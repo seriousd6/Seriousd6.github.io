@@ -29,75 +29,68 @@
         </nav>
     </div>
 
-
-    <button type="button" onclick="adventureBuilder()" class="btn btn-outline-dark">Roll Adventure</button>
-    <div class="container">
+    <div class="container-lg">
         <div class="row">
-            <div class="col-sm-3">
-                <button type="button" onclick="conflict()">Conflict</button>
-                <div id="Conflict"></div>
+            <div class="col">
+                <div class="row">
+                    <button class="col-4 btn btn-outline-dark" type="button" onclick="adventureBuilder()">Roll Adventure</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <button type="button" onclick="start()">Start Story</button>
-                <div id="Start"></div>
+            <div class="col">
+                <div class="row">
+                    <button type="button" onclick="start()">Start Story</button>
+                </div>
+                <div class="row" id="Start"></div>
             </div>
-            <div class="col-sm-3">
-                <button type="button" onclick="villain()">Villain</button>
-                <div id="Villain"></div>
+            <div class="col">
+                <div class="row">
+                    <button type="button" onclick="conflict()">Conflict</button>
+                </div>
+                <div class="row" id="Conflict"></div>
             </div>
-            <div class="col-sm-3">
-                <button type="button" onclick="motive()">Motive</button>
-                <div id="Motive"></div>
+            <div class="col">
+                <div class="row">
+                    <button type="button" onclick="villain()">Villain</button>
+                </div>
+                <div class="row" id="Villain">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <button type="button" onclick="motive()">Motive</button></div>
+                <div class="row" id="Motive"></div>
             </div>
         </div>
     </div>
-
-    <div class="container-sm">
-        <button type="button" onclick="trait()">Trait</button>
+    <div class="row">
+        <button class="col-2" type="button" onclick="trait()">Trait</button>
+        <div class="col" id="Trait"></div>
     </div>
-    <div class="container-md" id="Trait"></div>
-
-
-
-
-
-    <div class="container-sm">
-        <button type="button" onclick="artifact()">Artifact</button>
+    <div class="row">
+        <button class="col-2" onclick="artifact()">Artifact</button>
+        <div class="col" id="Artifact"></div>
     </div>
-    <div class="container-md" id="Artifact"></div>
-
-
-    <div class="container-sm">
-        <button type="button" onclick="twist()">Twist</button>
+    <div class="row">
+        <button class="col-2" type="button" onclick="twist()">Twist</button>
+        <div class="col" class="container-md" id="Twist">
+        </div>
     </div>
-    <div class="container-md" id="Twist">
+    <div class="row">
+        <button class="col-2" type="button" onclick="seat()">Seatof Power</button>
+        <div class="col" id="Seat"></div>
+        <button class="col-2" type="button" onclick="locale()">Seat Location</button>
+        <div class="col" id="Location"></div>
     </div>
-
-
-    <div class="container-sm">
-        <button type="button" onclick="seat()">Seatof Power</button>
+    <div class="row">
+        <button class="col-2" type="button" onclick="near()">Near Landmark</button>
+        <div class="col" id="Near"> </div>
     </div>
-    <div class="container-md" id="Seat"></div>
+    <div class="row">
+        <button class="col-2" type="button" onclick="final()">Final Fight</button>
 
-
-    <div class="container-sm">
-        <button type="button" onclick="locale()">Seat Location</button>
+        <div class="col" id="FF"></div>
     </div>
-    <div class="container-md" id="Location"></div>
-
-
-    <div class="container-sm">
-        <button type="button" onclick="near()">Near Landmark</button>
     </div>
-    <div class="container-md" id="Near"></div>
-
-
-    <div class="container-sm">
-        <button type="button" onclick="final()">Final Fight</button>
-    </div>
-    <div class="container-md" id="FF"></div>
-
-
 
 
 
