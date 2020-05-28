@@ -27,30 +27,39 @@
         </nav>
     </div>
 
-    <button type="button" onclick="buildTavern()" class="btn btn-outline-dark">Roll Tavern</button>
+
+
+
+
+    <button type="button" onclick="walkUp()+walkIn()+barkeep()+events()+quest()" class="btn btn-outline-dark">Roll Tavern</button>
     <div class="container-sm">
         <h5>Walking up:</h5>
+        <button type="button" onclick="walkUp()">Walk Up</button>
     </div>
     <div class="container-md" id="F1"></div>
     <div class="container-md" id="F2"></div>
     </br>
     <div class="container-sm">
         <h5>Walking in:</h5>
+        <button type="button" onclick="walkIn()">Walk In</button>
     </div>
     <div class="container-md" id="Overhear"></div> <br/>
     <div class="container-md" id="Bard"></div><br/>
     <div class="container-sm">
         <h5>The Barkeep</h5>
+        <button type="button" onclick="barkeep()">Barkeep</button>
     </div>
     <div class="container-md" id="Drink"></div>
     </br>
     <div class="container-md" id="Food"></div><br/>
     <div class="container-sm">
-        <h5>Misc</h5>
+        <h5>Misc Events</h5>
+        <button type="button" onclick="events()">Misc</button>
     </div>
     <div class="container-md" id="Event"></div><br/>
     <div class="container-sm">
         <h5>Quest Board</h5>
+        <button type="button" onclick="quest()">Quest Board</button>
     </div>
     <div class="container-md" id="Quest1"></div>
     <div class="container-md" id="Quest2"></div>
