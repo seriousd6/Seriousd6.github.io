@@ -125,90 +125,56 @@ function buildWorld() {
 
 
 
-
-
-
-
-
-
-
 var worldIntSpecies = [
-    "Only " + '@@Placeholder@@' + "species, Humans, exist in this world.",
-    "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.",
-    "Humans and " + '@@Placeholder@@' + "other species exist in the world.",
-    "Humans and " + '@@Placeholder@@' + "other species exist in the world.",
-    "Humans and " + '@@Placeholder@@' + "other species exist in the world.",
-    "Humans and " + '@@Placeholder@@' + "other species exist in the world.",
-    "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
-    "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
-    "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
+    "Only " + '@@Placeholder@@' + "species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
 ];
 const worldSpecArchetypes = [
-    "Brute - This species is known for its prodigal strength, near-endless endurance, and dim wittedness.",
-    "Vermin - This species is known for its individual incompetence, short lifespan, and rapid rate of reproduction.",
-    "Agile - This species is known for its incredible dexterity, mind-boggling flexibility, and skill at moving unseen.",
-    "Elder - This species is known for its ancient history, long lifespan, deep wisdom, and keen intellect.",
-    "Comfy - This species is known for its tight-knit families, friendly demeanor, and talent at agriculture.",
-    "Alien - This species is known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.",
-    "Artisan - This species is known for its industriousness, secretive demeanor, and talent at craftsmanship.",
-    "Big/Tiny - This species is known for its physical stature, which is much larger, or smaller than other species.",
-    "Arcane - This species is known for its high affinity for the supernatural, or its seemingly supernatural abilities.",
-    "Collective - This species is known for its intensely hierarchal society, and the huge variation between its castes.",
-    "Mundane - This species is known for its lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
+    "Brute - This species is known for its prodigal strength, near-endless endurance, and dim wittedness.", "Vermin - This species is known for its individual incompetence, short lifespan, and rapid rate of reproduction.", "Agile - This species is known for its incredible dexterity, mind-boggling flexibility, and skill at moving unseen.", "Elder - This species is known for its ancient history, long lifespan, deep wisdom, and keen intellect.", "Comfy - This species is known for its tight-knit families, friendly demeanor, and talent at agriculture.", "Alien - This species is known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.", "Artisan - This species is known for its industriousness, secretive demeanor, and talent at craftsmanship.", "Big/Tiny - This species is known for its physical stature, which is much larger, or smaller than other species.", "Arcane - This species is known for its high affinity for the supernatural, or its seemingly supernatural abilities.", "Collective - This species is known for its intensely hierarchal society, and the huge variation between its castes.", "Mundane - This species is known for its lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
 ];
 const specInterRelat = [
-    "Master Race - One species is widely considered to be superior paragons, to which others should defer.",
-    "Enslaved - One species is widely considered to be inferior, and is enslaved to an extent by the other species.",
-    "Race War - The species rarely meet, unless weapons are drawn. There is a long-held and irreconcilable animosity between the species.",
-    "Deep Mistrust - The species shun and avoid one another if possible, though outright violence is uncommon, race riots aren’t unheard of.",
-    "That Part of Town - Members of both species that live in the same region are discouraged from closer association. Any close relationships would mark those involved as pariahs.",
-    "Separate But Equal - The species have no hate for one another, and show their respect by staying out of each other’s way. Though there may be trade, the societies themselves are largely separate.",
-    "Pragmatic - Members of both species are businesslike in their dealings with one another, if it pays off to band together they’ll do so, but they won’t go out of their way to integrate.",
-    "Melting Pot - The species meet, trade, and form alliances fairly cordially, but primarily in trade hubs and major population centers. Sparks fly and cultures blend.",
-    "Amicable - Members of both species get along fairly well, all things considered. There are prejudices, but they are by no means universal.",
-    "Friendly - The species are quite close to one another, and interspecies marriages are not uncommon, though there are some few who’d prefer to remain separate.",
-    "What Species? - Members of both species are blind to their differences, and view themselves as one and the same in all matters, save mutually exclusive physical needs, of course.",
-    "The Same Species - Members of both species are in fact members of the same species, and can’t exist without one another, each is either different phases in the same species’ lifespan, or comprised of only gender that requires the other to reproduce. If deemed appropriate, this table may be rerolled to determine the relations between each part of the species.",
+    "Master Race - One species is widely considered to be superior paragons, to which others should defer.", "Enslaved - One species is widely considered to be inferior, and is enslaved to an extent by the other species.", "Race War - The species rarely meet, unless weapons are drawn. There is a long-held and irreconcilable animosity between the species.", "Deep Mistrust - The species shun and avoid one another if possible, though outright violence is uncommon, race riots aren’t unheard of.", "That Part of Town - Members of both species that live in the same region are discouraged from closer association. Any close relationships would mark those involved as pariahs.", "Separate But Equal - The species have no hate for one another, and show their respect by staying out of each other’s way. Though there may be trade, the societies themselves are largely separate.", "Pragmatic - Members of both species are businesslike in their dealings with one another, if it pays off to band together they’ll do so, but they won’t go out of their way to integrate.", "Melting Pot - The species meet, trade, and form alliances fairly cordially, but primarily in trade hubs and major population centers. Sparks fly and cultures blend.", "Amicable - Members of both species get along fairly well, all things considered. There are prejudices, but they are by no means universal.", "Friendly - The species are quite close to one another, and interspecies marriages are not uncommon, though there are some few who’d prefer to remain separate.", "What Species? - Members of both species are blind to their differences, and view themselves as one and the same in all matters, save mutually exclusive physical needs, of course.", "The Same Species - Members of both species are in fact members of the same species, and can’t exist without one another, each is either different phases in the same species’ lifespan, or comprised of only gender that requires the other to reproduce. If deemed appropriate, this table may be rerolled to determine the relations between each part of the species.",
 ];
 
-function populateWorld() {
-    let intSpecIndexObj = {
-        '0': 0,
-        '1': 3,
-        '2': 4,
-        '3': 6,
-        '4': 2,
-        '5': 8,
-        '6': 3,
-        '7': 6,
-        '8': 9,
-    };
+let intSpecIndexObj = {
+    '0': 0,
+    '1': 3,
+    '2': 4,
+    '3': 6,
+    '4': 2,
+    '5': 8,
+    '6': 3,
+    '7': 6,
+    '8': 9,
+};
 
-    var intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
-    var rawString = worldIntSpecies[intSpecIndex];
-    var otherSpecies = (rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
-    var numbSpecInWords = toWords(otherSpecies);
-    var fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
-    if (intSpecIndex >= 6) {
-        var numbSpecies = otherSpecies;
-    } else if (intSpecIndex === 0) {
-        var numbSpecies = 1
-    } else {
-        var numbSpecies = 1 + otherSpecies;
+function populate() {
+    function findSpec() {
+        let intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
+        let rawString = worldIntSpecies[intSpecIndex];
+        let otherSpecies = (rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
+        let numbSpecInWords = toWords(otherSpecies);
+        let fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
+        document.getElementById("Species").innerHTML = fixedString
+        if (intSpecIndex >= 6) {
+            let numbSpecies = otherSpecies;
+            return numbSpecies
+        } else if (intSpecIndex === 0) {
+            let numbSpecies = 1
+            return numbSpecies
+        } else {
+            let numbSpecies = 1 + otherSpecies;
+            return numbSpecies
+        }
     }
-    return fixedString + '\n'
+    findSpec()
 
     function findSpecArchs() {
-        var numArchs = numbSpecies;
-        var archList = worldSpecArchetypes;
-        shuffle(archList);
-        var finalArchs = archList.slice(0, numArchs)
-        var chosenArchs = finalArchs;
-        for (var i = 0; i < chosenArchs.length; ++i) {
-            return '#' + [i + 1] + ' ' + chosenArchs[i];
-
-        };
-    };
+        let numArchs = numbSpecies;
+        let finalArchs = shuffle(worldSpecArchetypes).slice(0, numArchs)
+        let chosenArchs = finalArchs;
+        return chosenArchs
+    }
+    findSpecArchs()
 
     function findInteractions() {
         if (numbSpecies === 1) {
@@ -229,8 +195,31 @@ function populateWorld() {
         };
     };
 
+    document.getElementById("Intera").innerHTML = findInteractions()
 
-    findSpecArchs();
-    findInteractions();
+    /*    function clearBoard() {
+            document.getElementById("Quest1").innerHTML = "";
+            document.getElementById("Quest2").innerHTML = "";
+            document.getElementById("Quest3").innerHTML = "";
+            document.getElementById("Quest4").innerHTML = "";
+        }
+        clearBoard()
+
+        let questList = questBoard()
+        if (questList.length === 4) {
+            document.getElementById("Quest1").innerHTML = "-" + questList[0]
+            document.getElementById("Quest2").innerHTML = "-" + questList[1]
+            document.getElementById("Quest3").innerHTML = "-" + questList[2]
+            document.getElementById("Quest4").innerHTML = "-" + questList[3]
+        } else if (questList.length === 3) {
+            document.getElementById("Quest1").innerHTML = "-" + questList[0]
+            document.getElementById("Quest2").innerHTML = "-" + questList[1]
+            document.getElementById("Quest3").innerHTML = "-" + questList[2]
+        } else if (questList.length === 2) {
+            document.getElementById("Quest1").innerHTML = "-" + questList[0]
+            document.getElementById("Quest2").innerHTML = "-" + questList[1]
+        } else {
+            document.getElementById("Quest1").innerHTML = "-" + questList[0]
+
+        }*/
 }
-populateWorld();
