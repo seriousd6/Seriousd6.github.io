@@ -487,3 +487,12 @@ function foodAndChat() {
     document.getElementById("Food").innerHTML = faveFood();
     document.getElementById("Drink").innerHTML = faveDrink();
 }
+
+function rollChar() {
+    buildRaceClass()
+    buildDesc()
+    personalityBuilder()
+    songBookGen()
+    findDiscTopic()
+    foodAndChat()
+}
