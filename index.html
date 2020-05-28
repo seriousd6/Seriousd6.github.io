@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Cache-Control" content="no-store" />
-
-    <title>D&D flavor Generators</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css" />
-
-    <script src="/character.js" defer></script>
-    <script src="/TavernsAndInns.js" defer></script>
-
+    <title>D&D Flavor Generators</title>
+    <script src="js/character.js"></script>
+    <script src="js/Tavern.js"></script>
+    <script src="js/world.js"></script>
 
 </head>
 
-<body style="background-color: rgb(0, 0, 0);" <div id="outputBox">
+<body style="background-color: rgb(255, 255, 255);" <div id="outputBox">
     </div>
-    <h1>D&D</hi>
-        <h1>Flavor Generators</h1>
+    <h1>D&D Flavor Generators</h1>
+
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" onclick="buildRaceClass() + buildDesc() + personalityBuilder() + songBookGen() + foodAndChat()" class="btn btn-dark">Reroll All</button>
+        <button type="button" onclick="buildRaceClass()" class="btn btn-danger">Race/Class</button>
+        <button type="button" onclick="buildDesc()" class="btn btn-success">Description</button>
+        <button type="button" onclick="personalityBuilder()" class="btn btn-info">Personaility</button>
+        <button type="button" onclick="songBookGen()" class="btn btn-primary">Book & Song</button>
+        <button type="button" onclick="foodAndChat()" class="btn btn-secondary">Eats and Discussion</button>
+    </div>
+    <div class="table-responsive-sm"></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" id="Race" class="bg-danger "></th>
+                <th scope="col" id="Class" class="bg-danger "></th>
+                <th scope="col" class="bg-success ">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="bg-info ">When Calm</th>
+                <td class="bg-info" id="Calm"></td>
+                <td id="Feat1" class="bg-success "></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">When Stressed</th>
+                <td class="bg-info" id="Stressed"></td>
+                <td id="Feat2" class="bg-success "></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Prejudice</th>
+                <td class="bg-info" id="Prejudice"></td>
+                <td id="Feat3" class="bg-success "></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Current Mood</td>
+                    <td class="bg-info " id="Mood"></td>
+                    <td id="Feat4" class="bg-success"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Goals/ Fears</th>
+                <td id="GoalsFears" class="bg-info"></td>
+                <td id="Feat5" class="bg-success"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Faith</td>
+                    <td class="bg-info " id="Faith"></td>
+                    <td id="Feat6" class="bg-success"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Hometown Secret</th>
+                <td id="Yawp" colspan="2" class="bg-info"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-info ">Keepsake</th>
+                <td id="Keepsake" colspan="2" class="bg-info"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-primary">Currently Reading</th>
+                <td id="Book" colspan="2" class="bg-primary"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="bg-primary">Favorite Song</th>
+                <td id="Song" colspan="2" class="bg-primary"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="table-secondary">Favorite Food</th>
+                <td id="Food" colspan="2" class="table-secondary"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="table-secondary">Favorite Drink</th>
+                <td id="Drink" colspan="2" class="table-secondary"></td>
+            </tr>
+            <tr>
+                <th scope="row" class="table-secondary">Favorite Discussion Topic</th>
+                <td id="Discuss" colspan="2" class="table-secondary"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+
+
 
 </body>
 
