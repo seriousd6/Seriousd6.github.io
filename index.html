@@ -16,17 +16,29 @@
 
 </head>
 
-<body style="background-color: rgb(255, 255, 255);" <div id="outputBox">
+<body style="background-color: rgb(255, 255, 255);">
+    <div id="breadcrumb">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Character/NPC</a>
+                </li>
+                <li class="breadcrumb-item"><a href="/tavern.html">Tavern</a></li>
+                <li class="breadcrumb-item"><a href="/world.html">World</a></li>
+                <li class="breadcrumb-item"><a href="/adventure.html">Adventure</a></li>
+            </ol>
+        </nav>
+    </div>
     <div>
         <h1>D&D Flavor Generators</h1>
     </div>
-    <div class="btn-group-sm" role="group">
+    <div class="btn-group btn-group-sm" role="group">
         <button type="button" onclick="buildRaceClass()" class="btn btn-danger">Race/Class</button>
         <button type="button" onclick="buildDesc()" class="btn btn-success">Description</button>
         <button type="button" onclick="personalityBuilder()" class="btn btn-info">Personaility</button>
         <button type="button" onclick="songBookGen()" class="btn btn-primary">Book & Song</button>
         <button type="button" onclick="foodAndChat()" class="btn btn-secondary">Eats and Discussion</button>
     </div>
+
     <div class="table-responsive-sm"></div>
     <table class="table">
         <thead>
