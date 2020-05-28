@@ -60,20 +60,30 @@
     </div>
     <div class="container-md" id="Titan"></div><br/>
     <div class="container-sm"><br/>
+        <button type="button" onclick="populate()">Populate</button>
         <h5>Intelligent Species</h5>
-        <button type="button" onclick="">Species</button>
     </div>
-    <div class="container-md" id="Species"></div><br/>
+    <div class="container-md" id="Species">
+    </div><br/>
     <div class="container-sm"><br/>
         <h5>Archetypes</h5>
-        <button type="button" onclick="">Archetypes</button>
     </div>
-    <div class="container-md" id="Arches"></div><br/>
+    <div class="container-md" id='Arches'>
+        <script type='text/javascript'>
+            var ul = document.createElement('ul');
+            var archVar = findSpecArchs();
+            for (i = 0; i < archVar.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = archvar[i]
+                ul.appendChild(li);
+            };
+            document.getElementById('Arches').appendChild(ul);
+        </script>
+    </div><br/>
     <div class="container-sm"><br/>
         <h5>Interactions</h5>
-        <button type="button" onclick="">Interactions</button>
     </div>
-    <div class="container-md" id="Species"></div><br/>
+    <div class="container-md" id="Intera"></div><br/>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
