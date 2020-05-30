@@ -28,64 +28,60 @@
             </ol>
         </nav>
     </div>
-
-    <div class="container-lg">
+    <style>
+        .blue {
+            border: 1px outset blue;
+            background-color: rgba(173, 216, 230, 0.25);
+        }
+    </style>
+    <div class="container-xl">
         <div class="row">
             <button class="col-2 btn btn-outline-danger" type="button" onclick="adventureBuilder()">Roll for Adventure</button>
+            <div class="col">
+                <button class="col pl-5 btn btn-outline-primary" type="button" onclick="start()">Start Story</button>
+                <div class="row blue" id="Start"></div>
+            </div>
+            <div class="col">
+                <button class="col btn btn-outline-primary" type="button" onclick="conflict()">Conflict</button>
+                <div class="row blue" id="Conflict"></div>
+            </div>
+            <div class="col">
+                <button class="col btn btn-outline-primary" type="button" onclick="villain()">Villain</button>
+                <div class="row blue" id="Villain">
+                </div>
+            </div>
 
             <div class="col">
-                <div class="row">
-                    <button class="btn btn-outline-primary" type="button" onclick="start()">Start Story</button>
-                </div>
-                <div class="row" id="Start"></div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <button class="btn btn-outline-primary" type="button" onclick="conflict()">Conflict</button>
-                </div>
-                <div class="row" id="Conflict"></div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <button class="btn btn-outline-primary" type="button" onclick="villain()">Villain</button>
-                </div>
-                <div class="row" id="Villain">
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <button class="btn btn-outline-primary" type="button" onclick="motive()">Motive</button></div>
-                <div class="row" id="Motive"></div>
+                <button class="col btn btn-outline-primary" type="button" onclick="motive()">Motive</button>
+                <div class="row blue" id="Motive"></div>
             </div>
         </div>
-
         <div class="row">
             <button class="col-2  btn btn-outline-primary" type="button" onclick="trait()">Trait</button>
-            <div class="col" id="Trait"></div>
+            <div class="col blue" id="Trait"></div>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-primary" onclick="artifact()">Artifact</button>
-            <div class="col" id="Artifact"></div>
+            <div class="col blue" id="Artifact"></div>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-primary" type="button" onclick="twist()">Twist</button>
-            <div class="col" class="container-md" id="Twist">
+            <div class="col blue" class="container-md" id="Twist">
             </div>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-primary" type="button" onclick="seat()">Seatof Power</button>
-            <div class="col" id="Seat"></div>
+            <div class="col blue" id="Seat"></div>
             <button class="col-2 btn btn-outline-primary" type="button" onclick="locale()">Seat Location</button>
-            <div class="col" id="Location"></div>
+            <div class="col blue" id="Location"></div>
         </div>
         <div class="row">
             <button class="col-2 btn btn-outline-primary" type="button" onclick="near()">Near Landmark</button>
-            <div class="col" id="Near"> </div>
+            <div class="col blue" id="Near"> </div>
         </div>
         <div class="row">
             <button class="col-2 btn btn-outline-primary" type="button" onclick="final()">Final Fight</button>
-
-            <div class="col" id="FF"></div>
+            <div class="col blue" id="FF"></div>
         </div>
     </div>
 

@@ -1,5 +1,9 @@
 h1 {
     text-align: center;
     font-size: large;
-    color: white;
+}
+
+div.col {
+    border: 1px outset rgb(0, 128, 0);
+    background-color: rgba(144, 238, 144, 0.253);
 }
