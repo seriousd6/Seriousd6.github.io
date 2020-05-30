@@ -29,69 +29,77 @@
         </nav>
     </div>
 
+    <style>
+        .col {
+            border: 1px outset green;
+            background-color: lightgreen;
+        }
+    </style>
+    <div class="container-lg">
+        <div class="row">
+            <button class="col-2 btn btn-outline-success" type="button" onclick="buildWorld()">Roll For World</button>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="origin()">Origin</button>
+            <div class="col" id="Origin"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" onclick="comp()">Composition</button>
+            <div class="col" id="Comp"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="age()">Age</button>
+            <div class="col" class="container-md" id="Age">
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="dieties()">Dieties</button>
+            <div class="col" id="Dieties"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-success" type="button" onclick="magic()">Magic</button>
+            <div class="col" id="Magic"> </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-success" type="button" onclick="titan()">Titan</button>
+            <div class="col" id="Titan"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-success" type="button" onclick="Int()">Intelligent Species</button>
+            <div class="col" id="Species"></div>
+        </div>
+    </div>
 
-    <button type="button" onclick="buildWorld()" class="btn btn-outline-dark">Roll World</button>
-    <div class="container-sm">
-        <h5>Origin:</h5>
-        <button type="button" onclick="origin()">Origin</button>
-    </div>
-    <div class="container-md" id="Origin"></div>
-    </br>
-    <div class="container-sm">
-        <h5>Composition</h5>
-        <button type="button" onclick="comp()">Composition</button>
-    </div>
-    <div class="container-md" id="Comp"></div> <br/>
-    <div class="container-sm">
-        <h5>Age</h5>
-        <button type="button" onclick="age()">Age</button>
-    </div>
-    <div class="container-md" id="Age"></div>
-    </br>
-    <div class="container-sm">
-        <h5>Dieties</h5>
-        <button type="button" onclick="dieties()">Dieties</button>
-    </div>
-    <div class="container-md" id="Dieties"></div><br/>
-    <div class="container-sm">
-        <h5>Magic</h5>
-        <button type="button" onclick="magic()">Magic</button>
-    </div>
-    <div class="container-md" id="Magic"></div>
-    <div class="container-sm"><br/>
-        <h5>Titan</h5>
-        <button type="button" onclick="titan()">Titan</button>
-    </div>
-    <div class="container-md" id="Titan"></div><br/>
-    <div class="container-sm"><br/>
-        <button type="button" onclick="populate()">Populate</button>
-        <h5>Intelligent Species</h5>
-    </div>
+
+
+    <button type="button" onclick="populate()">Populate</button>
+    <h5>Intelligent Species</h5>
     <div class="container-md" id="Species">
-    </div><br/>
-    <div class="container-sm"><br/>
-        <h5>Archetypes</h5>
-    </div>
-    <div class="container-md" id='Arches'>
-        <script type='text/javascript'>
-            var ul = document.createElement('ul');
-            var archVar = findSpecArchs();
-            for (i = 0; i < archVar.length; i++) {
-                var li = document.createElement('li');
-                li.innerHTML = archvar[i]
-                ul.appendChild(li);
-            };
-            document.getElementById('Arches').appendChild(ul);
-        </script>
-    </div><br/>
-    <div class="container-sm"><br/>
-        <h5>Interactions</h5>
-    </div>
-    <div class="container-md" id="Intera"></div><br/>
+        <div class="container-sm"><br/>
+            <h5>Archetypes</h5>
+        </div>
+        <div class="container-md" id='Arches'>
+            <script type='text/javascript'>
+                var ul = document.createElement('ul');
+                var archVar = findSpecArchs();
+                for (i = 0; i < archVar.length; i++) {
+                    var li = document.createElement('li');
+                    li.innerHTML = archvar[i]
+                    ul.appendChild(li);
+                };
+                document.getElementById('Arches').appendChild(ul);
+            </script>
+        </div><br/>
+        <div class="container-sm"><br/>
+            <h5>Interactions</h5>
+        </div>
+        <div class="container-md" id="Intera"></div><br/>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
 </body>
 
 </html>
