@@ -27,7 +27,93 @@
             </ol>
         </nav>
     </div>
-
+    <style>
+        .green {
+            background-color: rgba(0, 128, 0, 0.377);
+        }
+        
+        .red {
+            background-color: rgba(255, 0, 0, 0.486)
+        }
+        
+        .blue {
+            background-color: rgba(0, 0, 255, 0.26);
+        }
+        
+        .yellow {
+            background-color: rgba(255, 255, 0, 0.253);
+        }
+        
+        .col {
+            outline: 1px dotted black;
+        }
+    </style>
+    <div class="container-xlg">
+        <div class="row">
+            <button class="col-2 btn btn-outline-dark" type="button" onclick="rollChar()">Roll For Character</button>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-danger" type="button" onclick="buildRace()">Race</button>
+            <div class="col red" id="Race"></div>
+            <button class="col-2  btn btn-outline-danger" type="button" onclick="buildClass()">Class</button>
+            <div class="col red" id="Class"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="buildDesc()">Description</button>
+            <div class="col green" id="Feat1"></div>
+            <div class="col green" id="Feat2"></div>
+            <div class="col green" id="Feat3"></div>
+            <div class="col green" id="Feat4"></div>
+            <div class="col green" id="Feat5"></div>
+            <div class="col green" id="Feat6"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-primary" onclick="findCalm() +findStressed() +findMood()">Temperament</button>
+            <div class="col blue" id="Calm"></div>
+            <div class="col blue" id="Stressed"></div>
+            <div class="col blue" id="Mood"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-primary" onclick="findGoalFear()">Goal/Fear</button>
+            <div class="col blue" id="GoalsFears"></div>
+            <button class="col-2  btn btn-outline-primary" onclick="findPrejudice()">Prejudice/Flaw</button>
+            <div class="col blue" id="Prejudice"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-primary" onclick="findFaith()">Faith</button>
+            <div class="col blue" id="Faith"></div>
+            <button class="col-2  btn btn-outline-primary" onclick="findQuirk()">Quirk</button>
+            <div class="col blue" id="Quirk"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-primary" onclick="findKeepsake()">Keepsake</button>
+            <div class="col blue" id="Keepsake"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-warning" onclick="findHomeTown()">Hometown</button>
+            <div class="col yellow" id="Hometown"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-warning" onclick="findHomeTownSecret()">Hometown Secret</button>
+            <div class="col yellow" id="Hometown Secret"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-secondary" onclick="findFaveSong()">Favorite Song</button>
+            <div class="col" id="Song"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-secondary" onclick="findFaveFood()">Favorite Food</button>
+            <div class="col" id="Food"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-secondary" onclick="findFaveDrink()">Favorite Drink</button>
+            <div class="col" id="Drink"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-secondary" onclick="findCurrentBook()">Currently Reading</button>
+            <div class="col" id="Book"></div>
+        </div>
+    </div>
 
 
 
@@ -42,90 +128,3 @@
 </body>
 
 </html>
-<style>
-    .green {
-        background-color: rgba(0, 128, 0, 0.377);
-    }
-    
-    .red {
-        background-color: rgba(255, 0, 0, 0.486)
-    }
-    
-    .blue {
-        background-color: rgba(0, 0, 255, 0.26);
-    }
-    
-    .yellow {
-        background-color: rgba(255, 255, 0, 0.253);
-    }
-    
-    .col {
-        outline: 1px dotted black;
-    }
-</style>
-<div class="container-xlg">
-    <div class="row">
-        <button class="col-2 btn btn-outline-dark" type="button" onclick="rollChar()">Roll For Character</button>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-danger" type="button" onclick="buildRace()">Race</button>
-        <div class="col red" id="Race"></div>
-        <button class="col-2  btn btn-outline-danger" type="button" onclick="buildClass()">Class</button>
-        <div class="col red" id="Class"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-success" type="button" onclick="buildDesc()">Description</button>
-        <div class="col green" id="Feat1"></div>
-        <div class="col green" id="Feat2"></div>
-        <div class="col green" id="Feat3"></div>
-        <div class="col green" id="Feat4"></div>
-        <div class="col green" id="Feat5"></div>
-        <div class="col green" id="Feat6"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-primary" onclick="findCalm() +findStressed() +findMood()">Temperament</button>
-        <div class="col blue" id="Calm"></div>
-        <div class="col blue" id="Stressed"></div>
-        <div class="col blue" id="Mood"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-primary" onclick="findGoalFear()">Goal/Fear</button>
-        <div class="col blue" id="GoalsFears"></div>
-        <button class="col-2  btn btn-outline-primary" onclick="findPrejudice()">Prejudice/Flaw</button>
-        <div class="col blue" id="Prejudice"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-primary" onclick="findFaith()">Faith</button>
-        <div class="col blue" id="Faith"></div>
-        <button class="col-2  btn btn-outline-primary" onclick="findQuirk()">Quirk</button>
-        <div class="col blue" id="Quirk"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-primary" onclick="findKeepsake()">Keepsake</button>
-        <div class="col blue" id="Keepsake"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-warning" onclick="findHomeTown()">Hometown</button>
-        <div class="col yellow" id="Hometown"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-warning" onclick="findHomeTownSecret()">Hometown Secret</button>
-        <div class="col yellow" id="Hometown Secret"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-secondary" onclick="findFaveSong()">Favorite Song</button>
-        <div class="col" id="Song"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-secondary" onclick="findFaveFood()">Favorite Food</button>
-        <div class="col" id="Food"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-secondary" onclick="findFaveDrink()">Favorite Drink</button>
-        <div class="col" id="Drink"></div>
-    </div>
-    <div class="row">
-        <button class="col-2  btn btn-outline-secondary" onclick="findCurrentBook()">Currently Reading</button>
-        <div class="col" id="Book"></div>
-    </div>
-</div>
