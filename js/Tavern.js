@@ -323,7 +323,8 @@ randomHostAndHook();
 function buildTavern() {
     findF1()
     findF2()
-    findOverHear()
+    findEndConvo()
+    findInsult()
     bardFind()
     foodFind()
     drinkFind()
