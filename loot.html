@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/loot.js"></script>
+
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+    <h1>D&D Flavor Generators</h1>
+    <div id="breadcrumb">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Character/NPC</a></li>
+                <li class="breadcrumb-item"><a href="/tavern.html">Tavern</a></li>
+                <li class="breadcrumb-item"><a href="/world.html">World</a></li>
+                <li class="breadcrumb-item"><a href="/adventure.html">Adventure</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Loot</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <style>
+        .gold {
+            border: 1px outset goldenrod;
+            background-color: rgba(218, 165, 32, 0.356);
+            outline: 1px dotted black;
+        }
+    </style>
+    <div class="container-xl">
+        <div class="row">
+            <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-warning" type="button" onclick="weapon()">Weapon</button>
+            <div class="col gold" id="Weapon"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-warning" type="button" onclick="findHistory()">History</button>
+            <div class="col gold" id="History"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-warning" type="button" onclick="findScabbard()">Scabbard</button>
+            <div class="col gold" id="Scab"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>
