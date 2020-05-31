@@ -114,16 +114,6 @@ function titan() {
     document.getElementById("Titan").innerHTML = searchArray(worldTitan)
 }
 
-function buildWorld() {
-    origin()
-    comp()
-    age()
-    dieties()
-    magic()
-    titan()
-}
-
-
 function populate() {
     let worldIntSpecies = [
         "Only " + '@@Placeholder@@' + "species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
@@ -200,7 +190,18 @@ function populate() {
     console.log(findInteractions());
     document.getElementById("Intera").innerHTML = JSON.stringify(interactions, null, 4);
 };
-populate()
+
+function buildWorld() {
+    origin()
+    comp()
+    age()
+    dieties()
+    magic()
+    titan()
+    populate()
+}
+
+
 
 function reload() {
     location.reload()
