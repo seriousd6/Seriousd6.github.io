@@ -199,7 +199,7 @@ function quest() {
             let twoQuests = questPull.slice(0, 2)
             return twoQuests
         } else if (chance < 100) {
-            let oneQuest = searchArray(questPull)
+            let oneQuest = questPull.slice(0, 1)
             return oneQuest
         }
 
@@ -215,19 +215,19 @@ function quest() {
 
     let questList = questBoard()
     if (questList.length === 4) {
-        document.getElementById("Quest1").innerHTML = "-" + questList[0]
-        document.getElementById("Quest2").innerHTML = "-" + questList[1]
-        document.getElementById("Quest3").innerHTML = "-" + questList[2]
-        document.getElementById("Quest4").innerHTML = "-" + questList[3]
+        document.getElementById("Quest1").innerHTML = "#1 - " + questList[0]
+        document.getElementById("Quest2").innerHTML = "#2 - " + questList[1]
+        document.getElementById("Quest3").innerHTML = "#3 - " + questList[2]
+        document.getElementById("Quest4").innerHTML = "#4 - " + questList[3]
     } else if (questList.length === 3) {
-        document.getElementById("Quest1").innerHTML = "-" + questList[0]
-        document.getElementById("Quest2").innerHTML = "-" + questList[1]
-        document.getElementById("Quest3").innerHTML = "-" + questList[2]
+        document.getElementById("Quest1").innerHTML = "#1 - " + questList[0]
+        document.getElementById("Quest2").innerHTML = "#2 - " + questList[1]
+        document.getElementById("Quest3").innerHTML = "#3 - " + questList[2]
     } else if (questList.length === 2) {
-        document.getElementById("Quest1").innerHTML = "-" + questList[0]
-        document.getElementById("Quest2").innerHTML = "-" + questList[1]
+        document.getElementById("Quest1").innerHTML = "#1 - " + questList[0]
+        document.getElementById("Quest2").innerHTML = "#2 - " + questList[1]
     } else {
-        document.getElementById("Quest1").innerHTML = "-" + questList[0]
+        document.getElementById("Quest1").innerHTML = "#1 - " + questList[0]
 
     }
 }
