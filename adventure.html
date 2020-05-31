@@ -37,24 +37,24 @@
     <div class="container-xl">
         <div class="row">
             <button class="col-2 btn btn-outline-danger" type="button" onclick="adventureBuilder()">Roll for Adventure</button>
-            <div class="col">
-                <button class="col pl-5 btn btn-outline-primary" type="button" onclick="start()">Start Story</button>
-                <div class="row blue" id="Start"></div>
+            <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2 pl-5 btn btn-outline-primary" type="button" onclick="start()">Start Story</button>
+            <div class="col" id="Start"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-primary" type="button" onclick="conflict()">Conflict</button>
+            <div class="col" id="Conflict"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-primary" type="button" onclick="villain()">Villain</button>
+            <div class="col" id="Villain">
             </div>
-            <div class="col">
-                <button class="col btn btn-outline-primary" type="button" onclick="conflict()">Conflict</button>
-                <div class="row blue" id="Conflict"></div>
-            </div>
-            <div class="col">
-                <button class="col btn btn-outline-primary" type="button" onclick="villain()">Villain</button>
-                <div class="row blue" id="Villain">
-                </div>
-            </div>
-
-            <div class="col">
-                <button class="col btn btn-outline-primary" type="button" onclick="motive()">Motive</button>
-                <div class="row blue" id="Motive"></div>
-            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-outline-primary" type="button" onclick="motive()">Motive</button>
+            <div class="col" id="Motive"></div>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-primary" type="button" onclick="trait()">Trait</button>

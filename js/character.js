@@ -533,3 +533,7 @@ function rollChar() {
     findFaveFood()
     findFaveDrink()
 }
+
+function reload() {
+    location.reload()
+}

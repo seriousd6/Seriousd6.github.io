@@ -99,3 +99,7 @@ function adventureBuilder() {
     near();
     final();
 };
+
+function reload() {
+    location.reload()
+}

@@ -327,3 +327,7 @@ function buildTavern() {
     events()
     quest()
 }
+
+function reload() {
+    location.reload()
+}
