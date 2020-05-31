@@ -12,7 +12,8 @@ function shuffle(array) {
 };
 
 function searchArray(array) {
-    return array[Math.floor(Math.random() * array.length)];
+    let shuffled = shuffle(array)
+    return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
 
