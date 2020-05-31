@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
     <script src="js/character.js"></script>
-    <script src="js/Tavern.js"></script>
-    <script src="js/world.js"></script>
 
 </head>
 
@@ -30,91 +28,10 @@
         </nav>
     </div>
 
-    <div class="btn-group btn-group-toggle" role="group">
-        <button type="button" onclick="rollChar()" class="btn btn-outline-dark">Roll Char</button>
-        <button type="button" onclick="buildRaceClass()" class="btn btn-outline-danger">Race/Class</button>
-        <button type="button" onclick="buildDesc()" class="btn btn-outline-success">Description</button>
-        <button type="button" onclick="personalityBuilder()" class="btn btn-outline-info">Personaility</button>
-        <button type="button" onclick="homeTown()" class="btn btn-outline-warning">Hometown</button>
-        <button type="button" onclick="songBookGen()" class="btn btn-outline-primary">Book & Song</button>
-        <button type="button" onclick="foodAndChat()" class="btn btn-outline-secondary">Eats and Discussion</button>
-    </div>
 
-    <div class="table-responsive"></div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col" id="Race" class="table-danger "></th>
-                <th scope="col" id="Class" class="table-danger "></th>
-                <th scope="col" class="table-success ">Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row" class="table-info ">When Calm</th>
-                <td class="table-info" id="Calm"></td>
-                <td id="Feat1" class="table-success "></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">When Stressed</th>
-                <td class="table-info" id="Stressed"></td>
-                <td id="Feat2" class="table-success "></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">Prejudice/Flaw</th>
-                <td class="table-info" id="Prejudice"></td>
-                <td id="Feat3" class="table-success "></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">Current Mood</td>
-                    <td class="table-info " id="Mood"></td>
-                    <td id="Feat4" class="table-success"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">Goals/ Fears</th>
-                <td id="GoalsFears" class="table-info"></td>
-                <td id="Feat5" class="table-success"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">Faith</td>
-                    <td class="table-info " id="Faith"></td>
-                    <td id="Feat6" class="table-success"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-info ">Keepsake</th>
-                <td id="Keepsake" colspan="2" class="table-info"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-warning">Hometown</th>
-                <td id="Hometown" colspan="2" class="table-warning"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-warning">Hometown Secret</th>
-                <td id="Hometown Secret" colspan="2" class="table-warning"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-primary">Currently Reading</th>
-                <td id="Book" colspan="2" class="table-primary"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-primary">Favorite Song</th>
-                <td id="Song" colspan="2" class="table-primary"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-secondary">Favorite Food</th>
-                <td id="Food" colspan="2" class="table-secondary"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-secondary">Favorite Drink</th>
-                <td id="Drink" colspan="2" class="table-secondary"></td>
-            </tr>
-            <tr>
-                <th scope="row" class="table-secondary">Favorite Discussion Topic</th>
-                <td id="Discuss" colspan="2" class="table-secondary"></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
@@ -125,3 +42,90 @@
 </body>
 
 </html>
+<style>
+    .green {
+        background-color: rgba(0, 128, 0, 0.377);
+    }
+    
+    .red {
+        background-color: rgba(255, 0, 0, 0.486)
+    }
+    
+    .blue {
+        background-color: rgba(0, 0, 255, 0.26);
+    }
+    
+    .yellow {
+        background-color: rgba(255, 255, 0, 0.253);
+    }
+    
+    .col {
+        outline: 1px dotted black;
+    }
+</style>
+<div class="container-xlg">
+    <div class="row">
+        <button class="col-2 btn btn-outline-dark" type="button" onclick="rollChar()">Roll For Character</button>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-danger" type="button" onclick="buildRace()">Race</button>
+        <div class="col red" id="Race"></div>
+        <button class="col-2  btn btn-outline-danger" type="button" onclick="buildClass()">Class</button>
+        <div class="col red" id="Class"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-success" type="button" onclick="buildDesc()">Description</button>
+        <div class="col green" id="Feat1"></div>
+        <div class="col green" id="Feat2"></div>
+        <div class="col green" id="Feat3"></div>
+        <div class="col green" id="Feat4"></div>
+        <div class="col green" id="Feat5"></div>
+        <div class="col green" id="Feat6"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-primary" onclick="findCalm() +findStressed() +findMood()">Temperament</button>
+        <div class="col blue" id="Calm"></div>
+        <div class="col blue" id="Stressed"></div>
+        <div class="col blue" id="Mood"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-primary" onclick="findGoalFear()">Goal/Fear</button>
+        <div class="col blue" id="GoalsFears"></div>
+        <button class="col-2  btn btn-outline-primary" onclick="findPrejudice()">Prejudice/Flaw</button>
+        <div class="col blue" id="Prejudice"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-primary" onclick="findFaith()">Faith</button>
+        <div class="col blue" id="Faith"></div>
+        <button class="col-2  btn btn-outline-primary" onclick="findQuirk()">Quirk</button>
+        <div class="col blue" id="Quirk"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-primary" onclick="findKeepsake()">Keepsake</button>
+        <div class="col blue" id="Keepsake"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-warning" onclick="findHomeTown()">Hometown</button>
+        <div class="col yellow" id="Hometown"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-warning" onclick="findHomeTownSecret()">Hometown Secret</button>
+        <div class="col yellow" id="Hometown Secret"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-secondary" onclick="findFaveSong()">Favorite Song</button>
+        <div class="col" id="Song"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-secondary" onclick="findFaveFood()">Favorite Food</button>
+        <div class="col" id="Food"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-secondary" onclick="findFaveDrink()">Favorite Drink</button>
+        <div class="col" id="Drink"></div>
+    </div>
+    <div class="row">
+        <button class="col-2  btn btn-outline-secondary" onclick="findCurrentBook()">Currently Reading</button>
+        <div class="col" id="Book"></div>
+    </div>
+</div>
