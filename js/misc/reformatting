@@ -1,0 +1,899 @@
+01-02	Aarakocra
+03-04	Ankheg
+05-06	Bugbears
+07-08	Behir
+09-10	Sinkhole
+11-12	Traveling NPC
+13-14	Bulette
+15-16	Centaur
+17-18	Chimera
+19-20	Cockatrice
+21-22	Couatl
+23-24	Sealed entrance to the Underdeep
+25-26	Abandoned hunter's cabin
+27-28	Displacer Beast
+29-30	Dryad
+31-32	Earth Elemental
+33-34	Ettin
+35-36	Faerie Dragon
+37-38	Weather phenomenon/disaster
+39-40	Caged monster (reroll) and dead handlers
+41-42	Army patrol from Rega
+43-44	Galeb Duhr
+45-46	Gargoyle
+47-48	Hill Giant
+49-50	Gibbering Mouther
+51-52	Gnolls
+53-54	Cavern system (large)
+55-56	Cave, abandoned
+57-58	Goblins
+59-60	Ghouls
+61-62	Hippogriff
+63-64	Hobgoblins
+65-66	Hydra
+67-68	Deactivated Colossus
+69-70	Evil Cleric and minions performing ritual
+71-72	Jackalwere
+73-74	Manticore
+75-76	Ogres
+77-78	Orcs
+79-80	Owlbears
+81-82	Standing Circle of Stones (unpowered)
+83-84	Old Battlefield (reroll for monster Skeletons)
+85-86	Rust Monster
+87-88	Satyr
+89-90	Stirge
+91-92	Treant
+93-94	Troll
+95-96	Cycle Gate
+97-98	Abandoned fort/tower/temple
+99-00	Wyvern
+
+
+NPC Situation Tables
+
+Rumor Ladder: False (Appears as Specific or Exact), Vague, Mixed, General, Specific, Exact
+
+d20 for NPC reactions to PC talking
+	1-3: Hostile, now a nemesis. Gives Major Bane (F). Will pursue PC until dead.
+	4-6: Unhappy, gives Minor Bane (E), 80% will shift to hostile on next encounter
+	7-9: Disgruntled. Gives false information. 40% will shift to unhappy on next encounter.
+          10-12: Gives Personal (A) or Local Information (B), as requested 
+          13-15: Pleased. Shares Rumour (Use Ladder). 40% will shift to happy on next encounter
+          16-18: Happy. Gives Minor Boon (H). 80% will shift to friendly on next encounter
+          19-20: Friendly, now an ally. Gives Major Boon (G). Will protect PC until dead.
+
+d20 for NPC motivations under PC questioning
+	1-3: On The Run (J) from Enemy (Q -Minor, R – Major) for Good (O) or Evil Deeds (P)
+	4-6: On a Vendetta (I) versus an Enemy (Q -Minor, R - Major)
+	7-9: Searching for Local (B), Personal (A) or Item Information (C).
+          10-12: Buying / Selling (K) at nearby location, then returning Home (L)
+          13-15: On a local Minor Quest (M) for Treasure (U)
+          16-18: On a Minor (M) or Major Quest (N) for Minor Enemy (Q)
+          19-20: On a Major Quest (N) for Treasure (U)
+
+d20 for Area/Site Status
+	1-3: Faithtouched (AA) or Weavetouched (BB)
+	4-6: Home of (Evil, Neutral) Faction (D)
+	7-9: Home to Monster (Roll on Own Encounter Table). Nearby is a Minor Treasure (U)
+          10-12: Benign area of NPC population or is abandoned. No treasure
+          13-15: Home of (Good, Neutral) Faction (D)
+          16-18: Home to Monster (Roll on Own Encounter Table). Nearby is a Major Treasure (U)
+          19-20: Is Haunted (S) or Cursed (T)
+=========================================================================
+A – Personal Information – d20
+	1-3: Gives secret that leads to Major Boon (G)
+	4-6: Describes a family Emergency (V)
+	7-9: Passes along a rumor (check Ladder) about the PC as told by a friend or Enemy  (Q)(R)
+          10-12: Gives information that confirms a suspicion held by the PC or the Party
+          13-15: Passes along a Minor Warning (W) that concerns the PC or the Party
+          16-18: Gives Exact Knowledge about information the PC or Party has been investigating
+          19-20: Passes along knowledge of a Major Warning (W) to the PC
+
+B – Local Information – d20
+	1-3: Tells of Major Boon (G) concerning the area
+	4-6: Tells of Emergency (V)
+	7-9: Passes along knowledge of a Social Event (CC)
+          10-12: Gives information about an Enemy (Q) (R) threat
+          13-15: Passes along information of a Political Event (Y)
+          16-18: Gives information about Religious Event (Z)
+          19-20: Tells of Major Bane (F) 
+
+C – Item information – d20
+	1-3: Artifact (Single object (95%), or part of a Set (5%))
+	4-6: Jewelry, Chest, Map, Bucket, Lantern or Jar (d6)
+	7-9: Armor (Single piece (90%), or part of a Set(10%))
+          10-12: Missile or Melee Weapon (Common (60%), Uncommon (25%), Rare (5%)
+          13-15: Rod, Staff, Wand, Sceptre, Crown or Gemstone (d6)
+          16-18: Statue, Painting, Instrument, Sheet Music, Article of Clothing (d6)  
+          19-20: Replacement Body Part (75%) or Organ (25%)
+
+D – Faction
+	1-3: Mystery Cult (DD)
+	4-6: Slavers or brutal overlords
+	7-9: Religious warriors or clerics
+          10-12: Law and Justice officers or warriors
+          13-15: Corrupt mercenaries or rogues
+          16-18: Merchants collective or guild
+          19-20: Cabal of mages
+
+E – Minor Bane
+	1-3: Disease or pestilence
+	4-6:  Buildings destroyed
+	7-9: Enemy (Q) (R) of the PC or Party is actively opposing them 
+          10-12: Loss of items of value
+          13-15: Curse (T) has been activated
+          16-18: People have been injured
+          19-20: Haunted (S)
+
+F – Major Bane
+	1-3: Bad luck (random penalties[disadvantage] to random die rolls) for 1 month or 10 combats
+	4-6: Outbreak of large plague or pestilence
+	7-9: A large loss of monetary wealth
+          10-12: Many items of value have been lost or destroyed
+          13-15: Many buildings have been damaged or the land has been damaged
+          16-18: Many people have been killed
+          19-20: PC or Party has attracted the attention of an Enemy (Q) (R)
+
+G – Minor Boon
+	1-3: Enemy (Q) (R) has been temporarily thwarted
+	4-6: Minor magic item obtained
+	7-9: Small amount of money or resources obtained
+          10-12: Magicked gemstone obtained (use 0-level or Cantrip effect, 1/day, as level 1 caster)
+          13-15: A minor property is awarded or an improvement to a minor property is granted
+          16-18: Personal relationship established with potential ally or social status increases with ally
+          19-20: For one day, all activities are easier. +1
+
+
+
+
+H – Major Boon
+	1-3: Divine intervention grants a Treasure (U)
+	4-6: True Knowledge of a Treasure (U) location is obtained 
+	7-9: Large amount of monetary wealth is granted
+          10-12: An existing skill or knowledge is improved (+1) or a new skill is obtained
+          13-15: A personal relationship is improved to 100%
+          16-18: A major property is awarded or an improvement to a major property is granted
+          19-20: PC or Party is pointed towards an Artifact (C) (“Specific”on the Rumor Ladder)
+
+I – Vendetta 
+	1-3: Wrongfully jailed or persecuted
+	4-6: Racial crusade
+	7-9: Revenge for theft or deception
+          10-12: Revenge for personal death(s)
+          13-15: Religious crusade (local or part of a Faithquest)
+          16-18: Political persecution
+          19-20: Social status destroyed or socially exiled
+
+J – On The Run
+	1-3: Committed political crime
+	4-6: Escaped from detention for crime
+	7-9: Committed minor crime of theft, fraud or assualt
+          10-12: Committed major crime of theft, murder or rape (or this can be substituted with anarchy)
+          13-15: Committed religious crime
+          16-18: Got tangled up with a Mystery Cult (DD)
+          19-20: Unjustly accused
+
+K – Buying or Selling
+	1-3: Cloth: Raw or Finished
+	4-6: Wood: Raw, Finished, Furniture, Containers, Paper
+	7-9: Food: Random types (air, sea, land) from random culture
+          10-12: Beverages: Brewed (Ales), Distilled (Spirits), Raw (Juice) or Water 
+          13-15: Spice: Salt, Random spice, Random herb, Il(legal) drugs, or Medicine
+          16-18: Minerals: Raw or Refined or Gems
+          19-20: Luxury: Art, Rare Commodity or Masterwork items/weapons/armor
+
+L – Homeland (This has been left blank for you to fill in areas from your own worlds)
+	1-3: 
+	4-6: 
+	7-9: 
+          10-12: 
+          13-15: 
+          16-18: 
+          19-20: 
+
+
+
+
+M – Minor Quest 
+	1-3: Commune with avatar
+	4-6: Map a location 
+	7-9:  Deliver a message
+          10-12:  Recover a minor Treasure (U)
+          13-15: Deliver a package
+          16-18:  Destroy a minor monster/cleanse a tainted area
+          19-20: Rediscover a local forgotten place
+
+N – Major Quest  
+	1-3: Awaken a sleeping NPC
+	4-6: Recover or destroy an Artifact (C)
+	7-9: Aid or Slay an NPC
+          10-12: Slay a monster
+          13-15: Liberate or enslave an NPC
+          16-18: Discover a lost foreign land
+          19-20: Save or destroy the world
+
+O – Good Deeds
+	1-3: Freeing an innocent from imprisonment
+	4-6: Correct a long-standing error
+	7-9: Helping unfortunates with financial aid
+          10-12: Spreading a charitable political message or religious doctrine
+          13-15: Helping local children or relatives to overcome oppression
+          16-18: Heal the sick and comfort the dying
+          19-20: Using Artifact (C) to spread goodwill
+
+P – Evil Deeds
+	1-3: Humiliate and torture a rival
+	4-6: Collect an extortion's payoff and punish the offender
+	7-9: Steal from friends or family
+          10-12: Badly beat or kill a rival
+          13-15:  Destroy a business, financially or physically
+          16-18: Agitate a harmful political message or religious doctrine
+          19-20: Spread lies and rumors against an individual or group of a shocking nature
+
+Q – Minor Enemy
+	1-3: Snubbed ex-friend
+	4-6: School bully
+	7-9: Business rival
+          10-12: Local thug
+          13-15: Romantic rival
+          16-18: Spiteful boss or teacher
+          19-20: Family member 
+
+
+
+
+R – Major Enemy
+	1-3: A politician or political group
+	4-6: A powerful rogue/thug/assassin
+	7-9: A noble's family
+          10-12: A religious cult, sect, group, or temple
+          13-15: A powerful mage or cabal
+          16-18: A mercenary group
+          19-20: A mysterious NPC 
+
+S – Haunted
+	1-3: Spirits locked in battle
+	4-6: A tortured revenant who must relive its brutal murder
+	7-9: A benign phantom who provides small comforts and messages
+          10-12: A crazed banshee 
+          13-15: A spiteful haunt, who appears as dead loved ones and friends 
+          16-18: A playful poltergeist, a childish trickster
+          19-20: An evil ghost, driven to consume lifeforce in a bid to regain life
+
+T – Cursed
+	1-3: Time moves at a different speed
+	4-6: Sleep and rest is impossible
+	7-9: Extreme heat or cold
+          10-12: An overwhelming aura of helplessness and suffering
+          13-15: Plagues of vermin
+          16-18: Foul weather
+          19-20: Corruption of reality
+
+U – Treasure
+	1-3: Potions
+	4-6:  Gems
+	7-9:  Weapons or armor
+          10-12: Coins
+          13-15: Wands, Rods, and Staves
+          16-18: Clothing
+          19-20: Artifact (C)
+
+V – Emergency
+	1-3: Political power is dead or arrested/exiled
+	4-6: Business in trouble
+	7-9: Family friend ill or mad or dead
+          10-12: Hometown has been attacked or enslaved or destroyed
+          13-15: Disease epidemic 
+          16-18: Close relative or spouse has done something terrible
+          19-20: All resources or income has been stolen or destroyed
+
+
+
+
+W – Warning
+	1-3: A powerful enemy is coming for you
+	4-6: An enemy is plotting against you
+	7-9: The government is investigating you
+          10-12: Friend or lover or spouse is lying to you
+          13-15: Co-worker or business partner is stealing from you
+          16-18: Rival is spreading terrible lies and rumors
+          19-20: An avatar is coming
+
+X – Social Events
+	1-3: An invitation to an upcoming event (party, play, etc..) given by a mysterious stranger. 
+	4-6: A local revival of (insert deity) followers is nearby, and drawing crowds
+	7-9: A challenge has been issued by the (local ruler), calling for Feats of (insert ability)
+          10-12: The (guild-house) is permitting new members to join, decided by a contest
+          13-15: A circus has come to town. Rumors are they are taking on workers
+          16-18: A fancy dress party for the (local ruler) has drawn all the wealthy in the area
+          19-20: The marriage/birth/death/divorce/something else of (local ruler) or (ruler's family/spouse)
+
+Y – Political Events
+	1-3: Opposition gains control through a coup
+	4-6: A downshift in the support of financial backers has driven prices way up
+	7-9: A noble is accused of a terrible crime
+          10-12: A marriage between noble houses has been announced, rumors of treachery persist
+          13-15: A shift in the government's stance on taxes has been taken badly by the populace
+          16-18: Corruption rumors abound, and evidence of murder and treachery is begin sought
+          19-20: Powerful figure has been killed or exiled or worse
+
+Z – Religious Events
+	1-3: Avatar issues sanctions
+	4-6: Open warfare against temple enemies is now public knowledge
+	7-9: New edict/sanction is announced, causing a radical shift in the local population's mood
+          10-12: An expedition to the Heathen Lands has been announced
+          13-15: Temple leaders have declared a peace agreement and a Summit of Faith is announced.
+          16-18: An artifact or holy relic has been found/destroyed and a Call to the Faithful has gone out
+          19-20: Avatar appears and denounces/blesses the faithful and punishes/rewards with a bane/boon
+
+AA – Faith Touched
+	1-3: Dreams of the lives of those who gave their lives in sacrifice for the Faith
+	4-6: All skills relating to the practice of the faith are more easily accomplished. +1
+	7-9: Hallucinations of the landscape of the deity's Plane haunt the waking mind
+          10-12: Those not of the Faith will be psionically attacked by the environment, driving them out
+          13-15: Animal servants of the deity roam the grounds here, protecting from heathen intruders
+          16-18: All divine spells are cast here as if the caster was 1 level higher. 
+          19-20: Manifestation of an Avatar. Its mood depends on the PCs interaction
+
+
+
+
+BB – Weave Touched
+	1-3: A living mask of a Jester can be found here, hidden, but waiting. The parasite sleeps.
+	4-6: All skills relating to the practice of the arcane mysteries are more easily accomplished. +1
+	7-9: Time and space are on vacation here. Non-causality is a possibility. Dimensionally weird.
+          10-12: All arcane objects are recharged here, but can only be used once per item per location
+          13-15: Astral and ethereal creatures are feeding from this bountiful font. They are hostile
+          16-18: All arcane spells are cast here as if the caster were 1 level higher
+          19-20: Wild magic regularly spawns here, bathing the area with random level spells and duration
+
+CC – Mystery Cult
+	1-3: Trying to return/exile/free/enslave/destroy/rebirth a minor/major deity
+	4-6: Collecting objects to trade to a deity for power
+	7-9: Thralls under a larger power, acquiring resources, knowledge, manpower for a larger plan
+          10-12: Disaffected people angry at inequality. They have resorted to violence and rhetoric
+          13-15: Animal worshipers, devoted to returning humanity to a more primal lifestyle
+          16-18: Outsiders stealing/killing/trading/enslaving/helping the local populace
+          19-20: Wealthy cannibals and defilers, seeking only pleasure for themselves
+
+
+Location
+Tavern
+Crossroads
+Private Residence
+Cemetary
+Theater/Gallery
+Alleyway
+Docks
+Craftshop
+Retailshop
+Outdoor Area
+
+Crime
+Assassination
+Theft
+Murder
+Arson
+Kidnapping
+Property Destruction
+Massacre
+Terrorism
+Possible Suicide
+Accidental Death
+
+Clues
+Dropped personal item
+Eyewitness (Unreliable)
+Body part/evidence
+Arcane residue
+Eyewitness (Reliable)
+Footprint (Animal, Monster, Humanoid)
+Vehicle Track
+Dropped weapon
+Dropped correspondence/papers
+Psionic residue
+
+Perpetrators
+Bandits/Rogues
+Local Rowdies
+Lone evildoer
+Group of evildoers
+Classed NPCs
+Solo monster
+Group of monsters
+Politician/Royal
+Spirit creature
+Local inhabitant(s)
+
+Motive
+Revenge
+Contract
+Crime of Passion
+Political
+Curse/Geas
+Opportunity/Serial
+Survival
+Coerced
+
+Interested Parties
+Family member
+Spouse/lover (and Ex-)
+Guild
+Government
+Religious institution
+The People
+Influential Local
+Stranger
+
+Outside Elements
+Strange lights/noises
+Local Faction interest
+Missing elements
+Area is haunted/cursed
+Unusual/unseasonal weather
+Animal oddities
+Odd/Outsider Individual
+Crime scene has been staged
+
+Time Elapsed Since Crime
+A few minutes
+An hour
+4 hours
+8 hours
+24 hours
+48 hours
+A week
+Unknown
+
+Current Weather
+Hot and Windy
+Sunny and Dry
+Rainy
+Storming
+Snowing
+Cold and Windy
+Sleet
+Fog
+
+Time of Day (Current and At Time of Crime, roll/choose twice)
+Wee Hours
+Sunrise/Morning
+8 am
+Noon
+Afternoon
+Dusk/Evening
+Night
+Midnight
+
+
+
+Weapon histories
+...was forged in the Age of Mists by a powerful necromancer who wanted to use it against his most dread foes - a powerful paladin order.
+...was coughed up from the belly of the sleeping Tarrasque after it was fired upon by a Githyanki starship.
+...was dreamed into existence by the oldest of the Fey, and still carries a touch of the Wild upon it.
+… was birthed into existence during a brutal battle by the dying screams of the vanquished.
+… fell from the sky, thrown to earth by a goddess, which caused discord in the heavens.
+… broke apart from a bigger item, and was repurposed twice to fit its current state.
+… a living piece of a dying deity, long lost to time.
+… was pulled from the pages of a magical storybook.
+… has been tinkered together by Morman The Forlorn under threat of death, with his hate still inside.
+… was a rumor that was believed into reality.
+… was mistakenly stolen by Balog the Spoon Thief, twice.
+… was a royal heirloom that went missing when the last living heir disappeared without a trace.
+… was passed between several pirate lords as a result of lost bets and foul wagers.
+… famously stolen by the mistress of the prince at the time as punishment for bragging to his comrades about her acts.
+… had a war fought over it, a war that cost 10.000 lives.
+… was shaped from darkness on the day, three eons ago, that the Sun didn't rise.
+… was a gift between two lovers, who cooperatively created it as an act of love.
+… forged by the first dwarf, the first weapon of its kind.
+… is a vessel of significant power, even though the vessel is leaking and the content unknown.
+… it was simply found one day, several centuries ago, bearing only a single marking in an ancient language meaning “be godless”.
+… ordered to exist by The Creator, an entity that helped shape the world.
+… a magical ripple broke the fabric of reality, and a creature of the beyond bestowed it upon their unwilling champion.
+… said to be distilled from the moon itself.
+… nature itself created it from all over, specifically made to defend her.
+… it was meant to be broken up into pieces and spread across the world, at the word of an ill-omened prophecy, but it never was.
+… grafted from the root of the world tree.
+… famed for its role in the last stand of the Fuari, and their extinction.
+… once claimed after tricking the deity of Fertility into a bet.
+… was promised to be enchanted by an Archfey, the rightful price was never payed.
+… wielded by a fair maiden so beautiful that most lost both their hearts and their lives.
+… crash landed on this world in a mass of vines and buds found native only to a few small islands in the western hemisphere.
+… was thrust from a realm far beyond the horizon after a game of throwing bones.
+… sprouted from a tumor on a troll’s foot.
+… manifested when a demon child broke his toy.
+… was produced when a crazed detective sprouted from a hippopotamus's backside.
+... is a part of the social conscious and came to be through sheer willpower
+... fell from the sky one day and clonked you on the head.
+… was hidden in the reflection of another weapon, pulled forth from the glass.
+… was a living person before being polymorphed.
+… was a gift from a screaming demon, come down upon their Comet-Crusher and impaled in the heart of a king.
+… fell out of a magic mirror.
+… came from inside your own heart. Just reach in and pull it out.
+… is the shadow of a holy weapon, cast up from the lights of Hell.
+… came from the future.
+… was carried over from another campaign.
+… was stolen from a Dragon’s hoard who still seeks it.
+… made from the bones of a Hydra, a Catoblepas, and an Umber Hulk.
+… was inside of the oldest tree in the forest forgotten
+… fell to the deepest depths of the oceans and was cast out back upon the land.
+… was sold by a poor aging knight for a day’s rations
+… forged in honor of the dying prince so his memory lived on.
+… came to be when the druid asked the pig what did you eat today.
+… a star streaked across the sky and the mother wished to always protect her son.
+… when the old elf riddled with worry dreamed of impending doom the answer lie in his hands when his eyes opened.
+… when a seed was planted it grew instead of the crop.
+… was found stuck in the gums of old Ripple Belly the fat dragon when he finally passed away.
+… was stolen by a time thief hearing of its great power to forever alter the course of time.
+… was tossed away as scrap by the blacksmith thinking he had failed his task.
+… found stuck in a stone in a forgotten glade of beauty and peace
+… made from the bones and hair of his lover the hero used it to exact revenge upon the foul murder.
+… was created in a time before time as The Universe gave its first breath.
+… coalesced from the wasted energies in a ritual of dark intent.
+… formed in the bowels of a forgotten beast.
+… was molded from clay and given substance by the blood of a god.
+… was lanced from the tumors of a sewer mutant.
+… formed in a clot from a river of blood on an ancient battle field.
+… was spun from the wool of a golden sheep.
+… was regurgitated by a drunken Otyugh.
+… was found in the privy at a local brothel.
+... was forged from the knuckle bones of fifty devils.
+… carved from the fossilized dung of a prehistoric monster.
+… eaten by a Shoggoth, then spat up changed…
+… found at the bottom of a packrat midden
+… found in the debris left by a landslide
+… fell from the sky on the equinox
+… rendered from the fat of seven hanged men
+… is what's left of the phylactery of a long dead Lich
+… was found lodged deep in a glacier far to the north
+… was found in the core of a toppled tyrant’s statue
+… was cut from the stomach of a possessed man
+… created by hags from the fingernails of lost children
+… was carried by a living snowman who said I could keep it if I killed him with it.
+… fell from the Plane of the Gods.
+… came to me in a dream where a masked figure stabbed me with it. When I woke up, it sticking out of my gut.
+… fell out of a painting of a great battle I was staring at.
+… was forged from the drainage caught in a grease trap.
+… was a graduation present from a relative only I remember.
+… was crafted from the teeth of komodo dragons.
+… is made from the tendrils of a mage who polymorphed into a giant squid.
+… was in the stomach of a beached sea creature.
+… was hidden in the same hole I saw a squirrel burying its nuts.
+… showed up in the post. It was addressed to someone else, but it was my address.
+… was given to me by a demon. They said “You can either make a deal with me or take this weapon.”
+… kept replacing things I owned. Every time I didn’t take it, it would appear somewhere else, replacing the object that was there before.
+… was sticking out of the ground in the center of an abandoned town.
+… formed as I was pouring myself a glass of wine. I thought I was just drunk, but it was still there when I sobered.
+… crawled toward me with brittle arms, a shrill voice calling my name. It only stops if it’s on my person.
+… only manifests if I truly believe it is there.
+… bought me a drink at the pub.
+… was actually my barber’s preferred cutting tool. When they passed, they left it to me in their will.
+… was found in the shards of a broken mirror.
+… was built from pieces of several older and more powerful artifacts.
+… was spun from silk by a fey spider queen.
+… condensed from the essence of an elemental plane.
+… was crafted as a gift for an imperial wedding.
+… was won in a bet with a beggar.
+… was found at the bottom of a mass grave.
+… was forged to win a divine competition.
+… was empowered by the play of a child with uncontrolled power.
+… was found tucked in the pages of a forgotten book on a library shelf.
+… was accidentally created as an apprentice artificer’s class project, intended to do something else.
+… was once a star, plucked from the sky by a dragon.
+… was infused with power by the death throes of a dying psion.
+… spontaneously manifested from pure chaos.
+… is all that was left when a failed ritual engulfed a city.
+… was crafted to defend against eldritch incursions.
+… was torn from an angel’s shadow.
+… appeared in response to a priest’s prayers.
+… was forged as repentance for a great crime by a master smith, who died in the making.
+… was carried by a traveler who fell through the cracks from another world.
+… was carved from a Tarrasque’s broken claw.
+… will be crafted by a dying hero during the End Times, and with his dying breath, sent back in time to prevent the Enemy from rising to end the world.
+… was found at the center of the Elemental Plane of Earth, on a plinth surrounded by prostrate, worshipful Crysmals and Elementals. Origins and crafters unknown.
+… was dropped by The Lady of Pain, as if by accident, on High Street in Sigil. Nobody touched it out of fear of her wrath, and it lay there, her bladed shadow lingering over it for years until the unwary adventurers blithely picked it up.
+… grew from the branches of Yggdrasil, plucked and delivered by the Ratatoskr itself to a hero in a time of need.
+… was an illusionary weapon conjured to threaten an evil god’s avatar during a desperate battle between the Order and the hordes of Chaos Unbound. The all-powerful avatar’s belief in the illusion granted it a measure of his own power, so it became real.
+… fell from a dying god’s hand to earth during the creation of the world.
+… fell out of a dead Kender’s pockets. Whoops.
+… was created in another realm, the riders of a falling metal star brought it to the world. When their craft crashed, it killed most of the occupants. Their ruined metal ship kept one alive, asleep for centuries. When awakened, he bequeathed it to the party, in return for a way home, as the magic of the craft had faded beyond recovery.
+… was hawked at a pawn store and the adventurers never returned to claim their ticket.
+… was forged by a master Dwarven blacksmith during a period of blackout drunkenness. Although he has tried several times to replicate this weapon, it has never been successful.
+… was being used as a latch lock on a country farmhouse gate.
+… was being used as a prop by a local traveling troupe of bards.
+… was gifted to a mistress who then gave it away in spite after the affair ended.
+… was crafted by a mad tinkerer who was barricaded in his shop during the times of trouble.
+… really is none of your business, now go away!
+… was assembled from stolen components from the smithy
+… was traded at a flea market for a couple of pelts.
+… just appeared in my gear after checking it (the gear) at an event.
+… was given by a Nothic in exchange for bringing a wizard of some renown to see it.
+… was exposed after a flash flood eroded the ground around it.
+… was stashed at my place by a buddy who didn’t want his wife to know he got it. I can use it anytime, so it’s cool…
+… is a prototype, and I was asked to test it out and report back on how it performs in real world applications.
+… has never given me a straight answer.
+… it came into being after a wild mage screwed up an enchantment.
+… was unearthed by a farmer plowing his field in preparation for planting
+… was brought back in a hounds mouth after it ran into the woods
+… was the only thing left after a massive fire destroyed old man Jenkins home.
+… was in a store window display before being recognized for what it truly was by a passing scholar.
+… was worshiped as a god by a group of Kuo-Toa.
+
+
+
+A cigarette lighter etched with symbols of the sea and whaling. its a large curved bone with a flint-wheel that pulls out to reveal the cotton packed into the hollowed out cavity. It never works reliably the first time its used, and then will burn through all its fuel on the second try, and will burn for 3 hours if fully fueled. The light from the lighter can reveal the presence of Abyssal writing (which is normally invisible).
+The diseased remains of the first king of the land. Died soon after he founded the land, patient zero of a potent plague - High Lord Rolnir's Remains.
+A fairly mundane looking knick-knack like a spinning wheel or a pot or something boring of slight historical significance. It's actually a lich's phylactery.
+A jar of a glue-like oozing substance. When fed bones it will produce a sticky glue, when hungry it turns acidic and vaporous. It can die.
+The claw of the first lycanthrope, preserved in a jar. It's said that a scratch from the preserved claw still harbours a more virulent, primordial strain of the curse. Best it stay in the jar.
+A muzzle, fitted to house four long appendages where a mouth would be on a normal person. There are legends of an ancient race that held the Mind Flayers under their heel, but nowhere else on Earth exists any evidence of such a people, save this.
+A single bottle of pink, fizzy liquid. There is a label affixed to it written in Celestial. It reads "Heaven's Cola" and is sealed with a white cork. A note it attached to it by a thick string and a handwritten note is attached, written in Abyssal, that says, "Happy Birthday Dad".
+A fist-sized gem of a deep red colour. Inside a shadow flicks and twitches like a tadpole in an egg. Rumour has it that this is the seed of a god.
+A pair of gloves that look like bear paws, complete with felt claws. They appear to be quite large, but always change size to fit the wearer perfectly. On full moons, the wearer of the gloves will change into a full-sized brown bear, but will have hands of the wearer. This lasts until sunrise, and will repeat on each night of the full moon. There is a 10% chance that the change is permanent.
+Mimirion- Three oddly shaped seeds, they seem to hate the sun. It grows during the night on moonlight, giving off an odorous scent, before developing a seed again at the end of its life cycle and the morning light.
+A longsword whose blade is split clean in half, with constant searing heat on both edges of the break. The pommel bears the crest of God.
+A tin cup with a bent handle and a dented rim. The base (flipped upside-down) has an inscription written in Common that says "Who Dat Moose?". There is nothing else remarkable about it's appearance. Whomever drinks from the cup, however, will demand to be called "Moose" instead of their real name and will do anything to retain ownership of the cup, including murderous violence.
+A small oil painting of a ferret. To many people it seems completely mundane. Anyone illiterate who views it will see the portrait animate. The ferret inside will speak and insult the onlooker before attempting to teach them how to read.
+A bag of seeds in a burlap sack. There are approximately 500 seeds in the bag. If planted, they will grow into full sized fence posts in approximately six weeks. The posts will never rot and never need painting.
+A young man. No, not a preserved one, a live human male aged about 23. He smells constantly of skunk spray and demands you keep a distance from his display. He is otherwise very inward.
+The Deurggometer - a small black box with an eye-hole in it. "DO NOT LOOK INTO THE BOX" is painted on a sign in big red letters. Inside the box are little clay figures that look like people you know. Ask the person looking into the box to name a failed love. That person is now in the box. Ask them if they like their mother more or their father more. Whichever one they pick is not present. Ask the other player's at the table to place one more person in the box (this can be anyone from the player's life). Then you, as the DM choose one more player at the table to be present in the box. Roll to determine what happens. Mark down each roll so you remember how many times you rolled, and after each roll ask the player if they want to keep looking. Continue to roll until they say they can't watch anymore. For each outcome, roll 2d4 to determine who does what. Then place a verb between them: (Loves, Kisses, Marries, Adventures with, Hides, Dines with, Has Sex with, Bites, Stabs, Betrays, Cries about, Buries, Ostracizes, Eats, Chases, Cleaves, Mocks, Executes, Owns, Comforts.) The number of times you roll equals the amount of days before one of these things comes true.
+A mask of a crow. If worn, the speaker will be attacked by phantom crows until the mask is removed. However, the mask does not want to be removed and will resist by psychically attacking the wearer. If the mask wins the struggle, the wearer will die of his imagined wounds in less than an hour. If the owner wins the struggle, the mask teleports 10-1000 miles in a random direction, but will always end up in a place of civilization, regardless of distance traveled.
+A gold coin minted in some long forgotten time. The face on the coin is of an old man with a short beard and a crown. When flipped the coin always lands heads up.
+A candle that burns in reverse, collecting material from the aether forming it into a water-rich waxy substance that can be eaten. Producing a cup-worth of water takes an hour of burning.
+A pair of sandals that always feel sandy, no matter how often they are washed. The sandals will change shape to fit any sized feet. The benefit of the sandals is the ability to walk on water for up to 1 hour.
+A stuffed skunk the size of a bull. The skunk's black and white fur is reversed, and it has 7 eyes and six legs. The stink gland has been surgically removed, with large unruly stitches in its wake.
+A magical crossbow that is completely ordinary in every regard, except for the fact that whenever the user misses a shot it loudly insults them and their lineage.
+A mockingbird that will appear as a beautiful piece of taxidermy, but will reveal itself to be haunted by the ghost of an angry spirit who mocks the owner relentlessly while in its presence. The mockingbird can never be sold, but can be given away.
+A dull green glass bottle, filled with transparent oil that rolls about like the sea's tides. Its label, written in Undercommon, reads "Immortality." It is sealed with a deep black cork, and if opened reeks of skunk spray.
+"What do you see?" -Whoever looks at this painting will see the room (or place) they grew up in. If you look at it alone, the painting will move and show you a moment from your past. If you crawl into the painting you will inhabit your child body for exactly 10 seconds of real time (long enough to say one thing that you do) before being ejected from the painting.
+A set of 6 jars of preserves in a calico-lined wooden basket. The jam will raise the dead, but requires the owner to give up something precious to them - this includes family members, property, and memories.
+A six sided die which will occasionally land on 7.
+A flintlock pistol/hand-crossbow (Depending on the setting) That will invariably shoot through the heart of the nearest living creature. It is important to remember that the user is usually the nearest living creature.
+Your childhood stuffed animal. The plaque under it reads "First stuffed animal of [insert PC] retrieved from his gravesite."
+A writing quill that when used, the words of the text will periodically change to synonyms of the original text while unobserved.
+A kid’s doll that seems to animate when no-one is looking. It is depressed or has other issues as it can nearly always be found attempting to kill itself (by impalement or in a fire). As it is magical it is not easily destroyed (it might actually be a phylactery).
+An umbilical cord in a neat wooden box, lined with velvet. The cord itself has small, glassy eyes over its surface.
+A wig that when put on makes your character look like you, the player.
+A living spell in a container. It presses its face on the glass, breathes, then writes cryptic messages in the form of incantations in the glass-fog.
+A set of dragon's teeth in a carved wooden box. On the bottom of the box the name "Ray" has been carved hastily and with an amateur hand. If the teeth are planted, a single skeleton will rise for each tooth and will obey the owner's commands to the best of their ability until destroyed.
+A viking who has no idea what he is doing in a museum. It's labeled "Perfect recreation of an ancient warrior. Totally not a real person."
+A set of utensils that allow the dead to eat food on the Prime Material Plane. They are made from bone and are ancient and yellowed with age. If a demon can be convinced to use them, it will be forever destroyed.
+A small wooden box with some silver markings on its surface. You can hear something shift inside, however it has neither a lock nor hinges, cutting it open by force reveals it to be solid wood.
+A flashlight. Most natives think its a weapon, or a portal to the Positive Energy Plane, or a trapped elemental. But its just a flashlight.
+A tattoo kit and an image of a door on parchment. If you tattoo that door on living flesh, you can open the door and enter a dungeon.
+A bird cage that will kill any living thing placed inside it, but if left alone, will slowly manifest an Infernal-equivalent over 30 days. This hell-pet will act like a real pet, unless its owner is ever alone with it, at which point, it will try and escape. Its ability to breed with creatures on the Prime Material Plane is unparalleled.
+A dried-up rose that will come to life when pure hatred is nearby.
+A mirror that reflects an image from .5 seconds in the future.
+A crystal tea kettle, with what looks like an ocean raging inside of it. If boiled, the temperature of the coasts will rise dramatically. If drunk, the tides will receed further and further back.
+A set of scrolls that will allow conversation between them, insofar that a message written on one will appear on the other, no matter the distance. However, the words always become twisted away from their original meaning, with the intention of doing as much harm to the receiver's life or situation as it can.
+An archaic videogame controller. If plugged into the brain of a living creature (figure that one out) you can control them in a very robotic and simplistic way. Oh, and the cord is only 30ft.
+A chess set of all Queens and 2 Kings. If a game is played, the loser is Banished to the Demi-Plane of Chess.
+A pair of sunglasses that reverses everything the wearer sees. Friends become rivals, enemies charging become friends running with open arms.
+A pair of shoes that grant the ability to jump at great height. Was sold to the museum by a Djinn who claims to have found them floating above the atmosphere.
+An egg-shaped cage made of willow branches. Its craft seems simple, however it can hold magical creatures as if it had anti-magical properties.
+A red pill that takes you to the Modron Plane, and a blue pill that takes you to the PMP
+A set of armor, each piece a different type, e.g., chain chestplate, plate gauntlets, leather greaves, etc.... When in combat, the wearer can sacrifice a piece of the armor to completely avoid a successful hit, but their AC decreases a small amount. If the armor is completely sacrificed, it will return, whole, in 7 days.
+A book on sewing, knitting, and weaving problems and their solutions. Anyone who reads this book will encounter these issues when they next attempt to sew, knit, or weave. Some of these problems should not be possible in a 3 dimensional plane.
+A hookah that, when smoked, gradually transports the smoker into the ethereal plane. If not smoked to completion, the smoker becomes semi-impermeable, randomly phasing from solid to gaseous.
+A sundial that shows the correct time regardless to whether the sun is in the correct orientation or even present.
+A helmet with a mouth where your forehead is. If you say the word "Delicious" the mouth will open up and eat 1 thing in front of you and give you one of it's powers for 10 minutes. Example, you can eat a deck of cards and split into 52 tiny versions of yourself.
+A copper heron statue that, if placed near water, will act as if alive and life-like. Its copper belly is often found full of rotten and fermented fish.
+A set of glass playing cards, with symbols and numerals unknown to scholars. If shuffled, the deck will transport the owner to the 450TH ANNUAL RYL'AKS'HOOM TOURNAMENT and be automatically registered for the Final Death Match.
+A boardgame that requires the players to travel through the planes to complete the game. its called "FUN WITH SCIENCE"
+A set of faerie fire lanterns that only show the dead and obscure the living as if they were invisible. Once per month the effect can be made permanent in a location if the lantern is left behind and blessed by a cleric of at least 3rd level.
+A paintbrush that paint will never ever stick to.
+A stuffed lion's head that will devour any lich's phylactery permanently. The lion's name is Bernard.
+A candle that will grant a wish if blown out on your birthday.
+A tiny doll version of yourself that you can embody, but your regular body will become a doll in the meantime
+A whistle that only dragons can hear
+A normal sized carrot that weighs 300lbs.
+Two gold coins that when rubbed together reproduce.
+A birthday cake that will feed a group of 8. Once a piece is consumed, the owner drops into a deep sleep for 24 hours, but will awaken fully refreshed and healed of all diseases, curse or afflictions. However, an astral parasite now feeds on the victim and will permanently drain 1 HP per day until the host is dead. The parasite can be removed by a cleric of at least 9th level. The cake only ever appears in dungeons
+A crab cracker that only works when operated by dwarves.
+A life-sized unicorn that claims the gods are false and the true meaning of life can only be found in the old ways. The unicorn refuses all saddles, bridles, or hats.
+A wool blanket that will occasionally ‘’bleat’’ as a sheep.
+A tiny statue of Hastur. If the statue is rubbed, and Hastur's name is spoken, there is a 75% chance that the user's wish will come true, and a 25% chance that Hastur will manifest and punish the offender.
+A single rusted scale from a piece of scalemail. It seems to attract rust, and when in contact with other metals it will let them gleam and shine (collecting all rust already present and preventing new). When it disintegrated (due to collecting too much rust, or otherwise) the magic is released and all the collected rust will affect the nearest metal things instantly.
+A toy otyugh that vomits cloth garbage when you pull the string on its back
+A harpoon that will spear a fish from any liquid it is thrust into. If asked the curator will demonstrate by spearing a tuna from a glass of milk.
+A brass hippopotamus. Life sized. When its snout is rubbed there is a 50% chance the hippo will transform into a real hippopotamus, and a 50% chance that the victim is turned into a life-sized brass hippopotamus.
+A fake beard that changes your gender.
+A 10' foot pole made of wood that is incapable of displacing any object.
+A Skeleton Key. You can use it to unlock a heart (to make someone love the first thing they see), a bladder (to make them pee), or any other part of the body. Does not unlock doors.
+A set of tools for installing a door, including hinges and a knob. When placed into an existing door frame, will open upon the name of any plane that is written upon its face in chalk. Cannot connect physical spaces on the same plane.
+A pair of wedding rings that pull towards one another if the player using them is single, and repels if they're married.
+A portable brewery and distillery kit that is semi-automatic. It is however slightly damaged and will produce loads of methanol (causing blindness and death).
+A brush that changes your hair color when you use it.
+A (fake) plant, made of some sort of organic fiber, resembling a tiny Shambling Mound, that will clean your room and leave a slightly slimy trail.
+A baseball bat that deals damage equal to the amount of tattoos and piercings you have.
+A puppet in the form of a human or an animal, it depends on the desire of the one who claims it. It has a string to open and close the mouth and its limbs are fully articulated. The puppet has a name tag stitched to it, and its always the same name as the person who claims it. Over the course of 30 days the puppet will attempt to switch the owners mind into the doll, while it occupies the owner's body. If it is successful, it will live the most mundane, boring life it can, not trying to destroy anything, but not helping either, and will become listless and only interested in food and sleeping. After 30 days of this it will become bored and switch back. If it is not successful, it will be forced to wait 30 days before it can try again.
+A small glass bulb that gives off a bit of bluish light when touched. The light it shines counts as moonlight for the purpose of revealing things.
+A small stone that ticks. Everyone who hears the stone becomes convinced that the stone must remain locked away or something very bad will happen.
+a painting of an old hag wearing a cloak and hood in a bad frame. If hung on the wall, over the next 30 days, it will slowly transform into the painting of a beautiful man or woman. After the painting has fully changed, the owner will meet the subject of the painting and fall madly in love with them, and the feeling will be mutual. The painting will then teleport away.
+A dagger that doesn't harm anything stabbed by it, but displays the memories of what it stabs instead.
+A coin that when flipped tells you something nice about the person you're looking at.
+A set of brass chimes that will calm all the animals who can hear its ringing, regardless of their current mood.
+Two little birds in cages that tweet when they are apart and will do anything to come together.
+A bowl that whistles if the food in it is too hot to consume.
+A wooden stool that is unusually comfortable, despite it's simple construction.
+A pitcher that always pours the owner's favorite drink, and restores 1d4 HP. The drawback is that the entire pitcher must be consumed to gain the effect, and the drink becomes alcoholic, regardless of its original composition.
+An orb that swallows a negative emotion and spits out a black butterfly.
+A monocle that changes every person the wearer sees to be happy.
+A tiny clay man wearing a tiny hat. If a name is scratched into its chest, it will come to life and perform complicated dances, but only when the owner is alone.
+A deep blue pistol, which compels the wielder to shoot their own head. When done, the wielder's subconscious will become a physical manifestation, and have an honest conversation with them.
+A lost letter that will attempt to fold itself into a tiny bird, but fails to do so. It is completely crumpled by now but it still attempts to origami itself every hour or so.
+A brick of modeling clay that when used to sculpt small creatures they come to life. If two of these creatures encounter each other they will battle to the death, the loser reverting into a blob of clay.
+A beautiful painting of the sea. It moves when you look at it. You see yourself floating on your back. You're smiling.
+A bar of bitter cocoa that banishes doubt when eaten.
+A book that contains all the alternate universes where your life is worse than it is now, to show you how great you've done so far.
+A cloak with a hood that smells of lavender and repels all disease while worn. It is bright orange and stitched with embroidered smiling cat faces.
+A necklace with rough cut stones and glass strung on it. It makes the wearer feel comfortable in all conditions.
+A dragon hoodie with a zip-up hood. When the hood is zipped up you can roar like a dragon and fly for 10 seconds at a time.
+A jar of honey, with matching wand. Never empties.
+A piece of pavement with a partial rune on both sides. When placed on another stone surface it either turns hastens or slows a walking creature in a small area (by 5 ft., 20 ft radius) depending on the side that touches the stone surface.
+A tiny house, two stories, beautiful and always the perfect temperature. It can travel anywhere. But you have to be tiny to enter.
+A history book written about a long collapsed empire. When touched the user experiences the last 12 days of Emperor Callifax Corentius IIIV, leading up to his assassination.
+A small honey bee token, carved from soap. When crushed, it summons a honeybee familiar to serve you. It can only give advice in a soft, kind tone.
+Empty flower pot. If you collect a flower from a place and plant it in the pot, you can smell that place by sniffing the flower.
+A map of the solar system in 3 dimensions. Any alterations to the map move the cosmos.
+A set of gingerbread men molds that only work on human flesh, and will create homonculi that will serve the owner until they are destroyed.
+An invisible, invincible creature trapped in a lead box. It kills something random once a year if released.
+A floor tile with a footprint on it that reads: "Step here to summon Balog." The tile is slightly charred.
+Ear warmers that heighten the environmental sounds around you, but drowns out conversations.
+A tongue that replaces your tongue. It can extend 10' and has a hyper-sensitive sense of smell
+A set of knitting needles that are capable of knitting together dreams of multiple people or even the same person. once complete, if the dreamcoat is worn, the memories are able to be changed, but only once, and never again.
+A 6 inch tall horse.
+A tool designed to crack nuts. It disintegrates shells, leaving the nuts untouched. Bloody marks between the teeth and weird stains on the handle leave disturbing thoughts as to what it has been used for recently.
+a group of 7 mushrooms, each with the abbreviation of a day of the week (Sun-Sat), eating one takes you back to the last occurence of that day.
+A wooden handle that contains every tool ever conceived within. The ultimate swiss army knife. Good luck finding what you need, though.
+A snowglobe of (insert city from your world), shaking it makes it snow there.
+A full sized 110-pipe organ, complete with padded bench. It comes with a songbook of the greatest hits of Heaven and Hell. If played by a skilled performer, will draw a host of the appropriate type to come and judge the performance. A poor performance will have unpleasant consequences, while a good one will grant the player a Boon. The organ will then teleport in a random direction.
+A small music box that makes sounds when opened as if it was connected to another object somewhere else. Effects could include: Busy tavern, Snoring man, Diner table, Street sounds, Whispering meeting, Bedroom noises, Playing kids, People begging for mercy before being murdered
+A tiny hand mirror that will reflect the owner at any age it desires, including into the future. there is a 10% chance that Shael will gaze back at the owner.
+A bell that summons a horse when rung. 10% chance it summons Shael on a pegasus.
+A cold Iron spade labeled "THE SPOON OF BALOG."
+A pouch containing one pound of the most potent drug in the universe. A single molecule is enough to kill a man instantly, while he experiences 1000 mental years of pure ecstasy.
+A red liquid that when drank turns you into an old King long thought to be dead. 10% chance of turning you into Shael.
+A set of tiny iron soldiers wearing the livery of Kalan, The Unspeakable. if the soldiers are arranged into an attack position, there is a 50% chance they will animate and become full sized, obeying the commands of the owner, and a 50% chance that the owner will be forced to wear the livery of Kalan for the next year, losing their name completely.
+A music box that plays pleasant music. 5% chance of invoking the curse of Shael when the song completes.
+A hand-written diary by a young girl professing her hatred of Balog, the Spoon Thief.
+One hundred carved wooden ducks each bearing the name of a constellation. They are unremarkable otherwise.
+A fingernail sized blade that can cut through anything, even subatomic particles.
+A lantern that burns brighter the more the wielder is afraid.
+A disembodied head of a Modron. The creature will accurately guess the weight of anyone who stands within 1' of it.
+A silver eye-mask not unlike the one famously donned by Balog, the Spoon Thief. Allows the wearer total knowledge of every spoon on the plane they are currently in.
+A small tea kettle that fill with acid if the phrase. "be careful with that one, he's a biter." Is spoken within a 2 mile radius.
+A flask with an unknown liquid. It cannot be poured out unless it is standing upright (in which case nothing happens since gravity). The flask is very sturdy and in inscription reads ‘’Those that drink smart and slow will drink this drink made long ago.’’.
+A set of dueling blades that refuse to deal a killing blow. the individual cases are marked "His" and "Hers" in High Elven
+A small set of silver dining spoons. Scrying is impossible within a 10foot bubble centered on them.
+A group of seven swords, each with a day of the week on them. They can only be used on the week that is on their blade. When used they always hit and always cut off a limb.
+A fork that causes any edible substance stabbed with it to be transmogrified into cooked pork. Was retrieved from the possession of an infamous serial murderer.
+A dagger that only hurts those who are feeling angry
+A candlestick that ignites things that are inserted.
+A noose that only tightens around the necks of thieves who stole because they were starving.
+A gold coin that can only be stolen
+A coin that changes metals every time its flipped
+A dagger that can only strike its target in the dark
+A set of dishes that can summon rotting food that will fully heal any lycanthropic curses, but will permanently give the user bad breath.
+A wineskin that at random will take out the alcohol of the substance it contains before adding it some time later. It is a health risk to drink from, but often invokes quick inebriation or not at all.
+A Deck of One Thing. This magically imbued deck contains 31 of 40 cards. When a card is drawn, the drawer of the card has their pockets filled with pewter spoons.
+
+
+d20 - Find the...
+Big cracked boulder
+Lightning-blasted oak tree
+Rock shaped like a horse
+Stone wall with a piece of volcanic glass
+Exact center of the village/town/city
+Statue of <famous person>
+Shipwreck of the SS <name>
+Bones of the black dragon
+Cavern near the waterfall
+Top of the volcano
+Exact center of the lake
+Abandoned Temple
+Old Fort
+Old Standing Circle
+Road marker leading south
+Exact center of the longest bridge
+Hangman's scaffold
+King's/Queens throne room
+Crossroads
+Largest tomb in the cemetary
+
+d8 - Then...
+Go North for 1-4 miles
+Go South for 1-4 miles
+Go East for 1-4 miles
+Go West for 1-4 miles
+Go Northeast for 1-4 miles
+Go Northwest for 1-4 miles
+Go Southeast for 1-4 miles
+Go Southwest for 1-4 miles
+
+d20 - Until you find the...
+Mountain shaped like a tooth
+Hill shaped like a saddle
+Cliffs of red stone
+Tiny caves in a white hill
+Old fortress ruins
+Dried up creekbed
+Swift-running river
+Waterfall
+Abandoned village
+Tree with a large hole in it
+Toppled statue of <Deity>
+Landslide of shale and gravel
+Steep-sided valley with blue flowers
+Beach strewn with black seashells
+Broken remains of a watchtower
+Road marker pointing east
+Dilapidated hunter's shack
+Crossroads
+Hand-cut stairway into the hillside
+The canyon with natural stairs leading down
+
+d8 - Then...
+Go North for 1-4 miles
+Go South for 1-4 miles
+Go East for 1-4 miles
+Go West for 1-4 miles
+Go Northeast for 1-4 miles
+Go Northwest for 1-4 miles
+Go Southeast for 1-4 miles
+Go Southwest for 1-4 miles
+
+d20 - Until you find the...
+Rock shaped like a heart
+Mountain shaped like a bird's head
+Petrified forest
+Salt lake
+Dried up swampland
+Broken bridge
+Old abandoned mill
+The ruined tower of <famous mage>
+The ancient cemetary
+The mossy limestone cliffs
+The old granite quarry
+The abandoned campgrounds
+The vandalized statue of <former ruler>
+The crossroads
+The road marker pointing West
+Shipwreck of the SS <name>
+Minaret
+Quicksand
+Hills honeycombed with caves
+Old King's Forest
+
+d8 - Then...
+Go North for 1-4 miles
+Go South for 1-4 miles
+Go East for 1-4 miles
+Go West for 1-4 miles
+Go Northeast for 1-4 miles
+Go Northwest for 1-4 miles
+Go Southeast for 1-4 miles
+Go Southwest for 1-4 miles
+
+d20 - You'll find the treasure...
+Buried at the foot of a cliff
+Buried under a mighty oak tree
+Buried under some tower ruins
+Buried under a pile of skulls
+Buried in the grave of <famous person>
+Hidden at the top of an old tower
+Hidden behind an old painting
+Hidden at the bottom of an old rabbit's warren
+Hidden in the bole of an ancient elm tree
+Hidden in a shipwreck's hold
+Guarded by assassins
+Guarded by monsters
+Guarded by soldiers
+Guarded by spirits
+Guarded by a big monster
+Protected by magical wards
+Protected by astral locks
+Protected by physical traps
+Protected by necromantic curses
+Protected by spiritual prayers
