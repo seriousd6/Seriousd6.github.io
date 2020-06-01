@@ -160,6 +160,130 @@ function findCard() {
     document.getElementById("Card").innerHTML = searchArray(deckOfAllTheThings)
 }
 
+
+function treasureMap() {
+    let start = [
+        `big cracked boulder`,
+        `lightning-blasted oak tree`,
+        `rock shaped like a horse`,
+        `stone wall with a piece of volcanic glass`,
+        `exact center of the village/town/city`,
+        `statue of <famous person>`,
+        `shipwreck of the SS <name>`,
+        `bones of the black dragon`,
+        `cavern near the waterfall`,
+        `top of the volcano`,
+        `exact center of the lake`,
+        `abandoned Temple`,
+        `old Fort`,
+        `old standing circle`,
+        `road marker leading south`,
+        `exact center of the longest bridge`,
+        `hangman's scaffold`,
+        `king's/queens throne room`,
+        `crossroads`,
+        `largest tomb in the cemetary`,
+    ]
+    let then = [
+        `Go north for ${1 +rollDice(4)} mile(s)`,
+        `Go south for ${1 +rollDice(4)} mile(s)`,
+        `Go east for ${1 +rollDice(4)} mile(s)`,
+        `Go west for ${1 +rollDice(4)} mile(s)`,
+        `Go northeast for ${1 +rollDice(4)} mile(s)`,
+        `Go northwest for ${1 +rollDice(4)} mile(s)`,
+        `Go southeast for ${1 +rollDice(4)} mile(s)`,
+        `Go southwest for ${1 +rollDice(4)} mile(s)`,
+    ]
+    let until = [
+        `mountain shaped like a tooth`,
+        `hill shaped like a saddle`,
+        `cliffs of red stone`,
+        `tiny caves in a white hill`,
+        `old fortress ruins`,
+        `dried up creekbed`,
+        `swift-running river`,
+        `waterfall`,
+        `abandoned village`,
+        `tree with a large hole in it`,
+        `toppled statue of <Deity>`,
+        `landslide of shale and gravel`,
+        `steep-sided valley with blue flowers`,
+        `beach strewn with black seashells`,
+        `broken remains of a watchtower`,
+        `road marker pointing east`,
+        `dilapidated hunter's shack`,
+        `crossroads`,
+        `hand-cut stairway into the hillside`,
+        `the canyon with natural stairs leading down`,
+    ]
+    let thenTwo = [
+        `go north for ${1 +rollDice(4)} mile(s)`,
+        `go south for ${1 +rollDice(4)} mile(s)`,
+        `go east for ${1 +rollDice(4)} mile(s)`,
+        `go west for ${1 +rollDice(4)} mile(s)`,
+        `go northeast for ${1 +rollDice(4)} mile(s)`,
+        `go northwest for ${1 +rollDice(4)} mile(s)`,
+        `go southeast for ${1 +rollDice(4)} mile(s)`,
+        `go southwest for ${1 +rollDice(4)} mile(s)`,
+    ]
+    let untilTwo = [
+        `rock shaped like a heart`,
+        `mountain shaped like a bird's head`,
+        `petrified forest`,
+        `salt lake`,
+        `dried up swampland`,
+        `broken bridge`,
+        `old abandoned mill`,
+        `the ruined tower of <famous mage>`,
+        `the ancient cemetary`,
+        `the mossy limestone cliffs`,
+        `the old granite quarry`,
+        `the abandoned campgrounds`,
+        `the vandalized statue of <former ruler>`,
+        `the crossroads`,
+        `the road marker pointing West`,
+        `shipwreck of the SS <name>`,
+        `minaret`,
+        `quicksand`,
+        `hills honeycombed with caves`,
+        `old King's Forest`,
+    ]
+    let thenThree = [
+        `go north for ${1 + rollDice(4)} mile(s)`,
+        `go south for ${1 +rollDice(4)} mile(s)`,
+        `go east for ${1 +rollDice(4)} mile(s)`,
+        `go west for ${1 +rollDice(4)} mile(s)`,
+        `go northeast for ${1 +rollDice(4)} mile(s)`,
+        `go northwest for ${1 +rollDice(4)} mile(s)`,
+        `go southeast for ${1 +rollDice(4)} mile(s)`,
+        `go southwest for ${1 +rollDice(4)} mile(s)`,
+    ]
+    let xMarks = [
+        `buried at the foot of a cliff`,
+        `buried under a mighty oak tree`,
+        `buried under some tower ruins`,
+        `buried under a pile of skulls`,
+        `buried in the grave of <famous person>`,
+        `hidden at the top of an old tower`,
+        `hidden behind an old painting`,
+        `hidden at the bottom of an old rabbit's warren`,
+        `hidden in the bole of an ancient elm tree`,
+        `hidden in a shipwreck's hold`,
+        `guarded by assassins`,
+        `guarded by monsters`,
+        `guarded by soldiers`,
+        `guarded by spirits`,
+        `guarded by a big monster`,
+        `protected by magical wards`,
+        `protected by astral locks`,
+        `protected by physical traps`,
+        `protected by necromantic curses`,
+        `protected by spiritual prayers`,
+    ]
+
+    document.getElementById("Treasure Map").innerHTML = `The map starts at the ${searchArray(start)}. ${searchArray(then)} until you find the ${searchArray(until)}. Then ${searchArray(thenTwo)} until you find ${searchArray(untilTwo)}. Lastly ${searchArray(thenThree)} and you will find the treasure ${searchArray(xMarks)}.`
+}
+
 function reload() {
     location.reload()
 }

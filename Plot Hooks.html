@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
     <script src="js/plothooks.js"></script>
+    <script src="js/NPC reaction Tables.js"></script>
 
 </head>
 
@@ -36,13 +37,49 @@
             background-color: rgba(223, 84, 3, 0.151);
             outline: 1px dotted orangered;
         }
+        
+        .npc {
+            background-color: rgba(3, 190, 223, 0.26);
+            outline: 1px dotted rgb(2, 246, 246);
+        }
     </style>
+
 
     <div class="container-xl">
         <div class="row">
             <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
         </div>
-        <h2>Class</h2>
+        <h5>NPC Reactions</h5>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-dark" onclick="hostile()+reload()">Hostile</button>
+                <button type="button" class="btn btn-danger" onclick="unhappy()+reload()">Unhappy</button>
+                <button type="button" class="btn btn-warning" onclick="disgruntled()+reload()">Disgruntled</button>
+                <button type="button" class="btn btn-secondary" onclick="neutral()+reload()">Neutral</button>
+                <button type="button" class="btn btn-light" onclick="pleased()+reload()">Pleased</button>
+                <button type="button" class="btn btn-primary" onclick="happy()+reload()">Happy</button>
+                <button type="button" class="btn btn-success" onclick="friendly()+reload()">Friendly</button>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-light" type="button" onclick="reaClear()">Reaction</button>
+            <div class="col npc">
+                <div class="row" id="Reaction"></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-light" type="button" onclick="motivation()">Motivation</button>
+            <div class="col npc" id="Motivation"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-light" type="button" onclick="area()">Area Status</button>
+            <div class="col npc" id="Area Status"></div>
+        </div>
+
+        <h5>Class</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="paladin()">Paladin</button>
             <div class="col orange" id="Paladin"></div>
@@ -88,15 +125,17 @@
             <div class="col orange" id="Warlock"></div>
         </div>
     </div>
-    <h2>Generic</h2>
+
     <div class="container-xl">
+        <h5>Generic</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="generic()">Generic</button>
             <div class="col orange" id="Generic"></div>
         </div>
     </div>
-    <h2>Location</h2>
+
     <div class="container-xl">
+        <h5>Location</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="jungle()">Jungle</button>
             <div class="col orange" id="Jungle"></div>
@@ -118,8 +157,9 @@
             <div class="col orange" id="Mountain"></div>
         </div>
     </div>
-    <h2>City</h2>
+
     <div class="container-xl">
+        <h5>City</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="arts()">Arts</button>
             <div class="col orange" id="Arts"></div>
@@ -150,9 +190,9 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>
