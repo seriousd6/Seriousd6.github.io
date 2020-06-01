@@ -622,3 +622,7 @@ function findCard() {
     ]
     document.getElementById("Card").innerHTML = searchArray(deckOfAllTheThings)
 }
+
+function reload() {
+    location.reload()
+}
