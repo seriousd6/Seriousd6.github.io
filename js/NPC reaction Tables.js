@@ -347,3 +347,7 @@ let areaStatus = [
 function area() {
     document.getElementById("Area Status").innerHTML = searchArray(areaStatus);
 }
+
+function reload() {
+    location.reload()
+}
