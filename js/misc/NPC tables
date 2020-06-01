@@ -1,0 +1,430 @@
+
+NPC Situation Tables
+
+    Let rumorType = [
+        "False (Appears as Specific or Exact)", "Vague", "Mixed", "General", "Specific", "Exact"
+        ]
+
+    Let npcReaction = [
+        Hostile, now a nemesis. Gives Major Bane (F). Will pursue PC until dead.
+        Unhappy, gives Minor Bane (E), 80% will shift to hostile on next encounter.
+        Disgruntled. Gives false information. 40% will shift to unhappy on next encounter.
+        Gives Personal (A) or Local Information (B), as requested 
+        Pleased. Shares Rumour (Use Ladder). 40% will shift to happy on next encounter
+        Happy. Gives Minor Boon (H). 80% will shift to friendly on next encounter
+        Friendly, now an ally. Gives Major Boon (G). Will protect PC until dead.
+        ]
+
+    let npcMotivation = [
+        On The Run (J) from Enemy (Q -Minor, R – Major) for Good (O) or Evil Deeds (P)
+        On a Vendetta (I) versus an Enemy (Q -Minor, R - Major)
+        Searching for Local (B), Personal (A) or Item Information (C).
+        Buying / Selling (K) at nearby location, then returning Home (L)
+        On a local Minor Quest (M) for Treasure (U)
+        On a Minor (M) or Major Quest (N) for Minor Enemy (Q)
+        On a Major Quest (N) for Treasure (U)
+        ]
+
+    let areaStatus = [
+        Faithtouched (AA) or Weavetouched (BB)
+        Home of (Evil, Neutral) Faction (D)
+        Home to Monster (Roll on Own Encounter Table). Nearby is a Minor Treasure (U)
+        Benign area of NPC population or is abandoned. No treasure
+        Home of (Good, Neutral) Faction (D)
+        Home to Monster (Roll on Own Encounter Table). Nearby is a Major Treasure (U)
+        Is Haunted (S) or Cursed (T)
+        ]
+
+    let APersonalInformation = [
+        Gives secret that leads to Major Boon (G)
+        Describes a family Emergency (V)
+        Passes along a rumor (check Ladder) about the PC as told by a friend or Enemy  (Q)(R)
+        Gives information that confirms a suspicion held by the PC or the Party
+        Passes along a Minor Warning (W) that concerns the PC or the Party
+        Gives Exact Knowledge about information the PC or Party has been investigating
+        Passes along knowledge of a Major Warning (W) to the PC
+        ]
+
+    let BLocalInformation = [
+        Tells of Major Boon (G) concerning the area
+        Tells of Emergency (V)
+        Passes along knowledge of a Social Event (CC)
+        Gives information about an Enemy (Q) (R) threat
+        Passes along information of a Political Event (Y)
+        Gives information about Religious Event (Z)
+        Tells of Major Bane (F)
+        ] 
+
+    let CIteminformation = [
+        Artifact (Single object (95%), or part of a Set (5%))
+        Jewelry, Chest, Map, Bucket, Lantern or Jar (d6)
+        Armor (Single piece (90%), or part of a Set(10%))
+        Missile or Melee Weapon (Common (60%), Uncommon (25%), Rare (5%)
+        Rod, Staff, Wand, Sceptre, Crown or Gemstone (d6)
+        Statue, Painting, Instrument, Sheet Music, Article of Clothing (d6)  
+        Replacement Body Part (75%) or Organ (25%)
+        ]
+
+    let DFaction = [
+        Mystery Cult (CC)
+        Slavers or brutal overlords
+        Religious warriors or clerics
+        Law and Justice officers or warriors
+        Corrupt mercenaries or rogues
+        Merchants collective or guild
+        Cabal of mages
+        ]
+
+    let EMinorBane =[ 
+        Disease or pestilence
+        Buildings destroyed
+        Enemy (Q) (R) of the PC or Party is actively opposing them 
+        Loss of items of value
+        Curse (T) has been activated
+        People have been injured
+        Haunted (S)
+
+    let FMajorBane = [
+        Bad luck (random penalties[disadvantage] to random die rolls) for 1 month or 10 combats
+        Outbreak of large plague or pestilence
+        A large loss of monetary wealth
+        Many items of value have been lost or destroyed
+        Many buildings have been damaged or the land has been damaged
+        Many people have been killed
+        PC or Party has attracted the attention of an Enemy (Q) (R)
+        ]
+
+    let GMinorBoon = [
+        Enemy (Q) (R) has been temporarily thwarted
+        Minor magic item obtained
+        Small amount of money or resources obtained
+        Magicked gemstone obtained (use 0-level or Cantrip effect, 1/day, as level 1 caster)
+        A minor property is awarded or an improvement to a minor property is granted
+        Personal relationship established with potential ally or social status increases with ally
+        For one day, all activities are easier. +1
+        ]
+
+    let HMajorBoon = [
+        Divine intervention grants a Treasure (U)
+        True Knowledge of a Treasure (U) location is obtained 
+        Large amount of monetary wealth is granted
+        An existing skill or knowledge is improved (+1) or a new skill is obtained
+        A personal relationship is improved to 100%
+        A major property is awarded or an improvement to a major property is granted
+        PC or Party is pointed towards an Artifact (C) (“Specific” on the Rumor Ladder)
+        ]
+
+    let IVendetta = [ 
+        Wrongfully jailed or persecuted
+        Racial crusade
+        Revenge for theft or deception
+        Revenge for personal death(s)
+        Religious crusade (local or part of a Faithquest)
+        Political persecution
+        Social status destroyed or socially exiled
+        ]
+
+    let JOnTheRun= [
+        Committed political crime
+        Escaped from detention for crime
+        Committed minor crime of theft, fraud or assualt
+        Committed major crime of theft, murder or rape (or this can be substituted with anarchy)
+        Committed religious crime
+        Got tangled up with a Mystery Cult (CC)
+        Unjustly accused
+        ]
+
+    let KBuyingOrSelling = [
+        Cloth: Raw or Finished
+        Wood: Raw, Finished, Furniture, Containers, Paper
+        Food: Random types (air, sea, land) from random culture
+        Beverages: Brewed (Ales), Distilled (Spirits), Raw (Juice), Dried (Teas) or Water 
+        Spice: Salt, Random spice, Random herb, Il(legal) drugs, or Medicine
+        Minerals: Raw or Refined or Gems
+        Luxury: Art, Rare Commodity or Masterwork items/weapons/armor
+        ]
+
+    let LHomeland = [
+        1-3: (fill in NPC homeland from your world)
+        ]
+
+    let MMinorQuest = [ 
+        Commune with avatar
+        Map a location 
+        Deliver a message
+        Recover a minor Treasure (U)
+        Deliver a package
+        Destroy a minor monster/cleanse a tainted area
+        Rediscover a local forgotten place
+        ]
+
+    let NMajorQuest = [  
+        Awaken a sleeping NPC
+        Recover or destroy an Artifact (C)
+        Aid or Slay an NPC
+        Slay a monster
+        Liberate or enslave an NPC
+        Discover a lost foreign land
+        Save or destroy the world
+        ]
+
+    let OGoodDeeds = [
+        Freeing an innocent from imprisonment
+        Correct a long-standing error
+        Helping unfortunates with financial aid
+        Spreading a charitable political message or religious doctrine
+        Helping local children or relatives to overcome oppression
+        Heal the sick and comfort the dying
+        Using Artifact (C) to spread goodwill
+        ]
+
+    let PEvilDeeds = [
+        Humiliate and torture a rival
+        Collect an extortion's payoff and punish the offender
+        Steal from friends or family
+        Badly beat or kill a rival
+        Destroy a business, financially or physically
+        Agitate a harmful political message or religious doctrine
+        Spread lies and rumors against an individual or group of a shocking nature
+        ]
+
+    let QMinorEnemy = [
+        Snubbed ex-friend
+        School bully
+        Business rival
+        Local thug
+        Romantic rival
+        Spiteful boss or teacher
+        Family member 
+        ]
+
+    let RMajorEnemy = [
+        A politician or political group
+        A powerful rogue/thug/assassin
+        A noble's family
+        A religious cult, sect, group, or temple
+        A powerful mage or cabal
+        A mercenary group
+        A mysterious NPC 
+        ]
+
+    let SHaunted = [
+        Spirits locked in battle
+        A tortured revenant who must relive its brutal murder
+        A benign phantom who provides small comforts and messages
+        A crazed banshee 
+        A spiteful haunt, who appears as dead loved ones and friends 
+        A playful poltergeist, a childish trickster
+        An evil ghost, driven to consume lifeforce in a bid to regain life
+        ]
+
+    let TCursed = [
+        Time moves at a different speed
+        Sleep and rest is impossible
+        Extreme heat or cold
+        An overwhelming aura of helplessness and suffering
+        Plagues of vermin
+        Foul weather
+        Corruption of reality
+        ]
+
+    let UTreasure = [
+        Potions
+        Gems
+        Weapons or armor
+        Coins
+        Wands, Rods, and Staves
+        Clothing
+        Artifact (C)
+        ]
+
+    let VEmergency = [
+        Political power is dead or arrested/exiled
+        Business in trouble
+        Family friend ill or mad or dead
+        Hometown has been attacked or enslaved or destroyed
+        Disease epidemic 
+        Close relative or spouse has done something terrible
+        All resources or income has been stolen or destroyed
+        ]
+
+    let WWarning = [
+        A powerful enemy is coming for you
+        An enemy is plotting against you
+        The government is investigating you
+        Friend or lover or spouse is lying to you
+        Co-worker or business partner is stealing from you
+        Rival is spreading terrible lies and rumors
+        An avatar is coming
+        ]
+
+    let XSocialEvents = [
+        An invitation to an upcoming event (party, play, etc..) given by a mysterious stranger. 
+        A local revival of (insert deity) followers is nearby, and drawing crowds
+        A challenge has been issued by the (local ruler), calling for Feats of (insert ability)
+        The (guild-house) is permitting new members to join, decided by a contest
+        A circus has come to town. Rumors are they are taking on workers
+        A fancy dress party for the (local ruler) has drawn all the wealthy in the area
+        The marriage/birth/death/divorce/something else of (local ruler) or (ruler's family/spouse)
+        ]
+
+    let YPoliticalEvents = [
+        Opposition gains control through a coup
+        A downshift in the support of financial backers has driven prices way up
+        A noble is accused of a terrible crime
+        A marriage between noble houses has been announced, rumors of treachery persist
+        A shift in the government's stance on taxes has been taken badly by the populace
+        Corruption rumors abound, and evidence of murder and treachery is begin sought
+        Powerful figure has been killed or exiled or worse
+        ]
+
+    let ZReligiousEvents = [
+        Avatar issues sanctions
+        Open warfare against temple enemies is now public knowledge
+        New edict/sanction is announced, causing a radical shift in the local population's mood
+        An expedition to the Heathen Lands has been announced
+        Temple leaders have declared a peace agreement and a Summit of Faith is announced.
+        An artifact or holy relic has been found/destroyed and a Call to the Faithful has gone out
+        Avatar appears and denounces/blesses the faithful and punishes/rewards with a bane/boon
+        ]
+
+    let AAFaithTouched = [
+        Dreams of the lives of those who gave their lives in sacrifice for the Faith
+        All skills relating to the practice of the faith are more easily accomplished. +1
+        Hallucinations of the landscape of the deity's Plane haunt the waking mind
+        Those not of the Faith will be psionically attacked by the environment, driving them out
+        Animal servants of the deity roam the grounds here, protecting from heathen intruders
+        All divine spells are cast here as if the caster was 1 level higher. 
+        Manifestation of an Avatar. Its mood depends on the PCs interaction
+        ]
+
+    let BBWeaveTouched = [
+        A living mask of a Jester can be found here, hidden, but waiting. The parasite sleeps.
+        All skills relating to the practice of the arcane mysteries are more easily accomplished. +1
+        Time and space are on vacation here. Non-causality is a possibility. Dimensionally weird.
+        All arcane objects are recharged here, but can only be used once per item per location
+        Astral and ethereal creatures are feeding from this bountiful font. They are hostile
+        All arcane spells are cast here as if the caster were 1 level higher
+        Wild magic regularly spawns here, bathing the area with random level spells and duration
+        ]
+
+    let CCMysteryCult = [
+        Trying to return/exile/free/enslave/destroy/rebirth a minor/major deity
+        Collecting objects to trade to a deity for power
+        Thralls under a larger power, acquiring resources, knowledge, manpower for a larger plan
+        Disaffected people angry at inequality. They have resorted to violence and rhetoric
+        Animal worshipers, devoted to returning humanity to a more primal lifestyle
+        Outsiders stealing/killing/trading/enslaving/helping the local populace
+        Wealthy cannibals and defilers, seeking only pleasure for themselves
+        ]
+
+Rumor 
+    Did you hear the news?
+    A Child
+    A Fat merchant
+    A Temple priest
+    A Sailor
+    A Soldier
+    A Magician
+    A Noble
+    A Rogue
+    A Crazy monk
+    A Drunken farmer
+
+    1d10 AND THEY
+    Got drunk
+    Got washed out to sea
+    Got stuck on a runaway horse
+    Found an old well
+    Disappeared for 3 days
+    Found an old tomb
+    Met a weird stranger
+    Found a magic item
+    Were sleepwalking
+    Walked off into the forest
+
+    1d10 AND DISCOVERED
+    A new disease
+    A powerful artifact
+    A cursed item
+    A sleeping monster
+    A treasure map
+    A hero/villain thought dead, returned to life
+    A book of secrets
+    A key to a vast fortune
+    A supressed truth about the ruling kingdom
+    A door to another Plane
+
+    1d10 AND NOW
+    People are disappearing!
+    People are sick!
+    The king has decreed strange new laws!
+    The temple has issued strange new tenets!
+    The sun might not come back up!
+    The moon might fracture!
+    The world might be invaded!
+    People are having bad dreams every night!
+    People are unable to sleep!
+    People are afraid to come outside!
+
+
+
+    Motivations
+    d4 - You Asked, So I'll
+    Tell you a blatant lie, because I don't like you or because I'm afraid.
+    Tell you a half-truth, because I don't trust you or because I'm afraid.
+    Tell you the truth, but mix up all the details, because I want to trust you, but I'm afraid.
+    Tell you the truth, because I like and trust you, or I need help.
+
+    d20 - Why Am I Doing This?
+    To gain wealth.
+    To gain power.
+    To fulfill a promise.
+    To get revenge.
+    To get justice.
+    For the glory.
+    To gain the favor of someone.
+    To help a friend.
+    To stop an event.
+    To pay a debt.
+    To solve a mystery.
+    To escape from a problem.
+    To thwart an enemy.
+    To expose the truth.
+    To cover up the truth.
+    To gain my freedom.
+    To liberate others.
+    To oppress others.
+    To keep the status quo.
+    To upset the status quo.
+
+
+    d4 - When Will I Give Up?
+    As soon as I meet a serious setback or if I, or anyone else gets hurt.
+    As soon as there are a lot of obstacles, or if I, or anyone else gets seriously hurt.
+    As soon as someone dies.
+    Never. I will die before I give up.
+
+Villain Motivation
+    Betrayal - the person feels that they have been wronged and deeply desire revenge, thinking it will make them feel better. We all know that it rarely does. This leads to feelings of injustice and that can spiral out of control and lead to all sorts of damaging thoughts that can escalate into treating others as if they have no value.
+    Disenfranchisement - Someone who feels that they have no place in society can become deeply bitter and that can escalate to any number of emotional outlooks - anger, hatred, rage, rape, murder, terrorism, zealotry, and nationalism.
+    Trauma - life events that have shattered someone's psyche are probably the most common reason people "go bad". They might have been abused as children or adults - physically, sexually or psychologically. This sets up a cycle of depression and anger that can sometimes spiral out of control and the next thing you know they are walking the streets with a rifle.
+    Envy/Greed - when people are denied the things they feel they deserve, they can sometimes feel deeply resentful and start to make bad decisions in an effort to get what they want. This always leads to a grab for power, and as we all know, absolute power corrupts absolutely.
+
+
+    Goal
+    Get revenge
+    Steal an item
+    Murder an NPC/PC
+    Become the Boss of a Company/Guild/Whatever
+    Become Wealthy
+    Raise an Army to Conquer an Area
+    Murder a Particular Species/People
+    Enslave a Particular Species/People
+    Start a Rebellion Against Whatever
+    Build/Steal an artefact
+    Become the King/Queen/Whatever
+    Take over the Empire(s)
+    Raise a Dead/Sleeping/Banished God
+    Become a Deity/Lich/Whatever
+    Destroy/Remake the World

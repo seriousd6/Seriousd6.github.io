@@ -53,8 +53,6 @@ function toWords(s) {
 function modify(number) {
     return Math.floor(number * (.85 + Math.random() * .4))
 };
-let
-
 
 function partySize() {
     return 3 + rollDice(2)

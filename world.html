@@ -26,6 +26,7 @@
                 </li>
                 <li class="breadcrumb-item "><a href="/adventure.html">Adventure</a></li>
                 <li class="breadcrumb-item"><a href="./loot.html">Loot</a></li>
+                <li class="breadcrumb-item"><a href="/Plot Hooks.html">Plot Hooks</a></li>
             </ol>
         </nav>
     </div>
@@ -35,22 +36,46 @@
             background-color: rgba(144, 238, 144, 0.253);
         }
     </style>
+    <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear All</button>
+    <h5>Weather</h5>
+    <div class="container-xlg">
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="springWeather()">Spring</button>
+            <div class="col" id="Spring"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="summerWeather()">Summer</button>
+            <div class="col" id="Summer"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="fallWeather()">Fall</button>
+            <div class="col" id="Fall">
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-success" type="button" onclick="winterWeather()">Winter</button>
+            <div class="col" id="Winter"></div>
+        </div>
+    </div>
+    <h5>World Builder</h5>
     <div class="container-xlg">
         <div class="row">
             <button class="col-2 btn btn-outline-success" type="button" onclick="buildWorld()">Roll For World</button>
-            <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
+
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-success" type="button" onclick="origin()">Origin</button>
             <div class="col" id="Origin"></div>
+            <button class="col-0  btn btn-light" type="button" onclick="cOrigin()">Reset</button>
         </div>
         <div class="row">
-            <button class="col-2  btn btn-outline-success" onclick="comp()">Composition</button>
+            <button class="col-2  btn btn-outline-success" type="button" onclick="comp()">Composition</button>
             <div class="col" id="Comp"></div>
+            <button class="col-0  btn btn-light" type="button" onclick="cComp()">Reset</button>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-success" type="button" onclick="age()">Age</button>
-            <div class="col" class="container-md" id="Age">
+            <div class="col" id="Age">
             </div>
         </div>
         <div class="row">
@@ -78,6 +103,9 @@
             <div class="col" id="Intera"></div>
         </div>
     </div>
+
+
+
 
 
 
