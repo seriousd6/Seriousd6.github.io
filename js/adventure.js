@@ -117,3 +117,52 @@ function adventureBuilder() {
 function reload() {
     location.reload()
 }
+
+let crimeLocation = [
+    "at the tavern", "at the crossroads", "at a private residence", "at the cemetary", "at the theater/gallery", "in an alleyway", "at the docks", "in the craftshop", "in the retailshop", "in an outdoor area",
+]
+let crime = [
+    "assassination", "theft", "murder", "arson", "kidnapping", "property destruction", "massacre", "terrorism", "possible suicide", "accidental death",
+]
+let clues = [
+    "adropped personal item", "an eyewitness (unreliable)", "a body part/evidence", "some arcane residue", "an eyewitness (reliable)", "a footprint (animal, monster, humanoid)", "a vehicle track", "a dropped weapon", "a dropped piece of correspondence/papers", "some psionic residue",
+]
+
+let perpetrators = [
+    "bandits/rogues", "local rowdies", "lone evildoer", "group of evildoers", "classed npcs", "solo monster", "group of monsters", "politician/royal", "spirit creature", "local inhabitant(s)", "nobody"
+]
+
+let crimeMotive = [
+    "for revenge", "to complete a contract on this person", "it being a crime of passion", "due to political ties", "due to a curse/geas", "because it was a good opportunity/serial", "for survival", "because they were coerced",
+]
+let interestedParties = [
+    "a family member", "a spouse/lover (and ex-)", "a guild", "government involvement", "a religious institution", "the people", "an influential local", "a stranger",
+]
+
+let outsideElements = [
+    "strange lights/noises", "local faction interest", "missing elements", "fact this area is haunted/cursed", "unusual/unseasonal weather", "animal oddities", "odd/outsider individual", "possibility that the crime scene has been staged",
+]
+
+let timeSinceCrime = [
+    "a few minutes", "an hour", "about 4 hours", "about 8 hours", "about 24 hours", "about 48 hours", "about a week", "an unknownamount of time",
+]
+
+let currentWeather = [
+    "hot and windy", "sunny and dry", "rainy", "storming", "snowing", "cold and windy", "sleeting", "foggy",
+]
+
+let timeOfDay = [
+    "in the wee hours of the morning", "at sunrise/morning", "at about 8 am", "around noon", "in the afternoon", "during dusk/evening", "at night", "around midnight",
+]
+let timeOfDaytwo = [
+    "the wee hours of the morning", "during sunrise/morning", "about 8 am", "around noon", "early afternoon", "during dusk/evening", "late at night", "around midnight",
+]
+
+function crimeScene() {
+    return "The case of the " + searchArray(crime) + " " + searchArray(crimeLocation) + ". The main piece of evidence left behind by the perpetrator(s) (" + (searchArray(perpetrators)) + ") is " + searchArray(clues) + ". We've got a feeling that " + searchArray(interestedParties) + " may play a part in this, specifically " + searchArray(crimeMotive) + ", but there's the " + searchArray(outsideElements) + " which still needs to be accounted for. We peg this happened " + searchArray(timeSinceCrime) + " ago, which was " + searchArray(timeOfDay) + ". At the time of the the crime the weather was " + searchArray(currentWeather) + "."
+}
+console.log(crimeScene())
+
+function printCrime() {
+    document.getElementById("Crime Scene").innerHTML = crimeScene()
+}
