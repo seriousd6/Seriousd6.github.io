@@ -39,8 +39,12 @@
         .pad {
             padding-left: 12px;
         }
+        
+        .padtop {
+            padding-top: .5in;
+        }
     </style>
-    <div class="container-xlg">
+    <div class="container">
         <div class="row">
             <button class="col-2 btn btn-outline-secondary" type="button" onclick="buildTavern()">Roll For Tavern</button>
             <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
@@ -62,6 +66,10 @@
         <div class="row">
             <button class="col-2  btn btn-outline-secondary" onclick="bardFind()">Bard</button>
             <div class="col" id="Bard"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-outline-secondary" onclick="instrumentFind()">Instrument</button>
+            <div class="col" id="Instrument"></div>
         </div>
         <div class="row">
             <button class="col-2  btn btn-outline-secondary" type="button" onclick="drinkFind()">Drink Specialty</button>
@@ -88,7 +96,9 @@
     </div>
 
 
-
+    <div class="padtop">
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>

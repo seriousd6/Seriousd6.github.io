@@ -35,8 +35,12 @@
             border: 1px outset blue;
             background-color: rgba(173, 216, 230, 0.25);
         }
+        
+        .padtop {
+            padding-top: .5in;
+        }
     </style>
-    <div class="container-xl">
+    <div class="container">
         <div class="row">
             <button class="col-2 btn btn-outline-danger" type="button" onclick="adventureBuilder()">Roll for Adventure</button>
             <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
@@ -81,7 +85,7 @@
             <div class="col blue" id="FF"></div>
         </div>
     </div>
-    <div class="container-xl">
+    <div class="container">
         <h5>Smaller Adventure Ideas</h5>
         <div class="row">
             <button class="col-2 btn btn-outline-primary" type="button" onclick="printCrime()">Crime Scene</button>
@@ -90,7 +94,9 @@
     </div>
 
 
-
+    <div class="padtop">
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>

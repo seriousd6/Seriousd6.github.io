@@ -46,10 +46,13 @@
         .pad {
             padding-left: 12px;
         }
+        
+        .padtop {
+            padding-top: .5in;
+        }
     </style>
 
-
-    <div class="container-xl">
+    <div class="container" id='Clas'>
         <div class="row">
             <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear All</button>
         </div>
@@ -117,7 +120,7 @@
             <div class="col orange" id="Fighter"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-light" type="button" disabled>Sorcerer</button>
+            <button class="col-2 btn btn-light" type="button" onclick="sorcerer()">Sorcerer</button>
             <div class="col orange" id="Sorcerer"></div>
         </div>
         <div class="row">
@@ -130,15 +133,23 @@
         </div>
     </div>
 
-    <div class="container-xl">
+    <div class="container" id='Gen'>
         <h5>Generic</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="generic()">Generic</button>
             <div class="col orange" id="Generic"></div>
         </div>
+        <div class="row">
+            <button class="col-2 btn btn-light" type="button" onclick="kidsQuest()">Kids Quest</button>
+            <div class="col orange" id="kidQuest"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-light" type="button" onclick="ghibliFinder()">Ghibli-Esque</button>
+            <div class="col orange" id="Ghibli"></div>
+        </div>
     </div>
 
-    <div class="container-xl">
+    <div class="container" id='loc'>
         <h5>Location</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="jungle()">Jungle</button>
@@ -162,7 +173,7 @@
         </div>
     </div>
 
-    <div class="container-xl">
+    <div class="container" id='cit'>
         <h5>City</h5>
         <div class="row">
             <button class="col-2 btn btn-light" type="button" onclick="arts()">Arts</button>
@@ -192,6 +203,10 @@
             <button class="col-2 btn btn-light" type="button" onclick="personal()">Personal</button>
             <div class="col orange" id="Personal"></div>
         </div>
+    </div>
+
+    <div class="padtop">
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
