@@ -4,5 +4,29 @@ h1 {
 }
 
 body {
-    background-color: rgba(255,255,255);
+    background-color: rgb(255, 255, 255);
+}
+
+.padtop {
+    padding-top: .5in;
+}
+
+.gold {
+    border: 1px outset goldenrod;
+    background-color: rgba(218, 165, 32, 0.356);
+    outline: 1px dotted black;
+}
+
+.orange {
+    background-color: rgba(223, 84, 3, 0.151);
+    outline: 1px dotted orangered;
+}
+
+.npc {
+    background-color: rgba(3, 190, 223, 0.26);
+    outline: 1px dotted rgb(2, 246, 246);
+}
+
+.pad {
+    padding-left: 12px;
 }
