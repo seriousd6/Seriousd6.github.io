@@ -1,2 +1,2 @@
 # serious6.github.io
-Personal Portfolio Site
+All data is from the reddit D&D community
