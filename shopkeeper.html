@@ -10,61 +10,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
-    <script src="js/loot.js"></script>
+    <script src="js/Shopkeeper.js"></script>
 
 </head>
 
 <body>
-
     <h1>D&D Flavor Generators</h1>
     <div id="breadcrumb">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/index.html">Character/NPC</a></li>
+                <li class="breadcrumb-item"><a href="/index.html">Character/NPC</a>
+                </li>
                 <li class="breadcrumb-item"><a href="/tavern.html">Tavern</a></li>
                 <li class="breadcrumb-item"><a href="/world.html">World</a></li>
                 <li class="breadcrumb-item"><a href="/adventure.html">Adventure</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Loot</a>
-                </li>
+                <li class="breadcrumb-item"><a href="/loot.html">Loot</a></li>
                 <li class="breadcrumb-item"><a href="/plot_hooks.html">Plot Hooks</a></li>
                 <li class="breadcrumb-item"><a href="/setting_builder.html">Setting Builder</a></li>
-                <li class="breadcrumb-item"><a href="/shopkeeper.html">Shopkeeper</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shopkeeper</a>
+                </li>
             </ol>
         </nav>
     </div>
-    <style>
-        .padtop {
-            padding-top: .5in;
-        }
-    </style>
+
+
     <div class="container">
-        <div class="row">
-            <button class="col-2 btn btn-outline-dark" type="button" onclick="reload()">Clear</button>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="weapon()">Weapon</button>
-            <div class="col gold" id="Weapon"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="findHistory()">History</button>
-            <div class="col gold" id="History"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="findScabbard()">Scabbard</button>
-            <div class="col gold" id="Scab"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="findRing()">Ring</button>
-            <div class="col gold" id="Ring"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="findCard()">Deck of All the Things</button>
-            <div class="col gold" id="Card"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-outline-warning" type="button" onclick="treasureMap()">Treasure Map</button>
-            <div class="col gold" id="Treasure Map"></div>
-        </div>
     </div>
 
     <div class="padtop pad">
