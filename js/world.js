@@ -67,6 +67,10 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
+//Reload Page
+function reload() {
+    location.reload()
+}
 
 //page scripts
 function origin() {
@@ -114,11 +118,13 @@ function titan() {
 };
 
 function populate() {
+    document.getElementById("Arches").innerHTML = "";
+    document.getElementById("Intera").innerHTML = "";
     let worldIntSpecies = [
-        "Only " + '@@Placeholder@@' + "species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
+        "Only one species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
     ];
     let worldSpecArchetypes = [
-        "Brute - This species is known for its prodigal strength, near-endless endurance, and dim wittedness.", "Vermin - This species is known for its individual incompetence, short lifespan, and rapid rate of reproduction.", "Agile - This species is known for its incredible dexterity, mind-boggling flexibility, and skill at moving unseen.", "Elder - This species is known for its ancient history, long lifespan, deep wisdom, and keen intellect.", "Comfy - This species is known for its tight-knit families, friendly demeanor, and talent at agriculture.", "Alien - This species is known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.", "Artisan - This species is known for its industriousness, secretive demeanor, and talent at craftsmanship.", "Big/Tiny - This species is known for its physical stature, which is much larger, or smaller than other species.", "Arcane - This species is known for its high affinity for the supernatural, or its seemingly supernatural abilities.", "Collective - This species is known for its intensely hierarchal society, and the huge variation between its castes.", "Mundane - This species is known for its lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
+        "Brute - known for prodigal strength, near-endless endurance, and dim wittedness.", "Vermin - known for individual incompetence, short lifespan, and rapid rate of reproduction.", "Agile - known for incredible dexterity, mind-boggling flexibility, and skill at moving unseen.", "Elder - known for ancient history, long lifespan, deep wisdom, and keen intellect.", "Comfy - known for tight-knit families, friendly demeanor, and talent at agriculture.", "Alien - known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.", "Artisan - known for industriousness, secretive demeanor, and talent at craftsmanship.", "Big/Tiny - known for physical stature, which is much larger, or smaller than other species.", "Arcane - known for high affinity for the supernatural, or seemingly supernatural abilities.", "Collective - known for intensely hierarchal society, and the huge variation between castes.", "Mundane - known for lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
     ];
     let specInterRelat = [
         "Master Race - One species is widely considered to be superior paragons, to which others should defer.", "Enslaved - One species is widely considered to be inferior, and is enslaved to an extent by the other species.", "Race War - The species rarely meet, unless weapons are drawn. There is a long-held and irreconcilable animosity between the species.", "Deep Mistrust - The species shun and avoid one another if possible, though outright violence is uncommon, race riots aren’t unheard of.", "That Part of Town - Members of both species that live in the same region are discouraged from closer association. Any close relationships would mark those involved as pariahs.", "Separate But Equal - The species have no hate for one another, and show their respect by staying out of each other’s way. Though there may be trade, the societies themselves are largely separate.", "Pragmatic - Members of both species are businesslike in their dealings with one another, if it pays off to band together they’ll do so, but they won’t go out of their way to integrate.", "Melting Pot - The species meet, trade, and form alliances fairly cordially, but primarily in trade hubs and major population centers. Sparks fly and cultures blend.", "Amicable - Members of both species get along fairly well, all things considered. There are prejudices, but they are by no means universal.", "Friendly - The species are quite close to one another, and interspecies marriages are not uncommon, though there are some few who’d prefer to remain separate.", "What Species? - Members of both species are blind to their differences, and view themselves as one and the same in all matters, save mutually exclusive physical needs, of course.", "The Same Species - Members of both species are in fact members of the same species, and can’t exist without one another, each is either different phases in the same species’ lifespan, or comprised of only gender that requires the other to reproduce. If deemed appropriate, this table may be rerolled to determine the relations between each part of the species.",
@@ -139,16 +145,12 @@ function populate() {
     function findSpec() {
         let intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
         let rawString = worldIntSpecies[intSpecIndex];
-        let otherSpecies = (rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
+        let otherSpecies = (1 + rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
         let numbSpecInWords = toWords(otherSpecies);
         let fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
         document.getElementById("Species").innerHTML = fixedString;
-        console.log(fixedString)
         if (intSpecIndex >= 6) {
             let numbSpecies = otherSpecies;
-            return numbSpecies
-        } else if (intSpecIndex === 0) {
-            let numbSpecies = 1
             return numbSpecies
         } else {
             let numbSpecies = 1 + otherSpecies;
@@ -157,28 +159,32 @@ function populate() {
 
     }
     let numbSpecies = findSpec()
-    console.log(numbSpecies)
 
     function findSpecArchs() {
         let numArchs = numbSpecies;
         let finalArchs = shuffle(worldSpecArchetypes).slice(0, numArchs)
-        let chosenArchs = finalArchs;
-        return chosenArchs
+        return finalArchs
     }
     let archetypes = findSpecArchs()
-
-    document.getElementById("Arches").innerHTML = JSON.stringify(archetypes, null, 4);
+    archetypes.forEach(function(item) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(item);
+        li.appendChild(text);
+        document.getElementById("Arches").appendChild(li);
+    });
 
     function findInteractions() {
         if (numbSpecies === 1) {
-            return 'There are no other species, this race has taken over the world.'
+            let output = 'There are no other species, this race has taken over the world.'
+            return output
         } else if (numbSpecies === 2) {
             let interaList = specInterRelat;
             shuffle(interaList);
-            var finalIntera = interaList.slice(0, 1)
-            return 'There is only one relationship between these two species:' + '#1: ' + finalIntera[0];
+            let finalIntera = interaList.slice(0, 1)
+            let output = 'There is only one relationship between these two species: ' + '#1: ' + finalIntera[0];
+            return output
         } else {
-            let numOfInteract = Math.floor((numbSpecies / 1.5) + .5);
+            let numOfInteract = Math.floor((numbSpecies / 1.5) + .6);
             let interaList = specInterRelat;
             shuffle(interaList);
             var multipleIntera = interaList.slice(0, numOfInteract)
@@ -186,8 +192,18 @@ function populate() {
         };
     };
     let interactions = findInteractions()
-    console.log(findInteractions());
-    document.getElementById("Intera").innerHTML = JSON.stringify(interactions, null, 4);
+
+    if (Array.isArray(interactions) === true) {
+        interactions.forEach(function(item) {
+            var li = document.createElement("li");
+            var text = document.createTextNode(item);
+            li.appendChild(text);
+            document.getElementById("Intera").appendChild(li);
+        });
+    } else {
+        document.getElementById("Intera").innerHTML = interactions
+    }
+    console.log(interactions)
 };
 
 function buildWorld() {
@@ -200,9 +216,7 @@ function buildWorld() {
     populate();
 }
 
-function reload() {
-    location.reload()
-}
+
 
 //Weather
 let windDirection = [
@@ -345,3 +359,4 @@ let wildMagic = [
 function findSurge() {
     document.getElementById("Surge").innerHTML = searchArray(wildMagic)
 }
+populate()
