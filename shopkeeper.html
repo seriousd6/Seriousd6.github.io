@@ -33,43 +33,71 @@
         </nav>
     </div>
 
-
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn primary" type="button" onclick="shopkeeps()">Shop Premise</button>
+            <div class="col" id="Premise"></div>
+        </div>
+        </br>
+        <div class="row">
+            <button class="col-2 btn primary" type="button" onclick="traderInfo()">Traits</button>
+            <div class="col">
+                <div class="row pad" id="Personality"></div>
+                <div class="row pad" id="Bond"></div>
+                <div class="row pad" id="Ideal"></div>
+                <div class="row pad" id="Flaw"></div>
+            </div>
+        </div>
+    </div>
+    </br>
+    <div class="container-xl" style="background-color: black; color: aliceblue;">Shoutout to <a href="http://walrock-homebrew.blogspot.com">Walrock Hombrew</a> for these traders and inventories. I picked the PDF up for free at <a href="https://www.dmsguild.com/browse.php?author=Walrock%20Homebrew">DMSGUILD</a>!</div>
+    </br>
     <div class="container-xl">
         <div class="row">
-            <div class="col-3">
-                <nav class="nav flex-column">
-                    <button type="button" onclick="drinks()">Alcohol and Refreshment</button>
-                    <button type="button" onclick="animals()">Animals (Mounts and Pets)</button>
-                    <button type="button" onclick="books()">Books and Maps</button>
-                    <button type="button" onclick="flowers()">Flowers and Seeds</button>
-                    <button type="button" onclick="food()">Food and Animal Parts</button>
-                    <button type="button" onclick="decor()">Furniture and Interior Decor</button>
-                    <button type="button" onclick="fashion()">High Fashion</button>
-                    <button type="button" onclick="jeweler()">Jewelry and Gems</button>
-                    <button type="button" onclick="misc()">Knick Knacks</button>
-                    <button type="button" onclick="leather()">Leather Worker</button>
-                    <button type="button" onclick="mech()">Mechanical Contraptions</button>
-                    <button type="button" onclick="armor()">Medium/ Heavy Armor</button>
-                    <button type="button" onclick="alch()">Potions, Poisons, Herbs</button>
-                    <button type="button" onclick="religious()">Religious Idols and Blessings</button>
-                    <button type="button" onclick="instruments()">Songs and Instruments</button>
-                    <button type="button" onclick="spells()">Spell Tomes and Scrolls</button>
-                    <button type="button" onclick="fence()">Thieving Supplies</button>
-                    <button type="button" onclick="tools()">Tools</button>
-                    <button type="button" onclick="vehicles()">Vehicles and Transportation</button>
-                    <button type="button" onclick="weapons()">Weapons</button>
-                </nav>
+            <div class="col-2">
+                <div class="nav flex-column">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="drinks()">Drinks</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="animals()">Animals</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="books()">Books</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="flowers()">Flowers</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="food()">Food</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="decor()">Decor</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="fashion()">Fashion</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="jeweler()">Jewelry</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="misc()">Misc.</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="leather()">Leather</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="mech()">Mechanical</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="armor()">Armor</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="alch()">Alchemy</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="religious()">Religious</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="instruments()">Music</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="spells()">Spells</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="fence()">Fence</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="tools()">Tools</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="vehicles()">Vehicles</button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="weapons()">Weapons</button>
+                    <h10>Legendary Merchants</h10>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="astral()">Astral</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="enchants()">Enchanter</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="fey()">Fey Bargain</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="artifacts()">Artifacts</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="mystical()">Creatures</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="necro()">Necromantic</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hellish()">Hellish</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="time()">Time-Lost</button>
+                </div>
             </div>
             <div class="col">
                 <div id="Title" class="alert-link"></div>
                 <div id="Inventory"></div>
+                <br></br>
                 <div id="Trades"></div>
             </div>
         </div>
     </div>
 
 
-    <div class="padtop pad ">
+    <div class="padtop pad">
         <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/ ">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
     </div>
 
