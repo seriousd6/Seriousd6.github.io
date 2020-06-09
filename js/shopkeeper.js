@@ -107,7 +107,7 @@ function traderInfo() {
     document.getElementById("Ideal").innerHTML = "Ideal: " + searchArray(traderIdeal)
     document.getElementById("Bond").innerHTML = "Bond: " + searchArray(traderBond)
     document.getElementById("Flaw").innerHTML = "Flaw: " + searchArray(traderFlaw)
-}
+};
 
 //let merchantType = [ `Alcohol and refreshment`, `Animals(mounts and pets)`, `Books and maps(mundane)`, `Flowers and seeds`, `Food and animal parts`, `Furniture and interior decor`, `High fashion`, `Jewelry and gems`, `Knick-knacks`, `Leatherworking`, `Mechanical contraptions`, `Medium and heavy armor(and shields)`, `Potions, poisons, and herbs`, `Religious idols and blessings`, `Songs and instruments`, `Spell tomes and scrolls`, `Thieving supplies`, `Tools`, `Vehicles and transportation`, `Weapons`, `Legendary merchant(roll once on the Legendary Merchants table)`,]
 //let legendaryMerchant = [ `Astral traveler`, `Enchantments`, `Fey bargins`, `Magic items`, `Magical creatures`, `Necromancy`, `Needful things`, `Time-lost`, ]
