@@ -266,32 +266,7 @@ function leather() {
 
 function mech() {
     let mechanicalMerchant = [
-        `Hoop and stick (2cp) stock: ${rollDice(4)*3} | A pass-time from a simpler time`,
-        `Abacus (2gp) stock: ${rollDice(4)*2} | PHB 150`,
-        `Ball bearings (1gp/1,000) stock: ${rollDice(4)*2000} | PHB 150`,
-        `Block and tackle (1gp) stock: ${rollDice(4)*2} | PHB 150`,
-        `Cogs (1sp/handful) stock: ${rollDice(4)*5} handfuls`,
-        `Oil (1sp/flask) stock: ${rollDice(4)*5} flasks | PHB 150`,
-        `Barrel organ (30gp) stock: ${rollDice(4)} | Musical instrument; turn the crank to play`,
-        `Bomb (150gp) stock: ${rollDice(4)*4} | DMG 267 May not exist in settings w/o gunpowder`,
-        `Clockwork dog (5gp) stock: ${rollDice(4)} | When wound up, walks forward, barks, and flips`,
-        `Clockwork dragonchess set (20gp) stock: ${rollDice(4)} | Automatically plays dragonchess against you`,
-        `Gunpowder, horn (35gp) stock: ${rollDice(4)*4} | DMG 267 May not exist in settings w/o gunpowder`,
-        `Hunting trap (5gp) stock: ${rollDice(4)*3} | PHB 150`,
-        `Lock (10gp) stock: ${rollDice(4)*5} | PHB 150`,
-        `Clockwork dragon (25gp) stock: ${rollDice(4)} | May breathe fire that can set objects alight`,
-        `Clockwork mount (250gp) stock: ${rollDice(4)} | MM 336 Has the same statistics as a riding horse`,
-        `Clockwork songbird (12gp) stock: ${rollDice(4)} | Sings 1 of 3 songs on command; flightless`,
-        `Dynamite (200gp/stick) stock: ${rollDice(4)*4} sticks | DMG 267 May not exist in settings w/o gunpowder`,
-        `Goggles of night (500gp) stock: Only 1, ever | DMG 172`,
-        `Gunpowder, keg (250gp) stock: ${rollDice(4)} | DMG 267 May not exist in settings w/o gunpowder`,
-        `Pocketwatch (10gp) stock: ${rollDice(4)*2} | When wound, reliably tells the time of day`,
-        `Tinker's tools (50gp) stock: ${rollDice(4)+2} | PHB 154`,
-        `Clockwork rocket sled (2,500gp) stock: ${rollDice(4)+1} | Moves 60 feet / round in one direction for 1 min`,
-        `Iron bands of Bilarro (5,000gp) stock: Only 1, ever | DMG 177`,
-        `Manual of golems, iron (25,000gp) stock: Only 1, ever | DMG 180`,
-        `Wand of lightning bolts (5,000gp) stock: Only 1, ever | DMG 211`,
-        `Winged boots (500gp) stock: Only 1, ever | DMG 274`,
+        `Hoop and stick (2cp) stock: ${rollDice(4)*3} | A pass-time from a simpler time`, `Abacus (2gp) stock: ${rollDice(4)*2} | PHB 150`, `Ball bearings (1gp/1,000) stock: ${rollDice(4)*2000} | PHB 150`, `Block and tackle (1gp) stock: ${rollDice(4)*2} | PHB 150`, `Cogs (1sp/handful) stock: ${rollDice(4)*5} handfuls`, `Oil (1sp/flask) stock: ${rollDice(4)*5} flasks | PHB 150`, `Barrel organ (30gp) stock: ${rollDice(4)} | Musical instrument; turn the crank to play`, `Bomb (150gp) stock: ${rollDice(4)*4} | DMG 267 May not exist in settings w/o gunpowder`, `Clockwork dog (5gp) stock: ${rollDice(4)} | When wound up, walks forward, barks, and flips`, `Clockwork dragonchess set (20gp) stock: ${rollDice(4)} | Automatically plays dragonchess against you`, `Gunpowder, horn (35gp) stock: ${rollDice(4)*4} | DMG 267 May not exist in settings w/o gunpowder`, `Hunting trap (5gp) stock: ${rollDice(4)*3} | PHB 150`, `Lock (10gp) stock: ${rollDice(4)*5} | PHB 150`, `Clockwork dragon (25gp) stock: ${rollDice(4)} | May breathe fire that can set objects alight`, `Clockwork mount (250gp) stock: ${rollDice(4)} | MM 336 Has the same statistics as a riding horse`, `Clockwork songbird (12gp) stock: ${rollDice(4)} | Sings 1 of 3 songs on command; flightless`, `Dynamite (200gp/stick) stock: ${rollDice(4)*4} sticks | DMG 267 May not exist in settings w/o gunpowder`, `Goggles of night (500gp) stock: Only 1, ever | DMG 172`, `Gunpowder, keg (250gp) stock: ${rollDice(4)} | DMG 267 May not exist in settings w/o gunpowder`, `Pocketwatch (10gp) stock: ${rollDice(4)*2} | When wound, reliably tells the time of day`, `Tinker's tools (50gp) stock: ${rollDice(4)+2} | PHB 154`, `Clockwork rocket sled (2,500gp) stock: ${rollDice(4)+1} | Moves 60 feet / round in one direction for 1 min`, `Iron bands of Bilarro (5,000gp) stock: Only 1, ever | DMG 177`, `Manual of golems, iron (25,000gp) stock: Only 1, ever | DMG 180`, `Wand of lightning bolts (5,000gp) stock: Only 1, ever | DMG 211`, `Winged boots (500gp) stock: Only 1, ever | DMG 274`,
     ]
     clear()
     document.getElementById("Title").innerHTML = "Mechanical Contraptions"
@@ -453,8 +428,7 @@ function enchants() {
         [ //1
             `----|| Minor Enchantments ||----`, `Beacon - Bonus action: Item sheds bright light in 10 - foot radius, dim light for additional 10 feet. May extinguish with another bonus action.`, `Compass - Action: Learn which way is north.`, `Gleaming - This item never gets dirty.`, `Guardian - Grants a +2 bonus to initiative.`, `Language - This item grants know - ledge of a specific language chosen by the DM.`, `Sentinel - Item glows when within 120 feet of a specific type of creature chosen by the DM.`, `Unbreakable - This item can only be broken by special means.`, `Waterborne - Item can float in liquid, grants Advantage on checks to swim.`,
             `----|| Major Enchantments ||----`, `Transforming - Action: Item changes into another item of the same type. A sword may turn into a different sword, or a pair of boots may turn into shoes.`, `Spider - Touched. Grants a climb speed equal to your movement speed.`, `Unseen - Item is permanently invisible.`, `Fleet - Grants a + 10 foot bonus to movement speed.`, `Flight - Action: Gain a flight speed equal to your movement speed until the end of your turn.`, `Glibness - Action: Gain advantage on all Charisma checks made within the next minute. Refreshes with long rest.`, `Night Eye - Grants darkvision out to 60 feet, or increases it by 60 feet.`, `Warding - Reaction: Gain advantage on a saving throw. Short rest refresh.`,
-            `----|| Legendary Enchantments ||----`,
-            `Fearful - Bonus action: Adjacent creature must make a DC 15 Wisdom saving throw or be frightened of you until the end of your next turn. Short rest refresh.`, `Teleport - Bonus action: Teleport up to 15 feet in any direction.`, `Silent - Grants a + 10 bonus to Stealth.Lucky.Can add 1 d10 to any check, save, or attack. Short rest refresh.`, `Wall Walker - Bonus action: Can pass through solid objects until end of turn, which ejects you.Short rest refresh.`, `Vitality - Grants immunity to disease, poisons, and poison damage.`, `True Seeing - Grants truesight out to 60 feet, or increases it by 60 feet.`, `Fortitude - Increases your hit point max - imum by 15.`,
+            `----|| Legendary Enchantments ||----`, `Fearful - Bonus action: Adjacent creature must make a DC 15 Wisdom saving throw or be frightened of you until the end of your next turn. Short rest refresh.`, `Teleport - Bonus action: Teleport up to 15 feet in any direction.`, `Silent - Grants a + 10 bonus to Stealth.Lucky.Can add 1 d10 to any check, save, or attack. Short rest refresh.`, `Wall Walker - Bonus action: Can pass through solid objects until end of turn, which ejects you.Short rest refresh.`, `Vitality - Grants immunity to disease, poisons, and poison damage.`, `True Seeing - Grants truesight out to 60 feet, or increases it by 60 feet.`, `Fortitude - Increases your hit point max - imum by 15.`,
         ],
     ]
     clear()
