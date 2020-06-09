@@ -149,7 +149,7 @@ function clear() {
     document.getElementById("Inventory").innerHTML = ""
     document.getElementById("Title").innerHTML = ""
     document.getElementById("Trades").innerHTML = ""
-}
+};
 
 function drinks() {
     let alcoholAndRefreshment = [
@@ -194,7 +194,7 @@ function drinks() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function animals() {
     let animalMerchant = [
@@ -248,7 +248,7 @@ function animals() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function books() {
     let booksAndMapsMerchant = [
@@ -281,7 +281,7 @@ function books() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function flowers() {
     let flowersMerchant = [
@@ -314,7 +314,7 @@ function flowers() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function food() {
     let foodMerchant = [
@@ -363,7 +363,7 @@ function food() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function decor() {
     let artMerchant = [
@@ -404,7 +404,7 @@ function decor() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function fashion() {
     let fashionMerchant = [
@@ -449,7 +449,7 @@ function fashion() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function jeweler() {
     let jeweler = [
@@ -491,7 +491,7 @@ function jeweler() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function misc() {
     let KnickKnackMerchant = [
@@ -539,7 +539,7 @@ function misc() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function leather() {
     let leatherWorker = [
@@ -583,7 +583,7 @@ function leather() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function mech() {
     let mechanicalMerchant = [
@@ -622,10 +622,10 @@ function mech() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function armor() {
-    let heavyarmor = [
+    let armorArray = [
         `Barrel, wearable (2gp) stock: ${rollDice(4)*2} | PHB 150 Includes straps; does not include bottom`,
         `Bucket (5cp) stock: ${rollDice(4)*2} | PHB 150 Anything is armor if you're foolhardy enough`,
         `Chain mail (75gp) stock: ${rollDice(4)*3} | PHB 145`,
@@ -636,7 +636,7 @@ function armor() {
         `Scale mail (50gp) stock: ${rollDice(4)*3} | PHB 145`,
         `Shield (10gp) stock: ${rollDice(4)*3} | PHB 145`,
         `Anvil (75gp) stock: ${rollDice(4)}`,
-        `Barding (varies) stock: ${rollDice(4)*3} | PHB 157 Prices are as listed in the PHB`,
+        `Barding (*varies) stock: ${rollDice(4)*3} | PHB 157 Prices are as listed in the PHB`,
         `Breastplate (400gp) stock: ${rollDice(4)} | PHB 145`,
         `Helm, horned (25gp) stock: ${rollDice(4)} | While imposing, it is hard to get through doors`,
         `Smith's tools (20gp) stock: ${rollDice(4)} | PHB 154`,
@@ -646,7 +646,7 @@ function armor() {
         `Half plate (750gp) stock: ${rollDice(4)+3} | PHB 145`,
         `Helm, winged (50gp) stock: ${rollDice(4)} | Gallant and flamboyant`,
         `Mithral armor, any (500gp) stock: Only ${rollDice(4)}, ever | DMG 182 Must also pay the cost of the base armor`,
-        `Plate +1 (500gp) stock: ${rollDice(5)-2} | PHB 145`
+        `Plate +1 (500gp) stock: ${rollDice(5)-2} | PHB 145`,
         `Shield, +1 (500gp) stock: Only 1, ever | DMG 200`,
         `Silver (5gp/lb) stock: ${rollDice(4)*2} lbs. | PHB 157`,
         `Arrow-catching shield (5,000gp) stock: Only 1, ever | DMG 152`,
@@ -658,13 +658,13 @@ function armor() {
     ]
     clear()
     document.getElementById("Title").innerHTML = "Medium and Heavy Armor"
-    heavyarmor.forEach(function(item) {
+    armorArray.forEach(function(item) {
         var li = document.createElement("li");
         var text = document.createTextNode(item);
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function alch() {
     let alchemyAndPotions = [
@@ -710,7 +710,7 @@ function alch() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function religious() {
     let religiousMerchant = [
@@ -747,7 +747,7 @@ function religious() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function instruments() {
     let bardInstruments = [
@@ -791,7 +791,7 @@ function instruments() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function scrolls() {
     let spellsAndScrolls = [
@@ -830,7 +830,7 @@ function scrolls() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function fence() {
     let thievingMerchant = [
@@ -875,7 +875,7 @@ function fence() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function tools() {
     let toolsMerchant = [
@@ -926,7 +926,7 @@ function tools() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function vehicles() {
     let vehicleMerchant = [
@@ -972,7 +972,7 @@ function vehicles() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function weapons() {
     let weaponTrader = [
@@ -1010,7 +1010,7 @@ function weapons() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 
 //LEGENDARY MERCHANTS
