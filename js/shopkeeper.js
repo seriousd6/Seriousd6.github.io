@@ -16,8 +16,6 @@ function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
-
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -67,10 +65,11 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
+
 //Reload Page
 function reload() {
     location.reload()
-}
+};
 
 //page scripts
 
@@ -87,7 +86,7 @@ function shopkeeps() {
 
     ]
     document.getElementById("Premise").innerHTML = searchArray(shopPremise)
-}
+};
 
 
 //WALROCK MERCHANTS
@@ -110,13 +109,8 @@ function traderInfo() {
     document.getElementById("Flaw").innerHTML = "Flaw: " + searchArray(traderFlaw)
 }
 
-let merchantType = [
-    `Alcohol and refreshment`, `Animals(mounts and pets)`, `Books and maps(mundane)`, `Flowers and seeds`, `Food and animal parts`, `Furniture and interior decor`, `High fashion`, `Jewelry and gems`, `Knick-knacks`, `Leatherworking`, `Mechanical contraptions`, `Medium and heavy armor(and shields)`, `Potions, poisons, and herbs`, `Religious idols and blessings`, `Songs and instruments`, `Spell tomes and scrolls`, `Thieving supplies`, `Tools`, `Vehicles and transportation`, `Weapons`, `Legendary merchant(roll once on the Legendary Merchants table)`,
-]
-
-let legendaryMerchant = [
-    `Astral traveler`, `Enchantments`, `Fey bargins`, `Magic items`, `Magical creatures`, `Necromancy`, `Needful things`, `Time-lost`,
-]
+//let merchantType = [ `Alcohol and refreshment`, `Animals(mounts and pets)`, `Books and maps(mundane)`, `Flowers and seeds`, `Food and animal parts`, `Furniture and interior decor`, `High fashion`, `Jewelry and gems`, `Knick-knacks`, `Leatherworking`, `Mechanical contraptions`, `Medium and heavy armor(and shields)`, `Potions, poisons, and herbs`, `Religious idols and blessings`, `Songs and instruments`, `Spell tomes and scrolls`, `Thieving supplies`, `Tools`, `Vehicles and transportation`, `Weapons`, `Legendary merchant(roll once on the Legendary Merchants table)`,]
+//let legendaryMerchant = [ `Astral traveler`, `Enchantments`, `Fey bargins`, `Magic items`, `Magical creatures`, `Necromancy`, `Needful things`, `Time-lost`, ]
 
 function clear() {
     document.getElementById("Inventory").innerHTML = ""
@@ -418,7 +412,7 @@ function astral() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function enchants() {
     let enchantmentTrader = [
@@ -445,7 +439,7 @@ function enchants() {
         li.appendChild(text);
         document.getElementById("Trades").appendChild(li);
     });
-}
+};
 
 function fey() {
     let feyMerchant = [
@@ -470,7 +464,7 @@ function fey() {
         li.appendChild(text);
         document.getElementById("Trades").appendChild(li);
     });
-}
+};
 
 function artifacts() {
     let magicItemsMerchant = [
@@ -484,7 +478,7 @@ function artifacts() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function mystical() {
     let magicCreaturesMerchant = [
@@ -498,7 +492,7 @@ function mystical() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function necro() {
     let necromanticMerchant = [
@@ -512,7 +506,7 @@ function necro() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-}
+};
 
 function hellish() {
     let devilishMerchant = [
@@ -537,9 +531,9 @@ function hellish() {
         li.appendChild(text);
         document.getElementById("Trades").appendChild(li);
     });
-}
+};
 
-function time() {
+function timeLost() {
     let timelostMerchant = [
         `Calculator (60gp) stock: ${rollDice(4)} | Tech (2); performs mathematical functions`, `Electric torch (50gp) stock: ${rollDice(4)} | Tech (1)`, `Entertainment pad (150gp) stock: ${rollDice(4)} | Tech (3)`, `Energy cell (15gp/each) stock: ${rollDice(4)*4}| DMG 268`, `Sending stones (500gp) stock: Only 1 set, ever | DMG 199 Made of a strange, smooth, colored substance`, `Wristwatch (55gp) stock: Only 1, ever | Reliably tells the time of day, runs on motion`, `Bead of force (5,000gp/6)stock: Only 6, ever | DMG 154`, `Boots of levitation (5,000gp) stock: Only 1 set, ever | DMG 155`, `Cube of force (5,000 gp)stock: Only 1, ever | DMG 151`, `Goggles of night (5,000gp) stock: Only 1, ever | DMG 172`, `Grenade, fragmentation (300gp/each) stock: ${rollDice(4)*2} | DMG 268 Tech (2)`, `Grenade, smoke (250gp/each) stock: ${rollDice(4)*2} | DMG 268 Tech (2)`, `Jetpack (3,500gp) stock: Only 1, ever | Tech (4)`, `Laser pistol (3,000gp) stock: Only 1, ever | DMG 268 Tech (4)`, `Laser rifle (4,500gp) stock: Only 1, ever | DMG 268 Tech (4)`, `Antimatter rifle (6,500gp) stock: Only 1, ever | DMG 268 Tech (4)`, `Apparatus of Kwalish (500,000gp) stock: Only 1, ever | DMG 159`, `Cloak of invisibility (500,000gp) stock: Only 1, ever | DMG 158`, `Grenade launcher (5,500gp) stock: Only 1, ever | DMG 268 Tech (4)`, `Screwdriver, acoustic (1,250gp) stock: Only 1, ever | Tech (3); Grants adv. on thieves' tools checks`, `Tome of clear thought (50,000gp) stock: Only 1, ever | DMG 208 Title: "Introduction to Quantum Physics"`, `Tome of understanding (50,000gp)stock: Only 1, ever | DMG 209 Title: "Farmer's Almanac"`,
     ]
@@ -551,5 +545,5 @@ function time() {
         li.appendChild(text);
         document.getElementById("Inventory").appendChild(li);
     });
-    document.getElementById("Trades").innerHTML = `Use the "Figuring Out Alien Tech" (DMG 268), and use the training downtime rules (PHB 187) for players to gain proficiency with the tools marked *TECH*!`
-}
+    document.getElementById("Trades").innerHTML = `Use the "Figuring Out Alien Tech" (DMG 268), and use the training downtime rules (PHB 187) for players to gain proficiency with the tools marked *TECH*!`;
+};
