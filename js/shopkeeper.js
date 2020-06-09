@@ -657,7 +657,7 @@ function armor() {
         `Shield, +2 (5,000gp) stock: Only ${rollDice(5)-2}, ever | DMG 200`,
     ]
     clear()
-    document.getElementById("Title").innerHTML = "Medium/ Heavy Armor"
+    document.getElementById("Title").innerHTML = "Medium and Heavy Armor"
     heavyarmor.forEach(function(item) {
         var li = document.createElement("li");
         var text = document.createTextNode(item);
