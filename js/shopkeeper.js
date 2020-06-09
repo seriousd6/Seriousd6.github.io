@@ -636,7 +636,7 @@ function armor() {
         `Scale mail (50gp) stock: ${rollDice(4)*3} | PHB 145`,
         `Shield (10gp) stock: ${rollDice(4)*3} | PHB 145`,
         `Anvil (75gp) stock: ${rollDice(4)}`,
-        `Barding (*varies) stock: ${rollDice(4)*3} | PHB 157 Prices are as listed in the PHB`,
+        `Barding (varies) stock: ${rollDice(4)*3} | PHB 157 Prices are as listed in the PHB`,
         `Breastplate (400gp) stock: ${rollDice(4)} | PHB 145`,
         `Helm, horned (25gp) stock: ${rollDice(4)} | While imposing, it is hard to get through doors`,
         `Smith's tools (20gp) stock: ${rollDice(4)} | PHB 154`,
