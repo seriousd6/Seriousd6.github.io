@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
-    <script src="js/shopkeeper.js"></script>
+    <script src="js/Shopkeeper.js"></script>
 
 </head>
 
 <body>
+    <style>
+        .pad {
+            padding-left: 12px;
+        }
+    </style>
     <h1>D&D Flavor Generators</h1>
     <div id="breadcrumb">
         <nav aria-label="breadcrumb">
@@ -40,11 +45,11 @@
         <br>
         <div class="row">
             <button class="col-2 btn btn-primary btn-sm" type="button" onclick="traderInfo()">Traits</button>
-            <div class="col pad">
-                <div class="row" id="Personality"></div>
-                <div class="row" id="Bond"></div>
-                <div class="row" id="Ideal"></div>
-                <div class="row" id="Flaw"></div>
+            <div class="col">
+                <div class="row pad" id="Personality"></div>
+                <div class="row pad" id="Bond"></div>
+                <div class="row pad" id="Ideal"></div>
+                <div class="row pad" id="Flaw"></div>
             </div>
         </div>
     </div>
