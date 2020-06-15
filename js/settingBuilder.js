@@ -274,7 +274,6 @@ function findResources() {
 
 
 
-
 function rollTown() {
     findTown()
     findResources()
