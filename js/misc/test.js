@@ -65,3 +65,43 @@ function modify(number) {
 };
 
 /* ONLY DELETE BELOW HERE ------------------------------------------*/
+let template = [
+    `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(noun[1])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(noun[3])}`,
+    `The ${searchArray(noun[3])}'s ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[2])}'s ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[1])}'s ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
+    `The ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(adjective)} ${searchArray(noun[1])}`,
+    `The ${searchArray(adjective)} ${searchArray(noun[3])}`,
+    `The ${searchArray(adjective)} ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[2])} and the ${searchArray(noun[1])}`,
+    `The ${searchArray(noun[2])} and the ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[2])} and the ${searchArray(noun[3])}`,
+    `The ${searchArray(noun[3])} and the ${searchArray(noun[1])}`,
+    `The ${searchArray(noun[3])} and the ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[3])} and the ${searchArray(noun[3])}`,
+    `The ${searchArray(noun[1])} and the ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[1])} and the ${searchArray(noun[1])}`,
+    `The ${searchArray(noun[0])} and the ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[3])}`,
+    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[3])}`,
+    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[2])}'s ${searchArray(adjective)} ${searchArray(noun[0])}`,
+    `The ${searchArray(noun[2])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[1])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[1])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+    `The ${searchArray(noun[0])}'s ${searchArray(verb)}`,
+    `The ${searchArray(noun[3])}'s ${searchArray(verb)}`,
+    `The ${searchArray(noun[2])}'s ${searchArray(verb)}`,
+    `The ${searchArray(noun[1])}'s ${searchArray(verb)}`,
+    `The ${searchArray(verb)}`,
+    `${searchArray(adjective)} ${searchArray(verb)}`,
+    `The ${toWords(rollDice(100))} ${searchArray(noun[2])}'s`
+    `The ${toWords(rollDice(100))} ${searchArray(noun[1])}'s`
+    `The ${toWords(rollDice(100))} ${searchArray(noun[0])}'s`
+]
