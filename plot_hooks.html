@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
     <script src="js/plothooks.js"></script>
-    <script src="js/NPC reaction Tables.js"></script>
-
 </head>
 
 <body>
@@ -21,7 +19,7 @@
     <div id="breadcrumb">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/index.html">Character/NPC</a></li>
+                <li class="breadcrumb-item"><a href="/index.html">Character</a></li>
                 <li class="breadcrumb-item"><a href="/tavern.html">Tavern</a></li>
                 <li class="breadcrumb-item"><a href="/world.html">World</a></li>
                 <li class="breadcrumb-item"><a href="/adventure.html">Adventure</a></li>
@@ -31,6 +29,7 @@
                 </li>
                 <li class="breadcrumb-item"><a href="/setting_builder.html">Setting Builder</a></li>
                 <li class="breadcrumb-item"><a href="/shopkeeper.html">Shopkeeper</a></li>
+                <li class="breadcrumb-item"><a href="/npc_interactions.html">NPC Interactions</a></li>
             </ol>
         </nav>
     </div>
@@ -39,79 +38,49 @@
         <div class="row">
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
         </div>
-        <h5>NPC Reactions</h5>
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-dark" onclick="hostile()">Hostile</button>
-                <button type="button" class="btn btn-danger" onclick="unhappy()">Unhappy</button>
-                <button type="button" class="btn btn-warning" onclick="disgruntled()">Disgruntled</button>
-                <button type="button" class="btn btn-secondary" onclick="neutral()">Neutral</button>
-                <button type="button" class="btn btn-light" onclick="pleased()">Pleased</button>
-                <button type="button" class="btn btn-primary" onclick="happy()">Happy</button>
-                <button type="button" class="btn btn-success" onclick="friendly()">Friendly</button>
-            </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="reaClear()">Reaction</button>
-            <div class="col npc">
-                <div class="row pad" id="Reaction"></div>
-
-            </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="motivation()">Motivation</button>
-            <div class="col npc" id="Motivation"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="area()">Area Status</button>
-            <div class="col npc" id="Area Status"></div>
-        </div>
-
         <h5>Class</h5>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="paladin()">Paladin</button>
+            <button style="color: goldenrod; outline: dashed burlywood;" class="col-2 btn" type="button" onclick="paladin()">Paladin</button>
             <div class="col orange" id="Paladin"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="monk()">Monk</button>
+            <button style="color: rgb(66, 1, 1); outline: dashed burlywood; " class="col-2 btn" type="button" onclick="monk()">Monk</button>
             <div class="col orange" id="Monk"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="bard()">Bard</button>
+            <button style="color: rgba(132, 0, 255, 0.452); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="bard()">Bard</button>
             <div class="col orange" id="Bard"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="cleric()">Cleric</button>
+            <button style="color: rgb(255, 230, 0); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="cleric()">Cleric</button>
             <div class="col orange" id="Cleric"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="wizard()">Wizard</button>
+            <button style="color: rgb(70, 43, 226); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="wizard()">Wizard</button>
             <div class="col orange" id="Wizard"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="druid()">Druid</button>
+            <button style="color: rgb(9, 107, 22); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="druid()">Druid</button>
             <div class="col orange" id="Druid"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="barbarian()">Barbarian</button>
+            <button style="color: rgb(160, 160, 160); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="barbarian()">Barbarian</button>
             <div class="col orange" id="Barbarian"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="fighter()">Fighter</button>
+            <button style="color: rgb(223, 89, 0); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="fighter()">Fighter</button>
             <div class="col orange" id="Fighter"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="sorcerer()">Sorcerer</button>
+            <button style="color: rgb(3, 163, 255); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="sorcerer()">Sorcerer</button>
             <div class="col orange" id="Sorcerer"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" disabled>Ranger</button>
+            <button style="color: rgb(0, 212, 46); outline: dashed burlywood;" class="col-2 btn" type="button" disabled>Ranger (unfinished)</button>
             <div class="col orange" id="Ranger"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" disabled>Warlock</button>
+            <button style="color: rgb(255, 0, 0); outline: dashed burlywood;" class="col-2 btn" type="button" onclick="warlock()">Warlock</button>
             <div class="col orange" id="Warlock"></div>
         </div>
     </div>
@@ -119,15 +88,15 @@
     <div class="container" id='Gen'>
         <h5>Generic</h5>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="generic()">Generic</button>
+            <button class="col-2 btn" type="button" onclick="generic()">Generic</button>
             <div class="col orange" id="Generic"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="kidsQuest()">Kids Quest</button>
+            <button class="col-2 btn pop" type="button" onclick="kidsQuest()">Kids Quest</button>
             <div class="col orange" id="kidQuest"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="ghibliFinder()">Ghibli-Esque</button>
+            <button class="col-2 btn pop" type="button" onclick="ghibliFinder()">Ghibli-Esque</button>
             <div class="col orange" id="Ghibli"></div>
         </div>
     </div>
@@ -135,27 +104,27 @@
     <div class="container" id='loc'>
         <h5>Location</h5>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="jungle()">Jungle</button>
+            <button class="col-2 btn pop" type="button" onclick="jungle()">Jungle</button>
             <div class="col orange" id="Jungle"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="swamp()">Swamp</button>
+            <button class="col-2 btn pop" type="button" onclick="swamp()">Swamp</button>
             <div class="col orange" id="Swamp"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="ocean()">Ocean</button>
+            <button class="col-2 btn pop" type="button" onclick="ocean()">Ocean</button>
             <div class="col orange" id="Ocean"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="coast()">Coast</button>
+            <button class="col-2 btn pop" type="button" onclick="coast()">Coast</button>
             <div class="col orange" id="Coast"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="mountain()">Mountain</button>
+            <button class="col-2 btn pop" type="button" onclick="mountain()">Mountain</button>
             <div class="col orange" id="Mountain"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="dungeon()">Dungeon</button>
+            <button class="col-2 btn pop" type="button" onclick="dungeon()">Dungeon</button>
             <div class="col orange" id="Dungeon"></div>
         </div>
     </div>
@@ -163,39 +132,39 @@
     <div class="container" id='cit'>
         <h5>City</h5>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="arts()">Arts</button>
+            <button class="col-2 btn pop" type="button" onclick="arts()">Arts</button>
             <div class="col orange" id="Arts"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="night()">Night Life</button>
+            <button class="col-2 btn pop" type="button" onclick="night()">Night Life</button>
             <div class="col orange" id="Night"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="shopping()">Shopping</button>
+            <button class="col-2 btn pop" type="button" onclick="shopping()">Shopping</button>
             <div class="col orange" id="Shopping"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="street()">Street</button>
+            <button class="col-2 btn pop" type="button" onclick="street()">Street</button>
             <div class="col orange" id="Street"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="entertainment()">Entertainment</button>
+            <button class="col-2 btn pop" type="button" onclick="entertainment()">Entertainment</button>
             <div class="col orange" id="Ent"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="sports()">Sports</button>
+            <button class="col-2 btn pop" type="button" onclick="sports()">Sports</button>
             <div class="col orange" id="Sports"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="nautical()">Nautical</button>
+            <button class="col-2 btn pop" type="button" onclick="nautical()">Nautical</button>
             <div class="col orange" id="Nautical"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="events()">Event</button>
+            <button class="col-2 btn pop" type="button" onclick="events()">Event</button>
             <div class="col orange" id="Event"></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="personal()">Personal</button>
+            <button class="col-2 btn pop" type="button" onclick="personal()">Personal</button>
             <div class="col orange" id="Personal"></div>
         </div>
     </div>
