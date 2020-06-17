@@ -11,17 +11,6 @@ body {
     padding-top: .5in;
 }
 
-.gold {
-    border: 1px outset goldenrod;
-    background-color: rgba(218, 165, 32, 0.356);
-    outline: 1px dotted black;
-}
-
-.orange {
-    background-color: rgba(223, 84, 3, 0.151);
-    outline: 1px dotted orangered;
-}
-
 .npc {
     background-color: rgba(3, 190, 223, 0.26);
     outline: 1px dotted rgb(2, 246, 246);
@@ -29,23 +18,6 @@ body {
 
 .pad {
     padding-left: 12px;
-}
-
-.green {
-    background-color: rgba(0, 128, 0, 0.377);
-}
-
-.red {
-    background-color: rgba(255, 0, 0, 0.486)
-}
-
-.blue {
-    border: 1px outset blue;
-    background-color: rgba(0, 0, 255, 0.26);
-}
-
-.yellow {
-    background-color: rgba(255, 255, 0, 0.253);
 }
 
 .col {
@@ -56,6 +28,12 @@ body {
 .pop {
     color: rgba(183, 1, 255, 0.534);
     outline: dashed rgb(0, 0, 0);
+    background-color: grey;
+}
+
+.wow {
+    outline: dashed burlywood;
+    background-color: rgb(209, 209, 209);
 }
 
 div {
