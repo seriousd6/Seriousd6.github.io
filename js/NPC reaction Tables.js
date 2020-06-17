@@ -17,6 +17,41 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
+function shiftCheck(word) {
+    let chance = rollDice(100)
+    switch (word) {
+        case word = 'pleased':
+            if (chance < 40) {
+                return "This NPC will shift to Happy on the next encounter"
+            } else {
+                return "This NPC will stay Pleased for the next encounter"
+            }
+            break;
+        case word = 'happy':
+            if (chance < 20) {
+                return "This NPC will shift to Friendly on the next encounter"
+            } else {
+                return "This NPC will stay Happy for the next encounter"
+            }
+            break;
+        case word = 'disgruntled':
+            if (chance < 40) {
+                return "This NPC will shift to Unhappy on the next encounter"
+            } else {
+                return "This NPC will stay Disgruntled for the next encounter"
+            }
+            break;
+        case word = 'unhappy':
+            if (chance < 20) {
+                return "This NPC will shift to Hostile on the next encounter"
+            } else {
+                return "This NPC will stay Unhappy for the next encounter"
+            }
+            break;
+        default:
+            return "please enter the correct word"
+    }
+}
 
 // convert numbers to word form
 function toWords(s) {
