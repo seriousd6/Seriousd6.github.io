@@ -278,8 +278,8 @@ let monsterEncounter = ["a flock of aarakocra", "an ankheg", "some bugbears", "a
 let npcReactionToQuestioning = [`Hostile, now a nemesis. This interaction results in ${searchArray(FMajorBane)}. Also this NPC Will pursue PC until dead.`, `Unhappy, this interaction results in ${searchArray(EMinorBane)}. ${shiftCheck('unhappy')}`, `Disgruntled. The NPC gives false information. ${shiftCheck('disgruntled')}.`, `Tells you about ${searchArray(APersonalInformation)}, or ${searchArray(BLocalInformation)}, as requested `, `They are pleased. They share a ${searchArray(rumorType)} Rumour. ${shiftCheck('pleased')}`, `Happy. Rewards PC or Party with ${searchArray(GMinorBoon)}. ${shiftCheck('happy')}`, `Friendly, now an ally. Gives information about ${ searchArray(HMajorBoon) }. Will protect PC until dead.`, ]
 
 function hostile() {
-    document.getElementById("Reaction").innerHTML = ''
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[0]
+
 }
 
 function unhappy() {

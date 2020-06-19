@@ -359,4 +359,3 @@ let wildMagic = [
 function findSurge() {
     document.getElementById("Surge").innerHTML = searchArray(wildMagic)
 }
-populate()
