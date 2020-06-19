@@ -286,7 +286,7 @@ function artGenerator() {
         "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "ruby", "sapphire", "jade", "amethyst", "bone", "teeth-bone", "hide", "emerald", "topaz", "opal", "diamond", "moonstone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "amber", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass",
     ]
     let artform = [
-        `${variableEvent(status,0)}stained glass window`, `${variableEvent(status,1)}mural`, `${variableEvent(status,2)}${searchArray(material)} ${searchArray(pottery)}`, `${variableEvent(status,3)}${searchArray(material)} statue`, `${variableEvent(status,4)}painting`, `${variableEvent(status,5)}releif`, `${variableEvent(status,6)}tapestry`,
+        `${variableEvent(status,0)}stained glass window`, `${variableEvent(status,1)}mural`, `${variableEvent(status,2)}${searchArray(material)} ${searchArray(pottery)}`, `${variableEvent(status,3)}${searchArray(material)} statue`, `${variableEvent(status,4)}painting`, `${variableEvent(status,5)}relief`, `${variableEvent(status,6)}tapestry`,
     ]
     let size = [
         "large", "small", "tiny", "life-size", "huge", "gargantuan"
