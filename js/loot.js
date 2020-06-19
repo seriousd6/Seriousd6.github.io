@@ -268,7 +268,7 @@ function treasureMap() {
     document.getElementById("Treasure Map").innerHTML = `The map starts at the ${searchArray(start)}. ${searchArray(then)} until you find the ${searchArray(until)}. Then ${searchArray(thenTwo)} until you find ${searchArray(untilTwo)}. Lastly ${searchArray(thenThree)} and you will find the treasure ${searchArray(xMarks)}.`
 };
 
-function artGenerator() {
+function artGenerator(number) {
     document.getElementById("Art").innerHTML = ""
     let status = [
         ["dusty", "dirty", "vandalized", "scratched", "broken", "faded", "discolored", "unfinished", "incomplete", "cracked", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
@@ -286,12 +286,12 @@ function artGenerator() {
         "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "ruby", "sapphire", "jade", "amethyst", "bone", "teeth-bone", "hide", "emerald", "topaz", "opal", "diamond", "moonstone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "amber", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass",
     ]
     let artform = [
-        `${variableEvent(status,0)}stained glass window`, `${variableEvent(status,1)}mural`, `${variableEvent(status,2)}${searchArray(material)} ${searchArray(pottery)}`, `${variableEvent(status,3)}${searchArray(material)} statue`, `${variableEvent(status,4)}painting`, `${variableEvent(status,5)}relief`, `${variableEvent(status,6)}tapestry`,
+        `${variableEvent(status,0)}stained glass window`, `${variableEvent(status,1)}mural`, `${variableEvent(status,2)}${searchArray(material)} ${searchArray(pottery)}`, `${variableEvent(status,3)}${searchArray(material)} statue`, `${variableEvent(status,4)}painting`, `${variableEvent(status,5)}releif`, `${variableEvent(status,6)}tapestry`,
     ]
     let size = [
         "large", "small", "tiny", "life-size", "huge", "gargantuan"
     ]
-    let number = [
+    let many = [
         "a small group of", "a large group of", "a small army of", "a few", "a large force composed of"
     ]
     let adjective = [
@@ -412,8 +412,8 @@ function artGenerator() {
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${searchArray(monster)} ${searchArray(action[0])} ${variableEvent(descriptor)}${findRace()} ${searchArray(gender)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a gilded ceremonial ${searchArray(item)} being held by a(n) ${findRace()} ${searchArray(person)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${findRace()} ${variableEvent(gender)}${searchArray(verb[1])}.`,
-        `A ${variableEvent(size)}${searchArray(artform)} depicting ${searchArray(number)} ${searchArray(monster)}s ${searchArray(verb[0])}.`,
-        `A ${variableEvent(size)}${searchArray(artform)} with ${searchArray(number)} ${searchArray(person)}s holding ${searchArray(tool)}s and ${searchArray(action[1])}.`,
+        `A ${variableEvent(size)}${searchArray(artform)} depicting ${searchArray(many)} ${searchArray(monster)}s ${searchArray(verb[0])}.`,
+        `A ${variableEvent(size)}${searchArray(artform)} with ${searchArray(many)} ${searchArray(person)}s holding ${searchArray(tool)}s and ${searchArray(action[1])}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${searchArray(monster)} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${searchArray(monster)} ${searchArray(action[2])}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting ${searchArray(historicalEvent)}.`,
@@ -429,7 +429,7 @@ function artGenerator() {
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(gender)} with two ${searchArray(weapons)}s by their side.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${searchArray(monster)} with large and intricately detailed ${searchArray(bodyparts)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(gender)} astride a(n) ${searchArray(monster)}, holding a ${searchArray(weapons)} in their hand.`,
-        `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(gender)} playing ${searchArray(instruments)} to ${searchArray(number)} ${searchArray(audience)}.`,
+        `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(gender)} playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} kissing a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} on the cheek.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`,
@@ -449,16 +449,33 @@ function artGenerator() {
         `A ${variableEvent(size)}${searchArray(artform)} depicting a ${searchArray(size)} ${searchArray(monster)} daintily picking up a ${searchArray(item)} at its feet.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a ${searchArray(item)} with various birds perched on it.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster)}s looking at them.`,
-        `A ${variableEvent(size)}${searchArray(artform)} depicting ${toWords(3+rollDice(10))}${searchArray(person)}s looking at (a(n)) ${searchArray(item)} held by the one in the center.`,
-        `A ${variableEvent(size)}${searchArray(artform)} depicting ${toWords(3+rollDice(10))}${searchArray(monster)}s looking at (a(n)) ${searchArray(item)} on the ground between them.`,
+        `A ${variableEvent(size)}${searchArray(artform)} depicting ${toWords(2+rollDice(10))}${searchArray(person)}s looking at (a(n)) ${searchArray(item)} held by the one in the center.`,
+        `A ${variableEvent(size)}${searchArray(artform)} depicting ${toWords(2+rollDice(10))}${searchArray(monster)}s looking at (a(n)) ${searchArray(item)} on the ground between them.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a(n) ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} pouring a(n) ${searchArray(color)} liquid into a(n) ${searchArray(color)} flask.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting an extremely detailed muscular ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)}.`,
         `A ${variableEvent(size)}${searchArray(artform)} depicting a ${searchArray(expression)} ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)} playing chess with a ${searchArray(expression)} ${variableEvent(descriptor)}${findRace()} ${searchArray(genderTwo)}.`,
     ]
 
-    console.log(template.length)
-    printFrom(template, 10, "Art")
+    if (number === 50) {
+        printFrom(template, 50, "Art")
+    } else if (number === 25) {
+        printFrom(template, 25, "Art")
+    } else {
+        printFrom(template, 10, "Art")
+    }
 };
+
+function artTen() {
+    artGenerator(10)
+}
+
+function artTwentyFive() {
+    artGenerator(25)
+}
+
+function artFifty() {
+    artGenerator(50)
+}
 
 function artEffect() {
     document.getElementById("Effect").innerHTML = ''
