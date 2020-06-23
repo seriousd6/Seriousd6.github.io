@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/character.js"></script>
+    <script src="js/race.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html" style="color:white">Home</a></li>>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Character</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="/plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li class="breadcrumb-item"><a href="/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="rollChar()">Roll For Character</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" onclick="buildRace()">Race</button>
+            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="completeRace('Warforged')">Warforged</a>
+                <a class="dropdown-item" onclick="artFifty()">50 Art Pieces</a>
+            </div>
+            <div class="col">
+                <div class="row pad" id="Name"></div>
+                <div class="row pad" id="Sex"></div>
+                <div class="row pad" id="Race"></div>
+            </div>
+            <button class="col-2  btn btn-danger" type="button" onclick="buildClass()">Class</button>
+            <div class="col" id="Class"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" disabled>Trait</button>
+            <div class="col" id="Racial"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-success" type="button" onclick="buildDesc()">Description</button>
+            <div class="col green">
+                <div class="row pad" id="Feat1"></div>
+                <div class="row pad" id="Feat2"></div>
+                <div class="row pad" id="Feat3"></div>
+            </div>
+            <div class="col green">
+                <div class="row pad" id="Feat4"></div>
+                <div class="row pad" id="Feat5"></div>
+                <div class="row pad" id="Feat6"></div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findCalm() +findStressed() +findMood()">Temperament</button>
+            <div class="col" id="Calm"></div>
+            <div class="col" id="Stressed"></div>
+            <div class="col" id="Mood"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findGoalFear()">Goal/Fear</button>
+            <div class="col" id="GoalsFears"></div>
+            <button class="col-2 btn btn-primary" onclick="findPrejudice()">Prejudice/Flaw</button>
+            <div class="col" id="Prejudice"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findFaith()">Faith</button>
+            <div class="col" id="Faith"></div>
+            <button class="col-2 btn btn-primary" onclick="findDiscTopic()">Discussion Topic</button>
+            <div class="col" id="Discuss"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findKeepsake()">Keepsake</button>
+            <div class="col" id="Keepsake"></div>
+            <button class="col-2 btn btn-primary" onclick="findQuirk()">Quirk</button>
+            <div class="col" id="Quirk"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" onclick="findHomeTown()">Hometown</button>
+            <div class="col" id="Hometown"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" onclick="findHomeTownSecret()">Hometown Secret</button>
+            <div class="col" id="Hometown Secret"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveSong()">Favorite Song</button>
+            <div class="col" id="Song"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveFood()">Favorite Food</button>
+            <div class="col" id="Food"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveDrink()">Favorite Drink</button>
+            <div class="col" id="Drink"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findCurrentBook()">Currently Reading</button>
+            <div class="col" id="Book"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
