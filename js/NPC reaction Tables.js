@@ -51,7 +51,7 @@ function shiftCheck(word) {
         default:
             return "please enter the correct word"
     }
-}
+};
 
 // convert numbers to word form
 function toWords(s) {
@@ -280,35 +280,35 @@ let npcReactionToQuestioning = [`Hostile, now a nemesis. This interaction result
 function hostile() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[0]
 
-}
+};
 
 function unhappy() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[1]
-}
+};
 
 function disgruntled() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[2]
-}
+};
 
 function neutral() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[3]
-}
+};
 
 function pleased() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[4]
-}
+};
 
 function happy() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[5]
-}
+};
 
 function friendly() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[6]
-}
+};
 
 function reaClear() {
     document.getElementById("Reaction").innerHTML = ""
-}
+};
 
 let npcMotivation = [
     `On the run because ${searchArray(JOnTheRun)}. They are being pursued by ${enemyChooser()} because they ${deedFinder()}.`,
@@ -322,7 +322,7 @@ let npcMotivation = [
 
 function motivation() {
     document.getElementById("Motivation").innerHTML = searchArray(npcMotivation);
-}
+};
 
 
 let areaStatus = [
@@ -337,8 +337,8 @@ let areaStatus = [
 
 function area() {
     document.getElementById("Area Status").innerHTML = searchArray(areaStatus);
-}
+};
 
 function reload() {
     location.reload()
-}
+};

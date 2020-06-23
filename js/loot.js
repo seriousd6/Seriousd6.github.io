@@ -51,7 +51,7 @@ function printFrom(array, number, id) {
         li.appendChild(text);
         document.getElementById(id).appendChild(li);
     });
-}
+};
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -106,8 +106,11 @@ function reload() {
     location.reload()
 };
 
-//page scripts
 
+
+
+
+//page scripts
 function convertGold(number) {
     console.log('\nGold Conversion of ' + number + 'gp:\n' +
         `PP:${number/10} 
@@ -214,7 +217,7 @@ function findRing() {
         `Ring of Jaq: a +1 purple band ring with dwarven runes carved into it. Once attuned to the wearer becomes immune to poisoning and has advantage on constitution and charisma saving throws.`, `Ring of Lightning: a glass ring with lightning trapped inside of the band. the ring has 6 charges. The wearer can expend one charge to cast absorb element, two charges for thunderclap, or three charges for either lightning bolt or thunderstep.`, `Ring of Displacement: as a reaction after an enemy has hit, you may use this rings charge to swap places with one other creature. If the creature is willing it happens instantaneously, but if its not, it must first succeed on a wisdom saving throw of dc 15. This ring has one charge and recharges daily at dawn.`, `Ring of Freshwater: a +1 blue porcelain ring that when touched to saltwater transmutes it into freshwater. The rings effects do not work on bodies of water larger than 100 feet in diameter.`, `Ring of Saltwater: a +1 blue porcelain ring that when touched to freshwater transmutes it into saltwater. The rings effects do not work on bodies of water larger than 100 feet in diameter.`, `Invisible Ring: This ring is impossible to find unless you have an ability to see invisible things. When worn, it looks like the wearer is missing the finger the ring is on.`, `Ring of The Woodcarver: a mahogany ring with a ruby gem that once attuned to grants the wearer a +5 to woodcarving.`, `Ring of Sylvanus: a +1 ring with an emerald band that once attuned to grants the wearer the ability to speak to plants. The wearee can also regenerate 1d6 hit points every hour tgey are in sunlight.`, `Holy Ward of The Templar: a +2 red and white steel ring that grants the wearer advantage on initiative rolls.`, `Great Leviathans Eyes: a red leather ring that grants the wearer +2 perception, an additional 30 feet of darkvision, and the ability to sense any fiends in a 60 foot radius.`, `Ring of Freshness: a golden ring with a pink diamond carved into a heart shape. Once attuned the wearee gains a +2 charisma and always smells wonderful.`, `Ring of illusion: a ring that looks platinum with a diamond gem. The ring is actually a regular tarnished copper ring disguised as something more valuable.`, `Ring of Autumn: a mahogany ring with an orange gem carved into a leaf on it. The ring when touched to a tree will turn all of it's leaves red orange and brown.`, `Ring of The Professor: a white marble band that once attuned to gives the wearer +2 intelligence and the ability to calculate numbers with precision.`, `Ring of The Thief: a cast iron ring with runes scratched on it. the wearer has advantage on all slight of hand checks`, `Rangers Ring: an elvenwood ring that his glowing elven runes written on it. Once attuned all ranged attacks gain a 1d6 to damage rolls and all bolts or arrows become replenished if the attack hits.`, `Ring of Arthur: a +2 golden ring studded with rubies. Once attuned the wearer gains a +1 to attack rolls and can counterspell a spell that is an abjuration spells at level 5 or lower a number of times a day equal to the wearers intelligence modifier to a minimum of 1.`, `Barbers Ring: a porcelain blue and red ring that can summon a pair of scissors at will.`, `Ring of kinetic storage: During combat, this ring stores the kinetic energy of all your attacks both hits and misses. Each hit adds 1 charge and each miss adds 3 charges for a max of 20 charges. On a hit after making an attack (spell attack or melee) you may consume any increment of 5 (5,10,15 or 20) charges and add that number as force damage in addition to your damage roll. Alternatively, you may make an unarmed strike as a bonus action and add the force damage on a hit.`, `Ring of Mage Sight: a ring that once attuned to grants the wearer a +1 on all saving throws and the wearer can cast detect magic 3 times a day.`, `Ring of Air: a silver band with and a smoothed stone. When knocked prone a gust of wind immediately picks the wearer back up on their feet making the wearer immune to being knocked prone.`, `Ring of Safe Passage: These rings vary widely in their appearance. Each of these rings is attuned to a specific place. The wearer can safely pass through any area the ring is keyed to without setting off any magical traps or wards. Any magical guardians will treat the wearer as if they are guest of the rightful owner. The ring will also unlock specific magically locked doors.`, `Ring Golem: Upon command the ring unfolds itself into a tiny 3 inch tall golem. It's strong enough to carry about 1 pound. It's uses may require some imagination like "crawl inside that lock an unlock it from the inside".`, `The Pilgrims Knowledge: a copper ring that once attuned to grants the wearer +2 intelligence and gives the wearer the ability to know the name of any creature they see.`, `Ring of The Farmer: a copper ring that once attuned to grants the wearer +2 wisdom and proficiency in survival. The ring when touched to soil makes the soil very fertile.`, `Ring of Gluttony: a thick iron band that once attuned grants the wearer +2 constitution and advantage on all constitution saving throws, however, every day the ring is worn the wearer gains 2d6 pounds and requires twice the amount of food and water.`, `Ring of The Imprisoned One: a +2 ring made out of a mysterious glowing yellow material. Once attuned to the wearer can choose to replace their movement speed for teleportation equal to their movement speed.`, `Ring of The Dark Count: a black and red ring with a ruby gem that can cast bestow curse once a day.`, `Ring of Divine Invisibility: a golden and silver ring. Once worn celestial and fiend creatures cannot see the wearer.`, `Ring of Necromancy: a +1 ring that grants the wearer immunity to necrotic damage and allows the wearer the option to replace any bludgeoning, piercing, and slashing damage with necrotic damage.`, `Ring of the Windweaver: While attuned to this ring of twisted platinum wire, you may expend the ring's seven charges to create the following effects. The DC for any saving throw is 15, and the ring regains 1d6+1 charges daily at dawn. Updraft (2 charges) You cast levitate, targeting one creature within 120 feet of you and requiring no concentration. Alternatively, you cast feather fall, with a range of 120 feet and requiring no concentration. Downdraft (1 charge) A creature of your choice within 120 feet of you can't jump for 1 minute unless it passes a Strength check. If the creature is flying, it is forced down at 60 feet per round unless it passes the check, landing safely if it hits the ground. Tailwind (2 charges) One creature within 120 feet of you may Dash as a bonus action for 1 minute. You may target additional creatures by spending 1 charge per creature. Wind Spear (3 charges) Lashing out with a gust of violent air, you create a line up to 120 feet long and 5 feet wide, originating from you. It deals 3d6 bludgeoning damage to all creatures in the line, with a DEX save for half damage. Gale (4 charges) You create a sphere of turbulent wind with a radius of 20 feet within 120 feet of you. This area counts as difficult terrain, and a creature that enters the area for the first time on its turn or starts its turn there takes 1d6 bludgeoning damage. The sphere lasts for 1 minute. Hurricane (7 charges) A 120 foot wide, 40 foot tall cylinder centered on you is filled with a raging storm. Creatures in the area and take 3d6 bludgeoning damage when they enter the area for the first time on their turn or start their turn there. When moving in the area, a creature must pass a Strength check or be forced to move in a circle around you (clockwise or anticlockwise, determined when you use the ring. You and up to 6 other creatures of your choice are immune to these effects.`, `Ring of The Weave-spinning Warrior: A +3 ring made by a powerful evocation wizard, a war cleric, and a solar. The ring is made of pure diamond and has a crystal filled with diamond dust. The ring has one charge and the charge replenishes every week. When the wearer casts a spell the wearer can choose the expend one charge to double the damage of the spell being casted. One the charge is used the wearer gains exhaustion levels equal to the spell level -1 divided by two.`,
     ]
     document.getElementById("Ring").innerHTML = searchArray(rings)
-}
+};
 
 function findCard() {
     let deckOfAllTheThings = [
@@ -467,15 +470,15 @@ function artGenerator(number) {
 
 function artTen() {
     artGenerator(10)
-}
+};
 
 function artTwentyFive() {
     artGenerator(25)
-}
+};
 
 function artFifty() {
     artGenerator(50)
-}
+};
 
 function artEffect() {
     document.getElementById("Effect").innerHTML = ''

@@ -25,7 +25,7 @@ function printFrom(array, number, id) {
         li.appendChild(text);
         document.getElementById(id).appendChild(li);
     });
-}
+};
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -79,6 +79,9 @@ function toWords(s) {
 function reload() {
     location.reload()
 };
+
+
+
 
 //page scripts
 function tavernPremise() {
@@ -376,7 +379,7 @@ function quest() {
     } else if (chanceTwo < 100) {
         printFrom(flyers, 4, "Promo")
     };
-}
+};
 
 function buildTavern() {
     tavernName()

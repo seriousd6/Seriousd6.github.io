@@ -17,7 +17,6 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
-
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -72,6 +71,10 @@ function reload() {
     location.reload()
 };
 
+
+
+
+
 //page scripts
 
 //SHOPKEEPERS
@@ -88,7 +91,6 @@ function shopkeeps() {
     ]
     document.getElementById("Premise").innerHTML = searchArray(shopPremise)
 };
-
 
 //WALROCK MERCHANTS
 function traderInfo() {
