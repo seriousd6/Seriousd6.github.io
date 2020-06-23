@@ -5,7 +5,7 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-};
+}
 
 function searchArray(array) {
     let shuffled = shuffle(array)
@@ -18,6 +18,12 @@ function rollDice(number) {
 };
 
 function toWords(s) {
+    var th = ['', 'thousand', 'million', 'billion', 'trillion'];
+    var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    var tn = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+    var tw = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+
     s = s.toString();
     s = s.replace(/[\, ]/g, '');
     if (s != parseFloat(s)) return 'not a number';
@@ -64,44 +70,35 @@ function modify(number) {
     return Math.floor(number * (.85 + Math.random() * .4))
 };
 
+function variableEvent(array, number) {
+    let chance = rollDice(100)
+    if (chance < 75) {
+        return ""
+    } else if (number === "undefined") {
+        return searchArray(array) + " "
+    } else {
+        return searchArray(array[number]) + ' '
+    }
+
+
+};
+
+function variableEffect(array, array2, array3) {
+    let chance = rollDice(100)
+    if (chance < 90) {
+        return '.'
+    } else if (chance < 95) {
+        return '. ' + searchArray(array3)
+    } else if (chance < 98) {
+        return ". Observing this artwork has caused " + searchArray(array2[0])
+    } else {
+        return ". If you " + searchArray(array) + ', then ' + searchArray(array2[1])
+    }
+};
+
+function printFrom(array, number) {
+    let list = shuffle(array).slice(0, number)
+    console.log(list)
+}
+
 /* ONLY DELETE BELOW HERE ------------------------------------------*/
-let template = [
-    `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(noun[1])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(noun[3])}`,
-    `The ${searchArray(noun[3])}'s ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[2])}'s ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[1])}'s ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
-    `The ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(adjective)} ${searchArray(noun[1])}`,
-    `The ${searchArray(adjective)} ${searchArray(noun[3])}`,
-    `The ${searchArray(adjective)} ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[2])} and the ${searchArray(noun[1])}`,
-    `The ${searchArray(noun[2])} and the ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[2])} and the ${searchArray(noun[3])}`,
-    `The ${searchArray(noun[3])} and the ${searchArray(noun[1])}`,
-    `The ${searchArray(noun[3])} and the ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[3])} and the ${searchArray(noun[3])}`,
-    `The ${searchArray(noun[1])} and the ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[1])} and the ${searchArray(noun[1])}`,
-    `The ${searchArray(noun[0])} and the ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[3])}`,
-    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[3])}`,
-    `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[2])}'s ${searchArray(adjective)} ${searchArray(noun[0])}`,
-    `The ${searchArray(noun[2])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[1])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[1])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
-    `The ${searchArray(noun[0])}'s ${searchArray(verb)}`,
-    `The ${searchArray(noun[3])}'s ${searchArray(verb)}`,
-    `The ${searchArray(noun[2])}'s ${searchArray(verb)}`,
-    `The ${searchArray(noun[1])}'s ${searchArray(verb)}`,
-    `The ${searchArray(verb)}`,
-    `${searchArray(adjective)} ${searchArray(verb)}`,
-    `The ${toWords(rollDice(100))} ${searchArray(noun[2])}'s`
-    `The ${toWords(rollDice(100))} ${searchArray(noun[1])}'s`
-    `The ${toWords(rollDice(100))} ${searchArray(noun[0])}'s`
-]
