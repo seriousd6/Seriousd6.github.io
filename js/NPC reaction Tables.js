@@ -107,7 +107,68 @@ function reload() {
     location.reload()
 };
 
+function printFrom(array, number, id) {
+    let list = shuffle(array).slice(0, number)
+    list.forEach(function(item) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(item);
+        li.appendChild(text);
+        document.getElementById(id).appendChild(li);
+    });
+};
+
 //page scripts
+
+function scene() {
+    document.getElementById("Scene").innerHTML = ""
+
+    function person(number) {
+        let generic = ["man", "boy", "girl", "woman"]
+        let any = [`${searchArray(["young","old"])} man`, `${searchArray(["young","baby"])} boy`, `${searchArray(["young","baby"])} girl`, `${searchArray(["young","old"])} woman`]
+        let withagency = [`a${searchArray([" young","n old"])} man`, `a${searchArray([" young",""])} boy`, `a${searchArray([" young",""])} girl`, `a${searchArray([" young","n old"])} woman`]
+        let plural = [`young ${searchArray(["men","men and women","men, women and children","women"])}`, `varying aged ${searchArray(["men","men and women","men, women and children","women"])}`, `old ${searchArray(["men","men and women","women"])}`, `boys and girls`, `boys`, `girls`]
+        let audience = [`a ${searchArray(generic)}`, `a small group of ${searchArray(plural)}`, `a large group of ${searchArray(plural)}`]
+        let professional = [`${searchArray([" young","n old"])} man`, `${searchArray([" young","n old"])} woman`]
+        if (number === 0) {
+            return searchArray(generic)
+        } else if (number === 1) {
+            return searchArray(any)
+        } else if (number === 2) {
+            return searchArray(withagency)
+        } else if (number === 3) {
+            return searchArray(audience)
+        } else if (number === 4) {
+            return searchArray(plural)
+        } else if (number === 5) {
+            return searchArray(professional)
+        }
+    };
+    let sceneArray = [
+            `You see a few kids playing ${searchArray(["by climbing trees and houses and jumping down to scare people","with a pet","wall-ball","with a ball", "with some small figurines","tag","hide and go seek","freeze tag","hunter and prey"])}`,
+            `You see a kid, sitting on a wall ${searchArray(["stargazing","counting the clouds","muttering to themselves",`looking ${searchArray(["longingly","lazily","pitifully", "desperately","anxiously"])} at ${searchArray(["another kid","the local bakery","over the horizon","the graveyard","the treeline"])}`,])}`,
+            `You see a ${searchArray(["troubled","bored"])} ${person(0)} who ${searchArray(["can't decide what to do","seems to be daydreaming about someone",])}`,
+            `You see a ${person(0)} in the process of ${searchArray(["stealing something", "pickpocketing someone","mugging someone"])}`,
+            `You see ${searchArray([ "two boys", "two girls", "a boy and a girl", `a${searchArray([" young","n old"])} man and a${searchArray([" young","n old"])} woman`, `two old ${searchArray(["men","women"])}`])} ${searchArray(["complaining loudly","in a fistfight","playing chess","bickering back and forth",`making a deal`, `doing some scientific experiments`, `having a silent conversation`, `learning magic`, `playfully fighting`, `fishing`, `hiding from the rain`, `being nagged by ${person(2)}`])}`,
+        
+            `You see a group of ${person(4)} building ${searchArray(["a house","a boat","a wagon","a cart","some furniture"])}`,
+            `You see a ${person(0)} casting a spell`,
+            `You see a ${searchArray(["celebratory parade","funeral procession"])} for a ${searchArray(["well-loved","widely hated"])} ${person(1)}`,
+            `You see ${person(2)} ${searchArray(["demonstrating a lack of control","demonstrating confident ignorance","showing absentmindeness","using unessicarily fancy words to impress people","unknowingly misuing words and phrases of speech", "avoiding eye contact","behaving foolishly"])}`,
+            `You see ${person(3)} ${searchArray(["speaking with","discussing current events with","in a heated argument with","listening to",])} a${searchArray([" shabby-looking", " wise-looking"," surprisingly young-looking"," dirty-looking"," ancient-looking"," shifty-looking","n unassuming-looking","awe-inspiring","oddly attractive","wild-eyed"])} ${searchArray(["cleric","preist","sage","mage","paladin"])}`,
+            `You see ${searchArray([person(2),person(3)])} ${searchArray(["stargazing","preparing for an exorcism","working with plants and gathering some",`saving someone from ${searchArray(["a wld animal attack","drowining in the river", "a monster attack",])}`,"trying to stop a fistfight","cheering on a fistfight","sifting through the destruction of a recent bandit attack","watching a group of bandits terrorizing their home","taking measurements of the land for some project","trying to combat nature",`${searchArray(["trying to calm a drunk man","loading things onto a cart","lifting and hauling heavy boxes","pushing a broken cart"])}`,"chasing someone","playing friendly games","in mass hysteria","performing a religious ceremony","preparing to hunt ghosts","preparing for a hunt","foraging","negotiating with some guards","arguing with some guards","selling holy amulets","clearing plants","cutting down trees","selling something","selling useless things","eating a meal","writing a letter", "writing letters","writing stories","writing poetry", "composing songs", "searching for a thief","painting","whittling","washing clothes","singing", "listening to a musician", "digging a large hole (excavating)"])}`,
+            `You see ${person(2)} ${searchArray([`stuck ${searchArray(["under a dead horse", "under a broken wagon","under a fallen tree","in quicksand"])} calling for help`,"dishing out orders to others","quilting a blanket","sewing some clothes","using unfair weights in trades","in the process of forging something","wandering aimlessly",`${searchArray(["loading things onto a cart","lifting and hauling heavy boxes","pushing a broken cart"])}`,"chasing someone","panicing","seemingly in a hurry","performing a religious ritual","running from something, or someone",`bathing in the ${searchArray(["river","lake","ocean",])}`,"grooming themselves","offering to tell your fortune for the exclusive price of 1 gold","on their way to file papers with the local authority","performing some calculations with their finger in the air","sleeping on a bench","taking a nap in the grass","making a poor attempt to smuggle something past the guards",`hiding something (probably to smuggle it) in their ${searchArray(["horse's saddlebags","pack","wagon","bag of holding",])}`, `demonstrating an invention to ${person(3)}`, "begging for coins",`struggling with an illness`, `drying clothes`, `reeling from a spell effect`, `drunkenly wandering`, `acting very afraid of something`, `skinning an animal`, `translating signs/carvings`, `reading news`, `sending a mail pigeon`, `preparing meat`, `guarding someone, or something`, `doing artisan work`, `cooking`, `under a mental magic effect`, `hitchhiking`, `bluffing/denying something`, `speaking with shady people`, `mourning`, `performing a quest`, `following someone`, `gardening`, `gathering simple resourses (herbs, dyes etc.)`, `searching for a lost item`, `waiting for delivery`, `meditating`, `creating some alchemical concotion ( a cure for something)`, `parting with someone`, `counting coins`, `drawing schematics`, `preparing a potion`, `on a road to somewhere`, `sculpting`,])}`,
+            `You see ${person(2)} that looks quite peculiar`,
+            `You see a small group of ${person(4)} celebrating ${searchArray(["a reanimation ceremony","an initation ceremony","a birthday","the opening of a shrine", "a local holiday","something that involves a lot of drinking",])} `,
+            `You see a small group of ${person(4)} having a ${searchArray(["nostalgiс","heated","lazy"])} ${searchArray(["argument","discussion","debate",])} about ${searchArray(["other races", "a local gossip","supernatural phenomena","their ancestors","the way things used to be","the other sex","current events", "the current ruler","politics",])}`,
+            `You see a small group of ${person(4)} ${searchArray(["gathering to see a(n)", "currently attending/watching a(n)","leaving a recently ended"])} ${searchArray(["court proceeding","play","sports event","ressurection ritual","circus", "odd transport caravan", "public execution", "quarentine announcement","decree from the ruler","arrest", "magic (sleight of hand) show","the visiting of the local lord", "auction", "odd local competition or activity",])}`,
+            `You come upon an area that ${searchArray(["should have people, and has evidence of people recently present, but there is nobody here","has a manned checkpoint made by local authorities","has a manned checkpoint made by a group impersonating local authorities",])}`, 
+            `You see a ${person(0)} ${searchArray(["tithing to a local temple","damaging soem property","walking into the entrance of a mine","playing a ball game using mostly their feet with a few other players","admiring themselves in a reflection","sharing food with a young kid","gathering food", "looking at the horizon","faking the ability to do something","eavesdropping on a nearby conversation","warming themselves by a fire","praying","singing a hymn", "peeing in a bush on the side of the road"])}`,
+            `You see a ${person(5)} ${searchArray(["collecting taxes","asking for donations for a local cause", "about to start a duel with another person","and their significant other getting married","proposing marriage to their significant other","collecting trash on a cart", "feeding a child", "flirting with another person", "healing someones wounds","taunting someone",`providing an inspirational message to ${person(3)}`, `teaching a lesson to ${person(3)}`, `loudly haggling with a ${searchArray(["craftsman","merchant","butcher","carriage-driver"])}`,"working in a manufacturing plant","learning from a teacher","tying somebody up","walking a drunk home","signing a contract","controlling a machine that they built","placing animal traps","selling illegal merchandise","setting up some explosives","on a pilgrimage", "changing clothes", "training some fighters", "mumbling under their breath","training some kids"])}`,
+            `You see a small group of ${person(4)} ${searchArray([`up to some debaucherous antics`, `gambling on some games`, `preparing for something`, `telling stories to one another`, `training the local fighter regiment`, `trying to solve a local cattle theft`, `in a hideout/ambush spot`, `calming down a posessed person`, `engaged in a mass fistfight`, `doing a controlled burn of an area of forest`, `extinguishing a fire`, `searching for someone`, `doing a family activity`, `dancing together`, `advertising a product or service`, `fixing a broken ${searchArray(["house","cart","roof","wheel"])}`, `waiting for some adventurers to show up`, `smoking on a break`, `plowing a field`,])}`,
+        ]
+    printFrom(sceneArray,5,"Scene")
+};
+
 
 //Before Everything - non-dependant 
 let rumorType = ["False (Appears as Specific or Exact)", "Vague", "Mixed", "General", "Specific", "Exact", ]

@@ -42,11 +42,22 @@
 
     <div class="container" id='reac'>
         <div class="row">
-            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Reset Seed</button>
-            <br>
-            <p>This generator will repeat itself a lot (still figuring out how to auto-prime/ refresh), please use the "RESET SEED" button above to get new outcomes!</p>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
         </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="scene()">Scene</button>
+            <div class="col npc" id="Scene"></div>
+        </div>
+        <br>
+        <br>
+
+
+
         <h5>NPC Reactions</h5>
+        <p>This generator will repeat itself a lot (still figuring out how to auto-prime/ refresh), please use the "RESET SEED" button below to get new outcomes!</p>
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Reset Seed</button>
+        </div>
         <div class="row">
             <button class="col-2 btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reaction</button>
             <div class="dropdown-menu">
@@ -74,9 +85,13 @@
     </div>
 
 
-
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: <a style="color: red;" href="https://www.reddit.com/user/TheUHO">u/TheUHO</a> for the "SCENE" idea and content! <a style="color: red;" href="https://www.reddit.com/user/famoushippopotamus">u/FamousHippopotamus</a> for the content behind
+            the "REACTION", "MOTIVATION", and "AREA STATUS"
+        </p>
+    </footer>
     <footer>
-        <p>Thanks for checking this out! Give me some feedback on Reddit <a href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

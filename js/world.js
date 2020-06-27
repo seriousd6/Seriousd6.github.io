@@ -184,7 +184,7 @@ function populate() {
             let interaList = specInterRelat;
             shuffle(interaList);
             let finalIntera = interaList.slice(0, 1)
-            let output = 'There is only one relationship between these two species: ' + '#1: ' + finalIntera[0];
+            let output = 'There is only one relationship between these two species: ' + '\n#1: ' + finalIntera[0];
             return output
         } else {
             let numOfInteract = Math.floor((numbSpecies / 1.5) + .6);
