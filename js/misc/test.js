@@ -1,15 +1,10 @@
-//chance and array searching methods
+//Chance and array manipulation methods
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-}
-
-function searchArray(array) {
-    let shuffled = shuffle(array)
-    return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
 function rollDice(number) {
@@ -17,6 +12,13 @@ function rollDice(number) {
     return result;
 };
 
+function searchArray(array) {
+    let shuffled = shuffle(array)
+    return shuffled[Math.floor(Math.random() * shuffled.length)];
+};
+
+
+// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
@@ -65,40 +67,7 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-
-function modify(number) {
-    return Math.floor(number * (.85 + Math.random() * .4))
+//Reload Page
+function reload() {
+    location.reload()
 };
-
-function variableEvent(array, number) {
-    let chance = rollDice(100)
-    if (chance < 75) {
-        return ""
-    } else if (number === "undefined") {
-        return searchArray(array) + " "
-    } else {
-        return searchArray(array[number]) + ' '
-    }
-
-
-};
-
-function variableEffect(array, array2, array3) {
-    let chance = rollDice(100)
-    if (chance < 90) {
-        return '.'
-    } else if (chance < 95) {
-        return '. ' + searchArray(array3)
-    } else if (chance < 98) {
-        return ". Observing this artwork has caused " + searchArray(array2[0])
-    } else {
-        return ". If you " + searchArray(array) + ', then ' + searchArray(array2[1])
-    }
-};
-
-function printFrom(array, number) {
-    let list = shuffle(array).slice(0, number)
-    console.log(list)
-}
-
-/* ONLY DELETE BELOW HERE ------------------------------------------*/

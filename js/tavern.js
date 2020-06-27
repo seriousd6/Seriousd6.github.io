@@ -313,6 +313,180 @@ function foodFind() {
     document.getElementById("Food").innerHTML = findFood();
 };
 
+function gameFind() {
+    let size = [
+        "large group of people",
+        "considerable crowd of people",
+        "few tables pushed together with a small group of people",
+        "pair of people",
+        `rambunctious crowd surrounding ${toWords(2+rollDice(8))}people`,
+    ];
+    let stakes = [
+        `players have the opportunity to bet once on each player's turn`, `players have several opportunities to bet on each player's turn`, `players have several opportunities to bet each round`, `players must bet before the round is played`, `players must bet before the game begins`, `spectators bet as often as players do`, `spectators typically place bets before the game begins`, `spectators often place bets while the game is in progress`, `cheating is extremely rare or impossible`, `cheating is difficult, and often occurs with the help of someone else in the room`, `cheating is common`, `cheating is encouraged`,
+    ];
+    let renown = [
+        `high stakes gambling.`, `low stakes, social gambling.`, `its simple set of rules.`, `its complicated set of rules.`, `the ease with which anyone can learn to play.`, `its class of expert players and their elaborate strategies.`, `a celebrated instance of cheating that launched a war.`, `a celebrated instance of cheating that prevented a war.`, `a legendary match involving a king or queen.`, `a legendary match involving a witch or wizard.`, `a storied bet where the loser faced an aberration with many eyes.`, `a storied bet where the loser faced a dragon.`, `a storied bet where the loser faced a demon.`, `a storied bet where the loser faced a devil.`, `a storied bet where the loser faced an elemental.`, `a storied bet where the loser faced a kraken.`, `a storied bet where the loser faced a lich.`, `a storied bet where the loser faced a vampire.`, `a storied bet in which the winner took an airship from the loser.`, `a storied bet in which the winner took an ancient text from the loser.`, `a storied bet in which the winner took a castle from the loser.`, `a storied bet in which the winner took the keys to the city from the loser.`, `a storied bet in which the winner took a magic sword from the loser.`, `a storied bet in which the winner took a magic wand from the loser.`, `a storied bet in which the winner took a princess from the loser.`, `a storied bet in which the winner took a treasure hoard from the loser.`,
+    ];
+    let popular = [
+        `sailors and pirates.`, `fishermen and dockworkers.`, `thieves and knaves.`, `knights and lords.`, `peasants.`, `dwarves.`, `miners and smiths.`, `goblins and hobgoblins.`, `elves.`, `noblewomen.`, `masons and stonecutters.`, `mages and priests.`,
+    ];
+    let origin = [
+        "long ago in this region.",
+        "long ago in a foreign land.",
+        "long ago in an unknown location.",
+        "in the recent past in this region.",
+        "in the recent past in this very room.",
+        "in the recent past in a foreign land.",
+        "down along the docks of a bustling port city.",
+        "in a quaint country inn.",
+        "in rough-and-tumble urban tavern.",
+        "along a trade route to an exotic land.",
+        "in the court of a mighty king or queen.",
+        "in the mind of a half-mad wizard.",
+    ];
+
+    function cardGame() {
+        let winner = [
+            "play all the cards in his or her hand.", "be holding the highest score at the end of the hand.", "be holding the score closest to a target score.", "hold all the cards in the deck.", "win the most tricks over the course of a round.", "be holding the lowest score at the end of the hand.", "bluff and bet their way to having the lowest scoring hand.", "bluff and bet there way to being the highest scoring hand.",
+        ]
+        let best = [
+            "the dragon", "the lord", "the crown", "the queen", "the alchemist", "the knight", "the champion", "the eagle",
+        ]
+
+        let worst = [
+            "the worm", "the beggar", "the rat", "the fool", "the crone", "the devil", "the villain", "the pigeon",
+        ]
+
+        let cards = [
+            `The rules are simple, on each turn the player plays a card from his or her hand face up or face down on the table. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player draws one or more cards from a personal deck. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player draws one card from a community deck. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player draws a card from a community deck if he or she has no other plays. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player places a card from his or her hand into the discard pile. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player lays down a pair, a three or four of a kind, or a straight on the table. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player lays down a card to build threes and fours of a kind or straights on the table. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+            `The rules are simple, on each turn the player draws one or more cards from a personal deck. To win, they must ${searchArray(winner)} The best ${searchArray(['card','hand',])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}. `,
+        ]
+        return searchArray(cards);
+    };
+
+    function diceGame() {
+        let winner = [
+            "have rolled the highest score in play.",
+            "roll the highest possible score.",
+            "roll the lowest possible score.",
+            "have rolled the lowest score in play.",
+            "achieve a target score over the succession of many rolls.",
+            "outscore his or her opponents over the succession of many rolls.",
+            "bluff and bet their way to having the lowest remaining score.",
+            "bluff and bet there way to being the highest remaining score.",
+        ]
+        let best = [
+            "the dragon",
+            "the keep",
+            "the warship",
+            "the maiden",
+            "the thunder",
+            "the shark",
+            "the tower",
+            "the sorcerer",
+        ]
+        let worst = [
+            "The snake",
+            "The thief",
+            "The dinghy",
+            "The hag",
+            "The ghost ship",
+            "The tuna",
+            "The pits",
+            "The demon",
+        ]
+        let dice = [
+            `The rules are simple, on each turn the player rolls once. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls twice, keeping the better results. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls once or twice, keeping the second result on a reroll. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls at the same time as other players. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls and hides the results from other players. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls and hides the results from him- or herself and from other players. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls and hides the results from him- or herself but not from the other players. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player rolls and waits for an arbiter to make a ruling. To win, they must ${searchArray(winner)} The highest roll is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+        ]
+        return searchArray(dice)
+    };
+
+    function boardGame() {
+        let winner = [
+            "capture all of his or her opponents pieces.",
+            "kill all of his or her opponents pieces.",
+            "race his or her opponent's pieces through a labyrinth of obstacles.",
+            "maneuver pieces to the far side of his or her opponent's territory.",
+            "capture his or her opponent's headquarters.",
+            "kill his or her opponent's commanding piece.",
+            "score points while navigating pieces through a labyrinth.",
+            "claim territorial positions with pieces before his or her opponent does.",
+        ]
+        let best = [
+            "the dragon",
+            "the warhorse",
+            "the warlord",
+            "the mastermind",
+            "the queen",
+            "the dark lord",
+            "the treasure chest",
+            "the sword",
+        ]
+        let worst = [
+            "the minion",
+            "the foot soldier",
+            "the goblin",
+            "the goon",
+            "the guard",
+            "the skeleton",
+            "the trap",
+            "the club",
+        ]
+        let board = [
+            `The rules are simple, on each turn the player moves one of his or her pieces on the board. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player places a piece on the board. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player moves two or more of his or her pieces on the board. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player places two or more pieces on the board. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player removes one or more of his or her opponent's pieces by encircling it or flanking it. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player halts his or her opponent's progress by encircling or flanking one or more of the opponent's pieces. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player converts one or more of his or her opponent's pieces by encircling it or flanking it. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+            `The rules are simple, on each turn the player moves his or her piece closer to a destination space on the board. To win, they must ${searchArray(winner)} The ${searchArray(["most powerful piece", "strongest maneuver"])} is called ${searchArray(best)}, and the worst is called ${searchArray(worst)}.`,
+        ]
+        return searchArray(board)
+    };
+    let games = [
+        [
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck of over 100 cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck of 53 cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck of 52 cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck of 24 cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck of 22 cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a card game with a deck with a variable number of cards. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${cardGame()}`,
+        ],
+        [
+            `You notice that there is a ${searchArray(size)} playing a dice game using a pair of dice. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${diceGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a dice game using several dice. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${diceGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a dice game using several dice, pencils, and paper. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${diceGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a dice game using one or two dice and a board with pieces. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${diceGame()}`,
+        ],
+        [
+            `You notice that there is a ${searchArray(size)} playing a board game with sets of matching pieces. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${boardGame()}`,
+            `You notice that there is a ${searchArray(size)} playing a board game with sets of individual pieces. In this game ${searchArray(stakes)} and it is known for ${searchArray(renown)} The game is widely known, but is most loved by ${searchArray(popular)} It was devised ${searchArray(origin)} ${boardGame()}`,
+        ],
+    ];
+    let chance = rollDice(100)
+    if (chance < 33) {
+        return searchArray(games[0])
+    } else if (chance < 67) {
+        return searchArray(games[1])
+    } else {
+        return searchArray(games[2])
+    };
+};
+
 function events() {
     function checkEvent() {
         let badTavernEvent = [
@@ -327,12 +501,14 @@ function events() {
             "A talent agent is holding auditions for the midwinter festival play. Bonus points for singing and dancing!", "After 1d6 drinks gravity seems to hold no sway over the bar patrons. Everyone starts to float and the regular drinks keep drinking on the ceiling as if this is a normal occurrence.", "A member of your party is mistaken for a local celebrity. People are constantly asking for autographs etc for the whole night.", "It’s the owners birthday! Reduced drink prices and free cake!", "The barkeep leaves a single coin with a tiny dragon at your table, he says ‘be sure to spend him quick, he likes to travel’ the dragon is friendly but will not separate from the coin.",
         ]
         let chance = rollDice(100);
-        if (chance < 7) {
+        if (chance < 15) {
             return "While you are there..." + searchArray(badTavernEvent)
-        } else if (chance < 16) {
+        } else if (chance < 30) {
             return "While you are there..." + searchArray(tavernQuest)
-        } else if (chance < 25) {
+        } else if (chance < 45) {
             return "While you are there..." + searchArray(goodTavernEvent)
+        } else if (chance < 60) {
+            return gameFind()
         } else {
             return "Nothing of note is going on"
         }
