@@ -124,7 +124,15 @@ function populate() {
     document.getElementById("Arches").innerHTML = "";
     document.getElementById("Intera").innerHTML = "";
     let worldIntSpecies = [
-        "Only one species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
+        "Only one species, Humans, exist in this world.", 
+        "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", 
+        "Humans and " + '@@Placeholder@@' + "other species exist in the world.", 
+        "Humans and " + '@@Placeholder@@' + "other species exist in the world.", 
+        "Humans and " + '@@Placeholder@@' + "other species exist in the world.", 
+        "Humans and " + '@@Placeholder@@' + "other species exist in the world.", 
+        "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", 
+        "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", 
+        "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
     ];
     let worldSpecArchetypes = [
         "Brute - known for prodigal strength, near-endless endurance, and dim wittedness.", "Vermin - known for individual incompetence, short lifespan, and rapid rate of reproduction.", "Agile - known for incredible dexterity, mind-boggling flexibility, and skill at moving unseen.", "Elder - known for ancient history, long lifespan, deep wisdom, and keen intellect.", "Comfy - known for tight-knit families, friendly demeanor, and talent at agriculture.", "Alien - known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.", "Artisan - known for industriousness, secretive demeanor, and talent at craftsmanship.", "Big/Tiny - known for physical stature, which is much larger, or smaller than other species.", "Arcane - known for high affinity for the supernatural, or seemingly supernatural abilities.", "Collective - known for intensely hierarchal society, and the huge variation between castes.", "Mundane - known for lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
@@ -148,7 +156,7 @@ function populate() {
     function findSpec() {
         let intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
         let rawString = worldIntSpecies[intSpecIndex];
-        let otherSpecies = (1 + rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
+        let otherSpecies = (rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
         let numbSpecInWords = toWords(otherSpecies);
         let fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
         document.getElementById("Species").innerHTML = fixedString;
