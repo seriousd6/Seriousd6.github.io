@@ -149,7 +149,7 @@ function populate() {
         let intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
         let rawString = worldIntSpecies[intSpecIndex];
         let otherSpecies = (1 + rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
-        let numbSpecInWords = toWords(otherSpecies)
+        let numbSpecInWords = toWords(otherSpecies);
         let fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
         document.getElementById("Species").innerHTML = fixedString;
         if (intSpecIndex >= 6) {
