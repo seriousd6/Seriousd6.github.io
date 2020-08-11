@@ -151,7 +151,7 @@ function populate() {
         let otherSpecies = (rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
         let numbSpecInWords = no
         if (otherSpecies > 0) {
-            numbSpecInWords = toWords(otherSpecies);
+            numbSpecInWords = toWords(otherSpecies)
         }
         let fixedString = rawString.replace("@@Placeholder@@", numbSpecInWords);
         document.getElementById("Species").innerHTML = fixedString;
