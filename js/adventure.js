@@ -306,14 +306,7 @@ function subDimension() {
         ['a puzzle', 'faith', 'a riddle', 'skill', ],
     ]
     let entry = [
-        `if someone offers a sacrifice of ${searchArray(arrayOne[0])}`,
-        `when the stars are right; during ${searchArray(arrayOne[1])}`,
-        `during ${searchArray(arrayOne[2])}`,
-        `when the weather is ${searchArray(arrayOne[3])}`,
-        `when someone feels intense ${searchArray(arrayOne[4])}`,
-        `if someone sings ${searchArray(arrayOne[5])}`,
-        `if the ritual of ${searchArray(arrayOne[6])} is performed`,
-        `through ${searchArray(arrayOne[7])}`,
+        `if someone offers a sacrifice of ${searchArray(arrayOne[0])}`, `when the stars are right; during ${searchArray(arrayOne[1])}`, `during ${searchArray(arrayOne[2])}`, `when the weather is ${searchArray(arrayOne[3])}`, `when someone feels intense ${searchArray(arrayOne[4])}`, `if someone sings ${searchArray(arrayOne[5])}`, `if the ritual of ${searchArray(arrayOne[6])} is performed`, `through ${searchArray(arrayOne[7])}`,
     ]
 
     let arrayTwo = [
@@ -327,14 +320,7 @@ function subDimension() {
         ['the future', 'the past', 'somewhere nearby', 'somewhere far away'],
     ]
     let inside = [
-        `an imprisoned ${searchArray(arrayTwo[0])}`,
-        `a cache of ${searchArray(arrayTwo[1])}`,
-        `an artifact ${searchArray(arrayTwo[2])}`,
-        `a${searchArray(arrayTwo[3])}`,
-        `${searchArray(arrayTwo[4])}`,
-        `a community of ${searchArray(arrayTwo[5])}`,
-        `${searchArray(arrayTwo[6])}`,
-        `a portal to ${searchArray(arrayTwo[7])}`,
+        `an imprisoned ${searchArray(arrayTwo[0])}`, `a cache of ${searchArray(arrayTwo[1])}`, `an artifact ${searchArray(arrayTwo[2])}`, `a${searchArray(arrayTwo[3])}`, `${searchArray(arrayTwo[4])}`, `a community of ${searchArray(arrayTwo[5])}`, `${searchArray(arrayTwo[6])}`, `a portal to ${searchArray(arrayTwo[7])}`,
     ]
 
     let arrayThree = [
@@ -348,14 +334,7 @@ function subDimension() {
         ['a cart or caravan', 'boat or ship', 'spaceship', 'airship or some other flying contraption', ],
     ]
     let environment = [
-        `${searchArray(arrayThree[0])}`,
-        `a fractured plane of ${searchArray(arrayThree[1])}`,
-        `subterranian ${searchArray(arrayThree[2])}`,
-        `a minor elemental plane of ${searchArray(arrayThree[3])}`,
-        `an alien ${searchArray(arrayThree[4])}`,
-        `the inside of a ${searchArray(arrayThree[5])}`,
-        `a ${searchArray(arrayThree[6])}`,
-        `a ${searchArray(arrayThree[7])}`,
+        `${searchArray(arrayThree[0])}`, `a fractured plane of ${searchArray(arrayThree[1])}`, `subterranian ${searchArray(arrayThree[2])}`, `a minor elemental plane of ${searchArray(arrayThree[3])}`, `an alien ${searchArray(arrayThree[4])}`, `the inside of a ${searchArray(arrayThree[5])}`, `a ${searchArray(arrayThree[6])}`, `a ${searchArray(arrayThree[7])}`,
     ]
     let arrayFour = [
         ['a wizard', 'an experiment gone awry', 'psionics', 'repeated plane shifting'],
@@ -368,14 +347,7 @@ function subDimension() {
         ['battle', 'death of a powerful (outsider/deity/magic-user)', 'event, the destruction of an ancient and powerful artifact', 'weapon of terrible power'],
     ]
     let creation = [ //created by 
-        `${searchArray(arrayFour[0])}`,
-        `a cult that ${searchArray(arrayFour[1])}`,
-        `a deity, who is ${searchArray(arrayFour[2])}`,
-        `a precursor race, who ${searchArray(arrayFour[3])}`,
-        `${searchArray(arrayFour[4])}`,
-        `natural means, namely ${searchArray(arrayFour[5])}`,
-        `${searchArray(arrayFour[6])}`,
-        `a catostrophic ${searchArray(arrayFour[7])}`,
+        `${searchArray(arrayFour[0])}`, `a cult that ${searchArray(arrayFour[1])}`, `a deity, who is ${searchArray(arrayFour[2])}`, `a precursor race, who ${searchArray(arrayFour[3])}`, `${searchArray(arrayFour[4])}`, `natural means, namely ${searchArray(arrayFour[5])}`, `${searchArray(arrayFour[6])}`, `a catostrophic ${searchArray(arrayFour[7])}`,
     ]
 
     let arrayFive = [
@@ -389,25 +361,11 @@ function subDimension() {
         ['cast a resonant spell', 'pray to an appropriate deity', 'cause the death or destruction of an inhabitant or local object', 'ask for permission from the plane itself'],
     ]
     let exit = [
-        `sing a ${searchArray(arrayFive[0])}`,
-        `provide a sacrifice of ${searchArray(arrayFive[1])}`,
-        `experience intense ${searchArray(arrayFive[2])}`,
-        `complete a test ${searchArray(arrayFive[3])}`,
-        `perform a ritual of ${searchArray(arrayFive[4])}`,
-        `fast from ${searchArray(arrayFive[5])} for ${rollDice(4)+rollDice(5)+1} days`,
-        `relinquish ${searchArray(arrayFive[6])}`,
-        `${searchArray(arrayFive[7])}`,
+        `sing a ${searchArray(arrayFive[0])}`, `provide a sacrifice of ${searchArray(arrayFive[1])}`, `experience intense ${searchArray(arrayFive[2])}`, `complete a test ${searchArray(arrayFive[3])}`, `perform a ritual of ${searchArray(arrayFive[4])}`, `fast from ${searchArray(arrayFive[5])} for ${rollDice(4)+rollDice(5)+1} days`, `relinquish ${searchArray(arrayFive[6])}`, `${searchArray(arrayFive[7])}`,
     ]
 
     let size = [
-            `tiny building, a couple of rooms`,
-            `small house, three or four rooms`,
-            `huge house, eight or nine rooms`,
-            `mansion, a dozen rooms`,
-            `small building, a couple of blocks`,
-            `county fair or estate`,
-            `country or small kingdom`,
-            `small continent`,
+            `tiny building, a couple of rooms`, `small house, three or four rooms`, `huge house, eight or nine rooms`, `mansion, a dozen rooms`, `small building, a couple of blocks`, `county fair or estate`, `country or small kingdom`, `small continent`,
         ]
         /*
         console.log("This subplane is accessible " + searchArray(entry))

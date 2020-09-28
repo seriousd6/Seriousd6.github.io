@@ -20,9 +20,9 @@ function searchArray(array) {
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
-    var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-    var tn = ['ten', 'eleven', 'tewelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-    var tw = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+    var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
 
 
     s = s.toString();
@@ -124,7 +124,7 @@ function populate() {
     document.getElementById("Arches").innerHTML = "";
     document.getElementById("Intera").innerHTML = "";
     let worldIntSpecies = [
-        "Only one species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.","No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.","No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
+        "Only one species, Humans, exist in this world.", "Only Humans and " + '@@Placeholder@@' + "other significant subspecies exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "Humans and " + '@@Placeholder@@' + "other species exist in the world.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.", "No Humans exist in the world, instead, there is/are " + '@@Placeholder@@' + "other species.",
     ];
     let worldSpecArchetypes = [
         "Brute - known for prodigal strength, near-endless endurance, and dim wittedness.", "Vermin - known for individual incompetence, short lifespan, and rapid rate of reproduction.", "Agile - known for incredible dexterity, mind-boggling flexibility, and skill at moving unseen.", "Elder - known for ancient history, long lifespan, deep wisdom, and keen intellect.", "Comfy - known for tight-knit families, friendly demeanor, and talent at agriculture.", "Alien - known for the unsettling adaptations that allow it to thrive in areas other species couldn’t.", "Artisan - known for industriousness, secretive demeanor, and talent at craftsmanship.", "Big/Tiny - known for physical stature, which is much larger, or smaller than other species.", "Arcane - known for high affinity for the supernatural, or seemingly supernatural abilities.", "Collective - known for intensely hierarchal society, and the huge variation between castes.", "Mundane - known for lack of distinguishing traits, versatile mediocrity, and widespread settlement.",
@@ -156,7 +156,7 @@ function populate() {
             let numbSpecies = otherSpecies;
             return numbSpecies
         } else {
-            let numbSpecies = otherSpecies;
+            let numbSpecies = 1 + otherSpecies;
             return numbSpecies
         };
 

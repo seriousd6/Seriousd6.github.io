@@ -1642,356 +1642,7 @@ NPC stuff
         Sketch artist. This NPC is scribbling on a piece of paper while he or she is talking to the party. After a while they proudly show the sketch they made of one of the party members. Roll 1d6/2 to see how good this NPC is. Very, very bad. Extremely average. Very, very good.
         Want a cookie? This NPC bakes their own cookies and offers to anyone and everyone to try. Roll 1d6/2 to determine the quality. Terrible, bitter and is that a hair? Average, OK cookies. These are amazing, crunchy, sweet and something you can't quite put your finger on but it's awesome.
         Juggler. This NPC is an excellent juggler and will juggle everytime he or she has two or more items in his or her hands. Their limit is 1d6 + 3 items at once.
-    backstories quirks/ motives
-        Was exiled by their brother the king
-        Petrified to stone for over 200 years
-        The last of his ancient bloodline
-        Always takes first watch
-        Keeps a blacklist of people to kill
-        Became an adventurer because they lost a bet
-        Aims to learn every language in the land
-        Is wanted for a reward
-        Wants to clear his name
-        Drunkenly swore a blood oath and forgot what for
-        Insists they are the reincarnation of a legendary warrior
-        Doesn’t understand sarcasm
-        Believes trees can speak to them and them alone
-        Seeks to end an family feud
-        Hates being made to wait
-        Carries a charmed locket that they can't open
-        Always cuts to the chase
-        Can’t tell a lie, no matter the cost
-        Is searching for the knowledge of true immortality
-        Framed for the murder of a famous and well-loved innkeeper
-        Beaten and imprisoned for their religious beliefs
-        Keeps getting mistaken for a famous knight
-        Already made and lost a fortune
-        Has deserted from the army
-        Is trying to avoid a prophecy
-        Secretly became an adventurer to impress a love interest
-        Hates riding horses
-        Always gives the good/bad news first
-        Has cheated death more times than they deserved
-        Raised as a hostage by their father's enemies
-        Is running from a marriage arranged by their parents
-        Can understand common, but only speaks (language)
-        Has a huge debt to pay back
-        Has no other family but the party
-        Never returned anything they borrowed
-        Ran afoul of the goblin mob
-        Seems to know everyone
-        Once served as a court jester
-        Has been exiled twice under different names
-        Is the twin of the local monarch
-        Is really (I mean really) afraid of the dark
-        Trying to build a network of shady connections
-        Woke up in a bar with no memory and a sealed letter
-        Always keeps his promises
-        Worries some of their memories have been tampered with
-        Is terrified of rats
-        Suffers from claustrophobia
-        Is trapped in a faustian bargain
-        Ran away from home at the age of eleven
-        Always wakes up on the right side of the bed
-        Is afraid of sharp edges
-        Has gotten away with murder
-        Was a weapons instructor for the city militia
-        Loves to haggle
-        Often will offer a bribe over other persuasion tactics
-        Was expelled from the royal guards
-        Makes all minor decisions by flipping a coin
-        Is a former bare knuckle boxer
-        Always needs to be the centre of attention
-        Has an outstanding warrant for their arrest
-        Never takes their armour off, just in case
-        Is maniacally obsessed with etiquette
-        Rejected a foreign prince's marriage proposal
-        Used to work as a tavern bouncer
-        Only has two more years before a demon comes back to claim their soul
-        Doesn't have a reflection/shadow
-        Has anger problems
-        Bribed a nobleman to help them smuggle slaves out of a tyrannical kingdom
-        Believes plate armour is just a sign of being posh and over privileged
-        Is posing as someone else
-        Is on the run after having an affair with a noble's daughter
-        Is being hunted by a terrible monster
-        Wants to one day own their own ship
-        Never stands an insult
-        Doesn't believe in the gods - even though they have seen one with his own eyes
-        Always takes credit
-        Can’t resist a wager
-        If some says any number lower than 8, your must pass a constitution check or keep counting to 8.
-        Carries a cryptic treasure map they won in a tavern bet
-        You cannot pronounce your own name correctly.
-        You know 'fun facts' about everything. They are usually wrong
-        You absolutely REFUSE to sleep without a trinket of some kind. (a blanket, a stuffed animal, a pillow, etc.)
-        You introduce yourself by a slightly different name every time
-        You believe that Undead, have rights just like regular people. You must only fight them, in self defense
-        Thinks they are a god/immortal being
-        Studied interior dungeon design
-        Hasn't accomplished anything in their short life yet
-        Distrusts all authority
-        Is downright racist towards the Undead
-        Can't swim
-        Unwittingly misuses words all the bloody time
-        Has a regular sleepwalking issue
-        Never passes up a chance to say ‘I told you so’
-        Doesn't believe in magic, ever
-        Is afraid the rest of the party will kill them if they try to leave
-        Gets nervous when speaking in front of crowds
-        Is afraid of heights
-        A chef looking for the rarest/most exotic ingredients and cooking methods to create the ultimate gourmet experience
-        An agent of the church looking to steal back/reclaim holy relics
-        Is adventuring to send money home to the family farm
-    sailor tattoos
-        location 
-        Hands / fingers / wrists
-        Lower arm
-        Upper arm
-        Shoulder / shoulder blades
-        Neck
-        Head / face
-        Chest
-        Back
-        Upper legs
-        Lower legs
 
-        For the tattoo's quality, roll 1d4:
-        function tattooQuality = {
-            let chance = rollDice(100)
-            if (chance<12.5) {
-                return the tattoo is very simple or crude, only outlines, 1 or 2 colors tops.
-            } else if (chance<50) {
-                retrun the tattoo is simple but decent, mostly just outlines and using 1-3 colors
-            }else if (chance<87.5){
-                return the tattoo is above average, impressive work, a decent amount of shading and detailing, multiple colors.
-            }else {
-                return the tattoo is a true masterpiece, incredibly vibrant and richly detailed.
-            }
-
-        For the tattoo's subject, roll 1d20:
-        A ship.
-        Part of a ship. (anchor, flag, sail, oars, etc)
-        Ropes, chains, or fishing lines.
-        A dragon, wyvern, dragon turtle, etc.
-        A sea monster. (Kraken, giant octopus, sea serpent, etc)
-        A shark or dire shark.
-        Sea turtle
-        Harpoons or spears.
-        Gambling motif. (Cards, coins, dice, etc)
-        Religious symbol or symbols.
-        A sea bird. (tern, swallow, albatross, roc, etc)
-        A 'pin up girl.'
-        Compass rose.
-        Tankards, mugs, bottles of booze, etc.
-        Elementals, most often water or storm elementals.
-        'Sea folk.' (Mermaids, Darfellan, Sahuagin, etc)
-        A heart with a name in it.
-        Skulls, crossbones, etc.
-        Celestial bodies (stars, constellations, star charts, etc)
-    descriptive sayings
-        As unpredictable as a fey on a bad day
-        As noticeable as an ogre at a gnome bar
-        As convincing as three Gnomes in a sundress
-        As original as a kenku
-        Sweating like a heretic next to a paladin squad
-        As smooth as a bard with a beer in them
-        As tactful as an orc barbarian
-        You know what they say in Silverymoon. This is gonna go over like a Xvart in the birch grove. (
-        As bubbly as a bard (
-        'You're worse than a kobold with a new dragon in town.' Said to somebody who is brown-nosing. (
-        Instead of referring to a hardass spouse as 'The ol' ball and chain' you could replace it as 'the ol' bugbear' (
-        You look as nervous as a displacer beast in a paladin convention. (A reference to this art piece done by the famed Fredrik K.T. Andersson.) (
-        As ugly as the south end of a northbound gargoyle.
-        As smelly as something that got crapped out of one otyugh, eaten by another, and then crapped out of that second otyugh, then then set on fire.
-        As angry as an owlbear who caught his wife in bed with another man.
-        About as subtle as throwing a fireball into a smokepowder storehouse (smokepowder being the Forgotten Realms' equivalent to gunpowder).
-        I've had warmer welcomes in Stygia (Stygia being the 5th layer of the Nine Hells, and known for living up to the expression 'When Hell freezes over'.).
-        All the social grace of an orc berserker.
-        'He's/She's under rolling thunder!' (they are in trouble) (
-        'They are connected through stone.' (they share a stubborn opinion)
-        'You're burning a stone bridge!' (You are only harming yourself, not the target)
-        When a player fails stealth checks all the time: You’re as stealthy as a Goliath in a goblin den. (
-        I’m so hungry, I could eat a tarrasque. (
-        as tricky as a pixie with a puzzle box (& 
-        As uncomfortable as a tiefling among aasimar clerics (
-        As dead as a goblin caught stealing from a dragon (
-        As happy as a pixie in a honeysuckle patch.
-        As fast as a Sprite with the spell Haste.
-        As hungry as a Tarrasque woken from a 1000 year slumber.
-        As skittish as a Blink Dog cornered by three trolls.
-        As dead as a troll in a volcano.
-        As high as a Bard in college.
-        As drunk as a dwarf on his brother's birthday.
-        As discreet as a centaur tapdancing in a marble hall (
-        Higher than a dragons butthole ( (or Higher than a giants butthole)
-        Chattier than a Kenku at the fair. (
-        Just as warm as a lizardfolk re personality] (
-        Busy as a Gnome
-        Temper like a Salamander (or fire dragon if it's really bad)
-        Flies just like a Purple Worm
-        All the bravery of a kobold and none of the skill
-        Upstanding as a Slime
-        Reeks like an ogre's armpit
-        Smart as a bugbear and mean as one too
-        Flumphface
-        Go have fun training basilisks (doing the impossible)
-        Happy as a sorcerer with their first fireball
-        One-blast Warlock (one trick pony)
-        Trustworthy as a Yuan-ti
-        As subtle as a dwarven tavern during a high feast (
-        Like a barbarian in a Goblin Camp (
-        'As plain (or prude) as a wizard at the College of Lore' (
-        'As lost a ranger in city hall'
-        'As lost as a ranger at a banquet'
-        'As confused as a goblin with a scarecrow'
-        As welcoming as the Nine Hells (
-        as dumb as challenging a Goliath to arm wrestle (
-        useless as tying up a gelatinous cube
-        as helpful as a flint and steel to fire mage
-        pretty as a nymph in the moonlight
-        The time dragged on like a hill giant planning his next chess move
-        he is a real Kua-toa out of water
-        like asking a Treant to help gather firewood
-        happy as a dwarf in a brewery
-        As much use as boots for a beholder (
-        As happy as a hungry gnoll in an orphanage
-        Busier than an incubus in a convent
-        About as lively as a lich (
-        More mindless than a modron
-        Breath smells like a green dragon's (
-        Hairstyle looks like a gryphon's nest
-        As clear spoken as a sphynx
-        Armpit hair looks like the forest of (insert appropriate forest name).
-        As romantic as a gelatinous cube.
-        Beautiful as a beholder with conjunctivitis
-        The offspring of a dwarf and a hill giant.
-        As graceful as an elf.
-        A booming voice like a giant's.
-        So beautiful they'd never need to cast charm person.
-        As patient as the games master.
-        You look as comfortable as an elf in a mine (
-        As much personality as a gelatinous cube (
-        As graceful as a tapdancing goliath in a China store
-        As dumb as a bag of holding full of portable holes
-        They might as well be a rust monster. (clumsy/inept) (
-        Suspiciously clean, as if chewed up and spit out by a gelatinous being. (
-        My hotel's as clean as an elven arse.
-        Dumber than a box of goblins (
-        Looser than a dwarf wearing an ogre's briefs
-        Murky as the bottom of a hag's cauldron (
-        As useless as a giant at an ass-smelling contest. (
-        Like asking a dragon to light a match
-        You are as paranoic as/ more paranoic than a beholder ()
-        Hotter than a jug of fire beetles (
-        Not an anvil's chance in a nest of rust monsters
-        Deader than Strahd's ex-girlfriend ()
-        Crazier than a kuo-toa hopped up on pixie blush
-        Dumber than challenging Vecna to a game of 'Truth or Dare'
-        So by the book they probably have the day of the week engraved into thier Tassets and Faulds (
-        as graceful as a bugbear in high heels (
-        meaner than a landlocked kraken
-    charlatain backgrounds
-        Leaving an acquaintance to blame for selling fake drugs to a noble 
-        Tampering with a competitor's equipment to cause them to lose a competition so you can win a bet 
-        Stealing candy from a child who has now grown up to become a rage-filled barbarian 
-        Selling fake love potions to a desperate noble who ended up being embarrassed in public 
-        Using a friend's identity for an illegal deal and getting them arrested / questioned by the authorities 
-        Seducing away a minor noble’s daughter while posing as a noble, leaving them both destitute. ]
-        Bank fraud, resulting in the economic collapse of a village; a few deaths by despair, starvation or incidental robbery involved ]
-        planting fake evidence of involvement with a string of robberies, resulting in a local noble being exiled for life ]
-        popularizing a song that portrays a church in a strongly negative light, resulting in a purge from the region ]
-        selling a crate of shoddy weapons and armor to a local militia, resulting in a humiliating defeat ]
-        Playing both sides of a minor dispute between nobles that resulted in closed borders between the 2 regions (cold war situation). 
-        Farting at a very inopportune moment in front of a noble's child. 
-        Keeping a memento from a battle that should have gone back to the soldier's significant other or child. 
-        Climbing up a wall with clearly posted 'no climbing' signs, causing part of the wall to collapse 
-        Accidentally melting the ice sculptures at a local ice festival. 
-        Reselling stolen goods to the wrong merchant. 
-        Informing the local captain of the guard that their wife is having an affair when, in fact, she is most certainly not. 
-        Joined a convent for 9 months to hide from debt collectors, then burned the place down in a botched attempt at faking their death. 
-        Let a refugee family use their name to get into a safe city, having forgotten that they are a wanted criminal there. The family was detained, brutally interrogated as potential accomplices, and then thrown out. 
-        Used a set of vestments stolen from a cleric's wardrobe following a one night stand to sell fake indulgences and de-cursings. Many people were injured, and the cleric has been banished from their temple. 
-        Made up a really impressive sounding fake name off the cuff while being arrested which turned out to be a real, very important person. Interpreting the announcement of their arrest as some sort of provocation, a series of insults and slights escalated into an actual border war... in which the character was an active profiteer. 
-        Deflowered one of the participants in a critical political marriage the night before the ceremony, derailing a critical peace settlement and destabilizing the entire region for years 
-        Participated in a rebellion against an evil overlord, and named names when captured by the guards. 
-        Hocked a critical spare part from an irrigation system for beer money, causing a massive crop failure when that part was needed and couldn't be found in time. 
-        Engaged in some petty abuse of the local populace while wearing a guard uniform (stolen as part of another petty crime), which provoked a clash between the local peasants and the local law, resulting in many injuries and some deaths. 
-        Took a large sum of money to act as a surveyor and just copied a previous surveyor's work, resulting in multiple recently founded villages being destroyed when a dam was built down-river from them. 
-        Accidentally started a race war by spouting off about how much better elves are than dwarves...in a dwarf bar 
-        Accidentally started a three way religious war by claiming Torm was better than Ilmater...in Tyrian temple. 
-        Accidentally started the Blood War by pissing through a portal into Graz’zt’s throne room...while dressed as a devil for Halloween 
-        Betting (and losing) a party member on a gamble after already having lost all their money. The winner has ties to the slave trade and is not happy. 
-        Sold a man a bridge who was subsequently eaten by a very persistent troll. 
-        The significant other of a person killed in a fireball mistake turned out to be a renowned and feared bounty hunter. 
-        Tricking a family member or friend into buying pointless insurance. 
-        Tricking a family or friend into investing in a company that never existed. 
-        Convincing a friend not to marry by using a loaded die / coin. 
-        Upcharging significantly for beer/wine/mead at a close friend’s wedding. 
-        Taking and completing a contract to kill or bankrupt a close relation’s parent, friend or lover. 
-        Betting and losing a deed that wasn’t theirs to bet. 
-        Stealing a horse. 
-        Rewriting their parents’/grandparents’ will to their benefit. 
-        Laundering money for a gang / beholder / trading company that then ruined the charlatan’s ancestral lands or city. 
-        Convincing a former ally to make a pact with a shady entity at great personal cost in the name of wealth. 
-        Extorting, blackmailing or embezzling from an orphanage. 
-        Running an orphanage as a front. 
-        Skimming/stealing tithes. 
-        Hanging on to a memento from a cursed forest / temple, which must be returned lest extremely bad luck continue to befall them. 
-        Selling a cursed memento to an acquaintance that granted them exceptionally bad luck. 
-        Working with a troll/ogre to collect bridge tolls at great cost to life and limb for others. 
-        Contributing to the extinction of a local beast / bird after selling snake oil made from its bits. 
-        Conning a respected warrior into buying a weapon the charlatan enchanted to return to his/her position when the command word was spoken. 
-        Secretly working with a nothic to learn too much at great cost. 
-        Destroying a family’s crops and livelihood with shoddy agricultural remedies to cause their business and lands’ value to decline. 
-        Eating that last slice of pie... it was not a good idea... 
-        Instigating a gang war between two shady (yet wealthy) casinos by cheating and pretending to be from the other casino. 
-        Sinking the prize ship of a navy while pretending to be a nautical carpenter 
-        Crashing the lord's masquerade by spilling all of the swindled gold lining your clothes while on the stage, then escaping and therefore discrediting the lord for allowing a vagabond to steal so much money and get away with it leaving the (generous and generally beloved) noble house destitute. 
-        Selling 'magical' 'snake' oil that, caused a child to die of blood poisoning instead of their terminal (yet curable) illness. 
-        Reading from the wrong scripture while posing as a preacher, causing a devout acolyte to be executed for heresy after reciting your teachings. 
-        Lying about your identity to someone while becoming their lover for a scheme. The love was eventually genuine from your side, but the scheme wasn't exactly for the other's benefit. The revelation of your lie has left them heartbroken and angry at you. 
-        Laundering money so well that it got into wider circulation and put multiple people into prison as they tried to use the money in more rigorous markets. 
-        Telling someone that you could make them fly, leading to their suicide. 
-        Selling family heirlooms while posing as a moving company worker, scattering the heritage of a dwindling noble family. 
-        Leaving your home city abruptly, cutting all ties and never looking back on the people you knew. 
-        Not stopping a clear case of marital abuse because doing so would blow your cover. 
-        Stealing the bricks from a historic building and selling them at extortionate prices while replacing them with weaker materials, causing the building to collapse during a busy day. 
-        Misquoting a holy passage, causing a schism in the church. 
-        Pressured an accomplice to not seek medical aid for a serious injury, fearing it would result in the detection of a criminal plot, only to wreck the plot themselves by running their mouth in a tavern while drunk. 
-        Not wanting to be outdone telling tawdry tales at the inn, the character made up an atrociously lurid fib about their activities with a young princess they had never actually met. A bard heard it, made it into song, and completely ruined her marriage prospects. 
-        Sold a map of the city catacombs to what they thought were drug smugglers for 50 gold and a cask of nice wine. The 'drug smugglers' were an engineering crew from a rival city, and in a siege 6 months later used the plans to great effect by setting explosives under critical defense structures. 
-        Convinced a young accomplice to take the fall for a crime they committed, on the logic that the character would be able to break them out later. Character instead got arrested for partying too hard in the next town over, and jumped a ship out of the country instead of trying to go back for their fall guy. 
-        Persuaded several friends to bankroll them for a surefire gambling scheme, based on a plan to use advanced math to calculate the 'true' odds of any particular play. Lost everything when they got too drunk to properly carry the '1'. 
-        While rummaging through a church for things to steal, they found an old bottle of wine, drank it, and put the empty bottle back in it's nook. The bottle was one of the earthly possessions of a man who ascended to a higher plane, and it's consumption was seen as a sign of his return. Several pretenders appeared, triggering a violent schism in the religion. 
-        When travelling, they met the last survivor of a pilgrimage, clutching a golden chest in his hands. They were attempting to return a holy relic to a temple, in accordance with an oath sworn by the founder of their order over 150 years ago. With their last breath, they begged the character to deliver the relic in the chest to their destination. The character, headed the other direction, chose to throw the relic in a creek and hock the chest for 10 gold. 
-        In a moment of cocky bravado, the character gloated over the fallen body of a dangerous litch, telling them that they were an idiot for not hiding their phylactery better, rattling off several examples. The lich then used a contingency spell to transport themselves and their phylactery away. The phylactery hasn't been seen since, but the lich has been a plague on the land for years... 
-        Accidentally fell in with a group of highway robbers and cutthroats, who told the character they were freedom fighters against a corrupt regime. The character found out after a week, but stuck around for a whole month because the 'rebel leader' was just too hot. 
-        Attempting to get a lover to leave them so as to not feel the guilt of initiating a breakup, the character went too far, gaslighting their SO to the point of actual madness. 
-        Sold samples of their own blood to a group they knew to be demon summoning cultists as 'virgin blood' (lol, no). They successfully summoned the demon, but completely failed at containing or dismissing it. 
-        Got drunk and took a piss in a holy fountain, deconsecrating it. 
-        Fiddled around with an elaborate sundial because they were bored, not knowing that it served an important role in timing the local planting cycle and triggering massive crop failure. 
-        Agreed to act as a fraudulent guardian for a group of orphans who needed parental consent to join the Army. The 'military recruiter' was actually an agent for a slave trader. 
-        Hid the body of a dead man in a well, contaminating the only ready source of clean water within 5 miles of a small town. 
-        Received a key to the city for services rendered, and then got drunk and lost it. 
-        Sold a large pile of colored flour to a church, telling them it was rare medicinal powder. 
-        Stole a statue from a town square and sold it for cheap to an art collector. The statue was actually the petrified body of a legendary hero, prophecied to return to life in the time of greatest need, and the 'art collector' her ancient nemesis. 
-        Yelled 'do a flip' at a despondent man standing on a ledge. They did the flip. It was horrible. 
-        Spent years convincing an old, half-blind noblewoman that they were their adult grandchild. When the real grandchild came to visit, the guards shot them as an impostor. 
-        Knowingly gave a group of pirates a map of the harbor defenses of a city that had banished them for multiple crimes. 
-        Blamed a rash of robberies they had committed on an in-city goblin community, giving their enemies a pretense to persecute and exile them, uprooting families that had been living there for generations and turning 'Goblintown' from a thriving community to an urban blight. 
-        Knowingly sold defective spell components to a group of student wizards, causing them to fail their final exams when the spells misfired. 
-        While drunk and in a fighty mood, played 'devil's advocate' in an argument with a paladin, turning them Oathbreaker. 
-        After being saved from a shipwreck by a merperson, told a group of pirates where to find them in exchange for a fixed fee per fin they cut off. 
-        Participated in a scheme to breed and train mimics to act as guard animals and security devices. It worked great for about 72 hours, and then people started getting beaten to death by their own nightstands. 
-        Blamed a friendly old healer woman for cursing them, so they wouldn't need to explain certain symptoms of a STI to their significant other. The healer was a druid who was single-handedly responsible for keeping the Fair Folk at bay and placated, and after she was driven away as a witch they moved in on the town. 
-        Sold swords with defective heat treating to a local militia, many of which shattered in their hands when they were attempting to defend their town from bandits. 
-        Having come down ill before the night of a major party, the character paid a spellcaster to glamor them to hide the symptoms so they could go, carouse and steal. The party was in turn the epicenter of a massive disease outbreak, as many attendees were travelers from afar. 
-        Deliberately triggered a trap on the way out of a dungeon to reduce the number of people with whom they would have to share the treasure. 
-        Built a fake dungeon, and then spread about it at inns and taverns, so they could ambush the adventurers who came to 'save the townsfolk' and take their stuff. 
-        Bought a group of slaves on the intention of freeing them... and then changed their mind once they found out how good they were at keeping house and cooking meals. 
-        Tuned out during a conversation with a significant other, giving them the 'yeah, sure honey, sounds good' treatment when the SO was a young artificer asking for guidance on what ingredients to use, causing a large explosion. 
-        Gave someone's name to the Inquisition because they figured it would be easier to rob their house when they were too busy being stabbed with hot irons in a dungeon to do anything about it. 
     doggos
         Volmusian Ember Hair - A breed derived from fire elemental stock, bred by druids as attack animals. Fiery red hair, maned, with a sturdy frame and short snout. 1d3 Fire damage/round if within 5ft and the dog dislikes you.
         Mutt of Tindalos - Possessed of the blood of creatures which exist outside of space-time; this canine does not move, it simply stutters & teleports up to 40ft in a round instead. They are off-putting creatures, emaciated and long-limbed with greenish-grey fur.
@@ -4699,6 +4350,169 @@ Setting builder
         A pristine lake.
         A desert plateau.
        An idyllic hill country.
+    Weird Bugs
+        metamorhasis?
+            Doesn't Metamorphose
+            Does Metamorphose- Roll again on the table to determine adult form.
+        Locomotion
+            Flies
+            Runs
+            Burrows
+            Swims
+        What does it eat?
+            Sap
+            Plants
+            Honey
+            Blood
+            Living Meat
+            Carrion
+        Size
+            Nearly Microscopic
+            Grain of sand
+            Pebble
+            Half hand
+            Full hand
+            Torso sized
+            Human sized
+            Human Sized+ Roll again and combine
+        Chance to switch between eyes and legs
+            Number of Limbs (D10)
+                Crawling grub/worm
+                Equal to number rolled
+            1d% Number of Eyes
+                1-100
+        1d12 Method of Defense
+            Pincers
+            Bite- 50% Mandibles 50% Proboscis
+            Venomous Bite
+            Stinger
+            Burning Chemical Farts ala Bombardier Beatles
+            Horns
+            Fontanellar gun- Chemical glue forehead gun
+            Acid spittle
+            Spear-limb
+            Hammer Limb
+            Spines
+            Chance to choose two
+        Quirk
+            Can lift 20 times their body weight
+            Mimic- Is able to appear as another creature common in the environment
+            Aposematic Display- Colored very brightly as a warning signal, extremely toxic
+            Heavily Camouflaged
+            Deimatic Display- Has a pattern that can be displayed quickly to startle predators, often appearing as large predatory eyes.
+            Eusocial colony
+            Possessed silk producing spinnerets
+            Autonomy- Limbs break off for escape, they grow back...usually
+            Reflex Bleeding- Sprays or leaks foul smelling blood when threatened
+            Quadruple its size
+            Dodecachromats- Mantis Shrimp Eyes, see the Ultraviolet and beyond, see magic and invisible stuff
+            Digs/Creates pitfall traps
+            Can survive without a head for 1d6! days.
+            Mating Fusion- Imprints on a target and fuses to it in order to mate, nominally another of their species but that doesn't always happen
+            Parthenogenesis- Can reproduce without a mate at astonishing speeds.
+            Chance to gain 1-20 quirks Roll on the Quirks list until you are bored
+        Make it weird
+            Actually feeds on: Dreams, Emotions, Spinal Fluid, Bones Metal Magic
+            Has humanoid limbs
+            Mimics the face of its last victim.
+            Can taste through its limbs, 25% limbs actually are tongues
+            Spits napalm
+            Limbs are tentacles
+            Injects its young into living victims.
+            Can mimic 1d20 sounds including voices/words
+            Lives in an abandoned Shell Skull Coconut Human Detritus
+            Collects teeth for nest construction
+            Biologically Immortal
+            Is actually the larval form of the local variety of goblin
+            Is Telepathic (Broadcasts to everything Communicates with other bugs Actually intelligent Connects to a singular host)
+            Is antithetical to other bugs, its presence causes other insects to flee, its touch disintegrates them.
+            Bounces instead of taking fall damage
+            Camouflages as several smaller bugs of different species
+            Killing it causes a localized torrential thunderstorm
+            Doubles its move speed if someone screams in their presence
+            Shell is made of (Wood Steel Adamantium Occultium A Face 6.Refuse )
+            Consumes the inside and wears the skin of defeated foes.
+            Can shed its skin rapidly once per day to negate an attack
+            When it molts the discarded carapace lives on as a zombie
+            Is favored by a local deity and killing it causes a 4d6 Lightning Bolt to strike
+            Stomach is a bag of holding
+            Wields a crude appropriately sized weapon
+            Explodes if hit for max damage
+            Its noxious liquid defense spray is a powerful aphrodisiac for one random intelligent species.
+            Is actually a piece of advanced clockwork
+            Is actually a hallucination caused by another bug that bit you a few minutes ago
+            Leaves a permanent stain on anything that hits it.
+            Its droppings are intensely additive narcotics
+            Produces a honeydew/honey that is regenerative in small quantities, mutagenic in large.
+            Is on the coat of arms of a local noble/warlord.
+            Wears a tiny business suit and carries a briefcase. Briefcase contains 1d6 more bugs.
+            Can become completely immovable by locking itself in time/space
+            Is actually a mammal in disguise
+            Capable of surviving extreme temperatures
+            Immune to radiation/magic
+            Buzzing creates an area of Silence (other than the buzz) as far as the noise carries
+            Its sting causes a save or die Disintegration effect
+            Mines, processes, and smelts tiny coins from gold.
+            Is half lion and only consumes insects that otherwise resemble it.
+            Its movement patterns when studied for 8 hours produces a highly accurate augury.
+            Is highly nutritious, a hand-sized portion counts a a ration.
+            Used by the local psychopomp to weigh the souls of the dead against.
+            Bite causes AGONY on top of normal damage
+            Can Voltron with others of its kind, each on adding an additional Quirk and HD.
+            Exists on the same layer of reality as ghosts.
+            Causes a serious anaphylaxis reaction if eaten.
+            Transforms into a completely different bug (reroll everything) every time it is killed.
+            Equal to 1d10GP as a local currency
+            Can cast a random cantrip effect once per day
+            Can cast 1 random spell of 1st-3rd level (or MD if GLOG)
+            Is affected by holy water/energy/relics as undead
+            Is powerfully attracted to holy water/energy/relics
+            Weirdly conventionally attractive?
+            Extreme sexual dimorphism- re-generate bug for male and female
+            Capable of swapping biological sex each molting
+            Can fire 2d6 barbs per day with range as crossbow (damage depending on size)
+            Bioluminescent  (Roll 1d8 for color, 1-7 is standard rainbow, 8 is Octarine)
+            Exists 6 inches left of where you actually see it.
+            Increases local gravity minutely, a swarm can double or even triple localize gravity.
+            Is constantly precognizant of 6 seconds in the future
+            Is immune to changes in pressure (survives equally well at bottom of ocean and void of space)
+            Multiply the size by a factor of 10.
+            Only visible when you close your eyes or in absolute darkness
+            Swarms inhabit dead bodies and pilot them.
+            Creates a paper nest that, when boiled and unfurled carefully, depict a hyper accurate map of the local area.
+            Can be disbelieved and ignored like an illusion or a fairy.
+            Is actually a REALLY stressed human who has transformed.
+            The number of limbs are different every time you look at it.
+            Can teleport 6" at a time
+            It clicks in Morse code using prosigns.
+            It considered good luck and locals avoid hurting them at all costs.
+            Is actually a fungus zombie ala cordyceps
+            Lays its eggs in treasure, which its young eat when they hatch.
+            It has grease burns and a scrap of street food wax paper stuck to it
+            Is attracted to music and will follow around any tune.
+            Eggs look like gold coins of the local denomination.
+            Eggs ARE the local denomination.
+            Shells are perfect lenses 50% convex vs concave, glasses and telescope makers covet them
+            Anti-predator warning markings look suspiciously similar to caricatures of a party member.
+            Never dies of age, just keeps getting bigger.
+            Its carapace looks like the face helm of a warrior who died here ages ago.
+            Can travel through mirrors.
+            Creates a disturbing amount of sticky green foam when smashed
+            Eats ectoplasm, feeds primarily on local ghosts.
+            Can generate enough electricity to power a light-bulb for a year and a day.
+            Can be processed by alchemists into an edible and combustible oil.
+            Smells like teen spirit
+            Is the last of its kind
+            Is the first of its kind
+            Is a runaway from a local wizard lab and will mutate and grow larger every hour
+            Will instinctively solve any math problems laid before it.
+            Comes from an alien world and doesn’t adhere to normal biology.
+            Shaped like a letter of an ancient language, a colony can be used to decipher the dead script
+            Is secretly a spy for Beelzebub.
+            Collecting 101 living specimens can be traded to a specific genie for a wish.
+            Roll Twice
+            Y’know what? Roll in this table 5 times, that’s right Twice isn’t enough
+
 
 Adventure generator
     https://docs.google.com/document/d/1y0VMgGLoiGxtYcntjAn1J8tPBzFdLXgbb3hQi7ycYx8/edit

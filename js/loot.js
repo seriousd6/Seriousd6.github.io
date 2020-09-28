@@ -39,8 +39,6 @@ function variableEvent(array, number) {
     } else {
         return searchArray(array[number]) + ' '
     }
-
-
 };
 
 function printFrom(array, number, id) {

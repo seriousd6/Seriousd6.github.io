@@ -149,7 +149,6 @@ function scene() {
             `You see a ${searchArray(["troubled","bored"])} ${person(0)} who ${searchArray(["can't decide what to do","seems to be daydreaming about someone",])}`,
             `You see a ${person(0)} in the process of ${searchArray(["stealing something", "pickpocketing someone","mugging someone"])}`,
             `You see ${searchArray([ "two boys", "two girls", "a boy and a girl", `a${searchArray([" young","n old"])} man and a${searchArray([" young","n old"])} woman`, `two old ${searchArray(["men","women"])}`])} ${searchArray(["complaining loudly","in a fistfight","playing chess","bickering back and forth",`making a deal`, `doing some scientific experiments`, `having a silent conversation`, `learning magic`, `playfully fighting`, `fishing`, `hiding from the rain`, `being nagged by ${person(2)}`])}`,
-        
             `You see a group of ${person(4)} building ${searchArray(["a house","a boat","a wagon","a cart","some furniture"])}`,
             `You see a ${person(0)} casting a spell`,
             `You see a ${searchArray(["celebratory parade","funeral procession"])} for a ${searchArray(["well-loved","widely hated"])} ${person(1)}`,
