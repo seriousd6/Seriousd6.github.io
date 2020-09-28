@@ -395,15 +395,15 @@ function findQuirk() {
 
         let chance = rollDice(100);
         if (chance < 20) {
-            return `Favorite Phrase: ${searcharray(catchPhrase)}`
+            return `Favorite Phrase: ${searchaArray(catchPhrase)}`
         } else if (chance < 40) {
-            return `Personality Quirk: ${searcharray(personalityQuirk)}`
+            return `Personality Quirk: ${searchArray(personalityQuirk)}`
         } else if (chance < 60) {
-            return `Physical Quirk: ${searcharray(physicalQuirk)}`
+            return `Physical Quirk: ${searchArray(physicalQuirk)}`
         } else if (chance < 80) {
-            return `Favorite Story: ${searcharray(childStories)}`
+            return `Favorite Story: ${searchArray(childStories)}`
         } else {
-            return `Favorite Saying: ${searcharray(saying)}`
+            return `Favorite Saying: ${searchArray(saying)}`
         }
     }
     document.getElementById("Quirk").innerHTML = searchQuirk();
