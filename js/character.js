@@ -581,6 +581,7 @@ function rollChar() {
     findFaith()
     findPrejudice()
     findQuirk()
+    findBackstory()
     findKeepsake()
     findHomeTown()
     findHomeTownSecret()
