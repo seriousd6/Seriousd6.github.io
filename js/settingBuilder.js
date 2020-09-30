@@ -270,6 +270,57 @@ function findResources() {
     document.getElementById("Resources").innerHTML = output
 };
 
+function findShop() {
+    let type = [
+        "bank, or another sort of financial institution", "smithy or manufactory", "drover/caravansary", "kiln/glassworks", "university or other institution of learning", "hospital or some sort of healer", "a crafter such as a tailor or haberdashery", `an artist, such as a painter, sculptor or poet${searchArray([", there is a patron.", "."])}`,
+    ]
+    let prosperity = [
+        "collapsing. Whether through the incompetence of the owner(s) or outside factors, the business is falling apart and is likely up to it's eyes in debt.", "dwindling. The flow of customers or clients has almost dried up completely, though this may be the fault of the owner, rather than the community dying.", "steady. The business is profitable, but not so much that the proprietor is well to do.", "steady. The business is profitable, but not so much that the proprietor is well to do.", "steady. The business is profitable, but not so much that the proprietor is well to do.", "busy. The day is constantly packed with things to do, people to help.", "growing. Customers or clients find that they have to schedule in advance to get service. The business is looking for more help.", "bustling. There's more work than there are hands, and any new clients will have trouble getting what they want in a timely manner.",
+    ]
+    let owner = [
+        "this is a family business, perhaps the founder is still alive, but just as likely it has been going for several generations.", "there are a number of proprietors, perhaps only a pair, but maybe as large as a board.", "there is a sole owner, who may or may not have any employees.", "there is a distant and far away owner, such as a merchant prince or a noble. they likely have local representatives to look after their interests.", "the business is ran by the local government, or is an extension of a government monopoly.", "a cooperative or group of merchants, teachers or workers run the business.", "the ownership is contested. This certainly does not bode well for the future.", "the ownership of the business is unclear or actively obfuscated.",
+    ]
+    let rumor = [
+        "the owner is getting the majority of their stock or funding from an illegitimate source, such as from smugglers or by acting as a front.", "the product or training that the business provides is widely considered to be somehow corrupt or scandalous in some way locally. Patronizing it marks you as someone willing to overlook that reputation.", "the business has paid protection money to local criminals. Any harassment or theft on the premises is going to be met with serious reprisals.", "the business or institution is famous; they could have made some legendary item or trained or saved some notable personage.", "due to reasons inscrutable to those on the outside, the business is only open during certain times, such as during the night or certain seasons.", "doing business here is bound by some custom that may not only be immediately obvious, they may only accept patronage from a certain ethnicity, social class or faith.", "coin is not accepted here, only barter or service.", "the business has no set locale or storefront, they may even serve several nearby communities as well.",
+    ]
+    let output = `Your party comes upon a ${searchArray(type)}, and it looks as if business is ${searchArray(prosperity)} Upon further investigation the party can find out that ${searchArray(owner)} There is a rumor that ${searchArray(rumor)}`
+    document.getElementById("Shop").innerHTML = output
+};
+
+function findPrison() {
+    let type = [
+        "bars, stones, cells and blocks. a typical penitentiary.", "bars, stones, cells and blocks. a typical penitentiary.", "bars, stones, cells and blocks. a typical penitentiary.", "somewhere desolate and isolated, perhaps the side of a mountain or the endless expanse of the steppe. no bars are necessary because there's nowhere to go.", "a slum or segregated area of either an existing city or structure, or perhaps one now given over entirely to the purpose. The area is walled off and the perimeter guarded.", "exile. Prisoners are dropped off on some (supposedly) uninhabited island. They're likely still under a watchful eye, but it is much smaller than it otherwise would be.", "this place is more akin to a religious community than a true prison. Prisoners are enrolled as initiates and are required to go through certain rituals to be released.", "the prison is a labor camp, perhaps prisoners are forced to work at various crafts, farm or they're simply on a chain gang.",
+    ]
+    let prisoners = [
+        "this is a place for hardened criminals - thieves, murderers, rapists and robbers. The folk here are likely violent and skilled in the ways of criminality", "this is a place for hardened criminals - thieves, murderers, rapists and robbers. The folk here are likely violent and skilled in the ways of criminality", "this place is for debtors, those who owe the powers that be enough that they've been thrown in gaol to work off their debts.", "this place is for political prisoners. Folk who have fallen afoul of whatever temporal authority controls the penitentiary.", "the inmates here are prisoners of war, taken in battle or surrender.", "these souls are the victims of a religious purge or inquisition. They could be heretics, or they could be worshipers of an entirely other faith.", "this place was built to house a special kind of inmate, magic-users. It has additional layers of security, of course.", "the prisoners are ghosts. This place was meant to shackle the souls of condemned beyond the grave as a form of additional punishment.",
+    ]
+    let guards = [
+        "are vicious and unrelenting, they are a well-paid monolith of authoritative violence.", "are lazy and indolent, they will not notice all but the most egregious violations such as murders or escape attempts.", `have been utterly co-opted by a criminal group; the true masters of this place are ${searchArray(["those in charge of the local corruption", "an unknown but powerful and feared force","is a archmage that is using the prisoners for inhumane experiments"])}.`, "are prisoners themselves, generally those who earned trust through following the rules. The upper hierarchy may be normal guards, or perhaps there may be periodic checks to ensure that the population hasn't changed.", "are members of a religious order dedicated to punishment or otherwise oppression of criminals and the condemned.", "wild animals and the elements. There may be border guards or occasional patrols, but they are few and far between", "few, but they are preternatural in some way, ranging from cerberoi and minotaur to spirits or elementals.", "nonexistent. Some sort of eldritch force keeps people here, a curse or a spell.",
+    ]
+    let help = [
+        "a 'snitch', with wary eyes and open ears. they're a fantastic source of information, but they may also be informing others about you.", "a 'smuggler', with connections to the outside and a means to get things in. Smugglers will do most anything before revealing their sources.", "a 'tough', frightening and capable of coercing near anyone into compliance.", "a 'killer', skilled and predatory. willing to murder nearly anyone for the right price.", "a 'fixer', with the ears of the administration or the guards. They can arrange for the rules to be bent - for a favor.", "a 'crafter', able to take disparate materials and turn them into damn near anything, from weapons to drugs or drink.", "a 'kingpin', able to organize other prisoners (at least some of them) and to bend them towards their own ends.", "a 'seer', priest or other form of magic-user who is able to communicate with the outside, or if given the materials and seclusion, cast spells.",
+    ]
+    let output = `There is a prison nearby... ${searchArray(type)} Most know that ${searchArray(prisoners)} The guards ${searchArray(guards)} If you dare venture you may be able to find someone who can be considered ${searchArray(help)}`
+    document.getElementById("Prison").innerHTML = output
+};
+
+function findPresence() {
+    let group = [
+        "some veterans", "some rebels", "some bored gentry", "some foreign invaders", "some cultists/fanatics", "the indigenous population", "a criminal gang", "some government oppressors",
+    ]
+    let tactic = [
+        "savage, resorting to all out attacks. The bandits will fight without regard to their safety or future.", "ambushers, supported by ranged weapons. These folk will run as soon as they are discovered or the tide turns against them.", "assassins. Skilled in stealth and infiltration, they will never commit to any sort of direct attack, nor will they be caught together as a group.", "cavalry, whether that be on the backs of horses, or something stranger like wolves or vehicles. They favor hit and run style tactics.", "disciplined in tactics/planning. These are not mere bandits, but soldiers. they will use any and all means at their disposal to launch more effective attacks.", "unruly and ill-disciplined mobs. Members fight and flee as individuals, trusting in their own judgments.", "performers. This is all an act to try and extract what they want. They act tough, but in reality they are cowards, who will flee at the slightest hint of trouble.", "swindlers. They do not attack in any direct way, but rather seek to get what they desire through guile and deception. they may pretend to be someone else, or try to worm their ways into the community.",
+    ]
+    let purpose = [
+        "plunder and gain wealth.", "purge.", "conquer.", "achieve a specific goal regarding a person, piece of territory or item.", "settle a generational rivalry.", "satisfy a religiously goal.", "participate in a political/civil conflict.", "complete a contract.",
+    ]
+    let specialty = [
+        "someone important from a nearby community is an informant for the group in regards to the comings and goings there. they're far more aware of potential heists, targets or attempts at reprisals against them.", "these bandits employ animals or monsters, whether magical or otherwise, to help them with their work.", "the group is led by or is employing a spellcaster of some sort. They may have an enchanted item, or they may have the occasional back-up of the spell user.", `the brigands are led by a${searchArray([" dragon", " fiend", " celestial", "n aberration"])}.`, `the bandits themselves are ${searchArray(["undead", "dimensional travelers", "magically summoned", "underground dwellers"])}`, `the marauder's hideout is a ${searchArray(["pocket plane, which only the leader can open the portal to","mountain fortress", "fort built upon a river sandbar", "a ship which simply sails away"])}, which is near impossible for a small group to assault.`, "the agents are drawn from the population of the town itself! A conspiracy of silence supports the members.", "they are not here of their own volition, they have been forced into their current position by disaster or ill-luck.",
+    ]
+    let output = `The people here report that they are being harassed by ${searchArray(group)}. They are ${searchArray(tactic)} If you can get one to talk, you will find they are here to ${searchArray(purpose)} Looking into this may be to your benifit because ${searchArray(specialty)}`
+    document.getElementById("Presence").innerHTML = output
+}
+
 function rollTown() {
     findTown()
     findResources()
@@ -277,4 +328,9 @@ function rollTown() {
     findLegalStructure()
     findCorruption()
     findRumor()
+    findPresence()
+    findPrison()
+    findShop()
 };
+
+console.log(findShop() + "\n\n" + findPresence() + "\n\n" + findPrison())
