@@ -251,6 +251,7 @@ function adventureBuilder() {
     start();
     villain();
     villainTitle();
+    preMadeVillain();
     trait();
     motive();
     artifact();
