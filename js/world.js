@@ -144,6 +144,7 @@ function populate() {
 
     function findSpec() {
         let intSpecIndex = Math.floor(Math.random() * worldIntSpecies.length);
+        //console.log(intSpecIndex)
         let rawString = worldIntSpecies[intSpecIndex];
         let otherSpecies = (1 + rollDice(intSpecIndexObj[intSpecIndex].valueOf()));
         let numbSpecInWords = toWords(otherSpecies);
@@ -152,7 +153,7 @@ function populate() {
         if (intSpecIndex >= 6) {
             let numbSpecies = otherSpecies;
             return numbSpecies
-        } else if (intSpecIndex = 0) {
+        } else if (intSpecIndex === 0) {
             let numbSpecies = 1
             return numbSpecies
         } else {
@@ -162,6 +163,7 @@ function populate() {
 
     }
     let numbSpecies = findSpec()
+        //console.log(numbSpecies)
 
     function findSpecArchs() {
         let numArchs = numbSpecies;
@@ -169,6 +171,7 @@ function populate() {
         return finalArchs
     }
     let archetypes = findSpecArchs()
+        //console.log(archetypes)
     archetypes.forEach(function(item) {
         var li = document.createElement("li");
         var text = document.createTextNode(item);
@@ -195,7 +198,6 @@ function populate() {
         };
     };
     let interactions = findInteractions()
-
     if (Array.isArray(interactions) === true) {
         interactions.forEach(function(item) {
             var li = document.createElement("li");
@@ -206,7 +208,8 @@ function populate() {
     } else {
         document.getElementById("Intera").innerHTML = interactions
     }
-    console.log(interactions)
+
+    //console.log(interactions)
 };
 
 function buildWorld() {
