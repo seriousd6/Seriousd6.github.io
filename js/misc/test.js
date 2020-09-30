@@ -17,7 +17,16 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
-
+function variableEvent(array, number) {
+    let chance = rollDice(100)
+    if (chance < 75) {
+        return ""
+    } else if (number === undefined) {
+        return searchArray(array) + " "
+    } else {
+        return searchArray(array[number]) + ' '
+    }
+};
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
