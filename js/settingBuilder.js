@@ -17,6 +17,11 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
+function slice(array, number) {
+    return shuffle(array).slice(0, number)
+
+}
+
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -70,8 +75,6 @@ function toWords(s) {
 function reload() {
     location.reload()
 };
-
-
 
 //page scripts
 function findCorruption() {
@@ -319,6 +322,173 @@ function findPresence() {
     ]
     let output = `The people here report that they are being harassed by ${searchArray(group)}. They are ${searchArray(tactic)} If you can get one to talk, you will find they are here to ${searchArray(purpose)} Looking into this may be to your benifit because ${searchArray(specialty)}`
     document.getElementById("Presence").innerHTML = output
+};
+
+function findCult() {
+    let type = [
+        "based around a single charismatic individual.", "based on a mainline faith, pushed to extremes.", "of a new faith or mystery, perhaps from a far away land or inspired locally.", "that is hereditary in nature, passed along family lines or just a single gender.", "that keeps to the old one(s).", "that is also a secret society, or another form of cryptic organization.", "that is decadent and listless, the members of this cult are in it for the thrill.", "that is a doomsday cult, these folk believe that the world is ending soon, if not any day.",
+    ]
+    let goal = [
+            "a genuine exploration of their beliefs and inspirations, whcih could still have negative connotations.", `to summon ${searchArray(["an aberration", "a fiend", "people from the past","people from the future", "people from another dimension","a celestial", "a demon", "a god"])}`, "to cause upheaval of the status quo or current government.", `engaging in the socially unacceptable act of {searchArray(["cannibalism","proscribed sexual acts", "excessive drug or alcohol use", "fight club"])}.`, "to cause the death of some important figure, or more broadly, a faction.", "to cause the destruction of a rival faith, or any other faith.", "support and enrichment of it's members, whether that be through legal or illegal means.", `exploitation of it's members; it tells its members the purpose is ${searchArray(["a genuine exploration of their beliefs and inspirations, whcih could still have negative connotations.", `to summon ${searchArray(["an aberration", "a fiend", "people from the past","people from the future", "people from another dimension","a celestial", "a demon", "a god"])}`, "to cause upheaval of the status quo or current government.", `engaging in the socially unacceptable act of {searchArray(["cannibalism","proscribed sexual acts", "excessive drug or alcohol use", "fight club"])}.`, "to cause the death of some important figure, or more broadly, a faction.", "to cause the destruction of a rival faith, or any other faith.", "support and enrichment of it's members, whether that be through legal or illegal means."])}`,
+    ]
+    let membership = [
+        "ne'er do wells; criminals, beggars & transients.", "the elite of society.", "working class folk, the salt of the earth.", "all walks of life", "racially, culturally or ethnically exclusive.", "a certain profession, such as fisher folk, merchants or farmers.", "an isolated or otherwise insular folk.", "those who have been brainwashed, chosen or ensorcelled in some way.",
+    ]
+    let behavior = [ 
+        "out in the open. tThey are passive, and unwilling to commit violence - unless their faith requires it.", "openly, with hostility and great abandon.", "clandestinely, with a vicious streak towards any who stumble upon them.", "covertly, those who discover them are met with bribes, cajoling and religious arguments.", "in the shadows, the cult attempts to masquerade as a more pedestrian organization.", "openly locally, but their true home is somewhere far away and hidden.", "through a cellular structure, each cell is kept ignorant of what the other is doing, but there is a secret architect lurking somewhere.", "coordinated through dreams, they move seemingly without communication.",
+    ]
+
+    let output = `There are signs of a cult here ${searchArray(type)} digging deep enough one could find that their goal is ${searchArray(goal)} The membership consists of ${searchArray(membership)} They operate ${searchArray(behavior)}`
+    document.getElementById("Cult").innerHTML = output
+};
+
+function findSecretSociety(){
+    let leadership = [
+        "a council who gain their seats by virtue of heredity", "a council who gain their seats by virtue of experience", "a council who gain their seats by elections", "a dangerous megalomaniac", "a femme fatale", "an altruistic knight", "a dashing rogue", "a religious zealot", "a wise old priest or mage", "a celebrated war hero", "a wealthy merchant or noble", "a fugitive from justice",
+    ]
+    let goal = [
+        "foil the plans of another secret society.", "bring about the destruction of the city, region, or world.", "foment rebellion against the ruling class.", "hunt down and eliminate members of a specific race or class.", "protect the common people from tyranny.", "protect the city, region, or world from outside malign influences.",
+    ]
+    let sign = [
+        "a secret handshake.", "a secret gesture.", "a secret password.", "a set of coded phrases and responses.", "a subtle pin or piece of jewelry.", "a subtle fashion or style of dress.", "a changing verbal or physical cue specified by another member of the society.", "the way society members style their facial hair.",
+    ]
+    let colors = [
+        "black", "scarlet", "gold", "forest green", "royal blue", "violet", "silver", "bronze", "tan", "brown", "dark grey", "white", "maroon", "sky blue", "navy blue", "dark brown", "teal", "yellow", "orange", "olive green",
+    ]
+    let symbol = [
+        `${searchArray(["arrow", "axe", "dagger", "hammer", "mace", "spear", "staff", "sword"])}`, `${searchArray(["breastplate", "gauntlet", "helm", "shield"])}`, `${searchArray(["sun", "moon", "star", "comet"])}`, `${searchArray(["apple", "barley", "briar", "fig", "bunch of grapes", "lily", "maple", "oak", "olive", "pine", "rose", "straw of wheat"])}`, `${searchArray(["crab", "crocodile", "frog", "fish", "octopus", "whale"])}`, `${searchArray(["badger", "bat", "beaver", "dog", "ferret", "fox", "hedgehog", "lizard", "rat", "scorpion", "snake", "spider"])}`, `${searchArray(["bear", "boar", "bull", "dragon", "lion", "ox", "stag", "wolf"])}`, `${searchArray(["cardinal", "dove", "eagle", "hawk", "mockingbird", "owl", "pelican", "raven", "rooster", "sparrow", "swan", "vulture"])}`, `${searchArray(["cloud", "flame", "ice", "lightning bolt", "snow", "stone", "wave of water", "whirlwind"])}`, `${searchArray(["a pair of crossed bones", "a ghost", "a skull", "a spectral hand"])}`,
+    ]
+    let ideals = [
+        "compassion", "courage", "discipline", "domination", "duty", "excellence", "faith", "honor", "hope", "integrity", "knowledge", "justice", "loyalty", "mercy", "patience", "power", "righteousness", "strength", "victory", "wisdom",
+    ]
+    let behavior = [
+        "alone and in secret.", "in pairs, working in secret.", "in small groups, working in secret.", "alone, but openly.", "in pairs, but openly.", "in small groups, but openly.",
+    ]
+    let membership = [
+        "the poor and downtrodden (slaves, beggars, urchins, laborers, servants, etc.)", "the wealthy elite (merchants, nobles, etc.)", "members of a particular religion (a temple, a cult, a sect, etc.)", "members of a particular trade (blacksmiths, carpenters, fishermen, weavers, etc.)", "members of a particular class (bards, fighters, mages, priests, rangers, thieves, etc.)", "members of a particular race (dwarves, elves, gnomes, halflings, etc.)", "members of specific ancient lineages (noble houses, descendants of heroes, etc.)", "an eclectic mix of society",
+    ]
+    let knowledge = [
+        "only those right eblow and above in rank", "very few other members of the society", "several other members of the society", "the details of the society's organization", "nothing about the society's leadership", "the names of the society's leaders, though they’ve never met any of them", "one of the society's leading members and no other members",
+    ]
+    let gatheringPlace = [
+        "a secret chamber in a well-known temple.", "the cellar of a popular tavern.", "a secret chamber in a well-known guild-hall.", "the cellar of a wealthy merchant's house.", "the city sewers.", "the ancient catacombs beneath the city.", "the residence of the leader or a senior member.", "a wealthy merchant's office.", "a private dining room in a dingy tavern.", "a brothel.", "a warehouse or shipyard.", "the city's sewers.",
+    ]
+    let colorChoice = slice(colors,2) 
+    let idealChoice = slice(ideals,2)
+    let output = `There is a shadow organization here led by ${searchArray(leadership)}, who champion ${idealChoice[0]+" and "+idealChoice[1]} with the goal to ${searchArray(goal)} Their symbol is a ${colorChoice[0] + " and " + colorChoice[1] + " " + searchArray(symbol)}. The members of this organization, consisting of ${searchArray(membership)}, pursue their tasks ${searchArray(behavior)} If two members were to meet they would identify each other with ${searchArray(sign)} The most common meeting place is ${searchArray(gatheringPlace)} If one member were to be captured they would be able to provide information ${searchArray(knowledge)}.`
+    document.getElementById("Secret Society").innerHTML = output
+};
+
+function findOutlaws(){
+    function poachers(){
+        let animal =[
+            "bears", `birds of prey, specifically ${searchArray(["eagles", "falcons", "hawks", "owls"])}`, "boars", `${searchArray(["deer", "elk", "harts", "moose", "stags"])}`, `exotic beasts, specifically ${searchArray(["behemoths", "elephants", "griffons", "hippogriffs", "lions", "owl bears", "tigers", "wyverns"])}`, `game birds, specifically ${searchArray(["doves", "grouses", "partridges", "pheasants", "quails", "turkeys"])}`, `waterfowl, specifically ${searchArray(["ducks", "geese", "herons", "puffins", "snipes", "swans"])}`, `small furry beasts, specifically ${searchArray(["beavers", "ermines", "otters", "raccoons", "sables", "skunks"])}`, `small predators, specifically ${searchArray(["badgers", "coyotes", "foxes", "wolverines"])}`, "wolves",
+        ]
+        let purpose = [
+            "for sport", "to feed their families", "to feed the impoverished peasants", "to exact revenge on the landowner", "to sell the beasts’ meat", "to sell the beasts’ pelts",
+        ]
+        return " They poach"+ searchArray(animal) + " "+ searchArray(purpose)
+    }
+    function robber(){
+        let tactics = [
+            "swarm tactics", "hit-and-run tactics", "ambush tactics", "choreographed maneuvers", "unpredictable maneuvers", "fancy footwork",
+        ]
+        let notorious =[
+            "never leaving survivors", "branding captives", "scalping captives", "burning wagons and ships", "using explosives", "romantic escapades", "singing bawdy songs", "drinking too much ale",
+        ]
+        return "The robbers are known for their " + searchArray(tactics) +" and for "+ searchArray(notorious)
+    }
+    function smuggler(){
+        let strategy = [
+            "underground tunnels", "secret compartments", "stealth watercraft", "humanoid mules", "bribery of officials", "a network of safehouses",
+        ]
+        let support = [
+            "a prominent merchant", "an important minister or magistrate", "a major crime boss", "a pirate captain", "an admiral", "a group of subversives", "the captain of the guard or a local sheriff", "the sovereign’s main rival",
+        ]
+        return "The smugglers use "+searchArray(strategy)+" for their work, and if one digs enough they'll find that the group is supported by "+ searchArray(support)
+    }
+    let business = [
+    `poaching from the sovereign's preserve or a prominent noble’s lands ${poachers()}`, 
+    "harboring fugitives", 
+    `harassing government officials and nobles who pass along the road. ${robber()}`, 
+    `robbing caravans carrying gems, precious metals, and exotic goods. ${robber()}`, 
+    `holding up incoming or outgoing ships or wagons ${robber()}`,
+    `smuggling ${searchArray(["smokeleaf", "hallucinogenic mushrooms", "sleepysalt (a downer)", "sharpsugar (an upper)"])}. ${smuggler()}`, 
+    `smuggling rare antiquities. ${smuggler()}`, 
+    `smuggling stolen goods ${smuggler()}`, 
+    `smuggling ${searchArray(["exotic beasts", "foreign harlots", "fugitives", "slaves"])}. ${smuggler()}`, 
+    `serving as muscle for ${searchArray(["shady merchants","brothel-keepers"])}. ${smuggler()}`,
+    ]
+    let colors= [
+    "black", "gold", "forest green", "bronze", "tan", "brown", "dark grey", "maroon", "dark brown", "olive green",
+    ]
+    let symbol = [
+    "skull", "arrow", "dagger", "goblet", "moon", "star", "snake", "badger", "spider", "rat", "wolf", "bear",
+    ]
+    let leader = [
+    "a dangerous megalomaniac", "a charismatic demagogue", "a mysterious foreigner", "a talented thief", "a member of a prominent family", "a ruthless killer", "a femme fatale", "a charming rogue", "a dashing swashbuckler", "a brutish thug", "a devoted priest", "a well-known fugitive",
+    ]
+    let membership =[
+    "out-of-work artisans", "displaced peasants", "desperate peasants", "escaped slaves", "combat veterans", "foreign refugees",
+    ]
+    let goal = [
+    "domination of the region’s trade", "sabotage of the region’s trade", "revenge against a rival band of outlaws", "revenge against the region’s elite", "rebellion against the region’s elite", "equality and freedom for all", "a wealthy and peaceful retirement", "violence to slake their bloodlust",
+    ]
+    let weapons = [
+    "wooden clubs", "over-sized daggers", "shortbows and arrows", "longbows and arrows", "daggers and crossbows", "axes and knives", "sticks and stones", "shortswords", "brass knuckles", "daggers and sling shots",
+    ]
+    let meetingplace = [
+    "the residence of a prominent noble", "the village’s market square", "a wayside inn", "a tavern", "a brothel", "an old lighthouse", "an abandoned cabin", "a waterfall", "a cave", "a forest clearing",
+    ]
+    let respectedBy =[
+    "ambassadors and tax collectors", "merchants and peddlers", "politicians and magistrates", "guards and sheriffs", "soldiers and warriors", "nobles and wealthy travelers", "knights and loyalists", "peasants and farmers", "priests and sages", "women and children",
+    ]
+    let leaderQuirk= [
+    "a flashy earring ring", "shiny leather boots", "a hole in the toe of one boot", "a dagger in each boot", "a mask on the face", "a wide-brimmed hat", "a dragon tattoo on the forearm", "a flame tattoo around the arm", "a maniacal laugh", "a bent, broken nose", "an open shirt and a very hairy chest", "their extravagant mustache",
+    ]
+    let output = `There is a group of outlaws nearby whose modus operandi is ${searchArray(business)}. Their leader is ${searchArray(leader)}, identified by ${searchArray(leaderQuirk)}, whose goal is ${searchArray(goal)}. The group consists mostly of ${searchArray(membership)} weilding ${searchArray(weapons)}, these outlaws are well respected by ${searchArray(respectedBy)}. They meet at ${searchArray(meetingplace)} and they identify eachother using their symbol, the ${searchArray(colors) + " " +searchArray(symbol)}.`
+    document.getElementById("Outlaw").innerHTML = output
+}
+
+function findGang() {
+    let main = [
+        `distributing ${searchArray(["smokeleaf", "hallucinogenic mushrooms", "sleepysalt (a downer)", "sharpsugar (an upper)"])}`, "running heists of and/or fencing stolen gems and precious metals", "petty theft, burglary, and pickpocketing", "assassinations that look like accidents or that frame someone else", `running ${searchArray(["exotic", "low-class", "high-class"])} brothels`, "shaking down legitimate local businesses and/or city officials", "serving as muscle for shady merchants and/or brothel-keepers", "holding up outgoing ships or wagons",
+    ]
+    let colors =[
+        "black", "scarlet", "gold", "forest green", "royal blue", "violet", "silver", "bronze", "tan", "brown", "dark grey", "white", "maroon", "sky blue", "navy blue", "dark brown", "teal", "steel", "orange", "olive green",
+    ]
+    let symbol = [
+        "skull", "ghost", "open hand", "clenched fist", "arrow", "dagger", "sword", "hammer", "crown", "goblet", "moon", "star", "fish", "snake", "badger", "spider", "rat", "wolf", "bear", "eagle",
+    ]
+    let clothing = [
+        "shirts", "jackets", "scarves", "vests", "bandannas", "boots", "tattoos", "hats", "scars", "mustaches",
+    ]
+    let leader= [
+        "a dangerous megalomaniac", "a charismatic demagogue", "a mysterious foreigner", "a talented thief", "a well-known public figure", "a ruthless killer", "a femme fatale", "a charming rogue", "a dashing swashbuckler", "a brutish thug",
+    ]
+    let recruiting = [
+        "artisans", "relocated peasants", "sailors", "drunks", "beggars", "thieves", "servants and slaves", "combat veterans", "laborers", "foreigners", "young children", "circus performers",
+    ]
+    let goals =[
+        "domination of the city's politics", "domination of the city's trade", "revenge against a rival gang in the same city", "revenge against a rival gang in another city", "revenge against the city's elite", "rebellion against the city's elite",
+    ]
+    let weapon = [
+        "wooden clubs", "throwing knives", "over-sized daggers", "serrated daggers", "daggers and crossbows", "hammers and daggers", "sticks and stones", "shortswords", "brass knuckles", "bare fists",
+    ]
+    let tactics = [
+        "swarm tactics", "hit-and-run tactics", "ambush tactics", "choreographed maneuvers", "unpredictable maneuvers", "lots of smiles and jokes", "lots of fancy footwork", "lots of screaming and shouting", "lots of kicking and stomping", "lots of head-butting",
+    ]
+    let headquarters=[
+        "the residence of the leader or a senior gangmember", "an artisan's shop or guildhall", "a merchant's office", "a tavern", "a brothel", "a warehouse or shipyard", "a temple complex", "the city's sewers", "the town hall", "an abandoned guildhall or warehouse", "a shantytown", "the residence of a wealthy individual",
+    ]
+    let respectedBy = [
+        "fishermen and sailors", "beggars and thieves", "merchants and moneychangers", "jewelers and gemcutters", "politicians and magistrates", "guards and sheriffs", "soldiers and warriors", "gladiators and pugilists", "peasants and farmers", "servants and slaves", "priests and sages", "women and children",
+    ]
+    let leaderTrait = [
+        "a nose ring", "shiny leather boots", "a hole in the toe of one boot", "a dagger in each boot", "a heavy gold chain around the neck", "a wide-brimmed hat", "a dagger tattoo on the forearm", "a snake tattoo around the arm", "a maniacal laugh", "a long, hooked nose", "an open shirt and a very hairy chest", "extravagant mustaches",
+    ]
+    let output = `There is a street gang led by a ${searchArray(leader)} whose goal is ${searchArray(goals)}, they are well respected by ${searchArray(respectedBy)}. Their hideout is ${searchArray(headquarters)} and to get there find the man with ${searchArray(leaderTrait)}. Their recruitment efforts focus on ${searchArray(recruiting)}, and all members share a common style of ${searchArray(clothing)} with a ${searchArray(colors) + " colored " + searchArray(symbol)} symbol on it. Members are equipped with a ${searchArray(weapon)} and are known for ${searchArray(tactics)} in fights.`
+    document.getElementById("Gang").innerHTML = output
 }
 
 function rollTown() {
@@ -331,6 +501,8 @@ function rollTown() {
     findPresence()
     findPrison()
     findShop()
+    findCult()
+    findSecretSociety()
+    findOutlaws()
+    findGang()
 };
-
-console.log(findShop() + "\n\n" + findPresence() + "\n\n" + findPrison())

@@ -1,764 +1,97 @@
+function findHoliday
+let type = [
+"religious, explicitly performing rituals and celebrations in regards to a faith", "civic, sponsored by or in celebration of the prevailing government or society", "cultural a sort of blend of civic and religious holidays, cultural celebrations tend towards jovial atmospheres and often draw upon local folklore or legend", "commemoration, set aside for mourning or celebrating some grand event", "celestial, celebrating or noting something like an eclipse, lunar cycle, comet or similarly sidereal event", "seasonal, focusing on the passage of one set of weather patterns for another", "environmental, coinciding with the return of some plant or animal to the area", "mixed this day draws upon several sources, roll twice on this table and weld the results together",
+]
+let observance =[
+"a particular faith, sect or culture", "a particular faith, sect or culture", "a particular faith, sect or culture", "a small region such as a few villages or towns, perhaps even a city", "a large region such as a kingdom or an empire", "members of a certain profession or guild", "members of a certain race or ethnicity", "members of a certain race or ethnicity",
+]
+let practice = [
+"public feasting, drinking and celebrations", "public feasting, drinking and celebrations", "people are gathered for stories, speeches, songs and other forms of public performance", "people are gathered for stories, speeches, songs and other forms of public performance", "a procession, from a civilized area to a ritual site", "somber rituals, observances and sacrifices (whether they be living creatures or otherwise)", "a ritualized competition or combat that could range from bloodless sport to free-for-alls which result in the deaths of one or more participants", "certain norms and taboos are meant to be challenged during this festival; perhaps folk dress opposite to their normal gender expression, or debts may be forced to be forgiven",
+]
+let time =[
+"only a few hours, such as during the daylight hours or through the night", "an entire day", "an entire day", "an entire day", "an entire day", "several days", "an entire week", "a month",
+]
 
+function treasure()
 
+let why =[
+"it was an accident, a shipment lost to random chance or calamity for some reason it was never reclaimed", "a noble family, displaced by a revolt or disaster, hid their secret somewhere only they could find it", "a group of raiders or pirates, storing a score until it was safe to retrieve it", "members of a religious minority, fleeing persecution", "an extremely powerful figure, such as a culture hero or particularly skilled spellcaster", "the treasure was part of a tontine or related to the retirement of the members everyone died before anyone could retrieve it", "the society surrounding the hidden treasure collapsed, and its location was forgotten", "the treasure was important in some way -- perhaps it was the site of votive offerings, or the location of a guild's vault -- and it was guarded while most of it's sentinels have died or vanished, some may still be guarding it",
+]
 
-    the cult
-        what kind of cult is this?
-            based around a single charismatic individual.
-            a mainline faith, pushed to extremes.
-            a new faith or mystery, perhaps from a far away land or inspired locally.
-            hereditary in nature, passed along family lines or just a single gender.
-            keeps to the old one(s).
-            a secret society, or another form of cryptic organization.
-            decadent and listless, the members of this cult are in it for the thrill.
-            a doomsday cult, these folk believe that the world is ending soon, if not any day.
-        
-        what are they trying to accomplish?
-            a genuine exploration of their beliefs and inspirations. note that this could still have negative connotations.
-            summoning something, like a(n)...aberration, fiend, people from the past/future/another dimension, celestial.
-            upheaval of the status quo or current government.
-            engaging in some act unpalatable to the rest of society, like...cannibalism, proscribed sexual acts, excessive drug or alcohol use, fight club.
-            the death of some important figure, or more broadly, a faction.
-            the destruction of a rival faith, or any other faith.
-            support and enrichment of it's members, whether that be through legal or illegal means.
-            exploitation of it's members; roll again and ignore this result if rolled again. the second result is what they tell to new recruits.
-        
-        where is their membership drawn from?
-            ne'er do wells; criminals, beggars & transients.
-            the elite of society.
-            working class folk, the salt of the earth.
-            all walks of life
-            racially, culturally or ethnically exclusive.
-            a certain profession, such as fisher folk, merchants or farmers.
-            an isolated or otherwise insular folk.
-            those who have been brainwashed, chosen or ensorcelled in some way.
+let where= [
+"an isolated and deserted island", "deep inside a cave or another subterranean region", "a religious site, such as a temple or a shrine", "the middle of nowhere, a barren place, far from any civilization", "inside an urban area, currently inhabited or reduced to deserted ruins", "the bottom of the ocean or a lake", "a castle in the sky", "a celestial body, such as a planet or other plane of existence",
+]
 
-        how do they operate?
-            out in the open. they are passive, and unwilling to commit violence - unless their faith requires it.
-            openly, with hostility and great abandon.
-            clandestinely, with a vicious streak towards any who stumble upon them.
-            covertly, those who discover them are met with bribes, cajoling and religious arguments.
-            the cult attempts to masquerade as a more pedestrian organization.
-            they recruit openly locally, but their true home is somewhere far away and hidden.
-            through a cellular structure, each cell is kept ignorant of what the other is doing, but there is a secret architect lurking somewhere.
-            coordinated through dreams, they move seemingly without communication.
-    secret society
-        d6 The society's main goal is to...
-        Foil the plans of another secret society.
-        Bring about the destruction of the city, region, or world.
-        Foment rebellion against the ruling class.
-        Hunt down and eliminate members of a specific race or class.
-        Protect the common people from tyranny.
-        Protect the city, region, or world from outside malign influences.
+let what = [
+"riches! glittering gold and prizes the intrepid explorers receive (3d105) gp", "riches! glittering gold and prizes the intrepid explorers receive (3d105) gp", "riches! glittering gold and prizes the intrepid explorers receive (3d105) gp", "pandora's lament an extremely powerful monster has been bound to this site opening where it is held releases it", "cache of weapons - 50% chance to be magical, 50% chance to be make of an exotic material such as silver, obsidian or ivory", "cache of weapons - 50% chance to be magical, 50% chance to be make of an exotic material such as silver, obsidian or ivory", "cultural artifacts and personal effects worthless to most, priceless to the right buyers", "magical paraphernalia such as scrolls and potions, maybe even a spellbook",
+]
 
-        d12 The society is led by...
-        A council who gain their seats by virtue of heredity.
-        A council who gain their seats by virtue of experience.
-        A council who gain their seats by elections.
-        A dangerous megalomaniac.
-        A femme fatale.
-        An altruistic knight.
-        A dashing rogue.
-        A religious zealot.
-        A wise old priest or mage.
-        A celebrated war hero.
-        A wealthy merchant or noble.
-        A fugitive from justice.
+let form = [
+"the classic treasure map made of vellum, inked, and showing off a simple guide to the terrain leading to and around the score 50% chance that the map is in multiple parts", "the map is relatively well-known regionally and it takes the form of a local legend such as a story, poem or song", "a strange and bizarre device, such as a potion which makes one recall the memories of one of the people who hid it", "a cipher, puzzle or some other form of riddle", "the map is hidden within the patterns of a natural feature, such as a set of holes within a hillside, or the shadows of a grove of trees", "one of the people (or a descendant of one) responsible for hiding the treasure is spilling the location to people the party are certainly not the only ones who have caught wind of it", "the map is split between a number of people, no more than a half-dozen, all of whom have a piece of it", "there is no map - there are only the remaining notes (and possibly spirits) of those who hid it they must be searched or interrogated for the location",
+]
 
-        d8 Members of the society recognize each other by...
-        A secret handshake.
-        A secret gesture.
-        A secret password.
-        A set of coded phrases and responses.
-        A subtle pin or piece of jewelry.
-        A subtle fashion or style of dress.
-        A cue specified by another member of the society.
-        The way society members style their facial hair.
+function disaster()
 
-        d20 The society's colors are...
-        Black.
-        Red / scarlet.
-        Gold.
-        Forest green.
-        Royal blue.
-        Violet.
-        Silver / light grey.
-        Bronze.
-        Tan / khaki.
-        Brown / beaver.
-        Dark grey / gunmetal.
-        White.
-        Maroon.
-        Sky blue.
-        Navy blue.
-        Dark brown / chocolate.
-        Teal / turquoise.
-        Yellow.
-        Orange.
-        Olive green.
+let cause = [
+"random accident has conspired against the community no one in particular is responsible", "random accident has conspired against the community no one in particular is responsible", "random accident has conspired against the community no one in particular is responsible", "random accident has conspired against the community no one in particular is responsible", "the gods themselves have been offended a sacrifice was not made, a sacred animal or a priest was murdered, or someone has committed some other terrible transgression further recompense may be necessary", "a dark ritual or curse is targeting the community the calamity may the goal or merely a side-effect this may only be a prelude", "a prophecy has come to pass it was written in the ancient scrolls, and you were fools to have ignored them", "this is a knock-on effect, of another disaster roll again, adding another catastrophe on top of the first",
+]
 
-        d10 The society's symbol is...
-        A weapon (d8): arrow; axe; dagger; hammer; mace; spear; staff; sword.
-        A piece of armor (d4): breastplate; gauntlet; helm; shield.
-        A celestial body (d4): sun; moon; star; comet.
-        A plant or part of a plant (d12): apple; barley; briar; fig; grapes; lily; maple; oak; olive; pine; rose; wheat.
-        An aquatic beast (d6): crab; crocodile; frog; fish; octopus; whale.
-        A small beast (d12): badger; bat; beaver; dog; ferret; fox; hedgehog; lizard; rat; scorpion; snake; spider.
-        A great beast (d8): bear; boar; bull; dragon; lion; ox; stag; wolf.
-        A bird (d12): cardinal; dove; eagle; hawk; mockingbird; owl; pelican; raven; rooster; sparrow; swan; vulture.
-        An elemental rune or image (d8): cloud; flame; ice; lightning bolt; snow; stone; wave of water; whirlwind.
-        An icon of death (d4): a pair of crossed bones; a ghost; a skull; a spectral hand.
+let type = [
+"an invasion, whether in the form of bandits, a foreign foe or even something as pedestrian as locusts or weevils", "plague, deadly enough that healing magic has no means to arrest it", "a natural disaster, such as an earthquake, tsunami or volcanic eruption", "climate related disaster, such as an unusually long and intense rainy season, or a parching drought", "a weather related event, such as a tornado, hurricane or wild fire", "an explicitly magical event, such as a sourceless tune which forces listeners to dance or the dead beginning to rise from their graves", "blight and pestilence it leads to the the death of any crops and livestock which are afflicted", "a bizarre and fortean event, such as a rain of frogs or the waters within a river or lake turning to blood",
+]
 
-        d20 The society's motto champions the ideals of...
-        Compassion.
-        Courage.
-        Discipline.
-        Domination.
-        Duty.
-        Excellence.
-        Faith.
-        Honor.
-        Hope.
-        Integrity.
-        Knowledge
-        Justice.
-        Loyalty.
-        Mercy.
-        Patience.
-        Power.
-        Righteousness.
-        Strength.
-        Victory.
-        Wisdom.
+let damage =[
+"only a few families, or perhaps a couple of buildings", "the equivalent of a small town or village", "the equivalent of a small town or village", "a city, or several villages or towns", "a city, or several villages or towns", "an entire region or province", "an entire region or province", "the entirety of a country, empire or kingdom",
+]
 
-        d6 Members of the society typically operate...
-        Alone and in secret.
-        In pairs, working in secret.
-        In small groups, working in secret.
-        Alone, but openly.
-        In pairs, but openly.
-        In small groups, but openly.
-  
-        d6 Members of the society typically know...
-        Only those right eblow and above in rank
-        Very few other members of the society.
-        Several other members of the society.
-        The details of the society's organization.
-        Nothing about the society's leadership.
-        The names of the society's leaders, though they’ve never met any of them.
-        One of the society's leading members and no other members.
+let impact =[
+"nonchalance this event is a regular occurrence, to the point where most folk pay it no mind", "a doomsayer has appeared, promising to solve what vexes the community if they merely commit a few unspeakable acts people are listening", "mild panic there are runs on stores, hoarding and small bouts of interpersonal violence, but no breakdown in law and order", "mild panic there are runs on stores, hoarding and small bouts of interpersonal violence, but no breakdown in law and order", "severe panic looting, burning, combat in the streets", "open revolution the followers are blaming the leaders, and are planning on holding them responsible through violent means", "mass exodus everyone flees the area as fear seizes them", "resignation and apathy have overtaken them the disaster seems inevitable, so they no longer see the point in struggling",
+]
 
-        d12 Members of the society occasionally gather to meet in...
-        A secret chamber in a well-known temple.
-        The cellar of a popular tavern.
-        A secret chamber in a well-known guild-hall.
-        The cellar of a wealthy merchant's house.
-        The city sewers.
-        The ancient catacombs beneath the city.
-        The residence of the leader or a senior member.
-        A wealthy merchant's office.
-        A private dining room in a dingy tavern.
-        A brothel.
-        A warehouse or shipyard.
-        The city's sewers.
+function militia
+let type = [
+"light infantry, trained to do battle loose-order and to fight as raiders, scouts and skirmishers they are equipped with a mix of ranged and melee weapons", "heavy infantry, troops meant to fight in pitched battle and in line, these folk are equipped with the heaviest weapons and armor that they can afford", "light cavalry possessed of fleets mounts and raged weapons these troops are talented marauders and scouts and will eagerly run down any retreating enemies", "heavy cavalry, meant to shatter the enemy with brutal charges these mounted warriors are heavily armed and armored, with mounts large and powerful enough to carry them", "a siege train, which includes transports, specialists and ammunition these could take the form of cannon, rams, sappers or even stranger things", "ranged troops, whether they are equipped with bows, crossbows or firearms, these soldiers will do their best to stay far away from the enemy and pepper them with missiles", "privateers, using whatever kind of vessel is appropriate for the setting most commonly this means a sea-going ship, but this could also mean a river vessel or even something more exotic like an airship", 
+]
 
-        d8 The society's membership is primarily made up of...
-        The poor and downtrodden (slaves, beggars, urchins, laborers, servants, etc.).
-        The wealthy elite (merchants, nobles, etc.).
-        Members of a particular religion (a temple, a cult, a sect, etc.).
-        Members of a particular trade (blacksmiths, carpenters, fishermen, weavers, etc.).
-        Members of a particular class (bards, fighters, mages, priests, rangers, thieves, etc.)
-        Members of a particular race (dwarves, elves, gnomes, halflings, etc.).
-        Members of specific ancient lineages (noble houses, descendants of heroes, etc.)
-        An eclectic mix of society.
-    outlaws 
-        d10 The outlaw band’s primary “business” involves...
-        Poaching from the sovereign's preserve or a prominent noble’s lands.
-        Harboring fugitives.
-        Harassing government officials and nobles who pass along the road.
-        Robbing caravans carrying gems, precious metals, and exotic goods.
-        Holding up incoming or outgoing ships or wagons.
-        Smuggling drugs (d4): smokeleaf; hallucinogenic mushrooms; sleepysalt (a downer); sharpsugar (an upper).
-        Smuggling rare antiquities.
-        Smuggling stolen goods.
-        Smuggling living things (d4): exotic beasts; foreign harlots; fugitives; slaves.
-        Serving as muscle for shady merchants and/or brothel-keepers.
-        d10 The outlaw band’s colors are...
-        Black.
-        Gold.
-        Forest green.
-        Bronze.
-        Tan / khaki.
-        Brown / beaver.
-        Dark grey / gunmetal.
-        Maroon.
-        Dark brown / chocolate.
-        Olive green.
-        d12 The outlaw band’s symbol is...
-        A skull.
-        An arrow.
-        A dagger.
-        A goblet.
-        The moon.
-        A star.
-        A snake.
-        A badger.
-        A spider.
-        A rat.
-        A wolf.
-        A bear.
-        d12 The outlaw band’s leader is...
-        A dangerous megalomaniac.
-        A charismatic demagogue.
-        A mysterious foreigner.
-        A talented thief.
-        A member of a prominent family.
-        A ruthless killer.
-        A femme fatale.
-        A charming rogue.
-        A dashing swashbuckler.
-        A brutish thug.
-        A devoted priest.
-        A well-known fugitive.
-        d6 The outlaw band’s members are primarily...
-        Out-of-work artisans.
-        Displaced peasants.
-        Desperate peasants.
-        Escaped slaves.
-        Combat veterans.
-        Foreign refugees.
-        d8 The outlaw band’s goals include (leadership and rank-and-file members could have different goals)...
-        Domination of the region’s trade.
-        Sabotage of the region’s trade.
-        Revenge against a rival band of outlaws.
-        Revenge against the region’s elite.
-        Rebellion against the region’s elite.
-        Equality and freedom for all.
-        A wealthy and peaceful retirement.
-        Violence to slake their bloodlust.
-        d10 Members of the outlaw band typically arm themselves with...
-        Wooden clubs.
-        Over-sized daggers.
-        Shortbows and arrows.
-        Longbows and arrows.
-        Daggers and crossbows.
-        Axes and knives.
-        Sticks and stones.
-        Shortswords.
-        Brass knuckles.
-        Daggers and sling shots.
-        d10 The outlaw band’s headquarters is hidden in or near...
-        The residence of a prominent noble.
-        The village’s market square.
-        A wayside inn.
-        A tavern.
-        A brothel.
-        An old lighthouse.
-        An abandoned cabin.
-        A waterfall.
-        A cave.
-        A dense forest.
-        d10 The outlaw band is feared or respected by...
-        Ambassadors and tax collectors.
-        Merchants and peddlers.
-        Politicians and magistrates.
-        Guards and sheriffs.
-        Soldiers and warriors.
-        Nobles and wealthy travelers.
-        Knights and loyalists.
-        Peasants and farmers.
-        Priests and sages.
-        Women and children.
-        d12 Distinguishing feature for an individual: The outlaw has...
-        A flashy earring ring.
-        Shiny leather boots.
-        A hole in the toe of one boot.
-        A dagger in each boot.
-        A mask on the face.
-        A wide-brimmed hat.
-        A dragon tattoo on the forearm.
-        A flame tattoo around the arm.
-        A maniacal laugh.
-        A bent, broken nose.
-        An open shirt and a very hairy chest.
-        Extravagant mustaches.
- 
-        POACHERS
-        d8. The poachers’ favorite prey includes...
-        Bears.
-        Birds of prey (d4): eagles; falcons; hawks; owls.
-        Boars.
-        Deer (d4): elk; harts; moose; stags.
-        Exotic beasts (d8): behemoths; elephants; griffons; hippogriffs; lions; owl bears; tigers; wyverns).
-        Game birds (d6): doves; grouses; partridges; pheasants; quails; turkeys.
-        Waterfowl (d6): ducks; geese; herons; puffins; snipes; swans.
-        Small furry beasts (d6): beavers; ermines; otters; raccoons; sables; skunks.
-        Small predators (d4): badgers; coyotes; foxes; wolverines.
-        Wolves.
-        d6. The poachers’ hunt...
-        For sport.
-        To feed their families.
-        To feed the impoverished peasants.
-        To exact revenge on the landowner.
-        To sell the beasts’ meat.
-        To sell the beasts’ pelts.
+let amount = [
+"a small handful, perhaps just a dozen", "several squads, comprising a couple of units and several dozen troops", "a company, including several officers, which number a little over a hundred in total", "a cohort, hundreds of battle-ready soldiers and their attendant camp followers", "a cohort, hundreds of battle-ready soldiers and their attendant camp followers", "a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train", "a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train", "a veritable army, comprising ~20-30,000 soldiers, along with command staff and various support troops",
+]
 
-        ROBBERS
-        d6 The robbers typically strike with...
-        Swarm tactics.
-        Hit-and-run tactics.
-        Ambush tactics.
-        Choreographed maneuvers.
-        Unpredictable maneuvers.
-        Lots of fancy footwork.
-        d8 The robbers are notorious for...
-        Never leaving survivors.
-        Branding captives.
-        Scalping captives.
-        Burning wagons and ships.
-        Using explosives.
-        Romantic escapades.
-        Singing bawdy songs.
-        Drinking too much ale.
-        SMUGGLERS
-        d6 The smuggling ring's primary modus operandi involves...
-        Underground tunnels.
-        Secret compartments.
-        Stealth watercraft.
-        Humanoid mules.
-        Bribery of officials.
-        A network of safehouses.
-        d8 The ring is supported by...
-        A prominent merchant.
-        An important minister or magistrate.
-        A major crime boss.
-        A pirate captain.
-        An admiral.
-        A group of subversives.
-        The captain of the guard or a local sheriff.
-        The sovereign’s main rival.
-    Street gang
-        Distributing drugs (d4): smokeleaf; hallucinogenic mushrooms; sleepysalt (a downer); sharpsugar (an upper).
-        Running heists of and/or fencing stolen gems and precious metals.
-        Petty theft, burglary, and/or pickpocketing.
-        Assassinations that look like accidents or that frame someone else.
-        Running brothels (d3): exotic; low; high-class.
-        Shaking down legitimate local businesses and/or city officials.
-        Serving as muscle for shady merchants and/or brothel-keepers.
-        Holding up outgoing ships or wagons.
-        d20 The gang's colors are...
-        Black.
-        Red / scarlet.
-        Gold.
-        Forest green.
-        Royal blue.
-        Violet.
-        Silver / light grey.
-        Bronze.
-        Tan / khaki.
-        Brown / beaver.
-        Dark grey / gunmetal.
-        White.
-        Maroon.
-        Sky blue.
-        Navy blue.
-        Dark brown / chocolate.
-        Teal / turquoise.
-        Steel / blue grey.
-        Orange.
-        Olive green.
-        d20 The gang's symbol is...
-        A skull.
-        A ghost.
-        An open hand.
-        A clenched fist.
-        An arrow.
-        A dagger.
-        A sword.
-        A hammer.
-        A crown.
-        A goblet.
-        The moon.
-        A star.
-        A fish.
-        A snake.
-        A badger.
-        A spider.
-        A rat.
-        A wolf.
-        A bear.
-        An eagle.
-        d10 Gangmembers often sport matching...
-        Shirts.
-        Jackets.
-        Scarves.
-        Vests.
-        Bandannas.
-        Boots.
-        Tattoos.
-        Hats.
-        Scars.
-        Mustaches.
-        d10 The gang's leader is...
-        A dangerous megalomaniac.
-        A charismatic demagogue.
-        A mysterious foreigner.
-        A talented thief.
-        A well-known public figure.
-        A ruthless killer.
-        A femme fatale.
-        A charming rogue.
-        A dashing swashbuckler.
-        A brutish thug.
-        d12 For recruitment, the gang targets individuals who are...
-        Artisans.
-        Relocated peasants.
-        Sailors.
-        Drunks.
-        Beggars.
-        Thieves.
-        Servants and slaves.
-        Combat veterans.
-        Laborers.
-        Foreigners.
-        Young children.
-        Circus performers.
-        d6 The gang's goals include (leadership and rank-and-file members could have different goals)...
-        Domination of the city's politics.
-        Domination of the city's trade.
-        Revenge against a rival gang in the same city.
-        Revenge against a rival gang in another city.
-        Revenge against the city's elite.
-        Rebellion against the city's elite.
-        d10 Gangmembers typically arm themselves with...
-        Wooden clubs.
-        Throwing knives.
-        Over-sized daggers.
-        Serrated daggers.
-        Daggers and crossbows.
-        Hammers and daggers.
-        Sticks and stones.
-        Shortswords.
-        Brass knuckles.
-        Bare fists.
-        d10 Gangmembers typically fight with...
-        Swarm tactics.
-        Hit-and-run tactics.
-        Ambush tactics.
-        Choreographed maneuvers.
-        Unpredictable maneuvers.
-        Lots of smiles and jokes.
-        Lots of fancy footwork.
-        Lots of screaming and shouting.
-        Kicking and stomping.
-        Lots of head-butting.
-        d12 The gang's headquarters is hidden in or near...
-        The residence of the leader or a senior gangmember.
-        An artisan's shop or guildhall.
-        A merchant's office.
-        A tavern.
-        A brothel.
-        A warehouse or shipyard.
-        A temple complex.
-        The city's sewers.
-        The town hall.
-        An abandoned guildhall or warehouse.
-        A shantytown
-        The residence of a wealthy individual.
-        d12 The gang is feared or respected by...
-        Fishermen and sailors.
-        Beggars and thieves.
-        Merchants and moneychangers.
-        Jewelers and gemcutters.
-        Politicians and magistrates.
-        Guards and sheriffs.
-        Soldiers and warriors.
-        Gladiators and pugilists.
-        Peasants and farmers.
-        Servants and slaves.
-        Priests and sages.
-        Women and children.
-        d12 Distinguishing feature for an individual: The gangmember has...
-        A nose ring.
-        Shiny leather boots.
-        A hole in the toe of one boot.
-        A dagger in each boot.
-        A heavy gold chain around the neck.
-        A wide-brimmed hat.
-        A dagger tattoo on the forearm.
-        A snake tattoo around the arm.
-        A maniacal laugh.
-        A long, hooked nose.
-        An open shirt and a very hairy chest.
-        Extravagant mustaches.
-    the major holiday
-        what sort of holiday?
-            religious, explicitly performing rituals and celebrations in regards to a faith.
-            civic, sponsored by or in celebration of the prevailing government or society.
-            cultural. a sort of blend of civic and religious holidays, cultural celebrations tend towards jovial atmospheres and often draw upon local folklore or legend.
-            commemoration, set aside for mourning or celebrating some grand event.
-            celestial, celebrating or noting something like an eclipse, lunar cycle, comet or similarly sidereal event.
-            seasonal, focusing on the passage of one set of weather patterns for another.
-            environmental, coinciding with the return of some plant or animal to the area.
-            mixed. this day draws upon several sources, roll twice on this table and weld the results together.
-        
-        how widespread is observance?
-            a particular faith, sect or culture.
-            a particular faith, sect or culture.
-            a particular faith, sect or culture.
-            a small region such as a few villages or towns, perhaps even a city.
-            a large region such as a kingdom or an empire.
-            members of a certain profession or guild.
-            members of a certain race or ethnicity.
-            members of a certain race or ethnicity.
+let leader= [
+"a noble, fallen from glory and perhaps even exiled from the land of their birth their leader is likely skilled at both battle and diplomacy, but they are consumed by bitterness from their state and will likely do nearly anything to rectify it", "these troops mutinied against their officers, and are commanded by the former ringleaders the ringleaders have grouped themselves into a council, and will vote on important decisions discipline and uniformity is likely lax", "a soldier's soldier, someone who has fought their way through countless campaigns and has risen to a position of command they are likely skilled in the arts of war and death, but lack tact", "a member of the nobility in good standing their troops are likely drawn from lands the noble's family controls the noble isn't likely a mere adventurer, they are looking to advantage their family or themselves", "these are mercenaries in name only, they are barely better than bandits in behavior and their leader is no exception likely a vicious killer themselves, the commander of this band keeps control through violence and bribery", "founded as a money-making endeavor, the commander of this group is more akin to a merchant than a warrior the leader is likely skilled at negotiating contracts and sniffing out profitable battles", "led by a devout worshipper of a deity, the troops have been enticed or forced into the worship of their commander's god whether or not their devotion is true, their leader's is, and they will use the miracles granted by their deity to help them in battle", "a spellcaster, known for their strange and often baffling ways, leads this group by dint of their abilities they will aid their folk with spells and mystical knowledge",
+]
 
-        what form do the proceedings take?
-            public feasting, drinking and celebrations.
-            public feasting, drinking and celebrations.
-            people are gathered for stories, speeches, songs and other forms of public performance.
-            people are gathered for stories, speeches, songs and other forms of public performance.
-            a procession, from a civilized area to a ritual site.
-            somber rituals, observances and sacrifices (whether they be living creatures or otherwise)
-            a ritualized competition or combat that could range from bloodless sport to free-for-alls which result in the deaths of one or more participants.
-            certain norms and taboos are meant to be challenged during this festival; perhaps folk dress opposite to their normal gender expression, act in strange or transgressive ways, or debts may be forced to be forgiven.
-        
-        how long does it last?
-            only a few hours, such as during the daylight hours or through the night.
-            an entire day.
-            an entire day.
-            an entire day.
-            an entire day.
-            several days.
-            an entire week.
-            a month.
-    treasure
-        who hid it? why?
-            it was an accident, a shipment lost to random chance or calamity. for some reason it was never reclaimed.
-            a noble family, displaced by a revolt or disaster, hid their secret somewhere only they could find it.
-            a group of raiders or pirates, storing a score until it was safe to retrieve it.
-            members of a religious minority, fleeing persecution.
-            an extremely powerful figure, such as a culture hero or particularly skilled spellcaster.
-            the treasure was part of a tontine or related to the retirement of the members. everyone died before anyone could retrieve it.
-            the society surrounding the hidden treasure collapsed, and its location was forgotten.
-            the treasure was important in some way -- perhaps it was the site of votive offerings, or the location of a guild's vault -- and it was guarded. while most of it's sentinels have died or vanished, some may still be guarding it.
+let details = [
+"rabble, hardly a cut above levies they are cowards, who will run if the battle goes against them (-2 to all morale checks), they are however extremely cheap (-40% to costs)", "decently trained and equipped, but they lack motivation (-1 to all morale checks) and they have little care towards their own reputations they will betray their employer if given a better offer", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "well drilled and disciplined (+1 to all morale checks) troops with an iron-shod reputation", "the elite, the cream of the crop (+2 to all morale checks, +1 all attack rolls) they are brave and unshakably loyal, but they are hideously expensive (+40% to costs)", "elite (+2 to all morale checks, +1 all attack rolls) soldiers who know all too well their own worth they cost more (+20% to costs) but that coin does not win their loyalty they fight for whoever pays them most, even switching sides in the midst of battle",    
+]
 
-        where does it lead to?
-            an isolated and deserted island.
-            deep inside a cave or another subterranean region.
-            a religious site, such as a temple or a shrine.
-            the middle of nowhere, a barren place, far from any civilization.
-            inside an urban area, currently inhabited or reduced to deserted ruins.
-            the bottom of the ocean or a lake.
-            a castle in the sky.
-            a celestial body, such as a planet or other plane of existence.
+function Nobility
 
-        and what's hidden there?
-            riches! glittering gold and prizes. the intrepid explorers receive (3d105) gp.
-            riches! glittering gold and prizes. the intrepid explorers receive (3d105) gp.
-            riches! glittering gold and prizes. the intrepid explorers receive (3d105) gp.
-            pandora's lament. an extremely powerful monster has been bound to this site. opening where it is held releases it.
-            cache of weapons - 50% chance to be magical, 50% chance to be make of an exotic material such as silver, obsidian or ivory.
-            cache of weapons - 50% chance to be magical, 50% chance to be make of an exotic material such as silver, obsidian or ivory.
-            cultural artifacts and personal effects. worthless to most, priceless to the right buyers.
-            magical paraphernalia such as scrolls and potions, maybe even a spellbook.
-        
-        what form does the map take?
-            the classic treasure map. made of vellum, inked, and showing off a simple guide to the terrain leading to and around the score. 50% chance that the map is in multiple parts
-            the map is relatively well-known regionally and it takes the form of a local legend such as a story, poem or song.
-            a strange and bizarre device, such as a potion which makes one recall the memories of one of the people who hid it.
-            a cipher, puzzle or some other form of riddle.
-            the map is hidden within the patterns of a natural feature, such as a set of holes within a hillside, or the shadows of a grove of trees.
-            one of the people (or a descendant of one) responsible for hiding the treasure is spilling the location to people. the party are certainly not the only ones who have caught wind of it.
-            the map is split between a number of people, no more than a half-dozen, all of whom have a piece of it.
-            there is no map - there are only the remaining notes (and possibly spirits) of those who hid it. they must be searched or interrogated for the location.
-    disaster
-        what caused this?
-            random accident has conspired against the community. no one in particular is responsible.
-            random accident has conspired against the community. no one in particular is responsible.
-            random accident has conspired against the community. no one in particular is responsible.
-            random accident has conspired against the community. no one in particular is responsible.
-            the gods themselves have been offended. a sacrifice was not made, a sacred animal or a priest was murdered, or someone has committed some other terrible transgression. further recompense may be necessary.
-            a dark ritual or curse is targeting the community. the calamity may the goal or merely a side-effect. this may only be a prelude.
-            a prophecy has come to pass. it was written in the ancient scrolls, and you were fools to have ignored them.
-            this is a knock-on effect, of another disaster. roll again, adding another catastrophe on top of the first.
-        
-        what kind of catastrophe is it?
-            an invasion, whether in the form of bandits, a foreign foe or even something as pedestrian as locusts or weevils.
-            plague, deadly enough that healing magic has no means to arrest it.
-            a natural disaster, such as an earthquake, tsunami or volcanic eruption.
-            climate related disaster, such as an unusually long and intense rainy season, or a parching drought.
-            a weather related event, such as a tornado, hurricane or wild fire.
-            an explicitly magical event, such as a sourceless tune which forces listeners to dance or the dead beginning to rise from their graves.
-            blight and pestilence. it leads to the the death of any crops and livestock which are afflicted.
-            a bizarre and fortean event, such as a rain of frogs or the waters within a river or lake turning to blood.
-        
-        what is the scale of the devastation?
-            only a few families, or perhaps a couple of buildings.
-            the equivalent of a small town or village.
-            the equivalent of a small town or village.
-            a city, or several villages or towns.
-            a city, or several villages or towns.
-            an entire region or province.
-            an entire region or province.
-            the entirety of a country, empire or kingdom.
-        
-        how is the community dealing with this?
-            nonchalance. this event is a regular occurrence, to the point where most folk pay it no mind.
-            a doomsayer has appeared, promising to solve what vexes the community if they merely commit a few unspeakable acts. people are listening.
-            mild panic. there are runs on stores, hoarding and small bouts of interpersonal violence, but no breakdown in law and order.
-            mild panic. there are runs on stores, hoarding and small bouts of interpersonal violence, but no breakdown in law and order.
-            severe panic. looting, burning, combat in the streets.
-            open revolution. the followers are blaming the leaders, and are planning on holding them responsible through violent means.
-            mass exodus. everyone flees the area as fear seizes them.
-            resignation and apathy have overtaken them. the disaster seems inevitable, so they no longer see the point in struggling.
-    mercenary/ military
-        what kind of warriors are these?
-            light infantry, trained to do battle loose-order and to fight as raiders, scouts and skirmishers. they are equipped with a mix of ranged and melee weapons.
-            heavy infantry, troops meant to fight in pitched battle and in line, these folk are equipped with the heaviest weapons and armor that they can afford.
-            light cavalry possessed of fleets mounts and raged weapons. these troops are talented marauders and scouts and will eagerly run down any retreating enemies.
-            heavy cavalry, meant to shatter the enemy with brutal charges. these mounted warriors are heavily armed and armored, with mounts large and powerful enough to carry them.
-            a siege train, which includes transports, specialists and ammunition. these could take the form of cannon, rams, sappers or even stranger things.
-            ranged troops, whether they are equipped with bows, crossbows or firearms, these soldiers will do their best to stay far away from the enemy and pepper them with missiles.
-            privateers, using whatever kind of vessel is appropriate for the setting. most commonly this means a sea-going ship, but this could also mean a river vessel or even something more exotic like an airship.
-            a mixed force, roll twice on this table (ignoring this result if it comes up again) to determine what kind of soldiers make up this varied unit.
-        
-        how numerous are they?
-            a small handful, perhaps just a dozen
-            several squads, comprising a couple of units and several dozen troops.
-            a company, including several officers, which number a little over a hundred in total.
-            a cohort, hundreds of battle-ready soldiers and their attendant camp followers.
-            a cohort, hundreds of battle-ready soldiers and their attendant camp followers.
-            a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train.
-            a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train.
-            a veritable army, comprising ~20-30,000 soldiers, along with command staff and various support troops.
+let tier = [
+"Ancient and well-respected by all houses, great and small", "Ancient and greatly diminished in standing from what it once was", "Old with the respect of many houses, great and small", "Old and struggling to maintain respect of other houses", "Old but often overshadowed by other houses", "Newly raised up to the nobility",
+]
 
-        who leads them?
-            a noble, fallen from glory and perhaps even exiled from the land of their birth. their leader is likely skilled at both battle and diplomacy, but they are consumed by bitterness from their state and will likely do nearly anything to rectify it.
-            these troops mutinied against their officers, and are commanded by the former ringleaders. the ringleaders have grouped themselves into a council, and will vote on important decisions. discipline and uniformity is likely lax.
-            a soldier's soldier, someone who has fought their way through countless campaigns and has risen to a position of command. they are likely skilled in the arts of war and death, but lack tact.
-            a member of the nobility in good standing. their troops are likely drawn from lands the noble's family controls. the noble isn't likely a mere adventurer, they are looking to advantage their family or themselves.
-            these are mercenaries in name only, they are barely better than bandits in behavior and their leader is no exception. likely a vicious killer themselves, the commander of this band keeps control through violence and bribery.
-            founded as a money-making endeavor, the commander of this group is more akin to a merchant than a warrior. the leader is likely skilled at negotiating contracts and sniffing out profitable battles.
-            led by a devout worshipper of a deity, the troops have been enticed or forced into the worship of their commander's god. whether or not their devotion is true, their leader's is, and they will use the miracles granted by their deity to help them in battle.
-            a spellcaster, known for their strange and often baffling ways, leads this group by dint of their abilities. they will aid their folk with spells and mystical knowledge.
+let color = [
+"black", "scarlet", "gold", "forest green", "royal blue", "violet", "silver", "bronze", "tan", "brown", "dark grey", "white", "maroon", "sky blue", "navy blue", "dark brown", "teal", "yellow", "orange", "olive green",
+]
 
-        how skilled are they? are they loyal?
-            rabble, hardly a cut above levies. they are cowards, who will run if the battle goes against them (-2 to all morale checks), they are however extremely cheap (-40% to costs)
-            decently trained and equipped, but they lack motivation (-1 to all morale checks) and they have little care towards their own reputations. they will betray their employer if given a better offer.
-            average pay for average skill. they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty.
-            average pay for average skill. they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty.
-            average pay for average skill. they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty.
-            well drilled and disciplined (+1 to all morale checks) troops with an iron-shod reputation.
-            the elite, the cream of the crop (+2 to all morale checks, +1 all attack rolls). they are brave and unshakably loyal, but they are hideously expensive (+40% to costs)
-            elite (+2 to all morale checks, +1 all attack rolls) soldiers who know all too well their own worth. they cost more (+20% to costs) but that coin does not win their loyalty. they fight for whoever pays them most, even switching sides in the midst of battle.
-    noble houses
-        d6 The house is...
-        Ancient and well-respected by all houses, great and small.
-        Ancient and greatly diminished in standing from what it once was.
-        Old with the respect of many houses, great and small.
-        Old and struggling to maintain respect of other houses.
-        Old but often overshadowed by other houses.
-        Newly raised up to the nobility.
-        d20 The house's colors are...
-        Black.
-        Red / scarlet.
-        Gold.
-        Forest green.
-        Royal blue.
-        Violet.
-        Silver / light grey.
-        Bronze.
-        Tan / khaki.
-        Brown / beaver.
-        Dark grey / gunmetal.
-        White.
-        Maroon.
-        Sky blue.
-        Navy blue.
-        Dark brown / chocolate.
-       Teal / turquoise.
-        Yellow.
-        Orange.
-        Olive green.
-       d8 The house's symbol is...
-        A weapon (d8): arrow; axe; dagger; hammer; mace; spear; staff; sword.
-        A piece of armor (d4): breastplate; gauntlet; helm; shield.
-        A celestial body (d4): sun; moon; star; comet.
-        A plant or part of a plant (d12): apple; barley; briar; fig; grapes; lily; maple; oak; olive; pine; rose; wheat.
-        An aquatic beast (d6): crab; crocodile; frog; fish; octopus; whale.
-        A small beast (d12): badger; bat; beaver; dog; ferret; fox; hedgehog; lizard; rat; scorpion; snake; spider.
-        A great beast (d8): bear; boar; bull; dragon; lion; ox; stag; wolf.
-        A bird (d12): cardinal; dove; eagle; hawk; mockingbird; owl; pelican; raven; rooster; sparrow; swan; vulture.
-        d20 The house's motto champions the ideals of...
-        Compassion.
-        Courage.
-        Courtesy.
-       Determination.
-        Discipline.
-        Duty.
-        Excellence.
-        Faith.
-        Generosity.
-        Honor.
-        Hope.
-        Integrity.
-       Justice.
-        Loyalty.
-        Mercy.
-        Patience.
-       Righteousness.
-        Strength.
-        Trust.
-        Wisdom.
-        d12 The best known member of the house is or was...
-        A gallant knight.
-        A beautiful woman.
-        A ruthless negotiator.
-       An adept diplomat.
-        A famous traveler or explorer.
-       A brilliant military strategist.
-       A notorious rebel or outlaw.
-        A dashing swashbuckler.
-        A fearsome warrior.
-        A brilliant scholar.
-        A gifted orator.
-        A dangerous and mad ruler.
-        d10 The current head of the house is...
-       A kindly old man or woman.
-       A ruthless old man or woman.
-        A wily old man or woman.
-        A charming man or woman.
-        A grim veteran of wars.
-        An astute politician.
-        A devout adherent of a religion.
-        A heartbroken widower or widow.
-        A reckless or hot-headed young man or woman.
-       A child.
-        d8 The house's goals include (individual members may have different goals)...
-        Domination of the city or region's politics.
-        Domination of the city or region's trade.
-        Revenge against a rival house in the same city or region.
-        Revenge against a rival house in another city or region.
-        Sabotage of a group run by commoners—a guild, academy, religious faith, or secret society.
-        Fomenting rebellion against the city or region's ruling house.
-       Marriage with a powerful allied house.
-      Marriage with a powerful rival house.
-        d8 One or more house members keep secret (the secret may involve past or present events)...
-        A long-time scandalous romance.
-        The existence of a bastard child.
-        A murder in one of the house's keeps, castles, or palaces.
-        Religious zealotry.
-        The birth of a malformed freak.
-        Treason against the region's sovereign.
-        The senility or madness of family members.
-        Criminal sabotage of a rival house.
-       d10 The house's seat of power is located in or near...
-        A port city.
-        A range of high mountains.
-        A wide, fertile plain.
-        A fertile river valley.
-        An ancient forest.
-        A jagged coastline.
-        A sodden swamp.
-        A pristine lake.
-        A desert plateau.
-       An idyllic hill country.
+let symbol = [
+    `${searchArray([arrow, axe, dagger, hammer, mace, spear, staff, sword])}`, `${searchArray([breastplate, gauntlet, helm, shield])}`, `${searchArray([sun, moon, star, comet])}`, `${searchArray([apple, barley, briar, fig, grapes, lily, maple, oak, olive, pine, rose, wheat])}`, `${searchArray([crab, crocodile, frog, fish, octopus, whale])}`, `${searchArray([badger, bat, beaver, dog, ferret, fox, hedgehog, lizard, rat, scorpion, snake, spider])}`, `${searchArray([bear, boar, bull, dragon, lion, ox, stag, wolf])}`, `${searchArray([cardinal, dove, eagle, hawk, mockingbird, owl, pelican, raven, rooster, sparrow, swan, vulture])}`,
+]
+
+let ideals = [
+"Compassion", "Courage", "Courtesy", "Determination", "Discipline", "Duty", "Excellence", "Faith", "Generosity", "Honor", "Hope", "Integrity", "Justice", "Loyalty", "Mercy", "Patience", "Righteousness", "Strength", "Trust", "Wisdom",
+]
+
+let famousMember =[
+"A gallant knight", "A beautiful woman", "A ruthless negotiator", "An adept diplomat", "A famous traveler or explorer", "A brilliant military strategist", "A notorious rebel or outlaw", "A dashing swashbuckler", "A fearsome warrior", "A brilliant scholar", "A gifted orator", "A dangerous and mad ruler", "d10 The current head of the house is", "A kindly old man or woman", "A ruthless old man or woman", "A wily old man or woman", "A charming man or woman", "A grim veteran of wars", "An astute politician", "A devout adherent of a religion", "A heartbroken widower or widow", "A reckless or hot-headed young man or woman", "A child",
+]
+
+let houseGoal = [
+"Domination of the city or region's politics", "Domination of the city or region's trade", "Revenge against a rival house in the same city or region", "Revenge against a rival house in another city or region", "Sabotage of a group run by commoners—a guild, academy, religious faith, or secret society", "Fomenting rebellion against the city or region's ruling house", "Marriage with a powerful allied house", "Marriage with a powerful rival house", "d8 One or more house members keep secret (the secret may involve past or present events)", "A long-time scandalous romance", "The existence of a bastard child", "A murder in one of the house's keeps, castles, or palaces", "Religious zealotry", "The birth of a malformed freak", "Treason against the region's sovereign", "The senility or madness of family members", "Criminal sabotage of a rival house",
+]
+
+let seat= [
+"A port city", "A range of high mountains", "A wide, fertile plain", "A fertile river valley", "An ancient forest", "A jagged coastline", "A sodden swamp", "A pristine lake", "A desert plateau", "An idyllic hill country",
+]
+
