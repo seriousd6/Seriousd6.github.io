@@ -17,6 +17,17 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
+function variableEvent(array, number) {
+    let chance = rollDice(100)
+    if (chance < 50) {
+        return ""
+    } else if (number === undefined) {
+        return searchArray(array) + " " + string
+    } else {
+        return searchArray(array[number]) + ' '
+    }
+};
+
 function slice(array, number) {
     return shuffle(array).slice(0, number)
 
@@ -25,9 +36,9 @@ function slice(array, number) {
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
-    var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-    var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
-    var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+    var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    var tn = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'eineteen'];
+    var tw = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
 
     s = s.toString();
@@ -448,7 +459,7 @@ function findOutlaws(){
     ]
     let output = `There is a group of outlaws nearby whose modus operandi is ${searchArray(business)}. Their leader is ${searchArray(leader)}, identified by ${searchArray(leaderQuirk)}, whose goal is ${searchArray(goal)}. The group consists mostly of ${searchArray(membership)} weilding ${searchArray(weapons)}, these outlaws are well respected by ${searchArray(respectedBy)}. They meet at ${searchArray(meetingplace)} and they identify eachother using their symbol, the ${searchArray(colors) + " " +searchArray(symbol)}.`
     document.getElementById("Outlaw").innerHTML = output
-}
+};
 
 function findGang() {
     let main = [
@@ -489,6 +500,108 @@ function findGang() {
     ]
     let output = `There is a street gang led by a ${searchArray(leader)} whose goal is ${searchArray(goals)}, they are well respected by ${searchArray(respectedBy)}. Their hideout is ${searchArray(headquarters)} and to get there find the man with ${searchArray(leaderTrait)}. Their recruitment efforts focus on ${searchArray(recruiting)}, and all members share a common style of ${searchArray(clothing)} with a ${searchArray(colors) + " colored " + searchArray(symbol)} symbol on it. Members are equipped with a ${searchArray(weapon)} and are known for ${searchArray(tactics)} in fights.`
     document.getElementById("Gang").innerHTML = output
+};
+
+function findHoliday(){
+    let type = [
+    "religious, explicitly performing rituals and celebrations in regards to a faith lasting", "civic, sponsored by or in celebration of the prevailing government or society", "cultural, a sort of blend of civic and religious holidays, cultural celebrations tend towards jovial atmospheres and often draw upon local folklore or legend, celebrations go on for ", "commemoration, set aside for mourning or celebrating some grand event", "celestial, celebrating or noting something like an eclipse, lunar cycle, comet or similarly sidereal event", "seasonal, focusing on the passage of one set of weather patterns for another, festivities last", "environmental, coinciding with the return of some plant or animal to the area, celebrations last"
+    ]
+    let observance =[
+    "are part of a particular faith, sect or culture", "are part of a particular faith, sect or culture", "are part of a particular faith, sect or culture", "are part of a small region such as a few villages or towns, perhaps even a city", "are part of a large region such as a kingdom or an empire", "are members of a certain profession or guild", "are members of a certain race or ethnicity", "are members of a certain race or ethnicity",
+    ]
+    let time =[
+    "only a few hours, such as during the daylight hours or through the night", "an entire day", "an entire day", "an entire day", "an entire day", "several days", "an entire week", "a month",
+    ]    
+    let practice = [
+    "public feasting, drinking and parties", "public feasting, drinking and parties", "people gathering for stories, speeches, songs and other forms of public performance", "people gathering for stories, speeches, songs and other forms of public performance", "a procession, from a civilized area to a ritual site", "somber rituals, observances and sacrifices (whether they be living creatures or otherwise)", "a ritualized competition or combat that could range from bloodless sport to free-for-alls which result in the deaths of one or more participants", "certain norms and taboos are meant to be challenged during this festival; perhaps folk dress opposite to their normal or debts may be forced to be forgiven",
+    ]
+    let output = `There is a local holiday, ${searchArray(type)} for ${searchArray(time)}. Celebrants consist of those who ${searchArray(observance)}. The celeration typically involves ${searchArray(practice)}.`
+    document.getElementById("Holiday").innerHTML = output
+};
+
+function findTreasure() {
+    let why =[
+    "it was an accident, a shipment lost to random chance or calamity for some reason it was never reclaimed", "a noble family, displaced by a revolt or disaster, hid their secret somewhere only they could find it", "a group of raiders or pirates, storing a score until it was safe to retrieve it", "members of a religious minority, fleeing persecution hid their posession from their pursuers", "an extremely powerful figure, such as a culture hero or particularly skilled spellcaster had a personal stash", "the treasure was part of a tontine or related to the retirement of the members everyone died before anyone could retrieve it", "the society surrounding the hidden treasure collapsed, and its location was forgotten", "the treasure was important in some way -- perhaps it was the site of votive offerings, or the location of a guild's vault -- and it was guarded, while most of it's sentinels have died or vanished, some may still be guarding it",
+    ]
+    let form = [
+    `the classic treasure map made of vellum, inked, and showing off a simple guide to the terrain leading to and around the score, ${searchArray(['this map is currently whole',`this map is in ${toWords(1+ rollDice(15))} pieces`])}`, "relatively well-known regionally and it takes the form of a local legend such as a story, poem or song", "a strange and bizarre device, such as a potion which makes one recall the memories of one of the people who hid it", "a cipher, puzzle or some other form of riddle", "hidden within the patterns of a natural feature, such as a set of holes within a hillside, or the shadows of a grove of trees", "one of the people (or a descendant of one) responsible for hiding the treasure. This person is spilling the location to many others, the party are certainly not the only ones who have caught wind of it", `split between ${toWords(1+ rollDice(6))}people, all of whom have a piece of it`, "nonexistant - there are only the remaining notes (and possibly spirits) of those who hid it... they must be searched or interrogated for the location",
+    ]
+    let where= [
+    "on an isolated and deserted island", "deep inside a cave or another subterranean region", "at a religious site, such as a temple or a shrine", "in the middle of nowhere, a barren place, far from any civilization", "inside an urban area, currently inhabited or reduced to deserted ruins", "at the bottom of the ocean or a lake", "in a castle in the sky", "on a celestial body, such as a planet or other plane of existence",
+    ]
+    let what = [
+    `riches! Glittering gold and prizes... the intrepid explorers will find ${500+rollDice(500)+rollDice(500)} gp`,"pandora's lament - an extremely powerful monster has been bound to this site, and opening where it is held releases it", `a cache of ${searchArray(["powerfully magical", `exotic and finely crafted ${searchArray(["ivory", "gold", "silver", "platinum", "jade"," ruby","diamond", "obsidian", "mythril", "amethyst"])}`])} weapons and armor`,"cultural artifacts and personal effects worthless to most, priceless to the right buyers", "magical paraphernalia such as scrolls and potions, maybe even a spellbook",
+    ]
+
+    let output = `There is a rumor of a local treasure... the rumor goes "${searchArray(why)}." Finding the treasure will be hard enough, the map is ${searchArray(form)}. The treasure is hidden ${searchArray(where)}. The prize is ${searchArray(what)}.`
+    document.getElementById("Treasure").innerHTML = output
+};
+
+function findDisaster() {
+    let type = [
+    "an invasion, whether in the form of bandits, a foreign foe or even something as pedestrian as locusts or weevils", "plague, deadly enough that healing magic has no means to arrest it", "a natural disaster, such as an earthquake, tsunami or volcanic eruption", "climate related disaster, such as an unusually long and intense rainy season, or a parching drought", "a weather related event, such as a tornado, hurricane or wild fire", "an explicitly magical event, such as a sourceless tune which forces listeners to dance or the dead beginning to rise from their graves", "blight and pestilence it leads to the the death of any crops and livestock which are afflicted", "a bizarre and fortean event, such as a rain of frogs or the waters within a river or lake turning to blood",
+    ]
+
+    let cause = [
+    "of a random accident, no one in particular is responsible", "the gods themselves have been offended a sacrifice was not made, a sacred animal or a priest was murdered, or someone has committed some other terrible transgression further recompense may be necessary", "a dark ritual or curse is targeting the community the calamity may the goal or merely a side-effect this may only be a prelude", "a prophecy has come to pass - it was written in the ancient scrolls - and you were fools to have ignored them",
+    ]
+
+    let damage =[
+    "only a few families about the size of a city block", "the equivalent of a small town or village", "a city, or several villages or towns", "an entire region or province",  "the entirety of a country, empire or kingdom",
+    ]
+
+    let impact =[
+    "nonchalance, this event is a regular occurrence, to the point where most folk pay it no mind", "that a doomsayer has appeared, promising to solve what vexes the community if they merely commit a few unspeakable acts people are listening", "mild panic, there are runs on stores, hoarding and small bouts of interpersonal violence, but no breakdown in law and order", "severe panic -  looting, burning, combat in the streets", "open revolution - the followers are blaming the leaders, and are planning on holding them responsible through violent means", "a mass exodus - everyone is fleing the area as fear seizes them", "resignation and apathy, the disaster seems inevitable so they no longer see the point in struggling",
+    ]
+    let output = `This community is dealing with a disaster, ${searchArray(type)}, because ${searchArray(cause)}. This has impacted ${searchArray(damage)}, the local reaction is ${searchArray(impact)}.`
+    document.getElementById("Disaster").innerHTML = output
+};
+
+function findMilitia() {
+    let type = [
+        "light infantry, trained to do battle loose-order and to fight as raiders, scouts and skirmishers they are equipped with a mix of ranged and melee weapons", "heavy infantry, troops meant to fight in pitched battle and in line, these folk are equipped with the heaviest weapons and armor that they can afford", "light cavalry possessed of fleets mounts and raged weapons these troops are talented marauders and scouts and will eagerly run down any retreating enemies", "heavy cavalry, meant to shatter the enemy with brutal charges these mounted warriors are heavily armed and armored, with mounts large and powerful enough to carry them", "a siege train, which includes transports, specialists and ammunition these could take the form of cannon, rams, sappers or even stranger things", "ranged troops, whether they are equipped with bows, crossbows or firearms, these soldiers will do their best to stay far away from the enemy and pepper them with missiles", "privateers, using whatever kind of vessel is appropriate for the setting most commonly this means a sea-going ship, but this could also mean a river vessel or even something more exotic like an airship", 
+    ]
+
+    let amount = [
+        "a small handful, perhaps just a dozen", "several squads, comprising a couple of units and several dozen troops", "a company, including several officers, which number a little over a hundred in total", "a cohort, hundreds of battle-ready soldiers and their attendant camp followers", "a cohort, hundreds of battle-ready soldiers and their attendant camp followers", "a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train", "a brigade or legion, several thousand soldiers, along with their support staff, commanders and wagon train", "a veritable army, comprising ~20-30,000 soldiers, along with command staff and various support troops",
+    ]
+
+    let leader= [
+        "a noble, fallen from glory and perhaps even exiled from the land of their birth their leader is likely skilled at both battle and diplomacy, but they are consumed by bitterness from their state and will likely do nearly anything to rectify it", "council composed of the ringleaders that mutinied the previous command, they will vote on important decisions discipline and uniformity is likely lax", "a soldier's soldier, someone who has fought their way through countless campaigns and has risen to a position of command. They are likely skilled in the arts of war and death, but lack tact", "a member of the nobility in good standing. Their troops are likely drawn from lands the noble's family controls. The noble isn't likely a mere adventurer, they are looking to advantage their family or themselves", "an unknown, these are mercenaries in name only - they are barely better than bandits in behavior and their leader is no exception, likely a vicious killer themselves, the commander of this band keeps control through violence and bribery", "a commander that is more akin to a merchant than a warrior. Founded as a money making endeavor, the leader is more skilled at negotiating contracts and sniffing out profitable battles", "a devout worshipper of a deity, the troops have been enticed or forced into the worship of their commander's god whether or not their devotion is true, their leader's is, and they will use the miracles granted by their deity to help them in battle", "a spellcaster, known for their strange and often baffling ways, leads this group by dint of their abilities they will aid their folk with spells and mystical knowledge",
+    ]
+
+    let details = [
+       "rabble, hardly a cut above levies they are cowards, who will run if the battle goes against them (-2 to all morale checks), they are however extremely cheap (-40% to costs)", "decently trained and equipped, but they lack motivation (-1 to all morale checks) and they have little care towards their own reputations they will betray their employer if given a better offer", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "average pay for average skill they have been trained to acceptable standards, but are nothing special beyond having a reputation for loyalty", "well drilled and disciplined (+1 to all morale checks) troops with an iron-shod reputation", "the elite, the cream of the crop (+2 to all morale checks, +1 all attack rolls) they are brave and unshakably loyal, but they are hideously expensive (+40% to costs)", "elite (+2 to all morale checks, +1 all attack rolls) soldiers who know all too well their own worth they cost more (+20% to costs) but that coin does not win their loyalty they fight for whoever pays them most, even switching sides in the midst of battle",    
+    ]
+    let output = `There is a local militia led by ${searchArray(leader)}. The force is ${searchArray(amount)} of ${searchArray(type)}. They are ${searchArray(details)}.`
+    document.getElementById("Militia").innerHTML = output
+};
+
+function findNobility() {
+    let tier = [
+        "ancient and well-respected by all houses, great and small", "ancient and greatly diminished in standing from what it once was", "old with the respect of many houses, great and small", "old and struggling to maintain respect of other houses", "old but often overshadowed by other houses", "newly raised up to the nobility",
+    ]
+    let color = [
+        "black", "scarlet", "gold", "forest green", "royal blue", "violet", "silver", "bronze", "tan", "brown", "dark grey", "white", "maroon", "sky blue", "navy blue", "dark brown", "teal", "yellow", "orange", "olive green",
+    ]
+    let symbol = [
+        `${searchArray(["arrow", "axe", "dagger", "hammer", "mace", "spear", "staff", "sword"])}`, `${searchArray(["breastplate", "gauntlet", "helm", "shield"])}`, `${searchArray(["sun", "moon", "star", "comet"])}`, `${searchArray(["apple", "barley", "briar", "fig", "grapes", "lily", "maple", "oak", "olive", "pine", "rose", "wheat"])}`, `${searchArray(["crab", "crocodile", "frog", "fish", "octopus", "whale"])}`, `${searchArray(["badger", "bat", "beaver", "dog", "ferret", "fox", "hedgehog", "lizard", "rat", "scorpion", "snake", "spider"])}`, `${searchArray(["bear", "boar", "bull", "dragon", "lion", "ox", "stag", "wolf"])}`, `${searchArray(["cardinal", "dove", "eagle", "hawk", "mockingbird", "owl", "pelican", "raven", "rooster", "sparrow", "swan", "vulture"])}`,
+    ]
+    let ideals = [
+        "compassion", "courage", "courtesy", "determination", "discipline", "duty", "excellence", "faith", "generosity", "honor", "hope", "integrity", "justice", "loyalty", "mercy", "patience", "righteousness", "strength", "trust", "wisdom",
+    ]
+    let famousMember =[
+        "A gallant knight", "A beautiful woman", "A ruthless negotiator", "An adept diplomat", "A famous traveler or explorer", "A brilliant military strategist", "A notorious rebel or outlaw", "A dashing swashbuckler", "A fearsome warrior", "A brilliant scholar", "A gifted orator", "A dangerous and mad ruler", "d10 The current head of the house is", "A kindly old man or woman", "A ruthless old man or woman", "A wily old man or woman", "A charming man or woman", "A grim veteran of wars", "An astute politician", "A devout adherent of a religion", "A heartbroken widower or widow", "A reckless or hot-headed young man or woman", "A prodigious child",
+    ]
+    let houseGoal = [
+        "the domination of the city or region's politics", "the domination of the city or region's trade", "revenge against a rival house in the same city or region", "revenge against a rival house in another city or region", "the sabotage of a group run by commoners—a guild, academy, religious faith, or secret society", "fomenting rebellion against the city or region's ruling house", "a marriage with a powerful allied house", "a marriage with a powerful rival house", `one or more house members dealing with a kept secret: Specifically regarding ${searchArray(["a long-time scandalous romance", "the existence of a bastard child", "a murder in one of the house's keeps, castles, or palaces", "religious zealotry", "the birth of a malformed freak", "treason against the region's sovereign", "the senility or madness of family members", "criminal sabotage of a rival house"])}`, 
+    ]
+    let chosenIdeals  = slice(ideals,2)
+    let seat= [
+        "a port city", "a range of high mountains", "a wide, fertile plain", "a fertile river valley", "an ancient forest", "a jagged coastline", "a sodden swamp", "a pristine lake", "a desert plateau", "an idyllic hill country",
+    ]
+    let output = `There is a noble house in this community, ${searchArray(tier)}, identified by their heraldry of the ${searchArray(color) + " "+ searchArray(symbol)}, and known for promoting ${chosenIdeals[0] +" and " +chosenIdeals[1]}. Their hidden goal here is ${searchArray(houseGoal)}. This is a small part of the family, with the trunk being in ${searchArray(seat)}. ${searchArray(famousMember)} known across the region came from this family!`
+    document.getElementById("Nobility").innerHTML = output
 }
 
 function rollTown() {
@@ -505,4 +618,11 @@ function rollTown() {
     findSecretSociety()
     findOutlaws()
     findGang()
+    findHoliday()
+    findTreasure()
+    findDisaster()
+    findMilitia()
+    findNobility()
 };
+
+findNobility()
