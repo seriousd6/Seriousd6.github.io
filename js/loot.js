@@ -56,6 +56,50 @@ function printFrom(array, number, id) {
         document.getElementById(id).appendChild(li);
     });
 };
+
+function modify(number) {
+    return Math.floor(number * (.85 + Math.random() * .4))
+};
+
+function shuffleSlice(array, number) {
+    return shuffle(array).slice(0, number)
+
+}
+
+function loopCountPrintList(array, id) {
+    let x = array
+
+    function count(array) {
+        a = array
+        a.sort();
+        var current = null;
+        var cnt = 0;
+        let final = []
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] != current) {
+                if (cnt > 0) {
+                    final.push(cnt + "-" + current);
+                }
+                current = a[i];
+                cnt = 1;
+            } else {
+                cnt++;
+            }
+        }
+        if (cnt > 0) {
+            final.push(cnt + "-" + current);
+        }
+        return final
+    }
+    final = count(x);
+    final.forEach(function(item) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(item);
+        li.appendChild(text);
+        document.getElementById(id).appendChild(li);
+    });
+};
+
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -115,58 +159,462 @@ function reload() {
 
 
 //page scripts
-function convertGold(number) {
-    console.log('\nGold Conversion of ' + number + 'gp:\n' +
-        `PP:${number/10} 
-EP:${number*2}
-SP:${number*10}
-CP:${number*100}`
-    );
-};
 
 function calculateGold(level, fights) {
     if (level === 1) {
-        return `Coins: PP:${modify(0)*fights} GP:${modify(0)*fights} EP:${modify(5)*fights} SP:${modify(195)*fights} CP:${modify(390)*fights}`
+        return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(0)*fights} EP:${modify(5)*fights} SP:${modify(195)*fights} CP:${modify(390)*fights}`
     } else if (level === 2) {
-        return `Coins: PP:${modify(0)*fights} GP:${modify(3)*fights} EP:${modify(31)*fights} SP:${modify(312)*fights} CP:${modify(260)*fights}`
+        return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(3)*fights} EP:${modify(31)*fights} SP:${modify(312)*fights} CP:${modify(260)*fights}`
     } else if (level === 3) {
-        return `Coins: PP:${modify(0)*fights} GP:${modify(12)*fights} EP:${modify(35)*fights} SP:${modify(482)*fights} CP:${modify(158)*fights}`
+        return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(12)*fights} EP:${modify(35)*fights} SP:${modify(482)*fights} CP:${modify(158)*fights}`
     } else if (level === 4) {
-        return `Coins: PP:${modify(1)*fights} GP:${modify(16)*fights} EP:${modify(53)*fights} SP:${modify(567)*fights} CP:${modify(105)*fights}`
+        return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(1)*fights} GP:${modify(16)*fights} EP:${modify(53)*fights} SP:${modify(567)*fights} CP:${modify(105)*fights}`
     } else if (level === 5) {
-        return `Coins: PP:${modify(2)*fights} GP:${modify(50)*fights} EP:${modify(248)*fights} SP:${modify(828)*fights} CP:${modify(14)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(2)*fights} GP:${modify(50)*fights} EP:${modify(248)*fights} SP:${modify(828)*fights} CP:${modify(14)*fights}`
     } else if (level === 6) {
-        return `Coins: PP:${modify(4)*fights} GP:${modify(60)*fights} EP:${modify(305)*fights} SP:${modify(828)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(4)*fights} GP:${modify(60)*fights} EP:${modify(305)*fights} SP:${modify(828)*fights} CP:${modify(0)*fights}`
     } else if (level === 7) {
-        return `Coins: PP:${modify(5)*fights} GP:${modify(69)*fights} EP:${modify(386)*fights} SP:${modify(772)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(5)*fights} GP:${modify(69)*fights} EP:${modify(386)*fights} SP:${modify(772)*fights} CP:${modify(0)*fights}`
     } else if (level === 8) {
-        return `Coins: PP:${modify(18)*fights} GP:${modify(71)*fights} EP:${modify(485)*fights} SP:${modify(706)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(18)*fights} GP:${modify(71)*fights} EP:${modify(485)*fights} SP:${modify(706)*fights} CP:${modify(0)*fights}`
     } else if (level === 9) {
-        return `Coins: PP:${modify(7)*fights} GP:${modify(84)*fights} EP:${modify(755)*fights} SP:${modify(547)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(7)*fights} GP:${modify(84)*fights} EP:${modify(755)*fights} SP:${modify(547)*fights} CP:${modify(0)*fights}`
     } else if (level === 10) {
-        return `Coins: PP:${modify(7)*fights} GP:${modify(66)*fights} EP:${modify(696)*fights} SP:${modify(718)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(7)*fights} GP:${modify(66)*fights} EP:${modify(696)*fights} SP:${modify(718)*fights} CP:${modify(0)*fights}`
     } else if (level === 11) {
-        return `Coins: PP:${modify(24)*fights} GP:${modify(968)*fights} EP:${modify(399)*fights} SP:${modify(142)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(24)*fights} GP:${modify(968)*fights} EP:${modify(399)*fights} SP:${modify(142)*fights} CP:${modify(0)*fights}`
     } else if (level === 12) {
-        return `Coins: PP:${modify(26)*fights} GP:${modify(1057)*fights} EP:${modify(466)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(26)*fights} GP:${modify(1057)*fights} EP:${modify(466)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 13) {
-        return `Coins: PP:${modify(29)*fights} GP:${modify(1262)*fights} EP:${modify(269)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(29)*fights} GP:${modify(1262)*fights} EP:${modify(269)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 14) {
-        return `Coins: PP:${modify(27)*fights} GP:${modify(1432)*fights} EP:${modify(218)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(27)*fights} GP:${modify(1432)*fights} EP:${modify(218)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 15) {
-        return `Coins: PP:${modify(39)*fights} GP:${modify(1457)*fights} EP:${modify(194)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(39)*fights} GP:${modify(1457)*fights} EP:${modify(194)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 16) {
-        return `Coins: PP:${modify(46)*fights} GP:${modify(1533)*fights} EP:${modify(166)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(46)*fights} GP:${modify(1533)*fights} EP:${modify(166)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 17) {
-        return `Coins: PP:${modify(779)*fights} GP:${modify(875)*fights} EP:${modify(175)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(779)*fights} GP:${modify(875)*fights} EP:${modify(175)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 18) {
-        return `Coins: PP:${modify(834)*fights} GP:${modify(834)*fights} EP:${modify(185)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(834)*fights} GP:${modify(834)*fights} EP:${modify(185)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 19) {
-        return `Coins: PP:${modify(870)*fights} GP:${modify(1075)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(870)*fights} GP:${modify(1075)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     } else if (level === 20) {
-        return `Coins: PP:${modify(921)*fights} GP:${modify(1081)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(921)*fights} GP:${modify(1081)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     }
 };
+
+function alternateRewards(level, fights) {
+    function loopCountPushGems(array, array2, value) {
+        let x = array
+
+        function count(array) {
+            a = array
+            a.sort();
+            var current = null;
+            var cnt = 0;
+            let final = []
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] != current) {
+                    if (cnt > 0) {
+                        final.push(cnt + "-" + current);
+                    }
+                    current = a[i];
+                    cnt = 1;
+                } else {
+                    cnt++;
+                }
+            }
+            if (cnt > 0) {
+                final.push(cnt + "-" + current);
+            }
+            return final
+        }
+        final = count(x);
+        array2.push(` Bag of gems (Value: ${value} gp): ${final}`)
+    }
+
+    function loopCountPushArt(array, array2, value) {
+        let x = array
+
+        function count(array) {
+            a = array
+            a.sort();
+            var current = null;
+            var cnt = 0;
+            let final = []
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] != current) {
+                    if (cnt > 0) {
+                        final.push(cnt + "-" + current);
+                    }
+                    current = a[i];
+                    cnt = 1;
+                } else {
+                    cnt++;
+                }
+            }
+            if (cnt > 0) {
+                final.push(cnt + "-" + current);
+            }
+            return final
+        }
+        final = count(x);
+        array2.push(`A Set of Art Pieces (Value: ${value} gp): ${final}`)
+    }
+    document.getElementById("AlternateReward").innerHTML = ""
+    let magicItemsA = ["Potion of healing", "Spell scroll (cantrip)", "Potion of climbing", "Spell scroll (1st level)", "Spell scroll (2nd level)", "Potion of greater healing", "Bag of holding", "Driftglobe"]
+    let magicItemsB = ["Potion of greater healing", "Potion of fire breath", "Potion of resistance", "Ammunition, +1", "Potion of animal friendship", "Potion of hill giant strength", "Potion of growth", "Potion of water breathing", "Spell scroll (2nd level)", "Spell scroll (3rd level)", "Bag of holding", "Keoghtom's ointment", "Oil of slipperiness", "Dust of disappearance", "Dust of dryness", "Dust of sneezing and choking", "Elemental gem", "Philter of love", "Alchemy jug", "Cap of water breathing", "Cloak of the manta ray", "Driftglobe", "Goggles of night", "Helm of comprehending languages", "Immovable rod", "Lantern of revealing", "Mariner's armor", "Mithral armor", "Potion of poison", "Ring of swimming", "Robe of useful items", "Rope of climbing", "Saddle of the cavalier", "Wand of magic detection", "Wand of secrets"]
+    let magicItemsC = ["Potion of superior healing", "Spell scroll (4thlevel)", "Ammunition, +2", "Potion of clairvoyance", "Potion of diminution", "Potion of gaseous form", "Potion of frost giant strength", "Potion of stone giant strength", "Potion of heroism", "Potion of invulnerability", "Potion of mind reading", "Spell scroll (5thlevel)", "Elixir of health", "Oil of etherealness", "Potion of fire giant strength", "Quaal's feather token", "Scroll of protection", "Bag of beans", "Bead of force", "Chime of opening", "Decanter of endless water", "Eyes of minute seeing", "Folding boat", "Heward's handy haversack", "Horseshoes of speed", "Necklace of fireballs", "Periapt of health", "Sending Stones"]
+    let magicItemsD = ["Potion of supreme healing", "Potion of invisibility", "Potion of speed", "Spell scroll (6thlevel)", "Spell scroll (7thlevel)", "Ammunition, +3", "Oil of sharpness", "Potion of flying", "Potion of cloud giant strength", "Potion of longevity", "Potion of vitality", "Spell scroll (8thlevel)", "Horseshoes of a zephyr", "Nolzur's marvelous pigments", "Bag of devouring", "Portable hole"]
+    let magicItemsE = ["Spell scroll (8thlevel)", "Potion of storm giant strength", "Poti on of supreme healing", "Spell scroll (9st level)", "Universal solvent", "Arrow of slaying", "Sovereign glue"]
+    let magicItemsF = ["Weapon, +1", "Shield,+ 1", "Sentinel shield", "Amulet of proof against detection and location", "Boots of elvenkind", "Boots of striding and springing", "Bracers of archery", "Brooch of shielding", "Broom of flying", "Cloak of elvenkind", "Cloak of protection", "Gauntlets of ogre power", "Hat of disguise", "Javelin of lightning", "Pearl of power", "Rod of the pact keeper, + 1", "Slippers of spider climbing", "Staff of the adder", "Staff of the python", "Sword of vengeance", "Trident of fish command", "Wand of magic missiles", "Wand of the war mage, + 1", "Wand of web", "Weapon of warning", "Adamantine armor (chain mail)", "Adamantine armor (chain shirt)", "Adamantine armor (scale mail)", "Bag of tricks (gray)", "Bag of tricks (rust)", "Bag of tricks (tan)", "Boots of the winterlands", "Circlet of blasting", "Deck of illusions", "Eversmoking bottle", "Eyes of charming", "Eyes of the eagle", "Figurine of wondrous power (silver raven)", "Gem of brightness", "Gloves of missile snaring", "Gloves of swimming and climbing", "Gloves of thievery", "Headband of intellect", "Helm of telepathy", "Instrument of the bards (Doss lute)", "Instrument of the bards (Fochlucan bandore)", "Instrument of the bards (Mac-Fuimidh cittern)", "Medallion of thoughts", "Necklace of adaptation", "Periapt of wound closure", "Pipes of haunting", "Pipes of the sewers", "Ring of jumping", "Ring of mind shielding", "Ring of warmth", "Ring of water walking", "Quiver of Ehlonna", "Stone of good luck", "Wind fan", "Winged boots"]
+    let magicItemsG = ["Weapon, +2", "Figurine of wondrous power (roll d8)", "1: Bronze griffon", "2: Ebony fly", "3: Golden lions", "4: Ivory goats", "5: Marble elephant", "6-7: Onyx dog", "8: Serpentine owl", "Adamantine armor (breastplate)", "Adamantine armor (splint)", "Amulet of health", "Armor of vulnerability", "Arrow-catching shield", "Belt of dwarvenkind", "Belt of hill giant strength", "Berserker axe", "Boots of levitation", "Boots of speed", "Bowl of commanding water elementals", "Bracers of defense", "Brazier of commanding fire elementals", "Cape of the mountebank", "Censer of controlling air elementals", "Armor, +1 chain mail", "Armor of resistance (chain mail)", "Armor of resistance (chain shirt)", "Armor,+ 1 chain shirt", "Cloak of displacement", "Cloak of the bat", "Cube of force", "Daern's instant fortress", "Dagger of venom", "Dimensional shackles", "Dragon slayer", "Elven chain", "Flame tongue", "Gem of seeing", "Giant slayer", "Clamoured studded leather", "Helm of teleportation", "Horn of blasting", "Horn of Valhalla (silver or brass)", "Instrument of the bards (Canaithmandolin)", "Instrument ofthe bards (Cii lyre)", "loun stone (awareness)", "loun stone (protection)", "loun stone (reserve)", "loun stone (sustenance)", "Iron bands of Bilarro", "Armor, + 1 leather", "Armor of resistance (leather)", "Mace of disruption", "Mace of smiting", "Mace of terror", "Mantle of spell resistance", "Necklace of prayer beads", "Periapt of proof against poison", "Ring of animal influence", "Ring of evasion", "Ring of feather falling", "Ring of free action", "Ring of protection", "Ring of resistance", "Ring of spell storing", "Ring of the ram", "Ring of X-ray vision", "Robe of eyes", "Rod of rulership", "Rod of the pact keeper, +2", "Rope of entanglement", "Armor, +1 scale mail", "Armor of resistance (scale mail)", "Shield, +2", "Shield of missile attraction", "Staff of charming", "Staff of healing", "Staff of swarming insects", "Staff of the woodlands", "Staff of withering", "Stone of controlling earthelementals", "Sun blade", "Sword of life stealing", "Sword of wounding", "Tentacle rod", "Vicious weapon", "Wand of binding", "Wand of enemy detection", "Wand of fear", "Wand of fireballs", "Wand of lightning bolts", "Wand of paralysis", "Wand of the war mage, +2", "Wand of wonder", "Wings of flying"]
+    let magicItemsH = ["Weapon, +3", "Amulet of the planes", "Carpet of flying", "Crystal ball (very rare version)", "Ring of regeneration", "Ring of shooting stars", "Ring of telekinesis", "Robe of scintillating colors", "Robe of stars", "Rod of absorption", "Rod of alertness", "Rod of security", "Rod of the pact keeper, +3", "Scimitar of speed", "Shield, +3", "Staff of fire", "Staff of frost", "Staff of power", "Staff of striking", "Staff of thunder and lightning", "Sword of sharpnes", "Wand of polymorph", "Wand of the war mage, + 3", "Adamantine armor (half plate)", "Adamantine armor (plate)", "Animated shield", "Belt of fire giant strength", "Belt of frost (or stone) giant strength", "Armor, + 1 breastplate", "Armor of resistance (breastplate)", "Candle of invocation", "Armor, +2 chain mail", "Armor, +2 chain shirt", "Cloak of arachnida", "Dancing sword", "Demon armor", "Dragon scale mail", "Dwarven plate", "Dwarven thrower", "Efreeti bottle", "Figurine of wondrous power (obsidian steed)", "Frost brand", "Helm of brilliance", "Horn of Valhalla (bronze)", "Instrument of the bards (Anstruthharp)", "loun stone (absorption)", "loun stone (agility)", "loun stone (fortitude)", "loun stone (insight)", "loun stone (intellect)", "loun stone (leadership)", "loun stone (strength)", "Armor, +2 leather", "Manual of bodily health", "Manual of gainful exercise", "Manual of golems", "Manual of quickness of action", "Mirror of life trapping", "Nine lives stealer", "Oathbow", "Armor, +2 scale mail", "Spellguard shield", "Armor, + 1 splint", "Armor of resistance (splint)", "Armor, + 1 studded leather", "Armor of resistance (studded leather)", "Tome of clear thought", "Tome of leadership and influence", "Tome of understanding"]
+    let magicItemsI = ["Defender", "Hammer of thunderbolts", "Luck Blade", "Sword of answering", "Holy avenger", "Ring of djinni summoning", "Ring of invisibility", "Ring of spell turning", "Rod of lordly might", "Vorpal sword", "Belt of cloud giant strength", "Armor, +2 breastplate", "Armor, +3 chain mail", "Armor, +3 chain shirt", "Cloak of invisibility", "Crystal ball (legendary version)", "Armor, + 1 half plate", "Iron flask", "Armor, +3 leather", "Armor, +1 plate", "Robe of the archmagi", "Rod of resurrection", "Armor, +1 scale mail", "Scarab of protection", "Armor, +2 splint", "Armor, +2 studded leather", "Well of many worlds", "Armor, +2 half plate", "Armor, +2 plate", "Armor, +3 studded leather", "Armor, +3 breastplate", "Armor, +3 splint", "Armor, +3 half plate", "Armor, +3 plate", "Apparatus of Kwalish", "Armor of invulnerability", "Belt of storm giant strength", "Cubic gate", "Deck of many things", "Efreeti chain", "Armor of resistance (half plate)", "Horn of Valhalla (iron)", "Instrument of the bards (OIIamh harp)", "loun stone (greater absorption)", "loun stone (mastery)", "loun stone (regeneration)", "Plate armor of etherealness", "Plate armor of resistance", "Ring of air elemental command", "Ring of earthelemental command", "Ring of fire elemental command", "Ring of three wishes", "Ring of water elemental command", "Sphere of annihilation", "Talisman of pure good", "Talisman of the sphere", "Talisman of ultimate evil", "Tome of the stilled tongue"]
+    let gemsA = ["Azurite (opaque mottled deep blue)(10gp)", "Banded agate (translucent striped brown, blue, white, or red)(10gp)", "Blue quartz (transparent pale blue)(10gp)", "Eye agate (translucent circles of gray, white, brown, blue, or green)(10gp)", "Hematite (opaque gray-black)(10gp)", "Lapis lazuli (opaque light and dark blue with yellow flecks)(10gp)", "Malachite (opaque striated light and dark green)(10gp)", "Moss agate (translucent pink or yellow-white with mossy gray or green markings)(10gp)", "Obsidian (opaque black)(10gp)", "Rhodochrosite (opaque light pink)(10gp)", "Turquoise (opaque light blue-green)(10gp)", "Tiger eye (translucent brown with golden center)(10gp)"]
+    let gemsB = ["Bloodstone (opaque dark gray with red flecks)(50gp)", "Carnelian (opaque orange to red-brown)(50gp)", "Chalcedony (opaque white)(50gp)", "Chrysoprase (translucent green)(50gp)", "Citrine (transparent pale yellow-brown)(50gp)", "Jasper (opaque blue, black, or brown)(50gp)", "Moonstone (translucent white with pale blue glow)(50gp)", "Quartz (transparent white, smoky gray, or yellow)(50gp)", "Sardonyx (opaque bands of red and white)(50gp)", "Zircon (transparent pale blue-green)(50gp)", "Onyx (opaque bands of black and white, or pure black or white)(50gp)", "Star rose quartz (translucent rosy stone with white star-shaped center)(50gp)"]
+    let gemsC = ["Alexandrite (transparent dark green)(500gp)", "Aquamarine (transparent pale blue-green)(500gp)", "Black pearl (opaque pure black)(500gp)", "Blue spinel (transparent deep blue)(500gp)", "Peridot (transparent rich olive green)(500gp)", "Topaz (transparent golden yellow)(500gp)"]
+    let gemsD = ["Black opal (translucent dark green with black mottling and golden flecks)(1000gp)", "Blue sapphire (transparent blue-white to medium blue)(1000gp)", "Emerald (transparent deep bright green)(1000gp)", "Fire opal (translucent fiery red)(1000gp)", "Opal (translucent pale blue with green and golden mottling)(1000gp)", "Star ruby (translucent ruby with white star-shaped center)(1000gp)", "Star sapphire (translucent blue sapphire with white star-shaped center)(1000gp)", "Yellow sapphire (transparent fiery yellow or yellow green)(1000gp)"]
+    let gemsE = ["Black sapphire (translucent lustrous black with glowing highlights)(5000gp)", "Diamond (transparent blue-white, canary, pink, brown, or blue)(5000gp)", "Jacinth (transparent fiery orange)(5000gp)", "Ruby (transparent clear red to deep crimson)(5000gp)"]
+    let artA = ["Silver ewer(25gp)", "Carved bone statuette(25gp)", "Small gold bracelet(25gp)", "Cloth-of-gold vestments(25gp)", "Black velvet mask stitched with silver thread(25gp)", "Copper chalice with silver filigree(25gp)", "Pair of engraved bone dice(25gp)", "Small mirror set in a painted wooden frame(25gp)", "Embroidered silk handkerchief(25gp)", "Gold locket with a painted portrait inside(25gp)"]
+    let artB = ["Gold ring set with bloodstones(250gp)", "Carved ivory statuette(250gp)", "Large gold bracelet(250gp)", "Silver necklace with a gemstone pendant(250gp)", "Bronze crown(250gp)", "Silk robe with gold embroidery(250gp)", "Large well-made tapestry(250gp)", "Brass mug with jade inlay(250gp)", "Box of turquoise animal figurines(250gp)", "Gold bird cage with electrum filigree(250gp)"]
+    let artC = ["Silver chalice set with moonstones(750gp)", "Silver-plated steel longsword with jet set in hilt(750gp)", "Carved harp of exotic wood with ivory inlay and zircon gems(750gp)", "Small gold idol(750gp)", "Gold dragon comb set with red garnets as eyes(750gp)", "Bottle stopper cork embossed with gold leaf and set with amethysts(750gp)", "Ceremonial electrum dagger with a black pearl in the pommel(750gp)", "Silver and gold brooch(750gp)", "Obsidian statuette with gold fittings and inlay(750gp)", "Painted gold war mask(750gp)"]
+    let artD = ["Fine gold chain set with a fire opal(2500gp)", "Old masterpiece painting(2500gp)", "Embroidered silk and velvet mantle set with numerous moonstones(2500gp)", "Platinum bracelet set with a sapphire(2500gp)", "Embroidered glove set with jewel chips(2500gp)", "Jeweled anklet(2500gp)", "Gold music box(2500gp)", "Gold circlet set with four aquamarines(2500gp)", "Eye patch with a mock eye set in blue sapphire and moonstone(2500gp)", "A necklace string of small pink pearls(2500gp)"]
+    let artE = ["Jeweled gold crown(7500gp)", "Jeweled platinum ring(7500gp)", "Small gold statuette set with rubies(7500gp)", "Gold cup set with emeralds(7500gp)", "Gold jewelry box with platinum filigree(7500gp)", "Painted gold child's sarcophagus(7500gp)", "Jade game board with solid gold playing pieces(7500gp)", "Bejeweled ivory drinking horn with gold filigree(7500gp)"]
+
+    if (level === 1) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            art.push(searchArray(artA))
+        }
+        loopCountPushGems(gems, loot, (fights * 10))
+        loopCountPushArt(art, loot, (fights * 25))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 2) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            art.push(searchArray(artA))
+            loot.push(searchArray(magicItemsA))
+        }
+        loopCountPushGems(gems, loot, (fights * 10))
+        loopCountPushArt(art, loot, (fights * 25))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 3) {
+        let loot = []
+        let art = []
+        let gems = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            gems.push(searchArray(gemsA))
+            art.push(searchArray(artA))
+            art.push(searchArray(artA))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsA))
+        }
+        loopCountPushGems(gems, loot, (fights * 20))
+        loopCountPushArt(art, loot, (fights * 50))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 4) {
+        let loot = []
+        let art = []
+        let gems = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            gems.push(searchArray(gemsA))
+            art.push(searchArray(artA))
+            art.push(searchArray(artA))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsA))
+        }
+        loopCountPushGems(gems, loot, (fights * 20))
+        loopCountPushArt(art, loot, (fights * 50))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 5) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artA))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsB))
+        }
+        loopCountPushGems(gems, loot, (fights * 60))
+        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 6) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsA))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artA))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsB))
+        }
+        loopCountPushGems(gems, loot, (fights * 60))
+        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 7) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsB))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artA))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsB))
+        }
+        loopCountPushGems(gems, loot, (fights * 100))
+        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 8) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsB))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artB))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsA))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsB))
+        }
+        loopCountPushGems(gems, loot, (fights * 100))
+        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 9) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsB))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artB))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsB))
+        }
+        loopCountPushGems(gems, loot, (fights * 100))
+        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 10) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsB))
+            gems.push(searchArray(gemsB))
+            art.push(searchArray(artB))
+            art.push(searchArray(artB))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsC))
+        }
+        loopCountPushGems(gems, loot, (fights * 100))
+        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 11) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsB))
+            gems.push(searchArray(gemsC))
+            art.push(searchArray(artB))
+            art.push(searchArray(artC))
+            loot.push(searchArray(magicItemsB))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsC))
+        }
+        loopCountPushGems(gems, loot, (fights * 550))
+        loopCountPushArt(art, loot, (fights * 1000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 12) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsC))
+            gems.push(searchArray(gemsC))
+            art.push(searchArray(artC))
+            art.push(searchArray(artC))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsC))
+        }
+        loopCountPushGems(gems, loot, (fights * 1000))
+        loopCountPushArt(art, loot, (fights * 1500))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 13) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsC))
+            gems.push(searchArray(gemsC))
+            art.push(searchArray(artC))
+            art.push(searchArray(artC))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsD))
+        }
+        loopCountPushGems(gems, loot, (fights * 1000))
+        loopCountPushArt(art, loot, (fights * 1500))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 14) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsC))
+            gems.push(searchArray(gemsD))
+            art.push(searchArray(artC))
+            art.push(searchArray(artD))
+            loot.push(searchArray(magicItemsC))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsD))
+        }
+        loopCountPushGems(gems, loot, (fights * 1500))
+        loopCountPushArt(art, loot, (fights * 3250))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 15) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsD))
+            art.push(searchArray(artD))
+            art.push(searchArray(artD))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsD))
+        }
+        loopCountPushGems(gems, loot, (fights * 2000))
+        loopCountPushArt(art, loot, (fights * 5000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 16) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsD))
+            art.push(searchArray(artD))
+            art.push(searchArray(artD))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsE))
+        }
+        loopCountPushGems(gems, loot, (fights * 2000))
+        loopCountPushArt(art, loot, (fights * 5000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 17) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsE))
+            art.push(searchArray(artD))
+            art.push(searchArray(artE))
+            loot.push(searchArray(magicItemsD))
+            loot.push(searchArray(magicItemsE))
+            loot.push(searchArray(magicItemsE))
+        }
+        loopCountPushGems(gems, loot, (fights * 6000))
+        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 18) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsE))
+            art.push(searchArray(artD))
+            art.push(searchArray(artE))
+            loot.push(searchArray(magicItemsE))
+            loot.push(searchArray(magicItemsF))
+            loot.push(searchArray(magicItemsG))
+        }
+        loopCountPushGems(gems, loot, (fights * 6000))
+        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 19) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsE))
+            art.push(searchArray(artD))
+            art.push(searchArray(artE))
+            loot.push(searchArray(magicItemsF))
+            loot.push(searchArray(magicItemsG))
+            loot.push(searchArray(magicItemsH))
+        }
+        loopCountPushGems(gems, loot, (fights * 6000))
+        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPrintList(loot, "AlternateReward")
+    } else if (level === 20) {
+        let loot = []
+        let gems = []
+        let art = []
+        let x = Math.floor(1 + fights / 2)
+        for (i = 0; i < x; i++) {
+            gems.push(searchArray(gemsD))
+            gems.push(searchArray(gemsE))
+            art.push(searchArray(artD))
+            art.push(searchArray(artE))
+            loot.push(searchArray(magicItemsG))
+            loot.push(searchArray(magicItemsH))
+            loot.push(searchArray(magicItemsI))
+        }
+        loopCountPushGems(gems, loot, (fights * 6000))
+        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPrintList(loot, "AlternateReward")
+    }
+}
 
 function weapon() {
     function weaponGenerator() {
@@ -195,7 +643,6 @@ function weapon() {
             return searchArray(enchantmentArray) + ' Special effect: ' + searchArray(optionalProps);
         }
     }
-    console.log(weaponGenerator())
     document.getElementById("Weapon").innerHTML = weaponGenerator()
 };
 

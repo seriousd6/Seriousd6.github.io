@@ -28,7 +28,7 @@ function variableEvent(array, number) {
     }
 };
 
-function slice(array, number) {
+function shuffleSlice(array, number) {
     return shuffle(array).slice(0, number)
 
 }
@@ -384,8 +384,8 @@ function findSecretSociety(){
     let gatheringPlace = [
         "a secret chamber in a well-known temple.", "the cellar of a popular tavern.", "a secret chamber in a well-known guild-hall.", "the cellar of a wealthy merchant's house.", "the city sewers.", "the ancient catacombs beneath the city.", "the residence of the leader or a senior member.", "a wealthy merchant's office.", "a private dining room in a dingy tavern.", "a brothel.", "a warehouse or shipyard.", "the city's sewers.",
     ]
-    let colorChoice = slice(colors,2) 
-    let idealChoice = slice(ideals,2)
+    let colorChoice = shuffleSlice(colors,2) 
+    let idealChoice = shuffleSlice(ideals,2)
     let output = `There is a shadow organization here led by ${searchArray(leadership)}, who champion ${idealChoice[0]+" and "+idealChoice[1]} with the goal to ${searchArray(goal)} Their symbol is a ${colorChoice[0] + " and " + colorChoice[1] + " " + searchArray(symbol)}. The members of this organization, consisting of ${searchArray(membership)}, pursue their tasks ${searchArray(behavior)} If two members were to meet they would identify each other with ${searchArray(sign)} The most common meeting place is ${searchArray(gatheringPlace)} If one member were to be captured they would be able to provide information ${searchArray(knowledge)}.`
     document.getElementById("Secret Society").innerHTML = output
 };
@@ -596,7 +596,7 @@ function findNobility() {
     let houseGoal = [
         "the domination of the city or region's politics", "the domination of the city or region's trade", "revenge against a rival house in the same city or region", "revenge against a rival house in another city or region", "the sabotage of a group run by commoners—a guild, academy, religious faith, or secret society", "fomenting rebellion against the city or region's ruling house", "a marriage with a powerful allied house", "a marriage with a powerful rival house", `one or more house members dealing with a kept secret: Specifically regarding ${searchArray(["a long-time scandalous romance", "the existence of a bastard child", "a murder in one of the house's keeps, castles, or palaces", "religious zealotry", "the birth of a malformed freak", "treason against the region's sovereign", "the senility or madness of family members", "criminal sabotage of a rival house"])}`, 
     ]
-    let chosenIdeals  = slice(ideals,2)
+    let chosenIdeals  = shuffleSlice(ideals,2)
     let seat= [
         "a port city", "a range of high mountains", "a wide, fertile plain", "a fertile river valley", "an ancient forest", "a jagged coastline", "a sodden swamp", "a pristine lake", "a desert plateau", "an idyllic hill country",
     ]

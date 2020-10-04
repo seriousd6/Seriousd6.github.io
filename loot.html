@@ -81,15 +81,62 @@
             <button style="color: white;" class="col-2 btn btn-warning" type="button" onclick="artEffect()">Art Effect</button>
             <div class="col" id="Effect"></div>
         </div>
+        <div class="row" style="border-style:double; border-width: 3px; border-color: goldenrod;">
+            This reward calulator is based on the wealth values given by the WOTC. I figured out how many fights were required for each level up based on averages of CR's and then divided total wealth earned at each level. I did some other stuff but it should all
+            check out for WOTC suggested pacing! <br></br>Use the sliders below to change the level of the fight and the number of fights (thinking for a dungeon hoard), then click the reward calculator button! <br>
+        </div>
+        <div class="row">
+            <div class="col" style="border-style:double; border-width: 3px; border-color: goldenrod;">
+                <input type="range" min="1" max="20" value="1" class="slider" id="Level"> Level of Characters <b id="levelOutput" style="color: red;"></b></input>
+            </div>
+            <div class="col" style="border-style:double; border-width: 3px; border-color: goldenrod;">
+                <input type="range" min="1" max="20" value="1" class="slider" id="Fights"> Number of Fights <b id="fightsOutput" style="color: red;"></b></input>
+            </div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" type="button" onclick="inputGold()">Reward Calculator</button>
+            <div class="col" id="Reward"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" type="button" onclick="inputAlt()">Alternate Reward</button>
+            <div class="col" id="AlternateReward"></div>
+        </div>
+
     </div>
 
     <footer>
         <p>Thanks for checking this out! Give me some feedback on Reddit <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
     </footer>
 
+    <script>
+        var level = document.getElementById("Level");
+        var fights = document.getElementById("Fights");
+        var output = document.getElementById("levelOutput");
+        var output2 = document.getElementById("fightsOutput");
+        output.innerHTML = Level.value;
+        output2.innerHTML = Fights.value;
+        // Display the default slider value
+        // Update the current slider value (each time you drag the slider handle)
+        level.oninput = function() {
+            output.innerHTML = this.value;
+        }
+        fights.oninput = function() {
+            output2.innerHTML = this.value;
+        }
+
+        function inputGold() {
+            document.getElementById("Reward").innerHTML = calculateGold(Number(level.value), Number(fights.value))
+        }
+
+        function inputAlt() {
+            alternateRewards(Number(level.value), Number(fights.value))
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+
 </body>
 
 </html>
