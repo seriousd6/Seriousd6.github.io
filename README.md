@@ -3,3 +3,7 @@ All data is from the reddit D&D community
 EXCEPT-
 Shopkeeper inventory data is from Walrock Homebrew!
 Names are from fantasynamegenerator.com
+
+
+#Live Site
+https://seriousd6.github.io/
