@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/shopkeeper.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html" style="color:white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="/plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li class="breadcrumb-item"><a href="/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Shopkeeper</a>
+                        <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container-xl">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary btn-sm" type="button" onclick="shopkeeps()">Shop Premise</button>
+            <div class="col" id="Premise"></div>
+        </div>
+        <br>
+        <div class="row">
+            <button class="col-2 btn btn-primary btn-sm" type="button" onclick="traderInfo()">Traits</button>
+            <div class="col">
+                <div class="row pad" id="Personality"></div>
+                <div class="row pad" id="Bond"></div>
+                <div class="row pad" id="Ideal"></div>
+                <div class="row pad" id="Flaw"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-xl" style="background-color: black; color: aliceblue;">Shoutout to <a href="http://walrock-homebrew.blogspot.com">Walrock Hombrew</a> for these traders and inventories. I picked the PDF up for free at <a href="https://www.dmsguild.com/browse.php?author=Walrock%20Homebrew">DMSGUILD</a>!</div>
+    </br>
+    <div class="container">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Regular Merchants
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="drinks()">Drinks</a>
+                <a class="dropdown-item" onclick="animals()">Animals</a>
+                <a class="dropdown-item" onclick="books()">Books</a>
+                <a class="dropdown-item" onclick="flowers()">Flowers</a>
+                <a class="dropdown-item" onclick="food()">Food</a>
+                <a class="dropdown-item" onclick="decor()">Decor</a>
+                <a class="dropdown-item" onclick="fashion()">Fashion</a>
+                <a class="dropdown-item" onclick="jeweler()">Jewelry</a>
+                <a class="dropdown-item" onclick="misc()">Misc.</a>
+                <a class="dropdown-item" onclick="leather()">Leather</a>
+                <a class="dropdown-item" onclick="mech()">Mechanical</a>
+                <a class="dropdown-item" onclick="armor()">Armor</a>
+                <a class="dropdown-item" onclick="alch()">Alchemy</a>
+                <a class="dropdown-item" onclick="religious()">Religious</a>
+                <a class="dropdown-item" onclick="instruments()">Music</a>
+                <a class="dropdown-item" onclick="scrolls()">Spells</a>
+                <a class="dropdown-item" onclick="fence()">Fence</a>
+                <a class="dropdown-item" onclick="tools()">Tools</a>
+                <a class="dropdown-item" onclick="vehicles()">Vehicles</a>
+                <a class="dropdown-item" onclick="weapons()">Weapons</a>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Legendary Merchants
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="astral()">Astral</a>
+                <a class="dropdown-item" onclick="enchants()">Enchanter</a>
+                <a class="dropdown-item" onclick="fey()">Fey Bargain</a>
+                <a class="dropdown-item" onclick="artifacts()">Artifacts</a>
+                <a class="dropdown-item" onclick="mystical()">Creatures</a>
+                <a class="dropdown-item" onclick="necro()">Necromantic</a>
+                <a class="dropdown-item" onclick="hellish()">Hellish</a>
+                <a class="dropdown-item" onclick="tools()">Tools</a>
+                <a class="dropdown-item" onclick="vehicles()">Vehicles</a>
+                <a class="dropdown-item" onclick="timeLost()">Time-Lost</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl">
+        <div class="col">
+            <div id="Title" class="alert-link"></div>
+            <div id="Inventory"></div>
+            <br></br>
+            <div id="Trades"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>

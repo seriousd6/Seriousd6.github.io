@@ -1,0 +1,101 @@
+h1 {
+    text-align: left;
+    font-size: large;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.padtop {
+    padding-top: .5in;
+}
+
+.npc {
+    background-color: rgba(3, 190, 223, 0.26);
+    outline: 1px dotted rgb(2, 246, 246);
+}
+
+.pad {
+    padding-left: 12px;
+}
+
+.col {
+    outline: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+.pop {
+    color: rgb(255, 255, 255);
+    outline: dashed rgb(0, 0, 0);
+    background-color: rgb(183, 0, 255);
+}
+
+.wow {
+    outline: dashed burlywood;
+    background-color: rgb(209, 209, 209);
+}
+
+div {
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    outline-style: double;
+    padding: 5px;
+    padding-top: .5in;
+    margin-top: .5in;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+}

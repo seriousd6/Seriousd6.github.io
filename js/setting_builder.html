@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/settingBuilder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html" style="color:white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="/plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Setting Builder</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="rollTown()">Roll For Town</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <br>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" onclick="findTown()">Town</button>
+            <div class="col" id="Town"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-success" type="button" onclick="findResources()">Resources</button>
+            <div class="col" id="Resources"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findThePeople()">People</button>
+            <div class="col" id="People"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findLegalStructure()">Legal Structure</button>
+            <div class="col" id="Legal Structure"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findRumor()">Rumor</button>
+            <div class="col" id="Rumor"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findCorruption()">Corruption</button>
+            <div class="col" id="Corruption"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findShop()">Shop</button>
+            <div class="col" id="Shop"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findPrison()">Prison</button>
+            <div class="col" id="Prison"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findPresence()">Presence</button>
+            <div class="col" id="Presence"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findOutlaws()">Outlaws</button>
+            <div class="col" id="Outlaw"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findGang()">Gang</button>
+            <div class="col" id="Gang"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findDisaster()">Disaster</button>
+            <div class="col" id="Disaster"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findHoliday()">Holiday</button>
+            <div class="col" id="Holiday"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findTreasure()">Treasure</button>
+            <div class="col" id="Treasure"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findMilitia()">Militia</button>
+            <div class="col" id="Militia"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findNobility()">Nobility</button>
+            <div class="col" id="Nobility"></div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>

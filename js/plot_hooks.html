@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/plothooks.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html" style="color:white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/loot.html" style="color:white">Loot</a>
+                    </li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item" aria-current="page">Plot Hooks</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container" id='Clas'>
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
+        </div>
+        <h5>Class</h5>
+        <div class="row">
+            <button style="color: white ;background-color: goldenrod;" class="col-2 btn" type="button" onclick="paladin()">Paladin</button>
+            <div class="col" id="Paladin"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(66, 1, 1);" class="col-2 btn" type="button" onclick="monk()">Monk</button>
+            <div class="col" id="Monk"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgba(132, 0, 255, 0.452); " class="col-2 btn" type="button" onclick="bard()">Bard</button>
+            <div class="col" id="Bard"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(255, 230, 0); " class="col-2 btn" type="button" onclick="cleric()">Cleric</button>
+            <div class="col" id="Cleric"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(70, 43, 226); " class="col-2 btn" type="button" onclick="wizard()">Wizard</button>
+            <div class="col" id="Wizard"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(9, 107, 22); " class="col-2 btn" type="button" onclick="druid()">Druid</button>
+            <div class="col" id="Druid"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(160, 160, 160); " class="col-2 btn" type="button" onclick="barbarian()">Barbarian</button>
+            <div class="col" id="Barbarian"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(223, 89, 0); " class="col-2 btn" type="button" onclick="fighter()">Fighter</button>
+            <div class="col" id="Fighter"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(3, 163, 255); " class="col-2 btn" type="button" onclick="sorcerer()">Sorcerer</button>
+            <div class="col" id="Sorcerer"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(0, 212, 46); " class="col-2 btn" type="button" onclick="ranger()">Ranger</button>
+            <div class="col" id="Ranger"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgba(34, 34, 34, 0.787); " class="col-2 btn" type="button" onclick="rogue()">Rogue</button>
+            <div class="col" id="Rogue"></div>
+        </div>
+        <div class="row">
+            <button style="color: white ;background-color: rgb(255, 0, 0); outline: dashed burly" class="col-2 btn" type="button" onclick="warlock()">Warlock</button>
+            <div class="col" id="Warlock"></div>
+        </div>
+    </div>
+    <div class="container" id='loc'>
+        <h5>Location</h5>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="jungle()">Jungle</button>
+            <div class="col" id="Jungle"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="swamp()">Swamp</button>
+            <div class="col" id="Swamp"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="ocean()">Ocean</button>
+            <div class="col" id="Ocean"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="coast()">Coast</button>
+            <div class="col" id="Coast"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="mountain()">Mountain</button>
+            <div class="col" id="Mountain"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="dungeon()">Dungeon</button>
+            <div class="col" id="Dungeon"></div>
+        </div>
+    </div>
+    <div class="container" id='cit'>
+        <h5>City</h5>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="arts()">Arts</button>
+            <div class="col" id="Arts"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="night()">Night Life</button>
+            <div class="col" id="Night"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="shopping()">Shopping</button>
+            <div class="col" id="Shopping"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="street()">Street</button>
+            <div class="col" id="Street"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="entertainment()">Entertainment</button>
+            <div class="col" id="Ent"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="sports()">Sports</button>
+            <div class="col" id="Sports"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="nautical()">Nautical</button>
+            <div class="col" id="Nautical"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="events()">Event</button>
+            <div class="col" id="Event"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="personal()">Personal</button>
+            <div class="col" id="Personal"></div>
+        </div>
+    </div>
+    <div class="container" id='Gen'>
+        <h5>Generic</h5>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="generic()">Generic</button>
+            <div class="col" id="Generic"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="kidsQuest()">Kids Quest</button>
+            <div class="col" id="kidQuest"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn pop" type="button" onclick="ghibliFinder()">Ghibli-Esque</button>
+            <div class="col" id="Ghibli"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thanks for checking this out! Give me some feedback on Reddit <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> if you have any ideas on what I could improve or add in!</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
