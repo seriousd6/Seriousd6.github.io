@@ -605,24 +605,24 @@ function findNobility() {
 }
 
 function rollTown() {
-    findTown()
-    findResources()
-    findThePeople()
-    findLegalStructure()
-    findCorruption()
-    findRumor()
-    findPresence()
-    findPrison()
-    findShop()
-    findCult()
-    findSecretSociety()
-    findOutlaws()
-    findGang()
-    findHoliday()
-    findTreasure()
-    findDisaster()
-    findMilitia()
-    findNobility()
+    findTown();
+    findResources();
+    findThePeople();
+    findLegalStructure();
+    findCorruption();
+    findRumor();
+    findPresence();
+    findPrison();
+    findShop();
+    findCult();
+    findSecretSociety();
+    findOutlaws();
+    findGang();
+    findHoliday();
+    findTreasure();
+    findDisaster();
+    findMilitia();
+    findNobility();
 };
 
 findNobility()
