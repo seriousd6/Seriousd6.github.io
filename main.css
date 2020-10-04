@@ -36,33 +36,6 @@ body {
     background-color: rgb(209, 209, 209);
 }
 
-.slider {
-    width: 100%;
-    /* Full-width */
-    height: 25px;
-    /* Specified height */
-    background: Black;
-    /* Grey background */
-    outline: White;
-    /* Remove outline */
-    opacity: 0.7;
-    /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s;
-    /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-    width: 25px;
-    /* Set a specific slider handle width */
-    height: 25px;
-    /* Slider handle height */
-    background: red;
-    /* Green background */
-    cursor: pointer;
-    /* Cursor on hover */
-}
-
 div {
     padding: 5px;
 }
