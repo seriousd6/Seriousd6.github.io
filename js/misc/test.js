@@ -88,9 +88,6 @@ function reload() {
 
 //List a few possible topics (hooks)
 
-
-
-
 let rumorType = ["False (Appears as Specific or Exact)", "Vague", "Mixed", "General", "Specific", "Exact", ]
 let IVendetta = ["they were wrongfully jailed or persecuted", "of a racial crusade", "they want revenge for theft or deception", "they want revenge for personal death(s)", "they are on a religious crusade (local or part of a Faithquest)", "of political persecution", "their social status was destroyed and/or they were socially exiled", ]
 let KBuyingOrSelling = ["Cloth - (Raw or Finished)", "Wood - (Raw, Finished, Furniture, Containers, Paper)", "Food - (Random types (air, sea, land) from random culture)", "Beverages -(Brewed (Ales), Distilled (Spirits), Raw (Juice), Dried (Teas) or Water)", "Spice - (Salt, Random spice, Random herb, Il(legal) drugs, or Medicine)", "Minerals - (Raw or Refined or Gems)", "Luxury - (Art, Rare Commodity or Masterwork items/weapons/armor)", ]
@@ -287,6 +284,7 @@ function friendly() {
     document.getElementById("Reaction").innerHTML = npcReactionToQuestioning[6]
 };
 
+
 function reaClear() {
     document.getElementById("Reaction").innerHTML = ""
 };
@@ -304,7 +302,6 @@ let npcMotivation = [
 function motivation() {
     document.getElementById("Motivation").innerHTML = searchArray(npcMotivation);
 };
-
 
 let areaStatus = [
     `${faithOrWeave()}.`,
