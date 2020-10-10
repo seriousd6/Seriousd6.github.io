@@ -318,512 +318,7 @@ Loot/ rp
         used by a beggar
         used by an orc
         used by a weak person.
-    weapon properties
-        1	Adamantine	of Adamantine	This item is indestructible.
-        2	Alien	of Lunacy	Once attuned, the bearer constantly hears the ongoing, utterly insane mutterings of an alien intelligence trapped inside this weapon. Should this weapon be destroyed, the being will be released.
-        3	Ancient	of Old	This worn weapon inscribed with ancient runes can be used as a Spellcasting Focus
-        4	Antikytheran	of Mechanisms	An ancient mechanism is housed within this weapon that never configures the same way twice. Once per long rest the bearer can spend one minute to attempt a DC 20 investigation check to configure the device. If successful, the weapon becomes a +1 weapon until the end of the next long rest.
-        5	Arcane	of Arcana	This weapon can project a spectral tome suspended in mid-air that the bearer can interact with like a physical book. This tome can be used as a spellbook and may contain some spells from its previous bearer.
-        6	Arctic	of Snow	Icy wind and snowflakes bluster around this weapon, even in warm environments. The bearer can walk on the surface of the lightest snow, leaving no footprints.
-        7	Artist's	of the Artist	The bearer may use this weapon to make colored marks on any surface. The marks will fade away in 24 hours.
-        8	Assassin's	of the Assassin	The bearer may add 1d4 poison damage to all attacks made during surprise rounds.
-        9	Autumn	of Falling Leaves	The weapon contains a reservoir of natural magic that can a sustain a cascade of falling leaves for up to 30 seconds. The bearer may use an action to plant this weapon in the ground and release this magic. While planted and undepleted, creatures within 10 feet of this weapon have half cover. A long rest restores 1d6 sconds of energy to the weapon's resevoir.
-        10	Barbed	of Barbs	After an attack roll, the bearer may use their reaction to add 1d4 to the damage roll and take 1d4 damage.
-        11	Binding	of Binding	When you hit a creature with this weapon, the ground beneath binds to its feet, slowing its speed by 5 feet until the end of its next turn. This has no effect on creatures that are flying or swimming.
-        12	Blasted	of Detonation	The bearer may use a bonus action to activate destructive magic within this weapon. It begins to glow with white-hot intensely, and at the beginning of the bearer's next turn, the weapon casts a level 1 Shatter spell (DC 12) centered on the weapon. The weapon then loses this property.
-        13	Blessed	of Parables	Whenever the bearer of this item receives magical healing from a spell on the Cleric’s spell list, they gain an additional amount of hit points equal to their Wisdom (Religion) skill.
-        14	Blind	of Eyes	Garrish eyes are painted on this weapon. The bearer can use an action to see/unsee through the eyes, even if their own senses are compromised.
-        15	Blithe	of Mirth	The bearer is filled with inexplicable joy. All charisma skill and saving throw rolls gain a +1 bonus, but all wisdom skill and saving throw rolls gain a -1 penalty.
-        16	Bloodthirsty	of Bloodthirst	The bearer of this weapon spend a bonus action and a hit die to turn this weapon into a +1 magic weapon for 1d4 turns.
-        17	Bonded	of Twins	This item is part of a pair of identical items. The bearer of either knows the location of the other at all times.
-        18	Booming	of Thunder	The bearer may choose to deal Thunder damage with this weapon and gain a +1 bonus to damage.
-        19	Braided	of Knots	The bearer may use their action to cause the weapon to become a 50 ft length of hemp rope at will.
-        20	Deep	of the Deep	The bearer can hold their breath for 5 minutes before the onset of asphyxiation.
-        21	Broken	of Shards	This weapon is badly damaged. It is a testament to its former power that it is still serviceable. If reforged, it might regain its former power.
-        22	Capricious	of Chance	If the weapon is attuned to a Chaotic aligned character, they may roll a die after completing a long rest. If the result was an even number, treat this as a +1 magic weapon until they finish a long rest.
-        23	Cardinal	of the Lodestone	The bearer always knows which way is north and has advantage on Wisdom (Survival) checks for land navigation.
-        24	Caustic	of Corrosion	The bearer may choose to deal Acid damage with this weapon and gain a +1 bonus to damage.
-        25	Chained	of Chains	The bearer can spend an action to mystically bind or unbind themselves to this weapon. While bound, the bearer can no longer be disarmed but cannot switch out or throw this weapon.
-        26	Captivating	of Saving Graces	While the bearer is at 0 hp, they begin to hear the most beautiful music they have ever heard. The bearer has advantage on death saving throws and cannot recall details about the music if they wake.
-        27	Charged	of Lightning	The bearer may choose to deal Lightning damage with this weapon and gain a +1 bonus to damage.
-        28	Chill	of Chills	The air around the bearer of this weapon is always unnaturally cold. One's breath becomes visible, and frost continually forms on the surface of the bearer's hair, weapons, and armor. The bearer suffers no ill effect from being in extremely cold environments.
-        29	Civilized	of the Capital	The bearer gains +1 to intelligence saving throws.
-        30	Compassionate	of Compassion	Wounds inflicted with this weapon cause no pain.
-        31	Consecrated	of Consecration	Treat as a +1 magic weapon when attacking Undead. Any creature slain with this weapon cannot be raised as undead.
-        32	Corrosive	of Dissolving	When the bearer hits a creature with this weapon, they may deal their proficiency bonus in acid damage to a different creature within 5 feet of the target.
-        33	Courser's	of the Hostler	The bearer can placate and calm any mount not under the influence of a spell or possession.
-        34	Crashing	of the Crashing Waves	Whenever the bearer deals damage to a hostile creature, this weapon gains a charge. As a bonus action, the bearer can use any number of charges to deal that much extra lightning damage on their next attack. If a round (6 seconds) goes by and the weapon has not struck a foe, it loses all charges.
-        35	Crawling	of Vermin	The crawling things of the earth, such as insects, snakes, and vermin, are attracted to this item. When placed on the ground, such creatures will scurry toward the item like moths drawn to the flame.
-        36	Cruel	of Cruelty	The bearer may re-roll damage from critical hits scored with this weapon and take the second result.
-        37	Dancing	of Strings	The bearer may spend an action to permanently animate this weapon. Use the Flying Sword stat block from the Monster Manual p. 20. Also, the weapon retains any other magical properties. Once the animated weapon is reduced to 0 hp or unattuned, the weapon shatters like glass.
-        38	Dark	of Darkness	The bearer may choose to deal Necrotic damage with this weapon and gain a +1 bonus to damage.
-        39	Dead	of Rigor Mortis	If this weapon is entombed within a corpse for 8 hours, the bearer may treat it as a +1 magic weapon until the end of their next long rest
-        40	Deceptive	of Deception	When the bearer attunes this item, choose a harmless object within sight such as a tea cup, a ball of yarn, or a hairpin. If the bearer is touching the item, they may use an action to transform the weapon in or out of this form.
-        41	Defensive	of Defense	Whenever the bearer takes a dodge or disengage action, they may move an additional 5 feet that round.
-        42	Delver's	of the Delver	While underground, the bearer of this item always knows the item's depth below the surface and the direction to the nearest path leading upward.
-        43	Desperate	of Desperation	The bearer may use an action to release divine magic within, equivalent to a level 1 Cure Wounds spell being cast on all creatures (friend or foe) within 5 feet of the bearer. The weapon is destroyed and loses all magical properties.
-        44	Diplomatic	of Diplomacy	The bearer gains one language proficiency chosen by the DM.
-        45	Draconic	of Dragons	Treat as a +1 weapon when attacking Dragons.
-        46	Draining	of Draining	When the bearer makes a successful attack with this weapon, they gain 10% of the damage as temporary hit points (round down, minimum of 1).
-        47	Dreamscribe's	of the Dreamscribe	The bearer can read books they are touching while sleeping.
-        48	Drunkard's	of Taverns	The bearer always knows the direction to the nearest tavern in a 60 mile radius.
-        49	Dryad's	of the Dryad	When the bearer is outdoors, harmless creatures such as squirrels and birds flock to them when they sing songs for a minute or longer.
-        50	Eager	of Yearning	The bearer does not require an interaction to draw or sheath this weapon
-        51	Earthen	of Rooting	The bearer of this weapon is firmly rooted to the ground. When standing on solid earth or stone, if an effect would move the bearer against his will the distance is reduced by 5 feet.
-        52	Eastern	of the East	The bearer gains +1 to wisdom saving throws.
-        53	Effortless	of Ease	This weapon takes only one minute to attune.
-        54	Effulgent	of Light	The bearer can use this item to cast the Light cantrip on itself at will. While lit, it deals radiant damage instead of its usual damage type.
-        55	Eidolic	of Apparitions	Dark apparitions bound to this weapon haunt the edges of the bearer's peripheral vision, becoming hideously visible to devour the bodies of beings slain by this weapon. Once 666 bodies have been devoured, the apparitions will be released to prey upon our world and the sword becomes a permanent +3 weapon. So far, the weapon has eaten 1d6 x 100 + 3d20 bodies.
-        56	Enchanting	of the Enchantress	Treat this as a +1 weapon as long as the bearer is enchanted by a spell from the enchantment school of magic.
-        57	Enervating	of Inner Strength	Once per long rest, the bearer may spend one minute contemplating the patterns etched on this weapon's surface and regain 1 expended ki point.
-        58	Epistemological	of Truth	The bearer has advantage on investigation checks to see through illusions. In addition the bearer can gains advantage on an Insight check to check if someone is lying and disadvantage on all Deception checks.
-        59	Equanimeous	of Balance	When attuned to neutral aligned characters, this weapon has a +1 attack bonus during the day and a +1 damage bonus at night.
-        60	Etched	of Allegories	Ancient glyphs adorn the surface of this weapon, telling a story with a moral of the player's choosing (such as "One good turn deserves another" or "United we stand, divided we fall"). While attuning to this weapon, the glyphs spread across the entire skin of the bearer and the moral of the story becomes a bond trait for this character.
-        61	Fairweather	of Fairweather	Treat this as a +1 weapon if the bearer has more than half of their maximum hit points
-        62	Fatespun	of Intertwined Fates	Once per short rest, when the bearer crits with this weapon they gain inspiration.
-        63	Favored	of the Favored	Once per long rest, the bearer may roll a saving throw with advantage.
-        64	Feathered	of Feathers	The bearer may use their reaction to reduce fall damage by 1d6 until the end of turn. They cannot use this feature again until completing a long rest.
-        65	Final	of Last Hope	The bearer may spend an action beseeching the spirits within this weapon. Roll a DC 20 Persuasion check or make a sufficiently impassioned plea. If successful, the spirits will sacrifice themselves so that for the next minute the next attack with this weapon will be a crit. The weapon then loses this property forever.
-        66	First	of Speed	The bearer gains a +1 bonus to initiative rolls. As long as the bearer is first in the initiative order, their speed increases by 5 feet.
-        67	Forgotten	of the Forgotten	The bearer may spend an action to attempt to ignite the old magic in this weapon with a DC 13 Charisma check. If successful, treat the weapon as a +1 weapon as long as the bearer maintains concentration on this effect, maximum 10 minutes.
-        68	Friendly	of Friendship	Contains 1d4 unreplenishable charges of the Animal Friendship spell (1st level).
-        69	Frozen	of Ice	The bearer may choose to deal Cold damage with this weapon and gain a +1 bonus to damage.
-        70	Furious	of Fury	Treat as a +1 magic weapon when the bearer is raging.
-        71	Ghost-Tipped	of the Ranks	Whenever the bearer crits with this weapon, it gains the reach property (10 ft) for 1 minute. If it already had the reach property, increase its reach by 5 ft.
-        72	Ghost-Touched	of Remembered Glory	This weapon can be wielded by a missing limb. If so, it becomes a +1 weapon.
-        73	Glorious	of Glory	The bearer may choose to change the damage type of weapon to Radiant and its damage roll gains a +1 bonus.
-        74	Goading	of Duels	Once per short rest, when the bearer crits with this weapon it casts Compelled Duel on the creature it hit, DC 12.
-        75	Guardian	of Protection	When the bearer attunes this weapon they must choose a being in their mind. Henceforth, if the bearer is within 5 feet of the chosen being they may use their reaction to impose disadvantage on an attack roll against that creature. They cannot do this again until they have finished a short or long rest.
-        76	Harkening	of Eavesdropping	As long as it is on the same plane of existence, the bearer can hear through this weapon as if they were present.
-        77	Haunted	of Vengeful Spirits	Smoke rises from this weapon revealing the apparitions that haunt it. They lash out at living targets every time the bearer scores a hit, doing an additional +2 necrotic damage.
-        78	Healing	of Healing	This item contains a healing node. Once per long rest the bearer can use the node and an action to heal 1d4 hit points at touch range.
-        79	Heroic	of Heroes	Ancient heroes have wielded this weapon throughout the ages, and their courage still lingers. The bearer has advantage on saving throws vs. fear effects.
-        80	Holy	of Faith	When the bearer of this item rolls hit dice, they can choose to re-roll them and take the second result.
-        81	Iconic	of Symbols	The weapon is inscribed with holy symbols of the God of the DM's choice. A cleric or paladin that serves that god may use this weapon as a divine focus.
-        82	Imaginary	of the Imagination	Once attuned, this weapon exists only in the bearer's imagination until held with intent to do harm. It becomes imaginary again after a short rest.
-        83	Impact	of Impact	Once per long rest, the bearer may spend an action to activate an ancient mechanism within the weapon. Gears turn and parts shift as the weapon reconfigures itself into a more menacing version of the original. For 1 minute, attacks made with this weapon ignore resistances (but not immunities).
-        84	Indifferent	of Indifference	The bearer no longer feels emotions. They have immunity to fear effects but disadvantage on Insight and Performance checks, and cannot Rage.
-        85	Indomitable	of Surging Strength	When the bearer is grappled by multiple targets, they may choose to break the strongest grapple. If they succeed, then all grapples are broken.
-        86	Inspired	of Inspiration	The bearer gains their Constitution modifier in temporary hit points whenever they gain or use inspiration.
-        87	Jagged	of Teeth	Once hit by this weapon, the victim cannot regain hit points until the beginning of their next turn.
-        88	Jester's	of Madness	Once per short rest, when the bearer crits with this weapon it casts Crown of Madness on the creature it hit, DC 12
-        89	Leaping	of Leaping	Contains 1d4 unreplenishable charges of the Jump spell (1st level).
-        90	Liar's	of Lies	Contains 1d4 unreplenishable charges of the Silent Image spell (1st level).
-        91	Mage Killer's	of the Mage Killer	Ignores the AC bonuses given by spells such as Mage Armor and Shield.
-        92	Malediction	of Malediction	Contains 1d4 unreplenishable charges of the Bane spell(1st level).
-        93	Maligning	of Maligning	This weapon does an additional 1d4 damage on attacks of opportunity.
-        94	Marquis'	of the Maquis	Once per short rest, when you crit with this weapon it casts Command on its target with the word "grovel", DC 12
-        95	Masked	of Still Winds	The bearer and all of their possessions are completely odorless.
-        96	Master's	of Servants	Contains 1d4 unreplenishable charges of the Unseen Servant spell (1st level).
-        97	Meadowforged	of the Meadow	A gentle kaleidoscope of butterflies always accompanies this weapon. The bearer has advantage on persuasion checks with Fae creatures less than CR 3.
-        98	Memorial	of Memories	When the bearer kills a monster with this weapon, treat this weapon as a +1 weapon whenever you fight another monster of this kind. When the weapon is unattuned, it loses its memory.
-        99	Mimicking	of Mimicry	When the bearer places this weapon beside another melee weapon for 1 minute, this weapon changes weapon type, size, and physical qualities to become an exact replica of the other weapon. It does not gain any of the other weapon's magical properties.
-        100	Mindscour	of Countermeasures	This weapon disrupts all telepathic communication within 20 feet. Psychic attacks are not affected.
-        101	Mind's Eye	of the Mind's Eye	The bearer may choose to deal Psychic damage with this weapon and gain a +1 bonus to damage
-        102	Mortuary	of the Mortal Coil	The bearer's vital signs, such as a pulse and breathing, are masked by this weapon and are undetectable by non-magical inspection.
-        103	Mourner's	of Last Words	Contains one charge of the Speak With Dead spell. It regains the charge when the bearer dies.
-        104	Murderous	of Slaughter	When the bearer reduces a creature to zero hit points they may use a bonus action to move half their movement speed towards another hostile creature.
-        105	Northern	of the North	The bearer gains +1 to constitution saving throws
-        106	Nourishing	of Comfort	Once per long rest, the bearer may lay this weapon beside a bowl of water. After a moment, the bowl of water will begin to boil and after a minute it will transform into a hot meal of special significance to the bearer (Their mother's noodle soup or father's elk stew). Eating this delicious meal is so satisfying that it counts as nourishment for an entire day and restores 1d4 hit points. To anyone other than the bearer, the bowl and its contents appears unchanged.
-        107	Nullifying	of Nullification	Any spell of 1st level or lower that includes the bearer as a target has a 10% chance to fail, cast by both friendly and enemy spellcasters.
-        108	Painstrike	of Pain	Treat this as a +1 weapon for 1 minute if the bearer takes 13 or more damage in a single round of combat.
-        109	Parrying	of Parrying	The bearer may use their reaction to gain a +1 AC bonus until the end of the turn.
-        110	Patient	of Patience	Whenever the bearer readies an action, they have advantage on constitution saving throws to maintain concentration.
-        111	Pernicious	of the Snake	The bearer may choose to deal Poison damage with this weapon and gain a +1 bonus to damage.
-        112	Phantom	of the Phantasm	Damage inflicted with this weapon leaves no physical sign of injury, such as cuts and bruises, and draws no blood.
-        113	Pious	of the Pious	The bearer may spend ten minutes paying honor to the spirits that govern this weapon, shaving their head in tribute. Once the ceremony is finished, it becomes a +1 weapon until the end of the next long rest. They must wait 10 days until they have long enough hair to re-enact this ritual.
-        114	Preacher's	of the Preacher	This weapon increases the bearer's Channel Divinity range by 5 feet.
-        115	Force	of Force	The bearer may choose to deal Force damage with this weapon and gain a +1 bonus to damage.
-        116	Quantum	of Uncertainty	Every time the bearer takes a long rest, this weapon changes in appearance and function. It retains this property but any other properties are lost. However, it gains a new random ability from this chart.
-        117	Quicksilver	of Quicksilver	The bearer may use a bonus action to change the form of the weapon to any other simple or martial melee weapon. It always counts as a silvered weapon no matter what form it takes.
-        118	Rainbow	of Rainbows	The bearer may change the damage type of a spell they cast once per long rest.
-        119	Refined	of Quality	This weapon is so finely constructed it never needs maintenance, cannot rust or tarnish, and gains a +1 to damage rolls.
-        120	Reliable	of Reliance	When attacking with this weapon, crit fails (rolling 1) on attack rolls do not automatically miss the target.
-        121	Renaissance	of the Renaissance	Once per long rest, the bearer may gain +1 to any skill check.
-        122	Resonant	of Resonance	The bearer can spend an action and 1 ki point to treat this as a +1 weapon for 1 minute.
-        123	Restrained	of Subdual	This weapon only deals non-lethal damage to living targets
-        124	Righteous	of Righteousness	Treat this as a +1 weapon during the day when attuned to a good aligned character.
-        125	Rosen	of Roses	A ruby worth 30gp is the center stone in a rose-shaped setting on the weapon. If the bearer removes the ruby, the weapon grows a new one at the end of the month. The weapon always smells of roses while the ruby is in its setting.
-        126	Runic	of Runes	Whenever bearer casts a spell, treat this weapon as a +1 weapon until the beginning of their next turn.
-        127	Scarlet	of Bleeding	This weapon perpetually drips the blood of a monstrous race, chosen by the DM. The bearer can speak that race's language and has advantage on intimidation checks against monsters of that race when the weapon is revealed.
-        128	Seige	of Sieges	This weapon does maximum damage against man-made, inanimate objects.
-        129	Shading	of Shade	The bearer suffers no harm or discomfort in temperatures as high as 120 degrees Fahrenheit.
-        130	Shadow	of Shadows	Treat as a +1 magic weapon when in dim light.
-        131	Shamanic	of Rituals	Whenever the bearer is casting a spell as a ritual, they have advantage to maintain concentration during the ritual.
-        132	Shaming	of Disgrace	Any humanoid creature hit with this weapon loses all of the hair on their head and face.
-        133	Shielding	of Shielding	This item contains 1d4 unreplenishable charges of the Shield spell.
-        134	Skyward	of Unusual Gravity	This weapon falls up instead of down. Its weight does not contribute towards encumbrance.
-        135	Slayer's	of Slaying	Treat as a +1 weapon when attacking Demons and Devils.
-        136	Smoldering	of Flame	The bearer may choose to deal Fire damage with this weapon and gain a +1 bonus to damage.
-        137	Smuggler's	of Smuggling	This weapon contains a small, secret compartment. A character must succeed on a DC 20 Wisdom (Perception) check to reveal the compartment when searching the bearer.
-        138	Sojourner's	of the Sojourner	A poem, story, or map that describes a long-forgotten treasure that will make this weapon more powerful is etched on the surface of the weapon.
-        139	Solemn	of Solemnity	The bearer may spend an action to stabilize a dying creature within 5 feet. They cannot do so again until they have completed a long rest.
-        140	Soulbound	of Imprisonment	A powerful malevolent being is bound within this weapon and it will be released upon the weapon's destruction.
-        141	Southern	of the South	The bearer gains +1 to dexterity saving throws.
-        142	Spring	of Spring Rain	The weapon contains a pool of healing energy that can restore up to 30 hp. The bearer may use an action to plant this weapon in the ground and release this energy. While planted and undepleted, creatures that end their turn within 10 feet of the weapon are showered in warm rain that restores 1 hp per round. A long rest restores 1d6 hp of energy to the weapon's pool.
-        143	Staunch	of Security	Anyone except the bearer must attempt a DC 10+x Charisma check to pick up this weapon, where x is the bearer's level. Any attack made with this weapon against the bearer has disadvantage.
-        144	Strange	of the Far Realm	Treat this as a +1 weapon when attacking Aboleths and other creatures from the Far Realm
-        145	Strapping	of the Undaunted	Whenever the bearer breaks a grapple, they may choose to push the grappler up to 10 feet away from them as a bonus action.
-        146	Striding	of Strides	Contains 1d4 unreplenishable charges of the Longstrider spell (1st level).
-        147	Summer	of the Scorching Sun	The weapon contains a reservoir of scorching light that can deal up to 30 hp of radiant damage. The bearer may use an action to plant this weapon in the ground and release this energy. While planted and undepleted, creatures that end their turn within 10 feet of the weapon are brightly illuminated and seared for 1 radiant damage per round. A long rest restores 1d6 hp of energy to the weapon's reservoir.
-        148	Surgeon's	of the Surgeon	The bearer may use a bonus action to gain advantage to Wisdom (Medicine) checks for the rest of the turn.
-        149	Swift	of Reflexes	If the bearer is first in the initiative order, they may treat this as a +1 weapon.
-        150	Tenacious	of the Tenacious	When the bearer takes a long rest, they gain back one additional hit die.
-        151	Tithing	of Tithes	The bearer may lay 10 gold coins along the surface of the weapon and pray to a God of their choice for 10 minutes. At the end of this ritual, the weapon becomes a +1 weapon until the next long rest and the 10 gold coins are permanently gone. This boon will be lost if the bearer acts in a way that is contradictory to that deity's teachings.
-        152	Transient	of the Breaking Seal	Over the course of a long rest, the bearer may transfer the other magic properties of this weapon to a melee weapon of their choosing. This weapon then loses those properties.
-        153	Translucent	of Translucence	The bearer gains an extra level one spell slot, which recovers only after a full moon rises.
-        154	Trusty	of Resurgence	Treat this as a +1 weapon if the bearer has half their maximum hit points or less.
-        155	Tsunami	of Crashing Waves	Once per short rest, when the bearer crits with this weapon, all creatures other than the bearer within 5 feet of the target (including the target) must roll a DC 12 constitution saving throw or be knocked prone by a wave of concussive force.
-        156	Twilight's	of the Setting Sun	Once per short rest, when you crit with this weapon it casts Hex on the target. Roll a d6 to determine which of the target's attributes is weakened. The bearer cannot transfer the curse to another creature.
-        157	Unity	of Unity	Whenever the bearer of this weapon takes a help action in combat, the aided ally may treat their weapon as a +1 magic weapon until the end of their next turn.
-        158	Victorious	of Victory	Whenever the bearer kills a creature with this weapon, they gain temporary hit points equal to the creature's CR (minimum of 1).
-        159	Vigilant	of Vigilance	The bearer gains +1 to their Passive Perception.
-        160	Vile	of Villains	Treat this as a +1 weapon at night when attuned to an evil aligned character.
-        161	Violent	of Violence	Everytime you crit with this weapon, it gains 1 charge. As a bonus action, use a charge to make this a +1 weapon for 1 minute. All charges are lost at the end of a long rest.
-        162	Visionary	of the Visionary	The weapon does an additional 1 elemental damage based on the color of the bearer's eyes: (amber: lightning, black: necrotic, blue: cold, brown: acid, green: force, gray: thunder, hazel: poison, purple: psychic, red: fire, white: radiant)
-        163	Vital	of Vitality	The bearer's maximum hit points increases by their constitution modifier while attuned to this item. These hit points are lost when the bearer unattunes the item.
-        164	Voidstone	of the Void	This weapon cannot be detected by the "Detect Magic" spell unless the caster touches the weapon.
-        165	Voltaic	of Conduits	Whenever the bearer deals damage to a creature, this weapon gains a charge. As a bonus action, the bearer can use any number of charges to deal that much extra lightning damage on their next attack. If a round (6 seconds) goes by and the weapon has not struck a foe, it loses all charges.
-        166	War Leader's	of the War Leader	The bearer can use an action to amplify their voice three times louder than normal.
-        167	Warded	of Warding	Once per long rest the bearer may draw a 20 foot line in the ground with this weapon that lasts for 1 minute. The Undead must succeed on a DC 12 wisdom saving throw to move across this line. If they fail, they cannot move again until their next turn.
-        168	Waterborne	of the Sea	The item floats on water or other liquids. Its bearer has advantage on Strength (Athletics) checks to swim.
-        169	Weave-touched	of the Weave	Whenever the bearer casts a spell, this weapon gains charges equal to the spell's level. The bearer can use a bonus action to remove 13 charges and make this a +1 weapon until the start of the next round. All charges are lost during a long rest.
-        170	Western	of the West	The bearer gains +1 to charisma saving throws.
-        171	Wild	of the Wilds	The bearer gains +1 to strength saving throws.
-        172	Winged	of Wings	Once per long rest, the bearer may use an action to transform this weapon into a magical raven that can deliver a message to anyone in a 50 mile radius, provided the bearer knows their name and face. When the raven returns, it reverts into its weapon form. If the bird should die en route, it reverts into weapon form and unattunes from the bearer.
-        173	Winter	of Winter Ice	The weapon contains a reservoir of ice magic that can a freeze the ground for up to 30 seconds. The bearer may use an action to plant this weapon in the ground and release the ice magic within. While planted and undepleted, the ground in a 10 foot radius of this weapon becomes difficult terrain. A long rest restores 1d6 seconds of energy to the weapon's reservoir.
-        174	Woodsman's	of Felling	This weapon does maximum damage against plant creatures.
-        175	Zen	of Zen	Treat this as a +1 weapon for 1 minute after meditating with it for 1 minute.
-    Armor properties
-        1	Acolyte's	of the Acolyte	The bearer gains a +1 bonus to Wisdom (Religion) checks.
-        2	Amethyst	of Amethyst	Reduces psychic damage to the bearer by 1.
-        3	Arboreal	of the Woodlands	Treat as a +1 armor after the bearer has taken a long rest in a forest. If the bearer leaves the forest, this property becomes temporarily inert.
-        4	Arid	of the Wastelands	Treat as a +1 armor after the bearer has taken a long rest in a desert. If the bearer leaves the desert, this property becomes temporarily inert.
-        5	Astute	of the Astute	It takes half the time to don or doff this armor than a normal armor of this type.
-        6	Arctic	of the North	The bearer suffers no harm in temperature as cold as -20 degrees Fahrenheit.
-        7	Artisan's	of the Artisan	This armor is a swiss army knife of enchanted appendages that can take the form of any artisan's tools, from Alchemist's and Brewer's supplies to Weaver's and Woodcarver's tools (see p. 154 of the PHB for a complete set of artisan's tools).
-        8	Barbarian's	of the Barbarian	The bearer gains a +1 bonus to Strength (Athletics) checks.
-        9	Bard's	of the Bard	The bearer gains +1 to Charisma (Performance) checks.
-        10	Blessed	of Blessings	Whenever bearer of this item receives divine healing, they gain an additional 1d4 hit points.
-        11	Bloodthirsty	of Bloodthirst	The bearer can expend a hit die to turn this into a +1 armor for a number of turns equal to their roll on that die.
-        12	Burglar's	of the Burglar	The bearer gains +1 to Dexterity (Sleight of Hand) checks.
-        13	Cavernous	of the Underdark	Treat as a +1 armor after the bearer has taken a long rest in a cave. If the bearer leaves the cave, this property becomes temporarily inert.
-        14	Cardinal	of the Lodestone	The wielder always knows which way is north when on the material plane. When the bearer is on a plane without cardinal directions, they are aware of that absence.
-        15	Cerulean	of Storms	Reduces lightning damage to the bearer by 1.
-        16	Channelling	of Channelling	Once per day, the bearer may ignore the Verbal and/or Somatic components of a spell they are casting.
-        17	Charitable	of Charity	If the bearer donates 100gp or more to a temple of a goodly deity, this becomes a +1 armor for the next 24 hours. If they go longer than a month without making any such donations, they gain a -1 AC penalty until a suitable donation is made.
-        18	Civilized	of the Hearth	Treat as a +1 armor after the bearer has taken a long rest in an living urban environment. If the bearer leaves the city, this property becomes temporarily inert.
-        19	Climber's	of the Climber	This armor is suited with harnesses, rope, and other climbing tools readily in reach. The bearer may treat this armor as a climbing kit.
-        20	Concealing	of Concealment	The bearer may spend one action assembling components of this armor into a dagger. A person searching the bearer for weapons must make a DC 20 Intelligence (Investigation) check to discover this property.
-        21	Consecrated	of Consecration	Treat this as a +1 armor when the bearer is being attacked by Undead.
-        22	Crystalline	of Crystal	Treat as +1 armor until the bearer takes a critical hit, at which point it loses this property forever.
-        23	Dancer's	of the Dancer	The bearer gains a +1 bonus to Dexterity (Acrobatics) checks.
-        24	Dazzling	of Dazzling	Once per day, the bearer may spend an action to ignite the magic in this armor, causing it to flare brilliantly. Any creature within a 10 foot radius must use their reaction to shield their eyes or be blinded until the end of their next turn.
-        25	Debtor's	of Debts	The first 1 bludgeoning, piercing, or slashing damage from any source is negated. However, the total amount of damage prevented from that day accumulates as a negative modifier on death saving throws. So, if the armor prevented 5 points of damage that day, the bearer has a -5 penalty on death saving throws. The penalty resets to zero after a long rest.
-        26	Defensive	of Defence	Whenever the wearer takes a dodge action, they gain +1 AC until the end of the turn.
-        27	Deflecting	of Deflection	The bearer may spend their reaction to gain +1 AC vs. ranged weapon attacks until the beginning of their next turn.
-        28	Delver's	of the Delver	While underground, the bearer of this item always knows the item's depth below the surface and the direction to the nearest staircase, ramp, or other path leading upward.
-        29	Diplomatic	of Diplomacy	Once per long rest, the bearer can gain proficiency in any language for 24 hours that they are able to correctly speak the activation phrase: "The limits of my language are the limits of my world."
-        30	Druid's	of the Druid	The bearer gains a +1 bonus to Intelligence (Nature) checks.
-        31	Ephemeral	of Transience	Once per day, the bearer may spend their reaction to gain their Wisdom modifier to their AC until the beginning of their next turn.
-        32	Evasive	of Evasion	Whenever the bearer takes a dodge action, they may move an additional 10 feet.
-        33	Fair-weather	of Fair-weather	The bearer may treat this as +1 armor if the bearer has more than half of their maximum hit points.
-        34	False	of Falsehoods	The bearer gains a +1 bonus to Charisma (Deception) checks.
-        35	Favored	of the Favored	Once per day, the bearer may roll a saving throw with advantage.
-        36	Feinting	of Feinting	Whenever the bearer uses the help action in combat, they may treat this as a +1 armor until the beginning of their next turn.
-        37	Fen	of the Glade	Treat as a +1 armor after the bearer has taken a long rest in a swamp. If the bearer leaves the swamp, this property becomes temporarily inert.
-        38	Flanked	of the Flanked	The wearer may treat this as +1 armor if two or more enemies are adjacent to them.
-        39	First	of Reflexes	The bearer gain a +1 bonus to initiative rolls
-        40	Fresh	of Cleansing	This armor never gets dirty and remains odorless, even in the most filthy dungeon.
-        41	Forgotten	of the Forgotten	The bearer may spend an action to attempt to ignite the old magic in this armor with a DC 13 Charisma check. If successful, treat this as a +1 armor as long as the bearer maintains concentration on this effect, maximum 10 minutes.
-        42	Furious	of Fury	This plain suit of armor takes on a formidable appearance when the bearer goes into a rage. The bearer receives +1 AC when they are raging but -1 AC when they are not.
-        43	Garnet	of Garnet	Reduces fire damage to the bearer by 1.
-        44	Glass	of Glass	The bearer may treat this as +1 armor as long as the bearer is at full health.
-        45	Granite	of the Mountain	Any effect that would move the bearer against their will is reduced in distance by 5 feet.
-        46	Grim	of Coercion	The bearer gains a +1 bonus to Charisma (Intimidation) checks if their armor is visible.
-        47	Harmonious	of Harmony	Attuning to this item takes only 1 minute.
-        48	Heroic	of Heroes	The bearer has advantage on saving throws vs. fear.
-        49	Histrionic	of Histrionics	the bearer gains +1 to Charisma (Performance) checks.
-        50	Holy	of Faith	When the bearer of this item rolls hit dice, they can choose to re-roll them and take the second result.
-        51	Inquisitor's	of the Inquisitor	The bearer gains a +1 bonus to Intelligence (Investigation) checks.
-        52	Inspired	of Inspiration	The bearer receives their proficiency bonus in temporary hit points whenever they gain or use inspiration.
-        53	Invisible	of Invisibility	Once worn, this armor turns invisible (although not the wearer).
-        54	Lightweight	of Mobility	This armor is 10% lighter than normal armor of this type. If it has a Strength requirement to use, it is reduced by 1.
-        55	Loquacious	of the Silver Tongue	The bearer gains +1 to Charisma (Persuasion) checks.
-        56	Mage Killer's	of the Mage Killer	The bearer may spend their reaction to treat this as +1 armor vs. spell attacks until the beginning of their next turn.
-        57	Malachite	of Malachite	Reduces poison damage to the bearer by 1.
-        58	Masquarading	of the Masquarade	The bearer has advantage on skill checks involving disguise kits.
-        59	Medic's	of the Caduceus	Lined with compartments stocked with medical supplies, the bearer may treat this armor as a healer's kit.
-        60	Moonlit	of the Moon	The bearer may treat this as +1 armor when moonlight is shining directly on this armor.
-        61	Mortals'	of Mortals	At the end of a turn where the bearer failed a death saving throw, the magic within this armor will attempt to stabilize the bearer. It rolls a Wisdom (Medicine) check with a +3 modifier.
-        62	Mournful	of Sorrow	When an ally falls unconscious in battle, the bearer gains a +1 AC bonus for the next 10 minutes. If that ally stabilizes or awakens, the bearer loses this bonus.
-        63	Obsidian	of Obsidian	Reduces acid damage to the bearer by 1.
-        64	Opal	of Opal	Reduces cold damage to the bearer by 1.
-        65	Pious	of the Pious	Whenever the bearer shaves their head, treat this as a +1 armor until the end of the day. They must wait a week until they have long enough hair to re-enact this ritual.
-        66	Prairie	of the Plains	Treat as a +1 armor after the bearer has taken a long rest in a grassland. If the bearer leaves the grassland, this property becomes temporarily inert.
-        67	Preacher's	of the Preacher	The bearer may extend the range of their Channel Divinity by 5 feet.
-        68	Precipice	of the Crags	Treat as a +1 armor after the bearer has taken a long rest in the mountains. If the bearer leaves the mountain, this property becomes temporarily inert.
-        69	Primeval	of the Jungle	Treat as a +1 armor after the bearer has taken a long rest in a jungle. If the bearer leaves the jungle, this property becomes temporarily inert.
-        70	Reflexive	of Reflexes	If the bearer is first in initiative order, treat this as +1 armor for 1 minute.
-        71	Renaissance	of the Renaissance	Once per day, the bearer may gain +1 to any ability check.
-        72	Resonant	of Resonance	The bearer can spend an action and 1 ki point to treat this as +1 armor for 1 minute.
-        73	Righteous	of Righteousness	Treat this as +1 armor during the day when attuned to a good aligned character.
-        74	Regal	of Royalty	This armor is richly decorated and fashionable. Although it retains a hint of the ruggedness of a military garment, it could function as well in a ballroom as the battlefield. To the outside observer, you appear to be keeping an Aristocratic lifestyle expense.
-        75	Runic	of Runes	Whenever bearer casts a spell of first level or higher, treat this as +1 armor until the beginning of their next turn.
-        76	Sacred	of the Sacred	The bearer may increase their Lay on Hands hit point pool by 5.
-        77	Sagacious	of Acumen	The bearer gains +1 to Wisdom (Insight) checks.
-        78	Sage's	of the Sage	The bearer gains a +1 bonus to Intelligence (History) checks.
-        79	Sailor's	of the Sea	Treat as a +1 armor after the bearer has taken a long rest on the high seas. If the bearer leaves the ocean, this property becomes temporarily inert.
-        80	Scribe's	of the Scribe	This armor unfolds to reveal animated appendages that are equipped with writing implements, magnifying glasses, and book stands. The armor aids the bearer in transcription tasks: it knows 3 languages of the DM's choice and halves the amount of time it takes the bearer to copy any text, including spells into spellbooks.
-        81	Shading	of Shade	The bearer suffers no harm in temperatures as high as 120 degrees Fahrenheit.
-        82	Shadow	of Shadows	Treat as a +1 armor when in dim light.
-        83	Shepherd's	of the Shepherd	The bearer gains a +1 bonus to (Wisdom) Animal Handling checks.
-        84	Shifting	of Shifting	The bearer may spend an action to change minor aspects of the physical appearance of this item.
-        85	Silent	of the Night	If this armor imposed disadvantage to stealth, it no longer does. Otherwise, the bearer gains a +1 bonus to Dexterity (Stealth) checks.
-        86	Solar	of the Sun	The bearer may treat this as +1 armor when in direct sunlight.
-        87	Spiked	of Teeth	Whenever a creature begins their turn grappling or being grappled by the bearer, they take 1d4 piercing damage.
-        88	Spiritual	of the Divine	This armor is naught but a prayer written on a scrap of vellum, decorated with religious motifs of a particular god. Once per day, the bearer may spend 1 minute to read the prayer out loud, and at the end this armor will manifest and encase the bearer. The armor disappears if you act in any way that is not in accordance to the god's teachings.
-        89	Subtle	of Subtleties	The bearer gains proficiency in Thieves' Cant.
-        90	Surgeon's	of the Surgeon	The bearer gains a +1 bonus to Wisdom (Medicine) checks.
-        91	Tenacious	of the Tenacious	When the bearer takes a long rest, they gain back one additional hit die.
-        92	Tracker's	of the Tracker	The bearer gains a +1 to Wisdom (Survival) checks.
-        93	Trusty	of Resurgence	Treat this as +1 armor if the bearer has half their maximum hit points or less.
-        94	Turquoise	of Turquoise	Reduces thunder damage to the bearer by 1.
-        95	Twilight	of Twilight	Within 1 hour before or after the rising and setting of the sun, or during a solar eclipse, the armor comes alive with magic and the bearer may treat this as +1 armor.
-        96	Undertaker's	of the Undertaker	Once deceased, the body wearing this armor cannot be animated or raised from the dead.
-        97	Unyielding	of the Unyielding	The bearer may treat this as +1 armor if they have taken damage since the beginning of their last turn. This effect ends at the beginning of their next turn.
-        98	Vanguard	of the Vanguard	The bearer may spend their reaction to gain a +1 AC bonus vs. melee weapon attacks until the beginning of their next turn.
-        99	Veiled	of the Veil	The wearer gains a +1 bonus to Dexterity (Stealth) checks when taking a hide action.
-        100	Victorious	of Victory	Whenever the bearer kills a creature while wearing this amror, they gain temporary hit points equal to the creature's CR.
-        101	Vigilant	of Vigilance	The bearer gains +2 to their Passive Perception.
-        102	Vile	of Villains	Treat this as +1 armor at night when attuned to an evil aligned character.
-        103	Violent	of Violence	The bearer may choose to treat the heavy metal gauntlets of this armor as a Mace.
-        104	War Leader's	of the War Leader	The bearer can use an action to amplify their voice so that it clearly carries for up to 300 feet.
-        105	Warded	of Wards	The wearer cannot be possessed while wearing this armor.
-        106	Watcher's	of the Watcher	Treat as +1 armor when the bearer is surprised.
-        107	Waterborne	of the Sea	This armor floats. Its bearer has advantage on Strength (Athletics) checks to swim.
-        108	Winged	of Wings	The bearer gains +5 speed.
-        109	Wizard's	of the Wizard	The bearer gains a +1 to Intelligence (Arcana) checks.
-        110	Zen	of Zen	Treat this as +1 armor for one minute after meditating with it for one minute.
-        111	Zircon	of Zircon	Reduces force damage to the bearer by 1.
-        112	Abyssal	of the Abyss	When on the plane of the Abyss, the bearer has advantage on saving throws against Abyssal Corruption. (DMG p. 62)
-        113	Alarming	of Alarms	Contains 1d4 unreplenishable charges of the Alarm spell (1st level).
-        114	Arborean	of Arborea	When on the plane of Arborea, the bearer has advantage on saving throws against the effects of Intense Yearning. (DMG p. 61)
-        115	Arcadian	of Arcadia	When on the plane of Arcardia, the bearer is unaffected by Planar Vitality (DMG p. 67)
-        116	Astral	of the Astral Sea	When travelling the Astral Sea, it takes half the number of hours to locate a Color Pool to a specific plane. You have advantage on saving throws vs. the effects of Psychic Wind (DMG p. 47-48)
-        117	Beastial	of the Beastlands	When on the plane of The Beastlands, the bearer has advantage on saving throws vs. Beast Transformation (DMG p. 60)
-        118	Beastspeaker's	of Beastspeakers	Contains 1d4 unreplenishable charges of the Speak with Animals spell (1st level).
-        119	Benedictine	of Benediction	Contains 1d4 unreplenishable charges of the Healing Word spell (1st level).
-        120	Blasted	of Blasting	Contains 1d4 unreplenishable charges of the Fire Bolt spell (1st level).
-        121	Bold	of Boldness	Contains 1d4 unreplenishable charges of the Heroism spell (1st level).
-        122	Bountiful	of Bounty	Contains 1d4 unreplenishable charges of the Goodberry spell (1st level).
-        123	Bytopian	of Bytopia	When on the plane of Bytopia, the bearer has advantage on saving throws against Pervasive Goodwill. (DMG p. 59-60)
-        124	Carcerian	of Carceri	When on the plane of Carceri, the bearer knows the direction to the closest secret exit from this prison plane. (DMG p. 63)
-        125	Cartographic	of Cartography	On its own volition, the item records a map of the environments that the bearer is exploring, and can magically project it for the bearer to see.
-        126	Chill	of Chills	Contains 1d4 unreplenishable charges of the Ray of Frost spell (1st level).
-        127	Clockwork	of Gears	When on the plane of Mechanus, the bearer has advantage on saving throws against Imposing Order (DMG p. 66)
-        128	Cloy	of Cloying	The bearer may cast Friends once per day.
-        129	Compassionate	of Compassion	Contains 1d4 unreplenishable charges of the Cure Wounds spell (1st level).
-        130	Concordant	of Concordance	The bearer has advantage on saving throws vs. Psychic Dissonance when travelling the Outer Planes. (DMG p. 59)
-        131	Conjurer's	of the Conjurer	The bearer may cast Prestidigitation once per day.
-        132	Corrosive	of Dissolving	Contains 1d4 unreplenishable charges of the Acid Splash spell (1st level).
-        133	Crawling	of Vermin	The crawling things of the earth, such as insects, snakes, and vermin, are attracted to this item. When placed on the ground, such creatures will scurry toward the item like moths drawn to the flame.
-        134	Drunkard's	of Taverns	The bearer always knows the direction to the closest alcoholic beverage.
-        135	Elysian	of Elysium	When on the plane of Elysium, the bearer has advantage on saving throws against the effects of Overwhelming Joy (DMG p. 60)
-        136	Etherbound	of Ethereal Shores	The bearer can see creatures in the Border Ethereal that overlap with their plane as clearly as if they were fully in the bearer's plane. Such creatures appear as apparitions or ghosts.
-        137	Exalting	of Exaltation	Contains 1d4 unreplenishable charges of the Bless spell (1st level).
-        138	Expeditious	of Expedience	Contains 1d4 unreplenishable charges of the Expeditious Retreat spell.
-        139	Fathoming	of Tongues	Contains 1d4 unreplenishable charges of the Comprehend Languages spell.
-        140	Feathered	of Feathers	Contains 1d4 unreplenishable charges of the Feather Fall spell (1st level).
-        141	Feybound	of the Fey	The bearer knows the general direction to the closest Fey Crossing within a 60 mile radius. (DMG p. 50)
-        142	Forgiven	of Forgiveness	When on the plane of Mount Celestia, the bearer of this item can receive the benefits of Blessed Beneficence regardless of their alignment.
-        143	Fortune Teller's	of the Fortune Teller	Every time you hit by a monster, you glimpse a random image of its future or past.
-        144	Friendly	of Friendship	Contains 1d4 unreplenishable charges of the Animal Friendship spell (1st level).
-        145	Gehennan	of Gehenna	When on the plane of Gehenna, the bearer has advantage on saving throws against Cruel Hindrance. (DMG p. 63)
-        146	Gracious	of Grace	The bearer may cast Spare the Dying once per day.
-        147	Hadean	of Hades	When on the plane of Hades, the bearer has advantage on saving throws against Vile Transformation. (DMG p. 63)
-        148	Healing	of Healing	This item contains 4 weak healing nodes. As an action, a character can use one node to heal 1d4 hit points at touch range. The item regains 1d4 charges at sunrise.
-        149	Hellish	of the Nine Hells	When in the Nine Hells, the bearer has advantage on saving throws against Pervasive Evil. (DMG p. 64)
-        150	Desperate	of Last Chances	The bearer has advantage on perception checks when searching for items long lost in the the Swamp of Oblivion on the Plane of Earth. (DMG p. 54)
-        151	Leaping	of Leaping	Contains 1d4 unreplenishable charges of the Jump spell (1st level).
-        152	Liar's	of Lies	The bearer cannot be magically compelled to speak the truth while wearing this armour.
-        153	Limbo	of Limbo	When on the plane of Limbo, the bearer has advantage to Intelligence checks to alter or move non-magical objects within the plane. (DMG p. 61-62)
-        154	Locating	of Locating	Once attuned, the bearer always knows the exact location of this item
-        155	Malediction	of Malediction	Contains 1d4 unreplenishable charges of the Bane spell(1st level).
-        156	Manipulating	of Manipulation	The bearer may cast Mage Hand once per day.
-        157	Master's	of Servants	Contains 1d4 unreplenishable charges of the Unseen Servant spell (1st level).
-        158	Maverick	of the Maverick	The bearer has a +1 bonus to any skill check involving gambling and games of chance (Insight, Sleight of Hand, Investigation, etc).
-        159	Messenger	of Messages	The bearer may cast Message once per day.
-        160	Meteoric	of Falling Stars	Contains 1 unreplenishable charge of Scorching Ray cast at 2nd level.
-        161	Miraculous	of Miracles	The bearer may cast Thaumaturgy once per day.
-        162	Mocking	of Mockery	The bearer may cast Vicious Mockery once per day.
-        163	Natural	of Nature	Contains 1d4 unreplenishable charges of the Locate Animals or Plants spell (1st level).
-        164	Neutralizing	of Neutrality	Contains 1d4 unreplenishable charges of the Protection from Good and Evil spell (1st level).
-        165	Nourishing	of Nourishment	The bearer rarely feels hungry, and only needs to consume one-fifth the usual amount of food.
-        166	Pandemonium	of Pandemonium	When on the plane of Pandemonium, the bearer has advantage on saving throws against the Mad Winds. (DMG p. 62)
-        167	Projecting	of Projection	The bearer can send messages mentally to willing characters within 30 feet. This communication is one-way only.
-        168	Protective	of Protection	The bearer may cast Blade Ward once per day.
-        169	Revealing	of Revelation	Contains 1d4 unreplenishable charges of the Detect Magic spell (1st level).
-        170	Riutal	of Rituals	Whenever the bearer is casting a spell as a ritual, they have advantage to maintain concentration during the ritual.
-        171	Sailor's	of the Sea	Treat as a +1 weapon after the bearer has taken a long rest at sea. If the bearer steps on dry land, this property becomes temporarily inert.
-        172	Secret	of Secrets	Contains 1d4 unreplenishable charges of the Illusory Script spell (1st level).
-        173	Shadowbound	of the Shadowfell	The bearer knows the general direction to the closest Shadow Crossing within a 60 mile radius. They have advantage on saving throws vs. Shadowfell Dispair (DMG p. 51-52)
-        174	Shielding	of Shielding	This item contains 1d4 unreplenishable charges of the Shield spell.
-        175	Smith's	of Reparations	The bearer may cast Mending once per day.
-        176	Sparkling	of Lights	The bearer may cast Dancing Lights once per day.
-        177	Striding	of Strides	Contains 1d4 unreplenishable charges of the Longstrider spell (1st level).
-        178	Translucent	of Translucence	The bearer gains an extra level one spell slot, which recovers only after a full moon rises.
-        179	Trickster's	of Trickery	If the bearer uses no movement this turn, they may use a bonus action activate the magic in this armor to record their action. At the beginning of their next turn, an intangible illusory replica of themselves appears within 5 ft., repeatedly doing that action. It will continue to do this for 1 minute or until dispelled. The bearer may not use this magic again until they take a long rest.
-        180	True	of Truth	The bearer may cast True Strike once per day.
-        181	Verdant	of Druidcraft	The bearer may cast Druidcraft once per day.
-        182	Windborne	of the Labyrinth Wind	When in the Plane of Air, the bearer can navigate the Labyrinth Wind intuitively, and knows the path to the nearest Earth Mote within 60 miles.
-        183	Wrathful	of Ysgard	When on the plane of Ysgard, the bearer is unaffected by Immortal Wrath. (DMG p. 61)
-        184	Thunderous	of the Rolling Thunder	Contains 1 unreplenishable charge of Shatter cast at 2nd level.
-        185	Chained	of Chains	Contains 1 unreplenishable charge of Hold Person cast at 2nd level.
-        186	Spider's	of the Spider	Contains 1 unreplenishable charge of Web cast at 2nd level.
-        187	Heliacal	of the Sun	Contains 1 unreplenishable charge of Flaming Sphere cast at 2nd level.
-        188	Crippling	of Crippling	Contains 1 unreplenishable charge of Ray of Enfeeblement cast at 2nd level.
-        189	Lunar	of the Moon	Contains 1 unreplenishable charge of Moonbeam cast at 2nd level.
-        190	Fatespinner's	of the Fates	Contains 1 unreplenishable charge of Augury cast at 2nd level.
-        191	Rooting	of Roots	Contains 1 unreplenishable charge of Entanglement cast at 2nd level.
-        192	Mirrored	of Mirrors	Contains 1 unreplenishable charge of Mirror Image cast at 2nd level.
-        193	Vulpine	of the Fox	Characters trying to track the bearer have a disadvantage on their skill checks.
-        194	Submerged	of the Depths	Treat as a +1 armor when completely submerged in water.
-        195	Comforting	of Comfort	Treat as a +1 armor if the bearer has any levels of exhaustion.
-        196	Brawler's	of Brawling	Whenever a bearer makes an attack with an improvised weapon, treat as a +1 armor until the beginning of the bearer's next turn.
-        197	Eagle-eye	of the Eagle	The bearer can clearly see twice as far and gains advantage on Wisdom (perception) checks that use sight.
-        198	Lupine	of the Wolf	The bearer can detect and distinguish scents like a wolf and gains advantage on Wisdom (Perception) checks that use smell.
-        199	Chiropteran	of the Bat	The bearer can hear a pin drop in a crowded room and gains advantage on Wisdom (Perception) checks that use hearing.
-        200	Black	of Darkness	Contains 1 unreplenishable charge of Darkness cast at 2nd level.
-        201	Sober	of Sobriety	The bearer cannot become intoxicated while this armor is donned.
-    Trinket properties
-        1	Abyssal	of the Abyss	When on the plane of the Abyss, the bearer has advantage on saving throws against Abyssal Corruption. (DMG p. 62)
-        2	Acolyte's	of the Acolyte	The bearer gains a +1 bonus to Wisdom (Religion) checks.
-        3	Adamantine	of Adamantine	The item is indestructible.
-        4	Adroit	of Intellect	The bearer gains +1 bonus to Intelligence saving throws.
-        5	Alarming	of Alarms	Contains 1d4 unreplenishable charges of the Alarm spell (1st level).
-        6	Arborean	of Arborea	When on the plane of Arborea, the bearer has advantage on saving throws against the effects of Intense Yearning. (DMG p. 61)
-        7	Arcadian	of Arcadia	When on the plane of Arcardia, the bearer is unaffected by Planar Vitality (DMG p. 67)
-        8	Arctic	of the North	The bearer suffers no harm in temperature as cold as -20 degrees Fahrenheit.
-        9	Arresting	of Safety	Once per day, the bearer may use their reaction to reduce fall damage by 1d6 until the end of turn.
-        10	Assassin's	of the Assassin	The bearer may add their proficiency bonus to damage rolls dealt during surprise rounds.
-        11	Astral	of the Astral Sea	When travelling the Astral Sea, it takes half the number of hours to locate a Color Pool to a specific plane. You have advantage on saving throws vs. the effects of Psychic Wind (DMG p. 47-48)
-        12	Barbarian's	of the Barbarian	The bearer gains a +1 bonus to Strength (Athletics) checks.
-        13	Bard's	of the Bard	The bearer gains +1 to Charisma (Performance) checks.
-        14	Beastial	of the Beastlands	When on the plane of The Beastlands, the bearer has advantage on saving throws vs. Beast Transformation (DMG p. 60)
-        15	Beastspeaker's	of Beastspeakers	Contains 1d4 unreplenishable charges of the Speak with Animals spell (1st level).
-        16	Benedictine	of Benediction	Contains 1d4 unreplenishable charges of the Healing Word spell (1st level).
-        17	Blasted	of Blasting	Contains 1d4 unreplenishable charges of the Fire Bolt spell (1st level).
-        18	Blessed	of Blessings	Whenever bearer of this item receives divine healing, they gain an additional 1d4 hit points.
-        19	Bold	of Boldness	Contains 1d4 unreplenishable charges of the Heroism spell (1st level).
-        20	Bountiful	of Bounty	Contains 1d4 unreplenishable charges of the Goodberry spell (1st level).
-        21	Burglar's	of the Burglar	The bearer gains +1 to Dexterity (Sleight of Hand) checks.
-        22	Bytopian	of Bytopia	When on the plane of Bytopia, the bearer has advantage on saving throws against Pervasive Goodwill. (DMG p. 59-60)
-        23	Carcerian	of Carceri	When on the plane of Carceri, the bearer knows the direction to the closest secret exit from this prison plane. (DMG p. 63)
-        24	Cardinal	of the Lodestone	The wielder can use an action to learn which way is north.
-        25	Cartographic	of Cartography	On its own volition, the item records a map of the environments that the bearer is exploring, and can magically project it for the bearer to see.
-        26	Channelling	of Channelling	Once per day, the bearer may ignore the Verbal and/or Somatic components of a spell they are casting.
-        27	Chill	of Chills	Contains 1d4 unreplenishable charges of the Ray of Frost spell (1st level).
-        28	Clockwork	of Gears	When on the plane of Mechanus, the bearer has advantage on saving throws against Imposing Order (DMG p. 66)
-        29	Cloy	of Cloying	The bearer may cast Friends once per day.
-        30	Compassionate	of Compassion	Contains 1d4 unreplenishable charges of the Cure Wounds spell (1st level).
-        31	Concordant	of Concordance	The bearer has advantage on saving throws vs. Psychic Dissonance when travelling the Outer Planes. (DMG p. 59)
-        32	Conjurer's	of the Conjurer	The bearer may cast Prestidigitation once per day.
-        33	Corrosive	of Dissolving	Contains 1d4 unreplenishable charges of the Acid Splash spell (1st level).
-        34	Crawling	of Vermin	The crawling things of the earth, such as insects, snakes, and vermin, are attracted to this item. When placed on the ground, such creatures will scurry toward the item like moths drawn to the flame.
-        35	Dancer's	of the Dancer	The bearer gains a +1 bonus to Dexterity (Acrobatics) checks.
-        36	Defensive	of Defence	Whenever the bearer takes a dodge action, they may move an additional 5 feet.
-        37	Delver's	of the Delver	While underground, the bearer of this item always knows the item's depth below the surface and the direction to the nearest staircase, ramp, or other path leading upward.
-        38	Desperate	of Last Chances	The bearer has advantage on perception checks when searching for items long lost in the the Swamp of Oblivion on the Plane of Earth. (DMG p. 54)
-        39	Druid's	of the Druid	The bearer gains a +1 bonus to Intelligence (Nature) checks.
-        40	Drunkard's	of Taverns	The bearer always knows the direction to the closest alcoholic beverage.
-        41	Dynamic	of the Dynamo	The bearer has +1 to Charisma saving throws.
-        42	Eavesdropper's	of Eavesdropping	As long as it is on the same plane, the bearer can hear through this item as if they were present.
-        43	Elysian	of Elysium	When on the plane of Elysium, the bearer has advantage on saving throws against the effects of Overwhelming Joy (DMG p. 60)
-        44	Etherbound	of Ethereal Shores	The bearer can see creatures in the Border Ethereal that overlap with their plane as clearly as if they were fully in the bearer's plane. Such creatures appear as apparitions or ghosts.
-        45	Exalting	of Exaltation	Contains 1d4 unreplenishable charges of the Bless spell (1st level).
-        46	Expeditious	of Expedience	Contains 1d4 unreplenishable charges of the Expeditious Retreat spell.
-        47	False	of Falsehoods	The bearer gains a +1 bonus to Charisma (Deception) checks.
-        48	Fathoming	of Tongues	Contains 1d4 unreplenishable charges of the Comprehend Languages spell.
-        49	Favored	of the Favored	Once per day, the bearer may roll a saving throw with advantage.
-        50	Feathered	of Feathers	Contains 1d4 unreplenishable charges of the Feather Fall spell (1st level).
-        51	Feybound	of the Fey	The bearer knows the general direction to the closest Fey Crossing within a 60 mile radius. (DMG p. 50)
-        52	First	of Speed	The bearer gain a +1 bonus to initiative rolls
-        53	Forgiven	of Forgiveness	When on the plane of Mount Celestia, the bearer of this item can receive the benefits of Blessed Beneficence regardless of their alignment.
-        54	Fortune Teller's	of the Fortune Teller	Every time you are hit by a monster, you glimpse a random image of its future or past.
-        55	Friendly	of Friendship	Contains 1d4 unreplenishable charges of the Animal Friendship spell (1st level).
-        56	Gehennan	of Gehenna	When on the plane of Gehenna, the bearer has advantage on saving throws against Cruel Hindrance. (DMG p. 63)
-        57	Gracious	of Grace	The bearer may cast Spare the Dying once per day.
-        58	Grim	of Coercion	The bearer gains a +1 bonus to Charisma (Intimidation) checks if the target can see this item.
-        59	Hadean	of Hades	When on the plane of Hades, the bearer has advantage on saving throws against Vile Transformation. (DMG p. 63)
-        60	Harmonious	of Harmony	Attuning to this item takes only 1 minute.
-        61	Healing	of Healing	This item contains 4 weak healing nodes. As an action, a character can use one node to heal 1d4 hit points at touch range. The item regains 1d4 charges at sunrise.
-        62	Hellish	of the Nine Hells	When in the Nine Hells, the bearer has advantage on saving throws against Pervasive Evil. (DMG p. 64)
-        63	Heroic	of Heroes	The bearer has advantage on saving throws vs. fear.
-        64	Histrionic	of Histrionics	the bearer gains +1 to Charisma (Performance) checks.
-        65	Holy	of Faith	When the bearer of this item rolls hit dice, they can choose to re-roll them and take the second result.
-        66	Iconic	of Symbols	The item is inscribed with holy symbols of the God of the DM's choice. A cleric or paladin that serves that god may use this item as a divine focus.
-        67	Inquisitor's	of the Inquisitor	The bearer gains a +1 bonus to Intelligence (Investigation) checks.
-        68	Inspired	of Inspiration	The bearer regains their Constitution modifier in temporary hit points whenever they gain or use inspiration.
-        69	Leaping	of Leaping	Contains 1d4 unreplenishable charges of the Jump spell (1st level).
-        70	Liar's	of Lies	Contains 1d4 unreplenishable charges of the Silent Image spell (1st level).
-        71	Limbo	of Limbo	When on the plane of Limbo, the bearer has advantage to Intelligence checks to alter or move non-magical objects within the plane. (DMG p. 61-62)
-        72	Locating	of Locating	Once attuned, the bearer always knows the exact location of this item
-        73	Loquacious	of the Silver Tongue	The bearer gains +1 to Charisma (Persuasion) checks.
-        74	Malediction	of Malediction	Contains 1d4 unreplenishable charges of the Bane spell(1st level).
-        75	Manipulating	of Manipulation	The bearer may cast Mage Hand once per day.
-        76	Master's	of Servants	Contains 1d4 unreplenishable charges of the Unseen Servant spell (1st level).
-        77	Maverick	of the Maverick	The bearer has a +1 bonus to any skill check involving gambling and games of chance (Insight, Sleight of Hand, Investigation, etc).
-        78	Messenger	of Messages	The bearer may cast Message once per day.
-        79	Meteoric	of Falling Stars	Contains 1 unreplenishable charge of Scorching Ray (1st level).
-        80	Mindful	of Mindfulness	The bearer gains a +1 bonus to Wisdom saving throws.
-        81	Miraculous	of Miracles	The bearer may cast Thaumaturgy once per day.
-        82	Mocking	of Mockery	The bearer may cast Vicious Mockery once per day.
-        83	Natural	of Nature	Contains 1d4 unreplenishable charges of the Locate Animals or Plants spell (1st level).
-        84	Neutralizing	of Neutrality	Contains 1d4 unreplenishable charges of the Protection from Good and Evil spell (1st level).
-        85	Nimble	of Agility	The bearer gains a +1 bonus to Dexterity saving throws.
-        86	Nourishing	of Nourishment	The bearer rarely feels hungry, and only needs to consume one-fifth the usual amount of food.
-        87	Pandemonium	of Pandemonium	When on the plane of Pandemonium, the bearer has advantage on saving throws against the Mad Winds. (DMG p. 62)
-        88	Preacher's	of the Preacher	The bearer may extend the range of their Channel Divinity by 5 feet.
-        89	Projecting	of Projection	The bearer can send messages mentally to willing characters within 30 feet. This communication is one-way only.
-        90	Protective	of Protection	The bearer may cast Blade Ward once per day.
-        91	Reaper's	of the Reaper	The bearer has advantage on death saving throws.
-        92	Renaissance	of the Renaissance	Once per day, the bearer may gain +1 to any skill check.
-        93	Revealing	of Revelation	Contains 1d4 unreplenishable charges of the Detect Magic spell (1st level).
-        94	Riutal	of Rituals	Whenever the bearer casts a spell as a ritual, they have advantage to maintain concentration during the ritual.
-        95	Sacred	of the Sacred	The bearer may increase their Lay on Hands hit point pool by 5.
-        96	Sagacious	of Acumen	The bearer gains +1 to Wisdom (Insight) checks.
-        97	Sage's	of the Sage	The bearer gains a +1 bonus to Intelligence (History) checks.
-        98	Secret	of Secrets	Contains 1d4 unreplenishable charges of the Illusory Script spell (1st level).
-        99	Sentinel	of the Sentinel	Faintly glows when creatures of a certain race (DMs choice) are within a 100 foot radius.
-        100	Shading	of Shade	The bearer suffers no harm in temperatures as high as 120 degrees Fahrenheit.
-        101	Shadowbound	of the Shadowfell	The bearer knows the general direction to the closest Shadow Crossing within a 60 mile radius. They have advantage on saving throws vs. Shadowfell Dispair (DMG p. 51-52)
-        102	Shepherd's	of the Shepherd	The bearer gains a +1 bonus to (Wisdom) Animal Handling checks.
-        103	Shielding	of Shielding	This item contains 1d4 unreplenishable charges of the Shield spell.
-        104	Shifting	of Shifting	The bearer may change minor aspects of the physical appearance of this item.
-        105	Silent	of the Night	The bearer gains a +1 bonus to Dexterity (Stealth) checks.
-        106	Smith's	of Reparations	The bearer may cast Mending once per day.
-        107	Sojourner's	of the Sojouner	A poem, story, or map that describes a long-forgotten treasure is etched on the surface of the item.
-        108	Solemn	of Solemnity	The bearer may spend an action removing all the failed death saving throws from a target within 5 feet of them. The target is still not stabilized.
-        109	Sparkling	of Lights	The bearer may cast Dancing Lights once per day.
-        110	Striding	of Strides	Contains 1d4 unreplenishable charges of the Longstrider spell (1st level).
-        111	Surgeon's	of the Surgeon	The bearer gains a +1 bonus to Wisdom (Medicine) checks.
-        112	Tenacious	of the Tenacious	When the bearer takes a long rest, they gain back one additional hit die.
-        113	Tracker's	of the Tracker	The bearer gains a +1 to Wisdom (Survival) checks.
-        114	Translucent	of Translucence	The bearer gains an extra level one spell slot, which recovers only after a full moon rises.
-        115	Trickster's	of Trickery	The bearer may cast Minor Illusion once per day.
-        116	True	of Truth	The bearer may cast True Strike once per day.
-        117	Unbroken	of Heart	The bearer gains a +1 bonus to Constitution saving throws.
-        118	Verdant	of Druidcraft	The bearer may cast Druidcraft once per day.
-        119	Victorious	of Victory	Whenever the bearer kills a creature they gain temporary hit points equal to the creature's CR.
-        120	Vigilant	of Vigilance	The bearer gains +2 to their Passive Perception.
-        121	Vigorous	of Vigor	The bearer gains a +1 bonus to Strength saving throws.
-        122	Vital	of Vitality	The bearer's maximum hit points increases by their constitution modifier while attuned to this item. These hit points are lost when the bearer unattunes the item.
-        123	War Leader's	of the War Leader	The bearer can use an action to amplify their voice so that it clearly carries for up to 300 feet.
-        124	Waterborne	of the Sea	The item floats on water or other liquids. Its bearer has advantage on Strength (Athletics) checks to swim.
-        125	Windborne	of the Labyrinth Wind	When in the Plane of Air, the bearer can navigate the Labyrinth Wind intuitively, and knows the path to the nearest Earth Mote within 60 miles.
-        126	Wizard's	of the Wizard	The bearer gains a +1 to Intelligence (Arcana) checks.
-        127	Wrathful	of Ysgard	When on the plane of Ysgard, the bearer is unaffected by Immortal Wrath. (DMG p. 61)
+
     Armor Runes
         Rune of Confusion Upon taking a hit, the wearer can cast Confusing Rebuke. The attacker must make a DC 14 CHA check or become confused 
         Rune of Perth The bearer of this rune can cast Protection from Good and Evil once per day
@@ -924,6 +419,107 @@ Loot/ rp
         Rune of Fehu The wearer of this armour may activate this rune once per day for the duration of one encounter, causing the armour to burst into golden flames that cause all attacks against the wearer to have disadvantage. Any successful attacks on the armour causes 2d10 gp to fall from where it was hit
         Rune of the Inhabitancy The wielder gains the effect of a short rest on a critical failure attack made against the wearer
         Rune of Runes On a critical miss attack made against this armour, the rune grows brightly and an additional rune forms on the armour. Roll a d100 to determine the newly aRune. On a critical hit, a rune disappears at random. If the Rune of Runes is the only remaining rune, and the wearer suffers a critical hit, the Rune of Runes disappears
+    Weapon runes
+        Rune of the Wind: When an enemy is struck with this weapon, the must make a DEX saving throw or be blown back 5 ft.
+        Rune of the Squirrel: Grants advantage to the acrobatics skill.
+        Rune of the Dog: Grants advantage to the animal handling skill.
+        Rune of the Raven: Grants advantage to the arcana skill.
+        Rune of the Bear: Grants advantage to the athletics skill.
+        Rune of the Snake: Grants advantage to the deception skill.
+        Rune of the Elephant: Grants advantage to the history skill.
+        Rune of the Owl: Grants advantage to the insight skill.
+        Rune of the Lion: Grants advantage to the intimidation skill.
+        Rune of the Crow: Grants advantage to the investigation skill.
+        Rune of the Lobster: Grants advantage to the medicine skill.
+        Rune of the Elk: Grants advantage to the nature skill.
+        Rune of the Eagle: Grants advantage to the perception skill.
+        Rune of the Peacock: Grants advantage to the performance skill.
+        Rune of the Feline: Grants advantage to the persuasion skill.
+        Rune of the Mantis: Grants advantage to the religion skill.
+        Rune of the Spider: Grants advantage to the sleight of hand skill.
+        Rune of the Chameleon: Grants advantage to the stealth skill.
+        Rune of the Cockroach: Grants advantage to the survival skill.
+        Rune of Orcus: any humanoid creature of size large or smaller killed by this weapon rises as a zombie under your control for 20 minutes. After 20 minutes, the zombie collapses and turns back into a corpse.
+        Rune of Confusion: every time a creature is hit by this weapon, it must make a charisma saving throw against a DC equal to 8 + wielders prof bonus + wielders strength modifier (or dex if it’s a finesse weapon). On a failed save, the creature has disadvantage on its next attack against the wielder. Once a creature succeeds against this saving throw, this rune no longer affects it until its next long rest.
+        Rune of Defense Crushing: each time a creature is hit by this weapon, it must make a strength saving throw against a DC equal to 8 + wielders prof bonus + wielders strength modifier (or dex if it’s a finesse weapon). On a failed save, the creatures armor class is lowered by 1. This rune may not bring a creatures armor class below 10 + their dexterity modifier.
+        Rune of Unjo (Joy and Wellness): The bearer of this rune is able to stave off one level of exhaustion.
+        Rune of Hagalaz (Chaos and Destruction): The bearer of this rune can cast Thunderwave once per day.
+        Rune of Pertho (Protection from enemies): The bearer of this rune can cast Protection from Evil one per day.
+        Rune of Ehwaz (Trust, faith and companionship): the bearer of this rune can cast Bless once per day.
+        Rune of Swordbreaker: If the wielder is attacked with melee weapon and the attack is a critical failure, the player can break the attacker’s weapon.
+        Rune of Leaden Steps: adds 10 pounds to the target’s weight on each attack.
+        Rune of Vaporization: Once a day you can submerge the weapon into water and vaporize 1d20 cubic feet of water.
+        Rune of Returning: Once etched on the weapon, it allows the user to call the weapon into their hand if it’s within 10 ft.
+        Rune of Safety: Renders the edges/points of the weapon dull when children touch the weapon.
+        Rune of Green Thumbs: If the weapon to be planted in soil, a 30 foot tall tree will out of it in 1d4 days. The weapon is destroyed in the process.
+        Rune of Invisibility: Makes the weapon appear invisible to all, except for those designated by the rune-maker.
+        Rune of Poison Detection: If the weapon is dipped into poisoned food, the hilt changes color. The colors return to normal once poisoned is removed from the weapon.
+        Rune of Screaming: When the weapon this rune is inscribed upon strikes an enemy, the target must make a Wisdom saving throw with a 13 DC. If it fails, the target starts screaming uncontrollably for 1d10 minutes and is terrified of the attacker.
+        Rune of the Cliff: Allows the casting of Featherfall on command.
+        Rune of the Worg: This weapon seems easy to hold in your mouth, you don’t know why. You can now use your mouth as an ‘arm’ to hold this weapon – even if it requires two hands. You also know how to run on four legs like a beast (Your speeds increases by 10 ft. while doing so). You have disadvantage to make weapon attacks with your arms.
+        Rune of the Gryphon: When this weapon is swung upward, your jump distance is multiplied per 10. If you manage to hit an enemy while falling, you ignore all falling damage. If you keep swinging this weapon while spinning you might fly…
+        Rune of the Manticore: The weapon inscribed starts growing 1d10 spikes each day that, if removed, can be thrown as daggers with the range of a Longbow, or used as ammunition for the inscribed weapon. A weapon can have up to 10 spikes if one handed or 30 if two handed. The spikes seem very efficient for impaling or piercing hard surfaces like rock. If you leave a spike grow for a week, it becomes the length of a short sword; for a month of a longsword; for two months of a spear and for three months of a pike. All these weapons can be thrown at the range of a Longbow.
+        Rune of Fire: This weapon’s damage type has changed to fire.
+        Rune of Ice: This weapon’s damage type has changed to ice.
+        Rune of Mirrors: Once per short rest, as a bonus action, the user can break this weapon into two identical copies of the original. If either copy leaves the possession of the character who broke the weapon in two, the copy disappears and the effect is ended.
+        Rune of the Firebreather: This weapon, when slashed, creates a ten-foot line of fire. All creatures in the line must make DEX save or take 1d6 Fire damage.
+        Rune of Echoes: The wielder must make a noise into the enchanted weapon. When this weapon attacks, it leaves behind a rune on the target object. This rune continues to repeat the noise that the wielder recorded earlier, acting as a distraction.
+        Rune of the Kebab (pike or spear only): As an Action, you cause the weapon to grow outward then retract in a 30 ft. line. Make an attack against every creature in this line.
+        Rune of Helium: Once in a long rest as a bonus action you can put your weapon in front of your neck and make your voice squeakier like that of a mouse. You have an advantage on performances check and intimidation check against Large or larger creatures that are capable of hearing you.
+        Rune of Sulfur Hexafluoride: Once in a long rest as a bonus action you can put your weapon in front of your neck and make your voice deeper like that of a dragon. You have an advantage on performances check and intimidation check against Medium or smaller creatures that are capable of hearing you.
+        Rune of Wild Magic: On a critical hit with this weapon, roll on the Wild Magic Surge table to create a random magical effect.
+        Rune of Snail Shell: This weapon or shield is nearly unbreakable by non-magical means, however becomes so dense and heavy that it effectively eliminates any dex bonus the player has to their AC.
+        Rune of the Bull: Any weapon or shield this rune is attached too gives the player advantage on attempts to shove large or smaller creatures. Shove attempts send the target back 5 feet more than usual.
+        Rune of the Phoenix Feather: This rune provides the item it is slotted in, to turn into flames dealing 1 fire damage per round to players and creatures unless they have fire resistance. The item magically reforms if it is ever destroyed.
+        Rune of Absorbing: Once per day, you can spend a minute to change the material of the weapon to any material that it is in contact with.
+        Rune of the Open Door (any bludgeoning weapon): This weapon deals double damage against structures. Any damage done to the structure using this weapon does not affect the stability of the structure. (For instance, this weapon can create a hole in a load-bearing wall while the rest of the building is unaffected). This structural protection effect ends after 1d4 hours.
+        Rune of Terran Blessing: The wielder cannot be knocked prone by any environmental hazards (earthquakes, slippery ground, falling rocks, etc.).
+        Rune of Heaven’s Fan: when this weapon is swung, a gust of cool wind is released, extinguishing fires and briefly turning the ambient temperature tolerable regardless of its previous state. Twice a day, the wielder can slash the weapon downwards to create a 40-ft long, 5-ft wide blast of downwards wind that forces everyone hit to make a STR save or be knocked prone (if flying, they’ll fall out of the air), with DC potentially modified by one’s own eight. This ability slaps most projectiles out of the air, and can be used as a reaction to a projectile attack.
+        Rune of Time’s Shadow: any attack made with this weapon is repeated by a translucent, phantasmal shadow of it on the next turn at the same location. That shadow attack does the same damage, but can only hit an enemy in the same space as the original attack’s target.
+        Rune of Death’s Tongues: any successful hit with this weapon causes hungry, flesh-eating worms to spontaneously appear where the weapon hit. As they burrow into the wound, they prevent regeneration from the damage dealt, and deal 1d6-4 poison damage each subsequent round for 1d10 subsequent rounds.
+        Rune of Fire’s Wake: things hit by this weapon release a cloud of thick smoke that visually obscures an area of 10ft radius. Enemies or at least partially empty containers hit by this weapon fill up with a thick smoke. Those hit make a CON save as their respiratory system fills up completely with smoke; on a success, they expend their upcoming bonus action to cough out the smoke, but on a failure, they lose their upcoming action to do so.
+        Rune of the Journey: any enemy hit by this weapon makes a WIS save; otherwise, they will spend their upcoming movement to double back on the last turn of movement they took. If this takes less movement than their speed, they can use the remainder of this turn’s movement normally. If doubling back proves impossible (e.g. on the last turn they moved, they dropped from a high ledge, but on this turn it’s impossible for them to jump back up onto that ledge) they will still try to go back on that path if a logical alternative (in this example, climbing a nearby staircase to get to that ledge) is obvious to them. If no logical alternative presents itself, the effect is broken.
+        Rune of the Immanence: the wielder may cast Misty Step once per day. With the proper material components, the wielder may cast Plane Shift once per day.
+        Rune of the Inhabitance: the wielder gains the effects of a short rest on a critical hit with this weapon.
+        Rune of Fehu (Wealth, Fulfillment, Fire): the wielder of this weapon may activate this rune once per day for the duration of one encounter, causing the weapon to burst into golden flames that deal extra fire damage. Successful hits while the rune is active cause 2d10 gp to fall from where it hit.
+        Rune of Gifu (Gifts): the wielder of this weapon can freely teleport this weapon into the hands of another creature they can see within 120 feet. This method of transference does not harm the recipient, but will displace any objects they are currently holding. This ability stores three charges and regains one charge per day.
+        Rune of Alliance’s Might: this weapon gains 1d6 extra damage of the type it would normally deal per person allied with the wielder in 60ft.
+        Rune of the Carousel: Causes sentient beings struck by the weapon to spin uncontrollably at a fairly high speed for a few seconds. The affected must pass a DC 7 Constitution check or lose their turn as they try to regain their bearings and not vomit.
+        Rune of Refraction (Melee Weapon Only): The weapon refracts light strangely causing it to look broken (e.g. when observing a straw above and below water-line at an angle) causing everyone but the wielder to have trouble discerning its actual location. +1D4 to Attack Rolls & +1 AC against Melee Attacks to adjust for enemies not being able to block/dodge as easily while giving them mild motion sickness as they attempt to track the actual location of your weapon.
+        Rune of a Stranger: Once per long rest, if you invoke this ability, every creature in the battle has to succeed a DC 10 WIS save or forget your alliance for one round.
+        Rune of Enlarging: When you touch this rune as a bonus action your weapon becomes bulky and now has the Heavy Tag. During this time your weapon deals an extra 1d6 of damage on each successful attack. This transformation ends after 1 minute, if you drop the weapon or if you touch the Rune again as a bonus action. Using this ability on a weapon that already has the Heavy Tag has no effect.
+        Rune of the Goose: On your turn, you may reduce your bonus to hit by half when you make an attack. On a successful hit, the target must make a DC 8 + your weapon’s bonus to hit Wisdom saving throw, or become frightened for 1 minute. The affected creature may repeat the saving throw at the end of each of its turns. Once you use this rune, you cannot use it again until after a short or long rest. You may apply up to 3 Rune of the Gooses to gain additional uses of this feature between rests, 1 use for each rune.
+        Rune of the Dawn/Zenith/Dusk/Midnight Shine: During the corresponding time of day, lasting two hours, the weapon shines as under the effect of the Light cantrip, and deals an extra 1d10 radiant damage. (Upon rolling the rune, you may roll a d4 to determine the corresponding time of day.)
+        Rune of Bloodlust: While using the weapon, you can enter a rage once per long rest, with the features of a level 3 Barbarian’s rage (minus Primal Path benefits). If you have a Barbarian level greater than 3, you may use your own rage features (including Primal Path ones) while entering this rage.
+        Rune of Melody: In combat, the weapon emits a soft, musical humming. With practice, you may use the weapon as an instrument.
+        Rune of Celestial/Fey/Fiend/Elemental/Undead Slaying: The weapon shines when a creature of the appropriate type is 30 ft. or closer. The wielder is protected from those creatures as by the Protection From Evil And Good spell, and the weapon deals an extra 1d6 damage against them.
+        Rune of Foresight: You can use the weapon once to cast Augury as a 2nd-level spell per short rest. Wisdom is your spellcasting ability for this spell.
+        Rune of True Strike: Every time you attack, roll a d10. On a 10, you gain advantage on your attack roll and, upon a successful hit, you can roll for damage twice and choose either result.
+        Rune of Vampirism: Every time you hit, roll a d4. On a 4, you regain an amount of hp equal to half the inflicted damage.
+        Rune of Arcane Storage: You may store up to 5 levels’ worth of spell slots within the rune. Doing so requires 10 minutes per level, consumes the spell slot, and counts as a ritual. If you are touching the rune while casting a spell, you may choose to consume an amount of stored levels equal to the level of the spell instead of your own spell slots.
+        Rune of Truth: When a creature speaks a deliberate lie within 15 ft. of the rune, the weapon vibrates slightly for a few seconds. Detecting this vibration is no challenge, unless the wielder isn’t paying attention to the weapon’s response.
+        Rune of Speed: While holding the weapon, you can use the Dash action as a bonus action on each of your turns.
+        Rune of Wild Magic: On a critical failure using the weapon to attack triggers a Wild Magic Surge. Effects that require targeting are directed at the creature closest to the wielder.
+        Rune of Aquan Blessing: Wielder’s base speed increases by 10 ft. anytime it is raining or they are standing at least ankle deep in water.
+        Rune of the Primordial: Wielder can speak Primordial, and has advantage on Charisma checks on creatures that understand it.
+        Rune of Transformation: As a bonus action, on a successful Intelligence skill check, the wielder may cause the weapon to turn into any other weapon they are proficient with. No ammunition is produced this way. The weapon reverts to its true form after one hour or if the wielder loses hold of it.
+        Rune of Reflexes: You can use an extra opportunity attack per turn with this weapon, in addition to your reaction.
+        Rune of Bombardment: You can activate this rune with a power word of your choice. One turn after activation, the weapon will produce a 3rd-level Fireball spell centered on itself. This destroys the weapon.
+        Rune of Vanishing: The last rune to be carved into the item. Upon completion all runes carved into the item vanish from sight and are only visible to the creator of the item.
+        Rune of Life: This greater rune of enchantment gives item wielder immortality. He will not age, get sick or be harmed by poison. Normal damage and weapons will still kill him.
+        Rune of Alarm: This rune will begin to glow (or emit audible alarm) when certain type of creature (Dragonkind, undead, bald men…) approaches within certain range.
+        Rune of Possession: Unless the weapon is freely given or taken from its owner upon their death, this rune refuses to be attuned to another person. In addition, non-owners take -4 penalty on attack rolls if they attempt to use in the first round of combat. Subsequent rounds of combat, the weapon heats up and the holder takes 1d4 points of damage.
+        Rune of Sundering: When using the weapon to sunder objects, take a +4 bonus to attack rolls.
+        Rune of Spirit: Grants +2 morale bonus to attack rolls. In addition the weapon gains the ghost touch trait.
+        Rune of Auran Blessing: Wielder gains advantage on Animal Handling checks against creatures with a natural flight speed.
+        Rune of Returning: When the weapon is lost or stolen, it will always return to its true owner’s side after one long rest, along with one-piece ammunition if it’s a ranged weapon.
+        Rune of the Impersonnel: Once per turn when melee attacking using this weapon you can teleport to the opposite side of the creature.
+        Runs of Diplomacy: This rune allows the user to cast comprehend languages 3 times per short rest, the rune also gives you proficiency in the persuasion skill, however, due to the rune’s desire for peace, the rune gives -2 to attack and damage rolls against good aligned creatures.
+        Rune of Stone: Typically engraved on mauls, maces, and hammers, it is found on some heavy swords. This rune, it’s said, makes your weapon unbreakable in battle, and allows you to smash through enemy defenses, and cut through stone as if it were flesh.
+        Rune of Bees: Once per long or short rest, this rune allows the user to summon a swarm of bees to deal 2d4+2 Piercing or Poison damage as a bonus action. The user also gains a strange fondness for flowers.
+        Rune of the Duelist: When targeted by an enemy melee attack, you may impose disadvantage on the attack as a reaction. If the melee attack misses, you may attack the enemy who just attacked you.
+        Rune of Ignan Blessing: Natural flames in the area around the wielder glow brighter and hotter, shedding light an extra 10 ft. and dealing an extra 1d4 damage when applicable.
+        Rune of Runes: On a critical hit, the rune glows brightly and an additional rune forms on the weapon. Roll a d100 on this table to determine the newly added rune. On a critical miss, a rune disappears. If the Rune of Runes is the only remaining rune and you critical miss, the Rune of Runes disappears.
 
 NPC stuff
     Questgiver motives
@@ -1027,107 +623,6 @@ NPC stuff
         Cause the patron's society to surpass all other societies in this world. 
         To harness the power of gods for the use of mortals. 
         To prevent any mortals from ever again being subjugated by others. 
-    fey questions
-        What is the sound of a shadow? 
-        Why is a weather vane so indecisive? 
-        How is the moon like a mug of ale? 
-        What is myname? (not a typo, just watch as others argue whether or not you're asking for the NPC's name or what a 'Myname' is.) 
-        When a Druid shapchanges, where do his clothes go? 
-        How is it that grass grows but rocks don’t? 
-        What is your significance in the realm of why? 
-        Why does a Lark sound so fluidly? 
-        If buttons hold your clothes what holds the buttons? 
-        Why must your shirt be so cantankerous? 
-        Why is a quill so like a musician's lyre? 
-        How does a staff whistle so beautifully? 
-        What if a giant steps down? Are they still a giant? 
-        If you walk backwards, does your shadow follow you or do you follow the shadow? 
-        Are trees blind? 
-        Why does a Brook babble? Does it have no shame? 
-        Do you like my hat? It has its own socks. 
-        Would you like to swing on a star? 
-        Are you, or aren't you? If you are, then you certainly can't, and if you aren't then why won't you? 
-        Where is the line between time and space? 
-        Are two layers of chips with melted cheese in between a sandwich? 
-        Who TRULY let the dogs out? 
-        Is this violence in our nature simply the image of our maker? 
-        Could you use necromancy on a book? It is, after all, a collection of dead trees. 
-        What purpose do dots serve in written language? 
-        How do you know your god’s the right one to follow? 
-        Is the world more like a puppet on a string or a dog on a leash? 
-        Who shaves the barber? 
-        What about violence is cyclical? 
-        What if those who are raving mad are in the right? 
-        Are means justified by ends? 
-        What purpose do games serve? 
-        Is a good story a good way to pick a ruler? 
-        What is worse, evil or chaos? 
-        Are we alone right now? 
-        Why did the basilisk cross the road? 
-        If a treant falls in the forest, and no one is there to hear it, will it call out for help, or will it hope that nobody saw? 
-        How many licks does it take to get to the center of a sugar golem's chest cavity? 
-        Why is it that everytime my dog looks at me he seems to have some sort of question in mind, but then he turns around and starts licking his butt? 
-        Who's making clothes for all those giants? Is there a giant tailor around here somewhere? Or is there like, one giant Mom making everybody's clothes? I don't get it. 
-        Is it true you can tell how old rich people are by cutting them in half and counting their rings? 
-        Why do leprechauns keep their money in a pot? Why can't they just keep it in a purse, like everybody else? What happens if they go to the store and they forgot where their pot's is? Do they steal crap from the store? That seems a little excessive. 
-        Have you ever danced with the devil in the pale moonlight? Me neither. That guy's a douche. 
-        Why is that dude over there staring at us? 
-        What makes you think I won't cut you? 
-        Why don't the mountains crack under the weight of the sky? 
-        What's harder: watching your weight, or waiting for your watch? 
-        Do Modrons dream of mechanical sheep? 
-        Haven't you heard? (any response warrants an enthused answer) 
-        If a bear craps in the woods and no one is around does it make a sound? 
-        If you punch yourself and it hurts, does that make you strong or weak? 
-        Can God make a rock so massive that God himself cannot move it? 
-        Do you see what I see? 
-        What do I have in my pocket? 
-        How many times do you have to tell a lie before it becomes the truth? 
-        If you can cross the boundaries of one plane of existence into another, how can those planes be truly infinite? How can something that has boundaries be infinite? 
-        Which came first: the chicken or the egg? 
-        Why do they say a river runs through the land when it's always there? 
-        Does my reflection see me in the mirror? 
-        Why do cats always land on their feet while bread always lands on its butter? 
-        If you butter a cat's back and drop it, will it land on its feet, or on its butter? 
-        How do you take your ale? One lump or two? 
-        Have you thought you met me yet? 
-        Trees are wood but can they? 
-        A cow will moo but to who? 
-        If a fire is in its place but it isn't a fire place is the fire in its place or does the place have a fire? 
-        A candle burnt at both ends, which side falls first? 
-        If you are routed on your route do you get there faster? 
-        Why can a trap be sprung and a spring be set while a trap can be set but a spring can't sprung? 
-        Can a fish drink you under the table? 
-        How can the butterfly, yet the lard cannot? 
-        Did you choose where the moon would be in the sky when you were born? 
-        How is a raven like a writing desk? 
-        One eye sees a sight a second eye can also see, but the second sees the sight as second truth. One sight the same, but living separate lives. Which eye knows best? If either knows at all. 
-        Can I choke you to death? 
-        Do you know the difference between choking and strangulation? 
-        Why do humans have so many gods? man/
-        Why is a chicken? 
-        How many beans make five? 
-        How soon is now? 
-        Which way is morning? 
-        You're alive, you change, you're dead- who are you next, may I be your ghost while you are gone? 
-        If you hadn't never ever but you could, would you and why? 
-        When you toss the coin, does the coin not toss back? 
-        Which maker does the mark serve, when all change is off the counter? 
-        The whole point of the apple is the seeds- why must you spit split and discard those of The Core? 
-        Plant me a seed that I may saw the tree, wood you? 
-        North's exclusive set from sister South, yet one man's east is another man's west- to who does your compass point? 
-        What's updog? 
-        Is a hotdog a sandwich or a taco? 
-        Is water wet? 
-        Can I have your name? 
-        How do you plan on getting here? 
-        What is is? 
-        Who watches the watchmen watching the watchers watched by the watchers watching the watchmen? And where are the watchwomen? 
-        Where is nowhere? 
-        When will then be now? 
-        Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? 
-        If the planes are infinite, and the Gods are all-powerful, would you like a toasted tea-cake? 
-        What is the last question? 
     more quirks
         Mind of a child. This NPC has the mind of a child.
         Smells like dog crap. This NPC doesn’t wash very often or just has some unfortunate pheromones that cause his skin to excrete a smell that is unmistakingly similar to the smell of dog crap.
@@ -1838,8 +1333,7 @@ Catchall
         "When you make a hole in me, I have fewer holes. What am I?"	A net
         "The more you take, the more you leave behind."	Footsteps
         "What begins and has no end, and ends all things that begin?"	Death
-        "With potent, flowery words speak I, Of something common, vulgar, dry; I weave webs of pedantic prose, In effort to befuddle those,  Who think I wile time away,  In lofty things, above all day. The common kind that linger where Monadic beings live and fare;  Practical I may not be, But life, it seems, is full of me! And so adventurer I cry, can you tell me what am I?"	"A riddler, riddles, etc
-        "
+        "With potent, flowery words speak I, Of something common, vulgar, dry; I weave webs of pedantic prose, In effort to befuddle those,  Who think I wile time away,  In lofty things, above all day. The common kind that linger where Monadic beings live and fare;  Practical I may not be, But life, it seems, is full of me! And so adventurer I cry, can you tell me what am I?"	"A riddler, riddles, etc"
         I cannot be measured until I am done, oh but how you will miss me once I am gone.	Time, Lifespan
         "I welcome the day with a show of light. I came here stealthily in the night. I bathe the earthy stuff at dawn, but by noon - alas, I am gone. Tell me, what am I?"	The morning dew
         "Larger than mountains, brightening the sky, twinkling within the owls eye. Dimmer than candles, smaller than peas. Flickers, never caught, in the endless sea."	Stars
@@ -1878,8 +1372,7 @@ Catchall
         Each morning I appear to lie at your feet, all day I will follow no matter how fast you run, yet I nearly perish in the midday sun. What am I?	A Shadow
         One thin, one bold, one sick, one cold. The earth we span, to prey upon man.	The Four Horsemen of the Apocalypse
         "Once I'm used, I am useless. Twice offered, soon rejected. In desperation, oft expressed, but the intended, unprotected. Tell me, what am I?"	An alibi, an excuse
-        There are one hundred candles in a room in a line, and a hundred people walk through. The first person lights every candle. The second person extinguishes every second candle. The third person lights or extinguishes every third candle. The fourth, every forth, until all one hundred people have passed down the line. How many candles are lit? Is the __th candle lit?	"Only square numbered candles will be lit. 1, 4, 9, 16, etc - therefore there will be 10 candles lit at the end.
-        "
+        There are one hundred candles in a room in a line, and a hundred people walk through. The first person lights every candle. The second person extinguishes every second candle. The third person lights or extinguishes every third candle. The fourth, every forth, until all one hundred people have passed down the line. How many candles are lit? Is the __th candle lit?	"Only square numbered candles will be lit. 1, 4, 9, 16, etc - therefore there will be 10 candles lit at the end."
         Four hang, four sprang, two point the way, two to ward off dogs, one dangles after, always rather dirty. What am I?	A cow
         If you had taken me in my youth, haply you would have drunk the blood shed from me; but now that time has finished making me old, eat me, wrinkled as I am, with no moisture in me, crushing my bones together with my flesh.	A raisin
         There was a green house.  Inside the green house there was a white house.  Inside the white house there was a red house.  Inside the red house there were little black babies.	A watermelon
