@@ -161,7 +161,7 @@ function reload() {
 //page scripts
 function treasureMap() {
     let start = [
-        `big cracked boulder`, `lightning-blasted oak tree`, `rock shaped like a horse`, `stone wall with a piece of volcanic glass`, `exact center of the village/town/city`, `statue of <famous person>`, `shipwreck of the SS <name>`, `bones of the black dragon`, `cavern near the waterfall`, `top of the volcano`, `exact center of the lake`, `abandoned Temple`, `old Fort`, `old standing circle`, `road marker leading south`, `exact center of the longest bridge`, `hangman's scaffold`, `king's/queens throne room`, `crossroads`, `largest tomb in the cemetary`,
+        `big cracked boulder`, `lightning-blasted oak tree`, `rock shaped like a horse`, `stone wall with a piece of volcanic glass`, `exact center of the village/town/city`, `statue of (famous person)`, `shipwreck of the SS (name)`, `bones of the black dragon`, `cavern near the waterfall`, `top of the volcano`, `exact center of the lake`, `abandoned Temple`, `old Fort`, `old standing circle`, `road marker leading south`, `exact center of the longest bridge`, `hangman's scaffold`, `king's/queen's throne room`, `crossroads`, `largest tomb in the cemetary`,
     ]
     let then = [
         `Go north for ${1 +rollDice(20)} mile(s)`, `Go south for ${1 +rollDice(20)} mile(s)`, `Go east for ${1 +rollDice(20)} mile(s)`, `Go west for ${1 +rollDice(20)} mile(s)`, `Go northeast for ${1 +rollDice(20)} mile(s)`, `Go northwest for ${1 +rollDice(20)} mile(s)`, `Go southeast for ${1 +rollDice(20)} mile(s)`, `Go southwest for ${1 +rollDice(20)} mile(s)`,
@@ -173,7 +173,8 @@ function treasureMap() {
         `go north for ${1 +rollDice(30)} mile(s)`, `go south for ${1 +rollDice(30)} mile(s)`, `go east for ${1 +rollDice(30)} mile(s)`, `go west for ${1 +rollDice(30)} mile(s)`, `go northeast for ${1 +rollDice(30)} mile(s)`, `go northwest for ${1 +rollDice(30)} mile(s)`, `go southeast for ${1 +rollDice(30)} mile(s)`, `go southwest for ${1 +rollDice(30)} mile(s)`,
     ]
     let untilTwo = [
-        `rock shaped like a heart`, `mountain shaped like a bird's head`, `petrified forest`, `salt lake`, `dried up swampland`, `broken bridge`, `old abandoned mill`, `the ruined tower of <famous mage>`, `the ancient cemetary`, `the mossy limestone cliffs`, `the old granite quarry`, `the abandoned campgrounds`, `the vandalized statue of <former ruler>`, `the crossroads`, `the road marker pointing West`, `shipwreck of the SS <name>`, `minaret`, `quicksand`, `hills honeycombed with caves`, `old King's Forest`,
+        `rock shaped like a heart`, `mountain shaped like a bird's head`, `petrified forest`, `salt lake`, `dried up swampland`, `broken bridge`, `old abandoned mill`, `the ruined tower of (famous mage)`, `the ancient cemetary`, `the mossy limestone cliffs`, `the old granite quarry`, `the abandoned campgrounds`, `the vandalized statue of (former ruler)`, `the crossroads`, `the road marker pointing West`,
+        `minaret`, `quicksand`, `hills honeycombed with caves`, `old King's Forest`,
     ]
     let thenThree = [
         `go north for ${1 + rollDice(15)} mile(s)`, `go south for ${1 +rollDice(15)} mile(s)`, `go east for ${1 +rollDice(15)} mile(s)`, `go west for ${1 +rollDice(15)} mile(s)`, `go northeast for ${1 +rollDice(15)} mile(s)`, `go northwest for ${1 +rollDice(15)} mile(s)`, `go southeast for ${1 +rollDice(15)} mile(s)`, `go southwest for ${1 +rollDice(15)} mile(s)`,
@@ -191,7 +192,7 @@ function treasureChest() {
     ]
 
     let material = [
-        "old, rotting wood", "sturdy oak", "diamondwood", "iron", "steel", "bone", "obsidian", "glass", "ice", "silver", "gold", "ebony",
+        "old, rotting wood", "sturdy oak", "diamondwood", "iron", "steel", "bone", "obsidian", "glass", "platinum", "electrum", "silver", "gold", "ebony", "stone"
     ]
 
     let trim = [
