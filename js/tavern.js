@@ -26,6 +26,48 @@ function printFrom(array, number, id) {
         document.getElementById(id).appendChild(li);
     });
 };
+
+function orderedPrint(array, number, id) {
+    let list = array.slice(0, number)
+    list.forEach(function(item) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(item);
+        li.appendChild(text);
+        document.getElementById(id).appendChild(li);
+    });
+};
+
+function loopCountStoreList(array) {
+    let x = array
+
+    function count(array) {
+        a = array
+        a.sort();
+        var current = null;
+        var cnt = 0;
+        let final = []
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] != current) {
+                if (cnt > 0) {
+                    final.push(cnt + "-" + current);
+                }
+                current = a[i];
+                cnt = 1;
+            } else {
+                cnt++;
+            }
+        }
+        if (cnt > 0) {
+            final.push(cnt + "-" + current);
+        }
+        return final
+    }
+    return count(x);
+};
+
+function modify(number) {
+    return Math.floor(number * (.85 + Math.random() * .4))
+};
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -562,6 +604,576 @@ function quest() {
     };
 };
 
+function rivalParty() {
+    document.getElementById("Rival").innerHTML = ""
+
+    function calculateGold(level, fights) {
+        if (level === 1) {
+            return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(0)*fights} EP:${modify(5)*fights} SP:${modify(195)*fights} CP:${modify(390)*fights}`
+        } else if (level === 2) {
+            return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(3)*fights} EP:${modify(31)*fights} SP:${modify(312)*fights} CP:${modify(260)*fights}`
+        } else if (level === 3) {
+            return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(12)*fights} EP:${modify(35)*fights} SP:${modify(482)*fights} CP:${modify(158)*fights}`
+        } else if (level === 4) {
+            return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(1)*fights} GP:${modify(16)*fights} EP:${modify(53)*fights} SP:${modify(567)*fights} CP:${modify(105)*fights}`
+        } else if (level === 5) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(2)*fights} GP:${modify(50)*fights} EP:${modify(248)*fights} SP:${modify(828)*fights} CP:${modify(14)*fights}`
+        } else if (level === 6) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(4)*fights} GP:${modify(60)*fights} EP:${modify(305)*fights} SP:${modify(828)*fights} CP:${modify(0)*fights}`
+        } else if (level === 7) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(5)*fights} GP:${modify(69)*fights} EP:${modify(386)*fights} SP:${modify(772)*fights} CP:${modify(0)*fights}`
+        } else if (level === 8) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(18)*fights} GP:${modify(71)*fights} EP:${modify(485)*fights} SP:${modify(706)*fights} CP:${modify(0)*fights}`
+        } else if (level === 9) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(7)*fights} GP:${modify(84)*fights} EP:${modify(755)*fights} SP:${modify(547)*fights} CP:${modify(0)*fights}`
+        } else if (level === 10) {
+            return `(Average Value: ~${505*fights}gp) Coins: PP:${modify(7)*fights} GP:${modify(66)*fights} EP:${modify(696)*fights} SP:${modify(718)*fights} CP:${modify(0)*fights}`
+        } else if (level === 11) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(24)*fights} GP:${modify(968)*fights} EP:${modify(399)*fights} SP:${modify(142)*fights} CP:${modify(0)*fights}`
+        } else if (level === 12) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(26)*fights} GP:${modify(1057)*fights} EP:${modify(466)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 13) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(29)*fights} GP:${modify(1262)*fights} EP:${modify(269)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 14) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(27)*fights} GP:${modify(1432)*fights} EP:${modify(218)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 15) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(39)*fights} GP:${modify(1457)*fights} EP:${modify(194)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 16) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(46)*fights} GP:${modify(1533)*fights} EP:${modify(166)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 17) {
+            return `(Average Value: ~${1951*fights}gp) Coins: PP:${modify(779)*fights} GP:${modify(875)*fights} EP:${modify(175)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 18) {
+            return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(834)*fights} GP:${modify(834)*fights} EP:${modify(185)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 19) {
+            return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(870)*fights} GP:${modify(1075)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        } else if (level === 20) {
+            return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(921)*fights} GP:${modify(1081)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
+        }
+    };
+
+    function alternateRewards(level, fights) {
+        function loopCountPushGems(array, array2, value) {
+            let x = array
+
+            function count(array) {
+                a = array
+                a.sort();
+                var current = null;
+                var cnt = 0;
+                let final = []
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i] != current) {
+                        if (cnt > 0) {
+                            final.push(cnt + "-" + current);
+                        }
+                        current = a[i];
+                        cnt = 1;
+                    } else {
+                        cnt++;
+                    }
+                }
+                if (cnt > 0) {
+                    final.push(cnt + "-" + current);
+                }
+                return final
+            }
+            final = count(x);
+            array2.push(` Bag of gems (Value: ${value} gp): ${final}`)
+        }
+
+        function loopCountPushArt(array, array2, value) {
+            let x = array
+
+            function count(array) {
+                a = array
+                a.sort();
+                var current = null;
+                var cnt = 0;
+                let final = []
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i] != current) {
+                        if (cnt > 0) {
+                            final.push(cnt + "-" + current);
+                        }
+                        current = a[i];
+                        cnt = 1;
+                    } else {
+                        cnt++;
+                    }
+                }
+                if (cnt > 0) {
+                    final.push(cnt + "-" + current);
+                }
+                return final
+            }
+            final = count(x);
+            array2.push(`A Set of Art Pieces (Value: ${value} gp): ${final}`)
+        }
+        let cantrip = ["Acid Splash", "Blade Ward", "Booming Blade", "Chill Touch", "Control Flames", "Create Bonfire", "Dancing Lights", "Druidcraft", "Eldritch Blast", "Fire Bolt", "Friends", "Frostbite", "Green-Flame Blade", "Guidance", "Gust", "Infestation", "Light", "Lightning Lure", "Mage Hand", "Magic Stone", "Mending", "Message", "Minor Illusion", "Mold earth", "Poison Spray", "Prestidigitation", "Primal Savagery", "Produce Flame", "Ray of Frost", "Resistance", "Sacred Flame", "Shape Water", "Shillelagh", "Shocking Grasp", "Spare the Dying", "Sword Burst", "Thaumaturgy", "Thorn Whip", "Thunderclap", "Toll the Dead", "True Strike", "Vicious Mockery", "Word of Radiance"]
+        let first = ["Absorb Elements", "Alarm", "Animal Friendship", "Armor of Agathys", "Arms of Hadar", "Bane", "Beast Bond", "Bless", "Burning Hands", "Catapult", "Cause Fear", "Ceremony (Ritual)", "Chaos Bolt", "Charm Person", "Chromatic Orb", "Color Spray", "Command", "Compelled Duel", "Comprehend Languages (Ritual)", "Create or Destroy Water", "Cure Wounds", "Detect Evil and Good", "Detect Magic (Ritual)", "Detect Poison and Disease (Ritual)", "Disguise Self", "Dissonant Whispers", "Divine Favor", "Earth Tremor", "Ensnaring Strike", "Entangle", "Expeditious Retreat", "Faerie Fire", "False Life", "Feather Fall", "Find Familiar (Ritual)", "Fog Cloud", "Goodberry", "Grease", "Guiding Bolt", "Hail of Thorns", "Healing Word", "Hellish Rebuke", "Heroism", "Hex", "Hunter’s Mark", "Ice Knife", "Identify", "Illusory Script", "Inflict Wounds", "Jump", "Longstrider", "Mage Armor", "Magic Missile", "Protection from Evil and Good", "Purify Food and Drink (Ritual)", "Ray of Sickness", "Sanctuary", "Searing Smite", "Shield", "Shield of Faith", "Silent Image", "Sleep", "Snare", "Speak with Animals (Ritual)", "Tasha’s Hideous Laughter", "Tenser’s Floating Disk (Ritual)", "Thunderous Smite", "Thunderwave", "Unseen Servant (Ritual)", "Witch Bolt", "Wrathful Smite", "Zephyr Strike"]
+        let second = ["Aganazzar’s Scorcher", "Aid", "Alter Self", "Animal Messenger (Ritual)", "Arcane Lock", "Augury", "Barkskin", "Beast Sense (Ritual)", "Blindness/Deafness", "Blur", "Branding Smite", "Calm Emotions", "Cloud of Daggers", "Continual Flame", "Cordon of Arrows", "Crown of Madness", "Darkness", "Darkvision", "Detect Thoughts", "Dragon's Breath", "Dust Devil", "Earthbind", "Enhance Ability", "Enlarge/Reduce", "Enthrall", "Find Steed", "Find Traps", "Flame Blade", "Flaming Sphere", "Gentle Repose (Ritual)", "Gust of Wind", "Healing Spirit", "Heat Metal", "Hold Person", "Invisibility", "Knock", "Lesser Restoration", "Levitate", "Locate Animals or Plants (Ritual)", "Locate Object", "Magic Mouth", "Magic Weapon", "Maximilian’s Earthen Grasp", "Melf’s Acid Arrow", "Mind Spike", "Mirror Image", "Misty Step", "Moonbeam", "Nystul’s Magic Aura", "Pass Without Trace", "Phantasmal Force", "Prayer of Healing", "Protection from Poison", "Pyrotechnics", "Ray of Enfeeblement", "Rope Trick", "Scorching Ray", "See invisibility", "Shadow Blade", "Shatter", "Silence (Ritual)", "Skywrite (Ritual)", "Snilloc’s Snowball Swarm", "Spider Climb", "Spike Growth", "Spiritual Weapon", "Suggestion", "Warding Bond", "Warding Wind", "Web", "Zone of Truth"]
+        let third = ["Animate Dead", "Aura of Vitality", "Beacon of Hope", "Bestow Curse", "Blinding Smite", "Blink", "Call Lightning", "Catnap", "Clairvoyance", "Conjure Animals", "Conjure Barrage", "Counterspell", "Create Food and Water", "Crusader’s Mantle", "Daylight", "Dispel Magic", "Elemental Weapon", "Enemies abound", "Erupting Earth", "Fear", "Feign Death (Ritual)", "Fireball", "Flame Arrows", "Fly", "Gaseous Form", "Glyph of Warding", "Haste", "Hunger of Hadar", "Hypnotic Pattern", "Leomund’s Tiny Hut", "Life Transference", "Lightning Arrow", "Lightning Bolt", "Magic Circle", "Major Image", "Mass Healing Word", "Meld into Stone (Ritual)", "Melf’s Minute Meteors", "Nondetection", "Phantom Steed", "Plant Growth", "Protection from Energy", "Remove Curse", "Revivify", "Sending", "Sleet Storm", "Slow", "Speak with Dead", "Speak with Plants", "Spirit Guardians", "Stinking Cloud", "Summon Lesser Demons", "Thunder Step", "Tidal Wave", "Tiny Servant", "Tongues", "Vampiric Touch", "Wall of Sand", "Wall of Water", "Water Breathing (Ritual)", "Water Walk (Ritual)", "Wind Wall"]
+        let fourth = ["Arcane Eye", "Aura of Life", "Aura of Purity", "Banishment", "Blight", "Charm Monster", "Compulsion", "Confusion", "Conjure Minor Elementals", "Conjure Woodland Beings", "Control Water", "Death Ward", "Dimension Door", "Divination (Ritual)", "Dominate Beast", "Elemental Bane", "Evard’s Black Tentacles", "Fabricate", "Find Greater Steed", "Fire Shield", "Freedom of Movement", "Giant Insect", "Grasping Vine", "Greater Invisibility", "Guardian of Faith", "Guardian of Nature", "Hallucinatory Terrain", "Ice Storm", "Leomund’s Secret Chest", "Locate Creature", "Mordenkainen’s Faithful Hound", "Mordenkainen’s Private Sanctum", "Otiluke’s Resilient Sphere", "Phantasmal Killer", "Polymorph", "Shadow of Moil", "Sickening Radiance", "Staggering Smite", "Stone Shape", "Stoneskin", "Storm Sphere", "Summon Greater Demon", "Vitriolic Sphere", "Wall of Fire", "Watery Sphere"]
+        let fifth = ["Animate Objects", "Antilife Shell", "Awaken", "Banishing Smite", "Bigby’s Hand", "Circle of Power", "Cloudkill", "Commune", "Commune with Nature", "Cone of Cold", "Conjure Elemental", "Conjure Volley", "Contact Other Plane", "Contagion", "Control Winds", "Creation", "Danse Macabre", "Dawn", "Destructive Wave", "Dispel Evil and Good", "Dominate Person", "Dream", "Enervation", "Far Step", "Flame Strike", "Geas", "Greater Restoration", "Hallow", "Hold Monster", "Holy Weapon", "Immolation", "Infernal Calling", "Insect Plague", "Legend Lore", "Maelstrom", "Mass Cure Wounds", "Mislead", "Modify Memory", "Negative Energy Flood", "Passwall", "Planar Binding", "Raise Dead", "Rary’s Telepathic Bond (Ritual)", "Reincarnate", "Scrying", "Seeming", "Skill Empowerment", "Steel Wind Strike", "Swift Quiver", "Synaptic Static", "Telekinesis", "Teleportation Circle", "Transmute Rock", "Tree Stride", "Wall of Force", "Wall of Light", "Wall of Stone", "Wrath of Nature"]
+        let sixth = ["Arcane Gate", "Blade Barrier", "Bones of the Earth", "Chain Lightning", "Circle of Death", "Conjure Fey", "Contingency", "Create Homunculus", "Create Undead", "Disintegrate", "Drawmij’s Instant Summons", "Druid Grove", "Eyebite", "Find the Path", "Flesh to Stone", "Forbiddance (Ritual)", "Globe of Invulnerability", "Guards and Wards", "Harm", "Heal", "Heroes’ Feast", "Investiture of Flame", "Investiture of Ice", "Investiture of Stone", "Investiture of Wind", "Magic Jar", "Mass Suggestion", "Mental Prison", "Move Earth", "Otiluke’s Freezing Sphere", "Otto’s Irresistible Dance", "Planar Ally", "Primordial Ward", "Primordial Ward", "Programmed", "Scatter", "Soul Cage", "Sunbeam", "Tenser’s Transformation", "Transport via Plants", "True Seeing", "Wall of Ice", "Wall of Thorns", "Wind Walk", "Word of Recall"]
+        let seventh = ["Conjure Celestial", "Crown of Stars", "Delayed Blast Fireball", "Divine Word", "Etherealness", "Finger of Death", "Fire Storm", "Forcecage", "Mirage Arcane", "Mordenkainen’s Magnificent Mansion", "Mordenkainen’s Sword", "Plane Shift", "Power Word Pain", "Prismatic Spray", "Project Image", "Regenerate", "Resurrection", "Reverse Gravity", "Sequester", "Simulacrum", "Symbol", "Teleport", "Temple of the Gods", "Whirlwind"]
+        let eighth = ["Abi-Dalzim’s Horrid Wilting", "Animal Shapes", "Antimagic Field", "Antipathy/Sympathy", "Clone", "Control Weather", "Demiplane", "Dominate Monster", "Earthquake", "Feeblemind", "Glibness", "Holy Aura", "Illusory Dragon", "Incendiary Cloud", "Maddening Darkness", "Maze", "Mighty Fortress", "Mind Blank", "Power Word Stun", "Sunburst", "Telepathy", "Trap the Soul", "Tsunami"]
+        let ninth = ["Astral Projection", "Foresight", "Gate", "Imprisonment", "Invulnerability", "Mass Heal", "Mass Polymorph", "Meteor Swarm", "Power Word Heal", "Power Word Kill", "Prismatic Wall", "Psychic Scream", "Shapechange", "Storm of Vengeance", "Time Stop", "True Polymorph", "True Resurrection", "Weird", "Wish"]
+        let magicItemsA = [`Spell scroll (cantrip) ${searchArray(cantrip)}`, `Spell scroll (1st level) ${searchArray(first)}`, `Spell scroll (2nd level) ${searchArray(second)}`, `Spell scroll (3rd level) ${searchArray(third)}`, "Potion of healing", "Potion of climbing", "Potion of greater healing", "Bag of holding", "Driftglobe"]
+        let magicItemsB = [`Spell scroll (cantrip) ${searchArray(cantrip)}`, `Spell scroll (1st level) ${searchArray(first)}`, `Spell scroll (2nd level) ${searchArray(second)}`, `Spell scroll (3rd level) ${searchArray(third)}`, "Potion of greater healing", "Potion of fire breath", "Potion of resistance", "Ammunition, +1", "Potion of animal friendship", "Potion of hill giant strength", "Potion of growth", "Potion of water breathing", "Bag of holding", "Keoghtom's ointment", "Oil of slipperiness", "Dust of disappearance", "Dust of dryness", "Dust of sneezing and choking", "Elemental gem", "Philter of love", "Alchemy jug", "Cap of water breathing", "Cloak of the manta ray", "Driftglobe", "Goggles of night", "Helm of comprehending languages", "Immovable rod", "Lantern of revealing", "Mariner's armor", "Mithral armor", "Potion of poison", "Ring of swimming", "Robe of useful items", "Rope of climbing", "Saddle of the cavalier", "Wand of magic detection", "Wand of secrets"]
+        let magicItemsC = [`Spell scroll (cantrip) ${searchArray(cantrip)}`, `Spell scroll (1st level) ${searchArray(first)}`, `Spell scroll (2nd level) ${searchArray(second)}`, `Spell scroll (3rd level) ${searchArray(third)}`, "Potion of superior healing", "Ammunition, +2", "Potion of clairvoyance", "Potion of diminution", "Potion of gaseous form", "Potion of frost giant strength", "Potion of stone giant strength", "Potion of heroism", "Potion of invulnerability", "Potion of mind reading", "Elixir of health", "Oil of etherealness", "Potion of fire giant strength", "Quaal's feather token", "Scroll of protection", "Bag of beans", "Bead of force", "Chime of opening", "Decanter of endless water", "Eyes of minute seeing", "Folding boat", "Heward's handy haversack", "Horseshoes of speed", "Necklace of fireballs", "Periapt of health", "Sending Stones"]
+        let magicItemsD = [`Spell scroll (4thlevel) ${searchArray(fourth)}`, `Spell scroll (5thlevel) ${searchArray(fifth)}`, `Spell scroll (6thlevel) ${searchArray(sixth)}`, "Potion of supreme healing", "Potion of invisibility", "Potion of speed", "Ammunition, +3", "Oil of sharpness", "Potion of flying", "Potion of cloud giant strength", "Potion of longevity", "Potion of vitality", "Horseshoes of a zephyr", "Nolzur's marvelous pigments", "Bag of devouring", "Portable hole"]
+        let magicItemsE = [`Spell scroll (4thlevel) ${searchArray(fourth)}`, `Spell scroll (5thlevel) ${searchArray(fifth)}`, `Spell scroll (6thlevel) ${searchArray(sixth)}`, "Potion of storm giant strength", "Potion of supreme healing", "Universal solvent", "Arrow of slaying", "Sovereign glue"]
+        let magicItemsF = [`Spell scroll (4thlevel) ${searchArray(fourth)}`, `Spell scroll (5thlevel) ${searchArray(fifth)}`, `Spell scroll (6thlevel) ${searchArray(sixth)}`, "Weapon, +1", "Shield,+ 1", "Sentinel shield", "Amulet of proof against detection and location", "Boots of elvenkind", "Boots of striding and springing", "Bracers of archery", "Brooch of shielding", "Broom of flying", "Cloak of elvenkind", "Cloak of protection", "Gauntlets of ogre power", "Hat of disguise", "Javelin of lightning", "Pearl of power", "Rod of the pact keeper, + 1", "Slippers of spider climbing", "Staff of the adder", "Staff of the python", "Sword of vengeance", "Trident of fish command", "Wand of magic missiles", "Wand of the war mage, + 1", "Wand of web", "Weapon of warning", "Adamantine armor (chain mail)", "Adamantine armor (chain shirt)", "Adamantine armor (scale mail)", "Bag of tricks (gray)", "Bag of tricks (rust)", "Bag of tricks (tan)", "Boots of the winterlands", "Circlet of blasting", "Deck of illusions", "Eversmoking bottle", "Eyes of charming", "Eyes of the eagle", "Figurine of wondrous power (silver raven)", "Gem of brightness", "Gloves of missile snaring", "Gloves of swimming and climbing", "Gloves of thievery", "Headband of intellect", "Helm of telepathy", "Instrument of the bards (Doss lute)", "Instrument of the bards (Fochlucan bandore)", "Instrument of the bards (Mac-Fuimidh cittern)", "Medallion of thoughts", "Necklace of adaptation", "Periapt of wound closure", "Pipes of haunting", "Pipes of the sewers", "Ring of jumping", "Ring of mind shielding", "Ring of warmth", "Ring of water walking", "Quiver of Ehlonna", "Stone of good luck", "Wind fan", "Winged boots"]
+        let magicItemsG = [`Spell scroll (7thlevel) ${searchArray(seventh)}`, `Spell scroll (8thlevel) ${searchArray(eighth)}`, `Spell scroll (9th level) ${searchArray(ninth)}`, "Weapon, +2", `Figurine of wondrous power ${searchArray(["(bronze griffon)", "(ebony fly)", "(golden lions)", "(ivory goats)", "(marble elephant)", "(onyx dog)", "(serpentine owl)"])}`, "Adamantine armor (breastplate)", "Adamantine armor (splint)", "Amulet of health", "Armor of vulnerability", "Arrow-catching shield", "Belt of dwarvenkind", "Belt of hill giant strength", "Berserker axe", "Boots of levitation", "Boots of speed", "Bowl of commanding water elementals", "Bracers of defense", "Brazier of commanding fire elementals", "Cape of the mountebank", "Censer of controlling air elementals", "Armor, +1 chain mail", "Armor of resistance (chain mail)", "Armor of resistance (chain shirt)", "Armor,+ 1 chain shirt", "Cloak of displacement", "Cloak of the bat", "Cube of force", "Daern's instant fortress", "Dagger of venom", "Dimensional shackles", "Dragon slayer", "Elven chain", "Flame tongue", "Gem of seeing", "Giant slayer", "Clamoured studded leather", "Helm of teleportation", "Horn of blasting", "Horn of Valhalla (silver or brass)", "Instrument of the bards (Canaithmandolin)", "Instrument of the bards (Cii lyre)", "loun stone (awareness)", "loun stone (protection)", "loun stone (reserve)", "loun stone (sustenance)", "Iron bands of Bilarro", "Armor, + 1 leather", "Armor of resistance (leather)", "Mace of disruption", "Mace of smiting", "Mace of terror", "Mantle of spell resistance", "Necklace of prayer beads", "Periapt of proof against poison", "Ring of animal influence", "Ring of evasion", "Ring of feather falling", "Ring of free action", "Ring of protection", "Ring of resistance", "Ring of spell storing", "Ring of the ram", "Ring of X-ray vision", "Robe of eyes", "Rod of rulership", "Rod of the pact keeper, +2", "Rope of entanglement", "Armor, +1 scale mail", "Armor of resistance (scale mail)", "Shield, +2", "Shield of missile attraction", "Staff of charming", "Staff of healing", "Staff of swarming insects", "Staff of the woodlands", "Staff of withering", "Stone of controlling earthelementals", "Sun blade", "Sword of life stealing", "Sword of wounding", "Tentacle rod", "Vicious weapon", "Wand of binding", "Wand of enemy detection", "Wand of fear", "Wand of fireballs", "Wand of lightning bolts", "Wand of paralysis", "Wand of the war mage, +2", "Wand of wonder", "Wings of flying"]
+        let magicItemsH = [`Spell scroll (7thlevel) ${searchArray(seventh)}`, `Spell scroll (8thlevel) ${searchArray(eighth)}`, `Spell scroll (9th level) ${searchArray(ninth)}`, "Weapon, +3", "Amulet of the planes", "Carpet of flying", "Crystal ball (very rare version)", "Ring of regeneration", "Ring of shooting stars", "Ring of telekinesis", "Robe of scintillating colors", "Robe of stars", "Rod of absorption", "Rod of alertness", "Rod of security", "Rod of the pact keeper, +3", "Scimitar of speed", "Shield, +3", "Staff of fire", "Staff of frost", "Staff of power", "Staff of striking", "Staff of thunder and lightning", "Sword of sharpnes", "Wand of polymorph", "Wand of the war mage, + 3", "Adamantine armor (half plate)", "Adamantine armor (plate)", "Animated shield", "Belt of fire giant strength", "Belt of frost (or stone) giant strength", "Armor, + 1 breastplate", "Armor of resistance (breastplate)", "Candle of invocation", "Armor, +2 chain mail", "Armor, +2 chain shirt", "Cloak of arachnida", "Dancing sword", "Demon armor", "Dragon scale mail", "Dwarven plate", "Dwarven thrower", "Efreeti bottle", "Figurine of wondrous power (obsidian steed)", "Frost brand", "Helm of brilliance", "Horn of Valhalla (bronze)", "Instrument of the bards (Anstruthharp)", "loun stone (absorption)", "loun stone (agility)", "loun stone (fortitude)", "loun stone (insight)", "loun stone (intellect)", "loun stone (leadership)", "loun stone (strength)", "Armor, +2 leather", "Manual of bodily health", "Manual of gainful exercise", "Manual of golems", "Manual of quickness of action", "Mirror of life trapping", "Nine lives stealer", "Oathbow", "Armor, +2 scale mail", "Spellguard shield", "Armor, + 1 splint", "Armor of resistance (splint)", "Armor, + 1 studded leather", "Armor of resistance (studded leather)", "Tome of clear thought", "Tome of leadership and influence", "Tome of understanding"]
+        let magicItemsI = [`Spell scroll (7thlevel) ${searchArray(seventh)}`, `Spell scroll (8thlevel) ${searchArray(eighth)}`, `Spell scroll (9th level) ${searchArray(ninth)}`, "Defender", "Hammer of thunderbolts", "Luck Blade", "Sword of answering", "Holy avenger", "Ring of djinni summoning", "Ring of invisibility", "Ring of spell turning", "Rod of lordly might", "Vorpal sword", "Belt of cloud giant strength", "Armor, +2 breastplate", "Armor, +3 chain mail", "Armor, +3 chain shirt", "Cloak of invisibility", "Crystal ball (legendary version)", "Armor, + 1 half plate", "Iron flask", "Armor, +3 leather", "Armor, +1 plate", "Robe of the archmagi", "Rod of resurrection", "Armor, +1 scale mail", "Scarab of protection", "Armor, +2 splint", "Armor, +2 studded leather", "Well of many worlds", "Armor, +2 half plate", "Armor, +2 plate", "Armor, +3 studded leather", "Armor, +3 breastplate", "Armor, +3 splint", "Armor, +3 half plate", "Armor, +3 plate", "Apparatus of Kwalish", "Armor of invulnerability", "Belt of storm giant strength", "Cubic gate", "Deck of many things", "Efreeti chain", "Armor of resistance (half plate)", "Horn of Valhalla (iron)", "Instrument of the bards (OIIamh harp)", "loun stone (greater absorption)", "loun stone (mastery)", "loun stone (regeneration)", "Plate armor of etherealness", "Plate armor of resistance", "Ring of air elemental command", "Ring of earthelemental command", "Ring of fire elemental command", "Ring of three wishes", "Ring of water elemental command", "Sphere of annihilation", "Talisman of pure good", "Talisman of the sphere", "Talisman of ultimate evil", "Tome of the stilled tongue"]
+
+
+        if (level === 1) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 2)
+            for (i = 0; i < x; i++) {
+
+
+                loot.push(searchArray(magicItemsA))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 2) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 2)
+            for (i = 0; i < x; i++) {
+
+
+
+                loot.push(searchArray(magicItemsA))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 3) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 2)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsA))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 4) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 2)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsA))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 5) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 4)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsB))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 6) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 4)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsB))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 7) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 4)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsB))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 8) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 4)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsA))
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsB))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 9) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 4)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsB))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 10) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsC))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 11) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsB))
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsC))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 12) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsC))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 13) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsD))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 14) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsC))
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsD))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 15) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 6)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsD))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 16) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 8)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsE))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 17) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 8)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsD))
+                loot.push(searchArray(magicItemsE))
+                loot.push(searchArray(magicItemsE))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 18) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 8)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsE))
+                loot.push(searchArray(magicItemsF))
+                loot.push(searchArray(magicItemsG))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 19) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 8)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsF))
+                loot.push(searchArray(magicItemsG))
+                loot.push(searchArray(magicItemsH))
+            }
+
+
+            return loopCountStoreList(loot)
+        } else if (level === 20) {
+            let loot = []
+
+
+            let x = Math.floor(1 + fights / 8)
+            for (i = 0; i < x; i++) {
+
+
+
+
+                loot.push(searchArray(magicItemsG))
+                loot.push(searchArray(magicItemsH))
+                loot.push(searchArray(magicItemsI))
+            }
+
+
+            return loopCountStoreList(loot)
+        }
+    };
+
+    let partySize = 3 + rollDice(3)
+    let partyLevel = 1 + rollDice(19)
+    let standing = [
+        "friendly towards the PC party", "hostile towards the PC party for a percieved slight", "stand-offish and secretive", "drunk", "currently looking for someone", "recovering/wounded from a battle that went poorly",
+    ]
+    let travelPlans = [
+        "North", "North - East", "East", "South - East", "South", "South - West", "West", "North - West",
+    ]
+
+    function partyPrint(Number) {
+        function pBuilder(Number) {
+            let party = []
+            for (let i = 0; i < Number; i++) {
+                party[i] = ` ${genderReturn()} ${raceReturn()} ${findClass()}`
+            };
+
+            function raceReturn() {
+                var races = [
+                    [ //Common
+                        'Human',
+                    ],
+                    [ //Uncommon
+                        'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Halfling',
+                    ],
+                    [ //Rare
+                        'Dragonborn', 'Tiefling', 'Genasi', 'Aasimar', 'Half-Orc', 'Tabaxi',
+                    ],
+                    [ //Very Rare
+                        'Kalashtar', 'Shifter', 'Warforged', 'Simic Hybrid', 'Changeling', 'Goliath', 'Gith', 'Yuan-Ti', 'Tortle', 'Aarakocra', 'Orc',
+                    ],
+                    [ //Ultimate Rare
+                        'Bugbear', 'Firbolg', 'Goblin', 'Hobgoblin', 'Kenku', 'Kobold', 'Triton', 'Lizardfolk', 'Vedalken', 'Verdan', 'Locathah', 'Grung', 'Centaur', 'Loxodon', 'Minotaur',
+                    ],
+                ]
+
+                let chance = rollDice(100)
+                if (chance > 98) {
+                    let raceArray = races[4]
+                    return searchArray(raceArray);
+                } else if (chance > 95) {
+                    let raceArray = races[3]
+                    return searchArray(raceArray);
+                } else if (chance > 80) {
+                    let raceArray = races[2]
+                    return searchArray(raceArray);
+                } else if (chance > 50) {
+                    let raceArray = races[1]
+                    return searchArray(raceArray);
+                } else {
+                    let raceArray = races[0]
+                    return searchArray(raceArray);
+                }
+            };
+
+            function findClass() {
+                //Class Array
+                let classes = [
+                    [
+                        'Bard', 'Cleric', 'Fighter', 'Ranger', 'Rogue',
+                    ],
+                    [
+                        'Barbarian', 'Druid', 'Monk', 'Paladin',
+                    ],
+                    [
+                        'Sorcerer', 'Warlock', 'Wizard', 'Artificer', 'Summoner',
+                    ],
+                    [
+                        'Bounty Hunter', 'Blood Hunter', 'Mystic',
+                    ],
+                ]
+
+                function classReturn() {
+                    var chance = rollDice(100);
+                    if (chance > 98) {
+                        return searchArray(classes[3]);
+                    } else if (chance > 75) {
+                        return searchArray(classes[2]);
+                    } else if (chance > 45) {
+                        return searchArray(classes[1]);
+                    } else {
+                        return searchArray(classes[0]);
+                    };
+                }
+                return classReturn()
+            };
+
+            function genderReturn() {
+                let chance = rollDice(100)
+                if (chance < 50) {
+                    return "(F)"
+                } else {
+                    return "(M)"
+                }
+            };
+            return party
+        }
+        return pBuilder(Number)
+    }
+    let pcomp = partyPrint(partySize)
+
+    let flavor = `Another adventuring party ${searchArray(["is already in the tavern once the PC party arrives", "arrives to the tavern some time after the PC party"])}. They seem to be ${searchArray(standing)}. If engaged, the PC party may learn that the other party will be travelling ${searchArray(travelPlans)} to reach their next destination. The party is level ${partyLevel}.`
+    let comp = `The other party's composition is: ${pcomp}`
+    let gold = `The other party's funds are: ${calculateGold(partyLevel,partySize)}.`
+    let items = `The other party's magical items are ${searchArray(["concealed","out in the open"])}: ${alternateRewards(partyLevel,partySize*2)}`
+    let output = [flavor, comp, gold, items]
+    orderedPrint(output, output.length, "Rival")
+}
+rivalParty()
+
 function buildTavern() {
     tavernName()
     findF1()
@@ -569,8 +1181,11 @@ function buildTavern() {
     findEndConvo()
     findInsult()
     bardFind()
+    instrumentFind()
+    currentlyPlaying()
     foodFind()
     drinkFind()
     events()
     quest()
+    rivalParty()
 };
