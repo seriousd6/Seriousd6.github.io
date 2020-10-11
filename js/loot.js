@@ -486,7 +486,6 @@ function artGenerator(number) {
         `${variableEvent(status,4)}painting`,
         `${variableEvent(status,5)}relief`,
         `${variableEvent(status,6)}tapestry`,
-        `${variableEvent(status,7)}${searchArray(material[3])} ${searchArray(["bracelet", "necklace", "crown"])}`,
     ]
     let size = [
         "large", "small", "tiny", "life-size", "huge", "gargantuan"
