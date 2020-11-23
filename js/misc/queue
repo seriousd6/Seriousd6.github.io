@@ -234,107 +234,509 @@ Loot/ rp
         used by an orc
         used by a weak person.
 
+    Weapon enchantments
+        The item becomes branded with the icon of courage. This person receives advantage on intimidation checks
+
+        The item becomes imbued with necrotic energy, making it partly undead. The item can deal an extra 1d8 of necrotic damage but becomes useless against radiant beings
+
+        The item becomes imbued with chaotic energy, the user can tap into this energy with a bonus action and become imbued with chaos, doubling damage for 3 turns but taking half their max health from their current health. The user can be killed by this effect.
+
+        The item becomes sanctified by angels, when swung will release a cone of radiant energy that gets stronger the further it travels (base damage for the cone is 1d8. +1d8 for every 10 feet travelled, up to 50ft.)
+
+        The item becomes vampiric. When coated in blood the item will regenerate the users hit points by 4d4 per round but the item will become permanently useless in the sunlight.
+
+        The item becomes branded with the language of the gods. If the celestial language is known, these words can be spoken to ‘summon a phoenix under the control of the user. (one phoenix max)
+
+        The item warps into an unnatural shape, the user may roll a d20. On a natural 20 the user may pick one opponent within its line of sight to violently explode.
+
+        The item becomes imbued with radiant energy, creating a magical protection ward around the user making them immune to magical projectiles on the use of an action.` (physical projectiles imbued with magic will lose their magical properties but continue through the ward.)
+
+        The item becomes possessed by the ghost of a fallen medic. You may roll a D20, on a 15+ any living thing the item touches will heal for 4d4
+
+        The item gains three spark charges. When used, any damage dealt by the item will be doubled. Once the last charge is used and resolved the item explodes into a fireball 15ft in diameter
+
+        The item becomes spectral, it becomes useless against corporeal entities but deals an extra d10 damage to spectres and ghosts
+
+        The item becomes branded with spiral runes. Anything the item harms becomes totally unaware of the events that took place in the last five minutes.
+
+        The item gains the ability to transform into a stone wall of cover (5ft. wide by 3ft tall). Activating this effect destroys the item
+
+        The item becomes branded with the hymns of kyne. If the user can read elvish and utters these words, they will be able to deal an extra 1d8 of damage to animals until a long rest.
+
+        The item gains the ability to harness the effects of the weather. (If it is raining, the blade instantly kills beings made of pure fire, thunder adds 1d8 of lightning damage to the weapon, the sun sets the blade ablaze adding 1d8 of fire damage and snow coats the blade in ice that can fire an ice spike using a bonus action)
+
+        The item cracks and splinters. Plunge the blade into the ground and roll a d20. If 17+, roll a d10. The number rolled from the D10 dictates the magnitude of earthquake that will result.
+
+        The item begins to glow a bright white, lighting up even the darkest of caverns brightly enough to be able to see normally (50ft. range).
+
+        Imbues an item with ancient dwarven runes. If the dwarven language is known, these runes can be spoken and summon dwarven spirit armour, which adds a 2+ to their armour class.
+
+        The item begins to resonate. On a death blow the item absorbs the targets soul. Once five souls have been absorbed the item can emit a soul charge, a ball of soul energy deals 5d10 of damage to everything around the user, but not the user, in a 20ft radius.
+
+        The item becomes imbued with the power of ultimate siphon revivify. The item can touch a corpse and return it to life, at the cost of 100 hit points from the user.
+
+        The item turns grayscale in colour and becomes branded with an emblem of the moon. Under the moon, the item deals an extra 1d10 of lunar damage, 2d10 against animorphs.
+
+        The item begins to ooze green slime. This slime is a highly toxic poison. On a successful hit the target must make a constitution save (DC16). On a failed save, the target will take 3d4 damage for 3 turns. This effect does not stack.
+
+        The item gains five mana restoration charges. Pointed at a target with in 50ft and used, it will regenerate one of the targets spell slots. If the target cannot recover spell slots the charge is wasted.
+
+        The item becomes fused with the user through stone like growths and imbues the user with the power of the stone knight. A blow that would normally kill the user would instead leave the user with one hit point
+
+        The item becomes one with shadows and by extension, its user. Encompassed in a dark mist the user can activate this effect once per hour to disappear into any shadow they can move to without a trace.
+
+        The item triples in size and fills the user’s muscles with the power of a giant, forcing them to triple in size. Their strength becomes 25, but their dexterity is reduced by 4.
+
+        The item can tap into the heavens itself. Roll a d100, if the number is 90 or higher, summon a random angel. The item loses any magical property after this effect is resolved.
+
+        The item begins to glow slightly blue, it becomes clairvoyant and will warn the user through telepathy of impending danger, it cannot discern the magnitude of danger, just that there is danger nearby.
+
+        The item is branded with the emblem of a dagger and gains the ability to fire daggers by using a bonus action. If the user would like to use a whole action to fire this dagger, the fired dagger becomes a great sword, gaining the swords damage stats.
+
+        The item begins to be orbited by three different coloured spheres, one red, one blue and one yellow. The red sphere will restore 50 hit points. The blue sphere restores one spell slot. The yellow sphere spawns 100 gold.
+
+        The item becomes decorated in red glowing stripes and gains the ability to fire flares at will. If the flares hit a target, they deal 1d4 damage. On a hit, roll a d20. On a natural 20 the target is set ablaze dealing 5d10 damage per turn.
+
+        The item becomes warped into the shape of a spiral and grants the user the ability to cast one shot of wild magic per long rest.
+
+        the item begins to grow jagged teeth all over adding 1d4 of damage to the item. On a death blow the item absorbs the targets soul. Once five souls have been absorbed the item will restore the user to max health
+
+        The item becomes so heavy only those with a strength of 25 or above can wield it, but all hits with this weapon are guaranteed, regardless of AC.
+
+        The item becomes branded with the emblem of a hooded figure, DEX saves are done with advantage.
+
+        The item becomes coated in black flames. On a successful hit, whatever it touches must succeed a wisdom saving throw (DC 14), if it fails the target becomes friendly for one turn. This effect only works once per target.
+
+        The item becomes branded with the emblem of a smiley face. Charisma checks are done with advantage
+
+        The item becomes covered with leaves and branches and gains the ability to calm any animal creature its pointed at. The twigs add an extra +1 AC if the item is a shield, piece of armour or a creature.
+
+        The item turns from its original material into enchanted magma. The magma cannot damage the user but deals an extra 2d8 of fire damage to a target. Once per long rest the blade can summon a magma mephit under the control of the user.
+
+        The item begins to radiate an unknown energy. The item can now create minor illusions, any target that would be fooled by the illusion must make a wisdom saving throw (DC15), on a success the target is not fooled by the illusion.
+
+        The item is swarmed by flies. On a successful hit, anything the item touches must make a constitution saving throw, on a fail, the target is incapacitated with sickness for one turn.
+
+        The item is branded with words of courage, when spoken, the user makes all allies immune to fear and intimidation checks
+
+        The item is filled with the energy of the god the user serves. Anyone who serves another god gains disadvantage on initiative. If the user serves no god, the item turns feral, the user has disadvantage on all combat-based rolls
+
+        The item becomes two times lighter. The user gains the fast hands reaction. If an attempted hit should miss, they can reroll the hit.
+
+        The item thins out to an arrow tip somewhere on its form. The user may now activate its one arrow charge to bring down a hail of arrows upon the entirety of the battle field. Everyone in combat must make three DEX saves, any fails and the target will take 1d8 damage per fail. Once the charge is used the item returns to its original form and loses its magical properties
+
+        The item becomes shrouded in a white mist. The user can tap into the item and turn spectral at will.
+
+        The item can now turn into a bow at will. Firing spectral arrows that require nothing to create. The arrows deal 2d4 damage and will always find their mark, regardless of AC
+
+        The item gains a voodoo doll attachment. Roll a d20 per target while in combat. On a 19 or 20 the user gains total control of the target so long as that target is below a challenge level of 10. When combat ends the target dies. One target per combat.
+
+        The item is branded with the words “sword breaker”. If the item misses an attack, roll a d20. On a natural 20, the targets weapon is shattered into dust.
+
+        The item becomes branded with the vow of calamities. When the vow is uttered everyone in the area must make a constitution save (DC5). On a failed save, the targets suffer massive internal organ failure, dealing 10d10 damage. Every time the vow is uttered, the user is permanently deducted 20 hit points.
+
+        The item becomes decorated with golden spines and celestial runes. Should a member of the party be permanently killed by a hostile attack. The user can sacrifice the item and save their life, restoring them to 1 hit point.
+
+        The item becomes coated in a thin layer of mucus. This mucus can be bottled once per long rest. Should a bottle of mucus be emptied on a target, the target begins to become encased in the mucus. The target must make a strength saving throw (DC13) to pull the mucus off. After a certain number of turns based on the targets size, the target will become encased in the mucus totally, incapacitating the target. The target then has three turns to be freed before being dissolved in the mucus. (tiny creatures: 1 turn/small creatures: 3 turns/medium creatures: 5 turns/ large creatures: 10 turns/gigantic creatures: 20 turns)
+
+        The item becomes decorated in tentacles. The item receives 3 tentacle charges. Each charge deploys a grappling tentacle from the item that can pull the target towards the user on a failed strength check (DC15).
+
+        The item becomes swathed in magical wrappings. If the user activates the power of the item using an action, all allied spell casters gain an extra plus five to hit for one turn.
+
+        The item gains the emblem of despair. The target may summon a wraith for the duration of the battle that’s under the control of the user (one wraith max)
+
+        The item becomes shrouded in the faces of lost souls. The user may activate the item, using an action, to open a portal to the soul cairn, allowing the lost souls to pull one target to its realm. The target must succeed a strength check (DC 5) to stay within the material plane.
+
+        The item is given the seal of lesser reincarnation. This seal may be removed and placed on the skull of a corpse to bring back a zombie under the control of the user.
+
+        The item grows an eye. The item can now deploy this eye as a scout within 50 meters of the user. If the eye is damaged or destroyed, the item is also destroyed
+
+        The item becomes possessed by a deep voice that speaks to its user of dishonourable deeds. The item becomes doubly powerful against unarmed opponents
+
+        The item becomes possessed by an ancient wraith king. Any undead allies gain advantage on all hit rolls
+
+        The item becomes decorated with three porcelain hands. The user can discharge one of the hands as a mage hand.
+
+        The item becomes wrapped and surrounded with horned vines. Any attack made with the item that would intend to trip, disarm or incapacitate deals an extra +1d4 damage and is done with advantage.
+
+        The item begins to glow with all the colours of the rainbow. You gain a +2 to your charisma stat while using the item and gain advantage on persuasion rolls with characters of the same gender.
+
+        The item becomes fused with a large gold piece worth 1000 gold. The item can now fire gold pieces, using gold in the user’s possession dealing 1d4 damage, if the fired coin lands a kill shot, the target explodes into a multitude of valuable items
+
+        The item is imbued with the soul of a former bard. The item now boosts the user’s charisma stat by 1 and grants advantage on all charisma-based rolls
+
+        The item gains a small gun barrel somewhere on its form. This gun comes with five ancient seeds of Gaia that when fired into a target, they will instantly sprout. Roll a d10, the number rolled will determine how many d10s of damage will be dealt.
+
+        The item partly turns to stone. When the item deals damage to a target, the target must succeed in a constitution saving throw (DC5) or be permanently turned to stone
+
+        The item becomes imbued with the energy of the unwoven. The user may command the item to reduce the enemies hit points by as many as they choose, however the user will take an equal amount of damage
+
+        The item becomes branded with the words of the vampire king. It has one vampiric singularity charge. The user can sacrifice the item to create a vampiric singularity. Everyone in the battlefield must make a DC 15 dexterity saving throw to prevent themselves being pulled into the red ball. Anyone pulled in is instantly killed, once all dexterity saves have been made, the remaining parties gain health equal to the sum of the killed creatures hit points as the ball dissipates
+
+        The item becomes wrapped in black linin. The curse of the mythic assassins has been lain upon you. When initiative is rolled, you must roll a d20 for everyone in the battle. If you roll a natural 20 for anyone, you teleport to them dealing 10d6 worth of damage but if you teleport to more than 3 people, you are banished to another plane of existence.
+
+        The item becomes a stein of beer. This is the stein of never-ending mead. No matter how much you drink, you can’t seem to finish your glass
+
+        The item transforms into a spoon. This is the sliver spoon of the snow elves. When placed into the mouth of a target, feeds them a mouthful of their favourite food.
+
+        The item becomes magically connected to Gaia, the god of nature. When pointed at the ground the item will begin to grow a tree. How long the item is pointed at the ground dictates how large the tree will be
+
+        The item gains the symbol of stamina. This symbol grants the user 10 extra feet of movement and proficiency in athletics and acrobatics
+
+        The item becomes infested with insects. It has five insect charges. When a charge is spent, the battlefield becomes infested with a swarm of insects chosen by the user. Everyone must succeed on a DC 12 constitution save or be incapacitated with fear for a turn
+
+        The item becomes braded with the emblem of terror. When activated the user can begin to place marks of madness on a target. The target must succeed in a (DC10) wisdom save or have a mark of madness placed on them. If three marks of madness a placed on a target they become feral, attacking anything nearby. If the target succeeds any of these saves, they are immune to the emblem of terror for 24 hours.
+
+        The item begins to glow white hot. The item can now refuge any broken blades and amour at a single touch.
+
+        The item becomes tethered to the user through an umbilical cord. This connection allows the user to spend 10 points of their own lifeforce to grant the item an extra +10 to all damage they deal, but if the cord is severed the user takes 10D10 damage and the item is destroyed.
+
+        The item becomes fused with the scythe of the burning mother. The scythe does 4D6 slashing damage and a further 4D4 burning damage.
+
+        The item becomes fused with mechanical technology from the far future. A fusion core is placed on the weapon, charging it with nuclear energy. The item can now fire a beam of energy that can travel 130ft. and deal 5D8 radiant damage. However, if the core is damaged it will explode in a 20ft. sphere, dealing 10d10 radiant damage to everyone inside.
+
+        The item becomes consumed by pestilence. When the item is pointed at a target, using an action, a cloud of flies consumes them, incapacitating them for a turn.
+
+        The item grows a mouth. this mouth can perfectly replicate anyone’s voice but only on a performance check (DC7).
+
+        The item becomes reflective. If two living things share the same reflection their minds are swapped for 1D4 days.
+
+        The item is now orbited by white orb. This is the orb of protection against the night. The user can activate this orb to ward off any evil targets within a 20ft. cone, so long as the target is below a challenge level 7. Can be used once per long rest.
+
+        The item turns partly to bone. The target can choose one skeletal entity within their line of sight to crumble into meal. Can be used once per short rest.
+
+        The item gains the seal of the unbound. Should the user become bound or unable to move, using their action they can free themselves from their bindings.
+
+        The item gains the ability to enter the astral realm and bring its user with it. The user can astral project themselves up to 100ft. in any direction. The user cannot be seen, take damage or deal damage while in this state and once the enchantment is broken or the range exceeded, the user is returned to their original position.
+
+        The item becomes fused with a hypodermic needle somewhere on its form. Should a target be stuck with this needle, they must succeed on a constitution save (DC14) or be paralyzed for 1d4 turns.
+
+        The item turns black and its texture becomes course. It has been possessed by shade. Should the user take damage, half of the damage taken is reflected at the target.
+
+        The item becomes branded with the words of the ultimate masque. Wave the item in front of your face to change your appearance for an hour.
+
+        The item becomes lined with green, pulsating veins. Should the item be embedded in a target for 3 turns, the target’s blood becomes poisoned. This poison deals 20 points of damage per turn until the target dies or the blade is removed.
+
+        The item gains the blessing of the reborn ribbon. Placing the item upon a fallen ally will instantly revive them to full health but will destroy the item
+
+        The item is branded with the image of a key. Touch the item to any conventional lock to open it instantly.
+
+        The item becomes slender, elegant and beautiful. Its user is infatuated with the item and will refuse to replace it with any other. should the user kill a target with a challenge level of 20 or higher, increase their charisma by 1.
+
+        The item’s colour turns to a mix of dark greens and blues while a sinister grin appears somewhere on its form. The user gains 2 extra attacks.
+
+        The item becomes jagged and turns black. Its gains the sin of wrath. Once per long rest, the item can unleash a lighting bolt upon a target. If a hit, roll a D100. If its 90 or higher, the target is immediately killed. If its 50 – 89, the target takes 5d12 damage. If it is 2 -50 the target is incapacitated for a turn. If it is a 1, the user is immediately killed.
+
+        The item turns green and its form begins to bubble. Should a target possess something the user desires, the item can be sacrificed to create an exact replica of the desired object.
+
+        The item turns a deep red colour, becomes slender and smooth and oozes an unfamiliar red fluid. Once per long rest, the user can call upon the item to turn themselves into a succubus for one hour.
+
+        The item becomes heavy and much larger. Only those with a strength of 18 or higher can use the item. Should the user be on full health, death blows will grant 20 temporary hit points.
+
+        The item begins to exude black smoke. The user’s movement speed is decreased by 5. When the item is pointed at the target a beam of smoke will connect the target to the weapon. While this connection remains uncut, reduce the targets strength by 2 per turn. If the targets strength reached 0 before they can break the connection, they will wither away and die. If the connection is broken, the target is restored to full strength instantly and cannot be targeted again.
+
 stores
-    1	Madame Ortho's Oddities: A curiosity shop that sells useful (sometimes cursed) trinkets. Examples of some of her wares: a mummy hand that tries to strange it's owner while they sleep, a compass that points to the person that hates the owner the most, and a stuffed Vargouille. (u/dndspeak)
-    2	The Cobbler: A store that sells all kinds of horseshoes, for all kinds of reasons, but you notice, this town has no horses. (u/JambaJuiceJakey)
-    3	A Man's Burden: A blacksmith who displays and sells exotic weapons, made using blueprints gathered from across the land. (u/JambaJuiceJakey)
-    4	Row after Row: A store specializing in boats, specifically, boats that use rowing to move. (u/JambaJuiceJakey)
-    5	Gertha's Topography: A woman who sells maps she has found and made across the continent, from huge full continent maps to small maps of ruins and towns. (u/JambaJuiceJakey)
-    6	Fran's fortuitous froths: potions of dubious origins and craftsmanship, they almost never work as advertised, but always help you in a way you didn't know you need. (u/Eshmatarel)
-    7	Sofie's softies: pillows of the highest quality, stuffed with feathers of magic beasts, and enchanted with various effects. (u/Eshmatarel)
-    8	All the RAGE: battle axes and fashionable shirts. (u/Eshmatarel)
-    9	Wrench warfare: magic craftsman tools that can change into weapons. Great for sneaking weaponry past the border or into the castle. You can place custom orders. (u/Eshmatarel)
-    10	Caesarean's Palace - "Veni Vidi Veni": The strip club on the bad side of town. (u/neutronknows)
-    11	Head, Shoulders, Knees, and Toes: A store ran by a mysterious wizard, it only sells human appendages. (u/JambaJuiceJakey)
-    12	The Lotto Grotto: A store that sells magical items, but the item could be cursed or enchanted, and the buyer only knows after using it once. (u/JambaJuiceJakey)
-    13	**Gertrude's Trinkets:**A dingy magic shop on a back street that sells surprisingly good (we're talking some top notch stuff here) magic weapons and trinkets for ridiculously low prices (half the price of normal on average). At midnight anything bought from the shop returns back to the shop magically, and the shop teleports to another remote location. (u/Quail_eggs_29)
-    14	The Satyr's Pact: A tavern run by a satyr who offers musicians a deal. If they impress him and the crowd with a song they earn a instrument that is always in tune and free room and board for life. If they fail, they work in his tavern for a decade but can audition again for the same deal, years do add up. (u/PMMeYourHappySmile)
-    15	Rock Candy: Sells and buys a wide variety of gemstones. The shopkeeper is an Oread who has a tendency to eat the product, much to the dismay of the shop owner. (u/Woomy_Goomy)
-    16	Scrumdidilyumptious: This bakery is owned by a sorcerer whose focus is on her craft. She likes to infuse her goodies with spells, from rainbow cookies that make your tongue temporarily a new color to a slice of chili cake that makes your fire spells scarily more potent for a while. (u/Woomy_Goomy)
-    17	Munsters R Us: A tiny Pug stands at a crate, hollering in broken common to come over. He'll buy your scavenged monster parts (albeit at varying prices) from you. If you give him enough, he'll turn them into an item. It's disturbing, but how can you resist his cute lil' face? (u/Woomy_Goomy)
-    18	Furever Homes: Offers small and under-sized creatures as animal companions and pets. They have the basics, like rats, spiders, etc., but if you have enough money, you could adopt more exotic creatures. (u/Woomy_Goomy)
-    19	The Mountaineer's Bandolier: Sells survival kits, potions that help you adapt to weather, and various supplies that help explorers get through tough climate situations. (u/Woomy_Goomy)
-    20	Fizzlesprocket's Dairiticiary: A quirky gnome runs this ice cream stand and tries to pawn off bizarre treats. You won't know if you like it till you try it. (u/Woomy_Goomy)
-    21	Blood letting: general store takes payments in different kinds of blood. (u/pippop212)
-    22	Binxes potions: potion store run by the Sanderson sisters from hocus pocus. Don't let kids near this place they have an unfortunate habit of disappearing. (u/pippop212)
-    23	Morticias morgue: will hide and remove bodies, perform autopsys etc in return for rare bodies/monster parts. (u/pippop212)
-    24	Tinker and sons: apocalyptic/doomsday prepper family of ghomes will fix, repaid or mod weapons in return for canned foods, junk weapons and scraps of metal. (u/pippop212)
-    25	Fallen from a star: A well known bar/pub can find different celebritie style characters like Worgen Freeman or Clint Westwood. (u/pippop212)
-    26	Seamus the Imp Peddler: A travelling peddler, riding a covered cart led by a mule, stops by the party. He explains that he specialises in the sale of imps, but so far the only ones he has been able to obtain (trade secrets and all) have limited lifespans. It's a mixed bag in his opinion so all the imps cost the same. Imps cost [1d20/1.33] GP each, half this if it's raining. On purchase the imp is bound to the character until the imp's unique demise. Each imp has a craving and a fear; if the character is helpful in these regards the imp's loyalty will improve. Each imp also holds a secret agenda of mischief. (u/ApertureJunkieZA)
-    27	Herb the Hatters: Herb makes exquisitely beautiful hats which are quite uncomfortable. (u/Mamertine)
-    28	The Transport Tube: Any common item will fall down from a tube from above, assuming something of value has been put in the slot in the cubicle. Approx 5ft square circle room. Out the back, some creatures would be feeding the items in. (u/deathsirwow)
-    29	Murray's Theatrics: The half-elf Murray retired from the life of a wandering bard eight years ago, but still loves the trade dearly. His shop (which is really just the anteroom to his house) stocks sheet music and scripts for the lutist looking to expand her repertoire, or the troupe seeking to get ahead of the new fashion in comedies. The texts cost next to nothing - Murray remembers what it's like to travel on a performer's income. The real money comes from his younger brother, Astor, whose potions create audience-dazzling special effects. (u/ButtPoltergeist)
-    30	The Furrowed Brow: Esmeralda Turnbottom's mother made wards, and her mother made wards, and her mother made wards... And Esme has never been one to spoil a good tradition. The wares range from mundane (a pendant against forgetfulness, carved from gingko bark) to the specialized (ground cat's tooth to drive off harpies). Once a year, she closes up shop for a much deserved vacation, and returns with an armful of oddly specific wards. Such as "protection from a stampede of your own cattle frightened by a thunderclap on a moonless summer night". And yet they always get bought, and they always end up useful... (u/ButtPoltergeist)
-    31	The Sizzler: An exotic restaurant run by a very jovial, and very fat, half-ogre named Thog. They specialize in rare meats of all kinds and will pay well if what you have is fresh. From drake wings to spider legs, if it's fresh and serviceable they'll buy it. Their meals are renowned for being tasty and surprisingly filling, and the exotic nature of their ingredients has been known to impart certain temporary boons to the consumer. The house special is constantly changing, so get in quick before the line forms! (u/Kami-Kahzy)
-    32	Nero's Place: A shop run by an aging, paranoid neurotic elf that is convinced there's a demon after him. Nero sells a wide assortment of scrying crystals, mirrors, looking glasses, and patented listening tools that he uses on a daily basis. Some of his inventions are actually helpful, like his 'Peek-around' that angles two mirrors inside a square tube to look around corners. Others are less helpful, like his 'Hearing Helm' that is basically two gramophone bells welded onto a bucket. He also sells protective charms and wards to help keep... well anything off your back, really. For the paranoid inside us all, Nero's Place is the Place for you! (u/Kami-Kahzy)
-    33	Goldie's Locks: a wig shop selling enchanted wigs that are just right. (u/AnAverageWolf )
-    34	The "ooks" Store: A dingy store front window displays "ooks" peeling gold lettering. Inside the dimly lit shop are shelves upon shelves of musty old volumes fill up the space until only narrow paths await the adventurous customer. After searching the store you might find what you want...or need in the future. (u/Wandererdown)
-    35	The Amazing Omar's Shop of Curiosities: Omar, a flamboyantly dressed merchant waves, you over to his display wagon to view his wears. Various charms, potions, knick-knacks, and unguents are on display for all to see. If you are a polite and interested customer he may be persuaded to showcase his more interesting items... (u/Wandererdown)
-    36	Adon's Exceptional Reflection Collection: A good sized shop that sells mirrors of various shapes and sizes, run by a reclusive and eccentric old gnome named Adon. Mirrors hang from almost every surface, with some even dangling from the ceiling or the bottom of other mirrors. It is incredibly easy to get lost wandering the store, and the inside seems significantly bigger than its outside appearance belies. An observant customer will notice that some mirrors occasionally reflect fantastic locations with startling realism. (u/ThePragmaticPimp)
-    37	Ketterman Barley's Stonecarving and Statuary: Ketterman is a stone carver of some renown, and does all kinds of stonework from bas-reliefs and fountains to statues and headstones. He's expanded his business recently by offering smaller, personal busts of the client for a reasonable sum, depending on the quality of the stone. Ketterman typically sells to the upper class, but as long as you can pay he's more than willing to work with just about any customer. But here's the catch: Ketterman is actually an accomplished diviner as well. Every time he carves an eye into his stonework he can use those eyes to scry through at any time. Ketterman uses his vast network of eyes to spy on anyone within their gaze, and if he comes across something particularly noteworthy he sells that knowledge to the highest bidder, or uses it as leverage for blackmail under his assumed alias of 'The Emerald Pool' (because his eyes are green). Ketterman has been operating for almost two decades now, and his work has traveled far across the land. Odds are his stone eyes have seen something you didn't want to be seen. So tell me friend; what are you hiding? (u/Kami-Kahzy)
-    38	Blood Of Thy Enemies/Blood Of My Blood: Half the shop weapons & instruments of death run by tiny, aggressive woman. The other half a healing shop run by a large barbarian type man who's gentle. They are a couple...opposites attract? (u/YearLongSummer)
-    39	Rats, Bats, & Vats: Your typical cauldron witch type store. Alchemy, herbs, could be run by hag. (u/YearLongSummer)
-    40	Kern The Hammer's Hammers: Shout out to Critical Role. Half-Orc Kern The Hammer has given up on fighting in the pits after the loss to Grog the Barbarian, the shop has every kind of hammer you could ask for. (u/YearLongSummer)
-    41	Maybe It's Adamantine: A clearance type shop of magical items. Genuine as advertised Magical Items are in stock but rare. Lots of faulty or completely misidentified items. Create any additional rules, such as refund any item after purchase but at 30% of it's value, no identify spells allowed on store premises, etc. (u/YearLongSummer)
-    42	Ninth Level: Hell themed. Run by a demon or devil. Opportunity to buy existing contracts or forge a new one. (u/YearLongSummer)
-    43	Mendelsen's Magnificent Mending: Mendlesen is the most talented mender in the world. Clothes, artifacts, magic items, you name it & he/she can mend it. (u/YearLongSummer)
-    44	Carts & Crafts: Every kind of vehicle for sale & rent. Can purchase passage on different methods of transportation as well. Purchases come with option to register as a transporter to provide passage & collect fares. (u/YearLongSummer)
-    45	Dark Arts & Melted Hearts: Your typical "Dark Arts" type store, but complete with a tavern type meeting area that regularly provides a speed dating-esque environment for undesirables, villians, & general ne'er-do-wells. Everyone deserves a shot a love right? (u/YearLongSummer)
-    46	The Dock of Many Flings: A store either on the water or with a large well inside. There are no items, only shelves and shelves of pebbles worth different tiers of gold. You buy a pebble, then stand over the designated area and cast your pebble into the water. You gain a random magical effect, item, or etc. (eg. A Mini or alternate deck of many things) (u/YearLongSummer)
-    47	Whispers & Secrets: The only goods bought and sold here are rumors, secrets, other generally unknown information. You cannot pay with traditional currency, must offer hidden information of your own to barter with. Use either an unbiased magical system (such as speaking your secret into a glass jar, putting the lid on placing upon a magical scale that determines it's weight/value), or for more interesting roleplaying opportunities have a totally biased shopkeep the players can haggle with or try and persuade. (u/YearLongSummer)
-    48	Proctor & Son's Deadly Traps: More a small dungeon than a store, the ceiling to floor to finally the basement is covered in traps. You must survive long enough to actually disarm and then purchase your chosen traps. It used to be a family business but that didn't last for very long. (u/vetusnox)
-    49	Impeccable Times: In a building stylized as a home befitting a cuckoo clock, the sound of ticking from countless mechanisms dominate the senses. The blind elderly craftsman shows no concern for anyone except his owl which is never far from his side. Secretly, he can hear from every watch and see from every clock he creates. The owl is also a mechanical contraption. (u/vetusnox)
-    50	Ayesha's Insult Emporium: The store's name, in simple black lettering, is all that infers what lies inside. A friendly middle aged woman (presumably Ayesha) wearing a sari greets customers entering this store's antechamber with a sharp personal insult. Anyone who takes great offense to the insult is teleported out of the shop and can't re-enter. However, those who accept it in good spirit will be led by Ayesha to the main room which contains shelves and cabinets filled with scrolls, books and scraps of paper containing some of the most brilliant, sought-after and mind-bending insults to ever have been uttered or penned. (u/ApertureJunkieZA)
-    51	The Green Room: This inn, hidden by an entrance in the sewers, provides lodging in rooms made completely of thick glass. The floors consist of different types of soil, and beds are constructed from clay with meagre hay mattresses. Patrons that stay the night develop a slight green tinge to their skin that persists for a week. For this duration, as long as one stays in direct natural sunlight for at least 4 hours a day, they need not eat. Sleep is required as usual, and water requirements per day to survive are doubled. (u/ApertureJunkieZA)
-    52	The Potato Is Just An Illusion: A comedy club and tavern frequented by illusionists, diviners and enchanters. Patrons dine, drink and listen to wizards from the local guild tell comedy that is usually highly academic in nature and augmented by various creative illusions. STRICTLY NO IMP FAMILIARS ALLOWED. (u/ApertureJunkieZA)
-    53	Piander's Books: A poorly lit bookshop filled with books of ancient lore. Run by a seemingly mute man in a dark cloak, he watches visitors closely from the shadows. (u/Patergia)
-    54	Alethra's Tear Shop: A medium sized store with shelves full of tiny bottles of tears, the are all carefully labeled with the date the tears were shed, the name and race of the being that shed them, and the reason they were shed. Run by a middle aged woman named Alethera, an unusually cheerful woman who is as eager to buy new tears as she is to sell them. Alethera is especially interested in the tears of adventures and famous people. (u/Patergia)
-    55	Adventure's Emporium: On the outside it looks abandoned and if you ask around town you will be told it is cursed or haunted, but when adventures enter the building they enter a spacious, well lit store full of ten foot poles, iron spikes, torches, and other adventuring gear. It is run by a retired adventurer. (u/Patergia)
-    56	Darvin's Dandy Dolls: A shop with shelves full of dolls, many of them resemble important political figures of the region. It is rumored that some of the dolls have power over the people they represent. (u/Patergia)
-    57	Sprog's Spirits: A dark shop run by a well tempered and grim half orc. It's shelves are filled with bottles that Sprog claims hold the spirits of the dead. (u/Patergia)
-    58	Anton's All-porpoise Absolutions: An office run by a cleric of a god of mercy. A place where kings and commoners alike go to repair their relationship with their gods and other extraplanar patrons. (u/Patergia)
-    59	Magroma's Jewelry: A "jewelry store" run by an old woman where all of the jewelry is made out of the polished bones of various creatures, some of them quite exotic. (u/Patergia)
-    60	Arcadia Glass: A small shop with shelves filled with tiny and exquisitely beautiful glass statues. Run by a half elf, behind his desk he has a small collection of graphic statues that appear to depict past and future events. (u/Patergia)
-    61	Gulthric's Curiosity Shoppe: A mostly nondescript store from the outside, this shop is run by an old copper dragonborn. The inside of the shop is sectioned off with all sorts of magical items for sale, and there is the slight smell of incense. The shopkeeper will sell magic items in trade for a true story. The more important the story is to the character, the more likely they are to receive a more powerful magic item (limited within DM's reason, of course). Magic items range from a large selection of small trinkets to a rather limited selection of powerful items. (u/Luna_Parvulus)
-    62	Fletcher's Hunting Goods: A traveling fletcher who makes high quality bows and arrows. More likely to be seen in a frontier town or on the trails in the wilderness. (u/Luna_Parvulus)
-    63	Clara's Haberdashery: a half-orc woman makes and sells fashionable hats to normal patrons, but sells magical hats on the black market. Her hats are imbued with special abilities by using rare and wonderful items. She's an artist to her core and she'll try to accommodate your request, but at the end of the day, it's her final word. Imagine wild versions of hats you know, precursors to hats we have now, but much more ornate and fanciful. (u/Oyster_Stu)
-    64	People, People!: It's a shop where you can hire people. There's different races and strengths of people for different prices. You can hire a commoner for 1 gold as usual, but there's a few stronger people, or twin halflings that come as a bundle, or an old lady that's very expensive. There's not usually shops where you can easily hire people. Here one is. (u/bbqturtle)
-    65	The Flying Dutchmans' Insurance Agency: A pair of brothers, The Dutchmans, enchant items to levitate back to a predetermined location after using a keyword. Useful for if an item is stolen. (u/MrsPinappleFace)
-    66	Mounds of Masks: A disorganized store stuffed with various masks of all kinds. Owned by a retired, deranged playwright who is rumored to have fallen into the occult. (u/Patergia)
-    67	Dundragon Family Goods: This store appears to be an average general goods store run by a small family of three, a father, a mother, and a daughter, but any local criminal will know that "Dundragon Family Goods" is actually the best place to find illegal supplies without attracting attention, as the whole family knows thieves cant. (u/Patergia)
-    68	Ship Shape Ships: A shipwrights store that constantly smells of the sea. Behind the shipwright's desk are a collection of model ships in bottles that represent real ships, and whoever owns these models owns the real ship. (u/Patergia)
-    69	Stiletto Emporium: Stilettos give bonuses to charisma on female characters, but reduce speed and increase noise. (u/bbqturtle)
-    70	Beets Beets Beets!: They sell Beets! (u/bbqturtle)
-    71	The Weather Station: They have bottles of weather. If you open a bottle, the weather inside comes out and fills the room. (u/bbqturtle)
-    72	The Rusty Key: Sells Keys. Sells rings of keys. Sells keys for specific areas or boxes. Simple keys, giant keys, intricate keys, one magical key. They recommend using keys for decorative purposes only. (u/bbqturtle)
-    73	Dirt's Dirt: Sells dirt. Also small stones. sells mystery dirt and a "dirt mystery bag" that has dirt plus one item in it. (u/bbqturtle)
-    74	Balloons and darts: Every balloon purchase also comes with darts. You can get transport on a hot air balloon and tons of darts. Balloon animals and dart animals. Buy a balloon (and dart!) and get a balloon (and dart!) free! [On walking out, the dart is thrown at the balloon]. (u/bbqturtle)
-    75	Rosewaters: Sells tinctures of water. Rose water, holy water, filtered water, spring water, toilet water, alcohol water, etc. (u/bbqturtle)
-    76	Lukas' Lucky Oddities: At the start of each day, Lukas rolls twice on the trinket table and chooses one trinket. He must sell it for an exorbitant price before dusk. Such is his curse. (u/gaylordqueen69)
-    77	Madame Tralancet's Veritable Shop of Disguises and Costumes for the Modern Journeyman: She has an enormous selection of suspiciously cheap costumes, disguise kits, wigs, and other fake parts. She has seven drawers bulging with moustaches alone. (u/gaylordqueen69)
-    78	Doctor Nehantil's Reputable Establishment: In a rundown shack in a bad part of town, a half-orc woman runs reception. Give her your appointment card, and she'll tear off the planks from the back wall where you can meet Dr. Nehantil, a "physician" with cheap prices and even cheaper services, no questions asked. (u/gaylordqueen69)
-    79	Mira's Oozes: A pet store of sorts filled with living oozes of all colors stored in jars. Run by a young and naive sorceress who insists that the oozes are harmless when properly handled. (u/Patergia)
-    80	Temple of the Tiny: A quaint little store stocked with holy symbols and other religious merchandise, all marketed towards children. (u/Patergia)
-    81	Kesheki's Weapon Shop: A store in the darkest corner of the town run by a curiously well mannered female gnoll, Kesheki. The shop sells all kinds of the most exotic and vicious weapons imaginable. The only currency Kesheki will accept are the scalps of humanoids, the stronger the creature the scalp was taken from the more valuable the scalp is. (u/Patergia)
-    82	Walters Watch/Warehouse/Witchcraft/Wizardry/Weaponry: Walter is an aged peddler who settled in a small town. He has a bit of everything, is the towns postmaster and guard. The shop's sign says "Walter's " on the left side. The right side is a stack of signs he changes as needed. "Watch, Warehouse, Witchcraft (Herbs), Wizardry (mostly useless magic items) . When not selling he switches to "Walter's Watch" and earns his wage as the only townguard. (u/Lonar2)
-    83	Clifford's Catastrophic Candys: a candy shop that only sells empty bags that fill with either just the treat you want or something utterly disgusting once you get hungry. You must eat what appears before it fills again. (u/Luk9013)
-    84	Place Your Hand: An old shop, completely empty, run by and old human wizard. In the shop you can find only a table, and this old man sit on a wooden chair, behind the table. Over the table there is a Bag of Holding; for 10gp the old man let you pull out one random non-magical object, from a rusty pan to a brand new plate armor. Every thing is possibile in this shop! Are you brave enough to “Place your Hand” in the bag? (u/Ankeron)
-    85	Tomes of Tombs: A shop specializing in information on death, undeath, and graveyards. Includes biographies of famous figures buried in local area as well as maps of some family crypts. (u/Quaseymoto)
-    86	Old Elmer's: A wooden building that walks on several insectile legs, ran by an aging half-elf with a wooden leg, a glass eye, and a fully animated brass hand. Sells prosthetics of all kinds, magical and mundane. (u/A_Blessed_Feline)
-    87	The Meat Place: A luxurious, popular tavern with really good food, mainly specializing in one kind of meat. An still living animal covered in scars is suspended from the ceiling, chains covered in glowing runes. Occasionally an employee comes in and cuts it up, carrying the meat to the kitchen as the animal heals. Neither the staff nor the patrons seem to have any issues with this. The animal is a 1: Pig 2: Sheep 3: Goat 4: Cow 5: Irrecognizable mass of scar tissue with a distinct taste that you cannot place. 6: Roll twice. Both. If a die lands on a 6 again, it's a sapient being being kept against their will. (u/A_Blessed_Feline)
-    88	Frey's Fresh Fish Flesh; A middle-aged female water genasi carrying a large Urn of Infinite Water, as well as various fishing supplies. Sells fresh fish, which she fishes out of the urn, as well as fishing supplies. Often found in deserts. (u/A_Blessed_Feline)
-    89	Skeleton Shop: A large underground complex selling all kinds of animate skeletal animals. The owner is a jovial skeleton who only accepts currency taken by force, without the previous owner's consent. (u/A_Blessed_Feline)
-    90	Howard The Doe Has A Shop Now Come Check Out Howard The Doe's Shop: A rundown house obviously built as a home and not as a shop. Staffed by a very excited yet forgetful doe, Howard, who insists on maintaining bipedal gait while the party is present despite being really terrible at it. Will attempt to sell anything not nailed down, and is surprisingly persuasive despite having obvious trouble speaking with her doe vocal chords and holding objects with her doe hooves. Has no actual grasp on what objects are worth or even what constitutes valid payment and will often overcharge or undercharge the party to ridiculous degrees. (u/A_Blessed_Feline)
-    91	The Tavernacle: a tavern run entirely by beer-making monks. (u/PilotPen4lyfe)
-    92	QIA - Questions, Information, Answers: This business buys and sells information, brokers missions, offers services. Gathered by magic means, bought from adventurers or received from distant locations a party can find the information it needs, learn about a mission offered by a trader or use the shops scrying or message service for a fee. This shop and some traveling business wagons are run by an elderly, stonefaced dwarf named "Harthos Adori Treasurebringer" in wizard robes with a nameplate saying "Hat Wizard". (u/Lonar2)
-    93	Wyatt's Wandering Wares: This shop, run by a young half elf, is of a special kind. It appears in a free spot in a street, and when it appears it has always been there. Wyatt is a good natured trader, selling wares with magic properties that often are unknown, and always trying to play a little trick with his customers. (u/Lonar2)
-    94	Kabooms and Korpses: A fireworks store that has been almost completely blackened by numerous incidents. Run by a goblin inventor who is also an amateur undertaker, offers to use some of his bigger rockets to give loved ones a glorious send off. (u/Patergia)
-    95	Dolores' Café & Dispensary: - a public shop for purchasing all kinds of alchemical reagents and paramacutical goods for healing, potion making and poison brewing - Also doubles as a delightful café where patrons can drink hot brews of cocoa and indulge in their preffered choice of reality enhancing herb. (u/TerraKorruption)
-    96	The Gold Chain: They sell gold. Great place to exchange currency types, trade figurines or valuables for gold. They sell a few gold coins with magical properties, like the boomerang coin and the communication coin. Sometimes they have slow sales so they have a "buy-one-get-one-free" deal on gold coins. Deals primarily in gold. Also can melt gold into shapes like rings and earrings. (u/bbqturtle)
-    97	Store Store: Sells stores. You can buy storefronts ranging from a clothing store to a hot dog stand. Not cheap! They also have an enchanting business, password protected chests, charms to prevent theft, money pockets that only the owner can withdraw from, and alarm bells. They also sell signs of various types, some with glowing lights. (u/bbqturtle)
-    98	The Prime Meridian: This store has one person inside with very, very shiny golden shoes. "These are my prime shoes" they say. They will sell you almost any item, and have it back to you within two days. However, there is a significant charge to getting the item, and some items might not come within two days. Unfortunately, before you can buy, the man tries to up sell you with a long list of items, and won't begin getting your item until bombarding you with the other items. Things like a bard service to follow you around with music, a chef service to cook you food, an enchanted rock that you can talk to, but also tells him your preferences in case you come back, a painting delivery service that sends you paintings every week for you to look at, but the paintings are pretty bad, like a child drew them. Each service costs 2-3x the cost of the item they are going to get in 2 days. (u/bbqturtle)
-    99	Sew it seams: A textiles shop full of misleading fabrics and clothes. (u/Smalejandro)
-    100	ALWAYS A WINNER!: A lottery outlet. To enter, you have to put a GP into above the doorknob. You walk in and bells go off - you're a winner!! A crowd cheers around you and you see then number 10,000 person. A sash is placed on you. You're the 10,000th customer! You win a large cash prize! Congratulations! You can either stop now, or take the chance to double or nothing your earnings!! The shop has a large prize wheel. Roll a D10 - anything other than a D10 loses! You just have to sign here and pay the deposit of 10 gold coins! If the PC does so, they earn the prize of 1,000 gold coins. They check their pouch and a faint golden vapor is leaving their pouch and moves toward the lottery. If they re-enter, they must pay another coin, but the building is empty. (u/bbqturtle)
+    Shops
+        1	Madame Ortho's Oddities: A curiosity shop that sells useful (sometimes cursed) trinkets. Examples of some of her wares: a mummy hand that tries to strange it's owner while they sleep, a compass that points to the person that hates the owner the most, and a stuffed Vargouille. (u/dndspeak)
+        2	The Cobbler: A store that sells all kinds of horseshoes, for all kinds of reasons, but you notice, this town has no horses. (u/JambaJuiceJakey)
+        3	A Man's Burden: A blacksmith who displays and sells exotic weapons, made using blueprints gathered from across the land. (u/JambaJuiceJakey)
+        4	Row after Row: A store specializing in boats, specifically, boats that use rowing to move. (u/JambaJuiceJakey)
+        5	Gertha's Topography: A woman who sells maps she has found and made across the continent, from huge full continent maps to small maps of ruins and towns. (u/JambaJuiceJakey)
+        6	Fran's fortuitous froths: potions of dubious origins and craftsmanship, they almost never work as advertised, but always help you in a way you didn't know you need. (u/Eshmatarel)
+        7	Sofie's softies: pillows of the highest quality, stuffed with feathers of magic beasts, and enchanted with various effects. (u/Eshmatarel)
+        8	All the RAGE: battle axes and fashionable shirts. (u/Eshmatarel)
+        9	Wrench warfare: magic craftsman tools that can change into weapons. Great for sneaking weaponry past the border or into the castle. You can place custom orders. (u/Eshmatarel)
+        10	Caesarean's Palace - "Veni Vidi Veni": The strip club on the bad side of town. (u/neutronknows)
+        11	Head, Shoulders, Knees, and Toes: A store ran by a mysterious wizard, it only sells human appendages. (u/JambaJuiceJakey)
+        12	The Lotto Grotto: A store that sells magical items, but the item could be cursed or enchanted, and the buyer only knows after using it once. (u/JambaJuiceJakey)
+        13	**Gertrude's Trinkets:**A dingy magic shop on a back street that sells surprisingly good (we're talking some top notch stuff here) magic weapons and trinkets for ridiculously low prices (half the price of normal on average). At midnight anything bought from the shop returns back to the shop magically, and the shop teleports to another remote location. (u/Quail_eggs_29)
+        14	The Satyr's Pact: A tavern run by a satyr who offers musicians a deal. If they impress him and the crowd with a song they earn a instrument that is always in tune and free room and board for life. If they fail, they work in his tavern for a decade but can audition again for the same deal, years do add up. (u/PMMeYourHappySmile)
+        15	Rock Candy: Sells and buys a wide variety of gemstones. The shopkeeper is an Oread who has a tendency to eat the product, much to the dismay of the shop owner. (u/Woomy_Goomy)
+        16	Scrumdidilyumptious: This bakery is owned by a sorcerer whose focus is on her craft. She likes to infuse her goodies with spells, from rainbow cookies that make your tongue temporarily a new color to a slice of chili cake that makes your fire spells scarily more potent for a while. (u/Woomy_Goomy)
+        17	Munsters R Us: A tiny Pug stands at a crate, hollering in broken common to come over. He'll buy your scavenged monster parts (albeit at varying prices) from you. If you give him enough, he'll turn them into an item. It's disturbing, but how can you resist his cute lil' face? (u/Woomy_Goomy)
+        18	Furever Homes: Offers small and under-sized creatures as animal companions and pets. They have the basics, like rats, spiders, etc., but if you have enough money, you could adopt more exotic creatures. (u/Woomy_Goomy)
+        19	The Mountaineer's Bandolier: Sells survival kits, potions that help you adapt to weather, and various supplies that help explorers get through tough climate situations. (u/Woomy_Goomy)
+        20	Fizzlesprocket's Dairiticiary: A quirky gnome runs this ice cream stand and tries to pawn off bizarre treats. You won't know if you like it till you try it. (u/Woomy_Goomy)
+        21	Blood letting: general store takes payments in different kinds of blood. (u/pippop212)
+        22	Binxes potions: potion store run by the Sanderson sisters from hocus pocus. Don't let kids near this place they have an unfortunate habit of disappearing. (u/pippop212)
+        23	Morticias morgue: will hide and remove bodies, perform autopsys etc in return for rare bodies/monster parts. (u/pippop212)
+        24	Tinker and sons: apocalyptic/doomsday prepper family of ghomes will fix, repaid or mod weapons in return for canned foods, junk weapons and scraps of metal. (u/pippop212)
+        25	Fallen from a star: A well known bar/pub can find different celebritie style characters like Worgen Freeman or Clint Westwood. (u/pippop212)
+        26	Seamus the Imp Peddler: A travelling peddler, riding a covered cart led by a mule, stops by the party. He explains that he specialises in the sale of imps, but so far the only ones he has been able to obtain (trade secrets and all) have limited lifespans. It's a mixed bag in his opinion so all the imps cost the same. Imps cost [1d20/1.33] GP each, half this if it's raining. On purchase the imp is bound to the character until the imp's unique demise. Each imp has a craving and a fear; if the character is helpful in these regards the imp's loyalty will improve. Each imp also holds a secret agenda of mischief. (u/ApertureJunkieZA)
+        27	Herb the Hatters: Herb makes exquisitely beautiful hats which are quite uncomfortable. (u/Mamertine)
+        28	The Transport Tube: Any common item will fall down from a tube from above, assuming something of value has been put in the slot in the cubicle. Approx 5ft square circle room. Out the back, some creatures would be feeding the items in. (u/deathsirwow)
+        29	Murray's Theatrics: The half-elf Murray retired from the life of a wandering bard eight years ago, but still loves the trade dearly. His shop (which is really just the anteroom to his house) stocks sheet music and scripts for the lutist looking to expand her repertoire, or the troupe seeking to get ahead of the new fashion in comedies. The texts cost next to nothing - Murray remembers what it's like to travel on a performer's income. The real money comes from his younger brother, Astor, whose potions create audience-dazzling special effects. (u/ButtPoltergeist)
+        30	The Furrowed Brow: Esmeralda Turnbottom's mother made wards, and her mother made wards, and her mother made wards... And Esme has never been one to spoil a good tradition. The wares range from mundane (a pendant against forgetfulness, carved from gingko bark) to the specialized (ground cat's tooth to drive off harpies). Once a year, she closes up shop for a much deserved vacation, and returns with an armful of oddly specific wards. Such as "protection from a stampede of your own cattle frightened by a thunderclap on a moonless summer night". And yet they always get bought, and they always end up useful... (u/ButtPoltergeist)
+        31	The Sizzler: An exotic restaurant run by a very jovial, and very fat, half-ogre named Thog. They specialize in rare meats of all kinds and will pay well if what you have is fresh. From drake wings to spider legs, if it's fresh and serviceable they'll buy it. Their meals are renowned for being tasty and surprisingly filling, and the exotic nature of their ingredients has been known to impart certain temporary boons to the consumer. The house special is constantly changing, so get in quick before the line forms! (u/Kami-Kahzy)
+        32	Nero's Place: A shop run by an aging, paranoid neurotic elf that is convinced there's a demon after him. Nero sells a wide assortment of scrying crystals, mirrors, looking glasses, and patented listening tools that he uses on a daily basis. Some of his inventions are actually helpful, like his 'Peek-around' that angles two mirrors inside a square tube to look around corners. Others are less helpful, like his 'Hearing Helm' that is basically two gramophone bells welded onto a bucket. He also sells protective charms and wards to help keep... well anything off your back, really. For the paranoid inside us all, Nero's Place is the Place for you! (u/Kami-Kahzy)
+        33	Goldie's Locks: a wig shop selling enchanted wigs that are just right. (u/AnAverageWolf )
+        34	The "ooks" Store: A dingy store front window displays "ooks" peeling gold lettering. Inside the dimly lit shop are shelves upon shelves of musty old volumes fill up the space until only narrow paths await the adventurous customer. After searching the store you might find what you want...or need in the future. (u/Wandererdown)
+        35	The Amazing Omar's Shop of Curiosities: Omar, a flamboyantly dressed merchant waves, you over to his display wagon to view his wears. Various charms, potions, knick-knacks, and unguents are on display for all to see. If you are a polite and interested customer he may be persuaded to showcase his more interesting items... (u/Wandererdown)
+        36	Adon's Exceptional Reflection Collection: A good sized shop that sells mirrors of various shapes and sizes, run by a reclusive and eccentric old gnome named Adon. Mirrors hang from almost every surface, with some even dangling from the ceiling or the bottom of other mirrors. It is incredibly easy to get lost wandering the store, and the inside seems significantly bigger than its outside appearance belies. An observant customer will notice that some mirrors occasionally reflect fantastic locations with startling realism. (u/ThePragmaticPimp)
+        37	Ketterman Barley's Stonecarving and Statuary: Ketterman is a stone carver of some renown, and does all kinds of stonework from bas-reliefs and fountains to statues and headstones. He's expanded his business recently by offering smaller, personal busts of the client for a reasonable sum, depending on the quality of the stone. Ketterman typically sells to the upper class, but as long as you can pay he's more than willing to work with just about any customer. But here's the catch: Ketterman is actually an accomplished diviner as well. Every time he carves an eye into his stonework he can use those eyes to scry through at any time. Ketterman uses his vast network of eyes to spy on anyone within their gaze, and if he comes across something particularly noteworthy he sells that knowledge to the highest bidder, or uses it as leverage for blackmail under his assumed alias of 'The Emerald Pool' (because his eyes are green). Ketterman has been operating for almost two decades now, and his work has traveled far across the land. Odds are his stone eyes have seen something you didn't want to be seen. So tell me friend; what are you hiding? (u/Kami-Kahzy)
+        38	Blood Of Thy Enemies/Blood Of My Blood: Half the shop weapons & instruments of death run by tiny, aggressive woman. The other half a healing shop run by a large barbarian type man who's gentle. They are a couple...opposites attract? (u/YearLongSummer)
+        39	Rats, Bats, & Vats: Your typical cauldron witch type store. Alchemy, herbs, could be run by hag. (u/YearLongSummer)
+        40	Kern The Hammer's Hammers: Shout out to Critical Role. Half-Orc Kern The Hammer has given up on fighting in the pits after the loss to Grog the Barbarian, the shop has every kind of hammer you could ask for. (u/YearLongSummer)
+        41	Maybe It's Adamantine: A clearance type shop of magical items. Genuine as advertised Magical Items are in stock but rare. Lots of faulty or completely misidentified items. Create any additional rules, such as refund any item after purchase but at 30% of it's value, no identify spells allowed on store premises, etc. (u/YearLongSummer)
+        42	Ninth Level: Hell themed. Run by a demon or devil. Opportunity to buy existing contracts or forge a new one. (u/YearLongSummer)
+        43	Mendelsen's Magnificent Mending: Mendlesen is the most talented mender in the world. Clothes, artifacts, magic items, you name it & he/she can mend it. (u/YearLongSummer)
+        44	Carts & Crafts: Every kind of vehicle for sale & rent. Can purchase passage on different methods of transportation as well. Purchases come with option to register as a transporter to provide passage & collect fares. (u/YearLongSummer)
+        45	Dark Arts & Melted Hearts: Your typical "Dark Arts" type store, but complete with a tavern type meeting area that regularly provides a speed dating-esque environment for undesirables, villians, & general ne'er-do-wells. Everyone deserves a shot a love right? (u/YearLongSummer)
+        46	The Dock of Many Flings: A store either on the water or with a large well inside. There are no items, only shelves and shelves of pebbles worth different tiers of gold. You buy a pebble, then stand over the designated area and cast your pebble into the water. You gain a random magical effect, item, or etc. (eg. A Mini or alternate deck of many things) (u/YearLongSummer)
+        47	Whispers & Secrets: The only goods bought and sold here are rumors, secrets, other generally unknown information. You cannot pay with traditional currency, must offer hidden information of your own to barter with. Use either an unbiased magical system (such as speaking your secret into a glass jar, putting the lid on placing upon a magical scale that determines it's weight/value), or for more interesting roleplaying opportunities have a totally biased shopkeep the players can haggle with or try and persuade. (u/YearLongSummer)
+        48	Proctor & Son's Deadly Traps: More a small dungeon than a store, the ceiling to floor to finally the basement is covered in traps. You must survive long enough to actually disarm and then purchase your chosen traps. It used to be a family business but that didn't last for very long. (u/vetusnox)
+        49	Impeccable Times: In a building stylized as a home befitting a cuckoo clock, the sound of ticking from countless mechanisms dominate the senses. The blind elderly craftsman shows no concern for anyone except his owl which is never far from his side. Secretly, he can hear from every watch and see from every clock he creates. The owl is also a mechanical contraption. (u/vetusnox)
+        50	Ayesha's Insult Emporium: The store's name, in simple black lettering, is all that infers what lies inside. A friendly middle aged woman (presumably Ayesha) wearing a sari greets customers entering this store's antechamber with a sharp personal insult. Anyone who takes great offense to the insult is teleported out of the shop and can't re-enter. However, those who accept it in good spirit will be led by Ayesha to the main room which contains shelves and cabinets filled with scrolls, books and scraps of paper containing some of the most brilliant, sought-after and mind-bending insults to ever have been uttered or penned. (u/ApertureJunkieZA)
+        51	The Green Room: This inn, hidden by an entrance in the sewers, provides lodging in rooms made completely of thick glass. The floors consist of different types of soil, and beds are constructed from clay with meagre hay mattresses. Patrons that stay the night develop a slight green tinge to their skin that persists for a week. For this duration, as long as one stays in direct natural sunlight for at least 4 hours a day, they need not eat. Sleep is required as usual, and water requirements per day to survive are doubled. (u/ApertureJunkieZA)
+        52	The Potato Is Just An Illusion: A comedy club and tavern frequented by illusionists, diviners and enchanters. Patrons dine, drink and listen to wizards from the local guild tell comedy that is usually highly academic in nature and augmented by various creative illusions. STRICTLY NO IMP FAMILIARS ALLOWED. (u/ApertureJunkieZA)
+        53	Piander's Books: A poorly lit bookshop filled with books of ancient lore. Run by a seemingly mute man in a dark cloak, he watches visitors closely from the shadows. (u/Patergia)
+        54	Alethra's Tear Shop: A medium sized store with shelves full of tiny bottles of tears, the are all carefully labeled with the date the tears were shed, the name and race of the being that shed them, and the reason they were shed. Run by a middle aged woman named Alethera, an unusually cheerful woman who is as eager to buy new tears as she is to sell them. Alethera is especially interested in the tears of adventures and famous people. (u/Patergia)
+        55	Adventure's Emporium: On the outside it looks abandoned and if you ask around town you will be told it is cursed or haunted, but when adventures enter the building they enter a spacious, well lit store full of ten foot poles, iron spikes, torches, and other adventuring gear. It is run by a retired adventurer. (u/Patergia)
+        56	Darvin's Dandy Dolls: A shop with shelves full of dolls, many of them resemble important political figures of the region. It is rumored that some of the dolls have power over the people they represent. (u/Patergia)
+        57	Sprog's Spirits: A dark shop run by a well tempered and grim half orc. It's shelves are filled with bottles that Sprog claims hold the spirits of the dead. (u/Patergia)
+        58	Anton's All-porpoise Absolutions: An office run by a cleric of a god of mercy. A place where kings and commoners alike go to repair their relationship with their gods and other extraplanar patrons. (u/Patergia)
+        59	Magroma's Jewelry: A "jewelry store" run by an old woman where all of the jewelry is made out of the polished bones of various creatures, some of them quite exotic. (u/Patergia)
+        60	Arcadia Glass: A small shop with shelves filled with tiny and exquisitely beautiful glass statues. Run by a half elf, behind his desk he has a small collection of graphic statues that appear to depict past and future events. (u/Patergia)
+        61	Gulthric's Curiosity Shoppe: A mostly nondescript store from the outside, this shop is run by an old copper dragonborn. The inside of the shop is sectioned off with all sorts of magical items for sale, and there is the slight smell of incense. The shopkeeper will sell magic items in trade for a true story. The more important the story is to the character, the more likely they are to receive a more powerful magic item (limited within DM's reason, of course). Magic items range from a large selection of small trinkets to a rather limited selection of powerful items. (u/Luna_Parvulus)
+        62	Fletcher's Hunting Goods: A traveling fletcher who makes high quality bows and arrows. More likely to be seen in a frontier town or on the trails in the wilderness. (u/Luna_Parvulus)
+        63	Clara's Haberdashery: a half-orc woman makes and sells fashionable hats to normal patrons, but sells magical hats on the black market. Her hats are imbued with special abilities by using rare and wonderful items. She's an artist to her core and she'll try to accommodate your request, but at the end of the day, it's her final word. Imagine wild versions of hats you know, precursors to hats we have now, but much more ornate and fanciful. (u/Oyster_Stu)
+        64	People, People!: It's a shop where you can hire people. There's different races and strengths of people for different prices. You can hire a commoner for 1 gold as usual, but there's a few stronger people, or twin halflings that come as a bundle, or an old lady that's very expensive. There's not usually shops where you can easily hire people. Here one is. (u/bbqturtle)
+        65	The Flying Dutchmans' Insurance Agency: A pair of brothers, The Dutchmans, enchant items to levitate back to a predetermined location after using a keyword. Useful for if an item is stolen. (u/MrsPinappleFace)
+        66	Mounds of Masks: A disorganized store stuffed with various masks of all kinds. Owned by a retired, deranged playwright who is rumored to have fallen into the occult. (u/Patergia)
+        67	Dundragon Family Goods: This store appears to be an average general goods store run by a small family of three, a father, a mother, and a daughter, but any local criminal will know that "Dundragon Family Goods" is actually the best place to find illegal supplies without attracting attention, as the whole family knows thieves cant. (u/Patergia)
+        68	Ship Shape Ships: A shipwrights store that constantly smells of the sea. Behind the shipwright's desk are a collection of model ships in bottles that represent real ships, and whoever owns these models owns the real ship. (u/Patergia)
+        69	Stiletto Emporium: Stilettos give bonuses to charisma on female characters, but reduce speed and increase noise. (u/bbqturtle)
+        70	Beets Beets Beets!: They sell Beets! (u/bbqturtle)
+        71	The Weather Station: They have bottles of weather. If you open a bottle, the weather inside comes out and fills the room. (u/bbqturtle)
+        72	The Rusty Key: Sells Keys. Sells rings of keys. Sells keys for specific areas or boxes. Simple keys, giant keys, intricate keys, one magical key. They recommend using keys for decorative purposes only. (u/bbqturtle)
+        73	Dirt's Dirt: Sells dirt. Also small stones. sells mystery dirt and a "dirt mystery bag" that has dirt plus one item in it. (u/bbqturtle)
+        74	Balloons and darts: Every balloon purchase also comes with darts. You can get transport on a hot air balloon and tons of darts. Balloon animals and dart animals. Buy a balloon (and dart!) and get a balloon (and dart!) free! [On walking out, the dart is thrown at the balloon]. (u/bbqturtle)
+        75	Rosewaters: Sells tinctures of water. Rose water, holy water, filtered water, spring water, toilet water, alcohol water, etc. (u/bbqturtle)
+        76	Lukas' Lucky Oddities: At the start of each day, Lukas rolls twice on the trinket table and chooses one trinket. He must sell it for an exorbitant price before dusk. Such is his curse. (u/gaylordqueen69)
+        77	Madame Tralancet's Veritable Shop of Disguises and Costumes for the Modern Journeyman: She has an enormous selection of suspiciously cheap costumes, disguise kits, wigs, and other fake parts. She has seven drawers bulging with moustaches alone. (u/gaylordqueen69)
+        78	Doctor Nehantil's Reputable Establishment: In a rundown shack in a bad part of town, a half-orc woman runs reception. Give her your appointment card, and she'll tear off the planks from the back wall where you can meet Dr. Nehantil, a "physician" with cheap prices and even cheaper services, no questions asked. (u/gaylordqueen69)
+        79	Mira's Oozes: A pet store of sorts filled with living oozes of all colors stored in jars. Run by a young and naive sorceress who insists that the oozes are harmless when properly handled. (u/Patergia)
+        80	Temple of the Tiny: A quaint little store stocked with holy symbols and other religious merchandise, all marketed towards children. (u/Patergia)
+        81	Kesheki's Weapon Shop: A store in the darkest corner of the town run by a curiously well mannered female gnoll, Kesheki. The shop sells all kinds of the most exotic and vicious weapons imaginable. The only currency Kesheki will accept are the scalps of humanoids, the stronger the creature the scalp was taken from the more valuable the scalp is. (u/Patergia)
+        82	Walters Watch/Warehouse/Witchcraft/Wizardry/Weaponry: Walter is an aged peddler who settled in a small town. He has a bit of everything, is the towns postmaster and guard. The shop's sign says "Walter's " on the left side. The right side is a stack of signs he changes as needed. "Watch, Warehouse, Witchcraft (Herbs), Wizardry (mostly useless magic items) . When not selling he switches to "Walter's Watch" and earns his wage as the only townguard. (u/Lonar2)
+        83	Clifford's Catastrophic Candys: a candy shop that only sells empty bags that fill with either just the treat you want or something utterly disgusting once you get hungry. You must eat what appears before it fills again. (u/Luk9013)
+        84	Place Your Hand: An old shop, completely empty, run by and old human wizard. In the shop you can find only a table, and this old man sit on a wooden chair, behind the table. Over the table there is a Bag of Holding; for 10gp the old man let you pull out one random non-magical object, from a rusty pan to a brand new plate armor. Every thing is possibile in this shop! Are you brave enough to “Place your Hand” in the bag? (u/Ankeron)
+        85	Tomes of Tombs: A shop specializing in information on death, undeath, and graveyards. Includes biographies of famous figures buried in local area as well as maps of some family crypts. (u/Quaseymoto)
+        86	Old Elmer's: A wooden building that walks on several insectile legs, ran by an aging half-elf with a wooden leg, a glass eye, and a fully animated brass hand. Sells prosthetics of all kinds, magical and mundane. (u/A_Blessed_Feline)
+        87	The Meat Place: A luxurious, popular tavern with really good food, mainly specializing in one kind of meat. An still living animal covered in scars is suspended from the ceiling, chains covered in glowing runes. Occasionally an employee comes in and cuts it up, carrying the meat to the kitchen as the animal heals. Neither the staff nor the patrons seem to have any issues with this. The animal is a 1: Pig 2: Sheep 3: Goat 4: Cow 5: Irrecognizable mass of scar tissue with a distinct taste that you cannot place. 6: Roll twice. Both. If a die lands on a 6 again, it's a sapient being being kept against their will. (u/A_Blessed_Feline)
+        88	Frey's Fresh Fish Flesh; A middle-aged female water genasi carrying a large Urn of Infinite Water, as well as various fishing supplies. Sells fresh fish, which she fishes out of the urn, as well as fishing supplies. Often found in deserts. (u/A_Blessed_Feline)
+        89	Skeleton Shop: A large underground complex selling all kinds of animate skeletal animals. The owner is a jovial skeleton who only accepts currency taken by force, without the previous owner's consent. (u/A_Blessed_Feline)
+        90	Howard The Doe Has A Shop Now Come Check Out Howard The Doe's Shop: A rundown house obviously built as a home and not as a shop. Staffed by a very excited yet forgetful doe, Howard, who insists on maintaining bipedal gait while the party is present despite being really terrible at it. Will attempt to sell anything not nailed down, and is surprisingly persuasive despite having obvious trouble speaking with her doe vocal chords and holding objects with her doe hooves. Has no actual grasp on what objects are worth or even what constitutes valid payment and will often overcharge or undercharge the party to ridiculous degrees. (u/A_Blessed_Feline)
+        91	The Tavernacle: a tavern run entirely by beer-making monks. (u/PilotPen4lyfe)
+        92	QIA - Questions, Information, Answers: This business buys and sells information, brokers missions, offers services. Gathered by magic means, bought from adventurers or received from distant locations a party can find the information it needs, learn about a mission offered by a trader or use the shops scrying or message service for a fee. This shop and some traveling business wagons are run by an elderly, stonefaced dwarf named "Harthos Adori Treasurebringer" in wizard robes with a nameplate saying "Hat Wizard". (u/Lonar2)
+        93	Wyatt's Wandering Wares: This shop, run by a young half elf, is of a special kind. It appears in a free spot in a street, and when it appears it has always been there. Wyatt is a good natured trader, selling wares with magic properties that often are unknown, and always trying to play a little trick with his customers. (u/Lonar2)
+        94	Kabooms and Korpses: A fireworks store that has been almost completely blackened by numerous incidents. Run by a goblin inventor who is also an amateur undertaker, offers to use some of his bigger rockets to give loved ones a glorious send off. (u/Patergia)
+        95	Dolores' Café & Dispensary: - a public shop for purchasing all kinds of alchemical reagents and paramacutical goods for healing, potion making and poison brewing - Also doubles as a delightful café where patrons can drink hot brews of cocoa and indulge in their preffered choice of reality enhancing herb. (u/TerraKorruption)
+        96	The Gold Chain: They sell gold. Great place to exchange currency types, trade figurines or valuables for gold. They sell a few gold coins with magical properties, like the boomerang coin and the communication coin. Sometimes they have slow sales so they have a "buy-one-get-one-free" deal on gold coins. Deals primarily in gold. Also can melt gold into shapes like rings and earrings. (u/bbqturtle)
+        97	Store Store: Sells stores. You can buy storefronts ranging from a clothing store to a hot dog stand. Not cheap! They also have an enchanting business, password protected chests, charms to prevent theft, money pockets that only the owner can withdraw from, and alarm bells. They also sell signs of various types, some with glowing lights. (u/bbqturtle)
+        98	The Prime Meridian: This store has one person inside with very, very shiny golden shoes. "These are my prime shoes" they say. They will sell you almost any item, and have it back to you within two days. However, there is a significant charge to getting the item, and some items might not come within two days. Unfortunately, before you can buy, the man tries to up sell you with a long list of items, and won't begin getting your item until bombarding you with the other items. Things like a bard service to follow you around with music, a chef service to cook you food, an enchanted rock that you can talk to, but also tells him your preferences in case you come back, a painting delivery service that sends you paintings every week for you to look at, but the paintings are pretty bad, like a child drew them. Each service costs 2-3x the cost of the item they are going to get in 2 days. (u/bbqturtle)
+        99	Sew it seams: A textiles shop full of misleading fabrics and clothes. (u/Smalejandro)
+        100	ALWAYS A WINNER!: A lottery outlet. To enter, you have to put a GP into above the doorknob. You walk in and bells go off - you're a winner!! A crowd cheers around you and you see then number 10,000 person. A sash is placed on you. You're the 10,000th customer! You win a large cash prize! Congratulations! You can either stop now, or take the chance to double or nothing your earnings!! The shop has a large prize wheel. Roll a D10 - anything other than a D10 loses! You just have to sign here and pay the deposit of 10 gold coins! If the PC does so, they earn the prize of 1,000 gold coins. They check their pouch and a faint golden vapor is leaving their pouch and moves toward the lottery. If they re-enter, they must pay another coin, but the building is empty. (u/bbqturtle)
+    Shopkeeps
+        All shadow. Speaks in a raspy whisper.
+
+        Has mouths covering their body. Talks only in questions.
+
+        Draped patterned, coverings over every exposed bit of flesh. Wants a way home.
+
+        An engorged spider. Friendly but hungry.
+
+        Spider made of spiders. Hypnotic and a hard bargainer.
+
+        Person wearing a turban who is in fact a writhing mass of worms. 
+
+        The memory of a merchant. Keeps forgetting what they are selling but they are a ruthless bargainer
+
+        Eternal Flame. Speaks a lot of languages. Loves to show off.
+
+        Keeps shifting between avatars of deities. Arrogant but fun at parties.
+
+        Elephant. Does not like when people talk about them behind their back.
+
+        The concept of commerce. Leave a farthing. Take a farthing. Whatever you do, do not bring up alternative systems of economic distribution.
+
+        An old friend. Why do they not remember you? Why do they stare with vacant eyes?
+
+        Obese merchant. Super friendly and cordial. Willing to throw extra deals in if given the chance.
+
+        Vampire. Prefers bargains made with blood.
+
+        Renaissance faire employee. They thought they were here just for the summer.
+
+        Mosquito swarm. Prefers bargains made with blood.
+
+        Scam artist. All the stuff they are selling is legitimate but they try to sell it in scammy ways, ie. payment plans, hard to validate insurance policies, etc.
+
+        Magician. Theatricality and deception are powerful agents… blah blah blah
+
+        Costumed monster. Loves dressing up in various weird costumes. Pretty normal otherwise.
+
+        True believer. None of their stuff works but they think it will.
+
+        Bull. Meticulous and careful. Very calm as well. They want you to try their family tea.
+
+        Completely smooth skin everywhere. Communicates via gesturing.
+
+        Seems to encompass the entire store. Still paranoid about shoplifters.
+
+        A bunch of very strong odors. Invisible and polite. A bit shy.
+
+        Conquered a number of planes but they do this in their retirement.
+
+        Thin, bookish, wants to retire to a place of culture.
+
+        They used to be an antiquarian and now they sell this stuff.
+
+        Met the Sultan, in person, and lived. Now tells everyone about the experience.
+
+        Secretly a criminal kingpin. Looks exactly like a criminal kingpin.
+
+        Sky pirate. Eyepatch. Pegleg. Spyglass. Basically the coolest person ever.
+
+        Recently found out they have been evicted from their house. Lives out of their store now.
+
+        Can never return home. Brooding. Judges quickly and harshly.
+
+        Tiger. Wants to bundle in another item whenever they can.
+
+        Has realized the path to true enlightenment. May have just ingested special mushrooms in their tea.
+
+        Has seen a path that connects everyone and everything throughout all times and existences. Pretty mellow.
+
+        Has a secret portal to a plane of whatever they sell in their backroom. Keeps trying to get you the perfect version of whatever from the backroom.
+
+        This is their last sale of the day.
+
+        Decides everything with chance. Has a lucky coin. Has an unlucky coin.
+
+        Wants to sell you their whole business as well. Pushy.
+
+        They try to guess every customer’s accent. Is wrong every time but doesn’t let it get them down.
+
+        Juggles their goods when handling them. Sometimes, awkwardly drops things. Very embarrassed.
+
+        Has their four screaming rat children racing around their storefront. Apologizes for them constantly.
+
+        Tries to find someone that you both know. Somehow seems to always find someone. Very genial.
+
+        Generous to a fault but seems to have a prosperous store. Constantly undersells their goods.
+
+        No head. Repeatedly bows when you enter their store. Their voice sounds like it comes from far away.
+
+        A voice in the wind. Wind races through the whole store when they speak. Fluttering, swirling leaves manifest with their body.
+
+        A stifling heat. You can barely talk in the store. The merchant is the heat. Very warm.
+
+        You realize you have met this merchant before. In fact everything you say to them you have said before; they trade in the past to secure their future deals. Only likes sure things.
+
+        Series of tubes. Liquid pours through them to create sound.
+
+        A vast series of gears manned by reverse monks. Anytime the thing speaks or is spoken to there is a process of a few minutes as they calculate the next response.
+
+        A reverse monk. They walk everywhere in reverse, perform all tasks backwards. Their life is in reverse.
+
+        Wants more for their life than just being a merchant. If you are interesting enough they beg to tag along.
+
+        A hivemind of three children. Completing each other’s sentences. Finishing each other’s tasks.
+
+        Three children in a cloak.
+
+        Harpoon hand.
+
+        Sings all the time. Slightly annoying. Slightly endearing. Always awkward.
+
+        Acts extremely suspicious. Insinuates they run an illegal business in the back room. Doesn’t even have a back room.
+
+        Has a talking bird that does all the talking for them. Is the bird the merchant? Impossible to tell.
+
+        Dresses in a manner from the distant past, and seems completely unaware of current events.
+
+        A small statue of a head. Makes terrible jokes constantly. May give you a better price if you laugh, but will definitely give you a worse price if you don’t.
+
+        A modern style lamp set prominently. When rubbed a djinn dressed in knight’s armor runs the shop. They insist all requests for items be couched as wishes.
+
+        A giant fly who communicates by projected images in the minds of those in the shop.
+
+        A squad of soldiers. Works together. Has uniforms and a banner
+
+        Used carpet salesperson. Knows every trick in the books to get their sale.
+
+        Very unkempt. Smells. Meticulous in their speech and manner.
+
+        A pig. Do not mention that fact. Stares constantly
+
+        Is running the story for a relative while they are out at the moment. Not very knowledgeable.
+
+        Dead. Now less dead. Killer sales.
+
+        Has Sultan artifacts and memorabilia all over their front desk. Talks about the Sultan effusively.
+
+        Constantly offers you “discounts” based on how much they like you. Changes their mind easily.
+
+        Knew you from the war. You know the war don’t you?
+
+        Deposed monarch. Now runs their store like a nation state.
+
+        Mythological figure.
+
+        Animated armor. Creaks constantly; they probably need oil.
+
+        Rat-king. Hyperintelligent. Evil. 
+
+        Prefers to trade in corpses. Does not care what type of corpses.
+
+        Owes a ton of money. Desperate. A hunted and haunted look is in their eyes.
+
+        Is carried around on a shield by two shield bearers.
+
+        Bear. Loves hugs. Cuddly. Growls when upset.
+
+        A blank nondescript face. When you enter their store you forget what you came in for. When you leave you remember.
+
+        Is aggressively hiring an assistant. Would you like to be an assistant merchant?
+
+        Is the store. Deposit your money here. Watch where you walk. Oh that tickles!
+
+        Denies being the merchant no matter how obviously it is them. Shoplifting is still theft and they will try to stop you.
+
+        Has another, better store that they keep recommending to you. 
+
+        Does not believe in money. Will only trade in favors.
+
+        Die hard anarcho-communist. Hates capitalist pigs. And yet here they are…
+
+        The store as a metaphor. What is it a metaphor for?
+
+        A great tragedy is being enacted at this store. The theater troupe is the merchant. You still need to buy things.
+
+        A sense of oneness. How can you buy from yourself? How can you steal from yourself? Well you can, so maybe be careful.
+
+        A Sultan’s guard running the store.
+
+        A megalomaniacal villain trying to get you to buy their goods.
+
+        Very deaf. Has to shout everything as loud as possible. Speaks many languages though.
+
+        A snowperson. Relatively cold in the store. Tracks snow everywhere they go and does not seem to melt.
+
+        Yourself. They do not make a big deal out of it. There are a couple others of you running around.
+
+        A smaller replica of the store on a counter. Hey that kind of looks like your party there…
+
+        Writhing snakes forming into a mass. Very passionate about their wares.
+
+        Keeps telling you about their new religion. 
+
+        A cart. Rolls its goods around inside itself.
+
+        A mountain top. Keeps having miniature hermits inhabit it.
+
+        Tree. Grows throughout the store. Ancient. Great conversationalist.
 
 NPC stuff
     Questgiver motives
@@ -887,6 +1289,396 @@ Storybuilding stuff
         You're in a cave, a rockslide has blocked the flow of an underground river, a huge beastie is coming down the tunnel and suddenly unleashing a river in it's face is the best way to deal with it, but a gnome has built a house in the way and his wife is sick in bed 
         a magic mcguffin is very important to the survival of a town, you learn that a criminal gang are planning to steal it and they're recruiting new members to assist. A perfect opportunity to infiltrate and save the town, except the mcguffin would be really useful to your master quest. 
 
+    Plot hooks
+        Easy hooks, outside forces. Straight-forward events where something threatens your stronghold.
+
+        1) A room in the lower floor collapses, revealing a small crypt. There are no records of it being built, and it looks extremely ancient. Just a day after, everybody in the stronghold starts getting sick, their skin turns grey and blood drips from their nose and mouth.
+
+        2) A room in the lower floor catches fire, out of nowhere. The next day, it happens again. And again the day after. The only strange thing anybody noticed was a maid that heard kids laughing in an alleyway, right before the fire started.
+
+        3) A room in the lower flood EXPLODES in a geyser, that sends foul, brown, swampy water everywhere. Something crawls in it and it attacks people.
+
+        4) A drunk dragon crashes through a window.
+
+        5) A knight completely dressed in black, on a black horse, rides up to the door, demanding a duel. If defeated, the next day, a white knight arrives, demanding a duel. The thing keeps repeating, no matter how many times they’re defeated or killed.
+
+        6) A knight completely dressed in black, on a black horse, rides up to the door, demanding a duel. It’s actually an empty suit of armour being moved by invisible fairies, looking to mess with the players. They’ll use tricks and illusion to make their opponent look ridicolous in front of their followers.
+
+        7) The stronghold starts sinking. Apparently it was built on top of a swamp.
+
+        8) The Stronghold starts floating. Apparently it was built in an area where gravity is magically weak.
+
+        9) Trees start growing around the stronghold at incredible speed. In just a day they start growing inside and breaking through walls and floors. Strange naked people have been sighted in the new forest.
+
+        10) A second stronghold appears in front of the first. It’s a mirror of it, but it’s all wrong, a bit crooked, a bit different, pieces out of place here and there. Warped copies of the players roam its wrong halls.
+
+        Alright, we had some easy ones, pure encounters, go in go out. Now let’s get more personal.
+
+        Inside hooks: your own people are involved. Peasants and followers did something you have to deal with.
+
+        11) Witch hunters arrive early in the morning and drag away one of your maids. She’s a witch, they say. Someone gave them a tip, they won’t say who, but someone in the stronghold. The locals itch for a good burning, in any case.
+
+        12) Half a dozen witch hunters are found dead inside the castle. Seems like they wanted to arrest someone. Rumours go around rapidly, and everybody is nervous. Accusations are thrown around.
+
+        13) An NPC friend with the players arrives in town with a big haul. He scammed some wealthy merchants to get it. They didn’t appreciate it and caught up before he could get away. He asks the players to hide him and his “technically not stolen” wares in their stronghold.
+
+        Legally, he didn’t quite break the law, so…
+
+        14) One of the servants is caught with a bunch of stolen stuff in their room. Dozens of items, most of them worthless. A prank? Kleptomania? How will the players punish the thief?
+
+        15) Magical items start disappearing from the players' inventory when they’re in the stronghold, and they are found inside the room of one of the servants. A big haul. “I’m being framed!” says the servant.
+
+        16) A servants is cursed by a witch and suffers a horrible mutation that can’t be easily removed. The local clerics want them burned, the peasant, horrified, want them exiled. Will the players help the poor guy instead?
+
+        A lot of people will be really unhappy if the mutant stays around, but he did nothing wrong.
+
+        17) A servant is cursed by a witch. Everybody knows the servant deserved it, they were an asshole, unpleasant and downright violent.
+
+        But they’re still a servant of the players. To insult them is to insult the players. Letting this go without punishing the witch will surely damage their reputation, and make people question their loyalty:" What good is serving them if they won’t even protect me?"
+
+        18) A servant is caught embezzling money from the stronghold treasury. They were being forced to do it, they say; blackmail!
+
+        19) A group of servants is caught organizing orgies in the depths of the stronghold.
+
+        20) Some random traveller was robbed and murdered just next to the stronghold. Probably a servant did it, many seem to know about it, but nobody wants to talk.
+
+        What for? The victim was a nobody, and nobody will ever know. Surely you’re not proposing to punish a faithful servant just for that? Let it go.
+
+        Business proposals
+
+        Sometimes being a lord means doing deals. Dangerous dels. Big gains, big risks.
+
+        21) A thief lord approaches the players, proposing a collaboration: They want to open a thieves guild hidden in/ next to the stronghold. The players will get special access to the black market, discounts, information and the guarantee they won’t be targets of the guild, in exchange for protection and discretion.
+
+        22) A fervent cleric proposes to build a chapel in the stronghold, together with a bunch of monks.
+
+        They’re clearly dedicated and will bring blessings and protection from the agents of evil. They’re also nuts and may start witch hunts and oppress the locals. Refusing will bring their hammer, and, they say, the anger of the gods.
+
+        23) A strange alchemist proposes to build a lab in the stronghold. The alchemist is talented, no doubt, and they offer the players some really neat potions. They’re also a bit unstable, and their experiments often get riiiight on the verge of going out of control.
+
+        No problem, the alchemist guarantees. All cool. Just don’t ask about the previous laboratory.
+
+        24) A druid tells the players they must let a sacred groove grow next to the stronghold. If they refuse they are an enemy of nature, like all other nobles.
+
+        25) A merchant proposes to build a menagerie. Accepting would bring the players money and useful companions, but the merchant handles the animals with awful and violent methods. Still, technically it’s not illegal, and if the players find out only after the menagerie has been built, it won’t be easy to remove it without paying a hefty fine and causing a scandal. Not legally, at least.
+
+        26) A famous artist proposes to build a theatre in the area. They are a real handful: annoying, pretentious and overbearing, but aren’t all great artists? Their talent is clear, the populace loves them and nobles love to be seen by others at their spectacles.
+
+        27) An unknown bard proposes to build a small theatre, something simple, to make the peasants happy and entertain the kids. All very humble. Too humble, other nobles will surely dislike something like this. What a preposterous idea.
+
+        28) Someone proposes to legalize prostitution and open a brothel in town.
+
+        29) A group of dwarves proposes to build a large foundry in the stronghold. They’ll produce and sell weapons to the entire kingdom.
+
+        Just imagine how much money you’ll make, selling weapons. Mountains of gold. Gold. Gold. Ethics? Eh, whatever. Think of the gold.
+
+        30) The peasants beg the players to stop with the building and fixing: they are tired, the season is hard, food is scarce.
+
+        The players can refuse an important upgrade/addition to the stronghold to make the peasants happy, but damage their reputation with other nobles, or work their peasants to the bone and gain a reputation as brutal dictators.
+
+        Spooky Scary Skeletons and other shivers in the night. Scary plot hooks.
+
+        31) At night, the peasants are kept awake by the sound of hands scratching and clawing coming from inside the walls and under the floor.
+
+        Some, terrified, started sleeping in the middle of the street.
+
+        32) At night, a shadowy knight runs around the village, hidden by the fog. Nobody knows exactly what it is, but it causes damages and gives everybody a good scare.
+
+        33) At night, a voice crying and begging from help can be heard from the well in the middle of the stronghold. Nobody recognizes the voice.
+
+        34) At night, entire fields wither and die. The plants are found completely black and dead in the morning, but no traces. It hits a different farm every night.
+
+        35) At night, one more moon than usual can be seen in the sky. But only from the stronghold.
+
+        36) At night, a massive swarm of insects covers the sky and lands on the village. They enter in every house, eating everything that can be eaten. They eat crops and animals too.
+
+        37) At night, people are brutally murdered in the middle of the village. A good, old fashioned murder mystery.
+
+        38) At night, somebody dug up all the bodies from the local graveyard and made a pile with them in the middle of the village.
+
+        39) In the evening, as the sun is setting, strange figures can be seen walking between the crops. Some farmers go towards them, to see who they are, and never come back.
+
+        40) At dawn, some peasants wake up covered in blood.
+
+        Drastic events that could radically change life at the stronghold.
+
+        41) A necromancer arrives at the stronghold and offers to put her undeads to good use, helping the players. They can be a great workforce: never tired, never sleeping or eating. Would make life for the peasants a lot easier.
+
+        42) A strange plant starts growing in the village. Eating it makes people hallucinate. The peasants love it, and they look happier and more relaxed. What will be, if any, the long term effects, nobody knows.
+
+        43) A drow enclave asks to move into town, or under it, to be more precise. They say they abandoned the cult of Lolth, and want to live a better life.
+
+        44) Horrors and monsters start crawling in the woods around the stronghold, their numbers growing every day.
+
+        Will the players delve into the forest, trying to find the source, leaving their settlement undefended? Or will they wall themselves in and hope to endure the onslaught?
+
+        45) A horde of goblinoid arrives and says they want peace. They want to move in and work, peacefully, together with the players. They have shown they are powerful and capable.
+
+        An alliance would have a lot of benefits, but other nobles and local farmers would both be hard to convince.
+
+        46) The king demands the players send a large number of their followers and peasants to help in the war effort. Most of them will never come back, but it’s their duty, as nobles, to do so.
+
+        47) A strange idea is going around the locals: they think the players are about to declare their independence, break off from the kingdom.
+
+        Sure, they wouldn’t have to pay any more taxes, there is potentially much to gain, but the backlash would be enormous. The players can squash these rumours, hopefully before they reach the ears of the king. Unless they want to consider the idea…
+
+        48) There is a strong independence sentiment growing between the locals. They don’t want to follow the players anymore, and a few rebels seem really good at riling up the crowd.
+
+        The players can squash the movement with violence, try to gain back their trust, or hey, maybe they will accept and leave.
+
+        49) A connection to an elemental plane opens in the middle of the stronghold. The players can keep it, and make an alliance with whatever is on the other side.
+
+        Their followers and peasants will become a mix of regular mortals, planar-touched mortals and extraplanar visitors. Or they can try to close it.
+
+        50) A Hobgoblin legion wants to work for the players. They are well organized, trained and armed to the teeth.
+
+        Retainers. Hooks involving your most important followers. This is 20 long because they should have more weight than an average NPC. Remember that they’re people, with their own lives and interests.
+
+        51) A retainer killed a commoner over a stupid discussion. The retainer is shocked and feels terrible. They ask to be exiled, they’ve been feeling confused for a while… all this power is getting to their head.
+
+        They want to just stop and live like a normal person, away from everything.
+
+        The retainer will be lost permanently.
+
+        52) A retainer killed a commoner over a stupid discussion. The retainer expects the players will take their side. After all, it was just one, dirty commoner. Or so the retainer says.
+
+        That would surely sour relationships with the locals.
+
+        53) A retainer gets in a fight with a visiting noble. If things escalate, it could become a formal duel to the death. That would be… really bad, for the players, whatever the result will be.
+
+        54) A retainer gets in a discussion with a visiting noble. The Noble pulls out a knife and wounds the retainer, in front of everybody. Scandalous.
+
+        55) A retainer is found in bed with a peasant. She’s pregnant, but the retailer doesn’t want anything to do with her. Her family is outraged but could settle for a hefty payment, to keep everything under wraps. Still, small town, rumours spread.
+
+        56) A retainer is found in bed with a princess! If this becomes public knowledge, it will be an enormous scandal. And the princess is pregnant.
+
+        57) A retainer is found in bed with a peasant. The retainer is in love and asks to be let go from their job so the two can get married and go live together.
+
+        58) A retainer is a vampire! They’re trying to keep it secret, but the voices of people being assaulted in the night spread rapidly.
+
+        59) A retainer was attacked by an intellect devourer. Their intellect was devoured, and they have been replaced. A simple scout? The harbinger of a Mind Flayer invasion? Will the PCs even realize it happened?
+
+        60) A retainer meets a dryad in the woods around the stronghold, falls in love and asks to be let go, so they can go live together, frolicking in the woods or whatever. If the players refuse, the retainer runs away.
+
+        61) A retainer believes the players are being cheap. They demand to be given better equipment and more magical items.
+
+        62) A retainer bought a pegasus from a shady merchant, to use as a mount. The unicorn is wearing a magical bit that makes it follow any order.
+
+        63) A group of retainers have been helping the local peasants with some monsters. Nothing serious, very easy job, but the retainers are taking a lot of money from the peasants, to do it.
+
+        64) Fight between retainers. It’s something petty, but both retainers are getting riled up, and both expect the support of the players.
+
+        65) A retainer becomes a warlock. They met an entity and made a pact, in their free time. The players realize that this new patron is considered more important than they are, by the newly minted warlock.
+
+        66) A retainer was out in the woods, hunting. The retainer saw something move and shot. That something was an elf, and they’re dead now.
+
+        The retainer arrives at the stronghold in the middle of the night, carrying the body, desperately asking to hide it before the other elves find out and come for the retainer head. It’s possible they already know.
+
+        67) A rival noble starts buying the players retainers, offering them a lot of gold, more than the players can afford.
+
+        68) A retainer is often drunk, even during adventures, and their performance is terrible.
+
+        69) A retainer is spying on the players, selling information to some rival noble or criminal group. The player can catch them during the exchange at night, hidden in the garden.
+
+        70) A retainer has committed a blasphemous act and was marked by a god. Locals are horrified and hide as soon as they see the retainer. Other retainers expects the players to do something about it.
+
+        Political hooks, if you want to game those thrones. Not every player will like these.
+
+        71) Taxes. A retainer proposes to raise them, the peasants ask to lower them. The retainer says the players can use them wisely, and in the end, the peasants would be richer than without taxes.
+
+        The retainer could be embezzling part of those taxes.
+
+        72) A peasant insulted one of the players. The law says that a peasant insulting a noble should be punished harshly, and nearby nobles will expect nothing less.
+
+        If the players find it excessive and refuse, their reputation will surely be tarnished.
+
+        73) A peasant stole from the players. They were hungry and desperate, but the law is clear: off with their head. A peasant stealing from a noble is unforgivable. Forgiving the crime would be downright scandalous.
+
+        74) A retired professor has a proposal: open a school for the local peasants. Teach them the basics, at least reading and some math and history.
+
+        Sounds nice, right? WRONG! Other nobles find the idea absurd, and will not tolerate something like that. It’s a mockery of everything their society is based on, an attack at their status. Even the king is getting involved.
+
+        The players will get in real troubles if they go through with this idea.
+
+        75) A group of [race discriminated against in your setting] arrives at the stronghold, dirty and hungry, begging for refuge. Everybody expects the players to simply kick them out.
+
+        Not to mention, what will we do if more arrive?
+
+        76) An important noble wants to visit the stronghold. He demands to be welcomed the way he deserves: massive celebrations, plenty of food, games, music.
+
+        The celebration alone will keep the players busy for days, not to mention the time it will take to prepare it, and the enormous waste of resources, food, and the time it will take from the peasants that could have other things to do.
+
+        Refusing, while tempting, would carry heavy repercussions and the anger of the noble.
+
+        77) A marriage proposal for a player. A noble family wants to organize a marriage.
+
+        78) A high-level bard arrives in town and starts mocking the players. Legally, there isn’t much they can do to stop them, but the bard often goes past simple humour, and seems to be actively harming their reputation.
+
+        Maybe the bard secretly works for somebody?
+
+        79) A group of mercenaries wants to move in, offering to help protect the land. They are talented, and they would surely make the nearby lands safer, and their price is fair. They’re also aggressive, loud and violent with the peasants.
+
+        80) A druid wants to build a temple to an ancient, primaeval deity, that almost everybody has forgotten. It’s not an evil deity, but its cult is forbidden in the kingdom, for reasons nobody remembers.
+
+        The temple would surely bring boons and blessings, but also the ire of the king.
+
+        Superstition and tradition. Plot hooks that involve regular people and their wacky ideas about the world.
+
+        81) A wounded unicorn arrives in front of the stronghold and collapses, still alive, but barely. The local peasants are ready to butcher it: everybody knows unicorns can heal people, give youth, and are also very valuable.
+
+        The players can stop them, but it will surely get a lot of folks grumbling.
+
+        82) A large humanoid (any unconventional race) has wandered near the stronghold. The locals attacked them, tied them up, and are ready to burn them in the public square, even if the humanoid didn’t hurt anybody.
+
+        83) Centaurs have been spotted in the woods nearby. The locals are terrified, they’re putting up barricades and want to set the woods on fire. There are local tales that depict centaurs as demons.
+
+        84) A wounded Humber Hulk wandered outside the Underdark and died in front of the Stronghold. The locals want to eat it. Technically, the law grants them the right to do so, and they are convinced it’s some magical creature that will give them a health boost.
+
+        85) A wolf was spotted inside the stronghold at night. The locals are convinced it was a werewolf, paranoia is growing and people accuse each other.
+
+        86) One of the players accidentally broke an old local law. The punishment would be having their hands cut. The locals take these things very seriously.
+
+        87) The locals are convinced a nearby pond is magical and will protect the village during a famine if you dump carts full of food in it.
+
+        Throwing away tons of food during a famine seems like a bad idea, but the locals are adamant it’s the only way, and it worked in the past.
+
+        88) There is an inn in town, and occasionally, a traveller disappears. It’s the spirits, say the locals: they spirit people away, no big deal. Been happening for years. Don’t look into it, and don’t investigate the inn.
+
+        89) Locals regularly bring offerings to the “guardian” of the village. A spirit that watches over them, they say. If the players check it out, they easily recognize it as a dangerous Chimera.
+
+        90) There is an eclipse. The locals are ready to kill all the babies born this day.
+
+        Put the players in the spotlight. Roleplay-heavy hooks that directly involve the characters.
+
+        91) A peasant is in love with one of the players, and start courting them.
+
+        92) A drunk peasant, angry over something trivial, throws a glass of wine in the face of a player, in front of everybody.
+
+        93) Seeing the wealth of the players, the peasants accuse them of being thieves, of taking advantage of them and their land without sharing.
+
+        94) A rumour that the players are Satanists is spreading around the stronghold. Apparently the high-level magic they use is making their followers nervous.
+
+        95) A writer wants to write a book about one of the players, a glorious ballad of their deeds. They ask to be allowed to follow them, in their adventures and also during their daily life.
+
+        96) Worriesome rumours about a player reached the ears of the inquisition. They demand an investigation: one of them will follow the player, in their adventure and also during their daily life, judging their actions. No secret shall be kept from the inquisitor.
+
+        97) A local woman is pregnant, one of the players is accused of being the father.
+
+        98) A kid arrives at the stronghold, dirty and covered in rags. All they have is a letter that says one of the players is their parent and must take care of the kid.
+
+        99) A rival of the players, encountered in a previous adventure, attacks the village and takes some peasants and some followers hostage.
+
+        100) The players go back to their stronghold after an adventure and find out they are already there: there are identical copies of their characters running the stronghold.
+
+        All the peasants and followers thought they were the real ones. Both groups accuse the others of being imposters.
+
+    Apocalypse
+        This apocalypse will begin
+            1	when the Rite of Annihilation is performed during a total planetary alignment.
+            2	if the majority of living souls on the planet pray for it.
+            3	when human civilization achieves the goal for which it was originally designed by entities beyond comprehension: concentrating platinum into an easily harvested form.
+            4	with the first and final casting of the spell Power Word: End.
+            5	when the angels of justice finally manage to argue past their deadlock with the angels of mercy for the destruction of the world.
+            6	when an emperor unites all the kingdoms of the world under one crown and decrees it.
+            7	when the old gods are unchained from their chthonian prison.
+            8	when the Gloaming Horn is blown with enough force to topple castle walls.
+            9	if the four ur-temples at the corners of the earth are desecrated.
+            10	under conditions lost to mortal knowledge.
+            11	if ever the gods’ supply of spilled blood and sacrifices wavers.
+            12	when the last elf fades from the world.
+            13	when the fruit of the Tree of Anti-Life is fed to a would-be messiah.
+            14	in order to censor the spread of an ultimate cosmic secret.
+            15	when an act so vile is committed that the universe rejects itself.
+            16	when one of the thirty-six truly righteous people in the world is made to believe that they are what they are despite their deep humility.
+            17	at the time predetermined at the world’s creation. Manipulating the golden Doomsday Clock might accelerate or delay this inevitable date.
+            18	when the three pieces of the End-Bringer’s Blade are reunited.
+            19	when the seal at the bottom of the Tomb of Worlds is broken.
+            20	when the Questing Beast is caught and killed by an unworthy knight.
+        This apocalypse is most wished to be brought about by
+            1	a militant secret society of skeptics who believe it to be necessary to reveal the illusory nature of the world.
+            2	a disgraced order of paladins who believe this will save the world from an oncoming eon of evil and degeneration.
+            3	a coterie of wizards who seek to usurp the gods by becoming the creators of a new universe.
+            4	a genie bound to the wish of a misanthrope.
+            5	an ultraterrestrial para-deity trapped within the world in a cycle of reincarnation in wretched mortal forms.
+            6	an ultranationalist faction confident that they can preserve their own lands as a habitable sliver while the rest of the world is wiped away.
+            7	an uncanny intelligent machine from the future, seeking to prevent its own abominable construction.
+            8	the demiurge, architect of falsehood, who wishes to shape a new material reality to entrap more luminous souls.
+            9	a fanatical popular movement based on a peculiar interpretation of scripture, wherein the apocalypse will result in a utopia.
+            10	an infamous company of veteran mercenaries who desire an end to all conflict.
+            11	a dryad-like creature bound to ferns instead of trees, who wants to deny the world usurped from them to the seeded and the flowered.
+            12	a ghost who would rather see the world destroyed than move further from their treasured past.
+            13	a union of overworked zeitgeists who want the turning of the ages stopped for an unmeasurable non-eon.
+            14	a beloved, preternaturally-talent composer who desires the apocalypse as the coda to their greatest symphony yet.
+            15	an immortal alchemist who has become terminally bored with everything.
+            16	a nihilist social club.
+            17	a possessing curse bound to kill all the descendants of someone who betrayed its creator tens of thousands of years ago. Most people are now descended from that someone.
+            18	a necromancer who will establish a kingdom of the dead from the bones of the old world.
+            19	invaders from a parallel timeline of secondary possibilities, seeking to supplant their primaries.
+            20	a vengeance-crazed fallen hero who thinks it is the only way to destroy the phylactery of their nemesis, a geolich.
+        An omen heralding this apocalypse
+            1	is artists finding no inspiration for pleasant work, but an abundance of it for the harsh and hideous.
+            2	is sterility across all kinds of animals.
+            3	is the earth welling blood when dug or ploughed.
+            4	is all birdsong becoming the same threnody.
+            5	is the moon appearing as a glaring bloodshot eye.
+            6	is the living dreaming of the dead mourning for them.
+            7	is livestock being born as insatiable meat-eaters.
+            8	is an autumn without end.
+            9	is idols and icons spontaneously weeping black ichor.
+            10	is misrule in all kingdoms.
+            11	is colour dimming and darkness deepening.
+            12	is the rebuilding of the True Sanctum, which will be the sole, hotly contested place untouched by the apocalypse.
+            13	is fresh corpses rising to dig their own graves.
+            14	is oracles and soothsayers all screaming at once before falling dead.
+            15	is the birth of prodigal infants able to speak and walk from the moment of their first breath.
+            16	is an endless storm of locusts scouring the land back and forth.
+            17	is ploughs spontaneously reforging themselves into swords.
+            18	is cities being overrun with wilderness and feral creatures.
+            19	is the appearance of a comet like a bloody pennant.
+            20	is a sickening miasma sweeping through the lowlands.
+        When this apocalypse occurs,
+            1	giants will rise from the sea and trample cities and mountains to dust.
+            2	the stars will rain down, burning away the forests and the seas.
+            3	the barrier between worlds will wear thin and tear, merging a corner of the multiverse into a mind-bending mosaic.
+            4	light will fade from the heavens and all the world will become the larder of monsters swarming up from its shadow.
+            5	an army of hollowed men will be raised, wielding weapons yet unseen to scourge the earth clean.
+            6	the moon will crack as if an egg and release unclean radiance that transmutes all things exposed to it.
+            7	a slow and steady plague of petrification will sweep the globe. Refugees from stone nations will hack up sand from bloody lungs, all triumphs lost to Ozymandian crumbling.
+            8	complexity will flatten until only an infinite featureless plane exists. Higher thought will be one of the first things to go.
+            9	things will begin to decay while still living, the only way to stave it off for a time being to devour another living thing.
+            10	the world will be swallowed by a tempest. The land will be drowned by sky-high waves and vapourized beneath volleys of lightning.
+            11	all water will become bitter and undrinkable, the soil will lose its goodness, and the glare of the sun will intensify until everywhere is a bleached desert.
+            12	all people will become utterly atomized and alienated from each other, irrevocably separated into personal realities that can only contact each other through horrific violence.
+            13	a veil will be lifted, and everything up until that point will seem to have been very silly. People will laugh themselves to death, or not bother with anything further until it all falls apart.
+            14	every pantheon’s Götterdämmerung will kick off at once.
+            15	the perfect cancer will metastasize, an immortal disease that assimilates all life within it.
+            16	the meek shall inherit the earth, and the strong shall devour the meek’s reward.
+            17	fire will spread from the world’s core, and ice from its poles. Everything will be destroyed in their collision.
+            18	sense and causality will dissolve as if all the world were a dream.
+            19	sorcerous ability will appear at random in people, in frequency and potency never before seen. Their magically-backed whims will tear reality asunder.
+            20	the tools and machines of humanity will sprout new forms and complexities at an accelerating rate, coating first the planet and then the sun, ushering in the obsolescence of mere meat.
+        In the aftermath of this apocalypse
+            1	the continuity of time itself will break and turn upon itself.
+            2	all will decline, crumbling over eons into the void.
+            3	the few survivors will shed their lowly flesh and ascend.
+            4	the world will return to primal innocence, as it was in the beginning.
+            5	the lands of the living and the lands of the dead will switch their places, and ghostly throngs will feel their pulse quicken once again.
+            6	the cosmos will reset to the day before it kicked off, with everyone retaining fractured memories of it.
+            7	hyperdimensional vulture-analogues will pick over the wreckage.
+            8	the planet will explode and fill the cosmos with its shards of new kinds of being.
+            9	the dregs of the world left over will drain down to become a new layer of the Abyss.
+            10	there will only be goblins left.
+            11	a circle of skalds will attempt to save some part of the world by singing its stories into other realities.
+            12	the world will be quarantined by the proper authorities to prevent its spread.
+            13	the world’s countless ghosts and sundered futures will merge and be extruded into other worlds as destrudinous psychic sludge.
+            14	most of the world will be reborn through random fluctuations in thermodynamic equilibrium many eons hence.
+            15	the luckiest survivors will sail on celestial winds into the new world born from the old’s ashes.
+            16	the dead world will be raised as a necrokosmos by an arch-necromancer in another universe.
+            17	a new ecosystem with new peoples will emerge, adapted to the changed reality.
+            18	the most interesting survivors will be put in an ultraterrestrial zoo.
+            19	the world and its ending will repeat, diminished and degraded each time, as though remembered by a senile god.
+            20	explorers will come from unreached elsewhere and marvel at what once was.
+
 Setting builder
     nice book?
         who authored it?
@@ -1130,6 +1922,97 @@ Setting builder
             Collecting 101 living specimens can be traded to a specific genie for a wish.
             Roll Twice
             Y’know what? Roll in this table 5 times, that’s right Twice isn’t enough
+    Grafitti
+        A large heart, with two initials carved through it. It seems that, at a later date, someone tried to cross out the heart and one of the initials.
+
+        In small, expressive letters, with a smiling face underneath:
+        "The universe is going to forget you! Have a nice day!"
+
+        A large list of local/common names is listed on a wall. The words "The Promise" are written above it.
+
+        A wall hosts 7-10 or so names, crudely carved upon its surface. The names of several local town officials are listed, including the current mayor, or other form of leader. The mayor's name appears particularly jagged in style. In the centre of the names, in large letters, the phrase "The Trash Rats" is carved, with a simple image of a rat carved crudely inside of the "a" of "Trash".
+
+        The following phrase is written on the wall in chalk: "All Guards Are Villainous"
+
+        Carved into the stone, the following phrase:
+        "Let the owlbears consume me…"
+        There is an image of a frowning face next to this.
+
+        The following phrase in several different unique styles, and in different materials, crudely written into many different walls scattered throughout the city/town: "Sneak Goat"
+        When questioned by the party about the phrase, locals will either burst out laughing or loudly exclaim "Skeak Goat!".
+
+        The following phrase is inscribed into the wall:
+        "While you live, shine
+        have no grief at all
+        life exists only for a short while
+        and Time demands his due."
+
+        Upon a small ceramic pot, used to transport goods, currently in the possession of a merchant, there is a skillfully painted dolphin. Below the dolphin, in far cruder letters, the following is carved:
+        "Wave, travellers, for this is Phil! He travels the world, by sea and by land! As you possess this pot, record his locales, will you, good friend?"
+        Below this, in several different carving/handwriting styles, the names of several settlements, both local and exotic, are inscribed in a list.
+
+        The following words: "We two dear men, friends forever, were here. If you want to know our names, they are James and Frederick."
+
+        The following words:
+        "you guys wanna hear something interesting? A man writes on a wall "no one will remember you once you're dead", but 3000 years later it is discovered and his note is self-refuting."
+
+        Tally marks, counting up until the number 56, are shown. The final tally mark is circled. The word "Finally!" is inscribed next to it.
+
+        Next to a dead end in an alleyway, the following is inscribed:
+        "fuck the engineer that planned this shit town"
+
+        The following is inscribed, in a back-end alleyway:
+        "May everything turn out alright, so that you might leave this place."
+
+        A crude image of an Owlbear is carved into the wall. It seems that, at a later date, wings were drawn upon the owlbear's back.
+
+        An image of a phallus. Or several.
+
+        The following phrase:
+        "O walls, you have held up so much tedious graffiti that I am amazed that you have not already collapsed in ruin."
+        Around this inscription, in several different writing styles, the words "Yes", "Agreed", or otherwise are repeated multiple times.
+
+        A fairly neatly-drawn image of a well-endowed woman carrying two mugs of beer takes up a large portion of this wall. Below it, the phrase "Drink at the Eleven Eagles Tavern and Brewery! The beer with a raptor's heart!"
+
+        The following words are inscribed upon a wall:
+        "The light which brought peace to the darkness which surrounded me, the one who brought tranquility to the life of someone so small, has passed on, to the greatest unknown. Oh, Claire, there may be no statues in your name, no grand monuments to your beauty, but there shall be these words, scrawled upon such a place. And I hope this to be enough."*
+
+        The following words:
+        "We spent several days in the custody of Goblins. We celebrate our miraculous escape now, and appreciate the shortness of life." Below it, the following words in a different style:
+        "Hells yeah, baby! Nice!"
+
+        An image of a small, cat-like female, likely a Tabaxi, is drawn. Below it, the words "I wanna be a cat person…  :(" are written.
+        Below this, in an entirely different style, the words "Hidden Treasure of Snowfall replies here. I'm not sure whether to be flattered or offended."
+
+        On a well-travelled road, there is a commonly used campsite, with a large rock in the middle. There are dozens of pieces of graffiti inscribed upon it, some wishing luck to travellers, some of various gods of travel, some warning of the many dangers of the area, including common strategies used to avoid them. Some are simple names, indicating travelers who have come and gone before.
+
+        On a wall, the following is inscribed:
+        "SCORCH (TOWN NAME)." Such messages appear common throughout the town.
+
+        The following words:
+        "Marcus was here, and lived a life too short. Goodbye, old friend."
+
+        The following words:
+        "When I die, all these moments, these beautiful moments, will be lost. Like tears in rain."
+
+        Carved into the wall of an out of the way alley, the following is written, underneath a list of 5 names, each written in different styles.
+        "We, the Alley-cat 5, do solemnly swear that one day we will make it out of this damn town."
+        Below this, there is the following quote, signed by one of the apparent members:
+        "I made it, guys. I made it. Signed - (NAME)"
+
+        The following is inscribed:
+        "Go to the house of Aeneri, for a good time."
+
+        The following words are written on the wall outside of a small fast food-style place:
+        "I remark that the owner of this establishment is a scammer, and a fraud! He charges 3 copper for a watered-down beer, and his sausages were served cold!"
+
+        The following inscription:
+        "My sets of expensive copper cookery were stolen, and have not been returned to me. A reward of 10 gold will be provided to any man who catches the thief and returns my property. Speak to Tallus at the (INN/TAVERN/RESTAURANT NAME) to learn more."
+
+        The following inscription:
+        "Am I even, like, here? Sometimes, I feel numb, like everything around me doesn't even exist. What am I doing with my life? What's the point of all this?! Is this all that I'll be, for the rest of my short life?"
+        Inscribed below it, there are the following words:
+        "Same, man. Same."
 
 Adventure generator
     https://docs.google.com/document/d/1y0VMgGLoiGxtYcntjAn1J8tPBzFdLXgbb3hQi7ycYx8/edit
@@ -1501,52 +2384,52 @@ Seperate, complete omens
         
 Rumor 
     Did you hear the news?
-    A Child
-    A Fat merchant
-    A Temple priest
-    A Sailor
-    A Soldier
-    A Magician
-    A Noble
-    A Rogue
-    A Crazy monk
-    A Drunken farmer
+        A Child
+        A Fat merchant
+        A Temple priest
+        A Sailor
+        A Soldier
+        A Magician
+        A Noble
+        A Rogue
+        A Crazy monk
+        A Drunken farmer
 
-    1d10 AND THEY
-    Got drunk
-    Got washed out to sea
-    Got stuck on a runaway horse
-    Found an old well
-    Disappeared for 3 days
-    Found an old tomb
-    Met a weird stranger
-    Found a magic item
-    Were sleepwalking
-    Walked off into the forest
+        1d10 AND THEY
+        Got drunk
+        Got washed out to sea
+        Got stuck on a runaway horse
+        Found an old well
+        Disappeared for 3 days
+        Found an old tomb
+        Met a weird stranger
+        Found a magic item
+        Were sleepwalking
+        Walked off into the forest
 
-    1d10 AND DISCOVERED
-    A new disease
-    A powerful artifact
-    A cursed item
-    A sleeping monster
-    A treasure map
-    A hero/villain thought dead, returned to life
-    A book of secrets
-    A key to a vast fortune
-    A supressed truth about the ruling kingdom
-    A door to another Plane
+        1d10 AND DISCOVERED
+        A new disease
+        A powerful artifact
+        A cursed item
+        A sleeping monster
+        A treasure map
+        A hero/villain thought dead, returned to life
+        A book of secrets
+        A key to a vast fortune
+        A supressed truth about the ruling kingdom
+        A door to another Plane
 
-    1d10 AND NOW
-    People are disappearing!
-    People are sick!
-    The king has decreed strange new laws!
-    The temple has issued strange new tenets!
-    The sun might not come back up!
-    The moon might fracture!
-    The world might be invaded!
-    People are having bad dreams every night!
-    People are unable to sleep!
-    People are afraid to come outside!
+        1d10 AND NOW
+        People are disappearing!
+        People are sick!
+        The king has decreed strange new laws!
+        The temple has issued strange new tenets!
+        The sun might not come back up!
+        The moon might fracture!
+        The world might be invaded!
+        People are having bad dreams every night!
+        People are unable to sleep!
+        People are afraid to come outside!
 
 Nightmares
     You find yourself stranded in a desert, only sand from horizon to horizon. You keep walking but the dunes don't seem to come any closer. You feel extremely thirsty and slowly but steadily, your energy starts to fade. Hours seem to pass and when youre getting desperate, the sand in front of you starts to shift, a giant scorpion emerges and starts chasing you. 
@@ -1718,6 +2601,83 @@ Nightmare generator
     9	the [figure] is dragging away a party member. It looks up and makes eye contact with you
     10	inside of a new nightmare. Take it from the top
     Have the false wake resolve and the player wakes up. Or do they?
+
+legends that turn into quests
+    Infernal Research. The research of a Lich when he was just a powerful wizard that holds the secret to trans-planar communication.
+
+    The Ocean’s Bounty. The lost treasure of a great pirate hidden in a cursed shipwreck on the floor of the ocean.
+
+    The Ancient Laboratory. The portal to the demi plane that holds the laboratory of the greatest alchemist of all time.
+
+    Seeds of the Tree of Life. They are mystical artifacts with unknown powers not meant for mortal men.
+
+    The Divine Razor. A holy blade wielded by a paladin of a forgotten god said to be entombed in the God’s last temple.
+
+    u/PandaPugBook 6. The Keeper of the Celestial Grave. The last servant of a dead god roams in the mountains and knows of the his master’s final resting place.
+
+    u/zeppitaph 7. Fey incense. This incense smells of lavender and pine. It is said that if you burn the incense at a shrine in the wildest part of the woods, you will summon a kindly dryad.
+
+    8. Chalice of the Spider Queen. This ornate chalice flows over with an inky poison, magically refilling whenever it is emptied. The chalice lies in an underground citadel guarded by dark elves. Many have died to procure it.
+
+    9. Uncanny star chart. At a first glance, this chart of the night sky appears unremarkable. However, closer inspection will show that the chart depicts constellations that do not exist. He who can decipher the mysterious star map can navigate to a place where the veil between our world and the far realm is thin.
+
+    9. Oracle’s die. This icosahedral die is hewn from obsidian. It is located in the tomb of a long-dead seer who met with a terrible end. To wield the Oracle’s die means triumph over the machinations of fate.
+
+    10. The Temple of Delights. High in the mountains and surrounded by golden mist, the Temple of Delights is a monument to a god of pleasure. Worshippers at the temple serve sumptuous banquets, wear fine silks, and indulge their senses according to each passing whim. Many seek to make a pilgrimage there, and few return.
+
+    11. Duchess’s mirror. This silver handheld mirror has no magical properties or so the Duchess swears. The duchess’s jilted lover stole her favorite mirror, and she is willing to pay a hefty sum to whoever can retrieve it.
+
+    u/ArcaneRanga 12. The Crown of the Oligarch. A platinum crown decorated with shining emeralds, said to be the crown that the leaders of the rebellion used to sway the population to their side against the first empire. After centuries of wars the crown was lost to time
+
+    u/DoctorWhoops 13. The Merchant’s Map. The personal map of man who left his home and returned with a great bounty of wealth of origin unknown.
+
+    u/MasterDungeon 14. The Garden of Carminas. a medusa queen blessed by the gods had the ability to turn people into gold statues rather than stone, her island lair is covered in hundreds of statues.
+
+    15. Grundzik's Lost Mine. Grundzik Goldpick led an expedition to set up a mine in the far mountains. Word came back of the abundance of wealth he had discovered before suddenly no word came back at all.
+
+    16. The Forge of the Heavens. Legends say that there is a mythical forge that was used to create the weapons of the Gods, any weapon made there is imbued with incredible holy power.
+
+    u/Jinthar 17. The Tears of Korharath. A set of gemstones of immense power said to be the crystallized tears of Korharath in his last moments. He was the lover of the goddess of magic and the first magic user to exist. He was burned on a pyre for his unnatural powers.
+
+    u/albert_jockson 18. Wreck of the Flayer’s Fleet. Strange evil artifacts begin showing up at private auctions in nearby cities. Tomb robbers have discovered a 2000 year old wreck of a Mind Flayer Spelljammer scout ship in the wilderness, and are scavenging dangerous technologies from it. One of the technologies is a beacon which, when accidentally activated, calls the main body of the Mind Flayer Fleet to reunite with the descendants of the Mind Flayer survivors in the material plane.
+
+    u/HarshMillenium 19. A powerful wizard achieved immortality and was written about in the histories. Recent scholars now believe his residence was high atop a local mountain, now under a new name. If he is immortal could this wizard still be here?
+
+    u/TheTrueShy 20. The Vessels of Imarn - a wizard or artificer who found out how to plunge souls into constructs. Eventually wanting to become immortal he did this to himself. In his mechanical ever-shifting maze lies his laboratory, and along with it a thousand-years of treasures.
+
+    u/ajchafe 21. The Lunar Sword. Long ago a hero used a silver blade that changed in shape and power with the waxing and waning of the moon to slay a terrible werewolf. It is said that the blade was laid to rest in the Gardens of the Moon.
+
+    u/BeboTheMaster 22. The Pirate Kings’ Diary. The diary of the pirate king who hoarded and pillaged for years. It has the location of all his secret stashes of treasure around the world.
+
+    23. The Seraph’s Wings. A pair of real angel wings that are said to heal anybody who touches them of any disease.
+
+    u/Xxitsurboir0wanxX 24. Kovvonanns tomb. the temple where a powerful barbarian that had the ability to rage like no other. His axes are rumored to still rest in his cold dead hands.
+
+    u/Forever_Ron 25. Belly of the beast. A golden city home to an order of powerful wizards, said to hold a great many powerful magical artifacts and secrets. Was swallowed by an enormous beast.
+
+    The Shard of Awakening. Legend tells of a crystallised piece of pure divine magic left over from creation itself. This bright green crystal is a catalyst for life and is said to have caused ordinary animals to not only gain sentience similar to humans, but also to grow to incredible sizes and display powerful magic of their own. If it could do that to a mere beast, what could it do to a person...
+
+    Paeso's Lost Tale. The legendary storyteller Paeso was said to have written one last story before he died. Its said to have been buried with him, and was actually based on an old legend about a lost treasure.
+
+    The Skyforge. A remnant of the Golden Age of Magic, and birthplace of many artifacts still used by heroes to this day! The island it was built on used to float through the skies of the world, but fell into the ocean during the spell plague. Many sailors claim to have spotted it over the years, but its current location is unknown.
+
+    Aurintaura. The fabled 'Land of Gold' is said to lie to the far south through a sea constantly plagued by turbulent storms. Those who have made the journey and returned have all become rich beyond their wildest dreams, but many ships loaded with gold ore never made it back and still lie across the sea bed. The largest of these is the Aurintaura (The Golden Bull) Said to contain enough of the precious metal to line every road in the world!
+
+    Mask of Ancestry. This ancient wooden mask is adorned with tribal markings from a long forgotten civilisation. Rather then being the treasure, this item is easy to obtain, being in the possession of a collector all to eager to lend it out to adventurers under contract. The treasure comes from the masks power to see into the past of any object or location. The current owner used it on a single gold piece and saw a chamber full of gold coins that stretched as far as the eye could see. He wants you to find this chamber for him and share the spoils of the greatest treasure hoard the world will ever know.
+
+    Archmage Statue. A remnant of the floating cities before the spell plague. Legends say this statue talks and can teach the secrets of magic... if it survived in one piece that is.
+
+    • Phantom bazaar. Once a year, carts and stalls mysteriously crop up along a street in the capital city. The stalls are translucent and shed an eerie glow. At this market, ghostly vendors sell their wares — cursed rings, possessed dolls, the weapons of long-dead warriors, etc. Here you might happen upon a powerful magic item or a dreadful curse.
+
+    • Sought-after blossom. This plant, known for its striking red flower, is the only surviving organism of its kind. A druid circle wants to bring the plant back from the brink of extinction, but there’s just one problem — a dragon is hoarding it.
+
+    •Island of glass. This island lies in the middle of a vast ocean, far from mainland shores. The sand on this island is imbued with a unique property — in the hands of a skilled glassblower, its resultant glass is unbreakable.
+
+    •Hidden noble. A nobleman has been kidnapped and taken to an enemy city. This city is inhabited entirely by shapeshifters, and when would-be rescuers come to save the nobleman, everyone in the city assumes the noble’s form.
+
+    •The pirate’s left hand. An infamous pirate offers booty to whoever can find his missing hand. It’s out there somewhere!
+
+    •Lucky coin. This unassuming copper coin always lands on heads and grants unwavering luck to whoever possesses it. The coin lies among countless other copper coins in a vault in a massive, well-guarded treasury.
 
 Rumors that can be quests
         The Giants were never killed in the giant war, they secretly retreated into their airship and escaped (they actually went up into the clouds like Jack and the beanstalk)
@@ -2200,6 +3160,427 @@ Rumor mill
         A knight in golden armor.
         Gary Gygax.
         A talking cat.
+
+Spooky Tavern rumor
+    1-2: 'Ey, did you hear about poor old Tom Gobbard, the fisherman? Apparently he was out fishin’ a fortnight ago, and he reeled in something that…wasn’t a fish. He’s over there in the corner, still gibbering uncontrollably, if ye’ want to ask him about it.
+
+    3-4: I have it on good authority that a mysterious ship pulled into harbor just five days ago. Apparently, there’s not a living soul onboard. The captain and crew have simply vanished. The town watch investigated, and the entire ship was empty…except for a rather large box in the cargo hold. The ship is still sitting in the harbor. No one’s been brave enough to open the box.
+
+    5-6: Did you hear that Captain Norkus died just last week? It’s true! Word is that he tripped on his own deck and snapped his neck. His family paid a LOT of money to have him resurrected, and they’re trying to keep it a secret. It’s just…ever since he was raised from the dead he’s been…different. It’s hard to put your finger on it, but he's definitely been givin' ME the creeps.
+
+    7-8: Sit back, lad, I’ve got a story for you. Back in my youth, I sailed on a trader’s ship. We got blown off course, and made land on a green island, lush with vines and fruit trees. We thought we’d load up on fruit for the journey, but it wasn’t long before the island…started moving. We rushed back to the ship and I’ve never found the isle since.
+
+    9-10: You want to speak of strange isles? Well, when I was a lad my crew and I found a rocky isle many miles north. It was a tiny isle, lonely and bare, save for a solitary, black tower. We considered exploring the tower, but thought better of it when the sun went down and the tower began to…sing. We loved our lives, so we boarded the ship and fled!
+
+    11-12: The ghost ship is real, I’ve seen it! Head northwest of here, and, if the moon is full, you’ll see a glowing, purple pirate ship with ragged sails, floating just a mile’s distance away. No matter how close you sail, the ghost ship stays just out of reach…
+
+    13-14: You want to hear something funny? There’s a tiny town on the east coast where everyone has the same name! I mean it, EVERYONE. The butcher, the baker, the candlestick maker, everyone in town goes by the name ‘Goxus.’ Come to think of it, they all speak with the same sort of…distracted tone of voice, too. Kind of odd, now that I think of it. Anyway, they’ve never cheated me so I suppose I’ll keep doin’ business with ‘em.
+
+    15-16: Yes, this is Wicker the Parrot. I found him perched outside my window this morning. Can’t understand why his tail feathers have gone white, though…and where’s his master? This parrot used to talk nonstop, but now he only repeats one phrase… “Stay away from the Weeping Pool.” What do y’think that means?
+
+    17-18: There’s a fishing village to the west where they don’t seem to like strangers, much. I was lost and needed an inn, so I convinced them to let me stay the evening. I wish I’d have just moved on. One evening, late at night, I awoke to the sound of soft chanting outside my window. I pulled back the curtain and saw everyone in town down by the shore, holding an infant high in the air. As I watched, three ugly, blue-skinned women climbed out of the sea and onto the land. I closed the curtain and went back to bed. Wouldn’t recommend staying there!
+
+    19-20: If you’re sailing off to the west, keep an eye out. I’ve been hearing reports that there’s a big black storm brewing off the western coast. Strange thing, though, is that the storm has been building for several days, and the black clouds won’t blow away. Even stranger…some folks have been sayin’ that if you look at the black storm clouds just right, they look like faces…
+
+TAVERN JOBS
+    1- Little girl having night mares, looking for adventures to gaurd her bedroom door at night from monsters. 10 gp  (Hag in the forest is visiting her slowly turning her into a hag.)
+
+    2- @wastelandmonk:What looks like a missing person quest, but turns out to be a little kid trying to find a date for their single parent
+
+    3- @alex_is_boss_311:Help! I lost my owl bear and Its oddly aggressive i need it back alive. please bring to Owl Bear Farms.
+
+    4 - @renwolfmen:"i lost my gold dragon scale frying pan."
+
+    5- @urkohai:Rescue my cat from the goblins in the forest
+
+    6- @cxgummydnd:HELP: I found a weird book with weird looking shapes on it and its glowing blue and spawning dead geese everywhere
+
+    7- @turowe2012:Courier service needed. delivery to the Forest Queen, needed by the Spring Equinox. don't open the package, don't let the wolves catch you. 6000 gp… with proof of delivery 
+
+    8- @canned.hamm:Two cacti are throwing a coconut on a major highway. If the coconut is taken forcefully then the cacti get mad. But they will willingly play catch
+
+    9- @scars0808:I want the shoes! They have them! Go take them! But only the left ones! No right shoes! Right shoes hurt my ears! Please read in insane voice
+
+    10- @xxsinfulpridexx:investigate a pond. when players get thier they only find a goose. if it is disturbed and honks it summons a horde or cr appropriate monster. /goosehydra 
+
+    11- ex wife of the high wizard in town needs adventures to surve child support papers to wizard.
+
+    12- @shootervonslick:a wanted poster with a picture of one of the party members but under a different name. the person that is wanted may or may not be the party member.
+
+    13- @useless_orb:I, a local merchant, need help tracking a potion I sold to someone this past week (it may or may not be faulty and potentially fatal)idk who bought it
+
+    14- @damianthedm:A young girl says her cat has run away. Turns out she is actually been dead for (length of time) and the cat leads them to almost certain death.
+
+    15- @the16bitcouple:“Lost pet children” (it’s the children of the family pet) written by a child.
+
+    16- @valcure1:Field of Barron Fox: Something keeps coming onto my farm at night and stealing all my fox. leaving me with no fox to give. Help me find my Fox. ( fake job)
+
+    17- @frankholder27:"we buy silver" posters and when the players get to the store it's run by two lovely werewolves
+
+    18- @bardinthetree:1000 gold to the get my cows to stop glowing (and right next to it) ecological research aid: locate the disappearing glowing moss
+
+    19- @therealcreatorsama:Got a new Blinkdog puppy, now hiring trainers!
+
+    20- @codyragegamer:Help! My grandma is out of control and needs to be taught a lesson.
+
+    21- @nomad_ferocitas:I need three orc tusks. tusks must be from a full grown male, preferably warriors. for magical contract reasons they must be given willingly. 
+
+    22- @dcalfine:Help Wanted: My Blink Dog doesn’t blink? It just keeps staring at me
+
+    23- @reyamxela:AUTONOMOUS ARMOR LOST: Platemail Armor accidentally given intelligence, escaped, hiding in woods. Return to Artificer Jackson Cortland for (gold cost)
+
+    24- @machinafailure4:Gonthar needs help finding Gonthar's pet Squirrel, Gonthar.
+
+    25- @halfelf42:I think my pet mimic ran away. Her preferred shape is a children’s toy box. If you see her please bring her home safely, I’m sure she’s terrified.
+
+    26- @charlemagne_martel:“I can’t find my banana! Find my banana!” Old man Jackson who forgot her ate banana and that he issued the quest
+
+    27- @tyrantlight1:Help wanted: Exorcism required to clear out cursed family tomb! ⭐
+
+    28- @hakfloven:help me find out why I am always brused and sore in the morning
+
+    29- @benkannenberg:forest grew in our town overnight. sometimes it whispers jumbled prophecy. trees also magic resistant. we're slowly being driven mad. when they get there itd be fun if the "prophecy" was just a poor attempt at poetry by the forest
+
+    30- @mozz0617:Lost cat: last spotted at the gate of the nine hells.
+
+    31- @evil_lancer:My farm animals are going missing (turns out to be violet fungus)
+
+    32- @gothicbreadmann:I'm currently stuck in a well. if you would be so kind as to bring some food and drink to the well it would be much appreciated
+
+    33- @damianthedm:A must find my spectacles. Finds the person and the spectacles are on their head.
+
+    34- @thorreb:My goats keep disappearing and I keep finding these pits filled with pink and blue goo. Please figure out what’s going on. I need my goats.
+
+    35- @kitsunechris:local bard causing problems: Help wanted, Charm resistance mandatory
+
+    36- theif stole my co-worker please capture the theif and bring me back my co-worker. ( co-worker is a flesh golem.) 
+
+    37- @kagarafey:kobold mother of 47 requires a ✨sturdy✨ babysitter, reward for find. sitter will also be compensated.
+
+    38- @urdnothammer:Short and simple: Help my 500 year old grandfather find a date
+
+    39- @lariumbreon3360:I need a bundle of sticks from the eldest tree in the nearby forest.
+
+    40- @supermelemonlord:Help needed must sacrifice 47 chickens to the llama god
+
+    41- @bigjoe84:Search for the magical fleece￼
+
+    42- @paytonstradiotto:need a tear drop of a dragon
+
+    43- @thecrazytechie:Wanted: Reward 500gp fake paladin 
+
+    44- @cleric_34:Help! Three lizardmen won’t stop singing horribly at midnight and it keeps me up. Get rid of them or help them get on pitch
+
+    45- @patronzim:need help removing a fire chicken from local farm. 
+
+    46- @afrodude25:Help! My lover has been kidnapped by Dragonborn cultists and needs to be saved! (Lover is powerful leader of cult)
+
+    47- @lonely_bard:can someone please teach my how to tie my shoes laces please- it's been 30 years and I'm still clueless 
+
+    48- @memphischarlie:Quest: exterminate rabid dogs that attack people on the road Rabid dogs are actually mutated and demonic and have been trained by a local cult
+
+    49- @generaldiscontent:MISSING: lucky rock. Randy probably took it, he's a jerk. start there.
+
+    50- lost my pet pseudodragon 1000 gp to who ever finds them.
+
+    51- @sepina11:"help! need candy for godly duties! just dont tell my mother"-bims the fusha fey dragon with an a god complex and obsession with candy and sweets-
+
+    52- @dsanner134:Help! A bunch of Kobolds (and/or goblins) have taken up residence in one of the barns on my farm and are killing and eating my animals.
+
+    53- @swatmosse:Help wanted! Sir Knothole is getting old and wants to live out his glory days. will pay you to pretend to be bandit gang for him to defeat.
+
+    54- @turowe2012:Troublesome dragon near town. relocation service requested. absolutely no killing please. 6000gp after swearing on truth spell the dragon has moved… 
+
+    55- @turowe2012:crypt guards wanted! a string of grave robberies has occurred under the last several new moons. 100gp to any that can catch the culprit "dead" handed
+
+    56- @roaric5:A farmer outside town has been requesting help finding his missing chickens the only evidence of something we are going on is holes underneath chicken coop. 
+
+    57- @1cutecreeper:"Take a break. relax. don't stress out to much. come have a drink at Talia's pub!" With a free coupon for a drink.
+
+    58- @dj_valid:Lost Hand! Last see harassing a rat near Krooked Kraken. If found, please return to Lefty.
+
+    59- @turowe2012:mighty warriors needed. Serious inquiries only. my sister has been taken by a cult and I need her retrieved. 800gp alive. 3000gp dead
+
+    60- @dbplasma:Huge Gelatinous cube sliding down the hill. Not sure where it came from but seems to be heading for my tower. Please stop it before it gets here!
+
+    61- @turowe2012:Sewer system maintenance needed. Experienced ratters preferred. 5sp per giant rat tail, 1sp per dozen rats. corpses required for pay
+
+    62- @turowe2012:Keen investigators needed! children behaving too well, bewitchery suspected. any evidence paid for in gold and favors.
+
+    63- @dbplasma:Iron Golem gone mad at the blacksmith's. Trapped it in the basement but it's shaking my house down! Smash it and you're welcome to the scraps.
+
+    64- @tristonzaudtke:A giant rat stole and ate my wedding ring! Find the damn vermin and return what is rightfully mine. (Look at 61 could connect) 
+
+    65- @just_justin_black:Help! I'm a single father. My daughter just started pooping blood from her front butt. she is possessed by a blood demon. God fearing cleric wanted.
+
+    66- @damianthedm:A tavern owner requests that you steal the recipe of a stew that a rival tavern owner uses bc it originally belonged to his grandfather.
+
+    67- @ironwolf501st:"rabbit hunters needed" "ruthless rabbits raid local farms causing carrot shortage"
+
+    68- @nickgrimaldi0:The local quilting guild needs 8 yeti pelts for a commission
+
+    69- @lou.studioclub:HELP! Mimics have invaded my library and disguised themselvesas books! Kill the Mimics, but don’t destroy the books or the Library 📚
+
+    70- @zachpadgett:Help needed! Local cheese gone missing. Reward negotiable. Cheese is the local gold guard drake or muletant cheese elemental (lava elemental)
+
+    71- @jodevhai:Local Tavern needs help exterminating Large Rats! Rats are feral, have scales, incredibly aggressive! (Rats may be drakes, barkeep unsure)
+
+    72- @fatalchild:A quickling has gotten it's hands on some boots of speed. It's been stealing everything that's not tied down. For the love of God no one can catch it.
+
+    73- @warlockladd:local kenku thief wanted for identity theft and multiple armed robberies, wanted dead or alive. Kenny's name is bang and they are a gunslinger
+
+    74- @confedratecamo:Please kill the bear in the cave. Then make it a trap, the whole cave is full of primal bears.
+
+    75- @rockinstrings:Wanted: Single man with high paying job or farm. Reason: To marry my daughter. Ask the bartender about Grizzly Softpaws. ( daughter doesn't want to be married.)
+
+    76- @reeeeeebot:1 year contract - cast teleportation circle on a spot near this town everyday for a year so we get more people to do our quests
+
+    77- @psiwerewolf:I require the tongues of 42 chickens for science! Please deliver them in a fortnight
+
+    78- @jmixer08:Found: a large shrub has sudden appeared in my property
+
+    79- @ofoakenblood:Help wanted: need actors to fill the role of soldiers to help impress hobgoblin for courtship.
+
+    80- @somemisfortune7:Retrieve a statue called The Blue Diamond Monkey from a temple in the jungle. Will be rewarded with rare items in return.
+
+    81- @alphavoltario:"Lost Pet Wanted Dead or Alive Reward to be discussed." Necromancer lost his bone golem; it's name is J. Roger and he likes alchohol.
+
+    82- @tonytoups:Retrieve a ￼wyvern egg ￼for a master chef
+
+    83- tavern owner needs help with finding a woman to love big heart but im part dog. 
+
+    84- @cauvel22:need test subjects to gauge the effectivity of new potion
+
+    85- @hakfloven:will pay gold to have shed cleaned out @vegabsu:a gelatinous cube has taken a residence in my barn and need it removed
+
+    86- @mazter_stew:Need a mercenary to kill the mercenary that I hired to kill the first mercenary
+
+    87- @1yellowfish:adventurers needed to fake a wedding/kidnapping so my father in law will stop insulting my fiance! possible dance battle. free food included.
+
+    88- @lindenadelaide:Please retrieve undergarments. Lost near the local goblin nest after some drunken carousing. May or may not be held within the goblin nest.
+
+    89- @danielfromschool:i think my father is in a cult? Please help??? (The father is actually just in a BBQ club for fellow dads)
+
+    90- @isdominguez:Adventurers needed! My daughter has run away to marry a dragon. I would prefer that she doesnt marry a sugar daddy. Please get her home w/o bloodshed
+
+    91- @guywhoplaysdnd:A farmer has put in a request to find his missing sheep. We also have reason to believe that this “sheep” is not a sheep at all and actually a Druid. 
+
+    92- @kronosbg:House haunted?! Furniture keeps appearing and disappearing. Pet has gone missing. Food goes missing as well. Need help.
+
+    93- @bananaskinss:Help. My pet pseudodragon escaped 10 years ago and I found it again. it's the size of an elephant and it REMEMBERED MY NAME. I RAISED A RED DRAGON AND I DON'T KNOW WHAT TO DO ABOUT IT.
+
+    94- @basichumankindness:all the cheese has gone missing please find it
+
+    95- @deathscrowbar:Basement is full of fungus please kill it
+
+    96- @dazzlingphoenix:Strange Creature: A glowing entity has been stealing my fish from my net. It glows a blue-green color, then disappears with my fish! (Glowing squid)
+
+    97- @grimm_exodus:"Experiment 2603 has gone missing. It may still be in the city. please capture, but don't kill it... also, use extreme caution. Thank you." 
+
+    98- @volcocross:Workshop infested with shadow demons (Smoke Mephits). 50gp on completion; No looting! -Foreman Luellan
+
+    99- @willis1776:Hired security needed for our weekly dwarf fightclub. Be warned lower armor is recommended, drunk dwarfs tent to fight with no honor. 100gp each body 
+
+    100- @winer_z:Investigation quest: Local Farmer and son who are not the brightest can't seem to tell where their cows have been disappearing off to.
+    1- @bastionpupperz:help escort the amnesiatic necromancer back to their retirement home
+
+    2- @thedmjoel:Angry Imp stuck in my basement. Please remove. Don't break anything. (It's really a drunk goblin that's painted red and slippery cause paint is wet)
+
+    3- @adammmeredith:Island Gone Missing: Please Help. I want to go home. (The island is a Zaratan from Tome of Beasts)
+
+    4- @colinstimetobake:One woman show: TONIGHT ONLY- at the docks. plot twist it’s a siren obsessed with the little mermaid and only sings under the sea.
+
+    5- @xwilderx2002:GREETINGS! My cat has gone missing. She is especially hard to find, so be careful! I lost her while on a stroll on the northernmost hillside! Thx!
+
+    6- @lawfullyblind:a bounty letter for 100 gp for any information on who stole a potato from a local farmer
+
+    7- @jaythefayofficial:Lonely Patron Looking For The One: Must be willing to handle a long... hard... 66 years of service.
+
+    8- @forgeandfleece:Dragon scales. Form a live or dead dragon.
+
+    9- @mrrenard:Possessed knife-wielding chicken is holding my family hostage. Any amount of gold, just get the thing out of my house!!
+
+    10- @epickaos98:500 GOLD .remove wild magic zone 300 GOLD .cursed monk killer strikes again 100 GOLD .living weapon searching for partner
+
+    11- @darkcyril1138:Two bards are playing outside my house all night. Please make them stop. Or at least teach them how to play.
+
+    12- big ass gators in my backyard pond, they took my dog bring back the gators head for my revenge. Also bring me back my dog.
+
+    13- @asheraven2166:Lost my brother in the woods while camping please bring him back. (turns out their brother is a talking skull that he dropped)
+
+    14- @dreadedpiraterobear:PLEASE HELP: I've been cursed. I've tried cleaning my house, but everything I clean gets dirtier.
+
+    15- @thatchick009:Please help my elf friend get a date! She lonely and needs help!
+
+    16- @zenimustail:“Please help, local troll stole my cat to eat”
+
+    17- @bsbc0splays:A fey that wants a lich lover
+
+    18- @slicktheclown:Need the fifth eyestalk of a Beholder. Not the first, not the 6th, the FIFTH. And the next smartarse who brings me all of them is getting incinerated!
+
+    19- @ismaelmendez108:quest to defeat dragon. but its really a lizardfolk with good intimidation.
+
+    20- @drmalakai:rescue pet cat from a tree. (Cat happens to be a displacer beast)
+
+    21- @dray9509:A young girl has a messily written quest asking to help find her pet, she makes it seem like a cute puppy..its really a dire wolf.
+
+    22- @1asarti1:The salamancer is requesting for someone to hunt his arch enemy the newtromancer reward is 1gp
+
+    23- @virtus1414:"Need help collecting various items for new home *By replying to this notice you are in no way bound to a contractual agreement." -Just a chill guy who needs help running errands. -Doesnt explain why all the items PCs collect are extermely occultic
+
+    24- @yatashimajere:“Lost my penny’s in the woods need strong adventuress to help me find them.... they are rare - reword is one of the penny’s”
+
+    25- @necreth: collect deathkiss blood for spell components no killing. medicine checks to use special syringes.
+
+    26- @dr.marcon:Farmer needs a "perfectly normal ladder" retrieved from his orchard. no one dares get close to it. DC 15 Wisdom save to approach it.
+
+    27- @transwitchbitch:A request to find and kill a specific goose that lays in a cave outside the city. it is a very terrible goose.
+
+    28- @jonathansuttles0:Help: My baby beholder shrank my kids
+
+    29- @dannybee76:My neighbors will not stop trying to one-up each other with lawn decorations, and I cannot sleep because of the noise. make it look like an accident.
+
+    30- @the_malarksist:HEWP WIF GOBINSES. a local group of kobolds are requesting help dealing with what they think are goblins, but are drow setting up to attack a town
+
+    31- @joanautumns:My crush is amazing, but I don't know how to approach her. Please pretend to attack her so I can swoop in and she'll fall in love and get married
+
+    32- @the_malarksist:FREE SISTRR my name is neyn, my sister is mean and please take her away. shes probably delicious. (Nyen, an orc, is luring adventurers for gear)
+
+    33- @armyalcoholic:Roach infested basement. BIG ONES 
+
+    34- @the_malarksist:RATS IN MY BASEMENT. npc has been hearing rats in their basement, only there is no basement. the second theory players come up with is true.
+
+    35- @weekendwarrior117:Missing golden cat.......it’s a sphinx
+
+    36- @voiceoverguybrian:it has come to the attention of the merchants guild that someone in town is actually 3 kobolds in a trenchcoat, these duplicitous crettens must be stopped any solid evidence should be brought to the chamber of commerce forth with.
+
+    37-@redhoodmedia:Golem lost. Help Golem home. Golem pay gold.
+
+    38- @barronjonathan722:my cabbage cart keeps getting destroyed by a teenage monk and his friends plese stop him
+
+    39- @rustedsabre:"Gnimle wants adventures to get treasure. lots of treasure. come gnoblin cave. not goblin. no goblins here. Just treasure!"
+
+    40- @moonlitgrass:Cat herder needed. Posted by elderly business owner who brings a horde of cats to local houses to remove mice.
+
+    41- @caramel1114:help an old woman carry her jug full of coppers to the bank so she can cash them in.
+
+    42- @barronjonathan722:(from a former bard) to help get his lucky coat back from his ex which is a ___(insert sexy monster here)
+
+    43- @volcanoninja97:local necromancer lost his skeleton. skeleton is docile and listens to instructions. party must bring skeleton back in good condition pays okay
+
+    44- @shadowgamer3227:Need 4-6+ brave men/women to scratch my domesticated hydra’s many necks so it doesn’t get cranky
+
+    45- @thecontentpermadm:A serious one to fill out the board. Wolves have been stealing sheep and a lot of them, daily. They leave an obvious trail but nobody has return
+
+    46- @sandypanda:There’s are 50 cats in the town and the poster is convinced that no one owns a car and he thinks there an uprising that’s about to begin (he’s right)
+
+    47- @rcjoleary:Help getting cat out of a tree. Plot twist customer and cat are a Druid couple.
+
+    48- @knightlyduck:Low level - Investigate a string of thefts. Of undergarments. 😂
+
+    49- @davidhall465:A old hag lost her walk house? (Inspired by baga yaga) or a old wizard lost his spellbook in a library filled with book mimics.
+
+    50- @forgottencampaign:Need help wrangling prized chickens. (Chickens = giant eagles w/o flying speed) chickens can’t be harmed and spook easily and are aggressive.
+
+    51- @jetstarkobrakid:Lost friend: turned into potted plant, details below.
+
+    52- @creepingzombie:Please help me find my son! He is a dragonborn child with strange scales! (The client is three kobolds in a cloak looking for their friend)
+
+    53- @theforestnymph:raving chicken that kills other chickens and uses the bones as weapons
+
+    54- @kxm102003:BREAK MY ROCK: COME OVER HERE AND BREAK MY ROCK (the rock is secretly a golem)
+
+    55- @zachicardi:Collect kobold ear wax for its amazing medicinal properties.
+
+    56- @zachicardi:Collect wild honey. Seams easy. But the honey is found in hives built in certain trees at least 100 feet off the ground by a species of giant bee.
+
+    57- @stophonhaze:Horns women. Will pay for Mindflayer Partner(s).
+
+    58- @projectvalkyrie:I will pay YOU to take this Cursed Dagger. it keeps telling me the date of my death. I buried it and it came back.
+
+    59- @damian_the_fighter:a pair of skeleton Brothers keep trapping and feeding a town of humans very bad spaghetti. Although outside of that they seem very friendly and always let the humans out the next day
+
+    60- @sillysayo:I’m trying to grow a forest of my own trolls. Can you get me 10 troll pieces. The bigger the pieces the more your pay
+
+    61- @poweredthunderthighs:cursed Candy Castle popped up just outside of town. attention all passing adventures! Waves of 🍭 monsters are plaguing us. it's really inconvenient
+
+    62- @itsdangeroustogoalone:"HELP! Me wife got stuck arms deep in our cow, who then ran off with her."
+
+    63- @conspiracies.and.stuff:I need the head of a hag that lives in the forest. she has been coming onto my farm and slaughtering my livestock
+
+    64- @dovahkiin44:Fetch quest: an alchemist needs 15 Red Dragon Scales for their potion experiment.
+
+    65- @aedintsk:My owl shifted into a lady! I need a magic user to change her back!
+
+    66- @fuego0213:A little girls rubber ducky is lost. A wealthy family is paying good money for it to be returned. It’s easy to find but possessed by a demon.
+
+    67- @the._.electrician:Babies of all species have been temporarily going missing at night, then returning where they were three days later unscathed…
+
+    68- @dumbgeon_master:“Fight me.” -Kyle, human
+
+    69- @zogdisnow:Hello Reader! my aunt is in need of a baby sitter for her 4 sons and 1 daughter, while she is out to a ball in the neighbor city (name) take care
+
+    70- @morbidaeolic:Kill monkeys. Like...30 monkeys. And retrieve all of their hearts and return them to me.
+
+    71- @vgrouby:my ex killed my cat. Mildly inconvince them as much as possible for 8 hrs.
+
+    72- @levyforbess:help! my potatoes field is haunted. nothing will grow! it has to be ghosts! (they havn't actually planted anything)
+
+    73- @ameliamay93:Dear Adventurers I require 10 left shoes of various sizes. Just the left ones should there be a right shoe it decreases your pay. 50gp
+
+    74- @hatahhornbeard:Help Wanted: A Murderhobo Warforged Barbarian and Drow Owner is on a rampage killing the innocent. Stop the threat.
+
+    75- @josephineanimates:DJ Lich is having rave and needs adventures to as guards to stop other adventures from ruining his party
+
+    76- @bishopmemes:URGENT REQUEST: Earth elementals blocking trade road (they're tiny elementals that keep stacking rocks in the way when people aren't around)
+
+    77- @designerwookie:badger keeps harassing me and breaks my beehives. please help.
+
+    78- @benevolentdm:hive of bees the size of volkswagens in a farmer's barn. they are pretty docile but they dont want to leave because of a grove of giant flowers
+
+    79- @tbonemcgeethethird:WE REQUIRE... A SHRUBBERY! AND A SECOND! Planted next to the first, so there's a little path…
+
+    80- @herblueness:Dwarven bartender needs brave volunteers to test his "new brews and mixed drinks." que Dwhatever for misc. drink and effects.
+
+    81- @no_one_twt:I need help getting eggs (warning harder then sound their dragon egg DM picks color and how many but the party don't found out till they get there)
+
+    82- @travelersstories:Looking for handsome and beautiful adventurers to escort me to a fey party. I am located in the bog. Yes I am a Bog witch.
+
+    83- @ace.of.raids1:accidently lost my glasses in a pocket dimension full of random junk
+
+    84- @seekersstudio:Hi! I'm leaving town for a few days for business, and need help babysitting my pets. They are well trained, loving Owlbears. 3 adults and 2 children
+
+    85- @z_average_guy:I'm looking for a large horse that's been wandering the forest! this horse is a kelpie willing to aid the group for a price, exotic flesh.
+
+    86- @alifervonkale:a hastily drawn note that says "help I have angered the squirrels" and nothing else
+
+    87- @night_owl_707:"Looking for a bard to learn from. Teach me your ways."
+
+    88- @srgtwolf:local lord/lady requesting adventurers to gather a rare fruit from nearby mountain (guarded by monsters) (fairy tale tribute).
+
+    89- @weelyfactoids:transportation of Yeti's milk from the neighboring city.
+
+    90- @tombob9.5:Request for manticore spines preferably with barbs still attached. Also if available will buy the venom sac if intact.
+
+    91- @tigerkricket:sewer cleaning
+
+    92- @stevenross70: Request for information on bear fighting rings.
+
+    93- @gwphoenixsam:Looking for possessed beaver named Kevin, May be trapped Druid.
+
+    94- @phalos:help my beast breading farm requires help when they go the farm to help the person running the farm is a gnome and the beasts are large/huge monsters
+
+    95- @andrewjones4353:3 kobolds in a trenchcoat robbing people in the park
+
+    96- @gadzooks63:clean out the local outhouse reward is what ever they can find. 
+
+    97- @kronosbg:House haunted?! Furniture keeps appearing and disappearing. Pet has gone missing. Food goes missing as well. Need help.
+
+    98- @kalyshastarling:Lost donkey, answers to the name Candace. 2,000 gold reward. Dead or alive. (The donkey ate a rare magical item and then mysteriously disappeared)
+
+    99- @sur_duck:a bunch of pixies are turning a local farmers pumpkins too big for use and are using them as homes
+
+    100- @twistede13:REWARD! Any who have information or know whereabouts of suspect to the Werebear Attack out by Ironleaf Outpost. Please inquire the Guild!!
 
 Individuals
     Ancients
@@ -3588,3 +4969,219 @@ Individuals
         A piece of conspicuous jewelry.
         An unusual belt purse.
 
+secret societies greeting
+    Sign: "Gods, I'm thirsty. Know a place to get a good drink?" Countersign: "I know a good alehouse not too far from here."
+
+    While shaking hands, squeeze the other's hand. They will squeeze twice in response.
+
+    During the annual harvest festival, every house decorates its door with flowers. Members of the local cult use a particular arrangement of lavender.
+
+    The followers of a powerful dragon wear jewellery embedded with a piece of one of the dragon's scales. They learn a magic technique to sense the pieces' presence.
+
+    Certain markings upon your hat convey messages to contacts. For example, an X near the crown means "I'm being watched, it's not safe to talk to me." The markings can be removed with a simple cantrip.
+
+    When entering an inn: "My back hurts. I hope your beds are soft." If the innkeeper is an ally, they will respond: "Soft as any."
+
+    A certain design is embroidered on their shirt's shoulders. When was the last time you were talking to someone and looked at their shoulders?
+
+    A certain perfume is worn - difficult to identify unless you have a good nose or have been taught the scent.
+
+    When entering a temple: "This is a fine temple. Truly a place fit for [deity's name]." A fellow Inquisitor will respond: "We endeavour to honour [deity's name] with all we do here."
+
+    A simple handsign to be flashed quickly. For example: touch your little finger with your thumb, then close your hand into a fist.
+
+    A specific kind of mud smeared onto the shoe.
+
+    Tapping the foot twice, then quickly drawing a circle with it.
+
+    Singing a children's song with nonsensical lyrics.
+
+    Paying with a large coin, only to pull it back and give the appropriate amount in the smallest possible change. (evil cult)
+
+    The knowledge of a minor magic trick.
+
+    An elaborate fistbump ritual. [Thanks to lazyhuman_5040 for #11 - 16]
+
+    In a certain music club’s open mic nights, dedicate your song “to an old friend, who I hope to see again”. An agent will approach you soon after.
+
+    Scratch your ear, then your other ear.
+
+    A bandage hanging out of your bag.
+
+    Apparently idle tapping of the fingers, is actually going through a specific tap sequence.
+
+    Wearing a small article of clothing of particular color. Like a scarf or a sash around the waist.
+
+    Asking about a specific dish or drink at a tavern that is not on the menu.
+
+    Tattoos on the back of the hand that can only be seen with a magical light source.
+
+    Wearing a pin with a mundane looking symbol somewhere specific on the body. Like a pin of a crow on the left shoulder.
+
+    Tattoos that will burn when others with the same mark are very close by. [Thanks to catalystscattleless for #21 - 25]
+
+    If you look closely you see they have a nicely disguised fake mustache over their real mustache.
+
+    They always take a drink with there wrong hand, to switch it to there drinking hand
+
+    Sign: "Do you know the place with the worst drinks?" Countersign "Their toilet is the second-worst".
+
+    They blink with both eyes, however one blinks slightly slower
+
+    They will look slightly down when talking about the past, but slightly above you when talking about the future. [Thanks to likeicareaboutkarma for #26 - 30]
+
+    Members of the order will have a dagger tattooed on the underside of their tongue, representing their words are their most dangerous weapon. The spines along the dagger's hilt show their rank within the order.
+
+    When whistling the common song "Lady's Grace," another member will ask what the song is. If the whistler answers, "It's My Mother, The Maiden," the other member's response is, "I've never heard it. Would you teach me?" [Thanks to nlitherl for #31 - 32]
+
+    They stare at you meaningfully and give you an exaggerated wink. (Honestly, players can be dense).
+
+    The first and last name they give you each contains one consonant sound that corresponds to the name of the organization. e.g. an agent of the Radiant Brotherhood introduces himself as Ricky Bernstein.
+
+    Their fighting stance betrays training secret to the organization they belong to.
+
+    Every member has a compulsion that appears to be a nervous tic. The mention of particular word makes them scratch their nose or tug their ear lobe involuntarily. It's a patron thing.
+
+    They always travel in pairs, one wearing an article of clothing of a particular shade of red, the other a particular shade of blue. [Thanks to crimebiscuit for #33 - 37]
+
+    Keeping rhythm with a song in their head and tapping their foot along. A fellow member will give the counter rhythm and ask if it is a "foreign song they are thinking of".
+
+    A member will ask for a Mr or Mrs. "Ayam (are you a member)". Other member counters with No, but I can direct you Mr "Amia ( A member I am)".
+
+    A challenge coin (specialty art coin) is presented and a member who wants to be identified will show their coin to prove membership.
+
+    A flower display is left giving a floriographical message for the knowing member.
+
+    In parting, "May your hearth be warm and smoke be blue in the sky." Counter: " May your path lead back here and may we speak again."
+
+    Members are unable to get drunk as their natural boon does not allow the alcohol to get them drunk.
+
+    A member in need will whistle a tune to a hymn incorrectly and a fellow member will have to correct the tune with the correct note and give shelter or aid to the member. [Thanks to Th3R3493r for #38 - 44]
+
+    Everyone in the organization is named Robert Paulson. [Thanks to spaacemonkey for #45]
+
+    In a region where scarves are common, members wear scarves with very frayed edges. If pointed out, they will respond "Oh, yes, I've been meaning to get this fixed up." (This could also work with another suitable article of clothing.)
+
+    Sign: "It seems every day the weather is chosen at random." Countersign: "Well, it could be worse."
+
+    A travelling entertainer uses Illusory Script on their pamphlets so that only members can read the encoded message and be informed of their arrival.
+
+    When two ships pass by on the open seas, one plays a specific jib on an instrument for the other to hear. If the other ship is an ally, the counter is to shoot a flaming arrow harmlessly in the waters between the two ships.
+
+    At night, hanging a specific style of a lantern outside their doors indicates a safehouse.
+
+    Going into a weapons shop and asking "How much would a dagger that can kill a [creature] cost?" Counter: "It'd cost you enough to buy a [creature]." (The range of creatures named give different indications of intent or information. The weaker the creature, the stronger the intent or importance.)
+
+    Sharing a story of a very odd and specific dream but it contains a message in Thieves' Cant. The counter is to share an equally odd dream but with a reply in Thieves' Cant interwoven in. [Thanks to 2Stressed2BeBlessed for #48 - 52]
+
+Fiend Contract fine print
+    The signatory has to carry a device that pulls energy from them, charging it. It radiates with heat (not damaging) and glows red at night or when demihumans are near.
+
+    The signatory must become the hive for a nest of dire hornets.
+
+    The signatory must throw 25% of all gold they earn into the sea (or appropriate way to lose it based on the contract). If they gain items for any reason, the 25% of the item can be taken as a substitute tax.
+
+    Two nights a week, the signatory is not allowed to sleep. The sleep they would get is transferred to an unnamed slumbering creature that requires a set amount of slumber before awakening. The signatory gains a level of exhaustion after each of these nights.
+
+    Everyone forgets an event in which the signatory participated.
+
+    From now on, another creature will take all the credit for the signatory's deeds.
+
+    The signatory must babysit the contract-holder’s nephew. Any damage sustained to the child will be dealt to them with a 5 second delay (the next combat round). Healing, unfortunately, does not transfer in the same way.
+
+    The contract specifies that the signatory must break a fellow demon out of a prison in heaven within the next 30 days. Failure to bring the demon home and in stable, living condition means the demon can possess the signatory's body and use it as a vessel.
+
+    The signatory signs over the rights to all of their teeth, and all future teeth they may acquire through any means.
+
+    The signatory agrees that at any time they can be teleported to the contract owner's location and provide a foot massage. The massage will not last longer than 10 minutes.
+
+    At any time, any place, under any circumstance, the fiend may plane shift the signatory to their home plane for one minute, as a workplace-exchange program sponsored by the fiend’s superiors. A fiend of similar power to the signatory replaces the signatory for the time period. Per the conditions of the contract, any such interplanar travel is voluntary for the signatory, and cannot be resisted.
+
+    The signatory owes a tithe of blood each day. Signatory takes 1d4 damage at dusk each day. Any class features or magic used to prevent the damage will void the contract, and the fiend will be free to go.
+
+    At the start of any combat, the signatory must make a DC13 Wisdom save or be frightened of the enemy combatants for 1 minute. The signatory can make another save at the beginning of their turn each round to resist the effect.
+
+    The fiend will assist the signatory in combat, but only attacks when the signatory takes damage.
+
+    The fiend narrates the signatory's every move, providing inner monologues as well. The narration is not necessarily true. Signatory has disadvantage on stealth and deception checks.
+
+    The signatory's mundane weapons become enchanted, acting as magical weapons. However, only the fiend may wield them on their behalf. The signatory or their companions cannot use them.
+
+    Other fiends regularly appear to the signatory, urging them to sign their own contracts. Apparently, the signatory's agreeable nature is attractive to fiends…
+
+    All other contracts previously signed by the signatory are now null and void. House deeds, bank accounts, and loan debt are all lost, though a warlock pact is strong enough to resist this nullification.
+
+    The signatory's left and right hands completely swap. This doesn’t have much of a mechanical effect, but some might think they are a Rakshasa.
+
+    The signatory and their nearest sibling switch names. (If they are an only child, swap names with mother or father). 
+
+    Minor spouts of what some would call “stage magic” happen involuntarily. Each time the signatory fails a Constitution saving throw, roll on the table below (1d6) (or DM’s choice) to see what happens.
+    A crow flies out of their mouth (50% chance to be dead and skeletal)
+
+    Their footprints glow with iridescent paint for one hour.
+
+    Their head falls off, and they must use their reaction to catch it. If they do not have a reaction remaining, take 1d12 necrotic damage.
+
+    All of their bones crack, dealing 1d8 thunder damage to you and half as much to any creature within 5 feet.
+
+    Invisible three-quarters cover appears between them and the 5-foot space in front of them.
+
+    All the currency in their pockets appears in their hand. If you do not have a free hand, it falls at their feet.
+
+    Whenever signing further contracts, the signatory must ask to be paid in slaves, in addition to or instead of any other reward. When a sufficient number of slaves is reached, a fiend will arrive to take them away and the contract will be fulfilled.  
+
+    The signatory must fully abstain from (insert their favorite food, drink, or substance).
+
+    Each time the signatory get a full night's rest, they take on the appearance of someone else.
+
+    At any point, the fiend may take control of the signatory's body. Having signed, the victim may get a saving throw, but passing it would be a breach of contract. For one day, the fiend has complete control of the body. The signatory is in the equivalent of a deep coma. Usually there may be additional clauses, limiting what the fiend is allowed to do, e.g.: can't harm the body, or make it do clearly suicidal things, or directly attack the signatory's allies, but is otherwise free to use it as they please. 
+
+    The signatory isn’t allowed to enter any type of contract, alliance or agreement with good-aligned churches or entities, without the explicit permission of the fiend. 
+
+    A clone of the signatory will appear. The original and the clone will both be convinced they are the real one, with the same ability and memories, and only high-level magic will be able to tell them apart. 
+
+    The signatory loses the ability to read.
+
+    The signatory permanently loses one or more of the following senses: smell, hearing, touch, taste, the ability to perceive temperature, the ability to feel pain, the ability to keep rhythm. 
+
+    When the time comes where the signatory can vote, their vote will be determined by the contract owner.
+
+    The signatory loses the ability to deceive. The signatory can lie, or omit the truth, but the contract holder will correct them and notify the other party of the lie.
+
+    They inexplicably become obsessed with a new hobby. The need to explore this hobby is as compelling as their previously favorite activity.
+
+    The signatory is now betrothed to a family member of the contract holder (a fiend, of course). In 90 days, planar immigration authorities will give the signatory and their betrothed a test to show they are indeed in love and know enough about each other. If either person fails the test, they will both be banished from this plane. If they succeed, the wedding will take place within 24 hours. Failure to show up to the wedding or refuse the marriage will result in banishment as well.
+
+    The signatory will be transported to the contract owner’s position in the event the contract owner is threatened.
+
+    The signatory gives up their fertility and any other means of producing an offspring.
+
+    The signatory must house a sentient parasite for one year. If the parasite does not survive, a new one will arrive and the year starts over.
+
+    The signatory must listen to the contract owner’s nephew/niece’s band play their first show. This includes cheering when songs end, buying merch, and congratulating the band after finishing the show but before leaving the venue.
+
+    The signatory must plan and execute an amazing surprise birthday party for an entity/person/creature/or other specified consciousness or concept of the contract owner’s choosing.
+
+    The signatory must replace one of their eyes with the contract owner’s eyes (contract owner’s choice of which eyes). Both parties will be able to see through the replacement eye.
+
+    The signatory must convince the contract owner’s parent said parent is wrong about a particular issue of the contract owner’s choice. 
+
+    The signatory must act irrationally towards certain people or groups of people, chosen beforehand. The signatory is required to act foolishly, be very annoying or hectic, and never explain their action to anybody. 
+
+    The signatory must wear a necklace of severed fingers, and isn’t allowed to hide it under clothes or conceal it in any way.
+
+    The signatory must pay for 10 guards to comprise the contract holder's bodyguard. These count as elite troops or skilled labor for purposes of daily wages (ex. 3g/day/person, in 5e DMG terms).
+
+    After the term of contract is up, the signatory must serve the contract holder as a dually bonded mercenary for the same term of time. The fiend will very likely employ the signatory as a bodyguard, or as a line troop in the Blood War.
+
+    The contract holder must receive one good-aligned sacrifice every new moon, or quarter, if the world has no moons. If an evil-aligned creature is sacrificed instead, the contract holder becomes beholden to the sacrificial creature. If the sacrifice is forgotten or otherwise missed, the contract is void, and the contract holder attacks the signatory in an attempt to kill and steal their soul.
+
+    The signatory must open a gate to the contract holder's home plane within a year and a day of signing the contract.
+
+    The signatory must betray the trust of someone they love. This must happen during the period of the contract.
+
+    The signatory must intentionally lose a public fight against the contract holder, at a time and location chosen by the contract holder. The signatory must put up a believable and convincing act.
+
+    Any healing magic cast upon the signatory is now split with the contract holder, with half of the HP value going to each. Any regeneration from items is also split between them. Resurrection or restoration magic works as normal. This effect lasts through the duration of the contract.
+
+    The signatory begins to gain weight inexplicably. Nine months to the day after signing, the signatory gives birth to the contract holder's spawn. This happens regardless of the signatory's gender. The signatory loses half their HP, and gains three levels of exhaustion during the ordeal.

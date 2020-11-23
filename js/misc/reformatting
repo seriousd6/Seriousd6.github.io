@@ -1,133 +1,160 @@
 
-
-
-
-
-
-`Abyssal ${searchArray(trinketTypes)} of the Abyss - When on the plane of the Abyss, the bearer has advantage on saving throws against Abyssal Corruption. (DMG p. 62)`,
-`Acolyte's ${searchArray(trinketTypes)} of the Acolyte - The bearer gains a +1 bonus to Wisdom (Religion) checks.`,
-`Adamantine ${searchArray(trinketTypes)} of Adamantine - The item is indestructible.`,
-`Adroit ${searchArray(trinketTypes)} of Intellect - The bearer gains +1 bonus to Intelligence saving throws.`,
-`Alarming ${searchArray(trinketTypes)} of Alarms - Contains 1d4 unreplenishable charges of the Alarm spell (1st level).`,
-`Arborean ${searchArray(trinketTypes)} of Arborea - When on the plane of Arborea, the bearer has advantage on saving throws against the effects of Intense Yearning. (DMG p. 61)`,
-`Arcadian ${searchArray(trinketTypes)} of Arcadia - When on the plane of Arcardia, the bearer is unaffected by Planar Vitality (DMG p. 67)`,
-`Arctic ${searchArray(trinketTypes)} of the North - The bearer suffers no harm in temperature as cold as -20 degrees Fahrenheit.`,
-`Arresting ${searchArray(trinketTypes)} of Safety - Once per day, the bearer may use their reaction to reduce fall damage by 1d6 until the end of turn.`,
-`Assassin's ${searchArray(trinketTypes)} of the Assassin - The bearer may add their proficiency bonus to damage rolls dealt during surprise rounds.`,
-`Astral ${searchArray(trinketTypes)} of the Astral Sea - When travelling the Astral Sea, it takes half the number of hours to locate a Color Pool to a specific plane. You have advantage on saving throws vs. the effects of Psychic Wind (DMG p. 47-48)`,
-`Barbarian's ${searchArray(trinketTypes)} of the Barbarian - The bearer gains a +1 bonus to Strength (Athletics) checks.`,
-`Bard's ${searchArray(trinketTypes)} of the Bard - The bearer gains +1 to Charisma (Performance) checks.`,
-`Beastial ${searchArray(trinketTypes)} of the Beastlands - When on the plane of The Beastlands, the bearer has advantage on saving throws vs. Beast Transformation (DMG p. 60)`,
-`Beastspeaker's ${searchArray(trinketTypes)} of Beastspeakers - Contains 1d4 unreplenishable charges of the Speak with Animals spell (1st level).`,
-`Benedictine ${searchArray(trinketTypes)} of Benediction - Contains 1d4 unreplenishable charges of the Healing Word spell (1st level).`,
-`Blasted ${searchArray(trinketTypes)} of Blasting - Contains 1d4 unreplenishable charges of the Fire Bolt spell (1st level).`,
-`Blessed ${searchArray(trinketTypes)} of Blessings - Whenever bearer of this item receives divine healing, they gain an additional 1d4 hit points.`,
-`Bold ${searchArray(trinketTypes)} of Boldness - Contains 1d4 unreplenishable charges of the Heroism spell (1st level).`,
-`Bountiful ${searchArray(trinketTypes)} of Bounty - Contains 1d4 unreplenishable charges of the Goodberry spell (1st level).`,
-`Burglar's ${searchArray(trinketTypes)} of the Burglar - The bearer gains +1 to Dexterity (Sleight of Hand) checks.`,
-`Bytopian ${searchArray(trinketTypes)} of Bytopia - When on the plane of Bytopia, the bearer has advantage on saving throws against Pervasive Goodwill. (DMG p. 59-60)`,
-`Carcerian ${searchArray(trinketTypes)} of Carceri - When on the plane of Carceri, the bearer knows the direction to the closest secret exit from this prison plane. (DMG p. 63)`,
-`Cardinal ${searchArray(trinketTypes)} of the Lodestone - The wielder can use an action to learn which way is north.`,
-`Cartographic ${searchArray(trinketTypes)} of Cartography - On its own volition, the item records a map of the environments that the bearer is exploring, and can magically project it for the bearer to see.`,
-`Channelling ${searchArray(trinketTypes)} of Channelling - Once per day, the bearer may ignore the Verbal and/or Somatic components of a spell they are casting.`,
-`Chill ${searchArray(trinketTypes)} of Chills - Contains 1d4 unreplenishable charges of the Ray of Frost spell (1st level).`,
-`Clockwork ${searchArray(trinketTypes)} of Gears - When on the plane of Mechanus, the bearer has advantage on saving throws against Imposing Order (DMG p. 66)`,
-`Cloy ${searchArray(trinketTypes)} of Cloying - The bearer may cast Friends once per day.`,
-`Compassionate ${searchArray(trinketTypes)} of Compassion - Contains 1d4 unreplenishable charges of the Cure Wounds spell (1st level).`,
-`Concordant ${searchArray(trinketTypes)} of Concordance - The bearer has advantage on saving throws vs. Psychic Dissonance when travelling the Outer Planes. (DMG p. 59)`,
-`Conjurer's ${searchArray(trinketTypes)} of the Conjurer - The bearer may cast Prestidigitation once per day.`,
-`Corrosive ${searchArray(trinketTypes)} of Dissolving - Contains 1d4 unreplenishable charges of the Acid Splash spell (1st level).`,
-`Crawling ${searchArray(trinketTypes)} of Vermin - The crawling things of the earth, such as insects, snakes, and vermin, are attracted to this item. When placed on the ground, such creatures will scurry toward the item like moths drawn to the flame.`,
-`Dancer's ${searchArray(trinketTypes)} of the Dancer - The bearer gains a +1 bonus to Dexterity (Acrobatics) checks.`,
-`Defensive ${searchArray(trinketTypes)} of Defence - Whenever the bearer takes a dodge action, they may move an additional 5 feet.`,
-`Delver's ${searchArray(trinketTypes)} of the Delver - While underground, the bearer of this item always knows the item's depth below the surface and the direction to the nearest staircase, ramp, or other path leading upward.`,
-`Desperate ${searchArray(trinketTypes)} of Last Chances - The bearer has advantage on perception checks when searching for items long lost in the the Swamp of Oblivion on the Plane of Earth. (DMG p. 54)`,
-`Druid's ${searchArray(trinketTypes)} of the Druid - The bearer gains a +1 bonus to Intelligence (Nature) checks.`,
-`Drunkard's ${searchArray(trinketTypes)} of Taverns - The bearer always knows the direction to the closest alcoholic beverage.`,
-`Dynamic ${searchArray(trinketTypes)} of the Dynamo - The bearer has +1 to Charisma saving throws.`,
-`Eavesdropper's ${searchArray(trinketTypes)} of Eavesdropping - As long as it is on the same plane, the bearer can hear through this item as if they were present.`,
-`Elysian ${searchArray(trinketTypes)} of Elysium - When on the plane of Elysium, the bearer has advantage on saving throws against the effects of Overwhelming Joy (DMG p. 60)`,
-`Etherbound ${searchArray(trinketTypes)} of Ethereal Shores - The bearer can see creatures in the Border Ethereal that overlap with their plane as clearly as if they were fully in the bearer's plane. Such creatures appear as apparitions or ghosts.`,
-`Exalting ${searchArray(trinketTypes)} of Exaltation - Contains 1d4 unreplenishable charges of the Bless spell (1st level).`,
-`Expeditious ${searchArray(trinketTypes)} of Expedience - Contains 1d4 unreplenishable charges of the Expeditious Retreat spell.`,
-`False ${searchArray(trinketTypes)} of Falsehoods - The bearer gains a +1 bonus to Charisma (Deception) checks.`,
-`Fathoming ${searchArray(trinketTypes)} of Tongues - Contains 1d4 unreplenishable charges of the Comprehend Languages spell.`,
-`Favored ${searchArray(trinketTypes)} of the Favored - Once per day, the bearer may roll a saving throw with advantage.`,
-`Feathered ${searchArray(trinketTypes)} of Feathers - Contains 1d4 unreplenishable charges of the Feather Fall spell (1st level).`,
-`Feybound ${searchArray(trinketTypes)} of the Fey - The bearer knows the general direction to the closest Fey Crossing within a 60 mile radius. (DMG p. 50)`,
-`First ${searchArray(trinketTypes)} of Speed - The bearer gain a +1 bonus to initiative rolls`,
-`Forgiven ${searchArray(trinketTypes)} of Forgiveness - When on the plane of Mount Celestia, the bearer of this item can receive the benefits of Blessed Beneficence regardless of their alignment.`,
-`Fortune Teller's ${searchArray(trinketTypes)} of the Fortune Teller - Every time you are hit by a monster, you glimpse a random image of its future or past.`,
-`Friendly ${searchArray(trinketTypes)} of Friendship - Contains 1d4 unreplenishable charges of the Animal Friendship spell (1st level).`,
-`Gehennan ${searchArray(trinketTypes)} of Gehenna - When on the plane of Gehenna, the bearer has advantage on saving throws against Cruel Hindrance. (DMG p. 63)`,
-`Gracious ${searchArray(trinketTypes)} of Grace - The bearer may cast Spare the Dying once per day.`,
-`Grim ${searchArray(trinketTypes)} of Coercion - The bearer gains a +1 bonus to Charisma (Intimidation) checks if the target can see this item.`,
-`Hadean ${searchArray(trinketTypes)} of Hades - When on the plane of Hades, the bearer has advantage on saving throws against Vile Transformation. (DMG p. 63)`,
-`Harmonious ${searchArray(trinketTypes)} of Harmony - Attuning to this item takes only 1 minute.`,
-`Healing ${searchArray(trinketTypes)} of Healing - This item contains 4 weak healing nodes. As an action, a character can use one node to heal 1d4 hit points at touch range. The item regains 1d4 charges at sunrise.`,
-`Hellish ${searchArray(trinketTypes)} of the Nine Hells - When in the Nine Hells, the bearer has advantage on saving throws against Pervasive Evil. (DMG p. 64)`,
-`Heroic ${searchArray(trinketTypes)} of Heroes - The bearer has advantage on saving throws vs. fear.`,
-`Histrionic ${searchArray(trinketTypes)} of Histrionics - the bearer gains +1 to Charisma (Performance) checks.`,
-`Holy ${searchArray(trinketTypes)} of Faith - When the bearer of this item rolls hit dice, they can choose to re-roll them and take the second result.`,
-`Iconic ${searchArray(trinketTypes)} of Symbols - The item is inscribed with holy symbols of the God of the DM's choice. A cleric or paladin that serves that god may use this item as a divine focus.`,
-`Inquisitor's ${searchArray(trinketTypes)} of the Inquisitor - The bearer gains a +1 bonus to Intelligence (Investigation) checks.`,
-`Inspired ${searchArray(trinketTypes)} of Inspiration - The bearer regains their Constitution modifier in temporary hit points whenever they gain or use inspiration.`,
-`Leaping ${searchArray(trinketTypes)} of Leaping - Contains 1d4 unreplenishable charges of the Jump spell (1st level).`,
-`Liar's ${searchArray(trinketTypes)} of Lies - Contains 1d4 unreplenishable charges of the Silent Image spell (1st level).`,
-`Limbo ${searchArray(trinketTypes)} of Limbo - When on the plane of Limbo, the bearer has advantage to Intelligence checks to alter or move non-magical objects within the plane. (DMG p. 61-62)`,
-`Locating ${searchArray(trinketTypes)} of Locating - Once attuned, the bearer always knows the exact location of this item`,
-`Loquacious ${searchArray(trinketTypes)} of the Silver Tongue - The bearer gains +1 to Charisma (Persuasion) checks.`,
-`Malediction ${searchArray(trinketTypes)} of Malediction - Contains 1d4 unreplenishable charges of the Bane spell(1st level).`,
-`Manipulating ${searchArray(trinketTypes)} of Manipulation - The bearer may cast Mage Hand once per day.`,
-`Master's ${searchArray(trinketTypes)} of Servants - Contains 1d4 unreplenishable charges of the Unseen Servant spell (1st level).`,
-`Maverick ${searchArray(trinketTypes)} of the Maverick - The bearer has a +1 bonus to any skill check involving gambling and games of chance (Insight, Sleight of Hand, Investigation, etc).`,
-`Messenger ${searchArray(trinketTypes)} of Messages - The bearer may cast Message once per day.`,
-`Meteoric ${searchArray(trinketTypes)} of Falling Stars - Contains 1 unreplenishable charge of Scorching Ray (1st level).`,
-`Mindful ${searchArray(trinketTypes)} of Mindfulness - The bearer gains a +1 bonus to Wisdom saving throws.`,
-`Miraculous ${searchArray(trinketTypes)} of Miracles - The bearer may cast Thaumaturgy once per day.`,
-`Mocking ${searchArray(trinketTypes)} of Mockery - The bearer may cast Vicious Mockery once per day.`,
-`Natural ${searchArray(trinketTypes)} of Nature - Contains 1d4 unreplenishable charges of the Locate Animals or Plants spell (1st level).`,
-`Neutralizing ${searchArray(trinketTypes)} of Neutrality - Contains 1d4 unreplenishable charges of the Protection from Good and Evil spell (1st level).`,
-`Nimble ${searchArray(trinketTypes)} of Agility - The bearer gains a +1 bonus to Dexterity saving throws.`,
-`Nourishing ${searchArray(trinketTypes)} of Nourishment - The bearer rarely feels hungry, and only needs to consume one-fifth the usual amount of food.`,
-`Pandemonium ${searchArray(trinketTypes)} of Pandemonium - When on the plane of Pandemonium, the bearer has advantage on saving throws against the Mad Winds. (DMG p. 62)`,
-`Preacher's ${searchArray(trinketTypes)} of the Preacher - The bearer may extend the range of their Channel Divinity by 5 feet.`,
-`Projecting ${searchArray(trinketTypes)} of Projection - The bearer can send messages mentally to willing characters within 30 feet. This communication is one-way only.`,
-`Protective ${searchArray(trinketTypes)} of Protection - The bearer may cast Blade Ward once per day.`,
-`Reaper's ${searchArray(trinketTypes)} of the Reaper - The bearer has advantage on death saving throws.`,
-`Renaissance ${searchArray(trinketTypes)} of the Renaissance - Once per day, the bearer may gain +1 to any skill check.`,
-`Revealing ${searchArray(trinketTypes)} of Revelation - Contains 1d4 unreplenishable charges of the Detect Magic spell (1st level).`,
-`Riutal ${searchArray(trinketTypes)} of Rituals - Whenever the bearer casts a spell as a ritual, they have advantage to maintain concentration during the ritual.`,
-`Sacred ${searchArray(trinketTypes)} of the Sacred - The bearer may increase their Lay on Hands hit point pool by 5.`,
-`Sagacious ${searchArray(trinketTypes)} of Acumen - The bearer gains +1 to Wisdom (Insight) checks.`,
-`Sage's ${searchArray(trinketTypes)} of the Sage - The bearer gains a +1 bonus to Intelligence (History) checks.`,
-`Secret ${searchArray(trinketTypes)} of Secrets - Contains 1d4 unreplenishable charges of the Illusory Script spell (1st level).`,
-`Sentinel ${searchArray(trinketTypes)} of the Sentinel - Faintly glows when creatures of a certain race (DMs choice) are within a 100 foot radius.`,
-`Shading ${searchArray(trinketTypes)} of Shade - The bearer suffers no harm in temperatures as high as 120 degrees Fahrenheit.`,
-`Shadowbound ${searchArray(trinketTypes)} of the Shadowfell - The bearer knows the general direction to the closest Shadow Crossing within a 60 mile radius. They have advantage on saving throws vs. Shadowfell Dispair (DMG p. 51-52)`,
-`Shepherd's ${searchArray(trinketTypes)} of the Shepherd - The bearer gains a +1 bonus to (Wisdom) Animal Handling checks.`,
-`Shielding ${searchArray(trinketTypes)} of Shielding - This item contains 1d4 unreplenishable charges of the Shield spell.`,
-`Shifting ${searchArray(trinketTypes)} of Shifting - The bearer may change minor aspects of the physical appearance of this item.`,
-`Silent ${searchArray(trinketTypes)} of the Night - The bearer gains a +1 bonus to Dexterity (Stealth) checks.`,
-`Smith's ${searchArray(trinketTypes)} of Reparations - The bearer may cast Mending once per day.`,
-`Sojourner's ${searchArray(trinketTypes)} of the Sojouner - A poem, story, or map that describes a long-forgotten treasure is etched on the surface of the item.`,
-`Solemn ${searchArray(trinketTypes)} of Solemnity - The bearer may spend an action removing all the failed death saving throws from a target within 5 feet of them. The target is still not stabilized.`,
-`Sparkling ${searchArray(trinketTypes)} of Lights - The bearer may cast Dancing Lights once per day.`,
-`Striding ${searchArray(trinketTypes)} of Strides - Contains 1d4 unreplenishable charges of the Longstrider spell (1st level).`,
-`Surgeon's ${searchArray(trinketTypes)} of the Surgeon - The bearer gains a +1 bonus to Wisdom (Medicine) checks.`,
-`Tenacious ${searchArray(trinketTypes)} of the Tenacious - When the bearer takes a long rest, they gain back one additional hit die.`,
-`Tracker's ${searchArray(trinketTypes)} of the Tracker - The bearer gains a +1 to Wisdom (Survival) checks.`,
-`Translucent ${searchArray(trinketTypes)} of Translucence - The bearer gains an extra level one spell slot, which recovers only after a full moon rises.`,
-`Trickster's ${searchArray(trinketTypes)} of Trickery - The bearer may cast Minor Illusion once per day.`,
-`True ${searchArray(trinketTypes)} of Truth - The bearer may cast True Strike once per day.`,
-`Unbroken ${searchArray(trinketTypes)} of Heart - The bearer gains a +1 bonus to Constitution saving throws.`,
-`Verdant ${searchArray(trinketTypes)} of Druidcraft - The bearer may cast Druidcraft once per day.`,
-`Victorious ${searchArray(trinketTypes)} of Victory - Whenever the bearer kills a creature they gain temporary hit points equal to the creature's CR.`,
-`Vigilant ${searchArray(trinketTypes)} of Vigilance - The bearer gains +2 to their Passive Perception.`,
-`Vigorous ${searchArray(trinketTypes)} of Vigor - The bearer gains a +1 bonus to Strength saving throws.`,
-`Vital ${searchArray(trinketTypes)} of Vitality - The bearer's maximum hit points increases by their constitution modifier while attuned to this item. These hit points are lost when the bearer unattunes the item.`,
-`War Leader's ${searchArray(trinketTypes)} of the War Leader - The bearer can use an action to amplify their voice so that it clearly carries for up to 300 feet.`,
-`Waterborne ${searchArray(trinketTypes)} of the Sea - The item floats on water or other liquids. Its bearer has advantage on Strength (Athletics) checks to swim.`,
-`Windborne ${searchArray(trinketTypes)} of the Labyrinth Wind - When in the Plane of Air, the bearer can navigate the Labyrinth Wind intuitively, and knows the path to the nearest Earth Mote within 60 miles.`,
-`Wizard's ${searchArray(trinketTypes)} of the Wizard - The bearer gains a +1 to Intelligence (Arcana) checks.`,
-`Wrathful ${searchArray(trinketTypes)} of Ysgard - When on the plane of Ysgard, the bearer is unaffected by Immortal Wrath. (DMG p. 61)`,
+An adventuring party setting off from a village for their first adventure. Goblins can be seen peering out of some bushes.
+A handsome painting of a local lord or other noble, signed “To my dearest friend ______.”
+A cat with wings sitting on a hill licking its paws.
+A treent patting a blushing dryad on the head.
+A charismatic devil in a suit, sipping wine from a goblet while sitting on a fine chair that itself sits stop a massive pile of gold and jewels.
+A ruined city in the middle of a desert. A giant broken crystal hovers above the tallest tower.
+A nearly nude female dragonborn, draped in silks and eating grapes on a sofa.
+A jeweled sword stuck in a common stone.
+A knight on a horse. In the background a village is burning.
+A dragon dueling a giant while dwarves flee a cave below them.
+An epic battle scene of two human armies fighting each other 
+A painting of an Orc Princess in all her royal finery. 
+A painting of an impressive castle in the rain. 
+A beholder in a top hat whose eyes follow you. But each time you look, it's a different eye. 
+A man with a flute and a naked female of every other race. 
+A gnome standing proudly in front of some unidentifiable machine. Perhaps it flies? 
+The danse macabre: several skeletons, some in rags and some bedecked in finery, dance together. It is a reminder that after death, all bodies, regardless of status, are the same to a necromancer. 
+A troll intimidating a traveler on his bridge. 
+A red-faced drunken giant. 
+A still-life of potions and alchemical supplies. 
+A solemn saint with a halo of actual enchanted flames. 
+A mountain wreathed in storm. 
+An archer posing with a dead peryton. 
+A hero raising their magical spear to the sky in triumph. 
+A haggard old crone with a crystal ball. The ball contains the painter's reflection, distorted and upside down. 
+An artifact in a glowing crystal cage. 
+The prophesied end of the world. 
+You. The painting is enchanted to depict the viewer. 
+A mirror depicting the room it is in, devoid of people. A small plaque on the frame titles it "Vampires" 
+A sunset reflecting through an icy glacier. 
+An active volcanic mountain, casting a glow into the night sky. 
+Tidal pools on a rocky shore, full of unfamiliar sea creatures. 
+A formal-looking portrait of a headless woman, holding the decapitated head of a man. 
+A figure sits writing at a desk, surrounded by stacks of books and parchment. 
+A bunch of poorly-rendered stick figures and...is that a house? And it might be on fire? The only clear thing about this painting is that it was likely done by a child. 
+Geometric forms that overlap and intertwine, into which you can sort of apply some level of anthropomorphization. That might be a set of eyes, and that might be a mouth, after all. 
+A coronation scene, with a woman being crowned amidst a court of noble onlookers. 
+A scientific-looking rendering of a local animal/plant, annotated with biological observations. 
+An underwater shipwreck, surrounded by murky water and ethereal forms. 
+An evening sky lit by the aurora. 
+A bridge spanning a wide river, still in mid-construction. 
+A formal-looking portrait of a pig and an anteater. 
+Starry Night with a Nautiloid in the sky 
+An painting from a remote country. It depicts a magnificent walled city, with a golem in the background that towers over it. The golem bears the symbol of a foreign deity on its chest, representing the god’s role as a guardian of the city. 
+A golem of Hextor burning a village of elves. Drow army can be seen below helping the Golen -Circa 32 year of present day. 
+A mated pair of displacer beasts trying to scare off an invading owlbear from their recent kill. 
+A nature conservationist caring for and trying to nurse a winter wolf back to health. 
+A day in the life of dwarf miners plying their craft.
+A wizard and apprentice(s) discussing magical lore or performing a magical case study. 
+A portrait of adventuring friends before setting out for the first time. 
+A portrait of adventuring friends as kids in their neighborhood or perhaps at a fair. 
+A portrait of adventuring friends surrounded by many/some of their accumulated wealth and accomplishments before one or more of them moved away and/or were killed.
+A waterfall and lake in the Feywilds with fey creatures gathered round (e.g., mermaid/-men, dryads, faeries/pixies, etc.) 
+A family portrait of some noble family. 
+A family portrait of a wealthy merchant's family. 
+large caravan (entering, leaving) a city. 
+Ships docket at a large port city. 
+A portrait of a busy market street with lots of people buying and selling goods. 
+A brave knight battling a horrible monster. Both are being controlled by puppet strings. 
+A portrait of an adventuring group that looks like a (younger, older) version of the PCs. 
+A woman and a bear standing beside one another, they each have matching multi colored eyes. 
+A pantion of L-G and L-N deities arguing in a court room. 
+63.he deity of wisdom lecturing the hungover deity of festivities 
+A beautiful but wrong map of the planes. 
+A ancient red dragon battling a ancient white dragon. 
+A wizard being taunted by his lich-like reflection in a mirror. 
+A nobleman singing a pact with a grinning succubus 
+A druidic protection ritual performed in a beautiful forest by charming but animal-like people. They have e.g. antlers or wings. 
+A religious picture about the fight between the good and the evil. 
+A wonderful cathedral standing on a hill, dedicated to whatever god the ruler follows. 
+A portrait of a long dead ancestor, with telltale signs of something demonic about them. 
+A large ship battling a kraken in the middle of a raging storm. 
+A group of skeletons in a dungeon, peeking around a corner that some unsuspecting adventurers are approaching, planning an ambush. 
+An idealized painting of famous Wizards at a library discussing principles of magic (Think School of Athens) 
+A historical gathering of clerics/cultists promoting their faith in a courtyard. 
+A castle overlooking an active volcano. 
+A surrealism landscape of an elemental plane. 
+A wonderful cathedral standing on a hill, dedicated to whatever god the ruler follows. 
+A portrait of a long dead ancestor, with telltale signs of something demonic about them. 
+large ship battling a kraken in the middle of a raging storm. 
+Dead nature ( don't know the translation, those training paintings everyone does first to test styles. 
+Graphite sketches of an ancient, now outdated, dwarven war machine. 
+A collection of paintings of forest scenes with a red hooded girl and a werewolf:
+1st the girl is on the foreground, giving the perspective of natural movement. The creature is on the background, lurking, with vicious intent.
+2nd the girl forces through a narrow rock formation giving the impression she will be ambushed at any time.
+3rd represents a flung of the werewolf leaping towards the child
+4th a darker scene sets a circle of red hooded people facing the werewolf over a stone alter in the forest. It is faintly visible from some angles the form of three greenish tentacles surrounding the altar, and a gaping maw with nightmarish properties. 
+Satyr peeps through trees and watches the dryads bathe joyesly. 
+he market of meerkhat, a sensorial confounding painting of a desert based market, with vibrant colours, hundreds of depicted heads ( as in shoppers and sellers) all almost running over each other, and what looks like a parade on a higher road in the background. The looker of the painting makes a DC 13 Wisdom saving throw to resist an urge to go shopping ( either the gift shop at the museum or going to the closest market and going on a spree ). 
+A group of gnomes or halflings tiptoeing around a sleeping dragon and their hoard 
+A large army of dark knights being driven away by angels, their awesomely armored leader holding an evil looking great sword being struck in the chest by a spear of light. 
+A portrait of a striking military leader's top half. Not shown is the bottom half, where the leader is wearing very silly underwear and women's shoes. 
+A necromancer animating skeletons like puppets to play instruments. One of them is playing a trumpet. 
+A grand feast being held in a cramped tavern room. 
+A group of six werewolves playing poker. 
+A sad dwarf with his ear cut off. 
+A banshee screaming on a bridge. 
+A group of gnomes or halflings tiptoeing around a sleeping dragon and their hoard 
+A pack of gnolls battling a town militia 
+The Ascension of a cleric into a saint or celestial 
+A warlock being contacted and accepting a pact with their patron (whichever kind) 
+A noble knight breaking a liches phylactery 
+A large army of dark knights being driven away by angels, their awesomely armored leader holding an evil looking great sword being struck in the chest by a spear of light
+A trio of giant humanoids carving out mountains from the earth, as a god watches over them. 
+A Yuan-Ti Pureblood crown found at the site of an unearthed ruin. 
+Leather gloves, with 4 slots on the knuckles for jewels; to the side, one of the jewels, cracked and faded with color. Rumored to hold the power to cast any magic spell once if all four gems can be seated (one set per glove). 
+Tools thought to be the earliest concepts for modern Dwarven forging. Among the menagerie is a small anvil, shaped like a Dwarven head, probably used for working with gold. 
+A painting, on magical parchment, displays an epic magical encounter between former wizards of the realm. This painting's details of the spells are all magically flowing across the parchment, giving the painting the feel that the spells are being cast at the viewer! 
+A single solitary rune stone found within the core of an ancient tree, recently felled due to some evil force. The rune written on the stone reads "growth". 
+A green tinged chest-plate, which is a remnant of a ancient society of Dwarven druids. 
+An ancient cave painting from the early days of the world which depicts a creature of colossal size. Archaeologists have theorized that this might be one of the first artistic depictions of the legendary Tarrasque. 
+The perfectly preserved corpse of a mindflayer. 
+The tooth of a Kraken. 
+A silk dress spun by the spiders of the Feywild. 
+A sculpture depicting a hypothetical gate to the Nine Hells. It’s been rumored that if the doors on it were opened it would capture and drag those unwary souls to meet eternal damnation. Such rumors are naturally considered unfounded in the greater scientific community but as a precaution the doors are chained shut. 
+A full suit of armor once worn by a legendary hero. 
+A collection of old Elven vases, if broken or shattered they unleash a wave of liquid; water, lava, gold, or acid. 
+A bunch of carved rocks that float of their own violation. They in fact are just levitating via magnetism but the museum curator believes they are magical. 
+A mummy, in all it's golden regalia on a throne. Must have a sleep spell cast on it or it rises and generally acts like an old forgetful man bothering people. 
+The very large skull of an unknown creature. It has six eye sockets and dagger sized teeth. 
+A large rock covered with runes. Otherwise ordinary but a group of cultists have gathered outside the museum chanting 'release our master' ever since the rock arrived. 
+An obsidian Idol, which scholars believe depicts an ancient Lizardfolk god, whose name is now forgotten. 
+The perfectly preserved Mask of a Merregon, retrieved from an abandoned Cult site. 
+A rare example of Derro Art, A statue made of granite, seemingly twisted into curious shapes with magic. Its meaning is subject for speculation . 
+A painting by the rather famous/deceased Victor Lys, depicting the breathtaking Sunset in the Feywild. 
+The Book of Ur: A mysterious manuscript written in an unknown language nobody has been able to decipher in 50 years. Somehow, the book is immune to spells, such as Comprehend Languages. (Either the only source about an ancient secret society or just gibberish). 
+A dagger carved out of a large opal. Believed to have been used in ceremonies by early tribes in Kara-Tur. 
+A ceremonial bronze helmet from a Uthgard burial mound. The Uthgard are not happy about that. 
+The remains of an early gnomish automaton. 
+A cube made up off interlocking smaller cubelets. It was used as a mental exercise by an ancient group of monks and philosophers. 
+The ruins of Modron that was severely damaged and shut down during The Great Modron March. If it where to deactivate, it would return to the preset path of that specific march. 
+A life-size replica of an Illithid Nautiloid Spelljammer, taking up much of the chamber. 
+A handful of glowing dust-like material from an unknown plane, and is said to be highly poisonous and able to warp flesh. The dying man who brought the strange material spoke only of a place called "Trinity". 
+An ancient Dwarven rune carving which depicts an ancient disaster. On loan from the clan which carved it until other depictions of the disaster are unearthed and used instead. 
+A map of a magical moving island. 
+A large painting of a badly disguised Kobold wizard riding a dragon and throwing lightning bolts. 
+A small pouch of black sand, rumored to cause any cut the sand touches to infect and cause rot. 
+An ever-full wine skin, known to never be consumed no matter how much you take from it. 
+A very old map of an unknown land. You've never seen a map quite like it. It shows an island, or a continent, surrounded by water. But that's only the beginning. Everything is out of proportion: Dots indicate major cities, but these cities are larger than life, each the size of our own Kingdom! And this island is much smaller than our own land! 
+A single gauntlet, similar to the combat gauntlets of a knight, but with an attachment that allows it to be affixed to the arm. 
+A small pocketwatch with the power to slow down time for a brief moment, just long enough to get away with something. 
+A blood-stained journal page, with a poem that speaks of an ancient terror rising. 
+An onyx and diamond jeweled broach, known to give the user access to the memories of its previous owners for a few moments. 
+A small ornate music box, covered in demonic faces. When wound it plays a dark and thudding tune that puts those who hear it in a state of hypnosis. 
+A silver whistle, rumored to summon the beast that was used to make the whistle. 
+A small wooden box containing several intricate puzzles, each one fitting into another like a puzzle within a puzzle. 
+A glass bottle containing the glowing essence of lightning. 
+A glossy obsidian stone, with an eyehole carved in it for looking into a different dimension. 
+A small, ornate hourglass, holding back the sands of time. 
+A pipe shaped like a demon's head, with a unique kind of bowl that cools hot tabacs into a pleasant fruit flavor. 
+A very old and dusty tome, containing the story of a warrior from an age long forgotten. 
+A golden ring with an embedded ruby that forms the image of a roaring dragon. 
+A small ornate container of face paint, traditionally used for festivals where the user paints their face to look like the fearsome undead. 
+A notebook with complex mathematical formulas covering every page. 
+An album containing several family portraits spanning multiple generations. 
+A dull copper coin, stamped with the profile of an old king. If this coin is offered to a poor person, their debts are paid for a year. 
+A small wooden bead bracelet, each bead carved into a representation of a different race. 
+A glass vial containing the strength enhancing blood of an Aboleth. 
+A small pouch of dust, when thrown on the ground it creates a thick cloud making everything vague and unsubstantial. 

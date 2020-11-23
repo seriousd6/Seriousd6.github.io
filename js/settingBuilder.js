@@ -386,7 +386,7 @@ function findSecretSociety(){
     ]
     let colorChoice = shuffleSlice(colors,2) 
     let idealChoice = shuffleSlice(ideals,2)
-    let output = `There is a shadow organization here led by ${searchArray(leadership)}, who champion ${idealChoice[0]+" and "+idealChoice[1]} with the goal to ${searchArray(goal)} Their symbol is a ${colorChoice[0] + " and " + colorChoice[1] + " " + searchArray(symbol)}. The members of this organization, consisting of ${searchArray(membership)}, pursue their tasks ${searchArray(behavior)} If two members were to meet they would identify each other with ${searchArray(sign)} The most common meeting place is ${searchArray(gatheringPlace)} If one member were to be captured they would be able to provide information about ${searchArray(knowledge)}.`
+    let output = `There is a shadow organization here led by ${searchArray(leadership)}, who champions ${idealChoice[0]+" and "+idealChoice[1]} with the goal to ${searchArray(goal)} Their symbol is a ${colorChoice[0] + " and " + colorChoice[1] + " " + searchArray(symbol)}. The members of this organization, consisting of ${searchArray(membership)}, pursue their tasks ${searchArray(behavior)} If two members were to meet they would identify each other with ${searchArray(sign)} The most common meeting place is ${searchArray(gatheringPlace)} If one member were to be captured they would be able to provide information about ${searchArray(knowledge)}.`
     document.getElementById("Secret Society").innerHTML = output
 };
 
