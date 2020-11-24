@@ -234,8 +234,6 @@ Loot/ rp
         used by an orc
         used by a weak person.
 
-    Weapon enchantments
-  
     art 
         An adventuring party setting off from a village for their first adventure. Goblins can be seen peering out of some bushes.
         `group of ${searchArray(['adventurers', `${searchArray(subject[1])}`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of'])} a ${searchArray(['campsite','village','city','battefield','cave','portal','wasteland'])}`
