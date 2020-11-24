@@ -11,11 +11,6 @@ body {
     padding-top: .5in;
 }
 
-.npc {
-    background-color: rgba(3, 190, 223, 0.26);
-    outline: 1px dotted rgb(2, 246, 246);
-}
-
 .pad {
     padding-left: 12px;
 }
@@ -25,15 +20,9 @@ body {
     background-color: rgba(255, 255, 255, 0.233);
 }
 
-.pop {
-    color: rgb(255, 255, 255);
-    outline: dashed rgb(0, 0, 0);
-    background-color: rgb(183, 0, 255);
-}
-
-.wow {
-    outline: dashed burlywood;
-    background-color: rgb(209, 209, 209);
+.outline {
+    outline: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.233);
 }
 
 div {
