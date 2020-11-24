@@ -40,22 +40,13 @@
         <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
         <div class="container">
             <h5>Weather</h5>
-            <div class="row">
+            <div class="row btn-group" role="group" aria-label="Basic example"> 
                 <button class="col-2  btn btn-success" type="button" onclick="springWeather()">Spring</button>
-                <div class="col" id="Spring"></div>
-            </div>
-            <div class="row">
                 <button class="col-2  btn btn-success" type="button" onclick="summerWeather()">Summer</button>
-                <div class="col" id="Summer"></div>
-            </div>
-            <div class="row">
                 <button class="col-2  btn btn-success" type="button" onclick="fallWeather()">Fall</button>
-                <div class="col" id="Fall">
-                </div>
-            </div>
-            <div class="row">
                 <button class="col-2  btn btn-success" type="button" onclick="winterWeather()">Winter</button>
-                <div class="col" id="Winter"></div>
+            </div>    
+            <div class="row outline" id="weather">
             </div>
         </div>
 

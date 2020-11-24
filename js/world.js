@@ -286,7 +286,7 @@ function winterWeather() {
         `Clear Skies (This is the game as you normally play it. Clear bright light during day time, view of the stars and moon at night. No modifiers are added to play.)`,
         `Strange Phenomena - (${searchArray(strangePhenomena)})`,
     ]
-    document.getElementById("Winter").innerHTML = searchArray(Winter);
+    document.getElementById("weather").innerHTML = searchArray(Winter);
 };
 
 function springWeather() {
@@ -310,7 +310,7 @@ function springWeather() {
         `Scorching Heat (Blistering heat that is unpleasant to travel in. Creatures that attempt to travel during day light hours require twice the ration of water, and creature that travel for 4 or more hours or engage in heavy activity for 1 or more hour during the day and do not immediately take a short or long rest under cover must make a DC 10 Constitution saving throw or gain a level of Exhaustion. All fire damage rolls have a +2. All cold damage rolls have a –2.)`,
         `Strange Phenomena - (${searchArray(strangePhenomena)})`,
     ]
-    document.getElementById("Spring").innerHTML = searchArray(Spring);
+    document.getElementById("weather").innerHTML = searchArray(Spring);
 };
 
 function summerWeather() {
@@ -328,7 +328,7 @@ function summerWeather() {
         `Scorching Heat (Blistering heat that is unpleasant to travel in. Creatures that attempt to travel during day light hours require twice the ration of water, and creature that travel for 4 or more hours or engage in heavy activity for 1 or more hour during the day and do not immediately take a short or long rest under cover must make a DC 10 Constitution saving throw or gain a level of Exhaustion. All fire damage rolls have a +2. All cold damage rolls have a –2.)`,
         `Strange Phenomena - (${searchArray(strangePhenomena)})`,
     ]
-    document.getElementById("Summer").innerHTML = searchArray(Summer);
+    document.getElementById("weather").innerHTML = searchArray(Summer);
 };
 
 function fallWeather() {
@@ -356,7 +356,7 @@ function fallWeather() {
         `Scorching Heat (Blistering heat that is unpleasant to travel in. Creatures that attempt to travel during day light hours require twice the ration of water, and creature that travel for 4 or more hours or engage in heavy activity for 1 or more hour during the day and do not immediately take a short or long rest under cover must make a DC 10 Constitution saving throw or gain a level of Exhaustion. All fire damage rolls have a +2. All cold damage rolls have a –2.)`,
         `Strange Phenomena - (${searchArray(strangePhenomena)})`,
     ]
-    document.getElementById("Fall").innerHTML = searchArray(Fall);
+    document.getElementById("weather").innerHTML = searchArray(Fall);
 };
 
 
