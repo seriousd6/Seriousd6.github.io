@@ -365,7 +365,7 @@ function findEndConvo() {
             return 'You hear a toast: "' + searchArray(toasts) + '"';
         }
     }
-    let output = searchArray([findRumor(),/* overHear()*/])
+    let output = searchArray([findRumor(), overHear()])
     document.getElementById("EndConvo").innerHTML = output
 };
 
