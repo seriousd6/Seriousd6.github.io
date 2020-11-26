@@ -79,7 +79,7 @@ let cornyComparison = [
     "Owlbear's hoot",
     "Dryad's sprig",
     "Unicorn's horn",
-    "Trant's trunk",
+    "Treant's trunk",
     "Dragon's hoard",
 
 ]
