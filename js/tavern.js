@@ -302,7 +302,7 @@ function findEndConvo() {
             let wakeUp = [
                 "You awaken in a cold sweat.", "When you awake, you find yourself sleepwalking about 20 feet from where you fell asleep.", "When you awaken, you still see the last image of your dream when you shut your eyes until you flush them with water.", "You jump up, screaming for a moment, but you are able to silence yourself before waking your allies.",
             ];
-            let generatedOmen = `${searchArray(setting)}. ${searchArray(being)}. ${searchArray(action)}. ${searchArray(dreamOmen)}. ${searchArray(feeling)}. ${searchArray(wakeUp)}.`;
+            let generatedOmen = `${searchArray(setting)} ${searchArray(being)} ${searchArray(action)} ${searchArray(dreamOmen)} ${searchArray(feeling)} ${searchArray(wakeUp)}`;
             return searchArray([searchArray(completeOmens), generatedOmen]);
         };
         function nightmare(){
@@ -330,12 +330,12 @@ function findEndConvo() {
             ]
             //You wake up in a cold sweat
             let falseWake = [
-                "inches from your face is the ${savedFigure}", "in the darkness you can see the outline of the ${savedFigure}", "the ${savedFigure} is sprinting towards you, roll initiative. [Player wakes as soon as the figure reaches them. All spells fail and attacks miss against it", "the door to the room opens slowly and the ${savedFigure} walks in", "the party member closest to them is replaced with the ${savedFigure}", "standing over you is the ${savedFigure}", "as you are about to go to sleep you blink and the ${savedFigure} is in front of you", "the ${savedFigure} is walking toward you slowly. You cannot move", "the ${savedFigure} is dragging away a party member. It looks up and makes eye contact with you", "inside of a new nightmare. Take it from the top", "Have the false wake resolve and the player wakes up. Or do they?",    
+                `inches from your face is the ${savedFigure}`, "in the darkness you can see the outline of the same entity as before", "the same entity as before is sprinting towards you, roll initiative. [Player wakes as soon as the figure reaches them. All spells fail and attacks miss against it", "the door to the room opens slowly and the same entity as before walks in", "the party member closest to them is replaced with the same entity as before", "standing over you is the same entity as before", "as you are about to go to sleep you blink and the same entity as before is in front of you", "the same entity as before is walking toward you slowly. You cannot move", "the same entity as before is dragging away a party member. It looks up and makes eye contact with you", "inside of a new nightmare. Take it from the top", "Have the false wake resolve and the player wakes up. Or do they?",    
             ]
-            let generatedNightmare = `You find yourself ${searchArray()}. You see ${savedFigure}, and you notice ${searchArray(descriptor)}. All of a sudden it ${searchArray(action)}. You jolt awake... ${searchArray(falseWake)}`
-            return searchArray([searchArray(generatedNightmare, completeNightmares)])
+            let generatedNightmare = `You find yourself ${searchArray(place)}. You see ${savedFigure}, and you notice ${searchArray(descriptor)}. All of a sudden it ${searchArray(action)}. You jolt awake... ${searchArray(falseWake)}`
+            return searchArray([generatedNightmare, searchArray(completeNightmares)])
         }
-        let output = searchArray([`Rumor: ${searchArray([rumorMill(),searchArray(completeRumors)])}`, `Legend: ${legends}`, `Omen: ${omen()}`, `Nightmare: ${nightmare()}`])
+        let output = searchArray([`You hear someone spreading a rumor: ${searchArray([rumorMill(),searchArray(completeRumors)])}`, `You hear someone recounting a legend: ${legends}`, `You hear someone explaining a dream or other omen: ${omen()}`, `You hear someone sharing their nightmare: ${nightmare()}`])
         return output
     }
     function overHear() {
@@ -365,7 +365,7 @@ function findEndConvo() {
             return 'You hear a toast: "' + searchArray(toasts) + '"';
         }
     }
-    let output = searchArray([findRumor(), overHear()])
+    let output = searchArray([findRumor(),/* overHear()*/])
     document.getElementById("EndConvo").innerHTML = output
 };
 
