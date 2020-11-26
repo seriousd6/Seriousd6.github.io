@@ -303,7 +303,7 @@ function findEndConvo() {
                 "You awaken in a cold sweat.", "When you awake, you find yourself sleepwalking about 20 feet from where you fell asleep.", "When you awaken, you still see the last image of your dream when you shut your eyes until you flush them with water.", "You jump up, screaming for a moment, but you are able to silence yourself before waking your allies.",
             ];
             let generatedOmen = `${searchArray(setting)}. ${searchArray(being)}. ${searchArray(action)}. ${searchArray(dreamOmen)}. ${searchArray(feeling)}. ${searchArray(wakeUp)}.`;
-            return searcharray([searchArray(completeOmens), generatedOmen]);
+            return searchaArray([searchArray(completeOmens), generatedOmen]);
         };
         function nightmare(){
             let completeNightmares = [
