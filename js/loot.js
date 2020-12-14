@@ -660,22 +660,17 @@ function artGenerator(number) {
     function classReturn() {
         let classes = [
             [
-                'bardic', 'cleric', 'fighter', 'paladin', 'ranger', 'rogue', 'warlock',
+                'bardic performance', 'cleric holy', `fighter's dueling`, 'paladin ceremonial', 'ranger ceremonial', 'rogue honorific', 'warlock ritual',
             ],
             [
-                'barbarian', 'druidic', 'monk',
+                'barbarian tribal', 'druidic', 'monk ceremonial',
             ],
             [
-                'sorcerer', 'wizard', 'artificer', 'summoner',
-            ],
-            [
-                'bounty hunter', 'blood hunter', 'mystic',
+                `sorcerer ritual`, `wizard's ritual`, 'artificer', `summoner's`,'mystic'
             ],
         ]
         var chance = rollDice(100);
-        if (chance > 90) {
-            return searchArray(classes[3]);
-        } else if (chance > 70) {
+        if (chance > 70) {
             return searchArray(classes[2]);
         } else if (chance > 40) {
             return searchArray(classes[1]);
@@ -705,7 +700,7 @@ function artGenerator(number) {
             ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`of unknown make but of extradorinary beauty`])}`])}.`
         ],
         [
-            `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} ${searchArray([`${findRace()} ${searchArray(['cultural','religious','festival','royal','wedding','funeral','military','noble',''])} vestments`,'cultic vestments',`vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
+            `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} ${searchArray([`${findRace()} ${searchArray(['cultural','religious','festival','royal','wedding','funeral','military','noble'])} vestments`,'cultic vestments',`vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
         ],
         [
             `illuminated manuscript`
