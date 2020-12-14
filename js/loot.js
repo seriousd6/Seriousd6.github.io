@@ -510,16 +510,16 @@ function findCard() {
 function artGenerator(number) {
     document.getElementById("Art").innerHTML = ""
     let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer"]
-    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "brooch", "music box", "jewelry box"]
+    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "music box", "whistle", "horn",`faberge ${searchArray(['skull', 'egg'])}`]
     let gems = [ "azurite (opaque mottled deep blue)", "banded agate (translucent striped brown, blue, white, or red) ", "blue quartz (transparent pale blue)", "eye agate (translucent circles of gray, white, brown, blue, or green)", "hematite (opaque gray-black)", "lapis lazuli (opaque light and dark blue with yellow flecks)", "malachite (opaque striated light and dark green)", "moss agate (translucent pink or yellow-white with mossy gray or green markings)", "obsidian (opaque black)", "rhodochrosite (opaque light pink)", "turquoise (opaque light blue-green)", "tiger eye (translucent brown with golden center)","bloodstone (opaque dark gray with red flecks)", "carnelian (opaque orange to red-brown)", "chalcedony (opaque white)", "chrysoprase (translucent green)", "citrine (transparent pale yellow-brown)", "jasper (opaque blue, black, or brown)", "moonstone (translucent white with pale blue glow)", "quartz (transparent white, smoky gray, or yellow)", "sardonyx (opaque bands of red and white)", "zircon (transparent pale blue-green)", "onyx (opaque bands of black and white, or pure black or white)", "star rose quartz (translucent rosy stone with white star-shaped center)","alexandrite (transparent dark green)", "aquamarine (transparent pale blue-green)", "black pearl (opaque pure black)", "blue spinel (transparent deep blue)", "peridot (transparent rich olive green)", "topaz (transparent golden yellow)","black opal (translucent dark green with black mottling and golden flecks)", "blue sapphire (transparent blue-white to medium blue)", "emerald (transparent deep bright green)", "fire opal (translucent fiery red)", "opal (translucent pale blue with green and golden mottling)", "star ruby (translucent ruby with white star-shaped center)", "star sapphire (translucent blue sapphire with white star-shaped center)", "yellow sapphire (transparent fiery yellow or yellow green)","black sapphire (translucent lustrous black with glowing highlights)", "diamond (transparent blue-white, canary, pink, brown, or blue)", "jacinth (transparent fiery orange)", "ruby (transparent clear red to deep crimson)" ]
     let size = ["large", "small", "tiny", "life-size", "huge", "gargantuan"]
-    let many = ["a small group of", "a large group of", "a small army of", "a few", "a large force composed of"]
+    let many = ["a small group of", "a large group of", "group","a small army of", "a few", "a large force composed of"]
     let monster = ['aarakocra', 'aboleth', 'angel', 'animated object', 'animated weapon', 'ankheg', 'azer', 'banshee', 'basilisk', 'behir', 'beholder', 'blight', 'bugbear', 'bulette', 'bullywug', 'cambion', 'carrion crawler', 'centaur', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'cyclops', 'darkmantle', 'death knight', 'demilich', 'demon', 'devil', 'dinosaur', 'displacer beast', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'elemental', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'fomorian', 'fungi', 'galeb duhr', 'gargoyle', 'genie', 'ghost', 'giant', 'gibbering mouther', 'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'grick', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy', 'hell hound', 'helmed horror', 'hippogriph', 'hobgoblin', 'homunculus', 'hook horror', 'hydra', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron', 'mummie', 'myconid', 'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'ooze', 'orc', 'otyugh', 'owlbear', 'pegasus', 'peryton', 'piercer', 'pixie', 'psuedodragon', 'purple worm', 'quaggoth', 'rakshasa', 'remorhazes', 'revenant', 'roc', 'roper', 'rust monster', 'sahuagin', 'salamander', 'satyr', 'scarecrow', 'shadow', 'shambling mound', 'shield guardian', 'skeleton', 'slaadi', 'specter', 'sphinx', 'sprite', 'stirge', 'succubus', 'incubus', 'terrasque', 'thri-kreen', 'treant', 'troglodyte', 'troll', 'umber hulk', 'unicorn', 'vampire', 'water weird', 'wight', `will-o'-wisp`, 'wraith', 'wyvern', 'xorn', 'yeti', 'yuan-ti', 'yugoloth', 'zombie', 'ape', 'awakened tree', 'awakened shrub', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'blood hawk', 'boar', 'brown bear', 'camel', 'cat', 'constrictor snake', 'crab', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'eagle', 'elephant', 'elk', 'flying snake', 'frog', 'giant ape', 'giant badger', 'giant bat', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'giant elk', 'giant fire beetle', 'giant frog', 'giant goat', 'giant hyena', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony', 'quipper', 'rat', 'raven', 'reef shark', 'rhinoceros', 'riding horse', 'saber-toothed tiger', 'scorpion', 'sea horse', 'spider', 'bat swarm', 'insect swarm', 'poisonous snake swarm', 'quipper swarm', 'rat swarm', 'raven swarm', 'tiger', 'vulture', 'warhorse', 'weasel', 'winter wolf', 'wolf', 'worg', ]
     let historicalEvent = ["a creation myth", "a constellation", "an ascension story", "a historical battle", "a coronation", "an ancient disaster", "an ancient prophecy", "the aligment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical battle between ${findRace()}s and ${searchArray(monster)}s`, `a historical battle between ${findRace()}s and ${findRace()}s`, `a historical battle between ${searchArray(monster)}s and ${searchArray(monster)}s`, ]
     let tool = ['weapon', 'tool', 'treasure chest', 'sword', 'shovel']
     let item = ['whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 'mug', 'cup', 'tankard', 'bottle', 'plate', 'plow', 'pot', 'pan', 'lamp', 'rug', 'hammer', 'anvil', 'goblet', 'chest', 'tankard of alcohol', 'feather', 'oar', 'cask', 'harp', 'lute', 'necklace', 'bracelet', 'comb', 'crown', 'ring', 'oil-lamp', 'potion', 'gem', 'scroll', 'wand', 'horseshoe', 'pike', 'bow', 'pair of slippers', 'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle']
     let location = ["underfoot", "next to it", "in its mouth", "on its back"]
-    let ageDescriptor = ["young", "older"]
+    let ageDescriptor = ["younger", "older"]
     let adultGender = ["man", "woman"]
     let anyAgeGender = ["man", "woman", "boy", "girl"]
     let youngGender = ["boy", "girl"]
@@ -537,13 +537,7 @@ function artGenerator(number) {
     let mount = ["dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose"]
     let organization = ['theives guild', 'city', 'temple', "oracle's", "king's"]
     let facialExpression = ["Awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning"]
-    let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying','with the likeness of']
-
-    let artA = ["Silver ewer", "Carved bone statuette", "Small gold bracelet", "Cloth-of-gold vestments", "Black velvet mask stitched with silver thread", "Copper chalice with silver filigree", "Pair of engraved bone dice", "Small mirror set in a painted wooden frame", "Embroidered silk handkerchief", "Gold locket with a painted portrait inside"]
-    let artB = ["Gold ring set with bloodstones", "Carved ivory statuette", "Large gold bracelet", "Silver necklace with a gemstone pendant", "Bronze crown", "Silk robe with gold embroidery", "Large well-made tapestry", "Brass mug with jade inlay", "Box of turquoise animal figurines", "Gold bird cage with electrum filigree"]
-    let artC = ["Silver chalice set with moonstones", "Silver-plated steel longsword with jet set in hilt", "Carved harp of exotic wood with ivory inlay and zircon gems", "Small gold idol", "Gold dragon comb set with red garnets as eyes", "Bottle stopper cork embossed with gold leaf and set with amethysts", "Ceremonial electrum dagger with a black pearl in the pommel", "Silver and gold brooch", "Obsidian statuette with gold fittings and inlay", "Painted gold war mask"]
-    let artD = ["Fine gold chain set with a fire opal", "Old masterpiece painting", "Embroidered silk and velvet mantle set with numerous moonstones", "Platinum bracelet set with a sapphire", "Embroidered glove set with jewel chips", "Jeweled anklet", "Gold music box", "Gold circlet set with four aquamarines", "Eye patch with a mock eye set in blue sapphire and moonstone", "A necklace string of small pink pearls"]
-    let artE = ["Jeweled gold crown", "Jeweled platinum ring", "Small gold statuette set with rubies", "Gold cup set with emeralds", "Gold jewelry box with platinum filigree", "Painted gold child's sarcophagus", "Jade game board with solid gold playing pieces", "Bejeweled ivory drinking horn with gold filigree"]
+    let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying',]
 
     let status = [
         [ /*Stained Glass*/ "dusty", "dirty", "vandalized", "scratched", "broken", "faded", "discolored", "unfinished", "incomplete", "cracked", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
@@ -554,15 +548,142 @@ function artGenerator(number) {
         [ /*Relief*/ "dusty", "dirty", "vandalized", "scratched", "cracked", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
         [ /*Tapestry*/ "dusty", "dirty", "torn", "thread-bare", "worn", "water-stained", "shredded", "stained", "cut", "vandalised", "faded", "unfinished", "vibrant", "pristine", ],
         [ /*Fine Jewelry*/ "fine", "dusty", "dirty", "broken", "bent", "unfinished", "incomplete", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
-        [ /*Fine clothes*/ ]
+        [ /*Fine clothes*/ 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded'],
+        [/*Fine Armaments */ "dented and bent",'dusty','dirty','tarnished','pristine','broken',],
+    ]
+    function weaponType() {
+        let x = rollDice(1000)
+        if (x < 4) {
+            return "club"
+        } else if (x < 39) {
+            return "dagger"
+        } else if (x < 43) {
+            return "greatclub"
+        } else if (x < 67) {
+            return "handaxe"
+        } else if (x < 75) {
+            return "javelin"
+        } else if (x < 79) {
+            return "light hammer"
+        } else if (x < 149) {
+            return "mace"
+        } else if (x < 172) {
+            return "quarterstaff"
+        } else if (x < 176) {
+            return "sicle"
+        } else if (x < 213) {
+            return "spear"
+        } else if (x < 230) {
+            return `${searchArray(["tonfa","tiger claws","knucke dusters","iron fan","katar","emeici","cestus","tekko","maduvu","pata","crecent moon knives","knife wheel"])} (fist weapon)`
+        } else if (x < 271) {
+            return "light crossbow"
+        } else if (x < 287) {
+            return "dart"
+        } else if (x < 303) {
+            return "shortbow"
+        } else if (x < 319) {
+            return "sling"
+        } else if (x < 404) {
+            return "battleaxe"
+        } else if (x < 413) {
+            return "flail"
+        } else if (x < 420) {
+            return "glaive"
+        } else if (x < 498) {
+            return "greataxe"
+        } else if (x < 576) {
+            return "greatsword"
+        } else if (x < 581) {
+            return "halberd"
+        } else if (x < 586) {
+            return "lance"
+        } else if (x < 773) {
+            return "longsword"
+        } else if (x < 774) {
+            return "maul"
+        } else if (x < 778) {
+            return "morningstar"
+        } else if (x < 779) {
+            return "pike"
+        } else if (x < 809) {
+            return "rapier"
+        } else if (x < 848) {
+            return "scimitar"
+        } else if (x < 887) {
+            return "shortsword"
+        } else if (x < 891) {
+            return "trident"
+        } else if (x < 893) {
+            return "war pick"
+        } else if (x < 903) {
+            return "warhammer"
+        } else if (x < 905) {
+            return "whip"
+        } else if (x < 907) {
+            return "blowgun"
+        } else if (x < 914) {
+            return "hand crossbow"
+        } else if (x < 955) {
+            return "heavy crossbow"
+        } else if (x < 996) {
+            return "longbow"
+        } else if (x < 1000) {
+            return "net"
+        }
+    }
+    let armorTypes = [
+        [
+            `Splint`,
+            `Ring Mail`,
+            `Full Plate`,
+            `Chain Mail`,
+            `Scale Mail`,
+            `Hide Armor`,
+            `Half Plate`,
+            `Leather Armor`,
+            `Studded Leather Armor`,
+        ],
+        [
+            `Chain Shirt`,
+            `Breastplate`,
+            `Helmet`,
+        ],
     ]
     let material = [
         [ /*pottery*/ "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "jade", "bone", "teeth-bone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass", ],
         [ /*statues*/ "marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
         [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
         [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jewelled gold`, `${searchArray(gems)} jewelled platinum`, `${searchArray(gems)} jewelled electrum`, `${searchArray(gems)} jewelled silver`, `${searchArray(gems)} jewelled copper`, `${searchArray(gems)} jewelled gold with platinum inlay`, `${searchArray(gems)} jewelled gold and copper alloy`, `${searchArray(gems)} jewelled gold and silver alloy`, `solid ${searchArray(gems)}`],
-        [ /*Fine Clothes*/ "silk", "purple velvet", "spider-silk"],
+        [ /*Fine Clothes*/ "silk", "purple velvet", "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
+        [/*Fine Armaments*/ "platinum","gold","copper","silver","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
+    function classReturn() {
+        let classes = [
+            [
+                'bardic', 'cleric', 'fighter', 'paladin', 'ranger', 'rogue', 'warlock',
+            ],
+            [
+                'barbarian', 'druidic', 'monk',
+            ],
+            [
+                'sorcerer', 'wizard', 'artificer', 'summoner',
+            ],
+            [
+                'bounty hunter', 'blood hunter', 'mystic',
+            ],
+        ]
+        var chance = rollDice(100);
+        if (chance > 90) {
+            return searchArray(classes[3]);
+        } else if (chance > 70) {
+            return searchArray(classes[2]);
+        } else if (chance > 40) {
+            return searchArray(classes[1]);
+        } else {
+            return searchArray(classes[0]);
+        }
+    }
+
     let artForm = [
         [
             `${variableEvent(status,0)}stained glass window`,
@@ -575,18 +696,30 @@ function artGenerator(number) {
         ],
         [
             `${variableEvent(status,7)}${searchArray(material[3])} ${searchArray(jewelry)}`,            
-],
+        ],
         [
             `${variableEvent(status,3)}${searchArray(material[1])} ${searchArray(["statuette","figurine",])}`,
-        ]
+        ],
+        [
+            `${searchArray( ["A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"])} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
+            ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`of unknown make but of extradorinary beauty`])}`])}.`
+        ],
+        [
+            `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} ${searchArray([`${findRace()} ${searchArray(['cultural','religious','festival','royal','wedding','funeral','military','noble',''])} vestments`,'cultic vestments',`vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
+        ],
+        [
+            `illuminated manuscript`
+        ],
     ]
+
+
     let adjective = [
         ['airborne', 'slouching', 'giddy', 'brazen', 'hobbled', 'wrinkled', 'broken', 'happy', 'sunken', 'headless', 'burning', 'toothy', 'mighty', 'frisky', 'staggering', 'gutted', 'glorious', 'crooked', 'joyful', 'wise', 'sweet', 'surly', 'reverent', 'clumsy', 'clever', 'prone', 'restrained', 'unconscious', 'invisible', 'petrified', 'poisoned', 'charmed', 'frightened', 'grappled', 'acrobatic', 'dextrous', 'intelligent', 'strong', 'athletic', 'deceitful', 'charismatic', 'insightful', 'intimidating', 'observant', 'perceptive', 'persuasive', 'stealthy', 'dirty', 'dangerous', 'deadly', 'hidden', 'alert', 'brave', 'wicked', 'tricky', 'mysterious', 'kind', 'handsome', 'frantic', 'foolish', 'adorable', 'cruel', 'elegant', 'friendly', 'gnashing', 'winking', 'smiling', 'waving', 'ugly', 'busy', 'creepy', 'grotesque', 'poor', 'puzzled', 'obnoxious', 'fierce', 'fancy', 'magnificent', 'enchanting', 'eager', 'determined', 'horrible', 'wide-eyed', 'victorious', 'uptight', 'unusual', 'troubled', 'thankful', 'terrible', 'tame', 'repulsive', ],
         []
     ]
     let action = [
         ["fighting a(n)", "being killed by a(n)", "stalking a(n)", "conquered by a(n)", "standing over a(n)"],
-        ["looking towards the sky", "preparing to attack", "ready to swing", "sitting on a rock", "bracing for impact", "singing", "dancing in ceremonial dress"],
+        ["looking towards the sky", "preparing to attack", "ready to fight", "sitting on a rock", "bracing for impact", "singing", "dancing in ceremonial dress"],
         ["sitting in its lair", `clutching a(n) ${searchArray(item)} tightly`, "stalking around a city", "in a house", "standing on top of a large building", "on top of a building"]
     ]
     let verb = [
@@ -622,6 +755,11 @@ function artGenerator(number) {
         }
         //document.getElementById("Race").innerHTML = characterRace
     };
+
+    function stages(){
+        return `${variableEvent([`multiple scenes of a story ${searchArray(['starting with', 'ending with'])} `])}`
+    }
+
     function artPiece(){
         return variableEvent(size) + searchArray(artForm[0])
     }
@@ -632,7 +770,7 @@ function artGenerator(number) {
         `A(n) ${searchArray(monster)} dueling a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])} can be seen`,
         `An epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])} can be seen`,
     ]
-
+    let holdingLocation =['over their heads','at their sides','behind their backs']
     const storyTemplate = [
         [
             `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}`,`${searchArray(verb[0])}`])} ${variableEvent([ `${searchArray(background)} in the background.`])}`,
@@ -676,15 +814,15 @@ function artGenerator(number) {
             `${searchArray(many)} ${searchArray(subject[0])}s holding ${searchArray(tool)}s and ${searchArray(action[1])}. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${searchArray(historicalEvent)}.`,
             `two ${findRace()}s ${searchArray(verb[2])}. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
-            `${toWords(5+rollDice(15))}humaniods of various races holding a(n) ${searchArray(item)} over their heads. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
+            `${toWords(5+rollDice(15))}humaniods of various races holding a(n) ${searchArray(item)} ${searchArray(holdingLocation)}. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `a schematic of all the planes of existence.`,
             `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${toWords(2+rollDice(10))}${searchArray(monster)}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${searchArray(["a heavenly court","a hellish court","a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
         ],
     ]
-    // a  @@size@@ @@Quality@@ @@artform@@, @@story@@
-    /*@@story Templates
+    /* @@size@@ @@Quality@@ @@artform@@, @@story@@
+        @@story Templates
         @@description subject@@
         @@description subject Verb@@
         @@subject and subject verb@@
@@ -693,25 +831,28 @@ function artGenerator(number) {
         @@point of interest@@ 
     */
 
+
     let combiner = [
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${searchArray(artForm[1])} with designs telling that it ${searchArray([`is from an ancient ${findRace()} kingdom`,"is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
         `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain'])}, each bead is carved to represent a different ${searchArray(['race','school of magic','monster','plane','divine being','feindish lord','kingdom','historical moment','historical disaster'])}.`,
         `A(n) ${variableEvent(['dull','pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'tablet'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster)}`, `the image of a(n) ${searchArray(item)}`])}.`,
+        `${searchArray(artForm[3])}`,
+        `${searchArray(artForm[4])}`,
         ]
 
     if (number === 50) {
