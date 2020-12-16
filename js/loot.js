@@ -538,7 +538,7 @@ function artGenerator() {
     let hair = ["long flowing", "short", "no"]
     let mount = ["dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose"]
     let organization = ['theives guild', 'city', 'temple', "oracle's", "king's"]
-    let facialExpression = ["Awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning"]
+    let facialExpression = ["awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning"]
     let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying',]
 
     let status = [
@@ -643,7 +643,7 @@ function artGenerator() {
         [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
         [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jewelled gold`, `${searchArray(gems)} jewelled platinum`, `${searchArray(gems)} jewelled electrum`, `${searchArray(gems)} jewelled silver`, `${searchArray(gems)} jewelled copper`, `${searchArray(gems)} jewelled gold with platinum inlay`, `${searchArray(gems)} jewelled gold and copper alloy`, `${searchArray(gems)} jewelled gold and silver alloy`, `solid ${searchArray(gems)}`],
         [ /*Fine Clothes*/ "silk", `${searchArray(color)} velvet`, "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
-        [/*Fine Armaments*/ "platinum","gold","copper","silver","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
+        [/*Fine Armaments*/ "platinum","gold","copper","silver","silver with mythril inlay","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
     function classReturn() {
         let classes = [
@@ -744,8 +744,9 @@ function artGenerator() {
     let background = [
         `A${searchArray(['n impressive', ' typical', ' ruined'])} ${findRace()} ${searchArray( ['village','city','town','caravan','tower','castle'] )} ${searchArray( ['is burning','during a thunderstorm','during sunset','with a red sky','wreathed in storm',`being overtaken by ${searchArray([`${findRace()}s`,`${searchArray(monster)}`])}`])} can be seen`,
         `You can see a(n) ${searchArray(['grand feast being held in a cramped tavern room','pack of gnolls battling a town militia','large army of dark knights being driven away by angels','creature of colossal size','sunset in the Feywild','Illithid Nautiloid Spelljammer','castle overlooking an active volcano','surrealism landscape of an elemental plane','wonderful cathedral standing on a hill, dedicated to whatever god the ruler follows','waterfall and lake in the Feywilds with fey creatures gathered round','sunset reflecting through an icy glacier', 'active volcanic mountain, casting a glow into the night sky','active volcano','expansive seascape','abundant hilly plains',' expanse of mountains','icy glacier and rough waters',' abundance of tidal pools on a rocky shore, full of unfamiliar sea creatures', 'endless cityscape'])}`,
-        `A(n) ${searchArray(monster)} dueling a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])} can be seen`,
-        `An epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])} can be seen`,`A ${searchArray(['tranquil landscape', 'fine castle interior','a looming storm over the mountains'])} can be seen`
+        `A(n) ${searchArray(monster)} ${searchArray(['dueling','fighting','struggling against','battling','attacking'])} a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])} can be seen`,
+        `An epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])} can be seen`,
+        `A ${searchArray(['tranquil landscape', 'fine castle interior','looming storm over the mountains'])} can be seen`
     ]
     let holdingLocation =['over their heads','at their sides','behind their backs']
     const storyTemplate = [
@@ -795,7 +796,7 @@ function artGenerator() {
             `a schematic of all the planes of existence.`,
             `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${toWords(2+rollDice(10))}${searchArray(monster)}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
-            `${searchArray(["a heavenly court","a hellish court","a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
+            `${searchArray([`a ${searchArray(['trial being held','hero being rewarded','disagreement','battle','vision','celebration',])} in a heavenly court`,`a ${searchArray(['deal being struck','souls being wagered','trial being held','villain being rewarded','disagreement','battle','vision','celebration'])} in a hellish court`,"a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
         ],
     ]
     /* @@size@@ @@Quality@@ @@artform@@, @@story@@
@@ -817,7 +818,7 @@ function artGenerator() {
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${searchArray(artForm[1])} with designs telling that it ${searchArray([`is from an ancient ${findRace()} kingdom`,"is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
-        `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain'])}, each bead is carved to represent a different ${searchArray(['race','school of magic','monster','plane','divine being','feindish lord','kingdom','historical moment','historical disaster'])}.`,
+        `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain'])}, each bead is carved to represent a different ${searchArray(['race','school of magic','monster','plane','divine being','feindish lord','kingdom','historical moment','historical disaster','tenet of faith'])}.`,
         `A(n) ${variableEvent(['dull','pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'tablet'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster)}`, `the image of a(n) ${searchArray(item)}`])}.`,
         `${searchArray(artForm[3])}`,
         `${searchArray(artForm[4])}`,
