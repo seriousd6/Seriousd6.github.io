@@ -633,20 +633,20 @@ function artGenerator(number) {
     }
     let armorTypes = [
         [
-            `Splint`,
-            `Ring Mail`,
-            `Full Plate`,
-            `Chain Mail`,
-            `Scale Mail`,
-            `Hide Armor`,
-            `Half Plate`,
-            `Leather Armor`,
-            `Studded Leather Armor`,
+            `splint armor`,
+            `ring mail armor`,
+            `full plate armor`,
+            `chain mail armor`,
+            `scale mail armor`,
+            `hide armor`,
+            `half plate armor`,
+            `leather armor`,
+            `studded leather armor`,
         ],
         [
-            `Chain Shirt`,
-            `Breastplate`,
-            `Helmet`,
+            `chain shirt`,
+            `breastplate`,
+            `helmet`,
         ],
     ]
     let material = [
