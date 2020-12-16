@@ -641,7 +641,7 @@ function artGenerator() {
         [ /*pottery*/ "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "jade", "bone", "teeth-bone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass", ],
         [ /*statues*/ "marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
         [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
-        [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jewelled gold`, `${searchArray(gems)} jewelled platinum`, `${searchArray(gems)} jewelled electrum`, `${searchArray(gems)} jewelled silver`, `${searchArray(gems)} jewelled copper`, `${searchArray(gems)} jewelled gold with platinum inlay`, `${searchArray(gems)} jewelled gold and copper alloy`, `${searchArray(gems)} jewelled gold and silver alloy`, `solid ${searchArray(gems)}`],
+        [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jeweled gold`, `${searchArray(gems)} jeweled platinum`, `${searchArray(gems)} jeweled electrum`, `${searchArray(gems)} jeweled silver`, `${searchArray(gems)} jeweled copper`, `${searchArray(gems)} jeweled gold with platinum inlay`, `${searchArray(gems)} jeweled gold and copper alloy`, `${searchArray(gems)} jeweled gold and silver alloy`, `solid ${searchArray(gems)}`],
         [ /*Fine Clothes*/ "silk", `${searchArray(color)} velvet`, "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
         [/*Fine Armaments*/ "platinum","gold","copper","silver","silver with mythril inlay","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
@@ -679,7 +679,7 @@ function artGenerator() {
         ],
         [
             `${searchArray( ["A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"])} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
-            ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`extradorinary details and filigree`])}`])}.`
+            ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`extraordinary details and filigree`])}`])}.`
         ],
         [
             `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} ${searchArray([`${findRace()} ${searchArray(['cultural','religious','festival','royal','wedding','funeral','military','noble'])} vestments`,'cultic vestments',`vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
