@@ -697,7 +697,7 @@ function artGenerator(number) {
         ],
         [
             `${searchArray( ["A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"])} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
-            ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`of unknown make but of extradorinary beauty`])}`])}.`
+            ${searchArray([`seemingly of ${findRace()} make with ${searchArray(['cultural script covering it', `cultural motifs covering it`,'cultural designs covering it',`extradorinary details and filigree`])}`])}.`
         ],
         [
             `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} ${searchArray([`${findRace()} ${searchArray(['cultural','religious','festival','royal','wedding','funeral','military','noble'])} vestments`,'cultic vestments',`vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
