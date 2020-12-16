@@ -512,7 +512,7 @@ function findCard() {
 function artGenerator() {
     document.getElementById("Art").innerHTML = ""
     let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer"]
-    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "music box", "whistle", "horn",`faberge ${searchArray(['skull', 'egg'])}`]
+    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "music box", "whistle", "horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
     let gems = [ "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" ]
     let size = ["large", "small", "tiny", "life-size", "huge", "gargantuan"]
     let many = ["a small group of", "a large group of", "group","a small army of", "a few", "a large force composed of"]
@@ -532,7 +532,7 @@ function artGenerator() {
     let bodyparts = ["eyes", "teeth", "external markings", "claws"]
     let audience = ["royals", "monsters", "commoners", "villagers", "dragons", "tavern patrons", "heroes", `${findRace()}s`, `${searchArray(monster)}s`]
     let instruments = ["a harpsichord", "a piano", "a pipe organ", "bells", "chimes", "drums", "a gong", "a fiddle", "a harp", "a lute", "a mandolin", "a flute", "pan pipes", "a shawm", "a trumpet"]
-    let color = [`black`, `pink`, `red`, `hazel`, `indigo`, `purple`, `rainbow`, `white`, `lime`, `grey`, `green`, `brown`, `orange`, `blue`, `yellow`, `gold`, `turquoise`, ]
+    let color = [`black`, `pink`, `red`, `hazel`, `indigo`, `purple`, `rainbow`, `white`, `lime`, `grey`, `green`, `brown`, `orange`, `blue`, `yellow`, `gold`, `turquoise`, 'pearlescent']
     let projectile = ["dart", "javelin", "arrow", "wood splinter", "glass shard", "metal shrapnel", "spear"]
     let celebration = ["a bonfire", "a feast table", "an encampment", "a pile of bodies", "a pole in the center of town", "a pile of gold and gems"]
     let hair = ["long flowing", "short", "no"]
@@ -642,7 +642,7 @@ function artGenerator() {
         [ /*statues*/ "marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
         [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
         [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jewelled gold`, `${searchArray(gems)} jewelled platinum`, `${searchArray(gems)} jewelled electrum`, `${searchArray(gems)} jewelled silver`, `${searchArray(gems)} jewelled copper`, `${searchArray(gems)} jewelled gold with platinum inlay`, `${searchArray(gems)} jewelled gold and copper alloy`, `${searchArray(gems)} jewelled gold and silver alloy`, `solid ${searchArray(gems)}`],
-        [ /*Fine Clothes*/ "silk", "purple velvet", "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
+        [ /*Fine Clothes*/ "silk", `${searchArray(color)} velvet`, "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
         [/*Fine Armaments*/ "platinum","gold","copper","silver","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
     function classReturn() {
