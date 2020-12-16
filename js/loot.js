@@ -34,7 +34,7 @@ function variableEffect(array, array2, array3,array4) {
     } else if (chance > 20){
         return "If you " + searchArray(array) + ', then ' + searchArray(array2[1])
     } else {
-        return `This artwork is cursed. ${searchArray(array4)}.`
+        return `This artwork is cursed. ${searchArray(array4)}`
     }
 };
 
@@ -751,7 +751,7 @@ function artGenerator() {
     let holdingLocation =['over their heads','at their sides','behind their backs']
     const storyTemplate = [
         [
-            `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}`,`${searchArray(verb[0])}`])} ${variableEvent([ `${searchArray(background)} in the background.`])}`,
+            `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}.`,`${searchArray(verb[0])}.`])} ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${searchArray([`${searchArray(monster)} ${searchArray(action[0])} ${searchArray(monster)}.`,`${searchArray(monster)} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster)} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster)}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster)} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${searchArray(background)} in the background.`])}`,
             `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray(verb[1])}. ${variableEvent([ `${searchArray(background)} in the background.`])}`,
