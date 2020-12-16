@@ -515,7 +515,7 @@ function artGenerator() {
     let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "music box", "whistle", "horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
     let gems = [ "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" ]
     let size = ["large", "small", "tiny", "life-size", "huge", "gargantuan"]
-    let many = ["a small group of", "a large group of", "group","a small army of", "a few", "a large force composed of"]
+    let many = ["a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of"]
     let monster = ['aarakocra', 'aboleth', 'angel', 'animated object', 'animated weapon', 'ankheg', 'azer', 'banshee', 'basilisk', 'behir', 'beholder', 'blight', 'bugbear', 'bulette', 'bullywug', 'cambion', 'carrion crawler', 'centaur', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'cyclops', 'darkmantle', 'death knight', 'demilich', 'demon', 'devil', 'dinosaur', 'displacer beast', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'elemental', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'fomorian', 'fungi', 'galeb duhr', 'gargoyle', 'genie', 'ghost', 'giant', 'gibbering mouther', 'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'grick', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy', 'hell hound', 'helmed horror', 'hippogriph', 'hobgoblin', 'homunculus', 'hook horror', 'hydra', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron', 'mummie', 'myconid', 'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'ooze', 'orc', 'otyugh', 'owlbear', 'pegasus', 'peryton', 'piercer', 'pixie', 'psuedodragon', 'purple worm', 'quaggoth', 'rakshasa', 'remorhazes', 'revenant', 'roc', 'roper', 'rust monster', 'sahuagin', 'salamander', 'satyr', 'scarecrow', 'shadow', 'shambling mound', 'shield guardian', 'skeleton', 'slaadi', 'specter', 'sphinx', 'sprite', 'stirge', 'succubus', 'incubus', 'terrasque', 'thri-kreen', 'treant', 'troglodyte', 'troll', 'umber hulk', 'unicorn', 'vampire', 'water weird', 'wight', `will-o'-wisp`, 'wraith', 'wyvern', 'xorn', 'yeti', 'yuan-ti', 'yugoloth', 'zombie', 'ape', 'awakened tree', 'awakened shrub', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'blood hawk', 'boar', 'brown bear', 'camel', 'cat', 'constrictor snake', 'crab', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'eagle', 'elephant', 'elk', 'flying snake', 'frog', 'giant ape', 'giant badger', 'giant bat', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'giant elk', 'giant fire beetle', 'giant frog', 'giant goat', 'giant hyena', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony', 'quipper', 'rat', 'raven', 'reef shark', 'rhinoceros', 'riding horse', 'saber-toothed tiger', 'scorpion', 'sea horse', 'spider', 'bat swarm', 'insect swarm', 'poisonous snake swarm', 'quipper swarm', 'rat swarm', 'raven swarm', 'tiger', 'vulture', 'warhorse', 'weasel', 'winter wolf', 'wolf', 'worg', ]
     let historicalEvent = ["a creation myth", "a constellation", "an ascension story", "a historical battle", "a coronation", "an ancient disaster", "an ancient prophecy", "the aligment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical battle between ${findRace()}s and ${searchArray(monster)}s`, `a historical battle between ${findRace()}s and ${findRace()}s`, `a historical battle between ${searchArray(monster)}s and ${searchArray(monster)}s`, ]
     let tool = ['weapon', 'tool', 'treasure chest', 'sword', 'shovel']
@@ -647,15 +647,9 @@ function artGenerator() {
     ]
     function classReturn() {
         let classes = [
-            [
-                'bardic performance', 'cleric holy', `fighter's dueling`, 'paladin ceremonial', 'ranger ceremonial', 'rogue honorific', 'warlock ritual',
-            ],
-            [
-                'barbarian tribal', 'druidic', 'monk ceremonial',
-            ],
-            [
-                `sorcerer ritual`, `wizard's ritual`, 'artificer', `summoner's`,'mystic'
-            ],
+            [ 'bardic performance', 'cleric holy', `fighter's dueling`, 'paladin ceremonial', 'ranger ceremonial', 'rogue honorific', 'warlock ritual', ],
+            [ 'barbarian tribal', 'druidic', 'monk ceremonial', ],
+            [ `sorcerer ritual`, `wizard's ritual`, 'artificer', `summoner's`,'mystic' ],
         ]
         var chance = rollDice(100);
         if (chance > 70) {
@@ -818,17 +812,8 @@ function artGenerator() {
     let combiner = [
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${searchArray(artForm[1])} with designs telling that it ${searchArray([`is from an ancient ${findRace()} kingdom`,"is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
@@ -837,7 +822,6 @@ function artGenerator() {
         `${searchArray(artForm[3])}`,
         `${searchArray(artForm[4])}`,
         ]
-
 
     printFrom(combiner, 10, "Art")
 
