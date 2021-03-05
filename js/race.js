@@ -12,6 +12,12 @@ function rollDice(number) {
     return result;
 };
 
+function rollArray(array) {
+    let shuffled = shuffle(array)
+    let index = Math.floor(Math.random() * shuffled.length)
+    return `(Roll: ${index}/${shuffled.length}) ${shuffled[index]}`;
+};
+
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
@@ -67,6 +73,7 @@ function toWords(s) {
     return str.replace(/\s+/g, ' ');
 };
 //Reload Page
+
 function reload() {
     location.reload()
 };
