@@ -1,4 +1,4 @@
-//Chance and array manipulation methods
+/*###################Chance and array manipulation methods#########################*/
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -22,7 +22,6 @@ function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 // convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -73,12 +72,14 @@ function toWords(s) {
     return str.replace(/\s+/g, ' ');
 };
 //Reload Page
-
 function reload() {
     location.reload()
 };
 
-//Page Scripts
+
+
+
+/*############################Page Scripts#########################################*/
 const races = {
     "Common": {
         'Human': {

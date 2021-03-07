@@ -1,4 +1,4 @@
-//Chance and array manipulation methods
+/*###################Chance and array manipulation methods#########################*/
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -16,7 +16,6 @@ function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 
 // convert numbers to word form
 function toWords(s) {
@@ -72,7 +71,9 @@ function reload() {
     location.reload()
 };
 
-//page scripts
+
+
+/*############################Page Scripts#########################################*/
 //Class
 function paladin() {
     let paladinEncounter = [
@@ -240,7 +241,6 @@ function village(){
     ]
     document.getElementById("Loc").innerHTML = searchArray(villageEncounters)
 };
-
 
 //Generic
 function generic() {

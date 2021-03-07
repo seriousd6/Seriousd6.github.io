@@ -1,4 +1,4 @@
-//Chance and array manipulation methods
+/*###################Chance and array manipulation methods#########################*/
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -159,8 +159,7 @@ function reload() {
 
 
 
-
-//page scripts
+/*############################Page Scripts#########################################*/
 function treasureMap() {
     let start = [
         `big cracked boulder`, `lightning-blasted oak tree`, `rock shaped like a horse`, `stone wall with a piece of volcanic glass`, `exact center of the village/town/city`, `statue of (famous person)`, `shipwreck of the SS (name)`, `bones of the black dragon`, `cavern near the waterfall`, `top of the volcano`, `exact center of the lake`, `abandoned Temple`, `old Fort`, `old standing circle`, `road marker leading south`, `exact center of the longest bridge`, `hangman's scaffold`, `king's/queen's throne room`, `crossroads`, `largest tomb in the cemetary`,

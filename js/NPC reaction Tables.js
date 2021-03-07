@@ -1,4 +1,4 @@
-//Chance and array manipulation methods
+/*###################Chance and array manipulation methods#########################*/
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -117,8 +117,9 @@ function printFrom(array, number, id) {
     });
 };
 
-//page scripts
 
+
+/*############################Page Scripts#########################################*/
 function scene() {
     document.getElementById("Scene").innerHTML = ""
 
@@ -168,7 +169,6 @@ function scene() {
     printFrom(sceneArray,5,"Scene")
 };
 
-
 //Before Everything - non-dependant 
 let rumorType = ["False (Appears as Specific or Exact)", "Vague", "Mixed", "General", "Specific", "Exact", ]
 let IVendetta = ["they were wrongfully jailed or persecuted", "of a racial crusade", "they want revenge for theft or deception", "they want revenge for personal death(s)", "they are on a religious crusade (local or part of a Faithquest)", "of political persecution", "their social status was destroyed and/or they were socially exiled", ]
@@ -187,7 +187,8 @@ let AAFaithTouched = ["dreams of the lives of those who gave their lives in sacr
 let BBWeaveTouched = ["a living mask of a Jester can be found here, hidden, but waiting. The parasite sleeps.", "all skills relating to the practice of the arcane mysteries are more easily accomplished. +1", "time and space are on vacation here. Non-causality is a possibility. Dimensionally weird.", "all arcane objects are recharged here, but can only be used once per item per location", "astral and ethereal creatures are feeding from this bountiful font. They are hostile", "all arcane spells are cast here as if the caster were 1 level higher", "wild magic regularly spawns here, bathing the area with random level spells and duration", ]
 let CCMysteryCult = ["that is trying to return/exile/free/enslave/destroy/rebirth a minor/major deity", "that is collecting objects to trade to a deity for power", "are thralls under a larger power, acquiring resources, knowledge, manpower for a larger plan", "of disaffected people angry at inequality. They have resorted to violence and rhetoric", "of animal worshipers, devoted to returning humanity to a more primal lifestyle", "of outsiders stealing/killing/trading/enslaving/helping the local populace", "of wealthy cannibals and defilers, seeking only pleasure for themselves", ]
     //C
-function findArtifact() {
+
+    function findArtifact() {
     let chance = rollDice(100)
     if (chance < 95) {
         return "an artifact"
@@ -383,7 +384,6 @@ let npcMotivation = [
 function motivation() {
     document.getElementById("Motivation").innerHTML = searchArray(npcMotivation);
 };
-
 
 let areaStatus = [
     `${faithOrWeave()}.`,
