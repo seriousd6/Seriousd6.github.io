@@ -1,5 +1,5 @@
 # Statement of Pause 3/6/21
-I have achieved the major goal for this site and incremental updates may be possible in the future but I am working on new projects!
+I have achieved the major goal for this site and incremental updates may be possible in the future but I am now working on new projects and am not planning any more major updates!
 
 # Project Goal
 My goal for this project was to take all of the wonderful lists and tables created by other redditors and create a simple, modular, and inspiring tool for myself (to learn how to code as well as how to DM better), and others!
