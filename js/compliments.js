@@ -15,6 +15,7 @@ function searchArray(array) {
 // Page Scripts
 
 function compliment(){
+    document.getElementById("compliment").innerHTML = ""
 let cornyComparison = [
     "Rakshasa's socks", "Crawling Claw's clap", "Owlbear's hoot", "Dryad's sprig", "Unicorn's horn", "Treant's trunk", "Dragon's hoard",
 ]
@@ -28,4 +29,6 @@ let template = [
     `It's cool to be in the presence of such ${searchArray(mid)} ${searchArray(finisher)}!`, `You are as cool as rolling two natural twenties in a row!`, `People are glad and lucky to know ${searchArray(mid)} ${searchArray(finisher)} like you!`, `I love your creativity!`, `I think you are the ${searchArray(cornyComparison)}`, `I am honored such ${searchArray(mid)} ${searchArray(finisher)} would visit my site!`
 ]
 document.getElementById("compliment").innerHTML = searchArray(template);
+//console.log(searchArray(template))
 }
+compliment()
