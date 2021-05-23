@@ -28,7 +28,7 @@ let finisher = [
 let template = [
     `It's cool to be in the presence of such ${searchArray(mid)} ${searchArray(finisher)}!`, `You are as cool as rolling two natural twenties in a row!`, `People are glad and lucky to know ${searchArray(mid)} ${searchArray(finisher)} like you!`, `I love your creativity!`, `I think you are the ${searchArray(cornyComparison)}`, `I am honored such ${searchArray(mid)} ${searchArray(finisher)} would visit my site!`
 ]
-document.getElementById("compliment").innerHTML = searchArray(template);
+document.getElementById("compliment").innerHTML = `P.S. ${searchArray(template)}`;
 //console.log(searchArray(template))
 }
-compliment()
+
