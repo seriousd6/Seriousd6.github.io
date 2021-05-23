@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onclick="compliment()">
     <header>
         <h1>D&D Flavor Generators</h1>
         <div id="breadcrumb">
@@ -35,25 +35,7 @@
             </nav>
         </div>
     </header>
-   
-    <script>
-        function compliment(){
-            let cornyComparison = [
-                "Rakshasa's socks", "Crawling Claw's clap", "Owlbear's hoot", "Dryad's sprig", "Unicorn's horn", "Treant's trunk", "Dragon's hoard",
-            ]
-            let mid = [
-                "a creative", "a gorgeous", "a beautiful", "an intelligent", "a friendly", "a kind", "an awesome", "an impressive", "a great", "an important", "an admirable", "a dependable", "a talented", "a hardworking", "an imaginative", "a generous", "an excellent",
-            ]
-            let finisher = [
-                "person", "DM", "friend",
-            ]
-            let template = [
-                `It's cool to be in the presence of such ${searchArray(mid)} ${searchArray(finisher)}!`, `You are as cool as rolling two natural twenties in a row!`, `People are glad and lucky to know ${searchArray(mid)} ${searchArray(finisher)} like you!`, `I love your creativity!`, `I think you are the ${searchArray(cornyComparison)}`, `I am honored such ${searchArray(mid)} ${searchArray(finisher)} would visit my site!`
-            ]
-            document.getElementById("compliment").innerHTML = searchArray(template);
-            }
-    </script>
-    
+      
     <div style="background-color: antiquewhite; border-style: groove; margin-top: .5in;" class="container">
         <div>
             <p>Welcome, thank you for visiting. </p>
@@ -68,7 +50,7 @@
             <p>I hope this tool is useful to you.</p>
             <p>DS</p>
             <p>P.S.</p>
-            <p onclick="compliment()" id="compliment"></p>
+            <p id="compliment"></p>
         </div>
 
     </div>
