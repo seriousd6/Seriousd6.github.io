@@ -1361,3 +1361,26 @@ let jewelry =[
     /*Tier 5 7500gp*/[],
 
 ]
+
+
+
+/*
+Other Valuable rewards
+1: Lore and Knowledge
+2: Cool but mostly useless items
+3: Plot Relevant Items
+4: NPC Contacts, allies and friends
+5: Pets and Followers
+6: New skills and languages
+7: Trinkets
+8: Boons Blessings and Charms
+9: Properties
+10: Mundane Weapons and Armor
+11: Broken items
+12: A brand new car!
+13: Land and Title
+14: Faction Favor
+15: Backstory Stuff
+
+
+*/
