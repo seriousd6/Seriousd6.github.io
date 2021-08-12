@@ -60,7 +60,7 @@ function printFrom(array, number, id) {
 };
 
 function modify(number) {
-    return Math.floor(number * (.85 + Math.random() * .4))
+    return Math.floor(number * (.95 + Math.random() * .4))
 };
 
 function shuffleSlice(array, number) {
@@ -1019,8 +1019,8 @@ function alternateRewards(level, fights) {
             art.push(searchArray(artA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, (fights * 10))
-        loopCountPushArt(art, loot, (fights * 25))
+        loopCountPushGems(gems, loot, ((fights * 10)/2))
+        loopCountPushArt(art, loot, ((fights * 25)/2))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 2) {
         let loot = []
@@ -1033,8 +1033,8 @@ function alternateRewards(level, fights) {
             art.push(searchArray(artA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, (fights * 20))
-        loopCountPushArt(art, loot, (fights * 25))
+        loopCountPushGems(gems, loot, ((fights * 20)/2))
+        loopCountPushArt(art, loot, ((fights * 25)/2))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 3) {
         let loot = []
@@ -1049,8 +1049,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, (fights * 20))
-        loopCountPushArt(art, loot, (fights * 50))
+        loopCountPushGems(gems, loot,((fights * 20)/2))
+        loopCountPushArt(art, loot, ((fights * 50)/2))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 4) {
         let loot = []
@@ -1066,8 +1066,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, (fights * 20))
-        loopCountPushArt(art, loot, (fights * 50))
+        loopCountPushGems(gems, loot,((fights * 20)/2))
+        loopCountPushArt(art, loot, ((fights * 50)/2))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 5) {
         let loot = []
@@ -1083,8 +1083,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot, (fights * 60))
-        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPushGems(gems, loot,((fights * 60)/4))
+        loopCountPushArt(art, loot, ((fights * 275)/4))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 6) {
         let loot = []
@@ -1100,8 +1100,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot, (fights * 60))
-        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPushGems(gems, loot,((fights * 60)/4))
+        loopCountPushArt(art, loot, ((fights * 275)/4))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 7) {
         let loot = []
@@ -1117,8 +1117,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot, (fights * 100))
-        loopCountPushArt(art, loot, (fights * 275))
+        loopCountPushGems(gems, loot,((fights * 100)/4))
+        loopCountPushArt(art, loot, ((fights * 275)/4))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 8) {
         let loot = []
@@ -1134,8 +1134,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot, (fights * 100))
-        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPushGems(gems, loot,((fights * 100)/4))
+        loopCountPushArt(art, loot, ((fights * 500)/4))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 9) {
         let loot = []
@@ -1151,8 +1151,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot, (fights * 100))
-        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPushGems(gems, loot,((fights * 100)/4))
+        loopCountPushArt(art, loot, ((fights * 500)/4))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 10) {
         let loot = []
@@ -1168,8 +1168,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot, (fights * 100))
-        loopCountPushArt(art, loot, (fights * 500))
+        loopCountPushGems(gems, loot,((fights * 100)/6))
+        loopCountPushArt(art, loot, ((fights * 500)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 11) {
         let loot = []
@@ -1185,8 +1185,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot, (fights * 550))
-        loopCountPushArt(art, loot, (fights * 1000))
+        loopCountPushGems(gems, loot,((fights * 550)/6))
+        loopCountPushArt(art, loot, ((fights * 1000)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 12) {
         let loot = []
@@ -1202,8 +1202,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot, (fights * 1000))
-        loopCountPushArt(art, loot, (fights * 1500))
+        loopCountPushGems(gems, loot,((fights * 1000)/6))
+        loopCountPushArt(art, loot, ((fights * 1500)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 13) {
         let loot = []
@@ -1219,8 +1219,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot, (fights * 1000))
-        loopCountPushArt(art, loot, (fights * 1500))
+        loopCountPushGems(gems, loot,((fights * 1000)/6))
+        loopCountPushArt(art, loot, ((fights * 1500)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 14) {
         let loot = []
@@ -1236,8 +1236,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot, (fights * 1500))
-        loopCountPushArt(art, loot, (fights * 3250))
+        loopCountPushGems(gems, loot,((fights * 1500)/6))
+        loopCountPushArt(art, loot, ((fights * 3250)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 15) {
         let loot = []
@@ -1253,8 +1253,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot, (fights * 2000))
-        loopCountPushArt(art, loot, (fights * 5000))
+        loopCountPushGems(gems, loot,((fights * 2000)/6))
+        loopCountPushArt(art, loot, ((fights * 5000)/6))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 16) {
         let loot = []
@@ -1270,8 +1270,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsE))
         }
-        loopCountPushGems(gems, loot, (fights * 2000))
-        loopCountPushArt(art, loot, (fights * 5000))
+        loopCountPushGems(gems, loot,((fights * 2000)/8))
+        loopCountPushArt(art, loot, ((fights * 5000)/8))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 17) {
         let loot = []
@@ -1287,8 +1287,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsE))
             loot.push(searchArray(magicItemsE))
         }
-        loopCountPushGems(gems, loot, (fights * 6000))
-        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPushGems(gems, loot,((fights * 6000)/8))
+        loopCountPushArt(art, loot, ((fights * 10000)/8))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 18) {
         let loot = []
@@ -1304,8 +1304,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsF))
             loot.push(searchArray(magicItemsG))
         }
-        loopCountPushGems(gems, loot, (fights * 6000))
-        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPushGems(gems, loot,((fights * 6000)/8))
+        loopCountPushArt(art, loot, ((fights * 10000)/8))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 19) {
         let loot = []
@@ -1321,8 +1321,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsG))
             loot.push(searchArray(magicItemsH))
         }
-        loopCountPushGems(gems, loot, (fights * 6000))
-        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPushGems(gems, loot,((fights * 6000)/8))
+        loopCountPushArt(art, loot, ((fights * 10000)/8))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 20) {
         let loot = []
@@ -1338,8 +1338,26 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsH))
             loot.push(searchArray(magicItemsI))
         }
-        loopCountPushGems(gems, loot, (fights * 6000))
-        loopCountPushArt(art, loot, (fights * 10000))
+        loopCountPushGems(gems, loot,((fights * 6000)/8))
+        loopCountPushArt(art, loot, ((fights * 10000)/8))
         loopCountPrintList(loot, "AlternateReward")
     }
 };
+
+
+let gems = [
+    /*Tier 1 10gp*/["Azurite (opaque mottled deep blue)(10gp)", "Banded agate (translucent striped brown, blue, white, or red)(10gp)", "Blue quartz (transparent pale blue)(10gp)", "Eye agate (translucent circles of gray, white, brown, blue, or green)(10gp)", "Hematite (opaque gray-black)(10gp)", "Lapis lazuli (opaque light and dark blue with yellow flecks)(10gp)", "Malachite (opaque striated light and dark green)(10gp)", "Moss agate (translucent pink or yellow-white with mossy gray or green markings)(10gp)", "Obsidian (opaque black)(10gp)", "Rhodochrosite (opaque light pink)(10gp)", "Turquoise (opaque light blue-green)(10gp)", "Tiger eye (translucent brown with golden center)(10gp)"],
+    /*Tier 2 50gp*/["Pearl (white, lustrous) (50gp)","Bloodstone (opaque dark gray with red flecks)(50gp)", "Carnelian (opaque orange to red-brown)(50gp)", "Chalcedony (opaque white)(50gp)", "Chrysoprase (translucent green)(50gp)", "Citrine (transparent pale yellow-brown)(50gp)", "Jasper (opaque blue, black, or brown)(50gp)", "Moonstone (translucent white with pale blue glow)(50gp)", "Quartz (transparent white, smoky gray, or yellow)(50gp)", "Sardonyx (opaque bands of red and white)(50gp)", "Zircon (transparent pale blue-green)(50gp)", "Onyx (opaque bands of black and white, or pure black or white)(50gp)", "Star rose quartz (translucent rosy stone with white star-shaped center)(50gp)"],
+    /*Tier 3 100gp*/["Jet (opaque, deep black) (100gp)", "Jade (translucent deep green) (100gp)", "Amber (transparent, watery to rich gold) (100gp)", "Coral (opaque, crimson) (100gp)", "Pink Pearl (opaque, lustrous pink) (100gp)","Sapphire (deep blue, transparent) (100gp)"],
+    /*Tier 4 500gp*/["Diamond (blue-white, brown, or blue)(3-500gp)","Alexandrite (transparent dark green)(500gp)", "Aquamarine (transparent pale blue-green)(500gp)", "Black pearl (opaque pure black)(500gp)", "Blue spinel (transparent deep blue)(500gp)", "Peridot (transparent rich olive green)(500gp)", "Topaz (transparent golden yellow)(500gp)","Cat's Eye Agate (Yellowish green, gray, or brownish red with a white stripe down the middle) (500gp)"],
+    /*Tier 5 1000gp*/["Black opal (translucent dark green with black mottling and golden flecks)(1000gp)", "Blue sapphire (transparent blue-white to medium blue)(1000gp)", "Emerald (transparent deep bright green)(1000gp)", "Fire opal (translucent fiery red)(1000gp)", "Opal (translucent pale blue with green and golden mottling)(1000gp)", "Star ruby (translucent ruby with white star-shaped center)(1000gp)", "Star sapphire (translucent blue sapphire with white star-shaped center)(1000gp)", "Yellow sapphire (transparent fiery yellow or yellow green)(1000gp)", "Amethyst (deep purple, transparent) (1000gp)","Sapphire (deep pink with striping) (1000gp)"],
+    /*Tier 6 5000gp*/["Black sapphire (translucent lustrous black with glowing highlights)(5000gp)", "Diamond (transparent blue-white, canary, pink, brown, or blue)(5000gp)", "Jacinth (transparent fiery orange)(5000gp)", "Ruby (transparent clear red to deep crimson)(5000gp)"],
+]
+let jewelry =[
+    /*Tier 1 25gp*/[],
+    /*Tier 2 250gp*/[],
+    /*Tier 3 750gp*/[],
+    /*Tier 4 2500gp*/[],
+    /*Tier 5 7500gp*/[],
+
+]
