@@ -1019,8 +1019,8 @@ function alternateRewards(level, fights) {
             art.push(searchArray(artA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, ((fights * 10)/2))
-        loopCountPushArt(art, loot, ((fights * 25)/2))
+        loopCountPushGems(gems,loot, Math.floor( ((fights * 10)/2)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 25)/2)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 2) {
         let loot = []
@@ -1033,8 +1033,8 @@ function alternateRewards(level, fights) {
             art.push(searchArray(artA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot, ((fights * 20)/2))
-        loopCountPushArt(art, loot, ((fights * 25)/2))
+        loopCountPushGems(gems,loot, Math.floor( ((fights * 20)/2)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 25)/2)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 3) {
         let loot = []
@@ -1049,8 +1049,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot,((fights * 20)/2))
-        loopCountPushArt(art, loot, ((fights * 50)/2))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 20)/2)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 50)/2)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 4) {
         let loot = []
@@ -1066,8 +1066,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsA))
         }
-        loopCountPushGems(gems, loot,((fights * 20)/2))
-        loopCountPushArt(art, loot, ((fights * 50)/2))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 20)/2)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 50)/2)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 5) {
         let loot = []
@@ -1083,8 +1083,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot,((fights * 60)/4))
-        loopCountPushArt(art, loot, ((fights * 275)/4))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 60)/4)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 275)/4)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 6) {
         let loot = []
@@ -1100,8 +1100,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot,((fights * 60)/4))
-        loopCountPushArt(art, loot, ((fights * 275)/4))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 60)/4)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 275)/4)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 7) {
         let loot = []
@@ -1117,8 +1117,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsA))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot,((fights * 100)/4))
-        loopCountPushArt(art, loot, ((fights * 275)/4))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 100)/4)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 275)/4)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 8) {
         let loot = []
@@ -1134,8 +1134,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot,((fights * 100)/4))
-        loopCountPushArt(art, loot, ((fights * 500)/4))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 100)/4)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 500)/4)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 9) {
         let loot = []
@@ -1151,8 +1151,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsB))
         }
-        loopCountPushGems(gems, loot,((fights * 100)/4))
-        loopCountPushArt(art, loot, ((fights * 500)/4))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 100)/4)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 500)/4)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 10) {
         let loot = []
@@ -1168,8 +1168,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsB))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot,((fights * 100)/6))
-        loopCountPushArt(art, loot, ((fights * 500)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 100)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 500)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 11) {
         let loot = []
@@ -1185,8 +1185,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot,((fights * 550)/6))
-        loopCountPushArt(art, loot, ((fights * 1000)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 550)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 1000)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 12) {
         let loot = []
@@ -1202,8 +1202,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsC))
         }
-        loopCountPushGems(gems, loot,((fights * 1000)/6))
-        loopCountPushArt(art, loot, ((fights * 1500)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 1000)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 1500)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 13) {
         let loot = []
@@ -1219,8 +1219,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsC))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot,((fights * 1000)/6))
-        loopCountPushArt(art, loot, ((fights * 1500)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 1000)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 1500)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 14) {
         let loot = []
@@ -1236,8 +1236,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot,((fights * 1500)/6))
-        loopCountPushArt(art, loot, ((fights * 3250)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 1500)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 3250)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 15) {
         let loot = []
@@ -1253,8 +1253,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsD))
         }
-        loopCountPushGems(gems, loot,((fights * 2000)/6))
-        loopCountPushArt(art, loot, ((fights * 5000)/6))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 2000)/6)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 5000)/6)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 16) {
         let loot = []
@@ -1270,8 +1270,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsD))
             loot.push(searchArray(magicItemsE))
         }
-        loopCountPushGems(gems, loot,((fights * 2000)/8))
-        loopCountPushArt(art, loot, ((fights * 5000)/8))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 2000)/8)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 5000)/8)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 17) {
         let loot = []
@@ -1287,8 +1287,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsE))
             loot.push(searchArray(magicItemsE))
         }
-        loopCountPushGems(gems, loot,((fights * 6000)/8))
-        loopCountPushArt(art, loot, ((fights * 10000)/8))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 6000)/8)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 10000)/8)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 18) {
         let loot = []
@@ -1304,8 +1304,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsF))
             loot.push(searchArray(magicItemsG))
         }
-        loopCountPushGems(gems, loot,((fights * 6000)/8))
-        loopCountPushArt(art, loot, ((fights * 10000)/8))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 6000)/8)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 10000)/8)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 19) {
         let loot = []
@@ -1321,8 +1321,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsG))
             loot.push(searchArray(magicItemsH))
         }
-        loopCountPushGems(gems, loot,((fights * 6000)/8))
-        loopCountPushArt(art, loot, ((fights * 10000)/8))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 6000)/8)))
+        loopCountPushArt(art,loot, Math.floor( ((fights * 10000)/8)))
         loopCountPrintList(loot, "AlternateReward")
     } else if (level === 20) {
         let loot = []
@@ -1338,8 +1338,8 @@ function alternateRewards(level, fights) {
             loot.push(searchArray(magicItemsH))
             loot.push(searchArray(magicItemsI))
         }
-        loopCountPushGems(gems, loot,((fights * 6000)/8))
-        loopCountPushArt(art, loot, ((fights * 10000)/8))
+        loopCountPushGems(gems,loot, Math.floor(((fights * 6000)/8)))
+        loopCountPushArt(art,loot, Math.floor(((fights * 10000)/8)))
         loopCountPrintList(loot, "AlternateReward")
     }
 };
