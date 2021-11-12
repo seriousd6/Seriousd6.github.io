@@ -17,7 +17,7 @@ function searchArray(array) {
 function compliment(){
     document.getElementById("compliment").innerHTML = ""
 let cornyComparison = [
-    "Rakshasa's socks", "Crawling Claw's clap", "Owlbear's hoot", "Dryad's sprig", "Unicorn's horn", "Treant's trunk", "Dragon's hoard",
+    "Rakshasa's socks", "Crawling Claw's clap", "Owlbear's hoot", "Dryad's sprig", "Unicorn's horn", "Treant's trunk", "Dragon's hoard", ""
 ]
 let mid = [
     "a creative", "a gorgeous", "a beautiful", "an intelligent", "a friendly", "a kind", "an awesome", "an impressive", "a great", "an important", "an admirable", "a dependable", "a talented", "a hardworking", "an imaginative", "a generous", "an excellent",
