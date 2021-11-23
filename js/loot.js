@@ -38,16 +38,19 @@ function variableEffect(array, array2, array3,array4) {
     }
 };
 
-function variableEvent(array, number) {
+function variableEvent(givenArray, number) {
     let chance = rollDice(100)
     if (chance < 75) {
         return ""
     } else if (number === undefined) {
-        return searchArray(array) + " "
+        return searchArray(givenArray) + " "
+    } else if (typeof(givenArray) != object){
+        return givenArray
     } else {
         return searchArray(array[number]) + ' '
     }
 };
+
 
 function printFrom(array, number, id) {
     let list = shuffle(array).slice(0, number)
@@ -727,21 +730,27 @@ function findCard() {
 
 function artGenerator() {
     document.getElementById("Art").innerHTML = ""
-    let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer"]
-    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "bowl", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "music box", "whistle", "horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
+    let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray"]
+    let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
     let gems = [ "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" ]
     let size = ["large", "small", "tiny", "life-size", "huge", "gargantuan"]
     let many = ["a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of"]
     let monster = ['aarakocra', 'aboleth', 'angel', 'animated object', 'animated weapon', 'ankheg', 'azer', 'banshee', 'basilisk', 'behir', 'beholder', 'blight', 'bugbear', 'bulette', 'bullywug', 'cambion', 'carrion crawler', 'centaur', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'cyclops', 'darkmantle', 'death knight', 'demilich', 'demon', 'devil', 'dinosaur', 'displacer beast', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'elemental', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'fomorian', 'fungi', 'galeb duhr', 'gargoyle', 'genie', 'ghost', 'giant', 'gibbering mouther', 'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'grick', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy', 'hell hound', 'helmed horror', 'hippogriph', 'hobgoblin', 'homunculus', 'hook horror', 'hydra', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron', 'mummie', 'myconid', 
     'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'ooze', 'orc', 'otyugh', 'owlbear', 'pegasus', 'peryton', 'piercer', 'pixie', 'psuedodragon', 'purple worm', 'quaggoth', 'rakshasa', 'remorhazes', 'revenant', 'roc', 'roper', 'rust monster', 'sahuagin', 'salamander', 'satyr', 'scarecrow', 'shadow', 'shambling mound', 'shield guardian', 'skeleton', 'slaadi', 'specter', 'sphinx', 'sprite', 'stirge', 'succubus', 'incubus', 'terrasque', 'thri-kreen', 'treant', 'troglodyte', 'troll', 'umber hulk', 'unicorn', 'vampire', 'water weird', 'wight', `will-o'-wisp`, 'wraith', 'wyvern', 'xorn', 'yeti', 'yuan-ti', 'yugoloth', 'zombie', 'ape', 'awakened tree', 'awakened shrub', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'blood hawk', 'boar', 'brown bear', 'camel', 'cat', 'constrictor snake', 'crab', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'eagle', 'elephant', 'elk', 'flying snake', 'frog', 'giant ape', 'giant badger', 'giant bat', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'giant elk', 'giant fire beetle', 'giant frog', 'giant goat', 'giant hyena', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony', 'quipper', 'rat', 'raven', 'reef shark', 'rhinoceros', 'riding horse', 'saber-toothed tiger', 'scorpion', 'sea horse', 'spider', 'bat swarm', 'insect swarm', 'poisonous snake swarm', 'quipper swarm', 'rat swarm', 'raven swarm', 'tiger', 'vulture', 'warhorse', 'weasel', 'winter wolf', 'wolf', 'worg', ]
-    let historicalEvent = ["a creation myth", "a constellation", "an ascension story", "a historical battle", "a coronation", "an ancient disaster", "an ancient prophecy", "the alignment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical battle between ${findRace()}s and ${searchArray(monster)}s`, `a historical battle between ${findRace()}s and ${findRace()}s`, `a historical battle between ${searchArray(monster)}s and ${searchArray(monster)}s`, ]
-    let tool = ['weapon', 'tool', 'treasure chest', 'sword', 'shovel']
-    let item = ['whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 'mug', 'cup', 'tankard', 'bottle', 'plate', 'plow', 'pot', 'pan', 'lamp', 'rug', 'hammer', 'anvil', 'goblet', 'chest', 'tankard of alcohol', 'feather', 'oar', 'cask', 'harp', 'lute', 'necklace', 'bracelet', 'comb', 'crown', 'ring', 'oil-lamp', 'potion', 'gem', 'scroll', 'wand', 'horseshoe', 'pike', 'bow', 'pair of slippers', 'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle']
+    let eventRandomizer = [
+        'battle', 'deal', 'bargain', 'wedding'
+    ]
+    let tool = ['weapon', 'tool', 'treasure chest', 'sword', 'spade']
+    let item = ['whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 'mug', 'cup', 'tankard', 'bottle', 'plate', 'plow', 'pot', 'pan', 'lamp', 'rug', 'hammer', 'goblet', 'chest', 'tankard of alcohol', 'feather', 'oar', 'cask', 'harp', 'lute', 'necklace', 'bracelet', 'comb', 'crown', 'ring', 'oil-lamp', 'potion', 'gem', 'scroll', 'wand', 'horseshoe', 'pike', 'bow', 'pair of slippers', 'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle']
     let location = ["underfoot", "next to it", "in its mouth", "on its back"]
     let ageDescriptor = ["younger", "older"]
     let adultGender = ["man", "woman"]
     let anyAgeGender = ["man", "woman", "boy", "girl"]
     let youngGender = ["boy", "girl"]
+    let age = ['child', 'adolescent', 'adult']
+    let ruler = ['king','queen', 'warlord']
+    let historicalEvent = ["a creation myth", "a constellation", "an ascension story", `a historical ${searchArray(eventRandomizer)}`, `a coronation of a ${searchArray([`${variableEvent(findRace())} ${variableEvent(age)} ${variableEvent(ruler)}`, `monster over monsters/humanoids`])}`, "an ancient disaster", "an ancient prophecy", "the alignment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, `the rise of a great ${findRace()} villain`, `the fall of a great ${findRace()} villain`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${searchArray(monster)}s`, `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster)}s and ${searchArray(monster)}s`,  ]
+
     let time = ['beautiful but wrong',"somehow up to date", "changing-in-real-time", "slightly outdated"]
     let drink = ["tankard of mead", "cup of ale", "glass of wine", "goblet of blood"]
     let scene = ['swamp', 'mire', 'bridge', 'gate', 'road', 'paradise', 'fort', 'house', 'hut', 'keep', 'garden', 'room', 'sanctum', 'asylum', 'hideaway', 'refuge', 'shelter', 'shack', 'den', 'clearing', 'dungeon', 'castle', 'cottage', 'dungeon', 'field', 'camp', 'lean-to', 'mountain', 'cave', 'town', 'city', 'lake', 'pond', 'lair', 'chamber', 'hovel', ]
@@ -957,13 +966,15 @@ function artGenerator() {
     function artPiece(){
         return variableEvent(size) + searchArray(artForm[0])
     }
-    
+    let backgroundThesaurus = [
+        'can be seen', "is detailed"
+    ]
     let background = [
-        `A${searchArray(['n impressive', ' typical', ' ruined'])} ${findRace()} ${searchArray( ['village','city','town','caravan','tower','castle'] )} ${searchArray( ['is burning','during a thunderstorm','during sunset','with a red sky','wreathed in storm',`being overtaken by ${searchArray([`${findRace()}s`,`${searchArray(monster)}`])}`])} can be seen`,
+        `A${searchArray(['n impressive', ' typical', ' ruined'])} ${findRace()} ${searchArray( ['village','city','town','caravan','tower','castle'] )} ${searchArray( ['sitting quietly','is burning','during a thunderstorm','during sunset','with a red sky','wreathed in storm',`being overtaken by ${searchArray([`${findRace()}s`,`${searchArray(monster)}`])}`])} ${searchArray(backgroundThesaurus)}`,
         `You can see a(n) ${searchArray(['grand feast being held in a cramped tavern room','pack of gnolls battling a town militia','large army of dark knights being driven away by angels','creature of colossal size','sunset in the Feywild','Illithid Nautiloid Spelljammer','castle overlooking an active volcano','surrealism landscape of an elemental plane','wonderful cathedral standing on a hill, dedicated to whatever god the ruler follows','waterfall and lake in the Feywilds with fey creatures gathered round','sunset reflecting through an icy glacier', 'active volcanic mountain, casting a glow into the night sky','active volcano','expansive seascape','abundant hilly plains',' expanse of mountains','icy glacier and rough waters',' abundance of tidal pools on a rocky shore, full of unfamiliar sea creatures', 'endless cityscape'])}`,
-        `A(n) ${searchArray(monster)} ${searchArray(['dueling','fighting','struggling against','battling','attacking'])} a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])} can be seen`,
-        `An epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])} can be seen`,
-        `A ${searchArray(['tranquil landscape', 'fine castle interior','looming storm over the mountains'])} can be seen`
+        `A(n) ${searchArray(monster)} ${searchArray(['dueling','fighting','struggling against','battling','attacking'])} a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])} ${searchArray(backgroundThesaurus)}`,
+        `An epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])} ${searchArray(backgroundThesaurus)}`,
+        `A ${searchArray(['tranquil landscape', 'fine castle interior','looming storm over the mountains'])} ${searchArray(backgroundThesaurus)}`
     ]
     let holdingLocation =['over their heads','at their sides','behind their backs']
     const storyTemplate = [
