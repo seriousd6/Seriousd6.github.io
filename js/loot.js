@@ -727,7 +727,7 @@ function findCard() {
 };
 
 function artGenerator() {
-    //document.getElementById("Art").innerHTML = ""
+    document.getElementById("Art").innerHTML = ""
     let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray"]
     let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
     let gems = [ "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" ]
