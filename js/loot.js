@@ -44,10 +44,8 @@ function variableEvent(givenArray, number) {
         return ""
     } else if (number === undefined) {
         return searchArray(givenArray) + " "
-    } else if (typeof(givenArray) != object){
-        return givenArray
     } else {
-        return searchArray(array[number]) + ' '
+        return searchArray(givenArray[number]) + ' '
     }
 };
 
@@ -729,7 +727,7 @@ function findCard() {
 };
 
 function artGenerator() {
-    document.getElementById("Art").innerHTML = ""
+    //document.getElementById("Art").innerHTML = ""
     let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray"]
     let jewelry = ["arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['doll','skull', 'egg'])}`]
     let gems = [ "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" ]
@@ -747,9 +745,11 @@ function artGenerator() {
     let adultGender = ["man", "woman"]
     let anyAgeGender = ["man", "woman", "boy", "girl"]
     let youngGender = ["boy", "girl"]
-    let age = ['child', 'adolescent', 'adult']
+    let age = ['child', 'adolescent']
     let ruler = ['king','queen', 'warlord']
-    let historicalEvent = ["a creation myth", "a constellation", "an ascension story", `a historical ${searchArray(eventRandomizer)}`, `a coronation of a ${searchArray([`${variableEvent(findRace())} ${variableEvent(age)} ${variableEvent(ruler)}`, `monster over monsters/humanoids`])}`, "an ancient disaster", "an ancient prophecy", "the alignment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, `the rise of a great ${findRace()} villain`, `the fall of a great ${findRace()} villain`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${searchArray(monster)}s`, `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster)}s and ${searchArray(monster)}s`,  ]
+    let historicalEvent = ["a creation myth", "a constellation", "an ascension story", `a historical ${searchArray(eventRandomizer)}`,
+    `a coronation of a ${searchArray([`${variableEvent(age)}${findRace()} ${searchArray(ruler)}`,`${variableEvent(age)}${searchArray(ruler)}`, `monster over monsters/humanoids`])}`, 
+    "an ancient disaster", "an ancient prophecy", "the alignment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, `the rise of a great ${findRace()} villain`, `the fall of a great ${findRace()} villain`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${searchArray(monster)}s`, `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster)}s and ${searchArray(monster)}s`]
 
     let time = ['beautiful but wrong',"somehow up to date", "changing-in-real-time", "slightly outdated"]
     let drink = ["tankard of mead", "cup of ale", "glass of wine", "goblet of blood"]
@@ -960,7 +960,7 @@ function artGenerator() {
     };
 
     function stages(){
-        return `${variableEvent([`multiple scenes of a story ${searchArray(['starting with', 'ending with'])} `])}`
+        return `${variableEvent([`multiple scenes of a story ${searchArray(['starting with', 'ending with'])}`])}`
     }
 
     function artPiece(){
@@ -1052,7 +1052,9 @@ function artGenerator() {
         `${searchArray(artForm[4])}`,
         ]
 
-    printFrom(combiner, 10, "Art")
+    console.log(combiner[5])
+
+    /*printFrom(combiner, 10, "Art")*/
 
 };
 
@@ -1603,6 +1605,7 @@ let jewelry =[
 ]
 
 
+artGenerator()
 
 /*
 Other Valuable rewards
