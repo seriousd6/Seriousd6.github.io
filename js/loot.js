@@ -1054,7 +1054,7 @@ function artGenerator() {
 
     console.log(combiner[5])
 
-    /*printFrom(combiner, 10, "Art")*/
+    printFrom(combiner, 10, "Art")
 
 };
 
