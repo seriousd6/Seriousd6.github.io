@@ -1050,8 +1050,6 @@ function artGenerator() {
         `${searchArray(artForm[4])}`,
         ]
 
-    console.log(combiner[5])
-
     printFrom(combiner, 10, "Art")
 
 };
@@ -1602,8 +1600,6 @@ let jewelry =[
 
 ]
 
-
-artGenerator()
 
 /*
 Other Valuable rewards
