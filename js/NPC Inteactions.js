@@ -153,7 +153,7 @@ function randomHostAndHook() {
                 'are your rival', 'are an acquantance', 'are an old friend', 'are your old teacher', 'are a fellow student', 'are a family friend', 'are a childhood friend', 'are a family member', 'are an admirer of your work', 'are your secret admirer (stalker?)', 'are a work associate of yours'
             ],
             [ //FOUR ASSISTANCE
-                "has done something similar long ago", "has done it once under duress", "has experience getting the right things for it", "has practiced this before, and can totally help", "is very smart, and can puzzle out stuff like this all the time", "knows the right people to ask about it", "knows where to find out about it", "knows some ancient lore about it", "has some related magic for it", "has  authority to get help for it"
+                "has done something similar long ago", "has done it once under duress", "has experience getting the right things for it", "has practiced this before, and can totally help", "is very smart, and can puzzle out stuff like this all the time", "knows the right people to ask about it", "knows where to find out more about it", "knows some ancient lore about it", "has some related magic for it", "has  authority to get help for it"
             ],
             [ //FIVE POSSIBLE TWIST
                 'NPC really doesn’t like someone else in the party', 'NPC really likes someone in party too much', 'NPC Might tell your enemies', 'NPC Is actually not helpful', 'An adversary learns about you and your location and acts upon it', 'A local mob threatens the NPC to not help [PC]/ Party', "Another NPC you know needs your help, urgently", "You are mistaken for someone else, who's in big trouble", "The NPC severly insults and taunts one of your party members.", "The NPC gets a crush on [PC] or on one of the party"
@@ -165,7 +165,7 @@ function randomHostAndHook() {
         };
 
         function findRoleAndLocation() {
-            return " They are currently " + searchArray(hostPlotArray[0]) + searchArray(hostPlotArray[1]) +"."
+            return " They are currently " + searchArray(hostPlotArray[0]) + " " + searchArray(hostPlotArray[1]) +"."
         };
 
         function findRelationship() {
