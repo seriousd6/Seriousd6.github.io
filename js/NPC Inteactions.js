@@ -136,24 +136,24 @@ function randomHostAndHook() {
             "A ‘professional quest-giver’ who pampers the heroes with everything he can. He’s in kahoots with a local dungeon-lord, and gets a share of the armor, weapons and loot of the heroes killed in the dungeon he directs them towards. He’ll take to the hills if he’s found out.", "A young priestess of a god of the wilds. Her house is on the very outskirts of town, and has a terrible case of rats, which she doesn’t mind as long as they don’t bother the guests. Rats that do bother the guests get speared. She doesn’t take nonsense, but has some sense of humor.", "A Kenku minstrel who rents a room above the tavern he performs in. It’s covered in posters from his ‘glory-days’- although a keen eye (DC 15 Investigation) will note that they’re actually other bards’ posters, with the minstrel’s name altered into them.", "An apprentice baker and his wife, a schoolteacher. Their house was a cheap deal, and is a little run-down but still serviceable. Gets a little drafty, though.", "A Kobold who claims to be an architect and interior designer. Actually, she’s a dungeon planner who designs catacombs, lairs and castles galore. Highly sought-after by evil overlords, and frantically tries to direct them away while the guests are there. If she’s found out, she’ll flee to the safety of one of her closer creations.", "A Swordsmith who has been at it for years. He keeps a display case of splintered, shattered or blunted swords recovered from various dungeons and battlefields, each with the tale of a fallen hero attached to it.", "A halfling gourmand with an affinity for candies. He’s a longstanding foe of witches who use his creations, or mockeries thereof, to lure children into their cook-pots.", "A Dwarvish family of four- father, mother, son, daughter -who are rather new in town. Hospitable, but the house is still full of moving crates. The father is a lumberjack, the mother is a stay-at-home parent.", "The High Priest of a local shrine of the god of travelers and messengers. He’s an unmatched source of information, references and road maps, and will greet anybody with a smile so long as they return the favor.", "An old Elvish couple. The husband spends most of his time golfing or whittling, the wife is busy giving advice to her newly-married daughter. They live in a nice old house, although there’s a ghost in the attic. Don’t worry, it’s very polite during the day, and it can’t leave the attic."
         ]
         return searchArray(hostArray)
-    }
+    };
 
     function findPlot() {
         let hostPlotArray = [
             [ //ZERO THE PERSON'S ROLE
-                'A barkeep.', 'A warrior', 'A merchant', 'An agent', 'A criminal', 'A performer', 'A nobel.', 'A bureaucrat', 'A member of the clergy', 'An artist', 'A craftsman', 'A magic user'
+                'a barkeep.', 'a warrior', 'a merchant', 'an agent', 'a criminal', 'a performer', 'a nobel.', 'a bureaucrat', 'a member of the clergy', 'an artist', 'a craftsman', 'a magic user'
             ],
             [ //ONE THEIR LOCATION
-                'Unknown - they are hard to pin down', 'They are in [village]', 'They are in [city]', 'They can be found at [building]', ' They come through here rarely, might want to ask around', "They frequent the area, keep and eye out and you're bound to bump into them", 'They live right nearby', 'They are just a few villages away', 'Well, it is a bit remote from here, give me your map', "Just let their people know, they'll find you"
+                'in an unknown location - they are hard to pin down, always on the move', `in a ${searchArray(['nearby', 'far away']) + " " + searchArray(['village', 'city', 'castle', 'stronghold'])}`, 'that passes through here occasionally, might want to ask around', "that frequents the area, keep and eye out and you're bound to bump into them", 'that lives right nearby', 'that lives just a few villages away', `quite a distance from here in a remote location, you'll need your map marked`, "who is basically unreachable. Let their people know, they'll find you"
             ],
             [ //TWO THEIR FEELINGS TOWARDS YOU
                 "I hate [PC],and I wont give [[PC]/the party] the time of day, unless they pay up front (5gp/minute)", "Why would I help [PC], unless of course [PC] is offering something in return?", "I am willing to help [PC], but they'd need to persuade me", "Will do anything [PC] asks, no explanations or renumerations needed", "I hate [PC's] guts", "I never really liked [PC]", "We did try to kill each other that one time…", "I do not remember [PC] in the slightest", "I tolerate [PC], they'll get no special treatment", "I could lend a hand maybe I guess, but what's their name again?", "We are amicable but not necessarily amenable", "Sure, for the right (high) price in gold", "Yes, but first they'd need to help me do a thing that’s… a little dark", "Yes, but they'd need to help me get this thing first", "Yes, but they'd need to help me resolve a personal issue first", "Yes, but they'd need to cover some expenses", "Yes, but they'd have to join my guild", "Wish I could help, but it’s impossible now because magical restrictions", "Wish I could help, but it’s impossible now because social issues", "Yes, but they'd need to help me resolve a personal issue after", "I would do anything for [PC], but I won’t do that", "Any time, but they'd owe me one", "I would do anything for [PC]"
             ],
             [ //THREE RELATIONSHIP
-                'Your rival', 'An acquantance', 'An old friend', 'Your teacher', 'A fellow student', 'A family friend', 'A childhood friend', 'A family member', 'An admirer of your work', 'Your secret admirer (stalker?)', 'A work associate of yours'
+                'are your rival', 'are an acquantance', 'are an old friend', 'are your old teacher', 'are a fellow student', 'are a family friend', 'are a childhood friend', 'are a family member', 'are an admirer of your work', 'are your secret admirer (stalker?)', 'are a work associate of yours'
             ],
             [ //FOUR ASSISTANCE
-                "Having done something similar long ago", "Having done it once under duress", "Getting the right things for it", "Having practiced this, can totally help", "Being smart, puzzling stuff like this out all the time", "Knowing the right people to ask about it", "Knowing where to find out about it", "Having some ancient lore about it", "Having some related magic for it", "Having authority to get help for it"
+                "has done something similar long ago", "has done it once under duress", "has experience getting the right things for it", "has practiced this before, and can totally help", "is very smart, and can puzzle out stuff like this all the time", "knows the right people to ask about it", "knows where to find out about it", "knows some ancient lore about it", "has some related magic for it", "has  authority to get help for it"
             ],
             [ //FIVE POSSIBLE TWIST
                 'NPC really doesn’t like someone else in the party', 'NPC really likes someone in party too much', 'NPC Might tell your enemies', 'NPC Is actually not helpful', 'An adversary learns about you and your location and acts upon it', 'A local mob threatens the NPC to not help [PC]/ Party', "Another NPC you know needs your help, urgently", "You are mistaken for someone else, who's in big trouble", "The NPC severly insults and taunts one of your party members.", "The NPC gets a crush on [PC] or on one of the party"
@@ -161,37 +161,34 @@ function randomHostAndHook() {
         ]
 
         function findAssistance() {
-            return "If you tell them about a current challenge you'll learn about someone:" + "\nOffers: " + searchArray(hostPlotArray[4])
-        }
-
-        function findRole() {
-            return "\nStation: " + searchArray(hostPlotArray[0])
+            return "If you tell your host about a current challenge you'll learn about someone who " + searchArray(hostPlotArray[4]) + "."
         };
 
-        function findLocation() {
-            return "\nLocation: " + searchArray(hostPlotArray[1]) + "."
-        }
-
-        function findFeelings() {
-            return "\nAttitude: " + '"' + searchArray(hostPlotArray[2]) + '"'
-        }
+        function findRoleAndLocation() {
+            return " They are currently " + searchArray(hostPlotArray[0]) + searchArray(hostPlotArray[1]) +"."
+        };
 
         function findRelationship() {
-            return "\nRelationship: " + searchArray(hostPlotArray[3]) + "."
-        }
+            return " Rumor has it that they " + searchArray(hostPlotArray[3]) + "."
+        };
+
+        function findFeelings() {
+            return `Also, you'll probably be hearing something like ` + '"' + searchArray(hostPlotArray[2]) + '" if you end up trying to contact them.'
+        };
 
         function findSetback() {
             return searchArray(hostPlotArray[5]) + '.'
         }
+
         let setbacknumber = Math.floor(Math.random() * 100);
         if (setbacknumber > 85) {
-            return findAssistance() + findRole() + findRelationship() + findFeelings() + findLocation() + '\nTwist:' + findSetback();
+            return findAssistance() + findRoleAndLocation() + findRelationship() + findFeelings() + 'Unfortunately, ' + findSetback(); +"."
         } else {
-            return findAssistance() + findRole() + findRelationship() + findFeelings() + findLocation();
+            return findAssistance() + findRoleAndLocation() + findRelationship() + findFeelings() 
         }
-    }
+    };
 
-    document.getElementById("Host").innerHTML = returnHost() + findPlot();
+    document.getElementById("Host").innerHTML = returnHost() + " " + findPlot();
     //console.log(returnHost() + findPlot())    
 }
 
