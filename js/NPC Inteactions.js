@@ -173,7 +173,7 @@ function randomHostAndHook() {
         };
 
         function findFeelings() {
-            return `Also, you'll probably be hearing something like ` + '"' + searchArray(hostPlotArray[2]) + '" if you end up trying to contact them.'
+            return ` Also, you'll probably be hearing something like ` + '"' + searchArray(hostPlotArray[2]) + '" if you end up trying to contact them for help.'
         };
 
         function findSetback() {
@@ -182,7 +182,7 @@ function randomHostAndHook() {
 
         let setbacknumber = Math.floor(Math.random() * 100);
         if (setbacknumber > 85) {
-            return findAssistance() + findRoleAndLocation() + findRelationship() + findFeelings() + 'Unfortunately, ' + findSetback(); +"."
+            return findAssistance() + findRoleAndLocation() + findRelationship() + findFeelings() + ' Unfortunately, ' + findSetback(); +"."
         } else {
             return findAssistance() + findRoleAndLocation() + findRelationship() + findFeelings() 
         }
