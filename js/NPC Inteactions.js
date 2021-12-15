@@ -216,12 +216,12 @@ function npcBuilder() {
         //document.getElementById("Race").innerHTML = characterRace
     };
     let gender = [
-        `a ${searchArray([`young ${findRace()} ${searchArray('boy', 'girl', 'man', 'woman')}`, `an old ${findRace()} ${searchArray(['man', 'woman'])}`, `a ${searchArray([`young ${searchArray('boy', 'girl', 'man', 'woman')}`, `an old ${searchArray(['man', 'woman'])}`])}`, `${searchArray([`young ${findRace()}`, `an old ${findRace()}`])}` ])}`
+        `${searchArray([`A young ${findRace()} ${searchArray('boy', 'girl', 'man', 'woman')}`, `An old ${findRace()} ${searchArray(['man', 'woman'])}`, `${searchArray([`A young ${searchArray('boy', 'girl', 'man', 'woman')}`, `An old ${searchArray(['man', 'woman'])}`])}`, `${searchArray([`A young ${findRace()}`, `An old ${findRace()}`])}` ])}`
     ]
     
     let uniqueFeature = []
 
-    return `A ${searchArray(gender)} walks up to you and`
+    return `S${searchArray(gender)} walks up to you and`
 }
 
 function wisdom() {
