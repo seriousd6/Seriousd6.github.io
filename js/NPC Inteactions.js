@@ -231,7 +231,7 @@ function npcBuilder() {
     
     let uniqueFeature = []
 
-    return `S${searchArray(gender)} walks up to you and`
+    return `${searchArray(gender)} walks up to you and`
 }
 
 function wisdom() {
@@ -275,7 +275,7 @@ function omens() {
         'their eyes turn black with red swirls', 'they move in jittery, unsettling, motions', 'they speak with multiple dissonant voices', 'you hear many whispers as they speak', 'you get a chill as they begin to speak'
     ]
 
-    let output = npcBuilder() + ` and ${searchArray(freakArray)}, and they say "`+ searchArray(omens)+`"`
+    let output = npcBuilder() + ` ${searchArray(freakArray)}, and they say "`+ searchArray(omens)+`"`
     document.getElementById("Omen").innerHTML = output
 }
 
