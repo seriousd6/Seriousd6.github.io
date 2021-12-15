@@ -352,7 +352,7 @@ function prophecy(){
         'booming, otherwoldly voice', 'small and trepidacious voice', 'hateful and angry voice', 'sad and hopeless voice', 'joyful and unsettling voice'
     ]
 
-    let output =  npcBuilder() + `in a ${searchArray(voice)}, they say,` + `"Doom is coming, you'll see it ${searchArray(beginning)} Beware ${searchArray(proponents)} Keep watch for ${searchArray(sign)} This will be the end, ${searchArray(doom)} And for those who survive, ${searchArray(aftermath)}"`
+    let output =  npcBuilder() + ` in a ${searchArray(voice)}, they say,` + `"Doom is coming, you'll see it ${searchArray(beginning)} Beware ${searchArray(proponents)} Keep watch for ${searchArray(sign)} This will be the end, ${searchArray(doom)} And for those who survive, ${searchArray(aftermath)}"`
     document.getElementById("Prophecy").innerHTML = output
 }
 
