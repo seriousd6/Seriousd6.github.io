@@ -226,7 +226,7 @@ function npcBuilder() {
         //document.getElementById("Race").innerHTML = characterRace
     };
     let gender = [
-        `${searchArray([`A young ${findRace()} ${searchArray('boy', 'girl', 'man', 'woman')}`, `An old ${findRace()} ${searchArray(['man', 'woman'])}`, `${searchArray([`A young ${searchArray('boy', 'girl', 'man', 'woman')}`, `An old ${searchArray(['man', 'woman'])}`])}`, `${searchArray([`A young ${findRace()}`, `An old ${findRace()}`])}` ])}`
+        `${searchArray([`A young ${findRace()} ${searchArray(['boy', 'girl', 'man', 'woman'])}`, `An old ${findRace()} ${searchArray(['man', 'woman'])}`, `${searchArray([`A young ${searchArray(['boy', 'girl', 'man', 'woman'])}`, `An old ${searchArray(['man', 'woman'])}`])}`, `${searchArray([`A young ${findRace()}`, `An old ${findRace()}`])}` ])}`
     ]
     
     let uniqueFeature = []
