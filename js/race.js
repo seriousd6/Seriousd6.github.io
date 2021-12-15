@@ -6,23 +6,19 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function rollArray(array) {
     let shuffled = shuffle(array)
     let index = Math.floor(Math.random() * shuffled.length)
     return `(Roll: ${index}/${shuffled.length}) ${shuffled[index]}`;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -71,15 +67,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-
-/*############################Page Scripts#########################################*/
 const races = {
     "Common": {
         'Human': {
@@ -507,8 +502,6 @@ const races = {
         },
     },
 };
-
-
 function buildRace() {
     document.getElementById("Sex").innerHTML = ""
     document.getElementById("Race").innerHTML = ""
@@ -599,7 +592,6 @@ function buildRace() {
 
 
 };
-
 function completeRace(Race) {
     document.getElementById("Sex").innerHTML = ""
     document.getElementById("Race").innerHTML = ""
@@ -681,4 +673,4 @@ function completeRace(Race) {
     document.getElementById("Race").innerHTML = "Race: " + charRace;
     document.getElementById("Name").innerHTML = "Name: " + checkName();
     document.getElementById("Racial").innerHTML = checkRacial();
-}
+};

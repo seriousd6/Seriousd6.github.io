@@ -6,17 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 function printFrom(array, number, id) {
     let list = shuffle(array).slice(0, number)
     list.forEach(function(item) {
@@ -26,7 +23,6 @@ function printFrom(array, number, id) {
         document.getElementById(id).appendChild(li);
     });
 };
-
 function orderedPrint(array, number, id) {
     let list = array.slice(0, number)
     list.forEach(function(item) {
@@ -36,7 +32,6 @@ function orderedPrint(array, number, id) {
         document.getElementById(id).appendChild(li);
     });
 };
-
 function loopCountStoreList(array) {
     let x = array
 
@@ -64,11 +59,9 @@ function loopCountStoreList(array) {
     }
     return count(x);
 };
-
 function modify(number) {
     return Math.floor(number * (.85 + Math.random() * .4))
 };
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -117,15 +110,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-
-/*############################Page Scripts#########################################*/
 function tavernPremise() {
     let taverns = [
         "The Salty Seafarer - Found moored up at ports around the lands, this floating tavern is always busy, but only for a week or so before it sails off to it's next destination. Who knows when you'll bump into it again! Famed for the owner's stories and fables they have collected on their travels from the tavern's many patrons, as well as world famous bards who often travel along with it. Of course we can't forget to mention the exotic drinks and food they have picked up on the way!", "Nobody's Inn - Entering this tavern, you find that there doesn't seem to be an owner, although there are many patrons, pouring their own drinks and leaving coins in collection trays.", "The Boney Bar - The Boney bar is, if anything, creepier than it sounds. Not only are there skeletons serving you, nearly everything is made out of bones. The tables and chairs, a massive chandelier hanging in the centre of the room... even the mugs are skulls with the holes plugged up! Luckily, the food and drink is exquisite!", "The Dapper Dragon - A fancy restaurant that uses tiny dragons and other creatures to help cook food. Basically Ratatouille but with monsters! If I were you, unless you like your food black, I wouldn't ask for my steak to be 'Well done.'", 
@@ -143,7 +135,6 @@ function tavernPremise() {
     ]
     document.getElementById("Premise").innerHTML = searchArray(taverns);
 };
-
 function tavernName() {
     function tavernNamer() {
         let posts = ["Inn", "Tavern", "Bed and Breakfast", "Lodge", "Roadhouse", "Saloon", "Lounge", "Watering Hole", "Pub", "Taphouse", "Tavern & Inn", "Groghouse", "Ale Garden", "Canteen", "Rest House", ]
@@ -205,7 +196,6 @@ function tavernName() {
     document.getElementById("Name").innerHTML = tavernNamer()
         //console.log(tavernNamer())
 };
-
 function findF1() {
     function getFlavorOne() {
         let tavernFlavor1 = [
@@ -218,7 +208,6 @@ function findF1() {
     }
     document.getElementById("F1").innerHTML = getFlavorOne();
 };
-
 function findF2() {
     function getFlavorTwo() {
         let tavernFlavor2 = [
@@ -239,7 +228,6 @@ function findF2() {
     }
     document.getElementById("F2").innerHTML = getFlavorTwo();
 };
-
 function findInsult() {
     function insultGenerator() {
         function searchArray(array) {
@@ -272,7 +260,6 @@ function findInsult() {
         document.getElementById("Insult").innerHTML = 'An argument erupts: "' + searchArray(lawfulInsult) + '"';
     }
 };
-
 function findEndConvo() {
     function findRumor(){
         let completeRumors =[
@@ -488,7 +475,6 @@ function findEndConvo() {
     let output = searchArray([findRumor(), overHear()])
     document.getElementById("EndConvo").innerHTML = output
 };
-
 function bardFind() {
     function findBard() {
         let tavernBards = [
@@ -511,7 +497,6 @@ function bardFind() {
     }
     document.getElementById("Bard").innerHTML = findBard();
 };
-
 function instrumentFind() {
     let bardInstrument = [
 
@@ -531,7 +516,6 @@ function instrumentFind() {
     ]
     document.getElementById("Instrument").innerHTML = searchArray(bardInstrument)
 };
-
 function currentlyPlaying() {
     function songBuilder(){
         let subject = [ `a young ${searchArray(["barmaid", "blacksmith's daughter", "farmer's daughter", "miner's daughter", "innkeeper's daughter", "harlot", "lady's maid", "scullery maid",])}`, `a(n) ${searchArray(["barmaid", "captain's wife", "farmwife", "fisherman's wife", "housemaid", "madame", "merchant's wife", "seamstress",])}`, `a(n) ${searchArray(["beautiful noble maiden", "young princess", "ugly princess", "young queen", "old queen", "wicked queen", "faerie queen", "old widow",])}`, `a(n) ${searchArray(["young novice priestess", "innocent virgin", "high priestess", "sister of mercy", "old prude", "oracle", "temptress", "zealot",])}`, `a(n) ${searchArray(["crone", "enchantress", "gypsy woman", "fortune teller", "potion-maker", "seer", "dark sorceress", "wicked witch",])}`, `a(n) ${searchArray(["alchemist", "conjurer", "illusionist", "magician", "necromancer", "pyromancer", "old wizard", "apprentice mage",])}`, `a(n) ${searchArray(["barbarian", "gladiator", "guard captain", "young knight", "proud knight", "old knight", "mystery knight", "sellsword",])}`, `a(n) ${searchArray(["bandit", "gambler", "jester", "outlaw", "pirate", "singer", "smuggler", "thief",])}`, `a(n) ${searchArray(["young acolyte", "exorcist", "healer", "stoic monk", "preacher", "old priest", "young scholar", "wise master",])}`, `a common ${searchArray(["blacksmith", "farmer", "fisherman", "herder", 
@@ -565,7 +549,6 @@ function currentlyPlaying() {
     ];
     document.getElementById("Song").innerHTML = searchArray([searchArray(bardSongs),songBuilder()])
 };
-
 function drinkFind() {
     function findSpDrink() {
         let drinkSpecialty = [
@@ -605,7 +588,6 @@ function drinkFind() {
     findSpDrink();
     document.getElementById("Drink").innerHTML = findSpDrink();
 };
-
 function foodFind() {
     function findFood() {
         let foodEvent = [
@@ -654,7 +636,6 @@ function foodFind() {
     }
     document.getElementById("Food").innerHTML = findFood();
 };
-
 function gameFind() {
     let size = [
         "large group of people",
@@ -828,7 +809,6 @@ function gameFind() {
         return searchArray(games[2])
     };
 };
-
 function events() {
     function checkEvent() {
         let badTavernEvent = [
@@ -863,7 +843,6 @@ function events() {
     checkEvent();
     document.getElementById("Event").innerHTML = checkEvent();
 };
-
 function quest() {
     function clearBoard() {
         document.getElementById("Quest").innerHTML = "";
@@ -966,7 +945,6 @@ function quest() {
         printFrom(flyers, 4, "Promo")
     };
 };
-
 function rivalParty() {
     document.getElementById("Rival").innerHTML = ""
 
@@ -1534,9 +1512,7 @@ function rivalParty() {
     let items = `The other party's magical items are ${searchArray(["concealed","out in the open"])}: ${alternateRewards(partyLevel,partySize*2)}`
     let output = [flavor, comp, gold, items]
     orderedPrint(output, output.length, "Rival")
-}
-rivalParty()
-
+};
 function buildTavern() {
     tavernName()
     findF1()

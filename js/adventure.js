@@ -6,19 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
-
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'Thousand', 'Million', 'Billion', 'Trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -67,14 +62,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-/*############################Page Scripts#########################################*/
 function conflict() {
     let conflictArray = [
         "Players vs. An Antagonist", "Players vs. Natural Forces", "Players vs. Supernatural Forces", "Players vs. Authority or Tradition",

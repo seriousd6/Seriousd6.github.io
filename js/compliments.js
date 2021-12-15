@@ -6,13 +6,15 @@ function shuffle(array) {
     }
     return array;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
-// Page Scripts
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
+
 
 function compliment(){
     document.getElementById("compliment").innerHTML = ""

@@ -6,17 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 function variableEvent(givenArray, number) {
     let chance = rollDice(100)
     if (chance < 75) {
@@ -27,8 +24,6 @@ function variableEvent(givenArray, number) {
         return searchArray(givenArray[number]) + ' '
     }
 };
-
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -77,11 +72,9 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
-
 function printFrom(array, number, id) {
     let list = shuffle(array).slice(0, number)
     list.forEach(function(item) {
@@ -92,7 +85,70 @@ function printFrom(array, number, id) {
     });
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
+function scene() {
+    document.getElementById("Scene").innerHTML = ""
+
+    function person(number) {
+        let generic = ["man", "boy", "girl", "woman"]
+        let any = [`${searchArray(["young","old"])} man`, `${searchArray(["young","baby"])} boy`, `${searchArray(["young","baby"])} girl`, `${searchArray(["young","old"])} woman`]
+        let withagency = [`a${searchArray([" young","n old"])} man`, `a${searchArray([" young",""])} boy`, `a${searchArray([" young",""])} girl`, `a${searchArray([" young","n old"])} woman`]
+        let plural = [`young ${searchArray(["men","men and women","men, women and children","women"])}`, `varying aged ${searchArray(["men","men and women","men, women and children","women"])}`, `old ${searchArray(["men","men and women","women"])}`, `boys and girls`, `boys`, `girls`]
+        let audience = [`a ${searchArray(generic)}`, `a small group of ${searchArray(plural)}`, `a large group of ${searchArray(plural)}`]
+        let professional = [`${searchArray([" young","n old"])} man`, `${searchArray([" young","n old"])} woman`]
+        if (number === 0) {
+            return searchArray(generic)
+        } else if (number === 1) {
+            return searchArray(any)
+        } else if (number === 2) {
+            return searchArray(withagency)
+        } else if (number === 3) {
+            return searchArray(audience)
+        } else if (number === 4) {
+            return searchArray(plural)
+        } else if (number === 5) {
+            return searchArray(professional)
+        }
+    };
+    let sceneArray = [
+            `You see a few kids playing ${searchArray(["by climbing trees and houses and jumping down to scare people","with a pet","wall-ball","with a ball", "with some small figurines","tag","hide and go seek","freeze tag","hunter and prey"])}`,
+            `You see a kid, sitting on a wall ${searchArray(["stargazing","counting the clouds","muttering to themselves",`looking ${searchArray(["longingly","lazily","pitifully", "desperately","anxiously"])} at ${searchArray(["another kid","the local bakery","over the horizon","the graveyard","the treeline"])}`,])}`,
+            `You see a ${searchArray(["troubled","bored"])} ${person(0)} who ${searchArray(["can't decide what to do","seems to be daydreaming about someone",])}`,
+            `You see a ${person(0)} in the process of ${searchArray(["stealing something", "pickpocketing someone","mugging someone"])}`,
+            `You see ${searchArray([ "two boys", "two girls", "a boy and a girl", `a${searchArray([" young","n old"])} man and a${searchArray([" young","n old"])} woman`, `two old ${searchArray(["men","women"])}`])} ${searchArray(["complaining loudly","in a fistfight","playing chess","bickering back and forth",`making a deal`, `doing some scientific experiments`, `having a silent conversation`, `learning magic`, `playfully fighting`, `fishing`, `hiding from the rain`, `being nagged by ${person(2)}`])}`,
+            `You see a group of ${person(4)} building ${searchArray(["a house","a boat","a wagon","a cart","some furniture"])}`,
+            `You see a ${person(0)} casting a spell`,
+            `You see a ${searchArray(["celebratory parade","funeral procession"])} for a ${searchArray(["well-loved","widely hated"])} ${person(1)}`,
+            `You see ${person(2)} ${searchArray(["demonstrating a lack of control","demonstrating confident ignorance","showing absentmindeness","using unessicarily fancy words to impress people","unknowingly misuing words and phrases of speech", "avoiding eye contact","behaving foolishly"])}`,
+            `You see ${person(3)} ${searchArray(["speaking with","discussing current events with","in a heated argument with","listening to",])} a${searchArray([" shabby-looking", " wise-looking"," surprisingly young-looking"," dirty-looking"," ancient-looking"," shifty-looking","n unassuming-looking","awe-inspiring","oddly attractive","wild-eyed"])} ${searchArray(["cleric","preist","sage","mage","paladin"])}`,
+            `You see ${searchArray([person(2),person(3)])} ${searchArray(["stargazing","preparing for an exorcism","working with plants and gathering some",`saving someone from ${searchArray(["a wld animal attack","drowining in the river", "a monster attack",])}`,"trying to stop a fistfight","cheering on a fistfight","sifting through the destruction of a recent bandit attack","watching a group of bandits terrorizing their home","taking measurements of the land for some project","trying to combat nature",`${searchArray(["trying to calm a drunk man","loading things onto a cart","lifting and hauling heavy boxes","pushing a broken cart"])}`,"chasing someone","playing friendly games","in mass hysteria","performing a religious ceremony","preparing to hunt ghosts","preparing for a hunt","foraging","negotiating with some guards","arguing with some guards","selling holy amulets","clearing plants","cutting down trees","selling something","selling useless things","eating a meal","writing a letter", "writing letters","writing stories","writing poetry", "composing songs", "searching for a thief","painting","whittling","washing clothes","singing", "listening to a musician", "digging a large hole (excavating)"])}`,
+            `You see ${person(2)} ${searchArray([`stuck ${searchArray(["under a dead horse", "under a broken wagon","under a fallen tree","in quicksand"])} calling for help`,"dishing out orders to others","quilting a blanket","sewing some clothes","using unfair weights in trades","in the process of forging something","wandering aimlessly",`${searchArray(["loading things onto a cart","lifting and hauling heavy boxes","pushing a broken cart"])}`,"chasing someone","panicing","seemingly in a hurry","performing a religious ritual","running from something, or someone",`bathing in the ${searchArray(["river","lake","ocean",])}`,"grooming themselves","offering to tell your fortune for the exclusive price of 1 gold","on their way to file papers with the local authority","performing some calculations with their finger in the air","sleeping on a bench","taking a nap in the grass","making a poor attempt to smuggle something past the guards",`hiding something (probably to smuggle it) in their ${searchArray(["horse's saddlebags","pack","wagon","bag of holding",])}`, `demonstrating an invention to ${person(3)}`, "begging for coins",`struggling with an illness`, `drying clothes`, `reeling from a spell effect`, `drunkenly wandering`, `acting very afraid of something`, `skinning an animal`, `translating signs/carvings`, `reading news`, `sending a mail pigeon`, `preparing meat`, `guarding someone, or something`, `doing artisan work`, `cooking`, `under a mental magic effect`, `hitchhiking`, `bluffing/denying something`, `speaking with shady people`, `mourning`, `performing a quest`, `following someone`, `gardening`, `gathering simple resourses (herbs, dyes etc.)`, `searching for a lost item`, `waiting for delivery`, `meditating`, `creating some alchemical concotion ( a cure for something)`, `parting with someone`, `counting coins`, `drawing schematics`, `preparing a potion`, `on a road to somewhere`, `sculpting`,])}`,
+            `You see ${person(2)} that looks quite peculiar`,
+            `You see a small group of ${person(4)} celebrating ${searchArray(["a reanimation ceremony","an initation ceremony","a birthday","the opening of a shrine", "a local holiday","something that involves a lot of drinking",])} `,
+            `You see a small group of ${person(4)} having a ${searchArray(["nostalgiс","heated","lazy"])} ${searchArray(["argument","discussion","debate",])} about ${searchArray(["other races", "a local gossip","supernatural phenomena","their ancestors","the way things used to be","the other sex","current events", "the current ruler","politics",])}`,
+            `You see a small group of ${person(4)} ${searchArray(["gathering to see a(n)", "currently attending/watching a(n)","leaving a recently ended"])} ${searchArray(["court proceeding","play","sports event","ressurection ritual","circus", "odd transport caravan", "public execution", "quarentine announcement","decree from the ruler","arrest", "magic (sleight of hand) show","the visiting of the local lord", "auction", "odd local competition or activity",])}`,
+            `You come upon an area that ${searchArray(["should have people, and has evidence of people recently present, but there is nobody here","has a manned checkpoint made by local authorities","has a manned checkpoint made by a group impersonating local authorities",])}`, 
+            `You see a ${person(0)} ${searchArray(["tithing to a local temple","damaging soem property","walking into the entrance of a mine","playing a ball game using mostly their feet with a few other players","admiring themselves in a reflection","sharing food with a young kid","gathering food", "looking at the horizon","faking the ability to do something","eavesdropping on a nearby conversation","warming themselves by a fire","praying","singing a hymn", "peeing in a bush on the side of the road"])}`,
+            `You see a ${person(5)} ${searchArray(["collecting taxes","asking for donations for a local cause", "about to start a duel with another person","and their significant other getting married","proposing marriage to their significant other","collecting trash on a cart", "feeding a child", "flirting with another person", "healing someones wounds","taunting someone",`providing an inspirational message to ${person(3)}`, `teaching a lesson to ${person(3)}`, `loudly haggling with a ${searchArray(["craftsman","merchant","butcher","carriage-driver"])}`,"working in a manufacturing plant","learning from a teacher","tying somebody up","walking a drunk home","signing a contract","controlling a machine that they built","placing animal traps","selling illegal merchandise","setting up some explosives","on a pilgrimage", "changing clothes", "training some fighters", "mumbling under their breath","training some kids"])}`,
+            `You see a small group of ${person(4)} ${searchArray([`up to some debaucherous antics`, `gambling on some games`, `preparing for something`, `telling stories to one another`, `training the local fighter regiment`, `trying to solve a local cattle theft`, `in a hideout/ambush spot`, `calming down a posessed person`, `engaged in a mass fistfight`, `doing a controlled burn of an area of forest`, `extinguishing a fire`, `searching for someone`, `doing a family activity`, `dancing together`, `advertising a product or service`, `fixing a broken ${searchArray(["house","cart","roof","wheel"])}`, `waiting for some adventurers to show up`, `smoking on a break`, `plowing a field`,])}`,
+        ]
+    let sceneArray2 = [
+        `A child is throwing a tantrum in the street. One of their parents is standing nearby, pretending not to notice.`, `A patron is arguing with a shopkeeper over the price of an item that the shop doesn't sell.`, `A man is dancing in front of a group of elderly women. As he dances, the women will toss coins into his hat. Occasionally, one of the women will scoff and take some coins back.`, `Two Nobles are arguing the finer points of cockroach racing.`, `Neighbors are having a heated discussion about a noisy dog.`, `Graham the Hobo is performing an acrobatic pole dance.`, `Town guards are going door to door handing out flyers detailing changes to refuse disposal ordinances.`, `Three chickens are walking down the street stacked on top of each other.`, `A group of children are chasing a man with wooden swords. They are all laughing and shouting.`, `A wizard is seated across the table from an unnaturally large toad. The wizard is frantically flipping through several books.`, `A farmer is arguing with their cow. It seems the cow is unwilling to go where the farmer wants her to.`, `Drunken sailors are singing loudly from a tarven while the bar bouncer looks a them.`, `A town crier announces a gathering of the local religious group.`, `An unmarried couple walks hand in hand. Some passersby look at them and giggle.`, `A group of dock workers are team lifting a loaded wagon to reattach a broken wheel`, `A woman occasionally checking a small paper as she window shops`, `A young boy is selling newspapers on the corner. They aren’t selling well`, `Two horse-drawn carts slowly maneuver past each other as their drivers argue`, `A small circle of people are gathered around a pair of men locked in a serious match of arm wrestling`, `A small child runs through a gathering of pigeons`, `A goose steals a gardener's trowel and is chased for their audacity.`, `Graham the Hobo stands off to the side of the town square holding an old parchment aloft with the words, "Need Money for Ale. Why lie?"`, `A small cadre of druids are working on the community garden, cracking jokes and taking their time. It could be a class on growing but you aren't sure from this distance.`, 
+        `A blacksmith loudly scolding his apprentice for a minor mistake.`, `A very pregnant mother shopping while her son, tied to her by her apron-strings, stomps in every mud-puddle he can reach. The mother doesn't seem to notice how muddy the son has gotten her dress.`, `A tired looking prostitute on the walk outside the brothel smoking a pipe with a very bored expression on her face.`, `A loaded haywain blocking traffic outside an inn's stables, the old driver is arguing with city watch, "I ain't movin till the innkeep's boys unload my wagon. He paid me for this load, he's gettin it!"`, `A down-on-the-heels entertainer sitting in the corner of the inn, muttering to himself as he attempts to compose a ballad. From the snippets the players can hear, the composition is not going well.`, `An obviously drunk person in the stockade playing rhyming games with a group of kids gathered around his penitent post.`, `While her father speaks with a street merchant, a little girl no more than three years of age saunters over to hug a dog that's taller than her. The towering dog allows it, even resting its head on her shoulder.`, 
+        `Two children have taken a ball from a third, who looks to be on the verge of tears. A nearby horse whinnies as the older kids toss the ball back and forth, distracting one of the bullies at exactly the right moment to cause him to be pelted in the face. The younger kid snatches back their ball, sticks out their tongue, and runs away.`, `A young, overdressed nobleman is attempting to woo a lady. He steps in something unpleasant, and the trailing pair of chaperoning attendants struggle to contain their laughter.`, `Graham the Hobo seems to have decided that now would be an excellent time for a bath in a nearby fountain.`, `A small group of friars is administering short blessings and distributing loaves of bread to a queue of downtrodden families and street urchins.`, `An elderly couple quietly sits on a bench holding hands. Two old, feral cats are sitting together on their haunches at the other end of the bench. The old man and his coincidentally corresponding cat sneeze at the exact same time. Neither couple seems to pay any attention to the other.`, `Someone farts, nobody is that bothered`, `Plump teenage girl and her spindly younger brother are setting up fried chicken stand in the town square. There's a big wicker cage of doomed chickens softly clucking.`, `A fella sitting back in a chair, feet up on a table/what-have-you quietly humming a song to himself.`, `A group of ${rollDice(15)+2} men unloading a wagon.`, `A cat stalking a butterfly.`, `Two small boys climbing a tree.`, `A maid beating a rug.`, `A farmer plowing a field.`, `A horse throwing/losing his horseshoe.`, `A teenager chasing his/her/their dog, its leash trailing behind the dog.`, `A man proposing to a woman (or vice versa).`, `A person painting the side of his house/store.`, `A person cleaning the street (perhaps a punishment for a minor infraction of the law).`, 
+        `A cleric on a soapbox preaching.`, `A flock of birds clustered around a bakery.`, `Local town councilman is putting up posters and shaking hands in the town square, reminding people of the upcoming election.`, `Two maintenance men lead a horse and cart with tar and cobblestones to repair potholes in the main streets of town.`, `There's a commotion at the local barbershop as a aging noblewoman with "the vapors" demands the barber to urgently soothe her stomach demons by reading her humors and applying leeches.`, `Brenda pushes her cart of home grown vegetables through the street toward the farmers market, muttering on about every perceived slight and insult she's received over the years from awful Farmer Mills, the man who has a wheat flour and baked goods cart.`, `A rat drags a piece of bread larger than it is along the street and into the sewer drain.`, `Two girls play hopscotch, one is called by her mother to come home. The other one frowns and eventually wanders off home.`, `Farmer Mills and Farmer Hewson argue about irrigation and water rights as the spring rains have been few and far between.`, `Graham the Hobo has set up a three card monte table outside a pub with a deck of cards that looks like he found in a ditch. "Try your luck" he shouts.`, `Graham the Hobo feeds a malnourished stray dog a small piece of bread from the loaf he is eating`, `Graham the Hobo sees a woman unknowingly drop a piece of fine jewelry, then returns it to her`, `A fisherman is digging up and collecting worms`, `A gnome tinkers with a toy dragon as a child watches in fascination.`, 
+        `A group of children play as make-believe adventurers.`, `A noble buys a caged bird.`, `You notice a child picking the loose portions of a brick from a wall.`, `A well-dressed man with the voice of an auctioneer is selling a miracle cure for diseases no one’s heard of.`, `A young man taking the long way around the block/square or doubling back to peek in a window. He is nervous but doesn't seem to be doing anything wrong. He is sweet on a food vendor who works selling fried dumplings/ falafel and tries to find an opportunity to talk to her`, `A young man stop in the street and watch a particularly nice horse go by. He appears to be grocer or general store kind of assistant. His shirt is used but clean and his duties take him inside and outside a shop dusting carpets. If you watch for half an hour he lingers and studies a horse that has been tethered nearby. It's a nicer horse than most people see and you guess he knows how to judge good horseflesh by how he sizes them up.`, `There is a man on stilts, whitewashing the outside of a house. He rolls his eyes and is curt with everyone who makes a joke about "how's the weather up there?". He mutters to himself that this is more efficient than a ladder. He openly yells and tells off a group of three kids who clearly are working towards a plan to mess with his stilts.`, `A young woman briefly stops to smell the fresh bread as she walks past the bakery.`, 
+        `A man leaves a large building and pauses for a moment. He pats his pockets, sighs in disappointment, then goes back into the building to grab whatever he had forgotten.`, `Two men load a cart outside of a home while a nobleman speaks to the homes crying owner reviewing a piece of parchment.`, `Another child is throwing a tantrum in the street, crying about not wanting to go inside.`, `A couple is arguing outside a tavern.`, `A woman stands by the water, washing clothes.`, `A group of three men teasing each other over a dice game.`, `An older fruit salesman demonstrates to a curious onlooker how to use a mallet to crush grapes in a small vat.`, `Two children arguing over a toy, and their mother hanging her clothespins, oblivious.`, `A couple in deep discussion about whether or not to spend their savings on a new property or to continue saving.`, `Two children playing a game of marbles. They are about seven years old. One has a ring of blue, red, and yellow marbles. The other has a ring of green, blue, and purple.`, `Two children playing on top of a hay wagon. They appear to be twin brothers about five years old.`, 
+        `Two ducks with ducklings following them. You are confused why they're here in the village, but their wet footprints likely lead back to a small pond nearby.`, `Two ducks are in a pen with their latest batch of babies. One of the villagers say that they are "mill" ducks and how it's such a pity they have been cross breeding them for centuries to attain a perfect egg-laying machine.`, `A small brown hare drinking from a stream. It is quite a ways away from the rest of a batch of rabbits that are gathering near the feet of two hunters. The brown hare also seems to lack the distinctive black ears and white nose of the others.`, `A small fence surrounds a nearly empty plot of land. This plot of land apparently is where the town gallows currently sit. The current hanging dummy, a simple wooden figure of a man, stands with a sign that reads "Thievery."`, `A local town boy is selling a box of potentially enchanted cookies`, `Shopkeeper and his employee brother are splitting up the profits. “Four for me, one for you. Four for me, one for you.” “That’s not fair! I work twice as hard as you.” “Oh really?! But I take all the risk! Alright then. FIVE for me, one for you.”`, `Graham the Hobo deftly stops a child from wandering into the path of a moving wagon`, `A man is talking to a woman. They aren't doing anything important, but a passing man in a hat smiles at them.`, `A child is missing his two front teeth.`, `A little girl leading around a goat with a string.`, `The village blacksmith and his neighbor are talking with each other over the fence that separates their two houses.`, 
+        `You see a thatched roof house near the edge of town. A female halfling walks out of the front door and stands on the porch. She turns and says something to someone inside, then turns and shuts the door.`, `A young man is practicing archery by himself.`, `You hear a scream, and as you glance up, it turns out to be someone's shriek of happy recognition as a woman sees an old friend they haven't seen in a while.`, `An old man, with two days of beard stubble and stains on his shirt, stands on a street corner scratching the top of his butt crack and watching people walk by.`, `Three people have stopped hanging linens and are arguing about the lyrics to a well known song. Two of the trio insist that the last person is singing the lyrics wrong. The song is about adding to the parts of a tree and repeating previous verses: 'The branch was on the limb, the limb was on the tree, the tree was on the stump, the stump was in the hole...' (In real life it's the song 'Rattlin Bog' if you don't want to make your own lyrics)`, `The two are correct. There's regional variance on certain words, but the third person is just getting the order of the tree wrong.`, `Interestingly, surrounding townsfolk not in the trio begin singing after a few minutes of the trio arguing over the lyrics.`, `Three girls are jumping rope and are learning a new trick`, `A farmhand or shepard/ranch hand is juggling. She's not passing the hat or anything, she is bored, standing next to a wagon. To a trained eye she is self-taught, and can do columns, cascade, and reverse cascade. Her older sister sits in the wagon, minding the horse pulling it. The wagon sits outside a post-station. The wagon has shovel and pickaxe heads and bundles of appropriately sized wooden staves in the back of it.`, `A small group of people have placed a mug on a bench and are attempting to throw rocks into it from increasingly longer distances.`, 
+        `A father is lecturing his child about having warned them about the sharp rocks and slick footing as the child is wiping away tears with a bloody gash on their leg as the dad wraps the leg in bandages.`, `A small cluster of merchants are leaving their office and undoing their coats and ties as they step out into the hot air of the day.`, `The local dockmaster cheerily walks by holding a fishing set and tackle.`, `The herbalist tends to their small garden taking deep breaths of every crop therein before and after trimming.`, `A nobleman attempting but failing to nonchalantly exit the home of a prostitute. He quickly tries to hide his face from anyone making eye contact with him. Smells of liquor and cheap perfume.`, `Two boys walking down the street. One steps in a pile of dog poop. The other boy laughs at his misfortune before stepping into a much larger pile of horse poop a few steps later. The first boy quickly turns from scowling to laughing hysterically at the second boy.`, `A cat licking the ear of a dog that is lying outside the door to a shop.`, `A goat standing inside a small pen. A puppy wiggles under the fence and begins nursing from the goat’s teat.`, `A very lovable dog approaches your party wanting to be petted. Roughly tries to sniff the crotch of each member before urinating on anyone with any elvish heritage.`, `A little girl playing with her dollies acting out an argument she apparently heard between her parents.`, `An old woman approaches your party who opens her coat and offers to sell various items of “fine, expensive jewelry”. All items are either made from wood, string and garbage or are completely imaginary. She spits on the party when they refuse to consider her wares.`,
+    ]
+    printFrom(sceneArray, 3,"Scene")
+    printFrom(sceneArray2, 2,"Scene")
+};
 function cat(){
     
     let size = [
@@ -120,8 +176,7 @@ function cat(){
         "scratching", "hissing", "purring", "climbing trees", "climbing walls", "catching mice", "catching fish", "catching birds", "avoiding you", "ignoring you",
     ]
     document.getElementById("Cat").innerHTML =  `You see a ${searchArray(size)} ${searchArray(color)}, with ${searchArray(eyes)} and ${searchArray(markings)}. The cat was bred to ${searchArray(bredTo)}, enjoys ${searchArray(favFood)}, typically has ${searchArray(habits)} and is especially talented at ${searchArray(talent)}.`
-}
-
+};
 function randomHostAndHook() {
     //HOST AND PLOT COUPON ---------------------------------------------------------- 
 
@@ -200,8 +255,7 @@ function randomHostAndHook() {
 
     document.getElementById("Host").innerHTML = returnHost() + " " + findPlot();
     //console.log(returnHost() + findPlot())    
-}
-
+};
 function npcBuilder() {
     function findRace() {
         var races = {
@@ -232,8 +286,7 @@ function npcBuilder() {
     let uniqueFeature = []
 
     return `${searchArray(gender)} walks up to you and`
-}
-
+};
 function wisdom() {
     let wisdom = [
         `You will not be punished for your anger; you will be punished by your anger.`, `In the end, it’s not the years in your life that count. It’s the life in your years.`, `Truth is truth. How you deal with it is up to you.`, `Hero’s are no braver than an ordinary man, but he is brave five minutes longer.`, `Add life to your days, not days to your life. Life is either a daring adventure or nothing. It is not death most people are afraid of. It is getting to the end of life, only to realize, that you never truly lived. Some beautiful paths cannot be discovered without getting lost.`, `Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.`, `We don't get to decide what weighs on our souls, but it is our responsibility nonetheless`, 
@@ -257,8 +310,7 @@ function wisdom() {
 
     let output =  npcBuilder() + ' says, "' + searchArray(wisdom)+`"`
     document.getElementById("Wisdom").innerHTML = output
-}
-
+};
 function omens() {
     let omens = [
         `Beware of the blinding red light. If you see this light, you must flee. It will only bring you death!`, `You will find the answer to a long, mysterious riddle in your family bloodline buried between two oak trees, west of the village you grew up in.`, `A path of death lies in your wake.`, `Greed is a poor man’s compass, and I see gold and riches in your future.`, `A single wolf is slaughtered by many enemies that surround it. Let this be a warning sign of danger that is preventable by the pack.`, `The truth will come from a child’s toy. The lie will come from a weapon.`, `You must drink of the poison well and eat of the spoiled pantry.`, `Follow the flight of birds, never in winter, always returning.`, `A song contains a wish. Only the name will answer.`, `The mother has disguised herself. Her babe is lost and will not return. She will nurse no other.`, `The gears turn long after the machine has been broken. He who built it cannot mend it. He who holds it cannot carry it. He who finds it cannot speak it.`, `Gaze through the cracked window, and only then will you see clearly.`, `Beware the men with gills. Speak not to the sea or the southern wind.`, `Beware the snake’s venom, not its bite.`, `Travel five days with the silver star at your heels, then cross the raging river. There you will come to realize your true self.`, `The light will be in the shadowest darkness.`, `Not all the frogs are in the pond, beware of them.`, `One for the fire, two for the clouds, and three for the knights.`, `Don’t trust the song of the birds.`, `Cloak in the water. The man is crying. Let the leaf falls and everything will be fine.`, `For one wish to make, it’ll be more wish to crumble.`, `In the high plain there’s a dark moon. Don’t follow the light.`, `When the dawn will come at the birthday of the mother, rats and snakes will devour all hopes.`, `Near the montains, there is a grey falcon. Look at the eyes, and you’ll die. Look at the tail, and you’ll be rich.`,
@@ -277,8 +329,7 @@ function omens() {
 
     let output = npcBuilder() + ` ${searchArray(freakArray)}, and they say "`+ searchArray(omens)+`"`
     document.getElementById("Omen").innerHTML = output
-}
-
+};
 function rumor(){
     function single(){
         let singleSubject =[
@@ -329,8 +380,7 @@ function rumor(){
 
     let output = npcBuilder() + ` says nervously, "` + searchArray(storyTemplate) + `"`
     document.getElementById("Rumor").innerHTML = output
-}
-
+};
 function prophecy(){
     let beginning = [
         "when the Rite of Annihilation is performed during a total planetary alignment.", "if the majority of living souls on the planet pray for it.", "when human civilization achieves the goal for which it was originally designed by entities beyond comprehension: concentrating platinum into an easily harvested form.", "with the first and final casting of the spell Power Word: End.", "when the angels of justice finally manage to argue past their deadlock with the angels of mercy for the destruction of the world.", "when an emperor unites all the kingdoms of the world under one crown and decrees it.", "when the old gods are unchained from their chthonian prison.", "when the Gloaming Horn is blown with enough force to topple castle walls.", "if the four ur-temples at the corners of the earth are desecrated.", "under conditions lost to mortal knowledge.", "if ever the gods’ supply of spilled blood and sacrifices wavers.", "when the last elf fades from the world.", "when the fruit of the Tree of Anti-Life is fed to a would-be messiah.", "in order to censor the spread of an ultimate cosmic secret.", "when an act so vile is committed that the universe rejects itself.", "when one of the thirty-six truly righteous people in the world is made to believe that they are what they are despite their deep humility.", "at the time predetermined at the world’s creation. Manipulating the golden Doomsday Clock might accelerate or delay this inevitable date.", "when the three pieces of the End-Bringer’s Blade are reunited.", "when the seal at the bottom of the Tomb of Worlds is broken.", "when the Questing Beast is caught and killed by an unworthy knight."
@@ -354,6 +404,6 @@ function prophecy(){
 
     let output =  npcBuilder() + ` in a ${searchArray(voice)}, they say,` + `"Doom is coming, you'll see it ${searchArray(beginning)} Beware ${searchArray(proponents)} Keep watch for ${searchArray(sign)} This will be the end, ${searchArray(doom)} And for those who survive, ${searchArray(aftermath)}"`
     document.getElementById("Prophecy").innerHTML = output
-}
+};
 
 

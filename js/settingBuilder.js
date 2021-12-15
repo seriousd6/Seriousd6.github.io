@@ -6,17 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 function variableEvent(array, number) {
     let chance = rollDice(100)
     if (chance < 50) {
@@ -27,13 +24,10 @@ function variableEvent(array, number) {
         return searchArray(array[number]) + ' '
     }
 };
-
 function shuffleSlice(array, number) {
     return shuffle(array).slice(0, number)
 
-}
-
-// convert numbers to word form
+};
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
@@ -82,14 +76,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-/*############################Page Scripts#########################################*/
 function findTown() {
     let mainFeature = [
         'the town square', 'a water well', 'a bonfire', 'an open market/bazaar', 'a statue/shrine',
@@ -117,7 +111,6 @@ function findTown() {
     let output = "In the center of the town you notice " + searchArray(mainFeature) + " and " + searchArray(landmark) + ". While on your way to where the town can host you, " + searchArray(lodging) + ", you smell food... it is coming from " + searchArray(food) + ". There are a few shops in town, a general store, a " + searchArray(shop) + ", and a" + searchArray(specialtyShop) + ". The town's economic touchstone was/is " + searchArray(economicTouchstone) + "."
     document.getElementById("Town").innerHTML = output
 };
-
 function findThePeople() {
     let character = [
         "martial", "urbane", "faithful", "agrarian", "reserved", "mercantile", "peaceful", "decadent", "erudite"
@@ -172,7 +165,6 @@ function findThePeople() {
     let output = "This community is known for it's " + searchArray(character) + " citizenry, as well as for " + searchArray(knownFor) + ". They are governed " + searchArray(governance) + ". I've also heard that " + searchArray(customs) + '.'
     document.getElementById("People").innerHTML = output
 };
-
 function findResources() {
     let food = [
         "pelts/game (rich ecosystem)",
@@ -236,7 +228,6 @@ function findResources() {
     let output = "This community " + pickFoodOrLuxury() + " Regarding the main resource, it is " + searchArray(prosperity) + " Getting the material is " + searchArray(hazard) + " Also, " + searchArray(interesting)
     document.getElementById("Resources").innerHTML = output
 };
-
 function findCorruption() {
     let front = [
         "drug den", "bar", "marketplace", "racetrack", "gambling den", "regional 'philanthropic' organization", "brothel", "arena",
@@ -256,7 +247,6 @@ function findCorruption() {
     let output = "There is corruption in the " + searchArray(front) + ". It is typically frequented by " + searchArray(customers) + ", but it is " + searchArray(owner) + ". I heard that " + searchArray(uniqueFeature) + ", but I think you should check it out yourself."
     document.getElementById("details").innerHTML = output
 };
-
 function findLegalStructure() {
     let setting = [
         "barracks/guardhouse", "customs house", "guildhall", "prefect/sheriff's office", "local military order", "noble's court", "temple", "elder's abode",
@@ -277,7 +267,6 @@ function findLegalStructure() {
     let output = "The legal structure of this place is centered around the " + searchArray(setting) + ". They offer help " + searchArray(helpfulness) + " The leader is " + searchArray(leader) + " Curiously, I've heard that " + searchArray(quirk)
     document.getElementById("details").innerHTML = output
 };
-
 function findRumor() {
     let uniqueFeatures = [
         `there is a unusually large concentration of sky iron (meteoric iron) in the nearby hills`, `that in ancient times, these lands were flooded with lava from the nearby volcano. Today, the volcano lies silent, long since extinct, fertile soil is plentiful, and signs point to the possibility of veins of adamant (the main component of adamantine) underground`, `that the water from the lake is not only extraordinarily pure, it contains minerals that help to promote good health`, `that the nearby caves contain crystals made of concentrated magic`, `that there is a dangerous portal to yggdrassil (built to keep the baddies from comin out)somehwere nearby`, `that there is an alchemy ingredient only farmed here... like miniature bullette farms for their unfertilized eggs to make an omelette of digging giving you a burrow speed of 5' or 10' with a pick or shovel`, `that self aware water weirds gather fish for the nearby gnomes who then buy water from other sources with the fish money to feed the water weirds. They were influenced by the gnomish goodness long enough to change their attitude`, `that the hills around and in the village are actually giants’ skeletons, long since grown over in a graveyard forgotten`, `that there is a giant slab of rock. If the slab comes down the whole city comes down with it one building at a time`, `that there is an abandoned cursed royal palace which has the corpses of the royal family and the previous king inside. People call the city the “dead capital” because of this`, `the town has a giant sleeping monster under it, with parts of its claws, feet, mouth and tail in different underground places of the town (abandoned houses basements, sewers, etc...)`, `there is a shrine to an unknown god, that gets regular blessings and sacraments`, `there was an animal that saved a child from a lake, and the village was the original settlers who protected the animal out of respect`, `there are some unique flowers here that make a honey that had unique properties`, `the city is in a bio-dome/micro climate`, `this is a highly magical city that binds underneath a sleeping tarrasque - stolen from somewhere else`, `the village is protected by an invisibility bubble in the middle of a forest`, 
@@ -297,7 +286,6 @@ function findRumor() {
     ]
     document.getElementById("details").innerHTML = "Rumors of this town say " + searchArray(uniqueFeatures) + '.'
 };
-
 function findShop() {
     let type = [
         "bank, or another sort of financial institution", "smithy or manufactory", "drover/caravansary", "kiln/glassworks", "university or other institution of learning", "hospital or some sort of healer", "a crafter such as a tailor or haberdashery", `an artist, such as a painter, sculptor or poet${searchArray([", there is a patron.", "."])}`,
@@ -314,7 +302,6 @@ function findShop() {
     let output = `Your party comes upon a ${searchArray(type)}, and it looks as if business is ${searchArray(prosperity)} Upon further investigation the party can find out that ${searchArray(owner)} There is a rumor that ${searchArray(rumor)}`
     document.getElementById("details").innerHTML = output
 };
-
 function findPrison() {
     let type = [
         "bars, stones, cells and blocks. a typical penitentiary.", "bars, stones, cells and blocks. a typical penitentiary.", "bars, stones, cells and blocks. a typical penitentiary.", "somewhere desolate and isolated, perhaps the side of a mountain or the endless expanse of the steppe. no bars are necessary because there's nowhere to go.", "a slum or segregated area of either an existing city or structure, or perhaps one now given over entirely to the purpose. The area is walled off and the perimeter guarded.", "exile. Prisoners are dropped off on some (supposedly) uninhabited island. They're likely still under a watchful eye, but it is much smaller than it otherwise would be.", "this place is more akin to a religious community than a true prison. Prisoners are enrolled as initiates and are required to go through certain rituals to be released.", "the prison is a labor camp, perhaps prisoners are forced to work at various crafts, farm or they're simply on a chain gang.",
@@ -349,7 +336,6 @@ function findPrison() {
     let output = `There is a prison nearby... ${searchArray(type)} Most know that ${searchArray(prisoners)} The guards ${searchArray(guards)} If you dare venture you may be able to find someone who can be considered ${searchArray(help)} ${variableEvent([`Also, rumor is that a highly notable criminal is serving a sentence here right now: `+ searchArray(namedPrisoners)])}`
     document.getElementById("details").innerHTML = output
 };
-
 function findPresence() {
     let group = [
         "some veterans", "some rebels", "some bored gentry", "some foreign invaders", "some cultists/fanatics", "the indigenous population", "a criminal gang", "some government oppressors",
@@ -366,7 +352,6 @@ function findPresence() {
     let output = `The people here report that they are being harassed by ${searchArray(group)}. They are ${searchArray(tactic)} If you can get one to talk, you will find they are here to ${searchArray(purpose)} Looking into this may be to your benifit because ${searchArray(specialty)}`
     document.getElementById("details").innerHTML = output
 };
-
 function findCult() {
     let type = [
         "based around a single charismatic individual.", "based on a mainline faith, pushed to extremes.", "of a new faith or mystery, perhaps from a far away land or inspired locally.", "that is hereditary in nature, passed along family lines or just a single gender.", "that keeps to the old one(s).", "that is also a secret society, or another form of cryptic organization.", "that is decadent and listless, the members of this cult are in it for the thrill.", "that is a doomsday cult, these folk believe that the world is ending soon, if not any day.",
@@ -384,7 +369,6 @@ function findCult() {
     let output = `There are signs of a cult here ${searchArray(type)} Digging deep enough one could find that the cult's goal is ${searchArray(goal)} The membership of this cult is ${searchArray(membership)} and they operate ${searchArray(behavior)}`
     document.getElementById("details").innerHTML = output
 };
-
 function findSecretSociety(){
     let leadership = [
         "a council who gain their seats by virtue of heredity", "a council who gain their seats by virtue of experience", "a council who gain their seats by elections", "a dangerous megalomaniac", "a femme fatale", "an altruistic knight", "a dashing rogue", "a religious zealot", "a wise old priest or mage", "a celebrated war hero", "a wealthy merchant or noble", "a fugitive from justice",
@@ -424,7 +408,6 @@ function findSecretSociety(){
     let output = `There is a shadow organization here led by ${searchArray(leadership)}, who champions ${idealChoice[0]+" and "+idealChoice[1]} with the goal to ${searchArray(goal)} Their symbol is a ${colorChoice[0] + " and " + colorChoice[1] + " " + searchArray(symbol)}. The members of this organization, consisting of ${searchArray(membership)}, pursue their tasks ${searchArray(behavior)} If two members were to meet they would identify each other in the following way: ${searchArray(sign)} The most common meeting place is ${searchArray(gatheringPlace)} If one member were to be captured they would be able to provide information about ${searchArray(knowledge)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findOutlaws(){
     function poachers(){
         let animal =[
@@ -495,7 +478,6 @@ function findOutlaws(){
     let output = `There is a group of outlaws nearby whose modus operandi is ${searchArray(business)}. Their leader is ${searchArray(leader)}, identified by ${searchArray(leaderQuirk)}, whose goal is ${searchArray(goal)}. The group consists mostly of ${searchArray(membership)} weilding ${searchArray(weapons)}, these outlaws are well respected by ${searchArray(respectedBy)}. They meet at ${searchArray(meetingplace)} and they identify eachother using their symbol, the ${searchArray(colors) + " " +searchArray(symbol)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findGang() {
     let main = [
         `distributing ${searchArray(["smokeleaf", "hallucinogenic mushrooms", "sleepysalt (a downer)", "sharpsugar (an upper)"])}`, "running heists of and/or fencing stolen gems and precious metals", "petty theft, burglary, and pickpocketing", "assassinations that look like accidents or that frame someone else", `running ${searchArray(["exotic", "low-class", "high-class"])} brothels`, "shaking down legitimate local businesses and/or city officials", "serving as muscle for shady merchants and/or brothel-keepers", "holding up outgoing ships or wagons",
@@ -536,7 +518,6 @@ function findGang() {
     let output = `There is a street gang led by a ${searchArray(leader)} whose goal is ${searchArray(goals)}, they are well respected by ${searchArray(respectedBy)}. Their hideout is ${searchArray(headquarters)} and to get there find the man with ${searchArray(leaderTrait)}. Their recruitment efforts focus on ${searchArray(recruiting)}, and all members share a common style of ${searchArray(clothing)} with a ${searchArray(colors) + " colored " + searchArray(symbol)} symbol on it. Members are equipped with a ${searchArray(weapon)} and are known for ${searchArray(tactics)} in fights.`
     document.getElementById("details").innerHTML = output
 };
-
 function findHoliday(){
     let type = [
     "religious, explicitly performing rituals and celebrations in regards to a faith lasting", "civic, sponsored by or in celebration of the prevailing government or society", "cultural, a sort of blend of civic and religious holidays, cultural celebrations tend towards jovial atmospheres and often draw upon local folklore or legend, celebrations go on for ", "commemoration, set aside for mourning or celebrating some grand event", "celestial, celebrating or noting something like an eclipse, lunar cycle, comet or similarly sidereal event", "seasonal, focusing on the passage of one set of weather patterns for another, festivities last", "environmental, coinciding with the return of some plant or animal to the area, celebrations last"
@@ -553,7 +534,6 @@ function findHoliday(){
     let output = `There is a local holiday, ${searchArray(type)} for ${searchArray(time)}. Celebrants consist of those who ${searchArray(observance)}. The celeration typically involves ${searchArray(practice)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findTreasure() {
     let why =[
     "it was an accident, a shipment lost to random chance or calamity for some reason it was never reclaimed", "a noble family, displaced by a revolt or disaster, hid their secret somewhere only they could find it", "a group of raiders or pirates, storing a score until it was safe to retrieve it", "members of a religious minority, fleeing persecution hid their posession from their pursuers", "an extremely powerful figure, such as a culture hero or particularly skilled spellcaster had a personal stash", "the treasure was part of a tontine or related to the retirement of the members everyone died before anyone could retrieve it", "the society surrounding the hidden treasure collapsed, and its location was forgotten", "the treasure was important in some way -- perhaps it was the site of votive offerings, or the location of a guild's vault -- and it was guarded, while most of it's sentinels have died or vanished, some may still be guarding it",
@@ -571,7 +551,6 @@ function findTreasure() {
     let output = `There is a rumor of a local treasure... the rumor goes "${searchArray(why)}." Finding the treasure will be hard enough, the map is ${searchArray(form)}. The treasure is hidden ${searchArray(where)}. The prize is ${searchArray(what)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findDisaster() {
     let type = [
     "an invasion, whether in the form of bandits, a foreign foe or even something as pedestrian as locusts or weevils", "plague, deadly enough that healing magic has no means to arrest it", "a natural disaster, such as an earthquake, tsunami or volcanic eruption", "climate related disaster, such as an unusually long and intense rainy season, or a parching drought", "a weather related event, such as a tornado, hurricane or wild fire", "an explicitly magical event, such as a sourceless tune which forces listeners to dance or the dead beginning to rise from their graves", "blight and pestilence it leads to the the death of any crops and livestock which are afflicted", "a bizarre and fortean event, such as a rain of frogs or the waters within a river or lake turning to blood",
@@ -591,7 +570,6 @@ function findDisaster() {
     let output = `This community is dealing with a disaster, ${searchArray(type)}, because ${searchArray(cause)}. This has impacted ${searchArray(damage)}, the local reaction is ${searchArray(impact)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findMilitia() {
     let type = [
         "light infantry, trained to do battle loose-order and to fight as raiders, scouts and skirmishers they are equipped with a mix of ranged and melee weapons", "heavy infantry, troops meant to fight in pitched battle and in line, these folk are equipped with the heaviest weapons and armor that they can afford", "light cavalry possessed of fleets mounts and raged weapons these troops are talented marauders and scouts and will eagerly run down any retreating enemies", "heavy cavalry, meant to shatter the enemy with brutal charges these mounted warriors are heavily armed and armored, with mounts large and powerful enough to carry them", "a siege train, which includes transports, specialists and ammunition these could take the form of cannon, rams, sappers or even stranger things", "ranged troops, whether they are equipped with bows, crossbows or firearms, these soldiers will do their best to stay far away from the enemy and pepper them with missiles", "privateers, using whatever kind of vessel is appropriate for the setting most commonly this means a sea-going ship, but this could also mean a river vessel or even something more exotic like an airship", 
@@ -611,7 +589,6 @@ function findMilitia() {
     let output = `There is a local militia led by ${searchArray(leader)}. The force is ${searchArray(amount)} of ${searchArray(type)}. They are ${searchArray(details)}.`
     document.getElementById("details").innerHTML = output
 };
-
 function findNobility() {
     let tier = [
         "ancient and well-respected by all houses, great and small", "ancient and greatly diminished in standing from what it once was", "old with the respect of many houses, great and small", "old and struggling to maintain respect of other houses", "old but often overshadowed by other houses", "newly raised up to the nobility",
@@ -638,11 +615,8 @@ function findNobility() {
     let output = `There is a noble house in this community, ${searchArray(tier)}, identified by their heraldry of the ${searchArray(color) + " "+ searchArray(symbol)}, and known for promoting ${chosenIdeals[0] +" and " +chosenIdeals[1]}. Their hidden goal here is ${searchArray(houseGoal)}. This is a small part of the family, with the trunk being in ${searchArray(seat)}. ${searchArray(famousMember)} known across the region came from this family!`
     document.getElementById("details").innerHTML = output
 };
-
 function rollTown() {
     findTown();
     findResources();
     findThePeople();
 };
-
-findNobility()

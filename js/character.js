@@ -6,17 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 function variableEvent(array, number) {
     let chance = rollDice(100)
     if (chance < 75) {
@@ -27,8 +24,6 @@ function variableEvent(array, number) {
         return searchArray(array[number]) + ' '
     }
 };
-
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -77,13 +72,13 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
-
-/*############################Page Scripts#########################################*/
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
 //RACE |CLASS | DESCRIPTION GENERATOR-------------------------------------------------------------
 function buildClass() {

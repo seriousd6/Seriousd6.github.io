@@ -6,18 +6,14 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -66,14 +62,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-/*############################Page Scripts#########################################*/
 //Class
 function paladin() {
     let paladinEncounter = [
@@ -88,7 +84,6 @@ function paladin() {
     ]
     document.getElementById("Class").innerHTML = searchArray(paladinEncounter);
 };
-
 function monk() {
     let monkEncounter = [
         "A rival monastery extend a challenge: their greatest fighter against yours.", "Your mentor has gone missing, leaving no note and no one knows where they have gone. All that is left is a map and a powerful weapon.", "A small animal seems particularly interested in the PC - it will call to the character and try to get them to follow it - for what purpose, good or ill?", "The PC’s monastery is burned to the ground - a rival claims responsibility, but this is a lie.", "The PC begins to dream about the forging of a great weapon. Each night, the dream advances, through a long and lengthy process. When the dream finally finishes, a location will appear in the character’s mind.", "A lower-level monk from the same monastery challenges the PC to a level-duel. The winner advances a level, and the loser drops a level. (Ah, AD&D, I miss you…)", "Two rivals of the PC’s monastery cooperate in an ambush, stealing away the entire student class for the year. Their demands are outrageous and one of the rivals’ Elders plans to betray everyone in exchange for power from a mass-sacrifice of the kidnapped.", "The PC’s leader/mentor/elder has become possessed by an evil force, and the PC is charged/framed on false charges and is exiled from the monastery. Forever after, the PC will be hunted by his former allies.", "A stranger comes to the monastery, with a wild story - parts are true, and parts are untrue, but what is inevitable is that the monastery is about to be forever changed.", "A rival monastery is assassinating all the elders of all the other clans. The PC’s clan is one of the last untouched. There is a demonic force behind all of this violence, and a larger plan.", "A nearby town that has a rocky relationship to the monastery says they wish to celebrate the monastery with a holiday, to which all of the residents if the monastery are invited. Some believe it is some sort of trap, others are less certain.", "A pair of monks- one blind, the other deaf- work together to explain something is attacking their home and they need the PCs help.", 
@@ -99,7 +94,6 @@ function monk() {
     ]
     document.getElementById("Class").innerHTML = searchArray(monkEncounter);
 };
-
 function bard() {
     let bardEncounter = [
         "A local noble is having trouble getting his daughter to sleep. The bard will help with a lullaby and let the noble finally get a good night's rest… or else.", "Your instrument needs to be restringed. Unfortunately the shop is out of catgut. The strongest of which is made from the stomach of a monster that can be found in a nearby region…", "A book of local lore is discovered that touches on bits of epic poems the bard is familiar with. It ends abruptly, but not before giving clues as to the location of these events happening.", "A rival in town is spreading tales of his adventures. The problem is they sound exactly like the party’s’ escapades", "An archaeologist has discovered a tomb. The bard’s assistance is required to gain access due to their knowledge of the civilization that constructed it.", "An enemy of the state reaches out to you to help write their side of the story, with the hope of gaining some sympathisers to their cause.", "You are recruited to play an event for a local delegate that has come to town, but not only that, you are tasked to spy on the group and report back anything you may happen to overhear.", "Your act has been discovered and a small patron bidding war is taking place. If you don't overplay your hand..", "You are offered a serious payday to organise a smear-campaign against an important local.", "Something you lied about recently has gone around, has grown into rumour, and is causing trouble.", "Rumours start floating around that the grave of a famous bard was robbed and found empty. Flamboyant in life they set up some rhyme-based scavenger hunt for their magical instrument(s).", "A contest is held for a royal wedding/coronation. Over 200 performance artists will be competing over the 20 available positions during the event, and gain a reputation for life.", "Somebody has started a smear campaign against an important NPC (or PC, even better) and you are (hired) to counter it, and find the source.", "The luthier/instrument maker of this century has gone missing on a trip. Finding them could be a grant opportunity.", 
@@ -111,7 +105,6 @@ function bard() {
     ]
     document.getElementById("Class").innerHTML = searchArray(bardEncounter);
 };
-
 function cleric() {
     let clericEncounter = [
         "A ghost of a child is following the party. It doesn't speak a language, but seems to have an important message that needs to be deciphered. The message is written in Celestial/Infernal.", "A corpse of a Temple messenger is found on the side of a beaten road by the party. The messenger was clearly killed and his bags carry a royal seal, now broken.", "The next time the PC prays to their deity, a different voice answers.", "Your deity tasks you to write and publish a new script to add to the holy text. You need to find the subject first though.", "Your PC finds an ancient version of the holy symbol of their Deity. Interestingly it combines two symbols, a combination which sparks many questions.", "For the next year all the deities are locked into their Avatar forms and forced onto the Prime Material Plane.", "An enemy perishes, and on their deathbed their last breath are a final request. Something compels the listener to oblige, and a branded sigil of a deity’s symbol appears on their arm. It is not necessarily the symbol of the PC’s deity.", "A new deity has appeared, and they are attempting to steal domains from your PCs deity.", "A divine messenger has reached you. You are chosen to share knowledge with another Deity's following. This is a test.", "Omens start showing up all over the place, predicting the heresy of several key NPCs that seemingly have no relation to one another.", "The PCs holy symbol starts to disintegrate slowly over the course of days, without explanation, and nobody is answering, the magic slowly growing weaker as well.", "A stranger offers proof that the deity the cleric worships isn’t who they appear to be.", "A priest learns the deity is taking the day off tomorrow. No prayers will be answered, no judgements will be cast on their follower’s actions.", 
@@ -121,7 +114,6 @@ function cleric() {
     ]
     document.getElementById("Class").innerHTML = searchArray(clericEncounter);
 };
-
 function wizard() {
     let wizardEncounter = [
         "A relative has sent a letter saying they have come into possession of a spellbook that appears to have some stringent protections enchanting it, preventing it from being opened. The letter begs the PC to come to assist.", "The local Wizards Guild has been robbed and many local spellcasters have died. The PC is tasked with recovering what valuables they can from the thieves, who left behind 2 tantalizing clues.", "An unknown Wand (of Wonder) appears in the PC’s belongings. The wand is fully charged (100 charges) and when the PC grabs it, it will reveal its activation (command) word.", "An Oblex has secretly taken up residence in the PC’s tower/base/camp and has targeted the PC, and will continue to do so unless discovered or destroyed.", "A high-level Rogue has stolen the PC’s spellbook, leaving the PC with scrolls only. A ransom demand is left demanding a very high price for its return.", "A rival Wizard has entered the region and has been spreading rumors that the PC is a fraud and demands a duel.", "There are rumors of an ancient and powerful scroll in the area. It may or may not contain the spell that the PC wants in their spellbook. There’s a 10% chance the scroll is cursed.", "The PC returns to their tower/base/camp, only to discover that someone else has cast Guards and Wards on the location.", "A Bag of Holding is found in the PC’s belongings. Inside is an old rival, bound and gagged, along with a note that says, “Repaying a very old debt.” The rival is murderous with anger.", "A rival Guildhouse has declared itself in the city the PC is currently in. It has declared war on all city mages who do not join them. Mage/Assassins are soon sent after all current local wizards.", "A tinker says they have a lost Cantrip for sale. The Cantrip is legitimate, and part of an entire lost set, but the Tinker wants a bloodprice. If the PC agrees, this blood will later be sold to a hag for some nefarious purpose.", "An anonymous “admirer” (actually a bitter rival) sends the PC a stylish Hat for their birthday. The hat is a cursed Hat of Silence.", 
@@ -133,7 +125,6 @@ function wizard() {
     ]
     document.getElementById("Class").innerHTML = searchArray(wizardEncounter);
 };
-
 function druid() {
     let druidEncounter = [
         "A prey species is nearly extinct.", "A predator species is nearly extinct.", "A harmful mutation is affecting a local species.", "A beneficial mutation is affecting a local species.", "Birth rates of a local species has fallen almost to zero.", "Primary habitat for a local species is being destroyed by weather.", "Locals are polluting the waterways.", "Chance of a wildfire is high.", "Wildfire has started. The winds will drive its course.", "Locals are overfishing the local waterways.", "Locals are overhunting the local wildlife.", "Chance of a flood from a local waterway is high.", "Severe rain has triggered a flood.", "An invasive species of fungus is destroying a habitat.", "An invasive insect species is destroying a habitat.", "The local trees are suffering from a blight.", "The local crops are suffering from a blight.", "A virulent biological disease is affecting the local population.", "A virulent biological disease is affecting the local wildlife.", "A series of violent earthquakes affect the local area.", "Loggers are taking too much timber.", "Miners are disrupting local habitats.", "Construction workers are destroying habitats to build a road.", "Poachers are taking too much game.", "A magical disease is affecting the local wildlife.", "A magical disease is affecting the local population.", "Free-Willed Undead have been turning the local wildlife and population into new Undead.", "A mated pair of Ankheg have destroyed several local farms.", "A migrating swarm of Stirge have settled in the area for a few days to rest and feed.", "A locust swarm descends on the area and strips it of vegetation.", "Periodical cicadas emerge from the ground and begin breeding and seeking food.", "Recent storm has blown trees down all over the paths and roads.", "Local waterway is choked with treefalls and storm-swept brush.", "Local peat bog has caught fire. Choking, poisonous smoke threatens the area, and the threat of a wildfire is high.", 
@@ -154,7 +145,6 @@ function druid() {
     ]
     document.getElementById("Class").innerHTML = searchArray(druidEncounter);
 };
-
 function barbarian() {
     let barbarianEncounter = [
         "A group of settlers have arrived in the PC’s territory. They are peaceful, and seeking a place to make refuge after persecution from their homeland. They are hiding a monstrous secret.", "The PC receives a vision from one of the Ancestral Honored Dead, charging them with a Great and Momentous Task that will take them far from their homeland.", "The PC camps on a leyline, and is given horrid nightmares about the upcoming destruction of a Sacred Place. Time is short to avert the disaster.", "The PC experiences a trauma so severe that it creates a new Taboo for the PC.", "The PC is denounced by his tribe’s shaman, for purely political reasons, and forced into exile until they can clear their name.", "A local volcano has erupted, and the PC is tasked by their tribe to take an offering to the deity that dwells there, in an attempt to appease its wrath.", "The PC is haunted by one of their recently deceased relatives, who claims they were murdered, and wants the PC to enact revenge.", "The next animal the PC sees speaks to them through telepathy, and says that they have been sent as a guide, to lead them towards a mystery both baffling and deadly.", "The PC tribes totem animal appears to the PC - wounded and dying. Something is very wrong with the world.", "The party stumbled upon a relic - broken and battered. It belongs to a tribe that has not been heard of for generations and some claim no longer exists. The relic, by all rights, needs to be returned to its people.", "The party encounters a famed warrior, who offers to train the PC. The point of the training is because the warrior seeks a noble death from their trained equal.", "An entity from the beyond offers the PC the strength of their enemies upon defeat.",
@@ -165,7 +155,6 @@ function barbarian() {
     ]
     document.getElementById("Class").innerHTML = searchArray(barbarianEncounter);
 };
-
 function fighter() {
     let fighterEncounter = [
         "The PC gets a letter from an old friend, inviting them to join a warrior's guildhouse - there's a catch, however, and it may prove to be a moral dilemma.", "An ex-lover writes a letter to the PC begging them to come and help with a gang of thugs that has practically taken over their village. The letter is a lie, and part of a plot to kidnap the PC.", "A local militia has heard of the PC's reputation and asks them to lead their group against a pack of bandits that has been plaguing them.", "The local ruler has been recently installed after a coup and has ordered a contest be held to choose heraldry for the new kingdom - the PC is approached by a disgraced artist and asked to submit an entry on their behalf. The design is a sigil designed to assassinate the ruler.", "The PC passes by a fighting demonstration and sees a style they have never been exposed to before. If the PC stays to watch, the instructor notices their interest and asks them to stay back after the bout, at which time the instructor offers to teach the PC - for a steep price.", "The PC’s instructor/mentor has gone missing, leaving behind a series of cryptic clues and a timed warning.", "The PC is challenged to a duel by a child wielding an artifact thought lost to the world.", "A warlord or general needs to be talked down so he doesn’t instigate a battle. However, they will only talk to fellow martial experts.", "The PC has a dream of a legendary weapon/suit of armor and its exact location. However, the same dream has been sent to 3 other rivals - and they, and the PC, are all aware of this fact. The race is on!", "One day the PC’s armor starts complaining about its lack of polish and adornment. The armor is only awake for 3 days a month and has been asleep for decades. It doesn’t know what woke it up, but it is unhappy about its present condition.", "The PC’s grandparent was viciously wounded by a rabid beast three times its normal size. In their grandparent’s dying breaths, a promise was made to find and slay the beast.", 
@@ -178,7 +167,6 @@ function fighter() {
     ]
     document.getElementById("Class").innerHTML = searchArray(fighterEncounter);
 };
-
 function ranger() {
     let rangerEncounter = [
         `(Any) The next time the PC uses Primal Awareness, they discover that 1 (or more) type(s) of creatures are no longer able to be detected. Something (or someone) is using powerful magic to disguise their activities.`, `(Any) A messenger from a local ruler reaches the PC and delivers a job invitation - the ruler needs a Forester to oversee their lands and manage the wild resources in their territory. The job pays very well and if the PC agrees, upon arrival, the ruler has been assassinated. If the PC refuses the offer, the same events occur, but now the PC is a suspect.`, `(Any) At the next Foregathering, the PC trades news with an NPC ally they have not seen for some time. Something seems off about the NPC, however, and they mention an old shared memory with most of the details incorrect. The NPC may be having memory problems, or something more insidious is going on. DM's choice.`, `(Any) On a patrol, the PC notices one of their survival caches has been dug up. Upon investigating others, they find them all plundered. In the last one they check, they find a tiny silver arrow tipped with a poison known to be used by the Fey (specifically, Pixies).`,
@@ -194,7 +182,6 @@ function ranger() {
     ]
     document.getElementById("Class").innerHTML = searchArray(rangerEncounter);
 };
-
 function rogue() {
     let rogueMission = [
         "(Alchemy Easy) Go and pick up some basic reagents and return to the Guild without getting caught.", "(Alchemy Easy) Deliver a poisoned weapon without getting caught.", "(Alchemy Easy) Create a basic poison in quantity, and deliver it to a customer, get paid, and return without getting caught.", "(Alchemy Easy) Create a basic potion in quantity and deliver it into enemy territory. Return with the money.", "(Alchemy Easy) Create a previously unknown potion or potion in your skill level.", "(Alchemy Medium) Harvest intermediate reagents in enemy territory and escape.", "(Alchemy Medium) Create a previously unknown potion or potion in your skill level.", "(Alchemy Medium) Steal a shipment of enemy alchemical goods worth at least 500gp.", "(Alchemy Medium) Destroy an enemy's alchemical laboratory and escape", "(Alchemy Hard) Create a previously unknown potion or potion in your skill level.", "(Alchemy Hard) Successfully mix two advanced potions and get a favorable result.", "(Alchemy Hard) Create an advanced potion in quantity and deliver it into enemy territory. Return with the money.", "(Alchemy Hard) Oversee the successful application of at least 40 poisoned weapons with an advanced poison.", "(Alchemy Hard) Successfully reduce your creation time by 25%.",
@@ -222,7 +209,6 @@ function rogue() {
     ]
     document.getElementById("Class").innerHTML = searchArray(rogueArray);
 };
-
 function sorcerer() {
     let sorcererHooks = [
         `(All) The Sorcerer feels a mental "tug" in their mind of another person who has the same Source of magic as they do. They don't know how far away they are, but they will know when they get closer.`, `(All) The Source of the sorcerer's magic has died. They can feel their powers draining away. They must find a new Source (within 30 days).`, `(All) A friend of the PC has written a letter, full of frantic pleas for help - it appears that the friend has just had their Source awakened.`, `(All) A long lost magical object, once in possession of the PC's family (and attuned specifically for Sorcerers), has been found. The consequences for its discovery (in this day and age) could be catastrophic. The PC receives a message to return home.`, `(All) A new cabal of Spellhunters have been persecuting magic-users in the area. Word has reached the PC that they are being targeted next.`, `(All) The PC is haunted by dreams where they are being stripped of their magical abilities, and the ones who are doing it are the PC's family members. DM's choice if its true or not.`, `(All) Creatures from the Feywild have been drawn to the PC's "font of power" and want to steal it for themselves.`,
@@ -235,7 +221,6 @@ function sorcerer() {
     ]
     document.getElementById("Class").innerHTML = searchArray(sorcererHooks);
 };
-
 function warlock() {
     let warlockHooks = [
         `(All) The PC discovers that another Warlock with the same Patron has been actively working against the Patron's goals. The Patron has been blinded to this, through some powerful arcane means.`, `(All) While traveling, the PC feels the death of another Warlock with the same Patron, nearby. The murderers are still there (for the time being).`, `(All) The PC is challenged by another Warlock of the same Patron, who doesn't want any competition. This amuses the Patron, and allows it.`, `(All) Two Patrons are at war with one another. While it lasts, the PC will be able to detect any other Warlocks of the rival Patron within 1 mile. They will also be attacked periodically by Warlocks and their allies.`, 
@@ -249,6 +234,7 @@ function warlock() {
     ]
     document.getElementById("Class").innerHTML = searchArray(warlockHooks);
 };
+
 
 //Location
 function jungle() {
@@ -278,7 +264,6 @@ function jungle() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(jungleEncounter);
 };
-
 function swamp() {
     let swampEncounter = [
         "A week of heavy downpours have flooded the region, threatening villages and submerging most of the land.", "A band of Grippli has gone to war with another band, and their conflict has disrupted trade along a busy waterway.", "A Froghemoth (male) has entered the region, looking for a female to mate with. It is extremely aggressive right now.", "A pair of Green Hags have set up in the area, posing as herbalists, and their victims are used to fuel a ritual that stops them from aging. Their illusion magic is very powerful, aided by amulets that boost their spellcasting abilities.", "A Black Dragon, poisoned by far-off enemies, has crash-landed and is severely wounded. It will lash out with breath and tail strikes if anything approaches. It will first fall into torpor, and then die a year after that.", "A blight has caused the trees to lose their bark, making them susceptible to disease, which threatens the entire production chain of the local population.", "A monk has escaped into the swamp and is hiding from their pursuers. They will not trust anyone and attempt to disable any threats and flee further into the marsh.", "A patch of Giant Sundews have slowwwwwly crept their way towards a community, and will attempt to ambush & devour any who come to investigate.", "Something is killing off all the mangrove trees, and a blight has started to spread through the coastal fringes. There are whispers of a corrupted Druid in the area.", "Swarms of enlarged, biting flies are plaguing travelers. The source is the rotting body of an Aboleth in a nearby cove. The swarms will persist until the creature's body is destroyed.",
@@ -291,7 +276,6 @@ function swamp() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(swampEncounter);
 };
-
 function ocean() {
     let oceanEncounter = [
         "Tsunami!", "An Ocean Giant has claimed this part of the sea, and demands a stiff tribute from all vessels that pass through, over, or under it.", "Crab Folk (Brachya) are engaged in a war with a pack of Awakened Sharks, and this part of the sea is right in the heart of the conflict. Any vessels will be attacked by one (or both) sides.", "Waterspout!", "A Sea Druid has declared these waters off-limits to land-dwellers, and has taken great pains to make the area appear haunted, and will harass any trespassers.", "A clan of Sirens lays in wait among some rocky islands that offer the chance for vessels to replenish their water supplies. Many wrecks litter the sea floor here.", "A Kraken is asleep, and floating on the ocean surface. It has been asleep for many centuries, and groups of humanoids have constructed buildings on its surface. They worship it as a god, and regularly sacrifice lives to it.", "A pod of Whales is in the area to exchange information, introduce new calves to the pod, and rest and refresh before a long migration that is ahead of them. One of the whales is psionic, and curious about humanoids.", "A hulking wreck from a massive warship serves as the lair for a vicious pack of Lacedon, who will attempt to pick off lone watchmen, or swimmers, or small vessels and drag them down to serve as food.", "A Flotsam Ooze hunts these waters, and will be extremely difficult to drive off.", "A banshee haunts a rocky island, attempting to destroy any vessels that wander too close and feed on the drowning victims.", "A small island is home to a mysterious temple that houses a Sleeping Evil.", "A mass of floating sargasso has snarled the vessel’s steering equipment and the winds have died, leaving a becalmed area that stretches for nearly 100 nautical miles.", "Dire Barnacles have become attached to the hull of the vessel and will eat holes in it over the next 24 hours. They are difficult to remove and have a high Armor Class.",
@@ -315,7 +299,6 @@ function ocean() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(oceanEncounter);
 };
-
 function mountain() {
     let mountainEncounter = [
         "A rock-slide roars down just before dawn! The light of morning reveals a scene of carnage as half of the settlement is buried. The stones reek of sorcery, however, and some look...melted. This was no natural phenomenon.", "Hill giants, over 10 of them, stampede past the party, some close enough that they appear to be charging the group! Perceptive PCs note their panicked expressions, and any weapons in evidence are not readied for battle. They're fleeing from something...something big.", "Cattle, oxen, and even a few horses are being mutilated. If a PC manages a DC 20 Nature or Medicine check, they identify that no organs or meat was removed, just destroyed.", "Out-of-season storms cut off the local population for many weeks in the growing season. Famine and disease threaten to swamp these places and the PCs are trapped here.", "Forest fire!", "A clan of exiled Dwarves, forsworn by their people, has come into the region looking to make permanent settlement here. They are a cursed population, and bad things happen wherever they wander. The PCs catch sight of them entering their area.", "A drunken Hill Giant, a known local, has fallen asleep across the King’s Road again, stopping all trade traffic for many days. The PCs have either been asked to assist, or are themselves delayed by the incident.", "A strange new insect infestation has been causing houses and any wooden structures to collapse, no matter when they were built, or how solidly their foundation. This wood blight affects anything made of wood, and would-be rescuers have found their tools, weapons, furniture, and other goods succumbing to the same fate after touching the tainted ruins. This blight will spread.", 
@@ -340,7 +323,6 @@ function mountain() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(mountainEncounter);
 };
-
 function coast() {
     let coastalEncounter = [
         "The party finds a half-buried chest. Inside is the clue to a larger mystery.", "A group of Crab Folk have come to trade. They have goods unique to the land-dwellers usual offerings.", "A ghost ship appears off the coast every night for 7 days. If the ship is boarded, it disappears (with the party onboard) and reappears far away in the middle of a violent storm.", "A lightning storm creates a group of Fulger-Golems - metallic creatures that seek only destruction.", "Something is killing the local sea-life. Hundreds of dead fish and other sea creatures are washed up on the beach.", "A waterspout threatens the town/village/camp.", "A sea cave is discovered and, if explored, leads to an isolated branch of the Underdark that is home to creatures unlike the usual ones normally found.", "A sea festival is threatened by the appearance of a horde of Drowned Zombies, rising from the ocean waves.", "A massive sand castle appears overnight at a local beach. Locals say those who have gone to investigate have disappeared.", "A tsunami threatens to destroy the local town/village.", "A coral fortress has risen up out of the ocean in a local bay. Locals have reported seeing strange lights at night in the structure.", "An Aboleth has taken up residence in a nearby cove and is in the process of enslaving the locals.", "A contingent of Merfolk have appeared along the coast and have sent a diplomatic envoy to the nearest ruler, begging for help for a disaster that threatens their civilization.", "A pod of Awakened Dolphins shows up while the party is camped along the beach. They wish to bestow gifts and ask for help with a school of Awakened Sharks that are menacing them.", "A Tortle village has been destroyed and all evidence points to a local humanoid civilization behind the deed.", "A horde of Sea Spawn have raided the local town, dragging victims off to become enslaved by their masters.", "A Sea Hag has arrived on a storm-wracked ship, and has been luring victims to it, sacrificing some, and eating others.", "A Storm Giant arrives, demanding tribute.", "A Marid, stranded in the Prime Material Plane, has offered 'fabulous wealth' to any who can open a portal to the Plane of Water, allowing it to return home. The offer of wealth is a lie.", 
@@ -350,7 +332,6 @@ function coast() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(coastalEncounter);
 };
-
 function dungeon() {
     let dungeonHooks = [
         "A talking wolf in literal sheep’s clothes offers a wheel of cheese and a magical item for a handful of gold", "The ground crumbles beneath you revealing another level of the dungeon made of sand", "Glowing butterflies dance around the party gently resting on their shoulders. They seem harmless enough, but slowly they begin to drain away the party’s life force", "Introducing the Demon of Doors, each door leads you to a room full of, you guessed it. More doors! You can escape this room but only if you’re able to survive.", "A shrine flooded with purple liquid holds an important clue for an upcoming quest", "It appears this dungeon infested with monsters and ghouls is also home to a blind dog with incredible luck. Keep this ole girl around her luck might rub off onto you as well", "Shit! You’ve run into another group of adventurers who are looking for the EXACT same magic item. Each one mirrors a certain member of the party", "Creeping behind in the shadowed corners of the halls, a Goblin stalks the party. They are sketching portraits of all the members, thinking they are beautiful. But they are too embarrassed to admit it", "Impaled on a stalagmite, the skeleton remains of a warrior holds a valuable shield with a burdensome curse. Voices appear inside player’s heads if they attempt to dissuade them from looting", "Beyond some hanging moss a forgotten grotto lies in wait. Time does not move while players explore the remains"
@@ -370,7 +351,6 @@ function dungeon() {
     ]
     document.getElementById("Loc").innerHTML = searchArray(dungeonHooks);
 };
-
 function village(){
     let villageEncounters = [
     "An enormous bear stumbles around town wearing human clothing. They’re attempting to order drinks at the local tavern, but so far they haven’t had much luck", "You arrive early morning into a quiet little village. Unfortunately nobody is around to greet you because they have all been turned into candy", "A festival is taking place in the center of town. They seem to be celebrating a historical figure that looks oddly similar to someone in the party", "Dashing through the streets, a bandit has stolen a powerful magic artifact. Anyone they pass by are turned to stone. A hefty reward will be given to anyone who can catch them", "Hm? In your back pocket there’s a piece of paper with directions to somewhere in town. If asked about the location, nobody seems to know where it is", "While walking through the streets a child runs into the party at full speed, falling to the ground. They apologize profusely as they begin to collect their dropped goods. This includes a baby dragon", "Rumor: The guards in this town are not human, they never sleep. Most people speculate they are from another realm", "Enticing smells fill the air, there seems to be a cooking competition in town. And it looks like it’s not too late to sign up. Anybody know how to make a killer quiche?", "Rumor: Beneath the city lies an ancient tunnel leading to a thief’s lost treasure. But everyone is too afraid to look for themselves. When prompted on what is down there, people dance around the question", "Sentient vegetables rebel against the local chef. At first glance it seems to be a harmless prank, but anyone bit by the veggies begin morphing into vicious vegetables themselves", "Magic is outlawed in this district of town. Anyone who casts any spell begins to glow", "Little ducklings follow behind the party, quacking merrily. They are perfectly harmless but without their mother. Did somebody order 8 new beautiful children?", "Ghosts have driven out the living from the town leaving behind a literal Ghost Town. The Ghosts are actually quite friendly, too friendly", "Rumor: Grandma Crabapple, a sweet old lady who lives alone in her cottage up on the hill is actually a Doppelganger. Looks like we’re going to have to eat her famous cherry pie and get to the bottom of this mystery", 
@@ -391,6 +371,7 @@ function village(){
     ]
     document.getElementById("Loc").innerHTML = searchArray(villageEncounters)
 };
+
 
 //Generic
 function generic() {
@@ -417,7 +398,6 @@ function generic() {
     ]
     document.getElementById("Misc").innerHTML = searchArray(genericHook);
 };
-
 function kidsQuest() {
     let kidquestarray = [
         `"I don't think Daddy is Daddy anymore."`, `A dirty and disheveled street urchin, appears <8 years old approaches you, holding a small baby. “Do you wants ta buy my sis’er so’s I can buy food?”`, `"My imaginary friend won't stop hurting people.... He's standing right behind you. He says you're next."`, `A child had all his pocket money stolen by a local youth gang. He offers street information if you return the money.`, `"There's a boogieman in my closet..."`, `You promise a child to find his/her toy, which leads to you finding a Secret society of sentient toys (or whatever toy story plot you want to put into your game)`, `There’s a war between the boys and the girls factions in town and you can join either side or resolve the conflict.`, `Children slaves are revolting inside a mine and a kid is asking you to help them.`, `My doll doesn't like me anymore`, `An orphan traveling with a group of gypsies can’t find his most beloved companion, his jet-black cat.`, `I owe my life to the blacksmith - well whats left my life. Sure he saved me but a moment to late before the [monster] took my leg. He will save my life for free but won't make me a peg leg with out payment.`, `If I were a few years older, I would ask that girl out. I would shower her with gifts and riches and she would like me. She said if I got her gold she would leave town with me. Sarah is a beautiful girl who should get out of here as soon as it is safe. I need money for safe passage and to win her over.`, 
@@ -429,7 +409,6 @@ function kidsQuest() {
     ]
     document.getElementById("Misc").innerHTML = searchArray(kidquestarray);
 };
-
 function ghibliFinder() {
     let GhibliHooks = [
         "You find a magical scarecrow-true love's kiss will turn it back into a prince", "Certain townsfolk start turning see-through", "King of the Sea is summoning all of the jellyfish in the area to harvest them for a spell", "Spirit wolves rush into town. They grab the metalworker and drag him into the forest.", "Your father is an evil wizard, and he's back...", "Pirates arrive in town in disguise. They 're asking about a girl.", "A blue armored woman arrives on a flying skiff. She has a gas mask on.", "A young witch comes to town to make a name for herself", "A spirit is eating people in town. You can hear their screaming in the woods.", "A fighter plane lands right in front of the party, with the intent to kill.", "You remember a spell your grandmother taught you.", "Pirates lay an ambush in your home", "Tsunami.", "A baby is born and the party must name it.", "In your dream you are visited by a legendary warrior who shows you something great.", "Injured soldiers wash up in the river through town.", "Airships make a crash landing in a dangerous forest.", "A large spirit blocks and prominent path.", "Party guests are held hostage by pirates.", "Spirits sneak into your garden and plant seeds that will grow into magical plants.", "Library's burning and they need to get the books out.", "Beneath the river there is an underwater city built into the bank.", "An ancient mecha is awoken, too large for its own good.", "A wizard gifts you his old cottage. It's in the most beautiful meadow and dreadfully cursed.", "A dog starts following you. It may or may not be a polymorphed wizard.", "A brilliant light shines from the Inn, pointing into the clouds.", "The Wicked Witch of the Waste arrives in town.", "There are caves under the village, deep and old and ancient.", "Bombs. They are everywhere. A blitzkrieg.", "The Wicked Witch's henchmen are scouting the town", "A white dragon is hiding in town, disguised as a boy.", 
@@ -438,7 +417,6 @@ function ghibliFinder() {
     ]
     document.getElementById("Misc").innerHTML = searchArray(GhibliHooks);
 };
-
 function monster() {
     let monsterArray = [
         `The orc tribe is suffering from a terrible sickness, and there are rumors that the Shaman is actually the one responsible.`, `The tribe’s bravery pole has been stolen.`, `The chieftain believes that eating the heart of different creatures gives him their power. He asks for help in hunting a series of particularly dangerous creatures.`, `The Bloodmoon tribe and the Stormcloud tribe are engaged in a bitter conflict, but only by getting the two tribes to see eye to eye will the BBEG be thwarted.`, `A mysterious person approaches the party and offers them an obscene amount of gold to kill an orc chieftain and make it look like it was the responsibility of a different tribe.`, `A young orc is running away from the tribe and asks the party for help. He wants to go to the Mages College and become a wizard.`, `The tribe believes Wortsnaga is destined to be the next Eye of Gruumsh, but all he wants is to leave the tribe and become a bard. He offers to write an epic ballad about the party if they assist him.`, `A group of young orcs sent to gather firewood have gone missing.`, `The party is invited to participate in the Great Hunt, the one time of year where all the tribes gather together.`, `The tribe is hunting mammoths and invites the party to join them.`, `Mammoths stampede towards the orc encampment.`, `Human settlers are infringing on orc lands and tensions are rising.`, `The party discovers several orc babies abandoned in the wilderness by a tribe passing through.`, `The spirit of a dead orc warrior asks for help in being freed from the material plane and allowed to travel to Acheron to join Gruumsh’s Eternal Horde. He can only be freed by being defeated in honorable combat.`, 
@@ -448,7 +426,6 @@ function monster() {
     ]
     document.getElementById("Misc").innerHTML = searchArray(monsterArray)
 };
-
 function stronghold(){
     let strongholdEncounters= [
     "An old woman goes around, knocking at people’s doors in the middle of night. If welcomed, she leaves peacefully. If not given hospitality, she curses the homeowners in bizarre ways, such as 'you’ll be a beast and your family will be turned into cutlery until someone falls in love with you.' The peasants are scared of this clearly insane witch wandering the land, and beg the players to stop her.", "The keep was build on top of an old dwarven cemetery. Every new moon, the dead rise and a bunch of short skeletons and ghosts attack the keep cantina. They break barrels of wine and drink the content, devour every plucked chicken and duck in the kitchen and cause mayhem.", "A new group of adventurers has just started their career in town, but they're murderhobos and have been doing a lot of damage.", "Two families have been enemies for generations. The youngest members of the two, young and innocent, had fallen in love, but their families didn't allow them to be together. As a result, they committed suicide together. Then, they came back as undeads and now haunt the lands of their families.", 
@@ -473,7 +450,8 @@ function stronghold(){
     "A writer wants to write a book about one of the players, a glorious ballad of their deeds. They ask to be allowed to follow them, in their adventures and also during their daily life.", "Worriesome rumours about a player reached the ears of the inquisition. They demand an investigation: one of them will follow the player, in their adventure and also during their daily life, judging their actions. No secret shall be kept from the inquisitor.", "A local woman is pregnant, one of the players is accused of being the father.", "A kid arrives at the stronghold, dirty and covered in rags. All they have is a letter that says one of the players is their parent and must take care of the kid.", "A rival of the players, encountered in a previous adventure, attacks the village and takes some peasants and some followers hostage.", "The players go back to their stronghold after an adventure and find out they are already there: there are identical copies of their characters running the stronghold.", "All the peasants and followers thought they were the real ones. Both groups accuse the others of being imposters.",
     ]
     document.getElementById("Misc").innerHTML = searchArray(strongholdEncounters) 
-}
+};
+
 
 //City
 function arts() {
@@ -485,7 +463,6 @@ function arts() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityArtsEncounter);
 };
-
 function night() {
     let cityNightlifeEncounter = [
         "A local tavern is showcasing a new lager and a spruiker is on the streets handing out '1/2 off' coupons to passersby. The party is given '2 free drinks' coupons on purpose by the NPC. A stranger is waiting inside that wants to talk to the party.", "A dance club, on a typical night, has been infiltrated by an Avatar of Bacchus and has caused the party to spill into the streets where it has been pulling in passersby. The party is caught up in the crowd.", "An exclusive nightclub has opened, membership only. One of the party’s allies goes missing and was last seen there. The club is a coven of Sorcerers and every night they sacrifice a kidnapped customer to try to summon an Eldritch Horror.", "A hot club in town is secretly run by vampires. Cover charge is 1 pint of blood. Thralls being thralls, one of them talks, and a Hunter has gotten wind of the nest. The party will see him interrogating a thrall and escalating to torture.", "A drunken brawl spills out of a tavern near the party. The fight is brutal, involving makeshift weapons and ends up overtaking the party. If they do not flee, during the fracas the party notices that one of the brawlers is biting his opponents and swallowing the flesh. If they do flee, they hear the next day that a pile of half-eaten bodies was discovered in the aftermath. A new zombie-master has come to town.",
@@ -495,7 +472,6 @@ function night() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityNightlifeEncounter);
 };
-
 function street() {
     let streetEncounters = [
         "A homeless urchin approaches the party and claims that he used to be a great magician. He says that if the party were to give him a gold piece, he could make one of them disappear. The urchin has a teleportation sigil on the ground in front of him that is incredibly difficult to see and only activates with his command word, which happens to be 'PRESTO!'. The character standing on the sigil is teleported to an alleyway 3 blocks down the road, into a trash pile. ", "Three semi-attractive ladies boldly harass a PC saying that s/he slept with all three of them. Creating a diversion for a pickpocket to snagged the purse of the PC's while they are distracted by the ladies. Once the pickpocket is gone they apologize and say that the PC looks like someone they know. ", "Down the street, a person is being chased by the city guard. The guard are yelling for the thief to stop. As the thief gets close a 2nd thief causes a distraction to the guard such as overturning a wagon full of manure. The pair of thieves round the corner close to the PCs. what do the PC's do? ", "As you pass an alleyway, a male goblin rushes out frantically and flags down your group. 'Help, help, my wife is giving birth! Please, someone help us!' You look past him into the alley, and sure enough, there is a pregnant goblin grimacing and bracing herself against a crate. You get to name their firstborn if you help out, and the father will buy your party a round of drinks at the tavern he works at. ", "A charlatan offers to give a party member some fancy jewelry to advertise their business. Little did they know this jewelry has a scrying enchantment and will be used to see where the party is staying and how well defended they are and rob them that night. ", "Roll a DC 15 Dexterity check to not get hit with the contents of an emptied chamberpot. If anyone in the party fails the check, the party rolls all Charisma checks at a disadvantage until the unlucky ones take a proper bath. ", 
@@ -521,7 +497,6 @@ function street() {
     ]
     document.getElementById("City").innerHTML = searchArray(streetEncounters);
 };
-
 function shopping() {
     let cityShoppingEncounter = [
         "While looking for weapons, a party member 'accidentally' activates a sentient weapon, who declares the party member as 'master' and demands to know what has happened since it was 'put to sleep'.", "While shopping, one or more of the party members is pickpocketed by a young kid who is part of an 'urchin gang'. This gang is an arm of one of the more powerful rogue guilds in the city.", "A street vendor is selling “gag gifts”, guaranteed to ensure the perfect prank. All the objects are cursed, and the vendor reveals this as if they were joking, as part of the shtick.", "Upon purchasing a normal mundane item, it is found to be hollow, with an unknown substance hidden inside of it. If left undiscovered, the person who sold it will try to get the item back, by negotiation or violence, it depends on the party’s willingness to part with it.", "A certain type of plush toy is all the rage in this city, and the party will acquire one upon their next purchase - all the merchants were paid to distribute these as “customer incentives.” The toys act as scrying focus for the local thieves guild. The party’s lodgings will be robbed within 24 hours obtaining the toy.", "An extraordinary amount of the richer folk of the town have gathered on the plaza. Gregory’s Golden Garments has arrived back in town from one of his far-off trading junkets. He brings the most exclusive textiles and materials to town, and the auction has started (dragon-skins, silk, etc.). During the auction, someone purchases a rare bolt of material and the party finds it in their room later, with instructions to hide it. If they don’t, a group of Assassins come looking for it. If they do, they will be contacted by a mysterious agent who asks them to transport it far away for a hefty fee.", 
@@ -532,7 +507,6 @@ function shopping() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityShoppingEncounter);
 };
-
 function entertainment() {
     let cityEntertainmentEncounter = [
         "The party receives an anonymous gift of entry passes to an exclusive and private club in the city. At the club, the party is approached by cultists who attempt to persuade the party into joining.", "The museum is showcasing some rare artifacts. While visiting, the party is present during the brazen theft of one of the objects - an item of unique and dangerous powers.", "Zoo animals have escaped and are menacing the population!", "A local sage sends an urgent message to the party about a matter of great importance. The sage, a bit senile, has gotten mixed up and this is not the group he was supposed to contact. He does not realize this and treats the party as if they were hired to retrieve a book from an old, guarded crypt. If the party refuses, the Sage will eventually be foolish enough to try it himself and the party will hear about his death.", "A public estate sale of one of the city’s wealthiest families is announced. The prices are high, but the quality equally impressive. In the announcement is an object that the party or one of the party members has been looking for. If they attend the sale, they discover the price is three times higher than they can afford (even after pooling money or getting a loan). The security is strong but not impossible...", "The museum is showcasing the preserved remains of a long-dead monster race as part of a traveling exhibition. During a tour, or at night when closed, the monsters are revived by an interested party, and they go on a murderous spree. They attack either the party (along with many others) or one of the party’s allies.", "A series of foreign street magicians has entered town and perform solo acts all over town. One of them is near the party, and they need a volunteer for a (permanent) disappearing act.", "A street corner storyteller is spinning a tale of adventure and peril to a crowd. The tale sounds suspiciously like the last adventure the party had.", 
@@ -553,7 +527,6 @@ function entertainment() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityEntertainmentEncounter);
 };
-
 function sports() {
     let citySportsEncounter = [
         "The party receives an anonymous gift of tickets to a local sporting match. If they attend, they are approached by an NPC who says they represent a 'person who wishes to remain nameless, but desires to procure your services in a delicate, and potentially dangerous matter.'", "The party is invited by a local ally to attend a boxing match. At the match both fighters are killed by a powerful assassin who works in secret for a local politician.", "The party attends a game of skill and is accused of bribing a ref to throw the game by a rogue (who did actually rig the fight, but now has been caught and is desperate). A few of his crew will back him up and some of the crowd sides with them.", "A marathon race has been scheduled to wind through the city as part of a larger season of racing. A number of famous people and some talented locals will participate. During the race, several of the runners suddenly collapse and begin coughing blood. This is the start of a disease outbreak, and will, without precautions, infect over half the city in only 72 hours. The source is magical in nature, and part of a larger scheme to cripple the city by a secret faction.", "A bare-knuckle street match has been set up by an enterprising rogue/wizard. A series of ringers are inviting all-comers to challenge for a fat purse. Those who fight are wizard-marked, and followed later, to be kidnapped and bound for a fighting-arena in the Underdark.", 
@@ -563,7 +536,6 @@ function sports() {
     ]
     document.getElementById("City").innerHTML = searchArray(citySportsEncounter);
 };
-
 function nautical() {
     let cityNauticalEncounters = [
         "A local ally invites the party on a fishing trip. While on the trip, the vessel is attacked by a desperate band of Kuo-Toa, who appear to be diseased and attack with a more-than-usual savage aggression.", "The city is holding a yachting regatta and the party is present when one of the ships catches fire. Many accusations are bandied about and most seem to blame one of the city’s administrators who had a grudge.", "A seasonal storm rushes over the city does significant (and costly) damage to the local fleets (and any ships the party might have moored here). Trade and travel is stalled and only a hefty bribe and some forceful diplomacy can secure any movement needs that the party might have.", "A local mad-wizard-inventor is launching a submarine and has asked for volunteer pilots and crew. If the party accepts, they are attacked by a great white shark. If they do not, the sub is sunk by the shark. The mad-wizard will try again next month with a new design. If the shark has been killed, this version will find a sunken treasure worth a king’s fortune.", "The party is invited to a beach party by an ally. While there, a number of party-goers find themselves suddenly growing gills and webbed feet and toes and a strong urge to enter the ocean. They have been drugged by a Sahuagin Sorcerer, who is trying to build an “amphibious army” to attack the town and destroy it.",
@@ -572,7 +544,6 @@ function nautical() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityNauticalEncounters);
 };
-
 function events() {
     let cityEventEncounter = [
         "A historical walking tour of the city is being offered at a discount. This is a great way to lore dump and pass along rumors/hooks.", "The party is invited by a local ally to attend a tour of the city's finest restaurants. On the tour, the friend is poisoned and dies.", "The city is celebrating its anniversary with fireworks and street food and music. During the celebration, the party is attacked by a band of spectral undead who leave behind a burned mark/graffito on a wall.", "During the inauguration of a new High Priest of the most powerful temple in the city, an “unscheduled eclipse” darkens the skies for 8 hours. This is seen as an evil omen and factional violence suddenly breaks out among the population.", "The borders of the town close, and guards posted outside will not let people out. A deadly disease was discovered in the town, and it will remain quarantined until a cure is found, or everyone is dead.", "Juwua Crostuo- the self-proclaimed greatest baker in the district- challenges anyone to out-bake him. If they succeed, the prize is a nice amount of gold.", "Someone enchanted the animals in the taxidermy shop, and now they are tearing up the district, hurting and scaring people and causing property damage. A large predator finds itself near the party’s location.", "A mad prophet has begun preaching dire omens on street corners. Most consider the prophecies hogwash, but a small group believe and are preparing for the apocalypse.", 
@@ -580,7 +551,6 @@ function events() {
     ]
     document.getElementById("City").innerHTML = searchArray(cityEventEncounter);
 };
-
 function personal() {
     let cityPersonalEncoutner = [
         "One of the party members receives a message at their home/room that they are in great danger. The note begs the PC to 'come with all haste' to an address in one of the seedier parts of town. This is a setup for an ambush/robbery.", "One of the party's allies comes with 'hat in hand' to beg for start-up funds for a day spa. The ally has a silent partner, a dangerous rogue, who has threatened to kill the ally unless they have their half of the investment in the next day or two.", "A person the party could vaguely remember from something joins their company for a little while. Whenever the opportunity presents itself this NPC will stab one of the PC’s in the heart, claiming they ruined their lives for something (irresponsible) they did (Everyone has such an NPC).", "A PC receives a letter from a local lawyer when entering the city or having had to pass some papers. The lawyer claims that a relative of them died several years ago and they finally found a relative to pass the inheritance to. Upon arriving at the rich looking office they are read the inheritance which includes a small house in the city, a brewery/smithy/something, and a sum of gold that has been growing with interest. They are asked to pay the lawyers fees of (significant sum at about 20% of the worth of the inheritance) for keeping the account open. There is no inheritance, just white collar crime.", "The party is offered half off for a pedicure to make them feel better. After paying, the party is given the new adorable and cuddly pet they just adopted to cure any sadness that may crop up.", "A party member catches someone they know (parent, sibling, good friend) who is married on a date with someone who is not their spouse.", "A party member (or several, if appropriate) receive notice of the funeral services for a figure from their background. The service is in the city, and held soon, the next sacred day of the dearly deceased's faith. A young relative of the late NPC asks the party to attend, convinced the death was foul play and the murderer will be in attendance. She might be right, she might simply be overwhelmed with grief.", "A chance encounter saving a person’s life gets the party invited to their birthday party, where the person is suddenly assassinated.",

@@ -6,23 +6,19 @@ function shuffle(array) {
     }
     return array;
 };
-
 function rollDice(number) {
     result = (Math.floor(Math.random() * number))
     return result;
 };
-
 function rollArray(array) {
     let shuffled = shuffle(array)
     let index = Math.floor(Math.random() * shuffled.length)
     return `(Roll: ${index}/${shuffled.length}) ${shuffled[index]}`;
 };
-
 function searchArray(array) {
     let shuffled = shuffle(array)
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
-
 function variableEffect(array, array2, array3,array4) {
     let chance = rollDice(100)
     if (chance > 80) {
@@ -37,7 +33,6 @@ function variableEffect(array, array2, array3,array4) {
         return `This artwork is cursed. ${searchArray(array4)}`
     }
 };
-
 function variableEvent(givenArray, number) {
     let chance = rollDice(100)
     if (chance < 75) {
@@ -48,8 +43,6 @@ function variableEvent(givenArray, number) {
         return searchArray(givenArray[number]) + ' '
     }
 };
-
-
 function printFrom(array, number, id) {
     let list = shuffle(array).slice(0, number)
     list.forEach(function(item) {
@@ -59,16 +52,13 @@ function printFrom(array, number, id) {
         document.getElementById(id).appendChild(li);
     });
 };
-
 function modify(number) {
     return Math.floor(number * (.95 + Math.random() * .4))
 };
-
 function shuffleSlice(array, number) {
     return shuffle(array).slice(0, number)
 
-}
-
+};
 function loopCountPrintList(array, id) {
     let x = array
 
@@ -102,8 +92,6 @@ function loopCountPrintList(array, id) {
         document.getElementById(id).appendChild(li);
     });
 };
-
-// convert numbers to word form
 function toWords(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
@@ -152,15 +140,14 @@ function toWords(s) {
     }
     return str.replace(/\s+/g, ' ');
 };
-//Reload Page
 function reload() {
     location.reload()
 };
 
+/*==================================================================================*/
+/*-----------------------------Page Scripts Below-----------------------------------*/
+/*==================================================================================*/
 
-
-
-/*############################Page Scripts#########################################*/
 function treasureMap() {
     let start = [
         `big cracked boulder`, `lightning-blasted oak tree`, `rock shaped like a horse`, `stone wall with a piece of volcanic glass`, `exact center of the village/town/city`, `statue of (famous person)`, `shipwreck of the SS (name)`, `bones of the black dragon`, `cavern near the waterfall`, `top of the volcano`, `exact center of the lake`, `abandoned Temple`, `old Fort`, `old standing circle`, `road marker leading south`, `exact center of the longest bridge`, `hangman's scaffold`, `${searchArray(['king','queen'])}'s throne room`,` crossroads`, `largest tomb in the cemetary`
@@ -186,7 +173,6 @@ function treasureMap() {
 
     document.getElementById("Treasure Map").innerHTML = `The map starts at the ${searchArray(start)}. ${searchArray(then)} until you find the ${searchArray(until)}. Then ${searchArray(thenTwo)} until you find ${searchArray(untilTwo)}. Lastly ${searchArray(thenThree)} and you will find the treasure ${searchArray(xMarks)}.`
 };
-
 function treasureChest() {
     let style = [
         "crude", "standard", "fancy", "elven", "bejeweled", "draconic", "dwarven", "pink, gem encrusted", "pirate", "woven", "creepy", "heavy duty",
@@ -218,7 +204,6 @@ function treasureChest() {
     let output = `The treasure is enclosed by a ${searchArray(style)} chest made of ${searchArray(material)}. The trim and hinges are made of ${searchArray(trim)}. The craftsman left a mark in the form of ${searchArray(mark)}. Carelessness will trigger ${searchArray(trap)} trap. To get past the ${searchArray(lock)}, one would need the key, which is currently ${searchArray(keyLoc)}.`
     document.getElementById("Chest").innerHTML = output
 };
-
 function weapon() {
     function weaponGenerator() {
         function weaponType() {
@@ -370,7 +355,6 @@ function weapon() {
     }
     document.getElementById("Weapon").innerHTML = weaponGenerator()
 };
-
 function findHistory() {
     let weaponHistories = [
         "...was forged in the Age of Mists by a powerful necromancer who wanted to use it against his most dread foes - a powerful paladin order.", "...was coughed up from the belly of the sleeping Tarrasque after it was fired upon by a Githyanki starship.", "...was dreamed into existence by the oldest of the Fey, and still carries a touch of the Wild upon it.", "… was birthed into existence during a brutal battle by the dying screams of the vanquished.", "… fell from the sky, thrown to earth by a goddess, which caused discord in the heavens.", "… broke apart from a bigger item, and was repurposed twice to fit its current state.", "… a living piece of a dying deity, long lost to time.", "… was pulled from the pages of a magical storybook.", "… has been tinkered together by Morman The Forlorn under threat of death, with his hate still inside.", "… was a rumor that was believed into reality.", "… was mistakenly stolen by Balog the Spoon Thief, twice.", "… was a royal heirloom that went missing when the last living heir disappeared without a trace.", "… was passed between several pirate lords as a result of lost bets and foul wagers.", "… famously stolen by the mistress of the prince at the time as punishment for bragging to his comrades about her acts.", "… had a war fought over it, a war that cost 10.000 lives.", "… was shaped from darkness on the day, three eons ago, that the Sun didn't rise.", "… was a gift between two lovers, who cooperatively created it as an act of love.", "… forged by the first dwarf, the first weapon of its kind.", "… is a vessel of significant power, even though the vessel is leaking and the content unknown.", 
@@ -391,7 +375,6 @@ function findHistory() {
     ]
     document.getElementById("History").innerHTML = rollArray(weaponHistories)
 };
-
 function armor() {
     function armorGenerator() {
 
@@ -464,7 +447,6 @@ function armor() {
     }
     document.getElementById("Armor").innerHTML = armorGenerator()
 };
-
 function findScabbard() {
     let scabbards = [
         "Scabbard of Sharpening - A blade drawn from this metal scabbard is magically honed to razor sharpness, doing +1 extra damage when it strikes an opponent. The first time you miss, however, the enchantment wears off as the blade is dulled by your opponent's shield or armor or it hits the stone floor or whatever. (To get the bonus again, you have to sheathe and draw it again. The damage bonus does not stack with multiple drawings, it can only be +1, and only on one weapon at a time.) Every time the blade is sheathed or drawn, there's the distinct, and rather loud, sound of metal being sharpened.", "Snakeskin Sheath (Requires attunement) - This sheath is made of python skin. If you draw your sword and throw the sheath on the ground, it functions as per the magic item Staff of the Python.", "Mace Miter (Requires attunement) - This ornately decorated cone-shaped hat was once worn by a long-dead bishop. It still makes a fine head covering, if you want to wear it that way. But even better, you can turn it upside down, lash it to your belt, and carry your mace around in it. Whether used as a hat or a mace holder, the miter functions as a Holy Symbol +1.", "Flamesheath - This 'sheath' is not made of leather or metal, but flame! Well, sort of. It's just a permanent illusion cast on a normal leather sheath. But it looks pretty bad-ass. A weapon drawn from this sheath does an extra 1D4 fire damage the first time it's used after being drawn; hit or miss, the flames die out until it's resheathed and drawn again. The sheath itself can be used as a light source, functioning as the Light cantrip (but looking more like a torch). To hold the scabbard aloft, you'll have to have your weapon sheathed. Note it can't be turned on or off; the only way to hide the flames is to stick the sheath into a sack or other opaque object.", "Assassin's Sheath - This small leather sheath would appear to hold nothing larger than a tiny folding knife, but any weapon up to a great sword can be sheathed in it. The size of the weapon is revealed only when it is drawn from the scabbard, whether by the wearer or a wary guard. Unlike most scabbards, to draw a weapon from this one requires the Use an Object action. (The weapon's actual size can be revealed by Truesight.)",
@@ -485,7 +467,6 @@ function findScabbard() {
     ]
     document.getElementById("Scab").innerHTML = rollArray(scabbards)
 };
-
 function findTrinket() {
     let trinket = [
         "A miniature, tame mimic.", "A carved marble elephant.", "A small round cactus with two eyes.", "A pocket book of dwarven poetry.", "A bronze box containing a tiny wooden owl.", "A solid blue metal sphere, one inch in diameter, with three parallel grooves around the circumference.", "A pouch containing ten dried peas.", "A ceramic puzzle cube, with each face divided into four independently rotating squares enameled with astronomical signs.", "A square of bear-beetle leather, a creature unique to the misty woods of Cix.", "A sheet of vellum on which is crudely painted a herbal plant that you have yet to identify.", "A petrified frog.", "A twenty-sided die.", "A cut yellow chrysanthemum that never dies.", "A palm-sized iron cage: the door doesn't shut properly, as the tiny lock was broken from the inside.", "A blob of grey goo, slippy but safe to touch, kept in a ceramic pot.", "A dried sky lily, from the tip of the Godshead, an impossibly high mountain.", "A glowing blue-green line, six inches long, but with no discernible radius.", "A pretty conch shell.", "A scrap of paper on which is written, in Goblin, 'My dearest Bess,'.", 
@@ -586,7 +567,6 @@ function findTrinket() {
     let output = searchArray([`${searchArray(trinket)} Due to it's history, this trinket is considered to be imbued with the magic ${searchArray(trinketMagic[0])}`,`${searchArray(trinket)} ${searchArray(trinketMagic[1])}`, `${searchArray(trinket)} This trinket is magical: ${searchArray([`${searchArray(trinketMagic[2])}`,`${searchArray(trinketMagic[3])}`])}`])
     document.getElementById("Trinket").innerHTML = output
 };
-
 function findGrimoire(){
     let author = [
         `by precursors or the inhabitants of a previous reality`, `the work of a deity, saint or otherwise somehow divine in origin`, `a powerful mage or other form of spell caster`, `a(n) ${searchArray(['illithid', 'aboleth', 'neogi', 'beholder'])}`, `${searchArray([`a(n) ${searchArray(['celestial', 'fiend', `${searchArray(['elemental','genie'])}`, 'fae'])}`, `someone possessed by a(n) ${searchArray(['celestial', 'fiend', `${searchArray(['elemental','genie'])}`, 'fae'])}`])}`, `the culmination of the efforts of generations of scholars`, `a person that was taken by a eerie mood and wrote the work in a fortnight`, `nobody... it merely appeared one day, fully formed`, `by a doomed poet who dove deep into a mystery cult for inspiration`, `by a scholar who claimed to have tapped into the Akashic Records, where all knowledge is stored`, `by a popular medium while in a trance, shortly before their mysterious disappearance`, `by a priest who became obsessed with dubious apocrypha`, `by an unknown authour. It simply appeared in history one day`, `by an entire village, one page to a person, before they walked together into the night, never to be seen again`, `by a thousand deranged monkeys`, `by the head doctor of an asylum, based on the rantings of their patients`, `by the hands of an infamous thief, after they were cut off as punishment`, `by a historian based on their collated research on several lost civilizations`, `by a child who claimed to have been inspired by their imaginary friend`, `some time in the future. What you might find of it now is an imperfect, backwards copy anticipating its own original`, `shamefully, by a secret heresiarch`, `apparently long before any other example of written language`, `by a self-proclaimed prophet who claimed to have received its text in a god-granted vision`, `by a hermit best known for throwing their feces at visitors`, `by a jaded noble who brought ruin to their estate in pursuit of limit-experiences`, `by a professor and their closest students, who barricaded their university and slaughtered the rest of the inhabitants`, `as a bowdlerization of a yet more dreadful tome`, `by the hands of the true creator of the world, allegedly`,
@@ -611,7 +591,6 @@ function findGrimoire(){
     let output = `A legendary grimoire in the form of ${searchArray(form)}, and its authorship is ${searchArray(author)}. This grimoire is rumored to contain ${searchArray(lore)} and it was forbidden ${searchArray(forbidden)}. You can find this grimoire ${searchArray(location)}, and it has defense in that ${searchArray(defense)}.`
     document.getElementById("Grimoire").innerHTML = output
 };
-
 function findRing() {
     function ringBuilder(){
         let material = [`gold`, `white gold`, `tarnished silver`, `polished silver`, `gold-plated brass`, `silver-plated brass`, `gold-plated steel`, `silver-plated steel`, `brass`, `black steel`, `bone`, `ivory`, `ebony`, `mahogany`, `walnut`, `turquoise`, `jade`, `iron`, `copper`, `platinum`,]
@@ -646,7 +625,6 @@ function findRing() {
     ]
     document.getElementById("Ring").innerHTML = searchArray([rollArray(rings),ringBuilder()])
 };
-
 function findCard() {
     let deckOfAllTheThings = [
         "Kettle - This card is uncomfortably warm to the touch.", "Iron - This card is far heavier when held. When put away it returns to the weight of card, It always behaves as if it were made of card.", "Flagon - A large amount of liquid can be held on the card without it dripping off. The card is waterproof.", "Worm - Fish and birds are unusually attracted to this card.", "Coin - The card glimmers in the light, like a fine jewel.", "Knife - The sides of the card a very sharp, still bends like card.", "Quill - Draws a thin line when rubbed on a surface.", "Dice - When drawn a random number is displayed on the card.", "Book - This card shows a sentence of the last book the holder has read.", "Pepper - Storing this card with meat makes it taste better.", "Arrow - This card travels in a straight path when thrown.", "Bandage - This card sticks to the skin.", "Boot - The card slowly moves west.", "Coat - The card never gathers dirt nor gets wet.", "Pitchfork - The card smells exceptionally bad.", "Basket - Any object balanced on the card feels nearly weightless.", "Fork - Small objects stick to the edge of the card.", "Cloth - This card slowly absorbs liquids.", "Eyeglass - The card bends slightly at one corner, pointing to the nearest 'interesting' thing.", "Mirror - After 5 hours of the card remaining undamaged, a copy appears. (this card does not dissolve)",
@@ -724,7 +702,6 @@ function findCard() {
 
     document.getElementById("Card").innerHTML = rollArray(deckOfAllTheThings)
 };
-
 function artGenerator() {
     document.getElementById("Art").innerHTML = ""
     let pottery = ["vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray"]
@@ -1052,7 +1029,6 @@ function artGenerator() {
     printFrom(combiner, 10, "Art")
 
 };
-
 /* Future Art Generator Ideas
 "Silver ewer",
 "Carved bone statuette",
@@ -1246,6 +1222,7 @@ function artGenerator() {
 `An album containing several family portraits spanning multiple generations.`
 */
 
+
 function artEffect() {
     document.getElementById("Effect").innerHTML = ''
 
@@ -1305,7 +1282,6 @@ function artEffect() {
     let effectArray = [variableEffect(ifYou, thenThis, passive, curse), variableEffect(ifYou, thenThis, passive, curse), variableEffect(ifYou, thenThis, passive, curse), variableEffect(ifYou, thenThis, passive, curse), variableEffect(ifYou, thenThis, passive, curse), ]
     printFrom(effectArray, 5, "Effect")
 };
-
 function calculateGold(level, fights) {
     if (level === 1) {
         return `(Average Value: ~${60*fights}gp) Coins: PP:${modify(0)*fights} GP:${modify(0)*fights} EP:${modify(5)*fights} SP:${modify(195)*fights} CP:${modify(390)*fights}`
@@ -1349,7 +1325,6 @@ function calculateGold(level, fights) {
         return `(Average Value: ~${12205*fights}gp) Coins: PP:${modify(921)*fights} GP:${modify(1081)*fights} EP:${modify(0)*fights} SP:${modify(0)*fights} CP:${modify(0)*fights}`
     }
 };
-
 function alternateRewards(level, fights) {
     function loopCountPushGems(array, array2, value) {
         let x = array
