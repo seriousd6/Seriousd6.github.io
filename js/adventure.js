@@ -20,13 +20,13 @@ function searchArray(array) {
 
 // convert numbers to word form
 function toWords(s) {
-    var th = ['', 'thousand', 'million', 'billion', 'trillion'];
+    var th = ['', 'Thousand', 'Million', 'Billion', 'Trillion'];
     var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
     var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
     var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
 
 
-    s = s. ToString();
+    s = s.toString();
     s = s.replace(/[\, ]/g, '');
     if (s != parseFloat(s)) return 'not a number';
     var x = s.indexOf('.');
