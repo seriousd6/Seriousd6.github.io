@@ -49,6 +49,8 @@ header {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -58,6 +60,8 @@ header {
 @media only screen and (min-width: 600px) {
     body {
         font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -67,6 +71,8 @@ header {
 @media only screen and (min-width: 768px) {
     body {
         font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -76,6 +82,8 @@ header {
 @media only screen and (min-width: 992px) {
     body {
         font-size: 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -85,5 +93,7 @@ header {
 @media only screen and (min-width: 1200px) {
     body {
         font-size: 22px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
