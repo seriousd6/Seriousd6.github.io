@@ -17,6 +17,16 @@ function searchArray(array) {
     return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 
+function variableEvent(givenArray, number) {
+    let chance = rollDice(100)
+    if (chance < 75) {
+        return ""
+    } else if (number === undefined) {
+        return searchArray(givenArray) + " "
+    } else {
+        return searchArray(givenArray[number]) + ' '
+    }
+};
 
 // convert numbers to word form
 function toWords(s) {
