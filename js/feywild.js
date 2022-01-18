@@ -178,5 +178,5 @@ function faerie(){
     ]
 
     let output = `You see a ${searchArray(adjective) +' ' +searchArray(type)}, with ${searchArray([`${searchArray(color)} hair`,`${searchArray(color)} hair and ${searchArray(color) + ' ' +searchArray(hairFeature)}`])}, ${searchArray([`${searchArray(eyes)} eyes`, `${searchArray(eyes)} with ${searchArray(eyes) +' ' + searchArray(eyeFeature)} eyes`])}, ${searchArray(mannerisms)} and carrying ${searchArray(carrying)}. The party can learn that the faerie is interested in ${searchArray(motivation)}.`
-    document.getElementById("Bargains").innerHTML = output 
+    document.getElementById("Faerie").innerHTML = output 
 }
