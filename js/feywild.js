@@ -139,7 +139,7 @@ function archfey(){
     ]
     let chance = rollDice(100)
     if (chance>50) {
-        output = 'There is an Archfey with a domain designed after the failed dream of ' + searchArray(failedDreams) 
+        output = 'There is an Archfey with a domain designed after the failed dream of "' + searchArray(failedDreams) +'"'
     } else {
         output = 'There is an Archfey that stole a party member for the the following purpose: ' + searchArray(stolenFriend)
     }
