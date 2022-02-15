@@ -1,3 +1,6 @@
+# NFT Project
+I have begun storing a few futur NFT examples on here, this is a makeshit gallery until I get funding to host somewhere else more secure.
+
 # Resuming 11/1/21
 I have a rekindled desire to continue work on this site, I will be make incremental progress each month, please message me on [reddit](https://www.reddit.com/user/seriousd6/) to share ideas and make comments!
 
