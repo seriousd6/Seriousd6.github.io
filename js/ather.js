@@ -159,10 +159,10 @@ function quest() {
     let fairyTaleTropes = ['Abduction is love','Abusive parents','']
 
     let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${searchArray(factionArray)}; Trope: ${searchArray(tropeArray)}`
-    return output
+    document.getElementById("Quest").innerHTML = output 
 }
 
-console.log(quest())
+
 
 
 
