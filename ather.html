@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css" />
     <title>D&D Flavor Generators</title>
-    <script src="js/feywild.js"></script>
+    <script src="js/ather.js"></script>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                     <li class="breadcrumb-item"><a href="/setting_builder.html" style="color:white">Setting Builder</a></li>
                     <li class="breadcrumb-item"><a href="/shopkeeper.html" style="color:white">Shopkeeper</a></li>
                     <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">NPC Interactions</a></li>
-                    <li style="font-weight: bold; color: red" class="breadcrumb-item" aria-current="page">Feywilds</a></li>
-                    <li class="breadcrumb-item"><a href="/ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="/npc_interactions.html" style="color:white">Feywilds</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item" aria-current="page">Ather</a></li>
                     </li>
                 </ol>
             </nav>
@@ -44,36 +44,10 @@
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="">Entrance</button>
-            <div class="col npc" id="Entrance"></div>
+            <button class="col-2 btn btn-secondary" type="button" onclick="quest()">Quest</button>
+            <div class="col npc" id="Quest"></div>
         </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="">Enchanted Forest</button>
-            <div class="col npc" id="Enchanted Forest"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="faerie()">Faerie</button>
-            <div class="col npc" id="Faerie"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="treeFolk()">Tree Folk</button>
-            <div class="col npc" id="Tree Folk"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="feyPrank()">Prank</button>
-            <div class="col npc" id="Prank"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="feyBargains()">Bargain</button>
-            <div class="col npc" id="Bargains"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="feyMutations()">Mutations</button>
-            <div class="col npc" id="Mutations"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-secondary" type="button" onclick="archfey()">Archfey</button>
-            <div class="col npc" id="Archfey"></div>
+      
         </div>
         <br>
         <br>
