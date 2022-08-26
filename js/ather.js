@@ -156,7 +156,7 @@ function quest() {
     let rewardArray = ['Gold','Magic item','Lore/ knowledge','Cool but mostly useless items','Plot relevant item',`${searchArray(['NPC Contact', 'Ally', 'New Friend'])}`,`${searchArray(['New pet', 'New follower'])}`, `${searchArray(['New skill', 'New language'])}`, 'interesting trinket', `${searchArray(['Boon', 'Blessing','Charm'])}`, ,`Mundane ${searchArray(['Weapon', 'Armor', 'misc.'])} with a cool backstory`, 'Repairable broken item','New mode of transport', `${searchArray(['Property', 'Land and Title'])}`, 'Faction favor', 'Backstory connection', 'Trophy', `${searchArray(['Crafting materials', 'Crafting Recipes'])}`, 'Feats']
     let factionArray =['Home','Echos','Undead','Nature','Dragons','Gure','Gnolls','Fey','Radiant','Dieties']
 
-    
+
     let actionTropes = ['Being a B.A.','Big trope hunting','Chase scene','Combat','Dueling','Escape','Fight scene','I have your index','Index to the rescue','Just in time','VIOLENCE']
     let crimeTropes = ['confidence (scams, frauds, tricks)','organized crime','Gambling',' sex trade','Smuggling','Thievery','Drugs','Vandalism','Victimhood','Abuse','kidnapping, hostages, abduction',' murder','terrorism','threatening','banishment','censorship','law enforcement','courtroom','execution','forensics','perp sweating','prison']
     let dramaTropes = ['Betrayal','confession','conflict','emotion','infidelity','price of power','rejection','revenge','serious','subverted innocence','had a hard life','victimhoom','violence']
@@ -165,8 +165,8 @@ function quest() {
     'once upon a time','original position fallacy','our fairies are different','our witches are different','overprotective dad','pinnochio syndrome','please shoot the messenger','prince charming','princess for a day','princess protagonist','the promise',' proud beauty','the quest','rags to royalty','ragtag bunch of misfits','rash promise','re-headed stepchild','rescue romance','rip-van-winkle','royal brat','royal blood','rule of three','rule of seven','the runt at the end','the sandman','save the princess','schmuck banquet','scullery maid','secret identity','secret test of character','self-fulfilliong prophecy','shapeshifter shwodown','shapeshifting lover','she cleans up nicely','sibling triangle','soul jar','standard hero reward','swans a swimming','sweet and sour grapes','talking animal','threshold guardians','trail of bread crumbs','treacherous spirit chase',`true love's kiss`,'turtle island','Uriah Gambit','Wealthy ever after','what ever happened to the mouse?','When the clock strieks 12','wicked stepmother','wicked witch','Wonder child','year outside, hour inside','you have waited long enough','youngest child wins']
     
     let faction = searchArray(factionArray)
-
-    let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${faction}; Trope: ${searchArray(tropeArray)}`
+    let othertropes = `Action: ${searchArray(actionTropes)}, Crime: ${searchArray(crimeTropes)}, Drama: ${searchArray(dramaTropes)}, Espionage: ${searchArray(espionageTropes)}.`
+    let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${faction}; Fantasy Tropes: ${shuffleSlice(fairyTaleTropes,4)} ${othertropes}`
     document.getElementById("Quest").innerHTML = output 
 }
 
