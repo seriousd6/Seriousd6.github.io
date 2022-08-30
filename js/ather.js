@@ -166,10 +166,106 @@ function quest() {
     
     let faction = searchArray(factionArray)
     let othertropes = `Action: ${searchArray(actionTropes)}, Crime: ${searchArray(crimeTropes)}, Drama: ${searchArray(dramaTropes)}, Espionage: ${searchArray(espionageTropes)}.`
-    let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${faction}; Fantasy Tropes: ${shuffleSlice(fairyTaleTropes,4)} ${othertropes}`
+    let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${faction}; Fantasy Tropes: ${searchArray(fairyTaleTropes) +', '+ searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes)}} ${othertropes}`
     document.getElementById("Quest").innerHTML = output 
 }
 
+
+
+function dungeonCreator() {
+    let cityEvent  = ['Riot', 'Siege', 'Cult Gains Influence','Factions are Figthing', 'Wizard tower explodes', 'Royal Precession','Seasonal Celebration','Alarms are ringing','Alchemist paying for reagent retrieval','Exotic goods shipment arrives','Major heist is underway','Wizard college holding annual trials','Execution at dawn','Bounties posted everywhere','Serial killer stalking the streets','City watch is aggressively searching','Revolutionary sentiment spreading','Tournament is being announced','Travelling carnival','People are dissapearing'] 
+    let dungeonEvents = ['NPC driven mad','Blocked passage','Terrifying soudns ahead','hostages begging for help','Enemy surprise','unexpected Ally','Suspicious NPC asking for help','Magical lures','bloody steps gettign fresher','slime runs down the wall','vulnerable enemy','time and space anomalies','disgusting smells','door slamming','doors slowly closing ahead','lights ahead','chanting in the distance','shadows begin to stir','enemy taunts form shadows','lumberign steps approach']
+    let inhabitants = ['humans','beasts','humaniods','dragon','monster','undead','demonms','giant beast','swarm','cult','bandits','necromancer','assasins','giants','devils','golems','celestials','deity','abandoned']
+    let objective = ['capture','collect','purge','raid','ritual','destroy','guard','revive','discover','hide','worship','grow','deliver','ransom','repair','forge','purify','corrupt','sacrifice','summon','kill','rescue','escape','stop','clear','find','return','defend','investigate','chase','infiltrate','survive','escort','map','recover','negotiate']
+    let rooms = ['pit','chambers','great hall','maze','stairs','armory','dining','shrine','mine shaft','prison','courtyard','crypt','forge','cavern','fountain','laboratory','vault','workshop','stables','throne room']
+    let setting = ['castle','cave','dungeon','grotto','hive','lair','mansion','maz','mine','monastery','necropolis','prison','ruins','sanctum','sewer','temple','tomb','tower','vault','woods']
+    let theme = ['Ancient','blasphemous','bleak','bruning','corrupted','crystaline','cursed','elemental','flooded','fortified','hallowed','haunted','infested','overgrown','putrid','ruined','sacred','shadowy','tranquil','wild']
+    let trapTrigger = ['switch','wire','magic barrier','pressure','light','sound','opening','touch','movement','time','swallow','proximity','breaking','lever','release','weight','closing','breath','temperature','lock']
+    let trapEffect = ['charm','curse','alarm','spikes','Acid','Ice','fire','pit','beast','skeletons','net','crumbling','cage','flood','gas','spell','trap door','darts','pendulum','chute']
+    let treasures = ['weapon','armor','coins','book','magic item','scroll','ring','cursed item','potion','artifact','spell tome','clue','gemstone','cloak','shield','mask','journal','map','key','nothing']
+    let wildEvents = ['abandoned camp','swarm of animals ahead','bandits offer a deal','wounded desperate beast','earthquake','hazardous water crossing','being stalked','armed guards demand tithe','druidic ritual taking place','notorous bounty subject in the area','massive storm blowing in','travelling emrchant offers soemthing','mysterious fog confuses navigation','wildfire closing in','flash flood','mysterious fungi spreadin rapidly','mystical pool luring into the waters','darkness sooner than expected','wildlife is abnormal, mutated','nomadic NPC asks for help']
+
+    let modifyingimagery = ['tavern','map','skull','throwing knives','spiderwebs','flame circle','maze','exit path','sticky floor','trap hole','eldritch tentacles','wine glass','boulder trap','mimic','trap','tripwire','net', 'ghost','shark','vault','moon over mountains','wolf moon','waterfall']
+    let modifyingIdeas = ['vines','water','weapons','well', 'runes','lever','secret door','spiderwebs','flood','forge','fog','gas','acid','barrels','armory','cell','chasm','corpse','chest','fire','ice','lava','lock','mold','altar','barricade','aura','blood','book','collapse','cage','chamber','light','gate','stairwell','shrine','passage','pit','plant','rubble', 'supplies','trap','tracks','treasure']
+
+
+}
+
+function enemyCreator(){
+    let asset = ['army','church','clan','cult','deity','government','weapon','wealth','popularity','spies','magic item','hidden identity']
+    let method = ['stealth','violence','politics','magic','deceit','minions','chaos','bribery','misdirection','blackmail','fanatacism','manipulation']
+    let cultFocus = ['ritual','bodies','drugs','prophecy','demon','old god','location','relic','book','chaos']
+    let cultGoal = ['sacrifice','spread','acquire','destroy','summon','curse','consume','corrupt','manipulate','eradicate']
+    function dragon() {
+        let dragonAge = ['wyrmling','young','juvenile','adult','old','ancient','wyrm','great wyrm']
+        let exoticDragon = ['Shadow','gem','faerie','light','force','prismatic','homebrew']
+        let dragoncolor = ['black','blue','green','red','white','brass','bronze','copper','silver','gold',`exotic: ${searchArray(exoticDragon)}`] 
+        return `Dragon (age: ${searchArray(dragonAge)}, color: ${searchArray(dragoncolor)})`
+    }
+    let dragonAge = ['wyrmling','young','juvenile','adult','old','ancient','wyrm','great wyrm']
+    let exoticDragon = ['Shadow','gem','faerie','light','force','prismatic','homebrew']
+    let dragoncolor = ['black','blue','green','red','white','brass','bronze','copper','silver','gold',`exotic: ${searchArray(exoticDragon)}`] 
+    let lair = ['cave','tower','throne room','temple','sewers','ship','castle','mountain','mine','catacombs','crypt','church','mansion','spire','shrine','chasm','necropolis','vault','ruins','sanctum']
+    let intelligentMonsters = ['werewolf','lich','homunculus','deva','ettin','hag','troll','vampire','manticore','ghost','imp','wight','aboleth','pegasus',dragon(),'djinni','mephit','nightmare','devil','succubus','giant','ogre','drow','incubus','merfolk','centaur','doppleganger','harpy','medusa','minotaur','treant','vampire','wraith',]
+    let monsters = ['skeletons','zombie horde','hydra','golem','ettin','wyvern','gargoyle','gelatinous cube','basilisk','giant spider','bear','wolf','elemental','invisible stalker','blink dog','hell hound','behir','chimera','cockatrice','phase spider','owlbear','worg','mimic','shambling mound','shrieker','ooze','swarm','zombie']
+    let intelligentMotivation = ['betrayal','conspiracy','desperation','destiny','discovery','faith','fear','genocide','greater good','greed','grief','knowledge','love','power','pride','rebellion','redemption','renown','revenge','rivalry','reproduction','space']
+    let beastialMotivation = ['desperation','fear','rivalry','reproduction','space']
+    let personality = ['hermit','fanatical','arrogant','jealous','obsessive','mischievous','warm','ambitions','intelligent','stoic','fiery','paranoid','observant','empathetic','unforgiving','egotistic','careless','narcissistic','volatile','pious']
+
+    let villains = ['dark lord','charlatain','dictator','summoner','illusionist','elementalist','priest','necromancer','traitor','thief','ghost','wizard','hidden figure','beast','conquerer','noble','asasin','bandit','crime lord',dragon(),'heir','elemental','giant','knight','doppleganger','politician','advisor','prophet','scholar','demon','royal','alchemist','conman','witch','heretic','cultist','guild leader','undead','giant','deity']
+    let villainTraits = ['resistance','weakness','immunity','health leech','reanimation','flying','multi-attack','grows stronger','poison','mind control','armor','exploding','healing','spellcasting','ranged attack','telekinesis','stealth','teleporitng','undead']
+    let villainWeakness = ['tunnel vision','fear','dependant','lack of trust','magic','arrogance','addiction','past deeds','element','love','faith','curse','greed','health','bargain','resources','boastful','trust','morality','stubborn'] 
+    let modifyingimagery =['blood goblet','magic tree','foor bite','brain','coins','castle forfeit flag','hourglass','flag','werewolf','spirder','nose','dagger','smiling burning man','devil pitchfork','shield with icon','potion','cogs','battering ram','angry mob','royalty on the throne','telepathy','behind bars','circular saw','gravestone','dungeon window','keyring']
+    let modifyingIdeas =['erratic','restrained','organized','tough','fey','flight','grappler','hellish','drone','eerie','elemental','empowered','infamous','nervous','meek','zealous','aggressive','ambusher','amorphous','avoidance','berzerk','brave','bound','brute','corrosive','cunning','darkvision','displacer','deceptive','devious','envious','martyr','deranged','sadist','fixated','anger','amphibious','ambush','brave','corrupted','brash','cautious','ethereal','evasion','fanatical','feral','remorseless','intolerant','oppressive','fierce']
+
+}
+
+function worldCreator(){
+
+    let assetMethod = []
+
+    let modifyingimagery =[]
+    let modifyingIdeas =[]
+
+}
+
+function characterCreator(){
+
+    let assetMethod = []
+
+    let modifyingimagery =[]
+    let modifyingIdeas =[]
+
+}
+
+function miscCreator(){
+
+    let adventureGear = ['compass','waterskin','spyglass','flint & stee','rope & hook','caltrops','oil','lantern','vial','backpack','candle','torch','rations','hourglass','disguise kit','writing kit',`thieve's tools`,'repair kit',`alchemist's kit`,'map']
+    let armor =['clothing','padded','leather','studded leather','hide','chain','scale','half-plate','ring mail','chain mail','split','plate','shield','cloak','boots','gloves','helm','ring','amulet','robe']
+    let conditons = ['blinded','charmed','confused','deafened','dying','exhausted','frightened','grappled','incapacitated','invisible','paralyzed','petrified','prone','restrained','silenced','sickened','slowed','stunned','surprised','unconscious',]
+
+    let criticalHit = ['knock prone','terrify','amputate','disarm','bnus attack','flurry','armor break','rend','stun','triple damage','bonus move','inspire allies','hit multiple','advantage','drops item','broken bone','winded','blind','unconscious','decapitation']
+    let criticalMiss = ['tripped','drop weapon','hit ally','hit self','blinded','winded','frightened','confused','stunned','stuck','unwanted focus','expose weakness','break weapon','drop item','disadvantage','anger allies','slowed','broken bone','unconscious']
+    let curse = ['hostility','death clock','blinded','deaf','necrotic','madness','clumsy','bloodlust','fear','memory loss','feeble','life-drain',`deity's wrath`,'slowed','vertigo','aging',`can't lie`,'bleeding','mute','drunk','pursued','vampirism','lycanthropy','insomnia','hallucinations','disease','luck','exhaustion','disdained','memory','filth','suspicion','dread','possessed','envy','addiciton','hunger','noisy','false sense','ghostly']
+    let discovery = ['blight','portal','hideout','sign','presence','lair','map','signs of battle','tracks','ruins','grave','supplies','bones','witness','message','trap','hidden path','source','writings','warnings']
+    let items = ['amulet','arrows','axe','belt','boots','bow','book','bracelet','breastplate','brooch','candle','cloak','coin','compass','crown','cup','egg','feather','flute','glove','gem','hammer','har','helm','horn','lute','machiantions','mask','mirror','necklace','net','pack','potion','ring','rope','scepter','shield','skull','sword','wand']
+    let magicalMishaps = ['dark vision','sapped energy','memory loss','too much power','lingering trauma','magic fizzles','possessed','physical mark','see dark power','deep sleep','summon fey',' reversed effect','damaged space','terrify witness','destroy item','sickness','summon demon','ominous whisper','']  
+
+
+
+    let modifyingimagery =['sword in stone','wooden spike fence','pierced by spear','pawn','magical rings around a person','drinking horn','arrow through the head','power fist','broken arrow','blood recycle','poison bottle','horshoe','mushroom','genie lamp','skull and crossbones','dead trees','bone dagger','bloody sword','broken hatchet','torch','crowning a ruler','butterfly','gem','person frozen in ice','molten metal bucket','stone block','bell ringing','person running with bag of loot','cave entrance','morningstar','wand or staff with gem on top','winged boots','eyeball','four fingered claw','webs','box switch','crystals','arrow in the achilles','sword + lightning','portal gfate','book with skull']
+    let modifyingIdeas =['shocking','shining','lucky','charged','banished','unfinished','fake','stolen','mysterious','feral','nightmare','dirty','worthelss','silent','arcane','ornate','damaged','glowing','holy','iron','ancient','cosmic','dwarven','demonic','wild','golden','steel','rotting','evil','tribal','blinding','savage','runic','concealed','flaming','vampiric','bloodthirsty','psychic','chaotic','slimy','heretical','fey','acid','bloody','desolate','awakened','black','incredible','gilded','artisinal','healing','copper','blazing','cunning','blessed','slithering','celestial','scaled','heavy','pristine','jeweled','singing','shadow','light','dark','indestructable','elvish','hidden','rusty','great','frozen','chilling','buried','redeeming','fake','mutated','silver','bleeding','diabolic','inspiring','natural','terrifying','ghostly']
+
+}
+
+function questCreator(){
+
+    let assetMethod = []
+
+    let modifyingimagery =[]
+    let modifyingIdeas =[]
+
+}
 
 
 
