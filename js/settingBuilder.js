@@ -84,31 +84,223 @@ function reload() {
 /*-----------------------------Page Scripts Below-----------------------------------*/
 /*==================================================================================*/
 
-function findTown() {
-    let mainFeature = [
-        'the town square', 'a water well', 'a bonfire', 'an open market/bazaar', 'a statue/shrine',
-    ]
-    let lodging = [
-        'a relatively safe clearing near town', 'the house of a generous citizen with a vacancy', 'the open-air campground', 'a spare building (barn, empty home)', 'the communal lodge', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern', 'the inn/tavern',
-    ]
-    let food = [
-        'someone cooking their recent wild game/fish haul', 'the neighbor (they share generously)', 'the public vegetable garden', 'the communal potluck', 'the open pit barbecue', 'the smokehouse', 'the marketplace', 'the tavern',
-    ]
-    let shop = [
-        'blacksmith (armor, weapons, tools)', 'carpenter (boats, buildings, wagons)', 'tailor (common, fine)', 'leatherworks (armor, saddlery)',
+let cityEvent  = ['Riot', 'Siege', 'Cult Gains Influence','Factions are Figthing', 'Wizard tower explodes', 'Royal Precession','Seasonal Celebration','Alarms are ringing','Alchemist paying for reagent retrieval','Exotic goods shipment arrives','Major heist is underway','Wizard college holding annual trials','Execution at dawn','Bounties posted everywhere','Serial killer stalking the streets','City watch is aggressively searching','Revolutionary sentiment spreading','Tournament is being announced','Travelling carnival','People are dissapearing'] 
+let dungeonEvents = ['NPC driven mad','Blocked passage','Terrifying soudns ahead','hostages begging for help','Enemy surprise','unexpected Ally','Suspicious NPC asking for help','Magical lures','bloody steps gettign fresher','slime runs down the wall','vulnerable enemy','time and space anomalies','disgusting smells','door slamming','doors slowly closing ahead','lights ahead','chanting in the distance','shadows begin to stir','enemy taunts form shadows','lumberign steps approach']
+let inhabitants = ['humans','beasts','humaniods','dragon','monster','undead','demonms','giant beast','swarm','cult','bandits','necromancer','assasins','giants','devils','golems','celestials','deity','abandoned']
+let objective = ['capture','collect','purge','raid','ritual','destroy','guard','revive','discover','hide','worship','grow','deliver','ransom','repair','forge','purify','corrupt','sacrifice','summon','kill','rescue','escape','stop','clear','find','return','defend','investigate','chase','infiltrate','survive','escort','map','recover','negotiate']
 
+
+let rooms = ['pit','chambers','great hall','maze','stairs','armory','dining','shrine','mine shaft','prison','courtyard','crypt','forge','cavern','fountain','laboratory','vault','workshop','stables','throne room']
+let setting = ['castle','cave','dungeon','grotto','hive','lair','mansion','maz','mine','monastery','necropolis','prison','ruins','sanctum','sewer','temple','tomb','tower','vault','woods']
+let theme = ['Ancient','blasphemous','bleak','bruning','corrupted','crystaline','cursed','elemental','flooded','fortified','hallowed','haunted','infested','overgrown','putrid','ruined','sacred','shadowy','tranquil','wild']
+
+let agriculture = ['fruit','mushrooms','vegetables','seeds','eggs','honey','fish','grain','herbs','nuts','livestock','dairy','wool','flowers','mead','beans','lumber','water','dung','magical']
+let buildings = ['alchemist','bank','barracks','black market','brewety','tower','cistern','dump','artist','granary','graveyard','herbalist','house','prison','library','luxury goods','magic shop','mansion','general store','shrine','park','mill','smith','stable','tavern','watchtower','academy','college','garrison','guildhall','hospital','market','church','museum','temple','theater','town hall','arena','castle','docks']
+let shops = ['books','food','butcher','stables','curio','general store','calligrapher','blacksmith','tanner','cartographer','baker','spice trader','locksmith','mason','fish market','physician','banker','barber','arcane supplies','alchemist']
+let cultures = ['agricultural','hunter gatherer','magical','industrial','feudal','trade','commune','devout','primitive','advanced','nomadic','tribal','hedonistic','ancient','multicultural','ancient','explorers','militaristic','mysterious','isolationist','monarchy']
+let deityDomains = ['mercy','humanity','nightmares','moon','fire','death','water','redemption','pride','wrath','stars','seasons','luck','silence','rebirth','nature','light','pestilence','winter','time']
+let districts = ['arcane','artisans','commerce','divine','entertainement','fovernment','boarding','religious','crafting','housing']
+let events = ['wanted posters','market day','festival','holy day','coronation','attack','siege','disease','rumors','execution']
+
+
+let factionAsset = ['alchemy','blackmail','bullying','bureaucracy','coin','deceit','espionage','favors','item','information','legal','manipulation','negotiation','rumors','sabotage','time','theft','threats','violence']
+let factionIssue = ['lost powerful item','mutiny','criminal attention','dependance on outsiders','shortage of members','trouble wiht law','debt','weak defenses','no leadership','trouble with religion','dangerous secret','powerful item','armed force','diety','wealth','political influence','stronghold','popularity','alliance','territory']
+let factionRelations = ['business','debt','alliance','war','equals','shared power','rivals','clients','controls','respect','family','secret ties','follows','hate','blackmail','shared resource','servants','betrayal','loyal','unknown']
+let factions = ['monarchy','noble houses','cult','temple','crime lord','guilds','wizards','trade empire','invaders','dark lord','thieves','rebels','politicians','army','deity','coven','bank','navy','old ones','knights']
+
+
+function findTown() {
+    function townName() {
+        let adjective = [
+            'Red','White','Blue','Green','Black','Gold','High','Low','Deep','Fair','Well','Ever','Copper','Gold','Silver','Electrum','Adamantine','Platinum','Broken','Hidden','Blood','Crystal','Shadow', 'Dead', 'Fort','Rocky','Tired','First','Sunny','Bad','Proud','Secret','Diamond','Amethyst','Bitter','Onyx','Dragon','Dire','Marble','Ancestral','Ancient','Arcane','Burning','Cursed','Dark','Divine','Eternal','Forbidden','Forgotten','Free','Fey','Holy','Iron','Ivory','Peace','Trade','Walled','Smoky','Swamp','Twilight', 'Warrior','Sage','Wizard','Rogue','Dawn','Dusk','Morning','Evening'
+               ]
+        let direction = [
+            'North','South','East','West'
+        ]
+        let noun = [
+            'Wood','Sun','Willow','Oak','Rock','Point','Pine','Birch','Lock','Elder','Rose','Hills','Moon','Song','Wind','Mist','Leaf','Dust','Stone','Fire','Boulder','Breach','Crest','Crown','Hollow','River','Falls','Path','Mouth','Summit','Tower','Watch','Wall','Vault','Will','Water','Tree','Hill','Wedge','Ring','Fall','Sand','Stop','Fate','March','Fist','Arch','Call','Crossing','Embrace','Descent','Hunt','Peak','Road','Fort','Heart'
+        ]
+        let post = [
+            'Village','Town','Cove','Glen','Rest','Square','Bluff','Bay','Haven','Ridge','Field','Gate','Lagoon','Bay','Grove','Foothills','Pass','Hamlet','Crossroads','Station','Hearth'
+        ]
+        let pre = [
+            'Old ','New '
+        ]
+
+    let templates = [
+        `${searchArray(adjective)} ${searchArray(noun)}`,
+        `${searchArray(noun)} ${searchArray(noun)}`,
+        `${searchArray(direction)} ${searchArray(noun)}`,
+        `${searchArray(direction)} ${searchArray(noun)}${searchArray(noun).toLowerCase()}`,
+        `${searchArray(noun)}${searchArray(noun).toLowerCase()}`,
+        `${searchArray(direction)} ${searchArray(noun)}${searchArray(noun).toLowerCase()} ${searchArray(post)}`,
+        `${searchArray(direction)} ${searchArray(noun)} ${searchArray(post)}`,
+        `${searchArray(adjective)} ${searchArray(noun)} ${searchArray(post)}`,
+        `${searchArray(noun)} ${searchArray(post)}`
     ]
+    return searchArray(templates)
+    }
+
+    let statue = [
+        `of the town's founder`, 'of a hero','of a diety','of an unknown person','of a dragon','of a horseman'
+    ]
+    
+    function tavernName() {
+        function toWordsUc(s) {
+            var th = ['', 'thousand', 'million', 'billion', 'trillion'];
+            var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+            var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+            var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+        
+        
+            s = s.toString();
+            s = s.replace(/[\, ]/g, '');
+            if (s != parseFloat(s)) return 'not a number';
+            var x = s.indexOf('.');
+            if (x == -1)
+                x = s.length;
+            if (x > 15)
+                return 'too big';
+            var n = s.split('');
+            var str = '';
+            var sk = 0;
+            for (var i = 0; i < x; i++) {
+                if ((x - i) % 3 == 2) {
+                    if (n[i] == '1') {
+                        str += tn[Number(n[i + 1])] + ' ';
+                        i++;
+                        sk = 1;
+                    } else if (n[i] != 0) {
+                        str += tw[n[i] - 2] + ' ';
+                        sk = 1;
+                    }
+                } else if (n[i] != 0) { // 0235
+                    str += dg[n[i]] + ' ';
+                    if ((x - i) % 3 == 0) str += 'hundred ';
+                    sk = 1;
+                }
+                if ((x - i) % 3 == 1) {
+                    if (sk)
+                        str += th[(x - i - 1) / 3] + ' ';
+                    sk = 0;
+                }
+            }
+        
+            if (x != s.length) {
+                var y = s.length;
+                str += 'point ';
+                for (var i = x + 1; i < y; i++)
+                    str += dg[n[i]] + ' ';
+            }
+            return str.replace(/\s+/g, ' ');
+        };
+        function tavernNamer() {
+            let posts = ["Inn", "Tavern", "Bed and Breakfast", "Lodge", "Roadhouse", "Saloon", "Lounge", "Watering Hole", "Pub", "Taphouse", "Tavern & Inn", "Groghouse", "Ale Garden", "Canteen", "Rest House", ]
+            let adjective = ['Airborne', 'Smelly', 'Slouching', 'Giddy', 'Brazen', 'Bawdy', 'Hobbled', 'Wrinkled', 'Grim', 'Silent', 'Broken', 'Happy', 'Sunken', 'Quiet ', 'Trodden', 'Headless', 'Burning', 'Squawking', 'Toothy', 'Hungry', 'Mighty', 'Frisky', 'Staggering', 'Gutted', 'Peckish', 'Thirsty', 'Artful', 'Rare', 'Steamy', 'Drunk', 'Glorious', 'Crooked', 'Blushing', 'Insolent', 'Enthusiastic', 'Joyful', 'Surprising', 'Scorned', 'Shameful', 'Romantic', 'Wise', 'Sweet', 'Surly', 'Soothing', 'Reverent', 'Coarse', 'Artificial', 'Clumsy', 'Clever', 'Deaf', 'Blind', 'Paralyzed', 'Prone', 'Restrained', 'Unconscious', 'Invisible', 'Petrified', 'Poisoned', 'Charmed', 'Frightened', 'Grappled', 'Acrobatic', 'Dextrous', 'Intelligent', 'Strong', 'Athletic', 'Deceitful', 'Charismatic', 'Insightful', 'Intimidating', 'Observant', 'Natural', 'Perceptive', 'Performing', 'Persuasive', 'Stealthy', 'Soft', 'Dirty', 'Dangerous', 'Deadly', 'Hidden', 'Useful', 'Dashing', 'Alert', 'Brave', 'Large', 'Tiny', 'Wicked', 'Tricky', 'Mysterious', 'Kind', 'Handsome', 'Fresh', 'Frantic', 'Foolish', 'Adorable', 'Clueless', 'Cruel', 'Elegant', 'Friendly', 'Laughing', 'Lost', 'Sleepless', 'Salty', 'Gnashing', 'Winking', 'Smiling', 'Waving', 'Ugly', 'Old', 'New', `Same ol'`, 'Wealthy', 'Bad', 'Sleeping', 'Bright', 'Shiny', 'Hairy', 'Magic', 'Burning', 'Drunken', 'Tipsy', 'Quiet', 'Devout', 'Chivalrous', 'Ancient', 'Lucky', 'Busy', 'Fragile', 'Cloudy', 'Smooth', 'Creepy', 'Curious', 'Grotesque', 'Prickly', 'Poor', 'Putrid', 'Puzzled', 'Obnoxious', 'Fierce', 'Fancy', 'Faithful', 'Magnificent', 'Enchanting', 'Eager', 'Easy', 'Innocent', 'Determined', 'Horrible', 'Wide-Eyed', 'Victorious', 'Uptight', 'Unusual', 'Troubled', 'Thankful', 'Terrible', 'Tame', 'Talented', 'Strange', 'Spotless', 'Shy', 'Repulsive', 'Quaint', 'Cursed', 'Blessed', "Copper", "Gold", "Electrum", "Platinum", "Silver", "Ruby", "Sapphire", "Emerald", "Jade", "Opal", "Garnet", "Diamond", "Coral", "Moonstone", "Pearl", "Amber", "Ivory", "Obsidian", ]
+            let verb = ["Attack", "Run", "Rest", "Dive", "Strike", "Break", "Fall", "Point", "Recall", "Stand", "Walk", "Watch", "Wait", "Reply", "Request", "Delight", "Challenge", "Dream", "Guide", "Hunt", "Embrace", "Knot", "Jump", "Place", "Order", "Race", "Tap", "Yawn", "Wink", "Wash", "Signal", "Turn", "Bow", "Leap", "March", "Design", "Slight", "Display", "Fight", "Draft", "Code", "Exchange", "Drink", "Curse", "Battle", "Command", "Lie", "Boast", "Itch", "Kiss", "Guess", "Flight", "Doubt", "Demand", "Attempt", "Arrangement", "Climb", "Call", "Laugh", "Stack"]
+            let noun = [
+                ['Guy', 'Gal', 'Abbot', 'Refugee', 'Acolyte', 'Archmage', 'Assassin', 'Bandit', 'Berserker', 'Commoner', 'Cultist', 'Fanatic', 'Gladiator', 'Mage', 'Preist', 'Scout', 'Spy', 'Thug', 'Veteran', 'Dutchess', 'Paladin', 'Farmer', 'Seaman', 'Knight', 'Scholar', 'Seadog', 'Jester', 'Noble', 'King', 'Count', 'Duke', 'Emperor', 'Thief', 'Sailor', 'Farmer', 'Soldier', 'Mercenary', 'Priest', 'Mage', 'Scholar', 'Beggar', 'Bard', 'Guard', 'Drunk', 'Wench', 'Knight', 'Merchant', 'Smuggler', 'Fool', 'Druid', 'Witch', 'Traveler', 'Fisherman', 'Lady', 'Harlot', 'Bounty Hunter', 'Gardener', 'Gambler', 'Prince', 'Princess', 'Brother', 'Father', 'Sister', 'Mother', 'Pirate', 'Journeyman', 'Chieftain', 'Lord', 'Miller', 'Archer', 'Crossbowman', 'Lumberjack', 'Miner', 'Hunter', 'Villager', 'Settler', 'Butcher', 'Oracle', 'Pilgrim', 'Courier', 'Hero', 'Necromancer', 'Sorcerer', 'Wizard', 'Barbarian', 'Ranger', 'Fighter', 'Monk', 'Warlock', 'Summoner', 'Arcanist', 'Blood Hunter', 'Cleric', 'Rogue', 'Artificer', 'Outlander', 'Exile', ],
+                ['Swamp', 'Mire', 'End', 'Bridge', 'Gate', 'Road', 'Solace', 'Haven', 'Rest', 'Paradise', 'Fort', 'House', 'Home', 'Venture', 'Joint', 'Hut', 'Repose', 'Keep', 'Garden', 'Room', 'Sanctum', 'Retreat', 'Asylum', 'Hideaway', 'Refuge', 'Shelter', 'Haunt', 'Shack', 'Den', 'Clearing', 'Dungeon', 'Castle', 'Cottage', 'Dungeon', 'Field', 'Camp', 'Lean-To', 'Mountain', 'Cave', 'Town', 'City', 'Lake', 'Pond', 'Lair', 'Chamber', 'Hovel', 'Stall', ],
+                ['Whistle', 'Anchor', 'Bench', 'Bramble', 'Nail', 'Scale', 'Bugle', 'Keystone', 'Blight', 'Hook', 'Tree', 'Flower', 'Drum', 'Buckle', 'Chair', 'Table', 'Spoon', 'Fork', 'Axe', 'Sword', 'Shield', 'Armor', 'Bag', 'Door', 'Stash', 'Bed', 'Bunk', 'Bedroll', 'Barrel', 'Keg', 'Crate', 'Box', 'Pot', 'Vial', 'Arrow', 'Broom', 'Shovel', 'Pillow', 'Hearth', 'Candle', 'Lantern', 'Mug', 'Cup', 'Tankard', 'Bottle', 'Plate', 'Plow', 'Pot', 'Pan', 'Lamp', 'Wagon', 'Spoke', 'Rug', 'Hammer', 'Anvil', 'Forge', 'Goblet', 'Chest', 'Wardrobe', 'Cellar', 'Beer', 'Ale', 'Mead', 'Wine', 'Vodka', 'Feather', 'Oar', 'Brandy', 'Cask', 'Harp', 'Lute', 'Necklace', 'Bracelet', 'Comb', 'Mantle', 'Crown', 'Ring', 'Oil', 'Potion', 'Gem', 'Scroll', 'Wand', 'Bead', 'Horseshoe', 'Pike', 'Bow', 'Slippers', 'Trident', 'Brooch', 'Amulet', 'Pipe', 'Figurine', 'Deck', 'Circlet', 'Fan', 'Boots', 'Quiver', 'Helm', 'Gloves', 'Belt', 'Cape', 'Dagger', 'Shackles', 'Horn', 'Staff', 'Book', 'Wings', 'Bands', 'Crystal Ball', 'Carpet', 'Cask', 'Manual', 'Tome', 'Flask', 'Treasure', 'Map', 'Artifact', 'Trap', 'Dart', 'Javelin', 'Spear', 'Halberd', 'Hoard', 'Key', 'Stone', 'Talisman', 'Scimitar', 'Apparatus', 'Bracers', 'Bowl', 'Chime', 'Decanter', 'Card', 'Mail', 'Elixer', 'Boat', 'Ship', 'Hat', 'Clothes', 'Headband', 'Haversack', 'Mirror', 'Mace', 'Philter', 'Periapt', 'Robe', 'Rope', 'Saddle', 'Glue', 'Well', 'Trinket', 'Statue', 'Hankercheif', 'Locket', 'Bone', 'Skull', 'Sickle'],
+                ['Aarakocra', 'Aboleth', 'Angel', 'Animated Object', 'Animated Weapon', 'Ankheg', 'Azer', 'Banshee', 'Basilisk', 'Behir', 'Beholder', 'Blight', 'Bugbear', 'Bulette', 'Bullywug', 'Cambion', 'Carrion Crawler', 'Centaur', 'Chimera', 'Chuul', 'Cloaker', 'Cockatrice', 'Couatl', 'Crawling Claw', 'Cyclops', 'Darkmantle', 'Death Knight', 'Demilich', 'Demon', 'Devil', 'Dinosaur', 'Displacer Beast', 'Doppleganger', 'Dracolich', 'Shadow Dragon', 'Dragon', 'Dragon Turtle', 'Drider', 'Dryad', 'Duergar', 'Elemental', 'Empyrean', 'Ettercap', 'Ettin', 'Faerie Dragon', 'Flameskull', 'Flumph', 'Fomorian', 'Fungi', 'Galeb Duhr', 'Gargoyle', 'Genie', 'Ghost', 'Giant', 'Gibbering Mouther', 'Gith', 'Gnoll', 'Goblin', 'Golem', 'Gorgon', 'Grell', 'Grick', 'Griffon', 'Grimlock', 'Hag', 'Half Dragon', 'Harpy', 'Hell Hound', 'Helmed Horror', 'Hippogriph', 'Hobgoblin', 'Homunculus', 'Hook Horror', 'Hydra', 'Intellect Devourer', 'Invisible Stalker', 'Jakalwere', 'Kenku', 'Kobold', 'Kraken', 'Kuo-Toa', 'Lamia', 'Lich', 'Lizardfolk', 'Lycanthrope', 'Magmin', 'Manticore', 'Medusa', 'Mephits', 'Merfolk', 'Merrow', 'Mimic', 'Mind Flayer', 'Minotaur', 'Modron', 'Mummie', 'Myconid', 'Naga', 'Nightmare', 'Nothic', 'Ogre', 'Oni', 'Ooze', 'Orc', 'Otyugh', 'Owlbear', 'Pegasus', 'Peryton', 'Piercer', 'Pixie', 'Psuedodragon', 'Purple Worm', 'Quaggoth', 'Rakshasa', 'Remorhazes', 'Revenant', 'Roc', 'Roper', 'Rust Monster', 
+                'Sahuagin', 'Salamander', 'Satyr', 'Scarecrow', 'Shadow', 'Shambling Mound', 'Shield Guardian', 'Skeleton', 'Slaadi', 'Specter', 'Sphinx', 'Sprite', 'Stirge', 'Succubus', 'Incubus', 'Terrasque', 'Thri-kreen', 'Treant', 'Troglodyte', 'Troll', 'Umber Hulk', 'Unicorn', 'Vampire', 'Water Weird', 'Wight', `Will-o'-Wisp`, 'Wraith', 'Wyvern', 'Xorn', 'Yeti', 'Yuan-ti', 'Yugoloth', 'Zombie', 'Ape', 'Awakened Tree', 'Awakened Shrub', 'Axe Beak', 'Baboon', 'Badger', 'Bat', 'Black Bear', 'Blink Dog', 'Blood Hawk', 'Boar', 'Brown Bear', 'Camel', 'Cat', 'Constrictor Snake', 'Crab', 'Crocodile', 'Death Dog', 'Deer', 'Dire Wolf', 'Draft Horse', 'Eagle', 'Elephant', 'Elk', 'Flying Snake', 'Frog', 'Giant Ape', 'Giant Badger', 'Giant Bat', 'Giant Boar', 'Giant Centipede', 'Giant Constrictor Snake', 'Giant Crab', 'Giant Crocodile', 'Giant Eagle', 'Giant Elk', 'Giant Fire Beetle', 'Giant Frog', 'Giant Goat', 'Giant Hyena', 'Giant Lizard', 'Giant Octopus', 'Giant Owl', 'Giant Poisonous Snake', 'Giant Rat', 'Giant Scorpion', 'Giant Sea Horse', 'Giant Shark', 'Giant Spider', 'Giant Toad', 'Giant Vulture', 'Giant Wasp', 'Giant Weasel', 'Giant Wolf Spider', 'Goat', 'Hawk', 'Hunter Shark', 'Hyena', 'Jackal', 'Killer Whale', 'Lion', 'Lizard', 'Mammoth', 'Mastiff', 'Mule', 'Octopus', 'Owl', 'Panther', 'Phase Spider', 'Poisonous Snake', 'Polar Bear', 'Pony', 'Quipper', 'Rat', 'Raven', 'Reef Shark', 'Rhinoceros', 'Riding Horse', 'Saber-Toothed Tiger', 'Scorpion', 'Sea Horse', 'Spider', 'Bat Swarm', 'Insect Swarm', 'Poisonous Snake Swarm', 'Quipper Swarm', 'Rat Swarm', 'Raven Swarm', 'Tiger', 'Vulture', 'Warhorse', 'Weasel', 'Winter Wolf', 'Wolf', 'Worg', ],
+            ]
+            let template = [
+                `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(noun[3])}`,
+                `The ${searchArray(noun[3])}'s ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[3])}'s ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[1])}'s ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(noun[2])}`,
+                `The ${searchArray(adjective)} ${searchArray(noun[2])}`,
+                `The ${searchArray(adjective)} ${searchArray(noun[1])}`,
+                `The ${searchArray(adjective)} ${searchArray(noun[3])}`,
+                `The ${searchArray(adjective)} ${searchArray(noun[0])}`,
+                `The ${searchArray(noun[2])} ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[0])} and the ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[2])} and the ${searchArray(noun[3])}`,
+                `The ${searchArray(noun[3])} in the ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[0])} and the ${searchArray(noun[3])}`,
+                `The ${searchArray(noun[3])} and the ${searchArray(noun[3])}`,
+                `The ${searchArray(noun[0])} at the ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[1])} at the ${searchArray(noun[1])}`,
+                `The ${searchArray(noun[0])} and the ${searchArray(noun[0])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(noun[3])}`,
+                `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(noun[2])}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(verb)}`,
+                `The ${searchArray(noun[3])}'s ${searchArray(verb)}`,
+                `The ${searchArray(noun[2])}'s ${searchArray(verb)}`,
+                `The ${searchArray(noun[1])}'s ${searchArray(verb)}`,
+                `The ${searchArray(verb)}`,
+                `The ${searchArray(adjective)} ${searchArray(verb)}`,
+                `The ${toWordsUc(rollDice(100))}${searchArray(noun[3])}s`,
+                `The ${toWordsUc(rollDice(100))}${searchArray(noun[2])}s`,
+                `The ${toWordsUc(rollDice(100))}${searchArray(noun[1])}s`,
+                `The ${toWordsUc(rollDice(100))}${searchArray(noun[0])}s`,
+                `The ${searchArray(noun[3])}'s ${searchArray(adjective)} ${searchArray(verb)}`,
+                `The ${searchArray(noun[2])}'s ${searchArray(adjective)} ${searchArray(verb)}`,
+                `The ${searchArray(noun[1])}'s ${searchArray(adjective)} ${searchArray(verb)}`,
+                `The ${searchArray(noun[0])}'s ${searchArray(adjective)} ${searchArray(verb)}`,
+            ]
+            let chance = rollDice(100)
+            if (chance < 33) {
+                return searchArray(template) + " " + searchArray(posts)
+            } else {
+                return searchArray(template)
+            }
+        }
+        let output = tavernNamer()
+        return output
+    };
+
+    let mainFeature = [
+        'the town square', 'a water well', 'a bonfire', 'an open market', `a statue ${searchArray(statue)}`,'a shrine','a simple fountain', `a grand fountain with a statue ${searchArray(statue)} on top`,'a fighting pit','a collesium',`a ${searchArray(['tournament','festival'])} ground`,'a large tree', 'a large store','a tavern','a courtyard','an executioners platform and gallows',' a stage for performing','a floating crystal','a wizards tower','a mozaic','a beam of light','an impossibly large sword','a sword in a stone','A guild hall','an arcane construct','a divine guardian','a tomb of a legendary king','a temple','a garden','a hedge maze'
+    ]
+    function lodging(){   
+        let lodging = [
+            'at a relatively safe clearing near town', 
+            `at the house of a ${searchArray(['generous','rich','pushy','insistent','creepy','highborn','lonely','widowed','ex-adventurer'])} citizen with a vacancy`, 
+            `in a spare ${searchArray(['barn', 'empty home','stables','burnt out building'])}`,`in the home of a recently ${searchArray(['deceased','murdered','evacuated'])} citizen`,'at a recent crime scene',`in the${searchArray([' seedy',' luxurious',''])} communal lodge`, 'at the brothel'
+        ]  
+        if (rollDice(100) < 75) {
+            return `You can find lodging at the local tavern, "${tavernName()}".`;
+        } else {
+            return `You will find lodging ${searchArray(lodging)}.`
+        }
+    };
+    function food() {
+        let food = [
+            `someone cooking their recent ${searchArray(['wild game','fish haul'])}`, 'the neighbor who shares generously if pursued', 'the public vegetable garden', 'the communal potluck', 'the open pit barbecue', 'the smokehouse', 'the marketplace'
+        ]
+        if (rollDice(100)<75) {
+            return `You smell food coming from the local tavern.`;
+        } else {
+            return `You smell food coming from ${searchArray(food)}.`;
+        }
+    }
     let specialtyShop = [
-        'n alchemist/herbalist/healer', 'n enchanter/hex den', ' glassblower', ' horse trader', 'n exotic goods merchant (carpets & cloth, jewelry, perfumes, curio)',
+        'n alchemist',' herbalist',' healer', 'n enchanter',' hex den',' jeweler',' woodcarver',' silks shop',' toy shop',' game shop', ' glassblower', ' horse trader', ' carpet shop', ' perfume shop',' curio shop',' massage parlor',' salon', ' pet shop',' familiar shop', ' cartographer', ' ice cream shop',' soap shop',' popcorn shop',' gardening and flower nursery',' home improvement shop',' memory shop',' vehicle shop',' music shop',' tools shop'
     ]
     let economicTouchstone = [
-        'the fact that it is a crossroads between a few larger settlements', 'their crops', 'their livestock', 'their docks/harbor', 'the ferry/major bridge', 'their fishery', 'their holy site', 'a source of magical power', 'their mill', 'the mine', 'that it became a trade hub', 'their defense (barracks, defending a strategic location or road, gatehouse, training)', 'their production industry (shipyards, ironworks)',
+        'the fact that it is a crossroads between a few larger settlements', 'their crops', 'their livestock', 'their docks', 'the ferry','the major bridge', 'their fishery', 'their holy site', 'a source of magical power', 'their mill', 'the mine', 'that it became a trade hub', 'their defense capabilities', 'their production industry','agriculture','trading','crafting','arms','livestock','education','faith','magic','archaeology','technology','medicine','nobility','prophecy','equality','shipping','fishing','crime','smuggling','expeditions','hunting'
     ]
+    function landmark(){
     let landmark = [
-        'a wizard’s tower (active, abandoned)', 'a college (arcane, bardic, scholarly)', 'a combat training school', 'a church/shrine/temple', 'a fighting pit', 'a tended gardens', 'a guild hall (craft, trade, fighter, thieves)', 'a library/knowledge repository', 'a lighthouse or watchtower', 'a racetrack (dogs, horses)', 'ruins (castle, cathedral, shipyards)', 'a sealed cave entrance', 'what looks like a skirmish aftermath (neighboring town, invading horde, rampaging beast)', 'a spiritual lodge', 'a standing corporal punishment fixture (stocks, gallows, chopping block)', 'theater/amphitheater', 'that a river runs through it', 'that it is built into a hill- or mountain-side', 'that it is built into a canyon or ravine', 'that it is surrounded by forest/wilderness',
+        `wizard's ${searchArray(['active','abandoned'])} tower`, `${searchArray('arcane', 'bardic', 'scholarly')} college`, 'combat training school', `${searchArray(['church','shrine','temple'])}`, 'fighting pit', 'tended gardens', `${searchArray(['craft', 'trade', 'class','thieves'])} guild hall `, 'library', 'lighthouse','watchtower', 'racetrack', `${searchArray(['castle', 'temple', 'shipyard','town'])} ruin`, 'sealed cave entrance',  'spiritual lodge', 'theater','amphitheater']
+    let feature =[
+        'that a river runs through the town', `that the town is built into a ${searchArray(['hill-side','mountain-side','canyon','ravine'])}`,`that the town is surrounded by ${searchArray(['forest','wilderness','desert','tundra','mountains','plains','hills'])}`,`what looks like the aftermath of a skirmish with ${searchArray(['a neighboring town','an invading horde','a rampaging beast'])}`
     ]
+        if (rollDice(100)<50){
+            return `you also see a nearby ${searchArray(landmark)}`
+        } else {
+            return `as well as ${searchArray(feature)}`
+        }
 
-    let output = "In the center of the town you notice " + searchArray(mainFeature) + " and " + searchArray(landmark) + ". While on your way to where the town can host you, " + searchArray(lodging) + ", you smell food... it is coming from " + searchArray(food) + ". There are a few shops in town, a general store, a " + searchArray(shop) + ", and a" + searchArray(specialtyShop) + ". The town's economic touchstone was/is " + searchArray(economicTouchstone) + "."
+    };
+    let output = `Welcome to ${townName()}! In the center of the town you notice ${searchArray(mainFeature)}, ${landmark()}. ${lodging()} ${variableEvent([`${food()}`])} There are the expected shops in town, as well as a${searchArray(specialtyShop)}. The town's economy ${searchArray(['is','was'])} based off of ${searchArray(economicTouchstone)}.`
+
     document.getElementById("Town").innerHTML = output
 };
 function findThePeople() {
