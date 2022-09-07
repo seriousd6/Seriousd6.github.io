@@ -136,7 +136,16 @@ function findTown() {
         `${searchArray(direction)} ${searchArray(noun)}${searchArray(noun).toLowerCase()} ${searchArray(post)}`,
         `${searchArray(direction)} ${searchArray(noun)} ${searchArray(post)}`,
         `${searchArray(adjective)} ${searchArray(noun)} ${searchArray(post)}`,
-        `${searchArray(noun)} ${searchArray(post)}`
+        `${searchArray(noun)} ${searchArray(post)}`,
+        `${searchArray(pre)} ${searchArray(adjective)} ${searchArray(noun)}`,
+        `${searchArray(pre)} ${searchArray(noun)} ${searchArray(noun)}`,
+        `${searchArray(pre)} ${searchArray(direction)} ${searchArray(noun)}`,
+        `${searchArray(pre)} ${searchArray(direction)} ${searchArray(noun)}${searchArray(noun).toLowerCase()}`,
+        `${searchArray(pre)} ${searchArray(noun)}${searchArray(noun).toLowerCase()}`,
+        `${searchArray(pre)} ${searchArray(direction)} ${searchArray(noun)}${searchArray(noun).toLowerCase()} ${searchArray(post)}`,
+        `${searchArray(pre)} ${searchArray(direction)} ${searchArray(noun)} ${searchArray(post)}`,
+        `${searchArray(pre)} ${searchArray(adjective)} ${searchArray(noun)} ${searchArray(post)}`,
+        `${searchArray(pre)} ${searchArray(noun)} ${searchArray(post)}`
     ]
     return searchArray(templates)
     }
@@ -299,63 +308,9 @@ function findTown() {
         }
 
     };
-    let output = `Welcome to ${townName()}! In the center of the town you notice ${searchArray(mainFeature)}, ${landmark()}. ${lodging()} ${variableEvent([`${food()}`])} There are the expected shops in town, as well as a${searchArray(specialtyShop)}. The town's economy ${searchArray(['is','was'])} based off of ${searchArray(economicTouchstone)}.`
+    let output = `Welcome to "${townName()}"! In the center of the town you notice ${searchArray(mainFeature)}, ${landmark()}. ${lodging()} ${variableEvent([`${food()}`])} There are the expected shops in town, as well as a${searchArray(specialtyShop)}. The town's economy ${searchArray(['is','was'])} based off of ${searchArray(economicTouchstone)}.`
 
     document.getElementById("Town").innerHTML = output
-};
-function findThePeople() {
-    let character = [
-        "martial", "urbane", "faithful", "agrarian", "reserved", "mercantile", "peaceful", "decadent", "erudite"
-    ]
-    let govSubArray = [
-        [ //0
-            "fiend", "celestial", "aberration", "dragon", "undead/spirits",
-        ],
-        [ //1
-            "spellcasters", "militants", "merchants", "priests",
-        ],
-        [ //2
-            'popular', 'despised',
-        ],
-        [ //3
-            "nearby polity", "far-away empire", "tyrant", "puppet governor",
-        ],
-    ]
-    let governance = [
-        `by a ${searchArray(govSubArray[0])}`,
-        "by a noble or member of royalty",
-        "by a council, perhaps of elders or potentates",
-        "by nobody. This place is in anarchy, law & order has broken down, or perhaps never existed in the first place",
-        "by criminals. They've overwhelmed the proper authorities, or perhaps it was their town to begin with",
-        `by a cabal of ${searchArray(govSubArray[1])} that is ${searchArray(govSubArray[2])} by the populace`,
-        `by an oppressive ${searchArray(govSubArray[3])}`,
-        "democratically",
-    ]
-    let knownForSubArray = [
-        "swimming", "hunting", "agility", "strength"
-    ]
-    let knownFor = [
-        `their fine crafts`, `being near the site of a great battle`, `maintaining the grave of a great king or hero`, `their luxurious hospitality`, `their livestock`, `their physical prowess in ${searchArray(knownForSubArray)}`, `their skilled warriors or soldiers`, `their knowledge or learning`,
-    ]
-    let customsSubArray = [
-        ["fiend", "celestial", "military order", "faith", "monster", ],
-        ["by the local criminal organization", "through trial by combat", "augury (reading omens)", "through agreed upon written law"],
-        ["in trees", "underground", "on or under water", "an animal or some other huge beast"],
-        ["spellcasters", "a certain faith", "members of a certain race or ethnicity", "outsiders"],
-    ]
-    let customs = [
-        `they are bound to service or stewardship of a ${searchArray(customsSubArray[0])}`,
-        'these people are nomadic, whether by inclination or necessity, the community is where they are',
-        'currency does not exist here, instead "gifts" & barter are the rule',
-        `justice here is decided ${searchArray(customsSubArray[1])}`,
-        'the people here dress themselves in strange clothes or odd adornments',
-        `they dwell in an odd (to you) living space, namely ${searchArray(customsSubArray[2])}`,
-        'interactions here follow a sort of script or tradition and it is taboo to break with them',
-        `there is a fear or hatred held towards ${searchArray(customsSubArray[3])}`,
-    ]
-
-    let output = "This community is known for it's " + searchArray(character) + " citizenry, as well as for " + searchArray(knownFor) + ". They are governed " + searchArray(governance) + ". I've also heard that " + searchArray(customs) + '.'
-    document.getElementById("People").innerHTML = output
 };
 function findResources() {
     let food = [
@@ -419,6 +374,110 @@ function findResources() {
     }
     let output = "This community " + pickFoodOrLuxury() + " Regarding the main resource, it is " + searchArray(prosperity) + " Getting the material is " + searchArray(hazard) + " Also, " + searchArray(interesting)
     document.getElementById("Resources").innerHTML = output
+};
+function findThePeople() {
+    function buildRace() {
+        let common = [
+            'Humans'
+        ]
+        let uncommon= [
+            'Dwarves',
+            'High-Elfs',
+            'Wood-Elfs',
+            'Gnomes',
+            'Half-Elfs',
+            'Halflings'
+        ]
+        let rare = [
+            'Dragonborn',
+            'Tieflings',
+            'Genasi',
+            'Aasimar',
+            'Half-Orcs',
+            'Tabaxi',
+            'Drow'
+        ]
+        let vRare = [
+            'Kalashtar', 'Shifters', 'Warforged', 'Simic Hybrids', 'Changelings', 'Goliaths', 'Giths', 'Yuan-Ti', 'Tortles', 'Aarakocras', 'Orcs'
+        ]
+        let eRare = [
+            'Bugbears', 'Firbolgs', 'Goblins', 'Hobgoblins', 'Kenkus', 'Kobolds', 'Tritons', 'Lizardfolk', 'Vedalken', 'Verdan', 'Locathah', 'Grungs', 'Centaurs', 'Loxodons', 'Minotaurs'
+        ]
+        function findRace() {
+            let chance = rollDice(100)
+            if (chance > 98) {
+                return searchArray(eRare);
+            } else if (chance > 95) {
+                return searchArray(vRare);
+            } else if (chance > 80) {
+                return searchArray(rare);
+            } else if (chance > 50) {
+                return searchArray(uncommon);
+            } else {
+                return searchArray(common);
+            }
+            //document.getElementById("Race").innerHTML = characterRace
+        };
+        let charRace = findRace();
+
+        return charRace
+    };
+
+    let character = [
+        "martial", "urbane", "faithful", "agrarian", "reserved", "mercantile", "peaceful", "decadent", "erudite"
+    ]
+    let govSubArray = [
+        [ //0
+            "fiend", "celestial", "aberration", "dragon", "undead/spirits",
+        ],
+        [ //1
+            "spellcasters", "militants", "merchants", "priests",
+        ],
+        [ //2
+            'is popular with', 'is despised by','is tolerated by'
+        ],
+        [ //3
+            "nearby polity", "far-away empire", "tyrant", "puppet governor",
+        ],
+        [ //4
+            "an Autocracy (One hereditary ruler wields absolute power)", "a Bureaucracy (various departments compose the government, ansewring to a council)", "a Confederacy (Each individual town governs itself, but all contribute to a league that benefits each member state)", "a Democracy (citizens elect representatives to determine laws)", "a Dictatorship (one supreme ruler holds absolute power)", "a Feudalisic state (Lords and vassals, vassalsprovide soldiers or payment, lords provide protection)", "a Gerontocracy (elders preside over this society, especially elders from long-lived races)", "a Hierarchy (Everyone is under soemone else, except one)", "a Magocracy (Composed of spellcasters who rule as oligarchs, feudal lords, or a Democracy/ Bureaucracy", "a Matriarchy (ruled by the eldest or most important woman)", "a Militocracy", "a Monarchy (A single, hereditary sovereign wears the crown. different than an Autocrat - a monarch's power is limited by the law)", "an Oligarchy (A small number of rulers share power, possibly diving the land into districts under their control, or ruling together)", "a Patriarchy (ruled by the eldest or most important man)", "a Meritocracy (the most intelligent and educated people oversee the society, combined with a bureaucracy for the day-to-day work.)", "Plutocracy (Society is governed by the wealthy)", "a Republic (Government is entrusted to an established electorate who rule on behalf)", "a Satrapy (Conquerers and representatives from another government weild power)", "a Kleptocracy (Composed of groups or individuals primarily seekign wealth for themselves)", "a Theocracy (rulership falls to a direct representative or collection of agents of a diety)"
+        ]
+    ]
+    let governance = [
+        `by a ${searchArray(govSubArray[0])}`,
+        "by a noble or member of royalty",
+        "by a council, perhaps of elders or potentates",
+        "by nobody. This place is in anarchy, law & order has broken down, or perhaps never existed in the first place",
+        "by criminals. They've overwhelmed the proper authorities, or perhaps it was their town to begin with",
+        `by a cabal of ${searchArray([`${searchArray(govSubArray[1])}`,`${searchArray(govSubArray[0])}`])} that ${searchArray(govSubArray[2])} the populace`,
+        `by an oppressive ${searchArray(govSubArray[3])}`,
+        `by ${searchArray(govSubArray[4]).toLowerCase()}`,
+    ]
+    let knownForSubArray = [
+        "swimming", "hunting", "agility", "strength"
+    ]
+    let knownFor = [
+        `their fine crafts`, `being near the site of a great battle`, `maintaining the grave of a great king or hero`, `their luxurious hospitality`, `their livestock`, `their physical prowess in ${searchArray(knownForSubArray)}`, `their skilled warriors or soldiers`, `their knowledge or learning`,
+    ]
+    let customsSubArray = [
+        ["fiend", "celestial", "military order", "faith", "monster", ],
+        ["by the local criminal organization", "through trial by combat", "through augury (reading omens)", "through agreed upon written law"],
+        ["in trees", "underground", "on or under water", "an animal or some other huge beast"],
+        ["spellcasters", "a certain faith", "members of a certain race or ethnicity", "outsiders"],
+    ]
+    let customs = [
+        `they are bound to service or stewardship of a ${searchArray(customsSubArray[0])}`,
+        'these people are nomadic, whether by inclination or necessity, the community is where they are',
+        'currency does not exist here, instead "gifts" & barter are the rule',
+        `justice here is decided ${searchArray(customsSubArray[1])}`,
+        'the people here dress themselves in strange clothes or odd adornments',
+        `they dwell in an odd (to you) living space, namely ${searchArray(customsSubArray[2])}`,
+        'interactions here follow a sort of script or tradition and it is taboo to break with them',
+        `there is a fear or hatred held towards ${searchArray(customsSubArray[3])}`,
+    ]
+
+    let output = `This community${searchArray([', of diverse composition,',`, primarily composed of ${buildRace().toLowerCase()},`,`, solely composed of ${buildRace().toLowerCase()},`])} is known for it's ` + searchArray(character) + " citizenry, as well as for " + searchArray(knownFor) + ". They are governed " + searchArray(governance) + ". I've also heard that " + searchArray(customs) + '.'
+    document.getElementById("People").innerHTML = output
 };
 function findCorruption() {
     let front = [
