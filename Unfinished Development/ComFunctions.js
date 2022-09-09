@@ -241,5 +241,3 @@ function shuffleSlice(array, number) {
 
 }
 
-//import { shuffle, rollDice, searchArray, variableEvent, variableEffect, toWordsLc, toWordsUc, reload, printArray, printFrom, orderedPrint, loopCountStoreList, loopCountPrintList, modify, shuffleSlice } from '../B-Misc Development/ComFunctions.js';
-
