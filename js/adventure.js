@@ -70,15 +70,247 @@ function reload() {
 /*-----------------------------Page Scripts Below-----------------------------------*/
 /*==================================================================================*/
 
-function conflict() {
-    let conflictArray = [
-        "Players vs. An Antagonist", "Players vs. Natural Forces", "Players vs. Supernatural Forces", "Players vs. Authority or Tradition",
-    ]
-    document.getElementById("Conflict").innerHTML = searchArray(conflictArray);
+let adventureStuff = {
+    "Type": ["Location based", "Event Based", "Mystery", "Intrigue"],
+    "Dungeon Goal":[`Stop the dungeon's monstrous inhabitants from rading the surface world`,`Foil a villain's evil scheme`,`Destroy a magical threat inside the dungeon`,`Acquire treasure`,'Find a particular item for a particular purpose','Retrieve a stolen item hidden in the dungeon','Find information needed for a special purpose','Discover the fate of a previous adventuring party','Find an NPC who dissapeared in the area','Slay a dragon or other challenging monster','Discover the location and origin of a strange location or phenomenon','Pursue fleeing foes taking refuge in the dungeon','Escape from captivity in the dungeon','Clear a ruin so that it can be rebuilt and reoccupied','Discover hwy a villain is interested in a dungeon','Win a bet or complete a rite of passage by surving in the dungeon for a certain amount of time','Parley with a villain in the dungeon','Hide form a threat outside the dungeon'],
+    "Wilderness goal":['Locate a dungeon (search the dungeon array','Assess the scope of a natural or unnatural disaster','Escort an NPC to a location',`Arrive at a destination without being seen by the villain's forces`,'Stop monsters from raiding caravans and farms','Establish trade with a distant town','Map a new land','FInd a place to establish a colony','Find a natural resource','Hunt a specific monster','Return home from a distant place','Obtain information form a reclusive hermit','Find an object that was lost int he wilds','Discover the fate of a missing group of explorers','Pursue fleeing foes','Asses the size of an approaching army','Escape the reign of a tyrant','Protect the wilderness from attackers'],
+    "Other Goal":[`Seize control of a fortified ${searchArray('ship','town','fortess')}`,'Defend a location from attackers','Retrieve an object from inside a secure locaiton in a settlement','Retrieve an object from a caravan','Salvage an object or goods from a lost vessel or caravan','Break a prisoner out of jail or prison camp','escape from jail or prison camp','Successfully travel through an obstacle course to gain recognition or reward','Infiltrate a fortified location','Find the source of strange occurrences in a haunted house or other location','Interfere with the operation of a business',`Rescue a ${searchArray(['character','monster', 'object'])} from a ${searchArray(['natural', 'unnatural'])} disaster`,'Bring the villain to justice','Clear the name of an Innocent NPC','Protect or hide an NPC','Protect an object',`Discover the nature and origin of a strange phenomenon that might be the villain's doing`,'Find a wanted fugitive','Overthrow a tryant','Uncover a conspiracy to overthrow a ruler','Negotiate peace between enemy nations or feuding families','Secure Aid from a ruler or council','Help a villain find redemption','Parley with a vvillain','Smuggle weapons to rebel forces','Stop a band of smugglers','Gather intelligence on an enemy force','Win a tournament',`Determine a villain's identity`,'Locate a stolen item','Make sure a wedding goes off wihtout a hitch','Find a specific item rumored to be in the area','retrieve a stolen item currently held by th evillain','Recieve information form an NPC in the area','Rescue a captive','Discover the fate of a missing NPC','Slay a specific monster','Discover the nature and origin of a strange phenomenon in the area','secure the aid of a character or creature int he area'], 
+    "Allies":['Skilled adventurer','Inexperienced Adventurer','Enthusiastic Commoner','Soldier','Priest','Sage','Revenge Seeker','Raving Lunatic','Celestial Ally','Fey Ally','Disguised Monster','Villain posing as an ally'],
+    "Patrons":['Retired adventurer','Local ruler','MIlitary Officer','Temple official','Sage','Respected Elder','Deity or Celestial','Mysterious Fey','Old friend','Former teacher','Parent or other family member','Desperate Commoner','Embattled Merchant','Villain posing as a patron'],
+    "Surprises": [],
+    "Beginning": [],
+    "Middle":['Big event','Crime spree','Growing corruption','One and done','Serial crimes','Step by step'],
+    "End": [],
+}
+
+let villainStuff = {
+    "Type":{
+        "Intelligent":['Aberration','Fiend','Dragon','Giant','Undead','Fey','Cultist','Conquerer','Humaniod','Criminal Mastermind','Raider or ravager','Cursed'],
+        "Unintelligent":['Beast','Monstrosity','Undead']
+
+    },
+    "Objective": {
+        "Immorality": ['Acquire a legendary item to prolong life','Ascend to godhood','Become undead or obtain a younger body',`steal a planar creature's essence`],
+        "Influence": ['Seize a position of power or a title','Win a contest or tournament','Win favor with a powerful individual','Place a pawn in a position of power'],
+        "Magic": ['Obtain an ancient Artifac','Build or construct a magical device',`Carry out a diety's wishes`,'Offer sacrificaes to a diet','contact a lost diety or power','construct a gate to another world'],
+        "Mayhem": ['Fulfill an apocalyptic prophecy','Enact the vengeful will of a god or patorn','Spread a viel contagion','Overthrown the government','Trigger a natural disaster','Uterly destroy a bloodline or clan'],
+        "Passion": ['Prolong the life of a loved one',`Prove worthy of another person's love`,'Raise or restore a dead loved one',`Destroy rivals for another person's affections`],
+        "Power": ['Conquer a region or incite a rebellion','Seize control of an army','Become the power behind the throne','Gain the favor of a ruler'],
+        "Revenge": ['Avenge a past humiliation or insult','Avenge a past imprisonment or injury','Avenge the death of a loved one','Retrieve Stolen property and punish the thief'],
+        "Wealth": ['Control natural resources or trade','Marry into Wealth','Plunder ancient ruins','Steal land, goods, or money'],
+    },
+    "Methods": {
+        "Agricultural Devastation": ['Blight','Crop failure','Drought','Famine'],
+        "Assault or Beatings": [],
+        "Bounty Hunting or Assasination": [],
+        "Captivity or Coercion": ['Bribery','Enticement','Eviction','Imprisonment','Kidnapping','Legal Intimidation','Press Gangs','Shackling','Slavery','Threats or harassment'],
+        "Confidence Scams": ['Breach of contract','Cheating','Fast talking','Fine Print','Fraud or Swindling','Quackery or tricks'],
+        "Defamation": ['Graming','Gossiping or slander','HUmiliation','Libel or Insults'],
+        "Dueling": [],
+        "Execution": ['Beheading','Burning at the stake','Burying alive','Crucifixion','Drawing and Quartering','Hanging','Impalement','Living sacrifice'],
+        "Impersination or disguise": [],
+        "Lying or perjury": [],
+        "Magical Mayhem": ['Hauntings','Illusions','Infernal Bargains','Mind Control','Petrification','Raising or animating the dead','Summoning Monsters','Weather control'],
+        "Murder": ['Assassination','Cannibalism','Dismemberment','Drowning','Electrocution','Involuntary Euthanasia','Disease','Poisoning','Stabbing','Strangulation or Suffocation'],
+        "Neglect": [],
+        "Politics": ['Betrayal or treason','Confiscating Property','Conspiracy','Espionage or spying','Oppressive laws','Rasining Taxes'],
+        "Religion": ['Curses','Desecration','False gods','Heresy or cults'],
+        "Stalking": [],
+        "Theft or Property Crime": ['Arson','Blackmail or extortion','Burglary','Counterfeiting','Highway robbery','Looting','Mugging','Poaching','Seizing property','Smuggling',],
+        "Torture": ['Acid','Blinding','Branding','Racking','Thubscrews','Whipping'],
+        "Vice": ['Aldultery','Drugs or alcohol','Gambling','Seduction'],
+        "Warfare": ['Ambush','Invasion','Massacre','Mercenaries','Rebellion','Terrorism'],
+    },
+    "Weakness": ['A hidden object holds the villains soul',`The villain's power is broken if the death of it's true love is avenged`,'The villains is weakened in the presence of a particular artifact','A special weapon deals extra damage when used against the villain','The villain is destroyed if it speaks its true name','An ancient prophecy of a riddle reveals how the villain can be overthrown',`The villain fails when an ancient enemy forgives it's past actions`,'The villain loses its power if a mystic bargain it sruck long ago is cvompleted.']
+}
+let dungeonStuff = {
+    "Location": ["beneath a building in a city", "built into the catacombs or sewers beneath a city", "beneath a farmhouse", "beneath a graveyard", "beneath a ruined castle", "beneath a ruined city", "beneath a temple", "in a chasm", "in a cliff face", "in a desert", "in a forest", "in a glacier", "in a gorge", "in a jungle", "in a mountain pass", "in a swamp", "beneath or on top of a mesa", "in sea caves", "in several connected mesas", "on a mountain peak", " on a promontory", "on an island", "underwater", `${searchArray(["in the branches of a tree","around a geyser", "behind a waterfall","buried in an avalanche","buried in a sandstorm", "buried in volcanic ash","Sunk in a swamp", "floating on the sea", "in a meteorite","on a demiplane or pocket dimension", "in an area devastated by a magical catastrophe", "on a cloud", "in the Feywild", "in the Shadowfell", "on an island in an underground sea","In a volcano","on the back of a gargantuan living creature","sealed in a magical dome of force","inside a mordenkainen's magnificent mansion"])}`],
+    "Creator": {
+        "Basic": ["beholder", "dwarves", "elves (including drow)", "giants", "hobgoblins", "kuo-toa", "lich", "mind flayers", "yuan-ti", "devil or demons", "natural or magical phenomena"],
+        "Human": {
+            "Alignment": ["lawful good", "neutral good", "chaotic good", "lawful neutral", "neutral", "chaotic neutral", "lawful evil", "neutral evil", "chaotic evil"],
+            "Class": ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
+        }
+    },
+    "Purpose": {
+        "death trap": ["antechamber or waiting room for spectators", "guardroom fortified against intruders", `vault for holding important treasures, accessible only by locked or secret door (${searchArray(["trapped","trapped","trapped","not trapped"])})`, "room containing a puzzle that must be solved to bypass a trap or monster", "trap designed to kill or capture creatures", "observation room, allowing guards or spectators to observe creatures moving through the dungeon"],
+        "lair": ["armory stocked with weapons and armor", "audience chamber used to recieve guests", "banquet room used for important celebrations", "barracks where the lairs defenders are quartered", "bedroom for use by leaders", "chapel where the lair's inhabitants worship", "cistern or well for drinking water", "guardroom for defense of the lair", "kennel for pets and guard beasts", "kitchen for food storage and preparation", "pen or prison where captives are held", "storage, mostly nonperishable goods", "throne room where the lairs leaders hold court", "torture chamber", "training and exercise room", "trophy room or museum", "latrine or bath", "workshop for the contruction of weapons, armor, tools, and other goods"],
+        "maze": ["conjuring room, used to summon creatures that guard the maze", "guardroom for sentinel that patrol the maze", "lair for guard beasts that partol the maze", "pen or prison accessible only by secret door, used to hold captives condemned to the maze", "shrine dedicated to a god or other entity", "storage for food, as well as tools used by the maze's guardians to keep the complex in working order", "trap to confound or kill those sent into the maze", "well that provides drinking water", "workshop where doors, torch sconces, and other furnishings are repaired and maintained"],
+        "mine": ["barracks for miners", "bedroom for a supervisor or manager", "chapel dedicated to a patron diety of miners, earth, or protection", "cistern providing drinking water for miners", "guardroom", "kitchen used to feed workers", "laboratory used to conduct test on strange minerals extracted from the mine", `lode where metal ore is mined (${searchArray(["depleted","depleted","depleted","some ore left"])})`, "office used by the mine supervisor", "smithy for repairing damaged tools", "storage for tools and other equipment", "storage room or vault used to store ore for transport to the surface"],
+        "planar gate": ["decorated foyer antechamber", "armory used by the portal's guardians", "audience chamber for recieving visitors", "barracks used by the portal's guards", "bedroom for use by the high tanking members of the order that guards the portal", "chapel dedicated to a diety or dieties related to the protal and its defender", "cistern providing fresh water", "classroom for use of initiates learning about the portal's secrets", "conjuring room for summoning creatures used to investigate or defend the portal", "crypt where the remains of those that died guarding the portal are kept", "dining room", "divination room used to investigate the portal and events tied to it", "dormitory for visitors and guards", "entry room or vestibule", "gallery used for displaying trophies and objects related to the portal and those that guard it", "guardroom to protect or watch over the portal", "kitchen", "laboratory for conducting experiments related to the portal and the creatures that emerge form it", "library holding books abour the protal's history", "pen or prison for holding captives or creatures that emerge form the portal", `planar junction, where the gate to another plane ${searchArray(["once stood", "once stood","once stood", "is currently active"])}`, "storage", "strong room or vault, for guarding valuable treasures connected to the portal or funds used to pay the planar gate's guardians", "study", "torture chamber, for questioning creatures that pass through the portal or to clandestinely use it", "latrine or bath", "workshop for constructing the tools and gear needed to study the portal"],
+        "strongold": ["antechamber where visitors seeking access to the stronghold wait", "armory holding high-quality gear, including light siege weapons such as ballistas", "audience chamber used by the master of the stronghold to recieve visitors", "aviary or zoo for keeping exotic creatures", "banquet room for hosting celebrations and guests", "barracks used by elite guards", "bath outfitted with a marble floor and other luxurious accroutrements", "bedroom for use by the stronghold's master and other important guests", "chapel dedicated to a diety associated with the stronghold's master", "cistern providing drinking water", "dining room for intimate gatherings or informal meals", "dressing room featuring a number of wardrobes", "gallery for the display of expensive works of art and trophies", "game room used to entertain visitors", "guardroom", "kennel where monsters or trained animals that protect the stronghold are kept", "kitchen designed to prepare exotic foods for large numbers of guests", "library with an extensive collection of rare books", "lounge used to entertain guests", "pantry, including cellar for wine or spirits", "sitting room for family and intimate guests", "stable", "storage for mundane goods and supplies", `strong room or vault for protecting important treasures ${searchArray(["hidden behind a secret door","hidden behind a secret door","hidden behind a secret door","and the door is not hidden"])}`, "study, including a writing desk", "throneroom elaborately decorated", "waiting room where lesser guests are held before recieving an audience", "latrine or bath", "crypt blonging to the stronghold's master or someone else of importance"],
+        "temple/shrine": ["armory filled with weapons and armor, battle banners, and pennants", "audience chamber where priests of the temple recieve commoners and low-ranking visitors", "banquet room used for celebrations and holy days", "barracks for the temple's military arm or its hired guards", "cells where the faithful can sit in quiet contemplation", "central temple built to accomodate rituas", "chapel dedicated to a lesser diety associated with the temple's major diety", "classroom used to train initiates and priests", "conjuring room, specially sanctified and used to summon extraplanar creatures", "crypt for a high priest or similar figure, hidden and heavily guarded by creatures and traps", "divination room, inscribed with runes and stocked with soothsaying elements", "dining room (small), for the temple's high priests", "dining room (large) for the temple's servants and lesser priests", "dormitory for lesser priests or students", "guardroom", "kennel for animals or monsters associated with the temple's diety", "kitchen (might bear a disturbing resemblance to a torture chamber in an evil temple", "library, well stocked with religious treatises", "prison for captured enemies (in good or neutral temples) or those designated for sacrifices (in evil temples)", "robing room containing ceremonial outfits and items", "stable for riding horses and mounts belonging to the temple, or for visiting messengers and caravans", "storage holding mundane supplies", "strong room or vault holding important relics and ceremonial items, heavily trapped", "torture chamber, used in inquisitions (in lawful good and neutral temples) or for the sheer joy of causing pain (evil temples)", "latrine or bath", "well for drinking water, defendable in the case of attack or siege", "workshop for repairing or creating weapons, religious item, and tools"],
+        "tomb": ["antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals", "chapel dedicated to dieties that watch over the dead and protect their restng places", "a crypt for less important burials", "divination room, used in rituals to contact the dead for guidance", "false crypt(trapped) used to kill or capture thieves", "gallery to display the deeds of the deceased through trophies, statues, paintings, and so forth", "grand crypt for a noble, high priest, or other important indivudal", "guardroom, usually guarded by undead, constructs, or other creatures that do not need to eat or sleep", "robing room for preists to prepare for burial rituals", "storage, stocked with tools for maintaining the tomb and preparing the dead for burial", "tomb where the wealthiest and more important folk are interred, protected by secret doors and traps", "workshop for embalming the dead"],
+        "treasure vault": ["antechamber for visiting dignitaries", "armory containign mundane and magic gear used by the treasure vault's guards", "barracks for the guards", "cistern providing fresh water", "guardroom for defending against intruders", "kennel for trained beasts used to guard the treasure vault", "kitchen for feeding gaurds", "watch room that allows guards to observe those who approach the dungeon", "prison for holding captured intruders", "strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by a locked secret door", "torture chamber for extracting information from captured intruders", "trap or other trick designed to kill or capture creatures that enter the dungeon", ],
+    },
+    "History": ["it has been long since abandoned", "it has been abandoned due to a plague", "it has been conquered by invaders", "it is avoided due to attacking raiders", "the pioneers of the area were destroyed by a discovery made within", "infighting destroyed the first residents", "it is the site of a magical catastrophe, killing the first ones here", "it has been battered and deemed unusable due to natural disasters", "this location has been cursed by the gods and shunned", `it is currently under intelligent control`, "it is overrun by planar creatures", "it is the site of a great miracle", ],
+    "Layout": {
+        "Starting area": [
+            [
+                "square, 20x20 ft.; passage on each wall",
+                "square, 20x20 ft.; doors on two walls, passage in third wall",
+                "square, 40x40 ft.; doors on three walls",
+                "Rectangle, 80x20 ft.; with a row of pillars down the middle; two passages leading from each long wall, doors on each short wall",
+                "rectangle 20x40 ft.; passage on each wall",
+                "circle, 40 ft. diameter; one passage at each cardinal direction",
+                "circle, 40 ft. diameter; one passage in each cardinal direction; well in middle of room (might lead to a lower level)",
+                "square, 20x20 ft.; door on two walls, passage on third wall, secret door on fourth wall",
+                "passage, 10 ft. wide; T intersection",
+                "passage, 10 ft. wide; four way intersection"
+            ],
+            [
+                4,
+                3,
+                3,
+                6,
+                4,
+                4,
+                5,
+                4,
+                2,
+                4,
+            ]
+
+        ],
+        "Passage width": ["5 ft.", "10 ft.", "20 ft.", "30 ft.", "40 ft., with a row of pillars down the middle", "40 ft., with a double row of pillars", "40 ft. wide, 20 ft high", "40 ft. wide, 20 ft. high, (with a second floor balcony/gallery 10 ft. above)"],
+        "Stairs": ["down one level to a chamber", "down one level to a passage 20 ft. long", "down two levels to a chamber", "down two levels to a passage 20 ft. long", "down three levels to a chamber", "down three levels to a passage 20 ft. long", "up one level to a chamber", "up one level to a passage 20 ft. long", "up to a dead end", "down to a dead end", "chimney up one level to a passage 20 ft. long", "chimney up two levels to a passage 20 ft. long", "shaft (with or without elevator) down one level to a chamber", "shaft (with or without elevator) down two levels to a chamber"],
+        "Passage": ["30 ft. long with no side passages", "20 ft. long, door to the right, then and additional 10 ft. ahead", "20 ft. long, door to the left, then and additional 10 ft. ahead", "20 ft. long, passage ends in a door", "20 ft. long, side passage to the right, then an additional 10 ft. ahead", "20 ft. long, side passage to the left, then an additional 10 ft. ahead", `20 ft. long, comes to a dead end; (there is a secret door)`, "20 ft. long, then the passage turns left and continues 10 ft.", "20 ft. long, then the passage turns right and continues 10 ft."],
+        "PassageCount": [1, 2, 2, 1, 2, 2, 1, 1, 1],
+        "Door": {
+            "Type": ["wooden", "wooden, barred or locked", "stone", "stone, barred or locked", "iron", "iron, barred or locked", "portcullis", "portcullis, locked in place", "secret door", "secred door, barred or locked", ],
+            "Beyond": ["a passage extending 10 ft., then T intersection extending 10ft. to the right and left", "passage 20 ft. straight ahead", "false door with trap", ],
+        },
+        "Chambers": {
+            "Chamber Types": ["antechamber", "armory", "audience chamber", "Aviary", "Banquet room", "barracks", "bath or latrine", "bedrooms", "bestiary", "cell", "chantry", "chapel", "cistern", "classroom", "closet", "conjuring room", "court", "crypt", "dining room", "divination room", "dormitory", "Dressing room", " entry room or vestibule", "Gallery", "Game room", "guardroom", "Hall", "great hall", "Hallway", "Kennel", "Kitchen", "laboratory", "Library", "Lounge", "meditation chamber", "Observatory", "office", "Pantry", "pen or prison", "reception room", "refectory", "robing room", "salon", "shrine", "sitting room", "smithy", "stable", "storage room", "strong room or vault", "study", "temple", "throne room", "torture chamber", "training or exercise room", "trophy room or museum", "waiting room", "nursery or schoolroom", "well", "workshop"],
+            "Shape": [
+                /*Small*/
+                [`Square, 20x20 ft.`, `Square, 30x30 ft.`, `Square, 40x40 ft.`, `Rectangle, 20x30 ft.`, `Rectangle, 30x40 ft.`, `Circle, 30 ft. diameter`, ],
+                /*Large*/
+                [`Rectangle, 40x50 ft.`, `Rectangle, 50x80 ft.`, `Circle, 50 ft. diameter`, `Octagon, 40x40 ft.`, `Octagon, 60x60 ft.`, `Trapeziod, roughly 40x60 ft.`, ]
+            ],
+            "Chamber Exits": [
+                /*Small*/
+                [0, 0, 1, 1, 2, 2, 3, 3, 4, 4],
+                /*Large*/
+                [0, 1, 1, 2, 2, 3, 3, 4, 5, 6]
+            ],
+            "Exit locations": [
+                "wall opposite entrance", "wall left of entrance", "wall right of entrance", "same wall as entrance",
+            ],
+            "Exit type": [
+                "corridor, 10 ft. long"
+            ]
+        },
+
+        "State": ["rubble, ceiling partially collapsed", "holes, floor partially collapsed", "Ashes, contents mostly burned", "used as a campsite", "pool of water, chambers original contents are water damaged", "furniture wrecked but still present", `Converted to a(n) ${"chamber"}`, "Stripped bare", "Pristine and in original state"]
+    },
+    "Contents": {}
+
 };
+
+function printDungeon() {
+    let creator = "";
+    let purpose = searchArray(Object.keys(dungeon.Purpose));
+    if (rollDice(100) < 50) {
+        creator = searchArray(dungeon.Creator.Basic);
+    } else {
+        let creatorAlig = searchArray(dungeon.Creator.Human.Alignment);
+        let creatorClass = searchArray(dungeon.Creator.Human.Class);
+        creator = `a humaniod, specifically a ${creatorAlig} aligned ${creatorClass},`;
+    }
+
+
+    function dungeonBuilder(purpose) {
+        let roomCount = 0;
+        let limiter = 50
+        function start() {
+            let inde = Math.floor(Math.random(1) * dungeon.Layout["Starting area"][0].length);
+            let start = dungeon.Layout["Starting area"][0][inde];
+            roomCount += dungeon.Layout["Starting area"][1][inde];
+            return `The entrance of this dungeon lets into a ${start}, likely this area was a(n) ${searchArray(dungeon.Purpose[purpose])}.`
+        };
+        let output = `There is an area of interest ${searchArray(dungeon.Location)}, it was created by ${creator} and historically it has been used as a ${purpose}. Also, ${searchArray(dungeon.History)}.`
+        console.log(output + "\n\n" + start())
+        
+        let newRooms = [roomCount]
+        let outputArray = []
+        let counter = 1
+        for (t = 1; roomCount < limiter; t++) {
+
+            function determineType(num, x) {
+                let Arrg = []
+                for (i = x; i < num; i++) {
+
+                    let chance = rollDice(100)
+                    if (chance < 25) {
+                        Arrg.push(`Path ${toWords(counter)}is ${searchArray(["sealed", "blocked by rubble", "caved in", "too small to enter"])}`)
+                        counter++
+                    } else if (chance < 75) {
+                        if (roomCount > limiter) {
+                            let size = rollDice(1)
+                            let chamber = dungeon.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeon.Layout.Chambers.Shape[size].length))]
+                            let exits = 0
+                            roomCount += exits
+                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeon.Purpose[purpose])} with ${exits} exits.`)
+                            counter++
+                        } else {
+                            let size = rollDice(1)
+                            let chamber = dungeon.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeon.Layout.Chambers.Shape[size].length))]
+                            let exits = searchArray(dungeon.Layout.Chambers["Chamber Exits"][size])
+                            roomCount += exits
+                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeon.Purpose[purpose])} with ${exits} exits.`)
+                            counter++
+                        }
+                    } else {
+                        let inde = Math.floor(Math.random(1 * dungeon.Layout.Passage.length));
+                        let passage = "";
+                        let exits = "";
+                        let size = searchArray(dungeon.Layout["Passage width"]);
+
+                        function passType() {
+                            let chance = rollDice(100)
+                            if (chance < 75) {
+                                passage = 'passage that is ' + dungeon.Layout.Passage[inde];
+                                exits = dungeon.Layout.PassageCount[inde]
+                            } else {
+                                passage = 'staircase that is ' + searchArray(dungeon.Layout.Stairs)
+                                exits = 1
+                            }
+                        }
+                        passType()
+                        roomCount += exits
+                        Arrg.push(`Path ${toWords(counter)}leads to a ${size +" "+ passage} with ${exits} connection(s)`)
+                        counter++
+                    }
+                }
+                return Arrg
+            }
+            let build = determineType(roomCount, counter);
+            let bog = [].concat(outputArray, build)
+            outputArray = bog
+
+            newRooms.push(roomCount)
+        }
+        printArray(outputArray)
+    };
+    dungeonBuilder(purpose)
+
+};
+
+function tier(){
+    let tier = ["Tier 1 (lvl 1-5)", "Tier 2 (lvl 6-10)", "Tier 3 (lvl 11-16)", " Tier 4 (17-20)", "Marathon (Tier 1-4: level 1-20)"]
+    document.getElementById("Tier").innerHTML = searchArray(tier);
+};
+
+function flavor(){
+    let flavor = ["Heroic", "Sword and Sorcery", "Epic", "Mythic", "Dark", "Intrigue", "Mystery", "Swashbuckling", "War", "Wuxia (orient)",'Horror','Discovery','Historic','Time Travel','Plane Travel','Steam Punk','Calamity']
+    document.getElementById("Flavor").innerHTML = searchArray(flavor);
+}
+
 
 function start() {
     let startOfConflict = [
+        `While travelling in the wilderness, the characters fall into a sinkhole that opens up beneath their feet, dropping thme into the adventure location.`,'While travelling in the wilderness, the characters notice the entrance to the adventure location',`While travelling on a road, the characters are attacked by monsters that flee into the nearby adventure location.`,`The avdneturers find a map on a dead body. In addition to the map setting up the adventure,  the adventure's villain wants the map`,`AQ mysterious magic item or a cruel villain teleports the characters to the adventure lcoation`,`A stranger approaches the party in the tavern and urges them to the adventure location`,'A town or village needs volunteers to go to the adventure location','An NPC the characters care about needs them to go to the adventure location','An NPC the players must obey orders them to the adventure location','An NPC the party respects asks them to go to the adventure location','One night, the characters all dream about the adventure location','A ghost appears and terrorizes a village. Research reveals it can only be put to rest by going to the adventure location.',
         "A Child is born", "It's an Ambush", "It's someone's Birthday", "A Festival is in full swing", "A Monarch is being Coronated", "A Tournament is about to begin", "There is a Migration of Monsters", "It's the Day of an Important Trial", "Someone is undergoing investigation", "The PCs have been invited to a Ball", "An important Treaty is being signed", "A Mysterious Murder has taken place", "Two Planes are temporarily Converging", "It's the Anniversary of an Important Event", "The PCs have been unexpectedly drugged", "A Funeral Procession passes through town", "A Mysterious Stranger sits alone in the tavern", "Someone important is being publicly executed", "An NPC the PCs care about has been kidnapped", "The PCs have been wrongfully accused of a crime", "Ask everyone to roll a Dexterity save immediatly, without any context. After they've all rolled, describe the scene. They're running away from a hill giants' settlement after stealing something valuable. The plan was to sneak in, take the object, and leave silently, but a giant caught them red-handed and had to start running for their lives. Now the giants are throwing huge rocks at them from the distance while they run down the mountain. Make them roll once or twice more before succesfully escape and nerf the rock damage a bit if it hits. NPC, yelling at a PC while running: FOR THE GODS SAKE TELL ME YOU STILL HAVE IT WITH YOU!", "There you are, studying the situation. Tension can be cut with a knife, silence, no other sound but your steps on the grass and the growls of that damn thing. You walk in circles, keeping an eye and distance between you, and them, and thinking how on earth could you have ended up in that situation. You were facing a wild manticore 30 seconds ago, but suddenly a group of bandits appeared from nowhere, interrupting the scene. The situation just turned into a three-way combat, and everyone is just waiting for the others to make a move. Roll initiative, my dears.", 
         "The blizzard is hitting hard on them. They should've stayed in the village until tomorrow, but now it is too late to regret. As they walk through this narrow mountain pass, exhausted, deafened by the wind and almost blinded by the snow, one of the PCs slips. He/she manages to clutch to the edge of the cliff, but struggles to avoid falling.", "The party is being chased by a huge zombie horde in the middle of a foggy forest, when suddenly one of the PCs spots a small abandoned cabin. Getting inside seems like the best option in that dire situation. Anyways, the cabin is only a temporary solution because the zombies will end up entering one way or another; luckily, it has a small trapdoor leading to a basement...", "The PCs start tied in a ship's deck and one of them is about to walk the plank. Luckily, another PC just managed to get free while the crew is distracted with the show and mocking.", "The party are passengers on a ship that has come under attack by a sea monster, roll various checks in an attempt to survive. Eventually the ship is destroyed and the party will wash up on shore (whether they made it aboard a life raft or not).", "The PCs stare dumbly at each other in a quiet corner of a chaotic battlefield. They have no idea whose on what side, but they have a bigger problem: one of the players receives a reply from a sending scroll that goes: 'Roger that, Charlie Unit. Meteor Strike Inbound, eta 5 minutes'.", "An alarm is blaring. In the dimly-lit barracks, a flashing light covers the entire room in blinding crimson every two seconds. Before you’ve even fully woken up, you find yourself and your companions being aggressively shouted-at in a foreign tongue.", 
         "You feel like you've been running through the woods for hours, and your pursuers never seem to drop back very far. You come across a stream that seems to flow in about the direction you're trying to go, so you jump into it to try to hide your scent. Unfortunately, that narrow stream turns out to be a narrow but deep, fast-flowing river, and you're swept away on the current. Roll a Dexterity save for half damage as you bang against the walls of the narrow torrent/get projected over the edge of a cliff in a waterfall.", "The lunar festival is going swimmingly. Everyone is drinking and dancing and having a merry time. The PC's are enjoying the festivities in their own way. You notice that a fight has started near the band, and another one near the tables, wait another fight has broken out. As you look closer, the festival goers seem to be transforming into flesh craving demons. Chaos has erupted at this peaceful festival. Roll initiative!", 
@@ -153,6 +385,13 @@ function start() {
     document.getElementById("Start").innerHTML = searchArray(outcomes);
 };
 
+function conflict() {
+    let conflictArray = [
+        "Players vs. An Antagonist", "Players vs. Natural Forces", "Players vs. Supernatural Forces", "Players vs. Authority or Tradition",
+    ]
+    document.getElementById("Conflict").innerHTML = searchArray(conflictArray);
+};
+
 function villain() {
     let villainArray = [
         "Monster (Goblins, Oozes, etc.)", "Humanoid (The common races)", "Extraplanar (Elementals, Fey, etc.)", "Dragon (Chromatic, Metallic, etc.)", "Beast (Lions, Tigers, Owlbears, etc.)", "Fiends (Demons, Devils, Yugoloths, etc.)", "Undead (Vampires, Liches, Specters, etc.)", "Aberration (Beholders, Mind Flayers, etc.)",
@@ -190,7 +429,7 @@ function preMadeVillain() {
 
     ]
     document.getElementById("Premade").innerHTML = searchArray(premades);
-}
+};
 
 function villainTitle() {
     let titleArray = [
@@ -313,6 +552,7 @@ function artifact() {
 
 function twist() {
     let twistInStory = [
+        'The adventurers are racing against other creatures with the same or opposite goal','The PCs become responsible for the safety of a noncombatant NPC','The adventurers are prohibited form killing the villain, but the villain has no compunction about killing them','The adventurers have a time limit','The adventurers have recieved false or exteraneous information','Completing an adventure gol fulfills a prophecy or prevents the fulfillment of a prophecy.','The adventurers have two goas, but they can compelete only one','Completing the gol secretly helps the villain','The adventurers must cooperate with a known enemy to complete the goal','The adventurers are under magical compulsion (such as a geas) to compelte their goal',
         "Escort: The PCs must provide protection and safe passage for a non-combatant and/or vulnerable NPC", "Dammed: Each PC victory secretly benefits the Villain", "Bigger Fish: The PCs and their immediate foe declare a truce and join forces against an even greater foe", "Empower: An action the PCs are lead to believe will weaken the foe actually empowers the foe instead", "Sacrifice: The PCs must sacrifice one to save many, or doom many to save one (The Trolley Problem)", "Unwanted Rescue: Turns out the NPC victim never wanted to be rescued by the PCs in the first place", "The Greater Good: The PCs discover that the Villain does what they do for ostensibly 'good' reasons", "Didn't Get the Memo: The Villain pursues a goal that they have yet to realize is no longer valid or necessary", "Bait and Switch: The trouble really begins after the PCs obtain the McGuffin, and a new goal is revealed", "Are we the Baddies?: The PCs were the real baddies", "Dilemma: Two paths to victory are made evident at the last minute, but both options lead to uncertainty", "Traitor: A trustworthy NPC suddenly betrays the PCs", "The cult sacrifices are actually to keep a big bad from awakening", "The assassin who attempted to kill the king is actually the real king. The sitting King is a doppelganger", "The quest giver's spouse or kin or ally is actually pulling the strings and causing the chaos.", "The quest giver is actually the evil one. The target group is made out to be evil but are actually the innocent.", "The dungeon crawl is just a test by the mad wizard to check his security.", "The DMPC is undercover to learn the strengths and weaknesses of the party.", "The dimwitted pickpocket is actually a very talented thief in the thieve's guild that was hit with a Feeblemind spell.", "The ghosts haunting the old mines are living people trapped in the ethereal plane.", "The hag's cabin is where her power comes from. It corrupts those inside, luring them to become the next owner of the cabin.", 
         "The ancient beast frozen in the ice isn't the threat, it's the huge ice elemental that swallowed it.", "The party's fixer actually has no overarching goal or employer, but he or she is just giving the party assignments and paying out of their own pocket because they want to spend time with one of the party members - DM options: Are they in love with the PC? Watching them for nefarious purposes? Lost parent or guardian?", "The dungeon crawl is a psychic torture by a mind flayer/intellect devourer/other psychic beastie designed to make the party (currently held in stasis) go mad. Delicious, juicy, madness.", "The kingdom actually has no ruler - their sovereign is an illusion controlled by one of the courtiers. The real ruler died years ago and the court wants to maintain control.", "The drow/duergar raiders aren't taking people as slaves - they're taking them to find out information about the surface world and are planning for a mass exodus. Something is happening in the Underdark that is bad enough to scare them out of the dark", "The PCs' weapons are ALL sentient (having been hit by a Mass Awaken spell maybe?) and have been secretly making their own plans. And you thought that attacks hit or miss because of some silly dice rolls?", "The party's fixer has been sending them on missions to kill lots of low level vermin, kobolds, goblins, etc. The fix is secretly a necromancer, building up an unseen army of minions and party is doing all the 'prep' for them.", "The palace intrigue/gang turf war/cult rivalry/religious war is secretly a staged amusement for the lords of their respective parties. The fact that the party has bumbled into it and is now making a mess of everything means that it's the most entertainment the lords have had in years.", "While travelling on the road, the party finds an old woman who begs the group to destroy a demonic statue that is poisoning her land. The statue is surprisingly easy to destroy. The party later finds out that the statue was the only thing protecting a nearby village from the evil witch.", "The local lord has a bounty on a thief who stole his family heirloom. In truth, the thief switched bodies with the lord in a dark ritual, and thus the thief is the true lord. The heirloom has the ability to return him to his original body, but he needs to be within a certain distance.", 
         "A travelling merchant asks to travel with the party for safety, he offers some gold in payment. He tries (and fails) to murder one of the party members in their sleep. It becomes apparent that he clearly stole everything he has from a travelling merchant. Delivering him to a local official leads to a reward.", "The party is tasked with stopping the Big Bad from seeking out an 'Acient Power'. While the campaign appears take place in a medieval fantasy setting, it actually takes place in this world’s far flung future. A cataclysmic event, hinted at throughout the campaign, rendered all technology inert. As a result, civilization became reliant on analog conventions; torches, horse, written word. etc. This information is all revealed by the campagin’s Big Bad just before the final show down. The Big Bad goes on to explain the 'Acient Power' he seeks is that last piece of functioning technology.", "The campaign exists in the past. Skip 200 years to the present, all the players stop playing their characters, and start playing their characters descendants (same class & level). The players get to see the long term ramifications of their actions, good or bad. And exist in that world.", "The cleric of {good deity} who's been giving the party small objectives to secure the good deity's victory is actually an agent of the deity's enemies, and the party has unknowingly been hindering the deity's plans. 8. The local lord with the bandit problem? He's actually been on the bandits' side all along, and has successfully fooled his subjects this whole time.", "The king's assassination was a ruse to oust sedition in the court. He now seeks to return and punish those who squabble over his throne.", 
@@ -489,8 +729,15 @@ function monologue() {
     document.getElementById("Mono").innerHTML = searchArray(monologueArray);
 }
 
+function moral(){
+    let moral = ['Ally Quandry (choose the best ally - hurting the other)','Friend Quandry (A friend makes an impossible demand)',`Honor Quandry (Victory, but at a cost to one's own honor)`,'Rescue Quandry (villain, or NPCs in distress?)','Respect Quandry (Whose advice and expertise do you respect more?) ']
+
+    document.getElementById("Moral").innerHTML = searchArray(moral);
+}
+
 function final() {
     let bossMechanics = [
+        `The adventurers confront the main villain and a group of minions in a bloody battle to the finish`,`The adventurers chase the villain while dodging obstacles designed to thwart them, leading to a final confrontation outside the villain's refuge`,`The actions of the adventurers or the villain result in a cataclysmic event that the adventurers must escape`,`The adventurers race to the site where the villlain is bringing their master plan to its conclusion, arrive just as it is about to be completed`,` The villain and two or three lieutenants perform seperate rites in a large room. The adventurers must disrupt all the rites at the same time.`,`An ally betrays the adventurers as they are about to achieve their goal (use this climax carefully and don't overuse it.)`,`A portal opens to another plane of existence. Creatures on the other side spill out, forcing the adventurers to close the portal and deal with the villain at the same time,`,`Traps, hazards, or animated objects turn against the adventurers whiel the main villain attacks`,` The dungeon begins to collapse while the adventurers face the main villain, who attempts to escape in the chaos`, `A threat more powerful than the adventurer appears, destroys th emain villain, and then turns it's attention on the characters.`,`The adventurers must choose whether to pursue the fleeing main villain or save an NPC they care about or a group of innocents.`,`The adventurers must discover the main villain's weakness before they can hope to defeat him.`,
         "This battle takes place in front of a massive furnace. As the battle goes on, the furnace gets hotter and hotter, to near unbearable levels. Someone needs to tend to the huge furnace while the others battle to keep from melting!", "The boss will summon enemies that will distract the players from the fact that the boss is healing themselves.", "The room in which the boss is designed like a long hallway. As the boss grows weaker, they will run further down the long room. Traps cover the room.", "The boss cannot be close to an object or another boss, or else it will rapidly restore health; keeping it away will make it easier to take down.", "The boss is blind and takes damage when hit by natural light. Adventurers need to use the boss’s Tremorsense / Echolocation to lead it into beams of light.", "The boss fuses with slimes to become bigger and stronger, but it can only get so big before it explodes.", "There are ongoing rituals around the area that must each be disrupted in a specific way within the next few minutes. Each completed ritual empowers the boss with negative energy, escalating the fight and drawing the end times closer.", "Players must fight from the rafters above a stage while trying to stop the villain from sabotaging a performance going on below.", "The boss is in a sewer and monsters were placed in the sewer to deal with waste, but they end up attacking both the players and the boss.", "There is a massive minefield that has a bloodthirsty invisible stalker roaming around it. Mines deal heavy damage to both players and the elemental, and groups that can’t find the stalker have to activate the mines to either kill it or scare it away.", "The villain casts a spell on the players that makes them speak and describe their actions in iambic pentameter. When the villain dies they cry out saying“ I am slain!", "The party fights a creature that can turn people into lobsters for a turn if it hits them.", 
         "The boss is a lich who’ s phylactery is a bomb that would destroy the dungeon and everything within a three mile radius. Someone has to disarm the bomb while the other pcs keep the lich busy.", "The boss is in a gladiator style WWE ring. Through some hints during the fight, the players realize that the boss isnt actually trying to hurt them, and is instead trying to make the fight look as flashy as possible so that they can all survive another day in the arena.", "The players enter a room with a button and a locked door. If they press it, they are all knocked unconscious and dream about fighting a boss 4-5 cr higher than them. If they die in the dream they wake up in the real world, and the door to the next room is open. They can re-enter the dream to help whittle away at the boss or kill their friends to help speed up the process of them getting completing the dungeon.", "The boss can only be killed by mortal hands. Weapons, magic spells, and any damage type besides fists/natural weapons cannot damage the boss. Immortals and gods cannot damage it.", "The boss is a glass golem that can hide and heal inside of mirrors. Players can see the golem in the mirror, but must break the glass to force it to come out.", "The boss is stationary in the center of the room. When it receives enough damage from one if the cardinal directions it becomes invulnerable to damage from that side, forcing the players manuver around the room and minions to continue damaging it.", "While walking through a cave they have PCs have accidentally walked into the open mouth of the boss. Tremors felt during random fights of slimes and cubes or small parasites eventually lead to acid pools. Party can flee or fight their way out. Possible risk of digestion if slow.", "Boss is a wall, slowly shrinking the room and pushing the party to a pit or wall of spikes.", "Boss is a keg golem. Body is mostly full kegs. Some are filled with beer some are wine. Players can target weak points like corks or bungs to drain alcohol and wound the boss. Once limbs and parts are drained can be burned.", "A village has a pit of ghouls/zombies. When a love one is dying they toss them in to be turned. You have been tossed in as food.", 
         "Boss contains a howling void. No verbal commands or spells work. See if the PCS can work with out speaking or writing to each other.", "Glued together: The boss is two deadly bosses inseparably glued back to back.Their movement is halved/thirded. They are not cooperating with one another. Only one of the individuals is dominant at a time, the other is dragged along. On their turn, roll a d4. On a 1, the bosses bicker amongst themselves and fail to take meaningful action(flip a coin to see if the dominant individual changes). On a 2 or 3, both bosses may attempt to attack a target they are facing but do so with disadvantage. On a four, the dominant boss may make an attack as normal, and the subordinate one attacks with disadvantage. If one individual dies or becomes otherwise incapacitated, the other is permanently dominant and attacks as normal, but its speed remains the same.", "Bratty halfpint tossing: The arrogant yet naive boss is being carried on a light palanquin by their strongest and fastest minions. The boss refuses to touch the the ground, as it is demeaning… somehow more demeaning than the minions tossing the palanquin between them or using it as a blunt weapon when convenient. The boss is a powerful ranged attacker but spends half their turns shouting confusing orders instead of taking appropriate action. If the boss touches the ground, they have a temper tantrum and launch a very strong AoE spell at the party.", "Farty Fight: The boss is afflicted with horrible magical indigestion. Roll 1d4, on a 4 the boss, instead of acting, groans and releases a stinking cloud per the spell. They are unaffected by their own stinking cloud.", 
@@ -744,3 +991,5 @@ function subDimension() {
         */
     document.getElementById("Subplane").innerHTML = "This subplane is accessible " + searchArray(entry) + ". You will be transported to " + searchArray(environment) + ". The area will be the relative size of a " + searchArray(size) + ". The plane was made by " + searchArray(creation) + ". Inside you will find " + searchArray(inside) + ". And if you want to return you'd need to " + searchArray(exit) + "."
 };
+
+
