@@ -71,6 +71,45 @@
             <button class="col-2 btn btn-secondary" type="button" disabled>Dungeon Guide</button>
             <div class="col npc" id="DungeonKey"></div>
         </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="policy(8)">Government Policy</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="policy(4)">4 Policies</a>
+                <a class="dropdown-item" onclick="policy(6)">6 Policies</a>
+                <a class="dropdown-item" onclick="policy(8)">8 (Default)</a>
+                <a class="dropdown-item" onclick="policy(10)">10 Policies</a>
+                <a class="dropdown-item" onclick="policy(12)">12 Policies</a>
+                <a class="dropdown-item" onclick="policy(14)">14 Policies</a>
+                <a class="dropdown-item" onclick="policy(16)">16 Policies</a>
+                <a class="dropdown-item" onclick="policy(18)">18 Policies</a>
+                <a class="dropdown-item" onclick="policy(20)">20 Policies</a>
+            </div>
+            <div class="col">
+                <div class="row pad" id="Policy"></div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="religion(6)">Religious Beliefs</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="religion(4)">4 Aspects</a>
+                <a class="dropdown-item" onclick="religion(6)">6 (Default)</a>
+                <a class="dropdown-item" onclick="religion(8)">8 Aspects</a>
+                <a class="dropdown-item" onclick="religion(10)">10 Aspects</a>
+                <a class="dropdown-item" onclick="religion(12)">12 Aspects</a>
+                <a class="dropdown-item" onclick="religion(14)">14 Aspects</a>
+                <a class="dropdown-item" onclick="religion(16)">16 Aspects</a>
+            </div>
+            <div class="col">
+                <div class="row pad" id="Religion"></div>
+            </div>
+        </div>
+
     </div>
         <br>
         <br>
