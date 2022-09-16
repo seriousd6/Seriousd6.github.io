@@ -149,11 +149,11 @@ function combineArrays(array1,array2,sizecount){
 
 
 function quest() {
+    document.getElementById("Quest").innerHTML = ''
     let themeArray = ['Exploration', 'Comedy', `${searchArray(['Investigation', 'Mystery'])}`, 'Combat','Urban','Simulation (video game-like)',`${searchArray(['Kingmaker', 'Management'])}`, `${searchArray(['Action', 'Adventure'])}`, 'Horror', 'Espionage','Romance','Revenge',`${searchArray(['Collecting', 'Ranching'])}`]
     let goalArray = ['Money', 'Combat Power', 'Political/ influential Power','Rescue', 'Escape','Explore a new area','Retrieve','Thwart a plan', `Protect a ${searchArray(['place', 'NPC or PC', 'Artifact'])}`, `Win a ${searchArray(['small', 'large'])}-scale conflict`,'Settle a debt','clear a name']
     let rewardArray = ['Gold','Magic item','Lore/ knowledge','Cool but mostly useless items','Plot relevant item',`${searchArray(['NPC Contact', 'Ally', 'New Friend'])}`,`${searchArray(['New pet', 'New follower'])}`, `${searchArray(['New skill', 'New language'])}`, 'interesting trinket', `${searchArray(['Boon', 'Blessing','Charm'])}`, ,`Mundane ${searchArray(['Weapon', 'Armor', 'misc.'])} with a cool backstory`, 'Repairable broken item','New mode of transport', `${searchArray(['Property', 'Land and Title'])}`, 'Faction favor', 'Backstory connection', 'Trophy', `${searchArray(['Crafting materials', 'Crafting Recipes'])}`, 'Feats']
     let factionArray =['Home','Echos','Undead','Nature','Dragons','Gure','Gnolls','Fey','Radiant','Dieties']
-
 
     let actionTropes = ['Being a B.A.','Big trope hunting','Chase scene','Combat','Dueling','Escape','Fight scene','I have your index','Index to the rescue','Just in time','VIOLENCE']
     let crimeTropes = ['confidence (scams, frauds, tricks)','organized crime','Gambling',' sex trade','Smuggling','Thievery','Drugs','Vandalism','Victimhood','Abuse','kidnapping, hostages, abduction',' murder','terrorism','threatening','banishment','censorship','law enforcement','courtroom','execution','forensics','perp sweating','prison']
@@ -162,11 +162,19 @@ function quest() {
     let fairyTaleTropes = ['Abduction is love','Abusive parents','Aliens','an arm and a leg',`Androcles' lion`,'an ice person','animate inanimate objects','anthropomorphic personification','attention deficit... ooh, shiny!','back from the dead','bad boss','bears are bad news','beauty equals goodness','be careful what you wish for','the big bad wolf','big fancy castle','blue blood',' bothering by the book','bride and switch','cain and able','changeling tale','clingy macguffin','curse + escape clause','damsel in distress','dances and balls','david versus goliath','dead all along','deader than dead','deal with the devil','deceased parents are the best','distressed dude','doe snot like shoes',`don't go into the woods`,'double-in law marriage','dragon hoard','dragons prefer princesses','dude, wheres my respect?','due to the dead','earn your happy ending','enchanted forest','engagement challenge','evil matriarch','evil old folks','evil sorcere','evil tower of ominousness','exact eavesdropping','the fair folk','the fairest of them all','fairy devilmother','fairy godmother','fairy tale episode','fairy tale free-for-all','fake ultimate hero','fallen-on-hard-times job','faimly-unfriendly death','family-unfriendly violence','faux death','feminine women can cook','food chains','the fool','forbidden fruit','forced transformation','fractured fairy tale','gender flip','genie in a bottle','giant food','gingerbread house','girl in the tower','girl who fits the slipper','prince chamring','god save us from the queen','the good king','good princess, evil queen','greed','green-eyed monster','grimminfication','hair of gold, heart of gold','happily ever after','haunted castle','headless horseman','hedge of throns','heir club for men','hitchiker heroes','honorary uncle','hot witch','i know your true name','if i cant have you','impossible task','impossible theft','intangible theft','invisible to adults','involuntary shapeshifter','just liek robin hood','the kingdom','knight in shining armor','laser-guided karma','last request','law of inverse fertility','leaf boat','liminal time','little red fighting hood','love at first sight','mad scientists beautiful daughter','massive numbered siblings','malicious slander','macguffing guardian','meaningful name','merciful minion','mock millionaire','moving the goalposts','nameless narrative','noble fugitive','obfuscating stupidity','obnoxious-in-laws','offered the crown','offing the offpsring','off with his head!','old beggar test',
     'once upon a time','original position fallacy','our fairies are different','our witches are different','overprotective dad','pinnochio syndrome','please shoot the messenger','prince charming','princess for a day','princess protagonist','the promise',' proud beauty','the quest','rags to royalty','ragtag bunch of misfits','rash promise','re-headed stepchild','rescue romance','rip-van-winkle','royal brat','royal blood','rule of three','rule of seven','the runt at the end','the sandman','save the princess','schmuck banquet','scullery maid','secret identity','secret test of character','self-fulfilliong prophecy','shapeshifter shwodown','shapeshifting lover','she cleans up nicely','sibling triangle','soul jar','standard hero reward','swans a swimming','sweet and sour grapes','talking animal','threshold guardians','trail of bread crumbs','treacherous spirit chase',`true love's kiss`,'turtle island','Uriah Gambit','Wealthy ever after','what ever happened to the mouse?','When the clock strieks 12','wicked stepmother','wicked witch','Wonder child','year outside, hour inside','you have waited long enough','youngest child wins']
     
-    let faction = searchArray(factionArray)
-    let othertropes = `Action: ${searchArray(actionTropes)}, Crime: ${searchArray(crimeTropes)}, Drama: ${searchArray(dramaTropes)}, Espionage: ${searchArray(espionageTropes)}.`
-    let output = `Theme: ${searchArray(themeArray)}; Goal: ${searchArray(goalArray)}; Reward: ${searchArray(rewardArray)}; Faction: ${faction}; Fantasy Tropes: ${searchArray(fairyTaleTropes) +', '+ searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes) +', '+searchArray(fairyTaleTropes)}} ${othertropes}`
-    document.getElementById("Quest").innerHTML = output 
-
+    let output = []
+    function questBuilder(){
+        output.push(`Faction: ${searchArray(factionArray)}`)
+        output.push(`Theme: ${searchArray(themeArray)}`)
+        output.push(`Goal: ${searchArray(goalArray)}`)
+        output.push(`Reward: ${searchArray(rewardArray)}`)
+        output.push(`Major trope: ${searchArray(fairyTaleTropes)}`)
+        output.push(`Minor trope: ${searchArray(fairyTaleTropes)}`)
+        output.push(`Subgenre: ${searchArray([`Action - ${searchArray(actionTropes)}`,`Crime - ${searchArray(crimeTropes)}`,`Drama - ${searchArray(dramaTropes)}`, `Espionage - ${searchArray(espionageTropes)}`  ])}`)
+    }
+    
+    questBuilder()
+    loopPrintList(output,"Quest")
 };
 
 function buildRace(n) {
@@ -207,7 +215,7 @@ function buildRace(n) {
         //document.getElementById("Race").innerHTML = characterRace
     };
     return findRace(n)
-}
+};
 
 function fiftyTwoCardDungeon(input){
     document.getElementById("Dungeon").innerHTML = ''
