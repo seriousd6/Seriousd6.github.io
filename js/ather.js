@@ -358,7 +358,7 @@ function fiftyTwoCardDungeon(input){
                             'D': {
                                 1:`Enchanted Gadgets: A small cache of magical trinkets is hidden in the stone wall . Not anything particularly powerful like a 'proper' magic item but a few small gadgets that a clever hero could use to their advantage.`,
                                 2:'Abandoned Camp: There are signs that someone was living here, though they must have left in a hurry. A few basic tools and weapons and some supplies lie forgotten.These are unlikely to be of value, but they are exactly the sort of items a traveling adventurer needs.',
-                                3:`Forgotten Forge: Most of the weapons have rusted away but there are a few basic melee weapons that are still usable. If the heroes inspect closer, they'll find a slightly hidden strongbox in the corner of the room. Inside is a perfectly preserved magic melee weapon.`,
+                                3:`Forgotten Forge: Most of the weapons have rusted away but there are a few basic melee weapons that are still usable. If the heroes inspect closer, they'll find a slightly hidden strongbox in the corner of the room. Inside is a perfectly preserved magical ${searchArray(['melee','ranged'])} weapon.`,
                                 4:`Suspicious Armour Stands: In a line of ornamental armour displays, one stands out as being much more intact and possibly magical. Miraculously though, it doesn't come alive and start killing the heroes. Instead it is a suit of magical armour one of the heroes can wear.`,
                                 5:'Almost Too Easy...: An almost completely dark room, the only light focused upon a displayed magic ranged weapon. Removing it causes an ominous grinding sound and a consequence later in the dungeon.',
                                 6:`Tinker's Workshop: An tinker's workshop in a state of chaos. A selection of tools and blueprints are scattered around but the heroes' gaze is drawn to a single item sitting on a desk in front of a dead body. This item could be basically anything but in addition to its normal effects, the tinkerer accidentally transferred their sentience into it.`,
@@ -637,7 +637,7 @@ function fiftyTwoCardDungeon(input){
     //5. find the furthest room in the array - draw a boss card and a modifier card
             function bossDesc(array){
                 let boss2 = [suit[searchArray(suitArray)][searchArray(cardarray1113)].B,suit[searchArray(suitArray)][searchArray(cardarray1113)].F]
-                array.push(`${boss2[0]} || ${boss2[1]}`)
+                array.push(`BOSS: ${boss2[0]} || ${boss2[1]}`)
             };
 
             //5.1 Order the array by Z value         
@@ -874,9 +874,7 @@ function fiftyTwoCardDungeon(input){
             let descArray = dressings(currentSize)
             let descfinal = addEncounters(currentSize,descArray)
             bossDesc(descfinal)
-            let Axe = combineArrays(dungeon, descfinal,currentSize)
-
-
+            let Axe = combineArrays(dungeon, descfinal, currentSize+1)
         //document.getElementById("Dungeon").innerHTML = description
         //document.getElementById("DungeonKey").innerHTML = 
         loopPrintList(description, "Dungeon") 
