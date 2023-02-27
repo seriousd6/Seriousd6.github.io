@@ -28,11 +28,59 @@ function shuffleSlice(array, number) {
     return shuffle(array).slice(0, number)
 
 };
-function toWords(s) {
+function toWordsLc(s) {
     var th = ['', 'thousand', 'million', 'billion', 'trillion'];
     var dg = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     var tn = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'eineteen'];
     var tw = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+
+    s = s.toString();
+    s = s.replace(/[\, ]/g, '');
+    if (s != parseFloat(s)) return 'not a number';
+    var x = s.indexOf('.');
+    if (x == -1)
+        x = s.length;
+    if (x > 15)
+        return 'too big';
+    var n = s.split('');
+    var str = '';
+    var sk = 0;
+    for (var i = 0; i < x; i++) {
+        if ((x - i) % 3 == 2) {
+            if (n[i] == '1') {
+                str += tn[Number(n[i + 1])] + ' ';
+                i++;
+                sk = 1;
+            } else if (n[i] != 0) {
+                str += tw[n[i] - 2] + ' ';
+                sk = 1;
+            }
+        } else if (n[i] != 0) { // 0235
+            str += dg[n[i]] + ' ';
+            if ((x - i) % 3 == 0) str += 'hundred ';
+            sk = 1;
+        }
+        if ((x - i) % 3 == 1) {
+            if (sk)
+                str += th[(x - i - 1) / 3] + ' ';
+            sk = 0;
+        }
+    }
+
+    if (x != s.length) {
+        var y = s.length;
+        str += 'point ';
+        for (var i = x + 1; i < y; i++)
+            str += dg[n[i]] + ' ';
+    }
+    return str.replace(/\s+/g, ' ');
+};
+function toWordsUc(s) {
+    var th = ['', 'thousand', 'million', 'billion', 'trillion'];
+    var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+    var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
 
 
     s = s.toString();
@@ -155,54 +203,7 @@ function findTown() {
     ]
     
     function tavernName() {
-        function toWordsUc(s) {
-            var th = ['', 'thousand', 'million', 'billion', 'trillion'];
-            var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-            var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
-            var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
-        
-        
-            s = s.toString();
-            s = s.replace(/[\, ]/g, '');
-            if (s != parseFloat(s)) return 'not a number';
-            var x = s.indexOf('.');
-            if (x == -1)
-                x = s.length;
-            if (x > 15)
-                return 'too big';
-            var n = s.split('');
-            var str = '';
-            var sk = 0;
-            for (var i = 0; i < x; i++) {
-                if ((x - i) % 3 == 2) {
-                    if (n[i] == '1') {
-                        str += tn[Number(n[i + 1])] + ' ';
-                        i++;
-                        sk = 1;
-                    } else if (n[i] != 0) {
-                        str += tw[n[i] - 2] + ' ';
-                        sk = 1;
-                    }
-                } else if (n[i] != 0) { // 0235
-                    str += dg[n[i]] + ' ';
-                    if ((x - i) % 3 == 0) str += 'hundred ';
-                    sk = 1;
-                }
-                if ((x - i) % 3 == 1) {
-                    if (sk)
-                        str += th[(x - i - 1) / 3] + ' ';
-                    sk = 0;
-                }
-            }
-        
-            if (x != s.length) {
-                var y = s.length;
-                str += 'point ';
-                for (var i = x + 1; i < y; i++)
-                    str += dg[n[i]] + ' ';
-            }
-            return str.replace(/\s+/g, ' ');
-        };
+
         function tavernNamer() {
             let posts = ["Inn", "Tavern", "Bed and Breakfast", "Lodge", "Roadhouse", "Saloon", "Lounge", "Watering Hole", "Pub", "Taphouse", "Tavern & Inn", "Groghouse", "Ale Garden", "Canteen", "Rest House", ]
             let adjective = ['Airborne', 'Smelly', 'Slouching', 'Giddy', 'Brazen', 'Bawdy', 'Hobbled', 'Wrinkled', 'Grim', 'Silent', 'Broken', 'Happy', 'Sunken', 'Quiet ', 'Trodden', 'Headless', 'Burning', 'Squawking', 'Toothy', 'Hungry', 'Mighty', 'Frisky', 'Staggering', 'Gutted', 'Peckish', 'Thirsty', 'Artful', 'Rare', 'Steamy', 'Drunk', 'Glorious', 'Crooked', 'Blushing', 'Insolent', 'Enthusiastic', 'Joyful', 'Surprising', 'Scorned', 'Shameful', 'Romantic', 'Wise', 'Sweet', 'Surly', 'Soothing', 'Reverent', 'Coarse', 'Artificial', 'Clumsy', 'Clever', 'Deaf', 'Blind', 'Paralyzed', 'Prone', 'Restrained', 'Unconscious', 'Invisible', 'Petrified', 'Poisoned', 'Charmed', 'Frightened', 'Grappled', 'Acrobatic', 'Dextrous', 'Intelligent', 'Strong', 'Athletic', 'Deceitful', 'Charismatic', 'Insightful', 'Intimidating', 'Observant', 'Natural', 'Perceptive', 'Performing', 'Persuasive', 'Stealthy', 'Soft', 'Dirty', 'Dangerous', 'Deadly', 'Hidden', 'Useful', 'Dashing', 'Alert', 'Brave', 'Large', 'Tiny', 'Wicked', 'Tricky', 'Mysterious', 'Kind', 'Handsome', 'Fresh', 'Frantic', 'Foolish', 'Adorable', 'Clueless', 'Cruel', 'Elegant', 'Friendly', 'Laughing', 'Lost', 'Sleepless', 'Salty', 'Gnashing', 'Winking', 'Smiling', 'Waving', 'Ugly', 'Old', 'New', `Same ol'`, 'Wealthy', 'Bad', 'Sleeping', 'Bright', 'Shiny', 'Hairy', 'Magic', 'Burning', 'Drunken', 'Tipsy', 'Quiet', 'Devout', 'Chivalrous', 'Ancient', 'Lucky', 'Busy', 'Fragile', 'Cloudy', 'Smooth', 'Creepy', 'Curious', 'Grotesque', 'Prickly', 'Poor', 'Putrid', 'Puzzled', 'Obnoxious', 'Fierce', 'Fancy', 'Faithful', 'Magnificent', 'Enchanting', 'Eager', 'Easy', 'Innocent', 'Determined', 'Horrible', 'Wide-Eyed', 'Victorious', 'Uptight', 'Unusual', 'Troubled', 'Thankful', 'Terrible', 'Tame', 'Talented', 'Strange', 'Spotless', 'Shy', 'Repulsive', 'Quaint', 'Cursed', 'Blessed', "Copper", "Gold", "Electrum", "Platinum", "Silver", "Ruby", "Sapphire", "Emerald", "Jade", "Opal", "Garnet", "Diamond", "Coral", "Moonstone", "Pearl", "Amber", "Ivory", "Obsidian", ]
@@ -317,7 +318,7 @@ function findTown() {
             return output
         }
 
-        function lodging(){   
+        function findlodging(){   
             if (rollDice(100) < 75) {
                 return `You can find lodging at the local tavern, "${tavernName()}".`;
             } else {
@@ -334,10 +335,17 @@ function findTown() {
             } else  if (chance <90){
                 return `You smell food coming from ${searchArray(food)}.`;
             } else {
-                return 'There is a friendly townsperson willing to host you for dinner, and possibly room and board:'
+                return `There is a friendly townsperson willing to host you for dinner, and possibly room and board: ${findHost()} . ${findPlot()}`
             }
         }
+
+        if (rollDice(100)<50){
+            return `${findlodging() +'. '+ food()+ '. '} you also see a nearby ${searchArray(landmark)}`
+        } else {
+            return `${findlodging() +'. '+ food()+ '. '} as well as ${searchArray(feature)}`
+        }
     } 
+
     let specialtyShop = [
         'n alchemist',' herbalist',' healer', 'n enchanter',' hex den',' jeweler',' woodcarver',' silks shop',' toy shop',' game shop', ' glassblower', ' horse trader', ' carpet shop', ' perfume shop',' curio shop',' massage parlor',' salon', ' pet shop',' familiar shop', ' cartographer', ' ice cream shop',' soap shop',' popcorn shop',' gardening and flower nursery',' home improvement shop',' memory shop',' vehicle shop',' music shop',' tools shop'
     ]
@@ -839,7 +847,7 @@ function findTreasure() {
     "it was an accident, a shipment lost to random chance or calamity for some reason it was never reclaimed", "a noble family, displaced by a revolt or disaster, hid their secret somewhere only they could find it", "a group of raiders or pirates, storing a score until it was safe to retrieve it", "members of a religious minority, fleeing persecution hid their posession from their pursuers", "an extremely powerful figure, such as a culture hero or particularly skilled spellcaster had a personal stash", "the treasure was part of a tontine or related to the retirement of the members everyone died before anyone could retrieve it", "the society surrounding the hidden treasure collapsed, and its location was forgotten", "the treasure was important in some way -- perhaps it was the site of votive offerings, or the location of a guild's vault -- and it was guarded, while most of it's sentinels have died or vanished, some may still be guarding it",
     ]
     let form = [
-    `the classic treasure map made of vellum, inked, and showing off a simple guide to the terrain leading to and around the score, ${searchArray(['this map is currently whole',`this map is in ${toWords(1+ rollDice(15))} pieces`])}`, "relatively well-known regionally and it takes the form of a local legend such as a story, poem or song", "a strange and bizarre device, such as a potion which makes one recall the memories of one of the people who hid it", "a cipher, puzzle or some other form of riddle", "hidden within the patterns of a natural feature, such as a set of holes within a hillside, or the shadows of a grove of trees", "one of the people (or a descendant of one) responsible for hiding the treasure. This person is spilling the location to many others, the party are certainly not the only ones who have caught wind of it", `split between ${toWords(1+ rollDice(6))}people, all of whom have a piece of it`, "nonexistant - there are only the remaining notes (and possibly spirits) of those who hid it... they must be searched or interrogated for the location",
+    `the classic treasure map made of vellum, inked, and showing off a simple guide to the terrain leading to and around the score, ${searchArray(['this map is currently whole',`this map is in ${toWordsLc(1+ rollDice(15))} pieces`])}`, "relatively well-known regionally and it takes the form of a local legend such as a story, poem or song", "a strange and bizarre device, such as a potion which makes one recall the memories of one of the people who hid it", "a cipher, puzzle or some other form of riddle", "hidden within the patterns of a natural feature, such as a set of holes within a hillside, or the shadows of a grove of trees", "one of the people (or a descendant of one) responsible for hiding the treasure. This person is spilling the location to many others, the party are certainly not the only ones who have caught wind of it", `split between ${toWordsLc(1+ rollDice(6))}people, all of whom have a piece of it`, "nonexistant - there are only the remaining notes (and possibly spirits) of those who hid it... they must be searched or interrogated for the location",
     ]
     let where= [
     "on an isolated and deserted island", "deep inside a cave or another subterranean region", "at a religious site, such as a temple or a shrine", "in the middle of nowhere, a barren place, far from any civilization", "inside an urban area, currently inhabited or reduced to deserted ruins", "at the bottom of the ocean or a lake", "in a castle in the sky", "on a celestial body, such as a planet or other plane of existence",
