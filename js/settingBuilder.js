@@ -338,12 +338,8 @@ function findTown() {
                 return `There is a friendly townsperson willing to host you for dinner, and possibly room and board: ${findHost()} . ${findPlot()}`
             }
         }
+        return `${findlodging() +'. '+ food()+ '. '} you also see a nearby ${searchArray(landmark)}`
 
-        if (rollDice(100)<50){
-            return `${findlodging() +'. '+ food()+ '. '} you also see a nearby ${searchArray(landmark)}`
-        } else {
-            return `${findlodging() +'. '+ food()+ '. '} as well as ${searchArray(feature)}`
-        }
     } 
 
     let specialtyShop = [
