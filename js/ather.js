@@ -165,9 +165,9 @@ function quest() {
     let output = []
     function questBuilder(){
         output.push(`Faction: ${searchArray(factionArray)}`)
-        output.push(`Theme: ${searchArray(themeArray)}`)
         output.push(`Goal: ${searchArray(goalArray)}`)
         output.push(`Reward: ${searchArray(rewardArray)}`)
+        output.push(`Theme: ${searchArray(themeArray)}`)
         output.push(`Major trope: ${searchArray(fairyTaleTropes)}`)
         output.push(`Minor trope: ${searchArray(fairyTaleTropes)}`)
         output.push(`Subgenre: ${searchArray([`Action - ${searchArray(actionTropes)}`,`Crime - ${searchArray(crimeTropes)}`,`Drama - ${searchArray(dramaTropes)}`, `Espionage - ${searchArray(espionageTropes)}`  ])}`)
