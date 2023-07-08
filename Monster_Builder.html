@@ -195,9 +195,9 @@
             }
             function bossAndMinions(numMons,xp,xpmod){
                 if (numMons-1 === 0) {
-                    return `Boss XP: ${xp}`
+                    return `Boss XP: ${Math.floor(xp/(1*xpmod))}`
                 } else {
-                    return `Boss XP: ${Math.floor(xp/2)}, Minions XP: ${Math.floor((xp/2)/((numMons-1)*xpmod))}`
+                    return `Boss XP: ${Math.floor((xp/(2*xpmod)))}, Minions XP: ${Math.floor((xp/2)/((numMons-1)*xpmod))}`
                 }
                 
             }
