@@ -1446,7 +1446,7 @@ function fiftyTwoCardDungeon(input){
                 return rooms
             };
 
-        //10. Create and pring a randomized dunegon based off the rules in 52 card dungeon with my own twist
+        //10. Create and priny a randomized dunegon based off the rules in 52 card dungeon with my own twist
             dungeon.push([currentX,currentY,currentZ]) 
             buildDungeon(input)
             dungeon[0].sort(compareFn)
