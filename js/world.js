@@ -238,7 +238,7 @@ function buildWorld() {
 };
 
 //Weather
-let windDirection = [ "North", "East", "South", "West", ]
+let windDirection = [ "North", "East", "South", "West", ];
 let strangePhenomena = [
     `Ashfall - (Heavy white clouds of swirling smoke fill the sky, and it rains ash that coats everything in little flecks. A smell of burning wood or sulphur permeates the air.)    
         Also has the the effect of 
@@ -256,7 +256,7 @@ let strangePhenomena = [
             Also has the effect of 
                 High Winds - (Turbulent gusts sweep across the land. Wind direction = ${searchArray(windDirection)}. Flying creatures gain +10 movement speed when moving with the wind, and –10 movement speed when moving against it. All ranged weapon attacks have a –2 to attack rolls, and their range is reduced by half when shooting into the wind).`,
     "Wild Magic Storm - (Fluctuations in the weave drive strange flashing lights and odd phenomena sweeping across the world. Rain falls upwards, plants bloom unseasonably, and people see apparitions of the dead and gone. High chance of encounters with sentient plants, ghosts, and strange illusions. All spells cast are naturally upcast by 1 level, but trigger a Wild Surge as per a Wild Magic Sorcerer class feature until the storm subsides)",
-]
+];
 
 function winterWeather() {
     let Winter = [

@@ -40,16 +40,17 @@
     </header>
 
     <div>
-        <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
         <div class="container">
+        <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
             <h5>Weather</h5>
             <div class="row btn-group" role="group" aria-label="Basic example"> 
                 <button class="col-3 btn btn-success" type="button" onclick="springWeather()">Spring</button>
                 <button class="col-3 btn btn-success" type="button" onclick="summerWeather()">Summer</button>
                 <button class="col-3 btn btn-success" type="button" onclick="fallWeather()">Fall</button>
                 <button class="col-3 btn btn-success" type="button" onclick="winterWeather()">Winter</button>
-            </div>    
-            <div class="row outline" id="weather">
+            </div>  
+            <div>   
+                <div class="row outline" id="weather"></div>
             </div>
         </div>
 
