@@ -46,7 +46,7 @@
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
         </div>
         <div class="row" style="border-style:double; border-width: 3px; border-color: rgb(54, 10, 64);">
-            This monster calulator is based on the guidelines given by WotC. 
+            This encounter calulator is based on the guidelines given by WotC. 
         </div>
         <div class="row">
             <div class="col" style="border-style:double; border-width: 3px; border-color: rgb(54, 10, 64);">
@@ -157,7 +157,44 @@
                 "SaveDC" : [13,13,13,13,13,13,13,14,15,15,15,16,16,16,17,17,18,18,18,18,19,19,19,19,20,20,20,21,21,21,21,22,22,22,22,23],
                 "XP": [10,25,50,100,200,450,700,1100,1800,2300,2900,3900,5000,5900,7200,8400,10000,11500,13000,15000,18000,20000,22000,25000,33000,41000,50000,62000,75000,90000,105000,120000,135000,155000]
             }
-            
+            let examples = [
+                [/*0*/ 'Frog', 'Sea Horse', 'Awakened Shrub', 'Baboon', 'Badger', 'Bat', 'Cat', 'Commoner', 'Crab', 'Cranium Rat','Crawling Claw','Deer','Eagle', 'Giant Fire Beetle', 'Goat', 'Hawk', 'Homunculus Hyena Jackal Lem u re Lizard', 'Myconid Sprout', 'Octopus', 'Owl', 'Quipper', 'Rat', 'Raven', 'Scorpion', 'Shrieker', 'Spider', 'Vulture', 'Weasel'],
+                [/*1/8*/'Bandit', 'Blood Hawk', 'Boggle', 'Camel', 'Cultist', 'Dolphin', 'Flumph', 'Flying Snake', 'Giant Crab', 'Giant Rat', 'Giant Weasel', 'Guard', 'Kobold', 'Manes', 'Mastiff', 'Merfolk', 'Monodrone', 'Mule', 'Neogi Hatchling', 'Noble', 'Poisonous', 'Snake', 'Pony', 'Slaad Tadpole Stirge', 'Tribal Warrior Twig Blight Xvart', 'Young Kruthik'],
+                [/*1/4*/ 'Aarakocra Abyssal Wretch Acolyte', 'Apprentice Wizard', 'Axe Beak', 'Blink Dog', 'Boar', 'Bullywug', 'Constrictor Snake', 'Cow', 'Deep Rothe ', 'Derro', 'Dimetrodon', 'Draft Horse', 'Dretch', 'Drow', 'Duodrone', 'Elk', 'Flying Sword ', 'Giant Badger ', 'Giant Bat ', 'Giant Centipede ', 'Giant Frog ', 'Giant Lizard ', 'Giant Owl', 'Giant Poisonous Snake', 'Giant Wolf Spider', 'Gnoll Withering', 'Goblin', 'Grimlock', 'Grung', 'Hadrosaurus', 'Kenku', 'Kobold Inventor ', 'Kuo-toa ', 'Male Steeder ', 'Mud Mephit ', 'Needle Blight ', 'Oblex Spawn ', 'Ox', 'Panther', 'Pixie', 'Pseudodragon', 'Pteranodon', 'Riding Horse', 'Rothe', 'Skeleton', 'Smoke Mephit', 'Sprite', 'Star Spawn Grue ', 'Steam Mephit ', 'Stench Kow ', 'Swarm of Bats ', 'Swarm of Rats ', 'Swarm of Ravens ', 'Tortle ', 'Troglodyte ', 'Vegepygmy ', 'Velociraptor ', 'Violet Fungus ', 'Winged Kobold ', 'Wolf', 'Wretched Sorrowsworn', 'Zombie'],
+                [/*1/2*/ 'Ape', 'Black Bear ', 'Chitine', 'Cockatrice', 'Crocodile', 'Darkling', 'Darkmantle ', 'Dust Mephit', 'Firenewt Warrior', 'Gas Spore ', 'Gazer', 'Giant Goat ', 'Giant Sea Horse ', 'Giant Wasp ', 'Gnoll', 'Gnoll Hunter', 'Gray Ooze ', 'Hobgoblin ', 'Ice Mephit ', 'Jackalwere ', 'Lizardfolk ', 'Magma ', 'Mephit ', 'Magmin ', 'Myconid Adult ', 'Nupperibo', 'ORC', 'Ore Nurtured One ofYurtrus', 'Piercer', 'ReefShark', 'Rust Monster', 'Sahuagin', 'Satyr', 'Scout', 'Shadow', 'Skulk', 'Svirfneblin', 'Swarm of Insects', 'Swarm of Rot Grubs', 'Thug', 'Tridrone', 'Vine blight', 'Warhorse', 'Warhorse', 'Skeleton', 'Worg'],
+                [/*1*/ 'Animated Armor', 'Brass Dragon Wyrmling', 'Bronze Scout', 'Brown Bear', 'Bugbear', 'Choker', 'Copper Dragon Wyrmling', 'Death Dog', 'Deinonychus', 'Dire Wolf', 'Dryad', 'Duergar', 'Duergar Soulblade', 'FemaleSteeder', 'Fire Snake', 'Fire newt Warlock of lmix', 'Ghoul', 'Giant Eagle', 'Giant Hyena', 'Giant Octopus', 'Giant Spider', 'Giant Strider', 'Giant Toad', 'Giant Vulture', 'Gnoll Flesh Gnawer', 'Goblin Boss', 'Grung Wildling', 'Half-ogre', 'Harpy', 'Hippogriff', 'Imp', 'Kobold Dragonshield', 'Kobold Scale Sorcerer', 'Kuo-toa Whip', 'Lion', 'Maw Demon', 'Meazel', 'Nilbog', 'Quadrone', 'Quaggoth Spore Servant', 'Quasit', 'Quickling', 'Scarecrow ', 'Sea Spawn', 'Specter', 'Spy', 'Stone Cursed', 'Swarm of Quippers', 'Thorny Vegepygmy', 'Thri-kreen', 'Tiger', 'Vargouille', 'Xvart Warlock of Raxivort', 'Young Faerie Dragon', 'Yuan-ti Pureblood'],
+                [/*2*/ 'Adult Faerie Dragon', 'Adult Kruthik', 'Allosaurus', 'Ankheg', 'Aurochs', 'Awakened Tree', 'Azer', 'Bandit Captain Bard', 'Berbalang', 'Berserker', 'Black Dragon Wyrmling', 'Bronze Dragon Wyrmling', 'Carrion Crawler', 'Cave Bear', 'Centaur', 'Cult Fanatic', 'Darkling Elder', 'Druid', 'Duergar Flammerer', 'Duergar Kavalrachni', 'Duergar Mind Master', 'Duergar Stone Guard', 'Duergar Xarrorn', 'Ettercap', 'Gargoyle', 'Gelatinous Cube', 'Ghast', 'Giant Boar', 'Giant Constrictor Snake', 'Giant Elk', 'Gibbering Mouther', 'Githzerai Monk', 'Gnoll Pack Lord', 'Green Dragon Wyrmling', 'Grick Griffon', 'Grung Elite Warrior', 'Guard Drake', 'Hobgoblin Iron Shadow', 'Hunter Shark', 'Intellect Devourer', 'Lizardfolk Shaman', 'Meenlock', 'Merrow', 'Mimic', 'Minotaur Skeleton', 'Myconid Sovereign', 'Nothic Ochre Jelly Ogre', 'Ogre Bolt Launcher', 'Ogre Howdah', 'Ogre Zombie', 'Orc Claw of Luthic', 'Orc Eye of Gruumsh', 'Orc Hand of Yurtrus', 'Orog', 'Pegasus', 'Pentadrone', 'Peryton', 'Plesiosaurus', 'Polar Bear', 'Priest', 'Quaggoth', 'Quetzalcoatlus', 'Rhinoceros', 'Rug of Smothering', 'Rutterkin', 'Saber-toothed Tiger', 'Sahuagin Priestess', 'Sea Hag', 'Shadow Mastiff', 'Silver Dragon Wyrmling', 'Specter (poltergeist)', 'Spined Devil', 'Swarm of Poisonous Snakes', 'Tortle Druid', 'Vegepygmy Chief', 'Were rat', 'White Dragon Wyrmling', 'Will-o-wisp', 'Yuan-ti Broodguard'],
+                [/*3*/ 'Ankylosaurus', 'Archer', 'Basilisk', 'Bearded Devil', 'Blue Dragon Wyrmling', 'Bugbear Chief', 'Bulezau', 'Cave Fisher', 'Choldrith', 'Deathlock Wight', 'Deep Scion', 'Derro Savant', 'Displacer Beast', 'Dolphin Delighter', 'Doppelgänger', 'Duergar Screamer', 'Flail Snail', 'Giant Scorpion', 'Giff', 'Githyanki Warrior ', 'Gold Dragon Wyrmling ', 'Green Hag ', 'Grell', 'Hell Hound', 'Hobgoblin Captain', 'Hook Horror', 'Illusionist', 'Killer Whale', 'Knight', 'Leucrotta', 'Manticore', 'Martial Arts Adept', 'Merrenoloth', 'Minotaur', 'Mummy', 'Neogi', 'Nightmare', 'Ogre Chain Brute', 'Orc Red Fang of Shargaas', 'Owlbear', 'Phase Spider', 'Quaggoth Thonot ', 'Redcap', 'Shadow Mastiff Alpha', 'Slithering Tracker', 'Spectator', 'Swashbuckler', 'Sword Wraith Warrior', 'Trapper', 'Vampiric Mist', 'Veteran', 'Water Weird', 'Werewolf', 'Wight', 'Winter Wolf Yeti', 'Yuan-ti Malison'],
+                [/*4*/ 'Babau', 'Banshee', 'Barghest', 'Black Pudding', 'Bone Naga', 'Chuul', 'Couatl', 'Deathlock', 'Dybbuk', 'Elephant', 'Ettin', 'Flameskull', 'Ghost', 'Girallon', 'Gnoll Fang of Yeenoghu', 'Helmed Horror', 'Hobgoblin Devastator', 'Incubus', 'Iron Cobra', 'Lamia', 'Lizard King/Queen ', 'Merregon ', 'Neogi Master ', 'Ogre Battering Ram ', 'Orc Blade of llneval ', 'Orc War Chief ', 'Red Dragon Wyrmling ', 'Shadow Demon ', 'Stegosaurus ', 'Stone Defender ', 'Succubus', 'Warlock of the Archfey ', 'Wereboar ', 'Weretiger ', 'Yeth Hound', 'Yuan-ti Mind Whisperer ', 'Yuan-ti Nightmare Speaker'],
+                [/*5*/ 'Adult Oblex ', 'Air Elemental ', 'Allip', 'Banderhobb ', 'Barbed Devil ', 'Barlgura', 'Beholder Zombie', 'Brontosaurus', 'Bulette', 'Cambion', 'Catoblepas', 'Drow Elite Warrior', 'Earth Elemental', 'Enchanter', 'Fire Elemental', 'Flesh Golem', 'Giant Crocodile', 'Giant Shark', 'Gladiator', 'Gorgon', 'Half-Red Dragon Veteran', 'Hill Giant', 'Kraken Priest', 'Kruthik Hive Lord', 'Master Thief', 'Mezzoloth', 'Mindwitness', 'Night Hag', 'Oaken Bolter', 'Otyugh', 'Red Slaad', 'Revenant', 'Roper', 'Sahuagin Baron ', 'Salamander ', 'Shambling Mound ', 'Spawn of Kyuss ', 'Star Spawn Mangler ', 'Swarm of Cranium Rats ', 'Tanarukk', 'Tlincalli', 'Transmuter', 'Triceratops', 'Troll', 'Umber Hulk ', 'Unicorn ', 'Vampire Spawn ', 'Water Elemental ', 'Werebear ', 'Wood Woad ', 'Wraith ', 'Xorn', 'Young Remorhaz', 'Yuan-ti Pit Master'],
+                [/*6*/ 'Annis Hag', 'Bodak', 'Chasme', 'Chimera', 'Conjurer', 'Cyclops', 'Drider', 'Duergar Warlord ', 'Galeb Duhr ', 'Gauth', 'Githzerai Zerth ', 'Hobgoblin Warlord ', 'Invisible Stalker ', 'Kuo-toa Archpriest ', 'Mage ', 'Mammoth ', 'Medusa', 'Mouth of Grolantor Vrock', 'Warlock of the Great Old One', 'White Abishai', 'Wyvern', 'Young Brass Dragon ', 'Young White Dragon'],
+                [/*7*/ 'Air Elemental Myrmidon', 'Armanite', 'Bheur Hag', 'Black Abishai', 'Blue Slaad', 'Dhergoloth', 'Draegloth', 'Drow Mage', 'Earth Elemental Myrmidon', 'Fire Elemental Myrmidon ', 'Giant Ape ', 'Grick Alpha ', 'Korred', 'Lost Sorrowsworn', 'Maurezhi ', 'Mind Flayer ', 'Oni', 'Shadow Dancer ', 'Shield Guardian ', 'Stone Giant ', 'Venom Troll', 'Warlock of the Fiend', 'Water Elemental Myrmidon', 'Young Black Dragon', 'Young Copper Dragon', 'Yuan-ti Abomination'],
+                [/*8*/ 'Assassin', 'Blackguard', 'Canoloth', 'Chain Devil', 'Cloaker', 'Corpse Flower', 'Deathlock Mastermind', 'Diviner', 'Drow Priestess of Lolth', 'Fomorian', 'Frost Giant', 'Githyanki Knight', 'Green Slaad', 'Hezrou', 'Howler', 'Hydra', 'Mind Flayer Arcanist', 'Shoosuva', 'Spirit Naga', 'Sword Wraith Commander ', 'Tyrannosaurus Rex ', 'Young Bronze Dragon ', 'Young Green Dragon'],
+                [/*9*/ 'Abjurer', 'Abominable Yeti', 'Bone Devil', 'Champion', 'Clay Golem', 'Cloud Giant', 'Drow House Captain', 'Evoker', 'Fire Giant', 'Flind', 'Frost Salamander', 'Glabrezu ', 'Gloom Weaver ', 'Gray Slaad ', 'Hydroloth', 'Lonely Sorrowsworn', 'Necromancer', 'Nycaloth', 'Rot Troll', 'Treant', 'Ulitharid', 'War Priest', 'Young Blue Dragon', 'Young Silver Dragon'],
+                [/*10*/ 'Aboleth', 'Alhoon', 'Autumn Eladrin ', 'Death Kiss ', 'Death Slaad ', 'Deva', 'Elder Oblex', 'Froghemoth', 'Githyanki Gish', 'Githzerai Enlightened', 'Guardian Naga', 'Orthon', 'Spring Eladrin', 'Star Spawn Hulk', 'Stone Giant Dreamwalker', 'Stone Golem', 'Summer Eladrin', 'Winter Eladrin', 'Yochlol', 'Young Gold Dragon ', 'Young Red Dragon'],
+                [/*11*/ 'Alkilith', 'Balhannoth', 'Behir', 'Cloud Giant Smiling One', 'Dao', 'Djinni', 'Drow Shadowblade', 'Efreeti', 'Gynosphinx', 'Horned Devil', 'Hungry Sorrowsworn', 'Marid', 'Morkoth', 'Remorhaz', 'Roc', 'Soul Monger ', 'Spirit Troll Yagnoloth'],
+                [/*12*/ 'Arcanaloth', 'Archdruid', 'Archmage', 'Boneclaw', 'Duergar Despot', 'Eidolon', 'Erinyes', 'Frost Giant Everlasting One', `Githyanki Kith'rak `, 'Gray Render Ki-rin', 'Morkoth (in lair)', 'Oinoloth', 'Warlord', 'Yuan-ti Anathema',],
+                [/*13*/ 'Adult Brass Dragon ', 'Adult White Dragon ', 'Angry Sorrowsworn ', 'Beholder ', 'Devourer ', 'Dire Troll', 'Drow Arachnomancer', 'Nalfeshnee', 'Narzugon', 'Neothelid', 'Rakshasa', 'Star Spawn Seer', 'Storm Giant', 'Ultroloth', 'Vampire', 'Wastrilith', 'Young Red Shadow Dragon'],
+                [/*14*/ 'Adult Black Dragon ', 'Adult Copper Dragon ', 'Beholder (in lair)', 'Cadaver Collector ', 'Death Tyrant ', 'Drow Inquisitor ', 'Elder Brain', 'Fire Giant Dreadnought ', 'Githyanki Supreme Commander ', 'Ice Devil ', 'Retriever'],
+                [/*15*/ 'Adult Bronze Dragon ', 'Adult Green Dragon ', 'Death Tyrant (in lair) ', 'Green Abishai ', 'Mummy Lord ', 'Nabassu ', 'Purple Worm ', 'Skull Lord', 'Vampire (spellcaster) ', 'Vampire (warrior)'],
+                [/*16*/ 'Adult Blue Dragon ', 'Adult Silver Dragon ', 'Githzerai Anarch ', 'Hellfire Engine ', 'Iron Golem ', 'Marilith', 'Mummy Lord (in lair)', 'Phoenix', 'Planetar', 'Star Spawn Larva Mage', 'Steel Predator', 'Storm Giant Quintessent'],
+                [/*17*/ 'Adult Blue Dracolich', 'Adult Gold Dragon', 'Adult Red Dragon', 'Androsphinx', 'Blue Abishai', 'Death Knight', 'Dragon Turtle', 'Goristro', 'Nagpa'],
+                [/*18*/ 'Amnizu', 'Demilich', 'Drow Favored Consort', 'Sibriex'],
+                [/*19*/ 'Balor', 'Red Abishai'],
+                [/*20*/ 'Demilich (in lair)', 'Ancient Brass Dragon ', 'Ancient White Dragon ', 'Drow Matron Mother', 'Leviathan', 'Nightwalker ', 'Pit Fiend'],
+                [/*21*/ 'Ancient Black Dragon', 'Ancient Copper Dragon', 'Astral Dreadnought', 'Lich', 'Molydeus', 'Solar'],
+                [/*22*/ 'Ancient Bronze Dragon', 'Ancient Green Dragon', 'Lich (in lair)', 'Mind Flayer Lich', 'Zaratan'],
+                [/*23*/ 'Ancient Blue Dragon', 'Ancient Silver Dragon', 'Elder Tempest', 'Empyrean', 'Kraken'],
+                [/*24*/ 'Ancient Gold Dragon', 'Ancient Red Dragon'],
+                [/*25*/ 'Marut'],
+                [/*26*/ ],
+                [/*27*/ ],
+                [/*28*/ ],
+                [/*29*/ ],
+                [/*30*/ 'Tarrasque'],
+
+            ]
+ 
           
             function diffXpFinder(x,y){
                 let diffArray = challengeArrays[x-1]
@@ -195,11 +232,12 @@
             }
             function bossAndMinions(numMons,xp,xpmod){
                 if (numMons-1 === 0) {
-                    return `Boss XP: ${Math.floor(xp/(1*xpmod))}`
+                    return Math.floor(xp/(1*xpmod))
+                } else if (numMons-1 === 1){
+                    return [(Math.floor((xp/(1.3*xpmod)))), (Math.floor((xp/4)/((numMons-1)*xpmod)))]
                 } else {
-                    return `Boss XP: ${Math.floor((xp/(2*xpmod)))}, Minions XP: ${Math.floor((xp/2)/((numMons-1)*xpmod))}`
+                    return [(Math.floor((xp/(2*xpmod)))),(Math.floor((xp/2)/((numMons-1)*xpmod)))]
                 }
-                
             }
 
             output5 = pcs.value * diffXpFinder(difficulty.value,level.value)
@@ -208,13 +246,56 @@
             output6 = xpModifier(pcs.value,monsters.value)
             document.getElementById("diffMod").innerHTML = "Per Monster Modifier: x"+ output6
             
-            output7 =  diffXpFinder(difficulty.value,level.value)
-            document.getElementById("Even").innerHTML = `Even XP Breakdown: ${evenBreakdown(monsters.value,output5,output6)}`
+            document.getElementById("Even").innerHTML = `Even XP Breakdown: ${evenBreakdown(monsters.value,output5,output6)} (${crFinder(evenBreakdown(monsters.value,output5,output6))})`
+            
+            function bAndMoutput() {
+                let output7 = bossAndMinions(monsters.value,output5,output6)
+                if (Array.isArray(output7) === true) {
+                return `Boss XP: ${output7[0]} (${crFinder(output7[0])}), Minion XP: ${output7[1]} (${crFinder(output7[1])})`
+            }   else {
+                return `Boss XP: ${output7} (${crFinder(output7)})`
+            }
+            }
 
-            output8 =  diffXpFinder(difficulty.value,level.value)
-            document.getElementById("BandM").innerHTML = `${bossAndMinions(monsters.value,output5,output6)}`
 
-
+            function crFinder(xp){
+                if(xp <= 10) { return 'CR 0 - ' + shuffleSlice(examples[0],1)}
+                else if(xp <= 25) { return 'CR 1/8 - ' + shuffleSlice(examples[1],1)}
+                else if(xp <= 50) { return 'CR 1/4 - ' + shuffleSlice(examples[2],1)}
+                else if(xp <= 100) { return 'CR 1/2 - ' + shuffleSlice(examples[3],1)}
+                else if(xp <= 200) { return 'CR 1 - ' + shuffleSlice(examples[4],1)}
+                else if(xp <= 450) { return 'CR 2 - ' + shuffleSlice(examples[5],1)}
+                else if(xp <= 700) { return 'CR 3 - ' + shuffleSlice(examples[6],1)}
+                else if(xp <= 1100) { return 'CR 4 - ' + shuffleSlice(examples[7],1)}
+                else if(xp <= 1800) { return 'CR 5 - ' + shuffleSlice(examples[8],1)} 
+                else if(xp <= 2300) { return 'CR 6 - ' + shuffleSlice(examples[9],1)} 
+                else if(xp <= 2900) { return 'CR 7 - ' + shuffleSlice(examples[10],1)}
+                else if(xp <= 3900) { return 'CR 8 - ' + shuffleSlice(examples[11],1)} 
+                else if(xp <= 5000) { return 'CR 9 - ' + shuffleSlice(examples[12],1)} 
+                else if(xp <= 5900) { return 'CR 10 - ' + shuffleSlice(examples[13],1)} 
+                else if(xp <= 7200) { return 'CR 11 - ' + shuffleSlice(examples[14],1)} 
+                else if(xp <= 8400) { return 'CR 12 - ' + shuffleSlice(examples[15],1)} 
+                else if(xp <= 10000) { return 'CR 13 - ' + shuffleSlice(examples[16],1)} 
+                else if(xp <= 11500) { return 'CR 14 - ' + shuffleSlice(examples[17],1)} 
+                else if(xp <= 13000) { return 'CR 15 - ' + shuffleSlice(examples[18],1)} 
+                else if(xp <= 15000) { return 'CR 16 - ' + shuffleSlice(examples[19],1)} 
+                else if(xp <= 18000) { return 'CR 17 - ' + shuffleSlice(examples[20],1)} 
+                else if(xp <= 20000) { return 'CR 18 - ' + shuffleSlice(examples[21],1)} 
+                else if(xp <= 22000) { return 'CR 19 - ' + shuffleSlice(examples[22],1)} 
+                else if(xp <= 25000) { return 'CR 20 - ' + shuffleSlice(examples[23],1)} 
+                else if(xp <= 33000) { return 'CR 21 - ' + shuffleSlice(examples[24],1)} 
+                else if(xp <= 41000) { return 'CR 22 - ' + shuffleSlice(examples[25],1)} 
+                else if(xp <= 50000) { return 'CR 23 - ' + shuffleSlice(examples[26],1)} 
+                else if(xp <= 62000) { return 'CR 24 - ' + shuffleSlice(examples[27],1)} 
+                else if(xp <= 75000) { return 'CR 25 - ' + shuffleSlice(examples[28],1)} 
+                else if(xp <= 90000) { return 'CR 26 - ' + shuffleSlice(examples[29],1)} 
+                else if(xp <= 105000) { return 'CR 27 - ' + shuffleSlice(examples[30],1)} 
+                else if(xp <= 120000) { return 'CR 28 - ' + shuffleSlice(examples[31],1)} 
+                else if(xp <= 135000) { return 'CR 29 - ' + shuffleSlice(examples[32],1)} 
+                else if(xp <= 155000) { return 'CR 30 - ' + shuffleSlice(examples[33],1)} 
+            }
+            
+            document.getElementById("BandM").innerHTML = bAndMoutput()
 
 
 
