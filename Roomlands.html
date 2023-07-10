@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css" />
-    <title>Roomlands Generators</title>
+    <title>Colostle Generators</title>
     <script src="js/roomlands.js"></script>
 
 </head>
@@ -17,12 +17,12 @@
 <body>
 
     <header>
-        <h1 style="background-color: rgb(17, 2, 88);">Roomlands Generators</h1>
+        <h1 style="background-color: rgb(17, 2, 88);">Colostle Generators</h1>
         <div id="breadcrumb">
             <nav style="background-color: rgb(17, 2, 88);" aria-label="breadcrumb">
                 <ol style="background-color: rgb(17, 2, 88);" class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/index.html" style="color:white">Home</a></li>
-                    <li style="font-weight: bold; color: rgb(1, 183, 243)" class="breadcrumb-item" aria-current="page">Roomlands</a></li>
+                    <li style="font-weight: bold; color: rgb(1, 183, 243)" class="breadcrumb-item" aria-current="page">Colostle</a></li>
                 </ol>
             </nav>
         </div>
@@ -31,112 +31,49 @@
 
     <div class="container">
         <div class="row">
-            <button class="col-2 btn btn-danger" type="button" onclick="adventureBuilder()">Roll for Adventure</button>
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
         </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="tier()">Tier</button>
-            <div class="col blue" id="Tier"></div>
+        <h3>COMBAT</h3>
+        <div class="row" >
+            <div class="col"><p>
+                <strong>RULES:</strong>
+                <ol>
+                    <li>Draw the number of cards equal to player combat score.</li>
+                    <li>Draw enemy cards 1 at a time, counter if you have a higher number, Cancel ties, or use a lower number and take a WOUND.</li>
+                    <li>Counter with the same suit for a CRITICAL HIT (Remove one of the Enemies remaining attacks).</li>
+                    <li>You win the combat if you beat the majority of the incoming attacks.</li>
+                    <li>WINNING:
+                        <ul>
+                            <li>- Beating a ROOK - take Rook reward and add 1 to COMBAT or EXPLORATION score.</li>
+                            <li>- Beating a HUMAN - take 1 TREASURE.</li>
+                        </ul>
+                    <li>WOUNDS - Count up wounds, for each wound, remove 1 point from COMBAT or EXPLORATION, if either reaches zero, you DIE!</li>
+                </ol>
+                <i>Spades = Unarmed Attack | Clubs = Weapon Attack | Hearts = Magic Attack | Diamonds = Creative Attack</i>
+            </p>
+        </div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="flavor()">Flavor</button>
-            <div class="col blue" id="Flavor"></div>
+            <button class="col-2 btn btn-primary" type="button" onclick="draw('playerDrawCon')">Player Draw</button>
+            <div class="col" id="playerDrawCon"></div>
         </div>
-        <div class="row">
+        <div class="row" >
+            <button class="col-2 btn btn-primary" type="button" onclick="draw('enemyDrawCon')">Enemy Draw</button>
+            <div class="col" id="enemyDrawCon"></div>
+        </div>
+
+        <!--<div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="start()">Start Story</button>
             <div class="col blue" id="Start"></div>
         </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="conflict()">Conflict</button>
-            <div class="col blue" id="Conflict"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="villain()">Villain</button>
-            <div class="col blue" id="Villain"></div>
-            <button class="col-2 btn btn-primary" type="button" onclick="villainTitle()">Title</button>
-            <div class="col blue" id="Hi"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="preMadeVillain()">Premade Villain</button>
-            <div class="col blue" id="Premade"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="motive()">Motive</button>
-            <div class="col blue" id="Motive"></div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-primary" type="button" onclick="trait()">Trait</button>
-            <div class="col blue" id="Trait"></div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-primary" onclick="artifact()">Artifact</button>
-            <div class="col blue" id="Artifact"></div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-primary" type="button" onclick="twist()">Twist</button>
-            <div class="col blue" class="container-md" id="Twist">
-            </div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-primary" type="button" onclick="seat()">Seat of Power</button>
-            <div class="col blue" id="Seat"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="near()">Near Landmark</button>
-            <div class="col blue" id="Near"> </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="monologue()">Monologue</button>
-            <div class="col blue" id="Mono"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="moral()">Moral Quandry</button>
-            <div class="col blue" id="Moral"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="final()">Final Fight</button>
-            <div class="col blue" id="FF"></div>
-        </div>
-        <br>
-        <h6>Unique Combat Encounter Inspiration</h6>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="premise()">Premise</button>
-            <div class="col blue" id="Premise"> </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="disparity()">Power Disparity</button>
-            <div class="col blue" id="Disparity"> </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="background()">Background</button>
-            <div class="col blue" id="Background"> </div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="combatFocus()">Focus</button>
-            <div class="col blue" id="Method"> </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <h5>Smaller Adventure Ideas</h5>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="printCrime()">Crime Scene</button>
-            <div class="col blue" id="Crime Scene"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="subPlanePremise()">Sub-Plane premise</button>
-            <div class="col blue" id="Plane Premise"></div>
-        </div>
-        <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="subDimension()">Sub-Plane</button>
-            <div class="col blue" id="Subplane"></div>
-        </div>
+    -->
     </div>
 
 
     <footer>
         <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
