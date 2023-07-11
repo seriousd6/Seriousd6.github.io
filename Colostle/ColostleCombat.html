@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css" />
+    <title>Colostle Generators</title>
+    <script src="js/colostleCombat.js"></script>
+    <link rel="icon" type="image" href="../icon.bmp"/>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 style="background-color: rgb(17, 2, 88);">Colostle Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: rgb(17, 2, 88);" aria-label="breadcrumb">
+                <ol style="background-color: rgb(17, 2, 88);" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/Colostle/Start.html" style="color:white">Start</a></li>
+                    <li style="font-weight: bold; color: rgb(1, 183, 243)" class="breadcrumb-item" aria-current="page">Combat</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <h3>COMBAT</h3>
+        <div class="row" >
+            <div class="col"><p>
+                <strong>RULES:</strong>
+                <ol>
+                    <li>Draw the number of cards equal to player combat score.</li>
+                    <li>Draw enemy cards 1 at a time, counter if you have a higher number, Cancel ties, or use a lower number and take a WOUND.</li>
+                    <li>Counter with the same suit for a CRITICAL HIT (Remove one of the Enemies remaining attacks).</li>
+                    <li>You win the combat if you beat the majority of the incoming attacks.</li>
+                    <li>WINNING:
+                        <ul>
+                            <li>- Beating a ROOK - take Rook reward and add 1 to COMBAT or EXPLORATION score.</li>
+                            <li>- Beating a HUMAN - take 1 TREASURE.</li>
+                        </ul>
+                    <li>WOUNDS - Count up wounds, for each wound, remove 1 point from COMBAT or EXPLORATION, if either reaches zero, you DIE!</li>
+                </ol>
+                <i>Spades = Unarmed Attack | Clubs = Weapon Attack | Hearts = Magic Attack | Diamonds = Creative Attack</i>
+                <i>(AR) Spades = Laser Attack | Clubs = Flying Attack | Hearts = Grab Attack | Diamonds = Rocket Attack</i>
+            </p>
+        </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="draw('playerDrawCon')">Player Draw</button>
+            <div class="col" id="playerDrawCon"></div>
+        </div>
+        <div class="row" >
+            <button class="col-2 btn btn-primary" type="button" onclick="draw('enemyDrawCon')">Enemy Draw</button>
+            <div class="col" id="enemyDrawCon"></div>
+        </div>
+
+        <div class="row" >
+            <div class="col"><p>
+                <strong>LOSING</strong>
+                Your opponent lives and you receive no reward. Any wounds received in this COMBAT phase still take effect - both on you and your opponent. Maybe you will encounter this opponent again - a ‘white whale’ for your character. If you do, this you can count any wounds you managed to land against it as still there and reduce its combat score accordingly.
+            </p>
+        </div>
+
+        <!--<div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="start()">Start Story</button>
+            <div class="col blue" id="Start"></div>
+        </div>
+    -->
+    </div>
+
+
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: rgb(1, 183, 243);" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>

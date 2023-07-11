@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/plothooks.js"></script>
+    <link rel="icon" type="image" href="../icon.bmp"/>
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/D&D/start.html" style="color:white">Start</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/loot.html" style="color:white">Loot</a>
+                    </li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item" aria-current="page">Plot Hooks</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/D&D/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Monster_Builder.html" style="color:white">Monsters</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+            <div class="row">
+                <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
+            </div>
+            </div>
+    <div class="container">
+        <h5>Class-Based Plot Hooks</h5>
+            <div class="row btn-group" role="group" aria-label="Basic example">
+                <button style="color: white ;background-color: goldenrod;" class="col-3 btn" type="button" onclick="paladin()">Paladin</button>
+                <button style="color: white ;background-color: rgb(66, 1, 1);" class="col-3 btn" type="button" onclick="monk()">Monk</button>
+                <button style="color: white ;background-color: rgba(132, 0, 255, 0.452); " class="col-3 btn" type="button" onclick="bard()">Bard</button>
+                <button style="color: white ;background-color: rgb(255, 230, 0); " class="col-3 btn" type="button" onclick="cleric()">Cleric</button>
+                <button style="color: white ;background-color: rgb(70, 43, 226); " class="col-3 btn" type="button" onclick="wizard()">Wizard</button>
+                <button style="color: white ;background-color: rgb(9, 107, 22); " class="col-3 btn" type="button" onclick="druid()">Druid</button>
+                <button style="color: white ;background-color: rgb(160, 160, 160); " class="col-3 btn" type="button" onclick="barbarian()">Barbarian</button>
+                <button style="color: white ;background-color: rgb(223, 89, 0); " class="col-3 btn" type="button" onclick="fighter()">Fighter</button>
+                <button style="color: white ;background-color: rgb(3, 163, 255); " class="col-3 btn" type="button" onclick="sorcerer()">Sorcerer</button>
+                <button style="color: white ;background-color: rgb(0, 212, 46); " class="col-3 btn" type="button" onclick="ranger()">Ranger</button>
+                <button style="color: white ;background-color: rgba(34, 34, 34, 0.787); " class="col-3 btn" type="button" onclick="rogue()">Rogue</button>
+                <button style="color: white ;background-color: rgb(255, 0, 0); outline: dashed burly" class="col-3 btn" type="button" onclick="warlock()">Warlock</button>
+            </div>
+        <div class="col npc" id="Class"> </div>   
+        <br>     
+        <h5>Location-Based Plot Hooks</h5>
+        <div class="row btn-group" role="group" aria-label="Basic example">
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="jungle()">Jungle</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="swamp()">Swamp</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="ocean()">Ocean</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="coast()">Coast</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="mountain()">Mountain</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="dungeon()">Dungeon</button>
+            <button class="col-3 btn btn-outline-primary" type="button" onclick="village()">Village</button>
+        </div> 
+        <div>
+            <div class="col npc" id="Loc"></div>
+        </div>
+        <br>
+        <h5>City-Based Plot Hooks</h5>
+        <div class="row btn-group" role="group" aria-label="Basic example">
+            <button class="col-3 btn btn-outline-success" type="button" onclick="arts()">Arts</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="night()">Night Life</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="shopping()">Shopping</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="street()">Street</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="entertainment()">Entertainment</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="sports()">Sports</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="nautical()">Nautical</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="events()">Event</button>
+            <button class="col-3 btn btn-outline-success" type="button" onclick="personal()">Personal</button>
+        </div>
+        <div class="col npc" id="City"> </div>
+        <br>
+        <h5>Misc. Plot Hooks</h5>
+        <div class="row btn-group" role="group" aria-label="Basic example">
+            <button class="col-3 btn btn-warning" type="button" onclick="generic()">Misc.</button>
+            <button class="col-3 btn btn-warning" type="button" onclick="kidsQuest()">Kids Quest</button>
+            <button class="col-3 btn btn-warning" type="button" onclick="ghibliFinder()">Ghibli-Esque</button>
+            <button class="col-3 btn btn-warning" type="button" onclick="monster()">Monster</button>
+            <button class="col-3 btn btn-warning" type="button" onclick="stronghold()">Stronghold</button>
+        </div>
+        <div class="col npc" id="Misc">
+        </div>
+    </div>
+
+    
+
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: Most of the the class-based plot hooks are from <a style="color: red;" href="https://www.reddit.com/user/famoushippopotamus">u/FamousHippopotamus</a>, all others come from <a style="color: red;" href="https://www.reddit.com/r/d100/">r/d100</a>!
+        </p>
+    </footer>
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

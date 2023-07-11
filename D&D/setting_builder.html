@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/settingBuilder.js"></script>
+    <link rel="icon" type="image" href="../icon.bmp"/>
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/D&D/start.html" style="color:white">Start</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Setting Builder</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/D&D/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Monster_Builder.html" style="color:white">Monsters</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="rollTown()">Roll For Town</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <br>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" onclick="findTown()">Town</button>
+            <div class="col" id="Town"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-success" type="button" onclick="findResources()">Resources</button>
+            <div class="col" id="Resources"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="findThePeople()">People</button>
+            <div class="col" id="People"></div>
+        </div>
+        <h5>Details</h5>
+        <div class="row btn-group" role="group" aria-label="Basic example">
+            <button class="col-3 btn btn-primary" onclick="findLegalStructure()">Legal Structure</button>
+            <button class="col-3 btn btn-primary" onclick="findRumor()">Rumor</button>
+            <button class="col-3 btn btn-primary" onclick="findCorruption()">Corruption</button>
+            <button class="col-3 btn btn-primary" onclick="findShop()">Shop</button>
+            <button class="col-3 btn btn-primary" onclick="findPrison()">Prison</button>
+            <button class="col-3 btn btn-primary" onclick="findPresence()">Presence</button>
+            <button class="col-3 btn btn-primary" onclick="findOutlaws()">Outlaws</button>
+            <button class="col-3 btn btn-primary" onclick="findGang()">Gang</button>
+            <button class="col-3 btn btn-primary" onclick="findCult()">Cult</button>
+            <button class="col-3 btn btn-primary" onclick="findSecretSociety()">Secret Society</button>
+            <button class="col-3 btn btn-primary" onclick="findDisaster()">Disaster</button>
+            <button class="col-3 btn btn-primary" onclick="findHoliday()">Holiday</button>
+            <button class="col-3 btn btn-primary" onclick="findTreasure()">Treasure</button>
+            <button class="col-3 btn btn-primary" onclick="findMilitia()">Militia</button>
+            <button class="col-3 btn btn-primary" onclick="findNobility()">Nobility</button>
+        </div>
+        <div class="row outline" id= "details">
+        </div>
+    </div>
+
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: All of these generators came from a post on <a style="color: red;" href="https://www.reddit.com/r/d100/">r/d100</a> or <a style="color: red;" href="https://www.reddit.com/r/DnDBehindTheScreen/">r/DnDBehindTheScreen</a>that linked to a
+            blog which I cannot find - If you know the blog please let me know so I can link and credit here!
+        </p>
+    </footer>
+
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>

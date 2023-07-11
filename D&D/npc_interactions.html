@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/NPC reaction Tables.js"></script>
+    <script src="js/NPC Inteactions.js"></script>
+    <link rel="icon" type="image" href="../icon.bmp"/>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/D&D/start.html" style="color:white">Start</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/loot.html" style="color:white">Loot</a> </li>
+                    <li class="breadcrumb-item"><a href="/D&D/plot_hooks.html" style="color:white">Plot Hooks</a> </li>
+                    <li class="breadcrumb-item"><a href="/D&D/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item" aria-current="page">NPC Interactions</a> </li>
+                    <li class="breadcrumb-item"><a href="/D&D/Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Monster_Builder.html" style="color:white">Monsters</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container" id='reac'>
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear All</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="scene()">Scene</button>
+            <div class="col npc" id="Scene"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="cat()">Cat</button>
+            <div class="col npc" id="Cat"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="randomHostAndHook()">Host</button>
+            <div class="col npc" id="Host"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="omens()">Omen</button>
+            <div class="col npc" id="Omen"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="prophecy()">Prophecy</button>
+            <div class="col npc" id="Prophecy"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="rumor()">Rumor</button>
+            <div class="col npc" id="Rumor"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="wisdom()">Wisdom</button>
+            <div class="col npc" id="Wisdom"></div>
+        </div>
+        <br>
+        <br>
+
+
+        <h5>NPC Reactions</h5>
+        <p>This generator will repeat itself a lot (still figuring out how to auto-prime/ refresh), please use the "RESET SEED" button below to get new outcomes!</p>
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Reset Seed</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reaction</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="hostile()">Hostile</a>
+                <a class="dropdown-item" onclick="unhappy()">Unhappy</a>
+                <a class="dropdown-item" onclick="disgruntled()">Disgruntled</a>
+                <a class="dropdown-item" onclick="neutral()">Neutral</a>
+                <a class="dropdown-item" onclick="pleased()">Pleased</a>
+                <a class="dropdown-item" onclick="happy()">Happy</a>
+                <a class="dropdown-item" onclick="friendly()">Friendly</a>
+            </div>
+            <div class="col npc">
+                <div class="row pad" id="Reaction"></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="motivation()">Motivation</button>
+            <div class="col npc" id="Motivation"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" type="button" onclick="area()">Area Status</button>
+            <div class="col npc" id="Area Status"></div>
+        </div>
+    </div>
+
+
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: <a style="color: red;" href="https://www.reddit.com/user/TheUHO">u/TheUHO</a> for the "SCENE" idea and content! <a style="color: red;" href="https://www.reddit.com/user/famoushippopotamus">u/FamousHippopotamus</a> for the content behind
+            the "REACTION", "MOTIVATION", and "AREA STATUS"
+        </p>
+    </footer>
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css" />
+    <title>D&D Flavor Generators</title>
+    <script src="js/character.js"></script>
+    <script src="js/race.js"></script>
+    <link rel="icon" type="image" href="../icon.bmp"/>
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/D&D/start.html" style="color:white">Start</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Character</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="/D&D/tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/Monster_Builder.html" style="color:white">Monsters</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-dark" type="button" onclick="rollChar()">Roll For Character</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" onclick="buildRace()">Race</button>
+            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+        </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="completeRace('Aarakocra')">Aarakocra</a>
+                <a class="dropdown-item" onclick="completeRace('Aasimar')">Aasimar</a>
+                <a class="dropdown-item" onclick="completeRace('Bugbear')">Bugbear</a>
+                <a class="dropdown-item" onclick="completeRace('Centaur')">Centaur</a>
+                <a class="dropdown-item" onclick="completeRace('Changeling')">Changeling</a>
+                <a class="dropdown-item" onclick="completeRace('Dragonborn')">Dragonborn</a>
+                <a class="dropdown-item" onclick="completeRace('Drow')">Drow</a>
+                <a class="dropdown-item" onclick="completeRace('Dwarf')">Dwarf</a>
+                <a class="dropdown-item" onclick="completeRace('Firbolg')">Firbolg</a>
+                <a class="dropdown-item" onclick="completeRace('Genasi')">Genasi</a>
+                <a class="dropdown-item" onclick="completeRace('Gith')">Gith</a>
+                <a class="dropdown-item" onclick="completeRace('Gnome')">Gnome</a>
+                <a class="dropdown-item" onclick="completeRace('Goblin')">Goblin</a>
+                <a class="dropdown-item" onclick="completeRace('Goliath')">Goliath</a>
+                <a class="dropdown-item" onclick="completeRace('Grung')">Grung</a>
+                <a class="dropdown-item" onclick="completeRace('Half-Elf')">Half-Elf</a>
+                <a class="dropdown-item" onclick="completeRace('Half-Orc')">Half-Orc</a>
+                <a class="dropdown-item" onclick="completeRace('Halfling')">Halfling</a>
+                <a class="dropdown-item" onclick="completeRace('High-Elf')">High-Elf</a>
+                <a class="dropdown-item" onclick="completeRace('Hobgoblin')">Hobgoblin</a>
+                <a class="dropdown-item" onclick="completeRace('Human')">Human</a>
+                <a class="dropdown-item" onclick="completeRace('Kalashtar')">Kalashtar</a>
+                <a class="dropdown-item" onclick="completeRace('Kenku')">Kenku</a>
+                <a class="dropdown-item" onclick="completeRace('Kobold')">Kobold</a>
+                <a class="dropdown-item" onclick="completeRace('Lizardfolk')">Lizardfolk</a>
+                <a class="dropdown-item" onclick="completeRace('Locathah')">Locathah</a>
+                <a class="dropdown-item" onclick="completeRace('Loxodon')">Loxodon</a>
+                <a class="dropdown-item" onclick="completeRace('Minotaur')">Minotaur</a>
+                <a class="dropdown-item" onclick="completeRace('Orc')">Orc</a>
+                <a class="dropdown-item" onclick="completeRace('Shifter')">Shifter</a>
+                <a class="dropdown-item" onclick="completeRace('Simic Hybrid')">Simic-Hybrid</a>
+                <a class="dropdown-item" onclick="completeRace('Tabaxi')">Tabaxi</a>
+                <a class="dropdown-item" onclick="completeRace('Tiefling')">Tiefling</a>
+                <a class="dropdown-item" onclick="completeRace('Tortle')">Tortle</a>
+                <a class="dropdown-item" onclick="completeRace('Triton')">Triton</a>
+                <a class="dropdown-item" onclick="completeRace('Vedalken')">Vedalken</a>
+                <a class="dropdown-item" onclick="completeRace('Verdan')">Verdan</a>
+                <a class="dropdown-item" onclick="completeRace('Warforged')">Warforged</a>
+                <a class="dropdown-item" onclick="completeRace('Wood-Elf')">Wood-Elf</a>
+                <a class="dropdown-item" onclick="completeRace('Yuan-Ti')">Yuan-Ti</a>
+            </div>
+            <div class="col">
+                <div class="row pad" id="Name"></div>
+                <div class="row pad" id="Sex"></div>
+                <div class="row pad" id="Race"></div>
+            </div>
+            <button class="col-2  btn btn-danger" type="button" onclick="buildClass()">Class</button>
+            <div class="col" id="Class"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-danger" type="button" disabled>Trait</button>
+            <div class="col" id="Racial"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-success" type="button" onclick="buildDesc()">Description</button>
+            <div class="col green">
+                <div class="row pad" id="Feat1"></div>
+                <div class="row pad" id="Feat2"></div>
+                <div class="row pad" id="Feat3"></div>
+            </div>
+            <div class="col green">
+                <div class="row pad" id="Feat4"></div>
+                <div class="row pad" id="Feat5"></div>
+                <div class="row pad" id="Feat6"></div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findCalm() +findStressed() +findMood()">Temperament</button>
+            <div class="col" id="Calm"></div>
+            <div class="col" id="Stressed"></div>
+            <div class="col" id="Mood"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findGoalFear()">Goal/Fear</button>
+            <div class="col" id="GoalsFears"></div>
+            <button class="col-2 btn btn-primary" onclick="findPrejudice()">Prejudice/Flaw</button>
+            <div class="col" id="Prejudice"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findFaith()">Faith</button>
+            <div class="col" id="Faith"></div>
+            <button class="col-2 btn btn-primary" onclick="findDiscTopic()">Discussion Topic</button>
+            <div class="col" id="Discuss"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" onclick="findKeepsake()">Keepsake</button>
+            <div class="col" id="Keepsake"></div>
+            <button class="col-2 btn btn-primary" onclick="findQuirk()">Quirk</button>
+            <div class="col" id="Quirk"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-primary" onclick="findBackstory()">Backstory</button>
+            <div class="col" id="Backstory"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" onclick="findHomeTown()">Hometown</button>
+            <div class="col" id="Hometown"></div>
+        </div>
+        <div class="row">
+            <button style="color: white;" class="col-2 btn btn-warning" onclick="findHomeTownSecret()">Hometown Secret</button>
+            <div class="col" id="Hometown Secret"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveSong()">Favorite Song</button>
+            <div class="col" id="Song"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveFood()">Favorite Food</button>
+            <div class="col" id="Food"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findFaveDrink()">Favorite Drink</button>
+            <div class="col" id="Drink"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-secondary" onclick="findCurrentBook()">Currently Reading</button>
+            <div class="col" id="Book"></div>
+        </div>
+    </div>
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: I used names for the races from <a style="color: red;" href="https://www.fantasynamegenerators.com/">FantasyNameGenerator.com</a> The traits and features of each race from various lists on <a style="color: red;" href="https://www.reddit.com/r/d100/">r/d100</a>,
+            the job list from <a style="color: red;" href="https://www.reddit.com/r/DnDBehindTheScreen/comments/bjkejj/i_made_a_list_of_every_profession_i_could_think/">here</a>, the description and temperament from <a style="color: red;" href="https://www.reddit.com/user/famoushippopotamus">u/FamousHippopotamus</a>,
+            and pretty much everything else from various posts on <a style="color: red;" href="https://www.reddit.com/r/d100/">r/d100</a>
+        </p>
+    </footer>
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: red;" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
