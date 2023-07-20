@@ -338,7 +338,7 @@ function findTown() {
                 return `There is a friendly townsperson willing to host you for dinner, and possibly room and board: ${findHost()} . ${findPlot()}`
             }
         }
-        return `${findlodging() +'. '+ food()+ '. '} you also see a nearby ${searchArray(landmark)}`
+        return `${findlodging() +'. '+ food()+ '. '}`
 
     } 
 
@@ -350,7 +350,7 @@ function findTown() {
     ]
     function landmark(){
     let landmark = [
-        `wizard's ${searchArray(['active','abandoned'])} tower`, `${searchArray('arcane', 'bardic', 'scholarly')} college`, 'combat training school', `${searchArray(['church','shrine','temple'])}`, 'fighting pit', 'tended gardens', `${searchArray(['craft', 'trade', 'class','thieves'])} guild hall `, 'library', 'lighthouse','watchtower', 'racetrack', `${searchArray(['castle', 'temple', 'shipyard','town'])} ruin`, 'sealed cave entrance',  'spiritual lodge', 'theater','amphitheater']
+        `${searchArray(['active','abandoned'])} wizard's tower`, `${searchArray('arcane', 'bardic', 'scholarly','religious')} college`, 'combat training school', `${searchArray(['church','shrine','temple'])}`, 'fighting pit', 'tended gardens', `${searchArray(['craft', 'trade', 'class','thieves'])} guild hall `, 'library', 'lighthouse','watchtower', 'racetrack', `${searchArray(['castle', 'temple', 'shipyard','town'])} ruin`, 'sealed cave entrance',  'spiritual lodge', 'theater','amphitheater']
     let feature =[
         'that a river runs through the town', `that the town is built into a ${searchArray(['hill-side','mountain-side','canyon','ravine'])}`,`that the town is surrounded by ${searchArray(['forest','wilderness','desert','tundra','mountains','plains','hills'])}`,`what looks like the aftermath of a skirmish with ${searchArray(['a neighboring town','an invading horde','a rampaging beast'])}`
     ]
