@@ -21,12 +21,12 @@
     //race, gender, alignment, profession/class (and level), age, economic status, name
 //NPC interactions - 
     //Agreeing, Friend or Foe, Charisma, emotions, 1-7 Disagree, 8-13 maybe, 14-20 YES,
-        //emotions tabl reference
+        //emotions table reference
 
 //Travel
     //miles slider
     //travel speed slider
-    //Season selector, weatehr randomizer/ shifter
+    //Season selector, weather randomizer/ shifter
     //population density slider
     //Geographic features
     //wilderness encounters

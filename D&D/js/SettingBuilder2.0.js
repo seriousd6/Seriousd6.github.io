@@ -201,7 +201,7 @@ function printArray(array) {
         let settlements = ['city','village','port','monastery','criminal hive','castle','abandoned','capital','ruined','college','fort','trade hub','commune','hideout','town','hold','hamlet','metropolis','crossroads','outpost']
         let questLocations = ['arena','bank','barracks','basement','battlefield','camp','canyon','castle','cave','church','city','cove','docks','farm','forest','graveyard','grove','hideout','inn','island','keep','lab','library','market','mountain','pit','prison','river','road','ruins','sanctuary','sewers','shrine','slums','swamp','theater','tomb','tower','underwater','village']
 
-        let locationPrime = ['grey','deep','high','frost','last','broken','castaaway','first','bear','great','wolf','elder','stone','timber','black','lost','low','bleak','wood','thorn']
+        let locationPrime = ['grey','deep','high','frost','last','broken','castaway','first','bear','great','wolf','elder','stone','timber','black','lost','low','bleak','wood','thorn']
         let locationChron = ['watch','wood','ridge','stead','barrow','brook','rock','fall','haven','reach','helm','bay','moor','spire','harbor','valley','point','peak','glen','keep']
         function findTown() {
             function townName() {
@@ -769,11 +769,11 @@ function printArray(array) {
         };
 
         //History
-            //Somethign terrible
-            //somethign politcal
-            //somethign periodic
+            //Something terrible
+            //something politcal
+            //something periodic
             //something tender
-            //somethign petty
+            //something petty
         
 
         //villains
