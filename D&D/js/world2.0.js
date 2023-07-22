@@ -34,20 +34,6 @@
         //natural source
     //Status of magic
     //commonality
-    //Pillars
-        //source
-        //cost
-        //potency
-        //commonality
-        //accessibility
-        //pillars of mastery
-    //paths
-        //scientific
-        //Artisan
-        //arcane
-        //natural
-        //legendary
-        //forbidden
 
 //General Questions
     //world events remembered inaccurately
