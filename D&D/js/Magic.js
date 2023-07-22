@@ -432,7 +432,6 @@ const magics = {
             `Mastery and Magical Artifacts: The role of magical artifacts in assisting or hindering the path to mastery.`
         ]
         },
-
     'Artisan' : {/*Expression and creativity*/
         'Source': [
             // Artisans draw their magical abilities from various creative disciplines known as the 'Source.' Each Source represents a distinct form of expression and creativity. For instance:
@@ -951,7 +950,6 @@ const magics = {
             'Artisan Epics: Legends and tales chronicling the journeys and accomplishments of master Artisans.'
         ]
         },
-
     'Arcane' : { /*Knowledge, Power, and experience beyond the mundane - magic by its own merit*/
         'Source' : [ 
             //The 'Arcane' magical system draws its power from diverse and esoteric sources, representing knowledge, power, and experiences beyond the mundane. These sources include:
@@ -1080,7 +1078,6 @@ const magics = {
             'Arcane Vision Quests: Spiritual journeys undertaken to gain profound insights into arcane mysteries.'
         ]         
         },
-
     'Natural' : { /*Derived from the forces of nature*/
         'Source' : [ 
             //The 'Natural' magical system derives its power from the forces of nature, tapping into various elements and aspects of the natural world. These sources include:
@@ -1220,7 +1217,6 @@ const magics = {
             'Seekers of Hidden Knowledge: Masters who explore hidden realms and ancient texts to uncover forgotten natural magic.'
         ]
         },
-
     'Legendary' : { /*It moves a story or defines the lesson of a story*/
         'Source' : [ 
             //The 'Legendary' magical system draws its power from sources that carry great significance in shaping stories, lessons, and the course of events. These sources include:
@@ -1262,7 +1258,7 @@ const magics = {
             `Faith: Faith and belief in the magic's significance can be a necessary cost.`,
             `Unlikeliness: The magic may require overcoming seemingly impossible odds or challenges.`,
             `Last Hope: Utilizing legendary magic as a final resort or the last hope.`,
-            `OMNIPresent: Being present in all places and times can be a cost for wielding such magic.`,
+            `Omnipresent: Being present in all places and times can be a cost for wielding such magic.`,
             `Sacrifice of Loved Ones: Powerful magic may demand the sacrifice of loved ones.`,
             `Severing Bonds: Wielding legendary magic might require severing personal bonds or connections.`,
             `Atonement: Seeking redemption or atonement for past actions can empower the magic.`,
@@ -1388,7 +1384,6 @@ const magics = {
             `Eternal Echoes: Legends and tales of legendary masters resonate through the ages, inspiring others.`
         ]
         },
-
     'Forbidden' : { /*Magic that is feared or shunned*/
         'Source' : [
             //The 'Forbidden' magical system draws its power from sources that are feared, shunned, or deemed dangerous by society. These sources include:
@@ -1589,37 +1584,32 @@ const magics = {
 
 
 function magic() {
-    let typeArray = Object.keys(magics)
-    let pure = searchArray(typeArray)
-    let dual = shuffleSlice(typeArray,2)
-    let primary = dual[0]
-    let secondary = dual[1]
-    let trio = shuffleSlice(typeArray,3)
-    let t1= trio[0]
-    let t2= trio[1]
-    let t3= trio[2]
-    let c1 = shuffleSlice(typeArray,1)
-    let c2 = shuffleSlice(typeArray,1)
-    let c3 = shuffleSlice(typeArray,1)
-    let c4 = shuffleSlice(typeArray,1)
+    const typeArray = Object.keys(magics)
+
 
 
     function findPure(){
+        let pureChoice = [searchArray(typeArray)]
         document.getElementById("Magic").innerHTML = ''
         document.getElementById("Source").innerHTML = ''
         document.getElementById("Cost").innerHTML = ''
         document.getElementById("Potencies").innerHTML = ''
         document.getElementById("Accessibility").innerHTML = ''
         document.getElementById("Mastery").innerHTML = ''
-
-        document.getElementById("Magic").innerHTML = pure
-        document.getElementById("Source").innerHTML = searchArray(magics[pure].Source)
-        document.getElementById("Cost").innerHTML = shuffleSlicePrint(magics[pure].Cost,2)
-        document.getElementById("Potencies").innerHTML = shuffleSlicePrint(magics[pure].Potency,2)
-        document.getElementById("Accessibility").innerHTML = shuffleSlicePrint(magics[pure].Accessibility,2)
-        document.getElementById("Mastery").innerHTML = shuffleSlicePrint(magics[pure].Mastery,2)
+        
+        document.getElementById("Magic").innerHTML = 'PURE:'
+        loopCountPrintList(pureChoice,"Magic")
+        loopCountPrintList([searchArray(magics[pureChoice].Source)], "Source")
+        loopCountPrintList(shuffleSlice(magics[pureChoice].Cost,2), "Cost")
+        loopCountPrintList(shuffleSlice(magics[pureChoice].Potency,2), "Potencies")
+        loopCountPrintList(shuffleSlice(magics[pureChoice].Accessibility,2), "Accessibility")
+        loopCountPrintList(shuffleSlice(magics[pureChoice].Mastery,2), "Mastery")
     }
     function findDual(){
+        let dual = shuffleSlice(typeArray,2)
+        let primary = dual[0]
+        let secondary = dual[1]
+
         document.getElementById("Magic").innerHTML = ''
         document.getElementById("Source").innerHTML = ''
         document.getElementById("Cost").innerHTML = ''
@@ -1627,14 +1617,35 @@ function magic() {
         document.getElementById("Accessibility").innerHTML = ''
         document.getElementById("Mastery").innerHTML = ''
         
-        document.getElementById("Magic").innerHTML = dual[0] + ', '+ dual[1]
-        document.getElementById("Source").innerHTML = searchArray(magics[primary].Source)+', '+ searchArray(magics[secondary].Source)
-        document.getElementById("Cost").innerHTML = searchArray(magics[primary].Cost)+', '+ shuffleSlicePrint(magics[secondary].Cost,2)
-        document.getElementById("Potencies").innerHTML = searchArray(magics[primary].Potency)+', '+ shuffleSlicePrint(magics[secondary].Potency,2)
-        document.getElementById("Accessibility").innerHTML = searchArray(magics[primary].Accessibility)+', ' +shuffleSlicePrint(magics[secondary].Accessibility,2)
-        document.getElementById("Mastery").innerHTML = searchArray(magics[primary].Mastery)+', '+ shuffleSlicePrint(magics[secondary].Mastery,2)
+        document.getElementById("Magic").innerHTML = 'DUAL:'
+        loopCountPrintList(dual,"Magic")
+        let souAr = []
+        souAr.push(searchArray(magics[primary].Source))
+        souAr.push(searchArray(magics[secondary].Source))
+        loopCountPrintList(souAr, "Source")
+        let cosAr = []
+        cosAr.push(searchArray(magics[primary].Cost))
+        cosAr.push(shuffleSlice(magics[secondary].Cost,2))
+        loopCountPrintList(cosAr, "Cost")
+        let potAr = []
+        potAr.push(searchArray(magics[primary].Potency))
+        potAr.push(shuffleSlice(magics[secondary].Potency,2))
+        loopCountPrintList(potAr, "Potencies")
+        let accAr = []
+        accAr.push(searchArray(magics[primary].Accessibility))
+        accAr.push(shuffleSlice(magics[secondary].Accessibility,2))
+        loopCountPrintList(accAr, "Accessibility")
+        let masAr = []
+        masAr.push(searchArray(magics[primary].Mastery))
+        masAr.push(shuffleSlice(magics[secondary].Mastery,2))
+        loopCountPrintList(masAr, "Mastery")
     }
     function findTrio(){
+        let trio = shuffleSlice(typeArray,3)
+        let t1= trio[0]
+        let t2= trio[1]
+        let t3= trio[2]
+
         document.getElementById("Magic").innerHTML = ''
         document.getElementById("Source").innerHTML = ''
         document.getElementById("Cost").innerHTML = ''
@@ -1642,21 +1653,89 @@ function magic() {
         document.getElementById("Accessibility").innerHTML = ''
         document.getElementById("Mastery").innerHTML = ''
         
-        document.getElementById("Magic").innerHTML = dual[0] + ', '+ dual[1]
-        document.getElementById("Source").innerHTML = searchArray(magics[primary].Source)+', '+ searchArray(magics[secondary].Source)
-        document.getElementById("Cost").innerHTML = searchArray(magics[primary].Cost)+', '+ shuffleSlicePrint(magics[secondary].Cost,2)
-        document.getElementById("Potencies").innerHTML = searchArray(magics[primary].Potency)+', '+ shuffleSlicePrint(magics[secondary].Potency,2)
-        document.getElementById("Accessibility").innerHTML = searchArray(magics[primary].Accessibility)+', ' +shuffleSlicePrint(magics[secondary].Accessibility,2)
-        document.getElementById("Mastery").innerHTML = searchArray(magics[primary].Mastery)+', '+ shuffleSlicePrint(magics[secondary].Mastery,2)
+        document.getElementById("Magic").innerHTML = 'TRIO:'
+        loopCountPrintList(trio,"Magic")
+        let souAr = []
+        souAr.push(searchArray(magics[t1].Source))
+        souAr.push(searchArray(magics[t2].Source))
+        souAr.push(searchArray(magics[t3].Source))
+        loopCountPrintList(souAr, "Source")
+        let cosAr = []
+        cosAr.push(searchArray(magics[t1].Cost))
+        cosAr.push(searchArray(magics[t2].Cost))
+        cosAr.push(searchArray(magics[t3].Cost))
+        loopCountPrintList(cosAr, "Cost")
+        let potAr = []
+        potAr.push(searchArray(magics[t1].Potency))
+        potAr.push(searchArray(magics[t2].Potency))
+        potAr.push(searchArray(magics[t3].Potency))
+        loopCountPrintList(potAr, "Potencies")
+        let accAr = []
+        accAr.push(searchArray(magics[t1].Accessibility))
+        accAr.push(searchArray(magics[t2].Accessibility))
+        accAr.push(searchArray(magics[t3].Accessibility))
+        loopCountPrintList(accAr, "Accessibility")
+        let masAr = []
+        masAr.push(searchArray(magics[t1].Mastery))
+        masAr.push(searchArray(magics[t2].Mastery))
+        masAr.push(searchArray(magics[t3].Mastery))
+        loopCountPrintList(masAr, "Mastery")
     }
-    let templates = [
-            `${findPure()}`,
-            `${findDual()}`
-        /*Trio*/`Trio: ${t1 + ', '+ t2+ ', '+t3} || Source: ${searchArray(magics[t1].Source)}, ${searchArray(magics[t2].Source)}, ${searchArray(magics[t3].Source)} || Costs : ${searchArray(magics[t1].Cost)}, ${searchArray(magics[t2].Cost)}, ${searchArray(magics[t3].Cost)}  || Potencies: ${searchArray(magics[t1].Potency)}, ${searchArray(magics[t2].Potency)}, ${searchArray(magics[t3].Potency)} || Accessibility: ${searchArray(magics[t1].Accessibility)}, ${searchArray(magics[t2].Accessibility)}, ${searchArray(magics[t3].Accessibility)}  || Mastery: ${searchArray(magics[t1].Mastery)}, ${searchArray(magics[t2].Mastery)}, ${searchArray(magics[t3].Mastery)}`,
-        /*Complex*/`Complex: ${c1 + ', '+ c2+ ', '+c3+ ', '+c4} || Source: ${searchArray(magics[c1].Source)}, ${searchArray(magics[c2].Source)}, ${searchArray(magics[c3].Source)}, ${searchArray(magics[c4].Source)}  || Costs : ${searchArray(magics[c1].Cost)}, ${searchArray(magics[c2].Cost)}, ${searchArray(magics[c3].Cost)}, ${searchArray(magics[c4].Cost)}   || Potencies: ${searchArray(magics[c1].Potency)}, ${searchArray(magics[c2].Potency)}, ${searchArray(magics[c3].Potency)}, ${searchArray(magics[c4].Potency)} || Accessibility: ${searchArray(magics[c1].Accessibility)}, ${searchArray(magics[c2].Accessibility)}, ${searchArray(magics[c3].Accessibility)}, ${searchArray(magics[c4].Accessibility)}   || Mastery: ${searchArray(magics[c1].Mastery)}, ${searchArray(magics[c2].Mastery)}, ${searchArray(magics[c3].Mastery)}, ${searchArray(magics[c4].Mastery)}`
-        /**/
-        /**/
-        /**/
-    ]
-    document.getElementById("Magic").innerHTML = searchArray(templates)
-};
+    function findComplex(){
+        let c1 = shuffleSlice(typeArray,1)
+        let c2 = shuffleSlice(typeArray,1)
+        let c3 = shuffleSlice(typeArray,1)
+        let c4 = shuffleSlice(typeArray,1)
+        let complexAr = [c1,c2,c3,c4]
+
+        document.getElementById("Magic").innerHTML = ''
+        document.getElementById("Source").innerHTML = ''
+        document.getElementById("Cost").innerHTML = ''
+        document.getElementById("Potencies").innerHTML = ''
+        document.getElementById("Accessibility").innerHTML = ''
+        document.getElementById("Mastery").innerHTML = ''
+        
+        document.getElementById("Magic").innerHTML = 'COMPLEX:'
+        loopCountPrintList(complexAr,"Magic")
+        let souAr = []
+        souAr.push(searchArray(magics[c1].Source))
+        souAr.push(searchArray(magics[c2].Source))
+        souAr.push(searchArray(magics[c3].Source))
+        souAr.push(searchArray(magics[c4].Source))
+        let cosAr = []
+        loopCountPrintList(souAr, "Source")
+        cosAr.push(searchArray(magics[c1].Cost))
+        cosAr.push(searchArray(magics[c2].Cost))
+        cosAr.push(searchArray(magics[c3].Cost))
+        cosAr.push(searchArray(magics[c4].Cost))
+        loopCountPrintList(cosAr, "Cost")
+        let potAr = []
+        potAr.push(searchArray(magics[c1].Potency))
+        potAr.push(searchArray(magics[c2].Potency))
+        potAr.push(searchArray(magics[c3].Potency))
+        potAr.push(searchArray(magics[c4].Potency))
+        loopCountPrintList(potAr, "Potencies")
+        let accAr = []
+        accAr.push(searchArray(magics[c1].Accessibility))
+        accAr.push(searchArray(magics[c2].Accessibility))
+        accAr.push(searchArray(magics[c3].Accessibility))
+        accAr.push(searchArray(magics[c4].Accessibility))
+        loopCountPrintList(accAr, "Accessibility")
+        let masAr = []
+        masAr.push(searchArray(magics[c1].Mastery))
+        masAr.push(searchArray(magics[c2].Mastery))
+        masAr.push(searchArray(magics[c3].Mastery))
+        masAr.push(searchArray(magics[c4].Mastery))
+        loopCountPrintList(masAr, "Mastery")
+    }
+    let a = rollDice(100)
+    if(a >75){
+        findPure()
+    } else if (a > 50) {
+        findDual()
+    } else if (a > 25) {
+        findTrio()
+    } else {
+        findComplex()
+    }
+    };
