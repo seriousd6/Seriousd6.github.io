@@ -2208,7 +2208,7 @@ const magics = {
         ]
         },
     "Time": {
-        "Sources": [
+        "Source": [
           "Chronomancy: Manipulating time itself to alter the past, present, or future.",
           "Temporal Nexus: Drawing power from places where time flows differently or intersects.",
           "Ancestral Wisdom: Gaining insights into temporal magic through the knowledge of ancestors.",
