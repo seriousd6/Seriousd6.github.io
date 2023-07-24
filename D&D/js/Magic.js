@@ -7748,7 +7748,7 @@ const magics = {
         ]
         },
     "Culinary": {
-        "Sources": [
+        "Source": [
             "Exotic Ingredients: Harnessing the magical properties of rare and exotic ingredients.",
             "Herblore and Spices: Utilizing the power of herbs and spices in magical recipes.",
             "Emotional Infusion: Infusing food with specific emotions to evoke magical effects.",
@@ -7769,7 +7769,7 @@ const magics = {
             "Harvest Rituals: Incorporating harvest rituals to amplify magical cooking.",
             "Commemorative Dishes: Creating dishes for specific magical purposes or events."
         ],
-        "Costs": [
+        "Cost": [
             "Consumption: The magic is activated upon consuming the enchanted food.",
             "Exhaustion: Culinary magic may cause exhaustion or fatigue after use.",
             "Ingredient Rarity: Obtaining rare ingredients may be costly or difficult.",
