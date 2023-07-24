@@ -22,8 +22,10 @@
         <div id="breadcrumb">
             <nav style="background-color: rgb(17, 2, 88);" aria-label="breadcrumb">
                 <ol style="background-color: rgb(17, 2, 88);" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html" style="color:white">Home</a></li>
                     <li class="breadcrumb-item"><a href="/Colostle/Start.html" style="color:white">Start</a></li>
                     <li style="font-weight: bold; color: rgb(1, 183, 243)" class="breadcrumb-item" aria-current="page">Combat</a></li>
+                    <li class="breadcrumb-item"><a href="/Colostle/ColostleExploration.html" style="color:white">Exploration</a></li>
                 </ol>
             </nav>
         </div>
@@ -35,6 +37,11 @@
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
         </div>
         <h3>COMBAT</h3>
+        <div class="row">
+            <button class="col-1 btn btn-primary" type="button" onclick="">Human</button>
+            <button class="col-1 btn btn-primary" type="button" onclick="">Rook</button>
+            <div class="col" id="Enemy"></div>
+        </div>
         <div class="row" >
             <div class="col"><p>
                 <strong>RULES:</strong>
@@ -55,6 +62,12 @@
             </p>
         </div>
         </div>
+        <div class="row">
+            <div class="col"><p><i>Once all 52 cards are used, the website "deck" will be reshuffled automatically</i></p></div>
+            <button class="col-2 btn btn-dark" type="button" onclick="clearBoard()">Clear Board</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="shuffleDeck()">Shuffle Deck Early</button>
+        </div>
+
         <div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="draw('playerDrawCon')">Player Draw</button>
             <div class="col" id="playerDrawCon"></div>
