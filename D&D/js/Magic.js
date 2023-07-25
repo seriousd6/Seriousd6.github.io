@@ -17351,7 +17351,6 @@ let themeImagery = [
         "Ancient", "blasphemous", "bleak", "burning", "corrupted", "crystalline", "cursed", "elemental", "flooded", "fortified", "hallowed", "haunted", "infested", "overgrown", "putrid", "ruined", "sacred", "shadowy", "tranquil", "wild", "survival", "history", "destiny", "innocence", "fear", "time", "peace", "balance", "protection", "curse", "greed", "resource", "community", "calamity", "magic", "religion", "nature", "apocalypse", "revenge", "secrets", "abyssal", "ominous", "radiant", "chaos", "transcendent", "forgotten", "otherworldly", "enchanted", "cosmic", "sacrosanct", "dystopian", "nostalgic", "cryptic", "illusory", "supernatural", "wondrous", "twilight", "luminous", "fathomless", "revered", "mystic", "ethereal", "mystifying", "mythical", "majestic", "spiritual", "unfathomable", "elusive", "legendary", "serene", "vibrant", "unexplored", "shrouded", "sublime", "enraptured", "forbidden", "eternal", "secretive", "resplendent", "undiscovered", "enchanting", "arcane", "unveiled", "timeless", "enlightened", "celestial", "divine", "shadowed", "unseen", "veiled", "phantasmal", "unearthly", "dreamlike"
     ]
  
-    
 
 function magic() {
     const typeArray = Object.keys(magics)

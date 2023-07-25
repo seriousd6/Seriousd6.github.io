@@ -38,15 +38,15 @@
         </div>
         <h3>COMBAT</h3>
         <div class="row">
-            <button class="col-1 btn btn-primary" type="button" onclick="">Human</button>
-            <button class="col-1 btn btn-primary" type="button" onclick="">Rook</button>
+            <button class="col-1 btn btn-primary" type="button" onclick="humanEnemy()">Human</button>
+            <button class="col-1 btn btn-primary" type="button" onclick="rookEnemy()">Rook</button>
             <div class="col" id="Enemy"></div>
         </div>
         <div class="row" >
             <div class="col"><p>
                 <strong>RULES:</strong>
                 <ol>
-                    <li>Draw the number of cards equal to player combat score.</li>
+                    <li>Draw the number of cards equal to player combat score. (People =1, Medium Rook =3, Massive =5, AR =6)</li>
                     <li>Draw enemy cards 1 at a time, counter if you have a higher number, Cancel ties, or use a lower number and take a WOUND.</li>
                     <li>Counter with the same suit for a CRITICAL HIT (Remove one of the Enemies remaining attacks).</li>
                     <li>You win the combat if you beat the majority of the incoming attacks.</li>
