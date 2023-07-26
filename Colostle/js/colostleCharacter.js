@@ -544,25 +544,46 @@ function reload() {
         ]
 
     function pickName(){
+        document.getElementById("Name").innerHTML=''
         loopPrintList([searchArray(nameArray)],"Name")
     }
+    let a = ''
     function pickClass(){
-        let a = searchArray(Object.keys(characterClass))
-        let outputArray = []
-        outputArray.push(`Class = ${a}`)
-        outputArray.push(`Exploration: ${characterClass[a].exploration}`)
-        outputArray.push(`Combat: ${characterClass[a].combat}`)
-        outputArray.push(`Trait prompts:`)
-        let b = shuffleSlice(Object.values(characterClass[a]['trait prompts']),2)
-        outputArray.push(b[0])
-        outputArray.push(b[1])
-        loopPrintList(outputArray,"Class")
-        console.log
-        loopPrintList([characterClass[a].description],"Description")= `${characterClass[a].description}`
+        document.getElementById("CPick").innerHTML = ""
+        document.getElementById("Description").innerHTML = ""
+        a = searchArray(Object.keys(characterClass))
+        loopPrintList([`Class: ${a}`,`Exploration: ${characterClass[a].exploration}`,`Combat: ${characterClass[a].combat}`],"CPick")
+        loopPrintList([characterClass[a].description],"Description")
+    }
+    let promptArray = []
+    function traitPrompts(){
+        if (a === ''){
+            document.getElementById("Prompts").innerHTML = ''
+            document.getElementById("Prompts").innerHTML = 'Please pick a CLASS'
+        } else {
+
+            let x = searchArray(Object.values(characterClass[a]['trait prompts']))
+            if (checkConflict(x,promptArray)===1){
+                do {
+                    x = searchArray(Object.values(characterClass[a]['trait prompts']))
+                } while (checkConflict(x,promptArray)===1) 
+                promptArray.push(x)
+                loopPrintList([x],"Prompts")
+            } else {
+                promptArray.push(x)
+                loopPrintList([x],"Prompts")
+            }
+        }
+    }
+    function traitClear(){
+        promptArray = []
+        document.getElementById("Prompts").innerHTML = ''
     }
     function pickNature(){
+        document.getElementById("Nature").innerHTML=''
         loopPrintList([searchArray(nature)],"Nature")
     }
     function pickCalling(){
+        document.getElementById("Calling").innerHTML=''
         loopPrintList([searchArray(calling)],"Calling")
     }

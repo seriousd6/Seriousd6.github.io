@@ -674,8 +674,8 @@ function reload() {
     };
     
     //GENERAL
-        function generalExploration(){
-            let generalEvents = [
+        function genExplore(x){
+            let generalEv = [
                 `${searchArray(['An armed','An unarmed'])} stranger in unusual robes with a castle symbol on them. Perhaps ${searchArray(['he','she'])} has clues about the nature of the Colostle, but these strangers are often unwilling to even be found, let alone be spoken to. You’ve heard tell of them before - a cult maybe? People don’t talk about them kindly; strangers with strange practices... but they definitely know something. If you fight them, create a human opponent in your COMBAT phase.`,
                 `An Animal to hunt for food. This animal is ${searchArray(['easy prey','dangerous'])} The animals in the wilds are strange and unfamiliar; weird combinations of animals you might know, a boar with scales, or a fowl with 2 sets of wings. Adventuring is hungry work, you should make time to eat.`,
                 `CALLING - You come across ${searchArray(['a friendly','an unfriendly'])} ${searchArray(['man','woman','boy','girl'])}  who is key to your CALLING. Maybe they have a clue about what you’re looking for, or they block your way to learning more...`,
@@ -789,15 +789,15 @@ function reload() {
                 `You found A Medium Rook!`,
                 `You found A Massive Rook!`
             ]
-            document.getElementById("GeneralEvents").innerHTML = searchArray(generalEvents)
+            loopPrintList(shuffleSlice(generalEv,x),"GenEv")
         };
         function generalClear(){
-            document.getElementById("GeneralEvents").innerHTML = ""
+            document.getElementById("GenEv").innerHTML = ""
         };
     
     //OCEAN
-        function oceanExploration(){
-            let oceanEvents = [
+        function oceanExploration(x){
+            let OE = [
                 `A single castle tower sticks up out of the water, waves splashing around where it connects with the sea.${searchArray(['It seems uninhabited.','You hear voices from deep within.'])} There is a doorway that is accessible from the height of the sea, and when you look down into the interior you are stunned to see that it goes deep down into an underwater complex, completely airtight from the sea around it. WEATHER: ${searchArray(weather)}.`,
                 `Another seagoing adventurer in their own vessel. ${searchArray(['They seem friendly.','They seem unfriendly.'])} WEATHER: ${searchArray(weather)}`,
                 `Shipwreck. You pull up alongside the ${searchArray([`mostly intact vessel and find ${searchArray(items)} and ${searchArray(items)}`,`the completeley wrecked vessel and find ${searchArray(items)} floating among the debris`])}`,
@@ -806,7 +806,7 @@ function reload() {
                 `Sea cave, large enough for your vessel to enter. It’s huge, cavernous within, like an underground river leading from one cavern to the next. ${searchArray([`It is inhabited and the ${searchArray(['friendly','unfriendly'])} creatures you meet are not human`, `It is uninhabited and you find ${searchArray(items)}`])}`,
                 `A pirate ship! The pirates lasso your ship and bring you aboard. This is not a time to fight - you must sneak out and escape the pirate ship! Tell your story of how you navigate the halls and decks of the pirate ship and ${searchArray([`how you find the treasure`,`how you find the weapon`])} that you take back with you.`,
                 `Shallow waters and underwater ruins. If the weather is good, you could drop anchor and swim down to investigate...${searchArray(['Finding rook parts','finding treasure'])} should you be able to venture into the deeps.`,
-                `A small island. ${generalExploration()}. That is all there is to find here, return to the SEA to continue. WEATHER: ${searchArray(weather)}`,
+                `A small island. Use the General exploration list to determine what is there. That is all there is to find here, return to the SEA to continue. WEATHER: ${searchArray(weather)}`,
                 `A coastline. If you decide to disembark here then return to the base rulebook for ongoing EXPLORATION phases. WEATHER: ${searchArray(weather)}`,
                 `You found an island with ${searchArray(items)}!`,
                 `You found A Medium Rook!`,
@@ -853,14 +853,14 @@ function reload() {
                 `You found A Medium Rook!`,
                 `You found A Massive Rook!`
             ]
-            document.getElementById("OceanEv").innerHTML = searchArray(oceanEvents)
+            loopPrintList(shuffleSlice(OE,x),"OE")
         };
         function oceanClear(){
-            document.getElementById("OceanEv").innerHTML = ""
+            document.getElementById("OE").innerHTML = ""
         };
 
     //TUNDRA
-        function tundraExploration(){
+        function tundraExploration(x){
             let tundraVillage = [
                 `The village is starving, their food reserves are almost out and they have no one tough enough to leave and hunt for them. If you have already hunted an animal and have it with you then you can solve this event immediately. If you encountered a wild animal on a previous phase but didn’t kill it, you can return to it in a single exploration phase. Otherwise, you will need to head out and seek out a wild animal to hunt for the village.`,
                 `This village is constantly under attack from a nearby village of hardened warriors and hunters. There’s no way to muster an army and take the battle to them but you have heard the attackers are very superstitious. Is there some way you could work with the villagers to scare the enemy army away?`,
@@ -1008,7 +1008,7 @@ function reload() {
                 `ICE ROOK`,
                 `ENEMY ROOKNAUGHT`
                 ]
-            document.getElementById("Tundra").innerHTML = searchArray(TundraExploration)
+            loopPrintList(shuffleSlice(TundraExploration,x),"Tundra")
         };
         function tundraClear(){
             document.getElementById("Tundra").innerHTML = ""
@@ -1091,7 +1091,7 @@ function reload() {
             document.getElementById("CrackwayTheme").innerHTML = ""
             document.getElementById("CrackwayTheme").innerHTML = searchArray(safety)
         };
-        function crackwayExploration() {
+        function crackwayExploration(x) {
             let crackwayEvents = [
                 `TREASURE - Something of value left in the halls and caverns of the Crackway. ${searchArray([`It is an artifact or found on the body of a dead adventurer...`,'A broken crystal from the walls'])}`,
                 `GREAT HALL - A massive echoing chamber carved out of stone with ornate pillars throughout holding up the roof. It disappears into blackness in each direction you look due to its vastness... ${searchArray(['It is empty and echoing.','A bandit camp netled in the cooridoors.'])}`,
@@ -1134,14 +1134,14 @@ function reload() {
                 `LIVING WALLS - Sections of the Crackway are lined with ancient vines and roots that seem alive. They react to your presence and may offer unexpected help or hindrance.`,
                 `MEMORY POOLS - Puddles of shimmering liquid hold the memories of previous visitors. By touching them, you gain insights or experiences from those who passed through before.`
                 ]
-            document.getElementById("Crackway").innerHTML = searchArray(crackwayEvents)
+                loopPrintList(shuffleSlice(crackwayEvents,x),"Crackway")
         };
         function crackwayClear(){
             document.getElementById("Crackway").innerHTML = ""
         };
 
     //RAFTERS
-        function rafterExploration(){
+        function rafterExploration(x){
             let gargoyle = [
                 `The Sleek: These Gargoyles look sleek and fast, and appear more like dragons than humanoid creatures, with long pointed bodies and strange features. If you are grabbed by a Swift Gargoyle they will fly you at speed over to another Rafter next-door to this one. This will mean if you have found a way down or a Gargoyles nest you will have to find those places again on this new rafter to make use of them.`,
                 `The Gnarled: These are the Gargoyles you have seen in all the myths and illustrations. classic, humanoid winged beasts with castellated heads. If you are grabbed by a Gnarled Gargoyle they will lift you high in the air and drop you. ${searchArray(['You take 1 WOUND','You are lucky and the trees break your fall, you come away with only minor cuts and scratches'])}.`,
@@ -1235,7 +1235,7 @@ function reload() {
                 `A Gargoyle swoops down toward you! ${searchArray(gargoyle)} `,
                 `A Gargoyle swoops down toward you! ${searchArray(gargoyle)} `,
                 `CLUE - You find yourself at the foot of one of the towering thin mountains peppered with small Gargoyle nests. Strange unfamiliar words are carved into the rock here and there is a pile of small rounded stones that all have a single symbol carved into them. You’ve seen that symbol before, you’re sure of it... ${searchArray(['Seems safe to camp here','You hear noises nearby, it’s not safe'])}`,
-                `You look up and you can see a hole in the ceiling above you. ${searchArray(['A vine hangs down from the hole','There doesn’t look to be a way up'])}Through it you can see the clouds of a sky in a room above yours! The edges of the hole show fences that the people of that room have clearly erected for safety. If there is a vine you can climb it to enter another Room. Refer to the base rulebook to continue your encounter phase if you choose to climb it.`,
+                `You look up and you can see a hole in the ceiling above you. ${searchArray(['A vine hangs down from the hole','There doesn’t look to be a way up'])}. Through it you can see the clouds of a sky in a room above yours! The edges of the hole show fences that the people of that room have clearly erected for safety. If there is a vine you can climb it to enter another Room. Refer to the base rulebook to continue your encounter phase if you choose to climb it.`,
                 `A Gargoyle swoops down toward you! ${searchArray(gargoyle)} `,
                 `Skylight - you reach a point on this Rafter where you can see a window in the ceiling. This must lead to the Battlements! ${searchArray(['The glass is intact and must be broken','The glass is broken and the window can be traversed'])}If this is a ground floor room, this window must lead out to a lower part of the Battlements, either way, you can connect to the Battlements from this area.`,
                 `CALLING - You come across a place that is key to your CALLING. ${searchArray(['Something you were looking for is here!','A clue to the next step on your quest!'])}`,
@@ -1261,14 +1261,14 @@ function reload() {
                 `A network of ropes and makeshift bridges connects several sections of the Rafters. Use them to your advantage, but beware of instability.`,
                 `A powerful gust of wind rushes through the Rafters, nearly knocking you off balance. Hold on tightly to continue safely.`,
                 ]
-            document.getElementById("Rafter").innerHTML = searchArray(rafterExploration)
+                loopPrintList(shuffleSlice(rafterExploration,x),"Rafter")
         };
         function rafterClear(){
             document.getElementById("Rafter").innerHTML = ""
         };
 
     //BATTLEMENTS
-        function battlementExploration(){
+        function battlementExploration(x){
             let battlementEvents = [
                 `You come across a camp of nomads squatting in a large sturdy outbuilding on the edge of a rooftop. They have clearly been here for years, surviving a meagre frightened existence. Resting with them will heal one WOUND. ${searchArray(['Your actions cause you to be EXPOSED!','You manage to avoid unwanted danger'])}`,
                 `A barren prairie plain stretches off as far as the eye can see. This must be the flat roof of a ROOM below. There is little cover out here. ${searchArray(['Your actions cause you to be EXPOSED!','You manage to avoid unwanted danger'])}`,
@@ -1318,7 +1318,7 @@ function reload() {
                 `ABANDONED CAMP - You stumble upon an abandoned campsite, complete with scattered belongings and remnants of a past traveler. Investigate the campsite to uncover clues or avoid the area to remain undetected. ${searchArray(['Your actions cause you to be EXPOSED!','You manage to avoid unwanted danger.'])}`
         
             ]
-            document.getElementById("Battlement").innerHTML = searchArray(battlementEvents)
+            loopPrintList(shuffleSlice(battlementEvents,x),"Battlement")
         };
         function battlementClear(){
             document.getElementById("Battlement").innerHTML = ""

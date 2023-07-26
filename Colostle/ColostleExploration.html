@@ -78,52 +78,63 @@
 <!-- Divider! -->
         <div class="row">
             <div class="col"><p><i>Exploration table generators!</i></p></div>
+            <div class="col" style="border-style:double; border-width: 3px; border-color: rgb(54, 10, 64);">
+                <input type="range" min="1" max="5" value="1" step="1" class="slider" id="Score">Exploration Score: <b id="exScore" style="color: rgb(54, 10, 64);">1</b></input>
+            </div>
         </div>
+        <script>
+            
+            a = document.getElementById("Score")
+            aOut = document.getElementById("exScore")
+            a.oninput = function() {
+            aOut.innerHTML = this.value;
+            }
+
+        </script>
         <div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="findBiome()">Biome</button>
             <div class="col" id="Biome"></div>
         </div>
-        <!-- GENERAL-->
+
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="generalExploration()">General Exploration</button>
-            <div class="col" id="GeneralEvents"></div>
+            <button class="col-2 btn btn-primary" type="button" onclick="genExplore(a.value)">General Exploration</button>
+            <div class="col" id="GenEv"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="generalClear()">Clear</button>
         </div>
-        <!-- OCEAN -->
+
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="oceanExploration()">Ocean Exploration</button>
-            <div class="col" id="OceanEv"></div>
+            <button class="col-2 btn btn-primary" type="button" onclick="oceanExploration(a.value)">Ocean Exploration</button>
+            <div class="col" id="OE"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="oceanClear()">Clear</button>
         </div>
-        <!-- TUNDRA-->
+
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="tundraExploration()">Tundra Exploration</button>
+            <button class="col-2 btn btn-primary" type="button" onclick="tundraExploration(a.value)">Tundra Exploration</button>
             <div class="col" id="Tundra"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="tundraClear()">Clear</button>
         </div>
 
-        <!-- CRACKWAYS-->
         <div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="findCrackwayTheme()">Crackway Theme</button>
             <div class="col" id="CrackwayTheme"></div>
         </div>
         <div class="row">           
-            <button class="col-2 btn btn-primary" type="button" onclick="crackwayExploration()">Crackway Exploration</button>
+            <button class="col-2 btn btn-primary" type="button" onclick="crackwayExploration(a.value)">Crackway Exploration</button>
             <div class="col" id="Crackway"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="crackwayClear()">Clear</button>
         </div>
-        <!-- RAFTERS-->
+
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="rafterExploration()">Rafter Exploration</button>
+            <button class="col-2 btn btn-primary" type="button" onclick="rafterExploration(a.value)">Rafter Exploration</button>
             <div class="col" id="Rafter"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="rafterClear()">Clear</button>
         </div>
-        <!-- BATTLEMENTS-->
+
         <div class="row">
             <div class="col"><p><i>Endgame, 3 EXPOSED and roll an exposure event.</i></p></div>
         </div>
         <div class="row">
-            <button class="col-2 btn btn-primary" type="button" onclick="battlementExploration()">Battlement Exploration</button>
+            <button class="col-2 btn btn-primary" type="button" onclick="battlementExploration(a.value)">Battlement Exploration</button>
             <div class="col" id="Battlement"></div>
             <button class="col-1 btn btn-primary" type="button" onclick="battlementClear()">Clear</button>
         </div>
