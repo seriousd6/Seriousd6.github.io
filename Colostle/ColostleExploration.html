@@ -24,8 +24,10 @@
                 <ol style="background-color: rgb(17, 2, 88);" class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.html" style="color:white">Home</a></li>
                     <li class="breadcrumb-item"><a href="/Colostle/Start.html" style="color:white">Start</a></li>
-                    <li class="breadcrumb-item"><a href="/Colostle/ColostleCombat.html" style="color:white">Combat</a></li>
+                    <li class="breadcrumb-item"><a href="/Colostle/ColostleCharacter.html" style="color:white">Character</a></li>
                     <li style="font-weight: bold; color: rgb(1, 183, 243)" class="breadcrumb-item" aria-current="page">Exploration</a></li>
+                    <li class="breadcrumb-item"><a href="/Colostle/ColostleCombat.html" style="color:white">Combat</a></li>
+
                 </ol>
             </nav>
         </div>
@@ -57,6 +59,13 @@
             </p>
         </div>
         </div>
+<!-- Divider! -->
+        <div class="row">
+            <div class="col"><p><i>Once all 52 cards are used, the website "deck" will be reshuffled automatically</i></p></div>
+            <button class="col-2 btn btn-dark" type="button" onclick="clearBoard()">Clear Board</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="shuffleDeck()">Shuffle Deck Early</button>
+        </div>
+
         <div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="draw('playerDrawCon')">Player Draw</button>
             <div class="col" id="playerDrawCon"></div>
@@ -65,14 +74,133 @@
             <button class="col-2 btn btn-primary" type="button" onclick="draw('enemyDrawCon')">Enemy Draw</button>
             <div class="col" id="enemyDrawCon"></div>
         </div>
-
-        <div class="row" >
-            <div class="col">
-                <!-- <p>
-                <strong>LOSING</strong>
-                Your opponent lives and you receive no reward. Any wounds received in this COMBAT phase still take effect - both on you and your opponent. Maybe you will encounter this opponent again - a ‘white whale’ for your character. If you do, this you can count any wounds you managed to land against it as still there and reduce its combat score accordingly.
-            </p> -->
+        <br>
+<!-- Divider! -->
+        <div class="row">
+            <div class="col"><p><i>Exploration table generators!</i></p></div>
         </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findBiome()">Biome</button>
+            <div class="col" id="Biome"></div>
+        </div>
+        <!-- GENERAL-->
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="generalExploration()">General Exploration</button>
+            <div class="col" id="General"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="generalClear()">Clear</button>
+        </div>
+        <!-- OCEAN -->
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="oceanExploration()">Ocean Exploration</button>
+            <div class="col" id="Ocean"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="oceanClear()">Clear</button>
+        </div>
+        <!-- TUNDRA-->
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="tundraExploration()">Tundra Exploration</button>
+            <div class="col" id="Tundra"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="tundraClear()">Clear</button>
+        </div>
+
+        <!-- CRACKWAYS-->
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findCrackwayTheme()">Crackway Theme</button>
+            <div class="col" id="CrackwayTheme"></div>
+        </div>
+        <div class="row">           
+            <button class="col-2 btn btn-primary" type="button" onclick="crackwayExploration()">Crackway Exploration</button>
+            <div class="col" id="Crackway"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="crackwayClear()">Clear</button>
+        </div>
+        <!-- RAFTERS-->
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="rafterExploration()">Rafter Exploration</button>
+            <div class="col" id="Rafter"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="rafterClear()">Clear</button>
+        </div>
+        <!-- BATTLEMENTS-->
+        <div class="row">
+            <div class="col"><p><i>Endgame, 3 EXPOSED and roll an exposure event.</i></p></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="battlementExploration()">Battlement Exploration</button>
+            <div class="col" id="Battlement"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="battlementClear()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="exposureEvent()">Exposure Event</button>
+            <div class="col" id="Exposure"></div>
+            <button class="col-1 btn btn-primary" type="button" onclick="exposureClear()">Clear</button>
+        </div>
+        <br>
+        <br>
+<!-- Divider! -->
+    <div class="row">
+        <div class="col"><p><i>City</i></p></div>
+    </div>
+    <div class="row">
+        <button class="col-2 btn btn-primary" type="button" onclick="findCityName()">Name</button>
+        <div class="col" id="CityName"></div>
+    </div>
+    <div class="row">
+        <button class="col-2 btn btn-primary" type="button" onclick="buildCity()">City Contents</button>
+        <div class="col" id="cityOutput"></div>
+        <button class="col-1 btn btn-primary" type="button" onclick="clearCity()">Clear</button>
+
+    </div>
+    <div class="row">
+        <button class="col-2 btn btn-primary" type="button" onclick="guildQuest()">Hunter's Guild Quest</button>
+        <div class="col" id="GuildQuest"></div>
+    </div>
+
+    <br>
+<!-- Divider! -->
+        <div class="row">
+            <div class="col"><p><i>Oracles!</i></p></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findOracleNPC()">NPC</button>
+            <div class="col" id="OracleNPC"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findOracleQuest()">Quest</button>
+            <div class="col" id="OracleQuest"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findOracle8Ball()">Question Resolver (did it work?)</button>
+            <div class="col" id="Oracle8Ball"></div>
+        </div>
+        <br>
+<!-- Divider! -->
+        <div class="row">
+            <div class="col"><p><i>Supplemental Tables</i></p></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="foundItem()">Found Item!</button>
+            <div class="col" id="FoundItem"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findMachinery() ">Found/Repaired/Created Machinery</button>
+            <div class="col" id="Machinery"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findMaintenance()">RookHome Maintenance Checks</button>
+            <div class="col" id="Maintenance"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findRookling()">Rookling Description</button>
+            <div class="col" id="Rookling"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findSituation()">Random Situation</button>
+            <div class="col" id="Situation"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="findTundraVillager()">Tundra Villager</button>
+            <div class="col" id="Villager"></div>
+        </div>
+
+
 
         <!--<div class="row">
             <button class="col-2 btn btn-primary" type="button" onclick="start()">Start Story</button>
