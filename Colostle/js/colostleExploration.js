@@ -789,10 +789,10 @@ function reload() {
                 `You found A Medium Rook!`,
                 `You found A Massive Rook!`
             ]
-            document.getElementById("General").innerHTML = searchArray(generalEvents)
+            document.getElementById("GeneralEvents").innerHTML = searchArray(generalEvents)
         };
         function generalClear(){
-            document.getElementById("General").innerHTML = ""
+            document.getElementById("GeneralEvents").innerHTML = ""
         };
     
     //OCEAN
@@ -853,10 +853,10 @@ function reload() {
                 `You found A Medium Rook!`,
                 `You found A Massive Rook!`
             ]
-            document.getElementById("Ocean").innerHTML = searchArray(oceanEvents)
+            document.getElementById("OceanEv").innerHTML = searchArray(oceanEvents)
         };
         function oceanClear(){
-            document.getElementById("Ocean").innerHTML = ""
+            document.getElementById("OceanEv").innerHTML = ""
         };
 
     //TUNDRA
