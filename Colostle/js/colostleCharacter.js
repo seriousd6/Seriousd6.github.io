@@ -2304,7 +2304,8 @@ function reload() {
         loopPrintList([searchArray(subjectiveStruggles)],"SubStrug")
     };
     function emotionalExamples(){
-    let emotionOptions = [
+        document.getElementById("Emotions").innerHTML = ''
+        let emotionOptions = [
         //0- Sources of joy
         [
             `Joy: Finding love and experiencing a deep emotional connection with someone special.`,
