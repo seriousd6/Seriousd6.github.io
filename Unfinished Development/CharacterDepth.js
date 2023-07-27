@@ -604,7 +604,7 @@ function findGoals(){
         `Practice gratitude and appreciation to focus on the positive aspects of life.`
     ]
     let b = shuffleSlice(minorGoals,2)
-    loopPrintList([`Major:${searchArray(majorGoals)}`, `Minor: ${b[0]}`,`Minor: ${b[1]}`],"Goals")
+    loopPrintList([`Major: ${searchArray(majorGoals)}`, `Minor: ${b[0]}`,`Minor: ${b[1]}`],"Goals")
 };
 function findMotive(){
     document.getElementById("Motive").innerHTML = ''
@@ -1898,7 +1898,8 @@ function findSubStrug(){
     loopPrintList([searchArray(subjectiveStruggles)],"SubStrug")
 };
 function emotionalExamples(){
-let emotionOptions = [
+    document.getElementById("Emotions").innerHTML = ''
+    let emotionOptions = [
     //0- Sources of joy
     [
         `Joy: Finding love and experiencing a deep emotional connection with someone special.`,
@@ -3311,6 +3312,7 @@ function littleThings(){
     a.forEach(elem => b.push(searchArray(littleDetails[elem])))
     loopPrintList(b,"Little")
 };
+
 
 
 
