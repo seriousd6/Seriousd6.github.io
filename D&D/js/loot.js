@@ -2299,10 +2299,11 @@ function findCard() {
 function artGenerator() {
     document.getElementById("Art").innerHTML = ""
     let pottery = [
-        "vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray"
+        "vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray",
+        "Dish", "Cup", "Mug", "Saucer", "Pitcher", "Casserole", "Urn","Chalice", "Stein", "Crock", "Tureen", "Ramekin", "Gravy Boat", "Basin", "Goblet", "Kiln", "Cauldron", "Flagon",  "Censer",  "Serving Dish"
         ]
     let jewelry = [
-        "arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "comb", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['doll','skull', 'egg'])}`
+        "arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['figurine','doll','skull', 'egg','box','vessel'])}`, "tiara", "bangle", "pendant", "belly chain", "toe ring", "cufflinks", "signet ring", "hairpin", "nose ring", "torc", "lapel pin", "hair comb", "cameo", "circlet", "medallion", "waist chain", "prayer chain", "clasp", "diadem", "belly ring", "bookmarker", "chatelaine", "ear cuff", "fob watch", "snuff box", "faberge ", "garter belt", "hatpin", "ceremonial dagger", "body chain", "opera glasses", "walking stick", "cane"
         ]
     let gems = [ 
         "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" 
@@ -2311,13 +2312,18 @@ function artGenerator() {
         "large", "small", "tiny", "life-size", "huge", "gargantuan"
         ]
     let many = [
-        "a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of"
+        "a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of","a multitude of", "a swarm of", "a collection of", "a flock of", "a gathering of", "a handful of", "An assembly of", "a horde of", "a myriad of", "a band of", "a host of", "a throng of", "a cluster of", "a pack of", "a troop of", "a legion of", "an array of", "a battalion of", "an ensemble of", "a platoon of", "a squadron of", "a mass of", "a congregation of", "a posse of", "a sea of", "a team of", "an abundance of", "a pile of", "a crowd of", "a colony of", "an expanse of"
         ]
     let monster = [
-        'aarakocra', 'aboleth', 'angel', 'animated object', 'animated weapon', 'ankheg', 'azer', 'banshee', 'basilisk', 'behir', 'beholder', 'blight', 'bugbear', 'bulette', 'bullywug', 'cambion', 'carrion crawler', 'centaur', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'cyclops', 'darkmantle', 'death knight', 'demilich', 'demon', 'devil', 'dinosaur', 'displacer beast', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'elemental', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'fomorian', 'fungi', 'galeb duhr', 'gargoyle', 'genie', 'ghost', 'giant', 'gibbering mouther', 'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'grick', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy', 'hell hound', 'helmed horror', 'hippogriph', 'hobgoblin', 'homunculus', 'hook horror', 'hydra', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron', 'mummie', 'myconid', 
-        'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'ooze', 'orc', 'otyugh', 'owlbear', 'pegasus', 'peryton', 'piercer', 'pixie', 'psuedodragon', 'purple worm', 'quaggoth', 'rakshasa', 'remorhazes', 'revenant', 'roc', 'roper', 'rust monster', 'sahuagin', 'salamander', 'satyr', 'scarecrow', 'shadow', 'shambling mound', 'shield guardian', 'skeleton', 'slaadi', 'specter', 'sphinx', 'sprite', 'stirge', 'succubus', 'incubus', 'terrasque', 'thri-kreen', 'treant', 'troglodyte', 'troll', 'umber hulk', 'unicorn', 'vampire', 'water weird', 'wight', `will-o'-wisp`, 'wraith', 'wyvern', 'xorn', 'yeti', 'yuan-ti', 'yugoloth', 'zombie', 'ape', 'awakened tree', 'awakened shrub', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'blood hawk', 'boar', 'brown bear', 'camel', 'cat', 'constrictor snake', 'crab', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'eagle', 'elephant', 'elk', 'flying snake', 'frog', 'giant ape', 'giant badger', 'giant bat', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'giant elk', 'giant fire beetle', 'giant frog', 'giant goat', 'giant hyena', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony', 'quipper', 'rat', 'raven', 'reef shark', 'rhinoceros', 'riding horse', 'saber-toothed tiger', 'scorpion', 'sea horse', 'spider', 'bat swarm', 'insect swarm', 'poisonous snake swarm', 'quipper swarm', 'rat swarm', 'raven swarm', 'tiger', 'vulture', 'warhorse', 'weasel', 'winter wolf', 'wolf', 'worg', ]
+        [//sentient
+        'aarakocra', 'aboleth', 'angel', 'azer', 'beholder', 'bugbear', 'bullywug', 'cambion', 'centaur', 'cyclops',  'death knight', 'demilich', 'demon', 'devil', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'genie', 'ghost', 'giant',  'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy',  'helmed horror', 'hobgoblin', 'homunculus', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron',  'myconid', 'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'otyugh', 'pegasus', 'peryton', 'pixie', 'psuedodragon', 'rakshasa', 'revenant', 'sahuagin', 'satyr', 'slaadi', 'specter', 'sphinx', 'sprite', 'succubus', 'incubus', 'thri-kreen', 'treant', 'troll', 'umber hulk', 'unicorn', 'vampire', 'wight', `will-o'-wisp`, 'wraith',  'xorn', 'yeti', 'yuan-ti', 'yugoloth', 
+        ],
+        [//non-sentient
+        'animated object', 'animated weapon', 'ankheg', 'banshee', 'basilisk', 'behir', 'blight', 'carrion crawler', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'darkmantle','dinosaur', 'displacer beast', 'elemental', 'fungi', 'hippogriph', 'rust monster', 'ape', 'awakened tree', 'awakened shrub', 'hydra', 'fomorian', 'galeb duhr', 'gargoyle', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'grick', 'blood hawk', 'boar', 'brown bear', 'water weird', 'camel', 'cat', 'constrictor snake', 'crab', 'hook horror', 'gibbering mouther', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'mummie','eagle', 'elephant', 'elk', 'owlbear', 'flying snake', 'frog', 'giant ape', 'giant badger', 'roper', 'skeleton', 'shadow', 'scarecrow', 'roc', 'salamander', 'remorhazes', 'stirge', 'terrasque', 'giant bat', 'troglodyte', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'shambling mound', 'shield guardian', 'giant elk', 'giant fire beetle', 'giant frog', 'purple worm', 'giant goat', 'zombie', 'giant hyena', 'wyvern', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'quaggoth', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony','hell hound',
+        ]
+        ]
     let eventRandomizer = [
-        'battle', 'deal', 'bargain', 'wedding'
+        'battle', 'deal', 'bargain', 'wedding',"treaty", "alliance", "duel", "peace talks", "trade agreement", "summit", "ceasefire", "conquest", "expedition", "exploration", "merger", "collaboration", "diplomatic mission", "cultural exchange", "religious conversion", "invasion", "colonization", "migration", "revolution", "scientific discovery", "armistice", "secession", "debate", "uprising", "signing of a charter", "landmark legislation", "exposition", "intercultural celebration", "joint invention", "reconciliation"
         ]
     let tool = [
         'weapon', 'tool', 'treasure chest', 'sword', 'spade'
@@ -2334,7 +2340,33 @@ function artGenerator() {
     let youngGender = ["boy", "girl"]
     let age = ['child', 'adolescent']
     let ruler = ['king','queen', 'warlord']
-    let historicalEvent = ["a creation myth", "a constellation", "an ascension story", `a historical ${searchArray(eventRandomizer)}`, `a coronation of a(n) ${searchArray([`${variableEvent(age)}${findRace()} ${searchArray(ruler)}`,`${variableEvent(age)}${searchArray(ruler)}`, `intelligent ${searchArray(monster)}`])}`, "an ancient disaster", "an ancient prophecy", "the alignment of the stars", `the rise of a great ${findRace()} hero`, `the fall of a great ${findRace()} hero`, `the rise of a great ${findRace()} villain`, `the fall of a great ${findRace()} villain`, "the defeat of a powerful nation", "the creation of a powerful artifact", "the destruction of a powerful artifact", "the fall of an angel", "the rise of a demon", "the affair of a god", "entrance to another plane", "a mortal besting a God", "a hero's quest", `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${searchArray(monster)}s`, `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster)}s and ${searchArray(monster)}s`]
+    let historicalEvent = [
+        "a creation myth", 
+        "a constellation", 
+        "an ascension story", 
+        `a historical ${searchArray(eventRandomizer)}`, 
+        `a coronation of a(n) ${searchArray([`${variableEvent(age)}${findRace()} ${searchArray(ruler)}`,
+        `${variableEvent(age)}${searchArray(ruler)}`, 
+        `intelligent ${searchArray(monster)}`])}`, 
+        "an ancient disaster", "an ancient prophecy",
+        "the alignment of the stars", 
+        `the rise of a great ${findRace()} hero`, 
+        `the fall of a great ${findRace()} hero`, 
+        `the rise of a great ${findRace()} villain`, 
+        `the fall of a great ${findRace()} villain`, 
+        "the defeat of a powerful nation", 
+        "the creation of a powerful artifact", 
+        "the destruction of a powerful artifact", 
+        "the fall of an angel", 
+        "the rise of a demon", 
+        "the affair of a god",
+        "entrance to another plane", 
+        "a mortal besting a God", 
+        "a hero's quest", 
+        `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${searchArray(monster[0])}s`, 
+        `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, 
+        `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster[0])}s and ${searchArray(monster[0])}s`
+    ]
 
     let time = ['beautiful but wrong',"somehow up to date", "changing-in-real-time", "slightly outdated"]
 
@@ -2363,7 +2395,7 @@ function artGenerator() {
         [ /*Tapestry*/ "dusty", "dirty", "torn", "thread-bare", "worn", "water-stained", "shredded", "stained", "cut", "vandalised", "faded", "unfinished", "vibrant", "pristine", ],
         [ /*Fine Jewelry*/ "fine", "dusty", "dirty", "broken", "bent", "unfinished", "incomplete", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
         [ /*Fine clothes*/ 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded'],
-        [ /*Fine Armaments */ "dented and bent",'dusty','dirty','tarnished','pristine','broken',],
+        [ /*Fine Armaments */ "dented and bent",'dusty','dirty','tarnished','pristine','broken',"in the claws of a statue", "trapped in crystalline amber",`veiled in thick cobwebs`,"camouflaged as a mundane item"],
     ]
     function weaponType() {
         let x = rollDice(1000)
@@ -2495,6 +2527,10 @@ function artGenerator() {
         }
     }
 
+    let cermonialDesign = [
+        "Radiantly gilded", "Elegantly baroque", "Intricately carved", "Exquisitely enameled", "Lavishly adorned", "An unapologetically extravagant", "A painstakingly detailed", "A mythology-inspired", "Regally embossed", "Masterfully sculpted", "Sophisticatedly filigreed", "Luxuriously garnished", "Exotically bejeweled", "Artistically wrought", 
+        "Symbolically etched", "Meticulously inlaid", "Timelessly elegant", "Spectacularly bedecked", "Richly burnished", "An heirloom-quality","A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"
+    ]
 
     let artForm = [
         [//craft
@@ -2513,7 +2549,7 @@ function artGenerator() {
             `${variableEvent(status,3)}${searchArray(material[1])} ${searchArray(["statuette","figurine",])}`,
         ],
         [//weapons
-            `${searchArray( ["A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"])} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
+            `${searchArray(cermonialDesign)} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
             ${searchArray([`seemingly of ${findRace()} make with ${searchArray([`${culture()}`,`extraordinarily intricate designwork and filigree`])}`])}.`
         ],
         [//clothes
@@ -2538,7 +2574,7 @@ function artGenerator() {
         []
     ]
     let action = [
-        [
+        [// bad to good
             "fighting a(n)", 
             "being killed by a(n)", 
             "stalking a(n)", 
@@ -2625,10 +2661,10 @@ function artGenerator() {
             "inflicting a curse of eternal suffering upon a(n)",
             "siphoning the life force of a(n)",
         ],
-        [
+        [// general actions
             "looking towards the sky", "preparing to attack", "ready to fight", "sitting on a rock", "bracing for impact", "singing", "dancing in ceremonial dress"
         ],
-        [
+        [//evil actions
             "sitting in its lair", `clutching a(n) ${searchArray(item)} tightly`, "stalking around a city", "in a house", "standing on top of a large building", "on top of a building"
         ]
     ]
@@ -3484,10 +3520,10 @@ function artGenerator() {
     }
 function background() {
     let background = [
-        `${searchArray(['an impressive', 'a typical', 'a ruined'])} ${findRace()} ${searchArray( ['village','city','town','caravan','tower','castle'] )} ${searchArray( ['sitting quietly','is burning','during a thunderstorm','during sunset','with a red sky','wreathed in storm',`being overtaken by ${searchArray([`${findRace()}s`,`${searchArray(monster)}`])}`])}`,
+        `${searchArray(['an impressive', 'a typical', 'a ruined'])} ${findRace()} ${searchArray( ['village','city','town','caravan','tower','castle'] )} ${searchArray( ['sitting quietly','is burning','during a thunderstorm','during sunset','with a red sky','wreathed in storm',`being overtaken by ${searchArray([`${findRace()}s`,`${searchArray(monster[rollDice(1)])}`])}`])}`,
         `a(n) ${searchArray(['grand feast being held in a cramped tavern room','pack of gnolls battling a town militia','large army of dark knights being driven away by angels','creature of colossal size','sunset in the Feywild','Illithid Nautiloid Spelljammer','castle overlooking an active volcano','surrealism landscape of an elemental plane','wonderful cathedral standing on a hill, dedicated to whatever god the ruler follows','waterfall and lake in the Feywilds with fey creatures gathered round','sunset reflecting through an icy glacier', 'active volcanic mountain, casting a glow into the night sky','active volcano','expansive seascape','abundant hilly plains',' expanse of mountains','icy glacier and rough waters',' abundance of tidal pools on a rocky shore, full of unfamiliar sea creatures', 'endless cityscape'])}`,
-        `a(n) ${searchArray(monster)} ${searchArray(['dueling','fighting','struggling against','battling','attacking'])} a ${searchArray([searchArray(monster),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])}`,
-        `an epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster), 'demonic','abyssal','divine','elemental'])} incursion`])}`,
+        `a(n) ${searchArray(monster[rollDice(1)])} ${searchArray(['dueling','fighting','struggling against','battling','attacking'])} a ${searchArray([searchArray(monster[rollDice(1)]),`${searchArray(['group of adventurers', `group of ${searchArray(subject[0])}s`])} while a group of ${findRace()}s flee`])}`,
+        `an epic battle scene of ${searchArray([`two ${findRace()} armies fighting each other`, `${findRace()} army against a ${searchArray([searchArray(monster[rollDice(1)]), 'demonic','abyssal','divine','elemental'])} incursion`])}`,
         `a ${searchArray(['tranquil landscape', 'fine castle interior','looming storm over the mountains'])}`,
                 
     ] 
@@ -4155,34 +4191,22 @@ function background() {
 
 
     let holdingLocation =[
-        'over their heads',
-        'at their sides',
-        'behind their backs',
-        'held in an outstretched hand',
-        'cradled in their lap',
-        'leaning against their body or leaning on an object',
-        'wrapped in cloth or fabric',
-        'enveloped by magical energy or aura',
-        'floating or levitating',
-        'in their hands',
-        'clutched in their grasp',
-        'resting on their palm',
-        'cradled in their arms',
+        'over their heads', 'at their sides', 'behind their backs', 'held in an outstretched hand', 'cradled in their lap', 'leaning against their body or leaning on an object', 'wrapped in cloth or fabric', 'enveloped by magical energy or aura', 'floating or levitating', 'in their hands', 'clutched in their grasp', 'resting on their palm', 'cradled in their arms', "tucked under their arm", "strapped across their back", "secured in a holster or sheath", "held aloft in victory", "balanced on their shoulder", "draped over their shoulders", "positioned across their knees", "displayed on a raised platform", "mounted on a wall or stand", "encased in a transparent container", "held in the crook of their elbow", "securely gripped in both hands", "held in place by mechanical arms or supports", "resting against their chest", "swathed in a beam of light"
     ]
     const storyTemplate = [
         [
             `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}.`,`${searchArray(verb[0])}.`])} ${variableEvent([ `${background()}`])}.`,
-            `${searchArray([`${searchArray(monster)} ${searchArray(action[0])} ${searchArray(monster)}.`,`${searchArray(monster)} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster)} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster)}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster)} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${background()}`])}.`,
+            `${searchArray([`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${searchArray(monster[rollDice(1)])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${background()}`])}.`,
+            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster[rollDice(1)])}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster[rollDice(1)])}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster[rollDice(1)])} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${background()}`])}.`,
             `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray(verb[1])}. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(adjective,0)}${searchArray(monster)} ${searchArray(action[2])}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(monster)} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(monster)} ${searchArray(action[2])}.`,
+            `${variableEvent(adjective,0)}${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} raising a ${searchArray(drink)}. ${variableEvent([ `${background()}`])}.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} with two ${searchArray(weapons)}s, one ${searchArray(['by each side', `in each ${variableEvent(["raised"])}hand`, "over each shoulder"])}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(monster)} with large and intricately detailed ${searchArray(bodyparts)}. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} with a sword and shield ${searchArray(['training for battle','playing with friends',`fighting an imposing ${searchArray(monster)}`])}.`,
-            `${searchArray(monster)} on top of (a(n)) ${searchArray(item)} with a ${searchArray(organization)} crest on it.`,
+            `${searchArray(monster[rollDice(1)])} with large and intricately detailed ${searchArray(bodyparts)}. ${variableEvent([ `${background()}`])}.`,
+            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} with a sword and shield ${searchArray(['training for battle','playing with friends',`fighting an imposing ${searchArray(monster[rollDice(1)])}`])}.`,
+            `${searchArray(monster[rollDice(1)])} on top of (a(n)) ${searchArray(item)} with a ${searchArray(organization)} crest on it.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} pouring a(n) ${searchArray(color)} liquid into a(n) ${searchArray(color)} flask.`,
             `${variableEvent([searchArray(facialExpression),'extremely detailed', 'tough-looking', 'badly beaten and bloodied',searchArray(adjective[0])])} ${variableEvent(ageDescriptor)}${findRace()} ${variableEvent([searchArray(subject[0]), searchArray(anyAgeGender)])}.`,
             `${searchArray(item)} with various birds perched on it. ${variableEvent([ `${background()}`])}.`,
@@ -4194,28 +4218,28 @@ function background() {
             `crying ${findRace()} ${searchArray(anyAgeGender)} holding a(n) ${searchArray(item)} in their hands. ${variableEvent([ `${background()}`])}.`,
             `${variableEvent(time)}map, with the name of ${toWords(2+rollDice(10))}locations on it.`,
             `snake coiled around (a(n)) ${searchArray(item)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(scene)}, a(n) ${searchArray(monster)}, and ${toWords(2+rollDice(4))}humanoid figures ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(scene)}, a(n) ${searchArray(monster[rollDice(1)])}, and ${toWords(2+rollDice(4))}humanoid figures ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}.`,
             `distraught ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} clutching their chest with one hand and reaching out with the other. ${variableEvent([ `${background()}`])}.`,
             `winged ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} in a combat stance with a(n) ${searchArray(item)} in their hand. ${variableEvent([ `${background()}`])}.`,
             `seated crying ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} holding a lifeless ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} in their arms. ${variableEvent([ `${background()}`])}.`,
             `large group of mostly ${findRace()}s dancing and celebrating around ${searchArray(celebration)}. ${variableEvent([ `${background()}`])}.`,
             `${searchArray([`handsome bare chested ${variableEvent(ageDescriptor)}${findRace()} man with ${searchArray(hair)} hair with a(n) ${searchArray(weapons)} in his hand`,`beautiful ${variableEvent(ageDescriptor)}${findRace()} woman with ${searchArray(['long flowing', 'braided', 'buzzed','jewel decorated'])} hair with a(n) ${searchArray(weapons)} in her hand`])} riding a ${searchArray(mount)}. ${variableEvent([ `${background()}`])}.`,
             `faceless angelic being holding a(n) ${searchArray(item)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(size)} ${searchArray(monster)} daintily picking up a ${searchArray(item)} from the ground. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster)}s looking at them. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(size)} ${searchArray(monster[rollDice(1)])} daintily picking up a ${searchArray(item)} from the ground. ${variableEvent([ `${background()}`])}.`,
+            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster[rollDice(1)])}s looking at them. ${variableEvent([ `${background()}`])}.`,
             `${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing chess with a(n) ${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)}. ${variableEvent([ `${background()}`])}.`,
             `group of ${searchArray(['adventurers', `${searchArray(subject[0])}s`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of'])} a ${searchArray(['campsite','village','city','battefield','cave','portal','wasteland'])}. ${variableEvent([ `${background()}`])}.`,
             `${findRace()+' '+searchArray(adultGender)} in a ${searchArray(['flattering','relaxed','provocative','commanding'])} pose. ${variableEvent([ `${background()}`])}.`,
         ],
         [
-            `${searchArray(many)} ${searchArray(monster)}s ${searchArray(verb[0])}. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(many)} ${searchArray(monster[rollDice(1)])}s ${searchArray(verb[0])}. ${variableEvent([ `${background()}`])}.`,
             `${searchArray(many)} ${searchArray(subject[0])}s holding ${searchArray(tool)}s and ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}.`,
             `${searchArray(historicalEvent)}.`,
             `two ${findRace()}s ${searchArray(verb[2])}. ${variableEvent([ `${background()}`])}.`,
             `${toWords(5+rollDice(15))}humanoids of various races holding a(n) ${searchArray(item)} ${searchArray(holdingLocation)}. ${variableEvent([ `${background()}`])}.`,
             `a schematic of all the planes of existence.`,
             `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${background()}`])}.`,
-            `${toWords(2+rollDice(10))}${searchArray(monster)}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${background()}`])}.`,
+            `${toWords(2+rollDice(10))}${searchArray(monster[rollDice(1)])}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${background()}`])}.`,
             `${searchArray([`a ${searchArray(['trial being held','hero being rewarded','disagreement','battle','vision','celebration',])} in a heavenly court`,`a ${searchArray(['deal being struck','souls being wagered','trial being held','villain being rewarded','disagreement','battle','vision','celebration'])} in a hellish court`,"a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
         ],
     ]
@@ -4255,7 +4279,7 @@ function background() {
         `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
         `A(n) ${searchArray(artForm[1])} with designs telling that it ${searchArray([`is from an ancient ${findRace()} kingdom`,"is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
         `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain'])}, each bead is carved to represent a different ${searchArray(['race','school of magic','monster','plane','divine being','fiendish lord','kingdom','historical moment','historical disaster','tenet of faith'])}.`,
-        `A(n) ${variableEvent(['dull','pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'tablet'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster)}`, `the image of a(n) ${searchArray(item)}`])}.`,
+        `A(n) ${variableEvent(['dull','pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'tablet'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster[rollDice(1)])}`, `the image of a(n) ${searchArray(item)}`])}.`,
         `${searchArray(artForm[3])}`,
         `${searchArray(artForm[4])}`,
         ]
