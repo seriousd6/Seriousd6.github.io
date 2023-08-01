@@ -896,164 +896,164 @@ let adventureStuff = {
         "The party encounters a wise and ancient elemental spirit, seeking their help"
     ],
     "Surprises": [
-        "A hidden treasure chest with valuable loot",
-        "An unexpected ambush by bandits",
-        "A helpful NPC who offers to join the party",
-        "A cursed item that grants unexpected powers",
-        "A secret passage leading to a hidden location",
-        "A powerful magical artifact with unforeseen consequences",
-        "An ancient guardian that challenges the party",
-        "A sudden change in the weather causing challenging conditions",
-        "A group of friendly creatures offering aid",
-        "A betrayal by a seemingly trustworthy ally",
-        "A puzzle or riddle that needs to be solved to proceed",
-        "A mysterious and eerie fog that obscures vision",
-        "A rival group of adventurers vying for the same goal",
-        "A sudden earthquake or tremor shaking the area",
-        "A spectral figure that warns or guides the party",
-        "An unexpected twist in the quest's objective",
-        "A rare and legendary creature that requires special handling",
-        "A hidden enemy waiting to strike at the right moment",
-        "A time-sensitive task that adds urgency to the quest",
-        "A magical portal transporting the party to another realm",
-        "A friendly druid who transforms into an animal to aid the party",
-        "A group of mischievous fairies playing tricks on the party",
-        "A lost and frightened child seeking help to find their way home",
-        "A forgotten ancient prophecy that foretells the party's destiny",
-        "A sudden encounter with a powerful elemental being",
-        "A mysterious illness spreading through a village that needs curing",
-        "A friendly ghost seeking help to pass on to the afterlife",
-        "An unexpected celestial event with magical effects on the party",
-        "A hidden underground city with an enigmatic society",
-        "A cursed mirror that reflects the party's darkest fears",
-        "A peculiar and sentient talking object that joins the party",
-        "A mysterious time loop causing the party to relive the same events repeatedly",
-        "An ancient prophecy that speaks of the party's heroic destiny",
-        "A magical portal that leads to an alternate reality or parallel dimension",
-        "A powerful artifact that grants a temporary boon to the party's abilities",
-        "A cursed statue that comes to life and starts terrorizing the area",
-        "An encounter with a wise and cryptic oracle who offers cryptic clues",
-        "A sudden magical storm that unleashes dangerous elemental creatures",
-        "A hidden dungeon with challenging traps and puzzles to overcome",
-        "A powerful magical barrier blocking the path that needs to be dispelled",
-        "An unexpected alliance with a group of reformed villains",
-        "A friendly pack of shape-shifting creatures aiding the party in disguise",
-        "A sacred ritual that requires the party's participation to save the land",
-        "A powerful illusion that distorts reality and challenges the party's senses",
-        "A cursed forest that alters time and space for those who enter",
-        "An ancient ghost ship appearing in the desert miles away from water",
-        "A friendly and talkative animated statue that shares forgotten lore",
-        "A hidden cave with a portal to a lost civilization long believed extinct",
-        "A secret society that seeks the party's help in overthrowing a corrupt ruler",
-        "A magical melody that has a profound effect on emotions and memories",
-        "An enchanted garden where plants come to life and offer aid or hindrance",
-        "A powerful mind-controlling artifact that threatens the party's unity",
-        "A mysterious underground river leading to an unexplored realm",
-        "A chance encounter with a legendary hero from the past",
-        "A cursed painting that brings to life the creatures within it",
-        "A magical fountain that grants temporary special abilities to those who drink from it"
+        "a hidden treasure chest with valuable loot",
+        "an unexpected ambush by bandits",
+        "a helpful NPC who offers to join the party",
+        "a cursed item that grants unexpected powers",
+        "a secret passage leading to a hidden location",
+        "a powerful magical artifact with unforeseen consequences",
+        "an ancient guardian that challenges the party",
+        "a sudden change in the weather causing challenging conditions",
+        "a group of friendly creatures offering aid",
+        "a betrayal by a seemingly trustworthy ally",
+        "a puzzle or riddle that needs to be solved to proceed",
+        "a mysterious and eerie fog that obscures vision",
+        "a rival group of adventurers vying for the same goal",
+        "a sudden earthquake or tremor shaking the area",
+        "a spectral figure that warns or guides the party",
+        "an unexpected twist in the quest's objective",
+        "a rare and legendary creature that requires special handling",
+        "a hidden enemy waiting to strike at the right moment",
+        "a time-sensitive task that adds urgency to the quest",
+        "a magical portal transporting the party to another realm",
+        "a friendly druid who transforms into an animal to aid the party",
+        "a group of mischievous fairies playing tricks on the party",
+        "a lost and frightened child seeking help to find their way home",
+        "a forgotten ancient prophecy that foretells the party's destiny",
+        "a sudden encounter with a powerful elemental being",
+        "a mysterious illness spreading through a village that needs curing",
+        "a friendly ghost seeking help to pass on to the afterlife",
+        "an unexpected celestial event with magical effects on the party",
+        "a hidden underground city with an enigmatic society",
+        "a cursed mirror that reflects the party's darkest fears",
+        "a peculiar and sentient talking object that joins the party",
+        "a mysterious time loop causing the party to relive the same events repeatedly",
+        "an ancient prophecy that speaks of the party's heroic destiny",
+        "a magical portal that leads to an alternate reality or parallel dimension",
+        "a powerful artifact that grants a temporary boon to the party's abilities",
+        "a cursed statue that comes to life and starts terrorizing the area",
+        "an encounter with a wise and cryptic oracle who offers cryptic clues",
+        "a sudden magical storm that unleashes dangerous elemental creatures",
+        "a hidden dungeon with challenging traps and puzzles to overcome",
+        "a powerful magical barrier blocking the path that needs to be dispelled",
+        "an unexpected alliance with a group of reformed villains",
+        "a friendly pack of shape-shifting creatures aiding the party in disguise",
+        "a sacred ritual that requires the party's participation to save the land",
+        "a powerful illusion that distorts reality and challenges the party's senses",
+        "a cursed forest that alters time and space for those who enter",
+        "an ancient ghost ship appearing in the desert miles away from water",
+        "a friendly and talkative animated statue that shares forgotten lore",
+        "a hidden cave with a portal to a lost civilization long believed extinct",
+        "a secret society that seeks the party's help in overthrowing a corrupt ruler",
+        "a magical melody that has a profound effect on emotions and memories",
+        "an enchanted garden where plants come to life and offer aid or hindrance",
+        "a powerful mind-controlling artifact that threatens the party's unity",
+        "a mysterious underground river leading to an unexplored realm",
+        "a chance encounter with a legendary hero from the past",
+        "a cursed painting that brings to life the creatures within it",
+        "a magical fountain that grants temporary special abilities to those who drink from it"
     ],
     "End": [
-        "The party confronts the main villain in an epic final battle",
-        "A powerful ancient artifact is revealed, and the party must decide its fate",
-        "The party must solve one last puzzle to unlock the quest's ultimate goal",
-        "A celestial event grants the party divine assistance in their final challenge",
-        "The party faces a moral dilemma that will shape the outcome of their quest",
-        "A powerful entity tests the party's resolve and strength before granting aid",
-        "The party uncovers a shocking twist that changes the entire course of the quest",
-        "A powerful being offers the party a difficult choice that will affect the world",
-        "The party must make a sacrifice to achieve their ultimate objective",
-        "A long-lost ally returns to help the party in their final moments",
-        "The party discovers a hidden chamber with valuable treasures and knowledge",
-        "The fate of a beloved NPC or ally depends on the party's actions",
-        "The party faces the consequences of their choices throughout the quest",
-        "A powerful guardian challenges the party one last time before granting passage",
-        "A moment of destiny reveals the true purpose of the quest and the party's role",
-        "The party must prove their worthiness to receive a powerful boon or reward",
-        "A divine being intervenes, guiding the party towards their ultimate fate",
-        "The party faces the final trial that tests their determination and unity",
-        "A powerful celestial entity bestows blessings upon the party for their bravery",
-        "The party is rewarded with a grand celebration in their honor",
-        "A mysterious prophecy is fulfilled, sealing the fate of the party's quest",
-        "The party must outwit a cunning adversary in a game of wits",
-        "A powerful magical ritual is required to complete the quest's final task",
-        "The party faces the consequences of their actions throughout their journey",
-        "The party's journey comes full circle as they return to where it all began",
-        "The party's actions have far-reaching consequences, shaping the future of the realm",
-        "A powerful being rewards the party with a divine artifact for their bravery",
-        "The party must confront their deepest fears and doubts before reaching their goal",
-        "A powerful entity bestows a vision of the future, showing the impact of the quest",
-        "The party discovers a hidden treasure trove of ancient knowledge and riches",
-        "The party faces a final challenge that tests their bond and loyalty to one another",
-        "A mysterious prophecy is fulfilled, heralding a new era for the world",
-        "The party is honored by the leaders of the realm for their heroic deeds",
-        "The party must pass through a dangerous and magical barrier to reach their goal",
-        "A powerful artifact grants the party a single-use ability to aid them in the final battle",
-        "The party's journey leads them to a long-forgotten mythical city of wonders",
-        "The party must confront the consequences of their choices made throughout the quest",
-        "A celestial being offers the party a choice that will shape the destiny of the world",
-        "The party faces a series of trials that reflect their growth throughout the quest",
-        "The main villain reveals a tragic backstory, leading to a moment of redemption",
-        "The party discovers a portal leading to another realm, offering a way back home",
-        "A divine entity grants the party a vision of peace and prosperity brought by their deeds",
-        "The party's actions lead to the restoration of a long-lost civilization",
-        "The party's success inspires a new generation of heroes to follow in their footsteps",
-        "The party must confront their own personal flaws and overcome them in the final test",
-        "A powerful ritual must be performed to seal away the main villain for eternity",
-        "The party faces the consequences of their actions, for better or worse, in the world",
-        "A prophecy reveals that the party's quest is just the beginning of a greater journey",
-        "The party's heroic deeds are etched into legend, becoming immortalized in stories",
-        "A powerful artifact's true purpose is revealed, reshaping the world's balance of power",
-        "The party makes a significant sacrifice to achieve the greater good",
-        "A powerful entity offers the party a choice between multiple potential rewards",
-        "The party faces a powerful moral dilemma that will change the course of history",
-        "A long-lost prophecy comes to pass, fulfilling ancient predictions",
-        "The party must decipher a final riddle to unlock the ultimate truth of their quest",
-        "A powerful being grants the party one final wish to aid their future endeavors",
-        "The party faces a reflection of their past selves, reminding them of their growth",
-        "A celestial being descends to judge the party's worthiness and grant their reward",
-        "The party discovers the true identity and motivations of their main antagonist",
-        "A powerful artifact must be activated to bring about the quest's desired outcome",
-        "The party faces a climactic battle against the forces of darkness and chaos",
-        "The party encounters a mysterious figure who reveals hidden truths about the quest",
-        "A powerful being challenges the party one last time to prove their heroism",
-        "The party must navigate through a perilous and magical maze to reach their goal",
-        "A divine force empowers the party, turning them into temporary avatars of justice",
-        "The party faces the ultimate test of their unity and trust in one another",
-        "A powerful revelation about the party's past comes to light, shaping their future",
-        "The party's heroic actions inspire a new era of peace and prosperity in the realm",
-        "The main villain reveals a shocking twist that changes the party's perspective",
-        "A final confrontation with the main antagonist leads to an unexpected resolution",
-        "The party must choose between accepting a powerful reward or relinquishing it",
-        "A long-lost friend or ally returns to aid the party in their darkest hour",
-        "A powerful being presents the party with a vision of the world they've saved",
-        "The party's legendary deeds earn them a place of honor in the annals of history",
-        "The party's actions lead to the restoration of a long-lost civilization and its culture",
-        "The party discovers a hidden vault of knowledge that grants them great wisdom",
-        "A powerful being offers the party a glimpse of possible alternate futures",
-        "The party must solve a final riddle that reveals the true purpose of their quest",
-        "A celestial entity descends to grant the party divine blessings and boons",
-        "The party faces a moment of truth, deciding the fate of an entire kingdom",
-        "A powerful artifact is activated, shaping the world according to the party's desires",
-        "The party must outsmart a cunning adversary in an intense battle of wits",
-        "A long-lost prophecy is fulfilled, and a new era of prosperity begins",
-        "The party's actions have unforeseen consequences that challenge their beliefs",
-        "A divine being bestows a final test upon the party, assessing their virtue",
-        "The party uncovers a hidden sanctuary filled with ancient treasures and relics",
-        "A momentous celestial event occurs, marking the fulfillment of the party's destiny",
-        "The party is granted a single wish to bring about a significant change in the world",
-        "A powerful being offers the party a chance to reshape their own destinies",
-        "The party must pass through a challenging series of trials to reach their objective",
-        "A powerful enchantment is lifted, revealing the true form of a trusted ally",
-        "The party faces a moment of self-discovery that shapes their future path",
-        "A powerful entity imparts the party with the knowledge to reshape reality",
-        "The party's actions inspire a new age of cooperation and understanding among races",
-        "The main villain's dark plan is revealed, and the party must thwart it at all costs",
-        "The party must make a difficult choice between multiple quests with world-changing impact",
-        "A powerful being offers the party a chance to glimpse the fabric of the multiverse",
-        "The party's heroic deeds earn them a place in the pantheon of legendary heroes",
-        "The party is offered the opportunity to reshape the balance of power in the realm",
-        "A moment of unity and camaraderie solidifies the party's bond as lifelong companions",      
+        "the party confronts the main villain in an epic final battle",
+        "a powerful ancient artifact is revealed, and the party must decide its fate",
+        "the party must solve one last puzzle to unlock the quest's ultimate goal",
+        "a celestial event grants the party divine assistance in their final challenge",
+        "the party faces a moral dilemma that will shape the outcome of their quest",
+        "a powerful entity tests the party's resolve and strength before granting aid",
+        "the party uncovers a shocking twist that changes the entire course of the quest",
+        "a powerful being offers the party a difficult choice that will affect the world",
+        "the party must make a sacrifice to achieve their ultimate objective",
+        "a long-lost ally returns to help the party in their final moments",
+        "the party discovers a hidden chamber with valuable treasures and knowledge",
+        "the fate of a beloved NPC or ally depends on the party's actions",
+        "the party faces the consequences of their choices throughout the quest",
+        "a powerful guardian challenges the party one last time before granting passage",
+        "a moment of destiny reveals the true purpose of the quest and the party's role",
+        "the party must prove their worthiness to receive a powerful boon or reward",
+        "a divine being intervenes, guiding the party towards their ultimate fate",
+        "the party faces the final trial that tests their determination and unity",
+        "a powerful celestial entity bestows blessings upon the party for their bravery",
+        "the party is rewarded with a grand celebration in their honor",
+        "a mysterious prophecy is fulfilled, sealing the fate of the party's quest",
+        "the party must outwit a cunning adversary in a game of wits",
+        "a powerful magical ritual is required to complete the quest's final task",
+        "the party faces the consequences of their actions throughout their journey",
+        "the party's journey comes full circle as they return to where it all began",
+        "the party's actions have far-reaching consequences, shaping the future of the realm",
+        "a powerful being rewards the party with a divine artifact for their bravery",
+        "the party must confront their deepest fears and doubts before reaching their goal",
+        "a powerful entity bestows a vision of the future, showing the impact of the quest",
+        "the party discovers a hidden treasure trove of ancient knowledge and riches",
+        "the party faces a final challenge that tests their bond and loyalty to one another",
+        "a mysterious prophecy is fulfilled, heralding a new era for the world",
+        "the party is honored by the leaders of the realm for their heroic deeds",
+        "the party must pass through a dangerous and magical barrier to reach their goal",
+        "a powerful artifact grants the party a single-use ability to aid them in the final battle",
+        "the party's journey leads them to a long-forgotten mythical city of wonders",
+        "the party must confront the consequences of their choices made throughout the quest",
+        "a celestial being offers the party a choice that will shape the destiny of the world",
+        "the party faces a series of trials that reflect their growth throughout the quest",
+        "the main villain reveals a tragic backstory, leading to a moment of redemption",
+        "the party discovers a portal leading to another realm, offering a way back home",
+        "a divine entity grants the party a vision of peace and prosperity brought by their deeds",
+        "the party's actions lead to the restoration of a long-lost civilization",
+        "the party's success inspires a new generation of heroes to follow in their footsteps",
+        "the party must confront their own personal flaws and overcome them in the final test",
+        "a powerful ritual must be performed to seal away the main villain for eternity",
+        "the party faces the consequences of their actions, for better or worse, in the world",
+        "a prophecy reveals that the party's quest is just the beginning of a greater journey",
+        "the party's heroic deeds are etched into legend, becoming immortalized in stories",
+        "a powerful artifact's true purpose is revealed, reshaping the world's balance of power",
+        "the party makes a significant sacrifice to achieve the greater good",
+        "a powerful entity offers the party a choice between multiple potential rewards",
+        "the party faces a powerful moral dilemma that will change the course of history",
+        "a long-lost prophecy comes to pass, fulfilling ancient predictions",
+        "the party must decipher a final riddle to unlock the ultimate truth of their quest",
+        "a powerful being grants the party one final wish to aid their future endeavors",
+        "the party faces a reflection of their past selves, reminding them of their growth",
+        "a celestial being descends to judge the party's worthiness and grant their reward",
+        "the party discovers the true identity and motivations of their main antagonist",
+        "a powerful artifact must be activated to bring about the quest's desired outcome",
+        "the party faces a climactic battle against the forces of darkness and chaos",
+        "the party encounters a mysterious figure who reveals hidden truths about the quest",
+        "a powerful being challenges the party one last time to prove their heroism",
+        "the party must navigate through a perilous and magical maze to reach their goal",
+        "a divine force empowers the party, turning them into temporary avatars of justice",
+        "the party faces the ultimate test of their unity and trust in one another",
+        "a powerful revelation about the party's past comes to light, shaping their future",
+        "the party's heroic actions inspire a new era of peace and prosperity in the realm",
+        "the main villain reveals a shocking twist that changes the party's perspective",
+        "a final confrontation with the main antagonist leads to an unexpected resolution",
+        "the party must choose between accepting a powerful reward or relinquishing it",
+        "a long-lost friend or ally returns to aid the party in their darkest hour",
+        "a powerful being presents the party with a vision of the world they've saved",
+        "the party's legendary deeds earn them a place of honor in the annals of history",
+        "the party's actions lead to the restoration of a long-lost civilization and its culture",
+        "the party discovers a hidden vault of knowledge that grants them great wisdom",
+        "a powerful being offers the party a glimpse of possible alternate futures",
+        "the party must solve a final riddle that reveals the true purpose of their quest",
+        "a celestial entity descends to grant the party divine blessings and boons",
+        "the party faces a moment of truth, deciding the fate of an entire kingdom",
+        "a powerful artifact is activated, shaping the world according to the party's desires",
+        "the party must outsmart a cunning adversary in an intense battle of wits",
+        "a long-lost prophecy is fulfilled, and a new era of prosperity begins",
+        "the party's actions have unforeseen consequences that challenge their beliefs",
+        "a divine being bestows a final test upon the party, assessing their virtue",
+        "the party uncovers a hidden sanctuary filled with ancient treasures and relics",
+        "a momentous celestial event occurs, marking the fulfillment of the party's destiny",
+        "the party is granted a single wish to bring about a significant change in the world",
+        "a powerful being offers the party a chance to reshape their own destinies",
+        "the party must pass through a challenging series of trials to reach their objective",
+        "a powerful enchantment is lifted, revealing the true form of a trusted ally",
+        "the party faces a moment of self-discovery that shapes their future path",
+        "a powerful entity imparts the party with the knowledge to reshape reality",
+        "the party's actions inspire a new age of cooperation and understanding among races",
+        "the main villain's dark plan is revealed, and the party must thwart it at all costs",
+        "the party must make a difficult choice between multiple quests with world-changing impact",
+        "a powerful being offers the party a chance to glimpse the fabric of the multiverse",
+        "the party's heroic deeds earn them a place in the pantheon of legendary heroes",
+        "the party is offered the opportunity to reshape the balance of power in the realm",
+        "a moment of unity and camaraderie solidifies the party's bond as lifelong companions",      
     ],
 }
 
@@ -1080,7 +1080,7 @@ let dungeonStuff = {
         "strongold": ["antechamber where visitors seeking access to the stronghold wait", "armory holding high-quality gear, including light siege weapons such as ballistas", "audience chamber used by the master of the stronghold to recieve visitors", "aviary or zoo for keeping exotic creatures", "banquet room for hosting celebrations and guests", "barracks used by elite guards", "bath outfitted with a marble floor and other luxurious accroutrements", "bedroom for use by the stronghold's master and other important guests", "chapel dedicated to a diety associated with the stronghold's master", "cistern providing drinking water", "dining room for intimate gatherings or informal meals", "dressing room featuring a number of wardrobes", "gallery for the display of expensive works of art and trophies", "game room used to entertain visitors", "guardroom", "kennel where monsters or trained animals that protect the stronghold are kept", "kitchen designed to prepare exotic foods for large numbers of guests", "library with an extensive collection of rare books", "lounge used to entertain guests", "pantry, including cellar for wine or spirits", "sitting room for family and intimate guests", "stable", "storage for mundane goods and supplies", `strong room or vault for protecting important treasures ${searchArray(["hidden behind a secret door","hidden behind a secret door","hidden behind a secret door","and the door is not hidden"])}`, "study, including a writing desk", "throneroom elaborately decorated", "waiting room where lesser guests are held before recieving an audience", "latrine or bath", "crypt blonging to the stronghold's master or someone else of importance"],
         "temple/shrine": ["armory filled with weapons and armor, battle banners, and pennants", "audience chamber where priests of the temple recieve commoners and low-ranking visitors", "banquet room used for celebrations and holy days", "barracks for the temple's military arm or its hired guards", "cells where the faithful can sit in quiet contemplation", "central temple built to accomodate rituas", "chapel dedicated to a lesser diety associated with the temple's major diety", "classroom used to train initiates and priests", "conjuring room, specially sanctified and used to summon extraplanar creatures", "crypt for a high priest or similar figure, hidden and heavily guarded by creatures and traps", "divination room, inscribed with runes and stocked with soothsaying elements", "dining room (small), for the temple's high priests", "dining room (large) for the temple's servants and lesser priests", "dormitory for lesser priests or students", "guardroom", "kennel for animals or monsters associated with the temple's diety", "kitchen (might bear a disturbing resemblance to a torture chamber in an evil temple", "library, well stocked with religious treatises", "prison for captured enemies (in good or neutral temples) or those designated for sacrifices (in evil temples)", "robing room containing ceremonial outfits and items", "stable for riding horses and mounts belonging to the temple, or for visiting messengers and caravans", "storage holding mundane supplies", "strong room or vault holding important relics and ceremonial items, heavily trapped", "torture chamber, used in inquisitions (in lawful good and neutral temples) or for the sheer joy of causing pain (evil temples)", "latrine or bath", "well for drinking water, defendable in the case of attack or siege", "workshop for repairing or creating weapons, religious item, and tools"],
         "tomb": ["antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals", "chapel dedicated to dieties that watch over the dead and protect their restng places", "a crypt for less important burials", "divination room, used in rituals to contact the dead for guidance", "false crypt(trapped) used to kill or capture thieves", "gallery to display the deeds of the deceased through trophies, statues, paintings, and so forth", "grand crypt for a noble, high priest, or other important indivudal", "guardroom, usually guarded by undead, constructs, or other creatures that do not need to eat or sleep", "robing room for preists to prepare for burial rituals", "storage, stocked with tools for maintaining the tomb and preparing the dead for burial", "tomb where the wealthiest and more important folk are interred, protected by secret doors and traps", "workshop for embalming the dead"],
-        "treasure vault": ["antechamber for visiting dignitaries", "armory containign mundane and magic gear used by the treasure vault's guards", "barracks for the guards", "cistern providing fresh water", "guardroom for defending against intruders", "kennel for trained beasts used to guard the treasure vault", "kitchen for feeding gaurds", "watch room that allows guards to observe those who approach the dungeon", "prison for holding captured intruders", "strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by a locked secret door", "torture chamber for extracting information from captured intruders", "trap or other trick designed to kill or capture creatures that enter the dungeon", ],
+        "treasure vault": ["antechamber for visiting dignitaries", "armory containing mundane and magic gear used by the treasure vault's guards", "barracks for the guards", "cistern providing fresh water", "guardroom for defending against intruders", "kennel for trained beasts used to guard the treasure vault", "kitchen for feeding gaurds", "watch room that allows guards to observe those who approach the dungeon", "prison for holding captured intruders", "strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by a locked secret door", "torture chamber for extracting information from captured intruders", "trap or other trick designed to kill or capture creatures that enter the dungeon", ],
     },
     "History": ["it has been long since abandoned", "it has been abandoned due to a plague", "it has been conquered by invaders", "it is avoided due to attacking raiders", "the pioneers of the area were destroyed by a discovery made within", "infighting destroyed the first residents", "it is the site of a magical catastrophe, killing the first ones here", "it has been battered and deemed unusable due to natural disasters", "this location has been cursed by the gods and shunned", `it is currently under intelligent control`, "it is overrun by planar creatures", "it is the site of a great miracle", ],
     "Layout": {
@@ -1149,26 +1149,26 @@ let dungeonStuff = {
 
 function printDungeon() {
     let creator = "";
-    let purpose = searchArray(Object.keys(dungeon.Purpose));
+    let purpose = searchArray(Object.keys(dungeonStuff.Purpose));
     if (rollDice(100) < 50) {
-        creator = searchArray(dungeon.Creator.Basic);
+        creator = searchArray(dungeonStuff.Creator.Basic);
     } else {
-        let creatorAlig = searchArray(dungeon.Creator.Human.Alignment);
-        let creatorClass = searchArray(dungeon.Creator.Human.Class);
+        let creatorAlig = searchArray(dungeonStuff.Creator.Human.Alignment);
+        let creatorClass = searchArray(dungeonStuff.Creator.Human.Class);
         creator = `a humaniod, specifically a ${creatorAlig} aligned ${creatorClass},`;
     }
 
 
     function dungeonBuilder(purpose) {
         let roomCount = 0;
-        let limiter = 50
+        let limiter = 10
         function start() {
-            let inde = Math.floor(Math.random(1) * dungeon.Layout["Starting area"][0].length);
-            let start = dungeon.Layout["Starting area"][0][inde];
-            roomCount += dungeon.Layout["Starting area"][1][inde];
-            return `The entrance of this dungeon lets into a ${start}, likely this area was a(n) ${searchArray(dungeon.Purpose[purpose])}.`
+            let inde = Math.floor(Math.random(1) * dungeonStuff.Layout["Starting area"][0].length);
+            let start = dungeonStuff.Layout["Starting area"][0][inde];
+            roomCount += dungeonStuff.Layout["Starting area"][1][inde];
+            return `The entrance of this dungeon lets into a ${start}, likely this area was a(n) ${searchArray(dungeonStuff.Purpose[purpose])}.`
         };
-        let output = `There is an area of interest ${searchArray(dungeon.Location)}, it was created by ${creator} and historically it has been used as a ${purpose}. Also, ${searchArray(dungeon.History)}.`
+        let output = `There is an area of interest ${searchArray(dungeonStuff.Location)}, it was created by ${creator} and historically it has been used as a ${purpose}. Also, ${searchArray(dungeonStuff.History)}.`
         console.log(output + "\n\n" + start())
         
         let newRooms = [roomCount]
@@ -1187,32 +1187,32 @@ function printDungeon() {
                     } else if (chance < 75) {
                         if (roomCount > limiter) {
                             let size = rollDice(1)
-                            let chamber = dungeon.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeon.Layout.Chambers.Shape[size].length))]
+                            let chamber = dungeonStuff.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeonStuff.Layout.Chambers.Shape[size].length))]
                             let exits = 0
                             roomCount += exits
-                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeon.Purpose[purpose])} with ${exits} exits.`)
+                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeonStuff.Purpose[purpose])} with ${exits} exits.`)
                             counter++
                         } else {
                             let size = rollDice(1)
-                            let chamber = dungeon.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeon.Layout.Chambers.Shape[size].length))]
-                            let exits = searchArray(dungeon.Layout.Chambers["Chamber Exits"][size])
+                            let chamber = dungeonStuff.Layout.Chambers.Shape[size][Math.floor(Math.random(1 * dungeonStuff.Layout.Chambers.Shape[size].length))]
+                            let exits = searchArray(dungeonStuff.Layout.Chambers["Chamber Exits"][size])
                             roomCount += exits
-                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeon.Purpose[purpose])} with ${exits} exits.`)
+                            Arrg.push(`Path ${toWords(counter)}leads to a chamber that is ${chamber}, seeming to be used as a ${searchArray(dungeonStuff.Purpose[purpose])} with ${exits} exits.`)
                             counter++
                         }
                     } else {
-                        let inde = Math.floor(Math.random(1 * dungeon.Layout.Passage.length));
+                        let inde = Math.floor(Math.random(1 * dungeonStuff.Layout.Passage.length));
                         let passage = "";
                         let exits = "";
-                        let size = searchArray(dungeon.Layout["Passage width"]);
+                        let size = searchArray(dungeonStuff.Layout["Passage width"]);
 
                         function passType() {
                             let chance = rollDice(100)
                             if (chance < 75) {
-                                passage = 'passage that is ' + dungeon.Layout.Passage[inde];
-                                exits = dungeon.Layout.PassageCount[inde]
+                                passage = 'passage that is ' + dungeonStuff.Layout.Passage[inde];
+                                exits = dungeonStuff.Layout.PassageCount[inde]
                             } else {
-                                passage = 'staircase that is ' + searchArray(dungeon.Layout.Stairs)
+                                passage = 'staircase that is ' + searchArray(dungeonStuff.Layout.Stairs)
                                 exits = 1
                             }
                         }
@@ -1235,6 +1235,7 @@ function printDungeon() {
     dungeonBuilder(purpose)
 
 };
+printDungeon()
 
 function tier(){
     let tier = ["Tier 1 (lvl 1-5)", "Tier 2 (lvl 6-10)", "Tier 3 (lvl 11-16)", " Tier 4 (17-20)", "Marathon (Tier 1-4: level 1-20)"]

@@ -163,7 +163,7 @@ let languages = []
 let vulnerabilities = []
 let resistance = []
 let immunity = []
-let senses = ['Blindsight','Darkvision','Tremorsense','Turesight','']  
+let senses = ['Blindsight','Darkvision','Tremorsense','Truesight','']  
 
 const challengeRatingParameters = {
     '0'     : { 'PB' : 2, 'AC' : 13, 'HPmin' : 1, 'HPmax' : 6, 'AtBon' : 3, 'DmgPerRoundmin': 0, 'DmgPerRoundmax': 1, 'SaveDC': 13, 'XP' : 10},   

@@ -17323,46 +17323,544 @@ const magics = {
         ]
         }
     
-}
+};
 
-
-
-
-
-
-
-
-
- 
-
-let modifyingImagery = [
-    "sword in stone", "wooden spike fence", "pierced by spear", "pawn", "magical rings around a person", "drinking horn", "arrow through the head", "power fist", "broken arrow", "blood recycle", "poison bottle", "horseshoe", "mushroom", "genie lamp", "skull and crossbones", "dead trees", "bone dagger", "bloody sword", "broken hatchet", "torch", "crowning a ruler", "butterfly", "gem", "person frozen in ice", "molten metal bucket", "stone block", "bell ringing", "person running with bag of loot", "cave entrance", "morningstar", "wand or staff with gem on top", "winged boots", "eyeball", "four-fingered claw", "webs", "box switch", "crystals", "arrow in the Achilles", "sword + lightning", "portal of fate", "book with skull", "carnival tent", "telepathy waves", "sneaky person", "protective shield", "candle tray", "cloak", "hypnosis", "drama masks", "swords and shield", "razor blade", "farmer", "horseman", "plate helm", "wizard hat", "dragon", "goblin", "no hearing", "stairs", "wizard", "undead king", "frankenstein", "electric orb", "couatl", "snake and seedling", "acrobat", "meditation", "blood goblet", "magic tree", "foot bite", "brain", "coins", "castle forfeit flag", "hourglass", "flag", "werewolf", "spider", "nose", "dagger", "smiling burning man", "devil pitchfork", "shield with icon", "potion", "cogs", "battering ram", "angry mob", "royalty on the throne", "telepathy", "behind bars", "circular saw", "gravestone", "dungeon window", "keyring", "wall", "hammer and anvil", "knife into scroll", "ancient sword in stone", "flaming arrow", "evil book", "crescent moon over mountains", "spiked spiral", "temple entrance", "torchlit archway", "fireplace", "big fish eating little fish", "lightning above large house", "lighthouse", "whisper", "nature arrow", "stabbed in the back", "heavy boots", "caster in a graveyard", "castle on a hill", "colosseum", "temple with stained glass", "altar on a hill", "mine entrance", "tropical island", "portal", "guards blocking the way", "fence", "foot bit by fish", "sieged castle", "fortified castle", "water-powered building", "bull eating grass", "arrow through the heart", "castle surrender", "prison cage", "campfire", 
-    "binoculars", "ace of spades", "magical rock", "snake", "Trojan horse", "broken pillars", "solid door", "gravestones", "mine and minecart", "wheat", "multi-front war map", "tavern", "map", "skull", "throwing knives", "spiderwebs", "flame circle", "maze", "exit path", "sticky floor", "trap hole", "eldritch tentacles", "wine glass", "boulder trap", "mimic", "trap", "tripwire", "net", "ghost", "shark", "vault", "moon over mountains", "wolf moon", "waterfall", "plague doctor", "Viking ship", "Viking", "pirate skull", "crown", "hooded figure", "ogre", "grim reaper", "tent", "compass", "shhh", "herb branch", "hydra", "person with crown", "tank conquered city", "crescent moon over mountains", "hooded face", "crow's nest on a ship", "zombie", "vampire ankle biter", "ghost", "fire elemental", "ghostface", "soldier on horseback", "direction signs", "candle on finger tray", "crystal", "butterfly knife", "pawprint", "treasure chest", "bounty poster", "summoning pentagram", "whirlwind", "enchanted forest", "swirling vortex", "orb of light", "gargoyle", "golden chalice", "enchanted mirror", "enchanted doorway", "floating island", "phoenix rising", "mystical runes", "enchanted crown", "floating lanterns", "time-traveling device", "mystical sigil", "flying carpet", "enchanted garden", "starfall", "celestial sphere", "dancing fireflies", "whispering spirits", "giant's footprint", "celestial comet", "enchanted fountain", "fairy ring", "lunar eclipse", "solar eclipse", "cosmic dust", "crystal ball", "levitating crystals", "moonlit meadow", "stardust trail", "labyrinth of illusions", "floating city", "astral projection", "timeless clock", "enchanted quill", "ancient ruins", "mystical waterfall", "levitating stones", "cosmic energy", "enchanted cloak", "frozen in time", "spellbound vines", "moonlit ocean", "sorcerer's hat", "astral dragon", "enchanted amulet", "wandering spirits", "mystical mist", "whimsical toadstools", "levitating book", "cosmic spiral", "enchanted jewelry", "enchanted melody", "timeless tome", "mystic labyrinth", "sacred grove", "astral plane", "enchanted tapestry", "floating observatory", "whispers in the wind", "levitating lanterns", "mystical fire", "moonlit mountain", "star-studded sky"
-    ]
-
-let modifyingIdeas =[
-    "shocking", "shining", "lucky", "charged", "banished", "unfinished", "fake", "stolen", "feral", "nightmare", "dirty", "worthless", "silent", "arcane", "ornate", "damaged", "glowing", "holy", "iron", "ancient", "cosmic", "dwarven", "demonic", "wild", "golden", "steel", "rotting", "evil", "tribal", "blinding", "savage", "runic", "concealed", "flaming", "vampiric", "bloodthirsty", "psychic", "chaotic", "slimy", "heretical", "fey", "acid", "bloody", "desolate", "awakened", "black", "incredible", "gilded", "artisinal", "healing", "copper", "blazing", "cunning", "blessed", "slithering", "celestial", "scaled", "heavy", "pristine", "jeweled", "singing", "shadow", "light", "dark", "indestructible", "elvish", "hidden", "rusty", "great", "frozen", "chilling", "buried", "redeeming", "fake", "mutated", "silver", "bleeding", "diabolic", "inspiring", "natural", "terrifying", "ghostly", "erratic", "restrained", "organized", "tough", "fey", "flight", "grappler", "hellish", "drone", "eerie", "elemental", "empowered", "infamous", "nervous", "meek", "zealous", "aggressive", "ambusher", "amorphous", "avoidance", "berzerk", "brave", "bound", "brute", "corrosive", "cunning", "darkvision", "displacer", "deceptive", "devious", "envious", "martyr", "deranged", "sadist", "fixated", "anger", "amphibious", 
-    "ambush", "brave", "corrupted", "brash", "cautious", "ethereal", "evasion", "fanatical", "feral", "remorseless", "intolerant", "oppressive", "fierce", "vines", "water", "weapons", "well", "runes", "lever", "secret door", "spiderwebs", "flood", "forge", "fog", "gas", "acid", "barrels", "armory", "cell", "chasm", "corpse", "chest", "fire", "ice", "lava", "lock", "mold", "altar", "barricade", "aura", "blood", "book", "collapse", "cage", "chamber", "light", "gate", "stairwell", "shrine", "passage", "pit", "plant", "rubble", "supplies", "trap", "tracks", "treasure", "demonic", "filthy", "mysterious", "destroyed", "revolting", "immaterial", "rusted", "defenseless", "elaborate", "whimsical", "frigid", "vibrant", "empty", "natural", "blessed", "historical", "evil", "mystical", "hidden", "wicked", "unused", "ominous", "shimmering", "looming", "cleansed", "fortified", "fragile", "shadowy", "luminous", "menacing", "prestigious", "menacing", "quaint", "remote", "withered", "rough", "defended", "serene", "outlandish", "pure", "messy", "bountiful", "occult", "dense", "ancient", "infested", "abandoned", "overgrown", "burnt", "crumbling", "vast", "foul", "holy", "protected", "strange", "desolate", "isolated", "planar", "inaccessible", "unsightly", "exposed", 
-    "frozen", "royal", "lush", "pungent", "insignificant", "bustling", "thorny", "haunted", "sacred", "bright", "lost", "mesmerizing", "harmonious", "nightmarish", "peaceful", "fertile", "perilous", "dark", "settled", "savage", "lunar", "abundant", "watched", "flooded", "unholy", "blighted", "hallowed", "enchanted", "pristine", "dreary", "wild", "seedy", "calm", "neat", "spacious", "tortured", "wealthy", "despicable", "grounded", "likeable", "devout", "polite", "curious", "elegant", "sickly", "daring", "shameless", "naive", "optimistic", "cautious", "weak", "reserved", "frank", "gentle", "athletic", "quiet", "mischievous", "stubborn", "nervous", "determined", "intimidating", "loyal", "sneaky", "tough", "creative", "ambitious", "charming", "serious", "independent", "quick", "kind", "pensive", "reckless", "idealistic", "clever", "maniac", "jaded", "violent", "practical", "honorable", "sociable", "generous", "private", "funny", "brave", "lazy", "summon", "trap", "uncover", "unleash", "redeem", "smuggle", "resurrect", "steal", "keep", "persuade", "learn", "plan", "plant", "possess", "poison", "protect", "destroy", "resolve", "map", "wish", "explore", "resurrect", "avoid", "abandon", "demand", "remove", "surrender", "breach", "search", "secure", "release", "construct", "haunt", "impersonate", "heal", "infiltrate", "escape", "frame", "find", "grow", "corrupt", "empower", "create", "enchant", "banish", "betray", "blackmail", "convert", "scheme", "weaken", "gather", "restore", "guide", "recover", "forge", "conquer", "distract", "transform", "raid", 
-    "evade", "ascend", "avenge", "assassinate", "balance", "whirlwind", "enchanted forest", "swirling vortex", "orb of light", "gargoyle", "golden chalice", "enchanted mirror", "enchanted doorway", "floating island", "phoenix rising", "mystical runes", "enchanted crown", "floating lanterns", "time-traveling device", "mystical sigil", "flying carpet", "enchanted garden", "starfall", "celestial sphere", "dancing fireflies", "whispering spirits", "giant's footprint", "celestial comet", "enchanted fountain", "fairy ring", "lunar eclipse", "solar eclipse", "cosmic dust", "crystal ball", "levitating crystals", "moonlit meadow", "stardust trail", "labyrinth of illusions", "floating city", "astral projection", "timeless clock", "enchanted quill", "ancient ruins", "mystical waterfall", "levitating stones", "cosmic energy", "enchanted cloak", "frozen in time", "spellbound vines", "moonlit ocean", "sorcerer's hat", "astral dragon", "enchanted amulet", "wandering spirits", "mystical mist", "whimsical toadstools", "levitating book", "cosmic spiral", "enchanted jewelry", "enchanted melody", "timeless tome", "mystic labyrinth", "sacred grove", "astral plane", "enchanted tapestry", "floating observatory", "whispers in the wind", "levitating lanterns", "mystical fire", "moonlit mountain", "star-studded sky" 
-    ]
-
-let themeImagery = [
-        "Ancient", "blasphemous", "bleak", "burning", "corrupted", "crystalline", "cursed", "elemental", "flooded", "fortified", "hallowed", "haunted", "infested", "overgrown", "putrid", "ruined", "sacred", "shadowy", "tranquil", "wild", "survival", "history", "destiny", "innocence", "fear", "time", "peace", "balance", "protection", "curse", "greed", "resource", "community", "calamity", "magic", "religion", "nature", "apocalypse", "revenge", "secrets", "abyssal", "ominous", "radiant", "chaos", "transcendent", "forgotten", "otherworldly", "enchanted", "cosmic", "sacrosanct", "dystopian", "nostalgic", "cryptic", "illusory", "supernatural", "wondrous", "twilight", "luminous", "fathomless", "revered", "mystic", "ethereal", "mystifying", "mythical", "majestic", "spiritual", "unfathomable", "elusive", "legendary", "serene", "vibrant", "unexplored", "shrouded", "sublime", "enraptured", "forbidden", "eternal", "secretive", "resplendent", "undiscovered", "enchanting", "arcane", "unveiled", "timeless", "enlightened", "celestial", "divine", "shadowed", "unseen", "veiled", "phantasmal", "unearthly", "dreamlike"
-    ]
- 
-
-function magic() {
-    const typeArray = Object.keys(magics)
-    console.log(typeArray)
+function modifiers(){
+    let modifyingImagery = [
+        "sword in stone", "wooden spike fence", "pierced by spear", "pawn", "magical rings around a person", "drinking horn", "arrow through the head", "power fist", "broken arrow", "blood recycle", "poison bottle", "horseshoe", "mushroom", "genie lamp", "skull and crossbones", "dead trees", "bone dagger", "bloody sword", "broken hatchet", "torch", "crowning a ruler", "butterfly", "gem", "person frozen in ice", "molten metal bucket", "stone block", "bell ringing", "person running with bag of loot", "cave entrance", "morningstar", "wand or staff with gem on top", "winged boots", "eyeball", "four-fingered claw", "webs", "box switch", "crystals", "arrow in the Achilles", "sword + lightning", "portal of fate", "book with skull", "carnival tent", "telepathy waves", "sneaky person", "protective shield", "candle tray", "cloak", "hypnosis", "drama masks", "swords and shield", "razor blade", "farmer", "horseman", "plate helm", "wizard hat", "dragon", "goblin", "no hearing", "stairs", "wizard", "undead king", "frankenstein", "electric orb", "couatl", "snake and seedling", "acrobat", "meditation", "blood goblet", "magic tree", "foot bite", "brain", "coins", "castle forfeit flag", "hourglass", "flag", "werewolf", "spider", "nose", "dagger", "smiling burning man", "devil pitchfork", "shield with icon", "potion", "cogs", "battering ram", "angry mob", "royalty on the throne", "telepathy", "behind bars", "circular saw", "gravestone", "dungeon window", "keyring", "wall", "hammer and anvil", "knife into scroll", "ancient sword in stone", "flaming arrow", "evil book", "crescent moon over mountains", "spiked spiral", "temple entrance", "torchlit archway", "fireplace", "big fish eating little fish", "lightning above large house", "lighthouse", "whisper", "nature arrow", "stabbed in the back", "heavy boots", "caster in a graveyard", "castle on a hill", "colosseum", "temple with stained glass", "altar on a hill", "mine entrance", "tropical island", "portal", "guards blocking the way", "fence", "foot bit by fish", "sieged castle", "fortified castle", "water-powered building", "bull eating grass", "arrow through the heart", "castle surrender", "prison cage", "campfire", 
+        "binoculars", "ace of spades", "magical rock", "snake", "Trojan horse", "broken pillars", "solid door", "gravestones", "mine and minecart", "wheat", "multi-front war map", "tavern", "map", "skull", "throwing knives", "spiderwebs", "flame circle", "maze", "exit path", "sticky floor", "trap hole", "eldritch tentacles", "wine glass", "boulder trap", "mimic", "trap", "tripwire", "net", "ghost", "shark", "vault", "moon over mountains", "wolf moon", "waterfall", "plague doctor", "Viking ship", "Viking", "pirate skull", "crown", "hooded figure", "ogre", "grim reaper", "tent", "compass", "shhh", "herb branch", "hydra", "person with crown", "tank conquered city", "crescent moon over mountains", "hooded face", "crow's nest on a ship", "zombie", "vampire ankle biter", "ghost", "fire elemental", "ghostface", "soldier on horseback", "direction signs", "candle on finger tray", "crystal", "butterfly knife", "pawprint", "treasure chest", "bounty poster", "summoning pentagram", "whirlwind", "enchanted forest", "swirling vortex", "orb of light", "gargoyle", "golden chalice", "enchanted mirror", "enchanted doorway", "floating island", "phoenix rising", "mystical runes", "enchanted crown", "floating lanterns", "time-traveling device", "mystical sigil", "flying carpet", "enchanted garden", "starfall", "celestial sphere", "dancing fireflies", "whispering spirits", "giant's footprint", "celestial comet", "enchanted fountain", "fairy ring", "lunar eclipse", "solar eclipse", "cosmic dust", "crystal ball", "levitating crystals", "moonlit meadow", "stardust trail", "labyrinth of illusions", "floating city", "astral projection", "timeless clock", "enchanted quill", "ancient ruins", "mystical waterfall", "levitating stones", "cosmic energy", "enchanted cloak", "frozen in time", "spellbound vines", "moonlit ocean", "sorcerer's hat", "astral dragon", "enchanted amulet", "wandering spirits", "mystical mist", "whimsical toadstools", "levitating book", "cosmic spiral", "enchanted jewelry", "enchanted melody", "timeless tome", "mystic labyrinth", "sacred grove", "astral plane", "enchanted tapestry", "floating observatory", "whispers in the wind", "levitating lanterns", "mystical fire", "moonlit mountain", "star-studded sky"
+        ]
+    
+    let modifyingIdeas =[
+        "shocking", "shining", "lucky", "charged", "banished", "unfinished", "fake", "stolen", "feral", "nightmare", "dirty", "worthless", "silent", "arcane", "ornate", "damaged", "glowing", "holy", "iron", "ancient", "cosmic", "dwarven", "demonic", "wild", "golden", "steel", "rotting", "evil", "tribal", "blinding", "savage", "runic", "concealed", "flaming", "vampiric", "bloodthirsty", "psychic", "chaotic", "slimy", "heretical", "fey", "acid", "bloody", "desolate", "awakened", "black", "incredible", "gilded", "artisinal", "healing", "copper", "blazing", "cunning", "blessed", "slithering", "celestial", "scaled", "heavy", "pristine", "jeweled", "singing", "shadow", "light", "dark", "indestructible", "elvish", "hidden", "rusty", "great", "frozen", "chilling", "buried", "redeeming", "fake", "mutated", "silver", "bleeding", "diabolic", "inspiring", "natural", "terrifying", "ghostly", "erratic", "restrained", "organized", "tough", "fey", "flight", "grappler", "hellish", "drone", "eerie", "elemental", "empowered", "infamous", "nervous", "meek", "zealous", "aggressive", "ambusher", "amorphous", "avoidance", "berzerk", "brave", "bound", "brute", "corrosive", "cunning", "darkvision", "displacer", "deceptive", "devious", "envious", "martyr", "deranged", "sadist", "fixated", "anger", "amphibious", 
+        "ambush", "brave", "corrupted", "brash", "cautious", "ethereal", "evasion", "fanatical", "feral", "remorseless", "intolerant", "oppressive", "fierce", "vines", "water", "weapons", "well", "runes", "lever", "secret door", "spiderwebs", "flood", "forge", "fog", "gas", "acid", "barrels", "armory", "cell", "chasm", "corpse", "chest", "fire", "ice", "lava", "lock", "mold", "altar", "barricade", "aura", "blood", "book", "collapse", "cage", "chamber", "light", "gate", "stairwell", "shrine", "passage", "pit", "plant", "rubble", "supplies", "trap", "tracks", "treasure", "demonic", "filthy", "mysterious", "destroyed", "revolting", "immaterial", "rusted", "defenseless", "elaborate", "whimsical", "frigid", "vibrant", "empty", "natural", "blessed", "historical", "evil", "mystical", "hidden", "wicked", "unused", "ominous", "shimmering", "looming", "cleansed", "fortified", "fragile", "shadowy", "luminous", "menacing", "prestigious", "menacing", "quaint", "remote", "withered", "rough", "defended", "serene", "outlandish", "pure", "messy", "bountiful", "occult", "dense", "ancient", "infested", "abandoned", "overgrown", "burnt", "crumbling", "vast", "foul", "holy", "protected", "strange", "desolate", "isolated", "planar", "inaccessible", "unsightly", "exposed", 
+        "frozen", "royal", "lush", "pungent", "insignificant", "bustling", "thorny", "haunted", "sacred", "bright", "lost", "mesmerizing", "harmonious", "nightmarish", "peaceful", "fertile", "perilous", "dark", "settled", "savage", "lunar", "abundant", "watched", "flooded", "unholy", "blighted", "hallowed", "enchanted", "pristine", "dreary", "wild", "seedy", "calm", "neat", "spacious", "tortured", "wealthy", "despicable", "grounded", "likeable", "devout", "polite", "curious", "elegant", "sickly", "daring", "shameless", "naive", "optimistic", "cautious", "weak", "reserved", "frank", "gentle", "athletic", "quiet", "mischievous", "stubborn", "nervous", "determined", "intimidating", "loyal", "sneaky", "tough", "creative", "ambitious", "charming", "serious", "independent", "quick", "kind", "pensive", "reckless", "idealistic", "clever", "maniac", "jaded", "violent", "practical", "honorable", "sociable", "generous", "private", "funny", "brave", "lazy", "summon", "trap", "uncover", "unleash", "redeem", "smuggle", "resurrect", "steal", "keep", "persuade", "learn", "plan", "plant", "possess", "poison", "protect", "destroy", "resolve", "map", "wish", "explore", "resurrect", "avoid", "abandon", "demand", "remove", "surrender", "breach", "search", "secure", "release", "construct", "haunt", "impersonate", "heal", "infiltrate", "escape", "frame", "find", "grow", "corrupt", "empower", "create", "enchant", "banish", "betray", "blackmail", "convert", "scheme", "weaken", "gather", "restore", "guide", "recover", "forge", "conquer", "distract", "transform", "raid", 
+        "evade", "ascend", "avenge", "assassinate", "balance", "whirlwind", "enchanted forest", "swirling vortex", "orb of light", "gargoyle", "golden chalice", "enchanted mirror", "enchanted doorway", "floating island", "phoenix rising", "mystical runes", "enchanted crown", "floating lanterns", "time-traveling device", "mystical sigil", "flying carpet", "enchanted garden", "starfall", "celestial sphere", "dancing fireflies", "whispering spirits", "giant's footprint", "celestial comet", "enchanted fountain", "fairy ring", "lunar eclipse", "solar eclipse", "cosmic dust", "crystal ball", "levitating crystals", "moonlit meadow", "stardust trail", "labyrinth of illusions", "floating city", "astral projection", "timeless clock", "enchanted quill", "ancient ruins", "mystical waterfall", "levitating stones", "cosmic energy", "enchanted cloak", "frozen in time", "spellbound vines", "moonlit ocean", "sorcerer's hat", "astral dragon", "enchanted amulet", "wandering spirits", "mystical mist", "whimsical toadstools", "levitating book", "cosmic spiral", "enchanted jewelry", "enchanted melody", "timeless tome", "mystic labyrinth", "sacred grove", "astral plane", "enchanted tapestry", "floating observatory", "whispers in the wind", "levitating lanterns", "mystical fire", "moonlit mountain", "star-studded sky" 
+        ]
+    
+    let themeImagery = [
+            "Ancient", "blasphemous", "bleak", "burning", "corrupted", "crystalline", "cursed", "elemental", "flooded", "fortified", "hallowed", "haunted", "infested", "overgrown", "putrid", "ruined", "sacred", "shadowy", "tranquil", "wild", "survival", "history", "destiny", "innocence", "fear", "time", "peace", "balance", "protection", "curse", "greed", "resource", "community", "calamity", "magic", "religion", "nature", "apocalypse", "revenge", "secrets", "abyssal", "ominous", "radiant", "chaos", "transcendent", "forgotten", "otherworldly", "enchanted", "cosmic", "sacrosanct", "dystopian", "nostalgic", "cryptic", "illusory", "supernatural", "wondrous", "twilight", "luminous", "fathomless", "revered", "mystic", "ethereal", "mystifying", "mythical", "majestic", "spiritual", "unfathomable", "elusive", "legendary", "serene", "vibrant", "unexplored", "shrouded", "sublime", "enraptured", "forbidden", "eternal", "secretive", "resplendent", "undiscovered", "enchanting", "arcane", "unveiled", "timeless", "enlightened", "celestial", "divine", "shadowed", "unseen", "veiled", "phantasmal", "unearthly", "dreamlike"
+        ]
+    
+    let status = [
+            "Magic is Mundane - Mortals have no magic, it is solely the domain of the world’s deities and lesser supernatural entities.", 
+            "Magic is Rare - The world’s magic is hard to find and harder to use. The vast majority is useless superstition, incredibly tedious to employ, or dangerous to the user, but what works tends to be stronger than the freely available magic of other worlds.", 
+            "Magic is Dark - All but the weakest magic comes only through diabolical pacts and unspeakable deeds, and when it does, it is corrupting, chaotic, and catastrophic to the user and their victims alike.",
+            "Magic takes Tools - The mortal mind can’t grasp any but the weakest of magic, only through artifice, scroll-scribbling, alchemy, and enchantments can its energies be brought to bear.", 
+            "Magic is Demanding - Magic is both powerful and attainable, but it requires decades of difficult study, ironclad self-control, and immense personal sacrifice from its users.", 
+            "Magic is Inherited - Only mortals descended from or greatly favored by supernatural entities can channel magic, and while great within its scope, their power is narrow and limited.", 
+            "Magic is Common - The study of magic is well-known and widespread, to the extent a town may have a wizard living between its carpenter and smith, but due to its ubiquity, it tends to be weaker than the less available magic of other worlds.", 
+            "Magic is Myriad - Numerous methods of magic exist, everything from dark pacts, to artificial tools, to arduous study, and simple circumstance of birth, and its divergent practitioners may have an intense and oft-bloody rivalry with one another.", 
+            "Magic is Science - In their curiosity, mortals have codified and tested magic to the extent it’s seen as merely another discipline of science, and broadly implemented in technology.", 
+            "Magic is Everywhere - Powerful magic is freely accessible, at minimal to no cost and risk to its users, and magical entities that may be rare in other worlds readily serve mortals in all aspects of life.", 
+            "Magic is Bound - The mortal races aren’t able to wield magic on their own, instead they must give up a part of themselves to bind a spirit’s soul to theirs, or entrap a spirit in an item of precious value and force it to cast at its wielder’s command.",
+            "Magic is Wild - Magic is an unpredictable and untamed force, constantly shifting and changing. Those who dare to use it must be prepared for unintended consequences, as the magic may have a will of its own.",
+            "Magic is Forbidden - Governments, religions, or other powerful institutions have outlawed the use of magic. Its practice is hidden, secretive, and often associated with rebellion or criminality.",
+            "Magic is Dying - Once vibrant and widespread, the world's magical energies are waning. The causes might be mysterious or known, but the effects are felt by all magic users, leading to a desperate race to preserve or exploit what remains.",
+            "Magic is Nature - Magic is intertwined with the natural world, drawn from the plants, animals, and elements. It promotes harmony and balance but can be wrathful if misused or if nature is harmed.",
+            "Magic is Monopolized - A single entity, be it a government, corporation, or individual, controls the majority of magical knowledge and resources. This concentration of power may lead to inequality, unrest, and conflict.",
+            "Magic is Symbiotic - Magic can only be used through a mutual agreement or bond with magical creatures or entities. These relationships may be based on respect, manipulation, or coercion, and form a unique magical system.",
+            "Magic is Time-bound - The use of magic is connected to specific times or celestial events. Whether it's phases of the moon, solstices, or other temporal factors, magic ebbs and flows with the passage of time.",
+            "Magic is Sentient - The magical energies of the world are not merely a force to be harnessed but possess consciousness and intent. Communication, negotiation, or conflict with these sentient energies forms the basis of magical practice.",
+            "Magic is Sacrificial - The power to wield magic requires physical, emotional, or spiritual sacrifices. The greater the magic, the greater the cost, leading to profound ethical dilemmas and personal struggles for those who pursue this path.",
+            "Magic is Healing - The primary purpose and function of magic in this world is to heal and nurture. Combat and destructive uses of magic are rare or non-existent, and magical practice focuses on restoration, growth, and empathy.",
+            "Magic is Transformative - Magic primarily functions to change and transmute, whether it's the alteration of objects, the metamorphosis of beings, or the shifting of reality itself. This leads to a world of constant flux and potential.",
+            "Magic is Artistic - Magic is expressed through art, music, poetry, and other creative endeavors. The most powerful magic users are those with profound artistic talents, and magical duels might look more like artistic competitions.",
+            "Magic is Ancestral - Magic is deeply rooted in family lines and traditions. Knowledge and abilities are passed down through generations, and a person's lineage may determine their potential as a magic user.",
+            "Magic is Cultural - Different cultures within the world have unique magical traditions, methods, and philosophies. Interactions between these diverse magical systems can lead to cooperation, conflict, or synthesis.",
+            "Magic is Gendered - Magic operates differently based on gender, with specific abilities or roles assigned to different genders. This can influence societal norms, relationships, and the personal journey of magic users.",
+            "Magic is Cursed - Magic comes with inherent curses or risks that affect both the user and those around them. This might be a deliberate design by some higher power or a side effect of tapping into forces beyond mortal understanding.",
+            "Magic is Compassionate - Magic is driven by empathy and compassion, acting as a force for good. It refuses to be used for harm or selfish gains and aligns itself with those who seek to make positive changes in the world.",
+            "Magic is Seasonal - The power and nature of magic change with the seasons. Magic users must understand and adapt to these shifts, and some may specialize in the magic of a particular season.",
+            "Magic is Collective - Magic is not an individual force but thrives on community, connection, and shared intention. It grows stronger when practiced collectively and may be weaker or even inaccessible to lone practitioners.",
+            "Magic is Competitive - Magic is a central aspect of competition, sport, or games within the world. Mastery of magic is as much about strategy, teamwork, and skill as it is about understanding mystical forces.",
+            "Magic is Love-bound - Magic is intimately tied to love and relationships. Whether it's romantic, familial, or platonic, the strength and nature of one's magical abilities are closely linked to their bonds with others.",
+            "Magic is Dreamt - Magic is accessed and shaped within dreams. Dream mages walk a fine line between reality and imagination, and the dream world is a place of both incredible power and potential danger.",
+            "Magic is Reflective - Magic acts as a mirror of the user's inner self, reflecting their virtues, flaws, desires, and fears. Personal growth and self-awareness become crucial in mastering this form of magic.",
+            "Magic is Historical - Magic is tied to historical events, figures, or artifacts. The past holds the key to magical power, and those who delve into history can unlock abilities lost to time.",
+            "Magic is Commercialized - Magic has become a commodity, bought and sold like any other good. This commercialization has broad impacts on the economy, society, ethics, and the personal experiences of magic users.",
+            "Magic is Environmental - Magic is directly tied to the health and state of the environment. Pollution, deforestation, or other ecological issues can weaken or corrupt magic, leading to a complex relationship between magic users and their world.",
+            "Magic is Regional - Magic varies significantly by geography, with different regions having access to unique magical resources, traditions, or restrictions. This creates a rich tapestry of magical diversity across the world.",
+            "Magic is Harmonious - Magic must be practiced in balance and harmony with other forces, both magical and natural. Imbalance leads to weakness or catastrophe, and magic users must strive for equilibrium in all things.",
+            "Magic is Organic - Magic is grown, cultivated, and harvested like a crop. Magical farms or gardens might be tended by specialized practitioners, and the quality of the 'harvest' affects the potency of the magic.",
+            "Magic is Hierarchical - Magic operates within a strict hierarchy, with levels or ranks that determine a user's power and privileges. Ascending this hierarchy requires formalized testing, challenges, or other criteria.",
+            "Magic is Animalistic - Magic is closely tied to animals and their instincts, behaviors, and spirits. Magic users often form bonds with magical creatures or learn to harness the inherent magic within the animal kingdom.",
+            "Magic is Celestial - Magic is influenced by celestial bodies such as stars, planets, and comets. Astrological knowledge and timing play a crucial role in wielding this type of magic.",
+            "Magic is Philosophical - Magic is deeply entwined with philosophy and ethical considerations. Different schools of thought lead to different magical practices, and debates over magical ethics are common.",
+            "Magic is Judicial - Magic is used primarily for law, justice, and governance. It may be employed by judges, law enforcement, or politicians to maintain order, solve disputes, or enforce societal rules.",
+            "Magic is Musical - Magic is channeled and controlled through music, whether vocal or instrumental. The rhythm, melody, and harmony of the music direct the flow of magical energy.",
+            "Magic is Industrial - Magic has been harnessed for industrial purposes, powering machinery, transportation, and manufacturing. This has led to economic growth but may also raise ethical or environmental concerns.",
+            "Magic is Festive - Magic is strongest during festivals, holidays, and communal celebrations. These events become focal points for magical activities, and the joy and unity of the people amplify the magical energies.",
+            "Magic is Aesthetic - Magic is directly linked to beauty, elegance, and aesthetic appreciation. The crafting of beautiful objects, art, or architecture is a magical act, and aesthetic sensibilities guide magical practice.",
+            "Magic is Theatrical - Magic is performed and experienced as a form of theater or entertainment. Showmanship, drama, and audience engagement are key to this magical tradition.",
+            "Magic is Aquatic - Magic is drawn from the sea, rivers, and other bodies of water. Water mages may have unique abilities, rites, and connections to aquatic creatures and deities.",
+            "Magic is Nomadic - Magic is not tied to a particular place but travels with nomadic tribes or individuals. It adapts and changes with the journey, drawing power from movement and exploration.",
+            "Magic is Linguistic - Magic is tightly bound to language, with each word, phrase, or script carrying intrinsic magical properties. Linguists, poets, and scholars become the primary wielders of magical power.",
+            "Magic is Elemental - Magic is divided into distinct elemental forces such as fire, water, earth, and air. Mastery of these elements, or the fusion of them, becomes central to magical practice.",
+            "Magic is Chronological - Magic is tied to the manipulation and understanding of time. Whether speeding it up, slowing it down, or glimpsing possible futures, time magic is a delicate and profound art.",
+            "Magic is Agricultural - Magic is used primarily for farming and food production. It can enhance growth, control weather, and protect crops, forming the backbone of the world's food supply.",
+            "Magic is Therapeutic - Magic is used for mental and emotional healing, as well as physical restoration. Therapists and healers use it to mend broken minds and spirits, creating a world focused on well-being.",
+            "Magic is Athletic - Magic enhances physical abilities, sports, and athleticism. Competitions and games that integrate magic become central to the culture, and athletes train in both physical prowess and magical skill.",
+            "Magic is Aquatic - Magic is derived from or primarily used in oceans, rivers, or lakes. Water-based magic might involve control over tides, communication with aquatic life, or special underwater abilities.",
+            "Magic is Meteorological - Magic is connected to weather patterns and atmospheric conditions. Weather mages can summon storms, clear skies, or manipulate temperatures, affecting both daily life and strategic decisions.",
+            "Magic is Emotional - Magic is fueled by emotions such as love, anger, fear, or joy. The intensity and control of emotions directly impact the effectiveness and nature of magical abilities.",
+            "Magic is Geometric - Magic is based on geometrical shapes, symbols, and patterns. Creating precise geometric designs is essential for casting spells, and errors in design can lead to unintended effects.",
+            "Magic is Dynastic - Magic is controlled by a few powerful families or dynasties. Their control over magical resources, knowledge, and lineage creates a power structure that influences politics and society.",
+            "Magic is Educational - Magic is taught openly in schools and universities. The education of magic is as common as other subjects, with standardized curriculums, exams, and varying levels of expertise.",
+            "Magic is Architectural - Magic is embedded in buildings, bridges, and structures. Architects and builders use magic to create impossible designs, enhance durability, or imbue structures with special properties.",
+            "Magic is Memorial - Magic is tied to memory and history. It can be used to preserve memories, explore historical events, or even manipulate the memories of individuals.",
+            "Magic is Celestial - Magic is connected to celestial navigation and the alignment of stars. It might be used for navigation, prophecy, or to draw power from constellations.",
+            "Magic is Diplomatic - Magic plays a key role in diplomacy and international relations. Envoys and diplomats use it to negotiate treaties, resolve conflicts, or gather intelligence.",
+            "Magic is Mechanized - In a blend of technology and mysticism, magic powers machines and mechanical devices. Engineers and inventors create magical machinery that impacts transportation, industry, and warfare.",
+            "Magic is Gastronomic - Magic is cooked, brewed, and baked. Culinary wizards craft magical dishes, potions, and feasts that can heal, enchant, transform, or even curse those who partake.",
+            "Magic is Archaeological - Magic is unearthed through the excavation of ancient ruins, artifacts, and relics. Archaeological mages engage in adventurous exploration to rediscover lost magical civilizations and techniques.",
+            "Magic is Sensory - Magic is tied to the five senses, and practitioners can manipulate taste, smell, sight, touch, and hearing through magical means. Sensory mages have unique abilities to affect perception and sensation.",
+            "Magic is Technological - Magic is integrated with technology, allowing for magi-tech devices, vehicles, and systems. Tech mages combine engineering with arcane knowledge to push the boundaries of both fields.",
+            "Magic is Mystical - Magic remains a profound mystery, even to its practitioners. It resists categorization, analysis, or consistent rules, making it a force of wonder, unpredictability, and profound reverence.",
+            "Magic is Karmic - Magic operates on principles of karma, aligning with a user's ethical choices and deeds. Good and bad actions resonate through one's magical power, influencing success, potency, and consequences.",
+            "Magic is Mathematical - Magic is accessed through complex mathematical formulas and calculations. Mathematical wizards must solve intricate equations, utilizing logic and numerical skill to cast spells.",
+            "Magic is Ritualistic - Magic requires elaborate rituals and ceremonies. These rituals may take hours or even days to perform and often involve specific materials, symbols, and precise timing.",
+            "Magic is Literary - Magic resides in books, scrolls, and written texts. Libraries and archives become powerful magical repositories, and literary scholars are revered as mighty spellcasters.",
+            "Magic is Martial - Magic is a key component in warfare and military strategy. Soldiers are trained in battle magic, and generals must consider magical tactics and defenses in their planning."
+        ]
 
     document.getElementById("Modifiers").innerHTML = ''
     let modifiers = [
         `Image: ${searchArray(modifyingImagery)}`,
         `Idea: ${searchArray(modifyingIdeas)}`,
-        `Theme: ${searchArray(themeImagery)}`     
+        `Theme: ${searchArray(themeImagery)}`,
+        `Status: ${searchArray(status)}`   
     ]
     loopCountPrintList(modifiers,"Modifiers")
+};
+
+function methods(){
+    document.getElementById("Method").innerHTML = ''
+    const magicMethods = {
+        "Verbal Incantations: Spells are cast by speaking specific words or phrases in a magical language. The power is channeled through the spoken words." : 
+            [
+            `Tonal Harmony: Instead of specific words, magic users must produce specific musical tones or notes to cast spells. Each tone corresponds to a different type of magic.`,
+            `Whispers of the Ancients: The magical language is so ancient and powerful that even a whisper of the words can unleash great spells. Speaking too loudly might cause unintended consequences.`,
+            `Language of Nature: The magical language is not a human language but rather a complex series of sounds imitating the calls of animals, the rustling of leaves, and the rush of water.`,
+            `Spell Rhymes: Incantations take the form of rhyming couplets or poetic verses, and the rhythmic flow of the words helps focus and direct the magic.`,
+            `Emotional Resonance: Instead of fixed words, magic users must imbue their spoken language with the appropriate emotion to trigger the desired magical effect.`,
+            `Shared Chants: Certain spells require multiple magic users to chant in unison, amplifying the magical power through collective voice and harmony.`,
+            `Silent Casting: Advanced magic users can cast spells without speaking at all, using only their thoughts and intent to channel the magic.`,
+            `Singing Spells: Magic users must sing their incantations, with each song containing unique verses corresponding to different magical effects.`,
+            `Multilingual Magic: The magical language is a combination of multiple real-world languages, and magic users must be fluent in all of them to wield their power.`,
+            `Written Incantations: Magic users inscribe the words of the incantation in the air or on surfaces, and the spell is activated when the last word is written.`,
+            `Power Words: Only a few key words in the incantation hold the magical power, and the rest of the sentence serves as a focus to draw on that power.`,
+            `Echoing Invocation: The incantations must be spoken in specific locations or near magical sources, and the magic echoes and resonates through the environment.`,
+            `Concealed Words: The true words of power are hidden within seemingly mundane sentences, making them difficult for non-magic users to recognize.`,
+            `Empathic Magic: The words spoken must reflect the magic user's deepest desires or emotions, allowing the magic to be a direct extension of their soul.`,
+            `Fading Incantations: As magic users grow more skilled, they can cast spells with increasingly shorter incantations, reducing the need for lengthy invocations.`,
+            `Borrowed Voice: Some magic users can lend their voice to non-magical individuals, allowing them to cast spells using the borrowed magic.`,
+            `Voice Modulation: The power of the spell can be enhanced or altered by varying the pitch, volume, or tone of the incantation.`,
+            `Forbidden Language: The magical language is known only to a secretive and ancient order, and using it without proper initiation could have grave consequences.`,
+            `Interwoven Spells: Some powerful spells require multiple magic users to speak different parts of the incantation simultaneously, weaving their magic together.`,
+            `Articulation Mastery: The precision and clarity of pronunciation affect the potency and accuracy of the spell, making articulation training crucial for magic users.`
+            ],
+    
+        "Gestures and Movements: Magic users perform intricate hand gestures or body movements to direct and shape the magical energy.":
+            [
+            `Animal Mimicry: Magic users imitate the movements and behaviors of animals to tap into the innate magic associated with those creatures.`,
+            `Dance Magic: Magic users combine fluid and precise dance movements with their spells, using the rhythm and grace of the dance to enhance the power of the magic.`,
+            `Martial Arts Magic: Certain martial arts styles incorporate magical gestures and movements, allowing magic users to seamlessly blend combat and spellcasting.`,
+            `Geomancy Gestures: Magic users draw magical symbols and patterns in the air with their hands, using the shapes and lines to manipulate the magical energy.`,
+            `Mirror Magic: Spells are cast by mimicking the desired outcome of the magic in front of a reflective surface, like a mirror or water.`,
+            `Finger Runes: Instead of elaborate gestures, magic users inscribe runes in the air with their fingers, each rune representing a specific spell.`,
+            `Energetic Flow: Magic users use their bodies to create specific energy flows or currents, guiding the magical energy in the desired direction.`,
+            `Shadowcasting: Magic users manipulate the shadows their body casts, using them to trace intricate patterns and activate spells.`,
+            `Calligraphy Casting: The act of writing magical symbols or characters in an elegant and precise manner brings the spells to life.`,
+            `Symmetry Magic: Spells require perfectly symmetrical gestures to maintain balance and control over the magical forces.`,
+            `Tactile Spellcasting: Magic users touch objects or symbols, infusing them with magical energy to activate the desired effect.`,
+            `Elemental Mudras: Each element has its corresponding hand gesture, and combining them in different ways allows for a variety of elemental spells.`,
+            `Ritualistic Ceremonies: Spells are cast through elaborate rituals involving specific ingredients, symbols, and actions performed in a certain order.`,
+            `Enigmatic Sign Language: Magic users communicate and cast spells using a secret sign language, where the meaning of each gesture is known only to those initiated into the magical arts.`
+            ],
+    
+        "Mental Focus: Magic users concentrate their thoughts and intentions to harness magical power, with no need for external gestures or words.":
+            [
+            `Thought Weaving: Magic users mentally visualize intricate patterns or symbols, weaving them together to form the desired magical effect.`,
+            `Meditative Magic: Magic users enter deep states of meditation to connect with the source of magic and draw power from within.`,
+            `Visualization Spells: Magic users mentally picture the outcome they desire, and the strength of their mental imagery determines the potency of the spell.`,
+            `Conceptual Casting: Spells are cast by focusing on abstract concepts, such as time, space, or life force, to manipulate the fundamental forces of the universe.`,
+            `Mental Locks: Magic users must maintain complete focus on their intended target or outcome to keep the spell active.`,
+            `Instinctive Sorcery: Magic users instinctively react to situations with magic, letting their subconscious mind guide their spellcasting.`,
+            `Trance Channeling: Magic users enter a trance-like state where their minds connect with cosmic energies, allowing them to shape reality with their thoughts.`,
+            `Introspective Magic: Magic users delve into their memories and subconscious to unlock hidden magical potential or to retrieve forgotten spells.`,
+            `Limiting Beliefs: To cast a spell, magic users must overcome self-doubt and limiting beliefs, as their mental state directly affects the magic's efficacy.`,
+            `Archetypal Invocation: Magic users embody powerful archetypes or personas in their minds to draw on their associated magical abilities.`,
+            `Empowerment through Meditation: Magic users gather power by meditating in specific locations or on sacred grounds, connecting with the ancient energies of the place.`,
+            `Emotion Anchoring: Magic users anchor specific emotions to certain spells, enabling them to quickly access and cast the spell in situations that evoke the corresponding emotion.`,
+            `Mental Projection: Magic users project their consciousness into the target's mind to influence or manipulate their thoughts and actions.`
+            ],
+    
+        "Magical Tools: Magic is channeled through enchanted items, such as wands, staves, or crystals, acting as a conduit for the user's power.":
+            [
+            `Tattooed Glyphs: Magic users have magical symbols or glyphs tattooed on their bodies, and channel magic by touching or activating specific tattoos.`,
+            `Soulbound Artifacts: Certain magical tools are bound to their wielder's soul, forging a deep connection and allowing for more potent spellcasting.`,
+            `Elemental Crystals: Magic users possess crystals attuned to different elements, and channel magic by holding or focusing on the appropriate crystal.`,
+            `Spellscrolls: Magic users read enchanted scrolls containing spells, activating the magic by speaking the words written on the scroll.`,
+            `Charm Bracelets: Magic users wear bracelets adorned with charms, each charm representing a different spell that can be activated by touch or manipulation.`,
+            `Alchemical Concoctions: Magic users consume or apply special alchemical potions to temporarily enhance their spellcasting abilities.`,
+            `Ancestral Relics: Magic users inherit powerful relics from their ancestors, which hold ancient magic and provide guidance and strength in spellcasting.`,
+            `Living Plants: Magic users commune with and channel magic through sentient or magically enhanced plants.`,
+            `Runic Gloves: Magic users wear gloves inscribed with runes, using their hands to cast spells by forming specific rune combinations.`,
+            `Enchanted Instruments: Magic users play musical instruments imbued with magical properties to produce spell effects through their music.`
+            ],
+    
+        "Sacrifices: Magic can be accessed by offering sacrifices, whether it be material possessions, blood, or other valuable items.":
+            [
+            `Emotional Sacrifice: Magic users can access powerful spells by sacrificing strong emotions, such as love, hatred, or grief, which fuel the magic.`,
+            `Memory Sacrifice: Magic users sacrifice specific memories, erasing them from their minds to unlock hidden magical abilities.`,
+            `Artistic Offerings: Magic users create intricate artworks or masterpieces as offerings, channeling their creative energy into the magic.`,
+            `Life Force Offering: Magic users offer a portion of their life force or vitality to access potent spells.`,
+            `Symbolic Sacrifices: Instead of material possessions, magic users perform symbolic acts or rituals representing the essence of what they wish to sacrifice.`,
+            `Oaths and Promises: Magic users make solemn oaths or pledges, binding themselves to fulfill certain tasks or commitments to access magic.`,
+            `Dream Sacrifices: Magic users sacrifice a portion of their dreams or aspirations, exchanging them for magical power.`,
+            `Voice Sacrifice: Magic users offer their ability to speak or sing for a limited time to gain access to specific spells.`,
+            `Shared Sacrifice: Multiple magic users join forces, collectively offering sacrifices to unleash powerful collaborative magic.`,
+            `Sense Sacrifice: Magic users temporarily give up one or more of their senses, like sight or hearing, to tap into heightened magical perception.`,
+            `Wisdom Offering: Magic users sacrifice their knowledge or wisdom, allowing them to access ancient or forbidden spells.`,
+            `Voiceless Casting: Magic users perform spells without speaking, as their voice is silenced for a duration after a sacrifice.`,
+            `Cultural Tribute: Magic users offer traditional or culturally significant items to honor their heritage and access culturally specific magic.`,
+            `Sacrificial Companionship: Magic users form deep connections with certain animals, and by offering their bond, they gain access to animalistic magic.`,
+            `Symbolic Bloodletting: Instead of blood, magic users perform symbolic acts of self-sacrifice or harm to activate the magic.`,
+            `Echoing Sacrifice: The effects of the sacrifice resonate over time, granting access to magic for a limited duration after the offering.`,
+            `Psychic Donation: Magic users willingly donate their psychic energy or thoughts, enhancing their magical potential.`,
+            `Sacrificial Gauntlet: Magic users endure a series of challenges or trials, each requiring a personal sacrifice, to unlock powerful magic.`,
+            `Seasonal Offerings: Magic users make specific offerings during certain times of the year, aligning their magic with seasonal energies.`,
+            `Inherited Sacrifice: Magic users inherit a burden or quest from their ancestors, and fulfilling it grants them access to ancestral magic.`
+            ],
+    
+        "Emotional States: Certain emotions or states of mind, such as anger, love, or fear, can trigger or enhance magical abilities.":
+            [
+            `Empathic Amplification: Magic users can tap into the emotions of others, channeling their feelings to amplify their own magical power.`,
+            `Emotional Resonance: Magic users can align their emotional state with a specific element or type of magic to enhance their spells related to that emotion.`,
+            `Emotional Empowerment: Certain environments or situations evoke specific emotions in magic users, granting them temporary boosts in magical strength.`,
+            `Emotional Absorption: Magic users can absorb and convert the emotional energy of others to fuel their own magical abilities.`,
+            `Emotional Manipulation: Magic users can manipulate the emotions of others, using them as a focus to direct their magic.`,
+            `Emotional Transference: Magic users can transfer their emotions into objects, infusing them with specific magical properties.`,
+            `Emotional Imbuement: Magic users can infuse their spells with the intensity of their emotions, making them more potent and harder to resist.`,
+            `Emotional Conversion: Magic users can convert one emotion into another, such as turning fear into courage or hate into love, to change the outcome of a spell.`,
+            `Emotional Anchoring: Magic users anchor specific emotions to their magical abilities, enabling them to trigger spells by tapping into those emotions.`
+            ],
+    
+        "Channeling from Nature: Magic users draw power from natural elements, like moonlight, sunlight, plants, or the elements.":
+            [
+            `Seasonal Affinity: Magic users are more attuned to specific elements or natural energies during certain seasons, gaining different magical abilities throughout the year.`,
+            `Ley Line Convergence: Magic users seek out areas where ley lines intersect, tapping into the powerful earth energies for heightened magical prowess.`,
+            `Celestial Alignments: Magic users harness the power of celestial events, such as eclipses or planetary conjunctions, to amplify their magical abilities.`,
+            `Starlight Meditation: Magic users meditate under the night sky, absorbing the magical energy of the stars to strengthen their spells.`,
+            `Elemental Embodiment: Magic users embody specific elements, like becoming one with a raging storm or merging with the tranquility of a forest, to wield their magic.`,
+            `Moon Phases: Magic users' powers fluctuate with the phases of the moon, being strongest during a full moon and weakest during a new moon.`,
+            `Nature's Balance: Magic users maintain a harmonious relationship with the natural world, ensuring the preservation of the environment in exchange for magical favors.`,
+            `Plant Kinship: Magic users forge deep connections with certain plants, gaining their unique magical properties and abilities.`,
+            `Elemental Rites: Magic users perform sacred rituals in specific natural settings to attune themselves to the elemental energies present.`,
+            `Solar Meditation: Magic users harness the energy of the sun through focused meditation, storing its power for future magical use.`,
+            `Symbiotic Familiars: Magic users form bonds with powerful creatures of nature, drawing strength from their companions' natural abilities.`,
+            `Crystal Resonance: Magic users attune themselves to specific crystals or gemstones, channeling their energies to augment their magical abilities.`,
+            `Nature's Memory: Magic users draw power from ancient trees or natural landmarks, tapping into the accumulated knowledge and energy of the land.`,
+            `Mystic Garden: Magic users cultivate enchanted gardens or groves, accessing the magical potential of the flora and fauna within their sanctuaries.`
+            ],
+    
+        "Inscriptions and Symbols: Spells are cast by drawing or inscribing magical symbols or runes.":
+            [
+            `Glyphic Script: Magic users write or carve intricate glyphs and symbols on surfaces, activating the spells when the symbols are traced or touched.`,
+            `Elemental Engravings: Magic users inscribe symbols associated with each element, channeling the elemental energies to create different magical effects.`,
+            `Living Tattoos: Magic users have magical tattoos that contain inscribed spells, and they can activate the spells by channeling their energy into the tattoos.`,
+            `Runestones: Magic users carry small stones or crystals inscribed with runes, activating the spells by invoking the runes' names.`,
+            `Ephemeral Inscriptions: Magic users inscribe temporary symbols or patterns in the air, which dissipate after the spell is cast.`,
+            `Luminous Imprints: Magic users inscribe glowing symbols on surfaces, and the luminous energy sustains the spell until the symbols fade.`,
+            `Holographic Glyphs: Magic users project three-dimensional holographic symbols, controlling the magic by manipulating the glyphs in the air.`,
+            `Blood Runes: Magic users use their own blood or the blood of others to inscribe powerful runes, activating the magic with a drop of blood.`,
+            `Celestial Pictograms: Magic users draw symbols inspired by the constellations or celestial events, connecting their magic to the stars.`,
+            `Artistic Sigils: Magic users incorporate magical symbols into their artwork, activating spells when they complete a masterpiece.`,
+            `Focal Inscriptions: Magic users inscribe symbols on items or objects to turn them into magical conduits for specific spell effects.`,
+            `Sonic Glyphs: Magic users inscribe symbols that resonate with specific sounds or frequencies, creating sonic-based spells.`,
+            `Dissolving Runes: Magic users inscribe symbols using special inks that disappear after activating the spell, leaving no trace behind.`,
+            `Crystal Glyphs: Magic users inscribe symbols on crystals, using the crystal's properties to enhance and direct the magic.`,
+            `Symbolic Memorization: Magic users memorize intricate patterns and symbols, casting spells by mentally recalling the inscriptions.`,
+            `Primordial Carvings: Magic users uncover ancient carvings or symbols on ancient artifacts, connecting with the wisdom and power of the past.`,
+            `Parchment Seals: Magic users inscribe symbols on parchment paper, using the sealed paper to contain and release the magic.`,
+            `Spatial Inscriptions: Magic users inscribe symbols in specific arrangements in the environment, shaping the magical effects in the designated area.`,
+            `Mirror Glyphs: Magic users inscribe symbols on mirrors, using their reflective properties to redirect or amplify the magical energy.`,
+            `Shadow Sigils: Magic users inscribe symbols using shadows, manipulating the play of light to activate their spells.`
+            ],
+    
+        "Inherent Abilities: Some beings are born with innate magical abilities, and spells are cast through their inherent powers.":
+            [
+            `Bloodline Magic: Certain magical abilities are passed down through bloodlines, with each generation inheriting unique powers.`,
+            `Elemental Affinity: Beings are born with an affinity for a specific element, and they can naturally manipulate that element for magical purposes.`,
+            `Aura Manipulation: Beings possess a unique aura that grants them various magical abilities, and they can alter their aura to access different powers.`,
+            `Essence Shaping: Beings can shape their inherent life force or essence to perform magical feats, using their own energy as a source of power.`,
+            `Symbiotic Bonds: Some beings are born with a symbiotic entity within them, and their symbiotic partner grants them magical abilities.`,
+            `Soul Magic: Beings can tap into the power of their soul to cast spells, utilizing the intrinsic connection between their soul and the magical essence.`,
+            `Conscious Creation: Beings can manifest their thoughts and desires into reality, shaping the world around them through their innate magical abilities.`,
+            `Chameleon Magic: Beings can adapt their magical abilities to mimic or absorb the powers of other magical creatures or beings they encounter.`,
+            `Astral Projection: Beings can naturally project their consciousness into the astral plane, accessing vast reserves of magical energy.`,
+            `Shape-shifting Sorcery: Beings have the ability to shape-shift into various forms, each form granting them different magical abilities.`,
+            `Dreamwalking: Beings can enter the dreams of others, using the dream realm as a conduit for their magical powers.`,
+            `Lifebond Enchantment: Beings form powerful bonds with specific living creatures, sharing their magical abilities with their bonded companions.`,
+            `Innate Enchantments: Beings are naturally attuned to magical energies, enchanting objects or items with their touch.`,
+            `Chaos Embodiment: Beings are embodiments of chaos or unpredictability, granting them unorthodox and spontaneous magical abilities.`,
+            `Universal Channeling: Beings can tap into the raw magical essence of the universe, wielding vast and unpredictable magical powers.`
+            ],
+    
+        "Shared Energy: Magic users can draw power from collective energy, such as from a group of people or a ley line.":
+            [
+            `Ritualistic Gatherings: Magic users perform rituals where a group comes together to collectively pool their energy, enabling powerful cooperative spells.`,
+            `Coven Bond: Members of a magical coven are bound together, and they can draw on the combined magical energy of the group for individual or collective spells.`,
+            `Ley Line Nexus: Magic users converge at specific ley line intersections, tapping into the potent energies flowing through these natural channels.`,
+            `Mystical Circles: Magic users stand within a circle or formation, linking their energy and creating a shared reservoir for spellcasting.`,
+            `Synchronized Chanting: Magic users chant or recite incantations in unison, harnessing the harmonized energy for magical effects.`,
+            `Community Ceremonies: Magic users rely on communal celebrations or festivals to draw energy from the collective joy, excitement, or reverence.`,
+            `Blood Oath Bonds: Magic users form bonds through blood oaths, and they can draw on each other's strength to fuel their magic.`,
+            `Spiritual Linking: Magic users connect through spiritual or telepathic means, sharing their energy to amplify their spellcasting.`,
+            `Symbolic Offerings: Magic users make symbolic offerings or sacrifices, and the collective energy of these acts fuels their magical endeavors.`,
+            `Mutual Amplification: Magic users channel their energy into a single focal point, where it combines and multiplies to create more potent spells.`,
+            `Emotional Nexus: Magic users synchronize their emotions, drawing on the collective emotional state to enhance their magical abilities.`,
+            `Temporal Convergence: Magic users align their actions or spells to coincide with significant temporal events, accessing the heightened energies of those moments.`,
+            `Conduit Bonding: Magic users form a bond with a specific magical conduit or artifact, enabling them to share and amplify each other's magic.`,
+            `Guiding Elders: Novice magic users draw power from the guidance and support of experienced elders, benefiting from their wisdom and energy.`,
+            `Sacred Grounds: Magic users gather in sacred or consecrated places, connecting with the mystical energies infused within the land.`,
+            `Unity Rites: Magic users perform rituals that symbolize unity and harmony, creating a shared resonance that strengthens their spells.`,
+            `Celestial Alignment: Magic users synchronize their spellcasting with celestial events, aligning their magic with the greater cosmic energies.`,
+            `Elemental Fusion: Magic users of different elemental affinities combine their powers, creating powerful fusion spells through shared energy.`,
+            `Parallel Minds: Magic users enter a meditative state where their minds become interconnected, accessing each other's magical potential.`,
+            `Conscious Network: Magic users form a mental network, where they can share and exchange magical energy with one another.`
+            ],
+    
+        "Artifacts or Tomes: Magic can be accessed through ancient artifacts or mystical tomes that contain hidden knowledge and spells.":
+            [
+            `Sentient Artifacts: Some artifacts have consciousness or spirits bound to them, and they grant access to their magic through communication or symbiosis.`,
+            `Memory Gems: Gems or crystals store ancient knowledge and spells, and magic users can access the information by attuning to the gem's energy.`,
+            `Oracular Tomes: Mystical tomes can reveal future events or hidden truths, and magic users can cast spells by consulting their prophecies.`,
+            `Living Grimoires: Tomes or books with their own magical sentience can reveal spells to magic users who prove worthy of their trust.`,
+            `Time-locked Artifacts: Ancient artifacts are sealed with time-based enchantments, and they can only be accessed by magic users in specific time periods.`,
+            `Cursed Codices: Dark tomes contain forbidden magic and dangerous spells, and magic users risk their sanity when accessing their power.`,
+            `Unbound Scrolls: Ancient scrolls contain powerful magic, but they must be carefully controlled as their magic can be volatile and hard to control.`,
+            `Elemental Relics: Artifacts imbued with the power of the elements grant magic users control over specific elemental forces.`,
+            `Dreamweaver Artifacts: Artifacts or tomes allow magic users to manipulate the dream realm, altering reality through the world of dreams.`,
+            `Temporal Artifacts: Ancient objects hold time-altering magic, enabling magic users to manipulate time or access lost memories.`,
+            `Location-Dependent Artifacts: Some artifacts can only be accessed or function in specific locations or under certain conditions.`,
+            `Book of Shadows: A magical tome unique to each magic user, containing their personal spells, experiences, and insights.`,
+            `Godly Artifacts: Artifacts are gifts from deities, granting magic users powers that align with the god's domain.`,
+            `Inscribed Relics: Artifacts with inscriptions in a lost or ancient language, requiring specialized knowledge to unlock their magical secrets.`,
+            `Leyline Catalysts: Artifacts that resonate with the energy of ley lines, amplifying magic when placed on these powerful natural pathways.`,
+            `Enigmatic Ciphers: Complex puzzles or codes must be solved to reveal the true spells and magic hidden within the artifact or tome.`,
+            `Alchemical Tomes: Magical tomes contain formulas and recipes for crafting potent potions and elixirs with unique magical effects.`,
+            `Worldshaper Artifacts: Artifacts with the power to reshape the landscape or bend reality, granting magic users control over their surroundings.`,
+            `Elemental Codices: Tomes focused on specific elemental magic, containing a wealth of knowledge and spells pertaining to a single element.`,
+            `Astral Maps: Artifacts or tomes with maps or diagrams that navigate the astral plane, allowing magic users to traverse it and draw power from celestial sources.`
+            ],
+    
+        "Divine Favor: Magic is granted by deities or higher beings as a reward or through prayer and devotion.":
+            [
+            `Divine Boons: Magic users receive specific blessings or boons from deities, granting them access to divine powers or miracles.`,
+            `Prayerful Invocation: Magic users can call upon the aid of deities through prayer and devotion, and their magical abilities are strengthened by divine intervention.`,
+            `Divine Mark: Chosen individuals bear a mark or symbol bestowed by a deity, signifying their special connection and access to divine magic.`,
+            `Divine Communion: Magic users can directly communicate with deities or higher beings, seeking their guidance and magic through communion.`,
+            `Sacrificial Rituals: Magic users perform sacred rituals or sacrifices to gain the attention and favor of deities, who then grant them magical abilities.`,
+            `Ancestral Blessings: Magic users inherit divine favor from their ancestors, linking them to a long line of blessed individuals.`,
+            `Divine Artifacts: Magic users possess or wield sacred artifacts gifted by deities, which allow them to channel divine magic.`,
+            `Divine Mandate: Chosen champions receive a divine mandate, compelling them to fulfill a specific purpose and granting them magical abilities to aid in their quest.`,
+            `Divine Intervention: In moments of great need or desperation, deities may directly intervene and grant magic users divine power to overcome challenges.`,
+            `Divine Revelations: Magic users receive visions or prophetic dreams from deities, revealing hidden knowledge and new spells.`,
+            `Divine Inspire: Magic users gain inspiration and creativity from the divine, allowing them to create unique and powerful magical effects.`,
+            `Holy Grounds: Magic users gain enhanced magical abilities when within sacred or consecrated places dedicated to their deity.`,
+            `Divine Trial: To prove their devotion, magic users undergo divine trials or tests, and success grants them access to divine magic.`,
+            `Divine Avatar: Deities can temporarily empower magic users as their avatars, allowing them to wield divine power for a limited time.`,
+            `Divine Namesake: Magic users are named or dedicated to a specific deity, and this connection grants them access to divine magic.`,
+            `Chosen Disciples: Deities select specific individuals as their disciples, teaching them divine magic and entrusting them with their divine will.`,
+            `Divine Resonance: Magic users resonate with the divine essence of their deity, enabling them to channel divine energy through their spells.`,
+            `Ascended Devotees: Devoted worshipers who have achieved spiritual enlightenment gain access to divine magic as a reward for their devotion.`,
+            `Divine Guidance: Magic users receive intuitive insights and instincts from their deity, guiding them in their spellcasting and actions.`,
+            `Divine Oaths: Magic users make solemn oaths or promises to serve their deity, and in return, they gain access to divine magic.`
+            ],
+    
+        "Music and Song: Magic is woven into melodic tunes or chants, and the power is released through musical performance.":
+            [
+            `Harmonic Weaving: Magic users create harmonies and melodies that intertwine with the natural flow of magic, shaping its energy through musical composition.`,
+            `Intricate Lyrics: Magic users craft songs with powerful, magical lyrics that invoke specific spells or enchantments.`,
+            `Rhythm Enchantments: Magic users create rhythmic patterns that resonate with the magical essence, bringing forth the desired magical effects.`,
+            `Enchanted Instruments: Magic users play enchanted instruments that amplify and focus their magical abilities, acting as conduits for their spells.`,
+            `Crescendo Spells: Magic users build up the intensity and tempo of their musical performance, culminating in a grand spell release.`,
+            `Orchestrated Rituals: Magic users coordinate group performances, where multiple musicians combine their magic to cast powerful and complex spells.`,
+            `Sonic Enchantment: Magic users sing or play music that mesmerizes and entrances their audience, opening their minds to suggestion or manipulation.`,
+            `Lullaby Magic: Magic users use soothing melodies or lullabies to calm, heal, or put others to sleep.`,
+            `Battle Symphony: Magic users perform battle songs that inspire allies and enhance their combat abilities, infusing them with magical prowess.`,
+            `Elemental Sonatas: Magic users compose music that resonates with the elements, invoking elemental forces to manifest as powerful spells.`,
+            `Musical Glyphs: Magic users inscribe musical symbols or notes, activating the magical effects when played or sung in the correct sequence.`,
+            `Synchronized Melodies: Magic users coordinate their music with specific celestial events, such as eclipses or solstices, to draw extra power from the cosmos.`,
+            `Spectral Harmonies: Magic users use their music to commune with spirits and ghosts, seeking their aid or binding them to their will.`,
+            `Echoing Chorus: Magic users create echoes and reverberations in their music, enhancing the magical resonance and potency of their spells.`,
+            `Dancing Lights: Magic users combine music with dancing, creating mesmerizing light displays that mirror the spell's effects.`,
+            `Bardic Enchantment: Magic users who possess exceptional musical talents can influence emotions and behavior through their performances.`,
+            `Melodic Illusions: Magic users use music to cast illusions, manipulating what others see and hear.`,
+            `Cacophonic Dissonance: Magic users perform dissonant music that disrupts and counters other magic, causing spells to misfire or fail.`,
+            `Soulful Invocation: Magic users infuse their songs with heartfelt emotion, drawing upon the power of their emotions to strengthen their magic.`,
+            `Symphony of Creation: Magic users compose intricate symphonies that tap into the primordial forces of creation, shaping reality with their music.`
+            ],
+    
+        "Physical Objects: Certain objects, like talismans or enchanted weapons, can be activated to release magical effects.":
+            [
+            `Enchanted Talismans: Magic users carry or wear small talismans imbued with magical energy, activating them to release specific spells or protective effects.`,
+            `Runed Weapons: Magic users wield weapons with inscribed runes, channeling magic through the weapon to enhance its strikes or unleash elemental attacks.`,
+            `Amulets of Warding: Magic users use amulets that create protective barriers or shields when activated, shielding them from harm.`,
+            `Spell-Infused Ink: Magic users write or draw magical symbols using enchanted ink, activating the symbols to unleash various spell effects.`,
+            `Charged Crystals: Magic users use crystals infused with magical energy, activating them to amplify their spellcasting or to release bursts of elemental power.`,
+            `Warded Lockets: Magic users keep small lockets or pendants with protective wards, which can be activated for a burst of magical defense.`,
+            `Scrolls of Power: Magic users craft scrolls containing written spells, which can be read aloud to release the magical effects.`,
+            `Charm Bracelets: Magic users wear bracelets adorned with charms representing different spells, activating them by touching or manipulating the charms.`,
+            `Enchanted Tools: Magic users use specialized tools, such as enchanted staffs, wands, or rods, to focus and direct their magical abilities.`,
+            `Glowing Stones: Magic users activate small enchanted stones, which radiate light or release magical effects when triggered.`,
+            `Arcane Dust: Magic users possess small pouches of enchanted dust, which can be sprinkled to produce magical effects or enhance other spells.`,
+            `Elemental Gems: Magic users carry gemstones attuned to specific elements, activating them to release elemental spells or manipulate their environment.`,
+            `Ancient Artifacts: Magic users wield powerful ancient artifacts, each with unique abilities and spell effects that can be activated by a specific action.`,
+            `Cursed Relics: Magic users possess cursed objects that, when activated, unleash dark and malevolent magic upon their foes.`,
+            `Magical Rings: Magic users wear rings enchanted with various magical effects, activating them by touching the ring to release their power.`,
+            `Divination Tools: Magic users use enchanted tools like crystal balls, scrying mirrors, or tarot cards to reveal hidden knowledge or glimpse the future.`,
+            `Bottled Essences: Magic users carry small vials filled with magical essences, which can be uncorked to release their stored power.`,
+            `Sigil-etched Arrows: Magic users shoot arrows with sigils etched onto their shafts, releasing magical effects upon impact.`,
+            `Inscribed Armor: Magic users wear armor with magical inscriptions, which can be activated to enhance their defense or grant temporary invulnerability.`,
+            `Bejeweled Circlets: Magic users wear circlets adorned with magical gemstones, activating them to gain mental clarity, enhanced perception, or mental control.`
+            ],
+    
+        "Alignment with the Stars: Magic users may tap into celestial alignments and astrological events to enhance their spells.":
+            [
+            `Lunar Attunement: Magic users draw power from the phases of the moon, accessing different magical abilities based on the lunar cycle.`,
+            `Zodiacal Influence: Magic users align their spells with the zodiac signs, channeling the unique attributes of each sign for specific magical effects.`,
+            `Celestial Conjunctions: Magic users harness the power of rare celestial events, such as eclipses or planetary alignments, to perform extraordinary spells.`,
+            `Constellation Weaving: Magic users focus their spells on specific constellations, invoking the stars' symbolic meanings to infuse their magic with corresponding attributes.`,
+            `Stellar Rituals: Magic users perform elaborate rituals during meteor showers or other stellar phenomena, tapping into the vast energies of the cosmos.`,
+            `Starbound Prophesy: Magic users interpret the positions of the stars to foretell future events and adjust their spellcasting accordingly.`,
+            `Astral Meditation: Magic users attune their minds to the celestial realms, deepening their magical connection and clarity through astral meditation.`,
+            `Star-Charged Artifacts: Magic users infuse objects with starlight or cosmic energy, empowering them with enhanced magical properties.`,
+            `Galactic Resonance: Magic users align their spells with the heartbeat of the galaxy, drawing power from the cosmic rhythm.`,
+            `Ecliptic Empowerment: Magic users tap into the influence of the ecliptic plane, where the paths of the sun and planets intersect, to bolster their spells.`,
+            `Celestial Oracles: Magic users seek counsel from seers who interpret the movements of celestial bodies, guiding their spellcasting decisions.`,
+            `Celestial Ascendancy: Magic users can temporarily ascend to a higher plane, gaining god-like abilities during specific celestial alignments.`,
+            `Stardust Infusion: Magic users use stardust in their spellcasting, enhancing their magic with the essence of distant stars.`,
+            `Nebula Convergence: Magic users can tap into the energy of nebulae, using their swirling and colorful patterns to enhance their magic.`,
+            `Aurora Manifestation: Magic users can manifest the auroras, shaping their colors and movements to influence their spells.`,
+            `Interstellar Connections: Magic users can forge connections with otherworldly beings from distant stars, gaining access to exotic and powerful spells.`,
+            `Starfire Incantations: Magic users invoke the essence of stars themselves, using starfire in their spells for explosive and radiant magical effects.`,
+            `Astrological Augmentation: Magic users cast spells with specific astrological alignments to augment the potency and precision of their magic.`,
+            `Starfall Rituals: Magic users perform rituals during meteor showers, harnessing the falling stars' energy for extraordinary spellcasting.`,
+            `Celestial Chorus: Magic users sing or chant celestial hymns, harmonizing with the cosmic vibrations to amplify their magical abilities.`
+            ],
+    
+        "Balance and Harmony: Some magical systems require the caster to achieve inner balance or harmony with the world before casting spells.":
+            [
+            `Meditative Spellcasting: Magic users must enter a deep state of meditation to achieve inner balance and connect with the magical energies before casting spells.`,
+            `Yin-Yang Alignment: Magic users need to balance opposing forces within themselves, such as light and dark, to access the full spectrum of magical abilities.`,
+            `Nature's Accord: Magic users must attune themselves to the natural world and find harmony with its elements before they can wield nature-based magic.`,
+            `Emotional Equilibrium: Magic users need to regulate their emotions and achieve emotional balance to prevent their magic from becoming unpredictable or volatile.`,
+            `Karmic Casting: Magic users' spells are influenced by their actions and intentions; they must maintain a karmic balance to ensure their magic remains effective.`,
+            `Ethical Resonance: Magic users' spells are influenced by their adherence to a particular ethical code; they must align their actions with their beliefs to cast powerful magic.`,
+            `Elemental Equipoise: Magic users must balance their affinities for different elements to maintain a stable and versatile magical practice.`,
+            `Harmonious Gesture: Magic users incorporate precise and balanced gestures into their spellcasting, emphasizing harmony in their movements.`,
+            `Cosmic Alignment: Magic users must align their actions with the cosmic order and the rhythm of the universe to access celestial magic.`,
+            `Inner Stillness: Magic users need to achieve inner calm and tranquility to access their magical potential fully.`,
+            `Chakra Activation: Magic users balance and activate their chakras to align their spiritual energy, enabling them to perform more powerful spells.`,
+            `Synchronized Breath: Magic users coordinate their breath with their spellcasting, harmonizing their life force with the magic they channel.`,
+            `Mental Clarity: Magic users must clear their minds of distractions and achieve mental clarity to focus their magic effectively.`,
+            `Physical Balance: Magic users incorporate physical exercises or movements into their spellcasting to maintain balance and improve magical control.`,
+            `Seasonal Attunement: Magic users must align their magic with the changing seasons, drawing on the unique energies of each time of the year.`,
+            `Celestial Equilibrium: Magic users need to synchronize their magic with the movements of celestial bodies to perform certain astronomical spells.`,
+            `Harmony with Beings: Magic users cultivate harmonious relationships with magical beings, such as spirits or familiars, to gain their aid in spellcasting.`,
+            `Symbolic Harmony: Magic users incorporate symbolic representations of balance and harmony into their spells to enhance their effects.`,
+            `Universal Connection: Magic users achieve a sense of oneness with the universe, allowing them to tap into the collective magic of all existence.`,
+            `Flowing Form: Magic users develop a fluid and flowing form of spellcasting, mirroring the smoothness of harmonious energies.`
+            ],
+    
+        "Forbidden Knowledge: Powerful spells can be accessed only by delving into dark and forbidden realms of magical knowledge.":
+            [
+            `Necromantic Arts: Magic users delve into the forbidden realm of necromancy, harnessing the power of death and the afterlife to perform dark and potent spells.`,
+            `Eldritch Tomes: Magic users seek forbidden knowledge hidden within ancient and eldritch tomes, risking their sanity to gain access to powerful spells.`,
+            `Taboo Rituals: Magic users perform rituals that are forbidden by society or magical orders, harnessing forbidden energies to cast powerful spells.`,
+            `Blood Pacts: Magic users make dark bargains with malevolent entities, exchanging their soul or service for access to forbidden and dangerous magic.`,
+            `Abyssal Invocation: Magic users tap into the abyssal void, channeling chaotic and destructive energies to fuel their forbidden spells.`,
+            `Curses and Hexes: Magic users explore the dark arts of curses and hexes, inflicting calamities and misfortune upon their enemies.`,
+            `Shadow Magic: Magic users delve into the realm of shadows, manipulating darkness and exploiting its secrets for potent spellcasting.`,
+            `Forbidden Inscriptions: Magic users uncover ancient runes and symbols that are forbidden due to their dangerous and unpredictable nature.`,
+            `Demonology: Magic users study the forbidden art of summoning and commanding demons, gaining access to immense power at a grave cost.`,
+            `The Dark Underworld: Magic users journey into the depths of the underworld, communing with malevolent entities for forbidden magical knowledge.`,
+            `Eclipse Rites: Magic users seek forbidden rituals during solar or lunar eclipses, accessing dark and otherworldly magic.`,
+            `Sacrificial Magic: Magic users perform forbidden rituals that involve sacrificing living beings to attain powerful and destructive spells.`,
+            `Madness Invocation: Magic users venture into forbidden realms of insanity, embracing madness to gain unique insights and magical abilities.`,
+            `Occult Alchemy: Magic users experiment with forbidden alchemical processes, seeking to transmute reality and tap into hidden magical forces.`,
+            `Malediction Mastery: Magic users become masters of casting malevolent curses and hexes, able to inflict severe and lasting harm on their targets.`,
+            `Chaos Sorcery: Magic users dabble in the forbidden magic of chaos, wielding unpredictable and chaotic energies to alter reality.`,
+            `Forbidden Familiars: Magic users form pacts with forbidden entities as familiars, gaining access to forbidden magical knowledge through these dark companions.`,
+            `Cursed Artefacts: Magic users seek out cursed objects or artifacts, unlocking their potent magical potential but risking personal consequences.`,
+            `Ancestral Covenants: Magic users draw power from ancient and forbidden pacts made by their ancestors with dark entities or forces.`,
+            `Void Invocation: Magic users tap into the void between dimensions, harnessing its destructive energies for forbidden spells.`
+            ],
+    
+        "Dreams and Astral Projection: Magic users can cast spells through their dreams or while projecting their consciousness into the astral plane.":
+            [
+            `Oneiric Spellweaving: Magic users can weave spells directly into their dreams, and the magic takes effect upon waking or entering a lucid dream state.`,
+            `Astral Projection Magic: Magic users project their consciousness into the astral plane, where they can interact with and affect the physical world through astral magic.`,
+            `Dreamscape Manipulation: Magic users can alter the dreamscapes of others, influencing their dreams and emotions using magical techniques.`,
+            `Astral Channeling: Magic users use astral projection as a conduit to draw magical energies from the astral plane into the physical world, enhancing their spellcasting.`,
+            `Dreamwalking: Magic users traverse the dreams of others, entering their subconscious minds to influence or protect them.`,
+            `Astral Guardians: Magic users send their astral forms to guard or protect specific locations or individuals while their physical bodies remain elsewhere.`,
+            `Dream Recall: Magic users harness their dream memories to gain insights and foreknowledge, accessing hidden information through their dreams.`,
+            `Astral Illusions: Magic users create illusions by projecting their magic into the astral plane, making the illusions seem real to those experiencing them.`,
+            `Dream Manifestation: Magic users bring elements from the astral plane into the physical world through the power of their dreams.`,
+            `Ethereal Travel: Magic users travel great distances through the astral plane, covering vast territories in a fraction of the time it would take in the physical realm.`,
+            `Dream Enchantment: Magic users place enchantments on dream objects or beings, affecting them even when the dream ends.`,
+            `Astral Divination: Magic users use astral projection to access higher planes of existence, gaining insights and wisdom through interaction with celestial beings.`,
+            `Dreamtime Healing: Magic users perform healing rituals through their dreams, sending restorative energy to those in need.`,
+            `Astral Connections: Magic users forge connections with other astral travelers, forming networks of communication and support across great distances.`,
+            `Lucid Spellcasting: Magic users achieve lucid dreaming, where they can consciously control and shape their dreams to manifest magical effects.`,
+            `Astral Beasts: Magic users summon creatures or beings from the astral plane to aid them in the physical world.`,
+            `Dream Temples: Magic users construct ethereal sanctuaries in the astral plane, where they can conduct powerful rituals and harness unique energies.`,
+            `Astral Projection Combat: Magic users engage in magical duels in the astral plane, with the outcomes affecting the physical realm.`,
+            `Dreambound Artifacts: Magic users create enchanted objects or artifacts in their dreams, bringing them into reality upon awakening.`,
+            `Astral Memory Transfer: Magic users transfer memories and knowledge between individuals through their astral forms.`
+            ],
+    
+        "Contractual Pacts: Magic can be accessed through making deals or pacts with powerful entities or spirits.":
+            [
+            `Fiendish Bargains: Magic users strike pacts with infernal beings or demons, trading their souls or performing tasks in exchange for magical powers.`,
+            `Spiritual Agreements: Magic users form contracts with benevolent spirits or ethereal entities, gaining magical abilities in return for acts of service or offerings.`,
+            `Cosmic Covenants: Magic users make pacts with celestial beings or cosmic forces, aligning themselves with the powers of the stars or galaxies.`,
+            `Elemental Alliances: Magic users form agreements with elemental entities, attuning themselves to specific elements in exchange for magical prowess.`,
+            `Fey Pledges: Magic users enter pacts with fae creatures, receiving magical gifts or knowledge in return for fulfilling whimsical tasks.`,
+            `Ancestral Oaths: Magic users honor the pacts made by their ancestors with powerful entities, inheriting magical abilities from these past agreements.`,
+            `Divine Vows: Magic users make sacred vows or promises to deities, gaining access to divine magic in return for devotion and service.`,
+            `Nature's Covenants: Magic users forge bonds with the spirits of nature, gaining druidic or elemental magic through their connection with the natural world.`,
+            `Djinn Contracts: Magic users make deals with djinn or other wish-granting entities, receiving magical boons in exchange for granting the entity's desires.`,
+            `Eldritch Pledges: Magic users enter into pacts with eldritch beings from other dimensions, gaining access to forbidden and arcane magic.`,
+            `Soul Bonds: Magic users form deep connections with other individuals, sharing magical abilities through a mystical bond.`,
+            `Karmic Oaths: Magic users make pacts based on karma and balance, with the magic's potency tied to the purity of their intentions and actions.`,
+            `Tribal Alliances: Magic users form pacts with ancestral spirits or tribal guardians, gaining magic that reflects their cultural heritage.`,
+            `Dark Contracts: Magic users make ominous deals with malevolent entities, gaining access to dark and dangerous magic at a grave cost.`,
+            `Arcane Treaties: Magic users negotiate with ancient beings of arcane knowledge, accessing forgotten spells and secrets in exchange for their allegiance.`,
+            `Time-Warped Pacts: Magic users form contracts with time-manipulating entities, gaining access to temporal magic or glimpses of the future.`,
+            `Interdimensional Accords: Magic users make pacts with beings from other dimensions, tapping into their extradimensional powers.`,
+            `Star-Touched Bonds: Magic users forge connections with celestial beings, gaining access to stellar or celestial magic.`,
+            `Astral Oaths: Magic users make pledges with astral beings, receiving the ability to harness astral energy for their spells.`,
+            `Eternal Covenants: Magic users enter into timeless contracts with immortal entities, granting them access to ageless and everlasting magic.`
+            ]
+    }
+    const typeArray = Object.keys(magicMethods)
+    let a = searchArray(typeArray)
+    let b = searchArray(magicMethods[a])
+    console.log(a,b)
+    loopCountPrintList([a,b],"Method")
+}
+
+function magic() {
+    const typeArray = Object.keys(magics)
+    console.log(typeArray)
+
+    modifiers()
+    methods()
 
     function findPure(){
         let pureChoice = [searchArray(typeArray)]
