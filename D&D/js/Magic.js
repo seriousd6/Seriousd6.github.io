@@ -62,8 +62,7 @@ function shuffleSlicePrint(array, number) {
 function shuffleSlice(array, number) {
     return shuffle(array).slice(0, number)
 };
-function loopCountPrintList(array, id) {
-
+function loopPrintList(array, id) {
     final = array
     final.forEach(function(item) {
         let li = document.createElement("li");
@@ -17431,7 +17430,7 @@ function modifiers(){
         `Theme: ${searchArray(themeImagery)}`,
         `Status: ${searchArray(status)}`   
     ]
-    loopCountPrintList(modifiers,"Modifiers")
+    loopPrintList(modifiers,"Modifiers")
 };
 
 function methods(){
@@ -17852,12 +17851,12 @@ function methods(){
     let a = searchArray(typeArray)
     let b = searchArray(magicMethods[a])
     console.log(a,b)
-    loopCountPrintList([a,b],"Method")
+    loopPrintList([a,b],"Method")
 }
 
 function magic() {
     const typeArray = Object.keys(magics)
-    console.log(typeArray)
+
 
     modifiers()
     methods()
@@ -17872,12 +17871,12 @@ function magic() {
         document.getElementById("Mastery").innerHTML = ''
         
         document.getElementById("Magic").innerHTML = 'PURE:'
-        loopCountPrintList(pureChoice,"Magic")
-        loopCountPrintList([searchArray(magics[pureChoice].Source)], "Source")
-        loopCountPrintList(shuffleSlice(magics[pureChoice].Cost,2), "Cost")
-        loopCountPrintList(shuffleSlice(magics[pureChoice].Potency,2), "Potencies")
-        loopCountPrintList(shuffleSlice(magics[pureChoice].Accessibility,2), "Accessibility")
-        loopCountPrintList(shuffleSlice(magics[pureChoice].Mastery,2), "Mastery")
+        loopPrintList(pureChoice,"Magic")
+        loopPrintList([searchArray(magics[pureChoice].Source)], "Source")
+        loopPrintList(shuffleSlice(magics[pureChoice].Cost,2), "Cost")
+        loopPrintList(shuffleSlice(magics[pureChoice].Potency,2), "Potencies")
+        loopPrintList(shuffleSlice(magics[pureChoice].Accessibility,2), "Accessibility")
+        loopPrintList(shuffleSlice(magics[pureChoice].Mastery,2), "Mastery")
     }
     function findDual(){
         let dual = shuffleSlice(typeArray,2)
@@ -17892,27 +17891,27 @@ function magic() {
         document.getElementById("Mastery").innerHTML = ''
         
         document.getElementById("Magic").innerHTML = 'DUAL:'
-        loopCountPrintList(dual,"Magic")
+        loopPrintList(dual,"Magic")
         let souAr = []
         souAr.push(searchArray(magics[primary].Source))
         souAr.push(searchArray(magics[secondary].Source))
-        loopCountPrintList(souAr, "Source")
+        loopPrintList(souAr, "Source")
         let cosAr = []
         cosAr.push(searchArray(magics[primary].Cost))
         cosAr.push(searchArray(magics[secondary].Cost))
-        loopCountPrintList(cosAr, "Cost")
+        loopPrintList(cosAr, "Cost")
         let potAr = []
         potAr.push(searchArray(magics[primary].Potency))
         potAr.push(searchArray(magics[secondary].Potency))
-        loopCountPrintList(potAr, "Potencies")
+        loopPrintList(potAr, "Potencies")
         let accAr = []
         accAr.push(searchArray(magics[primary].Accessibility))
         accAr.push(searchArray(magics[secondary].Accessibility))
-        loopCountPrintList(accAr, "Accessibility")
+        loopPrintList(accAr, "Accessibility")
         let masAr = []
         masAr.push(searchArray(magics[primary].Mastery))
         masAr.push(searchArray(magics[secondary].Mastery))
-        loopCountPrintList(masAr, "Mastery")
+        loopPrintList(masAr, "Mastery")
     }
     function findTrio(){
         let trio = shuffleSlice(typeArray,3)
@@ -17928,32 +17927,32 @@ function magic() {
         document.getElementById("Mastery").innerHTML = ''
         
         document.getElementById("Magic").innerHTML = 'TRIO:'
-        loopCountPrintList(trio,"Magic")
+        loopPrintList(trio,"Magic")
         let souAr = []
         souAr.push(searchArray(magics[t1].Source))
         souAr.push(searchArray(magics[t2].Source))
         souAr.push(searchArray(magics[t3].Source))
-        loopCountPrintList(souAr, "Source")
+        loopPrintList(souAr, "Source")
         let cosAr = []
         cosAr.push(searchArray(magics[t1].Cost))
         cosAr.push(searchArray(magics[t2].Cost))
         cosAr.push(searchArray(magics[t3].Cost))
-        loopCountPrintList(cosAr, "Cost")
+        loopPrintList(cosAr, "Cost")
         let potAr = []
         potAr.push(searchArray(magics[t1].Potency))
         potAr.push(searchArray(magics[t2].Potency))
         potAr.push(searchArray(magics[t3].Potency))
-        loopCountPrintList(potAr, "Potencies")
+        loopPrintList(potAr, "Potencies")
         let accAr = []
         accAr.push(searchArray(magics[t1].Accessibility))
         accAr.push(searchArray(magics[t2].Accessibility))
         accAr.push(searchArray(magics[t3].Accessibility))
-        loopCountPrintList(accAr, "Accessibility")
+        loopPrintList(accAr, "Accessibility")
         let masAr = []
         masAr.push(searchArray(magics[t1].Mastery))
         masAr.push(searchArray(magics[t2].Mastery))
         masAr.push(searchArray(magics[t3].Mastery))
-        loopCountPrintList(masAr, "Mastery")
+        loopPrintList(masAr, "Mastery")
     }
     function findComplex(){
         let c1 = shuffleSlice(typeArray,1)
@@ -17970,37 +17969,37 @@ function magic() {
         document.getElementById("Mastery").innerHTML = ''
         
         document.getElementById("Magic").innerHTML = 'COMPLEX:'
-        loopCountPrintList(complexAr,"Magic")
+        loopPrintList(complexAr,"Magic")
         let souAr = []
         souAr.push(searchArray(magics[c1].Source))
         souAr.push(searchArray(magics[c2].Source))
         souAr.push(searchArray(magics[c3].Source))
         souAr.push(searchArray(magics[c4].Source))
         let cosAr = []
-        loopCountPrintList(souAr, "Source")
+        loopPrintList(souAr, "Source")
         cosAr.push(searchArray(magics[c1].Cost))
         cosAr.push(searchArray(magics[c2].Cost))
         cosAr.push(searchArray(magics[c3].Cost))
         cosAr.push(searchArray(magics[c4].Cost))
-        loopCountPrintList(cosAr, "Cost")
+        loopPrintList(cosAr, "Cost")
         let potAr = []
         potAr.push(searchArray(magics[c1].Potency))
         potAr.push(searchArray(magics[c2].Potency))
         potAr.push(searchArray(magics[c3].Potency))
         potAr.push(searchArray(magics[c4].Potency))
-        loopCountPrintList(potAr, "Potencies")
+        loopPrintList(potAr, "Potencies")
         let accAr = []
         accAr.push(searchArray(magics[c1].Accessibility))
         accAr.push(searchArray(magics[c2].Accessibility))
         accAr.push(searchArray(magics[c3].Accessibility))
         accAr.push(searchArray(magics[c4].Accessibility))
-        loopCountPrintList(accAr, "Accessibility")
+        loopPrintList(accAr, "Accessibility")
         let masAr = []
         masAr.push(searchArray(magics[c1].Mastery))
         masAr.push(searchArray(magics[c2].Mastery))
         masAr.push(searchArray(magics[c3].Mastery))
         masAr.push(searchArray(magics[c4].Mastery))
-        loopCountPrintList(masAr, "Mastery")
+        loopPrintList(masAr, "Mastery")
     }
     function findUltra(){
         let c1 = shuffleSlice(typeArray,1)
@@ -18018,7 +18017,7 @@ function magic() {
         document.getElementById("Mastery").innerHTML = ''
         
         document.getElementById("Magic").innerHTML = 'ULTRA:'
-        loopCountPrintList(complexAr,"Magic")
+        loopPrintList(complexAr,"Magic")
         let souAr = []
         souAr.push(searchArray(magics[c1].Source))
         souAr.push(searchArray(magics[c2].Source))
@@ -18026,34 +18025,34 @@ function magic() {
         souAr.push(searchArray(magics[c4].Source))
         souAr.push(searchArray(magics[c5].Source))
         let cosAr = []
-        loopCountPrintList(souAr, "Source")
+        loopPrintList(souAr, "Source")
         cosAr.push(searchArray(magics[c1].Cost))
         cosAr.push(searchArray(magics[c2].Cost))
         cosAr.push(searchArray(magics[c3].Cost))
         cosAr.push(searchArray(magics[c4].Cost))
         cosAr.push(searchArray(magics[c5].Cost))
-        loopCountPrintList(cosAr, "Cost")
+        loopPrintList(cosAr, "Cost")
         let potAr = []
         potAr.push(searchArray(magics[c1].Potency))
         potAr.push(searchArray(magics[c2].Potency))
         potAr.push(searchArray(magics[c3].Potency))
         potAr.push(searchArray(magics[c4].Potency))
         potAr.push(searchArray(magics[c5].Potency))
-        loopCountPrintList(potAr, "Potencies")
+        loopPrintList(potAr, "Potencies")
         let accAr = []
         accAr.push(searchArray(magics[c1].Accessibility))
         accAr.push(searchArray(magics[c2].Accessibility))
         accAr.push(searchArray(magics[c3].Accessibility))
         accAr.push(searchArray(magics[c4].Accessibility))
         accAr.push(searchArray(magics[c5].Accessibility))
-        loopCountPrintList(accAr, "Accessibility")
+        loopPrintList(accAr, "Accessibility")
         let masAr = []
         masAr.push(searchArray(magics[c1].Mastery))
         masAr.push(searchArray(magics[c2].Mastery))
         masAr.push(searchArray(magics[c3].Mastery))
         masAr.push(searchArray(magics[c4].Mastery))
         masAr.push(searchArray(magics[c5].Mastery))
-        loopCountPrintList(masAr, "Mastery")
+        loopPrintList(masAr, "Mastery")
     }
     let a = rollDice(100)
     if(a >80){
