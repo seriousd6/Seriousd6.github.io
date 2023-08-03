@@ -699,7 +699,6 @@ var obstacleMobility = [
     `Stalactite Fracture Deflection: A deflection system that redirects falling stalactites away from the wagon's path.`,
     `Cave Pressure Wave Detector: A detector that senses pressure waves from underground water or air currents, preventing surprises during cave travel.`,
     `Volcanic Lava Crust Reinforcer: A specialized coating that reinforces the wagon's surface to withstand temporary contact with lava crusts.`,
-    `Mineral Magnet Array: An array that attracts and collects valuable minerals and gems from the surrounding terrain.`,
     `Canyon Wind Funnel Control: A control system that optimizes the wagon's aerodynamics to handle strong canyon winds.`,
     `Abyssal Chasm Bridge Constructor: A constructor that generates stable bridges across abyssal chasms, ensuring safe passage.`,
     `Geospatial Mapping Chart: An enchanted chart that maps the wagon's trajectory, identifying potential geological hazards along the route.`,
@@ -940,8 +939,6 @@ var roof = [
 document.getElementById("Roof").innerHTML = ''
 loopPrintList([searchArray(roof)],"Roof")
 };
-
-
 function lights() {
 var insideLighting =[
     "Luminescent Crystals: These radiant crystals, harnessed from the depths of magical caverns, emit a gentle and enchanting glow, providing a calming ambiance inside the wagon.",
@@ -1352,9 +1349,6 @@ function exComEnh(x) {
     document.getElementById("ExEnh").innerHTML = ''
     loopPrintList(shuffleSlice(exCombatEnhancements,y),"ExEnh")
 };
-
-
-
 function frameEnh(x) {
 var framEnhance = [
     `Elemental Reinforcement Core: An elemental core embedded in the wagon's frame, enhancing its structural integrity and providing resistance to elemental damage.`,
@@ -1662,7 +1656,6 @@ let y = 1 + rollDice(2) + Math.floor(x/4)
 document.getElementById("FEnh").innerHTML = ''
 loopPrintList(shuffleSlice(framEnhance,y),"FEnh")
 };
-
 function emergency(x) {
 var emergency = [
     `Quick-Deploy Shelter Tent: A compact shelter tent that can be quickly set up outside the wagon for emergency rest and protection from the elements.`,
@@ -2154,8 +2147,6 @@ c.forEach(elem => outputArray.push(searchArray(tech[elem])))
 document.getElementById("Tech").innerHTML = ''
 loopPrintList(outputArray,"Tech")
 };
-
-
 function intSize() {
     var interiorSize = [
         "Logical Size: The interior of the wagon is logically designed to fit its external dimensions, providing ample space for passengers and cargo, but not exceeding what one would expect from its appearance.",
@@ -2172,7 +2163,6 @@ function intSize() {
     document.getElementById("Interior").innerHTML = ''
     loopPrintList([searchArray(interiorSize)],"Interior")
 };
-
 function furnishings(x) {
 let furnishings = [
     [//0- comfort
@@ -2721,6 +2711,7 @@ let furnishings = [
         "Oracle of Kindred Connections: A mystical oracle that reveals connections and shared destinies among strangers, deepening bonds of friendship."
     ],
     [//6- profession
+        `Mineral Magnet Array: An array that attracts and collects valuable minerals and gems from the surrounding terrain.`,
         `Capture Cube Mechanism: An advanced containment system within the wagon that can temporarily confine captured creatures or individuals securely.`,
         `Wildlife Observation Sphere: A spherical chamber with reinforced glass walls, allowing adventurers to observe and study captured creatures in their natural habitat.`,
         `Beast Taming Enclosure: An enclosure designed to foster a connection with captured beasts, making it easier to tame and train them for companionship or assistance.`,
@@ -2959,6 +2950,22 @@ document.getElementById("Furnishing").innerHTML = ''
 loopPrintList(outputArray,"Furnishing")
 };
 
-
+function wagonBuilder(x){
+    model()
+    purpose()
+    draughts()
+    seat()
+    wheels()
+    obMob()
+    modifications()
+    roof()
+    lights()
+    exComEnh(x)
+    frameEnh(x)
+    emergency(x)
+    techs(x)
+    intSize()
+    furnishings(x)
+}
 
 

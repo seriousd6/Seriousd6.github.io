@@ -46,6 +46,7 @@
 
     <div class="container">
         <div class="row">
+            <button class="col-2 btn btn-danger" type="button" onclick="wagonBuilder(a.value)">Roll for Wagon!</button>
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
         </div>
         <div class="row">
@@ -54,7 +55,6 @@
             </div>
         </div>
         <script>
-            
             let a = document.getElementById("Level")
             let aOut = document.getElementById("levelOutput")
             a.oninput = function() {
