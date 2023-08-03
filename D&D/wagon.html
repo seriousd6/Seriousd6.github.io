@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css" />
     <title>D&D Flavor Generators</title>
-    <script src="js/Magic.js"></script>
+    <script src="js/wagon.js"></script>
     <link rel="icon" type="image" href="../icon.bmp"/>
 
 </head>
@@ -35,52 +35,100 @@
                     <li class="breadcrumb-item"><a href="/D&D/Feywilds.html" style="color:white">Feywilds</a></li>
                     <li class="breadcrumb-item"><a href="/D&D/ather.html" style="color:white">Ather</a></li>
                     <li class="breadcrumb-item"><a href="/D&D/Monster_Builder.html" style="color:white">Monsters</a></li>
-                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Test</a>
-                        <li class="breadcrumb-item"><a href="/D&D/government.html" style="color:white">Government</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/magic.html" style="color:white">Magic</a></li>
+                    <li class="breadcrumb-item"><a href="/D&D/government.html" style="color:white">Government</a></li>
+                    <li style="font-weight: bold; color: red" class="breadcrumb-item active" aria-current="page">Wagon</a>
                     </li>
                 </ol>
             </nav>
         </div>
     </header>
 
-
     <div class="container">
         <div class="row">
             <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
         </div>
         <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" onclick="magic()">Magic Type</button>
-            <div class="col" id="Magic"></div>
+            <div class="col" style="border-style:double; border-width: 3px; border-color: rgb(54, 10, 64);">
+                <input type="range" min="1" max="20" value="1" step="1" class="slider" id="Level"> Level of Wagon <b id="levelOutput" style="color: rgb(30, 127, 6);"></b></input>
+            </div>
+        </div>
+        <script>
+            
+            let a = document.getElementById("Level")
+            let aOut = document.getElementById("levelOutput")
+            a.oninput = function() {
+            aOut.innerHTML = this.value;
+            }
+
+        </script>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="model()">Wagon Model</button>
+            <div class="col" id="Model"></div>
         </div>
         <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" disabled>Source of Magic</button>
-            <div class="col" id="Source"></div>
+            <button class="col-2  btn btn-secondary" type="button" onclick="purpose()">Purpose</button>
+            <div class="col" id="Purpose"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="seat()">Driver's Seat</button>
+            <div class="col" id="Seat"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="draughts()">Draught</button>
+            <div class="col" id="Animal"></div>
+        </div>
+
+        
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="wheels()">Wheels</button>
+            <div class="col" id="Wheels"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="obMob()">Obstacle Mobility</button>
+            <div class="col" id="ObMob"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="modifications()">Visual Modifications</button>
+            <div class="col" id="Mods"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="roof()">Roof Modification</button>
+            <div class="col" id="Roof"></div>
+        </div>
+        
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="frameEnh(a.value)">Frame Enhancements</button>
+            <div class="col" id="FEnh"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="exComEnh(a.value)">External Combat Enhancements</button>
+            <div class="col" id="ExEnh"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="emergency(a.value)">Emergency Features</button>
+            <div class="col" id="Emergency"></div>
+        </div>
+
+
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="techs(a.value)">Enhancing Technologies</button>
+            <div class="col" id="Tech"></div>
         </div>
 
         <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" disabled>Cost for Using it</button>
-            <div class="col" id="Cost"></div>
+            <button class="col-2  btn btn-secondary" type="button" onclick="lights()">Lighting</button>
+            <div class="col" id="Lights"></div>
         </div>
         <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" disabled>Strength of the Magic</button>
-            <div class="col" id="Potencies"></div>
+            <button class="col-2  btn btn-secondary" type="button" onclick="intSize()">Interior Size</button>
+            <div class="col" id="Interior"></div>
         </div>
         <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" disabled>How does a new user access it?</button>
-            <div class="col" id="Accessibility"></div>
+            <button class="col-2  btn btn-secondary" type="button" onclick="furnishings(a.value)">Furnishings</button>
+            <div class="col" id="Furnishing"></div>
         </div>
-        <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" disabled>What does Mastery look like?</button>
-            <div class="col" id="Mastery"></div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" onclick="methods()">Primary Method of Use</button>
-            <div class="col" id="Method"></div>
-        </div>
-        <div class="row">
-            <button class="col-2  btn btn-secondary" type="button" onclick="modifiers()">Modifiers</button>
-            <div class="col" id="Modifiers"></div>
-        </div>
+    
     </div>
 
     <footer>
