@@ -784,7 +784,6 @@ document.getElementById("ObMob").innerHTML = ''
 loopPrintList([searchArray(obstacleMobility)],"ObMob")
 };
 
-
 function modifications() {
 let mods = [
     "Weapon Racks: A wagon used for defense or military purposes can have visible weapon racks mounted on the sides, displaying spears, bows, or other armaments.",
@@ -1064,7 +1063,6 @@ var externalLighting = [
 document.getElementById("Lights").innerHTML = ''
 loopPrintList([`Interior: ${searchArray(insideLighting)}`,`Exterior: ${searchArray(externalLighting)}`],"Lights")
 };
-
 
 function exComEnh(x) {
     var exCombatEnhancements = [
@@ -1740,8 +1738,6 @@ let y = 1 + rollDice(2) + Math.floor(x/4)
 document.getElementById("Emergency").innerHTML = ''
 loopPrintList(shuffleSlice(emergency,y),"Emergency")
 };
-
-
 
 function techs(x) {
 let tech = [
@@ -2966,6 +2962,6 @@ function wagonBuilder(x){
     techs(x)
     intSize()
     furnishings(x)
-}
+};
 
 

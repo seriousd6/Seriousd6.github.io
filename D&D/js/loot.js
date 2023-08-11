@@ -148,6 +148,30 @@ function reload() {
 /*-----------------------------Page Scripts Below-----------------------------------*/
 /*==================================================================================*/
 
+
+/*
+
+**historal events
+words for ruler
+things to be drinking
+Words for showing
+facial expressions
+art source array
+cultural motifs array
+types of fancy clothes
+fancy clothes materials
+what are the categories art would cover
+mirrors to society
+stories
+history
+values
+beliefs
+social norms
+hopes
+fears
+
+*/
+
 function pickDirection(){
     return searchArray([ 'north', 'south', 'east', 'west', 'northeast', 'northwest', 'southeast', 'southwest' ])
 }
@@ -2300,19 +2324,33 @@ function artGenerator() {
     document.getElementById("Art").innerHTML = ""
     let pottery = [
         "vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray",
-        "Dish", "Cup", "Mug", "Saucer", "Pitcher", "Casserole", "Urn","Chalice", "Stein", "Crock", "Tureen", "Ramekin", "Gravy Boat", "Basin", "Goblet", "Kiln", "Cauldron", "Flagon",  "Censer",  "Serving Dish"
+        "Dish", "Cup", "Mug", "Saucer", "Pitcher", "Casserole", "Urn","Chalice", "Stein", "Crock", "Tureen", "Ramekin", "Gravy Boat", 
+        "Basin", "Goblet", "Kiln", "Cauldron", "Flagon",  "Censer",  "Serving Dish"
         ]
     let jewelry = [
-        "arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "broach", "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",`faberge ${searchArray(['figurine','doll','skull', 'egg','box','vessel'])}`, "tiara", "bangle", "pendant", "belly chain", "toe ring", "cufflinks", "signet ring", "hairpin", "nose ring", "torc", "lapel pin", "hair comb", "cameo", "circlet", "medallion", "waist chain", "prayer chain", "clasp", "diadem", "belly ring", "bookmarker", "chatelaine", "ear cuff", "fob watch", "snuff box", "faberge ", "garter belt", "hatpin", "ceremonial dagger", "body chain", "opera glasses", "walking stick", "cane"
+        "arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "broach", 
+        "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",
+        `faberge ${searchArray(['figurine','doll','skull', 'egg','box','vessel'])}`, "tiara", "bangle", "pendant", "belly chain", 
+        "toe ring", "cufflinks", "signet ring", "hairpin", "nose ring", "torc", "lapel pin", "hair comb", "cameo", "circlet", "medallion", 
+        "waist chain", "prayer chain", "clasp", "diadem", "belly ring", "bookmarker", "chatelaine", "ear cuff", "fob watch", "snuff box",
+        "garter belt", "hatpin", "ceremonial dagger", "body chain", "opera glasses", "walking stick", "cane"
         ]
     let gems = [ 
-        "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" 
+        "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", 
+        "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", 
+        "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", 
+        "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" 
         ]
     let size = [
-        "large", "small", "tiny", "life-size", "huge", "gargantuan"
+        "large", "small", "tiny", "life-size", "huge", "gargantuan", "miniature", "medium", "oversized", "petite", "colossal", "mammoth", "modest", 
+        "compact", "towering", "grandiose", "immense", "pocket-sized", "room-filling", "dominant", "dainty"
         ]
     let many = [
-        "a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of","a multitude of", "a swarm of", "a collection of", "a flock of", "a gathering of", "a handful of", "An assembly of", "a horde of", "a myriad of", "a band of", "a host of", "a throng of", "a cluster of", "a pack of", "a troop of", "a legion of", "an array of", "a battalion of", "an ensemble of", "a platoon of", "a squadron of", "a mass of", "a congregation of", "a posse of", "a sea of", "a team of", "an abundance of", "a pile of", "a crowd of", "a colony of", "an expanse of"
+        "a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of","a multitude of", 
+        "a swarm of", "a collection of", "a flock of", "a gathering of", "a handful of", "An assembly of", "a horde of", "a myriad of", 
+        "a band of", "a host of", "a throng of", "a cluster of", "a pack of", "a troop of", "a legion of", "an array of", "a battalion of", 
+        "an ensemble of", "a platoon of", "a squadron of", "a mass of", "a congregation of", "a posse of", "a sea of", "a team of", "an abundance of", 
+        "a pile of", "a crowd of", "a colony of", "an expanse of"
         ]
     let monster = [
         [//sentient
@@ -2323,23 +2361,34 @@ function artGenerator() {
         ]
         ]
     let eventRandomizer = [
-        'battle', 'deal', 'bargain', 'wedding',"treaty", "alliance", "duel", "peace talks", "trade agreement", "summit", "ceasefire", "conquest", "expedition", "exploration", "merger", "collaboration", "diplomatic mission", "cultural exchange", "religious conversion", "invasion", "colonization", "migration", "revolution", "scientific discovery", "armistice", "secession", "debate", "uprising", "signing of a charter", "landmark legislation", "exposition", "intercultural celebration", "joint invention", "reconciliation"
+        'battle', 'deal', 'bargain', 'wedding',"treaty", "alliance", "duel", "peace talks", "trade agreement", 
+        "summit", "ceasefire", "conquest", "expedition", "exploration", "merger", "collaboration", "diplomatic mission", 
+        "cultural exchange", "religious conversion", "invasion", "colonization", "migration", "revolution", "scientific discovery", 
+        "armistice", "secession", "debate", "uprising", "signing of a charter", "landmark legislation", "exposition", "intercultural celebration", "joint invention", "reconciliation"
         ]
     let tool = [
-        'weapon', 'tool', 'treasure chest', 'sword', 'spade'
+        'weapon', 'tool', 'treasure chest', 'sword', 'spade', "torch", "book", "scroll", "lantern" , "shield"
         ]
     let item = [
-        'whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 'mug', 'cup', 'tankard', 'bottle', 'plate', 'plow', 'pot', 'pan', 'lamp', 'rug', 'hammer', 'goblet', 'chest', 'tankard of alcohol', 'feather', 'oar', 'cask', 'harp', 'lute', 'necklace', 'bracelet', 'comb', 'crown', 'ring', 'oil-lamp', 'potion', 'gem', 'scroll', 'wand', 'horseshoe', 'pike', 'bow', 'pair of slippers', 'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle'
+        'whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 
+        'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 
+        'mug', 'cup', 'tankard', 'bottle', 'plate', 'plow', 'pot', 'pan', 'lamp', 'rug', 'hammer', 'goblet', 'chest', 'tankard of alcohol', 'feather', 'oar', 
+        'cask', 'harp', 'lute', 'necklace', 'bracelet', 'comb', 'crown', 'ring', 'oil-lamp', 'potion', 'gem', 'scroll', 'wand', 'horseshoe', 'pike', 'bow', 'pair of slippers', 
+        'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 
+        'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 
+        'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle'
         ]
     let location = [
-        "underfoot", "next to it", "in its mouth", "on its back"
+        "underfoot", "next to it", "in its mouth", "on its back",
+        "held captive by smaller creatures that serve it",
+        "surrounded by a protective barrier or force it conjures"
         ]
-    let ageDescriptor = ["younger", "older"]
+    let ageDescriptor = ["younger", "older", "adolescent", "mature", "childlike", "ancient", "middle-aged", "youthful", "elderly", "infantile", "senior", "juvenile", "venerable", "baby-faced", "grizzled", "time-worn", "nascent", "seasoned", "veteran", "fresh-faced"]
     let adultGender = ["man", "woman"]
     let anyAgeGender = ["man", "woman", "boy", "girl"]
     let youngGender = ["boy", "girl"]
-    let age = ['child', 'adolescent']
-    let ruler = ['king','queen', 'warlord']
+    let age = ['child',"preteen", 'adolescent', "young adult", "middle-aged", "mature adult", "senior", "elder"  ]
+    let ruler = ['king','queen', 'warlord',"emperor", "empress", "monarch", "pharaoh", "sultan", "shah", "kaiser", "czar", "tsar", "caliph", "duke", "duchess", "prince", "princess", "regent", "lord", "lady", "chieftain", "chief", "patriarch" , "matriarch", "sovereign", "governor", "despot", "tyrant", "tribal leader", "noble", "baron", "baroness", "magnate", "sheikh", "vizier"]
     let historicalEvent = [
         "a creation myth", 
         "a constellation", 
@@ -2368,22 +2417,112 @@ function artGenerator() {
         `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster[0])}s and ${searchArray(monster[0])}s`
     ]
 
-    let time = ['beautiful but wrong',"somehow up to date", "changing-in-real-time", "slightly outdated"]
+    let time = [
+        'beautiful but wrong',
+        "somehow up to date", 
+        "changing-in-real-time", 
+        "slightly outdated",
+        "meticulously detailed",
+        "rough sketch",
+        "impressionistic",
+        "historically accurate for its time",
+        "artistically embellished",
+        "modernized rendition",
+        "generally reliable",
+        "needs recalibration",
+        "abstract representation",
+        "lacking crucial details",
+        "with noticeable omissions",
+        "compiled from various sources",
+        "faithful to the original",
+        "topographically precise",
+        "with artistic liberties",
+        "dated but valuable",
+        "showing visible wear and corrections",
+        "cross-referenced for accuracy",
+        "showing only specific features",
+        "reliably comprehensive",
+        "with speculative territories",
+        "hand-drawn and approximate",
+        "fading but legible",
+        "stylized for aesthetic appeal"
+    ]
 
-    let drink = ["tankard of mead", "cup of ale", "glass of wine", "goblet of blood"]
-    let scene = ['swamp', 'mire', 'bridge', 'gate', 'road', 'paradise', 'fort', 'house', 'hut', 'keep', 'garden', 'room', 'sanctum', 'asylum', 'hideaway', 'refuge', 'shelter', 'shack', 'den', 'clearing', 'dungeon', 'castle', 'cottage', 'dungeon', 'field', 'camp', 'lean-to', 'mountain', 'cave', 'town', 'city', 'lake', 'pond', 'lair', 'chamber', 'hovel', ]
-    let weapons = ["sword", "dagger", "axe", "mace", "staff", "wand", "quarterstaff", "broadsword", "skull", "book", ]
-    let bodyparts = ["eyes", "teeth", "external markings", "claws"]
-    let audience = ["royals", "monsters", "commoners", "villagers", "dragons", "tavern patrons", "heroes", `${findRace()}s`, `${searchArray(monster)}s`]
-    let instruments = ["a harpsichord", "a piano", "a pipe organ", "bells", "chimes", "drums", "a gong", "a fiddle", "a harp", "a lute", "a mandolin", "a flute", "pan pipes", "a shawm", "a trumpet"]
-    let color = [`black`, `pink`, `red`, `hazel`, `indigo`, `purple`, `rainbow`, `white`, `lime`, `grey`, `green`, `brown`, `orange`, `blue`, `yellow`, `gold`, `turquoise`, 'pearlescent']
-    let projectile = ["dart", "javelin", "arrow", "wood splinter", "glass shard", "metal shrapnel", "spear"]
-    let celebration = ["a bonfire", "a feast table", "an encampment", "a pile of bodies", "a pole in the center of town", "a pile of gold and gems"]
-    let hair = ["long flowing", "short", "no"]
-    let mount = ["dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose"]
-    let organization = ['theives guild', 'city', 'temple', "oracle's", "king's"]
-    let facialExpression = ["awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning"]
-    let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying',]
+    let drink = [
+        "tankard of mead", "cup of ale", "glass of wine", "goblet of blood","flask of elixir", "horn of grog", "chalice of ambrosia", "bottle of enchanted brew", 
+        "vial of moonlight", "jar of faerie nectar", "phial of liquid mana", "mug of root beer", "potion of invincibility", "urn of ancient tea", 
+        "carafe of crystalline water", "tumbler of sapphire gin", "glass of midnight absinthe", "jug of molten gold", "steaming cauldron of witch's broth", 
+        "glass flute of sparkling fairy champagne", "beaker of alchemical concoction", "bowl of druidic herbal infusion", "shot of dragon's fire", 
+        "mug of dwarven stout", "goblet filled with mermaid tears", "glass of starlight liqueur", "cup of ethereal mist", "horn filled with centaur's cider", "chalice of dark void"
+    ]
+    let scene = [
+        'swamp', 'mire', 'bridge', 'gate', 'road', 'paradise', 'fort', 'house', 'hut', 'keep', 'garden', 'room', 'sanctum', 'asylum', 'hideaway', 'refuge', 
+        'shelter', 'shack', 'den', 'clearing', 'dungeon', 'castle', 'cottage', 'dungeon', 'field', 'camp', 'lean-to', 'mountain', 'cave', 'town', 'city', 'lake', 
+        'pond', 'lair', 'chamber', 'hovel', ]
+    let weapons = [
+        "sword", "dagger", "axe", "mace", "staff", "wand", "quarterstaff", "broadsword", "skull", "book", "spear", "halberd", "flail", "morningstar", "warhammer", "scimitar", "katana", 
+        "longbow", "falchion", "gladius", "whip", "rapier", "pike", "sabre", "war scythe"
+    ]
+    let bodyparts = ["eyes", "teeth", "external markings", "claws", "musculature definition", "osseous growths or bone extrusions", "crests or ridges", "underbelly texture or patterns"]
+    let audience = [
+        "royals", "monsters", "commoners", "villagers", "dragons", "tavern patrons", "heroes", `${findRace()}s`, `${searchArray(monster)}s`,
+        "merchants", "travelers", "wanderers", "knights", "warriors", "priests", "clerics", "mystics", "seers", "sailors", "pirates", "minstrels", 
+        "bards", "nymphs", "forest spirits", "dwarves", "miners", "elves", "elven lords", "faeries", "sprites", "witches", "wizards", "ghouls", 
+        "spirits", "beast tamers", "hunters", "children", "scholars", "sages", "thieves", "rogues", "merfolk", "sea creatures", "mountaineers", 
+        "highlanders", "nomads", "desert wanderers", "oracles", "fortune tellers", "goblins", "orcs", "centaurs", "satyrs", "angels", "demons", 
+        "noble courtiers", "diplomats", "adventurers", "farmers", "shepherds", "soldiers", "guards", "wild animals", "enchanted beasts"
+    ]
+    let instruments = [
+        "a harpsichord", "a piano", "a pipe organ", "bells", "chimes", "drums", "a gong", "a fiddle", "a harp", "a lute", "a mandolin", "a flute", "pan pipes", "a shawm", "a trumpet",
+    "a lyre", "a dulcimer", "a zither", "a bagpipe", "a hurdy-gurdy", "a viola da gamba", "a recorder", "a gemshorn", "a crumhorn", "a tambourine", "a rebec", "a psaltery", "a cittern", "a theorbo", "a sackbut"
+]
+    let color = [
+        "pearlescent",
+        "moonlit silver",
+        "sunflare orange",
+        "starshine blue",
+        "faerie green",
+        "phantom violet",
+        "mermaid teal",
+        "unicorn pink",
+        "eldritch black",
+        "dragon scale bronze",
+        "enchantment lavender",
+        "abyssal blue",
+        "wizard robe maroon",
+        "mystic rose",
+        "sorcerer's sapphire",
+        "goblin green",
+        "phoenix feather crimson",
+        "wyvern wing white",
+        "enigma ebony",
+        "twilight taupe",
+        "celestial cerulean",
+        "frostbite blue",
+        "inferno red",
+        "ethereal emerald",
+        "mystical mauve",
+        "shadowshade gray",
+        "potion pink",
+        "arcane amber",
+        "bewitched burgundy",
+        "chimera chartreuse",
+        "dream dust peach",
+        "fey frost",
+        "haunted heliotrope",
+        "illusionary indigo",
+        "jewel of the jinn ruby",
+        "knight's armor silver",
+        "lunar glow",
+        "midnight's allure"
+    ]
+    let projectile = ["dart", "javelin", "arrow", "wood shard", "glass shard", "metal shrapnel", "spear", "crossbow bolt", "slingshot pellet", "boomerang", "throwing knife", "rock", "stone", "bolas", "net", "sling stone", "tomahawk", "fireball", "ice shard", "lightning bolt", "blowgun needle", "caltrop", "flaming arrow", "poisoned dart", "magic missile", "smoke bomb", "holy water vial"]
+    let celebration = [ "a bonfire", "a feast table", "an encampment", "a pile of bodies", "a pole in the center of town", "a pile of gold and gems", "a large ceremonial altar", "a grand throne or chair", "a magical fountain", "a towering statue or idol", "a decorated tree or plant", "a sacrificial pit", "a colossal tent or pavilion", "a stage for performers", "an intricate sand or flower mandala", "a chained mythical creature or beast", "a series of flag poles with banners", "an astronomical observatory", "a sacred relic or artifact on display", "a grand ship or vessel", "a floating platform or island", "a gleaming crystal or prism", "a woven tapestry telling a story", "a collection of rare and magical items", "a mural or fresco", "a fireworks launch site", "a book or scroll of prophecies", "a sacred stone or monument"]
+    let hair = ["long flowing", "short", "no", "braided", "wild and untamed", "sleek and straight", "curly and voluminous", "tightly coiled", "bald with tattoos", "mohawk", "topknot", "ponytail", "side-shaved", "rugged dreadlocks", "slicked back", "crown of braids", "windswept waves", "bun with ornamental pins", "twisted locs", "spiky", "feathered", "wispy", "long and silver", "thick mane", "short with a side part", "bedhead", "bald with a shining crown", "intricately styled", "wavy with highlights", "tight curls with a headband"]
+    let mount = ["dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose", "phoenix", "dire wolf", "giant eagle", "unicorn", "wyvern", "rhinoceros", "giant spider", "elephant", "manticore", "giant bat", "giant seahorse", "hippogriff", "giant snail", "giant turtle", "chimera", "giant stag", "floating disk", "giant owl", "mechanical steed", "nightmare", "ghostly apparition", "abyssal charger"]
+    let organization = ['theives guild', 'city', 'temple', "oracle's", "king's", "thieves guild", "city", "temple", "oracle's", "king's", "knight's order", "mage's academy", "alchemist's society", "hunter's lodge", "sailor's league", "merchant's union", "bard's college", "farmer's cooperative", "assassin's syndicate", "explorer's club", "healer's association", "blacksmith's forge", "druid's circle", "warrior's clan", "librarian's consortium", "monk's monastery", "priest's clergy", "adventurer's guild", "noble family", "courier's network", "guard's battalion", "craftsman's guild", "scholar's institution", "herald's office", "paladin's order", "ambassador's envoy", "brewer's tavern", "beastmaster's ring", "ranger's patrol", "jester's troupe"]
+    let facialExpression = ["awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning",     "contemplative", "pensive", "amused", "suspicious", "intrigued", "ecstatic", "shocked", "exasperated", "embarrassed", "daydreaming", "glaring", "confused", "hopeful", "bored", "anxious", "overwhelmed", "nonchalant", "melancholic", "horrified", "jubilant", "indifferent"]
+    let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying',  "illustrating", "revealing", "expressing", "demonstrating", "manifesting"]
 
     let status = [
         [ /*Stained Glass*/ "dusty", "dirty", "vandalized", "scratched", "broken", "faded", "discolored", "unfinished", "incomplete", "cracked", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
@@ -2394,7 +2533,7 @@ function artGenerator() {
         [ /*Relief*/ "dusty", "dirty", "vandalized", "scratched", "cracked", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
         [ /*Tapestry*/ "dusty", "dirty", "torn", "thread-bare", "worn", "water-stained", "shredded", "stained", "cut", "vandalised", "faded", "unfinished", "vibrant", "pristine", ],
         [ /*Fine Jewelry*/ "fine", "dusty", "dirty", "broken", "bent", "unfinished", "incomplete", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
-        [ /*Fine clothes*/ 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded'],
+        [ /*Fine clothes*/ 'fine', 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded'],
         [ /*Fine Armaments */ "dented and bent",'dusty','dirty','tarnished','pristine','broken',"in the claws of a statue", "trapped in crystalline amber",`veiled in thick cobwebs`,"camouflaged as a mundane item"],
     ]
     function weaponType() {
@@ -2486,7 +2625,8 @@ function artGenerator() {
         [ /*statues*/ "marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
         [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
         [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jeweled gold`, `${searchArray(gems)} jeweled platinum`, `${searchArray(gems)} jeweled electrum`, `${searchArray(gems)} jeweled silver`, `${searchArray(gems)} jeweled copper`, `${searchArray(gems)} jeweled gold with platinum inlay`, `${searchArray(gems)} jeweled gold and copper alloy`, `${searchArray(gems)} jeweled gold and silver alloy`, `solid ${searchArray(gems)}`],
-        [ /*Fine Clothes*/ "silk", `${searchArray(color)} velvet`, "spider-silk",`cloth of ${searchArray(['gold','platinum','silver','electrum'])}`],
+        [ /*Fine Clothes*/ "griffon feather weave", "chimera leather", "dragon scale mesh", "phoenix feather down", "nymph hair thread", `${searchArray(color)} brocade`, "moonbeam-infused linen", "sun ray-embroidered fabric", "starlit tulle", "basilisk hide", "unicorn mane weave", "elf-spun cotton", "fairy wing lace", "siren silk", "dwarf-forged chainmail", "titan-tanned leather", "celestial chiffon", "abyssal black denim", "shadow-woven satin", "mermaid scale sequins", "ether fabric", "enchanted ivy weave", "kraken skin leather", "gossamer of moonlight", "fabric of bottled starlight", "feywild silk", "roc feather cloth", "centaur hide suede", "banshee veil netting", "ethereal essence tulle", "minotaur horn mesh", "fabric woven from dreams", "cloth dipped in the River Styx", "satyr's beard wool", "clothes made of woven spells", "mystical lava-forged fabric", "giant squid ink dyed cloth", "dryad leaf linen", "vampire bat wing leather", "thread spun from prophecies", "changeling camouflage cloth", "phoenix ash infused fabric", "will-o'-the-wisp woven mesh", "sprite's shimmer scale sequins", "medusa hair thread", "troll skin rubberized fabric", "cloth blessed by ancient deities", "harpy's song-woven silk", "fabric of trapped tempests", "wendigo fur", "cloth soaked in eldritch energies"
+    ],
         [ /*Fine Armaments*/ "platinum","gold","copper","silver","silver with mithril inlay","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
     function classReturn() {
@@ -2504,26 +2644,47 @@ function artGenerator() {
             return searchArray(classes[0]);
         }
     }
+
+    let culturalEvents =[
+        'festivals','weddings','funerals','combat','singing','chanting','instrumentation','storytelling','gift-giving','feasting','dancing','body adornment','greetings','rite of passage','reenactments','competitions','races','gatherings'
+    ]
+    let culturalPurpose = [
+        'family','religion','community','social order','justice','food','shelter','water','safety','ethics','morality','knowledge','language',
+        'heritage','resilience','dignity','honor','work','technology','life','death','survival','nature','strength','harmony','balance','eternity','love'
+    ]
+    let reason = [
+        'preservation','celebratation','bonding','education','expression','entertainment','inspiration','rememberance'
+    ]
+    let writtenArtifact = [
+        "novel", "short story", "poem", "biography", "autobiography", "memoir", "drama", "journal", "diary", "letter", "speech", "how-to guide", "review", "critique", 
+        "anecdote", "allegory", "fable", "myth", "legend", "chronicle", "epic", "haiku", "sonnet", "eulogy", "sermon", "prose", "lyric", "script", "commentary",'series of proverbs'
+    ]
+    let physicalArtifact = [
+        "painting", "sculpture", "drawing", "print", "etching", "lithograph", "mosaic", "tapestry", "installation art", "performance art", "pottery", 
+        "ceramics", "glass art", "stained glass", "collage", "bas-relief", "high relief", "metalwork", "jewelry", "fiber art", "textile art", "wood carving", "stone carving", 
+        "assemblage", "kinetic sculpture", "found object art", "cast iron piece", "forged metal artwork", "wearable art", "diorama", "shadow box", "origami", "paper mâché", 
+        "murals", "frescoes", "land art"
+    ]
+
+
+
     function culture() {
-        let culturalEvents =[
-            'festival','wedding','funeral','combat','song','chant','instrumentation','story','gift','feast','dance','body adornment','greeting','rite of passage','reenactment','competition','race','gathering'
-        ]
-        let culturalPurpose = [
-            'family','religion','community','social order','justice','food','shelter','water','safety','ethics','morality','knowledge','language',
-            'heritage','resilience','dignity','honor','work','technology','life','death','survival','nature','strength','harmony','balance','eternity','love'
-        ]
-        let reason = [
-            'preservation','celebratation','bonding','education','expression','entertainment','inspiration','rememberance',''
-        ]
-
-
         let x = rollDice(100)
         if (x>77){
-            return `${searchArray([`cultural script describing a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)} for the purpose of ${searchArray(reason)}`,`cultural script describing a ritualistic ${searchArray(culturalEvents)} for the purpose of ${searchArray(reason)}`,`cultural script describing a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,`cultural proverbs on ${searchArray(culturalPurpose)} for ${searchArray(reason)}`])}`
+            return `${searchArray([`a ${searchArray(writtenArtifact)} describing ${searchArray(culturalEvents)} based on ${searchArray(culturalPurpose)} - for the purpose of ${searchArray(reason)}`,
+            `a ${searchArray(writtenArtifact)} describing ${searchArray(culturalEvents)} for the purpose of ${searchArray(reason)}`,
+            `a ${searchArray(writtenArtifact)} describing ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,
+            `a ${searchArray(writtenArtifact)} on ${searchArray(culturalPurpose)} for ${searchArray(reason)}`])}`
         } else if (x >33) {
-            return `${searchArray([`cultural artworks depicting a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)} for the purpose of ${searchArray(reason)}`,`cultural artworks depicting a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,`cultural artworks depicting a ritualistic ${searchArray(culturalEvents)} for the purpose of ${searchArray(reason)}`,`cultural imagery on ${searchArray(culturalPurpose)}`])}`
+            return `${searchArray([`a ${searchArray(physicalArtifact)} depicting ${searchArray(culturalEvents)} reinforcing the culure's beliefs on ${searchArray(culturalPurpose)} - made for the purpose of ${searchArray(reason)}`,
+            `a ${searchArray(physicalArtifact)} depicting a ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,
+            `a ${searchArray(physicalArtifact)} depicting a ${searchArray(culturalEvents)} for the purpose of ${searchArray(reason)}`,
+            `a ${searchArray(physicalArtifact)} depicting a ${searchArray(culturalPurpose)}`])}`
         } else {
-            return `${searchArray([`cultural symbols describing a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)} for the purpose of ${searchArray(reason)}`,`cultural symbols describing a ritualistic ${searchArray(culturalEvents)}for the purpose of ${searchArray(reason)}`,`cultural symbols describing a ritualistic ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,`cultural symbols on the concept of ${searchArray(culturalPurpose)}`])}`
+            return `${searchArray([`cultural symbols describing a ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)} for the purpose of ${searchArray(reason)}`,
+            `cultural symbols describing a ${searchArray(culturalEvents)}for the purpose of ${searchArray(reason)}`,
+            `cultural symbols describing a ${searchArray(culturalEvents)} around the concept of ${searchArray(culturalPurpose)}`,
+            `cultural symbols on the concept of ${searchArray(culturalPurpose)}`])}`
         }
     }
 
@@ -2553,9 +2714,29 @@ function artGenerator() {
             ${searchArray([`seemingly of ${findRace()} make with ${searchArray([`${culture()}`,`extraordinarily intricate designwork and filigree`])}`])}.`
         ],
         [//clothes
-            `A ${variableEvent(status,8)}fine set of ${searchArray(material[4])} 
-            ${searchArray([`${findRace()} ${searchArray([])} vestments`,'cultic vestments',
-            `vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,`${classReturn()} vestments`])}.`
+            `A ${variableEvent(status,8)} set of ${searchArray(material[4])} ${searchArray(
+                [`${findRace()} ${searchArray(culturalEvents)} vestments`,
+                'cultic vestments',
+                `vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,
+                `${classReturn()} vestments`,
+                'royal drapery',
+                'enchanter’s robe',
+                'diviner’s attire',
+                'time-honored ceremonial cloak',
+                'dimensional weaver’s outfit',
+                'Archmage robes',
+                `garments blessed by ${searchArray(['moon', 'sun', 'stars', 'ocean'])} deities`,
+                'sorceress evening gown',
+                'warrior prince tunic',
+                'grand oracle’s ensemble',
+                'sacred guardian attire',
+                'holy emissary’s raiments',
+                'cloak of ancient prophecies',
+                'time-traveler’s tailored suit',
+                'mystical seer’s garb',
+                'necromancer’s robe adorned with lost souls',
+                'grandmaster alchemist’s attire'
+            ])}.`
         ],
         [//manuscripts
             `illuminated manuscript`
@@ -4195,51 +4376,51 @@ function background() {
     ]
     const storyTemplate = [
         [
-            `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}.`,`${searchArray(verb[0])}.`])} ${variableEvent([ `${background()}`])}.`,
-            `${searchArray([`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${searchArray(monster[rollDice(1)])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster[rollDice(1)])}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster[rollDice(1)])}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster[rollDice(1)])} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray(verb[1])}. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(adjective,0)}${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}.`,
+            `${variableEvent(ageDescriptor)+findRace()+' '+ searchArray([`${searchArray(subject[0])}`,`${searchArray(adultGender)}`])+' '+ searchArray([`${searchArray(verb[1])}.`,`${searchArray(verb[0])}.`])} ${variableEvent([ `${background()}`])}`,
+            `${searchArray([`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${searchArray(monster[rollDice(1)])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${background()}`])}`,
+            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster[rollDice(1)])}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster[rollDice(1)])}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster[rollDice(1)])} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${background()}`])}`,
+            `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray(verb[1])}. ${variableEvent([ `${background()}`])}`,
+            `${variableEvent(adjective,0)}${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}`,
             `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}.`,
-            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} raising a ${searchArray(drink)}. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} with two ${searchArray(weapons)}s, one ${searchArray(['by each side', `in each ${variableEvent(["raised"])}hand`, "over each shoulder"])}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(monster[rollDice(1)])} with large and intricately detailed ${searchArray(bodyparts)}. ${variableEvent([ `${background()}`])}.`,
+            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} raising a ${searchArray(drink)}. ${variableEvent([ `${background()}`])}`,
+            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} with two ${searchArray(weapons)}s, one ${searchArray(['by each side', `in each ${variableEvent(["raised"])}hand`, "over each shoulder"])}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(monster[rollDice(1)])} with large and intricately detailed ${searchArray(bodyparts)}. ${variableEvent([ `${background()}`])}`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} with a sword and shield ${searchArray(['training for battle','playing with friends',`fighting an imposing ${searchArray(monster[rollDice(1)])}`])}.`,
             `${searchArray(monster[rollDice(1)])} on top of (a(n)) ${searchArray(item)} with a ${searchArray(organization)} crest on it.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} pouring a(n) ${searchArray(color)} liquid into a(n) ${searchArray(color)} flask.`,
             `${variableEvent([searchArray(facialExpression),'extremely detailed', 'tough-looking', 'badly beaten and bloodied',searchArray(adjective[0])])} ${variableEvent(ageDescriptor)}${findRace()} ${variableEvent([searchArray(subject[0]), searchArray(anyAgeGender)])}.`,
-            `${searchArray(item)} with various birds perched on it. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(subject[0])+" on a " + searchArray(mount)}. ${variableEvent([ `${background()}`])}.`,
-            `${findRace() +' ' + searchArray(['prince','princess','king','queen'])} ${searchArray(['in all of their royal finery','brought low and dragged through the streets','being coronated amongst a host of noble onlookers',])} ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(item)} with various birds perched on it. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(subject[0])+" on a " + searchArray(mount)}. ${variableEvent([ `${background()}`])}`,
+            `${findRace() +' ' + searchArray(['prince','princess','king','queen'])} ${searchArray(['in all of their royal finery','brought low and dragged through the streets','being coronated amongst a host of noble onlookers',])} ${variableEvent([ `${background()}`])}`,
         ],
         [
-            `gilded ceremonial ${searchArray(item)} being held by a(n) ${findRace()} ${searchArray(subject[0])}. ${variableEvent([ `${background()}`])}.`,
-            `crying ${findRace()} ${searchArray(anyAgeGender)} holding a(n) ${searchArray(item)} in their hands. ${variableEvent([ `${background()}`])}.`,
+            `gilded ceremonial ${searchArray(item)} being held by a(n) ${findRace()} ${searchArray(subject[0])}. ${variableEvent([ `${background()}`])}`,
+            `crying ${findRace()} ${searchArray(anyAgeGender)} holding a(n) ${searchArray(item)} in their hands. ${variableEvent([ `${background()}`])}`,
             `${variableEvent(time)}map, with the name of ${toWords(2+rollDice(10))}locations on it.`,
-            `snake coiled around (a(n)) ${searchArray(item)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(scene)}, a(n) ${searchArray(monster[rollDice(1)])}, and ${toWords(2+rollDice(4))}humanoid figures ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}.`,
-            `distraught ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} clutching their chest with one hand and reaching out with the other. ${variableEvent([ `${background()}`])}.`,
-            `winged ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} in a combat stance with a(n) ${searchArray(item)} in their hand. ${variableEvent([ `${background()}`])}.`,
-            `seated crying ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} holding a lifeless ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} in their arms. ${variableEvent([ `${background()}`])}.`,
-            `large group of mostly ${findRace()}s dancing and celebrating around ${searchArray(celebration)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray([`handsome bare chested ${variableEvent(ageDescriptor)}${findRace()} man with ${searchArray(hair)} hair with a(n) ${searchArray(weapons)} in his hand`,`beautiful ${variableEvent(ageDescriptor)}${findRace()} woman with ${searchArray(['long flowing', 'braided', 'buzzed','jewel decorated'])} hair with a(n) ${searchArray(weapons)} in her hand`])} riding a ${searchArray(mount)}. ${variableEvent([ `${background()}`])}.`,
-            `faceless angelic being holding a(n) ${searchArray(item)}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(size)} ${searchArray(monster[rollDice(1)])} daintily picking up a ${searchArray(item)} from the ground. ${variableEvent([ `${background()}`])}.`,
-            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster[rollDice(1)])}s looking at them. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing chess with a(n) ${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)}. ${variableEvent([ `${background()}`])}.`,
-            `group of ${searchArray(['adventurers', `${searchArray(subject[0])}s`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of'])} a ${searchArray(['campsite','village','city','battefield','cave','portal','wasteland'])}. ${variableEvent([ `${background()}`])}.`,
-            `${findRace()+' '+searchArray(adultGender)} in a ${searchArray(['flattering','relaxed','provocative','commanding'])} pose. ${variableEvent([ `${background()}`])}.`,
+            `snake coiled around (a(n)) ${searchArray(item)}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(scene)}, a(n) ${searchArray(monster[rollDice(1)])}, and ${toWords(2+rollDice(4))}humanoid figures ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}`,
+            `distraught ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} clutching their chest with one hand and reaching out with the other. ${variableEvent([ `${background()}`])}`,
+            `winged ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} in a combat stance with a(n) ${searchArray(item)} in their hand. ${variableEvent([ `${background()}`])}`,
+            `seated crying ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} holding a lifeless ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} in their arms. ${variableEvent([ `${background()}`])}`,
+            `large group of mostly ${findRace()}s dancing and celebrating around ${searchArray(celebration)}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray([`handsome bare chested ${variableEvent(ageDescriptor)}${findRace()} man with ${searchArray(hair)} hair with a(n) ${searchArray(weapons)} in his hand`,`beautiful ${variableEvent(ageDescriptor)}${findRace()} woman with ${searchArray(['long flowing', 'braided', 'buzzed','jewel decorated'])} hair with a(n) ${searchArray(weapons)} in her hand`])} riding a ${searchArray(mount)}. ${variableEvent([ `${background()}`])}`,
+            `faceless angelic being holding a(n) ${searchArray(item)}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(size)} ${searchArray(monster[rollDice(1)])} daintily picking up a ${searchArray(item)} from the ground. ${variableEvent([ `${background()}`])}`,
+            `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster[rollDice(1)])}s looking at them. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing chess with a(n) ${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)}. ${variableEvent([ `${background()}`])}`,
+            `group of ${searchArray(['adventurers', `${searchArray(subject[0])}s`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of'])} a ${searchArray(['campsite','village','city','battefield','cave','portal','wasteland'])}. ${variableEvent([ `${background()}`])}`,
+            `${findRace()+' '+searchArray(adultGender)} in a ${searchArray(['flattering','relaxed','provocative','commanding'])} pose. ${variableEvent([ `${background()}`])}`,
         ],
         [
-            `${searchArray(many)} ${searchArray(monster[rollDice(1)])}s ${searchArray(verb[0])}. ${variableEvent([ `${background()}`])}.`,
-            `${searchArray(many)} ${searchArray(subject[0])}s holding ${searchArray(tool)}s and ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}.`,
+            `${searchArray(many)} ${searchArray(monster[rollDice(1)])}s ${searchArray(verb[0])}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(many)} ${searchArray(subject[0])}s holding ${searchArray(tool)}s and ${searchArray(action[1])}. ${variableEvent([ `${background()}`])}`,
             `${searchArray(historicalEvent)}.`,
-            `two ${findRace()}s ${searchArray(verb[2])}. ${variableEvent([ `${background()}`])}.`,
-            `${toWords(5+rollDice(15))}humanoids of various races holding a(n) ${searchArray(item)} ${searchArray(holdingLocation)}. ${variableEvent([ `${background()}`])}.`,
+            `two ${findRace()}s ${searchArray(verb[2])}. ${variableEvent([ `${background()}`])}`,
+            `${toWords(5+rollDice(15))}humanoids of various races holding a(n) ${searchArray(item)} ${searchArray(holdingLocation)}. ${variableEvent([ `${background()}`])}`,
             `a schematic of all the planes of existence.`,
-            `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${background()}`])}.`,
-            `${toWords(2+rollDice(10))}${searchArray(monster[rollDice(1)])}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${background()}`])}.`,
+            `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${background()}`])}`,
+            `${toWords(2+rollDice(10))}${searchArray(monster[rollDice(1)])}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${background()}`])}`,
             `${searchArray([`a ${searchArray(['trial being held','hero being rewarded','disagreement','battle','vision','celebration',])} in a heavenly court`,`a ${searchArray(['deal being struck','souls being wagered','trial being held','villain being rewarded','disagreement','battle','vision','celebration'])} in a hellish court`,"a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
         ],
     ]
