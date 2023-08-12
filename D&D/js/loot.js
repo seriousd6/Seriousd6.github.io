@@ -1826,82 +1826,61 @@ function weapon() {
     function weaponGenerator() {
         function weaponType() {
             let x = rollDice(1000)
-            if (x < 4) {
-                return "Club"
-            } else if (x < 39) {
+            //ranged or MAGIC
+            if (x < 55) {
                 return "Dagger"
-            } else if (x < 43) {
-                return "Greatclub"
-            } else if (x < 67) {
-                return "Handaxe"
-            } else if (x < 75) {
-                return "Javelin"
-            } else if (x < 79) {
-                return "Light Hammer"
-            } else if (x < 149) {
-                return "Mace"
-            } else if (x < 172) {
+            } else if (x < 110) {
                 return "QuarterStaff"
-            } else if (x < 176) {
-                return "Sicle"
-            } else if (x < 213) {
-                return "Spear"
-            } else if (x < 230) {
-                return `${searchArray(["Tonfa","Tiger Claws","Knuck;e Dusters","Iron Fan","Katar","Emeici","Cestus","Tekko","Maduvu","Pata","Crecent Moon Knives","Knife Wheel"])} (fist weapon)`
-            } else if (x < 271) {
-                return "Light Crossbow"
-            } else if (x < 287) {
-                return "Dart"
-            } else if (x < 303) {
-                return "Shortbow"
-            } else if (x < 319) {
-                return "Sling"
-            } else if (x < 404) {
-                return "Battleaxe"
-            } else if (x < 413) {
-                return "Flail"
-            } else if (x < 420) {
-                return "Glaive"
-            } else if (x < 498) {
-                return "Greataxe"
-            } else if (x < 576) {
-                return "Greatsword"
-            } else if (x < 581) {
-                return "Halberd"
-            } else if (x < 586) {
-                return "Lance"
-            } else if (x < 773) {
-                return "Longsword"
-            } else if (x < 774) {
-                return "Maul"
-            } else if (x < 778) {
-                return "Morningstar"
-            } else if (x < 779) {
-                return "Pike"
-            } else if (x < 809) {
-                return "Rapier"
-            } else if (x < 848) {
-                return "Scimitar"
-            } else if (x < 887) {
-                return "Shortsword"
-            } else if (x < 891) {
-                return "Trident"
-            } else if (x < 893) {
-                return "War Pick"
-            } else if (x < 903) {
-                return "Warhammer"
-            } else if (x < 905) {
-                return "Whip"
-            } else if (x < 907) {
-                return "Blowgun"
-            } else if (x < 914) {
-                return "Hand Crossbow"
-            } else if (x < 955) {
-                return "Heavy Crossbow"
-            } else if (x < 996) {
+            } else if (x < 165) {
+                return "Crossbow"
+            } else if (x < 220) {
                 return "Longbow"
-            } else if (x < 1000) {
-                return "Net"
+            } else if (x < 275) {
+                return "Shortbow"
+            } else if (x < 335) {
+                return "Staff"
+            //1H
+            } else if (x < 365) {
+                return "Longsword"
+            } else if (x < 395) {
+                return "Rapier"
+            } else if (x < 425) {
+                return "Scimitar"
+            } else if (x < 455) {
+            return "Shortsword"
+            } else if (x < 485) {
+                return "Club"
+            } else if (x < 515) {
+                return "Fist Weapon"
+            } else if (x < 545) {
+                return "Handaxe"
+            } else if (x < 575) {
+                return "Javelin"
+            } else if (x < 605) {
+                return "Mace"
+            } else if (x < 635) {
+                return "Sicle"
+            //2h
+            } else if (x < 675) {
+                return "Greatclub"
+            } else if (x < 715) {
+                return "Spear"
+            } else if (x < 755) {
+                return "Battleaxe"
+            } else if (x < 795) {
+                return "Flail"
+            } else if (x < 835) {
+                return "Glaive"
+            } else if (x < 875) {
+                return "Greatsword"
+            } else if (x < 905) {
+                return "Halberd"
+            } else if (x < 930) {
+                return "Lance"
+            } else if (x < 960) {
+                return "Trident"
+            } else {
+                return "Warhammer"
             }
         }
         let damageTypes = [
@@ -2326,7 +2305,7 @@ function artGenerator() {
         "vase", "decanter", "pot", "jar", "jug", "plate", "platter", "tankard", "bowl", "oil-lamp", "teapot", "ewer", "tray",
         "Dish", "Cup", "Mug", "Saucer", "Pitcher", "Casserole", "Urn","Chalice", "Stein", "Crock", "Tureen", "Ramekin", "Gravy Boat", 
         "Basin", "Goblet", "Kiln", "Cauldron", "Flagon",  "Censer",  "Serving Dish"
-        ]
+    ]
     let jewelry = [
         "arm-band", "ring", "necklace", "choker", "crown", "scepter", "bracelet", "pair of earrings", "anklet", "chalice", "locket", "broach", 
         "music box", "jewelry box", "pocketwatch", "container", "whistle", "mirror"," horn",
@@ -2334,24 +2313,24 @@ function artGenerator() {
         "toe ring", "cufflinks", "signet ring", "hairpin", "nose ring", "torc", "lapel pin", "hair comb", "cameo", "circlet", "medallion", 
         "waist chain", "prayer chain", "clasp", "diadem", "belly ring", "bookmarker", "chatelaine", "ear cuff", "fob watch", "snuff box",
         "garter belt", "hatpin", "ceremonial dagger", "body chain", "opera glasses", "walking stick", "cane"
-        ]
+    ]
     let gems = [ 
         "azurite", "banded agate", "blue quartz", "cats eye agate", "hematite", "lapis lazuli", "malachite", "moss agate", "obsidian", 
         "rhodochrosite", "turquoise", "tiger eye","bloodstone", "carnelian", "chalcedony", "chrysoprase", "citrine", "jasper", "moonstone", 
         "quartz", "sardonyx", "zircon", "onyx", "star rose quartz","alexandrite", "aquamarine", "black pearl", "blue spinel", "peridot", 
         "topaz","black opal", "blue sapphire", "emerald", "fire opal", "opal", "star ruby", "star sapphire", "yellow sapphire","black sapphire", "diamond", "jacinth", "ruby" 
-        ]
+    ]
     let size = [
         "large", "small", "tiny", "life-size", "huge", "gargantuan", "miniature", "medium", "oversized", "petite", "colossal", "mammoth", "modest", 
         "compact", "towering", "grandiose", "immense", "pocket-sized", "room-filling", "dominant", "dainty"
-        ]
+    ]
     let many = [
         "a small group of", "a large group of", "a group of","a small army of", "a few", "a large force composed of","a multitude of", 
         "a swarm of", "a collection of", "a flock of", "a gathering of", "a handful of", "An assembly of", "a horde of", "a myriad of", 
         "a band of", "a host of", "a throng of", "a cluster of", "a pack of", "a troop of", "a legion of", "an array of", "a battalion of", 
         "an ensemble of", "a platoon of", "a squadron of", "a mass of", "a congregation of", "a posse of", "a sea of", "a team of", "an abundance of", 
         "a pile of", "a crowd of", "a colony of", "an expanse of"
-        ]
+    ]
     let monster = [
         [//sentient
         'aarakocra', 'aboleth', 'angel', 'azer', 'beholder', 'bugbear', 'bullywug', 'cambion', 'centaur', 'cyclops',  'death knight', 'demilich', 'demon', 'devil', 'doppleganger', 'dracolich', 'shadow dragon', 'dragon', 'dragon turtle', 'drider', 'dryad', 'duergar', 'empyrean', 'ettercap', 'ettin', 'faerie dragon', 'flameskull', 'flumph', 'genie', 'ghost', 'giant',  'gith', 'gnoll', 'goblin', 'golem', 'gorgon', 'grell', 'griffon', 'grimlock', 'hag', 'half dragon', 'harpy',  'helmed horror', 'hobgoblin', 'homunculus', 'intellect devourer', 'invisible stalker', 'jakalwere', 'kenku', 'kobold', 'kraken', 'kuo-toa', 'lamia', 'lich', 'lizardfolk', 'lycanthrope', 'magmin', 'manticore', 'medusa', 'mephits', 'merfolk', 'merrow', 'mimic', 'mind flayer', 'minotaur', 'modron',  'myconid', 'naga', 'nightmare', 'nothic', 'ogre', 'oni', 'otyugh', 'pegasus', 'peryton', 'pixie', 'psuedodragon', 'rakshasa', 'revenant', 'sahuagin', 'satyr', 'slaadi', 'specter', 'sphinx', 'sprite', 'succubus', 'incubus', 'thri-kreen', 'treant', 'troll', 'umber hulk', 'unicorn', 'vampire', 'wight', `will-o'-wisp`, 'wraith',  'xorn', 'yeti', 'yuan-ti', 'yugoloth', 
@@ -2359,16 +2338,16 @@ function artGenerator() {
         [//non-sentient
         'animated object', 'animated weapon', 'ankheg', 'banshee', 'basilisk', 'behir', 'blight', 'carrion crawler', 'chimera', 'chuul', 'cloaker', 'cockatrice', 'couatl', 'crawling claw', 'darkmantle','dinosaur', 'displacer beast', 'elemental', 'fungi', 'hippogriph', 'rust monster', 'ape', 'awakened tree', 'awakened shrub', 'hydra', 'fomorian', 'galeb duhr', 'gargoyle', 'axe beak', 'baboon', 'badger', 'bat', 'black bear', 'blink dog', 'grick', 'blood hawk', 'boar', 'brown bear', 'water weird', 'camel', 'cat', 'constrictor snake', 'crab', 'hook horror', 'gibbering mouther', 'crocodile', 'death dog', 'deer', 'dire wolf', 'draft horse', 'mummie','eagle', 'elephant', 'elk', 'owlbear', 'flying snake', 'frog', 'giant ape', 'giant badger', 'roper', 'skeleton', 'shadow', 'scarecrow', 'roc', 'salamander', 'remorhazes', 'stirge', 'terrasque', 'giant bat', 'troglodyte', 'giant boar', 'giant centipede', 'giant constrictor snake', 'giant crab', 'giant crocodile', 'giant eagle', 'shambling mound', 'shield guardian', 'giant elk', 'giant fire beetle', 'giant frog', 'purple worm', 'giant goat', 'zombie', 'giant hyena', 'wyvern', 'giant lizard', 'giant octopus', 'giant owl', 'giant poisonous snake', 'giant rat', 'giant scorpion', 'giant sea horse', 'giant shark', 'giant spider', 'quaggoth', 'giant toad', 'giant vulture', 'giant wasp', 'giant weasel', 'giant wolf spider', 'goat', 'hawk', 'hunter shark', 'hyena', 'jackal', 'killer whale', 'lion', 'lizard', 'mammoth', 'mastiff', 'mule', 'octopus', 'owl', 'panther', 'phase spider', 'poisonous snake', 'polar bear', 'pony','hell hound',
         ]
-        ]
+    ]
     let eventRandomizer = [
         'battle', 'deal', 'bargain', 'wedding',"treaty", "alliance", "duel", "peace talks", "trade agreement", 
         "summit", "ceasefire", "conquest", "expedition", "exploration", "merger", "collaboration", "diplomatic mission", 
         "cultural exchange", "religious conversion", "invasion", "colonization", "migration", "revolution", "scientific discovery", 
         "armistice", "secession", "debate", "uprising", "signing of a charter", "landmark legislation", "exposition", "intercultural celebration", "joint invention", "reconciliation"
-        ]
+    ]
     let tool = [
         'weapon', 'tool', 'treasure chest', 'sword', 'spade', "torch", "book", "scroll", "lantern" , "shield"
-        ]
+    ]
     let item = [
         'whistle', 'anchor', 'nail', 'scale', 'open book', 'bugle', 'keystone', 'hook', 'tree', 'flower', 'drum', 'buckle', 'chair', 'spoon', 'fork', 'axe', 
         'sword', 'shield', 'armor', 'bedroll', 'barrel', 'keg', 'crate', 'box', 'pot', 'vial', 'arrow', 'broom', 'shovel', 'pillow', 'candle', 'lantern', 
@@ -2377,18 +2356,24 @@ function artGenerator() {
         'trident', 'brooch', 'amulet', 'pipe', 'figurine', 'deck', 'circlet', 'fan', 'boot', 'quiver', 'helm', 'gloves', 'belt', 'cape', 'dagger', 'shackles', 'horn', 
         'staff', 'book', 'wings', 'crystal ball', 'carpet', 'cask', 'flask', 'map', 'artifact', 'trap', 'spear', 'halberd', 'key', 'stone', 'talisman', 'scimitar', 
         'bracer', 'bowl', 'chime', 'elixer', 'hat', 'clothes', 'headband', 'haversack', 'mirror', 'mace', 'rope', 'trinket', 'statue', 'hankercheif', 'locket', 'bone', 'skull', 'sickle'
-        ]
+    ]
     let location = [
         "underfoot", "next to it", "in its mouth", "on its back",
         "held captive by smaller creatures that serve it",
         "surrounded by a protective barrier or force it conjures"
-        ]
-    let ageDescriptor = ["younger", "older", "adolescent", "mature", "childlike", "ancient", "middle-aged", "youthful", "elderly", "infantile", "senior", "juvenile", "venerable", "baby-faced", "grizzled", "time-worn", "nascent", "seasoned", "veteran", "fresh-faced"]
+    ]
+    let ageDescriptor = [
+        "younger", "older", "adolescent", "mature", "childlike", "ancient", "middle-aged", "youthful", "elderly", "infantile", "senior", "juvenile", "venerable", "baby-faced", "grizzled", "time-worn", "nascent", "seasoned", "veteran", "fresh-faced"
+    ]
     let adultGender = ["man", "woman"]
     let anyAgeGender = ["man", "woman", "boy", "girl"]
     let youngGender = ["boy", "girl"]
-    let age = ['child',"preteen", 'adolescent', "young adult", "middle-aged", "mature adult", "senior", "elder"  ]
-    let ruler = ['king','queen', 'warlord',"emperor", "empress", "monarch", "pharaoh", "sultan", "shah", "kaiser", "czar", "tsar", "caliph", "duke", "duchess", "prince", "princess", "regent", "lord", "lady", "chieftain", "chief", "patriarch" , "matriarch", "sovereign", "governor", "despot", "tyrant", "tribal leader", "noble", "baron", "baroness", "magnate", "sheikh", "vizier"]
+    let age = [
+        'child',"preteen", 'adolescent', "young adult", "middle-aged", "mature adult", "senior", "elder"  
+    ]
+    let ruler = [
+        'king','queen', 'warlord',"emperor", "empress", "monarch", "pharaoh", "sultan", "shah", "kaiser", "czar", "tsar", "caliph", "duke", "duchess", "prince", "princess", "regent", "lord", "lady", "chieftain", "chief", "patriarch" , "matriarch", "sovereign", "governor", "despot", "tyrant", "tribal leader", "noble", "baron", "baroness", "magnate", "sheikh", "vizier"
+    ]
     let historicalEvent = [
         "a creation myth", 
         "a constellation", 
@@ -2397,7 +2382,8 @@ function artGenerator() {
         `a coronation of a(n) ${searchArray([`${variableEvent(age)}${findRace()} ${searchArray(ruler)}`,
         `${variableEvent(age)}${searchArray(ruler)}`, 
         `intelligent ${searchArray(monster)}`])}`, 
-        "an ancient disaster", "an ancient prophecy",
+        "an ancient disaster", 
+        "an ancient prophecy",
         "the alignment of the stars", 
         `the rise of a great ${findRace()} hero`, 
         `the fall of a great ${findRace()} hero`, 
@@ -2416,38 +2402,9 @@ function artGenerator() {
         `a historical ${searchArray(eventRandomizer)} between ${findRace()}s and ${findRace()}s`, 
         `a historical ${searchArray(eventRandomizer)} between ${searchArray(monster[0])}s and ${searchArray(monster[0])}s`
     ]
-
     let time = [
-        'beautiful but wrong',
-        "somehow up to date", 
-        "changing-in-real-time", 
-        "slightly outdated",
-        "meticulously detailed",
-        "rough sketch",
-        "impressionistic",
-        "historically accurate for its time",
-        "artistically embellished",
-        "modernized rendition",
-        "generally reliable",
-        "needs recalibration",
-        "abstract representation",
-        "lacking crucial details",
-        "with noticeable omissions",
-        "compiled from various sources",
-        "faithful to the original",
-        "topographically precise",
-        "with artistic liberties",
-        "dated but valuable",
-        "showing visible wear and corrections",
-        "cross-referenced for accuracy",
-        "showing only specific features",
-        "reliably comprehensive",
-        "with speculative territories",
-        "hand-drawn and approximate",
-        "fading but legible",
-        "stylized for aesthetic appeal"
+        'beautiful but wrong', "somehow up to date", "changing-in-real-time", "slightly outdated", "meticulously detailed", "rough sketch", "impressionistic", "historically accurate for its time", "artistically embellished", "modernized rendition", "generally reliable", "needs recalibration", "abstract representation", "lacking crucial details", "with noticeable omissions", "compiled from various sources", "faithful to the original", "topographically precise", "with artistic liberties", "dated but valuable", "showing visible wear and corrections", "cross-referenced for accuracy", "showing only specific features", "reliably comprehensive", "with speculative territories", "hand-drawn and approximate", "fading but legible", "stylized for aesthetic appeal"
     ]
-
     let drink = [
         "tankard of mead", "cup of ale", "glass of wine", "goblet of blood","flask of elixir", "horn of grog", "chalice of ambrosia", "bottle of enchanted brew", 
         "vial of moonlight", "jar of faerie nectar", "phial of liquid mana", "mug of root beer", "potion of invincibility", "urn of ancient tea", 
@@ -2458,12 +2415,15 @@ function artGenerator() {
     let scene = [
         'swamp', 'mire', 'bridge', 'gate', 'road', 'paradise', 'fort', 'house', 'hut', 'keep', 'garden', 'room', 'sanctum', 'asylum', 'hideaway', 'refuge', 
         'shelter', 'shack', 'den', 'clearing', 'dungeon', 'castle', 'cottage', 'dungeon', 'field', 'camp', 'lean-to', 'mountain', 'cave', 'town', 'city', 'lake', 
-        'pond', 'lair', 'chamber', 'hovel', ]
+        'pond', 'lair', 'chamber', 'hovel', 
+    ]
     let weapons = [
         "sword", "dagger", "axe", "mace", "staff", "wand", "quarterstaff", "broadsword", "skull", "book", "spear", "halberd", "flail", "morningstar", "warhammer", "scimitar", "katana", 
         "longbow", "falchion", "gladius", "whip", "rapier", "pike", "sabre", "war scythe"
     ]
-    let bodyparts = ["eyes", "teeth", "external markings", "claws", "musculature definition", "osseous growths or bone extrusions", "crests or ridges", "underbelly texture or patterns"]
+    let bodyparts = [
+        "eyes", "teeth", "external markings", "claws", "musculature definition", "osseous growths or bone extrusions", "crests or ridges", "underbelly texture or patterns"
+    ]
     let audience = [
         "royals", "monsters", "commoners", "villagers", "dragons", "tavern patrons", "heroes", `${findRace()}s`, `${searchArray(monster)}s`,
         "merchants", "travelers", "wanderers", "knights", "warriors", "priests", "clerics", "mystics", "seers", "sailors", "pirates", "minstrels", 
@@ -2474,8 +2434,8 @@ function artGenerator() {
     ]
     let instruments = [
         "a harpsichord", "a piano", "a pipe organ", "bells", "chimes", "drums", "a gong", "a fiddle", "a harp", "a lute", "a mandolin", "a flute", "pan pipes", "a shawm", "a trumpet",
-    "a lyre", "a dulcimer", "a zither", "a bagpipe", "a hurdy-gurdy", "a viola da gamba", "a recorder", "a gemshorn", "a crumhorn", "a tambourine", "a rebec", "a psaltery", "a cittern", "a theorbo", "a sackbut"
-]
+        "a lyre", "a dulcimer", "a zither", "a bagpipe", "a hurdy-gurdy", "a viola da gamba", "a recorder", "a gemshorn", "a crumhorn", "a tambourine", "a rebec", "a psaltery", "a cittern", "a theorbo", "a sackbut"
+    ]
     let color = [
         "pearlescent",
         "moonlit silver",
@@ -2516,118 +2476,112 @@ function artGenerator() {
         "lunar glow",
         "midnight's allure"
     ]
-    let projectile = ["dart", "javelin", "arrow", "wood shard", "glass shard", "metal shrapnel", "spear", "crossbow bolt", "slingshot pellet", "boomerang", "throwing knife", "rock", "stone", "bolas", "net", "sling stone", "tomahawk", "fireball", "ice shard", "lightning bolt", "blowgun needle", "caltrop", "flaming arrow", "poisoned dart", "magic missile", "smoke bomb", "holy water vial"]
-    let celebration = [ "a bonfire", "a feast table", "an encampment", "a pile of bodies", "a pole in the center of town", "a pile of gold and gems", "a large ceremonial altar", "a grand throne or chair", "a magical fountain", "a towering statue or idol", "a decorated tree or plant", "a sacrificial pit", "a colossal tent or pavilion", "a stage for performers", "an intricate sand or flower mandala", "a chained mythical creature or beast", "a series of flag poles with banners", "an astronomical observatory", "a sacred relic or artifact on display", "a grand ship or vessel", "a floating platform or island", "a gleaming crystal or prism", "a woven tapestry telling a story", "a collection of rare and magical items", "a mural or fresco", "a fireworks launch site", "a book or scroll of prophecies", "a sacred stone or monument"]
-    let hair = ["long flowing", "short", "no", "braided", "wild and untamed", "sleek and straight", "curly and voluminous", "tightly coiled", "bald with tattoos", "mohawk", "topknot", "ponytail", "side-shaved", "rugged dreadlocks", "slicked back", "crown of braids", "windswept waves", "bun with ornamental pins", "twisted locs", "spiky", "feathered", "wispy", "long and silver", "thick mane", "short with a side part", "bedhead", "bald with a shining crown", "intricately styled", "wavy with highlights", "tight curls with a headband"]
-    let mount = ["dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose", "phoenix", "dire wolf", "giant eagle", "unicorn", "wyvern", "rhinoceros", "giant spider", "elephant", "manticore", "giant bat", "giant seahorse", "hippogriff", "giant snail", "giant turtle", "chimera", "giant stag", "floating disk", "giant owl", "mechanical steed", "nightmare", "ghostly apparition", "abyssal charger"]
-    let organization = ['theives guild', 'city', 'temple', "oracle's", "king's", "thieves guild", "city", "temple", "oracle's", "king's", "knight's order", "mage's academy", "alchemist's society", "hunter's lodge", "sailor's league", "merchant's union", "bard's college", "farmer's cooperative", "assassin's syndicate", "explorer's club", "healer's association", "blacksmith's forge", "druid's circle", "warrior's clan", "librarian's consortium", "monk's monastery", "priest's clergy", "adventurer's guild", "noble family", "courier's network", "guard's battalion", "craftsman's guild", "scholar's institution", "herald's office", "paladin's order", "ambassador's envoy", "brewer's tavern", "beastmaster's ring", "ranger's patrol", "jester's troupe"]
-    let facialExpression = ["awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning",     "contemplative", "pensive", "amused", "suspicious", "intrigued", "ecstatic", "shocked", "exasperated", "embarrassed", "daydreaming", "glaring", "confused", "hopeful", "bored", "anxious", "overwhelmed", "nonchalant", "melancholic", "horrified", "jubilant", "indifferent"]
-    let thesaurus = ['depicting','representing','showing','displaying','presenting','exhibiting','portraying',  "illustrating", "revealing", "expressing", "demonstrating", "manifesting"]
+    let projectile = [
+        "dart", "javelin", "arrow", "wood shard", "glass shard", "metal shrapnel", "spear", "crossbow bolt", "slingshot pellet", "boomerang", "throwing knife", "rock", "stone", "bolas", "net", "sling stone", "tomahawk", "fireball", "ice shard", "lightning bolt", "blowgun needle", "caltrop", "flaming arrow", "poisoned dart", "magic missile", "smoke bomb", "holy water vial"
+    ]
+    let celebration = [ 
+        "a bonfire", "a feast table", "an encampment", "a pile of bodies", "a pole in the center of town", "a pile of gold and gems", "a large ceremonial altar", "a grand throne or chair", "a magical fountain", "a towering statue or idol", "a decorated tree or plant", "a sacrificial pit", "a colossal tent or pavilion", "a stage for performers", "an intricate sand or flower mandala", "a chained mythical creature or beast", "a series of flag poles with banners", "an astronomical observatory", "a sacred relic or artifact on display", "a grand ship or vessel", "a floating platform or island", "a gleaming crystal or prism", "a woven tapestry telling a story", "a collection of rare and magical items", "a mural or fresco", "a fireworks launch site", "a book or scroll of prophecies", "a sacred stone or monument"
+    ]
+    let hair = [
+        "long flowing", "short", "no", "braided", "wild and untamed", "sleek and straight", "curly and voluminous", "tightly coiled", "bald with tattoos", "mohawk", "topknot", "ponytail", "side-shaved", "rugged dreadlocks", "slicked back", "crown of braids", "windswept waves", "bun with ornamental pins", "twisted locs", "spiky", "feathered", "wispy", "long and silver", "thick mane", "short with a side part", "bedhead", "bald with a shining crown", "intricately styled", "wavy with highlights", "tight curls with a headband"
+    ]
+    let mount = [
+        "dinosaur", "griffon", "pegasus", "dragon", "displacer beast", "mammoth", "lion", "tiger", "warhorse", "horse", "moose", "phoenix", "dire wolf", "giant eagle", "unicorn", "wyvern", "rhinoceros", "giant spider", "elephant", "manticore", "giant bat", "giant seahorse", "hippogriff", "giant snail", "giant turtle", "chimera", "giant stag", "floating disk", "giant owl", "mechanical steed", "nightmare", "ghostly apparition", "abyssal charger"
+    ]
+    let organization = [
+        'theives guild', 'city', 'temple', "oracle's", "king's", "thieves guild", "city", "temple", "oracle's", "king's", "knight's order", "mage's academy", "alchemist's society", "hunter's lodge", "sailor's league", "merchant's union", "bard's college", "farmer's cooperative", "assassin's syndicate", "explorer's club", "healer's association", "blacksmith's forge", "druid's circle", "warrior's clan", "librarian's consortium", "monk's monastery", "priest's clergy", "adventurer's guild", "noble family", "courier's network", "guard's battalion", "craftsman's guild", "scholar's institution", "herald's office", "paladin's order", "ambassador's envoy", "brewer's tavern", "beastmaster's ring", "ranger's patrol", "jester's troupe"
+    ]
+    let facialExpression = [
+        "awed", "angry", "disgusted", "surprised", "grinning", "stern", "fearful", "sad", "appalled", "smirking", "smiling", "beaming", "grimacing", "winking", "scowling", "terrified", "hardened", "stone-faced", "frowning",     "contemplative", "pensive", "amused", "suspicious", "intrigued", "ecstatic", "shocked", "exasperated", "embarrassed", "daydreaming", "glaring", "confused", "hopeful", "bored", "anxious", "overwhelmed", "nonchalant", "melancholic", "horrified", "jubilant", "indifferent"
+    ]
+    let showingThesaurus = [
+        'depicting','representing','showing','displaying','presenting','exhibiting','portraying',  "illustrating", "revealing", "expressing", "demonstrating", "manifesting"
+    ]
 
     let status = [
-        [ /*Stained Glass*/ "dusty", "dirty", "vandalized", "scratched", "broken", "faded", "discolored", "unfinished", "incomplete", "cracked", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
-        [ /*Mural*/ "dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "faded", "eroded", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
-        [ /*Pottery*/ "dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "faded", "shattered", "unfinished", "pristine", "well-repaired", "poorly-repaired"],
-        [ /*Figurine/ stauette/ carving*/ "dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "broken (and missing some pieces)", "eroded", "shattered", "unfinished", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired", "sliced in half"],
-        [ /*Painting*/ "dusty", "dirty", "torn", "stained", "cut", "water-stained", "vandalised", "faded", "unfinished", "vibrant", "pristine", ],
-        [ /*Relief*/ "dusty", "dirty", "vandalized", "scratched", "cracked", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
-        [ /*Tapestry*/ "dusty", "dirty", "torn", "thread-bare", "worn", "water-stained", "shredded", "stained", "cut", "vandalised", "faded", "unfinished", "vibrant", "pristine", ],
-        [ /*Fine Jewelry*/ "fine", "dusty", "dirty", "broken", "bent", "unfinished", "incomplete", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
-        [ /*Fine clothes*/ 'fine', 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded'],
-        [ /*Fine Armaments */ "dented and bent",'dusty','dirty','tarnished','pristine','broken',"in the claws of a statue", "trapped in crystalline amber",`veiled in thick cobwebs`,"camouflaged as a mundane item"],
+        [ /*Stained Glass*/ "chipped", "leaded seams loose or detached", "oxidized leading", "weather-worn", "sun-bleached", "tarnished", "missing fragments or sections", "cloudy or foggy appearance", "distorted from heat or warping", "mottled with inconsistent color", "replaced with mismatched pieces", "sealed with protective coatings", "showing soldering marks", "loose in its frame or setting", "darkened from grime or soot", "glinting with fresh polish", "encased in protective glazing", "peeling protective film", "water-streaked", "corroded by salt or sea spray","dusty", "dirty", "vandalized", "scratched", "broken", "faded", "discolored", "unfinished", "incomplete", "cracked", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
+        [ /*Mural*/ "peeling paint", "water-damaged", "sun-bleached", "discolored from pollutants", "covered in graffiti", "chipped plaster or medium", "blistered surface", "with touch-up marks", "partially obscured by new structures", "mildew or mold spotted", "burnt or scorched", "overlaid with posters or ads", "riddled with bullet holes or impact marks", "yellowed varnish or sealant", "exhibiting cracks from foundational shifts", "fogged by smog or environmental factors", "revealed after being hidden or painted over", "patchy with inconsistent colors", "abraded from sand or wind exposure", "corroded by salt or sea spray","dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "faded", "eroded", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
+        [ /*Pottery*/ "chipped", "worn glaze", "discolored from use", "mottled appearance", "restored with mismatched materials", "smudged with fingerprints", "pitted surface", "warped from firing", "crazed (fine cracks in glaze)", "mended with visible seams", "exhibiting kiln marks", "sun-bleached", "glazed unevenly", "eroded pattern or design", "missing fragments or parts", "bitten or gnawed marks", "covered in residual residue", "showing brush strokes or tool marks", "dulled finish", "peeling layers or materials","dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "faded", "shattered", "unfinished", "pristine", "well-repaired", "poorly-repaired"],
+        [ /*Figurine/ stauette/ carving*/ "chipped", "discolored from age", "worn details", "missing parts", "fading paint or color", "scuffed base", "mended with visible seams", "weathered from exposure", "covered in patina", "sun-bleached", "buried and excavated", "engraved with markings or symbols", "distorted from heat", "with added makeshift parts", "darkened from soot or grime", "sealed with protective coatings", "bitten or gnawed marks", "fused together from multiple pieces", "bent or warped", "showing tool or crafting marks","dusty", "dirty", "vandalized", "scratched", "broken", "cracked", "stained", "broken (and missing some pieces)", "eroded", "shattered", "unfinished", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired", "sliced in half"],
+        [ /*Painting*/ "cracked or craquelure", "peeling", "chipped paint", "warped canvas", "yellowed varnish", "mold-damaged", "restoration in progress", "smudged", "discolored from light exposure", "riddled with tiny pinholes", "with touch-up marks", "stretched or slackened canvas", "sun-bleached", "covered in a protective film", "detached from frame", "creased", "burnt edges or corners", "with added protective glazing", "flaking", "canvas rot from moisture","dusty", "dirty", "torn", "stained", "cut", "water-stained", "vandalised", "faded", "unfinished", "vibrant", "pristine"],
+        [ /*Relief*/ "eroded by time", "chipped edges", "fading details", "weathered from exposure", "discolored from elements", "restored with mismatched materials", "covered in graffiti", "missing sections or fragments", "stained from water or chemicals", "worn down from touch or interaction", "buried partially in sediment", "brightened with recent cleaning", "sun-bleached", "darkened from soot or pollution", "peeling protective coatings", "covered in bird droppings", "secured with modern brackets or supports", "altered from original design", "embellished with added elements", "dulled from abrasion","dusty", "dirty", "vandalized", "scratched", "cracked", "unfinished", "incomplete", "pristine", "moss/ivy-covered", "well-repaired", "poorly-repaired"],
+        [ /*Tapestry*/ "moth-eaten", "frayed edges", "patchwork", "sun-bleached", "mildewed", "matted", "snagged", "loosely woven", "discolored from age", "restored with differing fibers", "sagging", "curling at the corners", "pulled threads", "darned", "embellished with newer additions", "scorched", "wrinkled", "bleeding colors", "soaked and dried", "smoky or with a lingering odor","dusty", "dirty", "torn", "thread-bare", "worn", "water-stained", "shredded", "stained", "cut", "vandalised", "faded", "unfinished", "vibrant", "pristine",],
+        [ /*Fine Jewelry*/ "tarnished", "lustrous", "dull and faded", "chipped gemstone", "twinkling with radiance", "discolored from age", "mismatched with replaced parts", "scratched surface", "delicately engraved", "loose and fragile", "firmly set with stones", "intricately detailed", "scuffed edges", "gleaming with a fresh polish", "encrusted with old residues", "intertwined with intricate motifs", "overshadowed by dark patina", "retouched with new materials", "having missing links or pieces", "wrapped in protective silk","fine", "dusty", "dirty", "broken", "bent", "unfinished", "incomplete", "pristine", "vibrant", "well-repaired", "poorly-repaired"],
+        [ /*Fine clothes*/ 'fine', 'thread-bare','moth-eaten', 'mildewed', 'singed', 'pristine','shredded','bloodstained','faded','immaculate', 'tarnished', 'stained', 'soiled', 'frayed', 'wrinkled', 'worn-out', 'discolored', 'patchwork', 'blemished', 'tattered', 'scuffed', 'pilled', 'snagged', 'weathered', 'darned', 'stretched', 'crinkled', 'smudged', 'besmirched'],
+        [ /*Fine Armaments */ "chipped and scratched", "rust-covered", "engraved with ancient symbols", "gleaming and polished", "corroded from time", "embellished with jewels", "smeared with dried blood", "faintly glowing in the dark", "wrapped in old leather", "intertwined with creeping vines", "worn with battle scars", "sheathed in shimmering aura", "cursed with dark energies", "hilt encrusted with dried mud", "bearing the mark of a legendary warrior", "fused with elemental magic", "surrounded by floating runes", "repaired with makeshift bindings", "etched with tales of battles past", "sealed in a timeless vault","dented and bent",'dusty','dirty','tarnished','pristine','broken',"in the claws of a statue", "trapped in crystalline amber",`veiled in thick cobwebs`,"camouflaged as a mundane item"],
     ]
     function weaponType() {
         let x = rollDice(1000)
-        if (x < 4) {
-            return "club"
-        } else if (x < 39) {
-            return "dagger"
-        } else if (x < 43) {
-            return "greatclub"
-        } else if (x < 67) {
-            return "handaxe"
-        } else if (x < 75) {
-            return "javelin"
-        } else if (x < 79) {
-            return "light hammer"
-        } else if (x < 149) {
-            return "mace"
-        } else if (x < 172) {
-            return "quarterstaff"
-        } else if (x < 176) {
-            return "sicle"
-        } else if (x < 213) {
-            return "spear"
-        } else if (x < 230) {
-            return `${searchArray(["tonfa","tiger claws","knuckle dusters","iron fan","katar","emeici","cestus","tekko","maduvu","pata","crecent moon knives","knife wheel"])} (fist weapon)`
-        } else if (x < 271) {
-            return "light crossbow"
-        } else if (x < 287) {
-            return "dart"
-        } else if (x < 303) {
-            return "shortbow"
-        } else if (x < 319) {
-            return "sling"
-        } else if (x < 404) {
-            return "battleaxe"
-        } else if (x < 413) {
-            return "flail"
-        } else if (x < 420) {
-            return "glaive"
-        } else if (x < 498) {
-            return "greataxe"
-        } else if (x < 576) {
-            return "greatsword"
-        } else if (x < 581) {
-            return "halberd"
-        } else if (x < 586) {
-            return "lance"
-        } else if (x < 773) {
-            return "longsword"
-        } else if (x < 774) {
-            return "maul"
-        } else if (x < 778) {
-            return "morningstar"
-        } else if (x < 779) {
-            return "pike"
-        } else if (x < 809) {
-            return "rapier"
-        } else if (x < 848) {
-            return "scimitar"
-        } else if (x < 887) {
-            return "shortsword"
-        } else if (x < 891) {
-            return "trident"
-        } else if (x < 893) {
-            return "war pick"
-        } else if (x < 903) {
-            return "warhammer"
+        //ranged or MAGIC
+        if (x < 55) {
+            return "Dagger"
+        } else if (x < 110) {
+            return "QuarterStaff"
+        } else if (x < 165) {
+            return "Crossbow"
+        } else if (x < 220) {
+            return "Longbow"
+        } else if (x < 275) {
+            return "Shortbow"
+        } else if (x < 335) {
+            return "Staff"
+        //1H
+        } else if (x < 365) {
+            return "Longsword"
+        } else if (x < 395) {
+            return "Rapier"
+        } else if (x < 425) {
+            return "Scimitar"
+        } else if (x < 455) {
+        return "Shortsword"
+        } else if (x < 485) {
+            return "Club"
+        } else if (x < 515) {
+            return "Fist Weapon"
+        } else if (x < 545) {
+            return "Handaxe"
+        } else if (x < 575) {
+            return "Javelin"
+        } else if (x < 605) {
+            return "Mace"
+        } else if (x < 635) {
+            return "Sicle"
+        //2h
+        } else if (x < 675) {
+            return "Greatclub"
+        } else if (x < 715) {
+            return "Spear"
+        } else if (x < 755) {
+            return "Battleaxe"
+        } else if (x < 795) {
+            return "Flail"
+        } else if (x < 835) {
+            return "Glaive"
+        } else if (x < 875) {
+            return "Greatsword"
         } else if (x < 905) {
-            return "whip"
-        } else if (x < 907) {
-            return "blowgun"
-        } else if (x < 914) {
-            return "hand crossbow"
-        } else if (x < 955) {
-            return "heavy crossbow"
-        } else if (x < 996) {
-            return "longbow"
-        } else if (x < 1000) {
-            return "net"
+            return "Halberd"
+        } else if (x < 930) {
+            return "Lance"
+        } else if (x < 960) {
+            return "Trident"
+        } else {
+            return "Warhammer"
         }
     }
+
     let armorTypes = [
         [ `splint armor`, `ring mail armor`, `full plate armor`, `chain mail armor`, `scale mail armor`, `hide armor`, `half plate armor`, `leather armor`, `studded leather armor`, ],
-        [ `chain shirt`, `breastplate`, `helmet`, ],
+        [ `Shield`,`chain shirt`, `breastplate`, `helmet`, "greaves (shin)", "pauldrons (shoulder)", "gauntlets (Hands)", "vambraces (forearm)", "cuisses (thigh)", "sabatons (foot)", "gorget (neck)", "rerebraces (upper arm)", "tassets (waist)", "poleyns (knee)", "faulds (hip and thigh)", "buckler (shield)", "coif (a chain mail hood)", "bevor (protects the lower face and neck)", "plackart (lower front breastplate)", "spaulders (small shoulder)", "cuirass (front and back torso)",'War Mask','Quiver'],
     ]
     let material = [
-        [ /*pottery*/ "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "jade", "bone", "teeth-bone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass", ],
-        [ /*statues*/ "marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
-        [ /*Carvings*/ "bone", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", ],
-        [ /*Fine jewelry*/ "gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jeweled gold`, `${searchArray(gems)} jeweled platinum`, `${searchArray(gems)} jeweled electrum`, `${searchArray(gems)} jeweled silver`, `${searchArray(gems)} jeweled copper`, `${searchArray(gems)} jeweled gold with platinum inlay`, `${searchArray(gems)} jeweled gold and copper alloy`, `${searchArray(gems)} jeweled gold and silver alloy`, `solid ${searchArray(gems)}`],
-        [ /*Fine Clothes*/ "griffon feather weave", "chimera leather", "dragon scale mesh", "phoenix feather down", "nymph hair thread", `${searchArray(color)} brocade`, "moonbeam-infused linen", "sun ray-embroidered fabric", "starlit tulle", "basilisk hide", "unicorn mane weave", "elf-spun cotton", "fairy wing lace", "siren silk", "dwarf-forged chainmail", "titan-tanned leather", "celestial chiffon", "abyssal black denim", "shadow-woven satin", "mermaid scale sequins", "ether fabric", "enchanted ivy weave", "kraken skin leather", "gossamer of moonlight", "fabric of bottled starlight", "feywild silk", "roc feather cloth", "centaur hide suede", "banshee veil netting", "ethereal essence tulle", "minotaur horn mesh", "fabric woven from dreams", "cloth dipped in the River Styx", "satyr's beard wool", "clothes made of woven spells", "mystical lava-forged fabric", "giant squid ink dyed cloth", "dryad leaf linen", "vampire bat wing leather", "thread spun from prophecies", "changeling camouflage cloth", "phoenix ash infused fabric", "will-o'-the-wisp woven mesh", "sprite's shimmer scale sequins", "medusa hair thread", "troll skin rubberized fabric", "cloth blessed by ancient deities", "harpy's song-woven silk", "fabric of trapped tempests", "wendigo fur", "cloth soaked in eldritch energies"
-    ],
-        [ /*Fine Armaments*/ "platinum","gold","copper","silver","silver with mithril inlay","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
+        [ /*0 - pottery*/ "brass", "titanium", "zinc", "alabaster", "lapis lazuli", "coral", "ivory", "resin", "amber", "agate", "onyx", "horn", "bamboo", "leather", "wicker", "rattan", "ceramic", "terracotta", "soapstone", "slate", "coconut shell", "opal", "driftwood", "basalt", "walnut wood", "ash wood", "hickory wood", "maple wood", "cedar wood", "crystal", "turquoise", "jadeite", "pearl", "mother-of-pearl", "flint", "concrete", "enamel", "feldspar", "mica", "malachite", "pewter", "lead", "bronze", "gold", "iron", "silver", "platinum", "electrum", "copper", "nickel", "jade", "bone", "clay", "granite", "marble", "obsidian", "porcelain", "sandstone", "quartz", "cork", "petrified wood", "unidentifiable substance", "mohogany", "cherry wood", "oak wood", "apple wood", "teak wood", "pine wood", "birch wood", "shell", "sea glass", "glass", ],
+        [ /*1- statues*/ "limestone", "sandstone", "alabaster", "jade", "ivory", "wood", "terracotta", "soapstone", "porcelain", "ceramic", "iron", "lead", "zinc", "brass", "titanium", "concrete", "resin", "glass", "coral", "basalt", "quartz", "agate", "onyx", "lapis lazuli", "crystal", "driftwood", "cement", "fiberglass", "bamboo", "rattan", "pewter", "plaster", "papier-mâché", "salt","marble", "golden", "granite", "silver", "platinum", "copper", "bronze", "electrum", "obsidian", "clay", "bone"],
+        [ /*2- Carvings*/ "ivory", "ebony", "alabaster", "jade", "soapstone", "turquoise", "coral", "amber", "agate", "onyx", "lapis lazuli", "shell ", "horn ", "bamboo", "coconut shell", "driftwood", "slate", "granite", "marble", "obsidian", "flint", "resin", "leather ", "pewter", "copper", "clay ", "glass", "cork","bone", "wood" ],
+        [ /*3- Fine jewelry*/ `titanium`, `palladium`, `white gold`, `rose gold`, `rhodium-plated gold`, `rhodium-plated silver`, `tungsten`, `stainless steel`, `damascus steel`, `cobalt chrome`, `mokume-gane (a mixed-metal laminate)`, `niello (black mixture of copper, silver, and lead)`, `enamel inlay`, `filigree gold`, `filigree silver`, `shakudo (a gold and copper alloy with dark-blue-purple patina)`, `shibuichi (silver and copper alloy)`, `gold with enamel details`, `silver with enamel details`, `${searchArray(gems)} encrusted gold`, `${searchArray(gems)} encrusted silver`, `${searchArray(gems)} encrusted platinum`, `${searchArray(gems)} encrusted palladium`, `gold with ${searchArray(gems)} accents`, `silver with ${searchArray(gems)} accents`, `platinum with ${searchArray(gems)} accents`, `ceramic`, `lacquer`,"gold", "platinum", "electrum", "silver", "bronze","copper", "gold with platinum inlay", "gold and copper alloy", "gold and silver alloy", `${searchArray(gems)} jeweled gold`, `${searchArray(gems)} jeweled platinum`, `${searchArray(gems)} jeweled electrum`, `${searchArray(gems)} jeweled silver`, `${searchArray(gems)} jeweled copper`, `${searchArray(gems)} jeweled gold with platinum inlay`, `${searchArray(gems)} jeweled gold and copper alloy`, `${searchArray(gems)} jeweled gold and silver alloy`, `solid ${searchArray(gems)}`],
+        [ /*4 - Fine Clothes*/ "griffon feather weave", "chimera leather", "dragon scale mesh", "phoenix feather down", "nymph hair thread", `${searchArray(color)} brocade`, "moonbeam-infused linen", "sun ray-embroidered fabric", "starlit tulle", "basilisk hide", "unicorn mane weave", "elf-spun cotton", "fairy wing lace", "siren silk", "dwarf-forged chainmail", "titan-tanned leather", "celestial chiffon", "abyssal black denim", "shadow-woven satin", "mermaid scale sequins", "ether fabric", "enchanted ivy weave", "kraken skin leather", "gossamer of moonlight", "fabric of bottled starlight", "feywild silk", "roc feather cloth", "centaur hide suede", "banshee veil netting", "ethereal essence tulle", "minotaur horn mesh", "fabric woven from dreams", "cloth dipped in the River Styx", "satyr's beard wool", "clothes made of woven spells", "mystical lava-forged fabric", "giant squid ink dyed cloth", "dryad leaf linen", "vampire bat wing leather", "thread spun from prophecies", "changeling camouflage cloth", "phoenix ash infused fabric", "will-o'-the-wisp woven mesh", "sprite's shimmer scale sequins", "medusa hair thread", "troll skin rubberized fabric", "cloth blessed by ancient deities", "harpy's song-woven silk", "fabric of trapped tempests", "wendigo fur", "cloth soaked in eldritch energies"
+        ],
+        [ /*5 - Fine Armaments*/ `bronze`, `iron`, `damascus steel `, `blackened steel`, `etched steel`, `electrum `, `titanium`, `palladium`, `mithril `, `adamantium`, `orichalcum`, `runesteel`, `dragonbone`, `obsidian`, `moonstone inlaid gold`, `sunstone inlaid silver`, `tungsten carbide`, `rose gold`, `white gold`, `cold iron`, `elven silver`, `dwarven gold`, `brass`, `coral-embedded bronze`, `pearl-encrusted gold`, `lapis lazuli inlaid platinum`, `enamel decorated iron`, `rhodium-plated steel`, `ivory inlaid bronze`, `bone and silver composite`,"platinum","gold","copper","silver","silver with mithril inlay","gold with platinum inlay", "platinum with adamantium inlay", "copper with silver inlay","silver with gold inlay"]
     ]
     function classReturn() {
         let classes = [
@@ -2649,7 +2603,7 @@ function artGenerator() {
         'festivals','weddings','funerals','combat','singing','chanting','instrumentation','storytelling','gift-giving','feasting','dancing','body adornment','greetings','rite of passage','reenactments','competitions','races','gatherings'
     ]
     let culturalPurpose = [
-        'family','religion','community','social order','justice','food','shelter','water','safety','ethics','morality','knowledge','language',
+        'family','religion','community','social order','justice','food','shelter','water','safety','ethics','morality','knowledge','language', 'coming of age',
         'heritage','resilience','dignity','honor','work','technology','life','death','survival','nature','strength','harmony','balance','eternity','love'
     ]
     let reason = [
@@ -2689,8 +2643,200 @@ function artGenerator() {
     }
 
     let cermonialDesign = [
-        "Radiantly gilded", "Elegantly baroque", "Intricately carved", "Exquisitely enameled", "Lavishly adorned", "An unapologetically extravagant", "A painstakingly detailed", "A mythology-inspired", "Regally embossed", "Masterfully sculpted", "Sophisticatedly filigreed", "Luxuriously garnished", "Exotically bejeweled", "Artistically wrought", 
-        "Symbolically etched", "Meticulously inlaid", "Timelessly elegant", "Spectacularly bedecked", "Richly burnished", "An heirloom-quality","A jewel encrusted", "An extraordnarily ornate", "An impossibly opulent"
+        "Grandly illuminated", "Stunningly festooned", "Immaculately polished", "Majestically set", "Elaborately decorated", "Tastefully gilded", "Delicately laced", "Magnificently draped", "Traditionally crafted", "Impressively cast", "Fancifully designed", "Ethereally lighted", "Opulently layered", "Sumptuously embellished", "Refinedly chiseled", "Gloriously presented", "Awe-inspiringly radiant", "Historically revered", "Breathtakingly ornamental", "Celestially inspired", "Charmingly vintage", "Classically fashioned", "Divinely created", "Harmoniously balanced", "Unforgettably majestic","Radiantly gilded", "Elegantly baroque", "Intricately carved", "Exquisitely enameled", "Lavishly adorned", "An unapologetically extravagant", "painstakingly detailed", "mythology-inspired", "Regally embossed", "Masterfully sculpted", "Sophisticatedly filigreed", "Luxuriously garnished", "Exotically bejeweled", "Artistically wrought", 
+        "Symbolically etched", "Meticulously inlaid", "Timelessly elegant", "Spectacularly bedecked", "Richly burnished", "heirloom-quality","jewel encrusted", "extraordnarily ornate", "impossibly opulent"
+    ]
+    let v1Starter = [
+        `bearing the unmistakable hallmarks of `, `reminiscent of ancient `, `exuding the distinct style of `, `echoing the grandeur of `, `undeniably influenced by the skillful hands of `, `a manifestation of `, `reflecting the timeless elegance of `, `a testament to the mastery of `, `drawing inspiration from the mystique of `, `championing the age-old methods of `, `imbued with the artistry of`, `capturing the essence of`, `mirroring the traditions of`, `imbued with the iconic characteristics of`, `harkening back to the fabled designs of`, `showcasing the emblematic features of`, `infused with the lore and spirit of`, `an ode to the rich heritage of`, `a blend of modernity and the ageless beauty of`, `a product of the ancient wisdom and techniques of`, `encapsulating the spirit and ethos of`, `marrying contemporary design with the time-honored beauty of`, `reflecting the unique artisanship of`, `paying homage to the timeless aesthetics of`, `melding innovation with the traditions of`
+    ]
+    let v1Finisher = [
+    `artistry`, `craftsmanship`, `smithing`, `legacy`, `creators`, `tradition`, `techniques`, `weapon-smiths`, `lore`, `forges`, `aesthetics`, `design`, `methods`, `mastery`, `tailoring`, `etching`, `iconography`, `music and dance`, `culinary arts`, `metalwork`, `jewelry crafting`, `enchantments`, `mythos` 
+    ]
+    let v2Starter = [
+    `boasting`, `featuring`, `complemented by`, `enhanced with`, `adorned with`, `intricately balanced with`, `punctuated by`, `with`, `enveloped in`, `embellished with`, `characterized by`, `intertwined with`, `meticulously outfitted with`, `marrying functionality with`, `highlighted by`, `bedecked in`, `meticulously embedded with`, `encased in`, `highlighted by`, `graced with`
+    ]
+    let v2Finisher = [
+    `a dazzling array of precious stones and metals`, `spellbinding illustrations and icons`, `elaborate tapestries of gold and silver`, `a harmonious blend of function and art`, `exceptional detailing and inlays`, `masterful engravings from ancient tales`, `meticulously intertwined precious metals`, `a display of both grandeur and subtlety`, `ornate filigree reminiscent of bygone eras`, `striking motifs capturing heroic deeds`, `inlays reflecting celestial constellations`, `rich hues from polished gemstones`, `sophisticated layers of precious metals`, `intricate designs symbolizing power and prestige`, `a combination of craftsmanship and enchantments`, `a breathtaking tableau of scenes and motifs`, `an opulent mosaic of gems and inlays`, `a masterpiece of embossing and etchings`, `lavishly detailed patterns`, `a fusion of form and aesthetic`
+    ]
+    function armamentCloser() {
+        var chance = rollDice(100)
+        if (chance > 66) {
+            return ` ${searchArray(v1Starter)} ${findRace()} ${searchArray(v1Finisher)}.`
+        } else if (chance > 33) {
+                return ` ${searchArray(v1Starter)} ${findRace()} ${searchArray(v1Finisher)}.`
+        } else {
+            let x = shuffleSlice(v2Finisher,2)
+            return ` ${searchArray(v2Starter)} ${x[0]} and ${x[1]}.`
+        }
+    }
+    let withThesaurus = [
+        "Featuring", "Boasting", "Sporting", "Showcasing", "Presenting", "Wrapped in", "Adorned by", "Graced with", "Accented by", "Displaying", "Complemented by", "Highlighted with", "Finished with", "Characterized by", "Marked by"
+    ] 
+    let weaponAcc = [
+        `${searchArray(material[4])} wrapped around the hilt`,
+        `${searchArray(material[4])} attached as a decorative tassel or streamer on the pommel`,
+        `${searchArray(material[4])} woven as a sling or strap for easier carrying and transport`,
+        `${searchArray(material[4])} sewn into a protective sheath or scabbard`,
+        `${searchArray(material[4])} decoratively braided or knotted to signify rank or accomplishment`,
+        `${searchArray(material[4])} intertwined with metals or beads for ornamental purposes`,
+        `${searchArray(material[4])} as a banner or flag attached, indicating affiliation`,
+        `${searchArray(material[4])} incorporated into the design as a noise maker, like a whip-crack or to create a humming sound`,
+        `${searchArray(material[4])} used as a binding to hold parts of the weapon together`,
+        `${searchArray(material[4])} layered to create cushioning, for weapons that may come into contact with the user`,
+        `${searchArray(material[4])} as part of a camouflage or disguise for the weapon`,
+        `${searchArray(material[4])} used to create a pouch for storage`,
+        `a ${searchArray(material[4])} net or entangling component`,
+        `${searchArray(material[4])} woven with ${searchArray(culturalPurpose)} symbols`,
+        `a ${searchArray(material[4])} ribbon tied as a personalized marker`
+    ]
+    let armorAcc = [
+        `${searchArray(material[4])} decoratively braided or knotted to signify rank or accomplishment`,
+        `${searchArray(material[4])} intertwined with metals or beads for ornamental purposes`,
+        `${searchArray(material[4])} as a tabard, indicating affiliation`,
+        `${searchArray(material[4])} layered to create cushioning, for high friction areas`,
+        `${searchArray(material[4])} as part of a camouflage or disguise`,
+        `${searchArray(material[4])} used to create a pouch for storage`,
+        `${searchArray(material[4])} woven with ${searchArray(culturalPurpose)} symbols`,
+        `a ${searchArray(material[4])} ribbon tied as a personalized marker`
+    ]
+    function weaponAccent() {
+        return `. ${searchArray(withThesaurus)} ${searchArray(weaponAcc)}.`
+    }
+    function armorAccent() {
+        return `. ${searchArray(withThesaurus)} ${searchArray(armorAcc)}.`
+    }
+    function buildClass() {
+        function findClass() {
+            //Class Array
+            let classes = [
+                    [
+                        'Bard', 'Cleric', 'Fighter', 'Paladin', 'Ranger', 'Rogue', 'Warlock',
+                    ],
+                    [
+                        'Barbarian', 'Druid', 'Monk', 'Nomad',
+                    ],
+                    [
+                        'Sorcerer', 'Wizard', 'Artificer', 'Summoner',
+                    ],
+                    [
+                        'Bounty Hunter', 'Blood Hunter', 'Mystic',
+                    ],
+                ]
+                //Profession Array
+            let professions = {
+                'Agriculture, Animal-Husbandry, and Forestry': [
+                    'Animal Handler', 'Arborist', 'Beekeeper', 'Birdcatcher', 'Cowherd', 'Dairyboy/Dairymaid', 'Falconer', 'Farmer',
+                    'Fisher', 'Forager', 'Gamekeeper', 'Groom', 'Herder', 'Horse Trainer', 'Hunter', 'Master-of-Hounds', 'Miller',
+                    'Prospector', 'Ranger', 'Renderer', 'Shepherd', 'Stablehand', 'Thresher', 'Trapper', 'Vintner', 'Woodcutter', 'Zookeeper',
+                ],
+                'Architecture and Construction': [
+                    'Architect', 'Brickmaker', 'Brickmason', 'Carpenter', 'Claymason', 'Plasterer', 'Roofer', 'Stonemason', 'Streetlayer',
+                ],
+                'Arts and Entertainment': [
+                    'Acrobat', 'Actor', 'Chef', 'Dancer', 'Gladiator', 'Glasspainter', 'Jester', 'Illuminator', 'Minstrel', 'Musician', 'Painter', 'Piper', 'Playwright', 'Poet', 'Sculptor', 'Singer', 'Tattooist', 'Wrestler', 'Brawler', 'Writer',
+                ],
+                'Business and Trade': [
+                    'Accountant', 'Banker', 'Brothel Owner', 'Chandler', 'Collector', 'Entrepreneur', 'Fishmonger', 'General Contractor', 'Grocer', 'Guild Master',
+                    'Innkeeper', 'Ironmonger', 'Merchant', 'Peddler', 'Plantation Owner', 'Speculator', 'Street Vendor', 'Thriftdealer', 'Tradesman',
+                ],
+                'Communications': [
+                    'Courier', 'Herald', 'Interpreter', 'Linguist', 'Messenger', 'Town Crier', 'Translator',
+                ],
+                'Craftsman': [
+                    'Armorer', 'Blacksmith', 'Bladesmith', 'Bookbinder', 'Bowyer', 'Brewer', 'Broom Maker', 'Candlemaker',
+                    'Cartwright', 'Cobbler', 'Cooper', 'Cutler', 'Embroiderer', 'Engraver', 'Fletcher', 'Furniture Artisan',
+                    'Furrier', 'Glassmaker', 'Glovemaker', 'Goldsmith','Silversmith', 'Hatter',
+                    'Jeweler', 'Leatherworker', 'Locksmith', 'Mercer', 'Potter', 'Printer', 'Rope-maker', 'Saddler',
+                    'Seamstress','Tailor', 'Soaper', 'Tanner', 'Taxidermist', 'Thatcher', 'Tinker', 'Toymaker', 'Watchmaker',
+                    'Weaponsmith', 'Weaver', 'Wheelwright', 'Whittler', 'Woodcarver',
+                ],
+                'Crime': [
+                    'Assassin'
+                ],
+                'Education, Science, and Math': [
+                    'Anthropologist', 'Apprentice', 'Archaeologist', 'Archivist', 'Artificer', 'Astrologer', 'Botanist', 'Cartographer', 'Chemist', 'Dean', 'Engineer', 'Historian', 'Horologist', 'Librarian',
+                    'Mathematician', 'Philosopher', 'Professor', 'Scholar', 'Scribe', 'Student', 'Teacher', 'Theologian', 'Tutor',
+                ],
+                'Government and Law': [
+                    'Archduke','Archduchess', 'Aristocrat', 'Baron', 'Baroness', 'Chancellor', 'Chief', 'Constable', 'Count','Countess', 'Courtier', 'Diplomat', 'Duke','Duchess', 'Emperor','Empress', 'Judge',
+                    'King','Queen', 'Knight', 'Lady - in -Waiting', 'Lawyer', 'Marquess', 'Master of Coin', 'Master of the Revels', 'Minister', 'Noble', 'Orator', 'Prince','Princess',
+                    'Steward', 'Squire', 'Tax Collector', 'Viscount','Viscountess', 'Ward',
+                ],
+                'Health': [
+                    'Alchemist', 'Apothecary', 'Doctor', 'Healer', 'Herbalist', 'Midwife', 'Mortician', 'Nurse', 'Physician', 'Surgeon', 'Veterinarian',
+                ],
+                'Hospitality and Common Labor': [
+                    'Baker', 'Barber', 'Barkeep', 'Barmaid', 'Butcher', 'Charcoal Maker', 'Chatelaine','Majordomo', 'Chimney Sweeper', 'Clerk', 'Cook', 'Copyist', 'Croupier', 'Distiller', 'Florist', 'Gardener',
+                    'Gongfarmer', 'Gravedigger', 'Housemaid', 'Kitchen Drudge', 'Laborer', 'Lamplighter', 'Landscaper', 'Laundry Worker', 'Longshoreman', 'Maid','Butler', 'Miner', 'Orphanage Caretaker', 'Page',
+                    'Pastry Chef', 'Plumer(Feather dealer)', 'Porter', 'Street Sweeper', 'Tavern Worker', 'Vermin Catcher', 'Water Bearer',
+                ],
+                'The Magical Arts': [
+                    'Abjurer', 'Archmage', 'Augurer', 'Conjuror', 'Elementalist', 'Enchanter','Enchantress', 'Evoker', 'Hearth - witch', 'Illusionist', 'Mage', 'Necromancer', 'Ritualist', 'Runecaster', 'Sage',
+                    'Seer', 'Oracle', 'Shaman', 'Shapeshifter', 'Sorcerer', 'Sorceress', 'Summoner', 'Transmuter', 'Warlock', 'Witchdoctor', 'Witch', 'Wizard', 'Wordsmith',
+                ],
+                'Military and Security': [
+                    'Admiral', 'Archer', 'Bailiff', 'Bodyguard', 'Bouncer', 'Captain', 'Castellan', 'Cavalier', 'City Watch', 'Detective', 'Investigator', 'Duelist', 'Executioner', 'Fireman', 'Guard', 'General',
+                    'Jailer', 'Man - at - Arms', 'Marshall', 'Mercenary', 'Sapper', 'Sentinel', 'Sergeant', 'Sergeant - at - Arms', 'Scout', 'Siege Artillerist', 'Slave Driver', 'Soldier', 'Spearman', 'Spy', 'Tactician',
+                    'Torturer', 'Warden', 'Warmage',
+                ],
+                'Religion': [
+                    'Abbot', 'Abbess', 'Acolyte', 'Archbishop', 'Bishop', 'Cardinal', 'Chaplain', 'Clergy', 'Cleric', 'Cultist', 'Cult Leader', 'Diviner', 'Friar', 'High Priest', 'Inquisitor', 'Missionary', 'Monk',
+                    'Nun', 'Paladin', 'Pardoner', 'Priest', 'Prophet', 'Sexton', 'Templar',
+                ],
+                'Transportation': [
+                    'Boatman', 'Bosun', 'Cabbie', 'Wagoner', 'Caravaneer', 'Caravan Guard', 'Charioteer', 'Ferryman', 'First Mate', 'Helmsman', 'Navigator', 'Purser', 'Sailor', 'Sea Captain', 'Shipwright', 'Swab',
+                ],
+                'Unemployed, Self-Employed, and Outcast': [
+                    'Adventurer', 'Monster Hunter', 'Bounty Hunter', 'Elder', 'Retiree','Folk Hero', 
+                ],
+    
+            };
+    
+            //Pick a profession
+            function findProf() {
+                var getFieldName = searchArray(Object.keys(professions));
+                var npcProf = searchArray(professions[getFieldName]);
+                return npcProf;
+            };
+    
+            //Pick a class or profession
+            function classReturn() {
+                var chance = rollDice(100);
+                if (chance > 98) {
+                    return searchArray(classes[3]);
+                } else if (chance > 95) {
+                    return searchArray(classes[2]);
+                } else if (chance > 85) {
+                    return searchArray(classes[1]);
+                } else if (chance > 65) {
+                    return searchArray(classes[0]);
+                } else {
+                    return findProf()
+                };
+            }
+            return classReturn()
+        };
+        return findClass();
+    };
+    let vestments = [
+        `pair of pants`, `set of gloves`, `vest`, `blouse`, `shawl`, `skirt`, `dress`, `corset`, `hat`, `headdress`, `jacket`, `poncho`, `robes`, `scarf`, `gown`, `suit`, `cloak`, `tunic`, `kimono`, `sari`, `caftan`, `veil`, `cape`
+    ];
+    let madeOfThesaurus = [
+        `tailored from`, `fashioned out of`, `comprised of`, `constructed with`, `created from`, `assembled with`, `spun from`, `composed of`, `pieced together from`, `patched together from`, `quilted from`, `fabricated out of`, `wrought in`, `conceived with`
+    ];
+    let vestmentPurpose = [
+        `cultic`,
+        `sacrement`,
+        `${searchArray(culturalPurpose)} ceremony`,
+        `${searchArray(culturalPurpose)} festival`,
+        `meditation`,
+        `worship`,
+        `${searchArray(culturalPurpose)} quest`,
+        `${searchArray(culturalPurpose)} rituals`,
+        `${'professional ' + buildClass()}`
+    ];
+    let generalClothesTermThesaurus = [
+        `dress`, `clothing`, `wear`, `attire`, `outfits`, `garb`, `gowns`, `drapery`, `raiments`, `regalia`, `vestments`, `garments`, `ensemble`
     ]
 
     let artForm = [
@@ -2707,43 +2853,224 @@ function artGenerator() {
             `${variableEvent(status,7)}${searchArray(material[3])} ${searchArray(jewelry)}`,            
         ],
         [//statues
-            `${variableEvent(status,3)}${searchArray(material[1])} ${searchArray(["statuette","figurine",])}`,
+            `${variableEvent(status,3)}${searchArray(material[1])} ${searchArray(["bust", "miniature", "totem", "idol", "amulet", "effigy", "model", "icon", "maquette", "ornament", "talisman", "relic", "figural carving", "charm", "sculpturette", "replica", "trophy", "deity representation", "fetish", "avatar", "molded figure", "likeness", "caricature", "casting", "bas-relief", "cameo", "medallion", "plaque", "simulacrum", "diorama","statuette","figurine"])}`,
         ],
-        [//weapons
-            `${searchArray(cermonialDesign)} ${variableEvent(status,9)}${searchArray(material[5])} ${searchArray([`${weaponType()}`,`${searchArray([`set of ${searchArray(armorTypes[0])}`, `${searchArray(armorTypes[1])}`])}`, `shield and ${weaponType()} display set`])}, 
-            ${searchArray([`seemingly of ${findRace()} make with ${searchArray([`${culture()}`,`extraordinarily intricate designwork and filigree`])}`])}.`
+        [//Armaments
+            `A ${variableEvent([(searchArray(cermonialDesign)).toLowerCase()])} ${variableEvent(status,9)} ${searchArray(material[5])} ${weaponType()}${variableEvent([weaponAccent()])}${variableEvent([armamentCloser()])}`,
+            `A ${variableEvent([searchArray(cermonialDesign).toLowerCase()])} ${variableEvent(status,9)} set of ${searchArray(armorTypes[0])}${variableEvent([armorAccent()])}${([armamentCloser()])}`,
+            `A ${variableEvent([searchArray(cermonialDesign).toLowerCase()])} ${variableEvent(status,9)} ${searchArray(armorTypes[1])}${variableEvent([armorAccent()])}${variableEvent([armamentCloser()])}`,
+            `A ${variableEvent([searchArray(cermonialDesign).toLowerCase()])} ${variableEvent(status,9)} shield and ${weaponType()} display set${variableEvent([weaponAccent()])}${variableEvent([armamentCloser()])}`,
+            `A ${variableEvent([searchArray(cermonialDesign).toLowerCase()])} ${variableEvent(status,9)} dual ${weaponType()} display set${variableEvent([armamentCloser()])}`,
         ],
         [//clothes
-            `A ${variableEvent(status,8)} set of ${searchArray(material[4])} ${searchArray(
-                [`${findRace()} ${searchArray(culturalEvents)} vestments`,
-                'cultic vestments',
-                `vestments from a long forgotten ${searchArray(['kingdom','culture'])}`,
-                `${classReturn()} vestments`,
-                'royal drapery',
-                'enchanter’s robe',
-                'diviner’s attire',
-                'time-honored ceremonial cloak',
-                'dimensional weaver’s outfit',
-                'Archmage robes',
-                `garments blessed by ${searchArray(['moon', 'sun', 'stars', 'ocean'])} deities`,
-                'sorceress evening gown',
-                'warrior prince tunic',
-                'grand oracle’s ensemble',
-                'sacred guardian attire',
-                'holy emissary’s raiments',
-                'cloak of ancient prophecies',
-                'time-traveler’s tailored suit',
-                'mystical seer’s garb',
-                'necromancer’s robe adorned with lost souls',
-                'grandmaster alchemist’s attire'
-            ])}.`
+            `A(n) ${variableEvent(status,8)} set of ${searchArray(vestmentPurpose)} ${searchArray(generalClothesTermThesaurus)} ${searchArray(madeOfThesaurus)} ${searchArray(material[4])}`,
+            `A(n) ${variableEvent(status,8)} ${searchArray(vestments)} of ${searchArray(culturalPurpose)} ${searchArray(madeOfThesaurus)} ${searchArray(material[4])}`,
+            `A(n) ${variableEvent(status,8)} ${searchArray(vestments)}${searchArray(madeOfThesaurus)} ${searchArray(material[4])}`,
+            `A(n) ${variableEvent(status,8)} ${searchArray(culturalPurpose)} ${searchArray(generalClothesTermThesaurus)} ${searchArray(madeOfThesaurus)} ${searchArray(material[4])}`,
+            `A(n) ${variableEvent(status,8)} ${findRace()} ${searchArray(culturalEvents)} ${searchArray(generalClothesTermThesaurus)}`,
+            `A(n) ${variableEvent(status,8)} set of ${searchArray(vestmentPurpose)} ${searchArray(generalClothesTermThesaurus)} from a long forgotten ${searchArray(['kingdom','culture'])}`,
+            `A(n) ${variableEvent(status,8)} set of ${searchArray(culturalPurpose)} ${searchArray(generalClothesTermThesaurus)} from a long forgotten ${searchArray(['kingdom','culture'])}`
         ],
         [//manuscripts
-            `illuminated manuscript`
+            `illuminated manuscript`,
+            `Scroll`,
+            `Chronicle`,
+            `Religious Text`,
+            `Manuscript (vellum)`,
+            `Geonology`,
+            `Atlas`,
+            `Astrological charts`,
+            `profession books` ,
+            `beastiary`
         ],
         [//toys
-
+            `dolls/figurines`,
+            `marbles`,
+            `spinning tops`,
+            `yo yos (toy weapons)`,
+            `miniature vehicles`,
+            `wooden animals and beasts`,
+            `figurines`,
+            `masks`,
+            `hobby horse type toys`,
+            `rattles`,
+            `teddy bears`
+        ],
+        [//Musical Instruments
+            `Violin`,
+            `Viola`,
+            `Cello`,
+            `Double bass`,
+            `Guitar (acoustic, electric, bass)`,
+            `Harp`,
+            `Mandolin`,
+            `Banjo`,
+            `Sitar`,
+            `Oud`,
+            `Lute`,
+            `Zither`,
+            `Koto`,
+            `Balalaika`,
+            
+            `Flute (Western concert flute, piccolo, pan flute, fife)`,
+            `Clarinet`,
+            `Saxophone`,
+            `Oboe`,
+            `Bassoon`,
+            `Recorder`,
+            `Trumpet`,
+            `Trombone`,
+            `Tuba`,
+            `French horn`,
+            `Shakuhachi`,
+            `Didgeridoo`,
+            `Harmonica`,
+            `Accordion`,
+            `Bagpipes`,
+            
+            `Drums (snare drum, bass drum, bongos, congas, timpani, tabla)`,
+            `Piano`,
+            `Xylophone`,
+            `Marimba`,
+            `Vibraphone`,
+            `Tambourine`,
+            `Triangle`,
+            `Cymbals`,
+            `Gong`,
+            `Djembe`,
+            `Maracas`,
+            `Castanets`,
+            `Bodhrán`,
+            
+            `Organ`,
+            `Synthesizer`,
+            `Harpsichord`,
+            `Clavichord`,
+            
+            `Cornet`,
+            `Bugle`,
+            `Euphonium`,
+            `Sousaphone`,
+            
+            `Theremin`,
+            `Jew's harp`,
+            `Steel drums`,
+            `Mbira or thumb piano`,
+            `Hang drum`,
+            `Kazoo`,
+            `Nose flute`,
+        ],
+        [//quilting
+            `Wool blanket`,
+            `Fleece blanket`,
+            `Cotton blanket`,
+            `Vellux blanket`,
+            `Down blanket`,
+            `Cashmere blanket`,
+            `Microfiber blanket`,
+            `Waffle weave blanket`,
+            `Thermal blanket`,
+            `Mink blanket`,
+            `Acrylic blanket`,
+            `Knitted blanket`,
+            `Chenille blanket`,
+            `Muslin swaddle blanket`,
+            `Sherpa blanket`,
+            `Electric blanket`,
+            `Weighted blanket`,
+            `Polyester blanket`,
+            `Bamboo blanket`,
+            
+            `Patchwork quilt`,
+            `Amish quilt`,
+            `Appliqué quilt`,
+            `Log cabin quilt`,
+            `Whole cloth quilt`,
+            `Crazy quilt`,
+            `Bargello quilt`,
+            `Baltimore Album quilt`,
+            `Wedding Ring quilt`,
+            `Kantha quilt`,
+            `T-shirt quilt`,
+            `Medallion quilt`,
+            `Hawaiian quilt`,
+            `Memory quilt`,
+            `Sampler quilt`,
+            `Star quilt`,
+            `Charm quilt`,
+            `English paper pieced quilt`,
+            `Jelly Roll quilt`,
+            `Improvisational quilt`,
+            `Trapunto quilt`,
+            `Foundation paper pieced quilt`,
+        ],
+        [//installaiton art
+            `Site-specific installation`,
+            `Interactive installation`,
+            `Sound installation`,
+            `Light installation`,
+            `Video installation`,
+            `Kinetic installation`,
+            `Environmental art installation`,
+            `Land art installation`,
+            `Text-based installation`,
+            `Performance art installation`,
+            `Sculptural installation`,
+            `Virtual/Augmented Reality installation`,
+            `Institutional critique installation`,
+            `Temporary installation`,
+            `Permanent installation`,
+            `Conceptual installation`,
+            `Multimedia installation`,
+            `Narrative installation`,
+            `Architectural installation`,
+            `Nature-based installation`,
+            `Immersive 3D projection`,
+            `Biological or organic installation`,
+            `Holographic installation`,
+            `Mobile installation`,
+            `Relational aesthetics installation`,
+            `Interactive robotic installation`,
+            `Feminist art installation`,
+            `Political or activist installation`,
+            `Intangible installation`,
+            `Sensory installation (e.g., those that play with touch, smell, etc.)`,
+            `Participatory installation`,
+            `Mirror installation`,
+            `Found object installation`,
+            `Photographic installation`,
+            `Maze or labyrinthine installation`,
+            `Nomadic installation`,
+            `Performance-based participatory installation`,
+            `Neon installation`,
+        ],
+        [// glassblowing
+            `Free-blown glass: Glass forms are created without the use of molds.`,
+            `Mold-blown glass: Molten glass is blown into a mold to shape it.`,
+            `Solid sculpting: Solid pieces of glass are shaped without hollow sections.`,
+            `Lampworking (or flameworking): Uses a torch to melt and shape the glass.`,
+            `Off-hand glassblowing: Traditional method where the glass is shaped on the end of a blowpipe.`,
+            `Fused glass: Melting pieces of glass together in a kiln.`,
+            `Slumped glass: Gravity is used to shape glass into or over a mold in a kiln.`,
+            `Cane work: Incorporating rods of colored glass.`,
+            `Murrine: Slices from a glass cane that show a pattern or image.`,
+            `Graal: A Swedish technique where patterns are sandblasted or cut into a blank, then further encased in clear glass and blown.`,
+            `Incased glass: Layering different colors of molten glass.`,
+            `Pulled feather: Swirling and pulling colors in a semi-fluid state.`,
+            `Reticello: Incorporates air bubbles in a crisscross pattern within the glass.`,
+            `Aventurine: Spangling the glass with metallic specks.`,
+            `Latticino: Incorporates delicate latticework in the design.`,
+            `Overlay: Layering multiple colors of glass.`,
+            `Cameo glass: Multiple layers are etched or carved to reveal underlying colors.`,
+            `Hot sculpting: Manipulating glass outside of the furnace to achieve a shape or texture.`,
+            `Pâte de verre: Paste of glass that's packed into a mold and fired.`,
+            `Kiln casting: Glass is melted into a mold in a kiln.`,
+            `Cold-working: Techniques applied post the initial formation, such as cutting, polishing, or engraving.`,
+            `Glass threading: Fine threads of glass are wound around a hotter core.`,
+            `Goblet making: Creating functional goblets with intricate stems and bowls.`,
+            `Blown & sculpted`,
         ]
+
     ]
 
 
@@ -2843,10 +3170,11 @@ function artGenerator() {
             "siphoning the life force of a(n)",
         ],
         [// general actions
-            "looking towards the sky", "preparing to attack", "ready to fight", "sitting on a rock", "bracing for impact", "singing", "dancing in ceremonial dress"
+            "Meditating in a serene location", "Tending to a garden of vibrant flowers", "Sharing a meal with friends or family", "Reading an ancient tome", "Protecting a vulnerable creature or individual", "Gazing at a reflecting pool or mirror", "Playing a musical instrument", "Guiding others through a treacherous path", "Engaged in a joyful embrace", "Creating a work of art or craftsmanship", "Nurturing a young or wounded animal", "Engrossed in deep thought or contemplation", "Walking amidst nature with a sense of peace", "Listening intently to the whispers of nature", "Drawing or painting a scenic view", "Offering a hand to someone in need", "Lifting a lantern or torch to light the way", "Communicating with ethereal or elemental beings", "Gathering with others in a celebration", "Comforting a distressed soul", "Journeying with a sense of purpose", "Reveling in the beauty of a moment's stillness", "Releasing a captured creature back into the wild", "Laying down arms in an act of peace", "Standing tall amidst adversity, exuding hope", "Witnessing the first light of dawn", "Respecting a sacred site or monument", "Offering gifts or tributes in gratitude", "Guided by a magical or divine force",
+            "Finding solace in the presence of a guiding spirit", "Gathering herbs or medicinal plants in a forest", "Rescuing someone from danger or peril", "Partaking in a ritual of blessing or purification", "Admiring the vast expanse of the cosmos", "Connecting with animals in a harmonious bond", "Repairing a broken item or restoring something old", "Engaging in friendly competition or sport", "Crafting a gift with love and care", "Teaching younger ones a valuable lesson or skill", "Holding a beacon of hope in darkness", "Enjoying a moment of laughter with companions", "Planting a tree or sowing seeds for the future", "Drawing water from a clear, rejuvenating spring", "Exchanging tales and stories around a campfire", "Bestowing a token of affection or friendship", "Reuniting with a long-lost friend or family member", "Following a path illuminated by stars or fireflies", "Setting free a caged bird or creature", "Carving symbols or inscriptions of protection", "Embracing the elements – feeling the wind, sun, or rain", "Observing the wonders of nature with childlike awe", "Standing firm, united with allies against challenges", "Tuning in to the vibrations of a sacred site", "Building or constructing a haven or sanctuary", "Lending a listening ear to those who seek guidance","looking towards the sky", "preparing to attack", "ready to fight", "sitting on a rock", "bracing for impact", "singing", "dancing in ceremonial dress"
         ],
         [//evil actions
-            "sitting in its lair", `clutching a(n) ${searchArray(item)} tightly`, "stalking around a city", "in a house", "standing on top of a large building", "on top of a building"
+        "Lurking in the shadows", "Whispering to a captured prisoner", `Gazing intently into a(n) ${searchArray(item)}`, "Conjuring dark magic", "Laughing amidst chaos", "Summoning twisted creatures", "Overseeing a horde of minions", "Staring ominously from a throne", "Performing a forbidden ritual", "Plotting in a secret chamber", "Emerging from a portal of darkness", "Casting a curse on a village", "Engulfed in a cloak of smoke and mist", "Hovering above a desecrated land", "Binding a captive with dark chains", "Silhouetted against a blood-red moon", `Holding a(n) ${searchArray(item)} as a token of conquest`, "Savoring the screams of the tormented", "Engaged in a duel with a hero", "Poised to strike, weapon raised", "Studying forbidden scrolls", "Caressing a dark artifact", "Directing an army of the undead", "Communing with malevolent spirits", "Bathing in the glow of a sinister altar","sitting in its lair", `clutching a(n) ${searchArray(item)} tightly`, "stalking around a city", "in a house", "standing on top of a large building", "on top of a building", "Rising from a tomb with an eerie glow", "Drawing power from a corrupted crystal", "Wielding a weapon imbued with dark energy", "Overlooking a battlefield with malicious glee", "In the midst of a demonic transformation", "Drawing symbols in the ground for a dark summoning", `Eerily illuminated by the light of a(n) ${searchArray(item)}`, "Controlling puppets or beings against their will", "Drinking a potion made from the tears of the innocent", "Whispering secrets to an animated shadow", "On a chariot pulled by nightmarish beasts", "Presiding over a sacrificial ceremony", "Surrounded by an aura of palpable dread", "In a cavern, surrounded by treasures and bones", "Floating above a chasm of endless despair", "Exchanging dark promises with spectral figures", "Enthralling a crowd with hypnotic eyes", "Striking a deal at a crossroads at midnight", "Harnessing the essence of trapped souls", "Reveling in the destruction of a once-thriving place", "Animating statues or relics for malevolent purposes", "Gathering with followers in a clandestine ritual", "Singing a haunting lullaby that ensnares the mind", "Crafting weapons or artifacts of doom", "Masked, attending a ball of twisted revelry",
         ]
     ]
     let verb = [
@@ -2924,14 +3252,17 @@ function artGenerator() {
         [/*Singular*/ 
         "nursing a friend back to health", 
         "holding a baby in their hands", 
-        `defending against an onslaught of ${searchArray(monster)}s`, 
+        `defending against an onslaught of ${searchArray(monster[rollDice(1)])}s`, 
         "playing with a pet", 
         "laughing with friends", 
         "playing a tabletop game with friends", 
         `holding (a(n)) ${searchArray(item)} in one hand, and a ${searchArray(item)} in the other`, 
-        `weeping with a lifeless ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} ${searchArray([ 'in their arms', 'at their feet', 'across the battlefield', 'hanging from the gallows', 'lying peacefully in a bed of flowers', 'cradled in the branches of a sacred tree', 'resting beneath a serene waterfall', 'entombed in a grand mausoleum', 'floating peacefully in the depths of a tranquil lake', 'adorned with flowers on a funeral pyre', 'resting among the ancient ruins of a fallen city', 'surrounded by mourners paying their respects', 'protected in the embrace of a guardian spirit', 'laid to rest in a sacred burial ground', 'enclosed within a mystical crystal tomb', 'entwined with ivy on a weathered stone monument', 'enshrined in a magnificent marble sarcophagus', 'buried in the heart of an enchanted forest', 'surrounded by flickering candles in a dark crypt', 'watched over by celestial beings in the afterlife', 'floating peacefully in the night sky as a guiding star', 'resting on a bed of fallen leaves in a peaceful glade', 'remembered through a towering statue in their honor', 'reunited with their ancestors in the realm of spirits', 'surrounded by ancient symbols of protection and guidance', 'becoming part of the eternal tapestry of the cosmos', 'embodying the essence of the natural world as a spirit guardian', 'residing in a tranquil and ethereal dreamscape', 'immortalized in a majestic painting, forever remembered', 'dwelling in a realm of eternal twilight and peaceful slumber', 'watched over by a benevolent and celestial being', 'resting on a bed of glowing crystals in a mystical cavern', 'surrounded by angels, guiding them to the afterlife', 'enclosed within a magnificent and elaborate tomb', 'becoming one with the vibrant and ever-changing universe', 'surrounded by a chorus of spirits, singing them into the beyond', 'protected by ancient and powerful magical wards', 'resting peacefully in the embrace of a guardian deity', 'residing in a realm of eternal sunshine and happiness', 'watched over by the gentle and guiding light of the moon', 'enclosed within the heart of a majestic and ancient tree', 'surrounded by their cherished belongings and mementos', 'embodying the spirit of the earth, forever connected to nature', 'dwelling in the realm of dreams, a place of infinite possibilities', 
-        'watched over by a wise and benevolent spirit of the afterlife', 'resting on a bed of stars, their spirit soaring through the cosmos', 'surrounded by the warmth and comfort of ancestral spirits', 'protected by the embrace of a mythical and divine creature', 'residing in a realm of eternal peace and tranquility', 'enclosed within a sacred and mystical burial chamber', 'watched over by guardian spirits, their journey guided and protected', 'embodying the essence of the ocean, forever flowing with the tides', 'dwelling in a realm of eternal spring, where life is everlasting', 'resting among the shimmering and ethereal lights of the aurora', 'surrounded by the whispers of ancient and wise spirits', 'watched over by the spirits of their ancestors, guiding them home', 'residing in a realm of eternal night, where dreams come to life', 'enclosed within a hidden and sacred burial ground', 'protected by the watchful eyes of celestial beings', 'resting in the heart of a sacred and ancient temple', 'surrounded by the gentle embrace of a benevolent and loving spirit', 'watched over by the spirits of nature, forever connected to the earth', 'embodying the essence of the stars, forever shining in the sky', 'dwelling in a realm of eternal autumn, where colors never fade', 'residing among the echoes of the past and the dreams of the future', 'enclosed within a serene and peaceful memorial garden', 'protected by the wings of a majestic and mythical creature', 'resting on a bed of moonlit clouds, their spirit soaring free', 'surrounded by the soft and comforting glow of ethereal light', 'watched over by the eternal and guiding flame of a sacred fire', 'embodying the spirit of the mountains, forever standing tall', 'dwelling in a realm of eternal winter, where snow never melts', 'residing among the whispers of the wind, forever wandering', 'enclosed within the heart of a mystical and ancient forest', 'protected by the watchful and guiding eye of a guardian deity', 'resting on a bed of ancient and sacred runes, forever remembered', 'surrounded by the gentle and soothing melodies of celestial musicians', 
-        'watched over by the radiant and comforting light of the sun', 'embodying the essence of the flame, forever burning bright', 'dwelling in a realm of eternal summer, where flowers always bloom', 'residing among the twinkling and shimmering lights of the night sky', 'enclosed within a hidden and sacred burial mound', 'protected by the swirling and mysterious currents of the sea', 'resting on a bed of glowing embers, forever aflame with life', 'surrounded by the whispers of ancient and powerful magic', 'watched over by the guiding and protective spirits of the forest', 'embodying the spirit of the wind, forever moving with grace', 'dwelling in a realm of eternal rain, where waters never recede', 'residing among the radiant and colorful lights of the sunset', 'enclosed within the heart of a majestic and mythical mountain', 'protected by the shimmering and magical aura of a sacred crystal', 'resting on a bed of fallen petals, forever connected to nature', 'surrounded by the comforting and gentle embrace of the moonlight', 'watched over by the eternal and wise eyes of the stars', 'embodying the essence of the earth, forever grounded and strong', 'dwelling in a realm of eternal dusk, where shadows never fade', 'residing among the soft and soothing murmurs of the river', 'enclosed within a hidden and mystical burial cave', 'protected by the ancient and powerful energies of the ley lines', 'resting on a bed of ethereal mist, forever wandering and exploring', 'surrounded by the glowing and vibrant colors of the rainbow', 'watched over by the gentle and nurturing light of the morning sun', 'embodying the spirit of the thunderstorm, forever powerful and awe-inspiring', 'dwelling in a realm of eternal thunder, where storms never cease', 'residing among the radiant and twinkling lights of the fireflies', 'enclosed within the heart of a grand and ancient temple', 'protected by the comforting and guiding presence of a guardian spirit', 'resting on a bed of soft and fragrant petals, forever at peace', 'surrounded by the ethereal and enchanting melodies of celestial birds', 'watched over by the eternal and watchful eyes of a celestial deity', 'embodying the essence of the ocean, forever flowing and changing', 'dwelling in a realm of eternal fog, where mysteries never reveal themselves', ])}`, 
+        `weeping with a lifeless ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} ${searchArray(
+            [ 
+                'in their arms', 'at their feet', 'across the battlefield', 'hanging from the gallows', 'lying peacefully in a bed of flowers', 'cradled in the branches of a sacred tree', 'resting beneath a serene waterfall', 'entombed in a grand mausoleum', 'floating peacefully in the depths of a tranquil lake', 'adorned with flowers on a funeral pyre', 'resting among the ancient ruins of a fallen city', 'surrounded by mourners paying their respects', 'protected in the embrace of a guardian spirit', 'laid to rest in a sacred burial ground', 'enclosed within a mystical crystal tomb', 'entwined with ivy on a weathered stone monument', 'enshrined in a magnificent marble sarcophagus', 'buried in the heart of an enchanted forest', 'surrounded by flickering candles in a dark crypt', 'watched over by celestial beings in the afterlife', 'floating peacefully in the night sky as a guiding star', 'resting on a bed of fallen leaves in a peaceful glade', 'remembered through a towering statue in their honor', 'reunited with their ancestors in the realm of spirits', 'surrounded by ancient symbols of protection and guidance', 'becoming part of the eternal tapestry of the cosmos', 'embodying the essence of the natural world as a spirit guardian', 'residing in a tranquil and ethereal dreamscape', 'immortalized in a majestic painting, forever remembered', 'dwelling in a realm of eternal twilight and peaceful slumber', 'watched over by a benevolent and celestial being', 'resting on a bed of glowing crystals in a mystical cavern', 'surrounded by angels, guiding them to the afterlife', 'enclosed within a magnificent and elaborate tomb', 'becoming one with the vibrant and ever-changing universe', 'surrounded by a chorus of spirits, singing them into the beyond', 'protected by ancient and powerful magical wards', 'resting peacefully in the embrace of a guardian deity', 'residing in a realm of eternal sunshine and happiness', 'watched over by the gentle and guiding light of the moon', 'enclosed within the heart of a majestic and ancient tree', 'surrounded by their cherished belongings and mementos', 'embodying the spirit of the earth, forever connected to nature', 'dwelling in the realm of dreams, a place of infinite possibilities', 
+            'watched over by a wise and benevolent spirit of the afterlife', 'resting on a bed of stars, their spirit soaring through the cosmos', 'surrounded by the warmth and comfort of ancestral spirits', 'protected by the embrace of a mythical and divine creature', 'residing in a realm of eternal peace and tranquility', 'enclosed within a sacred and mystical burial chamber', 'watched over by guardian spirits, their journey guided and protected', 'embodying the essence of the ocean, forever flowing with the tides', 'dwelling in a realm of eternal spring, where life is everlasting', 'resting among the shimmering and ethereal lights of the aurora', 'surrounded by the whispers of ancient and wise spirits', 'watched over by the spirits of their ancestors, guiding them home', 'residing in a realm of eternal night, where dreams come to life', 'enclosed within a hidden and sacred burial ground', 'protected by the watchful eyes of celestial beings', 'resting in the heart of a sacred and ancient temple', 'surrounded by the gentle embrace of a benevolent and loving spirit', 'watched over by the spirits of nature, forever connected to the earth', 'embodying the essence of the stars, forever shining in the sky', 'dwelling in a realm of eternal autumn, where colors never fade', 'residing among the echoes of the past and the dreams of the future', 'enclosed within a serene and peaceful memorial garden', 'protected by the wings of a majestic and mythical creature', 'resting on a bed of moonlit clouds, their spirit soaring free', 'surrounded by the soft and comforting glow of ethereal light', 'watched over by the eternal and guiding flame of a sacred fire', 'embodying the spirit of the mountains, forever standing tall', 'dwelling in a realm of eternal winter, where snow never melts', 'residing among the whispers of the wind, forever wandering', 'enclosed within the heart of a mystical and ancient forest', 'protected by the watchful and guiding eye of a guardian deity', 'resting on a bed of ancient and sacred runes, forever remembered', 'surrounded by the gentle and soothing melodies of celestial musicians', 
+            'watched over by the radiant and comforting light of the sun', 'embodying the essence of the flame, forever burning bright', 'dwelling in a realm of eternal summer, where flowers always bloom', 'residing among the twinkling and shimmering lights of the night sky', 'enclosed within a hidden and sacred burial mound', 'protected by the swirling and mysterious currents of the sea', 'resting on a bed of glowing embers, forever aflame with life', 'surrounded by the whispers of ancient and powerful magic', 'watched over by the guiding and protective spirits of the forest', 'embodying the spirit of the wind, forever moving with grace', 'dwelling in a realm of eternal rain, where waters never recede', 'residing among the radiant and colorful lights of the sunset', 'enclosed within the heart of a majestic and mythical mountain', 'protected by the shimmering and magical aura of a sacred crystal', 'resting on a bed of fallen petals, forever connected to nature', 'surrounded by the comforting and gentle embrace of the moonlight', 'watched over by the eternal and wise eyes of the stars', 'embodying the essence of the earth, forever grounded and strong', 'dwelling in a realm of eternal dusk, where shadows never fade', 'residing among the soft and soothing murmurs of the river', 'enclosed within a hidden and mystical burial cave', 'protected by the ancient and powerful energies of the ley lines', 'resting on a bed of ethereal mist, forever wandering and exploring', 'surrounded by the glowing and vibrant colors of the rainbow', 'watched over by the gentle and nurturing light of the morning sun', 'embodying the spirit of the thunderstorm, forever powerful and awe-inspiring', 'dwelling in a realm of eternal thunder, where storms never cease', 'residing among the radiant and twinkling lights of the fireflies', 'enclosed within the heart of a grand and ancient temple', 'protected by the comforting and guiding presence of a guardian spirit', 'resting on a bed of soft and fragrant petals, forever at peace', 'surrounded by the ethereal and enchanting melodies of celestial birds', 'watched over by the eternal and watchful eyes of a celestial deity', 'embodying the essence of the ocean, forever flowing and changing', 'dwelling in a realm of eternal fog, where mysteries never reveal themselves', 
+            ])}`, 
         `working on a ship`, 
         'leaning against a cannon', 
         'loading a cannon', 
@@ -3028,7 +3359,7 @@ function artGenerator() {
         ],
         [/*Group*/
         "nursing a friend back to health together",
-        `defending against an onslaught of ${searchArray(monster)}s as a team`,
+        `defending against an onslaught of ${searchArray(monster[rollDice(1)])}s as a team`,
         "playing with their pets joyfully",
         "laughing together in sheer delight",
         "engaging in a friendly tabletop game",
@@ -3186,7 +3517,7 @@ function artGenerator() {
     ]
     let subject = [
         [/*Singular*/
-        'knight', 'refugee', 'acolyte', 'archmage', 'assassin', 'bandit', 'berserker', 'commoner', 'cultist', 'fanatic', 'gladiator', 'mage', 'priest', 'scout', 'spy', 'thug', 'veteran', 'dutchess', 'paladin', 'farmer', 'scholar', 'seadog', 'jester', 'noble', 'king', 'thief', 'sailor', 'farmer', 'soldier', 'beggar', 'bard', 'guard', 'merchant', 'smuggler', 'fool', 'druid', 'witch', 'traveler', 'fisherman', 'lady', 'harlot', 'bounty hunter', 'gardener', 'gambler', 'prince', 'princess', 'pirate', 'journeyman', 'chieftain', 'lord', 'archer', 'lumberjack', 'miner', 'hunter', 'villager', 'settler', 'butcher', 'oracle', 'pilgrim', 'courier', 'hero', 'necromancer', 'sorcerer', 'wizard', 'barbarian', 'ranger', 'fighter', 'monk', 'warlock', 'summoner', 'arcanist', 'blood hunter', 'cleric', 'rogue', 'artificer', 'outlander', 'exile', 'falconer', 'scribe', 'beastmaster', 'dancer', 'hermit', 'blacksmith', 'astronomer', 'explorer', 'alchemist', 'tavern owner', 'illusionist', 'baker', 'inquisitor', 'fortune teller', 'minstrel', 'gravedigger', 'fencer', 'philosopher', 'animal tamer', 'apothecary', 'court jester', 'seer', 'brawler', 'watchman', 'musician', 'volunteer', 'innkeeper', 'cartographer', 'executioner', 'shaman', 'sculptor', 'tax collector', 'acrobat', 'archaeologist', 'herbalist', 'weaver', 'beekeeper', 'librarian', 'trapper', 'gypsy', 'skald', 'messenger', 'almsman', 'governess', 'herald', 'peddler', 'storyteller', 'taxidermist', 'exorcist', 'juggler', 'sword swallower', 'fakir', 'prison guard', 'master thief', 'con artist', 'medicine woman', 'snake charmer', 'peasant', 'vagrant', 'glazier', 'magistrate', 'armorer'
+        'knight', 'refugee', 'acolyte', 'archmage', 'assassin', 'bandit', 'berserker', 'commoner', 'cultist', 'fanatic', 'gladiator', 'mage', 'priest', 'scout', 'spy', 'thug', 'veteran', 'dutchess', 'paladin', 'farmer', 'scholar', 'seadog', 'jester', 'noble', 'king', 'thief', 'sailor', 'farmer', 'soldier', 'beggar', 'bard', 'guard', 'merchant', 'smuggler', 'fool', 'druid', 'witch', 'traveler', 'fisherman', 'lady', 'harlot', 'bounty hunter', 'gardener', 'gambler', 'prince', 'princess', 'pirate', 'journeyman', 'chieftain', 'lord', 'archer', 'lumberjack', 'miner', 'hunter', 'villager', 'settler', 'butcher', 'oracle', 'pilgrim', 'courier', 'hero', 'necromancer', 'sorcerer', 'wizard', 'barbarian', 'ranger', 'fighter', 'monk', 'warlock', 'summoner', 'arcanist', 'blood hunter', 'cleric', 'rogue', 'artificer', 'outlander', 'exile', 'falconer', 'scribe', 'beastmaster', 'dancer', 'hermit', 'blacksmith', 'astronomer', 'explorer', 'alchemist', 'tavern owner', 'illusionist', 'baker', 'inquisitor', 'fortune teller', 'minstrel', 'gravedigger', 'fencer', 'philosopher', 'animal tamer', 'apothecary', 'court jester', 'seer', 'brawler', 'watchman', 'musician', 'volunteer', 'innkeeper', 'cartographer', 'executioner', 'shaman', 'sculptor', 'tax collector', 'acrobat', 'archaeologist', 'herbalist', 'weaver', 'beekeeper', 'librarian', 'trapper', 'gypsy', 'skald', 'messenger', 'almsman', 'governess', 'herald', 'peddler', 'storyteller', 'taxidermist', 'exorcist', 'juggler', 'sword swallower', 'fakir', 'prison guard', 'master thief', 'con artist', 'medicine woman', 'snake charmer', 'peasant', 'vagrant',  'magistrate', 'armorer'
         ],
         [/*Plural*/
         'knights', 'refugees', 'acolytes', 'archmages', 'assassins', 'bandits', 'berserkers', 'commoners', 'cultists', 'fanatics', 'gladiators', 'mages', 'priests', 'scouts', 'spies', 'thugs', 'veterans', 'dutchesses', 'paladins', 'farmers', 'scholars', 'seadogs', 'jesters', 'nobles', 'kings', 'thieves', 'sailors', 'farmers', 'soldiers', 'beggars', 'bards', 'guards', 'merchants', 'smugglers', 'fools', 'druids', 'witches', 'travelers', 'fishermen', 'ladies', 'harlots', 'bounty hunters', 'gardeners', 'gamblers', 'princes', 'princesses', 'pirates', 'journeymen', 'chieftains', 'lords', 'archers', 'lumberjacks', 'miners', 'hunters', 'villagers', 'settlers', 'butchers', 'oracles', 'pilgrims', 'couriers', 'heroes', 'necromancers', 'sorcerers', 'wizards', 'barbarians', 'rangers', 'fighters', 'monks', 'warlocks', 'summoners', 'arcanists', 'blood hunters', 'clerics', 'rogues', 'artificers', 'outlanders', 'exiles', 'falconers', 'scribes', 'beastmasters', 'dancers', 'hermits', 'blacksmiths', 'astronomers', 'explorers', 'alchemists', 'tavern owners', 'illusionists', 'bakers', 'inquisitors', 'fortune tellers', 'minstrels', 'gravediggers', 'fencers', 'philosophers', 'animal tamers', 'apothecaries', 'court jesters', 'seers', 'brawlers', 'watchmen', 'musicians', 'volunteers', 'innkeepers', 'cartographers', 'executioners', 'shamans', 'sculptors', 'tax collectors', 'acrobats', 'archaeologists', 'herbalists', 'weavers', 'beekeepers', 'librarians', 'trappers', 'gypsies', 'messengers', 'almsmen', 'governesses', 'heralds', 'peddlers', 'storytellers', 'taxidermists', 'exorcists', 'jugglers', 'sword swallowers', 'prison guards', 'master thieves', 'con artists', 'medicine women', 'snake charmers', 'peasants', 'vagrants', 'glaziers', 'magistrates', 'armorers'
@@ -3264,7 +3595,6 @@ function artGenerator() {
             "journey through dreamscape",
             "exploration of parallel worlds",
             "ancient prophecy fulfillment",
-            "virtual reality adventure",
             "sorcerer's apprentice training",
             "enchanted monarchy struggle",
             "futuristic rebellion",
@@ -3288,7 +3618,6 @@ function artGenerator() {
             "supernatural beings' secret world",
             "ancient artifact's power",
             "cosmic journey beyond the stars",
-            "virtual reality escape",
             "sorcerer's duel of destinies",
             "enchanted kingdom's rule",
             "futuristic utopia",
@@ -3321,7 +3650,6 @@ function artGenerator() {
             "supernatural beings' hidden world",
             "ancient artifact's mystery",
             "cosmic forces' clash",
-            "virtual reality challenge",
             "sorcerer's quest for knowledge",
             "enchanted kingdom's legacy",
             "futuristic dystopia",
@@ -3343,7 +3671,6 @@ function artGenerator() {
             "time-altering paradox",
             "fantasy realm's salvation",
             "cosmic mysteries' revelation",
-            "virtual reality escape room",
             "sorcerer's ancient spell",
             "enchanted monarchy's prophecy",
             "futuristic space exploration",
@@ -3354,7 +3681,6 @@ function artGenerator() {
             "supernatural beings' hidden agenda",
             "ancient artifact's forgotten history",
             "cosmic harmony and chaos",
-            "virtual reality gaming tournament",
             "sorcerer's ultimate challenge",
             "enchanted kingdom's revival",
             "futuristic utopian society",
@@ -3376,7 +3702,6 @@ function artGenerator() {
             "time-traveling adventure",
             "fantasy realm's destiny",
             "cosmic guardians' mission",
-            "virtual reality enigma",
             "sorcerer's magical legacy",
             "enchanted monarchy's revival",
             "futuristic cityscape exploration",
@@ -3398,7 +3723,6 @@ function artGenerator() {
             "time-bending adventure",
             "fantasy realm's quest for peace",
             "cosmic realm's balance",
-            "virtual reality challenge",
             "sorcerer's ancient grimoire",
             "enchanted monarchy's awakening",
             "futuristic spacefaring civilization",
@@ -3409,7 +3733,6 @@ function artGenerator() {
             "supernatural beings' quest",
             "ancient artifact's rediscovery",
             "cosmic conflict and resolution",
-            "virtual reality escapade",
             "sorcerer's epic trial",
             "enchanted kingdom's legacy",
             "futuristic metropolis",
@@ -3431,7 +3754,6 @@ function artGenerator() {
             "time-traveling escapade through eras",
             "fantasy realm's prophecy",
             "cosmic guardian's ancient quest",
-            "virtual reality realm's secret",
             "sorcerer's quest for the ultimate power",
             "enchanted monarchy's redemption",
             "futuristic space colonization",
@@ -3453,7 +3775,6 @@ function artGenerator() {
             "time-altering adventure of paradoxes",
             "fantasy realm's salvation from darkness",
             "cosmic mysteries' revelation",
-            "virtual reality escapade in a digital world",
             "sorcerer's ancient spell of power",
             "enchanted monarchy's prophecy fulfilled",
             "futuristic journey through the stars",
@@ -3464,7 +3785,6 @@ function artGenerator() {
             "supernatural beings' hidden world exposed",
             "ancient artifact's forgotten history revealed",
             "cosmic harmony and chaos clash",
-            "virtual reality gaming tournament of champions",
             "sorcerer's ultimate challenge for supremacy",
             "enchanted kingdom's revival and restoration",
             "futuristic utopian society's challenges",
@@ -3486,7 +3806,6 @@ function artGenerator() {
             "time-bending adventure through past and future",
             "fantasy realm's quest for peace and unity",
             "cosmic realm's balance of light and darkness",
-            "virtual reality challenge of mind and spirit",
             "sorcerer's ancient grimoire of arcane knowledge",
             "enchanted monarchy's awakening to its true power",
             "futuristic spacefaring civilization's grand vision",
@@ -3497,7 +3816,6 @@ function artGenerator() {
             "supernatural beings' quest to protect their realm",
             "ancient artifact's rediscovery and its secrets",
             "cosmic conflict and resolution among celestial beings",
-            "virtual reality escapade through a digital dreamscape",
             "sorcerer's epic trial for mastery of magic",
             "enchanted kingdom's legacy passed down through generations",
             "futuristic metropolis of innovation and wonder",
@@ -3519,7 +3837,6 @@ function artGenerator() {
             "time-traveling escapade through historical eras",
             "fantasy realm's prophecy of a chosen hero",
             "cosmic guardian's ancient quest to protect the universe",
-            "virtual reality realm's secret hidden within the code",
             "sorcerer's quest for the ultimate power and wisdom",
             "enchanted monarchy's prophecy fulfilled by a chosen one",
             "futuristic journey through the cosmos and beyond",
@@ -3541,7 +3858,6 @@ function artGenerator() {
             "time-altering adventure of paradoxes and alternate realities",
             "fantasy realm's salvation from darkness and tyranny",
             "cosmic mysteries' revelation of ancient cosmic beings",
-            "virtual reality escapade in a digital world of wonders",
             "sorcerer's ancient spell of power and ancient secrets",
             "enchanted monarchy's prophecy fulfilled by a destined ruler",
             "futuristic journey through the stars to discover new horizons",
@@ -3552,7 +3868,6 @@ function artGenerator() {
             "supernatural beings' hidden world exposed to the mortal realm",
             "ancient artifact's forgotten history revealed, unveiling its true purpose",
             "cosmic harmony and chaos clash, shaping the destiny of worlds",
-            "virtual reality challenge that tests the limits of human potential",
             "sorcerer's ultimate challenge to confront ancient and powerful adversaries",
             "enchanted kingdom's revival, restoring its former glory and grandeur",
             "futuristic utopian society's challenges in maintaining peace and harmony",
@@ -3574,7 +3889,6 @@ function artGenerator() {
             "time-bending adventure through the past and future",
             "fantasy realm's quest for peace and unity among diverse factions",
             "cosmic realm's balance of light and darkness hanging in the balance",
-            "virtual reality challenge that tests the mind and spirit",
             "sorcerer's ancient grimoire filled with arcane wisdom and spells",
             "enchanted monarchy's awakening to its true power and potential",
             "futuristic spacefaring civilization's grand vision for the universe",
@@ -3585,7 +3899,6 @@ function artGenerator() {
             "supernatural beings' quest to protect their realm from impending danger",
             "ancient artifact's rediscovery and the revelation of its secrets",
             "cosmic conflict and resolution among celestial beings and cosmic forces",
-            "virtual reality escapade through a digital dreamscape of imagination",
             "sorcerer's epic trial to prove their worth and mastery of magic",
             "enchanted kingdom's legacy passed down through generations of rulers",
             "futuristic metropolis of innovation, wonder, and technological marvels",
@@ -3607,7 +3920,6 @@ function artGenerator() {
             "time-traveling escapade through historical eras, witnessing significant moments in time",
             "fantasy realm's prophecy of a chosen hero destined to bring about change and restoration",
             "cosmic guardian's ancient quest to protect the universe from impending threats",
-            "virtual reality realm's secret hidden within the code, unveiling virtual mysteries",
             "sorcerer's quest for the ultimate power and wisdom, embarking on a magical journey",
             "enchanted monarchy's prophecy fulfilled by a chosen one, destined to rule with wisdom",
             "futuristic journey through the cosmos and beyond, exploring the wonders of space",
@@ -3629,7 +3941,6 @@ function artGenerator() {
             "time-bending adventure through past and future, experiencing temporal twists",
             "fantasy realm's quest for peace and unity, overcoming conflicts and divisions",
             "cosmic realm's balance of light and darkness, a cosmic struggle for equilibrium",
-            "virtual reality challenge of mind and spirit, testing the limits of human potential",
             "sorcerer's ancient grimoire of arcane knowledge, unlocking powerful magic",
             "enchanted monarchy's awakening to its true power, a transformation of rulership",
             "futuristic spacefaring civilization's grand vision, exploring the cosmos",
@@ -3640,7 +3951,6 @@ function artGenerator() {
             "supernatural beings' hidden world exposed, revealing the existence of magical beings",
             "ancient artifact's forgotten history revealed, unlocking its purpose and significance",
             "cosmic harmony and chaos clash, shaping destinies of worlds and beings",
-            "virtual reality challenge that tests the mind and spirit, pushing the limits of imagination",
             "sorcerer's ultimate challenge to confront ancient and powerful adversaries",
             "enchanted kingdom's revival, restoring its former glory and grandeur",
             "futuristic utopian society's challenges in maintaining peace and harmony",
@@ -3662,7 +3972,6 @@ function artGenerator() {
             "time-bending adventure through the past and future",
             "fantasy realm's quest for peace and unity among diverse factions",
             "cosmic realm's balance of light and darkness hanging in the balance",
-            "virtual reality challenge that tests the mind and spirit",
             "sorcerer's ancient grimoire filled with arcane wisdom and spells",
             "enchanted monarchy's awakening to its true power and potential",
             "futuristic spacefaring civilization's grand vision for the universe",
@@ -3673,7 +3982,6 @@ function artGenerator() {
             "supernatural beings' quest to protect their realm from impending danger",
             "ancient artifact's rediscovery and the revelation of its secrets",
             "cosmic conflict and resolution among celestial beings and cosmic forces",
-            "virtual reality escapade through a digital dreamscape of imagination",
             "sorcerer's epic trial to prove their worth and mastery of magic",
             "enchanted kingdom's legacy passed down through generations of rulers",
             "futuristic metropolis of innovation, wonder, and technological marvels",
@@ -3693,7 +4001,7 @@ function artGenerator() {
             "spacefarer's cosmic exploration beyond the stars, discovering distant galaxies and worlds"
         ]
         return `${variableEvent([
-            `multiple scenes of a ${searchArray(story)} ${searchArray(['starting with', 'ending with'])}` ])}`
+            `multiple scenes of a ${searchArray(story)} ${searchArray(['starting with', "preceded by", "followed by", "culminating in", "initiated by", "concluding with", "introduced with", "capped off by", "beginning from", "leading into", "setting the stage with", "paving the way for", "succeeded by", "hinted at by", "picking up after", "building up to", "evolving from", "giving way to", "resulting in", "growing out of", "inspired by the preceding", "taking cues from", "branching off from", "in sequence with", "peaking with", "developing after", 'ending with'])}` ])}`
     }
 
     function artPiece(){
@@ -4370,8 +4678,15 @@ function background() {
     }
 }
 
+let royalAction = [
+    'in all of their royal finery',"embarking on a grand voyage aboard a royal vessel", "participating in a ritualistic ceremony, honoring the deities", "surrounded by spies and informants, gathering intelligence", "in a heated argument with nobles, asserting their rule", "attending a grand opera or play, appreciating the arts", "visiting a distant province, greeted with local traditions", "gifting alms to the needy, showing compassion", "in a secret rendezvous, hidden from the watchful eyes of the court", "observing a military drill, ensuring the kingdom's defenses", "hosting a feast, enjoying the company of guests from afar", "undergoing a rite of passage, a pivotal moment in their life", "reading a proclamation to their subjects, a turning point for the kingdom", "shielded by their guards, navigating through potential threats", "interacting with exotic animals, showcasing the vastness of their empire", "laying the foundation stone for a monumental structure", "in the company of scholars, indulging in intellectual pursuits", "receiving tribute from vassal states, asserting their dominance", "in a moment of solitude, reflecting on their reign", "riding at the forefront of a parade, basking in adulation", "beside a roaring bonfire, partaking in celebratory dances", "receiving blessings from the high priest or priestess", "at a masked ball, the center of intrigue and mystery", "welcoming a royal birth, the heir to the throne", "meditating in a secluded royal chamber, seeking inner peace", "standing tall amidst the ruins post a battle, showcasing resilience and determination",'brought low and dragged through the streets',
+    'being coronated amongst a host of noble onlookers',"holding court with a diverse array of subjects", "leading their army into battle, banner aloft", "in an intimate moment, away from the prying eyes of the court", "strategizing in the war room, surrounded by trusted advisors", "dancing gracefully at the grand royal ball", "on a diplomatic mission, meeting foreign dignitaries", "in a lavish procession, greeted by cheering crowds", "deep in contemplation in the royal gardens", "on their majestic throne, asserting dominance", "in a tender embrace with their consort", "sharing wisdom with the young prince or princess", "engaging in royal pastimes, such as hunting or falconry", "overlooking their vast kingdom from a palace balcony", "partaking in religious ceremonies, showing devotion", "in clandestine negotiations, shaping the fate of the realm", "celebrating a festival or holiday, amid grandeur", "mourning the loss of a loved one, draped in black", "bestowing knighthood upon a deserving warrior", "commissioning artists or architects for a grand project", "navigating through political intrigue, masked in diplomacy", "in the midst of a pivotal historical moment for their reign", "entertaining tales from jesters and performers", "engrossed in scholarly pursuits, surrounded by scrolls and books", "in the throes of a royal scandal, caught off guard", "making a grand public announcement from the royal balcony",
+]
+let itemeffect = [
+    "with various birds perched on it.", "enshrouded in creeping ivy and vibrant flowers.", "reflecting the haunting glow of a setting sun.", "surrounded by a chaotic swirl of autumn leaves.", "half-submerged in a tranquil pond, creating ripples.", "casting elongated shadows under the piercing moonlight.", "with small critters and creatures making it their home.", "draped with fine silks or fabrics, fluttering in the breeze.", "in the midst of a bustling market scene.", "glistening with morning dew or fresh raindrops.", "with children playing or interacting around it.", "illuminated by the ethereal light of fireflies.", "being admired or inspected by curious onlookers.", "with traces of snow, hinting at the chill of winter.", "placed prominently on an ornate pedestal.", "in the backdrop of a ferocious storm or tempest.", "being used in a religious or spiritual ritual.", "surrounded by a halo of golden sunlight.", "with intricate patterns or motifs cast upon it by nearby objects.", "forming the centerpiece of a festive celebration.", "as a relic or artifact, half-buried in the sands of time.", "basking in the ambient glow of surrounding lanterns or candles.", "in the company of similar items, suggesting a collection or series.", "with the gentle embrace of a creeping mist or fog.", "reflecting the world around in its polished or mirrored surface.", "as a backdrop to a dramatic or pivotal historical moment.", "capturing the attention of wild animals, cautious or curious.", "ensconced in an environment that contrasts its nature.", "witnessing the passage of time, with day turning to night.", "buffeted by the wind.", "engulfed in fire.", "submerged in deep water.", "buried deep in the planet.",
+]
 
-    let holdingLocation =[
+let holdingLocation =[
         'over their heads', 'at their sides', 'behind their backs', 'held in an outstretched hand', 'cradled in their lap', 'leaning against their body or leaning on an object', 'wrapped in cloth or fabric', 'enveloped by magical energy or aura', 'floating or levitating', 'in their hands', 'clutched in their grasp', 'resting on their palm', 'cradled in their arms', "tucked under their arm", "strapped across their back", "secured in a holster or sheath", "held aloft in victory", "balanced on their shoulder", "draped over their shoulders", "positioned across their knees", "displayed on a raised platform", "mounted on a wall or stand", "encased in a transparent container", "held in the crook of their elbow", "securely gripped in both hands", "held in place by mechanical arms or supports", "resting against their chest", "swathed in a beam of light"
     ]
     const storyTemplate = [
@@ -4380,9 +4695,9 @@ function background() {
             `${searchArray([`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${searchArray(monster[rollDice(1)])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(subject[0])}.`,`${searchArray(monster[rollDice(1)])} ${searchArray(action[0])} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)}.`,])} ${variableEvent([ `${background()}`])}`,
             `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray([`astride a(n) ${searchArray(monster[rollDice(1)])}, holding a(n) ${searchArray(weapons)} in their hand.`, `playing ${searchArray(instruments)} to ${searchArray(many)} ${searchArray(audience)}.`, `kissing a(n) ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} on the cheek.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a small ${searchArray(monster[rollDice(1)])}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a tiny ${searchArray(item)}.`, `with ${searchArray(projectile)}s stuck in their back, protectively holding a baby ${findRace()} ${searchArray(youngGender)}.`, `in a loincloth with a ${searchArray(ageDescriptor)} ${searchArray(monster[rollDice(1)])} next to them.`, `holding a large bouquet of flowers in their arms.`,])} ${variableEvent([ `${background()}`])}`,
             `${variableEvent(ageDescriptor)+findRace()+ " "+ searchArray(anyAgeGender)} ${searchArray(verb[1])}. ${variableEvent([ `${background()}`])}`,
-            `${variableEvent(adjective,0)}${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}. ${variableEvent([ `${background()}`])}`,
-            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}`,
-            `${searchArray(monster[rollDice(1)])} ${searchArray(action[2])}.`,
+            `${variableEvent(adjective,0)}${searchArray(monster[rollDice(1)])} ${(searchArray(action[2])).toLowerCase()}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(monster[rollDice(1)])} ${(searchArray(action[2])).toLowerCase()} with a(n) ${searchArray(item)} ${searchArray(location)}. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(monster[rollDice(1)])} ${(searchArray(action[2])).toLowerCase()}.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} raising a ${searchArray(drink)}. ${variableEvent([ `${background()}`])}`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(adultGender)} with two ${searchArray(weapons)}s, one ${searchArray(['by each side', `in each ${variableEvent(["raised"])}hand`, "over each shoulder"])}. ${variableEvent([ `${background()}`])}`,
             `${searchArray(monster[rollDice(1)])} with large and intricately detailed ${searchArray(bodyparts)}. ${variableEvent([ `${background()}`])}`,
@@ -4390,9 +4705,9 @@ function background() {
             `${searchArray(monster[rollDice(1)])} on top of (a(n)) ${searchArray(item)} with a ${searchArray(organization)} crest on it.`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} pouring a(n) ${searchArray(color)} liquid into a(n) ${searchArray(color)} flask.`,
             `${variableEvent([searchArray(facialExpression),'extremely detailed', 'tough-looking', 'badly beaten and bloodied',searchArray(adjective[0])])} ${variableEvent(ageDescriptor)}${findRace()} ${variableEvent([searchArray(subject[0]), searchArray(anyAgeGender)])}.`,
-            `${searchArray(item)} with various birds perched on it. ${variableEvent([ `${background()}`])}`,
+            `${searchArray(item)} ${searchArray(itemeffect)} ${variableEvent([ `${background()}`])}`,
             `${searchArray(subject[0])+" on a " + searchArray(mount)}. ${variableEvent([ `${background()}`])}`,
-            `${findRace() +' ' + searchArray(['prince','princess','king','queen'])} ${searchArray(['in all of their royal finery','brought low and dragged through the streets','being coronated amongst a host of noble onlookers',])} ${variableEvent([ `${background()}`])}`,
+            `${findRace() +' ' + searchArray(ruler)} ${searchArray(royalAction)} ${variableEvent([ `${background()}`])}`,
         ],
         [
             `gilded ceremonial ${searchArray(item)} being held by a(n) ${findRace()} ${searchArray(subject[0])}. ${variableEvent([ `${background()}`])}`,
@@ -4409,8 +4724,8 @@ function background() {
             `${searchArray(size)} ${searchArray(monster[rollDice(1)])} daintily picking up a ${searchArray(item)} from the ground. ${variableEvent([ `${background()}`])}`,
             `${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing an ${searchArray(instruments)} with ${toWords(2+rollDice(4))}${searchArray(monster[rollDice(1)])}s looking at them. ${variableEvent([ `${background()}`])}`,
             `${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)} playing chess with a(n) ${searchArray(facialExpression)} ${variableEvent(ageDescriptor)}${findRace()} ${searchArray(anyAgeGender)}. ${variableEvent([ `${background()}`])}`,
-            `group of ${searchArray(['adventurers', `${searchArray(subject[0])}s`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of'])} a ${searchArray(['campsite','village','city','battefield','cave','portal','wasteland'])}. ${variableEvent([ `${background()}`])}`,
-            `${findRace()+' '+searchArray(adultGender)} in a ${searchArray(['flattering','relaxed','provocative','commanding'])} pose. ${variableEvent([ `${background()}`])}`,
+            `group of ${searchArray(['adventurers', `${searchArray(subject[0])}s`])} ${searchArray(['setting off from', 'heading towards', 'in the midst of', "gathering around", "venturing into", "retreating from", "congregating at", "splitting off from", "converging upon", "journeying through", "assembling before", "breaking away from", "encamped near", "launching an expedition to", "holding ground at", "making their way to", "uniting at", "standing guard over", "descending upon", "preparing to besiege"])} a ${searchArray(['campsite','village','city','battefield','cave','portal',"temple", "ruins", "castle", "forest", "mountain peak", "desert oasis", "river crossing", "island", "fortress", "monument", "ancient shrine", "coastline", "hidden valley", "abandoned mine", "sacred grove", "lagoon", "volcano's base", "mysterious structure", "burial ground", "crossroads", "dense jungle", "icy tundra", "remote outpost", "towering waterfall", "imposing gate",'wasteland'])}. ${variableEvent([ `${background()}`])}`,
+            `${findRace()+' '+searchArray(adultGender)} in a ${searchArray(['flattering','relaxed','provocative',"introspective", "dynamic", "contemplative", "defiant", "graceful", "casual", "heroic", "stoic", "playful", "reverent", "coy", "exuberant", "mournful", "pensive", "victorious", "melancholic", "powerful", "elegant", "subdued", "reflective", "elusive", "confident", "dauntless", "hopeful", "invigorated",'commanding'])} pose. ${variableEvent([ `${background()}`])}`,
         ],
         [
             `${searchArray(many)} ${searchArray(monster[rollDice(1)])}s ${searchArray(verb[0])}. ${variableEvent([ `${background()}`])}`,
@@ -4420,8 +4735,8 @@ function background() {
             `${toWords(5+rollDice(15))}humanoids of various races holding a(n) ${searchArray(item)} ${searchArray(holdingLocation)}. ${variableEvent([ `${background()}`])}`,
             `a schematic of all the planes of existence.`,
             `${toWords(2+rollDice(10))}${searchArray(subject[0])}s looking at (a(n)) ${searchArray(item)} held by the one in the center. ${variableEvent([ `${background()}`])}`,
-            `${toWords(2+rollDice(10))}${searchArray(monster[rollDice(1)])}s looking at (a(n)) ${searchArray(item)} on the ground between them. ${variableEvent([ `${background()}`])}`,
-            `${searchArray([`a ${searchArray(['trial being held','hero being rewarded','disagreement','battle','vision','celebration',])} in a heavenly court`,`a ${searchArray(['deal being struck','souls being wagered','trial being held','villain being rewarded','disagreement','battle','vision','celebration'])} in a hellish court`,"a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
+            `${toWords(2+rollDice(10))}${searchArray(monster[rollDice(1)])}s looking at (a(n)) ${searchArray(item)} ${searchArray(["hovering mysteriously in the air.", "emitting a soft, ethereal glow.", "sinking slowly into the water's edge.", "cracking open to reveal something within.", "casting long, dramatic shadows as the sun sets.", "spinning slowly on its axis.", "changing colors in a mesmerizing pattern.", "pulsating rhythmically, as if alive.", "lying shattered, its pieces scattered about.", "emitting a soft melody that captivates the listeners.", "levitating above a pedestal or altar.", "beginning to melt or dissolve before their eyes.", "drawing all surrounding light towards it, like a black hole.", "projecting a holographic image or scene.", "erupting in sporadic bursts of flame or smoke.", "growing or shrinking in size unpredictably.", "rearranging its components or parts, like a puzzle.", "floating downstream in a gentle current.", "casting reflections that dance on nearby surfaces.", "radiating heat or cold, affecting the surrounding area.", "releasing a tantalizing aroma that draws people nearer.", "making a repetitive sound, like a heartbeat or ticking.", "slowly being covered by creeping vines or plants.", "shimmering as if seen through a heat haze.", "being approached or investigated by curious animals."])} ${variableEvent([ `${background()}`])}`,
+            `${searchArray([`a ${(searchArray(['trial being held','hero being rewarded','disagreement','battle','vision','celebration',"The Arrival of a Legendary Soul", "Consecration Ritual", "Divine Decree Issuance", "Mediation between Rivals", "The Anointing of Messengers", "Ascension of a Mortal", "Cosmic Alignment Ritual", "The Passage of Epochs", "Formation of Alliances", "Sanctification of a Divine Marriage", "Mourning a Celestial Loss", "A Cosmic Dance", "The Weighing of Hearts", "The Great Library", "Blessing of the Divine Harvest", "Initiation into the Celestial Order", "Guarding the Sacred Relics", "Debate over Mortal Affairs", "Presentation of Miracles", "Revelation of Prophecies", "Cosmic Training", "Divine Play or Performance"])).toLowerCase()} in a heavenly court`,`a ${(searchArray(['deal being struck','souls being wagered','trial being held','villain being rewarded','disagreement','battle','vision','celebration',"Torture Session", "Summoning of Demons", "Condemnation Ritual", "Feasting on Damned Souls", "Contract Negotiation", "Induction of a New Overlord", "Dark Mass", "Coronation of a Demon King/Queen", "Infernal Duel", "Cursing of a Mortal Realm", "The Gathering of Shadows", "Desecration Ceremony", "The Great Inferno Dance", "Despair Induction Session", "Damnation Parade", "Ritual of Everlasting Torment", "Sacrifice to the Abyss", "Infernal Alliance Negotiation", "Brewing of Catastrophes", "Dark Prophecy Revelation", "Conspiracy Plotting", "Chaining of a Fallen Angel"])).toLowerCase()} in a hellish court`,"a desert oasis","an ancient city", 'some ruins', 'the sunset', `a ${searchArray(['beautiful but unfamiliar', 'chaotic and unnerving', "Lush and verdant", "Barren and desolate", "Majestic and breathtaking", "Eerie and mist-covered", "Sweeping and panoramic", "Rugged and untamed", "Serpentine and river-laden", "Mountainous and intimidating", "Golden and sun-kissed", "Icy and forbidding", "Mystical and dreamlike", "Scarred and war-torn", "Untouched and pristine", "Dank and swampy", "Dusty and windswept", "Frigid and stark", "Enchanted and whimsical", "Volcanic and smoldering", "Rolling and pastoral", "Gloomy and overcast", "Bustling and lively (for urban landscapes)", "Dewy and dawn-lit", "Twilight-hued and serene", "Suffocated and overgrown", "Harsh and unforgiving", "Lunar-like and otherworldly", "Idyllic and picturesque", "Bleak and haunting", 'dark and desroyed', "distant and alien"])} landscape`,])}.`,
         ],
     ]
 
@@ -4452,15 +4767,16 @@ function background() {
 
 
     let combiner = [
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
-        `A(n) ${artPiece()} ${searchArray(thesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
-        `A(n) ${searchArray(artForm[1])} with designs telling that it ${searchArray([`is from an ancient ${findRace()} kingdom`,"is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
-        `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain'])}, each bead is carved to represent a different ${searchArray(['race','school of magic','monster','plane','divine being','fiendish lord','kingdom','historical moment','historical disaster','tenet of faith'])}.`,
-        `A(n) ${variableEvent(['dull','pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'tablet'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster[rollDice(1)])}`, `the image of a(n) ${searchArray(item)}`])}.`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}a(n) ${searchArray(storyTemplate[0])}`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}a ${searchArray(storyTemplate[1])}`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${artPiece()} ${searchArray(showingThesaurus)} ${stages()}${searchArray(storyTemplate[2])}`,
+        `A(n) ${searchArray(artForm[1])} with designs ${searchArray(showingThesaurus)} that it ${searchArray([`is from an ancient ${findRace()} kingdom`,`is a relic from the ${findRace()} golden age`, "hails from the sunken cities of yore", "is believed to be the work of a legendary craftsman", `originates from the ${findRace()} nomadic tribes`, "is from the fabled catacombs of an ancient civilization", "is a rare artifact from a distant and isolated realm", "bears the mark of a lost dynasty", "has origins in a long-forgotten underground city", "was crafted in the shadow of the world's highest peaks", `is reminiscent of the ${findRace()} artisan guilds`, "is said to be touched by divinity", "is a vestige from a land consumed by the sea", "is from a time when magic was at its zenith", `shows the refined techniques of the ${findRace()} Renaissance`, "has its roots in a land where dragons still roam", "is of celestial craftsmanship, possibly the work of angels", `is evocative of the ${findRace()} Empire's splendor`, "originates from a world beyond the stars", "is steeped in myths and legends of old", "is an enigma, with no known culture or era of origin", "hails from the last great age of heroes", 
+        `captures the spirit of the ${findRace()}'s Age of Exploration`, "is from the era where magic and science coalesced", "has origins from a time and place written out of history", "emerges from the mysterious mists of forgotten islands", `speaks of the untamed wilderness of the ${findRace()}'s homeland`, "is a remnant from a city lost to time and sand", "hails from the age when giants walked the earth", "is a piece of a realm where night is eternal", `is a symbol of the ${findRace()} dynasty's resilience and might`, "originated from the twilight years of a grand empire", "holds the stories from the crossroads of many worlds", "was crafted during the great conjunction of celestial bodies", "is an artifact from the era of cataclysms and world-shattering events", "bears the energy and aura of the ethereal realms", `is a testimony to ${findRace()}'s golden age of artistry and creativity`, "came from the deepest trenches of the vast ocean", "is from a kingdom where the moon shines brighter than the sun", "is a souvenir from a war between gods and titans", "originates from the age when mythical beasts and humans coexisted", `is from the ${findRace()} artistic revival period`, "emerged from the heart of an enchanted forest", "is a relic from a city that floats amongst the clouds", "tells tales of lands swallowed by shadow and darkness", "hails from a time when stars fell from the sky", `captures the essence of the vibrant ${findRace()} festivals`, "is from the epoch when magic was a forbidden art", "has traces from the first dawn of creation","is of extraplanar origin","is of modern and local make","is of unknown and alien make"])}.`,
+        `A(n) ${variableEvent(['small', 'normal sized','large'])} ${searchArray(material[3])} beaded ${searchArray(['bracelet','necklace','chain', 'anklet', 'earrings', 'tiara', 'choker'])}, each bead is carved to represent a different ${searchArray(['important ritual', 'important ceremony', 'sacred animal', 'major celestial event', 'famous hero', 'ancient prophecy', 'specific spell', 'noble house', 'a significant war', 'fabled artifact', 'celestial body', 'natural phenomenon', 'season', 'famous tragedy', 'major river', 'major mountain', 'sacred tree', 'sacred plant', 'emblem of a guild', 'mythical spirit', 'mythical creature', 'important vision', 'holiday','race','school of magic','monster','plane','divine being','fiendish lord','kingdom','historical moment','historical disaster','tenet of faith'])}.`,
+        `A(n) ${variableEvent(['dull','tarnished', 'gleaming', 'weathered', 'polished', 'scratched', 'engraved', 'lustrous', 'faded', 'mottled', 'oxidized', 'glossy', 'matte', 'ornate', 'worn', 'aged', 'intricately detailed', 'simplistic', 'hammered', 'cast', 'smooth', 'ridged', 'decorated', 'pitted', 'chiseled', 'refined', 'pristine'])} ${searchArray(material[3])} ${searchArray(['coin','bar', 'ingot', 'disc', 'slab', 'plate', 'bead', 'sphere', 'cube', 'medallion'])}, stamped with ${searchArray([`the profile of a${searchArray(['n ancient and forgotten god',' god', ' demon', 'n ancient king'])}`, 'a strange symbol', `what looks like a(n) ${searchArray(subject[0])}`, `the face of a(n) ${searchArray(monster[rollDice(1)])}`, `the image of a(n) ${searchArray(item)}`,`a majestic ${searchArray(['dragon', 'phoenix', 'unicorn', 'griffin'])} in flight`, `a detailed depiction of ${searchArray(['a famous battlefield', 'a renowned castle', 'a legendary forest', 'a sacred temple'])}`, `an intricate pattern, resembling ${searchArray(['a constellation', 'a labyrinth', 'a family crest', 'an emblem'])}`, `the insignia of the ${searchArray(['Royal Guard', 'High Wizards', 'Merchant Guild', 'Assassin Brotherhood'])}`, `a representation of ${searchArray(['a celestial event', 'a great feast', 'a historic treaty', 'a grand ceremony'])}`, `a symbol that stands for ${searchArray(['prosperity', 'luck', 'strength', 'knowledge'])}`, `an abstract design, reminiscent of ${searchArray(['the flow of time', 'the cycle of life and death', 'the elements of nature', 'the connection between all living beings'])}`, `an elegant ${searchArray(['animal', 'tree', 'ship', 'weapon'])} associated with ${searchArray(['wealth', 'power', 'wisdom', 'adventure'])}`, `a cipher or code, known only to ${searchArray(['a secretive society', 'royal alchemists', 'ancient scholars', 'elite warriors'])}`, `a portrayal of ${searchArray([`a hero's journey`, 'a great discovery', 'a tragic love story', 'a grand expedition'])}`])}.`,
         `${searchArray(artForm[3])}`,
         `${searchArray(artForm[4])}`,
         ]
