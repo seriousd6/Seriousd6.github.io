@@ -1055,6 +1055,15 @@ let adventureStuff = {
         "the party is offered the opportunity to reshape the balance of power in the realm",
         "a moment of unity and camaraderie solidifies the party's bond as lifelong companions",      
     ],
+    "ReturnHome":[
+
+    ],
+    "majorChange":[
+
+    ],
+    "returnWithElixer":[
+        
+    ]
 }
 
 
