@@ -176,7 +176,6 @@ function quest() {
     questBuilder()
     loopPrintList(output,"Quest")
 };
-
 function buildRace(n) {
     //0 is plural, 1 is singular
     let common = [
@@ -216,7 +215,6 @@ function buildRace(n) {
     };
     return findRace(n)
 };
-
 function fiftyTwoCardDungeon(input){
     document.getElementById("Dungeon").innerHTML = ''
     document.getElementById("DungeonKey").innerHTML = '' 
@@ -880,85 +878,6 @@ function fiftyTwoCardDungeon(input){
         loopPrintList(description, "Dungeon") 
         loopPrintList(Axe, "DungeonKey") 
 };
-
-function policy (n) {
-    document.getElementById("Policy").innerHTML = ''
-    let military = [
-        `Resource management: +strategic Production in all cities, +strategic yield.`, `Third Alternative: ++gold and +culture from military and strategic developments.`, `Survey: double experience for recon units.`, `Disipline: +++combat strength when fighting bandits.`, `Agoge: +Production toward ranged and anti-calvary units.`, `Maritime industries: ++production towards naval units.`, `Maneuver = +production towards calvary units.`, `Conscription: -gold cost for unit maintenance.`, `Limitanei	- +loyalty for cities with garrisons.`, `Raid: Double yields for pillaging.`, `Veterancy: +production towards encampements and harbors.`, `Equestrian orders: +Yield for horses and iron .`, `Bastions: +city defense and ranged strength.`, `Limes: double production towards defensive buildings.`, `Feudal contract: +production towards melee, ranged, and anti-calvary units.`, `Retainers: +amenity for cities with a garrison.`, `Sack: +Yield from pillaging districts.`, `Professional army: -cost toward unit upgrades.`, `Retinues: -resource cost towards unit upgrades.`, `Craftsmen: double industrial zone adjacency bonuses.`, 
-        `Chivalry: +production towards light and heavy calvary units.`, `Native conquest: +gold per earlier era unit conquest.`, `Wars of religion: +combat strength towards civs with different religion .`, `Logistics: +movement in friendly territory .`, `Drill Manuals: +yields for niter and coal.`, `Grande Armee: +production for melee ranged and anti-calvary units.`, `National identity: less combat strength loss from taking damage in battle.`, `Press Gangs: double production towards naval units.`, `Military research: +science for military buildings.`, `Force modernization: -gold cost for unit upgrades.`, `Total war: double Yield from coastal pillaging and raids and for plundering trade routes.`, `Propaganda: -war weariness over time.`, `Levee en masse: -gold cost for unit maintenance.`, `Lightning warfare: +production for calvary units.`, `Patriotic war: double production for all military support units.`, `Internation waters: Double production towards all naval units.`, `Military first: +production on all melee, anti calvary, and ranged units.`, `Integrated Space cell: +production towards military-beneficial sciences.`, `Second strike capability: -gold cost for large military weapon maintenance.`, `Strategic air force: +production toward all flying units.`, `After action reports: +experience from combat.`, `Their finest hour: +production towards air units, +strength in home territory.`, `Martial law: -war weariness, ++loyalty for cities with garrisons.`, `Defense of the motherland: NO war weariness from combat in home territory, doubel production for support units.`
-    ];
-    let economic = [
-        `God king: +gold and +faith in capital.`, `Urban planning: +production in all cities.`, `Ilkum: +production to regional development.`, `Caravansaries: +gold from all trade routes.`, `Corvee: +production toward wonders.`, `Land surveyors	- reduce cost for expansion.`, `Colonization: +Production towards new cities.`, `Insulae: +housing in all cities with 2+districts.`, `Natural Philosophy: double efficiency to campus-adjacent tiles.`, `Scripture: double efficiency to holy site adjacent tiles.`, `Naval Infrastructure: double efficiency to harbor adjacent tiles.`, `Serfdom: +builder efficiency.`, `Meritocracy: +culter per specialty district.`, `Trade confederation: +culture and science from cross region trade routes.`, `Aesthetics: double efficiency to theater adjacent tiles.`, `Medina quarter: +housing to cities with 3+ specialty districts.`, `Town Charters: double efficiency to commercial hub adjacent districts.`, `Gothic architecture: +production to wonders.`, `Civil prestige: + amenity and housing to established govenors.`, `Simultaneum: double faith effectivness and even more if adjacent to 3 adjacency bones.`, 
-        `Religious orders: +faith based combat.`, `Triangular trade: ++gold and +faith from all trade routes.`, `Rationalism: double science efficiencyfrom campus, +population.`, `Free market: double gold efficiency from commercial hub, +population.`, `Liberalism: +amenities to all cities with 2+ specialty districts.`, `Public works: +production toward regional development and builder efficiency.`, `Skyscrapers: +production towards wonders.`, `Grand opera: double culture efficiency from theater square, +population.`, `Public transport: +gold when farms are replaced with neighborhoods, +food, gold, and production from neighborhoods.`, `Expropiation: -cost for regional expansion.`, `Market economy:  +gold, culture, and science per interegional trade routes + strategic resources.`, `Economic union: double commercial hub and harbor district adjaceny bonuses.`, `New Deal: ++housing, +amenities ---gold to cities with 3+ specialty districts.`, `Five-year-plan: double campus and industrial zone adjacency bonuses.`, `Collectivization: ++food and + Production from domestic trade routes .`, `Heritage tourism: double tourism from great works and artifacts .`, `Sports media: double theater square adjacency bonuses, stadiums +amenity.`, `Satellite Broadcasts: quadruple tourism from great works of music .`, `Ecommerce: +++production and ++++gold from international trade routes, half from others.`
-    ];
-    let wildcard =[
-        `Strategos: +great general develpoment.`, `Inspiraiton: +great scientist development.`, `Revelation: +great prophet development.`, `Literary tradition: +great writer development.`, `Navigation: +great admiral development.`, `Travelling Merchants: +great merchant development.`, `Invention: ++great engineer development, also + per workshop.`, `Frescoes: ++great artist development, also +per museum.`, `Symphonies: ++great musician development, also + per broadcast center.`, `Military organization: ++great general development and +movement, also + per Armory.`, `Laissez-Faire: ++great merchant development, also + per Bank, ++great admiral development, also +per shipyard.`, `Nobel prize: ++great scientist development.`, `Science Foundations: ++great scientist development, also + per university, ++great engineer development per power plant, also +per factory.`, `Aerospace contractors: +aluminum and +power.`,
-        `Space tourism: reduce tourism towards other civilizations.`, `Hallyu: Improved bards.`, `Non-state actors: improved spies.`, `Integrated attack logistics: +movement starting in enemy territory, +Production towards detah robots.`, `Rabblerousing: +diplomatic favor, -cost of diplomatic actions.`, `Diplomatic capital: ++diplomatic favor.`, `Global coalition: +++combat strength in friendly territory.`, `Autocratic legacy: +Yield for all government buildings.`, `Republican legacy: +housing and amenities.`, `Oligarchic legacy: ++combat strength for all land melee, anti-calvary, and naval melee.`, `Mercantile legacy: +gold for cities with an established govenor.`, `Monarchic legacy: +housing per level of wall.`, `Theocratic legacy: ++religious strength and faith .`, `Communist legacy: +production based on size.`, `Democratic legacy: +production and housing per district, ++food and Production per suzerain trade route.`, `Fascist legacy: ++combat strength and -war weariness.`
-    ];
-    let diplomatic = [
-        `Charismatic leader: +influence.`, `Diplomatic League: +envoys.`, `Paetorium: +loyalty.`, `Merchant Confederation: +gold from envoys.`, `Colonial offices: +citygrowth in initial region, +loyalty in different regions.`, `Machiavellianism: +spies efficiency.`, `Wisselbanken: +food, +production, +alliance points from trade routes to cities or city states.`, `Colonial Taxes: +gold and production for cities in new regions.`, `Raj: +gold, science, culture, faith for suzerain status, and trade routes to those city states.`, `Police state: -enemy spy effectiveness, -amenities, -loyalty.`,
-        `Nuclear espionage: +spy effectiveness when stealing tech.`, `Arsenal of Democracy: ++food and production for both allied cities in a trade route.`, `Gunboat Diplomacy: Open borders with city states ++influence toward envoys.`, `Cryptography: -enemy spy effectiveness in your lands, +spy effectiveness in enemy lands.`, `Containment: +envoy effectiveness if a different government.`, `Music Censorship: -bard proliferation from other civs, -1 amenity in big cities.`, `International space agency: +science per city state suzerain status and allied civ.`, `Collective activism: +culture per city state suzerain and allied civ.`, `Communications office: +loyalty per city.`
-    ];
-    let darkAge =[
-        `Monasticism: +++science for cities with a holy site, -culture in all cities.`, `Twilight valor: ++combat strength for all melee, cannot heal outside fo territory.`, `Inquisition: +++++religious strength, -science in all cities.`, `Isolationism: ++food and ++production, no regional expansion allowed.`, `Letters of Marque: doubel production for naval units, ++movement, double trade route plunder yield, half all regular trade route yield.`, `Robber Barons: +++++gold in cities with stock exchange, ++production for factories, --amenities.`, `Elite Forces: double experience for combat, ++gold cost for maintenance.`, `Collectivism: +food and ++housing per farm, double industrial zone adjacency bonuses, --great person development.`,
-        `Rogue state: +++++production towards covilization weapons, no envoy development.`, `Flower power: double toruism for civs not at war, double cost for all land units.`, `Cyber Warfare: +++++combat strength for advanced units, civ grievances do not decay.`, `Automated workforce: ++production towards city projects, -amenity and ----loyalty in cities.`, `Disinformation campaign: +++diplomatic favor per broadcast center, -science and culture in all cities.`, `Decentralization: small cities gain ++loyalty, large cities --gold.`, `Samderzhaviye: +++++Production in the capital, no governors allowed.`, `Soft targets: +++++combat strength vs city attacks and defenses, --combat strength vs units.`, `Despotic paternalism: ++loyalty for cities with govenors, --science and culture for cities without governors. .`,
-    ];
-    let goldenAge = [
-        `Monumentality: Faster regional expansion, +faith based expansion.`, `Exodus of the evangelists: Faster religious spread, more effective prosletizing, ++great prophet development.`, `Mandala state: ++culture for every wonder, --enemy city loyalty per wonder.`, `Free Inquiry: commercial hub and harbor gold provides science as well, campus provides gold equal to science.`, `Praetorian guard: ++unit healing per turn, ++production to military buildings.`, `Sakdina: +loyalty, +all great person development.`, `Reform the coinage: Traders cannot be plundered, ++gold per specialty district in the foreign city from trades.`,
-        `Heartbeat of steam: +production toward wonders, science district adjacency bonus also adds production.`, `To Arms!: +++combat experience, ++Production towards military units.`, `Culture Industry: +culture per specialty district, ++production towards non-specialty districts, faith based growht and development.`, `Wish you were here: double tourism for national parks: +++tourism for world wonders.`, `Popular Front: double diplomatic favor from suzerain status, ++to all trade route yields.`, `Solidarity: ++gold, faith, and loyalty from govenors.`, `Sky and stars: +++ production towards flight-based buildings, +science and production in cities with flight based buildings.`, `Military-industrial complex: +aluminum, oil, and uranium yield, ++combat strength and +combat range.`
-    ];
-    function templatepicker(){
-        let options = []
-        do {
-            let a = searchArray(military)
-            if (checkConflict(a,options) === 0){
-                options.push(`Military | ${a}`)
-            }
-            let b = searchArray(diplomatic)
-            if (checkConflict(b,options) === 0){
-                options.push(`Diplomatic | ${b}`)
-            }
-            let c = searchArray(economic)
-            if (checkConflict(c,options) === 0){
-                options.push(`Economic | ${c}`)
-            }
-            let d = searchArray(wildcard)
-            if (checkConflict(d,options) === 0){
-                options.push(`Wildcard | ${d}`)
-            }
-            let e = searchArray(darkAge)
-            if (checkConflict(e,options) === 0){
-                options.push(`Dark Age | ${e}`)
-            }
-            let f = searchArray(goldenAge)
-            if (checkConflict(f,options) === 0){
-                options.push(`Golden Age | ${f}`)
-            }
-        } while (options.length < 42)
-        return options
-    };
-    function buildGovernment(n){
-        let x = templatepicker()
-        let z = []
-        do {
-            let y = searchArray(x)
-            if (checkConflict(y,z) === 0){
-                z.push(y)
-            }
-        } while (z.length < n )
-        return z
-    }
-
-    let x = []
-    let y = buildGovernment(n)
-    do {
-        x.push(`${(rollDice(4)+5) * (rollDice(4)+4) * (rollDice(4)+3) + (rollDice(500)) + ' years'}`)
-    } while (x.length < y.length)
-    
-    let output = combineArrays(x,y,y.length)
-    loopPrintList(output,"Policy")
-};
-
 function religion(n) {
     document.getElementById("Religion").innerHTML = ''
     let beliefs =[
@@ -1040,6 +959,41 @@ function religion(n) {
     loopPrintList(buildReligion(n),"Religion")
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

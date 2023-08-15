@@ -19,9 +19,9 @@ function variableEvent(givenArray, number) {
     if (chance < 75) {
         return ""
     } else if (number === undefined) {
-        return searchArray(givenArray) + " "
+        return ` ${searchArray(givenArray)}`
     } else {
-        return searchArray(givenArray[number]) + ' '
+        return ` ${searchArray(givenArray[number])}`
     }
 };
 function toWords(s) {
@@ -726,6 +726,31 @@ function randomHostAndHook() {
     document.getElementById("Host").innerHTML = returnHost() + " " + findPlot();
     //console.log(returnHost() + findPlot())    
 };
+
+let communicate = [
+    "whispering conspiratorially,",
+    "uttering with a furtive glance,",
+    "declarring with a hint of excitement,",
+    "murmuring, looking over their shoulder,",
+    "sharring with a trembling voice,",
+    "confessing with a guilty look,",
+    "relaying, barely containing their glee,",
+    "revealing with a sly grin,",
+    "hinting with a wink,",
+    "proclaiming with wide-eyed earnestness,",
+    "admitting, lowering their voice to a hush,",
+    "breathing out, as if unburdening a heavy secret,",
+    "recalling with a distant, thoughtful expression,",
+    "mentioning with an air of nonchalance, as if it’s trivial,",
+    "imparting with a shiver of fear,",
+    "divulging, ensuring no one else is within earshot,",
+    "gossiping with an animated demeanor,",
+    "stating, trying hard to mask their amusement,",
+    "conveying with a hint of worry in their eyes,",
+    "spilling, as if they can't keep it in any longer,",
+    "saying nervously,"
+]
+
 function npcBuilder() {
     function findRace() {
         var races = {
@@ -749,91 +774,567 @@ function npcBuilder() {
         }
         //document.getElementById("Race").innerHTML = characterRace
     };
-    let gender = [
-        `${searchArray([`A young ${findRace()} ${searchArray(['boy', 'girl', 'man', 'woman'])}`, `An old ${findRace()} ${searchArray(['man', 'woman'])}`, `${searchArray([`A young ${searchArray(['boy', 'girl', 'man', 'woman'])}`, `An old ${searchArray(['man', 'woman'])}`])}`, `${searchArray([`A young ${findRace()}`, `An old ${findRace()}`])}` ])}`
+    let descriptor =[
+        `A middle-aged`, `A wounded`, `A cheerful`, `A mysterious`, `A distressed`, `A skilled`, `A cunning`, `A wise`, `A brave`, `A charismatic`, `A fearsome`, `A benevolent`, `A mischievous`, `A renowned`, `A haunted`, `A diligent`, `A vengeful`, `An exiled`, `A young`, `An old`,  `A humble`, `A disheveled`, `A cunning`, `A wild-eyed`, `A stoic`, `A devious`, `A zealous`, `A flirtatious`, `A reclusive`, `A fearless`, `A jaded`, `A notorious`, `A gentle`, `A fierce`, `A playful`, `A regal`, `A brooding`, `A gregarious`, `A quirky`, `An ethereal`, `A grieving`, `A jovial`, `A melancholic`, `A hesitant`, `A bold`, `A pious`, `A skeptical`, `A bumbling`, `A polished`, `A scarred`, `A sophisticated`, `A rustic`, `A calloused`, `A delicate`, `A vibrant`, `A weary`, `A rebellious`, `A loyal`, `A dashing`, `A snobbish`, `A chivalrous`, `A blunt`, `A radiant`, `A despondent`, `A gruff`, `A silky-voiced`, `A frigid`, `A boisterous`, `An introverted`, `An eloquent`, `A tight-lipped`, `A nurturing`, `A frugal`, `A lavish`, `A pompous`, `A modest`, `A spry`, `A lugubrious`, `An effervescent`, `A withdrawn`
     ]
-    
-    return `${searchArray(gender)} walks up to you and`
+    let mystery = [
+        [
+        `cloaked`, `masked`, `veiled`, `hooded`, `shadowed`, `shrouded`, `tattooed`, `armored`, `scarred`, `painted`, `branded`, `crowned`, `enchanted`, `incognito`,
+        ],
+        [
+        `clad in rags`, `draped in silks`, `sheathed in leather`, `wreathed in smoke`, `bearing an unknown emblem`, `robed in white`, `with a face of ash`, `draped in finery`, `marked by runes`, `with an obscured visage`, `in a phantom guise`, `with a mask of gold`, `with shifting features`, `whispering incantations`, `wearing a helm of obsidian`, `etched with old symbols`, `veiled in gossamer`, `wearing a disguise`, `with a pendant of an unknown sigil`, `wrapped in secrecy`, `with a gaze that pierces shadows`, `having a face half-covered`, `bearing ancient artifacts`, `wearing gloves of midnight hue`, `adorned with chains`, `garbed in mourning`, `encased in iron`, `swathed in furs`, `bedecked in jewels`, `in twilight-colored robes`, `with fingers stained in ink`, `enshrouded in mist`, `with a countenance obscured`, `carrying an ornate staff`, `holding a lantern dimly glowing`, `enwreathed in ivy and thorns`, `with eyes hidden behind tinted spectacles`, `bearing ritualistic tattoos`, `adorned with bone and feathers`, `with a voice muffled by cloth`, `cloaked in a shimmering aura`, `holding a pendant that glows softly`, `with a mysterious locket hanging around their neck`, `with whispers of frost in their wake`, `leaving the scent of foreign incense in the air`, `accompanied by a silent, ghostly companion`, `garbed in shifting patterns of light and shadow`, `with hands glowing faintly in the dark`, `enrobed in chains that move of their own volition`, `cloaked in starlight`, `wrapped in twilight silk`, `bearing the weight of forgotten memories`, `in attire untouched by time`, `with a satchel full of arcane objects`, `suffused with a faint luminescence`, `dressed in garments of another realm`, `carrying a blade etched with runes`, `walking with a staff that whispers tales`, `with a cloak made of raven feathers`, `wearing a ring emitting a soft hum`, `with a belt adorned with unknown gemstones`, `in a dress of interwoven shadows`, `wearing boots that leave no tracks`, `in garb that rustles like autumn leaves`, `carrying a chalice filled with liquid moonlight`, `bearing a shield with no reflection`, `with an amulet that seems to pulse`, `draped in chains of ethereal silver`, `wearing a hat that obscures thoughts`, `with a pocket watch that ticks backward`
+        ]    
+    ]
+    let templateArray= [
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['boy', 'girl', 'man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['soldier', 'guard', 'traveler'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['bard', 'minstrel', 'dancer'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['boy', 'girl', 'man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} child ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['blacksmith', 'apothecary', 'archer'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['thief', 'rogue', 'assassin'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['sage', 'monk', 'scholar'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['knight', 'warrior', 'commander'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['leader', 'chief', 'elder'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['warlock', 'sorcerer', 'witch'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['priest', 'priestess', 'healer'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['sprite', 'imp', 'child'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['hero', 'champion', 'explorer'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['specter', 'ghost', 'phantom'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['farmer', 'craftsman', 'merchant'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['avenger', 'hunter', 'guardian'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['prince', 'noble', 'duke'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${searchArray(['boy', 'girl', 'man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${searchArray(['man', 'woman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['peasant', 'farmer', 'hermit'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['beggar', 'outcast', 'wanderer'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['merchant', 'trader', 'dealer'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['prophet', 'heretic', 'visionary'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['guard', 'sentry', 'watchman'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['spy', 'informant', 'double-agent'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['acolyte', 'missionary', 'crusader'])} ${variableEvent(mystery[1])}`, 
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['dancer', 'bard', 'courtesan'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['scholar', 'alchemist', 'wizard'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['explorer', 'adventurer', 'pioneer'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['veteran', 'ex-warrior', 'old soldier'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['pirate', 'bandit', 'outlaw'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['healer', 'midwife', 'druid'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['chieftain', 'tribe leader', 'warlord'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['child', 'sprite', 'cub'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['queen', 'king', 'monarch'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['loner', 'thinker', 'philosopher'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['innkeeper', 'host', 'tavern owner'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['tinkerer', 'inventor', 'mechanic'])} ${variableEvent(mystery[1])}`,
+        `${searchArray(descriptor)} ${variableEvent(mystery[0])} ${findRace()} ${searchArray(['angel', 'fey', 'spirit'])} ${variableEvent(mystery[1])}`
+    ]
+    let interaction = [
+        `sidles up to you with a secretive grin, saying,`,
+        `beckons you closer, eyes darting around to make sure no one is eavesdropping, then whispers,`,
+        `interrupts whatever you're doing with an urgent tone, exclaiming,`,
+        `hesitates momentarily, looking conflicted, then cautiously shares,`,
+        `with a wild look in their eyes, suddenly blurts out,`,
+        `waves you over from a shadowy corner, and in hushed tones reveals,`,
+        `while pretending to be interested in something else, discreetly slips you a note that reads,`,
+        `with a heavy sigh of burdened knowledge, leans in and confides,`,
+        `furtively glances around, ensuring privacy, then urgently imparts,`,
+        `pulls you aside with an expression of deep concern, and tells you,`,
+        `taps on your shoulder from behind, and when you turn around, hesitatingly says,`,
+        `with a mix of excitement and trepidation, pulls you into an alley and exclaims,`,
+        `leaning over their drink at the tavern, making sure they're out of earshot of the others, murmurs,`,
+        `with an expression of barely contained excitement, rushes over and shares,`,
+        `acting nonchalant and trying to blend into the crowd, slips you a message with the rumor,`,
+        `with a knowing smirk and twinkle in their eye, leans close and teases,`,
+        `eyes widening with the importance of their message, quickly approaches and urgently whispers,`,
+        `gestures for you to join them in a secluded spot, then with a solemn face, discloses,`,
+        `shuffling their feet nervously, calls you over and hesitantly divulges,`,
+        `tries to get your attention with subtle hand signals, and once they have it, reveals,`,
+        `walks up to you and`
+    ]
+    return `${searchArray(templateArray)} ${searchArray(interaction)}`
 };
 function wisdom() {
     let wisdom = [
-        `You will not be punished for your anger; you will be punished by your anger.`, `In the end, it’s not the years in your life that count. It’s the life in your years.`, `Truth is truth. How you deal with it is up to you.`, `Hero’s are no braver than an ordinary man, but he is brave five minutes longer.`, `Add life to your days, not days to your life. Life is either a daring adventure or nothing. It is not death most people are afraid of. It is getting to the end of life, only to realize, that you never truly lived. Some beautiful paths cannot be discovered without getting lost.`, `Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.`, `We don't get to decide what weighs on our souls, but it is our responsibility nonetheless`, 
-        `"We don't make peace with our friends" in the context of "making peace with your enemies is of course difficult and unpleasant, that's why they're your enemies"`, `Speaker (someone the party is going to for answers) pouring tea into a full cup. Tea goes everywhere.`, `PC asks why they are pouring tea into the full cup.`, `Like the full cup you come to me full of yourself. You must be empty if you are to be filled with wisdom.`, `When you learn to balance a tack hammer on your head, you will learn to head off your enemies with a balanced attack`, `“There is more to life than what you're living. You take a chance and face the wind. An open road and a road that's hidden. A brand new life around the bend. “`, `“You take the good, you take the bad, you take them both and there you have The facts of life.”`, `“Now, the world don’t move to the beat of just one drum What might be right for you, may not be right for some.”`, `Inaction in the face of evil can be as damning as the act of evil itself.`, `Choosing to take no action is still a choice. Taking no action is still an action.`, 
-        `Is there really honor and glory in war? Look in the eyes of the widows and orphans, listen to cries of the wounded and the silence of the fallen, and stand within the worn-torn battlefields. You'll find your answer.`, `When deciding between the devil you know and the devil you do not know, remember that, in the end, they are both still devils.`, `Four strands of rope, kept separately, can be snapped with ease. Four strands of rope, twined together, are stronger than the sum of their parts. Strength lies not in numbers, but in unity, in cooperation.`, `There is nothing wrong with being proud of yourself, but always remember that too much pride can be blinding.`, `Always keep an eye on your pawns, even the ones you've already sacrificed. Off the board doesn't necessarily mean out of the game.`, `Even a mouse can be ferocious when cornered.`, `The past is written in stone, the present in clay, and the future in sand.`, `You are only bound to your destiny if you believe yourself bound to it. Only when you realize that it is you who controls your destiny can you well and truly be free.`, `Better a swift death at the blades of tyrants, than a slow one under their heel.`, 
-        `If you believe you know everything, then you truly know nothing at all.`, `Steel rusts, flesh weakens, but will is unbreakable.`, `If you think you're prepared for any eventuality, I can promise you'll be caught by surprise quite frequently.`, `Before binding yourself to someone through oaths of honor and loyalty, be sure to ask yourself if they even deserve such honor or loyalty.`, `There is no honor or glory in war, just victory or defeat.`, `Until beasts have scribes of their own, tales of the hunt shall always venerate the hunter.`, `The first step towards true wisdom is acknowledging that everything you know pales in comparison to everything you do not. The second is accepting that, no matter how long you study, you can never know everything. The third step is to keep learning regardless.`, `What is the path to true enlightenment? I'm afraid I cannot tell you. Everyone must forge their own path.`, `What is the meaning of life? The meaning of life is to live.`, `There is no shame in accepting charity when it is offered, or in asking for help when it is needed.`, `To er is human, to forgive is divine... but never pay full price for late pizza.`, 
-        `Speaker (someone the party is going to for answers) pouring tea into a full cup. Tea goes everywhere.`, `PC asks why they are pouring tea into the full cup.`, `Like the full cup you come to me full of yourself. You must be empty if you are to be filled with wisdom.`, `"The same hammer that breaks glass forges steel"`, `"Leave tomorrow's problems to tomorrow's you"`, `"Dont try to have sex with dragons"`, `"Sometimes you have to walk in the dark to appreciate the light"`, `"Nobody's perfect. You just have to live and work it again and again until you get it right"`, `"If the world ended tomorrow, would you rest in peace knowing your actions today?`, `“There is more to life than what you're living. You take a chance and face the wind. An open road and a road that's hidden. A brand new life around the bend. “`, `“You take the good, you take the bad, you take them both and there you have The facts of life.”`, `“Now, the world don’t move to the beat of just one drum What might be right for you, may not be right for some.”`, 
-        `There is a fine line between being brave and being stupid. Make sure you are on the correct side of this line.`, `You must wait for the silt to settle, before the water can be clear.`, `Only a fool leaves this world with a bag full of healing potions.`, `A road of gold is both loud and slippery.`, `Assassin/LE: "The world is cruel, unkind, and deceitful. A wise man will use that against his enemy."`, `Hermit: "The man who thinks himself wise is foolish. The man who thinks himself foolish is wise. The man who thinks too little is dead. The man who thinks too much loses everything he fights for."`, `A bowl is most useful when it is empty.`, `Live. Laugh. Love.`, `Calm waters run deep`, `You can bring a horse to water, but you can not make it drink`, `A copper saved is a copper earned`, `Liquor before beer and you are in the clear, Beer before liquor and you are never sicker....I think.`, 
-        `Nothing is written in stone, but a dirt path. If you roll your wagon the same way for too long, it will become the only path you can take`, `Sleep is good.`, `People in glass houses should rarely throw bears.`, `Kindness rewards kindness just as anger punishes anger.`, `Life is a journey and death is the destination. Where you go and what you do with your journey, how you enjoy it, is up to you.`, `When in danger, it can be a good idea to pray, but never forget to run, too.`, `Patience brews the best tea.`, `We should strive to make things better than ourselves.`, `Let me tell you what I wish I’d known when I was young and dreamed of glory: You have no control who lives, who dies, who tells your story.`, 
-        `Life is story: it’s best to have one worth reading.`, `Every person is a thread in the tapestry of mortal history.`, `I may die but my requiem plays on, the consequences of my life echoing into the void of history.`, `There can be no friendship without confidence, and no confidence without integrity.`, `Integrity without knowledge is weak and useless, and knowledge without integrity is dangerous and dreadful.`, `There is no wisdom in useless and hopeless sorrow; but there is something in it so like virtue, that he who is wholly without it cannot be loved.`, `It is more from carelessness about truth than from intentional lying, that there is so much falsehood in the world.`, `Every man naturally persuades himself that he can keep his resolutions, nor is he convinced of his imbecility but by length of time and frequency of experiment.`, `It is always observable that silence propagates itself, and that the longer talk has been suspended, the more difficult it is to find any thing to say.`, `Beware the fury of the patient man.`, `We first make our habits, and then our habits make us.`, `Happiness is the perpetual possession of the well decieved.`, `There can only be one wisdom. For if it were possible that there be several wisdoms, then these would have to be from one. Namely, unity is prior to all plurality. All we know of the truth is that the absolute truth, such as it is, is beyond our reach.`, `We don't get to decide what weighs on our souls, but it is our responsibility nonetheless`, `"When there are no foes to slay, there might be a cake to cut."`, `"Sometimes the simple solution IS the solution"`, `"Sonny, I have forgotten more things than you have ever bothered to learn"`, `Remember to add the pasta when the water is boiling. And don't forget to salt it too.`, `Barbarian and a wizard get into a fight about who’s smarter.`, `Barbarian says “you thing you’re so smart because you read your fancy books, but your so dumb you don’t even realize you just stepped in dog shit”`, `Wizard “what when? The dm didn’t tell me”`, `Dm “you’d have to check to know for sure”`, `The wizard raises his foot to check the bottom and the barbarian shoves him over.`, `“See, told you I was smarter”`, `Take the long road, strangers. The long road will set you free`, `Always waver, but never bend`, `Even monkeys fall from tree`, `Often it is the journey that is important not the destination.`,
-        `The truth remains the truth, an untruth remains an untruth, no matter how many people believe otherwise.`, `Oh you don't have to be wise to play a wise old mountain man. You only have to be cryptic.`, `Do not disturb your foe while he is making a mistake.`, `Bravery is not to feel no fear, bravery is to be afraid, but still act despite it.`, `When the storm winds blow fiercely the tree that bends breaks`, `When the storm winds blow fiercely the tree that doesn’t bend breaks`, `If you don't take time to enjoy life, what was the point?`, `If you try, you might fail. If you do not try, you have already failed.`, `One, who does not question, is easily lead astray.`, `Good intentions may lead one down the wrong path. However, without good intentions one is already on the wrong path.`, `Stop dreading failure. Learn from it.`, `The truth doesn't care what anyone believes.`, `Titles and praise do not make one great. The path to greatness lies in what you do.`, `When life gives you lemons, make lemonade`, `You see.. marriage is like a rattlesnake. You can have the head of a rattlesnake with its sharp teeth and curious tongue, and the tail of a rattlesnake with its mesmerizing rattle. But only together do you have a whole rattlesnake. Apart, you're just a hollow object and a screaming mess.`, `If you take that cart... you get there.`, `A wise man is but a normal person who is very vocal about the clear lack of common sense nowadays.`, `“Prodigious size alone does not dissuade the sharpened blade”`, `“A strict regimen is paramount, if one is to master the brutal arithmetic of combat”`, `“Every creature has a weakness. The wise hero trains for what they will face.`, `“A little hope, however desperate, is never without worth.”`, `“Failure tests the the mettle of heart, brain, and body.`, `You will endure loss, and learn from it.”`, 
-        `“Ignorance of your enemy and of yourself will invariably lead to defeat”`, `“Overconfidence is a slow and insidious killer.”`, `The Zhuangzi is a great source of sayings that sound mysterious and wise.`, `“Now gaining is timely, but losing is what follows. Take comfort in timeliness, and settle into what follows, then grief will not be able to disturb you”`, `“The cosmos burdens me with physical form, toils me through life, eases me through old age, and rests me in death. What makes my life good is what makes my dying good also”`, `“A large tree must have had little worth to grow so vast”`, `"It is important to draw wisdom from many different places, or else it becomes rigid and stale."`, `"Are you so busy fighting that you do not realize your own ship has set sail?"`, `"In the darkest times, hope is something you give yourself. It is the meaning of inner strength"`, `"Destiny is a funny thing. You never know how things are going to work out."`, `"This tea is something more than hot leaf juice!"`, 
-        `What is the most important step a man can take? Always the next one.`, `"Get a beach house. It gives you somewhere to go."`, `"Rather than to aim to be something, just be."`, `"Remember that this moment will also pass. Good or bad, everything is temporary"`, `Those who don't love never live. Those who do love never die.`, `Use soap every now and then.`, `Death is inevitable, but Life is a journey to death so make it count`, `Even you're in the right tunnel, the ooze will still eat you if you just sit there.`, `You only get one chance to screw things up forever, so don't be afraid to take it.`, `Saying something that sounds wise and actually being wise are two entirely different matters. Make sure you aim to be wise, unlike me.`, `Knowing your right from your left is irrelevant when the enemy stands straight in front of you.`, `Being able to do the right thing doesn't matter so much as knowing to not to the wrong thing.`, `Regularly wash behind your ears. It will help you to hear the world a little differently.`, `You are what you are. Once you know what you are, what others are doesn’t matter.`, 
-        `"It's an old hat, just a different coat"`, `[HimurasanX] "Funny thing about strength, the stronger you are the less you have to fight."`, `"First over the wall is an idiot, the second, is an idiot. The third, seeing what happened to the first two, is who you need watch out for."`, `You already have what you're looking for.`, `The more you run from the past, the quicker you’ll be burning through your future.`, `Life isn’t set in stone, but it is set in a muddy road. The more you drag your cart through the same rut, the harder it’s gonna be to get it out.`, `“A dead thing can go with the stream, but only a living thing can go against it.”`, `"What a person intends means all to them, and little to others. What a person says means little to them, and all to others."`, `"To seek wisdom from a single being is, in itself, an act of the unwise. Open your mind, and you will find yourself garnering more wisdom from the journey home then I may ever teach you."`, 
-        `"All things in moderation. Including, of course, moderation."`, `"In your profession, you must not fear death. Fear leads to inhibitions, lack of action, and hesitation - all fully capable of causing your death, and others alongside it, when action is needed. You will fear it, it is natural to do so. Yet you must ignore that instinct, and act without hesitation."`, `"The early bird may get the worm, but it is the second mouse that gets the cheese."`, `"Life very rarely molds itself well to universal wisdom. Take all advice with this in mind. Including this advice, of course."`, `In response to the party failing in a major way: “You tried to (insert major defeat). You mostly failed. This is life. The longer you live, the more you fail. Failure is the mark of a life well lived. In turn, the only way to live without failure is to be of no use to anyone. Trust me, I've practiced”`, `Only two kinds of people claim to feel no fear: liars and madmen.`, `"We can forget happy things. We can probably forget sad things too. People have the power to forget."`, `"An upper jaw filled with joy, and a lower jaw filled with sorrow. Life has a habit of grinding these two together. It is our job to relish it."`, `Fight like you are dying, live like you are fighting`, 
-        `"The question is not whether you will love, hurt, dream, and die. It is who you will love, why you will hurt, when you will dream, and how you will die." -Oathbringer by Brandon Sanderson`, `I would love to see where this goes, but just like you I'm not the wisest person you'll come across`, `Don’t wait around for someone to make you happy, if you want to be happy, then be happy.`, `You will be forgotten in the shade of your achievements.`, `There's no situation so bad, that you can't make it worse. - Chris Hadfield (maybe)`, `Mastery of the self is the only mastery that matters.`, `There is no civility, only politics.(Palpatine)`, `A war without civility is a massacre. (Treys Renata)`, `One who is never without one’s weapon will always find oneself using it.`, `A little ritual goes a long way.`, `Mistakes should be rested on the heart not the soul.`, `All is Human that suffers from the human condition.`, `To live is to devour others.`, `Everything is Food for something else.`, `Not everything needs to be Okay at the same time.`, `Love is a rich man's gold.`, 
-        `Live for the little things. Die for the big things.`, `To do for someone, something that they can do for themselves, is a form of theft.`, `Nature is where birds fly about uncooked.`, `Among the most courageous must be counted the first to eat an oyster.`, `It is not through violence but compassion that the virtue of a civilization is proved.`, `When one categorizes people according to their great love before all else, all other categories quickly dissolve.`, `Life is a fatal sexually transmitted disease.`, `Almost all absurdity of conduct arises from the imitation of those whom we cannot resemble.`, `No man is much pleased with a companion, who does not increase, in some respect, his fondness for himself.`, `Men more frequently require to be reminded than informed.`, `Avarice is generally the last passion of those lives of which the first part has been squandered in pleasure, and the second devoted to ambition.`, `Every man is rich or poor according to the proportion between his desires and his enjoyments; any enlargement of wishes is therefore equally destructive to happiness with the diminution of possession, and he that teaches another to long for what he never shall obtain is no less an enemy to his quiet than if he had robbed him of part of his patrimony.`, 
-        `He is no wise man that will quit a certainty for an uncertainty.`, `Hope is necessary in every condition. The miseries of poverty, of sickness, or captivity, would, without this comfort, be insupportable; nor does it appear that the happiest lot of terrestrial existence can set us above the want of this general blessing; or that life, when the gifts of nature and of fortune are accumulated upon it, would not still be wretched, were it not elevated and delighted by the expectation of some new possession, of some enjoyment yet behind, by which the wish shall at last be satisfied, and the heart filled up to its utmost extent.`, `Pleasure is very seldom found where it is sought. Our brightest blazes of gladness are commonly kindled by unexpected sparks. The flowers which scatter their odours from time to time in the paths of life, grow up without culture from seeds scattered by chance. Nothing is more hopeless than a scheme of merriment.`, `Merriment is always the effect of a sudden impression. The jest which is expected is already destroyed.`, `It is seldom that we find either men or places such as we expect them. ... Yet it is necessary to hope, though hope should always be deluded, for hope itself is happiness, and its frustrations, however frequent, are yet less dreadful than its extinction.`, `Nothing will ever be attempted, if all possible objections must be first overcome.`, `Example is always more efficacious than precept.`, 
-        `If one wishes to avoid all criticism, one must simply say nothing, do nothing, and be nothing.`, `"You're the one who has to die when its time for you to die, so live your life the way you want to."`, `"Holding a grudge is drinking poison and praying for your enemy to die. Of course, I knew a paladin whose prayers set their sword afire and raised the dead...."`, `"The gods ask us to be faithful to them at all times because of how hard it is to believe in yourself in the hard times. Faith in miracles is good practice for facing down dragons."`, `mortal beings are the instrument by which the universe cares.” I just like the quote`, `Violence is the last refuge of the incompetent. Those whom the gods would destroy first they make proud!`, `I'm not a wise man. I'm not even a wise guy. But I am wise enough to know I can be wiser still.`, `Forgiveness is difficult. The pain of hatred, even more so.`, `There is nothing to be gained from following the well-worn path. Though blazing your own trail comes with risks, it also comes with rewards.`, `One is not a fool for believing a lie, nor for knowing the truth; only for believing one knows.`, `Bravery is not the absence of fear. Bravery is being scared and saddling up anyway.`, `When in doubt, go slow.`, `When in doubt, go slow. Unless there's an owlbear chasing you, in which case you run fast.`, `Let it be.`, `A fool would become wise if he would persist in his foolishness.`, `For there is no form or substance that does not have its roots in the TOWER, which is under assault from the EGO, that terrible enemy called I.`,
+        `You will not be punished for your anger; you will be punished by your anger.`, 
+        `In the end, it’s not the years in your life that count. It’s the life in your years.`, 
+        `Truth is truth. How you deal with it is up to you.`, 
+        `Hero’s are no braver than an ordinary man, but he is brave five minutes longer.`, 
+        `Add life to your days, not days to your life. Life is either a daring adventure or nothing. It is not death most people are afraid of. It is getting to the end of life, only to realize, that you never truly lived. Some beautiful paths cannot be discovered without getting lost.`, 
+        `Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.`, 
+        `We don't get to decide what weighs on our souls, but it is our responsibility nonetheless`, 
+        `We don't make peace with our friends in the context of making peace with your enemies is of course difficult and unpleasant, that's why they're your enemies`, 
+        `Like the full cup you come to me full of yourself. You must be empty if you are to be filled with wisdom.`, 
+        `When you learn to balance a tack hammer on your head, you will learn to head off your enemies with a balanced attack`, 
+        `There is more to life than what you're living. You take a chance and face the wind. An open road and a road that's hidden. A brand new life around the bend. `, 
+        `You take the good, you take the bad, you take them both and there you have The facts of life.`, 
+        `Now, the world don’t move to the beat of just one drum What might be right for you, may not be right for some.`, 
+        `Inaction in the face of evil can be as damning as the act of evil itself.`, 
+        `Choosing to take no action is still a choice. Taking no action is still an action.`, 
+        `Is there really honor and glory in war? Look in the eyes of the widows and orphans, listen to cries of the wounded and the silence of the fallen, and stand within the worn-torn battlefields. You'll find your answer.`, 
+        `When deciding between the devil you know and the devil you do not know, remember that, in the end, they are both still devils.`, 
+        `Four strands of rope, kept separately, can be snapped with ease. Four strands of rope, twined together, are stronger than the sum of their parts. Strength lies not in numbers, but in unity, in cooperation.`, 
+        `There is nothing wrong with being proud of yourself, but always remember that too much pride can be blinding.`, 
+        `Always keep an eye on your pawns, even the ones you've already sacrificed. Off the board doesn't necessarily mean out of the game.`, 
+        `Even a mouse can be ferocious when cornered.`, 
+        `The past is written in stone, the present in clay, and the future in sand.`, 
+        `You are only bound to your destiny if you believe yourself bound to it. Only when you realize that it is you who controls your destiny can you well and truly be free.`, 
+        `Better a swift death at the blades of tyrants, than a slow one under their heel.`, 
+        `If you believe you know everything, then you truly know nothing at all.`, 
+        `Steel rusts, flesh weakens, but will is unbreakable.`, 
+        `If you think you're prepared for any eventuality, I can promise you'll be caught by surprise quite frequently.`, 
+        `Before binding yourself to someone through oaths of honor and loyalty, be sure to ask yourself if they even deserve such honor or loyalty.`, 
+        `There is no honor or glory in war, just victory or defeat.`, 
+        `Until beasts have scribes of their own, tales of the hunt shall always venerate the hunter.`, 
+        `The first step towards true wisdom is acknowledging that everything you know pales in comparison to everything you do not. The second is accepting that, no matter how long you study, you can never know everything. The third step is to keep learning regardless.`, 
+        `What is the path to true enlightenment? I'm afraid I cannot tell you. Everyone must forge their own path.`, 
+        `What is the meaning of life? The meaning of life is to live.`, 
+        `There is no shame in accepting charity when it is offered, or in asking for help when it is needed.`, 
+        `To er is human, to forgive is divine... but never pay full price for late pizza.`, 
+        `Speaker (someone the party is going to for answers) pouring tea into a full cup. Tea goes everywhere.`, 
+        `Like the full cup you come to me full of yourself. You must be empty if you are to be filled with wisdom.`, 
+        `The same hammer that breaks glass forges steel`, 
+        `Leave tomorrow's problems to tomorrow's you`, 
+        `Dont try to have sex with dragons`, 
+        `Sometimes you have to walk in the dark to appreciate the light`, 
+        `Nobody's perfect. You just have to live and work it again and again until you get it right`, 
+        `If the world ended tomorrow, would you rest in peace knowing your actions today?`, 
+        `There is more to life than what you're living. You take a chance and face the wind. An open road and a road that's hidden. A brand new life around the bend. `, 
+        `You take the good, you take the bad, you take them both and there you have The facts of life.`, 
+        `Now, the world don’t move to the beat of just one drum What might be right for you, may not be right for some.`, 
+        `There is a fine line between being brave and being stupid. Make sure you are on the correct side of this line.`, 
+        `You must wait for the silt to settle, before the water can be clear.`, 
+        `Only a fool leaves this world with a bag full of healing potions.`, 
+        `A road of gold is both loud and slippery.`, 
+        `The world is cruel, unkind, and deceitful. A wise man will use that against his enemy.`, 
+        `The man who thinks himself wise is foolish. The man who thinks himself foolish is wise. The man who thinks too little is dead. The man who thinks too much loses everything he fights for.`, 
+        `A bowl is most useful when it is empty.`, 
+        `Live. Laugh. Love.`, 
+        `Calm waters run deep`, 
+        `You can bring a horse to water, but you can not make it drink`, 
+        `A copper saved is a copper earned`, 
+        `Liquor before beer and you are in the clear, Beer before liquor and you are never sicker....I think.`, 
+        `Nothing is written in stone, but a dirt path. If you roll your wagon the same way for too long, it will become the only path you can take`, 
+        `Sleep is good.`, 
+        `People in glass houses should rarely throw bears.`, 
+        `Kindness rewards kindness just as anger punishes anger.`, 
+        `Life is a journey and death is the destination. Where you go and what you do with your journey, how you enjoy it, is up to you.`, 
+        `When in danger, it can be a good idea to pray, but never forget to run, too.`, 
+        `Patience brews the best tea.`, 
+        `We should strive to make things better than ourselves.`, 
+        `Let me tell you what I wish I’d known when I was young and dreamed of glory: You have no control who lives, who dies, who tells your story.`, 
+        `Life is story: it’s best to have one worth reading.`, 
+        `Every person is a thread in the tapestry of mortal history.`, 
+        `I may die but my requiem plays on, the consequences of my life echoing into the void of history.`, 
+        `There can be no friendship without confidence, and no confidence without integrity.`, 
+        `Integrity without knowledge is weak and useless, and knowledge without integrity is dangerous and dreadful.`, 
+        `There is no wisdom in useless and hopeless sorrow; but there is something in it so like virtue, that he who is wholly without it cannot be loved.`, 
+        `It is more from carelessness about truth than from intentional lying, that there is so much falsehood in the world.`, 
+        `Every man naturally persuades himself that he can keep his resolutions, nor is he convinced of his imbecility but by length of time and frequency of experiment.`, 
+        `It is always observable that silence propagates itself, and that the longer talk has been suspended, the more difficult it is to find any thing to say.`, 
+        `Beware the fury of the patient man.`, 
+        `We first make our habits, and then our habits make us.`, 
+        `Happiness is the perpetual possession of the well decieved.`, 
+        `There can only be one wisdom. For if it were possible that there be several wisdoms, then these would have to be from one. Namely, unity is prior to all plurality. All we know of the truth is that the absolute truth, such as it is, is beyond our reach.`, 
+        `We don't get to decide what weighs on our souls, but it is our responsibility nonetheless`, 
+        `When there are no foes to slay, there might be a cake to cut.`, 
+        `Sometimes the simple solution IS the solution`, 
+        `Sonny, I have forgotten more things than you have ever bothered to learn`, 
+        `Remember to add the pasta when the water is boiling. And don't forget to salt it too.`, 
+        `Barbarian and a wizard get into a fight about who’s smarter.`, 
+        `Barbarian says you thing you’re so smart because you read your fancy books, but your so dumb you don’t even realize you just stepped in dog crap`, 
+        `Wizard what when? The dm didn’t tell me`, 
+        `you’d have to check to know for sure`, 
+        `The wizard raises his foot to check the bottom and the barbarian shoves him over.`, 
+        `See, told you I was smarter`, 
+        `Take the long road, strangers. The long road will set you free`, 
+        `Always waver, but never bend`, 
+        `Even monkeys fall from tree`, 
+        `Often it is the journey that is important not the destination.`,
+        `The truth remains the truth, an untruth remains an untruth, no matter how many people believe otherwise.`, 
+        `Oh you don't have to be wise to play a wise old mountain man. You only have to be cryptic.`, 
+        `Do not disturb your foe while he is making a mistake.`, 
+        `Bravery is not to feel no fear, bravery is to be afraid, but still act despite it.`, 
+        `When the storm winds blow fiercely the tree that bends breaks`, 
+        `When the storm winds blow fiercely the tree that doesn’t bend breaks`, 
+        `If you don't take time to enjoy life, what was the point?`, 
+        `If you try, you might fail. If you do not try, you have already failed.`, 
+        `One, who does not question, is easily lead astray.`, 
+        `Good intentions may lead one down the wrong path. However, without good intentions one is already on the wrong path.`, 
+        `Stop dreading failure. Learn from it.`, 
+        `The truth doesn't care what anyone believes.`, 
+        `Titles and praise do not make one great. The path to greatness lies in what you do.`, 
+        `When life gives you lemons, make lemonade`, 
+        `You see.. marriage is like a rattlesnake. You can have the head of a rattlesnake with its sharp teeth and curious tongue, and the tail of a rattlesnake with its mesmerizing rattle. But only together do you have a whole rattlesnake. Apart, you're just a hollow object and a screaming mess.`, 
+        `If you take that cart... you get there.`, 
+        `A wise man is but a normal person who is very vocal about the clear lack of common sense nowadays.`, 
+        `Prodigious size alone does not dissuade the sharpened blade`, 
+        `A strict regimen is paramount, if one is to master the brutal arithmetic of combat`, 
+        `Every creature has a weakness. The wise hero trains for what they will face.`, 
+        `A little hope, however desperate, is never without worth.`, 
+        `Failure tests the the mettle of heart, brain, and body.`, 
+        `You will endure loss, and learn from it.`, 
+        `Ignorance of your enemy and of yourself will invariably lead to defeat`, 
+        `Overconfidence is a slow and insidious killer.`, 
+        `The Zhuangzi is a great source of sayings that sound mysterious and wise.`, 
+        `Now gaining is timely, but losing is what follows. Take comfort in timeliness, and settle into what follows, then grief will not be able to disturb you`, 
+        `The cosmos burdens me with physical form, toils me through life, eases me through old age, and rests me in death. What makes my life good is what makes my dying good also`, 
+        `A large tree must have had little worth to grow so vast`, 
+        `It is important to draw wisdom from many different places, or else it becomes rigid and stale.`, 
+        `Are you so busy fighting that you do not realize your own ship has set sail?`, 
+        `In the darkest times, hope is something you give yourself. It is the meaning of inner strength`, 
+        `Destiny is a funny thing. You never know how things are going to work out.`, 
+        `This tea is something more than hot leaf juice!`, 
+        `What is the most important step a man can take? Always the next one.`, 
+        `Get a beach house. It gives you somewhere to go.`, 
+        `Rather than to aim to be something, just be.`, 
+        `Remember that this moment will also pass. Good or bad, everything is temporary`, 
+        `Those who don't love never live. Those who do love never die.`, 
+        `Use soap every now and then.`, 
+        `Death is inevitable, but Life is a journey to death so make it count`, 
+        `Even you're in the right tunnel, the ooze will still eat you if you just sit there.`, 
+        `You only get one chance to screw things up forever, so don't be afraid to take it.`, 
+        `Saying something that sounds wise and actually being wise are two entirely different matters. Make sure you aim to be wise, unlike me.`, 
+        `Knowing your right from your left is irrelevant when the enemy stands straight in front of you.`, 
+        `Being able to do the right thing doesn't matter so much as knowing to not to the wrong thing.`, 
+        `Regularly wash behind your ears. It will help you to hear the world a little differently.`, 
+        `You are what you are. Once you know what you are, what others are doesn’t matter.`, 
+        `It's an old hat, just a different coat`, 
+        `Funny thing about strength, the stronger you are the less you have to fight.`, 
+        `First over the wall is an idiot, the second, is an idiot. The third, seeing what happened to the first two, is who you need watch out for.`, 
+        `You already have what you're looking for.`, 
+        `The more you run from the past, the quicker you’ll be burning through your future.`, 
+        `Life isn’t set in stone, but it is set in a muddy road. The more you drag your cart through the same rut, the harder it’s gonna be to get it out.`, 
+        `A dead thing can go with the stream, but only a living thing can go against it.`, 
+        `What a person intends means all to them, and little to others. What a person says means little to them, and all to others.`, 
+        `To seek wisdom from a single being is, in itself, an act of the unwise. Open your mind, and you will find yourself garnering more wisdom from the journey home then I may ever teach you.`, 
+        `All things in moderation. Including, of course, moderation.`, 
+        `In your profession, you must not fear death. Fear leads to inhibitions, lack of action, and hesitation - all fully capable of causing your death, and others alongside it, when action is needed. You will fear it, it is natural to do so. Yet you must ignore that instinct, and act without hesitation.`, 
+        `The early bird may get the worm, but it is the second mouse that gets the cheese.`, 
+        `Life very rarely molds itself well to universal wisdom. Take all advice with this in mind. Including this advice, of course.`, 
+        `You tried to (insert major defeat). You mostly failed. This is life. The longer you live, the more you fail. Failure is the mark of a life well lived. In turn, the only way to live without failure is to be of no use to anyone. Trust me, I've practiced`, 
+        `Only two kinds of people claim to feel no fear: liars and madmen.`, 
+        `We can forget happy things. We can probably forget sad things too. People have the power to forget.`, 
+        `An upper jaw filled with joy, and a lower jaw filled with sorrow. Life has a habit of grinding these two together. It is our job to relish it.`, 
+        `Fight like you are dying, live like you are fighting`, 
+        `The question is not whether you will love, hurt, dream, and die. It is who you will love, why you will hurt, when you will dream, and how you will die.`, 
+        `I would love to see where this goes, but just like you I'm not the wisest person you'll come across`, 
+        `Don’t wait around for someone to make you happy, if you want to be happy, then be happy.`, 
+        `You will be forgotten in the shade of your achievements.`, 
+        `There's no situation so bad, that you can't make it worse.`, 
+        `Mastery of the self is the only mastery that matters.`, 
+        `There is no civility, only politics.`, 
+        `A war without civility is a massacre.`, 
+        `One who is never without one’s weapon will always find oneself using it.`, 
+        `A little ritual goes a long way.`, 
+        `Mistakes should be rested on the heart not the soul.`, 
+        `All is Human that suffers from the human condition.`, 
+        `To live is to devour others.`, 
+        `Everything is Food for something else.`, 
+        `Not everything needs to be Okay at the same time.`, 
+        `Love is a rich man's gold.`, 
+        `Live for the little things. Die for the big things.`, 
+        `To do for someone, something that they can do for themselves, is a form of theft.`, 
+        `Nature is where birds fly about uncooked.`, 
+        `Among the most courageous must be counted the first to eat an oyster.`, 
+        `It is not through violence but compassion that the virtue of a civilization is proved.`, 
+        `When one categorizes people according to their great love before all else, all other categories quickly dissolve.`, 
+        `Life is a fatal sexually transmitted disease.`, 
+        `Almost all absurdity of conduct arises from the imitation of those whom we cannot resemble.`, 
+        `No man is much pleased with a companion, who does not increase, in some respect, his fondness for himself.`, 
+        `Men more frequently require to be reminded than informed.`, 
+        `Avarice is generally the last passion of those lives of which the first part has been squandered in pleasure, and the second devoted to ambition.`, 
+        `Every man is rich or poor according to the proportion between his desires and his enjoyments; any enlargement of wishes is therefore equally destructive to happiness with the diminution of possession, and he that teaches another to long for what he never shall obtain is no less an enemy to his quiet than if he had robbed him of part of his patrimony.`, 
+        `He is no wise man that will quit a certainty for an uncertainty.`, 
+        `Hope is necessary in every condition. The miseries of poverty, of sickness, or captivity, would, without this comfort, be insupportable; nor does it appear that the happiest lot of terrestrial existence can set us above the want of this general blessing; or that life, when the gifts of nature and of fortune are accumulated upon it, would not still be wretched, were it not elevated and delighted by the expectation of some new possession, of some enjoyment yet behind, by which the wish shall at last be satisfied, and the heart filled up to its utmost extent.`, 
+        `Pleasure is very seldom found where it is sought. Our brightest blazes of gladness are commonly kindled by unexpected sparks. The flowers which scatter their odours from time to time in the paths of life, grow up without culture from seeds scattered by chance. Nothing is more hopeless than a scheme of merriment.`, 
+        `Merriment is always the effect of a sudden impression. The jest which is expected is already destroyed.`, 
+        `It is seldom that we find either men or places such as we expect them. ... Yet it is necessary to hope, though hope should always be deluded, for hope itself is happiness, and its frustrations, however frequent, are yet less dreadful than its extinction.`, 
+        `Nothing will ever be attempted, if all possible objections must be first overcome.`, 
+        `Example is always more efficacious than precept.`, 
+        `If one wishes to avoid all criticism, one must simply say nothing, do nothing, and be nothing.`, 
+        `You're the one who has to die when its time for you to die, so live your life the way you want to.`, 
+        `Holding a grudge is drinking poison and praying for your enemy to die. Of course, I knew a paladin whose prayers set their sword afire and raised the dead....`, 
+        `The gods ask us to be faithful to them at all times because of how hard it is to believe in yourself in the hard times. Faith in miracles is good practice for facing down dragons.`, 
+        `mortal beings are the instrument by which the universe cares.`, 
+        `Violence is the last refuge of the incompetent. Those whom the gods would destroy first they make proud!`, 
+        `I'm not a wise man. I'm not even a wise guy. But I am wise enough to know I can be wiser still.`, 
+        `Forgiveness is difficult. The pain of hatred, even more so.`, 
+        `There is nothing to be gained from following the well-worn path. Though blazing your own trail comes with risks, it also comes with rewards.`, 
+        `One is not a fool for believing a lie, nor for knowing the truth; only for believing one knows.`, 
+        `Bravery is not the absence of fear. Bravery is being scared and saddling up anyway.`, 
+        `When in doubt, go slow.`, 
+        `When in doubt, go slow. Unless there's an owlbear chasing you, in which case you run fast.`, 
+        `Let it be.`, 
+        `A fool would become wise if he would persist in his foolishness.`, 
+        `For there is no form or substance that does not have its roots in the TOWER, which is under assault from the EGO, that terrible enemy called I.`,
     ]
 
-    let output =  npcBuilder() + ' says, "' + searchArray(wisdom)+`"`
+    let output =  `${npcBuilder()}  "${searchArray(wisdom)}"`
     document.getElementById("Wisdom").innerHTML = output
 };
 function omens() {
     let omens = [
-        `Beware of the blinding red light. If you see this light, you must flee. It will only bring you death!`, `You will find the answer to a long, mysterious riddle in your family bloodline buried between two oak trees, west of the village you grew up in.`, `A path of death lies in your wake.`, `Greed is a poor man’s compass, and I see gold and riches in your future.`, `A single wolf is slaughtered by many enemies that surround it. Let this be a warning sign of danger that is preventable by the pack.`, `The truth will come from a child’s toy. The lie will come from a weapon.`, `You must drink of the poison well and eat of the spoiled pantry.`, `Follow the flight of birds, never in winter, always returning.`, `A song contains a wish. Only the name will answer.`, `The mother has disguised herself. Her babe is lost and will not return. She will nurse no other.`, `The gears turn long after the machine has been broken. He who built it cannot mend it. He who holds it cannot carry it. He who finds it cannot speak it.`, `Gaze through the cracked window, and only then will you see clearly.`, `Beware the men with gills. Speak not to the sea or the southern wind.`, `Beware the snake’s venom, not its bite.`, `Travel five days with the silver star at your heels, then cross the raging river. There you will come to realize your true self.`, `The light will be in the shadowest darkness.`, `Not all the frogs are in the pond, beware of them.`, `One for the fire, two for the clouds, and three for the knights.`, `Don’t trust the song of the birds.`, `Cloak in the water. The man is crying. Let the leaf falls and everything will be fine.`, `For one wish to make, it’ll be more wish to crumble.`, `In the high plain there’s a dark moon. Don’t follow the light.`, `When the dawn will come at the birthday of the mother, rats and snakes will devour all hopes.`, `Near the montains, there is a grey falcon. Look at the eyes, and you’ll die. Look at the tail, and you’ll be rich.`,
-        `Don’t move when the night song come, or you’ll gain something you don’t want, and lost something you wanted to keep.`, `Today was possibly the most important day of your life! Congrat.. oh… you missed it… tsk tsk tsk… What a shame… A do-over, then! Tomorrow you will wake up and it will be today. Make sure you return or that decree will stay. k, Bye!`, `Do not trust your thoughts. They will hinder your victory.`,
-        `A figment in blue will cross your path tomorrow. You will know it when you see the sign. You must turn around 4 times and speak the following words: And through the drifts the snowy clifts Did send a dismal sheen: Nor shapes of men nor beasts we ken The ice was all between.`, `If you believe in telekinesis, raise my hand. The fortune teller then proceeds to raise their hand.`, `When you are done, the spirit haunting will pass over you.`, `A dragon will give you a jewel. Beware the generous miser.`, `The path less traveled is paved in gold.`, `Find the woman who gives birds their song.`, `Beware, young mouse, for the lion is thorned.`, `${searchArray(['Do', 'do not'])} cross the Mountain!`, `${rollDice(10)+2} Stars Mark the Path!`, `The Moon Shines Brightest to Those in Her Favor.`, `Speak Not The Name Unspoken; They Listen, Always.`, `Beware, for the Great Gyre is Nigh; The Slouching Beast Will Soon Arrive!`,
-        `Swords Shall Pierce Thine Heart; Pin Thy Love Lest It Be Lost.`, `Three Crones Shall Visit Thee and Thier Lights Shall Reveal the Truth of What Thou Doth Seek!`, `Keep a Candle Burning; Lest The Dark Take Even Your Fears Away.`, `Build Not Houses of White Stone.`, `Three Coins Must Ye Pay; Three Prices Dear, Secrets Thrice Revealed, ‘ere The Light of Day.`, `Gold, Silver, Copper; Never in the Opposite Order!`, `Spill Forth a Dram for the Lost; Make Merry in the Name of Those Who Pay the Highest Price!`, `You Must Seek the Leaf that Grows Not On Any Tree!`, `Jump the Broom; Dance above the Blades!`, `Sphinx of Black Quartz, Judge Thy Vow.`, `Seek the Egg of Stone; Face the Dragon!`, `Your nights will grow colder still, to match the heat of growing fires.`, `Trust the twin with no siblings, but abhor the lone child.`, `The face of the one you seek is thus- a busker at dawn; a composer at noon; a patron at dusk; a maestro under the stars.`, `Your money, here, have it back. The fortune you’ve asked me to read, never shall I speak of it in this life or any hereafter.`, `A wilting lineage droops to shadowy lows. What the rotten fruit begets chokes out the tree of its birth.`,
-        `Beware! Blessings from above may actually be curses from below!`, `A helping hand will come from an unlikely place. Trust it at your own peril.`, `When the leaves fall from the trees so too shall the stars fall from the sky.`, `The wisest men envy the grave.`, `The poison of the moon lies only once.`, `There be dragons in ye head. Make sure to feed them.`, `The treasure you are looking for is in the fruit.`, `Poorly-dresed skanks like you will die alone. Naked, and alone. (Works best in an arctic setting, or not.)`, `Never bring upon yourself the wrath of the chicken. You may think this a metaphor, but it is not. Their beaks are sharp like my toes.`, `Your hands will taste of orange in the near future.`, `That which you hold most dear will turn against you and lead you to ruin`, `Your actions have had unintended and unforeseeable consequences, and have placed into action the final piece of that which now approaches you. You are the harbinger of your own death`, `The thoughts you have had but not put into action are leading you down a path to your own undoing`, `The fall of slow rain upon the barren field will lead you to the house which shelters your destiny`, `Steel your heart for darkness ahead. Your betrayal has already happened though you do not yet know it.`, `Seek ye the good behind the bad and beware the bad behind the good.`, `Never lick a horse in the mouth, they bite.`,
-        `A Fall is Coming; Winter Just Round the Bend; Enjoy Spring; Summer Shall Bring An End!`, `Let Not Cold Enter Your Heart, For Then Only Love Can Drive It Out!`, `The black sky will shield you from your enemies. Travel by night.`, `The rope with which you climb may also hang you if you are not careful.`, `You will be an old man/woman by the time your quest is complete.`, `Fools will take great heed of your words. Use this to your advantage.`, `A shrewd and very attractive fortune teller has put a curse on you. I will remove it for an additional sum.`, `Trust not the travelers numbering odd.`, `Take something old, give something new, doubt something red, trust something blue.`, `Left at the stream, at the face look right, crawl through the dark, and you will find the light!`, `Salt thy wounds, relish the sting, sweet is the knave, and bold is the king.`, `Thrice will call the raven, heed its warn lest the fourth cry your dirge.`,
-        `Between silver and gold, choose evil’s bane. Between fire and chill, the lady’s kiss.`, `The shadow of the dragon is an omen, but coming of the wolf is the sign.`, `Begrudge not the thieving monkey, lest you take its place in the tiger’s jaws.`, `Lay not your head in the barn animals’ bed, for the headsman soon calls.`, `A copper for the maid, a silver to the beggar, and a gold for a lonely tune, may the vault of riches open to you.`, `Someone you remember, someone you forget, someone with a favor, another with a threat.`, `Poor fortune for ye, unless you confess your guilt to the willow tree.`, `Your luck is a shame until you trade with your mate who has one of the same.`, `A fortune most cold if you do as you’re told.`, `Torch and candle, wax and wick, in the hall of fire, move right quick!`, `Look for the priestess, she will bring salvation.`, `An ancient empire will rise from the waves along with ancient secrets.`, `Only when the lovers are reunited can the curse be broken.`, `As the hermit emerges from hiding, darkness shall soon emerge as well.`, `Watch for a nobleman in red, for he is a devil in disguise.`,
-    ]
-    let nightmares = []
-    
+        `Beware of the blinding red light. If you see this light, you must flee. It will only bring you death!`, 
+        `You will find the answer to a long, mysterious riddle in your family bloodline buried between two oak trees, west of the village you grew up in.`, 
+        `A path of death lies in your wake.`, 
+        `Greed is a poor man’s compass, and I see gold and riches in your future.`, 
+        `A single wolf is slaughtered by many enemies that surround it. Let this be a warning sign of danger that is preventable by the pack.`, 
+        `The truth will come from a child’s toy. The lie will come from a weapon.`, 
+        `You must drink of the poison well and eat of the spoiled pantry.`, 
+        `Follow the flight of birds, never in winter, always returning.`, 
+        `A song contains a wish. Only the name will answer.`, 
+        `The mother has disguised herself. Her babe is lost and will not return. She will nurse no other.`, 
+        `The gears turn long after the machine has been broken. He who built it cannot mend it. He who holds it cannot carry it. He who finds it cannot speak it.`, 
+        `Gaze through the cracked window, and only then will you see clearly.`, 
+        `Beware the men with gills. Speak not to the sea or the southern wind.`, 
+        `Beware the snake’s venom, not its bite.`, 
+        `Travel five days with the silver star at your heels, then cross the raging river. There you will come to realize your true self.`, 
+        `The light will be in the shadowest darkness.`, 
+        `Not all the frogs are in the pond, beware of them.`, 
+        `One for the fire, two for the clouds, and three for the knights.`, 
+        `Don’t trust the song of the birds.`, 
+        `Cloak in the water. The man is crying. Let the leaf falls and everything will be fine.`, 
+        `For one wish to make, it’ll be more wish to crumble.`, 
+        `In the high plain there’s a dark moon. Don’t follow the light.`, 
+        `When the dawn will come at the birthday of the mother, rats and snakes will devour all hopes.`, 
+        `Near the montains, there is a grey falcon. Look at the eyes, and you’ll die. Look at the tail, and you’ll be rich.`,
+        `Don’t move when the night song come, or you’ll gain something you don’t want, and lost something you wanted to keep.`, 
+        `Today was possibly the most important day of your life! Congrat.. oh… you missed it… tsk tsk tsk… What a shame… A do-over, then! Tomorrow you will wake up and it will be today. Make sure you return or that decree will stay. k, Bye!`, 
+        `Do not trust your thoughts. They will hinder your victory.`,
+        `A figment in blue will cross your path tomorrow. You will know it when you see the sign. You must turn around 4 times and speak the following words: And through the drifts the snowy clifts Did send a dismal sheen: Nor shapes of men nor beasts we ken The ice was all between.`, 
+        `If you believe in telekinesis, raise my hand. The fortune teller then proceeds to raise their hand.`, 
+        `When you are done, the spirit haunting will pass over you.`, 
+        `A dragon will give you a jewel. Beware the generous miser.`, 
+        `The path less traveled is paved in gold.`, 
+        `Find the woman who gives birds their song.`, 
+        `Beware, young mouse, for the lion is thorned.`, 
+        `${searchArray(['Do', 'do not'])} cross the Mountain!`, 
+        `${rollDice(10)+2} Stars Mark the Path!`, 
+        `The Moon Shines Brightest to Those in Her Favor.`, 
+        `Speak Not The Name Unspoken; They Listen, Always.`, 
+        `Beware, for the Great Gyre is Nigh; The Slouching Beast Will Soon Arrive!`,
+        `Swords Shall Pierce Thine Heart; Pin Thy Love Lest It Be Lost.`, 
+        `Three Crones Shall Visit Thee and Thier Lights Shall Reveal the Truth of What Thou Doth Seek!`, 
+        `Keep a Candle Burning; Lest The Dark Take Even Your Fears Away.`, 
+        `Build Not Houses of White Stone.`, 
+        `In the heart of the tempest, calmness lies; seek it, or meet your demise.`,
+        `When the raven and the dove fly as one, only then will your task be done.`,
+        `Beware the tree that bleeds and cries, for beneath its bark, deception lies.`,
+        `Follow the shadow that moves against the sun, there you'll find what can't be undone.`,
+        `The howling wind carries secrets untold, but only to those with hearts bold.`,
+        `In the lair where echoes don't sound, lost truths are to be found.`,
+        `To trust the face that wears no frown, is to invite the abyss and drown.`,
+        `At the crossroads where no paths can be seen, there destiny will intervene.`,
+        `When the stone sings and the flame speaks, the world's end it sneakily seeks.`,
+        `Where the fire doesn't burn and the water isn't wet, there lies a secret, a dangerous bet.`,
+        `Beware the laughter that echoes in silence, for it signals looming violence.`,
+        `As the stars fall and the skies weep, into your soul, darkness will creep.`,
+        `Seek the guardian with no shadow to cast, for answers to questions unasked.`,
+        `In the dance of leaves during an unmoving day, destiny's threads begin to fray.`,
+        `If the snow warms and the sun chills, brace yourself for unforeseen ills.`,
+        `The serpent's hiss is not what should worry, but its silence, that's the true fury.`,
+        `When walls whisper and doors conspire, the situation is most dire.`,
+        `Behind the mask with no eyes to see, lies the key to set you free.`,
+        `Avoid the place where dead trees bloom, or embrace an impending doom.`,
+        `Trust the hand that offers no aid, for in its restraint, truth is displayed.`,
+        `In the reflection where your face doesn't appear, confront your deepest fear.`,
+        `The moon's pale gaze hides more than it shows; what lies beneath, nobody knows.`,
+        `When you hear a song with no source in sight, move quickly, take flight.`,
+        `In the land where shadows cast light, challenge your notions of wrong and right.`,
+        `The wolf in sheep's clothing is not the foe, but the sheep in wolf's attire, brings woe.`,
+        `Seek not the treasure that sings in the night, for its allure brings forth fright.`,
+        `Three Coins Must Ye Pay; Three Prices Dear, Secrets Thrice Revealed, ‘ere The Light of Day.`, 
+        `Gold, Silver, Copper; Never in the Opposite Order!`, 
+        `Spill Forth a Dram for the Lost; Make Merry in the Name of Those Who Pay the Highest Price!`, 
+        `You Must Seek the Leaf that Grows Not On Any Tree!`, 
+        `Jump the Broom; Dance above the Blades!`, 
+        `Sphinx of Black Quartz, Judge Thy Vow.`, 
+        `Seek the Egg of Stone; Face the Dragon!`, 
+        `Your nights will grow colder still, to match the heat of growing fires.`, 
+        `Trust the twin with no siblings, but abhor the lone child.`, 
+        `The face of the one you seek is thus- a busker at dawn; a composer at noon; a patron at dusk; a maestro under the stars.`, 
+        `Your money, here, have it back. The fortune you’ve asked me to read, never shall I speak of it in this life or any hereafter.`, 
+        `A wilting lineage droops to shadowy lows. What the rotten fruit begets chokes out the tree of its birth.`,
+        `Beware! Blessings from above may actually be curses from below!`, 
+        `A helping hand will come from an unlikely place. Trust it at your own peril.`, 
+        `When the leaves fall from the trees so too shall the stars fall from the sky.`, 
+        `The wisest men envy the grave.`, 
+        `The poison of the moon lies only once.`, 
+        `There be dragons in ye head. Make sure to feed them.`, 
+        `The treasure you are looking for is in the fruit.`, 
+        `Poorly-dresed skanks like you will die alone. Naked, and alone. (Works best in an arctic setting, or not.)`, 
+        `Never bring upon yourself the wrath of the chicken. You may think this a metaphor, but it is not. Their beaks are sharp like my toes.`, 
+        `Your hands will taste of orange in the near future.`, 
+        `That which you hold most dear will turn against you and lead you to ruin`, 
+        `Your actions have had unintended and unforeseeable consequences, and have placed into action the final piece of that which now approaches you. You are the harbinger of your own death`, 
+        `The thoughts you have had but not put into action are leading you down a path to your own undoing`, 
+        `The fall of slow rain upon the barren field will lead you to the house which shelters your destiny`, 
+        `Steel your heart for darkness ahead. Your betrayal has already happened though you do not yet know it.`, 
+        `Seek ye the good behind the bad and beware the bad behind the good.`, 
+        `Never lick a horse in the mouth, they bite.`,
+        `A Fall is Coming; Winter Just Round the Bend; Enjoy Spring; Summer Shall Bring An End!`, 
+        `Let Not Cold Enter Your Heart, For Then Only Love Can Drive It Out!`, 
+        `The black sky will shield you from your enemies. Travel by night.`, 
+        `The rope with which you climb may also hang you if you are not careful.`, 
+        `You will be an old man/woman by the time your quest is complete.`, 
+        `Fools will take great heed of your words. Use this to your advantage.`, 
+        `A shrewd and very attractive fortune teller has put a curse on you. I will remove it for an additional sum.`, 
+        `Trust not the travelers numbering odd.`, 
+        `Take something old, give something new, doubt something red, trust something blue.`, 
+        `Left at the stream, at the face look right, crawl through the dark, and you will find the light!`, 
+        `Salt thy wounds, relish the sting, sweet is the knave, and bold is the king.`, 
+        `Thrice will call the raven, heed its warn lest the fourth cry your dirge.`,
+        `Between silver and gold, choose evil’s bane. Between fire and chill, the lady’s kiss.`, 
+        `The shadow of the dragon is an omen, but coming of the wolf is the sign.`, 
+        `Begrudge not the thieving monkey, lest you take its place in the tiger’s jaws.`, 
+        `Lay not your head in the barn animals’ bed, for the headsman soon calls.`, 
+        `A copper for the maid, a silver to the beggar, and a gold for a lonely tune, may the vault of riches open to you.`, 
+        `Someone you remember, someone you forget, someone with a favor, another with a threat.`, 
+        `Poor fortune for ye, unless you confess your guilt to the willow tree.`, 
+        `Your luck is a shame until you trade with your mate who has one of the same.`, 
+        `A fortune most cold if you do as you’re told.`, 
+        `Torch and candle, wax and wick, in the hall of fire, move right quick!`, 
+        `Look for the priestess, she will bring salvation.`, 
+        `An ancient empire will rise from the waves along with ancient secrets.`, 
+        `Only when the lovers are reunited can the curse be broken.`, 
+        `As the hermit emerges from hiding, darkness shall soon emerge as well.`, 
+        `Watch for a nobleman in red, for he is a devil in disguise.`,
+        `When the bell tolls at midday, shadows will point the way.`,
+        `The chalice's glow will dim, revealing the truth from within.`,
+        `On a night with no moon, listen closely to the dune.`,
+        `Whispers in the wind foretell the approaching kin.`,
+        `The weight of time will bear down, when the green turns to brown.`,
+        `By the edge of the forest, under the weeping willow, a secret lies buried below.`,
+        `Trust the voice that sings with no mouth, but be wary of the silent shout.`,
+        `When the statue weeps, darkness across the land creeps.`,
+        `The black feather foretells of a storm, but the white feather keeps you warm.`,
+        `Find the maiden who dances with crows, she knows what nobody knows.`,
+        `Seek the mirror that reflects no face, therein lies a dark space.`,
+        `As the rivers run red and the skies turn gray, beware the end of days.`,
+        `Only by the hand of a friend betrayed, will the final path be laid.`,
+        `The key is not metal but song, sing it rightly, or all will go wrong.`,
+        `Trust not the riddle from a jester’s tongue, for in his words, peril is sprung.`,
+        `When the northern star flickers and wanes, follow the path it ordains.`,
+        `In the grove where moonflowers bloom, there you'll find your impending doom.`,
+        `A horse of night, with eyes of flame, will bring news in a forgotten name.`,
+        `When dreams blend with reality's seam, beware the weaver's scheme.`,
+        `On the third crow's call, to your knees, you shall fall.`,
+        `Beware the woods when the mist is near, for it hides what you most fear.`,
+        `Seek guidance from the child with old eyes, for they see through all lies.`,
+        `When the mountains roar and valleys weep, in your heart, a secret you'll keep.`,
+        `By the strike of lightning thrice, heed the elder's advice.`,
+        `On the longest night, when the owls don't hoot, tread carefully on your route.`,
+        `Where the rainbows end, there's more than just gold my friend.`,
+        `In the lair of the lion with a mane of snakes, your destiny awaits and quakes.`,
+        `Beware the shadow that doesn't match its caster, for it heralds impending disaster.`,
+        `When the lilies droop and roses fade, a vital promise will be unmade.`,
+        `To see the unseen, look through the prism of a forgotten dream.`,
+        `With each petal plucked, destiny is further ducked.`,
+        `Where the waves crash but the sea can't be seen, tread lightly, or forever be trapped in between.`,
+        `Your next breath might be your last, if you don't reconcile with your past.`,
+    ];
+    let attention = [
+        `While they talk, you observe`,
+        `As their words flow, you discern`,
+        `In the midst of their speech, you catch that`,
+        `As they voice their thoughts, your attention is drawn to that`,
+        `While listening to them, you can't help but notice that`,
+        `While they articulate, you spot that`,
+        `As they verbalize, your are struck that`,
+        `During their discourse, it becomes apparent that`,
+        `Their words might distract, but you notice  that`,
+        `Amidst their conversation, your observation leads you to that`,
+        `They might be speaking, but what you notice is that`,
+        `Even as they continue talking, you take note of that`,
+        `With every word they utter, your focus shifts to that`,
+        `Their dialogue continues, yet you are captivated that`
+    ];
     let freakArray = [
-        'their eyes turn black with red swirls', 'they move in jittery, unsettling, motions', 'they speak with multiple dissonant voices', 'you hear many whispers as they speak', 'you get a chill as they begin to speak', 'their eyes turn black with red swirls', 'they move in jittery, unsettling motions', 'they speak with multiple dissonant voices', 'you hear many whispers as they speak', 'you get a chill as they begin to speak', 'their shadow takes on a monstrous, independent form', `the room's temperature drops suddenly in their presence`, 'they have an unnaturally wide grin with too many teeth', 'their laugh is high-pitched and echoes eerily', 'animals seem to fear them or behave erratically around them', 'candles or lights flicker and die when they approach', 'their footsteps leave no trace, or maybe a residue of frost', 'they appear to have no reflection or a distorted one', 'they can appear and disappear without a trace', 'their touch causes plants to wither and die', 'they never blink, or they blink far too frequently', 'they have a constant hum or droning noise around them', 'they seem to be always just out of direct light, enveloped in shadow', 'their breath is visible, even in warm environments', 'items or surfaces they touch occasionally rot or corrode', 'their skin has an unnatural hue or texture, like stone or scales', 'objects float or spin around them without any visible means', 'they seem to know personal details about people without being told', 'their presence causes feelings of deep dread or nausea', 'they have long, claw-like fingers or other monstrous features'
-    ]
-
-    let output = npcBuilder() + ` ${searchArray(freakArray)}, and they say "`+ searchArray(omens)+`"`
+        'their eyes are turning black with red swirls', 
+        'their movement is jittery, unsettling, motions', 
+        'their voice sounds of multiple dissonant voices', 
+        'you are hearing of many whispers as they speak', 
+        'you are getting a chill as they speak', 
+        'their shadow takes on a monstrous, independent form', 
+        `the room's temperature drops suddenly in their presence`, 
+        'they have an unnaturally wide grin with too many teeth', 
+        'their laugh is high-pitched and echoes eerily', 
+        'animals seem to fear them or behave erratically around them', 
+        'candles or lights flicker and die when they approach', 
+        'their footsteps leave no trace, or maybe a residue of frost', 
+        'they appear to have no reflection or a distorted one', 
+        'they can appear and disappear without a trace', 
+        'their touch causes plants to wither and die', 
+        'they never blink, or they blink far too frequently', 
+        'they have a constant hum or droning noise around them', 
+        'they seem to be always just out of direct light, enveloped in shadow', 
+        'their breath is visible, even in warm environments', 
+        'items or surfaces they touch occasionally rot or corrode', 
+        'their skin has an unnatural hue or texture, like stone or scales', 
+        'objects float or spin around them without any visible means', 
+        'they seem to know personal details about people without being told', 
+        'their presence causes feelings of deep dread or nausea', 
+        'they have long, claw-like fingers or other monstrous features'
+    ];
+    let output = `${npcBuilder()} ${searchArray(communicate)} "${searchArray(omens)}" ${searchArray(attention)} ${searchArray(freakArray)}`
     document.getElementById("Omen").innerHTML = output
 };
 
 function rumor(){
     let startArray = [
-        "Did you hear that a", "Rumor has it that a", "Word on the street is that a", "I've heard whispers that a", "They say a", "Someone mentioned that a", "There's talk around town that a", "Have you caught wind of the", "It's been said that a", "Behind closed doors, people are saying a", "You wouldn't believe it, but a", "A little birdie told me that a", "Don't quote me on this, but a", "From a reliable source, I've heard that a", "In hushed tones, folks are chatting about a", "It's not common knowledge, but a", "If the walls could talk, they'd tell you that a", "Believe it or not, a", "The latest buzz is that a", "The grapevine is buzzing about a", "I wasn't supposed to know, but a", "Trust me, it's all over the place: A "
+        "Did you hear that", "Rumor has it that", "Word on the street is that", "I've heard whispers that", "They say", "Someone mentioned that", "There's talk around town that", "Have you caught wind of the", "It's been said that", "Behind closed doors, people are saying", "You wouldn't believe it, but", "A little birdie told me that", "Don't quote me on this, but", "From a reliable source, I've heard that", "In hushed tones, folks are chatting about", "It's not common knowledge, but", "If the walls could talk, they'd tell you that", "Believe it or not,", "The latest buzz is that", "The grapevine is buzzing about", "I wasn't supposed to know, but", "Trust me, it's all over the place..."
         
-    ]  
+    ];  
     function single(){
         let singleSubject =[
             [
-                "local", 'regional', 'village', 'well-known', "distant", "neighboring", "town", "city", "forest", "mountain", "seaside", "underground", "royal", "abandoned", "military", "religious"
+                "a local", "a notable", 'a well-to-do', 'a regional', 'a village', 'a well-known', "a distant", "a neighboring", "a town", "a city", "a forest", "a mountain", "a seaside", "an underground", "a royal", "an abandoned", "a military", "a religious"
             ],
             [
                 `authority`, "magic user", "hero", "noble", "vagrant", "visitor", "criminal", "citizen", "merchant", "adventurer", "priest", "cultist", "bard", "knight", "scholar", "alchemist", "beastmaster", "witch", "soldier", "healer", "pirate", "explorer", "blacksmith", "innkeeper"
             ]
         ]
-        return searchArray(singleSubject[0]) + " " + searchArray(singleSubject[1])
-    }
+        return `${searchArray(singleSubject[0])}  ${searchArray(singleSubject[1])}`
+    };
     function plural() {
         let pluralSubject =[
             [
-                "local", 'regional', 'village', 'well-known', "notable", 'well-to-do', "distant", "neighboring", "town", "city", "forest", "mountain", "seaside", "underground", "royal", "abandoned", "military", "religious"
+                "a notable", 'a well-to-do', "a local", 'a regional', 'a village', 'a well-known', "a distant", "a neighboring", "a town", "a city", "a forest", "a mountain", "a seaside", "an underground", "a royal", "an abandoned", "a military", "a religious"
             ],
             [
                 `group of authorities`, "group of magic users", "group of heroes", "group of nobles", "group of vagrants", "group of visitors", "group of criminals", "group of citizens",  "thieves' guild", "order of monks", "circle of druids", "band of mercenaries", "secret society", "coven of witches", "group of performers", "cult of a forbidden god", "band of rebels", "company of actors", "guild of artisans", "order of paladins", "tribe of nomads", "crew of sailors", "conclave of mages", "family of nobles", "court of jesters", "sect of assassins", "clan of hunters", "gang of street urchins", "troupe of acrobats", "brotherhood of alchemists", "squad of guards", "ensemble of musicians", "community of hermits", "house of diplomats", "coalition of merchants", "horde of barbarians", "cabal of necromancers", "syndicate of smugglers",
             ]
         ]
-        return searchArray(pluralSubject[0]) + " " + searchArray(pluralSubject[1])
-    }
-
+        return `${searchArray(pluralSubject[0])}  ${searchArray(pluralSubject[1])}`
+    };
     let complication = [
-        "Also, the victim(s) were related to the killer(s).", 
-        `It seems to have been done at the behest of a ${searchArray([plural(), single()])}.`, 
-    ]
+        "Also, the victim(s) were related to the killer(s).",
+        `It seems to have been done at the behest of ${searchArray([plural(), single()])}.`,
+        "Apparently, the crime was foretold in an old village prophecy.",
+        `The incident coincided with the mysterious arrival of ${searchArray([plural(), single()])} in town.`,
+        "There's talk that an old curse was involved.",
+        "Rumors say it's all connected to an underground cult in the city.",
+        "There's a belief that the event was staged, but for what purpose is still unclear.",
+        "Some claim it was an accident, while others swear it was a message.",
+        `A cryptic symbol was found at the scene, one that has ancient ties to ${searchArray([plural(), single()])}.`,
+        "It's whispered that the real motive is buried in a decade-old secret.",
+        "There are those who believe that this is just the beginning of something bigger.",
+        `Witnesses have reported seeing ${searchArray([plural(), single()])} fleeing the scene.`,
+        "Strangely, all clocks in the vicinity stopped at the exact time of the incident.",
+        `An old journal mentions a similar event tied to ${searchArray([plural(), single()])} from years ago.`,
+        "There's chatter that a forbidden artifact might be the cause.",
+        `Some locals have drawn connections between the event and the legend of ${searchArray([plural(), single()])}.`,
+        "It's said that all involved had the same recurring dream for weeks leading up to the incident.",
+        "Whispers abound that a betrayal from within was the real cause.",
+        "Many believe that it's all a cover-up for something even more sinister.",
+        "Rumors are rife that the event was a diversion, drawing attention away from the real crime."
+    ];
     let verb = [
         'killed', "slayed", "murdered", "assassinated", "silenced", 'destroyed'
-    ]
+    ];
     let iHeard =[
         "Word is they employed",
         "The story goes that they utilized",
@@ -845,13 +1346,13 @@ function rumor(){
         "Whispers claim that their method involved",
         "It's been passed around that they took advantage of",
         "The tale being spun is that they resorted to",
-        "Insiders are saying they reached for",
+        "Insiders are saying they relied on",
         "Believe it or not, they might have employed",
         "There's chatter that their go-to was",
         "If the sources are right, they turned to",
         "The buzz around is that they applied",
         "I heard they used"
-    ]
+    ];
     let method = [ 
         `a ${searchArray(['magical', 'nonmagical'])} animal`,
         `${searchArray(['a weapon','a heavy object','their bare hands',
@@ -880,8 +1381,7 @@ function rumor(){
         `a staged scene where the victim is made to appear as ${searchArray(['a threat', 'a monster', 'an enemy spy'])} resulting in their death by others`,
         `their environment, specifically ${searchArray(['tampering with their equipment at great heights', 'altering a dive tank', 'meddling with vehicle controls'])}`,
         `rare or exotic creatures, specifically a ${searchArray(['a trained assassin bug', 'a venomous mythical beast', 'a summoned shadow creature'])}`
-    ]
-
+    ];
     let andWhy = [
         "and the entire affair unfolded",
         "and everything transpired",
@@ -898,35 +1398,13 @@ function rumor(){
         "and it all was set aflame",
         "and the genesis of the situation was done",
         "and it was all done"
-    ] 
+    ] ;
     function becauseArray(){
         let bcThesaurus = [
-            `because of`,
-            `due to`,
-            `on account of`,
-            `owing to`,
-            `as a result of`,
-            `in view of`,
-            `thanks to`,
-            `by reason of`,
-            `by virtue of`,
-            `in consequence of`,
-            `on the grounds of`,
-            `stemming from`,
-            `in light of`,
-            `given that`,
-            `as a consequence of`,
-            `by means of`,
-            `as per`,
-            `considering`,
-            `following`,
-            `in the wake of`,
-            `based on`,
-            'out of',
-            'over'
+            `because of`, `due to`, `on account of`, `owing to`, `as a result of`, `in view of`, `thanks to`, `by reason of`, `by virtue of`, `in consequence of`, `on the grounds of`, `stemming from`, `in light of`, `given that`, `as a consequence of`, `by means of`, `as per`, `considering`, `following`, `in the wake of`, `based on`, 'out of', 'over'
         ] 
         return searchArray(bcThesaurus)
-    }
+    };
     let motive= [  
         `${becauseArray()} money ${searchArray(['disputes',`disagreements`, `conflicts`, `contentions`, `arguments`, `squabbles`, `quarrels`, `differences`, `feuds`, `clashes`, `confrontations`, `dissensions`, `controversies`])}`,
         `${becauseArray()} romantic ${searchArray(['disputes',`disagreements`, `conflicts`, `contentions`, `arguments`, `squabbles`, `quarrels`, `differences`, `feuds`, `clashes`, `confrontations`, `dissensions`, `controversies`])}`,
@@ -989,37 +1467,13 @@ function rumor(){
         `due to a curse or external influence`,
         `as a demonstration of loyalty or allegiance`,
         `${becauseArray()} pressure or coercion from a third party`
-    ]
-
+    ];
     let storyTemplate = [
-        `${searchArray(startArray)} ${single()} ${searchArray(verb)} a ${single()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}. ${variableEvent(complication)}`,
-        `${searchArray(startArray)} ${plural()} ${searchArray(verb)} a ${single()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}. ${variableEvent(complication)}`,
-        `${searchArray(startArray)} ${plural()} ${searchArray(verb)} a ${plural()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}. ${variableEvent(complication)}`,
-        `${searchArray(startArray)} ${single()} ${searchArray(verb)} a ${plural()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}. ${variableEvent(complication)}`
-    ]
-    let communicate = [
-        "whispers conspiratorially,",
-        "utters with a furtive glance,",
-        "declares with a hint of excitement,",
-        "murmurs, looking over their shoulder,",
-        "shares with a trembling voice,",
-        "confesses with a guilty look,",
-        "relays, barely containing their glee,",
-        "reveals with a sly grin,",
-        "hints with a wink,",
-        "proclaims with wide-eyed earnestness,",
-        "admits, lowering their voice to a hush,",
-        "breathes out, as if unburdening a heavy secret,",
-        "recalls with a distant, thoughtful expression,",
-        "mentions with an air of nonchalance, as if it’s trivial,",
-        "imparts with a shiver of fear,",
-        "divulges, ensuring no one else is within earshot,",
-        "gossips with an animated demeanor,",
-        "states, trying hard to mask their amusement,",
-        "conveys with a hint of worry in their eyes,",
-        "spills, as if they can't keep it in any longer,",
-        "says nervously,"
-    ]
+        `${searchArray(startArray)} ${single()} ${searchArray(verb)} ${single()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}.${variableEvent(complication)}`,
+        `${searchArray(startArray)} ${plural()} ${searchArray(verb)} ${single()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}.${variableEvent(complication)}`,
+        `${searchArray(startArray)} ${plural()} ${searchArray(verb)} ${plural()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}.${variableEvent(complication)}`,
+        `${searchArray(startArray)} ${single()} ${searchArray(verb)} ${plural()}. ${searchArray(iHeard)} ${searchArray(method)}, ${searchArray(andWhy)} ${searchArray(motive)}.${variableEvent(complication)}`
+    ];
 
     let output = `${npcBuilder()} ${searchArray(communicate)} "${searchArray(storyTemplate)}".`
     document.getElementById("Rumor").innerHTML = output
@@ -1515,7 +1969,7 @@ function prophecy(){
         "To the pioneers of the new age,",
     ]
 
-    let output =  npcBuilder() + ` in a ${searchArray(voice)}, they say: "${searchArray(introductoryPhrase)} ${searchArray(beginning)} ${searchArray(warningPhrase)} ${searchArray(proponents)} ${searchArray(signPhrase)} ${searchArray(sign)} ${searchArray(doomPhrase)} ${searchArray(doom)} ${searchArray(aftermathPhrase)} ${searchArray(aftermath)}"`
+    let output =  npcBuilder() + ` in a ${searchArray(voice)}, ${searchArray(communicate)} "${searchArray(introductoryPhrase)} ${searchArray(beginning)} ${searchArray(warningPhrase)} ${searchArray(proponents)} ${searchArray(signPhrase)} ${searchArray(sign)} ${searchArray(doomPhrase)} ${searchArray(doom)} ${searchArray(aftermathPhrase)} ${searchArray(aftermath)}"`
     document.getElementById("Prophecy").innerHTML = output
 };
 
