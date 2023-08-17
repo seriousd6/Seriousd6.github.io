@@ -250,7 +250,7 @@ let template = [
 `The ${toWords(rollDice(100))}${searchArray(thing)}s`,
 `The ${toWords(rollDice(100))}${searchArray(place)}s`,
 `The ${toWords(rollDice(100))}${searchArray(person)}s`,
-`The ${toWords(rollDice(100))}${searchArray(verbs)}s`,
+`The ${toWords(rollDice(100))}${searchArray(verb)}s`,
 
 ]
 let chance = rollDice(100)
