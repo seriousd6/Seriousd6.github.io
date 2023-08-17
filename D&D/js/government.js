@@ -5188,7 +5188,7 @@ function governmentPicker(){
     fPolicy()
     intrigue()
     schemes()
-    p
+    policy(4)
 
 };
 
