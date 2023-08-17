@@ -1,5 +1,5 @@
 # Resuming 11/1/21
-I have a rekindled desire to continue work on this site, I will be make incremental progress each month, please message me on [reddit](https://www.reddit.com/user/seriousd6/) to share ideas and make comments!
+I have resumed progress on this site please message me on [reddit](https://www.reddit.com/user/seriousd6/) to share ideas and make comments!
 
 # Project Goal
 My goal for this project was to take all of the wonderful lists and tables created by other redditors and create a simple, modular, and inspiring tool for myself (to learn how to code as well as how to DM better), and for others to use as well!
