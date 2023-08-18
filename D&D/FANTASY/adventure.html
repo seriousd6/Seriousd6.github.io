@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="icon" type="image" href="../../icon.bmp"/>
+    <title>D&D Flavor Generators</title>
+    <script src="js/adventure.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html" style="color:white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../D&D.html" style="color:white">D&D</a></li>
+                    <li class="breadcrumb-item"><a href="./fantasy.html" style="color:white">Fantasy</a></li>
+                    <li class="breadcrumb-item"><a href="./character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="./tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="./world.html" style="color:white">World</a></li>
+                    <li style="font-weight: bold; color: rgb(255, 0, 242)" class="breadcrumb-item active" aria-current="page">Adventure</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="./loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="./plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li class="breadcrumb-item"><a href="./setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="./shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="./npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    <li class="breadcrumb-item"><a href="./Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="./ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="./Monster_Builder.html" style="color:white">Monsters</a></li>
+                    <li class="breadcrumb-item"><a href="./magic.html" style="color:white">Magic</a></li>
+                    <li class="breadcrumb-item"><a href="./government.html" style="color:white">Government</a></li>
+                    <li class="breadcrumb-item"><a href="./wagon.html" style="color:white">Wagon</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-danger" type="button" onclick="adventureBuilder()">Roll for Adventure</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="tier()">Tier</button>
+            <div class="col blue" id="Tier"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="flavor()">Flavor</button>
+            <div class="col blue" id="Flavor"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="start()">Start Story</button>
+            <div class="col blue" id="Start"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="conflict()">Conflict</button>
+            <div class="col blue" id="Conflict"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="villain()">Villain</button>
+            <div class="col blue" id="Villain"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="villainTitle()">Title</button>
+            <div class="col blue" id="Hi"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="preMadeVillain()">Premade Villain</button>
+            <div class="col blue" id="Premade"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="motive()">Motive</button>
+            <div class="col blue" id="Motive"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" type="button" onclick="trait()">Trait</button>
+            <div class="col blue" id="Trait"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" onclick="artifact()">Artifact</button>
+            <div class="col blue" id="Artifact"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" type="button" onclick="twist()">Twist</button>
+            <div class="col blue" class="container-md" id="Twist">
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-primary" type="button" onclick="seat()">Seat of Power</button>
+            <div class="col blue" id="Seat"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="near()">Near Landmark</button>
+            <div class="col blue" id="Near"> </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="monologue()">Monologue</button>
+            <div class="col blue" id="Mono"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="moral()">Moral Quandry</button>
+            <div class="col blue" id="Moral"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="final()">Final Fight</button>
+            <div class="col blue" id="FF"></div>
+        </div>
+        <br>
+        <h6>Unique Combat Encounter Inspiration</h6>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="premise()">Premise</button>
+            <div class="col blue" id="Premise"> </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="disparity()">Power Disparity</button>
+            <div class="col blue" id="Disparity"> </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="background()">Background</button>
+            <div class="col blue" id="Background"> </div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="combatFocus()">Focus</button>
+            <div class="col blue" id="Method"> </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h5>Smaller Adventure Ideas</h5>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="printCrime()">Crime Scene</button>
+            <div class="col blue" id="Crime Scene"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="subPlanePremise()">Sub-Plane premise</button>
+            <div class="col blue" id="Plane Premise"></div>
+        </div>
+        <div class="row">
+            <button class="col-2 btn btn-primary" type="button" onclick="subDimension()">Sub-Plane</button>
+            <div class="col blue" id="Subplane"></div>
+        </div>
+    </div>
+
+    <footer style="margin-top: .5in; background-color: black;color: white;">
+        <p>Credit: The majority ("Start Story" to "Final Fight") is a mashup of all the relevant lists from <a style="color: rgb(255, 0, 242);" href="https://www.reddit.com/r/d100/">r/d100</a> and <a style="color: rgb(255, 0, 242);" href="https://www.reddit.com/r/DnDBehindTheScreen/">r/DnDBehindTheScreen</a>.
+            The unique combat encounter and small adventure ideas are specific roll tables from a few contributors on <a style="color: rgb(255, 0, 242);" href="https://www.reddit.com/r/DnDBehindTheScreen/">r/DnDBehindTheScreen</a>.
+        </p>
+    </footer>
+
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: rgb(255, 0, 242);" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>

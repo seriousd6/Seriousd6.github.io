@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="icon" type="image" href="../../icon.bmp"/>
+    <title>D&D Flavor Generators</title>
+    <script src="js/wagon.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>D&D Flavor Generators</h1>
+        <div id="breadcrumb">
+            <nav style="background-color: black;" aria-label="breadcrumb">
+                <ol style="background-color: black;" class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html" style="color:white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../D&D.html" style="color:white">D&D</a></li>
+                    <li class="breadcrumb-item"><a href="./fantasy.html" style="color:white">Fantasy</a></li>
+                    <li class="breadcrumb-item"><a href="./character.html" style="color:white">Character</a></li>
+                    <li class="breadcrumb-item"><a href="./tavern.html" style="color:white">Tavern</a></li>
+                    <li class="breadcrumb-item"><a href="./world.html" style="color:white">World</a></li>
+                    <li class="breadcrumb-item"><a href="./adventure.html" style="color:white">Adventure</a></li>
+                    <li class="breadcrumb-item"><a href="./loot.html" style="color:white">Loot</a></li>
+                    <li class="breadcrumb-item"><a href="./plot_hooks.html" style="color:white">Plot Hooks</a></li>
+                    <li class="breadcrumb-item"><a href="./setting_builder.html" style="color:white">Setting Builder</a></li>
+                    <li class="breadcrumb-item"><a href="./shopkeeper.html" style="color:white">Shopkeeper</a></li>
+                    <li class="breadcrumb-item"><a href="./npc_interactions.html" style="color:white">NPC Interactions</a></li>
+                    <li class="breadcrumb-item"><a href="./Feywilds.html" style="color:white">Feywilds</a></li>
+                    <li class="breadcrumb-item"><a href="./ather.html" style="color:white">Ather</a></li>
+                    <li class="breadcrumb-item"><a href="./Monster_Builder.html" style="color:white">Monsters</a></li>
+                    <li class="breadcrumb-item"><a href="./magic.html" style="color:white">Magic</a></li>
+                    <li class="breadcrumb-item"><a href="./government.html" style="color:white">Government</a></li>
+                    <li style="font-weight: bold; color: rgb(255, 0, 242)" class="breadcrumb-item active" aria-current="page">Wagon</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <button class="col-2 btn btn-danger" type="button" onclick="wagonBuilder(a.value)">Roll for Wagon!</button>
+            <button class="col-2 btn btn-dark" type="button" onclick="reload()">Clear</button>
+        </div>
+        <div class="row">
+            <div class="col" style="border-style:double; border-width: 3px; border-color: rgb(54, 10, 64);">
+                <input type="range" min="1" max="20" value="1" step="1" class="slider" id="Level"> Level of Wagon <b id="levelOutput" style="color: rgb(30, 127, 6);"></b></input>
+            </div>
+        </div>
+        <script>
+            let a = document.getElementById("Level")
+            let aOut = document.getElementById("levelOutput")
+            a.oninput = function() {
+            aOut.innerHTML = this.value;
+            }
+
+        </script>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="model()">Wagon Model</button>
+            <div class="col" id="Model"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="purpose()">Purpose</button>
+            <div class="col" id="Purpose"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="seat()">Driver's Seat</button>
+            <div class="col" id="Seat"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="draughts()">Draught</button>
+            <div class="col" id="Animal"></div>
+        </div>
+
+        
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="wheels()">Wheels</button>
+            <div class="col" id="Wheels"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="obMob()">Obstacle Mobility</button>
+            <div class="col" id="ObMob"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="modifications()">Visual Modifications</button>
+            <div class="col" id="Mods"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="roof()">Roof Modification</button>
+            <div class="col" id="Roof"></div>
+        </div>
+        
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="frameEnh(a.value)">Frame Enhancements</button>
+            <div class="col" id="FEnh"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="exComEnh(a.value)">External Combat Enhancements</button>
+            <div class="col" id="ExEnh"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="emergency(a.value)">Emergency Features</button>
+            <div class="col" id="Emergency"></div>
+        </div>
+
+
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="techs(a.value)">Enhancing Technologies</button>
+            <div class="col" id="Tech"></div>
+        </div>
+
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="lights()">Lighting</button>
+            <div class="col" id="Lights"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="intSize()">Interior Size</button>
+            <div class="col" id="Interior"></div>
+        </div>
+        <div class="row">
+            <button class="col-2  btn btn-secondary" type="button" onclick="furnishings(a.value)">Furnishings</button>
+            <div class="col" id="Furnishing"></div>
+        </div>
+    
+    </div>
+
+    <footer>
+        <p>Thanks for checking this out, please let me know how I can make it better! <a style="color: rgb(255, 0, 242);" href="https://www.reddit.com/user/seriousd6/">u/seriousd6</a> </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>
