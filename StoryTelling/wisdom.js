@@ -16,8 +16,8 @@ function searchArray(array) {
 /*==================================================================================*/
 
 
-function wisdom(){
-    document.getElementById("Wisdom").innerHTML = ""
+function wis() {
+    document.getElementById("Wise").innerHTML = ""
     let quoteArray = [
         `We are all apprentices in a craft where no one ever becomes a master. ~Ernest Hemingway`,
         `Write. Just do it. Then again. Then some more. And more. Do not wait for inspiration; if you do enough of it often enough, inspiration will eventually come. ~Nancy Kress`,
@@ -118,7 +118,7 @@ function wisdom(){
         `Don’t labor over a little cameo work in which every word is to be perfect. Technique holds a reader from sentence to sentence, but only content will stay in his mind. ~Joyce Carol Oates`,
         `If you fall in love with the vision and not your words, the rewriting will become easier. ~Nora DeLoach`,
         `Be willing and unafraid to write badly, because often the bad stuff clears the way for good, or forms a base on which to build something better. ~Jennifer Egan`,
-        `Plot is no more than footprints left in the snow after your characters have run by on their way to incredible destinations. ~Ray Bradbury`
+        `Plot is no more than footprints left in the snow after your characters have run by on their way to incredible destinations. ~Ray Bradbury`,
         `All readers come to fiction as willing accomplices to your lies. Such is the basic goodwill contract made the moment we pick up a work of fiction. ~Steve Almond`,
         `It ain’t whatcha write, it’s the way atcha write it. ~Jack Kerouac`,
         `Not a wasted word. This has been a main point to my literary thinking all my life. ~Hunter S. Thompson`,
@@ -144,10 +144,10 @@ function wisdom(){
         `Plot is people. Human emotions and desires founded on the realities of life, working at cross purposes, getting hotter and fiercer as they strike against each other until finally there’s an explosion—that’s Plot. ~Leigh Brackett`,
         `The first sentence can’t be written until the final sentence is written. ~Joyce Carol Oates`,
         `When your story is ready for rewrite, cut it to the bone. Get rid of every ounce of excess fat. This is going to hurt; revising a story down to the bare essentials is always a little like murdering children, but it must be done. ~Stephen King`,
-        `Genius gives birth, talent delivers. What Rembrandt or Van Gogh saw in the night can never be seen again. Born writers of the future are amazed already at what they’re seeing now, what we’ll all see in time for the first time, and then see imitated many times by made writers.`,`–Jack Kerouac`,
+        `Genius gives birth, talent delivers. What Rembrandt or Van Gogh saw in the night can never be seen again. Born writers of the future are amazed already at what they’re seeing now, what we’ll all see in time for the first time, and then see imitated many times by made writers. ~Jack Kerouac`,
         `Long patience and application saturated with your heart’s blood—you will either write or you will not—and the only way to find out whether you will or not is to try. ~Jim Tully`
     ]
-document.getElementById("Wisdom").innerHTML = searchArray(quoteArray)
+document.getElementById("Wise").innerHTML = "Wisdom from the greats: " + searchArray(quoteArray)
 //console.log(searchArray(template))
 }
 
