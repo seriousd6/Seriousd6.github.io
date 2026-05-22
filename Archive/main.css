@@ -1,0 +1,97 @@
+h1 {
+    text-align: left;
+    font-size: large;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.padtop {
+    padding-top: .5in;
+}
+
+.pad {
+    padding-left: 12px;
+}
+
+.col {
+    outline: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+.outline {
+    outline: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+div {
+    padding: 1px;
+}
+
+footer {
+    text-align: center;
+    outline-style: double;
+    padding: 5px;
+    padding-top: .5in;
+    margin-top: .5in;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 22px;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 24px;
+        text-overflow: ellipsis;
+
+    }
+}
