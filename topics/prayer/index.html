@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+<title>Prayer in the Bible — A Comprehensive Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Warm parchment palette — aligned with site theme and Revelation page */
+  --bg:           #f3ead4;
+  --bg2:          #ece0c0;
+  --bg3:          #e3d4aa;
+  --bg4:          #d9c898;
+  --surface:      rgba(255,250,232,0.85);
+  --surface2:     rgba(240,228,200,0.75);
+  --surface3:     rgba(228,214,182,0.65);
+  --gold:         #a48330;
+  --gold-light:   #c9a85a;
+  --gold-dim:     #826625;
+  --gold-muted:   #c9a85a;
+  --cream:        #1d140a;   /* primary text   */
+  --cream-dim:    #3a2a18;   /* secondary text */
+  --cream-muted:  #6b5536;   /* muted text     */
+  --red-accent:   #6e1e22;
+  --red-light:    #8f3236;
+  --teal:         #2d4030;
+  --teal-light:   #3d5542;
+  --border:       rgba(29,20,10,0.18);
+  --border-strong:rgba(29,20,10,0.38);
+  --border-soft:  rgba(29,20,10,0.10);
+  --text:         #1d140a;
+  --text-dim:     #3a2a18;
+  --text-muted:   #6b5536;
+  --font-display: 'Cinzel', 'Trajan Pro', serif;
+  --font-body:    'EB Garamond', Georgia, serif;
+  --font-alt:     'Cormorant SC', 'EB Garamond', serif;
+  --sidebar-w:    280px;
+  --radius:       4px;
+  --header-h:     52px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--header-h, 52px);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--gold-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--header-h, 52px));
+  background: linear-gradient(180deg, #efe2c0 0%, #e6d6ad 100%);
+  border-right: 1px solid var(--border-strong);
+  box-shadow: inset -1px 0 0 rgba(255,245,220,0.5), 4px 0 18px -8px rgba(74,18,22,0.18);
+  position: fixed;
+  top: var(--header-h, 52px); left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.28s ease;
+}
+body:not(.sidebar-open) #sidebar { transform: translateX(-100%); }
+
+.sidebar-logo {
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-logo .cross {
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  display: block;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-logo h1 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.sidebar-logo p {
+  font-size: 11px;
+  color: var(--cream-muted);
+  letter-spacing: 0.22em;
+  margin-top: 8px;
+  font-family: var(--font-alt);
+  text-transform: uppercase;
+}
+
+.sidebar-search {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.sidebar-search input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--text);
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.sidebar-search input::placeholder { color: var(--text-muted); }
+.sidebar-search input:focus { border-color: var(--gold-dim); }
+
+.nav-section-label {
+  font-family: var(--font-alt);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  padding: 1rem 1rem 0.4rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 1.25rem;
+  font-family: var(--font-alt);
+  font-size: 13.5px;
+  letter-spacing: 0.08em;
+  color: var(--cream-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  position: relative;
+}
+.nav-item:hover { color: var(--red-accent); background: rgba(255,245,210,0.4); }
+.nav-item.active { color: var(--red-accent); border-left-color: var(--red-accent); background: linear-gradient(90deg, rgba(255,245,210,0.7), transparent 90%); font-weight: 500; }
+.nav-item .nav-num {
+  font-size: 9px;
+  color: var(--gold-muted);
+  min-width: 16px;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--cream-muted);
+  font-family: var(--font-alt);
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+/* ===== MAIN CONTENT ===== */
+#main {
+  margin-left: 0;
+  flex: 1;
+  max-width: 100vw;
+  transition: margin-left 0.28s ease, max-width 0.28s ease;
+}
+body.sidebar-open #main {
+  margin-left: var(--sidebar-w);
+  max-width: calc(100vw - var(--sidebar-w));
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  border-bottom: 1px double var(--gold);
+  padding: 70px 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(110,30,34,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+
+.hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 30px; height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span { color: var(--gold); }
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-dim);
+  max-width: 600px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.hero-meta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-stat .num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.hero-stat .label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+/* CONTENT AREA */
+.content-area {
+  padding: 0;
+}
+
+/* SECTION */
+.study-section {
+  padding: 70px 80px 90px;
+  border-bottom: 1px solid var(--border-soft);
+  display: none;
+  animation: fadeIn 0.3s ease;
+  max-width: 1100px;
+}
+
+.study-section.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 60px; height: 1px;
+  background: var(--gold);
+}
+
+.section-eyebrow {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-eyebrow .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border: 1px solid var(--gold-muted);
+  border-radius: 50%;
+  font-size: 9px;
+  color: var(--gold);
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--red-accent);
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 48px 0 16px;
+}
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 10px;
+}
+
+.section-intro {
+  font-size: 21px;
+  color: var(--cream-dim);
+  font-style: italic;
+  line-height: 1.55;
+  border-left: 3px double var(--gold);
+  padding-left: 22px;
+  margin: 22px 0 30px;
+  max-width: 800px;
+}
+
+/* TYPOGRAPHY */
+h3 {
+  font-family: var(--font-alt);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 28px 0 10px;
+}
+
+h4 {
+  font-family: var(--font-alt);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cream-muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 20px 0 8px;
+}
+
+p {
+  margin: 0 0 14px;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+strong { color: var(--cream); font-weight: 500; }
+em { color: var(--cream-dim); font-style: italic; }
+
+/* SCRIPTURE BLOCK */
+.scripture {
+  border-left: 2px solid var(--red-accent);
+  padding: 14px 20px;
+  margin: 18px 0;
+  background: rgba(255,245,210,0.4);
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+.scripture .ref {
+  font-family: var(--font-alt);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+.scripture .text {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--cream-dim);
+  line-height: 1.75;
+}
+
+/* CALLOUT */
+.callout {
+  background: linear-gradient(180deg, rgba(255,250,232,0.7) 0%, rgba(245,232,200,0.5) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 18px 0;
+  font-size: 17px;
+  color: var(--cream-dim);
+  line-height: 1.65;
+  position: relative;
+}
+
+.callout.gold { border-left: 3px solid var(--gold); }
+.callout.red  { border-left: 3px solid var(--red-accent); }
+.callout.teal { border-left: 3px solid var(--teal); }
+
+.callout-label {
+  font-family: var(--font-alt);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 6px;
+}
+
+/* GRID CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,250,232,0.7) 0%, rgba(245,232,200,0.5) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -10px rgba(74,18,22,0.25);
+}
+
+.card-icon {
+  font-size: 20px;
+  color: var(--gold-dim);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: var(--font-alt);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--gold-dim);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.card-body {
+  font-size: 15px;
+  color: var(--cream-dim);
+  line-height: 1.65;
+}
+
+/* ACCORDION */
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.accordion-item:hover { border-color: var(--border-strong); }
+.accordion-item.open { border-color: var(--border-strong); }
+
+.accordion-trigger {
+  width: 100%;
+  background: rgba(240,228,200,0.6);
+  border: none;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.accordion-trigger:hover { background: rgba(255,245,210,0.7); }
+.accordion-item.open .accordion-trigger { background: rgba(255,245,210,0.7); border-bottom: 1px solid var(--border); }
+
+.acc-title {
+  font-family: var(--font-alt);
+  font-size: 13.5px;
+  color: var(--cream-dim);
+  flex: 1;
+  letter-spacing: 0.06em;
+}
+
+.acc-ref {
+  font-family: var(--font-alt);
+  font-size: 11px;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+}
+
+.acc-chevron {
+  color: var(--gold-dim);
+  font-size: 12px;
+  transition: transform 0.25s;
+}
+
+.accordion-item.open .acc-chevron { transform: rotate(180deg); }
+
+.accordion-body {
+  display: none;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,250,232,0.5);
+}
+
+.accordion-item.open .accordion-body { display: block; }
+
+.accordion-body p { font-size: 15px; line-height: 1.75; }
+
+/* TAGS */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+
+.tag {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.tag.gold { color: var(--gold-dim); border-color: var(--gold); background: rgba(164,131,48,0.08); }
+.tag.red  { color: var(--red-accent); border-color: rgba(110,30,34,0.4); background: rgba(110,30,34,0.06); }
+.tag.teal { color: var(--teal); border-color: rgba(45,64,48,0.4); background: rgba(45,64,48,0.06); }
+.tag.dim  { color: var(--cream-muted); border-color: var(--border); background: var(--surface); }
+
+/* FATHER CARD */
+.father-card {
+  background: linear-gradient(180deg, rgba(255,250,232,0.7) 0%, rgba(245,232,200,0.5) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.father-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 16px -8px rgba(74,18,22,0.2);
+}
+
+.father-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.father-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--cream);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.father-dates {
+  font-size: 12px;
+  color: var(--cream-muted);
+  font-family: var(--font-alt);
+  letter-spacing: 0.1em;
+}
+
+.father-work {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+}
+
+.father-quote {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--cream-dim);
+  border-left: 2px solid var(--red-accent);
+  background: rgba(255,245,210,0.4);
+  padding: 14px 20px;
+  margin: 18px 0;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.65;
+}
+
+.father-body { font-size: 15px; line-height: 1.75; color: var(--text-dim); }
+.father-body p { font-size: 15px; margin-bottom: 0.75rem; }
+.father-body strong { color: var(--cream); font-weight: 600; }
+
+/* TIMELINE */
+.timeline { margin: 1.5rem 0; }
+
+.tl-item {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+}
+
+.tl-dot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--gold-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--gold);
+  flex-shrink: 0;
+  font-family: var(--font-display);
+}
+
+.tl-line {
+  flex: 1;
+  width: 1px;
+  background: var(--border-soft);
+  margin-top: 6px;
+  min-height: 30px;
+}
+
+.tl-content { flex: 1; padding-top: 6px; }
+.tl-content h3 { margin-top: 0; font-size: 14px; }
+.tl-content p { font-size: 14px; }
+
+.tl-ref {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* MODEL ROW */
+.model-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: border-color 0.2s;
+}
+
+.model-row:hover { border-color: var(--border); }
+
+.model-letter {
+  background: var(--surface2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.75rem;
+  border-right: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+.model-big {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--gold);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.model-word {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.model-content { padding: 1rem 1.25rem; background: var(--surface); }
+.model-content h3 { font-size: 13px; margin-top: 0; margin-bottom: 4px; }
+.model-content p { font-size: 13px; line-height: 1.7; color: var(--text-muted); margin: 0; }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+
+/* INFO BOX */
+.info-box {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-box h3 { margin-top: 0; font-size: 13px; }
+.info-box p { font-size: 13.5px; line-height: 1.75; margin: 0; color: var(--text-muted); }
+.info-box p + p { margin-top: 0.5rem; }
+
+/* GREEK WORD TABLE */
+.word-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 14px; }
+.word-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-family: var(--font-alt);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border-bottom: 1px solid var(--border-strong);
+  background: rgba(240,228,200,0.6);
+}
+.word-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text-dim);
+  vertical-align: top;
+}
+.word-table tr:last-child td { border-bottom: none; }
+.word-table tr:hover td { background: rgba(255,255,255,0.02); }
+.word-table .term { font-style: italic; color: var(--cream-dim); }
+
+/* DIVIDER */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.divider::after {
+  content: '✦';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  padding: 0 12px;
+  color: var(--gold-muted);
+  font-size: 10px;
+}
+
+/* PROGRESS BAR */
+#progress-bar {
+  position: fixed;
+  top: var(--header-h, 52px); left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 200;
+  transition: left 0.28s ease;
+}
+body.sidebar-open #progress-bar { left: var(--sidebar-w); }
+
+#progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  transition: width 0.1s;
+  width: 0%;
+}
+
+/* SEARCH HIGHLIGHT */
+.highlight { background: rgba(201,162,74,0.25); border-radius: 2px; }
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  #sidebar { width: 280px; box-shadow: 4px 0 18px rgba(0,0,0,0.18); }
+  body.sidebar-open #main { margin-left: 0; max-width: 100vw; }
+  .hero { padding: 50px 28px 40px; }
+  .study-section { padding: 50px 28px 70px; }
+  .hero h1 { font-size: 32px; }
+  .two-col, .three-col { grid-template-columns: 1fr; }
+}
+
+/* BACK TO TOP */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--gold-dim);
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 50;
+  text-decoration: none;
+}
+
+#back-to-top.visible { opacity: 1; }
+#back-to-top:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+/* SECTION JUMP LINKS */
+.section-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 1.25rem 0 2rem;
+}
+
+.section-jump a {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.section-jump a:hover { color: var(--gold); border-color: var(--gold-muted); }
+
+/* READING TIME */
+.reading-time {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+</style>
+<link rel="stylesheet" href="../../assets/css/topic-shell.css" />
+<link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+</head>
+<body data-current-topic="prayer" class="sidebar-open">
+
+<header class="site-header site-header--topic">
+  <button class="topic-sidebar-toggle" id="topic-sidebar-toggle" aria-expanded="true" aria-label="Toggle section menu">☰</button>
+  <a class="site-title" href="../../">📖 Bible Study</a>
+  <nav class="site-nav">
+    <a href="../../">Home</a>
+    <a href="../../read/" class="site-nav__action">Reader</a>
+    <a href="../../search/" class="site-nav__action">Search</a>
+    <span class="site-nav__breadcrumb">/ Prayer</span>
+  </nav>
+  <div class="version-picker">
+    <label for="bible-version">Version:</label>
+    <select id="bible-version"><!-- populated by bible.js --></select>
+  </div>
+</header>
+
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SIDEBAR -->
+<nav id="sidebar" role="navigation" aria-label="Study guide navigation">
+  <div class="sidebar-logo">
+    <span class="cross">✝</span>
+    <h1>Prayer in the Bible</h1>
+    <p>A Comprehensive Study Guide</p>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="search-input" placeholder="Search topics…" oninput="handleSearch(this.value)" aria-label="Search">
+  </div>
+
+  <div class="nav-section-label">Foundations</div>
+  <a class="nav-item active" onclick="showSection('overview', this)" href="#">
+    <span class="nav-num">01</span> Overview &amp; Etymology
+  </a>
+  <a class="nav-item" onclick="showSection('ot', this)" href="#">
+    <span class="nav-num">02</span> Old Testament
+  </a>
+  <a class="nav-item" onclick="showSection('nt', this)" href="#">
+    <span class="nav-num">03</span> New Testament
+  </a>
+
+  <div class="nav-section-label">Analysis</div>
+  <a class="nav-item" onclick="showSection('great-prayers', this)" href="#">
+    <span class="nav-num">04</span> Great Prayers
+  </a>
+  <a class="nav-item" onclick="showSection('models', this)" href="#">
+    <span class="nav-num">05</span> Models &amp; Structures
+  </a>
+  <a class="nav-item" onclick="showSection('figures', this)" href="#">
+    <span class="nav-num">06</span> Biblical Figures
+  </a>
+
+  <div class="nav-section-label">Tradition</div>
+  <a class="nav-item" onclick="showSection('fathers', this)" href="#">
+    <span class="nav-num">07</span> Church Fathers
+  </a>
+  <a class="nav-item" onclick="showSection('theology', this)" href="#">
+    <span class="nav-num">08</span> Systematic Theology
+  </a>
+  <a class="nav-item" onclick="showSection('practice', this)" href="#">
+    <span class="nav-num">09</span> Spiritual Practice
+  </a>
+  <a class="nav-item" onclick="showSection('bibliography', this)" href="#">
+    <span class="nav-num">10</span> Further Reading
+  </a>
+
+  <div class="sidebar-footer">
+    Covers Hebrew Scripture · Greek New Testament · Patristic Tradition · Systematic Theology
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main id="main">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Comprehensive Study Guide</div>
+    <h1>Prayer in <span>the Bible</span></h1>
+    <p class="hero-subtitle">From the patriarchs to the apostles, from the Psalms to the Paraclete — a thorough examination of prayer as the living dialogue between God and humanity.</p>
+    <div class="hero-meta">
+      <div class="hero-stat"><span class="num">10</span><span class="label">Sections</span></div>
+      <div class="hero-stat"><span class="num">150</span><span class="label">Psalms</span></div>
+      <div class="hero-stat"><span class="num">8</span><span class="label">Church Fathers</span></div>
+      <div class="hero-stat"><span class="num">650+</span><span class="label">Prayer References</span></div>
+    </div>
+  </div>
+
+  <div class="content-area">
+
+  <!-- ===== SECTION 1: OVERVIEW ===== -->
+  <section class="study-section active" id="sec-overview">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">01</span> Foundations</div>
+      <h2>Overview &amp; Etymology</h2>
+      <p class="section-intro">Prayer is the central act of religious life in both Testaments — the place where the human and the divine genuinely meet. Before examining individual prayers and traditions, we must establish what prayer actually is.</p>
+    </div>
+
+    <div class="reading-time">⏱ Estimated reading: 12 min</div>
+
+    <h3>What Is Prayer?</h3>
+    <p>Prayer is the conscious act of addressing God — speaking, listening, lamenting, praising, requesting, and being silent in the divine presence. It is simultaneously the most natural of human acts (people across all cultures pray) and the most theologically complex (it raises profound questions about divine sovereignty, human freedom, and the nature of relationship with God).</p>
+    <p>The Bible presents prayer not as a technique for accessing divine power, but as the language of relationship. Prayer is what happens when creatures made in God's image turn toward their Creator — with whatever they carry: gratitude, grief, confusion, joy, desperation, or awe. The Bible's prayer vocabulary is strikingly diverse, embracing silence and shouting, kneeling and dancing, individual whispers and communal liturgy.</p>
+
+    <div class="callout gold">
+      <div class="callout-label">Key Insight</div>
+      The Bible never presents prayer as overcoming God's reluctance or bending his will by force. It is, rather, the appointed means by which creatures in relationship with God participate in his ongoing purposes — receiving, responding, and being formed.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Hebrew Prayer Vocabulary</h3>
+    <p>The Old Testament employs a rich array of terms for prayer, each carrying distinct nuances about the nature of the act:</p>
+
+    <table class="word-table">
+      <thead><tr><th>Word</th><th>Transliteration</th><th>Literal Meaning</th><th>Nuance &amp; Key Usage</th></tr></thead>
+      <tbody>
+        <tr><td class="term">פָּלַל</td><td>palal</td><td>To intervene, judge oneself</td><td>The most common OT word for prayer; root in legal context (to adjudicate). Suggests coming before God as a judge. Used 84x; noun tefillah (תְּפִלָּה) is the standard word for "prayer."</td></tr>
+        <tr><td class="term">חָנַן</td><td>hanan</td><td>To be gracious, implore favor</td><td>To seek undeserved favor; root of tehinah (supplication). Implies approaching God as a social superior and appealing to his generosity. Used widely in Psalms.</td></tr>
+        <tr><td class="term">שָׁאַל</td><td>sha'al</td><td>To ask, request</td><td>Everyday term for asking — applied to prayer. Samuel's name means "asked of God." Also "to inquire of the Lord" in prophetic contexts.</td></tr>
+        <tr><td class="term">צָעַק / זָעַק</td><td>tsa'aq / za'aq</td><td>To cry out, shriek</td><td>The vocabulary of distress and urgency. Used for Israel's cry in Egypt (Ex 2:23), Jonah in the fish, lament psalms. Connotes extremity.</td></tr>
+        <tr><td class="term">דָּרַשׁ</td><td>darash</td><td>To seek, inquire</td><td>To seek God, often through prayer and oracle. "Seek the Lord while he may be found" (Isa 55:6). Implies active pursuit.</td></tr>
+        <tr><td class="term">בִּקֵּשׁ</td><td>biqqesh</td><td>To seek, desire</td><td>Earnest seeking; often of seeking God's face (Ps 27:8). More personal and relational than sha'al.</td></tr>
+        <tr><td class="term">נָדַר</td><td>nadar</td><td>To vow</td><td>The vow as a form of prayer — making a conditional promise to God (Hannah, Jonah, Jacob). Requires fulfillment.</td></tr>
+        <tr><td class="term">הָלַל</td><td>halal</td><td>To boast, praise (brightly)</td><td>Source of "hallelujah" (praise Yahweh). The ecstatic, shining dimension of prayer — proclamation of God's greatness.</td></tr>
+        <tr><td class="term">יָדָה</td><td>yadah</td><td>To throw, extend the hands</td><td>To confess and praise — bodily and verbal. Source of "todah" (thanksgiving offering). Praise linked to physical posture.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Greek Prayer Vocabulary</h3>
+    <table class="word-table">
+      <thead><tr><th>Word</th><th>Transliteration</th><th>Root Meaning</th><th>NT Usage</th></tr></thead>
+      <tbody>
+        <tr><td class="term">προσεύχομαι</td><td>proseuchomai</td><td>Toward + wish/vow</td><td>The general NT word for prayer (noun: proseuche). Used ~87x in NT; covers the full range of prayer acts. Always directed toward God/the Father.</td></tr>
+        <tr><td class="term">δέομαι</td><td>deomai</td><td>To be in want/need</td><td>To beseech, petition from a place of genuine need. Paul uses it of his earnest longing to revisit churches (1 Thess 3:10). More urgent than general prayer.</td></tr>
+        <tr><td class="term">αἰτέω</td><td>aiteo</td><td>To ask, claim</td><td>Request, often specific. Jesus uses it in John 14–16 ("ask in my name"). Can be used of a subordinate asking a superior.</td></tr>
+        <tr><td class="term">ἐρωτάω</td><td>erotao</td><td>To ask, inquire</td><td>Requesting between peers or from a position of intimacy; Jesus uses this word of his own prayer to the Father in John 17 — suggesting unique intimacy.</td></tr>
+        <tr><td class="term">ἐντυγχάνω</td><td>entynchanō</td><td>To meet, fall in with</td><td>To intercede; used of the Spirit's intercession (Rom 8:27) and Christ's (Heb 7:25; Rom 8:34). Implies encounter, meeting.</td></tr>
+        <tr><td class="term">ὑπερεντυγχάνω</td><td>hyperentynchanō</td><td>Over + intercede</td><td>The Spirit intercedes "beyond words" with groans (Rom 8:26) — this compound intensifies entynchanō. Unique to Romans 8.</td></tr>
+        <tr><td class="term">εὐχαριστέω</td><td>eucharisteo</td><td>To give thanks graciously</td><td>To give thanks; root of "eucharist." Used widely by Paul (opening of most letters). Also Jesus at the Last Supper and feeding miracles.</td></tr>
+        <tr><td class="term">εὐλογέω</td><td>eulogeo</td><td>To speak well of</td><td>To bless/praise — translates Hebrew barak. Used at meals, healings. God blesses people; people bless (praise) God.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Six Types of Prayer in Scripture</h3>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="card">
+        <div class="card-title">Adoration</div>
+        <div class="card-body">Glorifying God for who he is — his nature, character, and being — independent of what he has done for us. Pure worship. Ps 95, 100; Isa 6; Rev 4–5.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Confession</div>
+        <div class="card-body">Honest acknowledgment of sin, failure, and need for forgiveness. Individual (Ps 51) and corporate (Dan 9; Neh 9). Enables restored relationship.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Thanksgiving</div>
+        <div class="card-body">Gratitude for God's specific acts of grace and general faithfulness. Distinguished from adoration by its focus on deeds rather than being. Ps 107; 1 Thess 5:18.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Petition</div>
+        <div class="card-body">Bringing personal needs and desires before God. "Ask and it will be given" (Matt 7:7). Includes requests for healing, provision, wisdom, and deliverance.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Intercession</div>
+        <div class="card-body">Praying on behalf of others. The priestly vocation — Moses, the prophets, Jesus (John 17), Paul's epistolary prayers. The Spirit and Christ both intercede (Rom 8).</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Lament</div>
+        <div class="card-body">Honest crying out in suffering, confusion, or loss. The most common psalm genre (~40 of 150). Models that pain brought to God is itself an act of faith. Ps 22; Job 3.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Biblical Arc of Prayer</h3>
+    <p>Prayer does not appear fully formed in Genesis and remain static. It develops, deepens, and is radically transformed across the canon:</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">I</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Creation and Walk (Gen 1–11)</h3>
+          <p>Humanity created for relationship with God — the garden narratives imply immediate, natural communion. Enoch "walked with God" (Gen 5:24). Prayer in this period is largely implicit: the intimacy of creation itself. After the fall, prayer becomes necessary as the means of restored access to a now-distant God.</p>
+          <div class="tl-ref">Gen 3:8; 4:26; 5:22–24</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">II</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Patriarchal Prayer (Gen 12–50)</h3>
+          <p>Personal, unmediated covenant dialogue. God speaks; the patriarchs respond. Abraham argues with God, Jacob wrestles, Joseph is absent from formal prayer scenes but lives in constant trust. Prayer is embedded in life events: altars built after divine encounter, vows made in crisis, blessings spoken over children and grandchildren.</p>
+          <div class="tl-ref">Gen 12:8; 15; 18; 28:10–22; 32:22–32</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">III</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Mosaic / Tabernacle Prayer (Ex–Deut)</h3>
+          <p>Prayer becomes covenantally structured. The Tabernacle provides the spatial framework for approaching God through sacrifice and intercession. The priesthood mediates access. Moses emerges as the supreme intercessor — "face to face" conversation (Ex 33:11). The Aaronic blessing (Num 6:24–26) becomes the liturgical form of divine–human address.</p>
+          <div class="tl-ref">Ex 33; Num 6:24–26; Deut 26:5–10</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">IV</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Monarchy and Temple Prayer (Sam–Chr)</h3>
+          <p>Prayer becomes architecturally anchored with Solomon's Temple. The Temple functions as the "house of prayer for all nations" (Isa 56:7). Hannah, Samuel, David, and Solomon model different dimensions of prayer. The Psalter — largely Davidic — becomes Israel's canonical prayer book. The prophets emerge as intercessors alongside priests.</p>
+          <div class="tl-ref">1 Sam 1–2; 2 Sam 7; 1 Kings 8; Ps 72</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">V</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Psalms as Canon of Prayer</h3>
+          <p>The 150 Psalms represent the full spectrum of human experience brought before God — and become the prayer book of both Israel and the Church. Jesus quotes the Psalms, Paul saturates his letters with them, and the early church sang them. They provide the vocabulary for experiences that might otherwise be wordless.</p>
+          <div class="tl-ref">Pss 22; 51; 103; 130; 139; 150</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">VI</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Prophetic and Exilic Prayer (8th–5th c. BC)</h3>
+          <p>The prophets both model prayer and critique false prayer (religious performance without justice, Isa 1:10–17; Amos 5:21–24). In exile, prayer without the Temple becomes central — Daniel prays three times daily toward Jerusalem (Dan 6). The synagogue emerges as a prayer institution. Penitential prayer becomes the key mode of national restoration.</p>
+          <div class="tl-ref">Isa 6; Jer 20; Dan 9; Ezra 9; Neh 1; 9</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">VII</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Second Temple Judaism (5th c. BC – 1st c. AD)</h3>
+          <p>The period between the Testaments sees enormous development in Jewish prayer. The Amidah (Eighteen Benedictions / Shemoneh Esreh) becomes the central daily prayer. The Shema (Deut 6:4–9) is recited twice daily. Synagogue prayer structures daily life around three prayer times (morning, afternoon, evening). This is the world Jesus was born into and prayed within.</p>
+          <div class="tl-ref">Deut 6:4–9; Ps 119; cf. Luke 18:10–13</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">VIII</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Jesus and the New Era (Gospels)</h3>
+          <p>Jesus transforms prayer by teaching "Abba" — an intimate address to God that was radical in its day. He gives the Lord's Prayer, teaches persistence (Luke 18), critiques hypocrisy (Matt 6), and models prayer as the fuel of ministry. In John 17, he prays the longest recorded prayer — as High Priest for all who believe. His cry of dereliction (Ps 22:1) from the cross makes his prayer the hinge of redemptive history.</p>
+          <div class="tl-ref">Matt 6–7; Luke 11; 18; 22; John 17</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">IX</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>The Church at Prayer (Acts–Epistles)</h3>
+          <p>The gift of the Spirit transforms prayer — believers are now "temples" of God, and the Spirit himself intercedes within them (Rom 8:26–27). Prayer becomes explicitly Trinitarian. Paul's apostolic prayers model intercession for the church's growth in knowledge, love, and fullness. The church prays corporately in crisis, in commissioning, in persecution, at every turn.</p>
+          <div class="tl-ref">Acts 1–4; Rom 8; Eph 1; 3; Phil 4:6; 1 Thess 5:17</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot">X</div></div>
+        <div class="tl-content">
+          <h3>Eschatological Prayer (Revelation)</h3>
+          <p>The book of Revelation frames the whole of history as prayer ascending to God. The prayers of the saints rise before God as incense (Rev 5:8; 8:3–4). Prayer is cosmic and cosmic history is prayerful. The final word of Scripture is itself a prayer: "Come, Lord Jesus" (Rev 22:20) — the church's cry that prayer will one day give way to the face-to-face presence of the one to whom we have been speaking.</p>
+          <div class="tl-ref">Rev 5:8; 8:3–4; 22:20</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 2: OLD TESTAMENT ===== -->
+  <section class="study-section" id="sec-ot">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">02</span> Scripture</div>
+      <h2>Prayer in the Old Testament</h2>
+      <p class="section-intro">Old Testament prayer is earthy, bold, and remarkably honest. God is addressed directly, argued with, wept before, and praised. There is no attempt to sanitize the full range of human emotion — grief, anger, confusion, and doubt are all brought into the presence of God without apology.</p>
+    </div>
+
+    <h3>The Patriarchal Period</h3>
+    <p>The earliest prayers in Scripture are characterized by immediate, unmediated divine encounter. There is no Temple, no priesthood, no liturgical structure — only the encounter between God and individual people. Prayer in this period is embedded in life events: divine appearances (theophanies) that call forth human response.</p>
+
+    <div class="two-col">
+      <div class="info-box">
+        <h3>Abraham (Gen 12–25)</h3>
+        <p>Abraham builds altars and "calls on the name of the Lord" at each major moment of his journey (Gen 12:8; 13:4; 21:33). His great intercessory prayer for Sodom (Gen 18) establishes the template for all subsequent biblical intercession: bold persistence rooted in God's own character. He presses God from fifty to ten righteous people — not manipulation, but covenant appeal.</p>
+      </div>
+      <div class="info-box">
+        <h3>Jacob (Gen 28–35)</h3>
+        <p>Jacob's prayer life develops from bargaining ("if God will be with me… then the Lord shall be my God," Gen 28:20) to full surrender after Peniel (Gen 32:22–32). The night-long wrestling with the divine messenger — "I will not let you go unless you bless me" — is one of Scripture's most arresting prayer images: prayer as holy combat. His name is changed to Israel ("one who wrestles with God").</p>
+      </div>
+    </div>
+
+    <div class="scripture">
+      <div class="ref">Genesis 32:28 — Jacob at Peniel</div>
+      <div class="text">"Your name shall no longer be called Jacob, but Israel, for you have striven with God and with men, and have prevailed."</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Moses and Prophetic Intercession</h3>
+    <p>Moses represents the pinnacle of OT prophetic prayer — and the model against which all subsequent intercession is measured. His access to God is unique: "with him I speak mouth to mouth, clearly, and not in riddles, and he beholds the form of the Lord" (Num 12:8). But this access is granted for a purpose: intercession for an often-faithless people.</p>
+
+    <p><strong>The Golden Calf (Ex 32–34)</strong> is the crucible of Mosaic intercession. Israel has broken covenant at the very moment it was being established. God threatens to destroy Israel and start again with Moses. Moses refuses the offer with three arguments: God's reputation among the nations, God's own covenant love (hesed), and the patriarchal promises. Scripture records that "the Lord relented from the disaster that he had spoken of bringing on his people" (Ex 32:14). In Ex 32:32, Moses goes further — offering to be "blotted out of your book" in place of Israel. This is the OT's closest approach to vicarious intercession.</p>
+
+    <div class="callout teal">
+      <div class="callout-label">Theological Note</div>
+      Moses' intercession appeals not to Israel's merit but entirely to God's own character. "Remember Abraham, Isaac, and Israel, your servants, to whom you swore by your own self" (Ex 32:13). This remains the logic of all biblical intercession — covenant, not achievement.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Psalms — Israel's Prayer Book</h3>
+    <p>The Psalter is 150 prayers — the canonical vocabulary of human speech to God, covering every dimension of human experience. Scholars have categorized them in various ways; the most useful typology draws on form criticism:</p>
+
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+      <div class="card">
+        <div class="card-title">Lament Psalms</div>
+        <div class="card-body">~40 individual, ~15 communal. The dominant form — grief, accusation, petition, trust. Pss 22, 42–43, 88, 130. Most resolve in renewed trust but not all (Ps 88 ends in darkness).</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Hymns of Praise</div>
+        <div class="card-body">~30 psalms. Summons to praise + reasons. Pss 8, 19, 29, 100, 103, 148–150. Creation, covenant, history — all occasions for adoration.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Thanksgiving Psalms</div>
+        <div class="card-body">~10 psalms. Praise after specific deliverance — the fulfilled lament. Pss 30, 34, 107, 116, 138. Often recount the crisis, the cry, and the rescue.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Royal Psalms</div>
+        <div class="card-body">Pss 2, 18, 20, 21, 45, 72, 89, 110, 132. The king's prayer life and God's covenant with the Davidic line. NT reads these as messianic.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Psalms of Ascent</div>
+        <div class="card-body">Pss 120–134. Pilgrimage songs sung ascending to Jerusalem. Communal, short, layered with longing. Pss 121, 122, 131 among the most beloved.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Wisdom Psalms</div>
+        <div class="card-body">Pss 1, 37, 49, 73, 119, 127–128. Meditation and instruction embedded in prayer. Ps 119 (176 verses) is the longest meditation on God's word.</div>
+      </div>
+    </div>
+
+    <h4>The Anatomy of a Lament</h4>
+    <p>The biblical lament follows a recognizable shape (Westermann, Brueggemann) that models honest prayer in suffering. The form can be expanded or compressed, but the elements recur:</p>
+
+    <div class="accordion-item open">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">1. Address — Direct appeal to God</span>
+        <span class="acc-ref">Ps 22:1; 88:1</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body open">
+        <p>The lament begins by naming God directly and personally — "My God," "O Lord," "O God of my salvation." This address is theologically significant: the sufferer refuses to pray vaguely or to withdraw from God in pain. The very act of naming God in crisis is an act of faith. Psalm 88, the darkest lament, still opens with "O Lord, God of my salvation" (88:1) — even as it ends in absolute darkness.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">2. Complaint — Naming the pain honestly</span>
+        <span class="acc-ref">Ps 22:2; 44:9–22; 88:3–9</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>The psalmist describes his suffering without minimizing it — social rejection, illness, enemies, God's apparent absence, even perceived divine hostility ("you have rejected and humbled us," Ps 44:9; "your wrath lies heavily on me," Ps 88:7). The complaint is addressed TO God, not about God — this preserves the relationship even in rupture. The Psalms model that it is more faithful to bring anger to God than to pretend it doesn't exist.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">3. Petition — Specific urgent request</span>
+        <span class="acc-ref">Ps 22:11, 19–21; 86:2–4</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>The lament moves from description to request — "hear me," "help me," "do not be far from me," "rise up and come to our aid." The petition is specific, not vague. It names what the sufferer needs. This specificity is itself an act of faith — you don't ask someone for specific help unless you believe they can give it and are willing to hear. The imperative language ("arise," "save," "deliver") is not disrespectful but covenantally bold.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">4. Confession of Trust — Memory as anchor</span>
+        <span class="acc-ref">Ps 22:4–5; 42:6–8; 77:11–12</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Often embedded within the lament, the psalmist turns to recall past faithfulness: "Our ancestors cried to you and were saved" (Ps 22:5). Memory of God's past acts becomes the reason to hope in the present. This is not blind optimism but grounded trust — if God has acted before, he can act again. Psalm 77 is almost entirely this movement: "I will remember the deeds of the Lord; yes, I will remember your wonders of old" (77:11).</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">5. Vow of Praise — Anticipatory trust</span>
+        <span class="acc-ref">Ps 22:22–25; 56:12; 116:12–14</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>The lament frequently concludes with a vow to praise God when the deliverance comes — "I will tell of your name to my brothers" (Ps 22:22), "I will pay my vows to the Lord" (Ps 116:14). This is not a transaction ("I'll praise if you rescue") but eschatological confidence that resolution is coming. The vow transforms the whole lament retroactively: the complaint was uttered in the confidence that it would one day become praise.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Prophets and Prayer</h3>
+    <p>The writing prophets (Isaiah, Jeremiah, Ezekiel, Daniel, the Twelve) both practice prayer and reflect theologically on it. Their prayers are often generated by prophetic encounter — seeing God, receiving a word, being commissioned. They also critique prayer divorced from covenant ethics.</p>
+
+    <div class="callout red">
+      <div class="callout-label">Prophetic Critique of False Prayer</div>
+      Isaiah 1:10–17 and Amos 5:21–24 are among Scripture's most searching critiques: God "cannot endure iniquity and solemn assembly" together. Worship offered while oppressing the poor is not prayer but offense. Amos records God saying "I hate, I despise your religious festivals… even though you bring me burnt offerings and grain offerings, I will not accept them." Prayer without justice is an insult to the God who hears the cry of the poor.
+    </div>
+
+    <p><strong>Jeremiah's Confessions</strong> (Jer 11:18–12:6; 15:10–21; 17:14–18; 18:18–23; 20:7–18) are a unique form of prophetic prayer — raw, accusatory, even violent in their honesty. Jeremiah accuses God of deception ("you deceived me, Lord, and I was deceived," 20:7), laments his prophetic calling, and in 20:14–18 curses the day of his birth in language that parallels Job 3. These are not model prayers to imitate but testimony that God can receive the full weight of human anguish.</p>
+
+    <p><strong>Daniel 9</strong> is the supreme example of corporate penitential prayer — Daniel, reading Jeremiah's prophecy of 70 years, responds not with passive waiting but with active, corporate confession and appeal. He identifies fully with his sinful people ("we have sinned") and bases his appeal entirely on God's mercy and reputation, not Israel's righteousness.</p>
+
+    <div class="divider"></div>
+
+    <h3>Post-Exilic and Second Temple Prayer</h3>
+    <p>The return from Babylon catalyzes enormous development in Jewish prayer. Without the Temple (initially), prayer becomes the replacement for sacrifice. Synagogue worship develops as the primary context for communal prayer. The great penitential prayers of Ezra (Ezra 9) and Nehemiah (Neh 1; 9) model the national renewal that prayer can catalyze.</p>
+
+    <p>The <strong>Shema</strong> (Deut 6:4–9) — "Hear, O Israel: The Lord our God, the Lord is one" — becomes the twice-daily confession of Israel, recited morning and evening. The <strong>Amidah</strong> (Eighteen Benedictions), though developed through this period and beyond, structures synagogue worship with praise, petition, and thanksgiving across nineteen blessings (one was later added). This was the prayer world Jesus inhabited.</p>
+
+  </section>
+
+  <!-- ===== SECTION 3: NEW TESTAMENT ===== -->
+  <section class="study-section" id="sec-nt">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">03</span> Scripture</div>
+      <h2>Prayer in the New Testament</h2>
+      <p class="section-intro">The New Testament transforms prayer in three decisive ways: Jesus teaches "Abba" access, prayer is explicitly Trinitarian (through the Son, in the Spirit), and the resurrection opens a new era in which believers pray from within the accomplished work of redemption.</p>
+    </div>
+
+    <h3>Jesus and Prayer: The Prayer Gospel (Luke)</h3>
+    <p>Luke's Gospel is uniquely attentive to Jesus' prayer life. Only Luke records Jesus praying at seven crucial moments, each theologically significant:</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:11px">Bap</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>At His Baptism (Luke 3:21)</h3>
+          <p>"When all the people were being baptized, Jesus was baptized too. And as he was praying, heaven was opened and the Holy Spirit descended on him." Luke alone notes that the divine affirmation and Spirit's coming occur while Jesus prays — prayer is the occasion for the Father's declaration and the Spirit's anointing.</p>
+          <div class="tl-ref">Luke 3:21–22</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:11px">12</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Before Choosing the Twelve (Luke 6:12)</h3>
+          <p>"One of those days Jesus went out to a mountainside to pray, and spent the night praying to God. When morning came, he called his disciples to him and chose twelve of them." The most consequential decision of his earthly ministry is preceded by an all-night prayer vigil — establishing the pattern that major decisions flow from extended prayer.</p>
+          <div class="tl-ref">Luke 6:12</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:11px">Pet</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Before Peter's Confession (Luke 9:18)</h3>
+          <p>"Once when Jesus was praying in private and his disciples were with him, he asked them, 'Who do the crowds say I am?'" Only Luke notes that the watershed question "Who do you say I am?" — and Peter's confession of Jesus as the Christ — occurs in a prayer context. Revelation flows from communion with the Father.</p>
+          <div class="tl-ref">Luke 9:18–20</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:11px">Trn</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>At the Transfiguration (Luke 9:28–29)</h3>
+          <p>"About eight days after Jesus said this, he took Peter, John and James with him and went up onto a mountain to pray. As he was praying, the appearance of his face changed, and his clothes became as bright as a flash of lightning." The Transfiguration — the clearest earthly glimpse of Jesus' divine glory — occurs as he prays. His appearance transforms in the act of communion with the Father.</p>
+          <div class="tl-ref">Luke 9:28–36</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout gold">
+      <div class="callout-label">The Pattern</div>
+      Luke's emphasis on Jesus praying before every major event or decision establishes a pattern: prayer is not the backup plan when other resources fail. It is the prior posture from which all ministry and discernment flows. Jesus, the Son of God, needed to pray — how much more those who follow him.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Jesus' Teachings on Prayer (Synoptics)</h3>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">The Sermon on the Mount — Against Hypocrisy (Matt 6:5–8)</span>
+        <span class="acc-ref">Matthew 6:5–8</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Jesus identifies two prayer pathologies: ostentation ("they love to pray standing in the synagogues and on the street corners to be seen by others") and vain repetition ("they think they will be heard because of their many words"). The first is about audience — prayer directed at human observers rather than God. The second may target pagan magical incantation practices (multiplying divine names to compel the deity). Against both, Jesus prescribes: enter your inner room, close the door, pray to "your Father who is in secret." This does not prohibit corporate prayer (Jesus does both) but reorients all prayer: its audience is God alone, its foundation is already-existing relationship ("your Father knows what you need before you ask him").</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">The Lord's Prayer — A Grammar for Prayer (Matt 6:9–13)</span>
+        <span class="acc-ref">Matt 6:9–13; Luke 11:2–4</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>The Lord's Prayer is given in two forms: Matthew's (in the Sermon on the Mount, as one of three piety acts with fasting and almsgiving) and Luke's (in response to a disciple's direct request: "Lord, teach us to pray, as John taught his disciples"). The differences are minor but suggestive — Luke's is shorter, with "sins" (hamartias) rather than "debts" (opheilemata), reflecting different communities. Tertullian called it "a summary of the whole gospel" (breviarium totius evangelii). Its six petitions move from cosmic to personal: God's name, kingdom, and will; then bread, forgiveness, and deliverance. The Matthean version includes a doxology ("for yours is the kingdom, the power and the glory") found in the Didache (early 2nd century), suggesting early liturgical use.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Parable of the Persistent Widow — Against Prayerlessness (Luke 18:1–8)</span>
+        <span class="acc-ref">Luke 18:1–8</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Luke introduces this parable with its purpose: Jesus "told them a parable to show them that they should always pray and not give up" (18:1). The widow's persistent appeals to an unjust judge are contrasted with God — if even an unjust judge yields to persistence, how much more will the just God respond to his elect "who cry out to him day and night"? The parable ends with a haunting eschatological question: "when the Son of Man comes, will he find faith on the earth?" — suggesting that persistent prayer is the form faith takes while awaiting the parousia. The point is not that God needs to be overcome by our nagging, but that persistent prayer expresses genuine trust that God is the one who can and will act.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Parable of the Pharisee and Tax Collector — Posture in Prayer (Luke 18:9–14)</span>
+        <span class="acc-ref">Luke 18:9–14</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Two men pray in the Temple. The Pharisee's prayer lists his religious accomplishments — fasting twice a week, tithing everything. He "thanks" God but the prayer functions as self-commendation. The tax collector stands far off, beats his breast (a gesture of grief and contrition), and can only pray "God, be merciful to me, a sinner" (using hilaskomai — be propitious to me, the language of the mercy seat). Jesus' reversal is complete: the Pharisee leaves without justification; the tax collector goes home justified. The parable establishes the foundational condition of all true prayer: accurate self-knowledge before a holy God. The prayer that reaches heaven is not the most eloquent or the most religious, but the most honest.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Johannine Prayer Theology (John 14–17)</h3>
+    <p>The Upper Room Discourse (John 13–17) contains Jesus' most extended teaching on prayer — particularly the repeated promise of prayer "in my name" and the High Priestly Prayer of John 17.</p>
+
+    <div class="scripture">
+      <div class="ref">John 16:23–24 — The New Era of Prayer</div>
+      <div class="text">"In that day you will no longer ask me anything. Very truly I tell you, my Father will give you whatever you ask in my name. Until now you have not asked for anything in my name. Ask and you will receive, and your joy will be complete."</div>
+    </div>
+
+    <p>The phrase "in my name" (en tō onomati mou) appears six times in John 14–16 in connection with prayer. This is not a verbal formula but a covenantal concept: to pray "in Jesus' name" is to pray as one who belongs to him, who acts in accordance with his character and mission, who stands in his accomplished work. It is therefore both permission (Jesus authorizes access to the Father) and constraint (prayer must align with his purposes).</p>
+
+    <div class="divider"></div>
+
+    <h3>Paul's Theology of Prayer</h3>
+    <p>Paul's letters provide the New Testament's most systematic reflection on prayer — both in his epistolary prayers for churches and in his theological exposition (especially Romans 8 and Ephesians 6).</p>
+
+    <div class="two-col">
+      <div class="info-box">
+        <h3>Romans 8:26–27 — The Spirit Intercedes</h3>
+        <p>"The Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us through wordless groans. And he who searches our hearts knows the mind of the Spirit, because the Spirit intercedes for God's people in accordance with the will of God."</p>
+        <p>Paul addresses the believer's fundamental problem: we do not know how to pray as we ought. The Spirit overcomes this by interceding within us with "inarticulate groans" (stenagmois alalētois) — a phrase suggesting prayer beyond human language. The Trinity converges: the Spirit intercedes within us, the Father searches our hearts and understands the Spirit's mind, and Christ intercedes from above (8:34). Prayer is a Trinitarian act in which the divine persons cooperate to bring human need before God.</p>
+      </div>
+      <div class="info-box">
+        <h3>Philippians 4:6–7 — Anxiety and Prayer</h3>
+        <p>"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."</p>
+        <p>Paul's anti-anxiety command is matched by a positive alternative: prayer in everything, with specific petitions, accompanied by thanksgiving. The result is not necessarily resolution of the situation but "the peace of God" — a peace that exceeds rational comprehension because it is grounded in God's character rather than circumstances. This peace "guards" (phroureō — a military term) the heart and mind. Prayer is presented as the cognitive and emotional alternative to anxious self-management.</p>
+      </div>
+    </div>
+
+    <h4>Paul's Apostolic Prayers for the Churches</h4>
+    <p>Paul's letter openings consistently include prayer reports — windows into the content of his intercession. These function as both personal theology and models for congregational prayer:</p>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Ephesians 1:15–23 — Prayer for Knowledge</span>
+        <span class="acc-ref">Ephesians 1:15–23</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Paul prays that the Ephesians receive "the Spirit of wisdom and of revelation in the knowledge of him" and that "the eyes of your heart may be enlightened" (1:18). Three specific objects: knowing the hope of God's calling, knowing the riches of the inheritance in the saints, and knowing the immeasurable greatness of God's power available to believers — the same power that raised Christ from the dead. This is a prayer for theological comprehension, not merely academic knowledge but transformative, spirit-given understanding of the gospel's implications.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Ephesians 3:14–21 — Prayer for Fullness</span>
+        <span class="acc-ref">Ephesians 3:14–21</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Paul "kneels before the Father" (the unusual posture of kneeling for prayer signals special urgency) and prays for: inner strengthening through the Spirit, Christ dwelling in the heart through faith, being rooted and grounded in love, comprehending the dimensions of Christ's love, and ultimately being "filled to the measure of all the fullness of God" (plērōthēte eis pan to plērōma tou theou). The closing doxology ("to him who is able to do immeasurably more than all we ask or imagine") grounds the prayer in divine capacity. This is arguably the highest aim prayer can aspire to.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Colossians 1:9–14 — Prayer for Fruit</span>
+        <span class="acc-ref">Colossians 1:9–14</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Paul prays for the Colossians to be "filled with the knowledge of his will through all the wisdom and understanding that the Spirit gives" — specifically so that they may live worthy of the Lord. The prayer is explicitly ethical: knowledge leading to conduct ("bearing fruit in every good work"), endurance ("strengthened with all power"), and joy ("giving joyful thanks to the Father"). Paul's intercession is always oriented toward the community's maturity and mission, not merely their comfort.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Prayer in Acts — The Church at Prayer</h3>
+    <p>Acts presents the earliest Christian community as constitutively prayerful. Prayer is not an occasional supplement to the church's life but its atmosphere:</p>
+
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="card">
+        <div class="card-title">Acts 1:14</div>
+        <div class="card-body">The 120 devote themselves to prayer while waiting for the Spirit — prayer as preparation for the new era of the Spirit's coming.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acts 2:42</div>
+        <div class="card-body">The four pillars of the early church: apostles' teaching, fellowship, breaking of bread, and prayer. Prayer as constituent of community.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acts 4:24–31</div>
+        <div class="card-body">Under threat, the church prays Scripture (Ps 2), asks not for safety but for boldness, and is filled with the Spirit again. Prayer as corporate response to persecution.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acts 6:4–6</div>
+        <div class="card-body">Apostles delegate practical ministry to preserve their priority of "prayer and the ministry of the word." Deacons ordained with laying on of hands and prayer.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acts 12:5, 12</div>
+        <div class="card-body">Peter in prison; the church prays "earnestly" for him. His miraculous release arrives while they are still gathered in prayer — they barely believe their prayers were answered.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acts 13:2–3</div>
+        <div class="card-body">The first missionary journey begins as the church fasts and prays; the Spirit speaks and they send Barnabas and Saul. Prayer as discernment for mission.</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 4: GREAT PRAYERS ===== -->
+  <section class="study-section" id="sec-great-prayers">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">04</span> Analysis</div>
+      <h2>The Great Prayers of Scripture</h2>
+      <p class="section-intro">Certain prayers stand as landmarks — shaping Israel's theology, forming the church's practice, and providing models for every subsequent generation. Each repays extended study.</p>
+    </div>
+
+    <div class="accordion-item open">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Abraham's Intercession for Sodom</span>
+        <span class="acc-ref">Genesis 18:16–33</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body open">
+        <div class="tags"><span class="tag gold">Intercession</span><span class="tag dim">Covenant Appeal</span><span class="tag dim">OT Patriarchal</span></div>
+        <p>Abraham's bold negotiation with God is one of Scripture's most theologically rich prayer texts. The occasion: God reveals his intention to investigate Sodom's sin. Abraham "stood before the Lord" (a phrase suggesting the posture of a servant before a superior, or an intercessor before a judge) and begins an extraordinary negotiation, pressing from fifty righteous people down to ten.</p>
+        <p>What is theologically significant is the basis of Abraham's appeal: "Will not the Judge of all the earth do right?" (18:25). He does not ask God to abandon justice but to act consistently with his own character as the one who is just. This is the grammar of all biblical intercession — appealing to God's own nature, not arguing against it. Abraham is not manipulating an arbitrary deity; he is reasoning covenantally with a God whose character is his anchor.</p>
+        <p>The text records that "the Lord relented" (or: God departed). Whether God was moved by the prayer or simply revealed his intentions progressively remains debated — but the text presents Abraham's intercession as genuinely shaping the divine response. This prayer establishes that intercession is not impertinence but the fulfillment of what it means to "walk with God."</p>
+        <div class="callout gold" style="margin-top:1rem">
+          <div class="callout-label">Key Theological Point</div>
+          Abraham's prayer demonstrates the logic of covenant intercession: pray on the basis of who God is, not on the basis of the merit of those for whom you pray. This pattern recurs in Moses (Ex 32), Daniel (Dan 9), and Christ (John 17).
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Moses' Intercession at Sinai</span>
+        <span class="acc-ref">Exodus 32:11–14, 30–34; Numbers 14:13–19</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Intercession</span><span class="tag red">Penitential</span><span class="tag dim">Mosaic</span></div>
+        <p>The golden calf episode is the greatest crisis in Israel's early history — covenant broken at the very moment of its establishment. God declares his intention to destroy Israel and start fresh with Moses alone. Moses' response is one of the most striking in all Scripture: he refuses the offer.</p>
+        <p>His arguments follow a recognizable pattern of covenantal logic: (1) <strong>God's investment</strong> — "your people, whom you brought up out of Egypt with great power and a mighty hand" (32:11). They belong to God; destroying them is self-defeating. (2) <strong>God's reputation</strong> — what will Egypt say? That God brought them out to kill them in the mountains? God's honor among the nations is at stake. (3) <strong>God's covenant with the patriarchs</strong> — "Remember Abraham, Isaac, and Israel, your servants, to whom you swore by your own self" (32:13). Appeal to the ancient covenant that predates Israel's failure.</p>
+        <p>The climax comes in 32:32 — "But now, if you will forgive their sin — but if not, please blot me out of your book that you have written." Moses offers himself as substitute. This is the Old Testament's closest approach to vicarious atonement — a prophet identifying so completely with his people that he will share their fate. The NT reads this through Christ: where Moses could only offer, Christ actually accomplished.</p>
+        <p>Numbers 14:13–19 provides a second great Mosaic intercession, again using the threefold argument — this time drawing on God's own self-description from Exodus 34:6–7 ("the Lord, slow to anger, abounding in love"). Moses quotes God's character back to him as the basis for mercy.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Hannah's Prayer and Song</span>
+        <span class="acc-ref">1 Samuel 1:9–18; 2:1–10</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Petition</span><span class="tag gold">Praise</span><span class="tag dim">Lament resolved</span></div>
+        <p>Hannah's prayer at the Tabernacle is a study in contrasts with the official religion around her. Eli the priest misreads deep prayer as drunkenness — the trained religious professional cannot recognize authentic encounter with God. Hannah "wept much and prayed to the Lord," making a vow to consecrate her son to God if he grants her prayer.</p>
+        <p>Her prayer is silent but fervent — "only her lips moved." When she leaves, "her face was no longer downcast" (1:18) — an inner transformation before the external answer arrived. She believed she had been heard. This is a vivid illustration of the "peace that passes understanding" — not circumstances changed but inner orientation shifted.</p>
+        <p>Her Song (1 Sam 2:1–10) is the theological summit of the narrative — a poem about the reversal of human fortune under God's sovereign hand: the hungry fed, the mighty fallen, the barren bearing children, the dead raised, the poor lifted from the ash heap. This is not personal gratitude only; it is prophetic proclamation of God's character. Mary's Magnificat (Luke 1:46–55) echoes Hannah's Song almost verbatim, placing Hannah in the line of prophetic voices who glimpse the shape of God's purposes before they arrive.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Solomon's Temple Dedication Prayer</span>
+        <span class="acc-ref">1 Kings 8:22–53; 2 Chronicles 6</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Adoration</span><span class="tag gold">Intercession</span><span class="tag dim">Royal / Temple</span></div>
+        <p>This prayer is the theological charter of the Jerusalem Temple as a house of prayer. Solomon opens with an acknowledgment of God's transcendence that qualifies everything that follows: "But will God really dwell on earth? The heavens, even the highest heaven, cannot contain you. How much less this temple I have built!" (8:27). This is crucial — the Temple does not localize or contain God, but provides an appointed place where human attention and divine presence can meet.</p>
+        <p>The prayer envisions seven scenarios in which people will pray "toward this place": defeat in battle, drought, famine, plague, prayer by foreigners, war, and exile. Each scenario models the same movement: sin acknowledged, prayer directed toward the Temple, God hearing from heaven and forgiving. The Temple is a mediating symbol — not a place where God lives, but a place that orients the praying heart toward the God who dwells in heaven.</p>
+        <p>Strikingly, Solomon includes foreigners in the prayer's scope: "As for the foreigner who does not belong to your people Israel but has come from a distant land because of your name — when they come and pray toward this temple, then hear from heaven, your dwelling place" (8:41–43). This is prophetic universalism embedded in the Temple's very dedication — the house of prayer "for all nations" (Isa 56:7) is anticipated here.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Elijah on Carmel and in the Wilderness</span>
+        <span class="acc-ref">1 Kings 18:36–39; 19:4–18</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Petition</span><span class="tag red">Lament</span><span class="tag dim">Prophetic</span></div>
+        <p>Elijah presents two faces of prophetic prayer. On Carmel, his prayer at the altar is bold and public: "Lord, the God of Abraham, Isaac and Israel, let it be known today that you are God in Israel and that I am your servant and have done all these things at your command" (18:36). The prayer is answered with fire from heaven — spectacular, theophanic, public vindication. James 5:17–18 cites this as an example of the power of "a righteous person's prayer."</p>
+        <p>In the wilderness, the same prophet prays "I have had enough, Lord. Take my life" (19:4) — a prayer of utter exhaustion and despair, identical in structure to Moses' prayer in Numbers 11:15 ("if this is how you are going to treat me, please go ahead and kill me"). God does not rebuke this prayer but meets Elijah with food, rest, and gentle companionship. The contrast with Carmel is intentional: God receives both the triumphant prayer of power and the desperate prayer of exhaustion. The "still small voice" (19:12, KJV) — literally "the sound of gentle stillness" — suggests that God often comes most intimately not in spectacular answers but in quiet presence.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Daniel's Penitential Prayer</span>
+        <span class="acc-ref">Daniel 9:3–19</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag red">Confession</span><span class="tag gold">Intercession</span><span class="tag dim">Exilic</span></div>
+        <p>Daniel 9 is perhaps the most perfectly constructed penitential prayer in Scripture. Daniel, reading Jeremiah's prophecy of the 70 years of desolation, responds not with passive waiting but with active, corporate prayer. His preparation is deliberate: "I turned to the Lord God and pleaded with him in prayer and petition, in fasting, and in sackcloth and ashes" (9:3).</p>
+        <p>The prayer's structure is classic penitential: an extended confession covering disobedience, rejection of the prophets, and breach of the Mosaic covenant, followed by appeal to God's character and reputation. The repeated "we" is significant — Daniel, a man of exemplary personal righteousness, identifies fully with his people's collective sin. He does not say "they sinned" but "we have sinned… we have been wicked" (9:5). This corporate identification — the righteous bearing the burden of communal guilt — is the prophetic posture that the NT reads as fulfilled in Christ.</p>
+        <p>The basis of Daniel's appeal is striking: "We do not make requests of you because we are righteous, but because of your great mercy" (9:18). The prayer is entirely grace-based. And it is answered while he is still speaking (9:21) — Gabriel arrives "in swift flight" with revelation. The prayer is prophetically generative: it opens the next great eschatological disclosure.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">The Lord's Prayer</span>
+        <span class="acc-ref">Matthew 6:9–13; Luke 11:2–4</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Adoration</span><span class="tag gold">Petition</span><span class="tag red">Confession</span><span class="tag dim">Eschatological</span></div>
+        <p>The Lord's Prayer is the center of Christian prayer — given by Jesus in two slightly different forms, used in early Christian worship (the Didache instructs prayer three times daily "as the Lord commanded"), and prayed by billions across two millennia. It functions not as a verbal formula to be recited (Jesus says "pray like this," not "say these words") but as a grammar — a pattern that shapes all authentic prayer.</p>
+        <p><strong>Our Father in heaven:</strong> The address establishes relationship (Father), community (our — never just "my Father"), and transcendence (in heaven — not a domesticated deity). Jesus' use of "Abba" (attested in Mark 14:36, Rom 8:15, Gal 4:6) was an intimate familial address without precedent in Jewish corporate prayer for God.</p>
+        <p><strong>Hallowed be your name:</strong> The first petition is not a human need but a divine purpose — that God's name/character be recognized as holy in the world. This orients all subsequent prayer: everything is nested within the priority of God's glory. "Name" in Hebrew thought encompasses character, reputation, and person.</p>
+        <p><strong>Your kingdom come, your will be done on earth as in heaven:</strong> Eschatological petition for the full arrival of God's sovereign rule. "On earth as in heaven" is not resignation ("thy will be done whether I like it or not") but hope (may earth increasingly reflect heaven's perfect obedience).</p>
+        <p><strong>Give us today our daily bread:</strong> "Daily" translates epiousios — a word found only here in all Greek literature, likely meaning "for tomorrow" (sufficient for the coming day) or "necessary for existence." Permission to bring ordinary bodily need to God. Echoes the manna in the wilderness.</p>
+        <p><strong>Forgive us our debts as we have forgiven our debtors:</strong> The only petition Jesus expands on afterward (Matt 6:14–15). This does not teach that human forgiveness earns divine forgiveness, but that those who have truly received forgiveness are freed to extend it. Unforgiveness reveals that the gift has not been received.</p>
+        <p><strong>Lead us not into temptation, but deliver us from the evil one:</strong> A prayer for guidance away from situations that exceed our strength, and deliverance from the personal force of evil (ho ponēros is masculine — "the evil one," not just "evil"). Gethsemane echoes this: "Watch and pray so that you will not fall into temptation" (Matt 26:41).</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Gethsemane — The Agony in the Garden</span>
+        <span class="acc-ref">Matthew 26:36–46; Mark 14:32–42; Luke 22:39–46</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag red">Lament</span><span class="tag gold">Submission</span><span class="tag dim">Christological</span></div>
+        <p>Gethsemane is the most agonized prayer in Scripture — and the most theologically significant. Jesus approaches it with language of extreme distress: "My soul is overwhelmed with sorrow to the point of death" (Matt 26:38 — the same language as Ps 42:6). Luke records that "his sweat was like drops of blood falling to the ground" (22:44) — hematidrosis, a documented physiological response to extreme psychological stress.</p>
+        <p>The prayer itself: "My Father, if it is possible, may this cup be taken from me. Yet not as I will, but as you will" (Matt 26:39). This is a genuine human petition for a different way — not theatrical. The "cup" in OT symbolism is the cup of divine wrath (Isa 51:17; Jer 25:15–16) — Jesus is asking, in his human nature, whether the cup of bearing the Father's judgment on sin can pass. The Father's answer is "no," and Jesus returns twice more with the same prayer, ultimately moving to full submission: "not as I will, but as you will."</p>
+        <p>Gethsemane establishes that honest petition — including asking for a different way — is fully compatible with radical submission to God's will. Jesus does not suppress the human request; he holds it in tension with trust in the Father's wisdom. The disciples sleep while Jesus prays — they fail the very thing he warned them about ("watch and pray so that you will not fall into temptation," 26:41). Their failure contrasts with his prayer as the source of his courage in the arrest that follows immediately.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">The High Priestly Prayer</span>
+        <span class="acc-ref">John 17</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Intercession</span><span class="tag gold">Adoration</span><span class="tag dim">Priestly / Trinitarian</span></div>
+        <p>John 17 is often called "the real Lord's Prayer" — the longest recorded prayer of Jesus, prayed on the night of his betrayal as a high priest preparing to offer himself. It has three movements: Jesus prays for himself (1–5), for his immediate disciples (6–19), and for all future believers (20–26).</p>
+        <p><strong>For himself (vv.1–5):</strong> "Father, the hour has come. Glorify your Son, that your Son may glorify you." The mutual glorification of Father and Son through the cross is the theological center. Jesus prays to be restored to "the glory I had with you before the world began" (17:5) — one of the clearest NT affirmations of pre-existent divine glory being temporarily veiled in incarnation.</p>
+        <p><strong>For the disciples (vv.6–19):</strong> Three petitions: protection ("keep them… by the power of your name," 17:11), joy ("that they may have the full measure of my joy," 17:13), and sanctification ("sanctify them by the truth; your word is truth," 17:17). The disciples are to remain in the world but not belong to it — prayer is the means of sustaining this tension.</p>
+        <p><strong>For all believers (vv.20–26):</strong> The great petition is unity — "that all of them may be one, Father, just as you are in me and I am in you… May they be brought to complete unity to let the world know that you sent me" (17:21–23). Christian unity is rooted in Trinitarian unity; and its purpose is missional — the world believes through the church's unity. The prayer connects intercession directly to evangelism.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">The Early Church Under Persecution (Acts 4)</span>
+        <span class="acc-ref">Acts 4:24–31</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Petition</span><span class="tag dim">Corporate</span><span class="tag teal">Scriptural Prayer</span></div>
+        <p>After Peter and John are released from custody with threats, the entire community gathers and prays. This prayer is a masterclass in Christian corporate prayer and deserves close attention.</p>
+        <p><strong>Opening with sovereignty (v.24):</strong> "Sovereign Lord, you made the heavens and the earth and the sea, and everything in them." Before addressing their crisis, the church anchors itself in God's cosmic sovereignty. The word "Sovereign" is despotēs — the absolute master and owner of all things. The implicit logic: if God made everything, he is not threatened by the Sanhedrin's threats.</p>
+        <p><strong>Praying Scripture (vv.25–28):</strong> They pray Psalm 2 — "Why do the nations rage and the peoples plot in vain? The kings of the earth rise up and the rulers band together against the Lord and against his anointed one." And they apply it directly to their situation: Herod, Pilate, the Gentiles and people of Israel conspired against Jesus — "doing what your power and will had decided beforehand should happen" (4:28). They embed their present crisis in the larger scriptural narrative of God's sovereign purpose. Persecution is not an interruption to God's plan but an instance of the pattern Psalm 2 describes.</p>
+        <p><strong>The request (v.29–30):</strong> Not "Lord, protect us" or "make them stop." Instead: "Now, Lord, consider their threats and enable your servants to speak your word with great boldness." They ask for boldness, not safety. The result: "After they prayed, the place where they were meeting was shaken. And they were all filled with the Holy Spirit and spoke the word of God boldly" (4:31).</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 5: MODELS ===== -->
+  <section class="study-section" id="sec-models">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">05</span> Analysis</div>
+      <h2>Models &amp; Structures of Prayer</h2>
+      <p class="section-intro">Across Scripture and tradition, several frameworks help organize the movements of biblical prayer. These are not rigid formulas but maps of the terrain — tools for learning to pray.</p>
+    </div>
+
+    <h3>The ACTS Model</h3>
+    <p>A classic four-movement framework whose roots reach into the Psalms, the Lord's Prayer, and Paul's epistolary practice:</p>
+
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big">A</div><div class="model-word">Adoration</div></div>
+      <div class="model-content">
+        <h3>Glorifying God for who he is</h3>
+        <p>Begin by turning attention entirely to God himself — not what he has done, but who he is. His holiness (Isa 6), love (1 John 4:8), power (Ps 29), wisdom (Rom 11:33–36), faithfulness (Lam 3:22–23), and beauty (Ps 27:4). Adoration shifts the posture from consumer to worshiper and anchors prayer in reality. The Lord's Prayer begins here: "Hallowed be your name." Biblical models: Pss 8, 95, 100, 145–150; Rev 4–5.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big">C</div><div class="model-word">Confession</div></div>
+      <div class="model-content">
+        <h3>Honest acknowledgment of sin and failure</h3>
+        <p>Individual and corporate acknowledgment of sin, followed by the assurance of forgiveness. Not self-flagellation but realistic self-knowledge before God's holiness and grace. Psalm 51 (individual) and Daniel 9 (corporate) are the supreme models. 1 John 1:9 grounds confession in promise: "If we confess our sins, he is faithful and just and will forgive us our sins." Confession "clears the channel" — not because God withdraws from sinners, but because honesty is the basis of genuine relationship.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big">T</div><div class="model-word">Thanksgiving</div></div>
+      <div class="model-content">
+        <h3>Gratitude for what God has done</h3>
+        <p>"Give thanks in all circumstances; for this is God's will for you in Christ Jesus" (1 Thess 5:18). Thanksgiving is distinct from adoration in being retrospective (responding to specific acts) rather than ontological (responding to God's being). Paul opens almost every letter with thanksgiving. Scientific research confirms that gratitude practices reorient attention toward what is good and away from anxious rumination — what Paul promises in Phil 4:6–7. Biblical models: Pss 30, 34, 107, 116; Eph 1:15–16.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big">S</div><div class="model-word">Supplication</div></div>
+      <div class="model-content">
+        <h3>Bringing requests to God</h3>
+        <p>Petition (personal needs) and intercession (the needs of others). "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God" (Phil 4:6). Specific, persistent, aligned with God's will as revealed in Scripture. The promise: "Ask and it will be given to you" (Matt 7:7), understood within "if we ask anything according to his will" (1 John 5:14). Intercession models: John 17; Eph 1; 3; Col 1.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Lord's Prayer as Structure</h3>
+    <p>The Lord's Prayer functions as a grammar — each petition can become a "room" to spend extended time in, rather than rushing through the words:</p>
+
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:16px">Our<br>Father</div><div class="model-word">Address</div></div>
+      <div class="model-content"><h3>Relational access</h3><p>"Our" — communal even when alone. "Father" — intimate trust. "In heaven" — transcendence. Spend time in the reality of being a beloved child before the Father. Let this posture settle before moving further.</p></div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:14px">Hallowed</div><div class="model-word">Adoration</div></div>
+      <div class="model-content"><h3>Sanctifying God's name</h3><p>Pray that God be glorified — in your life, in the church, in the world. Reflect on what it means for God's name to be hallowed. This is also a commitment: "Let my life hallow your name today."</p></div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:13px">Your<br>Kingdom</div><div class="model-word">Submission</div></div>
+      <div class="model-content"><h3>Aligning with God's purposes</h3><p>Pray for the world under God's reign — for justice, peace, the church's mission, specific situations. Also surrender: "Your will be done in this situation I am facing." Eschatological longing and present submission converge here.</p></div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:13px">Daily<br>Bread</div><div class="model-word">Provision</div></div>
+      <div class="model-content"><h3>Dependence for daily needs</h3><p>Bring the specific material, relational, and spiritual needs of today. Permission to ask for ordinary things. This petition grounds prayer in the concrete particulars of life — not just spiritual abstractions.</p></div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:14px">Forgive</div><div class="model-word">Confession</div></div>
+      <div class="model-content"><h3>Receiving and extending forgiveness</h3><p>Confess specific sins. Receive forgiveness. Then the harder part: identify those against whom you hold anything, and exercise the choice to forgive. Let this petition generate both repentance and reconciliation.</p></div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:14px">Deliver</div><div class="model-word">Protection</div></div>
+      <div class="model-content"><h3>Deliverance from temptation and evil</h3><p>Pray for specific areas of temptation and weakness. Ask for strength and guidance away from situations that exceed your strength. Pray against spiritual opposition (Eph 6:12–18). "The one who is in you is greater than the one who is in the world" (1 John 4:4).</p></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Lament Structure</h3>
+    <p>Walter Brueggemann's analysis of the biblical lament identifies a pattern found across ~55 Psalms and in Jeremiah, Job, and Lamentations. Learning to lament is as important as learning to praise:</p>
+
+    <div class="three-col">
+      <div class="info-box">
+        <h3>1. Address</h3>
+        <p>Direct appeal to God by name — "My God," "O Lord." The refusal to pray vaguely or retreat from God in suffering. Even in darkness, naming God is an act of faith.</p>
+      </div>
+      <div class="info-box">
+        <h3>2. Complaint</h3>
+        <p>Naming the specific pain — illness, enemies, abandonment, injustice, divine absence. No sanitizing. The psalmist says what is true, not what sounds religious. God receives the complaint.</p>
+      </div>
+      <div class="info-box">
+        <h3>3. Petition</h3>
+        <p>Specific, urgent request. The imperative voice — "hear me," "arise," "save." Specificity expresses faith. You don't ask someone specific help unless you believe they can give it.</p>
+      </div>
+      <div class="info-box">
+        <h3>4. Motivation</h3>
+        <p>Reasons why God should act: his past faithfulness, his covenant, his own reputation. Not human merit but divine character as the basis for appeal.</p>
+      </div>
+      <div class="info-box">
+        <h3>5. Trust</h3>
+        <p>Confession of confidence in God — memory of his past acts as ground for present hope. "I will remember the deeds of the Lord" (Ps 77:11). Memory serves faith.</p>
+      </div>
+      <div class="info-box">
+        <h3>6. Praise / Vow</h3>
+        <p>Most laments end in anticipatory praise — "I will tell of your name to my brothers." The vow of praise transforms the whole lament: complaint is penultimate; praise is the final word.</p>
+      </div>
+    </div>
+
+    <div class="callout red">
+      <div class="callout-label">Why Lament Matters</div>
+      Removing lament from our prayer vocabulary leads to two pathologies: dishonesty (pretending before God that we are fine) or apostasy (suffering drives us away from God because we have no language for bringing it to him). The Psalms insist that bringing raw pain, anger, and confusion to God is itself an act of faith — the opposite of abandoning him. Psalm 88 ends in absolute darkness and is still canonical prayer.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Origen's Four Types (1 Timothy 2:1)</h3>
+    <p>Origen of Alexandria (c. 185–253) built his treatise on prayer around 1 Timothy 2:1 — "I urge, then, first of all, that petitions (deēseis), prayers (proseuchas), intercession (enteuxeis) and thanksgiving (eucharistias) be made for all people." He distinguished these as four distinct acts:</p>
+
+    <div class="two-col">
+      <div class="info-box">
+        <h3>Deēsis — Petition from need</h3>
+        <p>Request arising from felt lack or urgent need. The prayer of the beggar, the sick, the desperate. Addressed to God for specific help. The publican's "God, be merciful to me, a sinner" (Luke 18:13) is its archetype.</p>
+      </div>
+      <div class="info-box">
+        <h3>Proseuche — Prayer proper</h3>
+        <p>The general act of prayer — the orientation of the whole self toward God. Includes adoration, submission, listening. The broadest category: all turning of the mind and heart toward the divine.</p>
+      </div>
+      <div class="info-box">
+        <h3>Enteuxis — Intercession / Encounter</h3>
+        <p>From entynchanō — to meet, encounter. The "speaking to God on behalf of others" dimension. This is the priestly office of prayer — standing between human need and divine grace for the sake of others.</p>
+      </div>
+      <div class="info-box">
+        <h3>Eucharistia — Thanksgiving</h3>
+        <p>Grateful acknowledgment of grace received. The eucharistic dimension of all prayer — life received as gift and returned as gratitude. Paul's letter openings model this as the atmosphere of Christian prayer.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 6: BIBLICAL FIGURES ===== -->
+  <section class="study-section" id="sec-figures">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">06</span> Analysis</div>
+      <h2>Biblical Figures and Their Prayer Lives</h2>
+      <p class="section-intro">The Bible's great pray-ers model different dimensions of what it means to approach God. Each offers a distinct perspective on the life of prayer.</p>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Abraham — The Father of Intercession</span>
+        <span class="acc-ref">Genesis 12–25</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Intercession</span><span class="tag dim">Covenant</span><span class="tag dim">Altar-builder</span></div>
+        <p>Abraham's prayer life is characterized by altar-building at each major moment of his journey (Gen 12:7–8; 13:4, 18; 21:33) — physical markers of divine encounter and human response. He "called on the name of the Lord," a phrase that becomes formulaic for worshiping the true God in the face of surrounding paganism.</p>
+        <p>His great prayer for Sodom (Gen 18) establishes the pattern of covenantal intercession. His servant's prayer for guidance in finding Isaac's wife (Gen 24:12–14, 27) is one of Scripture's earliest examples of specific answered prayer — a prayer for a "sign" that is immediately granted. Abraham's faith in God's provision even to the point of sacrificing Isaac (Gen 22) — "God himself will provide the lamb" (22:8) — models prayer as confidence in divine faithfulness even when circumstances seem contradictory. James 2:23 calls him "God's friend" — suggesting that his prayer life was intimate and sustained.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">David — The Praying King</span>
+        <span class="acc-ref">Psalms; 1–2 Samuel</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Praise</span><span class="tag red">Lament</span><span class="tag dim">Penitential</span></div>
+        <p>David is the biblical figure most closely associated with prayer — the Psalter attributes 73 psalms to him, covering the full range from adoration to lament, penitence to thanksgiving. What characterizes his prayer life is raw honesty: he brings his military victories (Ps 18), his terror at enemies (Ps 56–57), his sense of divine abandonment (Ps 22), his adultery and murder (Ps 51), and his wonder at creation (Ps 8) all before God without pretension.</p>
+        <p>After Nathan's confrontation over Bathsheba and Uriah, Psalm 51 is his penitential prayer — one of the most penetrating confessional prayers in Scripture. "Create in me a pure heart, O God" (51:10) moves beyond seeking forgiveness to seeking transformation. His prayer over his dying infant child (2 Sam 12:16–23) shows that prayer can be bold and urgent and still accepted — even when the answer is no. David's life models that prayer is not for the morally perfect but for those who persistently return to God through failure.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Elijah — The Prophet Who Prays Fire and Rain</span>
+        <span class="acc-ref">1 Kings 17–19; James 5:17–18</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Petition</span><span class="tag red">Lament</span><span class="tag dim">Prophetic Power</span></div>
+        <p>Elijah is presented as the prototype of prophetic prayer's power. James 5:17–18 explicitly cites him: "Elijah was a human being, even as we are. He prayed earnestly that it would not rain, and it did not rain on the land for three and a half years. Again he prayed, and the heavens gave rain, and the earth produced its crops." The emphasis on his humanity ("even as we are") is deliberate — to encourage ordinary believers that they too can pray with kingdom effect.</p>
+        <p>The contrast between his Mount Carmel prayer (triumphant, public, answered with fire) and his wilderness prayer ("take my life") shows the full range of prophetic experience. God's response to the wilderness lament is noteworthy: before giving spiritual renewal, God provides physical rest and food. The "still small voice" (literally: a sound of gentle stillness, qol demamah daqah) teaches that God often meets the depleted soul not in spectacular revival but in quiet presence. Elijah's translation to heaven (2 Kings 2) connects him to the eschatological fulfillment of his intercessions — the prophetic prayer life has ultimate, not merely temporal, significance.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Nehemiah — The Instant Prayer</span>
+        <span class="acc-ref">Nehemiah 1–6</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag teal">Leadership</span><span class="tag dim">Crisis Prayer</span><span class="tag dim">Post-Exilic</span></div>
+        <p>Nehemiah's prayer life is distinctive for integrating sustained prayer with immediate prayer in the flow of daily life. He receives devastating news about Jerusalem (Neh 1:3) and responds with fasting and extended intercessory prayer over days (1:4–11). His prayer follows classic patterns: acknowledgment of God's greatness, confession of corporate sin, appeal to the Mosaic covenant, and specific request for success in his mission.</p>
+        <p>Then, when the king questions him in the palace and Nehemiah needs an answer immediately, we read: "the king granted my requests. For the gracious hand of my God was on me… I prayed to the God of heaven, and I answered the king" (2:8–9). The note "I prayed to the God of heaven" is an instant, silent prayer in the middle of a high-stakes conversation — what medieval mystics would call "arrow prayers" or "aspirations." Nehemiah models a life in which extended set-apart prayer (ch. 1) and instant crisis prayer (2:4) are both natural. Throughout the rebuilding project, prayer and action are interwoven: "We prayed to our God and posted a guard day and night" (4:9).</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Paul — The Apostolic Intercessor</span>
+        <span class="acc-ref">Epistles; Acts 9; 16</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Intercession</span><span class="tag dim">Apostolic</span><span class="tag dim">Trinitarian</span></div>
+        <p>Paul's letters reveal a man whose ministry is fundamentally grounded in prayer. He "constantly" (adialeiptōs) mentions the churches in his prayers (1 Thess 1:2–3; Rom 1:9–10) — not occasional thoughts but structured intercession for communities spread across the Roman world. His prayer reports in the letter openings give us windows into apostolic intercession: he prays for theological comprehension (Eph 1:17–18), for spiritual strengthening (Eph 3:16), for love and discernment (Phil 1:9–11), for fruitfulness (Col 1:9–12).</p>
+        <p>Paul's prison experience (Acts 16:25) — singing hymns and praying at midnight after being beaten — becomes the archetype of prayer in extreme circumstances. His thorn in the flesh (2 Cor 12:7–10) shows that Paul experienced answered prayer as "no" — and the answer transformed his theology of power in weakness. His own prayer report "Three times I pleaded with the Lord to take it away from me" suggests persistent prayer that nonetheless yields to God's wisdom. This is mature prayer — not passive resignation but active surrender.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Mary — The Listening Heart</span>
+        <span class="acc-ref">Luke 1–2; Acts 1:14</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="tags"><span class="tag gold">Praise</span><span class="tag dim">Receptive</span><span class="tag dim">Prophetic</span></div>
+        <p>Mary's prayer life is characterized above all by receptivity. Her response to the annunciation — "I am the Lord's servant. May your word to me be fulfilled" (Luke 1:38) — is the perfect model of prayer as surrender to divine initiative. Her Magnificat (Luke 1:46–55) is one of Scripture's great prophetic prayers — saturated with echoes of Hannah's Song, the Psalms, and the prophets, weaving together personal gratitude with cosmic vision of God's reversal of power structures.</p>
+        <p>"Mary treasured up all these things and pondered them in her heart" (Luke 2:19, 51) describes a contemplative posture — the practice of holding experience in the presence of God for meditation and meaning. She appears at Acts 1:14 among the disciples devoting themselves to prayer before Pentecost — quietly persistent in the upper room. The Eastern tradition's veneration of Mary as Theotokos (God-bearer) and her role in intercession grows from this portrait of a woman whose entire life was oriented in receptive, pondering, persistent prayer.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 7: CHURCH FATHERS ===== -->
+  <section class="study-section" id="sec-fathers">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">07</span> Tradition</div>
+      <h2>The Church Fathers on Prayer</h2>
+      <p class="section-intro">The early church developed a rich and sophisticated theology of prayer across the first five centuries. Their writings — commentaries on the Lord's Prayer, systematic treatises, spiritual directories — remain foundational.</p>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">Tertullian of Carthage</span>
+        <span class="father-dates">c. 155–240 AD</span>
+      </div>
+      <div class="father-work">De Oratione (On Prayer) — the oldest surviving Christian treatise on prayer</div>
+      <div class="father-quote">"The Lord's Prayer is truly a summary of the whole gospel." — De Oratione 1</div>
+      <div class="father-body">
+        <p>Tertullian's <em>De Oratione</em> (c. 200 AD) is an extended commentary on the Lord's Prayer, treating it phrase by phrase. He called it <em>breviarium totius evangelii</em> — "a summary of the whole gospel" — arguing that every essential element of Christian theology is contained within its six petitions.</p>
+        <p>On posture: Tertullian documents the early church's practice of praying with arms extended and hands open (a posture echoing the cross), and standing on Sundays and Pentecost (rather than kneeling, because Sunday is resurrection day — a day of triumph, not penitence). On kneeling: appropriate for confession and urgent petition during the week. He also addresses the practice of praying toward the east — symbolizing the coming of Christ "from the east" (Mal 4:2; Matt 24:27).</p>
+        <p>Tertullian addresses practical questions with remarkable pastoral sensitivity: Should you receive communion before or after prayer? What about greeting fellow-Christians during prayer? How should one handle anger before praying ("we will not be able to receive what is sought for in anger")? His discussion of fasting combined with prayer as intensifying petitions anticipates the patristic tradition of linked ascetical practices.</p>
+        <p><strong>Key contribution:</strong> Establishing the Lord's Prayer as the interpretive key to all Christian prayer, and documenting early church liturgical practices with unparalleled historical precision.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">Origen of Alexandria</span>
+        <span class="father-dates">c. 185–253 AD</span>
+      </div>
+      <div class="father-work">Peri Euches (On Prayer) — the most philosophically sophisticated early treatment</div>
+      <div class="father-quote">"He who prays unceasingly is the one who combines prayer with necessary works and works with prayer. For only in this way can we hold to the principle of 'pray without ceasing.'" — On Prayer 12</div>
+      <div class="father-body">
+        <p>Origen's <em>Peri Euches</em> (c. 233–234 AD) is the most theologically sophisticated early treatment of prayer — 34 chapters addressing the philosophical problem of prayer, a detailed exegesis of the Lord's Prayer, and practical guidance on prayer practice. He opens by confronting directly the "problem of prayer": if God is omniscient and his purposes are fixed, what difference can prayer make? His answer is nuanced: prayer does not change God's predetermined will, but it participates in the economy of God's purposes. God ordains both the prayer and the answer as linked events.</p>
+        <p>Origen's Trinitarian framework for prayer was groundbreaking: prayer is to be addressed to the Father, through the Son (who is our high priest and mediator), in the Holy Spirit (who prays within us). This Trinitarian structure — which he derives from Romans 8, Hebrews 7–8, and John 14–17 — became the standard theological framework for Christian prayer. Prayer addressed directly to Christ, while not wrong, is less precisely correct than prayer to the Father through Christ.</p>
+        <p>On "ceaseless prayer" (1 Thess 5:17): Origen distinguishes between formal prayer (verbal, set-apart) and the orientation of the whole life. A "life of virtue," he argues, is itself a continuous act of prayer — the whole of existence offered to God. "The goal of the whole life of a saint taken as a whole is one great prayer." This insight would be developed by the desert fathers and eventually become the foundation of the hesychast tradition.</p>
+        <p><strong>Key contribution:</strong> The philosophical defense of prayer's meaningfulness within divine sovereignty, the Trinitarian grammar of Christian prayer, and the expansion of "ceaseless prayer" into a whole-life orientation.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">Cyprian of Carthage</span>
+        <span class="father-dates">c. 200–258 AD</span>
+      </div>
+      <div class="father-work">De Dominica Oratione (On the Lord's Prayer)</div>
+      <div class="father-quote">"He who taught us to pray taught us also to live. It is not possible for anyone to pray as prescribed who does not live as he ought." — On the Lord's Prayer 32</div>
+      <div class="father-body">
+        <p>Cyprian's treatise on the Lord's Prayer (c. 252 AD, written during the Decian persecution) is a pastoral document as much as a theological one. He was bishop of Carthage during a devastating plague and intense persecution — his commentary on prayer was written for people whose faith was genuinely costly.</p>
+        <p><strong>The communal dimension:</strong> Cyprian's most significant contribution is his insistence on the "our" of "Our Father." We do not pray for ourselves alone, he argues, because our prayer is always the prayer of the whole church. "When we pray, we pray not for one but for the whole people, because we, the whole people, are one." This is not merely a social observation but a theological claim: the Christian is never an isolated individual before God but always a member of the body of Christ praying in union with every other member.</p>
+        <p>On the hours of prayer: Cyprian provides the clearest early description of the canonical prayer hours and their theological symbolism. The third hour (9am) = the Spirit's descent at Pentecost. The sixth hour (noon) = Christ on the cross ("from the sixth hour there was darkness over all the land"). The ninth hour (3pm) = Christ's death and the soldier's confession. Morning prayer = the resurrection. Evening prayer = thanksgiving for light received. Night prayer = preparation for the day of judgment. Each hour of prayer participates in and rehearses the events of salvation.</p>
+        <p><strong>Key contribution:</strong> The ecclesial and communal interpretation of the Lord's Prayer, and the theological grounding of the canonical prayer hours in the passion narrative.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">John Chrysostom</span>
+        <span class="father-dates">c. 347–407 AD</span>
+      </div>
+      <div class="father-work">Homilies on Matthew; Homilies on Genesis; On Prayer and Supplication</div>
+      <div class="father-quote">"Prayer is the light of the soul, giving us both knowledge of God and of ourselves. It is a joining and union of man with God; through it, what is holy has an indescribable delight." — On Prayer</div>
+      <div class="father-body">
+        <p>Chrysostom ("golden-mouthed") preached extensively on prayer as both sermon-content and lived example. Exiled twice for his prophetic courage, he continued writing and encouraging prayer from exile. His approach to prayer is characteristically pastoral and practical rather than philosophical.</p>
+        <p><strong>On attention in prayer:</strong> Chrysostom consistently emphasized that mechanical recitation of words was not prayer — prayer requires the engagement of the mind and heart. "It is better to pray briefly but fervently than at length but with distraction." He borrowed the medical metaphor: prayer is medicine for the soul, but medicine swallowed without attention doesn't heal. He instructed his congregation on how to prepare for prayer: quiet the mind, set aside distractions, and enter deliberately into the divine presence.</p>
+        <p><strong>On unanswered prayer:</strong> His pastoral theology of unanswered prayer is one of the richest in the fathers. He argues that God delays answers for three possible reasons: to increase our perseverance, to teach us to value what we ask for, or to give us something better. "When you ask for something and he does not give it, this is often a mark of greater love than when he gives what is asked." He cites Paul's thorn (2 Cor 12) and Moses' prayer to enter Canaan (Deut 3:25–26, denied) as examples of holy people whose prayers were refused for their greater good.</p>
+        <p><strong>On intercessory prayer for the dead:</strong> Chrysostom's homilies document the early church practice of commemorating the dead at the Eucharist — a form of prayer that he defends theologically. This became foundational for Eastern Orthodox prayer practice and the development of requiem masses in the West.</p>
+        <p><strong>Key contribution:</strong> Pastoral teaching on attentive versus mechanical prayer, an extensive theology of unanswered prayer, and the integration of prayer with the whole Christian life.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">Augustine of Hippo</span>
+        <span class="father-dates">354–430 AD</span>
+      </div>
+      <div class="father-work">Letter 130 (to Proba); Confessions; Expositions of the Psalms; On the Sermon on the Mount</div>
+      <div class="father-quote">"Our heart is restless, until it repose in Thee. And grant us now, O Lord, to know and understand which is first — to call on Thee, or to praise Thee?" — Confessions 1.1</div>
+      <div class="father-body">
+        <p>Augustine's theology of prayer is inseparable from his theology of desire — the most distinctive element of his thought. Humanity is created with infinite longing that only God can satisfy; prayer is the right ordering of that desire. The famous opening of the Confessions ("our heart is restless until it rests in you") is itself a prayer — and establishes the entire text as an extended act of prayer-as-autobiography.</p>
+        <p><strong>Letter 130 to Proba</strong> (a wealthy widow asking how to pray) is Augustine's most systematic treatment. He argues that the purpose of prayer is not to inform God of our needs (he knows them) or to persuade him to act (his will is fixed). Rather, prayer "expands our hearts" (dilatio cordis) to receive what God wills to give. The problem is not that God withholds; it is that our capacity to receive is too small. Prayer enlarges that capacity. This is why even the prayer that says nothing but "your will be done" is a profound act — it reshapes the pray-er's desiring self.</p>
+        <p><strong>On the Psalms as Christ praying:</strong> Augustine's <em>Enarrationes in Psalmos</em> (Expositions of the Psalms) spans 22 volumes and is the largest patristic commentary on any biblical book. His interpretive key: Christ is the one who prays in every Psalm. The "I" of the Psalms is the voice of Christ — sometimes as the glorified Head, sometimes as the suffering Body of Christ (the church), sometimes as both simultaneously. "He [Christ] prays for us as our priest, he prays in us as our head, he is prayed to by us as our God." This reading resolves the apparent difficulty of penitential psalms (how can Christ say "I have sinned"?) by locating the Psalm in Christ's identification with humanity.</p>
+        <p><strong>On the will and prayer:</strong> Augustine grappled extensively with the tension between divine sovereign grace and genuine human prayer. His mature position: God has "foreordained the prayers of the saints among the causes of those things that he willed to come about." Prayer is therefore neither superfluous (as if God acts regardless) nor efficacious in the sense of changing God's mind. It is the means God has ordained through which his grace reaches the praying heart.</p>
+        <p><strong>Key contribution:</strong> The theology of prayer as desire-expansion; Christ as the subject of all prayer in the Psalms; the integration of prayer, will, and divine grace.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">Evagrius Ponticus</span>
+        <span class="father-dates">345–399 AD</span>
+      </div>
+      <div class="father-work">Peri Proseuches (On Prayer) — 153 chapters; Praktikos; Kephalaia Gnostika</div>
+      <div class="father-quote">"If you are a theologian, you truly pray. If you truly pray, you are a theologian." — On Prayer 61</div>
+      <div class="father-body">
+        <p>Evagrius is the founder of systematic apophatic (negative/imageless) prayer theology in the Eastern tradition. His 153-chapter treatise on prayer (the number echoing John 21's miraculous catch of 153 fish) shaped the entire subsequent tradition of Christian mystical prayer through John Cassian, Pseudo-Dionysius, Gregory Palamas, and the hesychast movement.</p>
+        <p><strong>Prayer as ascent of mind to God:</strong> Evagrius defined prayer as "the ascent of the mind to God" (anabasis tou nou pros ton theon). This upward movement has a negative dimension — stripping away images, thoughts, passions, and even conceptual content about God — and a positive dimension: naked, imageless encounter with the divine presence. "Blessed is the intellect that, at the time of prayer, has arrived at total freedom from form."</p>
+        <p><strong>The eight logismoi (thoughts):</strong> Evagrius identified eight foundational "thoughts" (logismoi) that disrupt prayer: gluttony, fornication, avarice, sadness, anger, acedia (sloth), vainglory, and pride. John Cassian transmitted these to the West, where Gregory the Great reduced them to the seven capital sins. This practical diagnosis of what disrupts prayer had enormous influence on both Eastern and Western spirituality.</p>
+        <p><strong>Hesychia:</strong> Evagrius advocated <em>hesychia</em> (stillness, silence) as the condition of deepest prayer. The hesychast tradition — developed through the desert fathers, Gregory Palamas (14th c.), and the Jesus Prayer tradition — traces to Evagrius. His insight: the deepest prayer transcends words and images and reaches toward a direct participation in divine light.</p>
+        <p><strong>Key contribution:</strong> The foundation of apophatic prayer theology, the diagnosis of prayer-disrupting passions, and the concept of hesychia as the condition of highest prayer.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">John Cassian</span>
+        <span class="father-dates">c. 360–435 AD</span>
+      </div>
+      <div class="father-work">Collationes (Conferences) IX–X — the most influential Western spiritual directory on prayer</div>
+      <div class="father-quote">"The goal of the monk — and indeed of every Christian — is the kingdom of God. The proximate goal, which makes possible the ultimate goal, is purity of heart, without which no one can reach the kingdom." — Conferences I.4</div>
+      <div class="father-body">
+        <p>Cassian was the crucial transmitter between Egyptian desert spirituality and Western monasticism. He spent years among the desert fathers of Egypt before founding monasteries in Gaul (southern France) and writing the <em>Institutes</em> and <em>Conferences</em> — the foundational documents of Western monastic prayer. Benedict's Rule directs monks to read the Conferences daily.</p>
+        <p><strong>Conferences IX–X</strong> (with the fictional Abbot Isaac) contain Cassian's fullest treatment of prayer. Conference IX covers the four types of prayer from 1 Timothy 2:1 (supplication, prayer, intercession, thanksgiving) and their relationship to spiritual growth. Conference X addresses "fiery prayer" and "pure prayer" — the state in which the praying mind transcends even its own petitions and rests in God's presence beyond thought or word.</p>
+        <p><strong>The verse-prayer tradition:</strong> Cassian introduced to the West the practice of fixing on a single short verse for constant repetition — a means of maintaining prayerful attention through the day. He recommended Psalm 70:1: "Make haste, O God, to deliver me; make haste to help me, O Lord." This practice is a direct precursor to the Jesus Prayer. The Liturgy of the Hours structures this by providing a different psalm verse for each hour — what Cassian envisioned as continuous prayerful attention.</p>
+        <p><strong>Purity of heart:</strong> Cassian's organizing concept for the spiritual life — the proximate goal (purity of heart) that enables the ultimate goal (eternal life / the kingdom). Prayer is the primary means of cultivating purity of heart. "We direct all our deeds and our desires" toward the goal of purity of heart, which alone enables uninterrupted communion with God.</p>
+        <p><strong>Key contribution:</strong> The transmission of Egyptian desert spirituality to the West; the theory and practice of "fiery prayer" beyond words; the verse-prayer tradition that prefigures the Jesus Prayer.</p>
+      </div>
+    </div>
+
+    <div class="father-card">
+      <div class="father-header">
+        <span class="father-name">The Desert Fathers &amp; Mothers</span>
+        <span class="father-dates">3rd–5th centuries AD</span>
+      </div>
+      <div class="father-work">Apophthegmata Patrum (Sayings of the Desert Fathers); Lausiac History; Life of Antony</div>
+      <div class="father-quote">"A brother came to Abba Agathon and said: 'Father, which virtue needs the greatest effort?' He said: 'I think there is no labor greater than that of praying to God. For every time a man wants to pray, his enemies the demons try to prevent him.'" — Sayings of the Desert Fathers</div>
+      <div class="father-body">
+        <p>The desert fathers and mothers (Anthony of Egypt, Macarius the Great, Abba Poemen, Abba Moses, Amma Syncletica, Amma Sarah, Amma Theodora) represent the most intensive experiment in Christian prayer the church has known. Fleeing the nominally-Christian empire of the 4th century, they sought God in the Egyptian and Syrian deserts through solitude, manual labor, and unceasing prayer.</p>
+        <p><strong>Prayer as combat:</strong> A pervasive metaphor in desert spirituality is prayer as warfare. The demons attack most aggressively when one attempts to pray — distraction, sleep, agitation, scrupulosity, vainglory. "When you stand up to pray, your enemies the demons flee as they see you kneeling before the Lord" (Abba Agathon). The discipline of returning to prayer regardless of inner state is itself the victory.</p>
+        <p><strong>Work and prayer interwoven:</strong> The desert practice integrated physical labor (basket-weaving, rope-making) with interior prayer. Amma Syncletica: "Just as the most expert swimmer will eventually be drowned if he loses his footing, so it is with us. We must weave together works and prayer." The ideal is not withdrawal from work into prayer but the sanctification of work by prayer.</p>
+        <p><strong>Short, frequent prayer:</strong> Opposite to the impression of the desert as a place of endless long prayers, the desert fathers often advised short, frequent prayer over extended formal sessions. Abba Isaiah: "Make sure that your prayer is not long, for it is in short, frequent prayer that the demons are repelled." This is the practical wisdom behind Cassian's verse-prayer recommendation.</p>
+        <p><strong>Amma (Mothers) on prayer:</strong> Amma Syncletica: "Choose the meekness of Moses and you will find your heart, which is a rock, changed into a spring of water." Amma Sarah: "I put out my foot to ascend the ladder, and I place death before my eyes before going up it." The desert mothers contributed a body of teaching on prayer that is only now being fully recovered by scholars.</p>
+        <p><strong>Key contribution:</strong> The experiential foundation of Christian contemplative prayer, the integration of physical labor and prayer, the theology of prayer as spiritual combat, and the wisdom sayings tradition that shaped all subsequent Christian mysticism.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 8: THEOLOGY ===== -->
+  <section class="study-section" id="sec-theology">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">08</span> Tradition</div>
+      <h2>Systematic Theology of Prayer</h2>
+      <p class="section-intro">Christian prayer raises profound systematic questions that have occupied theologians from the earliest centuries. These are the major theological debates and their most developed answers.</p>
+    </div>
+
+    <h3>The Problem of Prayer</h3>
+    <p>If God is omniscient (knowing all things), why inform him of our needs? If God is sovereign (his purposes fixed), how can prayer change anything? These ancient objections have generated three major theological responses:</p>
+
+    <div class="accordion-item open">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">1. Prayer forms the pray-er (Augustinian response)</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body open">
+        <p>Augustine's answer: God does not need our prayer, but we need to pray. "He does not bid us pray in order to be instructed, but to move our desires toward him — to fix our attention on him — that our heart might be purified and our capacity for divine gift enlarged." Prayer is not primarily directed at God's will (changing it) but at the pray-er's will and character (aligning and expanding it). The purpose of prayer, on this view, is <em>dilatio cordis</em> — the enlargement of the heart to receive what God wills to give. We pray not to inform God but to open ourselves more fully to the grace he is always pouring out.</p>
+        <p>This view is deeply pastoral but risks making prayer seem unidirectional — a spiritual discipline that changes us but makes no difference to God or the world. Its strength is in its focus on the formative power of prayer.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">2. Prayer is ordained as the means of blessing (Calvinian response)</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>Calvin's <em>Institutes</em> III.20 contains one of the most careful treatments of prayer in the Reformed tradition. Calvin argues that prayer does not "overcome God's reluctance" or "bend his will" — God's purposes are fixed. But God has ordained prayer as the <em>means</em> through which his purposes are accomplished. He "has established by his own fixed law that prayers are necessary, not because he needs to be reminded of our necessities, but because we need to seek him and, through the seeking, discover him."</p>
+        <p>The analogy is to secondary causes in providence: God ordained that crops grow through rain, that human communities are sustained through labor, that healing comes through medicine. Prayer is the "secondary cause" through which certain blessings flow. To say "why pray if God's will is fixed?" is like saying "why farm if God controls the harvest?" Both assume that ordained means can be bypassed. Calvin's conclusion: prayer is simultaneously useless (it doesn't overcome God's fixed purposes) and essential (God has appointed it as the channel through which those purposes flow to us).</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">3. God genuinely responds to prayer (Relational response)</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p>A third stream — found in various forms in open theism, classical theism's careful treatments of divine relationality, and much pastoral theology — takes the biblical language of God "relenting," "changing his mind," and "being moved" by prayer at closer to face value. Exodus 32:14 ("the Lord relented from the disaster that he had spoken of bringing on his people"), Jonah 3:10, and Numbers 14:20 ("I have forgiven them, as you asked") describe genuine divine responsiveness to human prayer.</p>
+        <p>On this view, God genuinely interacts with his creatures in real time — not in ways that violate his sovereign purposes, but in ways that reflect genuine personal relationship. Prayer matters not just for the pray-er but in itself — it is a real input into an ongoing divine-human relationship. The analogy is not to a machine with fixed outputs, but to a relationship between persons in which each genuinely affects the other. This view takes most seriously the biblical language of "wrestling" with God (Jacob), of God being "moved" by intercession, and of the Spirit "groaning" within us (Rom 8:26).</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Trinitarian Structure of Prayer</h3>
+    <p>Christian prayer is inherently Trinitarian — a structure that emerges from Scripture and was systematized by the fathers. The three persons play distinct roles:</p>
+
+    <div class="three-col">
+      <div class="info-box">
+        <h3>The Father — Goal &amp; Source</h3>
+        <p>The ultimate addressee of Christian prayer. "Our Father in heaven." Prayer is <em>to</em> the Father. He is the fountain from which all grace flows and toward whom all creation moves. Jesus consistently prays to the Father, and teaches his disciples to do the same.</p>
+        <p>Key texts: Matt 6:9; John 17:1; Eph 3:14; 1 Pet 1:17</p>
+      </div>
+      <div class="info-box">
+        <h3>The Son — Mediator &amp; High Priest</h3>
+        <p>Prayer is offered <em>through</em> the Son. Christ is our high priest who intercedes for us at the Father's right hand (Heb 7:25; Rom 8:34). "Whatever you ask in my name" (John 14:13). His incarnation, death, resurrection, and ascension are the basis on which we have access to the Father.</p>
+        <p>Key texts: John 14–16; Heb 4:14–16; 7:25; Rom 8:34</p>
+      </div>
+      <div class="info-box">
+        <h3>The Spirit — Enabler &amp; Intercessor</h3>
+        <p>Prayer is offered <em>in</em> the Spirit. The Spirit enables prayer (teaching us to pray, interceding within us), gives us the cry of "Abba, Father" (Gal 4:6; Rom 8:15), and intercedes "through wordless groans" (Rom 8:26–27) when we don't know how to pray.</p>
+        <p>Key texts: Rom 8:15–16, 26–27; Gal 4:6; Eph 6:18; Jude 20</p>
+      </div>
+    </div>
+
+    <div class="callout teal">
+      <div class="callout-label">The Trinitarian Grammar</div>
+      Origen articulated it: "Prayer is to be offered to the Father, through the intercession of the Son, in the unity of the Holy Spirit." This became normative for liturgical prayer: "Through Jesus Christ your Son our Lord, who lives and reigns with you in the unity of the Holy Spirit, one God, for ever and ever." Prayer is not the lone individual ascending to a distant deity; it is a participation in the love and communication that flows eternally between the divine persons.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Unanswered Prayer</h3>
+    <p>The Bible does not pretend that all prayer receives what was requested. Scripture identifies several reasons for prayers not being granted as asked:</p>
+
+    <div class="two-col">
+      <div class="info-box">
+        <h3>The "No" of Greater Love</h3>
+        <p>Paul's thorn in the flesh (2 Cor 12:7–10): three times he "pleaded with the Lord to take it away." The answer: "My grace is sufficient for you, for my power is made perfect in weakness." The refusal becomes the occasion for one of the NT's most profound theological insights — that divine strength is most fully expressed through human weakness. The "no" is not abandonment but an act of deeper care that serves a greater purpose the pray-er couldn't see.</p>
+      </div>
+      <div class="info-box">
+        <h3>Moses Denied the Promised Land</h3>
+        <p>"But the Lord was angry with me because of you, and he would not listen to me. 'That is enough,' the Lord said. 'Do not speak to me anymore about this matter'" (Deut 3:26). Moses' request to enter Canaan is refused — and the refusal is embedded in a larger story about leadership failure and its consequences. Even the greatest intercessor in the OT received "no" answers. The denied prayer becomes part of the narrative of how God's purposes work through human limitation.</p>
+      </div>
+      <div class="info-box">
+        <h3>Sin as Hindrance</h3>
+        <p>"If I had cherished iniquity in my heart, the Lord would not have listened" (Ps 66:18). Isaiah 59:1–2: "Your iniquities have separated you from your God; your sins have hidden his face from you, so that he will not hear." 1 Peter 3:7 warns husbands that mistreatment of their wives will "hinder your prayers." James 4:3: "When you ask, you do not receive, because you ask with wrong motives." Sin, injustice, and wrong motivation can disrupt prayer — not because God abandons sinners, but because relational honesty is necessary for genuine prayer.</p>
+      </div>
+      <div class="info-box">
+        <h3>Delay and Eschatological Timing</h3>
+        <p>The persistent widow parable (Luke 18) implies that God sometimes delays not from indifference but for purposes that transcend the immediate situation. Revelation 6:9–11 shows martyrs under the altar crying "How long, O Lord?" and being told to "wait a little longer." Some prayers — including the prayer of Jesus in John 17 for the full unity of the church — have not yet been fully answered. These await eschatological fulfillment. The delay is not denial; it is timing.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Faith and Prayer</h3>
+    <p>The NT links prayer and faith repeatedly: "Ask in faith, without doubting" (James 1:6); "Whatever you ask for in prayer, believe that you have received it" (Mark 11:24). What is "faith" in the context of prayer?</p>
+
+    <div class="callout gold">
+      <div class="callout-label">What "Faith" Means in Prayer</div>
+      "Faith" in NT prayer texts is not the psychological manufacture of subjective certainty ("believe hard enough and it will happen"). That reading leads to a cruel theology in which unanswered prayer proves insufficient faith. Rather, faith is <em>trust in the character of God</em> — praying without "double-mindedness" (James 1:8, dipsychos — literally "two-souled") about who God is. The "wavering" James condemns is not uncertainty about the outcome of a specific prayer, but instability about God's fundamental trustworthiness and goodness. Faith-filled prayer trusts that God hears, that he is good, and that he will act wisely — even if his answer is not what we asked.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Prayer and Divine Sovereignty</h3>
+    <p>The deepest theological question about prayer is the relationship between divine sovereignty and genuine human agency. The classical resolution across most theological traditions:</p>
+    <p>God's sovereignty is not mechanical determinism but personal lordship — he governs history through real causes, including the genuine prayers of real persons. Prayer "works" not by overriding God's will but by participating in it. The Spirit within the believer prays "according to God's will" (Rom 8:27) — the prayer that conforms to God's purposes is the prayer that is answered. The mystery is that God ordains both the praying and the answer as genuinely connected: prayer is neither magic (compelling God) nor theater (meaningless performance). It is real participation in the ongoing conversation between Creator and creature.</p>
+
+  </section>
+
+  <!-- ===== SECTION 9: PRACTICE ===== -->
+  <section class="study-section" id="sec-practice">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">09</span> Tradition</div>
+      <h2>Spiritual Practice</h2>
+      <p class="section-intro">The biblical and patristic tradition shapes not just a theology of prayer but a way of living prayerfully — specific practices that structure time, body, and attention around communion with God.</p>
+    </div>
+
+    <h3>The Canonical Hours — Structuring Life around Prayer</h3>
+    <p>Both Judaism and early Christianity understood that prayer requires structure — that without regular, appointed times, prayer collapses into occasional impulse. The canonical hours transform the whole day into a liturgical drama reenacting the mystery of Christ.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Vigil</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Vigils / Matins (Midnight–3am)</h3>
+          <p>The night watch — roots in the monastic practice of rising in the middle of the night for prayer, following the pattern of the desert fathers. Psalm 119:62: "At midnight I rise to give you thanks." The symbolism: keeping watch in darkness, holding vigil for the coming dawn of resurrection. In cathedral practice, Vigils on major feast days were nightlong services. The night is not dead time but the hour of encounter for many biblical figures: Jacob wrestles at night, Jesus prays at Gethsemane in the night, the women come to the tomb "while it was still dark."</p>
+          <div class="tl-ref">Ps 63:6; 119:62; 130:6; Luke 6:12</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Lauds</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Lauds / Morning Prayer (Sunrise)</h3>
+          <p>The first prayer of the waking day — the great hymn to light and resurrection. The name "Lauds" comes from the "praise" psalms (148–150) always included. The Benedictus (Luke 1:68–79 — Zechariah's song at John the Baptist's birth) is the traditional canticle: "Blessed is the Lord, the God of Israel, who has visited and redeemed his people." Morning prayer greets the new day as an act of faith — consecrating the hours ahead, orienting the mind toward God before the distractions of the day accumulate. Mark 1:35 records Jesus rising "very early, while it was still dark" to pray.</p>
+          <div class="tl-ref">Ps 5:3; 63; 143:8; Mark 1:35; Luke 1:68–79</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Terce</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Terce / Third Hour (9am)</h3>
+          <p>The hour of the Spirit's descent at Pentecost (Acts 2:15: "it is only nine in the morning"). A midmorning pause recalling the Spirit's coming and the beginning of the church's mission. Cyprian connected this to the beginning of Christ's passion (the hearing before Pilate begins mid-morning). The third hour punctuates the working day — a reminder that the Spirit accompanies ordinary labor. Brief, focused, connected to mission: "Fill me with your Spirit for the work of this day."</p>
+          <div class="tl-ref">Acts 2:15; Mark 15:25</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Sext</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Sext / Sixth Hour (Noon)</h3>
+          <p>The hour of the crucifixion — "from the sixth hour there was darkness over all the land until the ninth hour" (Matt 27:45). Also the hour of Peter's vision (Acts 10:9). Noon prayer holds the darkness of the cross in the midst of the day's busiest hours. It is a memento mori — a remembrance that the world's activity takes place under the shadow and light of Christ's sacrifice. "At midday, turn your heart to God."</p>
+          <div class="tl-ref">Matt 27:45; Acts 10:9; Ps 55:17</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">None</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>None / Ninth Hour (3pm)</h3>
+          <p>The "hour of prayer" par excellence in Acts (3:1: "Peter and John were going up to the temple at the hour of prayer, the ninth hour"). The hour Christ cried "It is finished" and breathed his last (Matt 27:50; John 19:30). The hour the Roman centurion makes his confession. The thief on the cross prays at this hour and hears "today you will be with me in paradise." None is the hour of death and deathless promise — the two held together in the cry of the dying Savior.</p>
+          <div class="tl-ref">Acts 3:1; Matt 27:46–50; John 19:30; Luke 23:43</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Vespers</div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <h3>Vespers / Evening Prayer (Sunset)</h3>
+          <p>The great evening office — structurally parallel to Lauds. Opening with the ancient hymn "O Gladsome Light" (Phos Hilaron — possibly 3rd century, the oldest Christian hymn outside Scripture): "O gladsome light of the holy glory of the immortal Father, heavenly, holy, blessed Jesus Christ. Now that we have come to the setting of the sun and behold the evening light, we praise God: Father, Son, and Holy Spirit." The Magnificat (Luke 1:46–55 — Mary's song) is the traditional canticle. Vespers reviews the day in gratitude and confession.</p>
+          <div class="tl-ref">Ps 141:2; Luke 1:46–55</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot" style="font-size:10px">Compline</div></div>
+        <div class="tl-content">
+          <h3>Compline / Night Prayer (Bedtime)</h3>
+          <p>The final prayer of the day — an act of surrender. "Into your hands I commit my spirit" (Ps 31:5) — Jesus' last words from the cross, prayed nightly as the believer entrusts body and soul to God through the "little death" of sleep. The Nunc Dimittis (Luke 2:29–32 — Simeon's song: "Lord, now you let your servant depart in peace") is the traditional canticle. Compline is characterized by tranquility and trust: the day is done, its work and failures released to God, the night committed to his keeping. "He grants sleep to those he loves" (Ps 127:2).</p>
+          <div class="tl-ref">Ps 4:8; 31:5; 91; Luke 2:29–32</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Lectio Divina — Prayerful Reading of Scripture</h3>
+    <p>Lectio divina (sacred/divine reading) is the ancient practice of reading Scripture as an act of prayer — not primarily for information but for encounter with the living God. Though Guigo II systematized the four movements in the 12th century, the practice reaches back to the desert fathers and Origen.</p>
+
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:15px">Lectio</div><div class="model-word">Reading</div></div>
+      <div class="model-content">
+        <h3>Read slowly, attentively, repeatedly</h3>
+        <p>Choose a short passage (a few verses, a paragraph). Read it slowly — ideally aloud, as was the ancient practice. Read it again. And again. You are not reading for information but listening for the word God has for you today. A word or phrase will arrest your attention. Stop there. This word is your "food" for the lectio.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:13px">Medi&shy;tatio</div><div class="model-word">Meditation</div></div>
+      <div class="model-content">
+        <h3>Chew on the word — turn it over</h3>
+        <p>Meditatio in the ancient sense is not eastern emptying of mind but active mental engagement with the text — "rumination" (the Latin word ruminare means to chew the cud). Repeat the word or phrase. Hold it in your mind. Let it resonate with your life. What associations arise? What emotions? What memories? You are pressing the juice out of the fruit.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:14px">Oratio</div><div class="model-word">Prayer</div></div>
+      <div class="model-content">
+        <h3>Respond in prayer — speak back</h3>
+        <p>Let the meditation give rise to prayer — whatever is authentic: confession, gratitude, petition, lament, praise, surrender. You are speaking back to God what he has spoken to you. The word becomes a prayer: if the text is about forgiveness, pray for forgiveness and for a forgiving heart. If about God's power, pray for trust in that power in your specific situation. This is the heart of lectio: the text becoming the language of your prayer.</p>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-letter"><div class="model-big" style="font-size:12px">Contem&shy;platio</div><div class="model-word">Contemplation</div></div>
+      <div class="model-content">
+        <h3>Rest in God's presence — beyond words</h3>
+        <p>The movement from words to silence. Having spoken, now rest. Receive. The lectio, meditatio, and oratio have oriented the whole self toward God; contemplatio is the moment of simple, loving attention — not emptiness but fullness, not absence of thought but the quieting of compulsive thought in the presence of the One who is known. Guigo: "Seek in reading, and you will find in meditation; knock in prayer, and it will be opened to you in contemplation."</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Jesus Prayer</h3>
+
+    <div class="scripture">
+      <div class="ref">Eastern Orthodox — rooted in Luke 18:13, the desert fathers, and systematized in hesychasm</div>
+      <div class="text">"Lord Jesus Christ, Son of God, have mercy on me, a sinner."</div>
+    </div>
+
+    <p>The Jesus Prayer distills the entire gospel into a single breath-prayer. Its elements:</p>
+
+    <div class="three-col">
+      <div class="info-box">
+        <h3>"Lord Jesus Christ"</h3>
+        <p>The full christological confession: <em>Kyrios</em> (Lord — the name above all names, Philippians 2:9–11), <em>Jesus</em> (the historical human being, Joshua — "God saves"), <em>Christ</em> (Messiah, Anointed One). The prayer begins by naming who God is before asking for anything.</p>
+      </div>
+      <div class="info-box">
+        <h3>"Son of God"</h3>
+        <p>The theological identification — this Jesus is of divine nature, not merely a human teacher. This phrase grounds the prayer in Trinitarian theology: we are approaching the Father through the Son. It echoes the centurion's confession (Matt 27:54) and Peter's confession (Matt 16:16).</p>
+      </div>
+      <div class="info-box">
+        <h3>"Have mercy on me, a sinner"</h3>
+        <p>The publican's prayer (Luke 18:13) verbatim, combined with the lepers' cry (Luke 17:13) and Bartimaeus's cry (Mark 10:47). Eleison (mercy) echoes the Hebrew hesed (steadfast love) and the Kyrie of the liturgy. "A sinner" — corporate identity, not just individual: I place myself in the company of all who need mercy.</p>
+      </div>
+    </div>
+
+    <p>The practice involves connecting the prayer to the breath and heartbeat — inhaling on "Lord Jesus Christ, Son of God" and exhaling on "have mercy on me, a sinner." With time and practice, the prayer begins to "pray itself" — what Cassian called "fiery prayer," what the hesychasts called prayer of the heart. The anonymous 19th-century Russian classic <em>The Way of a Pilgrim</em> describes this journey from conscious repetition to the prayer becoming the pulse of the inner life.</p>
+
+    <div class="divider"></div>
+
+    <h3>Fasting and Prayer</h3>
+    <p>The biblical pairing of fasting and prayer is consistent across both Testaments and is treated by Jesus as an assumed practice of his disciples (Matt 6:16–18: "when you fast" — not "if you fast"). The logic of fasting in prayer:</p>
+
+    <div class="two-col">
+      <div class="info-box">
+        <h3>Intensification of Petition</h3>
+        <p>Fasting accompanies prayer in Scripture's most urgent petitions: Moses fasts on Sinai (Ex 34:28), David fasts for his dying child (2 Sam 12:16), Daniel fasts before his great prayer (Dan 9:3), Esther calls a corporate fast before approaching the king (Est 4:16), Jesus fasts for 40 days before his ministry begins (Matt 4:2). Fasting is not magic — it does not compel God — but it expresses and increases the seriousness of the prayer. It embodies with the whole body the earnestness of the petition.</p>
+      </div>
+      <div class="info-box">
+        <h3>Reordering of Desire</h3>
+        <p>Fasting addresses the deepest problem in prayer: divided desire. If we want God's will but also very much want our own comfort and control, prayer is compromised. Fasting loosens the grip of physical appetite as a way of training the deeper appetites — practicing saying "not this" in order to say more fully "yes, God." It also creates physical space (the empty stomach) that becomes a physical reminder to pray: hunger pangs become prayer prompts. Isaiah 58:6–7 redefines true fasting as social justice — loosing the oppressed, feeding the hungry. The outward fast must correlate with the inward reordering of desires.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Corporate Prayer</h3>
+    <p>Throughout Scripture, communal prayer is not merely the aggregate of individual prayers but has its own distinctive character. Jesus promises a specific presence for gathered prayer: "Where two or three gather in my name, there am I with them" (Matt 18:20). The early church's prayer was robustly corporate — they prayed together in times of crisis (Acts 4), sent missionaries with prayer (Acts 13), and gathered specifically to pray for imprisoned members (Acts 12).</p>
+
+    <div class="callout teal">
+      <div class="callout-label">Why Corporate Prayer Matters</div>
+      Corporate prayer is not more effective because of numbers (as if God responds to voting majorities). Rather, the gathered community of believers embodies the "body of Christ" praying as a whole — the eschatological community of the new covenant interceding together. The Lord's Prayer is irreducibly communal ("our Father," "give us," "forgive us"). Individual prayer is never truly solitary: even when alone, the Christian prays in the church, as part of the body. Corporate prayer makes visible what is always structurally true.
+    </div>
+
+  </section>
+
+  <!-- ===== SECTION 10: BIBLIOGRAPHY ===== -->
+  <section class="study-section" id="sec-bibliography">
+    <div class="section-header">
+      <div class="section-eyebrow"><span class="num">10</span> Resources</div>
+      <h2>Further Reading</h2>
+      <p class="section-intro">A curated bibliography for deeper study across biblical, patristic, historical, and devotional dimensions of the theology of prayer.</p>
+    </div>
+
+    <h3>Biblical &amp; Exegetical</h3>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Old Testament Prayer</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>Claus Westermann</strong> — <em>Praise and Lament in the Psalms</em> (1965/1981). The foundational form-critical study of the Psalms. Essential reading for understanding the structure of lament and praise.</p>
+        <p><strong>Walter Brueggemann</strong> — <em>Praying the Psalms</em> (1982); <em>The Psalms and the Life of Faith</em> (1995). Brilliant pastoral-theological engagement with the psalms as Israel's prayer book. Brueggemann's categories of orientation, disorientation, and new orientation are indispensable.</p>
+        <p><strong>Patrick Miller</strong> — <em>They Cried to the Lord: The Form and Theology of Biblical Prayer</em> (1994). The most comprehensive scholarly treatment of OT prayer. Covers vocabulary, forms, settings, and theology.</p>
+        <p><strong>Samuel Balentine</strong> — <em>Prayer in the Hebrew Bible: The Drama of Divine-Human Dialogue</em> (1993). Examines OT prayer as genuine dialogue — including the difficulty of God's apparent absence.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">New Testament Prayer</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>D.A. Carson</strong> — <em>A Call to Spiritual Reformation: Priorities from Paul and His Prayers</em> (1992). Exegetically careful study of Paul's epistolary prayers. Practical application with solid scholarship.</p>
+        <p><strong>O. Hallesby</strong> — <em>Prayer</em> (1931). A devotional classic on NT prayer — particularly penetrating on helplessness as the condition of genuine prayer.</p>
+        <p><strong>David Crump</strong> — <em>Knocking on Heaven's Door: A New Testament Theology of Petitionary Prayer</em> (2006). Comprehensive NT survey with careful attention to the tension between sovereignty and answered prayer.</p>
+        <p><strong>N.T. Wright</strong> — <em>The Lord and His Prayer</em> (1996). A theologian's meditation on the Lord's Prayer in its Jewish and eschatological context. Accessible and profound.</p>
+      </div>
+    </div>
+
+    <h3>Patristic &amp; Historical</h3>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Primary Sources</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>Tertullian</strong> — <em>De Oratione</em> (On Prayer). Available in the Ante-Nicene Fathers series. The oldest Christian prayer treatise; short and accessible.</p>
+        <p><strong>Origen</strong> — <em>On Prayer</em> (Peri Euches). The most philosophically sophisticated early treatment. Available in the Ancient Christian Writers series.</p>
+        <p><strong>Cyprian</strong> — <em>On the Lord's Prayer</em>. Available in the Ante-Nicene Fathers. Particularly valuable on the communal dimension of prayer.</p>
+        <p><strong>Augustine</strong> — <em>Confessions</em> (entire text as prayer); <em>Letter 130</em> (on prayer); <em>Expositions of the Psalms</em>. Available in Nicene and Post-Nicene Fathers; modern translations in New City Press series.</p>
+        <p><strong>John Cassian</strong> — <em>Conferences IX–X</em> (on prayer). Available in the Nicene and Post-Nicene Fathers series. The most formative patristic text on practical Western prayer.</p>
+        <p><strong>Sayings of the Desert Fathers</strong> — <em>Apophthegmata Patrum</em>. Available in the Cistercian Studies series, translated by Benedicta Ward. Essential for understanding early Christian prayer practice.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Historical and Liturgical</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>Paul Bradshaw</strong> — <em>Two Ways of Praying</em> (1995); <em>Early Christian Worship</em> (1996). Authoritative study of early Christian liturgical prayer forms. Scholarly but accessible.</p>
+        <p><strong>Columba Stewart</strong> — <em>Cassian the Monk</em> (1998). The best scholarly treatment of Cassian's prayer theology and its development from the desert tradition.</p>
+        <p><strong>Derwas Chitty</strong> — <em>The Desert a City</em> (1966). Classic study of Egyptian and Palestinian monasticism. Background for understanding the prayer world of the desert fathers.</p>
+      </div>
+    </div>
+
+    <h3>Systematic Theology</h3>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Theological Treatments</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>John Calvin</strong> — <em>Institutes of the Christian Religion</em>, III.20 ("On Prayer"). A masterly systematic treatment of prayer's necessity, nature, and rules. Dense but rewarding.</p>
+        <p><strong>P.T. Forsyth</strong> — <em>The Soul of Prayer</em> (1916). Often called the best short book on prayer in the English language. Forsyth's theology of prayer as the "supreme form of the Christian life" is unsurpassed in its depth.</p>
+        <p><strong>Karl Barth</strong> — <em>Prayer</em> (translated from 1949 German; 2002 edition). Based on Barth's exposition of the Lord's Prayer. Rigorous Reformed theology applied to prayer. Also: <em>Church Dogmatics</em> III/4 on prayer.</p>
+        <p><strong>Simon Chan</strong> — <em>Spiritual Theology</em> (1998). Integrates systematic theology with the contemplative tradition. Excellent on Trinitarian prayer and its practical dimensions.</p>
+      </div>
+    </div>
+
+    <h3>Devotional Classics</h3>
+    <div class="accordion-item">
+      <button class="accordion-trigger" onclick="toggleAccordion(this)">
+        <span class="acc-title">Formative Prayer Literature</span>
+        <span class="acc-chevron">▾</span>
+      </button>
+      <div class="accordion-body">
+        <p><strong>Anonymous (19th-century Russian)</strong> — <em>The Way of a Pilgrim</em>. The classic account of the Jesus Prayer tradition — a pilgrim's journey into unceasing prayer. Accessible, moving, and theologically rich.</p>
+        <p><strong>Brother Lawrence</strong> — <em>The Practice of the Presence of God</em> (17th century). Letters and conversations from a Carmelite lay brother who cultivated continuous prayer in the kitchen. A masterpiece of accessible mysticism.</p>
+        <p><strong>Thomas Merton</strong> — <em>Contemplative Prayer</em> (1969). The best 20th-century guide to contemplative prayer in the Western tradition. Draws on the desert fathers, Cassian, and the medieval mystics.</p>
+        <p><strong>Eugene Peterson</strong> — <em>Answering God: The Psalms as Tools for Prayer</em> (1989). A pastor-theologian's guide to praying the Psalms. Practically excellent and theologically sound.</p>
+        <p><strong>Dietrich Bonhoeffer</strong> — <em>Psalms: The Prayer Book of the Bible</em> (1940). A brief, profound meditation on why Christians must pray the Psalms — especially the difficult ones. Essential reading.</p>
+        <p><strong>Andrew Murray</strong> — <em>With Christ in the School of Prayer</em> (1885). Classic evangelical guide to NT prayer, built around 31 chapters on Jesus' prayer teaching. Slightly dated in idiom but deeply scriptural.</p>
+      </div>
+    </div>
+
+  </section>
+
+  </div><!-- end content-area -->
+
+</main><!-- end main -->
+
+<a href="#" id="back-to-top" aria-label="Back to top">↑</a>
+
+<script>
+// Section navigation
+function showSection(id, el) {
+  document.querySelectorAll('.study-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) { sec.classList.add('active'); sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (el) el.classList.add('active');
+  clearSearch();
+}
+
+// Accordion
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  const body = item.querySelector('.accordion-body');
+  const isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+
+// Progress bar
+const main = document.getElementById('main');
+const fill = document.getElementById('progress-fill');
+main.addEventListener('scroll', () => {
+  const pct = (main.scrollTop / (main.scrollHeight - main.clientHeight)) * 100;
+  fill.style.width = Math.min(pct, 100) + '%';
+  document.getElementById('back-to-top').classList.toggle('visible', main.scrollTop > 400);
+});
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  fill.style.width = Math.min(pct, 100) + '%';
+  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
+
+// Back to top
+document.getElementById('back-to-top').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.study-section.active')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// Sidebar toggle
+var _sidebarBtn = document.getElementById('topic-sidebar-toggle');
+if (window.innerWidth <= 1000) {
+  document.body.classList.remove('sidebar-open');
+  if (_sidebarBtn) _sidebarBtn.setAttribute('aria-expanded', 'false');
+}
+if (_sidebarBtn) {
+  _sidebarBtn.addEventListener('click', function() {
+    var isOpen = document.body.classList.toggle('sidebar-open');
+    _sidebarBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
+// Close sidebar on nav click when narrow (overlay mode)
+document.querySelectorAll('.nav-item').forEach(function(item) {
+  item.addEventListener('click', function() {
+    if (window.innerWidth <= 1000) {
+      document.body.classList.remove('sidebar-open');
+      if (_sidebarBtn) _sidebarBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Search
+function handleSearch(query) {
+  const q = query.toLowerCase().trim();
+  if (!q) { clearSearch(); return; }
+
+  // Show all sections
+  document.querySelectorAll('.study-section').forEach(s => {
+    s.classList.add('active');
+  });
+
+  // Remove old highlights
+  document.querySelectorAll('.highlight').forEach(h => {
+    h.outerHTML = h.innerHTML;
+  });
+
+  if (q.length < 2) return;
+
+  // Highlight matching text
+  const walker = document.createTreeWalker(
+    document.querySelector('.content-area'),
+    NodeFilter.SHOW_TEXT,
+    null
+  );
+
+  const textNodes = [];
+  let node;
+  while (node = walker.nextNode()) textNodes.push(node);
+
+  textNodes.forEach(tn => {
+    const text = tn.nodeValue;
+    const lc = text.toLowerCase();
+    if (lc.includes(q)) {
+      const span = document.createElement('span');
+      const idx = lc.indexOf(q);
+      span.innerHTML =
+        escHtml(text.slice(0, idx)) +
+        '<mark class="highlight">' + escHtml(text.slice(idx, idx + q.length)) + '</mark>' +
+        escHtml(text.slice(idx + q.length));
+      tn.parentNode.replaceChild(span, tn);
+    }
+  });
+}
+
+function escHtml(t) {
+  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function clearSearch() {
+  document.querySelectorAll('.highlight').forEach(h => {
+    h.outerHTML = h.innerHTML;
+  });
+  if (!document.querySelector('.study-section.active')) {
+    document.getElementById('sec-overview').classList.add('active');
+    document.querySelector('.nav-item').classList.add('active');
+  }
+}
+
+// Initialize first accordion open
+document.querySelectorAll('.accordion-item.open .accordion-body').forEach(b => b.classList.add('open'));
+</script>
+
+<script src="../../assets/js/bible.js"></script>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* ============================================================
+   Bible Study Website — Topic Page Shell
+   Shared site header grafted onto self-contained topic pages.
+   ============================================================ */
+
+/* ── Site header on topic pages ─────────────────────────────
+   The topic pages have their own full-screen layouts.
+   This fixed bar sits above everything and hosts the main nav.
+   ──────────────────────────────────────────────────────────── */
+.site-header--topic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h, 52px);
+  z-index: 1000;
+  background: var(--color-primary, #5c3d1e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.site-header--topic .site-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header--topic .site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+
+.site-header--topic .site-nav a {
+  color: #e8d9bb;
+  text-decoration: none;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.site-header--topic .site-nav a:hover,
+.site-header--topic .site-nav a:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Active section link (parent of current page) */
+.site-header--topic .site-nav a[aria-current] {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201, 162, 74, 0.7);
+}
+
+/* Breadcrumb: follows the section link it belongs to */
+.site-nav__breadcrumb {
+  color: #c9a24a;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+/* Version picker in the topic header */
+.site-header--topic .version-picker {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.site-header--topic .version-picker label {
+  color: #e8d9bb;
+}
+
+.site-header--topic .version-picker select {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.92);
+  color: #2c2416;
+  cursor: pointer;
+}
+
+.site-header--topic .version-picker select:focus {
+  outline: 2px solid #c9a24a;
+  outline-offset: 1px;
+}
+
+/* ── Sidebar toggle button in topic header ───────────────── */
+.topic-sidebar-toggle {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  color: #e8d9bb;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.28rem 0.55rem;
+  transition: background 0.12s, color 0.12s;
+}
+.topic-sidebar-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.topic-sidebar-toggle:focus-visible { outline: 2px solid #c9a24a; outline-offset: 2px; }
+
+/* ── Nav action pills inside topic header ────────────────── */
+.site-header--topic .site-nav__action {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 20px;
+  padding: 0.16rem 0.75rem;
+  color: #e8d9bb;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  margin-right: 0.75rem;
+}
+.site-header--topic .site-nav__action:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.75);
+  color: #fff;
+}
+.site-header--topic .site-nav__action[aria-current] {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ── Studies panel button inside topic header ────────────── */
+.site-header--topic .nav-panel-btn {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 20px;
+  padding: 0.16rem 0.75rem;
+  background: transparent;
+  color: #e8d9bb;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  margin-right: 0;
+}
+.site-header--topic .nav-panel-btn:hover,
+.site-header--topic .nav-panel-btn[aria-expanded="true"] {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.75);
+  color: #fff;
+}
+
+/* ── Nav panel backdrop + panel (shared, hardcoded for topic pages) ── */
+.nav-panel-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1100;
+}
+.nav-panel-overlay.is-visible { display: block; }
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  background: #fff;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.22s ease;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.22);
+  overflow-y: auto;
+}
+.nav-panel.is-open { transform: translateX(0); }
+
+.nav-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid rgba(92,61,30,0.15);
+  background: #5c3d1e;
+  flex-shrink: 0;
+}
+.nav-panel__heading {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-panel__close {
+  background: transparent;
+  border: none;
+  color: #e8d9bb;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.2rem 0.35rem;
+  border-radius: 4px;
+}
+.nav-panel__close:hover { color: #fff; }
+
+.nav-panel__section { padding: 1rem 1.25rem 0.25rem; }
+.nav-panel__section-title {
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7a6a55;
+  margin: 0 0 0.45rem;
+}
+.nav-panel__list { list-style: none; margin: 0; padding: 0; }
+.nav-panel__list a {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  border-radius: 5px;
+  color: #2c2416;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  transition: background 0.1s;
+}
+.nav-panel__list a:hover {
+  background: #faf8f4;
+  color: #5c3d1e;
+}
+.nav-panel__list a[aria-current="page"] {
+  background: #f0e9dc;
+  color: #5c3d1e;
+  font-weight: 600;
+}
+
+/* ── Mobile: collapse nav on narrow screens ──────────────── */
+@media (max-width: 600px) {
+  .site-header--topic .site-nav a:not(:first-child):not(.site-nav__action) {
+    display: none;
+  }
+  .site-nav__breadcrumb { display: none; }
+  .nav-panel { width: 100%; }
+}

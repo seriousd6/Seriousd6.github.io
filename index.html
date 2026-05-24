@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Personal Bible study notes, topical studies, and hotlinked scripture references." />
+  <title>Bible Study</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/bible-ui.css" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="/">📖 Bible Study</a>
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="read/" class="site-nav__action">Reader</a>
+        <a href="search/" class="site-nav__action">Search</a>
+      </nav>
+      <div class="version-picker">
+        <label for="bible-version">Version:</label>
+        <select id="bible-version"><!-- populated by bible.js --></select>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main ── -->
+  <main>
+    <div class="container">
+      <h1>Welcome</h1>
+      <p>
+        A personal collection of Bible study notes, topical studies, and
+        scripture references. Use the <strong>Topics</strong> menu to browse
+        studies, or click any scripture reference to read it in your preferred
+        Bible version.
+      </p>
+
+      <blockquote class="scripture">
+        <span class="bsw-verse" data-ref="Psalm 119:105">Thy word is a lamp unto my feet, and a light unto my path.</span>
+        <cite>— <a class="ref" data-ref="Psalm 119:105">Psalm 119:105</a></cite>
+      </blockquote>
+
+      <h2>Featured Studies</h2>
+      <div class="topic-grid">
+        <a class="topic-card" href="topics/prayer/">
+          <h3>🙏 Prayer</h3>
+          <p>What the Bible teaches about prayer, how to pray, and promises related to prayer.</p>
+        </a>
+        <a class="topic-card" href="topics/revelation/">
+          <h3>📜 Book of Revelation</h3>
+          <p>A study through the last book of the Bible — prophecy, symbols, and hope.</p>
+        </a>
+        <!-- ADD NEW TOPIC CARDS HERE -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+      <p class="small">Scripture references open inline — hover for a preview, click for the full passage.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/bible.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Read the Bible by reference with version switching." />
+  <title>Bible Reader — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/reader.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../">📖 Bible Study</a>
+      <nav class="site-nav">
+        <a href="../">Home</a>
+        <a href="../read/" class="site-nav__action" aria-current="page">Reader</a>
+        <a href="../search/" class="site-nav__action">Search</a>
+      </nav>
+      <div class="version-picker">
+        <label for="bible-version">Version:</label>
+        <select id="bible-version"><!-- populated by bible.js --></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="reader-lookup-bar">
+        <input id="reader-lookup-input" class="reader-lookup-input" type="search"
+          placeholder="Gen 1; John 3:16-21; Rom 8:28, 38-39"
+          autocomplete="off" spellcheck="false" aria-label="Go to Bible reference" />
+        <button id="reader-lookup-btn" class="reader-lookup-btn">Go</button>
+        <span id="reader-lookup-status" class="reader-lookup-status" aria-live="polite"></span>
+      </div>
+
+      <div id="reader-results" class="reader-results"></div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bible.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

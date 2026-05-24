@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.sublime-workspace
+.sublime/
+*.swp
+*~
+
+# Build artifacts
+/dist/
+/node_modules/
+npm-debug.log*
+
+# Local dev
+.env
+.env.local
+local-notes.md

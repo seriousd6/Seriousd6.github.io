@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="TOPIC_DESCRIPTION" />
+  <title>TOPIC_TITLE — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../../">📖 Bible Study</a>
+      <nav class="site-nav">
+        <a href="../../">Home</a>
+        <a href="../../read/" class="site-nav__action">Reader</a>
+        <a href="../../search/" class="site-nav__action">Search</a>
+        <!-- Breadcrumb always last: -->
+        <!-- <span class="site-nav__breadcrumb">/ PAGE_TITLE</span> -->
+      </nav>
+      <div class="version-picker">
+        <label for="bible-version">Version:</label>
+        <select id="bible-version"><!-- populated by bible.js --></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h1>TOPIC_TITLE</h1>
+      <p>TOPIC_INTRO — brief summary of what this study covers.</p>
+
+      <!-- ── Key Verse ── -->
+      <blockquote class="scripture">
+        KEY VERSE TEXT HERE
+        <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
+      </blockquote>
+
+      <!-- ── Section 1 ── -->
+      <h2>Section Heading</h2>
+      <p>
+        Study notes go here. Reference scripture inline like this:
+        <a class="ref" data-ref="John 3:16">John 3:16</a> or in a block:
+      </p>
+      <blockquote class="scripture">
+        Verse text here.
+        <cite><a class="ref" data-ref="John 3:16">John 3:16</a></cite>
+      </blockquote>
+
+      <!-- ADD MORE SECTIONS AS NEEDED -->
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/bible.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

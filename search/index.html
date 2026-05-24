@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Search the Bible by keyword or phrase across all books." />
+  <title>Verse Search — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../">📖 Bible Study</a>
+      <nav class="site-nav">
+        <a href="../">Home</a>
+        <a href="../read/" class="site-nav__action">Reader</a>
+        <a href="../search/" class="site-nav__action" aria-current="page">Search</a>
+      </nav>
+      <div class="version-picker">
+        <label for="bible-version">Version:</label>
+        <select id="bible-version"><!-- populated by bible.js --></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h1>Verse Search</h1>
+      <p>Type a word or phrase to search every verse in the current Bible version.</p>
+
+      <div class="search-page-input-wrap">
+        <input id="bsw-search-input" class="search-page-input" type="search"
+          placeholder="e.g. love, in the beginning, &quot;the word was God&quot;"
+          autocomplete="off" spellcheck="false" />
+        <p class="search-page-status" id="bsw-search-status"></p>
+      </div>
+
+      <div id="bsw-search-results" class="search-page-results" role="list"></div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bible.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

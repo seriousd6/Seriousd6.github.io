@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="All Bible study topics." />
+  <title>Topics — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../">📖 Bible Study</a>
+      <nav class="site-nav">
+        <a href="../">Home</a>
+        <a href="../read/" class="site-nav__action">Reader</a>
+        <a href="../search/" class="site-nav__action">Search</a>
+      </nav>
+      <div class="version-picker">
+        <label for="bible-version">Version:</label>
+        <select id="bible-version"><!-- populated by bible.js --></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Studies</h1>
+      <p>Browse by Bible book or topical study.</p>
+
+      <section id="books">
+        <h2>Bible Books</h2>
+        <div class="topic-grid">
+          <a class="topic-card" href="revelation/">
+            <h3>📜 Book of Revelation</h3>
+            <p>Chapter-by-chapter study through Revelation with cross-references.</p>
+          </a>
+          <!-- ADD NEW BOOK CARDS HERE -->
+        </div>
+      </section>
+
+      <section id="topics">
+        <h2>Topical Studies</h2>
+        <div class="topic-grid">
+          <a class="topic-card" href="prayer/">
+            <h3>🙏 Prayer</h3>
+            <p>Biblical foundations of prayer, key passages, and study notes.</p>
+          </a>
+          <!-- ADD NEW TOPIC CARDS HERE -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bible.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
