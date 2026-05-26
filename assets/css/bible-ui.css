@@ -5,7 +5,7 @@
 /* ── Tooltip ─────────────────────────────────────────────── */
 .bsw-tooltip {
   position: fixed;
-  z-index: 9000;
+  z-index: 9300;
   max-width: 300px;
   min-width: 180px;
   background: #3a2810;
@@ -198,6 +198,26 @@
 .bsw-modal__tab:focus-visible {
   outline: 2px solid var(--color-accent, #b8860b);
   outline-offset: -2px;
+}
+
+.bsw-modal__tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  margin-left: 5px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary, #5c3d1e);
+  border-radius: 8px;
+  line-height: 1;
+  vertical-align: middle;
+}
+.bsw-modal__tab--active .bsw-modal__tab-badge {
+  background: var(--color-accent, #b8860b);
 }
 
 /* Verse body */
@@ -610,6 +630,145 @@
   font-size: 0.85rem;
 }
 
+/* ── Search mode toggle pills ────────────────────────────── */
+.search-mode-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.search-mode-btn {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 20px;
+  background: var(--color-surface, #fff);
+  color: var(--color-muted, #7a6a55);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.search-mode-btn:hover {
+  border-color: var(--color-accent, #b8860b);
+  color: var(--color-accent, #b8860b);
+}
+
+.search-mode-btn--active {
+  background: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary, #5c3d1e);
+  color: #fff;
+}
+.search-mode-btn--active:hover {
+  background: var(--color-primary, #5c3d1e);
+  color: #fff;
+}
+
+/* ── Topic search results ────────────────────────────────── */
+.search-topic-result {
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-left: 3px solid var(--color-primary, #5c3d1e);
+  border-radius: 6px;
+  margin-bottom: 0.65rem;
+  background: var(--color-surface, #fff);
+}
+
+.str-breadcrumb {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.str-topic-link {
+  font-weight: 600;
+  color: var(--color-primary, #5c3d1e);
+  text-decoration: none;
+}
+.str-topic-link:hover { text-decoration: underline; }
+
+.str-sep {
+  color: var(--color-muted, #7a6a55);
+}
+
+.str-heading {
+  color: var(--color-text, #2c2416);
+}
+
+.str-excerpt {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--color-muted, #7a6a55);
+  margin-bottom: 0.5rem;
+}
+
+.str-open {
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+
+.search-highlight {
+  background: color-mix(in srgb, var(--color-accent, #b8860b) 22%, transparent);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.search-page-none {
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ── Strong's definition card (shown above results) ──────── */
+.strongs-def-card {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: var(--color-bg, #faf8f4);
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-left: 3px solid var(--color-accent, #b8860b);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.strongs-def-id {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-accent, #b8860b);
+  letter-spacing: 0.04em;
+}
+
+.strongs-def-lemma {
+  font-size: 1.15rem;
+  color: var(--color-text, #2c2416);
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.strongs-def-translit {
+  font-size: 0.85rem;
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.strongs-def-gloss {
+  font-size: 0.9rem;
+  color: var(--color-text, #2c2416);
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.strongs-usage-phrase {
+  font-style: italic;
+  color: var(--color-muted, #7a6a55);
+}
+
 /* ── Multi-chapter section in modal body ─────────────────── */
 /* One section per chapter when the ref spans a range (e.g. Ch. 1–3) */
 .bsw-modal__chapter-section {
@@ -701,6 +860,50 @@
   color: var(--color-accent, #b8860b);
 }
 
+/* ── "Verse Study" link in modal header ──────────────────── */
+.bsw-modal__verse-study-link {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.8rem;
+  color: #4a6a8a;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 8px;
+  border: 1px solid rgba(74, 106, 138, 0.35);
+  border-radius: 4px;
+  transition: background 0.12s, border-color 0.12s;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.bsw-modal__verse-study-link:hover,
+.bsw-modal__verse-study-link:focus-visible {
+  background: rgba(74, 106, 138, 0.1);
+  border-color: #4a6a8a;
+  outline: none;
+  color: #4a6a8a;
+}
+
+.bsw-modal__verse-study-link[hidden] { display: none; }
+
+.bsw-modal__compare-link {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.8rem;
+  color: var(--color-muted, #7a6a55);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 8px;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+.bsw-modal__compare-link:hover {
+  background: var(--color-border, #e0d5c4);
+  color: var(--color-primary, #5c3d1e);
+}
+.bsw-modal__compare-link[hidden] { display: none; }
+
 /* ── "Read chapter" link in search result ref row ────────── */
 .bsw-search-result__read {
   font-family: var(--font-ui, system-ui, sans-serif);
@@ -722,9 +925,8 @@
   outline: none;
 }
 
-/* ── Modal parallel split layout ────────────────────────── */
+/* ── Modal verse panel (full-width; cross-refs now inline footnotes) ─────── */
 .bsw-modal__split {
-  display: flex;
   flex: 1;
   overflow: hidden;
   min-height: 0;
@@ -733,44 +935,78 @@
 .bsw-modal__split[hidden] { display: none; }
 
 .bsw-modal__verse-col {
-  flex: 1 1 58%;
+  height: 100%;
   overflow-y: auto;
-  padding: 0.75rem 1rem 1rem 1.25rem;
-  border-right: 1px solid var(--color-border, #e0d5c4);
+  padding: 0.75rem 1.25rem 1rem;
 }
 
-.bsw-modal__xrefs-col {
-  flex: 0 0 42%;
-  overflow-y: auto;
-  padding: 0.75rem 1.25rem 1rem 1rem;
-  min-width: 140px;
-}
-
-.bsw-modal__xrefs-heading {
+/* Inline cross-reference footnote superscripts */
+.bsw-modal__xref-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 2px;
+  margin: 0 1px;
+  font-size: 0.55rem;
   font-family: var(--font-ui, system-ui, sans-serif);
-  font-size: 0.72rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-muted, #7a6a55);
-  margin-bottom: 0.6rem;
+  color: var(--color-accent, #b8860b);
+  background: color-mix(in srgb, var(--color-accent, #b8860b) 12%, transparent);
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: super;
+  line-height: 1;
+  transition: background 0.12s, color 0.12s;
+  user-select: none;
 }
-
-@media (max-width: 540px) {
-  .bsw-modal__split { flex-direction: column; overflow-y: auto; }
-  .bsw-modal__verse-col { flex: none; border-right: none; border-bottom: 1px solid var(--color-border, #e0d5c4); }
-  .bsw-modal__xrefs-col { flex: none; }
+.bsw-modal__xref-note:hover {
+  background: var(--color-accent, #b8860b);
+  color: #fff;
 }
 
 /* ── Commentary panel ────────────────────────────────────── */
 .bsw-modal__commentary-panel {
-  padding: 0.75rem 1.25rem 1rem;
+  padding: 0;
   overflow-y: auto;
   flex: 1;
   font-family: var(--font-body, Georgia, serif);
+  display: flex;
+  flex-direction: column;
 }
-
 .bsw-modal__commentary-panel[hidden] { display: none; }
+
+/* Source picker row inside Commentary panel */
+.bsw-modal__comm-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.25rem;
+  border-bottom: 1px solid var(--color-border, #e0d5c4);
+  background: var(--color-bg, #faf8f4);
+  flex-shrink: 0;
+}
+.bsw-modal__comm-label {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.78rem;
+  color: var(--color-muted, #7a6a55);
+}
+.bsw-modal__comm-select {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.82rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #2c2416);
+  cursor: pointer;
+}
+.bsw-modal__comm-body {
+  padding: 0.75rem 1.25rem 1rem;
+  overflow-y: auto;
+  flex: 1;
+}
 
 .bsw-modal__commentary-section {
   margin-bottom: 0.75rem;
@@ -783,11 +1019,13 @@
   color: var(--color-text, #2c2416);
 }
 
-.bsw-modal__commentary-section p.mhcc-heading {
+.bsw-modal__commentary-section p.mhcc-heading,
+.bsw-modal__commentary-section p.comm-heading {
   margin-bottom: 0.3rem;
 }
 
-.bsw-modal__commentary-section p.mhcc-heading strong {
+.bsw-modal__commentary-section p.mhcc-heading strong,
+.bsw-modal__commentary-section p.comm-heading strong {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
@@ -810,4 +1048,279 @@
   font-size: 0.88rem;
   color: var(--color-muted, #7a6a55);
   font-style: italic;
+}
+
+/* ── Word Study panel (modal tab) ────────────────────────── */
+.bsw-modal__wordstudy-panel {
+  padding: 0.75rem 1.25rem 1rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.bsw-modal__wordstudy-panel[hidden] { display: none; }
+
+.bsw-ws-loading,
+.bsw-ws-note {
+  font-size: 0.88rem;
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+}
+
+.bsw-ws-table {
+  display: grid;
+  grid-template-columns: auto auto auto auto 1fr;
+  gap: 0 0.75rem;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+
+.bsw-ws-row {
+  display: contents;
+}
+
+.bsw-ws-row > div {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-border, #e0d5c4);
+}
+
+.bsw-ws-eng {
+  font-weight: 600;
+  color: var(--color-primary, #3a2e22);
+}
+
+.bsw-ws-strongs {
+  font-weight: 700;
+  color: var(--color-accent, #b8860b);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.bsw-ws-lemma {
+  color: var(--color-text, #2c2416);
+  font-size: 1rem;
+}
+
+.bsw-ws-translit {
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+}
+
+.bsw-ws-gloss {
+  color: var(--color-text, #2c2416);
+}
+
+.bsw-ws-attr {
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  color: var(--color-muted, #7a6a55);
+  border-top: 1px solid var(--color-border, #e0d5c4);
+  padding-top: 0.5rem;
+}
+
+/* ── Notes panel (shared across modal, verse study, reader) ──────────────── */
+
+.bsw-modal__notes-panel {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.bsw-note-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+
+.bsw-note-item {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 6px;
+  background: var(--color-bg-alt, var(--color-bg));
+}
+
+.bsw-note-body { font-size: 0.88rem; line-height: 1.55; white-space: pre-wrap; margin-bottom: 0.35rem; }
+
+.bsw-note-meta {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin-bottom: 0.35rem;
+}
+.bsw-note-range {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.bsw-note-actions { display: flex; gap: 0.4rem; }
+.bsw-note-action-btn {
+  font-size: 0.72rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-family: inherit;
+}
+.bsw-note-action-btn:hover { color: var(--color-text); border-color: var(--color-primary); }
+.bsw-note-action-btn--del:hover { color: #c0392b; border-color: #c0392b; }
+
+.bsw-note-edit-area { margin-top: 0.5rem; }
+.bsw-note-edit-btns { display: flex; gap: 0.4rem; margin-top: 0.4rem; }
+
+.bsw-note-textarea {
+  width: 100%;
+  min-height: 72px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.bsw-note-textarea:focus { border-color: var(--color-primary); outline: none; }
+
+.bsw-note-empty {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.bsw-note-compose {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+.bsw-note-compose-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.bsw-note-ref-tag {
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Strong's ID link in modal word study */
+.bsw-ws-strongs-link {
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ── Modal / VS Topics tab (Nave's Topical Bible) ──────────────────────────── */
+.topical-modal-meta {
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.topical-modal-browse {
+  font-size: .75rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.topical-modal-browse:hover { text-decoration: underline; }
+
+.topical-modal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.topical-modal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  background: none;
+  font-size: .82rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: background .13s, color .13s, box-shadow .13s;
+}
+
+.topical-modal-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.topical-modal-chip__count {
+  font-size: .68rem;
+  font-weight: 500;
+  opacity: .65;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 999px;
+  padding: .05rem .38rem;
+}
+
+.topical-modal-chip:hover .topical-modal-chip__count {
+  background: rgba(255,255,255,.22);
+  opacity: 1;
+}
+
+.topical-modal-empty {
+  font-size: .85rem;
+  color: var(--color-muted, #aaa);
+  font-style: italic;
+  padding: .5rem 0;
+}
+
+/* ── Verse Study page — Nave's Topics section chips ─────────────────────────── */
+.vs-topical-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.vs-topical-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary);
+  background: none;
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background .13s, color .13s, box-shadow .13s;
+}
+
+.vs-topical-item:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.vs-topical-count {
+  font-size: .68rem;
+  font-weight: 500;
+  opacity: .65;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 999px;
+  padding: .05rem .38rem;
+}
+
+.vs-topical-item:hover .vs-topical-count {
+  background: rgba(255,255,255,.22);
+  opacity: 1;
 }

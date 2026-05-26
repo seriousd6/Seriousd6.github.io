@@ -1,0 +1,884 @@
+/* ============================================================
+   Verse Study Page  (verse-study/index.html)
+   ============================================================ */
+
+/* ── Override main padding so header touches the top ──────── */
+.verse-study-page main {
+  padding-top: 0;
+}
+
+/* ── Sticky verse header ──────────────────────────────────── */
+.vs-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+/* On mobile the fixed topbar is 48px; the sticky header must sit below it */
+@media (max-width: 1023px) {
+  .vs-header { top: var(--topbar-h, 48px); }
+}
+
+/* ── Header topbar row ────────────────────────────────────── */
+.vs-header__topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+.vs-back-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.vs-back-link:hover { text-decoration: underline; }
+
+.vs-header-ref {
+  flex: 1;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Version picker inherits sidebar's styles but restyled for header context */
+.vs-header .version-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.vs-header .version-picker select {
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ── Verse block (focal + context) ───────────────────────── */
+.vs-verse-block {
+  padding: 0.75rem 1.25rem 0.5rem;
+  max-width: 860px;
+}
+
+.vs-focal-verse {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0.25rem 0;
+}
+
+.vs-focal-num {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  vertical-align: super;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+.vs-focal-text {
+  flex: 1;
+}
+
+.vs-context-verse {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-muted);
+  opacity: 0.6;
+  padding: 0.15rem 0;
+}
+.vs-context-verse[hidden] { display: none; }
+
+.vs-ctx-num {
+  font-size: 0.65em;
+  font-weight: 700;
+  color: var(--color-accent);
+  vertical-align: super;
+  flex-shrink: 0;
+  margin-right: 0.1em;
+}
+
+/* ── Header actions row ───────────────────────────────────── */
+.vs-header__actions {
+  padding: 0.3rem 1.25rem;
+}
+
+.vs-context-btn {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.vs-context-btn:hover,
+.vs-context-btn--on {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* ── Word token row ───────────────────────────────────────── */
+.vs-token-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem;
+  padding: 0.5rem 1.25rem 0.75rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.vs-token {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: none;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  line-height: 1.5;
+}
+.vs-token:hover {
+  background: var(--color-border);
+  border-color: var(--color-border);
+}
+.vs-token--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.vs-token-punct {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ── Page wrap and layout ──────────────────────────────────── */
+.vs-page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem var(--space-md);
+}
+
+.vs-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .vs-layout {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+/* ── Section nav sidebar (desktop) ────────────────────────── */
+.vs-sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .vs-sidebar {
+    display: block;
+    position: sticky;
+    top: calc(var(--vs-header-h, 200px) + 1rem);
+    max-height: calc(100vh - var(--vs-header-h, 200px) - 2rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+}
+
+.vs-nav-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.75rem;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  white-space: nowrap;
+}
+.vs-nav-btn:hover {
+  background: var(--color-border);
+  color: var(--color-primary);
+  border-left-color: var(--color-accent);
+}
+.vs-nav-btn--active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ── Mobile section dropdown ──────────────────────────────── */
+.vs-mobile-nav {
+  margin-bottom: 1.5rem;
+}
+.vs-mobile-nav[hidden] { display: none; }
+.vs-mobile-nav select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .vs-mobile-nav { display: none !important; }
+}
+
+/* ── Content sections ─────────────────────────────────────── */
+.vs-section {
+  margin-bottom: 2.5rem;
+}
+.vs-section[hidden] { display: none; }
+
+.vs-section-heading {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin: 0 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: calc(var(--vs-header-h, 200px) + 1rem);
+}
+
+.vs-section-body {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ── Cross-references section ─────────────────────────────── */
+.vs-xref-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+}
+
+.vs-xref-link {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+  display: inline-block;
+}
+.vs-xref-link:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.vs-xref-link.bsw-xref--high { border-color: var(--color-primary); }
+.vs-xref-link.bsw-xref--med  { opacity: 0.9; }
+.vs-xref-link.bsw-xref--low  { opacity: 0.7; }
+
+/* ── Commentary section ───────────────────────────────────── */
+/* Commentary source picker (Verse Study page) */
+.vs-comm-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.vs-comm-label {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.vs-comm-select {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.vs-commentary-section {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+.vs-commentary-section p.comm-heading {
+  margin-bottom: 0.2rem;
+}
+.vs-commentary-section p.comm-heading strong {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.vs-commentary-attr {
+  margin-top: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+/* ── Parallel passages section ────────────────────────────── */
+.vs-parallel-panel {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.vs-parallel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+}
+
+.vs-parallel-ref {
+  flex: 1;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.vs-parallel-read-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.3rem;
+}
+.vs-parallel-read-link:hover { text-decoration: underline; }
+
+.vs-parallel-body {
+  padding: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.vs-parallel-text {
+  margin: 0;
+}
+
+/* ── Reader verse-number popup ────────────────────────────── */
+.vs-verse-popup {
+  position: absolute;
+  z-index: 600;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+  min-width: 210px;
+  font-family: var(--font-ui);
+  display: none;
+}
+.vs-verse-popup--visible { display: block; }
+
+.vs-verse-popup__ref {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  padding: 0.25rem 0.75rem 0.3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.vs-verse-popup__action {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem 0.75rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-family: var(--font-ui);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.vs-verse-popup__action:hover {
+  background: var(--color-border);
+  color: var(--color-primary);
+}
+.vs-verse-popup__action--active {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.vs-verse-popup__note-area {
+  border-top: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+}
+.vs-verse-popup__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-body, serif);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.4rem;
+  resize: vertical;
+}
+.vs-verse-popup__note-btns {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.vs-verse-popup__save-btn,
+.vs-verse-popup__cancel-btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+.vs-verse-popup__save-btn {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.vs-verse-popup__cancel-btn {
+  background: none;
+  color: var(--color-text);
+}
+
+/* ── Word study flyout panel ──────────────────────────────────────────────── */
+
+.vs-word-panel {
+  background: var(--color-surface);
+  border-top: 2px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-ui);
+}
+.vs-word-panel[hidden] { display: none; }
+
+.vs-word-panel__inner {
+  max-width: 680px;
+  position: relative;
+}
+
+.vs-word-panel__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  line-height: 1;
+}
+.vs-word-panel__close:hover { color: var(--color-primary); }
+
+.vs-word-panel__loading,
+.vs-word-panel__no-data,
+.vs-word-panel__no-entry {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.vs-word-panel__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.vs-word-panel__eng {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+}
+
+.vs-word-panel__strongs {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  letter-spacing: 0.04em;
+}
+
+.vs-word-panel__orig {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.vs-word-panel__lemma {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.vs-word-panel__translit {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.vs-word-panel__pronounce {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.vs-word-panel__gloss {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.vs-word-panel__def {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.vs-word-panel__deriv {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+.vs-word-panel__actions {
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.vs-word-panel__vs-link {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.vs-word-panel__vs-link:hover { text-decoration: underline; }
+
+/* ── Interlinear sentence diagram ────────────────────────── */
+.vs-interlinear-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.vs-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+  max-width: 150px;
+  padding: 0.55rem 0.6rem 0.4rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+  line-height: 1;
+}
+
+.vs-tile:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.vs-tile--active {
+  border-color: var(--color-primary);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: var(--color-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vs-tile__lemma {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.25;
+  margin-bottom: 0.2rem;
+}
+
+.vs-tile__lemma--missing {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.vs-tile__translit {
+  font-size: 0.78rem;
+  color: var(--color-text);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.vs-tile__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0;
+}
+
+.vs-tile__eng {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+}
+
+.vs-tile__strongs {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.65rem;
+  color: var(--color-accent);
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  white-space: nowrap;
+}
+
+/* ── Interlinear detail panel (expands below active tile) ── */
+.vs-interlinear-detail {
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-top: none;
+  border-radius: 0 6px 6px 6px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.vs-interlinear-detail[hidden] { display: none; }
+
+.vs-id-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.vs-id-eng {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.vs-id-strongs {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  letter-spacing: 0.04em;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.vs-id-lemma {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.vs-id-translit {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  font-style: italic;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.vs-id-pronounce {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.vs-id-gloss {
+  font-size: 0.97rem;
+  color: var(--color-text);
+  font-weight: 500;
+  margin-top: 0.35rem;
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.vs-id-def {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-top: 0.25rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.vs-id-deriv {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-top: 0.2rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.vs-id-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.vs-interlinear-note {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.vs-interlinear-attr {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0;
+}
+
+/* Reader verse number: make it clickable on the verse study page and reader */
+.reader-verse__num {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 1;
+  margin-right: 0.05em;
+  transition: color 0.1s;
+  user-select: none;
+}
+.reader-verse__num:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* ── All Translations section ──────────────────────────────── */
+
+.vs-cmp-row {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem 0.8rem;
+  margin-bottom: 0.6rem;
+  background: var(--color-surface, var(--color-bg));
+}
+
+.vs-cmp-row--current {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.vs-cmp-row__hdr {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.vs-cmp-row__id {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.vs-cmp-row__name {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.vs-cmp-row__text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.vs-cmp-row__text--loading {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.vs-cmp-row__text--na {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}

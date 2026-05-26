@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Deep-dive word study: all occurrences, translation breakdown, and usage statistics for a Strong's concordance entry." />
+  <title>Word Study — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/word.css" />
+</head>
+<body class="word-page">
+  <main>
+    <div class="container">
+      <div id="wd-back" class="wd-back">
+        <a id="wd-back-link" href="../search/" class="wd-back-link">← Search</a>
+        <div class="wd-version">
+          <label for="bible-version">Version:</label>
+          <select id="bible-version"></select>
+        </div>
+      </div>
+
+      <div id="wd-header" class="wd-header">
+        <p class="wd-loading">Loading…</p>
+      </div>
+
+      <div id="wd-stats" class="wd-stats" hidden></div>
+
+      <div class="wd-body" id="wd-body" hidden>
+        <aside class="wd-sidebar">
+          <section id="wd-books" class="wd-section" hidden>
+            <h2 class="wd-section-heading">By Book</h2>
+            <div id="wd-books-body" class="wd-books-body"></div>
+          </section>
+
+          <section id="wd-translations" class="wd-section" hidden>
+            <h2 class="wd-section-heading">Translations</h2>
+            <div id="wd-translations-body" class="wd-translations-body"></div>
+          </section>
+        </aside>
+
+        <div class="wd-main">
+          <section id="wd-verses" class="wd-section" hidden>
+            <h2 class="wd-section-heading">Occurrences</h2>
+            <div id="wd-verses-status" class="wd-verses-status"></div>
+            <div id="wd-verses-body" class="wd-verses-body"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+</body>
+</html>

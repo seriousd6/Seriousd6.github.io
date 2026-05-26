@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Scripture memory flashcards with spaced repetition." />
+  <title>Scripture Memory</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/memorize.css" />
+</head>
+<body>
+
+  <main>
+    <div class="container mem-page">
+
+      <div class="mem-header">
+        <h1 class="mem-title">⭐ Scripture Memory</h1>
+        <p class="mem-subtitle">Memorize verses using spaced repetition — reviewed at the right time, every time.</p>
+      </div>
+
+      <!-- Tab bar -->
+      <div class="mem-tabs" role="tablist">
+        <button class="mem-tab mem-tab--active" data-tab="browse" role="tab" aria-selected="true">Browse</button>
+        <button class="mem-tab" data-tab="review" role="tab" aria-selected="false" id="mem-review-tab">Review <span id="mem-due-badge" class="mem-badge" hidden></span></button>
+      </div>
+
+      <!-- ── Browse panel ── -->
+      <div id="mem-browse-panel" class="mem-panel">
+
+        <!-- Add verse -->
+        <div class="mem-add-row">
+          <input id="mem-add-input" type="text" class="mem-add-input"
+            placeholder="Add a verse — e.g. John 3:16 or Romans 8:28" autocomplete="off" />
+          <button id="mem-add-btn" class="mem-add-btn">Add</button>
+        </div>
+        <p id="mem-add-error" class="mem-add-error" hidden></p>
+
+        <!-- Flashcard mode selector -->
+        <div class="mem-mode-row">
+          <label class="mem-mode-label" for="mem-mode-select">Flashcard mode:</label>
+          <select id="mem-mode-select" class="mem-mode-select">
+            <option value="ref-to-text">Reference → Recall text</option>
+            <option value="text-to-ref">Text → Recall reference</option>
+          </select>
+        </div>
+
+        <!-- Verse list -->
+        <div id="mem-list" class="mem-list"></div>
+        <p id="mem-empty" class="mem-empty" hidden>No verses yet — add one above, or use the ⭐ button in any verse modal.</p>
+      </div>
+
+      <!-- ── Review panel ── -->
+      <div id="mem-review-panel" class="mem-panel" hidden>
+        <div id="mem-review-progress" class="mem-progress"></div>
+
+        <div id="mem-card" class="mem-card">
+          <div id="mem-card-front" class="mem-card__front"></div>
+          <div id="mem-card-back"  class="mem-card__back" hidden></div>
+          <div id="mem-card-actions" class="mem-card__actions" hidden>
+            <button class="mem-rate-btn mem-rate-btn--again" data-score="0">Again</button>
+            <button class="mem-rate-btn mem-rate-btn--hard"  data-score="1">Hard</button>
+            <button class="mem-rate-btn mem-rate-btn--good"  data-score="2">Good</button>
+            <button class="mem-rate-btn mem-rate-btn--easy"  data-score="3">Easy</button>
+          </div>
+        </div>
+
+        <div id="mem-review-done" class="mem-review-done" hidden>
+          <p>🎉 All done for today! Come back tomorrow for your next review.</p>
+          <button id="mem-back-browse" class="mem-back-btn">Back to Browse</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+</body>
+</html>

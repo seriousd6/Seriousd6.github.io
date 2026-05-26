@@ -87,8 +87,11 @@
       }
     ],
     tools: [
-      { label: '📖 Reader', href: _r('read/') },
-      { label: '🔍 Search', href: _r('search/') }
+      { label: '📖 Reader',         href: _r('read/') },
+      { label: '🔍 Search',         href: _r('search/') },
+      { label: '📅 Reading Plans',  href: _r('plans/') },
+      { label: '⭐ Memory',          href: _r('memorize/') },
+      { label: '📑 Topical Bible',  href: _r('topical/') }
     ]
   };
 
@@ -216,6 +219,34 @@
     homeLink.textContent = 'Home';
     if (_locN === _rootN) homeLink.setAttribute('aria-current', 'page');
     nav.appendChild(homeLink);
+
+    /* Version picker — at top of nav */
+    var verRow = mk('div', 'sb-version');
+    var verLabel = document.createElement('label');
+    verLabel.setAttribute('for', 'bible-version');
+    verLabel.textContent = 'Version:';
+    var verSelect = document.createElement('select');
+    verSelect.id = 'bible-version';
+    verRow.appendChild(verLabel);
+    verRow.appendChild(verSelect);
+    nav.appendChild(verRow);
+
+    nav.appendChild(mk('div', 'sb-divider'));
+
+    /* Tool links — same visual weight as group buttons */
+    NAV.tools.forEach(function (tool) {
+      var a = mk('a', 'sb-group-btn');
+      a.href = tool.href;
+      var lbl = mk('span', 'sb-group-label');
+      lbl.textContent = tool.label;
+      a.appendChild(lbl);
+      if (isActive(tool.href)) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('is-active');
+      }
+      nav.appendChild(a);
+    });
+
     nav.appendChild(mk('div', 'sb-divider'));
 
     /* Groups */
@@ -267,29 +298,6 @@
       wrapper.appendChild(items);
       nav.appendChild(wrapper);
     });
-
-    nav.appendChild(mk('div', 'sb-divider'));
-
-    /* Tool links */
-    NAV.tools.forEach(function (tool) {
-      var a = mk('a', 'sb-tool');
-      a.href = tool.href;
-      a.textContent = tool.label;
-      if (isActive(tool.href)) a.setAttribute('aria-current', 'page');
-      nav.appendChild(a);
-    });
-
-    /* Version picker */
-    nav.appendChild(mk('div', 'sb-divider'));
-    var verRow = mk('div', 'sb-version');
-    var verLabel = document.createElement('label');
-    verLabel.setAttribute('for', 'bible-version');
-    verLabel.textContent = 'Version:';
-    var verSelect = document.createElement('select');
-    verSelect.id = 'bible-version';
-    verRow.appendChild(verLabel);
-    verRow.appendChild(verSelect);
-    nav.appendChild(verRow);
 
     sidebar.appendChild(nav);
 

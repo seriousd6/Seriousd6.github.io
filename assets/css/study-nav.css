@@ -1,0 +1,291 @@
+/* ============================================================
+   In-Page Study Navigation — Shared Stylesheet
+   ============================================================
+
+   Used by multi-section SPA-style study pages (prayer, revelation, etc.)
+   that have their own fixed left sidebar for section navigation.
+
+   USAGE:
+     Add class="study-nav" to the sidebar element.
+     Add class="study-main" to the main content element.
+     Body must have class="sidebar-open" when the sidebar is visible.
+
+   This file handles:
+     - The parchment sidebar appearance and layout
+     - The sidebar-open body state (content shift)
+     - Navigation item, label, and brand styles
+     - Shared section show/hide (.study-section.active, .section.is-active)
+     - Back-to-top button
+
+   Each study page provides its own per-page <style> for:
+     - Hero (via tg-hero or bk-hero classes)
+     - Content components (accordions, cards, timelines, etc.)
+     - Font overrides (these pages use EB Garamond / Cinzel)
+     - Background and body color
+   ============================================================ */
+
+/* ── Shared parchment tokens ─────────────────────────────── */
+:root {
+  --sn-w:            280px;
+  --sn-bg-top:       #efe2c0;
+  --sn-bg-btm:       #e6d6ad;
+  --sn-text:         #1d140a;
+  --sn-text-dim:     #3a2a18;
+  --sn-text-muted:   #6b5536;
+  --sn-gold:         #a48330;
+  --sn-gold-dim:     #826625;
+  --sn-gold-muted:   #c9a85a;
+  --sn-active:       #6e1e22;
+  --sn-border:       rgba(29,20,10,0.18);
+  --sn-border-strong:rgba(29,20,10,0.35);
+  --sn-border-soft:  rgba(29,20,10,0.10);
+}
+
+/* ── In-page sidebar ─────────────────────────────────────── */
+.study-nav {
+  width: var(--sn-w);
+  height: calc(100vh - var(--header-h, 52px));
+  background: linear-gradient(180deg, var(--sn-bg-top) 0%, var(--sn-bg-btm) 100%);
+  border-right: 1px solid var(--sn-border-strong);
+  box-shadow: inset -1px 0 0 rgba(255,245,220,0.5), 4px 0 18px -8px rgba(74,18,22,0.18);
+  position: fixed;
+  top: var(--header-h, 52px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.28s ease;
+}
+
+body:not(.sidebar-open) .study-nav {
+  transform: translateX(-100%);
+}
+
+/* ── Main content area ───────────────────────────────────── */
+.study-main {
+  margin-left: 0;
+  flex: 1;
+  max-width: 100%;
+  transition: margin-left 0.28s ease, max-width 0.28s ease;
+}
+
+body.sidebar-open .study-main {
+  margin-left: var(--sn-w);
+  max-width: calc(100% - var(--sn-w));
+}
+
+/* ── Sidebar brand / logo area ───────────────────────────── */
+.sidebar-logo,
+.study-nav .brand {
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--sn-border);
+}
+
+.sidebar-logo .cross {
+  font-size: 22px;
+  color: var(--sn-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-logo h1,
+.study-nav .brand .title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--sn-text);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.sidebar-logo p,
+.study-nav .brand .sub {
+  font-size: 11px;
+  color: var(--sn-text-muted);
+  letter-spacing: 0.22em;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.study-nav .brand .greek {
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--sn-active);
+  margin: 0 0 6px;
+}
+
+/* ── Sidebar search ──────────────────────────────────────── */
+.sidebar-search,
+.study-nav .search-wrap {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--sn-border-soft);
+}
+
+.sidebar-search input,
+.study-nav .search-wrap input {
+  width: 100%;
+  background: rgba(255,250,232,0.85);
+  border: 1px solid var(--sn-border);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--sn-text);
+  letter-spacing: 0.04em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sidebar-search input::placeholder,
+.study-nav .search-wrap input::placeholder {
+  color: var(--sn-text-muted);
+}
+
+.sidebar-search input:focus,
+.study-nav .search-wrap input:focus {
+  border-color: var(--sn-gold-dim);
+}
+
+/* ── Section group labels ────────────────────────────────── */
+.nav-section-label,
+.study-nav .nav-section {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sn-gold-dim);
+  padding: 1rem 1rem 0.4rem;
+}
+
+/* ── Navigation items ────────────────────────────────────── */
+.study-nav .nav-item,
+.study-nav a.navlink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 1.25rem;
+  font-size: 13.5px;
+  letter-spacing: 0.08em;
+  color: var(--sn-text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  position: relative;
+}
+
+.study-nav a.navlink {
+  align-items: baseline;
+  padding: 9px 26px 9px 22px;
+  counter-increment: nav;
+}
+
+.study-nav a.navlink::before {
+  content: counter(nav, upper-roman) ".";
+  font-size: 10px;
+  color: var(--sn-gold-dim);
+  letter-spacing: 0.04em;
+  min-width: 26px;
+  flex-shrink: 0;
+}
+
+.study-nav ol { list-style: none; margin: 0; padding: 0; counter-reset: nav; }
+.study-nav li { margin: 0; }
+
+.study-nav .nav-item:hover,
+.study-nav a.navlink:hover {
+  color: var(--sn-active);
+  background: rgba(255,245,210,0.4);
+}
+
+.study-nav .nav-item.active,
+.study-nav a.navlink.active {
+  color: var(--sn-active);
+  border-left-color: var(--sn-active);
+  background: linear-gradient(90deg, rgba(255,245,210,0.7), transparent 90%);
+  font-weight: 500;
+}
+
+.nav-item .nav-num {
+  font-size: 9px;
+  color: var(--sn-gold-muted);
+  min-width: 16px;
+  font-weight: 600;
+}
+
+/* ── Sidebar footer ──────────────────────────────────────── */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--sn-border);
+  font-size: 10px;
+  color: var(--sn-text-muted);
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+/* ── Section show / hide ─────────────────────────────────── */
+/* Prayer: .study-section / .active */
+.study-section {
+  display: none;
+  animation: sn-fadeIn 0.3s ease;
+}
+.study-section.active { display: block; }
+
+/* Revelation: .section / .is-active */
+.section {
+  display: none;
+}
+.section.is-active { display: block; }
+
+@keyframes sn-fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Back to top ─────────────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--sn-gold);
+  color: #fff;
+  text-align: center;
+  line-height: 38px;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(74,18,22,0.25);
+  z-index: 300;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover { transform: translateY(-2px); }
+
+/* ── Scrollbar (webkit) ──────────────────────────────────── */
+.study-nav::-webkit-scrollbar { width: 4px; }
+.study-nav::-webkit-scrollbar-track { background: var(--sn-bg-btm); }
+.study-nav::-webkit-scrollbar-thumb { background: var(--sn-gold-muted); border-radius: 3px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  body.sidebar-open .study-main {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  body.sidebar-open .study-nav {
+    z-index: 500;
+  }
+}

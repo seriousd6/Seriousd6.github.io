@@ -4,54 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="Personal Bible study notes, topical studies, and hotlinked scripture references." />
-  <title>Bible Study</title>
+  <meta name="description" content="Daily Bible reading, verse of the day, and devotional." />
+  <title>Bible Study — Daily</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="assets/css/daily.css" />
 </head>
 <body>
-  <!-- ── Main ── -->
+
   <main>
-    <div class="container">
-      <h1>Welcome</h1>
-      <p>
-        A personal collection of Bible study notes, topical studies, and
-        scripture references. Use the <strong>Topics</strong> menu to browse
-        studies, or click any scripture reference to read it in your preferred
-        Bible version.
-      </p>
+    <div class="container daily-page">
 
-      <blockquote class="scripture">
-        <span class="bsw-verse" data-ref="Psalm 119:105">Thy word is a lamp unto my feet, and a light unto my path.</span>
-        <cite>— <a class="ref" data-ref="Psalm 119:105">Psalm 119:105</a></cite>
-      </blockquote>
-
-      <h2>Featured Studies</h2>
-      <div class="topic-grid">
-        <a class="topic-card" href="topics/prayer/">
-          <h3>🙏 Prayer</h3>
-          <p>What the Bible teaches about prayer, how to pray, and promises related to prayer.</p>
-        </a>
-        <a class="topic-card" href="topics/revelation/">
-          <h3>📜 Book of Revelation</h3>
-          <p>A study through the last book of the Bible — prophecy, symbols, and hope.</p>
-        </a>
-        <!-- ADD NEW TOPIC CARDS HERE -->
+      <!-- Greeting -->
+      <div class="daily-header">
+        <p id="daily-greeting" class="daily-greeting"></p>
+        <h1 id="daily-date" class="daily-date"></h1>
       </div>
 
-      <h2>Confessions &amp; Creeds</h2>
-      <p>Historic statements of Christian faith — creeds, confessions, and catechisms from across
-      the church. All scripture references are linked.</p>
-      <div class="topic-grid">
-        <a class="topic-card" href="library/">
-          <h3>📚 Library</h3>
-          <p>Apostles' Creed, Nicene Creed, Westminster Standards, Heidelberg Catechism, Canons of Dort, and more.</p>
-        </a>
-      </div>
+      <!-- ── Today's Reading ── -->
+      <section class="daily-card" id="daily-reading-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Today's Reading</h2>
+          <select id="daily-plan-select" class="daily-select" aria-label="Choose reading plan"></select>
+        </div>
+        <div id="daily-plan-content" class="daily-plan-body"></div>
+        <div id="daily-plan-datepicker" class="daily-datepicker" hidden>
+          <label for="daily-start-date">Started on:</label>
+          <input type="date" id="daily-start-date" class="daily-date-input" />
+        </div>
+      </section>
+
+      <!-- ── Verse of the Day ── -->
+      <section class="daily-card" id="daily-votd-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Verse of the Day</h2>
+        </div>
+        <div id="daily-votd-content" class="daily-votd-body"></div>
+      </section>
+
+      <!-- ── Daily Devotional ── -->
+      <section class="daily-card" id="daily-devot-card">
+        <div class="daily-card__head">
+          <h2 id="daily-devot-title" class="daily-card__title">Morning Devotional</h2>
+          <select id="daily-devot-select" class="daily-select" aria-label="Choose devotional source"></select>
+        </div>
+        <div id="daily-devot-content" class="daily-devot-body"></div>
+      </section>
+
     </div>
   </main>
 
-  <!-- ── Footer ── -->
   <footer class="site-footer">
     <div class="container">
       <p>Personal Bible study notes &amp; references.</p>
@@ -59,7 +61,7 @@
     </div>
   </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/bible.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/bible.js"></script>
 </body>
 </html>

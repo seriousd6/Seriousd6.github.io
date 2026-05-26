@@ -1,0 +1,299 @@
+/* daily.css — Home page daily discipline layout */
+
+/* ── Page wrapper ──────────────────────────────────────────────────────────── */
+.daily-page {
+  max-width: 760px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Greeting + date header ─────────────────────────────────────────────────── */
+.daily-header {
+  margin-bottom: 1.75rem;
+}
+
+.daily-greeting {
+  font-size: .9rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.daily-date {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-heading, var(--color-text));
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ── Card shell ─────────────────────────────────────────────────────────────── */
+.daily-card {
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.daily-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .9rem 1.1rem .75rem;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  background: var(--color-surface-subtle, var(--color-surface, #fafafa));
+}
+
+.daily-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-heading, var(--color-text));
+  letter-spacing: .01em;
+}
+
+/* ── Plan/devotional selects ────────────────────────────────────────────────── */
+.daily-select {
+  font-size: .82rem;
+  padding: .25rem .5rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 5px;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+  cursor: pointer;
+  max-width: 200px;
+}
+
+/* ── Today's Reading body ───────────────────────────────────────────────────── */
+.daily-plan-body {
+  padding: .9rem 1.1rem;
+}
+
+.daily-plan-meta {
+  font-size: .82rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .75rem;
+}
+
+.daily-plan-day {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 .6rem;
+}
+
+.daily-passages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: .9rem;
+}
+
+.daily-passage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .3rem .7rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: .82rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+
+.daily-passage-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+.daily-read-all {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+
+.daily-read-all:hover {
+  opacity: .85;
+  text-decoration: none;
+  color: #fff;
+}
+
+.daily-plan-empty {
+  font-size: .9rem;
+  color: var(--color-muted, #888);
+  font-style: italic;
+}
+
+/* ── Date picker (for non-BiaY plans) ──────────────────────────────────────── */
+.daily-datepicker {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem 1.1rem .8rem;
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  font-size: .83rem;
+  color: var(--color-muted, #777);
+}
+
+.daily-date-input {
+  padding: .25rem .45rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 5px;
+  font-size: .83rem;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+}
+
+/* ── Verse of the Day ───────────────────────────────────────────────────────── */
+.daily-votd-body {
+  padding: 1rem 1.25rem 1.1rem;
+}
+
+.daily-votd-body blockquote {
+  margin: 0 0 .6rem;
+  padding: 0;
+  border: none;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.daily-votd-body blockquote::before {
+  content: '\201C';
+  font-size: 2rem;
+  color: var(--color-primary);
+  line-height: 0;
+  vertical-align: -.35em;
+  margin-right: .1em;
+  font-style: normal;
+}
+
+.daily-votd-body cite {
+  display: block;
+  font-size: .85rem;
+  color: var(--color-muted, #888);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.daily-votd-body cite a {
+  color: var(--color-primary);
+}
+
+/* ── Devotional body ────────────────────────────────────────────────────────── */
+.daily-devot-body {
+  padding: .85rem 1.25rem 1rem;
+}
+
+.daily-devot-ref {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin: 0 0 .5rem;
+}
+
+.daily-devot-text {
+  font-size: .97rem;
+  line-height: 1.72;
+  color: var(--color-text);
+  margin: 0 0 .75rem;
+  white-space: pre-line;
+}
+
+.daily-devot-link {
+  font-size: .83rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.daily-devot-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Period badge (🌅 Morning / 🌙 Evening) ────────────────────────────────── */
+.daily-period-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .1rem .45rem;
+  border-radius: 4px;
+  margin-left: .4rem;
+  background: var(--color-primary);
+  color: #fff;
+  vertical-align: middle;
+  letter-spacing: .04em;
+}
+
+/* ── Notification permission banner ─────────────────────────────────────────── */
+.daily-notif-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .6rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: .85rem;
+  margin-bottom: 1rem;
+}
+
+.daily-notif-banner button {
+  padding: .25rem .7rem;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 5px;
+  color: #fff;
+  font-size: .82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.daily-notif-banner button:hover {
+  background: rgba(255,255,255,.35);
+}
+
+.daily-notif-dismiss {
+  background: none !important;
+  border: none !important;
+  font-size: 1rem !important;
+  padding: 0 .3rem !important;
+  opacity: .7;
+}
+
+/* ── Loading state ──────────────────────────────────────────────────────────── */
+.daily-loading {
+  color: var(--color-muted, #aaa);
+  font-size: .88rem;
+  font-style: italic;
+  padding: .5rem 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .daily-date { font-size: 1.35rem; }
+  .daily-card__head { flex-direction: column; align-items: flex-start; gap: .4rem; }
+  .daily-select { max-width: 100%; width: 100%; }
+  .daily-passages { gap: .3rem; }
+  .daily-passage-chip { font-size: .78rem; }
+}

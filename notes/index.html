@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Your personal Bible verse notes and highlights." />
+  <title>My Notes — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <style>
+    .notes-page { max-width: 720px; margin: 0 auto; }
+    .notes-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .notes-toolbar__title { flex: 1; margin: 0; font-size: 1.5rem; }
+    .notes-btn {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 5px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .notes-btn:hover { background: var(--color-border); }
+    .notes-empty {
+      font-family: var(--font-ui);
+      color: var(--color-muted);
+      padding: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .notes-list { list-style: none; margin: 0; padding: 0; }
+    .notes-item {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--color-surface);
+    }
+    .notes-item--highlighted { border-left: 4px solid #b8860b; }
+    .notes-item__header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .notes-item__ref {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 1rem;
+    }
+    .notes-item__badge {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 10px;
+      background: rgba(255, 220, 60, 0.35);
+      color: #7a6000;
+      border: 1px solid #d4aa00;
+    }
+    .notes-item__note {
+      font-family: var(--font-body, serif);
+      font-size: 0.9rem;
+      color: var(--color-text);
+      margin: 0 0 0.5rem;
+      white-space: pre-wrap;
+    }
+    .notes-item__actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .notes-item__link {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .notes-item__link:hover { text-decoration: underline; }
+    .notes-item__del {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .notes-item__del:hover { color: #c00; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container notes-page">
+
+      <div class="notes-toolbar">
+        <h1 class="notes-toolbar__title">My Notes</h1>
+        <button class="notes-btn" id="notes-export-text" type="button">Export as text</button>
+        <button class="notes-btn" id="notes-export-json" type="button">Export JSON</button>
+        <a class="notes-btn" href="../">← Home</a>
+      </div>
+
+      <p id="notes-count" style="font-family:var(--font-ui);font-size:0.85rem;color:var(--color-muted);margin:0 0 1rem;"></p>
+
+      <ul class="notes-list" id="notes-list"></ul>
+      <p class="notes-empty" id="notes-empty" hidden>
+        No notes yet. Open the Reader and click a verse number to highlight or add a note.
+      </p>
+
+    </div>
+  </main>
+
+  <script src="../assets/js/bible.js"></script>
+  <script>
+    (function () {
+      var NOTES_KEY = 'bsw_notes';
+      var READER_URL = '../read/';
+      var VS_URL = '../verse-study/';
+
+      function getNotes() {
+        try { return JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); }
+        catch (e) { return {}; }
+      }
+      function saveAllNotes(obj) {
+        localStorage.setItem(NOTES_KEY, JSON.stringify(obj));
+      }
+
+      function render() {
+        var notes = getNotes();
+        var refs = Object.keys(notes).sort();
+        var listEl = document.getElementById('notes-list');
+        var emptyEl = document.getElementById('notes-empty');
+        var countEl = document.getElementById('notes-count');
+
+        listEl.innerHTML = '';
+        if (refs.length === 0) {
+          emptyEl.hidden = false;
+          countEl.textContent = '';
+          return;
+        }
+        emptyEl.hidden = true;
+        countEl.textContent = refs.length + ' verse' + (refs.length !== 1 ? 's' : '') + ' annotated';
+
+        refs.forEach(function (ref) {
+          var n = notes[ref];
+          var li = document.createElement('li');
+          li.className = 'notes-item' + (n.highlight ? ' notes-item--highlighted' : '');
+
+          var header = document.createElement('div');
+          header.className = 'notes-item__header';
+
+          var refEl = document.createElement('span');
+          refEl.className = 'notes-item__ref';
+          refEl.textContent = ref;
+          header.appendChild(refEl);
+
+          if (n.highlight) {
+            var badge = document.createElement('span');
+            badge.className = 'notes-item__badge';
+            badge.textContent = '★ highlighted';
+            header.appendChild(badge);
+          }
+          li.appendChild(header);
+
+          if (n.note) {
+            var noteEl = document.createElement('p');
+            noteEl.className = 'notes-item__note';
+            noteEl.textContent = n.note;
+            li.appendChild(noteEl);
+          }
+
+          var actions = document.createElement('div');
+          actions.className = 'notes-item__actions';
+
+          var readerLink = document.createElement('a');
+          readerLink.className = 'notes-item__link';
+          readerLink.href = READER_URL + '?ref=' + encodeURIComponent(ref);
+          readerLink.textContent = 'Read in context';
+          actions.appendChild(readerLink);
+
+          var vsLink = document.createElement('a');
+          vsLink.className = 'notes-item__link';
+          vsLink.href = VS_URL + '?ref=' + encodeURIComponent(ref);
+          vsLink.textContent = 'Word study';
+          actions.appendChild(vsLink);
+
+          var delBtn = document.createElement('button');
+          delBtn.className = 'notes-item__del';
+          delBtn.type = 'button';
+          delBtn.textContent = 'Remove';
+          delBtn.addEventListener('click', function () {
+            var all = getNotes();
+            delete all[ref];
+            saveAllNotes(all);
+            render();
+          });
+          actions.appendChild(delBtn);
+
+          li.appendChild(actions);
+          listEl.appendChild(li);
+        });
+      }
+
+      // Export as plain text
+      document.getElementById('notes-export-text').addEventListener('click', function () {
+        var notes = getNotes();
+        var refs = Object.keys(notes).sort();
+        if (refs.length === 0) { alert('No notes to export.'); return; }
+        var lines = refs.map(function (ref) {
+          var n = notes[ref];
+          var parts = [ref];
+          if (n.highlight) parts.push('[highlighted]');
+          if (n.note) parts.push(n.note);
+          return parts.join('\n');
+        });
+        var blob = new Blob([lines.join('\n\n')], { type: 'text/plain' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'bible-notes.txt';
+        a.click();
+      });
+
+      // Export as JSON
+      document.getElementById('notes-export-json').addEventListener('click', function () {
+        var notes = getNotes();
+        if (Object.keys(notes).length === 0) { alert('No notes to export.'); return; }
+        var blob = new Blob([JSON.stringify(notes, null, 2)], { type: 'application/json' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'bible-notes.json';
+        a.click();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

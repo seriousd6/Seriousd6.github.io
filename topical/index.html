@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Nave's Topical Bible — 20,000+ topics with scripture references." />
+  <title>Nave's Topical Bible</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/topical.css" />
+</head>
+<body>
+
+  <main>
+    <div class="container topical-page">
+
+      <div class="topical-header">
+        <h1 class="topical-title">Nave's Topical Bible</h1>
+        <p class="topical-sub">5,322 topics · 100,000+ scripture references · Orville J. Nave (1896)</p>
+      </div>
+
+      <!-- Search -->
+      <div class="topical-search-row">
+        <input id="topical-search" type="search" class="topical-search-input"
+          placeholder="Search topics… e.g. prayer, faith, baptism"
+          autocomplete="off" spellcheck="false" />
+        <span id="topical-search-count" class="topical-search-count" hidden></span>
+      </div>
+
+      <!-- A–Z quick tabs -->
+      <div class="topical-alpha" id="topical-alpha" role="tablist" aria-label="Browse by letter"></div>
+
+      <!-- Two-column body: list + detail -->
+      <div class="topical-body" id="topical-body">
+        <div class="topical-list-col">
+          <div id="topical-list" class="topical-list"></div>
+          <p id="topical-loading" class="topical-loading">Loading topics…</p>
+          <p id="topical-empty"  class="topical-empty" hidden>No topics found.</p>
+        </div>
+        <div class="topical-detail-col" id="topical-detail-col" hidden>
+          <div id="topical-detail" class="topical-detail"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Nave's Topical Bible — public domain. Scripture references open inline.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+</body>
+</html>

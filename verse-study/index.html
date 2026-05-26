@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Deep-dive verse study: cross-references, commentary, parallel passages, and word study." />
+  <title>Verse Study — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/verse-study.css" />
+</head>
+<body class="verse-study-page">
+  <main>
+    <div id="vs-sticky-header" class="vs-header">
+      <div class="vs-header__topbar">
+        <a id="vs-back-link" class="vs-back-link" href="#">← Reader</a>
+        <span id="vs-header-ref" class="vs-header-ref"></span>
+        <div class="version-picker">
+          <label for="bible-version" class="version-picker__label">Version:</label>
+          <select id="bible-version" class="version-picker__select"></select>
+        </div>
+      </div>
+      <div class="vs-verse-block">
+        <div id="vs-context-prev" class="vs-context-verse" hidden></div>
+        <div id="vs-focal-verse" class="vs-focal-verse">
+          <sup class="vs-focal-num" id="vs-focal-num"></sup>
+          <span class="vs-focal-text" id="vs-focal-text">Loading…</span>
+        </div>
+        <div id="vs-context-next" class="vs-context-verse" hidden></div>
+      </div>
+      <div class="vs-header__actions">
+        <button id="vs-context-toggle" class="vs-context-btn" aria-pressed="false">Context</button>
+        <button id="vs-memory-btn" class="vs-context-btn" type="button">☆ Memorize</button>
+      </div>
+      <div id="vs-token-row" class="vs-token-row" aria-label="Word tokens for study"></div>
+    </div>
+
+    <div class="vs-page-wrap">
+      <div class="vs-layout">
+        <nav id="vs-sidebar" class="vs-sidebar" aria-label="Verse study sections"></nav>
+        <div class="vs-main">
+          <div class="vs-mobile-nav" id="vs-mobile-nav" hidden>
+            <select id="vs-section-select" aria-label="Jump to section">
+              <option value="">Jump to section…</option>
+            </select>
+          </div>
+          <div id="vs-sections-container"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+</body>
+</html>

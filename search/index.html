@@ -14,12 +14,17 @@
     <div class="container">
 
       <h1>Verse Search</h1>
-      <p>Type a word or phrase to search every verse in the current Bible version.</p>
+      <p>Search every verse by word or phrase, or look up all occurrences of a Strong's number (G3056, H430…).</p>
 
       <div class="search-page-input-wrap">
         <input id="bsw-search-input" class="search-page-input" type="search"
           placeholder="e.g. love, in the beginning, &quot;the word was God&quot;"
           autocomplete="off" spellcheck="false" />
+        <div class="search-mode-row">
+          <button class="search-mode-btn search-mode-btn--active" data-mode="text" type="button">Verses</button>
+          <button class="search-mode-btn" data-mode="strongs" type="button">Strong's #</button>
+          <button class="search-mode-btn" data-mode="topics" type="button">Topics</button>
+        </div>
         <p class="search-page-status" id="bsw-search-status"></p>
       </div>
 

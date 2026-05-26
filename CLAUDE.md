@@ -54,10 +54,10 @@ Copy `topics/_template/index.html` and edit:
 
 ## Known Future Work
 
-- [ ] Bible version switcher UI
-- [ ] In-page cross-reference tooltip (hover a `.ref` to preview verse)
-- [ ] Search across all topic pages
-- [ ] Verse highlight / personal notes (localStorage)
+- [x] Bible version switcher UI
+- [x] In-page cross-reference tooltip (hover a `.ref` to preview verse)
+- [x] Search across all topic pages
+- [x] Verse highlight / personal notes (localStorage)
 - [ ] Mobile navigation improvements
 
 ## What NOT to Do

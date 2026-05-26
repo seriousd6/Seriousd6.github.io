@@ -1,0 +1,406 @@
+/* memorize.css — Scripture memory flashcard page */
+
+.mem-page {
+  max-width: 680px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+.mem-header {
+  margin-bottom: 1.5rem;
+}
+
+.mem-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 .3rem;
+}
+
+.mem-subtitle {
+  font-size: .88rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+}
+
+/* ── Tabs ────────────────────────────────────────────────────────────────────── */
+.mem-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--color-border, #ddd);
+  margin-bottom: 1.25rem;
+}
+
+.mem-tab {
+  padding: .55rem 1.1rem;
+  font-size: .9rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: var(--color-muted, #888);
+  transition: color .15s, border-color .15s;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.mem-tab--active,
+.mem-tab:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.mem-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.3em;
+  height: 1.3em;
+  padding: 0 .35em;
+  border-radius: 20px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+/* ── Browse panel ────────────────────────────────────────────────────────────── */
+.mem-add-row {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: .4rem;
+}
+
+.mem-add-input {
+  flex: 1;
+  padding: .5rem .75rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 7px;
+  font-size: .9rem;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+}
+
+.mem-add-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.mem-add-btn {
+  padding: .5rem 1.1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mem-add-btn:hover { opacity: .85; }
+
+.mem-add-error {
+  font-size: .83rem;
+  color: #c0392b;
+  margin: 0 0 .6rem;
+}
+
+.mem-mode-row {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+
+.mem-mode-label {
+  font-size: .83rem;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+}
+
+.mem-mode-select {
+  font-size: .83rem;
+  padding: .25rem .5rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 5px;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ── Verse list ──────────────────────────────────────────────────────────────── */
+.mem-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.mem-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .65rem .9rem;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  background: var(--color-surface, #fff);
+}
+
+.mem-item--due {
+  border-left: 3px solid var(--color-primary);
+}
+
+.mem-item__ref {
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--color-text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mem-item__status {
+  font-size: .78rem;
+  white-space: nowrap;
+  color: var(--color-muted, #888);
+}
+
+.mem-item__status--due {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.mem-item__btns {
+  display: flex;
+  gap: .4rem;
+  flex-shrink: 0;
+}
+
+.mem-item__review-btn {
+  padding: .25rem .65rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mem-item__review-btn:hover { opacity: .85; }
+
+.mem-item__remove-btn {
+  padding: .25rem .5rem;
+  background: none;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 5px;
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+  cursor: pointer;
+}
+
+.mem-item__remove-btn:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+.mem-empty {
+  color: var(--color-muted, #aaa);
+  font-size: .9rem;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────────── */
+.mem-progress {
+  font-size: .83rem;
+  color: var(--color-muted, #888);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.mem-progress-bar {
+  flex: 1;
+  height: 5px;
+  background: var(--color-border, #e0e0e0);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mem-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width .3s;
+}
+
+/* ── Flashcard ───────────────────────────────────────────────────────────────── */
+.mem-card {
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 14px;
+  padding: 2rem 1.5rem 1.25rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+
+.mem-card__front {
+  width: 100%;
+}
+
+.mem-card__label {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--color-muted, #aaa);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.mem-card__ref {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: .6rem;
+}
+
+.mem-card__hint {
+  font-size: .83rem;
+  color: var(--color-muted, #aaa);
+  font-style: italic;
+}
+
+.mem-card__back {
+  width: 100%;
+}
+
+.mem-card__verse-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: .5rem;
+}
+
+.mem-card__verse-ref {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.mem-show-btn {
+  padding: .55rem 1.4rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: .5rem;
+}
+
+.mem-show-btn:hover { opacity: .85; }
+
+/* ── Rating buttons ──────────────────────────────────────────────────────────── */
+.mem-card__actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: .25rem;
+}
+
+.mem-rate-btn {
+  flex: 1;
+  min-width: 70px;
+  padding: .5rem .75rem;
+  border: none;
+  border-radius: 7px;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+
+.mem-rate-btn:hover { opacity: .85; }
+
+.mem-rate-btn--again { background: #e74c3c; color: #fff; }
+.mem-rate-btn--hard  { background: #e67e22; color: #fff; }
+.mem-rate-btn--good  { background: #27ae60; color: #fff; }
+.mem-rate-btn--easy  { background: #2980b9; color: #fff; }
+
+/* ── Review done ─────────────────────────────────────────────────────────────── */
+.mem-review-done {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.mem-review-done p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.mem-back-btn {
+  padding: .5rem 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mem-back-btn:hover { opacity: .85; }
+
+/* ── Memory button in modal header ──────────────────────────────────────────── */
+.bsw-modal__memory-btn {
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .2rem .6rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ccc);
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s, color .15s, border-color .15s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.bsw-modal__memory-btn:hover,
+.bsw-modal__memory-btn--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .mem-add-row { flex-direction: column; }
+  .mem-card { padding: 1.5rem 1rem; }
+  .mem-card__ref { font-size: 1.3rem; }
+  .mem-rate-btn { padding: .45rem .5rem; font-size: .8rem; }
+}

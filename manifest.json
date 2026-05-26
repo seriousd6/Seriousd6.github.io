@@ -1,0 +1,41 @@
+{
+  "name": "Bible Study",
+  "short_name": "Bible",
+  "description": "Personal Bible study — reader, word study, cross-references, and notes.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#faf8f4",
+  "theme_color": "#5c3d1e",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "48x48"
+    }
+  ],
+  "categories": ["education", "books", "reference"],
+  "shortcuts": [
+    {
+      "name": "Read",
+      "url": "./read/",
+      "description": "Open the Bible reader"
+    },
+    {
+      "name": "Verse Study",
+      "url": "./verse-study/",
+      "description": "Look up a verse"
+    },
+    {
+      "name": "My Notes",
+      "url": "./notes/",
+      "description": "View saved highlights and notes"
+    }
+  ]
+}

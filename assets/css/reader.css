@@ -2,74 +2,62 @@
    Bible Reader Page
    ============================================================ */
 
-/* ── Wide container override ─────────────────────────────── */
+/* ── Reader fills all available width — no centering cap ──── */
 .reader-page .container {
-  max-width: 1400px;
+  max-width: none;
+  padding: 0 1.5rem;
 }
 
-/* ── Page layout: sidebar + main + xref panel ────────────── */
+.reader-page main {
+  padding: 1.25rem 0 2rem;
+}
+
+/* ── Page layout: reading text + side panel ──────────────── */
 .reader-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: start;
 }
 
-/* Medium: text + cross-ref panel side-by-side (chapter sidebar stays hidden) */
+/* 700px+: text + side panel (Notes / Cross-refs / Commentary) */
 @media (min-width: 700px) {
   .reader-layout {
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 1fr 290px;
+    gap: 1.25rem;
   }
-  /* sidebar is display:none so exclude it from flow with grid-column spanning */
-  .reader-sidebar { display: none; }
   .reader-main      { grid-column: 1; grid-row: 1; }
   .reader-xref-panel { grid-column: 2; grid-row: 1; }
 }
 
-/* Wide: chapter sidebar + text + cross-ref panel */
-@media (min-width: 1100px) {
+/* 1300px+: wider panel so commentary is comfortably readable */
+@media (min-width: 1300px) {
   .reader-layout {
-    grid-template-columns: 160px 1fr 260px;
+    grid-template-columns: 1fr 400px;
   }
-  .reader-sidebar   { display: block; grid-column: 1; grid-row: 1; }
-  .reader-main      { grid-column: 2; grid-row: 1; }
-  .reader-xref-panel { grid-column: 3; grid-row: 1; }
 }
 
-/* ── Chapter list sidebar ────────────────────────────────── */
-.reader-sidebar {
-  display: none;
-  position: sticky;
-  top: 1rem;
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  scrollbar-width: thin;
-}
+/* Chapter sidebar hidden at all widths — nav handled by dropdowns + j/k keys */
+.reader-sidebar { display: none !important; }
 
-@media (min-width: 1100px) {
-  .reader-sidebar { display: block; }
-}
-
-/* ── Cross-reference side panel ──────────────────────────── */
+/* ── Side panel (Notes / Cross-refs / Commentary) ─────────── */
 .reader-xref-panel {
   display: none;
 }
 
 @media (min-width: 700px) {
   .reader-xref-panel {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: sticky;
     top: 1rem;
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
+    max-height: calc(100vh - 1.5rem);
+    overflow: hidden;
     scrollbar-width: thin;
   }
 }
 
-.reader-xref-panel:empty { display: none !important; }
+/* panel is now always shown at ≥700px — `:empty` hide removed */
 
 .reader-xref-panel__heading {
   font-family: var(--font-ui);
@@ -349,6 +337,11 @@
   display: inline;
 }
 
+.reader-verse--highlighted {
+  background: rgba(255, 230, 80, 0.32);
+  border-radius: 2px;
+}
+
 .reader-verse__num {
   font-family: var(--font-ui);
   font-size: 0.62rem;
@@ -357,6 +350,31 @@
   vertical-align: super;
   margin-right: 0.18em;
   user-select: none;
+  cursor: pointer;
+}
+
+.reader-verse__num--highlighted {
+  color: #b8860b;
+}
+
+/* Bookmark indicator on verse superscript */
+.reader-verse__num--bookmarked {
+  color: var(--color-primary);
+}
+.reader-verse__num--bookmarked::before {
+  content: '★';
+  font-size: 0.5rem;
+  vertical-align: super;
+  margin-right: 1px;
+}
+
+/* Small dot indicator when a verse has a note */
+.reader-verse--has-note .reader-verse__num::after {
+  content: '●';
+  font-size: 0.45rem;
+  vertical-align: super;
+  margin-left: 1px;
+  color: var(--color-primary);
 }
 
 /* ── Hint / loading / error text ─────────────────────────── */
@@ -407,25 +425,26 @@
 }
 
 /* ── Cross-reference footnote markers ────────────────────── */
+/* Deliberately different from verse numbers (gold accent) — use teal-blue */
 .reader-xref-note {
   font-family: var(--font-ui);
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: #4a85a3;
   vertical-align: super;
   cursor: pointer;
   margin-left: 0.1em;
   margin-right: 0.04em;
   line-height: 1;
   text-decoration: none;
-  border-bottom: 1px dotted var(--color-accent);
+  border-bottom: 1px dotted #4a85a3;
   transition: color 0.12s, border-color 0.12s;
   user-select: none;
 }
 
 .reader-xref-note:hover,
 .reader-xref-note:focus-visible {
-  color: var(--color-primary);
+  color: #2d6080;
   border-bottom-style: solid;
 }
 
@@ -650,4 +669,384 @@
   .reader-parallel-header { gap: 0.35rem; padding: 0.4rem 0.6rem; }
   .reader-parallel-body   { padding: 0.5rem 0.6rem; }
   .reader-parallel-text   { font-size: 0.94rem; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   Compare (side-by-side translation) feature
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Toggle button (same shape as Parallels button) ──────── */
+.reader-compare-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-compare-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-compare-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-compare-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+  color: #fff;
+}
+.reader-compare-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Compare split layout ────────────────────────────────── */
+.reader-compare-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .reader-compare-wrap { grid-template-columns: 1fr; }
+}
+
+.reader-compare-panel {
+  min-width: 0; /* prevent text overflow expanding the column */
+}
+
+/* ── Per-panel version header ────────────────────────────── */
+.reader-compare-panel__hdr {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-primary);
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-ui);
+}
+
+.reader-compare-panel__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.reader-compare-ver-sel {
+  font-size: 0.82rem;
+  padding: 2px 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  min-width: 0;
+  flex: 1;
+}
+
+/* ── Interlinear toggle button ───────────────────────────── */
+.reader-interlinear-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-interlinear-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-interlinear-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-interlinear-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+}
+.reader-interlinear-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Interlinear verse block layout ─────────────────────── */
+.reader-interlinear-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.reader-verse-block {
+  display: block;
+  padding: 0.25rem 0 0;
+}
+.reader-verse-block .reader-verse {
+  display: block;
+  line-height: 1.75;
+}
+.reader-interlinear-row {
+  padding: 0.4rem 0 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Interlinear tile grid ───────────────────────────────── */
+.ri-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.ri-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  max-width: 130px;
+  padding: 0.35rem 0.5rem 0.3rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  line-height: 1;
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+.ri-tile:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+}
+.ri-tile--active {
+  border-color: var(--color-primary);
+  background: var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.ri-tile__lemma {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: 0.15rem;
+}
+.ri-tile__lemma--none {
+  color: var(--color-muted);
+  font-style: italic;
+}
+.ri-tile__translit {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+.ri-tile__eng {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+.ri-tile__s {
+  font-size: 0.6rem;
+  color: var(--color-accent);
+  letter-spacing: 0.03em;
+  padding: 0.08rem 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-bg);
+  white-space: nowrap;
+}
+
+/* ── Interlinear popover ─────────────────────────────────── */
+.ri-popover {
+  position: fixed;
+  z-index: 700;
+  width: 280px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  padding: 0.85rem 1rem 0.8rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.ri-popover[hidden] { display: none; }
+.ri-popover__close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.55rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1;
+  padding: 0.15rem 0.3rem;
+}
+.ri-popover__close:hover { color: var(--color-text); }
+.ri-popover__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-right: 1.5rem;
+}
+.ri-popover__eng {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-body, Georgia, serif);
+}
+.ri-popover__s {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-surface);
+}
+.ri-popover__orig {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.ri-popover__lemma {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+.ri-popover__translit {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+.ri-popover__gloss {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.ri-popover__def {
+  font-size: 0.78rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+.ri-popover__deriv {
+  font-size: 0.73rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+.ri-popover__no-entry {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+}
+.ri-popover__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 0.3rem;
+}
+.ri-popover__links .vs-context-btn {
+  text-decoration: none;
+}
+
+/* ── Reader side panel: Notes / Cross-refs / Commentary switcher ─────────── */
+
+.reader-panel-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.reader-panel-tab {
+  flex: 1;
+  padding: 0.4rem 0.25rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.12s, border-color 0.12s;
+}
+.reader-panel-tab:hover { color: var(--color-text); }
+.reader-panel-tab--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.reader-panel-body {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+.reader-panel-body[hidden] { display: none; }
+
+/* Notes groups inside reader panel */
+.reader-notes-group { margin-bottom: 0.75rem; }
+.reader-notes-group__heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+.reader-notes-item {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.reader-notes-item:last-child { border-bottom: none; }
+.reader-notes-item__text { font-size: 0.82rem; line-height: 1.5; white-space: pre-wrap; }
+.reader-notes-item__meta { font-size: 0.68rem; color: var(--color-muted); margin-top: 0.15rem; }
+
+.reader-panel-compose { margin-top: 0.75rem; }
+.reader-panel-verse-sel {
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.15rem 0.3rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  max-width: 140px;
 }

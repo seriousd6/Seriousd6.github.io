@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Bible reading plans — daily schedules to read through Scripture." />
+  <title>Reading Plans — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <style>
+    .plans-page { max-width: 700px; margin: 0 auto; }
+    .plans-page h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .plans-page > .subtitle {
+      color: var(--color-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.75rem;
+    }
+
+    /* ── Plan card ── */
+    .plan-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .plan-card--enrolled {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 1px var(--color-primary);
+    }
+    .plan-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .plan-card__info { flex: 1; min-width: 0; }
+    .plan-card__title { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.2rem; }
+    .plan-card__meta { font-size: 0.78rem; color: var(--color-muted); margin-bottom: 0.4rem; }
+    .plan-card__desc { font-size: 0.88rem; color: var(--color-text); line-height: 1.5; }
+
+    .plan-card__actions { display: flex; gap: 0.5rem; flex-shrink: 0; align-items: flex-start; }
+    .plan-btn {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 5px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    .plan-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .plan-btn--primary {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
+    .plan-btn--primary:hover { background: #4a3016; border-color: #4a3016; color: #fff; }
+    .plan-btn--danger { color: var(--color-muted); }
+    .plan-btn--danger:hover { border-color: #c0392b; color: #c0392b; }
+
+    /* ── Today's reading section (shown when enrolled) ── */
+    .plan-today {
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .plan-today__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    .plan-today__progress {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      margin-bottom: 0.6rem;
+    }
+    .plan-today__passages { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .plan-today__passage {
+      font-size: 0.83rem;
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.2rem 0.55rem;
+      text-decoration: none;
+      background: var(--color-bg);
+    }
+    .plan-today__passage:hover {
+      border-color: var(--color-primary);
+      background: var(--color-surface);
+    }
+    .plan-today__done {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .plan-today__mark {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+    .plan-today__mark--done {
+      background: #e8f5e9;
+      border-color: #4caf50;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .plan-today__mark--done:hover { background: #c8e6c9; }
+    .plan-today__mark:not(.plan-today__mark--done):hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+    .plan-today__complete-msg {
+      font-size: 0.85rem;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+
+    /* ── Plan detail (calendar view) ── */
+    .plan-detail { margin-top: 0.75rem; }
+    .plan-detail-toggle {
+      font-size: 0.78rem;
+      color: var(--color-accent);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .plan-detail-toggle:hover { text-decoration: underline; }
+    .plan-calendar { margin-top: 0.6rem; display: none; }
+    .plan-calendar--open { display: block; }
+    .plan-calendar__row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.83rem;
+    }
+    .plan-calendar__row:last-child { border-bottom: none; }
+    .plan-calendar__row--today .plan-calendar__day { font-weight: 700; color: var(--color-primary); }
+    .plan-calendar__row--done .plan-calendar__passages { text-decoration: line-through; color: var(--color-muted); }
+    .plan-calendar__day { min-width: 45px; color: var(--color-muted); flex-shrink: 0; }
+    .plan-calendar__passages { flex: 1; color: var(--color-text); }
+    .plan-calendar__check { width: 1.1rem; text-align: center; color: #4caf50; font-size: 0.9rem; flex-shrink: 0; }
+
+    .plans-loading { color: var(--color-muted); font-style: italic; padding: 2rem 0; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container plans-page">
+      <h1>Reading Plans</h1>
+      <p class="subtitle">Daily schedules to read through Scripture. Pick a plan, start today, and track your progress locally in your browser.</p>
+      <div id="plans-list"><p class="plans-loading">Loading plans…</p></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    var PLANS_KEY  = 'bsw_plans';
+    var PLANS_ROOT = '../data/plans';
+    var READ_URL   = '../read/';
+
+    var PLAN_IDS = [
+      'bible-in-a-year',
+      'mcheyne',
+      'nt-90-days',
+      'psalms-proverbs',
+      'gospels-30-days'
+    ];
+
+    function getState()       { try { return JSON.parse(localStorage.getItem(PLANS_KEY) || '{}'); } catch(e) { return {}; } }
+    function saveState(s)     { localStorage.setItem(PLANS_KEY, JSON.stringify(s)); }
+    function todayStr()       { return new Date().toISOString().slice(0, 10); }
+
+    function dayNum(state) {
+      if (!state || !state.startDate) return 1;
+      var start = new Date(state.startDate + 'T00:00:00');
+      var today = new Date();
+      today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      return Math.floor((today - start) / 86400000) + 1;
+    }
+
+    function passageUrl(passage) {
+      return READ_URL + '?ref=' + encodeURIComponent(passage);
+    }
+
+    // ── Render ─────────────────────────────────────────────────────────────
+    function renderAll(planDataList) {
+      var state   = getState();
+      var listEl  = document.getElementById('plans-list');
+      listEl.innerHTML = '';
+
+      planDataList.forEach(function (plan) {
+        listEl.appendChild(renderPlanCard(plan, state[plan.id]));
+      });
+    }
+
+    function renderPlanCard(plan, enrollment) {
+      var enrolled = !!(enrollment && enrollment.startDate);
+      var card = document.createElement('div');
+      card.className = 'plan-card' + (enrolled ? ' plan-card--enrolled' : '');
+      card.dataset.planId = plan.id;
+
+      // ── Top bar: title + actions
+      var top = document.createElement('div');
+      top.className = 'plan-card__top';
+
+      var info = document.createElement('div');
+      info.className = 'plan-card__info';
+      info.innerHTML =
+        '<div class="plan-card__title">' + esc(plan.title) + '</div>' +
+        '<div class="plan-card__meta">' + plan.total_days + ' days</div>' +
+        '<div class="plan-card__desc">' + esc(plan.description) + '</div>';
+
+      var actions = document.createElement('div');
+      actions.className = 'plan-card__actions';
+
+      if (!enrolled) {
+        var startBtn = document.createElement('button');
+        startBtn.className = 'plan-btn plan-btn--primary';
+        startBtn.textContent = 'Start Plan';
+        startBtn.addEventListener('click', function () { enrollPlan(plan); });
+        actions.appendChild(startBtn);
+      } else {
+        var dropBtn = document.createElement('button');
+        dropBtn.className = 'plan-btn plan-btn--danger';
+        dropBtn.textContent = 'Unenroll';
+        dropBtn.addEventListener('click', function () { unenrollPlan(plan.id); });
+        actions.appendChild(dropBtn);
+      }
+
+      top.appendChild(info);
+      top.appendChild(actions);
+      card.appendChild(top);
+
+      // ── Today's reading (enrolled only)
+      if (enrolled) {
+        card.appendChild(renderTodaySection(plan, enrollment));
+      }
+
+      // ── Calendar toggle
+      var detailDiv = document.createElement('div');
+      detailDiv.className = 'plan-detail';
+      var toggleBtn = document.createElement('button');
+      toggleBtn.className = 'plan-detail-toggle';
+      toggleBtn.textContent = enrolled ? 'View full schedule ▾' : 'Preview schedule ▾';
+      var cal = document.createElement('div');
+      cal.className = 'plan-calendar';
+      toggleBtn.addEventListener('click', function () {
+        var open = cal.classList.toggle('plan-calendar--open');
+        toggleBtn.textContent = open
+          ? (enrolled ? 'Hide schedule ▴' : 'Hide preview ▴')
+          : (enrolled ? 'View full schedule ▾' : 'Preview schedule ▾');
+        if (open && !cal.dataset.built) {
+          buildCalendar(cal, plan, enrollment);
+          cal.dataset.built = '1';
+        }
+      });
+      detailDiv.appendChild(toggleBtn);
+      detailDiv.appendChild(cal);
+      card.appendChild(detailDiv);
+
+      return card;
+    }
+
+    function renderTodaySection(plan, enrollment) {
+      var div = document.createElement('div');
+      div.className = 'plan-today';
+      var dn = dayNum(enrollment);
+
+      if (dn < 1 || dn > plan.total_days) {
+        div.innerHTML =
+          '<div class="plan-today__label">Plan complete!</div>' +
+          '<p class="plan-today__complete-msg">You\'ve finished ' + esc(plan.title) + '. 🎉</p>';
+        return div;
+      }
+
+      var day  = plan.days[dn - 1];
+      var done = !!(enrollment.completed && enrollment.completed[dn]);
+
+      div.innerHTML =
+        '<div class="plan-today__label">Today\'s Reading — Day ' + dn + ' of ' + plan.total_days + '</div>' +
+        '<div class="plan-today__progress">' + progressBar(dn, plan.total_days) + ' ' +
+          Math.round((dn / plan.total_days) * 100) + '% complete</div>';
+
+      var passDiv = document.createElement('div');
+      passDiv.className = 'plan-today__passages';
+      day.passages.forEach(function (p) {
+        var a = document.createElement('a');
+        a.className = 'plan-today__passage';
+        a.href      = passageUrl(p);
+        a.textContent = p;
+        passDiv.appendChild(a);
+      });
+      div.appendChild(passDiv);
+
+      var doneDiv = document.createElement('div');
+      doneDiv.className = 'plan-today__done';
+      var markBtn = document.createElement('button');
+      markBtn.className = 'plan-today__mark' + (done ? ' plan-today__mark--done' : '');
+      markBtn.textContent = done ? '✓ Marked complete' : 'Mark day complete';
+      markBtn.addEventListener('click', function () {
+        var s = getState();
+        if (!s[plan.id]) return;
+        if (!s[plan.id].completed) s[plan.id].completed = {};
+        if (done) {
+          delete s[plan.id].completed[dn];
+          done = false;
+          markBtn.className = 'plan-today__mark';
+          markBtn.textContent = 'Mark day complete';
+        } else {
+          s[plan.id].completed[dn] = true;
+          done = true;
+          markBtn.className = 'plan-today__mark plan-today__mark--done';
+          markBtn.textContent = '✓ Marked complete';
+        }
+        saveState(s);
+      });
+      doneDiv.appendChild(markBtn);
+      div.appendChild(doneDiv);
+
+      return div;
+    }
+
+    function buildCalendar(cal, plan, enrollment) {
+      var today = dayNum(enrollment || {});
+      var comp  = (enrollment && enrollment.completed) || {};
+      var show  = enrollment ? plan.days : plan.days.slice(0, 14); // preview: first 14 days
+
+      show.forEach(function (day) {
+        var dn    = day.day;
+        var isToday = enrollment && dn === today;
+        var isDone  = !!comp[dn];
+
+        var row = document.createElement('div');
+        row.className = 'plan-calendar__row' +
+          (isToday ? ' plan-calendar__row--today' : '') +
+          (isDone  ? ' plan-calendar__row--done'  : '');
+
+        row.innerHTML =
+          '<span class="plan-calendar__check">' + (isDone ? '✓' : '') + '</span>' +
+          '<span class="plan-calendar__day">' + esc('Day ' + dn) + '</span>' +
+          '<span class="plan-calendar__passages">' + esc(day.passages.join(', ')) + '</span>';
+
+        cal.appendChild(row);
+      });
+
+      if (!enrollment && plan.days.length > 14) {
+        var more = document.createElement('p');
+        more.style.cssText = 'font-size:0.78rem;color:var(--color-muted);margin-top:0.4rem;';
+        more.textContent = '… and ' + (plan.days.length - 14) + ' more days. Start the plan to see the full schedule.';
+        cal.appendChild(more);
+      }
+    }
+
+    function progressBar(cur, total) {
+      var pct = Math.round((cur / total) * 100);
+      return '<span style="display:inline-block;width:60px;height:6px;background:var(--color-border);border-radius:3px;vertical-align:middle;position:relative;">' +
+        '<span style="display:block;height:100%;width:' + pct + '%;background:var(--color-primary);border-radius:3px;"></span></span>';
+    }
+
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── Enrollment actions ─────────────────────────────────────────────────
+    function enrollPlan(plan) {
+      var s = getState();
+      s[plan.id] = { startDate: todayStr(), completed: {} };
+      saveState(s);
+      loadAndRender();
+    }
+
+    function unenrollPlan(id) {
+      if (!confirm('Remove this reading plan and all progress?')) return;
+      var s = getState();
+      delete s[id];
+      saveState(s);
+      loadAndRender();
+    }
+
+    // ── Load all plan data ─────────────────────────────────────────────────
+    function loadAndRender() {
+      Promise.all(PLAN_IDS.map(function (id) {
+        return fetch(PLANS_ROOT + '/' + id + '.json')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; });
+      })).then(function (plans) {
+        renderAll(plans.filter(Boolean));
+      });
+    }
+
+    loadAndRender();
+  }());
+  </script>
+</body>
+</html>
