@@ -37,7 +37,7 @@
   --font-display: 'Cinzel', 'Trajan Pro', serif;
   --font-body:    'EB Garamond', Georgia, serif;
   --font-alt:     'Cormorant SC', 'EB Garamond', serif;
-  --sidebar-w:    280px;
+  --prayer-sidebar-w: 280px;
   --radius:       4px;
   --header-h:     52px;
 }
@@ -65,7 +65,7 @@ body {
 
 /* ===== SIDEBAR ===== */
 #sidebar {
-  width: var(--sidebar-w);
+  width: var(--prayer-sidebar-w);
   height: calc(100vh - var(--header-h, 52px));
   background: linear-gradient(180deg, #efe2c0 0%, #e6d6ad 100%);
   border-right: 1px solid var(--border-strong);
@@ -187,8 +187,8 @@ body:not(.sidebar-open) #sidebar { transform: translateX(-100%); }
   transition: margin-left 0.28s ease, max-width 0.28s ease;
 }
 body.sidebar-open #main {
-  margin-left: var(--sidebar-w);
-  max-width: calc(100vw - var(--sidebar-w));
+  margin-left: var(--prayer-sidebar-w);
+  max-width: calc(100vw - var(--prayer-sidebar-w));
 }
 
 /* HERO */
@@ -806,7 +806,7 @@ em { color: var(--cream-dim); font-style: italic; }
   z-index: 200;
   transition: left 0.28s ease;
 }
-body.sidebar-open #progress-bar { left: var(--sidebar-w); }
+body.sidebar-open #progress-bar { left: var(--prayer-sidebar-w); }
 
 #progress-fill {
   height: 100%;
@@ -890,22 +890,6 @@ body.sidebar-open #progress-bar { left: var(--sidebar-w); }
 <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
 </head>
 <body data-current-topic="prayer" class="sidebar-open">
-
-<header class="site-header site-header--topic">
-  <button class="topic-sidebar-toggle" id="topic-sidebar-toggle" aria-expanded="true" aria-label="Toggle section menu">☰</button>
-  <a class="site-title" href="../../">📖 Bible Study</a>
-  <nav class="site-nav">
-    <a href="../../">Home</a>
-    <a href="../../read/" class="site-nav__action">Reader</a>
-    <a href="../../search/" class="site-nav__action">Search</a>
-    <span class="site-nav__breadcrumb">/ Prayer</span>
-  </nav>
-  <div class="version-picker">
-    <label for="bible-version">Version:</label>
-    <select id="bible-version"><!-- populated by bible.js --></select>
-  </div>
-</header>
-
 <div id="progress-bar"><div id="progress-fill"></div></div>
 
 <!-- SIDEBAR -->
@@ -2514,7 +2498,7 @@ function clearSearch() {
 document.querySelectorAll('.accordion-item.open .accordion-body').forEach(b => b.classList.add('open'));
 </script>
 
-<script src="../../assets/js/bible.js"></script>
 <script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/bible.js"></script>
 </body>
 </html>

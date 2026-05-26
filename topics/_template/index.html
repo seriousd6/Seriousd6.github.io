@@ -8,50 +8,155 @@
   <title>TOPIC_TITLE — Bible Study</title>
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../../assets/css/topic-guide.css" />
 </head>
-<body>
+<body class="tg-study">
 
-  <header class="site-header">
-    <div class="container">
-      <a class="site-title" href="../../">📖 Bible Study</a>
-      <nav class="site-nav">
-        <a href="../../">Home</a>
-        <a href="../../read/" class="site-nav__action">Reader</a>
-        <a href="../../search/" class="site-nav__action">Search</a>
-        <!-- Breadcrumb always last: -->
-        <!-- <span class="site-nav__breadcrumb">/ PAGE_TITLE</span> -->
-      </nav>
-      <div class="version-picker">
-        <label for="bible-version">Version:</label>
-        <select id="bible-version"><!-- populated by bible.js --></select>
-      </div>
+  <!--
+    HERO — the only place with unique visual styling per study.
+    Set --tg-accent to a color that fits the topic's feel.
+    Optionally add a pattern modifier to .tg-hero:
+      tg-hero--stripes  |  tg-hero--glow  |  tg-hero--cross
+
+    Color suggestions:
+      Prayer / devotion:    #5c3d1e  (warm brown, site primary)
+      Holy Spirit:          #1a5f6e  (teal)
+      Salvation / grace:    #52278a  (violet)
+      Faith:                #3d5a2a  (forest green)
+      Love / fellowship:    #8a1a1a  (deep red)
+      Prophecy / end times: #1e3a6e  (navy)
+      Creation / nature:    #4a5e30  (olive)
+      Wisdom / fear of God: #7a5c0e  (amber)
+  -->
+  <header class="tg-hero tg-hero--cross" style="--tg-accent: #5c3d1e">
+    <div class="tg-hero__inner">
+      <span class="tg-hero__type">Topical Study</span>
+      <h1 class="tg-hero__title">TOPIC_TITLE</h1>
+      <p class="tg-hero__intro">
+        TOPIC_INTRO — one or two sentences describing what this study covers.
+      </p>
+      <blockquote class="tg-hero__key-verse">
+        <p>KEY VERSE TEXT HERE.</p>
+        <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
+      </blockquote>
     </div>
   </header>
 
   <main>
     <div class="container">
 
-      <h1>TOPIC_TITLE</h1>
-      <p>TOPIC_INTRO — brief summary of what this study covers.</p>
+      <!-- Optional: table of contents for longer studies -->
+      <nav class="tg-toc" aria-label="Study contents">
+        <h2 class="tg-toc__title">Contents</h2>
+        <ol class="tg-toc__list">
+          <li><a href="#section-1">First Section Title</a></li>
+          <li><a href="#section-2">Second Section Title</a></li>
+          <li><a href="#section-3">Third Section Title</a></li>
+        </ol>
+      </nav>
 
-      <!-- ── Key Verse ── -->
-      <blockquote class="scripture">
-        KEY VERSE TEXT HERE
-        <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
-      </blockquote>
+      <!-- ══════════════════════════════════════════════════════
+           SECTIONS — all use the same standardized structure
+           ═══════════════════════════════════════════════════ -->
 
-      <!-- ── Section 1 ── -->
-      <h2>Section Heading</h2>
-      <p>
-        Study notes go here. Reference scripture inline like this:
-        <a class="ref" data-ref="John 3:16">John 3:16</a> or in a block:
-      </p>
-      <blockquote class="scripture">
-        Verse text here.
-        <cite><a class="ref" data-ref="John 3:16">John 3:16</a></cite>
-      </blockquote>
+      <section class="tg-section" id="section-1">
+        <h2 class="tg-section__heading">First Section Heading</h2>
 
-      <!-- ADD MORE SECTIONS AS NEEDED -->
+        <p>Study content here. Reference scripture inline:
+          <a class="ref" data-ref="John 3:16">John 3:16</a>. Or use a full block:</p>
+
+        <blockquote class="scripture">
+          Verse text here.
+          <cite><a class="ref" data-ref="John 3:16">John 3:16</a></cite>
+        </blockquote>
+
+        <!-- Key point with label -->
+        <div class="tg-point">
+          <span class="tg-point__label">Point 1</span>
+          <div class="tg-point__heading">God initiates; we respond.</div>
+          <p>Explanation of this point. Scripture supports it here.</p>
+        </div>
+
+        <!-- Principle / promise callout -->
+        <div class="tg-principle">
+          <span class="tg-principle__label">Key Principle</span>
+          <p class="tg-principle__text">Statement of the biblical principle or promise.</p>
+        </div>
+
+        <!-- Key term definition -->
+        <div class="tg-definition">
+          <span class="tg-definition__term">Sanctification</span>
+          <span class="tg-definition__original">ἁγιασμός (hagiasmos)</span>
+          <span class="tg-definition__def">The ongoing process of being set apart and
+            conformed to the image of Christ.</span>
+        </div>
+
+        <!-- Application -->
+        <div class="tg-application">
+          <span class="tg-application__label">Application</span>
+          <p>How does this truth shape our daily life and practice?</p>
+        </div>
+
+      </section><!-- /section-1 -->
+
+      <section class="tg-section" id="section-2">
+        <h2 class="tg-section__heading">Second Section Heading</h2>
+        <h3 class="tg-subsection">Optional Sub-Heading</h3>
+
+        <p>More study content…</p>
+
+        <!-- Example or illustration -->
+        <div class="tg-example">
+          <span class="tg-example__label">Biblical Example</span>
+          <p>A character or episode from Scripture that illustrates the point.</p>
+        </div>
+
+        <!-- Study note (contextual, secondary) -->
+        <div class="tg-note">
+          <span class="tg-note__label">Note</span>
+          Some secondary observation or textual note that a reader might want but
+          that doesn't need to be in the main flow.
+        </div>
+
+      </section><!-- /section-2 -->
+
+      <section class="tg-section" id="section-3">
+        <h2 class="tg-section__heading">Third Section Heading</h2>
+
+        <!-- Optional comparison table -->
+        <table class="tg-compare">
+          <thead>
+            <tr>
+              <th>Column A</th>
+              <th>Column B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1 A</td>
+              <td>Row 1 B</td>
+            </tr>
+            <tr>
+              <td>Row 2 A</td>
+              <td>Row 2 B</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tg-application">
+          <span class="tg-application__label">Application</span>
+          <p>Final application point for this section.</p>
+        </div>
+      </section><!-- /section-3 -->
+
+      <!-- Optional: further reading list -->
+      <div class="tg-reading">
+        <h2 class="tg-reading__title">For Further Study</h2>
+        <p class="tg-reading__item">
+          <cite>Book Title</cite>, Author Name. Publisher, Year.
+          <em>Brief annotation — what it covers and who it's for.</em>
+        </p>
+      </div>
 
     </div>
   </main>
@@ -62,7 +167,7 @@
     </div>
   </footer>
 
-  <script src="../../assets/js/bible.js"></script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/bible.js"></script>
 </body>
 </html>

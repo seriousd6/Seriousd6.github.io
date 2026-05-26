@@ -1,0 +1,427 @@
+/* ============================================================
+   Topical Study Guide — Standardized Stylesheet
+   ============================================================
+
+   USAGE: Add class tg-study to <body>.
+
+   The hero section at the top is intentionally customizable:
+   set --tg-accent on the .tg-hero element via style="" to pick
+   a color unique to each study. Everything below the hero is
+   standardized and requires no per-study CSS overrides.
+
+   Example:
+     <header class="tg-hero" style="--tg-accent: #52278a">
+       ...hero content...
+     </header>
+
+   All content classes are prefixed tg- .
+   Inherits CSS custom properties from style.css (:root).
+   ============================================================ */
+
+/* ── Defaults (fallback if --tg-accent not set) ─────────────── */
+.tg-hero { --tg-accent: var(--color-primary); }
+
+/* ── Hero — unique per study, color set via --tg-accent ──────── */
+.tg-hero {
+  margin: 0 calc(-1 * var(--space-md)) var(--space-lg);
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  background-color: var(--tg-accent);
+  background-image:
+    radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.09), transparent 55%),
+    radial-gradient(ellipse at 15% 85%, rgba(0,0,0,0.12), transparent 50%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.tg-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='120' height='120' filter='url(%23n)'/></svg>");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+/* ── Optional hero pattern variations ───────────────────────── */
+/* Add one of these classes to .tg-hero for a visual flourish   */
+
+/* Diagonal stripe */
+.tg-hero--stripes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.04) 0,
+    rgba(255,255,255,0.04) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+/* Radial glow */
+.tg-hero--glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.18), transparent 65%);
+  pointer-events: none;
+}
+
+/* Cross motif (subtle) */
+.tg-hero--cross::before {
+  content: "✝";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(6rem, 20vw, 14rem);
+  color: rgba(255,255,255,0.05);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tg-hero__inner { position: relative; z-index: 1; max-width: var(--max-width); }
+
+/* Study type badge */
+.tg-hero__type {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.18rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.9rem;
+}
+
+/* Title */
+.tg-hero__title {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+/* Intro paragraph */
+.tg-hero__intro {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+}
+
+/* Key verse in hero */
+.tg-hero__key-verse {
+  border-left: 3px solid rgba(255,255,255,0.4);
+  padding: 0.65rem 1rem;
+  margin: 0;
+  background: rgba(0,0,0,0.15);
+  border-radius: 0 6px 6px 0;
+  max-width: 600px;
+}
+.tg-hero__key-verse p {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 0.35rem;
+}
+.tg-hero__key-verse cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+}
+.tg-hero__key-verse cite a { color: rgba(255,255,255,0.72); }
+.tg-hero__key-verse cite a:hover { color: #fff; }
+
+/* ── Table of contents ───────────────────────────────────────── */
+.tg-toc {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+.tg-toc__title {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.6rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.tg-toc__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+.tg-toc__list li { margin-bottom: 0.3rem; }
+.tg-toc__list a { color: var(--color-accent); text-decoration: none; }
+.tg-toc__list a:hover { text-decoration: underline; }
+
+/* ── Sections ───────────────────────────────────────────────── */
+.tg-section {
+  margin-bottom: var(--space-xl);
+  scroll-margin-top: calc(var(--header-h, 0px) + 1.5rem);
+}
+
+.tg-section__heading {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.15rem;
+  margin-top: var(--space-lg);
+}
+
+/* Subsection heading */
+.tg-subsection {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Content blocks ─────────────────────────────────────────── */
+
+/* Point / argument block with label */
+.tg-point {
+  margin: var(--space-md) 0 var(--space-lg);
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-border);
+}
+.tg-point__label {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.tg-point__heading {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0 0 0.4rem;
+}
+
+/* Application callout */
+.tg-application {
+  background: rgba(184,134,11,0.07);
+  border: 1px solid rgba(184,134,11,0.25);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin: var(--space-lg) 0;
+}
+.tg-application__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Key term / definition */
+.tg-definition {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: var(--space-md) 0;
+  background: var(--color-surface);
+}
+.tg-definition__term {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+.tg-definition__original {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin-left: 0.5rem;
+}
+.tg-definition__def {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Promise / principle callout */
+.tg-principle {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 0 0 6px 6px;
+  padding: 1rem 1.25rem;
+  margin: var(--space-md) 0;
+}
+.tg-principle__label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.tg-principle__text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+/* Example / illustration */
+.tg-example {
+  background: rgba(92, 61, 30, 0.04);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: var(--space-md) 0;
+  font-size: 0.95rem;
+}
+.tg-example__label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* Comparison / contrast table */
+.tg-compare {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.tg-compare th {
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.85rem;
+  text-align: left;
+}
+.tg-compare td {
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+.tg-compare tr:last-child td { border-bottom: none; }
+.tg-compare tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+/* Study note */
+.tg-note {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: var(--space-md) 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+.tg-note__label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Timeline row (for historical topical studies) */
+.tg-timeline { margin: var(--space-md) 0; }
+.tg-timeline__row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+  font-size: 0.95rem;
+}
+.tg-timeline__row:last-child { border-bottom: none; }
+.tg-timeline__date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Further reading / bibliography */
+.tg-reading {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+}
+.tg-reading__title {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.tg-reading__item {
+  margin-bottom: 0.6rem;
+  font-size: 0.92rem;
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+.tg-reading__item cite { font-style: italic; }
+.tg-reading__item em { color: var(--color-muted); font-style: normal; font-size: 0.85em; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tg-hero { padding: var(--space-lg) var(--space-md); }
+  .tg-hero--cross::before { font-size: 6rem; opacity: 0.04; }
+  .tg-compare { font-size: 0.88rem; }
+  .tg-timeline__row { grid-template-columns: 4rem 1fr; }
+  .tg-timeline__date { font-size: 0.68rem; }
+}

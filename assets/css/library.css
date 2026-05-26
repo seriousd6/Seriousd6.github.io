@@ -1,0 +1,286 @@
+/* ============================================================
+   Confessions & Creeds Library
+   ============================================================ */
+
+/* ── Document meta badge bar ────────────────────────────── */
+.lib-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+.lib-badge {
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.lib-badge--reformed  { border-color: #a0522d; color: #a0522d; }
+.lib-badge--lutheran  { border-color: #4a7a56; color: #4a7a56; }
+.lib-badge--anglican  { border-color: #4a5f7a; color: #4a5f7a; }
+.lib-badge--ecumenical{ border-color: var(--color-accent); color: var(--color-accent); }
+.lib-badge--baptist   { border-color: #5c2d87; color: #5c2d87; }
+
+/* ── Table of contents ──────────────────────────────────── */
+.lib-toc {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem 1.1rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+.lib-toc__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin-bottom: 0.6rem;
+}
+
+.lib-toc__list {
+  list-style: none;
+  columns: 2;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+}
+
+.lib-toc__list a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.lib-toc__list a:hover { text-decoration: underline; color: var(--color-primary); }
+
+@media (max-width: 540px) { .lib-toc__list { columns: 1; } }
+
+/* ── Chapter / Article container ────────────────────────── */
+.lib-chapter {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: calc(var(--header-h, 0px) + 1.5rem);
+}
+
+.lib-chapter__title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Numbered articles (Westminster-style) ──────────────── */
+.lib-article {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.8;
+}
+
+.lib-article__num {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  min-width: 1.6rem;
+  padding-top: 0.22rem;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.lib-article__text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.lib-article__text .lib-refs {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-left: 0.2em;
+}
+
+/* ── Q&A pairs (catechism-style) ────────────────────────── */
+.lib-qa {
+  display: grid;
+  grid-template-columns: 2.8rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.5rem;
+  row-gap: 0.1rem;
+  margin-bottom: 1.1rem;
+  scroll-margin-top: calc(var(--header-h, 0px) + 1.5rem);
+}
+
+.lib-qa__num {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding-top: 0.25rem;
+  letter-spacing: 0.03em;
+}
+
+.lib-qa__q {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+.lib-qa__a {
+  grid-column: 2;
+  grid-row: 2;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.lib-qa__a .lib-refs {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-left: 0.25em;
+}
+
+/* ── Lord's Day header (Heidelberg) ─────────────────────── */
+.lib-lords-day {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--color-muted);
+  margin: 1.75rem 0 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.lib-lords-day:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+
+/* ── Creed text (for short creed documents) ─────────────── */
+.lib-creed {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: var(--color-text);
+}
+
+.lib-creed p {
+  margin-bottom: 1rem;
+}
+
+.lib-creed .lib-clause {
+  display: block;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.7;
+}
+
+/* ── Attribution / source note ──────────────────────────── */
+.lib-attribution {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+/* ── Back link ──────────────────────────────────────────── */
+.lib-back {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+}
+.lib-back:hover { color: var(--color-primary); text-decoration: underline; }
+
+/* ── Library card grid (index page) ────────────────────── */
+.lib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lib-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.18s, transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.lib-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+.lib-card__title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.lib-card__year {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.lib-card__desc {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Section grouping on index ──────────────────────────── */
+.lib-section {
+  margin-bottom: 2.25rem;
+}
+
+.lib-section__heading {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+}

@@ -165,11 +165,116 @@
   cursor: pointer;
 }
 
+/* Tab bar */
+.bsw-modal__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border, #e0d5c4);
+  background: var(--color-bg, #faf8f4);
+  flex-shrink: 0;
+}
+
+.bsw-modal__tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.55rem 1.1rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-muted, #7a6a55);
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.bsw-modal__tab:hover {
+  color: var(--color-primary, #5c3d1e);
+}
+.bsw-modal__tab--active {
+  color: var(--color-primary, #5c3d1e);
+  border-bottom-color: var(--color-accent, #b8860b);
+  font-weight: 600;
+}
+.bsw-modal__tab:focus-visible {
+  outline: 2px solid var(--color-accent, #b8860b);
+  outline-offset: -2px;
+}
+
 /* Verse body */
 .bsw-modal__body {
   padding: 1rem 1.25rem 0.75rem;
   overflow-y: auto;
   flex: 1;
+}
+
+/* Cross-references panel */
+.bsw-modal__xrefs-panel {
+  padding: 0.75rem 1.25rem 1rem;
+  overflow-y: auto;
+  flex: 1;
+}
+.bsw-modal__xrefs-panel[hidden] { display: none; }
+
+.bsw-modal__xrefs-empty {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.88rem;
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.bsw-modal__xref-verse-label {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-accent, #b8860b);
+  margin: 0.85rem 0 0.4rem;
+}
+.bsw-modal__xref-verse-label:first-child { margin-top: 0; }
+
+.bsw-modal__xref-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.bsw-modal__xref-link {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.82rem;
+  color: var(--color-accent, #b8860b);
+  text-decoration: none;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.bsw-modal__xref-link:hover,
+.bsw-modal__xref-link:focus-visible {
+  background: rgba(184, 134, 11, 0.1);
+  border-color: var(--color-accent, #b8860b);
+  color: var(--color-primary, #5c3d1e);
+  outline: none;
+}
+
+/* Relevance tiers — only applied when vote data is present (new data format).
+   High: strong community consensus (≥15 votes).
+   Med:  moderate agreement (6–14 votes).
+   Low:  base TSK-level ref (1–5 votes).  */
+.bsw-modal__xref-link.bsw-xref--high {
+  border-color: rgba(184, 134, 11, 0.55);
+  font-weight: 600;
+}
+.bsw-modal__xref-link.bsw-xref--med {
+  border-color: rgba(184, 134, 11, 0.35);
+}
+.bsw-modal__xref-link.bsw-xref--low {
+  opacity: 0.72;
 }
 
 .bsw-modal__verse {
@@ -615,4 +720,94 @@
   color: var(--color-primary, #5c3d1e);
   border-color: var(--color-muted, #7a6a55);
   outline: none;
+}
+
+/* ── Modal parallel split layout ────────────────────────── */
+.bsw-modal__split {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.bsw-modal__split[hidden] { display: none; }
+
+.bsw-modal__verse-col {
+  flex: 1 1 58%;
+  overflow-y: auto;
+  padding: 0.75rem 1rem 1rem 1.25rem;
+  border-right: 1px solid var(--color-border, #e0d5c4);
+}
+
+.bsw-modal__xrefs-col {
+  flex: 0 0 42%;
+  overflow-y: auto;
+  padding: 0.75rem 1.25rem 1rem 1rem;
+  min-width: 140px;
+}
+
+.bsw-modal__xrefs-heading {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted, #7a6a55);
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 540px) {
+  .bsw-modal__split { flex-direction: column; overflow-y: auto; }
+  .bsw-modal__verse-col { flex: none; border-right: none; border-bottom: 1px solid var(--color-border, #e0d5c4); }
+  .bsw-modal__xrefs-col { flex: none; }
+}
+
+/* ── Commentary panel ────────────────────────────────────── */
+.bsw-modal__commentary-panel {
+  padding: 0.75rem 1.25rem 1rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.bsw-modal__commentary-panel[hidden] { display: none; }
+
+.bsw-modal__commentary-section {
+  margin-bottom: 0.75rem;
+}
+
+.bsw-modal__commentary-section p {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-text, #2c2416);
+}
+
+.bsw-modal__commentary-section p.mhcc-heading {
+  margin-bottom: 0.3rem;
+}
+
+.bsw-modal__commentary-section p.mhcc-heading strong {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-accent, #b8860b);
+}
+
+.bsw-modal__commentary-attr {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border, #e0d5c4);
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.72rem;
+  color: var(--color-muted, #7a6a55);
+}
+
+.bsw-modal__commentary-empty {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.88rem;
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
 }

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="BOOK_DESCRIPTION" />
+  <title>BOOK_NAME — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../../assets/css/book-study.css" />
+</head>
+
+<!--
+  BODY CLASSES — combine ONE from each group:
+
+  Testament:  bk-ot  |  bk-nt
+  Genre:      bk-torah | bk-history | bk-wisdom |
+              bk-prophecy | bk-gospel | bk-epistle | bk-apocalyptic
+
+  Examples:
+    <body class="bk-nt bk-epistle">   ← Romans, Galatians, Hebrews…
+    <body class="bk-ot bk-wisdom">    ← Psalms, Proverbs, Job…
+    <body class="bk-ot bk-prophecy">  ← Isaiah, Jeremiah, Amos…
+    <body class="bk-nt bk-gospel">    ← Matthew, Mark, Luke, John
+    <body class="bk-ot bk-history">   ← Joshua, Kings, Chronicles…
+    <body class="bk-nt bk-history">   ← Acts
+    <body class="bk-ot bk-torah">     ← Genesis, Exodus, Deuteronomy…
+    <body class="bk-nt bk-apocalyptic"> ← Revelation
+-->
+<body class="bk-nt bk-epistle">
+
+  <main>
+    <div class="container">
+
+      <!-- ══════════════════════════════════════════════════════
+           HERO — genre-colored header; identical structure for
+           all genres, appearance changes via body class.
+           ═══════════════════════════════════════════════════ -->
+      <header class="bk-hero">
+        <div class="bk-hero__inner">
+          <div class="bk-hero__badges">
+            <span class="bk-badge bk-badge--testament">New Testament</span>
+            <span class="bk-badge bk-badge--genre">Epistle</span>
+          </div>
+          <h1 class="bk-hero__title">BOOK_NAME</h1>
+          <p class="bk-hero__subtitle">BOOK_TAGLINE — brief thematic description</p>
+          <blockquote class="bk-hero__key-verse">
+            <p>KEY VERSE TEXT HERE.</p>
+            <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
+          </blockquote>
+        </div>
+      </header>
+
+      <!-- ══════════════════════════════════════════════════════
+           FACTS PANEL — always present, any genre
+           ═══════════════════════════════════════════════════ -->
+      <div class="bk-facts">
+        <dl class="bk-facts__grid">
+          <dt>Author</dt>      <dd>NAME (or Attributed to / Unknown)</dd>
+          <dt>Date</dt>        <dd>c. YEAR BC/AD</dd>
+          <dt>Audience</dt>    <dd>Original audience</dd>
+          <dt>Theme</dt>       <dd>Central theological theme</dd>
+          <dt>Key Verses</dt>  <dd><a class="ref" data-ref="Book 1:1">Book 1:1</a></dd>
+          <dt>Chapters</dt>    <dd>N</dd>
+        </dl>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           OUTLINE — optional, recommended for longer books
+           ═══════════════════════════════════════════════════ -->
+      <nav class="bk-outline" aria-label="Book outline">
+        <h2 class="bk-outline__title">Outline</h2>
+        <ol class="bk-outline__list">
+          <li><a href="#section-1">Section One Title (1:1–3:21)</a>
+            <ol class="bk-outline__sub">
+              <li><a href="#sub-1a">Subsection A (1:1–17)</a></li>
+              <li><a href="#sub-1b">Subsection B (1:18–3:21)</a></li>
+            </ol>
+          </li>
+          <li><a href="#section-2">Section Two Title (4:1–8:39)</a></li>
+          <li><a href="#section-3">Section Three Title (9:1–11:36)</a></li>
+        </ol>
+      </nav>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           CONTENT SECTIONS
+           Each section uses bk-section. The heading style
+           and accent color come from the body genre class.
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="bk-section" id="section-1">
+        <h2 class="bk-section__heading">Section One Heading</h2>
+        <span class="bk-section__ref">Book 1:1–3:21</span>
+
+        <p>Standard prose commentary goes here. Reference scripture inline:
+          <a class="ref" data-ref="Book 1:1">Book 1:1</a>. All the normal
+          site-wide styles apply — <code>blockquote.scripture</code>, key term
+          <span class="term">justification</span>, etc.</p>
+
+        <blockquote class="scripture">
+          Verse text quoted here for extended display.
+          <cite><a class="ref" data-ref="Book 1:16">Book 1:16–17</a></cite>
+        </blockquote>
+
+        <!-- ── Shared element: Application box ── -->
+        <div class="bk-application">
+          <span class="bk-application__label">Application</span>
+          <p>How does this truth change how we live? Practical takeaway goes here.</p>
+        </div>
+
+        <!-- ── Shared element: Key term ── -->
+        <div class="bk-key-term">
+          <span class="bk-key-term__word">Righteousness</span>
+          <span class="bk-key-term__original">δικαιοσύνη (dikaiosynē)</span>
+          <span class="bk-key-term__def">The state of being right or just before God;
+            conformity to his standard.</span>
+        </div>
+
+        <!-- ── Shared element: Cross-reference note ── -->
+        <div class="bk-cross-ref">
+          <a class="ref" data-ref="Isaiah 53:11">Isaiah 53:11</a>;
+          <a class="ref" data-ref="Philippians 3:9">Philippians 3:9</a>
+        </div>
+
+        <!-- ── Shared element: Study note ── -->
+        <div class="bk-note">
+          The Greek word here carries both forensic (legal) and relational dimensions.
+        </div>
+
+      </section><!-- /section-1 -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           EPISTLE-SPECIFIC ELEMENTS
+           (Remove this block for non-epistle genres)
+           ═══════════════════════════════════════════════════ -->
+      <section class="bk-section" id="section-2">
+        <h2 class="bk-section__heading">Doctrinal Body</h2>
+
+        <!-- Letter section marker -->
+        <div class="bk-letter-section">
+          <span class="bk-letter-section__marker">Doctrinal Section · 1:1–11:36</span>
+        </div>
+
+        <!-- Thesis statement -->
+        <div class="bk-thesis">
+          <span class="bk-thesis__label">Central Thesis</span>
+          For in it the righteousness of God is revealed from faith for faith, as it is
+          written, "The righteous shall live by faith."
+        </div>
+
+        <!-- Argument block -->
+        <div class="bk-argument">
+          <div class="bk-argument__row">
+            <span class="bk-argument__label">Grounds</span>
+            <div class="bk-argument__content">All have sinned and fall short of the
+              glory of God — <a class="ref" data-ref="Romans 3:23">Romans 3:23</a>.</div>
+          </div>
+          <div class="bk-argument__row">
+            <span class="bk-argument__label">Claim</span>
+            <div class="bk-argument__content">Justification is by faith, not works, for
+              Jew and Gentile alike — <a class="ref" data-ref="Romans 3:28">Romans 3:28</a>.</div>
+          </div>
+          <div class="bk-argument__row">
+            <span class="bk-argument__label">Support</span>
+            <div class="bk-argument__content">Abraham was justified before circumcision,
+              proving faith precedes the law — <a class="ref" data-ref="Romans 4:10">Romans 4:10</a>.</div>
+          </div>
+        </div>
+
+        <!-- Imperative section (practical application in epistles) -->
+        <div class="bk-letter-section">
+          <span class="bk-letter-section__marker">Ethical Section · 12:1–15:13</span>
+        </div>
+        <div class="bk-imperative">
+          <span class="bk-imperative__label">Imperative</span>
+          <p>Present your bodies as a living sacrifice, holy and acceptable to God —
+            <a class="ref" data-ref="Romans 12:1">Romans 12:1</a>.</p>
+        </div>
+
+      </section><!-- /section-2 (epistle) -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           PROPHECY-SPECIFIC ELEMENTS
+           (Use for OT prophets and Revelation)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="oracles">
+        <h2 class="bk-section__heading">Oracles of Judgment</h2>
+
+        <div class="bk-oracle">
+          <span class="bk-oracle__formula">Thus says the LORD of hosts:</span>
+          <p class="bk-oracle__text">Verse text of the oracle here.</p>
+        </div>
+
+        <div class="bk-woe">
+          <p>Woe to those who add house to house — <a class="ref" data-ref="Isaiah 5:8">Isaiah 5:8</a>.</p>
+        </div>
+
+        <div class="bk-promise">
+          <p>They shall beat their swords into plowshares — <a class="ref" data-ref="Isaiah 2:4">Isaiah 2:4</a>.</p>
+        </div>
+
+        <div class="bk-fulfillment bk-fulfillment--far">
+          <span class="bk-fulfillment__icon"></span>
+          <div>
+            <span class="bk-fulfillment__label">Ultimate Fulfillment</span>
+            This points forward to Christ's second coming — see
+            <a class="ref" data-ref="Revelation 21:1">Revelation 21</a>.
+          </div>
+        </div>
+      </section>
+      -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           WISDOM / POETRY-SPECIFIC ELEMENTS
+           (Use for Psalms, Proverbs, Job, Ecclesiastes, Song)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="poem-1">
+        <h2 class="bk-section__heading">Psalm 1</h2>
+        <span class="bk-psalm-type">Wisdom Psalm</span>
+
+        <div class="bk-poem">
+          <div class="bk-stanza">
+            <p class="bk-line">Blessed is the man who walks not in the counsel of the wicked,</p>
+            <p class="bk-line bk-line--b">nor stands in the way of sinners,</p>
+            <p class="bk-line bk-line--c">nor sits in the seat of scoffers.</p>
+          </div>
+          <div class="bk-stanza">
+            <p class="bk-line">But his delight is in the law of the LORD,</p>
+            <p class="bk-line bk-line--b">and on his law he meditates day and night.</p>
+          </div>
+        </div>
+
+        <div class="bk-chiasm">
+          <div class="bk-chiasm__row">
+            <span class="bk-chiasm__label">A</span>
+            <span class="bk-chiasm__text">The blessed man (v.1–3)</span>
+          </div>
+          <div class="bk-chiasm__row">
+            <span class="bk-chiasm__label">B</span>
+            <span class="bk-chiasm__text">The LORD knows the way of the righteous (v.6a)</span>
+          </div>
+          <div class="bk-chiasm__row">
+            <span class="bk-chiasm__label">A′</span>
+            <span class="bk-chiasm__text">The wicked will perish (v.4–6b)</span>
+          </div>
+        </div>
+      </section>
+      -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           HISTORY-SPECIFIC ELEMENTS
+           (Use for Joshua, Kings, Chronicles, Acts, etc.)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="events">
+        <h2 class="bk-section__heading">Key Events</h2>
+
+        <div class="bk-event">
+          <span class="bk-event__date">c. 722 BC</span>
+          <div class="bk-event__content">
+            <span class="bk-event__title">Fall of Samaria</span>
+            <p>Assyria captures the northern kingdom — <a class="ref" data-ref="2 Kings 17:6">2 Kings 17:6</a>.</p>
+          </div>
+        </div>
+
+        <div class="bk-figure">
+          <div class="bk-figure__name">Hezekiah</div>
+          <span class="bk-figure__role">King of Judah, c. 715–686 BC</span>
+          <p>Reformed worship, trusted God against Assyria. One of the greatest kings
+             of Judah — <a class="ref" data-ref="2 Kings 18:5">2 Kings 18:5</a>.</p>
+        </div>
+      </section>
+      -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           GOSPEL-SPECIFIC ELEMENTS
+           (Use for Matthew, Mark, Luke, John)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="sermon">
+        <h2 class="bk-section__heading">The Sermon on the Mount</h2>
+
+        <div class="bk-discourse">
+          <span class="bk-discourse__label">Extended Discourse · Matthew 5–7</span>
+          <p>The inaugural teaching of Jesus' kingdom ethic.</p>
+        </div>
+
+        <div class="bk-pericope">
+          <span class="bk-pericope__title">The Beatitudes</span>
+          <span class="bk-pericope__ref">Matthew 5:3–12</span>
+        </div>
+        <div class="bk-parallel">Luke 6:20–23</div>
+        <p>Study content here…</p>
+
+        <div class="bk-parable">
+          <span class="bk-parable__label">Parable</span>
+          <p>The Parable of the Soils — <a class="ref" data-ref="Matthew 13:3-9">Matthew 13:3–9</a>.</p>
+        </div>
+      </section>
+      -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           TORAH-SPECIFIC ELEMENTS
+           (Use for Genesis–Deuteronomy)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="covenant">
+        <h2 class="bk-section__heading">The Sinai Covenant</h2>
+
+        <div class="bk-covenant">
+          <div class="bk-covenant__heading">Covenant Structure (Exodus 19–24)</div>
+          <p>The Sinaitic covenant follows the pattern of ancient Near Eastern
+             suzerainty treaties: preamble, historical prologue, stipulations,
+             sanctions, and succession document.</p>
+        </div>
+
+        <div class="bk-law">
+          <span class="bk-law__num">Cmd 1</span>
+          You shall have no other gods before me —
+          <a class="ref" data-ref="Exodus 20:3">Exodus 20:3</a>.
+        </div>
+
+        <div class="bk-type">
+          <div class="bk-type__ot">
+            <span class="bk-type__label">Type (OT)</span>
+            The Passover Lamb — <a class="ref" data-ref="Exodus 12:1">Exodus 12</a>
+          </div>
+          <span class="bk-type__arrow">→</span>
+          <div class="bk-type__nt">
+            <span class="bk-type__label">Antitype (NT)</span>
+            Christ our Passover — <a class="ref" data-ref="1 Corinthians 5:7">1 Cor 5:7</a>
+          </div>
+        </div>
+      </section>
+      -->
+
+
+      <!-- ══════════════════════════════════════════════════════
+           APOCALYPTIC-SPECIFIC ELEMENTS
+           (Use for Daniel, Revelation)
+           ═══════════════════════════════════════════════════ -->
+      <!--
+      <section class="bk-section" id="vision-1">
+        <h2 class="bk-section__heading">The Throne Room Vision</h2>
+
+        <div class="bk-throne">
+          <span class="bk-throne__label">Heavenly Scene · Revelation 4–5</span>
+          <p>John is caught up and sees the one seated on the throne surrounded by
+             twenty-four elders and four living creatures.</p>
+        </div>
+
+        <div class="bk-vision">
+          <span class="bk-vision__label">Vision
+            <span class="bk-vision__ref">Revelation 6:1–8</span>
+          </span>
+          <p>The Lamb opens the first four seals; four horsemen go forth…</p>
+        </div>
+
+        <div class="bk-symbol-table">
+          <div class="bk-symbol">
+            <div class="bk-symbol__image">Seven stars</div>
+            <div class="bk-symbol__meaning">The angels (messengers) of the seven
+              churches — <a class="ref" data-ref="Revelation 1:20">Rev 1:20</a></div>
+          </div>
+          <div class="bk-symbol">
+            <div class="bk-symbol__image">Seven lampstands</div>
+            <div class="bk-symbol__meaning">The seven churches themselves —
+              <a class="ref" data-ref="Revelation 1:20">Rev 1:20</a></div>
+          </div>
+        </div>
+
+        <p>The number <span class="bk-number"><span class="bk-number__value">7</span>
+          <span class="bk-number__meaning">= divine completeness</span></span> recurs
+          throughout the vision.</p>
+      </section>
+      -->
+
+    </div><!-- /.container -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/bible.js"></script>
+</body>
+</html>

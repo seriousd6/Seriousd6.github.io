@@ -1,0 +1,987 @@
+/* ============================================================
+   Book Study — Standardized Genre-Aware Stylesheet
+   ============================================================
+
+   USAGE: Add two classes to <body>:
+     1. Testament:  bk-ot  |  bk-nt
+     2. Genre:      bk-torah | bk-history | bk-wisdom |
+                    bk-prophecy | bk-gospel | bk-epistle | bk-apocalyptic
+
+   Example: <body class="bk-ot bk-wisdom">
+
+   All content classes are prefixed bk- .
+   Inherits CSS custom properties from style.css (:root).
+   ============================================================ */
+
+/* ── Genre color tokens ─────────────────────────────────────── */
+
+/* Torah / Pentateuch (Gen–Deut) — crimson, covenant, law */
+.bk-torah {
+  --bk-accent:      #7a2030;
+  --bk-accent-mid:  #a33045;
+  --bk-accent-soft: rgba(122, 32, 48, 0.12);
+  --bk-accent-dim:  rgba(122, 32, 48, 0.06);
+  --bk-badge-bg:    #7a2030;
+  --bk-genre-name:  "Torah";
+}
+
+/* History (Josh–Esth, Acts) — olive, chronicle, narrative */
+.bk-history {
+  --bk-accent:      #3d5a2a;
+  --bk-accent-mid:  #567a3c;
+  --bk-accent-soft: rgba(61, 90, 42, 0.12);
+  --bk-accent-dim:  rgba(61, 90, 42, 0.06);
+  --bk-badge-bg:    #3d5a2a;
+  --bk-genre-name:  "History";
+}
+
+/* Wisdom / Poetry (Job, Pss, Prov, Eccl, Song) — amber, candlelight */
+.bk-wisdom {
+  --bk-accent:      #7a5c0e;
+  --bk-accent-mid:  #a07c18;
+  --bk-accent-soft: rgba(122, 92, 14, 0.12);
+  --bk-accent-dim:  rgba(122, 92, 14, 0.06);
+  --bk-badge-bg:    #7a5c0e;
+  --bk-genre-name:  "Wisdom & Poetry";
+}
+
+/* Prophecy (Isa–Mal) — violet, divine oracle */
+.bk-prophecy {
+  --bk-accent:      #52278a;
+  --bk-accent-mid:  #7040b0;
+  --bk-accent-soft: rgba(82, 39, 138, 0.12);
+  --bk-accent-dim:  rgba(82, 39, 138, 0.06);
+  --bk-badge-bg:    #52278a;
+  --bk-genre-name:  "Prophecy";
+}
+
+/* Gospel (Matt, Mark, Luke, John) — teal, good news */
+.bk-gospel {
+  --bk-accent:      #1a5f6e;
+  --bk-accent-mid:  #247f92;
+  --bk-accent-soft: rgba(26, 95, 110, 0.12);
+  --bk-accent-dim:  rgba(26, 95, 110, 0.06);
+  --bk-badge-bg:    #1a5f6e;
+  --bk-genre-name:  "Gospel";
+}
+
+/* Epistle (Rom–Jude) — navy, teaching letters */
+.bk-epistle {
+  --bk-accent:      #1e3a6e;
+  --bk-accent-mid:  #2e56a0;
+  --bk-accent-soft: rgba(30, 58, 110, 0.12);
+  --bk-accent-dim:  rgba(30, 58, 110, 0.06);
+  --bk-badge-bg:    #1e3a6e;
+  --bk-genre-name:  "Epistle";
+}
+
+/* Apocalyptic (Dan, Rev) — scarlet, judgment and glory */
+.bk-apocalyptic {
+  --bk-accent:      #8a1a1a;
+  --bk-accent-mid:  #b02424;
+  --bk-accent-soft: rgba(138, 26, 26, 0.12);
+  --bk-accent-dim:  rgba(138, 26, 26, 0.06);
+  --bk-badge-bg:    #8a1a1a;
+  --bk-genre-name:  "Apocalyptic";
+}
+
+/* ── Testament tokens ───────────────────────────────────────── */
+.bk-ot {
+  --bk-testament-label: "Old Testament";
+  --bk-testament-bg:    rgba(120, 80, 20, 0.025);
+  --bk-testament-rule:  rgba(139, 90, 43, 0.15);
+}
+.bk-nt {
+  --bk-testament-label: "New Testament";
+  --bk-testament-bg:    rgba(30, 60, 120, 0.02);
+  --bk-testament-rule:  rgba(30, 58, 110, 0.12);
+}
+
+/* ── Page background ────────────────────────────────────────── */
+body.bk-ot { background-color: #faf7f2; }
+body.bk-nt { background-color: #f8f9fc; }
+
+/* ── Hero section ────────────────────────────────────────────── */
+.bk-hero {
+  margin: 0 calc(-1 * var(--space-md)) var(--space-lg);
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  background-color: var(--bk-accent);
+  background-image:
+    radial-gradient(ellipse at 75% 30%, rgba(255,255,255,0.08), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(0,0,0,0.15), transparent 50%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle texture overlay */
+.bk-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='120' height='120' filter='url(%23n)'/></svg>");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+
+.bk-hero__inner { position: relative; z-index: 1; max-width: var(--max-width); }
+
+/* Badge row */
+.bk-hero__badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+
+.bk-badge {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.65rem;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+.bk-badge--testament {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.bk-badge--genre {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Title */
+.bk-hero__title {
+  font-family: var(--font-body);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0 0 0.35rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  letter-spacing: 0.01em;
+}
+
+/* Subtitle / tagline */
+.bk-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.82);
+  margin: 0 0 1.5rem;
+  max-width: 640px;
+}
+
+/* Key verse in hero */
+.bk-hero__key-verse {
+  border-left: 3px solid rgba(255,255,255,0.45);
+  padding: 0.65rem 1rem;
+  margin: 0;
+  background: rgba(0,0,0,0.15);
+  border-radius: 0 6px 6px 0;
+  max-width: 640px;
+}
+.bk-hero__key-verse p {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: rgba(255,255,255,0.92);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 0.4rem;
+}
+.bk-hero__key-verse cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+}
+.bk-hero__key-verse cite a { color: rgba(255,255,255,0.75); }
+.bk-hero__key-verse cite a:hover { color: #fff; }
+
+/* ── Facts panel ─────────────────────────────────────────────── */
+.bk-facts {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--bk-accent);
+  border-radius: 0 0 6px 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+
+.bk-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.65rem 1.5rem;
+  margin: 0;
+}
+
+.bk-fact { display: contents; }
+.bk-fact dt {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  grid-column: 1; /* handled by display:contents — use direct children instead */
+}
+
+/* Flat layout approach */
+.bk-facts__grid { list-style: none; }
+.bk-facts__grid dt {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.1rem;
+}
+.bk-facts__grid dd {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+}
+
+/* ── Outline / TOC ──────────────────────────────────────────── */
+.bk-outline {
+  background: var(--bk-accent-dim);
+  border: 1px solid var(--bk-accent-soft);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+
+.bk-outline__title {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin: 0 0 0.65rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.bk-outline__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+.bk-outline__list li { margin-bottom: 0.3rem; }
+.bk-outline__list a { color: var(--bk-accent); text-decoration: none; }
+.bk-outline__list a:hover { text-decoration: underline; }
+
+/* Nested outline */
+.bk-outline__sub {
+  margin: 0.3rem 0 0.1rem 1rem;
+  font-size: 0.82rem;
+}
+
+/* ── Content sections ───────────────────────────────────────── */
+.bk-section {
+  margin-bottom: var(--space-xl);
+  scroll-margin-top: calc(var(--header-h, 0px) + 1.5rem);
+}
+
+.bk-section__heading {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--bk-accent);
+  margin-bottom: 0.15rem;
+  margin-top: var(--space-lg);
+  border-bottom: 2px solid var(--bk-accent-soft);
+  padding-bottom: 0.3rem;
+}
+
+.bk-section__ref {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+/* Subsection heading */
+.bk-subsection {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--bk-accent-mid, var(--bk-accent));
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Shared content elements (all genres) ───────────────────── */
+
+/* Application / "So What" box */
+.bk-application {
+  background: var(--bk-accent-dim);
+  border-left: 4px solid var(--bk-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin: var(--space-lg) 0;
+}
+.bk-application__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Key term definition */
+.bk-key-term {
+  border: 1px solid var(--bk-accent-soft);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: var(--space-md) 0;
+  background: var(--color-surface);
+}
+.bk-key-term__word {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--bk-accent);
+  font-size: 1rem;
+}
+.bk-key-term__original {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin-left: 0.5rem;
+}
+.bk-key-term__def {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Cross-reference note */
+.bk-cross-ref {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  border-left: 2px solid var(--color-border);
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 0;
+}
+.bk-cross-ref::before { content: "cf. "; font-style: italic; }
+
+/* Study note / callout */
+.bk-note {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  margin: var(--space-md) 0;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+}
+.bk-note::before {
+  content: "Note: ";
+  font-weight: bold;
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── ═══════════════════════════════════════════════════════════
+   GENRE-SPECIFIC ELEMENTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── TORAH — Covenant structure, law, type ──────────────────── */
+
+.bk-covenant {
+  border: 1px solid var(--bk-accent-soft);
+  border-top: 3px solid var(--bk-accent);
+  border-radius: 0 0 6px 6px;
+  padding: 1.1rem 1.25rem;
+  margin: var(--space-lg) 0;
+  background: var(--color-surface);
+}
+.bk-covenant__heading {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin-bottom: 0.6rem;
+}
+
+/* Law code block */
+.bk-law {
+  background: var(--bk-accent-dim);
+  padding: 1rem 1.25rem 1rem 1.5rem;
+  margin: var(--space-md) 0;
+  border-left: 4px solid var(--bk-accent-mid, var(--bk-accent));
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+}
+.bk-law__num {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--bk-accent);
+  margin-right: 0.4rem;
+}
+
+/* Typological connection */
+.bk-type {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  background: var(--color-surface);
+  border: 1px dashed var(--bk-accent-soft);
+  border-radius: 6px;
+  margin: var(--space-md) 0;
+  font-size: 0.9rem;
+}
+.bk-type__ot { flex: 1; }
+.bk-type__arrow {
+  color: var(--bk-accent);
+  font-size: 1.2rem;
+  align-self: center;
+  flex-shrink: 0;
+}
+.bk-type__nt { flex: 1; }
+.bk-type__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin-bottom: 0.2rem;
+}
+
+/* ── HISTORY — Events, figures, periods ─────────────────────── */
+
+.bk-event {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0 1rem;
+  margin: var(--space-md) 0;
+  align-items: start;
+}
+.bk-event__date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--bk-accent);
+  background: var(--bk-accent-soft);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.3;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+.bk-event__content { font-size: 0.95rem; }
+.bk-event__title {
+  font-weight: bold;
+  color: var(--bk-accent);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* Key figure */
+.bk-figure {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--bk-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.1rem;
+  margin: var(--space-md) 0;
+}
+.bk-figure__name {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: var(--bk-accent);
+  margin-bottom: 0.2rem;
+}
+.bk-figure__role {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* ── WISDOM — Poetry, parallelism, chiasm ───────────────────── */
+
+.bk-poem {
+  margin: var(--space-lg) 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid var(--bk-accent-soft);
+}
+
+.bk-stanza {
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.bk-stanza:last-child { margin-bottom: 0; }
+
+.bk-line { margin: 0; }
+.bk-line--b {
+  padding-left: 1.5rem; /* indent of parallel B-line */
+  color: var(--color-muted);
+}
+.bk-line--c {
+  padding-left: 3rem;
+  color: var(--color-muted);
+  font-size: 0.97em;
+}
+
+/* Psalm type badge */
+.bk-psalm-type {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background: var(--bk-accent-soft);
+  color: var(--bk-accent);
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+/* Chiasm structure */
+.bk-chiasm {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  margin: var(--space-md) 0;
+  padding: 0.75rem 1rem;
+  background: var(--bk-accent-dim);
+  border-radius: 6px;
+}
+.bk-chiasm__row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+.bk-chiasm__label {
+  font-weight: 700;
+  color: var(--bk-accent);
+  min-width: 1.5rem;
+  flex-shrink: 0;
+}
+.bk-chiasm__text { color: var(--color-text); }
+
+/* ── PROPHECY — Oracles, woes, promises, fulfillment ────────── */
+
+/* Oracle introduction */
+.bk-oracle {
+  margin: var(--space-lg) 0;
+  padding: 1rem 1.25rem;
+  background: var(--bk-accent-dim);
+  border-left: 4px solid var(--bk-accent);
+  border-radius: 0 6px 6px 0;
+}
+.bk-oracle__formula {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin-bottom: 0.5rem;
+}
+.bk-oracle__text {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Woe oracle — darker, more severe styling */
+.bk-woe {
+  margin: var(--space-lg) 0;
+  padding: 1rem 1.25rem;
+  background: rgba(0,0,0,0.04);
+  border-left: 4px solid #8a1a1a;
+  border-radius: 0 6px 6px 0;
+}
+.bk-woe::before {
+  content: "Woe Oracle";
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+/* Restoration / promise section */
+.bk-promise {
+  margin: var(--space-lg) 0;
+  padding: 1rem 1.25rem;
+  background: rgba(61, 90, 42, 0.06);
+  border-left: 4px solid #3d5a2a;
+  border-radius: 0 6px 6px 0;
+}
+.bk-promise::before {
+  content: "Restoration Promise";
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3d5a2a;
+  margin-bottom: 0.4rem;
+}
+
+/* Fulfillment note */
+.bk-fulfillment {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin: var(--space-md) 0;
+  font-size: 0.88rem;
+}
+.bk-fulfillment__icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.bk-fulfillment--near .bk-fulfillment__icon::before { content: "⟵"; }
+.bk-fulfillment--far  .bk-fulfillment__icon::before { content: "→"; }
+.bk-fulfillment--both .bk-fulfillment__icon::before { content: "↔"; }
+.bk-fulfillment__label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* ── GOSPEL — Pericopes, parables, parallels, discourses ─────── */
+
+/* Pericope header */
+.bk-pericope {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--bk-accent-soft);
+}
+.bk-pericope__title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--bk-accent);
+  margin: 0;
+  display: inline;
+}
+.bk-pericope__ref {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-left: 0.6rem;
+}
+
+/* Parallel passage note */
+.bk-parallel {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0.5rem;
+}
+.bk-parallel::before { content: "Also: "; font-style: italic; }
+
+/* Parable section */
+.bk-parable {
+  background: var(--bk-accent-dim);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: var(--space-md) 0;
+  font-family: var(--font-body);
+  font-style: italic;
+}
+.bk-parable__label {
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Extended discourse marker */
+.bk-discourse {
+  border-top: 2px solid var(--bk-accent-soft);
+  border-bottom: 2px solid var(--bk-accent-soft);
+  padding: 0.85rem 0;
+  margin: var(--space-lg) 0;
+}
+.bk-discourse__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ── EPISTLE — Letter structure, thesis, argument ───────────── */
+
+/* Letter section marker (Greeting / Body / Doxology / Closing) */
+.bk-letter-section {
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+.bk-letter-section__marker {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  background: var(--bk-accent-soft);
+  padding: 0.15rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+}
+
+/* Thesis statement */
+.bk-thesis {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-style: italic;
+  border: 2px solid var(--bk-accent-soft);
+  border-left-width: 4px;
+  border-left-color: var(--bk-accent);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 6px 6px 0;
+  margin: var(--space-md) 0;
+  background: var(--color-surface);
+}
+.bk-thesis__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  margin-bottom: 0.35rem;
+}
+
+/* Argument block (grounds → claim → application) */
+.bk-argument {
+  border: 1px solid var(--bk-accent-soft);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: var(--space-lg) 0;
+}
+.bk-argument__row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  border-bottom: 1px solid var(--bk-accent-soft);
+}
+.bk-argument__row:last-child { border-bottom: none; }
+.bk-argument__label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  background: var(--bk-accent-dim);
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  align-items: center;
+}
+.bk-argument__content {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Imperative / practical application */
+.bk-imperative {
+  background: var(--bk-accent-soft);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: var(--space-md) 0;
+}
+.bk-imperative__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* ── APOCALYPTIC — Visions, symbols, throne scenes ──────────── */
+
+/* Vision narrative */
+.bk-vision {
+  background: var(--bk-accent-dim);
+  border: 1px solid var(--bk-accent-soft);
+  border-top: 3px solid var(--bk-accent);
+  border-radius: 0 0 6px 6px;
+  padding: 1.1rem 1.25rem;
+  margin: var(--space-lg) 0;
+  font-family: var(--font-body);
+}
+.bk-vision__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.bk-vision__ref {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-left: 0.5rem;
+}
+
+/* Symbol explanation */
+.bk-symbol {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0 1rem;
+  align-items: start;
+  margin: var(--space-md) 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+.bk-symbol__image {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--bk-accent);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+.bk-symbol__meaning { color: var(--color-text); }
+
+.bk-symbol-table { margin: var(--space-md) 0; }
+.bk-symbol-table .bk-symbol:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Number / numerology note */
+.bk-number {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.2rem 0.65rem;
+  background: var(--bk-accent-soft);
+  border-radius: 20px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  margin: 0 0.2rem;
+}
+.bk-number__value {
+  font-weight: 700;
+  color: var(--bk-accent);
+}
+.bk-number__meaning { color: var(--color-text); }
+
+/* Throne room / heavenly scene */
+.bk-throne {
+  position: relative;
+  background: var(--bk-accent-dim);
+  border: 1px solid var(--bk-accent-soft);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: var(--space-lg) 0;
+}
+.bk-throne::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 3px;
+  background: var(--bk-accent);
+  border-radius: 0 0 2px 2px;
+}
+.bk-throne__label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bk-accent);
+  text-align: center;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .bk-hero {
+    padding: var(--space-lg) var(--space-md);
+  }
+  .bk-facts__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bk-argument__row {
+    grid-template-columns: 1fr;
+  }
+  .bk-argument__label {
+    border-bottom: 1px solid var(--bk-accent-soft);
+  }
+  .bk-event {
+    grid-template-columns: 1fr;
+  }
+  .bk-event__date {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    text-align: left;
+  }
+  .bk-symbol {
+    grid-template-columns: 4rem 1fr;
+  }
+}

@@ -10,23 +10,6 @@
   <link rel="stylesheet" href="assets/css/bible-ui.css" />
 </head>
 <body>
-
-  <!-- ── Header ── -->
-  <header class="site-header">
-    <div class="container">
-      <a class="site-title" href="/">📖 Bible Study</a>
-      <nav class="site-nav">
-        <a href="/">Home</a>
-        <a href="read/" class="site-nav__action">Reader</a>
-        <a href="search/" class="site-nav__action">Search</a>
-      </nav>
-      <div class="version-picker">
-        <label for="bible-version">Version:</label>
-        <select id="bible-version"><!-- populated by bible.js --></select>
-      </div>
-    </div>
-  </header>
-
   <!-- ── Main ── -->
   <main>
     <div class="container">
@@ -55,6 +38,16 @@
         </a>
         <!-- ADD NEW TOPIC CARDS HERE -->
       </div>
+
+      <h2>Confessions &amp; Creeds</h2>
+      <p>Historic statements of Christian faith — creeds, confessions, and catechisms from across
+      the church. All scripture references are linked.</p>
+      <div class="topic-grid">
+        <a class="topic-card" href="library/">
+          <h3>📚 Library</h3>
+          <p>Apostles' Creed, Nicene Creed, Westminster Standards, Heidelberg Catechism, Canons of Dort, and more.</p>
+        </a>
+      </div>
     </div>
   </main>
 
@@ -66,7 +59,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/bible.js"></script>
-  <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bible.js"></script>
 </body>
 </html>
