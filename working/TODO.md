@@ -93,6 +93,10 @@ A full-page verse study experience that aggregates every available reference for
   - **Commentary:** One source shown at a time with a source selector dropdown (Matthew Henry first; Barnes, JFB, Clarke, Vincent added automatically as C1 data is built)
   - **Mobile section nav:** Top-of-page `<select>` dropdown; selecting a section smooth-scrolls to it
   - **Name:** "Verse Study" (user-facing label)
+  - **Completion note (stub):** Several VS1 sections are currently hidden on the live page pending
+    data from B2, C2, D1, D3, and D4; the exact set of sections that are live vs. hidden is not
+    tracked; see M3 (data validation stub) — a validation pass should document which sections are
+    active and which are waiting on specific data dependencies
   - **Sections with no data yet:** Hidden entirely — they appear automatically as their data dependencies are built; no "coming soon" placeholders
 
   ### Entry points
@@ -222,6 +226,14 @@ with public domain data and the existing `bible.js` infrastructure.
   - Result: site works fully offline after first visit; no major free web tool offers this
   - This is a genuine architectural differentiator — the static JSON-based design is perfectly suited for PWA
 
+- [ ] **B4a. PWA / Lighthouse validation audit** *(stub — needs scoping before work begins)*
+  - B4 is marked complete but has never been formally audited against PWA install criteria or
+    Lighthouse performance targets; an audit could surface regressions or gaps not caught in development
+  - Needs to determine: which Lighthouse categories matter (Performance, A11y, Best Practices, PWA),
+    what target scores are acceptable, and what remediation steps are in scope
+  - Also covers: whether the site is installable on Android and iOS, whether the app icon/manifest
+    display correctly on home screens, and whether offline fallback pages exist for all routes
+
 - [x] **B5. Parallel Passage Reader** *(complete)*
   - Toggle in reader toolbar (next to version picker); state in `localStorage` key `bsw_parallels` (default: off)
   - Three parallel types with visual badges: ⇌ Parallel (blue) / ✓ Fulfilled in (green) / ⌖ Prophesied in (gold)
@@ -287,6 +299,14 @@ with public domain data and the existing `bible.js` infrastructure.
   - This is the feature that makes this tool better than BLB for lay students who want
     original-language access without Logos pricing
 
+- [ ] **C2a. RTL layout for Hebrew interlinear tokens** *(stub — needs scoping before work begins)*
+  - Hebrew text in C2 is currently rendered left-to-right; Biblical Hebrew reads right-to-left and
+    incorrect directionality makes the script visually wrong and harder to read
+  - Needs to determine: whether `dir="rtl"` goes on individual tokens, the row container, or both;
+    how RTL affects the alignment of transliteration + morphology labels beneath each token;
+    whether Strong's numbers (which are LTR) need special handling; and how the interlinear grid
+    lays out when Hebrew (RTL) and Greek (LTR) chapters are mixed (e.g., on the compare page)
+
 - [x] **C3. Reading plans** *(complete)*
   - `plans/index.html` — browse and enroll in classic reading plans:
     - M'Cheyne's Calendar (OT + NT daily, 1 year) — public domain
@@ -299,6 +319,13 @@ with public domain data and the existing `bible.js` infrastructure.
   - Home page widget: "Today's Reading" showing the day's passages for enrolled plans,
     each reference linking directly to the Reader
   - YouVersion's dominant engagement feature; even 3–5 plans add meaningful daily-return habit
+
+- [ ] **C3a. Reading plan progress tracking** *(stub — needs scoping before work begins)*
+  - C3 tracks daily completion but has no visible % complete or projected finish date per plan;
+    users have no sense of how far they've come or when they'll finish
+  - Needs to determine: where this surface lives (plan detail page vs. home widget vs. both),
+    how to handle plans that fall behind schedule (skip-day logic, catch-up mode), and whether
+    a streak counter or visual calendar heatmap is in scope here or belongs in a later engagement phase
 
 - [x] **C4. Scripture memory / flashcard tool** *(complete)*
   - `memorize/index.html` — browse verses in the memory list; enter flashcard mode
@@ -438,6 +465,8 @@ with public domain data and the existing `bible.js` infrastructure.
   - Displayed in the Reader sidebar (collapsible) when viewing any chapter of that book
   - Also accessible at `books/{bookId}/index.html` as a standalone reference page
   - Missing from every major free web tool — genuine differentiator for book-study users
+  - **Dependency note:** F12 (Chapter 0 navigation) is the UI wire-up for this data; F12 can ship
+    with placeholder intros before D5 data is complete, but D5 must finish for Chapter 0 to be useful
 
 - [ ] **D6. Spurgeon's Morning and Evening devotionals** *(effort: 2–3 days)*
   - Public domain daily devotional (C.H. Spurgeon, 1865) — 365 morning + 365 evening entries
@@ -480,6 +509,21 @@ with public domain data and the existing `bible.js` infrastructure.
 ---
 
 ## Phase F — Polish
+
+- [ ] **F0. Core accessibility audit** *(stub — needs scoping before work begins)*
+  - No formal accessibility audit has been done; the site may have focus management, ARIA label,
+    and screen reader gaps that make it unusable for visually impaired users
+  - Needs to determine: which WCAG level to target (AA is the standard), which pages to audit
+    first (Reader and Verse Study are the highest-traffic), what tooling to use (axe-core, NVDA,
+    VoiceOver), and which gaps are quick wins vs. deep restructuring
+  - Related stub: F1a (keyboard-only navigation audit); C2a (RTL Hebrew); L1 (high-contrast mode)
+
+- [ ] **F1a. Keyboard-only navigation audit** *(stub — needs scoping before work begins)*
+  - F8 adds keyboard shortcut discovery, but it is not known whether all interactive elements
+    (verse popups, modals, collapsible panels, tool toggles) are reachable via Tab/Enter/Escape
+    without a mouse
+  - Needs to determine: which UI elements are missing tabindex or focus styles, whether focus
+    trapping in modals is implemented correctly, and whether the skip-nav link exists
 
 - [ ] **F1. Dark mode toggle**
   - CSS custom properties are already structured for it (all colors via `--color-*` variables)
@@ -626,6 +670,41 @@ with public domain data and the existing `bible.js` infrastructure.
   - No new CSS file; `.reader-bookinfo-panel` block added to `bible-ui.css`; button uses the
     existing `.reader-tool-btn` class already applied to Parallels and Interlinear toggles
 
+- [ ] **F13. Asset optimisation** *(stub — needs scoping before work begins)*
+  - No image optimisation has been done; any PNG/JPG assets should be WebP; SVGs should be
+    cleaned of editor metadata; total page weight impact is unknown
+  - Needs to determine: which assets exist, their current sizes, and whether WebP conversion
+    or SVG minification would produce meaningful savings on the target audience's devices
+
+- [ ] **F14. Data compression and lazy-loading strategy** *(stub — needs scoping before work begins)*
+  - Commentary JSON files are large and currently loaded eagerly; no gzip or lazy-load strategy
+    is in place; the ~43 MB total cache could be reduced significantly with compression
+  - Needs to determine: which data files are the best candidates for lazy loading (commentaries,
+    topical data, interlinear), whether GitHub Pages serves pre-compressed `.gz` files or if
+    compression must happen at build time, and what the actual impact on Time-to-Interactive is
+
+- [ ] **F15. Empty state UX** *(stub — needs scoping before work begins)*
+  - A first-time visitor with no notes, bookmarks, memory cards, or enrolled plans sees blank
+    pages on Notes, Bookmarks, Memorize, and Plans — no guidance on what to do next
+  - Needs to determine: which empty states are highest priority, what the copy and CTA should be,
+    and whether a global first-visit onboarding flow (Phase U) should handle this instead
+
+- [ ] **F16. LocalStorage migration and data versioning** *(stub — needs scoping before work begins)*
+  - As features evolve, `localStorage` schemas (bsw_notes, bsw_plans, bsw_memory, etc.) will
+    gain new fields; existing users' data needs forward-migration so it isn't silently corrupted
+    or ignored after a schema change
+  - Needs to determine: a versioning scheme for each storage key (e.g., `bsw_notes_v` field),
+    a migration runner that fires on page load, and what the fallback is if migration fails
+  - This is a data-safety risk that grows with every new feature that touches localStorage
+
+- [ ] **F17. Service worker cache invalidation strategy** *(stub — needs scoping before work begins)*
+  - B4 implements cache-first for data files but has no plan for breaking schema changes (e.g.,
+    adding a new required field to every verse JSON) — old cached versions could break silently
+    for users who haven't cleared their cache
+  - Needs to determine: how cache versioning works (SW version bump clears old caches?),
+    what the rollback plan is for a bad cache push, and how to handle users on very old SW versions
+  - Related to F16 (localStorage migration) — both are data-safety risks that compound over time
+
 ---
 
 ## Phase G — Search Quality *(priority: medium — high daily-use impact)*
@@ -764,6 +843,16 @@ the highlight system is single-color. These three items improve daily usability.
   - Show a summary toast after import: "Imported 34 notes, 12 highlights. 3 duplicates skipped."
   - Entirely client-side `FileReader` API; no server communication
 
+- [ ] **H4. Verse tagging for personal organisation** *(stub — needs scoping before work begins)*
+  - Users have no way to organise their notes and highlights beyond the existing filter chips
+    (All / Highlighted / Notes only); a tagging system would let them build a personal topical
+    index (e.g., #prayer, #promise, #warning, #sermon-notes)
+  - Needs to determine: how tags are stored (extend `bsw_notes_v2` schema with a `tags: []`
+    field), where tags are added and edited (inline in the notes page vs. in the verse popup),
+    whether tags are free-text or chosen from a managed list, and how tag filtering interacts
+    with the existing search and filter UI in H2
+  - Related to I5 (memory verse tags) — consider a unified tagging system across both features
+
 ---
 
 ## Phase I — Advanced Content *(builds on existing data and infrastructure)*
@@ -896,6 +985,175 @@ the highlight system is single-color. These three items improve daily usability.
   3. Add new paths to `SHELL_URLS` in `sw.js` (tier-2 cache — pre-fetch after first load, not
      during install, since each version adds ~10–12 MB)
   - **UI:** no version-picker code changes needed — it already reads `versions.json` dynamically
+
+---
+
+## Phase L — Accessibility & Internationalisation *(stub phase — all items need scoping)*
+
+All items in this phase are stubs. They were identified as gaps during a gap analysis but have
+not yet been researched or scoped. Do not begin work on any item until it has been expanded
+from stub form with concrete implementation details.
+
+- [ ] **L1. High-contrast mode** *(stub — needs scoping before work begins)*
+  - No high-contrast mode exists; users with low vision who rely on high-contrast system themes
+    may find the current colour scheme insufficient
+  - Needs to determine: whether `@media (prefers-contrast: high)` is sufficient or if a manual
+    toggle is needed, which colour-pair combinations need attention (text on scripture block
+    backgrounds, link colours, secondary text), and whether this is part of F0 (accessibility
+    audit) or a separate deliverable
+
+- [ ] **L2. Full keyboard navigation parity** *(stub — see also F0, F1a)*
+  - Umbrella item for ensuring every feature is reachable keyboard-only; specifically the
+    verse popup menu, the interlinear word panel, and all modal dialogs
+  - Needs to determine scope after F0 audit results are known; this item should not be started
+    before F0 is complete
+
+- [ ] **L3. Internationalisation (i18n) framework** *(stub — likely out of scope for now)*
+  - All UI chrome is hardcoded English; no plan exists for Spanish, French, German, or other
+    language UI translations
+  - Needs to determine: whether i18n is in scope at all for this personal project, and if so,
+    what framework approach works without a build step (a simple JSON locale file + a
+    `t('key')` helper would be sufficient)
+  - Note: Bible text is already multi-version (and MKT adds an original translation); i18n
+    here refers only to UI labels, not Bible content
+
+- [ ] **L4. Font size and display controls validation** *(stub — see F3)*
+  - F3 adds a font size toggle for the Reader and Verse Study, but it has not been validated
+    that the preference scales correctly through all affected elements: interlinear word grid,
+    Strong's flyout, verse modal, commentary panel, and mobile layout
+  - Needs to determine: which CSS custom property controls font size in each context, and
+    whether a single `--reader-font-size` variable is sufficient or if multiple variables
+    are needed
+
+---
+
+## Phase M — Infrastructure, DevOps & Performance *(stub phase — all items need scoping)*
+
+These items address operational and technical health. None of them are user-visible features
+but all of them reduce risk. All are stubs requiring further research before work begins.
+
+- [ ] **M1. Data build and deployment pipeline documentation** *(stub — needs scoping before work begins)*
+  - The Python scripts in `scripts/` fetch and transform upstream data (Bible text, interlinear,
+    Strong's, commentaries) but there is no documented process for when to run them, in what
+    order, how to validate output, or how changes are committed and deployed
+  - Needs to determine: which scripts exist and what each does, what the expected run frequency
+    is (one-time setup vs. periodic re-sync), and whether a simple README in `scripts/` is
+    sufficient or if a Makefile / CI step is warranted
+
+- [ ] **M2. Upstream data source version pinning and re-sync strategy** *(stub — needs scoping before work begins)*
+  - `data/interlinear/`, `data/strongs/`, and `data/commentary/` are sourced from external
+    GitHub repos (`morphgnt/sblgnt`, `openscriptures/morphhb`, etc.) but the specific commit
+    hashes used are not recorded anywhere; if those repos update, re-sync is done blind
+  - Needs to determine: how to pin each source to a specific commit or release tag, where to
+    record those pins (a `data/SOURCES.md` file is a simple option), and what the re-sync
+    process looks like when an upstream source publishes a correction
+
+- [ ] **M3. Data file completeness validation** *(stub — needs scoping before work begins)*
+  - Commentary data and interlinear data may have gaps (missing books, missing verses, missing
+    tokens) that are not surfaced to the user in any meaningful way — they just see blank sections
+  - Needs to determine: what a validation script should check (all 66 books present, all
+    chapters, verse count vs. expected), what the output format should be, and whether this
+    runs as a one-time check or a CI gate
+
+- [ ] **M4. Search performance profiling** *(stub — needs scoping before work begins)*
+  - Full-text search runs client-side against all cached Bible JSON; for large result sets or
+    slow devices, this could be noticeably slow, but no profiling has been done
+  - Needs to determine: what the worst-case query looks like (single-word common term across
+    all versions), how to measure it, and what an acceptable response time threshold is
+
+- [ ] **M5. `bible.js` modularisation plan** *(stub — likely long-term)*
+  - `bible.js` is 2000+ lines and growing; it handles verse rendering, modal system, tooltips,
+    version switching, commentary, Strong's, interlinear, notes, bookmarks, memory, and plans
+  - This is real technical debt but low urgency on a no-build static site; splitting it requires
+    either ES module imports (which need a server for local dev or a bundler) or a simple
+    script-load sequence
+  - Needs to determine: whether the no-build constraint can be relaxed (even a simple
+    concatenation step via a shell script would suffice), and which logical boundaries are
+    cleanest to split on first (verse-modal.js, reader-keyboard.js, etc.)
+
+- [ ] **M6. `data/references/` directory clarification** *(stub — immediate low-effort clarification needed)*
+  - A `data/references/` directory exists in the repo but is not mentioned anywhere in the TODO,
+    CLAUDE.md, or any HTML or JS file found during the gap analysis; its purpose is unknown
+  - Action needed: inspect its contents, determine if it is used, unused, or a placeholder;
+    either document it in the Notes section or delete it if orphaned
+
+---
+
+## Phase N — Engagement & Content Depth *(stub phase — all items need scoping)*
+
+These are features that drive regular use and deepen the study experience. All are stubs.
+
+- [ ] **N1. Reading streaks and engagement tracking** *(stub — needs scoping before work begins)*
+  - No streak or habit-tracking feature exists; YouVersion's dominant retention mechanic is a
+    daily reading streak with a visible counter and a "don't break the chain" nudge
+  - Needs to determine: what counts as a "reading day" (any Reader visit? a minimum verse count?
+    a plan completion?), where the streak counter displays (home page widget, header badge),
+    and whether achievements/badges are in scope or just the streak count
+  - Related to C3a (reading plan progress) — streaks and plan progress are often shown together
+
+- [ ] **N2. Prayer journal** *(stub — needs scoping before work begins)*
+  - Users want to log prayers alongside Scripture, separate from verse-level notes; a day-keyed
+    journal where each entry can link to one or more Bible references
+  - Needs to determine: storage key and schema (separate from `bsw_notes`), UI location
+    (`journal/index.html` vs. embedded in the home page), whether entries can be linked to
+    verses (`.ref` pattern), and whether this is a standalone feature or part of a broader
+    devotional flow with Spurgeon (D6) and VOTD (D7)
+
+- [ ] **N3. Study guide / curriculum templates** *(stub — needs scoping before work begins)*
+  - No structured multi-session study format exists; a study guide would be a series of
+    guided questions tied to Bible passages — more structured than reading plans, less
+    open-ended than the current topic pages
+  - Needs to determine: data format (JSON or HTML), authoring workflow, how they differ
+    from the existing `topics/` pages, and whether they are personal (like plans) or
+    published as site content
+
+- [ ] **N4. First-visit onboarding experience** *(stub — needs scoping before work begins)*
+  - A brand new visitor sees no guidance on what the site offers or where to start; there is
+    no welcome flow, no feature tour, and no help overlay beyond the keyboard shortcut modal (F8)
+  - Needs to determine: what the onboarding goal is (get the user to read one verse? enroll
+    in a plan? understand the tools?), whether this is a modal wizard, a guided tour overlay,
+    or a dedicated landing page, and whether it fires once (first visit) or is accessible later
+
+- [ ] **N5. Commentary citation and passage export** *(stub — needs scoping before work begins)*
+  - No way exists to copy a passage plus its commentary as a formatted block for sermon prep,
+    journaling, or sharing; the current Copy action (F2) only copies the verse text
+  - Needs to determine: what formats are useful (plain text block, Markdown, RTF for Word),
+    which commentary sources are included in an export, and how citation formatting works
+    (which style: Chicago, Turabian, informal?)
+
+---
+
+## Phase O — Long-term / Deferred *(stub phase — intentionally deprioritised)*
+
+These items have been identified but are intentionally deferred. They require significant
+research, have unclear scope, or are likely out of scope for a personal static-site project.
+Recorded here so they are not forgotten, but none should be started without deliberate
+re-evaluation.
+
+- [ ] **O1. Audio support for memory verses** *(stub — deferred)*
+  - TTS integration or royalty-free audio recordings for Scripture memory (C4) so verses can
+    be heard while commuting; no clear path on a static site without a TTS API dependency
+
+- [ ] **O2. Apocrypha / deuterocanonical books** *(stub — deferred)*
+  - The site targets the 66-book Protestant canon; adding Tobit, Maccabees, etc. would
+    require interlinear data, Strong's coverage, and version picker changes; no current plan
+
+- [ ] **O3. MKT print / ePub edition** *(stub — deferred)*
+  - Generating a full three-tier MKT as a downloadable PDF or ePub; significant formatting
+    work with unclear demand for a personal study tool
+
+- [ ] **O4. Social sharing beyond verse image cards** *(stub — deferred)*
+  - Shareable verse links, QR codes, and embed codes; may belong here if the site remains
+    personal, or in Phase N if broader readership becomes a goal
+
+- [ ] **O5. `bible.js` unit test suite** *(stub — deferred)*
+  - A Jest or Vitest test suite for core functions (ref parsing, search, modal logic,
+    localStorage handling); low urgency while the site has one author who can manually verify;
+    revisit if the codebase grows or contributors are added
+
+- [ ] **O6. Internationalisation of UI chrome** *(stub — deferred, see L3)*
+  - All button labels, headings, and status messages are hardcoded English; i18n would require
+    a locale file system and ongoing translation maintenance
 
 ---
 
@@ -1433,6 +1691,34 @@ the highlight system is single-color. These three items improve daily usability.
   lightweight crowd-annotation layer on top of the generated base. Out of scope for the static-only
   MVP but worth designing the data shape to accommodate (a `"contributions": []` array per verse).
 
+- [ ] **Z4. MKT versioning and update strategy** *(stub — needs scoping before work begins)*
+  - Z1 produces MKT v1.0; corrections discovered after release (better glossary choice,
+    consistency error, exegetical improvement) need a versioning scheme that does not
+    silently change what users have bookmarked, annotated, or memorised
+  - Needs to determine: whether MKT uses semantic versioning (v1.0 / v1.1 / v2.0), whether
+    the glossary versions independently from the translated text, how users are notified of
+    updates, and whether old cached MKT data is replaced automatically or requires user action
+  - Also covers: whether MKT-L / MKT-M / MKT-T each have independent version numbers or
+    always update as a set
+
+- [ ] **Z3a. MKT commentary tier behaviour** *(stub — needs scoping before work begins)*
+  - Z3 generates commentary written against MKT-M (the mediating tier); the behaviour when
+    the slider is at MKT-L or MKT-T is undefined — does the commentary stay anchored to
+    MKT-M text regardless of slider position, or does it shift?
+  - Needs to determine: whether the commentary panel shows a "Commentary written against
+    MKT-M" disclaimer when another tier is active, whether any commentary notes are
+    tier-specific, and whether the Verse Study page shows all three tier texts stacked even
+    when commentary is open
+
+- [ ] **Z1a. MKT public-facing landing page** *(stub — needs scoping before work begins)*
+  - Z1 references `translation/index.html` as a translation notes page, but its content,
+    audience, and depth have not been designed; it could be a brief philosophy statement or
+    a full academic methodology page
+  - Needs to determine: who the intended reader is (curious visitor vs. serious scholar),
+    what sections to include (three-tier philosophy, contested-terms decisions, example verse
+    comparisons, glossary methodology, licensing), and whether this page is linked from the
+    main nav or only discoverable via search/direct link
+
 ---
 
 ## Notes
@@ -1451,3 +1737,5 @@ the highlight system is single-color. These three items improve daily usability.
 - **Devotional source:** CCEL.org — Spurgeon's Morning and Evening (public domain)
 - All Scripture refs use `.ref[data-ref]` pattern — auto-wired by `bible.js`
 - Scripts: `scripts/serve.py` (dev server), `scripts/restart.py` (kill + restart), `scripts/new-topic.sh` (topic scaffold)
+- **`data/references/` directory** — purpose currently unknown; see M6 (stub) to clarify or remove
+- **Upstream data pins** — specific commit hashes for `morphgnt/sblgnt`, `openscriptures/morphhb`, `openscriptures/strongs`, and `openscriptures/nave` are not recorded; see M2 (stub) to address this
