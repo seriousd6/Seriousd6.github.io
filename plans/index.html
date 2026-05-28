@@ -302,10 +302,18 @@
       var day  = plan.days[dn - 1];
       var done = !!(enrollment.completed && enrollment.completed[dn]);
 
+      var daysCompleted = Object.keys(enrollment.completed || {}).length;
+      var startDt = new Date(enrollment.startDate + 'T00:00:00');
+      var finishDt = new Date(startDt.getTime());
+      finishDt.setDate(finishDt.getDate() + plan.total_days - 1);
+      var finishStr = finishDt.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+
       div.innerHTML =
         '<div class="plan-today__label">Today\'s Reading — Day ' + dn + ' of ' + plan.total_days + '</div>' +
         '<div class="plan-today__progress">' + progressBar(dn, plan.total_days) + ' ' +
-          Math.round((dn / plan.total_days) * 100) + '% complete</div>';
+          daysCompleted + ' of ' + plan.total_days + ' days done &nbsp;·&nbsp; ' +
+          Math.round((dn / plan.total_days) * 100) + '% complete' +
+          ' &nbsp;·&nbsp; Finish by ' + finishStr + '</div>';
 
       var passDiv = document.createElement('div');
       passDiv.className = 'plan-today__passages';

@@ -1,0 +1,342 @@
+/* dictionary.css — Easton's Bible Dictionary browse page */
+
+.dict-page {
+  max-width: 1100px;
+  padding-top: 1.75rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+.dict-header {
+  margin-bottom: 1.25rem;
+}
+
+.dict-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 .25rem;
+}
+
+.dict-sub {
+  font-size: .83rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+}
+
+/* ── Search ──────────────────────────────────────────────────────────────────── */
+.dict-search-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .9rem;
+}
+
+.dict-search-input {
+  flex: 1;
+  max-width: 480px;
+  padding: .55rem .9rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 8px;
+  font-size: .95rem;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+}
+
+.dict-search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.dict-search-count {
+  font-size: .82rem;
+  color: var(--color-muted, #888);
+}
+
+/* ── A–Z tabs ────────────────────────────────────────────────────────────────── */
+.dict-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-border, #ddd);
+  padding-bottom: .6rem;
+}
+
+.dict-alpha-btn {
+  padding: .25rem .55rem;
+  font-size: .8rem;
+  font-weight: 700;
+  background: none;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--color-text);
+  line-height: 1;
+  transition: background .12s, color .12s;
+}
+
+.dict-alpha-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.dict-alpha-btn--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.dict-alpha-btn--empty {
+  opacity: .3;
+  cursor: default;
+}
+
+/* ── Body layout ─────────────────────────────────────────────────────────────── */
+.dict-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .dict-body { grid-template-columns: 1fr; }
+}
+
+/* ── Entry list ──────────────────────────────────────────────────────────────── */
+.dict-list-col {
+  min-width: 0;
+}
+
+.dict-list {
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.dict-item {
+  display: flex;
+  align-items: baseline;
+  padding: .5rem .8rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border, #f0f0f0);
+  transition: background .1s;
+}
+
+.dict-item:last-child { border-bottom: none; }
+
+.dict-item:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+}
+
+.dict-item--active {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.dict-item__title {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dict-item--active .dict-item__title {
+  color: var(--color-primary);
+}
+
+.dict-loading,
+.dict-empty {
+  font-size: .88rem;
+  color: var(--color-muted, #aaa);
+  font-style: italic;
+  padding: .75rem .5rem;
+}
+
+/* ── Detail panel ────────────────────────────────────────────────────────────── */
+.dict-detail-col {
+  min-width: 0;
+  position: sticky;
+  top: calc(var(--vs-header-h, 0px) + 1rem);
+}
+
+.dict-detail {
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  background: var(--color-surface, #fff);
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+.dict-detail__head {
+  padding: .9rem 1.1rem .7rem;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  background: var(--color-surface-subtle, #fafafa);
+  border-radius: 10px 10px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.dict-detail__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 .2rem;
+  color: var(--color-heading, var(--color-text));
+}
+
+.dict-detail__meta {
+  font-size: .75rem;
+  color: var(--color-muted, #999);
+  margin: 0;
+}
+
+.dict-detail__body {
+  padding: .85rem 1.1rem 1.1rem;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+.dict-detail__body p {
+  margin: 0 0 .75em;
+}
+
+.dict-detail__refs {
+  margin-top: .9rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.dict-detail__refs-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-muted, #aaa);
+  margin: 0 0 .45rem;
+}
+
+.dict-detail__ref-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.dict-ref-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .2rem .55rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: .75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  transition: background .12s, color .12s;
+}
+
+.dict-ref-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+.dict-detail-placeholder {
+  color: var(--color-muted, #bbb);
+  font-size: .9rem;
+  font-style: italic;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+/* ── VS Dictionary section ───────────────────────────────────────────────────── */
+.vs-dict-list {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+.vs-dict-item {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .45rem .7rem;
+  border-radius: 7px;
+  text-decoration: none;
+  color: var(--color-text);
+  border: 1px solid var(--color-border, #e0e0e0);
+  transition: background .1s, border-color .1s;
+}
+
+.vs-dict-item:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.vs-dict-item__term {
+  font-size: .88rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.vs-dict-item__arrow {
+  font-size: .75rem;
+  color: var(--color-muted, #aaa);
+}
+
+/* ── Modal Dictionary tab ────────────────────────────────────────────────────── */
+.dict-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.dict-modal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .4rem .7rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: .85rem;
+  transition: background .1s;
+}
+
+.dict-modal-item:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  text-decoration: none;
+}
+
+.dict-modal-item__term {
+  font-weight: 600;
+}
+
+.dict-modal-browse {
+  display: block;
+  margin-top: .75rem;
+  font-size: .8rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.dict-modal-browse:hover { text-decoration: underline; }
+
+.dict-modal-empty {
+  font-size: .85rem;
+  color: var(--color-muted, #aaa);
+  font-style: italic;
+}

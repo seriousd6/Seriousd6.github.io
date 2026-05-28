@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Spurgeon's Morning and Evening — browse today's devotional or navigate by date." />
+  <title>Devotionals — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/devotionals.css" />
+</head>
+<body>
+  <main>
+    <div class="container devot-page">
+
+      <header class="devot-header">
+        <h1 class="devot-h1">Devotionals</h1>
+        <p class="devot-subtitle">Daily readings from Spurgeon's <em>Morning and Evening</em> (1865)</p>
+      </header>
+
+      <!-- Date nav + period selector -->
+      <div class="devot-controls">
+        <div class="devot-date-nav">
+          <button class="devot-nav-btn" id="devot-prev" aria-label="Previous day">&#8592;</button>
+          <input type="date" id="devot-date-input" class="devot-date-input" aria-label="Select date" />
+          <button class="devot-nav-btn" id="devot-next" aria-label="Next day">&#8594;</button>
+          <button class="devot-nav-btn devot-today-btn" id="devot-today">Today</button>
+        </div>
+        <div class="devot-period-tabs" role="tablist" aria-label="Morning or Evening">
+          <button class="devot-period-tab is-active" data-period="morning" role="tab" aria-selected="true">Morning</button>
+          <button class="devot-period-tab" data-period="evening" role="tab" aria-selected="false">Evening</button>
+        </div>
+      </div>
+
+      <!-- Content card -->
+      <article class="devot-card" id="devot-card" aria-live="polite">
+        <div class="devot-card__loading" id="devot-loading">Loading…</div>
+        <div class="devot-card__body" id="devot-body" hidden>
+          <div class="devot-card__date-label" id="devot-date-label"></div>
+          <blockquote class="devot-verse" id="devot-verse-block">
+            <p id="devot-verse-text"></p>
+            <cite id="devot-verse-ref"></cite>
+          </blockquote>
+          <div class="devot-text" id="devot-text"></div>
+        </div>
+        <div class="devot-card__empty" id="devot-empty" hidden>
+          No entry found for this date.
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/bible.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    var BASE = (function () {
+      var s = document.currentScript || document.querySelector('script[src*="devotionals"]');
+      if (s) return new URL('../data/devotionals/', new URL(s.src, location.href)).href;
+      return '../data/devotionals/';
+    }());
+
+    var _cache = {};
+    var _currentDate = new Date();
+    var _currentPeriod = 'morning';
+
+    var dateInput  = document.getElementById('devot-date-input');
+    var prevBtn    = document.getElementById('devot-prev');
+    var nextBtn    = document.getElementById('devot-next');
+    var todayBtn   = document.getElementById('devot-today');
+    var periodTabs = document.querySelectorAll('.devot-period-tab');
+    var loading    = document.getElementById('devot-loading');
+    var body       = document.getElementById('devot-body');
+    var empty      = document.getElementById('devot-empty');
+    var dateLabel  = document.getElementById('devot-date-label');
+    var verseText  = document.getElementById('devot-verse-text');
+    var verseRef   = document.getElementById('devot-verse-ref');
+    var textEl     = document.getElementById('devot-text');
+
+    function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function dateToKey(d) {
+      return pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+    }
+
+    function dateToValue(d) {
+      return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+    }
+
+    function formatDateLabel(d, period) {
+      var months = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+      var days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() +
+             ' — ' + (period === 'morning' ? 'Morning' : 'Evening');
+    }
+
+    function showLoading() {
+      loading.hidden = false;
+      body.hidden    = true;
+      empty.hidden   = true;
+    }
+
+    function render(entry, d, period) {
+      if (!entry) {
+        loading.hidden = true;
+        body.hidden    = true;
+        empty.hidden   = false;
+        return;
+      }
+      dateLabel.textContent = formatDateLabel(d, period);
+      verseText.textContent = entry.verse_text || '';
+      // Wire the verse ref as a clickable .ref link
+      verseRef.innerHTML = entry.verse_ref
+        ? '<a class="ref" data-ref="' + entry.verse_ref + '">' + entry.verse_ref + '</a>'
+        : '';
+      // Render body paragraphs
+      var paragraphs = (entry.body || '').split(/\n+/).filter(function (p) { return p.trim(); });
+      textEl.innerHTML = paragraphs.map(function (p) {
+        return '<p>' + p.trim() + '</p>';
+      }).join('');
+      loading.hidden = true;
+      empty.hidden   = true;
+      body.hidden    = false;
+      // Re-wire any newly inserted .ref links via bible.js
+      if (window._bswWireRefs) window._bswWireRefs(textEl);
+      if (window._bswWireRefs) window._bswWireRefs(verseRef);
+    }
+
+    function load(d, period) {
+      showLoading();
+      var key      = dateToKey(d);
+      var filename = 'spurgeon-' + period + '.json';
+      var cacheKey = period;
+
+      if (_cache[cacheKey]) {
+        render(_cache[cacheKey][key] || null, d, period);
+        return;
+      }
+
+      fetch(BASE + filename)
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (data) {
+          _cache[cacheKey] = data;
+          render(data[key] || null, d, period);
+        })
+        .catch(function () {
+          render(null, d, period);
+        });
+    }
+
+    function setDate(d) {
+      _currentDate = d;
+      dateInput.value = dateToValue(d);
+      load(_currentDate, _currentPeriod);
+    }
+
+    function setPeriod(p) {
+      _currentPeriod = p;
+      periodTabs.forEach(function (btn) {
+        var isThis = btn.dataset.period === p;
+        btn.classList.toggle('is-active', isThis);
+        btn.setAttribute('aria-selected', isThis ? 'true' : 'false');
+      });
+      load(_currentDate, _currentPeriod);
+    }
+
+    // Event wiring
+    prevBtn.addEventListener('click', function () {
+      var d = new Date(_currentDate);
+      d.setDate(d.getDate() - 1);
+      setDate(d);
+    });
+    nextBtn.addEventListener('click', function () {
+      var d = new Date(_currentDate);
+      d.setDate(d.getDate() + 1);
+      setDate(d);
+    });
+    todayBtn.addEventListener('click', function () {
+      setDate(new Date());
+    });
+    dateInput.addEventListener('change', function () {
+      var parts = this.value.split('-');
+      if (parts.length === 3) {
+        setDate(new Date(+parts[0], +parts[1] - 1, +parts[2]));
+      }
+    });
+    periodTabs.forEach(function (btn) {
+      btn.addEventListener('click', function () { setPeriod(this.dataset.period); });
+    });
+
+    // Restore period from localStorage if set
+    var saved = localStorage.getItem('bsw_devot_period');
+    if (saved === 'morning' || saved === 'evening') _currentPeriod = saved;
+    periodTabs.forEach(function (btn) {
+      var isThis = btn.dataset.period === _currentPeriod;
+      btn.classList.toggle('is-active', isThis);
+      btn.setAttribute('aria-selected', isThis ? 'true' : 'false');
+    });
+
+    // Also save period preference
+    periodTabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        localStorage.setItem('bsw_devot_period', this.dataset.period);
+      });
+    });
+
+    // Init
+    setDate(new Date());
+  }());
+  </script>
+</body>
+</html>

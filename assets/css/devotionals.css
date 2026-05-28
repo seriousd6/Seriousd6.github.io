@@ -1,0 +1,188 @@
+/* devotionals.css — Spurgeon Morning and Evening standalone page */
+
+.devot-page {
+  max-width: 720px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+
+.devot-header {
+  margin-bottom: 1.75rem;
+}
+
+.devot-h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 .3rem;
+  color: var(--color-heading, var(--color-text));
+}
+
+.devot-subtitle {
+  margin: 0;
+  color: var(--color-muted, #888);
+  font-size: .95rem;
+}
+
+/* ── Controls row ───────────────────────────────────────────────────────────── */
+
+.devot-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.devot-date-nav {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.devot-nav-btn {
+  padding: .35rem .7rem;
+  border: 1px solid var(--color-border, #d0d0d0);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #222);
+  font-size: .9rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: background .15s, border-color .15s;
+}
+
+.devot-nav-btn:hover {
+  background: var(--color-surface-hover, #f3f3f3);
+  border-color: var(--color-primary, #5c3d1e);
+}
+
+.devot-today-btn {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--color-primary, #5c3d1e);
+}
+
+.devot-date-input {
+  padding: .35rem .55rem;
+  border: 1px solid var(--color-border, #d0d0d0);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #222);
+  font-size: .9rem;
+  font-family: inherit;
+}
+
+.devot-period-tabs {
+  display: flex;
+  gap: .35rem;
+}
+
+.devot-period-tab {
+  padding: .35rem .9rem;
+  border: 1px solid var(--color-border, #d0d0d0);
+  border-radius: 20px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #444);
+  font-size: .88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+
+.devot-period-tab.is-active {
+  background: var(--color-primary, #5c3d1e);
+  color: #fff;
+  border-color: var(--color-primary, #5c3d1e);
+}
+
+/* ── Card ───────────────────────────────────────────────────────────────────── */
+
+.devot-card {
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  min-height: 240px;
+}
+
+.devot-card__loading,
+.devot-card__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  color: var(--color-muted, #888);
+  font-size: 1rem;
+}
+
+/* ── Date label ──────────────────────────────────────────────────────────────── */
+
+.devot-card__date-label {
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--color-muted, #999);
+  margin-bottom: 1rem;
+}
+
+/* ── Verse block ─────────────────────────────────────────────────────────────── */
+
+.devot-verse {
+  border-left: 3px solid var(--color-primary, #5c3d1e);
+  margin: 0 0 1.5rem;
+  padding: .5rem 0 .5rem 1.1rem;
+}
+
+.devot-verse p {
+  margin: 0 0 .3rem;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--color-text, #222);
+}
+
+.devot-verse cite {
+  font-style: normal;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-primary, #5c3d1e);
+}
+
+.devot-verse cite a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.devot-verse cite a:hover {
+  text-decoration: underline;
+}
+
+/* ── Body text ───────────────────────────────────────────────────────────────── */
+
+.devot-text p {
+  margin: 0 0 1em;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text, #222);
+}
+
+.devot-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .devot-card {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .devot-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .6rem;
+  }
+}

@@ -40,6 +40,34 @@
   var MANIFEST_URL     = _resolve('../../manifest.json');
   var SITE_ROOT        = _resolve('../../');
   var INTERLINEAR_ROOT = _resolve('../../data/interlinear');
+  var LIB_DOCS_BASE    = _resolve('../../data/library/docs');
+  var LIB_INDEX_URL    = _resolve('../../data/library/index.json');
+
+  // Library abbreviation → doc slug (must match data/library/docs/{slug}.json)
+  var LIB_ABBREV_MAP = {
+    // Confessions & creeds
+    'wcf':  'westminster-confession',
+    'wsc':  'westminster-shorter-catechism',
+    'wlc':  'westminster-larger-catechism',
+    'hc':   'heidelberg-catechism',
+    'belg': 'belgic-confession',
+    'cod':  'canons-of-dort',
+    'lbc':  'london-baptist-confession',
+    'ac':   'augsburg-confession',
+    '39a':  '39-articles',
+    'apos': 'apostles-creed',
+    'nic':  'nicene-creed',
+    'ath':  'athanasian-creed',
+    // Church Fathers
+    'ign':  'ignatius',
+    'jm':   'justin-martyr',
+    'iren': 'irenaeus',
+    'tert': 'tertullian',
+    'atha': 'athanasius',
+    'chrys':'chrysostom',
+    'aug':  'augustine',
+    'gnaz': 'gregory-nazianzus'
+  };
 
   // ── In-memory caches ──────────────────────────────────────────────────────
   // key "{VERSION}:{bookId}" → chapters object {"1":{"1":"text",...},...}
@@ -53,6 +81,8 @@
   // 'greek'|'hebrew' → Strong's dict object  /  bookId → interlinear data or null
   var strongsCache     = Object.create(null);
   var interlinearCache = Object.create(null);
+  var libDocCache      = Object.create(null);  // docId → doc JSON
+  var libIndexCache    = null;                  // Array from data/library/index.json
   var metaVersions = null;   // Array of version objects from versions.json
   var metaBooks    = null;   // Array of book objects from books.json
   var bookLookup   = null;   // Map: normalized string → bookId
@@ -278,6 +308,10 @@
         initParallelToggle();
         initCompareToggle();
         initInterlinearToggle();
+        initBookInfoToggle();
+        initSidebarToggle();
+        initWideToggle();
+        initSplitToggle();
       }
       if (document.getElementById('vs-sections-container')) {
         initVerseStudyPage();
@@ -297,6 +331,16 @@
       }
       if (document.getElementById('topical-list')) {
         initTopicalPage();
+      }
+      if (document.getElementById('dict-list')) {
+        initDictionaryPage();
+      }
+      // Defer term-map load and auto-tagging until browser is idle
+      var _runTag = function () { runAutoTagTerms(); };
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(_runTag, { timeout: 3000 });
+      } else {
+        setTimeout(_runTag, 1200);
       }
     }).catch(function (err) {
       console.error('[BibleUI] init failed:', err);
@@ -400,16 +444,33 @@
     var endCh = m[4] ? parseInt(m[4], 10) : ch;
     var endV  = m[5] ? parseInt(m[5], 10) : v;
 
+    // Artifact in source data: cross-chapter ranges stored without the end-chapter
+    // (e.g. "Gen 29:31-21" instead of "Gen 29:31-30:21"). Infer next chapter.
+    var crossChInferred = m[5] && !m[4] && endV < v;
+    if (crossChInferred) endCh = ch + 1;
+
     var bookData = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
     var bookName = bookData ? bookData.name : m[1];
 
     var display = bookName + ' ' + ch + ':' + v;
     if (m[5]) {
-      display += '–' + (m[4] ? m[4] + ':' : '') + m[5];
+      display += '–' + (m[4] ? m[4] + ':' : (crossChInferred ? endCh + ':' : '')) + m[5];
     }
 
     return { bookId: bookId, bookName: bookName, ch: ch, v: v,
              endCh: endCh, endV: endV, display: display, raw: str };
+  }
+
+  // Parses a library document reference such as "WCF 4", "WSC 1", "HC 26".
+  // Returns { docId, abbrev, section } or null.
+  function parseLibraryRef(str) {
+    if (!str) return null;
+    var m = str.trim().match(/^([A-Za-z0-9]+)\s+(\d+)$/);
+    if (!m) return null;
+    var key   = m[1].toLowerCase();
+    var docId = LIB_ABBREV_MAP[key];
+    if (!docId) return null;
+    return { docId: docId, abbrev: m[1].toUpperCase(), section: m[2] };
   }
 
   // Parses a comma-separated multi-reference string into an array of ref objects.
@@ -681,6 +742,11 @@
               text: chData[String(vNum)]
             });
           });
+
+        // Attach the real last verse of the chapter so nav can clamp ranges.
+        if (c === endCh && ch === endCh) {
+          results.chapterMaxV = Math.max.apply(null, Object.keys(chData).map(Number));
+        }
       }
       return results.length ? results : null;
     });
@@ -871,6 +937,8 @@
         '<button class="bsw-modal__tab" data-tab="commentary" role="tab" aria-selected="false">Commentary</button>' +
         '<button class="bsw-modal__tab" data-tab="wordstudy" role="tab" aria-selected="false">Word Study</button>' +
         '<button class="bsw-modal__tab" data-tab="topics" role="tab" aria-selected="false">Topics</button>' +
+        '<button class="bsw-modal__tab" data-tab="confessions" role="tab" aria-selected="false">Confessions</button>' +
+        '<button class="bsw-modal__tab" data-tab="dictionary" role="tab" aria-selected="false">Dictionary</button>' +
       '</div>' +
       // Verse panel (full-width; cross-refs injected as inline footnotes)
       '<div class="bsw-modal__split">' +
@@ -887,6 +955,10 @@
       '<div class="bsw-modal__wordstudy-panel" hidden></div>' +
       // Topics panel (hidden until tab click)
       '<div class="bsw-modal__topics-panel" hidden></div>' +
+      // Confessions panel (hidden until tab click)
+      '<div class="bsw-modal__confessions-panel" hidden></div>' +
+      // Dictionary panel (hidden until tab click)
+      '<div class="bsw-modal__dictionary-panel" hidden></div>' +
       '';
 
     backdrop.appendChild(modal);
@@ -926,12 +998,14 @@
         b.classList.toggle('bsw-modal__tab--active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       });
-      var splitEl  = modal.querySelector('.bsw-modal__split');
-      var notesEl  = modal.querySelector('.bsw-modal__notes-panel');
-      var commEl   = modal.querySelector('.bsw-modal__commentary-panel');
-      var wsEl     = modal.querySelector('.bsw-modal__wordstudy-panel');
-      var topicsEl = modal.querySelector('.bsw-modal__topics-panel');
-      var allPanels = [splitEl, notesEl, commEl, wsEl, topicsEl];
+      var splitEl   = modal.querySelector('.bsw-modal__split');
+      var notesEl   = modal.querySelector('.bsw-modal__notes-panel');
+      var commEl    = modal.querySelector('.bsw-modal__commentary-panel');
+      var wsEl      = modal.querySelector('.bsw-modal__wordstudy-panel');
+      var topicsEl  = modal.querySelector('.bsw-modal__topics-panel');
+      var confEl    = modal.querySelector('.bsw-modal__confessions-panel');
+      var dictEl    = modal.querySelector('.bsw-modal__dictionary-panel');
+      var allPanels = [splitEl, notesEl, commEl, wsEl, topicsEl, confEl, dictEl];
       allPanels.forEach(function (p) { if (p) p.setAttribute('hidden', ''); });
       if (tab === 'verse') {
         if (splitEl) splitEl.removeAttribute('hidden');
@@ -954,6 +1028,16 @@
         if (topicsEl) {
           topicsEl.removeAttribute('hidden');
           if (!topicsEl._topicsLoaded) renderModalTopics(_modalEl._parsedRef, topicsEl);
+        }
+      } else if (tab === 'confessions') {
+        if (confEl) {
+          confEl.removeAttribute('hidden');
+          if (!confEl._confLoaded) renderModalConfessions(_modalEl._parsedRef, confEl);
+        }
+      } else if (tab === 'dictionary') {
+        if (dictEl) {
+          dictEl.removeAttribute('hidden');
+          if (!dictEl._dictLoaded) renderModalDictionary(_modalEl._parsedRef, dictEl);
         }
       }
     });
@@ -1019,6 +1103,12 @@
     if (notesEl) { notesEl.setAttribute('hidden', ''); notesEl.innerHTML = ''; }
     if (commEl)  { commEl.setAttribute('hidden', '');  commEl._commentaryLoaded = false; }
     if (wsEl)    { wsEl.setAttribute('hidden', '');    wsEl._wsLoaded = false; }
+    var topicsEl2 = _modalEl.querySelector('.bsw-modal__topics-panel');
+    if (topicsEl2) { topicsEl2.setAttribute('hidden', ''); topicsEl2._topicsLoaded = false; }
+    var confEl = _modalEl.querySelector('.bsw-modal__confessions-panel');
+    if (confEl)  { confEl.setAttribute('hidden', '');  confEl._confLoaded = false; }
+    var dictPanelEl = _modalEl.querySelector('.bsw-modal__dictionary-panel');
+    if (dictPanelEl) { dictPanelEl.setAttribute('hidden', ''); dictPanelEl._dictLoaded = false; }
 
     var title  = _modalEl.querySelector('.bsw-modal__title');
     var body   = _modalEl.querySelector('.bsw-modal__body');
@@ -1041,7 +1131,7 @@
         readCh.href = READER_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch);
         readCh.textContent = 'Read chapter ↗';
       } else {
-        readCh.href = READER_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v);
+        readCh.href = READER_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch);
         readCh.textContent = 'Read chapter ↗';
       }
     }
@@ -1141,6 +1231,8 @@
         body.innerHTML = html;
         attr.textContent = ATTRIBUTION[versionId] || '';
         _injectModalFootnotes(parsed, body);
+        // Tag proper nouns / theological terms in verse text
+        if (_termMap2) { body._termsTagged = false; autoTagTerms(body); }
       })
       .catch(function () {
         body.innerHTML =
@@ -1688,12 +1780,32 @@
       var resultsEl = document.getElementById('reader-results');
       if (!q) { if (resultsEl) resultsEl.innerHTML = ''; return; }
 
+      // Library ref intercept: "WCF 4", "WSC 1", "HC 26" etc.
+      var libRef = parseLibraryRef(q);
+      if (libRef) {
+        setStatus('');
+        var libUrl = new URL(window.location.href);
+        libUrl.searchParams.set('ref', q);
+        history.replaceState(null, '', libUrl.toString());
+        renderReaderLibrary(libRef, q);
+        return;
+      }
+
       var refs = parseMultiRef(q, null);
       if (!refs.length) {
-        setStatus('Could not parse — try: Gen 1 or John 3:16-21');
+        setStatus('Could not parse — try: Gen 1, John 3:16-21, or WCF 1');
         return;
       }
       setStatus('');
+
+      // Chapter-0 intercept: "Genesis 0" renders the book introduction page
+      if (refs.length === 1 && refs[0].wholeChapter && refs[0].ch === 0) {
+        var url0 = new URL(window.location.href);
+        url0.searchParams.set('ref', q);
+        history.replaceState(null, '', url0.toString());
+        renderReaderBookIntro(refs[0].bookId, refs[0].bookName);
+        return;
+      }
 
       // Verse-window mode: when parallels are on, restrict a whole-chapter lookup to the first
       // PARALLEL_VERSE_WINDOW verses so each page stays manageable with parallel panels.
@@ -1749,23 +1861,83 @@
     var chSel   = document.getElementById('reader-ch-select');
     if (!bookSel || !chSel || !metaBooks) return;
 
+    // Bible books optgroup
+    var bibleGroup = document.createElement('optgroup');
+    bibleGroup.label = 'Bible';
     metaBooks.forEach(function (b) {
       var opt = document.createElement('option');
       opt.value = b.id;
       opt.textContent = b.name;
-      bookSel.appendChild(opt);
+      bibleGroup.appendChild(opt);
     });
+    bookSel.appendChild(bibleGroup);
+
+    // Library optgroup — loaded async from index.json
+    fetch(LIB_INDEX_URL)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (docs) {
+        libIndexCache = docs;
+        var libGroup = document.createElement('optgroup');
+        libGroup.label = 'Library';
+        docs.forEach(function (d) {
+          var opt = document.createElement('option');
+          opt.value = 'lib:' + d.abbrev.toLowerCase();
+          opt.textContent = d.abbrev + ' — ' + d.title;
+          libGroup.appendChild(opt);
+        });
+        bookSel.appendChild(libGroup);
+      })
+      .catch(function () { /* library group unavailable — ignore */ });
 
     bookSel.addEventListener('change', function () {
-      var bk = metaBooks.find(function (b) { return b.id === bookSel.value; });
+      var val = bookSel.value;
+
+      // Library doc selected
+      if (val && val.indexOf('lib:') === 0) {
+        var abbrevKey = val.slice(4);
+        var docId     = LIB_ABBREV_MAP[abbrevKey];
+        if (!docId) return;
+        var abbrev    = abbrevKey.toUpperCase();
+        // Populate chapter select with sections once doc is loaded
+        var fillSections = function (doc) {
+          chSel._libDocId = docId;
+          chSel._bookId   = null;
+          chSel.innerHTML = '<option value="">§…</option>';
+          for (var i = 1; i <= doc.totalSections; i++) {
+            var o = document.createElement('option');
+            o.value = String(i);
+            o.textContent = i;
+            chSel.appendChild(o);
+          }
+          chSel.disabled = false;
+        };
+        if (libDocCache[docId]) {
+          fillSections(libDocCache[docId]);
+        } else {
+          fetch(LIB_DOCS_BASE + '/' + docId + '.json')
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function (d) { libDocCache[docId] = d; fillSections(d); })
+            .catch(function () {});
+        }
+        return;
+      }
+
+      // Bible book selected
+      var bk = metaBooks.find(function (b) { return b.id === val; });
       if (!bk) {
         chSel.innerHTML = '<option value="">Ch…</option>';
         chSel.disabled = true;
-        chSel._bookId = null;
+        chSel._bookId   = null;
+        chSel._libDocId = null;
         return;
       }
-      chSel._bookId = bk.id;
+      chSel._bookId   = bk.id;
+      chSel._libDocId = null;
       chSel.innerHTML = '<option value="">Ch…</option>';
+      var introOpt = document.createElement('option');
+      introOpt.value = '0';
+      introOpt.textContent = 'Intro';
+      chSel.appendChild(introOpt);
       for (var i = 1; i <= (bk.chapters || 999); i++) {
         var opt = document.createElement('option');
         opt.value = String(i);
@@ -1777,10 +1949,22 @@
 
     chSel.addEventListener('change', function () {
       if (!bookSel.value || !chSel.value) return;
-      var bk = metaBooks.find(function (b) { return b.id === bookSel.value; });
+      var val = bookSel.value;
+      var lookupInput = document.getElementById('reader-lookup-input');
+
+      // Library section selected
+      if (val.indexOf('lib:') === 0) {
+        var abbrevKey2 = val.slice(4).toUpperCase();
+        var ref2 = abbrevKey2 + ' ' + chSel.value;
+        if (lookupInput) lookupInput.value = ref2;
+        if (_readerLookupFn) _readerLookupFn();
+        return;
+      }
+
+      // Bible chapter selected
+      var bk = metaBooks.find(function (b) { return b.id === val; });
       if (!bk) return;
       var ref = bk.name + ' ' + chSel.value;
-      var lookupInput = document.getElementById('reader-lookup-input');
       if (lookupInput) lookupInput.value = ref;
       if (_readerLookupFn) _readerLookupFn();
     });
@@ -1813,15 +1997,20 @@
           if (!nav.atChEnd) {
             var ns = nav.verseEnd + 1;
             var ne = nav.verseEnd + PARALLEL_VERSE_WINDOW;
+            if (nav.maxChV) ne = Math.min(ne, nav.maxChV);
             ref = nav.bookName + ' ' + nav.ch + ':' + ns + '-' + ne;
           } else if (nav.ch < nav.maxCh) {
             ref = nav.bookName + ' ' + (nav.ch + 1); // intercepted → first window of next chapter
           }
         }
       } else {
-        // Standard chapter-by-chapter mode
+        // Standard chapter-by-chapter mode (ch=0 = intro page)
         if (goLeft && nav.ch > 1) {
           ref = nav.bookName + ' ' + (nav.ch - 1);
+        } else if (goLeft && nav.ch === 1) {
+          ref = nav.bookName + ' 0'; // back to intro
+        } else if (goRight && nav.ch === 0) {
+          ref = nav.bookName + ' 1'; // intro → chapter 1
         } else if (goRight && nav.ch < nav.maxCh) {
           ref = nav.bookName + ' ' + (nav.ch + 1);
         }
@@ -1844,6 +2033,11 @@
 
     var maxCh = bk.chapters || 150;
     var html = '<div class="reader-sidebar__book">' + escHtml(bk.name) + '</div>';
+    var introActive = (ch === 0) ? ' reader-sidebar__intro--active' : '';
+    html += '<div class="reader-sidebar__intro-row">' +
+      '<button class="reader-sidebar__intro' + introActive + '" data-nav-label="' +
+      escHtml(bk.name + ' 0') + '">Intro</button>' +
+      '</div>';
     html += '<div class="reader-sidebar__grid">';
     for (var i = 1; i <= maxCh; i++) {
       var active = (i === ch) ? ' reader-sidebar__ch--active' : '';
@@ -1856,7 +2050,7 @@
     if (!sidebar._navWired) {
       sidebar._navWired = true;
       sidebar.addEventListener('click', function (e) {
-        var btn = e.target.closest('.reader-sidebar__ch');
+        var btn = e.target.closest('.reader-sidebar__ch, .reader-sidebar__intro');
         if (!btn) return;
         var label = btn.getAttribute('data-nav-label');
         if (!label) return;
@@ -1874,6 +2068,8 @@
 
   function syncBrowseSelects() {
     if (!_readerNavState) return;
+    // Library nav state is synced directly by renderReaderLibrary — skip here.
+    if (_readerNavState.isLib) return;
     var bookSel = document.getElementById('reader-book-select');
     var chSel   = document.getElementById('reader-ch-select');
     if (!bookSel || !chSel) return;
@@ -1883,6 +2079,10 @@
     if (chSel._bookId !== _readerNavState.bookId) {
       chSel._bookId = _readerNavState.bookId;
       chSel.innerHTML = '<option value="">Ch…</option>';
+      var introOpt = document.createElement('option');
+      introOpt.value = '0';
+      introOpt.textContent = 'Intro';
+      chSel.appendChild(introOpt);
       for (var i = 1; i <= (bk.chapters || 999); i++) {
         var opt = document.createElement('option');
         opt.value = String(i);
@@ -1901,10 +2101,13 @@
     var html = '<div class="' + cls + '">';
 
     if (ref.wholeChapter) {
-      // Standard chapter navigation
+      // Standard chapter navigation (ch=1 prev links to intro)
       if (ref.ch > 1) {
         var p = ref.bookName + ' ' + (ref.ch - 1);
         html += '<button class="reader-nav-btn" data-nav-label="' + escHtml(p) + '">← ' + escHtml(p) + '</button>';
+      } else if (ref.ch === 1) {
+        var introLbl = ref.bookName + ' 0';
+        html += '<button class="reader-nav-btn" data-nav-label="' + escHtml(introLbl) + '">← Intro</button>';
       } else {
         html += '<span></span>';
       }
@@ -1914,10 +2117,12 @@
       }
     } else if (ref.verseWindow) {
       // Verse-window mode: step by PARALLEL_VERSE_WINDOW within the chapter; wrap at boundaries.
-      // "fewer verses than window" means we're at the end of the chapter.
-      var atChEnd = !verses || verses.length < PARALLEL_VERSE_WINDOW;
+      var maxV    = verses && verses.chapterMaxV;
       var startV  = ref.v;
       var endV    = ref.endV;
+      // At chapter end if: got fewer verses than requested, OR endV reached/passed the last verse.
+      var atChEnd = !verses || verses.length < PARALLEL_VERSE_WINDOW ||
+                    (maxV !== undefined && endV >= maxV);
 
       // Prev button
       if (startV > 1) {
@@ -1928,6 +2133,8 @@
       } else if (ref.ch > 1) {
         var prevChLbl = ref.bookName + ' ' + (ref.ch - 1);
         html += '<button class="reader-nav-btn" data-nav-label="' + escHtml(prevChLbl) + '">← ' + escHtml(ref.bookName + ' ' + (ref.ch - 1)) + '</button>';
+      } else if (ref.ch === 1) {
+        html += '<button class="reader-nav-btn" data-nav-label="' + escHtml(ref.bookName + ' 0') + '">← Intro</button>';
       } else {
         html += '<span></span>';
       }
@@ -1936,6 +2143,7 @@
       if (!atChEnd) {
         var nextStart = endV + 1;
         var nextEnd   = endV + PARALLEL_VERSE_WINDOW;
+        if (maxV) nextEnd = Math.min(nextEnd, maxV);
         var nextLbl   = ref.bookName + ' ' + ref.ch + ':' + nextStart + '-' + nextEnd;
         html += '<button class="reader-nav-btn" data-nav-label="' + escHtml(nextLbl) + '">Next 5 verses →</button>';
       } else if (ref.ch < maxCh) {
@@ -1946,6 +2154,289 @@
 
     html += '</div>';
     return html;
+  }
+
+  // ── Library document reader ──────────────────────────────────────────────
+  function renderReaderLibrary(libRef, rawStr) {
+    var el = document.getElementById('reader-results');
+    if (!el) return;
+
+    el.innerHTML = '<p class="reader-hint">Loading…</p>';
+
+    var browseHint = document.querySelector('.reader-browse-hint');
+    if (browseHint) browseHint.textContent = 'j / → next section · k / ← prev';
+
+    // Seed nav state with bookName = abbrev so keyboard shortcuts produce "WCF 5" etc.
+    _readerNavState = {
+      bookId: null, bookName: libRef.abbrev,
+      ch: parseInt(libRef.section, 10), maxCh: null,
+      verseStart: null, verseEnd: null, atChEnd: false,
+      isLib: true
+    };
+
+    function loadDoc() {
+      return libDocCache[libRef.docId]
+        ? Promise.resolve(libDocCache[libRef.docId])
+        : fetch(LIB_DOCS_BASE + '/' + libRef.docId + '.json')
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function (d) { libDocCache[libRef.docId] = d; return d; });
+    }
+
+    loadDoc().then(function (doc) {
+      if (_readerNavState && _readerNavState.isLib) {
+        _readerNavState.maxCh = doc.totalSections;
+      }
+
+      var secNum  = parseInt(libRef.section, 10);
+      var section = doc.sections.find(function (s) { return parseInt(s.ref, 10) === secNum; })
+                 || doc.sections[0];
+      if (!section) {
+        el.innerHTML = '<p class="reader-hint">Section not found.</p>';
+        return;
+      }
+
+      var total  = doc.totalSections;
+      var abbrev = doc.abbrev;
+
+      function navBtn(label, text) {
+        return '<button class="reader-nav-btn" data-nav-label="' + escHtml(label) + '">' + escHtml(text) + '</button>';
+      }
+
+      var prevNum = secNum - 1;
+      var nextNum = secNum + 1;
+      var prevHtml = prevNum >= 1 ? navBtn(abbrev + ' ' + prevNum, '← ' + abbrev + ' ' + prevNum) : '<span></span>';
+      var nextHtml = nextNum <= total ? navBtn(abbrev + ' ' + nextNum, abbrev + ' ' + nextNum + ' →') : '';
+      var navRow = '<div class="reader-chapter-nav">' + prevHtml + nextHtml + '</div>';
+
+      var html = '<div class="reader-result-group reader-lib-section">';
+      html += navRow;
+      html += '<h2 class="reader-result-group__title">' + escHtml(abbrev + ' ' + section.ref) + '</h2>';
+      html += '<p class="reader-lib-docname">' + escHtml(doc.title) + '</p>';
+      html += '<div class="reader-lib-content">' + section.html + '</div>';
+      html += navRow.replace('reader-chapter-nav"', 'reader-chapter-nav reader-chapter-nav--bottom"');
+      html += '</div>';
+
+      // Update sidebar to show section numbers for this doc
+      var sidebar = document.getElementById('reader-sidebar');
+      if (sidebar) {
+        var sbHtml = '<div class="reader-sidebar__book">' + escHtml(abbrev) + '</div>';
+        sbHtml += '<div class="reader-sidebar__grid">';
+        for (var i = 1; i <= total; i++) {
+          var active = (i === secNum) ? ' reader-sidebar__ch--active' : '';
+          sbHtml += '<button class="reader-sidebar__ch' + active + '" data-nav-label="' +
+            escHtml(abbrev + ' ' + i) + '">' + i + '</button>';
+        }
+        sbHtml += '</div>';
+        sidebar.innerHTML = sbHtml;
+        if (!sidebar._libNavWired) {
+          sidebar._libNavWired = true;
+          sidebar.addEventListener('click', function (e) {
+            var btn = e.target.closest('.reader-sidebar__ch');
+            if (!btn) return;
+            var lbl = btn.getAttribute('data-nav-label');
+            if (!lbl) return;
+            var inp = document.getElementById('reader-lookup-input');
+            if (inp) inp.value = lbl;
+            if (_readerLookupFn) _readerLookupFn();
+          });
+        }
+        var activeBtn = sidebar.querySelector('.reader-sidebar__ch--active');
+        if (activeBtn) setTimeout(function () { activeBtn.scrollIntoView({ block: 'nearest' }); }, 50);
+      }
+
+      // Sync browse selects for library doc
+      var bookSel = document.getElementById('reader-book-select');
+      var chSel   = document.getElementById('reader-ch-select');
+      if (bookSel) bookSel.value = 'lib:' + abbrev.toLowerCase();
+      if (chSel) {
+        if (chSel._libDocId !== libRef.docId) {
+          chSel._libDocId = libRef.docId;
+          chSel.innerHTML = '<option value="">§…</option>';
+          for (var j = 1; j <= total; j++) {
+            var opt = document.createElement('option');
+            opt.value = String(j);
+            opt.textContent = j;
+            chSel.appendChild(opt);
+          }
+          chSel.disabled = false;
+        }
+        chSel.value = libRef.section;
+      }
+
+      el.innerHTML = html;
+      wireReaderNav(el);
+
+      // Wire .ref links so verse tooltips work within confession text
+      wireRefLinks();
+    }).catch(function () {
+      el.innerHTML = '<p class="reader-hint">Could not load library document.</p>';
+    });
+  }
+
+  // ── Book intro page (Chapter 0) ───────────────────────────────────────────
+  function renderReaderBookIntro(bookId, bookName) {
+    var el = document.getElementById('reader-results');
+    if (!el) return;
+    var bkMeta = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
+    var maxCh = bkMeta ? (bkMeta.chapters || 999) : 999;
+
+    _readerNavState = {
+      bookId: bookId, bookName: bookName, ch: 0, maxCh: maxCh,
+      verseStart: null, verseEnd: null, atChEnd: false
+    };
+    syncBrowseSelects();
+    renderReaderSidebar(bookId, 0);
+    if (_bookInfoOpen) _refreshBookInfoPanel();
+
+    var browseHint = document.querySelector('.reader-browse-hint');
+    if (browseHint) browseHint.textContent = 'j / → next chapter · k / ← prev';
+
+    el.innerHTML = '<p class="reader-hint">Loading…</p>';
+
+    if (_bookInfoCache[bookId]) {
+      _renderIntroInReader(el, _bookInfoCache[bookId], bookId, bookName, maxCh);
+      return;
+    }
+    var url = _resolve('../../data/books/introductions/' + bookId + '.json');
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        _bookInfoCache[bookId] = data;
+        if (_readerNavState && _readerNavState.bookId === bookId && _readerNavState.ch === 0)
+          _renderIntroInReader(el, data, bookId, bookName, maxCh);
+      })
+      .catch(function () {
+        el.innerHTML = '<p class="reader-hint">No introduction available for this book yet.</p>';
+      });
+  }
+
+  function _riSection(heading, contentHtml) {
+    return '<section class="ri-section">' +
+      '<h3 class="ri-section__heading">' + escHtml(heading) + '</h3>' +
+      contentHtml + '</section>';
+  }
+
+  function _renderIntroInReader(el, d, bookId, bookName, maxCh) {
+    var ch1Lbl = bookName + ' 1';
+    var body   = '';
+
+    // Author / Date meta row
+    body += '<div class="ri-meta">' +
+      '<span><strong>Author:</strong> ' + escHtml(d.author || '—') + '</span>' +
+      '<span><strong>Date:</strong> '   + escHtml(d.date   || '—') + '</span>' +
+      '</div>';
+
+    // Purpose
+    if (d.purpose || d.setting) {
+      body += _riSection('Purpose', '<p class="ri-body">' + escHtml(d.purpose || d.setting) + '</p>');
+    }
+
+    // Historical Context (enriched field)
+    if (d.context) {
+      body += _riSection('Historical Context', '<p class="ri-body">' + escHtml(d.context) + '</p>');
+    }
+
+    // Themes — expanded detail when available, chips as fallback
+    if (d.themes_detail && d.themes_detail.length) {
+      var tdHtml = d.themes_detail.map(function (t) {
+        return '<div class="ri-theme-item">' +
+          '<h4 class="ri-theme-title">' + escHtml(t.title) + '</h4>' +
+          '<p class="ri-body">' + escHtml(t.text) + '</p>' +
+          '</div>';
+      }).join('');
+      body += _riSection('Key Themes', tdHtml);
+    } else if (d.themes && d.themes.length) {
+      var chips = '<div class="reader-bookinfo-themes">' +
+        d.themes.map(function (t) {
+          return '<span class="reader-bookinfo-theme">' + escHtml(t) + '</span>';
+        }).join('') + '</div>';
+      body += _riSection('Themes', chips);
+    }
+
+    // Key People (enriched field)
+    if (d.key_people && d.key_people.length) {
+      var ppHtml = '<ul class="ri-people">' +
+        d.key_people.map(function (p) {
+          return '<li class="ri-person"><strong class="ri-person__name">' +
+            escHtml(p.name) + '</strong><span class="ri-person__role"> — ' +
+            escHtml(p.role) + '</span></li>';
+        }).join('') + '</ul>';
+      body += _riSection('Key People', ppHtml);
+    }
+
+    // Structural Outline
+    if (d.outline && d.outline.length) {
+      var olHtml = '<ol class="reader-bookinfo-outline">' +
+        d.outline.map(function (s) {
+          var link = s.ref
+            ? '<a class="ref" data-ref="' + escHtml(s.ref) + '">' + escHtml(s.label) + '</a>'
+            : escHtml(s.label);
+          return '<li>' + link +
+            (s.chapters ? ' <span class="reader-bookinfo-ch">ch. ' + escHtml(s.chapters) + '</span>' : '') +
+            '</li>';
+        }).join('') + '</ol>';
+      body += _riSection('Outline', olHtml);
+    }
+
+    // Key Verses — multi-list if enriched, single verse as fallback
+    if (d.key_verses && d.key_verses.length) {
+      var kvHtml = '<ul class="ri-keyverses">' +
+        d.key_verses.map(function (kv) {
+          return '<li class="ri-keyverse">' +
+            '<a class="ref ri-keyverse__ref" data-ref="' + escHtml(kv.ref) + '">' + escHtml(kv.ref) + '</a>' +
+            (kv.note ? '<span class="ri-keyverse__note"> — ' + escHtml(kv.note) + '</span>' : '') +
+            '</li>';
+        }).join('') + '</ul>';
+      body += _riSection('Key Verses', kvHtml);
+    } else if (d.key_verse) {
+      body += _riSection('Key Verse',
+        '<p class="ri-body"><a class="ref" data-ref="' + escHtml(d.key_verse) + '">' +
+        escHtml(d.key_verse) + '</a></p>');
+    }
+
+    // Christ in [Book] (enriched field)
+    if (d.christ_connection) {
+      body += _riSection('Christ in ' + d.title,
+        '<p class="ri-body ri-body--christ">' + escHtml(d.christ_connection) + '</p>');
+    }
+
+    // Timeline
+    if (d.timeline) {
+      var tl = d.timeline, tlParts = [];
+      if (tl.before && tl.before.length) {
+        tlParts.push(tl.before.map(function (b) {
+          return '<a class="ref" data-ref="' + escHtml(b.ref) + '">← ' + escHtml(b.label) + '</a>';
+        }).join(' · '));
+      }
+      tlParts.push('<strong class="ri-tl-current">' + escHtml(d.title) + '</strong>' +
+        (tl.date ? ' <span class="reader-bookinfo-tldate">(' + escHtml(tl.date) + ')</span>' : ''));
+      if (tl.after && tl.after.length) {
+        tlParts.push(tl.after.map(function (a) {
+          return '<a class="ref" data-ref="' + escHtml(a.ref) + '">' + escHtml(a.label) + ' →</a>';
+        }).join(' · '));
+      }
+      body += _riSection('Redemptive-Historical Timeline',
+        '<div class="ri-timeline">' + tlParts.join('<span class="ri-tl-sep"> · </span>') + '</div>');
+    }
+
+    el.innerHTML =
+      '<div class="reader-intro-page">' +
+        '<div class="reader-chapter-nav">' +
+          '<span></span>' +
+          '<button class="reader-nav-btn" data-nav-label="' + escHtml(ch1Lbl) + '">' + escHtml(ch1Lbl) + ' →</button>' +
+        '</div>' +
+        '<div class="reader-intro-inner">' +
+          '<h2 class="reader-intro-title">Introduction to ' + escHtml(d.title) + '</h2>' +
+          body +
+        '</div>' +
+        '<div class="reader-chapter-nav reader-chapter-nav--bottom reader-intro-begin">' +
+          '<span></span>' +
+          '<button class="reader-nav-btn reader-nav-btn--begin" data-nav-label="' + escHtml(ch1Lbl) + '">Begin Reading ' + escHtml(bookName) + ' →</button>' +
+        '</div>' +
+      '</div>';
+
+    wireReaderNav(el);
+    wireRefLinks(el);
   }
 
   function renderReaderResults(groups, version) {
@@ -2003,6 +2494,7 @@
       var navBk = metaBooks && metaBooks.find(function (b) { return b.id === groups[0].ref.bookId; });
       var navRef = groups[0].ref;
       var navVs  = groups[0].verses;
+      var navMaxV = navRef.verseWindow ? (navVs && navVs.chapterMaxV) : undefined;
       _readerNavState = {
         bookId:     navRef.bookId,
         bookName:   navRef.bookName,
@@ -2010,7 +2502,11 @@
         maxCh:      navBk ? (navBk.chapters || 999) : 999,
         verseStart: navRef.verseWindow ? navRef.v   : null,
         verseEnd:   navRef.verseWindow ? navRef.endV : null,
-        atChEnd:    navRef.verseWindow ? (!navVs || navVs.length < PARALLEL_VERSE_WINDOW) : false
+        maxChV:     navMaxV,
+        atChEnd:    navRef.verseWindow ? (
+          !navVs || navVs.length < PARALLEL_VERSE_WINDOW ||
+          (navMaxV !== undefined && navRef.endV >= navMaxV)
+        ) : false
       };
     } else {
       _readerNavState = null;
@@ -2036,6 +2532,15 @@
       }
     }
     renderReaderSidebar(sidebarBookId, sidebarCh);
+    if (_bookInfoOpen) _refreshBookInfoPanel();
+
+    // When _readerNavState is null (single-verse or multi-group search),
+    // syncBrowseSelects() skips updating bookSel. Sync it here so the
+    // study-link banner MutationObserver reads the correct current book.
+    if (!_readerNavState) {
+      var _bSel = document.getElementById('reader-book-select');
+      if (_bSel) _bSel.value = sidebarBookId || '';
+    }
 
     el.innerHTML = html || '<p class="reader-hint">No results.</p>';
 
@@ -2080,7 +2585,7 @@
       '</div>' +
       '<div class="reader-panel-notes reader-panel-body"></div>' +
       '<div class="reader-panel-xrefs reader-panel-body" hidden></div>' +
-      '<div class="reader-panel-comm reader-panel-body" hidden></div>';
+      '<div class="reader-panel-commentary reader-panel-body" hidden></div>';
     panel.querySelectorAll('.reader-panel-tab').forEach(function (btn) {
       btn.addEventListener('click', function () {
         _readerPanelActiveTab = btn.getAttribute('data-ptab');
@@ -2137,8 +2642,18 @@
         var rangeLabel = note.display && note.display !== (state.bookName + ' ' + vv.ch + ':' + vv.v)
           ? note.display + ' · ' : '';
         meta.textContent = rangeLabel + _noteRelTime(note.updated);
+        var actions = document.createElement('div');
+        actions.className = 'bsw-note-actions';
+        var delBtn = document.createElement('button');
+        delBtn.className = 'bsw-note-action-btn bsw-note-action-btn--del';
+        delBtn.textContent = 'Delete';
+        delBtn.addEventListener('click', (function (id) {
+          return function () { deleteNoteV2(id); _readerPanelRenderNotes(panel); };
+        })(note.id));
+        actions.appendChild(delBtn);
         item.appendChild(txt);
         item.appendChild(meta);
+        item.appendChild(actions);
         group.appendChild(item);
       });
       body.appendChild(group);
@@ -2186,22 +2701,49 @@
   }
 
   function _readerPanelRenderCommentary(panel) {
-    var body = panel.querySelector('.reader-panel-comm');
+    var body = panel.querySelector('.reader-panel-commentary');
     if (!body || body._commLoaded) return;
     var state = _readerNavState;
     if (!state) { body.innerHTML = '<p class="bsw-note-empty">Navigate to a chapter to load commentary.</p>'; return; }
     body._commLoaded = true;
-    body.innerHTML = '<p class="bsw-note-empty">Loading commentary…</p>';
-    var p = parseRef(state.bookName + ' ' + state.ch);
+
+    var p = parseRef(state.bookName + ' ' + state.ch + ':1');
     if (!p) return;
-    loadCommentary(p.bookId, _commentarySource).then(function (data) {
-      var html = _extractCommHtml(data, p, _commentarySource);
-      if (!html) { body.innerHTML = '<p class="bsw-note-empty">No commentary for this chapter.</p>'; return; }
-      body.innerHTML = html + '<p class="bsw-modal__commentary-attr">' + _commAttr(_commentarySource) + '</p>';
-      wireRefLinks(body);
-    }).catch(function () {
-      body.innerHTML = '<p class="bsw-note-empty">Could not load commentary.</p>';
+    p.wholeChapter = true;
+    p.endCh = p.ch;
+    p.endV = 9999;
+
+    var opts = COMMENTARY_SOURCES.map(function (s) {
+      return '<option value="' + s.id + '"' + (s.id === _commentarySource ? ' selected' : '') + '>' + s.label + '</option>';
+    }).join('');
+    body.innerHTML =
+      '<div class="reader-panel-comm-picker">' +
+        '<select class="reader-panel-comm-select">' + opts + '</select>' +
+      '</div>' +
+      '<div class="reader-panel-comm-content"></div>';
+
+    var sel       = body.querySelector('.reader-panel-comm-select');
+    var contentEl = body.querySelector('.reader-panel-comm-content');
+
+    function loadContent(src) {
+      contentEl.innerHTML = '<p class="bsw-note-empty">Loading…</p>';
+      loadCommentary(p.bookId, src).then(function (data) {
+        var html = _extractCommHtml(data, p, src);
+        if (!html) { contentEl.innerHTML = '<p class="bsw-note-empty">No commentary for this chapter.</p>'; return; }
+        contentEl.innerHTML = html + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
+        wireRefLinks(contentEl);
+      }).catch(function () {
+        contentEl.innerHTML = '<p class="bsw-note-empty">Could not load commentary.</p>';
+      });
+    }
+
+    sel.addEventListener('change', function () {
+      _commentarySource = sel.value;
+      localStorage.setItem('bsw_comm_src', _commentarySource);
+      loadContent(_commentarySource);
     });
+
+    loadContent(_commentarySource);
   }
 
   // Rebuilds cross-ref content in the side panel; initializes switcher structure on first call.
@@ -2214,7 +2756,7 @@
     if (!xrefsBody) return;
     xrefsBody.innerHTML = '';
 
-    var commBody = panel.querySelector('.reader-panel-comm');
+    var commBody = panel.querySelector('.reader-panel-commentary');
     if (commBody) { commBody._commLoaded = false; commBody.innerHTML = ''; }
 
     var sups = document.querySelectorAll('.reader-result-group .reader-xref-note');
@@ -3980,6 +4522,122 @@
     localStorage.setItem(INTERLINEAR_KEY, on ? '1' : '0');
   }
 
+  var SPLIT_KEY   = 'bsw_split_panel';
+  var WIDE_KEY    = 'bsw_wide_reader';
+  var SIDEBAR_KEY = 'bsw_sidebar_chapters';
+
+  function initSplitToggle() {
+    var browseBar = document.querySelector('.reader-browse-bar');
+    if (!browseBar || document.getElementById('reader-split-btn')) return;
+
+    var layout = document.querySelector('.reader-layout');
+    var on = !!localStorage.getItem(SPLIT_KEY);
+    if (on && layout) layout.classList.add('reader-layout--split');
+
+    var btn = document.createElement('button');
+    btn.id = 'reader-split-btn';
+    btn.className = 'reader-split-btn' + (on ? ' reader-split-btn--on' : '');
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.title = 'Toggle 50/50 text / panel split';
+    btn.textContent = '⇔ Split';
+
+    var interlinearBtn = document.getElementById('reader-interlinear-btn');
+    var compareBtn     = document.getElementById('reader-compare-btn');
+    var parallelsBtn   = document.getElementById('reader-parallels-btn');
+    var hint           = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, interlinearBtn || compareBtn || parallelsBtn || hint || null);
+
+    btn.addEventListener('click', function () {
+      on = !on;
+      if (on) {
+        localStorage.setItem(SPLIT_KEY, '1');
+        // deactivate Wide if on
+        var wideBtn = document.getElementById('reader-wide-btn');
+        if (wideBtn && wideBtn.classList.contains('reader-wide-btn--on')) wideBtn.click();
+      } else {
+        localStorage.removeItem(SPLIT_KEY);
+      }
+      if (layout) layout.classList.toggle('reader-layout--split', on);
+      btn.classList.toggle('reader-split-btn--on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  function initWideToggle() {
+    var browseBar = document.querySelector('.reader-browse-bar');
+    if (!browseBar || document.getElementById('reader-wide-btn')) return;
+
+    var layout = document.querySelector('.reader-layout');
+    var on = !!localStorage.getItem(WIDE_KEY);
+    if (on && layout) layout.classList.add('reader-layout--wide');
+
+    var btn = document.createElement('button');
+    btn.id = 'reader-wide-btn';
+    btn.className = 'reader-wide-btn' + (on ? ' reader-wide-btn--on' : '');
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.title = 'Hide panel for distraction-free reading';
+    btn.textContent = '⛶ Wide';
+
+    var splitBtn       = document.getElementById('reader-split-btn');
+    var interlinearBtn = document.getElementById('reader-interlinear-btn');
+    var compareBtn     = document.getElementById('reader-compare-btn');
+    var parallelsBtn   = document.getElementById('reader-parallels-btn');
+    var hint           = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, splitBtn || interlinearBtn || compareBtn || parallelsBtn || hint || null);
+
+    btn.addEventListener('click', function () {
+      on = !on;
+      if (on) {
+        localStorage.setItem(WIDE_KEY, '1');
+        // deactivate Split if on
+        var splitBtn2 = document.getElementById('reader-split-btn');
+        if (splitBtn2 && splitBtn2.classList.contains('reader-split-btn--on')) splitBtn2.click();
+      } else {
+        localStorage.removeItem(WIDE_KEY);
+      }
+      if (layout) layout.classList.toggle('reader-layout--wide', on);
+      btn.classList.toggle('reader-wide-btn--on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  function initSidebarToggle() {
+    var browseBar = document.querySelector('.reader-browse-bar');
+    if (!browseBar || document.getElementById('reader-sidebar-btn')) return;
+    var layout  = document.querySelector('.reader-layout');
+    var on = !!localStorage.getItem(SIDEBAR_KEY);
+    if (on && layout) layout.classList.add('reader-layout--with-sidebar');
+
+    var btn = document.createElement('button');
+    btn.id = 'reader-sidebar-btn';
+    btn.className = 'reader-sidebar-btn' + (on ? ' reader-sidebar-btn--on' : '');
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.title = 'Show chapter list';
+    btn.textContent = '≡ Chapters';
+
+    var wideBtn        = document.getElementById('reader-wide-btn');
+    var splitBtn       = document.getElementById('reader-split-btn');
+    var interlinearBtn = document.getElementById('reader-interlinear-btn');
+    var compareBtn     = document.getElementById('reader-compare-btn');
+    var parallelsBtn   = document.getElementById('reader-parallels-btn');
+    var hint           = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, wideBtn || splitBtn || interlinearBtn || compareBtn || parallelsBtn || hint || null);
+
+    btn.addEventListener('click', function () {
+      on = !on;
+      if (on) {
+        localStorage.setItem(SIDEBAR_KEY, '1');
+        if (layout) layout.classList.add('reader-layout--with-sidebar');
+        if (_readerNavState) renderReaderSidebar(_readerNavState.bookId, _readerNavState.ch);
+      } else {
+        localStorage.removeItem(SIDEBAR_KEY);
+        if (layout) layout.classList.remove('reader-layout--with-sidebar');
+      }
+      btn.classList.toggle('reader-sidebar-btn--on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
   function initInterlinearToggle() {
     var browseBar = document.querySelector('.reader-browse-bar');
     if (!browseBar || document.getElementById('reader-interlinear-btn')) return;
@@ -4012,6 +4670,146 @@
     });
   }
 
+  // ── Book Info toggle ──────────────────────────────────────────────────────
+  var _bookInfoOpen = false;
+  var _bookInfoCache = {};
+
+  function initBookInfoToggle() {
+    var browseBar = document.querySelector('.reader-browse-bar');
+    if (!browseBar || document.getElementById('reader-bookinfo-btn')) return;
+
+    var btn = document.createElement('button');
+    btn.id = 'reader-bookinfo-btn';
+    btn.className = 'reader-bookinfo-btn';
+    btn.setAttribute('aria-pressed', 'false');
+    btn.title = 'Book introduction — author, date, outline';
+    btn.textContent = '📖 Book Info';
+
+    var interlinearBtn = document.getElementById('reader-interlinear-btn');
+    var compareBtn     = document.getElementById('reader-compare-btn');
+    var parallelsBtn   = document.getElementById('reader-parallels-btn');
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, interlinearBtn || compareBtn || parallelsBtn || hint || null);
+
+    btn.addEventListener('click', function () {
+      _bookInfoOpen = !_bookInfoOpen;
+      btn.classList.toggle('reader-bookinfo-btn--on', _bookInfoOpen);
+      btn.setAttribute('aria-pressed', _bookInfoOpen ? 'true' : 'false');
+      _refreshBookInfoPanel();
+    });
+  }
+
+  function _refreshBookInfoPanel() {
+    var container = document.getElementById('reader-results');
+    if (!container) return;
+    var existing = document.getElementById('reader-bookinfo-panel');
+    if (!_bookInfoOpen) {
+      if (existing) existing.remove();
+      return;
+    }
+
+    var bookId = _readerNavState && _readerNavState.bookId;
+    if (!bookId) {
+      if (existing) existing.remove();
+      return;
+    }
+
+    if (!existing) {
+      existing = document.createElement('div');
+      existing.id = 'reader-bookinfo-panel';
+      existing.className = 'reader-bookinfo-panel';
+      container.parentNode.insertBefore(existing, container);
+    }
+    existing.innerHTML = '<div class="reader-bookinfo-loading">Loading…</div>';
+
+    if (_bookInfoCache[bookId]) {
+      _renderBookInfoContent(existing, _bookInfoCache[bookId]);
+      return;
+    }
+
+    var url = _resolve('../../data/books/introductions/' + bookId + '.json');
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        _bookInfoCache[bookId] = data;
+        if (_bookInfoOpen && _readerNavState && _readerNavState.bookId === bookId) {
+          _renderBookInfoContent(existing, data);
+        }
+      })
+      .catch(function () {
+        if (existing.parentNode) {
+          existing.innerHTML = '<p class="reader-bookinfo-empty">No introduction available for this book yet.</p>';
+        }
+      });
+  }
+
+  function _renderBookInfoContent(panel, d) {
+    var outlineHtml = '';
+    if (d.outline && d.outline.length) {
+      outlineHtml = '<ol class="reader-bookinfo-outline">' +
+        d.outline.map(function (s) {
+          var link = s.ref
+            ? '<a class="ref" data-ref="' + escHtml(s.ref) + '">' + escHtml(s.label) + '</a>'
+            : escHtml(s.label);
+          return '<li>' + link +
+            (s.chapters ? ' <span class="reader-bookinfo-ch">ch. ' + escHtml(s.chapters) + '</span>' : '') +
+            '</li>';
+        }).join('') + '</ol>';
+    }
+
+    var themesHtml = '';
+    if (d.themes && d.themes.length) {
+      themesHtml = '<div class="reader-bookinfo-themes">' +
+        d.themes.map(function (t) {
+          return '<span class="reader-bookinfo-theme">' + escHtml(t) + '</span>';
+        }).join('') + '</div>';
+    }
+
+    var timelineHtml = '';
+    if (d.timeline) {
+      var tl = d.timeline;
+      var parts = [];
+      if (tl.before && tl.before.length) {
+        parts.push(tl.before.map(function (b) {
+          return '<a class="ref" data-ref="' + escHtml(b.ref) + '">← ' + escHtml(b.label) + '</a>';
+        }).join(''));
+      }
+      parts.push('<strong>' + escHtml(d.title) + '</strong>' +
+        (tl.date ? ' <span class="reader-bookinfo-tldate">(' + escHtml(tl.date) + ')</span>' : ''));
+      if (tl.after && tl.after.length) {
+        parts.push(tl.after.map(function (a) {
+          return '<a class="ref" data-ref="' + escHtml(a.ref) + '">' + escHtml(a.label) + ' →</a>';
+        }).join(''));
+      }
+      timelineHtml = '<div class="reader-bookinfo-timeline">' + parts.join(' · ') + '</div>';
+    }
+
+    panel.innerHTML =
+      '<div class="reader-bookinfo-inner">' +
+        '<div class="reader-bookinfo-header">' +
+          '<h3 class="reader-bookinfo-title">' + escHtml(d.title) + '</h3>' +
+          '<button class="reader-bookinfo-close" aria-label="Close book info">✕</button>' +
+        '</div>' +
+        '<div class="reader-bookinfo-meta">' +
+          '<span><strong>Author:</strong> ' + escHtml(d.author || '—') + '</span>' +
+          '<span><strong>Date:</strong> ' + escHtml(d.date || '—') + '</span>' +
+        '</div>' +
+        '<p class="reader-bookinfo-purpose">' + escHtml(d.purpose || d.setting || '') + '</p>' +
+        themesHtml +
+        (outlineHtml ? '<h4 class="reader-bookinfo-subhead">Outline</h4>' + outlineHtml : '') +
+        timelineHtml +
+      '</div>';
+
+    wireRefLinks(panel);
+
+    panel.querySelector('.reader-bookinfo-close').addEventListener('click', function () {
+      _bookInfoOpen = false;
+      var btn = document.getElementById('reader-bookinfo-btn');
+      if (btn) { btn.classList.remove('reader-bookinfo-btn--on'); btn.setAttribute('aria-pressed', 'false'); }
+      panel.remove();
+    });
+  }
+
   function injectAllInterlinearRows(ref, groupEl) {
     if (!groupEl) return;
     var bkMeta = metaBooks && metaBooks.find(function (b) { return b.id === ref.bookId; });
@@ -4027,17 +4825,17 @@
           var v  = rowEl.getAttribute('data-v');
           var vTokens = interlinear[ch] && interlinear[ch][v];
           if (!vTokens || !vTokens.length) { rowEl.style.display = 'none'; return; }
-          renderReaderInterlinearRow(vTokens, strongsDict, rowEl);
+          renderReaderInterlinearRow(vTokens, strongsDict, rowEl, testament === 'hebrew');
         });
       });
   }
 
-  function renderReaderInterlinearRow(vTokens, strongsDict, container) {
+  function renderReaderInterlinearRow(vTokens, strongsDict, container, isHebrew) {
     var valid = vTokens.filter(function (t) { return t.s; });
     if (!valid.length) { container.style.display = 'none'; return; }
 
     var grid = document.createElement('div');
-    grid.className = 'ri-grid';
+    grid.className = isHebrew ? 'ri-grid ri-grid--rtl' : 'ri-grid';
 
     valid.forEach(function (tok) {
       var entry = strongsDict && strongsDict[tok.s];
@@ -4255,7 +5053,10 @@
       }
 
       if (focalNumEl) focalNumEl.textContent = parsed.v;
-      if (focalTextEl) focalTextEl.textContent = text;
+      if (focalTextEl) {
+        focalTextEl.textContent = text;
+        if (_termMap2) { focalTextEl._termsTagged = false; autoTagTerms(focalTextEl); }
+      }
 
       // Previous verse (same chapter)
       if (prevEl) {
@@ -4600,7 +5401,7 @@
     return positioned.map(function (p) { return p.tok; });
   }
 
-  function vsRenderInterlinear(vTokens, strongsDict, container) {
+  function vsRenderInterlinear(vTokens, strongsDict, container, isHebrew) {
     if (!vTokens || !vTokens.length) {
       container.innerHTML = '<p class="vs-interlinear-note">No interlinear data available.</p>';
       return;
@@ -4613,7 +5414,7 @@
     );
 
     var grid = document.createElement('div');
-    grid.className = 'vs-interlinear-grid';
+    grid.className = isHebrew ? 'vs-interlinear-grid vs-interlinear-grid--rtl' : 'vs-interlinear-grid';
 
     var detail = document.createElement('div');
     detail.className = 'vs-interlinear-detail';
@@ -4716,7 +5517,7 @@
         var chData  = results[0] && results[0][String(parsed.ch)];
         var vTokens = chData && chData[String(parsed.v)];
         if (!vTokens || !vTokens.length) { interlinearSec.el.remove(); vsRebuildNav(); return; }
-        vsRenderInterlinear(vTokens, results[1], interlinearSec.bodyEl);
+        vsRenderInterlinear(vTokens, results[1], interlinearSec.bodyEl, testament === 'hebrew');
         interlinearSec.el.removeAttribute('hidden');
         vsRebuildNav();
       });
@@ -4805,6 +5606,34 @@
       renderVSTopics(parsed, topicSec.bodyEl);
       topicSec.el.removeAttribute('hidden');
       vsRebuildNav();
+    }
+
+    // Confessions — only for single-verse refs
+    if (parsed.v) {
+      var confSec = vsCreateSection(container, 'vs-confessions', 'Confessional Citations');
+      var confUrl = _LIB_VERSE_IDX_BASE + '/' + parsed.bookId + '.json';
+      (_libVerseCache[parsed.bookId]
+        ? Promise.resolve(_libVerseCache[parsed.bookId])
+        : fetch(confUrl).then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+            .then(function (d) { _libVerseCache[parsed.bookId] = d; return d; })
+      ).then(function (data) {
+        var cits = (data[String(parsed.ch)] && data[String(parsed.ch)][String(parsed.v)]) || [];
+        if (!cits.length) { confSec.el.remove(); vsRebuildNav(); return; }
+        renderModalConfessions(parsed, confSec.bodyEl);
+        confSec.el.removeAttribute('hidden');
+        vsRebuildNav();
+      }).catch(function () { confSec.el.remove(); vsRebuildNav(); });
+    }
+
+    // Dictionary — only for single-verse refs
+    if (parsed.v) {
+      var dictSec = vsCreateSection(container, 'vs-dictionary', 'Dictionary');
+      _dictEntriesForVerse(parsed).then(function (entries) {
+        if (!entries.length) { dictSec.el.remove(); vsRebuildNav(); return; }
+        renderVSDictionary(parsed, dictSec.bodyEl);
+        dictSec.el.removeAttribute('hidden');
+        vsRebuildNav();
+      }).catch(function () { dictSec.el.remove(); vsRebuildNav(); });
     }
   }
 
@@ -5512,10 +6341,14 @@
   ];
 
   var DAILY_DEVOT_META = [
-    { id: 'daily-psalms',   label: 'Daily Psalms' },
-    { id: 'proverbs-month', label: 'Proverbs of the Month' },
-    { id: 'nt-daily',       label: 'NT Daily Reading' }
+    { id: 'spurgeon-morning', label: 'Spurgeon — Morning' },
+    { id: 'spurgeon-evening', label: 'Spurgeon — Evening' },
+    { id: 'daily-psalms',     label: 'Daily Psalms' },
+    { id: 'proverbs-month',   label: 'Proverbs of the Month' },
+    { id: 'nt-daily',         label: 'NT Daily Reading' }
   ];
+
+  var DAILY_DEVOT_BASE = _resolve('../../data/devotionals');
 
   function _dailyDayOfYear() {
     var now   = new Date();
@@ -5579,7 +6412,8 @@
 
     // ── Populate devotional selector
     if (devotSelect) {
-      var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || 'daily-psalms';
+      var defaultDevot = period === 'morning' ? 'spurgeon-morning' : 'spurgeon-evening';
+      var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || defaultDevot;
       DAILY_DEVOT_META.forEach(function (dm) {
         var opt = document.createElement('option');
         opt.value = dm.id;
@@ -5823,6 +6657,49 @@
           '<p class="daily-devot-text">' + escHtml(preview) + '</p>' +
           '<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(refLink)) + '">Read full chapter →</a>';
       }).catch(function () { bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load.</p>'; });
+      return;
+    }
+
+    // ── Spurgeon's Morning and Evening
+    if (source === 'spurgeon-morning' || source === 'spurgeon-evening') {
+      var spPeriod = (source === 'spurgeon-morning') ? 'morning' : 'evening';
+      var fileName = (source === 'spurgeon-morning') ? 'spurgeon-morning.json' : 'spurgeon-evening.json';
+      var mm = String(now.getMonth() + 1).padStart(2, '0');
+      var dd = String(now.getDate()).padStart(2, '0');
+      var dateKey = mm + '-' + dd;
+
+      if (titleEl) {
+        titleEl.innerHTML = 'Spurgeon — ' + (spPeriod === 'morning' ? 'Morning' : 'Evening') +
+          ' <span class="daily-period-badge">' + (spPeriod === 'morning' ? '🌅 Morning' : '🌙 Evening') + '</span>';
+      }
+
+      fetch(DAILY_DEVOT_BASE + '/' + fileName)
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (entries) {
+          var entry = entries[dateKey];
+          if (!entry) {
+            bodyEl.innerHTML = '<p class="daily-plan-empty">No entry for today.</p>';
+            return;
+          }
+          var ref = entry.verse_ref || '';
+          var refLink = ref
+            ? ' &nbsp;<a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>'
+            : '';
+          var paragraphs = entry.body.split('\n\n').filter(function (p) { return p.trim(); });
+          var bodyHtml = paragraphs.map(function (p) {
+            return '<p>' + escHtml(p.trim()) + '</p>';
+          }).join('');
+          bodyEl.innerHTML =
+            '<blockquote class="daily-spurgeon-verse">' +
+              escHtml(entry.verse_text) +
+              '<cite>' + refLink + '</cite>' +
+            '</blockquote>' +
+            '<div class="daily-spurgeon-body">' + bodyHtml + '</div>';
+          wireRefLinks(bodyEl);
+        })
+        .catch(function () {
+          bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load Spurgeon devotional.</p>';
+        });
       return;
     }
 
@@ -6098,6 +6975,12 @@
       item.appendChild(btns);
       listEl.appendChild(item);
     });
+    var dueCount = Object.keys(state).filter(function (r) { return _memIsDue(state[r]); }).length;
+    var badge = document.getElementById('mem-due-badge');
+    if (badge) {
+      if (dueCount > 0) { badge.textContent = dueCount; badge.removeAttribute('hidden'); }
+      else               badge.setAttribute('hidden', '');
+    }
   }
 
   var _memQueue    = [];
@@ -6131,8 +7014,19 @@
     var doneEl     = document.getElementById('mem-review-done');
     if (!cardEl) return;
     if (_memQueueIdx >= _memQueue.length) {
+      var n = _memQueue.length;
+      if (progressEl) progressEl.innerHTML = n > 0
+        ? '<span>' + n + ' of ' + n + '</span>' +
+          '<div class="mem-progress-bar"><div class="mem-progress-fill" style="width:100%"></div></div>'
+        : '';
       cardEl.setAttribute('hidden', '');
-      if (doneEl) doneEl.removeAttribute('hidden');
+      if (doneEl) {
+        var pEl = doneEl.querySelector('p');
+        if (pEl) pEl.textContent = n === 0
+          ? 'All caught up — nothing due right now.'
+          : 'Session complete — well done! You reviewed ' + (n === 1 ? '1 verse' : n + ' verses') + '.';
+        doneEl.removeAttribute('hidden');
+      }
       var badge = document.getElementById('mem-due-badge');
       if (badge) badge.setAttribute('hidden', '');
       return;
@@ -6477,6 +7371,60 @@
     container._topicsLoaded = true;
   }
 
+  // ── Confessions modal tab ───────────────────────────────────────────────────
+  var _LIB_VERSE_IDX_BASE = _resolve('../../data/library/verse-index');
+  var _libVerseCache       = {};
+
+  function renderModalConfessions(parsed, container) {
+    container._confLoaded = true;
+    if (!parsed || !parsed.bookId) {
+      container.innerHTML = '<p class="bsw-modal-topics-empty">No verse selected.</p>';
+      return;
+    }
+    container.innerHTML = '<p class="bsw-modal-topics-empty">Loading…</p>';
+
+    var bookId = parsed.bookId;
+    var ch     = String(parsed.ch);
+    var v      = String(parsed.v);
+
+    var url = _LIB_VERSE_IDX_BASE + '/' + bookId + '.json';
+    (_libVerseCache[bookId]
+      ? Promise.resolve(_libVerseCache[bookId])
+      : fetch(url).then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+          .then(function (d) { _libVerseCache[bookId] = d; return d; })
+    ).then(function (data) {
+      var citations = (data[ch] && data[ch][v]) || [];
+      if (!citations.length) {
+        container.innerHTML = '<p class="bsw-modal-topics-empty">No confessional citations for this verse.</p>';
+        return;
+      }
+      // Group by document abbreviation
+      var byDoc = {};
+      citations.forEach(function (c) {
+        if (!byDoc[c.doc]) byDoc[c.doc] = [];
+        byDoc[c.doc].push(c);
+      });
+      var html = '<div class="bsw-modal-confessions">';
+      Object.keys(byDoc).forEach(function (doc) {
+        html += '<div class="bsw-conf-group">';
+        html += '<div class="bsw-conf-group__doc">' + escHtml(doc) + '</div>';
+        byDoc[doc].forEach(function (c) {
+          var refLabel = c.doc + ' ' + c.section;
+          var href = READER_URL + '?ref=' + encodeURIComponent(refLabel);
+          html += '<a class="bsw-conf-item" href="' + escHtml(href) + '">' +
+            '<span class="bsw-conf-item__ref">' + escHtml(refLabel) + '</span>' +
+            '<span class="bsw-conf-item__text">' + escHtml(c.heading) + '</span>' +
+          '</a>';
+        });
+        html += '</div>';
+      });
+      html += '</div>';
+      container.innerHTML = html;
+    }).catch(function () {
+      container.innerHTML = '<p class="bsw-modal-topics-empty">Could not load confessional data.</p>';
+    });
+  }
+
   // ── Topical section in Verse Study page ─────────────────────────────────────
   function renderVSTopics(parsed, container) {
     container.innerHTML = '<p class="topical-modal-empty">Loading…</p>';
@@ -6497,6 +7445,605 @@
       container.innerHTML = html;
     }).catch(function () {
       container.innerHTML = '<p class="topical-modal-empty">Could not load topic data.</p>';
+    });
+  }
+
+  // ── Easton's Bible Dictionary ─────────────────────────────────────────────
+
+  var DICT_IDX_URL   = _resolve('../../data/dictionary/index.json');
+  var DICT_ENTRY_URL = _resolve('../../data/dictionary/');          // + slug + '.json'
+  var DICT_VIDX_URL  = _resolve('../../data/dictionary/verse-index/');
+  var DICT_PAGE_URL  = _resolve('../../dictionary/');
+
+  var _dictData     = null;   // [{id, term, brief}]
+  var _dictMap      = null;   // id → {id, term, brief}
+  var _dictByLetter = null;   // letter → [{id, term, brief}]
+  var _dictLoading  = null;   // Promise<void>
+  var _dictEntryCache = {};   // slug → {id, term, html, refs, source}
+  var _dictVidxCache  = {};   // bookId → {ch: {v: [{id, term}]}}
+
+  function _dictLoad() {
+    if (_dictLoading) return _dictLoading;
+    _dictLoading = fetch(DICT_IDX_URL)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        _dictData     = data;
+        _dictMap      = {};
+        _dictByLetter = {};
+        data.forEach(function (e) {
+          _dictMap[e.id] = e;
+          var letter = e.term.charAt(0).toUpperCase();
+          if (!_dictByLetter[letter]) _dictByLetter[letter] = [];
+          _dictByLetter[letter].push(e);
+        });
+      });
+    return _dictLoading;
+  }
+
+  function _dictLoadEntry(slug) {
+    if (_dictEntryCache[slug]) return Promise.resolve(_dictEntryCache[slug]);
+    return fetch(DICT_ENTRY_URL + slug + '.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (d) { _dictEntryCache[slug] = d; return d; });
+  }
+
+  function _dictLoadVidx(bookId) {
+    if (_dictVidxCache[bookId] !== undefined) return Promise.resolve(_dictVidxCache[bookId]);
+    return fetch(DICT_VIDX_URL + bookId + '.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (d) { _dictVidxCache[bookId] = d || {}; return d; })
+      .catch(function () { _dictVidxCache[bookId] = {}; return {}; });
+  }
+
+  function _dictEntriesForVerse(parsed) {
+    if (!parsed || !parsed.bookId || !parsed.ch || !parsed.v) return Promise.resolve([]);
+    return _dictLoadVidx(parsed.bookId).then(function (vidx) {
+      var ch   = String(parsed.ch);
+      var v    = String(parsed.v);
+      return (vidx[ch] && vidx[ch][v]) || [];
+    });
+  }
+
+  // Render VS1 Dictionary section
+  function renderVSDictionary(parsed, container) {
+    container.innerHTML = '<p class="dict-modal-empty">Loading…</p>';
+    _dictEntriesForVerse(parsed).then(function (entries) {
+      if (!entries.length) {
+        container.innerHTML = '<p class="dict-modal-empty">No dictionary entries for this verse.</p>';
+        return;
+      }
+      var html = '<div class="vs-dict-list">';
+      entries.forEach(function (e) {
+        var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+        html += '<a class="vs-dict-item" href="' + escHtml(href) + '">' +
+          '<span class="vs-dict-item__term">' + escHtml(e.term) + '</span>' +
+          '<span class="vs-dict-item__arrow">&#x2192;</span>' +
+          '</a>';
+      });
+      html += '</div>';
+      container.innerHTML = html;
+    }).catch(function () {
+      container.innerHTML = '<p class="dict-modal-empty">Could not load dictionary data.</p>';
+    });
+  }
+
+  // Render modal Dictionary tab — shows brief definitions inline
+  function renderModalDictionary(parsed, container) {
+    container._dictLoaded = true;
+    if (!parsed || !parsed.v) {
+      container.innerHTML = '<p class="dict-modal-empty">No verse selected.</p>';
+      return;
+    }
+    container.innerHTML = '<p class="dict-modal-empty">Loading…</p>';
+    _dictEntriesForVerse(parsed).then(function (entries) {
+      if (!entries.length) {
+        container.innerHTML = '<p class="dict-modal-empty">No dictionary entries for this verse.</p>';
+        return;
+      }
+      var html = '';
+      entries.forEach(function (e) {
+        var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+        var meta = _dictMap && _dictMap[e.id];
+        var brief = meta ? meta.brief : '';
+        // Trim brief to first sentence or 120 chars
+        if (brief) {
+          var dot = brief.indexOf('. ', 40);
+          if (dot > 0 && dot < 140) brief = brief.slice(0, dot + 1);
+          else if (brief.length > 130) brief = brief.slice(0, 127) + '…';
+        }
+        html += '<div class="bsw-dict-panel-entry">' +
+          '<p class="bsw-dict-panel-entry__term">' + escHtml(e.term) + '</p>' +
+          (brief ? '<p class="bsw-dict-panel-entry__brief">' + escHtml(brief) + '</p>' : '') +
+          '<a class="bsw-dict-panel-entry__link" href="' + escHtml(href) + '">Full entry &#x2192;</a>' +
+          '</div>';
+      });
+      html += '<p style="margin-top:.75rem;font-size:.75rem;">' +
+        '<a class="bsw-dict-panel-entry__link" href="' + escHtml(DICT_PAGE_URL) + '">Browse full dictionary &#x2192;</a></p>';
+      container.innerHTML = html;
+    }).catch(function () {
+      container.innerHTML = '<p class="dict-modal-empty">Could not load dictionary data.</p>';
+    });
+  }
+
+  // ── Dictionary standalone page ────────────────────────────────────────────
+  function initDictionaryPage() {
+    var listEl      = document.getElementById('dict-list');
+    var loadingEl   = document.getElementById('dict-loading');
+    var emptyEl     = document.getElementById('dict-empty');
+    var detailColEl = document.getElementById('dict-detail-col');
+    var detailEl    = document.getElementById('dict-detail');
+    var alphaEl     = document.getElementById('dict-alpha');
+    var searchEl    = document.getElementById('dict-search');
+    var countEl     = document.getElementById('dict-search-count');
+    if (!listEl) return;
+
+    var _activeLetter = null;
+    var _activeSlug   = null;
+
+    function showDetail(entry) {
+      _activeSlug = entry.id;
+      detailColEl.removeAttribute('hidden');
+
+      // Update active state in list
+      listEl.querySelectorAll('.dict-item').forEach(function (el) {
+        el.classList.toggle('dict-item--active', el.dataset.id === entry.id);
+      });
+
+      // Header
+      detailEl.innerHTML =
+        '<div class="dict-detail__head">' +
+          '<h2 class="dict-detail__title">' + escHtml(entry.term) + '</h2>' +
+          '<p class="dict-detail__meta">' + escHtml(entry.source || "Easton's Bible Dictionary (1897)") + '</p>' +
+        '</div>' +
+        '<div class="dict-detail__body"><p class="dict-loading">Loading…</p></div>';
+
+      _dictLoadEntry(entry.id).then(function (full) {
+        var body = detailEl.querySelector('.dict-detail__body');
+        var refsHtml = '';
+        if (full.refs && full.refs.length) {
+          refsHtml =
+            '<div class="dict-detail__refs">' +
+              '<p class="dict-detail__refs-label">Scripture References</p>' +
+              '<div class="dict-detail__ref-chips">' +
+              full.refs.map(function (r) {
+                return '<a class="dict-ref-chip ref" data-ref="' + escHtml(r) + '">' + escHtml(r) + '</a>';
+              }).join('') +
+              '</div>' +
+            '</div>';
+        }
+        body.innerHTML = full.html + refsHtml;
+        wireRefLinks(body);
+      }).catch(function () {
+        var body = detailEl.querySelector('.dict-detail__body');
+        if (body) body.innerHTML = '<p>Could not load entry.</p>';
+      });
+    }
+
+    function renderList(entries) {
+      if (!entries || !entries.length) {
+        listEl.innerHTML = '';
+        emptyEl.removeAttribute('hidden');
+        return;
+      }
+      emptyEl.setAttribute('hidden', '');
+      listEl.innerHTML = entries.map(function (e) {
+        return '<div class="dict-item' + (e.id === _activeSlug ? ' dict-item--active' : '') +
+          '" data-id="' + escHtml(e.id) + '">' +
+          '<span class="dict-item__title">' + escHtml(e.term) + '</span>' +
+          '</div>';
+      }).join('');
+
+      listEl.querySelectorAll('.dict-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          var id    = item.dataset.id;
+          var entry = _dictMap && _dictMap[id];
+          if (!entry) return;
+          listEl.querySelectorAll('.dict-item').forEach(function (el) {
+            el.classList.remove('dict-item--active');
+          });
+          item.classList.add('dict-item--active');
+          showDetail(entry);
+        });
+      });
+    }
+
+    function buildAlphaBar(byLetter) {
+      alphaEl.innerHTML = '';
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function (letter) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'dict-alpha-btn' +
+          (letter === _activeLetter ? ' dict-alpha-btn--active' : '') +
+          (!byLetter[letter] ? ' dict-alpha-btn--empty' : '');
+        btn.textContent = letter;
+        if (byLetter[letter]) {
+          btn.addEventListener('click', function () {
+            _activeLetter = letter;
+            searchEl.value = '';
+            if (countEl) { countEl.setAttribute('hidden', ''); }
+            alphaEl.querySelectorAll('.dict-alpha-btn').forEach(function (b) {
+              b.classList.toggle('dict-alpha-btn--active', b.textContent === letter);
+            });
+            renderList(byLetter[letter] || []);
+          });
+        }
+        alphaEl.appendChild(btn);
+      });
+    }
+
+    _dictLoad().then(function () {
+      if (loadingEl) loadingEl.setAttribute('hidden', '');
+
+      // Check for ?entry=slug param
+      var entryParam = new URLSearchParams(window.location.search).get('entry');
+      var firstLetter = Object.keys(_dictByLetter).sort()[0] || 'A';
+
+      if (entryParam && _dictMap && _dictMap[entryParam]) {
+        var entry  = _dictMap[entryParam];
+        var letter = entry.term.charAt(0).toUpperCase();
+        _activeLetter = letter;
+        buildAlphaBar(_dictByLetter);
+        renderList(_dictByLetter[letter] || []);
+        showDetail(entry);
+      } else {
+        _activeLetter = firstLetter;
+        buildAlphaBar(_dictByLetter);
+        renderList(_dictByLetter[firstLetter] || []);
+        detailEl.innerHTML = '<p class="dict-detail-placeholder">Select an entry to read its definition.</p>';
+      }
+
+      if (searchEl) {
+        searchEl.addEventListener('input', function () {
+          var q = searchEl.value.trim().toLowerCase();
+          if (!q) {
+            if (countEl) countEl.setAttribute('hidden', '');
+            _activeLetter = firstLetter;
+            buildAlphaBar(_dictByLetter);
+            renderList(_dictByLetter[firstLetter] || []);
+            return;
+          }
+          var results = _dictData.filter(function (e) {
+            return e.term.toLowerCase().includes(q) || e.brief.toLowerCase().includes(q);
+          });
+          if (countEl) {
+            countEl.textContent = results.length + ' result' + (results.length !== 1 ? 's' : '');
+            countEl.removeAttribute('hidden');
+          }
+          _activeLetter = null;
+          buildAlphaBar(_dictByLetter);
+          renderList(results.slice(0, 200));
+        });
+      }
+    }).catch(function () {
+      if (loadingEl) loadingEl.textContent = 'Failed to load dictionary.';
+    });
+  }
+
+  // ── Term hover tooltip (site-wide noun/concept linking) ───────────────────
+
+  var _termTipEl      = null;
+  var _termTipTimer   = null;
+  var _termTipHide    = null;
+  var _termMap2       = null;   // lowercase → {term, dictId?, dictBrief?, naveSlugs[]}
+  var _termMapReady   = null;   // Promise
+  var _termMultiRe    = null;   // Regex for multi-word terms
+  var _termSingleSet  = null;   // Set of lowercase single-word proper nouns
+
+  function _buildTermTooltipDOM() {
+    if (_termTipEl) return;
+    var el = document.createElement('div');
+    el.id        = 'bsw-term-tooltip';
+    el.className = 'bsw-term-tooltip';
+    el.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(el);
+    _termTipEl = el;
+    el.addEventListener('mouseenter', function () { cancelTermHide(); });
+    el.addEventListener('mouseleave', function () { _scheduleTermHide(); });
+  }
+
+  function _scheduleTermShow(anchor, key) {
+    cancelTermHide();
+    if (_termTipTimer) clearTimeout(_termTipTimer);
+    _termTipTimer = setTimeout(function () { _showTermTip(anchor, key); }, 250);
+  }
+
+  function _scheduleTermHide() {
+    if (_termTipTimer) { clearTimeout(_termTipTimer); _termTipTimer = null; }
+    _termTipHide = setTimeout(function () { _hideTermTip(); }, 180);
+  }
+
+  function cancelTermHide() {
+    if (_termTipHide) { clearTimeout(_termTipHide); _termTipHide = null; }
+  }
+
+  function _hideTermTip() {
+    if (_termTipEl) {
+      _termTipEl.classList.remove('bsw-term-tooltip--visible');
+      _termTipEl.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  function _positionTermTip(anchor) {
+    if (!_termTipEl) return;
+    var r  = anchor.getBoundingClientRect();
+    var tt = _termTipEl.getBoundingClientRect();
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var top  = r.bottom + 8;
+    var left = r.left;
+    if (top + tt.height > vh - 8)  top  = r.top - tt.height - 8;
+    if (left + tt.width > vw - 8)  left = vw - tt.width - 8;
+    if (left < 8) left = 8;
+    _termTipEl.style.top  = top  + 'px';
+    _termTipEl.style.left = left + 'px';
+  }
+
+  function _showTermTip(anchor, key) {
+    _buildTermTooltipDOM();
+    var entry = _termMap2 && _termMap2[key];
+    if (!entry) return;
+
+    var src = [];
+    if (entry.dictId)     src.push("Easton's");
+    if (entry.naveSlugs && entry.naveSlugs.length) src.push("Nave's");
+
+    var html =
+      '<div class="bsw-term-tooltip__head">' +
+        '<span class="bsw-term-tooltip__term">' + escHtml(entry.term) + '</span>' +
+        '<span class="bsw-term-tooltip__src">' + escHtml(src.join(' · ')) + '</span>' +
+      '</div>' +
+      '<div class="bsw-term-tooltip__body">';
+
+    if (entry.dictBrief) {
+      var brief = entry.dictBrief;
+      var dot = brief.indexOf('. ', 50);
+      if (dot > 0 && dot < 160) brief = brief.slice(0, dot + 1);
+      else if (brief.length > 120) brief = brief.slice(0, 117) + '…';
+      html += '<p class="bsw-term-tooltip__brief">' + escHtml(brief) + '</p>';
+    }
+
+    if (entry.naveSlugs && entry.naveSlugs.length) {
+      html += '<div class="bsw-term-tooltip__nave"><p class="bsw-term-tooltip__nave-label">Nave\'s Topics</p><div class="bsw-term-tooltip__nave-chips">';
+      entry.naveSlugs.slice(0, 4).forEach(function (ns) {
+        var t = _naveMap && _naveMap[ns];
+        if (!t) return;
+        var href = TOPICAL_URL + '?topic=' + encodeURIComponent(t.slug);
+        html += '<a class="bsw-term-tooltip__nave-chip" href="' + escHtml(href) + '">' +
+          escHtml(t.title.charAt(0) + t.title.slice(1).toLowerCase()) +
+          ' <span style="opacity:.6">(' + t.verses.length + ')</span></a>';
+      });
+      html += '</div></div>';
+    }
+
+    html += '<div class="bsw-term-tooltip__links">';
+    if (entry.dictId) {
+      var dHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.dictId);
+      html += '<a class="bsw-term-tooltip__link" href="' + escHtml(dHref) + '">Dictionary &#x2192;</a>';
+    }
+    if (entry.naveSlugs && entry.naveSlugs.length) {
+      var nHref = TOPICAL_URL + '?topic=' + encodeURIComponent(entry.naveSlugs[0]);
+      html += '<a class="bsw-term-tooltip__link" href="' + escHtml(nHref) + '">Topics &#x2192;</a>';
+    }
+    html += '</div></div>';
+
+    _termTipEl.innerHTML = html;
+    _termTipEl.classList.add('bsw-term-tooltip--visible');
+    _termTipEl.setAttribute('aria-hidden', 'false');
+    _positionTermTip(anchor);
+  }
+
+  // Build combined dict+nave lookup map
+  function _loadTermMap() {
+    if (_termMap2) return Promise.resolve(_termMap2);
+    if (_termMapReady) return _termMapReady;
+    _termMapReady = Promise.all([_dictLoad(), _naveLoad()]).then(function () {
+      var map  = {};
+      var multi = [];
+
+      if (_dictData) {
+        _dictData.forEach(function (e) {
+          var k = e.term.toLowerCase();
+          if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
+          map[k].dictId    = e.id;
+          map[k].dictBrief = e.brief;
+        });
+      }
+
+      if (_naveData) {
+        _naveData.forEach(function (t) {
+          // Nave titles are ALLCAPS — convert to Title Case for matching
+          var title = t.title.charAt(0) + t.title.slice(1).toLowerCase();
+          var k = title.toLowerCase();
+          if (!map[k]) map[k] = { term: title, naveSlugs: [] };
+          else if (!map[k].term) map[k].term = title;
+          map[k].naveSlugs.push(t.slug);
+        });
+      }
+
+      _termMap2 = map;
+
+      // Build multi-word regex (longest first)
+      var multiKeys = Object.keys(map).filter(function (k) {
+        return k.indexOf(' ') >= 0 && k.length >= 4;
+      }).sort(function (a, b) { return b.length - a.length; });
+
+      if (multiKeys.length) {
+        var escaped = multiKeys.map(function (k) {
+          return k.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&');
+        });
+        try {
+          _termMultiRe = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+        } catch (e) {
+          _termMultiRe = null;
+        }
+      }
+
+      // Single-word set: only proper nouns (will be checked for capitalization at tag time)
+      _termSingleSet = new Set(Object.keys(map).filter(function (k) {
+        return k.indexOf(' ') < 0 && k.length >= 3;
+      }));
+
+      return map;
+    });
+    return _termMapReady;
+  }
+
+  // Wire a single .term or .term-link element
+  function _wireTermEl(el) {
+    if (el._termWired) return;
+    el._termWired = true;
+    var key = (el.dataset.termKey || el.textContent || '').toLowerCase().trim();
+    el.addEventListener('mouseenter', function () { _scheduleTermShow(el, key); });
+    el.addEventListener('mouseleave', function () { _scheduleTermHide(); });
+    el.addEventListener('click', function (e) {
+      if (_termTipEl && _termTipEl.classList.contains('bsw-term-tooltip--visible')) {
+        _hideTermTip();
+        // Don't prevent default — allow any href on the element
+      }
+    });
+  }
+
+  // Tag text nodes in root with .term-link spans
+  function autoTagTerms(root) {
+    if (!_termMap2) return;
+    if (!root) return;
+    if (root._termsTagged) return;
+    root._termsTagged = true;
+
+    // Containers to skip entirely
+    var skipTags = new Set(['script','style','svg','canvas','select','option','textarea','input','button','a']);
+
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        var p = node.parentElement;
+        if (!p) return NodeFilter.FILTER_REJECT;
+        var tag = p.tagName.toLowerCase();
+        if (skipTags.has(tag)) return NodeFilter.FILTER_REJECT;
+        if (p.closest('a, .term-link, [data-ref], .bsw-tooltip, .bsw-term-tooltip, .site-sidebar, nav, footer')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        if (!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    var nodes = [];
+    var node;
+    while ((node = walker.nextNode())) nodes.push(node);
+
+    nodes.forEach(function (textNode) {
+      _tagTextNode(textNode);
+    });
+
+    // Wire any pre-existing .term elements in root
+    root.querySelectorAll('.term, .term-link').forEach(_wireTermEl);
+  }
+
+  function _tagTextNode(textNode) {
+    var text = textNode.textContent;
+    if (text.length < 3) return;
+
+    var modified = false;
+    var html     = '';
+    var last     = 0;
+
+    // Step 1: find multi-word phrase matches
+    if (_termMultiRe) {
+      _termMultiRe.lastIndex = 0;
+      var mResult;
+      while ((mResult = _termMultiRe.exec(text)) !== null) {
+        var matchStr = mResult[0];
+        var pos      = mResult.index;
+        var key      = matchStr.toLowerCase();
+        if (_termMap2[key]) {
+          html += escHtml(text.slice(last, pos));
+          html += '<span class="term-link" data-term-key="' + escHtml(key) + '">' +
+            escHtml(matchStr) + '</span>';
+          last     = pos + matchStr.length;
+          modified = true;
+        }
+      }
+    }
+
+    // Step 2: scan remaining text for capitalized single-word proper nouns
+    var remaining = last === 0 ? text : (text.slice(last));
+    var remaining_offset = last;
+
+    // Simple word-boundary scan
+    var wordRe = /\b([A-Z][a-z]{2,})\b/g;
+    var wResult;
+    var segLast = 0;
+    var segHtml = '';
+    var segMod  = false;
+
+    wordRe.lastIndex = 0;
+    while ((wResult = wordRe.exec(remaining)) !== null) {
+      var word    = wResult[1];
+      var wpos    = wResult.index;
+      var key2    = word.toLowerCase();
+
+      if (!_termSingleSet.has(key2)) continue;
+
+      // Skip sentence-initial capitals: check char before the word in the FULL text
+      var absPos  = remaining_offset + wpos;
+      var pre     = absPos > 0 ? text.charAt(absPos - 1) : '';
+      // If preceded by sentence-enders or newlines, this is sentence-start capitalisation
+      if (absPos === 0 || /[.!?\n\r]/.test(pre)) continue;
+      // Also skip if preceded by quote/em-dash after punctuation
+      if (/["'"‘’“”—]/.test(pre)) {
+        var pre2 = absPos > 1 ? text.charAt(absPos - 2) : '';
+        if (/[.!?\n]/.test(pre2)) continue;
+      }
+
+      segHtml += escHtml(remaining.slice(segLast, wpos));
+      segHtml += '<span class="term-link" data-term-key="' + escHtml(key2) + '">' +
+        escHtml(word) + '</span>';
+      segLast  = wpos + word.length;
+      segMod   = true;
+    }
+
+    if (segMod) {
+      segHtml += escHtml(remaining.slice(segLast));
+      html    += segHtml;
+      modified = true;
+    } else if (modified) {
+      html += escHtml(text.slice(last));
+    }
+
+    if (!modified) return;
+
+    var span = document.createElement('span');
+    span.innerHTML = html;
+    // Wire term-links within the new span
+    span.querySelectorAll('.term-link').forEach(_wireTermEl);
+    textNode.parentNode.replaceChild(span, textNode);
+  }
+
+  // Designated containers to auto-tag on page load
+  var _AUTOTAG_SELECTORS = [
+    'blockquote.scripture',
+    '[data-autotag]',
+    '.lib-chapter',
+    '.lib-father-quote',
+    '.lib-creed'
+  ].join(', ');
+
+  function runAutoTagTerms() {
+    _loadTermMap().then(function () {
+      // Wire explicit .term elements site-wide
+      document.querySelectorAll('.term').forEach(function (el) {
+        var key = el.textContent.toLowerCase().trim();
+        if (!el.classList.contains('term-link') && _termMap2 && _termMap2[key]) {
+          el.classList.add('term-link');
+          el.dataset.termKey = key;
+        }
+        _wireTermEl(el);
+      });
+
+      // Auto-tag designated content containers
+      document.querySelectorAll(_AUTOTAG_SELECTORS).forEach(function (container) {
+        autoTagTerms(container);
+      });
     });
   }
 

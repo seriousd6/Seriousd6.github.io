@@ -284,3 +284,51 @@
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--color-border);
 }
+
+/* ── Church Father pages ─────────────────────────────────── */
+.lib-father-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lib-father-meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0.2rem 0 0.75rem;
+}
+
+.lib-father-bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.lib-father-quote {
+  margin: 1.1rem 0 1.4rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-border);
+}
+
+.lib-father-text {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0 0 0.4rem;
+  quotes: "\201C" "\201D";
+}
+
+.lib-father-text::before { content: open-quote; }
+.lib-father-text::after  { content: close-quote; }
+
+.lib-father-source {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.lib-badge--father { border-color: #5a3e1b; color: #5a3e1b; }

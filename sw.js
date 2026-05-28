@@ -9,7 +9,7 @@
 
 'use strict';
 
-var CACHE_VERSION = 'bsw-v8';
+var CACHE_VERSION = 'bsw-v15';
 
 // App shell: files cached immediately on install
 // These are the files needed to render any page offline.
@@ -25,8 +25,45 @@ var SHELL_URLS = [
   './topics/index.html',
   './topics/prayer/index.html',
   './topics/revelation/index.html',
+  './topics/justification/index.html',
+  './topics/holy-spirit/index.html',
+  './topics/sermon-on-the-mount/index.html',
+  './topics/romans/index.html',
+  './topics/covenants/index.html',
+  './topics/christology/index.html',
+  './topics/psalms/index.html',
+  './library/ignatius/index.html',
+  './library/justin-martyr/index.html',
+  './library/irenaeus/index.html',
+  './library/tertullian/index.html',
+  './library/athanasius/index.html',
+  './library/chrysostom/index.html',
+  './library/augustine/index.html',
+  './library/gregory-nazianzus/index.html',
+  './data/library/docs/ignatius.json',
+  './data/library/docs/justin-martyr.json',
+  './data/library/docs/irenaeus.json',
+  './data/library/docs/tertullian.json',
+  './data/library/docs/athanasius.json',
+  './data/library/docs/chrysostom.json',
+  './data/library/docs/augustine.json',
+  './data/library/docs/gregory-nazianzus.json',
   './plans/index.html',
+  './devotionals/index.html',
   './library/index.html',
+  './data/library/index.json',
+  './data/library/docs/apostles-creed.json',
+  './data/library/docs/nicene-creed.json',
+  './data/library/docs/athanasian-creed.json',
+  './data/library/docs/heidelberg-catechism.json',
+  './data/library/docs/belgic-confession.json',
+  './data/library/docs/canons-of-dort.json',
+  './data/library/docs/westminster-confession.json',
+  './data/library/docs/westminster-shorter-catechism.json',
+  './data/library/docs/westminster-larger-catechism.json',
+  './data/library/docs/london-baptist-confession.json',
+  './data/library/docs/augsburg-confession.json',
+  './data/library/docs/39-articles.json',
   './library/apostles-creed/index.html',
   './library/nicene-creed/index.html',
   './library/athanasian-creed/index.html',
@@ -39,24 +76,33 @@ var SHELL_URLS = [
   './library/london-baptist-confession/index.html',
   './library/augsburg-confession/index.html',
   './library/39-articles/index.html',
+  './word/index.html',
+  './dictionary/index.html',
+  './offline.html',
   './assets/css/style.css',
   './assets/css/bible-ui.css',
   './assets/css/daily.css',
   './assets/css/memorize.css',
   './assets/css/topical.css',
-  './memorize/index.html',
-  './topical/index.html',
   './assets/css/reader.css',
   './assets/css/verse-study.css',
   './assets/css/book-study.css',
   './assets/css/library.css',
   './assets/css/topic-guide.css',
   './assets/css/topic-shell.css',
+  './assets/css/study-nav.css',
+  './assets/css/word.css',
+  './assets/css/dictionary.css',
+  './assets/css/devotionals.css',
+  './memorize/index.html',
+  './topical/index.html',
   './assets/js/bible.js',
   './assets/js/main.js',
   './favicon.svg',
   './favicon.ico',
   './manifest.json',
+  './assets/icon-192.png',
+  './assets/icon-512.png',
   './data/versions/versions.json',
   './data/bible/books.json',
   './data/votd/verses.json',
@@ -66,6 +112,8 @@ var SHELL_URLS = [
   './data/plans/nt-90-days.json',
   './data/plans/psalms-proverbs.json',
   './data/plans/gospels-30-days.json',
+  './data/devotionals/spurgeon-morning.json',
+  './data/devotionals/spurgeon-evening.json',
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────
@@ -137,8 +185,11 @@ function networkFirst(req) {
     return response;
   }).catch(function () {
     return caches.match(req).then(function (cached) {
-      return cached || new Response('<h1>Offline</h1><p>This page is not cached yet.</p>', {
-        headers: { 'Content-Type': 'text/html' }
+      if (cached) return cached;
+      return caches.match('./offline.html').then(function (offlinePage) {
+        return offlinePage || new Response('<h1>Offline</h1>', {
+          headers: { 'Content-Type': 'text/html' }
+        });
       });
     });
   });

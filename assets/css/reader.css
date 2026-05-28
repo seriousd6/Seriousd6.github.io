@@ -5,11 +5,11 @@
 /* ── Reader fills all available width — no centering cap ──── */
 .reader-page .container {
   max-width: none;
-  padding: 0 1.5rem;
+  padding: 0 25px;
 }
 
 .reader-page main {
-  padding: 1.25rem 0 2rem;
+  padding: 25px 0 2rem;
 }
 
 /* ── Page layout: reading text + side panel ──────────────── */
@@ -37,8 +37,51 @@
   }
 }
 
-/* Chapter sidebar hidden at all widths — nav handled by dropdowns + j/k keys */
-.reader-sidebar { display: none !important; }
+/* Split toggle: 50/50 text + panel */
+@media (min-width: 700px) {
+  .reader-layout--split {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Wide toggle: full-width reader, panel hidden */
+.reader-layout--wide .reader-xref-panel { display: none !important; }
+@media (min-width: 700px) {
+  .reader-layout--wide {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Chapter sidebar: hidden by default; shown when .reader-layout--with-sidebar is set */
+.reader-sidebar { display: none; }
+
+@media (min-width: 700px) {
+  .reader-layout--with-sidebar {
+    grid-template-columns: 160px 1fr 290px !important;
+  }
+  .reader-layout--with-sidebar.reader-layout--split {
+    grid-template-columns: 160px 1fr 1fr !important;
+  }
+  .reader-layout--with-sidebar.reader-layout--wide {
+    grid-template-columns: 160px 1fr !important;
+  }
+  .reader-layout--with-sidebar .reader-sidebar {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 1.5rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+  }
+  .reader-layout--with-sidebar .reader-main      { grid-column: 2; }
+  .reader-layout--with-sidebar .reader-xref-panel { grid-column: 3; }
+  .reader-layout--with-sidebar.reader-layout--wide .reader-xref-panel { display: none !important; }
+}
 
 /* ── Side panel (Notes / Cross-refs / Commentary) ─────────── */
 .reader-xref-panel {
@@ -174,6 +217,44 @@
 
 .reader-sidebar__ch:focus-visible {
   outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.reader-sidebar__intro-row {
+  padding: 0.3rem 0.4rem 0.1rem;
+}
+
+.reader-sidebar__intro {
+  width: 100%;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.22rem 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+
+.reader-sidebar__intro:hover {
+  background: rgba(92,61,30,0.08);
+  border-color: rgba(92,61,30,0.3);
+  color: var(--color-primary);
+}
+
+.reader-sidebar__intro--active {
+  background: rgba(92,61,30,0.12);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.reader-sidebar__intro:focus-visible {
+  outline: 2px solid var(--color-primary);
   outline-offset: 1px;
 }
 
@@ -423,6 +504,204 @@
   border-top: 1px solid var(--color-border);
   padding-top: 0.65rem;
 }
+
+.reader-nav-btn--begin {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(92,61,30,0.25);
+}
+
+.reader-nav-btn--begin:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+  color: #fff;
+}
+
+/* ── Book introduction inline page ──────────────────────── */
+.reader-intro-page {
+  padding: 0.25rem 0;
+}
+
+.reader-intro-inner {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem 1.75rem;
+  margin: 0.75rem 0;
+  background: var(--color-surface);
+}
+
+.reader-intro-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 0.65rem;
+  line-height: 1.25;
+}
+
+.reader-intro-keyverse {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.reader-intro-begin {
+  border-top: 2px solid var(--color-border);
+  padding-top: 0.85rem;
+}
+
+/* ── Book intro page: section layout ────────────────────── */
+.ri-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 0.25rem;
+}
+
+.ri-section {
+  margin-top: 1.4rem;
+}
+
+.ri-section__heading {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ri-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.ri-body--christ {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 0.85rem;
+  color: var(--color-heading);
+}
+
+/* Expanded themes */
+.ri-theme-item {
+  margin-bottom: 0.9rem;
+}
+
+.ri-theme-item:last-child { margin-bottom: 0; }
+
+.ri-theme-title {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 0.25rem;
+}
+
+/* Key people */
+.ri-people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ri-person {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.ri-person__name {
+  color: var(--color-heading);
+  font-family: var(--font-ui);
+}
+
+.ri-person__role {
+  color: var(--color-muted);
+}
+
+/* Key verses */
+.ri-keyverses {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ri-keyverse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.ri-keyverse__ref {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-accent);
+  white-space: nowrap;
+}
+
+.ri-keyverse__ref:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+.ri-keyverse__note {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+/* Timeline */
+.ri-timeline {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1rem;
+}
+
+.ri-tl-current {
+  color: var(--color-heading);
+  font-size: 0.95rem;
+}
+
+.ri-tl-sep {
+  color: var(--color-border);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.ri-timeline a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-accent);
+}
+
+.ri-timeline a:hover { color: var(--color-primary); }
 
 /* ── Cross-reference footnote markers ────────────────────── */
 /* Deliberately different from verse numbers (gold accent) — use teal-blue */
@@ -795,6 +1074,142 @@
   outline-offset: 2px;
 }
 
+/* ── Book Info toggle button ─────────────────────────────── */
+.reader-bookinfo-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-bookinfo-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-bookinfo-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-bookinfo-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+}
+.reader-bookinfo-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Wide-panel toggle button ────────────────────────────── */
+.reader-split-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-split-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-split-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-split-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+}
+.reader-split-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Wide (reader-only) toggle button ───────────────────── */
+.reader-wide-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-wide-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-wide-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-wide-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+}
+.reader-wide-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Chapters sidebar toggle button ─────────────────────── */
+.reader-sidebar-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-sidebar-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-sidebar-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-sidebar-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+}
+.reader-sidebar-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 /* ── Interlinear verse block layout ─────────────────────── */
 .reader-interlinear-text {
   display: flex;
@@ -880,6 +1295,17 @@
   border-radius: 3px;
   background: var(--color-bg);
   white-space: nowrap;
+}
+
+/* RTL (Hebrew OT) interlinear layout */
+.ri-grid--rtl {
+  direction: rtl;
+}
+.ri-grid--rtl .ri-tile__translit,
+.ri-grid--rtl .ri-tile__eng,
+.ri-grid--rtl .ri-tile__s {
+  direction: ltr;
+  unicode-bidi: embed;
 }
 
 /* ── Interlinear popover ─────────────────────────────────── */
@@ -1021,6 +1447,27 @@
 }
 .reader-panel-body[hidden] { display: none; }
 
+/* Commentary source picker inside reader panel */
+.reader-panel-comm-picker {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+.reader-panel-comm-select {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.78rem;
+  padding: 0.18rem 0.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text);
+  cursor: pointer;
+  width: 100%;
+}
+
 /* Notes groups inside reader panel */
 .reader-notes-group { margin-bottom: 0.75rem; }
 .reader-notes-group__heading {
@@ -1049,4 +1496,94 @@
   color: var(--color-text);
   cursor: pointer;
   max-width: 140px;
+}
+
+/* ── Library document sections in Reader ─────────────────────────────── */
+
+.reader-lib-docname {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.1rem;
+}
+
+.reader-lib-content {
+  line-height: 1.75;
+}
+
+/* Suppress lib-chapter wrapper styles inside the Reader */
+.reader-lib-content .lib-chapter {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reader-lib-content h2,
+.reader-lib-content .lib-chapter__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading, var(--color-text));
+  margin: 0 0 0.9rem;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  padding-bottom: 0.4rem;
+}
+
+.reader-lib-content h3 { font-size: 0.95rem; margin: 1rem 0 0.4rem; }
+
+/* Catechism Q&A */
+.reader-lib-content .lib-qa { margin-bottom: 1rem; }
+
+.reader-lib-content .lib-qa__num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-primary, #5c3d1e);
+  margin-bottom: 0.2rem;
+}
+
+.reader-lib-content .lib-qa__q {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.reader-lib-content .lib-qa__a {
+  color: var(--color-text, #222);
+}
+
+/* Confession articles */
+.reader-lib-content .lib-article {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.reader-lib-content .lib-article__num {
+  font-weight: 700;
+  min-width: 1.8rem;
+  flex-shrink: 0;
+  color: var(--color-primary, #5c3d1e);
+  font-size: 0.88rem;
+  padding-top: 0.05em;
+}
+
+.reader-lib-content .lib-article__text {
+  flex: 1;
+}
+
+/* Proof text references */
+.reader-lib-content .lib-refs {
+  font-size: 0.82rem;
+  color: var(--color-muted, #888);
+}
+
+.reader-lib-content .lib-refs a { color: var(--color-primary, #5c3d1e); }
+
+/* Creed body */
+.reader-lib-content .lib-creed {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.8;
 }

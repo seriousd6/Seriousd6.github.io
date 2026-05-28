@@ -79,8 +79,8 @@
   border-radius: 8px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
   width: 100%;
-  max-width: 600px;
-  max-height: 88vh;
+  max-width: 780px;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -171,21 +171,26 @@
   border-bottom: 1px solid var(--color-border, #e0d5c4);
   background: var(--color-bg, #faf8f4);
   flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
+.bsw-modal__tabs::-webkit-scrollbar { display: none; }
 
 .bsw-modal__tab {
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  padding: 0.55rem 1.1rem;
+  padding: 0.48rem 0.85rem;
   font-family: var(--font-ui, system-ui, sans-serif);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--color-muted, #7a6a55);
   cursor: pointer;
   margin-bottom: -1px;
   transition: color 0.15s, border-color 0.15s;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .bsw-modal__tab:hover {
   color: var(--color-primary, #5c3d1e);
@@ -1213,6 +1218,13 @@
 }
 
 /* ── Modal / VS Topics tab (Nave's Topical Bible) ──────────────────────────── */
+.bsw-modal__topics-panel {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+}
+.bsw-modal__topics-panel[hidden] { display: none; }
+
 .topical-modal-meta {
   font-size: .78rem;
   color: var(--color-muted, #888);
@@ -1281,6 +1293,65 @@
   padding: .5rem 0;
 }
 
+/* ── Confessions modal tab ────────────────────────────────────────────────────── */
+.bsw-modal-confessions { padding: .25rem 0; }
+.bsw-conf-group { margin-bottom: 1rem; }
+.bsw-conf-group__doc {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-muted, #888);
+  margin-bottom: .35rem;
+}
+.bsw-conf-item {
+  display: block;
+  padding: .45rem .6rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ddd);
+  margin-bottom: .35rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s;
+}
+.bsw-conf-item:hover { background: var(--color-bg-alt, #f6f2ea); }
+.bsw-conf-item__ref {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--color-primary, #5c3d1e);
+  margin-bottom: .2rem;
+}
+.bsw-conf-item__text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: .82rem;
+  color: var(--color-text, #333);
+  line-height: 1.45;
+}
+
+/* ── Spurgeon devotional on home page ─────────────────────────────────────────── */
+.daily-spurgeon-verse {
+  border-left: 3px solid var(--color-primary, #5c3d1e);
+  margin: 0 0 1rem;
+  padding: .5rem .85rem;
+  font-style: italic;
+}
+.daily-spurgeon-verse cite {
+  display: block;
+  margin-top: .35rem;
+  font-style: normal;
+  font-size: .85rem;
+  color: var(--color-muted, #888);
+}
+.daily-spurgeon-body p {
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0 0 .75rem;
+}
+
 /* ── Verse Study page — Nave's Topics section chips ─────────────────────────── */
 .vs-topical-list {
   display: flex;
@@ -1324,3 +1395,364 @@
   background: rgba(255,255,255,.22);
   opacity: 1;
 }
+
+/* ── Verse-number popup (reader + verse study) ───────────── */
+.vs-verse-popup {
+  position: fixed;
+  z-index: 9200;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+  min-width: 210px;
+  font-family: var(--font-ui);
+  display: none;
+}
+.vs-verse-popup--visible { display: block; }
+
+.vs-verse-popup__ref {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  padding: 0.25rem 0.75rem 0.3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.vs-verse-popup__action {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem 0.75rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-family: var(--font-ui);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.vs-verse-popup__action:hover {
+  background: var(--color-border);
+  color: var(--color-primary);
+}
+.vs-verse-popup__action--active {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.vs-verse-popup__note-area {
+  border-top: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+}
+.vs-verse-popup__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-body, serif);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.4rem;
+  resize: vertical;
+}
+.vs-verse-popup__note-btns {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.vs-verse-popup__save-btn,
+.vs-verse-popup__cancel-btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+.vs-verse-popup__save-btn {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.vs-verse-popup__cancel-btn {
+  background: none;
+  color: var(--color-text);
+}
+
+/* ── Reader Book Info toggle button — see reader.css for full rules ──── */
+
+/* ── Reader Book Info panel (appears above results) ─────────── */
+.reader-bookinfo-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.reader-bookinfo-inner {
+  padding: 1rem 1.25rem;
+}
+.reader-bookinfo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.reader-bookinfo-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+.reader-bookinfo-close {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+.reader-bookinfo-close:hover { background: var(--color-border); color: var(--color-text); }
+.reader-bookinfo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-bottom: 0.65rem;
+}
+.reader-bookinfo-purpose {
+  color: var(--color-text);
+  font-size: 0.88rem;
+  margin: 0 0 0.75rem;
+  line-height: 1.65;
+}
+.reader-bookinfo-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+.reader-bookinfo-theme {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-muted);
+}
+.reader-bookinfo-subhead {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin: 0.5rem 0 0.4rem;
+}
+.reader-bookinfo-outline {
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+.reader-bookinfo-outline li { margin-bottom: 0.15rem; }
+.reader-bookinfo-ch {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+.reader-bookinfo-timeline {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.6rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+.reader-bookinfo-tldate { font-style: italic; }
+.reader-bookinfo-loading,
+.reader-bookinfo-empty {
+  padding: 1rem 1.25rem;
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 0.88rem;
+}
+
+/* ── Confessions panel ───────────────────────────────────────────────────── */
+.bsw-modal__confessions-panel {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.bsw-modal__confessions-panel[hidden] { display: none; }
+
+/* ── Dictionary panel ────────────────────────────────────────────────────── */
+.bsw-modal__dictionary-panel {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.bsw-modal__dictionary-panel[hidden] { display: none; }
+
+.bsw-dict-panel-entry {
+  margin-bottom: 1.1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #e8e0d4);
+}
+.bsw-dict-panel-entry:last-child { border-bottom: none; margin-bottom: 0; }
+
+.bsw-dict-panel-entry__term {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-primary, #5c3d1e);
+  margin: 0 0 .35rem;
+}
+
+.bsw-dict-panel-entry__brief {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 .4rem;
+  font-family: var(--font-body, Georgia, serif);
+}
+
+.bsw-dict-panel-entry__link {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.bsw-dict-panel-entry__link:hover { text-decoration: underline; }
+
+/* ── Term links (site-wide hoverable terms) ──────────────────────────────── */
+.term-link {
+  border-bottom: 1.5px dashed color-mix(in srgb, var(--color-accent, #b8860b) 60%, transparent);
+  cursor: help;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .12s, color .12s;
+}
+.term-link:hover {
+  border-bottom-color: var(--color-accent, #b8860b);
+  color: inherit;
+}
+
+/* ── Term tooltip ────────────────────────────────────────────────────────── */
+.bsw-term-tooltip {
+  position: fixed;
+  z-index: 9400;
+  max-width: 340px;
+  min-width: 200px;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 9px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.18);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity .15s ease, transform .15s ease;
+  visibility: hidden;
+}
+.bsw-term-tooltip--visible {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.bsw-term-tooltip__head {
+  padding: .55rem .9rem .4rem;
+  border-bottom: 1px solid var(--color-border, #e0d5c4);
+  background: var(--color-bg, #faf8f4);
+  border-radius: 9px 9px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.bsw-term-tooltip__term {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--color-primary, #5c3d1e);
+}
+.bsw-term-tooltip__src {
+  font-size: .65rem;
+  color: var(--color-muted, #9a8a72);
+  font-style: italic;
+}
+
+.bsw-term-tooltip__body {
+  padding: .6rem .9rem .7rem;
+}
+
+.bsw-term-tooltip__brief {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: .83rem;
+  line-height: 1.55;
+  color: var(--color-text, #2c2416);
+  margin: 0 0 .5rem;
+}
+
+.bsw-term-tooltip__nave {
+  margin-top: .45rem;
+}
+.bsw-term-tooltip__nave-label {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-muted, #9a8a72);
+  margin: 0 0 .3rem;
+}
+.bsw-term-tooltip__nave-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+}
+.bsw-term-tooltip__nave-chip {
+  font-size: .72rem;
+  font-weight: 500;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 8%, transparent);
+  color: var(--color-primary, #5c3d1e);
+  border: 1px solid color-mix(in srgb, var(--color-primary, #5c3d1e) 22%, transparent);
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: background .12s, color .12s;
+}
+.bsw-term-tooltip__nave-chip:hover {
+  background: var(--color-primary, #5c3d1e);
+  color: #fff;
+  text-decoration: none;
+}
+
+.bsw-term-tooltip__links {
+  margin-top: .6rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--color-border, #e8e0d4);
+  display: flex;
+  gap: .9rem;
+}
+.bsw-term-tooltip__link {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--color-primary, #5c3d1e);
+  text-decoration: none;
+}
+.bsw-term-tooltip__link:hover { text-decoration: underline; }
