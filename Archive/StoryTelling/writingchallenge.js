@@ -1,9 +1,0 @@
-/*
-wordcount
-number of hints to write about
-theme
-subject
-conflict
-character
-setting
-*/
