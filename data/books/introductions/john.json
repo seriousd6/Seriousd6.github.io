@@ -43,19 +43,48 @@
   ],
   "key_verse": "John 3:16",
   "timeline": {
-    "date": "~AD 85–95 (writing); AD 27–30 (events)",
+    "date": "c. AD 90–100 (events: c. 27–30 AD)",
     "before": [
       {
-        "label": "Synoptic Gospels written",
-        "ref": "Matthew 1:1"
+        "label": "In the beginning was the Word — John 1:1 echoes Genesis 1:1",
+        "ref": "Genesis 1:1",
+        "year": "Primeval",
+        "type": "event"
+      },
+      {
+        "label": "Isaiah's vision of YHWH's glory — John 12:41 applies it to Jesus",
+        "ref": "Isaiah 6:1",
+        "year": "740 BC",
+        "type": "event"
+      },
+      {
+        "label": "Expulsion from the synagogue — John's community context",
+        "ref": "John 9:22",
+        "year": "c. AD 85–90",
+        "type": "world"
       }
     ],
     "after": [
       {
-        "label": "Revelation (also by John)",
-        "ref": "Revelation 1:1"
+        "label": "Resurrection appearances; Thomas confesses 'My Lord and my God'",
+        "ref": "John 20:28",
+        "year": "c. AD 30",
+        "type": "event"
+      },
+      {
+        "label": "Pentecost — the Paraclete arrives as Jesus promised",
+        "ref": "Acts 2:1",
+        "year": "c. AD 30",
+        "type": "event"
+      },
+      {
+        "label": "1 John — the Johannine community applies the gospel",
+        "ref": "1 John 1:1",
+        "year": "c. AD 90",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "gospels"
   },
   "key_people": [
     {

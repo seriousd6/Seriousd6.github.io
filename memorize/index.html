@@ -48,7 +48,12 @@
 
         <!-- Verse list -->
         <div id="mem-list" class="mem-list"></div>
-        <p id="mem-empty" class="mem-empty" hidden>No verses yet — add one above, or use the ⭐ button in any verse modal.</p>
+        <div id="mem-empty" class="bsw-empty-state" hidden>
+          <span class="bsw-empty-state__glyph" aria-hidden="true">◈</span>
+          <p class="bsw-empty-state__title">No verses yet</p>
+          <p class="bsw-empty-state__desc">Add a reference above, or click the star button inside any verse modal while reading.</p>
+          <a class="bsw-empty-state__cta" href="../read/">Open Reader</a>
+        </div>
       </div>
 
       <!-- ── Review panel ── -->

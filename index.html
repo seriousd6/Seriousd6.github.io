@@ -6,6 +6,12 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Daily Bible reading, verse of the day, and devotional." />
   <title>Bible Study — Daily</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bible Study — Daily" />
+  <meta property="og:description" content="Daily Bible reading, verse of the day, and devotional." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bible Study — Daily" />
+  <meta name="twitter:description" content="Daily Bible reading, verse of the day, and devotional." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/bible-ui.css" />
   <link rel="stylesheet" href="assets/css/daily.css" />
@@ -40,6 +46,14 @@
           <h2 class="daily-card__title">Verse of the Day</h2>
         </div>
         <div id="daily-votd-content" class="daily-votd-body"></div>
+      </section>
+
+      <!-- ── Continue Reading ── -->
+      <section class="daily-card daily-card--history" id="daily-history-card" hidden>
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Continue Reading</h2>
+        </div>
+        <div id="daily-history-content" class="daily-history-body"></div>
       </section>
 
       <!-- ── Daily Devotional ── -->

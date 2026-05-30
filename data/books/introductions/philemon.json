@@ -31,19 +31,48 @@
   ],
   "key_verse": "Philemon 1:16",
   "timeline": {
-    "date": "~AD 60–62",
+    "date": "c. AD 60–62 (Roman imprisonment)",
     "before": [
       {
-        "label": "Same imprisonment as Colossians and Ephesians",
-        "ref": "Colossians 4:9"
+        "label": "Galatians 3:28 — 'neither slave nor free' becomes social reality",
+        "ref": "Galatians 3:28",
+        "year": "c. AD 48",
+        "type": "event"
+      },
+      {
+        "label": "Paul founds the Colossian house-church through Epaphras",
+        "ref": "Colossians 1:7",
+        "year": "c. AD 52",
+        "type": "event"
+      },
+      {
+        "label": "Onesimus flees from Philemon to Rome; meets Paul there",
+        "ref": "Philemon 10",
+        "year": "c. AD 60",
+        "type": "event"
+      },
+      {
+        "label": "Colossians — written from the same imprisonment; Onesimus named",
+        "ref": "Colossians 4:9",
+        "year": "c. AD 60",
+        "type": "book"
       }
     ],
     "after": [
       {
-        "label": "Paul's release and resumed travels",
-        "ref": "Philippians 1:25"
+        "label": "Paul released and hopes to visit Philemon in Colossae",
+        "ref": "Philemon 22",
+        "year": "c. AD 62",
+        "type": "event"
+      },
+      {
+        "label": "Christianity's eventual role in abolishing slavery in the West",
+        "ref": "Philemon 16",
+        "year": "historical",
+        "type": "world"
       }
-    ]
+    ],
+    "period": "church"
   },
   "key_people": [
     {

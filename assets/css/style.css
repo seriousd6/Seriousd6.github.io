@@ -38,6 +38,9 @@
   /* Layout */
   --max-width: 860px;
   --header-h:  0px;   /* desktop: no top bar; updated for mobile via media query */
+
+  /* Reader font size — toggled by F3 controls */
+  --reader-font-size: 1rem;
 }
 
 /* ── Reset ── */
@@ -427,6 +430,17 @@ body.sb-open .sidebar-backdrop { display: block; }
 
   .sidebar-tab { display: none !important; }
   .mobile-topbar { display: flex; }
+
+  /* Larger touch targets for mobile nav links */
+  .sb-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Section headers more readable on mobile */
+  .sb-section-head {
+    padding: 0.6rem 1rem 0.25rem;
+  }
 }
 
 /* ── Layout ── */
@@ -587,3 +601,64 @@ span.term { font-weight: bold; color: var(--color-primary); }
   color: #4caf50;
   font-weight: 600;
 }
+
+/* ── Dark mode ──────────────────────────────────────────────────────────────── */
+/* Manual override: <html data-theme="dark"> set by the toggle button            */
+/* System default:  prefers-color-scheme:dark applies when no manual override    */
+
+[data-theme="dark"] {
+  --color-bg:        #1a1208;
+  --color-surface:   #231a0d;
+  --color-primary:   #e8c87a;
+  --color-accent:    #d4a017;
+  --color-text:      #e8dfc8;
+  --color-muted:     #9a8870;
+  --color-border:    #3a2e1e;
+  --color-bg-alt:    #2a1f0f;
+  --sb-bg:           #120d05;
+  --sb-text:         #e8d9bb;
+  --sb-muted:        #7a6a55;
+  --sb-hover:        rgba(255,255,255,0.06);
+  --sb-active-bg:    rgba(255,255,255,0.1);
+  --sb-active-fg:    #e8c87a;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg:        #1a1208;
+    --color-surface:   #231a0d;
+    --color-primary:   #e8c87a;
+    --color-accent:    #d4a017;
+    --color-text:      #e8dfc8;
+    --color-muted:     #9a8870;
+    --color-border:    #3a2e1e;
+    --color-bg-alt:    #2a1f0f;
+    --sb-bg:           #120d05;
+    --sb-text:         #e8d9bb;
+    --sb-muted:        #7a6a55;
+    --sb-hover:        rgba(255,255,255,0.06);
+    --sb-active-bg:    rgba(255,255,255,0.1);
+    --sb-active-fg:    #e8c87a;
+    color-scheme: dark;
+  }
+}
+
+/* Dark mode toggle button (injected into sidebar footer by main.js) */
+#bsw-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.45rem 1rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.83rem;
+  color: var(--sb-text, #e8d9bb);
+  cursor: pointer;
+  text-align: left;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+#bsw-theme-btn:hover { opacity: 1; }

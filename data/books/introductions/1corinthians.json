@@ -48,19 +48,48 @@
   ],
   "key_verse": "1 Corinthians 15:3",
   "timeline": {
-    "date": "~AD 53–55",
+    "date": "c. AD 54–55 (from Ephesus)",
     "before": [
       {
-        "label": "Paul's founding visit to Corinth (Acts 18)",
-        "ref": "Acts 18:1"
+        "label": "Paul founds the Corinthian church during his second journey",
+        "ref": "Acts 18:1",
+        "year": "c. AD 50–51",
+        "type": "event"
+      },
+      {
+        "label": "A previous letter (now lost) precedes this one",
+        "ref": "1 Corinthians 5:9",
+        "year": "c. AD 53",
+        "type": "event"
+      },
+      {
+        "label": "Chloe's people bring disturbing news of divisions",
+        "ref": "1 Corinthians 1:11",
+        "year": "c. AD 54",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "2 Corinthians — Paul defends his apostleship",
-        "ref": "2 Corinthians 1:1"
+        "label": "Jerusalem Council — Jewish-Gentile tensions resolved apostolically",
+        "ref": "Acts 15:1",
+        "year": "c. AD 49",
+        "type": "event"
+      },
+      {
+        "label": "Paul's painful visit to Corinth follows this letter's failure",
+        "ref": "2 Corinthians 2:1",
+        "year": "c. AD 55",
+        "type": "event"
+      },
+      {
+        "label": "2 Corinthians — Paul defends his ministry; reconciliation",
+        "ref": "2 Corinthians 1:1",
+        "year": "c. AD 55–57",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "church"
   },
   "key_people": [
     {

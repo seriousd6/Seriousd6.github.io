@@ -398,11 +398,17 @@
 
 .reader-result-group__text {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: var(--reader-font-size, 1.05rem);
   line-height: 1.95;
   color: var(--color-text);
   margin: 0;
 }
+
+/* Font size presets — set by F3 toggle buttons */
+body.bsw-font-sm  { --reader-font-size: 0.88rem; }
+body.bsw-font-md  { --reader-font-size: 1.05rem; }
+body.bsw-font-lg  { --reader-font-size: 1.22rem; }
+body.bsw-font-xl  { --reader-font-size: 1.42rem; }
 
 .reader-result-group__attr {
   margin-top: 0.85rem;
@@ -413,15 +419,40 @@
   color: var(--color-muted);
 }
 
+/* Chapter break shown when multiple chapters are in one result group */
+.reader-chapter-break {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+  clear: both;
+}
+.reader-chapter-break::before,
+.reader-chapter-break::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+.reader-chapter-break__label {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* ── Verse inline elements ───────────────────────────────── */
 .reader-verse {
   display: inline;
 }
 
-.reader-verse--highlighted {
-  background: rgba(255, 230, 80, 0.32);
-  border-radius: 2px;
-}
+.reader-verse--hl-yellow { background: rgba(255, 230, 80, 0.32); border-radius: 2px; }
+.reader-verse--hl-green  { background: rgba(100, 200, 120, 0.28); border-radius: 2px; }
+.reader-verse--hl-blue   { background: rgba(80, 160, 255, 0.25); border-radius: 2px; }
+.reader-verse--hl-pink   { background: rgba(235, 100, 150, 0.27); border-radius: 2px; }
 
 .reader-verse__num {
   font-family: var(--font-ui);
@@ -434,9 +465,10 @@
   cursor: pointer;
 }
 
-.reader-verse__num--highlighted {
-  color: #b8860b;
-}
+.reader-verse__num--highlighted { color: #b8860b; } /* default/yellow */
+.reader-verse--hl-green  .reader-verse__num--highlighted { color: #2d7a2d; }
+.reader-verse--hl-blue   .reader-verse__num--highlighted { color: #1a5fa8; }
+.reader-verse--hl-pink   .reader-verse__num--highlighted { color: #a83060; }
 
 /* Bookmark indicator on verse superscript */
 .reader-verse__num--bookmarked {
@@ -544,9 +576,34 @@
 }
 
 .reader-intro-keyverse {
-  margin: 0.5rem 0 0.75rem;
-  font-size: 0.9rem;
-  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.6rem;
+  margin: 0.75rem 0 0.5rem;
+  padding: 0.55rem 0.85rem;
+  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 4px 4px 0;
+}
+
+.reader-intro-kv-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.reader-intro-kv-note {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+  flex-basis: 100%;
+  padding-left: 0.2rem;
 }
 
 .reader-intro-begin {
@@ -672,36 +729,127 @@
   font-size: 0.88rem;
 }
 
-/* Timeline */
-.ri-timeline {
-  font-family: var(--font-ui);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--color-text);
+/* ── Timeline — two-part: era arc + event track ─────────────── */
+
+/* Era arc bar */
+.ri-tl-arc {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.1rem;
+  gap: 0.25rem 0.2rem;
+  margin-bottom: 1.1rem;
+}
+.ri-tl-era {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.ri-tl-era--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
 }
 
-.ri-tl-current {
-  color: var(--color-heading);
-  font-size: 0.95rem;
+/* 3-column event track */
+/* Horizontal 7-item timeline row: before[0..2] | BOOK | after[0..2] */
+.ri-tl-row {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+  padding-bottom: 0.75rem;
+  gap: 0;
 }
 
-.ri-tl-sep {
-  color: var(--color-border);
-  font-size: 1.1rem;
-  line-height: 1;
+.ri-tl-item {
+  flex: 1 0 0;
+  min-width: 90px;
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 0.35rem;
 }
 
-.ri-timeline a {
-  color: var(--color-accent);
+/* Horizontal connector line through dot centre (top: 4px = centre of 10px dot) */
+.ri-tl-item::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+/* Dot */
+.ri-tl-dot {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: transparent;
+  flex-shrink: 0;
+  margin-bottom: 0.45rem;
+}
+.ri-tl-dot--book  { color: var(--color-primary); background: var(--color-primary); }
+.ri-tl-dot--event { color: var(--color-accent); background: transparent; }
+.ri-tl-dot--world { color: var(--color-muted); background: transparent; }
+.ri-tl-dot--empty { color: var(--color-border); background: transparent; border-style: dashed; }
+/* Current book dot: 14px, margin-top: -2px keeps its centre at 5px to stay on the line */
+.ri-tl-dot--current {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  color: var(--color-primary);
+  background: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(92, 61, 30, 0.18);
+}
+
+/* Year / date label */
+.ri-tl-year {
+  font-family: var(--font-ui);
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+}
+.ri-tl-year--current { color: var(--color-primary); }
+
+/* Event / book label */
+.ri-tl-label {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  line-height: 1.3;
+  color: var(--color-text);
   text-decoration: none;
-  border-bottom: 1px dotted var(--color-accent);
+  display: block;
 }
+a.ri-tl-label { border-bottom: 1px dotted currentColor; }
+a.ri-tl-label:hover { color: var(--color-primary); }
 
-.ri-timeline a:hover { color: var(--color-primary); }
+.ri-tl-label--book    { color: var(--color-primary); }
+.ri-tl-label--event   { color: var(--color-text); }
+.ri-tl-label--world   { color: var(--color-muted); font-style: italic; }
+.ri-tl-label--current { font-weight: 700; color: var(--color-primary); font-size: 0.82rem; }
+
+/* Dim placeholder slots */
+.ri-tl-item--empty { opacity: 0.3; }
 
 /* ── Cross-reference footnote markers ────────────────────── */
 /* Deliberately different from verse numbers (gold accent) — use teal-blue */
@@ -1140,6 +1288,36 @@
 .reader-split-btn:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* ── Font size controls ─────────────────────────────────── */
+.reader-font-size-grp {
+  display: flex;
+  gap: 1px;
+  margin-right: 0.35rem;
+}
+.reader-font-size-btn {
+  padding: 0.22rem 0.5rem;
+  border: 1px solid var(--color-border);
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  line-height: 1;
+}
+.reader-font-size-btn:first-child { border-radius: 4px 0 0 4px; }
+.reader-font-size-btn:last-child  { border-radius: 0 4px 4px 0; border-left: none; }
+.reader-font-size-btn:not(:first-child):not(:last-child) { border-left: none; }
+.reader-font-size-btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.reader-font-size-btn:hover:not(.reader-font-size-btn--active) {
+  background: var(--color-bg-alt, #f6f2ea);
+  color: var(--color-primary);
 }
 
 /* ── Wide (reader-only) toggle button ───────────────────── */
@@ -1586,4 +1764,66 @@
   font-style: italic;
   font-size: 1rem;
   line-height: 1.8;
+}
+
+/* ── Print button (in browse bar) ────────────────────────── */
+.reader-print-btn {
+  padding: .28rem .6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: .78rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color .12s, border-color .12s;
+}
+.reader-print-btn:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* ── Print styles ────────────────────────────────────────── */
+@media print {
+  /* Hide everything except the chapter text */
+  header, nav, footer,
+  .sb-nav, .site-header, .site-footer,
+  .reader-browse-bar,
+  .reader-xref-panel,
+  .reader-sidebar,
+  .reader-lookup-row,
+  .reader-toolbar,
+  .reader-control-bar,
+  .reader-nav-row,
+  .bsw-modal,
+  .bsw-modal-backdrop,
+  .bsw-sw-toast,
+  .bsw-shortcuts-overlay,
+  #bsw-theme-btn {
+    display: none !important;
+  }
+
+  /* Full width, clean margins */
+  body, html { background: #fff !important; color: #000 !important; }
+  .reader-page .container { max-width: 100%; padding: 0 1cm; }
+  .reader-page main { padding: 0; }
+  .reader-layout { display: block; }
+  .reader-main { width: 100%; }
+
+  /* Verse text */
+  .reader-result-group__text {
+    font-size: 12pt !important;
+    line-height: 1.75 !important;
+  }
+  .reader-result-group__book-heading,
+  .reader-result-group__chapter-heading {
+    font-size: 14pt;
+    margin-top: 1em;
+  }
+
+  /* Avoid page breaks inside verses */
+  .reader-result-group__verse { page-break-inside: avoid; }
+
+  /* Show link hrefs for cross-refs */
+  a[href]::after { content: none; }
 }

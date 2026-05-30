@@ -75,6 +75,20 @@
             items: [
               { label: '39 Articles', href: _r('library/39-articles/') }
             ]
+          },
+          {
+            id: 'fathers',
+            label: 'Church Fathers',
+            items: [
+              { label: 'Ignatius of Antioch',   href: _r('library/ignatius/') },
+              { label: 'Justin Martyr',          href: _r('library/justin-martyr/') },
+              { label: 'Irenaeus of Lyons',      href: _r('library/irenaeus/') },
+              { label: 'Tertullian',             href: _r('library/tertullian/') },
+              { label: 'Athanasius of Alexandria', href: _r('library/athanasius/') },
+              { label: 'John Chrysostom',        href: _r('library/chrysostom/') },
+              { label: 'Augustine of Hippo',     href: _r('library/augustine/') },
+              { label: 'Gregory of Nazianzus',   href: _r('library/gregory-nazianzus/') }
+            ]
           }
         ]
       }

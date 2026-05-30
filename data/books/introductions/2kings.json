@@ -32,19 +32,48 @@
   ],
   "key_verse": "2 Kings 17:18",
   "timeline": {
-    "date": "~850–586 BC",
+    "date": "Events: c. 853–561 BC",
     "before": [
       {
-        "label": "Elijah and the northern kingdom",
-        "ref": "1 Kings 17:1"
+        "label": "1 Kings — Solomon, division of the kingdom, Elijah",
+        "ref": "1 Kings 1:1",
+        "year": "c. 971 BC",
+        "type": "book"
+      },
+      {
+        "label": "Elijah taken up to heaven; Elisha's ministry begins",
+        "ref": "2 Kings 2:11",
+        "year": "c. 850 BC",
+        "type": "event"
+      },
+      {
+        "label": "Assyria rises as the dominant world power",
+        "ref": "2 Kings 15:29",
+        "year": "c. 745 BC",
+        "type": "world"
       }
     ],
     "after": [
       {
-        "label": "Exile in Babylon; Ezekiel and Daniel ministries",
-        "ref": "Daniel 1:1"
+        "label": "Fall of Samaria — Israel exiled to Assyria",
+        "ref": "2 Kings 17:6",
+        "year": "722 BC",
+        "type": "event"
+      },
+      {
+        "label": "Fall of Jerusalem — Judah exiled to Babylon",
+        "ref": "2 Kings 25:11",
+        "year": "587 BC",
+        "type": "event"
+      },
+      {
+        "label": "Ezra — return from exile under Cyrus",
+        "ref": "Ezra 1:1",
+        "year": "c. 538 BC",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "exile"
   },
   "key_people": [
     {

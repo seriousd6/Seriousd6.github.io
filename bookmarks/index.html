@@ -30,12 +30,6 @@
       text-decoration: none;
     }
     .bookmarks-btn:hover { background: var(--color-border); }
-    .bookmarks-empty {
-      font-family: var(--font-ui);
-      color: var(--color-muted);
-      padding: 1.5rem 0;
-      font-size: 0.95rem;
-    }
     .bookmarks-list { list-style: none; margin: 0; padding: 0; }
     .bookmarks-item {
       display: flex;
@@ -109,9 +103,12 @@
       <div class="bookmarks-list-wrap" id="bm-list-wrap">
         <ul class="bookmarks-list" id="bm-list"></ul>
       </div>
-      <p class="bookmarks-empty" id="bm-empty" hidden>
-        No bookmarks yet. Open the Reader and click a verse number, then choose "☆ Bookmark".
-      </p>
+      <div class="bsw-empty-state" id="bm-empty" hidden>
+        <span class="bsw-empty-state__glyph" aria-hidden="true">☆</span>
+        <p class="bsw-empty-state__title">No bookmarks yet</p>
+        <p class="bsw-empty-state__desc">Save verses to come back to them quickly. In the Reader, click any verse number and choose "Bookmark".</p>
+        <a class="bsw-empty-state__cta" href="../read/">Open Reader</a>
+      </div>
 
     </div>
   </main>

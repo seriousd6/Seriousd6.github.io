@@ -494,3 +494,68 @@
 .vs-id-actions .vs-context-btn {
   text-decoration: none;
 }
+
+/* ── BDB / Thayer lexicon block on word study page ───────────────────────── */
+
+.wd-lexicon {
+  margin-top: 0.9rem;
+  padding: 0.7rem 1rem;
+  background: var(--color-surface-alt, #f8f8f8);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.wd-lexicon-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.wd-lexicon-short {
+  color: var(--color-text);
+}
+
+.wd-lexicon-long {
+  margin-top: 0.5rem;
+  color: var(--color-muted, #666);
+  font-size: 0.84rem;
+  white-space: pre-line;
+}
+
+.wd-lexicon-toggle {
+  display: block;
+  margin-top: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.wd-lexicon-toggle:hover { text-decoration: underline; }
+
+/* ── BDB / Thayer in word-study flyout panel ─────────────────────────────── */
+
+.vs-word-panel__lexicon {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-muted, #666);
+  line-height: 1.5;
+}
+
+.vs-word-panel__lex-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-right: 0.3em;
+}

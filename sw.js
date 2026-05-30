@@ -1,18 +1,31 @@
 /* sw.js — Bible Study PWA service worker
  *
- * Strategy:
- *   HTML pages       → network-first (always get updates when online)
- *   assets/data      → cache-first (static content; update in background)
- *   install          → pre-cache the app shell immediately
- *   message PRECACHE → background-download all Bible data in idle chunks
+ * ── Cache strategy ─────────────────────────────────────────────────────────
+ *   HTML pages       → network-first  (always fresh when online)
+ *   CSS / JS / icons → cache-first    (APP_CACHE_V; bump to bust)
+ *   JSON data files  → cache-first    (DATA_CACHE_V; bump to bust independently)
+ *
+ * ── How to invalidate on deploy ───────────────────────────────────────────
+ *   • Changed HTML / CSS / JS / icons   → bump APP_CACHE_V (e.g. v19 → v20)
+ *   • Changed data file schema (JSON)   → bump DATA_CACHE_V (e.g. v1 → v2)
+ *   • Emergency full reset              → bump both
+ *   On activate, all caches whose key is neither APP_CACHE_V nor DATA_CACHE_V
+ *   are automatically deleted, so old caches are cleaned up on next SW update.
+ *
+ * ── Rollback procedure ────────────────────────────────────────────────────
+ *   1. Revert the bad commit and redeploy.
+ *   2. Bump APP_CACHE_V (and DATA_CACHE_V if data changed) in the new deploy.
+ *   3. The F9 SW update toast prompts online users to reload; they get the
+ *      reverted files immediately.  Offline users are unaffected until they
+ *      come online and accept the update prompt.
  */
 
 'use strict';
 
-var CACHE_VERSION = 'bsw-v15';
+var APP_CACHE_V  = 'bsw-app-v19';  // bump when HTML/CSS/JS/icon changes
+var DATA_CACHE_V = 'bsw-data-v1';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
-// These are the files needed to render any page offline.
 var SHELL_URLS = [
   './',
   './index.html',
@@ -114,20 +127,26 @@ var SHELL_URLS = [
   './data/plans/gospels-30-days.json',
   './data/devotionals/spurgeon-morning.json',
   './data/devotionals/spurgeon-evening.json',
+  // Extended lexicons
+  './data/strongs/bdb.json',
+  './data/strongs/thayer.json',
+  // New dictionaries & topical
+  './data/smith/index.json',
+  './data/hitchcock/index.json',
+  './data/torrey/torrey.json',
+  './dictionary/index.html',
+  './topical/index.html',
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────
 self.addEventListener('install', function (e) {
   e.waitUntil(
-    caches.open(CACHE_VERSION).then(function (cache) {
-      // Cache each shell URL individually so one failure doesn't abort the rest
+    caches.open(APP_CACHE_V).then(function (cache) {
       return Promise.all(
         SHELL_URLS.map(function (url) {
           return fetch(url).then(function (r) {
             if (r.ok) return cache.put(url, r);
-          }).catch(function () {
-            // Some pages may genuinely not exist yet — skip them silently
-          });
+          }).catch(function () {});
         })
       );
     }).then(function () {
@@ -138,10 +157,12 @@ self.addEventListener('install', function (e) {
 
 // ── Activate ───────────────────────────────────────────────────────────────
 self.addEventListener('activate', function (e) {
+  var currentCaches = [APP_CACHE_V, DATA_CACHE_V];
   e.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
-        keys.filter(function (k) { return k !== CACHE_VERSION; })
+        keys
+          .filter(function (k) { return currentCaches.indexOf(k) === -1; })
           .map(function (k) { return caches.delete(k); })
       );
     }).then(function () {
@@ -161,26 +182,31 @@ self.addEventListener('fetch', function (e) {
 
   var path = url.pathname;
 
-  // Navigation (HTML) → network-first, cache as fallback
+  // Navigation (HTML) → network-first, app cache as fallback
   if (req.mode === 'navigate') {
-    e.respondWith(networkFirst(req));
+    e.respondWith(networkFirst(req, APP_CACHE_V));
     return;
   }
 
-  // Data files and assets → cache-first, network fallback + background update
-  if (path.includes('/data/') || path.includes('/assets/') ||
-      path.endsWith('.css') || path.endsWith('.js') ||
-      path.endsWith('.json') || path.endsWith('.svg') || path.endsWith('.ico')) {
-    e.respondWith(cacheFirst(req));
+  // JSON data files → cache-first in DATA_CACHE_V (bust independently of app shell)
+  if (path.includes('/data/') || path.endsWith('.json')) {
+    e.respondWith(cacheFirst(req, DATA_CACHE_V));
+    return;
+  }
+
+  // App shell assets (CSS, JS, icons) → cache-first in APP_CACHE_V
+  if (path.includes('/assets/') || path.endsWith('.css') || path.endsWith('.js') ||
+      path.endsWith('.svg') || path.endsWith('.ico') || path.endsWith('.png')) {
+    e.respondWith(cacheFirst(req, APP_CACHE_V));
     return;
   }
 });
 
-function networkFirst(req) {
+function networkFirst(req, cacheName) {
   return fetch(req).then(function (response) {
     if (response.ok) {
       var clone = response.clone();
-      caches.open(CACHE_VERSION).then(function (cache) { cache.put(req, clone); });
+      caches.open(cacheName).then(function (cache) { cache.put(req, clone); });
     }
     return response;
   }).catch(function () {
@@ -195,10 +221,9 @@ function networkFirst(req) {
   });
 }
 
-function cacheFirst(req) {
-  return caches.open(CACHE_VERSION).then(function (cache) {
+function cacheFirst(req, cacheName) {
+  return caches.open(cacheName).then(function (cache) {
     return cache.match(req).then(function (cached) {
-      // Serve from cache immediately; fetch + update in background
       var networkFetch = fetch(req).then(function (response) {
         if (response.ok) cache.put(req, response.clone());
         return response;
@@ -229,38 +254,32 @@ function precacheBible(data) {
 
   var urls = [];
 
-  // Per-version Bible text (the largest dataset)
   versions.forEach(function (ver) {
     books.forEach(function (bid) {
       urls.push(base + 'data/bible/' + ver + '/' + bid + '.json');
     });
   });
 
-  // Supporting per-book data (mhcc = flat path; others in subdirs)
+  // Crossrefs and interlinear: small enough to pre-cache fully
   ['crossrefs', 'interlinear'].forEach(function (dir) {
     books.forEach(function (bid) {
       urls.push(base + 'data/' + dir + '/' + bid + '.json');
     });
   });
-  // MHC (legacy flat path) + additional commentaries
-  var commSources = ['', 'jfb', 'clarke', 'calvin', 'barnes'];
-  commSources.forEach(function (src) {
-    var prefix = src ? 'data/commentary/' + src + '/' : 'data/commentary/';
-    books.forEach(function (bid) {
-      urls.push(base + prefix + bid + '.json');
-    });
-  });
 
-  // Strong's dictionaries
+  // Commentary is ~74 MB across 330 files; excluded from auto pre-cache.
+  // Each commentary file is cached on first access via the DATA_CACHE_V cacheFirst
+  // strategy, so offline support is preserved for books the user actually reads.
+
   urls.push(base + 'data/strongs/greek.json');
   urls.push(base + 'data/strongs/hebrew.json');
 
-  // Parallels (not all books have data — failures are silently ignored)
   books.forEach(function (bid) {
     urls.push(base + 'data/parallels/' + bid + '.json');
   });
 
-  caches.open(CACHE_VERSION).then(function (cache) {
+  // All precached Bible data goes into DATA_CACHE_V
+  caches.open(DATA_CACHE_V).then(function (cache) {
     var CHUNK = 6;
     var i = 0;
 
@@ -270,13 +289,12 @@ function precacheBible(data) {
       i += CHUNK;
       Promise.all(slice.map(function (url) {
         return cache.match(url).then(function (hit) {
-          if (hit) return; // already cached — skip
+          if (hit) return;
           return fetch(url).then(function (r) {
             if (r.ok) cache.put(url, r.clone());
           }).catch(function () {});
         });
       })).then(function () {
-        // Yield between chunks so the SW doesn't block other requests
         setTimeout(nextChunk, 150);
       });
     }

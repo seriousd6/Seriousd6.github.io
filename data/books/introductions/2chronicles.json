@@ -36,19 +36,48 @@
   ],
   "key_verse": "2 Chronicles 7:14",
   "timeline": {
-    "date": "Events ~970–539 BC; written ~450 BC",
+    "date": "Written: c. 450–400 BC (covers ~971–538 BC)",
     "before": [
       {
-        "label": "1 Chronicles — David's preparation",
-        "ref": "1 Chronicles 29:1"
+        "label": "1 Chronicles — David's preparations and the temple vision",
+        "ref": "1 Chronicles 29:1",
+        "year": "c. 971 BC",
+        "type": "book"
+      },
+      {
+        "label": "Solomon builds and dedicates the temple",
+        "ref": "1 Kings 8:1",
+        "year": "c. 959 BC",
+        "type": "event"
+      },
+      {
+        "label": "Return from exile; temple rebuilding begins",
+        "ref": "Ezra 1:1",
+        "year": "c. 538 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "Ezra — the return from exile",
-        "ref": "Ezra 1:1"
+        "label": "Cyrus's decree — 'Let him go up'",
+        "ref": "2 Chronicles 36:23",
+        "year": "538 BC",
+        "type": "event"
+      },
+      {
+        "label": "Ezra — return, temple completion, Torah restoration",
+        "ref": "Ezra 1:1",
+        "year": "c. 458 BC",
+        "type": "book"
+      },
+      {
+        "label": "Nehemiah — walls rebuilt, covenant renewed",
+        "ref": "Nehemiah 1:1",
+        "year": "c. 445 BC",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "restoration"
   },
   "key_people": [
     {

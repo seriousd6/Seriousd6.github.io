@@ -43,14 +43,48 @@
   ],
   "key_verse": "Job 19:25",
   "timeline": {
-    "date": "Unknown; patriarchal setting likely",
-    "before": [],
+    "date": "Setting: Patriarchal era (~2000–1700 BC?)",
+    "before": [
+      {
+        "label": "Creation: God makes the good world and its inhabitants",
+        "ref": "Genesis 1:1",
+        "year": "Primeval",
+        "type": "event"
+      },
+      {
+        "label": "The fall: suffering, toil, and death enter creation",
+        "ref": "Genesis 3:17",
+        "year": "Primeval",
+        "type": "event"
+      },
+      {
+        "label": "Abraham called; the covenant promises given",
+        "ref": "Genesis 12:1",
+        "year": "c. 2000 BC",
+        "type": "event"
+      }
+    ],
     "after": [
       {
-        "label": "Psalms — the poetry of Israel's worship",
-        "ref": "Psalms 1:1"
+        "label": "The Psalms — wisdom and lament in the covenant community",
+        "ref": "Psalms 1:1",
+        "year": "c. 1000 BC",
+        "type": "book"
+      },
+      {
+        "label": "Proverbs — creation-order wisdom and the fear of the LORD",
+        "ref": "Proverbs 1:7",
+        "year": "c. 950 BC",
+        "type": "book"
+      },
+      {
+        "label": "Ecclesiastes — the limits of wisdom under the sun",
+        "ref": "Ecclesiastes 1:2",
+        "year": "c. 935 BC",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "patriarchs"
   },
   "key_people": [
     {

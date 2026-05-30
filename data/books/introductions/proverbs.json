@@ -43,19 +43,48 @@
   ],
   "key_verse": "Proverbs 3:5",
   "timeline": {
-    "date": "~950–700 BC",
+    "date": "Composed: c. 950–700 BC",
     "before": [
       {
-        "label": "Solomon's temple and reign",
-        "ref": "1 Kings 3:1"
+        "label": "Creation: God establishes the order that wisdom discerns",
+        "ref": "Genesis 1:1",
+        "year": "Primeval",
+        "type": "event"
+      },
+      {
+        "label": "Psalms — Israel's hymnbook and wisdom poetry",
+        "ref": "Psalms 1:1",
+        "year": "c. 1000 BC",
+        "type": "book"
+      },
+      {
+        "label": "Solomon's God-given wisdom at Gibeon",
+        "ref": "1 Kings 3:9",
+        "year": "c. 960 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "Ecclesiastes — wisdom's limits",
-        "ref": "Ecclesiastes 1:1"
+        "label": "Ecclesiastes — wisdom tested to its limits",
+        "ref": "Ecclesiastes 1:2",
+        "year": "c. 935 BC",
+        "type": "book"
+      },
+      {
+        "label": "Jesus as Wisdom incarnate — 'something greater than Solomon'",
+        "ref": "Matthew 12:42",
+        "year": "c. AD 29",
+        "type": "event"
+      },
+      {
+        "label": "James — the NT wisdom letter applying Proverbs' ethics",
+        "ref": "James 1:5",
+        "year": "c. AD 48",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "monarchy"
   },
   "key_people": [
     {

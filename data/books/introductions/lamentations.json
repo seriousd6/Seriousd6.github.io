@@ -41,19 +41,48 @@
   ],
   "key_verse": "Lamentations 3:22",
   "timeline": {
-    "date": "~586 BC",
+    "date": "c. 587 BC",
     "before": [
       {
-        "label": "Fall of Jerusalem to Babylon",
-        "ref": "2 Kings 25:1"
+        "label": "Daniel — Jews in the Babylonian court maintaining faithfulness",
+        "ref": "Daniel 1:1",
+        "year": "c. 605 BC",
+        "type": "book"
+      },
+      {
+        "label": "Jeremiah's decades of unheeded warnings fulfilled",
+        "ref": "Jeremiah 7:14",
+        "year": "c. 600 BC",
+        "type": "event"
+      },
+      {
+        "label": "Ezekiel — prophesying among the exiles in Babylon",
+        "ref": "Ezekiel 1:1",
+        "year": "c. 593 BC",
+        "type": "book"
       }
     ],
     "after": [
       {
-        "label": "Ezekiel — prophecy from Babylon",
-        "ref": "Ezekiel 1:1"
+        "label": "Jerusalem falls — walls breached, temple destroyed, king blinded",
+        "ref": "Jeremiah 52:12",
+        "year": "587 BC",
+        "type": "event"
+      },
+      {
+        "label": "Judah's leadership exiled to Babylon by Nebuchadnezzar",
+        "ref": "2 Kings 25:11",
+        "year": "587 BC",
+        "type": "event"
+      },
+      {
+        "label": "Cyrus's decree; exiles begin returning to Jerusalem",
+        "ref": "Ezra 1:1",
+        "year": "538 BC",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "exile"
   },
   "key_people": [
     {

@@ -44,19 +44,48 @@
   ],
   "key_verse": "Psalms 46:10",
   "timeline": {
-    "date": "~1000–400 BC",
+    "date": "Composed: c. 1000–400 BC",
     "before": [
       {
-        "label": "The Monarchy: Saul, David, Solomon",
-        "ref": "1 Samuel 8:1"
+        "label": "The Tabernacle established as the centre of worship",
+        "ref": "Exodus 40:34",
+        "year": "c. 1445 BC",
+        "type": "event"
+      },
+      {
+        "label": "2 Samuel — David's reign; his psalms composed in its context",
+        "ref": "2 Samuel 1:1",
+        "year": "c. 1010 BC",
+        "type": "book"
+      },
+      {
+        "label": "David anointed king; covenant with Abraham's line",
+        "ref": "2 Samuel 7:12",
+        "year": "c. 1000 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "NT: Jesus quotes Psalms more than any other book",
-        "ref": "Matthew 22:44"
+        "label": "Solomon's temple — Psalms sung in formal temple worship",
+        "ref": "1 Kings 8:1",
+        "year": "c. 959 BC",
+        "type": "event"
+      },
+      {
+        "label": "Jesus quotes or alludes to Psalms more than any other OT book",
+        "ref": "Matthew 22:44",
+        "year": "c. AD 30",
+        "type": "event"
+      },
+      {
+        "label": "Revelation — heavenly worship draws on the Psalms",
+        "ref": "Revelation 15:3",
+        "year": "c. AD 95",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "monarchy"
   },
   "key_people": [
     {

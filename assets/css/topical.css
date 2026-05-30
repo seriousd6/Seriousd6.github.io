@@ -274,3 +274,41 @@
 }
 
 /* ── Modal / VS Topics — styles live in bible-ui.css (loads on all pages) ── */
+
+/* ── Source tabs (Nave / Torrey) ─────────────────────────────────────────── */
+
+.topical-src-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.topical-src-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.topical-src-tab:hover {
+  background: var(--color-surface-alt, #f5f5f5);
+}
+
+.topical-src-tab--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.topical-src-tab__count {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}

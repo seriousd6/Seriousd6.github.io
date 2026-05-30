@@ -27,19 +27,48 @@
   ],
   "key_verse": "Daniel 7:13",
   "timeline": {
-    "date": "~605–535 BC",
+    "date": "Events: c. 605–530 BC",
     "before": [
       {
-        "label": "The Babylonian exile",
-        "ref": "2 Kings 25:1"
+        "label": "First Babylonian deportation — Daniel taken to Babylon",
+        "ref": "Daniel 1:1",
+        "year": "605 BC",
+        "type": "event"
+      },
+      {
+        "label": "Jeremiah — exile and restoration prophesied",
+        "ref": "Jeremiah 25:11",
+        "year": "c. 605 BC",
+        "type": "book"
+      },
+      {
+        "label": "Nebuchadnezzar destroys Jerusalem and the temple",
+        "ref": "2 Kings 25:1",
+        "year": "587 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "Cyrus's decree; the return from exile",
-        "ref": "Ezra 1:1"
+        "label": "Fall of Babylon to Cyrus the Persian",
+        "ref": "Daniel 5:30",
+        "year": "539 BC",
+        "type": "world"
+      },
+      {
+        "label": "Cyrus's decree; exiles return under Zerubbabel",
+        "ref": "Ezra 1:1",
+        "year": "538 BC",
+        "type": "event"
+      },
+      {
+        "label": "Jesus claims to be the 'Son of Man' of Daniel 7",
+        "ref": "Mark 14:62",
+        "year": "c. AD 30",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "exile"
   },
   "key_people": [
     {

@@ -37,14 +37,36 @@
   ],
   "key_verse": "Genesis 12:3",
   "timeline": {
-    "date": "Events: ~4000–1700 BC (approx.)",
-    "before": [],
+    "date": "Events: ~4000–1700 BC",
+    "before": [
+      {
+        "label": "Before creation: the eternal God",
+        "year": "Eternity",
+        "type": "event",
+        "ref": "Psalm 90:2"
+      }
+    ],
     "after": [
       {
-        "label": "The Exodus",
-        "ref": "Exodus 1:1"
+        "label": "The Exodus from Egypt",
+        "ref": "Exodus 3:1",
+        "year": "c. 1446 BC",
+        "type": "event"
+      },
+      {
+        "label": "Sinai Covenant — God's law given to Israel",
+        "ref": "Exodus 19:1",
+        "year": "c. 1446 BC",
+        "type": "event"
+      },
+      {
+        "label": "Israel enters the Promised Land",
+        "ref": "Joshua 1:1",
+        "year": "c. 1406 BC",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "patriarchs"
   },
   "key_people": [
     {

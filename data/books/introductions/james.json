@@ -43,19 +43,48 @@
   ],
   "key_verse": "James 2:26",
   "timeline": {
-    "date": "~AD 45–50",
+    "date": "c. AD 45–49 (earliest NT letter)",
     "before": [
       {
-        "label": "Jerusalem Council, ~AD 49",
-        "ref": "Acts 15:13"
+        "label": "Jesus' Sermon on the Mount — the conceptual matrix of the letter",
+        "ref": "Matthew 5:1",
+        "year": "c. AD 28",
+        "type": "event"
+      },
+      {
+        "label": "Pentecost and the scattered Jerusalem church",
+        "ref": "Acts 8:1",
+        "year": "c. AD 35",
+        "type": "event"
+      },
+      {
+        "label": "James leads the Jerusalem church as its primary elder",
+        "ref": "Acts 15:13",
+        "year": "c. AD 49",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "James's martyrdom under Annas II, ~AD 62",
-        "ref": "Acts 12:17"
+        "label": "Jerusalem Council — James presides over the church's first major dispute",
+        "ref": "Acts 15:13",
+        "year": "c. AD 49",
+        "type": "event"
+      },
+      {
+        "label": "James seals his witness — a servant of God and the Lord Jesus Christ to the end",
+        "ref": "James 1:1",
+        "year": "c. AD 62",
+        "type": "event"
+      },
+      {
+        "label": "1 Peter — suffering and diaspora life addressed similarly",
+        "ref": "1 Peter 1:1",
+        "year": "c. AD 62–64",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "church"
   },
   "key_people": [
     {

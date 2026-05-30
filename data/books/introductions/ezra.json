@@ -27,19 +27,48 @@
   ],
   "key_verse": "Ezra 7:10",
   "timeline": {
-    "date": "~538–458 BC",
+    "date": "Events: c. 538–458 BC",
     "before": [
       {
-        "label": "Cyrus's decree ending the exile",
-        "ref": "2 Chronicles 36:22"
+        "label": "Fall of Babylon to Persia under Cyrus",
+        "ref": "2 Chronicles 36:22",
+        "year": "539 BC",
+        "type": "world"
+      },
+      {
+        "label": "Jeremiah's seventy-year exile prophecy fulfilled",
+        "ref": "Jeremiah 25:11",
+        "year": "538 BC",
+        "type": "event"
+      },
+      {
+        "label": "Zerubbabel leads the first wave of exiles home",
+        "ref": "Ezra 2:2",
+        "year": "c. 538 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "Nehemiah — rebuilding the walls",
-        "ref": "Nehemiah 1:1"
+        "label": "Temple completed and dedicated",
+        "ref": "Ezra 6:16",
+        "year": "516 BC",
+        "type": "event"
+      },
+      {
+        "label": "Nehemiah rebuilds Jerusalem's walls",
+        "ref": "Nehemiah 2:17",
+        "year": "c. 445 BC",
+        "type": "event"
+      },
+      {
+        "label": "Ezra publicly reads the Law — covenant renewal",
+        "ref": "Nehemiah 8:1",
+        "year": "c. 444 BC",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "restoration"
   },
   "key_people": [
     {

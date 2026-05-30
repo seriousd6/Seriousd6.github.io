@@ -340,3 +340,48 @@
   color: var(--color-muted, #aaa);
   font-style: italic;
 }
+
+/* ── Source tabs (Easton / Smith / Names) ────────────────────────────────── */
+
+.dict-src-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.dict-src-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.dict-src-tab:hover {
+  background: var(--color-surface-alt, #f5f5f5);
+}
+
+.dict-src-tab--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.dict-src-tab__count {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.dict-detail__meaning {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0;
+}

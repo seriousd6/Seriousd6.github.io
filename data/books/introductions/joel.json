@@ -32,14 +32,48 @@
   ],
   "key_verse": "Joel 2:28",
   "timeline": {
-    "date": "~835 or ~400 BC (debated)",
-    "before": [],
+    "date": "c. 400 BC (post-exilic, disputed)",
+    "before": [
+      {
+        "label": "Zechariah — post-exilic visions and the coming Day",
+        "ref": "Zechariah 14:1",
+        "year": "c. 520 BC",
+        "type": "book"
+      },
+      {
+        "label": "Malachi — the post-exilic community's spiritual drift",
+        "ref": "Malachi 1:1",
+        "year": "c. 450 BC",
+        "type": "book"
+      },
+      {
+        "label": "Locust plague devastates the land — the immediate crisis",
+        "ref": "Joel 1:4",
+        "year": "uncertain",
+        "type": "event"
+      }
+    ],
     "after": [
       {
-        "label": "Peter quotes Joel 2 at Pentecost",
-        "ref": "Acts 2:16"
+        "label": "Pentecost — the Spirit poured on all flesh as Joel promised",
+        "ref": "Acts 2:16",
+        "year": "c. AD 30",
+        "type": "event"
+      },
+      {
+        "label": "Paul — 'Everyone who calls on the name of the Lord will be saved'",
+        "ref": "Romans 10:13",
+        "year": "c. AD 57",
+        "type": "event"
+      },
+      {
+        "label": "Revelation — the great Day of the LORD's final arrival",
+        "ref": "Revelation 6:17",
+        "year": "c. AD 95",
+        "type": "event"
       }
-    ]
+    ],
+    "period": "restoration"
   },
   "key_people": [
     {

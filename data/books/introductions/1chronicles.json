@@ -36,19 +36,48 @@
   ],
   "key_verse": "1 Chronicles 29:11",
   "timeline": {
-    "date": "Events ~1010–970 BC; written ~450 BC",
+    "date": "Written: c. 450–400 BC (covers ~2000–971 BC)",
     "before": [
       {
-        "label": "The exile to Babylon",
-        "ref": "2 Kings 25:1"
+        "label": "2 Samuel — David's reign; the events Chronicles revisits",
+        "ref": "2 Samuel 5:1",
+        "year": "c. 1010 BC",
+        "type": "book"
+      },
+      {
+        "label": "David prepares the temple order; Levitical guilds organized",
+        "ref": "1 Chronicles 25:1",
+        "year": "c. 990 BC",
+        "type": "event"
+      },
+      {
+        "label": "Return from exile under Zerubbabel",
+        "ref": "Ezra 2:1",
+        "year": "c. 538 BC",
+        "type": "event"
       }
     ],
     "after": [
       {
-        "label": "2 Chronicles — Solomon through the exile",
-        "ref": "2 Chronicles 1:1"
+        "label": "Ezra — the post-exilic community reconstituted",
+        "ref": "Ezra 1:1",
+        "year": "c. 538 BC",
+        "type": "book"
+      },
+      {
+        "label": "Temple foundation laid; rebuilding stalls for 16 years",
+        "ref": "Ezra 3:10",
+        "year": "c. 536 BC",
+        "type": "event"
+      },
+      {
+        "label": "2 Chronicles — Solomon through the fall of Jerusalem",
+        "ref": "2 Chronicles 1:1",
+        "year": "c. 450 BC",
+        "type": "book"
       }
-    ]
+    ],
+    "period": "restoration"
   },
   "key_people": [
     {

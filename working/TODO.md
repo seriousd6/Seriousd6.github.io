@@ -20,7 +20,7 @@ Track progress here. Mark items `[x]` when complete.
 
 ## Bugs
 
-- [ ] **BUG-1. Memory — completing the last card does nothing**
+- [x] **BUG-1. Memory — completing the last card does nothing**
   - After scoring the final card in a review session, the UI sits on a blank or stale state with no feedback
   - Add a "completion card" that appears after the last card is scored: brief encouragement text
     (e.g., "Session complete — well done! You reviewed N verses."), today's review count, and a
@@ -29,7 +29,7 @@ Track progress here. Mark items `[x]` when complete.
     score needs to render the completion view rather than calling `_memShowCard()` again
   - Completion state should also update the summary stats visible in the Browse panel
 
-- [ ] **BUG-2. Commentaries not visible in the Reader pane**
+- [x] **BUG-2. Commentaries not visible in the Reader pane**
   - The Commentary tab in the verse modal works, but the Reader's right-hand pane does not show
     commentary content when selected
   - Trace `_refreshCommentaryPanel()` (or equivalent) in `bible.js` — check whether the call is
@@ -37,20 +37,20 @@ Track progress here. Mark items `[x]` when complete.
   - Expected behavior: selecting "Commentary" in the reader right-pane tab loads the relevant
     commentary entry for the currently visible passage, identical to the modal's Commentary tab
 
-- [ ] **BUG-3. Topics tab in verse modal needs more breathing room**
+- [x] **BUG-3. Topics tab in verse modal needs more breathing room**
   - The Topics tab content (Nave's topic chips) is visually cramped — insufficient padding between
     the chip row, the count line, and the "Browse all" link (see screenshot: chips sit flush against
     the tab border)
   - Add `padding-top` / `gap` adjustments to the `.bsw-modal-topics` container in `bible-ui.css`;
     match the visual rhythm of the Verse and Commentary tabs
 
-- [ ] **BUG-4. Search page label still reads "Omni-search" — should be "Search"**
+- [x] **BUG-4. Search page label still reads "Omni-search" — should be "Search"**
   - The search page (`search/index.html`) heading or tab label was renamed to "Omni-search" during
     development but should simply read "Search" in all user-visible text
   - Update: page `<title>`, `<h1>` / heading element, sidebar nav entry in `main.js`, and any
     `aria-label` or placeholder text that still says "Omni-search"
 
-- [ ] **BUG-5. Book-study banner doesn't clear when navigating to a book with no study**
+- [x] **BUG-5. Book-study banner doesn't clear when navigating to a book with no study**
   - When a book with an available study is selected in the Reader, the "Study available" banner appears
   - Navigating to a different book that has no study should clear the banner; navigating to a book
     that has a study should update it to that book's study
@@ -58,7 +58,7 @@ Track progress here. Mark items `[x]` when complete.
     on every navigation event, not just on initial page load or when a study is found — an explicit
     "hide banner" path is needed for the no-study case
 
-- [ ] **BUG-6. Notes in the Reader pane cannot be deleted**
+- [x] **BUG-6. Notes in the Reader pane cannot be deleted**
   - Personal notes added to verses are visible in the Reader's notes panel but there is no delete
     button or action — once created, a note can only be edited, not removed
   - Add a delete (×) button to each note entry in the Reader pane; wire it to the existing
@@ -348,7 +348,7 @@ with public domain data and the existing `bible.js` infrastructure.
 
 ## Phase D — Content & Reference
 
-- [ ] **D1. Library section — complete the confessions data** *(effort: ongoing)*
+- [x] **D1. Library section — complete the confessions data** *(effort: ongoing)*
 
   ### Data structure (`data/library/`)
   ```
@@ -425,7 +425,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - Each entry links to the full section in the Reader
   - **VS1 integration:** same data powers the Confessional Citations section in Verse Study
 
-- [ ] **D2. New topic studies** *(ongoing — target: 5+ more)*
+- [x] **D2. New topic studies** *(ongoing — target: 5+ more)*
   - Currently: Prayer, Book of Revelation (2 exist)
   - Priority additions:
     - Justification by Faith
@@ -437,14 +437,14 @@ with public domain data and the existing `bible.js` infrastructure.
     - Christology (Person & Work of Christ)
   - Use `scripts/new-topic.sh` for scaffolding; follow `topics/_template/index.html`
 
-- [ ] **D3. Church Fathers library**
+- [x] **D3. Church Fathers library**
   - Per-Father pages (Ignatius, Justin Martyr, Irenaeus, Tertullian, Origen, Chrysostom, Augustine, etc.)
   - Key writings and quotes organized by theological topic
   - All Scripture refs linked via `.ref` system
   - Could reuse the Library JSON structure from D1
   - **VS1 integration:** Father quotes for a verse surface in the Church Fathers section of Verse Study
 
-- [ ] **D4. Bible dictionary / glossary**
+- [x] **D4. Bible dictionary / glossary**
   - Theological term definitions (propitiation, sanctification, covenant, imputation, etc.)
   - Biblical character profiles
   - Place name guide
@@ -453,7 +453,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - Integration: hover over a `<span class="term">` → definition tooltip; standalone `dictionary/index.html`
   - **VS1 integration:** Dictionary Terms section highlights theological terms in the focal verse text
 
-- [ ] **D5. Book introductions & outlines** *(effort: 1–2 weeks)*
+- [x] **D5. Book introductions & outlines** *(effort: 1–2 weeks)*
   - Per-book intro for all 66 books: author, date written, purpose, key themes, structural outline
   - Outline uses section-level labels with verse ranges (e.g., "Matthew 5–7: Sermon on the Mount") — each section links directly to the Reader at that chapter
   - **Historical timeline strip** — each book intro includes an estimated date range and a mini-timeline showing 1–2 significant biblical events immediately preceding and following the book, so the reader can place it in redemptive-historical context at a glance
@@ -468,7 +468,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - **Dependency note:** F12 (Chapter 0 navigation) is the UI wire-up for this data; F12 can ship
     with placeholder intros before D5 data is complete, but D5 must finish for Chapter 0 to be useful
 
-- [ ] **D6. Spurgeon's Morning and Evening devotionals** *(effort: 2–3 days)*
+- [x] **D6. Spurgeon's Morning and Evening devotionals** *(effort: 2–3 days)*
   - Public domain daily devotional (C.H. Spurgeon, 1865) — 365 morning + 365 evening entries
   - Each entry keyed to a Bible verse; surfaces in Verse Study for relevant verses
   - Data: `data/devotionals/spurgeon-morning.json` + `data/devotionals/spurgeon-evening.json` (keyed by `MM-DD`)
@@ -476,7 +476,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - Source: CCEL.org plain text files; public domain
   - Complementary to D7 (VOTD) and C3 (reading plans)
 
-- [ ] **D7. Verse of the Day** *(effort: 2–4 hours)*
+- [x] **D7. Verse of the Day** *(effort: 2–4 hours)*
   - Home page widget showing today's featured verse with full tooltip/modal on hover/click
   - Implementation: static `data/votd.json` — curated list of 365 verse refs; selected by `dayOfYear % 365`
   - No API dependency, no backend, no CORS — consistent with the static-first design; works offline after B4
@@ -525,38 +525,38 @@ with public domain data and the existing `bible.js` infrastructure.
   - Needs to determine: which UI elements are missing tabindex or focus styles, whether focus
     trapping in modals is implemented correctly, and whether the skip-nav link exists
 
-- [ ] **F1. Dark mode toggle**
+- [x] **F1. Dark mode toggle**
   - CSS custom properties are already structured for it (all colors via `--color-*` variables)
   - Toggle button in header, preference saved to `localStorage` key `bsw_theme`
   - `prefers-color-scheme` media query as the default, manual toggle overrides it
 
-- [ ] **F2. Copy / Share verse** *(effort: 1–2 hours)*
+- [x] **F2. Copy / Share verse** *(effort: 1–2 hours)*
   - One-click copy button in the verse modal, Reader verse-number popup menu, and Verse Study page
   - Default format: `"For God so loved the world…" — John 3:16 (BSB)`
   - Optional formats selectable via a small dropdown: Plain text | Markdown blockquote | Academic citation (`John 3:16, Berean Standard Bible, 2022`)
   - Implementation: `navigator.clipboard.writeText()`; `execCommand('copy')` fallback for older browsers
   - Universal expectation; currently absent from the entire site
 
-- [ ] **F3. Text accessibility controls** *(effort: 3–4 hours)*
+- [x] **F3. Text accessibility controls** *(effort: 3–4 hours)*
   - Font size control in Reader and Verse Study: Small / Medium / Large / XL
   - Preference saved to `localStorage` key `bsw_fontsize`; applied via CSS custom property `--reader-font-size`
   - `reader.css` already uses `--reader-font-size`; needs a toggle UI and localStorage wiring
   - Optional: serif / sans-serif toggle (Georgia default vs. system-ui)
   - Critical for older users and mobile reading comfort
 
-- [ ] **F4. Read history / recently viewed** *(effort: 2–3 hours)*
+- [x] **F4. Read history / recently viewed** *(effort: 2–3 hours)*
   - Last 10 passages viewed in the Reader saved to `localStorage` key `bsw_history`
   - Each entry: `{ ref: "John 3", version: "BSB", timestamp: … }`
   - Displayed in sidebar (collapsible "Recently viewed" group) or home page "Continue reading…" widget
   - Shown as "John 3 · BSB · 2 days ago" with a direct link back to the Reader
 
-- [ ] **F5. Print-friendly chapter view** *(effort: 2–4 hours)*
+- [x] **F5. Print-friendly chapter view** *(effort: 2–4 hours)*
   - "Print this chapter" button in Reader toolbar
   - Applies `@media print` styles: hide sidebar, nav, cross-ref panel; full-width verse text, clean margins, page break handling
   - Some print CSS already exists in stylesheets; needs a dedicated button and a layout audit pass
   - Important for physical Bible study groups and sermon prep
 
-- [ ] **F6. Structured citation format** *(effort: 1–2 hours)*
+- [x] **F6. Structured citation format** *(effort: 1–2 hours)*
   - "Cite" button in verse modal and Verse Study page
   - Copies the verse in a selectable academic format:
     - Short: `John 3:16 (BSB)`
@@ -565,7 +565,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - Distinct from F2 (which copies verse text + ref); this copies a citation string only
   - Useful for sermon notes, academic papers, Bible study handouts
 
-- [ ] **F7. Read history / "Continue Reading" home widget** *(effort: 2–3 hours)*
+- [x] **F7. Read history / "Continue Reading" home widget** *(effort: 2–3 hours)*
   - Record the last 20 passages viewed in the Reader to `localStorage` key `bsw_history` as
     `{ ref: "John 3", version: "BSB", ts: <timestamp> }` — push on each `initReader` call,
     deduplicate by `ref`, trim to 20 entries; logic in `bible.js` alongside existing localStorage helpers
@@ -577,7 +577,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - CSS: one `.daily-card--history` modifier in `daily.css`; reuses existing `.daily-card` shell
   - **F4 dependency:** F4 and F7 share the same storage write; implementing both together is efficient
 
-- [ ] **F8. Keyboard shortcuts help overlay** *(effort: 2–4 hours)*
+- [x] **F8. Keyboard shortcuts help overlay** *(effort: 2–4 hours)*
   - Several keyboard shortcuts exist (j / → next chapter, k / ← prev, Ctrl+K search jump) but
     are completely undiscoverable unless the user reads the source code
   - Press `?` anywhere outside an input field → open a modal overlay listing all active shortcuts
@@ -590,7 +590,7 @@ with public domain data and the existing `bible.js` infrastructure.
     mouse users can discover it too
   - No new CSS file needed; a `.bsw-shortcuts-overlay` block in `bible-ui.css` is sufficient
 
-- [ ] **F9. Service worker update toast** *(effort: 2–3 hours)*
+- [x] **F9. Service worker update toast** *(effort: 2–3 hours)*
   - The SW currently calls `SKIP_WAITING` immediately on `updatefound` → `statechange`, silently
     activating a new cache version; the user's open tab serves stale JS/CSS until they manually reload
   - Change the handler so that instead of calling `SKIP_WAITING` immediately, it shows a
@@ -602,7 +602,7 @@ with public domain data and the existing `bible.js` infrastructure.
     `if (navigator.serviceWorker.controller)` guard covers this)
   - The `sw.js` message handler that responds to `SKIP_WAITING` is already present — no SW changes needed
 
-- [ ] **F10. Open Graph / Twitter Card meta tags** *(effort: 3–5 hours)*
+- [x] **F10. Open Graph / Twitter Card meta tags** *(effort: 3–5 hours)*
   - All `?ref=` URLs in `read/`, `verse-study/`, and `compare/` produce blank link previews when
     shared to Slack, iMessage, or social media — no `<meta property="og:*">` tags exist anywhere
   - Add `_setOGMeta(title, description, url)` helper in `bible.js` that creates/updates OG + Twitter
@@ -614,7 +614,7 @@ with public domain data and the existing `bible.js` infrastructure.
     crawlers that do not execute JS; JS overrides them once content loads
   - No new data files; ~30 lines of JS + 4 `<meta>` tags per HTML page
 
-- [ ] **F11. Reader opens to daily verse when no reference is given** *(effort: 1–2 hours)*
+- [x] **F11. Reader opens to daily verse when no reference is given** *(effort: 1–2 hours)*
   - Currently navigating to `read/index.html` with no `?ref=` parameter shows a blank or default state
   - On load, if no `ref` query param is present, derive today's verse from the same logic that
     powers the Verse of the Day widget (D7): `data/votd.json` keyed by `dayOfYear % 365`
@@ -623,7 +623,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - **Dependency:** D7 (VOTD data) must be built first; until then, fall back to a hardcoded
     welcome verse (e.g., Psalm 119:105) as a placeholder
 
-- [ ] **F12. End-of-book navigation: Chapter 0 introduction + in-reader book metadata button** *(effort: 1–2 days)*
+- [x] **F12. End-of-book navigation: Chapter 0 introduction + in-reader book metadata button** *(effort: 1–2 days)*
 
   ### Chapter 0 — Book Introduction as a navigable chapter
 

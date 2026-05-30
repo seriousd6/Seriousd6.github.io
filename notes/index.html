@@ -10,14 +10,16 @@
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <style>
     .notes-page { max-width: 720px; margin: 0 auto; }
+
+    /* ── Toolbar ── */
     .notes-toolbar {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.25rem;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
       flex-wrap: wrap;
     }
-    .notes-toolbar__title { flex: 1; margin: 0; font-size: 1.5rem; }
+    .notes-toolbar__title { flex: 1; margin: 0; font-size: 1.5rem; min-width: 0; }
     .notes-btn {
       font-family: var(--font-ui);
       font-size: 0.82rem;
@@ -28,14 +30,50 @@
       background: var(--color-surface);
       color: var(--color-text);
       text-decoration: none;
+      white-space: nowrap;
     }
     .notes-btn:hover { background: var(--color-border); }
-    .notes-empty {
-      font-family: var(--font-ui);
-      color: var(--color-muted);
-      padding: 1.5rem 0;
-      font-size: 0.95rem;
+
+    /* ── H2: Search + filter row ── */
+    .notes-search-row {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
     }
+    .notes-search-input {
+      flex: 1;
+      min-width: 160px;
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+      padding: 0.38rem 0.75rem;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+    .notes-search-input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+    .notes-chips { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+    .notes-chip {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .notes-chip:hover { border-color: var(--color-accent); color: var(--color-text); }
+    .notes-chip--active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
+    /* ── Count + empty ── */
+    .notes-count { font-family: var(--font-ui); font-size: 0.85rem; color: var(--color-muted); margin: 0 0 0.85rem; }
+    .notes-empty { font-family: var(--font-ui); color: var(--color-muted); padding: 1.5rem 0; font-size: 0.95rem; }
+
+    /* ── List items ── */
     .notes-list { list-style: none; margin: 0; padding: 0; }
     .notes-item {
       border: 1px solid var(--color-border);
@@ -44,58 +82,52 @@
       padding: 0.75rem 1rem;
       background: var(--color-surface);
     }
-    .notes-item--highlighted { border-left: 4px solid #b8860b; }
-    .notes-item__header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-    .notes-item__ref {
-      font-family: var(--font-ui);
-      font-weight: 700;
-      color: var(--color-primary);
-      font-size: 1rem;
-    }
+    /* H1: color-aware left borders */
+    .notes-item--hl-yellow { border-left: 4px solid #c9a000; }
+    .notes-item--hl-green  { border-left: 4px solid #2d7a2d; }
+    .notes-item--hl-blue   { border-left: 4px solid #1a5fa8; }
+    .notes-item--hl-pink   { border-left: 4px solid #a83060; }
+
+    .notes-item__header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; flex-wrap: wrap; }
+    .notes-item__ref { font-family: var(--font-ui); font-weight: 700; color: var(--color-primary); font-size: 1rem; }
     .notes-item__badge {
       font-family: var(--font-ui);
       font-size: 0.72rem;
       padding: 0.1rem 0.5rem;
       border-radius: 10px;
-      background: rgba(255, 220, 60, 0.35);
-      color: #7a6000;
-      border: 1px solid #d4aa00;
+      border: 1px solid currentColor;
     }
-    .notes-item__note {
-      font-family: var(--font-body, serif);
-      font-size: 0.9rem;
-      color: var(--color-text);
-      margin: 0 0 0.5rem;
-      white-space: pre-wrap;
-    }
-    .notes-item__actions {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .notes-item__link {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-primary);
-      text-decoration: none;
-    }
+    /* H1: color-coded badge variants */
+    .notes-item__badge--yellow { color: #856800; background: rgba(255,220,50,0.2); }
+    .notes-item__badge--green  { color: #2d7a2d; background: rgba(70,180,90,0.15); }
+    .notes-item__badge--blue   { color: #1a5fa8; background: rgba(50,130,220,0.12); }
+    .notes-item__badge--pink   { color: #a83060; background: rgba(210,60,120,0.12); }
+
+    .notes-item__note { font-family: var(--font-body, serif); font-size: 0.9rem; color: var(--color-text); margin: 0 0 0.5rem; white-space: pre-wrap; }
+    .notes-item__actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .notes-item__link { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-primary); text-decoration: none; }
     .notes-item__link:hover { text-decoration: underline; }
-    .notes-item__del {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-muted);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
+    .notes-item__del { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-muted); background: none; border: none; cursor: pointer; padding: 0; }
     .notes-item__del:hover { color: #c00; }
+
+    /* ── H3: Import toast ── */
+    .notes-toast {
+      position: fixed;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2a4a2a;
+      color: #d4f0d4;
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+      z-index: 9999;
+      max-width: 90vw;
+      text-align: center;
+    }
+    .notes-toast--error { background: #4a2a2a; color: #f0d4d4; }
   </style>
 </head>
 <body>
@@ -104,56 +136,110 @@
 
       <div class="notes-toolbar">
         <h1 class="notes-toolbar__title">My Notes</h1>
+        <!-- H3: Import button -->
+        <button class="notes-btn" id="notes-import-btn" type="button">Import backup</button>
+        <input type="file" id="notes-import-file" accept=".json" style="display:none" />
         <button class="notes-btn" id="notes-export-text" type="button">Export as text</button>
         <button class="notes-btn" id="notes-export-json" type="button">Export JSON</button>
         <a class="notes-btn" href="../">← Home</a>
       </div>
 
-      <p id="notes-count" style="font-family:var(--font-ui);font-size:0.85rem;color:var(--color-muted);margin:0 0 1rem;"></p>
+      <!-- H2: Search + filter chips -->
+      <div class="notes-search-row">
+        <input type="search" id="notes-search" class="notes-search-input"
+               placeholder="Search by reference or note text…" autocomplete="off" />
+        <div class="notes-chips">
+          <button class="notes-chip notes-chip--active" data-filter="all" type="button">All</button>
+          <button class="notes-chip" data-filter="highlighted" type="button">Highlighted</button>
+          <button class="notes-chip" data-filter="notes" type="button">Notes only</button>
+        </div>
+      </div>
 
+      <p class="notes-count" id="notes-count"></p>
       <ul class="notes-list" id="notes-list"></ul>
       <p class="notes-empty" id="notes-empty" hidden>
-        No notes yet. Open the Reader and click a verse number to highlight or add a note.
+        No notes yet. Open the Reader, click a verse number, then use the Notes tab to highlight or add a note.
       </p>
 
     </div>
   </main>
 
+  <!-- H3: import result toast -->
+  <div id="notes-toast" class="notes-toast" hidden></div>
+
   <script src="../assets/js/bible.js"></script>
   <script>
     (function () {
-      var NOTES_KEY = 'bsw_notes';
+      var NOTES_KEY  = 'bsw_notes';
       var READER_URL = '../read/';
-      var VS_URL = '../verse-study/';
+      var VS_URL     = '../verse-study/';
+
+      var _filter = 'all';
+      var _query  = '';
 
       function getNotes() {
         try { return JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); }
         catch (e) { return {}; }
       }
-      function saveAllNotes(obj) {
-        localStorage.setItem(NOTES_KEY, JSON.stringify(obj));
+      function saveAllNotes(obj) { localStorage.setItem(NOTES_KEY, JSON.stringify(obj)); }
+
+      // H1: normalize stored highlight → color string or false
+      function normHl(val) {
+        if (!val) return false;
+        if (val === true) return 'yellow'; // backward compat
+        return val;
+      }
+
+      function matchesFilter(ref, n) {
+        var hl = normHl(n.highlight);
+        if (_filter === 'highlighted' && !hl) return false;
+        if (_filter === 'notes' && !n.note) return false;
+        if (_query) {
+          var q = _query.toLowerCase();
+          if (!ref.toLowerCase().includes(q) && !(n.note && n.note.toLowerCase().includes(q))) return false;
+        }
+        return true;
       }
 
       function render() {
-        var notes = getNotes();
-        var refs = Object.keys(notes).sort();
-        var listEl = document.getElementById('notes-list');
+        var notes   = getNotes();
+        var refs    = Object.keys(notes).sort();
+        var listEl  = document.getElementById('notes-list');
         var emptyEl = document.getElementById('notes-empty');
         var countEl = document.getElementById('notes-count');
 
         listEl.innerHTML = '';
+
         if (refs.length === 0) {
           emptyEl.hidden = false;
           countEl.textContent = '';
           return;
         }
         emptyEl.hidden = true;
-        countEl.textContent = refs.length + ' verse' + (refs.length !== 1 ? 's' : '') + ' annotated';
 
-        refs.forEach(function (ref) {
-          var n = notes[ref];
+        var visible = refs.filter(function (ref) { return matchesFilter(ref, notes[ref]); });
+
+        if (visible.length === refs.length) {
+          countEl.textContent = refs.length + ' verse' + (refs.length !== 1 ? 's' : '') + ' annotated';
+        } else {
+          countEl.textContent = 'Showing ' + visible.length + ' of ' + refs.length + ' annotated verses';
+        }
+
+        if (visible.length === 0) {
+          var nm = document.createElement('p');
+          nm.className = 'notes-empty';
+          nm.style.display = 'block';
+          nm.textContent = 'No notes match your search or filter.';
+          listEl.appendChild(nm);
+          return;
+        }
+
+        visible.forEach(function (ref) {
+          var n  = notes[ref];
+          var hl = normHl(n.highlight);
+
           var li = document.createElement('li');
-          li.className = 'notes-item' + (n.highlight ? ' notes-item--highlighted' : '');
+          li.className = 'notes-item' + (hl ? ' notes-item--hl-' + hl : '');
 
           var header = document.createElement('div');
           header.className = 'notes-item__header';
@@ -163,10 +249,11 @@
           refEl.textContent = ref;
           header.appendChild(refEl);
 
-          if (n.highlight) {
+          // H1: color-coded highlight badge
+          if (hl) {
             var badge = document.createElement('span');
-            badge.className = 'notes-item__badge';
-            badge.textContent = '★ highlighted';
+            badge.className = 'notes-item__badge notes-item__badge--' + hl;
+            badge.textContent = '★ ' + hl;
             header.appendChild(badge);
           }
           li.appendChild(header);
@@ -210,34 +297,109 @@
         });
       }
 
-      // Export as plain text
+      // ── H2: Search & filter ──────────────────────────────────────────────────
+
+      document.getElementById('notes-search').addEventListener('input', function () {
+        _query = this.value.trim();
+        render();
+      });
+
+      document.querySelectorAll('.notes-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          document.querySelectorAll('.notes-chip').forEach(function (c) { c.classList.remove('notes-chip--active'); });
+          chip.classList.add('notes-chip--active');
+          _filter = chip.getAttribute('data-filter');
+          render();
+        });
+      });
+
+      // ── Exports ──────────────────────────────────────────────────────────────
+
       document.getElementById('notes-export-text').addEventListener('click', function () {
         var notes = getNotes();
         var refs = Object.keys(notes).sort();
-        if (refs.length === 0) { alert('No notes to export.'); return; }
+        if (!refs.length) { alert('No notes to export.'); return; }
         var lines = refs.map(function (ref) {
           var n = notes[ref];
           var parts = [ref];
-          if (n.highlight) parts.push('[highlighted]');
+          var hl = normHl(n.highlight);
+          if (hl) parts.push('[highlighted: ' + hl + ']');
           if (n.note) parts.push(n.note);
           return parts.join('\n');
         });
-        var blob = new Blob([lines.join('\n\n')], { type: 'text/plain' });
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'bible-notes.txt';
-        a.click();
+        download(new Blob([lines.join('\n\n')], { type: 'text/plain' }), 'bible-notes.txt');
       });
 
-      // Export as JSON
       document.getElementById('notes-export-json').addEventListener('click', function () {
         var notes = getNotes();
-        if (Object.keys(notes).length === 0) { alert('No notes to export.'); return; }
-        var blob = new Blob([JSON.stringify(notes, null, 2)], { type: 'application/json' });
+        if (!Object.keys(notes).length) { alert('No notes to export.'); return; }
+        download(new Blob([JSON.stringify(notes, null, 2)], { type: 'application/json' }), 'bible-notes.json');
+      });
+
+      function download(blob, name) {
         var a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'bible-notes.json';
+        a.download = name;
         a.click();
+      }
+
+      // ── H3: Import from backup ───────────────────────────────────────────────
+
+      function showToast(msg, isError) {
+        var t = document.getElementById('notes-toast');
+        t.textContent = msg;
+        t.className = 'notes-toast' + (isError ? ' notes-toast--error' : '');
+        t.hidden = false;
+        setTimeout(function () { t.hidden = true; }, 5000);
+      }
+
+      document.getElementById('notes-import-btn').addEventListener('click', function () {
+        document.getElementById('notes-import-file').click();
+      });
+
+      document.getElementById('notes-import-file').addEventListener('change', function () {
+        var file = this.files && this.files[0];
+        if (!file) return;
+        this.value = ''; // reset so same file can be reimported
+
+        var fr = new FileReader();
+        fr.onload = function (ev) {
+          var imported;
+          try { imported = JSON.parse(ev.target.result); }
+          catch (e) { showToast('Invalid JSON — could not parse the backup file.', true); return; }
+
+          if (typeof imported !== 'object' || Array.isArray(imported) || !imported) {
+            showToast('Unexpected format — expected a JSON object keyed by verse references.', true);
+            return;
+          }
+
+          var keys = Object.keys(imported);
+          var valid = keys.filter(function (k) {
+            var v = imported[k];
+            return v && typeof v === 'object' && ('highlight' in v || 'note' in v);
+          });
+
+          if (!valid.length) {
+            showToast('No recognisable notes found in that file.', true);
+            return;
+          }
+
+          var existing = getNotes();
+          var added = 0, skipped = 0;
+          valid.forEach(function (k) {
+            if (existing[k]) { skipped++; }
+            else { existing[k] = imported[k]; added++; }
+          });
+
+          saveAllNotes(existing);
+          render();
+
+          var msg = 'Imported ' + added + ' entr' + (added === 1 ? 'y' : 'ies') + '.';
+          if (skipped) msg += ' ' + skipped + ' duplicate' + (skipped === 1 ? '' : 's') + ' skipped.';
+          showToast(msg);
+        };
+        fr.onerror = function () { showToast('Could not read the file.', true); };
+        fr.readAsText(file);
       });
 
       render();

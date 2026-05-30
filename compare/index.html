@@ -6,6 +6,12 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Compare one Bible verse across all available translations side by side." />
   <title>All Translations — Bible Study</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" id="bsw-og-title" content="All Translations — Bible Study" />
+  <meta property="og:description" id="bsw-og-desc" content="Compare one Bible verse across all available translations side by side." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" id="bsw-tw-title" content="All Translations — Bible Study" />
+  <meta name="twitter:description" id="bsw-tw-desc" content="Compare one Bible verse across all available translations side by side." />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <style>
@@ -302,6 +308,10 @@
         document.title = parsed.display + ' — All Translations — Bible Study';
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.content = parsed.display + ' in all available Bible translations.';
+        var _ogTitle = parsed.display + ' — All Translations';
+        var _ogDesc  = parsed.display + ' in all available Bible translations.';
+        ['bsw-og-title','bsw-tw-title'].forEach(function (id) { var el = document.getElementById(id); if (el) el.setAttribute('content', _ogTitle); });
+        ['bsw-og-desc', 'bsw-tw-desc' ].forEach(function (id) { var el = document.getElementById(id); if (el) el.setAttribute('content', _ogDesc); });
 
         // Breadcrumb nav ref
         var navRef = document.getElementById('cmp-nav-ref');
