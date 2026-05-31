@@ -62,7 +62,7 @@
   padding: 0 .35em;
   border-radius: 20px;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   font-size: .72rem;
   font-weight: 700;
 }
@@ -93,7 +93,7 @@
 .mem-add-btn {
   padding: .5rem 1.1rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border: none;
   border-radius: 7px;
   font-size: .9rem;
@@ -142,13 +142,18 @@
 
 .mem-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
+  flex-direction: column;
+  gap: .35rem;
   padding: .65rem .9rem;
   border: 1px solid var(--color-border, #e0e0e0);
   border-radius: 8px;
   background: var(--color-surface, #fff);
+}
+
+.mem-item__top {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
 }
 
 .mem-item--due {
@@ -186,7 +191,7 @@
 .mem-item__review-btn {
   padding: .25rem .65rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border: none;
   border-radius: 5px;
   font-size: .78rem;
@@ -299,7 +304,7 @@
 .mem-show-btn {
   padding: .55rem 1.4rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border: none;
   border-radius: 8px;
   font-size: .95rem;
@@ -354,7 +359,7 @@
 .mem-back-btn {
   padding: .5rem 1.2rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border: none;
   border-radius: 7px;
   font-size: .9rem;
@@ -385,7 +390,7 @@
 .bsw-modal__memory-btn:hover,
 .bsw-modal__memory-btn--active {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
@@ -395,4 +400,128 @@
   .mem-card { padding: 1.5rem 1rem; }
   .mem-card__ref { font-size: 1.3rem; }
   .mem-rate-btn { padding: .45rem .5rem; font-size: .8rem; }
+}
+
+/* ── I5: Tag filter row ─────────────────────────────────────────────────── */
+.mem-tag-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: .75rem;
+}
+.mem-tag-filter-chip {
+  background: none;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 20px;
+  padding: .2rem .65rem;
+  font-size: .78rem;
+  cursor: pointer;
+  color: var(--color-muted, #888);
+  transition: border-color .12s, color .12s, background .12s;
+}
+.mem-tag-filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.mem-tag-filter-chip--active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+/* ── I5: Per-item tag chips ─────────────────────────────────────────────── */
+.mem-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  align-items: center;
+}
+.mem-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 12px;
+  padding: .1rem .5rem;
+  font-size: .72rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.mem-tag-chip__rm {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .85rem;
+  line-height: 1;
+  padding: 0;
+  color: inherit;
+  opacity: .6;
+}
+.mem-tag-chip__rm:hover { opacity: 1; }
+
+.mem-tag-add-input {
+  border: 1px dashed var(--color-border, #ccc);
+  border-radius: 12px;
+  padding: .1rem .5rem;
+  font-size: .72rem;
+  background: transparent;
+  color: var(--color-text);
+  width: 60px;
+  min-width: 40px;
+  transition: border-color .12s, width .2s;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.mem-tag-add-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  width: 100px;
+}
+.mem-tag-add-input::placeholder { color: var(--color-muted); opacity: .7; }
+
+/* ── I5: Scope label + Anki export ─────────────────────────────────────── */
+.mem-scope-label { margin-left: .5rem; }
+
+.mem-list-footer {
+  margin-top: .75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.mem-anki-btn {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: .8rem;
+  padding: .3rem .8rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 5px;
+  background: none;
+  color: var(--color-muted, #888);
+  cursor: pointer;
+  transition: color .12s, border-color .12s;
+}
+.mem-anki-btn:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+/* ── Dark-mode button overrides ─────────────────────────────────────────── */
+[data-theme="dark"] .mem-badge,
+[data-theme="dark"] .mem-add-btn,
+[data-theme="dark"] .mem-item__review-btn,
+[data-theme="dark"] .mem-show-btn,
+[data-theme="dark"] .mem-back-btn,
+[data-theme="dark"] .bsw-modal__memory-btn:hover,
+[data-theme="dark"] .bsw-modal__memory-btn--active {
+  background: var(--color-btn-bg, #3a2d18);
+  border-color: var(--color-primary);
+  color: var(--color-btn-text, #e8c87a);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .mem-badge,
+  :root:not([data-theme="light"]) .mem-add-btn,
+  :root:not([data-theme="light"]) .mem-item__review-btn,
+  :root:not([data-theme="light"]) .mem-show-btn,
+  :root:not([data-theme="light"]) .mem-back-btn,
+  :root:not([data-theme="light"]) .bsw-modal__memory-btn:hover,
+  :root:not([data-theme="light"]) .bsw-modal__memory-btn--active {
+    background: var(--color-btn-bg, #3a2d18);
+    border-color: var(--color-primary);
+    color: var(--color-btn-text, #e8c87a);
+  }
 }

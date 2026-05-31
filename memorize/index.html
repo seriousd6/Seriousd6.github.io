@@ -37,17 +37,25 @@
         </div>
         <p id="mem-add-error" class="mem-add-error" hidden></p>
 
-        <!-- Flashcard mode selector -->
+        <!-- Flashcard mode selector + review scope -->
         <div class="mem-mode-row">
           <label class="mem-mode-label" for="mem-mode-select">Flashcard mode:</label>
           <select id="mem-mode-select" class="mem-mode-select">
             <option value="ref-to-text">Reference → Recall text</option>
             <option value="text-to-ref">Text → Recall reference</option>
           </select>
+          <label class="mem-mode-label mem-scope-label" for="mem-scope-select">Review:</label>
+          <select id="mem-scope-select" class="mem-mode-select" aria-label="Review scope"></select>
         </div>
+
+        <!-- Tag filter chips (populated by JS) -->
+        <div id="mem-tag-filter-row" class="mem-tag-filter-row" hidden></div>
 
         <!-- Verse list -->
         <div id="mem-list" class="mem-list"></div>
+        <div id="mem-list-footer" class="mem-list-footer" hidden>
+          <button id="mem-anki-btn" class="mem-anki-btn" type="button">Export for Anki</button>
+        </div>
         <div id="mem-empty" class="bsw-empty-state" hidden>
           <span class="bsw-empty-state__glyph" aria-hidden="true">◈</span>
           <p class="bsw-empty-state__title">No verses yet</p>
@@ -87,6 +95,6 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/bible.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
 </body>
 </html>

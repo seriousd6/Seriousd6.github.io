@@ -1,0 +1,1119 @@
+/* daily.js — Daily Discipline page, Scripture Memory, Plans home widget */
+'use strict';
+
+import {
+  READER_URL, metaBooks, metaVersions,
+  getVersion, escHtml, parseRef, loadBook, resolveVerses,
+  _resolve
+} from './core.js';
+import { wireRefLinks } from './wire.js';
+import { initHistoryWidget } from './modal.js';
+
+// ── Daily Page constants ──────────────────────────────────────────────────────
+var DAILY_PLAN_KEY   = 'bsw_daily_plan';
+var DAILY_DEVOT_KEY  = 'bsw_daily_devot';
+var DAILY_NOTIF_KEY  = 'bsw_daily_notif';
+var DAILY_NOTIF_DISMISSED = 'bsw_daily_notif_dismissed';
+var DAILY_PLANS_ROOT    = _resolve('../../data/plans');
+var DAILY_VOTD_URL      = _resolve('../../data/votd/verses.json');
+var DAILY_CALENDAR_BASE = _resolve('../../read/');
+var DAILY_DEVOT_BASE    = _resolve('../../data/devotionals');
+
+var DAILY_AUTO_PLANS = ['bible-in-a-year', 'bible-in-a-year-chronological'];
+
+var DAILY_PLAN_META = [
+  { id: 'bible-in-a-year',               title: 'Bible in a Year',               days: 365 },
+  { id: 'bible-in-a-year-chronological', title: 'Bible in a Year — Chronological', days: 365 },
+  { id: 'mcheyne',                        title: "M'Cheyne",                       days: 365 },
+  { id: 'nt-90-days',                     title: 'NT in 90 Days',                  days: 90  },
+  { id: 'psalms-proverbs',               title: 'Psalms & Proverbs',              days: 31  },
+  { id: 'gospels-30-days',               title: 'Gospels in 30 Days',             days: 30  },
+  { id: 'heidelberg-weekly',             title: 'Heidelberg Catechism',           days: 52  },
+  { id: 'wsc-quarterly',                 title: 'Westminster Shorter Catechism',  days: 13  }
+];
+
+var DAILY_DEVOT_META = [
+  { id: 'spurgeon-morning', label: 'Spurgeon — Morning' },
+  { id: 'spurgeon-evening', label: 'Spurgeon — Evening' },
+  { id: 'daily-psalms',     label: 'Daily Psalms' },
+  { id: 'proverbs-month',   label: 'Proverbs of the Month' },
+  { id: 'nt-daily',         label: 'NT Daily Reading' }
+];
+
+// ── Streak ────────────────────────────────────────────────────────────────────
+var STREAK_KEY = 'bsw_streak';
+
+function _dailyRenderStreak() {
+  var el = document.getElementById('daily-streak-content');
+  if (!el) return;
+  var s;
+  try { s = JSON.parse(localStorage.getItem(STREAK_KEY) || '{}'); } catch (e) { s = {}; }
+  var current = s.current || 0;
+  var longest = s.longest || 0;
+  var card = el.closest('.daily-card');
+  if (!current) { if (card) card.setAttribute('hidden', ''); return; }
+  if (card) card.removeAttribute('hidden');
+  var readUrl = DAILY_CALENDAR_BASE;
+  el.innerHTML =
+    '<div class="daily-streak-row">' +
+      '<div class="daily-streak-stat">' +
+        '<span class="daily-streak-num">' + current + '</span>' +
+        '<span class="daily-streak-label">day streak</span>' +
+      '</div>' +
+      (longest > current
+        ? '<div class="daily-streak-stat daily-streak-stat--muted">' +
+            '<span class="daily-streak-num">' + longest + '</span>' +
+            '<span class="daily-streak-label">personal best</span>' +
+          '</div>'
+        : '') +
+      '<a class="daily-streak-cta" href="' + escHtml(readUrl) + '">Read today &rarr;</a>' +
+    '</div>';
+}
+
+// ── Helper functions ──────────────────────────────────────────────────────────
+function _dailyDayOfYear() {
+  var now   = new Date();
+  var start = new Date(now.getFullYear(), 0, 1);
+  return Math.floor((now - start) / 86400000) + 1;
+}
+
+function _dailyPeriod() {
+  return new Date().getHours() < 12 ? 'morning' : 'evening';
+}
+
+function _dailyDayNum(planId, startDateStr) {
+  if (DAILY_AUTO_PLANS.indexOf(planId) !== -1) {
+    return _dailyDayOfYear();
+  }
+  if (!startDateStr) return 1;
+  var start = new Date(startDateStr + 'T00:00:00');
+  var today = new Date();
+  today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return Math.max(1, Math.floor((today - start) / 86400000) + 1);
+}
+
+function _dailyPassageUrl(passage) {
+  return DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(passage);
+}
+
+function _dailyReadAllUrl(passages) {
+  return DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(passages.join(', '));
+}
+
+// ── initDailyPage ─────────────────────────────────────────────────────────────
+export function initDailyPage() {
+  var planSelect  = document.getElementById('daily-plan-select');
+  var devotSelect = document.getElementById('daily-devot-select');
+  if (!planSelect) return;
+
+  var greetingEl = document.getElementById('daily-greeting');
+  var dateEl     = document.getElementById('daily-date');
+  var now        = new Date();
+  var period     = _dailyPeriod();
+  var days       = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var months     = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  if (greetingEl) {
+    var hour = now.getHours();
+    var salutation = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+    greetingEl.textContent = salutation;
+  }
+  if (dateEl) {
+    dateEl.textContent = days[now.getDay()] + ' • ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+  }
+
+  var savedPlan = localStorage.getItem(DAILY_PLAN_KEY) || 'bible-in-a-year';
+  DAILY_PLAN_META.forEach(function (pm) {
+    var opt = document.createElement('option');
+    opt.value = pm.id;
+    opt.textContent = pm.title;
+    if (pm.id === savedPlan) opt.selected = true;
+    planSelect.appendChild(opt);
+  });
+
+  if (devotSelect) {
+    var defaultDevot = period === 'morning' ? 'spurgeon-morning' : 'spurgeon-evening';
+    var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || defaultDevot;
+    DAILY_DEVOT_META.forEach(function (dm) {
+      var opt = document.createElement('option');
+      opt.value = dm.id;
+      opt.textContent = dm.label;
+      if (dm.id === savedDevot) opt.selected = true;
+      devotSelect.appendChild(opt);
+    });
+    devotSelect.addEventListener('change', function () {
+      localStorage.setItem(DAILY_DEVOT_KEY, devotSelect.value);
+      _dailyRenderDevotional(devotSelect.value, period);
+    });
+  }
+
+  planSelect.addEventListener('change', function () {
+    var pid = planSelect.value;
+    localStorage.setItem(DAILY_PLAN_KEY, pid);
+    _dailyRenderPlan(pid);
+  });
+
+  var datepicker = document.getElementById('daily-plan-datepicker');
+  var dateInput  = document.getElementById('daily-start-date');
+  if (dateInput) {
+    dateInput.addEventListener('change', function () {
+      var pid = planSelect.value;
+      if (dateInput.value) {
+        localStorage.setItem('bsw_daily_start_' + pid, dateInput.value);
+      }
+      _dailyRenderPlan(pid);
+    });
+  }
+
+  _dailyRenderPlan(savedPlan);
+  _dailyRenderVOTD();
+  _dailyRenderDevotional(localStorage.getItem(DAILY_DEVOT_KEY) || 'daily-psalms', period);
+  _dailySetupNotifications(period);
+  initHistoryWidget();
+  _dailyRenderStreak();
+}
+
+function _dailyRenderPlan(planId) {
+  var contentEl  = document.getElementById('daily-plan-content');
+  var datepicker = document.getElementById('daily-plan-datepicker');
+  var dateInput  = document.getElementById('daily-start-date');
+  if (!contentEl) return;
+
+  var isAuto = DAILY_AUTO_PLANS.indexOf(planId) !== -1;
+  if (datepicker) {
+    if (isAuto) datepicker.setAttribute('hidden', '');
+    else        datepicker.removeAttribute('hidden');
+  }
+
+  var startDateStr = isAuto ? null : (localStorage.getItem('bsw_daily_start_' + planId) || '');
+  if (dateInput) {
+    dateInput.value = startDateStr || '';
+    if (!isAuto && !startDateStr) {
+      var today = new Date();
+      var yyyy  = today.getFullYear();
+      var mm    = ('0' + (today.getMonth() + 1)).slice(-2);
+      var dd    = ('0' + today.getDate()).slice(-2);
+      var todayStr = yyyy + '-' + mm + '-' + dd;
+      dateInput.value = todayStr;
+      localStorage.setItem('bsw_daily_start_' + planId, todayStr);
+      startDateStr = todayStr;
+    }
+  }
+
+  var dn   = _dailyDayNum(planId, startDateStr);
+  var meta = DAILY_PLAN_META.find(function (p) { return p.id === planId; });
+
+  contentEl.innerHTML = '<div class="daily-loading">Loading…</div>';
+
+  fetch(DAILY_PLANS_ROOT + '/' + planId + '.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (plan) {
+      var clampedDay = Math.min(Math.max(dn, 1), plan.total_days);
+      var dayData    = plan.days[clampedDay - 1];
+      if (!dayData) { contentEl.innerHTML = '<p class="daily-plan-empty">No reading for today.</p>'; return; }
+
+      var pct = Math.min(100, Math.round((clampedDay / plan.total_days) * 100));
+      var finishLabel = '';
+      if (isAuto) {
+        var endDt = new Date(new Date().getFullYear(), 0, 1);
+        endDt.setDate(endDt.getDate() + plan.total_days - 1);
+        finishLabel = endDt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+      } else if (startDateStr) {
+        var sDt = new Date(startDateStr + 'T00:00:00');
+        var fDt = new Date(sDt.getTime() + (plan.total_days - 1) * 86400000);
+        finishLabel = fDt.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+      var html = '<div class="daily-plan-progress">' +
+        '<div class="daily-plan-progress-bar"><div class="daily-plan-progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="daily-plan-progress-text">' + pct + '%' +
+        (finishLabel ? ' &nbsp;·&nbsp; Finish: ' + finishLabel : '') + '</span>' +
+        '</div>' +
+        '<p class="daily-plan-day">' +
+        (plan.type === 'catechism' ? dayData.label : 'Day ' + clampedDay + ' of ' + plan.total_days) +
+        '</p>';
+
+      if (plan.type === 'catechism' && dayData.href) {
+        if (dayData.questions) {
+          html += '<p class="daily-plan-questions">' + escHtml(dayData.questions) + '</p>';
+        }
+        if (dayData.desc) {
+          html += '<p class="daily-plan-desc">' + escHtml(dayData.desc) + '</p>';
+        }
+        var libHref = _resolve('../../') + dayData.href;
+        html += '<a class="daily-read-all" href="' + escHtml(libHref) + '">Read today\'s section &rarr;</a>';
+      } else {
+        var passages = dayData.passages || [];
+        html += '<div class="daily-passages">';
+        passages.forEach(function (p) {
+          html += '<a class="daily-passage-chip" href="' + escHtml(_dailyPassageUrl(p)) + '">' + escHtml(p) + '</a>';
+        });
+        html += '</div>';
+        if (passages.length > 1) {
+          html += '<a class="daily-read-all" href="' + escHtml(_dailyReadAllUrl(passages)) + '">Read all today&rsquo;s sections &rarr;</a>';
+        } else if (passages.length === 1) {
+          html += '<a class="daily-read-all" href="' + escHtml(_dailyPassageUrl(passages[0])) + '">Read today&rsquo;s passage &rarr;</a>';
+        }
+      }
+      contentEl.innerHTML = html;
+    })
+    .catch(function () {
+      contentEl.innerHTML = '<p class="daily-plan-empty">Could not load plan data.</p>';
+    });
+}
+
+function _dailyRenderVOTD() {
+  var el = document.getElementById('daily-votd-content');
+  if (!el) return;
+  el.innerHTML = '<div class="daily-loading">Loading…</div>';
+
+  fetch(DAILY_VOTD_URL)
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (verses) {
+      var doy  = _dailyDayOfYear();
+      var ref  = verses[(doy - 1) % verses.length];
+      var parsed = parseRef(ref);
+      if (!parsed || !parsed.bookId) {
+        el.innerHTML = '<p class="daily-plan-empty">Could not load verse.</p>';
+        return;
+      }
+      var version = getVersion();
+      return loadBook(version, parsed.bookId).then(function (chapters) {
+        var chData = chapters && chapters[String(parsed.ch)];
+        var text   = chData && chData[String(parsed.v)];
+        if (!text) { el.innerHTML = '<p class="daily-plan-empty">Verse unavailable.</p>'; return; }
+        el.innerHTML =
+          '<blockquote>' + escHtml(text) + '</blockquote>' +
+          '<cite>— <a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>' +
+          ' &nbsp;<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(ref)) + '">Read in context &rarr;</a></cite>';
+        wireRefLinks(el);
+      });
+    })
+    .catch(function () {
+      el.innerHTML = '<p class="daily-plan-empty">Could not load verse of the day.</p>';
+    });
+}
+
+function _dailyRenderDevotional(source, period) {
+  var titleEl = document.getElementById('daily-devot-title');
+  var bodyEl  = document.getElementById('daily-devot-content');
+  if (!bodyEl) return;
+
+  var periodLabel = period === 'morning' ? 'Morning' : 'Evening';
+  if (titleEl) {
+    titleEl.innerHTML = periodLabel + ' Devotional <span class="daily-period-badge">' +
+      (period === 'morning' ? '🌅' : '🌙') + ' ' + periodLabel + '</span>';
+  }
+  bodyEl.innerHTML = '<div class="daily-loading">Loading…</div>';
+
+  var now       = new Date();
+  var dayOfYear = _dailyDayOfYear();
+  var dom       = now.getDate();
+  var version   = getVersion();
+
+  if (source === 'daily-psalms') {
+    var psalmNumMorning = ((dayOfYear - 1) % 150) + 1;
+    var psalmNumEvening = ((dayOfYear - 1 + 75) % 150) + 1;
+    var psalmNum = period === 'morning' ? psalmNumMorning : psalmNumEvening;
+    var refStr   = 'Psalms ' + psalmNum;
+    loadBook(version, 'psalms').then(function (chapters) {
+      var chData = chapters && chapters[String(psalmNum)];
+      if (!chData) { bodyEl.innerHTML = '<p class="daily-plan-empty">Psalm unavailable.</p>'; return; }
+      var verses  = Object.keys(chData).sort(function (a, b) { return +a - +b; });
+      var preview = verses.slice(0, 6).map(function (v) { return chData[v]; }).join(' ');
+      if (verses.length > 6) preview += ' …';
+      bodyEl.innerHTML =
+        '<p class="daily-devot-ref">Psalm ' + psalmNum + '</p>' +
+        '<p class="daily-devot-text">' + escHtml(preview) + '</p>' +
+        '<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(refStr)) + '">Read all of Psalm ' + psalmNum + ' →</a>';
+    }).catch(function () {
+      bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load Psalms.</p>';
+    });
+    return;
+  }
+
+  if (source === 'proverbs-month') {
+    var ch = Math.min(dom, 31);
+    if (period === 'evening') {
+      var psNum = ((dayOfYear - 1) % 150) + 1;
+      loadBook(version, 'psalms').then(function (chapters) {
+        var chData = chapters && chapters[String(psNum)];
+        if (!chData) { bodyEl.innerHTML = '<p class="daily-plan-empty">Psalm unavailable.</p>'; return; }
+        var verses  = Object.keys(chData).sort(function (a, b) { return +a - +b; });
+        var preview = verses.slice(0, 6).map(function (v) { return chData[v]; }).join(' ');
+        if (verses.length > 6) preview += ' …';
+        bodyEl.innerHTML =
+          '<p class="daily-devot-ref">Psalm ' + psNum + ' (evening reflection)</p>' +
+          '<p class="daily-devot-text">' + escHtml(preview) + '</p>' +
+          '<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent('Psalms ' + psNum)) + '">Read all of Psalm ' + psNum + ' →</a>';
+      }).catch(function () { bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load.</p>'; });
+      return;
+    }
+    loadBook(version, 'proverbs').then(function (chapters) {
+      var chData = chapters && chapters[String(ch)];
+      if (!chData) { bodyEl.innerHTML = '<p class="daily-plan-empty">Proverbs unavailable.</p>'; return; }
+      var verses  = Object.keys(chData).sort(function (a, b) { return +a - +b; });
+      var preview = verses.slice(0, 6).map(function (v) { return chData[v]; }).join(' ');
+      if (verses.length > 6) preview += ' …';
+      bodyEl.innerHTML =
+        '<p class="daily-devot-ref">Proverbs ' + ch + '</p>' +
+        '<p class="daily-devot-text">' + escHtml(preview) + '</p>' +
+        '<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent('Proverbs ' + ch)) + '">Read all of Proverbs ' + ch + ' →</a>';
+    }).catch(function () {
+      bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load Proverbs.</p>';
+    });
+    return;
+  }
+
+  if (source === 'nt-daily') {
+    var NT_BOOKS_CHRON = [
+      ['matthew',34],['mark',16],['luke',24],['john',21],['acts',28],
+      ['james',5],['galatians',6],['1thessalonians',5],['2thessalonians',3],
+      ['1corinthians',16],['2corinthians',13],['romans',16],
+      ['philippians',4],['philemon',1],['colossians',4],['ephesians',6],
+      ['1timothy',6],['titus',3],['2timothy',4],
+      ['hebrews',13],['1peter',5],['2peter',3],
+      ['1john',5],['2john',1],['3john',1],['jude',1],['revelation',22]
+    ];
+    var totalNT = NT_BOOKS_CHRON.reduce(function (s, b) { return s + b[1]; }, 0);
+    var ntOffset = period === 'evening' ? Math.floor(totalNT / 2) : 0;
+    var ntIdx    = ((dayOfYear - 1 + ntOffset) % totalNT);
+    var cumul = 0;
+    var ntBook = null, ntCh = 1;
+    for (var i = 0; i < NT_BOOKS_CHRON.length; i++) {
+      var info = NT_BOOKS_CHRON[i];
+      if (ntIdx < cumul + info[1]) { ntBook = info[0]; ntCh = ntIdx - cumul + 1; break; }
+      cumul += info[1];
+    }
+    if (!ntBook) { bodyEl.innerHTML = '<p class="daily-plan-empty">Could not determine passage.</p>'; return; }
+    loadBook(version, ntBook).then(function (chapters) {
+      var chData = chapters && chapters[String(ntCh)];
+      if (!chData) { bodyEl.innerHTML = '<p class="daily-plan-empty">Chapter unavailable.</p>'; return; }
+      var bkName = metaBooks ? (metaBooks.find(function (b) { return b.id === ntBook; }) || {}).name || ntBook : ntBook;
+      var verses  = Object.keys(chData).sort(function (a, b) { return +a - +b; });
+      var preview = verses.slice(0, 6).map(function (v) { return chData[v]; }).join(' ');
+      if (verses.length > 6) preview += ' …';
+      var refLink = bkName + ' ' + ntCh;
+      bodyEl.innerHTML =
+        '<p class="daily-devot-ref">' + escHtml(refLink) + '</p>' +
+        '<p class="daily-devot-text">' + escHtml(preview) + '</p>' +
+        '<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(refLink)) + '">Read full chapter →</a>';
+    }).catch(function () { bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load.</p>'; });
+    return;
+  }
+
+  if (source === 'spurgeon-morning' || source === 'spurgeon-evening') {
+    var spPeriod = (source === 'spurgeon-morning') ? 'morning' : 'evening';
+    var fileName = (source === 'spurgeon-morning') ? 'spurgeon-morning.json' : 'spurgeon-evening.json';
+    var mm = String(now.getMonth() + 1).padStart(2, '0');
+    var dd = String(now.getDate()).padStart(2, '0');
+    var dateKey = mm + '-' + dd;
+
+    if (titleEl) {
+      titleEl.innerHTML = 'Spurgeon — ' + (spPeriod === 'morning' ? 'Morning' : 'Evening') +
+        ' <span class="daily-period-badge">' + (spPeriod === 'morning' ? '🌅 Morning' : '🌙 Evening') + '</span>';
+    }
+
+    fetch(DAILY_DEVOT_BASE + '/' + fileName)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (entries) {
+        var entry = entries[dateKey];
+        if (!entry) {
+          bodyEl.innerHTML = '<p class="daily-plan-empty">No entry for today.</p>';
+          return;
+        }
+        var ref = entry.verse_ref || '';
+        var refLink = ref
+          ? ' &nbsp;<a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>'
+          : '';
+        var paragraphs = entry.body.split('\n\n').filter(function (p) { return p.trim(); });
+        var bodyHtml = paragraphs.map(function (p) {
+          return '<p>' + escHtml(p.trim()) + '</p>';
+        }).join('');
+        bodyEl.innerHTML =
+          '<blockquote class="daily-spurgeon-verse">' +
+            escHtml(entry.verse_text) +
+            '<cite>' + refLink + '</cite>' +
+          '</blockquote>' +
+          '<div class="daily-spurgeon-body">' + bodyHtml + '</div>';
+        wireRefLinks(bodyEl);
+      })
+      .catch(function () {
+        bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load Spurgeon devotional.</p>';
+      });
+    return;
+  }
+
+  bodyEl.innerHTML = '<p class="daily-plan-empty">Select a devotional source above.</p>';
+}
+
+function _dailySetupNotifications(period) {
+  if (localStorage.getItem(DAILY_NOTIF_DISMISSED) === '1') {
+    _dailySchedulePeriodSwitch(period);
+    return;
+  }
+
+  var lastPeriod = localStorage.getItem(DAILY_NOTIF_KEY);
+  if (lastPeriod && lastPeriod !== period) {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+      _dailyFireNotification(period);
+    }
+  }
+  localStorage.setItem(DAILY_NOTIF_KEY, period);
+
+  if (typeof Notification !== 'undefined' && Notification.permission === 'default') {
+    _dailyShowNotifBanner();
+  }
+
+  _dailySchedulePeriodSwitch(period);
+}
+
+function _dailyShowNotifBanner() {
+  var page = document.querySelector('.daily-page');
+  if (!page) return;
+  var banner = document.createElement('div');
+  banner.className = 'daily-notif-banner';
+  banner.innerHTML =
+    '<span>Get notified when your morning & evening devotional changes.</span>' +
+    '<button id="daily-notif-allow">Enable notifications</button>' +
+    '<button class="daily-notif-dismiss" aria-label="Dismiss">✕</button>';
+  page.insertBefore(banner, page.firstChild);
+  banner.querySelector('#daily-notif-allow').addEventListener('click', function () {
+    Notification.requestPermission().then(function (perm) {
+      if (perm === 'granted') _dailyFireNotification(_dailyPeriod());
+      banner.remove();
+    });
+  });
+  banner.querySelector('.daily-notif-dismiss').addEventListener('click', function () {
+    localStorage.setItem(DAILY_NOTIF_DISMISSED, '1');
+    banner.remove();
+  });
+}
+
+function _dailyFireNotification(period) {
+  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+  var title = period === 'morning' ? 'Good morning — Daily devotional ready' : 'Good evening — Evening devotional ready';
+  var body  = period === 'morning' ? 'Your morning reading and verse of the day await.' : 'Your evening reflection and devotional are ready.';
+  if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.ready.then(function (reg) {
+      reg.showNotification(title, { body: body, icon: 'favicon.svg', badge: 'favicon.svg' });
+    });
+  } else {
+    new Notification(title, { body: body, icon: 'favicon.svg' });
+  }
+}
+
+function _dailySchedulePeriodSwitch(currentPeriod) {
+  var now    = new Date();
+  var target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), currentPeriod === 'morning' ? 12 : 24, 0, 0, 0);
+  var ms     = target - now;
+  if (ms <= 0) return;
+  setTimeout(function () {
+    var newPeriod = _dailyPeriod();
+    localStorage.setItem(DAILY_NOTIF_KEY, newPeriod);
+    if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+      _dailyFireNotification(newPeriod);
+    }
+    var devotSrc = localStorage.getItem(DAILY_DEVOT_KEY) || 'daily-psalms';
+    _dailyRenderDevotional(devotSrc, newPeriod);
+  }, ms);
+}
+
+// ── Scripture Memory ──────────────────────────────────────────────────────────
+var MEMORY_KEY      = 'bsw_memory';
+var MEMORY_MODE_KEY = 'bsw_memory_mode';
+
+export function _memGet()      { try { return JSON.parse(localStorage.getItem(MEMORY_KEY) || '{}'); } catch (e) { return {}; } }
+export function _memSet(state) { try { localStorage.setItem(MEMORY_KEY, JSON.stringify(state)); } catch (e) {} }
+
+export function _memHas(ref) { return !!_memGet()[ref]; }
+
+export function _memAdd(ref) {
+  var state = _memGet();
+  if (state[ref]) return;
+  var today = _memTodayStr();
+  state[ref] = { addedDate: today, interval: 1, nextReview: today, score: 0, reps: 0 };
+  _memSet(state);
+}
+
+export function _memRemove(ref) {
+  var state = _memGet();
+  delete state[ref];
+  _memSet(state);
+}
+
+function _memTodayStr() {
+  var d = new Date();
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+
+function _memIsDue(entry) {
+  return _memTodayStr() >= entry.nextReview;
+}
+
+function _memApplyScore(entry, score) {
+  var interval = entry.interval || 1;
+  if      (score === 0) interval = 1;
+  else if (score === 1) interval = Math.max(1, Math.ceil(interval * 1.2));
+  else if (score === 2) interval = Math.max(2, Math.ceil(interval * 2.5));
+  else                  interval = Math.max(4, Math.ceil(interval * 3.5));
+  var next = new Date();
+  next.setDate(next.getDate() + interval);
+  entry.interval   = interval;
+  entry.nextReview = next.getFullYear() + '-' + ('0' + (next.getMonth() + 1)).slice(-2) + '-' + ('0' + next.getDate()).slice(-2);
+  entry.score      = score;
+  entry.reps       = (entry.reps || 0) + 1;
+  return entry;
+}
+
+function _memDaysUntil(dateStr) {
+  var today = new Date();
+  today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  var target = new Date(dateStr + 'T00:00:00');
+  return Math.max(0, Math.ceil((target - today) / 86400000));
+}
+
+var _memTagFilter = null;
+
+function _memNormalizeTag(t) {
+  return t.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function _memAllTags() {
+  var state = _memGet();
+  var seen  = Object.create(null);
+  Object.keys(state).forEach(function (r) {
+    (state[r].tags || []).forEach(function (t) { seen[t] = true; });
+  });
+  return Object.keys(seen).sort();
+}
+
+function _memTagAdd(ref, rawTag) {
+  var tag   = _memNormalizeTag(rawTag);
+  if (!tag) return;
+  var state = _memGet();
+  if (!state[ref]) return;
+  var tags  = state[ref].tags || [];
+  if (tags.indexOf(tag) === -1) tags.push(tag);
+  state[ref].tags = tags;
+  _memSet(state);
+}
+
+function _memTagRemove(ref, tag) {
+  var state = _memGet();
+  if (!state[ref]) return;
+  state[ref].tags = (state[ref].tags || []).filter(function (t) { return t !== tag; });
+  _memSet(state);
+}
+
+export function _memRefreshModalBtn(ref) {
+  var modalEl = document.querySelector('.bsw-modal');
+  var btn = modalEl && modalEl.querySelector('.bsw-modal__memory-btn');
+  if (!btn) return;
+  var has = _memHas(ref);
+  btn.textContent = has ? '⭐ Memorizing' : '☆ Memorize';
+  btn.classList.toggle('bsw-modal__memory-btn--active', has);
+  btn._memRef = ref;
+}
+
+export function initMemorizePage() {
+  if (!document.getElementById('mem-list')) return;
+
+  var state    = _memGet();
+  var dueCount = Object.keys(state).filter(function (r) { return _memIsDue(state[r]); }).length;
+  var badge    = document.getElementById('mem-due-badge');
+  if (badge) {
+    if (dueCount > 0) { badge.textContent = dueCount; badge.removeAttribute('hidden'); }
+    else               badge.setAttribute('hidden', '');
+  }
+
+  var modeSelect = document.getElementById('mem-mode-select');
+  if (modeSelect) {
+    modeSelect.value = localStorage.getItem(MEMORY_MODE_KEY) || 'ref-to-text';
+    modeSelect.addEventListener('change', function () {
+      localStorage.setItem(MEMORY_MODE_KEY, modeSelect.value);
+    });
+  }
+
+  var tabs        = document.querySelectorAll('.mem-tab');
+  var browsePanel = document.getElementById('mem-browse-panel');
+  var reviewPanel = document.getElementById('mem-review-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var which = tab.getAttribute('data-tab');
+      tabs.forEach(function (t) {
+        t.classList.toggle('mem-tab--active', t === tab);
+        t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+      });
+      if (which === 'browse') {
+        browsePanel.removeAttribute('hidden');
+        reviewPanel.setAttribute('hidden', '');
+      } else {
+        browsePanel.setAttribute('hidden', '');
+        reviewPanel.removeAttribute('hidden');
+        _memStartReview();
+      }
+    });
+  });
+
+  var addInput = document.getElementById('mem-add-input');
+  var addBtn   = document.getElementById('mem-add-btn');
+  var addError = document.getElementById('mem-add-error');
+  function doAdd() {
+    var raw    = (addInput && addInput.value.trim()) || '';
+    if (!raw) return;
+    var parsed = parseRef(raw);
+    if (!parsed || !parsed.bookId) {
+      if (addError) { addError.textContent = 'Could not parse — try: John 3:16'; addError.removeAttribute('hidden'); }
+      return;
+    }
+    if (!parsed.v) {
+      if (addError) { addError.textContent = 'Please enter a specific verse (e.g. John 3:16).'; addError.removeAttribute('hidden'); }
+      return;
+    }
+    if (addError) addError.setAttribute('hidden', '');
+    var ref = parsed.bookName + ' ' + parsed.ch + ':' + parsed.v;
+    _memAdd(ref);
+    if (addInput) addInput.value = '';
+    _memRenderList();
+  }
+  if (addBtn)   addBtn.addEventListener('click', doAdd);
+  if (addInput) addInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') doAdd(); });
+
+  var backBtn = document.getElementById('mem-back-browse');
+  if (backBtn) backBtn.addEventListener('click', function () {
+    browsePanel.removeAttribute('hidden');
+    reviewPanel.setAttribute('hidden', '');
+    tabs.forEach(function (t) {
+      var isBrowse = t.getAttribute('data-tab') === 'browse';
+      t.classList.toggle('mem-tab--active', isBrowse);
+      t.setAttribute('aria-selected', isBrowse ? 'true' : 'false');
+    });
+  });
+
+  var scopeSelect = document.getElementById('mem-scope-select');
+  function _memRefreshScopeSelect() {
+    if (!scopeSelect) return;
+    var tags = _memAllTags();
+    var cur  = scopeSelect.value;
+    scopeSelect.innerHTML = '<option value="">All</option>' +
+      tags.map(function (t) {
+        return '<option value="' + escHtml(t) + '">' + escHtml(t) + '</option>';
+      }).join('');
+    if (cur && tags.indexOf(cur) !== -1) scopeSelect.value = cur;
+  }
+  _memRefreshScopeSelect();
+  if (scopeSelect) {
+    scopeSelect.addEventListener('change', function () {
+      _memTagFilter = this.value || null;
+      _memRenderList();
+    });
+  }
+
+  var ankiBtn = document.getElementById('mem-anki-btn');
+  if (ankiBtn) ankiBtn.addEventListener('click', _memAnkiExport);
+
+  _memRenderList();
+}
+
+function _memRenderList() {
+  var listEl   = document.getElementById('mem-list');
+  var emptyEl  = document.getElementById('mem-empty');
+  var footerEl = document.getElementById('mem-list-footer');
+  var filterEl = document.getElementById('mem-tag-filter-row');
+  if (!listEl) return;
+  var state = _memGet();
+  var allRefs = Object.keys(state);
+
+  var allTags = _memAllTags();
+  if (filterEl) {
+    if (allTags.length) {
+      filterEl.innerHTML = '';
+      var tagOptions = [''].concat(allTags);
+      tagOptions.forEach(function (t) {
+        var chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'mem-tag-filter-chip' + ((_memTagFilter === (t || null)) ? ' mem-tag-filter-chip--active' : '');
+        chip.textContent = t || 'All';
+        chip.addEventListener('click', function () {
+          _memTagFilter = t || null;
+          var scopeSelect = document.getElementById('mem-scope-select');
+          if (scopeSelect) scopeSelect.value = _memTagFilter || '';
+          _memRenderList();
+        });
+        filterEl.appendChild(chip);
+      });
+      filterEl.removeAttribute('hidden');
+    } else {
+      filterEl.innerHTML = '';
+      filterEl.setAttribute('hidden', '');
+    }
+  }
+
+  var refs = _memTagFilter
+    ? allRefs.filter(function (r) {
+        return (state[r].tags || []).indexOf(_memTagFilter) !== -1;
+      })
+    : allRefs;
+
+  if (!allRefs.length) {
+    listEl.innerHTML = '';
+    if (emptyEl)  emptyEl.removeAttribute('hidden');
+    if (footerEl) footerEl.setAttribute('hidden', '');
+    return;
+  }
+  if (emptyEl)  emptyEl.setAttribute('hidden', '');
+  if (footerEl) footerEl.removeAttribute('hidden');
+
+  refs.sort(function (a, b) {
+    var da = state[a].nextReview, db = state[b].nextReview;
+    return da < db ? -1 : da > db ? 1 : 0;
+  });
+  listEl.innerHTML = '';
+  refs.forEach(function (ref) {
+    var entry = state[ref];
+    var due   = _memIsDue(entry);
+    var days  = _memDaysUntil(entry.nextReview);
+    var item  = document.createElement('div');
+    item.className = 'mem-item' + (due ? ' mem-item--due' : '');
+
+    var refEl = document.createElement('span');
+    refEl.className = 'mem-item__ref';
+    refEl.textContent = ref;
+
+    var statusEl = document.createElement('span');
+    statusEl.className = 'mem-item__status' + (due ? ' mem-item__status--due' : '');
+    statusEl.textContent = due ? 'Due today' : 'In ' + days + ' day' + (days === 1 ? '' : 's');
+
+    var btns = document.createElement('div');
+    btns.className = 'mem-item__btns';
+    var reviewBtn = document.createElement('button');
+    reviewBtn.className = 'mem-item__review-btn';
+    reviewBtn.textContent = 'Review';
+    (function (r) { reviewBtn.addEventListener('click', function () { _memReviewSingle(r); }); }(ref));
+    var removeBtn = document.createElement('button');
+    removeBtn.className = 'mem-item__remove-btn';
+    removeBtn.textContent = '✕';
+    removeBtn.title = 'Remove from memory list';
+    (function (r) {
+      removeBtn.addEventListener('click', function () { _memRemove(r); _memRenderList(); });
+    }(ref));
+    btns.appendChild(reviewBtn);
+    btns.appendChild(removeBtn);
+
+    var tagArea = document.createElement('div');
+    tagArea.className = 'mem-item__tags';
+    (entry.tags || []).forEach(function (tag) {
+      var chip = document.createElement('span');
+      chip.className = 'mem-tag-chip';
+      chip.innerHTML = escHtml(tag) +
+        '<button class="mem-tag-chip__rm" type="button" aria-label="Remove tag ' + escHtml(tag) + '">×</button>';
+      (function (r, t) {
+        chip.querySelector('.mem-tag-chip__rm').addEventListener('click', function () {
+          _memTagRemove(r, t);
+          _memRenderList();
+        });
+      }(ref, tag));
+      tagArea.appendChild(chip);
+    });
+
+    var addTagInput = document.createElement('input');
+    addTagInput.type = 'text';
+    addTagInput.placeholder = '+ tag';
+    addTagInput.className = 'mem-tag-add-input';
+    addTagInput.setAttribute('aria-label', 'Add tag to ' + ref);
+    (function (r, inp) {
+      inp.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && inp.value.trim()) {
+          _memTagAdd(r, inp.value);
+          inp.value = '';
+          _memRenderList();
+        }
+      });
+      inp.addEventListener('blur', function () {
+        if (inp.value.trim()) { _memTagAdd(r, inp.value); inp.value = ''; _memRenderList(); }
+      });
+    }(ref, addTagInput));
+    tagArea.appendChild(addTagInput);
+
+    var topRow = document.createElement('div');
+    topRow.className = 'mem-item__top';
+    topRow.appendChild(refEl);
+    topRow.appendChild(statusEl);
+    topRow.appendChild(btns);
+    item.appendChild(topRow);
+    item.appendChild(tagArea);
+    listEl.appendChild(item);
+  });
+
+  var dueCount = allRefs.filter(function (r) { return _memIsDue(state[r]); }).length;
+  var badge = document.getElementById('mem-due-badge');
+  if (badge) {
+    if (dueCount > 0) { badge.textContent = dueCount; badge.removeAttribute('hidden'); }
+    else               badge.setAttribute('hidden', '');
+  }
+}
+
+function _memAnkiExport() {
+  var state   = _memGet();
+  var version = getVersion();
+  var refs    = Object.keys(state);
+  if (_memTagFilter) {
+    refs = refs.filter(function (r) {
+      return (state[r].tags || []).indexOf(_memTagFilter) !== -1;
+    });
+  }
+  if (!refs.length) {
+    alert('No verses to export.');
+    return;
+  }
+
+  var byBook = Object.create(null);
+  refs.forEach(function (ref) {
+    var parsed = parseRef(ref);
+    if (!parsed || !parsed.bookId) return;
+    if (!byBook[parsed.bookId]) byBook[parsed.bookId] = [];
+    byBook[parsed.bookId].push({ ref: ref, parsed: parsed });
+  });
+
+  var bookIds = Object.keys(byBook);
+  var rows    = [];
+
+  Promise.all(bookIds.map(function (bookId) {
+    return loadBook(version, bookId).then(function (chapters) {
+      byBook[bookId].forEach(function (item) {
+        var p    = item.parsed;
+        var text = chapters && chapters[String(p.ch)] && chapters[String(p.ch)][String(p.v)];
+        if (text) rows.push(item.ref + '\t' + text.replace(/\t|\n/g, ' '));
+      });
+    }).catch(function () {});
+  })).then(function () {
+    if (!rows.length) { alert('Could not fetch verse text. Try again while online.'); return; }
+    rows.sort();
+    var content = '#separator:Tab\n#html:false\n#notetype:Basic\n' + rows.join('\n');
+    var blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    var url  = URL.createObjectURL(blob);
+    var a    = document.createElement('a');
+    a.href   = url;
+    a.download = 'bible-memory' + (_memTagFilter ? '-' + _memTagFilter : '') + '.txt';
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 5000);
+  });
+}
+
+var _memQueue    = [];
+var _memQueueIdx = 0;
+
+function _memStartReview() {
+  var state = _memGet();
+  _memQueue    = Object.keys(state).filter(function (r) {
+    if (!_memIsDue(state[r])) return false;
+    if (_memTagFilter && (state[r].tags || []).indexOf(_memTagFilter) === -1) return false;
+    return true;
+  });
+  _memQueueIdx = 0;
+  _memShowReviewCard();
+}
+
+function _memReviewSingle(ref) {
+  _memQueue    = [ref];
+  _memQueueIdx = 0;
+  var browsePanel = document.getElementById('mem-browse-panel');
+  var reviewPanel = document.getElementById('mem-review-panel');
+  if (browsePanel) browsePanel.setAttribute('hidden', '');
+  if (reviewPanel) reviewPanel.removeAttribute('hidden');
+  document.querySelectorAll('.mem-tab').forEach(function (t) {
+    var isReview = t.getAttribute('data-tab') === 'review';
+    t.classList.toggle('mem-tab--active', isReview);
+    t.setAttribute('aria-selected', isReview ? 'true' : 'false');
+  });
+  _memShowReviewCard();
+}
+
+function _memShowReviewCard() {
+  var progressEl = document.getElementById('mem-review-progress');
+  var cardEl     = document.getElementById('mem-card');
+  var doneEl     = document.getElementById('mem-review-done');
+  if (!cardEl) return;
+  if (_memQueueIdx >= _memQueue.length) {
+    var n = _memQueue.length;
+    if (progressEl) progressEl.innerHTML = n > 0
+      ? '<span>' + n + ' of ' + n + '</span>' +
+        '<div class="mem-progress-bar"><div class="mem-progress-fill" style="width:100%"></div></div>'
+      : '';
+    cardEl.setAttribute('hidden', '');
+    if (doneEl) {
+      var pEl = doneEl.querySelector('p');
+      if (pEl) pEl.textContent = n === 0
+        ? 'All caught up — nothing due right now.'
+        : 'Session complete — well done! You reviewed ' + (n === 1 ? '1 verse' : n + ' verses') + '.';
+      doneEl.removeAttribute('hidden');
+    }
+    var badge = document.getElementById('mem-due-badge');
+    if (badge) badge.setAttribute('hidden', '');
+    return;
+  }
+  if (doneEl) doneEl.setAttribute('hidden', '');
+  cardEl.removeAttribute('hidden');
+  var total = _memQueue.length, done = _memQueueIdx;
+  if (progressEl) {
+    progressEl.innerHTML =
+      '<span>' + (done + 1) + ' of ' + total + '</span>' +
+      '<div class="mem-progress-bar"><div class="mem-progress-fill" style="width:' +
+      Math.round(done / total * 100) + '%"></div></div>';
+  }
+  var ref     = _memQueue[_memQueueIdx];
+  var mode    = localStorage.getItem(MEMORY_MODE_KEY) || 'ref-to-text';
+  var frontEl = document.getElementById('mem-card-front');
+  var backEl  = document.getElementById('mem-card-back');
+  var actsEl  = document.getElementById('mem-card-actions');
+  if (!frontEl) return;
+  backEl.setAttribute('hidden', '');
+  actsEl.setAttribute('hidden', '');
+  frontEl.removeAttribute('hidden');
+
+  if (mode === 'ref-to-text') {
+    frontEl.innerHTML =
+      '<p class="mem-card__label">Reference</p>' +
+      '<p class="mem-card__ref">' + escHtml(ref) + '</p>' +
+      '<p class="mem-card__hint">Recall the verse text, then reveal.</p>' +
+      '<button class="mem-show-btn" id="mem-show-answer">Show Answer</button>';
+    _memWireShowBtn(ref, mode, null);
+  } else {
+    frontEl.innerHTML = '<p class="mem-card__hint" style="font-size:.85rem">Loading…</p>';
+    var parsed = parseRef(ref);
+    if (parsed && parsed.bookId) {
+      loadBook(getVersion(), parsed.bookId).then(function (chs) {
+        var text = chs && chs[String(parsed.ch)] && chs[String(parsed.ch)][String(parsed.v)];
+        frontEl.innerHTML =
+          '<p class="mem-card__label">Verse Text</p>' +
+          '<p class="mem-card__verse-text">&ldquo;' + escHtml(text || ref) + '&rdquo;</p>' +
+          '<p class="mem-card__hint">Recall the reference, then reveal.</p>' +
+          '<button class="mem-show-btn" id="mem-show-answer">Show Answer</button>';
+        _memWireShowBtn(ref, mode, text);
+      }).catch(function () {
+        frontEl.innerHTML = '<p class="mem-card__ref">' + escHtml(ref) + '</p>' +
+          '<button class="mem-show-btn" id="mem-show-answer">Show Answer</button>';
+        _memWireShowBtn(ref, mode, null);
+      });
+    }
+  }
+}
+
+function _memWireShowBtn(ref, mode, cachedText) {
+  var showBtn = document.getElementById('mem-show-answer');
+  if (!showBtn) return;
+  showBtn.addEventListener('click', function () {
+    var frontEl = document.getElementById('mem-card-front');
+    var backEl  = document.getElementById('mem-card-back');
+    var actsEl  = document.getElementById('mem-card-actions');
+    function renderAnswer(text) {
+      if (mode === 'ref-to-text') {
+        backEl.innerHTML =
+          '<p class="mem-card__verse-text">&ldquo;' + escHtml(text || '(verse unavailable)') + '&rdquo;</p>' +
+          '<p class="mem-card__verse-ref">' + escHtml(ref) + '</p>';
+      } else {
+        backEl.innerHTML =
+          '<p class="mem-card__label">Reference</p><p class="mem-card__ref">' + escHtml(ref) + '</p>';
+      }
+      if (frontEl) frontEl.setAttribute('hidden', '');
+      backEl.removeAttribute('hidden');
+      actsEl.removeAttribute('hidden');
+      _memWireRatingBtns(ref);
+    }
+    if (cachedText) { renderAnswer(cachedText); return; }
+    var parsed = parseRef(ref);
+    if (parsed && parsed.bookId) {
+      loadBook(getVersion(), parsed.bookId).then(function (chs) {
+        renderAnswer(chs && chs[String(parsed.ch)] && chs[String(parsed.ch)][String(parsed.v)]);
+      }).catch(function () { renderAnswer(null); });
+    } else { renderAnswer(null); }
+  });
+}
+
+function _memWireRatingBtns(ref) {
+  var actsEl = document.getElementById('mem-card-actions');
+  if (!actsEl) return;
+  actsEl.querySelectorAll('.mem-rate-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var score = parseInt(btn.getAttribute('data-score'), 10);
+      var state = _memGet();
+      if (state[ref]) { state[ref] = _memApplyScore(state[ref], score); _memSet(state); }
+      _memQueueIdx++;
+      _memShowReviewCard();
+      _memRenderList();
+    }, { once: true });
+  });
+}
+
+// ── Reading Plans — home widget ───────────────────────────────────────────────
+var PLANS_KEY  = 'bsw_plans';
+var PLANS_ROOT = _resolve('../../data/plans');
+
+function _plansGetState()   { try { return JSON.parse(localStorage.getItem(PLANS_KEY) || '{}'); } catch (e) { return {}; } }
+function _plansDayNum(s) {
+  if (!s || !s.startDate) return 1;
+  var start = new Date(s.startDate + 'T00:00:00');
+  var today = new Date();
+  today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return Math.floor((today - start) / 86400000) + 1;
+}
+
+export function initPlansHomeWidget() {
+  var widget = document.getElementById('home-plans-widget');
+  if (!widget) return;
+
+  var state    = _plansGetState();
+  var enrolled = Object.keys(state).filter(function (id) { return state[id] && state[id].startDate; });
+  if (!enrolled.length) return;
+
+  Promise.all(enrolled.map(function (id) {
+    return fetch(PLANS_ROOT + '/' + id + '.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; });
+  })).then(function (plans) {
+    var html = '<div class="plans-widget">' +
+      '<h2 class="plans-widget__heading">Today\'s Reading</h2>';
+
+    var any = false;
+    plans.forEach(function (plan) {
+      if (!plan) return;
+      var s  = state[plan.id];
+      var dn = _plansDayNum(s);
+      if (dn < 1 || dn > plan.total_days) {
+        html += '<div class="plans-widget__item">' +
+          '<span class="plans-widget__title">' + escHtml(plan.title) + '</span> — ' +
+          '<span class="plans-widget__done">Complete!</span></div>';
+        any = true;
+        return;
+      }
+      var day  = plan.days[dn - 1];
+      var comp = s.completed && s.completed[dn];
+      html += '<div class="plans-widget__item' + (comp ? ' plans-widget__item--done' : '') + '">';
+      html += '<span class="plans-widget__title">' + escHtml(plan.title) + '</span>';
+      html += ' <span class="plans-widget__meta">Day ' + dn + ' of ' + plan.total_days + '</span>';
+      html += '<div class="plans-widget__passages">';
+      day.passages.forEach(function (p) {
+        html += '<a class="plans-widget__passage" href="' +
+          escHtml(READER_URL + '?ref=' + encodeURIComponent(p)) + '">' +
+          escHtml(p) + '</a>';
+      });
+      html += '</div>';
+      if (comp) {
+        html += '<span class="plans-widget__check">✓ Done</span>';
+      } else {
+        html += '<a class="plans-widget__goto" href="plans/">Open Reading Plans →</a>';
+      }
+      html += '</div>';
+      any = true;
+    });
+
+    html += '</div>';
+
+    if (any) {
+      widget.innerHTML = html;
+      widget.removeAttribute('hidden');
+      var toolsH2 = Array.from(widget.parentNode.querySelectorAll('h2'))
+        .find(function (h) { return h.textContent.trim() === 'Tools'; });
+      if (toolsH2) toolsH2.parentNode.insertBefore(widget, toolsH2);
+    }
+  });
+}

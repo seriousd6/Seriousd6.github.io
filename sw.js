@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v19';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v38';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v1';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -96,7 +96,6 @@ var SHELL_URLS = [
   './assets/css/bible-ui.css',
   './assets/css/daily.css',
   './assets/css/memorize.css',
-  './assets/css/topical.css',
   './assets/css/reader.css',
   './assets/css/verse-study.css',
   './assets/css/book-study.css',
@@ -106,10 +105,31 @@ var SHELL_URLS = [
   './assets/css/study-nav.css',
   './assets/css/word.css',
   './assets/css/dictionary.css',
+  './assets/css/timeline.css',
+  './assets/css/maps.css',
+  './assets/css/wordcloud.css',
   './assets/css/devotionals.css',
   './memorize/index.html',
-  './topical/index.html',
-  './assets/js/bible.js',
+  './journal/index.html',
+  './assets/js/app.js',
+  './assets/js/core.js',
+  './assets/js/storage.js',
+  './assets/js/tooltip.js',
+  './assets/js/modal.js',
+  './assets/js/wire.js',
+  './assets/js/pwa.js',
+  './assets/js/search.js',
+  './assets/js/reader.js',
+  './assets/js/parallels.js',
+  './assets/js/interlinear.js',
+  './assets/js/verse-study.js',
+  './assets/js/word.js',
+  './assets/js/daily.js',
+  './assets/js/library.js',
+  './assets/js/terms.js',
+  './assets/js/timeline.js',
+  './assets/js/maps.js',
+  './assets/js/wordcloud.js',
   './assets/js/main.js',
   './favicon.svg',
   './favicon.ico',
@@ -125,17 +145,24 @@ var SHELL_URLS = [
   './data/plans/nt-90-days.json',
   './data/plans/psalms-proverbs.json',
   './data/plans/gospels-30-days.json',
+  './data/plans/heidelberg-weekly.json',
+  './data/plans/wsc-quarterly.json',
   './data/devotionals/spurgeon-morning.json',
   './data/devotionals/spurgeon-evening.json',
   // Extended lexicons
   './data/strongs/bdb.json',
   './data/strongs/thayer.json',
-  // New dictionaries & topical
+  // Reference dictionaries & topical textbooks
   './data/smith/index.json',
   './data/hitchcock/index.json',
   './data/torrey/torrey.json',
   './dictionary/index.html',
-  './topical/index.html',
+  './timeline/index.html',
+  './maps/index.html',
+  './wordcloud/index.html',
+  './data/timeline/events.json',
+  './data/timeline/detail.json',
+  './data/wordcloud/frequencies.json',
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────

@@ -93,7 +93,7 @@
 
 .devot-period-tab.is-active {
   background: var(--color-primary, #5c3d1e);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary, #5c3d1e);
 }
 
@@ -184,5 +184,19 @@
     flex-direction: column;
     align-items: flex-start;
     gap: .6rem;
+  }
+}
+
+/* ── Dark-mode button overrides ─────────────────────────────────────────── */
+[data-theme="dark"] .devot-period-tab.is-active {
+  background: var(--color-btn-bg, #3a2d18);
+  border-color: var(--color-primary);
+  color: var(--color-btn-text, #e8c87a);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .devot-period-tab.is-active {
+    background: var(--color-btn-bg, #3a2d18);
+    border-color: var(--color-primary);
+    color: var(--color-btn-text, #e8c87a);
   }
 }

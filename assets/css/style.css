@@ -7,7 +7,8 @@
   --color-bg:        #faf8f4;
   --color-surface:   #ffffff;
   --color-primary:   #5c3d1e;
-  --color-accent:    #b8860b;
+  --color-on-primary: #fff;     /* text color for elements with background: var(--color-primary); dark mode overrides this */
+  --color-accent:    #8c6a00;   /* darkened from #b8860b — old value failed WCAG AA 4.5:1 on light bg */
   --color-text:      #2c2416;
   --color-muted:     #7a6a55;
   --color-border:    #e0d5c4;
@@ -15,7 +16,7 @@
   /* Sidebar */
   --sb-bg:           #32200e;
   --sb-text:         #e8d9bb;
-  --sb-muted:        #9a8060;
+  --sb-muted:        #a08a68;   /* darkened from #9a8060 — old value was 4.18:1, below WCAG AA 4.5:1 */
   --sb-hover:        rgba(255,255,255,0.07);
   --sb-active-bg:    rgba(255,255,255,0.12);
   --sb-active-fg:    #e8c87a;
@@ -219,7 +220,7 @@ body.sb-open .site-sidebar {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  color: #6a5540;
+  color: #9a7a50;   /* lightened from #6a5540 — old value was 2.21:1, below WCAG AA 3.0:1 minimum */
 }
 
 /* Child links */
@@ -610,6 +611,7 @@ span.term { font-weight: bold; color: var(--color-primary); }
   --color-bg:        #1a1208;
   --color-surface:   #231a0d;
   --color-primary:   #e8c87a;
+  --color-on-primary: #1a1208;  /* dark text on golden primary bg — white (#fff) fails at ~1.5:1 in dark mode */
   --color-accent:    #d4a017;
   --color-text:      #e8dfc8;
   --color-muted:     #9a8870;
@@ -617,10 +619,14 @@ span.term { font-weight: bold; color: var(--color-primary); }
   --color-bg-alt:    #2a1f0f;
   --sb-bg:           #120d05;
   --sb-text:         #e8d9bb;
-  --sb-muted:        #7a6a55;
+  --sb-muted:        #9e8a6e;   /* lightened from #7a6a55 — old value was 3.70:1, below WCAG AA 4.5:1 */
   --sb-hover:        rgba(255,255,255,0.06);
   --sb-active-bg:    rgba(255,255,255,0.1);
   --sb-active-fg:    #e8c87a;
+  /* Filled button surfaces — dark bg + golden text avoids white-on-yellow */
+  --color-btn-bg:       #3a2d18;
+  --color-btn-text:     #e8c87a;
+  --color-btn-bg-hover: #4a3a22;
   color-scheme: dark;
 }
 
@@ -629,6 +635,7 @@ span.term { font-weight: bold; color: var(--color-primary); }
     --color-bg:        #1a1208;
     --color-surface:   #231a0d;
     --color-primary:   #e8c87a;
+    --color-on-primary: #1a1208;  /* matches [data-theme="dark"] */
     --color-accent:    #d4a017;
     --color-text:      #e8dfc8;
     --color-muted:     #9a8870;
@@ -636,11 +643,26 @@ span.term { font-weight: bold; color: var(--color-primary); }
     --color-bg-alt:    #2a1f0f;
     --sb-bg:           #120d05;
     --sb-text:         #e8d9bb;
-    --sb-muted:        #7a6a55;
+    --sb-muted:        #9e8a6e;   /* matches [data-theme="dark"] fix */
     --sb-hover:        rgba(255,255,255,0.06);
     --sb-active-bg:    rgba(255,255,255,0.1);
     --sb-active-fg:    #e8c87a;
+    --color-btn-bg:       #3a2d18;
+    --color-btn-text:     #e8c87a;
+    --color-btn-bg-hover: #4a3a22;
     color-scheme: dark;
+  }
+}
+
+/* Footer: swap yellow bg for dark surface in dark mode */
+[data-theme="dark"] .site-footer {
+  background: #231a0d;
+  border-top: 1px solid #3a2e1e;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-footer {
+    background: #231a0d;
+    border-top: 1px solid #3a2e1e;
   }
 }
 

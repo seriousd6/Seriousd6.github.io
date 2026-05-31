@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="Search the Bible by keyword or phrase across all books." />
-  <title>Verse Search — Bible Study</title>
+  <meta name="description" content="Search the Bible by keyword or phrase, Strong's number, topic, or browse all content types at once." />
+  <title>Search — Bible Study</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
 </head>
@@ -14,22 +14,59 @@
     <div class="container">
 
       <h1>Search</h1>
-      <p>Search every verse by word or phrase, look up Strong's numbers, browse topics, or search across all dictionaries.</p>
 
       <div class="search-page-input-wrap">
         <input id="bsw-search-input" class="search-page-input" type="search"
           placeholder="e.g. love, in the beginning, &quot;the word was God&quot;"
           autocomplete="off" spellcheck="false" />
-        <div class="search-mode-row">
-          <button class="search-mode-btn search-mode-btn--active" data-mode="text" type="button">Verses</button>
-          <button class="search-mode-btn" data-mode="strongs" type="button">Strong's #</button>
-          <button class="search-mode-btn" data-mode="topics" type="button">Topics</button>
-          <button class="search-mode-btn" data-mode="dict" type="button">Dictionary</button>
+
+        <!-- Top-level mode tabs -->
+        <div class="search-tab-row">
+          <button class="search-tab search-tab--active" data-search-tab="verse" type="button">Verse Search</button>
+          <button class="search-tab" data-search-tab="explore" type="button">Explore</button>
         </div>
+
+        <!-- Verse-mode context controls -->
+        <div id="bsw-verse-ctx">
+          <div class="search-filter-row" id="bsw-search-filter-row">
+            <button class="search-filter-toggle" id="bsw-filter-toggle" type="button">Filter ▾</button>
+            <span class="search-filter-summary" id="bsw-filter-summary"></span>
+          </div>
+          <div class="search-filter-panel" id="bsw-filter-panel" hidden>
+            <div class="search-filter-group">
+              <button class="search-mode-btn search-mode-btn--active" data-testament="all" type="button">All</button>
+              <button class="search-mode-btn" data-testament="ot" type="button">Old Testament</button>
+              <button class="search-mode-btn" data-testament="nt" type="button">New Testament</button>
+              <select class="search-filter-book" id="bsw-book-filter" aria-label="Filter by book">
+                <option value="">All books</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-sort-row" id="bsw-search-sort-row" hidden>
+            <span class="search-sort-label">Sort:</span>
+            <button class="search-mode-btn" data-sort="relevance" type="button">Relevance</button>
+            <button class="search-mode-btn" data-sort="canonical" type="button">Bible order</button>
+          </div>
+        </div>
+
+        <!-- Explore-mode context controls -->
+        <div id="bsw-explore-ctx" hidden>
+          <div class="search-explore-filters">
+            <span class="search-explore-label">Show:</span>
+            <button class="search-explore-filter search-explore-filter--active" data-explore-filter="all" type="button">All</button>
+            <button class="search-explore-filter" data-explore-filter="verses" type="button">Verses</button>
+            <button class="search-explore-filter" data-explore-filter="words" type="button">Word Studies</button>
+            <button class="search-explore-filter" data-explore-filter="topics" type="button">Topics</button>
+            <button class="search-explore-filter" data-explore-filter="dictionary" type="button">Dictionary</button>
+            <button class="search-explore-filter" data-explore-filter="library" type="button">Library</button>
+          </div>
+          <div id="bsw-explore-output"></div>
+        </div>
+
         <p class="search-page-status" id="bsw-search-status"></p>
       </div>
 
-      <div id="bsw-search-results" class="search-page-results" role="list"></div>
+      <div id="bsw-search-output" class="search-page-results" role="list"></div>
 
     </div>
   </main>
@@ -41,6 +78,6 @@
   </footer>
 
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/bible.js"></script>
+    <script type="module" src="../assets/js/app.js"></script>
 </body>
 </html>

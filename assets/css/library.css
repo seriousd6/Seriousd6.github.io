@@ -29,6 +29,7 @@
 .lib-badge--anglican  { border-color: #4a5f7a; color: #4a5f7a; }
 .lib-badge--ecumenical{ border-color: var(--color-accent); color: var(--color-accent); }
 .lib-badge--baptist   { border-color: #5c2d87; color: #5c2d87; }
+.lib-badge--patristic { border-color: #8b6914; color: #8b6914; }
 
 /* ── Table of contents ──────────────────────────────────── */
 .lib-toc {
@@ -331,4 +332,46 @@
   margin: 0;
 }
 
-.lib-badge--father { border-color: #5a3e1b; color: #5a3e1b; }
+.lib-badge--father   { border-color: #5a3e1b; color: #5a3e1b; }
+.lib-badge--catholic { border-color: #8b1a1a; color: #8b1a1a; }
+
+/* ── I2: Library cross-document search ──────────────────── */
+.lib-search-bar {
+  margin: 1.25rem 0 0.5rem;
+}
+.lib-search-input {
+  width: 100%;
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+.lib-search-input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+
+.lib-search-results { margin-bottom: 1.5rem; }
+.lib-search-count { font-family: var(--font-ui); font-size: 0.83rem; color: var(--color-muted); margin: 0 0 0.75rem; }
+.lib-search-none  { font-family: var(--font-ui); font-size: 0.88rem; color: var(--color-muted); }
+
+.lib-search-result {
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  background: var(--color-surface);
+}
+.lsr-head { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; flex-wrap: wrap; }
+.lsr-doc  { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; color: var(--color-muted);
+            border: 1px solid currentColor; border-radius: 3px; padding: 0.05rem 0.4rem; white-space: nowrap; }
+.lsr-heading { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600; color: var(--color-primary); text-decoration: none; }
+.lsr-heading:hover { text-decoration: underline; }
+.lsr-snip { font-size: 0.83rem; color: var(--color-text); margin: 0 0 0.4rem; line-height: 1.5; }
+.lsr-snip mark { background: rgba(255,200,0,0.35); border-radius: 2px; padding: 0 1px; }
+.lsr-open { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-primary); text-decoration: none; }
+.lsr-open:hover { text-decoration: underline; }
+
+[data-theme="dark"] .lsr-snip mark,
+:root:not([data-theme="light"]) .lsr-snip mark { background: rgba(255,200,0,0.18); }

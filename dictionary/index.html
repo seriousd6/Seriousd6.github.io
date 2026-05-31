@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="Easton's Bible Dictionary — 3,963 entries covering people, places, and topics in Scripture. M.G. Easton, 1897 (public domain)." />
-  <title>Easton's Bible Dictionary</title>
+  <meta name="description" content="Bible Reference — search across Easton's and Smith's Bible Dictionaries, Hitchcock's Bible Names, and Nave's and Torrey's Topical Bibles." />
+  <title>Bible Reference — Bible Study</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <link rel="stylesheet" href="../assets/css/dictionary.css" />
@@ -16,27 +16,26 @@
     <div class="container dict-page">
 
       <div class="dict-header">
-        <h1 class="dict-title">Bible Dictionary</h1>
-        <div class="dict-src-tabs" role="tablist">
-          <button class="dict-src-tab dict-src-tab--active" data-src="easton" role="tab" aria-selected="true">Easton's <span class="dict-src-tab__count">3,963</span></button>
-          <button class="dict-src-tab" data-src="smith" role="tab" aria-selected="false">Smith's <span class="dict-src-tab__count">4,639</span></button>
-          <button class="dict-src-tab" data-src="names" role="tab" aria-selected="false">Names <span class="dict-src-tab__count">2,616</span></button>
-        </div>
+        <h1 class="dict-title">Bible Reference</h1>
+        <p class="dict-sub">Dictionary, names, and topical resources — search or browse by letter</p>
       </div>
 
       <div class="dict-search-row">
         <input id="dict-search" type="search" class="dict-search-input"
-          placeholder="Search entries… e.g. grace, tabernacle, Bethlehem"
+          placeholder="Search all sources… e.g. grace, tabernacle, prayer"
           autocomplete="off" spellcheck="false" />
         <span id="dict-search-count" class="dict-search-count" hidden></span>
       </div>
+
+      <!-- Source filter chips — injected by JS so adding new sources needs no HTML change -->
+      <div id="dict-source-filters" class="dict-source-filters" role="group" aria-label="Filter by source"></div>
 
       <div class="dict-alpha" id="dict-alpha" role="tablist" aria-label="Browse by letter"></div>
 
       <div class="dict-body" id="dict-body">
         <div class="dict-list-col">
           <div id="dict-list" class="dict-list"></div>
-          <p id="dict-loading" class="dict-loading">Loading dictionary…</p>
+          <p id="dict-loading" class="dict-loading">Loading…</p>
           <p id="dict-empty"   class="dict-empty"   hidden>No entries found.</p>
         </div>
         <div class="dict-detail-col" id="dict-detail-col" hidden>
@@ -51,11 +50,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Easton's Bible Dictionary (1897) · Smith's Bible Dictionary (1884) · Hitchcock's Bible Names (1874) — public domain.</p>
+      <p>Easton's Bible Dictionary (1897) · Smith's Bible Dictionary (1884) · Hitchcock's Bible Names (1874) · Nave's Topical Bible (1896) · Torrey's Topical Textbook (1897) — public domain.</p>
     </div>
   </footer>
 
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/bible.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
 </body>
 </html>

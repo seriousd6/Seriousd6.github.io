@@ -1,0 +1,131 @@
+/* lib-reader.css — Unified library document reader */
+
+.lr-page {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.lr-header {
+  margin-bottom: 1.5rem;
+}
+
+.lr-back {
+  font-size: .83rem;
+  color: var(--color-muted, #888);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: .65rem;
+}
+.lr-back:hover { color: var(--color-primary); }
+
+.lr-doc-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 .35rem;
+}
+
+/* ── Two-column layout ─────────────────────────────────────────────────────── */
+
+.lr-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.lr-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+}
+
+.lr-sidebar-inner {
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  padding: .75rem 1rem 1rem;
+  background: var(--color-surface, #fff);
+}
+
+.lr-toc-heading {
+  font-size: .67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--color-muted, #999);
+  margin-bottom: .55rem;
+}
+
+.lr-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.lr-toc-list a {
+  font-size: .8rem;
+  color: var(--color-accent, var(--color-primary));
+  text-decoration: none;
+  display: block;
+  padding: .22rem .4rem;
+  border-radius: 4px;
+  transition: background .1s, color .1s;
+  line-height: 1.4;
+}
+
+.lr-toc-list a:hover,
+.lr-toc-list a.lr-toc-active {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  color: var(--color-primary);
+}
+
+/* ── Main content ──────────────────────────────────────────────────────────── */
+
+.lr-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.lr-loading {
+  color: var(--color-muted, #aaa);
+  font-size: .9rem;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.lr-error {
+  color: var(--color-muted, #888);
+  padding: 2rem 0;
+}
+.lr-error a { color: var(--color-primary); }
+
+.lr-section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .lr-layout {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .lr-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+}
+
+/* ── Dark mode ─────────────────────────────────────────────────────────────── */
+
+[data-theme="dark"] .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
+}

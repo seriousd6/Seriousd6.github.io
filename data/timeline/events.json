@@ -1,0 +1,844 @@
+{
+  "eras": [
+    { "id": "creation",          "label": "Creation & Fall",         "color": "#3d7a4a" },
+    { "id": "patriarchs",        "label": "The Patriarchs",          "color": "#b06b1e" },
+    { "id": "exodus",            "label": "Moses & the Exodus",       "color": "#c44d29" },
+    { "id": "conquest",          "label": "Conquest & Judges",        "color": "#7b5ea7" },
+    { "id": "monarchy",          "label": "The Monarchy",             "color": "#b59b30" },
+    { "id": "exile",             "label": "Exile & Return",           "color": "#2a7a8e" },
+    { "id": "intertestamental",  "label": "Between the Testaments",   "color": "#6b7280" },
+    { "id": "gospels",           "label": "Life of Christ",           "color": "#9b2335" },
+    { "id": "church",            "label": "The Early Church",         "color": "#1a5fa8" },
+    { "id": "consummation",      "label": "The Consummation",         "color": "#7a5800" }
+  ],
+  "events": [
+    {
+      "id": "creation",
+      "label": "Creation",
+      "yearNum": -4004,
+      "yearDisplay": "c. 4000 BC",
+      "era": "creation",
+      "ref": "Genesis 1:1",
+      "desc": "God creates the heavens and the earth in six days, declaring his work very good."
+    },
+    {
+      "id": "creation-man",
+      "label": "Creation of Man",
+      "yearNum": -4003,
+      "yearDisplay": "c. 4000 BC",
+      "era": "creation",
+      "ref": "Genesis 1:27",
+      "desc": "God forms Adam from the dust and breathes life into him; Eve is formed from his side. They bear God's image."
+    },
+    {
+      "id": "the-fall",
+      "label": "The Fall",
+      "yearNum": -4002,
+      "yearDisplay": "c. 4000 BC",
+      "era": "creation",
+      "ref": "Genesis 3:6",
+      "desc": "Adam and Eve disobey God's command. Sin, death, and suffering enter the world — but God promises a coming deliverer."
+    },
+    {
+      "id": "cain-abel",
+      "label": "Cain & Abel",
+      "yearNum": -3600,
+      "yearDisplay": "c. 3600 BC",
+      "era": "creation",
+      "ref": "Genesis 4:8",
+      "desc": "Cain murders his brother Abel — the first murder, showing sin's immediate spread through humanity."
+    },
+    {
+      "id": "enoch",
+      "label": "Enoch",
+      "yearNum": -3100,
+      "yearDisplay": "c. 3100 BC",
+      "era": "creation",
+      "ref": "Genesis 5:24",
+      "desc": "Enoch 'walked with God and was not, for God took him' — a preview of resurrection before death."
+    },
+    {
+      "id": "the-flood",
+      "label": "The Great Flood",
+      "yearNum": -2350,
+      "yearDisplay": "c. 2350 BC",
+      "era": "creation",
+      "ref": "Genesis 7:11",
+      "desc": "God judges the world with a flood; Noah and his family are preserved through the ark — a pattern of judgment and salvation."
+    },
+    {
+      "id": "rainbow-covenant",
+      "label": "Noahic Covenant",
+      "yearNum": -2348,
+      "yearDisplay": "c. 2348 BC",
+      "era": "creation",
+      "ref": "Genesis 9:11",
+      "desc": "God establishes his covenant with Noah and all creation: never again to destroy the earth with a flood. The rainbow is its sign."
+    },
+    {
+      "id": "tower-of-babel",
+      "label": "Tower of Babel",
+      "yearNum": -2200,
+      "yearDisplay": "c. 2200 BC",
+      "era": "creation",
+      "ref": "Genesis 11:4",
+      "desc": "Humanity unites in proud defiance at Babel. God scatters the nations and confuses their language, preparing the stage for Abraham's call."
+    },
+    {
+      "id": "call-of-abraham",
+      "label": "Call of Abraham",
+      "yearNum": -2091,
+      "yearDisplay": "c. 2091 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 12:1",
+      "desc": "God calls Abram from Ur of the Chaldeans — the decisive turning point of redemptive history. He promises land, seed, and worldwide blessing."
+    },
+    {
+      "id": "abrahamic-covenant",
+      "label": "Abrahamic Covenant",
+      "yearNum": -2082,
+      "yearDisplay": "c. 2082 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 15:18",
+      "desc": "God ratifies his covenant with Abraham through a solemn oath, promising the land from the Nile to the Euphrates to his descendants."
+    },
+    {
+      "id": "sodom-gomorrah",
+      "label": "Sodom & Gomorrah",
+      "yearNum": -2068,
+      "yearDisplay": "c. 2068 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 19:24",
+      "desc": "God destroys Sodom and Gomorrah with fire and sulfur, rescuing Lot — a warning that divine judgment falls on unrepentant wickedness."
+    },
+    {
+      "id": "birth-of-isaac",
+      "label": "Isaac Born",
+      "yearNum": -2066,
+      "yearDisplay": "c. 2066 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 21:3",
+      "desc": "Isaac is born to Abraham and Sarah in their old age — the promised child whose birth was humanly impossible. Faith is vindicated."
+    },
+    {
+      "id": "binding-of-isaac",
+      "label": "Binding of Isaac",
+      "yearNum": -2050,
+      "yearDisplay": "c. 2050 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 22:9",
+      "desc": "God commands Abraham to sacrifice Isaac on Moriah. A ram is substituted at the last moment — the clearest OT picture of substitutionary atonement."
+    },
+    {
+      "id": "jacob-esau",
+      "label": "Jacob & Esau Born",
+      "yearNum": -2006,
+      "yearDisplay": "c. 2006 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 25:21",
+      "desc": "Twin sons born to Isaac and Rebekah. God sovereignly chooses Jacob before they are born — election is by grace, not merit."
+    },
+    {
+      "id": "jacobs-ladder",
+      "label": "Jacob at Bethel",
+      "yearNum": -1928,
+      "yearDisplay": "c. 1928 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 28:12",
+      "desc": "God appears to Jacob in a dream with a stairway to heaven, reaffirming the Abrahamic covenant and promising his presence."
+    },
+    {
+      "id": "joseph-sold",
+      "label": "Joseph Sold",
+      "yearNum": -1898,
+      "yearDisplay": "c. 1898 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 37:28",
+      "desc": "Joseph is sold by his brothers to Ishmaelite traders for twenty pieces of silver — rejected by his own, yet destined for glory."
+    },
+    {
+      "id": "joseph-exalted",
+      "label": "Joseph Exalted",
+      "yearNum": -1885,
+      "yearDisplay": "c. 1885 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 41:41",
+      "desc": "Pharaoh appoints Joseph as ruler over Egypt — the one rejected by his brothers becomes the savior of his family and many nations."
+    },
+    {
+      "id": "jacob-to-egypt",
+      "label": "Jacob's Family to Egypt",
+      "yearNum": -1876,
+      "yearDisplay": "c. 1876 BC",
+      "era": "patriarchs",
+      "ref": "Genesis 46:6",
+      "desc": "Israel and his seventy descendants move to Egypt at Joseph's invitation, beginning the sojourn that will end in the Exodus."
+    },
+    {
+      "id": "moses-born",
+      "label": "Moses Born",
+      "yearNum": -1526,
+      "yearDisplay": "c. 1526 BC",
+      "era": "exodus",
+      "ref": "Exodus 2:2",
+      "desc": "Moses is born during Israel's slavery under a death decree against Hebrew boys. Hidden by his mother, he is drawn from the Nile by Pharaoh's daughter."
+    },
+    {
+      "id": "burning-bush",
+      "label": "Burning Bush",
+      "yearNum": -1446,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 3:2",
+      "desc": "God appears to Moses in the burning bush on Sinai. He reveals his name — I AM — and commissions Moses to deliver Israel from Egypt."
+    },
+    {
+      "id": "ten-plagues",
+      "label": "Ten Plagues",
+      "yearNum": -1446,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 7:14",
+      "desc": "God sends ten devastating plagues on Egypt, demonstrating his sovereignty over all Egyptian gods and breaking Pharaoh's grip on Israel."
+    },
+    {
+      "id": "the-passover",
+      "label": "The Passover",
+      "yearNum": -1445,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 12:13",
+      "desc": "The blood of the lamb on the doorposts shields Israel from the final plague. The foundational event of Israel's worship — pointing to Christ, the true Passover Lamb."
+    },
+    {
+      "id": "red-sea",
+      "label": "Crossing the Red Sea",
+      "yearNum": -1444,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 14:22",
+      "desc": "God parts the Red Sea, Israel walks through on dry ground, and Pharaoh's army is swallowed by the returning waters. Salvation by power alone."
+    },
+    {
+      "id": "sinai-covenant",
+      "label": "Sinai Covenant",
+      "yearNum": -1443,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 19:5",
+      "desc": "God gives Israel his law at Sinai, establishing the covenant nation. The Ten Commandments and the entire Mosaic law are given here."
+    },
+    {
+      "id": "golden-calf",
+      "label": "The Golden Calf",
+      "yearNum": -1442,
+      "yearDisplay": "c. 1446 BC",
+      "era": "exodus",
+      "ref": "Exodus 32:4",
+      "desc": "Israel breaks the covenant almost immediately by making a golden calf. Moses intercedes; God's mercy prevails over judgment."
+    },
+    {
+      "id": "tabernacle",
+      "label": "Tabernacle Built",
+      "yearNum": -1445,
+      "yearDisplay": "c. 1445 BC",
+      "era": "exodus",
+      "ref": "Exodus 40:34",
+      "desc": "The Tabernacle is completed and the glory of God fills it. God now dwells in the midst of his people — a shadow of Christ's incarnation."
+    },
+    {
+      "id": "spies",
+      "label": "Twelve Spies Sent",
+      "yearNum": -1444,
+      "yearDisplay": "c. 1444 BC",
+      "era": "exodus",
+      "ref": "Numbers 13:2",
+      "desc": "Twelve spies scout Canaan. Ten return with fear; only Caleb and Joshua trust God. Israel's unbelief condemns them to forty years of wandering."
+    },
+    {
+      "id": "wilderness",
+      "label": "40 Years Wandering",
+      "yearNum": -1440,
+      "yearDisplay": "1444–1406 BC",
+      "era": "exodus",
+      "ref": "Numbers 14:33",
+      "desc": "The unbelieving generation dies in the wilderness. God's discipline is also his provision — manna, water from the rock, the bronze serpent."
+    },
+    {
+      "id": "death-of-moses",
+      "label": "Death of Moses",
+      "yearNum": -1406,
+      "yearDisplay": "c. 1406 BC",
+      "era": "exodus",
+      "ref": "Deuteronomy 34:5",
+      "desc": "Moses dies on Mount Nebo, within sight of the promised land. The greatest prophet of the OT, yet pointing forward to one greater still."
+    },
+    {
+      "id": "jordan-crossing",
+      "label": "Jordan Crossing",
+      "yearNum": -1406,
+      "yearDisplay": "c. 1406 BC",
+      "era": "conquest",
+      "ref": "Joshua 3:17",
+      "desc": "Israel crosses the Jordan River on dry ground under Joshua's leadership. A new Exodus — God again opens water, and a new generation enters the land."
+    },
+    {
+      "id": "fall-of-jericho",
+      "label": "Fall of Jericho",
+      "yearNum": -1405,
+      "yearDisplay": "c. 1406 BC",
+      "era": "conquest",
+      "ref": "Joshua 6:20",
+      "desc": "The walls of Jericho fall at the shout of Israel and the sound of trumpets after seven days of marching. The conquest of Canaan begins."
+    },
+    {
+      "id": "land-divided",
+      "label": "Land Divided",
+      "yearNum": -1399,
+      "yearDisplay": "c. 1399 BC",
+      "era": "conquest",
+      "ref": "Joshua 13:7",
+      "desc": "Joshua divides the conquered land among the twelve tribes. The covenant promise of land given to Abraham begins to be fulfilled."
+    },
+    {
+      "id": "judges-era",
+      "label": "Era of the Judges",
+      "yearNum": -1380,
+      "yearDisplay": "c. 1380 BC",
+      "era": "conquest",
+      "ref": "Judges 2:16",
+      "desc": "After Joshua's death, a cycle begins: Israel rebels, God sends oppression, Israel cries out, God raises a judge-deliverer. The pattern repeats for ~300 years."
+    },
+    {
+      "id": "deborah",
+      "label": "Deborah",
+      "yearNum": -1209,
+      "yearDisplay": "c. 1209 BC",
+      "era": "conquest",
+      "ref": "Judges 4:4",
+      "desc": "Deborah, prophetess and judge, leads Israel to victory over Jabin's army under Sisera. Her song of triumph is one of Israel's oldest poems."
+    },
+    {
+      "id": "gideon",
+      "label": "Gideon",
+      "yearNum": -1169,
+      "yearDisplay": "c. 1169 BC",
+      "era": "conquest",
+      "ref": "Judges 7:7",
+      "desc": "God delivers Israel from the Midianites through Gideon and just 300 men — demonstrating that salvation belongs to the Lord, not to human strength."
+    },
+    {
+      "id": "samson",
+      "label": "Samson",
+      "yearNum": -1075,
+      "yearDisplay": "c. 1075 BC",
+      "era": "conquest",
+      "ref": "Judges 13:24",
+      "desc": "Samson judges Israel for twenty years. His life is a study in wasted potential — great gifting, compromised by sin — yet God uses even his death for deliverance."
+    },
+    {
+      "id": "ruth",
+      "label": "Ruth",
+      "yearNum": -1100,
+      "yearDisplay": "c. 1100 BC",
+      "era": "conquest",
+      "ref": "Ruth 1:16",
+      "desc": "Ruth the Moabite declares loyalty to Naomi and Israel's God. Her marriage to Boaz places her in the line of David and ultimately of Jesus Christ."
+    },
+    {
+      "id": "samuel-called",
+      "label": "Samuel Called",
+      "yearNum": -1075,
+      "yearDisplay": "c. 1075 BC",
+      "era": "conquest",
+      "ref": "1 Samuel 3:10",
+      "desc": "The boy Samuel hears God's voice in the night and becomes the last judge and first prophet-figure of Israel, bridging the era of judges and the monarchy."
+    },
+    {
+      "id": "saul-anointed",
+      "label": "Saul Anointed King",
+      "yearNum": -1050,
+      "yearDisplay": "c. 1050 BC",
+      "era": "monarchy",
+      "ref": "1 Samuel 10:1",
+      "desc": "Israel demands a king 'like the nations.' God grants their request in judgment, and Saul — tall, handsome, and tragic — becomes the first king of Israel."
+    },
+    {
+      "id": "david-anointed",
+      "label": "David Anointed",
+      "yearNum": -1025,
+      "yearDisplay": "c. 1025 BC",
+      "era": "monarchy",
+      "ref": "1 Samuel 16:13",
+      "desc": "Samuel anoints the young shepherd David in Bethlehem. God looks not at outward appearance but at the heart — a man after God's own heart."
+    },
+    {
+      "id": "david-goliath",
+      "label": "David & Goliath",
+      "yearNum": -1023,
+      "yearDisplay": "c. 1023 BC",
+      "era": "monarchy",
+      "ref": "1 Samuel 17:49",
+      "desc": "The shepherd boy David fells the Philistine giant with a stone, trusting the name of the LORD. A picture of Christ's victory over the powers of darkness."
+    },
+    {
+      "id": "david-king",
+      "label": "David King of Israel",
+      "yearNum": -1003,
+      "yearDisplay": "c. 1003 BC",
+      "era": "monarchy",
+      "ref": "2 Samuel 5:3",
+      "desc": "David is anointed king over all Israel and captures Jerusalem, making it his capital — the city of God, eternal center of redemptive history."
+    },
+    {
+      "id": "davidic-covenant",
+      "label": "Davidic Covenant",
+      "yearNum": -997,
+      "yearDisplay": "c. 997 BC",
+      "era": "monarchy",
+      "ref": "2 Samuel 7:12",
+      "desc": "God promises David an eternal dynasty: one of his descendants will sit on the throne forever. This covenant finds its ultimate fulfillment in Jesus, Son of David."
+    },
+    {
+      "id": "solomon-king",
+      "label": "Solomon Becomes King",
+      "yearNum": -970,
+      "yearDisplay": "c. 970 BC",
+      "era": "monarchy",
+      "ref": "1 Kings 1:39",
+      "desc": "Solomon ascends the throne after David. His reign begins with wisdom and glory — yet ends with idolatry, showing that even the wisest human king is not the true King."
+    },
+    {
+      "id": "temple-built",
+      "label": "Temple Built",
+      "yearNum": -966,
+      "yearDisplay": "c. 966 BC",
+      "era": "monarchy",
+      "ref": "1 Kings 6:1",
+      "desc": "Solomon builds the Temple in Jerusalem — God's dwelling among his people. At its dedication the glory of God fills the house so that the priests cannot stand."
+    },
+    {
+      "id": "kingdom-divides",
+      "label": "Kingdom Divides",
+      "yearNum": -931,
+      "yearDisplay": "c. 931 BC",
+      "era": "monarchy",
+      "ref": "1 Kings 12:19",
+      "desc": "After Solomon's death, the kingdom splits: Israel (north, 10 tribes) and Judah (south, 2 tribes). The division is God's judgment for Solomon's apostasy."
+    },
+    {
+      "id": "elijah",
+      "label": "Elijah vs. Baal",
+      "yearNum": -850,
+      "yearDisplay": "c. 850 BC",
+      "era": "monarchy",
+      "ref": "1 Kings 18:38",
+      "desc": "Elijah confronts 450 prophets of Baal on Mount Carmel. Fire falls from heaven. The LORD alone is God. A turning point in the northern kingdom's apostasy."
+    },
+    {
+      "id": "isaiah",
+      "label": "Isaiah's Call",
+      "yearNum": -740,
+      "yearDisplay": "c. 740 BC",
+      "era": "monarchy",
+      "ref": "Isaiah 6:8",
+      "desc": "Isaiah sees the LORD enthroned and is commissioned as a prophet. His book spans from judgment on Israel to the glory of the new creation, including the Servant Songs."
+    },
+    {
+      "id": "amos",
+      "label": "Amos Prophesies",
+      "yearNum": -760,
+      "yearDisplay": "c. 760 BC",
+      "era": "monarchy",
+      "ref": "Amos 1:1",
+      "desc": "The shepherd-prophet Amos delivers God's fierce indictment of Israel's injustice. He announces the coming Day of the LORD and calls for justice to roll down like a river."
+    },
+    {
+      "id": "fall-samaria",
+      "label": "Fall of Samaria",
+      "yearNum": -722,
+      "yearDisplay": "722 BC",
+      "era": "monarchy",
+      "ref": "2 Kings 17:6",
+      "desc": "The Assyrians under Shalmaneser V and Sargon II destroy Samaria, the capital of Israel, and carry the northern ten tribes into exile — ending the northern kingdom forever."
+    },
+    {
+      "id": "hezekiah",
+      "label": "Hezekiah & Assyria",
+      "yearNum": -701,
+      "yearDisplay": "701 BC",
+      "era": "monarchy",
+      "ref": "2 Kings 19:35",
+      "desc": "Assyria under Sennacherib besieges Jerusalem. Hezekiah prays; Isaiah promises deliverance. The angel of the LORD strikes 185,000 Assyrian soldiers in the night."
+    },
+    {
+      "id": "josiah",
+      "label": "Josiah's Reforms",
+      "yearNum": -621,
+      "yearDisplay": "c. 621 BC",
+      "era": "monarchy",
+      "ref": "2 Kings 22:11",
+      "desc": "The Book of the Law is discovered in the Temple during Josiah's reign. He leads Israel in the most sweeping reform since the conquest — but it is too late to prevent judgment."
+    },
+    {
+      "id": "jeremiah",
+      "label": "Jeremiah's Call",
+      "yearNum": -626,
+      "yearDisplay": "c. 626 BC",
+      "era": "monarchy",
+      "ref": "Jeremiah 1:9",
+      "desc": "Jeremiah is called as the 'weeping prophet' to announce Judah's coming destruction and to promise a new covenant written on the heart — the heart of the gospel."
+    },
+    {
+      "id": "nebuchadnezzar",
+      "label": "Babylon's First Campaign",
+      "yearNum": -605,
+      "yearDisplay": "605 BC",
+      "era": "exile",
+      "ref": "Daniel 1:1",
+      "desc": "Nebuchadnezzar of Babylon defeats Egypt at Carchemish and takes the first captives from Jerusalem, including Daniel. The Babylonian exile begins."
+    },
+    {
+      "id": "ezekiel",
+      "label": "Ezekiel's Vision",
+      "yearNum": -593,
+      "yearDisplay": "593 BC",
+      "era": "exile",
+      "ref": "Ezekiel 1:1",
+      "desc": "By the Chebar Canal in Babylon, Ezekiel sees the glory of God — a living chariot-throne. He is called to prophesy to exiled Israel and promise the valley of dry bones."
+    },
+    {
+      "id": "fall-jerusalem",
+      "label": "Jerusalem Falls",
+      "yearNum": -586,
+      "yearDisplay": "586 BC",
+      "era": "exile",
+      "ref": "2 Kings 25:9",
+      "desc": "Nebuchadnezzar destroys Jerusalem, burns Solomon's Temple, and carries Judah into Babylon. Lamentations records the devastation. God's glory has departed."
+    },
+    {
+      "id": "cyrus-decree",
+      "label": "Cyrus Decrees Return",
+      "yearNum": -539,
+      "yearDisplay": "539 BC",
+      "era": "exile",
+      "ref": "Ezra 1:3",
+      "desc": "Cyrus the Great of Persia conquers Babylon and decrees that exiled peoples may return to their homelands — fulfilling Isaiah's 150-year-old prophecy by name."
+    },
+    {
+      "id": "first-return",
+      "label": "First Return from Exile",
+      "yearNum": -537,
+      "yearDisplay": "537 BC",
+      "era": "exile",
+      "ref": "Ezra 2:1",
+      "desc": "Zerubbabel leads approximately 42,000 exiles back to Jerusalem. The long night of exile begins to lift — a second Exodus from a second Egypt."
+    },
+    {
+      "id": "temple-rebuilt",
+      "label": "Temple Rebuilt",
+      "yearNum": -516,
+      "yearDisplay": "516 BC",
+      "era": "exile",
+      "ref": "Ezra 6:15",
+      "desc": "After decades of opposition and delay, the Second Temple is completed and dedicated with great joy and weeping. The glory of the former house is remembered and mourned."
+    },
+    {
+      "id": "esther",
+      "label": "Esther Saves Israel",
+      "yearNum": -479,
+      "yearDisplay": "c. 479 BC",
+      "era": "exile",
+      "ref": "Esther 4:14",
+      "desc": "Esther risks her life before the Persian king to save the Jewish people from Haman's genocidal plot. The feast of Purim commemorates this deliverance."
+    },
+    {
+      "id": "ezra",
+      "label": "Ezra Leads Second Return",
+      "yearNum": -458,
+      "yearDisplay": "458 BC",
+      "era": "exile",
+      "ref": "Ezra 7:10",
+      "desc": "Ezra the scribe leads a second wave of exiles back to Jerusalem, bringing a deep commitment to study and teach the Law of Moses to all Israel."
+    },
+    {
+      "id": "nehemiah",
+      "label": "Nehemiah Rebuilds Walls",
+      "yearNum": -445,
+      "yearDisplay": "445 BC",
+      "era": "exile",
+      "ref": "Nehemiah 2:17",
+      "desc": "Nehemiah returns from Persia and rebuilds the walls of Jerusalem in just 52 days against fierce opposition. The city is physically restored; the people are spiritually renewed."
+    },
+    {
+      "id": "malachi",
+      "label": "Malachi — Final Prophet",
+      "yearNum": -430,
+      "yearDisplay": "c. 430 BC",
+      "era": "exile",
+      "ref": "Malachi 4:5",
+      "desc": "Malachi delivers the last OT prophetic word: God charges Israel with spiritual adultery and promises the coming of the Lord's messenger — Elijah — before the great day."
+    },
+    {
+      "id": "silence",
+      "label": "400 Years of Silence",
+      "yearNum": -425,
+      "yearDisplay": "c. 430–5 BC",
+      "era": "intertestamental",
+      "ref": "Malachi 4:5",
+      "desc": "God sends no new prophetic word for four centuries. Persian, Greek, and Roman empires rise and fall over Palestine as Israel waits for the promised Messiah."
+    },
+    {
+      "id": "alexander",
+      "label": "Alexander Conquers",
+      "yearNum": -332,
+      "yearDisplay": "332 BC",
+      "era": "intertestamental",
+      "ref": "Daniel 8:21",
+      "desc": "Alexander the Great conquers the Near East in a lightning campaign, spreading Greek language and culture. Greek becomes the language in which the NT will be written."
+    },
+    {
+      "id": "septuagint",
+      "label": "LXX Translated",
+      "yearNum": -250,
+      "yearDisplay": "c. 250 BC",
+      "era": "intertestamental",
+      "ref": "Isaiah 7:14",
+      "desc": "The Hebrew Scriptures are translated into Greek (the Septuagint) in Alexandria, making God's word accessible across the Greek-speaking world."
+    },
+    {
+      "id": "maccabees",
+      "label": "Maccabean Revolt",
+      "yearNum": -167,
+      "yearDisplay": "167 BC",
+      "era": "intertestamental",
+      "ref": "Daniel 11:34",
+      "desc": "Antiochus IV Epiphanes desecrates the Temple; the Maccabees revolt and recapture it (commemorated in Hanukkah). Prefiguring the greater desecration still to come."
+    },
+    {
+      "id": "rome",
+      "label": "Rome Enters Palestine",
+      "yearNum": -63,
+      "yearDisplay": "63 BC",
+      "era": "intertestamental",
+      "ref": "Luke 2:1",
+      "desc": "Pompey the Great enters Jerusalem, ending Jewish independence. Roman rule sets the geopolitical stage for the birth of Christ under Caesar Augustus."
+    },
+    {
+      "id": "birth-of-jesus",
+      "label": "Birth of Jesus",
+      "yearNum": -5,
+      "yearDisplay": "c. 5 BC",
+      "era": "gospels",
+      "ref": "Luke 2:11",
+      "desc": "The eternal Son of God is born of the Virgin Mary in Bethlehem of Judea. The Word becomes flesh and dwells among us. All of history turns on this night."
+    },
+    {
+      "id": "magi",
+      "label": "The Magi",
+      "yearNum": -4,
+      "yearDisplay": "c. 4 BC",
+      "era": "gospels",
+      "ref": "Matthew 2:11",
+      "desc": "Wise men from the East follow a star to worship the newborn King. Herod's murderous plot follows — the powers of this world oppose the King from his birth."
+    },
+    {
+      "id": "baptism-of-jesus",
+      "label": "Baptism of Jesus",
+      "yearNum": 27,
+      "yearDisplay": "c. AD 27",
+      "era": "gospels",
+      "ref": "Matthew 3:17",
+      "desc": "Jesus is baptized by John in the Jordan. The Father speaks, the Spirit descends as a dove — the Trinity present at the launch of Jesus's public ministry."
+    },
+    {
+      "id": "temptation",
+      "label": "Temptation in the Wilderness",
+      "yearNum": 27,
+      "yearDisplay": "c. AD 27",
+      "era": "gospels",
+      "ref": "Matthew 4:11",
+      "desc": "Jesus is led by the Spirit into the wilderness for forty days and overcomes Satan's three temptations. Where Israel failed for forty years, Jesus succeeds."
+    },
+    {
+      "id": "sermon-mount",
+      "label": "Sermon on the Mount",
+      "yearNum": 28,
+      "yearDisplay": "c. AD 28",
+      "era": "gospels",
+      "ref": "Matthew 5:1",
+      "desc": "Jesus delivers the Sermon on the Mount — the charter of the kingdom of God. Blessed are the poor in spirit. A greater law than Sinai, written on the heart."
+    },
+    {
+      "id": "transfiguration",
+      "label": "Transfiguration",
+      "yearNum": 29,
+      "yearDisplay": "c. AD 29",
+      "era": "gospels",
+      "ref": "Matthew 17:5",
+      "desc": "On the mountain Jesus's face shines like the sun. Moses and Elijah appear with him; the Father again speaks from heaven. His disciples see his true glory."
+    },
+    {
+      "id": "triumphal-entry",
+      "label": "Triumphal Entry",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "gospels",
+      "ref": "Matthew 21:9",
+      "desc": "Jesus enters Jerusalem on a donkey to shouts of 'Hosanna!' — fulfilling Zechariah 9:9. He comes as the humble king, not the conquering general Israel wanted."
+    },
+    {
+      "id": "last-supper",
+      "label": "The Last Supper",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "gospels",
+      "ref": "Luke 22:19",
+      "desc": "Jesus takes bread and cup at the Passover meal, establishing the Lord's Supper as the new covenant memorial of his body given and blood shed for many."
+    },
+    {
+      "id": "crucifixion",
+      "label": "The Crucifixion",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "gospels",
+      "ref": "Luke 23:33",
+      "desc": "Jesus is crucified at Golgotha. He bears the sin of the world, exhausts divine wrath, and cries 'It is finished.' The veil of the Temple tears in two from top to bottom."
+    },
+    {
+      "id": "resurrection",
+      "label": "The Resurrection",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "gospels",
+      "ref": "Matthew 28:6",
+      "desc": "On the third day Jesus rises bodily from the dead — the firstfruits of the new creation. Death is conquered; the new age has dawned. Christianity stands or falls here."
+    },
+    {
+      "id": "ascension",
+      "label": "The Ascension",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "gospels",
+      "ref": "Acts 1:9",
+      "desc": "Jesus ascends into heaven and is seated at the right hand of the Father as Lord of all — awaiting the day when every enemy is made his footstool."
+    },
+    {
+      "id": "pentecost",
+      "label": "Pentecost",
+      "yearNum": 30,
+      "yearDisplay": "c. AD 30",
+      "era": "church",
+      "ref": "Acts 2:4",
+      "desc": "The Holy Spirit is poured out on the disciples with wind and fire. Three thousand are baptized in one day. The age of the church begins; the great mission is launched."
+    },
+    {
+      "id": "stephen",
+      "label": "Stephen Martyred",
+      "yearNum": 34,
+      "yearDisplay": "c. AD 34",
+      "era": "church",
+      "ref": "Acts 7:59",
+      "desc": "Stephen — full of faith and the Holy Spirit — becomes the first Christian martyr. Among those who watch his death: a young man named Saul of Tarsus."
+    },
+    {
+      "id": "paul-conversion",
+      "label": "Paul's Conversion",
+      "yearNum": 35,
+      "yearDisplay": "c. AD 35",
+      "era": "church",
+      "ref": "Acts 9:5",
+      "desc": "The risen Christ appears to Saul on the road to Damascus, transforming the great persecutor of the church into its greatest missionary and theologian."
+    },
+    {
+      "id": "paul-first-journey",
+      "label": "Paul's First Journey",
+      "yearNum": 46,
+      "yearDisplay": "c. AD 46–48",
+      "era": "church",
+      "ref": "Acts 13:2",
+      "desc": "Paul and Barnabas are sent from Antioch, the first missionary journey. They plant churches across Cyprus and southern Galatia and return to report what God has done among the Gentiles."
+    },
+    {
+      "id": "jerusalem-council",
+      "label": "Jerusalem Council",
+      "yearNum": 49,
+      "yearDisplay": "c. AD 49",
+      "era": "church",
+      "ref": "Acts 15:11",
+      "desc": "The first great church council decides that Gentiles need not be circumcised to be saved. Grace alone, through faith alone — the gospel's universality is affirmed."
+    },
+    {
+      "id": "paul-second-journey",
+      "label": "Paul's Second Journey",
+      "yearNum": 49,
+      "yearDisplay": "c. AD 49–51",
+      "era": "church",
+      "ref": "Acts 15:40",
+      "desc": "Paul plants churches in Macedonia and Achaia — Philippi, Thessalonica, Corinth. The gospel enters Europe for the first time."
+    },
+    {
+      "id": "paul-third-journey",
+      "label": "Paul's Third Journey",
+      "yearNum": 52,
+      "yearDisplay": "c. AD 52–57",
+      "era": "church",
+      "ref": "Acts 18:23",
+      "desc": "Paul spends three years in Ephesus, from which the word of God spreads throughout Asia Minor. He writes Romans, 1–2 Corinthians, and Galatians during this period."
+    },
+    {
+      "id": "paul-rome",
+      "label": "Paul Imprisoned in Rome",
+      "yearNum": 60,
+      "yearDisplay": "c. AD 60–62",
+      "era": "church",
+      "ref": "Acts 28:30",
+      "desc": "Paul arrives in Rome under house arrest and spends two years preaching the kingdom of God to all who come — including members of Caesar's household."
+    },
+    {
+      "id": "nero-persecution",
+      "label": "Nero's Persecution",
+      "yearNum": 64,
+      "yearDisplay": "AD 64",
+      "era": "church",
+      "ref": "2 Timothy 4:6",
+      "desc": "Emperor Nero blames the Great Fire of Rome on Christians and launches the first Roman imperial persecution. Peter and Paul are martyred in this period."
+    },
+    {
+      "id": "jerusalem-destroyed",
+      "label": "Jerusalem Destroyed",
+      "yearNum": 70,
+      "yearDisplay": "AD 70",
+      "era": "church",
+      "ref": "Matthew 24:2",
+      "desc": "The Roman general Titus destroys Jerusalem and burns the Second Temple — fulfilling Jesus's prophecy exactly. The old covenant age has definitively ended."
+    },
+    {
+      "id": "john-patmos",
+      "label": "John on Patmos",
+      "yearNum": 95,
+      "yearDisplay": "c. AD 95",
+      "era": "church",
+      "ref": "Revelation 1:9",
+      "desc": "John is exiled to the island of Patmos by Emperor Domitian. There the risen Christ appears to him with the vision of Revelation — the consummation of all things."
+    },
+    {
+      "id": "revelation",
+      "label": "Book of Revelation",
+      "yearNum": 95,
+      "yearDisplay": "c. AD 95",
+      "era": "church",
+      "ref": "Revelation 22:20",
+      "desc": "John writes the Apocalypse to comfort persecuted churches. The Lamb who was slain reigns. All things are being made new. 'Surely I am coming soon. Come, Lord Jesus.'"
+    },
+    {
+      "id": "new-creation",
+      "label": "New Creation",
+      "yearNum": 9999,
+      "yearDisplay": "The Consummation",
+      "era": "consummation",
+      "ref": "Revelation 21:5",
+      "desc": "God makes all things new: new heavens and new earth, the new Jerusalem descending, the dwelling of God with man. Every tear wiped away. Death no more. All things fulfilled."
+    }
+  ]
+}

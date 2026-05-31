@@ -1,116 +1,106 @@
 /**
  * main.js — builds and wires the left sidebar navigation.
- * Sidebar skeleton (including #bible-version) builds synchronously so bible.js
- * can run immediately.  Topic links are populated async from data/topics.json.
+ *
+ * Loaded as a plain <script> (not a module) so it runs before app.js and can
+ * insert the sidebar synchronously. This guarantees #bible-version exists in the
+ * DOM when app.js calls populateVersionPicker() and wireVersionPicker().
+ *
+ * Responsibilities:
+ *   - Detects the site root from its own <script src> so links work from any
+ *     subdirectory (important for GitHub Pages).
+ *   - Builds the full sidebar DOM: logo, version picker, tool links, collapsible
+ *     groups (Topics, Library).
+ *   - Loads data/topics.json asynchronously and populates the Bible Books and
+ *     Topical Studies subgroups. Static library items are hardcoded here.
+ *   - Manages sidebar collapse state in localStorage (key: bsw_sidebar).
+ *   - On the reader page, shows a "Study guide available" banner when the open
+ *     book has a corresponding topic page.
+ *
+ * This file must not import ES modules — it is a non-module script.
  */
 
 (function () {
   'use strict';
 
   /* ── Root detection ───────────────────────────────────────── */
+  // Use the script's own src URL to derive the site root, so _r() builds correct
+  // hrefs regardless of which subdirectory the page is in. Falls back to '/' for
+  // environments where currentScript is unavailable (e.g. deferred execution).
   var _src  = (document.currentScript && document.currentScript.src) || '';
   var _root = _src ? new URL('../../', _src).href : '/';
   function _r(p) { return _root + p; }
 
   /* ── Module-level state shared between sidebar and reader ──── */
-  var BOOK_STUDIES   = {};   // populated by loadTopics(); read by reader banner
-  var _readerUpdate  = null; // set by initReaderStudyLink(); called after topics load
+  // BOOK_STUDIES: maps book IDs (e.g. "REV") to { href, label } objects.
+  // Built by loadTopics() after topics.json loads; read by initReaderStudyLink()
+  // to show the study guide banner when the reader navigates to a covered book.
+  var BOOK_STUDIES   = {};
+  // _readerUpdate: callback set by initReaderStudyLink(); invoked after topics load
+  // so the banner can appear if the reader already has a book selected.
+  var _readerUpdate  = null;
 
   /* ── Nav data ─────────────────────────────────────────────── */
-  /* Topic subgroups start empty — loadTopics() fills them in.  */
+  // Static navigation tree. The "topics" group's subgroup items start empty —
+  // loadTopics() appends links after fetching data/topics.json.
+  // Library items are hardcoded here since they don't change without a code edit.
+  // Tool links appear above the collapsible groups so they're always visible.
   var NAV = {
+    tools: [
+      { label: '📖 The Holy Bible', href: _r('read/') },
+      { label: '🔍 Search', href: _r('search/') }
+    ],
     groups: [
       {
-        id: 'topics',
-        label: 'Topics',
-        icon: '📚',
+        id: 'discipline',
+        label: 'Discipline',
+        icon: '✝',
         children: [
-          { label: '📋 All Topics', href: _r('topics/') }
-        ],
-        subgroups: [
-          { id: 'bible-books', label: 'Bible Books',     items: [] },
-          { id: 'topical',     label: 'Topical Studies', items: [] }
+          { label: '📅 Reading Plans',  href: _r('plans/') },
+          { label: '🌅 Devotionals',    href: _r('devotionals/') },
+          { label: '⭐ Memory',          href: _r('memorize/') },
+          { label: '🙏 Prayer Journal', href: _r('journal/') },
+          { label: '📝 Personal Notes', href: _r('notes/') }
+        ]
+      },
+      {
+        id: 'reference',
+        label: 'Reference',
+        icon: '📘',
+        children: [
+          { label: '📖 Dictionary',  href: _r('dictionary/') },
+          { label: '🕰 Timeline',    href: _r('timeline/') },
+          { label: '🗺 Maps',        href: _r('maps/') },
+          { label: '☁ Word Cloud',  href: _r('wordcloud/') }
         ]
       },
       {
         id: 'library',
         label: 'Library',
-        icon: '📜',
+        icon: '📚',
         children: [
-          { label: '📋 All Documents', href: _r('library/') }
+          { label: '📋 Library', href: _r('library/') }
         ],
         subgroups: [
-          {
-            id: 'ecumenical',
-            label: 'Ecumenical Creeds',
-            items: [
-              { label: "Apostles' Creed",  href: _r('library/apostles-creed/') },
-              { label: 'Nicene Creed',     href: _r('library/nicene-creed/') },
-              { label: 'Athanasian Creed', href: _r('library/athanasian-creed/') }
-            ]
-          },
-          {
-            id: 'reformed',
-            label: 'Reformed',
-            items: [
-              { label: 'Heidelberg Catechism',         href: _r('library/heidelberg-catechism/') },
-              { label: 'Belgic Confession',             href: _r('library/belgic-confession/') },
-              { label: 'Canons of Dort',                href: _r('library/canons-of-dort/') },
-              { label: 'Westminster Confession',        href: _r('library/westminster-confession/') },
-              { label: 'Westminster Larger Catechism',  href: _r('library/westminster-larger-catechism/') },
-              { label: 'Westminster Shorter Catechism', href: _r('library/westminster-shorter-catechism/') },
-              { label: 'London Baptist Confession',     href: _r('library/london-baptist-confession/') }
-            ]
-          },
-          {
-            id: 'lutheran',
-            label: 'Lutheran',
-            items: [
-              { label: 'Augsburg Confession', href: _r('library/augsburg-confession/') }
-            ]
-          },
-          {
-            id: 'anglican',
-            label: 'Anglican',
-            items: [
-              { label: '39 Articles', href: _r('library/39-articles/') }
-            ]
-          },
-          {
-            id: 'fathers',
-            label: 'Church Fathers',
-            items: [
-              { label: 'Ignatius of Antioch',   href: _r('library/ignatius/') },
-              { label: 'Justin Martyr',          href: _r('library/justin-martyr/') },
-              { label: 'Irenaeus of Lyons',      href: _r('library/irenaeus/') },
-              { label: 'Tertullian',             href: _r('library/tertullian/') },
-              { label: 'Athanasius of Alexandria', href: _r('library/athanasius/') },
-              { label: 'John Chrysostom',        href: _r('library/chrysostom/') },
-              { label: 'Augustine of Hippo',     href: _r('library/augustine/') },
-              { label: 'Gregory of Nazianzus',   href: _r('library/gregory-nazianzus/') }
-            ]
-          }
+          { id: 'book-overviews',   label: 'Bible Book Overviews', items: [] },
+          { id: 'study-guides',     label: 'Study Guides',         items: [] },
+          { id: 'topical-articles', label: 'Topical Articles',     items: [] }
         ]
       }
-    ],
-    tools: [
-      { label: '📖 Reader',         href: _r('read/') },
-      { label: '🔍 Search',         href: _r('search/') },
-      { label: '📅 Reading Plans',  href: _r('plans/') },
-      { label: '🌅 Devotionals',    href: _r('devotionals/') },
-      { label: '⭐ Memory',          href: _r('memorize/') },
-      { label: '📑 Topical Bible',  href: _r('topical/') },
-      { label: '📘 Dictionary',      href: _r('dictionary/') }
     ]
   };
 
   /* ── URL helpers ──────────────────────────────────────────── */
+  // _norm: normalises a URL to always end with '/' and strips trailing index.html
+  // so that isActive() correctly identifies the current page regardless of how
+  // the URL was typed (e.g. /read/ and /read/index.html should both match).
   function _norm(href) {
     return href.replace(/\/index\.html(\?.*)?$/, '/').replace(/([^/])$/, '$1/');
   }
   var _locN  = _norm(window.location.href);
   var _rootN = _norm(_root);
 
+  // isActive: true when the normalised current URL exactly matches href.
+  // isAncestor: true when the current URL is under href (for parent group highlighting).
   function isActive(href)   { return _locN === _norm(href); }
   function isAncestor(href) {
     var n = _norm(href);
@@ -127,7 +117,7 @@
   function groupHasActive(group) {
     var s;
     for (var i = 0; i < group.children.length; i++) {
-      if (isActive(group.children[i].href)) return true;
+      if (isActive(group.children[i].href) || isAncestor(group.children[i].href)) return true;
     }
     if (group.subgroups) {
       for (s = 0; s < group.subgroups.length; s++) {
@@ -137,11 +127,15 @@
     return false;
   }
 
-  /* Is this a topic detail page (/topics/prayer/, /topics/revelation/) */
+  // _isTopicPage: true when viewing an individual topic (e.g. /topics/prayer/).
+  // Topic pages use sidebar-overlay mode — the sidebar floats over content rather
+  // than pushing it aside, to give more reading space.
   var _pathname    = window.location.pathname.replace(/\/index\.html$/, '/').replace(/([^/])$/, '$1/');
   var _isTopicPage = /\/topics\/[^/]+\/$/.test(_pathname) && _pathname !== _norm(_r('topics/'));
 
   /* ── localStorage ─────────────────────────────────────────── */
+  // Persists the sidebar open/collapsed state across page loads.
+  // Values: "collapsed" | "open" (or null = default open).
   var _LS = 'bsw_sidebar';
   function getState()   { try { return localStorage.getItem(_LS); }  catch(e) { return null; } }
   function saveState(v) { try { localStorage.setItem(_LS, v); }      catch(e) {} }
@@ -197,6 +191,12 @@
   }
 
   /* ── Build sidebar ────────────────────────────────────────── */
+  // Constructs and inserts the full sidebar DOM before any other body content.
+  // Also creates the collapse tab, mobile topbar (hamburger), and backdrop overlay.
+  // Collapse behaviour differs by context:
+  //   Desktop non-topic page  → pushes content (sidebar-collapsed class on body)
+  //   Desktop topic page      → overlays content (sidebar-overlay + sb-open toggle)
+  //   Mobile (<1024 px)       → always overlay, toggled by hamburger button
   function buildSidebar() {
 
     var sidebar = mk('aside', 'site-sidebar');
@@ -227,7 +227,9 @@
     if (_locN === _rootN) homeLink.setAttribute('aria-current', 'page');
     nav.appendChild(homeLink);
 
-    /* Version picker — built synchronously so bible.js finds it immediately */
+    /* Version picker — must exist synchronously so app.js can call
+     * populateVersionPicker() and wireVersionPicker() after metadata loads.
+     * The <select> starts empty; app.js fills it from versions.json. */
     var verRow    = mk('div', 'sb-version');
     var verLabel  = document.createElement('label');
     verLabel.setAttribute('for', 'bible-version');
@@ -303,6 +305,27 @@
       wrapper.appendChild(items);
       nav.appendChild(wrapper);
     });
+
+    /* Theme toggle — appended at the bottom of the nav scroll area */
+    nav.appendChild(mk('div', 'sb-divider'));
+    var themeBtn = mk('button', '');
+    themeBtn.id = 'bsw-theme-btn';
+    function _isDark() {
+      var th = document.documentElement.getAttribute('data-theme');
+      if (th) return th === 'dark';
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function _updateThemeLabel() {
+      themeBtn.textContent = _isDark() ? '☀ Light Mode' : '🌙 Dark Mode';
+    }
+    _updateThemeLabel();
+    themeBtn.addEventListener('click', function () {
+      var next = _isDark() ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('bsw_theme', next); } catch (e) {}
+      _updateThemeLabel();
+    });
+    nav.appendChild(themeBtn);
 
     sidebar.appendChild(nav);
 
@@ -407,29 +430,38 @@
   }
 
   /* ── Load topics from data/topics.json ───────────────────── */
+  // Fetches the topics manifest and appends links into the Bible Books and
+  // Topical Studies subgroups inside the sidebar. Each topic entry must have
+  // { slug, label, type } where type is "book" (goes under Bible Books) or
+  // anything else (goes under Topical Studies). An optional "book" field maps
+  // the topic to a book ID so the reader can show the study guide banner.
+  // If the fetch fails, static sidebar items still render normally.
   function loadTopics() {
-    var booksEl   = document.getElementById('sbsg-topics-bible-books');
-    var topicalEl = document.getElementById('sbsg-topics-topical');
-    if (!booksEl && !topicalEl) return;
+    var bookEl    = document.getElementById('sbsg-library-book-overviews');
+    var studyEl   = document.getElementById('sbsg-library-study-guides');
+    var topicalEl = document.getElementById('sbsg-library-topical-articles');
+    if (!bookEl && !studyEl && !topicalEl) return;
 
     fetch(_r('data/topics.json'))
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (topics) {
         topics.forEach(function (t) {
-          var href = _r('topics/' + t.slug + '/');
+          // Allow an explicit href override (e.g. study-guides/) instead of the default topics/ path.
+          var href = t.href ? _r(t.href) : _r('topics/' + t.slug + '/');
           var a    = mk('a', 'sb-subchild');
           a.href   = href;
           a.textContent = t.label;
           if (isActive(href)) a.setAttribute('aria-current', 'page');
 
-          if (t.type === 'book') { if (booksEl)   booksEl.appendChild(a); }
-          else                   { if (topicalEl) topicalEl.appendChild(a); }
+          if (t.type === 'book')  { if (bookEl)    bookEl.appendChild(a); }
+          else if (t.type === 'study') { if (studyEl) studyEl.appendChild(a); }
+          else                    { if (topicalEl) topicalEl.appendChild(a); }
 
           if (t.book) BOOK_STUDIES[t.book] = { href: href, label: t.label };
         });
 
         /* Expand the subgroup (and its parent group) if active page is inside */
-        [booksEl, topicalEl].forEach(function (itemsEl) {
+        [bookEl, studyEl, topicalEl].forEach(function (itemsEl) {
           if (!itemsEl || !itemsEl.querySelector('[aria-current="page"]')) return;
 
           var sgBtn = itemsEl.previousElementSibling;
@@ -458,6 +490,10 @@
   }
 
   /* ── Reader: show study-guide link when a book with a study is open ── */
+  // Watches the reader's book selector and verse container for changes.
+  // When the reader is showing a book that has a corresponding topic page
+  // in BOOK_STUDIES, a banner appears above the chapter with a link to that page.
+  // The banner is hidden for books without a study guide.
   function initReaderStudyLink() {
     var bookSel   = document.getElementById('reader-book-select');
     var resultsEl = document.getElementById('reader-results');

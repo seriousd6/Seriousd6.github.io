@@ -78,13 +78,13 @@
 
 .topical-alpha-btn:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
 .topical-alpha-btn--active {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
@@ -229,7 +229,7 @@
 }
 .topical-read-all:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: none;
 }
 
@@ -261,7 +261,7 @@
 
 .topical-ref-chip:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: none;
 }
 
@@ -304,11 +304,35 @@
 
 .topical-src-tab--active {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
 .topical-src-tab__count {
   font-size: 0.75rem;
   opacity: 0.75;
+}
+
+/* ── Dark-mode button overrides ─────────────────────────────────────────── */
+[data-theme="dark"] .topical-alpha-btn:hover,
+[data-theme="dark"] .topical-alpha-btn--active,
+[data-theme="dark"] .topical-read-all:hover,
+[data-theme="dark"] .topical-ref-chip:hover,
+[data-theme="dark"] .topical-src-tab--active {
+  background: var(--color-btn-bg, #3a2d18);
+  border-color: var(--color-primary);
+  color: var(--color-btn-text, #e8c87a);
+  box-shadow: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .topical-alpha-btn:hover,
+  :root:not([data-theme="light"]) .topical-alpha-btn--active,
+  :root:not([data-theme="light"]) .topical-read-all:hover,
+  :root:not([data-theme="light"]) .topical-ref-chip:hover,
+  :root:not([data-theme="light"]) .topical-src-tab--active {
+    background: var(--color-btn-bg, #3a2d18);
+    border-color: var(--color-primary);
+    color: var(--color-btn-text, #e8c87a);
+    box-shadow: none;
+  }
 }

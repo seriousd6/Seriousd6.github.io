@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Biblical geography maps — explore the Holy Land, Exodus route, Paul's journeys, and more." />
+  <title>Biblical Maps — Bible Study</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/maps.css" />
+</head>
+<body>
+
+  <main>
+    <div class="container maps-page">
+
+      <div class="maps-header">
+        <h1 class="maps-title">Biblical Maps</h1>
+        <p class="maps-sub">Explore the geography of redemptive history</p>
+      </div>
+
+      <div id="maps-container" class="maps-layout">
+
+        <!-- Map selector + legend -->
+        <div class="maps-selector-col">
+          <nav id="maps-nav" class="maps-nav" aria-label="Map selection"></nav>
+          <div class="maps-legend" id="maps-legend" hidden></div>
+        </div>
+
+        <!-- Map display -->
+        <div class="maps-display-col">
+          <div class="maps-title-bar">
+            <h2 id="maps-map-title" class="maps-map-title"></h2>
+            <p  id="maps-map-sub"   class="maps-map-sub"></p>
+          </div>
+
+          <!-- Leaflet map fills this div -->
+          <div id="maps-map" class="maps-map-container"></div>
+
+          <!-- City/place detail panel -->
+          <div id="maps-city-detail" class="maps-city-detail" hidden>
+            <button id="maps-city-close" class="maps-city-close" aria-label="Close">✕</button>
+            <h3 id="maps-city-name" class="maps-city-name"></h3>
+            <p  id="maps-city-desc" class="maps-city-desc"></p>
+            <div id="maps-city-refs" class="maps-city-refs"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
+</body>
+</html>

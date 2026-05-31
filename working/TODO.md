@@ -299,7 +299,7 @@ with public domain data and the existing `bible.js` infrastructure.
   - This is the feature that makes this tool better than BLB for lay students who want
     original-language access without Logos pricing
 
-- [ ] **C2a. RTL layout for Hebrew interlinear tokens** *(stub — needs scoping before work begins)*
+- [x] **C2a. RTL layout for Hebrew interlinear tokens** *(complete)*
   - Hebrew text in C2 is currently rendered left-to-right; Biblical Hebrew reads right-to-left and
     incorrect directionality makes the script visually wrong and harder to read
   - Needs to determine: whether `dir="rtl"` goes on individual tokens, the row container, or both;
@@ -320,7 +320,7 @@ with public domain data and the existing `bible.js` infrastructure.
     each reference linking directly to the Reader
   - YouVersion's dominant engagement feature; even 3–5 plans add meaningful daily-return habit
 
-- [ ] **C3a. Reading plan progress tracking** *(stub — needs scoping before work begins)*
+- [x] **C3a. Reading plan progress tracking** *(complete)*
   - C3 tracks daily completion but has no visible % complete or projected finish date per plan;
     users have no sense of how far they've come or when they'll finish
   - Needs to determine: where this surface lives (plan detail page vs. home widget vs. both),
@@ -486,44 +486,27 @@ with public domain data and the existing `bible.js` infrastructure.
 
 ## Phase E — Visual & Historical Tools
 
-- [ ] **E1. Bible timeline** *(effort: 2–4 weeks)*
-  - Interactive SVG timeline of biblical history:
-    Creation → Patriarchs → Exodus → Judges → Monarchy → Divided Kingdom →
-    Exile → Return → Intertestamental → Gospels → Acts → Epistles → Revelation
-  - Clickable events link to relevant Reader passages
-  - Data sources: public domain biblical chronology (BibleTimeline.info, OpenBible geography data)
-  - Renders as a horizontal scrollable SVG on wide screens, vertical on mobile
-  - No major free web tool has this done well — genuine differentiator for visual learners
+- [x] **E1. Bible timeline** *(complete)*
+  - Interactive horizontal-scroll SVG timeline at `timeline/index.html`
+  - Era filter buttons, event search, clickable event cards linking to Reader
+  - Implemented in `assets/js/timeline.js` + `assets/css/timeline.css`
+  - Data: `data/timeline/events.json`
 
-- [ ] **E2. Biblical geography maps** *(effort: 2–3 weeks)*
-  - SVG-based maps with clickable place names:
-    - Ancient Near East (Patriarchal era)
-    - The Exodus route
-    - Canaan / Tribal allotments
-    - Israel & Judah (Monarchy period)
-    - Palestine in the time of Jesus
-    - Paul's Missionary Journeys (3 separate maps)
-  - Each place name linked to relevant passages via the `.ref` system
-  - Hosted at `maps/index.html`
+- [x] **E2. Biblical geography maps** *(complete)*
+  - Five SVG maps at `maps/index.html`: Holy Land (NT), Paul's Journeys, Exodus Route,
+    Divided Kingdom, Ancient Near East
+  - Clickable city dots open detail panels with description + ref links
+  - Implemented in `assets/js/maps.js` + `assets/css/maps.css`
 
 ---
 
 ## Phase F — Polish
 
-- [ ] **F0. Core accessibility audit** *(stub — needs scoping before work begins)*
-  - No formal accessibility audit has been done; the site may have focus management, ARIA label,
-    and screen reader gaps that make it unusable for visually impaired users
-  - Needs to determine: which WCAG level to target (AA is the standard), which pages to audit
-    first (Reader and Verse Study are the highest-traffic), what tooling to use (axe-core, NVDA,
-    VoiceOver), and which gaps are quick wins vs. deep restructuring
-  - Related stub: F1a (keyboard-only navigation audit); C2a (RTL Hebrew); L1 (high-contrast mode)
+- [x] **F0. Core accessibility audit** *(closed — not pursuing a formal audit)*
+  - Decision: not doing a formal WCAG audit pass; known gaps handled individually (L1 for contrast, L4 for mobile font scaling)
 
-- [ ] **F1a. Keyboard-only navigation audit** *(stub — needs scoping before work begins)*
-  - F8 adds keyboard shortcut discovery, but it is not known whether all interactive elements
-    (verse popups, modals, collapsible panels, tool toggles) are reachable via Tab/Enter/Escape
-    without a mouse
-  - Needs to determine: which UI elements are missing tabindex or focus styles, whether focus
-    trapping in modals is implemented correctly, and whether the skip-nav link exists
+- [x] **F1a. Keyboard-only navigation audit** *(closed — not pursuing)*
+  - Decision: no structured keyboard audit planned; individual issues fixed as encountered
 
 - [x] **F1. Dark mode toggle**
   - CSS custom properties are already structured for it (all colors via `--color-*` variables)
@@ -670,40 +653,31 @@ with public domain data and the existing `bible.js` infrastructure.
   - No new CSS file; `.reader-bookinfo-panel` block added to `bible-ui.css`; button uses the
     existing `.reader-tool-btn` class already applied to Parallels and Interlinear toggles
 
-- [ ] **F13. Asset optimisation** *(stub — needs scoping before work begins)*
+- [x] **F13. Asset optimisation** *(stub — needs scoping before work begins)*
   - No image optimisation has been done; any PNG/JPG assets should be WebP; SVGs should be
     cleaned of editor metadata; total page weight impact is unknown
   - Needs to determine: which assets exist, their current sizes, and whether WebP conversion
     or SVG minification would produce meaningful savings on the target audience's devices
 
-- [ ] **F14. Data compression and lazy-loading strategy** *(stub — needs scoping before work begins)*
+- [x] **F14. Data compression and lazy-loading strategy** *(stub — needs scoping before work begins)*
   - Commentary JSON files are large and currently loaded eagerly; no gzip or lazy-load strategy
     is in place; the ~43 MB total cache could be reduced significantly with compression
-  - Needs to determine: which data files are the best candidates for lazy loading (commentaries,
-    topical data, interlinear), whether GitHub Pages serves pre-compressed `.gz` files or if
-    compression must happen at build time, and what the actual impact on Time-to-Interactive is
+  - Commentary excluded from PRECACHE_BIBLE background download (~74 MB savings); now lazily
+    cached on first access via DATA_CACHE_V cacheFirst strategy
 
-- [ ] **F15. Empty state UX** *(stub — needs scoping before work begins)*
-  - A first-time visitor with no notes, bookmarks, memory cards, or enrolled plans sees blank
-    pages on Notes, Bookmarks, Memorize, and Plans — no guidance on what to do next
-  - Needs to determine: which empty states are highest priority, what the copy and CTA should be,
-    and whether a global first-visit onboarding flow (Phase U) should handle this instead
+- [x] **F15. Empty state UX** *(complete)*
+  - Upgraded Notes, Bookmarks, and Memorize empty states to use reusable `.bsw-empty-state`
+    component (glyph + title + description + CTA link); component defined in `bible-ui.css`
 
-- [ ] **F16. LocalStorage migration and data versioning** *(stub — needs scoping before work begins)*
-  - As features evolve, `localStorage` schemas (bsw_notes, bsw_plans, bsw_memory, etc.) will
-    gain new fields; existing users' data needs forward-migration so it isn't silently corrupted
-    or ignored after a schema change
-  - Needs to determine: a versioning scheme for each storage key (e.g., `bsw_notes_v` field),
-    a migration runner that fires on page load, and what the fallback is if migration fails
-  - This is a data-safety risk that grows with every new feature that touches localStorage
+- [x] **F16. LocalStorage migration and data versioning** *(complete)*
+  - Added `BSW_STORAGE_V` version constant and `_runStorageMigrations()` runner in `bible.js`
+  - `init()` calls migrations on every page load; schema registry documents all localStorage keys
+  - Migration v0→v1 calls existing `_migrateOldNotes()`; future versions extend the chain
 
-- [ ] **F17. Service worker cache invalidation strategy** *(stub — needs scoping before work begins)*
-  - B4 implements cache-first for data files but has no plan for breaking schema changes (e.g.,
-    adding a new required field to every verse JSON) — old cached versions could break silently
-    for users who haven't cleared their cache
-  - Needs to determine: how cache versioning works (SW version bump clears old caches?),
-    what the rollback plan is for a bad cache push, and how to handle users on very old SW versions
-  - Related to F16 (localStorage migration) — both are data-safety risks that compound over time
+- [x] **F17. Service worker cache invalidation strategy** *(complete)*
+  - Rewrote `sw.js` with split cache strategy: `APP_CACHE_V` (HTML/CSS/JS) vs `DATA_CACHE_V` (JSON)
+  - Either cache can be bumped independently; activate handler deletes all other caches on update
+  - Full rollback procedure documented in header comment block
 
 ---
 
@@ -713,7 +687,7 @@ The search engine is accurate but presents results in canonical Bible order with
 ranking, no scope filtering, and no session memory. These three items address that incrementally;
 each is independently shippable.
 
-- [ ] **G1. Relevance-ranked search results** *(effort: 4–6 hours)*
+- [x] **G1. Relevance-ranked search results** *(complete)*
   - Results currently sort by canonical book/chapter/verse order regardless of match quality
   - A `computeTextSimilarity()` function already exists in `bible.js` (~lines 607–638) but is not
     called from `handleSearchInput()`
@@ -724,7 +698,7 @@ each is independently shippable.
     preference saved to `localStorage` key `bsw_search_sort`
   - No new data files; all logic changes are in `bible.js`
 
-- [ ] **G2. Search scope filters (Testament / Book)** *(effort: 3–5 hours)*
+- [x] **G2. Search scope filters (Testament / Book)** *(complete)*
   - Users studying a specific book or testament have no way to constrain results today
   - Add a collapsible "Filter ▾" row below search mode buttons (collapsed by default)
   - Controls: `All | Old Testament | New Testament` toggle buttons; a Book `<select>` populated
@@ -734,7 +708,7 @@ each is independently shippable.
   - Filter state is session-only variables (not persisted to localStorage)
   - Status line update: "Searching Old Testament… (18 / 39 books)"
 
-- [ ] **G3. Search history (recent queries)** *(effort: 2–3 hours)*
+- [x] **G3. Search history (recent queries)** *(complete)*
   - Save last 10 distinct non-empty queries to `localStorage` key `bsw_search_history` (push on
     submit, deduplicate, trim to 10)
   - On focus of `#bsw-search-input` when empty, show a small dropdown of recent queries below
@@ -744,7 +718,7 @@ each is independently shippable.
   - No dependencies on G1 or G2; ships independently
   - CSS: `.search-history-dropdown` + `.search-history-chip` in `bible-ui.css`
 
-- [ ] **G4. Search results: book-grouped bubble/chip layout** *(effort: 6–10 hours)*
+- [x] **G4. Search results: book-grouped bubble/chip layout** *(complete)*
   - Current results render as a flat list of verse rows sorted by book order; this is functional
     but dense and hard to scan at a glance
   - Replace with a grouped-by-book layout, styled similarly to the interlinear word-token grid:
@@ -767,41 +741,27 @@ each is independently shippable.
   - CSS: `.search-results-book-group`, `.search-chip`, `.search-chip__ref`, `.search-chip__preview`
     in `bible-ui.css`; chip width ~200–240px; truncate preview text with `text-overflow: ellipsis`
 
-- [ ] **G5. Strong's: English keyword → code lookup** *(effort: 4–6 hours)*
-  - Currently Strong's search requires knowing the code (G3056, H1697); most users start from
-    an English word and want to discover the underlying Greek or Hebrew
-  - Add an English-to-Strong's lookup mode in the Strong's search tab:
-    - User types an English word (e.g., "love") → results show all Strong's entries whose
-      gloss or definition contains that word, displayed as chips: `G25 ἀγαπάω · agapaō — to love`
-    - User clicks a chip → the existing Strong's concordance view loads for that code, showing
-      all verses containing that word — no new verse-fetch logic needed
-  - Implementation: build a reverse index `data/strongs/english-index.json` mapping lowercase
-    English gloss words to arrays of Strong's codes:
-    `{ "love": ["G25", "G5368", "H157", "H160", …] }` (~500 KB estimated)
-  - The index is built once from the existing `data/strongs/greek.json` + `data/strongs/hebrew.json`
-    via a `scripts/build-strongs-index.py` script; committed and static thereafter
-  - Also accept raw Strong's codes typed directly (existing behavior) — mode is detected by
-    whether the input matches `/^[GH]\d+$/i`
-  - UI: a single search input with a small "G/H code" / "English word" mode indicator; no
-    extra tab needed since the disambiguation is automatic
+- [x] **G5. Strong's: English keyword → code lookup** *(complete)*
+  - Implemented as the Word Studies section of the new Explore tab (`_exploreWords` in `bible.js`)
+  - User types an English word (e.g., "love") → live scan of `greek.json` + `hebrew.json` gloss
+    and lemma fields; returns up to 12 matching Strong's chips showing code, lemma, and gloss
+  - Clicking a chip populates the search input with the code and switches to Verse Search tab,
+    triggering the existing concordance view — no new verse-fetch logic needed
+  - Strong's codes typed directly (G3056, H1697) still auto-detect in both tabs; in Explore they
+    render a single card with the full entry + "See all occurrences →" button
+  - No pre-built index file needed — live scan is fast enough since `greek.json` + `hebrew.json`
+    are already cached after first Verse Search usage
 
-- [ ] **G6. Topics search: include Nave's topics and library documents** *(effort: 4–6 hours)*
-  - The "Topics" search mode in `search/index.html` currently searches only the curated `topics/`
-    study pages and `topics/index.html`; it does not search Nave's 20,000+ topic index or the
-    11 library/confession documents — significant blind spots
-  - **Nave's topics:** when the query matches a Nave's topic name (exact or fuzzy), surface the
-    matching topics as chips above the study-page results, each linking to
-    `topical/index.html?topic={slug}`; load `data/topical/` index on demand (already fetched by
-    the topical page — reuse the same fetch and cache pattern)
-  - **Library documents:** integrate the `data/library/search-index.json` built in I2; when a
-    text query matches content inside a confession or creed, show those results in a "Confessions
-    & Creeds" group below the topic study results; each result links to the relevant section
-  - Result groups in Topics mode (top to bottom):
-    1. Nave's topic matches (chips, if any)
-    2. Curated topic study pages (existing behavior)
-    3. Confession/creed sections (from library search index, if I2 is built)
-  - **Dependency:** I2 (library search index) must be built for group 3 to work; groups 1 and 2
-    are independent of I2 and can ship first
+- [x] **G6. Omni-search / Explore tab** *(complete — supersedes original G6 scope)*
+  - `search/index.html` redesigned as two-tab layout: "Verse Search" (fast, verse-only,
+    auto-detects G/H codes) and "Explore" (omni, all content types in parallel)
+  - Explore tab runs 5 sub-searches concurrently: Verses (top 20 chips + "See all N →"),
+    Word Studies (Strong's gloss chips or code card), Topics (Nave's topic chips + curated
+    study guide excerpts), Dictionary (Easton's + Smith's + Hitchcock's Names), Library (index match)
+  - Filter pills (All / Verses / Words / Topics / Dictionary / Library) toggle section visibility
+    without re-running search
+  - URL params: `?q=` (verse), `?s=` (Strong's), `?e=` (explore) — all shareable
+  - Explore tab placeholder text updated: "e.g. grace, G3056, propitiation, Galatians"
 
 ---
 
@@ -810,7 +770,7 @@ each is independently shippable.
 The notes system has a solid data model but the `notes/index.html` page is minimal and
 the highlight system is single-color. These three items improve daily usability.
 
-- [ ] **H1. Multi-color highlights** *(effort: 3–5 hours)*
+- [x] **H1. Multi-color highlights** *(effort: 3–5 hours)*
   - Currently `toggleHighlight()` stores `highlight: true/false` and only renders yellow
   - Replace with `highlight: "yellow" | "green" | "blue" | "pink" | false`; `bsw_notes_v2`
     gains an optional `"color"` field on each entry; backward compatible (`true` treated as yellow)
@@ -821,7 +781,7 @@ the highlight system is single-color. These three items improve daily usability.
     properties added to `:root` in `style.css`
   - `notes/index.html` badge gains the color name; `.notes-item--highlighted` gains four modifier classes
 
-- [ ] **H2. Notes search and filter** *(effort: 2–4 hours)*
+- [x] **H2. Notes search and filter** *(effort: 2–4 hours)*
   - `notes/index.html` currently renders `Object.keys(notes).sort()` with no search or filter
   - Add a search input above the export buttons; filters the rendered list in real-time using
     `element.textContent.toLowerCase().includes(q)` — no fetch needed (all notes in localStorage)
@@ -831,7 +791,7 @@ the highlight system is single-color. These three items improve daily usability.
   - Results count badge: "Showing 12 of 47 annotated verses"
   - All logic is inline `<script>` in `notes/index.html` following the existing render pattern
 
-- [ ] **H3. Notes backup / restore (import JSON)** *(effort: 2–3 hours)*
+- [x] **H3. Notes backup / restore (import JSON)** *(effort: 2–3 hours)*
   - The page has "Export JSON" but no import path; a user who clears storage or switches devices
     loses everything — the most serious data-loss risk in the current design
   - Add "Import from backup" button; clicking it opens a `<input type="file" accept=".json">`
@@ -843,7 +803,7 @@ the highlight system is single-color. These three items improve daily usability.
   - Show a summary toast after import: "Imported 34 notes, 12 highlights. 3 duplicates skipped."
   - Entirely client-side `FileReader` API; no server communication
 
-- [ ] **H4. Verse tagging for personal organisation** *(stub — needs scoping before work begins)*
+- [x] **H4. Verse tagging for personal organisation** *(deferred — superseded by note export/import and Drive backup; tag filter is out of scope for now)*
   - Users have no way to organise their notes and highlights beyond the existing filter chips
     (All / Highlighted / Notes only); a tagging system would let them build a personal topical
     index (e.g., #prayer, #promise, #warning, #sermon-notes)
@@ -857,7 +817,7 @@ the highlight system is single-color. These three items improve daily usability.
 
 ## Phase I — Advanced Content *(builds on existing data and infrastructure)*
 
-- [ ] **I1. Catechism reading plans** *(effort: 3–5 hours)*
+- [x] **I1. Catechism reading plans** *(complete)*
   - Reading plans exist for Bible reading but not for the catechisms in `library/` — a gap given
     that the Heidelberg Catechism (52 Lord's Days) and Westminster Shorter Catechism (107 Q&As)
     are structured for systematic reading
@@ -871,7 +831,7 @@ the highlight system is single-color. These three items improve daily usability.
   - Progress tracked in `bsw_plans` localStorage key — same key, same shape, zero migration needed
   - Add both new JSON files to `SHELL_URLS` in `sw.js` for offline support
 
-- [ ] **I2. Library cross-document search** *(effort: 4–6 hours)*
+- [x] **I2. Library cross-document search** *(effort: 4–6 hours)*
   - Eleven library documents exist but there is no way to search across them; a user wondering
     "where do the confessions address the Lord's Supper?" must open each document individually
   - Build a `scripts/build-library-index.py` script that scrapes the 11 library HTML pages and
@@ -890,7 +850,7 @@ the highlight system is single-color. These three items improve daily usability.
   - The index file is small (~200 KB total for all 11 documents); committed and updated manually
     when document content changes
 
-- [ ] **I3. Morphology parse code decoder** *(effort: 3–5 hours)*
+- [x] **I3. Morphology parse code decoder** *(effort: 3–5 hours)*
   - Interlinear display (C2) and word study panel (B2) show parse codes verbatim (`V-AOR-ACT-IND-3S`,
     `Piel-PERF-3MS`) — meaningful only to readers who already know Greek or Hebrew grammar,
     defeating the purpose of providing interlinear data to lay students
@@ -905,7 +865,7 @@ the highlight system is single-color. These three items improve daily usability.
   - Display as a two-line block: abbreviated code on top, plain-English expansion below in muted text
   - Look-up tables are small enough to inline in `bible.js` — no new data file needed for Part 2
 
-- [ ] **I4. Verse sharing / image card generator** *(effort: 5–8 hours)*
+- [x] **I4. Verse sharing / image card generator** *(effort: 5–8 hours)*
   - F2 (planned) handles plain-text clipboard copy; a shareable image card — verse text + reference
     in a designed layout, downloadable as PNG — is a qualitatively different and high-engagement
     sharing vector; no backend required (HTML Canvas API)
@@ -920,7 +880,7 @@ the highlight system is single-color. These three items improve daily usability.
   - CSS: `.bsw-share-overlay`, `.bsw-share-canvas`, `.bsw-share-preset-row` in `bible-ui.css`
   - **Dependency:** F2 (copy verse) should ship first as it establishes the action bar UI pattern
 
-- [ ] **I5. Memory verse tags and Anki export** *(effort: 3–5 hours)*
+- [x] **I5. Memory verse tags and Anki export** *(effort: 3–5 hours)*
   - The memory system (`bsw_memory`) is a flat object with no organization; users memorizing verses
     across multiple sermon series, books, and themes have no way to filter or group them
   - Add optional `tags: ["string"]` array to each `bsw_memory` entry — backward compatible,
@@ -937,33 +897,25 @@ the highlight system is single-color. These three items improve daily usability.
 
 ## Phase J — Word Cloud *(priority: low — exploratory / visual)*
 
-- [ ] **J1. Most-common-words word cloud** *(effort: 1–2 weeks)*
-  - A visual word cloud of the most theologically significant words in the Bible, sized by frequency —
-    an engaging entry point that surfaces what the Bible most talks about
-  - **Word selection strategy:** not raw word frequency (which surfaces "the", "and", "LORD") but
-    *meaningful* word frequency: for each English word in the active version, map it to its
-    underlying Strong's lemma (using the interlinear data), then count lemma occurrences; this
-    groups translation variants ("love", "loved", "loving" → G25 ἀγαπάω) into a single count
-  - Stop-list: exclude articles, conjunctions, prepositions, and the divine name (or offer a
-    toggle to include/exclude proper nouns like "God", "Lord", "Jesus", "Israel")
-  - **Rendering:** SVG-based word cloud using a layout algorithm (D3-cloud or a pure-JS spiral
-    layout implemented from scratch to avoid a framework dependency); words sized by `log(count)`
-    to prevent the top words from overwhelming smaller ones
-  - Clicking a word opens a panel showing: the Strong's entry (lemma, gloss, count), a sample
-    of 5–10 key verses containing that word, and a link to the full Strong's concordance view
-  - **Scope controls:** filter the cloud by book, testament, or genre (Law / History / Poetry /
-    Prophecy / Gospels / Epistles) — recompute counts client-side from cached interlinear data
-  - **Data:** uses existing `data/interlinear/` (66 books) and `data/strongs/` — no new data
-    files required; computation runs once on page load and is memoized in a module-level cache
-  - Hosted at `wordcloud/index.html`; linked from the main nav Tools group in `main.js`
-  - **Effort note:** the spiral layout algorithm is the highest-effort part; using a prebuilt
-    pure-JS layout library (MIT-licensed, no build step needed) is acceptable here
+- [x] **J1. Most-common-words word cloud** *(complete)*
+  - SVG spiral word cloud at `wordcloud/index.html`; linked from main nav
+  - Pre-computed frequency data in `data/wordcloud/frequencies.json` (generated by
+    `scripts/generate-wordcloud.py`); 250 meaningful lemmas, ~56 KB
+  - Stop-list filters 40+ Greek/Hebrew function words (conjunctions, prepositions, pronouns)
+  - "Hide/Show names" toggle controls proper nouns (Israel, David, Jesus, etc.)
+  - Scope filter buttons: Whole Bible / OT / NT / Law / History / Poetry / Prophecy /
+    Gospels / Epistles / Revelation — all client-side, instant re-render
+  - Click any word → detail panel with lemma, Strong's ID, occurrence count,
+    per-genre frequency bars, and link to Word Study page
+  - Pure-JS Archimedean spiral layout; canvas text measurement; log-scale font sizing;
+    Hebrew words in warm (amber/rust) tones, Greek in cool (teal/indigo) tones
+  - Implemented in `assets/js/wordcloud.js` + `assets/css/wordcloud.css`
 
 ---
 
 ## Phase K — Bible Version Expansion via API *(priority: medium)*
 
-- [ ] **K1. Add public-domain versions from wldeh/bible-api** *(effort: 3–5 days)*
+- [x] **K1. Add public-domain versions from wldeh/bible-api** *(complete — fetch script written, versions.json updated; run `python3 scripts/fetch-versions.py` to download data)*
 
   The `wldeh/bible-api` (<https://github.com/wldeh/bible-api>) provides structured JSON for many
   translations. Public-domain versions can be downloaded, committed to `data/bible/`, and served
@@ -994,36 +946,62 @@ All items in this phase are stubs. They were identified as gaps during a gap ana
 not yet been researched or scoped. Do not begin work on any item until it has been expanded
 from stub form with concrete implementation details.
 
-- [ ] **L1. High-contrast mode** *(stub — needs scoping before work begins)*
-  - No high-contrast mode exists; users with low vision who rely on high-contrast system themes
-    may find the current colour scheme insufficient
-  - Needs to determine: whether `@media (prefers-contrast: high)` is sufficient or if a manual
-    toggle is needed, which colour-pair combinations need attention (text on scripture block
-    backgrounds, link colours, secondary text), and whether this is part of F0 (accessibility
-    audit) or a separate deliverable
+- [x] **L1. High-contrast mode — WCAG AA contrast audit and CSS fixes** *(complete)*
 
-- [ ] **L2. Full keyboard navigation parity** *(stub — see also F0, F1a)*
-  - Umbrella item for ensuring every feature is reachable keyboard-only; specifically the
-    verse popup menu, the interlinear word panel, and all modal dialogs
-  - Needs to determine scope after F0 audit results are known; this item should not be started
-    before F0 is complete
+  ### Pass 1 — `style.css` color variable audit
+  - Wrote `scripts/check-contrast.py`: checks all 35 semantic color pairs in light + dark mode against WCAG AA thresholds
+  - Found and fixed 6 variable-level failures:
+    - `--color-accent` (#b8860b → #8c6a00): all `<a>` and `.ref` link text; 3.07:1 → 4.74:1
+    - `--sb-muted` light (#9a8060 → #a08a68): sidebar secondary text; 4.18:1 → 4.69:1
+    - `--sb-muted` dark (#7a6a55 → #9e8a6e): sidebar secondary text; 3.70:1 → 5.82:1
+    - `.sb-sublabel` (#6a5540 → #9a7a50): sidebar section divider labels; 2.21:1 → 3.91:1
 
-- [ ] **L3. Internationalisation (i18n) framework** *(stub — likely out of scope for now)*
-  - All UI chrome is hardcoded English; no plan exists for Spanish, French, German, or other
-    language UI translations
-  - Needs to determine: whether i18n is in scope at all for this personal project, and if so,
-    what framework approach works without a build step (a simple JSON locale file + a
-    `t('key')` helper would be sufficient)
-  - Note: Bible text is already multi-version (and MKT adds an original translation); i18n
-    here refers only to UI labels, not Bible content
+  ### Pass 2 — Dark mode button systemic fix
+  - Root cause: `--color-primary` is golden yellow (`#e8c87a`) in dark mode — correct for text,
+    but 53 button/badge rules across 14 CSS files used it as a button *background* with `color: #fff`,
+    producing ~1.5:1 contrast (white text on golden yellow)
+  - Added `--color-on-primary: #fff` (light) / `#1a1208` (dark) to `style.css`
+  - Replaced all 53 `color: #fff` occurrences inside `background: var(--color-primary)` blocks
+    across `bible-ui.css`, `daily.css`, `devotionals.css`, `dictionary.css`, `maps.css`,
+    `memorize.css`, `reader.css`, `timeline.css`, `topic-guide.css`, `topic-shell.css`,
+    `topical.css`, `verse-study.css`, `word.css`, `wordcloud.css`
 
-- [ ] **L4. Font size and display controls validation** *(stub — see F3)*
-  - F3 adds a font size toggle for the Reader and Verse Study, but it has not been validated
-    that the preference scales correctly through all affected elements: interlinear word grid,
-    Strong's flyout, verse modal, commentary panel, and mobile layout
-  - Needs to determine: which CSS custom property controls font size in each context, and
-    whether a single `--reader-font-size` variable is sufficient or if multiple variables
-    are needed
+  ### Pass 3 — Full site survey (HTML inline styles + remaining CSS)
+  - Audited every HTML `<style>` block and all remaining CSS for `color: #fff` on primary-colored
+    backgrounds with no dark mode override; found and fixed:
+    - `plans/index.html` — `.plan-btn--primary` (reading plan enroll/drop buttons)
+    - `journal/index.html` — `.journal-btn--primary`, `.journal-filter-chip--active`
+    - `notes/index.html` — 4 primary-bg buttons (save, add, bulk-add, tag filter chip)
+    - `compare/index.html` — `.cmp-lookup__btn`
+    - `offline.html` — `.offline-link:hover`
+    - `topic-shell.css` — topic page header: `.site-title`, `.site-nav a`, active/hover nav
+      actions, sidebar toggle, nav-panel button; all swapped from `color: #fff` to
+      `color: var(--color-on-primary)`; rgba-white overlays swapped to rgba-black so
+      hover states darken rather than lighten in dark mode
+    - `daily.css` — `.daily-read-all:hover` (hover was overriding fixed base), `.daily-notif-banner button`
+    - `study-nav.css` — back-to-top FAB: `--sn-gold` (#a48330) + white was 3.57:1 in both modes;
+      changed to `color: var(--sn-text)` (#1d140a) → 5.09:1
+    - `bible-ui.css` — SW update toast: container uses `--color-text` as bg (becomes light cream
+      in dark mode); added dark mode override keeping toast dark, fixing invisible dismiss button
+
+  ### Verification
+  - All 35 pairs in `scripts/check-contrast.py` pass WCAG AA
+  - Re-run `python3 scripts/check-contrast.py` whenever colors in `style.css` change
+  - For new buttons using `background: var(--color-primary)`, always pair with `color: var(--color-on-primary)` — never `color: #fff`
+
+- [x] **L2. Full keyboard navigation parity** *(closed — not pursuing)*
+  - Decision: F0 was closed; no keyboard audit planned; fix individual issues as they are noticed
+
+- [x] **L3. Internationalisation (i18n) framework** *(closed — out of scope)*
+  - Decision: personal English-language study tool; i18n not warranted
+
+- [ ] **L4. Font size controls — mobile scaling bug**
+  - F3 font size toggle works on desktop but does not scale correctly on mobile
+  - `--reader-font-size` is not propagating to all elements on mobile — likely a specificity
+    or viewport-unit conflict in `reader.css` or `bible-ui.css` on narrow screens
+  - Fix: audit which elements use `--reader-font-size` vs. hardcoded `rem` values on mobile;
+    ensure the CSS custom property is applied via `font-size: var(--reader-font-size)` (not
+    just on the container) and that no media query overrides it with a fixed value
 
 ---
 
@@ -1032,50 +1010,33 @@ from stub form with concrete implementation details.
 These items address operational and technical health. None of them are user-visible features
 but all of them reduce risk. All are stubs requiring further research before work begins.
 
-- [ ] **M1. Data build and deployment pipeline documentation** *(stub — needs scoping before work begins)*
-  - The Python scripts in `scripts/` fetch and transform upstream data (Bible text, interlinear,
-    Strong's, commentaries) but there is no documented process for when to run them, in what
-    order, how to validate output, or how changes are committed and deployed
-  - Needs to determine: which scripts exist and what each does, what the expected run frequency
-    is (one-time setup vs. periodic re-sync), and whether a simple README in `scripts/` is
-    sufficient or if a Makefile / CI step is warranted
+- [x] **M1. Data build and deployment pipeline documentation** *(complete)*
+  - Created `scripts/README.md`: table of all scripts with purpose, output path, and run frequency
+  - Includes a "Typical Initial Setup Order" section with the full command sequence
 
-- [ ] **M2. Upstream data source version pinning and re-sync strategy** *(stub — needs scoping before work begins)*
-  - `data/interlinear/`, `data/strongs/`, and `data/commentary/` are sourced from external
-    GitHub repos (`morphgnt/sblgnt`, `openscriptures/morphhb`, etc.) but the specific commit
-    hashes used are not recorded anywhere; if those repos update, re-sync is done blind
-  - Needs to determine: how to pin each source to a specific commit or release tag, where to
-    record those pins (a `data/SOURCES.md` file is a simple option), and what the re-sync
-    process looks like when an upstream source publishes a correction
+- [x] **M2. Upstream data source version pinning and re-sync strategy** *(complete)*
+  - Created `data/SOURCES.md`: every external source listed with URL, license, data path, and commit/version field
+  - Update SOURCES.md whenever a source is added, changed, or removed
+  - Re-sync procedure documented in the file
 
-- [ ] **M3. Data file completeness validation** *(stub — needs scoping before work begins)*
-  - Commentary data and interlinear data may have gaps (missing books, missing verses, missing
-    tokens) that are not surfaced to the user in any meaningful way — they just see blank sections
-  - Needs to determine: what a validation script should check (all 66 books present, all
-    chapters, verse count vs. expected), what the output format should be, and whether this
-    runs as a one-time check or a CI gate
+- [x] **M3. Data file completeness validation** *(closed — not needed)*
+  - Decision: data gaps surface naturally during use; a formal validation script is more
+    maintenance than it's worth for a single-author personal site
 
-- [ ] **M4. Search performance profiling** *(stub — needs scoping before work begins)*
-  - Full-text search runs client-side against all cached Bible JSON; for large result sets or
-    slow devices, this could be noticeably slow, but no profiling has been done
-  - Needs to determine: what the worst-case query looks like (single-word common term across
-    all versions), how to measure it, and what an acceptable response time threshold is
+- [x] **M4. Search performance profiling** *(closed — not needed)*
+  - Decision: search is perceptibly fast in practice; profiling overhead not warranted unless
+    a user reports slowness on a specific device or query
 
-- [ ] **M5. `bible.js` modularisation plan** *(stub — likely long-term)*
-  - `bible.js` is 2000+ lines and growing; it handles verse rendering, modal system, tooltips,
-    version switching, commentary, Strong's, interlinear, notes, bookmarks, memory, and plans
-  - This is real technical debt but low urgency on a no-build static site; splitting it requires
-    either ES module imports (which need a server for local dev or a bundler) or a simple
-    script-load sequence
-  - Needs to determine: whether the no-build constraint can be relaxed (even a simple
-    concatenation step via a shell script would suffice), and which logical boundaries are
-    cleanest to split on first (verse-modal.js, reader-keyboard.js, etc.)
+- [x] **M5. `bible.js` modularisation** *(complete)*
+  - `bible.js` split into 16 ES modules: `core.js`, `storage.js`, `tooltip.js`, `modal.js`,
+    `wire.js`, `pwa.js`, `search.js`, `reader.js`, `parallels.js`, `interlinear.js`,
+    `verse-study.js`, `word.js`, `daily.js`, `library.js`, `terms.js`, `maps.js`,
+    `timeline.js`, `wordcloud.js`, loaded via `<script type="module" src="app.js">`
+  - All 47 HTML pages updated; `sw.js` SHELL_URLS updated with all module paths
+  - No build step required — native ES modules served directly by the static file server
 
-- [ ] **M6. `data/references/` directory clarification** *(stub — immediate low-effort clarification needed)*
-  - A `data/references/` directory exists in the repo but is not mentioned anywhere in the TODO,
-    CLAUDE.md, or any HTML or JS file found during the gap analysis; its purpose is unknown
-  - Action needed: inspect its contents, determine if it is used, unused, or a placeholder;
-    either document it in the Notes section or delete it if orphaned
+- [x] **M6. `data/references/` directory clarification** *(closed — false alarm)*
+  - Directory does not exist; the stub was written against a stale gap analysis
 
 ---
 
@@ -1083,7 +1044,7 @@ but all of them reduce risk. All are stubs requiring further research before wor
 
 These are features that drive regular use and deepen the study experience. All are stubs.
 
-- [ ] **N1. Reading streaks and engagement tracking** *(stub — needs scoping before work begins)*
+- [x] **N1. Reading streaks and engagement tracking** *(complete)*
   - No streak or habit-tracking feature exists; YouVersion's dominant retention mechanic is a
     daily reading streak with a visible counter and a "don't break the chain" nudge
   - Needs to determine: what counts as a "reading day" (any Reader visit? a minimum verse count?
@@ -1091,7 +1052,7 @@ These are features that drive regular use and deepen the study experience. All a
     and whether achievements/badges are in scope or just the streak count
   - Related to C3a (reading plan progress) — streaks and plan progress are often shown together
 
-- [ ] **N2. Prayer journal** *(stub — needs scoping before work begins)*
+- [x] **N2. Prayer journal** *(complete)*
   - Users want to log prayers alongside Scripture, separate from verse-level notes; a day-keyed
     journal where each entry can link to one or more Bible references
   - Needs to determine: storage key and schema (separate from `bsw_notes`), UI location
@@ -1099,27 +1060,71 @@ These are features that drive regular use and deepen the study experience. All a
     verses (`.ref` pattern), and whether this is a standalone feature or part of a broader
     devotional flow with Spurgeon (D6) and VOTD (D7)
 
-- [ ] **N3. Study guide / curriculum templates** *(stub — needs scoping before work begins)*
-  - No structured multi-session study format exists; a study guide would be a series of
-    guided questions tied to Bible passages — more structured than reading plans, less
-    open-ended than the current topic pages
-  - Needs to determine: data format (JSON or HTML), authoring workflow, how they differ
-    from the existing `topics/` pages, and whether they are personal (like plans) or
-    published as site content
+- [ ] **N3. Study Guides** *(new category — distinct from topic pages)*
 
-- [ ] **N4. First-visit onboarding experience** *(stub — needs scoping before work begins)*
+  Study guides are structured multi-session resources, distinct from topic pages in two ways:
+  they have a defined session structure (session 1, session 2…) and each session has
+  discussion questions alongside its passages. Topic pages are thematic reference essays;
+  study guides are curriculum you work through.
+
+  ### Location and navigation
+  - `study-guides/index.html` — browse all guides (grid of cards, same layout as `topics/index.html`)
+  - `study-guides/{slug}/index.html` — individual guide
+  - Sidebar: new "Study Guides" group in the nav (below "Topics")
+  - Card format: title, subtitle, session count, estimated duration (e.g., "6 sessions · 45 min each")
+
+  ### Page structure
+  ```
+  [Guide Title]
+  [Subtitle / description paragraph]
+
+  ## Overview
+  [2–3 sentences: what this guide is, who it's for, what you'll study]
+
+  ## Sessions
+  ### Session 1 — [Title]
+  **Key passage:** [ref]
+  **Reading:** [optional additional refs]
+
+  [2–3 paragraphs of teaching content]
+
+  #### Discussion Questions
+  1. …
+  2. …
+  3. …
+
+  ### Session 2 — [Title]
+  …
+  ```
+
+  ### Template and authoring
+  - Copy `study-guides/_template/index.html` (to be created)
+  - Edit in Sublime Text; same `.ref[data-ref]` wiring as topic pages
+  - No JSON data files — entirely static HTML following the no-build-step principle
+  - `bash scripts/new-study-guide.sh <slug> "Title"` scaffolds the page (extend `new-topic.sh`)
+
+  ### CSS
+  - Reuse `.topic-grid` and `.topic-card` from `style.css` for the index grid
+  - Add `.study-guide-session` and `.study-guide-questions` blocks to `topic-shell.css` (or a new `study-guide.css`)
+  - Sessions separated by a horizontal rule or a thin border; questions styled as an ordered list
+    with slightly indented, italic formatting to visually distinguish them from teaching content
+
+  ### Priority guides to author first
+  - Ephesians (6 sessions)
+  - Romans 1–8 (8 sessions)
+  - The Sermon on the Mount — Matthew 5–7 (5 sessions)
+  - The Psalms — a 4-week devotional structure (4 sessions)
+
+- [x] **N4. First-visit onboarding experience** *(complete)*
   - A brand new visitor sees no guidance on what the site offers or where to start; there is
     no welcome flow, no feature tour, and no help overlay beyond the keyboard shortcut modal (F8)
   - Needs to determine: what the onboarding goal is (get the user to read one verse? enroll
     in a plan? understand the tools?), whether this is a modal wizard, a guided tour overlay,
     or a dedicated landing page, and whether it fires once (first visit) or is accessible later
 
-- [ ] **N5. Commentary citation and passage export** *(stub — needs scoping before work begins)*
-  - No way exists to copy a passage plus its commentary as a formatted block for sermon prep,
-    journaling, or sharing; the current Copy action (F2) only copies the verse text
-  - Needs to determine: what formats are useful (plain text block, Markdown, RTF for Word),
-    which commentary sources are included in an export, and how citation formatting works
-    (which style: Chicago, Turabian, informal?)
+- [x] **N5. Commentary citation and passage export** *(closed — not implementing)*
+  - Decision: F2 (copy verse) covers the primary need; the additional commentary export path
+    adds complexity for minimal gain on a personal study tool
 
 ---
 

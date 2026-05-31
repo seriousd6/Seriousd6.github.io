@@ -1,0 +1,237 @@
+/* wordcloud.css — Biblical Word Cloud page styles */
+
+.wc-page { max-width: 960px; }
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+.wc-header {
+  margin-bottom: 1.5rem;
+}
+.wc-h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--color-heading);
+}
+.wc-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+/* ── Controls bar ───────────────────────────────────────────────────────────── */
+.wc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.wc-scope-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.wc-scope-btn {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.wc-scope-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.wc-scope-btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.wc-proper-toggle {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: auto;
+  transition: border-color 0.15s, color 0.15s;
+}
+.wc-proper-toggle:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.wc-proper-toggle--on {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ── Cloud container ────────────────────────────────────────────────────────── */
+.wc-cloud-wrap {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.wc-loading, .wc-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+#wc-svg-wrap {
+  width: 100%;
+}
+
+.wc-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wc-word {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.wc-word:hover { opacity: 0.7; }
+.wc-word:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Legend ─────────────────────────────────────────────────────────────────── */
+.wc-legend {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+.wc-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.wc-legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* ── Detail panel ───────────────────────────────────────────────────────────── */
+.wc-detail {
+  margin-top: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.wc-detail-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.wc-detail-close:hover { color: var(--color-body); background: var(--color-hover); }
+
+.wc-detail-gloss {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 0.15rem;
+}
+.wc-detail-id {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0 0 0.25rem;
+  font-family: monospace;
+}
+.wc-detail-lemma {
+  font-size: 1.1rem;
+  margin: 0 0 0.2rem;
+  color: var(--color-body);
+}
+.wc-detail-count {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.wc-detail-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.wc-detail-bar-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 50px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.wc-detail-bar-label { color: var(--color-muted); }
+.wc-detail-bar-track {
+  height: 7px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.wc-detail-bar-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 4px;
+  min-width: 3px;
+}
+.wc-detail-bar-count {
+  text-align: right;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.wc-detail-word-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  transition: background 0.15s;
+}
+.wc-detail-word-link:hover { background: var(--color-primary); color: var(--color-on-primary); }
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .wc-h1 { font-size: 1.4rem; }
+  .wc-scope-bar { gap: 0.25rem; }
+  .wc-scope-btn { font-size: 0.72rem; padding: 0.25rem 0.55rem; }
+  .wc-proper-toggle { margin-left: 0; }
+  .wc-detail { padding: 1rem; }
+  .wc-detail-gloss { font-size: 1.3rem; }
+  .wc-detail-bar-row { grid-template-columns: 70px 1fr 40px; }
+}

@@ -1,0 +1,262 @@
+/* maps.css — Biblical Maps page (Leaflet-based) */
+
+/* ── Page layout ─────────────────────────────────────────────────────────── */
+
+.maps-page {
+  max-width: 1100px;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.maps-header {
+  margin-bottom: 1.25rem;
+}
+
+.maps-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 .2rem;
+}
+
+.maps-sub {
+  font-size: .85rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+}
+
+/* ── Two-column layout ───────────────────────────────────────────────────── */
+
+.maps-layout {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .maps-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Map selector nav ────────────────────────────────────────────────────── */
+
+.maps-nav {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.maps-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .55rem .8rem;
+  background: none;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: background .12s, border-color .12s;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.maps-nav-btn:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  border-color: var(--color-primary);
+}
+
+.maps-nav-btn--active {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.maps-nav-icon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+/* ── Legend ──────────────────────────────────────────────────────────────── */
+
+.maps-legend {
+  margin-top: .9rem;
+  padding: .7rem .85rem;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  font-size: .78rem;
+}
+
+.maps-legend[hidden] { display: none; }
+
+.maps-legend-title {
+  font-weight: 700;
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-muted, #888);
+  margin: 0 0 .5rem;
+}
+
+.maps-legend-item {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin-bottom: .3rem;
+  color: var(--color-text);
+  font-size: .79rem;
+}
+
+.maps-legend-swatch {
+  width: .9rem;
+  height: .9rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.maps-legend-line {
+  width: 1.4rem;
+  height: 3px;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+/* ── Display column ──────────────────────────────────────────────────────── */
+
+.maps-display-col {
+  min-width: 0;
+}
+
+.maps-title-bar {
+  margin-bottom: .6rem;
+}
+
+.maps-map-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 .15rem;
+}
+
+.maps-map-sub {
+  font-size: .8rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+}
+
+/* ── Leaflet map container ───────────────────────────────────────────────── */
+
+.maps-map-container {
+  width: 100%;
+  height: 520px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e8f4f8;
+}
+
+@media (max-width: 600px) {
+  .maps-map-container { height: 340px; }
+}
+
+/* Leaflet attribution link styling */
+.leaflet-container .leaflet-control-attribution {
+  font-size: .65rem;
+  background: rgba(255,255,255,.75);
+}
+
+/* ── Custom Leaflet marker styles (injected via JS) ──────────────────────── */
+
+.map-marker-capital {
+  width: 14px;
+  height: 14px;
+  background: var(--map-marker-color, #b00);
+  border: 2.5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  cursor: pointer;
+}
+
+.map-marker-city {
+  width: 10px;
+  height: 10px;
+  background: var(--map-marker-color, #555);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+/* ── City detail panel ───────────────────────────────────────────────────── */
+
+.maps-city-detail {
+  margin-top: .75rem;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  position: relative;
+}
+
+.maps-city-detail[hidden] { display: none; }
+
+.maps-city-close {
+  position: absolute;
+  top: .6rem;
+  right: .7rem;
+  background: none;
+  border: none;
+  font-size: .9rem;
+  color: var(--color-muted, #aaa);
+  cursor: pointer;
+  padding: .15rem .3rem;
+  border-radius: 4px;
+  transition: color .12s;
+}
+
+.maps-city-close:hover { color: var(--color-text); }
+
+.maps-city-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 .35rem;
+}
+
+.maps-city-desc {
+  font-size: .87rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 .65rem;
+}
+
+.maps-city-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.maps-city-ref-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .22rem .6rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: .75rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+}
+
+.maps-city-ref-chip:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  text-decoration: none;
+}

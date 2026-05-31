@@ -15,7 +15,7 @@
   height: var(--header-h, 52px);
   z-index: 1000;
   background: var(--color-primary, #5c3d1e);
-  color: #fff;
+  color: var(--color-on-primary);
   display: flex;
   align-items: center;
   padding: 0 1.25rem;
@@ -27,7 +27,7 @@
 .site-header--topic .site-title {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -50,13 +50,13 @@
 
 .site-header--topic .site-nav a:hover,
 .site-header--topic .site-nav a:focus {
-  color: #fff;
+  color: var(--color-on-primary);
   outline: none;
 }
 
 /* Active section link (parent of current page) */
 .site-header--topic .site-nav a[aria-current] {
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: rgba(201, 162, 74, 0.7);
@@ -114,7 +114,7 @@
   padding: 0.28rem 0.55rem;
   transition: background 0.12s, color 0.12s;
 }
-.topic-sidebar-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.topic-sidebar-toggle:hover { background: rgba(0,0,0,0.12); color: var(--color-on-primary); }
 .topic-sidebar-toggle:focus-visible { outline: 2px solid #c9a24a; outline-offset: 2px; }
 
 /* ── Nav action pills inside topic header ────────────────── */
@@ -132,14 +132,14 @@
   margin-right: 0.75rem;
 }
 .site-header--topic .site-nav__action:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.75);
-  color: #fff;
+  background: rgba(0,0,0,0.12);
+  border-color: rgba(0,0,0,0.3);
+  color: var(--color-on-primary);
 }
 .site-header--topic .site-nav__action[aria-current] {
-  background: rgba(255,255,255,0.2);
-  border-color: #fff;
-  color: #fff;
+  background: rgba(0,0,0,0.15);
+  border-color: rgba(0,0,0,0.4);
+  color: var(--color-on-primary);
 }
 
 /* ── Studies panel button inside topic header ────────────── */
@@ -159,9 +159,9 @@
 }
 .site-header--topic .nav-panel-btn:hover,
 .site-header--topic .nav-panel-btn[aria-expanded="true"] {
-  background: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.75);
-  color: #fff;
+  background: rgba(0,0,0,0.12);
+  border-color: rgba(0,0,0,0.3);
+  color: var(--color-on-primary);
 }
 
 /* ── Nav panel backdrop + panel (shared, hardcoded for topic pages) ── */
@@ -256,4 +256,18 @@
   }
   .site-nav__breadcrumb { display: none; }
   .nav-panel { width: 100%; }
+}
+
+/* ── Dark-mode header override ───────────────────────────────────────────── */
+/* Topic header bg flips to bright yellow in dark mode; replace with dark     */
+/* surface — white text already provides excellent contrast on dark bg.        */
+[data-theme="dark"] .site-header--topic {
+  background: #2a1f0f;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-header--topic {
+    background: #2a1f0f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
 }

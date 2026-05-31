@@ -361,14 +361,14 @@
 .wd-book-pill:hover {
   border-color: var(--color-primary);
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
 }
 .wd-book-pill:hover .wd-book-count { color: rgba(255,255,255,0.8); }
 
 .wd-book-pill--active {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
 }
 .wd-book-pill--active .wd-book-count { color: rgba(255,255,255,0.8); }
 .wd-book-pill { cursor: pointer; font-family: inherit; }
@@ -558,4 +558,24 @@
   text-transform: uppercase;
   color: var(--color-primary);
   margin-right: 0.3em;
+}
+
+/* ── Dark-mode button overrides ─────────────────────────────────────────── */
+[data-theme="dark"] .wd-book-pill:hover,
+[data-theme="dark"] .wd-book-pill--active {
+  background: var(--color-btn-bg, #3a2d18);
+  border-color: var(--color-primary);
+  color: var(--color-btn-text, #e8c87a);
+}
+[data-theme="dark"] .wd-book-pill:hover .wd-book-count,
+[data-theme="dark"] .wd-book-pill--active .wd-book-count { color: var(--color-btn-text, #e8c87a); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .wd-book-pill:hover,
+  :root:not([data-theme="light"]) .wd-book-pill--active {
+    background: var(--color-btn-bg, #3a2d18);
+    border-color: var(--color-primary);
+    color: var(--color-btn-text, #e8c87a);
+  }
+  :root:not([data-theme="light"]) .wd-book-pill:hover .wd-book-count,
+  :root:not([data-theme="light"]) .wd-book-pill--active .wd-book-count { color: var(--color-btn-text, #e8c87a); }
 }

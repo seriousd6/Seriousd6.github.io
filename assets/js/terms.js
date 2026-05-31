@@ -1,0 +1,382 @@
+/* terms.js — Term hover tooltip system (site-wide noun/concept linking) */
+'use strict';
+
+import {
+  escHtml,
+  _smithLoad, _smithData,
+  _hitchLoad, _hitchData
+} from './core.js';
+import { wireRefLinks } from './wire.js';
+import {
+  _naveLoad, _naveData, _naveMap,
+  _dictLoad, _dictData,
+  DICT_PAGE_URL
+} from './library.js';
+
+var _termTipEl     = null;
+var _termTipTimer  = null;
+var _termTipHide   = null;
+var _termMap2      = null;
+var _termMapReady  = null;
+var _termMultiRe   = null;
+var _termSingleSet = null;
+
+export function getTermMap2() { return _termMap2; }
+
+function _buildTermTooltipDOM() {
+  if (_termTipEl) return;
+  var el = document.createElement('div');
+  el.id        = 'bsw-term-tooltip';
+  el.className = 'bsw-term-tooltip';
+  el.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(el);
+  _termTipEl = el;
+  el.addEventListener('mouseenter', function () { cancelTermHide(); });
+  el.addEventListener('mouseleave', function () { _scheduleTermHide(); });
+}
+
+function _scheduleTermShow(anchor, key) {
+  cancelTermHide();
+  if (_termTipTimer) clearTimeout(_termTipTimer);
+  _termTipTimer = setTimeout(function () { _showTermTip(anchor, key); }, 250);
+}
+
+function _scheduleTermHide() {
+  if (_termTipTimer) { clearTimeout(_termTipTimer); _termTipTimer = null; }
+  _termTipHide = setTimeout(function () { _hideTermTip(); }, 180);
+}
+
+export function cancelTermHide() {
+  if (_termTipHide) { clearTimeout(_termTipHide); _termTipHide = null; }
+}
+
+function _hideTermTip() {
+  if (_termTipEl) {
+    _termTipEl.classList.remove('bsw-term-tooltip--visible');
+    _termTipEl.setAttribute('aria-hidden', 'true');
+  }
+}
+
+function _positionTermTip(anchor) {
+  if (!_termTipEl) return;
+  var r  = anchor.getBoundingClientRect();
+  var tt = _termTipEl.getBoundingClientRect();
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  var top  = r.bottom + 8;
+  var left = r.left;
+  if (top + tt.height > vh - 8)  top  = r.top - tt.height - 8;
+  if (left + tt.width > vw - 8)  left = vw - tt.width - 8;
+  if (left < 8) left = 8;
+  _termTipEl.style.top  = top  + 'px';
+  _termTipEl.style.left = left + 'px';
+}
+
+function _showTermTip(anchor, key) {
+  _buildTermTooltipDOM();
+  var entry = _termMap2 && _termMap2[key];
+  if (!entry) return;
+
+  var src = [];
+  if (entry.dictId)     src.push("Easton's");
+  if (entry.smithId)    src.push("Smith's");
+  if (entry.hitchId)    src.push("Names");
+  if (entry.naveSlugs && entry.naveSlugs.length) src.push("Nave's");
+
+  var html =
+    '<div class="bsw-term-tooltip__head">' +
+      '<span class="bsw-term-tooltip__term">' + escHtml(entry.term) + '</span>' +
+      '<span class="bsw-term-tooltip__src">' + escHtml(src.join(' · ')) + '</span>' +
+    '</div>' +
+    '<div class="bsw-term-tooltip__body">';
+
+  if (entry.dictBrief) {
+    var brief = entry.dictBrief;
+    var dot = brief.indexOf('. ', 50);
+    if (dot > 0 && dot < 160) brief = brief.slice(0, dot + 1);
+    else if (brief.length > 120) brief = brief.slice(0, 117) + '…';
+    html += '<p class="bsw-term-tooltip__brief">' + escHtml(brief) + '</p>';
+  } else if (entry.smithBrief) {
+    var sBrief = entry.smithBrief;
+    var sDot = sBrief.indexOf('. ', 50);
+    if (sDot > 0 && sDot < 160) sBrief = sBrief.slice(0, sDot + 1);
+    else if (sBrief.length > 120) sBrief = sBrief.slice(0, 117) + '…';
+    html += '<p class="bsw-term-tooltip__brief">' + escHtml(sBrief) + '</p>';
+  }
+
+  if (entry.hitchMeaning) {
+    html += '<p class="bsw-term-tooltip__hitch"><span class="bsw-term-tooltip__hitch-label">Name: </span>' +
+      escHtml(entry.hitchMeaning) + '</p>';
+  }
+
+  if (entry.naveSlugs && entry.naveSlugs.length) {
+    html += '<div class="bsw-term-tooltip__nave"><p class="bsw-term-tooltip__nave-label">Nave\'s Topics</p><div class="bsw-term-tooltip__nave-chips">';
+    entry.naveSlugs.slice(0, 4).forEach(function (ns) {
+      var t = _naveMap && _naveMap[ns];
+      if (!t) return;
+      var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(t.slug) + '&src=nave';
+      html += '<a class="bsw-term-tooltip__nave-chip" href="' + escHtml(href) + '">' +
+        escHtml(t.title.charAt(0) + t.title.slice(1).toLowerCase()) +
+        ' <span style="opacity:.6">(' + t.verses.length + ')</span></a>';
+    });
+    html += '</div></div>';
+  }
+
+  html += '<div class="bsw-term-tooltip__links">';
+  if (entry.dictId) {
+    var dHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.dictId);
+    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(dHref) + '">Easton\'s &#x2192;</a>';
+  }
+  if (entry.smithId) {
+    var sHref = DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(entry.smithId);
+    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(sHref) + '">Smith\'s &#x2192;</a>';
+  }
+  if (entry.naveSlugs && entry.naveSlugs.length) {
+    var nHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.naveSlugs[0]) + '&src=nave';
+    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(nHref) + '">Topics &#x2192;</a>';
+  }
+  html += '</div></div>';
+
+  _termTipEl.innerHTML = html;
+  _termTipEl.classList.add('bsw-term-tooltip--visible');
+  _termTipEl.setAttribute('aria-hidden', 'false');
+  _positionTermTip(anchor);
+}
+
+function _loadTermMap() {
+  if (_termMap2) return Promise.resolve(_termMap2);
+  if (_termMapReady) return _termMapReady;
+  _termMapReady = Promise.all([_dictLoad(), _naveLoad(), _smithLoad(), _hitchLoad()]).then(function () {
+    var map  = {};
+
+    if (_dictData) {
+      _dictData.forEach(function (e) {
+        var k = e.term.toLowerCase();
+        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
+        map[k].dictId    = e.id;
+        map[k].dictBrief = e.brief;
+      });
+    }
+
+    if (_naveData) {
+      _naveData.forEach(function (t) {
+        var title = t.title.charAt(0) + t.title.slice(1).toLowerCase();
+        var k = title.toLowerCase();
+        if (!map[k]) map[k] = { term: title, naveSlugs: [] };
+        else if (!map[k].term) map[k].term = title;
+        map[k].naveSlugs.push(t.slug);
+      });
+    }
+
+    if (_smithData) {
+      _smithData.forEach(function (e) {
+        var k = e.term.toLowerCase();
+        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
+        if (!map[k].smithId && e.brief) {
+          map[k].smithId    = e.id;
+          map[k].smithBrief = e.brief;
+        }
+      });
+    }
+
+    if (_hitchData) {
+      _hitchData.forEach(function (e) {
+        var k = e.term.toLowerCase();
+        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
+        map[k].hitchId      = e.id;
+        map[k].hitchMeaning = e.meaning;
+      });
+    }
+
+    _termMap2 = map;
+
+    var multiKeys = Object.keys(map).filter(function (k) {
+      return k.indexOf(' ') >= 0 && k.length >= 4;
+    }).sort(function (a, b) { return b.length - a.length; });
+
+    if (multiKeys.length) {
+      var escaped = multiKeys.map(function (k) {
+        return k.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&');
+      });
+      try {
+        _termMultiRe = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+      } catch (e) {
+        _termMultiRe = null;
+      }
+    }
+
+    _termSingleSet = new Set(Object.keys(map).filter(function (k) {
+      return k.indexOf(' ') < 0 && k.length >= 3;
+    }));
+
+    return map;
+  });
+  return _termMapReady;
+}
+
+function _wireTermEl(el) {
+  if (el._termWired) return;
+  el._termWired = true;
+  var key = (el.dataset.termKey || el.textContent || '').toLowerCase().trim();
+  el.addEventListener('mouseenter', function () { _scheduleTermShow(el, key); });
+  el.addEventListener('mouseleave', function () { _scheduleTermHide(); });
+  el.addEventListener('click', function () {
+    if (_termTipEl && _termTipEl.classList.contains('bsw-term-tooltip--visible')) {
+      _hideTermTip();
+    }
+  });
+}
+
+export function autoTagTerms(root) {
+  if (!_termMap2) return;
+  if (!root) return;
+  if (root._termsTagged) return;
+  root._termsTagged = true;
+
+  var skipTags = new Set(['script','style','svg','canvas','select','option','textarea','input','button','a']);
+
+  var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: function (node) {
+      var p = node.parentElement;
+      if (!p) return NodeFilter.FILTER_REJECT;
+      var tag = p.tagName.toLowerCase();
+      if (skipTags.has(tag)) return NodeFilter.FILTER_REJECT;
+      if (p.closest('a, .term-link, [data-ref], .bsw-tooltip, .bsw-term-tooltip, .site-sidebar, nav, footer')) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      if (!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  var nodes = [];
+  var node;
+  while ((node = walker.nextNode())) nodes.push(node);
+
+  nodes.forEach(function (textNode) {
+    _tagTextNode(textNode);
+  });
+
+  root.querySelectorAll('.term, .term-link').forEach(_wireTermEl);
+}
+
+function _tagTextNode(textNode) {
+  var text = textNode.textContent;
+  if (text.length < 3) return;
+
+  var modified = false;
+  var html     = '';
+  var last     = 0;
+
+  if (_termMultiRe) {
+    _termMultiRe.lastIndex = 0;
+    var mResult;
+    while ((mResult = _termMultiRe.exec(text)) !== null) {
+      var matchStr = mResult[0];
+      var pos      = mResult.index;
+      var key      = matchStr.toLowerCase();
+      if (_termMap2[key]) {
+        html += escHtml(text.slice(last, pos));
+        html += '<span class="term-link" data-term-key="' + escHtml(key) + '">' +
+          escHtml(matchStr) + '</span>';
+        last     = pos + matchStr.length;
+        modified = true;
+      }
+    }
+  }
+
+  var remaining = last === 0 ? text : (text.slice(last));
+  var remaining_offset = last;
+
+  var wordRe = /\b([A-Z][a-z]{2,})\b/g;
+  var wResult;
+  var segLast = 0;
+  var segHtml = '';
+  var segMod  = false;
+
+  wordRe.lastIndex = 0;
+  while ((wResult = wordRe.exec(remaining)) !== null) {
+    var word    = wResult[1];
+    var wpos    = wResult.index;
+    var key2    = word.toLowerCase();
+
+    if (!_termSingleSet.has(key2)) continue;
+
+    var absPos  = remaining_offset + wpos;
+    var pre     = absPos > 0 ? text.charAt(absPos - 1) : '';
+    if (absPos === 0 || /[.!?\n\r]/.test(pre)) continue;
+    if (/["'"''""—]/.test(pre)) {
+      var pre2 = absPos > 1 ? text.charAt(absPos - 2) : '';
+      if (/[.!?\n]/.test(pre2)) continue;
+    }
+
+    segHtml += escHtml(remaining.slice(segLast, wpos));
+    segHtml += '<span class="term-link" data-term-key="' + escHtml(key2) + '">' +
+      escHtml(word) + '</span>';
+    segLast  = wpos + word.length;
+    segMod   = true;
+  }
+
+  if (segMod) {
+    segHtml += escHtml(remaining.slice(segLast));
+    html    += segHtml;
+    modified = true;
+  } else if (modified) {
+    html += escHtml(text.slice(last));
+  }
+
+  if (!modified) return;
+
+  var span = document.createElement('span');
+  span.innerHTML = html;
+  span.querySelectorAll('.term-link').forEach(_wireTermEl);
+  textNode.parentNode.replaceChild(span, textNode);
+}
+
+var _AUTOTAG_SELECTORS = [
+  '.scripture',
+  '[data-autotag]',
+  '.lib-chapter',
+  '.lib-father-quote',
+  '.lib-creed',
+  '#vs-focal-text',
+  '#vs-context-prev',
+  '#vs-context-next',
+  '.reader-result-group__text',
+  '.reader-interlinear-text',
+  '.bk-section',
+  '.bk-note',
+  '.bk-application',
+  '.ri-body'
+].join(', ');
+
+// autoTagTermsWhenReady: for dynamically injected containers (e.g. the timeline
+// detail panel). Loads the term map first if not yet built, then scopes tagging
+// to root so the rest of the page is not re-scanned.
+export function autoTagTermsWhenReady(root) {
+  if (!root) return;
+  _loadTermMap().then(function () { autoTagTerms(root); });
+}
+
+export function runAutoTagTerms() {
+  _loadTermMap().then(function () {
+    document.querySelectorAll('.term').forEach(function (el) {
+      var key = el.textContent.toLowerCase().trim();
+      if (!el.classList.contains('term-link') && _termMap2 && _termMap2[key]) {
+        el.classList.add('term-link');
+        el.dataset.termKey = key;
+      }
+      _wireTermEl(el);
+    });
+
+    document.querySelectorAll(_AUTOTAG_SELECTORS).forEach(function (container) {
+      autoTagTerms(container);
+    });
+
+    var backdrop = document.querySelector('.bsw-modal-backdrop');
+    if (backdrop && !backdrop.classList.contains('bsw-modal-backdrop--hidden')) {
+      var mb = document.querySelector('.bsw-modal__body');
+      if (mb) { mb._termsTagged = false; autoTagTerms(mb); }
+    }
+  });
+}

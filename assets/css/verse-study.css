@@ -142,7 +142,7 @@
 .vs-context-btn:hover,
 .vs-context-btn--on {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
@@ -176,7 +176,7 @@
 }
 .vs-token--active {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 
@@ -314,7 +314,7 @@
 }
 .vs-xref-link:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
 }
 .vs-xref-link.bsw-xref--high { border-color: var(--color-primary); }
@@ -526,6 +526,14 @@
   margin-bottom: 0.3rem;
 }
 
+.vs-word-panel__morph {
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-style: normal;
+  margin-bottom: 0.3rem;
+}
+
 .vs-word-panel__actions {
   margin-top: 0.6rem;
   padding-top: 0.5rem;
@@ -719,6 +727,14 @@
   font-family: var(--font-ui, system-ui, sans-serif);
 }
 
+.vs-id-morph {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-style: normal;
+  margin-top: 0.2rem;
+}
+
 .vs-id-note {
   font-size: 0.85rem;
   color: var(--color-muted);
@@ -809,4 +825,24 @@
 .vs-cmp-row__text--na {
   color: var(--color-muted);
   font-size: 0.85rem;
+}
+
+/* ── Dark-mode button overrides ─────────────────────────────────────────── */
+[data-theme="dark"] .vs-context-btn:hover,
+[data-theme="dark"] .vs-context-btn--on,
+[data-theme="dark"] .vs-token--active,
+[data-theme="dark"] .vs-xref-link:hover {
+  background: var(--color-btn-bg, #3a2d18);
+  border-color: var(--color-primary);
+  color: var(--color-btn-text, #e8c87a);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vs-context-btn:hover,
+  :root:not([data-theme="light"]) .vs-context-btn--on,
+  :root:not([data-theme="light"]) .vs-token--active,
+  :root:not([data-theme="light"]) .vs-xref-link:hover {
+    background: var(--color-btn-bg, #3a2d18);
+    border-color: var(--color-primary);
+    color: var(--color-btn-text, #e8c87a);
+  }
 }

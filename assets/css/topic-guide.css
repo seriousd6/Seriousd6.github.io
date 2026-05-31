@@ -334,7 +334,7 @@
 }
 .tg-compare th {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 700;
@@ -424,4 +424,16 @@
   .tg-compare { font-size: 0.88rem; }
   .tg-timeline__row { grid-template-columns: 4rem 1fr; }
   .tg-timeline__date { font-size: 0.68rem; }
+}
+
+/* ── Dark-mode overrides ─────────────────────────────────────────────────── */
+[data-theme="dark"] .tg-compare th {
+  background: var(--color-btn-bg, #3a2d18);
+  color: var(--color-btn-text, #e8c87a);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tg-compare th {
+    background: var(--color-btn-bg, #3a2d18);
+    color: var(--color-btn-text, #e8c87a);
+  }
 }

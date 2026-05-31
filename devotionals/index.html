@@ -59,7 +59,7 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/bible.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
   <script>
   (function () {
     'use strict';
@@ -132,7 +132,7 @@
       loading.hidden = true;
       empty.hidden   = true;
       body.hidden    = false;
-      // Re-wire any newly inserted .ref links via bible.js
+      // Re-wire any newly inserted .ref links via wireRefLinks (app.js)
       if (window._bswWireRefs) window._bswWireRefs(textEl);
       if (window._bswWireRefs) window._bswWireRefs(verseRef);
     }

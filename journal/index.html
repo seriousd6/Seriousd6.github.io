@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Prayer journal — personal prayers, updates, and reflections linked to Scripture." />
+  <title>Prayer Journal — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <style>
+    /* ── Page ── */
+    .journal-page { max-width: 740px; margin: 0 auto; padding-bottom: 3rem; }
+    .journal-page h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+    .journal-subtitle { color: var(--color-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+    /* ── Buttons ── */
+    .journal-btn {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 5px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    .journal-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .journal-btn--primary { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+    .journal-btn--primary:hover { background: #4a3016; border-color: #4a3016; color: #fff; }
+    .journal-btn--sm { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
+
+    /* ── Action bar ── */
+    .journal-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .journal-search {
+      flex: 1;
+      min-width: 160px;
+      font-size: 0.85rem;
+      padding: 0.32rem 0.7rem;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+    .journal-search:focus { outline: none; border-color: var(--color-primary); }
+    .journal-count { font-size: 0.78rem; color: var(--color-muted); margin-left: auto; white-space: nowrap; }
+
+    /* ── Tag filter row ── */
+    .journal-tag-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.1rem;
+      min-height: 0;
+    }
+    .journal-tag-filters:empty { display: none; }
+    .journal-filter-chip {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-muted);
+      font-family: var(--font-ui);
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+      user-select: none;
+    }
+    .journal-filter-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .journal-filter-chip--active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+    .journal-filter-chip--clear { color: var(--color-accent); border-style: dashed; }
+    .journal-filter-chip--clear:hover { background: none; color: var(--color-primary); }
+
+    /* ── Tag chips (on entries) ── */
+    .journal-entry-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.3rem; }
+    .journal-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid;
+      font-family: var(--font-ui);
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .journal-tag--people { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+    .journal-tag--place  { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+    .journal-tag--topic  { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+    .journal-tag--default{ background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+    [data-theme="dark"] .journal-tag--people { background: #1e3a5f; color: #93c5fd; border-color: #3b6ea5; }
+    [data-theme="dark"] .journal-tag--place  { background: #064e3b; color: #6ee7b7; border-color: #065f46; }
+    [data-theme="dark"] .journal-tag--topic  { background: #78350f; color: #fcd34d; border-color: #92400e; }
+
+    /* ── Form ── */
+    .journal-form {
+      background: var(--color-surface);
+      border: 1px solid var(--color-primary);
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1.25rem;
+    }
+    .journal-form h2 { font-size: 1rem; margin: 0 0 0.85rem; color: var(--color-primary); }
+    .journal-field { margin-bottom: 0.75rem; }
+    .journal-field label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      margin-bottom: 0.25rem;
+    }
+    .journal-field label span { font-weight: 400; text-transform: none; }
+    .journal-input,
+    .journal-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: var(--font-body, Georgia, serif);
+      font-size: 0.92rem;
+      padding: 0.4rem 0.65rem;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      background: var(--color-bg);
+      color: var(--color-text);
+      resize: vertical;
+    }
+    .journal-input:focus, .journal-textarea:focus { outline: none; border-color: var(--color-primary); }
+    .journal-textarea { min-height: 110px; line-height: 1.6; }
+
+    /* ── Tag input row ── */
+    .journal-tag-input-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      align-items: center;
+      padding: 0.3rem 0.55rem;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      background: var(--color-bg);
+      min-height: 2.2rem;
+      cursor: text;
+    }
+    .journal-tag-input-wrap:focus-within { border-color: var(--color-primary); }
+    .journal-tag-input-wrap .journal-tag { cursor: default; }
+    .journal-tag__rm {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.75rem;
+      color: inherit;
+      padding: 0;
+      line-height: 1;
+      opacity: 0.7;
+      margin-left: 0.1rem;
+    }
+    .journal-tag__rm:hover { opacity: 1; }
+    .journal-tag-bare-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 0.82rem;
+      color: var(--color-text);
+      min-width: 120px;
+      flex: 1;
+      font-family: var(--font-ui);
+      padding: 0.1rem 0.2rem;
+    }
+    .journal-tag-category-btns {
+      display: flex;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .journal-cat-btn {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      font-family: var(--font-ui);
+      color: var(--color-muted);
+    }
+    .journal-cat-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    .journal-form-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 0.85rem; }
+
+    /* ── Entry cards ── */
+    .journal-entry {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin-bottom: 0.85rem;
+      overflow: hidden;
+    }
+    .journal-entry--has-updates { border-left: 3px solid var(--color-accent); }
+
+    .journal-entry__head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+    .journal-entry__head:hover { background: var(--color-bg); }
+    .journal-entry__meta { flex: 1; min-width: 0; }
+    .journal-entry__date {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: 0.15rem;
+    }
+    .journal-entry__title {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .journal-entry__preview {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      margin-top: 0.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .journal-entry__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+      flex-shrink: 0;
+    }
+    .journal-entry__btns { display: flex; gap: 0.3rem; }
+    .journal-entry__btn {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      background: var(--color-surface);
+      color: var(--color-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: var(--font-ui);
+    }
+    .journal-entry__btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .journal-entry__btn--del:hover { border-color: #c0392b; color: #c0392b; }
+    .journal-update-badge {
+      font-size: 0.68rem;
+      color: var(--color-accent);
+      font-family: var(--font-ui);
+      white-space: nowrap;
+    }
+
+    /* ── Conversation thread ── */
+    .journal-entry__body { display: none; border-top: 1px solid var(--color-border); }
+    .journal-entry__body--open { display: block; }
+
+    .journal-thread { padding: 0; }
+    .journal-thread-item {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+    .journal-thread-item:last-of-type { border-bottom: none; }
+    .journal-thread-item--original { background: var(--color-bg); }
+
+    .journal-thread-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+    .journal-thread-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-primary);
+    }
+    .journal-thread-date {
+      font-size: 0.72rem;
+      color: var(--color-muted);
+    }
+    .journal-thread-del {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      padding: 0 0.2rem;
+      opacity: 0;
+      transition: opacity 0.1s;
+    }
+    .journal-thread-item:hover .journal-thread-del { opacity: 1; }
+    .journal-thread-del:hover { color: #c0392b; }
+    .journal-thread-text {
+      font-family: var(--font-body, Georgia, serif);
+      font-size: 0.91rem;
+      line-height: 1.68;
+      color: var(--color-text);
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .journal-thread-refs {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .journal-thread-ref {
+      font-size: 0.75rem;
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      text-decoration: none;
+      background: var(--color-bg);
+    }
+    .journal-thread-ref:hover { border-color: var(--color-primary); }
+
+    /* ── Add update area ── */
+    .journal-update-area {
+      padding: 0.6rem 1rem;
+      background: var(--color-bg);
+      border-top: 1px dashed var(--color-border);
+    }
+    .journal-add-update-btn {
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      font-family: var(--font-ui);
+      font-weight: 600;
+    }
+    .journal-add-update-btn:hover { color: var(--color-primary); text-decoration: underline; }
+    .journal-update-form { margin-top: 0.6rem; }
+    .journal-update-form .journal-input { margin-bottom: 0.45rem; }
+    .journal-update-form .journal-textarea { min-height: 72px; }
+
+    /* ── Export row ── */
+    .journal-export-row {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Empty state ── */
+    .journal-empty { text-align: center; padding: 3rem 1rem; color: var(--color-muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container journal-page">
+      <h1>Prayer Journal</h1>
+      <p class="journal-subtitle">Prayers, updates, and reflections — saved locally in your browser.</p>
+
+      <div class="journal-bar">
+        <button class="journal-btn journal-btn--primary" id="journal-new-btn" type="button">+ New Prayer</button>
+        <input class="journal-search" type="search" id="journal-search" placeholder="Search prayers…" />
+        <span class="journal-count" id="journal-count"></span>
+      </div>
+
+      <div id="journal-tag-filters" class="journal-tag-filters"></div>
+      <div id="journal-form-container"></div>
+      <div id="journal-list"></div>
+
+      <div class="journal-export-row" id="journal-export-row" hidden>
+        <button class="journal-btn" id="journal-export-btn" type="button">Export JSON</button>
+        <button class="journal-btn" id="journal-import-btn" type="button">Import backup</button>
+        <input type="file" id="journal-import-file" accept=".json" style="display:none" />
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    var JOURNAL_KEY = 'bsw_journal';
+    var READ_URL    = '../read/';
+    var _editId     = null;
+    var _searchQ    = '';
+    var _tagFilter  = null;   // active tag string filter
+    var _formTags   = [];     // tags being edited in the current form
+
+    /* ── Storage ── */
+    function load()  { try { return JSON.parse(localStorage.getItem(JOURNAL_KEY) || '[]'); } catch (e) { return []; } }
+    function save(a) { localStorage.setItem(JOURNAL_KEY, JSON.stringify(a)); }
+    function todayStr() { return new Date().toISOString().slice(0, 10); }
+    function esc(s)  { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      var d = new Date(dateStr + 'T00:00:00');
+      return d.toLocaleDateString(undefined, { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    function formatDateShort(dateStr) {
+      if (!dateStr) return '';
+      var d = new Date(dateStr + 'T00:00:00');
+      return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    /* ── Tag helpers ── */
+    function tagCategory(tag) {
+      var lower = tag.toLowerCase();
+      if (lower.startsWith('people:') || lower.startsWith('person:')) return 'people';
+      if (lower.startsWith('place:')  || lower.startsWith('location:')) return 'place';
+      if (lower.startsWith('topic:')  || lower.startsWith('theme:')) return 'topic';
+      return 'default';
+    }
+
+    function tagDisplay(tag) {
+      // Show "John" for "people:john" etc.
+      var colon = tag.indexOf(':');
+      return colon !== -1 ? tag.slice(colon + 1) : tag;
+    }
+
+    function tagClass(tag) {
+      return 'journal-tag journal-tag--' + tagCategory(tag);
+    }
+
+    function renderTagChip(tag, withRemove) {
+      var display = esc(tagDisplay(tag));
+      var cat = tagCategory(tag);
+      var prefix = cat !== 'default' ? '<span style="opacity:.6;font-size:.65rem">' + esc(cat.slice(0,1).toUpperCase()) + ' </span>' : '';
+      return '<span class="' + esc(tagClass(tag)) + '" data-tag="' + esc(tag) + '">' +
+        prefix + display +
+        (withRemove ? '<button class="journal-tag__rm" data-rm-tag="' + esc(tag) + '" type="button" aria-label="Remove tag">×</button>' : '') +
+        '</span>';
+    }
+
+    function allTags() {
+      var set = {};
+      load().forEach(function (e) {
+        (e.tags || []).forEach(function (t) { set[t] = true; });
+      });
+      return Object.keys(set).sort();
+    }
+
+    /* ── Tag input widget ── */
+    function buildTagInput(existingTags) {
+      _formTags = existingTags ? existingTags.slice() : [];
+
+      var wrap = document.createElement('div');
+      wrap.className = 'journal-tag-input-wrap';
+      wrap.id = 'j-tag-wrap';
+
+      var inputEl = document.createElement('input');
+      inputEl.className = 'journal-tag-bare-input';
+      inputEl.type = 'text';
+      inputEl.placeholder = 'Add tag… (e.g. people:John, topic:healing)';
+      inputEl.id = 'j-tag-input';
+
+      function refreshChips() {
+        var chips = wrap.querySelectorAll('.journal-tag');
+        chips.forEach(function (c) { c.remove(); });
+        _formTags.forEach(function (t) {
+          var chip = document.createElement('span');
+          chip.innerHTML = renderTagChip(t, true);
+          var inner = chip.firstChild;
+          inner.querySelector('[data-rm-tag]').addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            _formTags = _formTags.filter(function (x) { return x !== t; });
+            refreshChips();
+          });
+          wrap.insertBefore(inner, inputEl);
+        });
+      }
+      refreshChips();
+
+      function addTag(raw) {
+        var tag = raw.trim().toLowerCase().replace(/\s+/g, '-');
+        if (!tag || _formTags.indexOf(tag) !== -1) return;
+        _formTags.push(tag);
+        refreshChips();
+        inputEl.value = '';
+      }
+
+      inputEl.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ',') {
+          e.preventDefault();
+          addTag(inputEl.value);
+        }
+        if (e.key === 'Backspace' && !inputEl.value && _formTags.length) {
+          _formTags.pop();
+          refreshChips();
+        }
+      });
+      inputEl.addEventListener('blur', function () {
+        if (inputEl.value.trim()) addTag(inputEl.value);
+      });
+
+      wrap.addEventListener('click', function (e) {
+        if (e.target === wrap) inputEl.focus();
+      });
+      wrap.appendChild(inputEl);
+
+      // Category shortcut buttons
+      var catRow = document.createElement('div');
+      catRow.className = 'journal-tag-category-btns';
+      [['People', 'people:'], ['Place', 'place:'], ['Topic', 'topic:']].forEach(function (pair) {
+        var btn = document.createElement('button');
+        btn.className = 'journal-cat-btn';
+        btn.type = 'button';
+        btn.textContent = '+ ' + pair[0];
+        btn.addEventListener('click', function () {
+          inputEl.value = pair[1];
+          inputEl.focus();
+        });
+        catRow.appendChild(btn);
+      });
+
+      var container = document.createElement('div');
+      container.appendChild(wrap);
+      container.appendChild(catRow);
+      return container;
+    }
+
+    /* ── Entry form ── */
+    function showForm(entry) {
+      _editId = entry ? entry.id : null;
+      var isEdit = !!entry;
+      var formEl = document.getElementById('journal-form-container');
+
+      var form = document.createElement('div');
+      form.className = 'journal-form';
+      form.innerHTML =
+        '<h2>' + (isEdit ? 'Edit Prayer' : 'New Prayer') + '</h2>' +
+        '<div class="journal-field"><label for="j-date">Date</label>' +
+          '<input class="journal-input" type="date" id="j-date" value="' + esc(isEdit ? entry.date : todayStr()) + '" /></div>' +
+        '<div class="journal-field"><label for="j-title">Title <span>(optional)</span></label>' +
+          '<input class="journal-input" type="text" id="j-title" placeholder="e.g. For John\'s recovery…" value="' + esc(isEdit ? (entry.title || '') : '') + '" maxlength="120" /></div>' +
+        '<div class="journal-field"><label for="j-body">Prayer / Reflection</label>' +
+          '<textarea class="journal-textarea" id="j-body" placeholder="Write your prayer here…">' + esc(isEdit ? (entry.body || '') : '') + '</textarea></div>' +
+        '<div class="journal-field"><label for="j-refs">Scripture References <span>(comma-separated, optional)</span></label>' +
+          '<input class="journal-input" type="text" id="j-refs" placeholder="e.g. John 3:16, Psalm 23:1" value="' + esc(isEdit ? ((entry.refs || []).join(', ')) : '') + '" /></div>' +
+        '<div class="journal-field" id="j-tags-field"><label>Tags <span>(Enter or comma to add)</span></label></div>' +
+        '<div class="journal-form-actions">' +
+          '<button class="journal-btn" id="j-cancel" type="button">Cancel</button>' +
+          '<button class="journal-btn journal-btn--primary" id="j-save" type="button">' + (isEdit ? 'Save changes' : 'Save prayer') + '</button>' +
+        '</div>';
+
+      formEl.innerHTML = '';
+      formEl.appendChild(form);
+
+      var tagField = form.querySelector('#j-tags-field');
+      var tagWidget = buildTagInput(isEdit ? (entry.tags || []) : []);
+      tagField.appendChild(tagWidget);
+
+      form.querySelector('#j-cancel').addEventListener('click', hideForm);
+      form.querySelector('#j-save').addEventListener('click', saveEntry);
+      form.querySelector('#j-body').focus();
+    }
+
+    function hideForm() {
+      _editId = null;
+      _formTags = [];
+      document.getElementById('journal-form-container').innerHTML = '';
+    }
+
+    function saveEntry() {
+      var date    = (document.getElementById('j-date').value || todayStr()).trim();
+      var title   = document.getElementById('j-title').value.trim();
+      var body    = document.getElementById('j-body').value.trim();
+      var refsRaw = document.getElementById('j-refs').value.trim();
+      var refs    = refsRaw ? refsRaw.split(',').map(function (r) { return r.trim(); }).filter(Boolean) : [];
+      var tags    = _formTags.slice();
+
+      // Flush any in-progress tag input
+      var bare = document.getElementById('j-tag-input');
+      if (bare && bare.value.trim()) {
+        var t = bare.value.trim().toLowerCase().replace(/\s+/g, '-');
+        if (t && tags.indexOf(t) === -1) tags.push(t);
+      }
+
+      if (!body && !title) { alert('Please add a title or prayer text.'); return; }
+
+      var entries = load();
+      if (_editId) {
+        entries = entries.map(function (e) {
+          return e.id === _editId
+            ? Object.assign({}, e, { date: date, title: title, body: body, refs: refs, tags: tags, modified: Date.now() })
+            : e;
+        });
+      } else {
+        entries.unshift({ id: Date.now(), date: date, title: title, body: body, refs: refs, tags: tags, updates: [], created: Date.now() });
+      }
+      save(entries);
+      hideForm();
+      render();
+    }
+
+    /* ── Render tag filter row ── */
+    function renderTagFilters() {
+      var filterEl = document.getElementById('journal-tag-filters');
+      var tags = allTags();
+      if (!tags.length) { filterEl.innerHTML = ''; return; }
+
+      var html = '';
+      if (_tagFilter) {
+        html += '<button class="journal-filter-chip journal-filter-chip--clear" id="jf-clear">× Clear filter</button>';
+      }
+      tags.forEach(function (tag) {
+        var isActive = _tagFilter === tag;
+        var cat = tagCategory(tag);
+        var display = tagDisplay(tag);
+        var catPrefix = cat !== 'default' ? cat.slice(0,1).toUpperCase() + ' · ' : '';
+        html += '<button class="journal-filter-chip' + (isActive ? ' journal-filter-chip--active' : '') +
+          '" data-filter-tag="' + esc(tag) + '">' + esc(catPrefix + display) + '</button>';
+      });
+      filterEl.innerHTML = html;
+
+      filterEl.querySelectorAll('[data-filter-tag]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var tag = btn.dataset.filterTag;
+          _tagFilter = (_tagFilter === tag) ? null : tag;
+          render();
+        });
+      });
+      var clearBtn = filterEl.querySelector('#jf-clear');
+      if (clearBtn) clearBtn.addEventListener('click', function () { _tagFilter = null; render(); });
+    }
+
+    /* ── Main render ── */
+    function render() {
+      renderTagFilters();
+
+      var entries = load();
+      var listEl  = document.getElementById('journal-list');
+      var countEl = document.getElementById('journal-count');
+      var exportRow = document.getElementById('journal-export-row');
+
+      // Sort by date desc, created desc
+      entries.sort(function (a, b) {
+        if (b.date !== a.date) return b.date > a.date ? 1 : -1;
+        return (b.created || 0) - (a.created || 0);
+      });
+
+      // Filter by search
+      var q = _searchQ.toLowerCase();
+      var filtered = entries.filter(function (e) {
+        if (_tagFilter && (e.tags || []).indexOf(_tagFilter) === -1) return false;
+        if (!q) return true;
+        var haystack = [e.title, e.body, (e.tags || []).join(' '),
+          (e.refs || []).join(' '),
+          (e.updates || []).map(function (u) { return u.body || ''; }).join(' ')
+        ].join(' ').toLowerCase();
+        return haystack.includes(q);
+      });
+
+      countEl.textContent = filtered.length + ' of ' + entries.length + ' prayers';
+      exportRow.hidden = entries.length === 0;
+
+      if (!filtered.length) {
+        listEl.innerHTML = '<div class="journal-empty">' +
+          (entries.length ? 'No prayers match your filter.' : 'No prayers yet. Start by recording a prayer.') +
+          '</div>';
+        return;
+      }
+
+      listEl.innerHTML = '';
+      filtered.forEach(function (entry) {
+        listEl.appendChild(buildEntryCard(entry));
+      });
+
+      if (typeof wireRefLinks === 'function') wireRefLinks(listEl);
+    }
+
+    /* ── Build entry card ── */
+    function buildEntryCard(entry) {
+      var updates = entry.updates || [];
+      var hasUpdates = updates.length > 0;
+      var card = document.createElement('div');
+      card.className = 'journal-entry' + (hasUpdates ? ' journal-entry--has-updates' : '');
+      card.dataset.id = entry.id;
+
+      var preview = (entry.body || '').replace(/\n/g, ' ').slice(0, 80);
+      if ((entry.body || '').length > 80) preview += '…';
+
+      var tagsHtml = '';
+      if ((entry.tags || []).length) {
+        tagsHtml = '<div class="journal-entry-tags">' +
+          entry.tags.map(function (t) { return renderTagChip(t, false); }).join('') +
+          '</div>';
+      }
+
+      var updateBadge = hasUpdates
+        ? '<span class="journal-update-badge">' + updates.length + ' update' + (updates.length !== 1 ? 's' : '') + '</span>'
+        : '';
+
+      // Head
+      var head = document.createElement('div');
+      head.className = 'journal-entry__head';
+      head.innerHTML =
+        '<div class="journal-entry__meta">' +
+          '<div class="journal-entry__date">' + esc(formatDate(entry.date)) + '</div>' +
+          '<div class="journal-entry__title">' + esc(entry.title || 'Untitled') + '</div>' +
+          (preview ? '<div class="journal-entry__preview">' + esc(preview) + '</div>' : '') +
+          tagsHtml +
+        '</div>' +
+        '<div class="journal-entry__actions">' +
+          updateBadge +
+          '<div class="journal-entry__btns">' +
+            '<button class="journal-entry__btn" data-action="edit" type="button">Edit</button>' +
+            '<button class="journal-entry__btn journal-entry__btn--del" data-action="del" type="button">Delete</button>' +
+          '</div>' +
+        '</div>';
+
+      // Body: conversation thread
+      var body = document.createElement('div');
+      body.className = 'journal-entry__body';
+      body.appendChild(buildThread(entry));
+
+      // Toggle on head click
+      head.addEventListener('click', function (e) {
+        if (e.target.closest('[data-action]')) return;
+        if (e.target.closest('.journal-tag')) {
+          // Tag click → filter
+          var tag = e.target.closest('.journal-tag').dataset.tag;
+          if (tag) { _tagFilter = (_tagFilter === tag) ? null : tag; render(); return; }
+        }
+        body.classList.toggle('journal-entry__body--open');
+      });
+
+      head.querySelector('[data-action="edit"]').addEventListener('click', function () {
+        var all = load();
+        var e   = all.find(function (x) { return x.id === entry.id; });
+        if (e) showForm(e);
+      });
+      head.querySelector('[data-action="del"]').addEventListener('click', function () {
+        if (!confirm('Delete this prayer and all its updates?')) return;
+        save(load().filter(function (x) { return x.id !== entry.id; }));
+        render();
+      });
+
+      card.appendChild(head);
+      card.appendChild(body);
+      return card;
+    }
+
+    /* ── Build conversation thread ── */
+    function buildThread(entry) {
+      var updates = entry.updates || [];
+      var wrap = document.createElement('div');
+      wrap.className = 'journal-thread';
+
+      // Original prayer
+      var origItem = document.createElement('div');
+      origItem.className = 'journal-thread-item journal-thread-item--original';
+      var refsHtml = '';
+      if ((entry.refs || []).length) {
+        refsHtml = '<div class="journal-thread-refs">' +
+          entry.refs.map(function (r) {
+            return '<a class="journal-thread-ref ref" data-ref="' + esc(r) + '" href="' +
+              esc(READ_URL + '?ref=' + encodeURIComponent(r)) + '">' + esc(r) + '</a>';
+          }).join('') + '</div>';
+      }
+      origItem.innerHTML =
+        '<div class="journal-thread-header">' +
+          '<span class="journal-thread-label">Original Prayer</span>' +
+          '<span class="journal-thread-date">' + esc(formatDateShort(entry.date)) + '</span>' +
+        '</div>' +
+        '<p class="journal-thread-text">' + esc(entry.body || '') + '</p>' +
+        refsHtml;
+      wrap.appendChild(origItem);
+
+      // Update items
+      updates.forEach(function (upd) {
+        wrap.appendChild(buildUpdateItem(entry.id, upd));
+      });
+
+      // Add update area
+      var updateArea = document.createElement('div');
+      updateArea.className = 'journal-update-area';
+      var addBtn = document.createElement('button');
+      addBtn.className = 'journal-add-update-btn';
+      addBtn.type = 'button';
+      addBtn.textContent = '+ Add update';
+
+      var updateFormEl = document.createElement('div');
+      updateFormEl.className = 'journal-update-form';
+      updateFormEl.setAttribute('hidden', '');
+      updateFormEl.innerHTML =
+        '<input class="journal-input" type="date" id="jup-date-' + entry.id + '" value="' + esc(todayStr()) + '" style="margin-bottom:.4rem" />' +
+        '<textarea class="journal-textarea" id="jup-body-' + entry.id + '" placeholder="What\'s the update? (answered prayer, progress, new request…)"></textarea>' +
+        '<div class="journal-form-actions">' +
+          '<button class="journal-btn" id="jup-cancel-' + entry.id + '" type="button">Cancel</button>' +
+          '<button class="journal-btn journal-btn--primary" id="jup-save-' + entry.id + '" type="button">Save update</button>' +
+        '</div>';
+
+      addBtn.addEventListener('click', function () {
+        updateFormEl.removeAttribute('hidden');
+        addBtn.setAttribute('hidden', '');
+        updateFormEl.querySelector('#jup-body-' + entry.id).focus();
+      });
+      updateFormEl.querySelector('#jup-cancel-' + entry.id).addEventListener('click', function () {
+        updateFormEl.setAttribute('hidden', '');
+        addBtn.removeAttribute('hidden');
+      });
+      updateFormEl.querySelector('#jup-save-' + entry.id).addEventListener('click', function () {
+        var date = (updateFormEl.querySelector('#jup-date-' + entry.id).value || todayStr()).trim();
+        var body = updateFormEl.querySelector('#jup-body-' + entry.id).value.trim();
+        if (!body) { alert('Please write an update.'); return; }
+        var all = load();
+        var idx = all.findIndex(function (x) { return x.id === entry.id; });
+        if (idx === -1) return;
+        if (!all[idx].updates) all[idx].updates = [];
+        all[idx].updates.push({ id: Date.now(), date: date, body: body, created: Date.now() });
+        save(all);
+        render();
+      });
+
+      updateArea.appendChild(addBtn);
+      updateArea.appendChild(updateFormEl);
+      wrap.appendChild(updateArea);
+      return wrap;
+    }
+
+    /* ── Build single update item ── */
+    function buildUpdateItem(entryId, upd) {
+      var item = document.createElement('div');
+      item.className = 'journal-thread-item';
+      item.innerHTML =
+        '<div class="journal-thread-header">' +
+          '<span class="journal-thread-label" style="color:var(--color-accent)">Update</span>' +
+          '<span class="journal-thread-date">' + esc(formatDateShort(upd.date)) + '</span>' +
+          '<button class="journal-thread-del" title="Delete update" type="button">×</button>' +
+        '</div>' +
+        '<p class="journal-thread-text">' + esc(upd.body || '') + '</p>';
+
+      item.querySelector('.journal-thread-del').addEventListener('click', function () {
+        if (!confirm('Delete this update?')) return;
+        var all = load();
+        var entry = all.find(function (x) { return x.id === entryId; });
+        if (!entry) return;
+        entry.updates = (entry.updates || []).filter(function (u) { return u.id !== upd.id; });
+        save(all);
+        render();
+      });
+      return item;
+    }
+
+    /* ── Export / Import ── */
+    document.getElementById('journal-export-btn').addEventListener('click', function () {
+      var blob = new Blob([JSON.stringify(load(), null, 2)], { type: 'application/json' });
+      var url  = URL.createObjectURL(blob);
+      var a    = document.createElement('a');
+      a.href   = url;
+      a.download = 'bsw-journal-' + todayStr() + '.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('journal-import-btn').addEventListener('click', function () {
+      document.getElementById('journal-import-file').click();
+    });
+
+    document.getElementById('journal-import-file').addEventListener('change', function (e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function (ev) {
+        var imported;
+        try { imported = JSON.parse(ev.target.result); } catch (err) { alert('Invalid JSON file.'); return; }
+        if (!Array.isArray(imported)) { alert('File does not contain a journal array.'); return; }
+        var existing   = load();
+        var existingIds = {};
+        existing.forEach(function (x) { existingIds[x.id] = true; });
+        var added = imported.filter(function (x) { return x.id && !existingIds[x.id]; });
+        save(existing.concat(added));
+        alert('Imported ' + added.length + ' entries. ' + (imported.length - added.length) + ' duplicates skipped.');
+        render();
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    });
+
+    /* ── Search ── */
+    document.getElementById('journal-search').addEventListener('input', function () {
+      _searchQ = this.value.trim();
+      render();
+    });
+
+    /* ── New prayer button ── */
+    document.getElementById('journal-new-btn').addEventListener('click', function () {
+      showForm(null);
+      document.getElementById('journal-form-container').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    /* ── Init ── */
+    render();
+  }());
+  </script>
+</body>
+</html>

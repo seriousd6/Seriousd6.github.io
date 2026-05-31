@@ -5,7 +5,10 @@
     "title": "Apostles' Creed",
     "year": 200,
     "type": "creed",
-    "href": "library/apostles-creed/"
+    "tradition": "ecumenical",
+    "era": "patristic",
+    "totalSections": 1,
+    "desc": "The oldest summary of the Christian faith, used universally in worship and catechesis."
   },
   {
     "id": "nicene-creed",
@@ -13,71 +16,21 @@
     "title": "Nicene Creed",
     "year": 381,
     "type": "creed",
-    "href": "library/nicene-creed/"
+    "tradition": "ecumenical",
+    "era": "patristic",
+    "totalSections": 1,
+    "desc": "The ecumenical creed defining Trinitarian orthodoxy, formulated at Nicaea and Constantinople."
   },
   {
     "id": "athanasian-creed",
-    "abbrev": "Ath",
+    "abbrev": "AthC",
     "title": "Athanasian Creed",
     "year": 500,
     "type": "creed",
-    "href": "library/athanasian-creed/"
-  },
-  {
-    "id": "heidelberg-catechism",
-    "abbrev": "HC",
-    "title": "Heidelberg Catechism",
-    "year": 1563,
-    "type": "catechism",
-    "href": "library/heidelberg-catechism/"
-  },
-  {
-    "id": "belgic-confession",
-    "abbrev": "Belg",
-    "title": "Belgic Confession",
-    "year": 1561,
-    "type": "confession",
-    "href": "library/belgic-confession/"
-  },
-  {
-    "id": "canons-of-dort",
-    "abbrev": "CoD",
-    "title": "Canons of Dort",
-    "year": 1619,
-    "type": "canons",
-    "href": "library/canons-of-dort/"
-  },
-  {
-    "id": "westminster-confession",
-    "abbrev": "WCF",
-    "title": "Westminster Confession of Faith",
-    "year": 1646,
-    "type": "confession",
-    "href": "library/westminster-confession/"
-  },
-  {
-    "id": "westminster-shorter-catechism",
-    "abbrev": "WSC",
-    "title": "Westminster Shorter Catechism",
-    "year": 1647,
-    "type": "catechism",
-    "href": "library/westminster-shorter-catechism/"
-  },
-  {
-    "id": "westminster-larger-catechism",
-    "abbrev": "WLC",
-    "title": "Westminster Larger Catechism",
-    "year": 1648,
-    "type": "catechism",
-    "href": "library/westminster-larger-catechism/"
-  },
-  {
-    "id": "london-baptist-confession",
-    "abbrev": "LBC",
-    "title": "Second London Baptist Confession of Faith",
-    "year": 1689,
-    "type": "confession",
-    "href": "library/london-baptist-confession/"
+    "tradition": "ecumenical",
+    "era": "patristic",
+    "totalSections": 1,
+    "desc": "A detailed exposition of the Trinity and the two natures of Christ."
   },
   {
     "id": "augsburg-confession",
@@ -85,15 +38,101 @@
     "title": "Augsburg Confession",
     "year": 1530,
     "type": "confession",
-    "href": "library/augsburg-confession/"
+    "tradition": "lutheran",
+    "era": "reformation",
+    "author": "Philip Melanchthon",
+    "totalSections": 28,
+    "desc": "28 articles presented to Emperor Charles V — the founding document of Lutheran theology."
+  },
+  {
+    "id": "belgic-confession",
+    "abbrev": "Belg",
+    "title": "Belgic Confession",
+    "year": 1561,
+    "type": "confession",
+    "tradition": "reformed",
+    "era": "reformation",
+    "author": "Guido de Brès",
+    "totalSections": 37,
+    "desc": "37 articles affirming Reformed doctrine, written by Guido de Brès against Rome and Anabaptism."
+  },
+  {
+    "id": "heidelberg-catechism",
+    "abbrev": "HC",
+    "title": "Heidelberg Catechism",
+    "year": 1563,
+    "type": "catechism",
+    "tradition": "reformed",
+    "era": "reformation",
+    "author": "Zacharias Ursinus",
+    "totalSections": 52,
+    "desc": "129 Q&As organized around comfort in life and death, structured in 52 Lord's Days."
   },
   {
     "id": "39-articles",
     "abbrev": "39A",
-    "title": "Thirty-Nine Articles of Religion",
+    "title": "Thirty-Nine Articles",
     "year": 1571,
     "type": "confession",
-    "href": "library/39-articles/"
+    "tradition": "anglican",
+    "era": "reformation",
+    "totalSections": 39,
+    "desc": "Doctrinal standard of the Church of England, combining Reformed theology with episcopal polity."
+  },
+  {
+    "id": "canons-of-dort",
+    "abbrev": "CoD",
+    "title": "Canons of Dort",
+    "year": 1619,
+    "type": "canons",
+    "tradition": "reformed",
+    "era": "reformation",
+    "totalSections": 4,
+    "desc": "Five heads of doctrine affirming particular grace against the Arminian Remonstrance (TULIP)."
+  },
+  {
+    "id": "westminster-confession",
+    "abbrev": "WCF",
+    "title": "Westminster Confession of Faith",
+    "year": 1646,
+    "type": "confession",
+    "tradition": "reformed",
+    "era": "post-reformation",
+    "totalSections": 33,
+    "desc": "33 chapters of systematic Reformed theology — the most comprehensive English-language confession."
+  },
+  {
+    "id": "westminster-shorter-catechism",
+    "abbrev": "WSC",
+    "title": "Westminster Shorter Catechism",
+    "year": 1647,
+    "type": "catechism",
+    "tradition": "reformed",
+    "era": "post-reformation",
+    "totalSections": 107,
+    "desc": "107 Q&As for catechesis, opening with \"What is the chief end of man?\""
+  },
+  {
+    "id": "westminster-larger-catechism",
+    "abbrev": "WLC",
+    "title": "Westminster Larger Catechism",
+    "year": 1648,
+    "type": "catechism",
+    "tradition": "reformed",
+    "era": "post-reformation",
+    "totalSections": 196,
+    "desc": "196 Q&As with full exposition of the Ten Commandments and Lord's Prayer."
+  },
+  {
+    "id": "london-baptist-confession",
+    "abbrev": "LBC",
+    "title": "Second London Baptist Confession",
+    "year": 1689,
+    "type": "confession",
+    "tradition": "baptist",
+    "era": "post-reformation",
+    "totalSections": 32,
+    "desc": "32 chapters following the WCF, adapted for Particular Baptist doctrine of believers' baptism."
   },
   {
     "id": "ignatius",
@@ -101,7 +140,11 @@
     "title": "Ignatius of Antioch",
     "year": 108,
     "type": "father",
-    "href": "library/ignatius/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Ignatius of Antioch",
+    "totalSections": 4,
+    "desc": "Apostolic Father on Christ's full divinity, church unity around the bishop, and martyrdom."
   },
   {
     "id": "justin-martyr",
@@ -109,7 +152,11 @@
     "title": "Justin Martyr",
     "year": 165,
     "type": "father",
-    "href": "library/justin-martyr/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Justin Martyr",
+    "totalSections": 4,
+    "desc": "Philosopher-apologist on the Logos, fulfilment of prophecy, and Christian worship."
   },
   {
     "id": "irenaeus",
@@ -117,7 +164,11 @@
     "title": "Irenaeus of Lyons",
     "year": 202,
     "type": "father",
-    "href": "library/irenaeus/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Irenaeus of Lyons",
+    "totalSections": 4,
+    "desc": "On the Rule of Faith, apostolic tradition, and recapitulation — Christ as the new Adam."
   },
   {
     "id": "tertullian",
@@ -125,7 +176,11 @@
     "title": "Tertullian",
     "year": 220,
     "type": "father",
-    "href": "library/tertullian/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Tertullian",
+    "totalSections": 4,
+    "desc": "First major Latin theologian; coined trinitas and established Trinitarian vocabulary."
   },
   {
     "id": "athanasius",
@@ -133,23 +188,11 @@
     "title": "Athanasius of Alexandria",
     "year": 373,
     "type": "father",
-    "href": "library/athanasius/"
-  },
-  {
-    "id": "chrysostom",
-    "abbrev": "Chrys",
-    "title": "John Chrysostom",
-    "year": 407,
-    "type": "father",
-    "href": "library/chrysostom/"
-  },
-  {
-    "id": "augustine",
-    "abbrev": "Aug",
-    "title": "Augustine of Hippo",
-    "year": 430,
-    "type": "father",
-    "href": "library/augustine/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Athanasius of Alexandria",
+    "totalSections": 4,
+    "desc": "Champion of Nicene orthodoxy; on the Incarnation and salvation by union with Christ."
   },
   {
     "id": "gregory-nazianzus",
@@ -157,6 +200,34 @@
     "title": "Gregory of Nazianzus",
     "year": 390,
     "type": "father",
-    "href": "library/gregory-nazianzus/"
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Gregory of Nazianzus",
+    "totalSections": 4,
+    "desc": "\"The Theologian\" on the Trinity, the full deity of the Spirit, and Christ's two natures."
+  },
+  {
+    "id": "chrysostom",
+    "abbrev": "Chrys",
+    "title": "John Chrysostom",
+    "year": 407,
+    "type": "father",
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "John Chrysostom",
+    "totalSections": 4,
+    "desc": "The greatest ancient preacher on Scripture, grace, prayer, and care for the poor."
+  },
+  {
+    "id": "augustine",
+    "abbrev": "Aug",
+    "title": "Augustine of Hippo",
+    "year": 430,
+    "type": "father",
+    "tradition": "patristic",
+    "era": "patristic",
+    "author": "Augustine of Hippo",
+    "totalSections": 5,
+    "desc": "On the restless heart, sovereign grace, original sin, the Trinity, and the two cities."
   }
 ]

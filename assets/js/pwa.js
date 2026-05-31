@@ -1,0 +1,121 @@
+/* pwa.js — Service Worker registration, PWA manifest injection, onboarding, SW update toast */
+'use strict';
+
+import { SW_URL, MANIFEST_URL, SITE_ROOT, READER_URL, escHtml, metaBooks, metaVersions } from './core.js';
+
+export function _initOnboarding() {
+  if (localStorage.getItem('bsw_onboarded')) return;
+  var overlay = document.createElement('div');
+  overlay.className = 'bsw-onboard-overlay';
+  var readerUrl  = READER_URL;
+  var vsUrl      = new URL('../../verse-study/', import.meta.url).href;
+  var libraryUrl = new URL('../../library/', import.meta.url).href;
+  var memUrl     = new URL('../../memorize/', import.meta.url).href;
+  overlay.innerHTML =
+    '<div class="bsw-onboard-card">' +
+      '<h2 class="bsw-onboard-title">Welcome to Bible Study</h2>' +
+      '<p class="bsw-onboard-sub">A personal offline Bible tool — no account needed, everything saved in your browser.</p>' +
+      '<div class="bsw-onboard-features">' +
+        '<a class="bsw-onboard-feature" href="' + escHtml(readerUrl) + '">' +
+          '<span class="bsw-onboard-icon">&#x1F4D6;</span>' +
+          '<div><strong>Bible Reader</strong><p>Any passage across multiple translations, with cross-references and commentary.</p></div>' +
+        '</a>' +
+        '<a class="bsw-onboard-feature" href="' + escHtml(vsUrl) + '">' +
+          '<span class="bsw-onboard-icon">&#x1F50D;</span>' +
+          '<div><strong>Verse Study</strong><p>Deep-dive any verse: Strong\'s lexicon, interlinear, parallel passages, and more.</p></div>' +
+        '</a>' +
+        '<a class="bsw-onboard-feature" href="' + escHtml(libraryUrl) + '">' +
+          '<span class="bsw-onboard-icon">&#x1F4DA;</span>' +
+          '<div><strong>Library</strong><p>Historic confessions and catechisms — Westminster, Heidelberg, Nicene Creed, and more.</p></div>' +
+        '</a>' +
+        '<a class="bsw-onboard-feature" href="' + escHtml(memUrl) + '">' +
+          '<span class="bsw-onboard-icon">&#x1F9E0;</span>' +
+          '<div><strong>Scripture Memory</strong><p>Spaced-repetition flashcards to memorize Bible verses at your own pace.</p></div>' +
+        '</a>' +
+      '</div>' +
+      '<div class="bsw-onboard-actions">' +
+        '<button class="bsw-onboard-btn" id="bsw-onboard-start">Get started</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(overlay);
+  var dismiss = function () {
+    localStorage.setItem('bsw_onboarded', '1');
+    overlay.remove();
+  };
+  overlay.querySelector('#bsw-onboard-start').addEventListener('click', dismiss);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) dismiss(); });
+  document.addEventListener('keydown', function onKey(e) {
+    if (e.key === 'Escape') { dismiss(); document.removeEventListener('keydown', onKey); }
+  });
+}
+
+export function initPWA() {
+  if (!document.querySelector('link[rel="manifest"]')) {
+    var link = document.createElement('link');
+    link.rel  = 'manifest';
+    link.href = MANIFEST_URL;
+    document.head.appendChild(link);
+  }
+  if (!document.querySelector('meta[name="theme-color"]')) {
+    var meta = document.createElement('meta');
+    meta.name    = 'theme-color';
+    meta.content = '#5c3d1e';
+    document.head.appendChild(meta);
+  }
+
+  if (!('serviceWorker' in navigator)) return;
+
+  navigator.serviceWorker.register(SW_URL).then(function (reg) {
+    function triggerPrecache(sw) {
+      if (!sw || !metaBooks || !metaVersions) return;
+      sw.postMessage({
+        type:     'PRECACHE_BIBLE',
+        base:     SITE_ROOT,
+        books:    metaBooks.map(function (b) { return b.id; }),
+        versions: metaVersions.map(function (v) { return v.id; })
+      });
+    }
+
+    if (reg.active) {
+      triggerPrecache(reg.active);
+    } else {
+      navigator.serviceWorker.ready.then(function (r) { triggerPrecache(r.active); });
+    }
+
+    reg.addEventListener('updatefound', function () {
+      var incoming = reg.installing;
+      incoming.addEventListener('statechange', function () {
+        if (incoming.state === 'installed' && navigator.serviceWorker.controller) {
+          _showSWUpdateToast(reg);
+        }
+      });
+    });
+  }).catch(function (err) {
+    console.warn('[BibleUI] SW registration failed:', err);
+  });
+}
+
+function _showSWUpdateToast(reg) {
+  var toast = document.getElementById('bsw-sw-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id        = 'bsw-sw-toast';
+    toast.className = 'bsw-sw-toast';
+    toast.innerHTML =
+      '<span class="bsw-sw-toast__msg">A new version is available.</span>' +
+      '<button class="bsw-sw-toast__btn" id="bsw-sw-reload">Reload</button>' +
+      '<button class="bsw-sw-toast__dismiss" aria-label="Dismiss">&#x2715;</button>';
+    document.body.appendChild(toast);
+    toast.querySelector('.bsw-sw-toast__dismiss').addEventListener('click', function () {
+      toast.hidden = true;
+    });
+  }
+  toast.hidden = false;
+  toast.querySelector('#bsw-sw-reload').onclick = function () {
+    if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      window.location.reload();
+    });
+  };
+  setTimeout(function () { if (toast) toast.hidden = true; }, 30000);
+}

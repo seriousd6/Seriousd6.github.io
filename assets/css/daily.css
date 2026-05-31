@@ -110,7 +110,7 @@
 
 .daily-passage-chip:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@
   gap: .4rem;
   padding: .45rem 1rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-radius: 6px;
   font-size: .85rem;
   font-weight: 600;
@@ -131,7 +131,7 @@
 .daily-read-all:hover {
   opacity: .85;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-on-primary);
 }
 
 .daily-plan-empty {
@@ -239,7 +239,7 @@
   border-radius: 4px;
   margin-left: .4rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   vertical-align: middle;
   letter-spacing: .04em;
 }
@@ -252,7 +252,7 @@
   gap: .75rem;
   padding: .6rem 1rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-radius: 8px;
   font-size: .85rem;
   margin-bottom: 1rem;
@@ -260,10 +260,10 @@
 
 .daily-notif-banner button {
   padding: .25rem .7rem;
-  background: rgba(255,255,255,.2);
-  border: 1px solid rgba(255,255,255,.4);
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.3);
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-on-primary);
   font-size: .82rem;
   cursor: pointer;
   white-space: nowrap;
@@ -280,6 +280,70 @@
   padding: 0 .3rem !important;
   opacity: .7;
 }
+
+/* ── Plan progress bar (C3a) ────────────────────────────────────────────────── */
+.daily-plan-progress {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .6rem;
+}
+.daily-plan-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-border, #e0d5c4);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.daily-plan-progress-fill {
+  height: 100%;
+  background: var(--color-primary, #5c3d1e);
+  border-radius: 3px;
+  transition: width .4s ease;
+}
+.daily-plan-progress-text {
+  font-size: .72rem;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Reading Streak widget (N1) ─────────────────────────────────────────────── */
+.daily-streak-body { padding: .9rem 1.1rem; }
+.daily-streak-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.daily-streak-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+.daily-streak-stat--muted .daily-streak-num { color: var(--color-muted, #888); }
+.daily-streak-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary, #5c3d1e);
+  line-height: 1;
+}
+.daily-streak-label {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--color-muted, #888);
+  margin-top: .2rem;
+}
+.daily-streak-cta {
+  margin-left: auto;
+  font-size: .85rem;
+  color: var(--color-primary, #5c3d1e);
+  font-weight: 600;
+  text-decoration: none;
+}
+.daily-streak-cta:hover { text-decoration: underline; }
 
 /* ── Loading state ──────────────────────────────────────────────────────────── */
 .daily-loading {
@@ -314,4 +378,52 @@
   .daily-select { max-width: 100%; width: 100%; }
   .daily-passages { gap: .3rem; }
   .daily-passage-chip { font-size: .78rem; }
+}
+
+/* ── Dark-mode button/banner overrides ──────────────────────────────────── */
+[data-theme="dark"] .daily-passage-chip:hover {
+  background: var(--color-btn-bg, #3a2d18);
+  color: var(--color-btn-text, #e8c87a);
+}
+[data-theme="dark"] .daily-read-all {
+  background: var(--color-btn-bg, #3a2d18);
+  color: var(--color-btn-text, #e8c87a);
+  border: 1px solid var(--color-primary);
+}
+[data-theme="dark"] .daily-read-all:hover {
+  opacity: 1;
+  background: var(--color-btn-bg-hover, #4a3a22);
+  color: var(--color-btn-text, #e8c87a);
+}
+[data-theme="dark"] .daily-period-badge {
+  background: var(--color-btn-bg, #3a2d18);
+  color: var(--color-btn-text, #e8c87a);
+}
+[data-theme="dark"] .daily-notif-banner {
+  background: #243020;
+  color: var(--color-text, #e8dfc8);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .daily-passage-chip:hover {
+    background: var(--color-btn-bg, #3a2d18);
+    color: var(--color-btn-text, #e8c87a);
+  }
+  :root:not([data-theme="light"]) .daily-read-all {
+    background: var(--color-btn-bg, #3a2d18);
+    color: var(--color-btn-text, #e8c87a);
+    border: 1px solid var(--color-primary);
+  }
+  :root:not([data-theme="light"]) .daily-read-all:hover {
+    opacity: 1;
+    background: var(--color-btn-bg-hover, #4a3a22);
+    color: var(--color-btn-text, #e8c87a);
+  }
+  :root:not([data-theme="light"]) .daily-period-badge {
+    background: var(--color-btn-bg, #3a2d18);
+    color: var(--color-btn-text, #e8c87a);
+  }
+  :root:not([data-theme="light"]) .daily-notif-banner {
+    background: #243020;
+    color: var(--color-text, #e8dfc8);
+  }
 }

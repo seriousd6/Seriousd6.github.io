@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Interactive biblical timeline from Creation to the Consummation — explore every era of redemptive history." />
+  <title>Biblical Timeline — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../assets/css/timeline.css" />
+</head>
+<body>
+
+  <main>
+    <div class="container tl2-page">
+
+      <div class="tl2-header">
+        <h1 class="tl2-title">Biblical Timeline</h1>
+        <p class="tl2-sub">Select an era · then an event · to read details</p>
+      </div>
+
+      <!-- 3-column layout; id="timeline-container" keeps app.js detection intact -->
+      <div class="tl2-layout" id="timeline-container">
+
+        <!-- Column 1: Era spine (always visible) -->
+        <div class="tl2-col tl2-col--eras">
+          <div class="tl2-col-label">Era</div>
+          <div class="tl2-spine-wrap" id="tl2-eras-spine">
+            <!-- era nodes injected by JS -->
+          </div>
+        </div>
+
+        <!-- Column 2: Sub-event spine -->
+        <div class="tl2-col tl2-col--events">
+          <div class="tl2-col-label" id="tl2-events-label">Events</div>
+          <div class="tl2-spine-wrap" id="tl2-events-spine">
+            <p class="tl2-placeholder">← Select an era</p>
+          </div>
+        </div>
+
+        <!-- Column 3: Detail panel -->
+        <div class="tl2-col tl2-col--detail">
+          <div class="tl2-col-label">Detail</div>
+          <div id="tl-detail">
+            <p class="tl2-placeholder">← Select an event</p>
+          </div>
+        </div>
+
+      </div><!-- /.tl2-layout -->
+    </div><!-- /.container -->
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
+</body>
+</html>
