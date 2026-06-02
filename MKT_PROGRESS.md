@@ -1,15 +1,15 @@
 # MKT Translation Progress
 
-**Last updated:** 2026-06-01
+**Last updated:** 2026-06-02 (1SA-6 complete — 1 Samuel 31 written)
 **Source of truth:** `data/translation/draft/{literal,mediating,thought}/{book}.json`
 
 ## Summary
 
 | | Books | Chapters | Verses |
 |-|-------|----------|--------|
-| Complete | 16 | 164 | 5,328 |
-| Partial | 2 | 30 / 52 | 1,287 / 2,158 |
-| Not started | 47 | — | — |
+| Complete | 23 | 350 | 11,008 |
+| Partial | 3 | 55 / 83 | 1,876 / ~3,000 |
+| Not started | 42 | — | — |
 
 ---
 
@@ -18,14 +18,14 @@
 | Book | Chs Done | Chs Total | Verses Done | Status |
 |------|----------|-----------|-------------|--------|
 | Genesis | 50 | 50 | 1,533 | Complete — mkt-genesis-1-10, 11-20, 21-25, 26-30, 31-36, 37-43, 44-50 |
-| Exodus | — | 40 | — | Not started |
-| Leviticus | — | 27 | — | Not started |
-| Numbers | — | 36 | — | Not started |
-| Deuteronomy | — | 34 | — | Not started |
-| Joshua | — | 24 | — | Not started |
-| Judges | — | 21 | — | Not started |
-| Ruth | — | 4 | — | Not started |
-| 1 Samuel | — | 31 | — | Not started |
+| Exodus | 40 | 40 | 1,213 | Complete — mkt-exodus-1-6, 7-12, 13-18, 19-24, 25-30, 31-36, 37-40 |
+| Leviticus | 27 | 27 | 859 | Complete — mkt-leviticus-1-6, 7-12, 13-18, 19-24, 25-27 |
+| Numbers | 36 | 36 | 1,288 | Complete — mkt-numbers-1-6, 7-12, 13-18, 19-24, 25-30, 31-36 |
+| Deuteronomy | 34 | 34 | 959 | Complete — mkt-deuteronomy-1-6, 7-12, 13-18, 19-24, 25-30, 31-34 |
+| Joshua | 24 | 24 | 658 | Complete — mkt-joshua-1-6, 7-12, 13-18, 19-24 |
+| Judges | 21 | 21 | 618 | Complete — mkt-judges-1-6, 7-12, 13-18, 19-21 |
+| Ruth | 4 | 4 | 85 | Complete — mkt-ruth-1-4 |
+| 1 Samuel | 25 | 31 | 589 | Partial — chs 1–12, 19–31 (mkt-1samuel-1-6, 7-12, 13-18[wip], 19-24, 25-30, 31-31) |
 | 2 Samuel | — | 24 | — | Not started |
 | 1 Kings | — | 21 | — | Not started |
 | 2 Kings | — | 25 | — | Not started |
@@ -131,6 +131,44 @@
 | `mkt-phase3.py` | Philippians, Colossians |
 | `mkt-phase4.py` | Galatians, Ephesians |
 | `mkt-acts-11-15.py` | Acts 11–15 |
+| `mkt-exodus-1-6.py` | Exodus 1–6 |
+| `mkt-exodus-7-12.py` | Exodus 7–12 |
+| `mkt-exodus-13-18.py` | Exodus 13–18 |
+| `mkt-exodus-19-24.py` | Exodus 19–24 |
+| `mkt-exodus-25-30.py` | Exodus 25–30 |
+| `mkt-exodus-31-36.py` | Exodus 31–36 |
+| `mkt-exodus-37-40.py` | Exodus 37–40 |
+| `mkt-leviticus-1-6.py` | Leviticus 1–6 |
+| `mkt-leviticus-7-12.py` | Leviticus 7–12 |
+| `mkt-leviticus-13-18.py` | Leviticus 13–18 |
+| `mkt-leviticus-19-24.py` | Leviticus 19–24 |
+| `mkt-leviticus-25-27.py` | Leviticus 25–27 |
+| `mkt-numbers-1-6.py` | Numbers 1–6 |
+| `mkt-numbers-7-12.py` | Numbers 7–12 |
+| `mkt-numbers-25-30.py` | Numbers 25–30 |
+| `mkt-numbers-13-18.py` | Numbers 13–18 |
+| `mkt-numbers-19-24.py` | Numbers 19–24 |
+| `mkt-numbers-31-36.py` | Numbers 31–36 |
+| `mkt-deuteronomy-1-6.py` | Deuteronomy 1–6 |
+| `mkt-deuteronomy-7-12.py` | Deuteronomy 7–12 |
+| `mkt-deuteronomy-13-18.py` | Deuteronomy 13–18 |
+| `mkt-deuteronomy-19-24.py` | Deuteronomy 19–24 |
+| `mkt-deuteronomy-25-30.py` | Deuteronomy 25–30 |
+| `mkt-deuteronomy-31-34.py` | Deuteronomy 31–34 |
+| `mkt-joshua-1-6.py` | Joshua 1–6 |
+| `mkt-joshua-7-12.py` | Joshua 7–12 |
+| `mkt-joshua-13-18.py` | Joshua 13–18 |
+| `mkt-joshua-19-24.py` | Joshua 19–24 |
+| `mkt-judges-1-6.py` | Judges 1–6 |
+| `mkt-judges-7-12.py` | Judges 7–12 |
+| `mkt-judges-19-21.py` | Judges 19–21 |
+| `mkt-judges-13-18.py` | Judges 13–18 |
+| `mkt-ruth-1-4.py` | Ruth 1–4 |
+| `mkt-1samuel-1-6.py` | 1 Samuel 1–6 |
+| `mkt-1samuel-7-12.py` | 1 Samuel 7–12 |
+| `mkt-1samuel-19-24.py` | 1 Samuel 19–24 |
+| `mkt-1samuel-25-30.py` | 1 Samuel 25–30 |
+| `mkt-1samuel-31-31.py` | 1 Samuel 31 |
 
 All remaining chapters are covered by Work Queue entries below. See `MKT_STATIC_SCRIPT_GUIDE.md` for how to write and run each script.
 
@@ -144,46 +182,46 @@ Each unit is pre-sized to ≤ 6 chapters / ≤ 250 verses. Do not expand beyond 
 
 | ID | Book | Chapters | Script to write | Verses | Status |
 |----|------|----------|-----------------|--------|--------|
-| EXO-1 | Exodus | 1–6 | `mkt-exodus-1-6.py` | 153 | not started |
-| EXO-2 | Exodus | 7–12 | `mkt-exodus-7-12.py` | 182 | not started |
-| EXO-3 | Exodus | 13–18 | `mkt-exodus-13-18.py` | 159 | not started |
-| EXO-4 | Exodus | 19–24 | `mkt-exodus-19-24.py` | 169 | not started |
-| EXO-5 | Exodus | 25–30 | `mkt-exodus-25-30.py` | 225 | not started |
-| EXO-6 | Exodus | 31–36 | `mkt-exodus-31-36.py` | 184 | not started |
-| EXO-7 | Exodus | 37–40 | `mkt-exodus-37-40.py` | 141 | not started |
-| LEV-1 | Leviticus | 1–6 | `mkt-leviticus-1-6.py` | 134 | not started |
-| LEV-2 | Leviticus | 7–12 | `mkt-leviticus-7-12.py` | 173 | not started |
-| LEV-3 | Leviticus | 13–18 | `mkt-leviticus-13-18.py` | 229 | not started |
-| LEV-4 | Leviticus | 19–24 | `mkt-leviticus-19-24.py` | 188 | not started |
-| LEV-5 | Leviticus | 25–27 | `mkt-leviticus-25-27.py` | 135 | not started |
-| NUM-1 | Numbers | 1–6 | `mkt-numbers-1-6.py` | 246 | not started |
-| NUM-2 | Numbers | 7–12 | `mkt-numbers-7-12.py` | 225 | not started |
-| NUM-3 | Numbers | 13–18 | `mkt-numbers-13-18.py` | 214 | not started |
-| NUM-4 | Numbers | 19–24 | `mkt-numbers-19-24.py` | 182 | not started |
-| NUM-5 | Numbers | 25–30 | `mkt-numbers-25-30.py` | 193 | not started |
-| NUM-6 | Numbers | 31–36 | `mkt-numbers-31-36.py` | 228 | not started |
-| DEU-1 | Deuteronomy | 1–6 | `mkt-deuteronomy-1-6.py` | 219 | not started |
-| DEU-2 | Deuteronomy | 7–12 | `mkt-deuteronomy-7-12.py` | 161 | not started |
-| DEU-3 | Deuteronomy | 13–18 | `mkt-deuteronomy-13-18.py` | 134 | not started |
-| DEU-4 | Deuteronomy | 19–24 | `mkt-deuteronomy-19-24.py` | 141 | not started |
-| DEU-5 | Deuteronomy | 25–30 | `mkt-deuteronomy-25-30.py` | 181 | not started |
-| DEU-6 | Deuteronomy | 31–34 | `mkt-deuteronomy-31-34.py` | 123 | not started |
-| JOS-1 | Joshua | 1–6 | `mkt-joshua-1-6.py` | 125 | not started |
-| JOS-2 | Joshua | 7–12 | `mkt-joshua-7-12.py` | 178 | not started |
-| JOS-3 | Joshua | 13–18 | `mkt-joshua-13-18.py` | 167 | not started |
-| JOS-4 | Joshua | 19–24 | `mkt-joshua-19-24.py` | 188 | not started |
-| JDG-1 | Judges | 1–6 | `mkt-judges-1-6.py` | 185 | not started |
-| JDG-2 | Judges | 7–12 | `mkt-judges-7-12.py` | 190 | not started |
-| JDG-3 | Judges | 13–18 | `mkt-judges-13-18.py` | 140 | not started |
-| JDG-4 | Judges | 19–21 | `mkt-judges-19-21.py` | 103 | not started |
-| RUT-1 | Ruth | 1–4 | `mkt-ruth-1-4.py` | 85 | not started |
-| 1SA-1 | 1 Samuel | 1–6 | `mkt-1samuel-1-6.py` | 140 | not started |
-| 1SA-2 | 1 Samuel | 7–12 | `mkt-1samuel-7-12.py` | 133 | not started |
-| 1SA-3 | 1 Samuel | 13–18 | `mkt-1samuel-13-18.py` | 221 | not started |
-| 1SA-4 | 1 Samuel | 19–24 | `mkt-1samuel-19-24.py` | 155 | not started |
-| 1SA-5 | 1 Samuel | 25–30 | `mkt-1samuel-25-30.py` | 148 | not started |
-| 1SA-6 | 1 Samuel | 31 | `mkt-1samuel-31-31.py` | 13 | not started |
-| 2SA-1 | 2 Samuel | 1–6 | `mkt-2samuel-1-6.py` | 158 | not started |
+| EXO-1 | Exodus | 1–6 | `mkt-exodus-1-6.py` | 153 | complete |
+| EXO-2 | Exodus | 7–12 | `mkt-exodus-7-12.py` | 182 | complete |
+| EXO-3 | Exodus | 13–18 | `mkt-exodus-13-18.py` | 159 | complete |
+| EXO-4 | Exodus | 19–24 | `mkt-exodus-19-24.py` | 169 | complete |
+| EXO-5 | Exodus | 25–30 | `mkt-exodus-25-30.py` | 225 | complete |
+| EXO-6 | Exodus | 31–36 | `mkt-exodus-31-36.py` | 184 | complete |
+| EXO-7 | Exodus | 37–40 | `mkt-exodus-37-40.py` | 141 | complete |
+| LEV-1 | Leviticus | 1–6 | `mkt-leviticus-1-6.py` | 134 | complete |
+| LEV-2 | Leviticus | 7–12 | `mkt-leviticus-7-12.py` | 173 | complete |
+| LEV-3 | Leviticus | 13–18 | `mkt-leviticus-13-18.py` | 229 | complete |
+| LEV-4 | Leviticus | 19–24 | `mkt-leviticus-19-24.py` | 188 | complete |
+| LEV-5 | Leviticus | 25–27 | `mkt-leviticus-25-27.py` | 135 | complete |
+| NUM-1 | Numbers | 1–6 | `mkt-numbers-1-6.py` | 246 | complete |
+| NUM-2 | Numbers | 7–12 | `mkt-numbers-7-12.py` | 225 | complete |
+| NUM-3 | Numbers | 13–18 | `mkt-numbers-13-18.py` | 214 | complete |
+| NUM-4 | Numbers | 19–24 | `mkt-numbers-19-24.py` | 182 | complete |
+| NUM-5 | Numbers | 25–30 | `mkt-numbers-25-30.py` | 193 | complete |
+| NUM-6 | Numbers | 31–36 | `mkt-numbers-31-36.py` | 228 | complete |
+| DEU-1 | Deuteronomy | 1–6 | `mkt-deuteronomy-1-6.py` | 219 | complete |
+| DEU-2 | Deuteronomy | 7–12 | `mkt-deuteronomy-7-12.py` | 161 | complete |
+| DEU-3 | Deuteronomy | 13–18 | `mkt-deuteronomy-13-18.py` | 134 | complete |
+| DEU-4 | Deuteronomy | 19–24 | `mkt-deuteronomy-19-24.py` | 141 | complete |
+| DEU-5 | Deuteronomy | 25–30 | `mkt-deuteronomy-25-30.py` | 181 | complete |
+| DEU-6 | Deuteronomy | 31–34 | `mkt-deuteronomy-31-34.py` | 123 | complete |
+| JOS-1 | Joshua | 1–6 | `mkt-joshua-1-6.py` | 125 | complete |
+| JOS-2 | Joshua | 7–12 | `mkt-joshua-7-12.py` | 178 | complete |
+| JOS-3 | Joshua | 13–18 | `mkt-joshua-13-18.py` | 167 | complete |
+| JOS-4 | Joshua | 19–24 | `mkt-joshua-19-24.py` | 188 | complete |
+| JDG-1 | Judges | 1–6 | `mkt-judges-1-6.py` | 185 | complete |
+| JDG-2 | Judges | 7–12 | `mkt-judges-7-12.py` | 190 | complete |
+| JDG-3 | Judges | 13–18 | `mkt-judges-13-18.py` | 140 | complete |
+| JDG-4 | Judges | 19–21 | `mkt-judges-19-21.py` | 103 | complete |
+| RUT-1 | Ruth | 1–4 | `mkt-ruth-1-4.py` | 85 | complete |
+| 1SA-1 | 1 Samuel | 1–6 | `mkt-1samuel-1-6.py` | 140 | complete |
+| 1SA-2 | 1 Samuel | 7–12 | `mkt-1samuel-7-12.py` | 133 | complete |
+| 1SA-3 | 1 Samuel | 13–18 | `mkt-1samuel-13-18.py` | 221 | in-progress |
+| 1SA-4 | 1 Samuel | 19–24 | `mkt-1samuel-19-24.py` | 155 | complete |
+| 1SA-5 | 1 Samuel | 25–30 | `mkt-1samuel-25-30.py` | 148 | complete |
+| 1SA-6 | 1 Samuel | 31 | `mkt-1samuel-31-31.py` | 13 | complete |
+| 2SA-1 | 2 Samuel | 1–6 | `mkt-2samuel-1-6.py` | 158 | in-progress |
 | 2SA-2 | 2 Samuel | 7–12 | `mkt-2samuel-7-12.py` | 137 | not started |
 | 2SA-3 | 2 Samuel | 13–18 | `mkt-2samuel-13-18.py` | 194 | not started |
 | 2SA-4 | 2 Samuel | 19–24 | `mkt-2samuel-19-24.py` | 206 | not started |

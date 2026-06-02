@@ -1,3 +1,9 @@
+# MKT Translation Agent Prompt
+
+Copy and paste this entire prompt to a new agent session to claim and complete one work unit.
+
+---
+
 Read the following files **in full** before doing anything else — in this order, no skipping:
 
 1. `TRANSLATION_AGENT_GUIDE.md`

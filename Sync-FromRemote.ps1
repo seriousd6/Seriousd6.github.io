@@ -35,7 +35,7 @@ param(
     [string]  $RemoteUser  = "domad",
     [string]  $RemotePath  = "/home/domad/Documents/bible-study-website",
     [string]  $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
-    [switch]  $DryRun = $true,
+    [switch]  $DryRun = $false,
     [switch]  $DeleteExtra = $false
 )
 
@@ -173,38 +173,64 @@ if ($toDownload.Count -eq 0 -and (-not $DeleteExtra -or $localOnlyCount -eq 0)) 
 }
 
 # ── 4. Download changed / new files ───────────────────────────────────────────
+# Uses a single SSH connection: we pipe the file list to `tar --files-from=-`
+# on the remote, stream the tar archive back over stdout, then extract locally.
+# One connection = one password prompt (or none with key auth).
 
 if ($toDownload.Count -gt 0) {
-    Write-Header "Downloading $($toDownload.Count) files"
+    Write-Header "Downloading $($toDownload.Count) files via single SSH connection"
 
-    $i       = 0
-    $failed  = 0
+    $tempTar = Join-Path $env:TEMP "bsw_sync_$([System.IO.Path]::GetRandomFileName()).tar.gz"
 
-    foreach ($relPath in $toDownload) {
-        $i++
-        $forwardSlash = $relPath -replace '\\', '/'
-        $remoteSrc    = "${RemotePath}/${forwardSlash}"
-        $localDest    = Join-Path $LocalPath $relPath
-        $localDir     = Split-Path $localDest -Parent
+    try {
+        # Launch SSH: remote side reads file list from stdin, tars those files to stdout.
+        # We redirect stdin/stdout through .NET streams to handle binary data correctly —
+        # PowerShell's pipeline would corrupt binary content by re-encoding it as text.
+        $psi = [System.Diagnostics.ProcessStartInfo]::new("ssh")
+        $psi.Arguments          = "${RemoteUser}@${RemoteHost} `"cd '$RemotePath' && tar czf - --files-from=-`""
+        $psi.RedirectStandardInput  = $true
+        $psi.RedirectStandardOutput = $true
+        $psi.RedirectStandardError  = $true
+        $psi.UseShellExecute        = $false
 
-        if (-not (Test-Path $localDir)) {
-            New-Item -ItemType Directory -Path $localDir -Force | Out-Null
-        }
+        $proc = [System.Diagnostics.Process]::Start($psi)
 
-        Write-Host "  [$i/$($toDownload.Count)] $relPath ... " -NoNewline
+        # Read stderr async so it never blocks the stdout pipe
+        $stderrTask = $proc.StandardError.ReadToEndAsync()
 
-        $scpResult = scp "${RemoteUser}@${RemoteHost}:$remoteSrc" $localDest 2>&1
-        if ($LASTEXITCODE -ne 0) {
-            Write-Host "FAILED" -ForegroundColor Red
-            Write-Warning "  $scpResult"
-            $failed++
+        # Build the file list as a raw UTF-8 byte array with LF-only line endings,
+        # then write directly to the underlying BaseStream. This completely bypasses
+        # StreamWriter's NewLine/encoding logic, which was stripping path separators.
+        $fileListStr   = ($toDownload | ForEach-Object { $_ -replace '\\', '/' }) -join "`n"
+        $fileListBytes = [System.Text.Encoding]::UTF8.GetBytes($fileListStr + "`n")
+        $proc.StandardInput.BaseStream.Write($fileListBytes, 0, $fileListBytes.Length)
+        $proc.StandardInput.BaseStream.Flush()
+        $proc.StandardInput.BaseStream.Close()
+
+        # Stream binary stdout directly to a temp file — no text encoding involved
+        $outStream = [System.IO.FileStream]::new($tempTar, [System.IO.FileMode]::Create)
+        $proc.StandardOutput.BaseStream.CopyTo($outStream)
+        $outStream.Close()
+
+        $stderr = $stderrTask.Result
+        $proc.WaitForExit()
+
+        if ($proc.ExitCode -ne 0) {
+            Write-Error "Remote tar failed (exit $($proc.ExitCode)):`n$stderr"
         } else {
-            Write-Host "OK" -ForegroundColor Green
-        }
-    }
+            if ($stderr) { Write-Host "  SSH: $stderr" -ForegroundColor DarkGray }
 
-    Write-Host ""
-    Write-Host "  Downloaded: $($toDownload.Count - $failed)  Failed: $failed"
+            Write-Host "  Extracting..."
+            $tarOut = tar xzf $tempTar -C $LocalPath 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Error "Local tar extraction failed:`n$tarOut"
+            } else {
+                Write-Host "  $($toDownload.Count) files extracted successfully." -ForegroundColor Green
+            }
+        }
+    } finally {
+        if (Test-Path $tempTar) { Remove-Item $tempTar -Force }
+    }
 }
 
 # ── 5. Delete local-only files (opt-in) ───────────────────────────────────────
