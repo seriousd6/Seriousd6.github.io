@@ -46,6 +46,8 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Ensure [hidden] always wins over element-level display rules (e.g. flex/block) */
+[hidden] { display: none !important; }
 
 /* ── Body — sidebar pushes content on desktop ── */
 body {
@@ -666,6 +668,27 @@ span.term { font-weight: bold; color: var(--color-primary); }
   }
 }
 
+/* Translation Workshop — pinned footer inside sidebar */
+.sb-footer {
+  flex-shrink: 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 0.35rem 0;
+}
+.sb-workshop-link {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  color: var(--sb-muted, #9a8060);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s, color 0.15s;
+  box-sizing: border-box;
+}
+.sb-workshop-link:hover { opacity: 1; color: var(--sb-text, #e8d9bb); }
+.sb-workshop-link[aria-current="page"] { color: var(--color-primary, #c8a96e); opacity: 1; }
+
 /* Dark mode toggle button (injected into sidebar footer by main.js) */
 #bsw-theme-btn {
   display: flex;
@@ -684,3 +707,10 @@ span.term { font-weight: bold; color: var(--color-primary); }
   transition: opacity 0.15s;
 }
 #bsw-theme-btn:hover { opacity: 1; }
+
+/* Modal scroll lock — overflow:hidden on html+body prevents scroll on Chrome/Android.
+   iOS scroll-through is blocked by a touchmove.preventDefault on the backdrop (see modal.js). */
+html.bsw-modal-open,
+body.bsw-modal-open {
+  overflow: hidden;
+}

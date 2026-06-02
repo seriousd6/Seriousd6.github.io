@@ -846,3 +846,44 @@
     color: var(--color-btn-text, #e8c87a);
   }
 }
+
+/* ── Mobile: touch targets + iOS fixes ──────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Context toggle buttons: 44px touch target */
+  .vs-context-btn {
+    min-height: 44px;
+    padding: 0 0.75rem;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Word tokens: easier to tap */
+  .vs-token {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* XRef chips: taller tap target */
+  .vs-xref-link {
+    min-height: 36px;
+    padding: 0.3rem 0.6rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section nav select: 16px prevents iOS auto-zoom on focus */
+  .vs-mobile-nav select,
+  .vs-comm-select,
+  .vs-header .version-picker select {
+    font-size: 1rem;
+    min-height: 44px;
+    padding: 0 0.75rem;
+  }
+
+  /* Interlinear tiles: allow narrower tiles on small screens */
+  .vs-tile {
+    min-width: 72px;
+    padding: 0.45rem 0.4rem 0.35rem;
+  }
+}

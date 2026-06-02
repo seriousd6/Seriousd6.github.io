@@ -18,12 +18,50 @@ import {
   wireRefLinks, wireRefEl, applyHighlights, applyBookmarks, autoTagRefs,
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
-import { getParallelsEnabled, injectAllParallelPanels } from './parallels.js';
+import { getParallelsEnabled, injectAllParallelPanels, applyParallelPagination } from './parallels.js';
 import {
   getInterlinearEnabled, injectAllInterlinearRows
 } from './interlinear.js';
 
 export { initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
+
+// ── Xref footnote-numbers toggle ──────────────────────────────────────────
+var XREF_NOTES_KEY = 'bsw_xref_notes';
+
+export function isXrefNotesEnabled()    { return !!localStorage.getItem(XREF_NOTES_KEY); }
+export function setXrefNotesEnabled(on) {
+  try {
+    if (on) localStorage.setItem(XREF_NOTES_KEY, '1');
+    else    localStorage.removeItem(XREF_NOTES_KEY);
+  } catch (e) {}
+  document.body.classList.toggle('bsw-xref-notes-on', !!on);
+}
+
+export function initXrefNotesToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-xref-notes-btn')) return;
+
+  // Apply persisted state on load (absent key = default off)
+  setXrefNotesEnabled(isXrefNotesEnabled());
+
+  var on  = isXrefNotesEnabled();
+  var btn = document.createElement('button');
+  btn.id        = 'reader-xref-notes-btn';
+  btn.className = 'reader-xref-notes-btn' + (on ? ' reader-xref-notes-btn--on' : '');
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.title     = 'Show cross-reference footnote numbers inline';
+  btn.textContent = '† Footnotes';
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(btn, hint || null);
+
+  btn.addEventListener('click', function () {
+    on = !on;
+    setXrefNotesEnabled(on);
+    btn.classList.toggle('reader-xref-notes-btn--on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
 
 // ── Compare state ─────────────────────────────────────────────────────────
 var COMPARE_KEY = 'bsw_compare';
@@ -180,15 +218,14 @@ export function initReaderLookup() {
 
     var refs = parseMultiRef(q, null);
 
-    // Bare book name → whole book (one ref per chapter)
+    // Bare book name → whole book as a single ref; chapter breaks are injected at render time.
     if (!refs.length) {
       var _bid = normalizeBook(q);
       var _bkm = _bid && metaBooks && metaBooks.find(function (b) { return b.id === _bid; });
       if (_bkm) {
-        for (var _ci = 1; _ci <= (_bkm.chapters || 1); _ci++) {
-          refs.push({ bookId: _bkm.id, bookName: _bkm.name, ch: _ci, v: 1, endCh: _ci, endV: 9999,
-            display: _bkm.name + ' ' + _ci, wholeChapter: true });
-        }
+        refs.push({ bookId: _bkm.id, bookName: _bkm.name, ch: 1, v: 1,
+          endCh: (_bkm.chapters || 1), endV: 9999,
+          display: _bkm.name, wholeChapter: true, wholeBook: true });
         input.value = _bkm.name;
         q = _bkm.name;
       }
@@ -232,16 +269,28 @@ export function initReaderLookup() {
         var groupEl = document.createElement('div');
         groupEl.className = 'reader-result-group';
 
-        if (g.ref.bookId) groupEl.appendChild(_buildNavButtons(g.ref, 'top'));
+        // Whole-book view: skip per-chapter nav buttons (chapter breaks act as structure).
+        if (g.ref.bookId && !g.ref.wholeBook) groupEl.appendChild(_buildNavButtons(g.ref, 'top'));
 
         var title = document.createElement('h2');
         title.className   = 'reader-result-group__title';
         title.textContent = g.ref.display;
         groupEl.appendChild(title);
 
-        var textEl = document.createElement('p');
+        // Use a <div> container for whole-book so chapter-break <div>s are valid children.
+        var textEl = document.createElement(g.ref.wholeBook ? 'div' : 'p');
         textEl.className = 'reader-result-group__text';
+        var _prevCh = null;
         g.verses.forEach(function (vObj) {
+          // Insert a chapter-break divider whenever the chapter number advances.
+          if (g.ref.wholeBook && vObj.chapter !== _prevCh && _prevCh !== null) {
+            var brk = document.createElement('div');
+            brk.className = 'reader-chapter-break';
+            brk.innerHTML = '<span class="reader-chapter-break__label">' +
+              escHtml(g.ref.bookName + ' ' + vObj.chapter) + '</span>';
+            textEl.appendChild(brk);
+          }
+          _prevCh = vObj.chapter;
           var span = document.createElement('span');
           span.className = 'reader-verse';
           span.setAttribute('data-book', g.ref.bookName);
@@ -261,7 +310,7 @@ export function initReaderLookup() {
         attrEl.textContent = ATTRIBUTION[ver] || '';
         groupEl.appendChild(attrEl);
 
-        if (g.ref.bookId) groupEl.appendChild(_buildNavButtons(g.ref, 'bottom'));
+        if (g.ref.bookId && !g.ref.wholeBook) groupEl.appendChild(_buildNavButtons(g.ref, 'bottom'));
 
         resultsEl.appendChild(groupEl);
 
@@ -294,7 +343,7 @@ export function initReaderLookup() {
 
       if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
       if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
-      if (getParallelsEnabled()) injectAllParallelPanels(resultsEl);
+      if (getParallelsEnabled()) { applyParallelPagination(resultsEl); injectAllParallelPanels(resultsEl); }
 
       _historyPush(q, ver);
       _recordReadingDay();
@@ -821,6 +870,9 @@ export function renderReaderSidebar(bookId, chapters, activeCh) {
   });
 }
 
+// Expose so interlinear.js can refresh the sidebar on-demand (avoids circular import).
+window._renderSidebarFn = renderReaderSidebar;
+
 // ── Book introduction ─────────────────────────────────────────────────────
 var _bookInfoCache = {};
 
@@ -885,14 +937,26 @@ var _RH_ERAS = [
 
 function _renderTimeline(tl, bookTitle) {
   var html = '';
+
+  // Era arc: segmented colour bar + active-era label (replaces the old wrapping chip list)
   if (tl.period) {
+    var _activeEra = null;
+    for (var _ei = 0; _ei < _RH_ERAS.length; _ei++) {
+      if (_RH_ERAS[_ei].slug === tl.period) { _activeEra = _RH_ERAS[_ei]; break; }
+    }
     html += '<div class="ri-tl-arc" aria-label="Redemptive-historical era">';
+    html += '<div class="ri-tl-arc-track">';
     _RH_ERAS.forEach(function (era) {
-      var active = (era.slug === tl.period) ? ' ri-tl-era--active' : '';
-      html += '<span class="ri-tl-era' + active + '">' + era.label + '</span>';
+      var cls = 'ri-tl-era' + (era.slug === tl.period ? ' ri-tl-era--active' : '');
+      html += '<span class="' + cls + '" title="' + escHtml(era.label) + '"></span>';
     });
     html += '</div>';
+    if (_activeEra) {
+      html += '<div class="ri-tl-arc-lbl">Period: <strong>' + escHtml(_activeEra.label) + '</strong></div>';
+    }
+    html += '</div>';
   }
+
   var before = (tl.before || []).slice();
   var after  = (tl.after  || []).slice();
   while (before.length < 3) before.unshift(null);
@@ -901,11 +965,12 @@ function _renderTimeline(tl, bookTitle) {
   html += '<div class="ri-tl-row">';
   before.concat([null], after).forEach(function (item, idx) {
     if (idx === 3) {
-      // Centre slot — the current book. Use the larger --current dot.
+      // Centre slot — current book. Dot is first child so the connector line bisects it
+      // regardless of whether a date label follows.
       html += '<div class="ri-tl-item">' +
-        (tl.date ? '<div class="ri-tl-year ri-tl-year--current">' + escHtml(tl.date) + '</div>' : '') +
         '<div class="ri-tl-dot ri-tl-dot--current"></div>' +
         '<div class="ri-tl-label ri-tl-label--current">' + escHtml(bookTitle) + '</div>' +
+        (tl.date ? '<div class="ri-tl-year ri-tl-year--current">' + escHtml(tl.date) + '</div>' : '') +
       '</div>';
       return;
     }
@@ -913,18 +978,23 @@ function _renderTimeline(tl, bookTitle) {
       html += '<div class="ri-tl-item ri-tl-item--empty"><div class="ri-tl-dot ri-tl-dot--empty"></div></div>';
       return;
     }
-    // Data fields: label (display text), ref (passage), type (event/book/world), year
     var type    = item.type  || 'event';
     var label   = item.label || '';
     var year    = item.year  || '';
-    var href    = (type === 'book' && item.ref) ? (READER_URL + '?ref=' + encodeURIComponent(item.ref)) : null;
+    var ref     = item.ref   || '';
+    var href    = (type === 'book' && ref) ? (READER_URL + '?ref=' + encodeURIComponent(ref)) : null;
+    // book-type: navigate to reader via href. event/world with a ref: hoverable link (tooltip + modal).
     var labelEl = href
       ? '<a class="ri-tl-label ri-tl-label--' + escHtml(type) + '" href="' + escHtml(href) + '">' + escHtml(label) + '</a>'
-      : '<span class="ri-tl-label ri-tl-label--' + escHtml(type) + '">' + escHtml(label) + '</span>';
+      : ref
+        ? '<a class="ref ri-tl-label ri-tl-label--' + escHtml(type) + '" data-ref="' + escHtml(ref) + '">' + escHtml(label) + '</a>'
+        : '<span class="ri-tl-label ri-tl-label--' + escHtml(type) + '">' + escHtml(label) + '</span>';
+    // Dot first — keeps it at a fixed vertical position so the connector line always
+    // bisects it, even when a year label appears below.
     html += '<div class="ri-tl-item">' +
-      (year ? '<div class="ri-tl-year">' + escHtml(year) + '</div>' : '') +
       '<div class="ri-tl-dot ri-tl-dot--' + escHtml(type) + '"></div>' +
       labelEl +
+      (year ? '<div class="ri-tl-year">' + escHtml(year) + '</div>' : '') +
     '</div>';
   });
   html += '</div>';

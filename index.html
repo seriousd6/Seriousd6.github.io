@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Daily Bible reading, verse of the day, and devotional." />
   <title>Bible Study — Daily</title>
@@ -62,6 +62,18 @@
           <h2 class="daily-card__title">Continue Reading</h2>
         </div>
         <div id="daily-history-content" class="daily-history-body"></div>
+        <div id="daily-lib-history" class="daily-history-body" style="border-top:1px solid var(--color-border)"></div>
+      </section>
+
+      <!-- ── Today's Disciplines tracker ── -->
+      <section class="daily-card" id="daily-tracker-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Today's Disciplines</h2>
+          <a href="tracker/" class="daily-streak-cta" style="font-size:.78rem">History →</a>
+        </div>
+        <ul class="daily-tracker-list" id="daily-tracker-list" aria-label="Today's discipline checklist">
+          <!-- populated by tracker module -->
+        </ul>
       </section>
 
       <!-- ── Daily Devotional ── -->
@@ -84,5 +96,92 @@
 
   <script src="assets/js/main.js"></script>
   <script type="module" src="assets/js/app.js"></script>
+
+  <script type="module">
+  import { getToday, onUpdate } from './assets/js/tracker.js';
+
+  var ROOT = './';
+
+  var D = ROOT + 'discipline/';
+  var DISCIPLINES = [
+    { key: 'reading',    label: 'Reading Plan',       href: D + '?tab=plans',                     doneLink: 'View plan',        todoLink: 'Go to plan' },
+    { key: 'devotional', label: 'Devotional',          href: D + '?tab=devotionals',               doneLink: 'View devotional',  todoLink: 'Read today\'s' },
+    { key: 'memory',     label: 'Scripture Memory',    href: D + '?tab=memory',                    doneLink: 'View memory',      todoLink: 'Start review' },
+    { key: 'prayer',     label: 'Prayer Journal',      href: D + '?tab=journal',                   doneLink: 'View journal',     todoLink: 'Write a prayer' },
+    { key: 'reflection', label: 'Study Reflection',    href: D + '?tab=journal&jtab=reflections',  doneLink: 'View reflections', todoLink: 'Write a reflection' },
+    { key: 'worship',    label: 'Worship (this week)', href: D + '?tab=worship',                   doneLink: 'View worship',     todoLink: 'Log sermon' },
+  ];
+
+  function renderTracker() {
+    var listEl = document.getElementById('daily-tracker-list');
+    if (!listEl) return;
+    var status = getToday();
+    listEl.innerHTML = '';
+    DISCIPLINES.forEach(function (d) {
+      var done = !!status[d.key];
+      var li   = document.createElement('li');
+      li.className = 'daily-tracker-item' + (done ? ' daily-tracker-item--done' : '');
+
+      var check = document.createElement('span');
+      check.className = 'daily-tracker-check';
+      check.setAttribute('aria-hidden', 'true');
+      check.textContent = done ? '✓' : '';
+
+      var label = document.createElement('span');
+      label.className = 'daily-tracker-label';
+      label.textContent = d.label;
+
+      var link = document.createElement('a');
+      link.className = 'daily-tracker-link';
+      link.href = d.href;
+      link.textContent = done ? d.doneLink : d.todoLink;
+
+      li.appendChild(check);
+      li.appendChild(label);
+      li.appendChild(link);
+      listEl.appendChild(li);
+    });
+  }
+
+  renderTracker();
+  onUpdate(renderTracker);
+  renderLibHistory();
+
+  function renderLibHistory() {
+    var el = document.getElementById('daily-lib-history');
+    if (!el) return;
+    try {
+      var data = JSON.parse(localStorage.getItem('bsw_lib_progress') || '{}');
+      var docs = Object.values(data).sort(function (a, b) { return b.lastRead > a.lastRead ? 1 : -1; }).slice(0, 3);
+      if (!docs.length) { el.hidden = true; return; }
+      el.hidden = false;
+      el.innerHTML = docs.map(function (d) {
+        return '<a class="daily-history-item" href="' + d.href + '">' +
+          '<span class="daily-history-ref">📚 ' + d.title + '</span>' +
+          '<span class="daily-history-meta">' + d.lastRead + '</span>' +
+        '</a>';
+      }).join('');
+      // Show the parent card if it was hidden
+      var card = document.getElementById('daily-history-card');
+      if (card) card.removeAttribute('hidden');
+    } catch (_) {}
+  }
+
+  // Re-render on localStorage changes from other tabs
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'bsw_tracker' || e.key === 'bsw_plans' || e.key === 'bsw_journal') {
+      renderTracker();
+    }
+    if (e.key === 'bsw_lib_progress') renderLibHistory();
+  });
+
+  // Re-render 300 ms after any click in case a same-tab action changed the data
+  // (e.g. plan mark-complete via the home page's daily widget).
+  var _debounce;
+  document.addEventListener('click', function () {
+    clearTimeout(_debounce);
+    _debounce = setTimeout(renderTracker, 300);
+  });
+  </script>
 </body>
 </html>

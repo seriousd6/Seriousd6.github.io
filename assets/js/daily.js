@@ -654,9 +654,12 @@ export function initMemorizePage() {
     });
   });
 
-  var addInput = document.getElementById('mem-add-input');
-  var addBtn   = document.getElementById('mem-add-btn');
-  var addError = document.getElementById('mem-add-error');
+  var addInput    = document.getElementById('mem-add-input');
+  var addBtn      = document.getElementById('mem-add-btn');
+  var addPassInput = document.getElementById('mem-add-passage-input');
+  var addPassBtn   = document.getElementById('mem-add-passage-btn');
+  var addError    = document.getElementById('mem-add-error');
+
   function doAdd() {
     var raw    = (addInput && addInput.value.trim()) || '';
     if (!raw) return;
@@ -677,6 +680,39 @@ export function initMemorizePage() {
   }
   if (addBtn)   addBtn.addEventListener('click', doAdd);
   if (addInput) addInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') doAdd(); });
+
+  // Passage add — accepts a verse range like "John 3:16-18"
+  function doAddPassage() {
+    var raw = (addPassInput && addPassInput.value.trim()) || '';
+    if (!raw) return;
+    var parsed = parseRef(raw);
+    if (!parsed || !parsed.bookId || !parsed.v) {
+      if (addError) { addError.textContent = 'Could not parse passage — try: John 3:16-18'; addError.removeAttribute('hidden'); }
+      return;
+    }
+    if (addError) addError.setAttribute('hidden', '');
+    var ref = parsed.display; // e.g. "John 3:16–18"
+    // Store as a single memory entry flagged as a passage
+    var state = _memGet();
+    if (!state[ref]) {
+      var today = _memTodayStr();
+      state[ref] = {
+        addedDate:   today,
+        interval:    1,
+        nextReview:  today,
+        score:       0,
+        reps:        0,
+        isPassage:   true,
+        passStart:   { bookId: parsed.bookId, bookName: parsed.bookName, ch: parsed.ch, v: parsed.v },
+        passEnd:     { ch: parsed.endCh, v: parsed.endV },
+      };
+      _memSet(state);
+    }
+    if (addPassInput) addPassInput.value = '';
+    _memRenderList();
+  }
+  if (addPassBtn)   addPassBtn.addEventListener('click', doAddPassage);
+  if (addPassInput) addPassInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') doAddPassage(); });
 
   var backBtn = document.getElementById('mem-back-browse');
   if (backBtn) backBtn.addEventListener('click', function () {
@@ -712,6 +748,29 @@ export function initMemorizePage() {
   if (ankiBtn) ankiBtn.addEventListener('click', _memAnkiExport);
 
   _memRenderList();
+
+  // Keyboard shortcuts during review — skip when focus is in a text input
+  document.addEventListener('keydown', function (e) {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT')) return;
+    if (!reviewPanel || reviewPanel.hasAttribute('hidden')) return;
+
+    var showBtn  = document.getElementById('mem-show-answer');
+    var actsEl   = document.getElementById('mem-card-actions');
+    var rateMap  = { '1': 0, '2': 1, '3': 2, '4': 3 }; // key → score
+
+    // Space / Enter flips the card (show answer)
+    if ((e.key === ' ' || e.key === 'Enter') && showBtn && !showBtn.hasAttribute('hidden')) {
+      e.preventDefault();
+      showBtn.click();
+      return;
+    }
+    // 1–4 trigger rating buttons once the answer is visible
+    if (rateMap[e.key] !== undefined && actsEl && !actsEl.hasAttribute('hidden')) {
+      e.preventDefault();
+      var btn = actsEl.querySelector('[data-score="' + rateMap[e.key] + '"]');
+      if (btn) btn.click();
+    }
+  });
 }
 
 function _memRenderList() {
@@ -998,17 +1057,43 @@ function _memShowReviewCard() {
   }
 }
 
+function _memLoadPassageText(entry) {
+  // Returns Promise<string> — all verses in a passage entry concatenated.
+  var ps = entry.passStart, pe = entry.passEnd;
+  return loadBook(getVersion(), ps.bookId).then(function (chs) {
+    var lines = [];
+    if (!chs) return '(text unavailable)';
+    var ch = ps.ch, endCh = pe.ch, endV = pe.v;
+    for (var c = ch; c <= endCh; c++) {
+      var chObj = chs[String(c)] || {};
+      var startV = (c === ch) ? ps.v : 1;
+      var stopV  = (c === endCh) ? endV : 999;
+      for (var v = startV; v <= stopV; v++) {
+        if (!chObj[String(v)]) break;
+        lines.push(escHtml(String(v)) + ' ' + escHtml(chObj[String(v)]));
+      }
+    }
+    return lines.join(' ');
+  });
+}
+
 function _memWireShowBtn(ref, mode, cachedText) {
   var showBtn = document.getElementById('mem-show-answer');
   if (!showBtn) return;
+  var entry = _memGet()[ref];
+  var isPassage = !!(entry && entry.isPassage);
+
   showBtn.addEventListener('click', function () {
     var frontEl = document.getElementById('mem-card-front');
     var backEl  = document.getElementById('mem-card-back');
     var actsEl  = document.getElementById('mem-card-actions');
+
     function renderAnswer(text) {
-      if (mode === 'ref-to-text') {
+      if (mode === 'ref-to-text' || isPassage) {
         backEl.innerHTML =
-          '<p class="mem-card__verse-text">&ldquo;' + escHtml(text || '(verse unavailable)') + '&rdquo;</p>' +
+          '<p class="mem-card__verse-text" style="text-align:left;line-height:1.7">' +
+          (isPassage ? text : '&ldquo;' + escHtml(text || '(verse unavailable)') + '&rdquo;') +
+          '</p>' +
           '<p class="mem-card__verse-ref">' + escHtml(ref) + '</p>';
       } else {
         backEl.innerHTML =
@@ -1018,6 +1103,13 @@ function _memWireShowBtn(ref, mode, cachedText) {
       backEl.removeAttribute('hidden');
       actsEl.removeAttribute('hidden');
       _memWireRatingBtns(ref);
+    }
+
+    if (isPassage && entry) {
+      backEl.innerHTML = '<p class="mem-card__hint">Loading passage…</p>';
+      frontEl.setAttribute('hidden', '');
+      _memLoadPassageText(entry).then(renderAnswer).catch(function () { renderAnswer('(unavailable)'); });
+      return;
     }
     if (cachedText) { renderAnswer(cachedText); return; }
     var parsed = parseRef(ref);

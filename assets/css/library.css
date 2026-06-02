@@ -24,12 +24,16 @@
   color: var(--color-muted);
 }
 
-.lib-badge--reformed  { border-color: #a0522d; color: #a0522d; }
-.lib-badge--lutheran  { border-color: #4a7a56; color: #4a7a56; }
-.lib-badge--anglican  { border-color: #4a5f7a; color: #4a5f7a; }
-.lib-badge--ecumenical{ border-color: var(--color-accent); color: var(--color-accent); }
-.lib-badge--baptist   { border-color: #5c2d87; color: #5c2d87; }
-.lib-badge--patristic { border-color: #8b6914; color: #8b6914; }
+.lib-badge--reformed        { border-color: #a0522d; color: #a0522d; }
+.lib-badge--lutheran        { border-color: #4a7a56; color: #4a7a56; }
+.lib-badge--anglican        { border-color: #4a5f7a; color: #4a5f7a; }
+.lib-badge--ecumenical      { border-color: var(--color-accent); color: var(--color-accent); }
+.lib-badge--baptist         { border-color: #5c2d87; color: #5c2d87; }
+.lib-badge--anabaptist      { border-color: #7a5230; color: #7a5230; }
+.lib-badge--congregationalist { border-color: #2a6b6b; color: #2a6b6b; }
+.lib-badge--methodist       { border-color: #1a6b8a; color: #1a6b8a; }
+.lib-badge--orthodox        { border-color: #8b2252; color: #8b2252; }
+.lib-badge--patristic       { border-color: #8b6914; color: #8b6914; }
 
 /* ── Table of contents ──────────────────────────────────── */
 .lib-toc {
@@ -375,3 +379,160 @@
 
 [data-theme="dark"] .lsr-snip mark,
 :root:not([data-theme="light"]) .lsr-snip mark { background: rgba(255,200,0,0.18); }
+
+/* ── Mobile: Q&A grid and touch targets ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Narrow the number column so it doesn't crowd 3-digit Q numbers */
+  .lib-qa {
+    grid-template-columns: 1.8rem 1fr;
+    column-gap: 0.4rem;
+  }
+  .lib-qa__num {
+    font-size: 0.65rem;
+  }
+}
+
+/* ── Wikisource content normalisation ─────────────────────────────────────────
+   Applies to HTML docs fetched from Wikisource and rendered in .lb-reader-body.
+   These rules make Wikisource-specific markup classes render cleanly and
+   responsively without requiring a Wikisource stylesheet. */
+
+/* Outer wrapper — standard block, no max-width constraint of its own */
+.mw-parser-output { max-width: 100%; }
+
+/* Images inside Wikisource content: always contained, never overflow */
+.mw-parser-output img { max-width: 100%; height: auto; display: block; }
+
+/* Tables: scrollable on small screens; border-collapse for readability */
+.mw-parser-output table {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+.mw-parser-output td, .mw-parser-output th {
+  padding: .3rem .5rem;
+  border: 1px solid var(--color-border);
+}
+
+/* Headings emitted as div wrappers by the Wikisource API */
+.mw-heading  { margin: 1.5rem 0 .65rem; }
+.mw-heading2 h2, .mw-heading h2 {
+  font-size: 1.1rem; font-weight: 700; margin: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: .3rem;
+}
+.mw-heading3 h3, .mw-heading h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+
+/* Verse/thesis number labels (Didache verse nums, Luther thesis nums) */
+.wst-verse, .wst-verse-default {
+  display: inline;
+  color: var(--color-muted, #aaa);
+  font-size: .72rem;
+  margin-right: .15em;
+  font-weight: 600;
+}
+.wst-verse sup, .wst-verse-default sup { font-size: .7em; vertical-align: super; }
+
+/* Chapter/section anchor spans (thesis numbers etc.) */
+.wst-anchor {
+  font-size: .7rem;
+  color: var(--color-muted, #aaa);
+  font-weight: 700;
+  margin-right: .3em;
+}
+
+/* Margin-number floats (wst-fqm) — show as small inline characters */
+.wst-fqm {
+  display: inline !important;
+  float: none !important;
+  margin-left: 0 !important;
+  width: auto !important;
+  font-size: .72rem;
+  color: var(--color-muted, #aaa);
+  margin: 0 .2em;
+}
+
+/* Centred content */
+.wst-center, .wst-block-center { text-align: center; }
+.wst-block-center { max-width: 100% !important; margin: 0 auto; }
+.wst-right { text-align: right; }
+.wst-uppercase { text-transform: uppercase; letter-spacing: .04em; }
+
+/* Border/frame boxes — Wikisource title pages and epigraphs */
+.wst-border {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem auto 1.5rem;
+  box-sizing: border-box;
+  /* Inline max-width from Wikisource (e.g. 450px) is kept on large screens;
+     overridden to 100% only on narrow viewports via the mobile rule below. */
+}
+
+/* Invisible spacing divs — hide cleanly */
+.wst-dhr { display: none !important; }
+
+/* Smaller / fine-print text variants */
+.wst-smaller, .wst-smaller-block,
+.wst-fine,    .wst-fine-block    { font-size: .88rem; line-height: 1.65; }
+
+/* Larger text blocks (used for opening titles) */
+.wst-size-block { font-size: 1.05rem; }
+
+/* Tooltip spans — native title attribute tooltip, marked with dashed underline */
+.wst-tooltip { cursor: help; }
+.wst-tooltip-dash { border-bottom: 1px dashed var(--color-muted, #bbb); }
+
+/* Language-tagged spans (e.g. Greek) */
+.wst-lang, .wst-lang-grc { font-style: italic; }
+
+/* Superscript (footnote markers) */
+.wst-sup { vertical-align: super; font-size: .7em; }
+
+/* Decorative rules */
+.wst-rule, .wst-rule-center {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  width: auto !important;
+  max-width: 7em;
+  margin: 1rem auto;
+}
+
+/* Long words must break — prevents mobile overflow on all Wikisource prose */
+.mw-parser-output p,
+.mw-parser-output li,
+.mw-parser-output td,
+.lb-reader-body p,
+.lb-reader-body li,
+.lr-section p,
+.lr-section li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ── lib-reader standalone page: responsive padding ─────────────────────── */
+@media (max-width: 600px) {
+  .lr-main { padding: 0; }
+  .lib-chapter { margin-bottom: 1.75rem; }
+  .lib-article { font-size: .95rem; }
+  .lib-qa__q, .lib-qa__a { font-size: .95rem; }
+  .lib-article__text { font-size: .95rem; }
+}
+
+/* ── lib-browser reader panel: responsive body padding ───────────────────── */
+@media (max-width: 480px) {
+  .lb-reader-body  { padding: .85rem .85rem 2rem; }
+  .lb-reader-title { font-size: 1rem; }
+  .lb-reader-toc-list a { font-size: .7rem; }
+  /* Blockquotes: tighter indent on mobile */
+  .lb-reader-body blockquote.scripture,
+  .lr-section blockquote.scripture {
+    padding-left: .75rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* Prevent inline max-width on wst-border boxes from overflowing narrow screens */
+  .wst-border { max-width: 100% !important; }
+}

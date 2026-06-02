@@ -63,6 +63,8 @@ export var TORREY_URL       = _resolve('../../data/torrey/torrey.json');  // Tor
 export var TORREY_VIDX_ROOT = _resolve('../../data/torrey/verse-index'); // per-book verse→topic index
 export var LIB_DOCS_BASE    = _resolve('../../data/library/docs');        // library document JSON files
 export var LIB_INDEX_URL    = _resolve('../../data/library/index.json'); // library document manifest
+export var LIB_SEARCH_URL   = _resolve('../../data/library/search-index.json'); // full-text library passage index
+export var TOPICS_INDEX_URL = _resolve('../../data/topics-index.json');           // study guide topic page index
 
 // ── Library abbreviation map ──────────────────────────────────────────────
 // Maps short codes used in ref strings (e.g. "wcf 3") to document slugs
@@ -445,6 +447,12 @@ export function parseMultiRef(str, defaultBookId) {
 // Returns a promise resolving to the chapters object ({ "1": { "1": "text", … }, … }).
 // Results are cached in bookCache keyed by "version:bookId"; a null cached value
 // means the fetch previously failed (book doesn't exist for that version).
+// MKT versions store tier name in their versions.json entry.
+// Files live at data/translation/draft/<tier>/<bookId>.json with the schema
+// {"ch": {"v": "text"}} — no outer wrapper — so we return data directly.
+var _MKT_TIER = { 'MKT-L': 'literal', 'MKT-M': 'mediating', 'MKT-T': 'thought' };
+var _MKT_ROOT = _resolve('../../data/translation/draft');
+
 export function loadBook(version, bookId) {
   var key = version + ':' + bookId;
   if (key in bookCache) {
@@ -452,14 +460,18 @@ export function loadBook(version, bookId) {
       ? Promise.resolve(bookCache[key])
       : Promise.reject(new Error('cached miss'));
   }
-  var url = DATA_ROOT + '/' + version + '/' + bookId + '.json';
+  var tier = _MKT_TIER[version];
+  var url = tier
+    ? _MKT_ROOT + '/' + tier + '/' + bookId + '.json'
+    : DATA_ROOT + '/' + version + '/' + bookId + '.json';
   return fetch(url)
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
     .then(function (data) {
-      bookCache[key] = data.chapters || null;
+      // MKT files are raw {ch:{v:text}}; standard files wrap chapters under data.chapters
+      bookCache[key] = tier ? data : (data.chapters || null);
       return bookCache[key];
     })
     .catch(function (err) {
@@ -490,10 +502,13 @@ export function loadCrossRefs(bookId) {
 // Copyright / attribution strings displayed under rendered Bible text.
 // Centralised here so adding a new version only requires one edit.
 export var ATTRIBUTION = {
-  'KJV': 'King James Version (1611) — Public Domain',
-  'BSB': 'Berean Standard Bible — Copyright © 2022 by Bible Hub. Used by permission. All rights reserved worldwide.',
-  'WEB': 'World English Bible — Public Domain',
-  'ASV': 'American Standard Version (1901) — Public Domain'
+  'KJV':   'King James Version (1611) — Public Domain',
+  'BSB':   'Berean Standard Bible — Copyright © 2022 by Bible Hub. Used by permission. All rights reserved worldwide.',
+  'WEB':   'World English Bible — Public Domain',
+  'ASV':   'American Standard Version (1901) — Public Domain',
+  'MKT-L': 'Modern Kingdom Translation — Literal Tier (work in progress). Personal study translation.',
+  'MKT-M': 'Modern Kingdom Translation — Mediating Tier (work in progress). Personal study translation.',
+  'MKT-T': 'Modern Kingdom Translation — Thought Tier (work in progress). Personal study translation.'
 };
 
 // ── COMMENTARY_SOURCES / loadCommentary ──────────────────────────────────
@@ -804,6 +819,16 @@ export function _loadLibIndex() {
   return fetch(LIB_INDEX_URL)
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (d) { libIndexCache = d; return d; });
+}
+
+var _libSearchCache = null;
+// _loadLibSearch: fetches data/library/search-index.json — passage-level full-text
+// for every library document, used by the omni-search explore tab.
+export function _loadLibSearch() {
+  if (_libSearchCache) return Promise.resolve(_libSearchCache);
+  return fetch(LIB_SEARCH_URL)
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (d) { _libSearchCache = d; return d; });
 }
 
 // ── escHtml (shared utility) ──────────────────────────────────────────────

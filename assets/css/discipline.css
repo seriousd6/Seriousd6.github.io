@@ -1,0 +1,503 @@
+/* discipline.css — Combined styles for the unified Discipline hub page.
+ *
+ * Sections:
+ *   Hub layout & tab bar
+ *   Plans tab
+ *   Journal tab  (prayers + reflections)
+ *   Worship tab  (sermon notes + fasting)
+ *
+ * Memory tab styles live in memorize.css
+ * Devotionals tab styles live in devotionals.css
+ */
+
+/* ── Hub layout ──────────────────────────────────────────────────────────────── */
+
+.disc-page { /* no extra wrapper needed; panels fill the page */ }
+
+/* Sticky top tab bar */
+.disc-tabbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.disc-tabbar::-webkit-scrollbar { display: none; }
+
+@media (max-width: 1023px) {
+  /* keep tab bar below the mobile top bar */
+  .disc-tabbar { top: var(--topbar-h, 48px); }
+}
+
+.disc-tab {
+  display: flex;
+  align-items: center;
+  gap: .38rem;
+  padding: .65rem 1.05rem;
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: color .15s;
+  flex-shrink: 0;
+}
+.disc-tab:hover { color: var(--color-text); }
+.disc-tab--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Status dot beside each tab label */
+.disc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-border);
+  flex-shrink: 0;
+  transition: background .25s;
+}
+
+/* Panel body: shared width + padding constraint */
+.disc-body {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+/* Memory needs its own narrower width */
+.disc-memory-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+/* Devotionals matches devot-page */
+.disc-devot-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* ── Plans tab ───────────────────────────────────────────────────────────────── */
+
+.plan-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+.plan-card--enrolled {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+.plan-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.plan-card__info { flex: 1; min-width: 0; }
+.plan-card__title { font-size: 1.05rem; font-weight: 700; margin: 0 0 .2rem; }
+.plan-card__meta  { font-size: .78rem; color: var(--color-muted); margin-bottom: .4rem; }
+.plan-card__desc  { font-size: .88rem; color: var(--color-text); line-height: 1.5; }
+.plan-card__actions { display: flex; gap: .5rem; flex-shrink: 0; align-items: flex-start; }
+
+.plan-btn {
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  padding: .35rem .85rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  background: var(--color-surface);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+.plan-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.plan-btn--primary { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.plan-btn--primary:hover { background: #4a3016; border-color: #4a3016; color: #fff; }
+.plan-btn--danger  { color: var(--color-muted); }
+.plan-btn--danger:hover { border-color: #c0392b; color: #c0392b; }
+
+.plan-today { margin-top: .85rem; padding-top: .85rem; border-top: 1px solid var(--color-border); }
+.plan-today__label {
+  font-size: .75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--color-accent); margin-bottom: .5rem;
+}
+.plan-today__progress { font-size: .78rem; color: var(--color-muted); margin-bottom: .6rem; }
+.plan-today__passages { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .6rem; }
+.plan-today__passage {
+  font-size: .83rem; color: var(--color-primary);
+  border: 1px solid var(--color-border); border-radius: 4px;
+  padding: .2rem .55rem; text-decoration: none; background: var(--color-bg);
+}
+.plan-today__passage:hover { border-color: var(--color-primary); background: var(--color-surface); }
+.plan-today__done  { display: flex; align-items: center; gap: .5rem; }
+.plan-today__mark {
+  font-family: var(--font-ui); font-size: .8rem; padding: .25rem .7rem;
+  border-radius: 4px; border: 1px solid var(--color-border);
+  cursor: pointer; background: var(--color-surface); color: var(--color-text);
+}
+.plan-today__mark--done { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; font-weight: 600; }
+.plan-today__mark--done:hover { background: #c8e6c9; }
+.plan-today__mark:not(.plan-today__mark--done):hover { border-color: var(--color-primary); color: var(--color-primary); }
+.plan-today__complete-msg { font-size: .85rem; color: #2e7d32; font-weight: 600; }
+.plan-today__desc {
+  font-size: .78rem; color: var(--color-muted); font-style: italic;
+  padding: .25rem 0 0; display: block; flex-basis: 100%;
+}
+.plan-detail { margin-top: .75rem; }
+.plan-detail-toggle {
+  font-size: .78rem; color: var(--color-accent);
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.plan-detail-toggle:hover { text-decoration: underline; }
+.plan-calendar { margin-top: .6rem; display: none; }
+.plan-calendar--open { display: block; }
+.plan-calendar__row {
+  display: flex; align-items: baseline; gap: .6rem;
+  padding: .25rem 0; border-bottom: 1px solid var(--color-border); font-size: .83rem;
+}
+.plan-calendar__row:last-child { border-bottom: none; }
+.plan-calendar__row--today .plan-calendar__day { font-weight: 700; color: var(--color-primary); }
+.plan-calendar__row--done  .plan-calendar__passages { text-decoration: line-through; color: var(--color-muted); }
+.plan-calendar__day      { min-width: 65px; color: var(--color-muted); flex-shrink: 0; }
+.plan-calendar__passages { flex: 1; color: var(--color-text); }
+.plan-calendar__check    { width: 1.1rem; text-align: center; color: #4caf50; font-size: .9rem; flex-shrink: 0; }
+.plans-loading { color: var(--color-muted); font-style: italic; padding: 2rem 0; text-align: center; }
+
+/* ── Journal tab ─────────────────────────────────────────────────────────────── */
+
+.journal-page { /* reuse for panel */ }
+.journal-subtitle { color: var(--color-muted); font-size: .9rem; margin-bottom: 1.1rem; }
+
+/* sub-tab bar (prayers / reflections) */
+.journal-tabs {
+  display: flex; gap: 0; margin-bottom: 1.1rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.journal-tab {
+  font-family: var(--font-ui); font-size: .87rem;
+  padding: .48rem 1.1rem; border: none; background: none;
+  cursor: pointer; color: var(--color-muted);
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+  border-radius: 4px 4px 0 0;
+}
+.journal-tab:hover { color: var(--color-text); }
+.journal-tab--active { color: var(--color-primary); border-bottom-color: var(--color-primary); font-weight: 600; }
+
+/* buttons */
+.journal-btn {
+  font-family: var(--font-ui); font-size: .82rem;
+  padding: .35rem .85rem; border-radius: 5px;
+  border: 1px solid var(--color-border); cursor: pointer;
+  background: var(--color-surface); color: var(--color-text); white-space: nowrap;
+}
+.journal-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.journal-btn--primary { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.journal-btn--primary:hover { background: #4a3016; border-color: #4a3016; color: #fff; }
+.journal-btn--sm { font-size: .75rem; padding: .2rem .55rem; }
+
+/* action bar */
+.journal-bar {
+  display: flex; align-items: center; gap: .6rem;
+  margin-bottom: .85rem; flex-wrap: wrap;
+}
+.journal-search {
+  flex: 1; min-width: 160px; font-size: .85rem;
+  padding: .32rem .7rem; border: 1px solid var(--color-border);
+  border-radius: 5px; background: var(--color-bg); color: var(--color-text);
+}
+.journal-search:focus { outline: none; border-color: var(--color-primary); }
+.journal-count { font-size: .78rem; color: var(--color-muted); margin-left: auto; white-space: nowrap; }
+
+/* status filter pills */
+.journal-status-filters { display: flex; gap: .3rem; align-items: center; }
+.journal-status-btn {
+  font-family: var(--font-ui); font-size: .75rem; padding: .2rem .6rem;
+  border-radius: 999px; border: 1px solid var(--color-border);
+  background: var(--color-surface); color: var(--color-muted); cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.journal-status-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.journal-status-btn--active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+
+/* tag filter chips */
+.journal-tag-filters { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1.1rem; min-height: 0; }
+.journal-tag-filters:empty { display: none; }
+.journal-filter-chip {
+  font-size: .75rem; padding: .18rem .55rem; border-radius: 999px;
+  border: 1px solid var(--color-border); cursor: pointer;
+  background: var(--color-surface); color: var(--color-muted); font-family: var(--font-ui);
+  transition: background .12s, color .12s, border-color .12s; user-select: none;
+}
+.journal-filter-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.journal-filter-chip--active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.journal-filter-chip--clear  { color: var(--color-accent); border-style: dashed; }
+.journal-filter-chip--clear:hover { background: none; color: var(--color-primary); }
+
+/* tag chips on entries */
+.journal-entry-tags { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .3rem; }
+.journal-tag {
+  display: inline-flex; align-items: center; gap: .2rem;
+  font-size: .7rem; padding: .1rem .45rem; border-radius: 999px; border: 1px solid;
+  font-family: var(--font-ui); font-weight: 500; white-space: nowrap; cursor: pointer;
+}
+.journal-tag--people  { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+.journal-tag--place   { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+.journal-tag--topic   { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.journal-tag--default { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+[data-theme="dark"] .journal-tag--people { background: #1e3a5f; color: #93c5fd; border-color: #3b6ea5; }
+[data-theme="dark"] .journal-tag--place  { background: #064e3b; color: #6ee7b7; border-color: #065f46; }
+[data-theme="dark"] .journal-tag--topic  { background: #78350f; color: #fcd34d; border-color: #92400e; }
+
+/* form */
+.journal-form {
+  background: var(--color-surface); border: 1px solid var(--color-primary);
+  border-radius: 8px; padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
+}
+.journal-form h2 { font-size: 1rem; margin: 0 0 .85rem; color: var(--color-primary); }
+.journal-field { margin-bottom: .75rem; }
+.journal-field label {
+  display: block; font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--color-muted); margin-bottom: .25rem;
+}
+.journal-field label span { font-weight: 400; text-transform: none; }
+.journal-input, .journal-textarea {
+  width: 100%; box-sizing: border-box;
+  font-family: var(--font-body, Georgia, serif); font-size: .92rem;
+  padding: .4rem .65rem; border: 1px solid var(--color-border);
+  border-radius: 5px; background: var(--color-bg); color: var(--color-text); resize: vertical;
+}
+.journal-input:focus, .journal-textarea:focus { outline: none; border-color: var(--color-primary); }
+.journal-textarea { min-height: 110px; line-height: 1.6; }
+
+/* tag input widget */
+.journal-tag-input-wrap {
+  display: flex; flex-wrap: wrap; gap: .3rem; align-items: center;
+  padding: .3rem .55rem; border: 1px solid var(--color-border); border-radius: 5px;
+  background: var(--color-bg); min-height: 2.2rem; cursor: text;
+}
+.journal-tag-input-wrap:focus-within { border-color: var(--color-primary); }
+.journal-tag-input-wrap .journal-tag { cursor: default; }
+.journal-tag__rm {
+  background: none; border: none; cursor: pointer; font-size: .75rem;
+  color: inherit; padding: 0; line-height: 1; opacity: .7; margin-left: .1rem;
+}
+.journal-tag__rm:hover { opacity: 1; }
+.journal-tag-bare-input {
+  border: none; outline: none; background: transparent; font-size: .82rem;
+  color: var(--color-text); min-width: 120px; flex: 1;
+  font-family: var(--font-ui); padding: .1rem .2rem;
+}
+.journal-tag-category-btns { display: flex; gap: .3rem; margin-top: .3rem; }
+.journal-cat-btn {
+  font-size: .7rem; padding: .1rem .45rem; border-radius: 999px;
+  border: 1px solid var(--color-border); cursor: pointer;
+  background: var(--color-surface); font-family: var(--font-ui); color: var(--color-muted);
+}
+.journal-cat-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.journal-form-actions { display: flex; gap: .5rem; justify-content: flex-end; margin-top: .85rem; }
+
+/* entry cards */
+.journal-entry {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 8px; margin-bottom: .85rem; overflow: hidden;
+}
+.journal-entry--has-updates { border-left: 3px solid var(--color-accent); }
+.journal-entry--answered    { border-left: 3px solid #4caf50; }
+.journal-entry__head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: .75rem; padding: .75rem 1rem; cursor: pointer;
+}
+.journal-entry__head:hover { background: var(--color-bg); }
+.journal-entry__meta { flex: 1; min-width: 0; }
+.journal-entry__date {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--color-accent); margin-bottom: .15rem;
+}
+.journal-entry__title { font-size: .97rem; font-weight: 700; color: var(--color-text); margin: 0; }
+.journal-entry__preview {
+  font-size: .8rem; color: var(--color-muted); margin-top: .1rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.journal-entry__actions { display: flex; flex-direction: column; align-items: flex-end; gap: .3rem; flex-shrink: 0; }
+.journal-entry__btns { display: flex; gap: .3rem; }
+.journal-entry__btn {
+  font-size: .72rem; padding: .18rem .5rem; border: 1px solid var(--color-border);
+  border-radius: 4px; background: var(--color-surface); color: var(--color-muted);
+  cursor: pointer; white-space: nowrap; font-family: var(--font-ui);
+}
+.journal-entry__btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.journal-entry__btn--del:hover { border-color: #c0392b; color: #c0392b; }
+.journal-answered-badge { font-size: .72rem; font-weight: 700; color: #2e7d32; font-family: var(--font-ui); white-space: nowrap; }
+[data-theme="dark"] .journal-answered-badge { color: #66bb6a; }
+.journal-update-badge { font-size: .68rem; color: var(--color-accent); font-family: var(--font-ui); white-space: nowrap; }
+
+/* conversation thread */
+.journal-entry__body { display: none; border-top: 1px solid var(--color-border); }
+.journal-entry__body--open { display: block; }
+.journal-thread { padding: 0; }
+.journal-thread-item { padding: .7rem 1rem; border-bottom: 1px solid var(--color-border); position: relative; }
+.journal-thread-item:last-of-type { border-bottom: none; }
+.journal-thread-item--original { background: var(--color-bg); }
+.journal-thread-header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .45rem; }
+.journal-thread-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--color-primary); }
+.journal-thread-date  { font-size: .72rem; color: var(--color-muted); }
+.journal-thread-del {
+  background: none; border: none; cursor: pointer; font-size: .78rem;
+  color: var(--color-muted); padding: 0 .2rem; opacity: 0; transition: opacity .1s;
+}
+.journal-thread-item:hover .journal-thread-del { opacity: 1; }
+.journal-thread-del:hover { color: #c0392b; }
+.journal-thread-text {
+  font-family: var(--font-body, Georgia, serif); font-size: .91rem; line-height: 1.68;
+  color: var(--color-text); margin: 0; white-space: pre-wrap; word-break: break-word;
+}
+.journal-thread-refs { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .3rem; }
+.journal-thread-ref {
+  font-size: .75rem; color: var(--color-primary);
+  border: 1px solid var(--color-border); border-radius: 4px;
+  padding: .1rem .4rem; text-decoration: none; background: var(--color-bg);
+}
+.journal-thread-ref:hover { border-color: var(--color-primary); }
+
+/* add update area */
+.journal-update-area { padding: .6rem 1rem; background: var(--color-bg); border-top: 1px dashed var(--color-border); }
+.journal-add-update-btn {
+  font-size: .8rem; color: var(--color-accent); background: none; border: none;
+  cursor: pointer; padding: 0; font-family: var(--font-ui); font-weight: 600;
+}
+.journal-add-update-btn:hover { color: var(--color-primary); text-decoration: underline; }
+.journal-update-form { margin-top: .6rem; }
+.journal-update-form .journal-input { margin-bottom: .45rem; }
+.journal-update-form .journal-textarea { min-height: 72px; }
+
+/* export row */
+.journal-export-row {
+  margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border);
+  display: flex; gap: .5rem; flex-wrap: wrap;
+}
+.journal-empty { text-align: center; padding: 3rem 1rem; color: var(--color-muted); font-size: .9rem; }
+
+/* ── Worship tab ─────────────────────────────────────────────────────────────── */
+
+.worship-tabs {
+  display: flex; gap: 0; margin-bottom: 1.25rem; border-bottom: 2px solid var(--color-border);
+}
+.worship-tab {
+  font-family: var(--font-ui); font-size: .87rem;
+  padding: .48rem 1.1rem; border: none; background: none;
+  cursor: pointer; color: var(--color-muted);
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+}
+.worship-tab:hover { color: var(--color-text); }
+.worship-tab--active { color: var(--color-primary); border-bottom-color: var(--color-primary); font-weight: 600; }
+
+.worship-btn {
+  font-family: var(--font-ui); font-size: .82rem;
+  padding: .35rem .85rem; border-radius: 5px;
+  border: 1px solid var(--color-border); cursor: pointer;
+  background: var(--color-surface); color: var(--color-text);
+}
+.worship-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.worship-btn--primary { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.worship-btn--primary:hover { background: #4a3016; border-color: #4a3016; color: #fff; }
+.worship-btn--sm { font-size: .75rem; padding: .2rem .55rem; }
+.worship-btn--del:hover { border-color: #c0392b; color: #c0392b; }
+
+.worship-bar { display: flex; align-items: center; gap: .6rem; margin-bottom: .9rem; flex-wrap: wrap; }
+.worship-search {
+  flex: 1; min-width: 160px; font-size: .85rem;
+  padding: .32rem .7rem; border: 1px solid var(--color-border);
+  border-radius: 5px; background: var(--color-bg); color: var(--color-text);
+}
+.worship-search:focus { outline: none; border-color: var(--color-primary); }
+.worship-count { font-size: .78rem; color: var(--color-muted); margin-left: auto; white-space: nowrap; }
+
+.worship-form {
+  background: var(--color-surface); border: 1px solid var(--color-primary);
+  border-radius: 8px; padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
+}
+.worship-form h2 { font-size: 1rem; margin: 0 0 .85rem; color: var(--color-primary); }
+.worship-field { margin-bottom: .7rem; }
+.worship-field label {
+  display: block; font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--color-muted); margin-bottom: .22rem;
+}
+.worship-field label span { font-weight: 400; text-transform: none; }
+.worship-input, .worship-textarea {
+  width: 100%; box-sizing: border-box;
+  font-family: var(--font-body, Georgia, serif); font-size: .92rem;
+  padding: .38rem .65rem; border: 1px solid var(--color-border);
+  border-radius: 5px; background: var(--color-bg); color: var(--color-text);
+}
+.worship-input:focus, .worship-textarea:focus { outline: none; border-color: var(--color-primary); }
+.worship-textarea { min-height: 90px; line-height: 1.6; resize: vertical; }
+.worship-row { display: flex; gap: .6rem; flex-wrap: wrap; }
+.worship-row .worship-field { flex: 1; min-width: 160px; }
+.worship-checkbox-row { display: flex; gap: 1rem; align-items: center; margin-bottom: .7rem; flex-wrap: wrap; }
+.worship-checkbox-label { display: flex; align-items: center; gap: .35rem; font-size: .88rem; color: var(--color-text); cursor: pointer; }
+.worship-form-actions { display: flex; gap: .5rem; justify-content: flex-end; margin-top: .85rem; }
+
+.worship-entry {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 8px; margin-bottom: .75rem; overflow: hidden;
+}
+.worship-entry__head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: .75rem; padding: .75rem 1rem; cursor: pointer;
+}
+.worship-entry__head:hover { background: var(--color-bg); }
+.worship-entry__meta { flex: 1; min-width: 0; }
+.worship-entry__date {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--color-accent); margin-bottom: .12rem;
+}
+.worship-entry__title { font-size: .97rem; font-weight: 700; color: var(--color-text); }
+.worship-entry__sub   { font-size: .8rem; color: var(--color-muted); margin-top: .1rem; }
+.worship-entry__btns  { display: flex; gap: .3rem; flex-shrink: 0; }
+.worship-entry__body  { display: none; border-top: 1px solid var(--color-border); padding: .8rem 1rem .9rem; }
+.worship-entry__body--open { display: block; }
+.worship-body-section { margin-bottom: .7rem; }
+.worship-body-section:last-child { margin-bottom: 0; }
+.worship-body-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--color-muted); margin-bottom: .25rem;
+}
+.worship-body-text {
+  font-family: var(--font-body, Georgia, serif); font-size: .91rem;
+  line-height: 1.65; color: var(--color-text); white-space: pre-wrap; margin: 0;
+}
+.worship-passage-link { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+.worship-passage-link:hover { text-decoration: underline; }
+.worship-badges { display: flex; gap: .35rem; flex-wrap: wrap; margin-top: .3rem; }
+.worship-badge {
+  font-size: .7rem; padding: .08rem .42rem; border-radius: 10px;
+  border: 1px solid var(--color-border); background: var(--color-bg); color: var(--color-muted);
+  font-family: var(--font-ui);
+}
+.worship-badge--green { border-color: #4caf50; color: #2e7d32; background: #f1f8e9; }
+[data-theme="dark"] .worship-badge--green { background: #1b3a1b; color: #66bb6a; }
+
+.fast-type-full    { border-color: var(--color-primary); color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+.fast-type-partial { border-color: var(--color-accent); color: var(--color-accent); }
+.fast-type-liquid  { border-color: #2980b9; color: #2980b9; }
+.worship-empty { text-align: center; padding: 3rem 1rem; color: var(--color-muted); font-size: .9rem; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .disc-tab { padding: .55rem .7rem; font-size: .78rem; }
+  .plan-card__top { flex-direction: column; }
+}

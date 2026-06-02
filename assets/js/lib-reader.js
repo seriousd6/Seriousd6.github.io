@@ -75,6 +75,26 @@ function _render(doc, content) {
   wireRefLinks(content);
   autoTagRefs();
   autoTagTermsWhenReady(content);
+
+  // Record that this document was opened so the home page can show "Continue reading"
+  _saveLibProgress(docId, doc.title, doc.totalSections);
+}
+
+var _LIB_PROGRESS_KEY = 'bsw_lib_progress';
+
+function _saveLibProgress(docId, title, totalSections) {
+  try {
+    var data = JSON.parse(localStorage.getItem(_LIB_PROGRESS_KEY) || '{}');
+    var today = new Date().toISOString().slice(0, 10);
+    // Keep at most 10 recent documents; evict oldest by lastRead
+    data[docId] = { title: title, href: location.href, lastRead: today, totalSections: totalSections || 0 };
+    var keys = Object.keys(data);
+    if (keys.length > 10) {
+      keys.sort(function (a, b) { return data[a].lastRead < data[b].lastRead ? -1 : 1; });
+      delete data[keys[0]];
+    }
+    localStorage.setItem(_LIB_PROGRESS_KEY, JSON.stringify(data));
+  } catch (e) { /* non-fatal */ }
 }
 
 function _sectionLabel(doc) {

@@ -174,6 +174,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;    /* Chrome: allow horizontal swipe across tabs */
 }
 .bsw-modal__tabs::-webkit-scrollbar { display: none; }
 
@@ -576,6 +577,38 @@
   position: relative;
 }
 
+.search-input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.search-input-row .search-page-input {
+  flex: 1;
+  width: auto;
+}
+
+.search-go-btn {
+  padding: 0 1.2rem;
+  background: var(--color-primary, #5c3d1e);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s;
+  flex-shrink: 0;
+}
+
+.search-go-btn:hover,
+.search-go-btn:focus-visible {
+  background: var(--color-primary-dark, #3d2810);
+  outline: none;
+}
+
 .search-tab-row {
   display: flex;
   gap: 0;
@@ -884,6 +917,18 @@
   font-size: 0.78rem;
   color: var(--color-muted, #7a6a55);
   white-space: nowrap;
+}
+
+.omni-lib-card__snippet {
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  color: var(--color-muted, #7a6a55);
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+.omni-lib-card {
+  flex-wrap: wrap;
 }
 
 .search-page-input {
@@ -1410,6 +1455,8 @@
   text-decoration: none;
   white-space: nowrap;
   padding: 3px 8px;
+  /* --color-bg-alt is only defined in dark mode; transparent fallback leaves light mode unchanged */
+  background: var(--color-bg-alt, transparent);
   border: 1px solid var(--color-border, #e0d5c4);
   border-radius: 4px;
   transition: background 0.12s, border-color 0.12s, color 0.12s;
@@ -1421,6 +1468,19 @@
   color: var(--color-primary, #5c3d1e);
 }
 .bsw-modal__compare-link[hidden] { display: none; }
+
+/* Active state: verse is in memory list */
+.bsw-modal__memory-btn--active {
+  background: var(--color-primary, #5c3d1e);
+  color: var(--color-on-primary, #fff);
+  border-color: var(--color-primary, #5c3d1e);
+}
+.bsw-modal__memory-btn--active:hover {
+  background: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary, #5c3d1e);
+  color: var(--color-on-primary, #fff);
+  opacity: 0.85;
+}
 
 /* ── Copy verse button ───────────────────────────────────── */
 .bsw-modal__copy-btn {
@@ -1480,6 +1540,8 @@
 
 /* ── Modal verse panel (full-width; cross-refs now inline footnotes) ─────── */
 .bsw-modal__split {
+  display: flex;          /* needed so flex: 1 children can fill height on iOS */
+  flex-direction: column;
   flex: 1;
   overflow: hidden;
   min-height: 0;
@@ -1488,8 +1550,12 @@
 .bsw-modal__split[hidden] { display: none; }
 
 .bsw-modal__verse-col {
-  height: 100%;
+  flex: 1;                /* replaces height: 100% which resolves to 0 on iOS */
+  min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;   /* tells Android Chrome this element scrolls vertically */
   padding: 0.75rem 1.25rem 1rem;
 }
 
@@ -1523,7 +1589,11 @@
 .bsw-modal__commentary-panel {
   padding: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
   font-family: var(--font-body, Georgia, serif);
   display: flex;
   flex-direction: column;
@@ -1558,7 +1628,11 @@
 .bsw-modal__comm-body {
   padding: 0.75rem 1.25rem 1rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
 }
 
 .bsw-modal__commentary-section {
@@ -1607,7 +1681,11 @@
 .bsw-modal__wordstudy-panel {
   padding: 0.75rem 1.25rem 1rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
   font-family: var(--font-ui, system-ui, sans-serif);
 }
 .bsw-modal__wordstudy-panel[hidden] { display: none; }
@@ -1675,7 +1753,11 @@
 .bsw-modal__notes-panel {
   padding: 1rem 1.25rem;
   overflow-y: auto;
-  max-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  flex: 1;
+  min-height: 0;
 }
 
 .bsw-note-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
@@ -1769,7 +1851,11 @@
 .bsw-modal__topics-panel {
   padding: 1rem 1.25rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
 }
 .bsw-modal__topics-panel[hidden] { display: none; }
 
@@ -2132,12 +2218,13 @@
 }
 .reader-bookinfo-close:hover { background: var(--color-border); color: var(--color-text); }
 .reader-bookinfo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.5rem;
   font-size: 0.82rem;
   color: var(--color-muted);
   margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+.reader-bookinfo-meta-sep {
+  color: var(--color-border);
 }
 .reader-bookinfo-purpose {
   color: var(--color-text);
@@ -2188,14 +2275,6 @@
 .reader-bookinfo-ch {
   color: var(--color-muted);
   font-size: 0.78rem;
-}
-.reader-bookinfo-timeline {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.6rem;
-  margin-top: 0.5rem;
-  line-height: 1.5;
 }
 .reader-bookinfo-tldate { font-style: italic; }
 .reader-bookinfo-loading,
@@ -2258,7 +2337,11 @@
 .bsw-modal__confessions-panel {
   padding: 1rem 1.25rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
   font-family: var(--font-ui, system-ui, sans-serif);
 }
 .bsw-modal__confessions-panel[hidden] { display: none; }
@@ -2267,7 +2350,11 @@
 .bsw-modal__dictionary-panel {
   padding: 1rem 1.25rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   flex: 1;
+  min-height: 0;
   font-family: var(--font-ui, system-ui, sans-serif);
 }
 .bsw-modal__dictionary-panel[hidden] { display: none; }
@@ -2634,13 +2721,27 @@ kbd {
 .reader-shortcuts-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
 
 /* ── Compact 3-item timeline in Book Info panel ──────────────────────────── */
+.reader-bookinfo-timeline {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.65rem;
+  margin-top: 0.65rem;
+}
 .reader-bookinfo-timeline .ri-tl-row--compact {
   justify-content: space-around;
+  padding-bottom: 0.25rem;
 }
 .reader-bookinfo-timeline .ri-tl-item {
   min-width: 80px;
   max-width: none;
   flex: 1 1 0;
+}
+/* Labels in the compact panel need smaller text to fit three items */
+.reader-bookinfo-timeline .ri-tl-label {
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+.reader-bookinfo-timeline .ri-tl-label--current {
+  font-size: 0.75rem;
 }
 
 /* ── Empty state component (Notes, Bookmarks, Memorize, etc.) ─────────────── */
@@ -3110,6 +3211,11 @@ kbd {
 .bsw-modal__crossrefs-panel {
   padding: 0.75rem 1rem 1.25rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  flex: 1;
+  min-height: 0;
 }
 
 .bsw-modal__xref-tab-hdr {
@@ -3265,4 +3371,213 @@ kbd {
 @media (max-width: 480px) {
   .bsw-onboard-features { grid-template-columns: 1fr; }
   .bsw-onboard-card { padding: 1.5rem 1.25rem 1.25rem; }
+}
+
+/* ── Mobile: bottom-sheet modal + touch targets ──────────────────────────────
+   On phones the verse modal slides up from the bottom edge as a sheet,
+   giving more vertical reading space and a natural thumb-friendly target area.
+   ─────────────────────────────────────────────────────────────────────────── */
+@keyframes bsw-sheet-up {
+  from { transform: translateY(60px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@media (max-width: 767px) {
+  /* Backdrop: pure scrim only — the modal positions itself directly via
+     position:fixed, so backdrop flex layout cannot affect its size or offset. */
+  .bsw-modal-backdrop {
+    padding: 0;
+  }
+
+  /* Modal: self-positioned bottom sheet.
+     position:fixed with explicit left/right/bottom completely bypasses the
+     backdrop's flex context, which was the source of the width and offset
+     bugs on Chrome (100vw scrollbar discrepancy, justify-content centering). */
+  .bsw-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 9101;          /* above backdrop (9100) */
+    width: 100%;
+    max-width: none;
+    border-radius: 16px 16px 0 0;
+    height: 90vh;           /* fallback: browsers without dvh */
+    height: 92dvh;          /* dvh shrinks when Chrome address bar is visible */
+    animation: bsw-sheet-up 0.22s ease;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    margin: 0;
+  }
+
+  /* Header: two-row layout on mobile.
+     Row 1 — title (truncated) + close: always on screen together.
+     Row 2 — action buttons: pushed below via ::after flex break so they
+     can never crowd the close button off the right edge. */
+  .bsw-modal__header {
+    padding: 1.1rem 0.75rem 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.4rem;
+    align-content: flex-start;
+  }
+  .bsw-modal__header::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 4px;
+    background: var(--color-border, #e0d5c4);
+    border-radius: 2px;
+  }
+
+  /* Row 1: title fills remaining space and truncates */
+  .bsw-modal__title {
+    order: 1;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Row 1: close stays pinned to the far right, always reachable */
+  .bsw-modal__close {
+    order: 2;
+    flex-shrink: 0;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: -6px -4px -6px 0;
+  }
+
+  /* Zero-height flex break forces everything with order >= 4 onto row 2 */
+  .bsw-modal__header::after {
+    content: '';
+    order: 3;
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  /* Row 2: action buttons — compact, wrap if many are visible at once */
+  .bsw-modal__read-ch,
+  .bsw-modal__verse-study-link,
+  .bsw-modal__compare-link,
+  .bsw-modal__memory-btn,
+  .bsw-modal__copy-btn,
+  .bsw-modal__share-btn {
+    order: 4;
+  }
+  /* Only style when actually visible (JS reveals via removeAttribute('hidden')) */
+  .bsw-modal__read-ch:not([hidden]),
+  .bsw-modal__verse-study-link:not([hidden]),
+  .bsw-modal__compare-link:not([hidden]),
+  .bsw-modal__memory-btn:not([hidden]),
+  .bsw-modal__copy-btn:not([hidden]),
+  .bsw-modal__share-btn:not([hidden]) {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.6rem;
+    min-height: 36px;
+    white-space: nowrap;
+  }
+
+  .bsw-modal__body,
+  .bsw-modal__xrefs-panel {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  /* Tab bar: wrap to multiple rows instead of horizontal scroll */
+  .bsw-modal__tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    touch-action: auto;
+  }
+
+  /* Tabs: 3-per-row grid via flex-basis 33%, tighter padding to fit text */
+  .bsw-modal__tab {
+    flex: 1 0 30%;          /* ~3 per row; flex-grow fills any remainder */
+    padding: 0.55rem 0.35rem;
+    font-size: 0.74rem;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* XRef chips: taller */
+  .bsw-modal__xref-link {
+    padding: 0.35rem 0.65rem;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Copy / Share buttons: taller */
+  .bsw-modal__copy-btn,
+  .bsw-modal__share-btn {
+    padding: 0.4rem 0.75rem;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Version select: 16px prevents iOS auto-zoom */
+  .bsw-modal__version-bar select {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* Search overlay → pure scrim; panel self-positions */
+  .bsw-search-overlay {
+    padding: 0;
+  }
+
+  .bsw-search-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 9201;          /* above search overlay (9200) */
+    width: 100%;
+    max-width: none;
+    border-radius: 16px 16px 0 0;
+    height: 90vh;           /* fallback */
+    height: 95dvh;
+    animation: bsw-sheet-up 0.22s ease;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    margin: 0;
+  }
+
+  /* 16px minimum prevents iOS auto-zoom on focus */
+  .bsw-search-input {
+    font-size: 1rem;
+  }
+
+  .bsw-search-close {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .bsw-search-result {
+    padding: 0.65rem 1rem;
+    min-height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

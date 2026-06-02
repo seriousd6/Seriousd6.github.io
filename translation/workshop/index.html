@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <title>MKT Translation Workshop — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/workshop.css" />
+</head>
+<body class="ws-body">
+
+  <div id="workshop-container" class="ws-page">
+
+    <!-- Top bar -->
+    <div class="ws-topbar">
+      <div class="ws-topbar__title">
+        <a href="../../" class="ws-back-link" title="Back to main site">← Site</a>
+        <span class="ws-topbar__sep">|</span>
+        <span class="ws-topbar__icon">⚙</span>
+        <span>MKT Translation Workshop</span>
+        <span class="ws-topbar__private">private</span>
+      </div>
+      <div class="ws-topbar__stats" id="ws-topbar-stats"></div>
+      <div class="ws-topbar__actions">
+        <button class="ws-btn ws-btn--sm" id="ws-import-btn" title="Import a previously exported decisions JSON">Import</button>
+        <button class="ws-btn ws-btn--sm" id="ws-export-btn" title="Export all decisions as JSON">Export JSON</button>
+        <input type="file" id="ws-import-file" accept=".json" hidden />
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="ws-loading" class="ws-loading">
+      <div>
+        <div class="ws-loading__text" id="ws-loading-text">Loading glossaries…</div>
+        <div class="ws-loading__bar"><div class="ws-loading__bar-inner"></div></div>
+      </div>
+    </div>
+
+    <!-- Main 3-column layout (shown after load) -->
+    <div class="ws-layout" id="ws-layout" hidden>
+
+      <!-- Column 1: Phase navigation -->
+      <div class="ws-col ws-col--nav" id="ws-nav"></div>
+
+      <!-- Column 2: Entry queue -->
+      <div class="ws-col ws-col--queue">
+        <div class="ws-queue-header">
+          <input type="search" id="ws-search" class="ws-search" placeholder="Filter entries…" autocomplete="off" />
+          <span id="ws-count" class="ws-count"></span>
+        </div>
+        <div id="ws-queue" class="ws-queue"></div>
+      </div>
+
+      <!-- Column 3: Lexical dossier -->
+      <div class="ws-col ws-col--dossier" id="ws-dossier">
+        <p class="ws-placeholder">← Select an entry to begin reviewing</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module">
+    import { initTheme } from '../../assets/js/core.js';
+    import { initWorkshopPage } from '../../assets/js/workshop.js';
+    initTheme();
+    initWorkshopPage().catch(err => {
+      const el = document.getElementById('ws-loading-text');
+      if (el) el.textContent = 'Error loading workshop: ' + err.message;
+      console.error('[Workshop]', err);
+    });
+  </script>
+</body>
+</html>

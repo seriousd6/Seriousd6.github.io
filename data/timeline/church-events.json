@@ -1,0 +1,427 @@
+{
+  "eras": [
+    { "id": "apostolic",      "label": "The Apostolic Age",    "color": "#2d6e9e" },
+    { "id": "ante-nicene",    "label": "Ante-Nicene Era",      "color": "#7c4fa0" },
+    { "id": "nicene",         "label": "The Nicene Era",       "color": "#9b2335" },
+    { "id": "early-medieval", "label": "Early Medieval",       "color": "#4a8a5a" },
+    { "id": "high-medieval",  "label": "High Medieval",        "color": "#9b7a1e" },
+    { "id": "reformation",    "label": "The Reformation",      "color": "#c44d29" },
+    { "id": "post-reform",    "label": "Post-Reformation",     "color": "#2a6b6b" },
+    { "id": "modern",         "label": "Modern Era",           "color": "#1a5fa8" }
+  ],
+  "events": [
+    {
+      "id": "pentecost",
+      "label": "Pentecost",
+      "yearNum": 30,
+      "yearDisplay": "AD 30",
+      "era": "apostolic",
+      "ref": "Acts 2:1-4",
+      "desc": "The Holy Spirit descends on the disciples in Jerusalem; 3,000 are baptised — the church is born."
+    },
+    {
+      "id": "stephen-martyred",
+      "label": "Stephen Martyred",
+      "yearNum": 34,
+      "yearDisplay": "c. AD 34",
+      "era": "apostolic",
+      "ref": "Acts 7:59",
+      "desc": "The first Christian martyr is stoned in Jerusalem, triggering a persecution that scatters believers across Judea and Samaria."
+    },
+    {
+      "id": "pauls-conversion",
+      "label": "Paul's Conversion",
+      "yearNum": 35,
+      "yearDisplay": "c. AD 35",
+      "era": "apostolic",
+      "ref": "Acts 9:3-6",
+      "desc": "Saul of Tarsus, the church's chief persecutor, is encountered by the risen Christ on the road to Damascus and becomes its greatest missionary."
+    },
+    {
+      "id": "jerusalem-council",
+      "label": "Jerusalem Council",
+      "yearNum": 49,
+      "yearDisplay": "c. AD 49",
+      "era": "apostolic",
+      "ref": "Acts 15:28-29",
+      "desc": "Apostles and elders gather in Jerusalem to settle whether Gentile converts must be circumcised — establishing grace apart from the Mosaic law."
+    },
+    {
+      "id": "destruction-jerusalem",
+      "label": "Jerusalem Destroyed",
+      "yearNum": 70,
+      "yearDisplay": "AD 70",
+      "era": "apostolic",
+      "ref": "Matthew 24:2",
+      "desc": "Roman general Titus destroys the Temple, fulfilling Christ's prophecy. The church, already scattered, becomes irreversibly Gentile-majority."
+    },
+    {
+      "id": "canon-completed",
+      "label": "Apostolic Witness Closes",
+      "yearNum": 96,
+      "yearDisplay": "c. AD 96",
+      "era": "apostolic",
+      "ref": "Revelation 22:20",
+      "desc": "With John's death on Patmos, the last eyewitness to Christ departs. The Apostolic Age ends; the church now lives by the completed written testimony."
+    },
+    {
+      "id": "polycarp-martyred",
+      "label": "Polycarp Martyred",
+      "yearNum": 155,
+      "yearDisplay": "c. AD 155",
+      "era": "ante-nicene",
+      "ref": "Philippians 1:21",
+      "desc": "Bishop of Smyrna and disciple of the apostle John, Polycarp is burned alive at age 86. His death epitomises the ante-Nicene church's theology of martyrdom."
+    },
+    {
+      "id": "justin-martyr",
+      "label": "Justin Martyr",
+      "yearNum": 165,
+      "yearDisplay": "c. AD 165",
+      "era": "ante-nicene",
+      "ref": "1 Peter 3:15",
+      "desc": "The philosopher-apologist defends Christianity before Roman emperors, pioneering Christian engagement with Greco-Roman thought before his own martyrdom."
+    },
+    {
+      "id": "irenaeus",
+      "label": "Irenaeus — Against Heresies",
+      "yearNum": 180,
+      "yearDisplay": "c. AD 180",
+      "era": "ante-nicene",
+      "ref": "1 Timothy 6:20",
+      "desc": "Bishop of Lyon refutes Gnosticism with a systematic defence of apostolic tradition, Scripture, and episcopal succession — the first great work of Christian theology."
+    },
+    {
+      "id": "tertullian",
+      "label": "Tertullian: Latin Theology",
+      "yearNum": 210,
+      "yearDisplay": "c. AD 200–220",
+      "era": "ante-nicene",
+      "ref": "Romans 3:4",
+      "desc": "Carthaginian lawyer-theologian forges Latin Christian vocabulary — including trinitas (Trinity) — and becomes the father of Western theology."
+    },
+    {
+      "id": "origen",
+      "label": "Origen — Alexandrian School",
+      "yearNum": 230,
+      "yearDisplay": "c. AD 220–250",
+      "era": "ante-nicene",
+      "ref": "2 Timothy 2:15",
+      "desc": "Origen of Alexandria produces the Hexapla, systematic theology (De Principiis), and a prolific biblical commentary tradition — the most productive scholar of the early church."
+    },
+    {
+      "id": "diocletian-persecution",
+      "label": "Diocletian Persecution",
+      "yearNum": 303,
+      "yearDisplay": "AD 303–311",
+      "era": "ante-nicene",
+      "ref": "Revelation 2:10",
+      "desc": "The Great Persecution: Diocletian orders churches burned, Scriptures destroyed, and clergy imprisoned. The church's refusal to surrender its Scriptures — the traditores — shapes canon debates for generations."
+    },
+    {
+      "id": "nicaea-i",
+      "label": "Council of Nicaea I",
+      "yearNum": 325,
+      "yearDisplay": "AD 325",
+      "era": "nicene",
+      "ref": "John 1:1",
+      "desc": "Constantine gathers 318 bishops at Nicaea to settle the Arian controversy. The council affirms Christ is homoousios — of the same substance as the Father."
+    },
+    {
+      "id": "athanasius",
+      "label": "Athanasius Contra Mundum",
+      "yearNum": 345,
+      "yearDisplay": "AD 328–373",
+      "era": "nicene",
+      "ref": "John 10:30",
+      "desc": "Bishop of Alexandria is exiled five times for defending Nicene orthodoxy against Arian emperors. His tenacity earns the phrase 'Athanasius against the world.'"
+    },
+    {
+      "id": "constantinople-i",
+      "label": "Council of Constantinople I",
+      "yearNum": 381,
+      "yearDisplay": "AD 381",
+      "era": "nicene",
+      "ref": "John 16:13",
+      "desc": "Expanded the Nicene Creed, affirming the full divinity of the Holy Spirit (against Macedonians) and settling the final shape of Trinitarian doctrine."
+    },
+    {
+      "id": "jerome-vulgate",
+      "label": "Jerome — The Vulgate",
+      "yearNum": 390,
+      "yearDisplay": "c. AD 382–405",
+      "era": "nicene",
+      "ref": "Psalm 119:105",
+      "desc": "Jerome translates the Hebrew Old Testament and Greek New Testament into Latin — the Vulgate becomes the Bible of Western Christendom for a thousand years."
+    },
+    {
+      "id": "augustine",
+      "label": "Augustine of Hippo",
+      "yearNum": 410,
+      "yearDisplay": "c. AD 396–430",
+      "era": "nicene",
+      "ref": "Romans 9:15-16",
+      "desc": "Bishop of Hippo produces the Confessions, City of God, and definitive treatises on grace, free will, and original sin — the most influential theologian in Western history."
+    },
+    {
+      "id": "chalcedon",
+      "label": "Council of Chalcedon",
+      "yearNum": 451,
+      "yearDisplay": "AD 451",
+      "era": "nicene",
+      "ref": "Philippians 2:6-8",
+      "desc": "The fourth ecumenical council defines Christ as one Person in two natures — fully divine and fully human — using the four adverbs: inconfusedly, unchangeably, indivisibly, inseparably."
+    },
+    {
+      "id": "council-orange",
+      "label": "Council of Orange II",
+      "yearNum": 529,
+      "yearDisplay": "AD 529",
+      "era": "early-medieval",
+      "ref": "Ephesians 2:8-9",
+      "desc": "Caesarius of Arles leads a provincial synod in southern Gaul that condemns Semi-Pelagianism, affirming that even the first movement of the will toward God is a gift of grace."
+    },
+    {
+      "id": "benedictine-rule",
+      "label": "Rule of Saint Benedict",
+      "yearNum": 540,
+      "yearDisplay": "c. AD 540",
+      "era": "early-medieval",
+      "ref": "Psalm 119:164",
+      "desc": "Benedict of Nursia writes his Rule organising monastic life around prayer, work, and hospitality. Benedictine monasteries become the centres of literacy, mission, and agriculture in medieval Europe."
+    },
+    {
+      "id": "gregory-great",
+      "label": "Gregory the Great",
+      "yearNum": 595,
+      "yearDisplay": "AD 590–604",
+      "era": "early-medieval",
+      "ref": "Matthew 28:19",
+      "desc": "Pope Gregory I sends Augustine of Canterbury to evangelise England, reforms the liturgy, and codifies pastoral theology — defining the medieval papal office."
+    },
+    {
+      "id": "islam-rises",
+      "label": "Rise of Islam",
+      "yearNum": 632,
+      "yearDisplay": "AD 610–732",
+      "era": "early-medieval",
+      "desc": "Muhammad's death launches rapid Islamic expansion. By 732 Muslim forces reach Tours, France. North Africa, the Middle East, and Persia — once heartlands of the church — are largely lost."
+    },
+    {
+      "id": "charlemagne",
+      "label": "Charlemagne Crowned",
+      "yearNum": 800,
+      "yearDisplay": "AD 800",
+      "era": "early-medieval",
+      "ref": "Romans 13:1",
+      "desc": "Pope Leo III crowns Charlemagne Holy Roman Emperor — cementing the fusion of church and state that defines medieval Christendom and sets the stage for centuries of church-empire conflict."
+    },
+    {
+      "id": "filioque",
+      "label": "The Filioque Dispute",
+      "yearNum": 867,
+      "yearDisplay": "c. AD 850–867",
+      "era": "early-medieval",
+      "ref": "John 15:26",
+      "desc": "Western churches insert filioque ('and the Son') into the Nicene Creed without an ecumenical council. Eastern patriarch Photius condemns it — the first major clash before the Great Schism."
+    },
+    {
+      "id": "great-schism",
+      "label": "The Great Schism",
+      "yearNum": 1054,
+      "yearDisplay": "AD 1054",
+      "era": "high-medieval",
+      "ref": "John 17:21",
+      "desc": "Cardinal Humbert and Patriarch Cerularius exchange mutual excommunications. Rome and Constantinople divide into Roman Catholic and Eastern Orthodox, a separation unhealed to this day."
+    },
+    {
+      "id": "anselm",
+      "label": "Anselm — Cur Deus Homo",
+      "yearNum": 1098,
+      "yearDisplay": "AD 1098",
+      "era": "high-medieval",
+      "ref": "Isaiah 53:5",
+      "desc": "Archbishop of Canterbury writes the classic formulation of the satisfaction theory of atonement — why the God-man must die to satisfy the honour (and later, justice) of God."
+    },
+    {
+      "id": "crusades",
+      "label": "The Crusades Begin",
+      "yearNum": 1099,
+      "yearDisplay": "AD 1096–1099",
+      "era": "high-medieval",
+      "ref": "Luke 9:54-55",
+      "desc": "Pope Urban II launches the First Crusade to reclaim Jerusalem. The crusading movement spans two centuries, leaving a lasting wound between Christianity, Islam, and Eastern Orthodoxy."
+    },
+    {
+      "id": "aquinas",
+      "label": "Thomas Aquinas",
+      "yearNum": 1270,
+      "yearDisplay": "c. AD 1265–1274",
+      "era": "high-medieval",
+      "ref": "Colossians 2:3",
+      "desc": "Dominican theologian synthesises Aristotelian philosophy with Christian theology in the Summa Theologica — the summit of Scholasticism and the foundation of Roman Catholic systematic theology."
+    },
+    {
+      "id": "wycliffe",
+      "label": "John Wycliffe",
+      "yearNum": 1380,
+      "yearDisplay": "c. AD 1375–1384",
+      "era": "high-medieval",
+      "ref": "Matthew 4:4",
+      "desc": "Oxford theologian attacks papal corruption and translates the Bible into English — the 'Morning Star of the Reformation.' His followers, the Lollards, precede Luther by 150 years."
+    },
+    {
+      "id": "hus-martyred",
+      "label": "Jan Hus Burned",
+      "yearNum": 1415,
+      "yearDisplay": "AD 1415",
+      "era": "high-medieval",
+      "ref": "Acts 5:29",
+      "desc": "Czech reformer Jan Hus is burned at the Council of Constance despite a promise of safe conduct. His martyrdom ignites the Hussite movement and plants the seed of the Reformation in Bohemia."
+    },
+    {
+      "id": "gutenberg-bible",
+      "label": "Gutenberg Bible",
+      "yearNum": 1455,
+      "yearDisplay": "AD 1455",
+      "era": "high-medieval",
+      "ref": "Isaiah 40:8",
+      "desc": "Johannes Gutenberg prints the first Bible with movable type. Mass printing transforms Scripture access, making the coming Reformation theologically explosive in a way prior movements could not be."
+    },
+    {
+      "id": "luther-95-theses",
+      "label": "Luther's 95 Theses",
+      "yearNum": 1517,
+      "yearDisplay": "AD 1517",
+      "era": "reformation",
+      "ref": "Romans 1:17",
+      "desc": "Martin Luther posts his 95 Theses in Wittenberg, igniting the Protestant Reformation with the doctrine of justification by faith alone (sola fide) through grace alone (sola gratia)."
+    },
+    {
+      "id": "diet-of-worms",
+      "label": "Diet of Worms",
+      "yearNum": 1521,
+      "yearDisplay": "AD 1521",
+      "era": "reformation",
+      "ref": "Acts 4:19-20",
+      "desc": "Luther refuses to recant before Emperor Charles V: 'Here I stand.' The moment seals the break with Rome and the principle that Scripture alone (sola Scriptura) is the supreme authority."
+    },
+    {
+      "id": "anabaptists",
+      "label": "Anabaptist Movement",
+      "yearNum": 1525,
+      "yearDisplay": "AD 1525",
+      "era": "reformation",
+      "ref": "Matthew 28:19",
+      "desc": "The Radical Reformation begins in Zurich. Anabaptists reject infant baptism and state-church fusion, practising believer's baptism and voluntary church membership — forerunners of Baptist and free-church traditions."
+    },
+    {
+      "id": "calvin-geneva",
+      "label": "Calvin's Geneva",
+      "yearNum": 1541,
+      "yearDisplay": "AD 1536–1564",
+      "era": "reformation",
+      "ref": "Romans 9:11",
+      "desc": "John Calvin establishes Geneva as a model Reformed city and produces the Institutes of the Christian Religion — the definitive systematic theology of the Reformed tradition and a blueprint for Reformed polity worldwide."
+    },
+    {
+      "id": "council-of-trent",
+      "label": "Council of Trent",
+      "yearNum": 1553,
+      "yearDisplay": "AD 1545–1563",
+      "era": "reformation",
+      "ref": "Galatians 1:8",
+      "desc": "The Roman Catholic Counter-Reformation response to Protestantism: Scripture plus tradition as co-equal authority, justification by infused grace, and the seven sacraments reaffirmed. The confessional divide solidifies."
+    },
+    {
+      "id": "westminster",
+      "label": "Westminster Assembly",
+      "yearNum": 1646,
+      "yearDisplay": "AD 1643–1649",
+      "era": "reformation",
+      "ref": "2 Timothy 3:16-17",
+      "desc": "English and Scottish divines produce the Westminster Confession of Faith and Catechisms — the most precise and enduring summary of Reformed theology, still confessed by Presbyterians worldwide."
+    },
+    {
+      "id": "great-awakening",
+      "label": "The Great Awakening",
+      "yearNum": 1740,
+      "yearDisplay": "AD 1735–1743",
+      "era": "post-reform",
+      "ref": "Acts 2:37",
+      "desc": "Jonathan Edwards and George Whitefield lead a transatlantic revival. The Awakening reshapes American religion, stresses conversion, and contributes to the evangelical tradition and eventually the abolition movement."
+    },
+    {
+      "id": "wesley-methodism",
+      "label": "Wesley and Methodism",
+      "yearNum": 1738,
+      "yearDisplay": "AD 1738–1791",
+      "era": "post-reform",
+      "ref": "John 3:3",
+      "desc": "John Wesley's Aldersgate experience and open-air preaching births Methodism — emphasising personal holiness, free grace, and discipleship classes that transformed working-class England and seeded global Wesleyan Christianity."
+    },
+    {
+      "id": "william-carey",
+      "label": "William Carey — Modern Missions",
+      "yearNum": 1793,
+      "yearDisplay": "AD 1792–1834",
+      "era": "post-reform",
+      "ref": "Isaiah 52:7",
+      "desc": "Baptist cobbler-theologian sails to India and founds the modern Protestant missionary movement, translating Scripture into dozens of Indian languages and inspiring a century of global missions."
+    },
+    {
+      "id": "spurgeon",
+      "label": "C.H. Spurgeon",
+      "yearNum": 1860,
+      "yearDisplay": "AD 1854–1892",
+      "era": "post-reform",
+      "ref": "1 Corinthians 1:23",
+      "desc": "The Prince of Preachers preaches to thousands weekly at the Metropolitan Tabernacle, produces thousands of sermons still in print, and establishes Spurgeon's College — the most influential Baptist preacher in history."
+    },
+    {
+      "id": "azusa-street",
+      "label": "Azusa Street Revival",
+      "yearNum": 1906,
+      "yearDisplay": "AD 1906–1909",
+      "era": "modern",
+      "ref": "Acts 2:4",
+      "desc": "William Seymour leads a three-year revival in Los Angeles that launches the global Pentecostal movement — now the fastest-growing segment of world Christianity, numbering over 600 million."
+    },
+    {
+      "id": "fundamentalist-modernist",
+      "label": "Fundamentalist Controversy",
+      "yearNum": 1922,
+      "yearDisplay": "AD 1920s–1930s",
+      "era": "modern",
+      "ref": "Jude 3",
+      "desc": "The Fundamentalist-Modernist controversy divides American Protestantism. Publication of The Fundamentals and J. Gresham Machen's Christianity and Liberalism define the fault lines of 20th-century theological debate."
+    },
+    {
+      "id": "billy-graham",
+      "label": "Billy Graham Crusades",
+      "yearNum": 1949,
+      "yearDisplay": "AD 1949–2005",
+      "era": "modern",
+      "ref": "John 3:16",
+      "desc": "Billy Graham preaches to over 200 million people across six decades, becoming the world's most recognisable evangelist and the face of postwar neo-evangelical Protestantism."
+    },
+    {
+      "id": "vatican-ii",
+      "label": "Vatican II",
+      "yearNum": 1963,
+      "yearDisplay": "AD 1962–1965",
+      "era": "modern",
+      "ref": "Ephesians 4:3",
+      "desc": "The Second Vatican Council, called by Pope John XXIII, opens the Roman Catholic Church to liturgical reform, ecumenical dialogue, and engagement with modernity — the most significant Catholic event since Trent."
+    },
+    {
+      "id": "global-south",
+      "label": "Global Christianity",
+      "yearNum": 2000,
+      "yearDisplay": "AD 1970–present",
+      "era": "modern",
+      "ref": "Revelation 7:9",
+      "desc": "The centre of world Christianity shifts to Africa, Asia, and Latin America. The Global South now holds a majority of the world's Christians — a demographic transformation unmatched since the first century."
+    }
+  ]
+}

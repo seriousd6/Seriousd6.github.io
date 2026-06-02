@@ -47,7 +47,7 @@
   var NAV = {
     tools: [
       { label: '📖 The Holy Bible', href: _r('read/') },
-      { label: '🔍 Search', href: _r('search/') }
+      { label: '🔍 Omni-search', href: _r('search/') }
     ],
     groups: [
       {
@@ -55,11 +55,11 @@
         label: 'Discipline',
         icon: '✝',
         children: [
-          { label: '📅 Reading Plans',  href: _r('plans/') },
-          { label: '🌅 Devotionals',    href: _r('devotionals/') },
-          { label: '⭐ Memory',          href: _r('memorize/') },
-          { label: '🙏 Prayer Journal', href: _r('journal/') },
-          { label: '📝 Personal Notes', href: _r('notes/') }
+          { label: '📅 Reading Plans',  href: _r('discipline/?tab=plans') },
+          { label: '🌅 Devotionals',    href: _r('discipline/?tab=devotionals') },
+          { label: '⭐ Memory',          href: _r('discipline/?tab=memory') },
+          { label: '✍️ Journal',         href: _r('discipline/?tab=journal') },
+          { label: '⛪ Worship Notes',   href: _r('discipline/?tab=worship') }
         ]
       },
       {
@@ -67,10 +67,12 @@
         label: 'Reference',
         icon: '📘',
         children: [
-          { label: '📖 Dictionary',  href: _r('dictionary/') },
-          { label: '🕰 Timeline',    href: _r('timeline/') },
-          { label: '🗺 Maps',        href: _r('maps/') },
-          { label: '☁ Word Cloud',  href: _r('wordcloud/') }
+          { label: '📖 Dictionary',         href: _r('dictionary/') },
+          { label: '🕰 Biblical Timeline',  href: _r('timeline/') },
+          { label: '🗺 Maps',               href: _r('maps/') },
+          { label: '☁ Word Cloud',          href: _r('wordcloud/') },
+          { label: '📊 Reading Progress',   href: _r('progress/') },
+          { label: '📝 My Notes',           href: _r('notes/') }
         ]
       },
       {
@@ -78,7 +80,8 @@
         label: 'Library',
         icon: '📚',
         children: [
-          { label: '📋 Library', href: _r('library/') }
+          { label: '📋 Library',                href: _r('library/') },
+          { label: '⛪ Church History Timeline', href: _r('church-history/') }
         ],
         subgroups: [
           { id: 'book-overviews',   label: 'Bible Book Overviews', items: [] },
@@ -329,6 +332,15 @@
 
     sidebar.appendChild(nav);
 
+    /* Translation Workshop — pinned footer at the very bottom of the sidebar */
+    var sbFooter = mk('div', 'sb-footer');
+    var wsLink = mk('a', 'sb-workshop-link');
+    wsLink.href = _r('translation/workshop/');
+    wsLink.textContent = '⚙ Translation Workshop';
+    if (isActive(_r('translation/workshop/'))) wsLink.setAttribute('aria-current', 'page');
+    sbFooter.appendChild(wsLink);
+    sidebar.appendChild(sbFooter);
+
     /* Collapse tab */
     var tab = mk('button', 'sidebar-tab');
     tab.setAttribute('aria-label', 'Toggle sidebar');
@@ -337,7 +349,7 @@
 
     /* Mobile topbar */
     var topbar    = mk('div', 'mobile-topbar');
-    topbar.setAttribute('aria-hidden', 'true');
+    topbar.setAttribute('role', 'banner');
     var hamburger = mk('button', 'mobile-topbar__hamburger');
     hamburger.setAttribute('aria-label', 'Open navigation');
     hamburger.setAttribute('aria-expanded', 'false');

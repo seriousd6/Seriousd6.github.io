@@ -817,30 +817,33 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
 
 /* ── Timeline — two-part: era arc + event track ─────────────── */
 
-/* Era arc bar */
+/* Era arc — segmented colour track replaces the old wrapping chip list */
 .ri-tl-arc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.2rem;
   margin-bottom: 1.1rem;
 }
+.ri-tl-arc-track {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.35rem;
+}
 .ri-tl-era {
-  font-family: var(--font-ui);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: var(--color-muted);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  padding: 0.18rem 0.5rem;
-  white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  flex: 1;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-border);
 }
 .ri-tl-era--active {
+  flex: 2;
   background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-on-primary);
+}
+.ri-tl-arc-lbl {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+.ri-tl-arc-lbl strong {
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 /* 3-column event track */
@@ -866,11 +869,13 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
   padding: 0 0.35rem;
 }
 
-/* Horizontal connector line through dot centre (top: 4px = centre of 10px dot) */
+/* Horizontal connector through dot centre. Dot is always the first child (no year above it),
+   so top: 5px reliably bisects the 10px dot. The 14px current dot is centred at the same
+   position because its margin-top of -2px is removed now that year follows below. */
 .ri-tl-item::before {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 0;
   right: 0;
   height: 2px;
@@ -894,17 +899,18 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
 .ri-tl-dot--event { color: var(--color-accent); background: transparent; }
 .ri-tl-dot--world { color: var(--color-muted); background: transparent; }
 .ri-tl-dot--empty { color: var(--color-border); background: transparent; border-style: dashed; }
-/* Current book dot: 14px, margin-top: -2px keeps its centre at 5px to stay on the line */
+/* Current book dot: slightly larger to stand out; no margin-top offset needed now that
+   dot is always the first child and year appears below the label. */
 .ri-tl-dot--current {
   width: 14px;
   height: 14px;
-  margin-top: -2px;
+  margin-top: -2px; /* -2px so its centre (7px) aligns with the 5px connector line */
   color: var(--color-primary);
   background: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(92, 61, 30, 0.18);
 }
 
-/* Year / date label */
+/* Year / date label — appears below the event label now that dot comes first */
 .ri-tl-year {
   font-family: var(--font-ui);
   font-size: 0.64rem;
@@ -912,7 +918,7 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
   color: var(--color-muted);
   letter-spacing: 0.02em;
   line-height: 1.2;
-  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
   white-space: nowrap;
 }
 .ri-tl-year--current { color: var(--color-primary); }
@@ -967,6 +973,9 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   border-radius: 1px;
 }
 
+/* Hidden by default; .bsw-xref-notes-on on <body> reveals them */
+body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
+
 /* ── Study guide link banner ─────────────────────────────── */
 .reader-study-banner {
   display: flex;
@@ -992,12 +1001,124 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 
 /* ── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .reader-lookup-bar { flex-wrap: wrap; }
-  .reader-lookup-input { width: 100%; flex: none; }
+  /* ── Lookup bar ──────────────────────────────── */
+  .reader-lookup-bar {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  /* Input spans full width; Go button fills remaining row */
+  .reader-lookup-input {
+    width: 100%;
+    flex: none;
+    font-size: 1rem;   /* prevents iOS auto-zoom */
+    min-height: 44px;
+  }
+  .reader-lookup-btn {
+    flex: 1;
+    min-height: 44px;
+  }
+  .reader-lookup-status { flex-basis: 100%; }
+
+  /* ── Browse bar: two rows ────────────────────── */
+  /* Row 1: "Browse:" label + book select + chapter select  */
+  /* Row 2: feature toggle buttons (Parallels, Compare, etc.) */
+  .reader-browse-bar {
+    gap: 0.4rem;
+    row-gap: 0.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.65rem;
+    align-items: center;
+  }
+
+  /* Keep label + selects on their own row */
+  .reader-browse-label { order: 1; flex-shrink: 0; }
+  .reader-browse-select {
+    order: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 1rem;   /* prevents iOS auto-zoom */
+    min-height: 44px;
+  }
+
+  /* Zero-height flex break forces toggle buttons to the next row */
+  .reader-browse-bar::after {
+    content: '';
+    display: block;
+    flex-basis: 100%;
+    height: 0;
+    order: 1;
+  }
+
+  /* All dynamically injected buttons: row 2 */
+  .reader-browse-bar > button {
+    order: 2;
+    flex-shrink: 0;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.84rem;
+    padding: 0 0.65rem;
+  }
+  .reader-browse-bar > div {
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  /* Font size buttons: square, readable */
+  .reader-font-size-grp { margin-right: 0; }
+  .reader-font-size-btn {
+    min-height: 36px;
+    min-width: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    padding: 0;
+  }
+
+  /* Wide and Split only make sense on large screens */
+  #reader-wide-btn,
+  #reader-split-btn { display: none; }
+
+  /* ── Results ─────────────────────────────────── */
   .reader-browse-hint { display: none; }
-  .reader-browse-select { flex: 1; }
   .reader-result-group { padding: 0.85rem 1rem 0.75rem; }
-  .reader-result-group__text { font-size: 1rem; }
+  .reader-result-group__text { font-size: var(--reader-font-size, 1rem); }
+}
+
+/* ── Mobile chapter sidebar ─────────────────────────────────────────────────
+   The sidebar column is locked behind min-width: 700px, so toggling
+   reader-layout--with-sidebar on a phone does nothing. Show it instead as a
+   full-width scrollable panel that slots above the reader content.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 699px) {
+  .reader-layout--with-sidebar .reader-sidebar {
+    display: block;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    max-height: 14rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 0.5rem;
+  }
+
+  /* More columns fit across the full phone width */
+  .reader-layout--with-sidebar .reader-sidebar .reader-sidebar__grid {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  }
+
+  /* 36px touch targets for chapter buttons */
+  .reader-layout--with-sidebar .reader-sidebar .reader-sidebar__ch {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.85rem;
+  }
 }
 
 /* ── Parallels toggle button ─────────────────────────────── */
@@ -1035,6 +1156,41 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   outline-offset: 2px;
 }
 
+/* ── Xref footnotes toggle button ────────────────────────── */
+.reader-xref-notes-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-xref-notes-btn:hover {
+  background: rgba(184,134,11,0.07);
+  border-color: rgba(184,134,11,0.4);
+  color: var(--color-text);
+}
+.reader-xref-notes-btn--on {
+  background: var(--color-accent, #b8860b);
+  border-color: var(--color-accent, #b8860b);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(184,134,11,0.35);
+}
+.reader-xref-notes-btn--on:hover {
+  background: #a07808;
+  border-color: #a07808;
+  color: #fff;
+}
+.reader-xref-notes-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* ── Parallel panels container ───────────────────────────── */
 .reader-parallels-container {
   margin-top: 1.25rem;
@@ -1055,10 +1211,13 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 }
 
 /* Type-specific left border colors */
-.reader-parallel-section[data-parallel-type="parallel"]        { border-left-color: #4a90d9; }
-.reader-parallel-section[data-parallel-type="fulfillment"]     { border-left-color: #4caf74; }
-.reader-parallel-section[data-parallel-type="prophecy-source"] { border-left-color: #b8860b; }
-.reader-parallel-section[data-parallel-type="quotation"]       { border-left-color: #9b59b6; }
+.reader-parallel-section[data-parallel-type="parallel"]          { border-left-color: #4a90d9; }
+.reader-parallel-section[data-parallel-type="fulfillment"]       { border-left-color: #4caf74; }
+.reader-parallel-section[data-parallel-type="prophecy-source"]   { border-left-color: #b8860b; }
+.reader-parallel-section[data-parallel-type="quotation"]         { border-left-color: #9b59b6; }
+.reader-parallel-section[data-parallel-type="quotation-source"]  { border-left-color: #9b59b6; }
+.reader-parallel-section[data-parallel-type="allusion"]          { border-left-color: #c0832a; }
+.reader-parallel-section[data-parallel-type="allusion-source"]   { border-left-color: #c0832a; }
 
 /* ── Panel header ────────────────────────────────────────── */
 .reader-parallel-header {
@@ -1084,6 +1243,8 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-parallel-badge--fulfillment { background: rgba(76,175,116,0.15); color: #2d7d52; }
 .reader-parallel-badge--prophecy    { background: rgba(184,134,11,0.15); color: #8a6300; }
 .reader-parallel-badge--quotation   { background: rgba(155,89,182,0.15); color: #6a3d8f; }
+.reader-parallel-badge--allusion    { background: rgba(192,131,42,0.15); color: #8a5a00; }
+/* quotation-source and allusion-source share the same colour family as their counterparts */
 
 .reader-parallel-ref-label {
   font-family: var(--font-ui);
@@ -1092,7 +1253,9 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   color: var(--color-primary);
   flex: 1;
   min-width: 0;
+  cursor: pointer;
 }
+.reader-parallel-ref-label:hover { text-decoration: underline dotted; }
 .reader-parallel-section-label {
   font-weight: 400;
   font-style: normal;
@@ -1176,6 +1339,58 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* ── Main-reader verse pager (active when parallels is on) ─ */
+/* Sits between the verse text and the parallel panels.       */
+.reader-parallel-page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0.5rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Panel-level verse pager (prev/next 5 verses) ─────────── */
+.reader-parallel-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.reader-parallel-pager__btn {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+  cursor: pointer;
+  transition: color 0.1s, border-color 0.1s;
+  white-space: nowrap;
+}
+.reader-parallel-pager__btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.reader-parallel-pager__info {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  flex: 1;
+  text-align: center;
+}
+
+.reader-parallel-pager__spacer { min-width: 4rem; }
 
 /* ── Mobile tweaks ───────────────────────────────────────── */
 @media (max-width: 640px) {
@@ -1302,6 +1517,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-interlinear-btn--on:hover {
   background: #4a3016;
   border-color: #4a3016;
+  color: #fff;
 }
 .reader-interlinear-btn:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -1340,6 +1556,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-bookinfo-btn--on:hover {
   background: #4a3016;
   border-color: #4a3016;
+  color: #fff;
 }
 .reader-bookinfo-btn:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -1374,6 +1591,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-split-btn--on:hover {
   background: #4a3016;
   border-color: #4a3016;
+  color: #fff;
 }
 .reader-split-btn:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -1438,6 +1656,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-wide-btn--on:hover {
   background: #4a3016;
   border-color: #4a3016;
+  color: #fff;
 }
 .reader-wide-btn:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -1472,6 +1691,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 .reader-sidebar-btn--on:hover {
   background: #4a3016;
   border-color: #4a3016;
+  color: #fff;
 }
 .reader-sidebar-btn:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -1953,7 +2173,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 [data-theme="dark"] .reader-font-size-btn--active,
 [data-theme="dark"] .reader-wide-btn--on,
 [data-theme="dark"] .reader-sidebar-btn--on,
-[data-theme="dark"] .ri-tl-era--active {
+[data-theme="dark"] .reader-xref-notes-btn--on {
   background: var(--color-btn-bg, #3a2d18);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
@@ -1965,7 +2185,8 @@ a.ri-tl-label:hover { color: var(--color-primary); }
 [data-theme="dark"] .reader-bookinfo-btn--on:hover,
 [data-theme="dark"] .reader-split-btn--on:hover,
 [data-theme="dark"] .reader-wide-btn--on:hover,
-[data-theme="dark"] .reader-sidebar-btn--on:hover {
+[data-theme="dark"] .reader-sidebar-btn--on:hover,
+[data-theme="dark"] .reader-xref-notes-btn--on:hover {
   background: var(--color-btn-bg-hover, #4a3a22);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
@@ -1992,7 +2213,7 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   :root:not([data-theme="light"]) .reader-font-size-btn--active,
   :root:not([data-theme="light"]) .reader-wide-btn--on,
   :root:not([data-theme="light"]) .reader-sidebar-btn--on,
-  :root:not([data-theme="light"]) .ri-tl-era--active {
+  :root:not([data-theme="light"]) .reader-xref-notes-btn--on {
     background: var(--color-btn-bg, #3a2d18);
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);
@@ -2004,7 +2225,8 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   :root:not([data-theme="light"]) .reader-bookinfo-btn--on:hover,
   :root:not([data-theme="light"]) .reader-split-btn--on:hover,
   :root:not([data-theme="light"]) .reader-wide-btn--on:hover,
-  :root:not([data-theme="light"]) .reader-sidebar-btn--on:hover {
+  :root:not([data-theme="light"]) .reader-sidebar-btn--on:hover,
+  :root:not([data-theme="light"]) .reader-xref-notes-btn--on:hover {
     background: var(--color-btn-bg-hover, #4a3a22);
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);

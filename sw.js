@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v38';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v51';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v1';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -102,6 +102,7 @@ var SHELL_URLS = [
   './assets/css/library.css',
   './assets/css/topic-guide.css',
   './assets/css/topic-shell.css',
+  './assets/css/study-guide.css',
   './assets/css/study-nav.css',
   './assets/css/word.css',
   './assets/css/dictionary.css',
@@ -111,6 +112,12 @@ var SHELL_URLS = [
   './assets/css/devotionals.css',
   './memorize/index.html',
   './journal/index.html',
+  './study-guides/index.html',
+  './study-guides/hebrews/index.html',
+  './study-guides/ephesians/index.html',
+  './study-guides/romans-1-8/index.html',
+  './study-guides/sermon-on-the-mount/index.html',
+  './study-guides/psalms/index.html',
   './assets/js/app.js',
   './assets/js/core.js',
   './assets/js/storage.js',
@@ -171,7 +178,10 @@ self.addEventListener('install', function (e) {
     caches.open(APP_CACHE_V).then(function (cache) {
       return Promise.all(
         SHELL_URLS.map(function (url) {
-          return fetch(url).then(function (r) {
+          // cache:'reload' bypasses the HTTP cache so the new SW always
+          // gets fresh files from the server, not stale copies from the
+          // old SW's cache (which would defeat the version bump).
+          return fetch(url, { cache: 'reload' }).then(function (r) {
             if (r.ok) return cache.put(url, r);
           }).catch(function () {});
         })

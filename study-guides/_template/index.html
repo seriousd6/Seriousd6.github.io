@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="GUIDE_DESCRIPTION" />
+  <title>GUIDE_TITLE — Study Guide — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../../assets/css/topic-guide.css" />
+  <link rel="stylesheet" href="../../assets/css/study-guide.css" />
+</head>
+<body class="tg-study">
+
+  <!--
+    HERO — set --tg-accent to a color that fits the guide's book/topic.
+    Color suggestions:
+      Pauline epistles / theology: #1e3a6e  (navy)
+      OT / Psalms / Wisdom:       #5c3d1e  (brown)
+      Gospels / Kingdom:          #3d5a2a  (forest green)
+      Eschatology / Revelation:   #52278a  (violet)
+  -->
+  <header class="tg-hero tg-hero--cross" style="--tg-accent: #1e3a6e">
+    <div class="tg-hero__inner">
+      <span class="tg-hero__type">Study Guide · N Sessions</span>
+      <h1 class="tg-hero__title">GUIDE_TITLE</h1>
+      <p class="tg-hero__intro">
+        GUIDE_INTRO — one or two sentences describing what this study covers and why it matters.
+      </p>
+      <blockquote class="tg-hero__key-verse">
+        <p>KEY VERSE TEXT HERE.</p>
+        <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
+      </blockquote>
+    </div>
+  </header>
+
+  <nav class="sg-tabs" aria-label="Session navigation">
+    <div class="sg-tabs__inner">
+      <button class="sg-tab-btn" data-target="overview">Overview</button>
+      <button class="sg-tab-btn" data-target="s-1"  title="Session 1 Title">1</button>
+      <button class="sg-tab-btn" data-target="s-2"  title="Session 2 Title">2</button>
+      <button class="sg-tab-btn" data-target="s-3"  title="Session 3 Title">3</button>
+      <!-- Add more session buttons as needed -->
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Overview ─────────────────────────────────── -->
+      <section class="tg-section" id="overview">
+        <h2 class="tg-section__heading">Overview</h2>
+        <p>OVERVIEW_PARAGRAPH — what this guide is, who it's for, what the student will gain.</p>
+
+        <table class="sg-overview-table">
+          <thead><tr><th>Session</th><th>Title</th><th>Passage</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#s-1">1</a></td><td>Session 1 Title</td><td>Book 1:1–12</td></tr>
+            <tr><td><a href="#s-2">2</a></td><td>Session 2 Title</td><td>Book 1:13–2:10</td></tr>
+            <tr><td><a href="#s-3">3</a></td><td>Session 3 Title</td><td>Book 2:11–3:21</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr class="sg-divider" />
+
+      <!-- ── Session 1 ─────────────────────────────────── -->
+      <section class="tg-section" id="s-1">
+        <div class="sg-session-header">
+          <span class="sg-session-num">Session 1</span>
+          <span class="sg-session-ref">Book 1:1–12</span>
+        </div>
+        <h2 class="tg-section__heading">Session 1 Title</h2>
+
+        <div class="sg-wave">
+          <strong>Key idea:</strong> Brief summary of what this session covers and why it matters.
+        </div>
+
+        <p>Teaching content paragraph. Reference scripture inline:
+          <a class="ref" data-ref="Book 1:1">Book 1:1</a>. Or use a full block:</p>
+
+        <blockquote class="scripture">
+          Verse text here.
+          <cite><a class="ref" data-ref="Book 1:3">Book 1:3</a></cite>
+        </blockquote>
+
+        <p>Continue teaching content.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Question one?</li>
+            <li>Question two?</li>
+            <li>Question three?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider" />
+
+      <!-- ── Session 2 ─────────────────────────────────── -->
+      <section class="tg-section" id="s-2">
+        <div class="sg-session-header">
+          <span class="sg-session-num">Session 2</span>
+          <span class="sg-session-ref">Book 1:13–2:10</span>
+        </div>
+        <h2 class="tg-section__heading">Session 2 Title</h2>
+
+        <div class="sg-wave">
+          <strong>Key idea:</strong> Brief summary of what this session covers.
+        </div>
+
+        <p>Teaching content.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Question one?</li>
+            <li>Question two?</li>
+            <li>Question three?</li>
+          </ol>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    /* Session tab navigation */
+    (function () {
+      var tabs   = document.querySelectorAll('.sg-tab-btn');
+      var active = null;
+
+      function activate(btn) {
+        if (active) active.classList.remove('is-active');
+        btn.classList.add('is-active');
+        active = btn;
+        var target = document.getElementById(btn.dataset.target);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+
+      tabs.forEach(function (btn) { btn.addEventListener('click', function () { activate(btn); }); });
+
+      /* Mark active tab based on scroll position */
+      var sections = Array.from(document.querySelectorAll('.tg-section[id]'));
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var btn = document.querySelector('.sg-tab-btn[data-target="' + e.target.id + '"]');
+            if (btn) { if (active) active.classList.remove('is-active'); btn.classList.add('is-active'); active = btn; }
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+
+      sections.forEach(function (s) { observer.observe(s); });
+      if (tabs.length) { tabs[0].classList.add('is-active'); active = tabs[0]; }
+    }());
+  </script>
+
+  <script type="module" src="../../assets/js/app.js"></script>
+</body>
+</html>

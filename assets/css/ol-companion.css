@@ -1,0 +1,295 @@
+/* ol-companion.css — Original Language Companion for Verse Study */
+
+.olc-loading, .olc-empty {
+  font-size: 0.85rem;
+  color: var(--color-muted, #888);
+  padding: 0.5rem 0;
+  font-style: italic;
+}
+.olc-empty code {
+  font-family: var(--font-mono, monospace);
+  background: var(--color-surface, #fff8f0);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-style: normal;
+}
+
+/* ── Structure note ──────────────────────────────────────────────────── */
+.olc-struct-note {
+  font-size: 0.82rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.7rem;
+  border-left: 3px solid var(--color-border, #c8a96e30);
+  background: var(--color-surface, #fff8f0);
+  border-radius: 0 4px 4px 0;
+}
+.olc-struct-note strong { color: var(--color-text, #1a0a00); }
+
+/* ── Subheadings ─────────────────────────────────────────────────────── */
+.olc-subhead {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted, #888);
+  margin: 1.25rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-border, #c8a96e20);
+}
+.olc-subhead:first-child { margin-top: 0; }
+
+/* ── Token grid ──────────────────────────────────────────────────────── */
+.olc-grid-note {
+  font-size: 0.78rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 0.6rem;
+}
+
+.olc-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.olc-sep {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  color: var(--color-muted, #888);
+  padding-bottom: 0.3rem;
+}
+
+.olc-token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.4rem 0.55rem 0.35rem;
+  border: 1px solid var(--color-border, #c8a96e25);
+  border-radius: 6px;
+  background: var(--color-surface, #fff8f0);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-width: 52px;
+  text-align: center;
+}
+.olc-token:hover {
+  border-color: var(--color-primary, #c8a96e);
+  background: var(--color-hover, rgba(200,169,110,0.06));
+}
+.olc-token--open {
+  border-color: var(--color-primary, #c8a96e);
+  background: var(--color-primary, #c8a96e);
+  color: var(--color-on-primary, #1a1208);
+}
+.olc-token--open .olc-token__translit {
+  color: var(--color-on-primary, #1a1208);
+  opacity: 0.7;
+}
+
+.olc-token__lemma {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.olc-token__translit {
+  font-size: 0.65rem;
+  color: var(--color-muted, #888);
+  font-style: italic;
+}
+.olc-token__med {
+  font-size: 0.72rem;
+  color: var(--color-muted, #888);
+  margin-top: 0.05rem;
+}
+.olc-token--open .olc-token__med { color: var(--color-on-primary, #1a1208); opacity: 0.8; }
+
+/* Dispute level colour tinting on tokens */
+.olc-disp-2 { border-color: #f0c04088; }
+.olc-disp-3 { border-color: #e8894488; }
+.olc-disp-4 { border-color: #e05a5a88; }
+
+/* ── Expand panel ────────────────────────────────────────────────────── */
+.olc-expand-panel {
+  border: 1px solid var(--color-border, #c8a96e30);
+  border-radius: 8px;
+  background: var(--color-bg, #fff8f0);
+  margin-top: 0.35rem;
+  overflow: hidden;
+}
+
+.olc-exp { padding: 0.85rem 1rem; }
+
+.olc-exp__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border, #c8a96e20);
+}
+.olc-exp__lemma {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.olc-exp__translit { font-size: 0.85rem; font-style: italic; color: var(--color-muted,#888); }
+.olc-exp__code     { font-family: monospace; font-size: 0.75rem; color: var(--color-muted,#888); }
+.olc-exp__pos {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--color-border,#c8a96e30);
+  border-radius: 3px;
+  color: var(--color-muted,#888);
+}
+.olc-exp__disp {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+.olc-disp-2.olc-exp__disp { background: #fff3cd; color: #856404; }
+.olc-disp-3.olc-exp__disp { background: #fff0e0; color: #e65100; }
+.olc-disp-4.olc-exp__disp { background: #fce4ec; color: #b71c1c; }
+
+.olc-exp__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.83rem;
+  margin-bottom: 0.4rem;
+}
+.olc-exp__label { color: var(--color-muted,#888); font-size: 0.75rem; min-width: 80px; }
+.olc-exp__val   { font-weight: 500; }
+
+.olc-exp__tiers { margin: 0.6rem 0; }
+.olc-exp__tier-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted,#888);
+  margin-bottom: 0.3rem;
+}
+.olc-exp__tier-table { border-collapse: collapse; font-size: 0.83rem; width: 100%; }
+.olc-exp__tier-table th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem 0.2rem 0;
+  width: 80px;
+}
+.olc-exp__tier-table td { padding: 0.2rem 0; }
+.olc-exp__tier-table tr { border-bottom: 1px solid var(--color-border,#c8a96e12); }
+
+.olc-tier-lit  { color: #3a5c9e; }
+.olc-tier-med  { color: #2e7d32; }
+.olc-tier-tho  { color: #7b2d8b; }
+
+.olc-exp__note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  background: var(--color-surface,#fff8f0);
+  border-left: 3px solid var(--color-border,#c8a96e40);
+}
+.olc-exp__note--div { border-left-color: var(--color-primary,#c8a96e); }
+
+.olc-exp__section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted,#888);
+  margin: 0.6rem 0 0.25rem;
+}
+.olc-exp__range {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--color-text,#1a0a00);
+  opacity: 0.85;
+}
+
+/* ── Flag cards ──────────────────────────────────────────────────────── */
+.olc-flag-card {
+  border: 1px solid var(--color-border,#c8a96e20);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.5rem;
+  background: var(--color-surface,#fff8f0);
+}
+.olc-flag-card.olc-disp-2 { border-left: 3px solid #f0c040; }
+.olc-flag-card.olc-disp-3 { border-left: 3px solid #e88944; }
+.olc-flag-card.olc-disp-4 { border-left: 3px solid #e05a5a; }
+
+.olc-flag-card__title {
+  font-size: 0.83rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+.olc-flag-lemma { font-size: 1.1rem; }
+.olc-flag-code  { font-family: monospace; font-size: 0.72rem; color: var(--color-muted,#888); }
+.olc-flag-disp  { font-size: 0.7rem; color: var(--color-muted,#888); }
+
+.olc-flag-card__note {
+  font-size: 0.81rem;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--color-text,#1a0a00);
+  opacity: 0.85;
+}
+
+/* ── Three-tier comparison table ─────────────────────────────────────── */
+.olc-tier-note {
+  font-size: 0.77rem;
+  color: var(--color-muted,#888);
+  font-style: italic;
+  margin: 0 0 0.6rem;
+}
+.olc-tier-cmp { border-collapse: collapse; width: 100%; font-size: 0.84rem; margin-top: 0.25rem; }
+.olc-tier-cmp th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem 0.35rem 0;
+  width: 80px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.olc-tier-cmp td {
+  padding: 0.35rem 0;
+  line-height: 1.55;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border,#c8a96e12);
+}
+
+/* ── Tier divergences ────────────────────────────────────────────────── */
+.olc-div-intro { font-size: 0.82rem; color: var(--color-muted,#888); margin: 0 0 0.4rem; }
+.olc-div-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.olc-div-list strong { color: var(--color-primary,#c8a96e); }
+
+/* ── Dark mode ───────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .olc-disp-2.olc-exp__disp { background: #3a2e00; color: #fdd835; }
+  .olc-disp-3.olc-exp__disp { background: #3a1a00; color: #ffb74d; }
+  .olc-disp-4.olc-exp__disp { background: #3a0a0a; color: #ef9a9a; }
+}
+[data-theme="dark"] .olc-disp-2.olc-exp__disp { background: #3a2e00; color: #fdd835; }
+[data-theme="dark"] .olc-disp-3.olc-exp__disp { background: #3a1a00; color: #ffb74d; }
+[data-theme="dark"] .olc-disp-4.olc-exp__disp { background: #3a0a0a; color: #ef9a9a; }

@@ -995,7 +995,7 @@ from stub form with concrete implementation details.
 - [x] **L3. Internationalisation (i18n) framework** *(closed — out of scope)*
   - Decision: personal English-language study tool; i18n not warranted
 
-- [ ] **L4. Font size controls — mobile scaling bug**
+- [x] **L4. Font size controls — mobile scaling bug**
   - F3 font size toggle works on desktop but does not scale correctly on mobile
   - `--reader-font-size` is not propagating to all elements on mobile — likely a specificity
     or viewport-unit conflict in `reader.css` or `bible-ui.css` on narrow screens
@@ -1060,7 +1060,7 @@ These are features that drive regular use and deepen the study experience. All a
     verses (`.ref` pattern), and whether this is a standalone feature or part of a broader
     devotional flow with Spurgeon (D6) and VOTD (D7)
 
-- [ ] **N3. Study Guides** *(new category — distinct from topic pages)*
+- [x] **N3. Study Guides** *(complete)*
 
   Study guides are structured multi-session resources, distinct from topic pages in two ways:
   they have a defined session structure (session 1, session 2…) and each session has

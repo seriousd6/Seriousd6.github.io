@@ -11,6 +11,13 @@ export var INTERLINEAR_KEY = 'bsw_interlinear';
 var _riPopoverEl  = null;
 var _riActiveTile = null;
 
+var _TL_ERA_LABELS = {
+  creation: 'Creation', patriarchs: 'Patriarchs', moses: 'Moses & Exodus',
+  conquest: 'Conquest & Judges', monarchy: 'The Monarchy', exile: 'Exile',
+  restoration: 'Restoration', intertestamental: 'Intertestamental',
+  gospels: 'The Gospels', church: 'The Church', consummation: 'Consummation'
+};
+
 export function getInterlinearEnabled() {
   return localStorage.getItem(INTERLINEAR_KEY) === '1';
 }
@@ -128,10 +135,12 @@ function _renderIntroHtml(panel, bk, intro) {
   var keyVerse = intro.key_verse || (intro.key_verses && intro.key_verses[0] && intro.key_verses[0].ref) || '';
   var kvNote   = intro.key_verses && intro.key_verses[0] ? intro.key_verses[0].note || '' : '';
 
-  var meta = '';
-  if (bk.testament) meta += '<span>' + escHtml(bk.testament) + '</span>';
-  if (author)       meta += '<span>' + escHtml(author) + '</span>';
-  if (date)         meta += '<span>' + escHtml(date) + '</span>';
+  // Meta row: join non-empty fields with a mid-dot separator
+  var metaParts = [];
+  if (bk.testament) metaParts.push(escHtml(bk.testament));
+  if (author)       metaParts.push(escHtml(author));
+  if (date)         metaParts.push(escHtml(date));
+  var meta = metaParts.join('<span class="reader-bookinfo-meta-sep"> · </span>');
 
   var kvHtml = '';
   if (keyVerse) {
@@ -151,6 +160,48 @@ function _renderIntroHtml(panel, bk, intro) {
     '</div>';
   }
 
+  // Compact 3-item timeline: most-recent before event, current book, first after event
+  var tlHtml = '';
+  var tl = intro.timeline;
+  if (tl) {
+    var beforeItem = tl.before && tl.before.length ? tl.before[tl.before.length - 1] : null;
+    var afterItem  = tl.after  && tl.after.length  ? tl.after[0]                      : null;
+    var eraLabel   = tl.period ? (_TL_ERA_LABELS[tl.period] || tl.period) : '';
+
+    var _tlItem = function (item) {
+      if (!item) return '<div class="ri-tl-item ri-tl-item--empty"><div class="ri-tl-dot ri-tl-dot--empty"></div></div>';
+      var type  = item.type  || 'event';
+      var label = item.label || '';
+      var year  = item.year  || '';
+      var ref   = item.ref   || '';
+      // Add data-ref so the tooltip/modal system can wire hover previews.
+      var lbl = ref
+        ? '<a class="ref ri-tl-label ri-tl-label--' + escHtml(type) + '" data-ref="' + escHtml(ref) + '">' + escHtml(label) + '</a>'
+        : '<span class="ri-tl-label ri-tl-label--' + escHtml(type) + '">' + escHtml(label) + '</span>';
+      return '<div class="ri-tl-item">' +
+        '<div class="ri-tl-dot ri-tl-dot--' + escHtml(type) + '"></div>' +
+        lbl +
+        (year ? '<div class="ri-tl-year">' + escHtml(year) + '</div>' : '') +
+      '</div>';
+    };
+
+    tlHtml =
+      '<div class="reader-bookinfo-timeline">' +
+      (eraLabel
+        ? '<div class="ri-tl-arc-lbl" style="margin-bottom:.45rem">Period: <strong>' + escHtml(eraLabel) + '</strong></div>'
+        : '') +
+      '<div class="ri-tl-row ri-tl-row--compact">' +
+        _tlItem(beforeItem) +
+        '<div class="ri-tl-item">' +
+          '<div class="ri-tl-dot ri-tl-dot--current"></div>' +
+          '<div class="ri-tl-label ri-tl-label--current">' + escHtml(bk.name) + '</div>' +
+          (tl.date ? '<div class="ri-tl-year ri-tl-year--current">' + escHtml(tl.date) + '</div>' : '') +
+        '</div>' +
+        _tlItem(afterItem) +
+      '</div>' +
+      '</div>';
+  }
+
   panel.innerHTML =
     '<div class="reader-bookinfo-inner">' +
       '<div class="reader-bookinfo-header">' +
@@ -160,7 +211,13 @@ function _renderIntroHtml(panel, bk, intro) {
       kvHtml +
       (purpose ? '<p class="reader-bookinfo-purpose">' + escHtml(purpose) + '</p>' : '') +
       themesHtml +
+      tlHtml +
     '</div>';
+
+  // Wire all [data-ref] elements in the panel (key verse, timeline items) for
+  // hover tooltips and modal. Panel is dynamically created so wireRefLinks is
+  // not called automatically — we must call it explicitly here.
+  wireRefLinks(panel);
 }
 
 // ── initSplitToggle ───────────────────────────────────────────────────────
@@ -275,8 +332,23 @@ export function initSidebarToggle() {
   browseBar.insertBefore(btn, hint || null);
   btn.addEventListener('click', function () {
     on = !on;
-    if (on) localStorage.setItem(SIDEBAR_KEY, '1');
-    else    localStorage.removeItem(SIDEBAR_KEY);
+    if (on) {
+      localStorage.setItem(SIDEBAR_KEY, '1');
+      // Populate the sidebar immediately if it has no chapter grid yet.
+      // This covers the case where the button was toggled after a passage loaded
+      // but renderReaderSidebar's async loadBook().then() hadn't resolved yet,
+      // or the user toggled the sidebar before any lookup.
+      var sidebarEl = document.querySelector('.reader-sidebar');
+      var state     = window._readerNavState;
+      if (sidebarEl && !sidebarEl.querySelector('.reader-sidebar__grid') &&
+          state && state.bookId && typeof window._renderSidebarFn === 'function') {
+        loadBook(getVersion(), state.bookId).then(function (chapters) {
+          if (chapters) window._renderSidebarFn(state.bookId, chapters, state.ch || 0);
+        }).catch(function () {});
+      }
+    } else {
+      localStorage.removeItem(SIDEBAR_KEY);
+    }
     if (layout) layout.classList.toggle('reader-layout--with-sidebar', on);
     btn.classList.toggle('reader-sidebar-btn--on', on);
     btn.setAttribute('aria-pressed', on ? 'true' : 'false');

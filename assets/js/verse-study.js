@@ -777,6 +777,12 @@ function loadVerseSections(parsed) {
       vsRebuildNav();
     }).catch(function () { dictSec.el.remove(); vsRebuildNav(); });
   }
+
+  // Original Language Companion — MKT token analysis, tier comparison, dispute flags
+  if (parsed.v && window.BibleUI && typeof window.BibleUI.initOLSection === 'function') {
+    window.BibleUI.initOLSection(parsed, vsCreateSection, vsRebuildNav)
+      .catch(function(e) { console.warn('[OL Companion]', e); });
+  }
 }
 
 function vsCreateSection(container, id, label) {

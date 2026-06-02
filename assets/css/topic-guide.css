@@ -424,6 +424,14 @@
   .tg-compare { font-size: 0.88rem; }
   .tg-timeline__row { grid-template-columns: 4rem 1fr; }
   .tg-timeline__date { font-size: 0.68rem; }
+
+  /* Comparison tables: scrollable block so they don't overflow the viewport */
+  .tg-compare {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
 }
 
 /* ── Dark-mode overrides ─────────────────────────────────────────────────── */

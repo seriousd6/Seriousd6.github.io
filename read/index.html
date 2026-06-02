@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Read the Bible by reference with version switching." />
   <title>The Holy Bible — Bible Study</title>
@@ -61,5 +61,42 @@
 
     <script src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/app.js"></script>
+
+  <!-- Chapter completion tracker: record when a chapter is rendered -->
+  <script>
+  (function () {
+    var READ_KEY = 'bsw_chapter_read';
+    var _lastRecorded = null;
+
+    function recordChapter(bookId, ch) {
+      var key = bookId + ':' + ch;
+      if (_lastRecorded === key) return;
+      _lastRecorded = key;
+      try {
+        var data  = JSON.parse(localStorage.getItem(READ_KEY) || '{}');
+        if (!data[bookId]) data[bookId] = {};
+        if (!data[bookId][String(ch)]) {
+          data[bookId][String(ch)] = new Date().toISOString().slice(0, 10);
+          localStorage.setItem(READ_KEY, JSON.stringify(data));
+        }
+      } catch (e) {}
+    }
+
+    // Watch window._readerNavState which reader.js sets on every chapter load
+    var _prevBookId = null, _prevCh = null;
+    var _resultsEl  = document.getElementById('reader-results');
+    if (_resultsEl && typeof MutationObserver !== 'undefined') {
+      new MutationObserver(function () {
+        var nav = window._readerNavState;
+        if (!nav || !nav.bookId || !nav.ch) return;
+        if (nav.bookId !== _prevBookId || nav.ch !== _prevCh) {
+          _prevBookId = nav.bookId;
+          _prevCh     = nav.ch;
+          recordChapter(nav.bookId, nav.ch);
+        }
+      }).observe(_resultsEl, { childList: true });
+    }
+  }());
+  </script>
 </body>
 </html>

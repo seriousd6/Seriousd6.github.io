@@ -292,6 +292,26 @@
 }
 .tl-detail-section-title--christ { color: var(--color-primary); }
 
+/* Church history: legacy section (teal accent box) */
+.tl-detail-section--legacy {
+  background: color-mix(in srgb, #2a6b6b 6%, transparent);
+  border-radius: 7px;
+  padding: .7rem .85rem;
+  border: 1px solid color-mix(in srgb, #2a6b6b 22%, transparent);
+}
+.tl-detail-section-title--legacy { color: #2a6b6b; }
+
+/* Church history: non-Scripture key text labels (documents, creeds, etc.) */
+.tl-detail-verse-ref--doc {
+  font-size: .73rem; font-weight: 600;
+  color: var(--color-muted, #777);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 4px;
+  padding: .08rem .4rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .tl-detail-people  { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .35rem; }
 .tl-detail-person  { font-size: .86rem; line-height: 1.5; padding-left: .85rem; position: relative; }
 .tl-detail-person::before { content: '●'; position: absolute; left: 0; color: var(--color-primary); font-size: .5rem; top: .38em; }

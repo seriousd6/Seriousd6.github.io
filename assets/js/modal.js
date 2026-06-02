@@ -148,6 +148,10 @@ export function buildModalDOM() {
   backdrop.addEventListener('click', function (e) {
     if (e.target === backdrop) hideModal();
   });
+  // Prevent iOS scroll-behind: block touchmove on the backdrop itself (not on modal content)
+  backdrop.addEventListener('touchmove', function (e) {
+    if (!_modalEl || !_modalEl.contains(e.target)) e.preventDefault();
+  }, { passive: false });
   modal.querySelector('#bsw-modal-version').addEventListener('change', function () {
     var ref = _modalEl._parsedRef;
     if (ref) renderModal(ref, this.value);
@@ -253,7 +257,8 @@ export function openModal(parsed) {
   });
 
   _modalEl.addEventListener('keydown', trapFocus);
-  document.body.style.overflow = 'hidden';
+  document.documentElement.classList.add('bsw-modal-open');
+  document.body.classList.add('bsw-modal-open');
 }
 
 // ── renderModal ───────────────────────────────────────────────────────────
@@ -899,7 +904,8 @@ export function hideModal() {
   _backdropEl.classList.add('bsw-modal-backdrop--hidden');
   _backdropEl.setAttribute('aria-hidden', 'true');
   if (_modalEl) _modalEl.removeEventListener('keydown', trapFocus);
-  document.body.style.overflow = '';
+  document.documentElement.classList.remove('bsw-modal-open');
+  document.body.classList.remove('bsw-modal-open');
   if (_lastFocused) { try { _lastFocused.focus(); } catch (e) {} _lastFocused = null; }
 }
 

@@ -26,9 +26,9 @@
 
 import {
   getVersion, loadBook, parseRef, normalizeBook, metaBooks, bookLookup, bookOrder,
-  SEARCH_URL, READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL,
+  SEARCH_URL, READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL, TOPICS_INDEX_URL,
   escHtml, computeTextSimilarity, _scoreResult,
-  _loadLibIndex, libIndexCache, bookCache,
+  _loadLibIndex, _loadLibSearch, libIndexCache, bookCache,
   loadStrongs, _smithLoad, _smithData
 } from './core.js';
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
@@ -205,6 +205,24 @@ export function initSearchPage(input) {
     });
   });
 
+  // Shared trigger: cancels any pending debounce and fires the search immediately.
+  function _fireSearch() {
+    clearTimeout(_searchDebounce);
+    var q = input.value.trim();
+    if (!q) { _clearResults(); return; }
+    if (_searchPageTab === 'verse') handleSearchInput(q);
+    else if (_searchPageTab === 'explore') handleExploreSearch(q);
+  }
+
+  // Search button — forces an immediate re-run on click.
+  var goBtn = document.getElementById('bsw-search-go');
+  if (goBtn) goBtn.addEventListener('click', _fireSearch);
+
+  // Enter key on the input also bypasses the debounce.
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); _fireSearch(); }
+  });
+
   // Main input: debounced 250 ms, routes to verse or explore handler.
   input.addEventListener('input', function () {
     clearTimeout(_searchDebounce);
@@ -332,6 +350,8 @@ export function handleSearchInput(query) {
   // score-ranking and history — so "love" and `"love"` produce identical ranked results.
   var literal = extractLiteral(query);
   var q = (literal || query).toLowerCase();
+  // AND logic: split unquoted multi-word queries so every word must appear in the verse.
+  var andWords = (!literal && q.indexOf(' ') !== -1) ? q.split(/\s+/).filter(Boolean) : null;
 
   var books = metaBooks || [];
   var results = [];
@@ -343,6 +363,13 @@ export function handleSearchInput(query) {
        : _filterTestament === 'nt' ? books.filter(function (b) { return b.testament === 'NT'; })
        : books);
 
+  // Show a loading indicator immediately so the user knows work is underway.
+  var _searchOut = document.getElementById('bsw-search-output');
+  var _sortRow   = document.getElementById('bsw-search-sort-row');
+  if (_searchOut) _searchOut.innerHTML = '<p class="omni-loading">Searching ' + booksToSearch.length + ' books…</p>';
+  if (_sortRow) _sortRow.hidden = true;
+  var _partialDone = false;
+
   booksToSearch.forEach(function (book) {
     pending++;
     loadBook(version, book.id).then(function (chapters) {
@@ -351,7 +378,11 @@ export function handleSearchInput(query) {
         Object.keys(chapters).forEach(function (chStr) {
           Object.keys(chapters[chStr]).forEach(function (vStr) {
             var text = chapters[chStr][vStr];
-            if (text && text.toLowerCase().indexOf(q) !== -1) {
+            var tl   = text && text.toLowerCase();
+            var matches = tl && (andWords
+              ? andWords.every(function (w) { return tl.indexOf(w) !== -1; })
+              : tl.indexOf(q) !== -1);
+            if (matches) {
               results.push({
                 ref:    book.name + ' ' + chStr + ':' + vStr,
                 bookId: book.id,
@@ -367,6 +398,12 @@ export function handleSearchInput(query) {
         });
       }
       pending--;
+      // Render a first-pass preview as soon as 20+ results accumulate so the user
+      // sees something while the remaining books still load.
+      if (!_partialDone && results.length >= 20 && gen === _searchGeneration) {
+        _partialDone = true;
+        renderSearchResults(results.slice(), query);
+      }
       if (pending === 0 && gen === _searchGeneration) {
         _lastSearchResults = results;
         _lastSearchQuery   = query;
@@ -426,18 +463,22 @@ function _appendVerseResultBatch(sorted, query, offset, container) {
   var batch     = sorted.slice(offset, offset + _VERSE_BATCH);
   var remaining = sorted.length - offset - batch.length;
 
-  // Use the extracted literal for highlighting so quoted searches highlight correctly.
-  var effectiveQ = extractLiteral(query) || query;
+  var literal    = extractLiteral(query);
+  var effectiveQ = literal || query;
+  var ql         = effectiveQ.toLowerCase();
+  // AND queries highlight each word separately; phrase and single-word queries use one mark.
+  var andWords   = (!literal && ql.indexOf(' ') !== -1) ? ql.split(/\s+/).filter(Boolean) : null;
 
   var html = batch.map(function (r) {
-    var text = r.text || '';
-    var ql   = effectiveQ.toLowerCase();
-    var idx  = text.toLowerCase().indexOf(ql);
-    var display = idx >= 0
-      ? escHtml(text.slice(0, idx)) +
-        '<mark>' + escHtml(text.slice(idx, idx + effectiveQ.length)) + '</mark>' +
-        escHtml(text.slice(idx + effectiveQ.length))
-      : escHtml(text);
+    var text    = r.text || '';
+    var display = andWords ? _highlightMulti(text, andWords) : (function () {
+      var idx = text.toLowerCase().indexOf(ql);
+      return idx >= 0
+        ? escHtml(text.slice(0, idx)) +
+          '<mark>' + escHtml(text.slice(idx, idx + ql.length)) + '</mark>' +
+          escHtml(text.slice(idx + ql.length))
+        : escHtml(text);
+    })();
     return '<div class="bsw-search-result">' +
       '<a class="bsw-search-result__ref ref" data-ref="' + escHtml(r.ref) + '">' +
         escHtml(r.ref) + '</a>' +
@@ -598,6 +639,36 @@ export function highlightMatch(text, query) {
     escHtml(text.slice(idx + q.length));
 }
 
+// _highlightMulti: marks every occurrence of each word in `words` within `text`.
+// Ranges are merged so overlapping matches don't produce nested <mark> tags.
+function _highlightMulti(text, words) {
+  if (!words || !words.length) return escHtml(text);
+  var tl = text.toLowerCase();
+  var ranges = [];
+  words.forEach(function (w) {
+    var i = 0, found;
+    while ((found = tl.indexOf(w, i)) !== -1) {
+      ranges.push([found, found + w.length]);
+      i = found + w.length;
+    }
+  });
+  if (!ranges.length) return escHtml(text);
+  ranges.sort(function (a, b) { return a[0] - b[0]; });
+  var merged = [ranges[0].slice()];
+  for (var i = 1; i < ranges.length; i++) {
+    var last = merged[merged.length - 1];
+    if (ranges[i][0] <= last[1]) last[1] = Math.max(last[1], ranges[i][1]);
+    else merged.push(ranges[i].slice());
+  }
+  var out = '', pos = 0;
+  merged.forEach(function (r) {
+    out += escHtml(text.slice(pos, r[0]));
+    out += '<mark>' + escHtml(text.slice(r[0], r[1])) + '</mark>';
+    pos = r[1];
+  });
+  return out + escHtml(text.slice(pos));
+}
+
 // ── handleExploreSearch ───────────────────────────────────────────────────
 // Omni-search on the "Explore" tab. Builds five sections inside
 // #bsw-explore-output: Verses, Word Studies, Topics (Nave's), Dictionary, Library.
@@ -616,7 +687,8 @@ export function handleExploreSearch(query) {
     { key: 'words',      title: 'Word Studies' },
     { key: 'topics',     title: 'Topics (Nave’s)' },
     { key: 'dictionary', title: 'Dictionary' },
-    { key: 'library',    title: 'Library' }
+    { key: 'library',    title: 'Library' },
+    { key: 'guides',     title: 'Study Guides' }
   ];
 
   out.innerHTML = SECTIONS.map(function (s) {
@@ -642,12 +714,14 @@ export function handleExploreSearch(query) {
   var tb = body('topics');
   var db = body('dictionary');
   var lb = body('library');
+  var gb = body('guides');
 
   if (vb) _exploreVerses(q, vb);
   if (wb) _exploreWords(q, wb);
   if (tb) _exploreTopics(q, tb);
   if (db) _exploreDict(q, db);
   if (lb) _exploreLibrary(q, lb);
+  if (gb) _exploreGuides(q, gb);
 }
 
 // ── Explore: Verses ───────────────────────────────────────────────────────
@@ -838,30 +912,73 @@ function _exploreDict(q, container) {
 }
 
 // ── Explore: Library ──────────────────────────────────────────────────────
-// Filters the library index (confessions, catechisms, etc.) by title substring
-// and shows matching documents as cards linking to their library pages.
+// Full-text search across all library documents using the passage-level search
+// index (data/library/search-index.json). Falls back to title matching via the
+// manifest when a doc has no entries in the search index.
 function _exploreLibrary(q, container) {
-  _loadLibIndex().then(function (index) {
-    if (!index) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
-    var ql  = q.toLowerCase();
-    var res = index.filter(function (doc) {
-      return doc.title.toLowerCase().indexOf(ql) >= 0;
-    });
-    if (!res.length) {
+  Promise.all([
+    _loadLibIndex().catch(function () { return null; }),
+    _loadLibSearch().catch(function () { return null; })
+  ]).then(function (both) {
+    var index     = both[0];
+    var searchIdx = both[1];
+
+    if (!index && !searchIdx) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
+
+    var ql = q.toLowerCase();
+
+    // Build docId → index entry map for title/year/abbrev lookup.
+    var indexMap = Object.create(null);
+    if (index) index.forEach(function (d) { indexMap[d.id] = d; });
+
+    // Full-text scan: first matching passage per document wins; store a text snippet.
+    var hits = Object.create(null);
+    if (searchIdx) {
+      searchIdx.forEach(function (entry) {
+        if (hits[entry.docId]) return;
+        var textL = (entry.text || '').toLowerCase();
+        var headL = (entry.heading || '').toLowerCase();
+        if (textL.indexOf(ql) !== -1 || headL.indexOf(ql) !== -1) {
+          var idx     = textL.indexOf(ql);
+          var snippet = '';
+          if (idx !== -1) {
+            var s = Math.max(0, idx - 60);
+            var e = Math.min(entry.text.length, idx + ql.length + 80);
+            snippet = (s > 0 ? '…' : '') + entry.text.slice(s, e).trim() +
+                      (e < entry.text.length ? '…' : '');
+          }
+          hits[entry.docId] = { docId: entry.docId, snippet: snippet };
+        }
+      });
+    }
+
+    // Fallback: title match for docs not represented in the search index.
+    if (index) {
+      index.forEach(function (doc) {
+        if (!hits[doc.id] && doc.title.toLowerCase().indexOf(ql) !== -1) {
+          hits[doc.id] = { docId: doc.id, snippet: doc.desc || '' };
+        }
+      });
+    }
+
+    var results = Object.keys(hits).map(function (k) { return hits[k]; });
+    if (!results.length) {
       container.innerHTML = '<p class="omni-none">No library documents found.</p>';
       return;
     }
-    container.innerHTML = res.slice(0, 8).map(function (doc) {
-      // href is a site-root-relative path from the index (e.g. "library/apostles-creed/").
-      var href = escHtml('/' + doc.href);
+
+    container.innerHTML = results.slice(0, 6).map(function (hit) {
+      var doc  = indexMap[hit.docId] || {};
+      var href = escHtml('/library/' + hit.docId + '/');
       return '<a class="omni-lib-card" href="' + href + '">' +
-        '<span class="omni-lib-card__abbrev">' + escHtml(doc.abbrev || '') + '</span>' +
-        '<span class="omni-lib-card__title">' + escHtml(doc.title) + '</span>' +
+        (doc.abbrev ? '<span class="omni-lib-card__abbrev">' + escHtml(doc.abbrev) + '</span>' : '') +
+        '<span class="omni-lib-card__title">' + escHtml(doc.title || hit.docId) + '</span>' +
         (doc.year ? '<span class="omni-lib-card__year">' + doc.year + '</span>' : '') +
+        (hit.snippet ? '<span class="omni-lib-card__snippet">' + escHtml(hit.snippet) + '</span>' : '') +
       '</a>';
     }).join('');
   }).catch(function () {
-    container.innerHTML = '<p class="omni-none">Could not load library index.</p>';
+    container.innerHTML = '<p class="omni-none">Could not load library.</p>';
   });
 }
 
@@ -881,12 +998,43 @@ function _applyExploreFilter(filter) {
 }
 
 // ── Topics index for search (site-wide topic pages) ───────────────────────
-// Placeholder for a future index of /topics/* pages.
+// Fetches data/topics-index.json — a manifest of all site study-guide pages.
 var _topicsIndexCache = null;
 
 function _buildTopicsIndex() {
   if (_topicsIndexCache) return Promise.resolve(_topicsIndexCache);
-  return Promise.resolve([]);
+  return fetch(TOPICS_INDEX_URL)
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (d) { _topicsIndexCache = d; return d; })
+    .catch(function () { return []; });
+}
+
+// ── Explore: Study Guides ─────────────────────────────────────────────────
+// Searches the site's own study-guide pages (/topics/*) by title and description.
+function _exploreGuides(q, container) {
+  _buildTopicsIndex().then(function (guides) {
+    if (!guides || !guides.length) {
+      container.innerHTML = '<p class="omni-none">No study guides found.</p>';
+      return;
+    }
+    var ql  = q.toLowerCase();
+    var res = guides.filter(function (g) {
+      return g.title.toLowerCase().indexOf(ql) !== -1 ||
+             (g.desc && g.desc.toLowerCase().indexOf(ql) !== -1);
+    });
+    if (!res.length) {
+      container.innerHTML = '<p class="omni-none">No study guides match.</p>';
+      return;
+    }
+    container.innerHTML = res.map(function (g) {
+      return '<a class="omni-lib-card" href="' + escHtml(TOPICS_ROOT + g.slug + '/') + '">' +
+        '<span class="omni-lib-card__title">' + escHtml(g.title) + '</span>' +
+        (g.desc ? '<span class="omni-lib-card__snippet">' + escHtml(g.desc) + '</span>' : '') +
+      '</a>';
+    }).join('');
+  }).catch(function () {
+    container.innerHTML = '<p class="omni-none">Could not load study guides.</p>';
+  });
 }
 
 // ── Search history ────────────────────────────────────────────────────────

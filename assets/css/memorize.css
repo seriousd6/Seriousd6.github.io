@@ -344,6 +344,19 @@
 .mem-rate-btn--good  { background: #27ae60; color: #fff; }
 .mem-rate-btn--easy  { background: #2980b9; color: #fff; }
 
+.mem-rate-btn kbd {
+  display: inline-block;
+  margin-left: .3em;
+  padding: 0 .3em;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,.45);
+  font-size: .72em;
+  line-height: 1.4;
+  font-family: var(--font-ui, system-ui);
+  opacity: .75;
+  vertical-align: middle;
+}
+
 /* ── Review done ─────────────────────────────────────────────────────────────── */
 .mem-review-done {
   text-align: center;
@@ -400,6 +413,29 @@
   .mem-card { padding: 1.5rem 1rem; }
   .mem-card__ref { font-size: 1.3rem; }
   .mem-rate-btn { padding: .45rem .5rem; font-size: .8rem; }
+}
+
+/* ── Mobile: touch targets ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Review / Remove buttons: 44px minimum tap height */
+  .mem-item__review-btn,
+  .mem-item__remove-btn {
+    min-height: 44px;
+    padding: 0 0.75rem;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Rate buttons (flip card): comfortable tap target */
+  .mem-rate-btn {
+    min-height: 48px;
+    padding: 0 0.75rem;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* ── I5: Tag filter row ─────────────────────────────────────────────────── */

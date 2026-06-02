@@ -42,7 +42,7 @@ import {
   initReaderPage, initCompareToggle, injectComparePanel,
   isCompareEnabled, getCompareVersion, setCompareVersion,
   initSplitToggle, initFontSizeControls, initWideToggle,
-  initSidebarToggle
+  initSidebarToggle, initXrefNotesToggle
 } from './reader.js';
 import {
   initParallelToggle, getParallelsEnabled, setParallelsEnabled
@@ -58,11 +58,13 @@ import { initWordPage } from './word.js';
 import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './daily.js';
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
 import { runAutoTagTerms, autoTagTerms, getTermMap2 } from './terms.js';
-import { initTimelinePage } from './timeline.js';
+import { initTimelinePage, initChurchTimelinePage } from './timeline.js';
 import { initMapsPage } from './maps.js';
 import { initWordCloudPage } from './wordcloud.js';
 import { initLibReaderPage } from './lib-reader.js';
 import { initLibBrowserPage } from './lib-browser.js';
+import { initWorkshopPage } from './workshop.js';
+import { initOLSection } from './ol-companion.js';
 
 // ── Register cross-module callbacks ───────────────────────────────────────
 // These connect the modal to feature-module renderers without creating circular
@@ -98,6 +100,7 @@ window.BibleUI = {
   getVersion:   getVersion,
   setVersion:   setVersion,
   openModal:    openModal,
+  initOLSection: initOLSection,   // exposed so verse-study.js can call it
   // openReader: navigates to the reader page at the given book/chapter/verse.
   openReader:   function (bookId, ch, v) {
     var bkData = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
@@ -121,6 +124,14 @@ window.BibleUI = {
 //   8. Term tagging — deferred to idle time so it doesn't block first render.
 function init() {
   initTheme();
+
+  // ── Workshop page (translation/workshop/index.html) ───────────────────────
+  // Private tool; does not need Bible metadata. Init directly and skip the rest.
+  if (document.getElementById('workshop-container')) {
+    initWorkshopPage();
+    return;
+  }
+
   initPWA();
   _runStorageMigrations();
 
@@ -144,6 +155,7 @@ function init() {
       initWideToggle();
       initSplitToggle();
       initFontSizeControls();
+      initXrefNotesToggle();
       _injectShortcutsBtn();
       _injectPrintBtn();
     }
@@ -189,6 +201,11 @@ function init() {
     // ── Timeline page (timeline/index.html) ──────────────────────────────
     if (document.getElementById('timeline-container')) {
       initTimelinePage();
+    }
+
+    // ── Church History Timeline (church-history/index.html) ───────────────
+    if (document.getElementById('church-timeline-container')) {
+      initChurchTimelinePage();
     }
 
     // ── Maps page (maps/index.html) ───────────────────────────────────────

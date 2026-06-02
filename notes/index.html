@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Review and manage your Bible highlights, notes, and tags." />
   <title>My Study — Bible Study</title>
@@ -23,6 +23,18 @@
       text-decoration: none; white-space: nowrap;
     }
     .ms-btn:hover { background: var(--color-border); }
+    /* Full-site backup buttons stand out slightly from notes-only buttons */
+    .ms-btn--all-export,
+    .ms-btn--all-import {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    .ms-btn--all-export:hover,
+    .ms-btn--all-import:hover {
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+    }
 
     /* ── Tabs ── */
     .ms-tabs { display: flex; gap: 0; margin-bottom: 1rem; border-bottom: 2px solid var(--color-border); }
@@ -465,10 +477,15 @@
       <!-- Header -->
       <div class="ms-header">
         <h1 class="ms-header__title">My Study</h1>
-        <button class="ms-btn" id="ms-import-btn" type="button">Import backup</button>
+        <!-- Full-site backup (all discipline data) -->
+        <button class="ms-btn ms-btn--all-export" id="ms-all-export" type="button">&#x2193; Export all data</button>
+        <button class="ms-btn ms-btn--all-import" id="ms-all-import" type="button">&#x2191; Import all data</button>
+        <input type="file" id="ms-all-import-file" accept=".json" style="display:none" />
+        <!-- Notes-only backup -->
+        <button class="ms-btn" id="ms-import-btn" type="button">Import notes</button>
         <input type="file" id="ms-import-file" accept=".json" style="display:none" />
         <button class="ms-btn" id="ms-export-text" type="button">Export text</button>
-        <button class="ms-btn" id="ms-export-json" type="button">Export JSON</button>
+        <button class="ms-btn" id="ms-export-json" type="button">Export notes</button>
         <a class="ms-btn" href="../">&#x2190; Home</a>
       </div>
 
@@ -561,6 +578,42 @@
 
   <script src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/app.js"></script>
+
+  <!-- Full-site backup/restore wired to store.js -->
+  <script type="module">
+  import { downloadBackup, importAll, readBackupFile, summarise } from '../assets/js/store.js';
+
+  document.getElementById('ms-all-export').addEventListener('click', function () {
+    downloadBackup();
+  });
+
+  var allImportFile = document.getElementById('ms-all-import-file');
+  document.getElementById('ms-all-import').addEventListener('click', function () {
+    allImportFile.click();
+  });
+
+  allImportFile.addEventListener('change', function () {
+    var file = this.files && this.files[0];
+    if (!file) return;
+    this.value = '';
+    readBackupFile(file).then(function (data) {
+      var summary = summarise(data);
+      // OK = replace, Cancel = merge — replace is the destructive path so it
+      // gets the confirm prompt; merge is the safe default.
+      var replace = confirm(
+        'Backup contents:\n\n' + summary + '\n\n' +
+        'Click OK to REPLACE all local data with this backup.\n' +
+        'Click Cancel to MERGE (add new entries, keep existing data).'
+      );
+      importAll(data, { mode: replace ? 'replace' : 'merge' });
+      alert((replace ? 'Replaced' : 'Merged') + ' all data. The page will reload.');
+      location.reload();
+    }).catch(function (err) {
+      alert('Import failed: ' + err.message);
+    });
+  });
+  </script>
+
   <script>
   (function () {
     'use strict';

@@ -1,0 +1,195 @@
+/* ============================================================
+   Bible Study Website — Study Guide Shared Styles
+   Used by study-guides/{slug}/index.html pages.
+   Complements topic-guide.css (hero, sections) and style.css.
+   ============================================================ */
+
+/* ── Session header ─────────────────────────────────────── */
+.sg-session-header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.sg-session-num {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.75rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+.sg-session-ref {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ── Content callout (argument / key point box) ─────────── */
+.sg-wave {
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-surface-alt, rgba(90,60,20,0.05));
+  padding: 0.875rem 1.25rem;
+  margin: 1.25rem 0 1.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+.sg-wave strong { color: var(--color-primary); }
+
+/* ── Discussion questions block ─────────────────────────── */
+.sg-questions {
+  background: var(--color-surface-alt, rgba(0,0,0,0.03));
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem 1rem;
+  margin-top: 2.25rem;
+}
+
+.sg-questions__heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted);
+  margin-bottom: 0.875rem;
+}
+
+.sg-questions__list {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.sg-questions__list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.65;
+}
+
+.sg-questions__list li:last-child { margin-bottom: 0; }
+
+/* ── Session tab bar ─────────────────────────────────────── */
+.sg-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--color-bg, #fff);
+  border-bottom: 2px solid var(--color-border);
+  margin: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.sg-tabs::-webkit-scrollbar { display: none; }
+
+.sg-tabs__inner {
+  display: flex;
+  min-width: max-content;
+  padding: 0 1rem;
+}
+
+.sg-tab-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.625rem 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -2px;
+  transition: color 0.12s, border-color 0.12s;
+  line-height: 1;
+}
+.sg-tab-btn:hover { color: var(--color-text); }
+.sg-tab-btn.is-active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 700;
+}
+/* Separator before first numbered session */
+.sg-tab-btn[data-target="s-1"] {
+  border-left: 1px solid var(--color-border);
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+}
+
+/* ── Overview table ──────────────────────────────────────── */
+.sg-overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.sg-overview-table th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.sg-overview-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+.sg-overview-table tr:last-child td { border-bottom: none; }
+
+/* ── Section divider ─────────────────────────────────────── */
+.sg-divider {
+  border: none;
+  border-top: 2px solid var(--color-border);
+  margin: 3rem 0;
+}
+
+/* ── Dark mode ───────────────────────────────────────────── */
+[data-theme="dark"] .sg-tabs,
+:root:not([data-theme="light"]) .sg-tabs {
+  background: var(--color-bg, #1a1208);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sg-tabs {
+    background: var(--color-bg, #1a1208);
+  }
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Tab bar must clear the mobile topbar when sticky */
+  .sg-tabs {
+    top: var(--topbar-h, 48px);
+  }
+
+  /* Session tab buttons: 44px touch target */
+  .sg-tab-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  /* Overview table: horizontal scroll on narrow phones */
+  .sg-overview-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  /* Discussion questions block: tighter padding */
+  .sg-questions {
+    padding: 1rem 1rem 0.75rem;
+  }
+}
