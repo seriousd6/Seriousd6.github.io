@@ -14,9 +14,24 @@ Thumbs.db
 npm-debug.log*
 
 # Local dev
-.env
-.env.local
 local-notes.md
 
 # Extra resources (local reference material, not part of the site)
-Z - extra resources/
+Z-ExtraResources/
+
+# Claude Code config (local settings, memory, worktrees — not part of the site)
+.claude/
+memory/
+
+# PowerShell scripts (local utilities, not part of the site)
+*.ps1
+
+# Secrets / credentials
+.env*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+*.secret
