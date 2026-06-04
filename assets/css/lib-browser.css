@@ -1,4 +1,4 @@
-/* lib-browser.css — 3-column library browser (filter | list | reader) */
+/* lib-browser.css — 4-column library browser (filter | authors | list | reader) */
 
 /* ── Full-screen page override (mirrors .reader-page) ────────────────────── */
 
@@ -17,11 +17,26 @@
 
 .lb-header { margin-bottom: 1rem; }
 
+.lb-header-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
 .lb-title {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 .2rem;
 }
+
+.lb-history-link {
+  font-size: .82rem;
+  color: var(--color-primary, #4a6fa5);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.lb-history-link:hover { text-decoration: underline; }
 
 .lb-sub {
   font-size: .85rem;
@@ -51,13 +66,13 @@
 .lb-col:last-child { border-right: none; }
 
 .lb-col--filters {
-  width: 205px;
+  width: 175px;
   flex-shrink: 0;
   overflow-y: auto;
-  /* smooth collapse transition */
   transition: width .18s ease;
 }
-.lb-col--list    { width: 265px; flex-shrink: 0; }
+.lb-col--authors { width: 190px; flex-shrink: 0; overflow-y: auto; transition: width .18s ease; }
+.lb-col--list    { width: 240px; flex-shrink: 0; }
 .lb-col--reader  { flex: 1; min-width: 0; overflow-y: auto; }
 
 /* ── Column header strip ─────────────────────────────────────────────────── */
@@ -108,6 +123,19 @@
 
 /* Center the toggle button in the slim column */
 .lb-layout--filters-collapsed .lb-col--filters .lb-col-label {
+  justify-content: center;
+  padding: .6rem .25rem .55rem;
+}
+
+/* ── Collapsed authors column ────────────────────────────────────────────── */
+
+.lb-layout--authors-collapsed .lb-col--authors {
+  width: 36px;
+  overflow: hidden;
+}
+.lb-layout--authors-collapsed .lb-col--authors .lb-col-label-text,
+.lb-layout--authors-collapsed #lb-authors { display: none; }
+.lb-layout--authors-collapsed .lb-col--authors .lb-col-label {
   justify-content: center;
   padding: .6rem .25rem .55rem;
 }
@@ -198,13 +226,20 @@
   opacity: .55;
 }
 
-/* ── Sort control ────────────────────────────────────────────────────────── */
+/* ── Search + sort controls (list column) ────────────────────────────────── */
 
 #lb-list-controls {
   padding: .3rem .7rem;
   border-bottom: 1px solid var(--color-border, #e0e0e0);
   background: var(--color-surface-subtle, #fafafa);
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.lb-list-search-row {
+  padding-top: .1rem;
 }
 
 .lb-sort-row {
@@ -236,6 +271,84 @@
 
 /* Hide sort control when list column is collapsed */
 .lb-layout--list-collapsed #lb-list-controls { display: none; }
+
+/* ── Authors panel ────────────────────────────────────────────────────────── */
+
+#lb-authors {
+  display: flex;
+  flex-direction: column;
+  padding: .35rem 0;
+}
+
+.lb-author-item {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  width: 100%;
+  text-align: left;
+  padding: .38rem .85rem .38rem .7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .82rem;
+  color: var(--color-text);
+  line-height: 1.3;
+  transition: background .1s;
+  border-left: 2px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lb-author-item:hover {
+  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+}
+.lb-author-item--active {
+  background: color-mix(in srgb, var(--color-primary) 9%, transparent);
+  border-left-color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Tradition dot — small colored circle */
+.lb-author-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--color-muted, #ccc);
+}
+.lb-author-dot--reformed      { background: #4a7c59; }
+.lb-author-dot--lutheran      { background: #7b5ea7; }
+.lb-author-dot--anglican      { background: #c06030; }
+.lb-author-dot--baptist       { background: #2e6da4; }
+.lb-author-dot--anabaptist    { background: #8a7d55; }
+.lb-author-dot--congregationalist { background: #5b7fa6; }
+.lb-author-dot--methodist     { background: #c07830; }
+.lb-author-dot--orthodox      { background: #9b2b2b; }
+.lb-author-dot--roman-catholic { background: #b0813a; }
+.lb-author-dot--patristic     { background: #5a7a9e; }
+.lb-author-dot--ecumenical    { background: #888; }
+
+.lb-author-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-author-count {
+  font-size: .68rem;
+  color: var(--color-muted, #aaa);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.lb-author-item--active .lb-author-count { color: var(--color-primary); opacity: .7; }
+
+.lb-authors-separator {
+  height: 1px;
+  background: var(--color-border, #eee);
+  margin: .3rem .7rem;
+  flex-shrink: 0;
+}
 
 /* ── Document list ────────────────────────────────────────────────────────── */
 
@@ -311,7 +424,7 @@
 .lb-item-abbrev--congregationalist{ border-color: #2a6b6b; color: #2a6b6b; }
 .lb-item-abbrev--methodist       { border-color: #1a6b8a; color: #1a6b8a; }
 .lb-item-abbrev--orthodox        { border-color: #8b2252; color: #8b2252; }
-.lb-item-abbrev--catholic        { border-color: #8b1a1a; color: #8b1a1a; }
+.lb-item-abbrev--roman-catholic  { border-color: #8b1a1a; color: #8b1a1a; }
 .lb-item-abbrev--patristic       { border-color: #8b6914; color: #8b6914; }
 
 .lb-item-body {
@@ -331,6 +444,22 @@
   text-overflow: ellipsis;
 }
 .lb-list-item--active .lb-item-title { color: var(--color-primary); }
+
+.lb-item-overview-badge {
+  display: inline-block;
+  margin-left: .35em;
+  padding: 0 .35em;
+  font-size: .6rem;
+  font-weight: 500;
+  line-height: 1.6;
+  vertical-align: middle;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--color-muted, #aaa) 18%, transparent);
+  color: var(--color-muted, #888);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 
 .lb-item-meta {
   font-size: .67rem;
@@ -370,13 +499,34 @@
   background: var(--color-surface-subtle, #fafafa);
 }
 
+/* Title row: title + open-in-reader link side by side */
+.lb-reader-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  margin: 0 0 .35rem;
+}
+
 .lb-reader-title {
   font-size: 1.15rem;
   font-weight: 700;
-  margin: 0 0 .35rem;
+  margin: 0;
   color: var(--color-heading, var(--color-text));
   line-height: 1.25;
+  flex: 1;
+  min-width: 0;
 }
+
+.lb-reader-open-link {
+  font-size: .95rem;
+  color: var(--color-muted, #bbb);
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  transition: color .12s;
+  line-height: 1;
+}
+.lb-reader-open-link:hover { color: var(--color-primary); }
 
 .lb-reader-meta {
   display: flex;
@@ -390,6 +540,199 @@
 .lb-reader-type {
   font-size: .73rem;
   color: var(--color-muted, #aaa);
+}
+
+/* Volume switcher chips */
+.lb-reader-volumes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .55rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.lb-vol-chip {
+  padding: .22em .65em;
+  font-size: .68rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-muted, #888);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.lb-vol-chip:hover {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lb-vol-chip--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  cursor: default;
+}
+
+/* Volume badge in list items */
+.lb-item-vol-badge {
+  display: inline-block;
+  margin-left: .35em;
+  padding: 0 .35em;
+  font-size: .6rem;
+  font-weight: 500;
+  line-height: 1.6;
+  vertical-align: middle;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+/* Paginated chapter navigator */
+.lb-reader-pager {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .55rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.lb-pager-btn {
+  padding: .25em .6em;
+  font-size: .72rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-text, #333);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .12s, border-color .12s;
+  flex-shrink: 0;
+}
+.lb-pager-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lb-pager-btn:disabled { opacity: .38; cursor: default; }
+
+.lb-pager-select {
+  flex: 1;
+  min-width: 0;
+  padding: .25em .4em;
+  font-size: .72rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #333);
+  cursor: pointer;
+}
+
+.lb-pager-progress {
+  margin-top: .3rem;
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.lb-pager-pos {
+  font-size: .63rem;
+  color: var(--color-muted, #aaa);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lb-pager-heading {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--color-heading, var(--color-text));
+  line-height: 1.3;
+}
+
+/* ── Section tab bar (≤7 sections in paginated mode) ─────────────────────── */
+
+.lb-sec-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  margin-bottom: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.lb-sec-tab {
+  padding: .22em .6em;
+  font-size: .7rem;
+  font-weight: 500;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-muted, #666);
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background .1s, border-color .1s, color .1s;
+}
+.lb-sec-tab:hover:not(.lb-sec-tab--active) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lb-sec-tab--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  pointer-events: none;
+}
+
+/* ── Chapter sub-pager (within a book section) ────────────────────────────── */
+
+.lb-subpager {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem 0;
+  border-top: 1px solid var(--color-border, #eee);
+  border-bottom: 1px solid var(--color-border, #eee);
+  margin-bottom: 1rem;
+}
+.lb-subpager + .lb-subpager {
+  margin-top: 1rem;
+  border-bottom: none;
+}
+
+.lb-subpager-btn {
+  padding: .2em .55em;
+  font-size: .68rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color .1s;
+}
+.lb-subpager-btn:hover:not(:disabled) { border-color: var(--color-primary); color: var(--color-primary); }
+.lb-subpager-btn:disabled { opacity: .35; cursor: default; }
+
+.lb-subpager-pos {
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--color-muted, #888);
+  flex: 1;
+}
+.lb-subpager-count {
+  font-weight: 400;
+  opacity: .7;
 }
 
 /* TOC strip inside reader header */
@@ -470,6 +813,7 @@
     border-radius: 8px;
   }
   .lb-col--filters,
+  .lb-col--authors,
   .lb-col--list {
     width: 100%;
     border-right: none;
@@ -477,27 +821,330 @@
     overflow: visible;
   }
   .lb-col--filters { transition: none; }
-  .lb-col--list { max-height: 300px; }
-  .lb-col--reader { border-right: none; overflow: visible; min-height: 300px; }
+  .lb-col--authors { max-height: 220px; overflow-y: auto; transition: none; }
+  .lb-col--list    { max-height: 300px; }
+  .lb-col--reader  { border-right: none; overflow: visible; min-height: 300px; }
   .lb-reader-header { position: static; }
   .lb-reader-body { overflow: visible; }
-  /* Collapse not meaningful on mobile — always show both columns */
+  /* Collapse not meaningful on mobile */
   .lb-layout--filters-collapsed .lb-col--filters,
-  .lb-layout--list-collapsed .lb-col--list { width: 100%; overflow: visible; }
+  .lb-layout--authors-collapsed .lb-col--authors,
+  .lb-layout--list-collapsed    .lb-col--list { width: 100%; overflow: visible; }
   .lb-layout--filters-collapsed .lb-col--filters .lb-col-label-text { display: inline; }
   .lb-layout--filters-collapsed #lb-filter-panel { display: flex; }
+  .lb-layout--authors-collapsed .lb-col--authors .lb-col-label-text { display: inline; }
+  .lb-layout--authors-collapsed #lb-authors { display: flex; }
   .lb-layout--list-collapsed .lb-col--list .lb-col-label-text { display: inline; }
   .lb-layout--list-collapsed #lb-list-count { display: inline; }
   .lb-layout--list-collapsed #lb-list-controls { display: block; }
   .lb-layout--list-collapsed #lb-list { display: block; }
 }
 
+/* ── Mobile tab bar (≤600px) ──────────────────────────────────────────────── */
+/*
+ * At narrow widths the 4-column stacked layout is unusable.
+ * We switch to a single-panel view driven by .lb-layout--tab-* classes on
+ * .lb-layout. A tab bar rendered by JS sits above the panel area.
+ * Only the active panel is shown; others are hidden.
+ */
+
+@media (max-width: 600px) {
+  /* Tab bar strip */
+  .lb-tab-bar {
+    display: flex;
+    border-bottom: 2px solid var(--color-border, #e0e0e0);
+    background: var(--color-surface-subtle, #fafafa);
+    flex-shrink: 0;
+  }
+  .lb-tab-btn {
+    flex: 1;
+    padding: .55rem .25rem;
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--color-muted, #999);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: color .12s, border-color .12s;
+  }
+  .lb-tab-btn--active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+  .lb-tab-btn:hover:not(.lb-tab-btn--active) { color: var(--color-text); }
+
+  /* In tab mode the layout is a column; tabs control which panel shows */
+  .lb-layout--tabbed {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  /* All columns hidden by default in tabbed mode */
+  .lb-layout--tabbed .lb-col--filters,
+  .lb-layout--tabbed .lb-col--authors,
+  .lb-layout--tabbed .lb-col--list,
+  .lb-layout--tabbed .lb-col--reader {
+    display: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: none;
+    overflow: visible;
+    min-height: 0;
+  }
+
+  /* Show only the active tab's column */
+  .lb-layout--tabbed.lb-tab--filters .lb-col--filters,
+  .lb-layout--tabbed.lb-tab--authors .lb-col--authors,
+  .lb-layout--tabbed.lb-tab--list    .lb-col--list,
+  .lb-layout--tabbed.lb-tab--reader  .lb-col--reader { display: flex; flex-direction: column; }
+
+  /* Reader tab fills remaining viewport */
+  .lb-layout--tabbed.lb-tab--reader .lb-col--reader {
+    min-height: calc(100vh - 160px);
+    overflow-y: auto;
+  }
+  .lb-layout--tabbed.lb-tab--reader .lb-reader-header { position: sticky; top: 0; }
+
+  /* Filter/Authors/List get scroll if tall */
+  .lb-layout--tabbed.lb-tab--filters .lb-col--filters,
+  .lb-layout--tabbed.lb-tab--authors .lb-col--authors { max-height: calc(100vh - 160px); overflow-y: auto; }
+  .lb-layout--tabbed.lb-tab--list    .lb-col--list    { max-height: calc(100vh - 160px); overflow-y: auto; }
+
+  /* Hide the old desktop collapse toggles on mobile */
+  .lb-layout--tabbed .lb-col-toggle { display: none; }
+
+  /* Restore collapsed overrides that the 900px breakpoint neutralises */
+  .lb-layout--tabbed.lb-layout--filters-collapsed .lb-col--filters { display: none; }
+  .lb-layout--tabbed.lb-layout--authors-collapsed .lb-col--authors { display: none; }
+  .lb-layout--tabbed.lb-layout--list-collapsed    .lb-col--list    { display: none; }
+}
+
+/* ── Clear filters button ─────────────────────────────────────────────────── */
+
+.lb-filter-clear-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 .8rem .2rem;
+}
+
+.lb-filter-clear {
+  font-size: .68rem;
+  color: var(--color-muted, #aaa);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .15rem .35rem;
+  border-radius: 3px;
+  transition: color .12s, background .12s;
+}
+.lb-filter-clear:hover {
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+}
+
+/* ── Authors panel search ─────────────────────────────────────────────────── */
+
+.lb-authors-search-row {
+  padding: .4rem .65rem .3rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.lb-authors-search { font-size: .76rem; }
+
+/* ── Document list reset button (empty state) ─────────────────────────────── */
+
+.lb-list-reset-row {
+  padding: .25rem 1rem .5rem;
+  text-align: center;
+}
+
+.lb-list-reset-btn {
+  font-size: .75rem;
+  color: var(--color-primary);
+  background: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  padding: .3em .9em;
+  cursor: pointer;
+  transition: background .12s;
+}
+.lb-list-reset-btn:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+
+/* ── Loading skeleton ─────────────────────────────────────────────────────── */
+
+.lb-reader-skeleton {
+  padding: 1.5rem 1.25rem;
+}
+
+.lb-skeleton-line {
+  height: .9em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--color-muted, #bbb) 18%, transparent);
+  margin-bottom: .75rem;
+  animation: lb-pulse 1.4s ease-in-out infinite;
+  width: 92%;
+}
+.lb-skeleton-line--title { height: 1.3em; width: 62%; margin-bottom: 1rem; }
+.lb-skeleton-line--meta  { height: .7em; width: 38%; margin-bottom: 1.25rem; }
+.lb-skeleton-line--short { width: 65%; }
+
+@keyframes lb-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .38; }
+}
+
+/* ── Paginated number input ───────────────────────────────────────────────── */
+
+.lb-pager-num {
+  width: 3.8rem;
+  padding: .22em .4em;
+  font-size: .72rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #333);
+  text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.lb-pager-num::-webkit-inner-spin-button,
+.lb-pager-num::-webkit-outer-spin-button { opacity: 0; }
+.lb-pager-num:focus { border-color: var(--color-primary); outline: none; }
+
+.lb-pager-of {
+  font-size: .68rem;
+  color: var(--color-muted, #aaa);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Reader title-row action buttons (find + open-in-reader) ─────────────── */
+
+.lb-reader-title-actions {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  flex-shrink: 0;
+  margin-top: .1rem;
+}
+
+.lb-find-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  color: var(--color-muted, #888);
+  font-size: .95rem;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color .12s, background .12s;
+}
+.lb-find-btn:hover { color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+
+/* ── In-reader find bar ──────────────────────────────────────────────────── */
+
+.lb-find-bar {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .5rem;
+  padding: .45rem .6rem;
+  background: var(--color-bg, #faf8f4);
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 6px;
+}
+.lb-find-input {
+  flex: 1;
+  min-width: 0;
+  padding: .28em .55em;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  font-size: .82rem;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #2c2416);
+}
+.lb-find-input:focus { border-color: var(--color-primary); outline: none; }
+.lb-find-submit {
+  padding: .28em .7em;
+  font-size: .78rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .12s;
+}
+.lb-find-submit:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+.lb-find-result {
+  font-size: .74rem;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lb-find-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  color: var(--color-muted, #888);
+  font-size: .85rem;
+  line-height: 1;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color .12s;
+}
+.lb-find-close:hover { color: var(--color-primary); }
+
+/* ── Find highlight mark ─────────────────────────────────────────────────── */
+
+mark.lb-find-mark {
+  background: #fde68a;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* ── Section counter (§ N of M) ──────────────────────────────────────────── */
+
+.lb-section-counter {
+  margin-left: auto;
+  font-size: .7rem;
+  color: var(--color-muted, #888);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.lb-section-counter:empty { display: none; }
+
 /* ── Dark mode ────────────────────────────────────────────────────────────── */
 
 [data-theme="dark"] .lb-col-label,
 [data-theme="dark"] .lb-reader-header { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lb-author-item--active {
+  background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+[data-theme="dark"] .lb-pager-num,
+[data-theme="dark"] .lb-pager-select,
+[data-theme="dark"] .lb-vol-chip { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lb-find-bar  { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lb-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .lb-col-label,
   :root:not([data-theme="light"]) .lb-reader-header { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lb-author-item--active {
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  }
+  :root:not([data-theme="light"]) .lb-pager-num,
+  :root:not([data-theme="light"]) .lb-pager-select,
+  :root:not([data-theme="light"]) .lb-vol-chip { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lb-find-bar   { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lb-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
 }

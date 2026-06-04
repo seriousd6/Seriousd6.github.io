@@ -295,6 +295,21 @@
   color: var(--color-muted, #aaa);
 }
 
+.vs-dict-src-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .6rem;
+  font-weight: 700;
+  font-family: var(--font-ui, sans-serif);
+  line-height: 1;
+  color: #fff;
+  border-radius: 3px;
+  padding: .1em .3em;
+  flex-shrink: 0;
+  vertical-align: baseline;
+}
+
 /* ── Modal Dictionary tab ────────────────────────────────────────────────────── */
 .dict-modal-list {
   display: flex;

@@ -487,6 +487,218 @@
   }
 }
 
+/* ── Reading streak (embedded in reading card) ───────────────────────────────── */
+.daily-plan-streak {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .55rem 1rem .6rem;
+  margin-top: .25rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+}
+.daily-plan-streak-flame { font-size: .95rem; line-height: 1; }
+.daily-plan-streak-num {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.daily-plan-streak-lbl {
+  font-size: .78rem;
+  color: var(--color-muted);
+}
+.daily-plan-streak-best {
+  font-size: .72rem;
+  color: var(--color-muted);
+  margin-left: auto;
+}
+.daily-plan-streak-empty {
+  font-size: .78rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ── HP-B: Reading plan pace badge ──────────────────────────────────────────── */
+.daily-plan-pace {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-radius: 8px;
+  padding: .1rem .4rem;
+  background: var(--color-border);
+}
+.daily-plan-pace--ahead   { color: #2e7d32; background: rgba(46,125,50,.1); }
+.daily-plan-pace--behind  { color: #b71c1c; background: rgba(183,28,28,.1); }
+.daily-plan-pace--on-track { color: var(--color-muted); }
+
+/* ── HP-C: Disciplines completion count + memory due badge ──────────────────── */
+.daily-tracker-count {
+  font-size: .78rem;
+  color: var(--color-muted);
+  margin-left: auto;
+  margin-right: .5rem;
+}
+.daily-mem-badge {
+  font-size: .7rem;
+  background: #b71c1c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0 .4rem;
+  margin-left: .35rem;
+  vertical-align: middle;
+}
+
+/* ── HP-D: Devotional source chips ──────────────────────────────────────────── */
+.daily-devot-chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .4rem;
+  padding: .5rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.daily-devot-chip {
+  flex-shrink: 0;
+  font-size: .78rem;
+  font-family: var(--font-ui);
+  padding: .28rem .75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.daily-devot-chip:hover { border-color: var(--color-primary); }
+.daily-devot-chip--active {
+  background: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  border-color: var(--color-primary);
+}
+
+/* ── HP-E: Streak empty state ───────────────────────────────────────────────── */
+.daily-streak-empty {
+  font-size: .9rem;
+  color: var(--color-muted);
+  padding: .9rem 1.1rem;
+  margin: 0;
+}
+.daily-streak-empty a { color: var(--color-primary); }
+
+/* ── HP-F: VOTD action buttons ───────────────────────────────────────────────── */
+.daily-votd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .3rem 1.25rem .85rem;
+}
+.daily-votd-btn {
+  font-size: .78rem;
+  font-family: var(--font-ui);
+  padding: .28rem .75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.daily-votd-btn:hover { border-color: var(--color-primary); }
+
+/* ── HP-G: Quick verse search ───────────────────────────────────────────────── */
+.daily-search-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.daily-search-input {
+  flex: 1;
+  padding: .55rem .85rem;
+  font-size: .9rem;
+  font-family: var(--font-body, inherit);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 7px 0 0 7px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  outline: none;
+}
+.daily-search-input:focus { border-color: var(--color-primary); }
+.daily-search-btn {
+  padding: .55rem 1.1rem;
+  font-size: .9rem;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  border: 1px solid var(--color-primary);
+  border-radius: 0 7px 7px 0;
+  background: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  cursor: pointer;
+}
+.daily-search-btn:hover { filter: brightness(1.1); }
+
+/* ── HP-H: Mark today done button ───────────────────────────────────────────── */
+.daily-mark-done-btn {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .38rem .9rem;
+  font-size: .82rem;
+  font-family: var(--font-ui);
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.daily-mark-done-btn:hover { background: var(--color-primary); color: var(--color-on-primary, #fff); }
+.daily-mark-done-btn--done {
+  border-color: var(--color-border);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+/* ── Continue Reading — empty-state suggestion ──────────────────────────────── */
+.daily-lib-suggest-lbl {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-muted);
+  padding: .6rem 1rem .1rem;
+  margin: 0;
+}
+.daily-lib-suggest {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .2rem;
+}
+.daily-lib-suggest-desc {
+  font-size: .8rem;
+  color: var(--color-muted);
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* ── HP-I: Library tradition chip ───────────────────────────────────────────── */
+.daily-hist-tradition {
+  font-size: .68rem;
+  background: var(--color-border);
+  border-radius: 3px;
+  padding: .05rem .35rem;
+  margin-left: .35rem;
+  text-transform: capitalize;
+  vertical-align: middle;
+  color: var(--color-text);
+}
+
 /* ── Mobile: touch targets ───────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   /* Passage chips: 44px minimum tap height */

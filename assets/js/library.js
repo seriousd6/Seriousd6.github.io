@@ -7,6 +7,7 @@ import {
   _torreyLoadVidx, _torreyTopicsForVerse,
   _torreyVidxCache,
   _smithLoad, _smithData, _smithMap, _smithByLetter, _smithEntryCache, _smithLoadEntry,
+  _isbeLoad, _isbeData, _isbeMap, _isbeByLetter, _isbeEntryCache, _isbeLoadEntry,
   _hitchLoad, _hitchData, _hitchMap, _hitchByLetter,
   _loadLibDoc, _loadLibIndex,
   _resolve
@@ -66,6 +67,14 @@ var DICT_IDX_URL   = _resolve('../../data/dictionary/index.json');
 var DICT_ENTRY_URL = _resolve('../../data/dictionary/');
 var DICT_VIDX_URL  = _resolve('../../data/dictionary/verse-index/');
 
+// ── Smith's verse-index ───────────────────────────────────────────────────────
+var SMITH_VIDX_URL  = _resolve('../../data/smith/verse-index/');
+var _smithVidxCache = {};
+
+// ── ISBE verse-index ─────────────────────────────────────────────────────────
+var ISBE_VIDX_URL  = _resolve('../../data/isbe/verse-index/');
+var _isbeVidxCache = {};
+
 export var _dictData      = null;
 export var _dictMap       = null;
 var _dictByLetter  = null;
@@ -106,13 +115,54 @@ function _dictLoadVidx(bookId) {
     .catch(function () { _dictVidxCache[bookId] = {}; return {}; });
 }
 
+function _smithLoadVidx(bookId) {
+  if (_smithVidxCache[bookId] !== undefined) return Promise.resolve(_smithVidxCache[bookId]);
+  return fetch(SMITH_VIDX_URL + bookId + '.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (d) { _smithVidxCache[bookId] = d || {}; return d; })
+    .catch(function () { _smithVidxCache[bookId] = {}; return {}; });
+}
+
+function _isbeLoadVidx(bookId) {
+  if (_isbeVidxCache[bookId] !== undefined) return Promise.resolve(_isbeVidxCache[bookId]);
+  return fetch(ISBE_VIDX_URL + bookId + '.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (d) { _isbeVidxCache[bookId] = d || {}; return d; })
+    .catch(function () { _isbeVidxCache[bookId] = {}; return {}; });
+}
+
+// INTENT: Loads per-verse dictionary entries from Easton, Smith, and ISBE verse indexes,
+//   deduplicating by source:id so the verse modal shows each matching article once.
+// CHANGE? Adding a new dictionary source requires: (1) a vidx loader function, (2) a new
+//   Promise in Promise.all, (3) a forEach block here, and (4) the source key in library.js
+//   display/render code (the badge lookup in renderModalDict and initDictionaryPage).
+// VERIFY: Open verse modal for Genesis 1:1; Dictionary tab should list entries from all three
+//   sources (E badge, S badge, IS badge) when relevant articles exist.
 export function _dictEntriesForVerse(parsed) {
   if (!parsed || !parsed.bookId || !parsed.ch || !parsed.v) return Promise.resolve([]);
-  return _dictLoadVidx(parsed.bookId).then(function (vidx) {
-    var ch   = String(parsed.ch);
-    var v    = String(parsed.v);
-    return (vidx[ch] && vidx[ch][v]) || [];
-  });
+  var ch = String(parsed.ch);
+  var v  = String(parsed.v);
+  return Promise.all([_dictLoadVidx(parsed.bookId), _smithLoadVidx(parsed.bookId), _isbeLoadVidx(parsed.bookId)])
+    .then(function (results) {
+      var eastonVidx = results[0];
+      var smithVidx  = results[1];
+      var isbeVidx   = results[2];
+      var entries = [];
+      var seen = {};
+      ((eastonVidx[ch] && eastonVidx[ch][v]) || []).forEach(function (e) {
+        var key = 'easton:' + e.id;
+        if (!seen[key]) { seen[key] = true; entries.push({ id: e.id, term: e.term, source: 'easton' }); }
+      });
+      ((smithVidx[ch] && smithVidx[ch][v]) || []).forEach(function (e) {
+        var key = 'smith:' + e.id;
+        if (!seen[key]) { seen[key] = true; entries.push({ id: e.id, term: e.term, source: 'smith' }); }
+      });
+      ((isbeVidx[ch] && isbeVidx[ch][v]) || []).forEach(function (e) {
+        var key = 'isbe:' + e.id;
+        if (!seen[key]) { seen[key] = true; entries.push({ id: e.id, term: e.term, source: 'isbe' }); }
+      });
+      return entries;
+    });
 }
 
 // ── Library verse-index ───────────────────────────────────────────────────────
@@ -299,8 +349,16 @@ export function renderVSDictionary(parsed, container) {
     }
     var html = '<div class="vs-dict-list">';
     entries.forEach(function (e) {
-      var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+      var src = e.source;
+      var href = src === 'smith'
+        ? DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(e.id)
+        : src === 'isbe'
+          ? DICT_PAGE_URL + '?src=isbe&entry=' + encodeURIComponent(e.id)
+          : DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+      var badge      = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
+      var badgeColor = src === 'smith' ? '#1d4ed8' : src === 'isbe' ? '#1e3a5f' : '#7c3aed';
       html += '<a class="vs-dict-item" href="' + escHtml(href) + '">' +
+        '<span class="vs-dict-src-badge" style="background:' + badgeColor + '">' + badge + '</span>' +
         '<span class="vs-dict-item__term">' + escHtml(e.term) + '</span>' +
         '<span class="vs-dict-item__arrow">&#x2192;</span>' +
         '</a>';
@@ -327,8 +385,17 @@ export function renderModalDictionary(parsed, container) {
     }
     var html = '';
     entries.forEach(function (e) {
-      var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
-      var meta = _dictMap && _dictMap[e.id];
+      var src    = e.source;
+      var href   = src === 'smith'
+        ? DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(e.id)
+        : src === 'isbe'
+          ? DICT_PAGE_URL + '?src=isbe&entry=' + encodeURIComponent(e.id)
+          : DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+      var meta   = src === 'smith' ? (_smithMap && _smithMap[e.id])
+                 : src === 'isbe'  ? (_isbeMap  && _isbeMap[e.id])
+                 : (_dictMap && _dictMap[e.id]);
+      var badge      = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
+      var badgeColor = src === 'smith' ? '#1d4ed8' : src === 'isbe' ? '#1e3a5f' : '#7c3aed';
       var brief = meta ? meta.brief : '';
       if (brief) {
         var dot = brief.indexOf('. ', 40);
@@ -336,7 +403,9 @@ export function renderModalDictionary(parsed, container) {
         else if (brief.length > 130) brief = brief.slice(0, 127) + '…';
       }
       html += '<div class="bsw-dict-panel-entry">' +
-        '<p class="bsw-dict-panel-entry__term">' + escHtml(e.term) + '</p>' +
+        '<p class="bsw-dict-panel-entry__term">' +
+        '<span class="vs-dict-src-badge" style="background:' + badgeColor + '">' + badge + '</span>' +
+        escHtml(e.term) + '</p>' +
         (brief ? '<p class="bsw-dict-panel-entry__brief">' + escHtml(brief) + '</p>' : '') +
         '<a class="bsw-dict-panel-entry__link" href="' + escHtml(href) + '">Full entry &#x2192;</a>' +
         '</div>';
@@ -381,6 +450,13 @@ export function initDictionaryPage() {
       load: function () { return _smithLoad(); },
       getData: function () { return { data: _smithData, map: _smithMap, byLetter: _smithByLetter }; },
       loadEntry: function (id) { return _smithLoadEntry(id); }
+    },
+    {
+      key: 'isbe',      label: 'ISBE',       badge: 'IS', badgeColor: '#1e3a5f',
+      type: 'dict',     meta: "Int'l Standard Bible Encyclopaedia (James Orr ed., 1915)",
+      load: function () { return _isbeLoad(); },
+      getData: function () { return { data: _isbeData,  map: _isbeMap,  byLetter: _isbeByLetter  }; },
+      loadEntry: function (id) { return _isbeLoadEntry(id); }
     },
     {
       key: 'hitchcock', label: 'Names',      badge: 'N',  badgeColor: '#065f46',
@@ -733,7 +809,7 @@ export function initDictionaryPage() {
       detailEl.innerHTML = '<p class="dict-detail-placeholder">Select an entry to read its definition.</p>';
     }
 
-    ['smith', 'hitchcock', 'nave', 'torrey'].forEach(function (key) {
+    ['smith', 'isbe', 'hitchcock', 'nave', 'torrey'].forEach(function (key) {
       var src = _findSrc(key);
       if (!src) return;
       src.load().then(function () {

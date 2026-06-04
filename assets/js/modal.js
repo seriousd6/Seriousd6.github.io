@@ -6,8 +6,8 @@ import {
   parseCrossRefEntry, _compareCanonical, parseRef,
   escHtml, READER_URL, VERSE_STUDY_URL, COMPARE_URL,
   COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
-  ATTRIBUTION, metaVersions,
-  registerOpenModal
+  ATTRIBUTION, metaVersions, metaBooks,
+  registerOpenModal, _resolve
 } from './core.js';
 import {
   getNotes, getNote, saveNote, toggleHighlight, getTags, addTag, removeTag,
@@ -19,6 +19,7 @@ import { wireRefEl, wireRefLinks, applyHighlights, applyModalHighlights } from '
 var _backdropEl  = null;
 var _modalEl     = null;
 var _lastFocused = null;
+var _lastTab     = 'verse'; // VM-F: persists last active tab within session
 
 // ── Cross-reference tab constants ─────────────────────────────────────────
 var XREF_CHAPTER_LIMIT = 5;
@@ -93,8 +94,9 @@ export function buildModalDOM() {
       '<a class="bsw-modal__read-ch" href="#">Read chapter</a>' +
       '<a class="bsw-modal__verse-study-link" href="#" hidden>Verse Study ↗</a>' +
       '<a class="bsw-modal__compare-link" href="#" hidden>All translations ↗</a>' +
-      '<button class="bsw-modal__memory-btn bsw-modal__compare-link" hidden aria-label="Add to memory">☆ Memorize</button>' +
-      '<button class="bsw-modal__copy-btn" hidden aria-label="Copy verse text">Copy</button>' +
+      '<button class="bsw-modal__memory-btn" hidden aria-label="Add to memory">☆ Memorize</button>' +
+      '<button class="bsw-modal__copy-quote-btn" hidden aria-label="Copy verse as quote">Quote</button>' +
+      '<button class="bsw-modal__copy-ref-btn" hidden aria-label="Copy verse reference">Reference</button>' +
       '<button class="bsw-modal__share-btn" hidden aria-label="Share verse as image">Share</button>' +
       '<button class="bsw-modal__close" aria-label="Close verse viewer">✕</button>' +
     '</div>' +
@@ -114,10 +116,12 @@ export function buildModalDOM() {
       '<button class="bsw-modal__tab" data-tab="crossrefs" role="tab" aria-selected="false">Cross Refs</button>' +
     '</div>' +
     '<div class="bsw-modal__split">' +
+      '<button class="bsw-modal__prev-verse" hidden aria-label="Previous verse" title="Previous verse (k)">‹</button>' +
       '<div class="bsw-modal__verse-col">' +
         '<div class="bsw-modal__body" aria-live="polite"></div>' +
         '<div class="bsw-modal__attribution"></div>' +
       '</div>' +
+      '<button class="bsw-modal__next-verse" hidden aria-label="Next verse" title="Next verse (j)">›</button>' +
     '</div>' +
     '<div class="bsw-modal__notes-panel" hidden></div>' +
     '<div class="bsw-modal__commentary-panel" hidden></div>' +
@@ -152,20 +156,92 @@ export function buildModalDOM() {
   backdrop.addEventListener('touchmove', function (e) {
     if (!_modalEl || !_modalEl.contains(e.target)) e.preventDefault();
   }, { passive: false });
+
+  // VM-M2: swipe-down-to-dismiss on mobile bottom sheet
+  var _swipeStartY = 0, _swipeDelta = 0, _activePanel = null;
+  modal.addEventListener('touchstart', function (e) {
+    if (window.innerWidth > 767) return;
+    _swipeStartY = e.touches[0].clientY;
+    _swipeDelta  = 0;
+    _activePanel = modal.querySelector('[class*="-panel"]:not([hidden])') ||
+                   modal.querySelector('.bsw-modal__verse-col');
+    modal.style.transition = 'none';
+  }, { passive: true });
+  modal.addEventListener('touchmove', function (e) {
+    if (window.innerWidth > 767) return;
+    _swipeDelta = e.touches[0].clientY - _swipeStartY;
+    if (_swipeDelta > 0 && (!_activePanel || _activePanel.scrollTop === 0))
+      modal.style.transform = 'translateY(' + _swipeDelta + 'px)';
+  }, { passive: true });
+  modal.addEventListener('touchend', function () {
+    if (window.innerWidth > 767) return;
+    modal.style.transition = '';
+    modal.style.transform  = '';
+    if (_swipeDelta > 100) hideModal();
+  });
+
   modal.querySelector('#bsw-modal-version').addEventListener('change', function () {
     var ref = _modalEl._parsedRef;
     if (ref) renderModal(ref, this.value);
   });
-  modal.querySelector('.bsw-modal__copy-btn').addEventListener('click', function () {
-    _copyModalVerse(this);
+  modal.querySelector('.bsw-modal__copy-quote-btn').addEventListener('click', function () {
+    _copyModalVerse(this, 'plain');
+  });
+  modal.querySelector('.bsw-modal__copy-ref-btn').addEventListener('click', function () {
+    _copyModalVerse(this, 'cite');
   });
   modal.querySelector('.bsw-modal__share-btn').addEventListener('click', function () {
     _shareModalVerseAsImage();
+  });
+  // VM-I: prev/next verse navigation
+  modal.querySelector('.bsw-modal__prev-verse').addEventListener('click', function () {
+    var ref = _modalEl && _modalEl._parsedRef;
+    if (ref && ref.v > 1) openModal(parseRef(ref.bookName + ' ' + ref.ch + ':' + (ref.v - 1)));
+  });
+  modal.querySelector('.bsw-modal__next-verse').addEventListener('click', function () {
+    var ref  = _modalEl && _modalEl._parsedRef;
+    var maxV = _modalEl && _modalEl._chapterMaxV;
+    if (ref && (!maxV || ref.v < maxV)) openModal(parseRef(ref.bookName + ' ' + ref.ch + ':' + (ref.v + 1)));
+  });
+  // VM-M2: swipe-down-to-dismiss gesture
+  var _swipeStartY = 0, _swipeDelta = 0, _activePanel = null;
+  modal.addEventListener('touchstart', function (e) {
+    if (window.innerWidth > 767) return;
+    _swipeStartY = e.touches[0].clientY;
+    _swipeDelta  = 0;
+    _activePanel = modal.querySelector('[class*="-panel"]:not([hidden])') ||
+                   modal.querySelector('.bsw-modal__verse-col');
+    modal.style.transition = 'none';
+  }, { passive: true });
+  modal.addEventListener('touchmove', function (e) {
+    if (window.innerWidth > 767) return;
+    _swipeDelta = e.touches[0].clientY - _swipeStartY;
+    if (_swipeDelta > 0 && (!_activePanel || _activePanel.scrollTop === 0))
+      modal.style.transform = 'translateY(' + _swipeDelta + 'px)';
+  }, { passive: true });
+  modal.addEventListener('touchend', function () {
+    modal.style.transition = '';
+    modal.style.transform  = '';
+    if (_swipeDelta > 100) hideModal();
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' &&
         _backdropEl && !_backdropEl.classList.contains('bsw-modal-backdrop--hidden')) {
       hideModal();
+    }
+    // VM-I: j/k navigate verses when modal is open
+    if (_backdropEl && !_backdropEl.classList.contains('bsw-modal-backdrop--hidden')) {
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'TEXTAREA' || tag === 'INPUT' || tag === 'SELECT') return;
+      var ref = _modalEl && _modalEl._parsedRef;
+      var isSingle = ref && !ref.wholeChapter && ref.ch === ref.endCh && ref.v === ref.endV;
+      if (!isSingle || !ref) return;
+      if (e.key === 'j' || e.key === 'ArrowRight') {
+        var maxV = _modalEl && _modalEl._chapterMaxV;
+        if (!maxV || ref.v < maxV) { e.preventDefault(); openModal(parseRef(ref.bookName + ' ' + ref.ch + ':' + (ref.v + 1))); }
+      } else if (e.key === 'k' || e.key === 'ArrowLeft') {
+        if (ref.v > 1) { e.preventDefault(); openModal(parseRef(ref.bookName + ' ' + ref.ch + ':' + (ref.v - 1))); }
+      }
     }
   });
 
@@ -174,6 +250,7 @@ export function buildModalDOM() {
     var btn = e.target.closest('.bsw-modal__tab');
     if (!btn) return;
     var tab = btn.getAttribute('data-tab');
+    _lastTab = tab; // VM-F: remember last tab within session
     modal.querySelectorAll('.bsw-modal__tab').forEach(function (b) {
       var active = b === btn;
       b.classList.toggle('bsw-modal__tab--active', active);
@@ -230,7 +307,7 @@ export function syncModalVersionPicker() {
   metaVersions.forEach(function (v) {
     var opt = document.createElement('option');
     opt.value       = v.id;
-    opt.textContent = v.id;
+    opt.textContent = v.id + ' — ' + v.name;
     opt.title       = v.name;
     sel.appendChild(opt);
   });
@@ -263,7 +340,8 @@ export function openModal(parsed) {
 
 // ── renderModal ───────────────────────────────────────────────────────────
 export function renderModal(parsed, versionId) {
-  _modalEl._parsedRef = parsed;
+  _modalEl._parsedRef    = parsed;
+  _modalEl._chapterMaxV  = null; // reset until resolveVerses resolves
 
   var bodyEl  = _modalEl.querySelector('.bsw-modal__body');
   var attrElR = _modalEl.querySelector('.bsw-modal__attribution');
@@ -295,8 +373,10 @@ export function renderModal(parsed, versionId) {
   if (dictPanelEl) { dictPanelEl.setAttribute('hidden', ''); dictPanelEl._dictLoaded = false; }
   var xrefsPanelEl = _modalEl.querySelector('.bsw-modal__crossrefs-panel');
   if (xrefsPanelEl) { xrefsPanelEl.setAttribute('hidden', ''); xrefsPanelEl._xrefsLoaded = false; }
-  var copyBtnReset = _modalEl.querySelector('.bsw-modal__copy-btn');
-  if (copyBtnReset) { copyBtnReset.setAttribute('hidden', ''); copyBtnReset.textContent = 'Copy'; }
+  var copyQuoteReset = _modalEl.querySelector('.bsw-modal__copy-quote-btn');
+  if (copyQuoteReset) { copyQuoteReset.setAttribute('hidden', ''); copyQuoteReset.textContent = 'Quote'; }
+  var copyRefReset = _modalEl.querySelector('.bsw-modal__copy-ref-btn');
+  if (copyRefReset) { copyRefReset.setAttribute('hidden', ''); copyRefReset.textContent = 'Reference'; }
 
   var title  = _modalEl.querySelector('.bsw-modal__title');
   var body   = _modalEl.querySelector('.bsw-modal__body');
@@ -344,10 +424,28 @@ export function renderModal(parsed, versionId) {
       memBtn.setAttribute('hidden', '');
     }
   }
-  var copyBtn = _modalEl.querySelector('.bsw-modal__copy-btn');
-  if (copyBtn) copyBtn.removeAttribute('hidden');
+  var copyQuoteBtn = _modalEl.querySelector('.bsw-modal__copy-quote-btn');
+  if (copyQuoteBtn) copyQuoteBtn.removeAttribute('hidden');
+  var copyRefBtn = _modalEl.querySelector('.bsw-modal__copy-ref-btn');
+  if (copyRefBtn) copyRefBtn.removeAttribute('hidden');
   var shareBtn = _modalEl.querySelector('.bsw-modal__share-btn');
   if (shareBtn) shareBtn.removeAttribute('hidden');
+  // VM-I: show prev/next buttons only for single verse
+  var prevBtn = _modalEl.querySelector('.bsw-modal__prev-verse');
+  var nextBtn = _modalEl.querySelector('.bsw-modal__next-verse');
+  if (prevBtn) {
+    if (isSingleVerse && parsed.v > 1) prevBtn.removeAttribute('hidden');
+    else prevBtn.setAttribute('hidden', '');
+  }
+  if (nextBtn) {
+    if (isSingleVerse) nextBtn.removeAttribute('hidden');
+    else nextBtn.setAttribute('hidden', '');
+  }
+  // VM-F: restore last tab (lazy-load on activation handles fresh data)
+  if (_lastTab && _lastTab !== 'verse') {
+    var lastTabBtn = _modalEl.querySelector('.bsw-modal__tab[data-tab="' + _lastTab + '"]');
+    if (lastTabBtn) lastTabBtn.click();
+  }
 
   return resolveVerses(parsed, versionId)
     .then(function (verses) {
@@ -401,6 +499,12 @@ export function renderModal(parsed, versionId) {
       applyModalHighlights(body, parsed);
       _maybeAutoTag(body);
       _injectModalFootnotes(parsed, body);
+      // VM-I: cap next-verse at chapter boundary once verse data is loaded
+      if (isSingleVerse && verses.chapterMaxV) {
+        _modalEl._chapterMaxV = verses.chapterMaxV;
+        var nextBtnPost = _modalEl.querySelector('.bsw-modal__next-verse');
+        if (nextBtnPost && parsed.v >= verses.chapterMaxV) nextBtnPost.setAttribute('hidden', '');
+      }
     })
     .catch(function () {
       body.innerHTML = '<p class="bsw-modal__error">Could not load ' + escHtml(versionId) + ' data.</p>';
@@ -578,7 +682,10 @@ export function renderModalCrossRefsTab(parsed, container, versionId) {
       scrollEl.appendChild(item);
       resolveVerses(p, versionId).then(function (verses) {
         if (!verses || !verses.length) { textEl.textContent = ''; return; }
-        textEl.textContent = verses.map(function (vr) { return vr.text; }).join(' ');
+        // VM-G: prefix verse number when result spans multiple verses
+        textEl.textContent = verses.length === 1
+          ? verses[0].text
+          : verses.map(function (vr) { return vr.verse + ' ' + vr.text; }).join(' ');
       }).catch(function () { textEl.textContent = ''; });
     });
   }).catch(function () {
@@ -598,20 +705,21 @@ function _buildCommPicker(currentSrc) {
 }
 
 // ── _extractCommHtml ──────────────────────────────────────────────────────
+// VM-H: returns { html, foundV } so callers can show a "nearest section" notice
 export function _extractCommHtml(data, parsed, source) {
-  if (!data) return null;
+  if (!data) return { html: null, foundV: null };
   var chData = data[String(parsed.ch)];
-  if (!chData) return null;
+  if (!chData) return { html: null, foundV: null };
   var sectionKeys = Object.keys(chData).map(Number).sort(function (a, b) { return a - b; });
   var html   = '';
   var endV   = parsed.wholeChapter ? 9999 : parsed.endV;
   var startV = parsed.v;
+  var foundV = null;
   if (parsed.wholeChapter) {
     sectionKeys.forEach(function (v) {
       html += '<div class="bsw-modal__commentary-section">' + chData[String(v)] + '</div>';
     });
   } else {
-    var foundV = null;
     for (var v = startV; v >= 1; v--) {
       if (chData[String(v)]) { foundV = v; break; }
     }
@@ -624,7 +732,7 @@ export function _extractCommHtml(data, parsed, source) {
       });
     }
   }
-  return html || null;
+  return { html: html || null, foundV: foundV };
 }
 
 // ── _refreshModalNotesBadge ───────────────────────────────────────────────
@@ -632,7 +740,12 @@ export function _refreshModalNotesBadge(parsed) {
   if (!_modalEl || !parsed) return;
   var noteBtn = _modalEl.querySelector('.bsw-modal__tab[data-tab="notes"]');
   if (!noteBtn) return;
-  var count = getNotesForVerse(parsed.bookId, parsed.ch, parsed.v).length;
+  // VM-C: sum notes across the full verse range, not just v
+  var count = 0;
+  var _badgeEndV = (parsed.endV && parsed.endCh === parsed.ch) ? parsed.endV : parsed.v;
+  for (var _vi = parsed.v; _vi <= _badgeEndV; _vi++) {
+    count += getNotesForVerse(parsed.bookId, parsed.ch, _vi).length;
+  }
   var badge = noteBtn.querySelector('.bsw-modal__tab-badge');
   if (count > 0) {
     if (!badge) {
@@ -873,14 +986,19 @@ export function renderCommentary(parsed, container) {
     var bodyEl = container.querySelector('.bsw-modal__comm-body');
     if (bodyEl) bodyEl.innerHTML = '<p class="bsw-modal__loading">Loading commentary…</p>';
     loadCommentary(parsed.bookId, src).then(function (data) {
-      var html   = _extractCommHtml(data, parsed, src);
+      var result  = _extractCommHtml(data, parsed, src); // VM-H: now returns { html, foundV }
       var bodyEl2 = container.querySelector('.bsw-modal__comm-body');
       if (!bodyEl2) return;
-      if (!html) {
+      if (!result.html) {
         bodyEl2.innerHTML = '<p class="bsw-modal__commentary-empty">No commentary found for this verse.</p>';
         return;
       }
-      bodyEl2.innerHTML = html + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
+      // VM-H: prepend muted notice when commentary is a section that includes, not targets, the verse
+      var notice = '';
+      if (!parsed.wholeChapter && result.foundV !== null && result.foundV !== parsed.v) {
+        notice = '<p class="bsw-modal__comm-section-note">▸ This section covers verse ' + result.foundV + ' and following</p>';
+      }
+      bodyEl2.innerHTML = notice + result.html + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
       wireRefLinks(bodyEl2);
     }).catch(function () {
       var bodyEl3 = container.querySelector('.bsw-modal__comm-body');
@@ -903,7 +1021,12 @@ export function hideModal() {
   if (!_backdropEl) return;
   _backdropEl.classList.add('bsw-modal-backdrop--hidden');
   _backdropEl.setAttribute('aria-hidden', 'true');
-  if (_modalEl) _modalEl.removeEventListener('keydown', trapFocus);
+  if (_modalEl) {
+    _modalEl.removeEventListener('keydown', trapFocus);
+    // VM-M2: clear any in-progress swipe transform
+    _modalEl.style.transform  = '';
+    _modalEl.style.transition = '';
+  }
   document.documentElement.classList.remove('bsw-modal-open');
   document.body.classList.remove('bsw-modal-open');
   if (_lastFocused) { try { _lastFocused.focus(); } catch (e) {} _lastFocused = null; }
@@ -926,32 +1049,28 @@ export function trapFocus(e) {
 }
 
 // ── _copyModalVerse ───────────────────────────────────────────────────────
-function _copyModalVerse(btn) {
+function _copyModalVerse(btn, fmt) {
   var parsed  = _modalEl && _modalEl._parsedRef;
   if (!parsed) return;
   var body    = _modalEl.querySelector('.bsw-modal__body');
   var version = (document.getElementById('bsw-modal-version') || {}).value || getVersion();
-  var verseEls = body ? body.querySelectorAll('.bsw-modal__verse') : [];
+  // VM-A: read from .bsw-modal__verse-text spans to skip verse-number sups and xref sups
+  var textSpans = body ? body.querySelectorAll('.bsw-modal__verse-text') : [];
   var texts    = [];
-  verseEls.forEach(function (el) {
-    var t = el.textContent.replace(/^\s*\d+\s*/, '').trim();
+  textSpans.forEach(function (el) {
+    var t = el.textContent.trim();
     if (t) texts.push(t);
   });
   if (!texts.length) return;
   var text  = texts.join(' ');
   var ref   = parsed.display;
   var plain = '"' + text + '" — ' + ref + ' (' + version.toUpperCase() + ')';
-  var fmt   = btn._copyFmt || 'plain';
-  var toCopy = fmt === 'plain' ? plain : (ref + ' (' + version.toUpperCase() + ')');
-  btn._copyFmt = fmt === 'plain' ? 'cite' : 'plain';
+  var toCopy = fmt === 'cite' ? (ref + ' (' + version.toUpperCase() + ')') : plain;
+  var origLabel = btn.textContent;
 
   function _onCopied() {
-    var prev = btn.textContent;
-    btn.textContent = fmt === 'plain' ? 'Copied!' : 'Cite copied!';
-    setTimeout(function () {
-      btn.textContent = (prev === 'Copied!' || prev === 'Cite copied!') ? 'Copy' : prev;
-      btn._copyFmt = 'plain';
-    }, 1800);
+    btn.textContent = 'Copied!';
+    setTimeout(function () { btn.textContent = origLabel; }, 1800);
   }
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -980,11 +1099,27 @@ var _SHARE_PRESETS = [
   { id: 'twilight',  label: 'Twilight',   bg: '#1c1828', text: '#e0d8f4', accent: '#9878d0' }
 ];
 
+var _SCENE_ROOT = _resolve('../../assets/share-scenes/');
+
+var _SHARE_SCENES = [
+  { id: 'dawn',      label: 'Dawn Sky',    overlay: 'rgba(0,0,0,0.32)', textColor: '#fff', accentColor: '#f6c96a', credit: 'Generated artwork' },
+  { id: 'mountains', label: 'Mountains',   overlay: 'rgba(0,0,0,0.42)', textColor: '#fff', accentColor: '#cce0f5', credit: 'Generated artwork' },
+  { id: 'sea',       label: 'Sea',         overlay: 'rgba(0,0,0,0.35)', textColor: '#fff', accentColor: '#a8d8ea', credit: 'Generated artwork' },
+  { id: 'desert',    label: 'Desert',      overlay: 'rgba(0,0,0,0.38)', textColor: '#fff', accentColor: '#f5d98a', credit: 'Generated artwork' },
+  { id: 'wheat',     label: 'Wheat Field', overlay: 'rgba(0,0,0,0.35)', textColor: '#fff', accentColor: '#f9e07a', credit: 'Generated artwork' },
+  { id: 'olive',     label: 'Olive Grove', overlay: 'rgba(0,0,0,0.40)', textColor: '#fff', accentColor: '#b8d8a0', credit: 'Generated artwork' },
+  { id: 'forestl',   label: 'Forest',      overlay: 'rgba(0,0,0,0.40)', textColor: '#fff', accentColor: '#a8e0b0', credit: 'Generated artwork' },
+  { id: 'stars',     label: 'Starfield',   overlay: 'rgba(0,0,0,0.30)', textColor: '#fff', accentColor: '#a0c0f0', credit: 'Generated artwork' },
+  { id: 'jerusalem', label: 'Jerusalem',   overlay: 'rgba(0,0,0,0.40)', textColor: '#fff', accentColor: '#f5d090', credit: 'Generated artwork' },
+  { id: 'rain',      label: 'Storm',       overlay: 'rgba(0,0,0,0.38)', textColor: '#e8f0ff', accentColor: '#90b0d8', credit: 'Generated artwork' }
+];
+
 var _SHARE_FONTS = [
   { id: 'georgia',     label: 'Georgia',     stack: 'Georgia, serif' },
   { id: 'palatino',    label: 'Palatino',    stack: "'Palatino Linotype', Palatino, 'Book Antiqua', serif" },
   { id: 'times',       label: 'Times',       stack: "'Times New Roman', Times, serif" },
-  { id: 'baskerville', label: 'Baskerville', stack: "'Baskerville Old Face', Baskerville, Georgia, serif" }
+  { id: 'baskerville', label: 'Baskerville', stack: "'Baskerville Old Face', Baskerville, Georgia, serif" },
+  { id: 'dancing',     label: 'Cursive',     stack: "'Dancing Script', cursive" }
 ];
 
 function _wrapCanvasText(ctx, text, maxWidth) {
@@ -1000,41 +1135,151 @@ function _wrapCanvasText(ctx, text, maxWidth) {
   return lines;
 }
 
+/* Returns a Promise so callers can chain after the (possibly async) image load. */
 function _drawShareCanvas(canvas, presetId, fontId, verseText, refDisplay, versionId) {
-  var preset = _SHARE_PRESETS.filter(function (p) { return p.id === presetId; })[0] || _SHARE_PRESETS[0];
+  var scene  = _SHARE_SCENES.filter(function (s) { return s.id === presetId; })[0];
+  var preset = scene ? null : (_SHARE_PRESETS.filter(function (p) { return p.id === presetId; })[0] || _SHARE_PRESETS[0]);
   var font   = _SHARE_FONTS.filter(function (f) { return f.id === fontId; })[0] || _SHARE_FONTS[0];
-  var ctx = canvas.getContext('2d');
-  var W = 1200, H = 630;
-  ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = preset.bg;
-  ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = preset.accent;
-  ctx.fillRect(0, 0, W, 7);
-  ctx.fillRect(0, H - 7, W, 7);
-  ctx.fillStyle = preset.accent;
-  ctx.font = '500 20px ' + font.stack;
-  ctx.textAlign = 'left';
-  ctx.fillText('Bible Study', 60, 52);
-  var maxW = W - 160;
-  var fontSize = 46;
-  var lines;
-  while (fontSize >= 24) {
+
+  function _paint(bgReady) {
+    var ctx = canvas.getContext('2d');
+    var W = 1200, H = 630;
+    ctx.clearRect(0, 0, W, H);
+
+    if (scene) {
+      /* cover-fit the scene image */
+      var imgW = bgReady.naturalWidth, imgH = bgReady.naturalHeight;
+      var scale = Math.max(W / imgW, H / imgH);
+      var sw = imgW * scale, sh = imgH * scale;
+      ctx.drawImage(bgReady, (W - sw) / 2, (H - sh) / 2, sw, sh);
+      /* readability overlay */
+      ctx.fillStyle = scene.overlay;
+      ctx.fillRect(0, 0, W, H);
+    } else {
+      ctx.fillStyle = preset.bg;
+      ctx.fillRect(0, 0, W, H);
+    }
+
+    var textColor   = scene ? scene.textColor   : preset.text;
+    var accentColor = scene ? scene.accentColor  : preset.accent;
+
+    /* accent bars */
+    ctx.fillStyle = accentColor;
+    ctx.fillRect(0, 0, W, 7);
+    ctx.fillRect(0, H - 7, W, 7);
+
+    /* header label */
+    ctx.fillStyle = accentColor;
+    ctx.font = '500 20px ' + font.stack;
+    ctx.textAlign = 'left';
+    ctx.fillText('Bible Study', 60, 52);
+
+    /* verse text — Dancing Script starts at 52px because it renders smaller */
+    var maxW = W - 160;
+    var fontSize = (fontId === 'dancing') ? 52 : 46;
+    var lines;
+    while (fontSize >= 24) {
+      ctx.font = 'italic ' + fontSize + 'px ' + font.stack;
+      lines = _wrapCanvasText(ctx, '“' + verseText + '”', maxW);
+      if (lines.length * fontSize * 1.45 <= H - 230) break;
+      fontSize -= 2;
+    }
+    var lineH  = fontSize * 1.45;
+    var totalH = lines.length * lineH;
+    var startY = Math.round((H - totalH) / 2) - 20;
+    ctx.fillStyle = textColor;
+    ctx.textAlign = 'center';
     ctx.font = 'italic ' + fontSize + 'px ' + font.stack;
-    lines = _wrapCanvasText(ctx, '"' + verseText + '"', maxW);
-    if (lines.length * fontSize * 1.45 <= H - 230) break;
-    fontSize -= 2;
+    lines.forEach(function (ln, i) { ctx.fillText(ln, W / 2, startY + i * lineH + fontSize); });
+
+    /* reference line */
+    ctx.fillStyle = accentColor;
+    ctx.font = '600 24px ' + font.stack;
+    ctx.textAlign = 'right';
+    ctx.fillText('— ' + refDisplay + '  (' + (versionId || 'BSB').toUpperCase() + ')', W - 60, H - 50);
+
+    /* scene attribution */
+    if (scene && scene.credit) {
+      ctx.fillStyle = 'rgba(255,255,255,0.55)';
+      ctx.font = '12px system-ui, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText(scene.credit, 14, H - 12);
+    }
   }
-  var lineH  = fontSize * 1.45;
-  var totalH = lines.length * lineH;
-  var startY = Math.round((H - totalH) / 2) - 20;
-  ctx.fillStyle = preset.text;
-  ctx.textAlign = 'center';
-  ctx.font = 'italic ' + fontSize + 'px ' + font.stack;
-  lines.forEach(function (ln, i) { ctx.fillText(ln, W / 2, startY + i * lineH + fontSize); });
-  ctx.fillStyle = preset.accent;
-  ctx.font = '600 24px ' + font.stack;
-  ctx.textAlign = 'right';
-  ctx.fillText('— ' + refDisplay + '  (' + (versionId || 'BSB').toUpperCase() + ')', W - 60, H - 50);
+
+  /* For Dancing Script, ensure font is loaded before drawing */
+  var fontLoadPromise = (fontId === 'dancing' && document.fonts)
+    ? document.fonts.load('40px "Dancing Script"')
+    : Promise.resolve();
+
+  if (scene) {
+    return fontLoadPromise.then(function () {
+      return new Promise(function (resolve) {
+        var img = new Image();
+        img.onload  = function () { _paint(img); resolve(); };
+        img.onerror = function () {
+          /* fallback to plain dark background if image fails */
+          var ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#1a1a2e';
+          ctx.fillRect(0, 0, 1200, 630);
+          _paint({ naturalWidth: 1200, naturalHeight: 630 });
+          resolve();
+        };
+        img.src = _SCENE_ROOT + scene.id + '.jpg';
+      });
+    });
+  }
+  return fontLoadPromise.then(function () { _paint(null); });
+}
+
+function _buildBgGallery() {
+  var solidCards = _SHARE_PRESETS.map(function (p, i) {
+    var checked = i === 0 ? ' checked' : '';
+    return '<label class="bsw-share-bg-card">' +
+      '<input type="radio" name="share-bg" value="' + p.id + '"' + checked + ' />' +
+      '<div class="bsw-share-bg-thumb" style="background:' + p.bg + ';flex-direction:column;justify-content:space-between">' +
+        '<div style="height:3px;background:' + p.accent + ';width:100%"></div>' +
+        '<div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px;overflow:hidden">' +
+          '<span style="font-family:Georgia,serif;font-style:italic;font-size:8px;line-height:1.2;color:' + p.text + '">He so loved</span>' +
+          '<span style="font-family:Georgia,serif;font-size:7px;color:' + p.accent + '">— John 3:16</span>' +
+        '</div>' +
+        '<div style="height:3px;background:' + p.accent + ';width:100%"></div>' +
+      '</div>' +
+      '<span class="bsw-share-bg-label">' + escHtml(p.label) + '</span>' +
+    '</label>';
+  }).join('');
+
+  var sceneSep = '<span class="bsw-share-gallery-sep">Scenery</span>';
+
+  var sceneCards = _SHARE_SCENES.map(function (s) {
+    return '<label class="bsw-share-bg-card">' +
+      '<input type="radio" name="share-bg" value="' + s.id + '" />' +
+      '<div class="bsw-share-bg-thumb bsw-share-bg-thumb--scene">' +
+        '<img src="' + _SCENE_ROOT + s.id + '.jpg" alt="" loading="lazy" ' +
+          'style="width:100%;height:100%;object-fit:cover;display:block" />' +
+      '</div>' +
+      '<span class="bsw-share-bg-label">' + escHtml(s.label) + '</span>' +
+    '</label>';
+  }).join('');
+
+  return '<div class="bsw-share-bg-gallery" role="radiogroup" aria-label="Background">' +
+    solidCards + sceneSep + sceneCards +
+  '</div>';
+}
+
+function _buildFontGallery() {
+  return '<div class="bsw-share-font-gallery" role="radiogroup" aria-label="Font">' +
+    _SHARE_FONTS.map(function (f, i) {
+      var checked = i === 0 ? ' checked' : '';
+      return '<label class="bsw-share-font-card">' +
+        '<input type="radio" name="share-font" value="' + f.id + '"' + checked + ' />' +
+        '<div class="bsw-share-font-thumb">' +
+          '<span style="font-family:' + f.stack + ';font-style:italic;font-size:14px;color:#2c1a0e;line-height:1.3">For God<br>so loved</span>' +
+        '</div>' +
+        '<span class="bsw-share-font-label">' + escHtml(f.label) + '</span>' +
+      '</label>';
+    }).join('') +
+  '</div>';
 }
 
 export function _shareVerseAsImage(verseText, refDisplay, versionId) {
@@ -1054,42 +1299,43 @@ export function _shareVerseAsImage(verseText, refDisplay, versionId) {
         '<button class="bsw-share-close" aria-label="Close">✕</button>' +
       '</div>' +
       '<div class="bsw-share-section-label">Background</div>' +
-      '<div class="bsw-share-preset-row" role="radiogroup" aria-label="Background preset">' +
-        _SHARE_PRESETS.map(function (p) {
-          return '<label class="bsw-share-preset">' +
-            '<input type="radio" name="share-preset" value="' + p.id + '"' + (p.id === 'parchment' ? ' checked' : '') + ' />' +
-            '<span class="bsw-share-preset__dot" style="background:' + p.bg + ';box-shadow:inset 0 0 0 2px ' + p.accent + '"></span>' +
-            escHtml(p.label) + '</label>';
-        }).join('') +
-      '</div>' +
-      '<div class="bsw-share-section-label">Font</div>' +
-      '<div class="bsw-share-font-row" role="radiogroup" aria-label="Font">' +
-        _SHARE_FONTS.map(function (f) {
-          return '<label class="bsw-share-font-chip">' +
-            '<input type="radio" name="share-font" value="' + f.id + '"' + (f.id === 'georgia' ? ' checked' : '') + ' />' +
-            '<span style="font-family:' + f.stack + ';font-style:italic">' + escHtml(f.label) + '</span></label>';
-        }).join('') +
-      '</div>' +
+      _buildBgGallery() +
+      '<div class="bsw-share-section-label" style="margin-top:.6rem">Font</div>' +
+      _buildFontGallery() +
       '<canvas class="bsw-share-canvas" width="1200" height="630"></canvas>' +
-      '<div class="bsw-share-actions"><button class="bsw-share-download vs-context-btn">⬇ Download PNG</button></div>' +
+      '<div class="bsw-share-actions"><button class="bsw-share-download vs-context-btn">' + (navigator.share ? '⬆ Share' : '⬇ Download PNG') + '</button></div>' +
     '</div>';
   _shareOverlayEl.removeAttribute('hidden');
-  var canvas       = _shareOverlayEl.querySelector('.bsw-share-canvas');
-  var presetInputs = _shareOverlayEl.querySelectorAll('[name="share-preset"]');
-  var fontInputs   = _shareOverlayEl.querySelectorAll('[name="share-font"]');
-  function currentPreset() { var c = _shareOverlayEl.querySelector('[name="share-preset"]:checked'); return c ? c.value : 'parchment'; }
-  function currentFont()   { var c = _shareOverlayEl.querySelector('[name="share-font"]:checked');   return c ? c.value : 'georgia';   }
+  var canvas    = _shareOverlayEl.querySelector('.bsw-share-canvas');
+  function currentPreset() { var c = _shareOverlayEl.querySelector('[name="share-bg"]:checked');   return c ? c.value : 'parchment'; }
+  function currentFont()   { var c = _shareOverlayEl.querySelector('[name="share-font"]:checked'); return c ? c.value : 'georgia';   }
   function draw() { _drawShareCanvas(canvas, currentPreset(), currentFont(), verseText, refDisplay, versionId); }
   draw();
-  presetInputs.forEach(function (inp) { inp.addEventListener('change', draw); });
-  fontInputs.forEach(function (inp)   { inp.addEventListener('change', draw); });
+  _shareOverlayEl.querySelectorAll('[name="share-bg"],[name="share-font"]').forEach(function (inp) {
+    inp.addEventListener('change', draw);
+  });
   _shareOverlayEl.querySelector('.bsw-share-close').addEventListener('click', function () { _shareOverlayEl.setAttribute('hidden', ''); });
   _shareOverlayEl.addEventListener('click', function (e) { if (e.target === _shareOverlayEl) _shareOverlayEl.setAttribute('hidden', ''); });
+  // VM-J: Web Share API on supported mobile browsers; fall back to download
   _shareOverlayEl.querySelector('.bsw-share-download').addEventListener('click', function () {
-    var a = document.createElement('a');
-    a.download = 'verse-' + refDisplay.replace(/[^a-zA-Z0-9]/g, '-') + '.png';
-    a.href = canvas.toDataURL('image/png');
-    a.click();
+    if (navigator.share) {
+      canvas.toBlob(function (blob) {
+        var file = new File([blob], 'verse.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], title: refDisplay }).catch(function () {});
+        } else {
+          var a = document.createElement('a');
+          a.download = 'verse-' + refDisplay.replace(/[^a-zA-Z0-9]/g, '-') + '.png';
+          a.href = canvas.toDataURL('image/png');
+          a.click();
+        }
+      }, 'image/png');
+    } else {
+      var a = document.createElement('a');
+      a.download = 'verse-' + refDisplay.replace(/[^a-zA-Z0-9]/g, '-') + '.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    }
   });
 }
 
@@ -1192,19 +1438,26 @@ export function initHistoryWidget() {
   var entries = (function () {
     try { return JSON.parse(localStorage.getItem('bsw_history') || '[]'); } catch (e) { return []; }
   })().slice(0, 3);
-  if (!entries.length) {
-    if (el.closest('.daily-card')) el.closest('.daily-card').setAttribute('hidden', '');
-    return;
-  }
-  if (el.closest('.daily-card')) el.closest('.daily-card').removeAttribute('hidden');
+  if (!entries.length) return;
+  var card = el.closest('.daily-card');
+  if (card) card.removeAttribute('hidden');
+  el.removeAttribute('hidden');
+  // Add border between reader history and lib history when both are present
+  var libEl = document.getElementById('daily-lib-history');
+  if (libEl) libEl.style.borderTop = '1px solid var(--color-border)';
   var html = '';
   var _noteRelTimeFn = _noteRelTime;
   entries.forEach(function (e) {
-    var url = READER_URL + '?ref=' + encodeURIComponent(e.ref);
+    // history entries are plain strings (the ref); objects are an older format
+    var ref = typeof e === 'string' ? e : (e.ref || '');
+    var ver = typeof e === 'string' ? '' : (e.version || '');
+    var ts  = typeof e === 'string' ? null : (e.ts || null);
+    if (!ref) return;
+    var url = READER_URL + '?ref=' + encodeURIComponent(ref);
     html += '<a class="daily-history-item" href="' + escHtml(url) + '">' +
-      '<span class="daily-history-ref">' + escHtml(e.ref) + '</span>' +
-      '<span class="daily-history-meta">' + escHtml(e.version.toUpperCase()) +
-        (e.ts ? ' · ' + _noteRelTimeFn(e.ts) : '') + '</span>' +
+      '<span class="daily-history-ref">' + escHtml(ref) + '</span>' +
+      '<span class="daily-history-meta">' + escHtml(ver.toUpperCase()) +
+        (ts ? ' · ' + _noteRelTimeFn(ts) : '') + '</span>' +
     '</a>';
   });
   el.innerHTML = html;

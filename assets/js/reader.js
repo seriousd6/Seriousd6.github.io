@@ -3,15 +3,17 @@
 
 import {
   getVersion, setVersion, loadBook, loadCrossRefs, loadCommentary, parseRef, parseMultiRef,
-  normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, escHtml,
+  normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, escHtml,
   _compareCanonical, parseCrossRefEntry, resolveVerses,
   ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
   onVersionChange, _resolve,
-  LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache
+  LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache,
+  BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
 import { autoTagTerms } from './terms.js';
 import {
-  getNotes, getNote, _historyPush, _recordReadingDay, getNotesForVerse, getNotesForChapter,
+  getNotes, getNote, saveNote, toggleHighlight, _HL_COLORS,
+  _historyPush, _historyGet, _recordReadingDay, getNotesForVerse, getNotesForChapter,
   createNoteV2, deleteNoteV2, updateNoteV2, _noteRelTime
 } from './storage.js';
 import {
@@ -23,7 +25,7 @@ import {
   getInterlinearEnabled, injectAllInterlinearRows
 } from './interlinear.js';
 
-export { initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
+export { initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
 
 // ── Xref footnote-numbers toggle ──────────────────────────────────────────
 var XREF_NOTES_KEY = 'bsw_xref_notes';
@@ -101,61 +103,107 @@ export function initCompareToggle() {
   });
 }
 
+// INTENT: Build a per-verse CSS grid inside each result group, injecting the
+//   compare layout into the existing DOM rather than replacing it. Primary cells
+//   are filled immediately; secondary (cmpVer) cells start as loading placeholders
+//   and are filled when resolveVerses resolves. Because primary text stays in place,
+//   _deactivateCompare must remove only the compare grid, not the whole group.
+// VERIFY: Toggle compare on/off; primary text should not flash or re-fetch.
+//   The Network tab should show only one fetch per cmpVer×book combination.
 export function injectComparePanel(groups, cmpVer, resultsEl) {
-  // Delegate to interlinear.js implementation
   var primaryVer = getVersion();
   var domGroups  = resultsEl.querySelectorAll('.reader-result-group');
 
   domGroups.forEach(function (groupEl, gIdx) {
     var g = groups[gIdx];
-    if (!g) return;
-    var textEl    = groupEl.querySelector('.reader-result-group__text');
-    var attrEl    = groupEl.querySelector('.reader-result-group__attr');
-    var hintEl    = !textEl ? groupEl.querySelector('.reader-hint') : null;
-    var contentEl = textEl || hintEl;
-    if (!contentEl) return;
+    if (!g || !g.verses || !g.verses.length) return;
+    var textEl = groupEl.querySelector('.reader-result-group__text');
+    var attrEl = groupEl.querySelector('.reader-result-group__attr');
 
-    var wrap = document.createElement('div');
-    wrap.className = 'reader-compare-wrap';
-    var p1 = document.createElement('div');
-    p1.className = 'reader-compare-panel';
-    p1.appendChild(_buildComparePanelHdr(primaryVer, 'primary'));
-    contentEl.parentNode.removeChild(contentEl);
-    p1.appendChild(contentEl);
-    if (attrEl && attrEl.parentNode) { attrEl.parentNode.removeChild(attrEl); p1.appendChild(attrEl); }
+    // Build the per-verse grid: two sticky column headers, then pairs of cells
+    var grid = document.createElement('div');
+    grid.className = 'reader-compare-grid';
 
-    var p2 = document.createElement('div');
-    p2.className = 'reader-compare-panel';
-    p2.appendChild(_buildComparePanelHdr(cmpVer, 'secondary'));
-    var p2body = document.createElement('div');
-    p2body.innerHTML = '<p class="reader-hint">Loading…</p>';
-    p2.appendChild(p2body);
-    wrap.appendChild(p1);
-    wrap.appendChild(p2);
+    var hdrA = _buildComparePanelHdr(primaryVer, 'primary');
+    hdrA.className = 'reader-compare-col-hdr reader-compare-col-hdr--a';
+    var hdrB = _buildComparePanelHdr(cmpVer, 'secondary');
+    hdrB.className = 'reader-compare-col-hdr reader-compare-col-hdr--b';
+    grid.appendChild(hdrA);
+    grid.appendChild(hdrB);
 
+    // Primary cells filled immediately; secondary cells show a loading indicator
+    g.verses.forEach(function (vObj) {
+      var key = String(vObj.chapter) + ':' + String(vObj.verse);
+
+      var cellA = document.createElement('div');
+      cellA.className = 'reader-compare-cell reader-compare-cell--a';
+      cellA.dataset.verse = key;
+      cellA.setAttribute('data-book', g.ref.bookName);
+      var supA = document.createElement('sup');
+      supA.className = 'reader-verse__num reader-compare-vnum';
+      supA.textContent = String(vObj.verse);
+      cellA.appendChild(supA);
+      cellA.appendChild(document.createTextNode(vObj.text));
+
+      var cellB = document.createElement('div');
+      cellB.className = 'reader-compare-cell reader-compare-cell--b reader-compare-cell--loading';
+      cellB.dataset.verse = key;
+      cellB.innerHTML = '<span class="reader-compare-loading">…</span>';
+
+      grid.appendChild(cellA);
+      grid.appendChild(cellB);
+    });
+
+    // Wire verse-number popups on primary cells (secondary fills asynchronously)
+    wireVerseNumberPopup(grid);
+
+    // Insert grid before bottom nav (or append), then remove the old flowing text block
     var bottomNav = groupEl.querySelector('.reader-chapter-nav--bottom');
-    if (bottomNav) groupEl.insertBefore(wrap, bottomNav);
-    else groupEl.appendChild(wrap);
+    if (bottomNav) groupEl.insertBefore(grid, bottomNav);
+    else groupEl.appendChild(grid);
+    if (textEl && textEl.parentNode) textEl.parentNode.removeChild(textEl);
+    if (attrEl && attrEl.parentNode) attrEl.parentNode.removeChild(attrEl);
 
+    // Fill secondary cells once the comparison version loads
     resolveVerses(g.ref, cmpVer).then(function (verses) {
-      if (!verses || !verses.length) {
-        p2body.innerHTML = '<p class="reader-hint">Not available in ' + escHtml(cmpVer) + '.</p>';
-        return;
+      var byVerse = {};
+      if (verses && verses.length) {
+        verses.forEach(function (v) { byVerse[v.chapter + ':' + v.verse] = v.text; });
       }
-      var html = '<p class="reader-result-group__text">';
-      verses.forEach(function (vObj) {
-        html += '<span class="reader-verse" data-book="' + escHtml(g.ref.bookName) +
-          '" data-ch="' + vObj.chapter + '" data-v="' + vObj.verse + '">' +
-          '<sup class="reader-verse__num">' + vObj.verse + '</sup>' +
-          escHtml(vObj.text) + '</span> ';
+      grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
+        var key2 = cell.dataset.verse;
+        var text = byVerse[key2];
+        var vNum = key2.split(':')[1];
+        cell.classList.remove('reader-compare-cell--loading');
+        cell.innerHTML = '';
+        if (text) {
+          cell.setAttribute('data-book', g.ref.bookName);
+          var supB = document.createElement('sup');
+          supB.className = 'reader-verse__num reader-compare-vnum';
+          supB.textContent = vNum;
+          cell.appendChild(supB);
+          cell.appendChild(document.createTextNode(text));
+        } else {
+          var unavail = document.createElement('span');
+          unavail.className = 'reader-compare-unavail';
+          unavail.textContent = '—';
+          cell.appendChild(unavail);
+        }
       });
-      html += '</p>';
+      applyHighlights(grid);
+      wireVerseNumberPopup(grid);
       var attr = ATTRIBUTION[cmpVer];
-      if (attr) html += '<p class="reader-result-group__attr">' + escHtml(attr) + '</p>';
-      p2body.innerHTML = html;
-      applyHighlights(p2body);
+      if (attr) {
+        var attrEl2 = document.createElement('p');
+        attrEl2.className = 'reader-result-group__attr';
+        attrEl2.textContent = attr;
+        grid.after(attrEl2);
+      }
     }).catch(function () {
-      p2body.innerHTML = '<p class="reader-hint">Could not load ' + escHtml(cmpVer) + '.</p>';
+      grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
+        cell.classList.remove('reader-compare-cell--loading');
+        cell.innerHTML = '<span class="reader-compare-unavail">—</span>';
+      });
     });
   });
 }
@@ -171,6 +219,7 @@ function _buildComparePanelHdr(versionId, role) {
   sel.setAttribute('aria-label', role === 'primary' ? 'Primary version' : 'Comparison version');
   if (metaVersions) {
     metaVersions.forEach(function (mv) {
+      if (mv.group === 'apocrypha') return;
       var opt = document.createElement('option');
       opt.value = mv.id; opt.textContent = mv.id; opt.title = mv.name;
       if (mv.id === versionId) opt.selected = true;
@@ -190,12 +239,20 @@ window._readerNavState  = null;
 window._readerGroups    = [];
 window._readerLookupFn  = null;
 
+// ── Stripped mode — no side panel (used when navigating from Reading Progress) ──
+var _strippedMode = !!new URLSearchParams(location.search).get('stripped');
+
 // ── initReaderPage ────────────────────────────────────────────────────────
 export function initReaderPage() {
   initReaderLookup();
   initReaderBrowse();
   initReaderKeyboard();
-  _ensureReaderPanelStructure();
+  if (_strippedMode) {
+    var panel = document.getElementById('reader-xref-panel');
+    if (panel) panel.hidden = true;
+  } else {
+    _ensureReaderPanelStructure();
+  }
 
   onVersionChange(function () {
     if (window._readerLookupFn) window._readerLookupFn();
@@ -211,6 +268,14 @@ export function initReaderLookup() {
 
   function setStatus(msg) { if (statusEl) statusEl.textContent = msg; }
 
+  // INTENT: Single entry point for all in-page navigation. Parses the input,
+  //   fetches verses, updates history.replaceState, writes bsw_history, and
+  //   re-renders all right-panel tabs. Any navigation that bypasses doLookup
+  //   leaves URL state, bsw_history, and the right panel out of sync.
+  // CHANGE? If you add a new right-panel section, add it to the panel refresh
+  //   sequence inside doLookup (after _loadReaderXrefs / _loadReaderNotes calls).
+  // VERIFY: Navigate to Romans 8; URL should update to ?ref=Romans+8, history
+  //   dropdown should prepend the entry, and all three panel tabs should refresh.
   function doLookup() {
     var q         = input.value.trim();
     var resultsEl = document.getElementById('reader-results');
@@ -308,9 +373,43 @@ export function initReaderLookup() {
         var attrEl = document.createElement('p');
         attrEl.className  = 'reader-result-group__attr';
         attrEl.textContent = ATTRIBUTION[ver] || '';
+        attrEl.hidden = !!(g.ref.v && !g.ref.endV);
         groupEl.appendChild(attrEl);
 
         if (g.ref.bookId && !g.ref.wholeBook) groupEl.appendChild(_buildNavButtons(g.ref, 'bottom'));
+
+        // D-D: Mark chapter as read button (whole chapter views only, not single verses)
+        if (g.ref.bookId && g.ref.ch && !g.ref.v) {
+          var markRow = document.createElement('div');
+          markRow.className = 'reader-mark-row';
+          var markKey = g.ref.bookId + '.' + g.ref.ch;
+          var markBtn2 = document.createElement('button');
+          markBtn2.className = 'reader-mark-btn';
+          markBtn2.type = 'button';
+          markBtn2.dataset.key = markKey;
+          (function (btn, key) {
+            var READ_KEY = 'bsw_chapter_read';
+            function getRead() { try { return JSON.parse(localStorage.getItem(READ_KEY) || '{}'); } catch (e) { return {}; } }
+            var alreadyRead = !!(getRead()[key] && getRead()[key].read);
+            if (alreadyRead) {
+              btn.textContent = '✓ Read';
+              btn.classList.add('reader-mark-btn--done');
+              btn.disabled = true;
+            } else {
+              btn.textContent = 'Mark chapter as read ✓';
+              btn.addEventListener('click', function () {
+                var data = getRead();
+                data[key] = { read: true, date: new Date().toISOString().slice(0, 10) };
+                localStorage.setItem(READ_KEY, JSON.stringify(data));
+                btn.textContent = '✓ Read';
+                btn.classList.add('reader-mark-btn--done');
+                btn.disabled = true;
+              });
+            }
+          }(markBtn2, markKey));
+          markRow.appendChild(markBtn2);
+          groupEl.appendChild(markRow);
+        }
 
         resultsEl.appendChild(groupEl);
 
@@ -327,7 +426,7 @@ export function initReaderLookup() {
             if (chapters) renderReaderSidebar(_navBookId, chapters, _navCh);
           }).catch(function () {});
           // Populate the Notes/Commentary/Cross Refs side panel for this passage.
-          loadReaderPanelContent(g.ref);
+          if (!_strippedMode) loadReaderPanelContent(g.ref);
         }
       });
 
@@ -339,6 +438,7 @@ export function initReaderLookup() {
       applyHighlights(resultsEl);
       applyBookmarks(resultsEl);
       wireVerseNumberPopup(resultsEl);
+      wireVerseTextHighlight(resultsEl);
       injectReaderFootnotes(resultsEl);
 
       if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
@@ -366,6 +466,37 @@ export function initReaderLookup() {
   if (refStr) {
     input.value = refStr;
     doLookup();
+  } else {
+    var resultsEl = document.getElementById('reader-results');
+    var hist = _historyGet();
+    var lastRef = hist[0];
+    if (lastRef && !sessionStorage.getItem('bsw_reader_resume_dismissed') && resultsEl) {
+      // RD-C: returning user — show dismissable resume banner
+      var banner = document.createElement('div');
+      banner.className = 'reader-resume-banner';
+      banner.innerHTML =
+        'Continue where you left off: ' +
+        '<a class="reader-resume-link" href="?ref=' + encodeURIComponent(lastRef) + '">' + escHtml(lastRef) + '</a>' +
+        '<button class="reader-resume-dismiss" aria-label="Dismiss">✕</button>';
+      resultsEl.appendChild(banner);
+      banner.querySelector('.reader-resume-dismiss').addEventListener('click', function () {
+        banner.remove();
+        sessionStorage.setItem('bsw_reader_resume_dismissed', '1');
+      });
+    } else if (!lastRef && resultsEl) {
+      // RD-H: first-time visitor — show empty state with quick-start chips
+      resultsEl.innerHTML =
+        '<div class="reader-empty-state">' +
+          '<p class="reader-hint">Enter a reference above — <em>John 3:16</em>, <em>Romans 8</em>, <em>Gen 1; John 1:1–14</em></p>' +
+          '<div class="reader-quick-starts">' +
+            '<a class="reader-qs-chip" href="?ref=John+1">John 1</a>' +
+            '<a class="reader-qs-chip" href="?ref=Psalms+23">Psalm 23</a>' +
+            '<a class="reader-qs-chip" href="?ref=Romans+8">Romans 8</a>' +
+            '<a class="reader-qs-chip" href="?ref=Genesis+1">Genesis 1</a>' +
+            '<a class="reader-qs-chip" href="?ref=Isaiah+53">Isaiah 53</a>' +
+          '</div>' +
+        '</div>';
+    }
   }
 }
 
@@ -388,6 +519,14 @@ function _buildNavButtons(parsedRef, pos) {
   return nav;
 }
 
+// INTENT: Prev/next chapter navigation must use _readerLookupFn (in-page) rather
+//   than window.location.href (full reload). A full reload resets the right panel,
+//   loses scroll position, and reverts all toggle states (interlinear, compare, etc.).
+//   The ch=0 intro-page branch below is the canonical pattern for in-page nav.
+// CHANGE? If the lookup input element ID ('reader-lookup-input') changes, update
+//   both this function and the sidebar chapter-button wiring.
+// VERIFY: Click next-chapter 3 times; the Network tab should show no full-page
+//   navigation — only data fetches. Right panel content should remain visible.
 function _navigateChapter(parsedRef, delta) {
   var bookIdx = bookOrder && bookOrder[parsedRef.bookId];
   if (bookIdx === undefined) return;
@@ -402,19 +541,20 @@ function _navigateChapter(parsedRef, delta) {
 
   loadBook(getVersion(), parsedRef.bookId).then(function (chapters) {
     var maxCh = chapters ? Object.keys(chapters).map(Number).reduce(function (a, b) { return a > b ? a : b; }, 0) : 999;
+    var inp = document.getElementById('reader-lookup-input');
+    var newRef;
     if (nextCh >= 1 && nextCh <= maxCh) {
-      var newRef = parsedRef.bookName + ' ' + nextCh;
-      window.location.href = READER_URL + '?ref=' + encodeURIComponent(newRef);
+      newRef = parsedRef.bookName + ' ' + nextCh;
     } else if (nextCh < 1 && bookIdx > 0) {
       var prevBook = metaBooks && metaBooks[bookIdx - 1];
-      if (prevBook) {
-        window.location.href = READER_URL + '?ref=' + encodeURIComponent(prevBook.name + ' 1');
-      }
+      if (prevBook) newRef = prevBook.name + ' 1';
     } else if (nextCh > maxCh) {
       var nextBook = metaBooks && metaBooks[bookIdx + 1];
-      if (nextBook) {
-        window.location.href = READER_URL + '?ref=' + encodeURIComponent(nextBook.name + ' 1');
-      }
+      if (nextBook) newRef = nextBook.name + ' 1';
+    }
+    if (newRef && inp) {
+      inp.value = newRef;
+      if (window._readerLookupFn) window._readerLookupFn();
     }
   }).catch(function () {});
 }
@@ -423,7 +563,43 @@ function _navigateChapter(parsedRef, delta) {
 export function initReaderBrowse() {
   var bookSel = document.getElementById('reader-book-select');
   var chSel   = document.getElementById('reader-ch-select');
+  var verSel  = document.getElementById('reader-ver-select');
   if (!bookSel || !chSel || !metaBooks) return;
+
+  // ── Translation picker ─────────────────────────────────────────────────────
+  if (verSel && metaVersions) {
+    var curVer = getVersion();
+    var tierLabels = { 1: 'Common', 2: 'Literal', 3: 'Other' };
+    var groups = {};
+    metaVersions.forEach(function (v) {
+      if (v.group === 'apocrypha') return;  // apocrypha-only versions live in the separate reader
+      var t = v.tier || 3;
+      if (!groups[t]) groups[t] = [];
+      groups[t].push(v);
+    });
+    Object.keys(groups).sort().forEach(function (t) {
+      var grp = document.createElement('optgroup');
+      grp.label = tierLabels[t] || 'Other';
+      groups[t].forEach(function (v) {
+        var opt = document.createElement('option');
+        opt.value       = v.id;
+        opt.textContent = v.id + ' — ' + v.name;
+        if (v.id === curVer) opt.selected = true;
+        grp.appendChild(opt);
+      });
+      verSel.appendChild(grp);
+    });
+
+    verSel.addEventListener('change', function () {
+      setVersion(verSel.value);
+      // onVersionChange callback in initReaderPage re-renders automatically
+    });
+
+    // Keep in sync if version changes from the global sidebar picker
+    onVersionChange(function (newId) {
+      if (verSel.value !== newId) verSel.value = newId;
+    });
+  }
 
   // Bible books optgroup
   var bibleGroup = document.createElement('optgroup');
@@ -594,16 +770,44 @@ export function injectReaderFootnotes(resultsEl) {
 }
 
 // ── wireVerseNumberPopup ──────────────────────────────────────────────────
+var _activeVerseEl = null;
+
 export function wireVerseNumberPopup(resultsEl) {
   if (!resultsEl) return;
   resultsEl.querySelectorAll('.reader-verse__num').forEach(function (numEl) {
+    if (numEl._versePopupWired) return;
+    numEl._versePopupWired = true;
     numEl.addEventListener('click', function (e) {
       e.preventDefault();
-      var verseEl  = numEl.closest('.reader-verse');
+      // Standard verse span or compare grid cell
+      var verseEl  = numEl.closest('.reader-verse') || numEl.closest('.reader-compare-cell');
       if (!verseEl) return;
-      var bookName = verseEl.getAttribute('data-book');
-      var ch       = verseEl.getAttribute('data-ch');
-      var v        = verseEl.getAttribute('data-v');
+      // RD-E: highlight active verse
+      if (_activeVerseEl) _activeVerseEl.classList.remove('reader-verse--active');
+      verseEl.classList.add('reader-verse--active');
+      _activeVerseEl = verseEl;
+      // Remove highlight when modal closes
+      var bd = document.querySelector('.bsw-modal-backdrop');
+      if (bd && !bd._readerVerseObserver) {
+        bd._readerVerseObserver = new MutationObserver(function () {
+          if (bd.classList.contains('bsw-modal-backdrop--hidden') && _activeVerseEl) {
+            _activeVerseEl.classList.remove('reader-verse--active');
+            _activeVerseEl = null;
+          }
+        });
+        bd._readerVerseObserver.observe(bd, { attributes: true, attributeFilter: ['class'] });
+      }
+      var bookName, ch, v;
+      if (verseEl.classList.contains('reader-compare-cell')) {
+        bookName = verseEl.getAttribute('data-book');
+        var parts = (verseEl.getAttribute('data-verse') || '').split(':');
+        ch = parts[0];
+        v  = parts[1];
+      } else {
+        bookName = verseEl.getAttribute('data-book');
+        ch       = verseEl.getAttribute('data-ch');
+        v        = verseEl.getAttribute('data-v');
+      }
       if (!bookName || !ch || !v) return;
       var ref = bookName + ' ' + ch + ':' + v;
       var parsed = parseRef(ref);
@@ -612,6 +816,125 @@ export function wireVerseNumberPopup(resultsEl) {
       }
     });
     numEl.style.cursor = 'pointer';
+  });
+}
+
+// ── Quick verse highlight picker ──────────────────────────────────────────
+// Solid swatch colours for the picker buttons (opaque, easy to distinguish).
+var _HL_SWATCHES = {
+  yellow: '#f5d000', orange: '#f07820', pink:     '#d84080',
+  red:    '#cc3030', purple: '#8030b8', lavender: '#9080cc',
+  green:  '#30a850', teal:   '#20a898', blue:     '#2878e0', mint: '#38c8b0'
+};
+var _hlPicker        = null;
+var _hlPickerVerseEl = null;
+var _hlPickerRef     = null;
+
+function _getHlPicker() {
+  if (_hlPicker) return _hlPicker;
+  _hlPicker = document.createElement('div');
+  _hlPicker.className = 'reader-hl-picker';
+  _hlPicker.setAttribute('role', 'toolbar');
+  _hlPicker.setAttribute('aria-label', 'Highlight colour');
+  _hlPicker.hidden = true;
+
+  _HL_COLORS.forEach(function (color) {
+    var btn = document.createElement('button');
+    btn.className = 'reader-hl-swatch';
+    btn.type = 'button';
+    btn.setAttribute('data-hl-color', color);
+    btn.title = color.charAt(0).toUpperCase() + color.slice(1);
+    btn.style.background = _HL_SWATCHES[color] || color;
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (_hlPickerRef && _hlPickerVerseEl) {
+        var newHl = toggleHighlight(_hlPickerRef, color);
+        _applyHlToVerseEl(_hlPickerVerseEl, newHl);
+      }
+      _hideHlPicker();
+    });
+    _hlPicker.appendChild(btn);
+  });
+
+  var clearBtn = document.createElement('button');
+  clearBtn.className = 'reader-hl-swatch reader-hl-swatch--clear';
+  clearBtn.type = 'button';
+  clearBtn.title = 'Remove highlight';
+  clearBtn.textContent = '×';
+  clearBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (_hlPickerRef && _hlPickerVerseEl) {
+      var n = getNote(_hlPickerRef) || {};
+      n.highlight = false;
+      saveNote(_hlPickerRef, n);
+      _applyHlToVerseEl(_hlPickerVerseEl, false);
+    }
+    _hideHlPicker();
+  });
+  _hlPicker.appendChild(clearBtn);
+
+  document.body.appendChild(_hlPicker);
+
+  document.addEventListener('click', function (e) {
+    if (_hlPicker && !_hlPicker.hidden && !_hlPicker.contains(e.target)) _hideHlPicker();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && _hlPicker && !_hlPicker.hidden) _hideHlPicker();
+  });
+
+  return _hlPicker;
+}
+
+function _showHlPicker(verseEl, ref, clientX, clientY) {
+  var picker = _getHlPicker();
+  _hlPickerVerseEl = verseEl;
+  _hlPickerRef     = ref;
+
+  var note = getNote(ref);
+  var activeColor = note && note.highlight;
+  picker.querySelectorAll('[data-hl-color]').forEach(function (btn) {
+    btn.classList.toggle('reader-hl-swatch--active', btn.getAttribute('data-hl-color') === activeColor);
+  });
+
+  picker.hidden = false;
+  // Position: show below click, clamp to viewport
+  var pw = picker.offsetWidth  || 280;
+  var ph = picker.offsetHeight || 36;
+  var vw = window.innerWidth,  vh = window.innerHeight;
+  var px = Math.max(4, Math.min(clientX - pw / 2, vw - pw - 4));
+  var py = clientY + 12;
+  if (py + ph > vh) py = clientY - ph - 8;
+  picker.style.left = px + 'px';
+  picker.style.top  = py + 'px';
+}
+
+function _hideHlPicker() {
+  if (_hlPicker) _hlPicker.hidden = true;
+  _hlPickerVerseEl = null;
+  _hlPickerRef     = null;
+}
+
+function _applyHlToVerseEl(verseEl, hl) {
+  verseEl.className = verseEl.className.replace(/\breader-verse--hl-\S+/g, '').trim();
+  if (hl && hl !== false) verseEl.classList.add('reader-verse--hl-' + hl);
+}
+
+export function wireVerseTextHighlight(resultsEl) {
+  if (!resultsEl) return;
+  resultsEl.querySelectorAll('.reader-verse').forEach(function (verseEl) {
+    if (verseEl._hlWired) return;
+    verseEl._hlWired = true;
+    verseEl.addEventListener('click', function (e) {
+      if (e.target.closest('.reader-verse__num') ||
+          e.target.closest('a') ||
+          e.target.closest('[role="button"]')) return;
+      var bookName = verseEl.getAttribute('data-book');
+      var ch       = verseEl.getAttribute('data-ch');
+      var v        = verseEl.getAttribute('data-v');
+      if (!bookName || !ch || !v) return;
+      e.stopPropagation();
+      _showHlPicker(verseEl, bookName + ' ' + ch + ':' + v, e.clientX, e.clientY);
+    });
   });
 }
 
@@ -630,10 +953,12 @@ export function _ensureReaderPanelStructure() {
       '<button class="reader-panel-tab reader-panel-tab--active" data-panel-tab="notes">Notes</button>' +
       '<button class="reader-panel-tab" data-panel-tab="commentary">Commentary</button>' +
       '<button class="reader-panel-tab" data-panel-tab="xrefs">Cross Refs</button>' +
+      '<button class="reader-panel-tab" data-panel-tab="bookmarks">Bookmarks</button>' +
     '</div>' +
     '<div class="reader-panel-body" id="reader-panel-notes"></div>' +
     '<div class="reader-panel-body" id="reader-panel-commentary" hidden></div>' +
-    '<div class="reader-panel-body" id="reader-panel-xrefs" hidden></div>';
+    '<div class="reader-panel-body" id="reader-panel-xrefs" hidden></div>' +
+    '<div class="reader-panel-body" id="reader-panel-bookmarks" hidden></div>';
 
   panel.querySelectorAll('.reader-panel-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -663,6 +988,11 @@ export function _activateReaderPanelTab(tab) {
 
 export function loadReaderPanelContent(parsed) {
   _readerPanelParsed = parsed;
+  // Re-activate comm mode for the new passage if it was on before chapter navigation.
+  var commBtn = document.getElementById('reader-comm-toggle');
+  if (commBtn && commBtn.getAttribute('aria-pressed') === 'true') {
+    _activateCommMode();
+  }
   var commEl = document.getElementById('reader-panel-commentary');
   var xrefEl = document.getElementById('reader-panel-xrefs');
   // Clear lazy-load flags so the new passage is fetched when each tab is opened.
@@ -674,6 +1004,10 @@ export function loadReaderPanelContent(parsed) {
   // Pre-load whichever tab is already active.
   if (_readerPanelActiveTab === 'commentary' && commEl) _loadReaderCommentary(parsed, commEl);
   if (_readerPanelActiveTab === 'xrefs'      && xrefEl) _loadReaderXrefs(parsed, xrefEl);
+  if (_readerPanelActiveTab === 'bookmarks') {
+    var bmEl = document.getElementById('reader-panel-bookmarks');
+    if (bmEl) _loadReaderBookmarks(bmEl);
+  }
 }
 
 function _loadPanelTab(tab, parsed) {
@@ -686,7 +1020,47 @@ function _loadPanelTab(tab, parsed) {
   } else if (tab === 'xrefs') {
     var xrefEl = document.getElementById('reader-panel-xrefs');
     if (xrefEl && !xrefEl._xrefsLoaded) _loadReaderXrefs(parsed, xrefEl);
+  } else if (tab === 'bookmarks') {
+    var bmEl = document.getElementById('reader-panel-bookmarks');
+    if (bmEl) _loadReaderBookmarks(bmEl);
   }
+}
+
+function _loadReaderBookmarks(container) {
+  var KEY = 'bsw_bookmarks';
+  var bms;
+  try { bms = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { bms = []; }
+
+  if (!bms.length) {
+    container.innerHTML =
+      '<p class="reader-hint" style="padding:.75rem">No bookmarks yet. Click a verse number and choose "Bookmark" to save a reference.</p>';
+    return;
+  }
+
+  var ul = document.createElement('ul');
+  ul.className = 'reader-bookmark-list';
+  bms.forEach(function (ref) {
+    var li  = document.createElement('li');
+    li.className = 'reader-bookmark-item';
+    var star = document.createElement('span');
+    star.className = 'reader-bookmark-star';
+    star.textContent = '★';
+    var a = document.createElement('a');
+    a.className = 'reader-bookmark-ref';
+    a.href = '#';
+    a.textContent = ref;
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var input = document.getElementById('reader-lookup-input');
+      if (input) input.value = ref;
+      if (window._readerLookupFn) window._readerLookupFn();
+    });
+    li.appendChild(star);
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  container.innerHTML = '';
+  container.appendChild(ul);
 }
 
 function _loadReaderNotes(parsed, container) {
@@ -712,7 +1086,8 @@ function _loadReaderNotes(parsed, container) {
   }
   // Compose form
   html += '<div class="reader-panel-compose">' +
-    '<textarea class="bsw-note-textarea" placeholder="Add a note for ' + escHtml(parsed.display || chLabel) + '…" rows="3"></textarea>' +
+    '<textarea class="bsw-note-textarea" placeholder="Add a chapter note for ' + escHtml(chLabel) + ' (click a verse number to note a specific verse)…" rows="3"></textarea>' +
+    '<p class="reader-hint" style="font-size:.72rem;margin:.15rem 0 .3rem;">Verse-specific notes: click the verse number ↑</p>' +
     '<div style="margin-top:0.3rem;display:flex;gap:.4rem;justify-content:flex-end;">' +
       '<button class="bsw-note-action-btn reader-panel-note-save">Save</button>' +
     '</div>' +
@@ -798,43 +1173,109 @@ function _loadReaderCommentary(parsed, container) {
   loadSrc(src);
 }
 
+function _buildXrefHtml(xdata, parsed) {
+  var html = '';
+  // Cap to one chapter for whole-chapter views; allow up to 2 for verse ranges
+  var maxCh = parsed.wholeChapter
+    ? parsed.ch
+    : Math.min(parsed.endCh || parsed.ch, parsed.ch + 1);
+  for (var c = parsed.ch; c <= maxCh; c++) {
+    var chData = xdata[String(c)];
+    if (!chData) continue;
+    var startV = (c === parsed.ch) ? (parsed.v || 1) : 1;
+    var stopV  = (c === (parsed.endCh || c))
+      ? (parsed.wholeChapter ? 9999 : (parsed.endV || parsed.v || 9999))
+      : 9999;
+    Object.keys(chData).map(Number)
+      .filter(function (n) { return n >= startV && n <= stopV; })
+      .sort(function (a, b) { return a - b; })
+      .forEach(function (vNum) {
+        var rawRefs = chData[String(vNum)];
+        if (!rawRefs || !rawRefs.length) return;
+        var entries = rawRefs.map(parseCrossRefEntry)
+          .sort(function (a, b) { return b.votes - a.votes; })
+          .slice(0, 8)
+          .sort(_compareCanonical);
+        html += '<div class="reader-xref-group">' +
+          '<div class="reader-xref-group__title">v.' + vNum + '</div>' +
+          '<ul class="reader-xref-group__list">';
+        entries.forEach(function (e) {
+          html += '<li class="reader-xref-group__item">' +
+            '<span class="reader-xref-group__link" data-ref="' + escHtml(e.ref) + '" role="button" tabindex="0">' + escHtml(e.ref) + '</span>' +
+          '</li>';
+        });
+        html += '</ul></div>';
+      });
+  }
+  return html;
+}
+
 function _loadReaderXrefs(parsed, container) {
   container._xrefsLoaded = true;
   container.innerHTML = '<p class="reader-hint">Loading cross-references…</p>';
 
+  // For multi-passage lookups, show refs for only the first passage and offer chips
+  // to switch. The groups array holds all loaded passages.
+  var groups   = window._readerGroups || [];
+  var multiPassage = groups.length > 1;
+
   loadCrossRefs(parsed.bookId).then(function (xdata) {
     if (!xdata) { container.innerHTML = '<p class="reader-xref-empty">No cross-references for this book.</p>'; return; }
 
-    var html = '';
-    for (var c = parsed.ch; c <= Math.min(parsed.endCh || parsed.ch, parsed.ch + 4); c++) {
-      var chData = xdata[String(c)];
-      if (!chData) continue;
-      var startV = (c === parsed.ch)             ? (parsed.v || 1)      : 1;
-      var stopV  = (c === (parsed.endCh || c))   ? (parsed.wholeChapter ? 9999 : (parsed.endV || parsed.v || 9999)) : 9999;
-      Object.keys(chData).map(Number)
-        .filter(function (n) { return n >= startV && n <= stopV; })
-        .sort(function (a, b) { return a - b; })
-        .forEach(function (vNum) {
-          var rawRefs = chData[String(vNum)];
-          if (!rawRefs || !rawRefs.length) return;
-          var entries = rawRefs.map(parseCrossRefEntry)
-            .sort(function (a, b) { return b.votes - a.votes; })
-            .slice(0, 8)
-            .sort(_compareCanonical);
-          html += '<div class="reader-xref-group">' +
-            '<div class="reader-xref-group__title">v.' + vNum + '</div>' +
-            '<ul class="reader-xref-group__list">';
-          entries.forEach(function (e) {
-            html += '<li class="reader-xref-group__item">' +
-              '<span class="reader-xref-group__link" data-ref="' + escHtml(e.ref) + '" role="button" tabindex="0">' + escHtml(e.ref) + '</span>' +
-            '</li>';
-          });
-          html += '</ul></div>';
-        });
+    var bk     = metaBooks && metaBooks.find(function (b) { return b.id === parsed.bookId; });
+    var chName = (bk ? bk.name : parsed.bookId) + ' ' + parsed.ch;
+
+    var noteHtml = multiPassage
+      ? '<p class="reader-hint reader-xref-scope-note">Showing cross-refs for <strong>' + escHtml(chName) + '</strong></p>'
+      : '';
+
+    // Chip row for switching passages when multiple groups are loaded
+    var chipsHtml = '';
+    if (multiPassage) {
+      chipsHtml = '<div class="reader-xref-chips">';
+      groups.forEach(function (g, i) {
+        var bkG = metaBooks && metaBooks.find(function (b) { return b.id === g.ref.bookId; });
+        var label = (bkG ? bkG.name : (g.ref.bookId || '')) + ' ' + g.ref.ch;
+        var active = (g.ref.bookId === parsed.bookId && g.ref.ch === parsed.ch);
+        chipsHtml += '<button class="reader-xref-chip' + (active ? ' reader-xref-chip--active' : '') +
+          '" data-xref-idx="' + i + '">' + escHtml(label) + '</button>';
+      });
+      chipsHtml += '</div>';
     }
-    if (!html) { container.innerHTML = '<p class="reader-xref-empty">No cross-references for this passage.</p>'; return; }
-    container.innerHTML = html;
+
+    var bodyHtml = _buildXrefHtml(xdata, parsed);
+    if (!bodyHtml) bodyHtml = '<p class="reader-xref-empty">No cross-references for this passage.</p>';
+
+    container.innerHTML = noteHtml + chipsHtml + '<div class="reader-xref-body">' + bodyHtml + '</div>';
     wireRefLinks(container);
+
+    // Wire chip clicks to reload refs for the selected passage
+    if (multiPassage) {
+      container.querySelectorAll('.reader-xref-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var idx = parseInt(chip.getAttribute('data-xref-idx'), 10);
+          var g2  = groups[idx];
+          if (!g2 || !g2.ref.bookId) return;
+          // Update active chip
+          container.querySelectorAll('.reader-xref-chip').forEach(function (c) {
+            c.classList.toggle('reader-xref-chip--active', c === chip);
+          });
+          // Reload xrefs for selected passage
+          loadCrossRefs(g2.ref.bookId).then(function (xdata2) {
+            var bodyEl = container.querySelector('.reader-xref-body');
+            if (!bodyEl) return;
+            var bkG2  = metaBooks && metaBooks.find(function (b) { return b.id === g2.ref.bookId; });
+            var label2 = (bkG2 ? bkG2.name : g2.ref.bookId) + ' ' + g2.ref.ch;
+            var note2  = container.querySelector('.reader-xref-scope-note');
+            if (note2) note2.innerHTML = 'Showing cross-refs for <strong>' + escHtml(label2) + '</strong>';
+            if (!xdata2) { bodyEl.innerHTML = '<p class="reader-xref-empty">No cross-references for this book.</p>'; return; }
+            var h2 = _buildXrefHtml(xdata2, g2.ref);
+            bodyEl.innerHTML = h2 || '<p class="reader-xref-empty">No cross-references for this passage.</p>';
+            wireRefLinks(bodyEl);
+          }).catch(function () {});
+        });
+      });
+    }
   }).catch(function () {
     container.innerHTML = '<p class="reader-xref-empty">Could not load cross-references.</p>';
   });
@@ -1083,6 +1524,18 @@ function _renderIntroInReader(el, d, bookId, bookName, maxCh) {
     body += _riSection('Redemptive-Historical Timeline', _renderTimeline(d.timeline, d.title));
   }
 
+  /* Related Maps — link to the maps page pre-selecting each relevant map */
+  var mapIds = BOOK_MAP_LINKS[bookId] || [];
+  if (mapIds.length) {
+    var mapChips = mapIds.map(function (id) {
+      var label = MAP_LABELS[id] || id;
+      return '<a class="ri-map-chip" href="' + escHtml(MAPS_URL + '#' + id) + '" target="_blank" rel="noopener">' +
+        '🗺 ' + escHtml(label) +
+      '</a>';
+    }).join('');
+    body += _riSection('Related Maps', '<div class="ri-map-chips">' + mapChips + '</div>');
+  }
+
   var prevBk    = _adjacentBook(bookId, -1, true);
   var prevBkBtn = prevBk
     ? '<button class="reader-nav-btn" data-nav-label="' + escHtml(prevBk.name + ' ' + prevBk.chapters) + '">← ' + escHtml(prevBk.name) + '</button>'
@@ -1110,6 +1563,11 @@ function _renderIntroInReader(el, d, bookId, bookName, maxCh) {
     b._termsTagged = false;
     autoTagTerms(b);
   });
+  /* Tag biblical place names after terms are done so we don't double-wrap */
+  var introInner = el.querySelector('.reader-intro-inner');
+  if (introInner && window.BibleUI && window.BibleUI.autoTagPlacesIn) {
+    window.BibleUI.autoTagPlacesIn(introInner);
+  }
 }
 
 function _wireReaderNav(el) {
@@ -1154,4 +1612,224 @@ function _renderReaderBookIntro(bookId, bookName) {
     .catch(function () {
       el.innerHTML = '<p class="reader-hint">No introduction available for this book yet.</p>';
     });
+}
+
+// ── Commentary Mode — RD-M ────────────────────────────────────────────────
+// INTENT: Verse-locked split view. Replaces the flowing reader text with a
+//   per-verse CSS grid so each verse is horizontally aligned with its commentary.
+//   _commModeChData stores { [srcId]: chapterObj } for the current passage;
+//   it is rebuilt whenever loadReaderPanelContent fires with a new passage.
+// CHANGE? _commModeChData is keyed only for the first passage's chapter. If
+//   multi-passage commentary is needed, switch to a [bookId+ch] composite key.
+// VERIFY: Load John 3, click Commentary, observe per-verse rows with source
+//   picker. Navigate to John 4 — rows update. Click Commentary again to restore.
+
+var _commModeChData = null;
+
+export function initCommModeToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-comm-toggle')) return;
+
+  var btn = document.createElement('button');
+  btn.id        = 'reader-comm-toggle';
+  btn.className = 'reader-comm-toggle';
+  btn.type      = 'button';
+  btn.textContent = 'Commentary';
+
+  // Restore visual state from localStorage (activation happens on next passage load)
+  var saved = false;
+  try { saved = localStorage.getItem('bsw_reader_comm_mode') === '1'; } catch (e) {}
+  btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(btn, hint || null);
+
+  btn.addEventListener('click', function () {
+    if (btn.getAttribute('aria-pressed') === 'true') {
+      _deactivateCommMode();
+    } else {
+      _activateCommMode();
+    }
+  });
+}
+
+function _activateCommMode() {
+  var parsed = _readerPanelParsed;
+  if (!parsed || !parsed.bookId) return;
+
+  var btn = document.getElementById('reader-comm-toggle');
+  if (btn) btn.setAttribute('aria-pressed', 'true');
+  try { localStorage.setItem('bsw_reader_comm_mode', '1'); } catch (e) {}
+
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.add('reader-layout--comm-mode');
+
+  var bookId = parsed.bookId;
+  var ch     = parsed.ch;
+  var chDataMap = {};
+  _commModeChData = chDataMap;
+
+  Promise.all(COMMENTARY_SOURCES.map(function (s) {
+    return loadCommentary(bookId, s.id).then(function (bookData) {
+      chDataMap[s.id] = (bookData && bookData[String(ch)]) || null;
+    }).catch(function () { chDataMap[s.id] = null; });
+  })).then(function () {
+    // Guard: a subsequent navigation may have replaced _commModeChData already
+    if (_commModeChData === chDataMap) _buildCommGrid();
+  });
+}
+
+function _deactivateCommMode() {
+  var btn = document.getElementById('reader-comm-toggle');
+  if (btn) btn.setAttribute('aria-pressed', 'false');
+  try { localStorage.setItem('bsw_reader_comm_mode', '0'); } catch (e) {}
+
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.remove('reader-layout--comm-mode');
+
+  _commModeChData = null;
+
+  // Re-render from scratch to restore the original inline verse flow
+  if (window._readerLookupFn) window._readerLookupFn();
+}
+
+// Return largest key ≤ v in chd, or null if none exists.
+function _commFindKey(chd, v) {
+  if (!chd) return null;
+  var keys = Object.keys(chd).map(Number).sort(function (a, b) { return a - b; });
+  for (var i = keys.length - 1; i >= 0; i--) {
+    if (keys[i] <= v) return keys[i];
+  }
+  return null;
+}
+
+function _buildCommGrid() {
+  var resultsEl = document.getElementById('reader-results');
+  if (!resultsEl) return;
+
+  resultsEl.querySelectorAll('.reader-result-group').forEach(function (groupEl) {
+    var textEl = groupEl.querySelector('.reader-result-group__text');
+    if (!textEl) return;
+    var verseSpans = Array.prototype.slice.call(textEl.querySelectorAll('.reader-verse'));
+    if (!verseSpans.length) return;
+
+    var verseData = verseSpans.map(function (span) {
+      return {
+        span: span,
+        ch:   parseInt(span.getAttribute('data-ch'), 10),
+        v:    parseInt(span.getAttribute('data-v'),  10)
+      };
+    });
+
+    var grid = document.createElement('div');
+    grid.className   = 'reader-comm-grid';
+    grid._verseData  = verseData; // stored so _rebuildCommCells can re-run on source change
+
+    // Row 1: single global source picker spanning both columns
+    grid.appendChild(_buildCommGlobalPicker());
+
+    // Rows 2+: one verse cell per verse in column 1, with explicit grid-row
+    verseData.forEach(function (vd, idx) {
+      var cell = document.createElement('div');
+      cell.className      = 'reader-comm-cell reader-comm-cell--verse';
+      cell.style.gridRow    = String(idx + 2); // row 1 = picker
+      cell.style.gridColumn = '1';
+      cell.appendChild(vd.span);
+      grid.appendChild(cell);
+    });
+
+    textEl.parentNode.replaceChild(grid, textEl);
+
+    // Commentary cells: one per section, spanning the rows of all verses in the section
+    _rebuildCommCells(grid);
+  });
+}
+
+function _buildCommGlobalPicker() {
+  var curSrc = getCommentarySource();
+  var wrap   = document.createElement('div');
+  wrap.className = 'reader-comm-picker-row';
+
+  var lbl = document.createElement('span');
+  lbl.className   = 'reader-comm-picker-label';
+  lbl.textContent = 'Source:';
+  wrap.appendChild(lbl);
+
+  var sel = document.createElement('select');
+  sel.className = 'reader-comm-src-sel';
+  sel.setAttribute('aria-label', 'Commentary source');
+  COMMENTARY_SOURCES.forEach(function (s) {
+    var opt = document.createElement('option');
+    opt.value       = s.id;
+    opt.textContent = s.label;
+    if (s.id === curSrc) opt.selected = true;
+    sel.appendChild(opt);
+  });
+  wrap.appendChild(sel);
+
+  sel.addEventListener('change', function () {
+    setCommentarySource(sel.value);
+    // Rebuild commentary cells in all grids and keep sibling pickers in sync
+    document.querySelectorAll('.reader-comm-grid').forEach(function (g) {
+      _rebuildCommCells(g);
+      var sib = g.querySelector('.reader-comm-src-sel');
+      if (sib && sib !== sel) sib.value = sel.value;
+    });
+  });
+
+  return wrap;
+}
+
+function _rebuildCommCells(grid) {
+  if (!grid._verseData) return;
+  var verseData = grid._verseData;
+  var srcId     = getCommentarySource();
+  var chd       = _commModeChData && _commModeChData[srcId];
+
+  // Remove previous commentary cells, keep picker and verse cells
+  grid.querySelectorAll('.reader-comm-cell--comm').forEach(function (el) { el.remove(); });
+
+  // Group consecutive verses that share the same foundKey into sections.
+  // Each section gets exactly one commentary cell spanning all its rows.
+  var sections = [];
+  verseData.forEach(function (vd, idx) {
+    var foundKey = _commFindKey(chd, vd.v);
+    var last = sections.length ? sections[sections.length - 1] : null;
+    if (last && last.foundKey === foundKey && last.ch === vd.ch) {
+      last.endIdx = idx;
+    } else {
+      sections.push({ foundKey: foundKey, ch: vd.ch, startIdx: idx, endIdx: idx });
+    }
+  });
+
+  sections.forEach(function (sec) {
+    var startRow  = sec.startIdx + 2; // +2: row 1 is the picker
+    var spanCount = sec.endIdx - sec.startIdx + 1;
+
+    var cell = document.createElement('div');
+    cell.className      = 'reader-comm-cell reader-comm-cell--comm';
+    cell.style.gridRow    = startRow + ' / span ' + spanCount;
+    cell.style.gridColumn = '2';
+
+    if (sec.foundKey !== null && chd && chd[String(sec.foundKey)]) {
+      var html = chd[String(sec.foundKey)];
+      // If this section's foundKey is before the first displayed verse, show a
+      // section-range note so the reader knows the commentary covers more context.
+      if (sec.foundKey < verseData[sec.startIdx].v) {
+        var allKeys = Object.keys(chd).map(Number).sort(function (a, b) { return a - b; });
+        var nextKey = null;
+        for (var k = 0; k < allKeys.length; k++) {
+          if (allKeys[k] > sec.foundKey) { nextKey = allKeys[k]; break; }
+        }
+        var rangeEnd = nextKey !== null ? (nextKey - 1) : '…';
+        html = '<p class="reader-comm-span-note">▸ section v.' + sec.foundKey + '–' + rangeEnd + '</p>' + html;
+      }
+      cell.innerHTML = html;
+      wireRefLinks(cell);
+    } else {
+      cell.innerHTML = '<p class="reader-hint">No commentary available.</p>';
+    }
+
+    grid.appendChild(cell);
+  });
 }

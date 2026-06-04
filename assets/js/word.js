@@ -12,6 +12,31 @@ import { expandMorphCode } from './interlinear.js';
 var _wdCurrentFilter = null;
 var _wdCurrentBook   = null;
 var _wdBookList      = null;
+var _wdMorphCount    = null;
+/* WD-L: shared across promise chain so _wdRenderRelatedWords can access them */
+var _wdEntry         = null;
+var _wdStrongsDict   = null;
+
+/* ── URL hash helpers (WD-B) ─────────────────────────────────────────────── */
+
+function _wdWriteHash() {
+  var parts = [];
+  if (_wdCurrentBook)   parts.push('book=' + encodeURIComponent(_wdCurrentBook));
+  if (_wdCurrentFilter) parts.push('trans=' + encodeURIComponent(_wdCurrentFilter));
+  var base = window.location.pathname + window.location.search;
+  window.history.replaceState(null, '', base + (parts.length ? '#' + parts.join('&') : ''));
+}
+
+function _wdReadHash() {
+  var hash = window.location.hash.replace(/^#/, '');
+  var result = { book: null, trans: null };
+  hash.split('&').forEach(function (part) {
+    var kv = part.split('=');
+    if (kv[0] === 'book' && kv[1])  result.book  = decodeURIComponent(kv[1]);
+    if (kv[0] === 'trans' && kv[1]) result.trans = decodeURIComponent(kv[1]);
+  });
+  return result;
+}
 
 export function initWordPage() {
   var params   = new URLSearchParams(window.location.search);
@@ -26,7 +51,14 @@ export function initWordPage() {
   document.title = rawId + ' — Word Study — Bible Study';
 
   var backLink = document.getElementById('wd-back-link');
-  if (backLink) backLink.href = SEARCH_URL + '?s=' + encodeURIComponent(rawId);
+  if (backLink) {
+    if (params.get('from') === 'wordcloud') {
+      backLink.href = '../wordcloud/';
+      backLink.textContent = '← Word Cloud';
+    } else {
+      backLink.href = SEARCH_URL + '?s=' + encodeURIComponent(rawId);
+    }
+  }
 
   var testament = rawId[0] === 'G' ? 'greek' : 'hebrew';
 
@@ -35,12 +67,26 @@ export function initWordPage() {
     if (versesSection && versesSection._rerenderFn) versesSection._rerenderFn(ver);
   });
 
+  /* WD-B: restore filters from Back/Forward navigation */
+  window.addEventListener('hashchange', function () {
+    var h = _wdReadHash();
+    _wdCurrentBook   = h.book;
+    _wdCurrentFilter = h.trans;
+    _wdRenderBooks();
+    _wdRenderTranslations();
+    _wdRefreshVerses();
+  });
+
   Promise.all([loadStrongs(testament), loadLexicon(testament)])
     .then(function (results) {
       var strongsDict = results[0];
       var lexDict     = results[1];
       var entry    = strongsDict && strongsDict[rawId];
       var lexEntry = lexDict    && lexDict[rawId];
+
+      /* WD-L: store for use after interlinear fetches resolve */
+      _wdEntry       = entry;
+      _wdStrongsDict = strongsDict;
 
       _wdRenderHeader(rawId, entry, lexEntry, headerEl);
 
@@ -51,9 +97,22 @@ export function initWordPage() {
       var bookMatches      = {};
       var totalCount       = 0;
       var translationCount = {};
+      var morphCount       = {};   /* WD-C */
+      var completed        = 0;
+      var total            = books.length;
+
+      /* WD-A: insert progress element below the header */
+      var progressEl = document.createElement('p');
+      progressEl.id = 'wd-progress';
+      progressEl.className = 'wd-progress';
+      progressEl.textContent = 'Loading books… 0 / ' + total;
+      var statsEl = document.getElementById('wd-stats');
+      statsEl.parentNode.insertBefore(progressEl, statsEl);
 
       var fetches = books.map(function (bk) {
         return loadInterlinear(bk.id).then(function (data) {
+          completed++;
+          progressEl.textContent = 'Loading books… ' + completed + ' / ' + total;
           if (!data) return;
           Object.keys(data).forEach(function (ch) {
             Object.keys(data[ch]).forEach(function (v) {
@@ -65,6 +124,8 @@ export function initWordPage() {
                   var norm = _wdNormalizePhrase(tok.text);
                   translationCount[norm] = (translationCount[norm] || 0) + 1;
                   totalCount++;
+                  /* WD-C: collect morph codes */
+                  if (tok.m) morphCount[tok.m] = (morphCount[tok.m] || 0) + 1;
                 }
               });
               if (phrases.length) {
@@ -77,13 +138,17 @@ export function initWordPage() {
       });
 
       return Promise.all(fetches).then(function () {
-        return { bookMatches: bookMatches, totalCount: totalCount, translationCount: translationCount };
+        return { bookMatches: bookMatches, totalCount: totalCount, translationCount: translationCount, morphCount: morphCount };
       });
     })
     .then(function (results) {
       var bookMatches      = results.bookMatches;
       var totalCount       = results.totalCount;
       var translationCount = results.translationCount;
+
+      /* WD-A: remove progress indicator */
+      var prog = document.getElementById('wd-progress');
+      if (prog) prog.parentNode.removeChild(prog);
 
       if (!totalCount) {
         document.getElementById('wd-stats').removeAttribute('hidden');
@@ -93,16 +158,23 @@ export function initWordPage() {
       }
 
       var bookList = Object.keys(bookMatches).map(function (id) { return bookMatches[id]; });
-      _wdBookList      = bookList;
-      _wdCurrentFilter = null;
-      _wdCurrentBook   = null;
+      _wdBookList   = bookList;
+      _wdMorphCount = results.morphCount;
 
-      _wdRenderStats(totalCount, bookList.length, translationCount);
+      /* WD-B: restore filters from URL hash before first render */
+      var h = _wdReadHash();
+      _wdCurrentFilter = h.trans;
+      _wdCurrentBook   = h.book;
+
+      _wdRenderStats(totalCount, bookList.length, translationCount, results.morphCount);
+      _wdRenderRelatedWords(_wdEntry, _wdStrongsDict);
       _wdRenderTranslations();
       _wdRenderBooks();
       _wdRenderVerses(rawId);
     })
     .catch(function (err) {
+      var prog = document.getElementById('wd-progress');
+      if (prog) prog.parentNode.removeChild(prog);
       headerEl.innerHTML = '<p class="wd-error">Failed to load data: ' + escHtml(String(err)) + '</p>';
     });
 }
@@ -134,6 +206,17 @@ function _wdRenderHeader(rawId, entry, lexEntry, el) {
       '<span class="wd-lexicon-short">' + escHtml(short) + '</span>';
     if (showToggle) {
       html += '<div class="wd-lexicon-long" hidden>' + escHtml(long_) + '</div>' +
+              '<button class="wd-lexicon-toggle" type="button">+ full entry</button>';
+    }
+    html += '</div>';
+  }
+  /* WD-H: Strong's (1890) as a second lexical source card */
+  if (entry && (entry.gloss || entry.def)) {
+    html += '<div class="wd-lexicon wd-lexicon--strongs">' +
+      '<span class="wd-lexicon-label">Strong\'s (1890)</span>' +
+      '<span class="wd-lexicon-short">' + escHtml(entry.gloss || '') + '</span>';
+    if (entry.def && entry.def !== entry.gloss) {
+      html += '<div class="wd-lexicon-long" hidden>' + escHtml(entry.def) + '</div>' +
               '<button class="wd-lexicon-toggle" type="button">+ full entry</button>';
     }
     html += '</div>';
@@ -188,16 +271,121 @@ function _wdRenderDefChips(def) {
   return html;
 }
 
-function _wdRenderStats(total, bookCount, translationCount) {
+function _wdRenderStats(total, bookCount, translationCount, morphCount) {
   var uniqueTranslations = Object.keys(translationCount).length;
   var statsEl = document.getElementById('wd-stats');
   statsEl.innerHTML =
     '<div class="wd-stat-card"><span class="wd-stat-num">' + total + '</span><span class="wd-stat-label">occurrences</span></div>' +
     '<div class="wd-stat-card"><span class="wd-stat-num">' + bookCount + '</span><span class="wd-stat-label">books</span></div>' +
     '<div class="wd-stat-card"><span class="wd-stat-num">' + uniqueTranslations + '</span><span class="wd-stat-label">unique translations</span></div>';
+  /* WD-G: "By genre" breakdown chips */
+  var genreCounts = {};
+  (_wdBookList || []).forEach(function (bm) {
+    var genre = (bm.book.genre || 'other');
+    genreCounts[genre] = (genreCounts[genre] || 0) + bm.verses.length;
+  });
+  var genreKeys = Object.keys(genreCounts).sort(function (a, b) {
+    return genreCounts[b] - genreCounts[a];
+  });
+  if (genreKeys.length > 1) {
+    var genreHtml = '<div class="wd-genre-row">';
+    genreKeys.forEach(function (g) {
+      genreHtml += '<span class="wd-genre-chip">' + escHtml(g) +
+        ' <span class="wd-genre-count">' + genreCounts[g] + '</span></span>';
+    });
+    genreHtml += '</div>';
+    statsEl.insertAdjacentHTML('beforeend', genreHtml);
+  }
+
   statsEl.removeAttribute('hidden');
   var bodyEl = document.getElementById('wd-body');
   if (bodyEl) bodyEl.removeAttribute('hidden');
+
+  /* WD-C: morph table — inserted between stat cards and body */
+  if (morphCount && Object.keys(morphCount).length) {
+    var morphEl = document.getElementById('wd-morph-table-wrap');
+    if (!morphEl) {
+      morphEl = document.createElement('div');
+      morphEl.id = 'wd-morph-table-wrap';
+      statsEl.parentNode.insertBefore(morphEl, bodyEl);
+    }
+    _wdRenderMorphTable(morphCount, morphEl);
+  }
+}
+
+/* WD-C: expand morph codes and render a sortable table */
+function _wdRenderMorphTable(morphCount, container) {
+  var pairs = Object.keys(morphCount).map(function (code) {
+    return { code: code, label: expandMorphCode(code) || code, count: morphCount[code] };
+  });
+  pairs.sort(function (a, b) { return b.count - a.count; });
+
+  var html = '<table class="wd-morph-table">' +
+    '<thead><tr><th>Form</th><th>Code</th><th>Count</th></tr></thead><tbody>';
+  pairs.forEach(function (p) {
+    html += '<tr><td>' + escHtml(p.label) + '</td><td class="wd-morph-code">' +
+      escHtml(p.code) + '</td><td class="wd-morph-n">' + p.count + '</td></tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+/* WD-L: render "Related Words" pill grid from see_also cross-refs in the strongs entry.
+// INTENT: Surface near-synonym and root-word links already encoded in the `deriv` field so the
+//   user can jump to semantic neighbors without returning to search. `see_also` arrays were
+//   generated by scripts/add-see-also.py from G\d+/H\d+ patterns in each entry's `deriv` text.
+// CHANGE? If word.js's DOM insertion order changes (morph table position), update the
+//   insertBefore reference target (#wd-morph-table-wrap or #wd-body accordingly).
+// VERIFY: Load ?s=G26 (agape); related words panel should show G25 (agapao) and G5368 (phileo)
+//   pills. Load ?s=H3068 (YHWH); panel should show H430 (Elohim). Panel absent for simple
+//   words with no cross-refs. */
+function _wdRenderRelatedWords(entry, strongsDict) {
+  var refs = entry && Array.isArray(entry.see_also) ? entry.see_also : [];
+  /* cap at 12 pills — deriv chains can be long for complex compound words */
+  refs = refs.slice(0, 12);
+
+  var existingEl = document.getElementById('wd-related-wrap');
+  if (existingEl) existingEl.parentNode.removeChild(existingEl);
+  if (!refs.length || !strongsDict) return;
+
+  var pills = refs.filter(function (id) {
+    return strongsDict[id] && strongsDict[id].lemma;
+  });
+  if (!pills.length) return;
+
+  var wrap = document.createElement('div');
+  wrap.id = 'wd-related-wrap';
+  wrap.className = 'wd-related-wrap';
+
+  var heading = document.createElement('h3');
+  heading.className = 'wd-related-heading';
+  heading.textContent = 'Related Words';
+  wrap.appendChild(heading);
+
+  var grid = document.createElement('div');
+  grid.className = 'wd-related-grid';
+
+  pills.forEach(function (id) {
+    var e = strongsDict[id];
+    var pill = document.createElement('a');
+    pill.className = 'wd-related-pill';
+    pill.href = WORD_URL + '?s=' + encodeURIComponent(id);
+    pill.title = id + ' — ' + (e.def || e.gloss || '');
+    pill.innerHTML = '<span class="wd-related-id">' + escHtml(id) + '</span>' +
+                     '<span class="wd-related-lemma">' + escHtml(e.lemma || '') + '</span>' +
+                     '<span class="wd-related-gloss">' + escHtml(e.gloss || '') + '</span>';
+    grid.appendChild(pill);
+  });
+
+  wrap.appendChild(grid);
+
+  /* insert after morph table (if present) or after stats, before body */
+  var bodyEl   = document.getElementById('wd-body');
+  var morphEl  = document.getElementById('wd-morph-table-wrap');
+  var anchor   = morphEl || document.getElementById('wd-stats');
+  if (anchor && anchor.parentNode) {
+    anchor.parentNode.insertBefore(wrap, anchor.nextSibling || bodyEl);
+  }
 }
 
 var _wdStopWords = (function () {
@@ -262,17 +450,30 @@ function _wdRenderTranslations() {
   var pairs  = Object.keys(counts).map(function (k) { return { phrase: k, count: counts[k] }; });
   pairs.sort(function (a, b) { return b.count - a.count; });
 
-  var html = '';
+  /* WD-K: label above the list */
+  var html = '<p class="wd-trans-label">How this word is translated:</p>';
+
+  /* WD-D: "All" row that clears the filter */
+  var allActive = !_wdCurrentFilter;
+  html += '<button class="wd-translation-row' + (allActive ? ' wd-translation-row--active' : '') +
+    '" data-phrase="" title="Show all translations">' +
+    '<span class="wd-translation-phrase">All translations</span>' +
+    '<div class="wd-translation-bar-wrap"><div class="wd-translation-bar" style="width:100%"></div></div>' +
+    '<span class="wd-translation-count">' + total + '</span>' +
+    '</button>';
+
   pairs.forEach(function (p) {
     var pct    = total ? Math.round((p.count / total) * 100) : 0;
     var active = p.phrase === _wdCurrentFilter;
     html += '<button class="wd-translation-row' + (active ? ' wd-translation-row--active' : '') +
-      '" data-phrase="' + escHtml(p.phrase) + '">' +
+      '" data-phrase="' + escHtml(p.phrase) + '"' +
+      ' title="Click to filter by this translation">' +
       '<span class="wd-translation-phrase">' + escHtml(p.phrase) + '</span>' +
       '<div class="wd-translation-bar-wrap">' +
       '<div class="wd-translation-bar" style="width:' + pct + '%"></div>' +
       '</div>' +
-      '<span class="wd-translation-count">' + p.count + '</span>' +
+      /* WD-K: show percentage next to count */
+      '<span class="wd-translation-count">' + p.count + ' <span class="wd-trans-pct">(' + pct + '%)</span></span>' +
       '</button>';
   });
   body.innerHTML = html;
@@ -282,7 +483,8 @@ function _wdRenderTranslations() {
     body.addEventListener('click', function (e) {
       var row = e.target.closest('.wd-translation-row');
       if (!row) return;
-      _wdToggleFilter(row.dataset.phrase);
+      /* empty data-phrase means "All" — pass null to clear */
+      _wdToggleFilter(row.dataset.phrase || null);
     });
   }
 
@@ -290,13 +492,17 @@ function _wdRenderTranslations() {
 }
 
 function _wdToggleFilter(phrase) {
-  _wdCurrentFilter = (phrase === _wdCurrentFilter) ? null : phrase;
+  /* null or same phrase → clear; otherwise set */
+  _wdCurrentFilter = (phrase && phrase !== _wdCurrentFilter) ? phrase : null;
+  _wdWriteHash();
   _wdRenderBooks();
+  _wdRenderTranslations();
   _wdRefreshVerses();
 }
 
 function _wdToggleBook(bookId) {
-  _wdCurrentBook = (bookId === _wdCurrentBook) ? null : bookId;
+  _wdCurrentBook = (bookId && bookId !== _wdCurrentBook) ? bookId : null;
+  _wdWriteHash();
   _wdRenderBooks();
   _wdRenderTranslations();
   _wdRefreshVerses();
@@ -312,13 +518,20 @@ function _wdRenderBooks() {
     return (a.book.bookNumber || 0) - (b.book.bookNumber || 0);
   });
 
-  var html = '';
+  /* WD-D: "All books" pill clears the book filter */
+  var allBooksActive = !_wdCurrentBook;
+  var totalVerses = Object.keys(counts).reduce(function (s, k) { return s + counts[k]; }, 0);
+  var html = '<button class="wd-book-pill' + (allBooksActive ? ' wd-book-pill--active' : '') +
+    '" data-book="" title="Show all books">' +
+    'All <span class="wd-book-count">' + totalVerses + '</span></button>';
+
   sorted.forEach(function (bm) {
     var count = counts[bm.book.id] || 0;
     if (!count) return;
     var active = bm.book.id === _wdCurrentBook;
     html += '<button class="wd-book-pill' + (active ? ' wd-book-pill--active' : '') +
-      '" data-book="' + escHtml(bm.book.id) + '">' +
+      '" data-book="' + escHtml(bm.book.id) + '"' +
+      ' title="Click to filter by this book">' +
       escHtml(bm.book.name) + ' <span class="wd-book-count">' + count + '</span></button>';
   });
   body.innerHTML = html;
@@ -328,7 +541,8 @@ function _wdRenderBooks() {
     body.addEventListener('click', function (e) {
       var pill = e.target.closest('.wd-book-pill[data-book]');
       if (!pill) return;
-      _wdToggleBook(pill.dataset.book);
+      /* empty data-book means "All books" — pass null to clear */
+      _wdToggleBook(pill.dataset.book || null);
     });
   }
 
@@ -420,14 +634,28 @@ function _wdRenderVerses(strongsId) {
         ' <button class="wd-chip-clear" data-clear="book">×</button></span>';
     }
     if (chips) {
+      /* WD-D/WD-J: show "Clear all filters" when both filters are active */
+      if (translationFilter && bookFilter) {
+        chips += '<button class="wd-filter-clear-all" style="margin-left:auto">Clear all</button>';
+      }
       var chipBar = document.createElement('div');
       chipBar.className = 'wd-filter-bar';
       chipBar.innerHTML = chips;
       chipBar.addEventListener('click', function (e) {
         var btn = e.target.closest('.wd-chip-clear');
-        if (!btn) return;
-        if (btn.dataset.clear === 'trans') _wdToggleFilter(_wdCurrentFilter);
-        else _wdToggleBook(_wdCurrentBook);
+        if (btn) {
+          if (btn.dataset.clear === 'trans') _wdToggleFilter(_wdCurrentFilter);
+          else _wdToggleBook(_wdCurrentBook);
+          return;
+        }
+        if (e.target.closest('.wd-filter-clear-all')) {
+          _wdCurrentFilter = null;
+          _wdCurrentBook   = null;
+          _wdWriteHash();
+          _wdRenderBooks();
+          _wdRenderTranslations();
+          _wdRefreshVerses();
+        }
       });
       statusEl.appendChild(chipBar);
     }
@@ -450,6 +678,14 @@ function _wdRenderVerses(strongsId) {
       var heading = document.createElement('h3');
       heading.className = 'wd-book-heading';
       heading.textContent = bm.book.name;
+
+      /* WD-E: "Read in context" link per book section */
+      var readerLink = document.createElement('a');
+      readerLink.className = 'wd-book-reader-link';
+      readerLink.href = '../read/?book=' + encodeURIComponent(bm.book.id);
+      readerLink.textContent = 'Read in context →';
+      heading.appendChild(readerLink);
+
       bookSection.appendChild(heading);
       body.appendChild(bookSection);
 
@@ -474,4 +710,49 @@ function _wdRenderVerses(strongsId) {
   section._rerenderFn  = function (ver) { render(ver, _wdCurrentFilter, _wdCurrentBook); };
   section._applyFilters = function (tf, bf) { render(getVersion(), tf, bf); };
   render(version, null, null);
+
+  /* WD-I: keyboard navigation through verse list */
+  var _focusedCardIdx = -1;
+  document.addEventListener('keydown', function (e) {
+    /* Ignore when focused inside an input or textarea */
+    var tag = (e.target.tagName || '').toUpperCase();
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+    var cards = Array.prototype.slice.call(body.querySelectorAll('.wd-verse-card'));
+
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!cards.length) return;
+      if (_focusedCardIdx >= 0 && _focusedCardIdx < cards.length) {
+        cards[_focusedCardIdx].classList.remove('wd-verse-card--focused');
+      }
+      _focusedCardIdx = e.key === 'ArrowDown'
+        ? Math.min(_focusedCardIdx + 1, cards.length - 1)
+        : Math.max(_focusedCardIdx - 1, 0);
+      var card = cards[_focusedCardIdx];
+      card.classList.add('wd-verse-card--focused');
+      card.scrollIntoView({ block: 'nearest' });
+      return;
+    }
+    if (e.key === 'b') {
+      var booksBody = document.getElementById('wd-books-body');
+      if (booksBody) { var firstPill = booksBody.querySelector('.wd-book-pill'); if (firstPill) firstPill.focus(); }
+      return;
+    }
+    if (e.key === 't') {
+      var transBody = document.getElementById('wd-translations-body');
+      if (transBody) { var firstRow = transBody.querySelector('.wd-translation-row'); if (firstRow) firstRow.focus(); }
+      return;
+    }
+    if (e.key === 'Escape') {
+      if (_wdCurrentFilter || _wdCurrentBook) {
+        _wdCurrentFilter = null;
+        _wdCurrentBook   = null;
+        _wdWriteHash();
+        _wdRenderBooks();
+        _wdRenderTranslations();
+        _wdRefreshVerses();
+      }
+    }
+  });
 }

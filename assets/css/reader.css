@@ -229,6 +229,41 @@
   padding: 0.6rem 0;
 }
 
+/* ── Cross-ref multi-passage chips (RD-G) ────────────────────────────────── */
+.reader-xref-scope-note {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin: 0 0 0.35rem;
+  padding: 0;
+}
+.reader-xref-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.reader-xref-chip {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.reader-xref-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+.reader-xref-chip--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
 .reader-sidebar__book {
   font-family: var(--font-ui);
   font-size: 0.72rem;
@@ -380,12 +415,81 @@
   cursor: default;
 }
 
+/* Version picker is wider than book/chapter — cap it so the bar doesn't overflow */
+.reader-browse-select--ver {
+  max-width: 14rem;
+}
+
 .reader-browse-hint {
   font-family: var(--font-ui);
   font-size: 0.75rem;
   color: var(--color-muted);
   margin-left: auto;
   white-space: nowrap;
+}
+
+/* ── View options popover (RD-B) ─────────────────────────────────────────── */
+.reader-view-wrap {
+  position: relative;
+  display: inline-block;
+}
+.reader-view-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-view-btn:hover {
+  background: rgba(92,61,30,.06);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+.reader-view-btn[aria-expanded="true"] {
+  background: rgba(92,61,30,.08);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+.reader-view-popover {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 200;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  min-width: 170px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.reader-view-popover[hidden] { display: none; }
+/* Items inside the popover use their existing button styles;
+   just ensure they render as full-width rows */
+.reader-view-popover > button,
+.reader-view-popover > div {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+/* Font size group inside popover: keep as a row of 4 buttons */
+.reader-view-popover > #reader-font-size-grp {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  width: 100%;
+}
+.reader-view-popover > #reader-font-size-grp .reader-font-size-btn {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
 }
 
 .reader-lookup-input {
@@ -555,6 +659,13 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
 .vs-header--hl-teal     { border-top: 3px solid rgba(30,  170, 155, 0.7); }
 .vs-header--hl-blue     { border-top: 3px solid rgba(50,  130, 230, 0.7); }
 .vs-header--hl-mint     { border-top: 3px solid rgba(80,  200, 180, 0.7); }
+
+/* RD-E: active verse highlight when modal is open */
+.reader-verse--active {
+  background: rgba(92, 61, 30, .07);
+  border-radius: 3px;
+  outline: 1px solid rgba(92, 61, 30, .07);
+}
 
 /* Bookmark indicator on verse superscript */
 .reader-verse__num--bookmarked {
@@ -738,6 +849,34 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
   border-left: 3px solid var(--color-primary);
   padding-left: 0.85rem;
   color: var(--color-heading);
+}
+
+/* Related Maps chips */
+.ri-map-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.ri-map-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .28rem .65rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: .8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+}
+
+.ri-map-chip:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  text-decoration: none;
 }
 
 /* Expanded themes */
@@ -999,6 +1138,64 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 }
 .reader-study-banner__link:hover { color: var(--color-accent); }
 
+/* ── RD-C: Resume banner ────────────────────────────────── */
+.reader-resume-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.reader-resume-link {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.reader-resume-link:hover { text-decoration: underline; }
+.reader-resume-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1rem;
+  padding: 0 0.2rem;
+  margin-left: auto;
+  line-height: 1;
+}
+
+/* ── RD-H: Empty state ──────────────────────────────────── */
+.reader-empty-state {
+  text-align: center;
+  padding: 2rem 0;
+}
+.reader-quick-starts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+.reader-qs-chip {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-family: var(--font-ui);
+  transition: background 0.15s, color 0.15s;
+}
+.reader-qs-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 /* ── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 640px) {
   /* ── Lookup bar ──────────────────────────────── */
@@ -1078,9 +1275,14 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
     padding: 0;
   }
 
-  /* Wide and Split only make sense on large screens */
+  /* Wide/Split/Sidebar are in the ⚙ View popover; hide legacy rules gracefully */
   #reader-wide-btn,
   #reader-split-btn { display: none; }
+
+  /* On mobile keep only Compare + ⚙ View inline; hide the rest */
+  #reader-interlinear-btn,
+  #reader-bookinfo-btn,
+  #reader-xref-notes-btn { display: none; }
 
   /* ── Results ─────────────────────────────────── */
   .reader-browse-hint { display: none; }
@@ -1109,6 +1311,9 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   .reader-layout--with-sidebar .reader-sidebar .reader-sidebar__grid {
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   }
+
+  /* RD-K: keyboard hints have no value on touch devices */
+  .reader-browse-hint { display: none; }
 
   /* 36px touch targets for chapter buttons */
   .reader-layout--with-sidebar .reader-sidebar .reader-sidebar__ch {
@@ -1438,36 +1643,54 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   outline-offset: 2px;
 }
 
-/* ── Compare split layout ────────────────────────────────── */
-.reader-compare-wrap {
+/* ── Compare per-verse grid (RD-L) ──────────────────────────── */
+.reader-compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
+  gap: 0;
+  margin: 0.5rem 0 1rem;
 }
-
-@media (max-width: 600px) {
-  .reader-compare-wrap { grid-template-columns: 1fr; }
-}
-
-.reader-compare-panel {
-  min-width: 0; /* prevent text overflow expanding the column */
-}
-
-/* ── Per-panel version header ────────────────────────────── */
-.reader-compare-panel__hdr {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.3rem 0.6rem;
+.reader-compare-col-hdr {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-bottom: 2px solid var(--color-primary);
-  border-radius: 6px 6px 0 0;
-  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-ui);
 }
+.reader-compare-col-hdr--a { border-right: none; border-radius: 6px 0 0 0; }
+.reader-compare-col-hdr--b { border-radius: 0 6px 0 0; }
+.reader-compare-cell {
+  padding: 0.5rem 0.75rem;
+  font-size: var(--reader-font-size, 1rem);
+  line-height: 1.72;
+  border-bottom: 1px solid var(--color-border);
+}
+.reader-compare-cell--a { border-right: 1px solid var(--color-border); }
+.reader-compare-cell--loading { color: var(--color-muted); }
+.reader-compare-unavail { color: var(--color-muted); font-style: italic; font-size: 0.85rem; }
+.reader-compare-vnum {
+  color: var(--color-muted);
+  font-size: 0.72em;
+  margin-right: 0.2em;
+  vertical-align: super;
+  font-style: normal;
+  user-select: none;
+}
+@media (max-width: 600px) {
+  .reader-compare-grid { grid-template-columns: 1fr; }
+  .reader-compare-col-hdr--a,
+  .reader-compare-cell--a { border-right: none; }
+  .reader-compare-col-hdr--b,
+  .reader-compare-cell--b { border-top: 2px solid var(--color-primary); }
+}
 
+/* ── Column header label / version selector ─────────────────── */
 .reader-compare-panel__label {
   font-size: 0.68rem;
   font-weight: 700;
@@ -1524,11 +1747,7 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   outline-offset: 2px;
 }
 
-/* ── Book Info inline panel — main styles live in bible-ui.css ───────────── */
-/* Only the [hidden] rule is here because bible-ui.css does not define it. */
-.reader-bookinfo-panel[hidden] { display: none; }
-
-/* ── Book Info toggle button ─────────────────────────────── */
+/* ── Book Info toggle button (navigates to ch=0 full-page intro) ─────────── */
 .reader-bookinfo-btn {
   padding: 0.28rem 0.7rem;
   border: 1px solid var(--color-border);
@@ -2274,6 +2493,75 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 [data-theme="dark"] .vs-header--hl-blue     { border-top-color: rgba( 80, 165, 255, 0.80); }
 [data-theme="dark"] .vs-header--hl-mint     { border-top-color: rgba(100, 230, 215, 0.80); }
 
+/* ── Quick highlight colour picker ──────────────────────────────────── */
+
+.reader-hl-picker {
+  position: fixed;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 3px 14px rgba(0,0,0,.18);
+}
+.reader-hl-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: transform .1s, border-color .1s;
+}
+.reader-hl-swatch:hover { transform: scale(1.2); }
+.reader-hl-swatch--active {
+  border-color: var(--color-text);
+  transform: scale(1.15);
+}
+.reader-hl-swatch--clear {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.reader-hl-swatch--clear:hover { background: var(--color-border); color: var(--color-text); }
+
+/* ── Bookmarks panel (in right xref panel) ───────────────────────────── */
+
+.reader-bookmark-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: .85rem;
+}
+.reader-bookmark-item {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .45rem .6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.reader-bookmark-item:last-child { border-bottom: none; }
+.reader-bookmark-star {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  font-size: .9rem;
+}
+.reader-bookmark-ref {
+  color: var(--color-primary);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  text-decoration: none;
+  flex: 1;
+}
+.reader-bookmark-ref:hover { text-decoration: underline; }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .reader-verse--hl-yellow   { background: rgba(255, 210,   0, 0.17); }
   :root:not([data-theme="light"]) .reader-verse--hl-orange   { background: rgba(255, 135,  20, 0.15); }
@@ -2308,3 +2596,143 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   :root:not([data-theme="light"]) .vs-header--hl-blue     { border-top-color: rgba( 80, 165, 255, 0.80); }
   :root:not([data-theme="light"]) .vs-header--hl-mint     { border-top-color: rgba(100, 230, 215, 0.80); }
 }
+
+/* ── D-D: Mark chapter as read ─────────────────────────────── */
+.reader-mark-row {
+  text-align: center;
+  padding: 1.5rem 0 2.5rem;
+}
+.reader-mark-btn {
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  padding: .42rem 1.1rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.reader-mark-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.reader-mark-btn--done {
+  border-color: var(--color-border);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+/* ── RD-M: Commentary Mode — verse-locked split view ─────── */
+.reader-comm-toggle {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-comm-toggle:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-comm-toggle[aria-pressed="true"] {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.3);
+}
+.reader-comm-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hide xref panel and expand to full width in comm mode */
+.reader-layout--comm-mode .reader-xref-panel { display: none !important; }
+@media (min-width: 700px) {
+  .reader-layout--comm-mode { grid-template-columns: 1fr !important; }
+  .reader-layout--comm-mode.reader-layout--with-sidebar { grid-template-columns: 160px 1fr !important; }
+}
+
+/* Flat CSS grid — all verse and commentary cells sit directly inside one grid.
+   Verse cells are in column 1 (one per row); commentary cells span multiple rows
+   via inline grid-row set by JS. Row 1 is the global picker. */
+.reader-comm-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+/* Picker spans both columns at row 1 */
+.reader-comm-picker-row {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-bottom: 2px solid var(--color-border);
+}
+.reader-comm-picker-label {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+.reader-comm-src-sel {
+  font-size: .82rem;
+  font-family: var(--font-ui);
+  padding: .18rem .4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+/* Verse cells: column 1, one per row */
+.reader-comm-cell--verse {
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  padding: .45rem .5rem .45rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.reader-comm-cell--verse .reader-verse__num {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+/* Commentary cells: column 2, spanning N verse rows per section */
+.reader-comm-cell--comm {
+  font-size: .9rem;
+  line-height: 1.7;
+  padding: .5rem 0 .5rem .85rem;
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  align-self: stretch;   /* fills the full span height */
+}
+.reader-comm-cell--comm p { margin: 0 0 .6rem; }
+.reader-comm-cell--comm p:last-child { margin-bottom: 0; }
+.reader-comm-span-note {
+  font-size: .7rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0 0 .4rem;
+}
+/* On narrow screens stack columns as blocks so the reader stays readable */
+@media (max-width: 699px) {
+  .reader-comm-grid { display: block; }
+  .reader-comm-picker-row { display: flex; }
+  .reader-comm-cell--verse,
+  .reader-comm-cell--comm { display: block; border-left: none; }
+}
+[data-theme="dark"] .reader-comm-src-sel { background: var(--color-surface); }
+:root:not([data-theme="light"]) .reader-comm-src-sel { background: var(--color-surface); }

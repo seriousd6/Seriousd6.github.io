@@ -1469,21 +1469,8 @@
 }
 .bsw-modal__compare-link[hidden] { display: none; }
 
-/* Active state: verse is in memory list */
-.bsw-modal__memory-btn--active {
-  background: var(--color-primary, #5c3d1e);
-  color: var(--color-on-primary, #fff);
-  border-color: var(--color-primary, #5c3d1e);
-}
-.bsw-modal__memory-btn--active:hover {
-  background: var(--color-primary, #5c3d1e);
-  border-color: var(--color-primary, #5c3d1e);
-  color: var(--color-on-primary, #fff);
-  opacity: 0.85;
-}
-
-/* ── Copy verse button ───────────────────────────────────── */
-.bsw-modal__copy-btn {
+/* Base style — same pill as the other action buttons */
+.bsw-modal__memory-btn {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.8rem;
   color: var(--color-muted, #7a6a55);
@@ -1497,9 +1484,25 @@
   flex-shrink: 0;
   margin-left: 0.25rem;
 }
-.bsw-modal__copy-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
-.bsw-modal__copy-btn[hidden] { display: none; }
+.bsw-modal__memory-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__memory-btn[hidden] { display: none; }
 
+/* Active state: verse is in memory list */
+.bsw-modal__memory-btn--active {
+  background: var(--color-primary, #5c3d1e);
+  color: var(--color-on-primary, #fff);
+  border-color: var(--color-primary, #5c3d1e);
+}
+.bsw-modal__memory-btn--active:hover {
+  background: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary, #5c3d1e);
+  color: var(--color-on-primary, #fff);
+  opacity: 0.85;
+}
+
+/* ── Copy as quote / reference buttons ───────────────────── */
+.bsw-modal__copy-quote-btn,
+.bsw-modal__copy-ref-btn,
 .bsw-modal__share-btn {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.8rem;
@@ -1514,8 +1517,43 @@
   flex-shrink: 0;
   margin-left: 0.25rem;
 }
+.bsw-modal__copy-quote-btn:hover,
+.bsw-modal__copy-ref-btn:hover,
 .bsw-modal__share-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__copy-quote-btn[hidden],
+.bsw-modal__copy-ref-btn[hidden],
 .bsw-modal__share-btn[hidden] { display: none; }
+
+/* VM-I: prev/next verse nav — side columns flanking the verse text */
+.bsw-modal__prev-verse,
+.bsw-modal__next-verse {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 2rem;
+  margin-top: 0.75rem;   /* aligns with verse-col top padding */
+  padding: 0.55rem 0;
+  font-size: 1.05rem;
+  line-height: 1;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  background: none;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  color: var(--color-muted, #7a6a55);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.bsw-modal__prev-verse:hover,
+.bsw-modal__next-verse:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__prev-verse[hidden],
+.bsw-modal__next-verse[hidden] { display: none; }
+
+/* VM-H: muted notice when commentary is a nearest-section match, not exact */
+.bsw-modal__comm-section-note {
+  font-size: 0.72rem;
+  color: var(--color-muted, #7a6a55);
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
 
 /* ── "Read chapter" link in search result ref row ────────── */
 .bsw-search-result__read {
@@ -1540,8 +1578,8 @@
 
 /* ── Modal verse panel (full-width; cross-refs now inline footnotes) ─────── */
 .bsw-modal__split {
-  display: flex;          /* needed so flex: 1 children can fill height on iOS */
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;    /* prev-col | verse-col | next-col */
   flex: 1;
   overflow: hidden;
   min-height: 0;
@@ -3125,70 +3163,139 @@ kbd {
   margin-bottom: 0.4rem;
 }
 
-/* ── Background preset pills ─────────────────── */
-.bsw-share-preset-row {
+/* ── Background gallery ──────────────────────── */
+.bsw-share-bg-gallery {
   display: flex;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0.4rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  scrollbar-width: thin;
+  align-items: flex-start;
+}
+.bsw-share-bg-gallery::-webkit-scrollbar { height: 4px; }
+.bsw-share-bg-gallery::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+
+.bsw-share-gallery-sep {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted);
+  align-self: center;
+  flex-shrink: 0;
+  padding: 0 0.25rem;
 }
 
-.bsw-share-preset {
-  display: inline-flex;
+.bsw-share-bg-card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
   cursor: pointer;
-  padding: 0.28rem 0.65rem 0.28rem 0.4rem;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  font-family: var(--font-ui, system-ui, sans-serif);
-  font-size: 0.82rem;
+  flex-shrink: 0;
   user-select: none;
-  transition: border-color 0.12s, color 0.12s, background 0.12s;
-  white-space: nowrap;
 }
-.bsw-share-preset input[type="radio"] { cursor: pointer; accent-color: var(--color-primary); }
-.bsw-share-preset:has(input:checked) {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+.bsw-share-bg-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0; height: 0;
 }
-.bsw-share-preset:hover { border-color: var(--color-primary); }
 
-.bsw-share-preset__dot {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+.bsw-share-bg-thumb {
+  width: 96px;
+  height: 54px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+  display: flex;
   flex-shrink: 0;
 }
-
-/* ── Font chips ──────────────────────────────── */
-.bsw-share-font-row {
-  display: flex;
-  gap: 0.4rem;
-  margin-bottom: 0.9rem;
-  flex-wrap: wrap;
+.bsw-share-bg-card:hover .bsw-share-bg-thumb {
+  border-color: var(--color-muted);
+}
+.bsw-share-bg-card:has(input:checked) .bsw-share-bg-thumb {
+  border-color: var(--color-primary);
+  transform: scale(1.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.22);
 }
 
-.bsw-share-font-chip {
-  display: inline-flex;
+.bsw-share-bg-label {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 0.25rem;
+  max-width: 96px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bsw-share-bg-card:has(input:checked) .bsw-share-bg-label {
+  color: var(--color-primary);
+}
+
+/* ── Font gallery ────────────────────────────── */
+.bsw-share-font-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0.4rem 0 0.5rem;
+  margin-bottom: 0.9rem;
+  scrollbar-width: thin;
+  align-items: flex-start;
+}
+.bsw-share-font-gallery::-webkit-scrollbar { height: 4px; }
+.bsw-share-font-gallery::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+
+.bsw-share-font-card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
-  padding: 0.28rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  font-size: 0.92rem;
+  flex-shrink: 0;
   user-select: none;
-  transition: border-color 0.12s, color 0.12s, background 0.12s;
 }
-.bsw-share-font-chip input[type="radio"] { cursor: pointer; accent-color: var(--color-primary); }
-.bsw-share-font-chip:has(input:checked) {
+.bsw-share-font-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0; height: 0;
+}
+
+.bsw-share-font-thumb {
+  width: 96px;
+  height: 54px;
+  border-radius: 4px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-color: var(--color-border);
+  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.bsw-share-font-card:hover .bsw-share-font-thumb {
+  border-color: var(--color-muted);
+}
+.bsw-share-font-card:has(input:checked) .bsw-share-font-thumb {
   border-color: var(--color-primary);
-  color: var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  transform: scale(1.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.bsw-share-font-chip:hover { border-color: var(--color-primary); }
+
+.bsw-share-font-label {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+.bsw-share-font-card:has(input:checked) .bsw-share-font-label {
+  color: var(--color-primary);
+}
 
 /* ── Canvas + actions ────────────────────────── */
 .bsw-share-canvas {
@@ -3464,12 +3571,13 @@ kbd {
     height: 0;
   }
 
-  /* Row 2: action buttons — compact, wrap if many are visible at once */
+  /* Row 2: all action buttons */
   .bsw-modal__read-ch,
   .bsw-modal__verse-study-link,
   .bsw-modal__compare-link,
   .bsw-modal__memory-btn,
-  .bsw-modal__copy-btn,
+  .bsw-modal__copy-quote-btn,
+  .bsw-modal__copy-ref-btn,
   .bsw-modal__share-btn {
     order: 4;
   }
@@ -3478,7 +3586,8 @@ kbd {
   .bsw-modal__verse-study-link:not([hidden]),
   .bsw-modal__compare-link:not([hidden]),
   .bsw-modal__memory-btn:not([hidden]),
-  .bsw-modal__copy-btn:not([hidden]),
+  .bsw-modal__copy-quote-btn:not([hidden]),
+  .bsw-modal__copy-ref-btn:not([hidden]),
   .bsw-modal__share-btn:not([hidden]) {
     display: inline-flex;
     align-items: center;
@@ -3486,6 +3595,15 @@ kbd {
     padding: 0.3rem 0.6rem;
     min-height: 36px;
     white-space: nowrap;
+  }
+
+  /* Prev/next live in the split row (not the header) — keep their side-column style on mobile */
+  .bsw-modal__prev-verse:not([hidden]),
+  .bsw-modal__next-verse:not([hidden]) {
+    width: 1.75rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
   }
 
   .bsw-modal__body,
@@ -3522,9 +3640,11 @@ kbd {
     align-items: center;
   }
 
-  /* Copy / Share buttons: taller */
-  .bsw-modal__copy-btn,
-  .bsw-modal__share-btn {
+  /* Copy / Share / Memory buttons: taller tap targets on mobile */
+  .bsw-modal__copy-quote-btn,
+  .bsw-modal__copy-ref-btn,
+  .bsw-modal__share-btn,
+  .bsw-modal__memory-btn {
     padding: 0.4rem 0.75rem;
     min-height: 36px;
     display: inline-flex;
@@ -3580,4 +3700,130 @@ kbd {
     flex-direction: column;
     justify-content: center;
   }
+
+  /* VM-M1: prevent iOS Safari auto-zoom on focus (font-size must be >= 16px) */
+  .bsw-note-textarea,
+  .bsw-tag-input,
+  .bsw-modal__comm-select {
+    font-size: 1rem;
+  }
+  .bsw-tag-input { width: auto; min-width: 80px; flex: 1; }
+
+  /* VM-M3: word study table — 2-row card layout per word on narrow screens */
+  .bsw-ws-table  { display: block; }
+  .bsw-ws-row    { display: grid; grid-template-columns: 1fr 1fr;
+                   gap: 0.1rem 0.5rem; padding: 0.5rem 0;
+                   border-bottom: 1px solid var(--color-border); }
+  .bsw-ws-row > div { border-bottom: none; padding: 0; }
+  .bsw-ws-lemma   { grid-column: 1; grid-row: 1; font-size: 1.15rem; }
+  .bsw-ws-strongs { grid-column: 2; grid-row: 1; text-align: right; }
+  .bsw-ws-eng     { grid-column: 1; grid-row: 2; }
+  .bsw-ws-gloss   { grid-column: 2; grid-row: 2; text-align: right;
+                    font-size: 0.8rem; color: var(--color-muted); }
+  .bsw-ws-translit { display: none; }
+
+  /* VM-M4: cross-ref footnote sups — expand tap zone via pseudo-element */
+  .bsw-modal__xref-note {
+    min-width: 20px;
+    height: 18px;
+    font-size: 0.65rem;
+    padding: 0 4px;
+    position: relative;
+  }
+  .bsw-modal__xref-note::after {
+    content: '';
+    position: absolute;
+    inset: -12px -8px;
+  }
+
+  /* VM-M5: share overlay close button — 44px minimum tap target */
+  .bsw-share-close {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: -8px -8px -8px 0;
+  }
+}
+
+/* ── Map place-name hover tooltip (.map-place links + #bsw-place-tip) ──────── */
+
+.map-place {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-primary, #4a7fcb);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.map-place:hover {
+  color: var(--color-primary, #4a7fcb);
+  text-decoration-style: solid;
+}
+
+#bsw-place-tip {
+  position: absolute;
+  z-index: 9400;   /* above modals (9100) */
+  width: 260px;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  padding: .75rem .9rem .65rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,.18);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .15s, transform .15s;
+}
+
+#bsw-place-tip.bsw-place-tip--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.bsw-place-tip__header {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  margin-bottom: .3rem;
+}
+
+.bsw-place-tip__pin {
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+
+.bsw-place-tip__name {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-heading, #1a1a1a);
+  line-height: 1.2;
+}
+
+.bsw-place-tip__desc {
+  font-size: .78rem;
+  line-height: 1.55;
+  color: var(--color-text, #333);
+  margin: 0 0 .55rem;
+}
+
+.bsw-place-tip__link {
+  display: inline-block;
+  font-size: .74rem;
+  font-weight: 600;
+  color: var(--color-primary, #4a7fcb);
+  text-decoration: none;
+  border: 1px solid var(--color-primary, #4a7fcb);
+  border-radius: 5px;
+  padding: .18rem .55rem;
+  transition: background .12s, color .12s;
+}
+
+.bsw-place-tip__link:hover {
+  background: var(--color-primary, #4a7fcb);
+  color: #fff;
 }

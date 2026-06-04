@@ -31,12 +31,18 @@
   function _r(p) { return _root + p; }
 
   /* ── Module-level state shared between sidebar and reader ──── */
-  // BOOK_STUDIES: maps book IDs (e.g. "REV") to { href, label } objects.
-  // Built by loadTopics() after topics.json loads; read by initReaderStudyLink()
-  // to show the study guide banner when the reader navigates to a covered book.
+  // INTENT: BOOK_STUDIES is populated asynchronously inside loadTopics() after
+  //   data/topics.json loads. Code that reads it must run inside the .then()
+  //   callback or use _readerUpdate as a deferred callback. Do NOT read
+  //   BOOK_STUDIES synchronously at module init time — it will be empty.
+  //   _readerUpdate is set by initReaderStudyLink() so the reader banner can
+  //   appear even if the reader already has a book selected before topics load.
+  // CHANGE? If topics.json gains new fields (e.g. a "section" key), update the
+  //   loop in loadTopics(), the BOOK_STUDIES entry shape, window._BOOK_STUDIES
+  //   exposure, and initReaderStudyLink's read of BOOK_STUDIES[bookId].
+  // VERIFY: Open the reader on Romans; the "Study guide available" banner should
+  //   appear above results without requiring a page reload.
   var BOOK_STUDIES   = {};
-  // _readerUpdate: callback set by initReaderStudyLink(); invoked after topics load
-  // so the banner can appear if the reader already has a book selected.
   var _readerUpdate  = null;
 
   /* ── Nav data ─────────────────────────────────────────────── */
@@ -47,32 +53,42 @@
   var NAV = {
     tools: [
       { label: '📖 The Holy Bible', href: _r('read/') },
-      { label: '🔍 Omni-search', href: _r('search/') }
+      { label: '📜 Apocrypha',      href: _r('apocrypha/') },
+      { label: '🔍 Explore',        href: _r('search/') },
+      { label: '📚 Studies',        href: _r('studies/') },
+      { label: '✝ Discipline',      href: _r('discipline/') }
     ],
     groups: [
+      {
+        id: 'history',
+        label: 'History',
+        icon: '🕰',
+        children: [
+          { label: '📜 Biblical Timeline',  href: _r('history/?tab=timeline') },
+          { label: '⛪ Church History',     href: _r('history/?tab=church') },
+          { label: '🗺 Maps',               href: _r('history/?tab=maps') },
+          { label: '🎬 Animated Map',       href: _r('history/?tab=timelapse') }
+        ]
+      },
+      {
+        id: 'explore',
+        label: 'Explore',
+        icon: '🔍',
+        children: [
+          { label: '🔍 Search',        href: _r('search/') },
+          { label: '📑 Topics',        href: _r('search/?tab=topics') },
+          { label: '📖 Study Guides',  href: _r('search/?tab=guides') },
+          { label: '📘 Dictionary',    href: _r('search/?tab=dictionary') },
+          { label: '☁ Word Cloud',     href: _r('search/?tab=wordcloud') }
+        ]
+      },
       {
         id: 'discipline',
         label: 'Discipline',
         icon: '✝',
         children: [
-          { label: '📅 Reading Plans',  href: _r('discipline/?tab=plans') },
-          { label: '🌅 Devotionals',    href: _r('discipline/?tab=devotionals') },
-          { label: '⭐ Memory',          href: _r('discipline/?tab=memory') },
-          { label: '✍️ Journal',         href: _r('discipline/?tab=journal') },
-          { label: '⛪ Worship Notes',   href: _r('discipline/?tab=worship') }
-        ]
-      },
-      {
-        id: 'reference',
-        label: 'Reference',
-        icon: '📘',
-        children: [
-          { label: '📖 Dictionary',         href: _r('dictionary/') },
-          { label: '🕰 Biblical Timeline',  href: _r('timeline/') },
-          { label: '🗺 Maps',               href: _r('maps/') },
-          { label: '☁ Word Cloud',          href: _r('wordcloud/') },
-          { label: '📊 Reading Progress',   href: _r('progress/') },
-          { label: '📝 My Notes',           href: _r('notes/') }
+          { label: '✝ Discipline Hub',    href: _r('discipline/') },
+          { label: '📅 Discipline History', href: _r('discipline/?tab=history') }
         ]
       },
       {
@@ -81,7 +97,7 @@
         icon: '📚',
         children: [
           { label: '📋 Library',                href: _r('library/') },
-          { label: '⛪ Church History Timeline', href: _r('church-history/') }
+          { label: '📚 Reading History',        href: _r('library/progress/') }
         ],
         subgroups: [
           { id: 'book-overviews',   label: 'Bible Book Overviews', items: [] },
@@ -201,6 +217,7 @@
   //   Desktop topic page      → overlays content (sidebar-overlay + sb-open toggle)
   //   Mobile (<1024 px)       → always overlay, toggled by hamburger button
   function buildSidebar() {
+    if (new URLSearchParams(location.search).get('minimal')) return;
 
     var sidebar = mk('aside', 'site-sidebar');
     sidebar.id  = 'site-sidebar';
@@ -472,7 +489,12 @@
           if (t.book) BOOK_STUDIES[t.book] = { href: href, label: t.label };
         });
 
-        /* Expand the subgroup (and its parent group) if active page is inside */
+        /* INTENT: Walk the freshly-appended topic links to find the active page,
+           then expand that link's subgroup and its parent group. Must run after
+           all appendChild calls complete — this is why it's at the end of the
+           .then() callback rather than in the sidebar-build phase.
+           VERIFY: Navigate directly to /topics/justification/; the Library →
+           Topical Articles subgroup should be pre-expanded with that link highlighted. */
         [bookEl, studyEl, topicalEl].forEach(function (itemsEl) {
           if (!itemsEl || !itemsEl.querySelector('[aria-current="page"]')) return;
 

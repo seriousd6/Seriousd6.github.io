@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <style>
+    .prog-back-link { display:inline-block; font-family:var(--font-ui); font-size:.8rem; color:var(--color-muted); text-decoration:none; padding:.4rem 0 .2rem; margin-bottom:.5rem; }
+    .prog-back-link:hover { color:var(--color-primary); }
     .prog-page { max-width: 860px; margin: 0 auto; padding-bottom: 3rem; }
     .prog-page h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
     .prog-subtitle { color: var(--color-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
@@ -64,6 +66,7 @@
 <body>
   <main>
     <div class="container prog-page">
+      <a class="prog-back-link" id="prog-back-link" href="../discipline/?tab=progress" hidden>← Disciplines</a>
       <h1>📊 Reading Progress</h1>
       <p class="prog-subtitle">Chapters are marked read automatically when you open them in the Bible reader. Click any chapter number to read it now.</p>
 
@@ -87,9 +90,16 @@
   <script src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/app.js"></script>
   <script>
+  if (new URLSearchParams(location.search).get('minimal')) {
+    var bl = document.getElementById('prog-back-link');
+    if (bl) bl.removeAttribute('hidden');
+  }
+  </script>
+  <script>
   (function () {
     'use strict';
 
+    /* bsw_chapter_read is the canonical key for read/unread chapter state */
     var READ_KEY = 'bsw_chapter_read';
     var READ_URL = '../read/';
 
@@ -150,7 +160,8 @@
             var a    = document.createElement('a');
             var done = !!bookRead[String(ch)];
             a.className = 'prog-ch' + (done ? ' prog-ch--read' : '');
-            a.href      = READ_URL + '?ref=' + encodeURIComponent(book.name + ' ' + ch);
+            a.href      = READ_URL + '?ref=' + encodeURIComponent(book.name + ' ' + ch) + '&stripped=1';
+            a.target    = '_top';
             a.title     = book.name + ' ' + ch + (done ? (' — read ' + bookRead[String(ch)]) : ' — not yet read');
             a.textContent = ch;
             chGrid.appendChild(a);

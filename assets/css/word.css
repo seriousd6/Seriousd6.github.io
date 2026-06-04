@@ -42,8 +42,10 @@
 
 #wd-header { margin-bottom: 1rem; }
 
-.wd-loading { color: var(--color-muted); font-style: italic; }
-.wd-error   { color: #c0392b; font-size: 0.9rem; }
+.wd-loading  { color: var(--color-muted); font-style: italic; }
+.wd-error    { color: #c0392b; font-size: 0.9rem; }
+/* WD-A: loading progress */
+.wd-progress { font-size: .82rem; color: var(--color-muted); margin-bottom: .5rem; }
 
 .wd-header-inner {
   display: flex;
@@ -175,12 +177,12 @@
   overflow: hidden;
 }
 
-/* Books: compact fixed area at top of sidebar */
+/* Books: compact fixed area at top of sidebar — WD-F: viewport-relative cap */
 #wd-books {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  max-height: 160px;
+  max-height: clamp(160px, 28vh, 260px);
   overflow: hidden;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--color-border);
@@ -558,6 +560,169 @@
   text-transform: uppercase;
   color: var(--color-primary);
   margin-right: 0.3em;
+}
+
+/* ── WD-G: By genre breakdown ────────────────────────────────────────────── */
+.wd-genre-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .6rem;
+  width: 100%;
+}
+.wd-genre-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .15rem .55rem;
+  background: var(--color-bg-alt, var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  font-size: .72rem;
+  color: var(--color-muted);
+  text-transform: capitalize;
+}
+.wd-genre-count {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ── WD-H: Strong's second lexical source — distinguished left border ────── */
+.wd-lexicon--strongs {
+  border-left-color: var(--color-border);
+  background: var(--color-bg-alt, #f8f8f8);
+  margin-top: 0.5rem;
+}
+
+/* ── WD-C: Morph code table ──────────────────────────────────────────────── */
+#wd-morph-table-wrap {
+  margin-bottom: 1.25rem;
+}
+.wd-morph-table {
+  width: 100%;
+  font-size: .82rem;
+  border-collapse: collapse;
+}
+.wd-morph-table td,
+.wd-morph-table th {
+  padding: .2rem .5rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+.wd-morph-table th {
+  font-weight: 600;
+  color: var(--color-muted);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.wd-morph-code { color: var(--color-muted); font-family: monospace; font-size: .78rem; }
+.wd-morph-n    { text-align: right; color: var(--color-muted); font-variant-numeric: tabular-nums; }
+
+/* ── WD-L: Related Words panel ───────────────────────────────────────────── */
+.wd-related-wrap {
+  margin-bottom: 1.25rem;
+}
+.wd-related-heading {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0 0 .5rem;
+}
+.wd-related-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.wd-related-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .3rem;
+  padding: .25rem .6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface, #faf8f5);
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: .82rem;
+  line-height: 1.4;
+  transition: border-color .15s, background .15s;
+}
+.wd-related-pill:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-faint, rgba(92,61,30,.06));
+}
+.wd-related-id {
+  font-size: .7rem;
+  color: var(--color-muted);
+  font-family: monospace;
+  flex-shrink: 0;
+}
+.wd-related-lemma {
+  font-weight: 500;
+}
+.wd-related-gloss {
+  color: var(--color-muted);
+  font-size: .76rem;
+  font-style: italic;
+}
+[data-theme="dark"] .wd-related-pill {
+  background: var(--color-surface, #1e1a14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .wd-related-pill {
+    background: var(--color-surface, #1e1a14);
+  }
+}
+
+/* ── WD-E: "Read in context" link in book headings ───────────────────────── */
+.wd-book-reader-link {
+  font-size: .72rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-left: .75rem;
+  font-weight: 400;
+  opacity: .75;
+}
+.wd-book-reader-link:hover { opacity: 1; text-decoration: underline; }
+
+/* ── WD-I: focused verse card (keyboard nav) ────────────────────────────── */
+.wd-verse-card--focused {
+  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  border-radius: 3px;
+  outline: none;
+}
+
+/* ── WD-D/WD-J: "Clear all" button in filter bar ────────────────────────── */
+.wd-filter-clear-all {
+  margin-left: auto;
+  font-size: .75rem;
+  padding: .1rem .5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: pointer;
+  font-family: inherit;
+}
+.wd-filter-clear-all:hover { color: var(--color-text); border-color: var(--color-primary); }
+
+/* ── WD-K: translation bar polish ───────────────────────────────────────── */
+.wd-translation-bar-wrap {
+  height: 12px;
+  border-radius: 6px;
+}
+.wd-translation-bar { border-radius: 6px; }
+.wd-trans-label {
+  font-size: .72rem;
+  color: var(--color-muted);
+  margin: 0 0 .35rem;
+}
+.wd-trans-pct {
+  font-size: .68rem;
+  color: var(--color-muted);
 }
 
 /* ── Dark-mode button overrides ─────────────────────────────────────────── */

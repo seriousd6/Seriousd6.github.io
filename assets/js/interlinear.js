@@ -3,20 +3,12 @@
 
 import {
   getVersion, loadBook, loadInterlinear, loadStrongs, loadLexicon,
-  metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef, _resolve
+  metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef
 } from './core.js';
-import { wireRefLinks } from './wire.js';
 
 export var INTERLINEAR_KEY = 'bsw_interlinear';
 var _riPopoverEl  = null;
 var _riActiveTile = null;
-
-var _TL_ERA_LABELS = {
-  creation: 'Creation', patriarchs: 'Patriarchs', moses: 'Moses & Exodus',
-  conquest: 'Conquest & Judges', monarchy: 'The Monarchy', exile: 'Exile',
-  restoration: 'Restoration', intertestamental: 'Intertestamental',
-  gospels: 'The Gospels', church: 'The Church', consummation: 'Consummation'
-};
 
 export function getInterlinearEnabled() {
   return localStorage.getItem(INTERLINEAR_KEY) === '1';
@@ -59,9 +51,16 @@ export function initInterlinearToggle() {
 }
 
 // ── initBookInfoToggle ────────────────────────────────────────────────────
-var _bookInfoOpen  = false;
-var _bookInfoCache = {};    // bookId → rich intro JSON from data/books/introductions/
-
+// INTENT: The Book Info button navigates to ch=0 (the canonical full-page intro)
+//   rather than maintaining a duplicate inline panel renderer. It reads bookName
+//   from window._readerNavState, which is written by reader.js on every passage
+//   load. If the reader hasn't loaded a passage yet (blank load), state.bookName
+//   is undefined and the button does nothing — this is expected behaviour.
+// CHANGE? If reader.js changes the shape of _readerNavState (e.g. renames
+//   bookName), update the state.bookName read in the click handler below.
+// VERIFY: Open any chapter; click Book Info; the reader should navigate to that
+//   book's ch=0 intro page. Then navigate to a different book and click again —
+//   it should show the new book's intro.
 export function initBookInfoToggle() {
   var browseBar = document.querySelector('.reader-browse-bar');
   if (!browseBar || document.getElementById('reader-bookinfo-btn')) return;
@@ -69,155 +68,78 @@ export function initBookInfoToggle() {
   var btn = document.createElement('button');
   btn.id        = 'reader-bookinfo-btn';
   btn.className = 'reader-bookinfo-btn';
-  btn.title     = 'Book information';
-  btn.setAttribute('aria-pressed', 'false');
+  btn.title     = 'Book introduction (opens full-page intro)';
   btn.textContent = 'Book Info';
 
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
 
   btn.addEventListener('click', function () {
-    _bookInfoOpen = !_bookInfoOpen;
-    btn.classList.toggle('reader-bookinfo-btn--on', _bookInfoOpen);
-    btn.setAttribute('aria-pressed', _bookInfoOpen ? 'true' : 'false');
-    _refreshBookInfoPanel(_bookInfoOpen);
+    var state = window._readerNavState;
+    if (!state || !state.bookName) return;
+    var inp = document.getElementById('reader-lookup-input');
+    if (inp) inp.value = state.bookName + ' 0';
+    if (window._readerLookupFn) window._readerLookupFn();
   });
 }
 
-function _refreshBookInfoPanel(open) {
-  var panel = document.getElementById('reader-bookinfo-panel');
-  if (!panel) {
-    // Panel missing from HTML — create and insert it before the results area.
-    panel = document.createElement('div');
-    panel.id = 'reader-bookinfo-panel';
-    panel.className = 'reader-bookinfo-panel';
-    var results = document.getElementById('reader-results');
-    if (!results) return;
-    results.parentNode.insertBefore(panel, results);
-  }
-  if (!open) { panel.hidden = true; return; }
-  panel.hidden = false;
-  var state = window._readerNavState;
-  if (!state || !state.bookId) return;
-  _renderBookInfoContent(state.bookId, panel);
+
+// ── initViewToggle — ⚙ View popover (RD-B) ───────────────────────────────
+export function initViewToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-view-btn')) return;
+
+  var wrap = document.createElement('div');
+  wrap.className = 'reader-view-wrap';
+
+  var btn = document.createElement('button');
+  btn.id        = 'reader-view-btn';
+  btn.className = 'reader-view-btn';
+  btn.title     = 'View options';
+  btn.setAttribute('aria-haspopup', 'true');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.textContent = '⚙ View';
+
+  var popover = document.createElement('div');
+  popover.id        = 'reader-view-popover';
+  popover.className = 'reader-view-popover';
+  popover.setAttribute('hidden', '');
+
+  wrap.appendChild(btn);
+  wrap.appendChild(popover);
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(wrap, hint || null);
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = !popover.hasAttribute('hidden');
+    if (open) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      popover.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!wrap.contains(e.target)) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !popover.hasAttribute('hidden')) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
-function _renderBookInfoContent(bookId, panel) {
-  var bk = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
-  if (!bk) { panel.innerHTML = '<p class="reader-hint">No information available.</p>'; return; }
-
-  // Show skeleton from metaBooks while the rich intro JSON loads.
-  panel.innerHTML = '<p class="reader-hint">Loading book information…</p>';
-
-  if (_bookInfoCache[bookId]) {
-    _renderIntroHtml(panel, bk, _bookInfoCache[bookId]);
-    return;
-  }
-
-  var url = _resolve('../../data/books/introductions/' + bookId + '.json');
-  fetch(url)
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (data) {
-      _bookInfoCache[bookId] = data || {};
-      _renderIntroHtml(panel, bk, _bookInfoCache[bookId]);
-    })
-    .catch(function () {
-      // Fall back to the basic metaBooks fields on fetch failure.
-      _renderIntroHtml(panel, bk, {});
-    });
-}
-
-function _renderIntroHtml(panel, bk, intro) {
-  var author   = intro.author   || '';
-  var date     = intro.date     || '';
-  var purpose  = intro.purpose  || intro.setting || '';
-  var themes   = Array.isArray(intro.themes) ? intro.themes : [];
-  var keyVerse = intro.key_verse || (intro.key_verses && intro.key_verses[0] && intro.key_verses[0].ref) || '';
-  var kvNote   = intro.key_verses && intro.key_verses[0] ? intro.key_verses[0].note || '' : '';
-
-  // Meta row: join non-empty fields with a mid-dot separator
-  var metaParts = [];
-  if (bk.testament) metaParts.push(escHtml(bk.testament));
-  if (author)       metaParts.push(escHtml(author));
-  if (date)         metaParts.push(escHtml(date));
-  var meta = metaParts.join('<span class="reader-bookinfo-meta-sep"> · </span>');
-
-  var kvHtml = '';
-  if (keyVerse) {
-    kvHtml = '<div class="reader-bookinfo-keyverse">' +
-      '<span class="reader-bookinfo-kv-label">Key Verse</span>' +
-      '<a class="reader-bookinfo-kv-ref ref" data-ref="' + escHtml(keyVerse) + '">' + escHtml(keyVerse) + '</a>' +
-      (kvNote ? '<span class="reader-bookinfo-kv-note">' + escHtml(kvNote) + '</span>' : '') +
-    '</div>';
-  }
-
-  var themesHtml = '';
-  if (themes.length) {
-    themesHtml = '<div class="reader-bookinfo-themes">' +
-      themes.map(function (t) {
-        return '<span class="reader-bookinfo-theme">' + escHtml(t) + '</span>';
-      }).join('') +
-    '</div>';
-  }
-
-  // Compact 3-item timeline: most-recent before event, current book, first after event
-  var tlHtml = '';
-  var tl = intro.timeline;
-  if (tl) {
-    var beforeItem = tl.before && tl.before.length ? tl.before[tl.before.length - 1] : null;
-    var afterItem  = tl.after  && tl.after.length  ? tl.after[0]                      : null;
-    var eraLabel   = tl.period ? (_TL_ERA_LABELS[tl.period] || tl.period) : '';
-
-    var _tlItem = function (item) {
-      if (!item) return '<div class="ri-tl-item ri-tl-item--empty"><div class="ri-tl-dot ri-tl-dot--empty"></div></div>';
-      var type  = item.type  || 'event';
-      var label = item.label || '';
-      var year  = item.year  || '';
-      var ref   = item.ref   || '';
-      // Add data-ref so the tooltip/modal system can wire hover previews.
-      var lbl = ref
-        ? '<a class="ref ri-tl-label ri-tl-label--' + escHtml(type) + '" data-ref="' + escHtml(ref) + '">' + escHtml(label) + '</a>'
-        : '<span class="ri-tl-label ri-tl-label--' + escHtml(type) + '">' + escHtml(label) + '</span>';
-      return '<div class="ri-tl-item">' +
-        '<div class="ri-tl-dot ri-tl-dot--' + escHtml(type) + '"></div>' +
-        lbl +
-        (year ? '<div class="ri-tl-year">' + escHtml(year) + '</div>' : '') +
-      '</div>';
-    };
-
-    tlHtml =
-      '<div class="reader-bookinfo-timeline">' +
-      (eraLabel
-        ? '<div class="ri-tl-arc-lbl" style="margin-bottom:.45rem">Period: <strong>' + escHtml(eraLabel) + '</strong></div>'
-        : '') +
-      '<div class="ri-tl-row ri-tl-row--compact">' +
-        _tlItem(beforeItem) +
-        '<div class="ri-tl-item">' +
-          '<div class="ri-tl-dot ri-tl-dot--current"></div>' +
-          '<div class="ri-tl-label ri-tl-label--current">' + escHtml(bk.name) + '</div>' +
-          (tl.date ? '<div class="ri-tl-year ri-tl-year--current">' + escHtml(tl.date) + '</div>' : '') +
-        '</div>' +
-        _tlItem(afterItem) +
-      '</div>' +
-      '</div>';
-  }
-
-  panel.innerHTML =
-    '<div class="reader-bookinfo-inner">' +
-      '<div class="reader-bookinfo-header">' +
-        '<h3 class="reader-bookinfo-title">' + escHtml(intro.title || bk.name) + '</h3>' +
-      '</div>' +
-      (meta ? '<div class="reader-bookinfo-meta">' + meta + '</div>' : '') +
-      kvHtml +
-      (purpose ? '<p class="reader-bookinfo-purpose">' + escHtml(purpose) + '</p>' : '') +
-      themesHtml +
-      tlHtml +
-    '</div>';
-
-  // Wire all [data-ref] elements in the panel (key verse, timeline items) for
-  // hover tooltips and modal. Panel is dynamically created so wireRefLinks is
-  // not called automatically — we must call it explicitly here.
-  wireRefLinks(panel);
+function _getViewPopover() {
+  return document.getElementById('reader-view-popover');
 }
 
 // ── initSplitToggle ───────────────────────────────────────────────────────
@@ -233,11 +155,16 @@ export function initSplitToggle() {
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.title = 'Toggle 50/50 text / panel split';
   btn.textContent = '⇔ Split';
-  var interlinearBtn = document.getElementById('reader-interlinear-btn');
-  var compareBtn     = document.getElementById('reader-compare-btn');
-  var parallelsBtn   = document.getElementById('reader-parallels-btn');
-  var hint           = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, interlinearBtn || compareBtn || parallelsBtn || hint || null);
+  var popover = _getViewPopover();
+  if (popover) {
+    popover.appendChild(btn);
+  } else {
+    var interlinearBtn = document.getElementById('reader-interlinear-btn');
+    var compareBtn     = document.getElementById('reader-compare-btn');
+    var parallelsBtn   = document.getElementById('reader-parallels-btn');
+    var hint           = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, interlinearBtn || compareBtn || parallelsBtn || hint || null);
+  }
   btn.addEventListener('click', function () {
     on = !on;
     if (on) {
@@ -283,8 +210,13 @@ export function initFontSizeControls() {
     });
     grp.appendChild(b);
   });
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(grp, hint || null);
+  var popover2 = _getViewPopover();
+  if (popover2) {
+    popover2.appendChild(grp);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(grp, hint || null);
+  }
 }
 
 // ── initWideToggle ────────────────────────────────────────────────────────
@@ -300,8 +232,13 @@ export function initWideToggle() {
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.title     = 'Wide layout';
   btn.textContent = '⇿ Wide';
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  var popoverW = _getViewPopover();
+  if (popoverW) {
+    popoverW.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
   btn.addEventListener('click', function () {
     on = !on;
     if (on) localStorage.setItem(WIDE_KEY, '1');
@@ -328,8 +265,13 @@ export function initSidebarToggle() {
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.title     = 'Chapter list sidebar';
   btn.textContent = '☰ Chapters';
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  var popoverS = _getViewPopover();
+  if (popoverS) {
+    popoverS.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
   btn.addEventListener('click', function () {
     on = !on;
     if (on) {

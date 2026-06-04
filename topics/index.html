@@ -12,6 +12,7 @@
 <body>
   <main>
     <div class="container">
+      <a class="hist-back-link" href="../search/?tab=topics" id="explore-back-link" target="_top" hidden>← Explore</a>
       <h1>Studies</h1>
       <p>Browse by Bible book or topical study.</p>
 
@@ -79,5 +80,13 @@
 
     <script src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/app.js"></script>
+    <script>
+      if (new URLSearchParams(location.search).get('minimal')) {
+        var bl = document.getElementById('explore-back-link');
+        if (bl) bl.removeAttribute('hidden');
+        var ft = document.querySelector('.site-footer');
+        if (ft) ft.hidden = true;
+      }
+    </script>
 </body>
 </html>

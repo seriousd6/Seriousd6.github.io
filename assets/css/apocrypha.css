@@ -1,0 +1,265 @@
+/* ============================================================
+   Apocrypha Reader Page
+   ============================================================ */
+
+/* ── Layout ──────────────────────────────────────────────── */
+.apoc-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 700px) {
+  .apoc-layout {
+    grid-template-columns: 160px 1fr;
+    gap: 1.25rem;
+  }
+  .apoc-sidebar { grid-column: 1; grid-row: 1; }
+  .apoc-main    { grid-column: 2; grid-row: 1; }
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.apoc-sidebar {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: .25rem;
+}
+
+.apoc-sidebar-book {
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin: 0 0 .5rem;
+  padding: 0 .25rem;
+}
+
+.apoc-ch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.apoc-ch-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.apoc-ch-btn:hover   { background: var(--color-hover); }
+.apoc-ch-btn--active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
+/* ── Controls ────────────────────────────────────────────── */
+.apoc-controls {
+  margin-bottom: 1rem;
+}
+
+.apoc-controls-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .6rem;
+  flex-wrap: wrap;
+}
+
+.apoc-controls-label {
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  flex-shrink: 0;
+}
+
+/* ── Canon chips ─────────────────────────────────────────── */
+.apoc-canon-bar {
+  display: flex;
+  gap: .35rem;
+  flex-wrap: wrap;
+}
+
+.apoc-canon-chip {
+  padding: .2rem .65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background .12s, color .12s, border-color .12s;
+}
+
+.apoc-canon-chip:hover {
+  background: var(--color-hover);
+}
+
+.apoc-canon-chip--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ── Browse bar ──────────────────────────────────────────── */
+.apoc-browse-bar {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.apoc-select {
+  padding: .3rem .5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  cursor: pointer;
+}
+
+.apoc-select--book { flex: 1 1 10rem; min-width: 8rem; max-width: 20rem; }
+.apoc-select--ch   { flex: 0 0 8rem; }
+.apoc-select--ver  { flex: 0 0 14rem; }
+
+/* ── Results ─────────────────────────────────────────────── */
+.apoc-results {
+  line-height: 1.75;
+}
+
+/* ── Chapter header ──────────────────────────────────────── */
+.apoc-chapter-header {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.apoc-chapter-title {
+  font-family: var(--font-ui);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.apoc-canon-badge {
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: .1rem .45rem;
+  letter-spacing: .03em;
+}
+
+/* ── Verses ──────────────────────────────────────────────── */
+.apoc-verses {
+  font-family: var(--font-reading, var(--font-serif));
+  font-size: var(--reader-font-size, 1rem);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.apoc-verse {
+  display: inline;
+}
+
+.apoc-verse-num {
+  font-size: .72em;
+  color: var(--color-muted);
+  margin-right: .2em;
+  vertical-align: super;
+  font-style: normal;
+  user-select: none;
+  font-family: var(--font-ui);
+}
+
+/* ── Chapter nav ─────────────────────────────────────────── */
+.apoc-chapter-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: .85rem;
+}
+
+.apoc-nav-btn {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: .3rem .6rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+}
+
+.apoc-nav-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.apoc-nav-info {
+  color: var(--color-muted);
+  font-size: .78rem;
+}
+
+/* ── Messages ────────────────────────────────────────────── */
+.apoc-msg {
+  font-family: var(--font-ui);
+  color: var(--color-muted);
+  font-size: .9rem;
+  padding: 2rem 0;
+}
+
+.apoc-msg--loading { color: var(--color-muted); }
+
+.apoc-msg--error {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.apoc-msg--error code {
+  font-size: .85em;
+  background: var(--color-hover);
+  padding: .1rem .35rem;
+  border-radius: 3px;
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 699px) {
+  .apoc-sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  .apoc-ch-grid { gap: 4px; }
+  .apoc-ch-btn  { width: 2.2rem; height: 2.2rem; font-size: .82rem; }
+}

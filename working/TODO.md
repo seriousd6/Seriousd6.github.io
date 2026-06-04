@@ -1,1130 +1,990 @@
 # Bible Study Website — Working TODO
 
 Track progress here. Mark items `[x]` when complete.
+Completed items are archived in `working/todo-archive.md`.
 
 ---
 
-## Completed
+## Z4–Z8 MKT Commentary Suite
 
-- [x] **Bible Reader** (`read/index.html`) — full-chapter and verse-range lookup, URL-shareable `?ref=` params, version switcher, split text + cross-refs layout
-- [x] **Full-text search** (`search/index.html`) — version-aware search across all 66 books, fuzzy multi-word matching, exact-quote mode, live progress
-- [x] **Verse tooltip + modal system** — hover preview, click-to-modal, focus/keyboard accessible, per-version rendering
-- [x] **Version picker** — localStorage persistence, all pages synced
-- [x] **Auto-tagging of scripture refs** in topic page prose (bare refs, ch:v, "Ch. N", continuations like "; 3:4")
-- [x] **Cross-references (TSK) in verse modal** — data: `data/crossrefs/` (66 books), split panel in modal and reader
-- [x] **Matthew Henry Commentary in verse modal** — data: `data/commentary/` (66 books), Commentary tab in modal
-- [x] **Chapter navigation in Bible Reader** — Prev/Next buttons (top + bottom), book/chapter browse dropdowns, keyboard shortcuts (j / → next, k / ← prev)
-- [x] **Parallel Passage Reader** — toggle in reader toolbar; stacked panels with fulfillment/prophecy/parallel type badges; lazy fetch with `bookCache` reuse; localStorage persistence (`bsw_parallels`); CSS in `reader.css`; data in `data/parallels/`
+**Goal:** Three original verse-by-verse commentaries for all 66 books, an echo/fulfillment data layer, and a key-term concordance. Uses the same static script + guide + work queue pattern as the MKT translation.
 
----
+**Commentaries:**
+- **Z6 `mkt-original`** — Original Language: why each translation choice, what English misses (aspect, idiom, wordplay, semantic range, honor-shame, tense)
+- **Z7 `mkt-context`** — Historical Context: what the original audience understood, ANE/Second Temple background, intertextual echoes
+- **Z8 `mkt-christ`** — "Christ in Every Verse": types, shadows, fulfillments, prophecy — honest about directness (direct/type/shadow/theme/revelation of God)
 
-## Bugs
+### Infrastructure (build first — prerequisites for everything below)
 
-- [x] **BUG-1. Memory — completing the last card does nothing**
-  - After scoring the final card in a review session, the UI sits on a blank or stale state with no feedback
-  - Add a "completion card" that appears after the last card is scored: brief encouragement text
-    (e.g., "Session complete — well done! You reviewed N verses."), today's review count, and a
-    button to return to the Browse panel
-  - Check `_memNextCard()` in `bible.js` — the path where `pendingCards` empties after the last
-    score needs to render the completion view rather than calling `_memShowCard()` again
-  - Completion state should also update the summary stats visible in the Browse panel
+- [ ] `Z_COMMENTARY_SCRIPT_GUIDE.md` — static script boilerplate (load/save/merge helpers), HTML conventions, source data checklist
+- [ ] `Z_COMMENTARY_AGENT_GUIDE.md` — content principles and length targets for all three commentary types
+- [ ] `Z_PROGRESS.md` — full work queue (66 books × 3 commentaries + echo layer, ≤6ch units, same claim protocol as MKT_PROGRESS.md)
+- [ ] `Z_AGENT_PROMPT.md` — paste prompt for agent sessions (mirrors MKT_AGENT_PROMPT.md)
 
-- [x] **BUG-2. Commentaries not visible in the Reader pane**
-  - The Commentary tab in the verse modal works, but the Reader's right-hand pane does not show
-    commentary content when selected
-  - Trace `_refreshCommentaryPanel()` (or equivalent) in `bible.js` — check whether the call is
-    wired to the reader's cross-ref panel tab switcher or whether the fetch/render path silently fails
-  - Expected behavior: selecting "Commentary" in the reader right-pane tab loads the relevant
-    commentary entry for the currently visible passage, identical to the modal's Commentary tab
+### Z4 — Echo & Fulfillment Data Layer
 
-- [x] **BUG-3. Topics tab in verse modal needs more breathing room**
-  - The Topics tab content (Nave's topic chips) is visually cramped — insufficient padding between
-    the chip row, the count line, and the "Browse all" link (see screenshot: chips sit flush against
-    the tab border)
-  - Add `padding-top` / `gap` adjustments to the `.bsw-modal-topics` container in `bible-ui.css`;
-    match the visual rhythm of the Verse and Commentary tabs
+**Note: Echoes replace Parallels.** The existing parallels feature (`data/parallels/`, `loadParallels()`, the parallels panel) was the prototype of what echoes are designed to be. Once Z4 data is generated, the parallels panel is replaced by the Echoes & Fulfillments panel and `loadParallels()` is retired.
 
-- [x] **BUG-4. Search page label still reads "Omni-search" — should be "Search"**
-  - The search page (`search/index.html`) heading or tab label was renamed to "Omni-search" during
-    development but should simply read "Search" in all user-visible text
-  - Update: page `<title>`, `<h1>` / heading element, sidebar nav entry in `main.js`, and any
-    `aria-label` or placeholder text that still says "Omni-search"
+**Parallels absorption (do before writing any echo scripts):**
+- [ ] Audit `data/parallels/` — review all entries for the books being processed
+- [ ] Absorb `prophecy-source` entries → echo type `fulfillment`; `quotation` → `quote`; `parallel` → `theme` or `allusion` where substantive
+- [ ] Add the `note` field that parallels entries lack (a brief argument for the connection)
+- [ ] Document the absorption step in `Z_COMMENTARY_SCRIPT_GUIDE.md`
 
-- [x] **BUG-5. Book-study banner doesn't clear when navigating to a book with no study**
-  - When a book with an available study is selected in the Reader, the "Study available" banner appears
-  - Navigating to a different book that has no study should clear the banner; navigating to a book
-    that has a study should update it to that book's study
-  - Locate the banner-render call in `bible.js` (triggered on book/chapter load); ensure it runs
-    on every navigation event, not just on initial page load or when a study is found — an explicit
-    "hide banner" path is needed for the no-study case
+**Build:**
+- [ ] Echo script units added to `Z_PROGRESS.md` work queue
+- [ ] `assets/js/core.js` — add `ECHOES_ROOT`, `loadEchoes()`, `echoesCache`; retire `loadParallels()` once echoes covers same books
+- [ ] `assets/js/verse-study.js` — replace parallels panel with "Echoes & Fulfillments" panel; type badge + `.ref` link + note per echo
+- [ ] `assets/js/reader.js` — replace parallels panel reference with echoes
+- [ ] Agents generate `data/echoes/{book}.json` via `zc-echo-{book}-{start}-{end}.py` (NT first)
 
-- [x] **BUG-6. Notes in the Reader pane cannot be deleted**
-  - Personal notes added to verses are visible in the Reader's notes panel but there is no delete
-    button or action — once created, a note can only be edited, not removed
-  - Add a delete (×) button to each note entry in the Reader pane; wire it to the existing
-    `deleteNote(refStr)` function (or add that function if absent) which removes the entry from
-    `bsw_notes` / `bsw_notes_v2` and re-renders the panel
-  - Confirm the delete button also exists (or is added) in `notes/index.html` for consistency
+Echo types: `quote` | `allusion` | `type` | `shadow` | `theme` | `fulfillment`
 
----
+### Z5 — Key Term Decision Commentary
 
-## Phase A — Foundation ✓ Complete
+- [ ] `scripts/z5-terms-greek.py` — hardcoded decision notes for all Greek dispute_level≥2 terms (~60 entries)
+- [ ] `scripts/z5-terms-hebrew.py` — Hebrew dispute_level≥2 terms (~40 entries)
+- [ ] `data/translation/term-commentary.json` — output with lemma, decision_note HTML, key_verses, tradition_map
+- [ ] `tools/terms/index.html` — searchable concordance page (tg-* CSS layout; left list, right panel)
 
-- [x] **A1. Library pages** — all 6 pages were already built with full content
-- [x] **A2. Nav consistency** — `main.js` sidebar includes Topics + Library on all pages
-- [x] **A3. `main.js` nav data** — full NAV structure with Topics and Library subgroups
-- [x] **A4. Delete `_includes/`** — stale Jekyll includes removed
-- [x] **A5. Reader 3-column layout** — `reader-page .container` → 1400px; grid: narrow=1col, medium 700px+=2col (text|xref panel), wide 1100px+=3col (ch-sidebar|text|xref panel); cross-ref side panel populated by `_refreshXrefPanel()` after each book's refs load
+### Z6–Z8 — Commentary UI Registration
+
+- [ ] `assets/js/core.js:635` — add 3 entries to `COMMENTARY_SOURCES`:
+  - `{ id: 'mkt-original', label: 'Original Language (MKT)', attr: '...' }`
+  - `{ id: 'mkt-context',  label: 'Historical Context (MKT)', attr: '...' }`
+  - `{ id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: '...' }`
+- [ ] Agents generate `data/commentary/mkt-original/{book}.json` via `zc-original-{book}-*.py` (NT first, start John + Romans)
+- [ ] Agents generate `data/commentary/mkt-context/{book}.json` via `zc-context-{book}-*.py` (NT first)
+- [ ] Agents generate `data/commentary/mkt-christ/{book}.json` via `zc-christ-{book}-*.py` (NT first)
+
+### Script naming convention
+`scripts/zc-{type}-{book}-{start}-{end}.py`
+Examples: `zc-original-john-1-5.py`, `zc-context-romans-1-8.py`, `zc-christ-genesis-1-10.py`, `zc-echo-john-1-5.py`
+
+### Data outputs
+- `data/echoes/` — typed echo layer per book
+- `data/commentary/mkt-original/` — Original Language commentary per book
+- `data/commentary/mkt-context/` — Context commentary per book
+- `data/commentary/mkt-christ/` — Christological commentary per book
+- `data/translation/term-commentary.json` — ~100 high-dispute term decision notes
+
+### Verification
+- verse-study John 3:16 → all 3 new MKT sources in commentary picker
+- verse-study John 1:29 → Echoes panel shows Exod 12 type + Isa 53:7 allusion
+- `tools/terms/index.html` → G4102 πίστις decision note with tradition map
+- No regressions: existing commentaries (mhcc, jfb, etc.) still load
 
 ---
 
-## Phase VS — Verse Study (Deep Dive) *(priority: high — build after Phase A)*
+## Word Study Page Improvements
 
-A full-page verse study experience that aggregates every available reference for a single verse. The "go deep" destination — richer than the quick modal, purpose-built for single-verse study.
+*(Completed 2026-06-03 — see todo-archive.md. WD-L complete 2026-06-03. WD-M data-blocked.)*
 
-- [x] **VS1. Verse Study page** (`verse-study/index.html?ref=John+3:16&v=BSB`) — sticky header with focal verse + context strip, word token row, cross-references, Matthew Henry commentary, parallel passages; modal "Open in Verse Study" button; reader verse-number click popup
+---
 
-  ### Design decisions (locked)
+### WD-A · Performance — Loading Progress for Bulk Interlinear Fetch *(HIGH)*
 
-  - **URL pattern:** `verse-study/index.html?ref=John+3:16` — same `?ref=` param convention as the Reader; version from `localStorage` or `&v=` override; fully shareable
-  - **Layout:** Sticky verse header + sidebar section nav on desktop; top-of-page `<select>` dropdown on mobile (< 768px)
-  - **Word study interaction:** Click any word token → expand inline panel below the token row showing Strong's number, Greek/Hebrew, morphology, gloss, occurrence count. Designed so the interlinear row (C2) slots in beneath each token later without restructuring the DOM.
-  - **Context strip:** Previous and next verse shown dimmed above/below the focal verse; toggleable via a **Context** button in the header; state saved to `localStorage` key `bsw_dissect_ctx`
-  - **Commentary:** One source shown at a time with a source selector dropdown (Matthew Henry first; Barnes, JFB, Clarke, Vincent added automatically as C1 data is built)
-  - **Mobile section nav:** Top-of-page `<select>` dropdown; selecting a section smooth-scrolls to it
-  - **Name:** "Verse Study" (user-facing label)
-  - **Completion note (stub):** Several VS1 sections are currently hidden on the live page pending
-    data from B2, C2, D1, D3, and D4; the exact set of sections that are live vs. hidden is not
-    tracked; see M3 (data validation stub) — a validation pass should document which sections are
-    active and which are waiting on specific data dependencies
-  - **Sections with no data yet:** Hidden entirely — they appear automatically as their data dependencies are built; no "coming soon" placeholders
+`initWordPage` fires one `loadInterlinear()` call per book in the relevant testament — up to 27
+(NT) or ~39 (OT) concurrent fetches. There is no progress feedback; the user sees only the
+static "Loading…" header text until every book resolves. For a common word (e.g. G2316 θεός,
+1300+ occurrences) this can take 5–15 MB of network and several seconds on a slow connection.
 
-  ### Entry points
+- [x] `word.js` (`initWordPage`, books fetch block): Track `completed` and `total` counters.
+  After each `loadInterlinear` promise settles, update a progress element:
+  `"Loading books… 12 / 27"`. Insert a `<p id="wd-progress" class="wd-loading"></p>` below
+  the header before the fetch starts; remove it (or replace with stat cards) once all books
+  are done.
+- [x] `word.css`: Add `.wd-progress { font-size:.82rem; color:var(--color-muted); margin-bottom:.5rem; }`
 
-  1. **Verse modal** — "Open in Verse Study" button at the bottom of the modal (alongside existing "Read in Reader")
-  2. **Reader verse-number click** — clicking a verse-number superscript in the reader opens a small popup menu:
-     - **Verse Study** — navigate to `verse-study/index.html?ref=...`
-     - *(future: Bookmark — B6; Add to Memory — C4)*
-  3. **Direct URL** — fully shareable; works as a search-engine landing page
+---
 
-  ### Page structure
+### WD-B · UX — Filter State Lost on Reload / Not Shareable *(HIGH)*
 
+Book (`_wdCurrentBook`) and translation (`_wdCurrentFilter`) filters live only in JS module
+state. Refreshing or sharing the URL loses both. A hash-based approach is cheap and makes
+filtered views linkable.
+
+- [x] `word.js` (`_wdToggleFilter`, `_wdToggleBook`): After updating module state, write to
+  `location.hash` — e.g. `#book=john&trans=love`. Use `encodeURIComponent` on each value.
+  Empty / null values should remove the key from the hash.
+- [x] `word.js` (`initWordPage`, after data loads): Read `location.hash` and restore
+  `_wdCurrentBook` and `_wdCurrentFilter` before calling `_wdRenderTranslations`,
+  `_wdRenderBooks`, and `_wdRenderVerses`.
+- [x] `word.js`: Listen to `window.addEventListener('hashchange', ...)` and re-apply filters
+  so browser Back/Forward navigation works.
+
+---
+
+### WD-C · Feature — Morphological Form Breakdown *(HIGH)*
+
+The interlinear token data includes a `.m` (morph code) field that `word.js` never reads.
+For a Greek verb like G3004 (λέγω) the distribution of tenses, voices, and moods across all
+occurrences is the most directly useful data for translation work. For nouns, case distribution
+matters. This data is already loaded; it just isn't surfaced.
+
+- [x] `word.js` (`initWordPage`, accumulation loop): While scanning tokens for matching
+  Strong's IDs, also collect `tok.m` values into a `morphCount` object:
+  `morphCount[tok.m] = (morphCount[tok.m] || 0) + 1`.
+- [x] `word.js`: Add `_wdRenderMorphTable(morphCount)` — expands each code via
+  `expandMorphCode` (already imported from `interlinear.js`) and renders a compact table of
+  form → count, sorted descending. Insert it between the stat cards and the two-column body.
+- [x] `word.css`: `.wd-morph-table` styles added.
+  Omit this section entirely for words with no morph codes (punctuation / particles).
+
+---
+
+### WD-D · UX — Interactivity Not Discoverable; No "All" Reset *(MEDIUM)*
+
+Translation rows and book pills are the only interactive elements in the sidebar, but they
+look like plain data — no tooltip, no affordance copy. Clearing a filter requires finding and
+clicking a chip in a different zone of the page; there is no "All / reset" button in the
+sidebar itself.
+
+- [x] `word.css`: `cursor:pointer` confirmed on `.wd-book-pill`; `title` attributes added via JS.
+- [x] `word.js` (`_wdRenderTranslations`): "All translations" row prepended; active when no filter set.
+  "All books" pill prepended in `_wdRenderBooks`.
+- [x] `word.js` (`_wdRenderVerses`, render function): "Clear all" button added at right end of `.wd-filter-bar`; visible when both filters active (consolidated with WD-J).
+
+---
+
+### WD-E · Feature — "Open in Reader" Link per Book Section *(MEDIUM)*
+
+Each `.wd-verse-ref-link` triggers the tooltip/modal but provides no path to the full passage
+context in the Reader. A small link per book-section heading (not per verse card — too noisy)
+closes the loop without cluttering the list.
+
+- [x] `word.js` (`_wdRenderVerses`, book section heading): `.wd-book-reader-link` appended inside heading.
+- [x] `word.css`: `.wd-book-reader-link` styles added.
+
+---
+
+### WD-F · UX — Books Sidebar Height Cap Too Tight *(MEDIUM)*
+
+`#wd-books` is capped at `max-height: 160px`. An OT word spanning 30+ books makes the pill
+grid nearly unreadable — three rows visible with heavy internal scrolling.
+
+- [x] `word.css` (`#wd-books`): Replaced `max-height: 160px` with `clamp(160px, 28vh, 260px)`.
+
+---
+
+### WD-G · UX — Author / Genre Breakdown in Stat Cards *(MEDIUM)*
+
+Stat cards show total occurrences, books, and unique translations — raw counts with no
+interpretive context. A Pauline word vs. a Johannine word vs. a Synoptic word tells a very
+different story; the book metadata almost certainly carries enough to compute a genre or
+author label per book.
+
+- [x] `data/bible/books.json`: `genre` field added to all 66 books.
+- [x] `word.js` (`_wdRenderStats`): "By genre" chip row appended to stat cards.
+
+---
+
+### WD-H · Feature — Second Lexical Source in Header *(MEDIUM)*
+
+The header shows Thayer (Greek) or BDB (Hebrew) as the sole lexical source. The Strong's
+dictionary data (`entry.gloss`, `entry.def`) is already in memory (loaded by `loadStrongs`)
+and could appear as a second source without any additional network fetch.
+
+- [x] `word.js` (`_wdRenderHeader`): Strong's (1890) added as `.wd-lexicon--strongs` collapsible card.
+- [x] `word.css`: `.wd-lexicon--strongs` with `--color-border` left-border added.
+
+---
+
+### WD-I · UX — Keyboard Navigation Through Verse List *(LOW)*
+
+The verse list can run to hundreds of entries with no keyboard shortcut to step through
+occurrences, jump to a book section, or toggle the active filter.
+
+- [x] `word.js`: `keydown` listener added — arrows step cards, `b`/`t`/`Escape` shortcuts.
+- [x] `word.css`: `.wd-verse-card--focused` style added.
+
+---
+
+### WD-J · UX — "Clear All Filters" When Both Filters Active *(LOW)*
+
+When both a book and a translation filter are active the user must dismiss two chips
+separately. A single button saves a click.
+
+- [x] Consolidated into WD-D — single "Clear all" button in filter bar handles both cases.
+
+---
+
+### WD-K · Visual — Semantic Range Bar Polish *(LOW)*
+
+The translation frequency bars in `.wd-translation-bar` already encode percentages but are
+only 8px tall and carry no percentage label. A minor visual polish pass would make the
+semantic range story clearer.
+
+- [x] `word.css`: Bar height 8px → 12px; `border-radius:6px`.
+- [x] `word.js`: Percentage text `(38%)` appended; "How this word is translated:" label added.
+- [x] `word.css`: `.wd-trans-label`, `.wd-trans-pct` styles added.
+
+---
+
+*(WD-L and WD-M claimed — see working/inprogress-wd-lm-todo.md)*
+
+---
+
+## Library Content Cleanup — LOW items remaining
+
+Completed sections archived. Two optional polish items remain open.
+
+*(Pascal Pensées claimed — see working/inprogress-pascal-pensees-todo.md)*
+
+---
+
+### LOW — Remaining polish
+
+- [x] **Newman Apologia `[Pg N]` spans** — stripped 418 `.pagenum` spans from `newman-apologia.html` via BeautifulSoup.
+
+- [x] **Smalcald Articles Part III sub-article `lib-article` nesting** — added `lib-article__num` (Roman numeral) and `lib-article__text` wrapper to all 13 articles; h3 updated to show title only.
+
+---
+
+## Bible Reader Improvements
+
+**Evaluation (2026-06-03):**
+
+The reader is feature-rich — multi-ref lookup, book introductions, compare mode, interlinear,
+parallels, three right-panel tabs, six layout modes — but several implementation problems
+undercut the experience. The most serious is a split navigation model: sidebar chapter buttons
+use in-page rendering while prev/next chapter buttons do a full `window.location.href` page
+reload. The toolbar is also severely overcrowded. Below items are roughly priority-ordered.
+
+---
+
+### RD-A · Chapter Navigation — Eliminate Full Page Reloads *(HIGH)*
+
+**Bug:** `_navigateChapter()` in `reader.js` uses `window.location.href = READER_URL + '?ref=...'`
+for all prev/next chapter navigation. This causes a full page reload, losing scroll position,
+clearing the right panel, resetting all toggles' visual state, and adding ~500ms latency for
+every chapter flip. By contrast, the chapter sidebar already uses `window._readerLookupFn` for
+in-page navigation — so the two nav paths are inconsistent.
+
+- [x] `reader.js` (`_navigateChapter`): Replace all `window.location.href = ...` assignments
+  with the in-page pattern already used by the sidebar:
+  ```js
+  var newRef = /* computed new ref string */;
+  var input  = document.getElementById('reader-lookup-input');
+  if (input) input.value = newRef;
+  if (window._readerLookupFn) window._readerLookupFn();
   ```
-  [← John 3 in Reader]                              [Version ▾]
+  Apply to all three branches: next chapter within book, prev chapter crossing into previous
+  book, next chapter crossing into next book. The `?ref=` URL is already updated by
+  `history.replaceState` inside `doLookup`, so deep-linking still works.
+- [x] `reader.js`: The ch=0 (intro page) branch of `_navigateChapter` already uses this pattern
+  correctly — verify it stays unchanged and serves as the model.
 
-  ┌──────────────────────────────────────────────────────────┐
-  │ John 3:16  [Context ▾]                                   │  ← sticky header
-  │                                                          │
-  │ ¹⁵ …that whoever believes may have eternal life.         │  ← prev verse, dimmed
-  │                                                          │
-  │ ¹⁶ For God so loved the world, that he gave his          │
-  │    only Son, that whoever believes in him should         │
-  │    not perish but have eternal life.                     │  ← focal verse, full-size
-  │                                                          │
-  │ ¹⁷ For God did not send his Son to condemn…              │  ← next verse, dimmed
-  ├──────────────────────────────────────────────────────────┤
-  │ Word Study                                               │
-  │ [For] [God] [so] [loved] [the] [world] [that]…          │  ← clickable tokens
-  │  ▼ G25 · ἀγαπάω · agapaō (Aorist Active Indicative 3S)  │  ← expands on click
-  │    "to love, to regard with favor" · 143× in NT · all → │
-  └──────────────────────────────────────────────────────────┘
+---
 
-  Desktop sidebar nav:  Cross-References | Commentary | Parallels | Confessions | Fathers | Dictionary
-  Mobile: [Section: Cross-References ▾] dropdown at top of content area
+### RD-B · Browse Bar Overcrowding — View Options Overflow Menu *(HIGH)*
 
-  ## Cross-References
-  ## Commentary  [Matthew Henry ▾]
-  ## Parallel Passages
-  ## Confessional Citations      ← appears when D1 verse-index is built
-  ## Church Fathers              ← appears when D3 is built
-  ## Dictionary Terms            ← appears when D4 is built
+**Problem:** All toggles are injected directly into the browse bar row:
+Interlinear · Book Info · ⇅ Compare · † Footnotes · ⇔ Split · ⇿ Wide · A− · A · A+ · A++ ·
+☰ Chapters · ? keyboard shortcuts · keyboard hint span = **13+ elements in one bar row**.
+On a 1280px screen with the site sidebar open, the reading area is ~700px wide — this row
+wraps or overflows, pushing content down.
+
+**Fix:** Keep 3–4 most-used controls inline; move the rest into a ⚙ "View" overflow popover.
+
+- [x] `interlinear.js` / `reader.js`: Add a single `<button id="reader-view-btn" class="reader-view-btn">⚙ View</button>` injected first into the browse bar. Below it, a `.reader-view-popover` (absolutely positioned, `hidden` by default).
+- [x] Move these into the popover (shown as a vertical list of toggle rows inside the popover):
+  - Split / Wide / Sidebar (layout toggles — rarely changed mid-session)
+  - Font size group (A− A A+ A++) — keep as a 4-button row inside the popover
+  - Parallels toggle (if present)
+  - Keyboard shortcuts `?` link
+- [x] Keep inline (always visible in browse bar):
+  - Interlinear toggle (frequently used during study)
+  - Compare toggle (frequently toggled)
+  - † Footnotes toggle (frequently toggled)
+  - Book Info toggle
+- [x] `reader.css`: `.reader-view-popover` — `position:absolute; top:100%; right:0; z-index:200; background:var(--color-surface); border:1px solid var(--color-border); border-radius:8px; padding:.6rem .75rem; min-width:200px; box-shadow:0 4px 16px rgba(0,0,0,.15)`; close on outside click and Escape
+- [x] Mobile (≤700px): Keep browse bar to book/chapter selects + Compare only; everything else in the ⚙ popover
+
+---
+
+### RD-C · Restore Last Position on Blank Load *(HIGH)*
+
+When navigating to `read/` with no `?ref=` parameter, the reader shows a blank `#reader-results`
+with no prompt. `bsw_history` already stores up to 100 recent references but is never used
+to restore state.
+
+- [x] `reader.js` (`initReaderLookup`): After the URL param check, if `refStr` is empty, read
+  `bsw_history[0]` from localStorage; if present, inject a dismissable banner into
+  `#reader-results`:
+  ```html
+  <div class="reader-resume-banner">
+    Continue where you left off:
+    <a class="reader-resume-link" href="?ref={lastRef}">{lastRef}</a>
+    <button class="reader-resume-dismiss" aria-label="Dismiss">✕</button>
+  </div>
   ```
-
-  ### Data dependencies per section
-
-  | Section | Data source | Status |
-  |---------|-------------|--------|
-  | Verse + context | `data/bible/` | Done |
-  | Cross-references | `data/crossrefs/` | Done |
-  | Parallel passages | `data/parallels/` | Done |
-  | Matthew Henry commentary | `data/commentary/` | Done |
-  | Word tokens (English) | String split, no data file | Done |
-  | Strong's word study flyout | `data/strongs/` | Not built (B2) |
-  | Interlinear row beneath tokens | `data/interlinear/` | Not built (C2) |
-  | Additional commentary sources | `data/commentary/{source}/` | Not built (C1) |
-  | Confessional citations section | `data/library/verse-index/` | Not built (D1) |
-  | Church Fathers quotes | TBD | Not built (D3) |
-  | Dictionary term hover | `data/dictionary/` | Not built (D4) |
-
-  ### JS additions (`bible.js` or new `verse-study.js`)
-
-  - `tokenizeVerse(text)` — split verse text into word tokens, preserving punctuation as non-clickable spans
-  - `renderTokenRow(tokens, container)` — build `<button class="vs-token">` elements; attach click handler
-  - `openWordStudy(tokenEl, strongsId)` — expand inline word study panel below token row; collapse previous if different word clicked
-  - `loadVerseSections(parsed)` — orchestrate parallel fetches for all data sections; each section renders independently as data arrives
-  - Verse-number click handler in `bible.js` reader — build popup menu; wire "Verse Study" link and future note/highlight/bookmark/memory actions
-
-  ### CSS: new `assets/css/verse-study.css`
-
-  - `.vs-header` — sticky verse display block with context strip
-  - `.vs-context-verse` — dimmed prev/next verse; hidden when context is toggled off
-  - `.vs-focal-verse` — focal verse, full-weight typography
-  - `.vs-token-row` — word token button row beneath the verse block
-  - `.vs-token` — individual word button; highlights on hover and when its word study panel is open
-  - `.vs-word-panel` — inline Strong's flyout below the token row
-  - `.vs-sidebar` — sticky left section nav (desktop ≥ 768px)
-  - `.vs-mobile-nav` — top-of-content `<select>` dropdown (mobile < 768px)
-  - `.vs-section` — each reference section container (cross-refs, commentary, etc.)
-  - `.vs-section-heading` — consistent section headings with `scroll-margin-top` for anchor accuracy
+  Do NOT auto-navigate — let the user click. Dismissing sets `bsw_reader_resume_dismissed`
+  so the banner doesn't reappear in the same session (use `sessionStorage`, not localStorage).
+- [x] `reader.css`: `.reader-resume-banner` — muted surface background, subtle left border in
+  `--color-primary`, `padding:.75rem 1rem`, `border-radius:6px`, `margin-bottom:1rem`,
+  flex row with the link and dismiss button
 
 ---
 
-## Phase B — Competitive Parity (closes the gap with Blue Letter Bible & BibleHub)
+### RD-E · Verse Hover — Highlight Active Verse *(MEDIUM)*
 
-These are the features every serious free competitor has. Each one is achievable
-with public domain data and the existing `bible.js` infrastructure.
+Clicking a verse number opens the modal, but the verse itself is not visually highlighted in
+the text — it looks identical to surrounding verses while the modal is open. A reading context
+highlight would help the eye return to position after dismissing the modal.
 
-- [x] **B1. Parallel translation reader** *(complete)* — "⇅ Compare" toggle in reader browse bar; splits text into 2 side-by-side panels each with its own version selector (A/B); primary selector calls `setVersion`, secondary stores to `bsw_compare`; lazy async fetch of secondary text; works with all 4 current versions (KJV, BSB, WEB, ASV); YLT/Darby/Geneva fetch scripts remain future work
-
-- [x] **B2. Strong's concordance word study** *(complete)*
-  - Click any word in a rendered verse → flyout shows:
-    - Strong's number (e.g., G3056 / H1697)
-    - Greek or Hebrew original term + transliteration
-    - Brief lexical definition (root, gloss, semantic range)
-    - Morphological parsing (for Greek: tense-voice-mood-person-number; for Hebrew: stem-conjugation)
-    - Count of occurrences + link to concordance list
-  - **Data sources (all public domain / open license):**
-    - `openscriptures/strongs` — Strong's Hebrew + Greek dictionaries as JSON
-    - `tahmmee/interlinear_bibledata` — OT + NT interlinear with Strong's numbers per word token
-    - Dodson Greek Lexicon (CC0) for expanded Greek definitions
-    - Brown-Driver-Briggs (BDB) Hebrew lexicon JSON for expanded Hebrew definitions
-  - **Storage:** `data/strongs/greek.json` (~800 KB) + `data/strongs/hebrew.json` (~1.2 MB), fetched on demand and cached
-  - **UI:** word-click handler wired into the verse renderer; flyout panel anchored to the clicked word
-  - **Verse modal:** add "Word Study" as a fourth tab, showing word-by-word breakdown of the selected passage
-  - This is the #1 feature gap vs. BLB; closes the most important competitive distance
-  - **VS1 integration:** B2 data directly powers the Verse Study word token panel
-
-- [x] **B3. Personal notes & verse highlights** *(complete)*
-  - Click a verse number to toggle a yellow highlight (persists in localStorage)
-  - Right-click / long-press a verse → open a small note editor textarea
-  - Notes saved to `localStorage` key `bsw_notes` as `{ "John 3:16": { highlight: true, note: "…" } }`
-  - `notes/index.html` — "My Notes" page listing all annotated verses with ref links back to Reader
-  - Export option: copy all notes as plain text or JSON
-  - Highlights visible in both the Reader and verse modal
-  - Privacy-first: everything local, nothing leaves the browser
-  - **VS1 integration:** Note and Highlight actions wired into the Reader verse-number popup menu (alongside "Verse Study")
-
-- [x] **B4. PWA / offline mode** *(complete)*
-  - Add `manifest.json` (name, icons, theme color, start URL, display: standalone)
-  - Add a service worker (`sw.js`) with:
-    - Cache-first strategy for `data/bible/**`, `data/crossrefs/**`, `data/commentary/**`, all CSS/JS
-    - Network-first for HTML pages so updates are always received when online
-    - Background pre-cache of all Bible JSON in 6-file chunks (150ms yield between chunks) triggered via postMessage after first load
-  - `initPWA()` in `bible.js` injects `<link rel="manifest">` and `<meta name="theme-color">` dynamically — no per-page changes needed
-  - SW auto-updates: new SW waits, then sends `SKIP_WAITING` to activate on next navigation
-  - Total data: ~43MB (Bible text, crossrefs, commentary, interlinear, strongs) cached across 4 versions
-  - Result: site works fully offline after first visit; no major free web tool offers this
-  - This is a genuine architectural differentiator — the static JSON-based design is perfectly suited for PWA
-
-- [ ] **B4a. PWA / Lighthouse validation audit** *(stub — needs scoping before work begins)*
-  - B4 is marked complete but has never been formally audited against PWA install criteria or
-    Lighthouse performance targets; an audit could surface regressions or gaps not caught in development
-  - Needs to determine: which Lighthouse categories matter (Performance, A11y, Best Practices, PWA),
-    what target scores are acceptable, and what remediation steps are in scope
-  - Also covers: whether the site is installable on Android and iOS, whether the app icon/manifest
-    display correctly on home screens, and whether offline fallback pages exist for all routes
-
-- [x] **B5. Parallel Passage Reader** *(complete)*
-  - Toggle in reader toolbar (next to version picker); state in `localStorage` key `bsw_parallels` (default: off)
-  - Three parallel types with visual badges: ⇌ Parallel (blue) / ✓ Fulfilled in (green) / ⌖ Prophesied in (gold)
-  - Stacked panels below each passage; first 3 verses visible, "Show N more" expander for remainder
-  - Per-panel ▾/▸ collapse button; collapse state resets on chapter navigation
-  - Lazy fetch — `loadParallels()` only fires when toggle is ON; zero fetches while feature is inactive
-  - `bookCache` reuse — parallel book text is free if the user has already read it that session
-  - Toggle-off removes all `.reader-parallel-section` elements from DOM (zero layout cost while inactive)
-  - CSS in `reader.css`; data in `data/parallels/{bookId}.json`
-
-- [x] **B6. Bookmarks** *(complete)*
-  - One-click star/bookmark on any verse — no text entry required (distinct from B3 notes, which require writing)
-  - Stored in `localStorage` key `bsw_bookmarks` as an array of ref strings (`["John 3:16", "Ps 23:1"]`)
-  - `bookmarks/index.html` — list all bookmarked verses with jump links to Reader and Verse Study
-  - Bookmarked verse numbers get a small ★ indicator in the Reader
-  - Wired into the Reader verse-number popup menu (VS1) alongside Note, Highlight, Verse Study
-
-- [x] **B7. Single-verse all-translations comparison** *(complete)*
-  - Dedicated view showing one verse across all available versions stacked vertically
-  - URL: `compare/index.html?ref=John+3:16` — shareable; works as a search-engine landing page
-  - Accessible from: Reader verse-number popup, Verse Study page header, verse modal header
-  - Distinct from B1 (B1 is side-by-side chapters; this is one verse × all versions)
-  - Adjacent verse prev/next navigation (handles chapter boundaries)
-  - Preferred version row highlighted with primary-color border
-  - Add YLT, Darby, Geneva (from B1 fetch scripts) to make the comparison more compelling
+- [x] `reader.js` (`wireVerseNumberPopup`): When a verse number is clicked, add class
+  `.reader-verse--active` to the parent `.reader-verse` element; remove it when the modal
+  closes (`modal.js` should fire a `bsw:modal:close` CustomEvent, or add a callback)
+- [x] `reader.css`: `.reader-verse--active` — subtle highlight: `background:var(--color-primary-faint, rgba(92,61,30,.07)); border-radius:3px; outline:1px solid var(--color-primary-faint)`
 
 ---
 
-## Phase C — Scholarly Depth (makes this better than BLB for serious lay study)
+### RD-F · Right Panel — Notes Compose Scope *(MEDIUM)*
 
-- [x] **C1. Additional public domain commentaries** *(complete)*
-  - Currently only Matthew Henry's Concise Commentary is bundled
-  - Add to the Commentary tab (selectable source dropdown):
-    - **Barnes' Notes on the Bible** (Albert Barnes, 1832–1885) — OT + NT, verse-by-verse, public domain
-    - **Jamieson-Fausset-Brown Commentary** (1871) — single-volume, scholarly, public domain
-    - **Adam Clarke's Commentary** (1810–1826) — strong on original languages, public domain
-    - **Vincent's Word Studies** (NT only, Marvin Vincent, 1886) — excellent Greek word-level commentary
-  - Data source: SWORD Project public domain modules; same processing pipeline as Matthew Henry
-  - Storage: `data/commentary/{source}/{bookId}.json` — same shape as existing commentary JSON
-  - e-Sword built its 25M-download reputation on bundling exactly these four; matching them is achievable
-  - **VS1 integration:** commentary source dropdown in Verse Study powered by the same data
+The notes compose textarea in the right panel prompts `"Add a note for John 3…"` (whole
+chapter). Notes added here are stored at chapter scope. But the notes display shows
+verse-specific notes with their verse label — creating confusion about what the textarea
+actually targets. The verse-modal path is the only way to add a verse-specific note.
 
-- [x] **C2. Interlinear reader — Greek NT + Hebrew OT** *(complete)*
-  - A toggle in the Reader renders the original language beneath each English word:
-    - Hebrew/Greek word (Unicode)
-    - Transliteration (SBL-style)
-    - Morphological parsing code (e.g., `V-AOR-ACT-IND-3S`, `N-NOM-MS`)
-    - Strong's number (links to B2 word study)
-  - Clicking any original-language word opens the Strong's flyout (B2)
-  - **Data sources (all open license):**
-    - Greek NT: `morphgnt/sblgnt` — SBLGNT with full morphological tagging, CC-BY 4.0
-      (`data/interlinear/greek/{bookId}.json`)
-    - Hebrew OT: `openscriptures/morphhb` — Westminster Leningrad Codex with tagging, CC-BY 4.0
-      (`data/interlinear/hebrew/{bookId}.json`)
-    - These are the same datasets used by BLB and BibleHub
-  - **Token JSON shape:**
-    ```json
-    { "eng": "In", "orig": "בְּרֵאשִׁ֖ית", "translit": "bə·rê·šîṯ",
-      "strongs": "H7225", "parse": "N-FS", "lemma": "רֵאשִׁית" }
-    ```
-  - Render as a word-grid below the verse text when interlinear mode is active
-  - **VS1 integration:** interlinear row slots directly beneath the VS1 token row — same token shape, same click handler
-  - This is the feature that makes this tool better than BLB for lay students who want
-    original-language access without Logos pricing
-
-- [x] **C2a. RTL layout for Hebrew interlinear tokens** *(complete)*
-  - Hebrew text in C2 is currently rendered left-to-right; Biblical Hebrew reads right-to-left and
-    incorrect directionality makes the script visually wrong and harder to read
-  - Needs to determine: whether `dir="rtl"` goes on individual tokens, the row container, or both;
-    how RTL affects the alignment of transliteration + morphology labels beneath each token;
-    whether Strong's numbers (which are LTR) need special handling; and how the interlinear grid
-    lays out when Hebrew (RTL) and Greek (LTR) chapters are mixed (e.g., on the compare page)
-
-- [x] **C3. Reading plans** *(complete)*
-  - `plans/index.html` — browse and enroll in classic reading plans:
-    - M'Cheyne's Calendar (OT + NT daily, 1 year) — public domain
-    - Through the Bible in a Year (chronological) — public domain
-    - New Testament in 90 Days
-    - Psalms & Proverbs in a Month
-    - Gospels in 30 Days
-  - Plans stored as `data/plans/{id}.json` — arrays of daily reading lists
-  - Enrollment + daily completion tracked in `localStorage` key `bsw_plans`
-  - Home page widget: "Today's Reading" showing the day's passages for enrolled plans,
-    each reference linking directly to the Reader
-  - YouVersion's dominant engagement feature; even 3–5 plans add meaningful daily-return habit
-
-- [x] **C3a. Reading plan progress tracking** *(complete)*
-  - C3 tracks daily completion but has no visible % complete or projected finish date per plan;
-    users have no sense of how far they've come or when they'll finish
-  - Needs to determine: where this surface lives (plan detail page vs. home widget vs. both),
-    how to handle plans that fall behind schedule (skip-day logic, catch-up mode), and whether
-    a streak counter or visual calendar heatmap is in scope here or belongs in a later engagement phase
-
-- [x] **C4. Scripture memory / flashcard tool** *(complete)*
-  - `memorize/index.html` — browse verses in the memory list; enter flashcard mode
-  - Flashcard modes: show reference → recall text; or show text → recall reference
-  - Spaced repetition via simple interval scoring in `localStorage` key `bsw_memory`:
-    `{ "John 3:16": { interval: 3, nextReview: "2026-06-01", score: 2 } }`
-  - "Add to Memory" action available from: verse modal, Verse Study page, Reader verse-number popup menu
-  - No backend required; highest-engagement feature not yet on this list
-
-- [x] **C5. Nave's Topical Bible** *(effort: 1–2 weeks)*
-  - 20,000+ topic index (Orville Nave, 1896 — public domain) — the backbone of BLB and e-Sword topical tools
-  - `topical/index.html` — alphabetical browse + search across all topics
-  - Data source: `openscriptures/nave` on GitHub
-  - Storage: `data/topical/{topic-slug}.json` (topic heading + verse list)
-  - **Verse modal integration:** new "Topics" tab listing all Nave's topics that cite the current verse
-  - **VS1 integration:** same Topics data surfaces in the Verse Study sidebar
-  - Distinct from manual `topics/` pages — those are curated studies; Nave's is an exhaustive concordance-style topical index
+- [x] `reader.js` (`_loadReaderNotes`): Change the compose textarea placeholder to explicitly
+  say `"Add a chapter note for {chLabel} (click a verse number to note a specific verse)…"`
+- [x] `reader.js`: Add a small hint beneath the textarea: `"Verse-specific notes: click the
+  verse number ↑"` in `.reader-hint` muted style — links the two note-entry paths explicitly
 
 ---
 
-## Phase D — Content & Reference
+### RD-G · Cross Refs Panel — Cap on Multi-Chapter Views *(MEDIUM)*
 
-- [x] **D1. Library section — complete the confessions data** *(effort: ongoing)*
+`_loadReaderXrefs` iterates `c <= Math.min(parsed.endCh, parsed.ch + 4)` — for a whole-chapter
+view this is one chapter, but for a multi-passage lookup (`Genesis 1; Romans 8`) it could
+produce cross-refs from all chapters simultaneously, making the panel unwieldy.
 
-  ### Data structure (`data/library/`)
+- [x] `reader.js` (`_loadReaderXrefs`): Cap to the first chapter only for whole-chapter views;
+  for multi-passage lookups, show cross refs for the first group's chapter only and add a
+  note `"Showing cross-refs for {bookName} {ch}"` at the top of the panel
+- [x] Add a chip row `.reader-xref-chips` to let the user pick which loaded passage's cross-refs to show when there are multiple groups; clicking a chip reloads xrefs for that passage
+
+---
+
+### RD-H · Empty-State Guidance for Blank Load *(MEDIUM)*
+
+Separate from RD-C (which adds the resume banner for returning users). First-time visitors or
+users who've cleared history see a completely blank `#reader-results` with no affordance.
+
+- [x] `reader.js` (`initReaderLookup`): If no `?ref=` param AND no history entry, render a
+  structured empty state in `#reader-results`:
+  ```html
+  <div class="reader-empty-state">
+    <p class="reader-hint">Enter a reference above — <em>John 3:16</em>, <em>Romans 8</em>,
+    <em>Gen 1; John 1:1–14</em></p>
+    <div class="reader-quick-starts">
+      <a class="reader-qs-chip" href="?ref=John+1">John 1</a>
+      <a class="reader-qs-chip" href="?ref=Psalms+23">Psalm 23</a>
+      <a class="reader-qs-chip" href="?ref=Romans+8">Romans 8</a>
+      <a class="reader-qs-chip" href="?ref=Genesis+1">Genesis 1</a>
+      <a class="reader-qs-chip" href="?ref=Isaiah+53">Isaiah 53</a>
+    </div>
+  </div>
   ```
-  data/library/{id}.json              — the document itself
-  data/library/index.json             — metadata list (id, title, abbrev, year, type)
-  data/library/verse-index/{bookId}.json  — reverse lookup: verse → confessional citations
-  ```
-
-  Document types:
-  - `"type": "creed"` — short articles, no proof texts (Apostles', Nicene, Athanasian)
-  - `"type": "confession"` — chapters → numbered sections with proof text refs
-  - `"type": "catechism"` — numbered Q&A with proof text refs
-  - `"type": "canons"` — heads of doctrine → articles (+ rejections)
-
-  Confession JSON shape:
-  ```json
-  {
-    "id": "wcf", "title": "Westminster Confession of Faith",
-    "abbrev": "WCF", "year": 1646, "type": "confession",
-    "content": {
-      "1": {
-        "heading": "Of the Holy Scripture",
-        "sections": { "1": { "text": "…", "proofs": ["2Pet 1:19-21", "2Tim 3:16"] } }
-      }
-    }
-  }
-  ```
-
-  Catechism JSON shape (Q&A):
-  ```json
-  {
-    "id": "wsc", "title": "Westminster Shorter Catechism",
-    "abbrev": "WSC", "year": 1647, "type": "catechism",
-    "content": {
-      "1": {
-        "q": "What is the chief end of man?",
-        "a": "Man's chief end is to glorify God, and to enjoy him forever.",
-        "proofs": ["1Cor 10:31", "Ps 73:25-28"]
-      }
-    }
-  }
-  ```
-
-  Verse index shape:
-  ```json
-  // data/library/verse-index/john.json
-  { "3": { "16": [{ "doc": "WCF", "ref": "WCF 7.3", "text": "…" }] } }
-  ```
-
-  ### Documents to build (priority order)
-  - [x] Apostles' Creed (page exists)
-  - [x] Nicene Creed (page exists)
-  - [x] Athanasian Creed (page exists)
-  - [x] Heidelberg Catechism (page exists)
-  - [x] Westminster Confession of Faith (page exists)
-  - [x] Westminster Shorter Catechism (page exists)
-  - [x] Belgic Confession (1561)
-  - [x] Canons of Dort (1618–1619)
-  - [x] Westminster Larger Catechism
-  - [x] London Baptist Confession (1689)
-  - [x] Augsburg Confession (1530)
-  - [x] 39 Articles of Religion
-
-  ### Reader integration
-  - Extend input parser to recognize library refs: "WCF 4", "WSC 1", "HC 26", "Belgic 1"
-  - Reader renders library content with same Prev/Next nav and browse dropdown
-  - Browse dropdown gets a "Library" group alongside the 66 Bible books
-  - Scripture proof texts auto-linked via `.ref` system
-
-  ### Verse modal integration
-  - Add a **"Confessions"** tab (alongside Verse / Commentary / Word Study)
-  - Loads `data/library/verse-index/{bookId}.json` on demand
-  - Shows all confessional sections citing the selected verse, grouped by document
-  - Each entry links to the full section in the Reader
-  - **VS1 integration:** same data powers the Confessional Citations section in Verse Study
-
-- [x] **D2. New topic studies** *(ongoing — target: 5+ more)*
-  - Currently: Prayer, Book of Revelation (2 exist)
-  - Priority additions:
-    - Justification by Faith
-    - The Holy Spirit
-    - The Sermon on the Mount (Matthew 5–7)
-    - Romans (book study)
-    - The Psalms (overview + devotional categories)
-    - The Covenants (Biblical Theology)
-    - Christology (Person & Work of Christ)
-  - Use `scripts/new-topic.sh` for scaffolding; follow `topics/_template/index.html`
-
-- [x] **D3. Church Fathers library**
-  - Per-Father pages (Ignatius, Justin Martyr, Irenaeus, Tertullian, Origen, Chrysostom, Augustine, etc.)
-  - Key writings and quotes organized by theological topic
-  - All Scripture refs linked via `.ref` system
-  - Could reuse the Library JSON structure from D1
-  - **VS1 integration:** Father quotes for a verse surface in the Church Fathers section of Verse Study
-
-- [x] **D4. Bible dictionary / glossary**
-  - Theological term definitions (propitiation, sanctification, covenant, imputation, etc.)
-  - Biblical character profiles
-  - Place name guide
-  - Data source: ISBE (International Standard Bible Encyclopaedia, 1915) — public domain
-  - Storage: `data/dictionary/{term-slug}.json`
-  - Integration: hover over a `<span class="term">` → definition tooltip; standalone `dictionary/index.html`
-  - **VS1 integration:** Dictionary Terms section highlights theological terms in the focal verse text
-
-- [x] **D5. Book introductions & outlines** *(effort: 1–2 weeks)*
-  - Per-book intro for all 66 books: author, date written, purpose, key themes, structural outline
-  - Outline uses section-level labels with verse ranges (e.g., "Matthew 5–7: Sermon on the Mount") — each section links directly to the Reader at that chapter
-  - **Historical timeline strip** — each book intro includes an estimated date range and a mini-timeline showing 1–2 significant biblical events immediately preceding and following the book, so the reader can place it in redemptive-historical context at a glance
-    - Example for Ruth: `← Judges period (oppression & cycles) · Ruth (~1100 BC) · Early Monarchy (Samuel, Saul) →`
-    - Example for Galatians: `← Paul's 1st Missionary Journey (Acts 13–14) · Galatians (~AD 48) · Jerusalem Council (Acts 15) →`
-    - Events link to relevant Reader passages; dates sourced from standard evangelical chronology (public domain)
-    - Data shape: `"timeline": { "date": "~1100 BC", "before": [{ "label": "Judges period", "ref": "Judges 2:16" }], "after": [{ "label": "Early Monarchy", "ref": "1 Samuel 1:1" }] }`
-  - Data: static JSON `data/books/introductions/{bookId}.json`; text sourced from ISBE (1915) + Easton's (public domain)
-  - Displayed in the Reader sidebar (collapsible) when viewing any chapter of that book
-  - Also accessible at `books/{bookId}/index.html` as a standalone reference page
-  - Missing from every major free web tool — genuine differentiator for book-study users
-  - **Dependency note:** F12 (Chapter 0 navigation) is the UI wire-up for this data; F12 can ship
-    with placeholder intros before D5 data is complete, but D5 must finish for Chapter 0 to be useful
-
-- [x] **D6. Spurgeon's Morning and Evening devotionals** *(effort: 2–3 days)*
-  - Public domain daily devotional (C.H. Spurgeon, 1865) — 365 morning + 365 evening entries
-  - Each entry keyed to a Bible verse; surfaces in Verse Study for relevant verses
-  - Data: `data/devotionals/spurgeon-morning.json` + `data/devotionals/spurgeon-evening.json` (keyed by `MM-DD`)
-  - `devotionals/index.html` — browse today's entry or navigate by date
-  - Source: CCEL.org plain text files; public domain
-  - Complementary to D7 (VOTD) and C3 (reading plans)
-
-- [x] **D7. Verse of the Day** *(effort: 2–4 hours)*
-  - Home page widget showing today's featured verse with full tooltip/modal on hover/click
-  - Implementation: static `data/votd.json` — curated list of 365 verse refs; selected by `dayOfYear % 365`
-  - No API dependency, no backend, no CORS — consistent with the static-first design; works offline after B4
-  - Natural companion to D6 (Spurgeon) and C3 (reading plans); high daily-return engagement
+- [x] `reader.css`: `.reader-empty-state` — centered, `padding:2rem 0`; `.reader-qs-chip` —
+  same style as `.daily-passage-chip` (outlined pill links)
 
 ---
 
-## Phase E — Visual & Historical Tools
-
-- [x] **E1. Bible timeline** *(complete)*
-  - Interactive horizontal-scroll SVG timeline at `timeline/index.html`
-  - Era filter buttons, event search, clickable event cards linking to Reader
-  - Implemented in `assets/js/timeline.js` + `assets/css/timeline.css`
-  - Data: `data/timeline/events.json`
-
-- [x] **E2. Biblical geography maps** *(complete)*
-  - Five SVG maps at `maps/index.html`: Holy Land (NT), Paul's Journeys, Exodus Route,
-    Divided Kingdom, Ancient Near East
-  - Clickable city dots open detail panels with description + ref links
-  - Implemented in `assets/js/maps.js` + `assets/css/maps.css`
+*(RD-I claimed — see working/inprogress-rdm-todo.md)*
 
 ---
 
-## Phase F — Polish
+### RD-J · Attribution Line — Suppress for Single-Verse Results *(LOW)*
 
-- [x] **F0. Core accessibility audit** *(closed — not pursuing a formal audit)*
-  - Decision: not doing a formal WCAG audit pass; known gaps handled individually (L1 for contrast, L4 for mobile font scaling)
+The attribution line (`"Berean Standard Bible…"`) appears after every result group including
+single-verse lookups like `John 3:16`. For a one-liner verse, the attribution takes up nearly
+as much vertical space as the verse itself.
 
-- [x] **F1a. Keyboard-only navigation audit** *(closed — not pursuing)*
-  - Decision: no structured keyboard audit planned; individual issues fixed as encountered
-
-- [x] **F1. Dark mode toggle**
-  - CSS custom properties are already structured for it (all colors via `--color-*` variables)
-  - Toggle button in header, preference saved to `localStorage` key `bsw_theme`
-  - `prefers-color-scheme` media query as the default, manual toggle overrides it
-
-- [x] **F2. Copy / Share verse** *(effort: 1–2 hours)*
-  - One-click copy button in the verse modal, Reader verse-number popup menu, and Verse Study page
-  - Default format: `"For God so loved the world…" — John 3:16 (BSB)`
-  - Optional formats selectable via a small dropdown: Plain text | Markdown blockquote | Academic citation (`John 3:16, Berean Standard Bible, 2022`)
-  - Implementation: `navigator.clipboard.writeText()`; `execCommand('copy')` fallback for older browsers
-  - Universal expectation; currently absent from the entire site
-
-- [x] **F3. Text accessibility controls** *(effort: 3–4 hours)*
-  - Font size control in Reader and Verse Study: Small / Medium / Large / XL
-  - Preference saved to `localStorage` key `bsw_fontsize`; applied via CSS custom property `--reader-font-size`
-  - `reader.css` already uses `--reader-font-size`; needs a toggle UI and localStorage wiring
-  - Optional: serif / sans-serif toggle (Georgia default vs. system-ui)
-  - Critical for older users and mobile reading comfort
-
-- [x] **F4. Read history / recently viewed** *(effort: 2–3 hours)*
-  - Last 10 passages viewed in the Reader saved to `localStorage` key `bsw_history`
-  - Each entry: `{ ref: "John 3", version: "BSB", timestamp: … }`
-  - Displayed in sidebar (collapsible "Recently viewed" group) or home page "Continue reading…" widget
-  - Shown as "John 3 · BSB · 2 days ago" with a direct link back to the Reader
-
-- [x] **F5. Print-friendly chapter view** *(effort: 2–4 hours)*
-  - "Print this chapter" button in Reader toolbar
-  - Applies `@media print` styles: hide sidebar, nav, cross-ref panel; full-width verse text, clean margins, page break handling
-  - Some print CSS already exists in stylesheets; needs a dedicated button and a layout audit pass
-  - Important for physical Bible study groups and sermon prep
-
-- [x] **F6. Structured citation format** *(effort: 1–2 hours)*
-  - "Cite" button in verse modal and Verse Study page
-  - Copies the verse in a selectable academic format:
-    - Short: `John 3:16 (BSB)`
-    - Long: `John 3:16, Berean Standard Bible (2022)`
-    - MLA-style: `"For God so loved…" Holy Bible, Berean Standard Bible, 2022, John 3:16.`
-  - Distinct from F2 (which copies verse text + ref); this copies a citation string only
-  - Useful for sermon notes, academic papers, Bible study handouts
-
-- [x] **F7. Read history / "Continue Reading" home widget** *(effort: 2–3 hours)*
-  - Record the last 20 passages viewed in the Reader to `localStorage` key `bsw_history` as
-    `{ ref: "John 3", version: "BSB", ts: <timestamp> }` — push on each `initReader` call,
-    deduplicate by `ref`, trim to 20 entries; logic in `bible.js` alongside existing localStorage helpers
-  - Home page (`index.html`) gains a fourth `daily-card` section labelled "Continue Reading";
-    rendered by a new `initHistoryWidget()`; shows last 3 entries with ref text, version badge,
-    and relative time label produced by the existing `_noteRelTime()` utility already in `bible.js`
-  - Each entry links directly to `read/index.html?ref=…` — no new URL format required
-  - Widget hidden entirely if `bsw_history` is empty (first-visit) — no placeholder clutter
-  - CSS: one `.daily-card--history` modifier in `daily.css`; reuses existing `.daily-card` shell
-  - **F4 dependency:** F4 and F7 share the same storage write; implementing both together is efficient
-
-- [x] **F8. Keyboard shortcuts help overlay** *(effort: 2–4 hours)*
-  - Several keyboard shortcuts exist (j / → next chapter, k / ← prev, Ctrl+K search jump) but
-    are completely undiscoverable unless the user reads the source code
-  - Press `?` anywhere outside an input field → open a modal overlay listing all active shortcuts
-    grouped by context (Global / Reader / Verse Study); wire in existing `initReaderKeyboard()` and
-    the VS init block using the same `keydown` pattern already throughout `bible.js`; skip if
-    `document.activeElement` is `input`, `textarea`, or `select`
-  - Dismiss with `Escape` or a close button; reuses existing `.bsw-modal-backdrop` and
-    `trapFocus()` logic from `openModal()`
-  - Add a small `?` icon button in the Reader browse bar (next to `.reader-browse-hint`) so
-    mouse users can discover it too
-  - No new CSS file needed; a `.bsw-shortcuts-overlay` block in `bible-ui.css` is sufficient
-
-- [x] **F9. Service worker update toast** *(effort: 2–3 hours)*
-  - The SW currently calls `SKIP_WAITING` immediately on `updatefound` → `statechange`, silently
-    activating a new cache version; the user's open tab serves stale JS/CSS until they manually reload
-  - Change the handler so that instead of calling `SKIP_WAITING` immediately, it shows a
-    non-blocking toast: "A new version is available — **Reload**"
-  - Clicking "Reload" sends `SKIP_WAITING` to `reg.waiting`, then listens for
-    `navigator.serviceWorker.controllerchange` and calls `location.reload()`; auto-dismiss after 30s
-  - Toast: `<div id="bsw-sw-toast" class="bsw-sw-toast" hidden>` injected by `initPWA()` in
-    `bible.js`; CSS in `bible-ui.css`; must not appear on first install (existing
-    `if (navigator.serviceWorker.controller)` guard covers this)
-  - The `sw.js` message handler that responds to `SKIP_WAITING` is already present — no SW changes needed
-
-- [x] **F10. Open Graph / Twitter Card meta tags** *(effort: 3–5 hours)*
-  - All `?ref=` URLs in `read/`, `verse-study/`, and `compare/` produce blank link previews when
-    shared to Slack, iMessage, or social media — no `<meta property="og:*">` tags exist anywhere
-  - Add `_setOGMeta(title, description, url)` helper in `bible.js` that creates/updates OG + Twitter
-    meta tags in `document.head`; call after verse/chapter renders in each affected page
-    - Reader: title `"John 3 — Bible Reader"`, description = first verse of displayed passage
-    - Verse Study: title `"John 3:16 — Verse Study"`, description = focal verse text
-    - Compare: title `"John 3:16 — All Translations"`
-  - Add static default OG tags to `<head>` of each of those three HTML files as a baseline for
-    crawlers that do not execute JS; JS overrides them once content loads
-  - No new data files; ~30 lines of JS + 4 `<meta>` tags per HTML page
-
-- [x] **F11. Reader opens to daily verse when no reference is given** *(effort: 1–2 hours)*
-  - Currently navigating to `read/index.html` with no `?ref=` parameter shows a blank or default state
-  - On load, if no `ref` query param is present, derive today's verse from the same logic that
-    powers the Verse of the Day widget (D7): `data/votd.json` keyed by `dayOfYear % 365`
-  - Navigate the Reader to that verse's chapter and highlight the verse, exactly as if the user
-    had typed the ref manually — gives every session a natural starting point
-  - **Dependency:** D7 (VOTD data) must be built first; until then, fall back to a hardcoded
-    welcome verse (e.g., Psalm 119:105) as a placeholder
-
-- [x] **F12. End-of-book navigation: Chapter 0 introduction + in-reader book metadata button** *(effort: 1–2 days)*
-
-  ### Chapter 0 — Book Introduction as a navigable chapter
-
-  Each book has a "Chapter 0" that is its full introduction (the content produced by D5):
-  author, date, purpose, key themes, structural outline with linked verse ranges, and the
-  historical timeline strip. This makes the introduction a first-class stop in the reading flow,
-  not a sidebar afterthought.
-
-  **Navigation behavior:**
-  - When on the last chapter of a book, pressing Next (or keyboard shortcut) loads **Chapter 0
-    of the next book** — the full D5 introduction — before dropping the reader into Chapter 1
-  - After reading Chapter 0, Next continues to Chapter 1 of that book
-  - When on Chapter 1 of a book, pressing Prev navigates to Chapter 0 of the same book (the
-    intro), then further Prev goes to the last chapter of the preceding book
-  - Wrap-around: past Revelation Chapter 0 returns to Genesis Chapter 0; Prev from Genesis
-    Chapter 0 wraps to Revelation's last chapter
-  - URL: `read/index.html?ref=Genesis.0` — Chapter 0 is a real addressable route; the Reader
-    already parameterizes by ref; `ch === 0` triggers intro rendering instead of verse fetch
-
-  **Chapter 0 rendering:**
-  - Full D5 content rendered in the main reading pane (not the sidebar): title, author block,
-    date/occasion, key themes as a bulleted list, structural outline with verse-range links,
-    historical timeline strip (inline horizontal on wide, vertical on mobile)
-  - Styled consistently with the Reader's existing prose; scripture refs in the outline use the
-    standard `.ref[data-ref]` pattern so they open tooltips on hover
-  - A prominent "Begin Reading →" button at the bottom loads Chapter 1
-  - No verse-level tools (no highlights, no notes per verse) on Chapter 0 — but a single
-    "Bookmark this book" action is available
-
-  **Data:** reads from `data/books/introductions/{bookId}.json` (defined by D5); F12 is the UI
-  wire-up — D5 is the data creation task. F12 can ship with placeholder intros and be filled
-  in as D5 progresses.
-
-  ### In-reader book metadata button
-
-  While reading any numbered chapter, a **"Book Info"** toggle button appears in the Reader
-  browse bar alongside the existing Parallels and Interlinear buttons.
-
-  - Clicking it expands a collapsible panel immediately above the verse list (same slide-down
-    pattern as the existing commentary panel) showing a condensed summary of the D5 data:
-    author, date, ~2-sentence purpose statement, and a mini timeline strip
-  - A "Full Introduction →" link at the bottom of the panel navigates to Chapter 0
-  - State is not persisted — panel collapses on chapter navigation (same behavior as Interlinear)
-  - No new CSS file; `.reader-bookinfo-panel` block added to `bible-ui.css`; button uses the
-    existing `.reader-tool-btn` class already applied to Parallels and Interlinear toggles
-
-- [x] **F13. Asset optimisation** *(stub — needs scoping before work begins)*
-  - No image optimisation has been done; any PNG/JPG assets should be WebP; SVGs should be
-    cleaned of editor metadata; total page weight impact is unknown
-  - Needs to determine: which assets exist, their current sizes, and whether WebP conversion
-    or SVG minification would produce meaningful savings on the target audience's devices
-
-- [x] **F14. Data compression and lazy-loading strategy** *(stub — needs scoping before work begins)*
-  - Commentary JSON files are large and currently loaded eagerly; no gzip or lazy-load strategy
-    is in place; the ~43 MB total cache could be reduced significantly with compression
-  - Commentary excluded from PRECACHE_BIBLE background download (~74 MB savings); now lazily
-    cached on first access via DATA_CACHE_V cacheFirst strategy
-
-- [x] **F15. Empty state UX** *(complete)*
-  - Upgraded Notes, Bookmarks, and Memorize empty states to use reusable `.bsw-empty-state`
-    component (glyph + title + description + CTA link); component defined in `bible-ui.css`
-
-- [x] **F16. LocalStorage migration and data versioning** *(complete)*
-  - Added `BSW_STORAGE_V` version constant and `_runStorageMigrations()` runner in `bible.js`
-  - `init()` calls migrations on every page load; schema registry documents all localStorage keys
-  - Migration v0→v1 calls existing `_migrateOldNotes()`; future versions extend the chain
-
-- [x] **F17. Service worker cache invalidation strategy** *(complete)*
-  - Rewrote `sw.js` with split cache strategy: `APP_CACHE_V` (HTML/CSS/JS) vs `DATA_CACHE_V` (JSON)
-  - Either cache can be bumped independently; activate handler deletes all other caches on update
-  - Full rollback procedure documented in header comment block
+- [x] `reader.js` (`doLookup`): Set `attrEl.hidden = g.ref.v && !g.ref.endV` — hide
+  attribution when the lookup is a single verse (verse specified, no range). Keep it visible
+  for chapter views and ranges where attribution is appropriate context.
 
 ---
 
-## Phase G — Search Quality *(priority: medium — high daily-use impact)*
+### RD-K · Mobile Browse Bar — Hide Keyboard Hint *(LOW)*
 
-The search engine is accurate but presents results in canonical Bible order with no relevance
-ranking, no scope filtering, and no session memory. These three items address that incrementally;
-each is independently shippable.
+`.reader-browse-hint` (`"j / → next chapter · k / ← prev"`) is visible on mobile where
+keyboard navigation is impossible.
 
-- [x] **G1. Relevance-ranked search results** *(complete)*
-  - Results currently sort by canonical book/chapter/verse order regardless of match quality
-  - A `computeTextSimilarity()` function already exists in `bible.js` (~lines 607–638) but is not
-    called from `handleSearchInput()`
-  - Add a `score` field to each result: exact phrase match → 100; all words present → Jaccard
-    similarity via `computeTextSimilarity()`; partial match → 0
-  - Sort `allResults` by `score DESC`, canonical order as tiebreaker
-  - Add a "Sort: Relevance | Bible order" toggle next to the `.search-mode-btn` row;
-    preference saved to `localStorage` key `bsw_search_sort`
-  - No new data files; all logic changes are in `bible.js`
-
-- [x] **G2. Search scope filters (Testament / Book)** *(complete)*
-  - Users studying a specific book or testament have no way to constrain results today
-  - Add a collapsible "Filter ▾" row below search mode buttons (collapsed by default)
-  - Controls: `All | Old Testament | New Testament` toggle buttons; a Book `<select>` populated
-    from `metaBooks` (disabled when a Testament filter is active)
-  - `booksToSearch` in `handleSearchInput()` gains a `.filter()` call gated on active filter state;
-    the Strong's search `handleStrongsSearch()` respects the same Testament control
-  - Filter state is session-only variables (not persisted to localStorage)
-  - Status line update: "Searching Old Testament… (18 / 39 books)"
-
-- [x] **G3. Search history (recent queries)** *(complete)*
-  - Save last 10 distinct non-empty queries to `localStorage` key `bsw_search_history` (push on
-    submit, deduplicate, trim to 10)
-  - On focus of `#bsw-search-input` when empty, show a small dropdown of recent queries below
-    the input (`.search-history-dropdown`); dismiss on blur or when user types
-  - Each history item is a clickable chip that sets the input value and triggers search
-  - "Clear history" link at the bottom removes the key from localStorage
-  - No dependencies on G1 or G2; ships independently
-  - CSS: `.search-history-dropdown` + `.search-history-chip` in `bible-ui.css`
-
-- [x] **G4. Search results: book-grouped bubble/chip layout** *(complete)*
-  - Current results render as a flat list of verse rows sorted by book order; this is functional
-    but dense and hard to scan at a glance
-  - Replace with a grouped-by-book layout, styled similarly to the interlinear word-token grid:
-    each book is a section heading followed by a row of verse chips, where each chip shows the
-    first 10–15 words of the verse in a rounded bubble
-  - Page width: expand the search results container to use more horizontal space (currently narrow);
-    chips can wrap naturally so each book's row fills the available width
-  - **Chip interaction:**
-    - Hovering a chip shows the standard verse tooltip (existing `openTooltip()` behavior)
-    - Clicking a chip opens the verse modal (`openModal()`) — identical to hovering/clicking a
-      `.ref` link anywhere else on the site
-  - **Chip shape:**
-    ```html
-    <span class="search-chip" data-ref="Romans 3:23">
-      <span class="search-chip__ref">Romans 3:23</span>
-      <span class="search-chip__preview">for all have sinned and fall…</span>
-    </span>
-    ```
-  - Results count and the "Sort: Relevance | Bible order" toggle (G1) remain above the grouped list
-  - CSS: `.search-results-book-group`, `.search-chip`, `.search-chip__ref`, `.search-chip__preview`
-    in `bible-ui.css`; chip width ~200–240px; truncate preview text with `text-overflow: ellipsis`
-
-- [x] **G5. Strong's: English keyword → code lookup** *(complete)*
-  - Implemented as the Word Studies section of the new Explore tab (`_exploreWords` in `bible.js`)
-  - User types an English word (e.g., "love") → live scan of `greek.json` + `hebrew.json` gloss
-    and lemma fields; returns up to 12 matching Strong's chips showing code, lemma, and gloss
-  - Clicking a chip populates the search input with the code and switches to Verse Search tab,
-    triggering the existing concordance view — no new verse-fetch logic needed
-  - Strong's codes typed directly (G3056, H1697) still auto-detect in both tabs; in Explore they
-    render a single card with the full entry + "See all occurrences →" button
-  - No pre-built index file needed — live scan is fast enough since `greek.json` + `hebrew.json`
-    are already cached after first Verse Search usage
-
-- [x] **G6. Omni-search / Explore tab** *(complete — supersedes original G6 scope)*
-  - `search/index.html` redesigned as two-tab layout: "Verse Search" (fast, verse-only,
-    auto-detects G/H codes) and "Explore" (omni, all content types in parallel)
-  - Explore tab runs 5 sub-searches concurrently: Verses (top 20 chips + "See all N →"),
-    Word Studies (Strong's gloss chips or code card), Topics (Nave's topic chips + curated
-    study guide excerpts), Dictionary (Easton's + Smith's + Hitchcock's Names), Library (index match)
-  - Filter pills (All / Verses / Words / Topics / Dictionary / Library) toggle section visibility
-    without re-running search
-  - URL params: `?q=` (verse), `?s=` (Strong's), `?e=` (explore) — all shareable
-  - Explore tab placeholder text updated: "e.g. grace, G3056, propitiation, Galatians"
+- [x] `reader.css`: Add `@media (max-width: 700px) { .reader-browse-hint { display: none; } }`
 
 ---
 
-## Phase H — Notes & Highlights UX *(priority: medium)*
+### RD-L · Compare Mode — Per-Verse Row Locking *(HIGH)*
 
-The notes system has a solid data model but the `notes/index.html` page is minimal and
-the highlight system is single-color. These three items improve daily usability.
+**Problem:** Both compare columns render as independent flowing text. Since verse lengths
+vary between translations, the two columns fall out of vertical sync — if verse 3 in version A
+takes two lines but version B's verse 3 takes four, every verse after that appears at a
+different vertical position in each column. The comparison becomes unusable for detailed
+textual study. The root cause is the current DOM structure: each column is a `<p>` with
+consecutive `<span class="reader-verse">` children — two independent text flows with no shared
+row relationship.
 
-- [x] **H1. Multi-color highlights** *(effort: 3–5 hours)*
-  - Currently `toggleHighlight()` stores `highlight: true/false` and only renders yellow
-  - Replace with `highlight: "yellow" | "green" | "blue" | "pink" | false`; `bsw_notes_v2`
-    gains an optional `"color"` field on each entry; backward compatible (`true` treated as yellow)
-  - Verse-number popup "Highlight" action becomes a 4-swatch color palette (16×16px CSS squares);
-    clicking a swatch calls `toggleHighlight(refStr, color)`; same color re-clicked toggles off
-  - Reader renders highlighted rows with a left border matching the active color:
-    `--highlight-yellow`, `--highlight-green`, `--highlight-blue`, `--highlight-pink` CSS custom
-    properties added to `:root` in `style.css`
-  - `notes/index.html` badge gains the color name; `.notes-item--highlighted` gains four modifier classes
+**Fix:** Replace the two flowing columns with a per-verse CSS grid where each verse number
+occupies one explicit grid row, shared across both columns. Row height is set by whichever
+cell is taller — both cells for verse N are always vertically aligned.
 
-- [x] **H2. Notes search and filter** *(effort: 2–4 hours)*
-  - `notes/index.html` currently renders `Object.keys(notes).sort()` with no search or filter
-  - Add a search input above the export buttons; filters the rendered list in real-time using
-    `element.textContent.toLowerCase().includes(q)` — no fetch needed (all notes in localStorage)
-  - Filter chips: `All | Highlighted | Notes only`; uses CSS class toggling, not re-render
-  - Sort control: `Ref order | Most recent | Oldest` — uses the `created` timestamp field already
-    present in every `bsw_notes_v2` entry
-  - Results count badge: "Showing 12 of 47 annotated verses"
-  - All logic is inline `<script>` in `notes/index.html` following the existing render pattern
-
-- [x] **H3. Notes backup / restore (import JSON)** *(effort: 2–3 hours)*
-  - The page has "Export JSON" but no import path; a user who clears storage or switches devices
-    loses everything — the most serious data-loss risk in the current design
-  - Add "Import from backup" button; clicking it opens a `<input type="file" accept=".json">`
-    file picker (triggered via `.click()` — no visible input element)
-  - Read via `FileReader.readAsText()`, parse JSON, validate shape, merge into `bsw_notes` without
-    overwriting existing entries unless user checks a "Replace existing" checkbox
-  - `bsw_notes_v2` import: validate required fields; assign new `id` values; deduplicate by
-    `(bookId, ch, v, text)` fingerprint
-  - Show a summary toast after import: "Imported 34 notes, 12 highlights. 3 duplicates skipped."
-  - Entirely client-side `FileReader` API; no server communication
-
-- [x] **H4. Verse tagging for personal organisation** *(deferred — superseded by note export/import and Drive backup; tag filter is out of scope for now)*
-  - Users have no way to organise their notes and highlights beyond the existing filter chips
-    (All / Highlighted / Notes only); a tagging system would let them build a personal topical
-    index (e.g., #prayer, #promise, #warning, #sermon-notes)
-  - Needs to determine: how tags are stored (extend `bsw_notes_v2` schema with a `tags: []`
-    field), where tags are added and edited (inline in the notes page vs. in the verse popup),
-    whether tags are free-text or chosen from a managed list, and how tag filtering interacts
-    with the existing search and filter UI in H2
-  - Related to I5 (memory verse tags) — consider a unified tagging system across both features
-
----
-
-## Phase I — Advanced Content *(builds on existing data and infrastructure)*
-
-- [x] **I1. Catechism reading plans** *(complete)*
-  - Reading plans exist for Bible reading but not for the catechisms in `library/` — a gap given
-    that the Heidelberg Catechism (52 Lord's Days) and Westminster Shorter Catechism (107 Q&As)
-    are structured for systematic reading
-  - Add two new plan files using the exact existing plan JSON shape:
-    - `data/plans/heidelberg-weekly.json` — 52 entries, one per Lord's Day:
-      `{ "day": 1, "label": "Lord's Day 1", "questions": [1, 2], "href": "../../library/heidelberg-catechism/#ld1" }`
-    - `data/plans/wsc-quarterly.json` — 13 weeks × ~8 Q&As; same shape
-  - Register both in the plan-selector dropdown in `plans/index.html` and home page `#daily-plan-select`
-    using existing `_plansGetState()` / `_plansDayNum()` infrastructure in `bible.js`
-  - "Read" links navigate to `library/` anchors rather than the Bible Reader
-  - Progress tracked in `bsw_plans` localStorage key — same key, same shape, zero migration needed
-  - Add both new JSON files to `SHELL_URLS` in `sw.js` for offline support
-
-- [x] **I2. Library cross-document search** *(effort: 4–6 hours)*
-  - Eleven library documents exist but there is no way to search across them; a user wondering
-    "where do the confessions address the Lord's Supper?" must open each document individually
-  - Build a `scripts/build-library-index.py` script that scrapes the 11 library HTML pages and
-    emits `data/library/search-index.json`:
-    ```json
-    [
-      { "doc": "WCF", "docSlug": "westminster-confession",
-        "section": "29.1", "heading": "Of the Lord's Supper",
-        "text": "Our Lord Jesus, in the night wherein he was betrayed…" }
-    ]
-    ```
-  - Add a search input to `library/index.html` above the document grid; on input, fetch
-    `data/library/search-index.json` (cached after first load), filter client-side, render results
-    as `doc · section — heading` cards with matched phrase highlighted via existing `highlightMatch()`
-  - Each result links to `library/{docSlug}/index.html#{section-anchor}`
-  - The index file is small (~200 KB total for all 11 documents); committed and updated manually
-    when document content changes
-
-- [x] **I3. Morphology parse code decoder** *(effort: 3–5 hours)*
-  - Interlinear display (C2) and word study panel (B2) show parse codes verbatim (`V-AOR-ACT-IND-3S`,
-    `Piel-PERF-3MS`) — meaningful only to readers who already know Greek or Hebrew grammar,
-    defeating the purpose of providing interlinear data to lay students
-  - **Part 1 — data:** extend the interlinear build script to include a `"m"` (parse code) field in
-    each token; update `data/interlinear/*.json` (66 files); target token shape:
-    `{ "s": "G25", "text": "loved", "m": "V-AAI-3S" }`
-  - **Part 2 — decoder:** add `expandMorphCode(code)` in `bible.js` with inline look-up tables
-    (~60 entries each for Greek and Hebrew); maps abbreviated segments to plain English:
-    `"V-AAI-3S"` → `"Verb — Aorist Active Indicative — 3rd Person Singular"`
-  - Wire into `_vsRenderWordPanel()` (pass `match.m` as the `morph` arg instead of `null`) and
-    into `_riShowPopover()` in the interlinear grid popover
-  - Display as a two-line block: abbreviated code on top, plain-English expansion below in muted text
-  - Look-up tables are small enough to inline in `bible.js` — no new data file needed for Part 2
-
-- [x] **I4. Verse sharing / image card generator** *(effort: 5–8 hours)*
-  - F2 (planned) handles plain-text clipboard copy; a shareable image card — verse text + reference
-    in a designed layout, downloadable as PNG — is a qualitatively different and high-engagement
-    sharing vector; no backend required (HTML Canvas API)
-  - Add a "Share as image" action to the verse modal action bar and to the Verse Study page header
-  - On click, open a canvas-based preview overlay (`.bsw-share-overlay`):
-    - 1200×630 px canvas (standard OG image size)
-    - 2–3 design presets (Light parchment / Dark slate / Minimal white) selectable via radio buttons
-    - Verse text drawn with `ctx.fillText()` using a serif font; reference + version badge smaller below
-    - "Download PNG" button: `canvas.toDataURL('image/png')` → temp `<a download="verse.png">` → `.click()` → `.remove()`
-  - Font: load a ~40 KB base64-encoded Latin subset of a free serif (e.g., Crimson Text) via
-    `FontFace` API before drawing — needed for consistent rendering across devices
-  - CSS: `.bsw-share-overlay`, `.bsw-share-canvas`, `.bsw-share-preset-row` in `bible-ui.css`
-  - **Dependency:** F2 (copy verse) should ship first as it establishes the action bar UI pattern
-
-- [x] **I5. Memory verse tags and Anki export** *(effort: 3–5 hours)*
-  - The memory system (`bsw_memory`) is a flat object with no organization; users memorizing verses
-    across multiple sermon series, books, and themes have no way to filter or group them
-  - Add optional `tags: ["string"]` array to each `bsw_memory` entry — backward compatible,
-    no migration needed (entries without `tags` treated as `[]`)
-  - Browse panel in `memorize/index.html`: tag filter chips showing all tags in use; a "+" button
-    and inline text input to add tags to any verse; tags normalized to lowercase-kebab-case
-  - Review session scoping: `"Review: All | [tag]"` selector limits `_memIsDue()` checks to entries
-    matching the selected tag
-  - **Anki export:** "Export for Anki" button produces a `.txt` file in tab-separated format
-    (`Front\tBack\n`) where Front = reference, Back = verse text fetched from the active cached version
-    via `loadBook()`; download via `<a download>` pattern; works fully offline with cached data
-
----
-
-## Phase J — Word Cloud *(priority: low — exploratory / visual)*
-
-- [x] **J1. Most-common-words word cloud** *(complete)*
-  - SVG spiral word cloud at `wordcloud/index.html`; linked from main nav
-  - Pre-computed frequency data in `data/wordcloud/frequencies.json` (generated by
-    `scripts/generate-wordcloud.py`); 250 meaningful lemmas, ~56 KB
-  - Stop-list filters 40+ Greek/Hebrew function words (conjunctions, prepositions, pronouns)
-  - "Hide/Show names" toggle controls proper nouns (Israel, David, Jesus, etc.)
-  - Scope filter buttons: Whole Bible / OT / NT / Law / History / Poetry / Prophecy /
-    Gospels / Epistles / Revelation — all client-side, instant re-render
-  - Click any word → detail panel with lemma, Strong's ID, occurrence count,
-    per-genre frequency bars, and link to Word Study page
-  - Pure-JS Archimedean spiral layout; canvas text measurement; log-scale font sizing;
-    Hebrew words in warm (amber/rust) tones, Greek in cool (teal/indigo) tones
-  - Implemented in `assets/js/wordcloud.js` + `assets/css/wordcloud.css`
-
----
-
-## Phase K — Bible Version Expansion via API *(priority: medium)*
-
-- [x] **K1. Add public-domain versions from wldeh/bible-api** *(complete — fetch script written, versions.json updated; run `python3 scripts/fetch-versions.py` to download data)*
-
-  The `wldeh/bible-api` (<https://github.com/wldeh/bible-api>) provides structured JSON for many
-  translations. Public-domain versions can be downloaded, committed to `data/bible/`, and served
-  offline like the existing four.
-
-  **Versions to commit locally (public domain — no redistribution restriction):**
-  | ID | Name | Year | Attribution required |
-  |----|------|------|----------------------|
-  | YLT | Young's Literal Translation | 1898 | None |
-  | DBY | Darby Translation | 1890 | None |
-  | GNV | Geneva Bible | 1599 | None |
-  | AKJV | American King James Version | ~2000 | None |
-  | WEBBE | World English Bible British Edition | 2000 | None |
-
-  **Process:**
-  1. Review `wldeh/bible-api` data schema; write `scripts/fetch-versions.py` to pull and reformat
-     each version into `data/bible/{VERSION}/{bookId}.json` matching the existing shape
-  2. Commit new version directories; add entries to `data/versions/versions.json`
-  3. Add new paths to `SHELL_URLS` in `sw.js` (tier-2 cache — pre-fetch after first load, not
-     during install, since each version adds ~10–12 MB)
-  - **UI:** no version-picker code changes needed — it already reads `versions.json` dynamically
-
----
-
-## Phase L — Accessibility & Internationalisation *(stub phase — all items need scoping)*
-
-All items in this phase are stubs. They were identified as gaps during a gap analysis but have
-not yet been researched or scoped. Do not begin work on any item until it has been expanded
-from stub form with concrete implementation details.
-
-- [x] **L1. High-contrast mode — WCAG AA contrast audit and CSS fixes** *(complete)*
-
-  ### Pass 1 — `style.css` color variable audit
-  - Wrote `scripts/check-contrast.py`: checks all 35 semantic color pairs in light + dark mode against WCAG AA thresholds
-  - Found and fixed 6 variable-level failures:
-    - `--color-accent` (#b8860b → #8c6a00): all `<a>` and `.ref` link text; 3.07:1 → 4.74:1
-    - `--sb-muted` light (#9a8060 → #a08a68): sidebar secondary text; 4.18:1 → 4.69:1
-    - `--sb-muted` dark (#7a6a55 → #9e8a6e): sidebar secondary text; 3.70:1 → 5.82:1
-    - `.sb-sublabel` (#6a5540 → #9a7a50): sidebar section divider labels; 2.21:1 → 3.91:1
-
-  ### Pass 2 — Dark mode button systemic fix
-  - Root cause: `--color-primary` is golden yellow (`#e8c87a`) in dark mode — correct for text,
-    but 53 button/badge rules across 14 CSS files used it as a button *background* with `color: #fff`,
-    producing ~1.5:1 contrast (white text on golden yellow)
-  - Added `--color-on-primary: #fff` (light) / `#1a1208` (dark) to `style.css`
-  - Replaced all 53 `color: #fff` occurrences inside `background: var(--color-primary)` blocks
-    across `bible-ui.css`, `daily.css`, `devotionals.css`, `dictionary.css`, `maps.css`,
-    `memorize.css`, `reader.css`, `timeline.css`, `topic-guide.css`, `topic-shell.css`,
-    `topical.css`, `verse-study.css`, `word.css`, `wordcloud.css`
-
-  ### Pass 3 — Full site survey (HTML inline styles + remaining CSS)
-  - Audited every HTML `<style>` block and all remaining CSS for `color: #fff` on primary-colored
-    backgrounds with no dark mode override; found and fixed:
-    - `plans/index.html` — `.plan-btn--primary` (reading plan enroll/drop buttons)
-    - `journal/index.html` — `.journal-btn--primary`, `.journal-filter-chip--active`
-    - `notes/index.html` — 4 primary-bg buttons (save, add, bulk-add, tag filter chip)
-    - `compare/index.html` — `.cmp-lookup__btn`
-    - `offline.html` — `.offline-link:hover`
-    - `topic-shell.css` — topic page header: `.site-title`, `.site-nav a`, active/hover nav
-      actions, sidebar toggle, nav-panel button; all swapped from `color: #fff` to
-      `color: var(--color-on-primary)`; rgba-white overlays swapped to rgba-black so
-      hover states darken rather than lighten in dark mode
-    - `daily.css` — `.daily-read-all:hover` (hover was overriding fixed base), `.daily-notif-banner button`
-    - `study-nav.css` — back-to-top FAB: `--sn-gold` (#a48330) + white was 3.57:1 in both modes;
-      changed to `color: var(--sn-text)` (#1d140a) → 5.09:1
-    - `bible-ui.css` — SW update toast: container uses `--color-text` as bg (becomes light cream
-      in dark mode); added dark mode override keeping toast dark, fixing invisible dismiss button
-
-  ### Verification
-  - All 35 pairs in `scripts/check-contrast.py` pass WCAG AA
-  - Re-run `python3 scripts/check-contrast.py` whenever colors in `style.css` change
-  - For new buttons using `background: var(--color-primary)`, always pair with `color: var(--color-on-primary)` — never `color: #fff`
-
-- [x] **L2. Full keyboard navigation parity** *(closed — not pursuing)*
-  - Decision: F0 was closed; no keyboard audit planned; fix individual issues as they are noticed
-
-- [x] **L3. Internationalisation (i18n) framework** *(closed — out of scope)*
-  - Decision: personal English-language study tool; i18n not warranted
-
-- [x] **L4. Font size controls — mobile scaling bug**
-  - F3 font size toggle works on desktop but does not scale correctly on mobile
-  - `--reader-font-size` is not propagating to all elements on mobile — likely a specificity
-    or viewport-unit conflict in `reader.css` or `bible-ui.css` on narrow screens
-  - Fix: audit which elements use `--reader-font-size` vs. hardcoded `rem` values on mobile;
-    ensure the CSS custom property is applied via `font-size: var(--reader-font-size)` (not
-    just on the container) and that no media query overrides it with a fixed value
-
----
-
-## Phase M — Infrastructure, DevOps & Performance *(stub phase — all items need scoping)*
-
-These items address operational and technical health. None of them are user-visible features
-but all of them reduce risk. All are stubs requiring further research before work begins.
-
-- [x] **M1. Data build and deployment pipeline documentation** *(complete)*
-  - Created `scripts/README.md`: table of all scripts with purpose, output path, and run frequency
-  - Includes a "Typical Initial Setup Order" section with the full command sequence
-
-- [x] **M2. Upstream data source version pinning and re-sync strategy** *(complete)*
-  - Created `data/SOURCES.md`: every external source listed with URL, license, data path, and commit/version field
-  - Update SOURCES.md whenever a source is added, changed, or removed
-  - Re-sync procedure documented in the file
-
-- [x] **M3. Data file completeness validation** *(closed — not needed)*
-  - Decision: data gaps surface naturally during use; a formal validation script is more
-    maintenance than it's worth for a single-author personal site
-
-- [x] **M4. Search performance profiling** *(closed — not needed)*
-  - Decision: search is perceptibly fast in practice; profiling overhead not warranted unless
-    a user reports slowness on a specific device or query
-
-- [x] **M5. `bible.js` modularisation** *(complete)*
-  - `bible.js` split into 16 ES modules: `core.js`, `storage.js`, `tooltip.js`, `modal.js`,
-    `wire.js`, `pwa.js`, `search.js`, `reader.js`, `parallels.js`, `interlinear.js`,
-    `verse-study.js`, `word.js`, `daily.js`, `library.js`, `terms.js`, `maps.js`,
-    `timeline.js`, `wordcloud.js`, loaded via `<script type="module" src="app.js">`
-  - All 47 HTML pages updated; `sw.js` SHELL_URLS updated with all module paths
-  - No build step required — native ES modules served directly by the static file server
-
-- [x] **M6. `data/references/` directory clarification** *(closed — false alarm)*
-  - Directory does not exist; the stub was written against a stale gap analysis
-
----
-
-## Phase N — Engagement & Content Depth *(stub phase — all items need scoping)*
-
-These are features that drive regular use and deepen the study experience. All are stubs.
-
-- [x] **N1. Reading streaks and engagement tracking** *(complete)*
-  - No streak or habit-tracking feature exists; YouVersion's dominant retention mechanic is a
-    daily reading streak with a visible counter and a "don't break the chain" nudge
-  - Needs to determine: what counts as a "reading day" (any Reader visit? a minimum verse count?
-    a plan completion?), where the streak counter displays (home page widget, header badge),
-    and whether achievements/badges are in scope or just the streak count
-  - Related to C3a (reading plan progress) — streaks and plan progress are often shown together
-
-- [x] **N2. Prayer journal** *(complete)*
-  - Users want to log prayers alongside Scripture, separate from verse-level notes; a day-keyed
-    journal where each entry can link to one or more Bible references
-  - Needs to determine: storage key and schema (separate from `bsw_notes`), UI location
-    (`journal/index.html` vs. embedded in the home page), whether entries can be linked to
-    verses (`.ref` pattern), and whether this is a standalone feature or part of a broader
-    devotional flow with Spurgeon (D6) and VOTD (D7)
-
-- [x] **N3. Study Guides** *(complete)*
-
-  Study guides are structured multi-session resources, distinct from topic pages in two ways:
-  they have a defined session structure (session 1, session 2…) and each session has
-  discussion questions alongside its passages. Topic pages are thematic reference essays;
-  study guides are curriculum you work through.
-
-  ### Location and navigation
-  - `study-guides/index.html` — browse all guides (grid of cards, same layout as `topics/index.html`)
-  - `study-guides/{slug}/index.html` — individual guide
-  - Sidebar: new "Study Guides" group in the nav (below "Topics")
-  - Card format: title, subtitle, session count, estimated duration (e.g., "6 sessions · 45 min each")
-
-  ### Page structure
-  ```
-  [Guide Title]
-  [Subtitle / description paragraph]
-
-  ## Overview
-  [2–3 sentences: what this guide is, who it's for, what you'll study]
-
-  ## Sessions
-  ### Session 1 — [Title]
-  **Key passage:** [ref]
-  **Reading:** [optional additional refs]
-
-  [2–3 paragraphs of teaching content]
-
-  #### Discussion Questions
-  1. …
-  2. …
-  3. …
-
-  ### Session 2 — [Title]
+**Target DOM structure:**
+```html
+<div class="reader-compare-grid">
+  <!-- sticky column headers -->
+  <div class="reader-compare-col-hdr reader-compare-col-hdr--a">
+    <span class="reader-compare-panel__label">A:</span>
+    <select class="reader-compare-ver-sel">…</select>
+  </div>
+  <div class="reader-compare-col-hdr reader-compare-col-hdr--b">
+    <span class="reader-compare-panel__label">B:</span>
+    <select class="reader-compare-ver-sel">…</select>
+  </div>
+  <!-- verse rows — one pair per verse, automatically placed into the same CSS grid row -->
+  <div class="reader-compare-cell reader-compare-cell--a" data-verse="1">
+    <sup class="reader-verse__num">1</sup> In the beginning God created…
+  </div>
+  <div class="reader-compare-cell reader-compare-cell--b" data-verse="1">
+    <sup class="reader-verse__num">1</sup> In the beginning God created…
+  </div>
+  <div class="reader-compare-cell reader-compare-cell--a" data-verse="2">…</div>
+  <div class="reader-compare-cell reader-compare-cell--b" data-verse="2">…</div>
   …
+</div>
+```
+In a `display: grid; grid-template-columns: 1fr 1fr` container, consecutive pairs of cells
+are automatically placed into the same row, and the row height equals the taller of the two.
+No explicit `grid-row` declarations needed.
+
+**Implementation:**
+
+- [x] `reader.js` (`injectComparePanel`): Replace the current two-panel approach with a
+  per-verse grid builder. Extract primary verses from `g.verses` (already resolved). Build the
+  grid DOM immediately with primary cells filled and secondary cells showing
+  `<span class="reader-compare-loading">…</span>` as placeholders:
+  ```js
+  var grid = document.createElement('div');
+  grid.className = 'reader-compare-grid';
+  // — header row —
+  grid.appendChild(_buildComparePanelHdr(primaryVer, 'primary'));
+  grid.appendChild(_buildComparePanelHdr(cmpVer, 'secondary'));
+  // — verse rows — primary cells filled immediately
+  g.verses.forEach(function (vObj) {
+    var cellA = document.createElement('div');
+    cellA.className = 'reader-compare-cell reader-compare-cell--a';
+    cellA.dataset.verse = String(vObj.chapter) + ':' + String(vObj.verse);
+    cellA.innerHTML = '<sup class="reader-verse__num reader-compare-vnum">' +
+      vObj.verse + '</sup>' + escHtml(vObj.text);
+    var cellB = document.createElement('div');
+    cellB.className = 'reader-compare-cell reader-compare-cell--b reader-compare-cell--loading';
+    cellB.dataset.verse = String(vObj.chapter) + ':' + String(vObj.verse);
+    cellB.innerHTML = '<span class="reader-compare-loading">…</span>';
+    grid.appendChild(cellA);
+    grid.appendChild(cellB);
+  });
+  // replace existing text content with the grid
+  var bottomNav = groupEl.querySelector('.reader-chapter-nav--bottom');
+  if (bottomNav) groupEl.insertBefore(grid, bottomNav);
+  else groupEl.appendChild(grid);
+  textEl.parentNode && textEl.parentNode.removeChild(textEl);
+  attrEl && attrEl.parentNode && attrEl.parentNode.removeChild(attrEl);
+  ```
+- [x] `reader.js`: When secondary `resolveVerses` resolves, fill in each `--b` cell by
+  matching on `data-verse`:
+  ```js
+  resolveVerses(g.ref, cmpVer).then(function (verses) {
+    if (!verses || !verses.length) {
+      grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
+        cell.innerHTML = '<span class="reader-compare-unavail">—</span>';
+        cell.classList.remove('reader-compare-cell--loading');
+      });
+      return;
+    }
+    var byVerse = {};
+    verses.forEach(function (v) { byVerse[v.chapter + ':' + v.verse] = v.text; });
+    grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
+      var key  = cell.dataset.verse;
+      var text = byVerse[key];
+      var vNum = key.split(':')[1];
+      cell.classList.remove('reader-compare-cell--loading');
+      cell.innerHTML = text
+        ? '<sup class="reader-verse__num reader-compare-vnum">' + vNum + '</sup>' + escHtml(text)
+        : '<span class="reader-compare-unavail">—</span>';
+    });
+    applyHighlights(grid);
+    // Add attribution below the grid
+    var attr = ATTRIBUTION[cmpVer];
+    if (attr) {
+      var attrEl2 = document.createElement('p');
+      attrEl2.className = 'reader-result-group__attr';
+      attrEl2.textContent = attr;
+      grid.after(attrEl2);
+    }
+  });
+  ```
+- [x] `reader.js` (`_buildComparePanelHdr`): No structural changes needed — the function
+  still returns a `div` which now becomes a column header cell inside the grid rather than a
+  panel header above a panel.
+
+**CSS:**
+
+- [x] `reader.css`: Replace `.reader-compare-wrap` / `.reader-compare-panel` rules with:
+  ```css
+  .reader-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;                        /* no gap — borders handle separation */
+    margin: 0.5rem 0 1rem;
+  }
+  .reader-compare-col-hdr {
+    /* first two children of the grid = sticky column headers */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-primary);
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-ui);
+  }
+  .reader-compare-col-hdr--a { border-right: none; border-radius: 6px 0 0 0; }
+  .reader-compare-col-hdr--b { border-radius: 0 6px 0 0; }
+  .reader-compare-cell {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--reader-font-size, 1rem);
+    line-height: 1.72;
+    border-bottom: 1px solid var(--color-border);
+    /* align-self: stretch is default — both cells in a row stretch to the same height */
+  }
+  .reader-compare-cell--a {
+    border-right: 1px solid var(--color-border);
+  }
+  .reader-compare-cell--loading {
+    color: var(--color-muted);
+  }
+  .reader-compare-unavail {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+  .reader-compare-vnum {
+    color: var(--color-muted);
+    font-size: 0.72em;
+    margin-right: 0.2em;
+    vertical-align: super;
+    font-style: normal;
+    user-select: none;
+  }
+  @media (max-width: 600px) {
+    /* On narrow screens, stack versions — verse locking less important than readability */
+    .reader-compare-grid { grid-template-columns: 1fr; }
+    .reader-compare-col-hdr--a,
+    .reader-compare-cell--a { border-right: none; }
+    .reader-compare-col-hdr--b,
+    .reader-compare-cell--b { border-top: 2px solid var(--color-primary); }
+  }
+  ```
+- [x] `reader.css`: Remove old `.reader-compare-wrap`, `.reader-compare-panel`,
+  `.reader-compare-panel__hdr` rules (now replaced by `.reader-compare-grid` and
+  `.reader-compare-col-hdr`)
+
+**Versification edge cases:**
+- If a verse exists in version A but not in version B (e.g., Mark 16:9 in some critical texts):
+  the secondary cell shows `—` (handled by `byVerse[key]` being undefined above)
+- If version B has a verse that version A does not: that verse simply has no paired row and
+  is silently omitted — acceptable for now; could be addressed in a future pass
+
+---
+
+*(RD-M claimed — see working/inprogress-rdm-todo.md)*
+
+---
+
+## Verse Study Page Improvements
+
+*(Claimed — see working/inprogress-vs-todo.md)*
+
+### VS-A · Prev/Next Verse Navigation *(HIGH)*
+
+There is no way to move to the adjacent verse from the study page. To study John 3:15 after
+John 3:16 the user must hit back, click a different verse number in the Reader, and re-enter the
+verse study page — reloading all sections. The chapter data is already fully loaded as part of
+`loadVerseStudyVerse`, so computing adjacent verse refs costs nothing extra.
+
+- [x] `verse-study/index.html`: Add two nav links flanking `#vs-header-ref` in `.vs-header__topbar`:
+  ```html
+  <a id="vs-prev-link" class="vs-adj-link" href="#" hidden aria-label="Previous verse">‹</a>
+  <!-- existing #vs-header-ref -->
+  <a id="vs-next-link" class="vs-adj-link" href="#" hidden aria-label="Next verse">›</a>
+  ```
+- [x] `verse-study.js` (`loadVerseStudyVerse`): Inside the `.then(function (chapters) { … })` callback,
+  after setting `focalTextEl.textContent`, update the nav links:
+  ```js
+  var prevLink = document.getElementById('vs-prev-link');
+  var nextLink = document.getElementById('vs-next-link');
+  if (prevLink) {
+    var pv = parsed.v - 1;
+    if (pv >= 1 && chData[String(pv)]) {
+      prevLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + pv);
+      prevLink.title = parsed.bookName + ' ' + parsed.ch + ':' + pv;
+      prevLink.removeAttribute('hidden');
+    } else { prevLink.setAttribute('hidden', ''); }
+  }
+  if (nextLink) {
+    var nv = parsed.v + 1;
+    if (chData[String(nv)]) {
+      nextLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + nv);
+      nextLink.title = parsed.bookName + ' ' + parsed.ch + ':' + nv;
+      nextLink.removeAttribute('hidden');
+    } else { nextLink.setAttribute('hidden', ''); }
+  }
+  ```
+- [x] `verse-study.css`: `.vs-adj-link { color: var(--color-accent); text-decoration: none; font-size: 1.1rem; padding: 0 0.2rem; flex-shrink: 0; line-height: 1; }` `.vs-adj-link[hidden] { display: none; }` `.vs-adj-link:hover { color: var(--color-primary); }`
+
+---
+
+### VS-B · Sidebar Nav — Active Section Scroll-Spy *(MEDIUM)*
+
+`.vs-nav-btn--active` is defined in `verse-study.css` (lines 247–251) but is never applied by
+JavaScript. `vsRebuildNav()` builds the button list on every section update but has no mechanism
+to track which section is currently in view. The sidebar acts only as a jump list with no
+orientation feedback — the user can't tell at a glance which section they're reading.
+
+- [x] `verse-study.js` (`vsRebuildNav`): Declare a module-level variable `var _vsNavObserver = null`.
+  At the top of `vsRebuildNav`, call `if (_vsNavObserver) { _vsNavObserver.disconnect(); _vsNavObserver = null; }`.
+  After building sidebar buttons, wire each button with `btn.dataset.sectionId = id` in
+  `vsCreateSection`, then register a fresh `IntersectionObserver`:
+  ```js
+  _vsNavObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var id = entry.target.id;
+      document.querySelectorAll('#vs-sidebar .vs-nav-btn').forEach(function (btn) {
+        btn.classList.toggle('vs-nav-btn--active', btn.dataset.sectionId === id);
+      });
+    });
+  }, { rootMargin: '-8% 0px -75% 0px', threshold: 0 });
+  visible.forEach(function (sec) { _vsNavObserver.observe(sec); });
+  ```
+- [x] `verse-study.js` (`vsCreateSection`): When building the sidebar `btn`, add `btn.dataset.sectionId = id;`
+  (one line, before `sidebar.appendChild(btn)`)
+
+---
+
+### VS-C · Section Collapse/Expand *(MEDIUM)*
+
+All 12 sections are fixed-open. After reading cross-references or commentary, the user must scroll
+past the entire section to reach the ones below. On mobile with long commentary (Clarke,
+Jamieson-Fausset-Brown) or a verse with many cross-refs, this can require scrolling 30+ screenfuls.
+Independent per-section collapse fits the long-form layout better than the reader's tab-panel model.
+
+- [x] `verse-study.js` (`vsCreateSection`): Add a collapse toggle to each section heading:
+  ```js
+  var toggleBtn = document.createElement('button');
+  toggleBtn.className = 'vs-section-toggle';
+  toggleBtn.setAttribute('aria-expanded', 'true');
+  toggleBtn.setAttribute('aria-controls', id + '-body');
+  toggleBtn.textContent = '▾';
+  heading.appendChild(toggleBtn);
+  body.id = id + '-body';
+
+  toggleBtn.addEventListener('click', function () {
+    var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    body.hidden = expanded;
+    toggleBtn.textContent = expanded ? '▸' : '▾';
+  });
+  ```
+- [x] `verse-study.css`: Update `.vs-section-heading` to `display:flex; align-items:baseline; justify-content:space-between;`
+  Add `.vs-section-toggle { background:none; border:none; cursor:pointer; font-size:.72rem; color:var(--color-muted); padding:0 .2rem; margin-left:.4rem; flex-shrink:0; }` `.vs-section-toggle:hover { color:var(--color-primary); }`
+
+---
+
+### VS-D · All Translations — Lazy Load + Diff Highlighting *(MEDIUM)*
+
+`vsRenderVersionCompare` fires a `resolveVerses` call for every version in `metaVersions` the
+instant the section is built — 8–12 parallel fetch requests on page load before the user has
+scrolled to that section. Additionally, the section shows all translation texts verbatim with no
+diff highlighting, making it harder to spot translation choices at a glance. The Reader already has
+`applyHighlights` in `wire.js` that handles this.
+
+- [x] `verse-study.js` (`loadVerseSections`): Replace the current eager call to `vsRenderVersionCompare`
+  with an `IntersectionObserver` that defers the fetch until the section is near the viewport:
+  ```js
+  var cmpObserver = new IntersectionObserver(function (entries) {
+    if (!entries[0].isIntersecting) return;
+    cmpObserver.disconnect();
+    vsRenderVersionCompare(parsed, cmpSec.bodyEl);
+  }, { threshold: 0.05 });
+  cmpSec.el.removeAttribute('hidden');
+  vsRebuildNav();
+  cmpObserver.observe(cmpSec.el);
+  ```
+  Remove the current `vsRenderVersionCompare(parsed, cmpSec.bodyEl)` call that precedes the show/rebuild.
+- [x] `verse-study.js` (`vsRenderVersionCompare`): Import `applyHighlights` from `./wire.js`; after each
+  `resolveVerses` resolve, call `applyHighlights(row)` on the `.vs-cmp-row` container, using the
+  current version's text as the baseline — words that differ from the current version get `<mark>` tags
+- [x] `verse-study.css`: `.vs-cmp-row mark { background: rgba(255, 200, 0, 0.35); border-radius: 2px; padding: 0 1px; }`
+  `[data-theme="dark"] .vs-cmp-row mark { background: rgba(200, 160, 0, 0.3); }`
+
+---
+
+### VS-E · Copy Verse Button in Header Actions *(LOW)*
+
+The header has Memorize and Share buttons but no plain copy-to-clipboard. Copying verse text + 
+reference is the most common action for messages, notes apps, and documents — faster than the
+image builder for text-only use. The verse text is already in `#vs-focal-text` and the ref in
+`#vs-header-ref` when the verse loads.
+
+- [x] `verse-study/index.html`: Add `<button id="vs-copy-btn" class="vs-context-btn" type="button" hidden>Copy</button>` to `.vs-header__actions` (after the Share button)
+- [x] `verse-study.js` (`loadVerseStudyVerse`): After `focalTextEl.textContent = text`, wire the button:
+  ```js
+  var copyBtn = document.getElementById('vs-copy-btn');
+  if (copyBtn && text) {
+    copyBtn.removeAttribute('hidden');
+    copyBtn.onclick = function () {
+      var ref = (document.getElementById('vs-header-ref') || {}).textContent || '';
+      navigator.clipboard.writeText(text + (ref ? ' — ' + ref : '')).then(function () {
+        copyBtn.textContent = 'Copied ✓';
+        setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1800);
+      });
+    };
+  }
   ```
 
-  ### Template and authoring
-  - Copy `study-guides/_template/index.html` (to be created)
-  - Edit in Sublime Text; same `.ref[data-ref]` wiring as topic pages
-  - No JSON data files — entirely static HTML following the no-build-step principle
-  - `bash scripts/new-study-guide.sh <slug> "Title"` scaffolds the page (extend `new-topic.sh`)
+---
 
-  ### CSS
-  - Reuse `.topic-grid` and `.topic-card` from `style.css` for the index grid
-  - Add `.study-guide-session` and `.study-guide-questions` blocks to `topic-shell.css` (or a new `study-guide.css`)
-  - Sessions separated by a horizontal rule or a thin border; questions styled as an ordered list
-    with slightly indented, italic formatting to visually distinguish them from teaching content
+### VS-F · Word Study Flyout — Full Definition Expand *(LOW)*
 
-  ### Priority guides to author first
-  - Ephesians (6 sessions)
-  - Romans 1–8 (8 sessions)
-  - The Sermon on the Mount — Matthew 5–7 (5 sessions)
-  - The Psalms — a 4-week devotional structure (4 sessions)
+`_vsRenderWordPanel` truncates `entry.def` at 300 characters and appends `…` with no way to see
+the rest. For OT Hebrew entries the most specific lexical notes often appear past that threshold.
+The expansion needs only a show/hide toggle on the already-rendered HTML — no re-fetch.
 
-- [x] **N4. First-visit onboarding experience** *(complete)*
-  - A brand new visitor sees no guidance on what the site offers or where to start; there is
-    no welcome flow, no feature tour, and no help overlay beyond the keyboard shortcut modal (F8)
-  - Needs to determine: what the onboarding goal is (get the user to read one verse? enroll
-    in a plan? understand the tools?), whether this is a modal wizard, a guided tour overlay,
-    or a dedicated landing page, and whether it fires once (first visit) or is accessible later
+- [x] `verse-study.js` (`_vsRenderWordPanel`): Replace the hard slice with an inline expand:
+  ```js
+  if (entry.def && entry.def !== entry.gloss) {
+    var isLong = entry.def.length > 300;
+    html += '<div class="vs-word-panel__def">';
+    html += '<span class="vs-wp-def-text">' + escHtml(isLong ? entry.def.slice(0, 300) : entry.def) + '</span>';
+    if (isLong) {
+      html += '<span class="vs-wp-def-rest" hidden>' + escHtml(entry.def.slice(300)) + '</span>';
+      html += ' <button class="vs-wp-def-more" type="button">more…</button>';
+    }
+    html += '</div>';
+  }
+  ```
+  After `_vsWordPanelEl.innerHTML = html;`, add the expand wire (after the existing `closeBtn` wire):
+  ```js
+  var moreBtn = _vsWordPanelEl.querySelector('.vs-wp-def-more');
+  if (moreBtn) {
+    moreBtn.addEventListener('click', function () {
+      var rest = _vsWordPanelEl.querySelector('.vs-wp-def-rest');
+      if (rest) rest.removeAttribute('hidden');
+      moreBtn.remove();
+    });
+  }
+  ```
+- [x] `verse-study.css`: `.vs-wp-def-more { background:none; border:none; color:var(--color-accent); font-size:.8rem; cursor:pointer; padding:0; }` `.vs-wp-def-more:hover { text-decoration:underline; }`
 
-- [x] **N5. Commentary citation and passage export** *(closed — not implementing)*
-  - Decision: F2 (copy verse) covers the primary need; the additional commentary export path
-    adds complexity for minimal gain on a personal study tool
+---
+
+### VS-G · Commentary — Long-Entry Truncation with Expand *(LOW)*
+
+Commentary HTML is injected verbatim with no length cap. Clarke and JFB entries can run 1,000–2,000
+words, forcing the user to scroll through the entire section to reach Parallel Passages and other
+sections below. A soft word threshold with a "Read more" expand keeps the page navigable without
+hiding content. This should apply after `wireRefLinks` to avoid wiring links that are hidden.
+
+- [x] `verse-study.js` (`vsLoadComm`): After `wireRefLinks(commSec.bodyEl)`, apply a character-count collapse:
+  ```js
+  var COMM_THRESHOLD = 800;
+  var commBody = commSec.bodyEl;
+  if (commBody.textContent.length > COMM_THRESHOLD) {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'vs-comm-truncated';
+    while (commBody.firstChild) wrapper.appendChild(commBody.firstChild);
+    commBody.appendChild(wrapper);
+    var expandBtn = document.createElement('button');
+    expandBtn.className = 'vs-comm-expand-btn';
+    expandBtn.type = 'button';
+    expandBtn.textContent = 'Read more ▾';
+    commBody.appendChild(expandBtn);
+    expandBtn.addEventListener('click', function () {
+      wrapper.classList.remove('vs-comm-truncated--clamped');
+      expandBtn.remove();
+    });
+    wrapper.classList.add('vs-comm-truncated--clamped');
+  }
+  ```
+- [x] `verse-study.css`: `.vs-comm-truncated--clamped { max-height: 14em; overflow: hidden; }` `.vs-comm-expand-btn { display:block; margin-top:.5rem; background:none; border:none; color:var(--color-accent); font-family:var(--font-ui); font-size:.82rem; cursor:pointer; padding:0; }` `.vs-comm-expand-btn:hover { text-decoration:underline; }`
+
+---
+
+### VS-H · Header Height — Wrong scroll-margin-top Until Verse Resolves *(LOW)*
+
+`--vs-header-h` is set inside the `.then()` callback of `loadVerseStudyVerse`, but `loadVerseSections`
+is called immediately after (synchronously). The Notes section renders synchronously and is visible
+in the nav before the verse text loads — if the user clicks Notes in the sidebar at that point,
+`scroll-margin-top` uses the fallback value of `200px`, which may be wrong. Adding an initial
+measurement on the first animation frame gives sections a correct offset immediately, without
+waiting for the verse fetch to resolve.
+
+- [x] `verse-study.js` (`initVerseStudyPage`): Immediately after wiring event listeners and before
+  calling `loadVerseStudyVerse`, add:
+  ```js
+  requestAnimationFrame(function () {
+    var header = document.getElementById('vs-sticky-header');
+    if (header) {
+      document.documentElement.style.setProperty('--vs-header-h', header.offsetHeight + 'px');
+    }
+  });
+  ```
+  The existing post-verse-load measurement in `loadVerseStudyVerse` still runs and corrects the
+  value after the verse text (and any token row content) has been added to the header.
+
+---
+
+## Reference Data Expansion
+
+New commentary sources, dictionary upgrades, and one index that can be built from data
+already on the site.
+
+*(REF-B complete — Robertson's Word Pictures fetched; see archive)*
+*(REF-C complete — Wesley's Notes fetched; see archive)*
+
+*(REF-D complete — Ellicott's Commentary added; 22,300 sections; see working/todo-archive.md)*
+
+---
+
+*(REF-E · DATA BLOCKED — Gill.zip not in CrossWire rawzip or mods.d; see working/inprogress-ref-e-gill-todo.md for details)*
+
+---
+
+*(REF-F claimed — see working/inprogress-ref-f-isbe-todo.md)*
+
+---
+
+## Phase B — Competitive Parity
+
+*(B4a claimed — see working/inprogress-b4a-pwa-todo.md)*
+
+---
+
+## Library Expansion — Pending
+
+*(Bonaventure Itinerarium claimed — see working/inprogress-bonaventure-todo.md)*
+
+*(Reformation-era works — 4 of 5 complete; see working/todo-archive.md. 1 DATA BLOCKED below.)*
+
+- [x] **Zwingli, On the True and False Religion (1525)** — Completed via 1929 Preble translation (public domain 2025); 9 sections. See archive.org `latinworkscorres03zwin`.
+
+- [ ] **Melanchthon, Loci Communes (1521)** — **DATA BLOCKED**: All English translations (Hill 1944, Manschreck 1965) are under copyright. No public domain English translation exists.
+
+*(Missions & biography works claimed — see working/inprogress-missions-bio-todo.md)*
+
+*(Apologetics texts claimed — see working/inprogress-lib-apologetics-todo.md)*
+
+*(Council texts complete — see todo-archive.md. 7 docs added: CP2, CP3, Nic2, Lat4, Trent, VatI, Jer1672.)*
+
+- [x] **Audit and add missing council texts** — completed 2026-06-03. Seven councils added across ecumenical, RC, and Orthodox traditions. Deferred: Vatican II (copyright unclear), Jassy 1642, CP4/Photian (no PD English translation), Hesychast (too specialized).
+
+  **Still needed (deferred):**
+  - Vatican II — *Lumen Gentium*, *Dei Verbum*, *Sacrosanctum Concilium*; copyright status unclear on usable English translations
+  - Constantinople IV / Photian Council (879–880) — no clear public domain English translation available
+  - Hesychast Councils (1341, 1347, 1351) — no standard public domain English text
+  - Council of Jassy (1642) — *Confession of Peter Mogila*; availability unclear
+
+
+*(Creeds & Confessions expansion claimed — see working/inprogress-lib-creeds-todo.md)*
+
+*(Liturgical & church-order documents claimed — see working/inprogress-liturgical-docs-todo.md)*
+
+*(Papal encyclicals claimed — see working/inprogress-papal-encyclicals-todo.md)*
+
+---
+
+## Maps Page Improvements
+
+### Phase 1 — UX & Structure *(complete)*
+All Phase 1 items are implemented: `ERA_GROUPS` drives nav section headers; `_buildNav()` renders group labels; `_selectMap()` has URL hash deep-linking; `_overviewHtml()` renders the overview panel; `_showCityDetail()` handles the `significance` field; city-detail panel is an `position:absolute` overlay; reset button is wired via `_wireResetButton()`. All CSS present.
+
+*(Maps Phase 2/3 complete — see working/inprogress-maps-phase23-cona-archive.md for archive pass)*
+
+---
+
+## Home Page Improvements
+
+*(Completed 2026-06-03 — see todo-archive.md. HP-A through HP-I all done.)*
+
+---
+
+## Site Navigation Consolidation
+
+The site has grown to ~20 top-level routes. Most are small single-purpose pages that end up
+buried in the sidebar and forgotten. The pattern already proven by the discipline hub — a sticky
+tab bar, lazy iframe loading with `?minimal=1`, and each sub-page still working standalone — can
+be applied across the rest of the site to collapse those 20 routes into ~6 hub destinations.
+
+**Target nav structure after all CON work:**
+
+| Hub | Tabs |
+|-----|------|
+| **Holy Bible** (`read/`) | Read · Compare · Bookmarks |
+| **Explore** (`search/`) | Search · Topics · Study Guides · Dictionary |
+| **History** (`history/`) | Biblical Timeline · Church History · Maps · Animated Map |
+| **Library** (`library/`) | unchanged (Browse + Reading History + subgroups) |
+| **Discipline** (`discipline/`) | Plans · Devotionals · Memory · Journal · Worship · Gratitude · History · (Notes · Progress in More ▾) |
+| **Home** (`/`) | unchanged — daily dashboard |
+
+The Reference nav group dissolves entirely: Timeline and Maps move to History, Dictionary moves
+to Explore, Notes and Progress move to Discipline (D-B/D-C). Word Cloud moves under Explore.
+Church History moves from Library → History.
+
+**Shared implementation pattern for all CON hubs:**
+
+All inter-page embedding uses the `?minimal=1` mechanism from D-F: each embedded page suppresses
+its sidebar and shows a back-link. Iframe `src` is set to `""` initially and only assigned when the
+tab is first activated (lazy load). Each embedded page continues to work standalone at its original URL.
+
+---
+
+*(CON-A complete — see working/inprogress-maps-phase23-cona-archive.md for archive pass)*
+
+---
+
+*(CON-B claimed — see working/inprogress-con-b-reader-hub-todo.md)*
+
+---
+
+*(CON-C claimed — see working/inprogress-con-c-todo.md)*
+
+---
+
+*(CON-D claimed — see working/inprogress-con-d-todo.md)*
+
+---
+
+*(CON-E claimed — see working/inprogress-con-e-todo.md)*
+
+---
+
+*(PB-A, PB-B, PB-C claimed — see working/inprogress-pb-todo.md)*
+
+---
+
+## Discipline Section Expansion
+
+*(Claimed — see working/inprogress-discipline-d-todo.md)*
+
+---
+
+*(Apocryphal Reader — complete; data fetched 2026-06-03 — see working/todo-archive.md)*
 
 ---
 
@@ -1139,9 +999,7 @@ re-evaluation.
   - TTS integration or royalty-free audio recordings for Scripture memory (C4) so verses can
     be heard while commuting; no clear path on a static site without a TTS API dependency
 
-- [ ] **O2. Apocrypha / deuterocanonical books** *(stub — deferred)*
-  - The site targets the 66-book Protestant canon; adding Tobit, Maccabees, etc. would
-    require interlinear data, Strong's coverage, and version picker changes; no current plan
+- [ ] **O2. Apocrypha / deuterocanonical books** *(promoted — see dedicated section below)*
 
 - [ ] **O3. MKT print / ePub edition** *(stub — deferred)*
   - Generating a full three-tier MKT as a downloadable PDF or ePub; significant formatting
@@ -1164,583 +1022,40 @@ re-evaluation.
 
 ## Phase Z — Modern Kingdom Translation (MKT) *(long-term / exploratory)*
 
-- [ ] **Z0. MKT Translation Workshop — a personal Hebrew and Greek mastery tool** *(effort: 3–5 weeks for the tool; ongoing as you use it)*
+*(MKT NT continuation claimed — see working/inprogress-mkt-todo.md)*
 
-  The Workshop is built before any verse is translated. It is the human-in-the-loop interface
-  for everything in Z1: every glossary entry the AI proposes passes through it, you confirm or
-  correct it, and the process of doing so is designed to make you progressively fluent in reading
-  Biblical Hebrew and Greek — not just as an editor signing off on AI decisions, but as someone
-  who understands *why* each decision was made.
-
-  Hosted at `translation/workshop/index.html`. Not linked in the public nav — a private tool.
-  All decisions written to `data/translation/glossary-*.json` and
-  `data/translation/glossary-phrases-*.json` with a `status` field; the translation script
-  (Z1 Step 2) only consumes entries with `status: "confirmed"` or `"locked"`.
-
-  ---
-
-  ### The Lexical Dossier — what you see for each word or phrase
-
-  Every item in the review queue opens a full **Lexical Dossier** panel. For a single lemma
-  (e.g. ἀγάπη / G26):
-
-  **1. The word itself**
-  - Lemma in original script with full Unicode rendering
-  - Pronunciation guide (transliteration + IPA approximation)
-  - Part of speech, gender/number pattern (for nouns), principal parts (for verbs)
-  - Root etymology: what the word is built from, what cognates exist in Aramaic / Ugaritic /
-    Arabic / LXX Greek; etymological chain rendered as a small visual tree
-  - **Frequency panel:** how many times it appears in the OT/NT, breakdown by book, by author,
-    by genre — rendered as a small bar chart so you can see at a glance whether this is a
-    Pauline signature word, an OT poetic term, or a word Jesus uses rarely but significantly
-
-  **2. Lexical source evidence — side by side**
-  Each public-domain source gets its own collapsible column so you can read them in parallel:
-  | Source | What it contributes |
-  |--------|---------------------|
-  | Dodson (CC0) | Concise NT gloss — the AI's starting point |
-  | Thayer (1889) | Extended semantic range, NT usage patterns, LXX cross-refs |
-  | Vine (1940) | Theological usage notes, near-synonym distinctions |
-  | Moulton & Milligan (1930) | Papyri attestations — how the word was used by ordinary people in 1st-century letters, contracts, and receipts; often the most illuminating column |
-  | Liddell-Scott (abridged) | Classical/secular Greek range; shows where NT usage departs or aligns |
-  | Robertson's Word Pictures | Phrase and construction notes; syntactic edge cases |
-  | BDB (Hebrew) | Contextual usage categories — BDB breaks each lemma into numbered senses with OT examples |
-  | Gesenius (Hebrew) | Etymology, cognate-language attestations, semantic history |
-
-  **3. Semantic range map**
-  A simple visual — a horizontal bar divided into the word's attested English ranges with
-  approximate proportional width based on LXX + NT usage frequency. Shows you the word's
-  "center of gravity" and how far the tiers are pulling from it.
-
-  Example for σάρξ (G4561):
-
-  ```
-  ←── body/flesh (physical) ──── human nature (general) ──── sinful nature (Pauline) ──→
-       [████████████████]          [████████████]               [█████████████████████]
-       Gospels / literal           General epistles              Romans / Galatians
-  ```
-
-  **4. The AI's proposed renderings**
-  Three-tier proposal with explicit reasoning for each:
-  ```
-  Literal:    "flesh"
-  Reasoning:  Source term is physical-body in all pre-Pauline uses; literal tier should
-              preserve the shock of Paul repurposing it. Departing here would over-interpret.
-
-  Mediating:  "flesh / sinful nature"  [context-split via context_override]
-  Reasoning:  BDB/Thayer both note the Pauline ethical sense is distinct; mediating tier
-              uses context_override: physical-body contexts → "flesh", soteriological
-              contexts (Rom 6–8, Gal 5) → "sinful nature".
-
-  Thought:    "our fallen human nature"
-  Reasoning:  NLT-style; Moulton & Milligan shows σάρξ in papyri never has ethical freight —
-              so MKT-T makes the Pauline extension explicit rather than leaving it to the reader.
-  ```
-
-  **5. Phrase context viewer**
-  Every verse containing this lemma is listed with the surrounding 3–5 words highlighted.
-  Click any verse to open it in the Reader alongside the interlinear. This is the fastest
-  way to develop intuition — seeing the word in every context it appears, not just definitions.
-  Filter by book, testament, author, or genre to compare usage patterns.
-
-  **6. LXX bridge panel** *(Hebrew lemmas only, and Greek lemmas with LXX attestations)*
-  - Which Hebrew word(s) does the LXX translate this Greek word with? (or vice versa)
-  - What does that Hebrew/Greek cognate mean? (cross-links to its own dossier)
-  - Why does this matter for the NT rendering? The AI explains the semantic inheritance chain.
-  - Example shown visually: `חֶסֶד (H2617) → LXX: ἔλεος (G1656) → NT: mercy/lovingkindness gap`
-
-  **7. Related lemmas**
-  Near-synonyms and semantic-field neighbors, each with a one-line contrast note:
-  - ἀγάπη vs. φιλία vs. ἔρως: "ἀγάπη: willed commitment · φιλία: warm affection · ἔρως: desire (absent from NT)"
-  - Links to each related dossier; reviewing a semantic cluster together is faster and more
-    effective than reviewing words in isolation
-
-  ---
-
-  ### Your actions on each entry
-
-  Every dossier has an action bar at the bottom. You are not just approving — you are
-  participating in the translation:
-
-  **Confirm** — accept the AI's proposed renderings and reasoning as-is; entry moves to
-  `status: "confirmed"`; the AI logs your confirmation as a signal that its reasoning was sound
-
-  **Override** — change one or more tiers; a required free-text field asks for your reasoning
-  (1–3 sentences minimum); your reasoning is stored in the glossary entry alongside the AI's
-  and displayed to you again during Step 3 consistency review
-
-  **Inform** — you have context the AI lacks; open a dialogue input:
-  *"The Moulton & Milligan entry for [X] shows a papyrus from AD 50 where this word means…"*
-  or *"In my reading of Romans 7, Paul seems to be doing something specific here that changes
-  this rendering…"* — the AI responds with a revised proposal and its updated reasoning; you
-  can go back and forth as many times as needed before confirming
-
-  **Dispute** — flag the entry as genuinely contested; it joins the human-priority review queue
-  and also appears in the contested-terms table (Z1) so it gets extra attention before Step 2
-
-  **Defer** — skip for now; entry stays `status: "draft"`; deferred entries form a revisit queue
-  shown on the dashboard
-
-  **Lock** — after confirming, mark a rendering as final; locked entries are never touched by
-  the consistency checker (Step 3) or by future AI re-draft passes; use for entries where you
-  have high confidence
-
-  ---
-
-  ### The learning architecture
-
-  The Workshop is sequenced to build your knowledge systematically, not dump everything at once:
-
-  **Phase 1 — The 200 most frequent NT Greek lemmas** *(covers ~80% of all NT word occurrences)*
-  Work through these first. After reviewing ~50 you will have internalized the basic vocabulary
-  of the Pauline letters; after ~200 you can read slow NT Greek with a dictionary. The tool
-  tracks your streak and estimates comprehension coverage as you go.
-
-  **Phase 2 — The 200 most frequent OT Hebrew lemmas** *(covers ~75% of all OT word occurrences)*
-  Same approach. Hebrew root patterns (binyanim) are explained as you encounter them — the tool
-  recognizes when you've just seen the Qal stem of a root and flags the related Hiphil/Niphal
-  forms you'll encounter soon, so you build paradigm intuition alongside vocabulary.
-
-  **Phase 3 — Semantic clusters**
-  After frequency coverage, work by semantic domain: all emotion words together, all
-  covenantal terms together, all eschatological terms together. The cluster view shows the
-  full semantic field at once so you can see the distinctions between near-synonyms in context.
-
-  **Phase 4 — Phrase glossary**
-  Hebrew idioms and Greek constructions reviewed after the underlying lemmas are familiar.
-  The Inform action is especially valuable here — idioms often have a compelling story behind
-  them (why does "lift up the face" mean favor? what does the Semitic background of "son of"
-  constructions tell us?) and the AI is prepared to walk through it.
-
-  **Phase 5 — Contested terms queue** *(dispute_level 3–4)*
-  The 50–100 hardest decisions, reviewed last when you have the most context. The AI presents
-  the full debate — every major translation's choice and the reasoning behind it — and you make
-  a decision for MKT with your eyes open. These decisions are the most theologically
-  significant choices in the entire translation.
-
-  ---
-
-  ### Progress dashboard
-
-  The workshop home page shows:
-  - Lemma coverage: `confirmed / total` per language, with a sparkline of daily pace
-  - Domain coverage heatmap: which semantic domains are complete vs. outstanding
-  - Disputed items: items flagged via Dispute action, sorted by dispute_level
-  - Deferred queue: items you skipped, oldest first
-  - Your decision log: a full journal of every Override and Inform exchange, searchable,
-    becoming over time a personal commentary on your translation philosophy
-  - Estimated "verse coverage" — what percentage of all Bible verses can now be translated
-    using only confirmed glossary entries (starts at 0%; reaches ~90% after Phase 1+2)
-
-  ---
-
-  ### Data flow into Z1
-
-  The Workshop is the gate:
-  - `status: "draft"` — AI-proposed, not yet reviewed; translation script will not use these
-  - `status: "confirmed"` — you accepted the AI's rendering; ready for Step 2
-  - `status: "override"` — you changed the rendering; your version is used; AI reasoning
-    replaced by your reasoning in the glossary file
-  - `status: "locked"` — confirmed and frozen; consistency checker skips these
-  - `status: "disputed"` — flagged for extra human review; Step 2 cannot proceed until all
-    disputed entries in the contested-terms table are resolved
-
-  The translation script (`scripts/translate-bible.py`) reads only `confirmed`, `override`,
-  and `locked` entries. Running it before the glossary is complete produces a partial
-  translation with clearly marked gaps — a useful intermediate state for testing the pipeline.
-
-- [ ] **Z1. Generate the Modern Kingdom Translation (MKT) using the project's own source data** *(effort: 1–2 months)*
-
-  The project already holds everything needed to produce a fully original, copyright-free English
-  translation: the Westminster Leningrad Codex (Hebrew OT) and SBLGNT (Greek NT) with word-level
-  morphological tagging and Strong's numbers are already committed in `data/interlinear/`. Both
-  source datasets are CC-BY 4.0 — a translation produced from them is a new work owned outright
-  by the author with no redistribution restriction.
-
-  ### Translation philosophy — three tiers, one unified source
-
-  Rather than committing to a single philosophy, MKT generates **three renderings per verse**
-  from the same underlying glossary and interlinear source. The reader moves between them with
-  a slider; the translation adapts rather than forcing the reader to switch versions.
-
-  | Tier | ID | Philosophy | Comparable to |
-  |------|----|------------|---------------|
-  | 1 — Literal | `MKT-L` | Word-for-word; source syntax preserved as far as English allows; every lemma gets its primary glossary rendering; nothing added or softened | NASB95, YLT, Interlinear |
-  | 2 — Mediating | `MKT-M` | Natural English sentence order; primary glossary renderings; idiomatic connectives; the default reading mode | BSB, ESV, NKJV |
-  | 3 — Thought | `MKT-T` | Meaning-driven; glossary alternates used where they communicate more clearly; phrases rather than individual word mappings; poetic passages in contemporary cadence | NLT, The Message (register only) |
-
-  All three tiers share:
-  - The same glossary (same Strong's decisions for contested terms — the theology is identical)
-  - The same expansion annotations (Z2 hover dots) — the semantic commentary does not change
-    with the slider position
-  - The same MKT commentary (Z3), written against MKT-M as the reference tier
-
-  The slider is a **UI morphing mechanism**, not three separate Bibles — the reader experiences
-  one coherent translation at a chosen level of interpretive distance from the source.
-
-  ### Process
-
-  **Step 1 — Build a shared translation glossary** *(~2–4 weeks — this is the foundation everything else rests on)*
-
-  The glossary is the intellectual core of MKT. A naïve lemma-to-word mapping misses most of
-  what makes Biblical language difficult: the same lemma means different things in different
-  syntactic contexts; many key phrases are idiomatic (their meaning is not the sum of their
-  parts); Greek and Hebrew each have semantic domains with no clean English equivalent; and some
-  terms carry theological weight that a purely linguistic approach obscures. The glossary must
-  handle all of this before a single verse is translated.
-
-  #### Two glossary types
-
-  **A. Lemma glossary** (`data/translation/glossary-greek.json`, `glossary-hebrew.json`)
-  One entry per Strong's number. The full shape:
-  ```json
-  {
-    "G26": {
-      "lemma": "ἀγάπη",
-      "pos": "noun",
-      "domain": ["emotion", "relationship", "theology"],
-      "dispute_level": 2,
-      "tiers": {
-        "literal":    { "primary": "love",             "notes": "retain when followed by genitive of object" },
-        "mediating":  { "primary": "love",             "notes": null },
-        "thought":    { "primary": "unconditional love","notes": "may expand to 'self-giving love' in narrative contexts" }
-      },
-      "context_overrides": [
-        { "condition": "preceded by G2316 (θεός) as subject", "literal": "divine love", "thought": "God's self-giving love" },
-        { "condition": "1 Cor 13 discourse", "thought": "love that never fails" }
-      ],
-      "related_lemmas": ["G5368", "G2309"],
-      "semantic_range": "Self-giving, other-directed regard; encompasses both affection and commitment; broader than φιλία (warm friendship) and unrelated to ἔρως (desire). In LXX used to translate אַהֲבָה (H160).",
-      "expansion": "ἀγάπη — self-giving, unconditional love; distinct from φιλία (affection) and ἔρως (desire)",
-      "sources": ["dodson", "thayer", "vine", "lxx_link:H160"]
-    }
-  }
-  ```
-
-  Key fields:
-  - `domain` — Louw-Nida-style semantic domain tags; used by the word cloud (J1) and search
-    scope filters (G2) to group semantically related lemmas
-  - `dispute_level` — 0 (uncontested) to 4 (major theological debate); drives the Z2 expansion
-    dot rendering and the contested-terms review priority queue
-  - `context_overrides` — explicit rendering decisions for specific syntactic environments;
-    these take precedence over tier defaults during translation and are logged as intentional
-    departures so the consistency checker (Step 3) does not flag them
-  - `related_lemmas` — semantic field links; surfaces in the Strong's panel ("see also") and
-    informs the word cloud lemma-grouping logic
-  - `sources` — which lexical sources informed this entry; `lxx_link` connects Hebrew and Greek
-    cognates across Testaments (e.g., the LXX bridge between ἀγάπη and אַהֲבָה)
-
-  **B. Phrase glossary** (`data/translation/glossary-phrases-greek.json`, `glossary-phrases-hebrew.json`)
-  One entry per idiomatic multi-word expression. These cannot be resolved by lemma lookup alone:
-  ```json
-  {
-    "heb_lift_face": {
-      "language": "hebrew",
-      "tokens": ["H5375", "H6440"],
-      "surface_example": "נָשָׂא פָנִים",
-      "literal_form":    "lift up face",
-      "mediating":       "show favor",
-      "thought":         "accept with honor",
-      "expansion":       "An idiom for granting favor or accepting someone; opposite of 'hiding the face' (divine rejection). Cf. Numbers 6:26.",
-      "refs": ["Gen 4:7", "Num 6:26", "Job 22:26"],
-      "sources": ["bdb", "gesenius"]
-    },
-    "grk_works_of_law": {
-      "language": "greek",
-      "tokens": ["G2041", "G3551"],
-      "surface_example": "ἔργα νόμου",
-      "literal_form":    "works of law",
-      "mediating":       "works of the law",
-      "thought":         "deeds done to earn standing before God",
-      "expansion":       "Pauline phrase, central to Galatians and Romans. Debate: does it refer to (a) moral law generally, (b) Torah boundary markers (circumcision, food laws, calendar), or (c) any rule-keeping done for justification? MKT-T renders it as (c) in soteriological contexts; other contexts use mediating form.",
-      "dispute_level": 4,
-      "refs": ["Rom 3:20", "Gal 2:16", "Gal 3:2"],
-      "sources": ["bdag_summary", "vine", "moulton_milligan"]
-    }
-  }
-  ```
-
-  Phrase entries are matched during translation before lemma lookup — a token sequence that
-  matches a phrase entry uses the phrase rendering, not the individual lemma renderings. The
-  translation script tracks which phrase entries fired per verse for the consistency log.
-
-  #### Lexical sources to incorporate
-
-  **Greek:**
-  | Source | Status | What it adds |
-  |--------|--------|--------------|
-  | Dodson Greek Lexicon | CC0 — already in project (`data/strongs/greek.json`) | Baseline gloss per lemma |
-  | Thayer's Greek-English Lexicon (1889) | Public domain | Extended semantic range notes, NT usage patterns, LXX cross-refs |
-  | Vine's Expository Dictionary (1940) | Public domain | Theological usage notes, distinction between near-synonyms |
-  | Moulton & Milligan — *Vocabulary of the Greek NT* (1930) | Public domain | Koine papyri attestations — shows how words were used in everyday 1st-century Greek, not just literary contexts |
-  | Liddell-Scott-Jones abridged | Public domain (abridged ed.) | Classical/secular range to show where NT usage departs from or aligns with broader Greek |
-  | Robertson's *Word Pictures in the NT* (1930) | Public domain | Phrase-level and syntactic commentary; excellent source for idiom and construction notes |
-  | Vincent's *Word Studies in the NT* (1887) | Public domain | Already feeds commentary (D4); cross-mine for phrase glossary entries |
-
-  **Hebrew:**
-  | Source | Status | What it adds |
-  |--------|--------|--------------|
-  | Brown-Driver-Briggs (BDB, 1906) | Public domain — JSON via `openscriptures/strongs` | Gold-standard OT Hebrew lexicon; extensive contextual usage breakdowns per lemma |
-  | Gesenius' Hebrew and Chaldee Lexicon (1857, Tregelles trans.) | Public domain | Etymology, cognate language attestations (Aramaic, Arabic, Ugaritic), semantic range evidence |
-  | Jastrow *Dictionary of Talmud and Midrash* (1903) | Public domain | Post-biblical Hebrew/Aramaic usage; essential for late OT and intertestamental vocabulary drift |
-  | TWOT entry summaries | Derivative fair-use summaries only | Theological significance of key terms; the primary data (BDB, Gesenius) is the source; TWOT is a cross-check |
-
-  **Cross-Testament bridge:**
-  - The Septuagint (LXX) is the key that connects Hebrew and Greek semantic ranges: when the
-    LXX translates a Hebrew word with a specific Greek word, that Greek word inherits the Hebrew
-    word's semantic freight in NT usage. Track these links in `lxx_link` fields of both glossaries.
-  - Example: LXX translates חֶסֶד (H2617, *hesed*) with ἔλεος (G1656, *mercy*) ~170 times — so
-    NT uses of ἔλεος carry the *hesed* overtones (covenantal loyalty, not just pity). The MKT-T
-    tier should reflect this; MKT-L should not.
-
-  #### Build process
-
-  1. **Automated draft pass** — LLM processes every Strong's entry in both files plus the
-     public-domain lexical sources (fed as context) and produces a draft glossary entry for each
-     lemma; phrase candidates are flagged by the model where token sequences appear repeatedly
-     with non-compositional meanings across the interlinear data
-  2. **Phrase extraction script** — `scripts/extract-phrases.py` scans `data/interlinear/` for
-     recurring multi-token sequences; cross-references against a seed list of known Hebrew and
-     Greek idioms from Thayer, BDB, and Robertson to produce phrase glossary candidates
-  3. **Human review** — glossary draft reviewed top-down by `dispute_level` (4 → 0); all
-     `context_overrides` and phrase entries require explicit human sign-off before translation begins
-  4. **Flag theologically contested terms** — ~50–100 lemmas at dispute_level 3–4 reviewed
-     manually before the translation pass (see list below); their tier renderings locked before
-     Step 2 starts so the model cannot drift on them
-
-  **Step 2 — Translate verse-by-verse × 3 tiers** *(~$150–450 in API cost — 3× Z1 original)*
-  - Three parallel LLM passes per verse, each with the same interlinear token array and the
-    same glossary, but with a different rendering instruction:
-    - `MKT-L`: *"Preserve source word order and morphology as closely as English syntax allows.
-      Use only the `literal` glossary field. Do not add explanatory words."*
-    - `MKT-M`: *"Natural English sentence flow. Use the `mediating` glossary field. Prefer
-      accuracy over elegance; add connectives only where English requires them."*
-    - `MKT-T`: *"Communicate the full meaning clearly to a modern reader. Use the `thought`
-      glossary field. Rephrase idioms; render poetry with contemporary cadence. Do not
-      change the theological content — only its expression."*
-  - Script: `scripts/translate-bible.py` — extended to accept a `--tier` argument; three runs
-    write to `data/translation/draft/literal/`, `mediating/`, `thought/`
-  - Log every glossary departure for review (shared log across tiers)
-
-  **Step 3 — Consistency pass** *(~1–2 days scripting)*
-  - Run `scripts/check-consistency.py` against each tier independently; then a cross-tier diff
-    that flags where MKT-T departs significantly from MKT-L on the same lemma (for human audit
-    of whether the departure is intentional)
-
-  **Step 4 — Human review** *(2–6 weeks depending on depth)*
-  - Review all three tiers together for each contested passage — the three columns side by side
-    reveal where the theology is being shaped by philosophy rather than source text
-  - Prioritize: theologically contested terms, poetic books (Psalms, Job, Proverbs), the
-    Prologue of John, the opening of Genesis
-  - Spot-check at least one chapter per Bible book across all three tiers
-  - Final sign-off before committing
-
-  ### Theologically contested terms requiring manual decisions
-  | Greek/Hebrew | Term | Key translation choices |
-  |---|---|---|
-  | G1342 δίκαιος | righteous / just | consistent rendering vs. context-split |
-  | G1343 δικαιοσύνη | righteousness / justification | one word or two? |
-  | G4561 σάρξ | flesh / sinful nature / body | literal vs. interpretive |
-  | G166 αἰώνιος | eternal / everlasting / age-long | theological weight of "eternal" |
-  | G3056 λόγος | Word / word / reason | John 1 capitalization |
-  | G26 ἀγάπη | love / charity | KJV "charity" vs. modern "love" |
-  | H430 אֱלֹהִים | God / gods / divine beings | context-sensitive? |
-  | H7307 רוּחַ | spirit / Spirit / wind / breath | capitalization policy |
-  | H2617 חֶסֶד | steadfast love / lovingkindness / mercy | no clean English equivalent |
-  | H3068 יהוה | LORD / Yahweh / Jehovah | rendering of the divine name |
-
-  ### Output
-
-  **Data files:**
-  - Three versioned directories: `data/bible/MKT-L/`, `data/bible/MKT-M/`, `data/bible/MKT-T/`
-    each containing 66 book files in the standard shape
-  - Shared glossary: `data/translation/glossary-greek.json` + `data/translation/glossary-hebrew.json`
-    (all three tiers' renderings in each entry, as above)
-  - All three committed; all three registered in `data/versions/versions.json`
-  - License: CC0 — freely shareable, no attribution required
-
-  **Version picker behavior:**
-  - The three MKT tiers do not appear as three separate dropdown entries; selecting "MKT" in
-    the version picker shows the Reader with the slider visible and defaults to MKT-M
-  - The slider (`<input type="range" min="1" max="3">`) sits in the Reader header beneath the
-    version label; dragging it swaps the displayed verse text client-side from the already-loaded
-    tier data (no network request — all three tiers for the current chapter are loaded together)
-  - Slider position saved to `localStorage` key `bsw_mkt_tier`; restored on next MKT session
-  - Tier labels beneath the slider: **Literal · Mediating · Thought**
-
-  **Integration points:**
-  - Parallel reader and compare page: MKT appears once with a mini-slider per column, not as
-    three separate version rows
-  - Verse Study: all three tier texts shown stacked with tier labels, no slider (study context
-    benefits from seeing all three at once)
-  - Share / export: the active tier at time of share is what gets copied/exported; tier label
-    included in the attribution line ("MKT · Mediating")
-  - Translation notes page (`translation/index.html`): documents the three-tier philosophy, the
-    glossary decisions for contested terms, and example verse comparisons across all three tiers
-
-  ### Why this is worth doing
-  - **No other translation tool does this** — a slider that morphs between literal, mediating,
-    and thought-for-thought within one internally consistent translation is genuinely novel; it
-    makes the exegetical decision visible rather than hiding it inside a publisher's philosophy
-  - All three tiers share the same theological decisions for contested terms — the slider changes
-    English expression, not doctrine; the reader can trust that MKT-L and MKT-T agree on the
-    *meaning* of every verse, just not on how close to stay to the source syntax
-  - Completely copyright-free; can be embedded, printed, or shared without legal friction
-  - The Z2 expansion layer and Z3 commentary are always written against MKT-M, so switching
-    tiers never orphans the reader from the study tools — everything stays aligned
-  - The BSB was produced by a similar computer-assisted + human-review pipeline — this is not
-    an unprecedented approach; the three-tier extension multiplies the API cost ~3× but the
-    scripting and review infrastructure is otherwise identical
-  - The infrastructure (source texts, Strong's data, scripting patterns) is already 80% present
-
-- [ ] **Z2. Amplified-style semantic expansion layer for the MKT** *(effort: 2–4 weeks)*
-
-  Alongside the primary MKT rendering, attach brief inline annotations to words and phrases where
-  the Greek/Hebrew is semantically wider, theologically contested, or routinely obscured by single-
-  word translation choices — giving the reader the exegetical conversation without leaving the verse.
-
-  ### What "Amplified experience" means for MKT
-
-  Unlike the AMP Bible's bracketed parentheticals embedded directly in verse text, MKT's approach
-  is non-intrusive: the base translation reads clean; expansions appear on demand.
-
-  - Each token flagged in the glossary as "contested" or "semantically rich" receives an
-    `"expansion"` field alongside its primary rendering:
-    ```json
-    {
-      "G26": {
-        "primary": "love",
-        "expansion": "ἀγάπη — self-giving, unconditional love; distinct from φιλία (affection) and ἔρως (desire)"
-      }
-    }
-    ```
-  - A `"notes"` array on the verse level (in `data/translation/draft/{bookId}.json`) captures
-    phrase-level observations: ambiguities that span multiple tokens (e.g. "flesh" vs. "sinful nature"
-    argument across a full sentence), textual variants, or translation philosophy departures
-
-  ### Rendering in the UI
-
-  - **Inline expansion dots**: contested words in the MKT display a subtle underline
-    dot; hovering/tapping opens a small popover (reuses existing `.ref-tooltip` CSS class) showing
-    the expansion text and alternate renderings
-  - **"Study mode" toggle** in the Reader header: when on, all expansion annotations are shown
-    inline beneath each verse in a muted smaller font — the closest equivalent to the printed
-    Amplified Bible; when off, the verse reads as plain text
-  - **Verse study page** (`verse-study/`): the expansion content surfaces automatically in the
-    word panel alongside the existing Strong's / morphology data — no extra click needed
-  - No new data files beyond what Z1 already produces; expansion data lives in the glossary and
-    verse note arrays already planned
-
-  ### Contested-phrase coverage priorities
-  Seed the expansion layer starting with these high-yield passages before generalizing:
-  - Romans 1–8 (δικαιοσύνη, σάρξ, πνεῦμα throughout)
-  - John 1:1–18 (λόγος, θεός, μονογενής)
-  - Genesis 1–3 (בָּרָא vs. יָצַר, רוּחַ, נֶפֶשׁ)
-  - The Sermon on the Mount (μακάριος, πτωχοὶ τῷ πνεύματι)
-  - Hebrews 1–4 (ὑπόστασις, χαρακτήρ, κατάπαυσις)
-
-- [ ] **Z3. MKT Custom Commentary** *(effort: 2–6 months, ongoing)*
-
-  A purpose-built verse-by-verse commentary written to accompany the Modern Kingdom Translation.
-  Unlike the existing public-domain commentaries (Matthew Henry, Barnes, JFB) which were written
-  against KJV and reflect 17th–19th century concerns, the MKT commentary is written:
-  - Against the MKT text specifically (cross-references its glossary decisions)
-  - In contemporary English, assuming a reader who wants to understand the text, not impress anyone
-  - With explicit integration of the Strong's/morphological data already in the project
-  - Reformed/evangelical in theological orientation, but noting where other traditions read differently
-
-  ### Data shape
-
-  Reuses the existing commentary data schema in `data/commentaries/` (verse-keyed JSON):
-  ```json
-  {
-    "John.3.16": {
-      "source": "MKT",
-      "text": "...",
-      "glossary_refs": ["G3779", "G26", "G3439"],
-      "cross_refs": ["Rom 5:8", "1 John 4:9"]
-    }
-  }
-  ```
-  A new source key `"MKT"` added to the commentary selector dropdown; displays alongside or
-  instead of the existing public-domain sources.
-
-  ### Generation pipeline (LLM-assisted, human-edited)
-
-  **Step 1 — Draft pass** *(~$100–300 API cost for full Bible)*
-  - Per-verse prompt: feed the MKT text, the expansion layer annotations (Z2), relevant
-    Strong's entries, cross-references, and the glossary decisions that shaped this verse
-  - LLM produces a 2–5 sentence explanatory note: what the verse says, why the translation choices
-    were made, what the reader should carry forward
-  - Script: `scripts/generate-commentary.py` — writes `data/commentaries/bsw-draft/{bookId}.json`
-
-  **Step 2 — Theological review pass** *(human)*
-  - Flag any verse where the draft commentary takes a contested theological position without
-    acknowledging it; revise to note the tension rather than resolve it silently
-  - Prioritize: the contested-terms table from Z1, soteriological passages, eschatology, the
-    Johannine "I AM" sayings, the Olivet Discourse
-
-  **Step 3 — Cross-commentary diff** *(tooling)*
-  - `scripts/compare-commentaries.py` — for each verse, print MKT commentary alongside MHC and
-    Barnes side by side; flag substantive disagreements for human attention
-  - Goal: not to harmonize, but to ensure the MKT commentary is aware of where it diverges
-
-  **Step 4 — Commit and integrate**
-  - Merge reviewed files into `data/commentaries/mkt.json` (one combined file, book-keyed)
-  - Register in the commentary source list; the existing `_vsShowCommentary()` UI handles display
-    with no changes required
-
-  ### Long-term: community annotation layer
-  If the project ever adds any server component (even a lightweight write-only endpoint), the MKT
-  commentary could accept reader-submitted paragraph-level corrections or alternate readings — a
-  lightweight crowd-annotation layer on top of the generated base. Out of scope for the static-only
-  MVP but worth designing the data shape to accommodate (a `"contributions": []` array per verse).
-
-- [ ] **Z4. MKT versioning and update strategy** *(stub — needs scoping before work begins)*
-  - Z1 produces MKT v1.0; corrections discovered after release (better glossary choice,
-    consistency error, exegetical improvement) need a versioning scheme that does not
-    silently change what users have bookmarked, annotated, or memorised
-  - Needs to determine: whether MKT uses semantic versioning (v1.0 / v1.1 / v2.0), whether
-    the glossary versions independently from the translated text, how users are notified of
-    updates, and whether old cached MKT data is replaced automatically or requires user action
-  - Also covers: whether MKT-L / MKT-M / MKT-T each have independent version numbers or
-    always update as a set
-
-- [ ] **Z3a. MKT commentary tier behaviour** *(stub — needs scoping before work begins)*
-  - Z3 generates commentary written against MKT-M (the mediating tier); the behaviour when
-    the slider is at MKT-L or MKT-T is undefined — does the commentary stay anchored to
-    MKT-M text regardless of slider position, or does it shift?
-  - Needs to determine: whether the commentary panel shows a "Commentary written against
-    MKT-M" disclaimer when another tier is active, whether any commentary notes are
-    tier-specific, and whether the Verse Study page shows all three tier texts stacked even
-    when commentary is open
-
-- [ ] **Z1a. MKT public-facing landing page** *(stub — needs scoping before work begins)*
-  - Z1 references `translation/index.html` as a translation notes page, but its content,
-    audience, and depth have not been designed; it could be a brief philosophy statement or
-    a full academic methodology page
-  - Needs to determine: who the intended reader is (curious visitor vs. serious scholar),
-    what sections to include (three-tier philosophy, contested-terms decisions, example verse
-    comparisons, glossary methodology, licensing), and whether this page is linked from the
-    main nav or only discoverable via search/direct link
 
 ---
 
-## Notes
+## Maps System Improvements
 
-- All content must remain static HTML/CSS/JS — no build step, no server
-- **Bible text data committed:** KJV, BSB, WEB, ASV (4 complete versions, 66 books each)
-- **Versions to add:** YLT (Young's Literal), Darby Translation, Geneva Bible (1599) — all public domain
-- **Cross-ref data source:** OpenBible.info (CC licensed, based on TSK + community)
-- **Commentary source:** SWORD Project / e-Sword public domain modules (Matthew Henry, Barnes, JFB, Clarke, Vincent)
-- **Interlinear data:** `morphgnt/sblgnt` (Greek, CC-BY 4.0), `openscriptures/morphhb` (Hebrew, CC-BY 4.0)
-- **Strong's data:** `openscriptures/strongs`, Dodson Greek Lexicon (CC0), BDB Hebrew Lexicon JSON
-- **Library/confessions source:** reformed.org, ccel.org, and similar public domain sources
-- **Dictionary source:** ISBE (1915) public domain
-- **Timeline/map data:** BibleTimeline.info, OpenBible geography data (public domain)
-- **Nave's Topical data:** `openscriptures/nave` on GitHub (public domain)
-- **Devotional source:** CCEL.org — Spurgeon's Morning and Evening (public domain)
-- All Scripture refs use `.ref[data-ref]` pattern — auto-wired by `bible.js`
-- Scripts: `scripts/serve.py` (dev server), `scripts/restart.py` (kill + restart), `scripts/new-topic.sh` (topic scaffold)
-- **`data/references/` directory** — purpose currently unknown; see M6 (stub) to clarify or remove
-- **Upstream data pins** — specific commit hashes for `morphgnt/sblgnt`, `openscriptures/morphhb`, `openscriptures/strongs`, and `openscriptures/nave` are not recorded; see M2 (stub) to address this
+Two-part system: **static thematic maps** (`maps/index.html` + `assets/js/maps.js`) and the
+**animated time-lapse** (`maps/timelapse/` + `assets/js/timelapse-map.js`). The systems are
+complementary — spatial reference vs. temporal narrative — but currently disconnected and each
+has gaps.
+
+**Key files:**
+- `assets/js/maps.js` — 14 static maps, all data inline (144KB, 1,894 lines)
+- `assets/js/timelapse-map.js` — animation engine, reads `data/maps/timelapse.json`
+- `data/maps/timelapse.json` — empire, route, figure, event, tribe, place data
+- `assets/css/maps.css` / `assets/css/timelapse.css`
+- `maps/index.html` / `maps/timelapse/index.html`
+
+---
+
+*(MAP-F claimed — see working/inprogress-map-f-todo.md)*
+
+---
+
+## Word Cloud — Post-Shipping Improvements
+
+*(Completed 2026-06-03 — see todo-archive.md. All WC-A through WC-G items done.)*
+
+---
+
+*(Studies SG-A through SG-I claimed — see working/inprogress-studies-sg-todo.md)*
+
+---
+
+*(CMT-A through CMT-I claimed — see working/inprogress-cmt-todo.md)*
+

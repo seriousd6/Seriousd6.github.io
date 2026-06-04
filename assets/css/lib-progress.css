@@ -1,0 +1,167 @@
+/* lib-progress.css — Library Reading History page (LR-C) */
+
+.lp-page { max-width: 860px; padding: 1.5rem 1.25rem 4rem; }
+
+.lp-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.lp-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-heading, #1a1a1a);
+}
+
+.lp-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-heading, #1a1a1a);
+  margin: 0 0 .9rem;
+}
+
+/* ── Stats ───────────────────────────────────────────────────────────────── */
+
+.lp-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.lp-stat {
+  background: var(--color-surface-alt, #f5f5f5);
+  border-radius: 10px;
+  padding: .9rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+}
+.lp-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary, #4a6fa5);
+  line-height: 1;
+}
+.lp-stat-label {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  margin-top: .3rem;
+  text-align: center;
+}
+
+/* ── Encouragement ───────────────────────────────────────────────────────── */
+
+.lp-encourage {
+  font-size: .9rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 2rem;
+  font-style: italic;
+}
+
+/* ── Tradition coverage bars ─────────────────────────────────────────────── */
+
+.lp-coverage {
+  margin-bottom: 2.5rem;
+}
+.lp-coverage-bars { display: flex; flex-direction: column; gap: .55rem; }
+
+.lp-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 56px;
+  align-items: center;
+  gap: .65rem;
+}
+.lp-bar-label {
+  font-size: .82rem;
+  color: var(--color-text, #333);
+  white-space: nowrap;
+}
+.lp-bar-track {
+  height: 10px;
+  background: var(--color-border, #e0e0e0);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.lp-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  min-width: 2px;
+  transition: width .3s ease;
+}
+.lp-bar-count {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Completion log ──────────────────────────────────────────────────────── */
+
+.lp-log { margin-bottom: 4rem; }
+.lp-log-empty { color: var(--color-muted, #888); font-size: .9rem; }
+
+.lp-log-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+.lp-log-item:last-child { border-bottom: none; }
+
+.lp-log-main {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+}
+.lp-log-title {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--color-primary, #4a6fa5);
+  text-decoration: none;
+}
+.lp-log-title:hover { text-decoration: underline; }
+.lp-log-author {
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+}
+
+.lp-log-meta {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+.lp-trad-chip {
+  font-size: .68rem;
+  color: #fff;
+  border-radius: 3px;
+  padding: .1rem .45rem;
+  white-space: nowrap;
+}
+.lp-log-date {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+}
+
+/* ── Dark mode ───────────────────────────────────────────────────────────── */
+
+[data-theme="dark"] .lp-stat { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lp-bar-track { background: var(--color-border, #333); }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lp-stat { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lp-bar-track { background: var(--color-border, #333); }
+}
+
+@media (max-width: 600px) {
+  .lp-bar-row { grid-template-columns: 100px 1fr 46px; }
+  .lp-stats { gap: .75rem; }
+  .lp-stat { min-width: 80px; padding: .75rem 1rem; }
+  .lp-log-item { flex-direction: column; align-items: flex-start; }
+}

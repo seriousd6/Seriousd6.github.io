@@ -29,16 +29,28 @@ import {
   SEARCH_URL, READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL, TOPICS_INDEX_URL,
   escHtml, computeTextSimilarity, _scoreResult,
   _loadLibIndex, _loadLibSearch, libIndexCache, bookCache,
-  loadStrongs, _smithLoad, _smithData
+  loadStrongs, _smithLoad, _smithData, _resolve,
+  _torreyLoad, _torreyData, _hitchLoad, _hitchData
 } from './core.js';
+
+var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
 import { _showShortcutsOverlay } from './modal.js';
 
 // ── Session state ─────────────────────────────────────────────────────────
 var _searchDebounce    = null;
-// Incremented each time a new search starts; stale async results check this
-// before rendering so a slow book fetch from a previous query can't overwrite newer results.
+// INTENT: _searchGeneration is incremented at the top of every handleExploreSearch
+//   call. Each async section captures the value at start time as a local `gen`
+//   and checks `if (gen !== _searchGeneration) return` before writing results.
+//   This prevents a slow book-fetch from a previous query overwriting faster
+//   results from a newer one. Removing or moving any gen guard causes interleaved
+//   results during fast typing.
+// CHANGE? Any new async section added to handleExploreSearch MUST capture
+//   `var gen = _searchGeneration` at the top and guard result-writing with
+//   `if (gen !== _searchGeneration) return`.
+// VERIFY: Type "love" quickly followed by "faith"; only "faith" results should
+//   appear — no "love" results should flash in or overwrite.
 var _searchGeneration  = 0;
 // Cached so re-sort and re-filter can re-render without refetching.
 var _lastSearchResults = [];
@@ -56,6 +68,8 @@ var _exploreFilter     = 'all';
 // Exposed so external code (e.g. the Explore tab's "Full verse search →" button) can
 // programmatically switch tabs.
 var _switchSearchTab   = null;
+// OS-C: module-level ref so _toggleRecentSearches can call it without knowing the active tab
+var _fireSearch        = null;
 
 // ── buildSearchDOM ────────────────────────────────────────────────────────
 // Injected on every page by app.js after books/versions load.
@@ -120,13 +134,41 @@ export function initSearchPage(input) {
     });
   }
 
+  // Hub browse tabs — show an iframe panel instead of the search panel.
+  var _hubTabs = ['topics', 'guides', 'dictionary', 'wordcloud'];
+
   function setSearchTab(tab) {
     _searchPageTab = tab;
     tabBtns.forEach(function (btn) {
       btn.classList.toggle('search-tab--active', btn.getAttribute('data-search-tab') === tab);
     });
-    if (verseCtx)   verseCtx.hidden   = (tab !== 'verse');
-    if (exploreCtx) exploreCtx.hidden = (tab !== 'explore');
+
+    var isHubTab    = _hubTabs.indexOf(tab) !== -1;
+    var searchPanel = document.getElementById('search-search-panel');
+    if (searchPanel) searchPanel.hidden = isHubTab;
+
+    // Activate the matching hub panel and lazy-load its iframe.
+    _hubTabs.forEach(function (ht) {
+      var panel = document.getElementById('search-hub-' + ht);
+      if (!panel) return;
+      var isThis = (ht === tab);
+      panel.classList.toggle('explore-hub-panel--active', isThis);
+      if (isThis) {
+        var iframe = panel.querySelector('iframe');
+        if (iframe && !iframe.getAttribute('src') && iframe.dataset.src) {
+          iframe.src = iframe.dataset.src;
+        }
+      }
+    });
+
+    if (!isHubTab) {
+      if (verseCtx)   verseCtx.hidden   = (tab !== 'verse');
+      if (exploreCtx) exploreCtx.hidden = (tab !== 'explore');
+    }
+
+    // Persist tab selection.
+    history.replaceState(null, '', '?tab=' + tab);
+    try { localStorage.setItem('bsw_explore_tab', tab); } catch (e) {}
   }
 
   _switchSearchTab = setSearchTab;
@@ -144,24 +186,33 @@ export function initSearchPage(input) {
 
   // Sort buttons — changing sort re-renders without refetching.
   var sortBtns = document.querySelectorAll('[data-sort]');
+  // OS-A: apply initial active state from persisted sort mode
+  sortBtns.forEach(function (b) {
+    b.classList.toggle('search-mode-btn--active', b.getAttribute('data-sort') === _searchSortMode);
+  });
   sortBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       _searchSortMode = btn.getAttribute('data-sort');
       try { localStorage.setItem('bsw_search_sort', _searchSortMode); } catch (e) {}
       sortBtns.forEach(function (b) {
-        b.classList.toggle('search-sort--active', b === btn);
+        b.classList.toggle('search-mode-btn--active', b === btn);
       });
       if (_lastSearchResults.length) renderSearchResults(_lastSearchResults, _lastSearchQuery);
     });
   });
 
   // Testament filter — re-renders cached results without refetching.
+  // OS-A: use search-mode-btn--active (has CSS rules) instead of search-filter--active (no rules)
   var testamentBtns = document.querySelectorAll('[data-testament]');
+  // OS-A: apply initial active state
+  testamentBtns.forEach(function (b) {
+    b.classList.toggle('search-mode-btn--active', b.getAttribute('data-testament') === _filterTestament);
+  });
   testamentBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       _filterTestament = btn.getAttribute('data-testament');
       testamentBtns.forEach(function (b) {
-        b.classList.toggle('search-filter--active', b === btn);
+        b.classList.toggle('search-mode-btn--active', b === btn);
       });
       if (_lastSearchResults.length) renderSearchResults(_lastSearchResults, _lastSearchQuery);
     });
@@ -206,13 +257,14 @@ export function initSearchPage(input) {
   });
 
   // Shared trigger: cancels any pending debounce and fires the search immediately.
-  function _fireSearch() {
+  // Assigned to the module-level _fireSearch so _toggleRecentSearches can use it (OS-C).
+  _fireSearch = function () {
     clearTimeout(_searchDebounce);
     var q = input.value.trim();
     if (!q) { _clearResults(); return; }
     if (_searchPageTab === 'verse') handleSearchInput(q);
     else if (_searchPageTab === 'explore') handleExploreSearch(q);
-  }
+  };
 
   // Search button — forces an immediate re-run on click.
   var goBtn = document.getElementById('bsw-search-go');
@@ -244,10 +296,34 @@ export function initSearchPage(input) {
     setTimeout(function () { _toggleRecentSearches(input, false); }, 200);
   });
 
-  // Support ?q= URL parameter so other pages can link directly to a search.
+  // OS-J: when switching back to verse tab, re-render cached results immediately
+  // so the pane isn't blank after visiting Explore.
+  tabBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.getAttribute('data-search-tab') === 'verse' &&
+          _lastSearchResults.length && _lastSearchQuery) {
+        renderSearchResults(_lastSearchResults, _lastSearchQuery);
+      }
+    });
+  });
+
+  // Support ?q= and ?tab= URL parameters; also restore from localStorage.
   var params = new URLSearchParams(window.location.search);
-  var qParam = params.get('q');
-  if (qParam) { input.value = qParam; handleSearchInput(qParam); }
+  var qParam   = params.get('q');
+  var tabParam = params.get('tab') || (function () {
+    try { return localStorage.getItem('bsw_explore_tab'); } catch (e) { return null; }
+  }());
+
+  if (tabParam && tabParam !== 'verse') {
+    setSearchTab(tabParam);
+    if (tabParam === 'explore' && qParam) {
+      input.value = qParam;
+      handleExploreSearch(qParam);
+    }
+  } else if (qParam) {
+    input.value = qParam;
+    handleSearchInput(qParam);
+  }
 }
 
 function _clearResults() {
@@ -297,10 +373,10 @@ function _toggleRecentSearches(input, show) {
 
   drop.querySelectorAll('.search-history-chip').forEach(function (chip) {
     chip.addEventListener('click', function () {
+      // OS-C: use _fireSearch so only the active tab's handler runs (not both)
       input.value = chip.textContent;
       drop.hidden = true;
-      handleSearchInput(chip.textContent);
-      if (_searchPageTab === 'explore') handleExploreSearch(chip.textContent);
+      if (_fireSearch) _fireSearch();
     });
   });
 
@@ -429,7 +505,7 @@ export function renderSearchResults(results, query) {
   var sortRow = document.getElementById('bsw-search-sort-row');
 
   if (!results || !results.length) {
-    out.innerHTML = '<p class="search-page-none">No results for “' + escHtml(query) + '”.</p>';
+    out.innerHTML = '<p class="search-page-none">No results for "' + escHtml(query) + '".</p>';
     if (sortRow) sortRow.hidden = true;
     return;
   }
@@ -447,6 +523,19 @@ export function renderSearchResults(results, query) {
     });
   } else {
     sorted.sort(function (a, b) { return (b.score || 0) - (a.score || 0); });
+  }
+
+  // OS-B: post-filter by the active testament/book filter so switching filters
+  // immediately re-scopes already-loaded results without a new search.
+  var bookMetaMap = Object.create(null);
+  if (metaBooks) metaBooks.forEach(function (b) { bookMetaMap[b.id] = b; });
+  if (_filterBook) {
+    sorted = sorted.filter(function (r) { return r.bookId === _filterBook; });
+  } else if (_filterTestament !== 'all') {
+    sorted = sorted.filter(function (r) {
+      var m = bookMetaMap[r.bookId];
+      return m && m.testament.toLowerCase() === _filterTestament;
+    });
   }
 
   out.innerHTML = '<p class="omni-none">' + results.length + ' result' +
@@ -532,14 +621,14 @@ export function handleStrongsSearch(query) {
     });
     renderStrongsResults(results, query, out);
   }).catch(function () {
-    out.innerHTML = '<p class="omni-none">Could not load Strong’s data.</p>';
+    out.innerHTML = "<p class=\"omni-none\">Could not load Strong's data.</p>";
   });
 }
 
 export function renderStrongsResults(results, query, out) {
   if (!out) return;
   if (!results.length) {
-    out.innerHTML = '<p class="omni-none">No Strong’s entries for “' + escHtml(query) + '”.</p>';
+    out.innerHTML = "<p class=\"omni-none\">No Strong's entries for \"" + escHtml(query) + "\".</p>";
     return;
   }
   out.innerHTML = results.slice(0, 50).map(function (r) {
@@ -569,7 +658,7 @@ export function handleTopicsSearch(query) {
     var q   = query.toLowerCase();
     var res = _naveData.filter(function (t) { return t.title.toLowerCase().indexOf(q) >= 0; });
     if (!res.length) {
-      out.innerHTML = '<p class="omni-none">No topics for “' + escHtml(query) + '”.</p>';
+      out.innerHTML = '<p class="omni-none">No topics for "' + escHtml(query) + '".</p>';
       return;
     }
     out.innerHTML = '<div class="omni-topics-row">' +
@@ -599,7 +688,7 @@ export function handleDictSearch(query) {
     var q   = query.toLowerCase();
     var res = _smithData.filter(function (e) { return e.term.toLowerCase().indexOf(q) >= 0; });
     if (!res.length) {
-      out.innerHTML = '<p class="omni-none">No dictionary entries for “' + escHtml(query) + '”.</p>';
+      out.innerHTML = '<p class="omni-none">No dictionary entries for "' + escHtml(query) + '".</p>';
       return;
     }
     out.innerHTML = res.slice(0, 20).map(function (e) {
@@ -607,7 +696,7 @@ export function handleDictSearch(query) {
       return '<div class="search-dict-result">' +
         '<div class="sdr-head">' +
           '<a class="sdr-term" href="' + href + '">' + escHtml(e.term) + '</a>' +
-          '<span class="sdr-source">Smith’s</span>' +
+          "<span class=\"sdr-source\">Smith's</span>" +
         '</div>' +
         (e.brief ? '<p class="sdr-brief">' + escHtml(e.brief) + '</p>' : '') +
       '</div>';
@@ -685,8 +774,10 @@ export function handleExploreSearch(query) {
   var SECTIONS = [
     { key: 'verses',     title: 'Verses' },
     { key: 'words',      title: 'Word Studies' },
-    { key: 'topics',     title: 'Topics (Nave’s)' },
+    { key: 'topics',     title: "Topics (Nave's)" },
+    { key: 'torrey',     title: 'Torrey Topics' },
     { key: 'dictionary', title: 'Dictionary' },
+    { key: 'names',      title: 'Bible Names' },
     { key: 'library',    title: 'Library' },
     { key: 'guides',     title: 'Study Guides' }
   ];
@@ -695,6 +786,7 @@ export function handleExploreSearch(query) {
     return '<section class="omni-section" data-explore-section="' + s.key + '">' +
       '<div class="omni-section__head">' +
         '<h3 class="omni-section__title">' + escHtml(s.title) + '</h3>' +
+        '<span class="omni-section__count" data-explore-count="' + s.key + '"></span>' +
       '</div>' +
       '<div class="omni-section__body" data-explore-body="' + s.key + '">' +
         '<p class="omni-loading">Loading…</p>' +
@@ -709,19 +801,23 @@ export function handleExploreSearch(query) {
     return out.querySelector('[data-explore-body="' + key + '"]');
   }
 
-  var vb = body('verses');
-  var wb = body('words');
-  var tb = body('topics');
-  var db = body('dictionary');
-  var lb = body('library');
-  var gb = body('guides');
+  var vb  = body('verses');
+  var wb  = body('words');
+  var tb  = body('topics');
+  var rrb = body('torrey');
+  var db  = body('dictionary');
+  var nb  = body('names');
+  var lb  = body('library');
+  var gb  = body('guides');
 
-  if (vb) _exploreVerses(q, vb);
-  if (wb) _exploreWords(q, wb);
-  if (tb) _exploreTopics(q, tb);
-  if (db) _exploreDict(q, db);
-  if (lb) _exploreLibrary(q, lb);
-  if (gb) _exploreGuides(q, gb);
+  if (vb)  _exploreVerses(q, vb);
+  if (wb)  _exploreWords(q, wb);
+  if (tb)  _exploreTopics(q, tb);
+  if (rrb) _exploreTorrey(q, rrb);
+  if (db)  _exploreDict(q, db);
+  if (nb)  _exploreNames(q, nb);
+  if (lb)  _exploreLibrary(q, lb);
+  if (gb)  _exploreGuides(q, gb);
 }
 
 // ── Explore: Verses ───────────────────────────────────────────────────────
@@ -769,8 +865,9 @@ function _exploreVerses(q, container) {
   var switchBtn = '<button class="omni-see-all" type="button" data-switch-tab="verse">' +
     'Full verse search →</button>';
 
+  _setExploreCount('verses', preview.length);
   if (!preview.length) {
-    container.innerHTML = '<p class="omni-none">No cached matches. ' + switchBtn + '</p>';
+    container.innerHTML = '<p class="omni-none">Switch to Verse Search for full results. ' + switchBtn + '</p>';
   } else {
     var html = preview.map(function (r) {
       var idx     = r.text.toLowerCase().indexOf(ql);
@@ -819,27 +916,37 @@ function _exploreWords(q, container) {
   container.innerHTML = '<p class="omni-loading">Loading…</p>';
 
   var ql = q.toLowerCase();
+  // Whole-word boundary check so "love" doesn't match "beloved" as a primary hit.
+  var wordRe = new RegExp('\\b' + ql.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
   Promise.all([loadStrongs('greek'), loadStrongs('hebrew')]).then(function (dicts) {
-    var results = [];
+    var primary = [];   // lemma / translit / number matches
+    var byDefn  = [];   // definition contains the query as a whole word
     dicts.forEach(function (dict) {
       if (!dict) return;
       Object.keys(dict).forEach(function (key) {
         var e     = dict[key];
         var lemma = (e.lemma || '').toLowerCase();
         var trans = (e.translit || '').toLowerCase();
-        // Match on lemma or transliteration; skip definition to keep results tight.
+        var defn  = e.definition || '';
         if (lemma.indexOf(ql) >= 0 || trans.indexOf(ql) >= 0 || key.toLowerCase() === ql) {
-          results.push({ key: key, entry: e });
+          primary.push({ key: key, entry: e });
+        } else if (wordRe.test(defn)) {
+          byDefn.push({ key: key, entry: e });
         }
       });
     });
 
+    // Primary matches first, then definition matches; cap display at 8.
+    var results = primary.concat(byDefn);
     if (!results.length) {
-      container.innerHTML = '<p class="omni-none">No Strong’s entries found.</p>';
+      _setExploreCount('words', 0);
+      container.innerHTML = "<p class=\"omni-none\">No Strong's entries found.</p>";
       return;
     }
 
-    container.innerHTML = results.slice(0, 4).map(function (r) {
+    _setExploreCount('words', results.length);
+    var shown = results.slice(0, 8);
+    container.innerHTML = shown.map(function (r) {
       var e    = r.entry;
       var href = escHtml(WORD_URL + '?s=' + encodeURIComponent(r.key));
       return '<div class="omni-strongs-card">' +
@@ -853,12 +960,12 @@ function _exploreWords(q, container) {
         '<a class="omni-strongs-card__link" href="' + href + '">Study →</a>' +
       '</div>';
     }).join('') +
-    (results.length > 4
-      ? '<a class="omni-see-all" href="' + escHtml(SEARCH_URL + '?q=' + encodeURIComponent(q)) +
-          '">See all ' + results.length + ' Strong’s matches →</a>'
+    (results.length > 8
+      ? '<a class="omni-see-all" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(q)) +
+          '">See all ' + results.length + " matches →</a>"
       : '');
   }).catch(function () {
-    container.innerHTML = '<p class="omni-none">Could not load Strong’s data.</p>';
+    container.innerHTML = "<p class=\"omni-none\">Could not load Strong's data.</p>";
   });
 }
 
@@ -869,15 +976,61 @@ function _exploreTopics(q, container) {
     if (!_naveData) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
     var ql  = q.toLowerCase();
     var res = _naveData.filter(function (t) { return t.title.toLowerCase().indexOf(ql) >= 0; });
+    _setExploreCount('topics', res.length);
     if (!res.length) { container.innerHTML = '<p class="omni-none">No topics found.</p>'; return; }
     container.innerHTML = '<div class="omni-topics-row">' +
       res.slice(0, 20).map(function (t) {
         return '<a class="omni-topic-chip" href="' +
-          escHtml(TOPICS_ROOT + '?topic=' + encodeURIComponent(t.slug)) + '">' +
+          escHtml(DICT_PAGE_URL + '?entry=' + encodeURIComponent(t.slug) + '&src=nave') + '">' +
           escHtml(t.title) +
           ' <span class="omni-topic-chip__count">(' + t.verses.length + ')</span></a>';
       }).join('') +
     '</div>';
+  });
+}
+
+// ── Explore: Torrey Topics ────────────────────────────────────────────────
+// OS-G: Torrey's New Topical Textbook — same pattern as Nave's topics.
+function _exploreTorrey(q, container) {
+  _torreyLoad().then(function () {
+    if (!_torreyData) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
+    var ql  = q.toLowerCase();
+    var res = _torreyData.filter(function (t) { return t.title.toLowerCase().indexOf(ql) >= 0; });
+    _setExploreCount('torrey', res.length);
+    if (!res.length) { container.innerHTML = '<p class="omni-none">No Torrey topics found.</p>'; return; }
+    container.innerHTML = '<div class="omni-topics-row">' +
+      res.slice(0, 20).map(function (t) {
+        return '<a class="omni-topic-chip" href="' +
+          escHtml(DICT_PAGE_URL + '?entry=' + encodeURIComponent(t.slug) + '&src=torrey') + '">' +
+          escHtml(t.title) +
+          ' <span class="omni-topic-chip__count">(' + t.verses.length + ')</span></a>';
+      }).join('') +
+    '</div>';
+  });
+}
+
+// ── Explore: Bible Names (Hitchcock) ──────────────────────────────────────
+// OS-H: Hitchcock's Bible Names dictionary — useful for proper-noun queries.
+function _exploreNames(q, container) {
+  _hitchLoad().then(function () {
+    if (!_hitchData) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
+    var ql  = q.toLowerCase();
+    var res = _hitchData.filter(function (e) {
+      return e.term.toLowerCase().indexOf(ql) >= 0 ||
+             e.meaning.toLowerCase().indexOf(ql) >= 0;
+    });
+    _setExploreCount('names', res.length);
+    if (!res.length) { container.innerHTML = '<p class="omni-none">No name entries found.</p>'; return; }
+    container.innerHTML = res.slice(0, 10).map(function (e) {
+      var href = escHtml(DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id) + '&src=hitchcock');
+      return '<div class="search-dict-result">' +
+        '<div class="sdr-head">' +
+          '<a class="sdr-term" href="' + href + '">' + escHtml(e.term) + '</a>' +
+          '<span class="sdr-source">Hitchcock</span>' +
+        '</div>' +
+        '<p class="sdr-brief">' + escHtml(e.meaning) + '</p>' +
+      '</div>';
+    }).join('');
   });
 }
 
@@ -889,6 +1042,7 @@ function _exploreDict(q, container) {
     if (!_smithData) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
     var ql  = q.toLowerCase();
     var res = _smithData.filter(function (e) { return e.term.toLowerCase().indexOf(ql) >= 0; });
+    _setExploreCount('dictionary', res.length);
     if (!res.length) {
       container.innerHTML = '<p class="omni-none">No dictionary entries found.</p>';
       return;
@@ -898,7 +1052,7 @@ function _exploreDict(q, container) {
       return '<div class="search-dict-result">' +
         '<div class="sdr-head">' +
           '<a class="sdr-term" href="' + href + '">' + escHtml(e.term) + '</a>' +
-          '<span class="sdr-source">Smith’s</span>' +
+          "<span class=\"sdr-source\">Smith's</span>" +
         '</div>' +
         (e.brief ? '<p class="sdr-brief">' + escHtml(e.brief.slice(0, 160)) + '</p>' : '') +
       '</div>';
@@ -931,7 +1085,7 @@ function _exploreLibrary(q, container) {
     var indexMap = Object.create(null);
     if (index) index.forEach(function (d) { indexMap[d.id] = d; });
 
-    // Full-text scan: first matching passage per document wins; store a text snippet.
+    // Full-text scan: first matching passage per document wins; store snippet + section ref.
     var hits = Object.create(null);
     if (searchIdx) {
       searchIdx.forEach(function (entry) {
@@ -947,7 +1101,7 @@ function _exploreLibrary(q, container) {
             snippet = (s > 0 ? '…' : '') + entry.text.slice(s, e).trim() +
                       (e < entry.text.length ? '…' : '');
           }
-          hits[entry.docId] = { docId: entry.docId, snippet: snippet };
+          hits[entry.docId] = { docId: entry.docId, snippet: snippet, ref: entry.ref };
         }
       });
     }
@@ -956,25 +1110,30 @@ function _exploreLibrary(q, container) {
     if (index) {
       index.forEach(function (doc) {
         if (!hits[doc.id] && doc.title.toLowerCase().indexOf(ql) !== -1) {
-          hits[doc.id] = { docId: doc.id, snippet: doc.desc || '' };
+          hits[doc.id] = { docId: doc.id, snippet: doc.desc || '', ref: null };
         }
       });
     }
 
     var results = Object.keys(hits).map(function (k) { return hits[k]; });
+    _setExploreCount('library', results.length);
     if (!results.length) {
       container.innerHTML = '<p class="omni-none">No library documents found.</p>';
       return;
     }
 
     container.innerHTML = results.slice(0, 6).map(function (hit) {
-      var doc  = indexMap[hit.docId] || {};
-      var href = escHtml('/library/' + hit.docId + '/');
+      var doc      = indexMap[hit.docId] || {};
+      // section param is 0-based; search index ref is 1-based — subtract 1
+      var secIdx   = hit.ref ? Math.max(0, parseInt(hit.ref, 10) - 1) : 0;
+      var secParam = secIdx > 0 ? '&section=' + secIdx : '';
+      var href = escHtml(_LIBRARY_ROOT + '?doc=' + encodeURIComponent(hit.docId) +
+                         secParam + '&focus=1');
       return '<a class="omni-lib-card" href="' + href + '">' +
         (doc.abbrev ? '<span class="omni-lib-card__abbrev">' + escHtml(doc.abbrev) + '</span>' : '') +
         '<span class="omni-lib-card__title">' + escHtml(doc.title || hit.docId) + '</span>' +
         (doc.year ? '<span class="omni-lib-card__year">' + doc.year + '</span>' : '') +
-        (hit.snippet ? '<span class="omni-lib-card__snippet">' + escHtml(hit.snippet) + '</span>' : '') +
+        (hit.snippet ? '<span class="omni-lib-card__snippet">' + highlightMatch(hit.snippet, q) + '</span>' : '') +
       '</a>';
     }).join('');
   }).catch(function () {
@@ -997,6 +1156,12 @@ function _applyExploreFilter(filter) {
   });
 }
 
+// OS-F: updates the count badge in a section header
+function _setExploreCount(key, count) {
+  var el = document.querySelector('[data-explore-count="' + key + '"]');
+  if (el) el.textContent = count > 0 ? String(count) : '';
+}
+
 // ── Topics index for search (site-wide topic pages) ───────────────────────
 // Fetches data/topics-index.json — a manifest of all site study-guide pages.
 var _topicsIndexCache = null;
@@ -1010,7 +1175,14 @@ function _buildTopicsIndex() {
 }
 
 // ── Explore: Study Guides ─────────────────────────────────────────────────
-// Searches the site's own study-guide pages (/topics/*) by title and description.
+// INTENT: Searches site study-guide pages using TOPICS_INDEX_URL (data/topics-index.json).
+//   When a guide entry has an explicit `href` field, that path is used directly
+//   because study guides live at study-guides/, not the default topics/ path.
+//   Falling back to TOPICS_ROOT + slug would produce broken links for study guides.
+// CHANGE? If study guides move to a different URL structure, update the href
+//   fallback path here and the `href` field generation in topics-index.json.
+// VERIFY: Search "hebrews" in Explore; the result link should go to
+//   study-guides/hebrews/, not topics/hebrews/.
 function _exploreGuides(q, container) {
   _buildTopicsIndex().then(function (guides) {
     if (!guides || !guides.length) {
@@ -1022,12 +1194,15 @@ function _exploreGuides(q, container) {
       return g.title.toLowerCase().indexOf(ql) !== -1 ||
              (g.desc && g.desc.toLowerCase().indexOf(ql) !== -1);
     });
+    _setExploreCount('guides', res.length);
     if (!res.length) {
       container.innerHTML = '<p class="omni-none">No study guides match.</p>';
       return;
     }
     container.innerHTML = res.map(function (g) {
-      return '<a class="omni-lib-card" href="' + escHtml(TOPICS_ROOT + g.slug + '/') + '">' +
+      // Use explicit href when present (e.g. study-guides/), fall back to topics/ path
+      var href = g.href ? escHtml(_resolve('../../' + g.href)) : escHtml(TOPICS_ROOT + g.slug + '/');
+      return '<a class="omni-lib-card" href="' + href + '">' +
         '<span class="omni-lib-card__title">' + escHtml(g.title) + '</span>' +
         (g.desc ? '<span class="omni-lib-card__snippet">' + escHtml(g.desc) + '</span>' : '') +
       '</a>';

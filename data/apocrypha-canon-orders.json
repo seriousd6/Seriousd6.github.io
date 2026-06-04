@@ -1,0 +1,75 @@
+{
+  "dr": {
+    "label": "Roman Catholic",
+    "note": "Douay-Rheims / WEB-CE order — deuterocanonicals interspersed in traditional Catholic OT placement",
+    "books": [
+      "genesis", "exodus", "leviticus", "numbers", "deuteronomy",
+      "joshua", "judges", "ruth",
+      "1samuel", "2samuel", "1kings", "2kings",
+      "1chronicles", "2chronicles", "ezra", "nehemiah",
+      "tobit", "judith", "esther", "additions-esther",
+      "1maccabees", "2maccabees",
+      "job", "psalms", "proverbs", "ecclesiastes", "songofsolomon",
+      "wisdom", "sirach",
+      "isaiah", "jeremiah", "lamentations", "baruch",
+      "ezekiel", "daniel", "prayer-of-azariah", "susanna", "bel-and-dragon",
+      "hosea", "joel", "amos", "obadiah", "jonah", "micah",
+      "nahum", "habakkuk", "zephaniah", "haggai", "zechariah", "malachi",
+      "matthew", "mark", "luke", "john", "acts",
+      "romans", "1corinthians", "2corinthians", "galatians", "ephesians",
+      "philippians", "colossians", "1thessalonians", "2thessalonians",
+      "1timothy", "2timothy", "titus", "philemon", "hebrews",
+      "james", "1peter", "2peter", "1john", "2john", "3john", "jude", "revelation"
+    ]
+  },
+  "kjv-apocrypha": {
+    "label": "Protestant + Apocrypha",
+    "note": "KJV Apocrypha (1611) order — deuterocanonicals collected between OT and NT",
+    "books": [
+      "genesis", "exodus", "leviticus", "numbers", "deuteronomy",
+      "joshua", "judges", "ruth",
+      "1samuel", "2samuel", "1kings", "2kings",
+      "1chronicles", "2chronicles", "ezra", "nehemiah",
+      "esther", "job", "psalms", "proverbs", "ecclesiastes", "songofsolomon",
+      "isaiah", "jeremiah", "lamentations", "ezekiel", "daniel",
+      "hosea", "joel", "amos", "obadiah", "jonah", "micah",
+      "nahum", "habakkuk", "zephaniah", "haggai", "zechariah", "malachi",
+      "1esdras", "2esdras",
+      "tobit", "judith", "additions-esther",
+      "wisdom", "sirach", "baruch",
+      "prayer-of-azariah", "susanna", "bel-and-dragon",
+      "prayer-of-manasseh",
+      "1maccabees", "2maccabees",
+      "matthew", "mark", "luke", "john", "acts",
+      "romans", "1corinthians", "2corinthians", "galatians", "ephesians",
+      "philippians", "colossians", "1thessalonians", "2thessalonians",
+      "1timothy", "2timothy", "titus", "philemon", "hebrews",
+      "james", "1peter", "2peter", "1john", "2john", "3john", "jude", "revelation"
+    ]
+  },
+  "lxx": {
+    "label": "Septuagint (Greek)",
+    "note": "Brenton LXX order — follows Codex Vaticanus arrangement; includes all LXX additions",
+    "books": [
+      "genesis", "exodus", "leviticus", "numbers", "deuteronomy",
+      "joshua", "judges", "ruth",
+      "1samuel", "2samuel", "1kings", "2kings",
+      "1chronicles", "2chronicles",
+      "1esdras", "ezra", "nehemiah",
+      "esther", "additions-esther", "judith", "tobit",
+      "1maccabees", "2maccabees", "3maccabees", "4maccabees",
+      "psalms", "psalm151", "proverbs", "ecclesiastes", "songofsolomon", "job",
+      "wisdom", "sirach",
+      "hosea", "amos", "micah", "joel", "obadiah", "jonah",
+      "nahum", "habakkuk", "zephaniah", "haggai", "zechariah", "malachi",
+      "isaiah", "jeremiah", "baruch", "lamentations",
+      "ezekiel", "daniel", "prayer-of-azariah", "susanna", "bel-and-dragon",
+      "prayer-of-manasseh", "2esdras",
+      "matthew", "mark", "luke", "john", "acts",
+      "romans", "1corinthians", "2corinthians", "galatians", "ephesians",
+      "philippians", "colossians", "1thessalonians", "2thessalonians",
+      "1timothy", "2timothy", "titus", "philemon", "hebrews",
+      "james", "1peter", "2peter", "1john", "2john", "3john", "jude", "revelation"
+    ]
+  }
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Bible studies — book guides, topical articles, and multi-session study guides." />
+  <title>Studies — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <style>
+    .studies-hero {
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+      padding: 2rem 1.5rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .studies-hero h1 {
+      margin: 0 0 0.4rem;
+      font-size: 1.75rem;
+    }
+    .studies-hero p {
+      margin: 0;
+      opacity: 0.85;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+    .studies-section { margin-bottom: 2.5rem; }
+    .studies-section__head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--color-border);
+    }
+    .studies-section__head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .studies-section__head a {
+      font-size: 0.78rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      margin-left: auto;
+    }
+    .studies-section__head a:hover { text-decoration: underline; }
+    .studies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .studies-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      background: var(--color-surface);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .studies-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .studies-card__head {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+    .studies-card__title {
+      font-size: 0.97rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin: 0;
+      flex: 1;
+    }
+    .studies-card__badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 2rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .studies-card__badge--guide {
+      background: #2e6b3e;
+    }
+    .studies-card__badge--book {
+      background: #1a4a7a;
+    }
+    .studies-card__scope {
+      font-size: 0.72rem;
+      color: var(--color-muted);
+      margin-bottom: 0.4rem;
+    }
+    .studies-card__desc {
+      font-size: 0.84rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    /* Progress bar shown when study is in progress */
+    .studies-card__progress {
+      margin-top: 0.6rem;
+      height: 4px;
+      background: var(--color-border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .studies-card__progress-fill {
+      height: 100%;
+      background: var(--color-primary);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="studies-hero">
+      <div class="container">
+        <h1>Studies</h1>
+        <p>Book guides, topical articles, and multi-session study guides for personal or group use.</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Study Guides -->
+      <section class="studies-section" id="study-guides">
+        <div class="studies-section__head">
+          <h2>Study Guides</h2>
+          <a href="../study-guides/">See all →</a>
+        </div>
+        <div class="studies-grid">
+          <a class="studies-card" href="../study-guides/hebrews/" data-slug="hebrews" data-total="13">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">Hebrews: The Better Covenant</h3>
+              <span class="studies-card__badge studies-card__badge--guide">Guide</span>
+            </div>
+            <p class="studies-card__scope">13 chapters</p>
+            <p class="studies-card__desc">A chapter-by-chapter study tracking the sustained argument that Jesus is the fulfilment and surpassing of the old covenant.</p>
+          </a>
+          <a class="studies-card" href="../study-guides/romans-1-8/" data-slug="romans-1-8" data-total="8">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">Romans 1–8: The Righteousness of God</h3>
+              <span class="studies-card__badge studies-card__badge--guide">Guide</span>
+            </div>
+            <p class="studies-card__scope">8 sessions</p>
+            <p class="studies-card__desc">The universal problem of sin, justification by faith alone, union with Christ, and life in the Spirit.</p>
+          </a>
+          <a class="studies-card" href="../study-guides/ephesians/" data-slug="ephesians" data-total="6">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">Ephesians: Every Spiritual Blessing</h3>
+              <span class="studies-card__badge studies-card__badge--guide">Guide</span>
+            </div>
+            <p class="studies-card__scope">6 sessions</p>
+            <p class="studies-card__desc">From cosmic election to household ethics — Paul's most concentrated presentation of the gospel and its implications for the church.</p>
+          </a>
+          <a class="studies-card" href="../study-guides/sermon-on-the-mount/" data-slug="sermon-on-the-mount" data-total="5">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">The Sermon on the Mount</h3>
+              <span class="studies-card__badge studies-card__badge--guide">Guide</span>
+            </div>
+            <p class="studies-card__scope">5 sessions</p>
+            <p class="studies-card__desc">Matthew 5–7 — the Beatitudes, the Antitheses, prayer, anxiety, and the two ways.</p>
+          </a>
+          <a class="studies-card" href="../study-guides/psalms/" data-slug="psalms" data-total="4">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">The Psalms: A 4-Week Devotional</h3>
+              <span class="studies-card__badge studies-card__badge--guide">Guide</span>
+            </div>
+            <p class="studies-card__scope">4 sessions</p>
+            <p class="studies-card__desc">Lament, praise, royal-messianic, and trust psalms — learning to pray the whole Psalter with Israel.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Book Studies -->
+      <section class="studies-section" id="book-studies">
+        <div class="studies-section__head">
+          <h2>Book Studies</h2>
+          <a href="../topics/">See all →</a>
+        </div>
+        <div class="studies-grid">
+          <a class="studies-card" href="../topics/revelation/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">📜 Book of Revelation</h3>
+              <span class="studies-card__badge studies-card__badge--book">Book</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Chapter-by-chapter study through Revelation with cross-references and interpretive notes.</p>
+          </a>
+          <a class="studies-card" href="../topics/romans/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">Romans</h3>
+              <span class="studies-card__badge studies-card__badge--book">Book</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Chapter-by-chapter study of Paul's magnum opus — sin, justification, sanctification, Israel, and Christian ethics.</p>
+          </a>
+          <a class="studies-card" href="../topics/psalms/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">📖 The Psalms</h3>
+              <span class="studies-card__badge studies-card__badge--book">Book</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">The Five Books of the Psalter — lament, praise, penitential, royal-messianic, and wisdom psalms.</p>
+          </a>
+          <a class="studies-card" href="../topics/sermon-on-the-mount/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">⛰️ Sermon on the Mount</h3>
+              <span class="studies-card__badge studies-card__badge--book">Book</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Verse-by-verse guide to Matthew 5–7 — the Beatitudes, the Antitheses, the Lord's Prayer, and the Two Ways.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Topical Articles -->
+      <section class="studies-section" id="topical-articles">
+        <div class="studies-section__head">
+          <h2>Topical Articles</h2>
+          <a href="../topics/">See all →</a>
+        </div>
+        <div class="studies-grid">
+          <a class="studies-card" href="../topics/justification/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">✝️ Justification by Faith</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">How sinners are declared righteous before God — sola fide, imputed righteousness, and assurance.</p>
+          </a>
+          <a class="studies-card" href="../topics/covenants/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">The Covenants of Scripture</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">A biblical-theological survey of all major covenants — from Eden through the New Covenant.</p>
+          </a>
+          <a class="studies-card" href="../topics/christology/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">Christology: The Person &amp; Work of Christ</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Eternal Son, incarnation, two natures, threefold office, atonement, resurrection, and exaltation.</p>
+          </a>
+          <a class="studies-card" href="../topics/holy-spirit/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">🕊️ The Holy Spirit</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Person and work of the third member of the Trinity — regeneration, indwelling, fruit, and gifts.</p>
+          </a>
+          <a class="studies-card" href="../topics/holy-catholic-church/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">The Holy Catholic Church</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Biblical ecclesiology from OT roots through Pentecost, the four marks, sacraments, and the Reformation.</p>
+          </a>
+          <a class="studies-card" href="../topics/prayer/">
+            <div class="studies-card__head">
+              <h3 class="studies-card__title">🙏 Prayer</h3>
+              <span class="studies-card__badge">Article</span>
+            </div>
+            <p class="studies-card__scope">Topical</p>
+            <p class="studies-card__desc">Biblical foundations of prayer, key passages, and study notes.</p>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/app.js"></script>
+  <script>
+    /* SG-D: Show progress bars on study guide cards if bsw_sg_progress exists */
+    (function () {
+      try {
+        var raw = localStorage.getItem('bsw_sg_progress');
+        if (!raw) return;
+        var progress = JSON.parse(raw);
+        document.querySelectorAll('.studies-card[data-slug]').forEach(function (card) {
+          var slug  = card.dataset.slug;
+          var total = parseInt(card.dataset.total, 10);
+          var done  = progress[slug] ? progress[slug].length : 0;
+          if (!done || !total) return;
+          var bar = document.createElement('div');
+          bar.className = 'studies-card__progress';
+          var fill = document.createElement('div');
+          fill.className = 'studies-card__progress-fill';
+          fill.style.width = Math.round((done / total) * 100) + '%';
+          bar.appendChild(fill);
+          card.appendChild(bar);
+          var scopeEl = card.querySelector('.studies-card__scope');
+          if (scopeEl) scopeEl.textContent = done + ' / ' + total + ' complete';
+        });
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>

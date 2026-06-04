@@ -182,6 +182,106 @@
 .tg-toc__list a { color: var(--color-accent); text-decoration: none; }
 .tg-toc__list a:hover { text-decoration: underline; }
 
+/* SG-E: sticky horizontal ToC bar for long articles */
+.tg-toc--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--color-bg);
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.5rem 1.25rem;
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.tg-toc--sticky::-webkit-scrollbar { height: 4px; }
+.tg-toc--sticky .tg-toc__title { display: none; }
+.tg-toc--sticky .tg-toc__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+.tg-toc--sticky .tg-toc__list li { margin-bottom: 0; white-space: nowrap; }
+.tg-toc--sticky .tg-toc__list a {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  background: transparent;
+  transition: background 0.12s, color 0.12s;
+}
+.tg-toc--sticky .tg-toc__list a:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* SG-G: breadcrumb nav above hero */
+.tg-breadcrumb {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  padding: 0.6rem var(--space-md, 1rem) 0.25rem;
+  max-width: var(--max-width, 860px);
+  margin: 0 auto;
+}
+.tg-breadcrumb a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+.tg-breadcrumb a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* SG-H: related studies section */
+.tg-related {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.tg-related__title {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+.tg-related__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.tg-related__link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: border-color 0.12s, background 0.12s;
+}
+.tg-related__link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  text-decoration: none;
+}
+
 /* ── Sections ───────────────────────────────────────────────── */
 .tg-section {
   margin-bottom: var(--space-xl);

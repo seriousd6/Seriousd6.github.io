@@ -95,6 +95,7 @@
       <div class="bookmarks-toolbar">
         <h1 class="bookmarks-toolbar__title">★ Bookmarks</h1>
         <button class="bookmarks-btn" id="bm-clear-all" type="button">Clear all</button>
+        <a class="bookmarks-btn" id="bm-reader-link" href="../read/">← Reader</a>
         <a class="bookmarks-btn" href="../">← Home</a>
       </div>
 
@@ -209,6 +210,12 @@
       });
 
       render();
+
+      // When embedded as iframe (?minimal=1), hide the Home back-link (Reader link stays)
+      if (new URLSearchParams(location.search).get('minimal')) {
+        var homeLink = document.querySelector('.bookmarks-btn[href="../"]');
+        if (homeLink) homeLink.hidden = true;
+      }
     })();
   </script>
 </body>

@@ -14,24 +14,95 @@
 
 .disc-page { /* no extra wrapper needed; panels fill the page */ }
 
-/* Sticky top tab bar */
-.disc-tabbar {
+/* Sticky top tab bar wrapper (needed for More menu positioning) */
+.disc-tabbar-wrap {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: var(--color-surface);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+@media (max-width: 1023px) {
+  .disc-tabbar-wrap { top: var(--topbar-h, 48px); }
+}
+
+/* Sticky top tab bar */
+.disc-tabbar {
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;
   background: var(--color-surface);
   border-bottom: 2px solid var(--color-border);
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  position: relative;
 }
 .disc-tabbar::-webkit-scrollbar { display: none; }
 
-@media (max-width: 1023px) {
-  /* keep tab bar below the mobile top bar */
-  .disc-tabbar { top: var(--topbar-h, 48px); }
+/* More ▾ overflow drawer */
+.disc-tab--more {
+  margin-left: auto;
+  border-left: 1px solid var(--color-border);
+  border-bottom-color: transparent !important;
 }
+.disc-more-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 180px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  z-index: 200;
+  padding: .3rem 0;
+}
+.disc-more-item {
+  display: block;
+  width: 100%;
+  padding: .55rem 1.1rem;
+  font-family: var(--font-ui);
+  font-size: .87rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.disc-more-item:hover { background: var(--color-bg, #f8f4ee); color: var(--color-text); }
+
+/* Daily strip */
+.disc-today-strip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .45rem;
+  padding: .22rem 1rem .28rem;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  font-size: .72rem;
+  color: var(--color-muted);
+  min-height: 0;
+}
+.disc-strip-label { margin-right: .3rem; }
+.disc-dot--strip { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+/* Embed iframe panels */
+.disc-embed-frame { width: 100%; border: none; height: calc(100vh - 120px); display: block; }
+
+/* Gratitude sub-panel (inside Journal) */
+#journal-gratitude-panel { padding-top: .75rem; }
+.grat-prompt { font-family: Georgia, serif; font-size: .95rem; font-style: italic; color: var(--color-muted); margin: 0 0 .75rem; }
+.grat-bar { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-bottom: .75rem; }
+
+/* Cross-discipline CTAs */
+.disc-cta-link { font-size: .78rem; color: var(--color-primary); font-weight: 500; margin-left: .6rem; text-decoration: none; }
+.disc-cta-link:hover { text-decoration: underline; }
+.worship-post-cta { font-size: .82rem; color: var(--color-muted); padding: .5rem 0; margin: 0; }
+.worship-post-cta a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
+.worship-post-cta a:hover { text-decoration: underline; }
+
 
 .disc-tab {
   display: flex;

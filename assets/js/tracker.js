@@ -113,6 +113,34 @@ export function isWorshipDone(date) {
   } catch (e) { return false; }
 }
 
+// ── Derived: gratitude (from bsw_gratitude) ──────────────────────────────────
+export function isGratitudeDone(date) {
+  date = date || _todayStr();
+  try {
+    var entries = JSON.parse(localStorage.getItem('bsw_gratitude') || '[]');
+    return entries.some(function (e) { return e.date === date; });
+  } catch (e) { return false; }
+}
+
+// ── Derived: fasting — any fast logged this week ──────────────────────────────
+export function isFastingDone(date) {
+  date = date || _todayStr();
+  try {
+    var d = new Date(date + 'T00:00:00');
+    var dow = d.getDay();
+    var sunday = new Date(d.getTime() - dow * 86400000);
+    var saturday = new Date(sunday.getTime() + 6 * 86400000);
+    function toStr(dt) {
+      return dt.getFullYear() + '-' +
+        String(dt.getMonth() + 1).padStart(2, '0') + '-' +
+        String(dt.getDate()).padStart(2, '0');
+    }
+    var sunStr = toStr(sunday), satStr = toStr(saturday);
+    var fasts = JSON.parse(localStorage.getItem('bsw_fasting') || '[]');
+    return fasts.some(function (f) { return f.date >= sunStr && f.date <= satStr; });
+  } catch (e) { return false; }
+}
+
 // ── Combined status ───────────────────────────────────────────────────────────
 export function getToday() {
   var today = _todayStr();
@@ -123,6 +151,8 @@ export function getToday() {
     prayer:     isPrayerDone(today),
     reflection: isReflectionDone(today),
     worship:    isWorshipDone(today),
+    gratitude:  isGratitudeDone(today),
+    fasting:    isFastingDone(today),
   };
 }
 

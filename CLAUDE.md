@@ -60,6 +60,39 @@ Copy `topics/_template/index.html` and edit:
 - [x] Verse highlight / personal notes (localStorage)
 - [ ] Mobile navigation improvements
 
+## Code Comments *(required for all new code)*
+
+**Every non-obvious function, algorithm, cache, or cross-module state interaction written or modified by an agent MUST include this comment format:**
+
+```js
+// INTENT: [one sentence — what this block does and WHY, not just what it obviously does]
+// CHANGE? [what else to update if you modify this code — downstream side-effects]
+// VERIFY: [a runtime check to confirm correctness — what to observe in the browser/console]
+```
+
+Rules:
+- **Required** on: new exported functions, non-trivial algorithms, any code that touches shared/global state, caches, and cross-module couplings (`window.*`, `localStorage.*`).
+- Short helpers (< 5 lines, obvious purpose) need only `INTENT` if anything.
+- Complex state flows **must** have all three lines.
+- `CHANGE?` must name specific variables, file paths, or downstream callers — not vague advice.
+- `VERIFY` must describe a browser/console observation, not "run the tests".
+- Do **not** add comments that restate what the code obviously does.
+
+**Worked example — `wordcloud.js` spiral placement:**
+
+```js
+// INTENT: Archimedean spiral (r = b·θ) places each word by sweeping outward from
+//   a seed pixel; b=5 gives ~450px max radius in MAX_ITER steps. The adaptive step
+//   TARGET_D / Math.max(r, TARGET_D) keeps arc-distance constant rather than
+//   angular-distance, so words pack evenly at all radii.
+// CHANGE? If you change SVG_W/SVG_H calculation, the mask cache key must also change
+//   (it includes dimensions) or stale masks will be reused after window resize.
+// VERIFY: Render the OT (tablets) scope; all words should stay within the arch
+//   boundary. No words should appear in the gap between the two tablet halves.
+```
+
+---
+
 ## What NOT to Do
 
 - Do not introduce a package.json / npm dependency unless explicitly asked

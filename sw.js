@@ -22,8 +22,8 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v51';  // bump when HTML/CSS/JS/icon changes
-var DATA_CACHE_V = 'bsw-data-v1';  // bump when JSON data schema changes
+var APP_CACHE_V  = 'bsw-app-v64';  // bump when HTML/CSS/JS/icon changes
+var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
 var SHELL_URLS = [
@@ -91,6 +91,16 @@ var SHELL_URLS = [
   './library/39-articles/index.html',
   './word/index.html',
   './dictionary/index.html',
+  './apocrypha/index.html',
+  './church-history/index.html',
+  './discipline/index.html',
+  './history/index.html',
+  './maps/timelapse/index.html',
+  './progress/index.html',
+  './reflections/index.html',
+  './studies/index.html',
+  './tracker/index.html',
+  './worship/index.html',
   './offline.html',
   './assets/css/style.css',
   './assets/css/bible-ui.css',
@@ -110,6 +120,14 @@ var SHELL_URLS = [
   './assets/css/maps.css',
   './assets/css/wordcloud.css',
   './assets/css/devotionals.css',
+  './assets/css/apocrypha.css',
+  './assets/css/discipline.css',
+  './assets/css/lib-browser.css',
+  './assets/css/lib-progress.css',
+  './assets/css/lib-reader.css',
+  './assets/css/ol-companion.css',
+  './assets/css/timelapse.css',
+  './assets/css/topical.css',
   './memorize/index.html',
   './journal/index.html',
   './study-guides/index.html',
@@ -138,6 +156,17 @@ var SHELL_URLS = [
   './assets/js/maps.js',
   './assets/js/wordcloud.js',
   './assets/js/main.js',
+  './assets/js/apocrypha-reader.js',
+  './assets/js/discipline-strip.js',
+  './assets/js/lib-browser.js',
+  './assets/js/lib-progress.js',
+  './assets/js/lib-reader.js',
+  './assets/js/ol-companion.js',
+  './assets/js/places.js',
+  './assets/js/sg-progress.js',
+  './assets/js/store.js',
+  './assets/js/timelapse-map.js',
+  './assets/js/tracker.js',
   './favicon.svg',
   './favicon.ico',
   './manifest.json',

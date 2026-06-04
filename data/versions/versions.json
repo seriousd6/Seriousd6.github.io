@@ -10,5 +10,10 @@
   { "id": "WEBBE", "name": "World English Bible British Edition", "year": 2000, "tier": 2 },
   { "id": "MKT-L", "name": "MKT — Literal",    "year": 2026, "tier": 3, "local": "literal"   },
   { "id": "MKT-M", "name": "MKT — Mediating",  "year": 2026, "tier": 3, "local": "mediating" },
-  { "id": "MKT-T", "name": "MKT — Thought",    "year": 2026, "tier": 3, "local": "thought"   }
+  { "id": "MKT-T", "name": "MKT — Thought",    "year": 2026, "tier": 3, "local": "thought"   },
+
+  { "id": "DR",      "name": "Douay-Rheims (1899)",               "year": 1899, "tier": 1, "group": "apocrypha", "scope": "full-bible", "canon_order": "dr" },
+  { "id": "WEB-CE",  "name": "World English Bible (Catholic Ed.)", "year": 2000, "tier": 1, "group": "apocrypha", "scope": "full-bible", "canon_order": "dr" },
+  { "id": "KJV-APO", "name": "KJV Apocrypha (1611)",               "year": 1611, "tier": 2, "group": "apocrypha", "scope": "full-bible", "canon_order": "kjv-apocrypha" },
+  { "id": "BRENTON", "name": "Brenton's LXX English (1851)",        "year": 1851, "tier": 2, "group": "apocrypha", "scope": "full-bible", "canon_order": "lxx" }
 ]

@@ -62,6 +62,17 @@ export function initPWA() {
     meta.content = '#5c3d1e';
     document.head.appendChild(meta);
   }
+  // INTENT: iOS Safari does not use the manifest for home-screen icons; it requires
+  //   an explicit apple-touch-icon link in the document head. Injecting here once
+  //   covers all pages via the shared initPWA() call in app.js.
+  // CHANGE? If the icon path changes, update ./assets/icon-192.png in sw.js SHELL_URLS too.
+  // VERIFY: On iOS Safari, "Add to Home Screen" should show the cross/book icon, not a webpage screenshot.
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    var touchIcon = document.createElement('link');
+    touchIcon.rel  = 'apple-touch-icon';
+    touchIcon.href = new URL('../../assets/icon-192.png', import.meta.url).href;
+    document.head.appendChild(touchIcon);
+  }
 
   if (!('serviceWorker' in navigator)) return;
 

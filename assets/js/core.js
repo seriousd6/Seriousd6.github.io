@@ -37,11 +37,115 @@ export var VERSIONS_URL     = _resolve('../../data/versions/versions.json'); // 
 export var BOOKS_URL        = _resolve('../../data/bible/books.json');       // book metadata (names, abbrevs, testament)
 export var SEARCH_URL       = _resolve('../../search/');
 export var READER_URL       = _resolve('../../read/');
+export var MAPS_URL         = _resolve('../../maps/');
 export var LIB_READER_URL   = _resolve('../../library/read/');
 export var VERSE_STUDY_URL  = _resolve('../../verse-study/');
 export var COMPARE_URL      = _resolve('../../compare/');
 export var WORD_URL         = _resolve('../../word/');
 export var STORAGE_KEY      = 'bsw_version';   // localStorage key for the user's chosen Bible version
+
+// ── Map cross-references ───────────────────────────────────────────────────
+// Human-readable labels for each map (keyed by map id from maps.js MAPS array).
+export var MAP_LABELS = {
+  'holy-land':           'Holy Land (NT)',
+  'paul-journeys':       "Paul's Journeys",
+  'exodus':              'The Exodus',
+  'divided-kingdom':     'Divided Kingdom',
+  'ancient-near-east':   'Ancient Near East',
+  'patriarchal-journeys':'Patriarchal Journeys',
+  'conquest':            'Conquest of Canaan',
+  'twelve-tribes':       'Twelve Tribes',
+  'judges':              'Time of the Judges',
+  'david-kingdom':       "David's Kingdom",
+  'solomon-kingdom':     "Solomon's Kingdom",
+  'invasions':           'Assyrian & Babylonian Invasions',
+  'return-exile':        'Return from Exile',
+  'seven-churches':      'Seven Churches'
+};
+
+// Bible book id → relevant map ids (ordered most-to-least relevant).
+export var BOOK_MAP_LINKS = {
+  'genesis':        ['patriarchal-journeys','ancient-near-east'],
+  'exodus':         ['exodus','ancient-near-east'],
+  'leviticus':      ['exodus'],
+  'numbers':        ['exodus','twelve-tribes'],
+  'deuteronomy':    ['exodus','conquest'],
+  'joshua':         ['conquest','twelve-tribes'],
+  'judges':         ['judges','twelve-tribes'],
+  'ruth':           ['judges','twelve-tribes'],
+  '1samuel':        ['judges','david-kingdom'],
+  '2samuel':        ['david-kingdom'],
+  '1kings':         ['david-kingdom','solomon-kingdom','divided-kingdom'],
+  '2kings':         ['divided-kingdom','invasions'],
+  '1chronicles':    ['david-kingdom','solomon-kingdom'],
+  '2chronicles':    ['solomon-kingdom','divided-kingdom','invasions'],
+  'ezra':           ['return-exile'],
+  'nehemiah':       ['return-exile'],
+  'esther':         ['return-exile','ancient-near-east'],
+  'job':            ['ancient-near-east'],
+  'psalms':         ['david-kingdom','holy-land'],
+  'proverbs':       ['solomon-kingdom'],
+  'ecclesiastes':   ['solomon-kingdom'],
+  'songofsolomon':  ['holy-land'],
+  'isaiah':         ['divided-kingdom','invasions','ancient-near-east'],
+  'jeremiah':       ['invasions','divided-kingdom'],
+  'lamentations':   ['invasions'],
+  'ezekiel':        ['invasions','return-exile'],
+  'daniel':         ['invasions','ancient-near-east'],
+  'hosea':          ['divided-kingdom'],
+  'joel':           ['divided-kingdom'],
+  'amos':           ['divided-kingdom'],
+  'obadiah':        ['divided-kingdom'],
+  'jonah':          ['ancient-near-east','invasions'],
+  'micah':          ['divided-kingdom'],
+  'nahum':          ['invasions'],
+  'habakkuk':       ['invasions'],
+  'zephaniah':      ['divided-kingdom'],
+  'haggai':         ['return-exile'],
+  'zechariah':      ['return-exile'],
+  'malachi':        ['return-exile'],
+  'matthew':        ['holy-land'],
+  'mark':           ['holy-land'],
+  'luke':           ['holy-land'],
+  'john':           ['holy-land'],
+  'acts':           ['holy-land','paul-journeys'],
+  'romans':         ['paul-journeys'],
+  '1corinthians':   ['paul-journeys'],
+  '2corinthians':   ['paul-journeys'],
+  'galatians':      ['paul-journeys'],
+  'ephesians':      ['paul-journeys','seven-churches'],
+  'philippians':    ['paul-journeys'],
+  'colossians':     ['paul-journeys'],
+  '1thessalonians': ['paul-journeys'],
+  '2thessalonians': ['paul-journeys'],
+  '1timothy':       ['paul-journeys'],
+  '2timothy':       ['paul-journeys'],
+  'titus':          ['paul-journeys'],
+  'philemon':       ['paul-journeys'],
+  'hebrews':        ['holy-land','exodus','conquest'],
+  'james':          ['holy-land'],
+  '1peter':         ['paul-journeys','holy-land'],
+  '2peter':         ['holy-land'],
+  '1john':          ['seven-churches','holy-land'],
+  '2john':          ['seven-churches'],
+  '3john':          ['seven-churches'],
+  'jude':           ['holy-land'],
+  'revelation':     ['seven-churches','holy-land']
+};
+
+// Timeline era id → relevant map ids.
+export var ERA_MAP_LINKS = {
+  'creation':       [],
+  'patriarchs':     ['ancient-near-east','patriarchal-journeys'],
+  'exodus':         ['exodus','ancient-near-east'],
+  'conquest':       ['conquest','twelve-tribes','judges'],
+  'monarchy':       ['david-kingdom','solomon-kingdom','divided-kingdom','invasions'],
+  'exile':          ['invasions','return-exile'],
+  'intertestamental':['return-exile','ancient-near-east'],
+  'gospels':        ['holy-land'],
+  'church':         ['holy-land','paul-journeys','seven-churches'],
+  'consummation':   ['seven-churches']
+};
 export var DEFAULT_VER      = 'BSB';           // fallback version if nothing is stored
 export var COMPARE_KEY      = 'bsw_compare';   // localStorage key for the compare-mode version
 export var NOTES_KEY        = 'bsw_notes';     // localStorage key for personal verse notes/highlights
@@ -58,6 +162,8 @@ export var BDB_URL          = _resolve('../../data/strongs/bdb.json');    // Bro
 export var THAYER_URL       = _resolve('../../data/strongs/thayer.json'); // Thayer's Greek lexicon
 export var SMITH_IDX_URL    = _resolve('../../data/smith/index.json');    // Smith's Bible Dictionary index
 export var SMITH_ENTRY_URL  = _resolve('../../data/smith/');              // individual entry JSON files
+export var ISBE_IDX_URL     = _resolve('../../data/isbe/index.json');     // ISBE index
+export var ISBE_ENTRY_URL   = _resolve('../../data/isbe/');               // individual ISBE entry files
 export var HITCH_IDX_URL    = _resolve('../../data/hitchcock/index.json');// Hitchcock's Bible Names index
 export var TORREY_URL       = _resolve('../../data/torrey/torrey.json');  // Torrey's New Topical Textbook
 export var TORREY_VIDX_ROOT = _resolve('../../data/torrey/verse-index'); // per-book verse→topic index
@@ -84,11 +190,11 @@ export var LIB_ABBREV_MAP = {
   'nic':  'nicene-creed',
   'ath':  'athanasian-creed',
   'ign':  'ignatius',
-  'jm':   'justin-martyr',
+  'just': 'justin-martyr',
   'iren': 'irenaeus',
   'tert': 'tertullian',
   'atha': 'athanasius',
-  'chrys':'chrysostom',
+  'chry': 'chrysostom',
   'aug':  'augustine',
   'gnaz': 'gregory-nazianzus'
 };
@@ -110,6 +216,13 @@ export var FATHER_SLUGS = {
 // Using Object.create(null) avoids prototype pollution from book IDs like "constructor".
 export var bookCache        = Object.create(null); // key: "VERSION:bookId" → chapters object
 export var crossRefCache    = Object.create(null); // key: bookId → cross-ref object
+// INTENT: Commentary cache keyed by "{srcId}/{bookId}"; value is the full
+//   chapter-keyed commentary object for that book. Never evicted. A session
+//   reading 20 chapters across 5 sources accumulates up to 100 entries.
+// CHANGE? If commentary data format changes, clear this cache by reassigning
+//   commentaryCache = Object.create(null) at the call site before re-fetching.
+// VERIFY: Switch commentary source twice in the reader; the Network tab should
+//   show only 2 fetches total (one per srcId×bookId pair), not one per chapter.
 export var commentaryCache  = Object.create(null); // key: "source:bookId" → commentary object
 export var parallelsCache   = Object.create(null); // key: bookId → parallels object
 export var strongsCache     = Object.create(null); // key: "greek"|"hebrew" → dictionary object
@@ -121,6 +234,9 @@ export var _lexCache        = Object.create(null); // key: "bdb"|"thayer" → le
 // Smith's Bible Dictionary — split into index (terms list) and per-slug entry files.
 export var _smithData = null; export var _smithMap = null; export var _smithByLetter = null;
 export var _smithLoading = null; export var _smithEntryCache = {};
+// ISBE — International Standard Bible Encyclopaedia (James Orr ed., 1915)
+export var _isbeData = null; export var _isbeMap = null; export var _isbeByLetter = null;
+export var _isbeLoading = null; export var _isbeEntryCache = {};
 // Hitchcock's Bible Names — same pattern as Smith's.
 export var _hitchData = null; export var _hitchMap = null; export var _hitchByLetter = null;
 export var _hitchLoading = null;
@@ -279,6 +395,7 @@ export function populateVersionPicker() {
   var current = getVersion();
   picker.innerHTML = '';
   metaVersions.forEach(function (v) {
+    if (v.group === 'apocrypha') return;  // excluded from main reader
     var opt = document.createElement('option');
     opt.value       = v.id;
     opt.textContent = v.id;
@@ -516,11 +633,14 @@ export var ATTRIBUTION = {
 // data/commentary/<bookId>.json; all others live at data/commentary/<source>/<bookId>.json.
 // Users can switch sources via the verse modal.
 export var COMMENTARY_SOURCES = [
-  { id: 'mhcc',   label: 'Matthew Henry Concise',    attr: "Matthew Henry's Concise Commentary (Public Domain)" },
-  { id: 'jfb',    label: 'Jamieson-Fausset-Brown',   attr: 'Jamieson-Fausset-Brown Bible Commentary (Public Domain)' },
-  { id: 'clarke', label: "Adam Clarke's Commentary", attr: "Adam Clarke's Commentary on the Bible (Public Domain)" },
-  { id: 'calvin', label: "Calvin's Commentaries",    attr: "Calvin's Collected Commentaries (Public Domain)" },
-  { id: 'barnes', label: "Barnes' Notes (NT)",       attr: "Barnes' Notes on the Bible (Public Domain)" }
+  { id: 'mhcc',     label: 'Matthew Henry Concise',       attr: "Matthew Henry's Concise Commentary (Public Domain)" },
+  { id: 'ellicott', label: "Ellicott's Commentary",       attr: "Ellicott's Commentary for English Readers (Charles J. Ellicott ed., 1878–1884; Public Domain)" },
+  { id: 'jfb',      label: 'Jamieson-Fausset-Brown',      attr: 'Jamieson-Fausset-Brown Bible Commentary (Public Domain)' },
+  { id: 'clarke',  label: "Adam Clarke's Commentary",    attr: "Adam Clarke's Commentary on the Bible (Public Domain)" },
+  { id: 'calvin',  label: "Calvin's Commentaries",       attr: "Calvin's Collected Commentaries (Public Domain)" },
+  { id: 'barnes',  label: "Barnes' Notes (NT)",          attr: "Barnes' Notes on the Bible (Public Domain)" },
+  { id: 'rwp',     label: "Robertson's Word Pictures",   attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
+  { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" }
 ];
 
 // Active commentary source — always read from localStorage so changes made in
@@ -636,9 +756,16 @@ export function _compareCanonical(a, b) {
 }
 
 // ── resolveVerses ─────────────────────────────────────────────────────────
-// Resolves a parsed ref (which may span a chapter range or verse range) into
-// an array of {ref, chapter, verse, text} objects by loading the book JSON.
-// Used by the tooltip, the modal verse display, and inline .bsw-verse elements.
+// INTENT: Accepts a parsed ref and a version ID; returns a Promise of verse
+//   objects ({ref, chapter, verse, text}). Loads the entire book JSON via
+//   loadBook() which caches the result in bookCache — so the first call per
+//   book/version fetches the file; all subsequent chapter lookups within that
+//   book are synchronous cache hits with no additional network activity.
+// CHANGE? If the bible data format changes (e.g. {c, v, text} → {chapter,
+//   verse, t}), update both the fetch path in loadBook() and the verse-object
+//   shape consumed by reader.js, compare.js, and the verse modal.
+// VERIFY: Look up "John 3" in the reader; DevTools Network should show exactly
+//   one fetch for John's book JSON. Then look up "John 4" — no new fetch.
 export function resolveVerses(parsedRef, versionId) {
   var bookId   = parsedRef.bookId;
   var ch       = parsedRef.ch;
@@ -737,6 +864,36 @@ export function _smithLoadEntry(slug) {
   return fetch(SMITH_ENTRY_URL + slug + '.json')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (d) { _smithEntryCache[slug] = d; return d; });
+}
+
+// ── ISBE loaders ─────────────────────────────────────────────────────────
+// INTENT: mirrors _smithLoad / _smithLoadEntry — single shared promise prevents duplicate fetches.
+// CHANGE? If ISBE_IDX_URL or ISBE_ENTRY_URL paths change, update the constants above and
+//   the ISBE_VIDX_URL in library.js; also re-run scripts/fetch-isbe.py.
+// VERIFY: Open dictionary page; ISBE filter chip appears and A-Z entries load on click.
+export function _isbeLoad() {
+  if (_isbeLoading) return _isbeLoading;
+  _isbeLoading = fetch(ISBE_IDX_URL)
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (data) {
+      _isbeData     = data;
+      _isbeMap      = {};
+      _isbeByLetter = {};
+      data.forEach(function (e) {
+        _isbeMap[e.id] = e;
+        var letter = e.term.charAt(0).toUpperCase();
+        if (!_isbeByLetter[letter]) _isbeByLetter[letter] = [];
+        _isbeByLetter[letter].push(e);
+      });
+    });
+  return _isbeLoading;
+}
+
+export function _isbeLoadEntry(slug) {
+  if (_isbeEntryCache[slug]) return Promise.resolve(_isbeEntryCache[slug]);
+  return fetch(ISBE_ENTRY_URL + slug + '.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (d) { _isbeEntryCache[slug] = d; return d; });
 }
 
 // ── Hitchcock's Bible Names loader ────────────────────────────────────────

@@ -109,6 +109,7 @@
 <body>
   <main>
     <div class="container trk-page">
+      <a id="trk-back-link" href="../discipline/?tab=history" hidden style="display:inline-block;margin-bottom:.75rem;font-size:.85rem;color:var(--color-primary);text-decoration:none;font-family:var(--font-ui)">← Disciplines</a>
       <h1>✝ Discipline History</h1>
       <p class="trk-subtitle">Last 35 days — each dot represents a completed discipline. <a href="../" style="color:var(--color-primary)">← Home</a></p>
 
@@ -298,6 +299,12 @@
   }
 
   render();
+  </script>
+  <script>
+  if (new URLSearchParams(location.search).get('minimal')) {
+    var bl = document.getElementById('trk-back-link');
+    if (bl) bl.removeAttribute('hidden');
+  }
   </script>
 </body>
 </html>

@@ -17,7 +17,8 @@
 
       <div class="tl2-header">
         <h1 class="tl2-title">Church History Timeline</h1>
-        <p class="tl2-sub">Select an era · then an event · to read details</p>
+        <p class="tl2-sub">Select an era · then an event · to read details · <a href="../timeline/">← Biblical Timeline</a></p>
+        <a class="hist-back-link" href="../history/" id="hist-back-link" hidden>← History</a>
       </div>
 
       <!-- 3-column layout; id="church-timeline-container" for app.js detection -->
@@ -34,6 +35,7 @@
         <!-- Column 2: Sub-event spine -->
         <div class="tl2-col tl2-col--events">
           <div class="tl2-col-label" id="tl2-events-label">Events</div>
+          <input class="tl2-search" type="search" placeholder="Search events…" aria-label="Search events" />
           <div class="tl2-spine-wrap" id="tl2-events-spine">
             <p class="tl2-placeholder">← Select an era</p>
           </div>
@@ -53,5 +55,11 @@
 
   <script src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/app.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('minimal')) {
+      var bl = document.getElementById('hist-back-link');
+      if (bl) bl.removeAttribute('hidden');
+    }
+  </script>
 </body>
 </html>

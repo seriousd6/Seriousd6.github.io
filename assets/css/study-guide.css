@@ -164,6 +164,43 @@
   }
 }
 
+/* ── Session progress (SG-D) ────────────────────────────── */
+.sg-complete-btn {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.sg-complete-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.sg-complete-btn--done {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.sg-complete-btn--done:hover {
+  background: transparent;
+  color: var(--color-muted);
+  border-color: var(--color-border);
+}
+/* Tab completion dot */
+.sg-tab-dot {
+  font-size: 0.45em;
+  color: var(--color-primary);
+  margin-left: 0.3em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
 /* ── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 640px) {
   /* Tab bar must clear the mobile topbar when sticky */

@@ -2,7 +2,7 @@
 'use strict';
 
 import {
-  READER_URL, SEARCH_URL, WORD_URL,
+  READER_URL, SEARCH_URL, WORD_URL, VERSE_STUDY_URL,
   metaVersions, metaBooks,
   COMMENTARY_SOURCES, FATHER_SLUGS,
   getVersion, onVersionChange, escHtml,
@@ -16,7 +16,7 @@ import {
 } from './core.js';
 import { getNotes } from './storage.js';
 import { _HL_COLORS } from './storage.js';
-import { wireRefEl, wireRefLinks } from './wire.js';
+import { wireRefEl, wireRefLinks, applyHighlights } from './wire.js';
 import { expandMorphCode } from './interlinear.js';
 import { loadParallels } from './parallels.js';
 import {
@@ -34,6 +34,7 @@ import { autoTagTerms } from './terms.js';
 var _vsActiveToken = null;
 var _vsWordPanelEl = null;
 var _vsCurrentRef  = null;
+var _vsNavObserver = null;
 
 var _PARALLEL_TYPE_META = {
   'parallel':        { icon: '⇌', label: 'Parallel',      cls: 'reader-parallel-badge--parallel' },
@@ -160,6 +161,14 @@ export function initVerseStudyPage() {
     });
   }
 
+  // VS-H: measure header before verse fetch so scroll-margin-top is correct immediately
+  requestAnimationFrame(function () {
+    var header = document.getElementById('vs-sticky-header');
+    if (header) {
+      document.documentElement.style.setProperty('--vs-header-h', header.offsetHeight + 'px');
+    }
+  });
+
   loadVerseStudyVerse(parsed, getVersion()).then(function () { applyCtx(ctxOn); });
   loadVerseSections(parsed);
 }
@@ -197,6 +206,43 @@ export function loadVerseStudyVerse(parsed, versionId) {
         focalTextEl._termsTagged = false;
         autoTagTerms(focalTextEl);
       }
+    }
+
+    // VS-A: prev/next verse nav links
+    var prevNavLink = document.getElementById('vs-prev-link');
+    var nextNavLink = document.getElementById('vs-next-link');
+    if (prevNavLink) {
+      var pv = parsed.v - 1;
+      if (pv >= 1 && chData[String(pv)]) {
+        prevNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + pv);
+        prevNavLink.title = parsed.bookName + ' ' + parsed.ch + ':' + pv;
+        prevNavLink.removeAttribute('hidden');
+      } else {
+        prevNavLink.setAttribute('hidden', '');
+      }
+    }
+    if (nextNavLink) {
+      var nv = parsed.v + 1;
+      if (chData[String(nv)]) {
+        nextNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + nv);
+        nextNavLink.title = parsed.bookName + ' ' + parsed.ch + ':' + nv;
+        nextNavLink.removeAttribute('hidden');
+      } else {
+        nextNavLink.setAttribute('hidden', '');
+      }
+    }
+
+    // VS-E: copy verse button
+    var copyBtn = document.getElementById('vs-copy-btn');
+    if (copyBtn && text) {
+      copyBtn.removeAttribute('hidden');
+      copyBtn.onclick = function () {
+        var ref = (document.getElementById('vs-header-ref') || {}).textContent || '';
+        navigator.clipboard.writeText(text + (ref ? ' — ' + ref : '')).then(function () {
+          copyBtn.textContent = 'Copied ✓';
+          setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1800);
+        });
+      };
     }
 
     if (prevEl) {
@@ -398,8 +444,14 @@ function _vsRenderWordPanel(wordText, strongsId, entry, lexEntry, tokenEl, morph
       html += '<div class="vs-word-panel__gloss">' + escHtml(entry.gloss) + '</div>';
     }
     if (entry.def && entry.def !== entry.gloss) {
-      var shortDef = entry.def.length > 300 ? entry.def.slice(0, 300) + '…' : entry.def;
-      html += '<div class="vs-word-panel__def">' + escHtml(shortDef) + '</div>';
+      var isLong = entry.def.length > 300;
+      html += '<div class="vs-word-panel__def">';
+      html += '<span class="vs-wp-def-text">' + escHtml(isLong ? entry.def.slice(0, 300) : entry.def) + '</span>';
+      if (isLong) {
+        html += '<span class="vs-wp-def-rest" hidden>' + escHtml(entry.def.slice(300)) + '</span>';
+        html += ' <button class="vs-wp-def-more" type="button">more…</button>';
+      }
+      html += '</div>';
     }
     if (entry.deriv) {
       html += '<div class="vs-word-panel__deriv">' + escHtml(entry.deriv) + '</div>';
@@ -459,6 +511,16 @@ function _vsRenderWordPanel(wordText, strongsId, entry, lexEntry, tokenEl, morph
         _vsActiveToken = null;
       }
       _vsWordPanelEl.setAttribute('hidden', '');
+    });
+  }
+
+  // VS-F: wire the "more…" expand button
+  var moreBtn = _vsWordPanelEl.querySelector('.vs-wp-def-more');
+  if (moreBtn) {
+    moreBtn.addEventListener('click', function () {
+      var rest = _vsWordPanelEl.querySelector('.vs-wp-def-rest');
+      if (rest) rest.removeAttribute('hidden');
+      moreBtn.remove();
     });
   }
 }
@@ -682,13 +744,33 @@ function loadVerseSections(parsed) {
     function vsLoadComm(src) {
       commSec.bodyEl.innerHTML = '<p class="bsw-modal__loading">Loading commentary…</p>';
       loadCommentary(parsed.bookId, src).then(function (data) {
-        var html = _extractCommHtml(data, parsed, src);
+        // _extractCommHtml returns {html, foundV} — destructure before use
+        var commResult = _extractCommHtml(data, parsed, src);
+        var html = commResult ? commResult.html : null;
         var attrHtml = html ? '<p class="vs-commentary-attr">' + _commAttr(src) + '</p>' : '';
         if (!html && commSec.el.hasAttribute('hidden')) {
           commSec.el.remove(); vsRebuildNav(); return;
         }
         commSec.bodyEl.innerHTML = (html || '<p class="bsw-modal__commentary-empty">No commentary found for this verse.</p>') + attrHtml;
         wireRefLinks(commSec.bodyEl);
+        // VS-G: collapse long commentary entries with a "Read more" expand
+        var COMM_THRESHOLD = 800;
+        if (commSec.bodyEl.textContent.length > COMM_THRESHOLD) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'vs-comm-truncated';
+          while (commSec.bodyEl.firstChild) wrapper.appendChild(commSec.bodyEl.firstChild);
+          commSec.bodyEl.appendChild(wrapper);
+          var expandBtn = document.createElement('button');
+          expandBtn.className = 'vs-comm-expand-btn';
+          expandBtn.type = 'button';
+          expandBtn.textContent = 'Read more ▾';
+          commSec.bodyEl.appendChild(expandBtn);
+          expandBtn.addEventListener('click', function () {
+            wrapper.classList.remove('vs-comm-truncated--clamped');
+            expandBtn.remove();
+          });
+          wrapper.classList.add('vs-comm-truncated--clamped');
+        }
         if (commSec.el.hasAttribute('hidden')) {
           commSec.el.removeAttribute('hidden');
           vsRebuildNav();
@@ -723,11 +805,16 @@ function loadVerseSections(parsed) {
     vsRebuildNav();
   });
 
-  // All Translations
+  // All Translations — lazy-load on scroll into view (VS-D)
   if (metaVersions && metaVersions.length) {
-    vsRenderVersionCompare(parsed, cmpSec.bodyEl);
     cmpSec.el.removeAttribute('hidden');
     vsRebuildNav();
+    var cmpObserver = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      cmpObserver.disconnect();
+      vsRenderVersionCompare(parsed, cmpSec.bodyEl);
+    }, { threshold: 0.05 });
+    cmpObserver.observe(cmpSec.el);
   } else {
     cmpSec.el.remove();
     vsRebuildNav();
@@ -797,6 +884,22 @@ function vsCreateSection(container, id, label) {
 
   var body = document.createElement('div');
   body.className = 'vs-section-body';
+  body.id = id + '-body';
+
+  // VS-C: collapse toggle
+  var toggleBtn = document.createElement('button');
+  toggleBtn.className = 'vs-section-toggle';
+  toggleBtn.setAttribute('aria-expanded', 'true');
+  toggleBtn.setAttribute('aria-controls', id + '-body');
+  toggleBtn.textContent = '▾';
+  heading.appendChild(toggleBtn);
+
+  toggleBtn.addEventListener('click', function () {
+    var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    body.hidden = expanded;
+    toggleBtn.textContent = expanded ? '▸' : '▾';
+  });
 
   sec.appendChild(heading);
   sec.appendChild(body);
@@ -805,6 +908,9 @@ function vsCreateSection(container, id, label) {
 }
 
 function vsRebuildNav() {
+  // VS-B: disconnect previous scroll-spy observer before rebuilding
+  if (_vsNavObserver) { _vsNavObserver.disconnect(); _vsNavObserver = null; }
+
   var sidebar     = document.getElementById('vs-sidebar');
   var mobileNav   = document.getElementById('vs-mobile-nav');
   var mobileSelect= document.getElementById('vs-section-select');
@@ -819,12 +925,27 @@ function vsRebuildNav() {
       if (!hd) return;
       var btn = document.createElement('button');
       btn.className = 'vs-nav-btn';
-      btn.textContent = hd.textContent;
+      btn.dataset.sectionId = sec.id;
+      btn.textContent = hd.textContent.replace('▾', '').replace('▸', '').trim();
       btn.addEventListener('click', function () {
         sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
       sidebar.appendChild(btn);
     });
+
+    // VS-B: wire scroll-spy observer
+    if (visible.length > 0) {
+      _vsNavObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id;
+          document.querySelectorAll('#vs-sidebar .vs-nav-btn').forEach(function (b) {
+            b.classList.toggle('vs-nav-btn--active', b.dataset.sectionId === id);
+          });
+        });
+      }, { rootMargin: '-8% 0px -75% 0px', threshold: 0 });
+      visible.forEach(function (sec) { _vsNavObserver.observe(sec); });
+    }
   }
 
   if (mobileSelect) {
@@ -873,6 +994,7 @@ function vsRenderVersionCompare(parsed, container) {
       if (text) {
         textEl.className = 'vs-cmp-row__text';
         textEl.textContent = text;
+        applyHighlights(row);
       } else {
         textEl.className = 'vs-cmp-row__text vs-cmp-row__text--na';
         textEl.textContent = 'Not available in this translation.';

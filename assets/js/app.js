@@ -41,8 +41,8 @@ import { initSearchPage, buildSearchDOM } from './search.js';
 import {
   initReaderPage, initCompareToggle, injectComparePanel,
   isCompareEnabled, getCompareVersion, setCompareVersion,
-  initSplitToggle, initFontSizeControls, initWideToggle,
-  initSidebarToggle, initXrefNotesToggle
+  initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle,
+  initSidebarToggle, initXrefNotesToggle, initCommModeToggle
 } from './reader.js';
 import {
   initParallelToggle, getParallelsEnabled, setParallelsEnabled
@@ -58,13 +58,17 @@ import { initWordPage } from './word.js';
 import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './daily.js';
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
 import { runAutoTagTerms, autoTagTerms, getTermMap2 } from './terms.js';
+import { runAutoTagPlaces, autoTagPlacesIn } from './places.js';
 import { initTimelinePage, initChurchTimelinePage } from './timeline.js';
 import { initMapsPage } from './maps.js';
+import { initTimelapsePage } from './timelapse-map.js?v=2';
 import { initWordCloudPage } from './wordcloud.js';
 import { initLibReaderPage } from './lib-reader.js';
 import { initLibBrowserPage } from './lib-browser.js';
+import { initLibProgressPage } from './lib-progress.js';
 import { initWorkshopPage } from './workshop.js';
 import { initOLSection } from './ol-companion.js';
+import { initApocryphaReader, wireApoRefLinks } from './apocrypha-reader.js';
 
 // ── Register cross-module callbacks ───────────────────────────────────────
 // These connect the modal to feature-module renderers without creating circular
@@ -96,11 +100,12 @@ onVersionChange(function (id) {
 // window.BibleUI is available to non-module scripts (topic pages, inline scripts).
 // Keep this surface small — it's the only intentional global.
 window.BibleUI = {
-  init:         init,
-  getVersion:   getVersion,
-  setVersion:   setVersion,
-  openModal:    openModal,
-  initOLSection: initOLSection,   // exposed so verse-study.js can call it
+  init:            init,
+  getVersion:      getVersion,
+  setVersion:      setVersion,
+  openModal:       openModal,
+  initOLSection:   initOLSection,
+  autoTagPlacesIn: autoTagPlacesIn,  // called by reader.js / timeline.js after dynamic renders
   // openReader: navigates to the reader page at the given book/chapter/verse.
   openReader:   function (bookId, ch, v) {
     var bkData = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
@@ -140,6 +145,7 @@ function init() {
     buildTooltipDOM();
     buildModalDOM();
     wireRefLinks();        // wire any static [data-ref] elements in the initial HTML
+    wireApoRefLinks();     // second pass: wire apocryphal refs not handled by wireRefLinks
     wireVersionPicker();
     buildSearchDOM();      // adds the Search button to the sidebar on every page
 
@@ -151,6 +157,8 @@ function init() {
       initCompareToggle();
       initInterlinearToggle();
       initBookInfoToggle();
+      initCommModeToggle();
+      initViewToggle();
       initSidebarToggle();
       initWideToggle();
       initSplitToggle();
@@ -213,6 +221,11 @@ function init() {
       initMapsPage();
     }
 
+    // ── Timelapse page (maps/timelapse/index.html) ────────────────────────
+    if (document.getElementById('tl-map')) {
+      initTimelapsePage();
+    }
+
     // ── Word Cloud page (wordcloud/index.html) ────────────────────────────
     if (document.getElementById('wc-container')) {
       initWordCloudPage();
@@ -226,6 +239,16 @@ function init() {
     // ── Library browser (library/index.html) ──────────────────────────────
     if (document.getElementById('lb-container')) {
       initLibBrowserPage();
+    }
+
+    // ── Library progress page (library/progress/index.html) ───────────────
+    if (document.getElementById('lp-root')) {
+      initLibProgressPage();
+    }
+
+    // ── Apocrypha reader (apocrypha/index.html) ───────────────────────────
+    if (document.getElementById('apoc-reader-results')) {
+      initApocryphaReader();
     }
 
     // History widget appears on the home page sidebar — tracks recently visited refs.
@@ -248,6 +271,15 @@ function init() {
       requestIdleCallback(_runTag, { timeout: 3000 });
     } else {
       setTimeout(_runTag, 1200);
+    }
+
+    /* Place-name auto-tagging — deferred to a second idle slot so it doesn't
+       compete with term tagging for the same idle window.                   */
+    var _runPlaces = function () { runAutoTagPlaces(); };
+    if (typeof requestIdleCallback !== 'undefined') {
+      requestIdleCallback(_runPlaces, { timeout: 5000 });
+    } else {
+      setTimeout(_runPlaces, 2000);
     }
 
   }).catch(function (err) {

@@ -1,0 +1,661 @@
+/* timelapse.css — Biblical History Time-Lapse page */
+
+/* Neutralise the global main { padding: 4rem 0 } so the 100vh layout fits */
+.tl-main {
+  padding: 0 !important;
+}
+
+.tl-page {
+  max-width: none !important;
+  padding-left: .75rem !important;
+  padding-right: .75rem !important;
+  padding-top: .65rem;
+  padding-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+
+.tl-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-bottom: .45rem;
+}
+
+.tl-page-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 .05rem;
+}
+
+.tl-page-sub {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+}
+
+.tl-maps-link {
+  font-size: .8rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tl-maps-link:hover { text-decoration: underline; }
+
+/* ── Body: event-list | map | info panel ────────────────────────────────── */
+
+.tl-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: .65rem;
+}
+
+/* Left event column */
+.tl-event-col {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-surface, #fff);
+}
+
+.tl-event-col-header {
+  flex-shrink: 0;
+  padding: .45rem .7rem;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--color-muted, #888);
+  border-bottom: 1px solid var(--color-border, #eee);
+  background: var(--color-surface, #fff);
+}
+
+.tl-event-search {
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .3rem .55rem;
+  border: none;
+  border-bottom: 1px solid var(--color-border, #eee);
+  background: var(--color-surface, #fff);
+  font-size: .73rem;
+  color: var(--color-text);
+  outline: none;
+}
+.tl-event-search:focus {
+  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+  border-bottom-color: var(--color-primary);
+}
+
+.tl-map-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.tl-map-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e8f4f8;
+}
+
+/* ── Info panel ──────────────────────────────────────────────────────────── */
+
+.tl-info-panel {
+  width: 360px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  overflow-y: auto;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,.09);
+}
+
+.tl-info-year {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.tl-info-era {
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--color-muted, #888);
+}
+
+.tl-info-label {
+  font-size: .95rem;
+  font-weight: 700;
+  margin: .15rem 0 0;
+  line-height: 1.3;
+  color: var(--color-heading, #1a1a1a);
+}
+
+.tl-info-desc {
+  font-size: .79rem;
+  line-height: 1.62;
+  color: var(--color-text);
+  margin: 0;
+  flex: 1;
+}
+
+/* Figures */
+.tl-figures {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding-top: .4rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.tl-figure-item {
+  display: flex;
+  flex-direction: column;
+  gap: .05rem;
+}
+
+.tl-figure-item__name {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--color-heading, #1a1a1a);
+}
+
+.tl-figure-item__note {
+  font-size: .72rem;
+  color: var(--color-muted, #888);
+  line-height: 1.4;
+}
+
+/* Active empires legend */
+.tl-empire-list {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding-top: .4rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.tl-empire-item {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  color: var(--color-text);
+}
+
+.tl-empire-swatch {
+  width: 1rem;
+  height: .65rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  opacity: .75;
+}
+
+.tl-empire-name {
+  font-weight: 500;
+}
+
+/* ── Slider controls ─────────────────────────────────────────────────────── */
+
+.tl-controls {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-shrink: 0;
+  padding: .5rem 0 .4rem;
+}
+
+.tl-btn-play {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .12s;
+}
+
+.tl-btn-play:hover { opacity: .85; }
+
+.tl-slider-track {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.tl-slider {
+  width: 100%;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.tl-tick-row {
+  position: relative;
+  height: 1rem;
+}
+
+.tl-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: .55rem;
+  color: var(--color-muted, #bbb);
+  cursor: pointer;
+  user-select: none;
+  transition: color .12s;
+}
+
+.tl-tick:hover {
+  color: var(--color-primary);
+}
+
+.tl-speed {
+  flex-shrink: 0;
+  font-size: .78rem;
+  padding: .2rem .4rem;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 5px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ── Place dot markers ───────────────────────────────────────────────────── */
+
+.tl-place-dot {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tl-place-dot span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #555;
+  box-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+
+/* Tribe tooltip — bottom-right corner at cursor */
+.tl-tribe-tip {
+  position: fixed;
+  z-index: 9999;
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: .4rem .6rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  font-size: .78rem;
+  color: #222;
+  line-height: 1.45;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.tl-tribe-tt-name {
+  font-weight: 700;
+  margin-bottom: .1rem;
+}
+
+.tl-tribe-tt-detail {
+  color: #555;
+  font-size: .73rem;
+}
+
+.tl-tribe-tt-verse {
+  color: var(--color-primary, #4a7fcb);
+  font-size: .71rem;
+  margin-top: .1rem;
+}
+
+/* Custom multi-dot proximity tooltip */
+.tl-place-tip {
+  position: fixed;
+  z-index: 10000;
+  display: none;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: .4rem .55rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  font-size: .78rem;
+  color: #222;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.tl-place-tip-sep {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: .35rem 0;
+}
+
+.tl-place-tt-label {
+  font-weight: 700;
+  margin-bottom: .1rem;
+}
+
+.tl-place-tt-sig {
+  color: #555;
+  font-size: .73rem;
+  line-height: 1.4;
+}
+
+/* ── Leaflet region labels ────────────────────────────────────────────────── */
+
+.tl-region-label {
+  pointer-events: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tl-region-label span {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(30,30,30,.55);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 2px rgba(255,255,255,.9), 0 -1px 2px rgba(255,255,255,.9);
+  user-select: none;
+}
+
+/* ── Figure markers ──────────────────────────────────────────────────────── */
+
+.tl-figure-icon {
+  pointer-events: auto;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tl-figure-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary, #4a7fcb);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  flex-shrink: 0;
+}
+
+.tl-figure-name {
+  font-size: .62rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(255,255,255,.9), 0 -1px 2px rgba(255,255,255,.9);
+  transform: translateY(-1px);
+}
+
+/* ── Event list (fills the left column) ─────────────────────────────────── */
+
+.tl-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  padding: .4rem .3rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tl-ev-item {
+  display: flex;
+  gap: .45rem;
+  align-items: baseline;
+  padding: .22rem .3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .1s;
+  border-left: 2px solid transparent;
+}
+
+.tl-ev-item:hover {
+  background: var(--color-hover, rgba(0,0,0,.05));
+}
+
+.tl-ev-item--active {
+  background: var(--color-primary-light, rgba(74,127,203,.12));
+}
+
+.tl-ev-year {
+  font-size: .64rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 4.5rem;
+}
+
+.tl-ev-label {
+  font-size: .72rem;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+/* ── Step mode / Continue buttons ───────────────────────────────────────── */
+
+.tl-btn-step {
+  flex-shrink: 0;
+  height: 2.2rem;
+  padding: 0 .75rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #d0d0d0);
+  background: var(--color-surface, #fff);
+  color: var(--color-muted, #888);
+  font-size: .75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+}
+
+.tl-btn-step--active {
+  background: var(--color-primary-light, rgba(74,127,203,.15));
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.tl-btn-step:hover { opacity: .85; }
+
+.tl-btn-continue {
+  flex-shrink: 0;
+  height: 2.2rem;
+  padding: 0 .9rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  animation: tl-pulse 1.6s ease-in-out infinite;
+}
+
+.tl-btn-continue:hover { opacity: .85; animation: none; }
+
+@keyframes tl-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74,127,203,.45); }
+  50%       { box-shadow: 0 0 0 6px rgba(74,127,203,0); }
+}
+
+/* ── Extended description (Read more) ───────────────────────────────────── */
+
+.tl-desc-extended {
+  margin-top: .5rem;
+}
+
+.tl-desc-extended summary {
+  font-size: .72rem;
+  color: var(--color-muted, #888);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.tl-desc-extended summary::before {
+  content: '▸';
+  font-size: .65rem;
+  transition: transform .15s;
+}
+
+.tl-desc-extended[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.tl-desc-extended summary:hover { color: var(--color-primary); }
+
+.tl-desc-extended p {
+  font-size: .79rem;
+  line-height: 1.62;
+  color: var(--color-text);
+  margin: .45rem 0 0;
+}
+
+/* ── Static-map deep-link (inside info panel) ───────────────────────────── */
+
+.tl-map-link {
+  display: inline-block;
+  margin-top: .35rem;
+  font-size: .69rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: .1rem .45rem;
+  transition: background .12s, color .12s;
+}
+.tl-map-link:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+.tl-map-link[hidden] { display: none !important; }
+
+/* ── Scripture ref chips ─────────────────────────────────────────────────── */
+
+#tl-info-content {
+  transition: opacity .15s ease;
+}
+
+.tl-ref-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .4rem;
+}
+
+.tl-ref-chip {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 600;
+  padding: .15rem .45rem;
+  border-radius: 4px;
+  background: var(--color-primary-light, rgba(74,127,203,.12));
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .1s;
+  white-space: nowrap;
+}
+
+.tl-ref-chip:hover {
+  background: var(--color-primary-light, rgba(74,127,203,.22));
+}
+
+/* ── Tribe labels ────────────────────────────────────────────────────────── */
+
+.tl-tribe-label {
+  pointer-events: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tl-tribe-label span {
+  display: inline-block;
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: rgba(30,30,30,.6);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 2px rgba(255,255,255,.9), 0 -1px 2px rgba(255,255,255,.9);
+  user-select: none;
+}
+
+/* ── Mobile events toggle ────────────────────────────────────────────────── */
+
+.tl-events-toggle {
+  display: none;
+  position: absolute;
+  top: .6rem;
+  left: .6rem;
+  z-index: 1000;
+  height: 2rem;
+  padding: 0 .75rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .tl-page  { height: auto; overflow: visible; }
+  .tl-body  { flex-direction: column; }
+  .tl-event-col { width: 100%; height: 160px; border-radius: 8px; }
+  .tl-map-wrapper { flex: none; height: 320px; }
+  .tl-map-container { height: 100%; }
+  .tl-info-panel { width: 100%; }
+  .tl-events-toggle { display: flex; align-items: center; }
+}

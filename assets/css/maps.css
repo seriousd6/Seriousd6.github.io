@@ -1,68 +1,148 @@
 /* maps.css — Biblical Maps page (Leaflet-based) */
 
-/* ── Page layout ─────────────────────────────────────────────────────────── */
+/* ── Full-viewport, full-width layout — no scrolling ────────────────────── */
 
 .maps-page {
-  max-width: 1100px;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  /* Override .container's max-width so we use the full available width */
+  max-width: none !important;
+  padding-left: .75rem !important;
+  padding-right: .75rem !important;
+  padding-top: .6rem;
+  padding-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .maps-header {
-  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-bottom: .4rem;
+}
+
+.maps-timelapse-link {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  padding: .2rem .6rem;
+  transition: background .12s, color .12s;
+  flex-shrink: 0;
+}
+
+.maps-timelapse-link:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
 }
 
 .maps-title {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 0 .2rem;
+  margin: 0 0 .05rem;
 }
 
 .maps-sub {
-  font-size: .85rem;
+  font-size: .75rem;
   color: var(--color-muted, #888);
   margin: 0;
 }
 
-/* ── Two-column layout ───────────────────────────────────────────────────── */
+/* ── Two-column grid: narrow nav | everything else ───────────────────────── */
 
 .maps-layout {
   display: grid;
-  grid-template-columns: 210px 1fr;
-  gap: 1.25rem;
-  align-items: start;
+  grid-template-columns: 128px 1fr;
+  gap: .6rem;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+  overflow: hidden;
 }
 
+/* ── Mobile: stack vertically ────────────────────────────────────────────── */
+
 @media (max-width: 700px) {
-  .maps-layout {
-    grid-template-columns: 1fr;
+  .maps-page   { height: auto; overflow: visible; padding-top: .5rem; }
+  .maps-layout { grid-template-columns: 1fr; flex: none; overflow: visible; }
+  .maps-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: none;
+    gap: .35rem;
+    padding-bottom: .2rem;
+    -webkit-overflow-scrolling: touch;
   }
+  .maps-nav-btn        { flex-shrink: 0; white-space: nowrap; }
+  .maps-nav-group-label { display: none; }
+  .maps-content-row    { flex-direction: column; }
+  .maps-map-wrapper    { flex: none; height: 300px; }
+  .maps-map-container  { height: 100%; }
+  .maps-detail-panel   { width: 100%; height: auto; min-height: 220px; }
+  .maps-panel-body     { height: 220px; }
 }
 
 /* ── Map selector nav ────────────────────────────────────────────────────── */
 
+.maps-selector-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.maps-nav-group-label {
+  font-size: .55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--color-muted, #888);
+  padding: .3rem .3rem .05rem;
+  margin-top: .1rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.maps-nav-group-label:first-child {
+  padding-top: .05rem;
+  margin-top: 0;
+}
+
 .maps-nav {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .15rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .maps-nav-btn {
   display: flex;
   align-items: center;
-  gap: .55rem;
-  padding: .55rem .8rem;
+  gap: .35rem;
+  padding: .2rem .5rem;
   background: none;
   border: 1px solid var(--color-border, #e0e0e0);
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   text-align: left;
-  font-size: .85rem;
+  font-size: .74rem;
   font-weight: 500;
   color: var(--color-text);
   transition: background .12s, border-color .12s;
   width: 100%;
-  line-height: 1.3;
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .maps-nav-btn:hover {
@@ -78,99 +158,638 @@
 }
 
 .maps-nav-icon {
-  font-size: 1.05rem;
+  font-size: .9rem;
   flex-shrink: 0;
 }
 
-/* ── Legend ──────────────────────────────────────────────────────────────── */
+/* ── Legend (sidebar element hidden — Leaflet control is canonical) ────────── */
 
-.maps-legend {
-  margin-top: .9rem;
-  padding: .7rem .85rem;
+.maps-legend { display: none !important; }
+
+/* ── Legend Leaflet overlay control ─────────────────────────────────────── */
+
+.maps-legend-control {
+  padding: .5rem .7rem;
+  background: var(--color-surface, rgba(255,255,255,.94));
   border: 1px solid var(--color-border, #e0e0e0);
   border-radius: 8px;
-  font-size: .78rem;
+  font-size: .77rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,.14);
+  max-width: 220px;
+  z-index: 850;
 }
 
-.maps-legend[hidden] { display: none; }
+.maps-legend-control[hidden] { display: none; }
 
 .maps-legend-title {
   font-weight: 700;
-  font-size: .7rem;
+  font-size: .68rem;
   text-transform: uppercase;
   letter-spacing: .06em;
   color: var(--color-muted, #888);
-  margin: 0 0 .5rem;
+  margin: 0 0 .45rem;
 }
 
 .maps-legend-item {
   display: flex;
   align-items: center;
-  gap: .45rem;
-  margin-bottom: .3rem;
+  gap: .4rem;
+  margin-bottom: .25rem;
   color: var(--color-text);
-  font-size: .79rem;
+  font-size: .77rem;
 }
 
 .maps-legend-swatch {
-  width: .9rem;
-  height: .9rem;
+  width: .85rem;
+  height: .85rem;
   border-radius: 3px;
   flex-shrink: 0;
   border: 1px solid rgba(0,0,0,.15);
 }
 
 .maps-legend-line {
-  width: 1.4rem;
+  width: 1.3rem;
   height: 3px;
   flex-shrink: 0;
   border-radius: 2px;
 }
 
-/* ── Display column ──────────────────────────────────────────────────────── */
+/* ── Display column (just a flex passthrough to the content row) ───────────── */
 
 .maps-display-col {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
-.maps-title-bar {
-  margin-bottom: .6rem;
+/* ── Content row: map + always-visible detail panel side by side ───────────── */
+
+.maps-content-row {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: .6rem;
 }
 
-.maps-map-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 .15rem;
-}
+/* ── Map wrapper + Leaflet container ──────────────────────────────────────── */
 
-.maps-map-sub {
-  font-size: .8rem;
-  color: var(--color-muted, #888);
-  margin: 0;
+.maps-map-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 0;
 }
-
-/* ── Leaflet map container ───────────────────────────────────────────────── */
 
 .maps-map-container {
   width: 100%;
-  height: 520px;
+  height: 100%;
   border: 1px solid var(--color-border, #e0e0e0);
   border-radius: 10px;
   overflow: hidden;
   background: #e8f4f8;
 }
 
-@media (max-width: 600px) {
-  .maps-map-container { height: 340px; }
-}
-
-/* Leaflet attribution link styling */
+/* Leaflet attribution */
 .leaflet-container .leaflet-control-attribution {
-  font-size: .65rem;
+  font-size: .62rem;
   background: rgba(255,255,255,.75);
 }
 
-/* ── Custom Leaflet marker styles (injected via JS) ──────────────────────── */
+/* ── Right detail panel ───────────────────────────────────────────────────── */
+
+.maps-detail-panel {
+  width: 310px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.09);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Panel header: map title + reset button — always visible */
+.maps-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .75rem 1rem .55rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.maps-panel-header-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.maps-map-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 .08rem;
+  line-height: 1.2;
+}
+
+.maps-map-sub {
+  font-size: .73rem;
+  color: var(--color-muted, #888);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.maps-reset-btn {
+  flex-shrink: 0;
+  padding: .2rem .45rem;
+  background: none;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .9rem;
+  line-height: 1;
+  color: var(--color-muted, #888);
+  transition: background .12s, color .12s, border-color .12s;
+  margin-top: .05rem;
+}
+
+.maps-reset-btn:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Timelapse era deep-link chip — sits below the map subtitle in the panel header */
+.maps-tl-chip {
+  display: inline-block;
+  margin-top: .28rem;
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: .1rem .4rem;
+  transition: background .12s, color .12s;
+}
+.maps-tl-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+.maps-tl-chip[hidden] { display: none !important; }
+
+/* ── Panel tab bar (Overview | Sites) ────────────────────────────────────── */
+
+.maps-panel-tabs {
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.maps-tab {
+  flex: 1;
+  padding: .3rem .4rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  font-size: .70rem;
+  font-weight: 600;
+  color: var(--color-muted, #888);
+  transition: color .12s, border-color .12s;
+  white-space: nowrap;
+}
+
+.maps-tab:hover { color: var(--color-text); }
+
+.maps-tab--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* ── Site index panel (Sites tab content) ────────────────────────────────── */
+
+.maps-site-index[hidden]        { display: none !important; }
+.maps-site-index:not([hidden])  { display: flex; }
+
+.maps-site-index {
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.maps-site-search {
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .32rem .75rem;
+  border: none;
+  border-bottom: 1px solid var(--color-border, #eee);
+  background: var(--color-surface, #fff);
+  font-size: .73rem;
+  color: var(--color-text);
+  outline: none;
+}
+
+.maps-site-search:focus {
+  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+  border-bottom-color: var(--color-primary);
+}
+
+.maps-site-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: .3rem .45rem;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.maps-site-item {
+  padding: .32rem .55rem;
+  border-radius: 5px;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  transition: background .1s, border-color .1s;
+}
+
+.maps-site-item:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  border-left-color: var(--color-primary);
+}
+
+.maps-site-item-name {
+  font-size: .76rem;
+  font-weight: 700;
+  color: var(--color-heading, #1a1a1a);
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.maps-site-item-star {
+  font-size: .62rem;
+  color: #b00010;
+  line-height: 1;
+}
+
+.maps-site-item-desc {
+  font-size: .68rem;
+  color: var(--color-muted, #888);
+  line-height: 1.35;
+  margin-top: .08rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── City detail prev / next navigation ──────────────────────────────────── */
+
+.maps-city-nav {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding-bottom: .35rem;
+  margin-bottom: .25rem;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.maps-city-nav[hidden] { display: none; }
+
+.maps-city-nav-btn {
+  background: none;
+  border: 1px solid var(--color-border, #d8d8d8);
+  border-radius: 4px;
+  padding: .1rem .5rem;
+  font-size: .78rem;
+  cursor: pointer;
+  color: var(--color-muted, #888);
+  line-height: 1.3;
+  transition: background .1s, color .1s, border-color .1s;
+}
+
+.maps-city-nav-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+.maps-city-nav-pos {
+  flex: 1;
+  font-size: .67rem;
+  color: var(--color-muted, #888);
+  text-align: center;
+  user-select: none;
+}
+
+/* Panel body: contains overview + site-index + city-detail as stacked absolute layers */
+.maps-panel-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Map overview — default layer, fills the body */
+.maps-detail-overview {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: .75rem 1rem;
+  font-size: .81rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.maps-detail-overview p         { margin: 0; }
+.maps-detail-overview p + p     { margin-top: .6em; }
+
+.maps-overview-ref {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.maps-overview-ref:hover { text-decoration: underline; }
+
+/* City detail — overlays the overview when a marker is clicked */
+.maps-city-detail {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  background: var(--color-surface, #fff);
+  padding: .75rem 1rem;
+  z-index: 2;
+}
+
+.maps-city-detail[hidden]       { display: none; }
+.maps-city-detail:not([hidden]) { display: block; }
+
+.maps-city-close {
+  position: absolute;
+  top: .5rem;
+  right: .6rem;
+  background: none;
+  border: none;
+  font-size: .9rem;
+  color: var(--color-muted, #aaa);
+  cursor: pointer;
+  padding: .15rem .3rem;
+  border-radius: 4px;
+  transition: color .12s;
+}
+
+.maps-city-close:hover { color: var(--color-text); }
+
+.maps-city-name {
+  font-size: .95rem;
+  font-weight: 700;
+  margin: 0 1.5rem .3rem 0; /* right margin to avoid close button overlap */
+}
+
+.maps-city-desc {
+  font-size: .84rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 .4rem;
+}
+
+.maps-city-significance {
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--color-muted, #888);
+  line-height: 1.55;
+  margin: 0 0 .6rem;
+  padding-top: .25rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.maps-city-significance[hidden] { display: none; }
+
+.maps-city-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .1rem;
+}
+
+.maps-city-ref-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .2rem .55rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: .73rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+}
+
+.maps-city-ref-chip:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  text-decoration: none;
+}
+
+/* ── Scripture refs index panel (Refs tab — MAP-I) ───────────────────────── */
+
+.maps-refs-index[hidden]        { display: none !important; }
+.maps-refs-index:not([hidden])  { display: flex; }
+
+.maps-refs-index {
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: .55rem .75rem;
+  gap: .55rem;
+}
+
+.maps-refs-count {
+  font-size: .68rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .1rem;
+}
+
+.maps-refs-empty {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  font-style: italic;
+  margin: 0;
+}
+
+.maps-refs-book {
+  display: flex;
+  flex-direction: column;
+  gap: .28rem;
+}
+
+.maps-refs-book-label {
+  font-size: .63rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--color-muted, #888);
+}
+
+.maps-refs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.maps-refs-chip {
+  display: inline-block;
+  font-size: .70rem;
+  font-weight: 500;
+  padding: .15rem .45rem;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .1s, color .1s;
+  white-space: nowrap;
+}
+
+.maps-refs-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ── Per-site study notes (MAP-H) ────────────────────────────────────────── */
+
+.maps-city-notes-wrap {
+  margin-top: .65rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.maps-city-notes-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: .72rem;
+  color: var(--color-muted, #888);
+  cursor: pointer;
+  transition: color .12s;
+}
+
+.maps-city-notes-btn:hover { color: var(--color-primary); }
+
+.maps-city-notes-textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: .35rem;
+  padding: .4rem .5rem;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 5px;
+  background: var(--color-surface-subtle, #f8f8f8);
+  font-size: .75rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  resize: vertical;
+  min-height: 4.5rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.maps-city-notes-textarea:focus {
+  border-color: var(--color-primary);
+  background: var(--color-surface, #fff);
+}
+
+/* Small amber dot on Leaflet markers that have a saved study note */
+.maps-marker-has-note::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e89d00;
+  border: 1px solid #fff;
+  pointer-events: none;
+}
+
+/* Leaflet SVG elements need position:relative for ::after to work */
+.leaflet-interactive.maps-marker-has-note {
+  position: relative;
+}
+
+/* City-detail "View city map" chip — appears on Jerusalem markers in all maps */
+.maps-city-map-chip {
+  display: inline-block;
+  margin-top: .55rem;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: .15rem .5rem;
+  transition: background .12s, color .12s;
+}
+.maps-city-map-chip:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ── Region / border labels (permanent div-icon on background polygons) ────── */
+
+.maps-region-label {
+  pointer-events: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.maps-region-label span {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(40,40,40,.55);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 2px rgba(255,255,255,.85), 0 -1px 2px rgba(255,255,255,.85);
+  user-select: none;
+}
+
+/* ── Tribe name labels (smaller than region labels, colored) ────────────── */
+
+.maps-tribe-label {
+  pointer-events: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.maps-tribe-label span {
+  display: inline-block;
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: rgba(30,30,30,.65);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 2px rgba(255,255,255,.9), 0 -1px 2px rgba(255,255,255,.9);
+  user-select: none;
+}
+
+/* ── Custom Leaflet marker styles ─────────────────────────────────────────── */
 
 .map-marker-capital {
   width: 14px;
@@ -190,73 +809,4 @@
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0,0,0,.3);
   cursor: pointer;
-}
-
-/* ── City detail panel ───────────────────────────────────────────────────── */
-
-.maps-city-detail {
-  margin-top: .75rem;
-  background: var(--color-surface, #fff);
-  border: 1px solid var(--color-border, #e0e0e0);
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
-  position: relative;
-}
-
-.maps-city-detail[hidden] { display: none; }
-
-.maps-city-close {
-  position: absolute;
-  top: .6rem;
-  right: .7rem;
-  background: none;
-  border: none;
-  font-size: .9rem;
-  color: var(--color-muted, #aaa);
-  cursor: pointer;
-  padding: .15rem .3rem;
-  border-radius: 4px;
-  transition: color .12s;
-}
-
-.maps-city-close:hover { color: var(--color-text); }
-
-.maps-city-name {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 0 0 .35rem;
-}
-
-.maps-city-desc {
-  font-size: .87rem;
-  line-height: 1.6;
-  color: var(--color-text);
-  margin: 0 0 .65rem;
-}
-
-.maps-city-refs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .3rem;
-}
-
-.maps-city-ref-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: .22rem .6rem;
-  border-radius: 20px;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  font-size: .75rem;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .12s, color .12s;
-  white-space: nowrap;
-}
-
-.maps-city-ref-chip:hover {
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  text-decoration: none;
 }

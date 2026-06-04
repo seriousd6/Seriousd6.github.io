@@ -90,6 +90,7 @@
 .lr-main {
   flex: 1;
   min-width: 0;
+  max-width: 760px;
 }
 
 .lr-loading {
@@ -108,6 +109,70 @@
 .lr-section {
   margin-bottom: 2.5rem;
   scroll-margin-top: 1.5rem;
+}
+
+/* ── Paginated chapter navigator ───────────────────────────────────────────── */
+
+.lr-pager {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin-bottom: .75rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.lr-pager-btn {
+  padding: .3em .75em;
+  font-size: .8rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-text, #333);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .12s, border-color .12s, color .12s;
+}
+.lr-pager-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lr-pager-btn:disabled { opacity: .38; cursor: default; }
+
+.lr-pager-select {
+  flex: 1;
+  min-width: 0;
+  padding: .3em .5em;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #333);
+  cursor: pointer;
+}
+
+.lr-pager-progress {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.lr-pager-pos {
+  font-size: .72rem;
+  color: var(--color-muted, #aaa);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lr-pager-heading {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--color-heading, var(--color-text));
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
@@ -141,10 +206,305 @@
   }
 }
 
+/* ── Volume switcher chips ─────────────────────────────────────────────────── */
+
+.lr-reader-volumes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .55rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+
+.lr-vol-chip {
+  display: inline-block;
+  padding: .22em .65em;
+  font-size: .74rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-muted, #888);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.lr-vol-chip:hover {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lr-vol-chip--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ── Paginated number input ────────────────────────────────────────────────── */
+
+.lr-pager-num {
+  width: 4rem;
+  padding: .3em .4em;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #333);
+  text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.lr-pager-num::-webkit-inner-spin-button,
+.lr-pager-num::-webkit-outer-spin-button { opacity: 0; }
+.lr-pager-num:focus { border-color: var(--color-primary); outline: none; }
+
+.lr-pager-of {
+  font-size: .74rem;
+  color: var(--color-muted, #aaa);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Title row (title + find button) ───────────────────────────────────────── */
+
+.lr-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  margin-bottom: .3rem;
+}
+.lr-title-row .lr-doc-title { margin-bottom: 0; flex: 1; min-width: 0; }
+
+.lr-find-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 3px 6px;
+  color: var(--color-muted, #888);
+  font-size: 1.05rem;
+  line-height: 1;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: .3rem;
+  transition: color .12s, background .12s;
+}
+.lr-find-btn:hover { color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+
+/* ── In-reader find bar ────────────────────────────────────────────────────── */
+
+.lr-find-bar {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .6rem;
+  padding: .5rem .65rem;
+  background: var(--color-bg, #faf8f4);
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 6px;
+}
+.lr-find-input {
+  flex: 1;
+  min-width: 0;
+  padding: .3em .6em;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  font-size: .9rem;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #2c2416);
+}
+.lr-find-input:focus { border-color: var(--color-primary); outline: none; }
+.lr-find-submit {
+  padding: .3em .8em;
+  font-size: .84rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .12s;
+}
+.lr-find-submit:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
+.lr-find-result {
+  font-size: .8rem;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lr-find-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  color: var(--color-muted, #888);
+  font-size: .9rem;
+  line-height: 1;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color .12s;
+}
+.lr-find-close:hover { color: var(--color-primary); }
+
+/* ── Find highlight mark ───────────────────────────────────────────────────── */
+
+mark.lr-find-mark {
+  background: #fde68a;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* ── Section counter (§ N of M) ────────────────────────────────────────────── */
+
+.lr-section-counter {
+  margin-left: auto;
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.lr-section-counter:empty { display: none; }
+
 /* ── Dark mode ─────────────────────────────────────────────────────────────── */
 
 [data-theme="dark"] .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
+[data-theme="dark"] .lr-pager-num { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lr-vol-chip  { background: transparent; }
+[data-theme="dark"] .lr-find-bar  { background: var(--color-surface-alt, #222); }
+[data-theme="dark"] .lr-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
+  :root:not([data-theme="light"]) .lr-pager-num { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lr-find-bar   { background: var(--color-surface-alt, #222); }
+  :root:not([data-theme="light"]) .lr-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
+}
+
+/* ── Tab bar (≤7 sections) ─────────────────────────────────────────────────── */
+
+.lr-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-bottom: 1rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.lr-tab {
+  padding: .3em .8em;
+  font-size: .78rem;
+  font-weight: 500;
+  border-radius: 20px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-muted, #666);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .12s, border-color .12s, color .12s;
+  max-width: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lr-tab:hover:not(.lr-tab--active) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+}
+.lr-tab--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .lr-tab-bar { gap: .25rem; }
+  .lr-tab { font-size: .72rem; padding: .25em .6em; }
+}
+
+/* ── Sub-pager (within long sections) ─────────────────────────────────────── */
+
+.lr-subpager {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 0;
+  border-top: 1px solid var(--color-border, #eee);
+  border-bottom: 1px solid var(--color-border, #eee);
+  margin-bottom: 1.25rem;
+}
+.lr-subpager + .lr-subpager {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--color-border, #eee);
+  margin-bottom: 0;
+}
+
+.lr-subpager-btn {
+  padding: .25em .7em;
+  font-size: .78rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background .12s, border-color .12s;
+  flex-shrink: 0;
+}
+.lr-subpager-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.lr-subpager-btn:disabled { opacity: .35; cursor: default; }
+
+.lr-subpager-pos {
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  margin: 0 .25rem;
+  font-weight: 500;
+}
+.lr-subpager-count {
+  font-weight: 400;
+  opacity: .7;
+}
+
+/* ── Mark as complete (LR-A) ───────────────────────────────────────────────── */
+
+.lib-mark-row {
+  text-align: center;
+  padding: 2.5rem 0 4rem;
+}
+
+.lib-mark-btn {
+  display: inline-block;
+  padding: .55rem 1.4rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--color-primary, #4a6fa5);
+  background: transparent;
+  color: var(--color-primary, #4a6fa5);
+  font-size: .9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.lib-mark-btn:hover:not(:disabled) {
+  background: var(--color-primary, #4a6fa5);
+  color: #fff;
+}
+.lib-mark-btn--done {
+  border-color: var(--color-muted, #888);
+  color: var(--color-muted, #888);
+  cursor: default;
+}
+
+.lib-mark-note {
+  margin: .55rem auto 0;
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+  max-width: 36rem;
 }

@@ -7,7 +7,8 @@ import {
   _resolve
 } from './core.js';
 import { wireRefLinks } from './wire.js';
-import { initHistoryWidget } from './modal.js';
+import { initHistoryWidget, _shareVerseAsImage } from './modal.js';
+import { markDone } from './tracker.js';
 
 // ── Daily Page constants ──────────────────────────────────────────────────────
 var DAILY_PLAN_KEY   = 'bsw_daily_plan';
@@ -27,10 +28,11 @@ var DAILY_PLAN_META = [
   { id: 'mcheyne',                        title: "M'Cheyne",                       days: 365 },
   { id: 'nt-90-days',                     title: 'NT in 90 Days',                  days: 90  },
   { id: 'psalms-proverbs',               title: 'Psalms & Proverbs',              days: 31  },
-  { id: 'gospels-30-days',               title: 'Gospels in 30 Days',             days: 30  },
-  { id: 'heidelberg-weekly',             title: 'Heidelberg Catechism',           days: 52  },
-  { id: 'wsc-quarterly',                 title: 'Westminster Shorter Catechism',  days: 13  }
+  { id: 'gospels-30-days',               title: 'Gospels in 30 Days',             days: 30  }
 ];
+
+// Catechism plans removed from home page selector; migrate any saved choice
+var _CATECHISM_PLAN_IDS = ['heidelberg-weekly', 'wsc-quarterly'];
 
 var DAILY_DEVOT_META = [
   { id: 'spurgeon-morning', label: 'Spurgeon — Morning' },
@@ -43,31 +45,45 @@ var DAILY_DEVOT_META = [
 // ── Streak ────────────────────────────────────────────────────────────────────
 var STREAK_KEY = 'bsw_streak';
 
-function _dailyRenderStreak() {
-  var el = document.getElementById('daily-streak-content');
-  if (!el) return;
-  var s;
-  try { s = JSON.parse(localStorage.getItem(STREAK_KEY) || '{}'); } catch (e) { s = {}; }
-  var current = s.current || 0;
-  var longest = s.longest || 0;
-  var card = el.closest('.daily-card');
-  if (!current) { if (card) card.setAttribute('hidden', ''); return; }
-  if (card) card.removeAttribute('hidden');
-  var readUrl = DAILY_CALENDAR_BASE;
-  el.innerHTML =
-    '<div class="daily-streak-row">' +
-      '<div class="daily-streak-stat">' +
-        '<span class="daily-streak-num">' + current + '</span>' +
-        '<span class="daily-streak-label">day streak</span>' +
-      '</div>' +
-      (longest > current
-        ? '<div class="daily-streak-stat daily-streak-stat--muted">' +
-            '<span class="daily-streak-num">' + longest + '</span>' +
-            '<span class="daily-streak-label">personal best</span>' +
-          '</div>'
-        : '') +
-      '<a class="daily-streak-cta" href="' + escHtml(readUrl) + '">Read today &rarr;</a>' +
-    '</div>';
+function _streakFmtDate(d) {
+  return d.getFullYear() + '-' +
+    String(d.getMonth() + 1).padStart(2, '0') + '-' +
+    String(d.getDate()).padStart(2, '0');
+}
+function _streakPrevDay(ds) {
+  var d = new Date(ds + 'T12:00:00');
+  return _streakFmtDate(new Date(d.getTime() - 86400000));
+}
+
+function _computeStreakFromDays(days) {
+  if (!days || !days.length) return { current: 0, longest: 0 };
+  var set = Object.create(null);
+  days.forEach(function (d) { set[d] = true; });
+  var today     = _streakFmtDate(new Date());
+  var yesterday = _streakPrevDay(today);
+
+  // Current streak: walk backwards from today (or yesterday if not read today yet)
+  var current = 0;
+  var cursor = set[today] ? today : (set[yesterday] ? yesterday : null);
+  while (cursor && set[cursor]) {
+    current++;
+    cursor = _streakPrevDay(cursor);
+  }
+
+  // Longest streak: scan sorted days
+  var sorted = days.slice().sort();
+  var longest = current;
+  var run = 1;
+  for (var i = 1; i < sorted.length; i++) {
+    if (sorted[i] === sorted[i - 1]) continue; // skip duplicates
+    if (sorted[i - 1] === _streakPrevDay(sorted[i])) {
+      run++;
+      if (run > longest) longest = run;
+    } else {
+      run = 1;
+    }
+  }
+  return { current: current, longest: longest };
 }
 
 // ── Helper functions ──────────────────────────────────────────────────────────
@@ -103,7 +119,6 @@ function _dailyReadAllUrl(passages) {
 // ── initDailyPage ─────────────────────────────────────────────────────────────
 export function initDailyPage() {
   var planSelect  = document.getElementById('daily-plan-select');
-  var devotSelect = document.getElementById('daily-devot-select');
   if (!planSelect) return;
 
   var greetingEl = document.getElementById('daily-greeting');
@@ -122,6 +137,10 @@ export function initDailyPage() {
   }
 
   var savedPlan = localStorage.getItem(DAILY_PLAN_KEY) || 'bible-in-a-year';
+  if (_CATECHISM_PLAN_IDS.indexOf(savedPlan) !== -1) {
+    savedPlan = 'bible-in-a-year';
+    localStorage.setItem(DAILY_PLAN_KEY, savedPlan);
+  }
   DAILY_PLAN_META.forEach(function (pm) {
     var opt = document.createElement('option');
     opt.value = pm.id;
@@ -130,21 +149,19 @@ export function initDailyPage() {
     planSelect.appendChild(opt);
   });
 
-  if (devotSelect) {
-    var defaultDevot = period === 'morning' ? 'spurgeon-morning' : 'spurgeon-evening';
-    var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || defaultDevot;
-    DAILY_DEVOT_META.forEach(function (dm) {
-      var opt = document.createElement('option');
-      opt.value = dm.id;
-      opt.textContent = dm.label;
-      if (dm.id === savedDevot) opt.selected = true;
-      devotSelect.appendChild(opt);
+  // HP-D: devot source chips
+  var defaultDevot = period === 'morning' ? 'spurgeon-morning' : 'spurgeon-evening';
+  var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || defaultDevot;
+  var devotChips = document.querySelectorAll('.daily-devot-chip');
+  devotChips.forEach(function (chip) {
+    if (chip.dataset.src === savedDevot) chip.classList.add('daily-devot-chip--active');
+    chip.addEventListener('click', function () {
+      devotChips.forEach(function (c) { c.classList.remove('daily-devot-chip--active'); });
+      chip.classList.add('daily-devot-chip--active');
+      localStorage.setItem(DAILY_DEVOT_KEY, chip.dataset.src);
+      _dailyRenderDevotional(chip.dataset.src, period);
     });
-    devotSelect.addEventListener('change', function () {
-      localStorage.setItem(DAILY_DEVOT_KEY, devotSelect.value);
-      _dailyRenderDevotional(devotSelect.value, period);
-    });
-  }
+  });
 
   planSelect.addEventListener('change', function () {
     var pid = planSelect.value;
@@ -166,10 +183,9 @@ export function initDailyPage() {
 
   _dailyRenderPlan(savedPlan);
   _dailyRenderVOTD();
-  _dailyRenderDevotional(localStorage.getItem(DAILY_DEVOT_KEY) || 'daily-psalms', period);
+  _dailyRenderDevotional(savedDevot, period);
   _dailySetupNotifications(period);
   initHistoryWidget();
-  _dailyRenderStreak();
 }
 
 function _dailyRenderPlan(planId) {
@@ -211,7 +227,15 @@ function _dailyRenderPlan(planId) {
       var dayData    = plan.days[clampedDay - 1];
       if (!dayData) { contentEl.innerHTML = '<p class="daily-plan-empty">No reading for today.</p>'; return; }
 
-      var pct = Math.min(100, Math.round((clampedDay / plan.total_days) * 100));
+      // Use actual completions for the progress bar
+      var plansStateRaw = {};
+      try { plansStateRaw = JSON.parse(localStorage.getItem('bsw_plans') || '{}'); } catch (_) {}
+      var completedMap  = (plansStateRaw[planId] && plansStateRaw[planId].completed) || {};
+      var completedCount = Object.keys(completedMap).length;
+      var pct = plan.type === 'catechism' ? Math.min(100, Math.round((clampedDay / plan.total_days) * 100))
+                                           : Math.min(100, Math.round((completedCount / plan.total_days) * 100));
+      var expectedPct = Math.round((dn / plan.total_days) * 100);
+      var paceStatus = pct > expectedPct + 2 ? 'ahead' : pct < expectedPct - 2 ? 'behind' : 'on-track';
       var finishLabel = '';
       if (isAuto) {
         var endDt = new Date(new Date().getFullYear(), 0, 1);
@@ -225,10 +249,14 @@ function _dailyRenderPlan(planId) {
       var html = '<div class="daily-plan-progress">' +
         '<div class="daily-plan-progress-bar"><div class="daily-plan-progress-fill" style="width:' + pct + '%"></div></div>' +
         '<span class="daily-plan-progress-text">' + pct + '%' +
-        (finishLabel ? ' &nbsp;·&nbsp; Finish: ' + finishLabel : '') + '</span>' +
+        (finishLabel ? ' &nbsp;·&nbsp; Finish: ' + finishLabel : '') +
+        ' &nbsp;<span class="daily-plan-pace daily-plan-pace--' + paceStatus + '">' + paceStatus.replace('-', ' ') + '</span></span>' +
         '</div>' +
         '<p class="daily-plan-day">' +
-        (plan.type === 'catechism' ? dayData.label : 'Day ' + clampedDay + ' of ' + plan.total_days) +
+        (plan.type === 'catechism'
+          ? dayData.label
+          : 'Day ' + clampedDay + ' of ' + plan.total_days +
+            (completedCount ? ' &nbsp;·&nbsp; ' + completedCount + ' completed' : '')) +
         '</p>';
 
       if (plan.type === 'catechism' && dayData.href) {
@@ -252,8 +280,49 @@ function _dailyRenderPlan(planId) {
         } else if (passages.length === 1) {
           html += '<a class="daily-read-all" href="' + escHtml(_dailyPassageUrl(passages[0])) + '">Read today&rsquo;s passage &rarr;</a>';
         }
+        // Mark today done button
+        var isDayDone = !!completedMap[clampedDay];
+        html += '<button class="daily-mark-done-btn' + (isDayDone ? ' daily-mark-done-btn--done' : '') +
+          '" id="daily-mark-done" data-plan="' + escHtml(planId) + '" data-day="' + clampedDay + '"' +
+          (isDayDone ? ' disabled' : '') + '>' + (isDayDone ? '✓ Done' : '✓ Mark today as done') + '</button>';
       }
+
+      // Reading streak (from bsw_streak.days — every day the Bible reader was opened)
+      var streakData = {};
+      try { streakData = JSON.parse(localStorage.getItem(STREAK_KEY) || '{}'); } catch (_) {}
+      var streak = _computeStreakFromDays(streakData.days || []);
+      html += '<div class="daily-plan-streak">';
+      if (streak.current > 0) {
+        html += '<span class="daily-plan-streak-flame">🔥</span>' +
+          '<span class="daily-plan-streak-num">' + streak.current + '</span>' +
+          '<span class="daily-plan-streak-lbl">day streak</span>';
+        if (streak.longest > streak.current) {
+          html += '<span class="daily-plan-streak-best">Best: ' + streak.longest + '</span>';
+        }
+      } else {
+        html += '<span class="daily-plan-streak-empty">Open the Bible reader to start your streak</span>';
+      }
+      html += '</div>';
+
       contentEl.innerHTML = html;
+      // Wire mark-done click
+      var markBtn = contentEl.querySelector('#daily-mark-done');
+      if (markBtn && !markBtn.disabled) {
+        markBtn.addEventListener('click', function () {
+          try {
+            var state = JSON.parse(localStorage.getItem('bsw_plans') || '{}');
+            if (!state[planId]) state[planId] = { completed: {} };
+            if (!state[planId].completed) state[planId].completed = {};
+            state[planId].completed[clampedDay] = new Date().toISOString().slice(0, 10);
+            localStorage.setItem('bsw_plans', JSON.stringify(state));
+          } catch (_) {}
+          markDone('reading');
+          markBtn.textContent = '✓ Done';
+          markBtn.classList.add('daily-mark-done-btn--done');
+          markBtn.disabled = true;
+          _dailyRenderPlan(planId); // re-render to update pct + streak
+        });
+      }
     })
     .catch(function () {
       contentEl.innerHTML = '<p class="daily-plan-empty">Could not load plan data.</p>';
@@ -283,8 +352,41 @@ function _dailyRenderVOTD() {
         el.innerHTML =
           '<blockquote>' + escHtml(text) + '</blockquote>' +
           '<cite>— <a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>' +
-          ' &nbsp;<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(ref)) + '">Read in context &rarr;</a></cite>';
+          ' &nbsp;<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(ref)) + '">Read in context &rarr;</a></cite>' +
+          '<div class="daily-votd-actions">' +
+            '<button class="daily-votd-btn" id="daily-votd-copy">Copy</button>' +
+            '<button class="daily-votd-btn" id="daily-votd-mem">' + (_memHas(ref) ? '⭐ Memorizing' : '☆ Memorize') + '</button>' +
+            '<button class="daily-votd-btn" id="daily-votd-share">Share image</button>' +
+          '</div>';
         wireRefLinks(el);
+        // HP-F: wire action buttons
+        var copyBtn = el.querySelector('#daily-votd-copy');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            navigator.clipboard.writeText(text + ' — ' + ref).then(function () {
+              copyBtn.textContent = 'Copied ✓';
+              setTimeout(function () { copyBtn.textContent = 'Copy'; }, 2000);
+            }).catch(function () {});
+          });
+        }
+        var memBtn = el.querySelector('#daily-votd-mem');
+        if (memBtn) {
+          memBtn.addEventListener('click', function () {
+            if (_memHas(ref)) {
+              // already memorizing — no toggle out from here, just confirm
+              memBtn.textContent = '⭐ Memorizing';
+            } else {
+              _memAdd(ref);
+              memBtn.textContent = '⭐ Memorizing';
+            }
+          });
+        }
+        var shareBtn = el.querySelector('#daily-votd-share');
+        if (shareBtn) {
+          shareBtn.addEventListener('click', function () {
+            _shareVerseAsImage(text, ref, version);
+          });
+        }
       });
     })
     .catch(function () {

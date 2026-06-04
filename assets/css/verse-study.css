@@ -847,6 +847,81 @@
   }
 }
 
+/* ── VS-A: Prev/Next verse navigation links ───────────────────────────── */
+.vs-adj-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0 0.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.vs-adj-link[hidden] { display: none; }
+.vs-adj-link:hover { color: var(--color-primary); }
+
+/* ── VS-B / VS-C: Section heading flex + collapse toggle ──────────────── */
+.vs-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.vs-section-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  padding: 0 0.2rem;
+  margin-left: 0.4rem;
+  flex-shrink: 0;
+}
+.vs-section-toggle:hover { color: var(--color-primary); }
+
+/* ── VS-D: Diff highlights in All Translations section ─────────────────── */
+.vs-cmp-row mark {
+  background: rgba(255, 200, 0, 0.35);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+[data-theme="dark"] .vs-cmp-row mark {
+  background: rgba(200, 160, 0, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vs-cmp-row mark {
+    background: rgba(200, 160, 0, 0.3);
+  }
+}
+
+/* ── VS-F: Word panel definition expand ────────────────────────────────── */
+.vs-wp-def-more {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+}
+.vs-wp-def-more:hover { text-decoration: underline; }
+
+/* ── VS-G: Commentary truncation ──────────────────────────────────────── */
+.vs-comm-truncated--clamped {
+  max-height: 14em;
+  overflow: hidden;
+}
+.vs-comm-expand-btn {
+  display: block;
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 0;
+}
+.vs-comm-expand-btn:hover { text-decoration: underline; }
+
 /* ── Mobile: touch targets + iOS fixes ──────────────────────────────────── */
 @media (max-width: 640px) {
   /* Context toggle buttons: 44px touch target */

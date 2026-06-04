@@ -1,15 +1,55 @@
 {
   "eras": [
-    { "id": "creation",          "label": "Creation & Fall",         "color": "#3d7a4a" },
-    { "id": "patriarchs",        "label": "The Patriarchs",          "color": "#b06b1e" },
-    { "id": "exodus",            "label": "Moses & the Exodus",       "color": "#c44d29" },
-    { "id": "conquest",          "label": "Conquest & Judges",        "color": "#7b5ea7" },
-    { "id": "monarchy",          "label": "The Monarchy",             "color": "#b59b30" },
-    { "id": "exile",             "label": "Exile & Return",           "color": "#2a7a8e" },
-    { "id": "intertestamental",  "label": "Between the Testaments",   "color": "#6b7280" },
-    { "id": "gospels",           "label": "Life of Christ",           "color": "#9b2335" },
-    { "id": "church",            "label": "The Early Church",         "color": "#1a5fa8" },
-    { "id": "consummation",      "label": "The Consummation",         "color": "#7a5800" }
+    {
+      "id": "creation",
+      "label": "Creation & Fall",
+      "color": "#3d7a4a"
+    },
+    {
+      "id": "patriarchs",
+      "label": "The Patriarchs",
+      "color": "#b06b1e"
+    },
+    {
+      "id": "exodus",
+      "label": "Moses & the Exodus",
+      "color": "#c44d29"
+    },
+    {
+      "id": "conquest",
+      "label": "Conquest & Judges",
+      "color": "#7b5ea7"
+    },
+    {
+      "id": "monarchy",
+      "label": "The Monarchy",
+      "color": "#b59b30"
+    },
+    {
+      "id": "exile",
+      "label": "Exile & Return",
+      "color": "#2a7a8e"
+    },
+    {
+      "id": "intertestamental",
+      "label": "Between the Testaments",
+      "color": "#6b7280"
+    },
+    {
+      "id": "gospels",
+      "label": "Life of Christ",
+      "color": "#9b2335"
+    },
+    {
+      "id": "church",
+      "label": "The Early Church",
+      "color": "#1a5fa8"
+    },
+    {
+      "id": "consummation",
+      "label": "The Consummation",
+      "color": "#7a5800"
+    }
   ],
   "events": [
     {
@@ -834,7 +874,7 @@
     {
       "id": "new-creation",
       "label": "New Creation",
-      "yearNum": 9999,
+      "yearNum": null,
       "yearDisplay": "The Consummation",
       "era": "consummation",
       "ref": "Revelation 21:5",

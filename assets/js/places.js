@@ -1,0 +1,238 @@
+/* places.js — Biblical place-name auto-tagger and hover tooltip.
+ *
+ * Loads data/maps/places.json once, builds a regex from all names + aliases,
+ * walks text nodes in target containers, and wraps matches in <a class="map-place">
+ * elements that show a hover tooltip linking to the maps page.
+ *
+ * Public API:
+ *   autoTagPlaces(rootEl)       — tag places inside a specific element (call after
+ *                                 dynamic renders in reader.js / timeline.js)
+ *   runAutoTagPlaces()          — idle-time full-page pass on static containers
+ */
+'use strict';
+
+import { escHtml, MAPS_URL } from './core.js';
+
+/* ── Data URL (relative to this file) ───────────────────────────────────── */
+var _PLACES_URL = new URL('../../data/maps/places.json', import.meta.url).href;
+
+/* ── State ───────────────────────────────────────────────────────────────── */
+var _placesReady  = null;          // Promise; resolves once places are loaded
+var _placesByName = null;          // Map: lowercase name/alias → place entry
+var _placeRe      = null;          // Combined alternation regex (longest first)
+
+/* ── Tooltip DOM ─────────────────────────────────────────────────────────── */
+var _tip       = null;
+var _showTimer = null;
+var _hideTimer = null;
+
+/* ── Load & index ────────────────────────────────────────────────────────── */
+export function loadPlaces() {
+  if (_placeRe)     return Promise.resolve();
+  if (_placesReady) return _placesReady;
+  _placesReady = fetch(_PLACES_URL)
+    .then(function (r) { return r.json(); })
+    .then(function (places) { _buildIndex(places); });
+  return _placesReady;
+}
+
+function _buildIndex(places) {
+  _placesByName = Object.create(null);
+  var allNames = [];
+
+  places.forEach(function (p) {
+    var names = [p.name].concat(p.aliases || []);
+    names.forEach(function (n) {
+      if (n.length < 3) return;
+      var k = n.toLowerCase();
+      if (!_placesByName[k]) {
+        _placesByName[k] = p;
+        allNames.push(n);
+      }
+    });
+  });
+
+  /* Longest match first so "Mount Sinai" beats "Sinai" */
+  allNames.sort(function (a, b) { return b.length - a.length; });
+
+  /* Build single combined regex with word boundaries */
+  var escaped = allNames.map(function (n) {
+    return '\\b' + n.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&') + '\\b';
+  });
+  _placeRe = new RegExp('(' + escaped.join('|') + ')', 'gi');
+}
+
+/* ── Text-node walker ────────────────────────────────────────────────────── */
+var _SKIP_TAGS = { SCRIPT:1, STYLE:1, CODE:1, PRE:1, TEXTAREA:1, SVG:1 };
+
+function _walkText(root, cb) {
+  var tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: function (node) {
+      var p = node.parentElement;
+      if (!p) return NodeFilter.FILTER_SKIP;
+      if (_SKIP_TAGS[p.tagName]) return NodeFilter.FILTER_SKIP;
+      /* Skip inside existing interactive elements */
+      if (p.closest('a, [data-ref], .map-place, .bsw-term, .bsw-modal-backdrop, .maps-page'))
+        return NodeFilter.FILTER_SKIP;
+      return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+    }
+  });
+  var nodes = [];
+  var n;
+  while ((n = tw.nextNode())) nodes.push(n);
+  nodes.forEach(cb);
+}
+
+/* ── Core tagger ─────────────────────────────────────────────────────────── */
+export function autoTagPlaces(rootEl) {
+  if (!_placeRe || !_placesByName) return;
+  var root = rootEl || document.body;
+
+  _walkText(root, function (textNode) {
+    var text = textNode.nodeValue;
+    _placeRe.lastIndex = 0;
+    if (!_placeRe.test(text)) return;
+    _placeRe.lastIndex = 0;
+
+    var frag = document.createDocumentFragment();
+    var last = 0, m;
+
+    while ((m = _placeRe.exec(text)) !== null) {
+      var place = _placesByName[m[0].toLowerCase()];
+      if (!place) continue;
+
+      if (m.index > last) {
+        frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      }
+
+      var a = document.createElement('a');
+      a.className         = 'map-place';
+      a.href              = MAPS_URL + '#' + place.mapId;
+      a.target            = '_blank';
+      a.rel               = 'noopener';
+      a.setAttribute('data-place-id', place.id);
+      a.textContent       = m[0];
+
+      /* Capture for closure */
+      (function (anchor, pl) {
+        anchor.addEventListener('mouseenter', function () { _scheduleShow(anchor, pl); });
+        anchor.addEventListener('mouseleave', function () { _scheduleHide(); });
+        anchor.addEventListener('focus',      function () { _scheduleShow(anchor, pl); });
+        anchor.addEventListener('blur',       function () { _scheduleHide(); });
+      }(a, place));
+
+      frag.appendChild(a);
+      last = m.index + m[0].length;
+    }
+
+    _placeRe.lastIndex = 0;
+
+    if (last > 0) {
+      if (last < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(last)));
+      }
+      textNode.parentNode.replaceChild(frag, textNode);
+    }
+  });
+}
+
+/* ── Idle-time full-page tagging ─────────────────────────────────────────── */
+/* Only targets high-signal containers; avoids scanning every Bible verse. */
+var _TARGETS = [
+  '.reader-intro-inner',   /* book intro text */
+  '.tl-detail-inner',      /* biblical timeline event detail */
+  '.maps-detail-overview', /* map overview panel */
+  '.topic-intro',          /* topic page introductions */
+  '.study-guide-body'      /* study guide content */
+];
+
+export function runAutoTagPlaces() {
+  loadPlaces().then(function () {
+    _TARGETS.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el) {
+        if (el._placesTagged) return;
+        el._placesTagged = true;
+        autoTagPlaces(el);
+      });
+    });
+  });
+}
+
+/* Convenience wrapper for dynamic renders (reader.js, timeline.js): loads
+   places if needed then immediately tags the supplied element.           */
+export function autoTagPlacesIn(el) {
+  if (!el || el._placesTagged) return;
+  loadPlaces().then(function () {
+    if (el._placesTagged) return;
+    el._placesTagged = true;
+    autoTagPlaces(el);
+  });
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────────── */
+function _buildTip() {
+  if (_tip) return;
+  var el = document.createElement('div');
+  el.id        = 'bsw-place-tip';
+  el.className = 'bsw-place-tip';
+  el.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(el);
+  _tip = el;
+  el.addEventListener('mouseenter', function () { _cancelHide(); });
+  el.addEventListener('mouseleave', function () { _scheduleHide(); });
+}
+
+function _scheduleShow(anchor, place) {
+  _cancelHide();
+  if (_showTimer) clearTimeout(_showTimer);
+  _showTimer = setTimeout(function () { _showTip(anchor, place); }, 230);
+}
+
+function _scheduleHide() {
+  if (_showTimer) { clearTimeout(_showTimer); _showTimer = null; }
+  _hideTimer = setTimeout(function () {
+    if (_tip) {
+      _tip.classList.remove('bsw-place-tip--visible');
+      _tip.setAttribute('aria-hidden', 'true');
+    }
+  }, 200);
+}
+
+function _cancelHide() {
+  if (_hideTimer) { clearTimeout(_hideTimer); _hideTimer = null; }
+}
+
+function _showTip(anchor, place) {
+  _buildTip();
+  var mapLabel = place.mapId.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  _tip.innerHTML =
+    '<div class="bsw-place-tip__header">' +
+      '<span class="bsw-place-tip__pin">📍</span>' +
+      '<span class="bsw-place-tip__name">' + escHtml(place.name) + '</span>' +
+    '</div>' +
+    '<p class="bsw-place-tip__desc">' + escHtml(place.desc) + '</p>' +
+    '<a class="bsw-place-tip__link" href="' + escHtml(MAPS_URL + '#' + place.mapId) + '" target="_blank" rel="noopener">' +
+      'View on Map · ' + escHtml(mapLabel) + ' →' +
+    '</a>';
+
+  _tip.classList.add('bsw-place-tip--visible');
+  _tip.setAttribute('aria-hidden', 'false');
+  _positionTip(anchor);
+}
+
+function _positionTip(anchor) {
+  if (!_tip) return;
+  _tip.style.top  = '-9999px';
+  _tip.style.left = '-9999px';
+  var r  = anchor.getBoundingClientRect();
+  var tt = _tip.getBoundingClientRect();
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  var top  = r.bottom + window.scrollY + 6;
+  var left = r.left   + window.scrollX;
+  if (r.bottom + tt.height + 14 > vh) top = r.top + window.scrollY - tt.height - 6;
+  if (left + tt.width > vw - 8)       left = vw - tt.width - 8;
+  if (left < 8)                        left = 8;
+  _tip.style.top  = top  + 'px';
+  _tip.style.left = left + 'px';
+}

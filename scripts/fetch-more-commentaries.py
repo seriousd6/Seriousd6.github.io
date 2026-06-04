@@ -3,10 +3,12 @@
 fetch-more-commentaries.py — Download additional public-domain SWORD commentaries.
 
 Commentaries fetched:
-  Barnes' Notes on the Bible     → data/commentary/barnes/{bookId}.json
-  Jamieson-Fausset-Brown         → data/commentary/jfb/{bookId}.json
-  Adam Clarke's Commentary       → data/commentary/clarke/{bookId}.json
-  Vincent's Word Studies (NT)    → data/commentary/vincent/{bookId}.json
+  Barnes' Notes on the Bible         → data/commentary/barnes/{bookId}.json
+  Jamieson-Fausset-Brown             → data/commentary/jfb/{bookId}.json
+  Adam Clarke's Commentary           → data/commentary/clarke/{bookId}.json
+  Calvin's Collected Commentaries    → data/commentary/calvin/{bookId}.json
+  Robertson's Word Pictures (NT)     → data/commentary/rwp/{bookId}.json
+  Wesley's Notes                     → data/commentary/wesley/{bookId}.json
 
 All modules are from the CrossWire SWORD Project (public domain).
 Data shape: {"chapter": {"startVerse": "<p>HTML text</p>", ...}}
@@ -73,6 +75,31 @@ MODULES = [
         'urls': [
             'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/CalvinCommentaries.zip',
             'http://ftp.crosswire.org/pub/sword/packages/rawzip/CalvinCommentaries.zip',
+        ],
+    },
+    {
+        'id': 'rwp',
+        'label': "Robertson's Word Pictures",
+        'nt_only': True,
+        'urls': [
+            'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/RWP.zip',
+            'http://ftp.crosswire.org/pub/sword/packages/rawzip/RWP.zip',
+        ],
+    },
+    {
+        'id': 'wesley',
+        'label': "Wesley's Notes",
+        'urls': [
+            'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Wesley.zip',
+            'http://ftp.crosswire.org/pub/sword/packages/rawzip/Wesley.zip',
+        ],
+    },
+    {
+        'id': 'gill',
+        'label': "Gill's Exposition of the Entire Bible",
+        'urls': [
+            'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Gill.zip',
+            'http://ftp.crosswire.org/pub/sword/packages/rawzip/Gill.zip',
         ],
     },
 ]

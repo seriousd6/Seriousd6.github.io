@@ -86,6 +86,22 @@
   margin-bottom: 1rem;
 }
 
+.lib-chapter__intro {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.lib-chapter__sub {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted);
+  margin: 1.25rem 0 0.6rem;
+}
+
 /* ── Numbered articles (Westminster-style) ──────────────── */
 .lib-article {
   display: flex;
@@ -337,7 +353,7 @@
 }
 
 .lib-badge--father   { border-color: #5a3e1b; color: #5a3e1b; }
-.lib-badge--catholic { border-color: #8b1a1a; color: #8b1a1a; }
+.lib-badge--roman-catholic { border-color: #8b1a1a; color: #8b1a1a; }
 
 /* ── I2: Library cross-document search ──────────────────── */
 .lib-search-bar {
@@ -399,6 +415,12 @@
 
 /* Outer wrapper — standard block, no max-width constraint of its own */
 .mw-parser-output { max-width: 100%; }
+
+/* Page-number markers copied from Gutenberg/Wikisource — hidden in all contexts */
+.pagenum { display: none !important; }
+
+/* Wikisource page-output wrapper — transparent to layout */
+.prp-pages-output { display: contents; }
 
 /* Images inside Wikisource content: always contained, never overflow */
 .mw-parser-output img { max-width: 100%; height: auto; display: block; }
@@ -490,6 +512,15 @@
 
 /* Superscript (footnote markers) */
 .wst-sup { vertical-align: super; font-size: .7em; }
+
+/* Hanging indent (liturgical rubrics, catechism answers) */
+.wst-hanging-indent { padding-left: 1.5em; text-indent: -1.5em; }
+
+/* Block-right alignment */
+.wst-block-right { text-align: right; }
+
+/* Italic body blocks */
+.wst-italic-body { font-style: italic; }
 
 /* Decorative rules */
 .wst-rule, .wst-rule-center {

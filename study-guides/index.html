@@ -12,6 +12,7 @@
 <body>
   <main>
     <div class="container">
+      <a class="hist-back-link" href="../search/?tab=guides" id="explore-back-link" target="_top" hidden>← Explore</a>
       <h1>Study Guides</h1>
       <p>Structured multi-session guides for group or personal study. Each guide has teaching content, key passages, and discussion questions per session.</p>
 
@@ -46,5 +47,13 @@
     </div>
   </main>
   <script type="module" src="../assets/js/app.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('minimal')) {
+      var bl = document.getElementById('explore-back-link');
+      if (bl) bl.removeAttribute('hidden');
+      var ft = document.querySelector('.site-footer');
+      if (ft) ft.hidden = true;
+    }
+  </script>
 </body>
 </html>

@@ -13,6 +13,7 @@
 </head>
 <body class="tg-study">
 
+  <nav class="tg-breadcrumb"><a href="../../studies/">← Studies</a></nav>
   <header class="tg-hero tg-hero--cross" style="--tg-accent: #5c3d1e">
     <div class="tg-hero__inner">
       <span class="tg-hero__type">Study Guide · 8 Sessions</span>
@@ -471,6 +472,16 @@
         </div>
       </section>
 
+
+      <div class="tg-related">
+        <h2 class="tg-related__title">Related Studies</h2>
+        <ul class="tg-related__list">
+          <li><a class="tg-related__link" href="../../topics/justification/">Justification by Faith</a></li>
+          <li><a class="tg-related__link" href="../../topics/covenants/">The Covenants</a></li>
+          <li><a class="tg-related__link" href="../../topics/romans/">Romans</a></li>
+        </ul>
+      </div>
+
     </div>
   </main>
 
@@ -501,5 +512,9 @@
   </script>
 
   <script type="module" src="../../assets/js/app.js"></script>
+  <script type="module">
+    import { initSgProgress } from '../../assets/js/sg-progress.js';
+    initSgProgress('romans-1-8', 9);
+  </script>
 </body>
 </html>

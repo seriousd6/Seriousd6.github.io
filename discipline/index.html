@@ -16,23 +16,34 @@
   <main>
 
     <!-- ── Sticky tab bar ─────────────────────────────────────────────────── -->
-    <div class="disc-tabbar" role="tablist" aria-label="Discipline tabs">
-      <button class="disc-tab disc-tab--active" data-tab="plans"       role="tab" aria-selected="true">
-        <span class="disc-dot" id="dot-reading"></span>📅 Plans
-      </button>
-      <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false">
-        <span class="disc-dot" id="dot-devotional"></span>🌅 Devotionals
-      </button>
-      <button class="disc-tab" data-tab="memory"      role="tab" aria-selected="false">
-        <span class="disc-dot" id="dot-memory"></span>⭐ Memory
-      </button>
-      <button class="disc-tab" data-tab="journal"     role="tab" aria-selected="false">
-        <span class="disc-dot" id="dot-prayer"></span>✍️ Journal
-      </button>
-      <button class="disc-tab" data-tab="worship"     role="tab" aria-selected="false">
-        <span class="disc-dot" id="dot-worship"></span>⛪ Worship
-      </button>
+    <div class="disc-tabbar-wrap">
+      <div class="disc-tabbar" role="tablist" aria-label="Discipline tabs">
+        <button class="disc-tab disc-tab--active" data-tab="plans"       role="tab" aria-selected="true">
+          <span class="disc-dot" id="dot-reading"></span>📅 Plans
+        </button>
+        <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false">
+          <span class="disc-dot" id="dot-devotional"></span>🌅 Devotionals
+        </button>
+        <button class="disc-tab" data-tab="memory"      role="tab" aria-selected="false">
+          <span class="disc-dot" id="dot-memory"></span>⭐ Memory
+        </button>
+        <button class="disc-tab" data-tab="journal"     role="tab" aria-selected="false">
+          <span class="disc-dot" id="dot-prayer"></span>✍️ Journal
+        </button>
+        <button class="disc-tab" data-tab="worship"     role="tab" aria-selected="false">
+          <span class="disc-dot" id="dot-worship"></span>⛪ Worship
+        </button>
+        <button class="disc-tab disc-tab--more" id="disc-more-btn" type="button" aria-haspopup="true" aria-expanded="false">More ▾</button>
+      </div>
+      <div class="disc-more-menu" id="disc-more-menu" hidden role="menu">
+        <button class="disc-more-item" data-tab="notes"    role="menuitem" type="button">📝 My Notes</button>
+        <button class="disc-more-item" data-tab="progress" role="menuitem" type="button">📊 Reading Progress</button>
+        <button class="disc-more-item" data-tab="history"  role="menuitem" type="button">📅 History</button>
+      </div>
     </div>
+
+    <!-- ── Daily summary strip ───────────────────────────────────────────── -->
+    <div class="disc-today-strip" id="disc-today-strip"></div>
 
     <!-- ══════════════════════════ PLANS PANEL ══════════════════════════════ -->
     <div id="disc-plans" class="disc-panel disc-body" hidden>
@@ -145,6 +156,7 @@
       <div class="journal-tabs" role="tablist">
         <button class="journal-tab journal-tab--active" data-jtab="prayers"     role="tab" aria-selected="true">🙏 Prayers</button>
         <button class="journal-tab"                     data-jtab="reflections" role="tab" aria-selected="false">📓 Reflections</button>
+        <button class="journal-tab"                     data-jtab="gratitude"   role="tab" aria-selected="false">🌿 Gratitude</button>
       </div>
       <!-- Prayers panel -->
       <div id="journal-prayers-panel">
@@ -178,6 +190,22 @@
         <div id="refl-form-container"></div>
         <div id="refl-list"></div>
       </div>
+      <!-- Gratitude panel -->
+      <div id="journal-gratitude-panel" hidden>
+        <p class="grat-prompt">What are you grateful for today?</p>
+        <div class="grat-bar">
+          <button class="journal-btn journal-btn--primary" id="grat-new-btn" type="button">+ New Entry</button>
+          <input class="journal-search" type="search" id="grat-search" placeholder="Search entries…" />
+          <span class="journal-count" id="grat-count"></span>
+        </div>
+        <div id="grat-form-container"></div>
+        <div id="grat-list"></div>
+        <div class="journal-export-row" id="grat-export-row" hidden>
+          <button class="journal-btn" id="grat-export-btn" type="button">Export JSON</button>
+          <button class="journal-btn" id="grat-import-btn" type="button">Import backup</button>
+          <input type="file" id="grat-import-file" accept=".json" style="display:none" />
+        </div>
+      </div>
     </div>
 
     <!-- ══════════════════════════ WORSHIP PANEL ════════════════════════════ -->
@@ -203,6 +231,21 @@
         <div id="fast-form-container"></div>
         <div id="fast-list"></div>
       </div>
+    </div>
+
+    <!-- ══════════════════════════ NOTES PANEL ══════════════════════════════ -->
+    <div id="disc-notes" class="disc-panel" hidden>
+      <iframe id="disc-notes-iframe" class="disc-embed-frame" data-src="../notes/?minimal=1" src="" style="display:none" title="My Notes"></iframe>
+    </div>
+
+    <!-- ══════════════════════════ PROGRESS PANEL ═══════════════════════════ -->
+    <div id="disc-progress" class="disc-panel" hidden>
+      <iframe id="disc-progress-iframe" class="disc-embed-frame" data-src="../progress/?minimal=1" src="" style="display:none" title="Reading Progress"></iframe>
+    </div>
+
+    <!-- ══════════════════════════ HISTORY PANEL ════════════════════════════ -->
+    <div id="disc-history" class="disc-panel" hidden>
+      <iframe id="disc-history-iframe" class="disc-embed-frame" data-src="../tracker/?minimal=1" src="" style="display:none" title="Discipline History"></iframe>
     </div>
 
   </main>
@@ -243,11 +286,27 @@
     });
   }
 
+  function updateStrip() {
+    var strip = document.getElementById('disc-today-strip');
+    if (!strip) return;
+    var status = getToday();
+    var keys = ['reading', 'devotional', 'memory', 'prayer', 'worship', 'gratitude'];
+    var done = keys.filter(function (k) { return !!status[k]; }).length;
+    if (done === 0) { strip.style.display = 'none'; return; }
+    strip.style.display = '';
+    var dotsHtml = keys.map(function (k) {
+      var color = !!status[k] ? (DOT_COLORS[k] || '#16a085') : 'var(--color-border)';
+      return '<span class="disc-dot disc-dot--strip" style="background:' + color + '" title="' + k + (status[k] ? ' ✓' : '') + '"></span>';
+    }).join('');
+    strip.innerHTML = '<span class="disc-strip-label">Today: ' + done + ' / ' + keys.length + ' complete</span>' + dotsHtml;
+  }
+
   updateDots();
-  onUpdate(updateDots);
+  updateStrip();
+  onUpdate(function () { updateDots(); updateStrip(); });
   window.addEventListener('storage', function (e) {
-    var keys = ['bsw_tracker','bsw_plans','bsw_journal','bsw_reflections','bsw_worship'];
-    if (keys.indexOf(e.key) !== -1) updateDots();
+    var keys = ['bsw_tracker','bsw_plans','bsw_journal','bsw_reflections','bsw_worship','bsw_gratitude'];
+    if (keys.indexOf(e.key) !== -1) { updateDots(); updateStrip(); }
   });
 
   // ── Devotional tracker ──────────────────────────────────────────────────
@@ -310,18 +369,49 @@
       document.querySelectorAll('.disc-panel').forEach(function (p) { p.hidden = true; });
       var panel = document.getElementById('disc-' + tab);
       if (panel) panel.hidden = false;
-      document.querySelectorAll('.disc-tab').forEach(function (btn) {
+
+      // Update tab button active states
+      document.querySelectorAll('.disc-tab[data-tab]').forEach(function (btn) {
         var isThis = btn.getAttribute('data-tab') === tab;
         btn.classList.toggle('disc-tab--active', isThis);
         btn.setAttribute('aria-selected', isThis ? 'true' : 'false');
       });
+
+      // Update "More" button label when a More-menu tab is active
+      var moreBtn = document.getElementById('disc-more-btn');
+      var moreTabs = ['notes', 'progress', 'history'];
+      var moreLabels = { notes: '📝 My Notes ▾', progress: '📊 Progress ▾', history: '📅 History ▾' };
+      if (moreBtn) {
+        if (moreTabs.indexOf(tab) !== -1) {
+          moreBtn.textContent = moreLabels[tab] || 'More ▾';
+          moreBtn.classList.add('disc-tab--active');
+        } else {
+          moreBtn.textContent = 'More ▾';
+          moreBtn.classList.remove('disc-tab--active');
+        }
+      }
+
+      // Lazy-load iframe panels
+      if (tab === 'notes' || tab === 'progress' || tab === 'history') {
+        var iframe = document.getElementById('disc-' + tab + '-iframe');
+        if (iframe) {
+          iframe.style.display = 'block';
+          if (!iframe.src || iframe.src === window.location.href) {
+            iframe.src = iframe.dataset.src;
+          }
+        }
+      }
+
       if (!skipHistory) {
         var qs = '?tab=' + tab;
         var jtab = new URLSearchParams(location.search).get('jtab');
         if (tab === 'journal' && jtab) qs += '&jtab=' + jtab;
+        var wtab = new URLSearchParams(location.search).get('wtab');
+        if (tab === 'worship' && wtab) qs += '&wtab=' + wtab;
         history.replaceState(null, '', qs);
         localStorage.setItem('bsw_discipline_tab', tab);
       }
+
       if (!_inited[tab]) {
         _inited[tab] = true;
         if (tab === 'plans')       initPlans();
@@ -332,9 +422,35 @@
       }
     }
 
-    document.querySelectorAll('.disc-tab').forEach(function (btn) {
+    document.querySelectorAll('.disc-tab[data-tab]').forEach(function (btn) {
       btn.addEventListener('click', function () { activateTab(btn.getAttribute('data-tab')); });
     });
+
+    // ── More ▾ dropdown ─────────────────────────────────────────────────────
+    var _moreMenu = document.getElementById('disc-more-menu');
+    var _moreBtn  = document.getElementById('disc-more-btn');
+
+    if (_moreBtn && _moreMenu) {
+      _moreBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = !_moreMenu.hidden;
+        _moreMenu.hidden = open;
+        _moreBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+      _moreMenu.querySelectorAll('.disc-more-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+          activateTab(item.getAttribute('data-tab'));
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('#disc-more-btn, #disc-more-menu')) {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
 
     /* handle URL on load */
     var params  = new URLSearchParams(location.search);
@@ -427,8 +543,10 @@
       markBtn.textContent=done?'✓ Marked complete':'Mark day complete';
       markBtn.addEventListener('click',function(){
         var s=getState(); if(!s[plan.id])return; if(!s[plan.id].completed)s[plan.id].completed={};
-        if(done){delete s[plan.id].completed[dn];done=false;markBtn.className='plan-today__mark';markBtn.textContent='Mark day complete';}
-        else{s[plan.id].completed[dn]=true;done=true;markBtn.className='plan-today__mark plan-today__mark--done';markBtn.textContent='✓ Marked complete';}
+        if(done){delete s[plan.id].completed[dn];done=false;markBtn.className='plan-today__mark';markBtn.textContent='Mark day complete';
+          var oldCta=doneDiv.querySelector('.disc-cta-link');if(oldCta)oldCta.remove();}
+        else{s[plan.id].completed[dn]=true;done=true;markBtn.className='plan-today__mark plan-today__mark--done';markBtn.textContent='✓ Marked complete';
+          var cta=document.createElement('a');cta.className='disc-cta-link';cta.href='?tab=journal&jtab=reflections';cta.textContent='Write a reflection on today\'s reading →';doneDiv.appendChild(cta);}
         saveState(s);
       });
       doneDiv.appendChild(markBtn); div.appendChild(doneDiv);
@@ -549,23 +667,28 @@
       // ── Journal sub-tab switching ──────────────────────────────────────
       var prayersPanel=document.getElementById('journal-prayers-panel');
       var reflPanel=document.getElementById('journal-reflections-panel');
+      var gratPanel=document.getElementById('journal-gratitude-panel');
+      var _gratInited=false;
 
       function switchJournalTab(tab) {
         prayersPanel.hidden=(tab!=='prayers');
         reflPanel.hidden=(tab!=='reflections');
+        gratPanel.hidden=(tab!=='gratitude');
         document.querySelectorAll('[data-jtab]').forEach(function(btn){
           var isThis=btn.getAttribute('data-jtab')===tab;
           btn.classList.toggle('journal-tab--active',isThis);
           btn.setAttribute('aria-selected',isThis?'true':'false');
         });
-        var base=history.state, qs='?tab=journal'; if(tab!=='prayers') qs+='&jtab='+tab;
+        var qs='?tab=journal'; if(tab!=='prayers') qs+='&jtab='+tab;
         history.replaceState(null,'',qs);
+        if (tab==='gratitude'&&!_gratInited){_gratInited=true;initGratitude();}
       }
       document.querySelectorAll('[data-jtab]').forEach(function(btn){
         btn.addEventListener('click',function(){switchJournalTab(btn.getAttribute('data-jtab'));});
       });
       var jtab=new URLSearchParams(location.search).get('jtab');
       if (jtab==='reflections') switchJournalTab('reflections');
+      else if (jtab==='gratitude') switchJournalTab('gratitude');
 
       // ── Prayers IIFE ──────────────────────────────────────────────────
       (function(){
@@ -876,17 +999,23 @@
 
     /* ══════════════════════════ WORSHIP ════════════════════════════════════ */
     function initWorship() {
-      // Worship sub-tab switching
-      document.querySelectorAll('[data-wtab]').forEach(function(btn){
-        btn.addEventListener('click',function(){
-          var tab=btn.getAttribute('data-wtab');
-          document.getElementById('worship-sermons-panel').hidden=(tab!=='sermons');
-          document.getElementById('worship-fasting-panel').hidden=(tab!=='fasting');
-          document.querySelectorAll('[data-wtab]').forEach(function(b){
-            b.classList.toggle('worship-tab--active',b===btn);b.setAttribute('aria-selected',b===btn?'true':'false');
-          });
+      // Worship sub-tab switching with URL + localStorage persistence (D-I)
+      function switchWtab(tab, skipUrl) {
+        document.getElementById('worship-sermons-panel').hidden=(tab!=='sermons');
+        document.getElementById('worship-fasting-panel').hidden=(tab!=='fasting');
+        document.querySelectorAll('[data-wtab]').forEach(function(b){
+          b.classList.toggle('worship-tab--active',b.getAttribute('data-wtab')===tab);
+          b.setAttribute('aria-selected',b.getAttribute('data-wtab')===tab?'true':'false');
         });
+        localStorage.setItem('bsw_worship_wtab', tab);
+        if (!skipUrl) history.replaceState(null,'','?tab=worship&wtab='+tab);
+      }
+      document.querySelectorAll('[data-wtab]').forEach(function(btn){
+        btn.addEventListener('click',function(){switchWtab(btn.getAttribute('data-wtab'));});
       });
+      // Restore persisted sub-tab on init
+      var savedWtab = new URLSearchParams(location.search).get('wtab') || localStorage.getItem('bsw_worship_wtab') || 'sermons';
+      switchWtab(savedWtab, true);
 
       var WORSHIP_KEY='bsw_worship', FASTING_KEY='bsw_fasting', READ_URL='../read/';
       function loadW(){try{return JSON.parse(localStorage.getItem(WORSHIP_KEY)||'[]');}catch(e){return[];}}
@@ -932,7 +1061,16 @@
         var entries=loadW();
         if(_wEditId){entries=entries.map(function(e){return e.id===_wEditId?Object.assign({},e,{date,church,preacher,passage,title,attended,communion,notes,takeaways,modified:Date.now()}):e;});}
         else{entries.unshift({id:Date.now(),date,church,preacher,passage,title,attended,communion,notes,takeaways,created:Date.now()});}
+        var isNew = !_wEditId;
         saveW(entries);hideSermonForm();renderSermons();
+        // D-K: prompt reflection after a new sermon entry
+        if (isNew) {
+          var fc2 = document.getElementById('worship-form-container');
+          var cta = document.createElement('p'); cta.className = 'worship-post-cta';
+          cta.innerHTML = 'Sermon logged. <a href="?tab=journal&amp;jtab=reflections">Write a reflection →</a>';
+          fc2.appendChild(cta);
+          setTimeout(function () { if (fc2.contains(cta)) cta.remove(); }, 6000);
+        }
       }
       function renderSermons(){
         var entries=loadW(),listEl=document.getElementById('worship-list'),countEl=document.getElementById('worship-count');
@@ -1014,6 +1152,114 @@
       document.getElementById('fast-new-btn').addEventListener('click',function(){showFastForm(null);});
       renderSermons(); renderFasts();
     } // end initWorship
+
+    /* ══════════════════════════ GRATITUDE ══════════════════════════════════ */
+    function initGratitude() {
+      var GRAT_KEY='bsw_gratitude';
+      var _gEditId=null, _gSearchQ='', _gFormTags=[];
+      function loadG(){try{return JSON.parse(localStorage.getItem(GRAT_KEY)||'[]');}catch(e){return[];}}
+      function saveG(a){localStorage.setItem(GRAT_KEY,JSON.stringify(a));}
+      function todayG(){return new Date().toISOString().slice(0,10);}
+      function escG(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      function fmtG(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'short',month:'long',day:'numeric',year:'numeric'});}
+
+      function buildGTagInput(existing){
+        _gFormTags=existing?existing.slice():[];
+        var wrap=document.createElement('div');wrap.className='journal-tag-input-wrap';
+        var inp=document.createElement('input');inp.className='journal-tag-bare-input';inp.type='text';inp.placeholder='Add tag…';
+        function refresh(){
+          wrap.querySelectorAll('.journal-tag').forEach(function(c){c.remove();});
+          _gFormTags.forEach(function(t){
+            var chip=document.createElement('span');
+            chip.innerHTML='<span class="journal-tag journal-tag--default" data-tag="'+escG(t)+'">'+escG(t)+'<button class="journal-tag__rm" data-rm-tag="'+escG(t)+'" type="button">×</button></span>';
+            var inner=chip.firstChild;
+            inner.querySelector('[data-rm-tag]').addEventListener('click',function(ev){ev.stopPropagation();_gFormTags=_gFormTags.filter(function(x){return x!==t;});refresh();});
+            wrap.insertBefore(inner,inp);
+          });
+        }
+        refresh();
+        function addTag(raw){var t=raw.trim().toLowerCase().replace(/\s+/g,'-');if(!t||_gFormTags.indexOf(t)!==-1)return;_gFormTags.push(t);refresh();inp.value='';}
+        inp.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===','){e.preventDefault();addTag(inp.value);}if(e.key==='Backspace'&&!inp.value&&_gFormTags.length){_gFormTags.pop();refresh();}});
+        inp.addEventListener('blur',function(){if(inp.value.trim())addTag(inp.value);});
+        wrap.addEventListener('click',function(e){if(e.target===wrap)inp.focus();});
+        wrap.appendChild(inp);return wrap;
+      }
+
+      function showGratForm(entry){
+        _gEditId=entry?entry.id:null;var isEdit=!!entry;
+        var fc=document.getElementById('grat-form-container');
+        var form=document.createElement('div');form.className='journal-form';
+        form.innerHTML='<h2>'+(isEdit?'Edit Entry':'New Gratitude Entry')+'</h2>'+
+          '<div class="journal-field"><label for="g-date">Date</label><input class="journal-input" type="date" id="g-date" value="'+escG(isEdit?entry.date:todayG())+'" /></div>'+
+          '<div class="journal-field"><label for="g-text">What are you grateful for?</label><textarea class="journal-textarea" id="g-text" placeholder="I am grateful for…">'+escG(isEdit?(entry.text||''):'')+'</textarea></div>'+
+          '<div class="journal-field" id="g-tags-field"><label>Tags <span>(Enter to add)</span></label></div>'+
+          '<div class="journal-form-actions"><button class="journal-btn" id="g-cancel" type="button">Cancel</button><button class="journal-btn journal-btn--primary" id="g-save" type="button">'+(isEdit?'Save changes':'Save entry')+'</button></div>';
+        fc.innerHTML='';fc.appendChild(form);
+        form.querySelector('#g-tags-field').appendChild(buildGTagInput(isEdit?(entry.tags||[]):[]));
+        form.querySelector('#g-cancel').addEventListener('click',hideGratForm);
+        form.querySelector('#g-save').addEventListener('click',saveGratEntry);
+        form.querySelector('#g-text').focus();
+      }
+      function hideGratForm(){_gEditId=null;_gFormTags=[];document.getElementById('grat-form-container').innerHTML='';}
+      function saveGratEntry(){
+        var bare=document.querySelector('#grat-form-container .journal-tag-bare-input');
+        if(bare&&bare.value.trim()){var t=bare.value.trim().toLowerCase().replace(/\s+/g,'-');if(t&&_gFormTags.indexOf(t)===-1)_gFormTags.push(t);}
+        var date=(document.getElementById('g-date').value||todayG()).trim();
+        var text=document.getElementById('g-text').value.trim();
+        var tags=_gFormTags.slice();
+        if(!text){alert('Please write what you are grateful for.');return;}
+        var entries=loadG();
+        if(_gEditId){entries=entries.map(function(e){return e.id===_gEditId?Object.assign({},e,{date,text,tags,modified:Date.now()}):e;});}
+        else{entries.unshift({id:Date.now(),date,text,tags,created:Date.now()});}
+        saveG(entries);hideGratForm();renderGrat();
+      }
+
+      function renderGrat(){
+        var entries=loadG(),listEl=document.getElementById('grat-list'),countEl=document.getElementById('grat-count'),exportRow=document.getElementById('grat-export-row');
+        entries.sort(function(a,b){return b.date>a.date?1:(b.date<a.date?-1:(b.created||0)-(a.created||0));});
+        var q=_gSearchQ.toLowerCase();
+        var filtered=q?entries.filter(function(e){return[e.text,(e.tags||[]).join(' ')].join(' ').toLowerCase().includes(q);}):entries;
+        countEl.textContent=filtered.length+' of '+entries.length+' entries';
+        exportRow.hidden=entries.length===0;
+        if(!filtered.length){listEl.innerHTML='<div class="journal-empty">'+(entries.length?'No entries match.':'No gratitude entries yet. Start by recording something you\'re thankful for.')+'</div>';return;}
+        listEl.innerHTML='';
+        filtered.forEach(function(entry){
+          var card=document.createElement('div');card.className='journal-entry';
+          var preview=(entry.text||'').replace(/\n/g,' ').slice(0,90)+((entry.text||'').length>90?'…':'');
+          var tagsHtml=(entry.tags||[]).length?'<div class="journal-entry-tags">'+(entry.tags||[]).map(function(t){return'<span class="journal-tag journal-tag--default">'+escG(t)+'</span>';}).join('')+'</div>':'';
+          var head=document.createElement('div');head.className='journal-entry__head';
+          head.innerHTML='<div class="journal-entry__meta"><div class="journal-entry__date">'+escG(fmtG(entry.date))+'</div>'+(preview?'<div class="journal-entry__preview">'+escG(preview)+'</div>':'')+tagsHtml+'</div>'+
+            '<div class="journal-entry__btns"><button class="journal-entry__btn" data-action="edit" type="button">Edit</button><button class="journal-entry__btn journal-entry__btn--del" data-action="del" type="button">Delete</button></div>';
+          var body=document.createElement('div');body.className='journal-entry__body';
+          body.innerHTML='<p style="font-family:Georgia,serif;font-size:.92rem;line-height:1.7;white-space:pre-wrap;margin:0">'+escG(entry.text||'')+'</p>';
+          head.addEventListener('click',function(e){if(e.target.closest('[data-action]'))return;body.classList.toggle('journal-entry__body--open');});
+          head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=loadG().find(function(x){return x.id===entry.id;});if(e)showGratForm(e);});
+          head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this entry?'))return;saveG(loadG().filter(function(x){return x.id!==entry.id;}));renderGrat();});
+          card.appendChild(head);card.appendChild(body);listEl.appendChild(card);
+        });
+      }
+
+      document.getElementById('grat-new-btn').addEventListener('click',function(){showGratForm(null);});
+      document.getElementById('grat-search').addEventListener('input',function(){_gSearchQ=this.value.trim();renderGrat();});
+      document.getElementById('grat-export-btn').addEventListener('click',function(){
+        var d=loadG();if(!d.length)return;
+        var blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='bsw-gratitude-'+todayG()+'.json';a.click();URL.revokeObjectURL(url);
+      });
+      document.getElementById('grat-import-btn').addEventListener('click',function(){document.getElementById('grat-import-file').click();});
+      document.getElementById('grat-import-file').addEventListener('change',function(e){
+        var file=e.target.files&&e.target.files[0];if(!file)return;this.value='';
+        var fr=new FileReader();fr.onload=function(ev){
+          var imp;try{imp=JSON.parse(ev.target.result);}catch(e){alert('Invalid JSON.');return;}
+          if(!Array.isArray(imp)){alert('Unexpected format.');return;}
+          var existing=loadG(),existIds={},added=0,skipped=0;
+          existing.forEach(function(x){existIds[x.id]=true;});
+          imp.forEach(function(x){if(x.id&&existIds[x.id])skipped++;else{existing.push(x);added++;}});
+          saveG(existing);renderGrat();
+          alert('Imported '+added+' entr'+(added===1?'y':'ies')+'.'+(skipped?' '+skipped+' duplicate'+(skipped!==1?'s':'')+' skipped.':''));
+        };fr.readAsText(file);
+      });
+      renderGrat();
+    } // end initGratitude
 
   }()); // end master IIFE
   </script>

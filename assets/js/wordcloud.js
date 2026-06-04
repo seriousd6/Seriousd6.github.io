@@ -30,27 +30,28 @@ var PROPER_IDS = new Set([
 
 // rotProb: fraction of eligible words (below the top-25% by frequency) that
 // are rotated -90°.  Higher values help fill narrow regions of the shape.
-// The cross uses 0.55 because its vertical beam is only ~34% wide — rotated
-// words (effective width ≈ font size, 8-36px) pack in far more densely there.
+// The cross uses 0.65 because its narrow Latin-cross arms (22% beam width)
+// need rotated words to fill the tight top arm and vertical beam efficiently.
 var SCOPES = [
   { id: 'all',        label: 'Whole Bible',   shape: 'oval',    minPx: 9, maxPx: 44, rotProb: 0.30, getCount: function (w) { return w.count; } },
   { id: 'ot',         label: 'Old Testament', shape: 'tablets', minPx: 9, maxPx: 40, rotProb: 0.35, getCount: function (w) { return w.ot; } },
-  { id: 'nt',         label: 'New Testament', shape: 'cross',   minPx: 8, maxPx: 34, rotProb: 0.55, getCount: function (w) { return w.nt; } },
+  { id: 'nt',         label: 'New Testament', shape: 'cross',   minPx: 8, maxPx: 34, rotProb: 0.65, getCount: function (w) { return w.nt; } },
   { id: 'law',        label: 'Law',           shape: 'scroll',  minPx: 8, maxPx: 34, rotProb: 0.30, getCount: function (w) { return w.genres.law; } },
   { id: 'history',    label: 'History',       shape: 'shield',  minPx: 9, maxPx: 42, rotProb: 0.30, getCount: function (w) { return w.genres.history; } },
   { id: 'poetry',     label: 'Poetry',        shape: 'heart',   minPx: 9, maxPx: 40, rotProb: 0.30, getCount: function (w) { return w.genres.poetry; } },
-  { id: 'prophecy',   label: 'Prophecy',      shape: 'flame',   minPx: 8, maxPx: 38, rotProb: 0.40, getCount: function (w) { return w.genres.prophecy; } },
+  { id: 'prophecy',   label: 'Prophecy',      shape: 'trumpet', minPx: 8, maxPx: 38, rotProb: 0.45, getCount: function (w) { return w.genres.prophecy; } },
   { id: 'gospels',    label: 'Gospels',       shape: 'fish',    minPx: 8, maxPx: 34, rotProb: 0.30, getCount: function (w) { return w.genres.gospels; } },
+  { id: 'acts',       label: 'Acts',          shape: 'dove',    minPx: 8, maxPx: 32, rotProb: 0.30, getCount: function (w) { return w.genres.acts; } },
   { id: 'epistles',   label: 'Epistles',      shape: 'scroll',  minPx: 8, maxPx: 36, rotProb: 0.30, getCount: function (w) { return w.genres.epistles; } },
   { id: 'apocalyptic',label: 'Revelation',    shape: 'star',    minPx: 8, maxPx: 32, rotProb: 0.35, getCount: function (w) { return w.genres.apocalyptic; } },
 ];
 
 // Per-shape SVG heights (shapes have different natural aspect ratios).
-// The cross is taller than the oval to give its narrow arms more room.
+// The cross is tallest — its extra height gives the long bottom arm room for words.
 var SHAPE_H = {
-  oval:    580, tablets: 560, cross:   720, scroll:  380,
+  oval:    580, tablets: 560, cross:   820, scroll:  380,
   shield:  620, heart:   620, flame:   680, fish:    400,
-  star:    600,
+  trumpet: 440, dove:    460, star:    600,
 };
 
 // ── Shape drawing functions ───────────────────────────────────────────────────
@@ -84,15 +85,15 @@ function _oneTablet(ctx, x, y, w, h) {
 }
 
 function _shapeCross(ctx, w, h) {
-  // Symmetric Greek-style cross: centering the horizontal bar gives equal
-  // top and bottom arm heights so the placement algorithm fills all four
-  // arms evenly. Wider beams (34% / 28%) give enough room for rotated words.
-  var vw = w * 0.34;            // vertical beam width
-  var hh = h * 0.28;            // horizontal beam height
-  var vx = (w - vw) / 2;       // center the vertical beam horizontally
-  var hy = (h - hh) / 2;       // center the horizontal beam vertically — equal top/bottom arms
-  ctx.fillRect(vx, h * 0.04, vw, h * 0.92);   // vertical beam, nearly full height
-  ctx.fillRect(w * 0.04, hy, w * 0.92, hh);   // horizontal beam, nearly full width
+  // Latin cross: crossbar placed at ~1/4 from top gives the classic
+  // short-top / long-bottom arm ratio (~1:3). Narrower beams (22% / 20%)
+  // make the silhouette read as a cross rather than a plus sign.
+  var vw = w * 0.22;            // vertical beam width
+  var hh = h * 0.20;            // horizontal beam height
+  var vx = (w - vw) / 2;
+  var hy = h * 0.22;            // crossbar top-edge at 22% — top arm ≈17%, bottom arm ≈57%
+  ctx.fillRect(vx, h * 0.03, vw, h * 0.94);   // vertical beam, nearly full height
+  ctx.fillRect(w * 0.06, hy, w * 0.88, hh);   // horizontal beam
 }
 
 function _shapeShield(ctx, w, h) {
@@ -164,6 +165,47 @@ function _shapeScroll(ctx, w, h) {
   ctx.fill();
 }
 
+function _shapeTrumpet(ctx, w, h) {
+  // Side-view trumpet: bell (right) → narrow tube → small mouthpiece flare (left).
+  // The bell occupies most of the right half and is the main word-placement area;
+  // the tube is narrow so rotated words fill it naturally.
+  var bx = w * 0.50;   // x where the tube widens into the bell
+  var ty = h * 0.37;   // tube top
+  var by = h * 0.63;   // tube bottom
+
+  ctx.beginPath();
+  ctx.moveTo(w * 0.03, h * 0.43);                                                      // mouthpiece tip top
+  ctx.quadraticCurveTo(w * 0.12, h * 0.35, w * 0.22, ty);                             // mouthpiece flare → tube top
+  ctx.lineTo(bx, ty);                                                                    // along tube top
+  ctx.bezierCurveTo(w * 0.68, h * 0.18, w * 0.84, h * 0.07, w * 0.97, h * 0.06);    // bell top flare
+  ctx.lineTo(w * 0.97, h * 0.94);                                                       // bell right edge
+  ctx.bezierCurveTo(w * 0.84, h * 0.93, w * 0.68, h * 0.82, bx, by);                // bell bottom flare
+  ctx.lineTo(w * 0.22, by);                                                              // along tube bottom
+  ctx.quadraticCurveTo(w * 0.12, h * 0.65, w * 0.03, h * 0.57);                      // mouthpiece flare → tip bottom
+  ctx.closePath();
+  ctx.fill();
+}
+
+function _shapeDove(ctx, w, h) {
+  // Dove with spread wings, viewed from slightly above.
+  // Single closed path: left wingtip → wings sweep up → head arc → right wingtip
+  // → trailing edges back → forked tail → close.
+  var cx = w / 2;
+  ctx.beginPath();
+  ctx.moveTo(w * 0.03, h * 0.44);                                                     // left wingtip
+  ctx.bezierCurveTo(w * 0.10, h * 0.06, w * 0.26, h * 0.20, cx - w * 0.10, h * 0.38); // left wing leading edge
+  ctx.quadraticCurveTo(cx, h * 0.16, cx + w * 0.10, h * 0.38);                        // head arc
+  ctx.bezierCurveTo(w * 0.74, h * 0.20, w * 0.90, h * 0.06, w * 0.97, h * 0.44);     // right wing leading edge
+  ctx.bezierCurveTo(w * 0.84, h * 0.54, cx + w * 0.16, h * 0.58, cx + w * 0.12, h * 0.68); // right wing trailing edge
+  ctx.lineTo(cx + w * 0.16, h * 0.92);                                                 // right tail prong
+  ctx.lineTo(cx,             h * 0.78);                                                 // tail notch
+  ctx.lineTo(cx - w * 0.16, h * 0.92);                                                 // left tail prong
+  ctx.lineTo(cx - w * 0.12, h * 0.68);                                                 // back to left wing join
+  ctx.bezierCurveTo(cx - w * 0.16, h * 0.58, w * 0.16, h * 0.54, w * 0.03, h * 0.44); // left wing trailing edge
+  ctx.closePath();
+  ctx.fill();
+}
+
 function _shapeStar(ctx, w, h) {
   var n  = 6; // six-pointed star
   var cx = w / 2, cy = h / 2;
@@ -191,11 +233,21 @@ var SHAPE_FNS = {
   flame:   _shapeFlame,
   fish:    _shapeFish,
   scroll:  _shapeScroll,
+  trumpet: _shapeTrumpet,
+  dove:    _shapeDove,
   star:    _shapeStar,
 };
 
 // ── Pixel mask ────────────────────────────────────────────────────────────────
 
+// INTENT: Rasterise the SVG shape onto an offscreen canvas at the exact render
+//   dimensions, then build a Uint8Array mask where 1 = valid placement pixel
+//   (alpha > 64). The cache key includes w and h so the mask is rebuilt when
+//   the window is resized — stale masks would place words outside the shape.
+// CHANGE? If SVG_W/SVG_H calculation changes, also update any callers that
+//   pass dimensions; a mismatch between mask size and SVG size misaligns placement.
+// VERIFY: With browser DevTools, inspect _maskCache after render; the key should
+//   be "{shape}_{svgWidth}_{svgHeight}" matching the rendered SVG dimensions.
 function _buildMask(shapeKey, w, h) {
   var key = shapeKey + '_' + w + '_' + h;
   if (_maskCache[key]) return _maskCache[key];
@@ -220,6 +272,13 @@ function _buildMask(shapeKey, w, h) {
   return result;
 }
 
+// INTENT: Test whether a bw×bh box at (x,y) fits entirely within the mask.
+//   Checks four corners first (O(1) fast rejection for out-of-shape positions),
+//   then samples interior on a grid whose step is proportional to the smaller
+//   bounding-box dimension — large words get denser sampling than small ones.
+// CHANGE? If SVG_W/SVG_H calculation changes, the mask cache key must change too
+//   (see _buildMask) or this function will test against a stale mask.
+// VERIFY: Render the OT (tablets) scope; confirm words stay within arch boundaries.
 function _fitsInMask(m, x, y, bw, bh) {
   var x0 = Math.floor(x),      y0 = Math.floor(y);
   var x1 = Math.ceil(x + bw),  y1 = Math.ceil(y + bh);
@@ -321,16 +380,15 @@ function _doRender(svgWrap) {
   });
 
   // ── Archimedean spiral placement ──────────────────────────────────────────
-  // r = b·θ; adaptive step keeps arc distance ≈ TARGET_D px between positions.
-  //
-  // Key insight for complex shapes (cross, fish, star): after a spiral escapes
-  // a narrow arm it burns thousands of iterations on out-of-mask pixels.
-  // The missStreak counter detects this and teleports the spiral to a fresh
-  // random mask pixel from the seed pool, turning one long useless spiral into
-  // many short productive local spirals that cover the whole shape.
-  //
-  // Words still unplaced after MAX_ITER get a second attempt with the opposite
-  // rotation — horizontal words that are too wide for an arm often fit rotated.
+  // INTENT: Place each word by walking an Archimedean spiral (r = b·θ) outward
+  //   from a seed pixel. The adaptive step TARGET_D / Math.max(r, TARGET_D) keeps
+  //   arc-distance constant (not angular-distance) so words pack evenly at all
+  //   radii. b=5 gives ~450px max radius across MAX_ITER steps — enough to reach
+  //   any part of the largest shape at the default SVG dimensions.
+  // CHANGE? If SVG_W/SVG_H calculation changes, update the _buildMask cache key
+  //   (it includes dimensions) or stale masks will be reused after a window resize.
+  // VERIFY: Render the OT (tablets) scope; all words should stay inside the arch
+  //   boundary with none appearing in the gap between the two tablet halves.
 
   var cx = SVG_W / 2, cy = SVG_H / 2;
   var placedBoxes = [];
@@ -364,7 +422,10 @@ function _doRender(svgWrap) {
 
       if (maskData) {
         if (!_fitsInMask(maskData, x, y, bw, bh)) {
-          // Spiral has escaped the shape; jump to a fresh mask pixel
+          // INTENT: After RESTART_AFTER consecutive out-of-mask positions the spiral
+          //   has escaped a narrow arm (e.g. the cross's vertical beam). Teleporting
+          //   to a random seedPool pixel restarts a fresh local spiral inside the
+          //   shape, turning one long useless sweep into many productive short ones.
           if (++missStreak >= RESTART_AFTER && seedPool.length > 0) {
             var ns = seedPool[Math.floor(Math.random() * seedPool.length)];
             sx = ns.x; sy = ns.y;
@@ -409,7 +470,10 @@ function _doRender(svgWrap) {
     }
   });
 
-  // Second pass: retry unplaced words with the opposite rotation.
+  // INTENT: Retry unplaced words with the opposite rotation. A word too wide to
+  //   fit horizontally in a narrow arm (e.g. the cross's vertical beam) often
+  //   fits rotated 90°, so flipping rotation before discarding recovers ~10–15%
+  //   of words that would otherwise be silently dropped.
   words.forEach(function (word) {
     if (word.placed) return;
     word.rot = word.rot === 0 ? -90 : 0;
@@ -432,6 +496,9 @@ function _doRender(svgWrap) {
     svgWrap.innerHTML = '<p class="wc-empty">Could not fit any words in this shape.</p>';
     return;
   }
+
+  var placedLangs = new Set(placed.map(function (ww) { return ww.w.lang; }));
+  _updateLegend(placedLangs);
 
   var parts = [
     '<svg viewBox="0 0 ' + SVG_W + ' ' + SVG_H + '" ' +
@@ -461,6 +528,7 @@ function _doRender(svgWrap) {
       'text-anchor="middle" ' +
       'font-size="' + word.size + '" ' +
       'font-weight="bold" ' +
+      'font-family="system-ui, sans-serif" ' +
       'fill="' + word.color + '" ' +
       'class="wc-word" ' +
       'data-idx="' + idx + '" ' +
@@ -528,8 +596,16 @@ function _buildScopeButtons() {
 function _wireProperToggle() {
   var btn = document.getElementById('wc-proper-toggle');
   if (!btn) return;
+  // Restore persisted toggle state
+  var stored = localStorage.getItem('bsw_wc_showProper');
+  if (stored !== null) {
+    _showProper = stored !== 'false';
+    btn.classList.toggle('wc-proper-toggle--on', _showProper);
+    btn.textContent = _showProper ? 'Hide names' : 'Show names';
+  }
   btn.addEventListener('click', function () {
     _showProper = !_showProper;
+    localStorage.setItem('bsw_wc_showProper', String(_showProper));
     btn.classList.toggle('wc-proper-toggle--on', _showProper);
     btn.textContent = _showProper ? 'Hide names' : 'Show names';
     _render();
@@ -544,7 +620,7 @@ function _showDetail(word) {
   var idEl     = document.getElementById('wc-detail-id');
   var lemmaEl  = document.getElementById('wc-detail-lemma');
   var countEl  = document.getElementById('wc-detail-count');
-  var testEl   = document.getElementById('wc-detail-translit');
+  var testEl   = document.getElementById('wc-detail-testament');
   var defEl    = document.getElementById('wc-detail-def');
   var linkEl   = document.getElementById('wc-detail-word-link');
   if (!panel || !word) return;
@@ -561,7 +637,7 @@ function _showDetail(word) {
   if (defEl)   defEl.innerHTML     = _buildBars(w);
 
   if (linkEl) {
-    linkEl.href = '../word/?s=' + encodeURIComponent(w.id);
+    linkEl.href = '../word/?s=' + encodeURIComponent(w.id) + '&from=wordcloud';
   }
 
   panel.hidden = false;
@@ -575,6 +651,7 @@ function _buildBars(w) {
     { label: 'Poetry',     count: w.genres.poetry },
     { label: 'Prophecy',   count: w.genres.prophecy },
     { label: 'Gospels',    count: w.genres.gospels },
+    { label: 'Acts',       count: w.genres.acts },
     { label: 'Epistles',   count: w.genres.epistles },
     { label: 'Revelation', count: w.genres.apocalyptic },
   ].filter(function (b) { return b.count > 0; });
@@ -592,6 +669,13 @@ function _buildBars(w) {
         '</div>';
     }).join('') +
     '</div>';
+}
+
+function _updateLegend(langs) {
+  var hebEl = document.getElementById('wc-legend-heb');
+  var grkEl = document.getElementById('wc-legend-grk');
+  if (hebEl) hebEl.style.display = langs.has('H') ? '' : 'none';
+  if (grkEl) grkEl.style.display = langs.has('G') ? '' : 'none';
 }
 
 document.addEventListener('click', function (e) {
@@ -613,6 +697,21 @@ export function initWordCloudPage() {
       _buildScopeButtons();
       _wireProperToggle();
       _render();
+
+      // Re-render when container width changes by more than 20px (e.g. sidebar open/close, orientation change)
+      var _wcLastW = 0;
+      var _wcResizeTimer = null;
+      var svgWrapEl = document.getElementById('wc-svg-wrap');
+      if (svgWrapEl && typeof ResizeObserver !== 'undefined') {
+        _wcLastW = svgWrapEl.offsetWidth;
+        new ResizeObserver(function (entries) {
+          var newW = Math.round(entries[0].contentRect.width);
+          if (Math.abs(newW - _wcLastW) < 20) return;
+          _wcLastW = newW;
+          clearTimeout(_wcResizeTimer);
+          _wcResizeTimer = setTimeout(_render, 100);
+        }).observe(svgWrapEl);
+      }
     })
     .catch(function (err) {
       console.error('[WordCloud] failed to load frequencies:', err);

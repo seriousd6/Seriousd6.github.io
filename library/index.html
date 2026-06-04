@@ -16,13 +16,16 @@
     <div class="container lb-page">
 
       <div class="lb-header">
-        <h1 class="lb-title">Library</h1>
+        <div class="lb-header-row">
+          <h1 class="lb-title">Library</h1>
+          <a class="lb-history-link" href="progress/">📚 Reading History</a>
+        </div>
         <p class="lb-sub">Creeds · Confessions · Catechisms · Church Fathers</p>
       </div>
 
       <div class="lb-layout" id="lb-container">
 
-        <!-- Column 1: Filter panel (collapsible) -->
+        <!-- Column 1: Filter panel (tradition / era / type — collapsible) -->
         <div class="lb-col lb-col--filters">
           <div class="lb-col-label">
             <span class="lb-col-label-text">Filter</span>
@@ -33,7 +36,18 @@
           </div>
         </div>
 
-        <!-- Column 2: Document list (collapsible) -->
+        <!-- Column 2: Authors panel (collapsible) -->
+        <div class="lb-col lb-col--authors">
+          <div class="lb-col-label">
+            <span class="lb-col-label-text">Authors</span>
+            <button class="lb-col-toggle" id="lb-authors-toggle" aria-label="Collapse authors">‹</button>
+          </div>
+          <div id="lb-authors">
+            <!-- author rows injected by JS -->
+          </div>
+        </div>
+
+        <!-- Column 3: Document list (collapsible) -->
         <div class="lb-col lb-col--list">
           <div class="lb-col-label lb-list-header">
             <span class="lb-col-label-text">Documents</span>
@@ -48,7 +62,7 @@
           </div>
         </div>
 
-        <!-- Column 3: Inline reader -->
+        <!-- Column 4: Inline reader -->
         <div class="lb-col lb-col--reader">
           <div class="lb-col-label">Reader</div>
           <div id="lb-reader">

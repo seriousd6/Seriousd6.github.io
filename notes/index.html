@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <style>
+    .ms-back-link { display:inline-block; font-family:var(--font-ui); font-size:.8rem; color:var(--color-muted); text-decoration:none; padding:.4rem 0 .2rem; margin-bottom:.5rem; }
+    .ms-back-link:hover { color:var(--color-primary); }
     /* ── Layout ── */
     .ms-page { max-width: 780px; margin: 0 auto; padding-bottom: 5rem; }
 
@@ -474,6 +476,9 @@
   <main>
     <div class="container ms-page">
 
+      <!-- Back link shown only when embedded via ?minimal=1 -->
+      <a class="ms-back-link" id="ms-back-link" href="../discipline/?tab=notes" hidden>← Disciplines</a>
+
       <!-- Header -->
       <div class="ms-header">
         <h1 class="ms-header__title">My Study</h1>
@@ -578,6 +583,12 @@
 
   <script src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/app.js"></script>
+  <script>
+  if (new URLSearchParams(location.search).get('minimal')) {
+    var bl = document.getElementById('ms-back-link');
+    if (bl) bl.removeAttribute('hidden');
+  }
+  </script>
 
   <!-- Full-site backup/restore wired to store.js -->
   <script type="module">
