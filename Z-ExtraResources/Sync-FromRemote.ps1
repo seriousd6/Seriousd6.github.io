@@ -25,24 +25,33 @@
     Also delete local files that no longer exist on the remote.
     WARNING: does NOT delete files in excluded directories (e.g. .git).
 
+.PARAMETER SkipHash
+    Fall back to size+mtime comparison instead of MD5 hash comparison.
+    Faster but can produce false positives when timestamps drift across platforms.
+
 .EXAMPLE
     .\Sync-FromRemote.ps1
     .\Sync-FromRemote.ps1 -DryRun
     .\Sync-FromRemote.ps1 -DeleteExtra
+    .\Sync-FromRemote.ps1 -SkipHash
 #>
 param(
     [string]  $RemoteHost  = "192.168.86.50",
     [string]  $RemoteUser  = "domad",
     [string]  $RemotePath  = "/home/domad/Documents/bible-study-website",
     [string]  $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
-    [switch]  $DryRun = $false,
-    [switch]  $DeleteExtra = $false
+    [switch]  $DryRun      = $false,
+    [switch]  $DeleteExtra = $false,
+    [switch]  $SkipHash    = $false
 )
 
 $ErrorActionPreference = "Stop"
 
 # Directories to ignore on both sides (never downloaded, never deleted)
 $ExcludeDirs = @('.git', 'node_modules', '.claude')
+
+# Individual files to ignore on both sides — matched by filename anywhere in the tree
+$ExcludeFiles = @('.gitignore', '.gitattributes', 'CLAUDE.md')
 
 # ── helpers ────────────────────────────────────────────────────────────────────
 
@@ -56,17 +65,26 @@ function Is-Excluded($relPath) {
             return $true
         }
     }
+    $leaf = Split-Path $relPath -Leaf
+    foreach ($file in $ExcludeFiles) {
+        if ($leaf -eq $file) { return $true }
+    }
     return $false
 }
 
 # ── 1. Fetch remote file manifest via SSH ─────────────────────────────────────
 
-Write-Header "Fetching remote file list from $RemoteUser@$RemoteHost"
+$hashMode = -not $SkipHash
+Write-Header "Fetching remote file list from $RemoteUser@$RemoteHost$(if ($hashMode) { ' (MD5 mode)' } else { ' (size+mtime mode)' })"
 
-# Build find command using -prune to skip excluded directories entirely.
-# This avoids descending into them and handles both top-level and nested cases.
 $pruneExpr = ($ExcludeDirs | ForEach-Object { "-name '$_'" }) -join ' -o '
-$findCmd = "find '$RemotePath' \( -type d \( $pruneExpr \) -prune \) -o \( -type f -printf '%P\t%T@\t%s\n' \) 2>/dev/null | sort"
+
+if ($hashMode) {
+    # cd first so md5sum emits relative paths; -print0 + xargs -0 handles any filename safely
+    $findCmd = "cd '$RemotePath' && find . \( -type d \( $pruneExpr \) -prune \) -o \( -type f -print0 \) 2>/dev/null | xargs -0 md5sum 2>/dev/null | sort -k2"
+} else {
+    $findCmd = "find '$RemotePath' \( -type d \( $pruneExpr \) -prune \) -o \( -type f -printf '%P\t%T@\t%s\n' \) 2>/dev/null | sort"
+}
 
 try {
     $remoteLines = ssh "${RemoteUser}@${RemoteHost}" $findCmd
@@ -81,15 +99,22 @@ $remoteFiles = [System.Collections.Generic.Dictionary[string, psobject]]::new(
 
 foreach ($line in $remoteLines) {
     if ([string]::IsNullOrWhiteSpace($line)) { continue }
-    $parts = $line -split "`t", 3
-    if ($parts.Count -ne 3) { continue }
 
-    # Normalise path separators to Windows backslash
-    $relPath = $parts[0] -replace '/', '\'
-
-    $remoteFiles[$relPath] = [pscustomobject]@{
-        Timestamp = [double]$parts[1]
-        Size      = [long]$parts[2]
+    if ($hashMode) {
+        # md5sum output: "<hash>  ./relpath" (two spaces between hash and path)
+        if ($line -notmatch '^([0-9a-fA-F]{32})\s+\.?[/\\]?(.+)$') { continue }
+        $relPath = ($Matches[2] -replace '/', '\').TrimStart('\')
+        if (Is-Excluded $relPath) { continue }
+        $remoteFiles[$relPath] = [pscustomobject]@{ Hash = $Matches[1].ToLower() }
+    } else {
+        $parts = $line -split "`t", 3
+        if ($parts.Count -ne 3) { continue }
+        $relPath = $parts[0] -replace '/', '\'
+        if (Is-Excluded $relPath) { continue }
+        $remoteFiles[$relPath] = [pscustomobject]@{
+            Timestamp = [double]$parts[1]
+            Size      = [long]$parts[2]
+        }
     }
 }
 
@@ -107,17 +132,25 @@ if (Test-Path $LocalPath) {
     Get-ChildItem -Path $LocalPath -Recurse -File | ForEach-Object {
         $relPath = $_.FullName.Substring($LocalPath.TrimEnd('\').Length).TrimStart('\')
         if (-not (Is-Excluded $relPath)) {
-            $epochUtc = ([System.DateTimeOffset]::new($_.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
-            $localFiles[$relPath] = [pscustomobject]@{
-                FullPath  = $_.FullName
-                Timestamp = $epochUtc
-                Size      = $_.Length
+            if ($hashMode) {
+                $hash = (Get-FileHash $_.FullName -Algorithm MD5).Hash.ToLower()
+                $localFiles[$relPath] = [pscustomobject]@{
+                    FullPath = $_.FullName
+                    Hash     = $hash
+                }
+            } else {
+                $epochUtc = ([System.DateTimeOffset]::new($_.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
+                $localFiles[$relPath] = [pscustomobject]@{
+                    FullPath  = $_.FullName
+                    Timestamp = $epochUtc
+                    Size      = $_.Length
+                }
             }
         }
     }
 }
 
-Write-Host "Local:  $($localFiles.Count) files found (excluding: $($ExcludeDirs -join ', '))"
+Write-Host "Local:  $($localFiles.Count) files found (excluding dirs: $($ExcludeDirs -join ', '); files: $($ExcludeFiles -join ', '))"
 
 # ── 3. Diff ────────────────────────────────────────────────────────────────────
 
@@ -133,10 +166,16 @@ foreach ($kvp in $remoteFiles.GetEnumerator()) {
     if (-not $localFiles.ContainsKey($relPath)) {
         Write-Host "  NEW     $relPath" -ForegroundColor Green
         $toDownload.Add($relPath)
+    } elseif ($hashMode) {
+        if ($remote.Hash -ne $localFiles[$relPath].Hash) {
+            Write-Host "  CHANGED $relPath  (remote: $($remote.Hash.Substring(0,8))…  local: $($localFiles[$relPath].Hash.Substring(0,8))…)" -ForegroundColor Yellow
+            $toDownload.Add($relPath)
+        } else {
+            $unchanged++
+        }
     } else {
-        $local = $localFiles[$relPath]
+        $local    = $localFiles[$relPath]
         $timeDiff = [Math]::Abs($remote.Timestamp - $local.Timestamp)
-
         # 2-second tolerance covers NTFS/ext4 rounding differences
         if ($remote.Size -ne $local.Size -or $timeDiff -gt 2) {
             Write-Host "  CHANGED $relPath" -ForegroundColor Yellow
