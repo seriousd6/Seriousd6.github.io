@@ -1,10 +1,11 @@
 <#
 .SYNOPSIS
-    Push a specific whitelist of local files/folders to the remote Linux machine.
+    Push all local files to the remote Linux machine, skipping only excluded dirs/files.
 
 .DESCRIPTION
-    Only the items in $SyncItems are ever considered — everything else on both sides
-    is ignored entirely. Uploads only new or changed files (compared by size + mtime).
+    Compares local files against the remote (by MD5 hash, or size+mtime with -SkipHash)
+    and uploads only what is new or changed. Remote-only files are reported but left alone
+    unless -DeleteExtra is specified.
 
 .PARAMETER RemoteHost
     IP or hostname of the remote machine. Default: 192.168.86.50
@@ -22,27 +23,63 @@
     Show what would change without touching any files.
 
 .PARAMETER DeleteExtra
-    Also delete remote copies of whitelisted files that no longer exist locally.
+    Also delete remote files that no longer exist locally (within non-excluded paths).
+
+.PARAMETER Target
+    Optional file or directory to sync. Accepts an absolute path or a path relative to
+    LocalPath (e.g. "topics\john" or "assets\css\style.css"). When omitted, all files
+    are considered (subject to ExcludeDirs / ExcludeFiles).
+
+.PARAMETER SkipHash
+    Fall back to size+mtime comparison instead of MD5 hash comparison.
+    Faster but can produce false positives when timestamps drift across platforms.
 
 .EXAMPLE
     .\Sync-ToRemote.ps1
     .\Sync-ToRemote.ps1 -DryRun
+    .\Sync-ToRemote.ps1 -Target topics\john
+    .\Sync-ToRemote.ps1 -Target "assets\css\style.css" -DryRun:$false
     .\Sync-ToRemote.ps1 -DeleteExtra
+    .\Sync-ToRemote.ps1 -SkipHash
 #>
 param(
     [string]  $RemoteHost  = "192.168.86.50",
     [string]  $RemoteUser  = "domad",
     [string]  $RemotePath  = "/home/domad/Documents/bible-study-website",
     [string]  $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
-    [switch]  $DryRun,
-    [switch]  $DeleteExtra = $false
+    [string]  $Target      = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io\working\audit-agent-guide.md",
+    [switch]  $DryRun      = $false,
+    [switch]  $DeleteExtra = $false,
+    [switch]  $SkipHash    = $false
 )
 
 $ErrorActionPreference = "Stop"
 
-# Only these items are synced — everything else is ignored on both sides.
-# Folder names include all files underneath them recursively.
-$SyncItems = @('Z-ExtraResources', 'TODO.md', '.gitignore')
+# Directories to ignore on both sides (never uploaded, never deleted)
+$ExcludeDirs = @('.git', 'node_modules', '.claude')
+
+# Individual files to ignore on both sides — matched by filename anywhere in the tree
+$ExcludeFiles = @('.gitattributes')
+
+# ── resolve -Target to a repo-relative backslash path ─────────────────────────
+
+$TargetRel = ""
+if ($Target) {
+    $t = $Target.Trim()
+    if ([System.IO.Path]::IsPathRooted($t)) {
+        $lpTrimmed = $LocalPath.TrimEnd('\')
+        if (-not $t.StartsWith($lpTrimmed, [System.StringComparison]::OrdinalIgnoreCase)) {
+            Write-Error "-Target '$t' is not under LocalPath '$LocalPath'"
+            exit 1
+        }
+        $t = $t.Substring($lpTrimmed.Length)
+    }
+    $TargetRel = ($t.TrimStart('\').TrimStart('/')) -replace '/', '\'
+    if (-not $TargetRel) {
+        Write-Error "-Target resolved to an empty path — pass a file or subdirectory."
+        exit 1
+    }
+}
 
 # ── helpers ────────────────────────────────────────────────────────────────────
 
@@ -50,54 +87,74 @@ function Write-Header($msg) {
     Write-Host "`n=== $msg ===" -ForegroundColor Cyan
 }
 
-function Test-Included($relPath) {
-    foreach ($item in $SyncItems) {
-        if ($relPath -eq $item -or $relPath -like "$item\*" -or $relPath -like "$item/*") {
+# Returns true when relPath should be included given the active -Target (if any).
+function Test-InTarget($relPath) {
+    if (-not $TargetRel) { return $true }
+    return ($relPath -eq $TargetRel -or $relPath -like "$TargetRel\*")
+}
+
+function Test-Excluded($relPath) {
+    foreach ($dir in $ExcludeDirs) {
+        if ($relPath -like "$dir\*" -or $relPath -like "$dir/*" -or $relPath -eq $dir) {
             return $true
         }
+    }
+    $leaf = Split-Path $relPath -Leaf
+    foreach ($file in $ExcludeFiles) {
+        if ($leaf -eq $file) { return $true }
     }
     return $false
 }
 
 # ── 1. Build local file manifest ──────────────────────────────────────────────
 
-Write-Header "Scanning local files"
+$hashMode = -not $SkipHash
+$targetLabel = if ($TargetRel) { " → $TargetRel" } else { "" }
+Write-Header "Scanning local files$targetLabel$(if ($hashMode) { ' (MD5 mode)' } else { ' (size+mtime mode)' })"
 
 $localFiles = [System.Collections.Generic.Dictionary[string, psobject]]::new(
     [System.StringComparer]::OrdinalIgnoreCase
 )
 
-if (Test-Path $LocalPath) {
-    Get-ChildItem -Path $LocalPath -Recurse -File | ForEach-Object {
+$scanRoot = if ($TargetRel) { Join-Path $LocalPath $TargetRel } else { $LocalPath }
+
+if (Test-Path $scanRoot) {
+    Get-ChildItem -Path $scanRoot -Recurse -File | ForEach-Object {
         $relPath = $_.FullName.Substring($LocalPath.TrimEnd('\').Length).TrimStart('\')
-        if (Test-Included $relPath) {
-            $epochUtc = ([System.DateTimeOffset]::new($_.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
-            $localFiles[$relPath] = [pscustomobject]@{
-                FullPath  = $_.FullName
-                Timestamp = $epochUtc
-                Size      = $_.Length
+        if (-not (Test-Excluded $relPath) -and (Test-InTarget $relPath)) {
+            if ($hashMode) {
+                $hash = (Get-FileHash $_.FullName -Algorithm MD5).Hash.ToLower()
+                $localFiles[$relPath] = [pscustomobject]@{
+                    FullPath = $_.FullName
+                    Hash     = $hash
+                }
+            } else {
+                $epochUtc = ([System.DateTimeOffset]::new($_.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
+                $localFiles[$relPath] = [pscustomobject]@{
+                    FullPath  = $_.FullName
+                    Timestamp = $epochUtc
+                    Size      = $_.Length
+                }
             }
         }
     }
 }
 
-Write-Host "Local:  $($localFiles.Count) files found (syncing: $($SyncItems -join ', '))"
+$scopeNote = if ($TargetRel) { "target: $TargetRel" } else { "excluding dirs: $($ExcludeDirs -join ', '); files: $($ExcludeFiles -join ', ')" }
+Write-Host "Local:  $($localFiles.Count) files found ($scopeNote)"
 
-# ── 2. Fetch remote file manifest for whitelisted paths only ──────────────────
+# ── 2. Fetch remote file manifest via SSH ─────────────────────────────────────
 
-Write-Header "Fetching remote file list from $RemoteUser@$RemoteHost"
+Write-Header "Fetching remote file list from $RemoteUser@$RemoteHost$targetLabel"
 
-# Build a targeted find that only checks the whitelisted items on the remote.
-# Dirs get a recursive find; root-level files get a -maxdepth 1 name match.
-$findParts = $SyncItems | ForEach-Object {
-    $localItem = Join-Path $LocalPath $_
-    if (Test-Path $localItem -PathType Container) {
-        "find . -path './$_/*' -type f -printf '%P\t%T@\t%s\n' 2>/dev/null"
-    } else {
-        "find . -maxdepth 1 -name '$_' -type f -printf '%P\t%T@\t%s\n' 2>/dev/null"
-    }
+$pruneExpr = ($ExcludeDirs | ForEach-Object { "-name '$_'" }) -join ' -o '
+
+if ($hashMode) {
+    # cd first so md5sum emits relative paths; -print0 + xargs -0 handles any filename safely
+    $findCmd = "cd '$RemotePath' && find . \( -type d \( $pruneExpr \) -prune \) -o \( -type f -print0 \) 2>/dev/null | xargs -0 md5sum 2>/dev/null | sort -k2"
+} else {
+    $findCmd = "cd '$RemotePath' && find . \( -type d \( $pruneExpr \) -prune \) -o \( -type f -printf '%P\t%T@\t%s\n' \) 2>/dev/null | sort"
 }
-$findCmd = "cd '$RemotePath' && { $($findParts -join '; '); } | sort"
 
 try {
     $remoteLines = ssh "${RemoteUser}@${RemoteHost}" $findCmd
@@ -112,18 +169,28 @@ $remoteFiles = [System.Collections.Generic.Dictionary[string, psobject]]::new(
 
 foreach ($line in $remoteLines) {
     if ([string]::IsNullOrWhiteSpace($line)) { continue }
-    $parts = $line -split "`t", 3
-    if ($parts.Count -ne 3) { continue }
 
-    $relPath = $parts[0] -replace '/', '\'
-
-    $remoteFiles[$relPath] = [pscustomobject]@{
-        Timestamp = [double]$parts[1]
-        Size      = [long]$parts[2]
+    if ($hashMode) {
+        # md5sum output: "<hash>  ./relpath" (two spaces between hash and path)
+        if ($line -notmatch '^([0-9a-fA-F]{32})\s+\.?[/\\]?(.+)$') { continue }
+        $relPath = ($Matches[2] -replace '/', '\').TrimStart('\')
+        if (Test-Excluded $relPath) { continue }
+        if (-not (Test-InTarget $relPath)) { continue }
+        $remoteFiles[$relPath] = [pscustomobject]@{ Hash = $Matches[1].ToLower() }
+    } else {
+        $parts = $line -split "`t", 3
+        if ($parts.Count -ne 3) { continue }
+        $relPath = $parts[0] -replace '/', '\'
+        if (Test-Excluded $relPath) { continue }
+        if (-not (Test-InTarget $relPath)) { continue }
+        $remoteFiles[$relPath] = [pscustomobject]@{
+            Timestamp = [double]$parts[1]
+            Size      = [long]$parts[2]
+        }
     }
 }
 
-Write-Host "Remote: $($remoteFiles.Count) files found (within synced paths)"
+Write-Host "Remote: $($remoteFiles.Count) files found"
 
 # ── 3. Diff ────────────────────────────────────────────────────────────────────
 
@@ -139,10 +206,17 @@ foreach ($kvp in $localFiles.GetEnumerator()) {
     if (-not $remoteFiles.ContainsKey($relPath)) {
         Write-Host "  NEW     $relPath" -ForegroundColor Green
         $toUpload.Add($relPath)
+    } elseif ($hashMode) {
+        if ($local.Hash -ne $remoteFiles[$relPath].Hash) {
+            Write-Host "  CHANGED $relPath  (local: $($local.Hash.Substring(0,8))…  remote: $($remoteFiles[$relPath].Hash.Substring(0,8))…)" -ForegroundColor Yellow
+            $toUpload.Add($relPath)
+        } else {
+            $unchanged++
+        }
     } else {
         $remote   = $remoteFiles[$relPath]
         $timeDiff = [Math]::Abs($local.Timestamp - $remote.Timestamp)
-
+        # 2-second tolerance covers NTFS/ext4 rounding differences
         if ($local.Size -ne $remote.Size -or $timeDiff -gt 2) {
             Write-Host "  CHANGED $relPath" -ForegroundColor Yellow
             $toUpload.Add($relPath)
@@ -152,7 +226,7 @@ foreach ($kvp in $localFiles.GetEnumerator()) {
     }
 }
 
-# Remote files in the whitelist that no longer exist locally
+# Files that exist on remote but not locally
 $remoteOnly = $remoteFiles.Keys | Where-Object { -not $localFiles.ContainsKey($_) }
 foreach ($f in $remoteOnly) {
     Write-Host "  REMOTE  $f" -ForegroundColor DarkGray
@@ -210,7 +284,6 @@ if ($toUpload.Count -gt 0) {
         $proc = [System.Diagnostics.Process]::Start($psi)
 
         $stderrTask = $proc.StandardError.ReadToEndAsync()
-        $stdoutTask = $proc.StandardOutput.ReadToEndAsync()
 
         # Write archive bytes directly to SSH stdin — no text re-encoding
         $tarBytes = [System.IO.File]::ReadAllBytes($tempTar)
@@ -233,7 +306,7 @@ if ($toUpload.Count -gt 0) {
     }
 }
 
-# ── 5. Delete remote-only whitelisted files (opt-in) ──────────────────────────
+# ── 5. Delete remote-only files (opt-in) ──────────────────────────────────────
 
 if ($DeleteExtra -and $remoteOnlyCount -gt 0) {
     Write-Header "Deleting $remoteOnlyCount remote-only files"
@@ -244,9 +317,8 @@ if ($DeleteExtra -and $remoteOnlyCount -gt 0) {
         Write-Host "  DELETED $f" -ForegroundColor Red
     }
 
-    # Remove empty directories left behind within whitelisted paths only
-    $syncUnix = ($SyncItems | ForEach-Object { "$RemotePath/$_" }) -join ' '
-    $cleanCmd = "find $syncUnix -type d -empty -delete 2>/dev/null"
+    # Remove empty directories left behind within non-excluded paths only
+    $cleanCmd = "cd '$RemotePath' && find . \( -type d \( $pruneExpr \) -prune \) -o \( -type d -empty -print \) 2>/dev/null | sort -r | xargs -r rmdir 2>/dev/null; true"
     ssh "${RemoteUser}@${RemoteHost}" $cleanCmd
     Write-Host "  Empty directories removed." -ForegroundColor DarkRed
 }
