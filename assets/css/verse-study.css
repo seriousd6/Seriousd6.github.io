@@ -939,9 +939,9 @@
     font-size: 1rem;
   }
 
-  /* XRef chips: taller tap target */
+  /* XRef chips: WCAG 2.1 SC 2.5.5 ≥44px tap target */
   .vs-xref-link {
-    min-height: 36px;
+    min-height: 44px;
     padding: 0.3rem 0.6rem;
     display: inline-flex;
     align-items: center;

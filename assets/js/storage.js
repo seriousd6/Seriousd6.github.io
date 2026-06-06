@@ -59,6 +59,14 @@ function _getNotesV2() {
 }
 function _saveNotesV2(arr) { localStorage.setItem(NOTES_V2_KEY, JSON.stringify(arr)); }
 
+// INTENT: One-shot v1→v2 note migration: converts flat { [refStr]: { note } } entries
+//   in the legacy NOTES_KEY into the v2 array format under NOTES_V2_KEY. Guarded by a
+//   sentinel key so it only runs once per browser profile.
+// CHANGE? Renaming NOTES_V2_KEY or removing the '_migrated' sentinel key will cause this
+//   migration to re-run, duplicating any notes already in v2 format. If you need to re-run
+//   migration intentionally, bump BSW_STORAGE_V and add a new migration branch instead.
+// VERIFY: Clear site data, set a v1 note directly in localStorage as bsw_notes JSON, reload
+//   the page — the note should appear in the Notes panel and bsw_notes_v2_migrated should be "1".
 function _migrateOldNotes() {
   if (localStorage.getItem(NOTES_V2_KEY + '_migrated')) return;
   var old      = getNotes();
@@ -133,6 +141,16 @@ export function _noteRelTime(ts) {
 var BSW_STORAGE_V     = 1;
 var BSW_STORAGE_V_KEY = 'bsw_storage_v';
 
+// INTENT: Versioned migration runner called once per page load from app.js boot.
+//   Compares BSW_STORAGE_V against the persisted schema version and runs any
+//   outstanding migration phases in order. Safe to call on every load — returns
+//   immediately if storedV is already current.
+// CHANGE? To add a new migration phase: increment BSW_STORAGE_V and add an
+//   `if (storedV < N) { ... storedV = N; }` branch before the setItem call.
+//   Do NOT renumber existing branches — storedV is cumulative.
+// VERIFY: Clear localStorage, reload — after first load `bsw_storage_v` should
+//   equal BSW_STORAGE_V ("1"). Existing notes in the v1 format should appear in
+//   the Notes panel (migration ran exactly once).
 export function _runStorageMigrations() {
   try {
     var storedV = parseInt(localStorage.getItem(BSW_STORAGE_V_KEY) || '0', 10);
@@ -166,6 +184,13 @@ export function toggleBookmark(refStr) {
 var HISTORY_KEY = 'bsw_history';
 var STREAK_KEY  = 'bsw_streak';
 
+// INTENT: Prepend ref to the reading history list (deduped, capped at 100 entries)
+//   so the reader and discipline pages can show "recent passages" without a server.
+// CHANGE? HISTORY_KEY ('bsw_history') is consumed by reader.js:_historyGet (for the
+//   resume banner) and daily.js (discipline history widget). If the key or array schema
+//   changes, update both callers.
+// VERIFY: Open any chapter in the reader, then open DevTools → Application → Local
+//   Storage; bsw_history should be a JSON array with the ref string as the first element.
 export function _historyPush(ref) {
   try {
     var arr = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
@@ -186,6 +211,14 @@ export function _streakTodayStr() {
     String(d.getMonth() + 1).padStart(2, '0') + '-' +
     String(d.getDate()).padStart(2, '0');
 }
+// INTENT: Record today's date in the streak log so daily.js:_computeStreakFromDays
+//   can calculate reading streaks without server-side date tracking.
+// CHANGE? STREAK_KEY ('bsw_streak') schema is { days: string[] } (ISO dates, sorted).
+//   daily.js:_computeStreakFromDays and tracker.js:isReadingDone both read this key.
+//   The 400-entry cap drops the oldest days first — streaks older than ~13 months
+//   are silently lost; raise the cap if long-term streak history is needed.
+// VERIFY: Open any chapter in the reader, then inspect bsw_streak in localStorage;
+//   today's ISO date should appear in the `days` array.
 export function _recordReadingDay() {
   try {
     var data  = JSON.parse(localStorage.getItem(STREAK_KEY) || '{"days":[]}');

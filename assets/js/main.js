@@ -88,7 +88,8 @@
         icon: '✝',
         children: [
           { label: '✝ Discipline Hub',    href: _r('discipline/') },
-          { label: '📅 Discipline History', href: _r('discipline/?tab=history') }
+          { label: '📅 Discipline History', href: _r('discipline/?tab=history') },
+          { label: '📊 Reading Progress', href: _r('progress/') }
         ]
       },
       {

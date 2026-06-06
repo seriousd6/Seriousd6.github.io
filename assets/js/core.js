@@ -281,6 +281,13 @@ export function onVersionChange(fn) {
   _versionChangeCallbacks.push(fn);
 }
 
+// CHANGE? Current subscribers registered via onVersionChange (all via app.js at startup):
+//   wire.js:updateInlineVerses — reloads all .bsw-verse inline embeds
+//   reader.js:doLookup — re-fetches the current chapter in the new version
+//   app.js:syncModalVersionPicker — updates the version selector inside the verse modal
+//   daily.js — refreshes devotional verse text
+//   If you add a new subscriber, append it here; if you remove one from app.js, remove it here
+//   so future editors know the bus is smaller than it appears.
 export function _fireVersionChange(id) {
   _versionChangeCallbacks.forEach(function(fn) { fn(id); });
 }
@@ -311,6 +318,9 @@ export function getVersion() {
 
 // setVersion: persists the chosen version, updates the picker UI, and fires
 // version-change callbacks so inline verses and the modal re-load.
+// VERIFY: In the version picker (any page), switch from KJV to ESV — the #bible-version
+//   select should immediately show ESV, all .bsw-verse inline embeds should reload with
+//   ESV text within ~500ms, and reopening the verse modal should show ESV in the version bar.
 export function setVersion(id) {
   localStorage.setItem(STORAGE_KEY, id);
   var picker = document.getElementById('bible-version');
@@ -389,6 +399,11 @@ export function loadBooks() {
 
 // populateVersionPicker: fills the #bible-version <select> with options from metaVersions.
 // Called after loadVersions() resolves. Preserves the user's stored selection.
+// INTENT: Renders only versions with actual data files; stub:true versions have empty
+//   data/bible/{id}/ directories and would produce 404s on every book load.
+// CHANGE? If data files are added for a stub version, remove its "stub": true field in
+//   data/versions/versions.json to make it appear here and in all version-aware code.
+// VERIFY: Open the version picker — AKJV, DBY, GNV, WEBBE, YLT should not appear.
 export function populateVersionPicker() {
   var picker = document.getElementById('bible-version');
   if (!picker || !metaVersions) return;
@@ -396,6 +411,7 @@ export function populateVersionPicker() {
   picker.innerHTML = '';
   metaVersions.forEach(function (v) {
     if (v.group === 'apocrypha') return;  // excluded from main reader
+    if (v.stub) return;                   // no data files yet — would 404 on every load
     var opt = document.createElement('option');
     opt.value       = v.id;
     opt.textContent = v.id;
@@ -475,10 +491,20 @@ export function parseLibraryRef(str) {
   return { docId: docId, abbrev: m[1].toUpperCase(), section: m[2] };
 }
 
-// parseMultiRef: parses a comma/semicolon-separated list of references with
-// implicit book/chapter carry-over (e.g. "John 3:16, 17; Rom 5:1").
-// Returns an array of parsed ref objects. Used for cross-reference lists and
-// multi-verse range resolution.
+// INTENT: Parses a comma/semicolon-delimited reference list with carry-over state
+//   (curBookId, curCh). Each segment that lacks a book name inherits the book from
+//   the previous segment; each segment lacking a chapter inherits the current chapter.
+//   This means "John 3:16, 17; Rom 5:1" correctly resolves to John 3:16, John 3:17,
+//   and Romans 5:1 — but ONLY because segments are processed strictly left-to-right.
+//   Out-of-order or pre-shuffled segment arrays will silently produce wrong book/chapter
+//   assignments. The BARE_RE branch (bare verse number like "17") silently skips the
+//   segment if curBookId or curCh is null, producing a shorter results array than
+//   expected — callers must supply defaultBookId when the context book is known.
+// CHANGE? If the segment-splitting regex changes (currently /[,;]/), the carry-over
+//   logic must also be re-validated; semicolons and commas have identical semantics here.
+//   Called by: reader.js cross-reference panel, wire.js tooltip inline expansion.
+// VERIFY: In the console: parseMultiRef('John 3:16, 17; Rom 5:1') should return
+//   3 objects — bookId:'john' ch:3 v:16, bookId:'john' ch:3 v:17, bookId:'rom' ch:5 v:1.
 export function parseMultiRef(str, defaultBookId) {
   if (!str || !metaBooks) return [];
   str = str.trim().replace(/[–—]/g, '-');
@@ -600,10 +626,19 @@ export function loadBook(version, bookId) {
 // ── loadCrossRefs ─────────────────────────────────────────────────────────
 // Fetches cross-reference data for a book from data/crossrefs/<bookId>.json.
 // Returns null if the file doesn't exist or is empty.
+// INTENT: Stores the in-flight Promise immediately so concurrent callers (up to 176 for
+//   Psalm 119) share a single fetch instead of each firing a separate HTTP request.
+//   Once the fetch resolves the cache entry is replaced with the plain data value so
+//   Promise.resolve() returns synchronously on subsequent calls.
+// CHANGE? crossRefCache is exported and read by reader.js — do not change the key format
+//   (bookId string) or the resolved value shape (object keyed by "ch:v" or null).
+// VERIFY: Load /read/?ref=Psalms+119 with DevTools Network open; filter by "crossrefs".
+//   Exactly 1 request to crossrefs/psalms.json should appear, not 176.
 export function loadCrossRefs(bookId) {
   if (bookId in crossRefCache) return Promise.resolve(crossRefCache[bookId]);
   var url = CROSSREFS_ROOT + '/' + bookId + '.json';
-  return fetch(url)
+  // Store the promise immediately so concurrent callers reuse it (stampede prevention).
+  crossRefCache[bookId] = fetch(url)
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
@@ -613,6 +648,7 @@ export function loadCrossRefs(bookId) {
       return crossRefCache[bookId];
     })
     .catch(function () { crossRefCache[bookId] = null; return null; });
+  return crossRefCache[bookId];
 }
 
 // ── ATTRIBUTION ──────────────────────────────────────────────────────────────
@@ -828,13 +864,20 @@ export function loadLexicon(type) {
 
 // loadInterlinear: fetches the interlinear word data for a given book.
 // Returns null if the file doesn't exist (not all books have interlinear data).
+// INTENT: Stores the in-flight Promise in interlinearCache immediately so concurrent callers
+//   (e.g. word.js firing 27–39 fetches at once) share a single fetch per book, not N fetches.
+//   The cache entry is replaced with the resolved data once the fetch settles.
+// CHANGE? If interlinearCache key format changes, also update the `!== undefined` guard.
+//   word.js reads this cache indirectly by calling loadInterlinear per book in batches.
+// VERIFY: Open DevTools → Network → filter 'interlinear'. Load a word lookup (e.g. G3056).
+//   Each book file should appear exactly once even though multiple calls may fire concurrently.
 export function loadInterlinear(bookId) {
   if (interlinearCache[bookId] !== undefined) return Promise.resolve(interlinearCache[bookId]);
   var url = INTERLINEAR_ROOT + '/' + bookId + '.json';
-  return fetch(url)
+  return (interlinearCache[bookId] = fetch(url)
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) { interlinearCache[bookId] = data; return data; })
-    .catch(function () { interlinearCache[bookId] = null; return null; });
+    .catch(function () { interlinearCache[bookId] = null; return null; }));
 }
 
 // ── Smith's Bible Dictionary loaders ─────────────────────────────────────

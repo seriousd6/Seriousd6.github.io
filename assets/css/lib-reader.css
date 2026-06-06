@@ -377,12 +377,16 @@ mark.lr-find-mark {
 [data-theme="dark"] .lr-vol-chip  { background: transparent; }
 [data-theme="dark"] .lr-find-bar  { background: var(--color-surface-alt, #222); }
 [data-theme="dark"] .lr-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
+/* INTENT: Amber #92610a replaces the yellow #fde68a highlight so search matches stay
+   clearly visible against the dark page — yellow washes out on the dark warm-brown surface. */
+[data-theme="dark"] mark.lr-find-mark { background: #92610a; color: #fff; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
   :root:not([data-theme="light"]) .lr-pager-num { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lr-find-bar   { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lr-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
+  :root:not([data-theme="light"]) mark.lr-find-mark { background: #92610a; color: #fff; }
 }
 
 /* ── Tab bar (≤7 sections) ─────────────────────────────────────────────────── */

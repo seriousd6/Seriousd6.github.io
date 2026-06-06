@@ -717,6 +717,13 @@ function loadVerseSections(parsed) {
       vsRenderInterlinear(vTokens, results[1], interlinearSec.bodyEl, testament === 'hebrew');
       interlinearSec.el.removeAttribute('hidden');
       vsRebuildNav();
+    })
+    .catch(function () {
+      // INTENT: Remove the hidden section so a fetch failure doesn't leave a ghost nav entry.
+      // CHANGE? If loadStrongs gains its own internal catch, this may fire less often — verify
+      //   the section is still removed by blocking data/strongs/*.json in DevTools Network.
+      interlinearSec.el.remove();
+      vsRebuildNav();
     });
 
   // Notes
@@ -737,7 +744,7 @@ function loadVerseSections(parsed) {
     vsRenderXrefList(entries, xrefSec.bodyEl);
     xrefSec.el.removeAttribute('hidden');
     vsRebuildNav();
-  });
+  }).catch(function () { xrefSec.el.remove(); vsRebuildNav(); });
 
   // Commentary with source picker
   (function () {
@@ -775,6 +782,8 @@ function loadVerseSections(parsed) {
           commSec.el.removeAttribute('hidden');
           vsRebuildNav();
         }
+      }).catch(function () {
+        commSec.bodyEl.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary. Check your connection.</p>';
       });
     }
 
@@ -803,7 +812,7 @@ function loadVerseSections(parsed) {
     vsRenderParallelList(sections, parSec.bodyEl, parsed);
     parSec.el.removeAttribute('hidden');
     vsRebuildNav();
-  });
+  }).catch(function () { parSec.el.remove(); vsRebuildNav(); });
 
   // All Translations — lazy-load on scroll into view (VS-D)
   if (metaVersions && metaVersions.length) {
@@ -972,6 +981,7 @@ function vsRenderVersionCompare(parsed, container) {
   var currentVer = getVersion();
 
   metaVersions.forEach(function (ver) {
+    if (ver.stub) return;  // no data files — would 404 on every load
     var row = document.createElement('div');
     row.className = 'vs-cmp-row' + (ver.id === currentVer ? ' vs-cmp-row--current' : '');
 

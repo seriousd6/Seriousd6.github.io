@@ -1315,9 +1315,9 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   /* RD-K: keyboard hints have no value on touch devices */
   .reader-browse-hint { display: none; }
 
-  /* 36px touch targets for chapter buttons */
+  /* WCAG 2.1 SC 2.5.5: chapter buttons need ≥44px tap target on touch displays */
   .reader-layout--with-sidebar .reader-sidebar .reader-sidebar__ch {
-    min-height: 36px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2736,3 +2736,9 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 }
 [data-theme="dark"] .reader-comm-src-sel { background: var(--color-surface); }
 :root:not([data-theme="light"]) .reader-comm-src-sel { background: var(--color-surface); }
+
+/* Hide the keyboard hint on any primary-touch device (iPad landscape, touch laptops, phones)
+   regardless of screen width — arrow-key navigation doesn't apply on touch devices. */
+@media (pointer: coarse) {
+  .reader-browse-hint { display: none; }
+}

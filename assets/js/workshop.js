@@ -31,6 +31,27 @@ const TOTAL_HEBREW = 8674;
 const SK_DECISIONS = 'bsw_ws_decisions';
 const SK_UI        = 'bsw_ws_ui';
 
+/* ── Book order (full name → display abbreviation) ─────────── */
+const BOOK_ORDER_OT = [
+  ['genesis','Gen'],['exodus','Exod'],['leviticus','Lev'],['numbers','Num'],['deuteronomy','Deut'],
+  ['joshua','Josh'],['judges','Judg'],['ruth','Ruth'],['1samuel','1Sam'],['2samuel','2Sam'],
+  ['1kings','1Kgs'],['2kings','2Kgs'],['1chronicles','1Chr'],['2chronicles','2Chr'],
+  ['ezra','Ezra'],['nehemiah','Neh'],['esther','Esth'],['job','Job'],['psalms','Ps'],
+  ['proverbs','Prov'],['ecclesiastes','Eccl'],['songofsolomon','Song'],['isaiah','Isa'],
+  ['jeremiah','Jer'],['lamentations','Lam'],['ezekiel','Ezek'],['daniel','Dan'],
+  ['hosea','Hos'],['joel','Joel'],['amos','Amos'],['obadiah','Obad'],['jonah','Jonah'],
+  ['micah','Mic'],['nahum','Nah'],['habakkuk','Hab'],['zephaniah','Zeph'],
+  ['haggai','Hag'],['zechariah','Zech'],['malachi','Mal'],
+];
+const BOOK_ORDER_NT = [
+  ['matthew','Matt'],['mark','Mark'],['luke','Luke'],['john','John'],['acts','Acts'],
+  ['romans','Rom'],['1corinthians','1Cor'],['2corinthians','2Cor'],['galatians','Gal'],
+  ['ephesians','Eph'],['philippians','Phil'],['colossians','Col'],['1thessalonians','1Th'],
+  ['2thessalonians','2Th'],['1timothy','1Tim'],['2timothy','2Tim'],['titus','Tit'],
+  ['philemon','Phm'],['hebrews','Heb'],['james','Jas'],['1peter','1Pet'],['2peter','2Pet'],
+  ['1john','1Jn'],['2john','2Jn'],['3john','3Jn'],['jude','Jude'],['revelation','Rev'],
+];
+
 /* ── Phase definitions ─────────────────────────────────────── */
 const PHASES = [
   { id: 'dashboard',  label: 'Dashboard',               icon: '📊' },
@@ -95,12 +116,14 @@ function _getEntry(code) {
   const dec = _decisions[code] || {};
   return {
     ...src,
-    _code:   code,
-    _lang:   code.startsWith('G') ? 'greek' : 'hebrew',
-    _status: dec.status || src.status || 'draft',
-    _tiers:  dec.tiers  || src.tiers  || {},
-    _notes:  dec.notes  || src.user_notes || '',
-    _decLog: dec.log    || src.decision_log || [],
+    _code:        code,
+    _lang:        code.startsWith('G') ? 'greek' : 'hebrew',
+    _status:      dec.status       || src.status       || 'draft',
+    _tiers:       dec.tiers        || src.tiers         || {},
+    _notes:       dec.notes        || src.user_notes    || '',
+    _decLog:      dec.log          || src.decision_log  || [],
+    _bookFreq:    src.book_freq    || {},
+    _bookDefaults: dec.book_defaults || {},
   };
 }
 
@@ -334,7 +357,7 @@ function _renderDossier(code) {
 
   let html = '<div class="ws-dossier">';
 
-  // Header
+  // ── Header
   html += `<div class="ws-dossier-head">
     <div class="ws-dossier-head__top">
       <span class="ws-dossier__code">${_esc(code)}</span>
@@ -349,9 +372,17 @@ function _renderDossier(code) {
     </div>
   </div>`;
 
-  // Sources — only show if phase bundle has source_data
+  // ── Attested Range (primary content — what the lexical sources actually document)
+  if (src.semantic_range) {
+    html += `<div class="ws-section ws-section--range">
+      <div class="ws-section-title">Attested Range <span class="ws-section-note">— what lexical sources document across all uses</span></div>
+      <p class="ws-semantic ws-semantic--headline">${_esc(src.semantic_range)}</p>
+    </div>`;
+  }
+
+  // ── Lexical Sources (supporting detail, subordinate to the range)
   if (hasSrcData) {
-    html += '<div class="ws-section"><div class="ws-section-title">Lexical Sources</div>';
+    html += '<div class="ws-section ws-section--sources"><div class="ws-section-title">Lexical Sources</div>';
     html += '<div class="ws-sources">';
     if (entry._lang === 'greek') {
       if (dodson.gloss || dodson.def) html += _sourceCard('Dodson (CC0)', dodson.gloss, dodson.def, dodson.deriv);
@@ -363,28 +394,26 @@ function _renderDossier(code) {
     html += '</div></div>';
   }
 
-  // Semantic range
-  if (src.semantic_range) {
-    html += `<div class="ws-section">
-      <div class="ws-section-title">Semantic Range</div>
-      <p class="ws-semantic">${_esc(src.semantic_range)}</p>
-    </div>`;
-  }
+  // ── Book distribution map (shows where this word actually clusters)
+  html += _renderBookDistribution(entry._bookFreq, entry._lang);
 
-  // Tiers
-  html += '<div class="ws-section" id="ws-tiers-section">';
-  html += '<div class="ws-section-title">Proposed Renderings <span class="ws-section-note">— defaults; add context overrides below for specific passages</span></div>';
+  // ── Default Rendering Tendency (your starting-point per tier — not a decided meaning)
+  html += '<div class="ws-section ws-section--tiers" id="ws-tiers-section">';
+  html += '<div class="ws-section-title">Default Rendering Tendency <span class="ws-section-note">— your starting point; context below is where meaning is actually decided</span></div>';
   html += _renderTiersView(entry._tiers);
   html += '</div>';
 
-  // Context overrides
+  // ── Per-book defaults (middle tier between global default and passage overrides)
+  html += _renderBookDefaults(code, entry);
+
+  // ── Contextual Renderings (the primary work surface — where translation actually happens)
   const overrides = ((_decisions[code] || {}).context_overrides) || src.context_overrides || [];
-  html += `<div class="ws-section" id="ws-overrides-section">
-    <div class="ws-section-title">Context Overrides
-      <button class="ws-add-override-btn" data-code="${_esc(code)}">+ Add</button>
-    </div>`;
+  html += `<div class="ws-section ws-section--contextual" id="ws-overrides-section">
+    <div class="ws-section-title ws-section-title--contextual">Contextual Renderings
+    </div>
+    <button class="ws-add-contextual-btn" data-code="${_esc(code)}">+ Add contextual rendering</button>`;
   if (!overrides.length) {
-    html += '<p class="ws-log-empty">No overrides yet — the primary rendering is used everywhere. Add an override when a specific passage, book, or construction clearly calls for a different rendering.</p>';
+    html += '<p class="ws-log-empty ws-contextual-hint">Translation decisions live here, not in the default above. Add a rendering whenever a specific passage, book, genre, or grammatical construction clearly calls for a different gloss.</p>';
   } else {
     html += '<div class="ws-overrides-list">';
     for (let i = 0; i < overrides.length; i++) {
@@ -405,7 +434,7 @@ function _renderDossier(code) {
   }
   html += '</div>';
 
-  // Decision log
+  // ── Decision log
   const log = entry._decLog;
   html += '<div class="ws-section"><div class="ws-section-title">Decision Log</div>';
   if (!log.length) {
@@ -422,16 +451,16 @@ function _renderDossier(code) {
   }
   html += '</div>';
 
-  // Actions
+  // ── Actions (labels reframed — internal action values unchanged for pipeline compatibility)
   const isLocked    = entry._status === 'locked';
   const isConfirmed = entry._status === 'confirmed' || entry._status === 'override';
   html += `<div class="ws-actions" id="ws-actions">
-    <button class="ws-action-btn ws-action-btn--confirm" data-action="confirm" ${isLocked ? 'disabled' : ''}>✓ Confirm</button>
-    <button class="ws-action-btn ws-action-btn--override" data-action="override" ${isLocked ? 'disabled' : ''}>✎ Override</button>
-    <button class="ws-action-btn ws-action-btn--inform"   data-action="inform"   ${isLocked ? 'disabled' : ''}>💬 Inform</button>
-    <button class="ws-action-btn ws-action-btn--dispute"  data-action="dispute"  ${isLocked ? 'disabled' : ''}>⚑ Dispute</button>
+    <button class="ws-action-btn ws-action-btn--confirm" data-action="confirm" ${isLocked ? 'disabled' : ''}>✓ Set Default</button>
+    <button class="ws-action-btn ws-action-btn--override" data-action="override" ${isLocked ? 'disabled' : ''}>✎ Edit Default</button>
+    <button class="ws-action-btn ws-action-btn--inform"   data-action="inform"   ${isLocked ? 'disabled' : ''}>💬 Note</button>
+    <button class="ws-action-btn ws-action-btn--dispute"  data-action="dispute"  ${isLocked ? 'disabled' : ''}>⚑ Flag Range</button>
     <button class="ws-action-btn ws-action-btn--defer"    data-action="defer"    ${isLocked ? 'disabled' : ''}>⟳ Defer</button>
-    <button class="ws-action-btn ws-action-btn--lock"     data-action="lock"     ${!isConfirmed || isLocked ? 'disabled' : ''}>🔒 Lock</button>
+    <button class="ws-action-btn ws-action-btn--lock"     data-action="lock"     ${!isConfirmed || isLocked ? 'disabled' : ''}>★ Anchor</button>
   </div>`;
 
   html += '</div>';
@@ -441,8 +470,9 @@ function _renderDossier(code) {
     btn.addEventListener('click', () => _handleAction(btn.dataset.action, code));
   });
 
-  // Context override buttons
-  $dossier.querySelector('.ws-add-override-btn')?.addEventListener('click', () => _showAddOverrideForm(code));
+  // Contextual rendering buttons (renamed class; old ws-add-override-btn alias kept for safety)
+  ($dossier.querySelector('.ws-add-contextual-btn') || $dossier.querySelector('.ws-add-override-btn'))
+    ?.addEventListener('click', () => _showAddOverrideForm(code));
   $dossier.querySelectorAll('.ws-remove-override-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = parseInt(btn.dataset.idx, 10);
@@ -453,6 +483,86 @@ function _renderDossier(code) {
       _renderDossier(code);
     });
   });
+
+  // Per-book default inputs — debounced blur-save so typing isn't interrupted
+  // INTENT: On blur, collect all book-default inputs for this entry and persist to _decisions.
+  // CHANGE? _setDecision merges at the top level; book_defaults must be the full object each save.
+  // VERIFY: Edit a per-book input, tab away; reload the entry — the value should persist.
+  $dossier.querySelectorAll('.ws-bookdef-input').forEach(inp => {
+    inp.addEventListener('blur', () => {
+      const c    = inp.dataset.bdCode;
+      const book = inp.dataset.bdBook;
+      const tier = inp.dataset.bdTier;
+      const val  = inp.value.trim();
+      const existing = (_decisions[c] || {}).book_defaults || {};
+      const updated  = { ...existing, [book]: { ...(existing[book] || {}), [tier]: val || undefined } };
+      // Prune empty book entries so JSON stays clean
+      if (updated[book] && !Object.values(updated[book]).some(Boolean)) delete updated[book];
+      _setDecision(c, { book_defaults: updated });
+    });
+  });
+}
+
+// INTENT: Render a compact book-distribution heat map so the user can see at a glance
+//   where a word clusters (e.g. a Pauline hapax vs. a synoptic staple) before setting defaults.
+// CHANGE? If BOOK_ORDER_OT / BOOK_ORDER_NT are changed, the cells rendered here will shift order.
+// VERIFY: Open a high-frequency entry (e.g. G3056 λόγος); OT and NT rows should show coloured
+//   cells for every book with occurrences; hover titles should show book abbreviation + count.
+function _renderBookDistribution(bookFreq, lang) {
+  if (!bookFreq || !Object.keys(bookFreq).length) return '';
+  const max = Math.max(...Object.values(bookFreq), 1);
+  const cell = ([key, abbr]) => {
+    const n = bookFreq[key] || 0;
+    if (!n) return `<span class="ws-bdist-cell ws-bdist-cell--zero" title="${abbr}"></span>`;
+    const intensity = Math.ceil((n / max) * 4); // 1–4 heat levels
+    return `<span class="ws-bdist-cell ws-bdist-cell--h${intensity}" title="${abbr}: ${n}×"></span>`;
+  };
+  const showOT = lang === 'hebrew' || Object.keys(bookFreq).some(k => BOOK_ORDER_OT.some(([bk]) => bk === k && bookFreq[bk] > 0));
+  const showNT = lang === 'greek'  || Object.keys(bookFreq).some(k => BOOK_ORDER_NT.some(([bk]) => bk === k && bookFreq[bk] > 0));
+  let html = '<div class="ws-section ws-section--bdist"><div class="ws-section-title">Bible Distribution</div><div class="ws-bdist">';
+  if (showOT) html += `<div class="ws-bdist-row"><span class="ws-bdist-label">OT</span><div class="ws-bdist-cells">${BOOK_ORDER_OT.map(cell).join('')}</div></div>`;
+  if (showNT) html += `<div class="ws-bdist-row"><span class="ws-bdist-label">NT</span><div class="ws-bdist-cells">${BOOK_ORDER_NT.map(cell).join('')}</div></div>`;
+  html += '</div></div>';
+  return html;
+}
+
+// INTENT: Render a collapsible per-book defaults editor so the user can override the global
+//   default rendering for specific books/authors without needing a passage-level override.
+// CHANGE? Saving calls _setDecision({book_defaults}); _getEntry() reads dec.book_defaults back.
+//   If _setDecision's merge strategy changes, verify saves aren't overwriting sibling keys.
+// VERIFY: Set a per-book default for "romans"; run translate-bible.py and confirm that book's
+//   output uses that rendering instead of the global tier default.
+function _renderBookDefaults(code, entry) {
+  const lang     = entry._lang;
+  const bookFreq = entry._bookFreq || {};
+  const defs     = entry._bookDefaults || {};
+  const books    = (lang === 'greek' ? BOOK_ORDER_NT : BOOK_ORDER_OT)
+    .filter(([key]) => (bookFreq[key] || 0) > 0);
+  if (!books.length) return '';
+
+  const open = Object.keys(defs).length > 0;
+  let html = `<div class="ws-section ws-section--bookdefs">
+    <details class="ws-bookdefs-details" ${open ? 'open' : ''}>
+      <summary class="ws-section-title ws-bookdefs-summary">Per-book Defaults
+        <span class="ws-section-note">— override the global default for a specific book or author</span>
+      </summary>
+      <div class="ws-bookdefs-grid">`;
+
+  for (const [key, abbr] of books) {
+    const bd = defs[key] || {};
+    const n  = bookFreq[key] || 0;
+    html += `<div class="ws-bookdef-row">
+      <span class="ws-bookdef-abbr" title="${key} (${n}×)">${abbr}</span>
+      <input class="ws-bookdef-input" data-bd-code="${_esc(code)}" data-bd-book="${_esc(key)}" data-bd-tier="literal"
+             placeholder="Literal" value="${_esc(bd.literal || '')}">
+      <input class="ws-bookdef-input" data-bd-code="${_esc(code)}" data-bd-book="${_esc(key)}" data-bd-tier="mediating"
+             placeholder="Mediating" value="${_esc(bd.mediating || '')}">
+      <input class="ws-bookdef-input" data-bd-code="${_esc(code)}" data-bd-book="${_esc(key)}" data-bd-tier="thought"
+             placeholder="Thought" value="${_esc(bd.thought || '')}">
+    </div>`;
+  }
+  html += '</div></details></div>';
+  return html;
 }
 
 function _renderTiersView(tiers) {
@@ -500,7 +610,7 @@ function _handleAction(action, code) {
 function _doConfirm(code) {
   const now = new Date().toISOString().slice(0, 10);
   const dec = _decisions[code] || {};
-  const log = [...(dec.log || []), { action: 'confirmed', date: now, note: 'Accepted proposed renderings' }];
+  const log = [...(dec.log || []), { action: 'confirmed', date: now, note: 'Set as default rendering tendency' }];
   _setDecision(code, { status: 'confirmed', log });
   _afterAction(code);
   _advanceQueue(code);
@@ -1310,7 +1420,16 @@ function _renderDashboard() {
       : `${label} <em style="opacity:.5">(not loaded yet)</em>`;
 
   $dossier.innerHTML = `<div class="ws-dashboard">
-    <h2 style="margin:0 0 1rem;font-size:1.1rem">Dashboard</h2>
+    <h2 style="margin:0 0 .5rem;font-size:1.1rem">Dashboard</h2>
+    <p class="ws-dash-premise">
+      Every word has an <strong>attested semantic range</strong> — the full spread of meanings
+      documented across all its uses in the corpus. That range is not a decision to be made;
+      it is what the lexicons record. What you <em>are</em> deciding is which rendering best fits
+      <em>a specific passage</em>. Use the <strong>Default Rendering Tendency</strong> as a
+      starting point for each lemma, then add <strong>Contextual Renderings</strong> wherever
+      a passage, book, or construction calls for something different.
+      Per-author tendencies live in <strong>Per-book Defaults</strong>.
+    </p>
     <div class="ws-dash-grid">
       <div class="ws-dash-card">
         <div class="ws-dash-card__label">Greek Reviewed</div>

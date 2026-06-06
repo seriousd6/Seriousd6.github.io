@@ -818,7 +818,9 @@ export function initDictionaryPage() {
         var q = searchEl ? searchEl.value.trim().toLowerCase() : '';
         if (q) { _doSearch(q); }
         else if (_activeLetter) { renderList(_getLetterItems(_activeLetter)); }
-      }).catch(function () {});
+        // INTENT: Log failures so developers can see in DevTools which secondary source failed;
+        //   user gets partial results without any visible error, which is acceptable.
+      }).catch(function () { console.warn('[dict] secondary source failed to load:', key); });
     });
   }).catch(function () {
     if (loadingEl) loadingEl.textContent = 'Failed to load dictionary.';

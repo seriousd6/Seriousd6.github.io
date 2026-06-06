@@ -810,3 +810,20 @@
   box-shadow: 0 1px 3px rgba(0,0,0,.3);
   cursor: pointer;
 }
+
+/* ── Dark mode ─────────────────────────────────────────────────────────────── */
+
+/* INTENT: .maps-map-container uses a light-blue placeholder (#e8f4f8) that shows
+   before the Leaflet tiles load — jarring against a dark page. .maps-site-item-star
+   uses dark red (#b00010) which drops below 3:1 contrast on dark surfaces.
+   CHANGE? If new map container variants are added with hardcoded backgrounds, add
+   matching overrides here.
+   VERIFY: In dark mode, open /maps/ — the map tile placeholder area should be dark,
+   not a light-blue rectangle. Any ★ star ratings on site items should be readable. */
+[data-theme="dark"] .maps-map-container  { background: #1a2a35; }
+[data-theme="dark"] .maps-site-item-star { color: #e05060; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .maps-map-container  { background: #1a2a35; }
+  :root:not([data-theme="light"]) .maps-site-item-star { color: #e05060; }
+}

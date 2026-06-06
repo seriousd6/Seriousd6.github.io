@@ -91,8 +91,15 @@ def apply_context_overrides(entry, surrounding_codes, tier):
 
 # ── Token rendering ───────────────────────────────────────────────────────────
 
-def render_token(token, glossary, tier, surrounding_codes=None, use_interlinear_fallback=True):
-    """Map one interlinear token to its tier rendering."""
+def render_token(token, glossary, tier, surrounding_codes=None, use_interlinear_fallback=True, book=None):
+    """Map one interlinear token to its tier rendering.
+
+    Resolution order (4-level hierarchy):
+      1. context_overrides — passage/construction-level (most specific)
+      2. book_defaults[book] — per-book/author-level default
+      3. tiers.{tier}.primary — global default rendering tendency
+      4. interlinear source text — last-resort fallback
+    """
     code     = token.get('s', '')
     src_text = token.get('text', '')   # interlinear's existing English
 
@@ -105,12 +112,21 @@ def render_token(token, glossary, tier, surrounding_codes=None, use_interlinear_
         # No entry in loaded glossary at all
         return src_text if use_interlinear_fallback else f'[{code}?]'
 
-    # Check context overrides first
+    # 1. Context overrides (passage/construction-level)
     if surrounding_codes:
         override = apply_context_overrides(entry, surrounding_codes, tier)
         if override:
             return override
 
+    # 2. Per-book default (author/genre-level)
+    if book:
+        book_defaults = entry.get('book_defaults') or {}
+        bd = book_defaults.get(book) or {}
+        bd_rendering = (bd.get(tier) or bd.get('mediating') or '').strip()
+        if bd_rendering:
+            return bd_rendering
+
+    # 3. Global default rendering tendency
     tiers     = entry.get('tiers') or {}
     tier_data = tiers.get(tier) or tiers.get('mediating') or {}
     primary   = (tier_data.get('primary') or '').strip()
@@ -118,7 +134,7 @@ def render_token(token, glossary, tier, surrounding_codes=None, use_interlinear_
     if primary:
         return primary
 
-    # Primary is empty — fall back to interlinear text rather than gap marker
+    # 4. Fall back to interlinear text rather than a gap marker
     return src_text if use_interlinear_fallback else f'[{code}?]'
 
 # ── Verse assembly ────────────────────────────────────────────────────────────
@@ -128,14 +144,14 @@ _PUNC_RE = re.compile(r' ([.,;:!?\)])')
 _OPEN_RE = re.compile(r'([\(]) ')
 _GAP_RE  = re.compile(r'\[[GH]\d+\?\]')
 
-def assemble_verse(tokens, glossary, tier, use_interlinear_fallback=True):
+def assemble_verse(tokens, glossary, tier, use_interlinear_fallback=True, book=None):
     """Assemble interlinear tokens into a draft verse string."""
     codes = [t.get('s', '') for t in tokens if t.get('s', '')]
     words = []
 
     for i, tok in enumerate(tokens):
         surrounding = codes[max(0, i-2):i] + codes[i+1:i+3]
-        word = render_token(tok, glossary, tier, surrounding, use_interlinear_fallback)
+        word = render_token(tok, glossary, tier, surrounding, use_interlinear_fallback, book=book)
         if word:
             words.append(word)
 
@@ -167,7 +183,7 @@ def translate_book(book, glossary, tier, use_interlinear_fallback=True):
     for ch_str, ch_data in inter.items():
         result[ch_str] = {}
         for v_str, tokens in ch_data.items():
-            text = assemble_verse(tokens, glossary, tier, use_interlinear_fallback)
+            text = assemble_verse(tokens, glossary, tier, use_interlinear_fallback, book=book)
             result[ch_str][v_str] = text
             if not use_interlinear_fallback:
                 gaps += len(_GAP_RE.findall(text))

@@ -160,6 +160,20 @@
   min-height: 420px;
 }
 
+/* INTENT: On mobile the single-column layout with a fixed calc() height extends ~48px below the
+   visible viewport because the topbar offset wasn't accounted for. Letting height flow naturally
+   prevents the verse-occurrence list from being clipped below the fold.
+   CHANGE? If .wd-sidebar or .wd-main add their own height:100% rules, they must also be overridden
+   here — both inherit .wd-body's height in the desktop layout.
+   VERIFY: At 375px wide, /word/?s=G3056 — Translation sidebar and verse list should be fully
+   visible and scrollable without any bottom cutoff. */
+@media (max-width: 767px) {
+  .wd-body {
+    height: auto;
+    min-height: unset;
+  }
+}
+
 @media (min-width: 768px) {
   .wd-body {
     grid-template-columns: 280px 1fr;

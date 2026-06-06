@@ -113,12 +113,20 @@ function _apoIdSet() {
 }
 
 // Full ordered book list for the current version from canon-order data
+// INTENT: Builds the combined canonical+deuterocanonical book list in the version's
+//   traditional sequence. `_canonOrders[key]` is an object `{label, note, books:[...]}`,
+//   so we must address `.books` — calling `.map()` on the raw object throws TypeError.
+// CHANGE? If `apocrypha-canon-orders.json` schema changes (e.g. books array renamed),
+//   update `.books` here. `_isFullBible()` controls which code path is taken —
+//   if scope values change in versions.json, that function must be updated too.
+// VERIFY: Open /apocrypha/ with DR or KJV-APO selected — the full combined book list
+//   (Genesis through Revelation + deuterocanonical books) should render immediately.
 function _getOrderedBooks() {
   if (!_isFullBible()) return _apoBooks || [];
   var ver = _getVer();
   var order = ver && _canonOrders && _canonOrders[ver.canon_order];
   if (!order) return (_apoBooks || []);
-  return order.map(function (id) { return _findBook(id); }).filter(Boolean);
+  return (order.books || []).map(function (id) { return _findBook(id); }).filter(Boolean);
 }
 
 // Apply the current filter chip to a book list

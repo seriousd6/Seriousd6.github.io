@@ -6,7 +6,7 @@ import {
   normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, escHtml,
   _compareCanonical, parseCrossRefEntry, resolveVerses,
   ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
-  onVersionChange, _resolve,
+  onVersionChange, _resolve, BOOKMARKS_URL,
   LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache,
   BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
@@ -31,6 +31,12 @@ export { initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle, 
 var XREF_NOTES_KEY = 'bsw_xref_notes';
 
 export function isXrefNotesEnabled()    { return !!localStorage.getItem(XREF_NOTES_KEY); }
+// INTENT: Persist the cross-reference footnote-number toggle so the user's preference
+//   survives page reload — presence of the key means on, absence means off.
+// CHANGE? XREF_NOTES_KEY is read back by isXrefNotesEnabled and by initXrefNotesToggle
+//   on load (line ~47). If the key name changes, update both; also update the VERIFY below.
+// VERIFY: Enable † Footnotes in the reader; reload — the button should still appear active
+//   and verse footnote numbers should be visible in the text.
 export function setXrefNotesEnabled(on) {
   try {
     if (on) localStorage.setItem(XREF_NOTES_KEY, '1');
@@ -69,6 +75,12 @@ export function initXrefNotesToggle() {
 var COMPARE_KEY = 'bsw_compare';
 export function isCompareEnabled()    { return !!localStorage.getItem(COMPARE_KEY); }
 export function getCompareVersion()   { return localStorage.getItem(COMPARE_KEY) || ''; }
+// INTENT: Persist the compare-mode version selection so the reader reopens in the
+//   same side-by-side state; empty string means compare is off.
+// CHANGE? COMPARE_KEY is read by isCompareEnabled and getCompareVersion on every doLookup.
+//   Removing this key (e.g. user clears storage) silently disables compare mode — acceptable.
+// VERIFY: Enable ⇅ Compare, choose a version, reload the reader — compare should still be
+//   active with the same version selected, and two columns should render.
 export function setCompareVersion(id) { try { localStorage.setItem(COMPARE_KEY, id || ''); } catch (e) {} }
 
 export function initCompareToggle() {
@@ -90,7 +102,8 @@ export function initCompareToggle() {
       var def     = null;
       if (metaVersions) {
         for (var i = 0; i < metaVersions.length; i++) {
-          if (metaVersions[i].id !== primary) { def = metaVersions[i].id; break; }
+          var mv = metaVersions[i];
+          if (!mv.stub && mv.id !== primary) { def = mv.id; break; }
         }
       }
       setCompareVersion(def || 'KJV');
@@ -220,6 +233,7 @@ function _buildComparePanelHdr(versionId, role) {
   if (metaVersions) {
     metaVersions.forEach(function (mv) {
       if (mv.group === 'apocrypha') return;
+      if (mv.stub) return;
       var opt = document.createElement('option');
       opt.value = mv.id; opt.textContent = mv.id; opt.title = mv.name;
       if (mv.id === versionId) opt.selected = true;
@@ -237,7 +251,19 @@ function _buildComparePanelHdr(versionId, role) {
 // ── Reader nav state ──────────────────────────────────────────────────────
 window._readerNavState  = null;
 window._readerGroups    = [];
+// CHANGE? window._readerLookupFn is assigned to doLookup inside initReaderLookup() and
+//   called by: _navigateChapter (prev/next chapter), initCompareToggle (compare on/off),
+//   onVersionChange callback, and the keyboard nav handler. Removing or renaming the
+//   assignment breaks all in-page navigation without any JS error — it just silently noops.
 window._readerLookupFn  = null;
+
+// ── Chapter read tracking ─────────────────────────────────────────────────
+// INTENT: Module-level constant so the key is visible in search and easy to update.
+// CHANGE? progress/index.html reads this same key to render the chapter progress grid.
+//   If this key is renamed, update progress/index.html:getChapterRead() too.
+// VERIFY: Mark a chapter as read in the reader; inspect localStorage — bsw_chapter_read
+//   should contain an object keyed by "{bookId}.{ch}" with { read: true, date: "YYYY-MM-DD" }.
+var READ_KEY = 'bsw_chapter_read';
 
 // ── Stripped mode — no side panel (used when navigating from Reading Progress) ──
 var _strippedMode = !!new URLSearchParams(location.search).get('stripped');
@@ -388,7 +414,6 @@ export function initReaderLookup() {
           markBtn2.type = 'button';
           markBtn2.dataset.key = markKey;
           (function (btn, key) {
-            var READ_KEY = 'bsw_chapter_read';
             function getRead() { try { return JSON.parse(localStorage.getItem(READ_KEY) || '{}'); } catch (e) { return {}; } }
             var alreadyRead = !!(getRead()[key] && getRead()[key].read);
             if (alreadyRead) {
@@ -453,6 +478,11 @@ export function initReaderLookup() {
     });
   }
 
+  // CHANGE? All in-page navigation calls window._readerLookupFn(); callers:
+  //   _navigateChapter (prev/next chapter buttons + keyboard), initCompareToggle (⇅ button),
+  //   onVersionChange callback, and initXrefNotesToggle (indirectly via reload).
+  //   If doLookup is ever renamed or this assignment is removed, all in-page navigation
+  //   silently becomes a no-op with no JS error.
   window._readerLookupFn = doLookup;
   if (btn) btn.addEventListener('click', doLookup);
   input.addEventListener('keydown', function (e) {
@@ -573,6 +603,7 @@ export function initReaderBrowse() {
     var groups = {};
     metaVersions.forEach(function (v) {
       if (v.group === 'apocrypha') return;  // apocrypha-only versions live in the separate reader
+      if (v.stub) return;                   // no data files yet
       var t = v.tier || 3;
       if (!groups[t]) groups[t] = [];
       groups[t].push(v);
@@ -1034,33 +1065,42 @@ function _loadReaderBookmarks(container) {
   if (!bms.length) {
     container.innerHTML =
       '<p class="reader-hint" style="padding:.75rem">No bookmarks yet. Click a verse number and choose "Bookmark" to save a reference.</p>';
-    return;
-  }
-
-  var ul = document.createElement('ul');
-  ul.className = 'reader-bookmark-list';
-  bms.forEach(function (ref) {
-    var li  = document.createElement('li');
-    li.className = 'reader-bookmark-item';
-    var star = document.createElement('span');
-    star.className = 'reader-bookmark-star';
-    star.textContent = '★';
-    var a = document.createElement('a');
-    a.className = 'reader-bookmark-ref';
-    a.href = '#';
-    a.textContent = ref;
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var input = document.getElementById('reader-lookup-input');
-      if (input) input.value = ref;
-      if (window._readerLookupFn) window._readerLookupFn();
+  } else {
+    var ul = document.createElement('ul');
+    ul.className = 'reader-bookmark-list';
+    bms.forEach(function (ref) {
+      var li  = document.createElement('li');
+      li.className = 'reader-bookmark-item';
+      var star = document.createElement('span');
+      star.className = 'reader-bookmark-star';
+      star.textContent = '★';
+      var a = document.createElement('a');
+      a.className = 'reader-bookmark-ref';
+      a.href = '#';
+      a.textContent = ref;
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var input = document.getElementById('reader-lookup-input');
+        if (input) input.value = ref;
+        if (window._readerLookupFn) window._readerLookupFn();
+      });
+      li.appendChild(star);
+      li.appendChild(a);
+      ul.appendChild(li);
     });
-    li.appendChild(star);
-    li.appendChild(a);
-    ul.appendChild(li);
-  });
-  container.innerHTML = '';
-  container.appendChild(ul);
+    container.innerHTML = '';
+    container.appendChild(ul);
+  }
+  // INTENT: BOOKMARKS_URL is exported from core.js but never surfaced in any UI — this is its
+  //   intended hook. Without this link the standalone bookmarks page is unreachable from the UI.
+  // CHANGE? If BOOKMARKS_URL path changes in core.js the link href updates automatically.
+  // VERIFY: Open reader → Bookmarks tab. "View all bookmarks ↗" link should appear at the bottom.
+  //   Clicking it navigates to bookmarks/index.html with the full bookmark list.
+  var viewAll = document.createElement('a');
+  viewAll.className = 'reader-bm-viewall';
+  viewAll.href = BOOKMARKS_URL;
+  viewAll.textContent = 'View all bookmarks ↗';
+  container.appendChild(viewAll);
 }
 
 function _loadReaderNotes(parsed, container) {

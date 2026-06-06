@@ -61,6 +61,20 @@ export function initPWA() {
     meta.name    = 'theme-color';
     meta.content = '#5c3d1e';
     document.head.appendChild(meta);
+    // INTENT: Inject a second theme-color meta for dark mode so the browser address bar /
+    //   PWA title bar reflects the dark palette when the user's OS is in dark mode.
+    //   The manifest spec has no media-query support so the splash-screen color remains
+    //   the light-mode value; only the browser chrome is corrected here.
+    // CHANGE? If the dark background color changes in style.css :root[data-theme="dark"],
+    //   update the content value below to match (currently --color-bg: #1a1208).
+    // VERIFY: In Chrome DevTools → Application → Manifest, two theme-color entries should
+    //   appear (light and dark). On an Android device in dark mode, the PWA title bar
+    //   should appear as dark brown rather than warm medium-brown.
+    var metaDark = document.createElement('meta');
+    metaDark.name    = 'theme-color';
+    metaDark.content = '#3a2008';
+    metaDark.setAttribute('media', '(prefers-color-scheme: dark)');
+    document.head.appendChild(metaDark);
   }
   // INTENT: iOS Safari does not use the manifest for home-screen icons; it requires
   //   an explicit apple-touch-icon link in the document head. Injecting here once
@@ -77,13 +91,22 @@ export function initPWA() {
   if (!('serviceWorker' in navigator)) return;
 
   navigator.serviceWorker.register(SW_URL).then(function (reg) {
+    // INTENT: Send only versions that have actual data/bible/{id}/ files; stubs (stub:true),
+    //   apocrypha group, and tier-3 MKT versions have no book JSON files and would each
+    //   fire 66 silent 404 requests during background precache.
+    // CHANGE? If data files are added for a stub version, remove its "stub":true field in
+    //   data/versions/versions.json and it will automatically be included here.
+    // VERIFY: After first page load, open DevTools Application → Cache Storage → bsw-data-v3;
+    //   no data/bible/DR/, data/bible/MKT-L/, or data/bible/AKJV/ entries should appear.
     function triggerPrecache(sw) {
       if (!sw || !metaBooks || !metaVersions) return;
       sw.postMessage({
         type:     'PRECACHE_BIBLE',
         base:     SITE_ROOT,
         books:    metaBooks.map(function (b) { return b.id; }),
-        versions: metaVersions.map(function (v) { return v.id; })
+        versions: metaVersions
+          .filter(function (v) { return !v.stub && !v.group && v.tier < 3; })
+          .map(function (v) { return v.id; })
       });
     }
 

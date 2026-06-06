@@ -255,8 +255,9 @@ def _make_tiers(gloss, def_='', code=''):
     }
 
 def compute_freq(books, code_prefix):
-    """Count Strong's code occurrences across a list of interlinear book files."""
-    counts = Counter()
+    """Count Strong's code occurrences; returns (total_counter, {code: {book: count}})."""
+    total  = Counter()
+    by_book = {}  # {code: {book: count}}
     for book in books:
         fpath = os.path.join(INTERLINEAR, f'{book}.json')
         if not os.path.exists(fpath):
@@ -269,10 +270,13 @@ def compute_freq(books, code_prefix):
                     for tok in tokens:
                         code = tok.get('s', '')
                         if code and code.startswith(code_prefix):
-                            counts[code] += 1
+                            total[code] += 1
+                            if code not in by_book:
+                                by_book[code] = {}
+                            by_book[code][book] = by_book[code].get(book, 0) + 1
         except Exception as e:
             print(f'  Warning: {book}.json — {e}')
-    return counts
+    return total, by_book
 
 def load_existing(path):
     """Load an existing glossary file (for non-destructive re-run)."""
@@ -281,7 +285,7 @@ def load_existing(path):
             return json.load(f)
     return {}
 
-def seed_greek(nt_freq, existing):
+def seed_greek(nt_freq, nt_book_freq, existing):
     with open(os.path.join(STRONGS, 'greek.json'), encoding='utf-8') as f:
         greek = json.load(f)
     try:
@@ -305,6 +309,7 @@ def seed_greek(nt_freq, existing):
         lemma   = entry.get('lemma', '')
         trans   = entry.get('translit', '')
         freq    = nt_freq.get(code, 0)
+        bfreq   = nt_book_freq.get(code, {})
 
         th      = thayer.get(code, {})
         th_sh   = th.get('short_def', '')
@@ -323,6 +328,8 @@ def seed_greek(nt_freq, existing):
             'dispute_level': disp,
             'status':    'draft',
             'nt_freq':   freq,
+            'book_freq': bfreq,
+            'book_defaults': {},
             'tiers':     _make_tiers(gloss, def_, code),
             'context_overrides': [],
             'related_lemmas': [],
@@ -338,7 +345,7 @@ def seed_greek(nt_freq, existing):
         }
     return glossary
 
-def seed_hebrew(ot_freq, existing):
+def seed_hebrew(ot_freq, ot_book_freq, existing):
     with open(os.path.join(STRONGS, 'hebrew.json'), encoding='utf-8') as f:
         hebrew = json.load(f)
     try:
@@ -361,6 +368,7 @@ def seed_hebrew(ot_freq, existing):
         lemma   = entry.get('lemma', '')
         trans   = entry.get('translit', '')
         freq    = ot_freq.get(code, 0)
+        bfreq   = ot_book_freq.get(code, {})
 
         b       = bdb.get(code, {})
         b_sh    = b.get('short_def', '')
@@ -379,6 +387,8 @@ def seed_hebrew(ot_freq, existing):
             'dispute_level': disp,
             'status':    'draft',
             'ot_freq':   freq,
+            'book_freq': bfreq,
+            'book_defaults': {},
             'tiers':     _make_tiers(gloss, def_, code),
             'context_overrides': [],
             'related_lemmas': [],
@@ -398,17 +408,17 @@ def main():
     os.makedirs(OUT, exist_ok=True)
 
     print('1/4  Computing NT Greek frequencies from interlinear…')
-    nt_freq = compute_freq(NT_BOOKS, 'G')
+    nt_freq, nt_book_freq = compute_freq(NT_BOOKS, 'G')
     print(f'     {sum(nt_freq.values()):,} token occurrences across {len(nt_freq)} distinct G codes')
 
     print('2/4  Computing OT Hebrew frequencies from interlinear…')
-    ot_freq = compute_freq(OT_BOOKS, 'H')
+    ot_freq, ot_book_freq = compute_freq(OT_BOOKS, 'H')
     print(f'     {sum(ot_freq.values()):,} token occurrences across {len(ot_freq)} distinct H codes')
 
     greek_path = os.path.join(OUT, 'glossary-greek.json')
     print('3/4  Seeding Greek glossary…')
     existing_g = load_existing(greek_path)
-    greek_gloss = seed_greek(nt_freq, existing_g)
+    greek_gloss = seed_greek(nt_freq, nt_book_freq, existing_g)
     with open(greek_path, 'w', encoding='utf-8') as f:
         json.dump(greek_gloss, f, ensure_ascii=False, separators=(',', ':'))
     print(f'     {len(greek_gloss):,} entries → {greek_path}')
@@ -416,7 +426,7 @@ def main():
     hebrew_path = os.path.join(OUT, 'glossary-hebrew.json')
     print('4/4  Seeding Hebrew glossary…')
     existing_h = load_existing(hebrew_path)
-    hebrew_gloss = seed_hebrew(ot_freq, existing_h)
+    hebrew_gloss = seed_hebrew(ot_freq, ot_book_freq, existing_h)
     with open(hebrew_path, 'w', encoding='utf-8') as f:
         json.dump(hebrew_gloss, f, ensure_ascii=False, separators=(',', ':'))
     print(f'     {len(hebrew_gloss):,} entries → {hebrew_path}')
@@ -448,6 +458,8 @@ def main():
             'status':       entry.get('status', 'draft'),
             'nt_freq':      entry.get('nt_freq', 0),
             'ot_freq':      entry.get('ot_freq', 0),
+            'book_freq':    entry.get('book_freq', {}),
+            'book_defaults': entry.get('book_defaults', {}),
             'tiers':        entry.get('tiers', {}),
             'context_overrides': entry.get('context_overrides', []),
             'related_lemmas':    entry.get('related_lemmas', []),
@@ -497,6 +509,8 @@ def main():
             'dispute_level': entry.get('dispute_level', 0),
             'nt_freq':       entry.get('nt_freq', 0),
             'ot_freq':       entry.get('ot_freq', 0),
+            'book_freq':     entry.get('book_freq', {}),
+            'book_defaults': entry.get('book_defaults', {}),
             'status':        entry.get('status', 'draft'),
             'tiers':         entry.get('tiers', {}),
             'semantic_range': (entry.get('semantic_range') or '')[:200],

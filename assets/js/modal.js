@@ -29,6 +29,10 @@ var _memHasFn     = null;
 var _memAddFn     = null;
 var _memRemoveFn  = null;
 var _memRefreshFn = null;
+// CHANGE? Called by app.js after importing daily.js (which provides the four functions).
+//   If this registration call is removed from app.js, the Memorize tab in the verse modal
+//   renders empty with no error — the add/remove/refresh helpers are just silently null.
+//   If daily.js renames any of the four exported functions, update the app.js call site.
 export function registerMemHelpers(hasFn, addFn, removeFn, refreshFn) {
   _memHasFn = hasFn; _memAddFn = addFn; _memRemoveFn = removeFn; _memRefreshFn = refreshFn;
 }
@@ -54,6 +58,11 @@ var _renderModalConfessionsFn = null;
 var _renderModalFathersFn    = null;
 var _renderModalDictionaryFn = null;
 
+// CHANGE? All five register* functions below are called by app.js after the relevant
+//   modules are imported (verse-study.js for word study, daily.js for topics/confessions/
+//   fathers/dictionary). If any registration is skipped, that modal tab silently renders
+//   empty — no error is thrown. If a module's render function is renamed, update both the
+//   app.js import and the corresponding registerModal* call here.
 export function registerModalWordStudy(fn)     { _renderModalWordStudyFn   = fn; }
 export function registerModalTopics(fn)        { _renderModalTopicsFn      = fn; }
 export function registerModalConfessions(fn)   { _renderModalConfessionsFn = fn; }
@@ -70,6 +79,15 @@ export function _commAttr(source) {
 }
 
 // ── buildModalDOM ─────────────────────────────────────────────────────────
+// INTENT: Creates the single global #bsw-modal-backdrop / #bsw-modal DOM tree and
+//   caches references in module-level _backdropEl / _modalEl. Idempotent — if the
+//   backdrop already exists (e.g. buildModalDOM called twice, or the page pre-renders it),
+//   it just re-reads the existing elements and returns. All modal state (_lastTab,
+//   _lastFocused, registered helpers) is module-level and persists across open/close
+//   cycles for the lifetime of the page session — closing the modal does not reset them.
+// CHANGE? If the modal's HTML structure changes (IDs, class names, or child elements),
+//   also audit openModal, closeModal, and every _renderModal* function that calls
+//   _modalEl.querySelector(...) directly — they all rely on this DOM shape.
 export function buildModalDOM() {
   if (document.getElementById('bsw-modal-backdrop')) {
     _backdropEl = document.getElementById('bsw-modal-backdrop');
@@ -301,10 +319,11 @@ export function buildModalDOM() {
 export function syncModalVersionPicker() {
   var sel = document.getElementById('bsw-modal-version');
   if (!sel || !metaVersions) return;
-  if (sel.options.length === metaVersions.length) return;
+  if (sel.options.length > 0) return;  // already populated
   var current = getVersion();
   sel.innerHTML = '';
   metaVersions.forEach(function (v) {
+    if (v.stub) return;  // no data files — would 404 on every book load
     var opt = document.createElement('option');
     opt.value       = v.id;
     opt.textContent = v.id + ' — ' + v.name;

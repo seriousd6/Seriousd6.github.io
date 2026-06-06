@@ -117,6 +117,15 @@
             /* getAttribute returns null when src attr is absent — robust vs "about:blank" */
             if (iframe && !iframe.getAttribute('src') && iframe.dataset.src) {
               iframe.src = iframe.dataset.src;
+              // INTENT: Show a friendly message if the sub-page can't load (offline, broken URL)
+              //   so the user doesn't see a blank frame with no explanation.
+              // CHANGE? If panel structure changes from a single iframe to something else,
+              //   this fallback must move to the new container element.
+              // VERIFY: In DevTools → Network → Offline, click each History tab; each panel
+              //   should show "Could not load this view…" rather than a blank white frame.
+              iframe.addEventListener('error', function () {
+                panel.innerHTML = '<p style="padding:2rem;color:var(--color-muted)">Could not load this view. Check your connection.</p>';
+              }, { once: true });
               /* After timelapse loads, dispatch resize so Leaflet sizes correctly */
               if (tab === 'timelapse') {
                 iframe.addEventListener('load', function () {

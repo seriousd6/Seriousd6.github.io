@@ -18,19 +18,19 @@
     <!-- ── Sticky tab bar ─────────────────────────────────────────────────── -->
     <div class="disc-tabbar-wrap">
       <div class="disc-tabbar" role="tablist" aria-label="Discipline tabs">
-        <button class="disc-tab disc-tab--active" data-tab="plans"       role="tab" aria-selected="true">
+        <button class="disc-tab disc-tab--active" data-tab="plans"       role="tab" aria-selected="true"  id="disc-tab-plans"       aria-controls="disc-plans">
           <span class="disc-dot" id="dot-reading"></span>📅 Plans
         </button>
-        <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false">
+        <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false" id="disc-tab-devotionals" aria-controls="disc-devotionals">
           <span class="disc-dot" id="dot-devotional"></span>🌅 Devotionals
         </button>
-        <button class="disc-tab" data-tab="memory"      role="tab" aria-selected="false">
+        <button class="disc-tab" data-tab="memory"      role="tab" aria-selected="false" id="disc-tab-memory"      aria-controls="disc-memory">
           <span class="disc-dot" id="dot-memory"></span>⭐ Memory
         </button>
-        <button class="disc-tab" data-tab="journal"     role="tab" aria-selected="false">
+        <button class="disc-tab" data-tab="journal"     role="tab" aria-selected="false" id="disc-tab-journal"     aria-controls="disc-journal">
           <span class="disc-dot" id="dot-prayer"></span>✍️ Journal
         </button>
-        <button class="disc-tab" data-tab="worship"     role="tab" aria-selected="false">
+        <button class="disc-tab" data-tab="worship"     role="tab" aria-selected="false" id="disc-tab-worship"     aria-controls="disc-worship">
           <span class="disc-dot" id="dot-worship"></span>⛪ Worship
         </button>
         <button class="disc-tab disc-tab--more" id="disc-more-btn" type="button" aria-haspopup="true" aria-expanded="false">More ▾</button>
@@ -46,13 +46,13 @@
     <div class="disc-today-strip" id="disc-today-strip"></div>
 
     <!-- ══════════════════════════ PLANS PANEL ══════════════════════════════ -->
-    <div id="disc-plans" class="disc-panel disc-body" hidden>
+    <div id="disc-plans" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-plans" hidden>
       <p class="plans-loading" id="plans-list-msg">Loading plans…</p>
       <div id="plans-list"></div>
     </div>
 
     <!-- ══════════════════════════ DEVOTIONALS PANEL ════════════════════════ -->
-    <div id="disc-devotionals" class="disc-panel disc-devot-body" hidden>
+    <div id="disc-devotionals" class="disc-panel disc-devot-body" role="tabpanel" aria-labelledby="disc-tab-devotionals" hidden>
       <div class="devot-controls" style="margin-bottom:1.25rem">
         <div class="devot-date-nav">
           <button class="devot-nav-btn" id="devot-prev" aria-label="Previous day">&#8592;</button>
@@ -61,11 +61,11 @@
           <button class="devot-nav-btn devot-today-btn" id="devot-today">Today</button>
         </div>
         <div class="devot-period-tabs" role="tablist" aria-label="Morning or Evening">
-          <button class="devot-period-tab is-active" data-period="morning" role="tab" aria-selected="true">Morning</button>
-          <button class="devot-period-tab"           data-period="evening" role="tab" aria-selected="false">Evening</button>
+          <button class="devot-period-tab is-active" data-period="morning" role="tab" aria-selected="true"  id="devot-tab-morning" aria-controls="devot-card">Morning</button>
+          <button class="devot-period-tab"           data-period="evening" role="tab" aria-selected="false" id="devot-tab-evening" aria-controls="devot-card">Evening</button>
         </div>
       </div>
-      <article class="devot-card" id="devot-card" aria-live="polite">
+      <article class="devot-card" id="devot-card" role="tabpanel" aria-labelledby="devot-tab-morning" aria-live="polite">
         <div class="devot-card__loading" id="devot-loading">Loading…</div>
         <div class="devot-card__body" id="devot-body" hidden>
           <div class="devot-card__date-label" id="devot-date-label"></div>
@@ -89,16 +89,16 @@
     </div>
 
     <!-- ══════════════════════════ MEMORY PANEL ═════════════════════════════ -->
-    <div id="disc-memory" class="disc-panel disc-memory-body" hidden>
+    <div id="disc-memory" class="disc-panel disc-memory-body" role="tabpanel" aria-labelledby="disc-tab-memory" hidden>
       <div class="mem-header">
         <h1 class="mem-title">⭐ Scripture Memory</h1>
         <p class="mem-subtitle">Memorize verses using spaced repetition — reviewed at the right time, every time.</p>
       </div>
       <div class="mem-tabs" role="tablist">
-        <button class="mem-tab mem-tab--active" data-tab="browse" role="tab" aria-selected="true">Browse</button>
-        <button class="mem-tab" data-tab="review" role="tab" aria-selected="false" id="mem-review-tab">Review <span id="mem-due-badge" class="mem-badge" hidden></span></button>
+        <button class="mem-tab mem-tab--active" data-tab="browse" role="tab" aria-selected="true"  id="mem-browse-tab"  aria-controls="mem-browse-panel">Browse</button>
+        <button class="mem-tab" data-tab="review" role="tab" aria-selected="false" id="mem-review-tab" aria-controls="mem-review-panel">Review <span id="mem-due-badge" class="mem-badge" hidden></span></button>
       </div>
-      <div id="mem-browse-panel" class="mem-panel">
+      <div id="mem-browse-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-browse-tab">
         <div class="mem-add-row">
           <input id="mem-add-input" type="text" class="mem-add-input" placeholder="Add a verse — e.g. John 3:16" autocomplete="off" />
           <button id="mem-add-btn" class="mem-add-btn">Add verse</button>
@@ -129,7 +129,7 @@
           <a class="bsw-empty-state__cta" href="../read/">Open Reader</a>
         </div>
       </div>
-      <div id="mem-review-panel" class="mem-panel" hidden>
+      <div id="mem-review-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-review-tab" hidden>
         <div id="mem-review-progress" class="mem-progress"></div>
         <div id="mem-card" class="mem-card">
           <div id="mem-card-front" class="mem-card__front"></div>
@@ -152,7 +152,7 @@
     </div>
 
     <!-- ══════════════════════════ JOURNAL PANEL ════════════════════════════ -->
-    <div id="disc-journal" class="disc-panel disc-body" hidden>
+    <div id="disc-journal" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-journal" hidden>
       <div class="journal-tabs" role="tablist">
         <button class="journal-tab journal-tab--active" data-jtab="prayers"     role="tab" aria-selected="true">🙏 Prayers</button>
         <button class="journal-tab"                     data-jtab="reflections" role="tab" aria-selected="false">📓 Reflections</button>
@@ -209,7 +209,7 @@
     </div>
 
     <!-- ══════════════════════════ WORSHIP PANEL ════════════════════════════ -->
-    <div id="disc-worship" class="disc-panel disc-body" hidden>
+    <div id="disc-worship" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-worship" hidden>
       <div class="worship-tabs" role="tablist">
         <button class="worship-tab worship-tab--active" data-wtab="sermons" role="tab" aria-selected="true">Sermon Notes</button>
         <button class="worship-tab"                     data-wtab="fasting" role="tab" aria-selected="false">Fasting Log</button>
@@ -450,6 +450,28 @@
           _moreBtn.setAttribute('aria-expanded', 'false');
         }
       });
+      _moreMenu.addEventListener('keydown', function (e) {
+        var items = Array.from(_moreMenu.querySelectorAll('.disc-more-item'));
+        var idx   = items.indexOf(document.activeElement);
+        if (e.key === 'Escape') {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+          _moreBtn.focus();
+          e.preventDefault();
+        } else if (e.key === 'ArrowDown') {
+          items[(idx + 1) % items.length].focus();
+          e.preventDefault();
+        } else if (e.key === 'ArrowUp') {
+          items[(idx - 1 + items.length) % items.length].focus();
+          e.preventDefault();
+        } else if (e.key === 'Home') {
+          items[0].focus();
+          e.preventDefault();
+        } else if (e.key === 'End') {
+          items[items.length - 1].focus();
+          e.preventDefault();
+        }
+      });
     }
 
     /* handle URL on load */
@@ -586,7 +608,11 @@
       if (listEl) listEl.innerHTML='<p class="plans-loading">Loading…</p>';
       Promise.all(PLAN_IDS.map(function(id){
         return fetch(PLANS_ROOT+'/'+id+'.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
-      })).then(function(plans){renderAllPlans(plans.filter(Boolean));});
+      })).then(function(plans){
+        var msg=document.getElementById('plans-list-msg');
+        if (msg) msg.setAttribute('hidden','');
+        renderAllPlans(plans.filter(Boolean));
+      });
     }
 
     function initPlans() { loadAndRenderPlans(); }

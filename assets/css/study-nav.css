@@ -104,7 +104,7 @@ body.sidebar-open .study-main {
 
 .sidebar-logo p,
 .study-nav .brand .sub {
-  font-size: 11px;
+  font-size: 0.75rem;
   color: var(--sn-text-muted);
   letter-spacing: 0.22em;
   margin-top: 8px;
@@ -126,6 +126,12 @@ body.sidebar-open .study-main {
   border-bottom: 1px solid var(--sn-border-soft);
 }
 
+/* INTENT: font-size 1rem (≥16px) prevents iOS Safari from auto-zooming the viewport when this
+   input is focused — iOS zooms in whenever an input has font-size < 16px.
+   CHANGE? If this selector is split or duplicated in a media query, both instances need 1rem+
+   to avoid zoom regression on iPhones.
+   VERIFY: On iPhone (or DevTools iPhone simulation), tap the sidebar search input on any topic
+   page — the viewport should NOT zoom in. */
 .sidebar-search input,
 .study-nav .search-wrap input {
   width: 100%;
@@ -133,7 +139,7 @@ body.sidebar-open .study-main {
   border: 1px solid var(--sn-border);
   border-radius: 4px;
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 1rem;
   color: var(--sn-text);
   letter-spacing: 0.04em;
   outline: none;
@@ -153,7 +159,7 @@ body.sidebar-open .study-main {
 /* ── Section group labels ────────────────────────────────── */
 .nav-section-label,
 .study-nav .nav-section {
-  font-size: 10px;
+  font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--sn-gold-dim);
@@ -185,7 +191,7 @@ body.sidebar-open .study-main {
 
 .study-nav a.navlink::before {
   content: counter(nav, upper-roman) ".";
-  font-size: 10px;
+  font-size: 0.7rem;
   color: var(--sn-gold-dim);
   letter-spacing: 0.04em;
   min-width: 26px;

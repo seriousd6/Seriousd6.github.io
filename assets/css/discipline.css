@@ -121,6 +121,7 @@
   white-space: nowrap;
   transition: color .15s;
   flex-shrink: 0;
+  min-height: 44px;
 }
 .disc-tab:hover { color: var(--color-text); }
 .disc-tab--active {
@@ -224,6 +225,14 @@
 .plan-today__mark--done:hover { background: #c8e6c9; }
 .plan-today__mark:not(.plan-today__mark--done):hover { border-color: var(--color-primary); color: var(--color-primary); }
 .plan-today__complete-msg { font-size: .85rem; color: #2e7d32; font-weight: 600; }
+[data-theme="dark"] .plan-today__mark--done { background: #1b3a1b; border-color: #4caf50; color: #66bb6a; }
+[data-theme="dark"] .plan-today__mark--done:hover { background: #254a25; }
+[data-theme="dark"] .plan-today__complete-msg { color: #66bb6a; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .plan-today__mark--done { background: #1b3a1b; border-color: #4caf50; color: #66bb6a; }
+  :root:not([data-theme="light"]) .plan-today__mark--done:hover { background: #254a25; }
+  :root:not([data-theme="light"]) .plan-today__complete-msg { color: #66bb6a; }
+}
 .plan-today__desc {
   font-size: .78rem; color: var(--color-muted); font-style: italic;
   padding: .25rem 0 0; display: block; flex-basis: 100%;
@@ -246,6 +255,10 @@
 .plan-calendar__day      { min-width: 65px; color: var(--color-muted); flex-shrink: 0; }
 .plan-calendar__passages { flex: 1; color: var(--color-text); }
 .plan-calendar__check    { width: 1.1rem; text-align: center; color: #4caf50; font-size: .9rem; flex-shrink: 0; }
+[data-theme="dark"] .plan-calendar__check { color: #66bb6a; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .plan-calendar__check { color: #66bb6a; }
+}
 .plans-loading { color: var(--color-muted); font-style: italic; padding: 2rem 0; text-align: center; }
 
 /* ── Journal tab ─────────────────────────────────────────────────────────────── */

@@ -72,6 +72,19 @@ export function wireRefLinks(root) {
 }
 
 // ── autoTagRefs ──────────────────────────────────────────────────────────
+// INTENT: Walks all text nodes in the document body and turns plain-text Bible
+//   references into clickable .ref links. The TreeWalker's acceptNode filter
+//   skips any node already inside a [data-ref] element, so calling this function
+//   more than once on the same page is safe — already-tagged nodes are never
+//   double-wrapped. No-ops immediately if bookLookup is null (called before
+//   books.json finishes loading); app.js re-calls after the books load.
+// CHANGE? If the SKIP tag list changes, also audit autoTagChapterRefs which uses
+//   the same skip set. If bookLookup's structure changes (currently an object keyed
+//   by lowercase name), the parseRef() call inside this function will silently
+//   produce null and skip the match rather than tagging it.
+// VERIFY: Open any topic page; after books.json loads, plain text like "See John 3:16"
+//   should become <a class="ref" data-ref="John 3:16">. Hovering shows the tooltip;
+//   clicking opens the verse modal. Run autoTagRefs() a second time — no duplicate links.
 // Walks all text nodes in the document body and turns plain-text Bible
 // references (e.g. "See John 3:16") into clickable .ref links.
 //
@@ -421,6 +434,11 @@ export function populateInlineVerse(el, versionId) {
 }
 
 // updateInlineVerses: re-populates all inline verse elements with a new version.
+// CHANGE? This function is wired as a version-change subscriber in app.js:
+//   onVersionChange(updateInlineVerses)  — if that line is removed, version switches
+//   will stop updating .bsw-verse embeds on every page. Inline verses also rely on
+//   populateInlineVerse fetching from the DATA_CACHE_V path; if the data URL shape
+//   changes in core.js, cached responses will serve stale content until sw.js is rebumped.
 // Called by the version-change callback in app.js whenever the user switches translations.
 export function updateInlineVerses(versionId) {
   document.querySelectorAll('.bsw-verse[data-ref]').forEach(function (el) {
@@ -431,6 +449,14 @@ export function updateInlineVerses(versionId) {
 // ── applyHighlights ───────────────────────────────────────────────────────
 // Reads highlight colours from stored notes (localStorage) and applies
 // the corresponding bsw-hl-<colour> CSS class to each .reader-verse element.
+// CHANGE? Callers that must be updated if the note data format or CSS class prefix changes:
+//   reader.js:doLookup — called after chapter verses are rendered
+//   reader.js:injectComparePanel — called after the compare panel's secondary verses load
+//   modal.js:applyModalHighlights — targets .bsw-modal__verse elements (separate class prefix)
+//   Highlight colour is read from note.highlight (string or false); if that field is
+//   renamed in storage.js, all three call sites silently lose their highlight colours.
+//   CSS class pattern is "reader-verse--hl-<colour>"; if renamed, also update applyModalHighlights
+//   which uses the different prefix "bsw-hl-<colour>".
 // Called by the reader page after verses are rendered and after the user
 // changes a highlight colour in the modal.
 export function applyHighlights(container) {

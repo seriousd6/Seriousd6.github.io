@@ -5,6 +5,74 @@ See `working/TODO.md` for the active task list.
 
 ---
 
+## Completed 2026-06-05 (session 9 — loop iteration 4)
+
+### CODE-3 · core.js — Version-change event bus and parseMultiRef algorithm missing INTENT/CHANGE? *(MEDIUM)*
+
+Added required comments to three functions in `assets/js/core.js`:
+- `_fireVersionChange`: Added `CHANGE?` listing all four current subscribers (wire.js:updateInlineVerses, reader.js:doLookup, app.js:syncModalVersionPicker, daily.js).
+- `setVersion`: Added `VERIFY` step (switch picker from KJV to ESV; confirm select updates, inline verses reload, modal version bar syncs).
+- `parseMultiRef`: Added `INTENT` + `CHANGE?` + `VERIFY` explaining the carry-over state model (curBookId/curCh inherited left-to-right), the BARE_RE silent-skip edge case, and how to verify in the console.
+
+### CODE-4 · wire.js — applyHighlights and updateInlineVerses missing CHANGE?/VERIFY *(MEDIUM)*
+
+Added required comments to three functions in `assets/js/wire.js`:
+- `autoTagRefs`: Added `INTENT` + `CHANGE?` + `VERIFY` explaining idempotency (TreeWalker skips existing [data-ref] nodes), the no-op guard (`if (!bookLookup) return`), and what to verify in the browser.
+- `updateInlineVerses`: Added `CHANGE?` noting the `onVersionChange(updateInlineVerses)` registration in app.js; removing it silently stops inline verse updates on version switch.
+- `applyHighlights`: Added `CHANGE?` listing all three callers (reader.js:doLookup, reader.js:injectComparePanel, modal.js:applyModalHighlights) and the note.highlight field / CSS class prefix dependencies.
+
+### CODE-5 · modal.js — buildModalDOM singleton and cross-module bridges missing INTENT/CHANGE? *(MEDIUM)*
+
+Added required comments to three functions in `assets/js/modal.js`:
+- `buildModalDOM`: Added `INTENT` (global singleton, idempotent, module-level state persists across open/close) + `CHANGE?` (if DOM structure changes, audit openModal, closeModal, and all _renderModal* querySelector calls).
+- `registerMemHelpers`: Added `CHANGE?` noting app.js calls this after importing daily.js; missing registration = Memorize tab silently empty.
+- `registerModalWordStudy`: Added `CHANGE?` covering all five register* functions — called by app.js after relevant module imports; missing = tab silently empty.
+
+---
+
+## Completed 2026-06-05 (session 3)
+
+### UX-1 · search.js empty catch on direct reference lookup *(MEDIUM)*
+- [x] `assets/js/search.js` (`handleSearchInput`): Added `"Looking up…"` loading indicator before `loadBook()` in the direct-ref path (sets `#bsw-search-output` HTML). Replaced the empty `.catch(function(){})` with one that renders `<p class="search-page-none">Could not load "…"…</p>` in the output element. Added INTENT/CHANGE?/VERIFY comments. Used `document.getElementById` directly since `_searchOut` is defined after the early `return`.
+
+### UX-2 · verse-study.js interlinear ghost section on network failure *(MEDIUM)*
+- [x] `assets/js/verse-study.js` (`loadVerseSections`, interlinear block): Added `.catch(function () { interlinearSec.el.remove(); vsRebuildNav(); })` after the `.then()`. If `loadStrongs` or `loadInterlinear` rejects, the hidden section is removed from the DOM and the sidebar nav is regenerated cleanly instead of leaving a ghost entry. Added INTENT/CHANGE? comments in the catch.
+
+### UX-3 · discipline/index.html "Loading plans…" never cleared *(MEDIUM)*
+- [x] `discipline/index.html` (`loadAndRenderPlans`): Added `var msg=document.getElementById('plans-list-msg'); if (msg) msg.setAttribute('hidden','');` inside the `.then()` callback before `renderAllPlans()`. The static `<p id="plans-list-msg">` is now hidden as soon as plan data loads.
+
+---
+
+## Completed 2026-06-05 (session 2)
+
+### PERF-2 · loadCrossRefs duplicate fetch stampede *(MEDIUM)*
+- [x] `assets/js/core.js` (`loadCrossRefs`): Store the in-flight Promise in `crossRefCache[bookId]` immediately before fetch resolves. All concurrent callers now share the same Promise via `Promise.resolve(thenable)`. Once the fetch settles, the cache entry is replaced with the plain data value. Added INTENT/CHANGE?/VERIFY comments. Psalm 119's 176 concurrent cross-ref callers now fire exactly 1 HTTP request instead of 176.
+
+### PWA-1 · Offline cache miss on parameterized URLs *(MEDIUM)*
+- [x] `sw.js` (`networkFirst`): Changed `caches.match(req)` → `caches.match(req, { ignoreSearch: true })`. Cache lookups now ignore query params, matching `/discipline/index.html` for navigations to `/discipline/?tab=journal`. Added INTENT/CHANGE?/VERIFY comments. Also bumped `APP_CACHE_V` from `bsw-app-v64` → `bsw-app-v65`.
+
+### PWA-2 · Precache sends 462 silent 404 requests for versions with no data *(MEDIUM)*
+- [x] `assets/js/pwa.js` (`triggerPrecache`): Changed `metaVersions.map(v => v.id)` to filter with `!v.stub && !v.group && v.tier < 3`. Now sends only KJV, BSB, WEB, ASV — the 4 versions with actual `data/bible/{id}/` files. Eliminates 462 wasted 404 requests per background precache run (7 data-less versions × 66 books). Added INTENT/CHANGE?/VERIFY comments.
+
+---
+
+## Completed 2026-06-05
+
+### AUD-1 · NT Daily devotional — Matthew chapter count bug *(HIGH)*
+- [x] `assets/js/daily.js` (line 470): Changed `['matthew', 34]` → `['matthew', 28]`. Matthew has 28 chapters; the wrong count caused 6 "Chapter unavailable." days per 266-day rotation cycle. `totalNT` now correctly equals 260.
+
+### CSS-7 · `--color-heading` undefined *(HIGH)*
+- [x] `assets/css/style.css` (`:root` block): Added `--color-heading: var(--color-text);`. Resolves all 24 references across 10 CSS files; the 5 dangerous `#1a1a1a` hardcoded fallbacks (timelapse.css, maps.css, lib-progress.css, bible-ui.css) now correctly inherit the dark-mode text color `#e8dfc8` instead of remaining near-invisible.
+
+### DATA-1 · 5 empty Bible version stubs cause 404 on every book load *(HIGH)*
+- [x] `data/versions/versions.json`: Added `"stub": true` to AKJV, DBY, GNV, WEBBE, YLT (all have 0 data files in `data/bible/{id}/`).
+- [x] `assets/js/core.js` (`populateVersionPicker`): Added `if (v.stub) return;` filter + INTENT/CHANGE?/VERIFY comments.
+- [x] `assets/js/reader.js`: Added stub filter in compare-default picker loop, compare panel header builder, and reader translation optgroup builder (3 spots).
+- [x] `assets/js/modal.js` (`syncModalVersionPicker`): Added stub filter; fixed idempotency guard from `=== metaVersions.length` to `> 0` (count no longer matches after filtering).
+- [x] `assets/js/verse-study.js` (`vsRenderVersionCompare`): Added stub filter so All Translations section skips versions with no data.
+
+---
+
 ## MKT NT Continuation — Completed 2026-06-03
 
 **Acts complete (28/28 chapters, 1,007 verses)** and **1 Thessalonians complete (5/5 chapters, 89 verses)**.
@@ -3460,3 +3528,288 @@ Previous note said "not on CCEL, Wikisource, or Gutenberg in clean HTML form." O
 - Chapters I–II: narrative paraphrase from CCEL section-by-section content (verbatim fetch was blocked by model; content is accurate to Boas)
 - Chapters III–VII: fully verbatim Boas translation
 - Scripture refs wired: Rom. 1:20, Col. 1:15, Gal. 2:20, John 10:9, Rev. 22:14, Exod. 3:14, Eph. 3:18, Rom. 5:5, Col. 1:26, Rev. 2:17, Luke 23:43, Job 7:15, Exod. 33:20, John 13:1, John 14:8, 2 Cor. 12:9, Ps. 73:26, Matt. 5:8, Song 1:1, John 17:3, Ps. 84:5
+
+---
+
+## Completed 2026-06-05 (session 4)
+
+### CSS-2 · style.css — Hamburger touch target
+
+Added `min-height: 44px; min-width: 44px;` to `.mobile-topbar__hamburger` in `assets/css/style.css`. Button was ~28.8px, below WCAG 2.1 SC 2.5.5 minimum. All mobile nav now meets 44px touch target.
+
+### CSS-3 · discipline.css — Discipline tab touch targets
+
+Added `min-height: 44px;` to `.disc-tab` in `assets/css/discipline.css`. On ≤500px the padding was reducing height to ~32px. The `min-height` guarantees 44px while preserving the tighter visual padding.
+
+### CSS-6 · reader.css — Keyboard browse hint on touch devices
+
+Added `@media (pointer: coarse) { .reader-browse-hint { display: none; } }` at end of `assets/css/reader.css`. Hides the "← → arrow keys" hint on any touch-primary device regardless of viewport width (fixes iPad Pro landscape and touch laptops at ≥700px).
+
+---
+
+## Completed 2026-06-05 (session 5)
+
+### CSS-1 · word.css — Mobile `.wd-body` height clipping
+
+Added `@media (max-width: 767px) { .wd-body { height: auto; min-height: unset; } }` to `assets/css/word.css`. The desktop layout uses `height: calc(100vh - 280px)` so both sidebar columns scroll independently; on mobile (single-column) that fixed height extended ~48px below the visible viewport, hiding the bottom of the verse list. With `height: auto`, the two `height: 100%` grid children (`.wd-sidebar`, `.wd-main`) resolve to auto as well, so all content flows naturally.
+
+### CSS-4 · study-nav.css — Font sizes and iOS zoom fix
+
+Four changes in `assets/css/study-nav.css`:
+1. `.sidebar-logo p` / `.study-nav .brand .sub`: `11px` → `0.75rem`
+2. `.sidebar-search input` / `.study-nav .search-wrap input`: `12px` → `1rem` — prevents iOS Safari viewport zoom on focus (iOS zooms when input `font-size < 16px`)
+3. `.nav-section-label` / `.study-nav .nav-section`: `10px` → `0.7rem`
+4. `.study-nav a.navlink::before`: `10px` → `0.7rem`
+
+INTENT/CHANGE?/VERIFY comment added on the search input change (the highest-impact fix).
+
+### DATA-2 · topics.json — Stale slug values
+
+Fixed two stale `slug` fields in `data/topics.json`:
+- `"sermon-on-the-mount-guide"` → `"study-guides/sermon-on-the-mount"` (matches actual `href`)
+- `"psalms-devotional"` → `"study-guides/psalms"` (matches actual `href`)
+
+Both entries have `href` set so `slug` was unused for navigation, but the mismatch would generate dead URLs if `href` were ever removed or if `slug`-based URL construction were added.
+
+---
+
+## Completed 2026-06-05 (session 6)
+
+### CSS-8 · maps.css + timelapse.css — First dark mode rules
+
+**timelapse.css** (appended at EOF): Dark mode block for `.tl-tribe-tip` and `.tl-place-tip` tooltips — both had `background: #fff` with `color: #222` (jarring white boxes over a dark map). Override uses `var(--color-surface, #231a0d)` / `var(--color-border, #3a2e1e)` / `var(--color-text, #e8dfc8)`. Also overrides `.tl-tribe-tt-detail` (was `color: #555`) and `.tl-place-tip-sep` (was `border-top: 1px solid #eee`). Both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` variants added.
+
+**maps.css** (appended at EOF): `.maps-map-container` (was `background: #e8f4f8`) → `#1a2a35` in dark mode; `.maps-site-item-star` (was `color: #b00010`, ~1.9:1 on dark) → `#e05060` (~4.6:1 on dark). Both variants added.
+
+### CSS-9 · lib-reader.css — Find-highlight dark mode
+
+Added `[data-theme="dark"] mark.lr-find-mark { background: #92610a; color: #fff; }` and `@media (prefers-color-scheme: dark)` mirror to `assets/css/lib-reader.css`. Amber `#92610a` replaces yellow `#fde68a` so search highlights are clearly visible on the dark warm-brown surface.
+
+### CSS-10 · timeline.css — Accent color dark mode
+
+Extended existing dark mode block in `assets/css/timeline.css` with:
+- `.tl-detail-section-title--legacy`: `#2a6b6b` (~2.1:1 on dark) → `#4fb3b3` (~6.8:1)
+- `.tl-detail-lib-chip`: same teal fix, plus `border-color`
+- `.tl-detail-crossover__label` / `.tl-detail-crossover__link`: `#2d6e9e` → `#6baed6`
+Note: `.tl-ch-section-title` referenced in the TODO does not exist in timeline.css — the class was likely renamed; no change needed for it.
+
+---
+
+## Completed 2026-06-05 (session 7)
+
+### PERF-1 · word.js — Batched interlinear fetches (5 at a time) *(HIGH)*
+
+**word.js** (`wdInit`, fetch block, lines 112–159): Replaced `books.map(loadInterlinear)` + `Promise.all(fetches)` with a recursive batch strategy. Books are split into chunks of 5 (`BATCH_SIZE = 5`); `_processBatch(chunkIdx)` runs `Promise.all` on each chunk then chains to the next via `.then`. Accumulator variables (`bookMatches`, `translationCount`, `morphCount`, `totalCount`) are captured by closure and mutated in-place — no data loss between batches. Progress counter still increments per-book inside each chunk. INTENT/CHANGE?/VERIFY comments added to the batch block.
+
+**core.js** (`loadInterlinear`, line 847): Updated to store the in-flight Promise in `interlinearCache` immediately on first call (before fetch resolves). Concurrent callers for the same bookId now share a single fetch via `Promise.resolve(inFlightPromise)`. Cache entry is replaced with resolved data once the fetch settles. INTENT/CHANGE?/VERIFY comments added.
+
+### PWA-4 · sw.js — Removed duplicate `./dictionary/index.html` from SHELL_URLS *(LOW)*
+
+**sw.js** (SHELL_URLS, former line 195): Removed the second `'./dictionary/index.html'` entry. The first occurrence at line 93 is sufficient. Eliminates one wasted install fetch + `cache.put` call.
+
+### AUD-5 · style.css — Added `a.ref:focus-visible` outline *(LOW)*
+
+**style.css** (after `a.ref:hover` rule): Added `a.ref:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 2px; }`. Matches the link's own `--color-accent` text color for visual consistency and ensures WCAG 2.2 SC 2.4.11 Focus Appearance is met on all `.ref` links — which lose the browser's built-in `:-webkit-any-link` focus ring when `wire.js` removes their `href` and adds `tabindex="0"`.
+
+---
+
+## Completed 2026-06-05 (session 7)
+
+### NAV-1 · reader.js — Bookmarks panel "View all" link
+
+Added `BOOKMARKS_URL` to the import list in `assets/js/reader.js` (was exported from core.js but never imported anywhere). Rewrote `_loadReaderBookmarks()` to convert the early-return empty-state into an `if/else` block so the "View all" link can be appended unconditionally at the end in both the empty and populated states. Link element has class `reader-bm-viewall`, `href: BOOKMARKS_URL`, text "View all bookmarks ↗".
+
+### CSS-5 · reader.css + verse-study.css — Sub-44px touch targets
+
+- `assets/css/reader.css` `.reader-sidebar__ch` at ≤699px: `min-height: 36px` → `min-height: 44px`
+- `assets/css/verse-study.css` `.vs-xref-link` at ≤640px: `min-height: 36px` → `min-height: 44px`
+
+The browse-bar buttons (36px at lines 1255, 1269 in reader.css) were intentionally left — the TODO only specified the chapter sidebar buttons and xref chips.
+
+### AUD-4 · discipline-strip.js — aria-label replaces title
+
+`assets/js/discipline-strip.js` line 32: `title="..."` replaced with `aria-label="..."`. Done-state marker changed from `' ✓'` to `' — done'` for consistent prose label. `title` is unreliable in VoiceOver and on touch devices (no hover); `aria-label` is the ARIA-spec approach for accessible link names.
+
+---
+
+## Completed 2026-06-05 (session 8)
+
+### CODE-2 · tracker.js — Cross-module localStorage couplings documented *(MEDIUM)*
+
+**tracker.js** (`isReadingDone`): Added `// CHANGE?` noting it reads `'bsw_plans'` (schema `{ [planId]: { startDate, completed: { [dayNum]: dateStr } } }`) owned by `daily.js`; if schema or key changes, both this function and `daily.js:_dailyRenderPlan` must be updated together.
+
+**tracker.js** (`isPrayerDone`): Added `// CHANGE?` noting it reads `'bsw_journal'` (array of `{ date: string, ... }` objects) owned by the journal module in `daily.js`.
+
+**tracker.js** (`onUpdate`): Replaced prose header comment with `// INTENT:` (same-tab callback registration, enables home-page tracker to update without reload) + `// CHANGE?` (explicitly notes this only fires for same-tab mutations; cross-tab changes come via the native `storage` event, which callers must wire separately; current registered caller is `app.js`).
+
+### AUD-2 · discipline/index.html — More ▾ menu keyboard navigation *(MEDIUM)*
+
+**discipline/index.html** (inline script, after the document click listener): Added `_moreMenu.addEventListener('keydown', ...)` handler implementing full WAI-ARIA menu keyboard contract: `Escape` closes menu and returns focus to `_moreBtn`; `ArrowDown`/`ArrowUp` cycle focus through `.disc-more-item` buttons (wrapping); `Home`/`End` jump to first/last item. All keys call `e.preventDefault()` to stop page scroll.
+
+### AUD-3 · discipline/index.html — Tab widgets ARIA associations *(MEDIUM)*
+
+**discipline/index.html** — added complete `aria-controls`/`role="tabpanel"`/`aria-labelledby` wiring across all three tab groups:
+
+**Main discipline tabs** (5 buttons): Added `id="disc-tab-{name}"` and `aria-controls="disc-{name}"` to each. Added `role="tabpanel"` and `aria-labelledby="disc-tab-{name}"` to all 5 panels (`disc-plans`, `disc-devotionals`, `disc-memory`, `disc-journal`, `disc-worship`).
+
+**Memory tabs**: Added `id="mem-browse-tab"` and `aria-controls="mem-browse-panel"` to the Browse button; added `aria-controls="mem-review-panel"` to the existing `#mem-review-tab`. Added `role="tabpanel"` + `aria-labelledby` to `#mem-browse-panel` and `#mem-review-panel`.
+
+**Devotional period tabs**: Added `id="devot-tab-morning/evening"` and `aria-controls="devot-card"` to both period buttons. Added `role="tabpanel"` and `aria-labelledby="devot-tab-morning"` to `#devot-card` (the shared panel; `aria-labelledby` reflects the initially active tab).
+
+---
+
+## Completed 2026-06-05 (session 9 — cleanup + implementations)
+
+### RD-J · Attribution Line — Suppress for Single-Verse Results *(LOW)*
+
+**assets/js/reader.js** (line 378): Already implemented — `attrEl.hidden = !!(g.ref.v && !g.ref.endV)`. Converted to completion stub (pre-done).
+
+### RD-K · Mobile Browse Bar — Hide Keyboard Hint *(LOW)*
+
+**assets/css/reader.css** (line 1315): Already implemented — both `@media (max-width: 699px) { .reader-browse-hint { display: none; } }` and `@media (pointer: coarse) { .reader-browse-hint { display: none; } }`. Converted to completion stub (pre-done).
+
+### VS-A · Prev/Next Verse Navigation *(HIGH)*
+
+**verse-study/index.html** and **assets/js/verse-study.js**: Already implemented — `#vs-prev-link` / `#vs-next-link` anchor elements in HTML; wired in `loadVerseStudyVerse` at lines 211–233 with VERSE_STUDY_URL refs and hidden attribute management. Converted to completion stub (pre-done).
+
+### VS-B · Sidebar Nav — Active Section Scroll-Spy *(MEDIUM)*
+
+**assets/js/verse-study.js**: Already implemented — `_vsNavObserver` module-level variable, `IntersectionObserver` registration at `vsRebuildNav` (line 945), `btn.dataset.sectionId` assignment (line 935). Converted to completion stub (pre-done).
+
+### VS-E · Copy Verse Button in Header Actions *(LOW)*
+
+**verse-study/index.html** (line 44) and **assets/js/verse-study.js** (lines 236–246): Already implemented — `#vs-copy-btn` button in HTML and `navigator.clipboard.writeText` wiring with "Copied ✓" feedback. Converted from claimed in-progress to completion stub (pre-done).
+
+### VS-F · Word Study Flyout — Full Definition Expand *(LOW)*
+
+**assets/js/verse-study.js** (lines 447–459): Already implemented — `isLong = entry.def.length > 300`, `.vs-wp-def-rest[hidden]`, `.vs-wp-def-more` button with click expand. Converted to completion stub (pre-done).
+
+### VS-G · Commentary — Long-Entry Truncation with Expand *(LOW)*
+
+**assets/js/verse-study.js** (lines 763–779): Already implemented — `COMM_THRESHOLD = 800`, `.vs-comm-truncated`, `.vs-comm-expand-btn` with click-to-remove. Converted to completion stub (pre-done).
+
+### VS-H · Header Height — Wrong scroll-margin-top Until Verse Resolves *(LOW)*
+
+**assets/js/verse-study.js** (line 168): Already implemented — `requestAnimationFrame` measurement of `vs-sticky-header.offsetHeight` called immediately in `initVerseStudyPage`. Converted to completion stub (pre-done).
+
+---
+
+## Completed 2026-06-05 (session 9 — PERF-3 · UX-4 · NAV-2 carried from session 8)
+
+### PERF-3 · search.js full-text search filter hint *(MEDIUM)*
+
+**assets/js/search.js** (`handleSearchInput`, line 462): Added filter tip UI. When `booksToSearch.length === 66` (no OT/NT/Book filter active), the loading message appends `<span class="omni-filter-tip">Tip: use OT / NT / Book filters to search faster.</span>`. Tip does not appear when any filter narrows the search. Added `// INTENT:` / `// CHANGE?` / `// VERIFY:` comment block per coding standard.
+
+### UX-4 · library.js — Secondary dictionary source load failures *(LOW)*
+
+**assets/js/library.js** (secondary sources `.forEach` block, line 821): Replaced empty `.catch(function () {})` with `console.warn('[dict] secondary source failed to load:', key)`. Developer-visible only; partial results remain available to the user. Added `// INTENT:` comment.
+
+### NAV-2 · `progress/` page linked from sidebar nav *(LOW)*
+
+**assets/js/main.js** (Discipline nav group children, line 92): Added `{ label: '📊 Reading Progress', href: _r('progress/') }`. The standalone Bible chapter tracker page was pre-cached in SHELL_URLS but unreachable via any UI element. Now appears in the Discipline nav group between the Discipline History and (any other) items.
+
+---
+
+## Completed 2026-06-05 (session 10)
+
+### UX-5 · history/index.html — Iframe tabs have no fallback *(LOW)*
+
+**history/index.html** (inline script, `activateTab`, after `iframe.src = iframe.dataset.src`): Added `iframe.addEventListener('error', function () { panel.innerHTML = '<p style="padding:2rem;color:var(--color-muted)">Could not load this view. Check your connection.</p>'; }, { once: true })`. Added INTENT/CHANGE?/VERIFY comment block. The panel's `innerHTML` is replaced entirely on error so the blank iframe is removed.
+
+### PWA-3 · `pwa.js` dark mode theme-color meta *(LOW)*
+
+**assets/js/pwa.js** (`initPWA`, inside the existing `!document.querySelector('meta[name="theme-color"]')` guard): After appending the light-mode meta (`#5c3d1e`), created a second `<meta name="theme-color" content="#3a2008" media="(prefers-color-scheme: dark)">` and appended it to `document.head`. Added INTENT/CHANGE?/VERIFY comment block noting the manifest spec limitation (no media-query support for splash colors). Dark value `#3a2008` is between the site's `--color-bg: #1a1208` and `--color-surface` to remain distinguishable from pure black.
+
+### CODE-8 · sw.js — cacheFirst and precacheBible comments *(LOW)*
+
+**sw.js** (`networkFirst` already had the comment block): Added INTENT/CHANGE?/VERIFY to `cacheFirst` (stale-while-revalidate pattern, when to use networkFirst instead) and INTENT/CHANGE?/VERIFY to `precacheBible` (message shape, chunked fetch with 150 ms gaps, DATA_CACHE_V routing).
+
+---
+
+## Completed 2026-06-05 (session 11)
+
+### CODE-6 · daily.js — Plan-state localStorage coupling *(LOW)*
+
+**assets/js/daily.js** (`_computeStreakFromDays`, line 58): Added INTENT/CHANGE?/VERIFY comment block explaining the "today or yesterday" grace window that keeps streaks alive at midnight, pointing to `tracker.js:isReadingDone` as a parallel implementation.
+
+**assets/js/daily.js** (`_dailyRenderPlan`, before the `bsw_plans` read, line 237): Added `// CHANGE?` noting the `bsw_plans` schema `{ [planId]: { completed: { [dayNum]: dateStr } } }`, the `bsw_daily_start_{planId}` dynamically-named key pattern, and that `tracker.js:isReadingDone` reads `bsw_plans`.
+
+### CODE-1 · storage.js — All localStorage write paths comments *(MEDIUM)*
+
+**assets/js/storage.js** (`_migrateOldNotes`, line 62): Added INTENT (one-shot v1→v2 migration guarded by sentinel) + CHANGE? (sentinel re-run hazard) + VERIFY (bsw_notes_v2_migrated key after reload).
+
+**assets/js/storage.js** (`_runStorageMigrations`, line 144): Added INTENT (versioned runner called from app.js boot) + CHANGE? (how to add new migration phases) + VERIFY (bsw_storage_v key = "1" after fresh load).
+
+**assets/js/storage.js** (`_historyPush`, line 187): Added INTENT (reading history deduped list) + CHANGE? (HISTORY_KEY consumed by reader.js:_historyGet and daily.js history widget) + VERIFY.
+
+**assets/js/storage.js** (`_recordReadingDay`, line 214): Added INTENT (streak log date recording) + CHANGE? (STREAK_KEY schema, 400-entry cap, daily.js and tracker.js consumers) + VERIFY.
+
+### Pre-done tasks batch-converted (session 11)
+
+All items below were already implemented in the codebase — their TODO sections had `[x]` checkboxes but section headers weren't marked complete:
+
+- **RD-C** (HIGH): Resume banner (`reader-resume-banner`) in `reader.js:initReaderLookup` — reads `bsw_history[0]`, shows dismissable banner with `sessionStorage` guard. CSS at `reader.css:1142`.
+- **RD-E** (MEDIUM): Verse active highlight — `wireVerseNumberPopup` adds/removes `.reader-verse--active` on click/modal-close. CSS at `reader.css:664`.
+- **RD-F** (MEDIUM): Notes compose scope — placeholder updated to "Add a chapter note for {ch} (click a verse number…)"; hint text at `reader.js:1102`.
+- **RD-G** (MEDIUM): Cross-refs multi-passage cap — `.reader-xref-chips` row, "Showing cross-refs for…" scope note, chip click reloads. `reader.js:1229+`.
+- **RD-H** (MEDIUM): Empty-state guidance — `.reader-empty-state` with `.reader-qs-chip` quick-start links. `reader.js:488–500`. CSS at `reader.css:1172+`.
+- **VS-C** (MEDIUM): Section collapse/expand — `.vs-section-toggle` button, `aria-expanded`, `body.hidden` toggle. `verse-study.js:896+`.
+- **VS-D** (MEDIUM): All Translations lazy load + diff — `IntersectionObserver` defers `vsRenderVersionCompare`; `applyHighlights(row)` per translation row. `verse-study.js:819+`.
+
+---
+
+## Completed 2026-06-05 (session 12)
+
+### CODE-7 · reader.js — Undocumented localStorage keys and _readerLookupFn *(MEDIUM)*
+
+**assets/js/reader.js** (`setXrefNotesEnabled`, line 34): Added INTENT/CHANGE?/VERIFY — persist xref footnote toggle across reloads; XREF_NOTES_KEY consumers noted.
+
+**assets/js/reader.js** (`setCompareVersion`, line 78): Added INTENT/CHANGE?/VERIFY — persist compare version selection; COMPARE_KEY consumers noted.
+
+**assets/js/reader.js** (`window._readerLookupFn`, line 254): Added CHANGE? listing all callers — `_navigateChapter`, `initCompareToggle`, `onVersionChange`, keyboard handler.
+
+**assets/js/reader.js** (`READ_KEY`, line 266): Extracted `bsw_chapter_read` string to module-level constant with INTENT/CHANGE?/VERIFY. Removed the re-declaration inside the IIFE (line ~417 now just uses the module-level constant).
+
+**assets/js/reader.js** (`initReaderLookup`, line 481): Added CHANGE? comment on the `window._readerLookupFn = doLookup` assignment listing all callers to prevent silent breakage during refactors.
+
+### Pre-done tasks batch-converted (session 12)
+
+- **RD-A** (HIGH): `_navigateChapter` uses `window._readerLookupFn()` for all three nav branches (next/prev within book, cross-book). No full `window.location.href` reloads. `reader.js:532+`.
+- **RD-B** (HIGH): `initViewToggle` in `interlinear.js:88` creates `reader-view-btn` and `reader-view-popover`. Split/Wide/Sidebar/FontSize controls injected into popover via `_getViewPopover()`. CSS at `reader.css:432+`. Close on outside click + Escape.
+- **RD-L** (HIGH): `injectComparePanel` builds a per-verse CSS grid with `.reader-compare-grid` (2-col), `.reader-compare-col-hdr` sticky headers, `.reader-compare-cell--a/b` verse cells. Secondary cells filled async from `resolveVerses` with `applyHighlights`. CSS at `reader.css:1647+`. Mobile stacks to 1 column at ≤600px.
+
+---
+
+## Completed (pre-loop — converted to stubs 2026-06-05)
+
+### WD-A through WD-K · Word Study Page Improvements
+
+All items already had `[x]` checkboxes when the loop started — completed in a prior work session. Converted to completion stubs in session 8. Summary of what was implemented:
+
+- **WD-A** (HIGH): Loading progress bar — `word.js` tracks `completed/total` and shows "Loading books… N / 27"
+- **WD-B** (HIGH): Hash-based filter state — `#book=...&trans=...` persisted to URL, restored on load, synced via hashchange
+- **WD-C** (HIGH): Morphological form table — `_wdRenderMorphTable()` using `expandMorphCode()`
+- **WD-D** (MEDIUM): "All translations" / "All books" reset rows; "Clear all" button in filter bar (also covers WD-J)
+- **WD-E** (MEDIUM): "Open in Reader" `.wd-book-reader-link` per book section heading
+- **WD-F** (MEDIUM): `#wd-books` max-height `160px` → `clamp(160px, 28vh, 260px)`
+- **WD-G** (MEDIUM): Genre breakdown in stat cards; `genre` field added to books.json
+- **WD-H** (MEDIUM): Strong's lexicon added as collapsible second source in header
+- **WD-I** (LOW): Keyboard navigation — arrow keys step verse cards; `b`/`t`/Escape shortcuts
+- **WD-J** (LOW): Consolidated into WD-D
+- **WD-K** (LOW): Semantic range bar polish — 8px → 12px height, percentage labels
+
+---
+
+## Completed 2026-06-05 (loop iteration)
+
+### AUD-6 · apocrypha-reader.js — `_getOrderedBooks()` crashes with TypeError *(HIGH)*
+
+`assets/js/apocrypha-reader.js` (`_getOrderedBooks`, line 121): Fixed `order.map(...)` → `(order.books || []).map(...)`. `_canonOrders[key]` returns an object `{label, note, books:[...]}`, not an array — calling `.map()` on it threw `TypeError: order.map is not a function`, making the book list silently blank for all four full-bible versions (DR, WEB-CE, KJV-APO, BRENTON). Added full INTENT/CHANGE?/VERIFY comment block documenting the schema contract.
+
+### CSS-13 · ol-companion.css — tier label colors missing dark mode override *(MEDIUM)*
+
+`assets/css/ol-companion.css`: Added `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` overrides for `.olc-tier-lit`, `.olc-tier-med`, `.olc-tier-tho`. Light-mode dark colors (`#3a5c9e`, `#2e7d32`, `#7b2d8b`) become invisible on dark backgrounds; replaced with high-contrast equivalents (`#90b4e8`, `#81c784`, `#ce93d8`). Guards follow `memorize.css` `:root:not([data-theme="light"])` pattern.
+
+### CSS-14 · discipline.css — reading plan done-state colors missing dark mode override *(MEDIUM)*
+
+`assets/css/discipline.css`: Added `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` overrides for `.plan-today__mark--done`, `.plan-today__mark--done:hover`, `.plan-today__complete-msg`, and `.plan-calendar__check`. Used consistent dark green values (`#1b3a1b` background, `#66bb6a` text) matching the existing `.worship-badge--green` dark override pattern already in the file.

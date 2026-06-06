@@ -55,6 +55,13 @@ function _streakPrevDay(ds) {
   return _streakFmtDate(new Date(d.getTime() - 86400000));
 }
 
+// INTENT: "Today or yesterday" starting point keeps the streak alive if the user hasn't
+//   read yet today but did read yesterday — prevents a midnight reset from breaking a
+//   multi-day streak before the user opens the app on the new day.
+// CHANGE? If the grace window changes (e.g., "within 36 hours"), update the cursor
+//   initialisation below; the same logic appears in tracker.js:isReadingDone.
+// VERIFY: On a device, mark a reading day, then advance the OS clock past midnight
+//   without opening the app. Reopen — current streak should be unchanged (not 0).
 function _computeStreakFromDays(days) {
   if (!days || !days.length) return { current: 0, longest: 0 };
   var set = Object.create(null);
@@ -227,7 +234,10 @@ function _dailyRenderPlan(planId) {
       var dayData    = plan.days[clampedDay - 1];
       if (!dayData) { contentEl.innerHTML = '<p class="daily-plan-empty">No reading for today.</p>'; return; }
 
-      // Use actual completions for the progress bar
+      // CHANGE? bsw_plans schema: { [planId]: { completed: { [dayNum]: dateStr } } }
+      //   tracker.js:isReadingDone reads this same key to determine daily-discipline status.
+      //   bsw_daily_start_{planId} is a per-plan start date written only by this function;
+      //   if the key pattern changes, the date picker restore at line ~203 breaks silently.
       var plansStateRaw = {};
       try { plansStateRaw = JSON.parse(localStorage.getItem('bsw_plans') || '{}'); } catch (_) {}
       var completedMap  = (plansStateRaw[planId] && plansStateRaw[planId].completed) || {};
@@ -467,7 +477,7 @@ function _dailyRenderDevotional(source, period) {
 
   if (source === 'nt-daily') {
     var NT_BOOKS_CHRON = [
-      ['matthew',34],['mark',16],['luke',24],['john',21],['acts',28],
+      ['matthew',28],['mark',16],['luke',24],['john',21],['acts',28],
       ['james',5],['galatians',6],['1thessalonians',5],['2thessalonians',3],
       ['1corinthians',16],['2corinthians',13],['romans',16],
       ['philippians',4],['philemon',1],['colossians',4],['ephesians',6],

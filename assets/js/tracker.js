@@ -61,6 +61,9 @@ export function isDone(discipline, date) {
 
 // ── Derived: reading (from bsw_plans) ────────────────────────────────────────
 // Returns true if any enrolled plan has today's day number marked complete.
+// CHANGE? Reads 'bsw_plans' (schema { [planId]: { startDate: string, completed: { [dayNum]: dateStr } } })
+//   owned by daily.js. If daily.js renames this key or changes its schema, this function silently
+//   returns false. daily.js:_dailyRenderPlan also reads the same key — update both together.
 export function isReadingDone(date) {
   date = date || _todayStr();
   try {
@@ -78,6 +81,8 @@ export function isReadingDone(date) {
 
 // ── Derived: prayer (from bsw_journal) ───────────────────────────────────────
 // Returns true if any journal entry's date field matches the given date.
+// CHANGE? Reads 'bsw_journal' (array of { date: string, ... } objects) owned by the journal
+//   module in daily.js. If the key is renamed or the array schema changes, update this function.
 export function isPrayerDone(date) {
   date = date || _todayStr();
   try {
@@ -157,8 +162,12 @@ export function getToday() {
 }
 
 // ── Change notifications ──────────────────────────────────────────────────────
-// Allows the home-page tracker card to re-render when a discipline is marked
-// done in the same tab (cross-tab updates fire via the native `storage` event).
+// INTENT: Register callbacks that fire when any discipline's completion state changes in the
+//   same browser tab; enables the home-page tracker card to update without a reload.
+// CHANGE? This mechanism only covers same-tab mutations (fired by _setAll). Cross-tab changes
+//   — e.g., user completes reading in the reader tab — arrive only via the native
+//   window.addEventListener('storage', ...) event, which callers must wire separately.
+//   Current callers: app.js registers the home-page tracker rerender via onUpdate.
 export function onUpdate(fn) {
   _listeners.push(fn);
 }

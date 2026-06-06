@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v64';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v65';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -192,7 +192,6 @@ var SHELL_URLS = [
   './data/smith/index.json',
   './data/hitchcock/index.json',
   './data/torrey/torrey.json',
-  './dictionary/index.html',
   './timeline/index.html',
   './maps/index.html',
   './wordcloud/index.html',
@@ -268,6 +267,13 @@ self.addEventListener('fetch', function (e) {
   }
 });
 
+// INTENT: Network-first with cache fallback; serves offline.html if both fail.
+//   ignoreSearch:true allows cached base URLs (e.g. /discipline/index.html) to match
+//   navigations with query params (/discipline/?tab=journal) so SPA pages load offline.
+// CHANGE? If a page needs distinct caches per query string (not this site's model), remove
+//   ignoreSearch and cache the parameterized URL directly in SHELL_URLS instead.
+// VERIFY: In DevTools Network → Offline, navigate to /discipline/?tab=journal — the
+//   Discipline page should load from cache and show the Journal tab, not offline.html.
 function networkFirst(req, cacheName) {
   return fetch(req).then(function (response) {
     if (response.ok) {
@@ -276,7 +282,7 @@ function networkFirst(req, cacheName) {
     }
     return response;
   }).catch(function () {
-    return caches.match(req).then(function (cached) {
+    return caches.match(req, { ignoreSearch: true }).then(function (cached) {
       if (cached) return cached;
       return caches.match('./offline.html').then(function (offlinePage) {
         return offlinePage || new Response('<h1>Offline</h1>', {
@@ -287,6 +293,13 @@ function networkFirst(req, cacheName) {
   });
 }
 
+// INTENT: Stale-while-revalidate — returns cached copy immediately if available, then
+//   fetches a fresh copy in the background to update the cache for next time.
+//   First-time requests have no cached copy so the network fetch is awaited directly.
+// CHANGE? If a resource should never serve stale (e.g. a version manifest), use
+//   networkFirst instead; changing here would affect all CSS/JS/JSON routing.
+// VERIFY: Load /assets/js/app.js, go offline in DevTools, reload — the file should
+//   still load from cache with no network error in the console.
 function cacheFirst(req, cacheName) {
   return caches.open(cacheName).then(function (cache) {
     return cache.match(req).then(function (cached) {
@@ -313,6 +326,15 @@ self.addEventListener('message', function (e) {
   }
 });
 
+// INTENT: Prefetches all Bible book JSON files for the given versions in the background
+//   after the first page load, so subsequent offline reads don't require a network connection.
+//   Chunks are fetched in groups of 6 (CHUNK) with 150 ms gaps to avoid saturating the
+//   browser connection pool and competing with foreground navigation fetches.
+// CHANGE? Expected message shape: { type: 'PRECACHE_BIBLE', base: string, books: string[],
+//   versions: string[] }. Sent by pwa.js:initPWA after SW registration; if that call site
+//   changes the message schema this function breaks silently (books/versions default to []).
+// VERIFY: After first load in Chrome, open DevTools → Application → Cache Storage →
+//   bsw-data-v3; entries for data/bible/KJV/Gen.json etc. should appear progressively.
 function precacheBible(data) {
   var books    = data.books    || [];
   var versions = data.versions || [];

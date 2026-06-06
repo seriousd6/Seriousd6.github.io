@@ -404,8 +404,16 @@ export function handleSearchInput(query) {
   _saveSearchHistory(query);
 
   // Direct reference lookup — skip full-text scan for "Book Ch:V" queries.
+  // INTENT: Fast path for verse references; bypasses the full-text scan and loading bar,
+  //   so we show a brief "Looking up…" indicator and surface any fetch error explicitly.
+  // CHANGE? The element ID 'bsw-search-output' is also used by the full-text path below;
+  //   if renamed, update both this block and the _searchOut assignment at line ~443.
+  // VERIFY: Block *.json in DevTools Network, type "John 3:16" — output should show
+  //   "Could not load…" rather than staying blank or stuck on a previous result.
   var parsed = parseRef(query);
   if (parsed) {
+    var _refOut = document.getElementById('bsw-search-output');
+    if (_refOut) _refOut.innerHTML = '<p class="omni-loading">Looking up ' + escHtml(parsed.display) + '…</p>';
     loadBook(version, parsed.bookId).then(function (chapters) {
       if (gen !== _searchGeneration) return;
       var ch   = chapters && chapters[String(parsed.ch)];
@@ -417,7 +425,10 @@ export function handleSearchInput(query) {
         _lastSearchQuery   = query;
         renderSearchResults(results, query);
       }
-    }).catch(function () {});
+    }).catch(function () {
+      var out = document.getElementById('bsw-search-output');
+      if (out) out.innerHTML = '<p class="search-page-none">Could not load “' + escHtml(query) + '”. Check your connection and try again.</p>';
+    });
     return;
   }
 
@@ -440,9 +451,18 @@ export function handleSearchInput(query) {
        : books);
 
   // Show a loading indicator immediately so the user knows work is underway.
+  // INTENT: When no filter narrows the search, append a filter tip so users know they can reduce
+  //   the 66-book concurrent fetch by selecting OT / NT / Book first. This doesn't batch the
+  //   requests but reduces how often cold 66-book loads happen.
+  // CHANGE? If the filter UI changes from OT/NT/Book buttons to something else, update the tip text.
+  // VERIFY: Search "love" with no filter — loading message should include "Tip: use OT/NT/Book…".
+  //   Search "grace" with OT selected — tip should NOT appear (booksToSearch.length < 66).
   var _searchOut = document.getElementById('bsw-search-output');
   var _sortRow   = document.getElementById('bsw-search-sort-row');
-  if (_searchOut) _searchOut.innerHTML = '<p class="omni-loading">Searching ' + booksToSearch.length + ' books…</p>';
+  var _tipHtml   = (booksToSearch.length === 66)
+    ? ' <span class="omni-filter-tip">Tip: use OT / NT / Book filters to search faster.</span>'
+    : '';
+  if (_searchOut) _searchOut.innerHTML = '<p class="omni-loading">Searching ' + booksToSearch.length + ' books…' + _tipHtml + '</p>';
   if (_sortRow) _sortRow.hidden = true;
   var _partialDone = false;
 

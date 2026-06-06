@@ -82,142 +82,47 @@ Examples: `zc-original-john-1-5.py`, `zc-context-romans-1-8.py`, `zc-christ-gene
 
 ---
 
-### WD-A · Performance — Loading Progress for Bulk Interlinear Fetch *(HIGH)*
-
-`initWordPage` fires one `loadInterlinear()` call per book in the relevant testament — up to 27
-(NT) or ~39 (OT) concurrent fetches. There is no progress feedback; the user sees only the
-static "Loading…" header text until every book resolves. For a common word (e.g. G2316 θεός,
-1300+ occurrences) this can take 5–15 MB of network and several seconds on a slow connection.
-
-- [x] `word.js` (`initWordPage`, books fetch block): Track `completed` and `total` counters.
-  After each `loadInterlinear` promise settles, update a progress element:
-  `"Loading books… 12 / 27"`. Insert a `<p id="wd-progress" class="wd-loading"></p>` below
-  the header before the fetch starts; remove it (or replace with stat cards) once all books
-  are done.
-- [x] `word.css`: Add `.wd-progress { font-size:.82rem; color:var(--color-muted); margin-bottom:.5rem; }`
+*(WD-A complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-B · UX — Filter State Lost on Reload / Not Shareable *(HIGH)*
-
-Book (`_wdCurrentBook`) and translation (`_wdCurrentFilter`) filters live only in JS module
-state. Refreshing or sharing the URL loses both. A hash-based approach is cheap and makes
-filtered views linkable.
-
-- [x] `word.js` (`_wdToggleFilter`, `_wdToggleBook`): After updating module state, write to
-  `location.hash` — e.g. `#book=john&trans=love`. Use `encodeURIComponent` on each value.
-  Empty / null values should remove the key from the hash.
-- [x] `word.js` (`initWordPage`, after data loads): Read `location.hash` and restore
-  `_wdCurrentBook` and `_wdCurrentFilter` before calling `_wdRenderTranslations`,
-  `_wdRenderBooks`, and `_wdRenderVerses`.
-- [x] `word.js`: Listen to `window.addEventListener('hashchange', ...)` and re-apply filters
-  so browser Back/Forward navigation works.
+*(WD-B complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-C · Feature — Morphological Form Breakdown *(HIGH)*
-
-The interlinear token data includes a `.m` (morph code) field that `word.js` never reads.
-For a Greek verb like G3004 (λέγω) the distribution of tenses, voices, and moods across all
-occurrences is the most directly useful data for translation work. For nouns, case distribution
-matters. This data is already loaded; it just isn't surfaced.
-
-- [x] `word.js` (`initWordPage`, accumulation loop): While scanning tokens for matching
-  Strong's IDs, also collect `tok.m` values into a `morphCount` object:
-  `morphCount[tok.m] = (morphCount[tok.m] || 0) + 1`.
-- [x] `word.js`: Add `_wdRenderMorphTable(morphCount)` — expands each code via
-  `expandMorphCode` (already imported from `interlinear.js`) and renders a compact table of
-  form → count, sorted descending. Insert it between the stat cards and the two-column body.
-- [x] `word.css`: `.wd-morph-table` styles added.
-  Omit this section entirely for words with no morph codes (punctuation / particles).
+*(WD-C complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-D · UX — Interactivity Not Discoverable; No "All" Reset *(MEDIUM)*
-
-Translation rows and book pills are the only interactive elements in the sidebar, but they
-look like plain data — no tooltip, no affordance copy. Clearing a filter requires finding and
-clicking a chip in a different zone of the page; there is no "All / reset" button in the
-sidebar itself.
-
-- [x] `word.css`: `cursor:pointer` confirmed on `.wd-book-pill`; `title` attributes added via JS.
-- [x] `word.js` (`_wdRenderTranslations`): "All translations" row prepended; active when no filter set.
-  "All books" pill prepended in `_wdRenderBooks`.
-- [x] `word.js` (`_wdRenderVerses`, render function): "Clear all" button added at right end of `.wd-filter-bar`; visible when both filters active (consolidated with WD-J).
+*(WD-D complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-E · Feature — "Open in Reader" Link per Book Section *(MEDIUM)*
-
-Each `.wd-verse-ref-link` triggers the tooltip/modal but provides no path to the full passage
-context in the Reader. A small link per book-section heading (not per verse card — too noisy)
-closes the loop without cluttering the list.
-
-- [x] `word.js` (`_wdRenderVerses`, book section heading): `.wd-book-reader-link` appended inside heading.
-- [x] `word.css`: `.wd-book-reader-link` styles added.
+*(WD-E complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-F · UX — Books Sidebar Height Cap Too Tight *(MEDIUM)*
-
-`#wd-books` is capped at `max-height: 160px`. An OT word spanning 30+ books makes the pill
-grid nearly unreadable — three rows visible with heavy internal scrolling.
-
-- [x] `word.css` (`#wd-books`): Replaced `max-height: 160px` with `clamp(160px, 28vh, 260px)`.
+*(WD-F complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-G · UX — Author / Genre Breakdown in Stat Cards *(MEDIUM)*
-
-Stat cards show total occurrences, books, and unique translations — raw counts with no
-interpretive context. A Pauline word vs. a Johannine word vs. a Synoptic word tells a very
-different story; the book metadata almost certainly carries enough to compute a genre or
-author label per book.
-
-- [x] `data/bible/books.json`: `genre` field added to all 66 books.
-- [x] `word.js` (`_wdRenderStats`): "By genre" chip row appended to stat cards.
+*(WD-G complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-H · Feature — Second Lexical Source in Header *(MEDIUM)*
-
-The header shows Thayer (Greek) or BDB (Hebrew) as the sole lexical source. The Strong's
-dictionary data (`entry.gloss`, `entry.def`) is already in memory (loaded by `loadStrongs`)
-and could appear as a second source without any additional network fetch.
-
-- [x] `word.js` (`_wdRenderHeader`): Strong's (1890) added as `.wd-lexicon--strongs` collapsible card.
-- [x] `word.css`: `.wd-lexicon--strongs` with `--color-border` left-border added.
+*(WD-H complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-I · UX — Keyboard Navigation Through Verse List *(LOW)*
-
-The verse list can run to hundreds of entries with no keyboard shortcut to step through
-occurrences, jump to a book section, or toggle the active filter.
-
-- [x] `word.js`: `keydown` listener added — arrows step cards, `b`/`t`/`Escape` shortcuts.
-- [x] `word.css`: `.wd-verse-card--focused` style added.
+*(WD-I complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-J · UX — "Clear All Filters" When Both Filters Active *(LOW)*
-
-When both a book and a translation filter are active the user must dismiss two chips
-separately. A single button saves a click.
-
-- [x] Consolidated into WD-D — single "Clear all" button in filter bar handles both cases.
+*(WD-J complete — consolidated into WD-D — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### WD-K · Visual — Semantic Range Bar Polish *(LOW)*
-
-The translation frequency bars in `.wd-translation-bar` already encode percentages but are
-only 8px tall and carry no percentage label. A minor visual polish pass would make the
-semantic range story clearer.
-
-- [x] `word.css`: Bar height 8px → 12px; `border-radius:6px`.
-- [x] `word.js`: Percentage text `(38%)` appended; "How this word is translated:" label added.
-- [x] `word.css`: `.wd-trans-label`, `.wd-trans-pct` styles added.
+*(WD-K complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -253,142 +158,31 @@ reload. The toolbar is also severely overcrowded. Below items are roughly priori
 
 ---
 
-### RD-A · Chapter Navigation — Eliminate Full Page Reloads *(HIGH)*
-
-**Bug:** `_navigateChapter()` in `reader.js` uses `window.location.href = READER_URL + '?ref=...'`
-for all prev/next chapter navigation. This causes a full page reload, losing scroll position,
-clearing the right panel, resetting all toggles' visual state, and adding ~500ms latency for
-every chapter flip. By contrast, the chapter sidebar already uses `window._readerLookupFn` for
-in-page navigation — so the two nav paths are inconsistent.
-
-- [x] `reader.js` (`_navigateChapter`): Replace all `window.location.href = ...` assignments
-  with the in-page pattern already used by the sidebar:
-  ```js
-  var newRef = /* computed new ref string */;
-  var input  = document.getElementById('reader-lookup-input');
-  if (input) input.value = newRef;
-  if (window._readerLookupFn) window._readerLookupFn();
-  ```
-  Apply to all three branches: next chapter within book, prev chapter crossing into previous
-  book, next chapter crossing into next book. The `?ref=` URL is already updated by
-  `history.replaceState` inside `doLookup`, so deep-linking still works.
-- [x] `reader.js`: The ch=0 (intro page) branch of `_navigateChapter` already uses this pattern
-  correctly — verify it stays unchanged and serves as the model.
+*(RD-A complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-B · Browse Bar Overcrowding — View Options Overflow Menu *(HIGH)*
-
-**Problem:** All toggles are injected directly into the browse bar row:
-Interlinear · Book Info · ⇅ Compare · † Footnotes · ⇔ Split · ⇿ Wide · A− · A · A+ · A++ ·
-☰ Chapters · ? keyboard shortcuts · keyboard hint span = **13+ elements in one bar row**.
-On a 1280px screen with the site sidebar open, the reading area is ~700px wide — this row
-wraps or overflows, pushing content down.
-
-**Fix:** Keep 3–4 most-used controls inline; move the rest into a ⚙ "View" overflow popover.
-
-- [x] `interlinear.js` / `reader.js`: Add a single `<button id="reader-view-btn" class="reader-view-btn">⚙ View</button>` injected first into the browse bar. Below it, a `.reader-view-popover` (absolutely positioned, `hidden` by default).
-- [x] Move these into the popover (shown as a vertical list of toggle rows inside the popover):
-  - Split / Wide / Sidebar (layout toggles — rarely changed mid-session)
-  - Font size group (A− A A+ A++) — keep as a 4-button row inside the popover
-  - Parallels toggle (if present)
-  - Keyboard shortcuts `?` link
-- [x] Keep inline (always visible in browse bar):
-  - Interlinear toggle (frequently used during study)
-  - Compare toggle (frequently toggled)
-  - † Footnotes toggle (frequently toggled)
-  - Book Info toggle
-- [x] `reader.css`: `.reader-view-popover` — `position:absolute; top:100%; right:0; z-index:200; background:var(--color-surface); border:1px solid var(--color-border); border-radius:8px; padding:.6rem .75rem; min-width:200px; box-shadow:0 4px 16px rgba(0,0,0,.15)`; close on outside click and Escape
-- [x] Mobile (≤700px): Keep browse bar to book/chapter selects + Compare only; everything else in the ⚙ popover
+*(RD-B complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-C · Restore Last Position on Blank Load *(HIGH)*
-
-When navigating to `read/` with no `?ref=` parameter, the reader shows a blank `#reader-results`
-with no prompt. `bsw_history` already stores up to 100 recent references but is never used
-to restore state.
-
-- [x] `reader.js` (`initReaderLookup`): After the URL param check, if `refStr` is empty, read
-  `bsw_history[0]` from localStorage; if present, inject a dismissable banner into
-  `#reader-results`:
-  ```html
-  <div class="reader-resume-banner">
-    Continue where you left off:
-    <a class="reader-resume-link" href="?ref={lastRef}">{lastRef}</a>
-    <button class="reader-resume-dismiss" aria-label="Dismiss">✕</button>
-  </div>
-  ```
-  Do NOT auto-navigate — let the user click. Dismissing sets `bsw_reader_resume_dismissed`
-  so the banner doesn't reappear in the same session (use `sessionStorage`, not localStorage).
-- [x] `reader.css`: `.reader-resume-banner` — muted surface background, subtle left border in
-  `--color-primary`, `padding:.75rem 1rem`, `border-radius:6px`, `margin-bottom:1rem`,
-  flex row with the link and dismiss button
+*(RD-C complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-E · Verse Hover — Highlight Active Verse *(MEDIUM)*
-
-Clicking a verse number opens the modal, but the verse itself is not visually highlighted in
-the text — it looks identical to surrounding verses while the modal is open. A reading context
-highlight would help the eye return to position after dismissing the modal.
-
-- [x] `reader.js` (`wireVerseNumberPopup`): When a verse number is clicked, add class
-  `.reader-verse--active` to the parent `.reader-verse` element; remove it when the modal
-  closes (`modal.js` should fire a `bsw:modal:close` CustomEvent, or add a callback)
-- [x] `reader.css`: `.reader-verse--active` — subtle highlight: `background:var(--color-primary-faint, rgba(92,61,30,.07)); border-radius:3px; outline:1px solid var(--color-primary-faint)`
+*(RD-E complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-F · Right Panel — Notes Compose Scope *(MEDIUM)*
-
-The notes compose textarea in the right panel prompts `"Add a note for John 3…"` (whole
-chapter). Notes added here are stored at chapter scope. But the notes display shows
-verse-specific notes with their verse label — creating confusion about what the textarea
-actually targets. The verse-modal path is the only way to add a verse-specific note.
-
-- [x] `reader.js` (`_loadReaderNotes`): Change the compose textarea placeholder to explicitly
-  say `"Add a chapter note for {chLabel} (click a verse number to note a specific verse)…"`
-- [x] `reader.js`: Add a small hint beneath the textarea: `"Verse-specific notes: click the
-  verse number ↑"` in `.reader-hint` muted style — links the two note-entry paths explicitly
+*(RD-F complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-G · Cross Refs Panel — Cap on Multi-Chapter Views *(MEDIUM)*
-
-`_loadReaderXrefs` iterates `c <= Math.min(parsed.endCh, parsed.ch + 4)` — for a whole-chapter
-view this is one chapter, but for a multi-passage lookup (`Genesis 1; Romans 8`) it could
-produce cross-refs from all chapters simultaneously, making the panel unwieldy.
-
-- [x] `reader.js` (`_loadReaderXrefs`): Cap to the first chapter only for whole-chapter views;
-  for multi-passage lookups, show cross refs for the first group's chapter only and add a
-  note `"Showing cross-refs for {bookName} {ch}"` at the top of the panel
-- [x] Add a chip row `.reader-xref-chips` to let the user pick which loaded passage's cross-refs to show when there are multiple groups; clicking a chip reloads xrefs for that passage
+*(RD-G complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-H · Empty-State Guidance for Blank Load *(MEDIUM)*
-
-Separate from RD-C (which adds the resume banner for returning users). First-time visitors or
-users who've cleared history see a completely blank `#reader-results` with no affordance.
-
-- [x] `reader.js` (`initReaderLookup`): If no `?ref=` param AND no history entry, render a
-  structured empty state in `#reader-results`:
-  ```html
-  <div class="reader-empty-state">
-    <p class="reader-hint">Enter a reference above — <em>John 3:16</em>, <em>Romans 8</em>,
-    <em>Gen 1; John 1:1–14</em></p>
-    <div class="reader-quick-starts">
-      <a class="reader-qs-chip" href="?ref=John+1">John 1</a>
-      <a class="reader-qs-chip" href="?ref=Psalms+23">Psalm 23</a>
-      <a class="reader-qs-chip" href="?ref=Romans+8">Romans 8</a>
-      <a class="reader-qs-chip" href="?ref=Genesis+1">Genesis 1</a>
-      <a class="reader-qs-chip" href="?ref=Isaiah+53">Isaiah 53</a>
-    </div>
-  </div>
-  ```
-- [x] `reader.css`: `.reader-empty-state` — centered, `padding:2rem 0`; `.reader-qs-chip` —
-  same style as `.daily-passage-chip` (outlined pill links)
+*(RD-H complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -396,209 +190,15 @@ users who've cleared history see a completely blank `#reader-results` with no af
 
 ---
 
-### RD-J · Attribution Line — Suppress for Single-Verse Results *(LOW)*
-
-The attribution line (`"Berean Standard Bible…"`) appears after every result group including
-single-verse lookups like `John 3:16`. For a one-liner verse, the attribution takes up nearly
-as much vertical space as the verse itself.
-
-- [x] `reader.js` (`doLookup`): Set `attrEl.hidden = g.ref.v && !g.ref.endV` — hide
-  attribution when the lookup is a single verse (verse specified, no range). Keep it visible
-  for chapter views and ranges where attribution is appropriate context.
+*(RD-J complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-K · Mobile Browse Bar — Hide Keyboard Hint *(LOW)*
-
-`.reader-browse-hint` (`"j / → next chapter · k / ← prev"`) is visible on mobile where
-keyboard navigation is impossible.
-
-- [x] `reader.css`: Add `@media (max-width: 700px) { .reader-browse-hint { display: none; } }`
+*(RD-K complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### RD-L · Compare Mode — Per-Verse Row Locking *(HIGH)*
-
-**Problem:** Both compare columns render as independent flowing text. Since verse lengths
-vary between translations, the two columns fall out of vertical sync — if verse 3 in version A
-takes two lines but version B's verse 3 takes four, every verse after that appears at a
-different vertical position in each column. The comparison becomes unusable for detailed
-textual study. The root cause is the current DOM structure: each column is a `<p>` with
-consecutive `<span class="reader-verse">` children — two independent text flows with no shared
-row relationship.
-
-**Fix:** Replace the two flowing columns with a per-verse CSS grid where each verse number
-occupies one explicit grid row, shared across both columns. Row height is set by whichever
-cell is taller — both cells for verse N are always vertically aligned.
-
-**Target DOM structure:**
-```html
-<div class="reader-compare-grid">
-  <!-- sticky column headers -->
-  <div class="reader-compare-col-hdr reader-compare-col-hdr--a">
-    <span class="reader-compare-panel__label">A:</span>
-    <select class="reader-compare-ver-sel">…</select>
-  </div>
-  <div class="reader-compare-col-hdr reader-compare-col-hdr--b">
-    <span class="reader-compare-panel__label">B:</span>
-    <select class="reader-compare-ver-sel">…</select>
-  </div>
-  <!-- verse rows — one pair per verse, automatically placed into the same CSS grid row -->
-  <div class="reader-compare-cell reader-compare-cell--a" data-verse="1">
-    <sup class="reader-verse__num">1</sup> In the beginning God created…
-  </div>
-  <div class="reader-compare-cell reader-compare-cell--b" data-verse="1">
-    <sup class="reader-verse__num">1</sup> In the beginning God created…
-  </div>
-  <div class="reader-compare-cell reader-compare-cell--a" data-verse="2">…</div>
-  <div class="reader-compare-cell reader-compare-cell--b" data-verse="2">…</div>
-  …
-</div>
-```
-In a `display: grid; grid-template-columns: 1fr 1fr` container, consecutive pairs of cells
-are automatically placed into the same row, and the row height equals the taller of the two.
-No explicit `grid-row` declarations needed.
-
-**Implementation:**
-
-- [x] `reader.js` (`injectComparePanel`): Replace the current two-panel approach with a
-  per-verse grid builder. Extract primary verses from `g.verses` (already resolved). Build the
-  grid DOM immediately with primary cells filled and secondary cells showing
-  `<span class="reader-compare-loading">…</span>` as placeholders:
-  ```js
-  var grid = document.createElement('div');
-  grid.className = 'reader-compare-grid';
-  // — header row —
-  grid.appendChild(_buildComparePanelHdr(primaryVer, 'primary'));
-  grid.appendChild(_buildComparePanelHdr(cmpVer, 'secondary'));
-  // — verse rows — primary cells filled immediately
-  g.verses.forEach(function (vObj) {
-    var cellA = document.createElement('div');
-    cellA.className = 'reader-compare-cell reader-compare-cell--a';
-    cellA.dataset.verse = String(vObj.chapter) + ':' + String(vObj.verse);
-    cellA.innerHTML = '<sup class="reader-verse__num reader-compare-vnum">' +
-      vObj.verse + '</sup>' + escHtml(vObj.text);
-    var cellB = document.createElement('div');
-    cellB.className = 'reader-compare-cell reader-compare-cell--b reader-compare-cell--loading';
-    cellB.dataset.verse = String(vObj.chapter) + ':' + String(vObj.verse);
-    cellB.innerHTML = '<span class="reader-compare-loading">…</span>';
-    grid.appendChild(cellA);
-    grid.appendChild(cellB);
-  });
-  // replace existing text content with the grid
-  var bottomNav = groupEl.querySelector('.reader-chapter-nav--bottom');
-  if (bottomNav) groupEl.insertBefore(grid, bottomNav);
-  else groupEl.appendChild(grid);
-  textEl.parentNode && textEl.parentNode.removeChild(textEl);
-  attrEl && attrEl.parentNode && attrEl.parentNode.removeChild(attrEl);
-  ```
-- [x] `reader.js`: When secondary `resolveVerses` resolves, fill in each `--b` cell by
-  matching on `data-verse`:
-  ```js
-  resolveVerses(g.ref, cmpVer).then(function (verses) {
-    if (!verses || !verses.length) {
-      grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
-        cell.innerHTML = '<span class="reader-compare-unavail">—</span>';
-        cell.classList.remove('reader-compare-cell--loading');
-      });
-      return;
-    }
-    var byVerse = {};
-    verses.forEach(function (v) { byVerse[v.chapter + ':' + v.verse] = v.text; });
-    grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
-      var key  = cell.dataset.verse;
-      var text = byVerse[key];
-      var vNum = key.split(':')[1];
-      cell.classList.remove('reader-compare-cell--loading');
-      cell.innerHTML = text
-        ? '<sup class="reader-verse__num reader-compare-vnum">' + vNum + '</sup>' + escHtml(text)
-        : '<span class="reader-compare-unavail">—</span>';
-    });
-    applyHighlights(grid);
-    // Add attribution below the grid
-    var attr = ATTRIBUTION[cmpVer];
-    if (attr) {
-      var attrEl2 = document.createElement('p');
-      attrEl2.className = 'reader-result-group__attr';
-      attrEl2.textContent = attr;
-      grid.after(attrEl2);
-    }
-  });
-  ```
-- [x] `reader.js` (`_buildComparePanelHdr`): No structural changes needed — the function
-  still returns a `div` which now becomes a column header cell inside the grid rather than a
-  panel header above a panel.
-
-**CSS:**
-
-- [x] `reader.css`: Replace `.reader-compare-wrap` / `.reader-compare-panel` rules with:
-  ```css
-  .reader-compare-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;                        /* no gap — borders handle separation */
-    margin: 0.5rem 0 1rem;
-  }
-  .reader-compare-col-hdr {
-    /* first two children of the grid = sticky column headers */
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-bottom: 2px solid var(--color-primary);
-    padding: 0.3rem 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-ui);
-  }
-  .reader-compare-col-hdr--a { border-right: none; border-radius: 6px 0 0 0; }
-  .reader-compare-col-hdr--b { border-radius: 0 6px 0 0; }
-  .reader-compare-cell {
-    padding: 0.5rem 0.75rem;
-    font-size: var(--reader-font-size, 1rem);
-    line-height: 1.72;
-    border-bottom: 1px solid var(--color-border);
-    /* align-self: stretch is default — both cells in a row stretch to the same height */
-  }
-  .reader-compare-cell--a {
-    border-right: 1px solid var(--color-border);
-  }
-  .reader-compare-cell--loading {
-    color: var(--color-muted);
-  }
-  .reader-compare-unavail {
-    color: var(--color-muted);
-    font-style: italic;
-    font-size: 0.85rem;
-  }
-  .reader-compare-vnum {
-    color: var(--color-muted);
-    font-size: 0.72em;
-    margin-right: 0.2em;
-    vertical-align: super;
-    font-style: normal;
-    user-select: none;
-  }
-  @media (max-width: 600px) {
-    /* On narrow screens, stack versions — verse locking less important than readability */
-    .reader-compare-grid { grid-template-columns: 1fr; }
-    .reader-compare-col-hdr--a,
-    .reader-compare-cell--a { border-right: none; }
-    .reader-compare-col-hdr--b,
-    .reader-compare-cell--b { border-top: 2px solid var(--color-primary); }
-  }
-  ```
-- [x] `reader.css`: Remove old `.reader-compare-wrap`, `.reader-compare-panel`,
-  `.reader-compare-panel__hdr` rules (now replaced by `.reader-compare-grid` and
-  `.reader-compare-col-hdr`)
-
-**Versification edge cases:**
-- If a verse exists in version A but not in version B (e.g., Mark 16:9 in some critical texts):
-  the secondary cell shows `—` (handled by `byVerse[key]` being undefined above)
-- If version B has a verse that version A does not: that verse simply has no paired row and
-  is silently omitted — acceptable for now; could be addressed in a future pass
+*(RD-L complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -610,243 +210,35 @@ No explicit `grid-row` declarations needed.
 
 *(Claimed — see working/inprogress-vs-todo.md)*
 
-### VS-A · Prev/Next Verse Navigation *(HIGH)*
-
-There is no way to move to the adjacent verse from the study page. To study John 3:15 after
-John 3:16 the user must hit back, click a different verse number in the Reader, and re-enter the
-verse study page — reloading all sections. The chapter data is already fully loaded as part of
-`loadVerseStudyVerse`, so computing adjacent verse refs costs nothing extra.
-
-- [x] `verse-study/index.html`: Add two nav links flanking `#vs-header-ref` in `.vs-header__topbar`:
-  ```html
-  <a id="vs-prev-link" class="vs-adj-link" href="#" hidden aria-label="Previous verse">‹</a>
-  <!-- existing #vs-header-ref -->
-  <a id="vs-next-link" class="vs-adj-link" href="#" hidden aria-label="Next verse">›</a>
-  ```
-- [x] `verse-study.js` (`loadVerseStudyVerse`): Inside the `.then(function (chapters) { … })` callback,
-  after setting `focalTextEl.textContent`, update the nav links:
-  ```js
-  var prevLink = document.getElementById('vs-prev-link');
-  var nextLink = document.getElementById('vs-next-link');
-  if (prevLink) {
-    var pv = parsed.v - 1;
-    if (pv >= 1 && chData[String(pv)]) {
-      prevLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + pv);
-      prevLink.title = parsed.bookName + ' ' + parsed.ch + ':' + pv;
-      prevLink.removeAttribute('hidden');
-    } else { prevLink.setAttribute('hidden', ''); }
-  }
-  if (nextLink) {
-    var nv = parsed.v + 1;
-    if (chData[String(nv)]) {
-      nextLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + nv);
-      nextLink.title = parsed.bookName + ' ' + parsed.ch + ':' + nv;
-      nextLink.removeAttribute('hidden');
-    } else { nextLink.setAttribute('hidden', ''); }
-  }
-  ```
-- [x] `verse-study.css`: `.vs-adj-link { color: var(--color-accent); text-decoration: none; font-size: 1.1rem; padding: 0 0.2rem; flex-shrink: 0; line-height: 1; }` `.vs-adj-link[hidden] { display: none; }` `.vs-adj-link:hover { color: var(--color-primary); }`
+*(VS-A complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-B · Sidebar Nav — Active Section Scroll-Spy *(MEDIUM)*
-
-`.vs-nav-btn--active` is defined in `verse-study.css` (lines 247–251) but is never applied by
-JavaScript. `vsRebuildNav()` builds the button list on every section update but has no mechanism
-to track which section is currently in view. The sidebar acts only as a jump list with no
-orientation feedback — the user can't tell at a glance which section they're reading.
-
-- [x] `verse-study.js` (`vsRebuildNav`): Declare a module-level variable `var _vsNavObserver = null`.
-  At the top of `vsRebuildNav`, call `if (_vsNavObserver) { _vsNavObserver.disconnect(); _vsNavObserver = null; }`.
-  After building sidebar buttons, wire each button with `btn.dataset.sectionId = id` in
-  `vsCreateSection`, then register a fresh `IntersectionObserver`:
-  ```js
-  _vsNavObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      var id = entry.target.id;
-      document.querySelectorAll('#vs-sidebar .vs-nav-btn').forEach(function (btn) {
-        btn.classList.toggle('vs-nav-btn--active', btn.dataset.sectionId === id);
-      });
-    });
-  }, { rootMargin: '-8% 0px -75% 0px', threshold: 0 });
-  visible.forEach(function (sec) { _vsNavObserver.observe(sec); });
-  ```
-- [x] `verse-study.js` (`vsCreateSection`): When building the sidebar `btn`, add `btn.dataset.sectionId = id;`
-  (one line, before `sidebar.appendChild(btn)`)
+*(VS-B complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-C · Section Collapse/Expand *(MEDIUM)*
-
-All 12 sections are fixed-open. After reading cross-references or commentary, the user must scroll
-past the entire section to reach the ones below. On mobile with long commentary (Clarke,
-Jamieson-Fausset-Brown) or a verse with many cross-refs, this can require scrolling 30+ screenfuls.
-Independent per-section collapse fits the long-form layout better than the reader's tab-panel model.
-
-- [x] `verse-study.js` (`vsCreateSection`): Add a collapse toggle to each section heading:
-  ```js
-  var toggleBtn = document.createElement('button');
-  toggleBtn.className = 'vs-section-toggle';
-  toggleBtn.setAttribute('aria-expanded', 'true');
-  toggleBtn.setAttribute('aria-controls', id + '-body');
-  toggleBtn.textContent = '▾';
-  heading.appendChild(toggleBtn);
-  body.id = id + '-body';
-
-  toggleBtn.addEventListener('click', function () {
-    var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', String(!expanded));
-    body.hidden = expanded;
-    toggleBtn.textContent = expanded ? '▸' : '▾';
-  });
-  ```
-- [x] `verse-study.css`: Update `.vs-section-heading` to `display:flex; align-items:baseline; justify-content:space-between;`
-  Add `.vs-section-toggle { background:none; border:none; cursor:pointer; font-size:.72rem; color:var(--color-muted); padding:0 .2rem; margin-left:.4rem; flex-shrink:0; }` `.vs-section-toggle:hover { color:var(--color-primary); }`
+*(VS-C complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-D · All Translations — Lazy Load + Diff Highlighting *(MEDIUM)*
-
-`vsRenderVersionCompare` fires a `resolveVerses` call for every version in `metaVersions` the
-instant the section is built — 8–12 parallel fetch requests on page load before the user has
-scrolled to that section. Additionally, the section shows all translation texts verbatim with no
-diff highlighting, making it harder to spot translation choices at a glance. The Reader already has
-`applyHighlights` in `wire.js` that handles this.
-
-- [x] `verse-study.js` (`loadVerseSections`): Replace the current eager call to `vsRenderVersionCompare`
-  with an `IntersectionObserver` that defers the fetch until the section is near the viewport:
-  ```js
-  var cmpObserver = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) return;
-    cmpObserver.disconnect();
-    vsRenderVersionCompare(parsed, cmpSec.bodyEl);
-  }, { threshold: 0.05 });
-  cmpSec.el.removeAttribute('hidden');
-  vsRebuildNav();
-  cmpObserver.observe(cmpSec.el);
-  ```
-  Remove the current `vsRenderVersionCompare(parsed, cmpSec.bodyEl)` call that precedes the show/rebuild.
-- [x] `verse-study.js` (`vsRenderVersionCompare`): Import `applyHighlights` from `./wire.js`; after each
-  `resolveVerses` resolve, call `applyHighlights(row)` on the `.vs-cmp-row` container, using the
-  current version's text as the baseline — words that differ from the current version get `<mark>` tags
-- [x] `verse-study.css`: `.vs-cmp-row mark { background: rgba(255, 200, 0, 0.35); border-radius: 2px; padding: 0 1px; }`
-  `[data-theme="dark"] .vs-cmp-row mark { background: rgba(200, 160, 0, 0.3); }`
+*(VS-D complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-E · Copy Verse Button in Header Actions *(LOW)*
-
-The header has Memorize and Share buttons but no plain copy-to-clipboard. Copying verse text + 
-reference is the most common action for messages, notes apps, and documents — faster than the
-image builder for text-only use. The verse text is already in `#vs-focal-text` and the ref in
-`#vs-header-ref` when the verse loads.
-
-- [x] `verse-study/index.html`: Add `<button id="vs-copy-btn" class="vs-context-btn" type="button" hidden>Copy</button>` to `.vs-header__actions` (after the Share button)
-- [x] `verse-study.js` (`loadVerseStudyVerse`): After `focalTextEl.textContent = text`, wire the button:
-  ```js
-  var copyBtn = document.getElementById('vs-copy-btn');
-  if (copyBtn && text) {
-    copyBtn.removeAttribute('hidden');
-    copyBtn.onclick = function () {
-      var ref = (document.getElementById('vs-header-ref') || {}).textContent || '';
-      navigator.clipboard.writeText(text + (ref ? ' — ' + ref : '')).then(function () {
-        copyBtn.textContent = 'Copied ✓';
-        setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1800);
-      });
-    };
-  }
-  ```
+*(VS-E complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-F · Word Study Flyout — Full Definition Expand *(LOW)*
-
-`_vsRenderWordPanel` truncates `entry.def` at 300 characters and appends `…` with no way to see
-the rest. For OT Hebrew entries the most specific lexical notes often appear past that threshold.
-The expansion needs only a show/hide toggle on the already-rendered HTML — no re-fetch.
-
-- [x] `verse-study.js` (`_vsRenderWordPanel`): Replace the hard slice with an inline expand:
-  ```js
-  if (entry.def && entry.def !== entry.gloss) {
-    var isLong = entry.def.length > 300;
-    html += '<div class="vs-word-panel__def">';
-    html += '<span class="vs-wp-def-text">' + escHtml(isLong ? entry.def.slice(0, 300) : entry.def) + '</span>';
-    if (isLong) {
-      html += '<span class="vs-wp-def-rest" hidden>' + escHtml(entry.def.slice(300)) + '</span>';
-      html += ' <button class="vs-wp-def-more" type="button">more…</button>';
-    }
-    html += '</div>';
-  }
-  ```
-  After `_vsWordPanelEl.innerHTML = html;`, add the expand wire (after the existing `closeBtn` wire):
-  ```js
-  var moreBtn = _vsWordPanelEl.querySelector('.vs-wp-def-more');
-  if (moreBtn) {
-    moreBtn.addEventListener('click', function () {
-      var rest = _vsWordPanelEl.querySelector('.vs-wp-def-rest');
-      if (rest) rest.removeAttribute('hidden');
-      moreBtn.remove();
-    });
-  }
-  ```
-- [x] `verse-study.css`: `.vs-wp-def-more { background:none; border:none; color:var(--color-accent); font-size:.8rem; cursor:pointer; padding:0; }` `.vs-wp-def-more:hover { text-decoration:underline; }`
+*(VS-F complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-G · Commentary — Long-Entry Truncation with Expand *(LOW)*
-
-Commentary HTML is injected verbatim with no length cap. Clarke and JFB entries can run 1,000–2,000
-words, forcing the user to scroll through the entire section to reach Parallel Passages and other
-sections below. A soft word threshold with a "Read more" expand keeps the page navigable without
-hiding content. This should apply after `wireRefLinks` to avoid wiring links that are hidden.
-
-- [x] `verse-study.js` (`vsLoadComm`): After `wireRefLinks(commSec.bodyEl)`, apply a character-count collapse:
-  ```js
-  var COMM_THRESHOLD = 800;
-  var commBody = commSec.bodyEl;
-  if (commBody.textContent.length > COMM_THRESHOLD) {
-    var wrapper = document.createElement('div');
-    wrapper.className = 'vs-comm-truncated';
-    while (commBody.firstChild) wrapper.appendChild(commBody.firstChild);
-    commBody.appendChild(wrapper);
-    var expandBtn = document.createElement('button');
-    expandBtn.className = 'vs-comm-expand-btn';
-    expandBtn.type = 'button';
-    expandBtn.textContent = 'Read more ▾';
-    commBody.appendChild(expandBtn);
-    expandBtn.addEventListener('click', function () {
-      wrapper.classList.remove('vs-comm-truncated--clamped');
-      expandBtn.remove();
-    });
-    wrapper.classList.add('vs-comm-truncated--clamped');
-  }
-  ```
-- [x] `verse-study.css`: `.vs-comm-truncated--clamped { max-height: 14em; overflow: hidden; }` `.vs-comm-expand-btn { display:block; margin-top:.5rem; background:none; border:none; color:var(--color-accent); font-family:var(--font-ui); font-size:.82rem; cursor:pointer; padding:0; }` `.vs-comm-expand-btn:hover { text-decoration:underline; }`
+*(VS-G complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### VS-H · Header Height — Wrong scroll-margin-top Until Verse Resolves *(LOW)*
-
-`--vs-header-h` is set inside the `.then()` callback of `loadVerseStudyVerse`, but `loadVerseSections`
-is called immediately after (synchronously). The Notes section renders synchronously and is visible
-in the nav before the verse text loads — if the user clicks Notes in the sidebar at that point,
-`scroll-margin-top` uses the fallback value of `200px`, which may be wrong. Adding an initial
-measurement on the first animation frame gives sections a correct offset immediately, without
-waiting for the verse fetch to resolve.
-
-- [x] `verse-study.js` (`initVerseStudyPage`): Immediately after wiring event listeners and before
-  calling `loadVerseStudyVerse`, add:
-  ```js
-  requestAnimationFrame(function () {
-    var header = document.getElementById('vs-sticky-header');
-    if (header) {
-      document.documentElement.style.setProperty('--vs-header-h', header.offsetHeight + 'px');
-    }
-  });
-  ```
-  The existing post-verse-load measurement in `loadVerseStudyVerse` still runs and corrects the
-  value after the verse text (and any token row content) has been added to the header.
+*(VS-H complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -1059,3 +451,375 @@ has gaps.
 
 *(CMT-A through CMT-I claimed — see working/inprogress-cmt-todo.md)*
 
+---
+
+## Code Comment Audit — Dimension 1
+
+*Audit pass 2026-06-05. Files missing required INTENT/CHANGE?/VERIFY comments on exported functions,
+localStorage write paths, algorithms, and cross-module couplings.*
+
+---
+
+*(CODE-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-4 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-5 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-6 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-7 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CODE-8 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Empty State & Loading State Audit — Dimension 2
+
+*Audit pass 2026-06-05. Pages and panels with missing error feedback on fetch failure or empty data.*
+
+---
+
+*(UX-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(UX-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(UX-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(UX-4 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(UX-5 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Mobile Responsiveness Audit — Dimension 3
+
+*Audit pass 2026-06-05. CSS code-reading audit — no browser DevTools available; findings based on media-query analysis and layout calculations.*
+
+---
+
+*(CSS-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-4 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-5 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-6 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Data Path Integrity Audit — Dimension 4
+
+*Audit pass 2026-06-05. Verified fetch paths against actual files in `data/`. All commentary sources (mhcc, ellicott, jfb, clarke, calvin, barnes, rwp, wesley) have all 66 books. Crossrefs, echoes, interlinear all have full 66-book coverage. Plans, library docs, manifest shortcuts, SHELL_URLS in sw.js, and all main nav hrefs verified present.*
+
+---
+
+*(DATA-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(DATA-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Feature Completeness Audit — Dimension 5
+
+*Audit pass 2026-06-05. Checked: word cloud scope data (all 11 scopes have non-zero ot/nt/genre counts), study guide session tabs (5 guides, all tabs have real content), all 10 topic pages (no stubs — 285–2538 lines of real content), manifest shortcuts (3/3 resolve), sidebar nav links (all resolve), NT Daily devotional rotation logic. Reading plans, library docs, and commentary sources already verified in Dimension 4.*
+
+---
+
+*(AUD-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Performance Audit — Dimension 6
+
+*Audit pass 2026-06-05. Read: `assets/js/word.js`, `assets/js/search.js`, `assets/js/reader.js`, `assets/js/verse-study.js`, `assets/js/daily.js`, `assets/js/core.js`. Verified: search is 250ms-debounced; daily.js fetches one devotional on load (not all 5); vsRenderVersionCompare is lazy-loaded via IntersectionObserver; VOTD file is 2.7KB (not a concern). Measured: OT interlinear = 39 files × avg 205KB = 8MB total; NT interlinear = 27 files = 3.5MB; all 66 KJV books = 4.4MB.*
+
+---
+
+*(PERF-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(PERF-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(PERF-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+### PERF-4 · `vsRenderVersionCompare` unbounded concurrent fetch burst *(MEDIUM)*
+
+**Problem:** `vsRenderVersionCompare` in `assets/js/verse-study.js` (line 981) calls `metaVersions.forEach` and fires one `resolveVerses()` → `loadBook()` call per non-stub version, all simultaneously with no queue or batch size cap. With 11 non-stub versions currently defined in `data/versions/versions.json`, opening the "All Translations" section for the first time triggers 11 concurrent book-JSON fetches at once. Although the section is correctly deferred via `IntersectionObserver` (VS-D), the fetch pattern once visible has no rate limit. This is inconsistent with `word.js`, which adopted a `BATCH_SIZE = 5` sequential-batch pattern (lines 120–128 in `word.js`) specifically to stay within the browser's 6-connection-per-host limit and surface partial results sooner. On a slow connection, all 11 "Loading…" placeholders remain blank until the slowest fetch resolves.
+
+**Fix:**
+- `assets/js/verse-study.js` (`vsRenderVersionCompare`): Replace the `metaVersions.forEach` with the same batch-queue pattern from `word.js`: split `filteredVersions` into chunks of 4–5, process chunks sequentially with `Promise.all` per chunk. Each chunk renders as it resolves so early results appear before the last chunk finishes.
+
+**Verify:** In DevTools → Network, filter requests by the current book id (e.g. `john`). Open the verse study page for John 3:16 and scroll to "All Translations" — should see at most 4–5 simultaneous fetch requests at once, followed by a second batch, rather than 11 all at once.
+
+---
+
+*Audit pass 2026-06-05 (Cycle 2). Read: `assets/js/verse-study.js`, `assets/js/daily.js`, `assets/js/ol-companion.js`, `assets/js/apocrypha-reader.js`, `assets/js/word.js`, `assets/js/reader.js`, `assets/js/core.js`. Verified: daily.js fetches only selected devotional (confirmed); `loadLibVerseIndex` is properly cached (confirmed double-call is a no-op at network level); IntersectionObserver deferral confirmed (line 819); word.js BATCH_SIZE=5 confirmed implemented. New finding: vsRenderVersionCompare fires 11 uncapped concurrent fetches — PERF-4.*
+
+---
+
+## Visual System Audit — Dimension 7
+
+*Audit pass 2026-06-05. Checked: hardcoded hex colors across all `assets/css/*.css`; dark mode blocks in style.css, topic-shell.css, topic-guide.css, timeline.css, timelapse.css, maps.css, lib-reader.css, word.css; `--tg-accent` usage consistency; `--color-heading` variable definition; template placeholder text (none found). Dark mode variables defined: `--color-bg`, `--color-surface`, `--color-primary`, `--color-text`, `--color-muted`, `--color-border`. Notably absent: `--color-heading` — never defined in style.css, only used via fallback.*
+
+---
+
+*(CSS-7 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-8 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-9 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-10 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-13 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(CSS-14 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*Audit pass 2026-06-05 (Cycle 2). Read: `assets/css/ol-companion.css`, `assets/css/apocrypha.css`, `assets/css/workshop.css`, `assets/css/discipline.css`, `assets/css/memorize.css`, `assets/css/devotionals.css`. Verified: apocrypha.css `#fff` uses are on primary-colored backgrounds (acceptable). workshop.css status badges have dark mode; dispute/action-button pastels do not (workshop is dev-tool, lower priority). memorize.css rate button colors (again/hard/good/easy) have no dark mode but remain legible since they are bright saturated on dark. discipline.css plan-done and calendar-check missing (tracked CSS-14). ol-companion.css tier labels missing (tracked CSS-13).*
+
+---
+
+## Navigation & Discoverability Audit — Dimension 8
+
+*Audit pass 2026-06-05. Checked: all main sidebar nav links (all resolve — `read/`, `apocrypha/`, `search/`, `studies/`, `discipline/`, `history/`, `library/`, `library/progress/`, `translation/workshop/`); all 10 topic cards → real pages; all 5 study guide cards → real pages; history hub 4 iframe tabs (all 4 `data-src` targets exist: `timeline/`, `church-history/`, `maps/`, `maps/timelapse/`); `?minimal=1` mode (correctly early-returns from `buildSidebar()` before both sidebar and mobile topbar are built); `tracker/` (embedded as iframe in `discipline/?tab=history`); `compare/` (linked via `COMPARE_URL` in `modal.js` line 411); `wordcloud/` (embedded as iframe in `search/?tab=wordcloud`). Redirect stubs (`plans/`, `journal/`, `memorize/`, `devotionals/`, `reflections/`) all redirect correctly to discipline tabs.*
+
+---
+
+*(NAV-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(NAV-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## PWA & Offline Audit — Dimension 9
+
+*Audit pass 2026-06-05. Checked: `sw.js` cache strategy (`networkFirst` for navigation, `cacheFirst` for data/assets), install SHELL_URLS completeness, activate cleanup logic (correct — deletes non-current caches), `manifest.json` (shortcuts, icons, colors), `offline.html` (real content with working links, loads `main.js` correctly as non-module), `pwa.js` (`initPWA`, `triggerPrecache`, `_showSWUpdateToast`), `precacheBible` chunked fetching. All 200+ SHELL_URLS resolve to real files on disk — no broken precache paths. `workshop.js`/`workshop.css` intentionally absent (dev tool). `data/votd/verses.json` is a single pre-fetched file (no per-day files). 4 issues found.*
+
+---
+
+*(PWA-1 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(PWA-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(PWA-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(PWA-4 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Accessibility Audit — Dimension 10
+
+*Audit pass 2026-06-05. Checked: focus styles (sidebar, modal, reader, `.ref` links), ARIA roles and labels (sidebar collapse button, hamburger, nav, modal dialog, reader controls, discipline tabs), modal keyboard trap (`trapFocus` in `modal.js` — complete: Escape closes, Tab cycles, `_lastFocused.focus()` restores on close), color contrast (all primary color pairs pass WCAG AA), `alt` attributes (no `<img>` elements in main pages — site uses CSS/SVG/emoji icons), theme toggle button accessible name (visible text content serves as label), `discipline-strip.js` mobile label handling. Modal, reader, and search ARIA patterns are solid. 4 issues found.*
+
+---
+
+*(AUD-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(AUD-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(AUD-4 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(AUD-5 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Feature Completeness Audit — Dimension 5, Cycle 2
+
+*Audit pass 2026-06-05 (cycle 2). First cycle (AUD-1) found the NT Daily Matthew chapter-count bug. This pass checked: ISBE data (9,380 entries + 66-book verse-index — complete), OL Companion wiring (`window.BibleUI.initOLSection` → verse-study.js — correct), book introductions (66/66), Nave's topical verse-index (66/66), topics-index.json (15 entries — all pages resolve), word cloud scopes (unchanged), translation workshop (page exists), apocrypha reader. Found one HIGH bug in apocrypha-reader.js `_getOrderedBooks()`.*
+
+---
+
+*(AUD-6 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Data Path Integrity Audit — Dimension 4, Cycle 2
+
+*Audit pass 2026-06-05 (cycle 2). First cycle verified all 18 canonical Bible versions, 8 commentary sources, crossrefs, interlinear, plans, library docs, manifest shortcuts, and nav hrefs. This pass checked the new apocrypha data layer (`data/bible-apocrypha/`, `apocrypha-books.json`, `apocrypha-canon-orders.json`) and JS fetch paths in `apocrypha-reader.js`, `terms.js`, `places.js`.*
+
+---
+
+### DATA-3 · BRENTON version missing scope correction and 3 canonical OT books *(MEDIUM)*
+
+**Problem:** `data/versions/versions.json` declares `BRENTON` with `"scope": "full-bible"` and `"canon_order": "lxx"`. The `lxx` canon order in `apocrypha-canon-orders.json` lists 83 books (66 canonical + 17 deuterocanonical). However, `data/bible-apocrypha/BRENTON/` only has 51 files — the Brenton LXX is an Old Testament translation only with no NT content. The apocrypha reader uses `_isFullBible()` (`scope === 'full-bible'`) to decide whether to show NT navigation, so on BRENTON all 27 NT books appear in the book list but every one 404s when clicked. Additionally, 3 canonical OT books are missing from the BRENTON directory: `esther` (only `additions-esther.json` present — the Greek Esther with additions is there, but `esther.json` for the base canonical MT-mapped form is absent), `daniel` (LXX Daniel includes additions but no `daniel.json` base file), and `nahum` (no equivalent in the BRENTON directory — genuinely missing).
+
+**Fix:**
+- `data/versions/versions.json` (`BRENTON` entry): Change `"scope": "full-bible"` → `"scope": "ot-only"` (or add a new `"scope": "lxx-ot"` value). Update `_isFullBible()` in `apocrypha-reader.js` to return false for OT-only scopes.
+- `data/bible-apocrypha/BRENTON/`: Re-run the fetch script to populate `nahum.json`. Verify whether `daniel.json` and `esther.json` are needed as canon-mapped aliases (vs. the LXX-specific `additions-*` variants already present).
+
+**Verify:** Open the apocrypha reader, select BRENTON, confirm the book list shows only OT books. Navigate to Nahum — it should load without a 404.
+
+---
+
+### DATA-4 · DR apocrypha version missing 4 Daniel/Esther additions *(LOW)*
+
+**Problem:** `data/bible-apocrypha/DR/` has 73 files but the `dr` canon order in `apocrypha-canon-orders.json` lists 77 books. Four books in the DR canon are missing from the directory: `additions-esther`, `prayer-of-azariah`, `susanna`, and `bel-and-dragon`. All four are Daniel/Esther additions that the Douay-Rheims includes (as chapters of Daniel and Esther). When a user selects the DR version and navigates to any of these four books, the apocrypha reader shows a fetch error.
+
+**Fix:**
+- `data/bible-apocrypha/DR/`: Re-run `scripts/fetch-apocrypha.py` (or equivalent) targeting the DR version for `additions-esther`, `prayer-of-azariah`, `susanna`, `bel-and-dragon`. If the DR source treats these as chapters of Daniel/Esther rather than standalone books, update the `dr` canon order in `apocrypha-canon-orders.json` to remove the standalone entries.
+
+**Verify:** Open the apocrypha reader with DR selected, navigate to Susanna — it should load content, not a fetch error.
+
+---
+
+## Mobile Responsiveness Audit — Dimension 3, Cycle 2
+
+*Audit pass 2026-06-05 (cycle 2). First cycle (CSS-1–6) addressed word.css height clipping, hamburger/discipline/reader touch targets, study-nav font-size, and reader keyboard hint visibility. This pass examined lib-browser.css, verse-study.css, memorize.css, maps.css, and timelapse.css. Two new issues found.*
+
+---
+
+### CSS-11 · lib-browser.css — Mobile tab bar sub-WCAG font-size and touch target *(MEDIUM)* *(agent: in-progress)*
+
+**Problem:** In `lib-browser.css` `@media (max-width: 600px)` (line 859), `.lb-tab-btn` has `font-size: .72rem` (11.52px at 16px base — WCAG AA body minimum is 14px) and `padding: .55rem .25rem` with no `min-height`. Computed button height is approximately 30–32px — below the WCAG 2.5.5 minimum of 44px. These tab buttons are the primary navigation for the entire Library browser on mobile: Browse / Authors / List / Read. A user on a 375px screen cannot reliably tap the correct tab or read the labels without zooming. This also affects the `lb-tab-btn--active` state which inherits the same dimensions.
+
+**Fix:**
+- `assets/css/lib-browser.css` (`.lb-tab-btn` in `@media (max-width: 600px)`, line 860): Change `font-size: .72rem` → `font-size: .82rem`. Add `min-height: 44px; display: flex; align-items: center; justify-content: center;` to guarantee a 44px tap height.
+
+**Verify:** At 375px viewport width, all four Library browser tab buttons (Browse / Authors / List / Read) should be visually ≥44px tall and the label text readable without pinch-zoom.
+
+---
+
+### CSS-12 · verse-study.css — Section collapse toggle button has no mobile touch target *(LOW)*
+
+**Problem:** In `verse-study.css` (line 869), `.vs-section-toggle` (the ▾/▴ button that collapses/expands each verse study section, added in VS-C) has `font-size: 0.72rem`, `padding: 0 0.2rem`, and no `min-height`. On mobile the button renders at roughly 14–16px × 20px — well below the 44px WCAG tap target. It sits adjacent to the section heading, so mis-taps scroll the page or activate the wrong element. No `@media (max-width: ...)` override exists for this element in the existing mobile touch-targets block (line 926).
+
+**Fix:**
+- `assets/css/verse-study.css` (`.vs-section-toggle` mobile rule, add inside existing `@media (max-width: 640px)` block at line 926): Add `.vs-section-toggle { min-height: 44px; padding: 0 0.5rem; display: inline-flex; align-items: center; }` to bring it to the WCAG tap minimum without affecting its desktop appearance.
+
+**Verify:** On a 375px viewport in the verse study page, tap the ▾ button on any section heading — it should be easy to tap without hitting adjacent text. Section collapses correctly.
+
+---
+
+## Empty State & Loading State Audit — Dimension 2, Cycle 2
+
+*Audit pass 2026-06-05 (cycle 2). First cycle (UX-1–5) addressed search.js, verse-study.js interlinear, discipline plans, library secondary sources, and history iframe tabs. This pass found two remaining missing `.catch()` patterns in verse-study.js.*
+
+---
+
+### UX-6 · verse-study.js — Commentary stuck on "Loading commentary…" after source-switch network failure *(MEDIUM)* *(agent: in-progress)*
+
+**Problem:** In `verse-study.js`, the inner `vsLoadComm` function (line 752) sets `commSec.bodyEl.innerHTML` to `'<p class="bsw-modal__loading">Loading commentary…</p>'` before the fetch, but has no `.catch()` handler. On initial page load this is harmless — the commentary section stays hidden if the fetch fails. However, once the section has been successfully shown and the user switches the commentary source picker, the section is already visible. If the new fetch fails (offline, source unavailable), `commSec.bodyEl.innerHTML` is left permanently showing "Loading commentary…" with no way to dismiss or retry. This is the same pattern that UX-2 fixed for the interlinear section.
+
+**Fix:**
+- `verse-study.js` (`vsLoadComm`, line ~785): Add `.catch(function () { commSec.bodyEl.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary. Check your connection.</p>'; })` after the `.then()` block.
+
+**Verify:** In the verse study page with a commentary source loaded, disable the network (DevTools → Network → Offline), then switch to a different commentary source — the "Loading commentary…" message should be replaced with a "Could not load" error, not stay stuck.
+
+---
+
+### UX-7 · verse-study.js — Cross-reference and parallels sections leave hidden orphan DOM nodes on fetch failure *(LOW)* *(agent: in-progress)*
+
+**Problem:** In `verse-study.js`, both `xrefSec` (line 741, `loadCrossRefs`) and `parSec` (line 807, `loadParallels`) have no `.catch()` handler. On network failure both sections remain as invisible orphan DOM elements (created but never made visible and never removed). `vsRebuildNav()` correctly excludes hidden sections from the sidebar, so the user sees nothing wrong. However, the orphan nodes are a resource/memory inconsistency and mask the real cause of absent sections — a user on a slow connection cannot distinguish "no data for this verse" from "fetch failed." The same fix pattern was applied to `interlinearSec` in UX-2.
+
+**Fix:**
+- `verse-study.js` (xref section, line ~747): Add `.catch(function () { xrefSec.el.remove(); vsRebuildNav(); })` after the loadCrossRefs `.then()`.
+- `verse-study.js` (parallels section, line ~813): Add `.catch(function () { parSec.el.remove(); vsRebuildNav(); })` after the loadParallels `.then()`.
+
+**Verify:** In the verse study page with DevTools → Network → Offline, load a verse — the cross-references and parallels sections should be absent (removed), not silently orphaned in the DOM (confirm via DevTools Elements that no hidden `.vs-xrefs` or `.vs-parallels` elements remain).
+
+---
+
+## Code Comment Audit — Dimension 1, Cycle 2
+
+*Audit pass 2026-06-05 (cycle 2). First cycle (CODE-1–8) addressed the most obvious gaps. This pass found two areas still missing required structured comments: three complex algorithms in wire.js added after the first-pass fixes, and the window.BibleUI cross-module coupling in app.js.*
+
+---
+
+### CODE-9 · wire.js — autoTagChapterRefs, autoTagBareRefs, autoTagBareChapters lacking INTENT/CHANGE?/VERIFY *(MEDIUM)*
+
+**Problem:** Five exported functions in `wire.js` are still missing required structured comments after the first-pass fix (which addressed `autoTagRefs`, `updateInlineVerses`, and `applyHighlights`). `autoTagChapterRefs` (line 203), `autoTagBareRefs` (line 285), and `autoTagBareChapters` (line 360) are complex TreeWalker algorithms with no `INTENT`, `CHANGE?`, or `VERIFY` at all. `applyModalHighlights` (line 480) uses a different CSS class prefix (`bsw-hl-`) than `applyHighlights` (`reader-verse--hl-`), but has no `CHANGE?` documenting that divergence or listing its callers. `applyBookmarks` (line 497) writes DOM state from localStorage bookmarks but has no `CHANGE?` noting which callers in `reader.js` must stay in sync.
+
+**Fix:**
+- `wire.js` (`autoTagChapterRefs`, line 203): Add INTENT (same TreeWalker/SKIP-set pattern as autoTagRefs; tags "Book Ch" and "Book Ch–Ch" whole-chapter patterns, excluding tokens followed by `:digit`) + CHANGE? (if bookLookup/metaBooks structure changes or the SKIP set diverges from autoTagRefs, both functions break silently; autoTagRefs calls this at its end) + VERIFY (open a topic page with plain "Romans 5–8" text; after load it should become a clickable whole-chapter ref).
+- `wire.js` (`autoTagBareRefs`, line 285): Add INTENT (bare "Ch:V" patterns on book-specific pages; only invoked when body has `data-bible-book`; bookId and bookName supplied by autoTagRefs) + CHANGE? (if data-bible-book handling in autoTagRefs changes, this function stops being called; also called nowhere else) + VERIFY.
+- `wire.js` (`autoTagBareChapters`, line 360): Add INTENT ("Chap. 3" / "ch. 3" / "chapter 3" patterns on book-specific pages; called in sequence after autoTagBareRefs from autoTagRefs) + CHANGE? + VERIFY.
+- `wire.js` (`applyModalHighlights`, line 480): Add CHANGE? noting the CSS class prefix split: this function applies `bsw-hl-{colour}` to `.bsw-modal__verse` elements; `applyHighlights` applies `reader-verse--hl-{colour}` to `.reader-verse` elements — they must not be swapped; callers are `modal.js:_renderModalVerseTab` and `modal.js:_switchTab`.
+- `wire.js` (`applyBookmarks`, line 497): Add CHANGE? listing callers: `reader.js:doLookup` and `reader.js:injectComparePanel`; if `isBookmarked()` schema in `storage.js` changes or the `reader-verse__num--bookmarked` class name is renamed, both call sites silently show no bookmark state.
+
+**Verify:** Open the reader at a chapter with a bookmarked verse; confirm the bookmark star renders. Open a book-specific topic page (e.g. `topics/gospel-of-john/`) and verify "3:16" and "Chap. 1" are auto-tagged as clickable ref links.
+
+---
+
+### CODE-10 · app.js — window.BibleUI cross-module coupling lacks CHANGE? *(MEDIUM)*
+
+**Problem:** `app.js` line 102 declares `window.BibleUI` — the site's only intentional window-level global, depended on by non-module inline scripts on topic pages and by `ol-companion.js`. Per CLAUDE.md rules, any `window.*` cross-module coupling requires `// CHANGE?` noting downstream callers. Currently the object has a one-line prose comment ("the only intentional global") but no structured `CHANGE?` listing which pages use each key, and no `VERIFY`. The nested `openReader` closure (lines 110–115) also has no `INTENT`, despite a non-obvious `bookId → display name` resolution step that silently falls back to the raw ID string if `metaBooks` isn't loaded. Removing or renaming any `window.BibleUI` key without updating inline scripts fails completely silently.
+
+**Fix:**
+- `app.js` (`window.BibleUI`, line 102): Add `// CHANGE?` listing consumers: topic-page inline scripts call `BibleUI.openModal()` and `BibleUI.autoTagPlacesIn()`; `ol-companion.js` calls `BibleUI.initOLSection()`; `timeline.js` calls `BibleUI.autoTagPlacesIn()` after dynamic renders; removing any key with no replacement silently breaks the relevant pages. Also add `// VERIFY`: from a topic page DevTools console, confirm `window.BibleUI.openModal` is a function and calling it opens the verse modal.
+- `app.js` (`openReader`, line 110): Add `// INTENT:` explaining the bookId → name resolution step (callers on topic pages pass an ID like `"genesis"` not the display name `"Genesis"`; falls back to bookId string if metaBooks isn't ready, which produces a broken reader URL).
+
+**Verify:** From a topic page console, call `window.BibleUI.openReader('john', 3, 16)` — confirm the reader navigates to John 3:16. Confirm `window.BibleUI.openModal` is callable with a `{bookId, ch, v}` parsed object.

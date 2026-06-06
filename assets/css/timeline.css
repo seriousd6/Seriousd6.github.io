@@ -522,6 +522,16 @@
 [data-theme="dark"] .tl-detail-inner              { background: var(--color-surface, #1e1e1e); }
 [data-theme="dark"] .tl-detail-header             { background: var(--color-surface-alt, #2a2318); }
 [data-theme="dark"] .tl-detail-text--evidence     { color: var(--color-muted, #999); }
+/* INTENT: #2a6b6b (dark teal) and #2d6e9e (dark blue) are ~2:1 contrast on the dark surface —
+   near-invisible. Lighter variants (#4fb3b3 teal, #6baed6 blue) pass 4.5:1 on dark backgrounds.
+   CHANGE? If the light-mode accent hex values change in .tl-detail-section-title--legacy,
+   .tl-detail-lib-chip, or .tl-detail-crossover, update these dark overrides to match.
+   VERIFY: In dark mode, open /history/?tab=church — section headings and library link chips
+   should be clearly legible teal/blue, not near-invisible dark teal. */
+[data-theme="dark"] .tl-detail-section-title--legacy              { color: #4fb3b3; }
+[data-theme="dark"] .tl-detail-lib-chip                           { color: #4fb3b3; border-color: #4fb3b3; }
+[data-theme="dark"] .tl-detail-crossover__label,
+[data-theme="dark"] .tl-detail-crossover__link                    { color: #6baed6; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tl2-spine-wrap::before   { background: var(--color-border, #3a3a3a); }
@@ -529,4 +539,8 @@
   :root:not([data-theme="light"]) .tl-detail-inner          { background: var(--color-surface, #1e1e1e); }
   :root:not([data-theme="light"]) .tl-detail-header         { background: var(--color-surface-alt, #2a2318); }
   :root:not([data-theme="light"]) .tl-detail-text--evidence { color: var(--color-muted, #999); }
+  :root:not([data-theme="light"]) .tl-detail-section-title--legacy { color: #4fb3b3; }
+  :root:not([data-theme="light"]) .tl-detail-lib-chip               { color: #4fb3b3; border-color: #4fb3b3; }
+  :root:not([data-theme="light"]) .tl-detail-crossover__label,
+  :root:not([data-theme="light"]) .tl-detail-crossover__link        { color: #6baed6; }
 }

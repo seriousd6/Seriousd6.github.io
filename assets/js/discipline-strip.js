@@ -29,7 +29,10 @@ function _render() {
     var done   = !!status[item.key];
     var color  = done ? item.color : 'var(--color-border)';
     var opacity = done ? '1' : '0.45';
-    return '<a class="disc-strip__item' + (done ? ' disc-strip__item--done' : '') + '" href="' + item.href + '" title="' + item.label + (done ? ' ✓' : '') + '">' +
+    // INTENT: aria-label is used instead of title so screen readers reliably announce the link
+    //   name on all platforms — title is ignored by VoiceOver and only read by NVDA as a fallback.
+    //   At ≤540px the visible .disc-strip__label is hidden, so aria-label is the only accessible name.
+    return '<a class="disc-strip__item' + (done ? ' disc-strip__item--done' : '') + '" href="' + item.href + '" aria-label="' + item.label + (done ? ' — done' : '') + '">' +
       '<span class="disc-strip__dot" style="background:' + color + ';opacity:' + opacity + '"></span>' +
       '<span class="disc-strip__label">' + item.label + '</span>' +
     '</a>';

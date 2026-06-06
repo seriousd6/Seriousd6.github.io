@@ -109,35 +109,52 @@ export function initWordPage() {
       var statsEl = document.getElementById('wd-stats');
       statsEl.parentNode.insertBefore(progressEl, statsEl);
 
-      var fetches = books.map(function (bk) {
-        return loadInterlinear(bk.id).then(function (data) {
-          completed++;
-          progressEl.textContent = 'Loading books… ' + completed + ' / ' + total;
-          if (!data) return;
-          Object.keys(data).forEach(function (ch) {
-            Object.keys(data[ch]).forEach(function (v) {
-              var tokens = data[ch][v];
-              var phrases = [];
-              tokens.forEach(function (tok) {
-                if (tok.s === rawId && tok.text) {
-                  phrases.push(tok.text);
-                  var norm = _wdNormalizePhrase(tok.text);
-                  translationCount[norm] = (translationCount[norm] || 0) + 1;
-                  totalCount++;
-                  /* WD-C: collect morph codes */
-                  if (tok.m) morphCount[tok.m] = (morphCount[tok.m] || 0) + 1;
+      // INTENT: Batch interlinear fetches (5 books at a time) to stay within the browser's
+      //   6-connection-per-host limit; firing 27–39 simultaneous fetches would queue all of them
+      //   and offer no faster start than sequential batches of 5.
+      // CHANGE? If BATCH_SIZE changes, also update core.js loadInterlinear comment. The
+      //   accumulator vars (bookMatches, translationCount, morphCount) are captured by closure
+      //   and mutated inside each batch — do not move this block out of its current scope.
+      // VERIFY: DevTools → Network → filter 'interlinear'; first word lookup should show ≤5
+      //   requests in-flight at once. Total request count equals the testament's book count.
+      var BATCH_SIZE = 5;
+      var bookChunks = [];
+      for (var ci = 0; ci < books.length; ci += BATCH_SIZE) {
+        bookChunks.push(books.slice(ci, ci + BATCH_SIZE));
+      }
+
+      function _processBatch(chunkIdx) {
+        if (chunkIdx >= bookChunks.length) return Promise.resolve();
+        return Promise.all(bookChunks[chunkIdx].map(function (bk) {
+          return loadInterlinear(bk.id).then(function (data) {
+            completed++;
+            progressEl.textContent = 'Loading books… ' + completed + ' / ' + total;
+            if (!data) return;
+            Object.keys(data).forEach(function (ch) {
+              Object.keys(data[ch]).forEach(function (v) {
+                var tokens = data[ch][v];
+                var phrases = [];
+                tokens.forEach(function (tok) {
+                  if (tok.s === rawId && tok.text) {
+                    phrases.push(tok.text);
+                    var norm = _wdNormalizePhrase(tok.text);
+                    translationCount[norm] = (translationCount[norm] || 0) + 1;
+                    totalCount++;
+                    /* WD-C: collect morph codes */
+                    if (tok.m) morphCount[tok.m] = (morphCount[tok.m] || 0) + 1;
+                  }
+                });
+                if (phrases.length) {
+                  if (!bookMatches[bk.id]) bookMatches[bk.id] = { book: bk, verses: [] };
+                  bookMatches[bk.id].verses.push({ ch: ch, v: v, phrases: phrases });
                 }
               });
-              if (phrases.length) {
-                if (!bookMatches[bk.id]) bookMatches[bk.id] = { book: bk, verses: [] };
-                bookMatches[bk.id].verses.push({ ch: ch, v: v, phrases: phrases });
-              }
             });
           });
-        });
-      });
+        })).then(function () { return _processBatch(chunkIdx + 1); });
+      }
 
-      return Promise.all(fetches).then(function () {
+      return _processBatch(0).then(function () {
         return { bookMatches: bookMatches, totalCount: totalCount, translationCount: translationCount, morphCount: morphCount };
       });
     })
