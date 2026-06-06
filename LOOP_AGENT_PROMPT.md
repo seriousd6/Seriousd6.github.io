@@ -5,6 +5,7 @@
 2. `working/site-overview.md` — architecture, module map, CSS system, localStorage keys
 3. `CODING_RULES.md` — hard syntax and pattern rules for this codebase
 4. `CODING_PHILOSOPHY.md` — how to think about changes, scope discipline
+5. `working/todo-workflow.md` — required format for reading, claiming, completing, and archiving TODO items
 
 Do not skip any of these. They are short and will save you from expensive mistakes.
 
@@ -12,16 +13,14 @@ Do not skip any of these. They are short and will save you from expensive mistak
 
 ## Step 1 — Pick 2–3 work items from `working/TODO.md`
 
-Read `working/TODO.md` in full first. Then apply these filters:
+Read `working/TODO.md` in full first. The file contains only actionable items — Z, O, and blocked
+work has already been separated into `working/Deferred-Todo.md`. See `working/todo-workflow.md`
+for the full decision rules.
 
-### Skip entirely:
-- The entire **Z4–Z8 MKT Commentary Suite** section — that work has its own agent (`Z_AGENT_PROMPT.md`)
-- The entire **Phase Z — Modern Kingdom Translation** section
-- The entire **Phase O — Long-term / Deferred** section
-- Any row marked `*(claimed — see working/inprogress-*.md)*` — it's being worked by another session
+### Skip:
+- Any item marked ` *(agent: in-progress)*` — it's being worked by another session
 - Any item that contains `DATA BLOCKED` — external data is unavailable
-- Any item in a `## Z…` section heading
-- Any item whose Fix says `"Agents generate …"` — those are data-generation tasks, not site code
+- Any item whose Fix says `"Agents generate …"` — data-generation tasks, not site code
 
 ### Prefer:
 - **HIGH** priority items before MEDIUM, MEDIUM before LOW
@@ -31,12 +30,12 @@ Read `working/TODO.md` in full first. Then apply these filters:
 - Self-contained LOW items after HIGH/MEDIUM work is exhausted — they ship cleanly
 
 ### Good session shapes:
-- Two HIGH items from the same feature area (e.g., two RD-* items in reader.js)
+- Two HIGH items from the same feature area (e.g., two DATA-* items touching the same fetch script)
 - One HIGH + two LOW items from different areas
 - Three MEDIUM items that are independent
 
 ### Warn and stop if:
-- Every non-Z non-claimed non-deferred item in the list is already `[x]` → report complete and exit
+- Every non-claimed, non-blocked item in the list is already `[x]` → report complete and exit
 - You cannot find 2 items that meet the criteria → pick 1 and explain why
 
 ---
@@ -133,19 +132,25 @@ If the answer is "mostly" or "partially" — either finish it or note what was l
 
 ## Step 7 — Mark complete and summarize
 
+See `working/todo-workflow.md` for the full rules. Quick version:
+
 For each completed item in `working/TODO.md`:
-1. Change `[ ]` to `[x]` on every sub-item you completed
-2. Remove the ` *(agent: in-progress)*` suffix from the heading
-3. If you only partially completed an item (e.g., finished JS but not CSS), leave it `[ ]` and add
-   a brief note: `*(partially done: JS complete, CSS pending)*`
+1. Change `[ ]` to `[x]` on every sub-item you completed.
+2. Remove the ` *(agent: in-progress)*` suffix from the heading.
+3. If only partially done, leave `[ ]` on remaining sub-items and note: `*(partially done: JS complete, CSS pending)*`
 
-After updating the file, write a brief summary:
-- What was changed
-- Which files were modified
-- Any edge cases or caveats to be aware of
+**If 100% complete — archive it:**
+1. Cut the entire item block from `TODO.md`.
+2. Open `working/todo-archive.md`.
+3. Add or find a `## YYYY-MM-DD` heading for today at the top of the archive (newest-first).
+4. Paste the item under that heading.
+5. Save both files.
 
-1. If a task is 100% complete, move the task to the working/todo-archive.md file, under a new heading with today's date.
-2. If a task is partially complete, update the task description to reflect what remains to be done, and keep it in the working/TODO.md file.
+**If partially complete:** Update the Problem/Fix description to reflect what remains. Keep it in `TODO.md`.
+
+After all items are handled, write a brief summary:
+- What was changed, which files were modified
+- Any edge cases or caveats the next session should know about
 
 ---
 

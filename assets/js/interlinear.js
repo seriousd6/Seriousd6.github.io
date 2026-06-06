@@ -3,12 +3,13 @@
 
 import {
   getVersion, loadBook, loadInterlinear, loadStrongs, loadLexicon,
-  metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef
+  metaBooks, metaVersions, bookOrder, READER_URL, WORD_URL, escHtml, parseRef
 } from './core.js';
 
 export var INTERLINEAR_KEY = 'bsw_interlinear';
-var _riPopoverEl  = null;
-var _riActiveTile = null;
+var _riPopoverEl     = null;
+var _riActiveTile    = null;
+var _riScrollCleanup = null;  // fn to remove scroll-close listener; set in _riShowPopover
 
 export function getInterlinearEnabled() {
   return localStorage.getItem(INTERLINEAR_KEY) === '1';
@@ -366,16 +367,31 @@ function _isNTBook(bookId) {
 }
 
 function _riShowPopover(tile, strongsDict) {
+  // INTENT: Renders a lexicon card for the clicked tile's Strong's entry; positions it
+  //   within viewport bounds (fixed element — scroll offsets must NOT be added to
+  //   getBoundingClientRect coords); closes on scroll so it never floats adrift.
+  // CHANGE? POP_W (280) must match .ri-popover width in reader.css (line 2022).
+  //   WORD_URL is imported from core.js; if the word/ path changes, update core.js line 45.
+  //   _riScrollCleanup is module-level — if you add new close triggers (e.g. Escape),
+  //   call _riScrollCleanup() and null it before removing the popover.
+  // VERIFY: Click a tile near the right edge → popover stays fully within viewport.
+  //   Click a tile near the bottom → popover flips above the tile.
+  //   Open popover; scroll the reader → popover disappears immediately.
+  //   Popover shows "Word Study →" link navigating to word/?s=G3056 (or correct code).
   var strongs = tile.getAttribute('data-strongs');
   if (!strongs) return;
   var entry = strongsDict && strongsDict[strongs];
   if (!entry) return;
 
-  if (_riPopoverEl) _riPopoverEl.remove();
+  // Tear down any existing popover and its scroll listener
+  if (_riScrollCleanup)  { _riScrollCleanup(); _riScrollCleanup = null; }
+  if (_riActiveTile)     { _riActiveTile.classList.remove('ri-tile--active'); }
+  if (_riPopoverEl)      { _riPopoverEl.remove(); _riPopoverEl = null; }
+
   var pop = document.createElement('div');
   pop.className = 'ri-popover';
   pop.innerHTML =
-    '<button class="ri-popover__close" aria-label="Close">&#x2715;</button>' +
+    '<button class="ri-popover__close" type="button" aria-label="Close">&#x2715;</button>' +
     '<div class="ri-popover__header">' +
       (entry.gloss ? '<span class="ri-popover__eng">' + escHtml(entry.gloss) + '</span>' : '') +
       '<span class="ri-popover__s">' + escHtml(strongs) + '</span>' +
@@ -385,19 +401,64 @@ function _riShowPopover(tile, strongsDict) {
       (entry.translit ? '<span class="ri-popover__translit">' + escHtml(entry.translit) + '</span>' : '') +
     '</div>' +
     (entry.def   ? '<p class="ri-popover__def">'   + escHtml(entry.def)   + '</p>' : '') +
-    (entry.deriv ? '<p class="ri-popover__deriv">' + escHtml(entry.deriv) + '</p>' : '');
+    (entry.deriv ? '<p class="ri-popover__deriv">' + escHtml(entry.deriv) + '</p>' : '') +
+    '<div class="ri-popover__links">' +
+      '<a class="vs-context-btn" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(strongs)) + '" ' +
+         'title="Open full word study">Word Study →</a>' +
+    '</div>';
+
   document.body.appendChild(pop);
   _riPopoverEl  = pop;
   _riActiveTile = tile;
+  tile.classList.add('ri-tile--active');
 
-  var r   = tile.getBoundingClientRect();
-  pop.style.top  = (r.bottom + window.scrollY + 4) + 'px';
-  pop.style.left = Math.max(8, r.left + window.scrollX) + 'px';
+  // RI-A: Viewport-clamped position — fixed element uses viewport coords, no scroll offset
+  var POP_W = 280, POP_MARGIN = 8;
+  var r = tile.getBoundingClientRect();
+  pop.style.left = Math.min(
+    Math.max(POP_MARGIN, r.left),
+    window.innerWidth - POP_W - POP_MARGIN
+  ) + 'px';
+  pop.style.top = (r.bottom + 4) + 'px';
+  // Flip above tile if popover would overflow the bottom edge
+  requestAnimationFrame(function () {
+    if (!_riPopoverEl) return;
+    var popH = pop.offsetHeight;
+    if (r.bottom + 4 + popH > window.innerHeight - POP_MARGIN) {
+      pop.style.top = Math.max(POP_MARGIN, r.top - popH - 4) + 'px';
+    }
+  });
 
-  pop.querySelector('.ri-popover__close').addEventListener('click', function () { pop.remove(); _riPopoverEl = null; });
+  // RI-B: Close on scroll — fixed popover can't track the tile as the reader scrolls
+  var scrollTarget = document.querySelector('.reader-content') ||
+                     document.getElementById('reader-results') ||
+                     window;
+  var _scrollClose = function () {
+    scrollTarget.removeEventListener('scroll', _scrollClose);
+    _riScrollCleanup = null;
+    if (_riActiveTile) { _riActiveTile.classList.remove('ri-tile--active'); _riActiveTile = null; }
+    if (_riPopoverEl)  { _riPopoverEl.remove(); _riPopoverEl = null; }
+  };
+  _riScrollCleanup = function () { scrollTarget.removeEventListener('scroll', _scrollClose); };
+  scrollTarget.addEventListener('scroll', _scrollClose, { passive: true });
+
+  pop.querySelector('.ri-popover__close').addEventListener('click', function () {
+    if (_riScrollCleanup) { _riScrollCleanup(); _riScrollCleanup = null; }
+    tile.classList.remove('ri-tile--active');
+    _riActiveTile = null;
+    pop.remove();
+    _riPopoverEl = null;
+  });
+
   setTimeout(function () {
     document.addEventListener('click', function _outside(e) {
-      if (!pop.contains(e.target) && e.target !== tile) { pop.remove(); _riPopoverEl = null; document.removeEventListener('click', _outside); }
+      if (!pop.contains(e.target) && e.target !== tile) {
+        if (_riScrollCleanup) { _riScrollCleanup(); _riScrollCleanup = null; }
+        if (_riActiveTile) { _riActiveTile.classList.remove('ri-tile--active'); _riActiveTile = null; }
+        pop.remove();
+        _riPopoverEl = null;
+        document.removeEventListener('click', _outside);
+      }
     });
   }, 10);
 }

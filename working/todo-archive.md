@@ -5,6 +5,36 @@ See `working/TODO.md` for the active task list.
 
 ---
 
+## Completed 2026-06-06 (loop session)
+
+### RI-A · Popover spawns off-screen on right edge and bottom edge *(HIGH)*
+
+Fixed `_riShowPopover` in `assets/js/interlinear.js`: removed `window.scrollY`/`window.scrollX`
+from the `position: fixed` popover placement (those offsets are wrong for viewport-relative
+coordinates), added right-edge clamping (`Math.min(Math.max(8, r.left), innerWidth - 280 - 8)`),
+and added a `requestAnimationFrame` bottom-flip that measures `pop.offsetHeight` after render and
+repositions above the tile if it would overflow the bottom edge.
+
+### RI-B · Popover stays fixed on screen when user scrolls *(HIGH)*
+
+Added a one-shot `{ passive: true }` scroll listener on `.reader-content` /
+`#reader-results` / `window` (first found) that tears down the popover and active-tile state
+when the reader scrolls. Added `_riScrollCleanup` module-level variable to hold the removal
+function; called on scroll, close-button click, and outside-click so no stale listener remains.
+New `_riShowPopover` calls also cancel any previous scroll listener before opening a fresh popover.
+
+### RI-C · No "Word Study" link in popover *(HIGH)*
+
+Added `WORD_URL` to the `import` from `./core.js` in `interlinear.js`. Appended a
+`<div class="ri-popover__links">` block to the popover HTML in `_riShowPopover` containing
+`<a class="vs-context-btn" href="…">Word Study →</a>` pointing to
+`WORD_URL + '?s=' + encodeURIComponent(strongs)`. The `.ri-popover__links` and
+`.vs-context-btn` CSS rules already existed in `reader.css` lines 2115–2125.
+
+**Files modified:** `assets/js/interlinear.js` only (import line, module-level var, `_riShowPopover`).
+
+---
+
 ## Completed 2026-06-05 (loop session, iteration 2)
 
 ### WS-B · Fetch Gesenius' Hebrew-Chaldee Lexicon (1857) *(HIGH)*

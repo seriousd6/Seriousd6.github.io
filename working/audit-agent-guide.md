@@ -25,38 +25,19 @@ name specific files, functions, and observable symptoms.
 
 ## How to Write a TODO Entry
 
-All new TODO entries go at the bottom of the appropriate existing section in `working/TODO.md`,
-or in a new section at the bottom if no section fits. Use this exact format:
+**Read `working/todo-workflow.md` before writing any entry.** That file is the authoritative
+format reference: item template (Problem / Fix / Verify), priority label definitions,
+prefix code assignments, and the decision rule for TODO.md vs. Deferred-Todo.md.
 
-```markdown
-### AREA-X · Short descriptive title *(HIGH / MEDIUM / LOW)*
+Quick summary for this audit context:
 
-**Problem:** One paragraph. What is broken, missing, or inconsistent?
-Name the file(s) and function(s) where the issue lives. Describe the observable symptom
-a user would see. If it is a gap rather than a bug, describe what the user cannot do.
-
-**Fix:**
-- `filename.js` (`functionName`): Specific change described in one line.
-- `filename.css`: Specific CSS rule to add or change.
-- Any other files affected.
-
-**Verify:** What to observe in the browser or console to confirm the fix is correct.
-```
-
-Use priority labels:
-- **HIGH** — broken behavior, data loss risk, confusing UX on the main path
-- **MEDIUM** — missing feature, degraded experience, inconsistency
-- **LOW** — polish, edge case, minor visual issue
-
-Prefix codes to use (pick the right one for the area being audited):
-- `AUD-` for audit-discovered items with no other natural prefix
-- `NAV-` for navigation and routing
-- `UX-` for user experience flows
-- `CSS-` for visual and style system
-- `CODE-` for code quality, comment discipline, architecture
-- `PWA-` for offline, service worker, install flow
-- `DATA-` for data files, missing JSON, broken paths
-- `PERF-` for performance, unnecessary fetches, load time
+- All audit findings go in `working/TODO.md` in the appropriate existing section, or a new
+  `##` section at the bottom if no section fits (above the Audit Summary table).
+- Search `TODO.md` and `todo-archive.md` before writing — do not duplicate tracked items.
+- Every entry needs all three fields: **Problem** (file + function + user-visible symptom),
+  **Fix** (specific per-file changes), **Verify** (one observable browser/console check).
+- Assign the next unused `PREFIX-N` number. Check the archive for the highest existing number.
+- Do not add items to `Deferred-Todo.md` during an audit session — that file is owner-maintained.
 
 ---
 
@@ -317,11 +298,13 @@ Or use it manually: read this file, pick a dimension, audit, write findings.
 ## What NOT to Do During an Audit
 
 - Do not fix anything — audit only
-- Do not add items already tracked in `working/TODO.md` (search before writing)
+- Do not add items already tracked in `working/TODO.md` (search `TODO.md` and `todo-archive.md` before writing)
 - Do not add vague items ("improve UX", "add better error handling") — every item needs a file and function name
+- Do not add items to `working/Deferred-Todo.md` — that file is owner-maintained
 - Do not create new files other than appending to `working/TODO.md`
 - Do not run Python scripts or modify data files
 - Do not open a browser — audit is code-reading only (unless explicitly doing a visual/DevTools audit)
+- Do not write items without all three required fields (Problem, Fix, Verify) — see `working/todo-workflow.md`
 
 ---
 
