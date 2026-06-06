@@ -99,6 +99,17 @@ onVersionChange(function (id) {
 // ── Public API ────────────────────────────────────────────────────────────
 // window.BibleUI is available to non-module scripts (topic pages, inline scripts).
 // Keep this surface small — it's the only intentional global.
+// CHANGE? Consumers of each key — removing or renaming any of these silently
+//   breaks the listed callers with no JS error until runtime:
+//   - openModal:       topic-page inline <script> blocks on all 10 topic pages
+//   - openReader:      topic-page inline <script> blocks (pass bookId string)
+//   - autoTagPlacesIn: timeline.js after dynamic re-renders; reader.js on lookup
+//   - initOLSection:   ol-companion.js on verse-study page init
+//   - getVersion/setVersion: version picker in topics/_template inline script
+//   Do not add new window.* state outside this object; use app.js callbacks instead.
+// VERIFY: From any topic page DevTools console, confirm `window.BibleUI.openModal`
+//   is a function; call `window.BibleUI.openReader('john', 3, 16)` and verify the
+//   reader navigates to John 3:16.
 window.BibleUI = {
   init:            init,
   getVersion:      getVersion,
@@ -106,7 +117,10 @@ window.BibleUI = {
   openModal:       openModal,
   initOLSection:   initOLSection,
   autoTagPlacesIn: autoTagPlacesIn,  // called by reader.js / timeline.js after dynamic renders
-  // openReader: navigates to the reader page at the given book/chapter/verse.
+  // INTENT: Resolves bookId (e.g. "genesis") to its display name (e.g. "Genesis")
+  //   via metaBooks before building the reader URL. Falls back to the raw bookId
+  //   string if metaBooks hasn't loaded yet, which produces a URL the reader can
+  //   still parse but with lower fidelity (ID string rather than canonical name).
   openReader:   function (bookId, ch, v) {
     var bkData = metaBooks && metaBooks.find(function (b) { return b.id === bookId; });
     var bkName = bkData ? bkData.name : bookId;

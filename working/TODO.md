@@ -590,18 +590,19 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
-### PERF-4 · `vsRenderVersionCompare` unbounded concurrent fetch burst *(MEDIUM)*
-
-**Problem:** `vsRenderVersionCompare` in `assets/js/verse-study.js` (line 981) calls `metaVersions.forEach` and fires one `resolveVerses()` → `loadBook()` call per non-stub version, all simultaneously with no queue or batch size cap. With 11 non-stub versions currently defined in `data/versions/versions.json`, opening the "All Translations" section for the first time triggers 11 concurrent book-JSON fetches at once. Although the section is correctly deferred via `IntersectionObserver` (VS-D), the fetch pattern once visible has no rate limit. This is inconsistent with `word.js`, which adopted a `BATCH_SIZE = 5` sequential-batch pattern (lines 120–128 in `word.js`) specifically to stay within the browser's 6-connection-per-host limit and surface partial results sooner. On a slow connection, all 11 "Loading…" placeholders remain blank until the slowest fetch resolves.
-
-**Fix:**
-- `assets/js/verse-study.js` (`vsRenderVersionCompare`): Replace the `metaVersions.forEach` with the same batch-queue pattern from `word.js`: split `filteredVersions` into chunks of 4–5, process chunks sequentially with `Promise.all` per chunk. Each chunk renders as it resolves so early results appear before the last chunk finishes.
-
-**Verify:** In DevTools → Network, filter requests by the current book id (e.g. `john`). Open the verse study page for John 3:16 and scroll to "All Translations" — should see at most 4–5 simultaneous fetch requests at once, followed by a second batch, rather than 11 all at once.
+*(PERF-4 complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
 *Audit pass 2026-06-05 (Cycle 2). Read: `assets/js/verse-study.js`, `assets/js/daily.js`, `assets/js/ol-companion.js`, `assets/js/apocrypha-reader.js`, `assets/js/word.js`, `assets/js/reader.js`, `assets/js/core.js`. Verified: daily.js fetches only selected devotional (confirmed); `loadLibVerseIndex` is properly cached (confirmed double-call is a no-op at network level); IntersectionObserver deferral confirmed (line 819); word.js BATCH_SIZE=5 confirmed implemented. New finding: vsRenderVersionCompare fires 11 uncapped concurrent fetches — PERF-4.*
+
+---
+
+*Audit pass 2026-06-05 (Cycle 3). Read: `assets/js/lib-browser.js`, `assets/js/ol-companion.js`, `assets/js/reader.js`, `data/library/index.json` (92 KB, 182 docs). Verified: lib-browser.js search debounced 200ms/150ms ✓; `_saveSectionIdx` only fires on pagination not scroll ✓; scroll spy uses `{ passive: true }` ✓; `loadCrossRefs` in core.js caches by bookId with promise-store (concurrent verse renders share pending fetch) ✓; ol-companion.js fetches cached after first book load ✓; library index 92KB is reasonable ✓. New finding: `data/translation/notes/` book files are 3.8–5.4 MB; ol-companion.js fetches the entire book file to render any single verse — PERF-5.*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -639,6 +640,18 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+*Audit pass 2026-06-05 (Cycle 3). Read: `assets/css/verse-study.css`, `assets/css/lib-browser.css`. Verified: no px font sizes in either file ✓; `#fff` in `lib-browser.css` lines 576/693 is white text on primary-colored active chips (acceptable pattern) ✓; `lb-author-dot--*` mid-range colors remain visible in dark mode ✓. New findings: verse-study.css echo-badge light pastels have no dark mode — CSS-17. lib-browser.css tradition abbrev badges use dark hex colors invisible in dark mode + `mark.lb-find-mark` bright yellow — CSS-18.*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-06)*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-06)*
+
+---
+
 ## Navigation & Discoverability Audit — Dimension 8
 
 *Audit pass 2026-06-05. Checked: all main sidebar nav links (all resolve — `read/`, `apocrypha/`, `search/`, `studies/`, `discipline/`, `history/`, `library/`, `library/progress/`, `translation/workshop/`); all 10 topic cards → real pages; all 5 study guide cards → real pages; history hub 4 iframe tabs (all 4 `data-src` targets exist: `timeline/`, `church-history/`, `maps/`, `maps/timelapse/`); `?minimal=1` mode (correctly early-returns from `buildSidebar()` before both sidebar and mobile topbar are built); `tracker/` (embedded as iframe in `discipline/?tab=history`); `compare/` (linked via `COMPARE_URL` in `modal.js` line 411); `wordcloud/` (embedded as iframe in `search/?tab=wordcloud`). Redirect stubs (`plans/`, `journal/`, `memorize/`, `devotionals/`, `reflections/`) all redirect correctly to discipline tabs.*
@@ -650,6 +663,35 @@ localStorage write paths, algorithms, and cross-module couplings.*
 ---
 
 *(NAV-2 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(NAV-3 complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*Audit pass 2026-06-05 (Cycle 2). Checked: all pages on disk vs. nav entries; data/topics.json vs. topics/ dirs (all resolve); study-guides hrefs in topics.json (all 5 resolve); `worship/` redirect stub (correctly points to discipline/?tab=worship); NOTES_URL vs. BOOKMARKS_URL consumption (BOOKMARKS_URL used in reader.js:1101; NOTES_URL never imported — see NAV-3); `tools/terms/` (not yet created — Z5 planned work). No broken nav links, no orphaned topics, no missing study guides.*
+
+---
+
+*Audit pass 2026-06-06 (Cycle 3). Read: `assets/js/main.js` NAV array, `assets/js/verse-study.js` prev/next logic (lines 222–243), `verse-study/index.html`, `assets/css/style.css` sidebar layout. Verified: `apocrypha/` ✓ in NAV (line 56); `word/` ✓ linked via WORD_URL from search + verse-study tokens; `bookmarks/` ✓ linked via BOOKMARKS_URL (reader.js:1101); `notes/` ✓ linked via NOTES_URL (reader.js:1164 + modal.js:992); `verse-study/` ✓ linked from reader modal (modal.js:426); `study-guides/` ✓ linked from topics.json; `church-history/` ✓ linked from history hub iframe; all four pages have index.html ✓; verse-study page correctly loads main site sidebar (body.padding-left via style.css:72) ✓. New finding: verse-study prev/next hides at chapter boundaries with no cross-chapter fallback — NAV-4.*
+
+---
+
+### NAV-4 — verse-study chapter-boundary navigation dead-end
+
+**Priority:** MEDIUM  
+**File:** `assets/js/verse-study.js` lines 222–243
+
+The prev/next verse navigation in `verse-study/` silently hides when it reaches a chapter boundary:
+- **At verse 1** (`pv = 0`): `pv >= 1` is false → `prevNavLink` gets `hidden` attribute. No link to the previous chapter's last verse.
+- **At the last verse** (e.g., John 3:36): `chData[String(37)]` is undefined → `nextNavLink` gets `hidden` attribute. No link to John 4:1.
+
+A user studying verse-by-verse reaches the end of a chapter and the navigation arrow simply vanishes. To continue to the next chapter, they must use "← Reader" (back to the reader), then re-navigate to the next chapter — three extra steps.
+
+**Fix:** When the end-of-chapter check fails, instead of hiding the link, show a chapter-jump: `nextNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(bookName + ' ' + (ch+1) + ':1')` with label `›› Ch {ch+1}`. For prev: link to the reader at the previous chapter with a note (`← Ch {ch-1}`), or pre-load the previous chapter's data to determine its last verse number. The simplest option is a chapter-level jump (Ch N+1 : 1 / Ch N-1 : last) using `metaBooks[book].chapters` to guard against wrapping past the last chapter.
+
+**Verify:** Navigate to verse-study for John 1:1 → prev link shows `← Ch reader` or is absent for chapter 1, verse 1 of the book. Navigate to last verse of John 3 → next link shows `›› Ch 4` linking to John 4:1.
 
 ---
 
@@ -675,6 +717,14 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*Audit pass 2026-06-05 (Cycle 2). Checked all SHELL_URLS against disk. New assets correctly included: `apocrypha.css/js`, `ol-companion.css/js`, `discipline.css/js`, `memorize.css/js`, `lib-browser/progress/reader.css/js`, `timelapse-map.js`, `places.js`, `worship/index.html`, `study-guides/*.html`. Intentionally absent (dev tool): `workshop.js`, `workshop.css`. Missing: `data/apocrypha-books.json` + `data/apocrypha-canon-orders.json` (tracked PWA-5); `topics/holy-catholic-church/index.html` (LOW — not all topics are precached, just the most popular); `translation/workshop/index.html` (intentional — dev tool, not for offline use).*
+
+---
+
 ## Accessibility Audit — Dimension 10
 
 *Audit pass 2026-06-05. Checked: focus styles (sidebar, modal, reader, `.ref` links), ARIA roles and labels (sidebar collapse button, hamburger, nav, modal dialog, reader controls, discipline tabs), modal keyboard trap (`trapFocus` in `modal.js` — complete: Escape closes, Tab cycles, `_lastFocused.focus()` restores on close), color contrast (all primary color pairs pass WCAG AA), `alt` attributes (no `<img>` elements in main pages — site uses CSS/SVG/emoji icons), theme toggle button accessible name (visible text content serves as label), `discipline-strip.js` mobile label handling. Modal, reader, and search ARIA patterns are solid. 4 issues found.*
@@ -697,6 +747,17 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*Audit pass 2026-06-05 (Cycle 2). Checked: `apocrypha-reader.js` (canon chips, chapter buttons — ARIA gaps found), `ol-companion.js` (token buttons — ARIA gap found), `lib-browser.js` (solid ARIA throughout — aria-label on all controls, aria-current on active doc link), `verse-study.js` section toggles (correct — aria-expanded + aria-controls). No new focus-order or contrast issues found beyond those tracked in cycles 1 & 2.*
+
+---
+
 ## Feature Completeness Audit — Dimension 5, Cycle 2
 
 *Audit pass 2026-06-05 (cycle 2). First cycle (AUD-1) found the NT Daily Matthew chapter-count bug. This pass checked: ISBE data (9,380 entries + 66-book verse-index — complete), OL Companion wiring (`window.BibleUI.initOLSection` → verse-study.js — correct), book introductions (66/66), Nave's topical verse-index (66/66), topics-index.json (15 entries — all pages resolve), word cloud scopes (unchanged), translation workshop (page exists), apocrypha reader. Found one HIGH bug in apocrypha-reader.js `_getOrderedBooks()`.*
@@ -707,15 +768,31 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+## Feature Completeness Audit — Dimension 5, Cycle 3
+
+*Audit pass 2026-06-05 (cycle 3). Confirmed: reading plans (8/8 IDs → files), MKT commentary data (fully generated), echoes data (fully generated), apocrypha reader nav wiring, OL Companion wiring. Found two data-ready features with no UI access path.*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
 ## Data Path Integrity Audit — Dimension 4, Cycle 2
 
 *Audit pass 2026-06-05 (cycle 2). First cycle verified all 18 canonical Bible versions, 8 commentary sources, crossrefs, interlinear, plans, library docs, manifest shortcuts, and nav hrefs. This pass checked the new apocrypha data layer (`data/bible-apocrypha/`, `apocrypha-books.json`, `apocrypha-canon-orders.json`) and JS fetch paths in `apocrypha-reader.js`, `terms.js`, `places.js`.*
 
 ---
 
-### DATA-3 · BRENTON version missing scope correction and 3 canonical OT books *(MEDIUM)*
+### DATA-3 · BRENTON version missing scope correction and 3 canonical OT books *(MEDIUM)* *(partially done: code complete, data pending)*
 
 **Problem:** `data/versions/versions.json` declares `BRENTON` with `"scope": "full-bible"` and `"canon_order": "lxx"`. The `lxx` canon order in `apocrypha-canon-orders.json` lists 83 books (66 canonical + 17 deuterocanonical). However, `data/bible-apocrypha/BRENTON/` only has 51 files — the Brenton LXX is an Old Testament translation only with no NT content. The apocrypha reader uses `_isFullBible()` (`scope === 'full-bible'`) to decide whether to show NT navigation, so on BRENTON all 27 NT books appear in the book list but every one 404s when clicked. Additionally, 3 canonical OT books are missing from the BRENTON directory: `esther` (only `additions-esther.json` present — the Greek Esther with additions is there, but `esther.json` for the base canonical MT-mapped form is absent), `daniel` (LXX Daniel includes additions but no `daniel.json` base file), and `nahum` (no equivalent in the BRENTON directory — genuinely missing).
+
+**Code fix applied (2026-06-05):** Changed BRENTON `scope` in `data/versions/versions.json` from `"full-bible"` → `"ot-only"`. Updated `_getOrderedBooks()` in `apocrypha-reader.js` to: (1) use the canon order for any version that has one (not just full-bible), and (2) filter out NT canonical books for `ot-only` scope. This stops the 27 NT 404s. The 3 missing OT data files remain blocked.
 
 **Fix:**
 - `data/versions/versions.json` (`BRENTON` entry): Change `"scope": "full-bible"` → `"scope": "ot-only"` (or add a new `"scope": "lxx-ot"` value). Update `_isFullBible()` in `apocrypha-reader.js` to return false for OT-only scopes.
@@ -736,31 +813,97 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+## Data Path Integrity Audit — Dimension 4, Cycle 3
+
+*Audit pass 2026-06-05 (cycle 3). Cross-checked all translation data paths (notes + 3 MKT draft tiers × 66 books = 264 files — all present). All 8 registered commentary sources have complete 66-book coverage. Topics.json href links all resolve. Found one new gap: WEB-CE has the same Daniel-additions data gap as DR (DATA-4) but with a slightly different set of missing books.*
+
+---
+
+### DATA-5 · WEB-CE full-bible version missing 3 Daniel-addition books *(MEDIUM)*
+
+**Problem:** `data/bible-apocrypha/WEB-CE/` has 74 files but the `dr` canon order it shares with DR lists 77 books. Three books present in the canon order are missing from the WEB-CE directory: `bel-and-dragon`, `prayer-of-azariah`, and `susanna`. (DR has an additional gap — `additions-esther` — that WEB-CE does not.) All three are Daniel additions in the Catholic/deuterocanonical tradition. WEB-CE is the World English Bible with Deuterocanonicals, marketed as a full-Bible version. When a user selects WEB-CE and navigates to Bel and the Dragon, Prayer of Azariah, or Susanna, the apocrypha reader shows: `"[Book] is not yet available in World English Bible: Catholic Edition."` — a confusing error for a version that claims full coverage.
+
+**Fix:**
+- `data/bible-apocrypha/WEB-CE/`: Run `scripts/fetch-apocrypha.py` (or equivalent) targeting WEB-CE for `bel-and-dragon`, `prayer-of-azariah`, `susanna`. These three books ARE available in the WEB-CE source — they are the same Daniel additions that appear in Catholic editions.
+
+**Verify:** Open apocrypha reader with WEB-CE selected, navigate to Susanna — it should display verses, not a fetch error.
+
+---
+
+### DATA-6 · DR / KJV-APO / WEB-CE canonical books contaminated with Strong's markup *(HIGH)*
+
+**Problem:** The 66 canonical book files in `data/bible-apocrypha/DR/`, `KJV-APO/`, and `WEB-CE/` were fetched with Strong's interlinear annotations left in the verse text — e.g. `In|strong="H0430"the|strong="H0853"beginning…`. Contamination rates: DR 87%, KJV-APO 100%, WEB-CE 99.8%. The apocrypha-specific books (tobit, sirach, etc.) in the same directories are clean — only the canonical copies are affected. This makes every canonical chapter unreadable in these three versions.
+
+**Fix:**
+- Write `scripts/fix-apocrypha-strongs.py` that walks all three version directories, strips the pattern `\|strong="[HG]\d+"` (and surrounding whitespace artifacts such as `\s*\|strong="[HG]\d+"\s*`) from every verse string, and writes the files back in-place.
+- Run it and spot-check: `DR/genesis 1:1` should read `"In the beginning God created the heaven and the earth."` with no pipe characters.
+
+**Verify:** Open apocrypha reader, select DR, navigate to Genesis 1 — verses should be plain readable English with no `|strong=` artifacts.
+
+---
+
+### DATA-7 · BRENTON missing spaces in verse text (~1% of verses) *(MEDIUM)*
+
+**Problem:** `data/bible-apocrypha/BRENTON/` has ~399 verses (~1%) where words are concatenated without spaces — e.g. `"Thebook"`, `"sonof"`, `"Inthe"`, `"Loverighteousness"`, `"Whereasmany"`. Affects both canonical and apocrypha-specific books. Root cause: the eBible.org USFM source has inline markers that the fetch script failed to tokenise correctly, causing adjacent words to merge.
+
+**Fix (preferred):** Re-run `scripts/fetch-apocrypha.py BRENTON --force` to re-fetch from eBible.org with corrected USFM tokenisation.
+
+**Fix (fallback):** Post-processing pass — `re.sub(r'([a-z])([A-Z])', r'\1 \2', text)` on all verse strings in `data/bible-apocrypha/BRENTON/`. Low false-positive risk in Biblical text (no camelCase proper nouns). After running, recheck count: should drop from 399 to 0.
+
+**Verify:** BRENTON/tobit 1:1 should read `"The book of the words of Tobit…"` not `"Thebook of the words of Tobit…"`.
+
+---
+
+### DATA-8 · additions-esther chapter count mismatch — WEB-CE and BRENTON have 10 chapters, expected 7 *(LOW)*
+
+**Problem:** `apocrypha-books.json` declares `additions-esther` as 7 chapters, but both `data/bible-apocrypha/WEB-CE/additions-esther.json` and `data/bible-apocrypha/BRENTON/additions-esther.json` contain 10 chapters. The traditional "Additions to Esther" (Deuterocanonical) has 6 lettered sections (A–F) in NRSV convention, or 7 chapters in some enumerations. 10 chapters matches neither — the source likely used the Greek Esther continuous chapter numbering (chapters 11–16 of a combined Hebrew+Greek Esther).
+
+**Fix:**
+- Inspect both files: determine what chapter keys are used and what content is in them.
+- Either: (a) update `apocrypha-books.json` to reflect the correct count for this numbering convention, or (b) restructure the files to the declared 7-chapter schema if the source supports it.
+- Update `apocrypha-canon-orders.json` chapter count field if needed.
+
+**Verify:** The apocrypha reader should navigate additions-esther chapter by chapter without a "chapter not found" error at any step.
+
+---
+
+### DATA-9 · BRENTON Baruch missing chapter 6 (Letter of Jeremiah) *(LOW)*
+
+**Problem:** `data/bible-apocrypha/BRENTON/baruch.json` has 5 chapters; `apocrypha-books.json` declares 6. Chapter 6 of Baruch is the "Letter of Jeremiah" — a distinct text traditionally appended to Baruch in LXX manuscripts, included in Brenton's 1851 translation.
+
+**Fix:**
+- Re-run `scripts/fetch-apocrypha.py BRENTON --force` to re-fetch, or manually source Brenton's Baruch chapter 6 from Wikisource (public domain) and append to the file as chapter key `"6"` with verse keys `"1"` through `"73"`.
+- Expected opening: `"The copy of an epistle, which Jeremy sent unto them which were to be led captives into Babylon…"`
+
+**Verify:** BRENTON/baruch.json has chapters 1–6; navigating to chapter 6 in the apocrypha reader shows the Letter of Jeremiah text.
+
+---
+
 ## Mobile Responsiveness Audit — Dimension 3, Cycle 2
 
 *Audit pass 2026-06-05 (cycle 2). First cycle (CSS-1–6) addressed word.css height clipping, hamburger/discipline/reader touch targets, study-nav font-size, and reader keyboard hint visibility. This pass examined lib-browser.css, verse-study.css, memorize.css, maps.css, and timelapse.css. Two new issues found.*
 
 ---
 
-### CSS-11 · lib-browser.css — Mobile tab bar sub-WCAG font-size and touch target *(MEDIUM)* *(agent: in-progress)*
-
-**Problem:** In `lib-browser.css` `@media (max-width: 600px)` (line 859), `.lb-tab-btn` has `font-size: .72rem` (11.52px at 16px base — WCAG AA body minimum is 14px) and `padding: .55rem .25rem` with no `min-height`. Computed button height is approximately 30–32px — below the WCAG 2.5.5 minimum of 44px. These tab buttons are the primary navigation for the entire Library browser on mobile: Browse / Authors / List / Read. A user on a 375px screen cannot reliably tap the correct tab or read the labels without zooming. This also affects the `lb-tab-btn--active` state which inherits the same dimensions.
-
-**Fix:**
-- `assets/css/lib-browser.css` (`.lb-tab-btn` in `@media (max-width: 600px)`, line 860): Change `font-size: .72rem` → `font-size: .82rem`. Add `min-height: 44px; display: flex; align-items: center; justify-content: center;` to guarantee a 44px tap height.
-
-**Verify:** At 375px viewport width, all four Library browser tab buttons (Browse / Authors / List / Read) should be visually ≥44px tall and the label text readable without pinch-zoom.
+*(CSS-11 complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### CSS-12 · verse-study.css — Section collapse toggle button has no mobile touch target *(LOW)*
+*(CSS-12 complete — see working/todo-archive.md 2026-06-05)*
 
-**Problem:** In `verse-study.css` (line 869), `.vs-section-toggle` (the ▾/▴ button that collapses/expands each verse study section, added in VS-C) has `font-size: 0.72rem`, `padding: 0 0.2rem`, and no `min-height`. On mobile the button renders at roughly 14–16px × 20px — well below the 44px WCAG tap target. It sits adjacent to the section heading, so mis-taps scroll the page or activate the wrong element. No `@media (max-width: ...)` override exists for this element in the existing mobile touch-targets block (line 926).
+---
 
-**Fix:**
-- `assets/css/verse-study.css` (`.vs-section-toggle` mobile rule, add inside existing `@media (max-width: 640px)` block at line 926): Add `.vs-section-toggle { min-height: 44px; padding: 0 0.5rem; display: inline-flex; align-items: center; }` to bring it to the WCAG tap minimum without affecting its desktop appearance.
+## Mobile Responsiveness Audit — Dimension 3, Cycle 3
 
-**Verify:** On a 375px viewport in the verse study page, tap the ▾ button on any section heading — it should be easy to tap without hitting adjacent text. Section collapses correctly.
+*Audit pass 2026-06-05 (cycle 3). Prior cycles addressed the core reader, discipline, lib-browser, verse-study, maps, and timelapse pages. This pass audited `apocrypha.css` and `ol-companion.css` — both added after the previous mobile passes.*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
@@ -770,28 +913,25 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
-### UX-6 · verse-study.js — Commentary stuck on "Loading commentary…" after source-switch network failure *(MEDIUM)* *(agent: in-progress)*
-
-**Problem:** In `verse-study.js`, the inner `vsLoadComm` function (line 752) sets `commSec.bodyEl.innerHTML` to `'<p class="bsw-modal__loading">Loading commentary…</p>'` before the fetch, but has no `.catch()` handler. On initial page load this is harmless — the commentary section stays hidden if the fetch fails. However, once the section has been successfully shown and the user switches the commentary source picker, the section is already visible. If the new fetch fails (offline, source unavailable), `commSec.bodyEl.innerHTML` is left permanently showing "Loading commentary…" with no way to dismiss or retry. This is the same pattern that UX-2 fixed for the interlinear section.
-
-**Fix:**
-- `verse-study.js` (`vsLoadComm`, line ~785): Add `.catch(function () { commSec.bodyEl.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary. Check your connection.</p>'; })` after the `.then()` block.
-
-**Verify:** In the verse study page with a commentary source loaded, disable the network (DevTools → Network → Offline), then switch to a different commentary source — the "Loading commentary…" message should be replaced with a "Could not load" error, not stay stuck.
+*(UX-6 complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### UX-7 · verse-study.js — Cross-reference and parallels sections leave hidden orphan DOM nodes on fetch failure *(LOW)* *(agent: in-progress)*
-
-**Problem:** In `verse-study.js`, both `xrefSec` (line 741, `loadCrossRefs`) and `parSec` (line 807, `loadParallels`) have no `.catch()` handler. On network failure both sections remain as invisible orphan DOM elements (created but never made visible and never removed). `vsRebuildNav()` correctly excludes hidden sections from the sidebar, so the user sees nothing wrong. However, the orphan nodes are a resource/memory inconsistency and mask the real cause of absent sections — a user on a slow connection cannot distinguish "no data for this verse" from "fetch failed." The same fix pattern was applied to `interlinearSec` in UX-2.
-
-**Fix:**
-- `verse-study.js` (xref section, line ~747): Add `.catch(function () { xrefSec.el.remove(); vsRebuildNav(); })` after the loadCrossRefs `.then()`.
-- `verse-study.js` (parallels section, line ~813): Add `.catch(function () { parSec.el.remove(); vsRebuildNav(); })` after the loadParallels `.then()`.
-
-**Verify:** In the verse study page with DevTools → Network → Offline, load a verse — the cross-references and parallels sections should be absent (removed), not silently orphaned in the DOM (confirm via DevTools Elements that no hidden `.vs-xrefs` or `.vs-parallels` elements remain).
+*(UX-7 complete — see working/todo-archive.md 2026-06-05)*
 
 ---
+
+## Empty State & Loading State Audit — Dimension 2, Cycle 3
+
+*Audit pass 2026-06-05 (cycle 3). Previous cycles covered the core reader, search, verse-study, and discipline pages. This pass targeted two newer modules — lib-browser.js and apocrypha-reader.js — that were added after the prior audits.*
+
+---
+
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
 
 ## Code Comment Audit — Dimension 1, Cycle 2
 
@@ -799,27 +939,210 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
-### CODE-9 · wire.js — autoTagChapterRefs, autoTagBareRefs, autoTagBareChapters lacking INTENT/CHANGE?/VERIFY *(MEDIUM)*
-
-**Problem:** Five exported functions in `wire.js` are still missing required structured comments after the first-pass fix (which addressed `autoTagRefs`, `updateInlineVerses`, and `applyHighlights`). `autoTagChapterRefs` (line 203), `autoTagBareRefs` (line 285), and `autoTagBareChapters` (line 360) are complex TreeWalker algorithms with no `INTENT`, `CHANGE?`, or `VERIFY` at all. `applyModalHighlights` (line 480) uses a different CSS class prefix (`bsw-hl-`) than `applyHighlights` (`reader-verse--hl-`), but has no `CHANGE?` documenting that divergence or listing its callers. `applyBookmarks` (line 497) writes DOM state from localStorage bookmarks but has no `CHANGE?` noting which callers in `reader.js` must stay in sync.
-
-**Fix:**
-- `wire.js` (`autoTagChapterRefs`, line 203): Add INTENT (same TreeWalker/SKIP-set pattern as autoTagRefs; tags "Book Ch" and "Book Ch–Ch" whole-chapter patterns, excluding tokens followed by `:digit`) + CHANGE? (if bookLookup/metaBooks structure changes or the SKIP set diverges from autoTagRefs, both functions break silently; autoTagRefs calls this at its end) + VERIFY (open a topic page with plain "Romans 5–8" text; after load it should become a clickable whole-chapter ref).
-- `wire.js` (`autoTagBareRefs`, line 285): Add INTENT (bare "Ch:V" patterns on book-specific pages; only invoked when body has `data-bible-book`; bookId and bookName supplied by autoTagRefs) + CHANGE? (if data-bible-book handling in autoTagRefs changes, this function stops being called; also called nowhere else) + VERIFY.
-- `wire.js` (`autoTagBareChapters`, line 360): Add INTENT ("Chap. 3" / "ch. 3" / "chapter 3" patterns on book-specific pages; called in sequence after autoTagBareRefs from autoTagRefs) + CHANGE? + VERIFY.
-- `wire.js` (`applyModalHighlights`, line 480): Add CHANGE? noting the CSS class prefix split: this function applies `bsw-hl-{colour}` to `.bsw-modal__verse` elements; `applyHighlights` applies `reader-verse--hl-{colour}` to `.reader-verse` elements — they must not be swapped; callers are `modal.js:_renderModalVerseTab` and `modal.js:_switchTab`.
-- `wire.js` (`applyBookmarks`, line 497): Add CHANGE? listing callers: `reader.js:doLookup` and `reader.js:injectComparePanel`; if `isBookmarked()` schema in `storage.js` changes or the `reader-verse__num--bookmarked` class name is renamed, both call sites silently show no bookmark state.
-
-**Verify:** Open the reader at a chapter with a bookmarked verse; confirm the bookmark star renders. Open a book-specific topic page (e.g. `topics/gospel-of-john/`) and verify "3:16" and "Chap. 1" are auto-tagged as clickable ref links.
+*(CODE-9 complete — see working/todo-archive.md 2026-06-05)*
 
 ---
 
-### CODE-10 · app.js — window.BibleUI cross-module coupling lacks CHANGE? *(MEDIUM)*
+*(CODE-10 complete — see working/todo-archive.md 2026-06-05)*
 
-**Problem:** `app.js` line 102 declares `window.BibleUI` — the site's only intentional window-level global, depended on by non-module inline scripts on topic pages and by `ol-companion.js`. Per CLAUDE.md rules, any `window.*` cross-module coupling requires `// CHANGE?` noting downstream callers. Currently the object has a one-line prose comment ("the only intentional global") but no structured `CHANGE?` listing which pages use each key, and no `VERIFY`. The nested `openReader` closure (lines 110–115) also has no `INTENT`, despite a non-obvious `bookId → display name` resolution step that silently falls back to the raw ID string if `metaBooks` isn't loaded. Removing or renaming any `window.BibleUI` key without updating inline scripts fails completely silently.
+---
 
-**Fix:**
-- `app.js` (`window.BibleUI`, line 102): Add `// CHANGE?` listing consumers: topic-page inline scripts call `BibleUI.openModal()` and `BibleUI.autoTagPlacesIn()`; `ol-companion.js` calls `BibleUI.initOLSection()`; `timeline.js` calls `BibleUI.autoTagPlacesIn()` after dynamic renders; removing any key with no replacement silently breaks the relevant pages. Also add `// VERIFY`: from a topic page DevTools console, confirm `window.BibleUI.openModal` is a function and calling it opens the verse modal.
-- `app.js` (`openReader`, line 110): Add `// INTENT:` explaining the bookId → name resolution step (callers on topic pages pass an ID like `"genesis"` not the display name `"Genesis"`; falls back to bookId string if metaBooks isn't ready, which produces a broken reader URL).
+## Code Comment Audit — Dimension 1, Cycle 3
 
-**Verify:** From a topic page console, call `window.BibleUI.openReader('john', 3, 16)` — confirm the reader navigates to John 3:16. Confirm `window.BibleUI.openModal` is callable with a `{bookId, ch, v}` parsed object.
+*Audit pass 2026-06-05 (cycle 3). Prior cycles (CODE-1–10) addressed the original JS files and wire.js/app.js additions. This pass found two files added since those fixes — ol-companion.js and lib-browser.js — that have zero INTENT/CHANGE?/VERIFY coverage despite containing complex state logic.*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(item complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+## Reader Interlinear — Popover Bugs
+
+Four bugs in the interlinear tile popover (`assets/js/interlinear.js` — `_riShowPopover`, `renderReaderInterlinearRow`).
+
+---
+
+### RI-A · Popover spawns off-screen on right edge and bottom edge *(HIGH)*
+
+**Root cause:** The popover is `position: fixed` in CSS (`reader.css:2020`), which means coordinates are viewport-relative. But `_riShowPopover` (interlinear.js:393–395) positions it with:
+```js
+pop.style.top  = (r.bottom + window.scrollY + 4) + 'px';
+pop.style.left = Math.max(8, r.left + window.scrollX) + 'px';
+```
+Adding `window.scrollY` / `window.scrollX` to a `fixed` element's coordinates pushes it far below and to the right of the viewport whenever the user has scrolled. With `fixed` positioning, `getBoundingClientRect()` already returns viewport coordinates — scroll offsets must not be added.
+
+Additionally there is no right-edge or bottom-edge clamping: a tile near the right side of the screen will cause the 280px popover to overflow the viewport, and a tile near the bottom will push the popover below the fold.
+
+**Fix — interlinear.js `_riShowPopover`, lines 393–395:**
+```js
+var POP_W = 280;
+var POP_MARGIN = 8;
+var r = tile.getBoundingClientRect();
+
+// Position below tile; flip above if it would overflow the bottom
+var topBelow = r.bottom + 4;
+var topAbove = r.top - 4;  // will subtract pop height after render
+pop.style.left = Math.min(
+  Math.max(POP_MARGIN, r.left),
+  window.innerWidth - POP_W - POP_MARGIN
+) + 'px';
+pop.style.top = topBelow + 'px';  // initial placement; adjust after render
+
+// After the element is in the DOM, flip above if it overflows the bottom
+requestAnimationFrame(function () {
+  var popH = pop.offsetHeight;
+  if (topBelow + popH > window.innerHeight - POP_MARGIN) {
+    pop.style.top = Math.max(POP_MARGIN, r.top - popH - 4) + 'px';
+  }
+});
+```
+Remove `window.scrollY` and `window.scrollX` from both lines.
+
+**Verify:** Click a tile on a word near the right edge of the interlinear row — popover should stay fully within the viewport. Click a tile on the last verse in a chapter — popover should flip above the tile rather than disappearing below the fold.
+
+---
+
+### RI-B · Popover stays fixed on screen when user scrolls — loses connection to tile *(HIGH)*
+
+**Root cause:** The popover is `position: fixed` and is never repositioned or removed when the reader scroll container scrolls. After the user scrolls a few lines, the popover floats at its original screen position with no visible connection to any tile, covering unrelated text.
+
+**Fix — interlinear.js `_riShowPopover`:**
+Add a one-shot scroll listener on the reader's scroll container that closes the popover when the user scrolls:
+```js
+// Close on scroll — fixed popover can't track the tile
+var _scrollClose = function () {
+  if (_riPopoverEl) { _riPopoverEl.remove(); _riPopoverEl = null; }
+  _scrollTarget.removeEventListener('scroll', _scrollClose);
+};
+var _scrollTarget = document.querySelector('.reader-content') ||
+                    document.getElementById('reader-results') ||
+                    window;
+_scrollTarget.addEventListener('scroll', _scrollClose, { passive: true });
+```
+Store a reference to the scroll listener alongside `_riPopoverEl` so it can be removed when the popover is closed by other means (close button, outside click).
+
+**Verify:** Open an interlinear popover, then scroll the reader. The popover should disappear immediately on scroll rather than floating adrift over the text.
+
+---
+
+### RI-C · No "Word Study" link in popover — was present before, now missing *(HIGH)*
+
+**Root cause:** `_riShowPopover` (interlinear.js:377–388) builds the popover HTML with close button, header, orig, def, and deriv — but no links section. The CSS already has `.ri-popover__links` and `.ri-popover__links .vs-context-btn` (reader.css:2115–2125), confirming the section was planned and previously existed but was dropped from the JS render.
+
+The word study URL pattern is `WORD_URL + '?s=' + strongs` (matches verse-study.js:508, 573, 707). `WORD_URL` is exported from `core.js` line 45 but is not currently imported in `interlinear.js`.
+
+**Fix — interlinear.js:**
+1. Add `WORD_URL` to the import from `./core.js` (line 6).
+2. Append a links block to the popover HTML in `_riShowPopover`:
+```js
+'<div class="ri-popover__links">' +
+  '<a class="vs-context-btn" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(strongs)) + '" ' +
+     'title="Open full word study">' +
+    'Word Study →' +
+  '</a>' +
+'</div>'
+```
+
+**Verify:** Click any interlinear tile — the popover should show a "Word Study →" link at the bottom. Clicking it should navigate to the word study page for that Strong's code (e.g. `word/?s=G3056`).
+
+---
+
+### RI-D · Tile click feels unresponsive — no active state, outside-click timing bug *(MEDIUM)*
+
+**Root causes:**
+1. `.ri-tile--active` is defined in CSS (`reader.css:1966`) but the JS never applies it — there is no visual feedback between click and popover render, making repeated clicks feel ignored.
+2. The outside-click listener is registered inside a `setTimeout(10ms)` (interlinear.js:398–402). On fast clicks this can race: the tile click event propagates, the 10ms fires, and the newly created outside-click listener immediately closes the popover it just opened. Using `e.stopPropagation()` on the tile click is cleaner and removes the race.
+3. Touch targets: `.ri-tile` has no explicit minimum height/touch-area, making it hard to tap accurately on mobile.
+
+**Fix — interlinear.js `renderReaderInterlinearRow` and `_riShowPopover`:**
+
+In `renderReaderInterlinearRow`, change the tile click handler:
+```js
+tile.addEventListener('click', function (e) {
+  e.stopPropagation();  // prevents immediate outside-click close
+  // Remove active state from previously active tile
+  if (_riActiveTile && _riActiveTile !== tile) {
+    _riActiveTile.classList.remove('ri-tile--active');
+  }
+  tile.classList.add('ri-tile--active');
+  _riShowPopover(tile, strongsDict);
+});
+```
+
+In `_riShowPopover`, remove the `setTimeout` wrapper and use a direct `document.addEventListener` (safe because `e.stopPropagation()` on the tile prevents immediate close):
+```js
+// Replace the setTimeout block:
+document.addEventListener('click', function _outside(e) {
+  if (!pop.contains(e.target)) {
+    pop.remove(); _riPopoverEl = null;
+    if (_riActiveTile) { _riActiveTile.classList.remove('ri-tile--active'); _riActiveTile = null; }
+    document.removeEventListener('click', _outside);
+  }
+});
+```
+
+Also update the close button handler to remove the active class.
+
+**Fix — reader.css:**
+Add a minimum touch target to `.ri-tile`:
+```css
+.ri-tile { min-height: 44px; }  /* WCAG 2.5.5 touch target */
+```
+
+**Verify:** Click a tile — it should immediately show an active/highlighted state, and the popover should appear without any flicker or immediate close. Click outside — the popover closes and the tile's active state is removed. On mobile, tapping small tiles should register reliably.
+
+---
+
+## Translation Workshop — Lexical Evidence Expansion
+
+**Goal:** Transform the Workshop's "Attested Range" from an asserted definition into a demonstrated one. Right now `semantic_range` is a copy of the Strong's `def` field — the same single-source claim dressed up differently. The expansion adds three layers of evidence: more lexical sources (independent scholarly witnesses to the range), biblical attestation (the word in its actual textual contexts across the corpus), and extrabiblical attestation (papyri, Josephus, Philo, classical Greek — showing the word in the wild outside the Bible).
+
+**Current sources:**
+- Greek: Dodson (CC0 gloss/def) + Thayer 1889 (short/long def) — both are Strong's-adjacent derivatives
+- Hebrew: Strong's Hebrew (gloss/def) + BDB 1906 (short/long def)
+- `expansion` field: in schema, empty in every entry
+
+**Evaluation:** The two-source display looks great visually. The semantic range framing is correct in theory. What's missing is *evidence* — the dossier tells you what scholars think the range is, but doesn't show you the word earning that range through actual use. A translator needs to see the word behaving differently in John vs. Paul, in the papyri vs. the LXX, in an oath vs. a prayer.
+
+---
+
+*(WS-A complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(WS-B complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(WS-C complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(WS-D complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(WS-E complete — see working/todo-archive.md 2026-06-05)*
+
+---
+
+*(WS-F complete — see working/todo-archive.md 2026-06-05)*
+
+
+### WS-G · Curated semantic-range descriptions for top-100 disputed/high-use terms *(LOW — agent task)*
+
+**Why:** The current `semantic_range` field is generated from the Strong's `def` field — it's the same text from the same source, just relabeled. For the 100 most significant terms (the Phase 1 + Phase 5 sets), the range description should be a curated synthesis: what do all the sources agree on, where do they diverge, and what does the corpus evidence show? This is an agent-writable task — one entry at a time, the agent reads all source cards + attested uses and writes a 2-3 sentence curated range description.
+
+**Tasks:**
+- [ ] Design the agent prompt for curated range writing (reads: dodson + thayer + abbott-smith + attested uses → writes: `semantic_range` as 2-3 sentence synthesis)
+- [ ] Agent pass: curate `semantic_range` for all Phase 1 Greek entries (200 entries)
+- [ ] Agent pass: curate `semantic_range` for all Phase 2 Hebrew entries (200 entries)
+- [ ] Agent pass: curate `semantic_range` for Phase 5 contested terms (17 entries — highest priority)
+- [ ] `apply-decisions.py` — extend to support `semantic_range` field updates (currently only handles status/tiers/log)
+
+**Note:** Do WS-A–E first. The curated range descriptions should synthesise all the evidence, not just paraphrase Strong's.

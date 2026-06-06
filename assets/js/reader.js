@@ -6,7 +6,7 @@ import {
   normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, escHtml,
   _compareCanonical, parseCrossRefEntry, resolveVerses,
   ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
-  onVersionChange, _resolve, BOOKMARKS_URL,
+  onVersionChange, _resolve, BOOKMARKS_URL, NOTES_URL,
   LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache,
   BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
@@ -1154,6 +1154,16 @@ function _loadReaderNotes(parsed, container) {
       _loadReaderNotes(parsed, container);
     });
   }
+
+  // INTENT: NOTES_URL was exported from core.js but unused — mirrors the BOOKMARKS_URL "View all"
+  //   link pattern in _loadReaderBookmarks so notes are equally discoverable from the reader panel.
+  // CHANGE? If NOTES_URL path changes in core.js the link href updates automatically.
+  // VERIFY: Open reader → Notes tab. "View all notes ↗" link appears below the compose form.
+  var viewAll = document.createElement('a');
+  viewAll.className  = 'reader-bm-viewall';
+  viewAll.href       = NOTES_URL;
+  viewAll.textContent = 'View all notes ↗';
+  container.appendChild(viewAll);
 }
 
 function _loadReaderCommentary(parsed, container) {

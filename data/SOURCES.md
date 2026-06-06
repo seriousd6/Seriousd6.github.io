@@ -111,6 +111,31 @@ changed, or removed. Include the commit hash or version tag so re-syncs are not 
 - **Last pulled:** 2026
 - **Commit/version:** unknown — record hash on next pull
 
+### Gesenius' Hebrew-Chaldee Lexicon to the Old Testament (Tregelles tr., 1857)
+- **Source:** archive.org — public domain (pre-1923); preferred item: `geseniushebrew00geseuoft`
+- **Fetch script:** `scripts/fetch-gesenius.py`
+- **Data path:** `data/strongs/gesenius.json`
+- **License:** Public domain (1857 Tregelles translation of Wilhelm Gesenius)
+- **Last pulled:** (not yet run — run fetch-gesenius.py to populate)
+- **Why:** Foundational Hebrew lexicon with Semitic cognate data (Arabic, Aramaic, Syriac,
+  Phoenician parallels) that grounds Hebrew roots in the broader Semitic family. BDB (1906)
+  was built on Gesenius; Gesenius has richer cognate/etymology depth for disputed terms
+  (e.g., H2617 חֶסֶד — Arabic cognate meaning shame/reproach illuminates why the range is wide).
+- **Workshop UI:** Shown as "Gesenius (1857)" source card in the Lexical Sources section.
+  Injected into Hebrew entries via `seed-glossary.py` (source_data.gesenius).
+
+### Abbott-Smith, Manual Greek Lexicon of the New Testament (1922)
+- **Source:** https://ccel.org/ccel/abbott_smith/lexicon (CCEL — G.H. Abbott-Smith, 3rd ed. 1922)
+- **Fetch script:** `scripts/fetch-abbott-smith.py`
+- **Data path:** `data/strongs/abbott-smith.json`
+- **License:** Public domain (published 1922, pre-1928)
+- **Last pulled:** (not yet run — run fetch-abbott-smith.py to populate)
+- **Why:** NT-specific lexicon with classical usage notes and LXX cross-references;
+  provides an independent third witness for Greek semantic range alongside Dodson (CC0)
+  and Thayer (1889). Cited as the compact scholarly standard for NT Greek.
+- **Workshop UI:** Shown as "Abbott-Smith (1922)" source card in the Lexical Sources section
+  of the dossier. Injected into entries via `seed-glossary.py` (source_data.abbott).
+
 ---
 
 ## Nave's Topical Bible

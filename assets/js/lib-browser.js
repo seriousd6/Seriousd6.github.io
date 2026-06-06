@@ -31,6 +31,13 @@ var _findMatchSecs = [];   // section indices containing the term (paginated mod
 var _findCurrMatch = 0;    // which match index is currently shown (paginated mode)
 var _findDocId     = '';   // doc whose find state is live (cleared when switching docs)
 
+// INTENT: Entry point for the Library Browser page (/library/). Called by app.js when
+//   #lb-container is present. Wires filters, filter-toggle, search, URL state, and the
+//   initial document list render. Evicts stale localStorage position entries on load.
+// CHANGE? Caller is app.js — search for 'initLibBrowserPage' there to find the detection guard.
+//   #lb-container is the sentinel; if it is renamed in library/index.html, update app.js too.
+// VERIFY: Open /library/ — filter chips and document list populate; selecting a filter updates
+//   the list. DevTools → Application → Local Storage: bsw_lib_filters key updates on filter change.
 export function initLibBrowserPage() {
   if (!document.getElementById('lb-container')) return;
   _evictStalePositions();
@@ -106,6 +113,8 @@ export function initLibBrowserPage() {
     })
     .catch(function(err) {
       console.error('[LibBrowser] index load error:', err);
+      var listEl = document.getElementById('lb-list');
+      if (listEl) listEl.innerHTML = '<p class="lb-list-empty">Could not load the document index. Check your connection and reload the page.</p>';
     });
 }
 
@@ -212,10 +221,30 @@ function _initFromUrl() {
   if (_activeId && sec > 0) _sectionIdx[_activeId] = sec;
 }
 
+// INTENT: Persists the current _filters state to localStorage so it survives page reloads.
+//   _initFromUrl reads it back on the next load when the URL has no explicit filter params.
+// CHANGE? Key is _LIB_FILTERS_KEY = 'bsw_lib_filters'. Schema: { tradition, era, type, author,
+//   sort, q }. Adding a new filter dimension means updating _filters default (top of file),
+//   the read loop in _initFromUrl, and the JSON here — omitted keys are silently dropped on restore.
+// VERIFY: Set a filter, reload the page with a clean URL — the same filter should be active.
+//   DevTools → Application → Local Storage: bsw_lib_filters should be a JSON object with the
+//   expected keys set to their current values.
 function _saveFilters() {
   try { localStorage.setItem(_LIB_FILTERS_KEY, JSON.stringify(_filters)); } catch(e) {}
 }
 
+// INTENT: Removes localStorage position entries (bsw_lbpos_* keys) older than 90 days to
+//   prevent unbounded growth as users open many library documents over time.
+//   Iterates in reverse because forward iteration corrupts indices after localStorage.removeItem —
+//   removing item at index i shifts all higher-index items down, causing the next i++ to skip one.
+//   The /^\d+$/ guard skips legacy entries that stored a bare chapter number (no timestamp) —
+//   those cannot be age-checked so they are left in place and cleaned up by the next visit
+//   after a new-format entry overwrites them.
+// CHANGE? 90-day cutoff is hardcoded (line 223); _LIB_POS_PREFIX = 'bsw_lbpos_' is the namespace.
+//   Position schema: { idx: <sectionIndex>, ts: <epochMs> }. If either changes, update
+//   the read/write at lines ~809 and ~816 and the legacy guard regex here.
+// VERIFY: DevTools → Application → Local Storage: after 90+ days, old bsw_lbpos_* entries
+//   disappear on the next page load. New entries appear as JSON objects with idx and ts fields.
 function _evictStalePositions() {
   try {
     var cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;

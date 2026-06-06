@@ -369,6 +369,57 @@
 }
 
 /* ── Parallel passages section ────────────────────────────── */
+/* ── Echoes & Fulfillments ────────────────────────────────────────────────── */
+.vs-echo-entry {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.vs-echo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+}
+
+.vs-echo-badge {
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.vs-echo-badge--quote       { background: #e8f5e9; color: #2e7d32; }
+.vs-echo-badge--fulfillment { background: #e3f2fd; color: #1565c0; }
+.vs-echo-badge--allusion    { background: #fff3e0; color: #e65100; }
+.vs-echo-badge--type        { background: #f3e5f5; color: #6a1b9a; }
+.vs-echo-badge--shadow      { background: #f5f5f5; color: #424242; }
+.vs-echo-badge--theme       { background: #fce4ec; color: #880e4f; }
+
+.vs-echo-ref {
+  font-weight: 600;
+  color: var(--color-primary);
+  flex: 1;
+}
+
+.vs-echo-note {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
 .vs-parallel-panel {
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -893,6 +944,22 @@
   }
 }
 
+/* ── Echo badge dark-mode overrides (CSS-17) ─────────────────────────────── */
+[data-theme="dark"] .vs-echo-badge--quote       { background: rgba(46,125,50,0.18);  color: #81c784; }
+[data-theme="dark"] .vs-echo-badge--fulfillment { background: rgba(21,101,192,0.18); color: #90caf9; }
+[data-theme="dark"] .vs-echo-badge--allusion    { background: rgba(230,81,0,0.18);   color: #ffcc80; }
+[data-theme="dark"] .vs-echo-badge--type        { background: rgba(106,27,154,0.18); color: #ce93d8; }
+[data-theme="dark"] .vs-echo-badge--shadow      { background: rgba(66,66,66,0.25);   color: #bdbdbd; }
+[data-theme="dark"] .vs-echo-badge--theme       { background: rgba(136,14,79,0.18);  color: #f48fb1; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vs-echo-badge--quote       { background: rgba(46,125,50,0.18);  color: #81c784; }
+  :root:not([data-theme="light"]) .vs-echo-badge--fulfillment { background: rgba(21,101,192,0.18); color: #90caf9; }
+  :root:not([data-theme="light"]) .vs-echo-badge--allusion    { background: rgba(230,81,0,0.18);   color: #ffcc80; }
+  :root:not([data-theme="light"]) .vs-echo-badge--type        { background: rgba(106,27,154,0.18); color: #ce93d8; }
+  :root:not([data-theme="light"]) .vs-echo-badge--shadow      { background: rgba(66,66,66,0.25);   color: #bdbdbd; }
+  :root:not([data-theme="light"]) .vs-echo-badge--theme       { background: rgba(136,14,79,0.18);  color: #f48fb1; }
+}
+
 /* ── VS-F: Word panel definition expand ────────────────────────────────── */
 .vs-wp-def-more {
   background: none;
@@ -943,6 +1010,14 @@
   .vs-xref-link {
     min-height: 44px;
     padding: 0.3rem 0.6rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section collapse toggle: 44px tap target (desktop size ~20px is too small) */
+  .vs-section-toggle {
+    min-height: 44px;
+    padding: 0 0.5rem;
     display: inline-flex;
     align-items: center;
   }

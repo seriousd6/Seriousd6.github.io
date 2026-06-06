@@ -7,7 +7,7 @@ import {
   escHtml, READER_URL, VERSE_STUDY_URL, COMPARE_URL,
   COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
   ATTRIBUTION, metaVersions, metaBooks,
-  registerOpenModal, _resolve
+  registerOpenModal, _resolve, NOTES_URL
 } from './core.js';
 import {
   getNotes, getNote, saveNote, toggleHighlight, getTags, addTag, removeTag,
@@ -982,6 +982,16 @@ export function _renderNotesPanel(parsed, container) {
       cta.value = '';
       refresh();
     });
+
+    // INTENT: NOTES_URL was exported from core.js but never surfaced — this link makes the
+    //   standalone notes page discoverable from the verse modal after saving a note.
+    // CHANGE? If NOTES_URL path changes in core.js the link href updates automatically.
+    // VERIFY: Open verse study modal → Notes tab. "View all notes ↗" link appears below compose area.
+    var viewAllNotes = document.createElement('a');
+    viewAllNotes.className  = 'bsw-notes-viewall';
+    viewAllNotes.href       = NOTES_URL;
+    viewAllNotes.textContent = 'View all notes ↗';
+    container.appendChild(viewAllNotes);
   }
 
   function refresh() {

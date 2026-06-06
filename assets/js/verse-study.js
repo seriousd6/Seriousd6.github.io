@@ -7,7 +7,7 @@ import {
   COMMENTARY_SOURCES, FATHER_SLUGS,
   getVersion, onVersionChange, escHtml,
   parseRef, resolveVerses, loadBook,
-  loadCrossRefs, loadCommentary,
+  loadCrossRefs, loadCommentary, loadEchoes,
   loadInterlinear, loadStrongs, loadLexicon,
   parseCrossRefEntry, _compareCanonical,
   getCommentarySource, setCommentarySource,
@@ -18,6 +18,7 @@ import { getNotes } from './storage.js';
 import { _HL_COLORS } from './storage.js';
 import { wireRefEl, wireRefLinks, applyHighlights } from './wire.js';
 import { expandMorphCode } from './interlinear.js';
+// loadParallels retained for reference — verse-study now uses loadEchoes (see AUD-9)
 import { loadParallels } from './parallels.js';
 import {
   _renderNotesPanel, _shareVerseAsImage,
@@ -35,6 +36,15 @@ var _vsActiveToken = null;
 var _vsWordPanelEl = null;
 var _vsCurrentRef  = null;
 var _vsNavObserver = null;
+
+var _ECHO_TYPE_META = {
+  'quote':       { label: 'Direct Quote',   cls: 'vs-echo-badge--quote' },
+  'allusion':    { label: 'Allusion',       cls: 'vs-echo-badge--allusion' },
+  'fulfillment': { label: 'Fulfillment',    cls: 'vs-echo-badge--fulfillment' },
+  'type':        { label: 'Type',           cls: 'vs-echo-badge--type' },
+  'shadow':      { label: 'Shadow',         cls: 'vs-echo-badge--shadow' },
+  'theme':       { label: 'Theme',          cls: 'vs-echo-badge--theme' }
+};
 
 var _PARALLEL_TYPE_META = {
   'parallel':        { icon: '⇌', label: 'Parallel',      cls: 'reader-parallel-badge--parallel' },
@@ -734,7 +744,7 @@ function loadVerseSections(parsed) {
 
   var xrefSec  = vsCreateSection(container, 'vs-xrefs',      'Cross-References');
   var commSec  = vsCreateSection(container, 'vs-commentary', 'Commentary');
-  var parSec   = vsCreateSection(container, 'vs-parallels',  'Parallel Passages');
+  var parSec   = vsCreateSection(container, 'vs-echoes', 'Echoes &amp; Fulfillments');
   var cmpSec   = vsCreateSection(container, 'vs-compare',    'All Translations');
 
   // Cross-references
@@ -805,11 +815,12 @@ function loadVerseSections(parsed) {
     vsLoadComm(getCommentarySource());
   }());
 
-  // Parallel passages
-  loadParallels(parsed.bookId).then(function (data) {
-    var sections = vsExtractParallels(data, parsed);
-    if (!sections || !sections.length) { parSec.el.remove(); vsRebuildNav(); return; }
-    vsRenderParallelList(sections, parSec.bodyEl, parsed);
+  // Echoes & Fulfillments — OT→NT typological connections for this verse
+  loadEchoes(parsed.bookId).then(function (data) {
+    var echoes = vsExtractEchoes(data, parsed);
+    if (!echoes || !echoes.length) { parSec.el.remove(); vsRebuildNav(); return; }
+    vsRenderEchoList(echoes, parSec.bodyEl);
+    wireRefLinks(parSec.bodyEl);
     parSec.el.removeAttribute('hidden');
     vsRebuildNav();
   }).catch(function () { parSec.el.remove(); vsRebuildNav(); });
@@ -976,10 +987,25 @@ function vsRebuildNav() {
 }
 
 // ── All-translations compare ──────────────────────────────────────────────────
+// INTENT: Renders a verse row for every non-stub version. All "Loading…"
+//   placeholders appear immediately (good for perceived performance), then fetches
+//   are fired in sequential batches of BATCH_SIZE so we stay within the browser's
+//   6-connection-per-host limit. Consistent with the batch pattern in word.js.
+// CHANGE? BATCH_SIZE controls concurrency — 5 keeps us under the 6-connection cap
+//   while allowing a second batch to start before the first is fully visible.
+//   resolveVerses() is imported from core.js; if its signature changes, update
+//   the call here. getVersion() supplies the "current" highlight class.
+// VERIFY: DevTools → Network → filter by book id (e.g. "john"). Scroll to "All
+//   Translations" on verse-study/?ref=John+3:16 — should see ≤5 simultaneous
+//   requests, then a second wave, rather than 11 all at once.
 function vsRenderVersionCompare(parsed, container) {
   if (!metaVersions || !metaVersions.length) return;
   var currentVer = getVersion();
+  var BATCH_SIZE = 5;
 
+  // Build DOM rows upfront so all "Loading…" placeholders appear immediately,
+  // paired with each version so batched fetch closures can update them.
+  var items = [];
   metaVersions.forEach(function (ver) {
     if (ver.stub) return;  // no data files — would 404 on every load
     var row = document.createElement('div');
@@ -998,22 +1024,36 @@ function vsRenderVersionCompare(parsed, container) {
     row.appendChild(textEl);
 
     container.appendChild(row);
-
-    resolveVerses(parsed, ver.id).then(function (rows) {
-      var text = rows && rows[0] && rows[0].text;
-      if (text) {
-        textEl.className = 'vs-cmp-row__text';
-        textEl.textContent = text;
-        applyHighlights(row);
-      } else {
-        textEl.className = 'vs-cmp-row__text vs-cmp-row__text--na';
-        textEl.textContent = 'Not available in this translation.';
-      }
-    }).catch(function () {
-      textEl.className = 'vs-cmp-row__text vs-cmp-row__text--na';
-      textEl.textContent = 'Could not load.';
-    });
+    items.push({ ver: ver, textEl: textEl, row: row });
   });
+
+  // Slice into chunks and process sequentially; within each chunk fetches run in parallel.
+  var chunks = [];
+  for (var i = 0; i < items.length; i += BATCH_SIZE) {
+    chunks.push(items.slice(i, i + BATCH_SIZE));
+  }
+
+  function _processBatch(chunkIdx) {
+    if (chunkIdx >= chunks.length) return;
+    Promise.all(chunks[chunkIdx].map(function (item) {
+      return resolveVerses(parsed, item.ver.id).then(function (rows) {
+        var text = rows && rows[0] && rows[0].text;
+        if (text) {
+          item.textEl.className = 'vs-cmp-row__text';
+          item.textEl.textContent = text;
+          applyHighlights(item.row);
+        } else {
+          item.textEl.className = 'vs-cmp-row__text vs-cmp-row__text--na';
+          item.textEl.textContent = 'Not available in this translation.';
+        }
+      }).catch(function () {
+        item.textEl.className = 'vs-cmp-row__text vs-cmp-row__text--na';
+        item.textEl.textContent = 'Could not load.';
+      });
+    })).then(function () { _processBatch(chunkIdx + 1); });
+  }
+
+  _processBatch(0);
 }
 
 // ── Cross-ref helpers ─────────────────────────────────────────────────────────
@@ -1048,6 +1088,56 @@ function vsRenderXrefList(entries, container) {
     div.appendChild(a);
   });
   container.appendChild(div);
+}
+
+// ── Echoes & Fulfillments helpers ─────────────────────────────────────────────
+// INTENT: Extract echo entries for the current verse from per-book echoes data.
+//   Returns the array of {type, target, note} objects for data[ch][v], or null if absent.
+// CHANGE? If the echoes data schema changes (e.g. nested under a "echoes" key), update the
+//   accessor path here and in loadEchoes in core.js.
+// VERIFY: Open verse-study for John 1:29 — the "Echoes & Fulfillments" section should appear
+//   with entries for Exod 12 (type) and Isa 53:7 (allusion) and their notes.
+function vsExtractEchoes(data, parsed) {
+  if (!data) return null;
+  var chData = data[String(parsed.ch)];
+  if (!chData) return null;
+  var entries = chData[String(parsed.v)];
+  if (!entries || !entries.length) return null;
+  return entries;
+}
+
+function vsRenderEchoList(echoes, container) {
+  echoes.forEach(function (echo) {
+    var meta = _ECHO_TYPE_META[echo.type] || { label: echo.type || 'Echo', cls: 'vs-echo-badge--allusion' };
+
+    var entry = document.createElement('div');
+    entry.className = 'vs-echo-entry';
+
+    var header = document.createElement('div');
+    header.className = 'vs-echo-header';
+
+    var badge = document.createElement('span');
+    badge.className = 'vs-echo-badge ' + meta.cls;
+    badge.textContent = meta.label;
+
+    var refLink = document.createElement('a');
+    refLink.className = 'ref vs-echo-ref';
+    refLink.dataset.ref = echo.target || '';
+    refLink.textContent = echo.target || '';
+
+    header.appendChild(badge);
+    header.appendChild(refLink);
+    entry.appendChild(header);
+
+    if (echo.note) {
+      var note = document.createElement('p');
+      note.className = 'vs-echo-note';
+      note.textContent = echo.note;
+      entry.appendChild(note);
+    }
+
+    container.appendChild(entry);
+  });
 }
 
 // ── Parallel passage helpers ──────────────────────────────────────────────────

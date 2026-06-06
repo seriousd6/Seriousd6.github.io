@@ -2201,6 +2201,16 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 .reader-notes-item__text { font-size: 0.82rem; line-height: 1.5; white-space: pre-wrap; }
 .reader-notes-item__meta { font-size: 0.68rem; color: var(--color-muted); margin-top: 0.15rem; }
 
+.reader-bm-viewall {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  text-align: right;
+  margin-top: 0.6rem;
+  text-decoration: none;
+}
+.reader-bm-viewall:hover { text-decoration: underline; }
+
 .reader-panel-compose { margin-top: 0.75rem; }
 .reader-panel-verse-sel {
   font-size: 0.75rem;

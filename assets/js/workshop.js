@@ -346,10 +346,12 @@ function _renderDossier(code) {
 
   const src         = entry;
   const hasSrcData  = !!(src.source_data);
-  const dodson      = src.source_data?.dodson || {};
-  const thayer      = src.source_data?.thayer || {};
-  const hebrew      = src.source_data?.hebrew || {};
-  const bdb         = src.source_data?.bdb    || {};
+  const dodson      = src.source_data?.dodson    || {};
+  const thayer      = src.source_data?.thayer    || {};
+  const abbott      = src.source_data?.abbott    || {};
+  const hebrew      = src.source_data?.hebrew    || {};
+  const bdb         = src.source_data?.bdb       || {};
+  const gesenius    = src.source_data?.gesenius  || {};
   const freq        = src.nt_freq ?? src.ot_freq ?? 0;
   const freqLabel   = entry._lang === 'greek' ? 'NT' : 'OT';
   const dispute     = src.dispute_level || 0;
@@ -379,19 +381,65 @@ function _renderDossier(code) {
       <p class="ws-semantic ws-semantic--headline">${_esc(src.semantic_range)}</p>
     </div>`;
   }
+  // INTENT: Attested uses show the word in its actual textual contexts — evidence that the
+  //   semantic range is real, not just asserted. Rendered below the range headline, before
+  //   the lexical source cards, so evidence leads explanation.
+  // CHANGE? If attested_uses schema changes in build-attested-uses.py, update field names here.
+  // VERIFY: Open G26 (ἀγάπη) — verse samples from John, Paul, and at least one other NT author
+  //   appear below the semantic range headline and above the Lexical Sources section.
+  if (src.attested_uses && src.attested_uses.length) html += _renderAttestedUses(src.attested_uses);
+
+  // INTENT: Extrabiblical uses (M&M papyri) follow biblical attestation — showing the same
+  //   word in ordinary Koine Greek outside the Bible, the strongest evidence against
+  //   over-theological readings. Rendered only when data exists (requires fetch-moulton-milligan.py).
+  // CHANGE? If extrabiblical_uses schema changes in seed-glossary.py or fetch-moulton-milligan.py
+  //   (field names: source, citation, text, note), update _renderExtrabib accordingly.
+  // VERIFY: Open G3056 (λόγος) after running fetch-moulton-milligan.py — Extrabiblical
+  //   section appears with M&M badge and papyri citation(s) showing commercial/ordinary use.
+  if (entry._lang === 'greek' && src.extrabiblical_uses && src.extrabiblical_uses.length) {
+    html += _renderExtrabib(src.extrabiblical_uses);
+  }
 
   // ── Lexical Sources (supporting detail, subordinate to the range)
+  // INTENT: Manifest-driven source cards — one entry per source, filtered to those with content.
+  //   Wrapped in <details> defaulting to closed when verse samples are present so the dossier
+  //   stays scannable; open by default when no verse samples exist yet.
+  // CHANGE? To add a new source: add one entry to SOURCES_MANIFEST and ensure seed-glossary.py
+  //   populates the corresponding source_data field and includes the source key in sources[].
+  // VERIFY: Open G3056 (λόγος) — Lexical Sources section is collapsed (verse samples present).
+  //   Expand it: three source cards appear (Dodson, Thayer, Abbott-Smith). For H2617 (חֶסֶד):
+  //   three Hebrew cards appear (Strong's Hebrew, BDB, Gesenius).
   if (hasSrcData) {
-    html += '<div class="ws-section ws-section--sources"><div class="ws-section-title">Lexical Sources</div>';
+    var SOURCES_MANIFEST = entry._lang === 'greek' ? [
+      { label: 'Dodson (CC0)',        gloss: dodson.gloss,    def: dodson.def,    extra: dodson.deriv          },
+      { label: 'Thayer (1889)',       gloss: thayer.short,    def: thayer.long,   extra: ''                    },
+      { label: 'Abbott-Smith (1922)', gloss: abbott.gloss,    def: abbott.def,    extra: abbott.classical_note || '' },
+    ] : [
+      { label: "Strong's Hebrew",     gloss: hebrew.gloss,    def: hebrew.def,    extra: hebrew.deriv          },
+      { label: 'BDB (1906)',          gloss: bdb.short,       def: bdb.long,      extra: ''                    },
+      { label: 'Gesenius (1857)',     gloss: gesenius.gloss,  def: gesenius.def,  extra: gesenius.cognates || '' },
+    ];
+    var activeCards = SOURCES_MANIFEST.filter(function(s) { return s.gloss || s.def; });
+    var sourcesOpen = !(src.attested_uses && src.attested_uses.length);
+    html += '<div class="ws-section ws-section--sources">';
+    html += '<details class="ws-sources-details"' + (sourcesOpen ? ' open' : '') + '>';
+    html += '<summary class="ws-section-title ws-sources-summary">Lexical Sources <span class="ws-section-note">(' + activeCards.length + ' source' + (activeCards.length === 1 ? '' : 's') + ')</span></summary>';
     html += '<div class="ws-sources">';
-    if (entry._lang === 'greek') {
-      if (dodson.gloss || dodson.def) html += _sourceCard('Dodson (CC0)', dodson.gloss, dodson.def, dodson.deriv);
-      if (thayer.short || thayer.long) html += _sourceCard('Thayer (1889)', thayer.short, thayer.long, '');
-    } else {
-      if (hebrew.gloss || hebrew.def)  html += _sourceCard("Strong's Hebrew", hebrew.gloss, hebrew.def, hebrew.deriv);
-      if (bdb.short || bdb.long)       html += _sourceCard('BDB (1906)', bdb.short, bdb.long, '');
-    }
-    html += '</div></div>';
+    activeCards.forEach(function(s) { html += _sourceCard(s.label, s.gloss, s.def, s.extra); });
+    html += '</div></details></div>';
+  }
+
+  // ── LXX Bridge (Hebrew only — how Septuagint translators rendered this word)
+  // INTENT: Renders after Lexical Sources so the user sees the scholarly dictionary
+  //   entries first, then the evidence of ancient translation decisions. The LXX bridge
+  //   shows that the semantic range problem is not new — the translators of the LXX faced
+  //   the same choices and their decisions shaped the NT's theological vocabulary.
+  // CHANGE? If lxx_bridge schema changes in build-lxx-bridge.py (field names: greek_code,
+  //   greek_lemma, frequency, note), update _renderLxxBridge accordingly.
+  // VERIFY: Open H2617 (חֶסֶד) — LXX Bridge section appears below Lexical Sources showing
+  //   ἔλεος (170×) as dominant rendering, χάρις (12×) secondary, with semantic notes.
+  if (entry._lang === 'hebrew' && src.lxx_bridge && src.lxx_bridge.length) {
+    html += _renderLxxBridge(src.lxx_bridge);
   }
 
   // ── Book distribution map (shows where this word actually clusters)
@@ -591,6 +639,76 @@ function _sourceCard(label, gloss, def, deriv) {
     ${def   ? `<div class="ws-source-card__def">${_esc(def)}</div>` : ''}
     ${deriv ? `<div class="ws-source-card__deriv">${_esc(deriv)}</div>` : ''}
   </div>`;
+}
+
+// INTENT: Render a collapsible list of biblical verse samples that show the word in its
+//   actual textual contexts across different authors and genres. Provides evidence-first
+//   presentation — the range is real because these verses exist, not just because a lexicon
+//   asserts it. Notes (if present) flag differing semantic registers between uses.
+// CHANGE? If attested_uses schema changes in build-attested-uses.py or seed-glossary.py
+//   (field names: ref, text, note, context), update the template literals below.
+// VERIFY: Open G3056 (λόγος) — collapsible "Verse Samples" section appears. Each item shows
+//   a ref badge, truncated verse text, and context label. Expand/collapse toggle works.
+function _renderAttestedUses(uses) {
+  if (!uses || !uses.length) return '';
+  var items = uses.map(function (u) {
+    return `<li class="ws-attestation-item">
+      <span class="ws-attestation-ref">${_esc(u.ref || '')}</span>
+      ${u.context ? `<span class="ws-attestation-ctx">${_esc(u.context)}</span>` : ''}
+      <span class="ws-attestation-quote">${_esc((u.text || '').slice(0, 200))}</span>
+      ${u.note ? `<span class="ws-attestation-note">${_esc(u.note)}</span>` : ''}
+    </li>`;
+  }).join('');
+  return `<details class="ws-attestation-details">
+    <summary class="ws-attestation-summary">Verse Samples <span class="ws-section-note">(${uses.length} uses)</span></summary>
+    <ul class="ws-attestation-list">${items}</ul>
+  </details>`;
+}
+
+// INTENT: Render a collapsible list of extrabiblical (papyri/secular Koine) attestations,
+//   showing the word in ordinary non-religious use — the strongest available argument
+//   against over-theologising NT vocabulary. Source badge identifies M&M vs. other sources.
+// CHANGE? If extrabiblical_uses schema changes in seed-glossary.py or fetch-moulton-milligan.py
+//   (field names: source, citation, text, note), update the template literals here.
+// VERIFY: Open G3056 (λόγος) after running fetch-moulton-milligan.py — collapsible
+//   "Extrabiblical Uses" section appears with M&M badge and a papyri citation.
+function _renderExtrabib(uses) {
+  if (!uses || !uses.length) return '';
+  var items = uses.map(function(u) {
+    return '<div class="ws-extrabib-item">'
+      + (u.source   ? '<span class="ws-extrabib-source">'   + _esc(u.source)                       + '</span>' : '')
+      + (u.citation ? '<span class="ws-extrabib-citation">' + _esc(u.citation)                     + '</span>' : '')
+      + (u.text     ? '<div class="ws-extrabib-text">'      + _esc((u.text || '').slice(0, 300))   + '</div>'  : '')
+      + (u.note     ? '<div class="ws-extrabib-note">'      + _esc(u.note)                         + '</div>'  : '')
+      + '</div>';
+  }).join('');
+  return '<details class="ws-extrabib-details">'
+    + '<summary class="ws-extrabib-summary">Extrabiblical Uses <span class="ws-section-note">(papyri · secular Koine)</span></summary>'
+    + '<div class="ws-extrabib-list">' + items + '</div>'
+    + '</details>';
+}
+
+// INTENT: Render the LXX Bridge as a concise set of Greek-rendering chips for a Hebrew entry,
+//   showing frequency and a note explaining what the Greek choice captures vs. misses.
+//   Evidence that the semantic range problem is ancient — the LXX translators faced it too.
+// CHANGE? If lxx_bridge schema changes in build-lxx-bridge.py (field names: greek_code,
+//   greek_lemma, frequency, note), update the template literals here.
+// VERIFY: Open H2617 (חֶסֶד) — LXX Bridge section shows ἔλεος chip (170×) as dominant,
+//   χάρις (12×) secondary, each with a note. Section title and layout match ws-lxx-bridge CSS.
+function _renderLxxBridge(bridge) {
+  if (!bridge || !bridge.length) return '';
+  var items = bridge.map(function(p) {
+    return '<div class="ws-lxx-pair">'
+      + '<span class="ws-lxx-pair__lemma">' + _esc(p.greek_lemma || '') + '</span>'
+      + '<span class="ws-lxx-pair__code">'  + _esc(p.greek_code  || '') + '</span>'
+      + (p.frequency ? '<span class="ws-lxx-pair__freq">' + p.frequency + '×</span>' : '')
+      + (p.note      ? '<span class="ws-lxx-pair__note">' + _esc(p.note) + '</span>'      : '')
+      + '</div>';
+  }).join('');
+  return '<div class="ws-section ws-section--lxx">'
+    + '<div class="ws-section-title">LXX Bridge <span class="ws-section-note">— how Septuagint translators rendered this word</span></div>'
+    + '<div class="ws-lxx-bridge">' + items + '</div>'
+    + '</div>';
 }
 
 /* ── Actions ───────────────────────────────────────────────── */
@@ -1422,13 +1540,15 @@ function _renderDashboard() {
   $dossier.innerHTML = `<div class="ws-dashboard">
     <h2 style="margin:0 0 .5rem;font-size:1.1rem">Dashboard</h2>
     <p class="ws-dash-premise">
-      Every word has an <strong>attested semantic range</strong> — the full spread of meanings
-      documented across all its uses in the corpus. That range is not a decision to be made;
-      it is what the lexicons record. What you <em>are</em> deciding is which rendering best fits
+      Every word has an <strong>attested semantic range</strong> — documented across biblical
+      and extrabiblical use. Each dossier shows <strong>verse samples</strong> (the word in its
+      actual contexts), <strong>lexical sources</strong> (Dodson/Thayer/Abbott-Smith for Greek;
+      Strong's/BDB/Gesenius for Hebrew), and for Hebrew terms a <strong>LXX Bridge</strong>
+      showing how the Septuagint translators rendered the same word — and what their Greek
+      choice captured or missed. What you <em>are</em> deciding is which rendering best fits
       <em>a specific passage</em>. Use the <strong>Default Rendering Tendency</strong> as a
-      starting point for each lemma, then add <strong>Contextual Renderings</strong> wherever
-      a passage, book, or construction calls for something different.
-      Per-author tendencies live in <strong>Per-book Defaults</strong>.
+      starting point, then add <strong>Contextual Renderings</strong> wherever a passage, book,
+      or construction calls for something different.
     </p>
     <div class="ws-dash-grid">
       <div class="ws-dash-card">

@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v65';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v66';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -173,6 +173,8 @@ var SHELL_URLS = [
   './assets/icon-192.png',
   './assets/icon-512.png',
   './data/versions/versions.json',
+  './data/apocrypha-books.json',
+  './data/apocrypha-canon-orders.json',
   './data/bible/books.json',
   './data/votd/verses.json',
   './data/plans/bible-in-a-year.json',

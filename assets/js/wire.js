@@ -197,9 +197,18 @@ export function autoTagRefs() {
 }
 
 // ── autoTagChapterRefs ────────────────────────────────────────────────────
-// Tags "Book Ch" and "Book Ch-Ch" patterns (whole-chapter refs) that don't
-// have a verse number. These are linked as whole-chapter refs so the modal
-// and tooltip show the chapter opening verses.
+// INTENT: Same TreeWalker/SKIP-set pattern as autoTagRefs; tags "Book Ch" and
+//   "Book Ch–Ch" whole-chapter patterns, excluding tokens followed by `:digit`
+//   so "John 3:16" is never double-tagged. Called from autoTagRefs() after it
+//   tags verse refs, so verse refs take priority and won't be re-walked.
+// CHANGE? If bookLookup/metaBooks structure changes (field names, array format)
+//   or if the SKIP set diverges from the one in autoTagRefs, both functions
+//   break silently — they share the same SKIP list but are separate copies.
+//   autoTagRefs() calls this at its end; removing that call silently disables
+//   whole-chapter linking on all pages.
+// VERIFY: Open any topic page (e.g. topics/gospel-of-john/) with plain
+//   "Romans 5–8" text; after load it should become a clickable .ref link
+//   that opens the modal to Romans 5.
 export function autoTagChapterRefs() {
   if (!bookLookup || !metaBooks) return;
   // Matches "Genesis 1" or "Romans 5-8" but NOT "John 3:16" (the :16 excludes it).
@@ -279,9 +288,15 @@ export function autoTagChapterRefs() {
 }
 
 // ── autoTagBareRefs ───────────────────────────────────────────────────────
-// Tags bare "Ch:V" patterns (e.g. "3:16") on pages where a specific book is
-// implied by the page context (body[data-bible-book]).
-// The bookId and bookName are supplied by autoTagRefs() after it reads data-bible-book.
+// INTENT: Tags bare "Ch:V" patterns (e.g. "3:16") on book-specific pages where
+//   the book is implied by `body[data-bible-book]`. bookId and bookName are
+//   resolved upstream by autoTagRefs() which passes them in after reading the
+//   data attribute — this function is never called directly from outside wire.js.
+// CHANGE? If data-bible-book handling in autoTagRefs() changes (attribute name,
+//   lookup method), this function stops being called and bare refs go untagged
+//   silently. This function is called nowhere else — verify by searching callers.
+// VERIFY: Open a book-specific topic page (e.g. topics/gospel-of-john/) and
+//   confirm "3:16" (without "John") auto-links to the modal for John 3:16.
 export function autoTagBareRefs(bookId, bookName) {
   var BARE_RE = /\b(\d+):(\d+)(?:[-–](?:(\d+):)?(\d+))?/g;
   var SKIP    = { script:1, style:1, code:1, pre:1, textarea:1, a:1, button:1, select:1, option:1, label:1 };
@@ -355,8 +370,16 @@ export function autoTagBareRefs(bookId, bookName) {
 }
 
 // ── autoTagBareChapters ───────────────────────────────────────────────────
-// Tags "Chap. 3", "ch. 3", or "chapter 3" patterns on book-specific pages,
-// linking them as whole-chapter refs using the page's implied book context.
+// INTENT: Tags "Chap. 3", "ch. 3", and "chapter 3" patterns on book-specific
+//   pages, producing whole-chapter refs using the page's implied book. Called
+//   in sequence after autoTagBareRefs() from within autoTagRefs() — the three
+//   functions run in order: verse refs → bare "Ch:V" → chapter-word patterns.
+// CHANGE? CHAP_RE only matches "Chap." / "ch." prefix forms; "Chapter 3" (capital
+//   C followed by lowercase h) also matches via the [Cc] class — verify edge cases
+//   if the regex is widened. Called only from autoTagRefs(); not exported for
+//   external use.
+// VERIFY: Open a book-specific topic page that has "chap. 1" or "Chap. 3" text;
+//   confirm they become clickable whole-chapter .ref links after load.
 export function autoTagBareChapters(bookId, bookName) {
   var CHAP_RE = /\b[Cc]hap?\.?\s*(\d+)(?:\s*[-–]\s*(\d+))?/g;
   var SKIP    = { script:1, style:1, code:1, pre:1, textarea:1, a:1, button:1, select:1, option:1, label:1 };
@@ -477,6 +500,13 @@ export function applyHighlights(container) {
 // ── applyModalHighlights ──────────────────────────────────────────────────
 // Same as applyHighlights but targets .bsw-modal__verse elements inside the
 // open verse modal so highlights are visible while the modal is open.
+// CHANGE? CSS class prefix divergence: this function applies `bsw-hl-{colour}`
+//   to `.bsw-modal__verse` elements; applyHighlights() applies
+//   `reader-verse--hl-{colour}` to `.reader-verse` elements — the two prefixes
+//   must not be swapped. Callers: modal.js:_renderModalVerseTab (on render) and
+//   modal.js:_switchTab (on tab change). If the modal verse element class name
+//   `.bsw-modal__verse` or the CSS prefix `bsw-hl-` is renamed, update both
+//   here and in those two callers.
 export function applyModalHighlights(bodyEl, parsed) {
   if (!bodyEl || !parsed) return;
   bodyEl.querySelectorAll('.bsw-modal__verse[data-ch][data-v]').forEach(function (el) {
@@ -494,6 +524,11 @@ export function applyModalHighlights(bodyEl, parsed) {
 // Adds/removes the reader-verse--bookmarked class on each verse element based
 // on the current bookmarks stored in localStorage. Called after the reader
 // renders verses and whenever a bookmark is toggled.
+// CHANGE? Callers: reader.js:doLookup (after each render) and
+//   reader.js:injectComparePanel (after compare panel renders). If isBookmarked()
+//   in storage.js changes its ref key format (currently "Book Ch:V" string), or
+//   if the class name `reader-verse__num--bookmarked` is renamed in reader.css,
+//   both call sites silently show no bookmark state with no JS error.
 export function applyBookmarks(container) {
   if (!container) return;
   container.querySelectorAll('.reader-verse[data-book][data-ch][data-v]').forEach(function (el) {

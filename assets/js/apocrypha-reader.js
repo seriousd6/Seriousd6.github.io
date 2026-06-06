@@ -113,20 +113,32 @@ function _apoIdSet() {
 }
 
 // Full ordered book list for the current version from canon-order data
-// INTENT: Builds the combined canonical+deuterocanonical book list in the version's
-//   traditional sequence. `_canonOrders[key]` is an object `{label, note, books:[...]}`,
-//   so we must address `.books` — calling `.map()` on the raw object throws TypeError.
+// INTENT: Any version with a `canon_order` field uses that order (full-bible and
+//   ot-only). For ot-only scope (BRENTON), NT canonical books are filtered out after
+//   ordering so NT 404s don't appear in the list. Versions with no canon_order
+//   fall back to the deuterocanonical-only list (_apoBooks). `_canonOrders[key]`
+//   is an object `{label, note, books:[...]}` — `.books` must be addressed explicitly.
 // CHANGE? If `apocrypha-canon-orders.json` schema changes (e.g. books array renamed),
-//   update `.books` here. `_isFullBible()` controls which code path is taken —
-//   if scope values change in versions.json, that function must be updated too.
-// VERIFY: Open /apocrypha/ with DR or KJV-APO selected — the full combined book list
-//   (Genesis through Revelation + deuterocanonical books) should render immediately.
+//   update `.books` here. If new scope values are added to versions.json, decide
+//   whether they should use a canon order and whether NT filtering applies.
+//   _isFullBible() is separate — it only controls which filter chips are shown.
+// VERIFY: Open /apocrypha/ with BRENTON — confirm only OT books appear (no NT).
+//   With DR — confirm the full combined list including NT appears.
 function _getOrderedBooks() {
-  if (!_isFullBible()) return _apoBooks || [];
   var ver = _getVer();
   var order = ver && _canonOrders && _canonOrders[ver.canon_order];
-  if (!order) return (_apoBooks || []);
-  return (order.books || []).map(function (id) { return _findBook(id); }).filter(Boolean);
+  var books;
+  if (order) {
+    books = (order.books || []).map(function (id) { return _findBook(id); }).filter(Boolean);
+  } else {
+    books = _apoBooks || [];
+  }
+  // OT-only versions (e.g. BRENTON): exclude NT books the canon order lists but
+  // for which no data files exist — prevents 404s for all 27 NT slots.
+  if (ver && ver.scope === 'ot-only') {
+    books = books.filter(function (b) { return b.testament !== 'NT'; });
+  }
+  return books;
 }
 
 // Apply the current filter chip to a book list
@@ -202,6 +214,7 @@ function _buildFilterChips() {
     btn.dataset.filter = chip.id;
     btn.textContent = chip.label;
     btn.type = 'button';
+    btn.setAttribute('aria-pressed', chip.id === _currentFilter ? 'true' : 'false');
     btn.addEventListener('click', function () { _selectFilter(chip.id); });
     bar.appendChild(btn);
   });
@@ -286,10 +299,13 @@ function _buildSidebarChapters(bookId, currentCh) {
   grid.className = 'apoc-ch-grid';
   for (var i = 1; i <= book.chapters; i++) {
     var btn = document.createElement('button');
-    btn.className   = 'apoc-ch-btn' + (String(i) === String(currentCh) ? ' apoc-ch-btn--active' : '');
+    var isCurrent = String(i) === String(currentCh);
+    btn.className   = 'apoc-ch-btn' + (isCurrent ? ' apoc-ch-btn--active' : '');
     btn.textContent = String(i);
     btn.dataset.ch  = String(i);
     btn.type = 'button';
+    btn.setAttribute('aria-label', 'Chapter ' + i);
+    btn.setAttribute('aria-current', isCurrent ? 'page' : 'false');
     btn.addEventListener('click', (function (ch) {
       return function () { _navigateTo(bookId, ch); };
     }(i)));
@@ -433,7 +449,9 @@ function _navigateTo(bookId, ch) {
 function _selectFilter(filter) {
   _currentFilter = filter;
   document.querySelectorAll('.apoc-canon-chip').forEach(function (btn) {
-    btn.classList.toggle('apoc-canon-chip--active', btn.dataset.filter === filter);
+    var active = btn.dataset.filter === filter;
+    btn.classList.toggle('apoc-canon-chip--active', active);
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
   });
   var bookSel  = _getEl('apoc-book-select');
   var prevBook = bookSel && bookSel.value;
@@ -524,7 +542,10 @@ export function initApocryphaReader() {
         _populateChSelect(e.state.book, e.state.ch);
         _loadBook(_currentVer, e.state.book).then(function (chs) {
           _renderChapter(e.state.book, e.state.ch, chs);
-        }).catch(function () {});
+        }).catch(function () {
+          var resultsEl = _getEl('apoc-reader-results');
+          if (resultsEl) resultsEl.innerHTML = '<p class="apoc-msg apoc-msg--error">Could not load this chapter. Check your connection.</p>';
+        });
       }
     });
 

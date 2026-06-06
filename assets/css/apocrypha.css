@@ -103,6 +103,9 @@
   cursor: pointer;
   line-height: 1.4;
   transition: background .12s, color .12s, border-color .12s;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .apoc-canon-chip:hover {
@@ -261,5 +264,6 @@
   }
 
   .apoc-ch-grid { gap: 4px; }
-  .apoc-ch-btn  { width: 2.2rem; height: 2.2rem; font-size: .82rem; }
+  .apoc-ch-btn  { width: 2.75rem; height: 2.75rem; font-size: .82rem; }
+  .apoc-nav-btn { padding: .65rem 1rem; }
 }

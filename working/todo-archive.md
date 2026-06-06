@@ -5,6 +5,66 @@ See `working/TODO.md` for the active task list.
 
 ---
 
+## Completed 2026-06-05 (loop session, iteration 2)
+
+### WS-B · Fetch Gesenius' Hebrew-Chaldee Lexicon (1857) *(HIGH)*
+
+Gesenius is the foundational Hebrew lexicon with Semitic cognate data that grounds H codes
+in Arabic/Aramaic/Syriac parallels — evidence that the semantic range is genuinely wide.
+
+- [x] `scripts/fetch-gesenius.py` — Created. Fetches archive.org `geseniushebrew00geseuoft` (fallback IDs included); parses OCR text for Hebrew headwords; extracts `gloss`, `def`, `cognates` (sentences with language names), `root_note` (etymology sentences); maps to H codes via niqqud-exact + niqqud-stripped fallback. Outputs `data/strongs/gesenius.json`.
+- [x] `scripts/seed-glossary.py` — Updated `seed_hebrew()` to load `gesenius.json` (try/except — safe if not yet run); injects `source_data.gesenius: {gloss, def, cognates, root_note}` per entry; adds `'gesenius'` to `sources`. Updated `slim()` to include `source_data.gesenius` (def≤400, cognates≤200, root_note≤150).
+- [x] `assets/js/workshop.js` — `_renderDossier`: `const gesenius = src.source_data?.gesenius || {};` added; renders `_sourceCard('Gesenius (1857)', ...)` after BDB card (Hebrew section only), with `cognates` as the deriv field. INTENT/CHANGE?/VERIFY comments added.
+- [x] `data/SOURCES.md` — Gesenius entry documented under Strong's section.
+
+**To activate:** Run `python3 scripts/fetch-gesenius.py` then `python3 scripts/seed-glossary.py`.
+
+---
+
+### WS-C · Auto-generate biblical attested uses from interlinear *(HIGH)*
+
+Each Strong's code now gets up to 6 representative KJV verse samples pulled directly from
+the interlinear — book-diverse, with high-priority refs for theologically disputed terms.
+
+- [x] `scripts/build-attested-uses.py` — Created. Scans all interlinear files (NT for G codes, OT for H codes) in one pass; selects ≤6 verses per code with book diversity + HIGH_PRIORITY_REFS ensuring theological key verses (John 1:1 for G3056, Psalm 136:1 for H2617, etc.) appear first. Loads KJV verse text from `data/bible/KJV/{book}.json`. Notes left blank for agent curation (WS-G). Outputs `data/strongs/attested-uses-greek.json` and `data/strongs/attested-uses-hebrew.json`.
+- [x] `scripts/seed-glossary.py` — Updated both `seed_greek()` and `seed_hebrew()` to load the attested-uses files; injects `attested_uses` array per entry. Updated `slim()` to include `attested_uses[:6]` in phase bundles.
+- [x] `assets/js/workshop.js` — New `_renderAttestedUses(uses)` function: `<details>` collapsible "Verse Samples" section; renders ref badge + context label + italic truncated quote + optional note per use. Wired into `_renderDossier` below the `semantic_range` headline (before Lexical Sources). INTENT/CHANGE?/VERIFY comments added.
+- [x] `assets/css/workshop.css` — Added `.ws-attestation-details`, `.ws-attestation-summary`, `.ws-attestation-list`, `.ws-attestation-item`, `.ws-attestation-ref`, `.ws-attestation-ctx`, `.ws-attestation-quote`, `.ws-attestation-note`. Summary uses `<details>` open/closed arrow via `::before`. Quote uses `-webkit-line-clamp: 2` for truncation. All colors via CSS custom properties.
+
+**To activate:** Run `python3 scripts/build-attested-uses.py` then `python3 scripts/seed-glossary.py`.
+**Verify after data build:** Open G26 (ἀγάπη) — "Verse Samples" collapsible appears below semantic range. Verses from John, Paul, and at least one other NT author visible.
+
+---
+
+## Completed 2026-06-05 (loop session, iteration 1)
+
+### NAV-3 · `notes/` page has no "View all" entry point — NOTES_URL is dead code *(MEDIUM)*
+
+`NOTES_URL` was exported from `core.js` but never imported anywhere, leaving `notes/index.html`
+unreachable from the UI. Added "View all notes ↗" links mirroring the bookmarks pattern:
+
+- [x] `assets/js/modal.js`: Imported `NOTES_URL`; appended `.bsw-notes-viewall` link at the bottom of `_renderNotesPanel`'s `_innerRefresh()`.
+- [x] `assets/js/reader.js`: Imported `NOTES_URL`; appended `.reader-bm-viewall` link at the end of `_loadReaderNotes()` (reuses same class as bookmarks for consistent styling).
+- [x] `assets/css/reader.css`: Added `.reader-bm-viewall` rule (small right-aligned primary-color link, `display:block`; serves both bookmarks and notes panels).
+- [x] `assets/css/bible-ui.css`: Added `.bsw-notes-viewall` rule (same styling as above for the modal context).
+
+---
+
+### WS-A · Fetch Abbott-Smith Manual Greek Lexicon (1922) *(HIGH)*
+
+Abbott-Smith (1922) is a NT-specific lexicon with classical and LXX usage notes — a third
+independent scholarly witness for Greek semantic range beyond Dodson/Thayer. All four sub-tasks complete:
+
+- [x] `scripts/fetch-abbott-smith.py` — Created. Fetches CCEL Abbott-Smith via paginated HTML; builds lemma → G code index from `greek.json`; 3-pass Strong's mapping (in-text hint → exact lemma → diacritic-stripped fuzzy). Outputs `data/strongs/abbott-smith.json`. Run this script first, then seed-glossary.py.
+- [x] `scripts/seed-glossary.py` — Updated `seed_greek()` to load `abbott-smith.json` (try/except — safe if not yet fetched); injects `source_data.abbott: {gloss, def, classical_note, lxx_note}` per entry and adds `'abbott'` to the `sources` list. Updated `slim()` to include `source_data.abbott` in phase bundles (def capped at 400 chars, classical_note at 200 chars).
+- [x] `assets/js/workshop.js` — `_renderDossier`: `const abbott = src.source_data?.abbott || {};` added; renders `_sourceCard('Abbott-Smith (1922)', abbott.gloss, abbott.def, abbott.classical_note)` after Thayer, conditionally (no card rendered until `fetch-abbott-smith.py` is run). INTENT/CHANGE?/VERIFY comments added.
+- [x] `data/SOURCES.md` — Abbott-Smith entry documented under Strong's section (source URL, fetch script, data path, license, purpose).
+
+**To activate:** Run `python3 scripts/fetch-abbott-smith.py` then `python3 scripts/seed-glossary.py`.
+**Verify after data fetch:** Open G3056 (λόγος) in workshop — three Greek source cards render: Dodson, Thayer, Abbott-Smith. Abbott-Smith card includes `classical_note` if CCEL markup contains "Cl." notation.
+
+---
+
 ## Completed 2026-06-05 (session 9 — loop iteration 4)
 
 ### CODE-3 · core.js — Version-change event bus and parseMultiRef algorithm missing INTENT/CHANGE? *(MEDIUM)*
@@ -3800,11 +3860,64 @@ All items already had `[x]` checkboxes when the loop started — completed in a 
 
 ---
 
+## Completed 2026-06-05 (loop iteration 3)
+
+### PERF-4 · verse-study.js — `vsRenderVersionCompare` unbounded concurrent fetch burst *(MEDIUM)*
+
+`assets/js/verse-study.js` (`vsRenderVersionCompare`): Replaced the unbounded `metaVersions.forEach` fetch pattern with a two-phase approach matching `word.js`:
+1. First pass builds all DOM rows with "Loading…" placeholders so the user sees all version slots instantly.
+2. Versions are split into chunks of `BATCH_SIZE = 5` and processed with `Promise.all` per chunk, chained sequentially via `_processBatch(chunkIdx + 1)` in the `.then()`. This limits concurrent fetches to ≤5 at a time instead of 11 simultaneous, staying within the browser's 6-connection-per-host limit. Added full INTENT/CHANGE?/VERIFY comment block.
+
+### DATA-3 · BRENTON scope fix (code part) *(MEDIUM — partially complete)*
+
+Code-only portion complete:
+- `data/versions/versions.json`: BRENTON `scope` changed `"full-bible"` → `"ot-only"`.
+- `apocrypha-reader.js` (`_getOrderedBooks`): Refactored to use `canon_order` for any version that defines one (not just `full-bible`), and filters out `testament === 'NT'` books when `scope === 'ot-only'`. This stops all 27 NT books from appearing in BRENTON's book list and 404ing.
+
+**Data part remains in TODO.md:** `nahum.json` (and possibly `daniel.json` / `esther.json` aliases) need to be populated via `scripts/fetch-apocrypha.py` targeting BRENTON.
+
+---
+
+## Completed 2026-06-05 (loop iteration 2)
+
+### CSS-12 · verse-study.css — Section collapse toggle no mobile touch target *(LOW)*
+
+`assets/css/verse-study.css`: Added `.vs-section-toggle { min-height: 44px; padding: 0 0.5rem; display: inline-flex; align-items: center; }` inside the existing `@media (max-width: 640px)` touch-targets block. The desktop rule renders at ~20px height which is far below the WCAG 44px tap minimum; this override applies only on mobile without affecting the desktop layout.
+
+### CODE-9 · wire.js — autoTagChapterRefs, autoTagBareRefs, autoTagBareChapters lacking structured comments *(MEDIUM)*
+
+`assets/js/wire.js`: Added INTENT/CHANGE?/VERIFY structured comments to five functions:
+- `autoTagChapterRefs`: Documents the TreeWalker/SKIP-set pattern, BOOK_CH_RE exclusion of `:digit` tokens, and the call chain from autoTagRefs().
+- `autoTagBareRefs`: Documents the data-bible-book dependency, the fact it is called only from autoTagRefs(), and the VERIFY for bare "3:16" refs on book pages.
+- `autoTagBareChapters`: Documents the "Chap./ch./chapter" regex coverage, call order (after autoTagBareRefs), and VERIFY for "chap. 1" links.
+- `applyModalHighlights`: Added CHANGE? documenting the CSS class prefix divergence (`bsw-hl-` vs `reader-verse--hl-`) and callers `modal.js:_renderModalVerseTab` and `modal.js:_switchTab`.
+- `applyBookmarks`: Added CHANGE? listing callers `reader.js:doLookup` and `reader.js:injectComparePanel` and the `isBookmarked()` / `reader-verse__num--bookmarked` class name dependency.
+
+### CODE-10 · app.js — window.BibleUI cross-module coupling lacks CHANGE? *(MEDIUM)*
+
+`assets/js/app.js`: Added `// CHANGE?` to `window.BibleUI` listing all five consumer sites (10 topic pages for openModal/openReader, timeline.js + reader.js for autoTagPlacesIn, ol-companion.js for initOLSection, version picker for getVersion/setVersion). Added `// VERIFY`. Added `// INTENT` to `openReader` closure documenting the bookId → display name resolution and the silent fallback to the raw ID string if metaBooks hasn't loaded.
+
+---
+
 ## Completed 2026-06-05 (loop iteration)
 
 ### AUD-6 · apocrypha-reader.js — `_getOrderedBooks()` crashes with TypeError *(HIGH)*
 
 `assets/js/apocrypha-reader.js` (`_getOrderedBooks`, line 121): Fixed `order.map(...)` → `(order.books || []).map(...)`. `_canonOrders[key]` returns an object `{label, note, books:[...]}`, not an array — calling `.map()` on it threw `TypeError: order.map is not a function`, making the book list silently blank for all four full-bible versions (DR, WEB-CE, KJV-APO, BRENTON). Added full INTENT/CHANGE?/VERIFY comment block documenting the schema contract.
+
+### UX-6 · verse-study.js — Commentary stuck on "Loading commentary…" *(MEDIUM)*
+
+`assets/js/verse-study.js` (`vsLoadComm`, line ~785): Added `.catch(function () { commSec.bodyEl.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary. Check your connection.</p>'; })` after the `.then()` block. Without this, switching the commentary source picker while offline left "Loading commentary…" permanently in the section body with no recovery path.
+
+### UX-7 · verse-study.js — Cross-reference and parallels orphan DOM on fetch failure *(LOW)*
+
+`assets/js/verse-study.js`:
+- `loadCrossRefs` (line 747): Added `.catch(function () { xrefSec.el.remove(); vsRebuildNav(); })` — on fetch failure the section is removed from DOM and the sidebar nav is rebuilt, consistent with the no-data path.
+- `loadParallels` (line 815): Added `.catch(function () { parSec.el.remove(); vsRebuildNav(); })` — same pattern. Previously both left invisible orphan elements in the DOM on network failure that could not be distinguished from "no data for this verse."
+
+### CSS-11 · lib-browser.css — Mobile tab bar sub-WCAG font-size and touch target *(MEDIUM)*
+
+`assets/css/lib-browser.css` (`.lb-tab-btn` in `@media (max-width: 600px)`): Changed `font-size: .72rem` → `.82rem` (was below WCAG 14px minimum). Added `min-height: 44px; display: flex; align-items: center; justify-content: center;` to bring the tap target to the WCAG 2.5.5 44px minimum. Affects all four Library browser navigation tabs (Browse / Authors / List / Read) on mobile.
 
 ### CSS-13 · ol-companion.css — tier label colors missing dark mode override *(MEDIUM)*
 
@@ -3813,3 +3926,123 @@ All items already had `[x]` checkboxes when the loop started — completed in a 
 ### CSS-14 · discipline.css — reading plan done-state colors missing dark mode override *(MEDIUM)*
 
 `assets/css/discipline.css`: Added `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` overrides for `.plan-today__mark--done`, `.plan-today__mark--done:hover`, `.plan-today__complete-msg`, and `.plan-calendar__check`. Used consistent dark green values (`#1b3a1b` background, `#66bb6a` text) matching the existing `.worship-badge--green` dark override pattern already in the file.
+
+## Completed 2026-06-05 (loop session, iteration 3)
+
+### WS-D · Build LXX bridge — Hebrew-to-Greek semantic mapping *(MEDIUM)*
+
+`scripts/build-lxx-bridge.py`: Created with curated scholarly data (Hatch & Redpath, Muraoka LXX Lexicon, NETS) for 17 key disputed Hebrew codes → 35 Greek rendering pairs. Outputs `data/strongs/lxx-bridge.json`. Ran script — 17 entries written.
+
+`scripts/seed-glossary.py`: Added `lxx-bridge.json` load (try/except) in `seed_hebrew()`; injects `lxx_bridge: lxx_bridge_data.get(code, [])` per Hebrew entry; added `lxx_bridge: entry.get('lxx_bridge', [])[:3]` to `slim()`.
+
+`assets/js/workshop.js`: Added `_renderLxxBridge(bridge)` helper with INTENT/CHANGE?/VERIFY comments; wired into `_renderDossier()` for Hebrew entries after Lexical Sources section (`if (entry._lang === 'hebrew' && src.lxx_bridge && src.lxx_bridge.length)`).
+
+`assets/css/workshop.css`: Added `.ws-section--lxx`, `.ws-lxx-bridge`, `.ws-lxx-pair`, `.ws-lxx-pair__lemma`, `.ws-lxx-pair__code`, `.ws-lxx-pair__freq`, `.ws-lxx-pair__note` CSS rules.
+
+### WS-E · Fetch Moulton & Milligan papyri attestations *(MEDIUM)*
+
+`scripts/fetch-moulton-milligan.py`: Created with archive.org fetch logic (tries `vocabularyofgree00mouluoft` and fallbacks via djvu.txt endpoint), OCR text parsing for Greek lemma entry blocks, papyri citation extraction (`P.Oxy`, `BGU`, `PSI`, etc.), and lemma→G-code mapping via greek.json. Outputs `data/strongs/moulton-milligan.json` (empty if archive.org unavailable — graceful degradation).
+
+`scripts/seed-glossary.py`: Added `moulton-milligan.json` load (try/except) in `seed_greek()`; injects `extrabiblical_uses: [{source:'M&M', ...}][:2]` per Greek entry; added `extrabiblical_uses: entry.get('extrabiblical_uses', [])[:2]` to `slim()`.
+
+`assets/js/workshop.js`: Added `_renderExtrabib(uses)` helper with INTENT/CHANGE?/VERIFY comments; wired into `_renderDossier()` for Greek entries after attested_uses (`if (entry._lang === 'greek' && src.extrabiblical_uses && src.extrabiblical_uses.length)`).
+
+`assets/css/workshop.css`: Added `.ws-extrabib-details`, `.ws-extrabib-summary`, `.ws-extrabib-list`, `.ws-extrabib-item`, `.ws-extrabib-source`, `.ws-extrabib-citation`, `.ws-extrabib-text`, `.ws-extrabib-note` CSS rules.
+
+### WS-F · Workshop UI — integrate all new evidence layers *(HIGH)*
+
+`assets/js/workshop.js` (`_renderDossier`): Refactored source card block to manifest-driven (`SOURCES_MANIFEST` array per language, filtered with `activeCards.filter()`). Wrapped Lexical Sources in `<details class="ws-sources-details">` defaulting to closed when verse samples exist, open when none. Wired `_renderExtrabib()` after `_renderAttestedUses()` (Greek only). Wired `_renderLxxBridge()` after Lexical Sources (Hebrew only). Updated dashboard premise paragraph to mention verse samples, multiple lexical sources, and LXX Bridge.
+
+`scripts/seed-glossary.py` (`slim()`): Updated with all size caps: `attested_uses[:6]`, `extrabiblical_uses[:2]`, `lxx_bridge[:3]`.
+
+`assets/css/workshop.css`: Added `.ws-sources-details`, `.ws-sources-summary` collapsible CSS.
+
+## Completed 2026-06-05 (loop session, iteration 4)
+
+### UX-8 · Library page shows blank panels with no message when index fails to load *(HIGH)*
+
+`assets/js/lib-browser.js` (`.catch()` at line 107): Added user-facing error message alongside the existing `console.error`. When the `INDEX_URL` fetch fails, `#lb-list` now shows `<p class="lb-list-empty">Could not load the document index. Check your connection and reload the page.</p>` instead of blank space. Used the existing `lb-list-empty` class to match the "no results" styling.
+
+### UX-9 · Apocrypha reader — back/forward navigation silently fails when book data is missing *(MEDIUM)*
+
+`assets/js/apocrypha-reader.js` (`popstate` handler, line 539): Replaced the empty `.catch(function () {})` with a handler that writes the standard error message into `#apoc-reader-results`: `<p class="apoc-msg apoc-msg--error">Could not load this chapter. Check your connection.</p>`. Matches the error pattern used by `_navigateTo()` (line 435–442).
+
+### AUD-7 · Apocrypha reader — canon chip buttons missing `aria-pressed`, chapter buttons missing `aria-current` *(MEDIUM)*
+
+`assets/js/apocrypha-reader.js` (`_buildCanonBar`, line 217): Added `btn.setAttribute('aria-pressed', chip.id === _currentFilter ? 'true' : 'false')` at button creation so the initial state is announced by screen readers.
+
+`assets/js/apocrypha-reader.js` (`_selectFilter`, line 451–454): Added `btn.setAttribute('aria-pressed', active ? 'true' : 'false')` inside the `querySelectorAll` loop that toggles CSS classes, keeping ARIA state in sync with visual state on every filter change.
+
+`assets/js/apocrypha-reader.js` (`_buildSidebarChapters`, line 307–308): Added `btn.setAttribute('aria-label', 'Chapter ' + i)` (so screen readers announce "Chapter 3" not just "3") and `btn.setAttribute('aria-current', isCurrent ? 'page' : 'false')` for the active chapter. Sidebar is rebuilt on every `_renderChapter` call, so the `aria-current` state is always fresh.
+
+---
+
+## Completed 2026-06-05 (loop session, iteration 5)
+
+### AUD-8 · OL Companion token buttons missing `aria-expanded` *(MEDIUM)*
+
+`assets/js/ol-companion.js` (`_renderTokenGrid`): Assigned `expandPanel.id = 'olc-exp-{ch}-{v}'` (unique per verse) so buttons can reference it. Added `card.setAttribute('aria-expanded', 'false')` and `card.setAttribute('aria-controls', panelId)` at button creation. In the click handler: set `aria-expanded="false"` on collapse-self branch, set `aria-expanded="false"` on all previously-open tokens in the collapse-previous loop, and set `aria-expanded="true"` on the newly opened card.
+
+### CSS-15 · Apocrypha reader touch targets below 44px *(MEDIUM)*
+
+`assets/css/apocrypha.css`: Increased `.apoc-ch-btn` mobile override from `2.2rem` to `2.75rem` (44px). Added `min-height: 2.75rem; display: inline-flex; align-items: center` to `.apoc-canon-chip` (all viewports). Added `.apoc-nav-btn { padding: .65rem 1rem }` inside the existing `max-width: 699px` breakpoint to bring nav arrows to ≥44px height on mobile.
+
+### CSS-16 · OL Companion mobile media query *(MEDIUM)*
+
+`assets/css/ol-companion.css`: Added `@media (max-width: 699px)` block increasing `.olc-token__translit` to `0.75rem`, `.olc-token__med` to `0.8rem`, `.olc-subhead` / `.olc-exp__tier-label` / `.olc-exp__section-label` / `.olc-exp__pos` / `.olc-exp__disp` to `0.75rem`, and reducing `.olc-exp__label` `min-width` from `80px` to `60px` to prevent row crowding on narrow screens.
+
+---
+
+## Completed 2026-06-05 (loop session, iteration 6)
+
+### PWA-5 · Apocrypha reader init data files not precached *(HIGH)*
+
+`sw.js`: Added `'./data/apocrypha-books.json'` and `'./data/apocrypha-canon-orders.json'` to SHELL_URLS immediately after `'./data/versions/versions.json'`. Bumped `APP_CACHE_V` from `bsw-app-v65` → `bsw-app-v66` to force a fresh install bundle on all clients.
+
+### AUD-9 · Echoes & Fulfillments wiring *(HIGH)*
+
+`assets/js/core.js`: Added `ECHOES_ROOT` path constant, `echoesCache` per-book cache object (same pattern as crossRefCache), and `loadEchoes(bookId)` function with promise-coalescing stampede prevention (INTENT/CHANGE?/VERIFY commented).
+
+`assets/js/verse-study.js`: Added `loadEchoes` to core.js imports. Added `_ECHO_TYPE_META` with labels and badge classes for the 6 echo types (quote, allusion, fulfillment, type, shadow, theme). Replaced the Parallel Passages section with an "Echoes & Fulfillments" section that calls `loadEchoes`, extracts the verse's array via `vsExtractEchoes`, and renders each entry with a type badge, a `.ref` link to the target, and the note paragraph via `vsRenderEchoList`. Old `vsExtractParallels`/`vsRenderParallelList` left in place per the "can be retired" note in the TODO.
+
+`assets/css/verse-study.css`: Added `.vs-echo-entry`, `.vs-echo-header`, `.vs-echo-badge` (with per-type colour modifiers), `.vs-echo-ref`, and `.vs-echo-note` CSS.
+
+### AUD-10 · MKT commentary sources registration *(HIGH)*
+
+`assets/js/core.js` (`COMMENTARY_SOURCES`): Added three entries — `mkt-original` ("Original Language (MKT)"), `mkt-context` ("Historical Context (MKT)"), `mkt-christ` ("Christ in Every Verse (MKT)"). `loadCommentary()` already routes non-default sources to `data/commentary/<source>/<bookId>.json`, so no other code changes were needed.
+
+---
+
+## Completed 2026-06-05 (loop session, iteration 7)
+
+### PERF-5 · Translation notes — per-book fetch (3–5 MB) → per-chapter fetch (~50–160 KB) *(HIGH)*
+
+Python inline script split all 66 `data/translation/notes/{bookId}.json` files into 1,188 per-chapter files at `data/translation/notes/{bookId}/{ch}.json`. Each chapter file contains only the verse-keyed entries for that chapter (no outer chapter wrapper). Result: John 3 drops from 3.86 MB to 162 KB; Psalm 119 from 5.4 MB to 289 KB.
+
+`assets/js/ol-companion.js` (`_notesUrl`): Updated to `notes/{bookId}/{ch}.json` path. Added INTENT/CHANGE?/VERIFY comment.
+
+`assets/js/ol-companion.js` (`_notesCache`): Changed cache key from `bookId` → `"bookId:ch"` so each chapter is cached independently.
+
+`assets/js/ol-companion.js` (`_loadNotes`): Added `ch` parameter; key = `bookId + ':' + ch`. Added full INTENT/CHANGE?/VERIFY comment block.
+
+`assets/js/ol-companion.js` (`initOLSection`): Updated call to `_loadNotes(parsed.bookId, parsed.ch)`. Removed the `chData = notes[ch]` indirection — chapter file is already the verse-keyed dict, so extraction is now `notes[String(parsed.v)]`.
+
+### CODE-11 · `ol-companion.js` code comment blocks *(MEDIUM)*
+
+Added INTENT/CHANGE?/VERIFY comments to: `_notesUrl` (PERF-5 context + layout warning), `_loadNotes` (cache key format + stampede note), `_loadTier` (cache key format + tier-name coupling), `_expandedCode` module variable (single-grid constraint + Map refactor guidance), `_renderTokenGrid` (IIFE closure pattern for per-token click binding), `initOLSection` (entry point, caller, API contract).
+
+### CODE-12 · `lib-browser.js` code comment blocks *(MEDIUM)*
+
+Added INTENT/CHANGE?/VERIFY comments to: `initLibBrowserPage` (entry point, caller = app.js, sentinel = #lb-container), `_evictStalePositions` (reverse-iteration rationale, legacy bare-int guard explanation, 90-day cutoff location, position schema), `_saveFilters` / filter restore in `_initFromUrl` (key = bsw_lib_filters, schema = {tradition, era, type, author, sort, q}, silent-drop warning for new filter dimensions).
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 8)
+
+### CSS-17 · verse-study.css echo-badge dark mode gap *(MEDIUM)*
+
+`assets/css/verse-study.css`: Added `[data-theme="dark"]` overrides and a matching `@media (prefers-color-scheme: dark)` mirror for all 6 `.vs-echo-badge--*` classes. Each uses a translucent tinted background (e.g., `rgba(46,125,50,0.18)` for quote) with a lightened foreground text color (e.g., `#81c784`) so the type badges remain legible and color-coded in dark mode without the bright pastel patches.
+
+### CSS-18 · lib-browser.css tradition badges + find-mark dark mode gap *(MEDIUM)*
+
+`assets/css/lib-browser.css`: Added `[data-theme="dark"]` overrides and a `@media (prefers-color-scheme: dark)` mirror for all 10 `.lb-item-abbrev--*` tradition badges, lightening each saturated dark hex to a readable light version (e.g., reformed `#a0522d` → `#d4895a`, orthodox `#8b2252` → `#d45c90`). Also added `mark.lb-find-mark` override to `rgba(253,230,138,0.25)` (dim amber) in dark mode to reduce visual glare while keeping highlights visible.

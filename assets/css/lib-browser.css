@@ -859,7 +859,7 @@
   .lb-tab-btn {
     flex: 1;
     padding: .55rem .25rem;
-    font-size: .72rem;
+    font-size: .82rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .06em;
@@ -870,6 +870,10 @@
     margin-bottom: -2px;
     cursor: pointer;
     transition: color .12s, border-color .12s;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .lb-tab-btn--active {
     color: var(--color-primary);
@@ -1147,4 +1151,30 @@ mark.lb-find-mark {
   :root:not([data-theme="light"]) .lb-vol-chip { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lb-find-bar   { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lb-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
+}
+
+/* ── Tradition badge + find-mark dark-mode overrides (CSS-18) ─────────────── */
+[data-theme="dark"] .lb-item-abbrev--reformed        { border-color: #d4895a; color: #d4895a; }
+[data-theme="dark"] .lb-item-abbrev--lutheran        { border-color: #7abf8e; color: #7abf8e; }
+[data-theme="dark"] .lb-item-abbrev--anglican        { border-color: #7a9abf; color: #7a9abf; }
+[data-theme="dark"] .lb-item-abbrev--baptist         { border-color: #9b5ed4; color: #9b5ed4; }
+[data-theme="dark"] .lb-item-abbrev--anabaptist      { border-color: #c28050; color: #c28050; }
+[data-theme="dark"] .lb-item-abbrev--congregationalist { border-color: #52b3b3; color: #52b3b3; }
+[data-theme="dark"] .lb-item-abbrev--methodist       { border-color: #4aabcc; color: #4aabcc; }
+[data-theme="dark"] .lb-item-abbrev--orthodox        { border-color: #d45c90; color: #d45c90; }
+[data-theme="dark"] .lb-item-abbrev--roman-catholic  { border-color: #d45c5c; color: #d45c5c; }
+[data-theme="dark"] .lb-item-abbrev--patristic       { border-color: #d4a83a; color: #d4a83a; }
+[data-theme="dark"] mark.lb-find-mark                { background: rgba(253,230,138,0.25); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lb-item-abbrev--reformed        { border-color: #d4895a; color: #d4895a; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--lutheran        { border-color: #7abf8e; color: #7abf8e; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--anglican        { border-color: #7a9abf; color: #7a9abf; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--baptist         { border-color: #9b5ed4; color: #9b5ed4; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--anabaptist      { border-color: #c28050; color: #c28050; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--congregationalist { border-color: #52b3b3; color: #52b3b3; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--methodist       { border-color: #4aabcc; color: #4aabcc; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--orthodox        { border-color: #d45c90; color: #d45c90; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--roman-catholic  { border-color: #d45c5c; color: #d45c5c; }
+  :root:not([data-theme="light"]) .lb-item-abbrev--patristic       { border-color: #d4a83a; color: #d4a83a; }
+  :root:not([data-theme="light"]) mark.lb-find-mark                { background: rgba(253,230,138,0.25); }
 }

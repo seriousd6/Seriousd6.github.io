@@ -284,6 +284,18 @@
 }
 .olc-div-list strong { color: var(--color-primary,#c8a96e); }
 
+/* ── Mobile ──────────────────────────────────────────────────────────── */
+@media (max-width: 699px) {
+  .olc-token__translit { font-size: 0.75rem; }
+  .olc-token__med      { font-size: 0.8rem; }
+  .olc-subhead         { font-size: 0.75rem; }
+  .olc-exp__tier-label,
+  .olc-exp__section-label,
+  .olc-exp__pos,
+  .olc-exp__disp       { font-size: 0.75rem; }
+  .olc-exp__label      { min-width: 60px; }
+}
+
 /* ── Dark mode ───────────────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   .olc-disp-2.olc-exp__disp { background: #3a2e00; color: #fdd835; }

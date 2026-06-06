@@ -1877,6 +1877,16 @@
   font-weight: 600;
 }
 
+.bsw-notes-viewall {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  text-align: right;
+  margin-top: 0.6rem;
+  text-decoration: none;
+}
+.bsw-notes-viewall:hover { text-decoration: underline; }
+
 /* Strong's ID link in modal word study */
 .bsw-ws-strongs-link {
   font-size: 0.78rem;

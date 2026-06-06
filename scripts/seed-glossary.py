@@ -293,6 +293,21 @@ def seed_greek(nt_freq, nt_book_freq, existing):
             thayer = json.load(f)
     except Exception:
         thayer = {}
+    try:
+        with open(os.path.join(STRONGS, 'abbott-smith.json'), encoding='utf-8') as f:
+            abbott = json.load(f)
+    except Exception:
+        abbott = {}
+    try:
+        with open(os.path.join(STRONGS, 'attested-uses-greek.json'), encoding='utf-8') as f:
+            attested_greek = json.load(f)
+    except Exception:
+        attested_greek = {}
+    try:
+        with open(os.path.join(STRONGS, 'moulton-milligan.json'), encoding='utf-8') as f:
+            mm = json.load(f)
+    except Exception:
+        mm = {}
 
     glossary = {}
     for code, entry in greek.items():
@@ -317,8 +332,14 @@ def seed_greek(nt_freq, nt_book_freq, existing):
         if th_lg and len(th_lg) > 600:
             th_lg = th_lg[:600] + '…'
 
+        ab      = abbott.get(code, {})
+
         disp = DISPUTED_GREEK.get(code, 0)
         if freq > 1000: disp = max(disp, 1)
+
+        sources = ['dodson']
+        if th_sh:  sources.append('thayer')
+        if ab.get('gloss') or ab.get('def'): sources.append('abbott')
 
         glossary[code] = {
             'lemma':     lemma,
@@ -335,11 +356,22 @@ def seed_greek(nt_freq, nt_book_freq, existing):
             'related_lemmas': [],
             'semantic_range': def_ or gloss,
             'expansion': '',
-            'sources':   ['dodson'] + (['thayer'] if th_sh else []),
+            'sources':   sources,
             'source_data': {
                 'dodson': {'gloss': gloss, 'def': def_, 'deriv': deriv},
                 'thayer': {'short': th_sh, 'long': th_lg},
+                'abbott': {
+                    'gloss':          ab.get('gloss', ''),
+                    'def':            ab.get('def', ''),
+                    'classical_note': ab.get('classical_note', ''),
+                    'lxx_note':       ab.get('lxx_note', ''),
+                },
             },
+            'attested_uses': attested_greek.get(code, []),
+            'extrabiblical_uses': [
+                dict(ex, source='M&M')
+                for ex in (mm.get(code) or {}).get('papyri_examples', [])[:2]
+            ],
             'user_notes':   '',
             'decision_log': [],
         }
@@ -353,6 +385,21 @@ def seed_hebrew(ot_freq, ot_book_freq, existing):
             bdb = json.load(f)
     except Exception:
         bdb = {}
+    try:
+        with open(os.path.join(STRONGS, 'gesenius.json'), encoding='utf-8') as f:
+            gesenius = json.load(f)
+    except Exception:
+        gesenius = {}
+    try:
+        with open(os.path.join(STRONGS, 'attested-uses-hebrew.json'), encoding='utf-8') as f:
+            attested_hebrew = json.load(f)
+    except Exception:
+        attested_hebrew = {}
+    try:
+        with open(os.path.join(STRONGS, 'lxx-bridge.json'), encoding='utf-8') as f:
+            lxx_bridge_data = json.load(f)
+    except Exception:
+        lxx_bridge_data = {}
 
     glossary = {}
     for code, entry in hebrew.items():
@@ -376,8 +423,14 @@ def seed_hebrew(ot_freq, ot_book_freq, existing):
         if b_lg and len(b_lg) > 600:
             b_lg = b_lg[:600] + '…'
 
+        ge      = gesenius.get(code, {})
+
         disp = DISPUTED_HEBREW.get(code, 0)
         if freq > 1000: disp = max(disp, 1)
+
+        sources = ['hebrew']
+        if b_sh:  sources.append('bdb')
+        if ge.get('gloss') or ge.get('def'): sources.append('gesenius')
 
         glossary[code] = {
             'lemma':     lemma,
@@ -394,11 +447,19 @@ def seed_hebrew(ot_freq, ot_book_freq, existing):
             'related_lemmas': [],
             'semantic_range': def_ or gloss,
             'expansion': '',
-            'sources':   ['hebrew'] + (['bdb'] if b_sh else []),
+            'sources':   sources,
             'source_data': {
                 'hebrew': {'gloss': gloss, 'def': def_, 'deriv': deriv},
                 'bdb':    {'short': b_sh, 'long': b_lg},
+                'gesenius': {
+                    'gloss':     ge.get('gloss', ''),
+                    'def':       ge.get('def', ''),
+                    'cognates':  ge.get('cognates', ''),
+                    'root_note': ge.get('root_note', ''),
+                },
             },
+            'attested_uses': attested_hebrew.get(code, []),
+            'lxx_bridge':   lxx_bridge_data.get(code, []),
             'user_notes':   '',
             'decision_log': [],
         }
@@ -444,11 +505,13 @@ def main():
 
     def slim(entry, code):
         """Compact entry for phase bundles — drops verbose long_def strings."""
-        sd = entry.get('source_data', {})
-        dodson = sd.get('dodson', {})
-        thayer = sd.get('thayer', {})
-        hebrew = sd.get('hebrew', {})
-        bdb    = sd.get('bdb', {})
+        sd      = entry.get('source_data', {})
+        dodson  = sd.get('dodson', {})
+        thayer  = sd.get('thayer', {})
+        hebrew  = sd.get('hebrew', {})
+        bdb     = sd.get('bdb', {})
+        abbott  = sd.get('abbott', {})
+        gesenius = sd.get('gesenius', {})
         return {
             'lemma':        entry.get('lemma', ''),
             'translit':     entry.get('translit', ''),
@@ -472,7 +535,21 @@ def main():
                 'thayer': {'short': thayer.get('short',''), 'long': thayer.get('long','')[:400]},
                 'hebrew': {'gloss': hebrew.get('gloss',''), 'def': hebrew.get('def','')[:300], 'deriv': hebrew.get('deriv','')},
                 'bdb':    {'short': bdb.get('short',''),   'long': bdb.get('long','')[:400]},
+                'abbott': {
+                    'gloss':          abbott.get('gloss', ''),
+                    'def':            abbott.get('def', '')[:400],
+                    'classical_note': abbott.get('classical_note', '')[:200],
+                },
+                'gesenius': {
+                    'gloss':     gesenius.get('gloss', ''),
+                    'def':       gesenius.get('def', '')[:400],
+                    'cognates':  gesenius.get('cognates', '')[:200],
+                    'root_note': gesenius.get('root_note', '')[:150],
+                },
             },
+            'attested_uses':      entry.get('attested_uses', [])[:6],
+            'extrabiblical_uses': entry.get('extrabiblical_uses', [])[:2],
+            'lxx_bridge':         entry.get('lxx_bridge', [])[:3],
             'user_notes':   entry.get('user_notes', ''),
             'decision_log': entry.get('decision_log', []),
         }

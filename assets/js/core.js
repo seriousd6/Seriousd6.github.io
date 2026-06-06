@@ -33,6 +33,7 @@ export var DATA_ROOT        = _resolve('../../data/bible');        // versioned 
 export var CROSSREFS_ROOT   = _resolve('../../data/crossrefs');    // cross-reference JSON per book
 export var COMMENTARY_ROOT  = _resolve('../../data/commentary');   // commentary JSON per book/source
 export var PARALLELS_ROOT   = _resolve('../../data/parallels');    // parallel passage data
+export var ECHOES_ROOT      = _resolve('../../data/echoes');         // OT→NT echo/allusion/typology data per book
 export var VERSIONS_URL     = _resolve('../../data/versions/versions.json'); // list of available translations
 export var BOOKS_URL        = _resolve('../../data/bible/books.json');       // book metadata (names, abbrevs, testament)
 export var SEARCH_URL       = _resolve('../../search/');
@@ -225,6 +226,7 @@ export var crossRefCache    = Object.create(null); // key: bookId → cross-ref 
 //   show only 2 fetches total (one per srcId×bookId pair), not one per chapter.
 export var commentaryCache  = Object.create(null); // key: "source:bookId" → commentary object
 export var parallelsCache   = Object.create(null); // key: bookId → parallels object
+export var echoesCache      = Object.create(null); // key: bookId → echoes object
 export var strongsCache     = Object.create(null); // key: "greek"|"hebrew" → dictionary object
 export var interlinearCache = Object.create(null); // key: bookId → interlinear object
 export var libDocCache      = Object.create(null); // key: docId → document object
@@ -651,6 +653,30 @@ export function loadCrossRefs(bookId) {
   return crossRefCache[bookId];
 }
 
+// ── loadEchoes ────────────────────────────────────────────────────────────────
+// INTENT: Loads OT→NT echo/allusion/typology data for a book from data/echoes/<bookId>.json.
+//   Schema: { "ch": { "v": [{type, target, note}] } } — same structural pattern as crossrefs.
+//   Resolves null (not a rejection) when the file is absent so callers can hide the section cleanly.
+// CHANGE? echoesCache is keyed by bookId string. If the data file layout changes, update
+//   ECHOES_ROOT here and vsExtractEchoes/vsRenderEchoList in verse-study.js.
+// VERIFY: Open verse-study for John 1:29 — Network tab should show exactly one fetch to
+//   data/echoes/john.json; repeat navigation to the same verse should show no re-fetch.
+export function loadEchoes(bookId) {
+  if (bookId in echoesCache) return Promise.resolve(echoesCache[bookId]);
+  var url = ECHOES_ROOT + '/' + bookId + '.json';
+  echoesCache[bookId] = fetch(url)
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      echoesCache[bookId] = (data && Object.keys(data).length) ? data : null;
+      return echoesCache[bookId];
+    })
+    .catch(function () { echoesCache[bookId] = null; return null; });
+  return echoesCache[bookId];
+}
+
 // ── ATTRIBUTION ──────────────────────────────────────────────────────────────
 // Copyright / attribution strings displayed under rendered Bible text.
 // Centralised here so adding a new version only requires one edit.
@@ -676,7 +702,10 @@ export var COMMENTARY_SOURCES = [
   { id: 'calvin',  label: "Calvin's Commentaries",       attr: "Calvin's Collected Commentaries (Public Domain)" },
   { id: 'barnes',  label: "Barnes' Notes (NT)",          attr: "Barnes' Notes on the Bible (Public Domain)" },
   { id: 'rwp',     label: "Robertson's Word Pictures",   attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
-  { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" }
+  { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" },
+  { id: 'mkt-original', label: 'Original Language (MKT)', attr: 'MKT Commentary — Original Language (generated)' },
+  { id: 'mkt-context',  label: 'Historical Context (MKT)', attr: 'MKT Commentary — Historical Context (generated)' },
+  { id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: 'MKT Commentary — Christ in Every Verse (generated)' }
 ];
 
 // Active commentary source — always read from localStorage so changes made in
