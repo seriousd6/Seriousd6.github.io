@@ -103,6 +103,7 @@
 
 @media (max-width: 680px) {
   .dict-body { grid-template-columns: 1fr; }
+  .dict-alpha-btn { min-height: 44px; display: inline-flex; align-items: center; }
 }
 
 /* ── Entry list ──────────────────────────────────────────────────────────────── */
@@ -555,4 +556,80 @@
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);
   }
+}
+
+/* ── Dictionary source badge colors (data-dict-src replaces inline styles) ── */
+
+.vs-dict-src-badge[data-dict-src],
+.dict-filter-chip__badge[data-dict-src],
+.dict-item__src[data-dict-src] {
+  color: #fff;
+  border-radius: 3px;
+  padding: .1rem .35rem;
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.vs-dict-src-badge[data-dict-src="easton"],
+.dict-filter-chip__badge[data-dict-src="easton"],
+.dict-item__src[data-dict-src="easton"]  { background: #7c3aed; }
+
+.vs-dict-src-badge[data-dict-src="smith"],
+.dict-filter-chip__badge[data-dict-src="smith"],
+.dict-item__src[data-dict-src="smith"]   { background: #1d4ed8; }
+
+.vs-dict-src-badge[data-dict-src="isbe"],
+.dict-filter-chip__badge[data-dict-src="isbe"],
+.dict-item__src[data-dict-src="isbe"]    { background: #1e3a5f; }
+
+.vs-dict-src-badge[data-dict-src="hitchcock"],
+.dict-filter-chip__badge[data-dict-src="hitchcock"],
+.dict-item__src[data-dict-src="hitchcock"] { background: #065f46; }
+
+.vs-dict-src-badge[data-dict-src="nave"],
+.dict-filter-chip__badge[data-dict-src="nave"],
+.dict-item__src[data-dict-src="nave"]    { background: #b45309; }
+
+.vs-dict-src-badge[data-dict-src="torrey"],
+.dict-filter-chip__badge[data-dict-src="torrey"],
+.dict-item__src[data-dict-src="torrey"]  { background: #be123c; }
+
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="easton"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="easton"],
+[data-theme="dark"] .dict-item__src[data-dict-src="easton"]  { background: #7c3aed; }
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="smith"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="smith"],
+[data-theme="dark"] .dict-item__src[data-dict-src="smith"]   { background: #3b6fd4; }
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="isbe"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="isbe"],
+[data-theme="dark"] .dict-item__src[data-dict-src="isbe"]    { background: #3a6aaf; }
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="hitchcock"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="hitchcock"],
+[data-theme="dark"] .dict-item__src[data-dict-src="hitchcock"] { background: #059669; }
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="nave"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="nave"],
+[data-theme="dark"] .dict-item__src[data-dict-src="nave"]    { background: #d97706; }
+[data-theme="dark"] .vs-dict-src-badge[data-dict-src="torrey"],
+[data-theme="dark"] .dict-filter-chip__badge[data-dict-src="torrey"],
+[data-theme="dark"] .dict-item__src[data-dict-src="torrey"]  { background: #e11d48; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="easton"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="easton"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="easton"]  { background: #7c3aed; }
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="smith"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="smith"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="smith"]   { background: #3b6fd4; }
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="isbe"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="isbe"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="isbe"]    { background: #3a6aaf; }
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="hitchcock"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="hitchcock"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="hitchcock"] { background: #059669; }
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="nave"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="nave"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="nave"]    { background: #d97706; }
+  :root:not([data-theme="light"]) .vs-dict-src-badge[data-dict-src="torrey"],
+  :root:not([data-theme="light"]) .dict-filter-chip__badge[data-dict-src="torrey"],
+  :root:not([data-theme="light"]) .dict-item__src[data-dict-src="torrey"]  { background: #e11d48; }
 }

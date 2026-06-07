@@ -12,7 +12,7 @@
  */
 'use strict';
 
-import { _resolve, initTheme } from './core.js';
+import { _resolve, initTheme, parseRef, loadInterlinear, loadStrongs, escHtml, INTERLINEAR_ROOT } from './core.js';
 
 /* ── URLs ──────────────────────────────────────────────────── */
 const PHASE_URLS = {
@@ -30,6 +30,7 @@ const TOTAL_HEBREW = 8674;
 /* ── localStorage keys ─────────────────────────────────────── */
 const SK_DECISIONS = 'bsw_ws_decisions';
 const SK_UI        = 'bsw_ws_ui';
+const SK_DEPTH     = 'bsw_ws_depth';
 
 /* ── Book order (full name → display abbreviation) ─────────── */
 const BOOK_ORDER_OT = [
@@ -71,6 +72,26 @@ let    _queue     = [];          // code array for current phase
 let    _filtered  = [];          // after search
 let    _page      = 0;
 const  PAGE_SIZE  = 80;
+
+// INTENT: Passage study mode state — when true, column 2 shows interlinear tiles
+//   instead of the vocabulary queue. Depth and translationMode apply to the dossier.
+// CHANGE? If additional passage-mode views are added (SW-B/C/D), extend _passageRef
+//   to carry chapter range info so tabs can query the right data.
+// VERIFY: Type "John 1:1" in the passage input, click Study → sw-passage-view is
+//   shown, ws-browse-panel is hidden, tiles appear.
+let _passageMode     = false;
+let _passageRef      = null;      // parsed ref object (bookId, ch, v, endCh, endV)
+let _translationMode = false;     // false = hides translator-only sections in dossier
+let _depth           = 2;         // 1=Reader, 2=Student, 3=Scholar
+
+// INTENT: Grammar data cache for SW-B particle highlighting in passage tiles and
+//   the Grammar Significance dossier section. Loaded lazily on first passage study.
+// CHANGE? If particle file paths change, update _loadParticles() URL template.
+//   If morphology-significance files are added for new languages, extend the loader.
+// VERIFY: Study John 1 — tiles with γάρ/οὖν/ἀλλά get colored left-border + badge.
+//   Click γάρ tile → dossier Grammar section shows "Ground / Reason" function card.
+let _particlesCache = {};         // lang ('greek'|'hebrew') → {code: particle entry}
+let _morphSigCache  = {};         // lang → morphology significance data
 
 /* ── DOM refs ──────────────────────────────────────────────── */
 let $nav, $queue, $count, $dossier, $search, $layout, $loading, $loadingText, $topbarStats;
@@ -339,6 +360,97 @@ function _renderQueueActive() {
   });
 }
 
+/* ── SW-B: Grammar Significance section ───────────────────── */
+// INTENT: Build the Grammar Significance HTML for the dossier. If the word is a
+//   recognized discourse particle, show a function card explaining what it does
+//   in plain English. If it is a verb or noun, show applicable morphology notes
+//   from the preloaded morphology-significance cache (best-effort; may be empty).
+// CHANGE? If particle/morphology JSON schemas change, update field references here.
+//   If new POS categories are added, extend the POS → morph-key mapping below.
+// VERIFY: Click G1063 (γάρ) → "Ground / Reason" card appears in red/amber with
+//   plain explanation. Click G3056 (λόγος, noun) → morphology section shows genitive
+//   and dative case notes. Click G3004 (λέγω, verb) → aspect notes appear.
+function _renderGrammarSection(code, lang) {
+  const particles = _particlesCache[lang] || {};
+  const morphSig  = _morphSigCache[lang]  || {};
+  const particle  = particles[code];
+
+  let inner = '';
+
+  // ── Particle function card
+  if (particle) {
+    inner += '<div class="sw-particle-card sw-particle--' + particle.function + '" style="border-color:currentColor">'
+      + '<div class="sw-particle-card__fn">'
+      + '<span class="sw-particle-card__word">' + _esc(particle.word) + '</span>'
+      + '<strong>' + _esc(particle.function_label) + '</strong>'
+      + '</div>'
+      + '<p class="sw-particle-card__plain">' + _esc(particle.plain) + '</p>';
+    if (particle.example) {
+      inner += '<div class="sw-particle-card__example">'
+        + '<span class="sw-particle-card__example-ref">' + _esc(particle.example.ref) + '</span>'
+        + _esc(particle.example.note)
+        + '</div>';
+    }
+    inner += '</div>';
+  }
+
+  // ── Morphology significance hints (verb/noun — POS-keyed)
+  // Pull entries whose key starts with the likely POS prefix, so verb → verb_aspect_*
+  // We cannot know the token's actual parsed form, so we show all categories for the POS.
+  const POS_PREFIXES = {
+    'verb': ['verb_aspect_aorist','verb_aspect_perfect','verb_aspect_imperfect','verb_aspect_present',
+             'verb_voice_passive','verb_mood_subjunctive','verb_mood_imperative'],
+    'noun': ['noun_case_genitive','noun_case_dative'],
+    'adj':        ['noun_case_genitive','noun_case_dative'],
+    'adjective':  ['noun_case_genitive','noun_case_dative'],
+    'participle': ['participle_substantival','participle_hebrew'],
+    'article':    ['article_absence'],
+    'infinitive': ['infinitive_purpose'],
+  };
+  // Hebrew-specific
+  const HEB_POS_PREFIXES = {
+    'verb': ['binyan_piel','binyan_niphal','binyan_hiphil','binyan_hitpael',
+             'aspect_perfect','aspect_imperfect','waw_consecutive'],
+    'noun': ['construct_chain'],
+    'participle': ['participle_hebrew'],
+  };
+
+  // Use entry's pos field if available from the dossier entry
+  const entry = _getEntry(code);
+  const rawPos = (entry && (entry.pos || (entry.source_data && entry.source_data.pos))) || '';
+  const posKey = rawPos.toLowerCase().replace(/[^a-z]/g, '');
+  const prefixes = (lang === 'hebrew' ? HEB_POS_PREFIXES[posKey] : POS_PREFIXES[posKey]) || [];
+
+  if (prefixes.length > 0) {
+    const rows = prefixes.map(function(k) { return morphSig[k]; }).filter(Boolean);
+    if (rows.length > 0) {
+      inner += '<div class="sw-morph-hints">';
+      rows.forEach(function(m) {
+        inner += '<div class="sw-morph-hint">'
+          + '<div class="sw-morph-hint__label">' + _esc(m.label) + '</div>'
+          + '<div class="sw-morph-hint__sig">' + _esc(m.significance) + '</div>';
+        if (m.debate) {
+          inner += '<div class="sw-morph-hint__debate">📌 ' + _esc(m.debate) + '</div>';
+        }
+        if (m.examples && m.examples.length) {
+          inner += '<ul class="sw-morph-hint__examples">';
+          m.examples.forEach(function(ex) { inner += '<li>' + _esc(ex) + '</li>'; });
+          inner += '</ul>';
+        }
+        inner += '</div>';
+      });
+      inner += '</div>';
+    }
+  }
+
+  if (!inner) return '';
+
+  return '<div class="sw-grammar-section" data-depth-min="1">'
+    + '<div class="sw-grammar-section__title">Grammar Significance</div>'
+    + inner
+    + '</div>';
+}
+
 /* ── Dossier ───────────────────────────────────────────────── */
 function _renderDossier(code) {
   const entry = _getEntry(code);
@@ -359,7 +471,7 @@ function _renderDossier(code) {
 
   let html = '<div class="ws-dossier">';
 
-  // ── Header
+  // ── Header + depth toggle
   html += `<div class="ws-dossier-head">
     <div class="ws-dossier-head__top">
       <span class="ws-dossier__code">${_esc(code)}</span>
@@ -372,11 +484,17 @@ function _renderDossier(code) {
       ${freq > 0 ? `<span>${freqLabel} frequency: <strong>${freq.toLocaleString()}×</strong></span>` : ''}
       <span>Status: <span class="ws-dossier-head__status ws-status--${entry._status}">${entry._status}</span></span>
     </div>
+    <div class="sw-depth-toggle" id="sw-depth-toggle">
+      <span class="sw-depth-label">Depth:</span>
+      <button type="button" class="sw-depth-btn${_depth === 1 ? ' sw-depth-btn--active' : ''}" data-depth="1" title="Reader — essential summary">Reader</button>
+      <button type="button" class="sw-depth-btn${_depth === 2 ? ' sw-depth-btn--active' : ''}" data-depth="2" title="Student — all lexical sources">Student</button>
+      <button type="button" class="sw-depth-btn${_depth === 3 ? ' sw-depth-btn--active' : ''}" data-depth="3" title="Scholar — all sources including M&amp;M and LXX bridge">Scholar</button>
+    </div>
   </div>`;
 
   // ── Attested Range (primary content — what the lexical sources actually document)
   if (src.semantic_range) {
-    html += `<div class="ws-section ws-section--range">
+    html += `<div class="ws-section ws-section--range" data-depth-min="1">
       <div class="ws-section-title">Attested Range <span class="ws-section-note">— what lexical sources document across all uses</span></div>
       <p class="ws-semantic ws-semantic--headline">${_esc(src.semantic_range)}</p>
     </div>`;
@@ -388,6 +506,17 @@ function _renderDossier(code) {
   // VERIFY: Open G26 (ἀγάπη) — verse samples from John, Paul, and at least one other NT author
   //   appear below the semantic range headline and above the Lexical Sources section.
   if (src.attested_uses && src.attested_uses.length) html += _renderAttestedUses(src.attested_uses);
+
+  // ── SW-B: Grammar Significance (particle function card + POS morphology hints)
+  // INTENT: Surface grammar significance right after the attested range so the user
+  //   understands what this word does structurally before diving into lexical sources.
+  //   Uses the preloaded _particlesCache and _morphSigCache — no additional fetch needed
+  //   since particles are loaded during passage study before tile click.
+  // CHANGE? If grammar section should move (e.g. after Lexical Sources), cut this line
+  //   and paste it at the new position in _renderDossier. _renderGrammarSection is stateless.
+  // VERIFY: Click a particle tile in passage view → Grammar Significance section appears
+  //   with colored card. Click a non-particle tile → section is absent or shows morph hints only.
+  html += _renderGrammarSection(code, entry._lang || (code.startsWith('G') ? 'greek' : 'hebrew'));
 
   // INTENT: Extrabiblical uses (M&M papyri) follow biblical attestation — showing the same
   //   word in ordinary Koine Greek outside the Bible, the strongest evidence against
@@ -421,7 +550,7 @@ function _renderDossier(code) {
     ];
     var activeCards = SOURCES_MANIFEST.filter(function(s) { return s.gloss || s.def; });
     var sourcesOpen = !(src.attested_uses && src.attested_uses.length);
-    html += '<div class="ws-section ws-section--sources">';
+    html += '<div class="ws-section ws-section--sources" data-depth-min="2">';
     html += '<details class="ws-sources-details"' + (sourcesOpen ? ' open' : '') + '>';
     html += '<summary class="ws-section-title ws-sources-summary">Lexical Sources <span class="ws-section-note">(' + activeCards.length + ' source' + (activeCards.length === 1 ? '' : 's') + ')</span></summary>';
     html += '<div class="ws-sources">';
@@ -446,7 +575,7 @@ function _renderDossier(code) {
   html += _renderBookDistribution(entry._bookFreq, entry._lang);
 
   // ── Default Rendering Tendency (your starting-point per tier — not a decided meaning)
-  html += '<div class="ws-section ws-section--tiers" id="ws-tiers-section">';
+  html += '<div class="ws-section ws-section--tiers sw-trans-section" id="ws-tiers-section">';
   html += '<div class="ws-section-title">Default Rendering Tendency <span class="ws-section-note">— your starting point; context below is where meaning is actually decided</span></div>';
   html += _renderTiersView(entry._tiers);
   html += '</div>';
@@ -456,7 +585,7 @@ function _renderDossier(code) {
 
   // ── Contextual Renderings (the primary work surface — where translation actually happens)
   const overrides = ((_decisions[code] || {}).context_overrides) || src.context_overrides || [];
-  html += `<div class="ws-section ws-section--contextual" id="ws-overrides-section">
+  html += `<div class="ws-section ws-section--contextual sw-trans-section" id="ws-overrides-section">
     <div class="ws-section-title ws-section-title--contextual">Contextual Renderings
     </div>
     <button class="ws-add-contextual-btn" data-code="${_esc(code)}">+ Add contextual rendering</button>`;
@@ -482,9 +611,9 @@ function _renderDossier(code) {
   }
   html += '</div>';
 
-  // ── Decision log
+  // ── Decision log (translation mode only)
   const log = entry._decLog;
-  html += '<div class="ws-section"><div class="ws-section-title">Decision Log</div>';
+  html += '<div class="ws-section sw-trans-section"><div class="ws-section-title">Decision Log</div>';
   if (!log.length) {
     html += '<p class="ws-log-empty">No decisions recorded yet.</p>';
   } else {
@@ -502,7 +631,7 @@ function _renderDossier(code) {
   // ── Actions (labels reframed — internal action values unchanged for pipeline compatibility)
   const isLocked    = entry._status === 'locked';
   const isConfirmed = entry._status === 'confirmed' || entry._status === 'override';
-  html += `<div class="ws-actions" id="ws-actions">
+  html += `<div class="ws-actions sw-trans-section" id="ws-actions">
     <button class="ws-action-btn ws-action-btn--confirm" data-action="confirm" ${isLocked ? 'disabled' : ''}>✓ Set Default</button>
     <button class="ws-action-btn ws-action-btn--override" data-action="override" ${isLocked ? 'disabled' : ''}>✎ Edit Default</button>
     <button class="ws-action-btn ws-action-btn--inform"   data-action="inform"   ${isLocked ? 'disabled' : ''}>💬 Note</button>
@@ -567,7 +696,7 @@ function _renderBookDistribution(bookFreq, lang) {
   };
   const showOT = lang === 'hebrew' || Object.keys(bookFreq).some(k => BOOK_ORDER_OT.some(([bk]) => bk === k && bookFreq[bk] > 0));
   const showNT = lang === 'greek'  || Object.keys(bookFreq).some(k => BOOK_ORDER_NT.some(([bk]) => bk === k && bookFreq[bk] > 0));
-  let html = '<div class="ws-section ws-section--bdist"><div class="ws-section-title">Bible Distribution</div><div class="ws-bdist">';
+  let html = '<div class="ws-section ws-section--bdist" data-depth-min="2"><div class="ws-section-title">Bible Distribution</div><div class="ws-bdist">';
   if (showOT) html += `<div class="ws-bdist-row"><span class="ws-bdist-label">OT</span><div class="ws-bdist-cells">${BOOK_ORDER_OT.map(cell).join('')}</div></div>`;
   if (showNT) html += `<div class="ws-bdist-row"><span class="ws-bdist-label">NT</span><div class="ws-bdist-cells">${BOOK_ORDER_NT.map(cell).join('')}</div></div>`;
   html += '</div></div>';
@@ -589,7 +718,7 @@ function _renderBookDefaults(code, entry) {
   if (!books.length) return '';
 
   const open = Object.keys(defs).length > 0;
-  let html = `<div class="ws-section ws-section--bookdefs">
+  let html = `<div class="ws-section ws-section--bookdefs sw-trans-section">
     <details class="ws-bookdefs-details" ${open ? 'open' : ''}>
       <summary class="ws-section-title ws-bookdefs-summary">Per-book Defaults
         <span class="ws-section-note">— override the global default for a specific book or author</span>
@@ -682,10 +811,10 @@ function _renderExtrabib(uses) {
       + (u.note     ? '<div class="ws-extrabib-note">'      + _esc(u.note)                         + '</div>'  : '')
       + '</div>';
   }).join('');
-  return '<details class="ws-extrabib-details">'
+  return '<div data-depth-min="3"><details class="ws-extrabib-details">'
     + '<summary class="ws-extrabib-summary">Extrabiblical Uses <span class="ws-section-note">(papyri · secular Koine)</span></summary>'
     + '<div class="ws-extrabib-list">' + items + '</div>'
-    + '</details>';
+    + '</details></div>';
 }
 
 // INTENT: Render the LXX Bridge as a concise set of Greek-rendering chips for a Hebrew entry,
@@ -705,7 +834,7 @@ function _renderLxxBridge(bridge) {
       + (p.note      ? '<span class="ws-lxx-pair__note">' + _esc(p.note) + '</span>'      : '')
       + '</div>';
   }).join('');
-  return '<div class="ws-section ws-section--lxx">'
+  return '<div class="ws-section ws-section--lxx" data-depth-min="3">'
     + '<div class="ws-section-title">LXX Bridge <span class="ws-section-note">— how Septuagint translators rendered this word</span></div>'
     + '<div class="ws-lxx-bridge">' + items + '</div>'
     + '</div>';
@@ -1669,6 +1798,323 @@ function _esc(str) {
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+/* ── Depth toggle (SW-A) ───────────────────────────────────── */
+// INTENT: Depth controls how much of the dossier is shown. Reader (1) = essential
+//   summary only; Student (2) = all lexical sources; Scholar (3) = all including
+//   M&M papyri and LXX bridge. Applied by setting a CSS class on ws-page.
+// CHANGE? If new depth levels are added, update SW_DEPTH_LABELS and the CSS
+//   sw-depth-1/2/3 rules in workshop.css that hide [data-depth-min].
+// VERIFY: At depth 1, open the dossier for G26 — Lexical Sources section is hidden.
+//   At depth 2, it is visible. At depth 3, LXX Bridge is also visible.
+function _initDepth() {
+  try { _depth = parseInt(localStorage.getItem(SK_DEPTH), 10) || 2; } catch { _depth = 2; }
+  if (_depth < 1 || _depth > 3) _depth = 2;
+  _applyDepth(_depth);
+}
+function _applyDepth(level) {
+  _depth = level;
+  try { localStorage.setItem(SK_DEPTH, String(level)); } catch (e) {}
+  const page = document.querySelector('.ws-page');
+  if (page) {
+    page.classList.remove('sw-depth-1', 'sw-depth-2', 'sw-depth-3');
+    page.classList.add('sw-depth-' + level);
+  }
+  // Update depth toggle buttons
+  document.querySelectorAll('.sw-depth-btn').forEach(function (btn) {
+    btn.classList.toggle('sw-depth-btn--active', parseInt(btn.dataset.depth, 10) === level);
+  });
+}
+
+/* ── Translation mode toggle (SW-A) ────────────────────────── */
+// INTENT: In study mode (default), translator-only UI (tier inputs, status buttons,
+//   decision log, contextual overrides) is hidden so the dossier reads as a clean
+//   reference card. Translation mode reveals those controls for workflow use.
+// CHANGE? If new translator sections are added to _renderDossier, add the class
+//   sw-trans-section to their opening element so this toggle picks them up.
+// VERIFY: On load, #ws-tiers-section and #ws-actions should not be visible. Click
+//   "Translation mode" → they appear. Click again → they hide.
+function _applyTransMode() {
+  const dossier = document.getElementById('ws-dossier');
+  if (dossier) dossier.classList.toggle('sw-trans-on', _translationMode);
+  const btn = document.getElementById('sw-trans-toggle-btn');
+  if (btn) {
+    btn.classList.toggle('ws-btn--active', _translationMode);
+    btn.setAttribute('aria-pressed', _translationMode ? 'true' : 'false');
+  }
+}
+
+/* ── Passage study mode (SW-A) ─────────────────────────────── */
+// INTENT: Switches column 2 from the vocabulary queue to the interlinear tile view
+//   for the requested passage. Tile click → _openWord() → shows lexical dossier.
+// CHANGE? If the tile popover from interlinear.js is ported here, remove the
+//   inline dossier call in _renderPassageTiles and defer to the popover logic.
+// VERIFY: Type "John 1:1-5", click Study → sw-passage-view shows John 1:1 through
+//   1:5 as rows of tiles. Click a G-code tile → dossier loads for that word.
+// INTENT: Lazily fetch the particle discourse-marker JSON for a language.
+//   Returns cached result on subsequent calls so the file is fetched at most once.
+// CHANGE? If data/grammar/{lang}-particles.json is renamed or moved, update the URL.
+// VERIFY: Open DevTools Network tab, study John 1 → one request to greek-particles.json,
+//   then study Romans 8 → no second request (cache hit).
+async function _loadParticles(lang) {
+  if (_particlesCache[lang]) return _particlesCache[lang];
+  try {
+    const url = _resolve('../../data/grammar/' + lang + '-particles.json');
+    _particlesCache[lang] = await fetch(url).then(function(r) { return r.ok ? r.json() : {}; });
+  } catch (e) {
+    _particlesCache[lang] = {};
+  }
+  return _particlesCache[lang];
+}
+
+// INTENT: Lazily fetch the morphology significance JSON for a language.
+//   Used in the dossier Grammar section to show per-POS form significance notes.
+// CHANGE? If data/grammar/{lang}-morphology-significance.json is renamed, update URL.
+// VERIFY: Click a Greek verb in any passage → dossier Grammar section shows at least
+//   the aspect significance rows (aorist, perfect, imperfect, present).
+async function _loadMorphSig(lang) {
+  if (_morphSigCache[lang]) return _morphSigCache[lang];
+  try {
+    const url = _resolve('../../data/grammar/' + lang + '-morphology-significance.json');
+    _morphSigCache[lang] = await fetch(url).then(function(r) { return r.ok ? r.json() : {}; });
+  } catch (e) {
+    _morphSigCache[lang] = {};
+  }
+  return _morphSigCache[lang];
+}
+
+function _switchToPassageMode() {
+  _passageMode = true;
+  const browse  = document.getElementById('ws-browse-panel');
+  const passage = document.getElementById('sw-passage-view');
+  if (browse)  browse.hidden  = true;
+  if (passage) passage.hidden = false;
+}
+function _switchToBrowseMode() {
+  _passageMode = false;
+  const browse  = document.getElementById('ws-browse-panel');
+  const passage = document.getElementById('sw-passage-view');
+  if (browse)  browse.hidden  = false;
+  if (passage) passage.hidden = true;
+}
+
+async function _studyPassage(refStr) {
+  const parsed = parseRef(refStr);
+  if (!parsed) {
+    const header = document.getElementById('sw-passage-header');
+    if (header) header.innerHTML = '<span class="sw-passage-err">Reference not recognised — try "John 1:1" or "Romans 8:1-4"</span>';
+    _switchToPassageMode();
+    return;
+  }
+  _passageRef = parsed;
+
+  const header = document.getElementById('sw-passage-header');
+  if (header) header.innerHTML = '<span class="sw-passage-ref-label">' + _esc(parsed.display) + '</span>'
+    + '<button type="button" class="sw-close-passage ws-btn ws-btn--sm" id="sw-close-passage-btn">✕ Close</button>';
+
+  const tilesEl = document.getElementById('sw-ptiles');
+  if (tilesEl) tilesEl.innerHTML = '<span class="sw-ptile-loading">Loading…</span>';
+
+  _switchToPassageMode();
+
+  // Wire close button
+  const closeBtn = document.getElementById('sw-close-passage-btn');
+  if (closeBtn) closeBtn.addEventListener('click', function () { _switchToBrowseMode(); });
+
+  try {
+    const lang       = parsed.bookId === 'psalms' || !parsed.bookId.match(/matthew|mark|luke|john|acts|romans|1corinthians|2corinthians|galatians|ephesians|philippians|colossians|1thessalonians|2thessalonians|1timothy|2timothy|titus|philemon|hebrews|james|1peter|2peter|1john|2john|3john|jude|revelation/)
+      ? 'hebrew' : 'greek';
+    const [interData, strongsDict, particles] = await Promise.all([
+      loadInterlinear(parsed.bookId),
+      loadStrongs(lang),
+      _loadParticles(lang),
+      _loadMorphSig(lang),   // pre-warm morphSigCache so dossier grammar section is sync
+    ]);
+    _renderPassageTiles(parsed, interData, strongsDict, particles);
+  } catch (err) {
+    if (tilesEl) tilesEl.innerHTML = '<span class="sw-ptile-loading">Could not load interlinear data.</span>';
+  }
+}
+
+// INTENT: Render interlinear token tiles for a passage reference, annotating any
+//   discourse particles with a colored left-border and function badge (SW-B).
+//   Particles arg may be null/empty — tiles still render without annotation.
+// CHANGE? If tile HTML structure changes, update sw-ptile CSS selectors in workshop.css.
+//   If particles JSON schema changes (color/function fields), update annotation logic here.
+// VERIFY: Study Romans 8:1-11 → οὖν tile (G3767) has blue left-border + "inference" badge.
+//   Study Ps 23 → כִּי tiles (H3588) have sienna left-border + "because/that" badge.
+function _renderPassageTiles(parsed, interData, strongsDict, particles) {
+  const tilesEl  = document.getElementById('sw-ptiles');
+  const tabsEl   = document.getElementById('sw-passage-tabs');
+  const tabCont  = document.getElementById('sw-tab-content');
+  if (!tilesEl || !interData) {
+    if (tilesEl) tilesEl.innerHTML = '<span class="sw-ptile-loading">No interlinear data for this passage.</span>';
+    return;
+  }
+
+  // Build legend showing which particle functions appear in this passage
+  const seenFunctions = new Set();
+  const startCh = parsed.ch;
+  const endCh   = parsed.endCh;
+
+  // First pass: collect which functions appear so legend is passage-specific
+  for (let ch = startCh; ch <= endCh; ch++) {
+    const chData = interData[String(ch)];
+    if (!chData) continue;
+    const vStart = (ch === startCh) ? parsed.v    : 1;
+    const vEnd   = (ch === endCh)   ? parsed.endV : 999;
+    for (let v = vStart; v <= vEnd; v++) {
+      const tokens = chData[String(v)];
+      if (!tokens) continue;
+      tokens.forEach(function(tok) {
+        if (particles && tok.s && particles[tok.s]) seenFunctions.add(particles[tok.s].function);
+      });
+    }
+  }
+
+  // Legend bar (only if particles are present in passage)
+  const LEGEND_LABELS = {
+    'ground': 'ground', 'inference': 'inference', 'contrast': 'contrast',
+    'strong-contrast': 'contrast', 'adversative': 'contrast', 'limitation': 'contrast',
+    'limitation-assurance': 'contrast', 'exception-contrast': 'contrast',
+    'continue': 'continue', 'additive': 'continue', 'additive-temporal': 'continue',
+    'additive-intensifier': 'continue', 'temporal-transition': 'continue',
+    'contrast-setup': 'continue', 'relative': 'continue', 'entreaty': 'continue',
+    'purpose': 'purpose', 'result': 'result', 'manner-result': 'result',
+    'condition': 'condition', 'condition-possible': 'condition',
+    'cause': 'cause', 'causal-or-means': 'cause', 'content-or-cause': 'cause',
+    'negation': 'negation', 'negation-fact': 'negation', 'negation-process': 'negation',
+    'negation-prohibition': 'negation', 'immediacy': 'immediacy', 'focus': 'focus',
+  };
+  const legendGroups = new Set();
+  seenFunctions.forEach(function(fn) { if (LEGEND_LABELS[fn]) legendGroups.add(LEGEND_LABELS[fn]); });
+
+  let legendHtml = '';
+  if (legendGroups.size > 0) {
+    legendHtml = '<div class="sw-markers-bar"><span class="sw-markers-bar__label">Discourse markers:</span>';
+    legendGroups.forEach(function(g) {
+      legendHtml += '<span class="sw-marker-legend sw-marker-legend--' + g + '">' + g + '</span>';
+    });
+    legendHtml += '</div>';
+  }
+
+  let html = '';
+  for (let ch = startCh; ch <= endCh; ch++) {
+    const chData = interData[String(ch)];
+    if (!chData) continue;
+    const vStart = (ch === startCh) ? parsed.v    : 1;
+    const vEnd   = (ch === endCh)   ? parsed.endV : 999;
+
+    for (var v = vStart; v <= vEnd; v++) {
+      const tokens = chData[String(v)];
+      if (!tokens || !tokens.length) continue;
+
+      html += '<div class="sw-verse-row">';
+      html += '<span class="sw-verse-num">' + ch + ':' + v + '</span>';
+      html += '<span class="sw-tiles-wrap">';
+      tokens.forEach(function (tok) {
+        const sEntry    = strongsDict && tok.s && strongsDict[tok.s];
+        const particle  = particles && tok.s && particles[tok.s];
+        const lemma     = (sEntry && sEntry.lemma)  || '';
+        const gloss     = tok.text || (sEntry && sEntry.gloss) || '';
+        const pClass    = particle ? (' sw-particle--' + particle.function) : '';
+        const pTitle    = particle ? (' — ' + particle.function_label) : '';
+        html += '<span class="sw-ptile' + pClass + '" data-strongs="' + _esc(tok.s || '') + '" tabindex="0" role="button"'
+          + (tok.s ? ' title="' + _esc(tok.s) + ' ' + _esc(lemma) + pTitle + '"' : '') + '>'
+          + (lemma ? '<span class="sw-ptile__lemma">' + _esc(lemma) + '</span>' : '')
+          + '<span class="sw-ptile__eng">' + _esc(gloss) + '</span>'
+          + (tok.s ? '<span class="sw-ptile__s">' + _esc(tok.s) + '</span>' : '')
+          + (particle ? '<span class="sw-ptile__badge">' + _esc(particle.function_label.split(' ')[0].toLowerCase()) + '</span>' : '')
+          + '</span>';
+      });
+      html += '</span></div>';
+    }
+  }
+
+  tilesEl.innerHTML = (legendHtml + html) || '<span class="sw-ptile-loading">No tokens found for this passage.</span>';
+
+  // Wire tile click → open dossier
+  tilesEl.querySelectorAll('.sw-ptile[data-strongs]').forEach(function (tile) {
+    tile.addEventListener('click', function () {
+      const code = tile.dataset.strongs;
+      if (code) {
+        tilesEl.querySelectorAll('.sw-ptile').forEach(function (t) { t.classList.remove('sw-ptile--active'); });
+        tile.classList.add('sw-ptile--active');
+        _openWord(code);
+      }
+    });
+    tile.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tile.click(); }
+    });
+  });
+
+  // Show passage tabs once tiles are rendered
+  if (tabsEl)  tabsEl.hidden  = false;
+  if (tabCont) tabCont.hidden = false;
+
+  // Wire tab buttons
+  if (tabsEl) {
+    tabsEl.querySelectorAll('.sw-tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        tabsEl.querySelectorAll('.sw-tab-btn').forEach(function (b) { b.classList.remove('sw-tab-btn--active'); });
+        btn.classList.add('sw-tab-btn--active');
+        if (tabCont) {
+          const stubs = { literary: 'Literary Structure analysis — coming in SW-D.',
+                          cultural: 'Cultural Context — coming in SW-F.',
+                          intertextual: 'Intertextual connections — coming in SW-K.',
+                          synthesis: 'Passage synthesis — coming in SW-M.' };
+          tabCont.innerHTML = '<p class="sw-tab-stub">' + _esc(stubs[btn.dataset.tab] || '') + '</p>';
+        }
+      });
+    });
+  }
+}
+
+// INTENT: Looks up a Strong's code in any loaded phase cache, then falls back to
+//   loading the full all-greek/all-hebrew index. Opens the existing dossier once data
+//   is available. This is the bridge between passage tile clicks and the translator dossier.
+// CHANGE? If _getEntry() logic changes (e.g., reads from a new source), this function
+//   may already find the entry without the fallback fetch.
+// VERIFY: Click G3056 (λόγος) in a passage tile — dossier should show the full
+//   lexical entry even if only phase1 is loaded (λόγος is a top-100 NT word).
+async function _openWord(code) {
+  // Try cached phases first (fast path)
+  if (_getEntry(code)) {
+    _renderDossier(code);
+    _uiState.activeCode = code;
+    _renderQueueActive();
+    return;
+  }
+  // Load the appropriate full index and retry
+  const fallback = code.startsWith('G') ? 'all-greek' : 'all-hebrew';
+  try {
+    await _loadPhase(fallback);
+  } catch (e) { /* silent */ }
+  if (_getEntry(code)) {
+    _renderDossier(code);
+    _uiState.activeCode = code;
+  } else {
+    // Word not in any source — show minimal entry from Strongs data
+    const lang = code.startsWith('G') ? 'greek' : 'hebrew';
+    const sdict = await loadStrongs(lang).catch(function () { return null; });
+    const sEntry = sdict && sdict[code];
+    if (sEntry) {
+      document.getElementById('ws-dossier').innerHTML =
+        '<div class="ws-dossier"><div class="ws-dossier-head">'
+        + '<div class="ws-dossier-head__top">'
+        + '<span class="ws-dossier__code">' + _esc(code) + '</span>'
+        + '<span class="ws-dossier__lemma">' + _esc(sEntry.lemma || '') + '</span>'
+        + (sEntry.translit ? '<span class="ws-dossier__translit">' + _esc(sEntry.translit) + '</span>' : '')
+        + '</div></div>'
+        + '<div class="ws-section" data-depth-min="1"><div class="ws-section-title">Gloss</div>'
+        + '<p>' + _esc(sEntry.gloss || '') + '</p></div>'
+        + '<div class="ws-section" data-depth-min="1"><div class="ws-section-title">Definition</div>'
+        + '<p>' + _esc(sEntry.def || '') + '</p></div>'
+        + '<p class="ws-placeholder" style="font-size:.8rem;margin-top:1rem">Full dossier not available — word is outside the curated vocabulary sets.</p>'
+        + '</div>';
+    }
+  }
+}
+
 /* ── Init ──────────────────────────────────────────────────── */
 export async function initWorkshopPage() {
   $nav         = document.getElementById('ws-nav');
@@ -1704,6 +2150,48 @@ export async function initWorkshopPage() {
     const file = e.target.files?.[0];
     if (file) _doImport(file);
     e.target.value = '';
+  });
+
+  // INTENT: Initialize depth from localStorage and wire all SW-A controls (passage study,
+  //   translation mode toggle, depth selector) so they are live before any phase data loads.
+  // CHANGE? If SK_DEPTH key changes, update _initDepth and _applyDepth. If new topbar buttons
+  //   are added, wire them here in the same block.
+  // VERIFY: Reload workshop — depth buttons show correct active state. Typing a ref and clicking
+  //   "Study Passage" switches the queue column to passage view; "browse vocabulary →" returns to it.
+  _initDepth();
+
+  // Passage entry — study button and Enter key
+  const $studyBtn  = document.getElementById('sw-study-btn');
+  const $refInput  = document.getElementById('sw-ref-input');
+  const $browseLink = document.getElementById('sw-browse-link');
+  const $transBtn  = document.getElementById('sw-trans-toggle-btn');
+
+  function _doStudy() {
+    const ref = ($refInput.value || '').trim();
+    if (ref) _studyPassage(ref);
+  }
+  $studyBtn.addEventListener('click', _doStudy);
+  $refInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') _doStudy();
+  });
+
+  $browseLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    _switchToBrowseMode();
+  });
+
+  // Translation mode toggle
+  $transBtn.addEventListener('click', function() {
+    _translationMode = !_translationMode;
+    _applyTransMode();
+  });
+  _applyTransMode();
+
+  // Depth toggle — delegated from the dossier column since depth buttons are rendered
+  // inside _renderDossier HTML and may not exist at init time
+  document.getElementById('ws-dossier').addEventListener('click', function(e) {
+    const btn = e.target.closest('[data-depth]');
+    if (btn) _applyDepth(parseInt(btn.dataset.depth, 10));
   });
 
   _updateTopbarStats();

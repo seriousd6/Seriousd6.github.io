@@ -200,6 +200,7 @@
       <form class="cmp-lookup" id="cmp-form">
         <input class="cmp-lookup__input" id="cmp-ref-input" type="text"
           placeholder="e.g. John 3:16 or Romans 8:28"
+          aria-label="Bible verse reference"
           autocomplete="off" spellcheck="false" />
         <button class="cmp-lookup__btn" type="submit">Compare</button>
       </form>
@@ -441,6 +442,13 @@
           }
         }
       }).catch(function (err) {
+        // INTENT: Show a user-visible message when init data fails — without this,
+        //   bookMeta stays null and all searches silently bail at the if(!bookMeta) guard.
+        // CHANGE? If #cmp-hint is renamed, update selector here and in the form-submit handler.
+        // VERIFY: Throttle to Offline in DevTools before page load → hint reads
+        //   "Failed to load version data. Please refresh to try again."
+        document.getElementById('cmp-hint').textContent =
+          'Failed to load version data. Please refresh to try again.';
         console.error('[compare] init failed:', err);
       });
 

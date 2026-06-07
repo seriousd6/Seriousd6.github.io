@@ -57,6 +57,14 @@ var _PARALLEL_TYPE_META = {
 // that changes made in the modal are reflected here without a page reload.
 
 // ── initVerseStudyPage ────────────────────────────────────────────────────────
+// INTENT: Entry point called by app.js on page load. Parses the ?ref= URL param to
+//   load the focal verse, seeds localStorage state for version preference, context-view
+//   setting, and memory mode from URL params so deep-links can set initial UI state.
+// CHANGE? If localStorage keys change, update all three: bsw_version (line 65),
+//   bsw_dissect_ctx (lines 93/110), bsw_memory (lines 121/130/140). If app.js call
+//   site changes, also update modal.js line 426 which links to verse-study/?ref=.
+// VERIFY: Load verse-study/?ref=John+3:16 — focal verse text renders; version selector
+//   shows the saved version; ?v=KJV in URL overrides localStorage and selects KJV.
 export function initVerseStudyPage() {
   var params = new URLSearchParams(window.location.search);
   var refStr = params.get('ref') || '';
@@ -81,6 +89,7 @@ export function initVerseStudyPage() {
 
   var headerRef = document.getElementById('vs-header-ref');
   if (headerRef) headerRef.textContent = parsed.display;
+  document.title = parsed.display + ' — Verse Study — Bible Study';
 
   var backLink = document.getElementById('vs-back-link');
   if (backLink) {
@@ -184,6 +193,15 @@ export function initVerseStudyPage() {
 }
 
 // ── loadVerseStudyVerse ───────────────────────────────────────────────────────
+// INTENT: Primary verse-load pipeline — fetches the book JSON, sets focal verse text,
+//   renders prev/next context verses with chapter-crossing logic (ch-1 last verse /
+//   ch+1 first verse when at boundaries), and renders the morphological token row.
+//   Called by initVerseStudyPage and by app.js after a version change in the modal.
+// CHANGE? If vsRenderTokenRow signature changes (verse-study.js line ~290), update
+//   the call at the end of this function. If loadBook cache strategy changes (core.js),
+//   verify chapter-crossing prev/next still works across cold/warm cache loads.
+// VERIFY: Load John 1:1 — prev context is absent (start of book). Load John 1:51 →
+//   next shows John 2:1 (chapter crossing). Token row shows morphological tiles.
 export function loadVerseStudyVerse(parsed, versionId) {
   var focalTextEl = document.getElementById('vs-focal-text');
   var focalNumEl  = document.getElementById('vs-focal-num');
@@ -218,14 +236,30 @@ export function loadVerseStudyVerse(parsed, versionId) {
       }
     }
 
-    // VS-A: prev/next verse nav links
+    // VS-A / NAV-4: prev/next verse nav with cross-chapter fallback
+    // INTENT: At verse 1 or last verse, show a chapter-jump link (Ch N-1 or Ch N+1:1)
+    //   instead of hiding the arrow; prevents study dead-ends at chapter boundaries.
+    // CHANGE? bk.chapters (from metaBooks) guards against linking past the book end.
+    //   If VERSE_STUDY_URL changes in core.js, hrefs here update automatically.
+    // VERIFY: Navigate to last verse of John 3 → next arrow shows 'Ch 4 ›' linking
+    //   to John 4:1. Navigate to John 1:1 → prev arrow is hidden (book start).
     var prevNavLink = document.getElementById('vs-prev-link');
     var nextNavLink = document.getElementById('vs-next-link');
+    var bk = metaBooks && metaBooks.find(function (b) { return b.id === parsed.bookId; });
     if (prevNavLink) {
       var pv = parsed.v - 1;
       if (pv >= 1 && chData[String(pv)]) {
         prevNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + pv);
         prevNavLink.title = parsed.bookName + ' ' + parsed.ch + ':' + pv;
+        prevNavLink.textContent = '‹';
+        prevNavLink.setAttribute('aria-label', 'Previous verse');
+        prevNavLink.removeAttribute('hidden');
+      } else if (parsed.ch > 1) {
+        var prevCh = parsed.ch - 1;
+        prevNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + prevCh + ':1');
+        prevNavLink.title = parsed.bookName + ' ' + prevCh + ':1';
+        prevNavLink.textContent = '← Ch ' + prevCh;
+        prevNavLink.setAttribute('aria-label', 'Go to chapter ' + prevCh);
         prevNavLink.removeAttribute('hidden');
       } else {
         prevNavLink.setAttribute('hidden', '');
@@ -236,6 +270,15 @@ export function loadVerseStudyVerse(parsed, versionId) {
       if (chData[String(nv)]) {
         nextNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + nv);
         nextNavLink.title = parsed.bookName + ' ' + parsed.ch + ':' + nv;
+        nextNavLink.textContent = '›';
+        nextNavLink.setAttribute('aria-label', 'Next verse');
+        nextNavLink.removeAttribute('hidden');
+      } else if (bk && parsed.ch < bk.chapters) {
+        var nextCh = parsed.ch + 1;
+        nextNavLink.href = VERSE_STUDY_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + nextCh + ':1');
+        nextNavLink.title = parsed.bookName + ' ' + nextCh + ':1';
+        nextNavLink.textContent = 'Ch ' + nextCh + ' »';
+        nextNavLink.setAttribute('aria-label', 'Go to chapter ' + nextCh);
         nextNavLink.removeAttribute('hidden');
       } else {
         nextNavLink.setAttribute('hidden', '');
@@ -885,6 +928,15 @@ function loadVerseSections(parsed) {
     }).catch(function () { dictSec.el.remove(); vsRebuildNav(); });
   }
 
+  // INTENT: window.BibleUI indirection — ol-companion.js registers initOLSection on
+  //   window.BibleUI in app.js rather than being imported directly here. This avoids a
+  //   circular import: ol-companion.js imports from core.js, and verse-study.js also
+  //   imports from core.js; a direct import of ol-companion.js here would create an
+  //   import cycle. The window.BibleUI global is the deliberate decoupling point.
+  // CHANGE? If the coupling strategy changes (e.g., to a shared event bus), update
+  //   app.js (registration of window.BibleUI.initOLSection) and ol-companion.js export.
+  // VERIFY: Load verse-study/?ref=Romans+8:1 — OL Companion section renders below the
+  //   other sections with tier comparison rows. No console errors about circular imports.
   // Original Language Companion — MKT token analysis, tier comparison, dispute flags
   if (parsed.v && window.BibleUI && typeof window.BibleUI.initOLSection === 'function') {
     window.BibleUI.initOLSection(parsed, vsCreateSection, vsRebuildNav)

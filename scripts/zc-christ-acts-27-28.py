@@ -1,30 +1,28 @@
 """
-mkt-christ layer — Acts all 28 chapters
+mkt-christ layer — Acts chapters 27–28
 Output: data/commentary/mkt-christ/acts.json
-
-Acts presents Christ as the risen Lord who continues to act through the Spirit
-and the church. The Christological trajectory in Acts is consistently resurrection-
-centered: Jesus is the fulfillment of every OT expectation precisely because
-he died and rose. The five directness levels apply to each pericope.
+Run: python3 scripts/zc-christ-acts-27-28.py
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     if p.exists():
         return json.loads(p.read_text())
     return {}
 
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
 def merge_comm(existing, new_data):
+    # INTENT: Merge new verse entries without overwriting already-present keys — safe to re-run.
+    # CHANGE? If commentary JSON structure changes from {ch:{v:html}}, update this traversal.
+    # VERIFY: Re-running the script should produce identical output.
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -32,61 +30,90 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRIST = {
-  "1": {
-    "9": "<p>A direct revelation: the ascension is not the departure of Christ but the enthronement of the crucified-and-risen Lord. When the cloud receives Jesus (<em>nephelē hypelaben auton</em>), Luke invokes the Danielic cloud-of-divine-presence (Dan 7:13-14) and the Sinai theophany cloud. The Christological point: Christ is not leaving the world but entering the place of cosmic authority at the Father's right hand, from which he will send the Spirit (2:33) and to which believers' prayers are addressed. The disciples' upward gaze is redirected by the angels — not to the sky but to the world they are sent to fill with witnesses.</p>",
-
-    "11": "<p>A direct revelation: 'This Jesus, who was taken up from you into heaven, will come in the same way as you saw him go into heaven.' The parousia-promise anchors Christian hope in the personal return of the same embodied, risen Lord who ascended — not a spiritual presence-return (already given at Pentecost) but the eschatological appearing of the glorified Christ. The continuity of identity ('this Jesus') is christologically critical: the one who comes is the one who died, who rose, who ascended — resurrection-continuity spans from the tomb to the parousia.</p>"
-  },
-  "2": {
-    "36": "<p>A direct revelation: 'God has made him both Lord and Christ, this Jesus whom you crucified.' This is the climax of Peter's Pentecost sermon and one of the densest Christological sentences in the NT. <em>Kurios</em> (Lord) carries the full weight of the LXX divine name (YHWH); <em>Christos</em> (Christ/Messiah) the royal-covenantal designation. The resurrection-exaltation is the moment of enthronement — not that Jesus became Lord only then (his pre-existence is assumed throughout Acts' theology), but that the cosmic lordship is now publicly declared and the messianic mission fulfilled. The audience ('whom you crucified') makes the declaration forensically stunning: the crucified one is the enthroned Lord.</p>"
-  },
-  "3": {
-    "15": "<p>A direct revelation: 'You killed the Author of life, whom God raised from the dead.' <em>Archēgon tēs zōēs</em> (pioneer/author of life) is one of Acts' most original Christological titles. The paradox is maximal: the one who is the source and pioneer of life was put to death. The resurrection is not merely resuscitation but the vindication of Christ's identity — if God raised him, God endorses his claims. Peter's speech invites repentance not as moral self-improvement but as a re-orientation toward the one they killed, now established as the sole mediator of life.</p>"
-  },
-  "4": {
-    "12": "<p>A direct revelation: 'There is salvation in no one else, for there is no other name under heaven given among people by which we must be saved.' The exclusivity claim (<em>ouk estin en allō oudeni hē sōtēria</em>) is made before the supreme Jewish court that had condemned Jesus. Peter's Christocentrism is absolute and public: not 'Jesus is one path among many' but the singular name by which salvation comes. The <em>dei</em> (must) is divine necessity — salvation through this name is not a human option but a divine appointment. The Christological uniqueness of Acts 4:12 is the evangelical confession that animates the entire mission of the book.</p>"
-  },
-  "7": {
-    "56": "<p>A direct revelation: 'Behold, I see the heavens opened, and the Son of Man standing at the right hand of God.' Stephen's vision at the moment of martyrdom is the only post-resurrection appearance of the risen Christ to someone other than Paul in Acts (the Damascus road, 9:4-5). The 'Son of Man' title — Jesus's own self-designation during his ministry (Luke 9:22; 22:69) — is used here by Stephen, the only NT speaker outside the Gospels to use this title of Jesus. The standing Christ (see mkt-original note on <em>hestōta</em>) is the risen Lord actively receiving his first martyr. Christology is here embedded in pneumatology: the Spirit-filled Stephen sees the Christological reality that sustains martyrdom.</p>"
-  },
-  "8": {
-    "35": "<p>A fulfillment: Philip 'beginning from this Scripture proclaimed good news about Jesus' — the Ethiopian's question about Isa 53:7-8 is answered by identifying the silent suffering lamb as Jesus. This is the apostolic hermeneutic in miniature: the Suffering Servant is not Israel in general or Isaiah himself but the specific individual who died silently and was raised ('his life is taken away from the earth' → resurrection reversal). The Christological reading of Isa 53 as a resurrection narrative (the servant suffers, is cut off, but the Lord 'prolongs his days', Isa 53:10 MT) is already present in Jesus's own self-understanding (Luke 22:37) and becomes the template for apostolic preaching throughout Acts.</p>"
-  },
-  "9": {
-    "5": "<p>A direct revelation: 'I am Jesus, whom you are persecuting.' The Damascus road self-disclosure is the risen Christ identifying himself with the community he is building: to persecute the church is to persecute Jesus. The identification is ontological, not merely moral — Christ's body is so united to the community of believers that assault on one is assault on the other. This is the experiential foundation of Paul's later 'body of Christ' ecclesiology (1 Cor 12:12-27; Eph 4:15-16): the risen Lord is not spatially removed from his people but present in them, suffering with them, and encountered through them.</p>"
-  },
-  "10": {
-    "43": "<p>A direct revelation: 'To him all the prophets bear witness that everyone who believes in him receives forgiveness of sins through his name.' Peter's summary of the OT witness to Christ is comprehensive ('all the prophets') and universalizing ('everyone who believes'). The Cornelius episode's Christological climax is precisely this: the same Christ who is the subject of all prophetic testimony is the one through whom Gentiles receive forgiveness. The Spirit's falling on the Gentiles mid-sermon (v. 44) is God's own validation of this Christological universalism — the risen Christ's lordship over all flesh (Joel 2:28) enacted in real time.</p>"
-  },
-  "13": {
-    "30": "<p>A direct revelation: 'But God raised him from the dead; and for many days he appeared to those who had come up with him from Galilee to Jerusalem, who are now his witnesses to the people.' Paul at Pisidian Antioch places the resurrection as the pivotal event that all of Israel's history was pointing toward — the promises to the patriarchs (v. 32), the Davidic covenant (v. 34), and the resurrection prophecies of the Psalms (Ps 2:7; Ps 16:10; Isa 55:3) all converge on this fact. The witnesses from Galilee are the guarantors of historical continuity: the risen one is the same Jesus who walked those roads. Christology is not mythology but testified history.</p>",
-
-    "47": "<p>A fulfillment: Paul cites Isa 49:6 ('I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth') as the scriptural mandate for the Gentile mission. The Servant's commission is now Christ's commission extended through Paul and Barnabas. This is typological fulfillment: the Servant who could not be restricted to Israel's restoration alone (Isa 49:6a) prefigures Christ whose mission overflows every ethnic and geographic boundary. Paul's application of the Servant commission to himself and Barnabas (first person plural) shows that missionaries participate in Christ's Servant identity — they are his instruments in the fulfillment of Isa 49.</p>"
-  },
-  "15": {
-    "14": "<p>A fulfillment: James cites Amos 9:11-12 — 'I will return and rebuild the tent of David that has fallen' — as fulfilled in Christ's resurrection and the formation of the Gentile church. The 'tent of David' in Amos is the Davidic dynasty; its 'rebuilding' in LXX Amos is translated in terms broad enough to include all the Gentiles who bear God's name. James's pesher reading: Christ's resurrection is the rebuilding of the Davidic tent; the Gentile mission is the fulfillment of Amos's promise that all nations will seek the Lord. The Jerusalem Council's doctrinal resolution is grounded not in pragmatics but in Christological exegesis: the Gentile mission is what Scripture said the Messiah would accomplish.</p>"
-  },
-  "17": {
-    "31": "<p>A direct revelation: 'He has fixed a day on which he will judge the world in righteousness by a man whom he has appointed, and of this he has given assurance to all by raising him from the dead.' Paul's Areopagus speech concludes with the risen Christ as the eschatological judge appointed by God. The Christological claim before a philosophical audience that had no framework for bodily resurrection (<em>anastasis</em>, v. 32, provoked mockery) is the irreducible skandalon of the gospel: not a timeless philosophical principle but a specific man, raised from the dead, appointed to judge all. The resurrection is both validation of Jesus's identity and guarantee of universal accountability before him.</p>"
-  },
-  "20": {
-    "28": "<p>A direct revelation: 'Pay careful attention to yourselves and to all the flock, in which the Holy Spirit has made you overseers, to care for the church of God, which he obtained with his own blood.' The theological density of this charge to the Ephesian elders is unparalleled in Acts: (1) the Spirit appoints church leadership; (2) the church belongs to God himself; (3) God purchased this church through blood that is 'his own'. Whether <em>tou haimatos tou idiou</em> is rendered 'his own blood' (ascribing blood to God the Father, implying the Son's blood is God's own) or 'the blood of his own [Son]', the Christological purchase is irreversible and costly beyond measure. The cross is the price God paid for his own community.</p>"
-  },
-  "26": {
-    "23": "<p>A direct revelation: Paul's testimony before Agrippa distills his entire gospel: 'that the Christ must suffer and that, by being the first to rise from the dead, he would proclaim light both to our people and to the Gentiles.' Three elements define this Christological summary: (1) necessity (<em>pathētos</em>, <em>dei</em>) — the Christ was destined to suffer, fulfilling a divine plan woven into Scripture; (2) priority (<em>prōtos ex anastaseōs nekrōn</em>) — Christ's resurrection is the first of the general resurrection, making him the firstfruits (1 Cor 15:20) of the new creation; (3) universality — the resurrection-proclamation of light reaches both Israel and the nations. The entire Pauline mission is Christologically compressed into one sentence.</p>"
+NEW = {
+  "27": {
+    "1": "Paul is handed over to a centurion named Julius for the voyage to Rome — his passage into Roman custody mirrors Jesus being handed over to Roman authorities (Luke 23:1; John 18:28). Both carry out their mission under imperial constraint.",
+    "2": "The party boards an Adramyttian ship, beginning the final sea-journey that will end at Rome — fulfilling the trajectory Jesus set in Acts 1:8, from Jerusalem to the ends of the earth.",
+    "3": "The centurion Julius shows Paul kindness and lets him visit friends at Sidon — a foreshadowing of the centurion at the cross (Luke 23:47) who recognized the truth about Jesus; now one of Rome's soldiers serves Paul's mission.",
+    "4": "The ship sails under the lee of Cyprus because of contrary winds — the journey is difficult from the start, as Paul's passion-pattern narrative has been difficult from Jerusalem onward.",
+    "5": "They cross the open sea off Cilicia and Pamphylia — passing the region of Paul's first missionary journey, moving now toward the imperial capital where the testimony must reach.",
+    "6": "Julius transfers the prisoners to an Alexandrian grain ship — the largest cargo vessels of antiquity, carrying the bread that sustained the empire; Paul will soon preside over a different bread-breaking aboard this very ship.",
+    "7": "Sailing slowly and arriving off Cnidus with difficulty — Luke lingers on the resistance to heighten the contrast with the ultimate deliverance that Paul's word promises.",
+    "8": "They reach Fair Havens near the city of Lasea — a name Luke uses with quiet irony; the haven will not prove fair enough, but the God who guides Paul's mission provides a haven that is truly fair at journey's end.",
+    "9": "The Fast (Yom Kippur, autumn) has passed and sailing is dangerous — Paul warns that disaster lies ahead. The Day of Atonement is the day Israel's high priest intercedes before God for the people; Paul, apostle of the true High Priest, now intercedes for the ship's company.",
+    "10": "Paul warns that the voyage will bring disaster and great loss — a prophetic word from one who carries the Spirit, overruled as prophetic warnings were overruled at every stage of Jesus's passion.",
+    "11": "The centurion listens to the pilot and shipowner rather than to Paul — those with worldly expertise are preferred over the apostle, just as the crowd chose Barabbas over Jesus (Luke 23:18).",
+    "12": "The majority vote to sail on — a democratic rejection of the prophetic voice, recalling the crowd's cry at the crucifixion. Decisions by human consensus override the word of God.",
+    "13": "When a gentle south wind blows they suppose their purpose is achieved — the calm before the storm mirrors every moment of false security before crisis in the passion narrative.",
+    "14": "The Euraquilo, a violent northeastern wind, strikes the ship — the great storm bursts in unexpectedly, as violence descended on Jesus in Gethsemane after apparent calm.",
+    "15": "The ship is caught and cannot face the wind, so they give way and let it drive — surrender to forces beyond human control, as Jesus surrendered to arrest and prayed that the Father's will be done (Luke 22:42).",
+    "16": "Under the shelter of Cauda they secured the lifeboat with difficulty — barely surviving each moment; the preservation of the boat mirrors God's preservation of the remnant through the storm.",
+    "17": "They use cables to undergird the ship and lower the sea anchor, fearing the Syrtis shoals — human ingenuity in the face of catastrophe; but the ultimate anchor is the word Paul will receive from God (vv. 23-25).",
+    "18": "The storm is so violent that they throw the cargo overboard — loss of everything material precedes the total dependence that leads to salvation; earthly provision is cast away so lives might be saved.",
+    "19": "On the third day they throw the ship's tackle overboard with their own hands — Luke marks the third day: throughout Acts and the Gospel, the third day is the day of resurrection and new life. What is lost in three days of storm will be restored.",
+    "20": "When neither sun nor stars appear for many days and the storm continues, all hope of being saved is abandoned — the nadir, as at the crucifixion when hope was extinguished and the disciples scattered (Mark 14:50).",
+    "21": "Paul stands up and says they should have listened to him — not to condemn but to introduce the word of assurance that follows; as Jesus spoke authoritatively even in a storm-tossed boat (Mark 4:39-41).",
+    "22": "Paul urges them to take heart — tharseite, the same word Jesus used when walking on water (Matt 14:27) and in the upper room (John 16:33: take heart, I have overcome the world). Not one of them will be lost.",
+    "23": "An angel of the God Paul belongs to and serves has stood beside him — as an angel appeared to Jesus in Gethsemane to strengthen him (Luke 22:43); the same divine provision attends the apostle in his moment of extremity.",
+    "24": "The angel declares that Paul must stand before Caesar and that God has granted him all who sail with him — Paul's intercessory presence saves the entire company. As the Father gave disciples to the Son and the Son kept all of them safe (John 17:12), so Paul's apostolic commission encompasses the lives of all entrusted to him.",
+    "25": "Paul urges them to take heart again, trusting God that it will happen exactly as he was told — faith in the divine promise against all visible evidence, as Abraham believed God (Rom 4:18-21) and Jesus entrusted himself to the Father (1 Pet 2:23).",
+    "26": "Paul says they will run aground on some island — his prophecy is detailed and exact; the word of God given through Paul is more reliable than any instrument of navigation.",
+    "27": "On the fourteenth night the sailors detect land — the fourteenth night echoes the Passover night (Exodus 12:6, the 14th of Nisan); deliverance is imminent on the night when God historically acts to save his people.",
+    "28": "They sound the depth and find twenty fathoms, then fifteen — the sea grows shallower; the crisis approaches its resolution, as the passion narrative approaches the dawn of resurrection.",
+    "29": "Fearing they might run aground on the rocks they let out four anchors and pray for day to come — even pagan sailors pray for dawn; the resurrection dawn that Paul has proclaimed is the only anchor that truly holds.",
+    "30": "The sailors attempt to escape in the lifeboat under pretense of dropping anchors — human schemes for self-preservation at the expense of others; the disciples too fled to save themselves (Mark 14:50).",
+    "31": "Paul tells the centurion that unless these men stay in the ship no one can be saved — Paul is the mediating voice of salvation; remaining in the vessel together is the condition of deliverance, as remaining in Christ is the condition of life (John 15:4).",
+    "32": "The soldiers cut away the lifeboat — a radical act of trust: they destroy the apparent means of escape, throwing themselves entirely on the word Paul has given. Faith required abandoning the fallback.",
+    "33": "Just before dawn Paul urges all 276 aboard to eat — the pre-dawn meal before crossing to safety echoes the Passover meal before the Exodus; Paul provides strength for the final crossing.",
+    "34": "Paul assures them that not a hair of anyone's head will perish — the exact language Jesus used in Luke 21:18, now fulfilled through Paul's apostolic word.",
+    "35": "Paul takes bread, gives thanks to God before all, breaks it, and begins to eat — the eucharistic formula: taking, giving thanks (eucharistesas), breaking (klasas); on the night of greatest danger, Paul presides at a table that echoes the Last Supper (Luke 22:19; 1 Cor 11:23-24).",
+    "36": "They all take heart and eat — the meal produces courage and renewed life, as the resurrection appearance meals restored the disciples. The bread of thanksgiving precedes the crossing to safety.",
+    "37": "There are 276 persons on the ship — Luke records the exact number; every one of them must be accounted for, as the shepherd counts each sheep (Luke 15:4) and the Father does not lose any given to the Son (John 6:39).",
+    "38": "They lighten the ship by throwing the wheat into the sea — the grain cargo that fed the empire is sacrificed so that lives might be saved. The paradox of loss for gain echoes the cross.",
+    "39": "Day comes and they make for the beach — resurrection dawn; the voyage toward death has turned toward life.",
+    "40": "They cast off the anchors, loosen the rudder ropes, hoist the foresail, and head for the beach — the ship moves toward the shore of deliverance under the providential guidance of the word Paul has proclaimed.",
+    "41": "The ship strikes a reef; the bow lodges fast while the stern breaks apart under the waves — the vessel is broken so that its passengers might reach land, as the body of Christ was broken that many might live.",
+    "42": "The soldiers plan to kill the prisoners to prevent escape — the threat of death at the moment of deliverance mirrors every violent attempt to thwart God's saving purpose, from the slaughter of the innocents (Matt 2:16) to the orders to kill Jesus (Luke 22:2).",
+    "43": "The centurion, wishing to save Paul, prevents the plan and orders those who can swim to jump overboard first — Julius acts to protect Paul as the centurion at the cross bore witness to Jesus (Luke 23:47); Rome's agents repeatedly serve God's plan despite their ignorance.",
+    "44": "All 276 escape safely to land — Paul's prophecy is fulfilled exactly: not one hair perished. The complete deliverance of all who sail with the apostle is the sign of resurrection power: death cannot hold those entrusted to God's word.",
   },
   "28": {
-    "31": "<p>A direct revelation: Acts closes with Paul 'proclaiming the kingdom of God and teaching about the Lord Jesus Christ with all boldness and without hindrance.' The final phrase — <em>akōlytōs</em>, unhindered — is the book's last word and its thesis. The risen Lord whose story opened Acts (1:1-11) has accomplished through broken, imprisoned, shipwrecked witnesses what he promised: testimony from Jerusalem to the heart of the empire. The kingdom of God and the Lord Jesus Christ are the twin proclamations that summarize the entire Lukan-Acts narrative: God's reign arrives in the person and work of Jesus, vindicated by resurrection, extended by the Spirit, and declared to all nations without hindrance.</p>"
+    "1": "Once safe on land they learn the island is Malta — after storm and shipwreck comes unexpected refuge; the pattern of death-and-resurrection lands the company in a new place of hospitality and mission.",
+    "2": "The native people show unusual kindness, building a fire because of the rain and cold — the welcome Paul receives from pagans anticipates the welcome the Gentile church extends to the gospel; unexpected grace from unexpected people.",
+    "3": "Paul gathers sticks and a viper fastens on his hand from the heat — the encounter with the serpent echoes the primeval enmity of Genesis 3:15, where the seed of the woman would be struck by the serpent; Paul, in the apostolic line of that Seed, is struck.",
+    "4": "The islanders conclude Paul must be a murderer whom justice does not allow to live — the same logic applied to Jesus: the crowd believed one crucified under Roman authority must be guilty; suffering is read as divine punishment.",
+    "5": "Paul shakes the snake into the fire and suffers no harm — the seed of the woman crushes the serpent's head (Gen 3:15); Jesus declared that his disciples would have authority to trample serpents (Luke 10:19), and Paul enacts that promise.",
+    "6": "The islanders wait for Paul to swell up or die, but when nothing happens they change their minds and call him a god — the reversal of judgment: one believed cursed is now believed divine. The resurrection of Jesus effected the same reversal: crucified as a criminal, declared Son of God by the Spirit of holiness (Rom 1:4).",
+    "7": "Publius, the leading man of the island, receives them for three days with generous hospitality — three days of welcome after shipwreck; the resonance of three days throughout Luke-Acts always points toward the resurrection pattern.",
+    "8": "Paul prays and lays his hands on Publius's father, who is healed of fever and dysentery — the gesture and sequence echo Jesus healing Peter's mother-in-law (Mark 1:30-31), who lay ill with fever and was healed by his touch. Paul's healing ministry continues Jesus's own.",
+    "9": "When this happens, the rest of the sick on the island come and are healed — as Jesus's healings drew crowds from the whole region (Mark 1:32-34), Paul's single act of healing opens the entire island to the restoration that the kingdom brings.",
+    "10": "They honor Paul's company with many gifts and provisions for the voyage — Malta is a type of the new creation: those who encounter the apostolic word are healed, restored, and equipped. The mission is self-sustaining because God provides through those who receive it.",
+    "11": "After three months they sail on an Alexandrian ship with the Twin Brothers as figurehead — Castor and Pollux, patron deities of sailors, adorn the ship; Paul rides to Rome under the ironic banner of pagan savior-figures while the apostle of the true Savior carries the message of the one resurrection.",
+    "12": "They put in at Syracuse and stay three days — three days again; the resurrection cadence marks each stopping point on the journey to Rome.",
+    "13": "They reach Rhegium and Puteoli — the final Italian ports before Rome; the mission is steps away from the heart of the empire.",
+    "14": "At Puteoli they find brothers who invite them to stay seven days — a community of resurrection faith already exists in the shadow of Rome. The mission has preceded the apostle.",
+    "15": "Brothers from Rome travel to the Forum of Appius and Three Taverns to meet Paul; on seeing them Paul thanks God and takes heart — the verb used for courage (etharsen) is the same root as tharseite, the word Jesus spoke to his disciples (Matt 14:27; John 16:33). The community of the resurrection gives the apostle what the risen Christ gave the disciples: courage to continue.",
+    "16": "In Rome Paul is allowed to live by himself with a soldier guarding him — Paul is under guard but not imprisoned; the chain is real but the word is unbound. As the word of God cannot be chained (2 Tim 2:9), so Paul's proclamation continues unimpeded.",
+    "17": "Three days after arriving Paul calls together the local Jewish leaders — Paul's first act in Rome comes on the third day after arrival, as the most significant acts of God in Luke-Acts happen on the third day. He presents himself as the faithful Jew who has done nothing against the law or customs.",
+    "18": "The Roman authorities examined him and wanted to release him, finding no ground for capital punishment — identical to Pilate's repeated verdict of no guilt (Luke 23:4, 14, 22); both Jesus and Paul are adjudicated innocent by Rome and yet remain in Roman custody.",
+    "19": "Paul appealed to Caesar not because he had charges against his own nation — Paul distances himself from political accusation, as Jesus refused the title of revolutionary king (John 18:36); both bear witness to a kingdom not of this world.",
+    "20": "Paul is bound with this chain for the sake of the hope of Israel — the Messianic hope, the resurrection from the dead, the fulfillment of every promise God made to Israel through the prophets. Paul is in chains because he proclaims the risen Jesus as the fulfillment of Israel's hope.",
+    "21": "The Jewish leaders say they have received no letters about Paul from Judea — the accusers have not followed through; as those who condemned Jesus could not prevent the resurrection, those who sought Paul's death cannot reach him in Rome.",
+    "22": "The leaders want to hear Paul about the sect that is spoken against everywhere — Christianity divides opinion wherever it goes; the same was said of Jesus (Luke 2:34: destined for the falling and rising of many, a sign that will be spoken against).",
+    "23": "From morning until evening Paul explains and testifies about the kingdom of God, persuading them about Jesus from both the Law of Moses and the Prophets — this is the hermeneutic of the risen Jesus himself (Luke 24:27, 44-45): all Scripture rightly read testifies to him. Paul does in Rome what Jesus did on the road to Emmaus.",
+    "24": "Some are convinced by what Paul says, while others refuse to believe — the division of response mirrors every encounter with Jesus throughout Luke-Acts; the gospel is the stone over which some stumble and on which others are built (Luke 20:17-18; 1 Pet 2:7-8).",
+    "25": "They disagree and leave after Paul makes one final statement — the final statement is the hinge of the entire Lukan narrative: Paul quotes Isaiah 6:9-10, the same oracle Jesus quoted when explaining why he spoke in parables (Matt 13:14-15; Mark 4:12; Luke 8:10). The frame opens and closes with the same scripture.",
+    "26": "The Isaiah citation: go to this people and say, you will indeed hear but never understand, you will indeed see but never perceive — this oracle was fulfilled in Israel's response to Jesus's preaching; Paul now applies it to its second fulfillment in Rome. The pattern of Israel's rejection runs from Isaiah through Jesus to Paul.",
+    "27": "The heart of this people has grown dull — John 12:40 cites this same Isaiah text to explain why Israel did not believe in Jesus despite his signs; Paul cites it to explain why the Roman Jewish community divides over the resurrection. The blindness is the same; the light being rejected is the same.",
+    "28": "Paul declares that this salvation of God has been sent to the Gentiles and they will listen — the fulfillment of Isaiah 49:6, which the angel declared over the infant Jesus (Luke 2:32: a light for revelation to the Gentiles) and which Paul and Barnabas claimed as their commission (Acts 13:47). The Lukan arc closes: what was promised over the cradle is proclaimed in the capital of the Gentile world.",
+    "29": "The Jews depart, arguing vigorously among themselves — the word of God continues to divide, as Jesus said he came not to bring peace but a sword (Matt 10:34) and as Simeon prophesied that the child would cause the rising and falling of many (Luke 2:34).",
+    "30": "Paul lives two whole years in his own rented dwelling and welcomes all who come to him — the open house in the heart of Rome is the fulfillment of Acts 1:8: Jerusalem, Judea, Samaria, and now the uttermost part of the earth. The mission is established at the center of the world.",
   }
 }
 
-def main():
-    existing = load_comm('mkt-christ', 'acts')
-    merge_comm(existing, CHRIST)
-    save_comm('mkt-christ', 'acts', existing)
-    total = sum(len(v) for v in existing.values())
-    print(f'Acts mkt-christ: {len(existing)} chapters, {total} verses.')
-
 if __name__ == '__main__':
-    main()
+    existing = load_comm('mkt-christ', 'acts')
+    merge_comm(existing, NEW)
+    save_comm('mkt-christ', 'acts', existing)
+    for ch in ['27', '28']:
+        print(f'  ch {ch}: {len(existing.get(ch, {}))} verses')

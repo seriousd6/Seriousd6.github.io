@@ -1,30 +1,28 @@
 """
-mkt-christ layer — 1 Corinthians all 16 chapters
+mkt-christ layer — 1 Corinthians chapters 15–16
 Output: data/commentary/mkt-christ/1corinthians.json
-
-1 Corinthians presents Christ as crucified wisdom (ch1-2),
-the foundation of the church (ch3), the Passover lamb (ch5),
-the spiritual rock (ch10), the head of the eucharistic body (ch11),
-and the firstfruits of the resurrection (ch15).
+Run: python3 scripts/zc-christ-1corinthians-15-16.py
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     if p.exists():
         return json.loads(p.read_text())
     return {}
 
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
 def merge_comm(existing, new_data):
+    # INTENT: Merge new verse entries without overwriting already-present keys — safe to re-run.
+    # CHANGE? If commentary JSON structure changes from {ch:{v:html}}, update this traversal.
+    # VERIFY: Re-running the script should produce identical output.
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -32,36 +30,95 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'The word of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God.' Paul's theologia crucis (theology of the cross) is the irreducible Christological claim: God's power is revealed not in imperial might or philosophical sophistry but in the crucified Christ. The cross does not merely illustrate a timeless spiritual principle — it is the specific historical event in which God's wisdom and power are concentrated and disclosed. Every Corinthian pretension to superior wisdom is measured against this standard: does it stand or fall before the cross?</p>",
-
-    "30": "<p>A direct revelation: 'He is the source of your life in Christ Jesus, whom God made our wisdom, righteousness, sanctification, and redemption.' Christ as the personified Wisdom of God (cf. Prov 8:22-31; Sir 24; Wis 7:22-8:1) answers Corinthian competition over human wisdom with a Christological absorbing of all wisdom into one person. The four nouns (wisdom, righteousness, sanctification, redemption) are not merely metaphors but ontological claims: in Christ, believers receive these realities as gifts, not achievements. This is the Christological inversion of the Torah: where Torah promised blessing through obedience, Christ provides the reality the Torah pointed toward.</p>"
-  },
-  "5": {
-    "7": "<p>A fulfillment: 'Christ our Passover lamb has been sacrificed.' <em>Pascha hemon etythē Christos</em> — Paul's most explicit identification of Christ with the Passover sacrifice. The Passover lamb (Exod 12) was killed at the appointed time, its blood placed on doorposts, its eating a communal participation in deliverance. Paul applies all three registers to Christ: appointed time (the cross at Passover), blood as protection, and communal participation (the Lord's Supper as new Passover meal). The command 'let us celebrate the festival' (v. 8) invites believers into ongoing Christological Passover-living: sincerity and truth as the unleavened bread that accompanies the feast.</p>"
-  },
-  "10": {
-    "4": "<p>A type: 'They drank from the spiritual rock that followed them, and the rock was Christ.' Paul applies a midrashic tradition (the rock of Exod 17:6 and Num 20:11 that followed Israel in the wilderness — attested in various Second Temple sources) and identifies it typologically with Christ. The wilderness generation had Christological benefits before the incarnation: they ate the spiritual food (manna) and drank the spiritual drink (water from the rock) that pointed forward to and derived its sustaining power from Christ. Christ was the substance that every wilderness provision shadowed.</p>"
-  },
-  "11": {
-    "26": "<p>A direct revelation: 'For as often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes.' The Eucharist is not merely commemorative but kerygmatic — every celebration is a proclamation (<em>kataggellō</em>) of the Lord's death. This death-proclamation has an eschatological horizon: 'until he comes' (<em>achris hou elthe</em>). The Lord's Supper situates the community between the cross and the parousia, making every meal a re-entry into the narrative of Christ's saving death and an anticipation of its completion at the return. Christology is embedded in liturgical practice.</p>"
-  },
+NEW = {
   "15": {
-    "20": "<p>A direct revelation: 'But in fact Christ has been raised from the dead, the firstfruits of those who have fallen asleep.' The resurrection of Christ is the pivotal fact on which Paul's entire argument turns — not a theological principle but a historical event (<em>Christos egegertai</em>: he has been raised, perfect tense, with present ongoing state). The firstfruits designation makes the resurrection of believers not an optional addendum but the structurally necessary completion of Christ's resurrection: God's harvest of humanity is underway, Christ being the guarantee of the rest. The resurrection hope is not escape from creation but transformation into a new, glorified mode of embodied existence.</p>",
-
-    "45": "<p>A direct revelation: 'The last Adam became a life-giving spirit.' The Adam-Christ typology here reaches its Christological climax. Adam was the representative head who brought death by disobedience into the created order; Christ is the new representative head who brings life by obedience (and resurrection). The <em>eschatos Adam</em> (last Adam) terminology is unique to Paul: Christ is not merely another Adam in a sequence but the final, definitive human through whom the Adamic story reaches its appointed end. As the life-giving spirit (<em>pneuma zoopoioun</em>), the risen Christ is the source of the Spirit that will transform resurrection-bodies at the last day.</p>",
-
-    "57": "<p>A direct revelation: 'Thanks be to God who gives us the victory through our Lord Jesus Christ.' The doxology concludes the resurrection argument: the victory over death, sin, and law (v. 56) is not achieved by believers but given (<em>didonti</em>) by God. The mode of giving is 'through our Lord Jesus Christ' — his resurrection is the mediating event through which God's victory becomes the believer's possession. The personal pronoun 'our' Lord Jesus Christ makes the cosmic Christological triumph intimately personal: this victory is given to those who belong to him.</p>"
+    "1": "Paul declares the gospel (euangelion) he proclaimed is the same gospel the Corinthians received, in which they stand, and through which they are being saved — three stages that describe the gospel's continuing work. The resurrection of Christ is not a detachable appendix to the gospel but its heart.",
+    "2": "Unless you believed in vain — eikē (in vain, without effect) — the conditional tests whether the Corinthians' faith has genuine content. Resurrection-denying faith is not a lesser form of Christianity but no Christianity at all; to deny Christ's resurrection is to believe in a Christ who is still dead.",
+    "3": "Paul hands on as of first importance (en prōtois) what he received — the paradosis (tradition) formula used in 11:23 for the Supper institution; the same authority governs both. Christ died for our sins — the substitutionary logic: his death was for (hyper) the sins of others, not his own.",
+    "4": "He was buried — the burial confirms the reality of death; the resurrection on the third day according to the scriptures fulfills the Jonah pattern (Matt 12:40), Hosea 6:2 (after two days he will revive us; on the third day he will raise us up), and Psalm 16:10 (you will not abandon my soul to Sheol).",
+    "5": "He appeared to Cephas, then to the Twelve — the primary eyewitness testimony. Peter's personal encounter with the risen Christ transformed the one who denied him three times into the one who preached him to thousands at Pentecost. The appearance to the Twelve constituted them as the reconstituted Israel of the new age.",
+    "6": "He appeared to more than five hundred brothers at one time — the mass appearance whose witnesses are still mostly living when Paul writes. The resurrection is not a private mystical experience but a public, verifiable event with hundreds of living witnesses.",
+    "7": "He appeared to James — the Lord's own brother, who was not a disciple during Jesus's ministry (John 7:5: not even his brothers believed in him). The appearance to James is the catalyst for his conversion and subsequent leadership of the Jerusalem church (Gal 1:19; Acts 15:13). The resurrection overcame the resistance of Jesus's own household.",
+    "8": "Last of all, as to one untimely born, he appeared also to me — Paul's encounter on the Damascus road (Acts 9:3-9) is the last in the series of post-resurrection appearances. The risen Christ commissioned Paul as he commissioned the Twelve, claiming Paul as his apostle despite Paul's prior persecution of the church.",
+    "9": "I am the least of the apostles, not worthy to be called an apostle, because I persecuted the church of God — the cross of Christ transforms the persecutor into the preacher. The grace that reached Paul on the Damascus road is the same grace that the Corinthians received. The apostle's unworthiness magnifies the grace.",
+    "10": "But by the grace of God I am what I am — the resurrection-encounter with Christ did not merely give Paul information; it constituted his identity. The grace (charis) that defines him is the grace of the risen Christ who appeared to him and sent him.",
+    "11": "Whether then it was I or they, so we preach and so you believed — the unity of the apostolic witness across all the resurrection appearances guarantees the content of the gospel. The risen Christ is the same Christ regardless of which apostle encountered him.",
+    "12": "Now if Christ is proclaimed as raised from the dead, how can some among you say there is no resurrection of the dead? — the logical incoherence Paul exposes: to deny resurrection in general is to deny Christ's resurrection in particular, which is to deny the entire foundation of the gospel they received.",
+    "13": "If there is no resurrection of the dead, then Christ has not been raised — the argument runs backward from the general to the particular. Christ's resurrection is not an exception to a general rule about the dead; it is the first instance of the general resurrection that will include all who are in him.",
+    "14": "If Christ has not been raised, then our proclamation is empty and your faith is empty — the cross without the resurrection is a tragedy, not a gospel. The empty tomb is what makes the cross redemptive rather than merely cruel; the risen Christ is the proof that his death achieved what it claimed.",
+    "15": "We are even found to be misrepresenting God — if Christ was not raised, the apostles have been claiming that God did something he did not do. The integrity of the apostolic witness stands or falls with the resurrection. A Christianity without the risen Christ is built on false testimony about God.",
+    "16": "For if the dead are not raised, not even Christ has been raised — the repetition for emphasis: Paul cannot let the Corinthians find a middle position. They cannot accept Christ's resurrection while denying the resurrection of the dead; the two stand or fall together.",
+    "17": "If Christ has not been raised, your faith is futile (mataia) and you are still in your sins — the atonement itself is validated by the resurrection. Christ was delivered up for our trespasses and raised for our justification (Rom 4:25); the resurrection is the Father's declaration that the Son's atoning work was accepted.",
+    "18": "Then also those who have fallen asleep in Christ have perished — the full weight of the argument arrives: if there is no resurrection, Christian martyrs and all who died trusting in Christ are simply gone. The hope that sustained them was false. Paul forces this conclusion so the Corinthians feel the full horror of their position.",
+    "19": "If in Christ we have hope only for this life, we are of all people most to be pitied — the apostolic life of suffering (vv.30-32) makes sense only in light of resurrection. A suffering servant of a dead Christ would be the most pathetic figure imaginable. But the resurrection makes Paul's sufferings the birth-pangs of new creation.",
+    "21": "For as by a man came death, by a man has also come the resurrection of the dead — the Adam/Christ typology: the scope of Christ's redemptive work matches the scope of Adam's fall. A man introduced death into the human family; a man has introduced resurrection life. The symmetry is precise.",
+    "22": "As in Adam all die, so also in Christ shall all be made alive — the two humanities, the two federal heads, the two histories. Union with Adam results in death; union with Christ results in resurrection. The all in each case is bounded by the respective union: all who are in Adam die; all who are in Christ will be raised.",
+    "23": "Christ the firstfruits (aparche), then at his coming those who belong to Christ — the eschatological sequence: Christ's resurrection is the first sheaf of the harvest, the pledge of the full harvest to come. The parousia (his coming) is when the harvest is completed — when those who are his are raised at his return.",
+    "24": "Then comes the end, when he delivers the kingdom to God the Father after destroying every rule and every authority and power — the eschatological programme: Christ's reign is purposefully aimed at the elimination of every force that opposes God's rule. The handing over of the kingdom to the Father is the completion of the Son's mediatorial mission.",
+    "25": "For he must reign until he has put all his enemies under his feet — Psalm 110:1 cited: the Lord's word to my Lord, sit at my right hand until I make your enemies your footstool. Christ's current reign at the Father's right hand (Acts 2:34-35; Heb 1:13) is already the conquest of his enemies in progress.",
+    "26": "The last enemy to be destroyed is death — death personified as the final hostile power. Christ's resurrection has already struck the decisive blow; the final resurrection will complete death's defeat. Revelation 20:14 calls death's end the second death — death itself will die.",
+    "27": "God has put all things in subjection under his feet — Psalm 8:6 read christologically: the human figure of Psalm 8 (what is man?) receives cosmic dominion. The writer of Hebrews makes the same move (Heb 2:5-9): we do not yet see everything in subjection, but we see Jesus, crowned with glory and honor.",
+    "28": "When all things are subjected to him, then the Son himself will also be subjected to him who put all things in subjection under him, so that God may be all in all — the telos of redemption: the Son's eternal submission to the Father is not ontological subordination but the completion of the mission. The entire created order is brought into the fullness of God's life.",
+    "29": "Otherwise, what do people mean by being baptized on behalf of the dead? — Paul uses this practice as an ad hominem argument without endorsing it: if there is no resurrection, even those who practice proxy baptism for the dead are acting on a false hope. The practice proves that even the Corinthians believed in bodily resurrection in some form.",
+    "30": "Why are we in danger every hour? — Paul's own apostolic suffering serves as an argument from experience: if there is no resurrection, his readiness to face death at every turn is not courage but stupidity.",
+    "31": "I die every day — the daily dying of the apostolic life (2 Cor 4:10-11: always carrying in the body the dying of Jesus) makes sense only if resurrection is real. The cross-pattern that Paul embodies presupposes the resurrection-pattern that follows.",
+    "32": "What do I gain if, humanly speaking, I fought with beasts at Ephesus? If the dead are not raised, let us eat and drink, for tomorrow we die — Paul offers the Epicurean alternative in its starkest form. If the resurrection is false, Epicurean pleasure-maximization is the rational response. But Paul's life choices prove he does not believe the resurrection is false.",
+    "33": "Do not be deceived: bad company ruins good morals — the resurrection-denying teaching circulating in Corinth is not merely wrong; it is morally corrupting. False theology produces bad ethics (the connection runs throughout the letter: what you believe about Christ determines how you treat your body, your neighbor, your community).",
+    "34": "Wake up from your drunken stupor and do not go on sinning — the command to sober up (eknepsate) addresses the moral consequences of resurrection-denial. Those who deny the resurrection have no ground for the ethic of self-sacrifice, neighbor-love, or endurance that the gospel requires.",
+    "35": "How are the dead raised? With what kind of body do they come? — the fool's question that Paul immediately answers with the seed analogy. The question assumes that resurrection body must be identical to burial body, which Paul rejects. The risen Christ is the prototype: recognizable yet transformed, physical yet imperishable.",
+    "36": "What you sow does not come to life unless it dies — the seed-death-new-life pattern is the resurrection pattern in nature. Jesus used the same analogy: unless a grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit (John 12:24). The seed's death is the condition of the plant's life.",
+    "37": "What you sow is not the body that is to be, but a bare kernel — the continuity between the sown seed and the risen plant is real but the form is transformed. So with the resurrection body: continuous identity with the buried body, but radically transformed in mode of existence.",
+    "38": "God gives it a body as he has chosen — the resurrection body is God's creative act, not the reconstitution of existing material. The diversity of bodies in creation (v.39-41) shows that God has no single template; the resurrection body will be the appropriate form for immortal, Spirit-animated existence.",
+    "39": "Not all flesh is the same flesh — the diversity of created bodies prepares for the resurrection body's difference from the present body. The Creator who made the variety of flesh in creation can create a body appropriate for the resurrection age.",
+    "40": "There are heavenly bodies and earthly bodies — the contrast between celestial bodies (stars, with their radiant glory) and terrestrial bodies prepares for the contrast between the present mortal body and the resurrection body. Each has its appropriate doxa (glory/radiance).",
+    "41": "Star differs from star in glory — the diversity of glory even within a single category (stars) suggests that the resurrection body's glory will be qualitatively different from, not merely more of, the present body's.",
+    "42": "So is it with the resurrection of the dead — the analogy applied: sown in perishability, raised in imperishability. The four antitheses in vv.42-44 describe the transformation that the resurrection of Christ has inaugurated and that believers will share at the parousia.",
+    "43": "Sown in dishonor, raised in glory; sown in weakness, raised in power — the cross of Christ maps onto the seed pattern: crucified in weakness, raised in power (2 Cor 13:4); crucified in dishonor, raised in glory (Phil 2:9-11). The believer's resurrection participates in Christ's own transformation.",
+    "44": "Sown a natural body, raised a spiritual body — the psychikon soma (body animated by natural life) gives way to the pneumatikon soma (body animated by the Spirit). The risen Christ is the prototype: his resurrection body was the same body that was buried, yet transformed into the life of the Spirit.",
+    "46": "The spiritual is not first but the natural and then the spiritual — the sequence of the ages: present age (psychikon), then age to come (pneumatikon). The incarnation follows this sequence: the eternal Son took on the psychikon existence of Adam before being raised in the pneumatikon existence of the last Adam.",
+    "47": "The first man is from the earth, earthy; the second man is from heaven — the origin of the two Adams: the first Adam was formed from the dust (Gen 2:7); the second Adam is from heaven (ho deuteros anthrōpos ex ouranou) — the incarnate Son who descended from the Father and will return to draw his own to himself (John 14:3).",
+    "48": "As was the man of dust, so also are those who are of the dust; as is the man of heaven, so also are those who are of heaven — the solidarity of the two humanities: those in Adam bear his image (mortal, earthy); those in Christ will bear his image (imperishable, heavenly). The transformation is not yet complete but is guaranteed by union with the risen Lord.",
+    "49": "Just as we have borne the image of the man of dust, we shall also bear the image of the man of heaven — the eschatological promise: those united with Christ will be conformed to his image (Rom 8:29: predestined to be conformed to the image of his Son). The transformation begun in regeneration will be completed in resurrection.",
+    "50": "Flesh and blood cannot inherit the kingdom of God — the present mortal constitution is not the vehicle for the kingdom's ultimate form. Transformation is required, not merely survival. The kingdom of God that Jesus proclaimed as present in his ministry will be consummated in the age when death itself has been destroyed.",
+    "51": "Behold, I tell you a mystery — Paul introduces a previously unrevealed truth: not all will die before the parousia. We will not all sleep, but we will all be changed — the mystery is the transformation of the living at Christ's return, which Paul also describes in 1 Thessalonians 4:15-17.",
+    "52": "In a moment, in the twinkling of an eye, at the last trumpet — the eschatological trumpet (Matt 24:31; 1 Thess 4:16; Rev 11:15) signals Christ's return and the completion of his reign. The instantaneous transformation (atomos, an indivisible moment) underscores that resurrection is divine act, not biological process.",
+    "53": "This perishable body must put on the imperishable, and this mortal body must put on immortality — the clothing metaphor (ependysasthai) echoes Paul's language in 2 Cor 5:2-4 and anticipates the new-creation imagery of Revelation 7:9-14. The resurrection body is not the destruction of the old but the clothing of it with incorruption.",
+    "54": "Death is swallowed up in victory — citing Isaiah 25:8 (God will swallow up death forever; he will wipe away tears from all faces). The banquet of Isaiah 25 on the holy mountain, where God destroys death, is the eschatological feast that the Lord's Supper anticipates. Christ's resurrection is the first victory in the war that ends with death's complete defeat.",
+    "55": "O death, where is your victory? O death, where is your sting? — citing Hosea 13:14 (LXX). Paul applies to the general resurrection what Hosea spoke of in a context of divine judgment and restoration. The taunting of death — an appropriate response from those who have seen Christ raised — anticipates the complete victory that is certain.",
+    "56": "The sting of death is sin, and the power of sin is the law — the cross addressed all three: Christ bore sin, fulfilled the law, and defeated death. The three are intertwined: the law defines sin; sin empowers death; death is defeated by Christ who bore both sin and law's curse in our place (Gal 3:13).",
+    "58": "Therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain — the resurrection grounds the ethics: because Christ is raised, nothing done in the Lord's name is ultimately empty. The resurrection makes every act of love, every moment of faithful labor, permanently significant.",
+  },
+  "16": {
+    "1": "The collection for the saints — Paul's Jerusalem collection (logia) was a concrete expression of the unity of Jewish and Gentile believers in Christ. Romans 15:27 explains the theology: Gentiles have come to share in Jewish spiritual blessings and should therefore serve them with material blessings. The collection enacts the one-body teaching of chapter 12.",
+    "2": "On the first day of every week — the day of Christ's resurrection (Mark 16:2; Luke 24:1; John 20:1) has become the regular gathering day of the early church. The weekly rhythm of giving is tied to the resurrection calendar: each Sunday is a small Easter, and resurrection generosity flows from resurrection faith.",
+    "3": "Those whom you accredit by letter will carry your gift — the careful handling of financial gifts mirrors Paul's general principle: things that are honorable in the Lord's sight should also be honorable in people's sight (2 Cor 8:21). The integrity of the collection reflects the integrity of the gospel.",
+    "4": "If it seems advisable that I should go also — Paul's posture of deference to community discernment reflects his apostolic authority exercised in service. The one who could command prefers to invite participation.",
+    "5": "I will visit you after passing through Macedonia — Paul's travel plans are always submitted to the Lord's will (v.7: if the Lord permits). The apostle's movements are governed by the mission rather than personal convenience.",
+    "6": "I intend to stay with you or even spend the winter — the depth of Paul's relationship with Corinth shows in his desire for extended time with them. His longing to be present mirrors Christ's promise to be present where two or three are gathered (Matt 18:20).",
+    "7": "I do not want to see you now just in passing — the same Greek verb Paul uses elsewhere for the eschatological hope of seeing face to face (13:12: then I will know fully, even as I have been fully known). Apostolic relationship aims at depth of presence, not mere contact.",
+    "8": "I will stay in Ephesus until Pentecost — Paul orients his ministry calendar around the great Jewish festivals that Christ has fulfilled. Pentecost, the festival of the Spirit's gift (Acts 2), is the natural marker for one who has been sent as an apostle of the Spirit's Lord.",
+    "9": "A wide door for effective work has opened to me — the open door metaphor (thyra megalē) for gospel opportunity appears in 2 Cor 2:12 and Col 4:3. The Lord opens doors (Rev 3:7-8); Paul walks through them.",
+    "10": "If Timothy comes, see that he is with you without fear, for he is doing the work of the Lord as I am — the identification of Timothy's work with Paul's work and Paul's with the Lord's work creates a chain of commission: the Lord sends Paul; Paul sends Timothy; the community receives Timothy as they would receive Paul — and by extension, the Lord who sent him (Matt 10:40).",
+    "11": "Let no one despise him — the warning against despising Timothy echoes Jesus's warning about despising the little ones (Matt 18:10). Those who bear the gospel message carry Christ's own authority and are not to be dismissed by those who measure by worldly standards of status or age.",
+    "12": "As for our brother Apollos — Apollos, around whom one Corinthian faction coalesced (1:12), is Paul's brother rather than rival. The unity of apostolic workers in Christ mirrors the unity of the body in chapter 12: different gifts, one Lord.",
+    "13": "Be watchful, stand firm in the faith, act like men, be strong — four imperatives drawn from the language of holy war and covenant faithfulness. The Shema commanded love with all one's strength; Paul commands the community to stand firm and be strong — the language of Deuteronomy's commissioning of Israel for the conquest.",
+    "14": "Let all that you do be done in love — the fifth command that frames all the others. The martial language of vv.13 is immediately qualified by agapē — the whole of chapter 13 in a single word. Christian strength is always exercised through love.",
+    "15": "The household of Stephanas were the firstfruits (aparche) of Achaia — the firstfruits language from chapter 15 (Christ as aparche of the resurrection harvest) now applied to the first converts of a region. The community of the risen Christ is itself a firstfruits of the new creation.",
+    "16": "Be subject to such as these and to everyone who works and toils with them — the authority that deserves submission in the Christian community is the authority of faithful service, not of social rank. Those who labor (kopiaō) are the leaders; the ethic of the cross shapes the ecclesiology.",
+    "17": "I rejoice at the coming of Stephanas and Fortunatus and Achaicus — the joy of Christian reunion anticipates the eschatological joy of the Lord's return. Every gathering of the community in Christ's name is a foretaste of the marriage supper of the Lamb.",
+    "18": "They refreshed my spirit and yours — anapauō (refresh, give rest) is the word of Jesus's invitation: come to me and I will give you rest (Matt 11:28). Those who serve the community in Christ's name extend his own refreshing presence.",
+    "19": "Aquila and Prisca with the church in their house — the house-church as the primary form of the early community: small, intimate, centered on a household, gathered in the name of the risen Lord. The Lord promised to be present where two or three are gathered in his name (Matt 18:20); the house-church was precisely that gathering.",
+    "20": "Greet one another with a holy kiss — the holy kiss was a liturgical enactment of the new-family relationship created by Christ. As God has named himself Father, believers have become siblings; the kiss of greeting among brothers and sisters in Christ is both human affection and theological statement.",
+    "21": "I, Paul, write this greeting with my own hand — the authenticating signature that guaranteed the letter's genuineness. Paul's personal presence in the letter mirrors the Lord's own personal presence promised through the apostolic word (John 17:20: I pray for those who will believe in me through their word).",
+    "22": "If anyone has no love for the Lord, let him be accursed. Maranatha — the two-part closing: the curse on lovelessness (anathema, covenant-curse) and the prayer for the Lord's coming (maranatha, our Lord, come!). The earliest Aramaic liturgical prayer of the church preserves the centrality of Christ's return as the community's defining hope.",
+    "23": "The grace of the Lord Jesus be with you — charis (grace) closes the letter as it opened it (1:3: grace to you and peace). The grace of Christ that the whole letter has traced — in wisdom, in cross, in gifts, in resurrection — is what Paul leaves as the community's provision.",
+    "24": "My love be with you all in Christ Jesus — the personal closing that transforms the letter's rebukes and instructions into an expression of pastoral love. In Christ Jesus — the phrase that has governed the whole letter: every argument, every instruction, every promise has been shaped by the reality of being in Christ Jesus.",
   }
 }
 
-def main():
-    existing = load_comm('mkt-christ', '1corinthians')
-    merge_comm(existing, CHRIST)
-    save_comm('mkt-christ', '1corinthians', existing)
-    total = sum(len(v) for v in existing.values())
-    print(f'1 Corinthians mkt-christ: {len(existing)} chapters, {total} verses.')
-
 if __name__ == '__main__':
-    main()
+    existing = load_comm('mkt-christ', '1corinthians')
+    merge_comm(existing, NEW)
+    save_comm('mkt-christ', '1corinthians', existing)
+    for ch in ['15', '16']:
+        print(f'  ch {ch}: {len(existing.get(ch, {}))} verses')

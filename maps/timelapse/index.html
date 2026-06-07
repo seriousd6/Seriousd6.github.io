@@ -61,16 +61,16 @@
       <!-- Slider controls -->
       <div class="tl-controls">
         <button class="tl-btn-play" id="tl-play" aria-label="Play / Pause" title="Play">▶</button>
-        <button class="tl-btn-step tl-btn-step--active" id="tl-step-toggle" title="Step mode: auto-pause at each event">Step</button>
+        <button class="tl-btn-step tl-btn-step--active" id="tl-step-toggle" title="Step mode: auto-pause at each event" aria-pressed="true">Step</button>
         <button class="tl-btn-continue" id="tl-continue" title="Continue to next event" hidden>Continue ▶</button>
 
         <div class="tl-slider-track">
           <input type="range" class="tl-slider" id="tl-slider"
-                 min="0" step="1" value="0" />
+                 min="0" step="1" value="0" aria-label="Timeline position" />
           <div class="tl-tick-row" id="tl-ticks"></div>
         </div>
 
-        <select class="tl-speed" id="tl-speed" title="Playback speed">
+        <select class="tl-speed" id="tl-speed" aria-label="Playback speed">
           <option value="slow">Slow</option>
           <option value="normal" selected>Normal</option>
           <option value="fast">Fast</option>

@@ -688,6 +688,16 @@ function _makeController(cfg) {
 
 /* ── Exported init functions ───────────────────────────────────────────── */
 
+// INTENT: Bootstrap the biblical timeline on /timeline/ — fetches
+//   data/timeline/events.json + detail.json via _makeController, then persists
+//   the user's era/event selection in sessionStorage under keys bsw_tl_era and
+//   bsw_tl_event so the selection survives a same-tab page reload.
+// CHANGE? If the data files are renamed, update _BIBLICAL_EVENTS_URL /
+//   _BIBLICAL_DETAIL_URL at the top of this file. If the storageKey prefix
+//   changes, also update any bookmarks that embed ?era= / ?event= URL params
+//   since _makeController reads these on init to restore state.
+// VERIFY: Load /timeline/ → era list and event list render; click an event →
+//   reload page → same era and event are re-selected from sessionStorage.
 export function initTimelinePage() {
   _makeController({
     eventsUrl:  _BIBLICAL_EVENTS_URL,
@@ -697,6 +707,16 @@ export function initTimelinePage() {
   }).init();
 }
 
+// INTENT: Bootstrap the church history timeline on /church-history/ — same
+//   controller as initTimelinePage but loads church-events/detail JSONs and
+//   uses bsw_chtl_era / bsw_chtl_event as the sessionStorage namespace so the
+//   two timelines don't overwrite each other's saved selection.
+// CHANGE? Rename _CHURCH_EVENTS_URL / _CHURCH_DETAIL_URL at the top of this
+//   file if the data files move. isChurch:true gates church-specific rendering
+//   branches inside _makeController — search "isChurch" to find them.
+// VERIFY: Load /church-history/ → eras and events render; navigate to an event;
+//   reload → selection restored. Open /timeline/ in a separate tab → its
+//   selection is independent (different storageKey namespace).
 export function initChurchTimelinePage() {
   _makeController({
     eventsUrl:  _CHURCH_EVENTS_URL,

@@ -51,7 +51,7 @@ TORREY_ABBREVS = {
     '1Sa':'1samuel','2Sa':'2samuel','1Ki':'1kings','2Ki':'2kings',
     '1Ch':'1chronicles','2Ch':'2chronicles','Ezr':'ezra','Ne':'nehemiah',
     'Es':'esther','Job':'job','Ps':'psalms','Pr':'proverbs',
-    'Ec':'ecclesiastes','So':'songofsolomon','Is':'isaiah','Jer':'jeremiah',
+    'Ec':'ecclesiastes','So':'songofsolomon','Is':'isaiah','Isa':'isaiah','Jer':'jeremiah',
     'La':'lamentations','Eze':'ezekiel','Da':'daniel','Ho':'hosea',
     'Joe':'joel','Am':'amos','Ob':'obadiah','Jon':'jonah',
     'Mic':'micah','Na':'nahum','Hab':'habakkuk','Zep':'zephaniah',
@@ -196,7 +196,7 @@ OSIS_REF_RE  = re.compile(r'osisRef="([^"]+)"')
 SCRIP_REF_RE = re.compile(r'<scripRef>(.*?)</scripRef>', re.DOTALL)
 
 # Match a leading book abbreviation (1–3 chars, optionally preceded by digit)
-_BOOK_PREFIX_RE = re.compile(r'^(\d?[A-Z][a-z]{0,2})\s+')
+_BOOK_PREFIX_RE = re.compile(r'^(\d?[A-Z][a-z]{0,3})\s+')
 
 
 def _parse_scripref_content(content, book_names):

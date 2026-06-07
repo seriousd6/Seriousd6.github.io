@@ -698,7 +698,7 @@ function _renderList() {
       ? '<span class="lb-item-vol-badge">' + escHtml(doc.volume_label) + '</span>'
       : '';
     html +=
-      '<button class="lb-list-item' + active + '" data-doc-id="' + escHtml(doc.id) + '" aria-label="' + escHtml(doc.title) + '" title="' + escHtml(doc.title) + '">' +
+      '<button class="lb-list-item' + active + '" data-doc-id="' + escHtml(doc.id) + '" aria-label="' + escHtml(doc.title) + '" aria-pressed="' + (doc.id === _activeId ? 'true' : 'false') + '" title="' + escHtml(doc.title) + '">' +
         '<span class="lb-item-abbrev lb-item-abbrev--' + escHtml(doc.tradition) + '">' + escHtml(doc.abbrev) + '</span>' +
         '<span class="lb-item-body">' +
           '<span class="lb-item-title">' + escHtml(doc.title) + overviewBadge + volBadge + '</span>' +
@@ -752,7 +752,9 @@ function _openDoc(docId) {
 
   // Sync list active state
   document.querySelectorAll('.lb-list-item').forEach(function(el) {
-    el.classList.toggle('lb-list-item--active', el.dataset.docId === docId);
+    var isActive = el.dataset.docId === docId;
+    el.classList.toggle('lb-list-item--active', isActive);
+    el.setAttribute('aria-pressed', String(isActive));
   });
 
   var panel = document.getElementById('lb-reader');
@@ -1182,10 +1184,10 @@ function _renderPaginatedView(doc, entry, vHtml, idx, panel) {
     var tabs = sections.map(function(sec, i) {
       var label = sec.heading || ('§' + (i + 1));
       if (label.length > 26) label = label.slice(0, 23) + '…';
-      return '<button class="lb-sec-tab' + (i === idx ? ' lb-sec-tab--active' : '') + '" data-idx="' + i + '">' +
+      return '<button class="lb-sec-tab' + (i === idx ? ' lb-sec-tab--active' : '') + '" role="tab" aria-selected="' + (i === idx ? 'true' : 'false') + '" data-idx="' + i + '">' +
                escHtml(label) + '</button>';
     }).join('');
-    navHtml = '<div class="lb-sec-tab-bar">' + tabs + '</div>';
+    navHtml = '<div class="lb-sec-tab-bar" role="tablist" aria-label="Document sections">' + tabs + '</div>';
   } else {
     var opts = sections.map(function(sec, i) {
       return '<option value="' + i + '"' + (i === idx ? ' selected' : '') + '>' +

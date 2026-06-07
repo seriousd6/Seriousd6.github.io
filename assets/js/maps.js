@@ -346,6 +346,15 @@ var GROUPS = [
 ];
 
 /* ── Init ────────────────────────────────────────────────────────────────── */
+// INTENT: Entry point for the maps page — builds the map-selector nav from
+//   MAPS/GROUPS arrays, wires all controls (tabs, city detail panel, reset
+//   button, search), then selects the initial map from location.hash or MAPS[0].
+// CHANGE? If you add a MAPS entry, also update GROUPS so it appears in the nav;
+//   if you rename a map id, update the location.hash matching at lines 361–365.
+//   wireRefLinks(container) is called on city detail panels — if wire.js
+//   signature changes, that call silently mis-wires refs.
+// VERIFY: Load /maps/ with no hash → first map renders; load /maps/#paul-journeys
+//   → Paul's Journeys map loads directly; click a city → detail panel opens.
 export function initMapsPage() {
   if (!document.getElementById('maps-container')) return;
   if (!window.L) {
@@ -395,7 +404,9 @@ function _selectMap(map) {
 
   /* update nav active state */
   document.querySelectorAll('.maps-nav-btn').forEach(function (b) {
-    b.classList.toggle('maps-nav-btn--active', b.dataset.id === map.id);
+    var isActive = b.dataset.id === map.id;
+    b.classList.toggle('maps-nav-btn--active', isActive);
+    b.setAttribute('aria-current', String(isActive));
   });
 
   /* update title / sub */
@@ -801,9 +812,9 @@ function _setTab(tab) {
   if (overviewEl)  overviewEl.hidden  = (tab !== 'overview');
   if (siteIndexEl) siteIndexEl.hidden = (tab !== 'sites');
   if (refsIndexEl) refsIndexEl.hidden = (tab !== 'refs');
-  if (btnOverview) btnOverview.classList.toggle('maps-tab--active', tab === 'overview');
-  if (btnSites)    btnSites.classList.toggle('maps-tab--active',    tab === 'sites');
-  if (btnRefs)     btnRefs.classList.toggle('maps-tab--active',     tab === 'refs');
+  if (btnOverview) { btnOverview.classList.toggle('maps-tab--active', tab === 'overview'); btnOverview.setAttribute('aria-selected', String(tab === 'overview')); }
+  if (btnSites)    { btnSites.classList.toggle('maps-tab--active',    tab === 'sites');    btnSites.setAttribute('aria-selected',    String(tab === 'sites')); }
+  if (btnRefs)     { btnRefs.classList.toggle('maps-tab--active',     tab === 'refs');     btnRefs.setAttribute('aria-selected',     String(tab === 'refs')); }
 }
 
 /* ── Site index list (populated after each map render) ───────────────────── */

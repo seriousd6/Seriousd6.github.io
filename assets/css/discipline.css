@@ -584,4 +584,9 @@
 @media (max-width: 500px) {
   .disc-tab { padding: .55rem .7rem; font-size: .78rem; }
   .plan-card__top { flex-direction: column; }
+
+  /* WCAG 2.5.5: disc-tab compact padding gives ~34px on mobile; raise to 44px.
+     journal-btn--sm edit/delete buttons are ~22px; raise to 44px via min-height. */
+  .disc-tab       { min-height: 2.75rem; }
+  .journal-btn--sm { min-height: 2.75rem; padding-top: .5rem; padding-bottom: .5rem; }
 }

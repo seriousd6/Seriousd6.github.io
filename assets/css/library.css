@@ -396,6 +396,33 @@
 [data-theme="dark"] .lsr-snip mark,
 :root:not([data-theme="light"]) .lsr-snip mark { background: rgba(255,200,0,0.18); }
 
+/* ── lib-badge dark mode: lighten border/text so badges read on dark backgrounds */
+[data-theme="dark"] .lib-badge--reformed        { border-color: #c47c4a; color: #c47c4a; }
+[data-theme="dark"] .lib-badge--lutheran        { border-color: #6aaa76; color: #6aaa76; }
+[data-theme="dark"] .lib-badge--anglican        { border-color: #6a8fa8; color: #6a8fa8; }
+[data-theme="dark"] .lib-badge--baptist         { border-color: #8b5fc7; color: #8b5fc7; }
+[data-theme="dark"] .lib-badge--anabaptist      { border-color: #a87850; color: #a87850; }
+[data-theme="dark"] .lib-badge--congregationalist { border-color: #4a9b9b; color: #4a9b9b; }
+[data-theme="dark"] .lib-badge--methodist       { border-color: #3a9bba; color: #3a9bba; }
+[data-theme="dark"] .lib-badge--orthodox        { border-color: #bf4a7a; color: #bf4a7a; }
+[data-theme="dark"] .lib-badge--patristic       { border-color: #c09940; color: #c09940; }
+[data-theme="dark"] .lib-badge--father          { border-color: #8b6b3a; color: #8b6b3a; }
+[data-theme="dark"] .lib-badge--roman-catholic  { border-color: #bf4a4a; color: #bf4a4a; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lib-badge--reformed        { border-color: #c47c4a; color: #c47c4a; }
+  :root:not([data-theme="light"]) .lib-badge--lutheran        { border-color: #6aaa76; color: #6aaa76; }
+  :root:not([data-theme="light"]) .lib-badge--anglican        { border-color: #6a8fa8; color: #6a8fa8; }
+  :root:not([data-theme="light"]) .lib-badge--baptist         { border-color: #8b5fc7; color: #8b5fc7; }
+  :root:not([data-theme="light"]) .lib-badge--anabaptist      { border-color: #a87850; color: #a87850; }
+  :root:not([data-theme="light"]) .lib-badge--congregationalist { border-color: #4a9b9b; color: #4a9b9b; }
+  :root:not([data-theme="light"]) .lib-badge--methodist       { border-color: #3a9bba; color: #3a9bba; }
+  :root:not([data-theme="light"]) .lib-badge--orthodox        { border-color: #bf4a7a; color: #bf4a7a; }
+  :root:not([data-theme="light"]) .lib-badge--patristic       { border-color: #c09940; color: #c09940; }
+  :root:not([data-theme="light"]) .lib-badge--father          { border-color: #8b6b3a; color: #8b6b3a; }
+  :root:not([data-theme="light"]) .lib-badge--roman-catholic  { border-color: #bf4a4a; color: #bf4a4a; }
+}
+
 /* ── Mobile: Q&A grid and touch targets ─────────────────────────────────────── */
 @media (max-width: 480px) {
   /* Narrow the number column so it doesn't crowd 3-digit Q numbers */

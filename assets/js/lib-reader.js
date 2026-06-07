@@ -22,6 +22,10 @@ var _findMatchSecs = [];    // section indices containing the term (paginated mo
 var _findCurrMatch = 0;     // which match index is currently shown
 var _findBarWired  = false; // header find bar only gets event listeners once per document
 
+// INTENT: Read saved section position from localStorage; handles both the legacy bare-integer
+//   format (stored before the {idx, ts} shape was introduced) and current JSON shape.
+// CHANGE? If the _savePos schema changes, update the /^\d+$/ legacy branch accordingly.
+// VERIFY: Navigate to any doc, advance a few sections, reload the page — same section loads.
 function _loadPos(docId) {
   try {
     var raw = localStorage.getItem(_LIB_POS_PREFIX + docId);
@@ -30,10 +34,22 @@ function _loadPos(docId) {
     return JSON.parse(raw).idx || 0;
   } catch(e) { return 0; }
 }
+// INTENT: Persist current section index as { idx, ts } under `bsw_lbpos_{docId}`;
+//   the `ts` timestamp is used by _evictStalePositions to expire old entries.
+// CHANGE? _loadPos reads this exact shape; `_LIB_POS_PREFIX` must match in both functions.
+// VERIFY: After navigating to section 3 of any doc, open DevTools → Application → Local Storage
+//   and confirm a `bsw_lbpos_<docId>` key with `{"idx":2,"ts":...}` exists.
 function _savePos(docId, idx) {
   try { localStorage.setItem(_LIB_POS_PREFIX + docId, JSON.stringify({ idx: idx, ts: Date.now() })); } catch(e) {}
 }
 
+// INTENT: Remove `bsw_lbpos_*` localStorage entries older than 90 days to prevent unbounded
+//   growth if a user reads many different documents over time. Iterates in reverse so that
+//   `localStorage.length` index stays valid after each `removeItem` call.
+// CHANGE? `_LIB_POS_PREFIX` must match `_loadPos`/`_savePos`; legacy bare-int entries are
+//   skipped (no `ts` field) and not evicted — they are overwritten on next section advance.
+// VERIFY: In DevTools console: manually set a `bsw_lbpos_test` key with a stale ts, reload —
+//   the key should be gone after the next `initLibReaderPage` call.
 function _evictStalePositions() {
   try {
     var cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
@@ -47,6 +63,14 @@ function _evictStalePositions() {
   } catch(e) {}
 }
 
+// INTENT: Entry point for `library/read/index.html`; reads `?doc=` and optional `?section=`
+//   URL params, fetches the document (JSON from `data/library/docs/` or legacy HTML from
+//   `data/library/html/`), restores the saved section position, and renders the full reader.
+// CHANGE? Called by `app.js:249` when `#lib-reader-content` is present on the page.
+//   URL param names (`doc`, `section`) are also used by `lib-browser.js:_openDoc` (fullscreen link)
+//   and `lib-progress.js` (reading-history links) — change all three together.
+// VERIFY: Navigate to `library/read/?doc=heidelberg-catechism` → doc loads with TOC + paginated
+//   sections; arrow keys advance sections; position is restored on reload.
 export function initLibReaderPage() {
   var content = document.getElementById('lib-reader-content');
   if (!content) return;
@@ -416,7 +440,7 @@ function _renderPaged(doc, docId, sections, idx, content, entry) {
       var label = sec.heading || ('Section ' + (i + 1));
       // Abbreviate long headings in the tab
       if (label.length > 28) label = label.slice(0, 25) + '…';
-      return '<button class="lr-tab' + (i === idx ? ' lr-tab--active' : '') + '" data-idx="' + i + '">' +
+      return '<button class="lr-tab' + (i === idx ? ' lr-tab--active' : '') + '" role="tab" aria-selected="' + (i === idx ? 'true' : 'false') + '" data-idx="' + i + '">' +
                escHtml(label) +
              '</button>';
     }).join('');
@@ -634,6 +658,11 @@ function _wireSubPager(container, section, secIdx) {
 var _LIB_PROGRESS_KEY  = 'bsw_lib_progress';
 var _LIB_COMPLETE_KEY  = 'bsw_lib_complete';
 
+// INTENT: Record this doc as recently-read in `bsw_lib_progress` (capped at 10 entries,
+//   oldest evicted) so `library/progress/` can show a reading history widget.
+// CHANGE? `lib-progress.js` reads `bsw_lib_progress` via `_LIB_PROGRESS_KEY`; both keys
+//   and the `{ title, href, lastRead, totalSections, tradition }` object shape must stay in sync.
+// VERIFY: Read any library doc, open `library/progress/` → the doc should appear in "Recently Read".
 function _saveLibProgress(docId, title, sectionCount, tradition) {
   try {
     var data  = JSON.parse(localStorage.getItem(_LIB_PROGRESS_KEY) || '{}');
@@ -676,6 +705,13 @@ function _traditionNote(tradition, log, allTrads) {
   return 'Growing in ' + tradLabel + ' reading.';
 }
 
+// INTENT: Write a completion record to `bsw_lib_complete` when the user clicks "Mark as Complete".
+//   Returns today's ISO date string on success, null on failure; the return value is used by the
+//   caller to update the UI without re-reading localStorage.
+// CHANGE? `lib-progress.js` reads `bsw_lib_complete` via `_LIB_COMPLETE_KEY`; the entry shape
+//   `{ title, author, tradition, completedDate, type }` must match the rendering in lib-progress.js.
+// VERIFY: Click "Mark as Complete" on any library doc → open `library/progress/` →
+//   the doc appears in the completion log with today's date and the correct tradition chip.
 function _markDocComplete(docId, doc, entry) {
   try {
     var log   = JSON.parse(localStorage.getItem(_LIB_COMPLETE_KEY) || '{}');

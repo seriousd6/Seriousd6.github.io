@@ -100,11 +100,11 @@
       </div>
       <div id="mem-browse-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-browse-tab">
         <div class="mem-add-row">
-          <input id="mem-add-input" type="text" class="mem-add-input" placeholder="Add a verse — e.g. John 3:16" autocomplete="off" />
+          <input id="mem-add-input" type="text" class="mem-add-input" placeholder="Add a verse — e.g. John 3:16" aria-label="Add a verse — e.g. John 3:16" autocomplete="off" />
           <button id="mem-add-btn" class="mem-add-btn">Add verse</button>
         </div>
         <div class="mem-add-row">
-          <input id="mem-add-passage-input" type="text" class="mem-add-input" placeholder="Add a passage — e.g. Romans 8:28-30" autocomplete="off" />
+          <input id="mem-add-passage-input" type="text" class="mem-add-input" placeholder="Add a passage — e.g. Romans 8:28-30" aria-label="Add a passage — e.g. Romans 8:28-30" autocomplete="off" />
           <button id="mem-add-passage-btn" class="mem-add-btn" style="white-space:nowrap">Add passage</button>
         </div>
         <p id="mem-add-error" class="mem-add-error" hidden></p>
@@ -153,21 +153,21 @@
 
     <!-- ══════════════════════════ JOURNAL PANEL ════════════════════════════ -->
     <div id="disc-journal" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-journal" hidden>
-      <div class="journal-tabs" role="tablist">
-        <button class="journal-tab journal-tab--active" data-jtab="prayers"     role="tab" aria-selected="true">🙏 Prayers</button>
-        <button class="journal-tab"                     data-jtab="reflections" role="tab" aria-selected="false">📓 Reflections</button>
-        <button class="journal-tab"                     data-jtab="gratitude"   role="tab" aria-selected="false">🌿 Gratitude</button>
+      <div class="journal-tabs" role="tablist" aria-label="Journal sections">
+        <button class="journal-tab journal-tab--active" data-jtab="prayers"     role="tab" aria-selected="true"  id="journal-tab-prayers"     aria-controls="journal-prayers-panel">🙏 Prayers</button>
+        <button class="journal-tab"                     data-jtab="reflections" role="tab" aria-selected="false" id="journal-tab-reflections"  aria-controls="journal-reflections-panel">📓 Reflections</button>
+        <button class="journal-tab"                     data-jtab="gratitude"   role="tab" aria-selected="false" id="journal-tab-gratitude"    aria-controls="journal-gratitude-panel">🌿 Gratitude</button>
       </div>
       <!-- Prayers panel -->
-      <div id="journal-prayers-panel">
+      <div id="journal-prayers-panel" role="tabpanel" aria-labelledby="journal-tab-prayers">
         <div class="journal-bar">
           <button class="journal-btn journal-btn--primary" id="journal-new-btn" type="button">+ New Prayer</button>
-          <div class="journal-status-filters" role="group">
+          <div class="journal-status-filters" role="group" aria-label="Filter by prayer status">
             <button class="journal-status-btn journal-status-btn--active" data-status="all"      type="button">All</button>
             <button class="journal-status-btn"                            data-status="open"     type="button">Open</button>
             <button class="journal-status-btn"                            data-status="answered" type="button">✓ Answered</button>
           </div>
-          <input class="journal-search" type="search" id="journal-search" placeholder="Search prayers…" />
+          <input class="journal-search" type="search" id="journal-search" placeholder="Search prayers…" aria-label="Search prayers" />
           <span class="journal-count" id="journal-count"></span>
         </div>
         <div id="journal-tag-filters" class="journal-tag-filters"></div>
@@ -180,10 +180,10 @@
         </div>
       </div>
       <!-- Reflections panel -->
-      <div id="journal-reflections-panel" hidden>
+      <div id="journal-reflections-panel" role="tabpanel" aria-labelledby="journal-tab-reflections" hidden>
         <div class="journal-bar">
           <button class="journal-btn journal-btn--primary" id="refl-new-btn" type="button">+ New Reflection</button>
-          <input class="journal-search" type="search" id="refl-search" placeholder="Search reflections…" />
+          <input class="journal-search" type="search" id="refl-search" placeholder="Search reflections…" aria-label="Search reflections" />
           <span class="journal-count" id="refl-count"></span>
         </div>
         <div id="refl-tag-filters" class="journal-tag-filters"></div>
@@ -191,11 +191,11 @@
         <div id="refl-list"></div>
       </div>
       <!-- Gratitude panel -->
-      <div id="journal-gratitude-panel" hidden>
+      <div id="journal-gratitude-panel" role="tabpanel" aria-labelledby="journal-tab-gratitude" hidden>
         <p class="grat-prompt">What are you grateful for today?</p>
         <div class="grat-bar">
           <button class="journal-btn journal-btn--primary" id="grat-new-btn" type="button">+ New Entry</button>
-          <input class="journal-search" type="search" id="grat-search" placeholder="Search entries…" />
+          <input class="journal-search" type="search" id="grat-search" placeholder="Search entries…" aria-label="Search gratitude entries" />
           <span class="journal-count" id="grat-count"></span>
         </div>
         <div id="grat-form-container"></div>
@@ -210,20 +210,20 @@
 
     <!-- ══════════════════════════ WORSHIP PANEL ════════════════════════════ -->
     <div id="disc-worship" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-worship" hidden>
-      <div class="worship-tabs" role="tablist">
-        <button class="worship-tab worship-tab--active" data-wtab="sermons" role="tab" aria-selected="true">Sermon Notes</button>
-        <button class="worship-tab"                     data-wtab="fasting" role="tab" aria-selected="false">Fasting Log</button>
+      <div class="worship-tabs" role="tablist" aria-label="Worship sections">
+        <button class="worship-tab worship-tab--active" data-wtab="sermons" role="tab" aria-selected="true"  id="worship-tab-sermons" aria-controls="worship-sermons-panel">Sermon Notes</button>
+        <button class="worship-tab"                     data-wtab="fasting" role="tab" aria-selected="false" id="worship-tab-fasting" aria-controls="worship-fasting-panel">Fasting Log</button>
       </div>
-      <div id="worship-sermons-panel">
+      <div id="worship-sermons-panel" role="tabpanel" aria-labelledby="worship-tab-sermons">
         <div class="worship-bar">
           <button class="worship-btn worship-btn--primary" id="worship-new-btn" type="button">+ New Entry</button>
-          <input class="worship-search" type="search" id="worship-search" placeholder="Search sermons…" />
+          <input class="worship-search" type="search" id="worship-search" placeholder="Search sermons…" aria-label="Search sermon notes" />
           <span class="worship-count" id="worship-count"></span>
         </div>
         <div id="worship-form-container"></div>
         <div id="worship-list"></div>
       </div>
-      <div id="worship-fasting-panel" hidden>
+      <div id="worship-fasting-panel" role="tabpanel" aria-labelledby="worship-tab-fasting" hidden>
         <div class="worship-bar">
           <button class="worship-btn worship-btn--primary" id="fast-new-btn" type="button">+ Log Fast</button>
           <span class="worship-count" id="fast-count"></span>

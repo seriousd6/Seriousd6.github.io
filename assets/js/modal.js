@@ -334,6 +334,13 @@ export function syncModalVersionPicker() {
   if (!sel.value) sel.selectedIndex = 0;
 }
 
+// INTENT: Show the verse modal for `parsed`, focus the close button, and lock page scroll.
+//   Builds the modal DOM on first call, syncs the version picker, and registers trapFocus.
+// CHANGE? `document.documentElement.classList.add('bsw-modal-open')` suppresses body scroll;
+//   this must be reversed in `hideModal()` or the page stays locked after modal closes.
+//   Callers: `wire.js` → `.ref` link click; `reader.js` verse click; `verse-study.js` cross-link.
+// VERIFY: Click any `.ref` link → modal opens, focus lands on close button, background
+//   scroll is suppressed; press Escape → modal closes and focus returns to trigger element.
 // ── openModal ─────────────────────────────────────────────────────────────
 export function openModal(parsed) {
   if (!_modalEl || !_backdropEl) buildModalDOM();
@@ -357,6 +364,14 @@ export function openModal(parsed) {
   document.body.classList.add('bsw-modal-open');
 }
 
+// INTENT: Primary render dispatcher — fetches verse text, fires all 5 registered render
+//   functions (verse text, cross-refs, notes, commentary, attribution), and sets shared modal
+//   state (`_modalEl._parsedRef`, `_modalEl._chapterMaxV`) used by tab-switching and prev/next nav.
+// CHANGE? Each render function is registered via `registerModalRenderer` in `core.js` — adding
+//   a new panel requires a registration there; order of registration is render order.
+//   `_modalEl._chapterMaxV` is set by `resolveVerses` and read by modal nav prev/next arrows.
+// VERIFY: Open John 3:16 → verse text, cross-ref count badge, and commentary tab all populate;
+//   switch version → `renderModal` re-fires with new versionId; prev/next chapter arrows work.
 // ── renderModal ───────────────────────────────────────────────────────────
 export function renderModal(parsed, versionId) {
   _modalEl._parsedRef    = parsed;
@@ -566,6 +581,13 @@ function _injectModalFootnotes(parsed, bodyEl) {
   }).catch(function () {});
 }
 
+// INTENT: Load and render cross-references for `parsed` into `container`; handles both single-verse
+//   and range requests, capping at 4 chapters to avoid over-fetching multi-chapter passages.
+//   Cross-ref data is loaded via `loadCrossRefs(bookId)` from `core.js` (cached per book).
+// CHANGE? Cross-ref data lives at `data/crossrefs/{book}.json` (loaded by core.js); if the format
+//   changes, update `_extractCommHtml`-style extraction logic in this function's inner loop.
+// VERIFY: Open John 3:16 → cross-refs tab shows reference list with `.ref` link chips that
+//   open the linked verse on click; multi-verse range (John 3:16-18) shows refs for all verses.
 // ── renderCrossRefs ───────────────────────────────────────────────────────
 export function renderCrossRefs(parsed, container) {
   if (!parsed) {
@@ -754,6 +776,12 @@ export function _extractCommHtml(data, parsed, source) {
   return { html: html || null, foundV: foundV };
 }
 
+// INTENT: Update the "Notes" tab badge count by summing notes across the full verse range of
+//   `parsed`; called by `renderModal` on every open and by `_renderNotesPanel`'s save handler.
+// CHANGE? `getNotesForVerse` reads the `bsw_notes` localStorage key (managed in storage.js);
+//   if the key or schema changes, update `getNotesForVerse` there and this badge will auto-follow.
+// VERIFY: Open John 3:16 with an existing note → Notes tab shows badge with count; add a note
+//   → badge increments without re-opening the modal.
 // ── _refreshModalNotesBadge ───────────────────────────────────────────────
 export function _refreshModalNotesBadge(parsed) {
   if (!_modalEl || !parsed) return;
@@ -778,6 +806,14 @@ export function _refreshModalNotesBadge(parsed) {
   }
 }
 
+// INTENT: Render the notes panel for `parsed`: loads existing notes from `bsw_notes` (via
+//   storage.js), renders a textarea + save button, wires autosave on blur, and returns a
+//   `refresh()` function called by the tab-switch handler to reload notes without re-opening the modal.
+// CHANGE? Writes to the same `bsw_notes` key read by `_refreshModalNotesBadge`; the note
+//   object schema `{ id, text, display, bookId, ch, v, ts }` is defined in storage.js —
+//   any field addition must be mirrored there and in the badge-count summing logic.
+// VERIFY: Open any verse → write a note → blur textarea → reopen modal for same verse
+//   → note text persists; badge on Notes tab shows count matching saved notes.
 // ── _renderNotesPanel ────────────────────────────────────────────────────
 export function _renderNotesPanel(parsed, container) {
   if (!parsed) { container.innerHTML = '<p class="bsw-note-empty">No reference selected.</p>'; return function () {}; }
@@ -1003,6 +1039,14 @@ export function _renderNotesPanel(parsed, container) {
   return refresh;
 }
 
+// INTENT: Render commentary for `parsed` using the currently selected source; a source picker
+//   dropdown is built from `COMMENTARY_SOURCES` (registered in core.js) and the last-used source
+//   is persisted in `localStorage` key `bsw_comm_src` so it survives across page loads.
+// CHANGE? New commentary sources must be registered via `registerCommentarySource()` in core.js —
+//   modal.js reads the registry but never writes to it. Data lives at `data/commentary/{src}/{book}.json`,
+//   fetched by `loadCommentary(bookId, src)` in core.js (cached per book+src pair).
+// VERIFY: Open John 3:16 → switch commentary source → selected source persists on next open;
+//   a book/verse with no commentary shows "No commentary found" rather than a loading spinner.
 // ── renderCommentary ──────────────────────────────────────────────────────
 export function renderCommentary(parsed, container) {
   if (!parsed) {

@@ -30,9 +30,17 @@ var _hideTimer = null;
 export function loadPlaces() {
   if (_placeRe)     return Promise.resolve();
   if (_placesReady) return _placesReady;
+  // INTENT: Fetch + index places.json once; null-reset on failure so the next
+  //   call can retry (a truthy rejected Promise would otherwise permanently block
+  //   retries, causing one unhandled rejection per chapter navigation).
+  // CHANGE? _PLACES_URL points to data/maps/places.json; if the filename changes,
+  //   also update sw.js SHELL_URLS and the path in timelapse-map.js.
+  // VERIFY: Throttle to Offline in DevTools, load /read/, navigate chapters —
+  //   no "Uncaught (in promise)" errors for places.js in the console.
   _placesReady = fetch(_PLACES_URL)
     .then(function (r) { return r.json(); })
-    .then(function (places) { _buildIndex(places); });
+    .then(function (places) { _buildIndex(places); })
+    .catch(function () { _placesReady = null; });
   return _placesReady;
 }
 

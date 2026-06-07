@@ -40,7 +40,7 @@
 
 .maps-timelapse-link:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary, #fff);
   text-decoration: none;
 }
 
@@ -82,13 +82,16 @@
     padding-bottom: .2rem;
     -webkit-overflow-scrolling: touch;
   }
-  .maps-nav-btn        { flex-shrink: 0; white-space: nowrap; }
+  .maps-nav-btn        { flex-shrink: 0; white-space: nowrap; min-height: 2.75rem; }
   .maps-nav-group-label { display: none; }
   .maps-content-row    { flex-direction: column; }
   .maps-map-wrapper    { flex: none; height: 300px; }
   .maps-map-container  { height: 100%; }
   .maps-detail-panel   { width: 100%; height: auto; min-height: 220px; }
   .maps-panel-body     { height: 220px; }
+  /* WCAG 2.5.5: ensure 44px touch targets for panel tabs and city nav on mobile */
+  .maps-tab            { min-height: 2.75rem; }
+  .maps-city-nav-btn   { min-height: 2.75rem; }
 }
 
 /* ── Map selector nav ────────────────────────────────────────────────────── */
@@ -335,7 +338,7 @@
 }
 .maps-tl-chip:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary, #fff);
   text-decoration: none;
 }
 .maps-tl-chip[hidden] { display: none !important; }
@@ -661,7 +664,7 @@
 
 .maps-refs-chip:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary, #fff);
 }
 
 /* ── Per-site study notes (MAP-H) ────────────────────────────────────────── */
@@ -741,7 +744,7 @@
 }
 .maps-city-map-chip:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary, #fff);
   text-decoration: none;
 }
 

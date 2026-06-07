@@ -35,6 +35,15 @@ var _TRAD_COLORS = {
   ecumenical:      '#4a6a4a'
 };
 
+// INTENT: Fetch data/library/index.json for tradition totals, read bsw_lib_complete
+//   from localStorage for the user's completion log, then call _render to build
+//   the progress dashboard (stats, tradition bars, completed-works log).
+// CHANGE? If the lib-reader.js sets a new localStorage key or changes the bsw_lib_complete
+//   schema ({ [docId]: { tradition, title, author, completedDate } }), update the
+//   log-read here and the per-entry accesses in _render(). LIB_INDEX_URL resolves
+//   relative to this file — if this file moves, update _resolve() base accordingly.
+// VERIFY: Load /library/progress/ after completing ≥1 doc in lib-reader → stats
+//   show correct count, tradition bar fills, and completed work appears in the log.
 export function initLibProgressPage() {
   var root = document.getElementById('lp-root');
   if (!root) return;
@@ -48,6 +57,13 @@ export function initLibProgressPage() {
     .catch(function() { _render(root, log, []); });
 }
 
+// INTENT: Build the full progress dashboard HTML from the completion log and index.
+//   Computes per-tradition counts (done vs total from index), sorts the log newest-
+//   first, and sets innerHTML on root in one shot to avoid incremental reflow.
+// CHANGE? bsw_lib_complete schema: { [docId]: { tradition, title, author, completedDate } }.
+//   If lib-reader.js writes new fields, add them here. _TRAD_COLORS keys must match
+//   _TRAD_ORDER exactly — adding a tradition requires updating both constants and
+//   the _TRAD_DISPLAY map, otherwise the bar renders with no label and wrong color.
 function _render(root, log, index) {
   var completedIds = Object.keys(log);
   var totalDocs    = completedIds.length;
@@ -95,7 +111,7 @@ function _render(root, log, index) {
       '<div class="lp-bar-row">' +
         '<span class="lp-bar-label">' + escHtml(label) + '</span>' +
         '<div class="lp-bar-track">' +
-          '<div class="lp-bar-fill" style="width:' + pct + '%;background:' + escHtml(color) + '"></div>' +
+          '<div class="lp-bar-fill" data-trad="' + escHtml(trad) + '" style="width:' + pct + '%"></div>' +
         '</div>' +
         '<span class="lp-bar-count">' + done + ' / ' + total + '</span>' +
       '</div>';
@@ -135,7 +151,7 @@ function _render(root, log, index) {
             (entry.author ? '<span class="lp-log-author">' + escHtml(entry.author) + '</span>' : '') +
           '</div>' +
           '<div class="lp-log-meta">' +
-            '<span class="lp-trad-chip" style="background:' + escHtml(color) + '">' + escHtml(tradLabel) + '</span>' +
+            '<span class="lp-trad-chip" data-trad="' + escHtml(trad) + '">' + escHtml(tradLabel) + '</span>' +
             (entry.completedDate ? '<span class="lp-log-date">' + escHtml(entry.completedDate) + '</span>' : '') +
           '</div>' +
         '</div>';

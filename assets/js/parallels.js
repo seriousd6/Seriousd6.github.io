@@ -17,6 +17,15 @@ export function setParallelsEnabled(on) {
   localStorage.setItem(PARALLELS_STORAGE_KEY, on ? '1' : '0');
 }
 
+// INTENT: Fetch parallel-passage data for a book once, caching the result
+//   (including null on 404/error) so subsequent calls return immediately without
+//   re-fetching. Null cache is intentional — books with no parallel data should
+//   not retry on every verse render.
+// CHANGE? parallelsCache is imported from core.js and keyed by bookId; if its
+//   key schema changes (e.g. to `${version}/${bookId}`), update this cache write
+//   and injectParallelPanels' cache-hit check.
+// VERIFY: Open reader, enable parallels, navigate two chapters of the same book —
+//   Network tab should show exactly one fetch for that book's parallels JSON.
 export function loadParallels(bookId) {
   if (parallelsCache[bookId] !== undefined) return Promise.resolve(parallelsCache[bookId]);
   var url = PARALLELS_ROOT + '/' + bookId + '.json';
@@ -26,6 +35,17 @@ export function loadParallels(bookId) {
     .catch(function () { parallelsCache[bookId] = null; return null; });
 }
 
+// INTENT: Insert the "⇉ Parallels" toggle button into the reader browse bar and
+//   wire its click handler; restores prior on/off state from localStorage. This
+//   function bootstraps the entire parallels subsystem — calling it is required
+//   before any parallel panels can render.
+// CHANGE? The click handler drives a 4-function cascade: applyParallelPagination
+//   + injectAllParallelPanels (on) or removeAllParallelPanels + removeParallelPagination
+//   (off). Also updates PARALLELS_STORAGE_KEY in localStorage; if the key name
+//   changes, update getParallelsEnabled/setParallelsEnabled too.
+// VERIFY: Open /read/, confirm "⇉ Parallels" button appears; toggle it on/off
+//   and verify parallel panels appear/disappear; reload page and confirm the
+//   on/off state is restored from localStorage.
 export function initParallelToggle() {
   var browseBar = document.querySelector('.reader-browse-bar');
   if (!browseBar || document.getElementById('reader-parallels-btn')) return;
@@ -94,6 +114,16 @@ export function injectParallelPanels(groupEl, parsed) {
   }).catch(function () {});
 }
 
+// INTENT: Build and inject the parallel-passage panel DOM for a reader verse
+//   group, including badge, label, "Read →" link, and collapse button for each
+//   parallel ref. Calls wireRefLinks(container) for hover-preview/modal wiring.
+// CHANGE? wireRefLinks is imported from wire.js; if that function's signature or
+//   expected container structure changes, this call will silently mis-wire refs.
+//   Also: BADGE_TYPE_MAP and BADGE_PHRASE_MAP here must stay in sync with parallel
+//   data schema (data/crossrefs/*.json type field values).
+// VERIFY: Enable parallels on a cross-referenced passage (e.g. Matthew 5:3) —
+//   panel renders with correct badge colours and hovering a ref shows the verse
+//   preview tooltip.
 export function buildParallelPanel(groupEl, parsed, sets) {
   var container = document.createElement('div');
   container.className = 'reader-parallels-container';
@@ -196,6 +226,17 @@ export function buildParallelPanel(groupEl, parsed, sets) {
 
 var PARALLEL_PAGE_SIZE = 5;
 
+// INTENT: Fetch the target passage text for a parallel panel body and render it
+//   with optional pagination when the verse range exceeds PARALLEL_PAGE_SIZE (5).
+//   Pagination buttons re-call this function with an updated page arg; they do
+//   not re-fetch — loadBook() caches the full chapter.
+// CHANGE? PARALLEL_PAGE_SIZE (line ~197) controls items per page; pager buttons
+//   use data-page attribute which this function reads back. If loadBook's return
+//   shape changes (currently {chapter: {verse: text}}), update the ch/verse
+//   access at line ~208 here.
+// VERIFY: Enable parallels on Psalm 119 — a long parallel should show a pager;
+//   click Next/Prev and verify verse text changes without a new network request
+//   (chapter JSON is already cached by loadBook).
 export function loadParallelText(ref, version, container, page) {
   page = page || 0;
   var parsed = parseRef(ref);
@@ -296,6 +337,19 @@ export function removeParallelPagination(resultsEl) {
   resultsEl.querySelectorAll('.reader-parallel-page-nav').forEach(function (el) { el.remove(); });
 }
 
+// INTENT: Show/hide individual reader verses via style.display to implement
+//   page-by-page navigation within a long chapter group, and re-inject parallel
+//   panels for the newly visible verse slice on every page change. The DOM
+//   stores page state in data-rpage attributes on nav buttons rather than in JS
+//   state, so panel injection always reads the current visible set.
+// CHANGE? READER_PAGE_SIZE (line ~279) controls items per page. Re-injection of
+//   parallel panels at line ~342 calls injectParallelPanels with a freshly
+//   computed _groupParsedRef — if _groupParsedRef's visible-verse detection
+//   logic changes, parallels may inject for the wrong verse range. data-rpage
+//   attribute name must stay in sync with the nav button click handler below.
+// VERIFY: Enable parallels on Psalm 119 (176 verses), navigate to page 2 —
+//   only vv. 6–10 should be visible; parallel panels should refresh to match
+//   that verse range, not the full chapter.
 function _paginateGroup(groupEl, verses, page) {
   var totalPages = Math.ceil(verses.length / READER_PAGE_SIZE);
   page = Math.max(0, Math.min(page, totalPages - 1));

@@ -140,7 +140,9 @@ export function initSearchPage(input) {
   function setSearchTab(tab) {
     _searchPageTab = tab;
     tabBtns.forEach(function (btn) {
-      btn.classList.toggle('search-tab--active', btn.getAttribute('data-search-tab') === tab);
+      var isActive = btn.getAttribute('data-search-tab') === tab;
+      btn.classList.toggle('search-tab--active', isActive);
+      btn.setAttribute('aria-selected', String(isActive));
     });
 
     var isHubTab    = _hubTabs.indexOf(tab) !== -1;

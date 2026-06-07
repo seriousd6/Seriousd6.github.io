@@ -1,0 +1,242 @@
+{
+  "G1063": {
+    "word": "γάρ", "translit": "gar", "function": "ground",
+    "function_label": "Ground / Reason",
+    "color": "sw-particle--ground",
+    "plain": "Introduces the reason or explanation for the preceding statement. Often translated 'for' — which sounds archaic and is frequently omitted in modern translations, making the logical structure invisible. When you see γάρ, ask: what is being explained by what comes next?",
+    "example": {
+      "ref": "Rom 1:16–17",
+      "note": "Paul writes 'I am not ashamed of the gospel' → γάρ → 'for it is the power of God for salvation' → γάρ → 'for in it the righteousness of God is revealed.' Two stacked grounds. Removing the γάρ makes three disconnected assertions where Paul wrote one reasoned argument."
+    }
+  },
+  "G3767": {
+    "word": "οὖν", "translit": "oun", "function": "inference",
+    "function_label": "Inference / Conclusion",
+    "color": "sw-particle--inference",
+    "plain": "'Therefore' / 'So then' — draws a logical conclusion from what came before. When you see οὖν, ask: what has been established, and what is being concluded from it? Paul's great pivots use this word.",
+    "example": {
+      "ref": "Rom 8:1",
+      "note": "'There is therefore now no condemnation for those in Christ Jesus.' The οὖν connects to everything argued in Romans 1–7. Remove it and the verse sounds like a free-standing promise; keep it and it is the conclusion of a 7-chapter argument."
+    }
+  },
+  "G0235": {
+    "word": "ἀλλά", "translit": "alla", "function": "strong-contrast",
+    "function_label": "Strong Contrast",
+    "color": "sw-particle--contrast",
+    "plain": "Strong adversative — 'but' with real force. Stronger than δέ. Often introduces the main positive point after a negative: 'Not X, but rather Y.' When Paul uses ἀλλά, he is drawing a sharp line.",
+    "example": {
+      "ref": "Phil 2:7",
+      "note": "'He did not regard equality with God as something to be exploited, ἀλλά he emptied himself.' The ἀλλά marks the sharp contrast between what he could have done and what he actually chose."
+    }
+  },
+  "G1161": {
+    "word": "δέ", "translit": "de", "function": "continuation",
+    "function_label": "Continuation / Mild Contrast",
+    "color": "sw-particle--continue",
+    "plain": "The most common connective in the NT. Usually moves the narrative or argument forward ('and', 'now'), but can also mark a mild contrast ('but', 'however'). Context always determines which. It is a postpositive — it always appears second in its clause, never first, even when it is logically the first word.",
+    "example": {
+      "ref": "John 1:1–5",
+      "note": "John strings the Prologue together almost entirely with δέ, giving it a meditative, cumulative rhythm — each statement flowing into the next."
+    }
+  },
+  "G5620": {
+    "word": "ὥστε", "translit": "hoste", "function": "result",
+    "function_label": "Result / Consequence",
+    "color": "sw-particle--result",
+    "plain": "Introduces a result clause — 'so that', 'with the result that', 'therefore'. Different from ἵνα (which is purpose/intention): ὥστε states what actually happened as a consequence, not what was aimed at.",
+    "example": {
+      "ref": "John 3:16",
+      "note": "'God so loved the world ὥστε he gave his only Son.' The ὥστε marks the giving as the actual result/expression of the love — not merely its purpose."
+    }
+  },
+  "G2443": {
+    "word": "ἵνα", "translit": "hina", "function": "purpose",
+    "function_label": "Purpose / Goal",
+    "color": "sw-particle--purpose",
+    "plain": "Introduces a purpose clause — 'in order that', 'that'. Always followed by the subjunctive mood. Marks what someone intends or aims at. Distinguish from ὥστε (actual result) and ὅτι (content or cause).",
+    "example": {
+      "ref": "John 3:16",
+      "note": "'He gave his only Son ἵνα everyone who believes in him should not perish.' The ἵνα marks the intended goal of the giving — salvation — as distinct from the love that motivated it."
+    }
+  },
+  "G3754": {
+    "word": "ὅτι", "translit": "hoti", "function": "content-or-cause",
+    "function_label": "Content ('that') or Cause ('because')",
+    "color": "sw-particle--cause",
+    "plain": "Deliberately ambiguous — ὅτι can introduce content ('I know that...') or cause ('I rejoice because...'). Context must decide. This ambiguity is grammatically significant: many theological debates turn on whether a verse means 'know that God loves you' (content) or 'because God loves you' (ground for action).",
+    "example": {
+      "ref": "1 John 4:19",
+      "note": "'We love because (ὅτι) he first loved us.' The causal reading grounds our love in God's prior love. Some manuscripts and translations read it as 'We love him because...' (content) — a significantly different emphasis."
+    }
+  },
+  "G1487": {
+    "word": "εἰ", "translit": "ei", "function": "condition",
+    "function_label": "Condition (1st or 2nd class)",
+    "color": "sw-particle--condition",
+    "plain": "Introduces a conditional clause. With the indicative mood: first class ('if... and this is assumed true') or second class ('if... but this is assumed false'). The Greek conditional system makes explicit what English leaves implicit — whether the speaker treats the condition as real, contrary-to-fact, or merely possible.",
+    "example": {
+      "ref": "Rom 8:31",
+      "note": "'εἰ God is for us, who can be against us?' First class condition — Paul is asserting it as true for the sake of argument, not questioning it. 'If — and he is — God is for us...'"
+    }
+  },
+  "G1437": {
+    "word": "ἐάν", "translit": "ean", "function": "condition-possible",
+    "function_label": "Condition (3rd class — possible)",
+    "color": "sw-particle--condition",
+    "plain": "Third class condition with the subjunctive: 'if (possibly)' — the speaker presents the condition as genuinely possible but not assumed. Translators often use 'if' for both εἰ and ἐάν, hiding the distinction. When εἰ treats the condition as real and ἐάν as possible, the difference matters for theological precision.",
+    "example": {
+      "ref": "1 John 1:9",
+      "note": "'ἐάν we confess our sins...' — third class condition. The confession is possible, not assumed as already happening. The promise is real; the condition is a real condition."
+    }
+  },
+  "G0686": {
+    "word": "ἄρα", "translit": "ara", "function": "inference",
+    "function_label": "Inference / So then",
+    "color": "sw-particle--inference",
+    "plain": "Draws a conclusion: 'so', 'then', 'therefore'. Similar to οὖν but with a slightly more logical/deductive flavor. Often paired with οὖν as ἄρα οὖν ('so then therefore') for strong emphasis on the conclusion.",
+    "example": {
+      "ref": "Rom 7:3",
+      "note": "'ἄρα then she is not an adulteress...' — logical conclusion from the preceding legal argument about marriage and death."
+    }
+  },
+  "G4133": {
+    "word": "πλήν", "translit": "plēn", "function": "exception-contrast",
+    "function_label": "Exception / Nevertheless",
+    "color": "sw-particle--contrast",
+    "plain": "'But', 'however', 'nevertheless', 'except that'. Marks a qualification or exception to what was just said. Luke uses it frequently; Paul rarely. Often signals a pastoral pivot: 'This is difficult — nevertheless, here is what matters.'",
+    "example": {
+      "ref": "Phil 4:14",
+      "note": "'πλήν you have done well to share in my trouble.' After explaining his contentment in all circumstances, Paul uses πλήν to acknowledge the Philippians' particular gift without undermining his point about contentment."
+    }
+  },
+  "G3303": {
+    "word": "μέν", "translit": "men", "function": "contrast-setup",
+    "function_label": "Contrast Setup (on the one hand...)",
+    "color": "sw-particle--continue",
+    "plain": "'On the one hand...' — sets up a contrast or elaboration that is completed by a following δέ ('on the other hand'). The μέν...δέ construction is a Greek way of presenting two sides of something. Modern translations frequently drop the μέν entirely, hiding the contrast structure.",
+    "example": {
+      "ref": "Heb 1:1–2",
+      "note": "'God, who at many times and in many ways spoke to our fathers through the prophets (μέν)... has in these last days spoken to us by his Son (δέ).' The μέν...δέ sets up the contrast between old and new revelation."
+    }
+  },
+  "G2532": {
+    "word": "καί", "translit": "kai", "function": "additive",
+    "function_label": "Additive (and / also / even)",
+    "color": "sw-particle--continue",
+    "plain": "The most common word in the NT — 'and/also/even'. Usually additive, but when it carries the force of 'even' or 'indeed', it adds emphasis that translations often smooth away. John's Gospel uses καί where Paul would use δέ — giving Johannine Greek a more Hebraic, additive rhythm.",
+    "example": {
+      "ref": "John 1:14",
+      "note": "'καὶ ὁ λόγος σὰρξ ἐγένετο' — 'And the Word became flesh.' The καί here is not merely additive; it marks the shocking next step after 'the Word was God.' Some translate as 'indeed' or 'and so.'"
+    }
+  },
+  "G3779": {
+    "word": "οὕτως", "translit": "houtōs", "function": "manner-result",
+    "function_label": "Manner / Result (so / thus)",
+    "color": "sw-particle--result",
+    "plain": "'So', 'in this way', 'thus'. Can indicate manner (how something was done) or result (how something turned out). Famous for John 3:16 where οὕτως introduces the manner/degree of God's love.",
+    "example": {
+      "ref": "John 3:16",
+      "note": "'For God οὕτως loved the world...' — most translations render this 'so loved' (as in 'so much'), but the Greek means 'in this way/manner' — the way is what follows: he gave his Son. The degree reading and the manner reading both illuminate the text."
+    }
+  },
+  "G1352": {
+    "word": "διό", "translit": "dio", "function": "inference",
+    "function_label": "Therefore / For this reason",
+    "color": "sw-particle--inference",
+    "plain": "A strong inferential — 'therefore', 'for this reason.' Stronger and more explicit than οὖν; marks a conclusion that directly follows from the stated ground. Common in Paul and Hebrews at pivotal transitions.",
+    "example": {
+      "ref": "Heb 2:1",
+      "note": "'Διό we must pay much closer attention to what we have heard.' The inference drawn from the superiority of the Son established in chapter 1."
+    }
+  },
+  "G1360": {
+    "word": "διότι", "translit": "dioti", "function": "ground",
+    "function_label": "Ground / Because",
+    "color": "sw-particle--ground",
+    "plain": "'Because', 'for the reason that', 'therefore'. A compound of διά (through/because of) + ὅτι (that). Introduces a strong causal ground. Sometimes translated 'therefore' when used at the start of an inference.",
+    "example": {
+      "ref": "Rom 1:21",
+      "note": "'Διότι, knowing God, they did not honor him as God...' — the reason why God's wrath is revealed (stated in v.18) is now given in full."
+    }
+  },
+  "G1893": {
+    "word": "ἐπεί", "translit": "epei", "function": "ground",
+    "function_label": "Since / Causal Ground",
+    "color": "sw-particle--ground",
+    "plain": "'Since', 'because', 'for'. Introduces a causal ground, often with the sense that the grounds are assumed to be acknowledged by the reader. Similar to γάρ but slightly more formal.",
+    "example": {
+      "ref": "Heb 9:17",
+      "note": "'ἐπεί a will takes effect only at death...' — the author grounds the argument about the new covenant in an analogy from common law."
+    }
+  },
+  "G5037": {
+    "word": "τε", "translit": "te", "function": "additive",
+    "function_label": "And / Both (connective)",
+    "color": "sw-particle--continue",
+    "plain": "A connective 'and' that is slightly more formal than καί. Often appears in the construction τε...καί ('both...and'). Luke uses it extensively in Acts to link events in a sequence. It is a postpositive — never appears first in a clause.",
+    "example": {
+      "ref": "Acts 2:43",
+      "note": "'Many wonders and signs τε were done through the apostles.' The τε adds a dignified, narrative link between successive events in Luke's account."
+    }
+  },
+  "G2089": {
+    "word": "ἔτι", "translit": "eti", "function": "additive-temporal",
+    "function_label": "Still / Yet / Furthermore",
+    "color": "sw-particle--continue",
+    "plain": "'Still', 'yet', 'even now', 'furthermore'. Temporal or additive. In the additive sense, can introduce an additional argument or intensify what was already said: 'and beyond that...'",
+    "example": {
+      "ref": "Rom 5:8",
+      "note": "'God demonstrates his love for us in that ἔτι while we were sinners, Christ died for us.' The ἔτι emphasizes the timing — even while (still in the condition of) sinners."
+    }
+  },
+  "G1065": {
+    "word": "γε", "translit": "ge", "function": "focus",
+    "function_label": "Focus / Intensifier (at least / indeed / even)",
+    "color": "sw-particle--continue",
+    "plain": "An intensifying or focusing particle — 'at least', 'indeed', 'even'. Adds emphasis to the word it follows. Often appears in combinations: εἴ γε ('if indeed'), μέν γε ('certainly'), εἴπερ γε. Frequently missed by translators.",
+    "example": {
+      "ref": "Eph 3:2",
+      "note": "'εἴ γε ἠκούσατε' — 'if indeed you have heard.' The γε makes the 'if' more presumptive — Paul is fairly confident they have heard of his commission."
+    }
+  },
+  "G0686": {
+    "word": "ἄρα", "translit": "ara", "function": "inference",
+    "function_label": "So / Then (mild inference)",
+    "color": "sw-particle--inference",
+    "plain": "A mild inferential particle — 'so', 'then', 'consequently'. Often appears in rhetorical questions or rapid conclusions. When it appears in a question (ἄρα οὖν;), it invites the reader to draw the obvious conclusion.",
+    "example": {
+      "ref": "Gal 2:21",
+      "note": "'ἄρα Χριστὸς δωρεὰν ἀπέθανεν' — 'then Christ died for nothing.' Paul draws the logical consequence that would follow if justification came through the law — a reductio ad absurdum."
+    }
+  },
+  "G3361": {
+    "word": "μή", "translit": "mē", "function": "negation-process",
+    "function_label": "Negation (process / prohibition)",
+    "color": "sw-particle--negation",
+    "plain": "Negation used with non-indicative moods (subjunctive, imperative, infinitive, participle). μή with a present imperative means 'stop doing' (you are currently doing this). μή with an aorist subjunctive means 'don't start.' This distinction — which English 'don't' completely hides — often changes the pastoral force of a command.",
+    "example": {
+      "ref": "Eph 4:30",
+      "note": "'μὴ λυπεῖτε τὸ πνεῦμα' — present imperative: 'Stop grieving the Holy Spirit' (implying they are currently doing so). Not merely a general prohibition."
+    }
+  },
+  "G3756": {
+    "word": "οὐ / οὐκ / οὐχ", "translit": "ou / ouk / ouch", "function": "negation-fact",
+    "function_label": "Negation (factual / absolute)",
+    "color": "sw-particle--negation",
+    "plain": "Absolute factual negation — 'not', 'no'. Used with the indicative mood to negate facts. The distinction between οὐ (factual negation) and μή (prohibitive/subjunctive negation) is linguistically precise. οὐ says something is not the case as a matter of fact.",
+    "example": {
+      "ref": "John 1:3",
+      "note": "'Without him οὐδὲ ἓν ἐγένετο ὃ γέγονεν' — 'Not even one thing that has come into being came into being without him.' The double οὐ (οὐδέ...ὃ) is emphatic total exclusion."
+    }
+  },
+  "G1223": {
+    "word": "διά", "translit": "dia", "function": "causal-or-means",
+    "function_label": "Through / Because of (cause or means)",
+    "color": "sw-particle--ground",
+    "plain": "A preposition that becomes particle-like in certain constructions. διά + accusative = 'because of / on account of.' διά + genitive = 'through / by means of.' The case determines the meaning — a distinction many English translations blur.",
+    "example": {
+      "ref": "Rom 4:25",
+      "note": "'who was delivered up διὰ τὰ παραπτώματα ἡμῶν' (because of our trespasses — accusative) 'and raised διὰ τὴν δικαίωσιν ἡμῶν' (for our justification — accusative showing purpose/result). The prepositions carry the causal logic."
+    }
+  }
+}

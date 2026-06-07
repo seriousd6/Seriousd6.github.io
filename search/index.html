@@ -32,13 +32,13 @@
       <h1>Explore</h1>
 
       <!-- Top-level hub tabs — search tabs + 4 browse tabs -->
-      <div class="search-tab-row">
-        <button class="search-tab search-tab--active" data-search-tab="verse" type="button">🔍 Verse Search</button>
-        <button class="search-tab" data-search-tab="explore" type="button">✦ Omni-search</button>
-        <button class="search-tab" data-search-tab="topics" type="button">📑 Topics</button>
-        <button class="search-tab" data-search-tab="guides" type="button">📖 Study Guides</button>
-        <button class="search-tab" data-search-tab="dictionary" type="button">📘 Dictionary</button>
-        <button class="search-tab" data-search-tab="wordcloud" type="button">☁ Word Cloud</button>
+      <div class="search-tab-row" role="tablist" aria-label="Explore sections">
+        <button class="search-tab search-tab--active" data-search-tab="verse"       role="tab" aria-selected="true"  type="button">🔍 Verse Search</button>
+        <button class="search-tab" data-search-tab="explore"    role="tab" aria-selected="false" type="button">✦ Omni-search</button>
+        <button class="search-tab" data-search-tab="topics"     role="tab" aria-selected="false" type="button">📑 Topics</button>
+        <button class="search-tab" data-search-tab="guides"     role="tab" aria-selected="false" type="button">📖 Study Guides</button>
+        <button class="search-tab" data-search-tab="dictionary" role="tab" aria-selected="false" type="button">📘 Dictionary</button>
+        <button class="search-tab" data-search-tab="wordcloud"  role="tab" aria-selected="false" type="button">☁ Word Cloud</button>
       </div>
 
       <!-- Search panel: verse search + omni-search (hidden when a browse tab is active) -->

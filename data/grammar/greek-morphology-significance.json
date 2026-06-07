@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "description": "Semantic significance notes for Greek morphological categories, keyed by POS and category. Used by the Workshop Grammar section to surface why a grammatical form matters, not just what it is.",
+    "pos_codes": ["verb", "noun", "adjective", "participle", "infinitive", "article"]
+  },
+
+  "verb_aspect_aorist": {
+    "category": "Aorist Aspect",
+    "pos": "verb",
+    "label": "Aorist (Simple / Punctiliar)",
+    "significance": "The aorist views the action as a whole — a complete event, without dwelling on its duration or ongoing nature. It is the 'snapshot' tense: the action happened. English often renders this as a simple past. The aorist does NOT necessarily mean 'once-for-all' or 'instantaneous' — that is a common over-reading. The aorist is simply the unmarked, default way to refer to a past event.",
+    "debate": "The 'once-for-all aorist' (e.g., in 1 John 3:9 'whoever is born of God does not practice sin') is debated. The aorist ἁμαρτάνει is actually a present, but the broader debate over aorist as implying permanent results is important — it is often overstated by preachers but has real exegetical uses (e.g., Rom 6:10).",
+    "examples": ["Rom 6:10 — 'the death he died (aorist) he died to sin once for all'; 'once for all' (ἐφάπαξ) is added by Paul precisely because the aorist alone doesn't carry that meaning", "Eph 2:8 — 'you have been saved (perfect, not aorist)' — Paul chose perfect here deliberately"]
+  },
+
+  "verb_aspect_perfect": {
+    "category": "Perfect Aspect",
+    "pos": "verb",
+    "label": "Perfect (Completed Action with Present State)",
+    "significance": "The perfect is the most theologically loaded tense in Greek. It describes an action completed in the past whose results or state continue into the present. The perfect says: 'it happened, and things are still that way.' This double focus — completed action + present state — is often compressed in English translations.",
+    "debate": "John 19:30 — τετέλεσται ('It is finished') is perfect, not aorist. The perfect means 'it has been brought to completion and stands completed' — not merely 'it ended.' This is a significant theological difference. The state of completion persists.",
+    "examples": ["John 19:30 — τετέλεσται: 'it stands finished'", "1 Cor 15:4 — 'he has been raised (perfect)' — the resurrection is a present state, not just a past event", "Eph 2:8 — 'you have been saved (perfect, σεσῳσμένοι)' — saved and standing in a saved condition"]
+  },
+
+  "verb_aspect_imperfect": {
+    "category": "Imperfect Aspect",
+    "pos": "verb",
+    "label": "Imperfect (Ongoing / Repeated Past Action)",
+    "significance": "The imperfect describes a past action as ongoing, repeated, or in process — the 'movie camera' tense vs. the aorist's 'snapshot.' When you see an imperfect, ask: what was the repeated or continuous nature of this action? Translations often miss this by using simple past.",
+    "debate": "Mark's Gospel uses imperfect heavily (including the historical present ἐρεῖ), giving it a vivid, immediate style. Luke often converts Mark's imperfects to aorists in his retelling — a text-critical and stylistic point with theological implications for how each Gospel presents Jesus's ministry.",
+    "examples": ["Mark 1:34 — 'he was healing (imperfect) many who were sick' — ongoing healing session", "Luke 15:16 — 'he was longing (imperfect)' — the son's ongoing, frustrated desire", "Acts 2:45 — 'they were distributing (imperfect) to all, as anyone had need' — repeated acts of generosity, not one event"]
+  },
+
+  "verb_aspect_present": {
+    "category": "Present Aspect",
+    "pos": "verb",
+    "label": "Present (Ongoing / Process Action)",
+    "significance": "In the indicative, the present describes an ongoing or repeatedly occurring action from the author's perspective — either literally present or a habitual/gnomic reality. The present imperative often means 'keep on doing' (ongoing command), while the aorist imperative is an urgent one-time command. This distinction drives many exegetical debates.",
+    "debate": "1 John 3:6,9 — 'no one who abides in him keeps on sinning (present)' — the present tense is key to interpreting this passage. John is not saying believers never sin (cf. 1:8–9); he is saying continuous, unbroken sinning as a lifestyle is incompatible with abiding. The present aspect is the difference between 'never sins at all' and 'does not go on sinning habitually.'",
+    "examples": ["Matt 7:7 — 'ask (present), seek (present), knock (present)' — keep asking, keep seeking, keep knocking", "Rom 12:1 — 'present your bodies (aorist)' — a decisive act", "Phil 4:6 — 'be anxious (present, negative) about nothing' — stop the ongoing pattern of anxiety"]
+  },
+
+  "verb_voice_passive": {
+    "category": "Passive Voice",
+    "pos": "verb",
+    "label": "Passive Voice (Action Received — often 'Divine Passive')",
+    "significance": "The passive voice means the subject receives the action. The agent who acts is often introduced by ὑπό ('by'). When no agent is named in a theological context, this is called a 'divine passive' or 'theological passive' — a Jewish/Greek convention where God is the implicit agent, named to avoid overusing God's name or to preserve reverence.",
+    "debate": "The divine passive is exegetically significant throughout the NT. 'You will be forgiven (passive)' = 'God will forgive you.' 'Blessed are those who mourn, for they will be comforted (divine passive)' = God will comfort them. Recognizing divine passives prevents misreadings that see an unspecified human agent.",
+    "examples": ["Matt 5:4 — 'they shall be comforted' — divine passive; God comforts", "Luke 12:20 — 'your soul is required of you' — divine passive; God requires it", "Rom 1:4 — 'declared to be the Son of God... by the resurrection' — the passive points to God's act, not human declaration"]
+  },
+
+  "verb_mood_subjunctive": {
+    "category": "Subjunctive Mood",
+    "pos": "verb",
+    "label": "Subjunctive (Possibility / Purpose / Condition)",
+    "significance": "The subjunctive expresses possibility, purpose, or contingency — not certain reality. Where the indicative states facts, the subjunctive enters the realm of 'might', 'should', 'in order that', 'whenever.' The subjunctive is the mood of the conditional, of purpose clauses (ἵνα + subj.), and of indefinite temporal clauses.",
+    "debate": "John 3:16 — 'that everyone who believes (πιστεύων, present participle, not subjunctive here) should not perish but have (ἔχῃ, subjunctive) eternal life.' The ἵνα + subjunctive construction marks 'having eternal life' as the intended outcome/purpose, not an automatic result. The grammar preserves contingency.",
+    "examples": ["John 3:16 — ἵνα...ἔχῃ: 'so that...he might have' — purpose clause, not simple result", "1 John 1:9 — 'if we confess (3rd class condition, subjunctive)... he is faithful to forgive' — the condition is subjunctive (assumed possible), the result is indicative (certain)", "Rev 3:20 — 'if anyone hears my voice... I will come in' — subjunctive condition, indicative promise"]
+  },
+
+  "verb_mood_imperative": {
+    "category": "Imperative Mood",
+    "pos": "verb",
+    "label": "Imperative (Command)",
+    "significance": "The imperative is the mood of command or entreaty. The tense of the imperative matters: aorist imperative tends toward a specific, urgent command ('do this now'); present imperative tends toward ongoing behavior ('keep doing / stop doing this'). Negative aorist imperative (μή + aorist subj.) = 'don't do this.' Negative present imperative (μή + present impv.) = 'stop doing this / don't keep doing this.'",
+    "debate": "Phil 4:4 — 'Rejoice (present imperative) in the Lord always' — Paul is commanding an ongoing disposition, not a one-time act. The present tense transforms what might seem like an impossible emotional demand into a sustained orientation of the heart. Many imperatives in Paul's letters are present, emphasizing Christian life as ongoing practice, not single decisions.",
+    "examples": ["Matt 6:9 — 'pray (aorist) like this' — learn this prayer; a model to adopt", "1 Thess 5:16–18 — 'rejoice always, pray continually, give thanks in all circumstances' — three present imperatives, three ongoing dispositions", "Rom 6:13 — 'do not present (present) your members to sin... but present (aorist) yourselves to God'"]
+  },
+
+  "noun_case_genitive": {
+    "category": "Genitive Case",
+    "pos": "noun",
+    "label": "Genitive (Of / Relationship)",
+    "significance": "The genitive expresses a relationship between two nouns, typically translated 'of.' But there are many subspecies: possessive ('the word of God' = God's word), subjective (God acts), objective (God is acted upon), genitive of source ('righteousness from God'), partitive ('some of the group'), and many more. The ambiguity of the genitive drives some of the biggest theological debates in the NT.",
+    "debate": "Rom 3:22 — 'righteousness of God through faith of/in Jesus Christ' — is πίστεως Ἰησοῦ Χριστοῦ (a) objective genitive: 'faith in Jesus Christ' (our faith directed at Christ, the traditional reading) or (b) subjective genitive: 'the faithfulness of Jesus Christ' (Christ's own faithfulness as the basis)? Both are grammatically valid. This is one of the most significant current debates in Pauline studies.",
+    "examples": ["2 Cor 5:14 — 'the love of Christ compels us' — subjective (Christ's love for us) or objective (our love for Christ)?", "Gal 2:16,20 — πίστεως Ἰησοῦ Χριστοῦ — the faith/faithfulness of Christ debate", "Rev 1:1 — 'the revelation of Jesus Christ' — both: from Christ AND about Christ"]
+  },
+
+  "noun_case_dative": {
+    "category": "Dative Case",
+    "pos": "noun",
+    "label": "Dative (Indirect Object / Instrument / Sphere)",
+    "significance": "The dative serves multiple functions: indirect object ('gave to him'), instrument or means ('by the Spirit'), location or sphere ('in Christ'), and interest ('for your benefit' / 'against you'). The dative 'in Christ' (ἐν Χριστῷ) is theologically central in Paul — it is a locative dative expressing union, not merely association.",
+    "debate": "Rom 6:2 — 'we who died to sin (τῇ ἁμαρτίᾳ, dative)' — this is a dative of reference: 'with respect to sin.' Not 'we died and sin is gone' but 'our relationship to sin's dominion has changed.' The dative case preserves a nuance that the English 'to' often flattens.",
+    "examples": ["Eph 2:8 — 'by grace (χάριτι, instrumental dative) you have been saved through faith'", "Gal 2:19 — 'I died to the law (νόμῳ, dative of reference)' — with respect to the law's claim on me", "Phil 2:7 — 'taking the form of a servant (δούλου, genitive) in the likeness (ὁμοιώματι, dative) of men'"]
+  },
+
+  "participle_substantival": {
+    "category": "Participle — Substantival",
+    "pos": "participle",
+    "label": "Participle Used as a Noun",
+    "significance": "When a Greek participle is used with the article as a noun, it refers to a class of people or things defined by the action. 'The believing ones' (οἱ πιστεύοντες) is a richer formulation than just 'believers' — it emphasizes faith as an ongoing activity that defines the group. Substantival participles often carry more dynamic, process-oriented meaning than equivalent English nouns.",
+    "debate": "John 3:16 — 'everyone who believes (πᾶς ὁ πιστεύων)' — the present participle 'the one who is believing' emphasizes ongoing faith as the condition, not a one-time decision. This nuance has significant implications for debates about assurance and perseverance.",
+    "examples": ["John 3:16 — πᾶς ὁ πιστεύων: 'every one who is believing'", "Rom 1:16 — 'to everyone who believes (πιστεύοντι, dat. participle)' — ongoing believers", "1 Cor 1:18 — 'to those who are perishing (ἀπολλυμένοις)... to us who are being saved (σῳζομένοις)' — two groups defined by their present trajectory"]
+  },
+
+  "article_absence": {
+    "category": "Absence of the Article",
+    "pos": "article",
+    "label": "Anarthrous Construction (No Article)",
+    "significance": "Greek has no indefinite article ('a'), so the absence of the definite article (ἄρθρον) can mean: (1) indefinite — 'a word'; (2) qualitative — emphasizing what kind of thing ('a god' vs 'divine in nature'); (3) proper name / category used without article. The anarthrous noun is often emphasizing quality or nature rather than identity.",
+    "debate": "John 1:1c — 'the Word was God (θεὸς ἦν ὁ λόγος)' — θεός lacks the article. Does this mean 'the Word was a god' (Jehovah's Witnesses) or 'the Word was divine in nature' (Colwell's Rule: definite predicate nominatives preceding the verb often lack the article)? Most scholars reject the Arian reading; the anarthrous θεός emphasizes the divine nature/quality shared with the Father.",
+    "examples": ["John 1:1 — θεὸς ἦν ὁ λόγος: predicate nominative before verb, anarthrous; Colwell's Rule applies", "John 4:24 — 'God is spirit (πνεῦμα ὁ θεός)' — πνεῦμα is anarthrous, emphasizing nature, not 'a spirit'", "Rom 1:1 — 'a servant (δοῦλος, anarthrous) of Christ Jesus'"]
+  },
+
+  "infinitive_purpose": {
+    "category": "Infinitive of Purpose",
+    "pos": "infinitive",
+    "label": "Infinitive Expressing Purpose / Result",
+    "significance": "Greek infinitives can express purpose ('in order to'), result ('so that'), or indirect statement ('he said that he would...'). The articular infinitive with τοῦ is particularly common for purpose. Recognizing an infinitive of purpose vs. result vs. indirect speech changes how the clause is read — purpose looks backward at intention; result looks forward at what happened.",
+    "examples": ["Phil 3:10 — 'to know (τοῦ γνῶναι, articular infinitive of purpose) him...' — the infinitive chain expresses Paul's life aim", "Matt 2:2 — 'we came to worship (aorist infinitive of purpose) him'", "Luke 1:54 — 'to help (ἀντιλαβέσθαι) his servant Israel' — infinitive of purpose in the Magnificat"]
+  }
+}

@@ -362,7 +362,7 @@ export async function initOLSection(parsed, vsCreateSection, vsRebuildNav) {
   body.innerHTML = '';
 
   if (!notes) {
-    body.innerHTML = '<p class="olc-empty">Original language notes not available for this book. Run <code>python3 scripts/generate-notes.py</code> to generate them.</p>';
+    body.innerHTML = '<p class="olc-empty">Original language notes not available for ' + (parsed.bookId || 'this book') + ' chapter ' + parsed.ch + '. The interlinear source may not have data for this chapter.</p>';
     return;
   }
 

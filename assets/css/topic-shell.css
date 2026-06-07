@@ -271,3 +271,19 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
 }
+
+/* ── Dark-mode nav panel override ────────────────────────────────────────── */
+/* .nav-panel has background:#fff and hardcoded warm text with no dark override */
+[data-theme="dark"] .nav-panel                { background: var(--color-surface, #1e1e1e); }
+[data-theme="dark"] .nav-panel__section-title { color: var(--color-muted, #999); }
+[data-theme="dark"] .nav-panel__list a        { color: var(--color-text, #e8dfc8); }
+[data-theme="dark"] .nav-panel__list a:hover  { background: rgba(255,255,255,.06); color: var(--color-text, #e8dfc8); }
+[data-theme="dark"] .nav-panel__list a[aria-current="page"] { background: rgba(255,255,255,.1); color: var(--color-text, #e8dfc8); }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav-panel                { background: var(--color-surface, #1e1e1e); }
+  :root:not([data-theme="light"]) .nav-panel__section-title { color: var(--color-muted, #999); }
+  :root:not([data-theme="light"]) .nav-panel__list a        { color: var(--color-text, #e8dfc8); }
+  :root:not([data-theme="light"]) .nav-panel__list a:hover  { background: rgba(255,255,255,.06); color: var(--color-text, #e8dfc8); }
+  :root:not([data-theme="light"]) .nav-panel__list a[aria-current="page"] { background: rgba(255,255,255,.1); color: var(--color-text, #e8dfc8); }
+}

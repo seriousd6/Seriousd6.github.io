@@ -349,7 +349,8 @@ export function renderReaderInterlinearRow(container, tokens, bookId) {
     container.innerHTML = html;
 
     container.querySelectorAll('.ri-tile').forEach(function (tile) {
-      tile.addEventListener('click', function () {
+      tile.addEventListener('click', function (e) {
+        e.stopPropagation();  // prevents bubble to document outside-click listener
         _riShowPopover(tile, strongsDict);
       });
     });
@@ -450,17 +451,17 @@ function _riShowPopover(tile, strongsDict) {
     _riPopoverEl = null;
   });
 
-  setTimeout(function () {
-    document.addEventListener('click', function _outside(e) {
-      if (!pop.contains(e.target) && e.target !== tile) {
-        if (_riScrollCleanup) { _riScrollCleanup(); _riScrollCleanup = null; }
-        if (_riActiveTile) { _riActiveTile.classList.remove('ri-tile--active'); _riActiveTile = null; }
-        pop.remove();
-        _riPopoverEl = null;
-        document.removeEventListener('click', _outside);
-      }
-    });
-  }, 10);
+  // Safe direct listener: tile click uses e.stopPropagation(), so this won't fire
+  // for the same click that opened the popover (no setTimeout race needed).
+  document.addEventListener('click', function _outside(e) {
+    if (!pop.contains(e.target)) {
+      document.removeEventListener('click', _outside);
+      if (_riScrollCleanup) { _riScrollCleanup(); _riScrollCleanup = null; }
+      if (_riActiveTile) { _riActiveTile.classList.remove('ri-tile--active'); _riActiveTile = null; }
+      pop.remove();
+      _riPopoverEl = null;
+    }
+  });
 }
 
 // ── expandMorphCode (exposed for verse-study.js) ──────────────────────────

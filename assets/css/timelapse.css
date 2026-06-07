@@ -677,6 +677,13 @@
 }
 [data-theme="dark"] .tl-tribe-tt-detail { color: var(--color-muted, #a09070); }
 [data-theme="dark"] .tl-place-tip-sep   { border-top-color: var(--color-border, #3a2e1e); }
+/* INTENT: Play, continue, and events-toggle buttons use background:var(--color-primary)
+   which is golden (#e8c87a) in dark mode — white text on golden fails (~1.3:1).
+   --color-on-primary (#1a1208) is designed for exactly this pairing (10:1 on golden). */
+[data-theme="dark"] .tl-btn-play,
+[data-theme="dark"] .tl-btn-continue,
+[data-theme="dark"] .tl-events-toggle { color: var(--color-on-primary); }
+[data-theme="dark"] .tl-map-link:hover { color: var(--color-on-primary); }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tl-tribe-tip,
@@ -687,4 +694,8 @@
   }
   :root:not([data-theme="light"]) .tl-tribe-tt-detail { color: var(--color-muted, #a09070); }
   :root:not([data-theme="light"]) .tl-place-tip-sep   { border-top-color: var(--color-border, #3a2e1e); }
+  :root:not([data-theme="light"]) .tl-btn-play,
+  :root:not([data-theme="light"]) .tl-btn-continue,
+  :root:not([data-theme="light"]) .tl-events-toggle { color: var(--color-on-primary); }
+  :root:not([data-theme="light"]) .tl-map-link:hover { color: var(--color-on-primary); }
 }

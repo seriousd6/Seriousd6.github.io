@@ -358,7 +358,18 @@ export function autoTagTermsWhenReady(root) {
   _loadTermMap().then(function () { autoTagTerms(root); });
 }
 
+// INTENT: Guard against loading 3.2 MB of term-index data on pages with no taggable content
+//   (maps, history, search, library progress, etc.). Checks for `.term` elements AND any
+//   container matching `_AUTOTAG_SELECTORS` before triggering the network fetch.
+// CHANGE? If a new page type gains autotag-eligible content, ensure its container selector
+//   appears in `_AUTOTAG_SELECTORS` so this guard allows the load.
+// VERIFY: Open DevTools Network on `/history/` with cache cleared — no requests to
+//   `data/dictionary/index.json`, `data/smith/index.json`, or `data/topical/nave.json`.
+//   Open `/topics/christology/` — all term-index files load during idle.
 export function runAutoTagTerms() {
+  var hasTerms   = !!document.querySelector('.term');
+  var hasContent = !!document.querySelector(_AUTOTAG_SELECTORS);
+  if (!hasTerms && !hasContent) return;
   _loadTermMap().then(function () {
     document.querySelectorAll('.term').forEach(function (el) {
       var key = el.textContent.toLowerCase().trim();

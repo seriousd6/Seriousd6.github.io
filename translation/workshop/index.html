@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
-  <title>MKT Translation Workshop — Bible Study</title>
+  <title>Original Language Study — Bible Study</title>
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="stylesheet" href="../../assets/css/workshop.css" />
 </head>
@@ -17,15 +17,26 @@
       <div class="ws-topbar__title">
         <a href="../../" class="ws-back-link" title="Back to main site">← Site</a>
         <span class="ws-topbar__sep">|</span>
-        <span class="ws-topbar__icon">⚙</span>
-        <span>MKT Translation Workshop</span>
-        <span class="ws-topbar__private">private</span>
+        <span class="ws-topbar__icon">📖</span>
+        <span>Original Language Study</span>
       </div>
       <div class="ws-topbar__stats" id="ws-topbar-stats"></div>
       <div class="ws-topbar__actions">
+        <button class="ws-btn ws-btn--sm" id="sw-trans-toggle-btn" type="button" title="Show translation workflow tools">Translation mode</button>
         <button class="ws-btn ws-btn--sm" id="ws-import-btn" title="Import a previously exported decisions JSON">Import</button>
         <button class="ws-btn ws-btn--sm" id="ws-export-btn" title="Export all decisions as JSON">Export JSON</button>
         <input type="file" id="ws-import-file" accept=".json" hidden />
+      </div>
+    </div>
+
+    <!-- Passage entry panel — shown above the layout at all times -->
+    <div id="sw-passage-entry" class="sw-passage-entry">
+      <div class="sw-passage-entry__inner">
+        <input type="text" id="sw-ref-input" class="sw-ref-input"
+               placeholder="Study a passage… e.g. John 1:1-5, Romans 8:1"
+               autocomplete="off" spellcheck="false" />
+        <button type="button" id="sw-study-btn" class="ws-btn sw-study-btn">Study Passage</button>
+        <a id="sw-browse-link" class="sw-browse-link" href="#">or browse vocabulary →</a>
       </div>
     </div>
 
@@ -40,16 +51,34 @@
     <!-- Main 3-column layout (shown after load) -->
     <div class="ws-layout" id="ws-layout" hidden>
 
-      <!-- Column 1: Phase navigation -->
+      <!-- Column 1: Phase navigation (also shows when in passage mode) -->
       <div class="ws-col ws-col--nav" id="ws-nav"></div>
 
-      <!-- Column 2: Entry queue -->
-      <div class="ws-col ws-col--queue">
-        <div class="ws-queue-header">
-          <input type="search" id="ws-search" class="ws-search" placeholder="Filter entries…" autocomplete="off" />
-          <span id="ws-count" class="ws-count"></span>
+      <!-- Column 2: Entry queue OR passage study view -->
+      <div class="ws-col ws-col--queue" id="ws-col-queue">
+        <!-- Vocabulary browse mode -->
+        <div id="ws-browse-panel" class="sw-panel">
+          <div class="ws-queue-header">
+            <input type="search" id="ws-search" class="ws-search" placeholder="Filter entries…" autocomplete="off" />
+            <span id="ws-count" class="ws-count"></span>
+          </div>
+          <div id="ws-queue" class="ws-queue"></div>
         </div>
-        <div id="ws-queue" class="ws-queue"></div>
+
+        <!-- Passage study mode -->
+        <div id="sw-passage-view" class="sw-passage-view sw-panel" hidden>
+          <div class="sw-passage-header" id="sw-passage-header"></div>
+          <div id="sw-ptiles" class="sw-ptiles"></div>
+          <div class="sw-passage-tabs" id="sw-passage-tabs" hidden>
+            <button type="button" class="sw-tab-btn sw-tab-btn--active" data-tab="literary" title="Literary Structure analysis">Literary Structure</button>
+            <button type="button" class="sw-tab-btn" data-tab="cultural" title="Cultural Context">Cultural Context</button>
+            <button type="button" class="sw-tab-btn" data-tab="intertextual" title="Intertextual connections">Intertextual</button>
+            <button type="button" class="sw-tab-btn" data-tab="synthesis" title="Passage synthesis">Synthesis</button>
+          </div>
+          <div class="sw-tab-content" id="sw-tab-content" hidden>
+            <p class="sw-tab-stub">Literary Structure analysis will appear here (SW-D).</p>
+          </div>
+        </div>
       </div>
 
       <!-- Column 3: Lexical dossier -->

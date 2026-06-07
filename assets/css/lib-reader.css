@@ -204,6 +204,18 @@
     padding: .4rem .6rem;
     font-size: .9rem;
   }
+  /* Chapter pager and sub-pager buttons: enforce 44px touch target */
+  .lr-pager-btn, .lr-subpager-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Section tabs: enforce 44px touch target */
+  .lr-tab {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 /* ── Volume switcher chips ─────────────────────────────────────────────────── */
@@ -429,7 +441,7 @@ mark.lr-find-mark {
 
 @media (max-width: 600px) {
   .lr-tab-bar { gap: .25rem; }
-  .lr-tab { font-size: .72rem; padding: .25em .6em; }
+  .lr-tab { font-size: .72rem; padding: .25em .6em; min-height: 44px; }
 }
 
 /* ── Sub-pager (within long sections) ─────────────────────────────────────── */

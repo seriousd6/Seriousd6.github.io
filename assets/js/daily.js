@@ -124,6 +124,15 @@ function _dailyReadAllUrl(passages) {
 }
 
 // ── initDailyPage ─────────────────────────────────────────────────────────────
+// INTENT: Bootstrap the full daily reading page (daily.html) — reads DAILY_PLAN_KEY
+//   and DAILY_DEVOT_KEY from localStorage to restore the user's last plan and
+//   devotional selection, reads bsw_daily_start_{pid} to compute today's day
+//   number, and renders greeting, plan passages, VOTD, and devotional sections.
+// CHANGE? Depends on localStorage keys: DAILY_PLAN_KEY, DAILY_DEVOT_KEY,
+//   `bsw_daily_start_${planId}`, STREAK_KEY. If any key name changes, also update
+//   the corresponding getters/setters and the plan-reset logic in _dailyRenderPlan.
+// VERIFY: Open /daily/, switch reading plan via the select — passages update and
+//   the selection persists after a hard reload.
 export function initDailyPage() {
   var planSelect  = document.getElementById('daily-plan-select');
   if (!planSelect) return;
@@ -195,6 +204,10 @@ export function initDailyPage() {
   initHistoryWidget();
 }
 
+// INTENT: Fetch today's passages for planId and render them into #daily-plan-content,
+//   computing today's day number from the plan start date in localStorage. Also
+//   wires the "Mark as read" button which updates bsw_plans and re-renders to
+//   refresh the streak badge.
 function _dailyRenderPlan(planId) {
   var contentEl  = document.getElementById('daily-plan-content');
   var datepicker = document.getElementById('daily-plan-datepicker');
@@ -339,6 +352,8 @@ function _dailyRenderPlan(planId) {
     });
 }
 
+// INTENT: Fetch DAILY_VOTD_URL and render a random verse for today using the
+//   day-of-year as a stable index so the same verse shows all day regardless of reload.
 function _dailyRenderVOTD() {
   var el = document.getElementById('daily-votd-content');
   if (!el) return;
@@ -404,6 +419,9 @@ function _dailyRenderVOTD() {
     });
 }
 
+// INTENT: Fetch the selected devotional source (DAILY_DEVOT_KEY) for the current
+//   period (morning/evening) and render it into #daily-devot-content; wires the
+//   source-picker dropdown so the user can switch devotional without reloading.
 function _dailyRenderDevotional(source, period) {
   var titleEl = document.getElementById('daily-devot-title');
   var bodyEl  = document.getElementById('daily-devot-content');
@@ -633,6 +651,12 @@ function _dailySchedulePeriodSwitch(currentPeriod) {
 var MEMORY_KEY      = 'bsw_memory';
 var MEMORY_MODE_KEY = 'bsw_memory_mode';
 
+// INTENT: Serialize / deserialize the memory-verse set to localStorage under
+//   MEMORY_KEY. The schema is a flat object {[ref]: {added, nextReview, score, tags}}.
+//   _memGet returns {} on parse error so callers always get a safe object.
+// CHANGE? _memAdd, _memRemove, _memHas, _memIsDue, _memApplyScore, and
+//   initMemorizePage all depend on this schema shape; if the per-verse entry
+//   structure changes, every one of those functions must be updated together.
 export function _memGet()      { try { return JSON.parse(localStorage.getItem(MEMORY_KEY) || '{}'); } catch (e) { return {}; } }
 export function _memSet(state) { try { localStorage.setItem(MEMORY_KEY, JSON.stringify(state)); } catch (e) {} }
 
@@ -726,6 +750,15 @@ export function _memRefreshModalBtn(ref) {
   btn._memRef = ref;
 }
 
+// INTENT: Bootstrap the memorization/flashcard page — reads MEMORY_KEY (via
+//   _memGet) for the verse set and MEMORY_MODE_KEY for the current review mode
+//   (all | due | tag), then renders the verse list, SRS due-count badge, and
+//   mode-toggle buttons.
+// CHANGE? Depends on _memGet schema — if per-verse entry shape changes, the
+//   rendering logic here (due filtering, tag display) must be updated. Also
+//   depends on MEMORY_MODE_KEY; if that key changes, update _memSetMode too.
+// VERIFY: Add 2 verses to memory, open /daily/memorize/ — both appear in list;
+//   mark one as reviewed and confirm the due count decrements.
 export function initMemorizePage() {
   if (!document.getElementById('mem-list')) return;
 
@@ -1261,6 +1294,11 @@ function _plansDayNum(s) {
   return Math.floor((today - start) / 86400000) + 1;
 }
 
+// INTENT: Render the reading plan progress widget on the studies home page —
+//   reads plan state from localStorage via _plansGetState and outputs a compact
+//   progress bar + current passage link for the active plan.
+// CHANGE? _plansGetState reads bsw_plans from localStorage; if the plans state
+//   schema changes, the rendering logic here must be updated in tandem.
 export function initPlansHomeWidget() {
   var widget = document.getElementById('home-plans-widget');
   if (!widget) return;

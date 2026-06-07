@@ -565,6 +565,7 @@ details[open] .ws-bookdefs-summary::before { content: '▾ '; }
 }
 .ws-btn:hover { background: var(--color-hover, rgba(200,169,110,0.07)); }
 .ws-btn--sm { font-size: 0.73rem; padding: 0.25rem 0.5rem; }
+.ws-btn--active { background: var(--color-primary, #8b4513); color: #fff; border-color: var(--color-primary, #8b4513); }
 
 /* Dashboard */
 .ws-dashboard { padding: 1.25rem; }
@@ -1015,3 +1016,389 @@ details[open] .ws-extrabib-summary::before { content: '▼ '; }
 [data-theme="dark"] .ws-status--disputed  { background: #3a2e00; color: #fdd835; }
 [data-theme="dark"] .ws-status--deferred  { background: #3a1218; color: #ef9a9a; }
 [data-theme="dark"] .ws-status--locked    { background: #2a2a2a; color: #9e9e9e; }
+
+/* ── SW-A: Passage Entry Bar ─────────────────────────────────────── */
+.sw-passage-entry {
+  flex-shrink: 0;
+  background: var(--color-bg-alt, #f5efe6);
+  border-bottom: 1px solid var(--color-border, #c8a96e30);
+  padding: 0.5rem 1rem;
+}
+.sw-passage-entry__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 900px;
+}
+.sw-ref-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--color-border, #c8a96e60);
+  border-radius: 4px;
+  background: var(--color-bg, #fff);
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+.sw-ref-input:focus {
+  outline: 2px solid var(--color-primary, #8b4513);
+  outline-offset: 1px;
+}
+.sw-study-btn {
+  white-space: nowrap;
+}
+.sw-browse-link {
+  font-size: 0.82rem;
+  color: var(--color-primary, #8b4513);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+.sw-browse-link:hover { opacity: 1; text-decoration: underline; }
+
+/* ── SW-A: Panel switching ───────────────────────────────────────── */
+.sw-panel { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+
+/* ── SW-A: Passage view ──────────────────────────────────────────── */
+.sw-passage-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.sw-passage-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--color-border, #c8a96e30);
+  gap: 0.5rem;
+}
+.sw-close-passage {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-muted, #888);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+.sw-close-passage:hover { background: var(--color-hover, #c8a96e20); }
+.sw-ptiles {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+}
+.sw-ptile-loading, .sw-passage-err {
+  padding: 1rem;
+  color: var(--color-muted, #888);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.sw-passage-err { color: var(--color-error, #c0392b); }
+
+/* ── SW-A: Interlinear tiles ─────────────────────────────────────── */
+.sw-verse-row { margin-bottom: 0.75rem; }
+.sw-verse-num {
+  font-size: 0.72rem;
+  color: var(--color-muted, #888);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.sw-tiles-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.sw-ptile {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem 0.35rem;
+  border: 1px solid var(--color-border, #c8a96e40);
+  border-radius: 4px;
+  background: var(--color-bg, #fff);
+  cursor: pointer;
+  font-size: 0.78rem;
+  min-width: 2.5rem;
+  transition: background 0.1s, border-color 0.1s;
+}
+.sw-ptile:hover { background: var(--color-hover, #c8a96e15); border-color: var(--color-primary, #8b4513); }
+.sw-ptile--active { background: var(--color-primary, #8b4513); border-color: var(--color-primary, #8b4513); color: #fff; }
+.sw-ptile__lemma {
+  font-family: var(--font-greek, 'SBL Greek', Georgia, serif);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.sw-ptile__eng {
+  font-size: 0.7rem;
+  color: var(--color-muted, #666);
+  text-align: center;
+}
+.sw-ptile--active .sw-ptile__eng { color: rgba(255,255,255,0.85); }
+.sw-ptile__s {
+  font-size: 0.62rem;
+  color: var(--color-primary, #8b4513);
+  opacity: 0.7;
+}
+.sw-ptile--active .sw-ptile__s { color: rgba(255,255,255,0.7); }
+
+/* ── SW-A: Passage tabs ──────────────────────────────────────────── */
+.sw-passage-tabs {
+  flex-shrink: 0;
+  display: flex;
+  border-top: 1px solid var(--color-border, #c8a96e30);
+  background: var(--color-bg-alt, #f5efe6);
+}
+.sw-tab-btn {
+  flex: 1;
+  padding: 0.4rem 0.25rem;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--color-muted, #888);
+  transition: color 0.1s, border-color 0.1s;
+}
+.sw-tab-btn:hover { color: var(--color-text); }
+.sw-tab-btn--active { color: var(--color-primary, #8b4513); border-bottom-color: var(--color-primary, #8b4513); font-weight: 600; }
+.sw-tab-content {
+  flex-shrink: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.82rem;
+  color: var(--color-muted, #888);
+  border-top: 1px solid var(--color-border, #c8a96e20);
+}
+.sw-tab-stub { margin: 0; font-style: italic; }
+
+/* ── SW-A: Depth toggle ──────────────────────────────────────────── */
+.sw-depth-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.sw-depth-label { font-size: 0.78rem; color: var(--color-muted, #888); margin-right: 0.15rem; }
+.sw-depth-btn {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--color-border, #c8a96e60);
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  transition: background 0.1s;
+}
+.sw-depth-btn:hover { background: var(--color-hover, #c8a96e15); }
+.sw-depth-btn--active { background: var(--color-primary, #8b4513); color: #fff; border-color: var(--color-primary, #8b4513); }
+
+/* ── SW-A: Translation-mode visibility ───────────────────────────── */
+/* Translator-only sections hidden by default (study mode) */
+.sw-trans-section { display: none; }
+/* Show when dossier has sw-trans-on class (translation mode active) */
+#ws-dossier.sw-trans-on .sw-trans-section { display: block; }
+
+/* ── SW-A: Depth-based section visibility ────────────────────────── */
+/* Sections with data-depth-min > current depth are hidden */
+.ws-page.sw-depth-1 [data-depth-min="2"],
+.ws-page.sw-depth-1 [data-depth-min="3"],
+.ws-page.sw-depth-2 [data-depth-min="3"] { display: none; }
+
+/* ── SW-A: Trans-mode toggle button state ────────────────────────── */
+#sw-trans-toggle-btn[aria-pressed="true"] {
+  background: var(--color-primary, #8b4513);
+  color: #fff;
+  border-color: var(--color-primary, #8b4513);
+}
+
+/* ── SW-B: Particle color tokens ─────────────────────────────────── */
+:root {
+  --sw-p-ground:    #b07d1a;   /* amber   — because/reason        */
+  --sw-p-inference: #2868c0;   /* blue    — therefore/thus        */
+  --sw-p-contrast:  #c03820;   /* rust    — but/however/only      */
+  --sw-p-continue:  #5b7a8a;   /* slate   — and/also/still        */
+  --sw-p-purpose:   #7040a8;   /* violet  — in order that         */
+  --sw-p-result:    #1a8060;   /* teal    — so that/result        */
+  --sw-p-condition: #7a7010;   /* olive   — if / whenever         */
+  --sw-p-cause:     #a04018;   /* sienna  — because/causal        */
+  --sw-p-negation:  #b01030;   /* crimson — not / never           */
+  --sw-p-immediacy: #c07010;   /* gold    — behold / look         */
+  --sw-p-focus:     #6030a0;   /* purple  — indeed / even / surely*/
+}
+
+/* ── SW-B: Particle tile annotation ──────────────────────────────── */
+/* Colored left-border signals discourse function at a glance */
+.sw-ptile[class*="sw-particle--"] {
+  border-left: 3px solid;
+  padding-left: 5px;
+}
+.sw-ptile__badge {
+  display: block;
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  opacity: .75;
+  line-height: 1;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 6rem;
+}
+
+/* Particle color classes — applied to .sw-ptile */
+.sw-particle--ground            { border-color: var(--sw-p-ground);    color: var(--sw-p-ground);    }
+.sw-particle--inference         { border-color: var(--sw-p-inference); color: var(--sw-p-inference); }
+.sw-particle--contrast          { border-color: var(--sw-p-contrast);  color: var(--sw-p-contrast);  }
+.sw-particle--strong-contrast   { border-color: var(--sw-p-contrast);  color: var(--sw-p-contrast);  }
+.sw-particle--adversative       { border-color: var(--sw-p-contrast);  color: var(--sw-p-contrast);  }
+.sw-particle--limitation        { border-color: var(--sw-p-contrast);  color: var(--sw-p-contrast);  }
+.sw-particle--limitation-assurance { border-color: var(--sw-p-contrast); color: var(--sw-p-contrast); }
+.sw-particle--exception-contrast { border-color: var(--sw-p-contrast); color: var(--sw-p-contrast); }
+.sw-particle--continue          { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--additive          { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--additive-temporal { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--additive-intensifier { border-color: var(--sw-p-continue); color: var(--sw-p-continue); }
+.sw-particle--temporal-transition { border-color: var(--sw-p-continue); color: var(--sw-p-continue); }
+.sw-particle--contrast-setup    { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--relative          { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--entreaty          { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-particle--purpose           { border-color: var(--sw-p-purpose);   color: var(--sw-p-purpose);   }
+.sw-particle--result            { border-color: var(--sw-p-result);    color: var(--sw-p-result);    }
+.sw-particle--manner-result     { border-color: var(--sw-p-result);    color: var(--sw-p-result);    }
+.sw-particle--condition         { border-color: var(--sw-p-condition); color: var(--sw-p-condition); }
+.sw-particle--condition-possible { border-color: var(--sw-p-condition); color: var(--sw-p-condition); }
+.sw-particle--cause             { border-color: var(--sw-p-cause);     color: var(--sw-p-cause);     }
+.sw-particle--causal-or-means   { border-color: var(--sw-p-cause);     color: var(--sw-p-cause);     }
+.sw-particle--content-or-cause  { border-color: var(--sw-p-cause);     color: var(--sw-p-cause);     }
+.sw-particle--negation          { border-color: var(--sw-p-negation);  color: var(--sw-p-negation);  }
+.sw-particle--negation-fact     { border-color: var(--sw-p-negation);  color: var(--sw-p-negation);  }
+.sw-particle--negation-process  { border-color: var(--sw-p-negation);  color: var(--sw-p-negation);  }
+.sw-particle--negation-prohibition { border-color: var(--sw-p-negation); color: var(--sw-p-negation); }
+.sw-particle--immediacy         { border-color: var(--sw-p-immediacy); color: var(--sw-p-immediacy); }
+.sw-particle--focus             { border-color: var(--sw-p-focus);     color: var(--sw-p-focus);     }
+
+/* ── SW-B: Discourse marker toggle above tiles ───────────────────── */
+.sw-markers-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--color-surface, #faf6ef);
+  border-bottom: 1px solid var(--color-border, #c8a96e40);
+  font-size: .75rem;
+  flex-wrap: wrap;
+}
+.sw-markers-bar__label { color: var(--color-muted, #888); font-style: italic; }
+.sw-marker-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  padding: .1rem .35rem;
+  border-radius: 3px;
+  border-left: 3px solid;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.sw-marker-legend--ground     { border-color: var(--sw-p-ground);    color: var(--sw-p-ground);    }
+.sw-marker-legend--inference  { border-color: var(--sw-p-inference); color: var(--sw-p-inference); }
+.sw-marker-legend--contrast   { border-color: var(--sw-p-contrast);  color: var(--sw-p-contrast);  }
+.sw-marker-legend--continue   { border-color: var(--sw-p-continue);  color: var(--sw-p-continue);  }
+.sw-marker-legend--purpose    { border-color: var(--sw-p-purpose);   color: var(--sw-p-purpose);   }
+.sw-marker-legend--result     { border-color: var(--sw-p-result);    color: var(--sw-p-result);    }
+.sw-marker-legend--condition  { border-color: var(--sw-p-condition); color: var(--sw-p-condition); }
+.sw-marker-legend--negation   { border-color: var(--sw-p-negation);  color: var(--sw-p-negation);  }
+.sw-marker-legend--cause      { border-color: var(--sw-p-cause);     color: var(--sw-p-cause);     }
+
+/* ── SW-B: Grammar Significance dossier section ─────────────────── */
+.sw-grammar-section {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background: var(--color-surface, #faf6ef);
+  border: 1px solid var(--color-border, #c8a96e30);
+  border-radius: 6px;
+}
+.sw-grammar-section__title {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--color-muted, #888);
+  margin-bottom: 0.5rem;
+}
+
+/* Particle function card — shown when selected word is a discourse particle */
+.sw-particle-card {
+  padding: 0.6rem 0.75rem;
+  border-left: 4px solid;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 0.5rem;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+}
+.sw-particle-card__fn {
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.sw-particle-card__word {
+  font-size: 1.2rem;
+  font-family: 'Noto Serif', serif;
+  margin-right: 0.35rem;
+}
+.sw-particle-card__plain {
+  font-size: .82rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+.sw-particle-card__example {
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+  border-top: 1px solid var(--color-border, #c8a96e30);
+  padding-top: 0.35rem;
+  margin-top: 0.35rem;
+}
+.sw-particle-card__example-ref {
+  font-weight: 600;
+  color: var(--color-primary, #8b4513);
+  margin-right: 0.25rem;
+}
+
+/* Morphology hint rows — shown for verbs, nouns, etc. */
+.sw-morph-hints { margin-top: 0.4rem; }
+.sw-morph-hint {
+  padding: 0.4rem 0.5rem;
+  border-left: 3px solid var(--color-border, #c8a96e60);
+  margin-bottom: 0.4rem;
+  font-size: .8rem;
+}
+.sw-morph-hint__label {
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .03em;
+  color: var(--color-primary, #8b4513);
+  margin-bottom: .15rem;
+}
+.sw-morph-hint__sig { line-height: 1.5; }
+.sw-morph-hint__debate {
+  margin-top: .3rem;
+  font-size: .75rem;
+  color: var(--color-muted, #888);
+  font-style: italic;
+  border-top: 1px dashed var(--color-border, #c8a96e40);
+  padding-top: .25rem;
+}
+.sw-morph-hint__examples {
+  margin-top: .3rem;
+  padding-left: 1rem;
+  font-size: .74rem;
+  color: var(--color-muted, #777);
+}
+.sw-morph-hint__examples li { margin-bottom: .1rem; }

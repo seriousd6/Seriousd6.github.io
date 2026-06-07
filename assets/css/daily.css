@@ -713,4 +713,8 @@
     min-height: 44px;
     padding: 0 1rem;
   }
+
+  /* VOTD action row (Copy/Share/Memory) and per-section mark-done buttons */
+  .daily-votd-btn     { min-height: 44px; display: inline-flex; align-items: center; }
+  .daily-mark-done-btn { min-height: 44px; display: inline-flex; align-items: center; }
 }

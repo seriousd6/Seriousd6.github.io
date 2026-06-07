@@ -47,7 +47,7 @@ param(
     [string]  $RemoteUser  = "domad",
     [string]  $RemotePath  = "/home/domad/Documents/bible-study-website",
     [string]  $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
-    [string]  $Target      = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io\Z_AGENT_PROMPT.md",
+    [string]  $Target      = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io\working\audit-agent-guide.md",
     [switch]  $DryRun      = $false,
     [switch]  $DeleteExtra = $false,
     [switch]  $SkipHash    = $false

@@ -1949,6 +1949,7 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   align-items: center;
   min-width: 70px;
   max-width: 130px;
+  min-height: 44px;  /* WCAG 2.5.5 touch target */
   padding: 0.35rem 0.5rem 0.3rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);

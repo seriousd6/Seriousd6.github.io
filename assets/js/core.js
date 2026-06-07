@@ -701,7 +701,7 @@ export var COMMENTARY_SOURCES = [
   { id: 'clarke',  label: "Adam Clarke's Commentary",    attr: "Adam Clarke's Commentary on the Bible (Public Domain)" },
   { id: 'calvin',  label: "Calvin's Commentaries",       attr: "Calvin's Collected Commentaries (Public Domain)" },
   { id: 'barnes',  label: "Barnes' Notes (NT)",          attr: "Barnes' Notes on the Bible (Public Domain)" },
-  { id: 'rwp',     label: "Robertson's Word Pictures",   attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
+  { id: 'rwp',     label: "Robertson's Word Pictures (NT)", attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
   { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" },
   { id: 'mkt-original', label: 'Original Language (MKT)', attr: 'MKT Commentary — Original Language (generated)' },
   { id: 'mkt-context',  label: 'Historical Context (MKT)', attr: 'MKT Commentary — Historical Context (generated)' },

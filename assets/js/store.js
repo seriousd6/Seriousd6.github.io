@@ -52,6 +52,14 @@ function _set(key, val) {
 }
 
 // ── Export ────────────────────────────────────────────────────────────────────
+// INTENT: Snapshot every STORE_KEYS slot into a schema-v2 plain object — the
+//   single source of truth for what a full backup contains. Returns a JSON-safe
+//   object that importAll() can later restore.
+// CHANGE? If you add a new STORE_KEYS entry, add the matching _get() read here
+//   AND a corresponding merge branch in importAll(); missing either silently
+//   drops that field from backups or skips it during restore.
+// VERIFY: Open the progress page → Download backup → inspect JSON; all fields
+//   (plans, notes_v2, bookmarks, memory, etc.) should be present and non-null.
 export function exportAll() {
   return {
     _schema:   SCHEMA,
@@ -111,6 +119,16 @@ export function downloadBackup() {
 //   streak     union of day strings, sorted
 //   prefs      per-key overwrite only for non-null values in backup
 
+// INTENT: Restore a schema-v2 backup into localStorage; mode='merge' (default)
+//   preserves existing data and appends/unions new entries, mode='replace'
+//   overwrites each section present in the backup file.
+// CHANGE? If you add a new STORE_KEYS entry, add BOTH a _set() call in the
+//   'replace' branch AND a merge-strategy block in the 'merge' branch —
+//   missing either silently skips that field during import. Also update
+//   exportAll() or the field will never appear in backups in the first place.
+// VERIFY: Export a backup, clear localStorage, import it (replace mode) →
+//   open notes/bookmarks/journal, all entries present. Import again (merge) →
+//   no duplicate entries created.
 export function importAll(data, opts) {
   opts = opts || {};
   var mode = opts.mode || 'merge';

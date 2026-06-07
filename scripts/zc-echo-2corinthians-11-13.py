@@ -1,13 +1,8 @@
 """
-Echo layer — 2 Corinthians all 13 chapters
+Echo layer — 2 Corinthians chapters 11–13
 Output: data/echoes/2corinthians.json
-
-2 Corinthians is the most personally revealing of Paul's letters.
-Key echo zones: the new exodus theology of ch3 (Exod 34; Jer 31),
-the 'servant of the Lord' suffering pattern (Isa 53),
-the new creation (Isa 65:17-25), and the triumphal procession (Isa 52:7-10).
+Run: python3 scripts/zc-echo-2corinthians-11-13.py
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
@@ -25,81 +20,96 @@ def save_echo(book, data):
     print(f'  wrote {p.relative_to(ROOT)}')
 
 def merge_echo(existing, new_data):
+    # INTENT: Merge new verse entries without overwriting already-present keys — safe to re-run.
+    # CHANGE? If echo JSON structure changes from {ch:{v:html}}, update this traversal.
+    # VERIFY: Re-running the script should produce identical output.
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
-        for v, entries in verses.items():
+        for v, html in verses.items():
             if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
+                existing[ch][v] = html
 
-ECHOES = {
-  "1": {
-    "20": [
-      {"type": "fulfillment", "target": "Num 23:19", "note": "All God's promises find their Yes in Christ — God is not a man that he should lie; every promise made through the patriarchs and prophets is ratified in the 'Yes' of Christ's faithfulness, fulfilling what the prophets spoke and the Torah promised"}
-    ]
-  },
-  "3": {
-    "3": [
-      {"type": "fulfillment", "target": "Jer 31:33", "note": "Written not with ink but with the Spirit of the living God, not on tablets of stone but on tablets of human hearts — Paul's new covenant ministry description fulfills Jeremiah's new covenant promise precisely: the law written on hearts rather than stone; the Spirit as the writing-agent replacing Moses's tablets"}
-    ],
-    "6": [
-      {"type": "fulfillment", "target": "Jer 31:31-34", "note": "God has made us ministers of a new covenant (<em>kaines diathekes</em>) — the new covenant that Jeremiah promised, distinguished from the Mosaic covenant by its internality (heart-law), universality, and permanent forgiveness"},
-      {"type": "allusion", "target": "Ezek 11:19", "note": "A new spirit I will put within them; I will remove the heart of stone and give them a heart of flesh — Ezekiel's new covenant promise of the Spirit transforming stony hearts into living hearts; Paul's 'tablets of human hearts' echoes Ezek 11:19/36:26"}
-    ],
-    "13": [
-      {"type": "allusion", "target": "Exod 34:33-35", "note": "Moses put a veil over his face — Paul's midrash on the Sinai theophany: the veil Moses wore was to prevent Israel from seeing the fading of the Mosaic covenant's glory; the veil remains on Israel's mind when reading the old covenant, but is removed in Christ"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "Exod 34:29-35", "note": "Beholding the glory of the Lord, we are being transformed into the same image from one degree of glory to another — Moses's face shone with reflected glory after encountering YHWH; now believers behold Christ's glory with unveiled faces and are transformed progressively into that same glory; the Mosaic type fulfilled in Christian experience"}
-    ]
-  },
-  "4": {
-    "6": [
-      {"type": "allusion", "target": "Gen 1:3", "note": "God who said Let light shine out of darkness has shone in our hearts — the creation-light of Gen 1:3 is the type; the new creation-light of the gospel in the face of Christ is the antitype; conversion is a new-creation event"},
-      {"type": "allusion", "target": "Isa 9:2", "note": "The people walking in darkness have seen a great light — the Isaianic light-in-darkness oracle; Paul identifies the light of the gospel with the prophetic light that was to dawn in the messianic age"}
-    ]
-  },
-  "5": {
-    "17": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "If anyone is in Christ, he is a new creation; the old has passed away, the new has come — Paul's new creation language directly echoes Isa 65:17 (I am creating new heavens and a new earth; the former things shall not be remembered); the eschatological new creation promised by Isaiah is present already in union with Christ"}
-    ],
-    "21": [
-      {"type": "fulfillment", "target": "Isa 53:6", "note": "For our sake he made him to be sin who knew no sin — the substitutionary exchange (sinless one made sin; sinners made righteous) fulfills the Servant logic of Isa 53:6 where YHWH 'laid on him the iniquity of us all'; the great exchange of 2 Cor 5:21 is Isa 53 compressed into a single sentence"}
-    ]
-  },
-  "6": {
-    "2": [
-      {"type": "fulfillment", "target": "Isa 49:8", "note": "In a favorable time I listened to you and in a day of salvation I have helped you — Paul quotes Isa 49:8 (LXX) and applies it to the present moment of gospel proclamation: 'Behold, now is the favorable time; now is the day of salvation.' The Isaianic day of YHWH's rescue is declared to have arrived in the gospel age"}
-    ],
-    "16": [
-      {"type": "fulfillment", "target": "Lev 26:11-12", "note": "I will live in them and walk among them, and I will be their God, and they shall be my people — Paul's catena of OT quotations on the temple-community: Lev 26:11-12 (YHWH dwelling with Israel) is the first; the promise of the Shekinah-presence with Israel is fulfilled in the community of believers as the Spirit's temple"},
-      {"type": "fulfillment", "target": "Isa 52:11", "note": "Come out from their midst and be separate, says the Lord — the second catena quote: Isa 52:11's call for the priests carrying the temple vessels to be ritually pure on the new exodus from Babylon; Paul applies the call to separation from idolatry to the Christian community"}
-    ]
-  },
-  "8": {
-    "9": [
-      {"type": "allusion", "target": "Isa 53:2-3", "note": "Though he was rich, yet for your sake he became poor — the self-emptying of the pre-existent Christ echoes the Servant who had no form or majesty (Isa 53:2); the poverty of incarnation and cross parallels the Servant's voluntary humiliation for others' benefit"}
-    ]
+NEW = {
+  "11": {
+    "1": "Bear with me in a little foolishness — Paul's self-deprecating irony echoes Qohelet's wisdom: there is a time for every matter (Eccl 3:1). The fool speech as a genre inverts wisdom conventions, as Proverbs 26:5 advises answering a fool according to his folly lest he become wise in his own eyes.",
+    "2": "I am jealous for you with godly jealousy — Exodus 20:5; 34:14: I the Lord your God am a jealous God. Divine jealousy (qin'ah/zelos) is the covenant response to infidelity. Jeremiah 2:2-3 recalls Israel's early devotion as a bride in the wilderness; Hosea 2:14-23 speaks of God wooing his bride back. Paul casts himself as the divine jealousy's agent.",
+    "3": "As the serpent deceived Eve by his cunning — Genesis 3:1-13, the temptation and fall narrative. The serpent's craftiness (panourgia, LXX) is the same word Paul uses here for satanic cunning. Eve's simplicity (haplotēs) of devotion is what Paul wants to preserve in the Corinthians against the super-apostles' seduction.",
+    "4": "If someone comes preaching another Jesus — Deuteronomy 13:1-5: if a prophet arises and gives you a sign or wonder and says let us go after other gods, that prophet must be put to death. The criteria for false prophecy in Deuteronomy 13 and 18:20-22 underlie Paul's polemic against the intruding preachers.",
+    "5": "These super-apostles — the polemic against false apostles echoes Jeremiah's condemnation of false prophets who prophesy out of their own hearts (Jer 23:16-40; Ezek 13:1-16). The true prophet is commissioned at cost; the false prophet comes with smooth words.",
+    "6": "Even if I am unskilled in speaking — Moses's objection to God's commission: I am not eloquent, I am slow of speech and tongue (Exod 4:10). God's answer to Moses was that he would teach him what to say; Paul's argument is similar — his unimpressive speech is the ground of God's sufficiency.",
+    "7": "Did I commit a sin in humbling myself so that you might be exalted? — Isaiah 53:11: by his knowledge my righteous servant will justify many. The servant's humiliation serves the exaltation of others. Paul's self-abasement for the Corinthians' sake follows the servant pattern.",
+    "8": "I robbed other churches by accepting support from them — the language of robbing (sylao) echoes the plundering of Egypt at the Exodus (Exod 3:22; 12:36): Israel plundered Egypt to fund the tabernacle. Paul's acceptance of Macedonian support for Corinthian ministry is a kind of sacred redistribution.",
+    "9": "I did not burden anyone when I was with you — the language of not being a burden (katanarkaō) reflects the ideal of the Cynic philosopher, but Paul's ground is different: not philosophical independence but care for the gospel's credibility and the community's welfare.",
+    "10": "As the truth of Christ is in me — the oath formula echoes OT covenant oaths: as the Lord lives (Judg 8:19; Ruth 3:13; 1 Sam 14:39). Paul's oath is made in Christ rather than in the divine name, reflecting the christological center of his apostolic identity.",
+    "11": "Because I do not love you? God knows I do! — the appeal to God's knowledge echoes Psalm 139:1-4: O Lord, you have searched me and known me. God's omniscience as the witness to Paul's love mirrors the psalmist's appeal to divine knowledge of hidden intentions.",
+    "12": "I will continue doing what I do, in order to undercut those who want an opportunity to be regarded as our equals — Ezekiel 34: the shepherds of Israel who fed themselves rather than the flock. The false apostles' use of the congregation for personal advantage echoes the failed shepherds whom God will judge.",
+    "13": "False apostles, deceitful workers, disguising themselves as apostles of Christ — Jeremiah 23:31-32: I am against those who prophesy lying dreams and tell them and who lead my people astray by their lies and their recklessness. The false prophets of Jeremiah are the OT template for Paul's false apostles.",
+    "14": "Satan disguises himself as an angel of light — Isaiah 14:12: How you have fallen from heaven, O Day Star, son of Dawn! The tradition of Satan's original radiance and his transformation into a deceiver draws on Isaiah 14 and Ezekiel 28:12-17 (the guardian cherub, perfect in beauty, who became corrupt). The angel-of-light disguise is the satanic parody of genuine divine manifestation.",
+    "15": "His servants also disguise themselves as servants of righteousness — the contrast between true and false servants echoes Isaiah 42:1-9 (the true servant of the Lord) and the servant songs throughout Isaiah 40-55. Their end will be according to their deeds — Psalm 62:12: you repay each person according to what he has done.",
+    "16": "Let no one think me foolish — Paul's self-deprecating claim to foolishness inverts the wisdom-foolishness theme of 1 Corinthians 1-4. There Paul said the wisdom of the world is foolishness to God (1 Cor 3:19); here he plays the fool by worldly standards to make a point that transcends worldly wisdom.",
+    "17": "I am not speaking as the Lord would — Paul's explicit distinction between his inspired counsel and the Lord's commands (as in 1 Cor 7:12) reflects the careful prophetic protocol of distinguishing the word of the Lord from human speech (Jer 23:28-29: the prophet who has a dream, let him tell the dream; but let the one who has my word speak it faithfully).",
+    "18": "Since many boast according to worldly standards, I too will boast — Jeremiah 9:23-24: let not the wise man boast in his wisdom, nor the strong man in his strength, nor the rich man in his riches, but let the one who boasts boast in this: that he understands and knows me. Paul's boasting ultimately conforms to Jeremiah's criterion (12:9-10).",
+    "19": "You gladly bear with fools, being wise yourselves — the irony echoes the wisdom literature's portrait of the fool who is wise in his own eyes (Prov 3:7; 12:15; 26:12). The Corinthians' self-congratulatory wisdom makes them susceptible to fools.",
+    "20": "For you bear it if someone makes slaves of you, devours you, takes advantage of you, puts on airs, or strikes you in the face — Ezekiel 34:2-4: the shepherds who have been feeding themselves rather than the flock, the weak you have not strengthened, the sick you have not healed. The false apostles exhibit the predatory behavior of the failed shepherds of Ezekiel.",
+    "21": "I speak as a fool — Qohelet 1:2: vanity of vanities; the Preacher frames all human striving as vapor and folly. Paul's fool-speech borrows Qohelet's genre of subversive self-undermining wisdom.",
+    "22": "Are they Hebrews? So am I. Are they Israelites? So am I. Are they offspring of Abraham? So am I — Paul's triple ethnic credential mirrors the identity markers of Romans 9:4-5 (Israelites, to whom belong the adoption, the glory, the covenants). The Abrahamic sonship (offspring of Abraham) echoes Genesis 12:1-3 and the promise of blessing through Abraham's seed.",
+    "23": "Are they servants of Christ? I am a better one — I am talking like a madman — the catalogue of suffering that follows echoes the lament psalms (Ps 22; 69; 88) and Jeremiah's confessions (Jer 15:10-21; 20:7-18). Far greater labors, far more imprisonments, with countless beatings, often near death.",
+    "24": "Five times I received the forty lashes less one — Deuteronomy 25:2-3: the judge shall cause the guilty party to lie down and be beaten in his presence with the number of stripes proportionate to his offense, but not more than forty. The limit of forty lashes (reduced to thirty-nine in practice) was Mosaic law. Paul bore the synagogue's discipline five times.",
+    "25": "Three times I was shipwrecked; a night and a day I was adrift at sea — Jonah 1:15-17: the sailors threw Jonah into the sea; the Lord appointed a great fish to swallow Jonah. Paul's sea-perils echo the maritime danger theme in Israel's poetry (Ps 107:23-32: those who go down to the sea in ships) and Jonah's watery ordeal.",
+    "26": "Danger from rivers, danger from robbers, danger from my own people — the litany of dangers echoes Psalm 22:12-18: I am surrounded by strong bulls; a band of evildoers encircles me. The comprehensive threat from every quarter mirrors the encirclement language of the lament psalms.",
+    "27": "In toil and hardship, through many a sleepless night, in hunger and thirst, often without food, in cold and exposure — the wilderness wandering of Israel in Exodus provides the background: they suffered thirst (Exod 15:22-24), hunger (Exod 16:3), and exposure (Exod 14:21-22). Paul's apostolic hardship is a wilderness journey.",
+    "28": "And apart from other things, there is the daily pressure on me of my anxiety for all the churches — Numbers 11:14-15: Moses cries out I am not able to carry all this people alone; the burden is too heavy for me. The weight of pastoral care echoes the Mosaic burden of leading the people.",
+    "29": "Who is weak, and I am not weak? Who is made to fall, and I am not indignant? — Ezekiel 34:4: the weak you have not strengthened, the sick you have not healed. Paul identifies with the weakness of the flock rather than distancing himself from it, embodying the shepherd-heart Ezekiel described as lacking in Israel's false shepherds.",
+    "30": "If I must boast, I will boast of the things that show my weakness — Psalm 34:2: my soul will boast in the Lord; let the humble hear and be glad. Paul's boast in weakness is the proper form of the psalmist's boast in the Lord: it redirects glory from the human instrument to the divine power working through it.",
+    "31": "The God and Father of the Lord Jesus, he who is blessed forever, knows that I am not lying — the solemn oath formula echoes Romans 9:1 (I am speaking the truth in Christ; I am not lying) and the OT oath formulas (as the Lord lives; God is my witness). The appeal to God's knowledge as the warrant of truthfulness echoes Psalm 139.",
+    "32": "At Damascus, the governor under King Aretas guarded the city of Damascus to seize me — the Damascus escape echoes Joshua 2:15: Rahab let the spies down by a rope through the window (Josh 2:15). The parallel inverts the direction: Israel's spies were lowered to safety outside the city; Paul is lowered to escape the city's hostility.",
+    "33": "I was let down in a basket through a window in the wall and escaped his hands — 1 Samuel 19:12: Michal let David down through a window, and he fled and escaped. David's escape from Saul's pursuit parallels Paul's escape from Aretas's pursuit; both are preserved by divine providence through human ingenuity and unexpected help.",
   },
   "12": {
-    "9": [
-      {"type": "allusion", "target": "Isa 40:29-31", "note": "My power is made perfect in weakness — YHWH gives power to the faint and increases the strength of the weak; Paul's experience of Christ's power through weakness is the Isaianic pattern of divine strength in human insufficiency reaching its Christological application"}
-    ]
+    "1": "I must go on boasting — Jeremiah's confessions: cursed be the day I was born (Jer 20:14). Paul's reluctant boasting mirrors Jeremiah's involuntary compulsion to speak (Jer 20:9: if I say I will not mention him, there is in my heart a burning fire).",
+    "2": "I know a man in Christ who fourteen years ago was caught up to the third heaven — Ezekiel 1-3: the throne-chariot vision (merkavah). Isaiah 6: the temple vision of the enthroned Lord. The pattern of prophetic commissioning visions shapes Paul's account of his heavenly ascent.",
+    "3": "And I know that this man — the repetition (whether in the body or out of the body I do not know, God knows) echoes the characteristic repetition of Qohelet (vanity of vanities, all is vanity) and the liturgical repetitions of the psalms of Ascent.",
+    "4": "Was caught up into paradise and heard inexpressible things — paradise (paradeisos) is the LXX word for the Garden of Eden in Genesis 2:8-3:24. The word was used in Judaism for the heavenly garden where the righteous await resurrection (Luke 23:43; Rev 2:7). Paul's paradeisos echoes both the original Eden and its eschatological restoration.",
+    "5": "On behalf of this man I will boast, but on my own behalf I will not boast, except of my weaknesses — the distinction between boasting in the Lord and not in oneself directly fulfills Jeremiah 9:23-24 (let not the wise man boast in his wisdom, but let the one who boasts boast in this: that he understands and knows me).",
+    "6": "For if I wish to boast, I would not be a fool, for I would be speaking the truth — Numbers 12:3: Moses was very meek, more than all people who were on the face of the earth. The pattern of the truly great leader's humility about his greatness echoes the Mosaic humility; Paul possesses genuine grounds for boasting but chooses restraint.",
+    "7": "A thorn was given me in the flesh, a messenger of Satan to harass me — Job 1-2: Satan appears before God and afflicts Job with painful sores (Job 2:7). Numbers 33:55: those you allow to remain will be as barbs in your eyes and thorns in your sides. The thorn imagery draws on Numbers' warning and Job's suffering figure.",
+    "8": "Three times I pleaded with the Lord about this — 1 Kings 18:43-44: Elijah sent his servant seven times to look for a cloud. Jesus in Gethsemane prayed three times that the cup pass from him (Matt 26:36-46; Mark 14:32-42; Luke 22:40-46). The triplicate prayer pattern echoes both the prophetic persistence (Elijah) and the passion narrative.",
+    "9": "My grace is sufficient for you, for my power is made perfect in weakness — Judges 6-7: God chose Gideon's small army (cut from 32,000 to 300) so that Israel could not boast that her own hand had saved her (Judg 7:2). 1 Samuel 17: David defeats Goliath not with conventional weapons but by God's power. Isaiah 40:29-31: he gives power to the faint and strength to the powerless. The paradox of divine power through human weakness runs from Judges through Isaiah.",
+    "10": "For the sake of Christ, I am content with weaknesses, insults, hardships, persecutions, and calamities — Isaiah 53:3-5: despised and rejected by men, a man of sorrows and acquainted with grief. Paul's contentment in suffering follows the servant's acceptance of humiliation as the path of redemptive service.",
+    "11": "I have been a fool — you forced me to it — the involuntary nature of Paul's boasting echoes Jeremiah's complaint: you have deceived me, O Lord, and I was deceived (Jer 20:7). Both the prophet and the apostle are compelled to acts they find distasteful by the faithlessness of those they serve.",
+    "12": "Signs and wonders and mighty works — the language of Deuteronomy 6:22 (signs and wonders, great and grievous) and 34:11-12 (for all the signs and the wonders that the Lord sent him to do). Moses's signs-and-wonders ministry at the Exodus is the template for apostolic signs-and-wonders in the new Exodus.",
+    "13": "For in what were you less favored than the rest of the churches? — the irony of being treated worse by receiving less (Paul's refusal of support) echoes the wilderness manna: God provided equally for all without partiality (Exod 16:17-18: those who gathered much had nothing left over, and those who gathered little had no lack).",
+    "14": "For children are not obligated to save up for their parents, but parents for their children — Proverbs 13:22: a good man leaves an inheritance to his children's children. The parental metaphor for apostolic relationship mirrors God's own parental provision for Israel (Deut 1:31: the Lord your God carried you as a man carries his son).",
+    "15": "I will most gladly spend and be spent for your souls — Ruth 1:16-17: where you go I will go; where you die I will die. The language of total self-giving for the other echoes Ruth's covenant loyalty to Naomi. Paul's spending of himself for the Corinthians is an expression of covenant faithfulness.",
+    "16": "But granting that I myself did not burden you, I was crafty and caught you by deceit — the sarcastic accusation mirrors Jeremiah 4:10: you have utterly deceived this people (the people's accusation against God's messenger). The true prophet is accused of deceit while the false prophets go unquestioned.",
+    "17": "Did I take advantage of you through any of those whom I sent to you? — Ezekiel 34:8: the shepherds have not searched for my sheep but have fed themselves and not the flock. Paul's contrast with those who exploit the flock echoes Ezekiel's contrast between the false shepherds and the coming true shepherd (Ezek 34:23).",
+    "18": "I urged Titus to go and sent the brother with him — the pattern of sending representatives who share the apostle's spirit echoes Moses sending the twelve spies (Num 13:2) and Joshua's sending of spies to Jericho (Josh 2:1). The integrity of the sent representative mirrors the integrity of the sender.",
+    "19": "Have you been thinking all along that we have been defending ourselves to you? We speak in Christ before God — the courtroom framing echoes Isaiah 41:1-21 and 43:9-13, where God presents his case before the nations and calls witnesses. Paul speaks coram Deo (before God) rather than before a human tribunal.",
+    "20": "For I fear that perhaps when I come I may find you not as I wish — the warnings about quarreling, jealousy, anger, selfish ambition, slander, gossip, arrogance, and disorder echo the wilderness rebellion catalogue of Psalm 78: they did not believe in God and did not trust his saving power (Ps 78:22), they tested God and provoked the Holy One of Israel (v.56).",
+    "21": "I fear that when I come again my God may humble me before you, and I may have to mourn over many of those who sinned earlier — Numbers 14:1-5: Moses and Aaron fell on their faces before the whole assembly when Israel wept and refused to enter the land. The leader's grief over the congregation's failure echoes the Mosaic pattern.",
+  },
+  "13": {
+    "1": "This is the third time I am coming to you — Deuteronomy 19:15: only on the evidence of two witnesses or of three witnesses shall a charge be established. Paul explicitly cites the Mosaic legal standard for testimony; his three visits function as the three-witness requirement before definitive judgment.",
+    "2": "If I come again I will not spare them — the disciplinary warning echoes Deuteronomy 17:12-13: the man who acts presumptuously by not obeying the priest or the judge shall die; so you shall purge the evil from Israel. Covenant discipline follows the pattern of the OT legal code.",
+    "3": "Since you seek proof that Christ is speaking in me — 1 Kings 22:16: the king adjured Micaiah to speak nothing but the truth in the name of the Lord. The demand for proof of genuine prophetic commission echoes the testing of prophecy in the OT (Deut 18:21-22; 1 Kings 22).",
+    "4": "For he was crucified in weakness, but lives by the power of God — Isaiah 53:10-12: after the suffering of his soul he will see the light of life and be satisfied. The pattern of humiliation-then-vindication in the servant songs provides the framework for Paul's crucified-yet-risen christology.",
+    "5": "Examine yourselves, to see whether you are in the faith — Lamentations 3:40: let us test and examine our ways and return to the Lord. Psalm 26:2: examine me, O Lord, and test me; try my heart and my mind. The call to self-examination echoes the lament tradition's invitation to honest self-assessment before God.",
+    "6": "I hope you will find out that we have not failed the test — the word adokimoi (failed, disqualified) echoes Jeremiah 6:30: rejected silver people call them, for the Lord has rejected them. The assay metaphor (testing metal for purity) is common in prophetic speech (Mal 3:2-3: he will refine and purify).",
+    "7": "Not that we may appear to have met the test, but that you may do what is right, even though we may seem to have failed — the willingness to appear as nothing so that the congregation may be right echoes Moses's intercession: blot me from your book if you will not forgive this people (Exod 32:32). The leader's self-negation for the people's sake is a Mosaic pattern.",
+    "8": "For we cannot do anything against the truth, but only for the truth — Psalm 119:151: you are near, O Lord, and all your commandments are truth. The alignment of the apostle with truth echoes the prophetic claim to speak only what the Lord commands (Num 22:38; 1 Kgs 22:14; Jer 23:28).",
+    "9": "We are glad when we are weak and you are strong — Hannah's prayer: my heart exults in the Lord; my strength is exalted in the Lord (1 Sam 2:1). The pattern of the leader's gladness in the people's strength rather than their own echoes Hannah and the reversal-of-fortunes theme of the Magnificat (Luke 1:46-55).",
+    "10": "I write these things while I am away from you, that when I come I may not have to be severe in my use of the authority the Lord has given me for building up and not for tearing down — Jeremiah 1:10: I have set you this day over nations and over kingdoms, to pluck up and to break down, to destroy and to overthrow, to build and to plant. Paul's authority echoes the prophetic commission of Jeremiah — given primarily for building and planting, not for tearing down.",
+    "11": "Finally, brothers, rejoice. Aim for restoration, comfort one another, agree with one another, live in peace — Isaiah 52:7-8: how beautiful upon the mountains are the feet of him who brings good news, who publishes peace. The clustering of joy, peace, and restoration in the closing greetings echoes the prophetic proclamation of shalom in the new Exodus.",
+    "12": "Greet one another with a holy kiss — Ruth 1:9: Naomi kissed her daughters-in-law. The holy kiss as an expression of covenant community echoes the family loyalty (hesed) demonstrated in the greeting kiss of the OT. It is the physical enactment of the new-family relationship created by the Spirit.",
+    "13": "All the saints greet you — the greeting from all the saints echoes the communal dimension of the OT assembly (qahal). When Israel gathered at Sinai, the whole congregation was present (Exod 19:17); the apostolic letter carries greetings from the whole church, the new assembly.",
+    "14": "The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy Spirit be with you all — the closest thing to a trinitarian benediction in the NT echoes the Aaronic blessing of Numbers 6:24-26: the Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord lift up his countenance upon you and give you peace. Three invocations of the divine name, three aspects of blessing. Paul's benediction is the Aaronic blessing christologically expanded: grace (Christ), love (Father), fellowship/communion (Spirit).",
   }
 }
 
-def main():
-    existing = load_echo('2corinthians')
-    merge_echo(existing, ECHOES)
-    save_echo('2corinthians', existing)
-    total = sum(len(v) for v in existing.values())
-    print(f'2 Corinthians echo: {len(existing)} chapters, {total} verses with connections.')
-
 if __name__ == '__main__':
-    main()
+    existing = load_echo('2corinthians')
+    merge_echo(existing, NEW)
+    save_echo('2corinthians', existing)
+    for ch in ['11', '12', '13']:
+        print(f'  ch {ch}: {len(existing.get(ch, {}))} verses')

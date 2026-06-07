@@ -70,6 +70,17 @@ function _yearFromT(t) {
 }
 
 /* ── Init ────────────────────────────────────────────────────────────────── */
+// INTENT: Fetch timelapse.json, initialise Leaflet + all pre-built event layers,
+//   wire playback controls and the RAF animation loop, then honour a #t=<n>
+//   deep-link to jump to a specific time offset on load.
+// CHANGE? _DATA_URL resolves relative to this module file (assets/js/); if
+//   this file moves, update _DATA_URL. TOTAL_TIME must match the last event's
+//   .t field in timelapse.json or the slider will clamp early — update both
+//   together. Leaflet map instance is stored in module-level _map; if multiple
+//   timelapse instances were ever needed, that would need to change.
+// VERIFY: Load /maps/timelapse/ → map renders with events ✓. Load
+//   /maps/timelapse/#t=400 → map jumps to t=400 ✓. Play 3s, pause, scrub →
+//   resume plays from scrubbed position ✓.
 export function initTimelapsePage() {
   if (!document.getElementById('tl-map')) return;
   if (!window.L) { document.getElementById('tl-map').textContent = 'Map library failed to load.'; return; }
@@ -92,7 +103,11 @@ export function initTimelapsePage() {
       var hashMatch = location.hash.match(/^#t=(\d+(?:\.\d+)?)$/);
       if (hashMatch) _seekTo(parseFloat(hashMatch[1]));
     })
-    .catch(function (e) { console.error('[Timelapse] load failed:', e); });
+    .catch(function (e) {
+      console.error('[Timelapse] load failed:', e);
+      var container = document.getElementById('tl-event-list') || document.getElementById('tl-container');
+      if (container) container.innerHTML = '<p style="padding:1rem;color:var(--color-muted,#888)">Unable to load animated map data.</p>';
+    });
 }
 
 /* ── Pre-build all Leaflet layers (called once after data loads) ──────────── */
@@ -330,7 +345,10 @@ function _continuePlay() {
 function _toggleStepMode() {
   _stepMode = !_stepMode;
   var btn = document.getElementById('tl-step-toggle');
-  if (btn) btn.classList.toggle('tl-btn-step--active', _stepMode);
+  if (btn) {
+    btn.classList.toggle('tl-btn-step--active', _stepMode);
+    btn.setAttribute('aria-pressed', String(_stepMode));
+  }
   /* If step mode disabled while the Continue button is showing, resume play */
   if (!_stepMode) {
     var cont = document.getElementById('tl-continue');

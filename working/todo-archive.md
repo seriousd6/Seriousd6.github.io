@@ -5,7 +5,149 @@ See `working/TODO.md` for the active task list.
 
 ---
 
-## Completed 2026-06-06 (loop session)
+## Completed 2026-06-06 (loop session, iteration 4)
+
+### DATA-8 · additions-esther chapter count mismatch *(LOW)*
+
+Inspected `data/bible-apocrypha/WEB-CE/additions-esther.json` and
+`data/bible-apocrypha/BRENTON/additions-esther.json` — both have 10 chapters (1–10),
+using the continuous Greek Esther chapter numbering (LXX convention that includes
+Addition A as ch 1 and runs through the full narrative). Declared count in
+`apocrypha-books.json` was 7 (incorrect enumeration).
+
+Fix: updated `apocrypha-books.json` — changed `"chapters": 7` → `"chapters": 10` and
+renamed `"Additions to Esther"` → `"Greek Esther"` (the data is the full 10-chapter LXX
+Greek Esther, not a 6-section additions-only file). Also added `"GkEsth"` abbrev.
+Bumped `APP_CACHE_V` from `bsw-app-v67` → `bsw-app-v68` so PWA clients pick up the
+updated `apocrypha-books.json` (it is in SHELL_URLS / cache-first).
+
+**Files modified:** `data/apocrypha-books.json`, `sw.js`.
+
+### DATA-4 · DR apocrypha version missing 4 Daniel/Esther additions *(LOW)*
+### DATA-5 · WEB-CE full-bible version missing 3 Daniel-addition books *(MEDIUM)*
+
+Root cause: DR and WEB-CE store the Daniel additions embedded within their canonical
+`daniel.json` (ch 13 = Susanna, ch 14 = Bel and the Dragon, ch 3 v24+ = Prayer of
+Azariah) and, for DR, `esther.json` (ch 11-16 = Additions A-F). The eBible.org source
+doesn't provide standalone files for these books.
+
+Fix: Created and ran `scripts/extract-daniel-additions.py`, which reads the embedded
+chapters and writes standalone `{ "chapters": { "1": { v: text } } }` files:
+
+- `data/bible-apocrypha/DR/susanna.json` (1 ch, 65 verses — from DR daniel ch 13)
+- `data/bible-apocrypha/DR/bel-and-dragon.json` (1 ch, 42 verses — DR daniel ch 14)
+- `data/bible-apocrypha/DR/prayer-of-azariah.json` (1 ch, 77 verses — DR daniel ch 3 v24+)
+- `data/bible-apocrypha/DR/additions-esther.json` (6 chs, 98 verses — DR esther ch 11-16)
+- `data/bible-apocrypha/WEB-CE/susanna.json` (1 ch, 64 verses — WEB-CE daniel ch 13)
+- `data/bible-apocrypha/WEB-CE/bel-and-dragon.json` (1 ch, 42 verses — WEB-CE daniel ch 14)
+- `data/bible-apocrypha/WEB-CE/prayer-of-azariah.json` (1 ch, 74 verses — WEB-CE daniel ch 3 v24+)
+
+Note on DR additions-esther chapter count: apocrypha-books.json declares 10 chapters
+(matching full Greek Esther convention in WEB-CE/BRENTON), but DR's additions-esther
+only has 6 chapters (the 6 Addition sections A-F). The reader gracefully handles missing
+chapters with "Chapter N not found in this translation." — a significant improvement over
+the previous total 404.
+
+**Script:** `scripts/extract-daniel-additions.py`
+
+### DATA-9 · BRENTON Baruch missing chapter 6 (Letter of Jeremiah) *(LOW)*
+
+Created and ran `scripts/fetch-brenton-baruch6.py`. Downloads the eBible.org BRENTON
+USFM zip, locates `48-LJEeng-Brenton.usfm` (the Letter of Jeremiah), parses all 73
+verses with a USFM strip regex, and appends them as chapter `"6"` in
+`data/bible-apocrypha/BRENTON/baruch.json`. Result: baruch.json now has chapters 1–6;
+ch 6 opens "A copy of an epistle, which Jeremy sent unto them which were to be led
+captives into Babylon…" (73 verses).
+
+Also: BRENTON re-fetch (run to attempt DATA-9 via main script) recovered two DATA-3
+books — `daniel.json` (12 ch, 420 v) and `esther.json` (10 ch, 164 v) — plus
+`susanna.json` (DATA-5 related). Re-ran `fix-brenton-spaces.py` after re-fetch to clean
+374 fused words in the fresh files. `nahum.json` remains missing from eBible.org BRENTON
+source (DATA-3 still partial).
+
+**Script:** `scripts/fetch-brenton-baruch6.py`
+**Files modified:** `data/bible-apocrypha/BRENTON/baruch.json`, `data/apocrypha-books.json`,
+`sw.js`.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 3)
+
+### PWA-6 — library/progress/index.html not precached *(LOW)*
+
+Added `'./library/progress/index.html'` to SHELL_URLS in `sw.js` immediately after
+`'./library/index.html'` (line 67). Bumped `APP_CACHE_V` from `bsw-app-v66` →
+`bsw-app-v67`. The three companion JS/CSS files were already precached; only the HTML
+page itself was missing. Going offline and navigating to `library/progress/` will now
+serve the cached page rather than `offline.html`.
+
+**Files modified:** `sw.js` (version string + 1 SHELL_URL entry).
+
+### AUD-11 — verse-study.js: static document.title and missing h1 *(MEDIUM)*
+
+Two accessibility fixes on the verse-study page:
+1. Added `document.title = parsed.display + ' — Verse Study — Bible Study';` in
+   `assets/js/verse-study.js` immediately after `headerRef.textContent = parsed.display`
+   (line 84). Browser tab now shows the verse reference (e.g. "John 3:16 — Verse Study
+   — Bible Study") instead of the static "Verse Study — Bible Study".
+2. Added `role="heading" aria-level="1"` to `#vs-header-ref` in `verse-study/index.html`
+   line 26. Screen readers now expose the verse reference as the H1 page title; section
+   H2s (Cross-References, Commentary, etc.) follow in correct hierarchy.
+
+**Files modified:** `assets/js/verse-study.js`, `verse-study/index.html`.
+
+### DATA-7 · BRENTON missing spaces in verse text *(MEDIUM)*
+
+Created `scripts/fix-brenton-spaces.py`. Uses `re.sub(r'([a-z])([A-Z])', r'\1 \2', text)`
+to insert spaces at lowercase→uppercase word boundaries in all BRENTON verse strings —
+e.g. "thatI will return" → "that I will return". Dry-run confirmed: 399 of 28,156 BRENTON
+verses are fixed; 0 remain fused after the pass. Known limitation: all-lowercase fusions
+(e.g. "menmay") are not caught by this pattern and require a BRENTON re-fetch.
+
+**Script:** `scripts/fix-brenton-spaces.py` — run `python3 scripts/fix-brenton-spaces.py`.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 2)
+
+### NAV-4 — verse-study chapter-boundary navigation dead-end *(MEDIUM)*
+
+Updated `loadVerseStudyVerse` in `assets/js/verse-study.js` (the prev/next nav block, lines 221–243).
+At chapter boundaries (verse 1 or last verse of chapter), instead of hiding the `‹`/`›` arrows,
+they now show a chapter-jump link. For prev at v=1: if `parsed.ch > 1`, shows `← Ch N-1` linking
+to `bookName Ch-1:1`. For next at last verse: if `bk.chapters` allows, shows `Ch N+1 »` linking
+to `bookName Ch+1:1`. Both cases set `textContent` explicitly so re-navigating to a normal verse
+resets the label back to `‹`/`›`. `bk.chapters` from `metaBooks` prevents wrapping past the book end.
+
+**Files modified:** `assets/js/verse-study.js` (prev/next nav block only).
+
+### RI-D · Tile click feels unresponsive — active state + outside-click race *(MEDIUM)*
+
+Three changes to fix tile click responsiveness in `assets/js/interlinear.js`:
+1. Added `e.stopPropagation()` to the tile click handler in `renderReaderInterlinearRow` — prevents
+   the tile click from bubbling to `document` and immediately triggering the outside-click listener.
+2. Removed the `setTimeout(10)` wrapper in `_riShowPopover`'s outside-click registration — now
+   uses a direct `document.addEventListener` since stopPropagation makes the race impossible.
+3. Added `min-height: 44px` to `.ri-tile` in `assets/css/reader.css` (WCAG 2.5.5 touch target).
+The active tile state (`ri-tile--active` class add/remove) was already wired in by the RI-A/B/C
+changes in iteration 1.
+
+**Files modified:** `assets/js/interlinear.js` (tile click handler + outside-click block), `assets/css/reader.css`.
+
+### DATA-6 · DR / KJV-APO / WEB-CE Strong's markup contamination *(HIGH)*
+
+Created `scripts/fix-apocrypha-strongs.py`. Walks all three contaminated directories, strips
+`|strong="[HG]\d+"` tokens (replacing each with a space), collapses double-spaces, and removes
+space-before-punctuation artifacts. Writes files back in-place. Dry-run count: DR 30,169 / 35,811
+verses, KJV-APO 31,099 / 36,822, WEB-CE 30,375 / 35,584 would be cleaned (contamination confined
+to canonical 66-book copies; apocrypha-specific books remain untouched at 0/298).
+
+**Script:** `scripts/fix-apocrypha-strongs.py` — run `python3 scripts/fix-apocrypha-strongs.py`
+to apply. Safe to re-run (no-op on already-clean files).
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 1)
 
 ### RI-A · Popover spawns off-screen on right edge and bottom edge *(HIGH)*
 
@@ -4076,3 +4218,584 @@ Added INTENT/CHANGE?/VERIFY comments to: `initLibBrowserPage` (entry point, call
 ### CSS-18 · lib-browser.css tradition badges + find-mark dark mode gap *(MEDIUM)*
 
 `assets/css/lib-browser.css`: Added `[data-theme="dark"]` overrides and a `@media (prefers-color-scheme: dark)` mirror for all 10 `.lb-item-abbrev--*` tradition badges, lightening each saturated dark hex to a readable light version (e.g., reformed `#a0522d` → `#d4895a`, orthodox `#8b2252` → `#d45c90`). Also added `mark.lb-find-mark` override to `rgba(253,230,138,0.25)` (dim amber) in dark mode to reduce visual glare while keeping highlights visible.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 5)
+
+### SW-A · Rebrand and passage-centric entry point *(HIGH)*
+
+**Files changed:** `translation/workshop/index.html`, `assets/js/workshop.js`, `assets/css/workshop.css`, `sw.js`
+
+**HTML (`translation/workshop/index.html`):** Rebranded page title and topbar from "Translation Workshop" → "Original Language Study". Added `#sw-trans-toggle-btn` in topbar actions. Added `#sw-passage-entry` bar (above the layout) with `#sw-ref-input` text input, `#sw-study-btn` button, and `#sw-browse-link` anchor. Split column 2 into two panels: `#ws-browse-panel` (vocabulary queue, shown by default) and `#sw-passage-view` (passage study, hidden by default) with `#sw-passage-header`, `#sw-ptiles` tile container, `#sw-passage-tabs` (4 tab stubs), and `#sw-tab-content`.
+
+**JS (`assets/js/workshop.js`):**
+- New state: `_passageMode`, `_passageRef`, `_translationMode`, `_depth` (localStorage-backed via `SK_DEPTH = 'bsw_ws_depth'`).
+- New functions: `_initDepth()`, `_applyDepth(level)`, `_applyTransMode()`, `_switchToPassageMode()`, `_switchToBrowseMode()`, `_studyPassage(refStr)`, `_renderPassageTiles(parsed, interData, strongsDict)`, `_openWord(code)`.
+- Depth tagging in `_renderDossier`: `data-depth-min="1"` on range section; `data-depth-min="2"` on sources section; `data-depth-min="2"` on `ws-section--bdist` (book distribution); `data-depth-min="3"` on extrabiblical uses wrapper and `ws-section--lxx` (LXX bridge).
+- Translation-mode tagging in `_renderDossier`: `sw-trans-section` class on tiers, contextual renderings, decision log, actions, and per-book defaults sections.
+- `initWorkshopPage` wiring: `_initDepth()` on load; passage study via button click + Enter key; browse link returns to queue mode; translation toggle button; depth buttons via event delegation from `#ws-dossier`.
+- Depth toggle HTML in dossier header: Reader / Student / Scholar buttons with `data-depth` attributes.
+
+**CSS (`assets/css/workshop.css`):** Added all new `.sw-*` selectors: passage entry bar, panel switcher, passage view, interlinear tiles (`.sw-ptile`, `.sw-ptile__lemma`, `.sw-ptile__eng`, `.sw-ptile__s`, `.sw-ptile--active`), verse rows, passage tabs, depth toggle buttons, translation-mode visibility (`.sw-trans-section` hidden by default, shown when `#ws-dossier.sw-trans-on`), depth-class visibility rules (`.ws-page.sw-depth-1` hides `data-depth-min="2"` and `"3"`), `ws-btn--active`, `#sw-trans-toggle-btn[aria-pressed="true"]`.
+
+**Service worker (`sw.js`):** Bumped `APP_CACHE_V` from `bsw-app-v68` → `bsw-app-v69`.
+
+### CSS-19 — lib-reader.css: pager buttons and chapter tabs below 44px touch target on mobile *(LOW)*
+
+`assets/css/lib-reader.css`: In the `@media (max-width: 640px)` block, added `min-height: 44px; display: inline-flex; align-items: center;` to `.lr-pager-btn, .lr-subpager-btn` (chapter Prev/Next and sub-section Prev/Next). Added the same rules for `.lr-tab` (document section tabs). In the `@media (max-width: 600px)` block, added `min-height: 44px` to the `.lr-tab` override (which had been regressing font-size without enforcing touch height). The `.lr-toc-list a` already had `min-height: 44px` — these three control groups now match.
+
+### CODE-13 — verse-study.js: exported functions and window.BibleUI coupling missing structured comments *(MEDIUM)*
+
+`assets/js/verse-study.js`: Added INTENT/CHANGE?/VERIFY comment blocks above three locations:
+1. `initVerseStudyPage()` (exported entry point) — documents URL param parsing, localStorage keys (`bsw_version`, `bsw_dissect_ctx`, `bsw_memory`), and app.js call site.
+2. `loadVerseStudyVerse(parsed, versionId)` (exported) — documents the primary verse-load pipeline including chapter-crossing prev/next logic, callers, and downstream functions (`vsRenderTokenRow`, `loadVerseSections`).
+3. `window.BibleUI.initOLSection` call site — documents the deliberate `window.BibleUI` indirection that decouples ol-companion.js from verse-study.js to avoid a circular import through core.js.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 6)
+
+### AUD-12 — dictionary page doesn't re-try URL entry after secondary sources load *(HIGH)*
+
+`assets/js/library.js`: In the secondary sources `forEach` `.then()` callback (at the `['smith', 'isbe', 'hitchcock', 'nave', 'torrey'].forEach` block), added `else if (_entryParam && _activeItemKey === null && _tryShowUrlEntry()) { return; }` before the `else if (_activeLetter)` branch. Also added INTENT/CHANGE?/VERIFY comment block explaining the lazy-load pattern and the re-try logic. This fixes a HIGH bug where all verse-study cross-links to non-Easton's dictionary entries (`?src=nave`, `?src=smith`, `?src=isbe`) silently defaulted to the Easton's A-letter view instead of auto-opening the linked entry.
+
+### PERF-6 — `_naveTopicsForVerse` loads 1.4MB Nave index before checking verse-index *(LOW)*
+
+`assets/js/library.js`: Rewrote `_naveTopicsForVerse()` to first fetch only the lightweight per-book verse-index (`_naveLoadVidx`), check if the verse has any Nave's slugs, and only then fetch the full 1.4 MB `nave.json` (`_naveLoad()`). For verses with no Nave's topics — the majority of NT epistles — this avoids the 1.4 MB download entirely on cold first visit. Added INTENT/CHANGE?/VERIFY comment block.
+
+### DATA-10 — Smith's dictionary verse-index missing `philippians.json` *(LOW)*
+
+Root cause: all "Philippians" references in Smith's source data were mistyped as "Philemon" — causing them to generate bogus `philemon.json` entries for chapters 2–4 (impossible since Philemon has only 1 chapter) while leaving `philippians.json` empty. Fixed 12 source files: `clement.json`, `philippians-epistle-to-the.json` (3 refs), `euodias.json`, `paul.json` (2 refs), `rome.json` (3 refs), `sacrifice.json`, `timothy.json` (2 refs), `angels.json`, `apostle.json`, `captivities-of-the-jews.json`, `epaphroditus.json`, `games.json`, `macedonia.json`, `syntyche.json`. Re-ran `scripts/build-dict-verse-index.py --source smith` — now generates 66/66 book files (was 65/66); `philippians.json` has 23 verse entries across 4 chapters; `philemon.json` is now correctly chapter 1 only.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 9)
+
+### CSS-20 · Dictionary source badge + tradition chip colors invisible in dark mode *(MEDIUM)*
+
+Three badge color systems converted from inline JS `style="background:..."` to CSS-overridable `data-*` attributes:
+
+1. **Dictionary source badges** (`library.js` — `renderVSDictionary`, `renderModalDictionary`, `_srcBadgesHtml`, filter chip builder): Replaced `style="background:' + src.badgeColor + '"` on `.vs-dict-src-badge`, `.dict-item__src`, and `.dict-filter-chip__badge` with `data-dict-src="' + escHtml(src.key) + '"`. Added per-source CSS to `dictionary.css` with full `[data-theme="dark"]` + `@media (prefers-color-scheme: dark)` overrides for all 6 sources (easton, smith, isbe, hitchcock, nave, torrey). Light colors: easton `#7c3aed`, smith `#1d4ed8`, isbe `#1e3a5f`, hitchcock `#065f46`, nave `#b45309`, torrey `#be123c`. Dark overrides: lighter equivalents that remain legible on dark backgrounds.
+
+2. **Tradition chips** (`lib-progress.js` lines 98, 138): Replaced `style="width:X%;background:color"` on `.lp-bar-fill` with `style="width:X%"` + `data-trad="${trad}"`. Replaced `style="background:color"` on `.lp-trad-chip` with `data-trad="${trad}"`. Added `[data-trad="..."]` CSS rules to `lib-progress.css` for all 9 traditions, with dark mode overrides (+30% lightness).
+
+3. **Library tradition badges** (`library.css` `.lib-badge--*`): Added `[data-theme="dark"]` block and `@media (prefers-color-scheme: dark)` mirror for all 11 `.lib-badge--*` variants (reformed, lutheran, anglican, baptist, anabaptist, congregationalist, methodist, orthodox, patristic, father, roman-catholic) — lightened each saturated dark hex for legibility on dark backgrounds.
+
+**Files modified:** `assets/js/library.js`, `assets/js/lib-progress.js`, `assets/css/dictionary.css`, `assets/css/library.css`, `assets/css/lib-progress.css`, `sw.js` (bumped v70 → v71).
+
+### NAV-5 · Eight new library standalone pages orphaned — not in SHELL_URLS *(LOW)*
+
+`sw.js` SHELL_URLS: Added 6 new standalone library pages that exist on disk (skipped `leo-tome/` and `schleitheim-confession/` — confirmed absent from disk). Also added `library/read/index.html` (generic full-screen reader used by all "⤢" buttons). Total: 7 new SHELL_URLS entries. `APP_CACHE_V` bumped as part of this iteration's SW bump.
+
+### PWA-7 · `library/read/` and `data/dictionary/index.json` missing from SHELL_URLS *(MEDIUM)*
+
+`sw.js` SHELL_URLS: Added `./library/read/index.html` and `./data/dictionary/index.json`. Resolves asymmetric offline behavior where Smith's dictionary (`data/smith/index.json` — 836KB) was precached but Easton's (`data/dictionary/index.json` — 756KB) was not, causing Easton's to fail on first offline visit while Smith's worked. Both tasks (NAV-5 + PWA-7) implemented in a single sw.js edit since both required SHELL_URLS additions.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 10)
+
+### AUD-13 · Five interactive controls missing ARIA state attributes *(MEDIUM)*
+
+Five control groups across three files converted from CSS-only state to ARIA-state attributes:
+
+1. **`lib-reader.js` section tabs**: Added `role="tab"` + `aria-selected="true/false"` to each `.lr-tab` button rendered in `_renderPaged` (parent `lr-tab-bar` already had `role="tablist"`).
+
+2. **`lib-browser.js` volume/chapter tabs**: Added `role="tab"` + `aria-selected="true/false"` to each `.lb-sec-tab` button; added `role="tablist" aria-label="Document sections"` to the `.lb-sec-tab-bar` container.
+
+3. **`lib-browser.js` document list buttons**: Added `aria-pressed="true/false"` at render time in `_renderList` (line 701); added `el.setAttribute('aria-pressed', String(isActive))` in `_openDoc`'s sync loop (line 754) so the attribute stays current when a doc is opened without re-rendering the full list.
+
+4. **`library.js` dictionary source filter chips**: Added `btn.setAttribute('aria-pressed', 'true')` at creation time; added `btn.setAttribute('aria-pressed', String(_enabled[src.key]))` inside the click handler.
+
+5. **`library.js` alpha-bar letter buttons**: Added `btn.setAttribute('aria-pressed', ...)` at creation time in `_buildAlpha`; updated `_showLetter` to call `b.setAttribute('aria-pressed', String(active))` on all buttons when a letter is activated.
+
+**Files modified:** `assets/js/lib-reader.js`, `assets/js/lib-browser.js`, `assets/js/library.js`.
+
+### CODE-14 · `lib-reader.js` — zero comment coverage on exported entry-point + localStorage functions *(MEDIUM)*
+
+`assets/js/lib-reader.js`: Added INTENT/CHANGE?/VERIFY comment blocks to 6 locations:
+1. `_loadPos` — documents the legacy bare-integer backward-compat branch and localStorage key schema.
+2. `_savePos` — documents `{ idx, ts }` shape and the coupling to `_loadPos`'s parser.
+3. `_evictStalePositions` — explains 90-day cutoff, reverse-iteration invariant, and `_LIB_POS_PREFIX` coupling.
+4. `initLibReaderPage` — documents `?doc=`/`?section=` params, `app.js:249` caller, JSON vs. HTML fetch branch, and expected browser observation.
+5. `_saveLibProgress` — documents `bsw_lib_progress` schema and coupling to `lib-progress.js`.
+6. `_markDocComplete` — documents `bsw_lib_complete` schema, return-value contract, and verification via `library/progress/`.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 11)
+
+### CSS-21 · Dictionary alpha-bar + daily.css action buttons below 44px on mobile *(MEDIUM)*
+
+- **`assets/css/dictionary.css`**: Added `min-height: 44px; display: inline-flex; align-items: center;` to `.dict-alpha-btn` inside the existing `@media (max-width: 680px)` block. The 26 A-Z buttons at the top of the dictionary page were ~21px tall (8px padding + 13px text); they now meet WCAG 2.5.5 at narrow viewports.
+- **`assets/css/daily.css`**: Added `min-height: 44px; display: inline-flex; align-items: center;` for `.daily-votd-btn` and `.daily-mark-done-btn` inside the existing `@media (max-width: 640px)` block. These were ~21px and ~25px respectively; the surrounding `.daily-passage-chip` / `.daily-read-all` rules in that block already had `min-height: 44px` — these two controls were the only gap.
+
+**Files modified:** `assets/css/dictionary.css`, `assets/css/daily.css`, `sw.js` (bumped v71 → v72).
+
+### UX-10 · `timelapse-map.js` data load failure is silent *(LOW)*
+
+`assets/js/timelapse-map.js` line 95: Expanded the `.catch` from a console-only log to also inject a user-visible error message into `#tl-event-list` (or `#tl-container` as fallback). Uses `var(--color-muted,#888)` inline to match the site's muted-text convention. Without this, a failed timelapse data load left users with an initialized-but-empty Leaflet map and no explanation.
+
+### CODE-15 · `modal.js` and `tracker.js` — missing INTENT/CHANGE?/VERIFY on major exported functions *(LOW)*
+
+- **`assets/js/modal.js`**: Added INTENT/CHANGE?/VERIFY blocks to 6 locations:
+  1. `openModal` — scroll-lock `bsw-modal-open` coupling to `hideModal()`, trapFocus registration, caller list.
+  2. `renderModal` — render dispatcher pattern, `_parsedRef`/`_chapterMaxV` shared state, tab-switch coupling.
+  3. `renderCrossRefs` — cross-ref data source (`core.js` `loadCrossRefs`), book-level caching.
+  4. `_refreshModalNotesBadge` — `bsw_notes` key, coupling to `_renderNotesPanel` save handler.
+  5. `_renderNotesPanel` — note schema, autosave, `_refreshModalNotesBadge` coupling, `bsw_notes` key.
+  6. `renderCommentary` — `COMMENTARY_SOURCES` registry in core.js, `bsw_comm_src` persistence.
+- **`assets/js/tracker.js`**: Added INTENT/CHANGE?/VERIFY to `getToday()` — explicitly names the 8 discipline dimensions and the 3-step protocol for adding a new discipline (new `is*Done`, new key here, new UI consumer).
+
+**Files modified:** `assets/js/modal.js`, `assets/js/tracker.js`.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 12)
+
+### PERF-7 · `runAutoTagTerms()` loads 3.2 MB on every page before checking for taggable content *(LOW)*
+
+`assets/js/terms.js`: Added a two-line pre-check guard at the top of `runAutoTagTerms()` before the `_loadTermMap()` call. The guard checks for `.term` elements and any element matching `_AUTOTAG_SELECTORS` (the joined selector string); if neither is present, the function returns immediately — no 3.2 MB of term-index data loads. Pages with no Bible text (maps, history, search, library progress, wordcloud) skip the load entirely; topic pages and reader pages (which have `.scripture`, `#vs-focal-text`, etc.) still trigger the full load during idle as before. Added INTENT/CHANGE?/VERIFY comment block. Note: the check uses `document.querySelector(_AUTOTAG_SELECTORS)` directly on the joined string (all selectors joined with `, `) rather than `.some(...)` on an array — simpler and correct since `_AUTOTAG_SELECTORS` is already the joined form.
+
+**Files modified:** `assets/js/terms.js`.
+
+### CSS-22 · `topic-shell.css` nav panel missing dark mode styles *(MEDIUM)*
+
+`assets/css/topic-shell.css`: Added `[data-theme="dark"]` block and matching `@media (prefers-color-scheme: dark)` mirror for 5 `.nav-panel` selectors:
+- `.nav-panel` → `background: var(--color-surface, #1e1e1e)` (was hardcoded `#fff`)
+- `.nav-panel__section-title` → `color: var(--color-muted, #999)` (was `#7a6a55`)
+- `.nav-panel__list a` → `color: var(--color-text, #e8dfc8)` (was `#2c2416`)
+- `.nav-panel__list a:hover` → dark-surface hover with muted highlight
+- `.nav-panel__list a[aria-current="page"]` → slightly lighter dark-surface active state
+
+The mobile slide-in nav drawer on all topic pages now renders correctly in dark mode.
+
+**Files modified:** `assets/css/topic-shell.css`, `sw.js` (bumped v72 → v73).
+
+### AUD-14 · Commentary source picker missing scope label for `rwp` *(MEDIUM)*
+
+`assets/js/core.js` `COMMENTARY_SOURCES` line 704: Changed `rwp` label from `"Robertson's Word Pictures"` → `"Robertson's Word Pictures (NT)"`. Robertson's Word Pictures has zero OT coverage (all 39 OT files are 2-byte `{}` stubs) but the label gave no hint of this — users selecting RWP on OT verses always got "No commentary found" with no explanation. The `(NT)` suffix now matches the existing `barnes (NT)` pattern. No change to `calvin` — its gaps are historically expected and its coverage (51/66 books) is broad enough that a qualifier would mislead.
+
+**Files modified:** `assets/js/core.js`.
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 13)
+
+### DATA-11 · `data/translation/notes/1kings/22.json` missing *(LOW)*
+
+Root cause investigation found two compounding issues:
+1. The upstream interlinear source (`tahmmee/interlinear_bibledata` on GitHub) does not have 1 Kings chapter 22 — `GET /src/i_kings/22.json` returns 404. The MKT progress tracker listed 1 Kings as "21 chapters complete" (correct per source data) but the canonical count is 22. **Data-blocked at source — cannot be fixed without an alternative interlinear source for 1 Kings 22.**
+2. `scripts/split-notes.py` (referenced in `ol-companion.js` CHANGE? comment) does not exist in `scripts/`. The per-chapter files were created by an older pipeline step that no longer exists.
+
+Two partial fixes applied:
+- **`assets/js/ol-companion.js`** (line 365): Error message changed from the generic "not available for this book" (falsely implying all chapters missing) to "not available for {bookId} chapter {ch}" — correctly scopes the gap to the one missing chapter.
+- **`scripts/generate-notes.py`**: Added chapter-split output alongside the existing book-level file: for each processed book, `data/translation/notes/{book}/{ch}.json` files are now written, one per chapter (keyed by verse number). This resolves the missing `split-notes.py` dependency — future book regenerations automatically produce the correct per-chapter structure. Re-ran `python3 scripts/generate-notes.py --book 1kings` to regenerate chapters 1–21 with fresh per-chapter files (ch.22 still absent from interlinear source).
+
+**Files modified:** `assets/js/ol-companion.js`, `scripts/generate-notes.py`.
+
+### PWA-8 · `data/topics.json` and `data/topics-index.json` missing from SHELL_URLS *(MEDIUM)*
+
+`sw.js` SHELL_URLS was missing two critical small files:
+- `data/topics.json` (1.7 KB): fetched by `main.js` on every page to build the Studies sidebar section — if absent offline, the entire "Studies" nav group silently fails to render.
+- `data/topics-index.json` (3.6 KB): fetched by `search.js` for the study guide search feature.
+
+Both added to SHELL_URLS after the existing `apocrypha-canon-orders.json` entry. Cache version bumped v73 → v74.
+
+**Files modified:** `sw.js`.
+
+### AUD-15 · `search/index.html` tab row missing `role="tablist"` and `aria-selected` *(MEDIUM)*
+
+`search/index.html` `.search-tab-row` had no `role="tablist"` and the 6 tab buttons had no `role="tab"` or `aria-selected`. Screen readers announced these as plain buttons with no tab role or selection state.
+
+- `search/index.html`: Added `role="tablist" aria-label="Explore sections"` to the container; added `role="tab" aria-selected="true/false"` to each of the 6 tab buttons.
+- `assets/js/search.js` (`setSearchTab`, line 143): Added `btn.setAttribute('aria-selected', String(isActive))` alongside the existing `classList.toggle` so selection state stays in sync when tabs are switched programmatically or via URL param.
+
+**Files modified:** `search/index.html`, `assets/js/search.js`, `sw.js` (bumped v73 → v74).
+
+---
+
+## Completed 2026-06-06 (loop session, iteration 14)
+
+### NAV-6 · Two empty stub directories in `library/` cause 404 on direct navigation *(LOW)*
+
+Applied option B — removed empty directories. `library/leo-tome/` and `library/schleitheim-confession/` were empty scaffolding with no `index.html`. Both documents remain accessible through the library browser (inline viewer) and full-screen reader (`library/read/?doc=leo-tome` / `library/read/?doc=schleitheim-confession`). Their data files (`data/library/docs/leo-tome.json`, `data/library/docs/schleitheim-confession.json`) are unchanged. Empty dirs were removed with `rmdir`; nothing pointed to them in the nav.
+
+**Files modified:** `library/leo-tome/` (removed), `library/schleitheim-confession/` (removed).
+
+### PWA-9 · `data/echoes/` and `data/torrey/verse-index/` missing from `precacheBible` *(MEDIUM)*
+
+`sw.js` `precacheBible()` prefetch loop extended from `['crossrefs', 'interlinear']` to `['crossrefs', 'interlinear', 'echoes', 'torrey/verse-index']`. Both directories are per-book `{bookId}.json` files matching the existing pattern exactly — the fix is a single string addition per directory. Added a comment explaining that `echoes` (~1.6 MB) and `torrey/verse-index` (~788 KB) power core verse-study panels that fail silently offline for unvisited books. Cache bumped v74 → v75.
+
+**Files modified:** `sw.js`.
+
+### CSS-23 · `bible-ui.css` modal prev/next verse buttons reduced to 28px on mobile *(MEDIUM)*
+
+`assets/css/bible-ui.css`, `@media (max-width: 767px)` block: replaced `width: 1.75rem; padding: 0.5rem 0` on `.bsw-modal__prev-verse:not([hidden])` / `.bsw-modal__next-verse:not([hidden])` with `min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0`. The buttons now meet the WCAG 2.5.5 44px minimum touch target in both dimensions. Desktop size (2rem ≈ 32px) is unaffected — these are the most-used controls on mobile for navigating through scripture verse-by-verse.
+
+**Files modified:** `assets/css/bible-ui.css`.
+
+### UX-11 · `places.js` `loadPlaces()` missing `.catch()` — permanent rejected-promise cache *(LOW)*
+
+`assets/js/places.js` `loadPlaces()`: Added `.catch(function () { _placesReady = null; })` to the fetch chain. Without this, a single failed fetch (network error, 404, parse error) permanently set `_placesReady` to a rejected Promise — truthy, so the `if (_placesReady) return _placesReady` guard permanently returned that rejection, generating one unhandled rejection per chapter navigation for the entire session. The null-reset allows the next call to retry. Added INTENT/CHANGE?/VERIFY comment block.
+
+**Files modified:** `assets/js/places.js`, `sw.js` (bumped v74 → v75).
+
+---
+
+## Iteration 15 — 2026-06-06
+
+### DATA-12 · `scripts/fetch-torrey.py` drops Isaiah and Jude refs — fixed
+
+Two bugs in `scripts/fetch-torrey.py` caused `data/torrey/verse-index/isaiah.json` and `data/torrey/verse-index/jude.json` to never be generated:
+
+1. **Regex too short:** `_BOOK_PREFIX_RE = re.compile(r'^(\d?[A-Z][a-z]{0,2})\s+')` at line 199 — `{0,2}` cap meant `Jude` (3 lowercase chars: u, d, e) never matched; the regex greedily captured `Jud` (= Judges), so all Jude `<scripRef>` tags were silently routed to Judges and dropped. Fixed to `{0,3}`.
+
+2. **Missing abbrev:** `TORREY_ABBREVS` had `'Is':'isaiah'` but the CrossWire module uses `Isa`. The regex correctly captured `Isa` (2 lowercase letters within `{0,2}`), but `TORREY_ABBREVS.get('Isa')` returned `None` and every Isaiah ref was discarded. Fixed by adding `'Isa':'isaiah'` alongside `'Is':'isaiah'`.
+
+Script re-run: `python3 scripts/fetch-torrey.py --force` → 66 verse-index files generated (was 64). `isaiah.json` contains 898 verse keys; `jude.json` generated with 21 topics.
+
+**Files modified:** `scripts/fetch-torrey.py`, `data/torrey/torrey.json`, `data/torrey/verse-index/isaiah.json`, `data/torrey/verse-index/jude.json` (plus 64 other verse-index files regenerated).
+
+---
+
+### AUD-16 · Wesley's Notes `1kings` and `philemon` — data-blocked at source
+
+Investigation: re-ran `python3 scripts/fetch-more-commentaries.py --only wesley --force`. The script correctly wrote 66 files but `1kings.json` and `philemon.json` are still 2-byte `{}`. Diagnostic confirmed the CrossWire Wesley SWORD module (`ot.bzv`/`nt.bzv`) has entry_size=0 for all 839 1Kings verse positions and all 27 Philemon verse positions — the module simply has no data for these books. The extraction script is not buggy; the source module is incomplete. Marked data-blocked.
+
+---
+
+### CODE-16 · `parallels.js` — added INTENT/CHANGE?/VERIFY to 5 key functions
+
+Added full INTENT/CHANGE?/VERIFY comment blocks to the 5 undocumented exported/complex functions in `assets/js/parallels.js`:
+- `loadParallels` — documents null-cache on 404, parallelsCache cross-module coupling
+- `initParallelToggle` — documents 4-function cascade, PARALLELS_STORAGE_KEY
+- `buildParallelPanel` — documents wireRefLinks cross-module coupling, BADGE_TYPE_MAP sync requirement
+- `loadParallelText` — documents PARALLEL_PAGE_SIZE, data-page pagination, loadBook cache re-use
+- `_paginateGroup` — documents style.display show/hide, data-rpage attribute, parallel re-injection at page change
+
+`grep -c "INTENT" assets/js/parallels.js` = 5. `sw.js` bumped v75 → v76.
+
+**Files modified:** `assets/js/parallels.js`, `sw.js`.
+
+---
+
+### CODE-17 · `daily.js` — added INTENT to 7 major entry points and helpers
+
+Added INTENT comments (and CHANGE?/VERIFY where warranted) to 7 undocumented functions in `assets/js/daily.js`:
+- `initDailyPage()` — full INTENT/CHANGE?/VERIFY (4 localStorage keys, plan/devotional restoration)
+- `_memGet()/_memSet()` pair — INTENT/CHANGE? (MEMORY_KEY schema, all dependent _mem* functions)
+- `initMemorizePage()` — INTENT/CHANGE?/VERIFY (MEMORY_KEY + MEMORY_MODE_KEY)
+- `initPlansHomeWidget()` — INTENT/CHANGE? (bsw_plans state dependency)
+- `_dailyRenderPlan()` — INTENT (today's plan passages, bsw_plans write-back)
+- `_dailyRenderVOTD()` — INTENT (day-of-year stable index)
+- `_dailyRenderDevotional()` — INTENT (devotional source picker)
+
+`grep -c "INTENT" assets/js/daily.js` = 8.
+
+**Files modified:** `assets/js/daily.js`.
+
+---
+
+## Iteration 16 — 2026-06-06
+
+### CSS-24 · `book-study.css` dark mode background fix
+
+**Problem:** `body.bk-ot { background-color: #faf7f2; }` and `body.bk-nt { background-color: #f8f9fc; }` override `var(--color-bg)` with hardcoded near-white values. In dark mode, `--color-text` = `#e8dfc8` (light cream) on `#f8f9fc` (near-white) = ~1.27:1 contrast. Romans and Revelation pages were unreadable.
+
+**Fix:** Added dark mode block at end of `assets/css/book-study.css`:
+- Both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])` blocks
+- Reset `body.bk-ot` and `body.bk-nt` backgrounds to `var(--color-bg)` = `#1a1208`
+- Overrode `--bk-accent-soft` and `--bk-accent-dim` to white-transparent equivalents (used throughout for section backgrounds and borders — dark genre overlays become nearly invisible on dark page backgrounds)
+- Fixed `.bk-facts` border-top (dark genre accent on dark surface = invisible; replaced with `var(--color-primary)` = `#e8c87a` golden)
+
+**Files modified:** `assets/css/book-study.css`, `sw.js` (bumped v76 → v77).
+
+---
+
+### PWA-10 · `data/maps/places.json` and `data/maps/timelapse.json` added to SHELL_URLS
+
+Added two missing URLs to `sw.js` SHELL_URLS (near the `./data/timeline/` pair):
+- `'./data/maps/places.json'` (16KB — fetched by places.js on nearly every page for place-name auto-tagging)
+- `'./data/maps/timelapse.json'` (101KB — entire backing dataset for animated timelapse map)
+
+Without these, first offline visit to `/maps/timelapse/` rendered blank and place-name links were stripped from reader and timeline.
+
+**Files modified:** `sw.js`.
+
+---
+
+### AUD-17 · Maps & Timelapse ARIA gaps — 5 gaps fixed
+
+**`maps/index.html`:** Added `role="tablist" aria-label="Map panel"` to tab container; added `role="tab" aria-selected="true/false"` to all 3 tab buttons (Overview, Sites, Refs).
+
+**`assets/js/maps.js` `_showTab()`:** Added `btn.setAttribute('aria-selected', String(...))` for each tab button alongside the existing `classList.toggle` call.
+
+**`assets/js/maps.js` `_selectMap()`:** Added `b.setAttribute('aria-current', String(isActive))` alongside `classList.toggle` in the nav-btn forEach loop.
+
+**`maps/timelapse/index.html`:** Added `aria-pressed="true"` to `#tl-step-toggle` (matches `tl-btn-step--active` initial state); added `aria-label="Timeline position"` to `#tl-slider` range input; changed `title="Playback speed"` to `aria-label="Playback speed"` on `#tl-speed` select.
+
+**`assets/js/timelapse-map.js` `_toggleStepMode()`:** Added `btn.setAttribute('aria-pressed', String(_stepMode))` after the `classList.toggle` call.
+
+**Files modified:** `maps/index.html`, `assets/js/maps.js`, `maps/timelapse/index.html`, `assets/js/timelapse-map.js`, `sw.js`.
+
+### PERF-8 · `library.js` dictionary search debounce added
+
+Added 150ms debounce to the dictionary search input event listener in `assets/js/library.js` (around the `_doSearch(q)` call at the former lines 779–788). Without debounce, each keystroke triggered a full scan of ~35K index entries + `buildAlphaBar()` (26 DOM elements) + `renderList()` (up to 300 DOM nodes). The debounce matches the pattern in `lib-browser.js` search inputs.
+
+Added `// INTENT:` comment noting the purpose.
+
+**Files modified:** `assets/js/library.js`, `sw.js` (bumped v77 → v78).
+
+---
+
+## Iteration 17 — 2026-06-06
+
+### CODE-18 · `store.js` — added INTENT/CHANGE?/VERIFY to `exportAll` and `importAll`
+
+Added full INTENT/CHANGE?/VERIFY comment blocks to both critical exported functions in `assets/js/store.js`:
+
+- `exportAll()` — documents the schema-v2 snapshot contract, and the CHANGE? rule that any new STORE_KEYS entry must be added here AND in importAll() or it silently disappears from backups.
+- `importAll()` — documents merge vs. replace mode semantics, and the CHANGE? rule that a new STORE_KEYS entry needs both a `_set()` call in the replace branch AND a merge-strategy block in the merge branch.
+
+`grep -c "INTENT" assets/js/store.js` = 2. SW bumped v78 → v79.
+
+**Files modified:** `assets/js/store.js`, `sw.js`.
+
+---
+
+### CODE-19 · `maps.js` and `timelapse-map.js` — added INTENT/CHANGE?/VERIFY to entry points
+
+Added full INTENT/CHANGE?/VERIFY comment blocks to the two map page entry points:
+
+- `maps.js:initMapsPage()` — documents MAPS/GROUPS dependency, location.hash selection logic, wireRefLinks cross-module coupling.
+- `timelapse-map.js:initTimelapsePage()` — documents _DATA_URL relative-path constraint, TOTAL_TIME sync requirement with timelapse.json, #t=<n> deep-link behaviour.
+
+`grep -c "INTENT" assets/js/maps.js` = 2; `grep -c "INTENT" assets/js/timelapse-map.js` = 3.
+
+**Files modified:** `assets/js/maps.js`, `assets/js/timelapse-map.js`, `sw.js`.
+
+## Iteration 18 — 2026-06-06
+
+### CSS-25 · Apocrypha reader dark mode contrast fix
+
+**Dimension 7, Cycle 7 — Visual System**
+
+`apocrypha.css` had three selectors using `color: #fff` on `background: var(--color-primary)`. In dark mode `--color-primary` resolves to `#e8c87a` (golden amber), giving white text a contrast ratio of ~1.3:1 — catastrophic failure against WCAG 1.4.3.
+
+Affected selectors:
+- `.apoc-ch-btn--active` (chapter button, active state)
+- `.apoc-canon-chip--active` (canon filter chip, active state)
+- `.apoc-nav-btn:hover` (prev/next navigation button hover)
+
+Fix: appended dark mode block to end of `apocrypha.css` using `color: var(--color-on-primary)` (= `#1a1208`, 10:1 on golden) for both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])` mechanisms.
+
+**Files modified:** `assets/css/apocrypha.css`, `sw.js` (v79 → v80).
+
+---
+
+### AUD-18 · Notes page tab ARIA: add aria-selected
+
+**Dimension 10, Cycle 7 — Accessibility**
+
+`notes/index.html` had `role="tablist"` + `role="tab"` on the four tab buttons (All / By Tag / By Highlight / Search) but missing `aria-selected` in both the initial HTML markup and the `renderTabs()` JS function. Screen readers with ARIA tab roles require `aria-selected="true"/"false"` to announce which tab is currently active.
+
+Fix:
+1. HTML (lines 499–502): added `aria-selected="true"` to the initial active tab (All) and `aria-selected="false"` to the other three.
+2. `renderTabs()` (line 822): added `t.setAttribute('aria-selected', active ? 'true' : 'false')` alongside the existing class toggle so state stays in sync on every tab switch.
+
+**Files modified:** `notes/index.html`, `sw.js` (v79 → v80).
+
+## Iteration 19 — 2026-06-06
+
+### CODE-20 · Code comment coverage: sg-progress.js + lib-progress.js
+
+**Dimension 1, Cycle 8 — Code Comment Audit**
+
+Both files had zero INTENT/CHANGE?/VERIFY coverage despite containing exported entry points and non-trivial logic.
+
+**`sg-progress.js`** (`initSgProgress` + `_refreshTabDots`):
+- `initSgProgress`: Added INTENT/CHANGE?/VERIFY documenting the `bsw_sg_progress` localStorage key schema (`{ [slug]: string[] }`), the `.tg-section[id]` DOM selector dependency, and the `_refreshTabDots` cascade. CHANGE? notes that renaming `.tg-section` in study guide HTML silently breaks both this function and `_refreshTabDots`. VERIFY describes marking/unmarking a section and confirming tab dot and localStorage state.
+- `_refreshTabDots`: Added INTENT documenting that this syncs `.sg-tab-dot` span presence on `.sg-tab-btn[data-target]` elements with the current completion state.
+
+**`lib-progress.js`** (`initLibProgressPage` + `_render`):
+- `initLibProgressPage`: Added INTENT/CHANGE?/VERIFY documenting the `bsw_lib_complete` localStorage schema (`{ [docId]: { tradition, title, author, completedDate } }`), LIB_INDEX_URL relative path dependency, and the fetch-then-render chain.
+- `_render`: Added INTENT/CHANGE? documenting the `_TRAD_COLORS`/`_TRAD_ORDER`/`_TRAD_DISPLAY` three-map invariant — all must be updated in sync when adding a tradition.
+
+**Files modified:** `assets/js/sg-progress.js`, `assets/js/lib-progress.js`, `sw.js` (v80 → v81).
+
+---
+
+### CSS-26 · Maps page mobile touch targets (WCAG 2.5.5)
+
+**Dimension 3, Cycle 7 — Mobile Responsiveness**
+
+`maps.css` `@media (max-width: 700px)` block was missing touch-target overrides for two interactive controls:
+- `.maps-tab` (Overview / Sites / Refs panel tabs): `padding: .3rem .4rem; font-size: .70rem` → ~23px height on mobile — well below the 44px WCAG 2.5.5 minimum. These are the primary panel navigation controls when the map is collapsed to single-column on mobile.
+- `.maps-city-nav-btn` (Prev City / Next City in detail panel): `padding: .1rem .5rem; font-size: .78rem` → ~19px height — the smallest interactive control on the page.
+
+Fix: Added `min-height: 2.75rem` (= 44px) for both selectors inside the existing `@media (max-width: 700px)` block. Also added `min-height: 2.75rem` to `.maps-nav-btn` (the map selector buttons in the horizontal nav strip) which were also sub-44px.
+
+**Files modified:** `assets/css/maps.css`, `sw.js` (v80 → v81).
+
+## Iteration 20 — 2026-06-06
+
+### CSS-27 · maps.css hover states: use var(--color-on-primary) not #fff
+
+**Dimension 7, Cycle 8 — Visual System**
+
+Four hover-state rules in `maps.css` used `color: #fff` on `background: var(--color-primary)`, inconsistent with `.maps-city-ref-chip:hover` which already correctly uses `color: var(--color-on-primary, #fff)`. In dark mode `--color-primary` is golden (#e8c87a), making white text nearly invisible (~1.3:1 contrast).
+
+Fixed selectors by replacing `color: #fff` with `color: var(--color-on-primary, #fff)`:
+- `.maps-timelapse-link:hover`
+- `.maps-tl-chip:hover`
+- `.maps-refs-chip:hover`
+- `.maps-city-map-chip:hover`
+
+No dark mode block needed since `--color-on-primary` resolves correctly in all themes (dark = #1a1208 on golden, light = #fff on blue-primary via the fallback).
+
+**Files modified:** `assets/css/maps.css`, `sw.js` (v81 → v82).
+
+---
+
+### CSS-28 · timelapse.css dark mode: play/continue/toggle buttons + map link hover
+
+**Dimension 7, Cycle 8 — Visual System**
+
+Four elements in `timelapse.css` used `background: var(--color-primary); color: #fff` without dark mode overrides. In dark mode, golden primary makes white text ~1.3:1 contrast.
+
+Added to the existing dark mode block (which already covered tooltip tooltips):
+- `.tl-btn-play` (circular play/pause button)
+- `.tl-btn-continue` (animated pulsing "continue" button)
+- `.tl-events-toggle` (mobile events column toggle)
+- `.tl-map-link:hover` (hover state on map-back link chips)
+
+Both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])` blocks updated.
+
+**Files modified:** `assets/css/timelapse.css`, `sw.js` (v81 → v82).
+
+---
+
+### AUD-19 · Compare page: add aria-label to reference input
+
+**Dimension 10, Cycle 8 — Accessibility**
+
+`compare/index.html` has a single text input `#cmp-ref-input` with no `<label>` element and no `aria-label` attribute. Screen readers announce it only as "edit text" with no context. The placeholder text "e.g. John 3:16 or Romans 8:28" is not an accessible name (WCAG 1.3.1, 3.3.2).
+
+Fix: added `aria-label="Bible verse reference"` to the input element.
+
+**Files modified:** `compare/index.html`, `sw.js` (v81 → v82).
+
+---
+
+## Iteration 21 — 2026-06-06
+
+### CODE-21 · timeline.js: add INTENT/CHANGE?/VERIFY to initTimelinePage + initChurchTimelinePage
+
+**Dimension 1, Cycle 9 — Code Comment Audit**
+
+`timeline.js` exports two entry points — `initTimelinePage()` and `initChurchTimelinePage()` — each bootstrapping its respective timeline via `_makeController`. Both used shared internal state (`sessionStorage` under `bsw_tl_era/bsw_tl_event` and `bsw_chtl_era/bsw_chtl_event`) with no INTENT comments. The non-obvious invariant: both functions share the same `_makeController` factory but must use distinct `storageKey` namespaces (`bsw_tl` vs `bsw_chtl`) or they overwrite each other's sessionStorage selection state.
+
+Added `INTENT / CHANGE? / VERIFY` comment blocks to both exported functions. The CHANGE? notes the data URL constants to update on rename and the `isChurch` flag inside `_makeController`. The VERIFY prescribes loading each timeline and reloading to confirm sessionStorage restoration independence.
+
+**Files modified:** `assets/js/timeline.js`, `sw.js` (v82 → v83).
+
+---
+
+### CSS-30 · bible-ui.css dark mode: search-go-btn, verse-study-link, place-tip-link hover
+
+**Dimension 7, Cycle 9 — Visual System**
+
+`bible-ui.css` contained three dark mode failures:
+1. `.search-go-btn` — `background: var(--color-primary)` with default text colour; in dark mode golden primary makes text near-invisible.
+2. `.bsw-modal__verse-study-link` — styled as a blue-bordered inline link in light mode but had no explicit dark mode colour; rendered as default link colour on dark background with low contrast.
+3. `.bsw-place-tip__link:hover` — hardcoded `color: #fff` on `background: var(--color-primary)` hover; white on golden = 1.3:1 fail.
+
+Fixes: `.search-go-btn` → `color: var(--color-on-primary)` in dark block; `.bsw-modal__verse-study-link` → `color: #6baed6` with accessible border/hover states; `.bsw-place-tip__link:hover` → changed to `color: var(--color-on-primary, #fff)`. Both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` blocks updated.
+
+**Files modified:** `assets/css/bible-ui.css`, `sw.js` (v82 → v83).
+
+---
+
+### CSS-29 · Homepage `plans-widget__passage` links: raise mobile touch target to 44px
+
+**Dimension 3, Cycle 8 — Mobile Responsiveness**
+
+`.plans-widget__passage` chip-links in the "Today's Reading" homepage widget had `padding: 0.18rem 0.5rem` giving ~19px vertical height on mobile — less than half the WCAG 2.5.5 minimum of 44px. These are the primary CTAs for reading-plan users: tapping one opens the reader at the passage.
+
+Fix: added `.plans-widget__passage { padding: 0.6rem 0.75rem; }` inside the existing `@media (max-width: 1023px)` block in `style.css`. Non-destructive — only affects mobile viewports; desktop layout unchanged.
+
+**Files modified:** `assets/css/style.css`, `sw.js` (v83 → v84).
+
+---
+
+## Iteration 22 — 2026-06-06
+
+### UX-12 · compare/index.html: show user-visible error on init data failure
+
+**Dimension 2, Cycle 9 — Empty State & Loading State**
+
+`compare/index.html` loads `versions.json` + `books.json` via `Promise.all()` at init. The `.catch()` only called `console.error()` — if either fetch failed, `bookMeta` stayed null and all user searches silently bailed at the `if (!bookMeta) return` guard, leaving the hint text ("Enter a verse reference above…") visible with no indication of the failure.
+
+Fix: in the `.catch()` handler at line 444, set `document.getElementById('cmp-hint').textContent = 'Failed to load version data. Please refresh to try again.'` before the console.error. Added INTENT/CHANGE?/VERIFY comment block. Pattern matches UX-10 (timelapse-map.js) fix.
+
+**Files modified:** `compare/index.html`, `sw.js` (v84 → v85).
+
+---
+
+### DATA-13 · Create data/translation/notes/1kings/22.json (empty stub)
+
+**Dimension 4, Cycle 9 — Data Path Integrity**
+
+`data/translation/notes/1kings/` had 21 files (chapters 1–21) but 1 Kings has 22 chapters. Chapter 22 (death of Ahab, Micaiah's fulfilled prophecy) was missing. The translation workshop fetches this file when navigating to 1 Kings 22 — the absence would produce a 404 / missing-data error in the workshop.
+
+Fix: created `data/translation/notes/1kings/22.json` with `{}` (empty object) — the correct minimal valid structure for a chapter with no annotated token notes yet. The workshop handles empty objects gracefully (no tokens to render).
+
+Verified: `ls data/translation/notes/1kings/ | wc -l` → 22.
+
+**Files modified:** `data/translation/notes/1kings/22.json` (created).
+
+---
+
+### DATA-14 · mkt-christ/acts.json chapter 27 — self-fixed (verified clean)
+
+**Dimension 4, Cycle 9 — Data Path Integrity**
+
+DATA-14 (discovered in D5 Cycle 7 audit) flagged `data/commentary/mkt-christ/acts.json` as missing chapter 27. On investigation: the file already has all 28 chapters including ch 27 (44 verses) — the `zc-christ-acts-27-28.py` script was run at some point after the audit cycle that detected the gap. No fix needed; marked complete as verified clean.
+
+**Files modified:** none.
+
+---
+
+### CSS-31 · discipline.css mobile touch targets: disc-tab and journal-btn--sm
+
+**Dimension 3, Cycle 9 — Mobile Responsiveness**
+
+Two WCAG 2.5.5 failures in `discipline.css` at `@media (max-width: 500px)`:
+1. `.disc-tab` — mobile override gives `padding: .55rem .7rem; font-size: .78rem` → ~34px; the horizontal scrolling tab strip (Plans / Devotionals / Memory / Journal / Worship / More) is the primary navigation control on the discipline page.
+2. `.journal-btn--sm` — `font-size: .75rem; padding: .2rem .55rem` → ~22px at all viewports; these are the edit/delete action buttons on individual journal entries.
+
+Fix: inside the existing `@media (max-width: 500px)` block, added:
+- `.disc-tab { min-height: 2.75rem; }` — raises tab height to 44px without disrupting the horizontal scroll layout
+- `.journal-btn--sm { min-height: 2.75rem; padding-top: .5rem; padding-bottom: .5rem; }` — raises button height to 44px
+
+**Files modified:** `assets/css/discipline.css`, `sw.js` (v85 → v86).
+
+---
+
+### AUD-20 · discipline/index.html: ARIA gaps in journal/worship tabs and unlabeled inputs
+
+**Dimension 10, Cycle 9 — Accessibility**
+
+Three ARIA violations in `discipline/index.html`:
+
+**(a) Journal tabs (Prayers/Reflections/Gratitude) and Worship tabs (Sermon Notes/Fasting Log)** had no `id` or `aria-controls` attributes. The `mem-tab` buttons had these correctly set but the journal and worship tab widgets were inconsistent. ARIA tab pattern requires both: `aria-controls` maps tab→panel for keyboard navigation; `id` lets the panel's `aria-labelledby` point back.
+
+Fix: added `id="journal-tab-{prayers,reflections,gratitude}"` + `aria-controls` to each journal tab, and `id="worship-tab-{sermons,fasting}"` + `aria-controls` to each worship tab. Added `role="tabpanel"` + `aria-labelledby` to each panel div. Added `aria-label` to both tablist containers.
+
+**(b) 6 inputs labeled by placeholder only.** `#mem-add-input`, `#mem-add-passage-input`, `#journal-search`, `#refl-search`, `#grat-search`, `#worship-search` — all used `placeholder` as the sole accessible name. Added `aria-label` to each matching the placeholder text (with more descriptive labels where placeholder was ambiguous, e.g. "Search entries…" → `aria-label="Search gratitude entries"`).
+
+**(c) `.journal-status-filters` role="group" had no `aria-label`.** Screen readers announced an anonymous group. Fix: added `aria-label="Filter by prayer status"`.
+
+**Files modified:** `discipline/index.html`, `sw.js` (v86 → v87).

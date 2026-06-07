@@ -149,14 +149,71 @@
   white-space: nowrap;
 }
 
+/* ── Tradition colors: data-trad replaces inline style="background:..." ───── */
+
+.lp-bar-fill[data-trad="patristic"],
+.lp-trad-chip[data-trad="patristic"]       { background: #8b6914; }
+.lp-bar-fill[data-trad="reformed"],
+.lp-trad-chip[data-trad="reformed"]        { background: #2a5a8a; }
+.lp-bar-fill[data-trad="lutheran"],
+.lp-trad-chip[data-trad="lutheran"]        { background: #5a2a8a; }
+.lp-bar-fill[data-trad="anglican"],
+.lp-trad-chip[data-trad="anglican"]        { background: #1a6b4a; }
+.lp-bar-fill[data-trad="baptist"],
+.lp-trad-chip[data-trad="baptist"]         { background: #8a3a1a; }
+.lp-bar-fill[data-trad="orthodox"],
+.lp-trad-chip[data-trad="orthodox"]        { background: #c0792a; }
+.lp-bar-fill[data-trad="roman-catholic"],
+.lp-trad-chip[data-trad="roman-catholic"]  { background: #8a1a2a; }
+.lp-bar-fill[data-trad="methodist"],
+.lp-trad-chip[data-trad="methodist"]       { background: #1a6b8a; }
+.lp-bar-fill[data-trad="ecumenical"],
+.lp-trad-chip[data-trad="ecumenical"]      { background: #4a6a4a; }
+
 /* ── Dark mode ───────────────────────────────────────────────────────────── */
 
 [data-theme="dark"] .lp-stat { background: var(--color-surface-alt, #222); }
 [data-theme="dark"] .lp-bar-track { background: var(--color-border, #333); }
+[data-theme="dark"] .lp-bar-fill[data-trad="patristic"],
+[data-theme="dark"] .lp-trad-chip[data-trad="patristic"]       { background: #c09940; }
+[data-theme="dark"] .lp-bar-fill[data-trad="reformed"],
+[data-theme="dark"] .lp-trad-chip[data-trad="reformed"]        { background: #4a8ac0; }
+[data-theme="dark"] .lp-bar-fill[data-trad="lutheran"],
+[data-theme="dark"] .lp-trad-chip[data-trad="lutheran"]        { background: #8a5ac0; }
+[data-theme="dark"] .lp-bar-fill[data-trad="anglican"],
+[data-theme="dark"] .lp-trad-chip[data-trad="anglican"]        { background: #2a9b6a; }
+[data-theme="dark"] .lp-bar-fill[data-trad="baptist"],
+[data-theme="dark"] .lp-trad-chip[data-trad="baptist"]         { background: #ba6a4a; }
+[data-theme="dark"] .lp-bar-fill[data-trad="orthodox"],
+[data-theme="dark"] .lp-trad-chip[data-trad="orthodox"]        { background: #e09a5a; }
+[data-theme="dark"] .lp-bar-fill[data-trad="roman-catholic"],
+[data-theme="dark"] .lp-trad-chip[data-trad="roman-catholic"]  { background: #ba4a5a; }
+[data-theme="dark"] .lp-bar-fill[data-trad="methodist"],
+[data-theme="dark"] .lp-trad-chip[data-trad="methodist"]       { background: #2a9bba; }
+[data-theme="dark"] .lp-bar-fill[data-trad="ecumenical"],
+[data-theme="dark"] .lp-trad-chip[data-trad="ecumenical"]      { background: #6a9a6a; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .lp-stat { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lp-bar-track { background: var(--color-border, #333); }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="patristic"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="patristic"]       { background: #c09940; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="reformed"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="reformed"]        { background: #4a8ac0; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="lutheran"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="lutheran"]        { background: #8a5ac0; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="anglican"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="anglican"]        { background: #2a9b6a; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="baptist"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="baptist"]         { background: #ba6a4a; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="orthodox"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="orthodox"]        { background: #e09a5a; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="roman-catholic"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="roman-catholic"]  { background: #ba4a5a; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="methodist"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="methodist"]       { background: #2a9bba; }
+  :root:not([data-theme="light"]) .lp-bar-fill[data-trad="ecumenical"],
+  :root:not([data-theme="light"]) .lp-trad-chip[data-trad="ecumenical"]      { background: #6a9a6a; }
 }
 
 @media (max-width: 600px) {

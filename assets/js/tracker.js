@@ -146,6 +146,13 @@ export function isFastingDone(date) {
   } catch (e) { return false; }
 }
 
+// INTENT: Aggregate today's completion status across all 8 discipline dimensions into a
+//   single object; the home-page tracker card reads this on load and after every `onUpdate` fire.
+// CHANGE? Adding a new discipline requires: (1) a new `is*Done(today)` function above,
+//   (2) a new key here, AND (3) a corresponding discipline UI consumer — missing any step means
+//   the new discipline silently doesn't count toward the daily summary strip.
+// VERIFY: Complete reading for today → call `getToday()` in console → `reading: true`;
+//   all 8 keys should be present even on a fresh day with nothing done.
 // ── Combined status ───────────────────────────────────────────────────────────
 export function getToday() {
   var today = _todayStr();

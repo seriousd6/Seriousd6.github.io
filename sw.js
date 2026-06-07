@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v66';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v87';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -64,6 +64,7 @@ var SHELL_URLS = [
   './plans/index.html',
   './devotionals/index.html',
   './library/index.html',
+  './library/progress/index.html',
   './data/library/index.json',
   './data/library/docs/apostles-creed.json',
   './data/library/docs/nicene-creed.json',
@@ -175,6 +176,8 @@ var SHELL_URLS = [
   './data/versions/versions.json',
   './data/apocrypha-books.json',
   './data/apocrypha-canon-orders.json',
+  './data/topics.json',
+  './data/topics-index.json',
   './data/bible/books.json',
   './data/votd/verses.json',
   './data/plans/bible-in-a-year.json',
@@ -191,14 +194,26 @@ var SHELL_URLS = [
   './data/strongs/bdb.json',
   './data/strongs/thayer.json',
   // Reference dictionaries & topical textbooks
+  './data/dictionary/index.json',  // Easton's (parity with smith/index.json below)
   './data/smith/index.json',
   './data/hitchcock/index.json',
   './data/torrey/torrey.json',
+  // Generic library full-screen reader (target of every "Open in reader" button)
+  './library/read/index.html',
+  // Standalone library pages (council/confession docs with inline HTML)
+  './library/nicaea-i/index.html',
+  './library/constantinople-i/index.html',
+  './library/ephesus-431/index.html',
+  './library/chalcedon-451/index.html',
+  './library/orange-529/index.html',
+  './library/smalcald-articles/index.html',
   './timeline/index.html',
   './maps/index.html',
   './wordcloud/index.html',
   './data/timeline/events.json',
   './data/timeline/detail.json',
+  './data/maps/places.json',
+  './data/maps/timelapse.json',
   './data/wordcloud/frequencies.json',
 ];
 
@@ -350,8 +365,10 @@ function precacheBible(data) {
     });
   });
 
-  // Crossrefs and interlinear: small enough to pre-cache fully
-  ['crossrefs', 'interlinear'].forEach(function (dir) {
+  // Crossrefs, interlinear, echoes, and Torrey verse-index: pre-cache fully.
+  // echoes (~1.6 MB) and torrey/verse-index (~788 KB) power core verse-study
+  // panels; without precaching they silently fail offline for unvisited books.
+  ['crossrefs', 'interlinear', 'echoes', 'torrey/verse-index'].forEach(function (dir) {
     books.forEach(function (bid) {
       urls.push(base + 'data/' + dir + '/' + bid + '.json');
     });

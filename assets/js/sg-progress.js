@@ -43,6 +43,15 @@ export function getProgress(slug) {
  * Call after DOM is ready. slug identifies the guide (e.g. "hebrews").
  * total is the total number of completable sections for progress display.
  */
+// INTENT: Wire "Mark complete" toggle buttons onto every .tg-section[id] element
+//   for a given study-guide slug; persists state to bsw_sg_progress via _SG_KEY
+//   and calls _refreshTabDots so chapter-tab completion indicators stay in sync.
+// CHANGE? If study guide HTML renames .tg-section[id] → another selector, update
+//   the querySelectorAll here and in _refreshTabDots. If bsw_sg_progress schema
+//   changes ({ [slug]: string[] }), update _load/_save plus store.js exportAll.
+// VERIFY: Open /study-guides/hebrews/ → click "Mark complete" on section 1 →
+//   button changes to "✓ Completed" and a dot appears on the chapter tab. Reload
+//   → state persists. Click again → reverts cleanly.
 export function initSgProgress(slug, total) {
   var data     = _load();
   var completed = data[slug] || [];
@@ -79,7 +88,9 @@ export function initSgProgress(slug, total) {
   _refreshTabDots(slug);
 }
 
-/* _refreshTabDots — update completion dots on sg-tab-btn elements */
+// INTENT: Append a .sg-tab-dot span to any .sg-tab-btn whose data-target section
+//   is completed, and remove it if the section is no longer completed. Called on
+//   every mark/unmark to keep the chapter nav visually in sync with progress state.
 function _refreshTabDots(slug) {
   var completed = _load()[slug] || [];
   document.querySelectorAll('.sg-tab-btn[data-target]').forEach(function (tab) {

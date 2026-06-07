@@ -52,13 +52,23 @@ function _naveLoadVidx(bookId) {
     .catch(function () { _naveVidxCache[bookId] = {}; return {}; });
 }
 
+// INTENT: Check verse-index first (a few KB) before deciding whether to load the full
+//   1.4 MB nave.json. Most NT verses have no Nave's topics, so skipping the full load
+//   on cold first visit saves significant bandwidth on those pages.
+// CHANGE? If _naveVidxCache structure changes (key format ch:v), update the key
+//   construction below. If _naveLoad() caching changes, verify the lazy path still
+//   avoids a duplicate fetch when called twice for the same session.
+// VERIFY: Load verse-study for Philemon 1:1 (no Nave's topics); check DevTools Network —
+//   nave.json should NOT appear. Load Romans 8:28 (has topics); nave.json should appear.
 function _naveTopicsForVerse(parsed) {
   if (!parsed || !parsed.bookId || !parsed.v) return Promise.resolve([]);
-  return Promise.all([_naveLoad(), _naveLoadVidx(parsed.bookId)]).then(function () {
+  return _naveLoadVidx(parsed.bookId).then(function () {
     var key   = parsed.ch + ':' + parsed.v;
-    var vidx  = _naveVidxCache[parsed.bookId] || {};
-    var slugs = vidx[key] || [];
-    return slugs.map(function (s) { return _naveMap && _naveMap[s]; }).filter(Boolean);
+    var slugs = (_naveVidxCache[parsed.bookId] || {})[key] || [];
+    if (!slugs.length) return [];
+    return _naveLoad().then(function () {
+      return slugs.map(function (s) { return _naveMap && _naveMap[s]; }).filter(Boolean);
+    });
   });
 }
 
@@ -355,10 +365,9 @@ export function renderVSDictionary(parsed, container) {
         : src === 'isbe'
           ? DICT_PAGE_URL + '?src=isbe&entry=' + encodeURIComponent(e.id)
           : DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
-      var badge      = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
-      var badgeColor = src === 'smith' ? '#1d4ed8' : src === 'isbe' ? '#1e3a5f' : '#7c3aed';
+      var badge = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
       html += '<a class="vs-dict-item" href="' + escHtml(href) + '">' +
-        '<span class="vs-dict-src-badge" style="background:' + badgeColor + '">' + badge + '</span>' +
+        '<span class="vs-dict-src-badge" data-dict-src="' + escHtml(src) + '">' + badge + '</span>' +
         '<span class="vs-dict-item__term">' + escHtml(e.term) + '</span>' +
         '<span class="vs-dict-item__arrow">&#x2192;</span>' +
         '</a>';
@@ -394,8 +403,7 @@ export function renderModalDictionary(parsed, container) {
       var meta   = src === 'smith' ? (_smithMap && _smithMap[e.id])
                  : src === 'isbe'  ? (_isbeMap  && _isbeMap[e.id])
                  : (_dictMap && _dictMap[e.id]);
-      var badge      = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
-      var badgeColor = src === 'smith' ? '#1d4ed8' : src === 'isbe' ? '#1e3a5f' : '#7c3aed';
+      var badge = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
       var brief = meta ? meta.brief : '';
       if (brief) {
         var dot = brief.indexOf('. ', 40);
@@ -404,7 +412,7 @@ export function renderModalDictionary(parsed, container) {
       }
       html += '<div class="bsw-dict-panel-entry">' +
         '<p class="bsw-dict-panel-entry__term">' +
-        '<span class="vs-dict-src-badge" style="background:' + badgeColor + '">' + badge + '</span>' +
+        '<span class="vs-dict-src-badge" data-dict-src="' + escHtml(src) + '">' + badge + '</span>' +
         escHtml(e.term) + '</p>' +
         (brief ? '<p class="bsw-dict-panel-entry__brief">' + escHtml(brief) + '</p>' : '') +
         '<a class="bsw-dict-panel-entry__link" href="' + escHtml(href) + '">Full entry &#x2192;</a>' +
@@ -493,14 +501,16 @@ export function initDictionaryPage() {
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'dict-filter-chip dict-filter-chip--on';
+      btn.setAttribute('aria-pressed', 'true');
       btn.dataset.src = src.key;
       btn.innerHTML =
-        '<span class="dict-filter-chip__badge" style="background:' + src.badgeColor + '">' +
+        '<span class="dict-filter-chip__badge" data-dict-src="' + escHtml(src.key) + '">' +
           escHtml(src.badge) +
         '</span>' + escHtml(src.label);
       btn.addEventListener('click', function () {
         _enabled[src.key] = !_enabled[src.key];
         btn.classList.toggle('dict-filter-chip--on', _enabled[src.key]);
+        btn.setAttribute('aria-pressed', String(_enabled[src.key]));
         var q = searchEl ? searchEl.value.trim().toLowerCase() : '';
         if (q) { _doSearch(q); } else { _refreshLetter(); }
       });
@@ -593,6 +603,7 @@ export function initDictionaryPage() {
       btn.className = 'dict-alpha-btn' +
         (letter === _activeLetter ? ' dict-alpha-btn--active' : '') +
         (!cov[letter] ? ' dict-alpha-btn--empty' : '');
+      btn.setAttribute('aria-pressed', letter === _activeLetter ? 'true' : 'false');
       btn.textContent = letter;
       if (cov[letter]) {
         btn.addEventListener('click', function () {
@@ -608,7 +619,9 @@ export function initDictionaryPage() {
   function _showLetter(letter) {
     _activeLetter = letter;
     alphaEl.querySelectorAll('.dict-alpha-btn').forEach(function (b) {
-      b.classList.toggle('dict-alpha-btn--active', b.textContent === letter);
+      var active = b.textContent === letter;
+      b.classList.toggle('dict-alpha-btn--active', active);
+      b.setAttribute('aria-pressed', String(active));
     });
     renderList(_getLetterItems(letter));
   }
@@ -632,7 +645,7 @@ export function initDictionaryPage() {
     item.allSources.forEach(function (s) {
       if (!_enabled[s.srcKey]) return;
       var src = _findSrc(s.srcKey);
-      if (src) out += '<span class="dict-item__src" style="background:' + src.badgeColor + '">' + escHtml(src.badge) + '</span>';
+      if (src) out += '<span class="dict-item__src" data-dict-src="' + escHtml(s.srcKey) + '">' + escHtml(src.badge) + '</span>';
     });
     return out;
   }
@@ -689,7 +702,7 @@ export function initDictionaryPage() {
 
       var headHtml =
         '<div class="dict-src-section__head">' +
-          '<span class="dict-item__src" style="background:' + src.badgeColor + '">' + escHtml(src.badge) + '</span>' +
+          '<span class="dict-item__src" data-dict-src="' + escHtml(src.key) + '">' + escHtml(src.badge) + '</span>' +
           '<span class="dict-src-section__name">' + escHtml(src.meta) + '</span>' +
         '</div>';
 
@@ -763,15 +776,22 @@ export function initDictionaryPage() {
     renderList(results.slice(0, 300));
   }
 
+  var _dictSearchTimer;
   if (searchEl) {
+    // INTENT: Debounce the dictionary search input (150ms) so _doSearch — which
+    //   iterates ~35K index entries and rebuilds DOM — fires once after typing
+    //   stops rather than on every keystroke, preventing input lag on mobile.
     searchEl.addEventListener('input', function () {
+      clearTimeout(_dictSearchTimer);
       var q = searchEl.value.trim().toLowerCase();
-      if (!q) {
-        if (countEl) countEl.setAttribute('hidden', '');
-        _refreshLetter();
-        return;
-      }
-      _doSearch(q);
+      _dictSearchTimer = setTimeout(function () {
+        if (!q) {
+          if (countEl) countEl.setAttribute('hidden', '');
+          _refreshLetter();
+          return;
+        }
+        _doSearch(q);
+      }, 150);
     });
   }
 
@@ -809,6 +829,14 @@ export function initDictionaryPage() {
       detailEl.innerHTML = '<p class="dict-detail-placeholder">Select an entry to read its definition.</p>';
     }
 
+    // INTENT: Secondary dictionary sources load lazily after Easton's (which is synchronous
+    //   with page render). After each resolves, we re-try the URL entry param so that links
+    //   to non-Easton's entries (e.g. ?src=nave&entry=faith) auto-open as soon as that source
+    //   is available — without this re-try, the URL is ignored and the user sees the default A list.
+    // CHANGE? If _tryShowUrlEntry() logic changes (e.g., new URL params), verify it still returns
+    //   false when no URL entry is present (otherwise every load would skip list refresh).
+    // VERIFY: In verse-study for John 3:16, click a Nave's Topics link → dictionary/?src=nave&entry=...
+    //   should auto-open the Nave article, not default to the Easton's A-letter view.
     ['smith', 'isbe', 'hitchcock', 'nave', 'torrey'].forEach(function (key) {
       var src = _findSrc(key);
       if (!src) return;
@@ -817,9 +845,8 @@ export function initDictionaryPage() {
         buildAlphaBar();
         var q = searchEl ? searchEl.value.trim().toLowerCase() : '';
         if (q) { _doSearch(q); }
+        else if (_entryParam && _activeItemKey === null && _tryShowUrlEntry()) { return; }
         else if (_activeLetter) { renderList(_getLetterItems(_activeLetter)); }
-        // INTENT: Log failures so developers can see in DevTools which secondary source failed;
-        //   user gets partial results without any visible error, which is acceptable.
       }).catch(function () { console.warn('[dict] secondary source failed to load:', key); });
     });
   }).catch(function () {

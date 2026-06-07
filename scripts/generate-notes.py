@@ -9,7 +9,8 @@ For every verse in every book, produces:
   - tier_divergences: tokens where Literal ≠ Thought (showing the range of choice)
   - structure_note: one-line description of the verse's grammatical character
 
-Output: data/translation/notes/{book}.json
+Output: data/translation/notes/{book}.json         (full-book index)
+        data/translation/notes/{book}/{ch}.json     (per-chapter, shape: {"v": data})
   Shape: {"1": {"1": {token, flags, tier_divergences, structure_note}}}
 
 Run:
@@ -260,9 +261,18 @@ def main():
             continue
 
         book_data, verses, flagged = result
+        # Write full-book index
         out_path = OUT_DIR / f'{book}.json'
         with open(out_path, 'w', encoding='utf-8') as f:
             json.dump(book_data, f, ensure_ascii=False, separators=(',', ':'))
+
+        # Write per-chapter files (consumed by ol-companion.js _loadNotes)
+        ch_dir = OUT_DIR / book
+        ch_dir.mkdir(exist_ok=True)
+        for ch_str, ch_data in book_data.items():
+            ch_path = ch_dir / f'{ch_str}.json'
+            with open(ch_path, 'w', encoding='utf-8') as f:
+                json.dump(ch_data, f, ensure_ascii=False, separators=(',', ':'))
 
         kb = out_path.stat().st_size // 1024
         total_v += verses

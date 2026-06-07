@@ -3607,13 +3607,17 @@ kbd {
     white-space: nowrap;
   }
 
-  /* Prev/next live in the split row (not the header) — keep their side-column style on mobile */
+  /* Prev/next are the primary verse-nav controls on mobile — must meet 44px minimum */
   .bsw-modal__prev-verse:not([hidden]),
   .bsw-modal__next-verse:not([hidden]) {
-    width: 1.75rem;
-    padding: 0.5rem 0;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     font-size: 0.95rem;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .bsw-modal__body,
@@ -3835,5 +3839,39 @@ kbd {
 
 .bsw-place-tip__link:hover {
   background: var(--color-primary, #4a7fcb);
-  color: #fff;
+  color: var(--color-on-primary, #fff);
+}
+
+/* ── Dark mode: elements that use var(--color-primary) as background ─────── */
+/* INTENT: search-go-btn, verse-study-link, and place-tip-link all use
+   color:#fff or dark colors that fail in dark mode where --color-primary = #e8c87a
+   (golden). --color-on-primary (#1a1208) is the correct text color for golden bg. */
+[data-theme="dark"] .search-go-btn,
+[data-theme="dark"] .search-go-btn:hover,
+[data-theme="dark"] .search-go-btn:focus-visible { color: var(--color-on-primary); }
+[data-theme="dark"] .bsw-modal__verse-study-link {
+  color: #6baed6;
+  border-color: rgba(107, 174, 214, 0.45);
+}
+[data-theme="dark"] .bsw-modal__verse-study-link:hover,
+[data-theme="dark"] .bsw-modal__verse-study-link:focus-visible {
+  background: rgba(107, 174, 214, 0.12);
+  border-color: #6baed6;
+  color: #6baed6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .search-go-btn,
+  :root:not([data-theme="light"]) .search-go-btn:hover,
+  :root:not([data-theme="light"]) .search-go-btn:focus-visible { color: var(--color-on-primary); }
+  :root:not([data-theme="light"]) .bsw-modal__verse-study-link {
+    color: #6baed6;
+    border-color: rgba(107, 174, 214, 0.45);
+  }
+  :root:not([data-theme="light"]) .bsw-modal__verse-study-link:hover,
+  :root:not([data-theme="light"]) .bsw-modal__verse-study-link:focus-visible {
+    background: rgba(107, 174, 214, 0.12);
+    border-color: #6baed6;
+    color: #6baed6;
+  }
 }

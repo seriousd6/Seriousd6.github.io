@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "description": "Semantic significance notes for Hebrew morphological categories. Keyed by category slug. Used by the Workshop Grammar section to explain why a verb stem or form matters beyond just naming it.",
+    "categories": ["binyan", "aspect", "waw_consecutive", "participle", "infinitive", "construct_chain"]
+  },
+
+  "binyan_piel": {
+    "category": "Piel Binyan (Verbal Stem)",
+    "label": "Piel — Intensive / Factitive",
+    "significance": "The Piel binyan (D-stem) typically intensifies the basic Qal action or makes it factitive (causing someone to be something). It is NOT always simply 'intensive' — scholars debate its functions. The most common pattern: if the Qal means 'to be X', the Piel means 'to declare/make X.' If the Qal means 'to do X', the Piel often means 'to do X thoroughly or repeatedly.'",
+    "debate": "The 'intensive' label for Piel is increasingly questioned by Hebraists (Waltke-O'Connor, van der Merwe). The Piel often simply expresses the same action as Qal for certain verbs, while for others it is genuinely factitive. Translation must be determined by each verb's Piel usage pattern, not a blanket rule.",
+    "examples": ["דִּבֶּר (Piel of דבר): 'to speak' — Piel is the standard form; Qal is rare. Not more intensive, just the normal paradigm for this verb", "בִּקֵּשׁ (Piel of בקשׁ): 'to seek earnestly / repeatedly' — the Piel of seeking adds intensity", "קִדֵּשׁ (Piel of קדשׁ): 'to make holy / declare holy' — factitive; cf. Qal 'to be holy'"]
+  },
+
+  "binyan_niphal": {
+    "category": "Niphal Binyan (Verbal Stem)",
+    "label": "Niphal — Passive / Middle / Reflexive",
+    "significance": "The Niphal (N-stem) is the passive/reflexive counterpart to the Qal. It can mean: (1) passive — the subject receives the Qal action ('to be seen'); (2) reflexive — the subject acts on itself ('to guard oneself'); (3) middle — the subject participates in the action ('to gather / come together'). Unlike Greek passive, Hebrew Niphal sometimes implies the subject's willing participation.",
+    "examples": ["נִרְאָה (Niphal of ראה): 'he was seen / appeared' — God 'appearing' to Abraham uses Niphal; conveys both passive (seen) and middle (presenting himself)", "נִשְׁבַּע (Niphal of שׁבע): 'to swear' — reflexive; 'to bind oneself by oath'", "נֶאֱסְפוּ (Niphal of אסף): 'they gathered themselves / were gathered' — middle/passive ambiguity intentional in assembly contexts"]
+  },
+
+  "binyan_hiphil": {
+    "category": "Hiphil Binyan (Verbal Stem)",
+    "label": "Hiphil — Causative",
+    "significance": "The Hiphil (H-stem) is consistently causative: 'to cause someone/something to do what the Qal describes.' If the Qal means 'to walk', the Hiphil means 'to cause to walk / lead.' This causative force is usually transparent and consistent, making it more predictable than the Piel. The Hiphil is the most exegetically consistent stem for identifying what agent causes what effect.",
+    "debate": "Some Hiphils are 'declarative' rather than causative — 'to declare X to be the case' rather than 'to cause X to happen.' הִצְדִּיק (Hiphil of צדק) = 'to justify / declare righteous' (declarative) rather than 'to make righteous' (causative). This distinction is central to the Protestant Reformation debate over justification: God 'declares' righteous, not 'makes' righteous.",
+    "examples": ["הֶאֱמִין (Hiphil of אמן): 'to believe / trust' — causative 'to cause to stand firm,' used of faith; Gen 15:6", "הִצְדִּיק (Hiphil of צדק): declarative — 'to justify / pronounce righteous'; key in the justification debate (Isa 53:11, Prov 17:15)", "הֶחֱיָה (Hiphil of חיה): 'to give life to / preserve alive' — causative of 'to live'"]
+  },
+
+  "binyan_hitpael": {
+    "category": "Hitpael Binyan (Verbal Stem)",
+    "label": "Hitpael — Reflexive / Reciprocal / Iterative",
+    "significance": "The Hitpael (HtD-stem) is typically reflexive ('to do X to oneself'), reciprocal ('to do X to each other'), or iterative (repeated action). It often has a deliberate, self-involved quality. In narratives, it sometimes carries a connotation of pretending or posturing — 'acting as if one were X.'",
+    "examples": ["הִתְפַּלֵּל (Hitpael of פלל): 'to pray' — literally 'to intercede on behalf of oneself / judge oneself'; reflexive nuance explains why prayer in Hebrew is a Hitpael", "הִתְהַלֵּךְ (Hitpael of הלך): 'to walk about / live one's life habitually' — Enoch 'walked with God' uses Hitpael: ongoing, habitual, deliberate walk", "הִתְחַזֵּק (Hitpael of חזק): 'to strengthen oneself' — reflexive; the idiom for 'take courage'"]
+  },
+
+  "aspect_perfect": {
+    "category": "Perfect Aspect (Qatal)",
+    "label": "Qatal Form (Completed / Stative)",
+    "significance": "The Hebrew qatal (traditionally 'perfect') describes a completed action or a state of being. It is the default past tense narrative form for main verbs. Unlike Greek aorist vs. perfect, Hebrew qatal covers both 'simple past' and 'completed with ongoing effect.' Context determines which sense is primary. Stative verbs in qatal often describe a present condition: 'I love' (not 'I have loved' or 'I loved').",
+    "debate": "The Hebrew verbal system encodes 'aspect' (completed vs. ongoing) rather than absolute time, though time is usually inferable from context. The prophetic perfect — a qatal describing a future event as already completed — is used by the prophets to express certainty: 'The virgin shall conceive (qatal with future force).' Isa 53 uses qatals throughout for future passion predictions.",
+    "examples": ["Isa 53:4 — 'surely he has borne (qatal) our griefs' — prophetic perfect; a future act spoken as already accomplished", "Gen 1:1 — 'In the beginning God created (qatal)' — simple past narrative", "Ps 23:4 — 'you are with me (qatal of היה)' — stative; present condition of God's presence"]
+  },
+
+  "aspect_imperfect": {
+    "category": "Imperfect Aspect (Yiqtol)",
+    "label": "Yiqtol Form (Ongoing / Future / Habitual)",
+    "significance": "The Hebrew yiqtol (traditionally 'imperfect') describes ongoing, repeated, habitual, or future action. It is not simply 'incomplete' — it expresses the speaker's view of the action as dynamic, in process, or yet to happen. Modal uses (may, might, should, let) are common. The yiqtol is the mood of poetry for expressing ongoing realities and of narrative for repeated or habitual background action.",
+    "examples": ["Ps 23:1 — 'The LORD is my shepherd; I shall not want (yiqtol)' — ongoing future confidence, not a past statement", "Gen 2:10 — 'A river went out (yiqtol) from Eden to water the garden' — habitual/ongoing past action describing the garden's state", "Deut 6:4 — 'The LORD our God, the LORD is one (Qal perfect of היה)' — contrast: this is a stative qatal for the eternal truth"]
+  },
+
+  "waw_consecutive": {
+    "category": "Waw Consecutive (Wayyiqtol / Waw + Perfect)",
+    "label": "Waw Consecutive — Narrative Sequence",
+    "significance": "The waw consecutive is how Biblical Hebrew constructs narrative sequence. Wayyiqtol (waw + yiqtol with prefix doubling) moves the story forward: 'and he did... then he said... so he went.' It is the backbone of OT narrative and is NOT simply 'and.' It is a grammaticalized sequencing device. The waw + perfect (weqatal) similarly sequences future events or commands: 'do X... then do Y.'",
+    "debate": "The wayyiqtol is sometimes called the 'conversive waw' because it 'converts' an imperfect to a past-tense sequential form. Modern linguistics prefers to see it as a distinct aspect form, not a converted imperfect. The important practical point: every wayyiqtol is a narrative beat, moving the story one step forward.",
+    "examples": ["Gen 1:3 — וַיֹּאמֶר אֱלֹהִים (wayyiqtol): 'And God said' — first in the sequence of creation commands", "Gen 22:10 — 'Abraham stretched out (wayyiqtol) his hand and took (wayyiqtol) the knife to slaughter his son' — two sequential acts in rapid succession", "1 Kgs 19:5 — 'and he lay down (wayyiqtol) and slept (wayyiqtol) under a juniper tree; and behold (הִנֵּה), an angel touched him' — narrative sequence punctuated by הִנֵּה for surprise"]
+  },
+
+  "construct_chain": {
+    "category": "Construct Chain (Nomen-Regens Relationship)",
+    "label": "Construct Chain (Genitive Relationship)",
+    "significance": "Hebrew expresses the genitive relationship not with a particle but by placing two nouns in sequence: the first (construct) loses its full vowels and the second (absolute) carries the meaning 'of the first.' This is the Hebrew equivalent of the Greek genitive case. The relationship can be possessive, partitive, attributive, appositive, etc. — context determines which.",
+    "debate": "The construct chain is often theologically significant. 'Holy of Holies' (קֹדֶשׁ הַקֳּדָשִׁים) is a superlative construct: 'the holiest of all holinesses.' Hebrew superlatives are formed this way — 'Song of Songs' = 'the greatest song', 'King of kings', 'Lord of lords.' English translations that miss the superlative force flatten the Hebrew rhetoric.",
+    "examples": ["קֹדֶשׁ הַקֳּדָשִׁים — 'Holy of Holies' = the most holy place (superlative construct)", "שִׁיר הַשִּׁירִים — 'Song of Songs' = the greatest song (title of Song of Solomon)", "רוּחַ אֱלֹהִים — 'Spirit of God' — attributive or possessive; the construct chain expresses divine relationship without a preposition"]
+  },
+
+  "participle_hebrew": {
+    "category": "Hebrew Participle",
+    "label": "Participle — Ongoing Action or State (Active / Passive)",
+    "significance": "The Hebrew participle describes an ongoing action or state — often used as a noun ('the one who does X'), as a predicate expressing present or ongoing activity, or as a verbal adjective. Active participles are stative in nature: 'one who is doing / going / speaking.' Passive participles describe a resulting state: 'the spoken word' (a thing that has been spoken and stands in that condition).",
+    "examples": ["Gen 1:2 — 'the Spirit of God was hovering (מְרַחֶפֶת, Piel participle) over the face of the waters' — ongoing present action, not a one-time event", "Ps 121:3–4 — 'he who keeps (שֹׁמֶר, Qal participle) you will not slumber; behold, he who keeps Israel will neither slumber nor sleep' — the participle emphasizes God's continuous, uninterrupted keeping", "Isa 40:31 — 'those who wait for the LORD (קוֹיֵ יְהוָה, construct + participle)' — ongoing, active waiting as a defining posture"]
+  }
+}

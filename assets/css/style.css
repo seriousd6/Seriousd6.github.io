@@ -459,6 +459,10 @@ body.sb-open .sidebar-backdrop { display: block; }
   .sb-section-head {
     padding: 0.6rem 1rem 0.25rem;
   }
+
+  /* WCAG 2.5.5: "Today's Reading" passage chips are the primary homepage CTA;
+     default padding gives ~19px height — raise to ~44px on mobile. */
+  .plans-widget__passage { padding: 0.6rem 0.75rem; }
 }
 
 /* ── Layout ── */

@@ -496,10 +496,10 @@
 
       <!-- Tabs -->
       <div class="ms-tabs" role="tablist">
-        <button class="ms-tab ms-tab--active" data-tab="all"        role="tab" type="button">All</button>
-        <button class="ms-tab"                data-tab="tags"       role="tab" type="button">By Tag</button>
-        <button class="ms-tab"                data-tab="highlights" role="tab" type="button">By Highlight</button>
-        <button class="ms-tab"                data-tab="search"     role="tab" type="button">Search</button>
+        <button class="ms-tab ms-tab--active" data-tab="all"        role="tab" aria-selected="true"  type="button">All</button>
+        <button class="ms-tab"                data-tab="tags"       role="tab" aria-selected="false" type="button">By Tag</button>
+        <button class="ms-tab"                data-tab="highlights" role="tab" aria-selected="false" type="button">By Highlight</button>
+        <button class="ms-tab"                data-tab="search"     role="tab" aria-selected="false" type="button">Search</button>
       </div>
 
       <!-- Filter bar -->
@@ -821,7 +821,9 @@
 
     function renderTabs() {
       document.querySelectorAll('.ms-tab').forEach(function (t) {
-        t.classList.toggle('ms-tab--active', t.getAttribute('data-tab') === _tab);
+        var active = t.getAttribute('data-tab') === _tab;
+        t.classList.toggle('ms-tab--active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
       });
     }
 

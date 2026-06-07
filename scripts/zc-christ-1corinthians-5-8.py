@@ -1,30 +1,28 @@
 """
-mkt-christ layer — 1 Corinthians all 16 chapters
+mkt-christ layer — 1 Corinthians chapters 5–8
 Output: data/commentary/mkt-christ/1corinthians.json
-
-1 Corinthians presents Christ as crucified wisdom (ch1-2),
-the foundation of the church (ch3), the Passover lamb (ch5),
-the spiritual rock (ch10), the head of the eucharistic body (ch11),
-and the firstfruits of the resurrection (ch15).
+Run: python3 scripts/zc-christ-1corinthians-5-8.py
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     if p.exists():
         return json.loads(p.read_text())
     return {}
 
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
 def merge_comm(existing, new_data):
+    # INTENT: Merge new verse entries without overwriting already-present keys — safe to re-run.
+    # CHANGE? If commentary JSON structure changes from {ch:{v:html}}, update this traversal.
+    # VERIFY: Re-running the script should produce identical output.
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -32,36 +30,105 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'The word of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God.' Paul's theologia crucis (theology of the cross) is the irreducible Christological claim: God's power is revealed not in imperial might or philosophical sophistry but in the crucified Christ. The cross does not merely illustrate a timeless spiritual principle — it is the specific historical event in which God's wisdom and power are concentrated and disclosed. Every Corinthian pretension to superior wisdom is measured against this standard: does it stand or fall before the cross?</p>",
-
-    "30": "<p>A direct revelation: 'He is the source of your life in Christ Jesus, whom God made our wisdom, righteousness, sanctification, and redemption.' Christ as the personified Wisdom of God (cf. Prov 8:22-31; Sir 24; Wis 7:22-8:1) answers Corinthian competition over human wisdom with a Christological absorbing of all wisdom into one person. The four nouns (wisdom, righteousness, sanctification, redemption) are not merely metaphors but ontological claims: in Christ, believers receive these realities as gifts, not achievements. This is the Christological inversion of the Torah: where Torah promised blessing through obedience, Christ provides the reality the Torah pointed toward.</p>"
-  },
+NEW = {
   "5": {
-    "7": "<p>A fulfillment: 'Christ our Passover lamb has been sacrificed.' <em>Pascha hemon etythē Christos</em> — Paul's most explicit identification of Christ with the Passover sacrifice. The Passover lamb (Exod 12) was killed at the appointed time, its blood placed on doorposts, its eating a communal participation in deliverance. Paul applies all three registers to Christ: appointed time (the cross at Passover), blood as protection, and communal participation (the Lord's Supper as new Passover meal). The command 'let us celebrate the festival' (v. 8) invites believers into ongoing Christological Passover-living: sincerity and truth as the unleavened bread that accompanies the feast.</p>"
+    "1": "The sexual immorality Paul confronts belongs to the broader pattern of the church as new covenant community under Christ's holiness. The sin mirrors the defilement that led to exile in the OT — the community's tolerance of it mirrors Israel's tolerance of covenant-breaking that provoked divine judgment.",
+    "2": "The community's arrogance (phusiomenoi) while harboring open sin mirrors the contradiction of Pharisaic honor-before-God alongside moral failure that Jesus exposed (Matt 23:27-28). A community boasting in Christ while sheltering unrepentant sin is a community that has lost the logic of the cross.",
+    "3": "Paul pronounces judgment in the name of the Lord Jesus — the judicial authority Paul exercises is Christ's own authority delegated to the apostle (Matt 18:18-20; John 20:23). Paul's absence in body but presence in spirit echoes Christ's promised presence when two or three gather in his name.",
+    "4": "When you are assembled in the name of the Lord Jesus with the power of the Lord Jesus: the gathering of the congregation in Christ's name is the locus of his judicial authority. The assembly is not a mere human meeting but a gathering under the kingly rule of the risen Lord.",
+    "5": "Handed over to Satan for the destruction of the flesh so that his spirit may be saved in the day of the Lord — the death-and-resurrection pattern: destruction of the flesh in the present age is the path to salvation in the eschatological day. This mirrors the logic of the cross: through death, life. The day of the Lord is the day of Christ's return and final judgment.",
+    "6": "A little leaven leavens the whole lump — the leaven metaphor connects directly to the Passover context of v.7-8. In the Passover preparations, all leaven was removed from the household before the festival (Exod 12:15). The community is the household; sin is the leaven that must be removed before the feast can be kept.",
+    "8": "Let us keep the festival not with the old leaven, the leaven of malice and evil, but with the unleavened bread of sincerity and truth — the Passover feast is now the ongoing life of the Christian community. Since Christ the Passover lamb has been sacrificed (v.7), the entire life of the church becomes a perpetual Passover feast, kept pure by the removal of moral leaven.",
+    "9": "Paul's earlier letter about not associating with the sexually immoral — the instruction to maintain the holiness of the community follows from Christ's own teaching on binding and loosing (Matt 18:15-20) and the separation of the holy community from defilement.",
+    "10": "Not meaning the immoral of this world — Paul clarifies: separation from the immoral within the community, not withdrawal from the world. This echoes Jesus's prayer in John 17:15-16: not that they be taken out of the world, but that they be kept from the evil one. The church is in the world but not of it.",
+    "11": "Not to associate with one called a brother who is sexually immoral: the category of brother (adelphos) — one who shares the same Father in Christ — creates a higher standard of accountability than applies to outsiders. The covenant community of the new Exodus holds a holiness commensurate with the sacrifice that constituted it.",
+    "12": "Is it not those inside the church whom you are to judge? — the church's internal discipline reflects Christ's own shepherding of his flock. The shepherd who leaves the ninety-nine to seek the one (Luke 15:4-7) exercises this same internal care for each member of the community.",
+    "13": "God will judge those outside — Paul transfers final judgment of outsiders to God alone, echoing Jesus's teaching: do not judge, lest you be judged (Matt 7:1). The church's discipline is remedial and restorative; God's judgment of the world is eschatological and final.",
   },
-  "10": {
-    "4": "<p>A type: 'They drank from the spiritual rock that followed them, and the rock was Christ.' Paul applies a midrashic tradition (the rock of Exod 17:6 and Num 20:11 that followed Israel in the wilderness — attested in various Second Temple sources) and identifies it typologically with Christ. The wilderness generation had Christological benefits before the incarnation: they ate the spiritual food (manna) and drank the spiritual drink (water from the rock) that pointed forward to and derived its sustaining power from Christ. Christ was the substance that every wilderness provision shadowed.</p>"
+  "6": {
+    "1": "Taking a grievance before the unrighteous rather than before the saints: the contradiction Paul identifies is that those who will judge the world (v.2) — by virtue of their union with Christ who is the eschatological judge — are submitting their disputes to those who have no share in that judgment.",
+    "2": "The saints will judge the world — the eschatological role of believers in judgment (Dan 7:18, 22; Wis 3:7-8) is grounded in their union with Christ who is the Judge of all (John 5:22). To judge the world with Christ means being fit to adjudicate trivial matters within the community.",
+    "3": "We will judge angels — a striking claim about the eschatological dignity of believers united with Christ. If the Son of Man receives dominion over all powers (Dan 7:13-14), those united with him share that dominion, including authority over the angelic realm.",
+    "4": "Do you appoint as judges those who have no standing in the church? — the rhetorical question assumes the answer is absurd. Those who do not share the resurrection life and the Spirit of Christ cannot rightly adjudicate disputes within the community defined by that life and Spirit.",
+    "5": "Is there no one among you wise enough to settle a dispute? — the irony is barbed: the Corinthians pride themselves on wisdom (sophia, chapters 1-4), yet cannot find one wise enough to judge a community dispute. The wisdom they boast of has not produced the practical fruit of reconciled relationships.",
+    "6": "Brother goes to law against brother before unbelievers — the language of brotherhood is the key. Those who share one Father through Christ should be able to resolve conflicts through the Spirit of the family, not by appealing to those outside the family.",
+    "7": "To have lawsuits at all with one another is already a defeat — the willingness to take a fellow believer to court is itself the spiritual failure, regardless of the outcome. Christ's teaching in the Sermon on the Mount already anticipated this: settle with your adversary quickly (Matt 5:25); do not resist the one who is evil (Matt 5:39).",
+    "8": "You yourselves wrong and defraud — and your own brothers: the wrongdoing (adikeo) mirrors the adikia (wrongdoing) that those who practice it will not inherit the kingdom (v.9). Those who defraud their brothers are acting as if they belong to the adikoi (the unjust ones) rather than to the body of Christ.",
+    "9": "The unrighteous (adikoi) will not inherit the kingdom of God — the kingdom of God is the domain of Christ's rule, entered through repentance and faith. The list of vices (sexual immorality, idolatry, adultery, theft, greed) defines the life of the old age, incompatible with the kingdom that Christ inaugurated.",
+    "10": "Nor thieves, nor the greedy, nor drunkards, nor revilers, nor swindlers will inherit the kingdom of God — the second half of the vice list emphasizes economic sins (theft, greed, swindling) — precisely the category relevant to the lawsuit dispute of vv.1-8. The greedy (pleonektai) will not inherit what Christ gives freely.",
+    "11": "But you were washed, you were sanctified, you were justified in the name of the Lord Jesus Christ and by the Spirit of our God — the three passive verbs describe what happened in baptism: the past is over. The washing (apelousasthe) evokes baptismal water; sanctification (hēgiasthēte) establishes new identity; justification (edikaiōthēte) declares new standing before God — all in the name of the Lord Jesus Christ.",
+    "12": "All things are permissible for me — the Corinthian slogan Paul quotes and qualifies twice. The freedom purchased by Christ's blood is real (Gal 5:1: for freedom Christ has set us free) but is not the freedom of the old self to indulge old desires.",
+    "13": "The body is not for sexual immorality but for the Lord — the christological claim: the body belongs to Christ, the Lord who purchased it (v.20). This is the ground for sexual ethics: not moralism but ontology — the body's belonging to Christ.",
+    "14": "God raised the Lord and will raise us also by his power — the resurrection grounds the body's dignity. The physical body is not a disposable container for the soul but the created form that will be raised and transformed. What is done to the body has eternal significance.",
+    "15": "Your bodies are members of Christ — the body of the believer is literally incorporated into the body of Christ (the church as body of Christ, 12:12-27). To join that body to a prostitute is to take what belongs to Christ and unite it to what belongs to a different domain entirely.",
+    "16": "The one who is joined to a prostitute becomes one body with her — citing Genesis 2:24 (the two shall become one flesh). The sexual union is not merely a physical act but a covenantal bonding; the body's capacity for such union is why sexual immorality is not morally neutral.",
+    "17": "But the one joined to the Lord becomes one spirit with him — the spiritual union with the risen Christ (hen pneuma, one spirit) is the positive counterpart to the negative one-flesh warning. Union with Christ is the defining reality of the believer's existence.",
+    "18": "Flee sexual immorality — the imperative echoes the sexual temptation narrative of the OT (Gen 39:12: Joseph fled from Potiphar's wife). The body's unique relationship to sexual sin (it is against one's own body) reflects the covenantal dimension of embodied sexuality established in Genesis 2.",
+    "19": "Your body is a temple of the Holy Spirit within you — the temple (naos) is not a metaphor for something spiritual; it is the architectural reality of God's dwelling with his people. In Christ, God's temple-presence (shekinah) now inhabits human bodies. The destruction of the Jerusalem temple's uniqueness is implicit in this democratization of divine indwelling.",
+    "20": "You were bought with a price — the redemption language (agorazō, to purchase in the marketplace) echoes the Exodus: God redeemed Israel from slavery in Egypt; Christ redeemed believers from slavery to sin and death at the cost of his blood. The price is the cross. Therefore glorify God in your body.",
   },
-  "11": {
-    "26": "<p>A direct revelation: 'For as often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes.' The Eucharist is not merely commemorative but kerygmatic — every celebration is a proclamation (<em>kataggellō</em>) of the Lord's death. This death-proclamation has an eschatological horizon: 'until he comes' (<em>achris hou elthe</em>). The Lord's Supper situates the community between the cross and the parousia, making every meal a re-entry into the narrative of Christ's saving death and an anticipation of its completion at the return. Christology is embedded in liturgical practice.</p>"
+  "7": {
+    "1": "It is good for a man not to touch a woman — Paul is quoting or summarizing a Corinthian position, then responding. The ascetic tendency in Corinth mirrors a broader cultural movement toward sexual renunciation in some Hellenistic philosophies. Paul neither fully endorses nor rejects it.",
+    "2": "Because of sexual immorality, each man should have his own wife — the positive ground of marriage: the covenant structure of one man and one woman in exclusive mutual belonging mirrors the covenant between Christ and the church (Eph 5:25-32). The marriage is not a concession to weakness but a proper ordering of desire within the covenant framework.",
+    "3": "The husband should give to his wife her conjugal rights — the mutual authority over each other's bodies (v.4) reflects the mutual self-giving of the marriage covenant. Paul's insistence on mutuality was countercultural in a Roman world where the husband had near-absolute authority.",
+    "4": "The wife does not have authority over her own body, but the husband does; likewise the husband does not have authority over his own body, but the wife does — the mutuality is complete and precise. Both spouses are simultaneously self-giving and received. This mirrors the mutual indwelling of Christ and the church (John 15:4-5).",
+    "5": "Do not deprive one another except perhaps by agreement for a limited time to devote yourselves to prayer — the temporary abstinence for prayer reflects the Mosaic pattern (Exod 19:15; 1 Sam 21:5) where sexual abstinence preceded encounters with the holy. Paul grants it but insists on mutual consent and restoration.",
+    "6": "I say this by way of concession, not command — Paul distinguishes his own judgment from the Lord's command; an important epistemic distinction that he maintains through the chapter (vv.10, 12, 25, 40).",
+    "7": "I wish that all were as I myself am — Paul's celibacy is a gift (charisma) from God, not a moral achievement. The diversity of gifts (12:4-11) extends to the gift of celibacy; neither celibacy nor marriage is the universally superior state.",
+    "8": "To the unmarried and the widows I say that it is good for them to remain single as I am — Paul's own celibate apostolic life (Phil 4:11-12: contentment in all states) is the model for those who can bear it. The eschatological urgency of v.29-31 grounds this preference.",
+    "9": "But if they cannot exercise self-control, they should marry — the positive gift of marriage: better to marry than to burn with passion. The verb pyrousthai (to burn) suggests the consuming fire of unmanaged desire; marriage channels desire into covenant.",
+    "10": "To the married I give this charge — not I but the Lord — Paul explicitly cites the command of the Lord Jesus himself (Matt 5:32; 19:9; Mark 10:11-12; Luke 16:18). This is one of the clearest points in Paul's letters where he invokes dominical authority as distinct from his own apostolic judgment.",
+    "11": "But if she does separate, let her remain unmarried or else be reconciled to her husband — the allowance for separation without remarriage reflects the primacy of covenant permanence. The goal is always reconciliation, mirroring God's persistent pursuit of Israel after her unfaithfulness (Hos 2:14-23).",
+    "12": "To the rest I say — I, not the Lord — Paul explicitly distinguishes his apostolic judgment from the Lord's explicit teaching. The mixed marriage situation (believer with unbeliever) was not addressed by Jesus's earthly ministry.",
+    "13": "If any woman has a husband who is an unbeliever and he consents to live with her, she should not divorce him — the mission of the believer to the unbelieving spouse reflects the logic of Christ's own engagement with a world that did not yet believe (John 17:18-19: as you sent me into the world, I have sent them into the world).",
+    "14": "The unbelieving husband is made holy through his wife — the concept of sanctification through proximity to the holy recalls the OT principle that contact with the holy transfers holiness (Exod 29:37; 30:29). The believer's holiness radiates outward through the covenant relationship.",
+    "15": "But if the unbelieving partner separates, let it be so — the Pauline privilege: when the unbeliever initiates dissolution, the believer is not bound. God has called you to peace — eirēnē, the shalom of God's kingdom, is the governing value. The Lord is lord even of broken marriage situations.",
+    "16": "Wife, how do you know whether you will save your husband? — the evangelistic possibility is real but uncertain. The grounds for maintaining a difficult mixed marriage include the possibility of the unbelieving spouse's salvation — a participation in Christ's own saving mission through the medium of marriage.",
+    "17": "As the Lord has assigned to each, as God has called each one, so he should walk — the principle of remaining in one's calling: each social location is the field of Christ's mission. The verb peripateo (walk) is Paul's term for the whole of Christian living (Eph 4:1; 5:2, 8, 15).",
+    "18": "Was anyone at the time of his call already circumcised? Let him not seek to remove the marks of circumcision — circumcision is a social-ethnic marker, not a soteriological one in Christ. Neither circumcision nor uncircumcision counts for anything — only faith working through love (Gal 5:6).",
+    "19": "Circumcision is nothing and uncircumcision is nothing, but keeping the commandments of God is everything — the commandments Paul has in mind are those of the new covenant: love one another as I have loved you (John 13:34). The ethnic markers dissolve; the love-commandment of Christ remains.",
+    "20": "Each one should remain in the condition in which he was called — the repetition of the principle (vv.17, 20, 24) establishes it as the governing rule. Social location is not changed by conversion; it is transformed from within by the presence of Christ.",
+    "21": "Were you a slave when called? Do not be concerned — the slave who belongs to Christ is a freed person in the most important sense (v.22). The social institution does not determine spiritual dignity in Christ.",
+    "22": "For the one who was called in the Lord while a slave is a freed person of the Lord; likewise the one who was free when called is a slave of Christ — the christological reversal: the slave is free in Christ; the free person is Christ's slave. Both find their true identity in relation to the Lord, not in their social position.",
+    "23": "You were bought with a price; do not become slaves of men — the redemption motif from 6:20 returns: the price paid at the cross establishes the believer's true allegiance. Social servitude is real, but ultimate allegiance to any human master is incompatible with belonging to Christ.",
+    "24": "Each one is to remain with God in the condition in which he was called — the final statement of the principle adds with God. The social condition is not merely endured; it is inhabited with God, lived in the divine presence that transforms every circumstance.",
+    "25": "Now concerning virgins — I have no command of the Lord, but I give my judgment — Paul explicitly marks the limit of dominical tradition; his apostolic judgment is offered under the Spirit (v.40) but distinguished from explicit command.",
+    "26": "In view of the present distress (anankē) — the eschatological pressure that makes the present moment extraordinary. The anankē (necessity, constraint) that Paul uses here is the same word he used for his own compulsion to preach (9:16). The end of the age creates urgency that reframes all ordinary social calculations.",
+    "27": "Are you bound to a wife? Do not seek to be free. Are you free? Do not seek a wife — the even-handedness of Paul's counsel reflects his eschatological framework: neither marriage nor singleness is advantageous in itself; both are to be inhabited faithfully.",
+    "28": "If you do marry, you have not sinned — marriage is not a second-class spiritual state. The tribulation (thlipsis) of the married in the flesh reflects the additional vulnerabilities of those with earthly attachments in the coming eschatological pressure.",
+    "29": "The appointed time has grown very short — the eschatological horizon (ho kairos synestalmenos estin) shortens all earthly arrangements. Those with wives should live as though they had none: not dissolving marriage but holding all earthly goods loosely in light of the coming kingdom.",
+    "30": "Those who weep as though they were not weeping, those who rejoice as though they were not rejoicing, those who buy as though they had no goods — the fourfold as-if pattern describes eschatological detachment: present realities are real but not ultimate. The resurrection relativizes all present conditions.",
+    "31": "The present form of this world is passing away (paragon to schema tou kosmou) — schema (form, structure, configuration) suggests the outward arrangement of the present age. The whole configuration is paragon (passing, transient); only the kingdom of Christ is permanent.",
+    "32": "The unmarried man is anxious about the things of the Lord — the single person's undivided attention to the things of Christ mirrors the singular focus of the apostle himself. The devotion (merimnao) is the same word used for the anxiety Jesus forbids (Matt 6:25-34) but here redirected toward the Lord.",
+    "33": "The married man is anxious about worldly things, how to please his wife — the double anxiety of the married person is not condemned; it is acknowledged as the real cost of the vocation of marriage. Pleasing the spouse is a legitimate form of service that participates in the marriage covenant.",
+    "34": "The unmarried woman or virgin is anxious about the things of the Lord — the parallel structure for women gives them the same vocational options and dignity as men; both are equally capable of undivided devotion to Christ.",
+    "35": "Not to lay any restraint upon you but to promote good order and to secure your undivided devotion (euparedron) to the Lord — the eupahedron (well-seated beside, attending closely) is Paul's term for the quality of presence he advocates: sitting attentively at the Lord's feet, as Mary at Jesus's feet (Luke 10:39).",
+    "36": "If anyone thinks he is not behaving properly toward his betrothed — Paul addresses the engaged couple; let them marry. The permission to marry is gracious, not grudging.",
+    "37": "Whoever is firmly established in his heart, being under no necessity and having his desire under control, to keep her as his betrothed — the man who can sustain betrothed celibacy as a positive gift, not merely as inability, does well.",
+    "38": "So then he who marries his betrothed does well, and he who refrains from marriage does better — the better (kreitton) is comparative not absolute: better in the specific context of the present eschatological necessity, not inherently or ontologically superior.",
+    "39": "A wife is bound to her husband as long as he lives — the permanence of the marriage covenant echoes Christ's own teaching (Mark 10:6-9); the bond is dissolved only by death. The freedom to remarry is qualified: only in the Lord — the new spouse must also be a believer.",
+    "40": "In my judgment she is happier if she remains as she is — Paul's final word: the widow who remains single in the eschatological moment is, in his view, more blessed. And I think that I too have the Spirit of God — the confidence is appropriately humble; Paul does not claim direct revelation but the Spirit-guided judgment of the apostle.",
   },
-  "15": {
-    "20": "<p>A direct revelation: 'But in fact Christ has been raised from the dead, the firstfruits of those who have fallen asleep.' The resurrection of Christ is the pivotal fact on which Paul's entire argument turns — not a theological principle but a historical event (<em>Christos egegertai</em>: he has been raised, perfect tense, with present ongoing state). The firstfruits designation makes the resurrection of believers not an optional addendum but the structurally necessary completion of Christ's resurrection: God's harvest of humanity is underway, Christ being the guarantee of the rest. The resurrection hope is not escape from creation but transformation into a new, glorified mode of embodied existence.</p>",
-
-    "45": "<p>A direct revelation: 'The last Adam became a life-giving spirit.' The Adam-Christ typology here reaches its Christological climax. Adam was the representative head who brought death by disobedience into the created order; Christ is the new representative head who brings life by obedience (and resurrection). The <em>eschatos Adam</em> (last Adam) terminology is unique to Paul: Christ is not merely another Adam in a sequence but the final, definitive human through whom the Adamic story reaches its appointed end. As the life-giving spirit (<em>pneuma zoopoioun</em>), the risen Christ is the source of the Spirit that will transform resurrection-bodies at the last day.</p>",
-
-    "57": "<p>A direct revelation: 'Thanks be to God who gives us the victory through our Lord Jesus Christ.' The doxology concludes the resurrection argument: the victory over death, sin, and law (v. 56) is not achieved by believers but given (<em>didonti</em>) by God. The mode of giving is 'through our Lord Jesus Christ' — his resurrection is the mediating event through which God's victory becomes the believer's possession. The personal pronoun 'our' Lord Jesus Christ makes the cosmic Christological triumph intimately personal: this victory is given to those who belong to him.</p>"
+  "8": {
+    "1": "Now concerning food offered to idols — the issue of eidōlothyta (idol meat) sat at the intersection of theology and social life. Some in Corinth appealed to their gnōsis (knowledge) as the basis for freedom. Paul responds that knowledge puffs up, but love builds up — the criterion shifts from what I know to what serves my neighbor.",
+    "2": "If anyone imagines he knows something, he does not yet know as he ought to know — the self-congratulation of the gnostic is precisely what genuine knowledge of God undermines. To know God truly is to be made humble by that knowledge (Jer 9:23-24: let not the wise man boast in his wisdom).",
+    "3": "But if anyone loves God, he is known by God — the reversal is striking: the Christian's knowing of God is derivative of being known by God (Gal 4:9: now you have come to know God, or rather to be known by God). The priority of divine initiative in the relationship of knowledge and love mirrors John's Gospel: you did not choose me, but I chose you (John 15:16).",
+    "4": "An idol has no real existence and there is no God but one — the christological monotheism Paul articulates in v.6 is grounded in this affirmation. The Shema (Deut 6:4: the Lord is one) is the foundation on which Paul builds his christological expansion.",
+    "5": "There are many gods and many lords — the Roman world was populated with competing divine claims: the imperial cult, the Olympian gods, mystery deities like Isis and Mithras. Paul grants the existence of these as powerful cultural forces while denying their divine status.",
+    "6": "Yet for us there is one God the Father from whom all things come and for whom we exist, and one Lord Jesus Christ through whom all things come and through whom we exist — the christological reshaping of the Shema. The Shema's one God is now specified as Father and Son; creation (ta panta) and new creation are both accomplished through the Son (Col 1:15-17; John 1:3). This is among the earliest and clearest NT statements of Christ's cosmic lordship.",
+    "7": "Not everyone possesses this knowledge — the gnōsis of v.1-6 is real but not universal. Recent converts from paganism carry the memory of their former worship; for them, the idol retains emotional and spiritual force even if intellectually they know it is nothing.",
+    "8": "Food will not commend us to God — the criterion for standing before God is not dietary practice but faith, love, and obedience. Christ is not food but the one who feeds (John 6:35: I am the bread of life); the Corinthian debate about idol meat is peripheral to the central question of relationship with Christ.",
+    "9": "Take care that this right of yours does not somehow become a stumbling block to the weak — the word exousia (right) returns from chapter 9's discussion of Paul's own rights. The parallel is intentional: as Paul waived his apostolic rights for the sake of the gospel, so the Corinthian believers should waive their idol-meat rights for the sake of the weak.",
+    "10": "If anyone sees you who have knowledge eating in an idol's temple — the scenario is a social dinner in the temple's dining hall. The weak person sees the knowledgeable believer and is encouraged (oikodomeō, the same word as building up) to eat against his conscience — a grotesque irony: the community's edification vocabulary applied to the spiritual destruction of a member.",
+    "11": "The weak person is destroyed — apollytai (perish, be destroyed) is the word of eschatological ruin. The weak brother (ton asthena) for whom Christ died: this is the measure of the weak person's worth — the life of the Son of God was the price paid for him. To despise him is to treat as worthless what cost Christ everything.",
+    "12": "Sinning against your brothers and wounding their conscience — you sin against Christ — the identification of Christ with his members (those for whom he died) means that a wound inflicted on a weak believer reaches Christ himself. This anticipates the Matthean teaching: what you did to the least of these my brothers, you did to me (Matt 25:40).",
+    "13": "Therefore, if food makes my brother stumble, I will never eat meat — Paul's personal resolution follows from the christological logic: the one for whom Christ died sets the upper limit of what I am willing to sacrifice. If my freedom costs my brother the life that Christ bought for him, my freedom is not worth that cost.",
   }
 }
 
-def main():
-    existing = load_comm('mkt-christ', '1corinthians')
-    merge_comm(existing, CHRIST)
-    save_comm('mkt-christ', '1corinthians', existing)
-    total = sum(len(v) for v in existing.values())
-    print(f'1 Corinthians mkt-christ: {len(existing)} chapters, {total} verses.')
-
 if __name__ == '__main__':
-    main()
+    existing = load_comm('mkt-christ', '1corinthians')
+    merge_comm(existing, NEW)
+    save_comm('mkt-christ', '1corinthians', existing)
+    for ch in ['5', '6', '7', '8']:
+        print(f'  ch {ch}: {len(existing.get(ch, {}))} verses')
