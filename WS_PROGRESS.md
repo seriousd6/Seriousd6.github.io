@@ -1,6 +1,6 @@
 # Wide Source Commentary Progress
 
-**Last updated:** 2026-06-07 (infrastructure created; no synthesis data yet)
+**Last updated:** 2026-06-07
 **Source of truth:** `data/commentary/synthesis/`
 **Purpose:** Per-verse synthesis of Calvin, Matthew Henry Concise (mhcc), Ellicott, JFB, Clarke, Wesley, and Barnes (NT). Each verse gets a 100–250 word prose synthesis plus a `voices` array of 40–80 word excerpts. See `WS_AGENT_GUIDE.md` for content principles.
 
@@ -36,7 +36,7 @@ Phase 5 (remaining OT)
 | Luke | luke | 24 | | not started |
 | John | john | 21 | | not started |
 | Acts | acts | 28 | | not started |
-| Romans | romans | 16 | | not started |
+| Romans | romans | 16 | complete 13/16 | in-progress |
 | 1 Corinthians | 1corinthians | 16 | | not started |
 | 2 Corinthians | 2corinthians | 13 | | not started |
 | Galatians | galatians | 6 | | not started |
@@ -49,7 +49,7 @@ Phase 5 (remaining OT)
 | 2 Timothy | 2timothy | 4 | | not started |
 | Titus | titus | 3 | | not started |
 | Philemon | philemon | 1 | | not started |
-| Hebrews | hebrews | 13 | | not started |
+| Hebrews | hebrews | 13 | complete 12/13 | in-progress |
 | James | james | 5 | | not started |
 | 1 Peter | 1peter | 5 | | not started |
 | 2 Peter | 2peter | 3 | | not started |
@@ -109,24 +109,65 @@ Phase 5 (remaining OT)
 
 ## NT Work Queue
 
-Work units are ≤99 verses (greedy chapter packing). Claim one row at a time — set Status to `in-progress @ <ISO timestamp>` before writing; set to `complete` after running and verifying.
+Work units target **≤45 verses** (typically 1–2 chapters). Long chapters (30+ verses) get their own row. Claim one row at a time — set Status to `in-progress @ <ISO timestamp>` before writing; set to `complete` after running and verifying.
 
 | Script | Book | Chapters | Verses (est.) | Status |
 |--------|------|----------|---------------|--------|
-| ws-synthesis-hebrews-1-4.py | hebrews | 1–4 | ~90 | in-progress @ 2026-06-07T12:16:20Z |
-| ws-synthesis-hebrews-5-9.py | hebrews | 5–9 | ~99 | not started |
-| ws-synthesis-hebrews-10-13.py | hebrews | 10–13 | ~90 | not started |
-| ws-synthesis-romans-1-4.py | romans | 1–4 | ~97 | not started |
-| ws-synthesis-romans-5-8.py | romans | 5–8 | ~97 | not started |
-| ws-synthesis-romans-9-11.py | romans | 9–11 | ~91 | not started |
-| ws-synthesis-romans-12-16.py | romans | 12–16 | ~89 | not started |
-| ws-synthesis-galatians-1-6.py | galatians | 1–6 | ~149 | not started |
-| ws-synthesis-ephesians-1-6.py | ephesians | 1–6 | ~155 | not started |
-| ws-synthesis-1john-1-5.py | 1john | 1–5 | ~105 | not started |
-| ws-synthesis-john-1-4.py | john | 1–4 | ~87 | not started |
-| ws-synthesis-john-5-8.py | john | 5–8 | ~99 | not started |
-| ws-synthesis-john-9-12.py | john | 9–12 | ~97 | not started |
-| ws-synthesis-john-13-17.py | john | 13–17 | ~95 | not started |
-| ws-synthesis-john-18-21.py | john | 18–21 | ~94 | not started |
+| ws-synthesis-hebrews-1-2.py | hebrews | 1–2 | ~32 | complete |
+| ws-synthesis-hebrews-3-4.py | hebrews | 3–4 | ~35 | complete |
+| ws-synthesis-hebrews-5-6.py | hebrews | 5–6 | ~34 | complete |
+| ws-synthesis-hebrews-7.py | hebrews | 7 | ~28 | complete |
+| ws-synthesis-hebrews-8-9.py | hebrews | 8–9 | ~41 | complete |
+| ws-synthesis-hebrews-10.py | hebrews | 10 | ~39 | in-progress @ 2026-06-07T19:30:41Z |
+| ws-synthesis-hebrews-11.py | hebrews | 11 | ~40 | complete |
+| ws-synthesis-hebrews-12.py | hebrews | 12 | ~29 | complete |
+| ws-synthesis-hebrews-13.py | hebrews | 13 | ~25 | complete |
+| ws-synthesis-romans-1.py | romans | 1 | ~32 | complete |
+| ws-synthesis-romans-2.py | romans | 2 | ~29 | complete |
+| ws-synthesis-romans-3.py | romans | 3 | ~31 | complete |
+| ws-synthesis-romans-4.py | romans | 4 | ~25 | complete |
+| ws-synthesis-romans-5-6.py | romans | 5–6 | ~44 | complete |
+| ws-synthesis-romans-7.py | romans | 7 | ~25 | complete |
+| ws-synthesis-romans-8.py | romans | 8 | ~39 | complete |
+| ws-synthesis-romans-9.py | romans | 9 | ~33 | complete |
+| ws-synthesis-romans-10.py | romans | 10 | ~21 | complete |
+| ws-synthesis-romans-11.py | romans | 11 | ~36 | complete |
+| ws-synthesis-romans-12-13.py | romans | 12–13 | ~35 | complete |
+| ws-synthesis-romans-14.py | romans | 14 | ~23 | not started |
+| ws-synthesis-romans-15.py | romans | 15 | ~33 | not started |
+| ws-synthesis-romans-16.py | romans | 16 | ~27 | not started |
+| ws-synthesis-galatians-1-2.py | galatians | 1–2 | ~45 | not started |
+| ws-synthesis-galatians-3.py | galatians | 3 | ~29 | not started |
+| ws-synthesis-galatians-4.py | galatians | 4 | ~31 | not started |
+| ws-synthesis-galatians-5-6.py | galatians | 5–6 | ~44 | not started |
+| ws-synthesis-ephesians-1-2.py | ephesians | 1–2 | ~45 | not started |
+| ws-synthesis-ephesians-3.py | ephesians | 3 | ~21 | not started |
+| ws-synthesis-ephesians-4.py | ephesians | 4 | ~32 | not started |
+| ws-synthesis-ephesians-5.py | ephesians | 5 | ~33 | not started |
+| ws-synthesis-ephesians-6.py | ephesians | 6 | ~24 | not started |
+| ws-synthesis-1john-1-2.py | 1john | 1–2 | ~39 | not started |
+| ws-synthesis-1john-3-4.py | 1john | 3–4 | ~45 | not started |
+| ws-synthesis-1john-5.py | 1john | 5 | ~21 | not started |
+| ws-synthesis-john-1.py | john | 1 | ~51 | not started |
+| ws-synthesis-john-2.py | john | 2 | ~25 | not started |
+| ws-synthesis-john-3.py | john | 3 | ~36 | not started |
+| ws-synthesis-john-4.py | john | 4 | ~54 | not started |
+| ws-synthesis-john-5.py | john | 5 | ~47 | not started |
+| ws-synthesis-john-6.py | john | 6 | ~71 | not started |
+| ws-synthesis-john-7.py | john | 7 | ~53 | not started |
+| ws-synthesis-john-8.py | john | 8 | ~59 | not started |
+| ws-synthesis-john-9.py | john | 9 | ~41 | not started |
+| ws-synthesis-john-10.py | john | 10 | ~42 | not started |
+| ws-synthesis-john-11.py | john | 11 | ~57 | not started |
+| ws-synthesis-john-12.py | john | 12 | ~50 | not started |
+| ws-synthesis-john-13.py | john | 13 | ~38 | not started |
+| ws-synthesis-john-14.py | john | 14 | ~31 | not started |
+| ws-synthesis-john-15.py | john | 15 | ~27 | not started |
+| ws-synthesis-john-16.py | john | 16 | ~33 | not started |
+| ws-synthesis-john-17.py | john | 17 | ~26 | not started |
+| ws-synthesis-john-18.py | john | 18 | ~40 | not started |
+| ws-synthesis-john-19.py | john | 19 | ~42 | not started |
+| ws-synthesis-john-20.py | john | 20 | ~31 | not started |
+| ws-synthesis-john-21.py | john | 21 | ~25 | not started |
 
 *(Add OT work queue entries when Phase 4 begins.)*

@@ -1,6 +1,6 @@
 # Book Study Progress
 
-**Last updated:** 2026-06-07 (isaiah complete)
+**Last updated:** 2026-06-07 (malachi complete — ALL 66 BOOKS DONE)
 **Source of truth:** `data/workshop/book-study/`
 **Supplemental only** — `data/books/introductions/{bookId}.json` already covers author/date/outline/themes/christ_connection for all 66 books. These scripts add: key_vocabulary, language_notes, reception, reading_guide.
 
@@ -11,7 +11,7 @@
 | | key_vocab | language_notes | reception | reading_guide |
 |-|-----------|----------------|-----------|---------------|
 | NT complete (books) | 27 / 27 | 27 / 27 | 27 / 27 | 27 / 27 |
-| OT complete (books) | 23 / 39 | 23 / 39 | 23 / 39 | 23 / 39 |
+| OT complete (books) | 39 / 39 | 39 / 39 | 39 / 39 | 39 / 39 |
 
 ---
 
@@ -76,19 +76,19 @@
 | Ecclesiastes | ecclesiastes | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
 | Song of Solomon | songofsolomon | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
 | Isaiah | isaiah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
-| Jeremiah | jeremiah | hebrew | | | | | in-progress @ 2026-06-07T12:22:07Z |
-| Lamentations | lamentations | hebrew | | | | | not started |
-| Ezekiel | ezekiel | hebrew | | | | | not started |
-| Daniel | daniel | hebrew | | | | | not started |
-| Hosea | hosea | hebrew | | | | | not started |
-| Joel | joel | hebrew | | | | | not started |
-| Amos | amos | hebrew | | | | | not started |
-| Obadiah | obadiah | hebrew | | | | | not started |
-| Jonah | jonah | hebrew | | | | | not started |
-| Micah | micah | hebrew | | | | | not started |
-| Nahum | nahum | hebrew | | | | | not started |
-| Habakkuk | habakkuk | hebrew | | | | | not started |
-| Zephaniah | zephaniah | hebrew | | | | | not started |
-| Haggai | haggai | hebrew | | | | | not started |
-| Zechariah | zechariah | hebrew | | | | | not started |
-| Malachi | malachi | hebrew | | | | | not started |
+| Jeremiah | jeremiah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Lamentations | lamentations | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Ezekiel | ezekiel | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Daniel | daniel | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Hosea | hosea | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Joel | joel | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Amos | amos | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Obadiah | obadiah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Jonah | jonah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Micah | micah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Nahum | nahum | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Habakkuk | habakkuk | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Zephaniah | zephaniah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Haggai | haggai | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Zechariah | zechariah | hebrew | ✓ | ✓ | ✓ | ✓ | complete |
+| Malachi | malachi | hebrew | ✓ | ✓ | ✓ | ✓ | complete |

@@ -121,7 +121,7 @@ Apply the content principles from `WS_AGENT_GUIDE.md` to every entry:
 - voices excerpts are 40–80 words, directly from the source HTML
 - Be honest: use `consensus: "divided"` when voices genuinely disagree; set `key_tension`
 
-If context runs short mid-range, finish the current chapter cleanly, stop, and update your work queue row to show the chapters actually completed (e.g., change `1–4` to `1–2` and create a new row for `3–4`).
+Work units are already sized at ≤45 verses (typically 1–2 chapters). If context runs short mid-chapter, finish that chapter cleanly, stop, and update the work queue row to show the chapter actually completed; leave the remainder as a new `not started` row.
 
 ---
 

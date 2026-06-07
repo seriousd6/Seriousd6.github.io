@@ -1,53 +1,23 @@
-"""
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
-
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
-"""
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    # INTENT: merge without overwriting any verse already present in existing
+    # CHANGE? Do not alter the guard condition; concurrent agents depend on this being append-only
+    # VERIFY: run twice; second run should report identical byte count for psalms.json
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,112 +25,47 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
-  },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
+NEW_DATA = {
+    "118": {
+        "1": "<p><b>hodu lYHWH ki-tov ki leolam chasdo</b> — the great hallel refrain (shared verbatim with Ps 106:1, 107:1, 136:1 passim) opens and closes the psalm (v29 = v1), creating a liturgical inclusio. Ps 118 is the climactic psalm of the Egyptian Hallel (Pss 113-118) sung at Passover; Jesus and the disciples sang it after the Last Supper (Matt 26:30; Mark 14:26). The refrain is not mere formula — <i>ki-tov ki leolam chasdo</i> asserts that YHWH's <i>chesed</i> (covenantal faithfulness) is the permanent structural feature of reality.</p>",
+        "2": "<p><b>yomar-na yisrael ki leolam chasdo</b> — the first of three liturgical circles: Israel the nation. <i>yomar-na</i> (let ... say, jussive + entreaty particle <i>na</i>) — a call-and-response format, with the congregation repeating the refrain. The na particle makes it an urgent invitation, not merely a command.</p>",
+        "3": "<p><b>yomru-na veyt-aharon ki leolam chasdo</b> — the second circle: the priestly house of Aaron, the liturgical specialists whose role is precisely to proclaim the divine name. That they too confess <i>leolam chasdo</i> shows the refrain is not casual piety but cultic confession at the highest level.</p>",
+        "4": "<p><b>yomru-na yirey YHWH ki leolam chasdo</b> — the third and widest circle: <i>yirey YHWH</i> (those who fear the LORD) — a category that extends beyond ethnic Israel to include God-fearers and proselytes (cf. Ps 115:11; 135:20). The concentric structure (Israel → Aaron → fearers) moves from the ethnically particular to the religiously universal.</p>",
+        "5": "<p><b>min-hammetzer qarati Yah anani vammerchav Yah</b> — the thematic hinge of the psalm's personal testimony. <i>metzer</i> (narrow straits/distress, from <i>tzarar</i>, to squeeze/bind) is the physical sensation of being compressed by crisis. <i>merchav</i> (broad/spacious place, from <i>rachav</i>, wide) is the experiential opposite — rescue is felt as release from constriction into expanse. The contraction <i>Yah</i> (short form of YHWH) appears twice, emphasizing divine directness. The pattern <i>metzer → merchav</i> is repeated across the Psalter as the primary rescue schema.</p>",
+        "6": "<p><b>YHWH li lo ira mah-yaaseh li adam</b> — <i>YHWH li</i> (the LORD is for/on my side) — the preposition <i>le</i> expresses personal advocacy: YHWH takes the speaker's side. <i>lo ira</i> (I will not fear) — the negative jussive of <i>yare</i>. <i>mah-yaaseh li adam</i> (what can a person do to me?) — the rhetorical question that grounds fearlessness in divine advocacy. Heb 13:6 cites this with the added phrase 'the Lord is my helper' — drawing on v7 to complete the thought.</p>",
+        "7": "<p><b>YHWH li bozray vaani ereh bsoneay</b> — <i>bozray</i> (among my helpers, Qal participle plural of <i>azar</i> + preposition <i>be</i> + 1s suffix) — YHWH is classified among those who help, but as the decisive one. <i>vaani ereh bsoneay</i> (and I will look/see regarding those who hate me) — <i>raah</i> used for watching the downfall of enemies: the psalmist will outlast them to see their ruin. Cf. Ps 54:9; 59:10.</p>",
+        "8": "<p><b>tov lachsot bYHWH mivtitoach baadam</b> — <i>chasah</i> (to take refuge/shelter, seek protection) is the active seeking of a defender; <i>batach</i> (to trust/rely on) is passive reliance. The distinction is subtle but real: shelter is obtained, trust is extended. <i>adam</i> (mortal person, the common human) is the comparison — not sinful necessarily, but inherently limited. The proverb form (<i>tov...min</i>, better...than) is wisdom genre.</p>",
+        "9": "<p><b>tov lachsot bYHWH mivtitoach bindivim</b> — the parallel proverb escalates from <i>adam</i> (ordinary person) to <i>ndivim</i> (nobles/princes/generous ones) — those with actual power and resources. If trusting ordinary humans is foolish, trusting powerful humans is doubly so. <i>ndivim</i> shares the root of <i>ndavah</i> (freewill offering) — generosity and nobility are related concepts in Hebrew thought.</p>",
+        "10": "<p><b>kol-goyim svavuni bshem YHWH ki amilam</b> — <i>svavuni</i> (they surrounded me, Qal perfect of <i>savav</i>) — the encirclement of enemies. <i>bshem YHWH</i> (in the name of the LORD) — not by military strength but by invoking the divine name. <i>amilam</i> (I will cut them off, Hiphil of <i>mul</i>) — the same verb used for circumcision: to cut off the foreskin, then extended to cutting off enemies. The triple repetition of <i>bshem YHWH ki amilam</i> across vv10-12 creates a liturgical drumbeat of divine name-power.</p>",
+        "11": "<p><b>sabbuni gam-svavuni bshem YHWH ki amilam</b> — the two synonyms <i>sabbuni</i> and <i>svavuni</i> (both from <i>savav</i>, to surround) with <i>gam</i> (also/even) emphasize the completeness of encirclement — there was no escape route. The repetition of <i>bshem YHWH ki amilam</i> (second of three) builds the psalm's drumbeat to its climax in v12.</p>",
+        "12": "<p><b>svavuni kadvurim doachu kesh qotzim bshem YHWH ki amilam</b> — two similes for the enemies: <i>kadvurim</i> (like bees) — a swarm, numerous and stinging; <i>doachu kesh qotzim</i> (they blazed out as fire of thorns) — dry-brush fire burns intensely but briefly. The enemies are numerous and fierce but transient. The third and final repetition of <i>bshem YHWH ki amilam</i> closes the strophe: the name has triumphed where numbers and ferocity could not.</p>",
+        "13": "<p><b>dachoh dchitani linpol vaYHWH azarani</b> — the infinitive absolute + finite verb construction (<i>dachoh dchitani</i>) emphasizes the violence of the push: 'pushed hard to fall.' The subject of <i>dchitani</i> is unstated — enemies collectively, or personified Death. <i>vaYHWH azarani</i> — the adversative <i>vav</i> (but/and then) marks the divine reversal at the crisis point. The structure perfectly captures the moment: maximum pressure, then divine rescue.</p>",
+        "14": "<p><b>ozi vzimrat Yah vayhi-li liyshvuah</b> — verbatim from Exod 15:2 (the Song of the Sea) and Isa 12:2. The deliberate quotation is a theological claim: this individual's rescue recapitulates the paradigmatic national rescue. <i>oz</i> (strength/might), <i>zimrah</i> (song/praise) — the two responses to salvation are strength and song. <i>Yah</i> (the contracted divine name) appears twice in the verse, a poetic doubling of divine identity.</p>",
+        "15": "<p><b>qol rinnah viyshvuah baoholey tzaddiqim ymin YHWH ossah chayil</b> — <i>rinnah</i> (ringing shout of joy, cf. Ps 106:44) — the shout that bursts out involuntarily from overwhelming relief. <i>baoholey tzaddiqim</i> (in the tents of the righteous) — the wilderness community imagery: the righteous are those in covenant relationship, living in tents as Israel did in the desert. <i>ymin YHWH ossah chayil</i> (the right hand of the LORD does valiantly/mightily) — <i>yamin</i> (right hand) is the hand of oath, covenant, and power; <i>chayil</i> (valor, strength, army) is the warrior-God idiom.</p>",
+        "16": "<p><b>ymin YHWH romamah ymin YHWH ossah chayil</b> — the right-hand theme expands into a strophe: <i>romamah</i> (is exalted/raised high) — God's right hand is elevated in the posture of victory and blessing (cf. Exod 15:6, 12). The repetition (<i>ymin YHWH</i> three times across vv15-16) is liturgical emphasis; in temple worship, the right hand was the side of divine blessing.</p>",
+        "17": "<p><b>lo amut ki echyeh vasapper maasey Yah</b> — the bold defiance of death as outcome. <i>lo amut ki echyeh</i> (I will not die but I will live) — the contrast between <i>mut</i> (death) and <i>chayah</i> (life) is stark. The purpose of survival: <i>asapper maasey Yah</i> (I will recount the deeds of Yah) — <i>sapar</i> (to count/recount, declare narratively) — witness-bearing as the reason for rescue. Life is given so that God's acts can be proclaimed. This verse underlies the NT logic of resurrection-as-witness (Acts 2:24-36).</p>",
+        "18": "<p><b>yassor yissrani Yah velammavet lo ntanani</b> — the infinitive absolute + finite verb (<i>yassor yissrani</i>) emphasizes the severity of the discipline: 'the LORD has indeed disciplined me severely.' <i>yasar</i> (to discipline/chastise, the parental correction word) — same root as Prov 3:11-12 (cited Heb 12:5-11). <i>velammavet lo ntanani</i> (but to death he has not given me) — the limit on divine discipline is death: even maximum chastening stops short of permanent destruction. The verse is the theological balance between v17's defiance and v13's near-fall.</p>",
+        "19": "<p><b>pitchu-li shaare-tzedeq avo-vam odeh Yah</b> — the processional gate liturgy begins. <i>pitchu-li</i> (open for me, imperative plural to the gatekeepers). <i>shaare-tzedeq</i> (gates of righteousness) — either the gates through which righteous persons enter, or the gates that righteousness itself constitutes. <i>avo-vam odeh Yah</i> (I will enter them and give thanks to Yah) — entering the temple gates is the act of thanksgiving; the liturgical space makes the gratitude concrete.</p>",
+        "20": "<p><b>zeh-hashaar laYHWH tzaddiqim yavou vo</b> — the gatekeeper's response: <i>zeh-hashaar</i> (this is the gate) — the demonstrative makes it specific. <i>laYHWH</i> (belonging to/of the LORD) — the gate is his, not the institution's. <i>tzaddiqim yavou vo</i> (the righteous shall enter through it) — the gate defines and identifies the righteous: those who enter this way are thereby shown to be tzaddiqim. The gate is also the teaching: who enters here and how they enter shows what righteousness is.</p>",
+        "21": "<p><b>odekha ki anitani vatehi-li liyshvuah</b> — the individual thanksgiving that follows gate entry. <i>anitani</i> (you answered me, Qal perfect of <i>anah</i>) — divine response to the <i>metzer</i>-cry of v5. <i>vatehi-li liyshvuah</i> (and you became for me salvation) — the salvation formula used across the Psalter: YHWH is not just a helper but becomes salvation itself for the speaker.</p>",
+        "22": "<p><b>even maasu habonim haytah lerosh pinnah</b> — the most NT-quoted OT verse. <i>even</i> (stone); <i>maasu</i> (they rejected/despised, Qal perfect of <i>maas</i> — the same rejection-word for Saul and idols); <i>habonim</i> (the builders, Qal participle plural of <i>banah</i>). <i>lerosh pinnah</i> (for the head of the corner) — the cornerstone or capstone, the structurally indispensable stone placed either at the base (load-bearing) or at the apex (keystone of an arch). The paradox: what professional builders discarded becomes the architecturally decisive element. NT citations: Matt 21:42; Mark 12:10; Luke 20:17; Acts 4:11; 1 Pet 2:7; cf. Eph 2:20. Jesus himself applies this to his rejection and resurrection (Matt 21:42). The 'builders' who rejected him are the religious leaders; the exaltation of the cornerstone is the resurrection.</p>",
+        "23": "<p><b>meat YHWH haytah zot hi niphlet beeyneynu</b> — <i>meat YHWH</i> (from the LORD this was) — divine agency behind the reversal: the builders' rejection is not the end of the story; YHWH's act makes the rejected stone the cornerstone. <i>niphlet</i> (it is marvelous/wonderful, Niphal of <i>palah</i>) — the same root as <i>niphleot</i> throughout the historical psalms: an act so extraordinary it exceeds ordinary human expectations. <i>beeyneynu</i> (in our eyes) — the reversal is visible and publicly acknowledged.</p>",
+        "24": "<p><b>zeh-hayyom asah YHWH nagilah venismekhah vo</b> — <i>hayyom</i> with the definite article: 'this the day' — not a generic day but the specific day of YHWH's redemptive act. Liturgically, every Passover enacts 'this day,' and Christians apply it to every Lord's Day (the day of resurrection). <i>nagilah</i> (let us spin/leap for joy, cohortative of <i>gil</i>) and <i>venismekhah</i> (and let us be glad, cohortative of <i>samach</i>) — two cohortative invitations to full-body joyful response. <i>gil</i> is the more intense physical word (leaping, spinning); <i>samach</i> is the settled gladness.</p>",
+        "25": "<p><b>ana YHWH hoshiah-na ana YHWH hatzlichah-na</b> — <i>ana</i> (O LORD, a particle of earnest appeal). <i>hoshiah-na</i> contracted in Aramaic tradition to 'hosanna' — the shout of the crowds at the Triumphal Entry (Matt 21:9; Mark 11:9-10; Luke 19:38; John 12:13). The <i>na</i> particle (entreaty, urgency) transforms the imperative into a plea: 'please save.' <i>hatzlichah-na</i> (grant success/prosper, please) — <i>tzalach</i> (to succeed, prosper, advance) — the second petition shows rescue and flourishing are expected together. Historically a plea; in the Triumphal Entry narrative, a messianic acclamation.</p>",
+        "26": "<p><b>baruch haba bshem YHWH berakhanukem mivet YHWH</b> — the priestly blessing from within the temple: <i>baruch haba bshem YHWH</i> (blessed is the one who comes in the name of the LORD) — the crowd's greeting at the Triumphal Entry (Matt 21:9; 23:39; Luke 19:38; John 12:13). <i>bshem YHWH</i> (in the name of the LORD) — the representative, authorized agent who acts under divine commission. <i>berakhanukem mivet YHWH</i> (we bless you from the house of the LORD) — the priests inside the temple bless the approaching worshiper. Jesus quotes this psalm back at Jerusalem in Matt 23:39 as a future eschatological condition: 'you will not see me again until you say...'</p>",
+        "27": "<p><b>el YHWH wayyaer lanu isru-chag baavotim ad-qarnot hamizbeach</b> — <i>el YHWH wayyaer lanu</i> (God is the LORD and he has made his light shine on us) — an allusion to the Aaronic benediction (Num 6:25: 'the LORD make his face shine on you'). <i>isru-chag</i> (bind the festival/sacrificial animal) — <i>asar</i> (bind, the same root as in Joseph's binding, v18 of Ps 105). <i>baavotim</i> (with cords/thick ropes) — <i>avot</i> (twisted cords). <i>ad-qarnot hamizbeach</i> (to the horns of the altar) — the horns were the points at the four corners of the altar where blood was applied (Exod 29:12; Lev 4:7). The binding of the sacrifice to the altar horns resonates typologically with the Akedah (Gen 22, where Abraham bound Isaac) and with the cross.</p>",
+        "28": "<p><b>eli attah veodekha elohi aromimekha</b> — the personal climax of individual testimony. The double <i>eli</i> (my God) with two different response-verbs: <i>odekha</i> (I will thank/praise you) and <i>aromimekha</i> (I will exalt you, Polel of <i>rum</i>, to lift high). The affirmation 'you are my God' is the covenant formula at its most personal — not an abstract theological claim but a relational declaration. The Polel of <i>rum</i> (cause to be high, exalt) is an intensive form: the speaker actively lifts God high through praise.</p>",
+        "29": "<p><b>hodu lYHWH ki-tov ki leolam chasdo</b> — verbatim repetition of v1: the liturgical inclusio that frames the entire psalm. The closing refrain is not anticlimactic but retrospective: everything between v1 and v29 — the encirclement by nations, the near-fall, the rescue, the rejected-stone-becomes-cornerstone reversal, the hosanna, the processional entry — is now understood as evidence that <i>ki-tov ki leolam chasdo</i> (he is good; his steadfast love endures forever). The personal testimony and the cosmic claim are identical.</p>"
+    }
 }
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
-}
-
-def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
 
 if __name__ == '__main__':
-    main()
+    book = 'psalms'
+    source = 'mkt-original'
+    existing = load_comm(source, book)
+    merge_comm(existing, NEW_DATA)
+    save_comm(source, book, existing)
+    for ch, vv in NEW_DATA.items():
+        saved = existing.get(ch, {})
+        missing = [v for v in vv if v not in saved]
+        print(f'  ch {ch}: {len(vv)} entries, {len(missing)} missing after merge')

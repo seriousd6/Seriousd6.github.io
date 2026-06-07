@@ -1,0 +1,167 @@
+"""
+Book Study Data — Zechariah
+book_id: zechariah
+lang: hebrew
+
+Run: python3 scripts/build-book-study-zechariah.py
+
+Notes:
+- Author group: Minor — peaks are generic; vocabulary selected from Zechariah's
+  distinctive night-vision and passion-narrative vocabulary
+- Zechariah is quoted more in the NT passion narratives than any other OT book
+- Key codes already used: H7200 raah (see), H4758 mareh (vision), H2377 chazon,
+  H7307 ruach (spirit), H3581 koach (power), H5869 ayin (eye), H7462 raah (shepherd),
+  H5771 avon (iniquity), H2617 hesed, H5797 oz (strength), H2490 chalal (pierce)
+- H6780 tsemach (Branch) is the book's primary messianic title; appears also in
+  Jer 23:5, 33:15, Isa 4:2 but most developed here
+- H1856 daqar (pierce/thrust) is Zech 12:10's specific word — quoted by John 19:37
+- H5221 nakah (strike) is the shepherd-strike word in 13:7 — quoted by Jesus in
+  Matt 26:31; important to distinguish from H1856 daqar (piercing in 12:10)
+- Hebrew translit fields blank in glossary; supplied manually
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "zechariah",
+
+    "key_vocabulary": [
+        {
+            "code": "H6780",
+            "lemma": "צֶמַח",
+            "translit": "ṣɛmaḥ",
+            "gloss": "branch",
+            "significance": "צֶמַח (ṣɛmaḥ, &lsquo;a sprout, a shoot — the new growth that pushes up from a root or stump; by extension, a messianic title for the coming Davidic king who springs from the seemingly dead root of Jesse&rsquo;) is Zechariah&rsquo;s primary messianic designation. Zechariah 3:8: &ldquo;Behold, I will bring my servant the Branch (ṣɛmaḥ).&rdquo; Zechariah 6:12-13: &ldquo;Thus says the LORD of hosts, &lsquo;Behold, the man whose name is the Branch: for he shall branch out (yiṣmāḥ) from his place, and he shall build the temple of the LORD. It is he who shall build the temple of the LORD and shall bear royal honor, and shall sit and rule on his throne. And there shall be a priest on his throne, and the counsel of peace shall be between them both.&rsquo;&rdquo; The ṣɛmaḥ-title appears in four OT texts: Isaiah 4:2 (&ldquo;the Branch of the LORD shall be beautiful and glorious&rdquo;), Jeremiah 23:5 (&ldquo;I will raise up for David a righteous Branch&rdquo;), Jeremiah 33:15 (same formula), and twice in Zechariah. But Zechariah 6:12-13 is the most developed ṣɛmaḥ-oracle: here the Branch is identified as both the builder of the true temple and the priest-king who unites the two offices of Israel&rsquo;s covenant leadership (king + high priest) in a single person. The priest-king union is a theological claim without OT precedent: the Davidic king was royal but not priestly; the Aaronic priest was priestly but not royal. The ṣɛmaḥ who is both king and priest anticipates the christological claim of Hebrews (especially Heb 5-7): Jesus is simultaneously the Davidic king (heir of the royal line) and the eternal high priest (Melchizedekian priest). The coronation of Joshua the high priest in Zechariah 6:9-14 is a typological act pointing to the coming ṣɛmaḥ who will definitively fill both offices."
+        },
+        {
+            "code": "H4501",
+            "lemma": "מְנוֹרָה",
+            "translit": "mĕnôrāh",
+            "gloss": "lampstand",
+            "significance": "מְנוֹרָה (mĕnôrāh, &lsquo;a lampstand — the branched holder for multiple lamps, specifically the seven-branched golden lampstand that stood in the tabernacle and temple as the sign of divine illumination&rsquo;) is the central image of Zechariah&rsquo;s fourth night vision (4:1-14). Zechariah 4:2-3: &ldquo;I see, and behold, a lampstand (mĕnôrāh) all of gold, with a bowl on the top of it, and seven lamps on it, with seven lips on each of the lamps that are on the top of it. And there are two olive trees by it, one on the right of the bowl and the other on its left.&rdquo; The mĕnôrāh-vision is immediately interpreted in 4:6: &ldquo;Not by might (ḥayil), nor by power (kōaḥ), but by my Spirit (rûaḥ), says the LORD of hosts.&rdquo; The mĕnôrāh is the image of the Spirit&rsquo;s inexhaustible supply: it burns continuously not through human effort but because it is fed by a supernatural source (the two olive trees that represent Joshua the priest and Zerubbabel the governor, 4:14 — the two anointed ones who stand by the Lord of all the earth). In the tabernacle, the mĕnôrāh burned continuously in the Holy Place (Exod 27:20-21: &ldquo;the people of Israel shall bring you pure beaten olive oil for the light, that a lamp may regularly burn&rdquo;). In Zechariah&rsquo;s vision, the supernatural supply makes the human effort of maintaining the lamp irrelevant: the Spirit maintains what Israel could not sustain through its own resources. The NT&rsquo;s seven mĕnôrôt in Revelation 1:12-20 are identified as the seven churches — the communities that are to be lampstands of the Spirit&rsquo;s light in the world."
+        },
+        {
+            "code": "H8081",
+            "lemma": "שֶׁמֶן",
+            "translit": "šɛmɛn",
+            "gloss": "oil",
+            "significance": "שֶׁמֶן (šɛmɛn, &lsquo;grease, especially olive oil — the liquid pressed from the olive; used for lamps, food, anointing of priests and kings, and perfumed preparations; figuratively, richness and favor&rsquo;) connects the lampstand-vision (ch. 4) to the anointing-theology of the OT. Zechariah 4:12: &ldquo;And a second time I answered and said to him, &lsquo;What are these two branches of the olive trees, which are beside the two golden pipes from which the golden oil (hayyiṣhār — the fresh oil) is poured out?&rsquo;&rdquo; The šɛmɛn/yiṣhār flowing from the olive trees through the pipes into the bowl of the mĕnôrāh is the Spirit&rsquo;s inexhaustible provision — the supply that makes the lampstand&rsquo;s light continuous without human maintenance. The OT&rsquo;s šɛmɛn-anointing vocabulary runs from the anointing of the tabernacle and its vessels (Exod 40:9-11) through the anointing of priests (Lev 8:12) and kings (1 Sam 10:1: Samuel anointing Saul; 1 Sam 16:13: Samuel anointing David) to the suffering servant &ldquo;anointed&rdquo; by YHWH (Isa 61:1: &ldquo;The Spirit of the Lord GOD is upon me, because the LORD has anointed (māšaḥ) me&rdquo;). In Zechariah 4, the šɛmɛn-supply specifically identifies Zerubbabel and Joshua as the two &ldquo;sons of fresh oil&rdquo; (bĕnê hayyiṣhār, 4:14) — the anointed ones who mediate the Spirit&rsquo;s presence to the community. Luke 4:18 quotes the Isa 61:1 anointing-oracle as Jesus&rsquo;s inaugural sermon in Nazareth: &ldquo;The Spirit of the Lord is upon me, because he has anointed me.&rdquo;"
+        },
+        {
+            "code": "H2132",
+            "lemma": "זַיִת",
+            "translit": "zayit",
+            "gloss": "olive tree",
+            "significance": "זַיִת (zayit, &lsquo;the olive — the tree, its branch, or its fruit; the source of the oil that fueled lamps, anointed priests and kings, and symbolized peace and blessing in the ancient world&rsquo;) is central to the lampstand-vision of Zechariah 4. Zechariah 4:3: &ldquo;And there are two olive trees (zêtîm) by it, one on the right of the bowl and the other on its left.&rdquo; Zechariah 4:11-14: &ldquo;Then I asked him, &lsquo;What are these two olive trees on the right and the left of the lampstand?&rsquo;... He said, &lsquo;These are the two anointed ones who stand by the Lord of the whole earth.&rsquo;&rdquo; The two zêtîm are Zerubbabel (the civil governor) and Joshua (the high priest) — the two covenant offices that together supply the Spirit&rsquo;s illumination to the community. The zayit-imagery carries deep OT resonance: Noah&rsquo;s dove returns with an olive leaf (Gen 8:11) — the first sign of the new world after judgment; the zayit-press produces the oil that anoints kings and priests; the Mount of Olives (har hazzêtîm) is where the king crossed before the eschatological battle (2 Sam 15:30; Zech 14:4). Revelation 11:4 identifies the two witnesses as &ldquo;the two olive trees and the two lampstands that stand before the Lord of the earth&rdquo; — a direct allusion to Zechariah 4, suggesting that the zayit-imagery of Spirit-supply and authorized witness continues through history until the final testimony is complete."
+        },
+        {
+            "code": "H2428",
+            "lemma": "חַיִל",
+            "translit": "ḥayil",
+            "gloss": "might",
+            "significance": "חַיִל (ḥayil, &lsquo;a force — military might, wealth, virtue, valor, ability; whatever constitutes effective human power whether material or personal&rsquo;) is the first of two human resources that Zechariah 4:6 famously negates: &ldquo;Not by ḥayil, nor by power (kōaḥ — H3581), but by my Spirit (rûaḥ — H7307), says the LORD of hosts.&rdquo; The verse is delivered to Zerubbabel, the governor tasked with completing the second temple against enormous obstacles. The ḥayil Zerubbabel lacks — military power, political resources, imperial backing — is explicitly excluded from the method by which the temple will be completed. The ḥayil-negation defines the principle of the Spirit&rsquo;s work: not reinforced by human power but specifically replacing it. The OT&rsquo;s ḥayil-theology includes both uses: ḥayil can be positive (Ruth 3:11: Boaz addresses Ruth as &ldquo;a woman of excellence (ḥayil)&rdquo;; Prov 31:10 describes the capable wife as a woman of ḥayil) and negative when it becomes the basis of human self-sufficiency. Psalm 33:16-17: &ldquo;The king is not saved by his great army (ḥayil); a warrior is not delivered by his great strength (kōaḥ). The war horse is a false hope for salvation.&rdquo; Paul&rsquo;s &ldquo;power is made perfect in weakness&rdquo; (2 Cor 12:9) and &ldquo;God chose what is weak in the world to shame the strong&rdquo; (1 Cor 1:27) are direct extensions of Zechariah&rsquo;s ḥayil-negation: the divine method operates through human inadequacy, not in spite of it."
+        },
+        {
+            "code": "H1856",
+            "lemma": "דָּקַר",
+            "translit": "dāqar",
+            "gloss": "pierce",
+            "significance": "דָּקַר (dāqar, &lsquo;to stab, to thrust through — the piercing of a body by a weapon; by extension, to cause death by stabbing or to revile so deeply as to wound&rsquo;) is the specific word for the &lsquo;pierced one&rsquo; of Zechariah 12:10: &ldquo;And I will pour out on the house of David and the inhabitants of Jerusalem a spirit of grace and pleas for mercy, so that, when they look on me, on him whom they have pierced (dāqārû), they shall mourn for him, as one mourns for an only child.&rdquo; The dāqar-verse is one of the most theologically significant and grammatically provocative passages in the OT. The grammatical tension is acute: the clause shifts from first person (&ldquo;they will look <em>on me</em>&rdquo; — ʾêlay) to third person (&ldquo;on him whom they have pierced&rdquo; — ʾēt ʾăšɛr-dāqārû). The identity of the dāqar-one (YHWH himself? a servant-figure? the messiah?) was debated in early Jewish and Christian interpretation: some rabbinic readings identified the mourned-over figure as the Messiah son of Joseph (killed in eschatological battle); John 19:37 applies the verse to Jesus&rsquo;s crucifixion (&ldquo;They will look on him whom they have pierced&rdquo;); Revelation 1:7 universalizes it (&ldquo;every eye will see him, even those who pierced him&rdquo;). The shift from &lsquo;me&rsquo; to &lsquo;him&rsquo; in the Hebrew creates the identification that John&rsquo;s Gospel presses: the one pierced is the one whom looking at constitutes looking at YHWH — the Incarnation collapses the two referents into one person."
+        },
+        {
+            "code": "H5221",
+            "lemma": "נָכָה",
+            "translit": "nākāh",
+            "gloss": "strike",
+            "significance": "נָכָה (nākāh, &lsquo;to strike — whether lightly or with lethal force; the blow of a weapon, a plague, or divine judgment against a person, city, or nation&rsquo;) is the shepherd-strike verb of Zechariah 13:7: &ldquo;Awake, O sword, against my shepherd, against the man who stands next to me, declares the LORD of hosts. Strike (hakkēh) the shepherd, and the sheep will be scattered; I will turn my hand against the little ones.&rdquo; The nākāh-strike is YHWH&rsquo;s own command: the sword is awakened against <em>my</em> shepherd, the man who &ldquo;stands next to me&rdquo; (ʿămîtî — my companion, associate). This makes the shepherd-strike uniquely complex: the shepherd is both innocent (he is YHWH&rsquo;s companion, not an opponent) and subject to YHWH&rsquo;s punitive action. The OT nākāh-vocabulary covers both divine judgment (the plagues against Egypt, Exod 7-12) and human violence (Cain striking Abel, Gen 4:8; the striking of the servant in Isa 53:4: &ldquo;struck — nākāh — by God and afflicted&rdquo;). Jesus quotes Zechariah 13:7 directly in Matthew 26:31 and Mark 14:27: &ldquo;You will all fall away because of me this night. For it is written, &lsquo;I will strike the shepherd, and the sheep of the flock will be scattered.&rsquo;&rdquo; The nākāh of the shepherd is the christological key to Zechariah 13:7: the one who is struck is simultaneously innocent (YHWH&rsquo;s associate) and the object of YHWH&rsquo;s punitive action — anticipating the theological logic of vicarious atonement."
+        },
+        {
+            "code": "H5895",
+            "lemma": "עַיִר",
+            "translit": "ʿayir",
+            "gloss": "foal",
+            "significance": "עַיִר (ʿayir, &lsquo;a young donkey — properly, one just broken to a load; an ass-colt, unbroken and unused for labor; by extension, an animal of lowly status used for ordinary transportation rather than for war&rsquo;) is one of two animals in Zechariah 9:9: &ldquo;Rejoice greatly, O daughter of Zion! Shout aloud, O daughter of Jerusalem! Behold, your king is coming to you; righteous and having salvation is he, humble and mounted on a donkey (ḥămôr), on a colt (ʿayir), the foal of a donkey.&rdquo; The ʿayir is specifically an unbroken young animal — an animal that has never carried a royal burden. The OT&rsquo;s donkey-riding convention is nuanced: donkeys were used by judges, elders, and tribal leaders for ordinary transportation (Judg 10:4; 12:14); horses (H5483 sûs) were the animal of warfare and military display. A king who arrives on an ʿayir rather than a warhorse is making a deliberate statement: his authority is not grounded in military power. The juxtaposition of ʿayir and ḥamor (the general donkey) is the Hebrew poetry&rsquo;s parallelism — the same animal described by species and by age. Matthew 21:1-7 famously reads the parallelism as two animals (bringing both the donkey and the colt) — a reading that follows the LXX more closely. John 12:14-15 quotes the verse more precisely: Jesus &ldquo;found a young donkey (onárion — the diminutive, equivalent to ʿayir) and sat on it.&rdquo; The ʿayir-arrival embodies the ṣɛmaḥ-theology: the messianic king comes not in the display of ḥayil but in the lowliness of the covenant servant."
+        },
+        {
+            "code": "H3701",
+            "lemma": "כֶּסֶף",
+            "translit": "kɛsɛp̄",
+            "gloss": "silver",
+            "significance": "כֶּסֶף (kɛsɛp̄, &lsquo;silver — from its pale color; by extension, money in general, since silver was the primary medium of exchange in the ancient Near East; figuratively, anything of great value&rsquo;) is the medium of the betrayal price in Zechariah 11:12-13: &ldquo;Then I said to them, &lsquo;If it seems good to you, give me my wages; but if not, keep them.&rsquo; And they weighed out as my wages thirty pieces of silver (šĕlōšîm kɛsɛp̄). Then the LORD said to me, &lsquo;Throw it to the potter&rsquo; — the lordly price at which I was priced by them. So I took the thirty pieces of silver and threw them into the house of the LORD, to the potter.&rdquo; The thirty kɛsɛp̄ is the &ldquo;lordly price&rdquo; — stated with bitter irony, since thirty shekels of silver was the legal compensation for a slave gored to death (Exod 21:32). To price the shepherd (who represents YHWH&rsquo;s covenant agency) at the value of a dead slave is the full expression of Israel&rsquo;s contempt. Matthew 27:9-10 applies Zechariah 11:12-13 to Judas&rsquo;s betrayal and the purchase of the potter&rsquo;s field, though Matthew attributes the quotation to Jeremiah (a conflation that has generated extensive commentary — the most common explanation being that Matthew follows the rabbinic practice of citing a composite quotation by its first and more prominent source). The kɛsɛp̄-price paid for the shepherd is the OT&rsquo;s most precise anticipation of the valuation placed on Jesus&rsquo;s life by those who arranged his death."
+        },
+        {
+            "code": "H6629",
+            "lemma": "צֹאן",
+            "translit": "ṣōʾn",
+            "gloss": "flock",
+            "significance": "צֹאן (ṣōʾn, &lsquo;a collective noun for a flock of sheep or goats; by extension, figuratively, the covenant people under their shepherd-ruler&rsquo;) is the scattered and refined people of Zechariah 13:7-9: &ldquo;Strike the shepherd, and the sheep (ṣōʾn) will be scattered; I will turn my hand against the little ones. In the whole land, declares the LORD, two thirds shall be cut off and perish, and one third shall be left alive. And I will put this third into the fire, and refine them as one refines silver, and test them as gold is tested.&rdquo; The ṣōʾn in Zechariah&rsquo;s shepherd oracle is the community that is simultaneously scattered by the shepherd&rsquo;s striking and refined through the dispersal. The shepherd-flock imagery runs throughout the OT as the primary metaphor for covenant leadership: Psalm 23 (&ldquo;The LORD is my shepherd&rdquo;); Ezekiel 34 (&ldquo;Thus says the Lord GOD: Behold, I am against the shepherds&rdquo;); Isaiah 40:11 (&ldquo;He will tend his flock like a shepherd&rdquo;). In Zechariah 11-13, the ṣōʾn-imagery is predominantly dark: the flock is sold, abandoned, slaughtered (11:4-7), before being scattered at the striking of the true shepherd (13:7). But the scattering is not abandonment: YHWH turns his hand against &ldquo;the little ones&rdquo; (13:7) in protective judgment, and the refined third becomes YHWH&rsquo;s covenant people — &ldquo;They will call on my name, and I will answer them. I will say, &lsquo;They are my people,&rsquo; and they will say, &lsquo;The LORD is my God&rsquo;&rdquo; (13:9). John 10:11-16 explicitly connects the good shepherd who lays down his life for the ṣōʾn to Zechariah&rsquo;s shepherd-oracle."
+        },
+        {
+            "code": "H6327",
+            "lemma": "פּוּץ",
+            "translit": "pûṣ",
+            "gloss": "scatter",
+            "significance": "פּוּץ (pûṣ, &lsquo;to dash in pieces, to disperse — the violent breaking apart of a unit into fragments; the scattering of a flock, an army, or a nation by an overwhelming force&rsquo;) completes the shepherd oracle of Zechariah 13:7: &ldquo;Strike (nākāh) the shepherd, and the sheep will be scattered (wĕtāpûṣeynāh).&rdquo; The nakah-puts pairing is the two-verb sequence that Jesus quotes verbatim in Matthew 26:31: &ldquo;You will all fall away because of me this night. For it is written, &lsquo;I will strike the shepherd, and the sheep of the flock will be scattered (diaskorpisthēsontai — Greek translation of pûṣ).&rsquo;&rdquo; The pûṣ in Zechariah 13:7 is the immediate consequence of the shepherd&rsquo;s removal: without the shepherd, the ṣōʾn disperses. The OT&rsquo;s pûṣ-vocabulary includes both curse and restoration: Deuteronomy 4:27 (&ldquo;the LORD will scatter you among the peoples&rdquo;); Nehemiah 1:8 (&ldquo;If you are unfaithful, I will scatter you among the peoples&rdquo;); and the reversal in Ezekiel 34:12 (&ldquo;As a shepherd seeks out his flock when he is among his sheep that have been scattered — pĕzûrōt, a synonym — so will I seek out my sheep&rdquo;). Jesus&rsquo;s citation of the nakah-puts sequence as a prediction of his disciples&rsquo; flight at Gethsemane (Matt 26:56: &ldquo;all the disciples left him and fled&rdquo;) is the literal enactment of Zechariah&rsquo;s pûṣ: the struck shepherd and the scattered flock are the events of Maundy Thursday night."
+        },
+        {
+            "code": "H1234",
+            "lemma": "בָּקַע",
+            "translit": "bāqaʿ",
+            "gloss": "cleave",
+            "significance": "בָּקַע (bāqaʿ, &lsquo;to cleave, to rend, to break open — the splitting of a solid object into two parts; to break through or burst open by force; used for the splitting of wood, land, or bodies&rsquo;) is the eschatological verb of Zechariah 14:4: &ldquo;On that day his feet shall stand on the Mount of Olives that lies before Jerusalem on the east, and the Mount of Olives shall be split (wĕnibaqqaʿ) in two from east to west by a very wide valley, so that one half of the Mount shall move northward, and the other half southward.&rdquo; The bāqaʿ-splitting of the Mount of Olives is one of the most topographically specific images in the prophetic apocalyptic tradition: a known geographical feature (the Mount of Olives east of Jerusalem, where the divine Glory departed in Ezekiel 11:23) is split by YHWH&rsquo;s physical arrival to create an escape route for his people. The OT&rsquo;s bāqaʿ-vocabulary includes: the splitting of the Red Sea (Exod 14:21: &ldquo;the LORD drove the sea back by a strong east wind... and the waters were divided — bĕqāʿūhā&rdquo;); the splitting of the rock in the wilderness (Ps 78:15: &ldquo;he split (bāqaʿ) rocks in the wilderness and gave them drink abundantly as from the deep&rdquo;); and Elijah&rsquo;s cloak splitting the Jordan (2 Kgs 2:8). Zechariah&rsquo;s bāqaʿ-splitting at the Day of the LORD concludes the book&rsquo;s apocalyptic arc: YHWH will not merely address history from a distance but will physically arrive and reshape the geography of his people&rsquo;s deliverance. Acts 1:11-12 locates the disciples on the Mount of Olives at the Ascension; Revelation 16:16-21 uses the same landscape for the final battle."
+        }
+    ],
+
+    "language_notes": (
+        "<p>Zechariah is the <strong>longest of the Minor Prophets</strong> and the most cited in the NT passion narratives — quoted or alluded to more than any other OT book in the accounts of Jesus&rsquo;s final week. The book divides naturally into two sections with distinct literary character: chapters 1-8 (prose visions and dated oracles, 520-518 BC) and chapters 9-14 (undated oracles of apocalyptic scope). The literary distinction has generated the &ldquo;Deutero-Zechariah&rdquo; debate: chapters 9-14 are stylistically different and are attributed to different authorship by critical scholars, while the traditional view holds the whole book as unified. For readers of the NT, the debate matters less than the fact that it is chapters 9-14 that generate almost all the passion narrative citations — 9:9 (Triumphal Entry), 11:12-13 (thirty pieces of silver), 12:10 (the pierced one), and 13:7 (striking the shepherd).</p>"
+        "<p>The eight night visions of chapters 1-6 share a <strong>structural logic of reversal</strong>: YHWH has been angry (1:2), the nations exceeded their commission in oppressing Israel (1:15), but YHWH has &ldquo;returned to Jerusalem with mercy&rdquo; (1:16) and the nations will be judged. Each vision adds a dimension to this return: the patrolling horsemen confirm the earth is at rest (1:7-17); the four horns are countered by four craftsmen (1:18-21); Jerusalem will be a city without walls because YHWH will be its fire and glory (2:1-5); Joshua the high priest is cleansed and given access to YHWH&rsquo;s court (3:1-10); the lampstand burns by the Spirit (4:1-14); the flying scroll curses theft and perjury (5:1-4); the woman in the ephah carries wickedness to Babylon (5:5-11); and the four chariots patrol the earth (6:1-8). The sequence moves from the cosmic (&ldquo;the earth is at rest&rdquo;) to the cultic (Joshua&rsquo;s cleansing) to the ethical (the cursing scroll) to the cosmic again (the chariots). The pattern is: YHWH returns → the nations are judged → the community is purified → YHWH&rsquo;s purposes are executed through the Spirit.</p>"
+        "<p>The ṣɛmaḥ (&ldquo;Branch&rdquo;) of Zechariah 3:8 and 6:12 is the book&rsquo;s <strong>primary messianic title</strong>, defined with more precision than anywhere else in the OT: the ṣɛmaḥ will both build the temple and bear royal honor and sit as priest on his throne. The <strong>union of priestly and royal offices</strong> in the ṣɛmaḥ is the book&rsquo;s structural messianic claim. The eight night visions embody this claim: Zerubbabel (the royal figure) and Joshua (the priestly figure) are the two olive trees that supply the lampstand — but both are types pointing to the single ṣɛmaḥ who will unite them. The christological reading is not imposed by the NT but invited by Zechariah&rsquo;s own logic.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>The passion narrative cluster:</strong> No OT book is cited more in the NT accounts of Jesus&rsquo;s final week than Zechariah. Matthew 21:5 cites 9:9 (Triumphal Entry); Matthew 26:31 cites 13:7 (striking the shepherd); Matthew 27:9-10 cites 11:12-13 (thirty pieces of silver, attributed to Jeremiah in a conflated quotation); John 19:37 cites 12:10 (the pierced one); Revelation 1:7 cites 12:10 universally. The cluster is not incidental — it reflects the earliest Christian conviction that Zechariah had provided a detailed prophetic script for the events of Passion Week. The dāqar of 12:10, the nākāh of 13:7, the kɛsɛp̄ of 11:12-13, and the ʿayir of 9:9 together provide the OT&rsquo;s most concentrated passion-narrative vocabulary.</p>"
+        "<p><strong>Zechariah 4:6 in Christian theology:</strong> &ldquo;Not by might, nor by power, but by my Spirit&rdquo; has functioned across Christian history as one of the primary texts for the theology of weakness and dependence. Paul&rsquo;s &ldquo;power is made perfect in weakness&rdquo; (2 Cor 12:9) and &ldquo;God chose what is foolish in the world to shame the wise&rdquo; (1 Cor 1:27) stand in the direct tradition of Zechariah&rsquo;s ḥayil-negation. In the Reformation, 4:6 was used to argue that the Spirit&rsquo;s work is not contingent on institutional power or human achievement. In mission theology, the verse grounded the principle that the gospel advances through apparently weak and cruciform means.</p>"
+        "<p><strong>Zechariah 12:10 and christology:</strong> The identity shift in 12:10 — &ldquo;they will look <em>on me</em>, on him whom they have pierced&rdquo; — became one of early Christianity&rsquo;s key proof texts for the divine identity of Jesus. If YHWH is the one pierced, and the pierced one is Jesus, then Jesus is YHWH. This argument was deployed by Justin Martyr, Tertullian, and Origen, and remains a significant text in discussions of OT anticipations of Christ&rsquo;s divine identity. The christological weight of dāqar in 12:10 is thus not only about the manner of death (stabbing) but about the identity of the one who dies.</p>"
+    ),
+
+    "reading_guide": (
+        "<p><strong>Read chapters 1-8 as a single vision of YHWH&rsquo;s return.</strong> Each of the eight night visions adds a dimension to the same theological claim: YHWH has not abandoned Jerusalem. The progression moves from the earth being &ldquo;at rest&rdquo; (troublingly, 1:11) through judgment on the nations, the cleansing of the high priest, the Spirit-sustained lampstand, and the final patrolling of the earth. Read each vision asking: what dimension of YHWH&rsquo;s return does this add? By chapter 6, the cosmic, cultic, ethical, and executive dimensions of the return are all in view.</p>"
+        "<p><strong>Read 9:9 as the hinge between the two halves.</strong> The humble king on a ʿayir connects the temple-restoration theology of chapters 1-8 (the Spirit builds what human ḥayil cannot) to the apocalyptic vision of chapters 9-14 (the shepherd is struck, the flock is scattered, YHWH fights for Jerusalem). The ʿayir-king arrives in humility before the dāqar-piercing and the nākāh-striking: the messianic arrival precedes the messianic suffering. Reading 9:9 without 12:10 and 13:7 is reading only the Triumphal Entry without Good Friday.</p>"
+        "<p><strong>Read 12:10-13:1 as the climax.</strong> The dāqar-mourning of 12:10-14 (mourning for the pierced one &ldquo;as one mourns for an only child&rdquo;) leads immediately to 13:1: &ldquo;On that day there shall be a fountain opened for the house of David and the inhabitants of Jerusalem, to cleanse them from sin and uncleanness.&rdquo; The mourning over the pierced one opens the purifying fountain. John 19:34-37 enacts this sequence at the cross: the soldier&rsquo;s lance pierces Jesus (dāqar), and &ldquo;blood and water came out&rdquo; — the fountain of 13:1 flowing from the piercing of 12:10.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('zechariah')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('zechariah', merged)
+
+main()

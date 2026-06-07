@@ -1,53 +1,34 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
+MKT Original Commentary — Psalms 75–77 (42 verses)
+Run: python3 scripts/zc-original-psalms-75-77.py
 
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+Key decisions in this range:
+- Ps 75: divine-speech sections (vv2-5) distinguished from community/psalmist voice;
+  horn (qeren) imagery as status/power symbol treated consistently
+- Ps 76: Sennacherib-era background likely but not asserted; gaʿar (rebuke)
+  as unique divine-power idiom; ṭāref (prey/plunder) in v4 retained
+- Ps 77: v10 treated as the crisis-pivot (most disputed verse in the psalm);
+  Exodus memory (vv16-20) as the psalm's therapeutic core
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,112 +36,64 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
+NEW = {
+  "75": {
+    "1": "<p><b>hôdînû lĕkhā ʾĕlōhîm hôdînû</b> — <i>we give thanks to you, O God; we give thanks</i>. The doubled hiphil of yādāh (to confess, acknowledge, thank) creates liturgical emphasis — thanks given and given again. <b>wĕqārôb shĕmekā</b> — <i>your name is near</i>. <i>Qārôb</i> (near, close) as a theological declaration: the divine name is not distant or inaccessible but close enough to invoke. The nearness of the name is the reason for thanks, not the occasion for it.</p>",
+    "2": "<p><b>kî ʾeqqaḥ môʿēd</b> — <i>when I choose the appointed time</i>. The voice shifts from community (v1) to God himself (vv2-5) — a divine speech embedded in the psalm. <i>Môʿēd</i> (appointed time, set season — the same word for the sacred calendar of Lev 23) — God controls when judgment falls. <b>ʾănî mêshārîm ʾeshpōṭ</b> — <i>I will judge with perfect equity</i>. <i>Mêshārîm</i> (uprightnesses, level places — plural abstract noun) — justice rendered with complete, undeflecting fairness across every dimension.</p>",
+    "3": "<p><b>nĕmōgîm ʾereṣ wĕkhol-yōshĕbêhā</b> — <i>when the earth totters and all its people with it</i>. <i>Māmag</i> (to melt, dissolve, totter) — the earth losing its structural integrity. <b>ʾānōkî tikkantî ʿammûdêhā selāh</b> — <i>it is I who hold its pillars firm</i>. The hiphil of kûn (to establish, fix, make firm) — God maintaining the structural supports of creation against dissolution. <i>ʿAmmûdêhā</i> (its pillars) — the cosmological framework of the earth (cf. 1 Sam 2:8; Ps 104:5). The selah pause marks the weight of the claim: universal chaos does not shake the one who sustains all things.</p>",
+    "4": "<p><b>ʾāmartî lahalĕlîm ʾal-tāhōlû</b> — <i>I say to the arrogant: Stop your boasting</i>. <i>Hōlēl</i> (arrogant, boastful — from hālal, the root of hallĕlûyāh — praise — turned into its degenerate opposite: vain boasting). <b>wĕlārĕshāʿîm ʾal-tārîmû qāren</b> — <i>and to the wicked: do not raise your horn</i>. The horn (<i>qeren</i>) is the animal's weapon and status symbol — raised high means asserting dominance. The divine speech commands the gesture of self-elevation to stop.</p>",
+    "5": "<p><b>ʾal-tārîmû lammārôm qarnĕkhem</b> — <i>do not raise your horn on high</i>. The repetition of the horn-command (v4b) intensifies with <i>lammārôm</i> (on high, toward the heights) — not just raised but raised toward heaven — the posture of those who challenge God himself. <b>tĕdabbĕrû bĕṣawwāʾr ʿātāq</b> — <i>do not speak with an arrogant neck</i>. <i>Ṣawwāʾr ʿātāq</i> (arrogant/stiff neck) — <i>ʿātāq</i> (bold, insolent, stiff — used of the neck that refuses to bow) in this construction. Speaking with a stiff neck is the posture of those who will not bow before the divine judge of v2.</p>",
+    "6": "<p><b>kî lōʾ mimmôṣāʾ ûmimmaʿărāb wĕlōʾ mimmidbar</b> — <i>for advancement comes neither from east nor west, nor from the wilderness of the south</i>. The directional inventory (east, west, wilderness/south) is a merism for everywhere — the negative is absolute: no human quarter, no political alliance, no geographic advantage produces the exaltation the wicked seek by raising their horns. The verse omits the north — traditionally the direction of the divine throne (Isa 14:13) — because v7 supplies the answer: elevation comes from God alone.</p>",
+    "7": "<p><b>kî-ʾĕlōhîm shōpēṭ</b> — <i>but God is the judge</i>. The participial form <i>shōpēṭ</i> (the one who judges — ongoing, characteristic action, not a one-time event) — judging is what God does by nature. <b>zeh yashpîl wĕzeh yārîm</b> — <i>he brings one person down and raises another up</i>. The hiphil of shāpal (to bring low) and rûm (to raise) — both vertical movements are divine prerogative. The wicked's raised horn (vv4-5) and the righteous person's lifted horn (v10) are explained by this sovereign divine action.</p>",
+    "8": "<p><b>kî khôs bĕyad-YHWH wĕyayin ḥāmar</b> — <i>for in the hand of the LORD there is a cup of foaming wine</i>. <i>Kôs</i> (cup) as the vessel of divine judgment — a major prophetic motif: Isa 51:17,22; Jer 25:15-17; Ezek 23:31-33; Hab 2:16; Rev 14:10; 16:19. <i>Yāyin ḥāmar</i> (wine that ferments, foams) — spiced wine, full strength. <b>wayyaṣṣēq mizzeh wĕkol-rĕshāʿê ʾāreṣ yimṣûʾ yishĕtû ʾet-shĕmārêhā</b> — <i>he pours it out, and all the wicked of the earth shall drain it to the very dregs</i>. <i>Shĕmārîm</i> (dregs, sediment at the bottom) — the bitterest and most potent part. The wicked must drink every last drop.</p>",
+    "9": "<p><b>waʾănî ʾaggîd lĕʿôlām</b> — <i>but as for me, I will declare this forever</i>. The voice returns to the psalmist in a vow of perpetual proclamation. The contrast with the wicked's fate (v8) is stark: they drain the cup of wrath; the Psalmist sings forever. <b>ʾăzammĕrāh lêʾlōhê yaʿăqōb</b> — <i>I will sing praises to the God of Jacob</i>. <i>ʾĕlōhê yaʿăqōb</i> (God of Jacob) — not a generic deity but the God of covenant history, the one who chose the unlikely son over the elder (Gen 25:23), whose faithfulness to Jacob is the basis for faithfulness now.</p>",
+    "10": "<p><b>wĕkhol-qarnê rĕshāʿîm ʾăgaddēaʿ</b> — <i>all the horns of the wicked I will cut down</i>. <i>Gādaʿ</i> (to cut off, hew down — used of felling trees and vines) — the horn imagery of vv4-5 reaches its resolution. Who speaks? The divine voice of vv2-5 resuming, or the psalmist confidently declaring what God will do? The ambiguity is likely intentional — the psalmist so identifies with the divine purpose that the distinction dissolves. <b>tĕrômnāh qarnôt ṣaddîq</b> — <i>the horns of the righteous shall be lifted high</i>. The contrast is complete: wicked horns cut down, righteous horns raised — the divine inversion of v7 enacted in full.</p>"
   },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
+  "76": {
+    "1": "<p><b>nôdāʿ bîhûdāh ʾĕlōhîm</b> — <i>God is known in Judah</i>. The niphal of yādaʿ (to be known, to make oneself known) — the same root as the covenant-knowledge formula. <b>bĕyisrāʾêl gādôl shĕmô</b> — <i>his name is great in Israel</i>. The pairing of Judah and Israel is a merism for the whole people — the divine fame is national. The victory celebrated in vv3-6 is YHWH's public demonstration of this greatness; the hymn opens by naming the result before explaining the cause.</p>",
+    "2": "<p><b>wayhî bĕshālēm sukkô</b> — <i>his tabernacle is in Salem</i>. <i>Shālēm</i> (Salem) is the ancient name for Jerusalem (Gen 14:18; Heb 7:2) — its connection to <i>shālôm</i> (wholeness, peace) is lexically transparent. <i>Sukkô</i> (his booth/tabernacle — from sukkāh, the temporary dwelling, used of the Feast of Booths) — the warrior-God dwells in the city he defends. <b>ûmĕʿônātô bĕṣiyyôn</b> — <i>his dwelling place is in Zion</i>. <i>Mĕʿônāh</i> (dwelling place, den) — the permanent habitation that makes Salem/Zion the location of divine judgment.</p>",
+    "3": "<p><b>shāmmāh shibbēr rishpê-qāshet</b> — <i>there he shattered the flashing arrows</i>. <i>Risphê qāshet</i> (flames/sparks of the bow — fiery arrows) — the image combines fire and combat. <i>Shibbar</i> (piel of shābar: to shatter, smash to pieces) — the weapons of war broken at the source, in the presence of God at his sanctuary. <b>māgēn wĕḥereb ûmilḥāmāh selāh</b> — <i>the shield, the sword, and all the weapons of war</i>. The catalog (bow-arrows, shield, sword) covers the full range of ancient warfare — nothing escaped the divine judgment. <i>There</i> (shāmmāh, at Zion) is the location of total disarmament.</p>",
+    "4": "<p><b>nāʾôr ʾattāh ʾaddîr mêharrê-ṭāref</b> — <i>you are glorious and majestic, more than the everlasting mountains of plunder</i>. <i>Ṭāref</i> (prey, plunder, what a predator tears) — the mountains of plunder are either the lair-mountains of predators or the accumulated trophies of powerful nations. YHWH is more majestic than either. The comparison is deliberately jarring: the greatest thing one can imagine (prey-mountains, the pinnacle of military success) cannot approach the divine splendor.</p>",
+    "5": "<p><b>ʾeshshôlĕlû ʾabbîrê lēb</b> — <i>the valiant warriors have been stripped of their plunder</i>. <i>ʾAbbîr lēb</i> (mighty of heart — those of formidable courage) — the ironic reversal: those who came to plunder are themselves stripped (<i>shālal</i>). <b>nāmû shĕnātām</b> — <i>they have fallen into the sleep of death</i>. <i>Nûm</i> (to sleep, to slumber) as a euphemism for death — the mighty warriors permanently put to sleep. <b>wĕlōʾ-māṣĕʾû khol-ʾanshê-ḥayil ʾet-yĕdêhem</b> — <i>not one soldier could lift a hand</i>. Even the reflexive act of raising a hand in defense was beyond them — a total incapacity imposed by divine judgment.</p>",
+    "6": "<p><b>mîgaʿarātĕkhā ʾĕlōhê yaʿăqōb</b> — <i>at your rebuke, O God of Jacob</i>. <i>Gaʿar</i> (to rebuke, to thunder at — used of the divine rebuking of the sea in Ps 104:7; 106:9; Nah 1:4) — the divine rebuke is the audible power that shatters armies. The same rebuke that divided the sea at the Exodus here destroys the war machine. <b>nirdāam wākkerekeb wāssûs</b> — <i>both chariot and horse fell into a dead sleep</i>. <i>Rādam</i> (to be in a deep stupor, a death-like sleep — the same root as Jonah 1:5's <i>nirdām</i>) — the chariot force cast into helpless unconsciousness. The chariot was ancient warfare's decisive weapon; its defeat signals total military reversal.</p>",
+    "7": "<p><b>ʾattāh nôrāʾ ʾattāh</b> — <i>but you — you alone are to be feared</i>. The pronoun <i>ʾattāh</i> (you) appears twice for emphasis — an insistent identification of who, exactly, inspires fear. <i>Nôrāʾ</i> (fearful, awesome — niphal participle of yārēʾ) — applied to God at Sinai (Deut 10:17) and to the angel of YHWH. <b>ûmî-yaʿămōd lĕphānêkhā mēʾāz ʾappekā</b> — <i>who can stand before you when your anger is kindled?</i> The rhetorical question expects no answer — the defeated armies of vv5-6 are the empirical demonstration. The question frames divine wrath not as capricious but as a self-evident power before which nothing can stand.</p>",
+    "8": "<p><b>mishāmayim hishmaʿtā mišpāṭ</b> — <i>from heaven you pronounced judgment</i>. <i>Hishmaʿtā</i> (hiphil of shāmaʿ: you caused to be heard, you announced) — judgment is audible, announced from the heavens and heard on earth. <b>ʾāreṣ yārĕʾāh wĕshāqāṭāh</b> — <i>the earth feared and stood still</i>. Earth personified as a witness to the divine verdict: it heard and froze in awe. The earth's response mirrors the proper human response that the invaders refused to give — they came with horns raised (Ps 75:4-5); the earth itself bowed.</p>",
+    "9": "<p><b>bĕqûm-lammišpāṭ ʾĕlōhîm</b> — <i>when God arose to judge</i>. The divine arising (<i>qûm</i>) is the standard idiom for God moving from apparent inactivity into decisive intervention (cf. Ps 7:6; 68:1; 74:22). <b>lĕhôshîaʿ kol-ʿanwê-ʾāreṣ selāh</b> — <i>to save all the humble of the earth</i>. The <i>ʿānāw</i> (the humble, the meek, the lowly — those who have bent their necks in contrast to the stiff-necked of Ps 75:5) — those with no human recourse. The selah marks the theological center: God's judgment serves his saving purpose for the vulnerable.</p>",
+    "10": "<p><b>kî-ḥămat ʾādām tôdekhā</b> — <i>surely human fury will bring you praise</i>. <i>Ḥēmāh</i> (fury, burning anger — the hot rage of the enemy) becomes an occasion for YHWH's praise — the paradox of divine sovereignty transforming human wrath into divine glorification. <b>shĕʾērît ḥēmōt taḥgōr</b> — <i>whatever wrath remains you will restrain</i>. <i>Tāḥgōr</i> (you will gird on, restrain — from ḥāgar: to gird about, as a warrior girds on a weapon) — God wearing the remaining human wrath as a controlled girdle. Both the wrath unleashed and the wrath restrained serve the divine purpose.</p>",
+    "11": "<p><b>nidrû wĕshallĕmû laYHWH ʾĕlōhêkhem</b> — <i>make vows to the LORD your God and keep them</i>. The victory hymn turns to exhortation: the proper response to witnessed divine power is vow-making and vow-keeping. <b>kol-sĕbîbāyw yōbîlû shay lammôrāʾ</b> — <i>let all the surrounding nations bring tribute to the one who is to be feared</i>. <i>Shay</i> (tribute, gift — a rare term, cf. Isa 18:7; Ps 68:29) — the surrounding nations, seeing the invader's defeat, are called to bring tribute to the <i>mōrāʾ</i> (the one who inspires fear). The national humiliation of the aggressor is the universal invitation.</p>",
+    "12": "<p><b>yibṣōr rûaḥ nĕgîdîm</b> — <i>he cuts off the spirit of princes</i>. <i>Bāṣar</i> (to cut off, to harvest — used of cutting grapes) — the breath/spirit (<i>rûaḥ</i>) of princes snipped like a cluster. <i>Nāgîd</i> (prince, leader — one set before others) — those in positions of earthly authority, whose authority and breath are equally in God's hands. <b>nôrāʾ lĕmalkê-ʾāreṣ</b> — <i>he is fearsome to the kings of the earth</i>. The psalm closes with <i>nôrāʾ</i> (fearsome) — the same word centered in v7. Kings feared by their subjects are themselves made to fear the God who cuts off the breath of princes.</p>"
   },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
+  "77": {
+    "1": "<p><b>qôlî ʾel-ʾĕlōhîm wĕʾeṣʿāqāh</b> — <i>I cried out to God with my full voice</i>. The cohortative <i>ʾeṣʿāqāh</i> (I will/let me cry out) — not a quiet prayer but a loud, urgent cry. <i>Ṣāʿaq</i> (to cry out) is the word used of Israel's cry from Egypt (Exod 2:23; 3:7) — the Exodus register is activated from the psalm's opening verse. <b>qôlî ʾel-ʾĕlōhîm wĕhaʾăzîn ʾēlāy</b> — <i>I cried to God, and he listened</i>. The hiphil of ʾāzan (to give ear, to listen attentively) — God inclined his ear. The second half of v1 already contains the resolution the body of the psalm struggles to reach.</p>",
+    "2": "<p><b>bĕyôm ṣārātî ʾădōnāy dārāshtî</b> — <i>in the day of my trouble I sought the Lord</i>. <i>Dārash</i> (to seek, to inquire — the same verb of seeking God at a sanctuary or oracle) — distress drives purposeful seeking. <b>yādî laylāh niggĕrāh wĕlōʾ tāpûg</b> — <i>through the night my hand was outstretched without ceasing</i>. <i>Nāgar</i> (to flow out, be poured out — used of water) — the hand stretched out in prayer, poured out through the night without flagging. <b>māʾănāh hinnāḥēm nafshî</b> — <i>my soul refused to be comforted</i>. The niphal of nāḥam (to be comforted) refused — a deliberate rejection of lesser comforts, holding out for God alone, which paradoxically prolongs the distress.</p>",
+    "3": "<p><b>ʾezkĕrāh ʾĕlōhîm wĕʾehĕmāyāh</b> — <i>I thought of God and I groaned</i>. The paradox: remembering God at this stage produces groaning rather than comfort (the therapeutic remembering of vv11-20 comes later, after the crisis reaches its lowest point). <i>Hāmāh</i> (to murmur, roar, groan — used of the churning sea and of tumultuous crowds) — the inner noise of unresolved distress. <b>ʾāśîḥāh wĕtiʿaṭṭēph rûḥî selāh</b> — <i>I poured out my grief until my spirit grew faint</i>. <i>ʿāṭaph</i> (hithpael: to wrap oneself up, to grow faint from exhaustion) — the spirit collapsing under unresolved grief.</p>",
+    "4": "<p><b>ʾāḥaztā shĕmurôt ʿênāy</b> — <i>you kept my eyes wide open through the night</i>. The subject shifts to God: <i>ʾāḥaztā</i> (you held, you grasped — from ʾāḥaz: to seize, take hold) — God himself holding the eyelids open. The insomnia is not merely psychological but divinely caused: God is keeping the Psalmist awake. This makes God the agent of the very suffering the Psalmist brings to him in complaint — the same move as Ps 73:14 (God who afflicts his own). <b>niphʿamtî wĕlōʾ ʾădabbēr</b> — <i>I was too troubled to speak</i>. <i>Pāʿam</i> (to beat, trouble, agitate — used of Pharaoh's troubled spirit, Gen 41:8) — agitated beyond articulation.</p>",
+    "5": "<p><b>ḥishshabtî yāmîm miqqedem</b> — <i>I think about the days of old</i>. <i>Ḥāshab</i> (to reckon, compute, think deliberately — the accountant's word) — purposeful recollection rather than nostalgic wandering. <b>shĕnôt ʿôlāmîm</b> — <i>the years of long ago</i>. <i>ʿôlām</i> (hidden, of long ago, ancient) — the years whose significance requires excavation, the buried history of divine faithfulness. The movement from personal crisis (vv1-4) toward historical memory (vv5-6, then vv11-20) begins here — the therapeutic arc of the psalm.</p>",
+    "6": "<p><b>ʾezkĕrāh nĕgînātî ballāylāh</b> — <i>I recall my song in the night</i>. <i>Nĕgînāh</i> (song, melody — from nāgan: to play a stringed instrument) — the Psalmist recalls his former worship song, the night song that once came naturally and now does not. <b>ʿim-lĕbābî ʾāśîḥāh</b> — <i>I ponder in my heart</i>. <i>Śîaḥ</i> (to muse, meditate — the same root as the meditation of Ps 119:15,23) — deliberate inward rumination. <b>wîḥaqqēr rûḥî</b> — <i>my spirit searches deeply</i>. <i>Ḥāqar</i> (to search out, probe — used of thorough legal investigation) — the spirit conducting a thorough examination of its own condition.</p>",
+    "7": "<p><b>hălĕʿôlāmîm yiznaḥ ʾădōnāy</b> — <i>will the Lord reject us forever?</i> <i>Zānaḥ</i> (to reject, push away — the same verb as Ps 74:1; 44:9) — the communal lament vocabulary applied to personal experience. The series of questions in vv7-9 form a theodicy catechism, each attacking a specific divine attribute: permanence (v7), faithfulness in steadfast love (v8), grace and compassion (v9). <b>wĕlōʾ-yōsîph lirṣôt ʿôd</b> — <i>will he never again be pleased with us?</i> <i>Rāṣāh</i> (to be pleased, accept favorably — the technical word for divine acceptance of a sacrifice, Lev 1:4) — will divine acceptance never return?</p>",
+    "8": "<p><b>heʾāphes lāneṣaḥ ḥasdô</b> — <i>has his steadfast love ceased once and for all?</i> <i>Ḥesed</i> (steadfast love, covenant loyalty) — the foundational divine attribute of Exod 34:6-7. <i>Āphēs</i> (to cease, come to an end — used of armies that cease, of hope that ends) — the question is not whether God can cease to love but whether the silence is permanent. <b>gāmar ʾōmer lĕdōr wādōr</b> — <i>has his promise failed for every generation to come?</i> <i>ʾŌmer</i> (word, promise, speech) — the divine word that was the foundation of covenant confidence. Has the word gone silent for all future generations?</p>",
+    "9": "<p><b>hăshākah ḥannôt ʾêl</b> — <i>has God forgotten to show grace?</i> <i>Ḥānan</i> (to show grace, to be gracious — the divine attribute proclaimed at Sinai, Exod 34:6: <i>ḥannûn wĕraḥûm</i>) — the question strips the attribute from God and holds it up as a challenge. <b>ʾim-qāphāṣ bĕʾap raḥămāyw selāh</b> — <i>has he locked away his compassion in his anger?</i> <i>Qāphaṣ</i> (to shut, close — a rare verb suggesting a snapping shut) — the <i>raḥămîm</i> (compassions/mercies, from reḥem: womb, the maternal depths) clamped shut by anger. The selah marks the nadir of the questioning.</p>",
+    "10": "<p><b>waʾōmar ḥallôtî hîʾ</b> — <i>then I said: this is the sickness that is killing me</i>. The most exegetically contested verse in the psalm. <i>Ḥallôtî</i> (my sickness, my wounding — from ḥālāh: to be sick, wounded) — the Psalmist names his condition. <b>shĕnôt yĕmîn ʿelyôn</b> — <i>the years of the right hand of the Most High</i>. Two main readings: (1) the right hand of the Most High has changed — the crisis thought that God's saving power has withdrawn; (2) the years of the Most High's right hand are past — the golden years of divine action seem over. Either reading makes v10 the pivot: the crisis-thought about God's apparent withdrawal is immediately followed by <i>I will remember</i> (v11). The Psalmist does not resolve the crisis by argument but by therapeutic memory of the Exodus.</p>",
+    "11": "<p><b>ʾezkōr maʿallĕlê-YAH</b> — <i>I will call to mind the works of the LORD</i>. <i>Maʿallēl</i> (deed, work — from ʿālal: to act, to deal with) — the specific, concrete acts of God in history. The name <i>YAH</i> (the shortened form of YHWH, found especially in the Psalter and in hallĕlûyāh) — personal, intimate. <b>kî-ʾezkĕrāh miqqedem pilelĕkhā</b> — <i>yes, I will remember your wonders from of old</i>. The cohortative <i>ʾezkĕrāh</i> (I will remember) is a deliberate act of will against the current despair — the Psalmist chooses to move from questioning (vv7-9) to remembering.</p>",
+    "12": "<p><b>wĕhāgîtî bĕkhol-poʿlekā</b> — <i>I will meditate on all your works</i>. <i>Hāgāh</i> (to murmur, meditate — Ps 1:2's word for sustained Torah meditation) — the same contemplative practice turned from individual crisis toward historical acts of God. <b>ûbĕʿălîlôtekhā ʾāśîḥāh</b> — <i>and think carefully about everything you have done</i>. The <i>ʾāśîḥāh</i> (meditative contemplation — the same word used of distress in v3) is now redirected: the interior groaning becomes productive meditation on redemptive history. Memory is the therapy.</p>",
+    "13": "<p><b>ʾĕlōhîm baqqōdesh darkekā</b> — <i>O God, your path runs through what is holy</i>. <i>Baqqōdesh darkekā</i> — the divine way is through the holy place; the sanctuary is where God's way is made known. The sanctuary as the place of divine revelation recurs from Ps 73:17 — it is where the eschatological perspective becomes visible, where crisis is met with memory. <b>mî-ʾêl gādôl kĕʾĕlōhîm</b> — <i>what god anywhere is as great as our God?</i> The incomparability formula — no divine competitor approaches YHWH in the acts now about to be rehearsed.</p>",
+    "14": "<p><b>ʾattāh hāʾêl ʿōśēh pheleʾ</b> — <i>you are the God who performs wonders</i>. <i>Pheleʾ</i> (wonder, extraordinary deed — Exod 15:11 in the Song of the Sea: <i>nôrāʾ tĕhillōt ʿōśēh pheleʾ</i>, awesome in praises, working wonders). The Exodus doxology vocabulary begins consciously here — the Psalmist is entering the Song of the Sea tradition. <b>hôdaʿtā bāʿammîm ʿuzzekā</b> — <i>you have declared your power among the nations</i>. The Exodus was a public, international event — a display before all peoples (cf. Exod 9:16; Josh 2:10), not a private national experience.</p>",
+    "15": "<p><b>gāʾaltā bizzĕrôaʿ ʿammekā</b> — <i>with your strong arm you redeemed your people</i>. <i>Gāʾal</i> (kinsman-redemption) + <i>zĕrôaʿ</i> (the arm, the outstretched arm) — the full Exodus formula compressed into four Hebrew words. The combination recalls the Deuteronomic summaries (Deut 5:15; 26:8). <b>bĕnê-yaʿăqōb wĕyôsēph selāh</b> — <i>the descendants of Jacob and Joseph</i>. The unusual dual mention of Jacob and Joseph — perhaps including both southern and northern traditions (Joseph = Ephraim/Manasseh), embracing the whole people in the Exodus memory.</p>",
+    "16": "<p><b>rāʾûkhā mayim ʾĕlōhîm rāʾûkhā mayim yāḥîlû</b> — <i>the waters saw you, O God; the waters saw you and recoiled</i>. <i>Rāʾāh</i> (to see) repeated — the waters as sentient witnesses to the divine presence. <i>Yāḥîlû</i> (they writhed, were in anguish — from ḥûl: to writhe as in labor-pain) — the Red Sea experiencing the anguish of a woman in childbirth at God's approach. <b>ʾaf yirgezu tĕhōmôt</b> — <i>the very depths were shaken</i>. <i>Tĕhôm</i> (the deep, the primordial ocean — Gen 1:2) trembling before the Creator — the Exodus crossing narrated in creation-battle terms.</p>",
+    "17": "<p><b>zōrĕmû mayim ʿābôt</b> — <i>the clouds poured down rain</i>. <i>Zāram</i> (to pour out in a torrent — violent, sudden rain) — the storm-theophany begins. <b>qôl nātĕnû shĕḥāqîm</b> — <i>the sky resounded</i>. <i>Shĕḥāqîm</i> (the thin upper air — from shāḥaq: to grind fine) — the upper atmosphere resonating with the divine voice. <b>ʾaf-ḥăṣāṣêkhā yithallākû</b> — <i>your arrows flashed out in every direction</i>. <i>Ḥēṣ</i> (arrow) — divine lightning as divine arrows, combining the warrior and storm images in one theophany.</p>",
+    "18": "<p><b>qôl raʿămĕkhā baggalgal</b> — <i>your thunder rolled through the churning heavens</i>. <i>Galgal</i> (wheel, whirlwind, rolling thing — the wheel-sound of thunder rolling across the vault of heaven). <b>hēʾîrû bĕrāqîm tēbēl</b> — <i>your lightning illuminated the world</i>. <i>Tēbēl</i> (the inhabited earth — the whole world with its peoples) lit up by divine lightning. <b>rāgĕzāh wattiʿash hāʾāreṣ</b> — <i>the earth trembled and quaked</i>. The two earthquake verbs (<i>rāgaz</i>: to quake with agitation; <i>raʿash</i>: to tremble violently) combine Sinai vocabulary (Exod 19:18) with the Exodus crossing into one cosmic event.</p>",
+    "19": "<p><b>bayyām darkekā ûshbîlekhā bĕmayim rabbîm</b> — <i>your path went through the sea, your way through the great deep</i>. The Exodus crossing narrated as divine theophany — God's way passes through the sea, through the primordial chaos-waters (<i>mayim rabbîm</i>: the great waters, Ps 29:3). <b>wĕʿiqbôtekhā lōʾ nōdāʿû</b> — <i>but your footprints could not be found</i>. <i>ʿĀqēb</i> (heel, footprint, track) — God left no traceable footprint in the sea. The divine transcendence expressed as invisibility: God acts decisively in history, parts the sea, leads the people — and leaves no trace that can be pinned down, analyzed, or reduced to a natural phenomenon. He cannot be controlled.</p>",
+    "20": "<p><b>nāḥîtā kattsōʾn ʿammekā</b> — <i>you guided your people like a flock</i>. <i>Nāḥāh</i> (to lead, guide — specifically of divine leading in the wilderness, Exod 13:21; 15:13; Deut 32:12) + <i>ṣōʾn</i> (flock) — the shepherd image closing the Exodus retrospective. <b>bĕyad-mōsheh wĕʾahărōn</b> — <i>through the leadership of Moses and Aaron</i>. The psalm ends not with triumphant theophany but with human instruments of divine guidance. The personal crisis of vv1-9 is answered not with a direct divine address but with the reminder that God has always led through human intermediaries. The Psalmist stands in that tradition — the God who led then continues to lead now.</p>"
   }
 }
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    data = load_comm('mkt-original', 'psalms')
+    merge_comm(data, NEW)
+    save_comm('mkt-original', 'psalms', data)
+    for ch in ['75', '76', '77']:
+        vcount = len(data.get(ch, {}))
+        print(f'  Ps {ch}: {vcount} verses')
 
 if __name__ == '__main__':
     main()

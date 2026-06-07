@@ -1,12 +1,31 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
+Echo data — Psalms chapters 120–133 (gap-fill: chs 120–129, 131, 133 missing; 130, 132 already present)
+Run: python3 scripts/zc-echo-psalms-120-133.py
 
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+These are the Songs of Ascents (Ps 120–134), sung by pilgrims ascending to Jerusalem
+for the three annual feasts (Passover, Weeks, Booths). They form a liturgical unit
+expressing longing for God's house, trust in the LORD's protection, and hope for
+Jerusalem's restoration.
+
+Key connections:
+- Ps 121:4: "He who watches over Israel will neither slumber nor sleep" → Heb 7:25
+  (Christ always lives to intercede — the eternal watchkeeper).
+- Ps 122:1: "I rejoiced with those who said to me, 'Let us go to the house of the LORD'"
+  → John 2:17 / Heb 10:25.
+- Ps 122:6: "Pray for the peace of Jerusalem" → Heb 12:22 / Rev 21:2 (heavenly Jerusalem).
+- Ps 124:8: "Our help is in the name of the LORD" → Acts 4:12 (salvation in no other name).
+- Ps 125:1: "Those who trust in the LORD are like Mount Zion which cannot be shaken"
+  → Heb 12:28 (a kingdom that cannot be shaken).
+- Ps 126:5-6: "Those who sow in tears will reap with songs of joy" → John 16:20
+  (your grief will turn to joy).
+- Ps 127:1: "Unless the LORD builds the house, the builders labor in vain" →
+  1 Cor 3:11 (no one can lay a foundation other than the one already laid — Christ).
+- Ps 129:4: "The LORD is righteous; he has cut me free from the cords of the wicked"
+  → Col 1:13 (rescued us from the dominion of darkness).
+- Ps 131:2: "Like a weaned child with its mother; like a weaned child I am content"
+  → Matt 18:3 (become like little children) / Phil 4:11 (I have learned contentment).
+- Ps 133:1: "How good and pleasant it is when God's people live together in unity"
+  → John 17:21 (that they all may be one, as you, Father, are in me).
 """
 
 import json, pathlib
@@ -15,7 +34,9 @@ ROOT = pathlib.Path(__file__).parent.parent
 
 def load_echo(book):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
@@ -23,17 +44,8 @@ def save_echo(book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def merge_echo(existing, new_data):
+    """Merge echo entries; deduplicate by (type, target) within each verse."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -47,120 +59,170 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
+# INTENT: Echo data for Songs of Ascents (Ps 120–133), targeting 12 missing chapters.
+#   The Songs of Ascents were pilgrimage psalms; their themes of ascending to God's house,
+#   divine protection, unity, and restoration find NT fulfillment in Christ as the true
+#   temple (John 2:19-21), the eternal keeper (Heb 7:25), and the foundation of God's
+#   household (1 Cor 3:11). The unity prayer of Ps 133 finds its highest form in Jesus'
+#   high-priestly prayer (John 17:21).
+# CHANGE? If data/echoes/psalms.json structure changes, update load_echo/save_echo
+#   per Z_COMMENTARY_SCRIPT_GUIDE.md.
+# VERIFY: python3 -c "import json; d=json.load(open('data/echoes/psalms.json')); print([len(d.get(str(c),{})) for c in range(120,134)])" should show non-zero for all 14.
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
+PSALMS_ECHOES = {
+  "120": {
+    "7": [
+      {
+        "type": "allusion",
+        "target": "Matt 10:34",
+        "note": "I am for peace; but when I speak, they are for war — 'Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword' (Matt 10:34). The Psalmist's experience of being for peace and encountering only war is the condition Christ acknowledges for his followers. He himself is the Prince of Peace (Isa 9:6) whose coming provokes hostility in those committed to violence — Psalm 120:7's lament is the pilgrimage condition of those who follow the way of peace in a world that chooses war."
+      }
     ]
   },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
+  "121": {
     "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
+      {
+        "type": "allusion",
+        "target": "Heb 7:25",
+        "note": "He who watches over Israel will neither slumber nor sleep — 'therefore he is able to save completely those who come to God through him, because he always lives to intercede for them' (Heb 7:25). The unwearying divine watchkeeper of Psalm 121:4 is fulfilled in Christ's perpetual intercession — he is the keeper who never sleeps because he is the one who passed through death and lives permanently on the other side. His intercession is not periodic prayer but constant watchfulness: 'always lives' (Heb 7:25) is the NT form of 'will neither slumber nor sleep.'"
+      }
+    ],
+    "8": [
+      {
+        "type": "allusion",
+        "target": "John 10:9",
+        "note": "The LORD will watch over your coming and going both now and forevermore — 'I am the gate; whoever enters through me will be saved. They will come in and go out, and find pasture' (John 10:9). The LORD's guardianship of going out and coming in (Ps 121:8) — a comprehensive Hebraic idiom for all of life's movement — is enacted by Christ as the gate. Those who enter through him find protection in their going out and coming in, and the 'forevermore' of the Psalm is the 'I am' of John — the eternal guardian."
+      }
     ]
   },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
+  "122": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "John 2:17",
+        "note": "I rejoiced with those who said to me, 'Let us go to the house of the LORD' — 'his disciples remembered that it is written: \"Zeal for your house will consume me\"' (John 2:17). The pilgrimage joy of ascending to the LORD's house (Ps 122:1) and the consuming zeal for God's house (Ps 69:9, cited at the Temple cleansing) both point to Christ's passion for the place of divine presence. The pilgrim song of going to the house of the LORD reaches its fullest expression in Christ, who is himself that house (John 2:19-21: 'Destroy this temple, and I will raise it again in three days')."
+      }
+    ],
+    "6": [
+      {
+        "type": "allusion",
+        "target": "Heb 12:22",
+        "note": "Pray for the peace of Jerusalem — 'but you have come to Mount Zion, to the city of the living God, the heavenly Jerusalem. You have come to thousands upon thousands of angels in joyful assembly' (Heb 12:22). The prayer for Jerusalem's peace (Ps 122:6) finds its NT horizon in the heavenly Jerusalem of Hebrews — the city that is already the dwelling of the living God, accessible through Christ the mediator (Heb 12:24). Rev 21:2: the new Jerusalem coming down from heaven, in which God will dwell permanently with his people. The peace prayed for in the earthly city is the peace that the new Jerusalem will permanently embody."
+      }
     ]
   },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
+  "123": {
+    "2": [
+      {
+        "type": "allusion",
+        "target": "John 15:5",
+        "note": "As the eyes of slaves look to the hand of their master, as the eyes of a female slave look to the hand of her mistress, so our eyes look to the LORD our God, till he shows us his mercy — 'I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit; apart from me you can do nothing' (John 15:5). The posture of Psalm 123:2 — eyes fixed on the master, waiting on his provision, doing nothing apart from his direction — is the posture Jesus describes for abiding in him. Complete dependency on the master's hand is the form of life that connects to Christ."
+      }
     ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
   },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
+  "124": {
+    "8": [
+      {
+        "type": "allusion",
+        "target": "Acts 4:12",
+        "note": "Our help is in the name of the LORD, the Maker of heaven and earth — 'salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved' (Acts 4:12). The exclusive help and deliverance found in the LORD's name (Ps 124:8) is what Peter declares located in the name of Jesus — the name above every name (Phil 2:9). The Psalm's declaration that the Maker of heaven and earth is Israel's helper finds its NT concentration in the risen Christ, through whom alone the help of the Maker reaches those who call."
+      }
+    ]
   },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
+  "125": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "Heb 12:28",
+        "note": "Those who trust in the LORD are like Mount Zion, which cannot be shaken, which endures forever — 'therefore, since we are receiving a kingdom that cannot be shaken, let us be thankful, and so worship God acceptably with reverence and awe' (Heb 12:28). The unshakeable stability of those who trust in the LORD (Ps 125:1) is the kingdom that Hebrews declares believers are receiving through Christ. The shakeability of all earthly structures (Heb 12:26-27: God will shake earth and heaven) contrasts with the unshakeable kingdom — the Psalm's image of the unmovable mountain is the image of what Christ's kingdom is."
+      }
+    ],
+    "5": [
+      {
+        "type": "allusion",
+        "target": "Matt 7:14",
+        "note": "But those who turn to crooked ways the LORD will banish with the evildoers — 'but small is the gate and narrow the road that leads to life, and only a few find it' (Matt 7:14). Psalm 125:5's distinction between those who trust in the LORD and those who turn to crooked ways parallels Christ's narrow-road/broad-road teaching. The final result — the LORD banishes those who choose crooked paths — is the same end that awaits those who take the broad road: exclusion from the peace that ends the Psalm (v5b: 'Peace be on Israel')."
+      }
+    ]
   },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
+  "126": {
+    "5": [
+      {
+        "type": "allusion",
+        "target": "John 16:20",
+        "note": "Those who sow in tears will reap with songs of joy — 'very truly I tell you, you will weep and mourn while the world rejoices. You will grieve, but your grief will turn to joy' (John 16:20). The harvest pattern of Psalm 126:5-6 — sorrow at sowing, joy at reaping — is the eschatological rhythm Jesus applies to the disciples in the passion discourse. The tears of going out bearing seed are the grief of Holy Saturday; the songs of reaping are the joy of resurrection morning. The Psalm's pattern becomes the template for discipleship: suffering before glory, cross before crown."
+      }
+    ]
   },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
+  "127": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "1 Cor 3:11",
+        "note": "Unless the LORD builds the house, the builders labor in vain. Unless the LORD watches over the city, the guards stand watch in vain — 'for no one can lay any foundation other than the one already laid, which is Jesus Christ' (1 Cor 3:11). Paul's building metaphor (1 Cor 3:9-11) applies Psalm 127:1's principle directly: the builders labor in vain unless God builds, and God has already laid the foundation — Christ himself. The Psalm's wisdom about futile human construction without divine agency becomes Paul's theology of the church: only the building whose foundation and builder is Christ will stand."
+      }
+    ],
+    "2": [
+      {
+        "type": "allusion",
+        "target": "Matt 11:28",
+        "note": "In vain you rise early and stay up late, toiling for food to eat — for he grants sleep to those he loves — 'come to me, all you who are weary and burdened, and I will give you rest' (Matt 11:28). The anxious, sleepless toiling that Psalm 127:2 declares futile is the burden Christ invites the weary to lay down. God's gift of sleep to his beloved (the one who trusts and rests rather than anxiously striving) is the rest Christ offers — the yoke that is easy, the burden that is light. The LORD who gives sleep is the Christ who gives rest."
+      }
+    ]
   },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
+  "128": {
+    "5": [
+      {
+        "type": "allusion",
+        "target": "Gal 4:26",
+        "note": "May the LORD bless you from Zion; may you see the prosperity of Jerusalem all the days of your life — 'but the Jerusalem that is above is free, and she is our mother' (Gal 4:26). The blessing from Zion and the prosperity of Jerusalem that Psalm 128:5 envisions as the ideal for the God-fearer are the blessings that Paul, in Galatians 4, locates in the heavenly Jerusalem — the mother-city of all who are born of the Spirit. The pilgrimage Psalm's vision of a blessed life connected to Jerusalem is fulfilled in the believer's connection to the Jerusalem above, from which all covenant blessings flow through Christ."
+      }
+    ]
   },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
+  "129": {
+    "4": [
+      {
+        "type": "allusion",
+        "target": "Col 1:13",
+        "note": "The LORD is righteous; he has cut me free from the cords of the wicked — 'for he has rescued us from the dominion of darkness and brought us into the kingdom of the Son he loves, in whom we have redemption, the forgiveness of sins' (Col 1:13-14). The divine liberation from the cords of the wicked (Ps 129:4) is the image that captures the NT doctrine of rescue from spiritual bondage. Israel's experience of being cut free from oppressors becomes the template for the rescue Paul describes: from the dominion of darkness, its cords cut by the cross, into the kingdom of God's Son."
+      }
+    ]
   },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
+  "131": {
+    "2": [
+      {
+        "type": "allusion",
+        "target": "Matt 18:3",
+        "note": "I have calmed and quieted my soul; like a weaned child with its mother, like a weaned child I am content — 'truly I tell you, unless you change and become like little children, you will never enter the kingdom of heaven' (Matt 18:3). The posture of Psalm 131:2 — the calmed, quieted soul that has ceased grasping and is content to rest in God's presence like a child — is the posture Jesus identifies as the condition for kingdom entry. Phil 4:11: 'I have learned, in whatever state I am, to be content.' The soul's quiet resting, not its striving, is the image of kingdom life."
+      }
+    ]
+  },
+  "133": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "John 17:21",
+        "note": "How good and pleasant it is when God's people live together in unity — 'that all of them may be one, Father, just as you are in me and I am in you. May they also be in us so that the world may believe that you have sent me' (John 17:21). The beauty of brotherly unity that Psalm 133:1 celebrates reaches its theological depth in Jesus' high-priestly prayer: the unity of God's people is patterned on the unity of the Father and Son, and it is the apologetic demonstration that the Father sent the Son. The Psalm's aesthetic and liturgical delight in unity becomes, in John 17, a Trinitarian reality and a missiological imperative."
+      }
+    ],
+    "3": [
+      {
+        "type": "allusion",
+        "target": "John 10:10",
+        "note": "There the LORD bestows his blessing, even life forevermore — 'I have come that they may have life, and have it to the full' (John 10:10). The blessing at Zion's completion — life forevermore (Ps 133:3) — is the life Christ declares he came to give. The unity blessed by God in Psalm 133 produces life in its fullest form; the community gathered under Christ experiences what Zion was always meant to provide. The dew of Hermon descending on Zion is the image of divine overflow — life abundant beyond what was asked or expected."
+      }
+    ]
   }
 }
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_echo('psalms')
+    merge_echo(existing, PSALMS_ECHOES)
+    save_echo('psalms', existing)
+    for ch in range(120, 134):
+        entries = len(existing.get(str(ch), {}))
+        print(f"  ch{ch}: {entries} verses with entries")
+    print("Psalms 120-133 echoes complete.")
 
 if __name__ == '__main__':
     main()

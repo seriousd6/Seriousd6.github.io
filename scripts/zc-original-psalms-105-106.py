@@ -1,53 +1,23 @@
-"""
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
-
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
-"""
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    # INTENT: merge without overwriting any verse already present in existing
+    # CHANGE? Do not alter the guard condition; concurrent agents depend on this being append-only
+    # VERIFY: run twice; second run should report identical byte count for psalms.json
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,112 +25,114 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
-  },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
+NEW_DATA = {
+    "105": {
+        "1": "<p><b>hodu lYHWH qiru bishmo</b> — three Hiphil imperatives open the psalm: <i>hodu</i> (give thanks/acknowledge, from <i>yadah</i>), <i>qiru</i> (call upon), <i>hodihu</i> (make known). The triad frames the psalm's purpose: communal proclamation to the nations (<i>baammim</i>). Ps 105 is a historical recital of covenant faithfulness; 1 Chr 16:8 quotes vv 1-15 at the ark's installation, rooting this liturgy in Israel's worship.</p>",
+        "2": "<p><b>sihu bkhol-niplootayw</b> — <i>sihu</i> (reflect/meditate/speak, Qal imperative of <i>siah</i>) ranges from inner meditation to outspoken recitation. The object <i>niplootayw</i> (his wondrous acts, Niphal participle of <i>palah</i>) denotes acts so astonishing they exceed human capacity — the word family includes what is 'too difficult' for man but not for God (Gen 18:14).</p>",
+        "3": "<p><b>hithallelu bshem qodshow</b> — <i>hithallelu</i> is Hithpael of <i>halal</i>, the root of <i>hallelujah</i>: reflexive boasting in the LORD. The command targets the inward community (<i>ybaqqshe YHWH</i>, those who seek the LORD) rather than outsiders. Joy (<i>yismhu</i>) flows from seeking, not from circumstances.</p>",
+        "4": "<p><b>dirshu YHWH vuzzow</b> — <i>darash</i> (seek/inquire) and <i>baqqesh</i> (seek/search) are near-synonyms deployed in parallel, intensifying the call. <i>uzzow</i> (his strength/power) stands in apposition to <i>phanayw</i> (his face/presence) — to seek God's face is to seek his active power, not merely information about him. <i>bkhol-et</i> (at all times) removes seasonal limits on the pursuit.</p>",
+        "5": "<p><b>zikru niplootayw asher asah</b> — the Qal imperative <i>zikru</i> (remember) is not passive nostalgia but active liturgical recall. Three objects follow: <i>niplootayw</i> (wonders), <i>mophetayw</i> (signs/portents), and <i>mishpte-phihu</i> (judgments of his mouth). The third term is striking — God's spoken verdicts are as much his deeds as the physical plagues.</p>",
+        "6": "<p><b>zera avraham avdow</b> — the addressees are identified through two covenant lineages: <i>zera avraham</i> (seed of Abraham, covenant-descent language from Gen 12-17) and <i>bne yaaqov bchirayw</i> (sons of Jacob, his chosen ones). <i>bachar</i> (election) is the key verb of this psalm: God does not merely acknowledge Israel but actively selects them. <i>eved</i> (servant) for Abraham is an honorific of intimate covenantal relationship.</p>",
+        "7": "<p><b>hu YHWH elohenu</b> — the emphatic pronoun <i>hu</i> (he, himself) asserts exclusive identity: this same LORD is our God. <i>mishpatayw bkhol-haaretz</i> (his judgments/justice throughout all the earth) — what might seem a private national covenant carries universal jurisdiction. The combination of particular covenant and universal sovereignty is characteristic of Israel's theology.</p>",
+        "8": "<p><b>zachar briytow leolam</b> — <i>zachar</i> (remember) used of God is covenantal action, not mere cognition: his remembering activates faithfulness (cf. Gen 8:1, Exod 2:24). <i>dabar tziwwah leelep dor</i> (the word he commanded to a thousand generations) — thousand is not a precise count but an idiom of incalculable duration, echoing the fifth commandment's promise (Deut 5:10).</p>",
+        "9": "<p><b>asher karat et-avraham</b> — <i>karat brit</i> (cut a covenant) preserves the ancient rite of covenant ratification through animal division (Gen 15:9-18). The oath sworn to Isaac (<i>nishba lyitzchaq</i>) adds a second generational anchor, showing the covenant is not a one-time event but a promise renewed across the patriarchal line.</p>",
+        "10": "<p><b>wayyaamideha lyaaqov lchok</b> — <i>heeemid</i> (caused to stand, Hiphil of <i>amad</i>) conveys establishment, durability. <i>chok</i> (statute/binding decree, from <i>chaqaq</i>, to inscribe) describes the covenant as a carved-in obligation — not a revocable policy. <i>brit olam</i> (everlasting covenant) for Israel echoes the same phrase used for Noah (Gen 9:16) and Abraham (Gen 17:7, 13, 19).</p>",
+        "11": "<p><b>lcha ettten et-eretz knaaan</b> — the direct speech of God embedded in historical recital. <i>chevel nachalatckem</i> — <i>chevel</i> (rope/measuring line, then the portion measured by it) is the idiom for the allotted territorial inheritance. The surveyor's rope (<i>chevel</i>) divides tribal portions (cf. Josh 17:14; Mic 2:4-5); to receive a <i>chevel</i> is to receive a deeded inheritance.</p>",
+        "12": "<p><b>bheyotam mte mispar</b> — <i>mte mispar</i> (men of number) is an idiom for a small, countable group — few enough that you could number them (cf. Deut 4:27; Jer 44:28). <i>kmat wgarim bah</i> (almost few and sojourners in it) — <i>ger</i> (sojourner) had no legal land rights, making God's gift of the land all the more striking.</p>",
+        "13": "<p><b>wayyithhallkhu migoy el-goy</b> — <i>hithhallek</i> (Hithpael of <i>halakh</i>) describes repeated, ongoing movement — the patriarchs were perpetually mobile, never settled. The repetition of the preposition (<i>migoy...el-goy, mimmamlacha...el-am</i>) underscores the precariousness of their situation as stateless wanderers among empires.</p>",
+        "14": "<p><b>lo-hinniach adam leoshqam</b> — <i>hinniach</i> (Hiphil of <i>nuach</i>) means to permit or allow; God did not allow any man to oppress them. <i>wayyochach alaychem mlakhim</i> — <i>yakhah</i> (Hiphil, to rebuke/reprove) used of God correcting kings on behalf of the powerless patriarchs: Pharaoh (Gen 12:17), Abimelech (Gen 20:3-7). Kings are answerable to the covenant God.</p>",
+        "15": "<p><b>al-tigeu bimshichai</b> — <i>mashiach</i> (anointed) applied to the patriarchs is exceptional — they hold no formal office, yet God treats them as his consecrated ones. <i>nbiyay</i> (my prophets) identifies Abraham especially (Gen 20:7: 'he is a prophet'). The warning protects those who carry the promise; to harm them is to assault the covenant itself.</p>",
+        "16": "<p><b>wayyiqra raav al-haaretz</b> — the verb <i>qara</i> (call/summon) applied to the famine is theologically charged: the famine is not a natural disaster but a divine summons. <i>kol-matteh-lechem shabar</i> — <i>matteh-lechem</i> (staff of bread) is the idiom for the food supply (Lev 26:26; Ezek 4:16; 5:16): God breaks the very structural support of nutrition, channeling all provision through Joseph.</p>",
+        "17": "<p><b>shalach liphneyhem ish — yosef</b> — the syntax is deliberate: <i>shalach</i> (he sent) appears before Joseph's name, reframing the sale by his brothers as divine mission. <i>leved nimkar</i> (who was sold as a slave) — the passive voice (<i>nimkar</i>, Niphal of <i>makar</i>) distances the psalmist from fraternal guilt while naming the historical fact. Joseph's slavery is the vehicle of covenant advance.</p>",
+        "18": "<p><b>annu bakevel raglow</b> — <i>anah</i> (Piel, to afflict/humble) is the intensive form used for Egypt's later affliction of Israel (Exod 1:12). <i>barzel baah naphshow</i> (iron entered his soul) — a vivid idiom: the iron fetters penetrate not just the body but the person (<i>nephesh</i>). The image suggests that Joseph internalized the affliction — the prison was not merely external confinement but entered his whole being.</p>",
+        "19": "<p><b>imrat YHWH tzrapphathu</b> — <i>tzaraph</i> (to smelt/refine metals) applied to the divine word: the word of God that Joseph had received tested and purified him across years of waiting. The time of suffering (<i>ad-et bo devaro</i>, until the time his word came) is recast as a metallurgical process — affliction as the furnace that proves genuine faith.</p>",
+        "20": "<p><b>shalach melek wayyattirehu</b> — <i>natar</i> (Piel, to release/let go) and <i>pattach</i> (Piel, to open/set free) in parallel describe the reversal of Joseph's imprisonment. The structural echo with v17 is intentional: God sent Joseph into slavery (v17); now the king sends to release him. Both sendings are under divine governance.</p>",
+        "21": "<p><b>samo adon lveytow</b> — <i>adon</i> (lord/master) and <i>mosher</i> (ruler) bracket Joseph's authority. <i>bkhol-qinyanow</i> (all his possessions/acquisitions) — <i>qinyan</i> (from <i>qanah</i>, acquire) is an economic term for accumulated assets. Pharaoh's entire estate is placed under the man who had nothing — the reversal is total.</p>",
+        "22": "<p><b>lesor sarayw bnaphshow</b> — the irony is pointed: Joseph (<i>asur</i>, bound, v18) now binds (<i>asar</i>) princes at his pleasure (<i>bnaphshow</i>). <i>uzqenayw yechakkem</i> (he taught wisdom to his elders) — <i>chakhem</i> Piel (cause to be wise): the former prisoner educates Egypt's ruling class. The schema of humiliation-then-exaltation that recurs through Scripture is on full display.</p>",
+        "23": "<p><b>wayyavo yisrael mitzrayim</b> — <i>yisrael</i> here is Jacob the patriarch (the same man as in v6), making explicit that the nation's descent begins with one man's journey. <i>eretz-cham</i> (land of Ham) is the archaic poetic name for Egypt, tracing the Egyptians' ancestry to Noah's son Ham (Gen 10:6). The name appears only in the Psalms (78:51; 105:23, 27; 106:22).</p>",
+        "24": "<p><b>wayyepher et-amow meod</b> — <i>parah</i> (to be fruitful) echoes the creation mandate (Gen 1:28) and the patriarchal promises (Gen 17:20; 28:3). The language is deliberate: Israel in Egypt is fulfilling the Adamic commission even in exile. <i>wayyaamtzehu mitzarayw</i> (he made them stronger than their adversaries) — the very growth that alarmed Egypt was divinely engineered.</p>",
+        "25": "<p><b>haphak libbam lisno amow</b> — <i>haphak</i> (to turn/overturn) is the verb of Sodom and Gomorrah's destruction (Gen 19:21, 25). Here God turns hearts toward hatred. The theological claim is stark: Pharaoh's hostility is neither accidental nor autonomous but part of God's larger plan to create the crisis that will demonstrate his power. Cf. Exod 4:21; 9:12 (hardening).</p>",
+        "26": "<p><b>shalach moshe avdow aharon asher bachar-bow</b> — <i>shalach</i> (he sent) for the third time (Joseph v17; Moses here). The sending pattern shows the psalmist's theology: God's human agents are always sent ones. <i>bachar-bow</i> (whom he chose in him) — <i>bachar</i> (election) applied to Aaron alongside Moses; both prophet and priest are elected instruments.</p>",
+        "27": "<p><b>samu-bam divrey ototayw</b> — a difficult construction: lit. 'they set among them words of his signs.' The phrase indicates that Moses and Aaron displayed and enacted the signs, or that the signs themselves were communicative acts — words spoken in deed. <i>mophetim beretz cham</i> links to the historical summary in Ps 78:43-51 and the tradition's consistent use of <i>ot</i> + <i>mophet</i> as a fixed pair for Exodus miracles.</p>",
+        "28": "<p><b>shalach choshech wayyachashik</b> — the order of plagues here is not Exodus chronological: darkness (ninth plague) comes first, framing all the others. <i>welo-maru et-devaro</i> (and they did not rebel against his word) — the subject is Moses and Aaron, not Egypt: they remained obedient throughout. The psalmist commends the messengers alongside the miraculous acts.</p>",
+        "29": "<p><b>haphak et-meyhem ldam</b> — <i>haphak</i> again (vv25, 29): God who turned hearts toward hatred now turns water to blood. The repetition may be intentional — the same overturning power operates in the moral realm (hearts) and the physical realm (water). <i>wayamet et-dghatam</i> (killed their fish) — fish were a dietary staple in Egypt (Num 11:5), making this a fundamental economic and food security crisis.</p>",
+        "30": "<p><b>sharats artzam tzphardim</b> — <i>sharats</i> (to swarm, teem) echoes the creation language of Gen 1:20, where the waters swarm with living creatures. The frogs overrunning Egypt mock the creation order: proliferation that should be blessing becomes plague. <i>chadre malchehem</i> (the inner rooms of their kings) — the plague penetrates even the most protected spaces of power.</p>",
+        "31": "<p><b>amar wayyavo arov</b> — <i>amar</i> (he spoke/said) without any specific speech content: the bare divine word is enough to summon the plague. The minimalism is theological — creation and judgment both proceed by <i>dabar</i> alone. <i>kinnim</i> (gnats/lice) and <i>arov</i> (swarms of insects) represent the relentless multiplication of judgment.</p>",
+        "32": "<p><b>natan gishmeyhem barad</b> — <i>natan</i> (he gave) inverts the blessing idiom: what God gives is hail instead of rain. Rain is gift; hail is judgment wearing rain's form. <i>esh lehavot beartzam</i> (flashing fire in their land) — fire within hail (Exod 9:23-24) is a paradox of simultaneous opposing elements, signaling that normal nature is suspended under divine judgment.</p>",
+        "33": "<p><b>wayyak gaphnnam uteenatam</b> — <i>hikah</i> (to strike down) is the same verb later used for the firstborn (v36). The progression of plagues strikes agricultural infrastructure: vines, fig trees, then all trees. <i>wayyshaber etz gevulam</i> (he shattered the trees of their border) — <i>shabar</i> (break/shatter) is the word for breaking idols and crushing enemies; nature itself is shattered by the plague.</p>",
+        "34": "<p><b>amar wayyavo arbeh</b> — again the bare <i>amar</i> (he spoke and locusts came). Two locust species: <i>arbeh</i> (mature locust, the common word) and <i>yeleq</i> (young locust, a less-developed stage) — together they cover the full life cycle of the locust swarm, leaving nothing unconsumed.</p>",
+        "35": "<p><b>wayyochal kol-esev beartzam</b> — the totality of consumption is emphasized: <i>kol</i> (all) appears twice. <i>esev</i> (vegetation) and <i>peri admatam</i> (fruit of their soil) are the categories of Ps 104's creation abundance — what God provides in creation, the locust plague devours. The land becomes anti-creation.</p>",
+        "36": "<p><b>wayyak kol-bchor beartzam</b> — the tenth plague strikes the pinnacle of biological priority. <i>reshit kol-onam</i> (firstfruits of all their vigor) — <i>on</i> (vigor/generative power) appears in Jacob's deathbed poem (Gen 49:3) and Deut 21:17 for the firstborn's special claim. Egypt's firstborn are their generational wealth and social capital — both are struck simultaneously.</p>",
+        "37": "<p><b>wayyotziem bkeseph vzahav</b> — the Exodus verb par excellence: <i>yatzah</i> (bring out). Israel departs loaded with silver and gold (Exod 12:35-36), the plundering of Egypt that fulfills God's promise to Abraham (Gen 15:14). <i>wein bshvataw kosher</i> (not one stumbling/weak among their tribes) — after 400 years of slave labor, no one lacks the strength to march. A final miracle in itself.</p>",
+        "38": "<p><b>samach mitzrayim btzeetam</b> — the reversal of v24's dynamic: Egypt that once feared Israel's growth now rejoices at their departure. <i>ki-naphal pachadam aleyhem</i> (for the dread of them had fallen upon them) — <i>pachad</i> (sudden terror/dread) is the same word for the awe that falls on surrounding nations during conquest (Gen 35:5; Exod 15:16). Egypt's relief is a backhanded testimony to Israel's God.</p>",
+        "39": "<p><b>paras anan lmasach</b> — <i>masach</i> (curtain/screen) is the tabernacle term for the veil (Exod 26:36; 35:12). The cloud as covering uses the same word — wilderness protection is structurally homologous to the tabernacle's inner sanctum. God shelters his people with the same conceptual fabric that shields his glory. <i>wesh lehair layilah</i> — the fire pillar continues the day-night totality of provision.</p>",
+        "40": "<p><b>shaaal wayyave slav</b> — <i>shahal</i> (to ask/request) recalls Israel's demanding petition (Num 11:4-6, 31-34). God gives the quail but at terrible cost there (Num 11:33) — the psalmist omits the accompanying judgment, focusing on the provision. <i>lechem shamayim yasviem</i> (bread of heaven satisfied them) — the manna is bread of heaven (<i>lechem shamayim</i>, cf. Exod 16:4; John 6:32-33), a category of provision exceeding earthly agriculture.</p>",
+        "41": "<p><b>patach tzur wayyazuvu mayim</b> — <i>patach</i> (to open) applied to a rock makes the stone porous like a spring. The tradition is attested at Rephidim (Exod 17) and Meribah (Num 20); Paul sees one spiritual rock following Israel (1 Cor 10:4). <i>halchu btziyyot nahar</i> (they flowed in dry places like a river) — the desert is transformed into a riverine landscape: barrenness becomes abundance.</p>",
+        "42": "<p><b>ki-zachar et-dvar qodsho</b> — the structural keystone: <i>zachar</i> (he remembered) echoes v8 where the same verb established the psalm's premise. The entirety of the Joseph narrative, the plagues, the wilderness provision — all of it flows from a single act: God's covenantal memory. <i>dvar qodsho</i> (his holy word/promise) — the promise to Abraham is holy because it carries God's own character.</p>",
+        "43": "<p><b>wayyotzi amow bsasson</b> — <i>sasson</i> (exultation/rejoicing) and <i>rinnah</i> (ringing cry of joy, jubilant shout) are among the most festive Hebrew terms. <i>rinnah</i> denotes the kind of shout that bursts out involuntarily — the Exodus departure is not a solemn retreat but an eruption of joy. <i>amow</i> (his people) and <i>bhirayw</i> (his chosen ones) — election produces belonging, and belonging produces exultation.</p>",
+        "44": "<p><b>wayyitten lahem artzot goyim</b> — the land gift is framed in terms of prior labor: <i>waamal leummim yirashu</i> (they inherited the labor of peoples). Israel's inheritance is not vacant land but developed territory — farms, cities, vineyards already planted (Deut 6:10-11). The gift includes the fruits of others' labor, an unmerited grace underscoring that the land is entirely God's to give.</p>",
+        "45": "<p><b>baavur yishmru chuqqayw</b> — <i>baavur</i> (so that, in order that) reveals the telos of the entire narrative: all of creation-election-rescue-provision culminates in a people who keep Torah. <i>chuqqayw</i> (his statutes) and <i>toratayw</i> (his instructions) frame covenant obedience as the goal of redemption, not its precondition. The psalm closes with <i>hallelu-Yah</i> — paired with Ps 106's opening and closing doxologies to frame Book IV's great historical meditation.</p>"
+    },
+    "106": {
+        "1": "<p><b>halleluyah — hodu lYHWH ki-tov ki leolam chasdo</b> — the liturgical refrain shared with Pss 107:1; 118:1; 136:1 (where it appears 26 times). In Ps 106 it frames a catalog of failures — the refrain's stability is precisely the answer to the instability of the history it introduces. The community praises despite the record of betrayal because YHWH's <i>chesed</i> endures <i>leolam</i> (forever).</p>",
+        "2": "<p><b>mi-ymallel gevurot YHWH</b> — <i>malal</i> Pi. (to speak out fully, declare) in interrogative form: who is able? The question is rhetorical — no one can fully recount God's mighty acts. <i>yashmi kol-tehillato</i> (make heard all his praise) — the incompleteness of any human doxology is itself a doxological acknowledgment: God exceeds all praise.</p>",
+        "3": "<p><b>ashre shomre mishpat osse tzedaqah bkhol-et</b> — the <i>ashre</i> formula (blessed/happy) introduces the ethical condition against which the following confession of failure will be measured. <i>bkhol-et</i> (at every time) is the standard the nation chronically fails — the psalm will document how the 'every time' became 'almost never.' The beatitude sets up the tragic irony of vv6-46.</p>",
+        "4": "<p><b>zkhoreni YHWH birtzon amekha</b> — a sudden shift to first-person singular, unique in this communal psalm. The individual voice lodges a personal petition within the corporate lament. <i>ratzon</i> (favor/pleasure/goodwill) is the positive divine disposition toward the elect: the petitioner asks to be included in that which God already intends for his people.</p>",
+        "5": "<p><b>lirot btvuvat bhirekhah</b> — <i>bachir</i> (chosen one) continues the election theme from Ps 105. The three purposes (<i>lirot, lsimchah, lhithallel</i>) — to see, to share joy, to boast/praise with the inheritance — show that individual salvation is inseparable from communal participation in God's purposes. To be saved is to be incorporated into the worshiping community.</p>",
+        "6": "<p><b>chatanu im-avotenu</b> — the three-verb confession: <i>chata</i> (miss the mark/sin), <i>avah</i> (bend/act crookedly, iniquity), <i>rasha</i> (act wickedly) — the moral spectrum from inadvertent failure to deliberate rebellion. <i>im-avotenu</i> (along with/together with our fathers) — the solidarity is not merely historical comparison but genuine corporate identification: we sinned, they sinned, the community is one continuous body.</p>",
+        "7": "<p><b>lo-hiskilu niphleotekhah</b> — <i>hiskil</i> (Hiphil of <i>sakal</i>, give attention to/understand) — the failure was cognitive as well as volitional. Ps 105 commanded <i>sihu</i> (reflect) on the wonders; the fathers at the sea did not. <i>lo-zakhru</i> (did not remember) — the antithesis of <i>zachar</i> that drove Ps 105. <i>wayyamru al-yam-suph</i> (they rebelled at the Red Sea) — the rebellion occurred at the very site of the miracle.</p>",
+        "8": "<p><b>wayyoshiem lmaan shmo</b> — the decisive theological pivot: God's motivation is not Israel's merit but his own name/reputation. <i>lmaan shmo</i> (for the sake of his name) is the most common stated reason for divine action toward rebellious Israel (Ezek 20:9, 14, 22; 36:22). The name is God's character made public; to act for his name's sake is to act from who he is, not from who Israel is.</p>",
+        "9": "<p><b>wayyighar byam-suph</b> — <i>gaar</i> (to rebuke/threaten) is the term for God's command to chaos waters (Ps 104:7; Nah 1:4). At the Red Sea, God treats the sea as a chaos power to be subdued — the Exodus has cosmic dimensions. <i>wayyhalekh bacharvot</i> (he walked through the dry places) — <i>halakh</i> of the sea itself: the water that was obstacle becomes pathway.</p>",
+        "10": "<p><b>wayyoshiem miyad soneh</b> — <i>sane</i> (hating enemy) and <i>gaal</i> (to redeem as kinsman) in the same verse: the rescue from enemy is framed in family-law terms. <i>goel</i> (kinsman redeemer) acts when a family member is enslaved or dispossessed — God acts for Israel as their nearest relative, with full legal standing.</p>",
+        "11": "<p><b>wayykhasu-mayim tzareyhem</b> — <i>kasah</i> (to cover/overwhelm) with water: the army that tried to cover the Israelites in slavery is itself covered by the sea. <i>lo-notar meyhem echad</i> (not one of them remained) — the totality of judgment echoes Exod 14:28. The same waters that carried Israel become the tomb of their enemies.</p>",
+        "12": "<p><b>wayyaaminu bidhvarayw wayyashiru tehillato</b> — the moment of faith and song (Exod 14:31-15:1). <i>aman</i> Hiphil (to trust, believe, rely on) — the Song of the Sea is Israel's high-water mark of faith in the Pentateuch. The tragedy is that vv13ff. show how quickly that faith collapsed. The Song is not the culmination of a stable faith but a peak before rapid descent.</p>",
+        "13": "<p><b>meheru shakhchu maasoyw</b> — <i>meher</i> (quickly, with haste) attached to <i>shakhah</i> (forget) is a devastating indictment: the forgetting was not gradual but precipitous. <i>lo-chakku leatzato</i> (they did not wait for his counsel) — <i>chakah</i> (to wait patiently, tarry) is the discipline they lacked; the wilderness tested precisely this. Impatience and forgetting are twin roots of rebellion.</p>",
+        "14": "<p><b>wayyitaou taavah bamidbar</b> — <i>avah</i> intensified as noun-verb pair (<i>wayyitaou taavah</i>) — an internal accusative construction: they craved a craving. The place Kibroth-hattaavah (Num 11:34: graves of craving) memorializes this. <i>nasah el biyyshimon</i> (tested God in the wasteland) — the wilderness as a proving ground cuts both ways: God tests Israel, and Israel improperly tests God.</p>",
+        "15": "<p><b>wayyitten lahem sheellatam</b> — God grants the demand (<i>sheelah</i>, request). <i>wayyshallach razown bnaphsham</i> — <i>razown</i> (leanness/wasting) is the terrible gift inside the granted wish: the quail comes with a wasting sickness in their beings (<i>nephesh</i>). God's judgment here is a 'yes' — the most fearsome divine response to impatient prayer.</p>",
+        "16": "<p><b>wayyqanneu lmoshe bamachaneh</b> — <i>qanah</i> (to be jealous/zealous) for the priesthood of Moses and Aaron. The irony runs deep: Phinehas will later demonstrate righteous <i>qinna</i> (zeal) in v30, reversing the selfish jealousy of v16. <i>qedosh YHWH</i> (the holy one of the LORD) — Aaron's title; to envy him is to challenge the divine order of holiness.</p>",
+        "17": "<p><b>tiptach-eretz watibbela datan</b> — the earth opened (<i>patach</i>) and swallowed (<i>bala</i>): judgment takes the form of the earth consuming those who rebelled against the LORD's appointed leader (Num 16:30-33). The naming of Dathan without Korah follows a tradition also seen in Deut 11:6 — Korah's line survived (Num 26:11) and composed psalms.</p>",
+        "18": "<p><b>wattivaar-esh beadatam</b> — <i>baar</i> (to burn/blaze) — fire from the LORD consumed 250 men who offered incense (Num 16:35). The <i>edah</i> (congregation/company) destroyed by fire stands as a warning against usurping the priestly office; fire that purifies the altar consumes those who approach it without authorization.</p>",
+        "19": "<p><b>yaasu-egel bchorev</b> — the Golden Calf (Exod 32) is located at <i>Chorev</i> (Deuteronomic name for Sinai), emphasizing that it occurred at the mountain of the law itself — not in absence of revelation but in the very shadow of it. <i>wayyishtachavu lmassechah</i> (they bowed down to a cast/molten image) — <i>massechah</i> (cast metal image) denotes the manufacturing process: they made what they worshiped.</p>",
+        "20": "<p><b>wayyamiru et-kevodam btavnit shor ochel esev</b> — <i>mur</i> (to exchange/substitute, commercial barter term) makes the trade explicit: <i>kavod</i> (glory, the divine Presence) was exchanged for a grass-eating ox. The grotesque specificity — a working animal — measures the magnitude of the descent. Jer 2:11 applies this language to all of Israel's idolatry.</p>",
+        "21": "<p><b>shakhchu el moshiam</b> — <i>moshia</i> (Savior, Hiphil participle of <i>yasha</i>) — the title for Israel's personal divine Deliverer is forgotten within weeks of the Exodus events. The verb <i>shakhah</i> (forget) — the counterpoint to <i>zachar</i> — indicts the heart's capacity for self-erasure of even the most extraordinary experiences.</p>",
+        "22": "<p><b>niphleot beretz-cham noraot al-yam-suph</b> — <i>niphleot</i> (wonders, Niphal participle of <i>palah</i>) and <i>noraot</i> (fearsome acts, Niphal participle of <i>yare</i>) frame the Red Sea crossing from two angles: astonishing and awe-inducing. These are the precise acts just forgotten in v21 — the forgetting is not of distant abstractions but of recent overwhelming experience.</p>",
+        "23": "<p><b>lule moshe vchiro amad babedek</b> — <i>bedeq</i> (breach in a fortification wall) appears here and Ezek 22:30; a technical military term for a gap through which the enemy pours. Moses stands in the breach, blocking the flow of divine wrath. <i>lehashiv chamato</i> (to turn his anger back) — Moses's intercession is physically imaged as plugging the gap in a wall under siege.</p>",
+        "24": "<p><b>wayyimasu beretz chemdah</b> — <i>maas</i> (to despise/reject) is a loaded word: used for rejecting God's kingship (1 Sam 8:7), for rejecting the word (1 Sam 15:23), for God's rejection of Saul (1 Sam 16:1). To despise the <i>eretz chemdah</i> (the desirable/lovely land) — the object of 400 years of promise — is to reject the covenant itself. <i>lo-heeeminu lidhvaro</i> echoes v12's momentary faith: the faith of the Song of the Sea had not endured to the border of Canaan.</p>",
+        "25": "<p><b>wayyrganu beoholeyhem</b> — <i>ragan</i> (to grumble/murmur, Niphal) carries a particularly negative connotation: secret malicious muttering (Deut 1:27). The private (<i>beoholeyhem</i>, in their tents) nature of the complaint makes it more insidious — a conspiracy of complaint rather than open dialogue. <i>lo shameu bqol YHWH</i> — deafness to the divine voice is the definitive covenantal failure.</p>",
+        "26": "<p><b>wayyisa yadow lahem</b> — <i>nasa yad</i> (to lift the hand) is the oath-swearing gesture (Gen 14:22; Exod 6:8); here turned against Israel: God swears an oath of judgment (Num 14:28-35). The same posture that seals covenant blessing now seals covenant consequence. The structure is deeply ironic: God's oath-raising hand was first raised to swear blessing; now raised to swear judgment.</p>",
+        "27": "<p><b>whhaphil zaram bagoyim ulzarotam bearatzot</b> — <i>naphal</i> Hiphil (to fell/cast down) and <i>zarah</i> (to scatter/winnow) — the diaspora language used here anticipates the Babylonian exile by centuries. The wilderness generation's failure is the paradigm for exile; the scattering into the nations is the ultimate covenant sanction (Lev 26:33; Deut 4:27; 28:64).</p>",
+        "28": "<p><b>wayyitzamdu lbaal peor</b> — <i>tzamad</i> (to bind/yoke/attach, Niphal) is a powerful metaphor: Israel is harnessed to Baal of Peor as an ox is yoked to a plow — unable to move independently. <i>wayyochlu zivche metim</i> (they ate sacrifices of the dead) — <i>metim</i> (dead ones) refers to the dead gods who cannot speak or act; to eat their sacrificial meat is to commune with nothingness.</p>",
+        "29": "<p><b>wayyakhisu bemalleleyhem</b> — <i>kaas</i> (to vex/provoke to anger, cause grief) — the Baal Peor apostasy actively provokes. <i>wayyiphrats bam hamagepah</i> (a plague burst through among them) — <i>parats</i> (to burst/break through): the plague broke through the defenses — the same idiom as a military breach in a wall.</p>",
+        "30": "<p><b>wayyaamod phinehas wayplallel</b> — <i>pallal</i> Piel is a rare verb, cognate to <i>mishpat</i> (judgment): Phinehas intervened/executed judgment through the physical act of Num 25:7-8. He stood (<i>amad</i>) where Moses stood in v23's breach — both interceptions stop divine wrath, one by prayer and one by action. <i>wattaatzar hammagepah</i> — <i>atzar</i> (to restrain, shut) — the same verb used for shutting the womb (Gen 20:18) and stopping rain (1 Kgs 17:1): divine judgment is shut by righteous intervention.</p>",
+        "31": "<p><b>wayyechasher low ltzedaqah ldor wador ad-olam</b> — <i>chashav</i> (to reckon/count/credit) is the Gen 15:6 verb used for Abraham's faith being credited as righteousness. The echo is deliberate: Phinehas's zealous act is credited (<i>chashav</i>) as righteousness in exactly the same vocabulary as the paradigmatic faith of the father of the faithful. James 2's discussion of faith and works lives in the tension between these two uses of <i>chashav</i>.</p>",
+        "32": "<p><b>wayyaqtzipu al-me merivah</b> — <i>qatzaph</i> (to become angry, provoke wrath) at the waters of Merivah (strife-waters, from <i>riv</i>, contend). <i>wayyera lmoshe baavoram</i> (it went badly for Moses because of them) — the psalmist exonerates Moses: the harm came to him because of them. Moses suffers collateral damage from Israel's rebellion, making his exclusion from Canaan a tragedy rather than a simple personal punishment.</p>",
+        "33": "<p><b>ki-himru et-rucho wayyevatte bsphathayw</b> — <i>marar</i> (to make bitter, Hiphil <i>himru</i>) is the root of Miriam's name and of Naomi's self-renaming (Ruth 1:20). The people made Moses's spirit bitter. <i>batta</i> (to speak rashly, hapax in this form) describes Moses's fatal speech — the words spoken in frustration at Meribah (Num 20:10-11) that cost him entry to the land. The sin of the tongue is the culminating effect of the people's embittering.</p>",
+        "34": "<p><b>lo-hishmidu et-haamim asher amar lahem YHWH</b> — failure to execute the <i>cherem</i> (devoted destruction) command. The disobedience is not presented as mercy but as defection — the nations not driven out become the source of the assimilation catalogued in vv35-39. Partial obedience plants the seeds of total corruption.</p>",
+        "35": "<p><b>wayyitaarvu bagoyim wayyilmdu maaseyhem</b> — <i>arav</i> (to intermingle, mix together) — Israel is blended into the nations like dye into water, losing its distinctive character. <i>lamad</i> (to learn) — the wrong curriculum: they learned the nations' practices (<i>maaaseyhem</i>) rather than teaching the nations YHWH's ways. The direction of influence is completely reversed from the original mandate.</p>",
+        "36": "<p><b>wayyavdu et-atzabbeyhem wayyihyu lahem lmoqesh</b> — <i>atzav</i> (idol/grievous image, from <i>atzav</i>, to hurt/pain) — an idol is a hurt-maker. <i>moqesh</i> (trap/snare) fulfills the warning of Exod 23:33; Josh 23:13: the gods of the nations left in place would become snares. The trajectory from intermarriage (v35) to idol service (v36) to child sacrifice (vv37-38) follows the logic of unchecked assimilation.</p>",
+        "37": "<p><b>wayyizbechu et-bnehem veet-bnotehem lashedim</b> — <i>shedim</i> (demons) appears only here and Deut 32:17 in the Hebrew Bible. The Akkadian cognate <i>shedu</i> originally denoted protective spirits; the psalmist uses the term with bitter irony — what purports to protect Israel's children is actually destroying them. Child sacrifice as the terminus of idolatry: what began as worship ends as murder.</p>",
+        "38": "<p><b>wayyishpkhu dam naqi</b> — <i>shaphak dam</i> (to pour out/shed blood) is the idiom for murder (Gen 9:6; Ezek 22:3-4). <i>naqi</i> (innocent, guiltless) — children bear no guilt. <i>wattechanneph haaretz baddamim</i> (the land was profaned by the bloodshed) — <i>chaneph</i> (to be profane/polluted) describes moral defilement of the land itself; the land bears the bloodguilt and becomes unlivable (Num 35:33-34).</p>",
+        "39": "<p><b>wayyitmeu bmaaseyhem wayyiznu bmalleleyhem</b> — two defilement verbs: <i>tame</i> Niphal (to become ritually/morally unclean) and <i>zanah</i> (to act as a harlot, spiritual adultery). The Prophets consistently use marital infidelity as the metaphor for idolatry (Hos 1-3; Ezek 16; 23) — the covenant is a marriage, and idolatry is adultery against YHWH. The defilement accumulates until the land expels its inhabitants (Lev 18:24-28).</p>",
+        "40": "<p><b>wayyichar-aph YHWH baamow wayyetaev et-nachalatow</b> — <i>charah aph</i> (his nose burned) is the standard Hebrew idiom for burning anger: the flared nostrils of rage. <i>taav</i> Hiphil (to cause abhorrence, make abominable) — God comes to find his own inheritance loathsome. The emotional register here is as raw as anywhere in the Psalter: YHWH abhors his own people. The covenant love remains, but the experience of covenant life has become revolting to both parties.</p>",
+        "41": "<p><b>wayyitnem byad-goyim</b> — the defeat formula: to be given into the hand of enemies is the covenantal curse language of Deut 28:25, Judg 2:14, 6:1. <i>wayyimshlu vahem soneyhem</i> (those who hated them ruled over them) — <i>sane</i> (hate, the same root as v10's persecutors at the Red Sea) — the deliverer from haters has now handed them to haters. The cycle is vicious and deliberate.</p>",
+        "42": "<p><b>wayyilchatzum oyveyhem wayyikanaou tachat yadam</b> — <i>lachatz</i> (to oppress/crush) is Egypt's verb (Exod 3:9): Israel now suffers the Egyptian experience from its neighbors. <i>kanah</i> Niphal (to be humbled/subdued) — the same root as <i>knaaan</i> (Canaan): they are brought down like Canaanites in the land promised to them. The irony is complete.</p>",
+        "43": "<p><b>paamim rabboth yatzilem vhemah yamru beatzato wayyamokhu baavonam</b> — <i>paamim rabboth</i> (many times): the Judges cycle compressed into three words. <i>makhakh</i> (to sink down, collapse, be brought low) in the final clause is the terminus of the cycle: sin then servitude then cry then rescue then sin then collapse. <i>baavonam</i> (in/through their iniquity) — iniquity is both the cause and the weight that collapses them.</p>",
+        "44": "<p><b>wayyar batzar lahem bshomeo et-rinnatam</b> — the turning point: God sees (<i>raah</i>) and hears (<i>shamaa</i>). <i>rinnah</i> here denotes the distress-cry (contrast v43's joyful <i>rinnah</i> at departure from Egypt). The same ringing-shout word that described exultant departure is now the anguished cry of the oppressed. God responds to both registers of <i>rinnah</i>.</p>",
+        "45": "<p><b>wayyizchor lahem britow wayyinachem krob chasadayw</b> — the psalm's climactic verse. <i>zachar brit</i> (remember the covenant) — the same action that opened Ps 105's recital (v8) now closes Ps 106's lament: God's memory of the covenant is the one stable anchor in the entire turbulent history. <i>nacham</i> Niphal (to be moved with compassion, to relent) — the divine relenting is motivated by <i>krob chasadayw</i> (the abundance/greatness of his steadfast loves) — the plural <i>chasadim</i> denotes the fullness of covenantal faithfulness, the accumulated weight of every promise.</p>",
+        "46": "<p><b>wayyitten otam lrachamim liphne kol-shovehem</b> — <i>rachamim</i> (compassion, womb-mercy, plural of <i>rechem</i>) — God gives them to the compassion of their captors. The term <i>rachamim</i>, denoting the tenderest form of love (maternal womb-mercy), appears in the most unexpected place: the hearts of enemy captors. God can make oppressors show mercy (cf. Gen 39:21 — same construction for Joseph in prison). The exile is softened from within by the same <i>rachamim</i> that drives YHWH himself.</p>",
+        "47": "<p><b>hoshienu YHWH elohenu wqabtzenu min-hagoyim</b> — the psalm's climactic prayer: <i>hoshia</i> (save) and <i>qabatz</i> (gather/assemble) — the two great exile-reversal verbs (cf. Deut 30:3-4; Isa 43:5; 54:7). The purpose stated: <i>lhodot lshem qodshekhah</i> (to give thanks to your holy name) — the goal of ingathering is not national restoration for its own sake but restored worship. The same <i>hodu</i> that opened Ps 105 (v1) is the telos of the prayer here: the cycle of praise continues.</p>",
+        "48": "<p><b>barukh YHWH elohey yisrael min-haolam vad haolam</b> — the Book IV doxology, closing Pss 90-106. <i>vaamar kol-haam amen</i> — the congregational response <i>amen</i> (truly, so be it — from <i>aman</i>, the same root as faith/trust in v12 and Gen 15:6) is the community's ratification of all that has been recounted. The paired Pss 105-106 present the single covenant story from both sides — divine faithfulness and human failure — and the doxology pronounces them together as ground for blessing. <i>halleluyah</i> closes both psalms as the only adequate response to the whole.</p>"
+    }
 }
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
-}
-
-def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
 
 if __name__ == '__main__':
-    main()
+    book = 'psalms'
+    source = 'mkt-original'
+    existing = load_comm(source, book)
+    merge_comm(existing, NEW_DATA)
+    save_comm(source, book, existing)
+    # quick verification
+    for ch, vv in NEW_DATA.items():
+        saved = existing.get(ch, {})
+        missing = [v for v in vv if v not in saved]
+        print(f'  ch {ch}: {len(vv)} entries, {len(missing)} missing after merge')
