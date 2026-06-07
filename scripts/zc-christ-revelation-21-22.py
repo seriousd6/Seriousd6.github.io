@@ -1,53 +1,41 @@
 """
-Combined script: Revelation — all four layers (echo + original + context + christ)
-Output: data/echoes/revelation.json + mkt-original + mkt-context + mkt-christ
+MKT Christ Commentary — Revelation chapters 21–22
+Run: python3 scripts/zc-christ-revelation-21-22.py
 
-Revelation is the most OT-saturated NT book (approximately 404 verses
-contain echoes from 278 OT passages without ever giving a direct citation).
-Key zones: the throne-room vision (chs 4-5, Ezekiel + Isaiah + Daniel),
-the seals/trumpets/bowls (Exodus plagues + prophetic judgment oracles),
-the Lamb who was slain (Isa 53 + Passover), and the new creation (Isa 65-66 + Ezek 40-48).
+Source data used:
+- data/interlinear/revelation.json
+- data/translation/draft/mediating/revelation.json (MKT text)
+
+Christological focus decisions in this range:
+- v21:22 "no temple" = the most explicit Christological architectural statement: Christ is not
+  in the temple, he IS the temple (John 2:19-21; Heb 9:11-12)
+- v21:23 "Lamb is its lamp" = Christ as the light of the new creation (John 8:12; 1:14)
+- v22:3 "no more curse" = Gal 3:13 (Christ became a curse for us) — eschatological completion
+  of the atonement
+- v22:13 = three divine self-identification formulas all applied to Christ — theological high
+  point of Revelation's Christology, claiming full divine eternity for the returning Lord
+- v22:20 "Come, Lord Jesus" = Maranatha (1 Cor 16:22) — the church's eucharistic prayer
+  for the Parousia
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,158 +43,113 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-REV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "fulfillment", "target": "Dan 7:13", "note": "Behold he is coming with the clouds — the Danielic Son of Man coming with the clouds of heaven; Revelation's opening vision applies Dan 7:13 directly to the parousia of Jesus"},
-      {"type": "fulfillment", "target": "Zech 12:10", "note": "Every eye will see him, even those who pierced him, and all tribes of the earth will wail — the mourning of Zech 12:10 (they will look on him whom they have pierced, and mourn for him) is applied to the universal vision of the returning Christ; the piercing of Christ on the cross is the historical fulfillment of the Zecharian piercing"}
-    ],
-    "12": [
-      {"type": "allusion", "target": "Dan 10:5-6", "note": "Among the lampstands one like a son of man, clothed with a long robe and with a golden sash — Daniel's vision of the heavenly man clothed in linen, girded with gold, with face like lightning; John's vision of the glorified Christ reuses Daniel's heavenly-figure imagery"},
-      {"type": "allusion", "target": "Exod 25:37", "note": "The seven golden lampstands — the seven-branched menorah of the tabernacle; the seven churches are the new menorah, the light-bearing presence of God in the world as the tabernacle was in Israel"}
-    ]
-  },
-  "4": {
-    "2": [
-      {"type": "allusion", "target": "Ezek 1:26-28", "note": "A throne stood in heaven with one seated on it, with the appearance of jasper and carnelian, and around the throne a rainbow — Ezekiel's throne-chariot vision (merkabah): the one on the throne with the appearance of gleaming amber, the rainbow surrounding; John's throne-room draws directly from Ezekiel's initial vision"},
-      {"type": "allusion", "target": "Isa 6:1-3", "note": "The four living creatures crying Holy, holy, holy — the seraphim of Isaiah's throne vision crying the Trisagion; the four living creatures of Revelation 4 combine Ezekiel's four living creatures (Ezek 1:5-14) with Isaiah's seraphim (Isa 6:2-3)"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "fulfillment", "target": "Gen 49:9-10", "note": "Behold, the Lion of the tribe of Judah, the Root of David — the Judah-lion prophecy of Gen 49:9-10 (the scepter shall not depart from Judah) identifies the Lion as the coming ruler from Judah's line; Revelation applies this to the resurrected Christ who has conquered"},
-      {"type": "fulfillment", "target": "Isa 11:1", "note": "The Root of David has conquered — the shoot from the stump of Jesse (Isa 11:1) who will rule with justice; the Davidic root-branch motif of Isaiah fulfilled in Christ's resurrection-conquest"}
-    ],
-    "6": [
-      {"type": "fulfillment", "target": "Isa 53:7", "note": "A Lamb standing, as though it had been slain — the lamb led to slaughter of Isa 53:7 (he was led like a lamb to the slaughter and like a sheep before its shearers is silent); the slain-but-standing Lamb is the risen Christ as the Servant who was killed and lives"},
-      {"type": "allusion", "target": "Zech 3:9", "note": "A Lamb with seven horns and seven eyes, the seven spirits of God — the stone with seven eyes before Joshua the high priest (Zech 3:9: I will engrave its inscription; seven are the eyes of the LORD which range through the whole earth); the seven eyes as divine omniscience applied to the Lamb"}
-    ]
-  },
-  "6": {
-    "12": [
-      {"type": "allusion", "target": "Joel 2:10", "note": "The sun became black as sackcloth, the full moon became like blood, the stars fell to earth — the Day-of-the-LORD cosmic signs of Joel 2:10 and 2:31 (the sun will be turned to darkness and the moon to blood before the great and awesome day of the LORD); the sixth seal's cosmic disruption uses Joel's Day-of-LORD imagery"}
-    ]
-  },
-  "7": {
-    "17": [
-      {"type": "fulfillment", "target": "Isa 25:8", "note": "God will wipe away every tear from their eyes — Isa 25:8 (YHWH will swallow up death forever and wipe away tears from all faces); the eschatological comfort of the feast-after-death promise now applied to the great multitude before the Lamb"}
-    ]
-  },
-  "11": {
-    "15": [
-      {"type": "fulfillment", "target": "Dan 2:44", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — Daniel's vision of the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44: 'the God of heaven will set up a kingdom that shall never be destroyed'); the seventh trumpet announces this as completed"}
-    ]
-  },
-  "12": {
-    "5": [
-      {"type": "fulfillment", "target": "Ps 2:9", "note": "She gave birth to a male child, one who is to rule all the nations with a rod of iron — Ps 2:9 (you shall break them with a rod of iron); the messianic ruler of Ps 2 is identified as the male child born of the woman; the rod-of-iron rule is the eschatological conquest of Christ"}
-    ]
-  },
-  "19": {
-    "11": [
-      {"type": "allusion", "target": "Isa 11:4", "note": "The rider on the white horse is called Faithful and True, and in righteousness he judges and makes war — the messianic judge who strikes the earth with the rod of his mouth and slays the wicked with the breath of his lips (Isa 11:4); the rider's warfare is by the word of his mouth (v. 15)"}
-    ],
-    "13": [
-      {"type": "allusion", "target": "Isa 63:1-3", "note": "He is clothed in a robe dipped in blood — the warrior-in-crimson of Isa 63:1-6 whose garments are stained red from treading the winepress of nations' judgment; the Revelation rider's blood-stained robe echoes the Isaianic divine warrior"}
-    ]
-  },
+REVELATION = {
   "21": {
-    "1": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "I saw a new heaven and a new earth, for the first heaven and first earth had passed away — Isa 65:17's promise (I create new heavens and a new earth; the former shall not be remembered) is the explicit basis for Revelation's new creation; the eschatological promise receives its fullest apocalyptic depiction here"}
-    ],
-    "3": [
-      {"type": "fulfillment", "target": "Lev 26:11-12", "note": "Behold the dwelling place of God is with man — the Sinai covenant promise 'I will set my dwelling among you ... I will walk among you and will be your God and you shall be my people' (Lev 26:11-12) reaches its consummation in the New Jerusalem; what the tabernacle mediated, the new creation embodies directly"},
-      {"type": "fulfillment", "target": "Ezek 37:27", "note": "My dwelling place shall be with them and I will be their God and they shall be my people — Ezekiel's new covenant promise of YHWH dwelling with his people in the restored Israel reaches its cosmic fullness in the new creation"}
-    ]
+    "1": '<p>The new heaven and new earth are the eschatological completion of Christ\'s creative and redemptive work. In Col 1:15–20 Christ is both the agent of the original creation ("by him all things were created") and the agent of reconciliation ("through him to reconcile to himself all things"). The "new creation" language of 2 Cor 5:17 ("if anyone is in Christ, he is a new creation; the old has passed away; behold, the new has come") is personal before it is cosmic — but the cosmic new creation of Rev 21:1 is the full scope of what Christ\'s personal-renewal work always pointed toward. The removal of the sea (chaos-domain) is the completion of Christ\'s stilling of the storm (Mark 4:39: "Peace! Be still") enacted at creation-scale.</p>',
+
+    "2": '<p>The holy city as bride prepared for her husband is the climax of Revelation\'s primary Christological image: Christ as the bridegroom. Eph 5:25–27 ("Christ loved the church and gave himself up for her, that he might sanctify her... so that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish") names the purpose of the cross: to prepare this very bride for this very moment. The descending city "prepared as a bride" is what the cross achieved — the church purified, beautified, and presented to the Lamb for the eschatological wedding that the entire book has been moving toward (19:7–9).</p>',
+
+    "3": '<p>"God\'s dwelling place is now among the people" — the eschatological fulfillment of the Incarnation. John 1:14 ("the Word became flesh and dwelt [<em>eskēnōsen</em>, tabernacled] among us") is the first installment of this promise: at the Incarnation, God tabernacled among humanity in the person of Jesus Christ. In the new Jerusalem, the tabernacling is permanent, universal, and unmediated. The Incarnation was not a temporary arrangement; it was the prototype of the eternal dwelling. The one who pitched his tent among us in Galilee now pitches his tent among all his people forever.</p>',
+
+    "4": '<p>"He will wipe every tear from their eyes. There will be no more death or mourning or crying or pain" — the permanent elimination of everything Christ came to destroy. 1 Cor 15:26 ("the last enemy to be destroyed is death"); 1 Cor 15:54–57 ("Death is swallowed up in victory. O death, where is your victory? O death, where is your sting?... thanks be to God, who gives us the victory through our Lord Jesus Christ"). Every tear wiped away is a specific reversal of what sin and death inflicted — and the one who wipes them is the one who wept at Lazarus\'s tomb (John 11:35) before raising him as a sign of what he came to do at cosmic scale.</p>',
+
+    "5": '<p>"Behold, I am making all things new!" — the enthroned Father speaks the new creation into existence, but the mechanism of newness is Christ: 2 Cor 5:17 ("if anyone is in Christ, he is a new creation"); Gal 6:15 ("neither circumcision nor uncircumcision counts for anything, but a new creation"). The newness that is personal in the believer\'s union with Christ becomes cosmic at the consummation. The command to "write this down, for these words are trustworthy and true" uses Christ\'s own self-designation (3:14: "the Amen, the faithful and true witness") as the authentication formula for the new creation.</p>',
+
+    "6": '<p>"It is done. I am the Alpha and the Omega, the Beginning and the End" — the divine self-declaration that opened the book (1:8) now marks its culmination. "To the thirsty I will give water from the spring of the water of life without cost" — the gift Christ promised in John 4:14 ("the water that I will give him will become in him a spring of water welling up to eternal life") and 7:37–38 ("If anyone thirsts, let him come to me and drink. Whoever believes in me, as the Scripture has said, \'Out of his heart will flow rivers of living water\'") is here given in its final form: eternal, free, and from the divine spring itself.</p>',
+
+    "7": '<p>"Anyone who is victorious will inherit all this, and I will be their God and they will be my child" — inheritance through Christ. Rom 8:17 ("heirs of God and fellow heirs with Christ, provided we suffer with him in order that we may also be glorified with him"); Gal 4:7 ("you are no longer a slave, but a son, and if a son, then an heir through God"). The specific language of divine adoption ("I will be their God and they will be my child") applies the Davidic promise of 2 Sam 7:14 ("I will be to him a father, and he shall be to me a son") universally to all who are in Christ — the inheritance of the firstborn Son becoming the inheritance of all who share his standing.</p>',
+
+    "8": '<p>The catalog of the excluded — those who receive the second death — represents those who remained outside Christ\'s atoning work. Rom 6:23 ("the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord") names the two outcomes. The second death is not the absence of Christ\'s provision but the rejection of it: Heb 10:29 ("How much worse punishment, do you think, will be deserved by the one who has trampled underfoot the Son of God, and has profaned the blood of the covenant by which he was sanctified, and has outraged the Spirit of grace?"). The list leads with cowardice — the refusal to bear the cost of the testimony of Jesus (12:17) — as the foundational form of exclusion.</p>',
+
+    "9": '<p>The angel who showed the harlot Babylon (17:1) now shows the bride Jerusalem — the same angelic guide reveals both the counterfeit city and the true one. The invitation "Come, I will show you the Bride, the wife of the Lamb" echoes the wedding language of 19:7–9. The Lamb\'s wife is the community purchased by his blood (5:9; Eph 5:25–27), now revealed in her eschatological glory. The vision is the answer to everything the harlot-vision threatened: where Babylon seduced and destroyed, the Lamb\'s bride is faithful and imperishable.</p>',
+
+    "10": '<p>The Spirit-transport to the great high mountain echoes Christ\'s transfiguration (Matt 17:1–8), where the disciples were taken to a high mountain and saw his glory — a preview of the eschatological revelation. The new Jerusalem "coming down out of heaven from God" echoes Christ\'s own heavenly origin (John 3:13: "no one has ascended into heaven except he who descended from heaven, the Son of Man") and the pattern of divine gifts descending from above (Jas 1:17: "every good gift and every perfect gift is from above, coming down from the Father of lights").</p>',
+
+    "11": '<p>The city radiating the glory of God "like a very precious jewel — like a jasper, clear as crystal" — the glory of Christ fills the new city. John 1:14 ("we beheld his glory, glory as of the only Son from the Father, full of grace and truth"); Rev 1:16 (Christ\'s face shining like the sun in full strength). The glory that the disciples glimpsed at the Transfiguration and John saw in the first vision of the risen Christ now permanently illuminates the entire city. The jasper radiance connects to the divine throne-vision of 4:3 — the city shares the luminosity of the divine presence that centers on the Lamb.</p>',
+
+    "12": '<p>The twelve gates with the twelve tribes\' names = Christ as the fulfillment of Israel\'s covenant history. John 11:51–52 (Christ would die "not for the nation only, but also to gather into one the children of God who are scattered abroad"); Matt 19:28 (the twelve apostles sitting on twelve thrones, judging the twelve tribes of Israel); the gates bearing the tribal names show that the whole of Israel\'s covenant history is incorporated into the city Christ purchased. The twelve-tribe gates and twelve-apostle foundations (v. 14) show one city encompassing both testaments of covenant history.</p>',
+
+    "13": '<p>The three gates on each of the four sides = Christ gathering his elect from all four directions. Matt 24:31 ("he will send out his angels with a loud trumpet call, and they will gather his elect from the four winds, from one end of heaven to the other"); Mark 13:27 ("from the ends of the earth to the ends of heaven"). The four-directional orientation of the city\'s access reflects the universal reach of Christ\'s redemption: he draws people from east and west, north and south to recline at table in the kingdom of God (Luke 13:29).</p>',
+
+    "14": '<p>The twelve apostolic foundations = Christ\'s apostles as the bearers of the gospel that is the city\'s foundation. 1 Cor 3:11 ("no one can lay a foundation other than that which is laid, which is Jesus Christ"); Eph 2:20 ("built on the foundation of the apostles and prophets, with Christ Jesus himself as the cornerstone"). The apostolic foundations rest on Christ the cornerstone — the twelve foundations in turn rest on the one ground. The city Christ purchased is built on the testimony he commissioned and the apostles proclaimed.</p>',
+
+    "15": '<p>The golden measuring rod = divine ownership and protection of the city Christ purchased. Acts 20:28 ("the church of God, which he obtained with his own blood"); 1 Cor 6:20 ("you were bought with a price"). To measure is to claim: the entire city — its length, width, gates, and walls — belongs to the Lord who died to acquire it. The gold of the measuring rod echoes the golden lampstands among which Christ walks (1:12–13), maintaining his ownership and presence within the community he redeemed.</p>',
+
+    "16": '<p>The perfect cube (12,000 stadia in all directions) = the entire city as Holy of Holies. Heb 9:11–12 ("Christ appeared as a high priest of the good things that have come... he entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood, thus securing an eternal redemption"). The Holy of Holies was the inner sanctum of direct divine presence; Christ\'s once-for-all entry into the true heavenly Holy of Holies by his own blood has made the entire new Jerusalem that sacred zone — all 12,000 stadia of it, for all the redeemed.</p>',
+
+    "17": '<p>The wall measured in human/angelic terms — the city is built for humanity. The Incarnation grounds the human dimensions of the eschatological city: Christ became flesh (John 1:14), participated in human measurement, and through his resurrection body (Luke 24:39: "a spirit does not have flesh and bones as you see that I have") inaugurated the bodily resurrection that the new city will be home to. The angelic and human measurements being equal signals that the heavenly city is perfectly calibrated to its human residents.</p>',
+
+    "18": '<p>The jasper wall and transparent-gold city = the divine glory that Christ gives to his own. John 17:22 ("the glory that you have given me I have given to them, that they may be one even as we are one"). The city\'s materials — the impervious jasper and the luminous transparent gold — embody the glory Christ shares from the Father: a glory that is simultaneously defensive (jasper = divine radiance as protection) and transparent (gold like glass = nothing hidden in the divine light). The city\'s substance is the glorified state of those who are "conformed to the image of his Son" (Rom 8:29).</p>',
+
+    "19": '<p>The twelve foundation stones echoing the high priest\'s breastplate (Exod 28:17–20) — Christ as the true High Priest whose work the breastplate always signified. Heb 4:14–16 ("we have a great high priest who has passed through the heavens, Jesus, the Son of God"); Heb 9:11–12 (Christ as high priest of the greater and more perfect tent). The twelve precious stones of the breastplate bore the names of the twelve tribes before God in priestly intercession; the city\'s twelve foundation stones, bearing the apostles\' names, are the eschatological fruit of Christ\'s high priestly intercession permanently materialized.</p>',
+
+    "20": '<p>The continuation of the foundation-stone catalog represents the diversity of the apostolic witness — twelve distinct individuals, twelve distinct stones, one coherent foundation — as the expression of Christ\'s purpose: "to present the church to himself in splendor" (Eph 5:27). The permanent, imperishable material of the foundations contrasts with the perishable building materials of earthly construction (1 Cor 3:12–15) — what Christ builds on his foundation survives the eschatological fire and becomes the foundation of the new creation.</p>',
+
+    "21": '<p>The twelve pearl gates and the transparent-gold streets = the surpassing value of what Christ purchased. Matt 13:44–46 (the kingdom as a treasure hidden in a field and a pearl of great price — the man sells everything to possess it; Christ sold everything, giving his life, to purchase this city). The gate made from a single pearl implies a pearl of cosmological size: the kingdom is worth everything, and Christ gave everything to acquire it. The gold streets transparent as glass = nothing hidden, everything radiant with the light of the Lamb (v. 23) who walks among his redeemed as he once walked among the lampstands (1:13).</p>',
+
+    "22": '<p>"I did not see a temple in the city, because the Lord God Almighty and the Lamb are its temple" — the most explicit Christological architectural statement in Scripture. Christ predicted his own body as the true temple: John 2:19–21 ("Destroy this temple, and in three days I will raise it up... he was speaking about the temple of his body"). The temple was always a means toward the end of unmediated divine presence; in the new Jerusalem, the Lord God Almighty and the Lamb are themselves the dwelling-place — the means is dissolved because the end is achieved. Christ is not in the temple; he is the temple. Heb 9:11 ("Christ appeared as a high priest of the good things that have come, and entered through the greater and more perfect tent, not made with hands, that is, not of this creation").</p>',
+
+    "23": '<p>"The glory of God illuminates it, and the Lamb is its lamp" — Christ is the permanent, personal source of the new creation\'s light. John 8:12 ("I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life"); John 1:4–5 ("In him was life, and the life was the light of men. The light shines in the darkness, and the darkness has not overcome it"). The Incarnation introduced the light into darkness; the new creation completes the process by making the light of the Lamb the city\'s only and eternal illumination. The Lamb (<em>lychnos</em>, lamp) is not merely a light source but the personal Savior who is himself the light.</p>',
+
+    "24": '<p>"The nations will walk by its light, and the kings of the earth will bring their splendor into it" — the fulfillment of Christ\'s mission as "a light for revelation to the Gentiles" (Luke 2:32, Simeon\'s prophecy; Isa 42:6; 49:6). John 12:32 ("when I am lifted up from the earth, I will draw all people to myself") — the drawing accomplished by the cross is completed in the new Jerusalem, where all nations walk by the Lamb\'s light. The kings who once aligned with Babylon against the Lamb (17:12–14) are now, in their redeemed representatives, bringing their glory voluntarily into the city the Lamb built.</p>',
+
+    "25": '<p>The gates never shut = the open access Christ provides permanently. John 10:9 ("I am the door. If anyone enters by me, he will be saved and will go in and out and find pasture"); John 14:6 ("I am the way, and the truth, and the life. No one comes to the Father except through me"). In the new Jerusalem the "door" is permanently open because there is no longer any enemy to close it against: the dragon is in the lake of fire (20:10), the beast is defeated (19:20), and death itself has been destroyed (20:14). The open gates are the permanent embodiment of Christ\'s "I am the door" — now realized rather than promised.</p>',
+
+    "26": '<p>"The glory and honor of the nations will be brought into it" — the eschatological return of all created value to the Creator through Christ. 1 Cor 15:28 ("the Son himself will also be subjected to him who put all things in subjection under him, that God may be all in all") — the ultimate Christological teleology: the Son brings all things to the Father, who is then all in all. The glory and honor the nations bring reflects the Abrahamic promise fulfilled through Christ: "in your offspring all the nations of the earth shall be blessed" (Gen 22:18; Gal 3:16: "the offspring is Christ").</p>',
+
+    "27": '<p>"Nothing impure will ever enter it... only those whose names are written in the Lamb\'s book of life" — the exclusive Christological criterion for the new creation. John 14:6 ("no one comes to the Father except through me"); Acts 4:12 ("there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved"). The Lamb\'s book of life (cf. 13:8; 17:8; 20:12, 15) is the definitive registry: names written there are names the Lamb knows, the names for whom he died, the names that will inhabit the city he purchased. The city\'s purity is maintained by the Lamb\'s own atoning work — nothing impure enters because the Lamb has dealt with impurity once for all at the cross.</p>'
   },
+
   "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Ezek 47:1-12", "note": "The river of the water of life flowing from the throne — Ezekiel's vision of the temple-river that flows deeper and deeper toward the sea, bringing life wherever it goes (Ezek 47:9: everything will live where the river goes); the New Jerusalem's river fulfills Ezekiel's temple-river"}
-    ],
-    "2": [
-      {"type": "fulfillment", "target": "Gen 2:9", "note": "The tree of life with its twelve kinds of fruit, one for each month — the tree of life in the middle of the garden (Gen 2:9) that Adam and Eve were excluded from after the Fall; the new creation restores unrestricted access to the tree of life for those who wash their robes (v. 14), reversing the consequence of Gen 3:24"}
-    ]
-  }
-}
+    "1": '<p>The river of the water of life flowing from "the throne of God and of the Lamb" — the Lamb is the co-source of eschatological life. John 4:14 ("the water that I will give him will become in him a spring of water welling up to eternal life"); John 7:37–38 ("If anyone thirsts, let him come to me and drink... rivers of living water will flow from within them" — John 7:39 identifies this as the Spirit given through the crucified and glorified Christ). The river flows from the throne of God and of the Lamb — the co-enthroned sovereignty of Father and Son is the fountain from which the new creation\'s life pours. Heb 1:3 (Christ upholds all things by the word of his power) — he who sustains creation now permanently supplies the river that sustains the redeemed.</p>',
 
-REV_ORIGINAL = {
-  "1": {
-    "8": "<p><strong>ego eimi to Alpha kai to Omega legei Kyrios ho Theos ho on kai ho en kai ho erchomenos ho Pantokrator</strong>: 'I am the Alpha and the Omega, says the Lord God, who is and who was and who is to come, the Almighty.' <em>Alpha kai Omega</em>: the first and last letters of the Greek alphabet — a comprehensive inclusio encompassing all of reality. The phrase is applied both to God the Father (1:8; 21:6) and to Jesus (22:13: 'I am the Alpha and the Omega, the first and the last, the beginning and the end') — the shared title making the Christological identification with YHWH explicit. <em>Pantokrator</em> (Almighty): the LXX translation of Hebrew <em>El Shaddai</em> and <em>YHWH Tsvaot</em> (LORD of hosts) — here applied to both Father and Son as the supreme governing power over all creation.</p>",
+    "2": '<p>The tree of life bearing twelve fruits = Christ as the bread and fruit of the new creation. John 6:35 ("I am the bread of life; whoever comes to me shall not hunger"); John 6:51 ("the bread that I will give for the life of the world is my flesh"). Christ is simultaneously the one who provides the tree of life (through his atoning death) and the one who is himself the life it bears. The restoration of the tree of life reverses Gen 3:22–24 (exile from the garden and the tree) — Christ\'s death outside the city (Heb 13:12) opened the way back in. "Leaves for the healing of the nations" = the universalization of Christ\'s healing ministry: the one who healed the sick in Galilee now heals all nations through the tree his cross established.</p>',
 
-    "17": "<p><strong>ego eimi ho protos kai ho eschatos kai ho zon kai egenomen nekros kai idou zon eimi eis tous aionas ton aionon</strong>: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore.' The phrase <em>ho protos kai ho eschatos</em> (first and last) is YHWH's self-identification in Isa 41:4; 44:6; 48:12 — the exclusive divine claim to be both origin and terminus of all history. Jesus applies this YHWH-title to himself in combination with the resurrection claim: 'I died and behold I am alive.' The resurrection is the proof that the crucified one is the living YHWH — the divine identity claim vindicated by rising from death.</p>"
-  },
-  "4": {
-    "8": "<p><strong>hagios hagios hagios Kyrios ho Theos ho Pantokrator ho en kai ho on kai ho erchomenos</strong>: 'Holy, holy, holy, is the Lord God Almighty, who was and is and is to come.' The Trisagion (Isa 6:3) is adapted with the temporal formula that characterizes Revelation's divine self-identification. The fourfold repetition of praise from the four living creatures links Revelation's throne-room to Isaiah's call-vision: the same divine holiness that destroyed Isaiah's self-confidence before the vision of YHWH is now the content of ceaseless heavenly worship. John hears the cosmic liturgy that underlies all earthly worship.</p>"
-  },
-  "5": {
-    "5": "<p><strong>enikesen ho leon ho ek tes phyles Iouda e riza David anoixai to biblion</strong>: 'The Lion of the tribe of Judah, the Root of David, has conquered, so that he can open the scroll.' The title-cluster is Christological recapitulation: <em>Leon ek phyles Iouda</em> (Lion-of-Judah: Gen 49:9-10), <em>Riza David</em> (Root of David: Isa 11:1, 10; Rev 22:16), <em>enikesen</em> (has conquered). Then the stunning inversion: the 'Lion' who conquers is revealed as a 'Lamb standing as if slain' (v. 6). John hears Lion, then sees Lamb — the conquering is through the cross, not through military force. This Lion-Lamb inversion is Revelation's central hermeneutic: power is redefined by the slain Lamb who stands.</p>"
-  },
-  "13": {
-    "18": "<p><strong>de estin sophia ho echon noun psephisato ton arithmon tou theriou arithmos gar anthropou estin kai ho arithmos autou hexakosioi hexekonta hex</strong>: '666' — the number of the beast. <em>Arithmos anthropou</em> (number of a human/humanity) — the beast's number is not cosmic but human, not transcendent but sub-divine. <em>Gematria</em> (assigning numerical values to letters) was a common Greco-Roman literary technique. The best-attested solution: NERON KAISER in Hebrew letters (nun=50 + resh=200 + vav=6 + nun=50 + qoph=100 + samek=60 + resh=200 = 666). Nero Caesar as the prototype of the beast — the first Roman persecutor of Christians — makes the political-historical reference legible to John's seven churches (ca. 90-95 CE, under Domitian, the 'second Nero').</p>"
-  },
-  "21": {
-    "3": "<p><strong>idou he skene tou theou meta ton anthropon kai skemnosei met auton</strong>: 'Behold the dwelling place (<em>skene</em>) of God is with people, and he will dwell (<em>skenosei</em>) with them.' The <em>skene</em>-language deliberately echoes the wilderness tabernacle (<em>Mishkan</em>) and anticipates John 1:14 where the Word <em>eskenosen</em> (tabernacled) among us. The eschatological new creation is the realization of what the tabernacle mediated: direct divine presence without the veil, without the intermediary system, without separation — YHWH's face-to-face dwelling with his people. The Sinai covenant promise reaches its telos in the new Jerusalem.</p>"
-  },
-  "22": {
-    "20": "<p><strong>nai erchomai tachy</strong> (<em>nai erchomai tachy</em>): 'Surely I am coming soon.' The final direct speech of Christ in the canon is a promise of return. <em>Tachy</em> (soon/quickly): the eschatological urgency that has characterized the entire Revelation. The community's response — <em>Amen, erchou Kyrie Iesou</em> (Come, Lord Jesus) — is the Greek form of the Aramaic <em>Maranatha</em> (1 Cor 16:22; Didache 10:6). The canon ends with a promise and a prayer: Christ's 'I am coming' and the community's 'Come.' The entire Christian life is lived in this tension of promise-and-prayer, the <em>already</em> of Christ's victory and the <em>not yet</em> of his return.</p>"
-  }
-}
+    "3": '<p>"No longer will there be any curse" — Gal 3:13 ("Christ redeemed us from the curse of the law by becoming a curse for us — for it is written, \'Cursed is everyone who is hanged on a tree\'") is the mechanism: Christ absorbed the curse of Gen 3:17–19 at Calvary so that the eschatological city is curse-free. The removal of the curse in the new creation is the completion of what the cross accomplished temporally and personally in every believer\'s experience. "His servants will serve him" (<em>latreuousin</em>): priestly service before the Lord — the kingdom of priests of Exod 19:6 and Rev 1:6 fulfilled permanently. Christ\'s own priestly ministry (Heb 7:25) enables the priestly ministry of all the redeemed.</p>',
 
-REV_CONTEXT = {
-  "1": {
-    "9": "<p>The island of Patmos is a small volcanic island in the Aegean Sea, part of the Dodecanese chain, about 37 miles southwest of Ephesus. The Roman practice of <em>relegatio in insulam</em> (banishment to an island) was used for political offenders of some status — those meriting death were executed, those of social standing were exiled. John's Patmos exile 'on account of the word of God and the testimony of Jesus' (v. 9) places the Revelation within the Roman persecution of Christians, most plausibly under Domitian (81-96 CE, who demanded to be addressed as <em>Dominus et Deus</em>, Lord and God — a title the Revelation's 'Lord God Almighty' directly counters). The imperial cult was particularly strong in the seven cities of Revelation (Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, Laodicea, and Ephesus all had imperial temples and cult practices).</p>"
-  },
-  "4": {
-    "1": "<p>John's heavenly ascent follows the well-established pattern of Jewish apocalyptic merkabah mysticism (throne-chariot speculation based on Ezek 1 and Isa 6). The rabbinic tradition (b. Hagigah 11b-16a) treated merkabah speculation as dangerous esoterica — only the wisest scholars should study it. John's vision democratizes the throne-room: every Christian is shown what the mystical traditions reserved for elite initiates. The four living creatures (combining Ezek 1:5-14's four creatures with Isa 6:2-3's seraphim) and the twenty-four elders (representing either the twelve patriarchs + twelve apostles, or the twenty-four priestly courses of 1 Chr 24) frame the throne in the same pattern as the OT heavenly-temple tradition.</p>"
-  },
-  "12": {
-    "1": "<p>The woman clothed with the sun (ch. 12) has generated three major interpretive traditions: (1) the church giving birth to Christ and then fleeing persecution (corporate-ecclesial reading); (2) Mary (Roman Catholic tradition, citing Gen 3:15 and the Immaculate Conception typology); (3) Israel/the covenant community through whom the Messiah came (salvation-historical reading). The best reading combines 2 and 3: the woman is the covenant community (OT Israel → NT church) through whom the Messiah came; Mary is the proximate historical instantiation. The cosmic imagery (sun, moon, twelve stars = Gen 37:9's dream of Joseph) links the woman to the patriarchal promise-community.</p>"
-  },
-  "17": {
-    "9": "<p>The seven hills on which the woman sits (v. 9: <em>hepta ore</em>) is the most explicit historical identification in Revelation — Rome was universally known as the 'city of seven hills' (Septemontium). The woman 'Babylon the great' (vv. 5, 18: 'the great city that has dominion over the kings of the earth') is Rome — coded in the 'Babylon' cipher that 1 Peter also uses (1 Pet 5:13). Jewish and Christian apocalyptic literature routinely used 'Babylon' for Rome as the current oppressive empire (4 Ezra 3:1-2, 28-31; 2 Baruch 10-11). The coding protected the text from Roman censorship while being transparent to readers in the seven churches who knew the 'mystery' (v. 7).</p>"
-  }
-}
+    "4": '<p>"They will see his face, and his name will be on their foreheads" — the beatific vision and the name of Christ permanently marking the redeemed. John 14:9 ("Whoever has seen me has seen the Father"); 1 John 3:2 ("we know that when he appears we shall be like him, because we shall see him as he is"). The seeing of God\'s face, impossible during the earthly pilgrimage (Exod 33:20), is made possible through the one who is himself the image of the invisible God (Col 1:15; Heb 1:3: "the exact imprint of his nature"). Rev 3:12 ("I will write on him the name of my God... and my own new name") — the divine name on the forehead is specifically Christ\'s name, marking the redeemed as permanently belonging to him.</p>',
 
-REV_CHRIST = {
-  "1": {
-    "17": "<p>A direct revelation: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore, and I have the keys of Death and Hades.' Three layered claims: (1) divine identity — the first-and-last YHWH-title; (2) resurrection reality — I died and I live; (3) eschatological authority — I hold the keys to death and Hades. These three together constitute the Christological thesis of Revelation: the crucified and risen Lord is the sovereign YHWH who controls death itself. The entire apocalyptic vision — judgments, seals, trumpets, bowls, the final victory — flows from this threefold claim made by Christ to John on Patmos.</p>"
-  },
-  "5": {
-    "6": "<p>A direct revelation: 'A Lamb standing, as though it had been slain, with seven horns and seven eyes, which are the seven spirits of God sent out into all the earth.' The Lamb-vision is Revelation's Christological center. The Lamb is: (1) slain — bearing the marks of the cross permanently in his resurrection body; (2) standing — the resurrection state; (3) with seven horns — omnipotent (seven = completeness; horns = power); (4) with seven eyes — omniscient. This is the highest Christological symbol in the canon: the crucified-and-risen Jesus is simultaneously the sacrificial victim and the omnipotent, omniscient Lord of all history. The entire drama of Revelation unfolds as this Lamb opens the seals of history.</p>",
+    "5": '<p>"They will reign forever and ever" — the eternal co-reign with Christ is the fulfillment of the overcomers\' promises throughout the letters: 2:26–27 ("the one who conquers... I will give him authority over the nations"); 3:21 ("the one who conquers, I will grant him to sit with me on my throne"). Rom 5:17 ("those who receive the abundance of grace and the free gift of righteousness reign in life through the one man Jesus Christ"); 2 Tim 2:12 ("if we endure, we will also reign with him"). The eternal reign is participation in Christ\'s own reign — he reigns, and those united to him share his reign. The darkness eliminated (no more night) is the final confirmation that the light of Christ (John 1:5: "the light shines in the darkness") has permanently overcome.</p>',
 
-    "12": "<p>A direct revelation: 'Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!' The sevenfold doxology directed to the Lamb matches the sevenfold doxology directed to God in v. 13 — the deliberate parallelism attributes to Christ the same divine worthiness that belongs to YHWH alone. The ground of worthiness is the slaying (<em>ho esphagmenos</em>) — the cross is the qualification for cosmic lordship. The order in the throne-room is anti-imperial: not the emperor who receives tribute but the crucified-and-exalted Lamb who receives worship from every creature.</p>"
-  },
-  "19": {
-    "16": "<p>A direct revelation: 'On his robe and on his thigh he has a name written: King of kings and Lord of lords.' The rider on the white horse — identified in vv. 11-16 with 'Faithful and True,' with eyes like flame, with many diadems, clothed in blood-stained robe, wielding a sharp sword from his mouth — bears the supreme title that Deut 10:17 gives to YHWH (God of gods and Lord of lords). Jesus as King-of-kings and Lord-of-lords is the final Christological counter-claim to every imperial title: Caesar's claim to divine lordship is answered by the appearance of the one whose sovereignty is not shared and whose kingdom will not be destroyed.</p>"
-  },
-  "21": {
-    "5": "<p>A direct revelation: 'And he who was seated on the throne said: Behold, I am making all things new.' In the new creation vision, the one seated on the throne (identified with the Lamb in 22:1, 3 where both are said to be the throne of the new Jerusalem) speaks the new creation into being. The <em>kaina</em> (new, qualitatively new) of v. 5 echoes 2 Cor 5:17 (new creation) and Isa 65:17 — the eschatological renewal is not the old patched up but the new inaugurated by divine decree. The Christological new creation: as Christ's word created the old order (John 1:3; Col 1:16), so his word re-creates the new.</p>"
-  },
-  "22": {
-    "13": "<p>A direct revelation: 'I am the Alpha and the Omega, the first and the last, the beginning and the end.' Revelation's closing divine address: Jesus claims for himself the three divine-identity formulae that the book opened with in relation to the Father (1:8: Alpha-Omega + Almighty). The three phrases together (Alpha/Omega, first/last, beginning/end) constitute the most comprehensive divine self-identification in the canon — and the book assigns them to Jesus. The Christological conclusion of Revelation: the Jesus who was crucified under Pontius Pilate, who was raised and ascended, who will return, is the one to whom all time and all reality belong. He is the beginning and the end of all creation.</p>"
+    "6": '<p>"The Lord, the God who inspires the prophets, sent his angel to show his servants the things that must soon take place" — the authentication chain of Revelation (1:1: God → Christ → angel → John → churches) is confirmed. Christ is the final and fullest prophet (Heb 1:1–2: "Long ago, at many times and in many ways, God spoke to our fathers by the prophets, but in these last days he has spoken to us by his Son") through whom the entire prophetic tradition reaches its culmination. The same God who inspired the prophets sent Christ; the same Christ whose resurrection inaugurated the last days has sent this final revelation through his angel.</p>',
+
+    "7": '<p>"Behold, I am coming soon! Blessed is the one who keeps the words of the prophecy of this scroll" — the first of three "coming soon" declarations by the returning Christ (vv. 7, 12, 20). John 14:3 ("I will come again and will take you to myself, that where I am you may be also"); John 14:28 ("I am going away and I will come to you"); Acts 1:11 ("This Jesus, who was taken up from you into heaven, will come in the same way as you saw him go into heaven"). The sixth beatitude for those who keep the words of this prophecy = those who hold to "the testimony of Jesus" (12:17; 19:10: "the testimony of Jesus is the spirit of prophecy").</p>',
+
+    "8": '<p>John\'s prostration before the angel — the same refusal as in 19:10 — brackets the New Jerusalem vision with the anti-angel-worship correction. The angel\'s refusal redirects to the true object of worship: God and the Lamb. The eschatological magnificence of what John has witnessed could easily generate confusion about where worship belongs — the correction ensures that the vision\'s grandeur is ascribed to God and the Lamb, not to any intermediary who carries it.</p>',
+
+    "9": '<p>"Do not do that! I am a fellow servant with you and with your brothers the prophets... Worship God" — the angel places angelic and prophetic ministry at the same level of service to the one God. The Christological implication: worship belongs to God and to the Lamb (5:13: "to him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever"). All created beings — angels, prophets, apostles, martyrs — serve; only the enthroned God and the Lamb receive worship. The angel who refused John\'s prostration is the same kind of messenger who announced Christ\'s birth, resurrection, and ascension — glorious but not the object of adoration.</p>',
+
+    "10": '<p>"Do not seal up the words of the prophecy of this scroll, because the time is near" — Christ has inaugurated the last days (Heb 1:2: "in these last days he has spoken to us by his Son"; Acts 2:17: "in the last days... I will pour out my Spirit"). Unlike Daniel, which was sealed for a distant future (Dan 12:4), Revelation is unsealed because Christ\'s advent has begun the era of fulfillment. The "time is near" (<em>ho kairos engys estin</em>) is the same phrase as Rev 1:3 — the urgency runs through the entire book because every moment between the Ascension and the Return is the last hour (1 John 2:18: "it is the last hour").</p>',
+
+    "11": '<p>"Let the evildoer still do evil... let the righteous still do right, and the holy still be holy" — the irreversibility of moral formation at the End, and the urgency of the present moment. The context is Christ\'s imminent return: his coming will permanently establish what has been forming. 2 Cor 5:10 ("we must all appear before the judgment seat of Christ, so that each one may receive what is due for what he has done in the body"); Rom 14:12 ("each of us will give an account of himself to God"). The finality of the judgment means that the present moment of witness, repentance, and faith is decisive — Christ\'s return is the deadline.</p>',
+
+    "12": '<p>"My reward is with me, and I will give to each person according to what they have done" — Christ the eschatological Judge brings both reward and recompense. John 5:22–27 ("the Father judges no one, but has given all judgment to the Son... and has given him authority to execute judgment because he is the Son of Man"); 2 Cor 5:10 ("we must all appear before the judgment seat of Christ"); Rom 2:6 ("he will render to each one according to his works"). The imminence formula ("Behold, I am coming soon") combined with the judgment formula grounds the urgency of the entire book: the one who is coming is also the one who will judge.</p>',
+
+    "13": '<p>"I am the Alpha and the Omega, the First and the Last, the Beginning and the End" — the theological high point of Revelation\'s Christology. The three divine self-identification formulas, used throughout Revelation of both the Father (1:8; 21:6) and the Son (1:17; 2:8; 22:13), are here combined and applied to Christ in a single declaration. This is the fullest explicit claim to divine identity in the entire NT: Christ shares the divine eternity (Alpha-Omega), the divine uniqueness (First and Last), and the divine comprehensiveness (Beginning and End) with the Father. Phil 2:6 ("who, though he was in the form of God, did not count equality with God a thing to be grasped") is here not a veiled claim but an open declaration.</p>',
+
+    "14": '<p>"Blessed are those who wash their robes, that they may have the right to the tree of life and may go through the gates into the city" — the seventh and final beatitude, grounding access to the new creation in the atonement. Heb 9:14 ("how much more will the blood of Christ, who through the eternal Spirit offered himself without blemish to God, purify our conscience from dead works to serve the living God"); 1 John 1:7 ("the blood of Jesus his Son cleanses us from all sin"). Access to the tree of life (Gen 3:22–24 — blocked after the fall) and entrance through the gates are both secured by the Lamb\'s blood. The one who was excluded from the garden through sin re-enters the eschatological garden through the cleansing of Christ\'s sacrifice.</p>',
+
+    "15": '<p>"Outside are the dogs, those who practice sorcery, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood" — those who remain outside the city Christ purchased are defined by their refusal of him. John 3:36 ("whoever does not obey the Son shall not see life, but the wrath of God remains on him"); Rev 21:8 (the parallel catalog of the excluded). The outside/inside distinction is Christological at its foundation: those inside are those who washed their robes in the Lamb\'s blood (v. 14); those outside refused that washing. The "dogs" who once followed the beast\'s mark are permanently excluded from the city the Lamb purchased.</p>',
+
+    "16": '<p>"I, Jesus, have sent my angel to give you this testimony for the churches. I am the Root and the Offspring of David, and the bright morning star" — Christ\'s personal authentication is the capstone Christological self-identification of the book. "Root and Offspring of David" = simultaneously David\'s ancestor-Lord (Mark 12:35–37: "If then David calls him Lord, how can he be his son?") and David\'s descendant (Rom 1:3: "descended from David according to the flesh"). The bright morning star = Num 24:17 (the star from Jacob) and the title Christ gives to the victors (2:28: "I will give him the morning star"), which he here claims as his own self-designation. The one who gives himself to his people is himself the gift.</p>',
+
+    "17": '<p>"The Spirit and the Bride say, \'Come!\'" — the church, empowered by the Spirit, joins in the eschatological invitation for Christ to return and for the thirsty to come. The bidirectionality of the invitation reflects Revelation\'s two eschatological directions: toward the returning Lord (the Maranatha prayer of v. 20) and toward the world in need of Christ (the gospel invitation). "Let the one who desires take the water of life without cost" — the free offer of the water of life echoes Isa 55:1 and Christ\'s own invitation in John 7:37 ("If anyone thirsts, let him come to me and drink") and 6:37 ("whoever comes to me I will never cast out"). The Spirit and Bride\'s "Come!" is the continuation of Christ\'s own invitation.</p>',
+
+    "18": '<p>"If anyone adds anything to them, God will add to that person the plagues described in this scroll" — the warning about adding to Christ\'s revelation echoes Deut 4:2 applied to the testimony of Jesus. The authority of Revelation rests on its being the testimony of Jesus (1:2: "the word of God and the testimony of Jesus Christ"; 19:10: "the testimony of Jesus is the spirit of prophecy"). To add to it is to distort the testimony of Jesus; to subtract from it (v. 19) is to diminish it. The severity of the warning reflects the severity of tamperingwith the record of what Christ accomplished, revealed, and promised.</p>',
+
+    "19": '<p>"If anyone takes words away from this scroll of prophecy, God will take away from that person any share in the tree of life and in the holy city" — the removal penalty (losing the tree of life and the city) mirrors the book\'s climactic promises: the tree of life (22:2, 14) and the holy city (21:2, 10) are what Christ secured. To tamper with the book is to forfeit the goods it promises. The symmetry (add → earn plagues; subtract → lose blessings) reflects the covenantal structure of the entire Bible, applied here to Christ\'s own final revelation: every word of the testimony of Jesus is necessary and inviolable.</p>',
+
+    "20": '<p>"Yes, I am coming soon. Amen. Come, Lord Jesus!" — the closing exchange between the risen Christ and the praying church. The Aramaic Maranatha (preserved in 1 Cor 16:22 and the Didache 10.6) was the church\'s eucharistic prayer for the Lord\'s return — spoken at the Lord\'s Supper table where Christ\'s death was proclaimed "until he comes" (1 Cor 11:26). Revelation ends at the Lord\'s table: the book that was read aloud in the gathered assembly (1:3) closes with the congregation\'s response to Christ\'s "I am coming soon" — the ancient, Aramaic, pre-Pauline prayer for the Parousia. The entire Scripture moves from the first coming to the second; this final verse is the church\'s longing for the story to reach its completion.</p>',
+
+    "21": '<p>"The grace of the Lord Jesus be with God\'s people. Amen" — the final word of the canon is grace in the name of Christ. The closing benediction (echoing Rom 16:20; 1 Cor 16:23; 2 Cor 13:14; and every Pauline letter-close) confirms that Revelation belongs to the letter-genre as well as the prophetic-apocalyptic genre: it is addressed to the churches and closes with pastoral grace. "The grace of the Lord Jesus" names the precise gift that makes the entire new-creation vision real: the unmerited divine favor accomplished at the cross, through which the Bride was prepared, the book was written, the judgment is just, and the new creation is given. Grace is the first word of the gospel and the last word of the canon.</p>'
   }
 }
 
 def main():
-    e = load_echo('revelation')
-    merge_echo(e, REV_ECHO)
-    save_echo('revelation', e)
-    print(f'Rev echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'revelation')
-    merge_comm(c, REV_ORIGINAL)
-    save_comm('mkt-original', 'revelation', c)
-    print(f'Rev original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'revelation')
-    merge_comm(c, REV_CONTEXT)
-    save_comm('mkt-context', 'revelation', c)
-    print(f'Rev context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'revelation')
-    merge_comm(c, REV_CHRIST)
-    save_comm('mkt-christ', 'revelation', c)
-    print(f'Rev christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-christ', 'revelation')
+    merge_comm(existing, REVELATION)
+    save_comm('mkt-christ', 'revelation', existing)
+    print('Revelation 21–22 mkt-christ written.')
 
 if __name__ == '__main__':
     main()

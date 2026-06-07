@@ -1,0 +1,167 @@
+"""
+Book Study Data — Ezra
+book_id: ezra
+lang: hebrew
+
+Run: python3 scripts/build-book-study-ezra.py
+
+Notes:
+- Author group: Historical (Joshua-Esther) in author-freq-hebrew.json
+- Historical peaks are all generic function words; vocabulary selected for Ezra's
+  specific theology: the return-from-exile narrative, temple rebuilding, Torah
+  teaching, covenant separation, and Ezra's prayer spirituality
+- 12 vocab entries. Hebrew translit fields blank in glossary — supplied manually
+- H5927 alah: "go up" is the pilgrimage/aliyah word for every return from Babylon
+- H1473 golah: exile-community self-designation, central to Ezra's social world
+- H6031 anah (afflict/humble self): same spelling as H6030 (answer) but different root;
+  context of 8:21 confirms H6031 (Piel "humble/afflict")
+- H954 bush: two appearances with distinct moral valences — before king (8:22)
+  and before God (9:6)
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "ezra",
+
+    "key_vocabulary": [
+        {
+            "code": "H5927",
+            "lemma": "עָלָה",
+            "translit": "ʿālāh",
+            "gloss": "go up",
+            "significance": "עָלָה (alah, &lsquo;to ascend, to mount — used of climbing hills, going to the temple, and the return from exile; the root of the modern term aliyah [immigration to Israel]&rsquo;) is the word for every return from Babylon in Ezra: &lsquo;these were the people of the province who came up (alah) out of the captivity&rsquo; (2:1); &lsquo;Ezra went up (alah) from Babylonia&rsquo; (7:6). Returning to Jerusalem is consistently described as going up, not going back — the pilgrimage-language of ascending to the holy city. The same alah appears in Cyrus&rsquo;s foundational decree (1:3; echoing 2 Chr 36:23): &lsquo;let him go up (ya&rsquo;al)&rsquo; — the pagan emperor uses Jerusalem&rsquo;s own ascent-vocabulary. The choice of alah over other verbs for movement frames the entire post-exilic return as a liturgical act: not political repatriation but a holy ascent toward the place where YHWH dwells. The theological connection is to the original Exodus: Israel &lsquo;came up (alah) from Egypt&rsquo; (Exod 1:10; 12:38; Num 32:11), and the prophets promised a second alah that would surpass the first (Isa 40:9; Jer 16:14-15). Ezra&rsquo;s alah fulfills that prophetic expectation in the first installment of the final restoration."
+        },
+        {
+            "code": "H1473",
+            "lemma": "גּוֹלָה",
+            "translit": "gôlāh",
+            "gloss": "exile",
+            "significance": "גּוֹלָה (golah, &lsquo;exile; concretely and collectively, the body of exiles — from galah [H1540], to uncover/go into exile&rsquo;) is Ezra&rsquo;s distinctive term for the returned community: &lsquo;the children of the captivity (b&rsquo;nai ha-golah)&rsquo; (2:1; 6:16, 19-20; 8:35; 9:4; 10:6-8, 16). The golah is not a neutral sociological description but a theological identity: these are people defined by the experience of exile and return, the remnant through whom YHWH&rsquo;s covenant purposes run. The golah community sees itself as the authentic continuation of pre-exilic Israel — not because of ancestry alone but because it has been refined by the exile experience. This self-understanding drives the sharp boundaries of Ezra 9-10: who counts as golah (and thus as covenant community) is the underlying question. The tension between the golah community and the &lsquo;peoples of the land&rsquo; (am ha-aretz) who had remained during the exile — whose religious purity was uncertain — is the social fault line of the entire book. The NT&rsquo;s &lsquo;diaspora&rsquo; (1 Pet 1:1; Jas 1:1) continues the golah theology: the church as a people defined by their dispersion and their orientation toward a homeland that is not yet fully home."
+        },
+        {
+            "code": "H1129",
+            "lemma": "בָּנָה",
+            "translit": "bānāh",
+            "gloss": "build",
+            "significance": "בָּנָה (banah, &lsquo;to build, in the widest range of applications: erecting structures, establishing households, founding institutions&rsquo;) is the governing verb of Ezra 1-6 and the word around which the narrative&rsquo;s conflict is organized. Cyrus&rsquo;s decree commands: &lsquo;whoever is among you of all his people, let him build (v&rsquo;yiven) the house of YHWH the God of Israel&rsquo; (1:3). The adversaries use banah as the grounds for accusation: &lsquo;the Jews...are rebuilding (banyin) that rebellious and wicked city&rsquo; (4:12). Darius&rsquo;s counter-decree affirms: &lsquo;Let the house of God be rebuilt (yitb&rsquo;neh) on its site&rsquo; (6:7). The whole arc from 1:1 to 6:15 is the banah-arc: who has authorization to build what, and under whose authority. Banah connects Ezra to the Davidic theology of 2 Samuel 7 (YHWH &lsquo;will build you a house,&rsquo; David wanted to &lsquo;build a house for God&rsquo;) and to Isaiah&rsquo;s restoration promises: &lsquo;you shall raise up the foundations of many generations; you shall be called the repairer of the breach, the restorer (banah) of streets to dwell in&rsquo; (Isa 58:12). The NT&rsquo;s oikodomē (&lsquo;building up&rsquo;) language for the church (1 Cor 3:9-17; Eph 2:20-22) is the fulfillment of the banah-vision: the community rebuilt around the living stone who is Christ."
+        },
+        {
+            "code": "H914",
+            "lemma": "בָּדַל",
+            "translit": "bādal",
+            "gloss": "separate",
+            "significance": "בָּדַל (badal, &lsquo;to divide, to separate, to make a distinction — in various applications literal or figurative&rsquo;) is the verb of Ezra&rsquo;s reformation crisis. 9:1: &lsquo;the people of Israel and the priests and the Levites have not separated themselves (lo nivdelu) from the peoples of the lands.&rsquo; 10:11: &lsquo;make confession...and separate yourselves (hibadlu) from the peoples of the land and from the foreign wives.&rsquo; 6:21: &lsquo;all who had separated themselves (nibdal) from the uncleanness of the peoples of the land.&rsquo; The badal-word carries enormous theological freight: God used badal in creation (Gen 1:4-18, six times — he &lsquo;separated&rsquo; light from dark, water from water, day from night) and commanded Israel&rsquo;s badal at Sinai: &lsquo;I YHWH am holy and have separated (hbdalti) you from the peoples, that you should be mine&rsquo; (Lev 20:26). The Levites were specifically badal from Israel for temple service (Num 8:14; 16:9). Ezra&rsquo;s call for badal is thus not ethnic exclusivism but the application of cosmic and covenantal order-categories to the restoration community: to be YHWH&rsquo;s people is to be a distinguished, set-apart people. Paul&rsquo;s &lsquo;come out from them and be separate (aphoristhenai)&rsquo; (2 Cor 6:17, citing Isa 52:11) applies the badal-imperative to the new covenant community."
+        },
+        {
+            "code": "H8057",
+            "lemma": "שִׂמְחָה",
+            "translit": "śimḥāh",
+            "gloss": "joy",
+            "significance": "שִׂמְחָה (simchah, &lsquo;festive joy, gladness — the blithesomeness of religious celebration and festival, as distinct from everyday contentment&rsquo;) marks the emotional climax of the temple-rebuilding narrative. 6:16: &lsquo;the people of Israel, the priests, the Levites, and the rest of the returned exiles, celebrated the dedication of this house of God with joy (simchah gedolah — great joy).&rsquo; 6:22: &lsquo;YHWH had made them joyful (samach) and had turned the heart of the king of Persia to them.&rsquo; But Ezra&rsquo;s most poignant simchah-moment is at 3:12-13, where the joy-shouts of the younger generation who have never seen the first temple mingle inseparably with the weeping of the old priests and elders who remember it: &lsquo;the people could not distinguish the sound of the joyful shout (qol ha-teruah ba-simchah) from the sound of the people&rsquo;s weeping, for the people shouted with a great shout, and the sound was heard far away.&rsquo; This mixed simchah — joy and grief together, the new and the lost mingled — is the emotional truth of every partial restoration: the fulfillment is real but incomplete, the simchah is genuine but shadowed. Psalm 126:5-6 is the theological caption: &lsquo;Those who sow in tears shall reap with shouts of joy (rinah).&rsquo;"
+        },
+        {
+            "code": "H6031",
+            "lemma": "עָנָה",
+            "translit": "ʿānāh",
+            "gloss": "humble",
+            "significance": "עָנָה (anah, &lsquo;to be bowed low, to be afflicted; in the reflexive/Hithpael, to humble oneself, to fast — note: homograph of H6030 anah [to answer] but a different root&rsquo;) is the word for the spiritual discipline Ezra adopts before the journey to Jerusalem. 8:21: &lsquo;Then I proclaimed a fast there, at the river Ahava, that we might humble ourselves (lehit&rsquo;anot) before our God, to seek from him a safe journey for ourselves, our children, and all our goods.&rsquo; Ezra explains why he chooses the fast over a military escort: &lsquo;For I was ashamed to ask the king for a band of soldiers...since we had told the king, &ldquo;The hand of our God is for good on all who seek him&rdquo;&rsquo; (8:22). The anah-fast is chosen not primarily for safety but for theological consistency — to contradict his own witness would be the greater danger. The anah-word connects to Moses: YHWH &lsquo;humbled (anah) you and let you hunger...to make you know that man does not live by bread alone&rsquo; (Deut 8:2-3), and to the Suffering Servant: &lsquo;he was afflicted (anah) and he was oppressed, yet he opened not his mouth&rsquo; (Isa 53:7). Ezra&rsquo;s voluntary anah-fast mirrors the pattern: chosen weakness as the occasion for YHWH&rsquo;s demonstration of strength."
+        },
+        {
+            "code": "H3925",
+            "lemma": "לָמַד",
+            "translit": "lāmad",
+            "gloss": "teach",
+            "significance": "לָמַד (lamad, &lsquo;properly, to goad — the agricultural image of training animals by the prod; hence, to teach by sustained instruction, to train by repeated exposure; the root of talmid [disciple] and Talmud [rabbinic compilation of teaching]&rsquo;) is the verb of Ezra&rsquo;s defining vocation in the most concentrated description of the scribe-teacher&rsquo;s calling in the OT: &lsquo;For Ezra had set his heart to study (lidrosh) the Law of YHWH, and to do (la&rsquo;asot) it and to teach (ullamad) his statutes and rules in Israel&rsquo; (7:10). The three verbs of 7:10 form an indivisible sequence: study → practice → teach. Ezra does not teach what he has not practiced; he does not practice what he has not studied. The lamad-sequence becomes the template for every faithful teacher of Scripture — authority to teach derives from embodied fidelity. The lamad-root appears in Deuteronomy for the intergenerational transmission of the Torah: &lsquo;teach (lamad) them to your children&rsquo; (4:10; 11:19); &lsquo;YHWH commanded me...to teach (lamad) you statutes and rules&rsquo; (4:14). Jesus as the supreme teacher who fulfills rather than abolishes the law (Matt 5:17-20) and who commands &lsquo;teaching (didaskontes, the Greek lamad-equivalent) them to observe all that I have commanded&rsquo; (Matt 28:20) is the NT&rsquo;s fulfillment of the lamad-vocation Ezra embodied."
+        },
+        {
+            "code": "H8074",
+            "lemma": "שָׁמֵם",
+            "translit": "šāmēm",
+            "gloss": "be appalled",
+            "significance": "שָׁמֵם (shamem, &lsquo;to be stunned, numb, or devastated — used of persons appalled by what they witness and of lands left desolate and uninhabited; both meanings are present when a person becomes as desolate as a ruined city&rsquo;) is the word for Ezra&rsquo;s formal posture of grief and intercession after hearing the report of intermarriage. 9:3-4: &lsquo;When I heard this, I tore my garment and my cloak and pulled hair from my head and beard and sat appalled (meshomem)...And I sat appalled (meshomem) until the evening sacrifice.&rsquo; The shamem-sitting is not private distress but a public prophetic act: Ezra positions himself visibly among those who gather to him because they &lsquo;trembled at the words of the God of Israel&rsquo; (9:4). The communal gathering around the shamem-leader eventually generates the assembly, confession, and covenant action of chapters 10. Shamem is used in Lamentations for the desolated city itself (1:4, 1:13: &lsquo;He has made me desolate [shamem], faint all the day&rsquo;), so Ezra&rsquo;s shamem at Israel&rsquo;s sin echoes Jerusalem&rsquo;s shamem in exile: the leader&rsquo;s body becomes the embodiment of the community&rsquo;s spiritual condition. Daniel 8:27 uses the same root for Daniel&rsquo;s overwhelming reaction to his vision — the shamem of one who has seen too much to continue normally. Isaiah 52:14&rsquo;s use for the shocked reaction to the Servant&rsquo;s disfigurement (&lsquo;many were appalled/shamem at you&rsquo;) gives the word its most profound extension in the NT: the scandal of the cross appalls before it redeems."
+        },
+        {
+            "code": "H6908",
+            "lemma": "קָבַץ",
+            "translit": "qābaṣ",
+            "gloss": "gather",
+            "significance": "קָבַץ (qabats, &lsquo;to grasp, to collect, to gather into one place&rsquo;) is Ezra&rsquo;s word for assembling the exile community at the Ahava River canal before the journey. 8:15: &lsquo;I gathered them (va&rsquo;aqbetsa) to the river that runs to Ahava, and there we camped three days. As I reviewed the people and the priests, I found there none of the sons of Levi.&rsquo; The qabats of 8:15 is immediately followed by a gap: Levites for the temple service are missing, prompting a second gathering of religious personnel (8:16-20). Even the assembly of the restored exile community is partial — the gathering is real but incomplete. This incompleteness sets qabats in Ezra against the background of the great prophetic qabats-promises: &lsquo;With great compassion I will qabats you&rsquo; (Isa 54:7); &lsquo;YHWH...who gathers (mekabbets) the outcasts of Israel, declares, &ldquo;I will gather (aqabbets) yet others to him besides those already gathered&rdquo;&rsquo; (Isa 56:8). Ezra&rsquo;s qabats is the first fulfillment of the eschatological gathering — real, but not yet complete. The missing Levites are the gap that signals the continuation of the story. The NT&rsquo;s eschatological gathering (&lsquo;they will gather [episynaxousin] his elect from the four winds,&rsquo; Matt 24:31) is the final qabats the prophets envisioned."
+        },
+        {
+            "code": "H2580",
+            "lemma": "חֵן",
+            "translit": "ḥēn",
+            "gloss": "favor",
+            "significance": "חֵן (chen, &lsquo;graciousness — subjectively, the attitude of the giver [kindness, favor]; objectively, the quality that makes a recipient attractive or acceptable to another [beauty, charm]&rsquo;) is the word for the divine favor that Ezra identifies as the underlying cause of every political breakthrough the golah community experiences. 7:28: Ezra&rsquo;s personal doxology: &lsquo;[God] extended steadfast love (chesed) to me before the king and his counselors, and before all the king&rsquo;s mighty officers. I took courage, for the hand of YHWH my God was on me.&rsquo; The &lsquo;hand of God&rsquo; formula — &lsquo;yad YHWH hatovah&rsquo; (the good hand of YHWH) — appears five times in Ezra (7:6, 7:9, 7:28; 8:18, 8:22, 8:31) as Ezra&rsquo;s theological commentary on why the king acts favorably, why the journey succeeds, why the right people appear at the right time. Chen/favor is the mechanism: YHWH disposes powerful people toward gracious acts for his servants. Genesis 6:8: &lsquo;Noah found favor (chen) in the eyes of YHWH&rsquo; — the same chen that Ezra experiences before Artaxerxes. The NT&rsquo;s charis (&lsquo;grace&rsquo; — the Greek chen-equivalent) extends the theology: &lsquo;The child grew and became strong, filled with wisdom. And the grace (charis) of God was upon him&rsquo; (Luke 2:40, of Jesus) — the chen-of-YHWH formula applied to the Son."
+        },
+        {
+            "code": "H3627",
+            "lemma": "כְּלִי",
+            "translit": "kĕlî",
+            "gloss": "vessel",
+            "significance": "כְּלִי (keli, &lsquo;something prepared — any apparatus, implement, utensil, vessel, or instrument; used for weapons, musical instruments, and sacred vessels equally&rsquo;) is the word for the temple vessels taken by Nebuchadnezzar and returned by Cyrus. 1:7-8: &lsquo;Cyrus the king also brought out the vessels (kelim) of the house of YHWH that Nebuchadnezzar had carried away from Jerusalem...Cyrus king of Persia brought these out in the charge of Mithredath the treasurer.&rsquo; 6:5: Darius&rsquo;s decree: &lsquo;also the gold and silver vessels (kelim) of the house of God, which Nebuchadnezzar took out of the temple...shall be returned and brought back to the temple that is in Jerusalem.&rsquo; The kelim-narrative is theologically loaded: the vessels represent the continuity of the temple&rsquo;s sanctity across the exile. Babylon&rsquo;s conquest included desecrating the holy kelim (Dan 5:2-4: Belshazzar drinks from them at his banquet — the ultimate sacrilege). Their return before a stone is laid is the first sign that the exile is truly ending: YHWH restores what Babylon had defiled. In the NT, the keli-language migrates from architecture to persons: &lsquo;we have this treasure in jars of clay (ostrakínois skeúesin)&rsquo; (2 Cor 4:7) — the keli-that-carries-holy-presence is now the Spirit-indwelt human body. &lsquo;Chosen instrument (skeuos eklogēs)&rsquo; applied to Paul (Acts 9:15) uses the same keli-concept."
+        },
+        {
+            "code": "H954",
+            "lemma": "בּוּשׁ",
+            "translit": "bûš",
+            "gloss": "be ashamed",
+            "significance": "בּוּשׁ (bush, &lsquo;properly, to pale — to go pale with shame, to be ashamed, to be disappointed or confounded&rsquo;) appears in two critical moments in Ezra that illuminate the range and depth of his spirituality. 8:22: &lsquo;For I was ashamed (boshthi) to ask the king for a band of soldiers and horsemen to protect us from the enemy on our way, since we had told the king, &ldquo;The hand of our God is for good on all who seek him.&rdquo;&rsquo; 9:6: &lsquo;O my God, I am ashamed (boshthi) and blush to lift my face to you, my God, for our iniquities have risen higher than our heads.&rsquo; The first bush is a holy witness-shame: to ask for military protection would contradict Ezra&rsquo;s public testimony about divine sufficiency, so the shame of contradiction is a stronger deterrent than physical danger. The second bush is penitential shame: Ezra takes the community&rsquo;s corporate sin personally and confesses it in the first person plural (&lsquo;our iniquities,&rsquo; &lsquo;our guilt&rsquo;) as though it were his own — the leadership posture of one who identifies with his people&rsquo;s failure rather than distancing from it. Both uses are positive: shame functioning as moral compass. Paul&rsquo;s &lsquo;I am not ashamed (ou...epaischunomai) of the gospel&rsquo; (Rom 1:16) is the gospel&rsquo;s resolution of the bush-dynamic: those who trust in Christ &lsquo;will not be put to shame (ou kataischynthēsetai)&rsquo; (Rom 9:33, citing Isa 28:16)."
+        }
+    ],
+
+    "language_notes": (
+        "<p>The most structurally distinctive feature of Ezra&rsquo;s language is the <strong>Aramaic intrusion</strong> into its Hebrew narrative. Two sections shift entirely into Aramaic — the diplomatic language of the Persian Empire: 4:8&ndash;6:18 (the correspondence about the temple-building controversy) and 7:12&ndash;26 (Artaxerxes&rsquo;s letter to Ezra). These are the most extensive Aramaic prose sections in the Hebrew Bible outside Daniel. The language shift is not accidental or merely archival. When the text moves into Aramaic, it is quoting the political world&rsquo;s own documentary voice — the language in which Persian imperial decrees were actually written and in which the adversaries of the golah community composed their accusations (4:8). The reader experiences the linguistic displacement that the post-exilic community lived: a Hebrew covenant people embedded in a world where another tongue held power. The return to Hebrew after each Aramaic section performs textually what the community is doing historically — re-asserting Hebrew covenant identity within an Aramaic imperial context.</p>"
+        "<p>The <strong>&ldquo;hand of God&rdquo; formula</strong> is Ezra&rsquo;s signature theological commentary. &lsquo;The hand of YHWH his God was on him (yad YHWH Elohav alav)&rsquo; (7:6) appears in five variations across Ezra (7:6, 7:9, 7:28; 8:18, 8:22, 8:31), always as Ezra&rsquo;s explanation of why political impossibilities become possible. The formula is both humble and theologically precise: it attributes political favor (kings&rsquo; decrees, governors&rsquo; cooperation, the right personnel appearing) not to Ezra&rsquo;s diplomatic skill or the community&rsquo;s merit but to YHWH&rsquo;s sovereign disposition of human hearts. The Hebrew yad (hand) is used throughout the OT for divine power-in-action — the &lsquo;mighty hand and outstretched arm&rsquo; of the Exodus — and Ezra&rsquo;s formula connects the post-exilic restoration to that older tradition: the same hand that brought Israel out of Egypt is orchestrating the return from Babylon through Persian kings.</p>"
+        "<p>The <strong>documentary and archival style</strong> of Ezra shapes its Hebrew prose in unusual ways. The book is saturated with lists: the returnees&rsquo; genealogical roster (ch. 2, 153 verses of names and numbers), the inventory of temple vessels Cyrus returned (1:9-11: twelve types, 5,400 items), the enumeration of Ezra&rsquo;s caravan (8:1-14), the confession-list of those who had married foreign women (ch. 10). This list-style is not bureaucratic padding but theological argument: the specificity of the numbers and names is the Chronicler&rsquo;s way of asserting that the restoration is real, traceable, and verifiable. Individual names matter because individual people matter in covenant history. The embedded Persian decrees in 1:2-4, 4:11-22, 5:7-17, 6:2-12, and 7:12-26 are among the most externally verifiable passages in the OT — consistent with the style and content of authentic Persian imperial correspondence, and the Cyrus Cylinder (discovered 1879) confirms the historicity of Cyrus&rsquo;s repatriation policy.</p>"
+        "<p>The <strong>vocabulary of ascent and community identity</strong> runs through Ezra&rsquo;s Hebrew as a sustained metaphor. Every return is alah (going up), not shub (going back) — the pilgrimage language that frames the restoration as liturgical ascent toward the holy city rather than political migration. The community calls itself the golah (the exile-body, from galah = to uncover/go into exile), preserving its identity as the community that was taken away and has returned — a designation that simultaneously acknowledges the wound of exile and the miracle of return. The concern for who belongs to the golah (and thus who belongs to the covenant community) drives the energy of chapters 9-10. This dual vocabulary — alah upward and golah as identity — performs the book&rsquo;s central theological claim: the post-exilic community is continuous with pre-exilic Israel, wounded but not destroyed, ascending but not yet arrived.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> The early church fathers read Ezra primarily through the lens of scriptural typology. Origen noted that &ldquo;Ezra&rdquo; (in the LXX form <em>Esdras</em>) derives from a root meaning &ldquo;helper,&rdquo; and read him as a type of Christ who helps his people return to the Father. Jerome&rsquo;s Vulgate treated Ezra-Nehemiah as one book (1 Esdras) and the apocryphal 1 Esdras as a parallel account; his prefaces to the canonical and apocryphal versions helped establish the complex textual tradition. The patristic tradition was most interested in the rebuilding of the temple as a figure for the church: Chrysostom and Basil used the opposition to the temple-building (Ezra 4-5) as a model for how the devil opposes the building of the church in souls. Cyrus&rsquo;s role as a pagan instrument of divine redemption received sustained attention, connecting Isa 45:1&rsquo;s naming of Cyrus as &ldquo;anointed&rdquo; to the Magi of Matthew 2 — pagan wisdom recognizing and serving the covenant God.</p>"
+        "<p><strong>Reformation:</strong> Calvin&rsquo;s lectures on Ezra-Nehemiah treated the scribal vocation of Ezra 7:10 (&ldquo;to study, to do, and to teach&rdquo;) as the essential pattern for the Reformed minister: one who has first been shaped personally by the word before presuming to expound it publicly. The intermarriage crisis (chs. 9-10) generated both pastoral and polemical readings: Luther saw it as confirming that the people of God must maintain doctrinal and spiritual distinctiveness from surrounding religious cultures, while Anabaptist traditions used the badal-language of separation as a foundation for their theology of the gathered, separated church. Ezra&rsquo;s refusal of a military escort (8:21-22) became a proof-text for the Radical Reformation&rsquo;s pacifist and anti-Constantinian traditions.</p>"
+        "<p><strong>Modern scholarship:</strong> The dominant critical question in modern Ezra studies is the relationship between Ezra, Nehemiah, and Chronicles — whether a single &ldquo;Chronicler&rdquo; composed all three, and what the historical order of Ezra&rsquo;s and Nehemiah&rsquo;s respective missions was. The discovery of the Cyrus Cylinder (1879) validated the historicity of the repatriation decree, shifting scholarship from skepticism about Persian-period sources to appreciation for their reliability. The mixed-marriage dissolution (chs. 9-10) remains the most debated passage: scholars debate whether it represents ethnic exclusivism, covenant-purity concern, or socioeconomic land-protection — with the theological answer hinging on whether &ldquo;foreign wives&rdquo; is primarily a religious or ethnic category (the text&rsquo;s own evidence points to religion).</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Read Ezra and Nehemiah together as one continuous story in two acts (they were originally one book): Ezra&rsquo;s priestly-scribal reform restores covenant identity through the Law, while Nehemiah&rsquo;s civil reform restores the city&rsquo;s physical form. Ezra without Nehemiah is the community without its walls; Nehemiah without Ezra is the walls without the community&rsquo;s spiritual center. The great climax of the combined narrative is Nehemiah 8, where Ezra reads the Law to the assembled people and they weep with understanding — the lamad-vocation of Ezra 7:10 bearing its fullest fruit.</p>"
+        "<p>Track the <strong>&ldquo;hand of God&rdquo; formula</strong> as you read (7:6, 7:9, 7:28; 8:18, 8:22, 8:31). It is Ezra&rsquo;s theological commentary on every political development — the marker that shows him interpreting Persian imperial decisions as divine provision rather than political fortune. Notice how it replaces what you would expect: instead of crediting his own diplomacy or the community&rsquo;s resources, Ezra consistently names the divine hand. His refusal of a military escort (8:21-22) is the boldest application of this theology: his witness to the king about divine protection constrains him from contradicting it by asking for soldiers.</p>"
+        "<p>The <strong>intermarriage crisis (chs. 9-10)</strong> is the passage most modern readers find hardest. Read it with this key: the concern is not ethnicity but religious faithfulness — foreign wives in the OT context consistently meant the introduction of foreign worship (Solomon&rsquo;s case was the supreme example, and the exile it eventually produced was fresh in memory). The dissolution of the marriages is presented as painful and costly, not triumphant. Ezra&rsquo;s own shamem-sitting and first-person plural confession (&ldquo;our iniquities&rdquo;) in 9:6-15 shows that he experiences the community&rsquo;s failure as his own — the posture of the leader who identifies with his people rather than judging from above.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('ezra')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('ezra', merged)
+
+main()

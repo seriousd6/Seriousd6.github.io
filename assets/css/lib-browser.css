@@ -1139,8 +1139,15 @@ mark.lb-find-mark {
 [data-theme="dark"] .lb-vol-chip { background: var(--color-surface-alt, #222); }
 [data-theme="dark"] .lb-find-bar  { background: var(--color-surface-alt, #222); }
 [data-theme="dark"] .lb-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
+/* INTENT: .lb-vol-chip--active and .lb-sec-tab--active use background:var(--color-primary)
+   with color:#fff; in dark mode primary is golden (#e8c87a) — white on golden fails ~1.3:1.
+   --color-on-primary (#1a1208) is the correct paired text color (10:1 on golden). */
+[data-theme="dark"] .lb-vol-chip--active,
+[data-theme="dark"] .lb-sec-tab--active { color: var(--color-on-primary); }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lb-vol-chip--active,
+  :root:not([data-theme="light"]) .lb-sec-tab--active { color: var(--color-on-primary); }
   :root:not([data-theme="light"]) .lb-col-label,
   :root:not([data-theme="light"]) .lb-reader-header { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lb-author-item--active {

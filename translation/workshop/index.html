@@ -22,21 +22,19 @@
       </div>
       <div class="ws-topbar__stats" id="ws-topbar-stats"></div>
       <div class="ws-topbar__actions">
-        <button class="ws-btn ws-btn--sm" id="sw-trans-toggle-btn" type="button" title="Show translation workflow tools">Translation mode</button>
-        <button class="ws-btn ws-btn--sm" id="ws-import-btn" title="Import a previously exported decisions JSON">Import</button>
-        <button class="ws-btn ws-btn--sm" id="ws-export-btn" title="Export all decisions as JSON">Export JSON</button>
-        <input type="file" id="ws-import-file" accept=".json" hidden />
+        <button class="ws-btn ws-btn--sm sw-flashcard-nav-btn" id="sw-flashcard-nav-btn" type="button" title="Vocabulary flashcard review">&#127279; Flashcards <span id="sw-fc-due-badge" class="sw-fc-due-badge"></span></button>
+        <button class="ws-btn ws-btn--sm ws-btn--ghost" id="sw-advanced-toggle" type="button" title="Translation workshop tools">⚙</button>
       </div>
     </div>
 
-    <!-- Passage entry panel — shown above the layout at all times -->
-    <div id="sw-passage-entry" class="sw-passage-entry">
-      <div class="sw-passage-entry__inner">
-        <input type="text" id="sw-ref-input" class="sw-ref-input"
-               placeholder="Study a passage… e.g. John 1:1-5, Romans 8:1"
-               autocomplete="off" spellcheck="false" />
-        <button type="button" id="sw-study-btn" class="ws-btn sw-study-btn">Study Passage</button>
-        <a id="sw-browse-link" class="sw-browse-link" href="#">or browse vocabulary →</a>
+    <!-- Advanced tools panel (translation workflow — hidden by default) -->
+    <div id="sw-advanced-panel" class="sw-advanced-panel" hidden>
+      <div class="sw-advanced-panel__inner">
+        <span class="sw-advanced-panel__label">Translation Workshop</span>
+        <button class="ws-btn ws-btn--sm" id="sw-trans-toggle-btn" type="button">Translation mode</button>
+        <button class="ws-btn ws-btn--sm" id="ws-import-btn">Import decisions</button>
+        <button class="ws-btn ws-btn--sm" id="ws-export-btn">Export JSON</button>
+        <input type="file" id="ws-import-file" accept=".json" hidden />
       </div>
     </div>
 
@@ -48,45 +46,203 @@
       </div>
     </div>
 
-    <!-- Main 3-column layout (shown after load) -->
+    <!-- Main 3-column layout -->
     <div class="ws-layout" id="ws-layout" hidden>
 
-      <!-- Column 1: Phase navigation (also shows when in passage mode) -->
+      <!-- Column 1: Study nav (study tools by default; phases in translation mode) -->
       <div class="ws-col ws-col--nav" id="ws-nav"></div>
 
-      <!-- Column 2: Entry queue OR passage study view -->
+      <!-- Column 2: Mode-switched center panel -->
       <div class="ws-col ws-col--queue" id="ws-col-queue">
-        <!-- Vocabulary browse mode -->
-        <div id="ws-browse-panel" class="sw-panel">
-          <div class="ws-queue-header">
-            <input type="search" id="ws-search" class="ws-search" placeholder="Filter entries…" autocomplete="off" />
-            <span id="ws-count" class="ws-count"></span>
-          </div>
-          <div id="ws-queue" class="ws-queue"></div>
+
+        <!-- Mode selector bar (always visible) -->
+        <div class="sw-mode-bar" id="sw-mode-bar">
+          <button type="button" class="sw-mode-btn sw-mode-btn--active" data-mode="verse">📖 Verse Study</button>
+          <button type="button" class="sw-mode-btn" data-mode="word">🔤 Word Study</button>
+          <button type="button" class="sw-mode-btn" data-mode="book">📚 Book Study</button>
         </div>
 
-        <!-- Passage study mode -->
-        <div id="sw-passage-view" class="sw-passage-view sw-panel" hidden>
-          <div class="sw-passage-header" id="sw-passage-header"></div>
-          <div id="sw-ptiles" class="sw-ptiles"></div>
-          <div class="sw-passage-tabs" id="sw-passage-tabs" hidden>
-            <button type="button" class="sw-tab-btn sw-tab-btn--active" data-tab="literary" title="Literary Structure analysis">Literary Structure</button>
-            <button type="button" class="sw-tab-btn" data-tab="cultural" title="Cultural Context">Cultural Context</button>
-            <button type="button" class="sw-tab-btn" data-tab="intertextual" title="Intertextual connections">Intertextual</button>
-            <button type="button" class="sw-tab-btn" data-tab="synthesis" title="Passage synthesis">Synthesis</button>
+        <!-- ── VERSE STUDY mode ── -->
+        <div id="sw-verse-mode" class="sw-panel">
+
+          <!-- Passage reference entry — lives inside verse study so it's only visible here -->
+          <div id="sw-passage-entry" class="sw-passage-entry">
+            <div class="sw-passage-entry__inner">
+              <input type="text" id="sw-ref-input" class="sw-ref-input"
+                     placeholder="Enter a reference… e.g. John 1:1, Romans 8:1-4, Psalm 22"
+                     autocomplete="off" spellcheck="false" />
+              <select id="sw-version-sel" class="sw-version-sel" title="Bible translation for passage text"></select>
+              <button type="button" id="sw-study-btn" class="ws-btn sw-study-btn">Study</button>
+            </div>
           </div>
-          <div class="sw-tab-content" id="sw-tab-content" hidden>
-            <p class="sw-tab-stub">Literary Structure analysis will appear here (SW-D).</p>
+
+          <!-- Vocabulary browse sub-panel (kept for internal use; not directly reachable from nav) -->
+          <div id="ws-browse-panel" class="sw-panel" hidden>
+            <div class="ws-queue-header">
+              <input type="search" id="ws-search" class="ws-search" placeholder="Filter entries…" autocomplete="off" />
+              <span id="ws-count" class="ws-count"></span>
+            </div>
+            <div id="ws-queue" class="ws-queue"></div>
+          </div>
+
+          <!-- Passage tiles sub-panel -->
+          <div id="sw-passage-view" class="sw-passage-view sw-panel" hidden>
+            <div class="sw-verse-nav-bar" id="sw-verse-nav-bar" hidden>
+              <button type="button" id="sw-prev-verse-btn" class="sw-verse-nav-btn" title="Previous verse">&#8592; Prev</button>
+              <span id="sw-verse-nav-label" class="sw-verse-nav-label"></span>
+              <button type="button" id="sw-next-verse-btn" class="sw-verse-nav-btn" title="Next verse">Next &#8594;</button>
+            </div>
+
+            <!-- 50/50 split: tiles left, analysis right -->
+            <div class="sw-verse-split">
+
+              <!-- Left: passage header + interlinear tiles -->
+              <div class="sw-verse-left">
+                <div class="sw-passage-header" id="sw-passage-header"></div>
+                <div id="sw-ptiles" class="sw-ptiles"></div>
+              </div>
+
+              <!-- Right: analysis tabs + content (Dossier is one of the tabs) -->
+              <div class="sw-verse-right">
+                <div class="sw-passage-tabs" id="sw-passage-tabs" hidden>
+                  <button type="button" class="sw-tab-btn sw-tab-btn--active" data-tab="literary">Literary</button>
+                  <button type="button" class="sw-tab-btn" data-tab="cultural">Cultural</button>
+                  <button type="button" class="sw-tab-btn" data-tab="intertextual">Intertextual</button>
+                  <button type="button" class="sw-tab-btn" data-tab="synthesis">Synthesis</button>
+                  <button type="button" class="sw-tab-btn" data-tab="crossrefs">Cross-refs</button>
+                  <button type="button" class="sw-tab-btn" data-tab="commentary">Commentary</button>
+                  <button type="button" class="sw-tab-btn" data-tab="grammar">Grammar</button>
+                  <button type="button" class="sw-tab-btn" data-tab="dossier">Word</button>
+                </div>
+                <div class="sw-tab-content" id="sw-tab-content" hidden></div>
+                <details class="sw-passage-notes" id="sw-passage-notes">
+                  <summary class="sw-passage-notes__summary">My Notes</summary>
+                  <textarea id="sw-passage-notes-ta" class="sw-passage-notes__ta" rows="4" placeholder="Study notes, observations, questions… Saved automatically."></textarea>
+                </details>
+                <div class="sw-passage-actions" id="sw-passage-actions" hidden>
+                  <button type="button" class="sw-export-btn" id="sw-export-sheet-btn" title="Print a study sheet for this passage">&#128438; Export Study Sheet</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Empty state: no passage loaded yet -->
+          <div id="sw-verse-empty" class="sw-ws-placeholder">
+            Enter a verse reference to begin studying.<br>
+            <small>e.g. John 1:1 · Romans 8:1-4 · Psalm 22</small>
+          </div>
+
+        </div>
+
+        <!-- ── WORD STUDY mode ── -->
+        <div id="sw-word-mode" class="sw-word-study-panel" hidden>
+          <!-- Search bar always visible at top -->
+          <div class="sw-ws-header">
+            <div class="sw-ws-search-bar">
+              <input type="text" id="sw-ws-input" class="sw-ws-input"
+                     placeholder="Search a word, gloss, or Strong's code… e.g. love, logos, G3056"
+                     autocomplete="off" spellcheck="false" />
+              <button type="button" class="ws-btn ws-btn--sm" id="sw-ws-dict-toggle" title="Toggle dictionary / glossary">📖 Dictionary</button>
+            </div>
+          </div>
+
+          <!-- Body area: single column normally, 50/50 grid when dictionary open -->
+          <div class="sw-ws-body-area" id="sw-ws-body-area">
+            <!-- Left column: filter chips + dictionary list (visible only when dict open) -->
+            <div class="sw-ws-dict-col" id="sw-ws-dict-col" hidden>
+              <div class="sw-ws-filters" id="sw-ws-filters">
+                <span class="sw-ws-filter-label">Show:</span>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="greek">Greek</button>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="hebrew">Hebrew</button>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="noun">Nouns</button>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="verb">Verbs</button>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="name">Names</button>
+                <button type="button" class="sw-ws-filter sw-ws-filter--active" data-filter="other">Other</button>
+              </div>
+              <div id="sw-dict-panel" class="sw-dict-panel">
+                <div class="sw-dict-list-wrap">
+                  <div id="sw-dict-status" class="sw-dict-status"></div>
+                  <div id="sw-dict-list" class="sw-dict-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column: word detail (takes full width when dict closed) -->
+            <div class="sw-ws-body" id="sw-ws-body">
+              <p class="sw-ws-placeholder">
+                Search for a Greek or Hebrew word above, or click any tile in Verse Study.<br>
+                <small>Toggle "Dictionary" to browse all entries. Strong's codes work too: G3056, H1697</small>
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- ── BOOK STUDY mode ── -->
+        <div id="sw-book-mode" class="sw-book-study-panel" hidden>
+          <div class="sw-book-header">
+            <select id="sw-book-select" class="sw-book-select">
+              <option value="">Select a book…</option>
+            </select>
+          </div>
+          <div class="sw-book-body" id="sw-book-body">
+            <p class="sw-ws-placeholder">
+              Select a book to explore its themes, key vocabulary, and literary style.
+            </p>
+          </div>
+        </div>
+
       </div>
 
       <!-- Column 3: Lexical dossier -->
       <div class="ws-col ws-col--dossier" id="ws-dossier">
-        <p class="ws-placeholder">← Select an entry to begin reviewing</p>
+        <p class="ws-placeholder">← Click any word in the passage to study it</p>
       </div>
 
     </div>
+
+    <!-- Flashcard View — overlays the study layout when active -->
+    <div id="sw-flashcard-view" class="sw-flashcard-view" hidden>
+      <div class="sw-fc-header">
+        <div class="sw-fc-header-info">
+          <span id="sw-fc-deck-label" class="sw-fc-deck-label"></span>
+          <span id="sw-fc-progress-label" class="sw-fc-progress-label"></span>
+        </div>
+        <button type="button" class="ws-btn ws-btn--sm" id="sw-fc-close-btn">✕ Close</button>
+      </div>
+      <div class="sw-fc-body">
+        <div id="sw-fc-card" class="sw-fc-card">
+          <div class="sw-fc-front" id="sw-fc-front">
+            <div class="sw-fc-word" id="sw-fc-word"></div>
+            <div class="sw-fc-translit" id="sw-fc-translit"></div>
+            <button type="button" class="sw-fc-reveal-btn" id="sw-fc-reveal-btn">Tap to reveal →</button>
+          </div>
+          <div class="sw-fc-back" id="sw-fc-back" hidden>
+            <div class="sw-fc-word sw-fc-word--back" id="sw-fc-back-word"></div>
+            <div class="sw-fc-pos" id="sw-fc-pos"></div>
+            <div class="sw-fc-gloss" id="sw-fc-gloss"></div>
+            <div class="sw-fc-freq" id="sw-fc-freq"></div>
+            <div class="sw-fc-samples" id="sw-fc-samples"></div>
+            <div class="sw-fc-rating-row">
+              <button type="button" class="sw-fc-rate-btn sw-fc-rate--again" data-rating="again">Again<br><small>1 day</small></button>
+              <button type="button" class="sw-fc-rate-btn sw-fc-rate--hard" data-rating="hard">Hard<br><small>3 days</small></button>
+              <button type="button" class="sw-fc-rate-btn sw-fc-rate--good" data-rating="good">Good<br><small>7 days</small></button>
+              <button type="button" class="sw-fc-rate-btn sw-fc-rate--easy" data-rating="easy">Easy<br><small>21 days</small></button>
+            </div>
+          </div>
+        </div>
+        <div id="sw-fc-done" class="sw-fc-done" hidden>
+          <div class="sw-fc-done-icon">✓</div>
+          <div class="sw-fc-done-msg" id="sw-fc-done-msg">All caught up!</div>
+          <div class="sw-fc-done-stats" id="sw-fc-done-stats"></div>
+          <button type="button" class="ws-btn sw-fc-done-close" id="sw-fc-done-close">Back to Study</button>
+        </div>
+      </div>
+      <div class="sw-fc-footer">
+        <span class="sw-fc-hint">Press <kbd>Space</kbd> to reveal · <kbd>1</kbd>Again · <kbd>2</kbd>Hard · <kbd>3</kbd>Good · <kbd>4</kbd>Easy</span>
+      </div>
+    </div>
+
   </div>
 
   <script type="module">
@@ -95,7 +251,7 @@
     initTheme();
     initWorkshopPage().catch(err => {
       const el = document.getElementById('ws-loading-text');
-      if (el) el.textContent = 'Error loading workshop: ' + err.message;
+      if (el) el.textContent = 'Error loading: ' + err.message;
       console.error('[Workshop]', err);
     });
   </script>

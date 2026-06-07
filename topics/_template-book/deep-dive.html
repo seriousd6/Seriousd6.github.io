@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="BOOK_DESCRIPTION — scholarly analysis, interpretive frameworks, and chapter-by-chapter breakdown." />
+  <title>BOOK_NAME — Deep Dive — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/bible-ui.css" />
+  <link rel="stylesheet" href="../../assets/css/book-study.css" />
+</head>
+
+<!--
+  BODY CLASSES — combine ONE from each group:
+    <body class="bk-nt bk-epistle">   ← Romans, Galatians, Hebrews…
+    <body class="bk-ot bk-wisdom">    ← Psalms, Proverbs, Job…
+    <body class="bk-ot bk-prophecy">  ← Isaiah, Jeremiah, Amos…
+    <body class="bk-nt bk-gospel">    ← Matthew, Mark, Luke, John
+    <body class="bk-nt bk-apocalyptic"> ← Revelation
+    <body class="bk-ot bk-history">   ← Joshua, Kings, Chronicles…
+    <body class="bk-ot bk-torah">     ← Genesis, Exodus…
+    <body class="bk-nt bk-history">   ← Acts
+-->
+<body class="bk-nt bk-epistle">
+
+  <main>
+
+    <!-- ── Tier navigation strip ──────────────────────────────────
+         data-tier="deep-dive" activates the Deep Dive item via CSS.
+         Hide tiers not yet built with [hidden] on the <li>.
+    ──────────────────────────────────────────────────────────── -->
+    <nav class="bk-tier-nav" aria-label="Study tiers" data-tier="deep-dive">
+      <div class="bk-tier-nav__inner">
+        <a class="bk-tier-nav__book" href=".">BOOK_NAME</a>
+        <ol class="bk-tier-nav__list">
+          <li data-tier-item="guide"><a class="bk-tier-nav__link" href="index.html"><span class="bk-tier-nav__icon">◎</span><span class="bk-tier-nav__label">Book Guide</span><span class="bk-tier-nav__sub">Overview &amp; questions</span></a></li>
+          <li data-tier-item="deep-dive"><a class="bk-tier-nav__link" href="deep-dive.html" aria-current="page"><span class="bk-tier-nav__icon">⊕</span><span class="bk-tier-nav__label">Deep Dive</span><span class="bk-tier-nav__sub">Scholarly analysis</span></a></li>
+          <li data-tier-item="commentary" hidden><a class="bk-tier-nav__link" href="commentary.html"><span class="bk-tier-nav__icon">❧</span><span class="bk-tier-nav__label">Commentary</span><span class="bk-tier-nav__sub">Classic voices</span></a></li>
+        </ol>
+        <a class="bk-tier-nav__back" href="../../studies/">← All Studies</a>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- ══════════════════════════════════════════════════════
+           HERO
+           ═══════════════════════════════════════════════════ -->
+      <header class="bk-hero">
+        <div class="bk-hero__inner">
+          <div class="bk-hero__badges">
+            <span class="bk-badge bk-badge--testament">New Testament</span>
+            <span class="bk-badge bk-badge--genre">Epistle</span>
+          </div>
+          <h1 class="bk-hero__title">BOOK_NAME — Deep Dive</h1>
+          <p class="bk-hero__subtitle">BOOK_TAGLINE</p>
+          <blockquote class="bk-hero__key-verse">
+            <p>KEY VERSE TEXT HERE.</p>
+            <cite><a class="ref" data-ref="Book Ch:V">Book Ch:V</a></cite>
+          </blockquote>
+        </div>
+      </header>
+
+      <!-- ══════════════════════════════════════════════════════
+           FACTS PANEL
+           ═══════════════════════════════════════════════════ -->
+      <div class="bk-facts">
+        <dl class="bk-facts__grid">
+          <dt>Author</dt>      <dd></dd>
+          <dt>Date</dt>        <dd></dd>
+          <dt>Audience</dt>    <dd></dd>
+          <dt>Theme</dt>       <dd></dd>
+          <dt>Key Verses</dt>  <dd></dd>
+          <dt>Chapters</dt>    <dd></dd>
+        </dl>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           OUTLINE
+           ═══════════════════════════════════════════════════ -->
+      <nav class="bk-outline" aria-label="Book outline">
+        <h2 class="bk-outline__title">Outline</h2>
+        <ol class="bk-outline__list">
+          <li><a href="#section-1">Section One (1:1–N:N)</a></li>
+          <li><a href="#section-2">Section Two (N:N–N:N)</a></li>
+        </ol>
+      </nav>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           CONTENT SECTIONS
+           Add as many bk-section blocks as needed.
+           Deep Dive sections go deeper than the Book Guide:
+           - literary structure (chiasms, discourse analysis)
+           - interpretive debates and competing schools
+           - chapter-by-chapter breakdown with accordions
+           - key thinkers and classic commentary perspectives
+           - symbol tables (for apocalyptic)
+           - background, authorship, canon questions
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="bk-section" id="section-1">
+        <h2 class="bk-section__heading">Section Heading</h2>
+        <span class="bk-section__ref">Book 1:1–N:N</span>
+
+        <p>Commentary here. Reference scripture inline:
+          <a class="ref" data-ref="Book 1:1">Book 1:1</a>.</p>
+
+        <blockquote class="scripture">
+          Extended verse quote.
+          <cite><a class="ref" data-ref="Book 1:1">Book 1:1</a></cite>
+        </blockquote>
+
+        <!-- Available deep-dive elements: -->
+        <!-- bk-argument, bk-thesis, bk-chiasm, bk-symbol-table, bk-symbol -->
+        <!-- bk-oracle, bk-woe, bk-promise, bk-fulfillment -->
+        <!-- bk-discourse, bk-pericope, bk-parallel -->
+        <!-- bk-key-term, bk-cross-ref, bk-note, bk-application -->
+
+      </section>
+
+
+    </div><!-- /.container -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Personal Bible study notes &amp; references.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script type="module" src="../../assets/js/app.js"></script>
+</body>
+</html>

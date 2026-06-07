@@ -1,0 +1,175 @@
+"""
+Book Study Data — 2 Corinthians
+book_id: 2corinthians
+lang: greek
+
+Run: python3 scripts/build-book-study-2corinthians.py
+
+Notes:
+- Key vocabulary selected from Paul author group peaks, with priority given to words
+  distinctive to 2 Corinthians: παράκλησις (10x in ch 1), καυχάομαι (fool's speech),
+  σκόλοψ (only NT occurrence), καταλλαγή (reconciliation as theological term)
+- 2 Corinthians is the most autobiographical Pauline letter; vocabulary reflects
+  the theology of strength-through-weakness that governs the entire letter
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "2corinthians",
+
+    "key_vocabulary": [
+        {
+            "code": "G3874",
+            "lemma": "παράκλησις",
+            "translit": "paraklēsis",
+            "gloss": "comfort",
+            "significance": "παράκλησις opens the letter with extraordinary density: it appears 10 times in 1:3–7, more than in any other NT passage. The word carries a double sense — comfort in suffering and exhortation to action — that English must split into two words. Paul's central claim is that God's comfort flows through the apostle's shared suffering to comfort others (1:4), making affliction the very channel of ministry. The word shares a root with παράκλητος (Paraclete, the Spirit in John's Gospel), suggesting the Spirit-mediated character of the comfort Paul describes."
+        },
+        {
+            "code": "G2347",
+            "lemma": "θλῖψις",
+            "translit": "thlipsis",
+            "gloss": "anguish",
+            "significance": "θλῖψις (literally 'pressure,' 'crushing') is paired throughout chapters 1 and 4–6 with παράκλησις as its counterpart. Paul's catalogues of suffering (4:8–9; 6:4–10; 11:23–29) use θλῖψις and cognates to enumerate what the Corinthians counted as disqualifying weaknesses. Paul's reframing is eschatological: 'this light momentary θλῖψις is preparing for us an eternal weight of glory beyond all comparison' (4:17). The contrast between the lightness of the present pressure and the 'weight' of coming glory is a deliberate rhetorical inversion of normal valuation."
+        },
+        {
+            "code": "G769",
+            "lemma": "ἀσθένεια",
+            "translit": "astheneia",
+            "gloss": "weakness",
+            "significance": "ἀσθένεια is the theological crux of 2 Corinthians. The 'super-apostles' (11:5) treated Paul's weakness — his unimpressive presence, his suffering, his refusal of payment — as evidence against his apostleship. Paul's counterargument is that weakness is precisely the condition in which Christ's power rests upon the apostle (12:9). The 'thorn in the flesh' episode (12:7–10) climaxes with Paul learning to 'boast all the more gladly of my ἀσθενείαι, so that the power of Christ may rest upon me.' This is not mere resignation but a theological conviction about how divine power operates in the new covenant."
+        },
+        {
+            "code": "G2744",
+            "lemma": "καυχάομαι",
+            "translit": "kauchaomai",
+            "gloss": "boast",
+            "significance": "καυχάομαι appears more frequently in 2 Corinthians than in any other NT letter, and its deployment is deliberately ironic. The 'Fool's Speech' of chapters 10–13 is a sustained parody of the Greco-Roman peristasis catalog — a genre in which a public figure listed honors, achievements, and patronage to establish social status. Paul performs this genre while systematically subverting it: his list includes imprisonments, beatings, shipwrecks, and daily anxiety for the churches (11:23–28). When he finally 'boasts' in a vision (12:1–6), he immediately introduces the thorn that prevents his boasting. In 2 Corinthians, true apostolic boasting is boasting in weakness (11:30; 12:9)."
+        },
+        {
+            "code": "G1391",
+            "lemma": "δόξα",
+            "translit": "doxa",
+            "gloss": "glory",
+            "significance": "The old-covenant/new-covenant contrast of chapters 3–4 is organized around δόξα. Moses' face shone with glory, but Paul argues the Mosaic glory was (1) a ministry of condemnation and death, and (2) fading (3:7–11). The new covenant ministry is a ministry of surpassing, permanent glory. The theological surprise is where this glory is located: not in impressive apostolic display but in the proclamation of 'the light of the knowledge of the glory of God in the face of Jesus Christ' (4:6), which God deposits in weak, breakable clay vessels (4:7). Glory through weakness is 2 Corinthians' governing paradox."
+        },
+        {
+            "code": "G1242",
+            "lemma": "διαθήκη",
+            "translit": "diathēkē",
+            "gloss": "covenant",
+            "significance": "In 3:6 Paul identifies himself as a 'servant of the new διαθήκη — not of the letter but of the Spirit; for the letter kills, but the Spirit gives life.' This is the letter's most explicit claim to eschatological fulfillment: Paul's ministry is the arrival of the new covenant promised by Jeremiah (Jer 31:31–34) and Ezekiel (Ezek 36:26–27). The contrast is not between two equal covenants but between a transitional, preparatory covenant that served its purpose and the permanent order it anticipated. The word διαθήκη could mean either covenant or will/testament — both senses are activated in the NT's theology of Christ's death."
+        },
+        {
+            "code": "G1248",
+            "lemma": "διακονία",
+            "translit": "diakonia",
+            "gloss": "ministry",
+            "significance": "2 Corinthians is the NT's most sustained meditation on the nature of ministry (διακονία), appearing repeatedly in chapters 3–6 and 8–9. Paul describes the 'ministry of the new covenant' (3:6), the 'ministry of condemnation' vs. the 'ministry of righteousness' (3:9), the 'ministry of reconciliation' (5:18), and the 'ministry of generosity' in the collection (8:4; 9:1, 12, 13). The consistent thread is that διακονία always involves concrete suffering service (6:3–10), not status display. The super-apostles' boasting about status is the antithesis of Paul's διακονία theology."
+        },
+        {
+            "code": "G2643",
+            "lemma": "καταλλαγή",
+            "translit": "katallagē",
+            "gloss": "reconciliation",
+            "significance": "καταλλαγή (from καταλλάσσω, 'to change completely, to restore from enmity to favor') is the theological heart of 5:18–21, one of the NT's most compressed atonement passages. The word implies a previous state of hostility resolved from God's side: 'God was in Christ reconciling the world to himself, not counting their sins against them' (5:19). The theological weight falls on the divine initiative — God does not wait for humanity to reconcile itself but acts unilaterally in Christ. The content (καταλλαγή) and the mission (the ministry of καταλλαγή) are inseparable: Paul is both a recipient of and an ambassador for reconciliation."
+        },
+        {
+            "code": "G4632",
+            "lemma": "σκεῦος",
+            "translit": "skeuos",
+            "gloss": "vessel",
+            "significance": "In 4:7 Paul uses σκεῦος (an ordinary clay pot) for the apostle's human body and person: 'we have this treasure in clay σκεύη, to show that the surpassing power belongs to God and not to us.' The choice of image is deliberate — clay jars were the cheapest, most breakable household containers in the ancient world, used for storing grain, oil, or documents. The 'treasure' is the gospel of Christ's glory (4:4–6). The very ordinariness of the vessel proves the extraordinary character of its contents. This verse crystallizes the theological logic of 2 Corinthians: Paul's weakness is not incidental to his ministry but constitutive of it."
+        },
+        {
+            "code": "G4647",
+            "lemma": "σκόλοψ",
+            "translit": "skolops",
+            "gloss": "thorn",
+            "significance": "σκόλοψ appears only once in the entire NT, at 12:7. The word means a sharpened stake or thorn — something that pierces and cannot be removed without effort. Paul describes his unspecified affliction as a 'messenger of Satan to harass me' — an agent of cosmic opposition — but God's response to Paul's three petitions for removal is not removal but reinterpretation: 'My grace is sufficient for you, for my power is made perfect in weakness' (12:9). The identity of the σκόλοψ (eye disease? epilepsy? a specific opponent?) has generated centuries of speculation, but its function is clear: it is the paradigmatic case of divine power through human weakness."
+        },
+        {
+            "code": "G2537",
+            "lemma": "καινός",
+            "translit": "kainos",
+            "gloss": "new",
+            "significance": "In 5:17 Paul writes: 'if anyone is in Christ, he is a καινὴ κτίσις (new creation); the old has passed away; behold, the new has come.' Καινός means qualitatively new — not merely recent (νέος) but of a different order. The 'new creation' language draws on Isaiah's eschatological promises (Isa 43:18–19; 65:17) and claims that those who are united to the risen Christ already participate in the new age that was expected to arrive at the end of history. This is realized eschatology with a present dimension: the future age has broken into the present through Christ's resurrection, and those in Christ belong to the new order already."
+        },
+        {
+            "code": "G5485",
+            "lemma": "χάρις",
+            "translit": "charis",
+            "gloss": "grace",
+            "significance": "χάρις in 2 Corinthians spans multiple registers. In the comfort section (1:2–11) it is God's free favor. In the collection chapters (8–9) it becomes the operative term for generous giving: the Macedonians' generosity is a χάρις (8:1), the collection is a χάρις (8:6, 7, 19), and Paul bases his appeal on the christological foundation — 'you know the χάρις of our Lord Jesus Christ, that though he was rich, yet for your sake he became poor' (8:9). God's own inexhaustible gift is called his ἀνεκδιήγητος χάρις ('inexpressible grace,' 9:15). The christological χάρις of the incarnation is the model and the motive for human generosity."
+        },
+        {
+            "code": "G4052",
+            "lemma": "περισσεύω",
+            "translit": "perisseuō",
+            "gloss": "abound",
+            "significance": "περισσεύω (to overflow, to superabound) appears repeatedly in 2 Corinthians to characterize the inexhaustible, excessive quality of divine grace. Affliction abounds AND consolation abounds (1:5); thanksgiving overflows to God's glory (4:15); the Macedonians' joy overflowed into generosity despite severe poverty (8:2); the one who sows generously will harvest περισσεύοντα (abundantly, 9:6). The repeated use of this word against a backdrop of suffering is deliberate: divine grace does not merely equal human need but exceeds it in all directions. For Paul, the categories of accounting and sufficiency are replaced by the logic of overflow."
+        },
+        {
+            "code": "G1382",
+            "lemma": "δοκιμή",
+            "translit": "dokimē",
+            "gloss": "proof",
+            "significance": "δοκιμή (tested quality, proven character) appears in 2:9; 8:2; 9:13; and 13:3, always in the context of something or someone being evaluated under pressure. The cognate verb δοκιμάζω (to test/examine) also appears (13:5 — 'Examine yourselves, to see whether you are in the faith'). Paul is defending his own δοκιμή as an apostle (13:3), pointing to the Macedonians' δοκιμή shown through generous giving under affliction (8:2), and anticipating that the collection will demonstrate the Corinthians' δοκιμή (9:13). The word implies that genuine quality is only visible after testing — it cannot be claimed in advance or established by impressive self-presentation."
+        }
+    ],
+
+    "language_notes": (
+        "<p>The letter's most famous grammatical move is Paul's use of <strong>ἵνα</strong> (hina, 'so that') in the peristasis catalogs — his lists of sufferings. In 4:10–11, Paul lists being 'always carrying in the body the death of Jesus, so that (ἵνα) the life of Jesus may also be manifested in our bodies.' The ἵνα clause turns suffering from mere adversity into teleological instrument: each affliction serves a divine purpose. This grammatical pattern — suffering + ἵνα + divine outcome — runs through chapters 4–6 and encodes Paul's theology of cruciform ministry directly into his syntax.</p>"
+        "<p>The 'Fool's Speech' of chapters 10–13 is a masterpiece of <strong>ironic rhetoric</strong> that deploys and parodies a recognizable Greco-Roman genre, the peristasis catalog (or 'honor list'). A Roman orator defending his honor before critics would list his achievements, patronage, divine visions, and social credentials. Paul performs this genre in chapters 11–12 while systematically inverting its content: his list culminates in beatings, shipwrecks, and a midnight escape in a basket (11:32–33), which he caps with a vision he cannot boast about (12:1–6), followed immediately by a humiliating thorn in the flesh (12:7). Greek-literate readers in Corinth would have recognized the genre and felt the irony more acutely than modern readers.</p>"
+        "<p>The old-covenant/new-covenant comparison in chapter 3 depends on a subtle textual argument about <strong>Exodus 34:29–35</strong>. The Hebrew text says Moses put a veil on his face to prevent Israel from seeing it — the purpose of the veil is ambiguous. Paul's interpretation (3:13–18) reads the veil as covering <em>the fading of the glory</em>, so that Israel could not see the glory of the Mosaic covenant coming to an end. This is an interpretive move: the LXX does not say the glory faded. Paul reads the end of Mosaic glory into the text to argue that the old covenant was always transitional — its glory was real but temporary, preparing for the permanent glory of the new covenant.</p>"
+        "<p>2 Corinthians features <strong>the most extensive use of the preposition ὑπέρ</strong> (hyper, 'over, beyond, for') in the Pauline corpus, reflecting the 'surpassing' and 'excessive' character of new covenant realities. Key compounds: <em>ὑπεραίρομαι</em> (to become conceited, 12:7); <em>ὑπερβολή</em> (surpassing/exceedingly, 4:7, 17; 12:7); <em>ὑπερεκπερισσοῦ</em> (exceeding abundantly). The prefix carries theological weight: grace is not merely adequate but 'above and beyond.' Paul's opponents are 'super-apostles' (ὑπερλίαν ἀπόστολοι, 11:5; 12:11) — the very word he uses for them is an ironic echo of his own theological vocabulary of excess.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Chrysostom's homilies on 2 Corinthians (c. AD 390) gave sustained attention to Paul's theology of weakness, reading the thorn in the flesh as a providential humbling device and the peristasis catalogs as demonstrations of apostolic virtue. The 5:21 verse ('He made him to be sin who knew no sin') was foundational for the Greek Fathers' theology of theosis: Christ takes on the human condition of alienation from God so that humanity might participate in divine righteousness. Origen's allegorical method found the veil passages of chapter 3 particularly fruitful for developing his theory of spiritual interpretation of scripture.</p>"
+        "<p><strong>Reformation:</strong> Luther drew heavily on 2 Corinthians for his <em>theologia crucis</em> (theology of the cross), the argument that God is known 'under contraries' — in weakness, suffering, and foolishness rather than in power and glory. The contrast between the theologian of the cross and the theologian of glory, central to the Heidelberg Disputation (1518), is essentially a reading of 2 Corinthians 4–6. Calvin's commentary on 2 Corinthians engaged Paul's argument against the 'super-apostles' as a template for the Reformation's own controversy with Rome over apostolic authority and self-commendation.</p>"
+        "<p><strong>Modern debates:</strong> The letter's structural integrity has been the major twentieth-century critical question: most scholars now hold that chapters 10–13 (the 'Fool's Speech') were originally a separate letter — the 'severe letter' of 2:3–4 — later compiled with chapters 1–9. The shift in tone between the reconciling chapters 1–9 and the sharp polemics of 10–13 is the primary evidence. The question of the 'super-apostles' identity has also generated substantial debate: Jewish-Christian missionaries? Itinerant sophists? Pneumatics with a realized eschatology? Their precise identity remains contested, though most agree they offered what the Corinthians found impressive: eloquence, visions, and social status.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Before reading, hold in mind that 2 Corinthians is a crisis letter written out of deep personal pain. Paul has been publicly challenged, his authority disputed, and his relationship with the congregation he founded has been damaged. Understanding this emotional and rhetorical context transforms what can read as abstract theology into a deeply pastoral argument. Every claim Paul makes about apostolic ministry — weakness, suffering, treasure in clay jars — is also a defense of his own credibility with people he loves and fears losing.</p>"
+        "<p>Read chapters 1–7 tracking the word <strong>παράκλησις</strong> (comfort) as it moves from God's comfort of Paul (1:3–7) through Paul's reconciliation with the wounded congregation (2:5–11; 7:5–16). Then read chapters 8–9 as the collection appeal: note how Paul grounds the request in christology (8:9) rather than guilt. Chapters 10–13 should be read as deliberate parody — Paul is performing the genre of Greco-Roman self-commendation while systematically subverting it. When he 'boasts,' notice what he boasts about.</p>"
+        "<p>The most common misreading of 2 Corinthians is treating Paul's theology of weakness as a generic encouragement to accept hardship. His argument is more specific: weakness is the condition in which <em>Christ's power</em> is displayed, not human resilience. The thorn in the flesh is not removed; God's answer is sufficiency, not deliverance. Watch also for how 5:17 ('new creation') and 5:21 (the great exchange) function as the theological foundation beneath Paul's appeal for reconciliation with the Corinthians — the gospel of cosmic reconciliation motivates the personal reconciliation he is seeking.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('2corinthians')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('2corinthians', merged)
+
+main()

@@ -1,0 +1,150 @@
+import json, os, sys
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+BOOK_ID = '1corinthians'
+
+new_data = {
+    "bookId": BOOK_ID,
+    "key_vocabulary": [
+        {
+            "code": "G4716",
+            "lemma": "σταυρός",
+            "translit": "stauros",
+            "gloss": "cross",
+            "significance": "The cross is the epistemological center of 1 Corinthians: Paul declares he determined to know nothing among the Corinthians except 'Jesus Christ and him crucified' (2:2). The Greek word denoted an instrument of shameful execution — the antithesis of the honor the Corinthians craved. Paul's assertion that this humiliation is simultaneously the wisdom and power of God (1:24) directly confronts their status competition. Every ethical problem in the letter — division, lawsuits, idol food, Lord's Supper abuses — can be diagnosed as a failure to internalize the cruciform logic Paul establishes here."
+        },
+        {
+            "code": "G4678",
+            "lemma": "σοφία",
+            "translit": "sophia",
+            "gloss": "wisdom",
+            "significance": "1 Corinthians uses σοφία 17 times, more than any other Pauline letter, because the Corinthians' divisions were rooted in competing claims to wisdom — the rhetorical excellence and philosophical sophistication prized in the Greco-Roman city. Paul distinguishes human σοφία (worldly cleverness that nullifies the cross) from the hidden σοφία of God (the crucified Christ revealed by the Spirit). Chapters 1–4 turn Corinthian cultural values upside down: what the city calls wisdom is folly before God, and what it calls folly is God's own wisdom."
+        },
+        {
+            "code": "G3472",
+            "lemma": "μωρία",
+            "translit": "moria",
+            "gloss": "foolishness",
+            "significance": "Μωρία (foolishness, absurdity) is the rhetorical foil to σοφία throughout chapters 1–4. Paul uses it polemically: the message of the cross is μωρία to those who are perishing (1:18), and God has made foolish the wisdom of the world (1:20). But the sharpest edge is 3:18 — 'If anyone thinks he is wise in this age, let him become a fool so that he may become wise.' Paul reclaims the charge of foolishness as the path to authentic wisdom, inverting the honor system that drove Corinthian factionalism."
+        },
+        {
+            "code": "G1411",
+            "lemma": "δύναμις",
+            "translit": "dynamis",
+            "gloss": "power",
+            "significance": "Paired with σοφία throughout chapters 1–4, δύναμις reframes what counts as divine power. The Corinthians admired powerful rhetoric and spectacular spiritual displays; Paul contrasts this with 'the word of the cross' which is 'the power of God' for the saved (1:18). His own weak, fearful presence among them (2:3) was deliberately cruciform — so that their faith might rest on 'the power of God' rather than human persuasion (2:5). In chapter 15, δύναμις returns: the spiritual body is raised in power (15:43), and the last enemy destroyed is death itself (15:54–55)."
+        },
+        {
+            "code": "G4983",
+            "lemma": "σῶμα",
+            "translit": "soma",
+            "gloss": "body",
+            "significance": "σῶμα carries three interlocking theological registers in 1 Corinthians, unique in the NT for the density of their interplay. First, the individual body belongs to the Lord and is a temple of the Holy Spirit (6:13–20), making sexual ethics a theological matter. Second, believers collectively constitute one σῶμα of Christ, with many members whose diverse gifts serve the whole (12:12–27). Third, the resurrection σῶμα of chapter 15 — sown perishable, raised imperishable — answers the Corinthians' skepticism about bodily resurrection. These three registers mutually reinforce Paul's argument throughout."
+        },
+        {
+            "code": "G386",
+            "lemma": "ἀνάστασις",
+            "translit": "anastasis",
+            "gloss": "resurrection",
+            "significance": "Chapter 15 contains the most sustained and theologically dense treatment of resurrection in the entire New Testament. Paul grounds the whole Christian edifice in the historical ἀνάστασις of Jesus (15:3–8), then draws the logical corollary: if there is no resurrection of the dead, then Christ has not been raised, and the faith is empty (15:14). The Corinthian error was not atheism but over-realized eschatology — they thought they had already arrived spiritually and needed no future bodily resurrection. Paul's rebuttal climaxes in the apocalyptic sequence of 15:20–28 and the mystery of transformation in 15:51–55."
+        },
+        {
+            "code": "G5486",
+            "lemma": "χάρισμα",
+            "translit": "charisma",
+            "gloss": "spiritual gift",
+            "significance": "χάρισμα (a grace-gift, derived from χάρις) is Paul's distinctive term for Spirit-given capacities — it appears 17 times in the NT and 7 of those are in 1 Corinthians (12:4, 9, 28, 30, 31). The word's root in χάρις (grace) is not accidental: χαρίσματα are gifts, not achievements or status markers. Paul's lists in chapters 12 and 14 deliberately include both 'spectacular' gifts (tongues, healing, prophecy) and 'mundane' ones (administration, helps) to undercut the Corinthians' spiritual hierarchy — every gift serves the body, and spectacular gifts do not indicate superior spirituality."
+        },
+        {
+            "code": "G4152",
+            "lemma": "πνευματικός",
+            "translit": "pneumatikos",
+            "gloss": "spiritual",
+            "significance": "The adjective πνευματικός ('of the Spirit') is contested terrain in 1 Corinthians. The Corinthians apparently claimed πνευματικοί identity to justify their freedom (from sexual ethics, from consideration of the weak, from the need for bodily resurrection). Paul redefines the term: the truly πνευματικός person discerns all things by the Spirit of God (2:15), and the Spirit-taught person is precisely the one who recognizes the cross as wisdom (2:13). In chapters 12–14, the περὶ δέ τῶν πνευματικῶν ('now concerning spiritual gifts/people') opens Paul's reordering of the gifts around love and edification of the body."
+        },
+        {
+            "code": "G26",
+            "lemma": "ἀγάπη",
+            "translit": "agape",
+            "gloss": "love",
+            "significance": "Chapter 13 is the structural and theological center of 1 Corinthians 12–14, placed between the gift-diversity of chapter 12 and the ordering of gifts in chapter 14. Paul calls ἀγάπη 'the more excellent way' (12:31b) — not a gift alongside others but the frame within which all gifts are exercised. The 15 descriptors of love in 13:4–7 function as a mirror held up to the Corinthians: patience and kindness against their impatience with the weak; not insisting on one's own way against the assertion of freedoms that harm others. Without ἀγάπη, even tongues and prophecy are nothing (13:1–3)."
+        },
+        {
+            "code": "G4151",
+            "lemma": "πνεῦμα",
+            "translit": "pneuma",
+            "gloss": "Spirit",
+            "significance": "The Spirit's role in 1 Corinthians centers on two claims. First, the Spirit searches all things, including the depths of God, and has been given to believers so that they may know what God has freely given (2:10–12) — the Spirit is the mediator of cruciform wisdom, not of worldly impressive display. Second, the Spirit indwells and animates the community as a whole (3:16) and each member individually (6:19), making ethical violations against the body a violation against the Spirit's temple. Chapters 12–14 show the Spirit as the common source of diverse gifts that serve one body."
+        },
+        {
+            "code": "G3485",
+            "lemma": "ναός",
+            "translit": "naos",
+            "gloss": "temple",
+            "significance": "Paul uses ναός (the inner sanctuary of a temple, distinct from the larger precinct ἱερόν) in two electrifying applications. In 3:16–17 the church community in Corinth is God's temple — destroying it through division is destroying what God dwells in. In 6:19–20 each individual believer's body is a ναός of the Holy Spirit. In a city famous for its temples and cultic life, this was a striking relocation of the divine presence: not in stone shrines but in the community gathered around the crucified Lord and in each member's body. This relocates the sacred and makes ordinary bodily decisions theological acts."
+        },
+        {
+            "code": "G2842",
+            "lemma": "κοινωνία",
+            "translit": "koinonia",
+            "gloss": "fellowship / participation",
+            "significance": "κοινωνία means both 'fellowship/community' and 'participation/sharing in' something — English requires two words where Greek has one. In 1:9 Paul grounds the entire letter in God's faithfulness to call believers into κοινωνία with his Son. In 10:16 the eucharistic cup is 'κοινωνία of the blood of Christ' and the bread 'κοινωνία of the body of Christ' — a participation in Christ's death, not merely a symbol. This eucharistic κοινωνία makes participation in idol feasts (10:20) a contradiction: you cannot have κοινωνία with the table of the Lord and the table of demons simultaneously."
+        },
+        {
+            "code": "G1577",
+            "lemma": "ἐκκλησία",
+            "translit": "ekklesia",
+            "gloss": "church / assembly",
+            "significance": "1 Corinthians uses ἐκκλησία more than any other Pauline letter (21 times), reflecting how central ecclesiology is to Paul's pastoral argument. The word itself was the standard Greek term for the civic assembly — the gathered citizens of a polis. Paul adapts it for the gathered people of God in a given city, and he addresses the letter to 'the church of God in Corinth' (1:2). The Corinthians' competitive factionalism was a failure to act as a true ἐκκλησία: the Lord's Supper abuses (11:18–22) mean that 'when you come together, it is not the Lord's Supper you eat' — their assembly is not functioning as the assembly of God."
+        },
+        {
+            "code": "G2919",
+            "lemma": "κρίνω",
+            "translit": "krino",
+            "gloss": "judge",
+            "significance": "Judgment (κρίνω and its cognates) runs through 1 Corinthians in three distinct registers. In chapters 4–6 Paul confronts the Corinthians' eagerness to judge: they were evaluating Paul's apostleship (4:3–4), taking disputes to pagan courts (6:1–8). Paul's rebuttal is sharp — he does not even judge himself, since it is the Lord who judges (4:4). Yet in 11:28–34 Paul calls for self-examination (διακρίνω) at the Lord's Supper, because those who eat and drink without discerning (διακρίνω) the body 'eat and drink judgment (κρίμα) on themselves.' The cross inverts human judgment hierarchies while creating new accountabilities before God."
+        }
+    ],
+    "language_notes": (
+        "<p>First Corinthians is structured by a distinctive epistolary formula that modern readers often miss: <strong>περὶ δέ</strong> (peri de, 'now concerning'), which appears six times in chapters 7–16 (7:1, 7:25, 8:1, 12:1, 16:1, 16:12). Each occurrence marks Paul's reply to a question or situation that the Corinthians had raised in their letter to him. Recognizing the formula transforms the reading experience: chapters 1–6 address problems Paul heard about by report, while chapters 7–16 are Paul's direct answers to their agenda. The letter is therefore a dialogue, not a monologue.</p>"
+        "<p>A feature unique in the Pauline corpus is Paul's apparent practice of quoting Corinthian slogans and then rebutting or qualifying them. Scholars have identified several candidates: 'All things are lawful for me' (6:12; 10:23), 'It is good for a man not to touch a woman' (7:1), 'An idol is nothing' (8:4), 'We all have knowledge' (8:1). In each case Paul does not deny the slogan outright but circumscribes it: 'but not all things are beneficial,' 'but not all things build up.' Reading these as quotations changes the rhetorical texture of the letter — Paul is not issuing abstract principles but responding to Corinthian positions with cruciform logic.</p>"
+        "<p>The antithesis of <strong>σοφία</strong> (wisdom) and <strong>μωρία</strong> (foolishness) in chapters 1–4 is the letter's governing rhetorical inversion. Greek rhetorical culture valued sophistry and elegant demonstration; Paul explicitly rejects 'lofty speech or wisdom' (2:1) and 'persuasive words of wisdom' (2:4), not because clarity is bad but because display-wisdom draws attention to the speaker rather than to the crucified Christ. The σοφία/μωρία antithesis was also a cultural flashpoint — orators competed for honor, and to be called a fool (μωρός) was a serious social insult. Paul's embrace of the 'foolishness' of the cross is a deliberate inversion of Corinthian status logic.</p>"
+        "<p>The word <strong>σῶμα</strong> (body) is used with an unusual semantic density: individual human body, eucharistic body of Christ, and the church as corporate body of Christ all appear in the same letter, sometimes in adjacent chapters. This polyvalence is not confusion — it is theological argument by analogy. Paul can move from 'the body is for the Lord' (6:13) to 'you are the body of Christ' (12:27) to 'with what body do they come?' (15:35) because each usage reinforces a single conviction: the bodily, material, communal, and eschatological dimensions of redemption cannot be spiritualized away.</p>"
+    ),
+    "reception": (
+        "<p>The Corinthian correspondence has been a contested battleground through Christian history precisely because it addresses questions that never became settled. The resurrection chapter (15) was the primary NT text deployed against early Gnostic teachers who denied bodily resurrection; Irenaeus of Lyons drew on it extensively in <em>Against Heresies</em> to argue that creation and the body are affirmed, not escaped, in salvation. The same chapter later shaped debates with Platonizing theology about whether Christians expect a spiritual or material resurrection body.</p>"
+        "<p>The Lord's Supper texts of chapters 10–11 were at the center of the sixteenth-century Reformation controversies. Luther and Zwingli's bitter dispute at the Marburg Colloquy (1529) turned on the meaning of 1 Corinthians 10:16 — is the cup 'participation in the blood of Christ' a real presence or a commemorative symbol? The Reformed tradition has generally followed Zwingli's reading; Lutheran and Catholic traditions maintain a stronger real-presence interpretation. No NT text has generated more confessional division in Western Christianity.</p>"
+        "<p>Chapter 13 became, somewhat ironically, one of the most secularized texts in the Bible — read at weddings in contexts where its original argument (love as the frame for contested spiritual gifts) is entirely absent. The theological force of the chapter is recovered only when read between chapters 12 and 14: it is not a general hymn to romance but a direct challenge to the Corinthians' status competition over spectacular gifts. Its modern popularity as a wedding reading testifies both to its literary power and to the tendency of reception to detach texts from their rhetorical context.</p>"
+        "<p>The gift passages of chapters 12–14 became foundational for Pentecostal and charismatic movements of the twentieth century, and the 'cessationist' response — arguing that sign gifts ceased with the apostolic age — produced an extensive exegetical literature. 1 Corinthians 14 (with its instruction that tongues require interpretation and prophecy requires evaluation) has been cited by both sides: charismatics as permission, cessationists as evidence that even Paul's churches had to regulate potentially disordered gifts.</p>"
+    ),
+    "reading_guide": (
+        "<p>Read 1 Corinthians in two passes. On the first pass, mark every occurrence of the <strong>περὶ δέ</strong> formula ('now concerning') in chapters 7–16 and note the topic it introduces. This reveals the letter's architecture: chapters 1–6 address reported problems (divisions, immorality, lawsuits); chapters 7–16 answer the Corinthians' own questions. Each section of chapters 7–16 should be read as Paul's reply to a specific Corinthian position — often one he will qualify rather than simply endorse.</p>"
+        "<p>On the second pass, track the cross (<strong>σταυρός</strong>) as the interpretive key. The argument Paul establishes in chapters 1–4 — that the crucified Christ is the wisdom and power of God, inverting all human status hierarchies — is the logic he applies to every later problem. Division in the church? The cross levels all patron-teacher hierarchies. Sexual ethics? The body belongs to the crucified and risen Lord. Idol food? The freedom of the strong must be crucified for the sake of the weak. Lord's Supper abuses? Class distinctions cannot survive the one bread of the one body. Resurrection denial? You cannot spiritualize away the bodily death and raising of Jesus.</p>"
+        "<p>Chapter 13 should be read not as a digression but as the pivot of the gift argument: chapters 12 and 14 flank it, and love is Paul's answer to the Corinthian gift hierarchy. When you reach chapter 15, note that Paul cites the earliest creedal tradition in the NT (15:3–8) before building his resurrection argument — he is grounding his case in shared apostolic testimony, not personal innovation. The letter ends (15:58) with a call to 'abound in the work of the Lord' precisely because resurrection hope makes present labor meaningful rather than futile.</p>"
+    )
+}
+
+existing = load_book_study(BOOK_ID)
+merged = merge_book_study(existing, new_data)
+save_book_study(BOOK_ID, merged)

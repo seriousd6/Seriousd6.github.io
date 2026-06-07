@@ -1,28 +1,26 @@
 """
-Combined script: James, 1 Peter, 2 Peter, 2 John, 3 John, Jude — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for each letter.
+MKT Christ Commentary — 2 Peter ch1-3
+59 missing verses (ch1v1 and ch3v10 already present)
+Run: python3 scripts/zc-christ-2peter-1-3.py
 
-The General Epistles span wisdom tradition (James), suffering-theology (1 Peter),
-eschatological warning (2 Peter, Jude), and community discernment (2-3 John).
+Christological threads:
+- Ch1: Christ as source of divine-nature participation; Transfiguration as foundational Christophany;
+        virtue chain as Christological formation; prophetic word pointing to Christ's glory
+- Ch2: judgment-rescue pattern revealing Christ's character; the denied Despotes who purchased even
+        the apostates; Balaam as antitype of Christ's true prophetic word; living water contrast
+- Ch3: Christ as the coming Day of the Lord; pre-incarnate Logos in creation; new creation in Christ;
+        doxology to Christ closing the epistle
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_comm(layer, book, data):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -30,21 +28,8 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -52,288 +37,91 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# JAMES
-# ============================================================
-
-JAMES_ECHO = {
+CHRIST = {
   "1": {
-    "17": [
-      {"type": "allusion", "target": "Num 23:19", "note": "With whom there is no variation or shadow due to change — God is not a man that he should lie or change his mind; YHWH's immutability as the ground of trust echoes in James's description of the Father of lights"},
-      {"type": "allusion", "target": "Mal 3:6", "note": "I the LORD do not change — YHWH's immutability guarantees the covenant; James's 'no variation' language in describing the Father draws from the prophetic declaration of divine constancy"}
-    ]
+    "2": '<p>Grace and peace come "through the knowledge (<em>epignōsis</em>) of God and of Jesus our Lord" — Christ is co-named with God the Father as the joint source of the covenant blessing-pair that opens the letter. The intensified <em>epi-gnōsis</em> (full, relational knowledge) echoes the letter\'s central polemic against the false teachers who claim <em>gnōsis</em> while denying the Sovereign Lord (2:1). True knowledge of Christ produces the grace and peace that is the mark of genuine salvation; counterfeit knowledge produces neither.</p>',
+    "3": '<p>"His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness" — the "him who called us" is Christ (cf. 1 Pet 1:15; 2:9), and the power at work is his. The One who possesses <em>theias dynameōs</em> (divine power) is described in the same letter as "our God and Savior Jesus Christ" (v1). Everything needed for <em>eusebeia</em> (godly life) flows from union with the Christ who calls by his own glory — the glory displayed at the Transfiguration (vv16-18).</p>',
+    "4": '<p>Through Christ\'s promises, believers "may participate in the divine nature (<em>theias koinōnoi physeōs</em>)" — the most striking Christological statement in the epistle. This unique NT phrase uses Stoic and Platonic divinization language to describe what Christ\'s atoning and mediating work accomplishes: genuine participation in the life of God. The "escape from the corruption in the world caused by evil desires" is the negative side of the same work — liberation from the power of sin that Christ\'s cross achieves. The divine-nature participation is the positive telos of redemption: the redeemed share what Christ by nature is.</p>',
+    "5": '<p>The virtue chain begins with <em>pistis</em> (faith) as its irreducible foundation: "to your faith add goodness." Faith in Jesus Christ is the starting point from which all moral growth proceeds. The chain structure — faith as the base, love as the apex (v7) — is explicitly Christological in its telos: all growth is evaluated by productivity "in your knowledge of our Lord Jesus Christ" (v8). The virtues are not self-generated but are the expression of faith-union with Christ working its way outward into character.</p>',
+    "6": '<p>Self-control (<em>enkrateia</em>) and perseverance (<em>hypomonē</em>) occupy the middle of the virtue chain. <em>Hypomonē</em> (patient endurance) is especially Christological — it is the virtue of the one who presses toward the goal without turning back, the virtue Christ himself perfected "for the joy set before him" (Heb 12:2). The believer who adds <em>hypomonē</em> to self-control is being conformed to the image of Christ who endured the cross. Perseverance in virtue is the earthly face of the eschatological hope that grounds the whole chain.</p>',
+    "7": '<p>The apex of the virtue chain is <em>agapē</em> — love. The chain reaches its Christological summit because <em>agapē</em> is preeminently the character of Christ himself and the bond that holds his new community together (John 13:34-35; 1 John 4:8). The progression from <em>philadelphia</em> (brotherly love within the community) to <em>agapē</em> (love that extends outward without limit) traces the movement of Christ\'s own love — from the inner circle of disciples to the world he died to save (John 3:16).</p>',
+    "8": '<p>Possessing these virtues "in increasing measure" keeps believers "from being ineffective and unproductive in your knowledge of our Lord Jesus Christ." Christ is the explicit telos of the virtue chain. Growth in virtue is growth into fuller knowledge of Christ; failure to grow is a symptom of forgetting who Christ is and what he has done (v9). The knowledge that is the goal is not mere doctrinal information but the relational <em>epignōsis</em> (full knowing) of the Christ who gave everything for his people.</p>',
+    "9": '<p>"Forgetting that they have been cleansed from their past sins" — the cleansing is a Christological act, the atonement accomplished at the cross. The one who does not grow in virtue has not forgotten a religious ceremony but the cross of Christ. To be cleansed (<em>katharismos</em>) from past sins is to have been washed by the blood of Christ (1 Pet 1:18-19; cf. 2 Pet 2:20 where apostates re-entangle themselves after escaping "the corruption of the world by knowing our Lord and Savior"). Stagnation is spiritual short-sightedness about the magnitude of what Christ did.</p>',
+    "10": '<p>"Make every effort to confirm your calling and election" — the calling is Christological: God calls through Christ (1 Pet 1:15; 2:9; 5:10). Confirmation of calling comes through the very virtues of vv5-7, which are the fruit of genuine union with Christ. The confidence of not stumbling is not a guarantee of sinlessness but of eschatological arrival: the one who grows in Christ will not fall away at the last judgment because Christ holds those who are his (John 10:28-29).</p>',
+    "11": '<p>The "rich welcome (<em>plousiōs epichorēgēthēsetai</em>) into the eternal kingdom of our Lord and Savior Jesus Christ" is the eschatological goal the entire letter works toward. Christ\'s kingdom is eternal (<em>aiōnios</em>) — in contrast to the temporary pleasures the false teachers offer (2:13). The One who "receives" the believer at the last is the same One who called them at the beginning: the Lord and Savior whose Parousia (v16) consummates what his first coming began.</p>',
+    "12": '<p>Peter\'s pastoral ministry of reminding — "even though you know them and are firmly established in the truth you now have" — echoes Christ\'s own pastoral care of those he had already taught. The Good Shepherd does not leave the flock once they know the basics; he continually calls, guards, and feeds. Peter, commissioned by the risen Christ to "feed my sheep" (John 21:17), is here doing precisely that: the ministry of Christian memory is an extension of Christ\'s own shepherd care.</p>',
+    "13": '<p>"As long as I live in the tent of this body" — the <em>skēnōma</em> (tent) is a Johannine term for embodied life (cf. John 1:14: the Word "tented" among us). Peter\'s use of tent imagery for his mortal body sets up the contrast between the temporary dwelling now and the eternal kingdom of v11. The same Christ who took on a body and tabernacled in human flesh calls his apostle to faithful embodied ministry until that body is laid aside. Incarnational dignity grounds the pastoral calling.</p>',
+    "14": '<p>"As our Lord Jesus Christ has made clear to me" — a reference to the prediction of Peter\'s death (John 21:18-19: "when you are old, you will stretch out your hands, and someone else will dress you and lead you where you do not want to go"). Christ\'s foreknowledge of Peter\'s martyrdom frames the apostle\'s pastoral urgency: the one who knows he is dying for the Lord writes with the same intensity as the Lord who himself knew he would die (John 10:17-18: "I lay down my life"). The knowledge of coming death purifies the ministry.</p>',
+    "15": '<p>"After my departure (<em>exodon</em>) you will always be able to remember these things" — the word <em>exodos</em> for Peter\'s death is the same word used at the Transfiguration (Luke 9:31: Moses and Elijah "spoke about his departure — <em>exodon</em> — which he was about to bring to fulfillment at Jerusalem"). Peter\'s death is framed in the vocabulary of Christ\'s own death: both are <em>exodoi</em>, departures that accomplish something for those left behind. The written Gospel-tradition that Peter leaves behind extends the eyewitness testimony beyond his death.</p>',
+    "16": '<p>"We were eyewitnesses of his majesty (<em>megaleiōtētos</em>)" — the Transfiguration, at which Peter, James, and John saw Christ\'s divine glory unveiled (Matt 17:1-8; Mark 9:2-8; Luke 9:28-36). The Christological claim is foundational: the proclamation of Christ\'s Parousia is not mythology (<em>sesophismenois mythois</em>) but eyewitness testimony about an event that has already happened — the preview of the Parousia in the Transfiguration. The future coming is certain because the glory was already seen. Christ is not a hope without evidence but a known quantity whose return is anticipated on the basis of his revealed nature.</p>',
+    "17": '<p>The Transfiguration voice — "This is my Son, whom I love; with him I am well pleased" — is the Father\'s own Christological attestation. The voice comes "from the Majestic Glory" (<em>megaloprepous doxēs</em>), the divine Presence itself, certifying Christ\'s identity as the beloved Son. This is the highest possible Christological warrant: not human testimony but the Father\'s own declaration at the moment when Christ\'s divine glory was most visibly displayed. The entire letter\'s authority rests on this attestation — the apostle is witness to what the Father himself declared about his Son.</p>',
+    "18": '<p>"We ourselves heard this voice that came from heaven when we were with him on the sacred mountain" — the physicality and specificity of the testimony. The apostles were not in ecstasy or vision but bodily present on a specific mountain (the "holy mountain" probably Hermon or Tabor), hearing an audible voice. The incarnate Christ was transfigured in real space and time; the eyewitnesses heard with real ears. The Christology of 2 Peter is rooted in the historical, bodily reality of Jesus — the same bodily Christ will return visibly (v16: "coming in power"; 3:4, 10: "the day of the Lord").</p>',
+    "19": '<p>"The prophetic message as something completely reliable" — the entire OT prophetic tradition is confirmed by the Transfiguration, because the same Christ whom the prophets announced appeared in glory on the mountain. "Until the day dawns and the morning star (<em>phōsphoros</em>) rises in your hearts" — Christ is the <em>phōsphoros</em> (light-bearer, morning star; cf. Rev 22:16: "I am the bright Morning Star"). The prophetic scriptures are a lamp in the darkness of the present age; Christ at his Parousia is the sunrise that makes the lamp unnecessary. The whole OT points toward the same glory that was glimpsed at the Transfiguration.</p>',
+    "20": '<p>"No prophecy of Scripture came about by the prophet\'s own interpretation" — prophetic Scripture is not human self-expression but divine communication. The significance for Christology: if the OT prophets were carried by the Spirit, they were speaking of realities beyond their own understanding (1 Pet 1:10-12), and those realities are fulfilled in Christ. The false teachers who twist both Paul\'s letters and "the other Scriptures" (3:16) are doing what the prophets could not do — imposing their own interpretation. True prophecy points beyond the prophet to Christ.</p>',
+    "21": '<p>"Prophets, though human, spoke from God as they were carried along (<em>pheromenoi</em>) by the Holy Spirit" — the same Spirit who was the agent of new creation (Gen 1:2) inspired the prophetic witness to Christ. The passive <em>pheromenoi</em> (being carried, like a ship borne by the wind) describes the prophets as instruments of the Spirit\'s own christological agenda. The entire prophetic corpus — from Moses to Malachi — is the Spirit bearing witness to the One who was transfigured on the mountain and will come in power at the last day.</p>'
   },
   "2": {
-    "23": [
-      {"type": "fulfillment", "target": "Gen 15:6", "note": "Abraham believed God and it was counted to him as righteousness, and he was called a friend of God — James cites Gen 15:6 (as does Paul in Rom 4 and Gal 3) but applies it to the Abraham of Gen 22 (the Aqedah); the faith that justified Abraham was not bare intellectual belief but the active trust that obeyed unto the ultimate test"}
-    ]
-  },
-  "4": {
-    "6": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — James quotes Prov 3:34 LXX exactly (as does 1 Pet 5:5); the wisdom tradition's insistence that YHWH resists the arrogant and upholds the lowly is the hermeneutical key to James's social ethics"}
-    ]
-  },
-  "5": {
-    "4": [
-      {"type": "allusion", "target": "Isa 5:9", "note": "Behold the pay of the laborers who mowed your fields, which you kept back by fraud, is crying out — YHWH's ear hears the cry of the oppressed wages; James's eschatological indictment of wealthy landowners echoes the Isaianic woe-oracles against exploitative landowners"}
-    ]
-  }
-}
-
-JAMES_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>pasan charan hegesasthe adelphoi mou hotan peirasmois peripesete poikilois</strong> (<em>pāsan charān hēgēsasthe, adelphoi mou, hotan peirasmois peripesēte poikilois</em>): 'Count it all joy when you fall into various trials.' <em>Hegeomai</em> (count/consider) is a deliberate act of valuation — joy is not a natural reaction to trials but a chosen re-evaluation. <em>Peirasmoi</em> (trials/temptations) covers both external testing by circumstances (v. 2-4) and internal temptation by desire (v. 13-14) — James distinguishes them but uses the same word, showing that external pressure and internal desire interact in the same human experience of testing.</p>",
-
-    "22": "<p><strong>ginesthe de poietai logou kai me monon akroatai paralogizomenoi heautous</strong> (<em>ginesthe de poiētai logou kai mē monon akroatai paralogizomenoi heautous</em>): 'Be doers of the word and not hearers only, deceiving yourselves.' <em>Poietes logou</em> (doer of the word): the verbal-moral contrast between hearing and doing is fundamental to both the wisdom tradition (Prov 2:1-6) and the dominical teaching (Matt 7:24-27: the wise and foolish builders). <em>Paralogizomenoi</em> (deceiving, reasoning falsely alongside) implies a syllogistic self-deception: 'I heard the word, therefore I have received it and its benefits' — the error of intellectual reception without moral transformation.</p>"
-  },
-  "2": {
-    "14": "<p><strong>ti ophelos adelphoi mou ean pistin lege tis echein erga de me eche</strong> (<em>ti ophelos, adelphoi mou, ean pistin legē tis echein, erga de mē echē</em>): 'What good is it, my brothers, if someone says he has faith but does not have works?' The famous James-Paul tension: Luther notoriously called James 'an epistle of straw' for seeming to contradict Paul's faith-righteousness. The resolution lies in different uses of <em>pistis</em>: Paul's 'faith' is the whole person's trust in and surrender to God; James's target is a merely verbal profession (<em>legē tis echein</em>, 'says he has faith') without ethical corollary. James and Paul agree that genuine faith produces works (cf. Gal 5:6: 'faith working through love'); their different opponents require different emphases.</p>"
+    "1": '<p>"False prophets among the people" and "false teachers among you" — the parallel with Israel\'s false prophets frames the present crisis. But the most striking Christological note is that the false teachers "den[y] the sovereign Lord (<em>despotēs</em>) who bought them (<em>agorasanta</em>)." The purchasing language (<em>agorazō</em>) is the language of redemption — the same term used of Christ\'s atoning work (1 Cor 6:20; 7:23; Rev 5:9). Christ paid the purchase price for those who now deny him. The apostasy is not merely intellectual error but the rejection of the Redeemer who owned them by right of purchase.</p>',
+    "2": '<p>"The way of truth (<em>hodos tēs alētheias</em>) will be brought into disrepute" — the <em>hodos</em> (way) is the characteristic early Christian term for the movement and its teaching (Acts 9:2; 19:9, 23; 22:4; 24:14). The "way of truth" is the way of Christ, who is himself "the way, the truth, and the life" (John 14:6). When false teachers live depraved lives under the Christian name, they discredit not merely an institution but the One who embodies the Way. The false teachers\' conduct is a Christological offence: it misrepresents the character of the Lord they claim to serve.</p>',
+    "3": '<p>"Their condemnation has long been hanging over them, and their destruction has not been sleeping" — the certainty of divine judgment rests on the character of Christ as the Judge appointed to judge the living and the dead (Acts 10:42; 2 Tim 4:1). The judgment that "has not been sleeping" is the judgment prepared by the One who will come "like a thief" (3:10). The contrast with vv16-18 of chapter 1 (the Transfiguration Christophany) is pointed: the same Lord whose glory Peter witnessed will be the Judge before whom the false teachers stand condemned.</p>',
+    "4": '<p>The angels who sinned were consigned to Tartarus — judgment executed by divine authority over even the highest created beings. This establishes the scope of Christ\'s judicial lordship: there is no created being beyond his power to judge. The "chains of darkness" in which the fallen angels are held anticipate the "blackest darkness" reserved for the false teachers (v17). Christ who descended into the lower parts of the earth (Eph 4:9) and "proclaimed to the spirits in prison" (1 Pet 3:19) is Lord even of the imprisoned spiritual powers.</p>',
+    "5": '<p>Noah, preserved through the flood, is "a preacher of righteousness (<em>dikaiosynēs kēryx</em>)" — an anticipation of Christ, who is himself <em>dikaios</em> (the Righteous One, Acts 3:14; 7:52; 1 Pet 3:18) and whose preachers announce the righteousness that comes through him. The pattern: God preserved the one faithful witness while judging the world around him. This rescue-through-judgment pattern reaches its apex in the cross: the Righteous One passed through the judgment of the cross as the means by which his people are preserved and the world is judged.</p>',
+    "6": '<p>Sodom and Gomorrah burned as an <em>hypodeigma</em> (example, type) of what will happen to the ungodly. Jesus himself invoked Sodom and Gomorrah as types of eschatological judgment: "It will be more bearable for Sodom on the day of judgment than for you" (Matt 11:24). The fiery destruction of those cities is a shadow of the final judgment by fire that Christ will execute at his Parousia (3:7, 10, 12). Christ is both the Rescuer of the righteous and the Agent of judgment on the ungodly — both sides of the pattern are Christologically grounded.</p>',
+    "7": '<p>Lot rescued despite living "among those who live in error" — the righteous preserved while surrounded by lawlessness. This is the pastoral pattern of Christ: the Good Shepherd pursues the sheep that is lost and preserves the one that is found, even in hostile territory (John 10:28-30: "no one can snatch them out of my hand"). Lot\'s rescue by the angels (Gen 19) foreshadows the eschatological rescue of the elect at the Parousia (Matt 24:31: "he will send his angels and gather his elect").</p>',
+    "8": '<p>Lot\'s righteous soul was "tormented (<em>ebasanizen</em>) day after day" by what he saw and heard — the righteous suffer in a fallen world, as Christ himself suffered in his earthly ministry (Isa 53:3: "a man of suffering, acquainted with grief"; Heb 4:15: "tempted in every way, just as we are"). The identification of Christ with righteous suffering transforms the believer\'s experience of living among the lawless: suffering among the ungodly is conformity to Christ, not abandonment by God.</p>',
+    "9": '<p>"The Lord knows how to rescue the godly from trials" — this rescue reaches its supreme expression in the resurrection of Christ. The one who was most deeply in the midst of the ungodly — "numbered with the transgressors" (Isa 53:12) — was rescued by God through resurrection (Acts 2:24: "it was impossible for death to keep its hold on him"). The Lord who rescues the godly is the Lord who was himself rescued from death; his Parousia is the completion of the rescue that began at the empty tomb.</p>',
+    "10": '<p>The bold and arrogant who "despise authority (<em>kyriotētos</em>) and heap abuse on celestial beings" are rejecting precisely the <em>kyrios</em>-ship — the Lordship — that 2 Peter everywhere confesses (Christ is named <em>Kyrios</em> or <em>Sōtēr</em> ten times in the letter). To despise <em>kyriotēs</em> is ultimately to despise the Lord Jesus Christ, whose authority over all spiritual powers was established by his resurrection and ascension (Phil 2:9-11: "every knee will bow to the name of Jesus").</p>',
+    "11": '<p>"Even angels, although stronger and more powerful, do not heap abuse on such beings when bringing judgment on them from the Lord" — the restraint of righteous angels in the presence of fallen spiritual powers reflects the ordered authority structure that Christ\'s resurrection established. Michael\'s restraint in Jude 9 ("The Lord rebuke you") shows that even the archangel defers to the Lord for vindication. The false teachers\' presumptuous speech against spiritual powers shows they have no understanding of Christ\'s actual authority over the spirit world.</p>',
+    "12": '<p>"Born only to be caught and destroyed, and like animals they too will perish" — a stark contrast with the destiny of those who participate in the divine nature (1:4). The false teachers have become what they are by choice: having refused the Christological formation of 1:5-7, having denied the Redeemer who purchased them (v1), they revert to the bios of unreasoning animals. The eschatological endpoint of rejecting Christ is the dissolution of what makes human beings distinctive — the very image of God that Christ restores is forfeited by apostasy.</p>',
+    "13": '<p>"They will be paid back with harm for the harm they have done" — the lex talionis of divine judgment executed through Christ. "Reveling in their pleasures while they feast with you (<em>en tais apatais autōn syneuōchoumenoi hymin</em>)" — their deception (<em>apatais</em>) at the agape feast corrupts the very celebration of Christ\'s table. The Lord\'s Supper is the meal of Christ\'s body and blood given for others (1 Cor 11:23-26); these false teachers pervert it into self-gratifying indulgence. The judgment on them is shaped by the magnitude of what they have corrupted.</p>',
+    "14": '<p>"Eyes full of adultery (<em>moichalidos</em>), never stop sinning; they seduce the unstable" — the adultery language draws on the OT prophetic tradition in which covenant infidelity to God is spiritual adultery (Hos 1-3; Jer 3; Ezek 16, 23). To have eyes "full of adultery" is to be wholly oriented toward false objects of ultimate loyalty. Christ, the Bridegroom of the church (Matt 9:15; John 3:29; Rev 19:7), is the true object of covenant devotion; the false teachers seduce the church away from her Lord just as an adulterer seduces away from a lawful spouse.</p>',
+    "15": '<p>"They have left the straight way (<em>tēn eutheian hodon</em>)" — the straight path that leads to life (cf. Matt 7:13-14: "narrow is the road that leads to life"). Balaam loved the wages of wickedness: unlike Christ, who "did not come to be served, but to serve, and to give his life as a ransom for many" (Matt 20:28), Balaam made his prophetic gift a commercial transaction. The antithesis to Balaam\'s way is Christ\'s self-giving: the true prophet who came not for wages but for the sake of those he came to save.</p>',
+    "16": '<p>Balaam was "rebuked for his wrongdoing by a donkey" — the creator\'s speech through the humblest instrument to arrest the greatest prophet\'s madness. This is the pattern of divine speech: God chose the foolish things of the world to shame the wise (1 Cor 1:27), and the supreme expression of this pattern is the incarnation — the eternal Word speaking through a human body. The donkey that restrained Balaam\'s madness anticipates the Word made flesh who speaks truth in a world of prophetic corruption.</p>',
+    "17": '<p>"Springs without water and mists driven by a storm" — powerful images of promise-without-substance. Jesus promised "rivers of living water" flowing from the believer (John 7:38) and offered the Samaritan woman water that would become "a spring of water welling up to eternal life" (John 4:14). The false teachers promise water but deliver drought. They cannot give what they do not have, because they have denied the One who is himself the source of living water. "Blackest darkness is reserved for them" — the eternal separation from the light who is Christ (John 8:12; 9:5).</p>',
+    "18": '<p>"They entice people who are just escaping from those who live in error" — targeting the newly converted, those who have just come to Christ and are not yet rooted in him. The false teachers\' "empty, boastful words" are the antithesis of Christ\'s own words, which are "spirit and life" (John 6:63). To be just escaping from error is to be at the most vulnerable moment of the new life in Christ; the false teachers exploit precisely this vulnerability. The pastoral concern of the letter is for these young believers whose faith is being targeted.</p>',
+    "19": '<p>"Promising freedom, while they themselves are slaves of depravity" — the false teachers use the language of liberation but are themselves bound. This is the inverse of Christ\'s proclamation: "If the Son sets you free, you will be free indeed" (John 8:36). The freedom Christ gives is freedom from sin through bondage to him (Rom 6:18: "you have been set free from sin and have become slaves to righteousness"). The freedom the false teachers offer is the freedom to follow sinful desires — which is no freedom at all but slavery to the most tyrannical master.</p>',
+    "20": '<p>"If they have escaped the corruption of the world by knowing our Lord and Savior Jesus Christ and are again entangled in it and are overcome" — the apostasy the false teachers represent is not hypothetical but visible. The knowledge of Christ that produced initial escape from corruption — the <em>epignōsis</em> that is the letter\'s central theme — is thrown away. The result is that they "are worse off at the end than they were at the beginning" — the greater the light rejected, the greater the darkness (Matt 12:45; Luke 11:26). The apostates had Christ and abandoned him; their condemnation is proportional to the magnitude of what they forsook.</p>',
+    "21": '<p>"It would have been better for them not to have known the way of righteousness" — the "way of righteousness" is the way of Christ (John 14:6; cf. Matt 21:32 where "the way of righteousness" describes John the Baptist\'s proclamation of Christ). To have known the way and then "turn their backs on the sacred command (<em>tēs paradotheisēs autois hagias entolēs</em>)" is to have heard, received, and repudiated the very apostolic deposit about Jesus. The "sacred command" is not merely ethical instruction but the gospel command to believe in Christ (1 John 3:23).</p>',
+    "22": '<p>"A dog returns to its vomit" (Prov 26:11) and "a sow that is washed returns to her wallowing in the mud" — the proverbs describe not moral failure in believers but the innate character of those who never truly underwent the transformation that only Christ effects. The washing of 1:9 (forgotten by those who do not grow) echoes here. The sow can be washed externally but the nature is unchanged; only the new birth in Christ (1 Pet 1:23) produces the new nature that is not drawn back to the old life. External religious contact without internal regeneration ends in return to the beginning.</p>'
   },
   "3": {
-    "1": "<p><strong>me polloi didaskaloi ginesthe adelphoi mou eidotes hoti meizon krima lepsometha</strong> (<em>mē polloi didaskaloi ginesthe, adelphoi mou, eidotes hoti meizon krima lēpsometha</em>): 'Not many of you should become teachers, my brothers, knowing that we who teach will be judged with greater strictness.' The <em>meizon krima</em> (greater judgment) for teachers reflects the Jewish wisdom tradition's high estimation of the Torah-teacher's responsibility (m. Avot 2:7: 'the more Torah, the more life; the more study, the more wisdom; the more counsel, the more understanding; the more righteousness, the more peace; ... the more Torah, the more life') and its warning about the consequences of teaching falsehood. James is aware of his own exposure to this judgment.</p>"
-  }
-}
-
-JAMES_CONTEXT = {
-  "1": {
-    "1": "<p>James is addressed 'to the twelve tribes in the Dispersion' — framing the audience as the diaspora Jewish-Christian community. Whether 'James the brother of the Lord' (Gal 1:19; Josephus Ant. 20.200) is the author (martyred 62 CE) or a pseudonymous use of his authority (ca. 80-100 CE) is debated, but the letter's decidedly Jewish-Christian character (the synagogue imagery of 2:2; the explicit wisdom-tradition shaping; the prophetic social ethics) is consistent with Jerusalem's Jewish-Christian leader. Josephus describes James as 'the brother of Jesus who was called Christ' and records his death by stoning at the instigation of the high priest Ananus II, ca. 62 CE. If authentic, James is among the earliest NT writings.</p>"
-  },
-  "2": {
-    "1": "<p>The community James addresses assembles in a <em>synagoge</em> (2:2) — the term for a Jewish gathering-place, not yet the distinctly Christian <em>ekklesia</em> (church building). The social stratification problem (wealthy visitor with gold rings and fine clothing given the good seat; poor visitor told to stand or sit on the floor) reflects the patron-client dynamics of both the Roman and the Palestinian Jewish world. James's condemnation of partiality (<em>prosopolepsia</em>) is grounded in the same divine-impartiality tradition Paul invokes (Rom 2:11; Acts 10:34) — YHWH who shows no partiality to the rich over the poor is the standard for the community's hospitality.</p>"
-  }
-}
-
-JAMES_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.' James's God-centered theology (without yet making a Christological application) shows the Father's immutable character as the ground of human trust and patience in trial. The Christological trajectory: this unchanging Father of lights is the one who sent his Son (not yet named in ch.1, but cf. 2:1: 'the faith in our Lord Jesus Christ, the Lord of glory'). The stability of the Father underwrites the whole counsel of the letter.</p>"
-  },
-  "2": {
-    "1": "<p>A direct revelation: 'The faith of our Lord Jesus Christ, the Lord of glory.' James's only explicit Christological title is <em>Kyrios tes doxes</em> — 'the Lord of glory.' In LXX Ps 24:7-10, the 'King of glory' (<em>basileus tes doxes</em>) is YHWH himself. James transfers this divine glory-title to Jesus: to hold 'the faith of the Lord of glory' while showing partiality to the rich is a theological contradiction — the one who identifies with the poor (the Magnificat's God; the Beatitudes' Christ) cannot be honored by honoring the rich over the poor.</p>"
-  },
-  "5": {
-    "7": "<p>A direct revelation: 'Be patient, therefore, brothers, until the coming of the Lord.' James ends with the parousia as the motive for patience in suffering (vv. 7-11) and restraint of speech (vv. 12). The 'coming of the Lord' (<em>parousia tou Kyriou</em>) frames the whole letter's ethics eschatologically: the injustice of the rich oppressors, the suffering of the righteous, the unanswered prayers — all are held before the coming Judge (v. 9: 'the Judge is standing at the door'). The standing judge at the door is the Christ whose coming is imminent.</p>"
-  }
-}
-
-# ============================================================
-# 1 PETER
-# ============================================================
-
-ONEPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "quote", "target": "Lev 11:44", "note": "You shall be holy, for I am holy — the Levitical holiness-imperative is directly quoted as the foundation for Peter's ethics; the holiness character of YHWH is the standard for covenant-community behavior in both the old and new covenants"}
-    ],
-    "24": [
-      {"type": "fulfillment", "target": "Isa 40:6-8", "note": "All flesh is like grass and all its glory like the flower of grass; the grass withers and the flower falls, but the word of the Lord remains forever — Peter applies Isa 40:6-8 to the imperishable seed of the gospel-word; the word that endures is the good news preached to them, fulfilling Isaiah's consolation-proclamation"}
-    ]
-  },
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Isa 28:16", "note": "Behold I am laying in Zion a stone, a cornerstone chosen and precious, and whoever believes in him will not be put to shame — Peter cites Isa 28:16 LXX as fulfilled in Christ; the Zion-foundation stone of Isaiah is identified with the rejected-and-vindicated Christ"},
-      {"type": "fulfillment", "target": "Ps 118:22", "note": "The stone that the builders rejected has become the cornerstone — the second OT stone text: the rejected cornerstone of Ps 118 is Christ crucified and raised; the very rejection that qualified him as victim becomes his exaltation-identity"},
-      {"type": "fulfillment", "target": "Isa 8:14", "note": "A stone of stumbling and a rock of offense — Isa 8:14 LXX (YHWH as both sanctuary and stone of stumbling for Israel); Peter applies the dual effect to Christ: to believers, the cornerstone; to unbelievers, the stumbling stone"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Exod 19:6", "note": "A royal priesthood, a holy nation — Peter applies the Sinai covenant's identity-markers (Exod 19:6: a kingdom of priests and a holy nation) directly to the church; the new covenant community is the Sinai identity realized and expanded beyond ethnic Israel"},
-      {"type": "fulfillment", "target": "Isa 43:20-21", "note": "A people for his own possession, that you may proclaim the excellencies of him who called you — Isa 43:21 LXX (my people whom I formed for myself, to declare my praise); Peter completes the new-community description with the Isaianic mission: called-out-from-darkness people who exist to proclaim the God who called them"}
-    ]
-  },
-  "3": {
-    "10": [
-      {"type": "quote", "target": "Ps 34:12-16", "note": "Whoever desires to love life and see good days, let him keep his tongue from evil — Peter quotes Ps 34:12-16 LXX directly as the biblical foundation for his ethics of suffering and peace-seeking; Psalm 34 (the acrostic of David's deliverance) becomes the wisdom-framework for the community's response to hostility"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — same Prov 3:34 LXX quotation as James 4:6; the shared citation indicates it was a widely known community warrant for humility in the face of suffering and opposition"}
-    ]
-  }
-}
-
-ONEPET_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>anagennesas hemas eis elpida zosan di anastaseos Iesou Christou ek nekron</strong> (<em>anagennēsas hēmas eis elpida zōsan di anastaseōs Iēsou Christou ek nekrōn</em>): 'who has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.' <em>Anagennao</em> (born again/anew) appears only here and v. 23 in the NT; John 3 uses <em>gennethenai anothen</em> (born from above/again). The new birth is not an isolated spiritual event but a directed new genesis: <em>eis elpida zosan</em> (into a living hope). The resurrection of Christ is not merely the means but the content of the hope — living hope because the Resurrected One lives.</p>",
-
-    "18": "<p><strong>ou phthartois argyrio e chruso oi elytrothete ... alla timio haimati has amnos amomou kai aspilon Christou</strong> (<em>ou phthartois, argyriō ē chrysō, oi elytrōthēte ... alla timiō haimati hōs amnos amōmou kai aspilou Christou</em>): 'not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-metaphor (<em>lytroō</em>, redeem/ransom) is grounded in the Exodus-redemption of Israel (Exod 6:6: 'I will redeem you with an outstretched arm') and the Servant's self-pouring in Isa 53. The lamb-without-blemish terminology is directly cultic: the Passover lamb (Exod 12:5) and the sacrificial requirements of Lev 22:19-25 — Christ fulfills the sacrificial requirements as the perfect offering.</p>"
-  },
-  "2": {
-    "24": "<p><strong>hos tas hamartias hemon autos anenegken en to somati autou epi to xylon</strong> (<em>hos tas hamartias hēmōn autos anēnenken en tō sōmati autou epi to xylon</em>): 'He himself bore our sins in his body on the tree.' The language is saturated with Isa 53: <em>anaphero</em> is the LXX word for the priestly act of lifting/bearing an offering to the altar; <em>epi to xylon</em> (on the tree) echoes Deut 21:23 (a hanged man is cursed) and Gal 3:13 (Christ redeemed us from the curse of the law by becoming a curse for us). The phrase 'in his body' is a deliberate anti-Docetic marker: the sin-bearing was physical, not merely spiritual — the crucifixion was real.</p>"
-  }
-}
-
-ONEPET_CONTEXT = {
-  "1": {
-    "1": "<p>1 Peter is addressed to the diaspora of Pontus, Galatia, Cappadocia, Asia, and Bithynia — a geographic sweep of the northern half of Asia Minor (modern Turkey). The term <em>parepidemos</em> (sojourner/temporary resident, v. 1) and <em>paroikos</em> (alien/resident without citizenship, 2:11) had legal specificity: resident aliens without full citizenship rights, dependent on local good will. Peter applies these social categories to the spiritual situation of believers: they are not truly at home in this age, regardless of their legal status. The five provinces listed correspond roughly to the area of a Bithynian governor's jurisdiction, suggesting a single administrative document.</p>"
-  },
-  "2": {
-    "13": "<p>Peter's 'submit to every human institution' (<em>hypotassō pase anthropine ktisei</em>) parallels Paul's Romans 13, but the social context is different: 1 Peter addresses communities facing active hostility and false accusation, not merely civic obligation. The political submission is part of the apologetic strategy: by visibly good behavior (v. 15: <em>agathopoia</em>, doing good), the community silences the ignorance of foolish critics. The 'honor everyone, love the brotherhood, fear God, honor the emperor' (v. 17) places the emperor in the fourth position — honored, but not uniquely so, and subordinate to God-fear.</p>"
-  }
-}
-
-ONEPET_CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'You were ransomed from the futile ways inherited from your forefathers, not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-price Christology: Christ's blood is the currency of redemption from inherited futility. The Passover-lamb imagery connects the death of Christ to the entire Exodus-redemption narrative — as the Passover blood protected Israel from the destroying angel, Christ's blood ransoms believers from the bondage of empty ancestral religion. The lamb is not merely a metaphor for innocence but a liturgical category that places the cross within the sacrificial system's culmination.</p>"
-  },
-  "2": {
-    "24": "<p>A fulfillment: 'He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.' 1 Peter 2:22-25 is the most sustained application of Isa 53 to the passion in the NT outside the Gospel traditions. Peter works through the Servant Song verse by verse: v. 22 (Isa 53:9: no sin in his mouth), v. 23 (Isa 53:7: did not retaliate), v. 24 (Isa 53:4-5: bore our griefs, wounded for our iniquities, by his stripes we are healed), v. 25 (Isa 53:6: we all went astray like sheep). The suffering community (1:6-7; 2:19-21; 4:12-16) is invited to understand their own suffering through the Servant-Christ who bore sins and called them to follow his pattern.</p>"
-  },
-  "3": {
-    "18": "<p>A direct revelation: 'Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit.' The uniqueness and finality of the atonement: <em>hapax</em> (once, for all time) marks the non-repeatability of Christ's sin-bearing death. The substitutionary logic: the righteous (<em>dikaios</em>) for the unrighteous (<em>adikous</em>) — the morally qualified dies for the morally disqualified. The telos: 'that he might bring us to God' (<em>hina hemas prosagagē to theo</em>) — access to God is the goal of the cross, not merely forgiveness as a legal transaction.</p>"
-  }
-}
-
-# ============================================================
-# 2 PETER
-# ============================================================
-
-TWOPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Dan 7:13-14", "note": "The power and coming of our Lord Jesus Christ — the Danielic 'power and great glory' of the Son of Man's coming; Peter grounds the Transfiguration as the preview of the parousia-power and glory that Daniel anticipated"},
-      {"type": "allusion", "target": "Ps 2:7", "note": "This is my beloved Son with whom I am well pleased — the divine voice at the Transfiguration echoes Ps 2:7's royal adoption formula; Peter as eyewitness to this Father-to-Son declaration grounds his eschatological teaching"}
-    ]
-  },
-  "3": {
-    "13": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "New heavens and a new earth in which righteousness dwells — Peter cites the Isaianic new creation promise (Isa 65:17; 66:22) as the eschatological expectation; the new creation where righteousness dwells (not merely exists but inhabits fully) is the goal toward which the present cosmos is moving"}
-    ]
-  }
-}
-
-TWOPET_ORIGINAL = {
-  "3": {
-    "9": "<p><strong>ou bradynei Kyrios tes epangelias hos tines bradyteta hegountai alla makrothymei eis hymas me boulomenos tinas apolesai alla pantas eis metanoian chorein</strong> (<em>ou bradynei Kyrios tēs epangelias, hōs tines bradytēta hēgountai, alla makrothymei eis hymas, mē boulomenos tinas apolesthai alla pantas eis metanoian chōrein</em>): 'The Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish but that all should reach repentance.' <em>Makrothymia</em> (patience/longsuffering) reframes the delayed parousia as a divine mercy-extension rather than a failed prediction. The universalistic-sounding 'not wishing that any should perish' is balanced by 'toward you' — the patience is specifically exercised toward the addressees, inviting them toward repentance. The passage is one of the key texts on divine patience and the purpose of eschatological delay.</p>"
-  }
-}
-
-TWOPET_CONTEXT = {
-  "3": {
-    "3": "<p>The 'scoffers' who mock the parousia promise ('Where is the promise of his coming? For ever since the fathers fell asleep, all things are continuing as they were from the beginning', vv. 3-4) reflect an Epicurean-style skepticism about divine intervention in the regularities of nature: if God were going to act, why hasn't he? The Epicurean doctrine of <em>ataraxia</em> (undisturbed natural regularity, governed by atoms, not divine providence) provided intellectual cover for dismissing apocalyptic expectations. Peter's response: the uniformitarians forget that the past was not uniform — the flood was God's catastrophic intervention in the 'natural order' (vv. 5-6), and the coming fire will be the next. The argument uses Genesis to rebut Epicurean naturalism.</p>"
-  }
-}
-
-TWOPET_CHRIST = {
-  "1": {
-    "1": "<p>A direct revelation: 'To those who have obtained a faith of equal standing with ours by the righteousness of our God and Savior Jesus Christ.' The phrase 'our God and Savior Jesus Christ' (<em>tou theou hemon kai soteros Iesou Christou</em>) — following the same Granville Sharp single-article construction as Titus 2:13 — directly predicates deity of Jesus Christ. 2 Peter opens with its highest Christological claim: Jesus is God and Savior. This framing situates the entire letter's authority under the person of the divine Savior whose return the scoffers mock.</p>"
-  },
-  "3": {
-    "10": "<p>A direct revelation: 'The day of the Lord will come like a thief, and then the heavens will pass away with a roar, and the heavenly bodies will be burned up and dissolved, and the earth and the works that are done on it will be exposed.' The Day of the Lord (the YHWH theophany-judgment tradition; Amos 5:18-20; Joel 2; Zeph 1:14-18) is identified with the Day of Jesus Christ (v. 12: 'waiting for and hastening the coming of the day of God'). The cosmic dissolution is not the end of material existence but its purification — leading to the new heavens and new earth of v. 13. The Christological judgment: the Lord Jesus presides over this dissolution as the eschatological judge whose day arrives unexpectedly.</p>"
-  }
-}
-
-# ============================================================
-# 2 JOHN, 3 JOHN, JUDE
-# ============================================================
-
-TWOJOHN_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "1 John 4:2", "note": "Those who do not confess the coming of Jesus Christ in the flesh are the deceiver and the antichrist — the same anti-Docetic test as 1 John 4:2 (every spirit that confesses Jesus Christ has come in the flesh is from God); 2 John applies the same doctrinal test to traveling teachers"}
-    ]
-  }
-}
-
-TWOJOHN_ORIGINAL = {
-  "1": {
-    "7": "<p><strong>hoti polloi planoi exelthon eis ton kosmon hoi me homologountes Iesoun Christon erchomenon en sarki houtos estin ho planos kai ho antichristos</strong> (<em>hoti polloi planoi exēlthon eis ton kosmon, hoi mē homologountes Iēsoun Christon erchomenon en sarki</em>): 'For many deceivers have gone out into the world, those who do not confess the coming of Jesus Christ in the flesh.' The present participle <em>erchomenon</em> (coming) rather than the perfect <em>elēlythota</em> (having come, 1 John 4:2) may signal a future reference — not the Incarnation but the parousia. Either way, the test is the same: affirm the bodily reality of Jesus's existence, whether past (Incarnation) or future (Return). The Docetic denial of Christ's flesh eliminates both the atonement and the resurrection-body hope.</p>"
-  }
-}
-
-TWOJOHN_CONTEXT = {
-  "1": {
-    "1": "<p>2 John is addressed from 'the elder' to 'the elect lady and her children' — most likely a metaphor for a particular congregation and its members (cf. 1 Pet 5:13 where 'Babylon' = Rome; 'she' = the church in Babylon). The 'elder' is commonly identified with John the Apostle or John the Elder of Ephesus (Papias distinguishes these; Eusebius records the tradition of two Johns in Asia). The letter is a brief (13 verses) traveling advisory: the practice of Greco-Roman hospitality created real danger for Christian communities — traveling teachers could exploit the obligation of hospitality to spread heresy. 2 John's 'do not receive him into your house' (v. 10) restricts the normal hospitality-obligation for doctrinal cause.</p>"
-  }
-}
-
-TWOJOHN_CHRIST = {
-  "1": {
-    "3": "<p>A direct revelation: 'Grace, mercy, and peace will be with us from God the Father and from Jesus Christ the Father's Son.' The Trinitarian greeting (Father and Son together as the source of grace, mercy, and peace) frames 2 John's doctrinal concern: the Christ of the greeting (the Son of the Father) is the same Christ whose bodily reality the deceivers deny (v. 7). Christology determines fellowship (vv. 9-11): to go beyond Christ's teaching is to lose the Father; to hold the Son's teaching is to have both the Son and the Father. The Christological and Trinitarian are inseparable in 2 John.</p>"
-  }
-}
-
-THREEJOHN_ECHO = {
-  "1": {
-    "11": [
-      {"type": "allusion", "target": "Gen 1:4", "note": "Whoever does good is from God; whoever does evil has not seen God — the fundamental creation-theology judgment: good comes from God, evil does not; 3 John applies this creation-ethics criterion to the community conflict between the hospitable Gaius and the domineering Diotrephes"}
-    ]
-  }
-}
-
-THREEJOHN_ORIGINAL = {
-  "1": {
-    "4": "<p><strong>meizotera toutōn ouk echo charan hina akouo ta ema tekna en te aletheia peripatounta</strong> (<em>meizoteran toutōn ouk echō charan, hina akouō ta ema tekna en tē alētheia peripatounta</em>): 'I have no greater joy than to hear that my children are walking in the truth.' The elder's pastoral identity is entirely defined by the spiritual progress of his 'children' — those he has led to faith. <em>Peripatountas en te aletheia</em> (walking in truth) is the Johannine idiom for the whole-life embodiment of the gospel: truth is not merely intellectual assent but an ambulatory practice that shapes the whole life.</p>"
-  }
-}
-
-THREEJOHN_CONTEXT = {
-  "1": {
-    "9": "<p>Diotrephes 'who likes to put himself first' (<em>philoproteuo</em>, v. 9) represents the emergence of local congregational autonomy that resisted the authority of the itinerant apostolic elder. The conflict between the elder's authority (rooted in the apostolic tradition) and Diotrephes's local authority (rooted in congregational control) anticipates the later tension between episcopal and local governance structures. Diotrephes's practices — refusing the elder's letter, refusing to receive traveling brothers, and expelling those who do — constitute a miniature local church coup. 3 John is the NT's only document addressing intra-Christian church politics at this granular level.</p>"
-  }
-}
-
-THREEJOHN_CHRIST = {
-  "1": {
-    "7": "<p>A direct revelation: 'For they have gone out for the sake of the name, accepting nothing from the Gentiles.' The missionaries who deserve hospitality go out 'for the sake of the Name' (<em>hyper tou onomatos</em>) — the Name of Jesus, YHWH's eschatological Name in the NT (Acts 4:12; Phil 2:9-10). They are supported not by the Gentile world's resources but by the community of believers. The missional church is defined by: (1) the Name as motivation, (2) non-worldly financial support, and (3) mutual community support (<em>synergoi</em>, v. 8). The entire brief letter is framed within this Christological missiology.</p>"
-  }
-}
-
-JUDE_ECHO = {
-  "1": {
-    "9": [
-      {"type": "allusion", "target": "Zech 3:2", "note": "The Lord rebuke you — Michael's rebuke of the devil in Jude's midrash on the Assumption of Moses echoes YHWH's rebuke of Satan in Zech 3:2 ('The LORD rebuke you, O Satan'); the heavenly court's handling of demonic accusation follows the same pattern"}
-    ],
-    "14": [
-      {"type": "quote", "target": "1 Enoch 1:9", "note": "Behold the Lord comes with ten thousands of his holy ones to execute judgment — Jude quotes 1 Enoch 1:9 as prophetic authority; this is the only direct quotation of 1 Enoch in the NT, indicating the apocalyptic tradition's authority in some early Christian communities"},
-      {"type": "allusion", "target": "Deut 33:2", "note": "He came from Sinai ... with holy ones at his right hand — the Sinai theophany with the myriads of holy ones (angels/saints); both Deut 33:2 and 1 Enoch 1:9 draw from the same theophany tradition that Jude applies to the parousia of Christ"}
-    ]
-  }
-}
-
-JUDE_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>parakalo agapetoi pasan spoude poioumenos graphein hymin peri tes koines soteries anagkaion egesamen grapsai hymin parakalon epagonizesthai te hapax paradotheise tois hagiois pistei</strong>: 'I found it necessary to write appealing to you to contend for the faith that was once for all delivered to the saints.' <em>Hapax paradotheise</em> (once for all delivered): the single, unrepeatable handing-over of the faith — <em>paradidomi</em> is the technical tradition-transmission verb (as in 1 Cor 11:23, 15:3). The faith is not a developing deposit that each generation revises but a fixed, delivered tradition that needs defending, not augmenting. <em>Epagonizomai</em> (contend earnestly for) is the athletic-contest word applied to doctrinal fidelity — not aggressive attack of opponents but vigorous defense of what was given.</p>"
-  }
-}
-
-JUDE_CONTEXT = {
-  "1": {
-    "4": "<p>The opponents Jude addresses are 'certain people who have crept in unnoticed' (<em>pareisedysan</em>) — using the technical language of infiltration. They are described as 'perverting the grace of our God into sensuality and denying our only Master and Lord Jesus Christ.' The combination of antinomian sexual license ('sensuality') with Christological denial suggests a proto-Gnostic group that used the grace-freedom of the gospel (cf. Rom 6:1: 'shall we continue in sin so that grace may abound?') as license for moral license. Jude's use of 1 Enoch and the Assumption of Moses (v. 9) indicates familiarity with the wider Jewish apocalyptic tradition and suggests a Jewish-Christian context for both author and audience.</p>"
-  }
-}
-
-JUDE_CHRIST = {
-  "1": {
-    "25": "<p>A direct revelation: 'To the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority before all time and now and forever.' Jude's doxology is the most comprehensive Christological doxology in the NT — ascribing glory, majesty, dominion, and authority (four throne-room attributes of YHWH in Daniel and Isaiah) to God through Christ, and extending this across all three tenses of time (before, now, forever). The Christ through whom this glory is ascribed is the Lord whose 'love you keep yourselves in' (v. 21) and who presents believers blameless with rejoicing (v. 24). The letter's defense of the faith is framed by this doxological Christology.</p>"
+    "1": '<p>"This is now my second letter to you" — the Petrine correspondence frames both letters as Christ\'s own continued pastoral care of his churches through apostolic writing. The purpose is to "stimulate you to wholesome thinking (<em>eilikrinē dianoian</em>)" — the word <em>eilikrinē</em> (tested pure by sunlight, sincere) describes the mental orientation that comes from genuine formation by the truth of Christ. Wholesome thinking is thinking aligned with the Christ of the apostolic witness, not the distorted Christ of the false teachers.</p>',
+    "2": '<p>"The words spoken in the past by the holy prophets and the command given by our Lord and Savior through your apostles" — a two-stage revelation structure: prophetic anticipation and apostolic proclamation, with Christ as the hinge between the two. The <em>entolē</em> (command) "through your apostles" is the gospel command that originates with Christ himself and is transmitted through the apostolic witnesses. The entire chain of prophetic-apostolic revelation is about and from Christ: he is both the content of the message and the One who commissioned its messengers.</p>',
+    "3": '<p>"In the last days scoffers will come, scoffing and following their own evil desires" — the Christological significance is eschatological: the appearance of scoffers is itself a sign of the last days that Christ predicted (Matt 24:11-12, 24; 2 Tim 3:1-5; 4:3-4). The scoffers\' arrival validates rather than undermines the apostolic testimony. The very mockery of Christ\'s return is evidence that his predictions about the last days are coming true. The scoffers are not refuting the Parousia but confirming it.</p>',
+    "4": '<p>"Where is this \'coming\' he promised?" — the Parousia promise they mock is specifically the promise of Jesus: "I will come again" (John 14:3); the parables of the returning master (Luke 12:35-48; Matt 24:45-51); the explicit prediction of the Son of Man coming on the clouds (Matt 24:30; Mark 13:26). The uniformitarianism argument ("everything goes on as it has since the beginning of creation") ignores both the flood of Noah\'s day and the resurrection of Christ — the two decisive interruptions of the "things go on as always" world-order that Peter now addresses.</p>',
+    "5": '<p>"By God\'s word the heavens came into being and the earth was formed out of water and by water" — the Word that created the world is the pre-incarnate Logos (John 1:1-3: "In the beginning was the Word, and the Word was with God, and the Word was God. Through him all things were made"). The same Christ who spoke creation into existence is the Christ whose Parousia will dissolve it and re-create it. The scoffers\' appeal to creation-continuity ironically appeals to the very Christ they deny: it was his word that created the world in the first place.</p>',
+    "6": '<p>"The world of that time was deluged and destroyed" by water — the flood judgment that Peter invoked in 2:5 (Noah) now becomes part of the theological argument about cosmic history. The flood was a catastrophic interruption of the uniformitarian order, demonstrating that God does not allow creation to run forever without judgment. Christ, the Coming Judge, will bring a second and final interruption: as Noah\'s flood destroyed the first world, so Christ\'s return will dissolve the present order to make way for the new creation (3:13).</p>',
+    "7": '<p>"The present heavens and earth are reserved for fire, being kept for the day of judgment and destruction of the ungodly" — the fire of eschatological judgment is associated throughout the NT with Christ\'s Parousia: "the Son of Man will send out his angels, and they will weed out of his kingdom everything that causes sin and all who do evil. They will throw them into the blazing furnace" (Matt 13:41-42). Christ is the Judge who keeps the present world in reserve for the day he will execute final judgment. The fire is not arbitrary destruction but the justice of the One who was himself the Righteous Sufferer.</p>',
+    "8": '<p>"With the Lord a day is like a thousand years, and a thousand years are like a day" (from Ps 90:4, Moses\'s psalm) — the Lord\'s timescale transcends human calculation. The Christological import: the "delay" of Christ\'s return is not evidence of divine indifference or impotence but of divine freedom from the constraints of creaturely time. Christ operates on the eternal timescale of the triune God, not the urgency-calendar of human impatience. The Lord who is beyond time is not bound by time\'s measure of "slowness."</p>',
+    "11": '<p>"What kind of people ought you to be? You ought to live holy and godly lives" — the eschatological dissolution of the present world does not produce passivity but intensified Christological ethics. The "holy and godly lives" (<em>en hagiais anastrophais kai eusebeiais</em>) are the lives of people shaped by the character of Christ, who is himself holy (1 Pet 1:15-16; Rev 3:7) and whose appearing is the ground of all Christian moral effort (1 John 3:2-3: "when he appears, we shall be like him... everyone who has this hope in him purifies himself"). The coming of Christ is not an escape from ethics but their sharpest motivation.</p>',
+    "12": '<p>"Looking forward to the day of God and speeding its coming" — the "day of God" is the Day of the Lord that throughout the OT announces divine intervention in history (Amos 5:18; Joel 2:31; Zeph 1:14). In the NT this day becomes specifically the Day of Christ: the day of Jesus Christ (Phil 1:6), the day of our Lord Jesus Christ (1 Cor 1:8), the great day of the Lamb\'s wrath (Rev 6:17). The community that prays "come, Lord Jesus" (<em>marana tha</em>, 1 Cor 16:22; Rev 22:20) is hastening the day when Christ will make all things new.</p>',
+    "13": '<p>"A new heaven and a new earth, where righteousness dwells (<em>dikaiosynē katoikei</em>)" — the new creation of Isa 65:17; 66:22 fulfilled through Christ. Righteousness "dwells" in the new creation because Christ himself is righteousness personified: he is made our righteousness (1 Cor 1:30: <em>dikaiosynē</em>), and his righteous reign (Rev 19:11: "Faithful and True... in righteousness he judges and makes war") characterizes the new creation order. The new world is new because the Righteous One inhabits it as its Lord — the old creation groaned under sin; the new creation will resonate with Christ\'s own character.</p>',
+    "14": '<p>"Make every effort to be found spotless (<em>aspiloi</em>), blameless (<em>amōmētoi</em>) and at peace with him" — the terms echo the description of Christ himself as the unblemished sacrifice: 1 Pet 1:19 uses <em>amōmou kai aspilou</em> (without blemish and without spot) for Christ. The believer is called to be found in Christ\'s own character when he appears — spotless and blameless not by their own achievement but because they are "found in him" (Phil 3:9). The preparation for the Parousia is conformity to the character of the One who will appear.</p>',
+    "15": '<p>"Our Lord\'s patience means salvation" — the patience of Christ in delaying the Parousia is not indecision but salvific strategy: the time of waiting is the time of the gospel\'s advance, gathering those who will be found among his own at the last day. Paul\'s letters, Peter notes, address "these matters" — the same themes of Christ\'s return, judgment, and salvation. Paul and Peter witness to the same Christ from different perspectives; the unity of their testimony is the unity of Christ himself, the one Lord of the one apostolic gospel.</p>',
+    "16": '<p>Paul\'s letters are placed alongside "the rest of the Scriptures (<em>tas loipas graphas</em>)" — an extraordinary claim that the apostolic letters about Christ are on par with the prophetic scriptures that pointed to him. The canon of Christ-testimony is expanding to include the apostolic witness as authoritatively as the prophetic. Those who "distort" Paul as they do "the other Scriptures" are simultaneously distorting the christological content of both: twisting the Christ-testimony of the OT and the apostolic proclamation of the same Christ.</p>',
+    "17": '<p>"Be on your guard so that you may not be carried away by the error of the lawless and fall from your secure position (<em>tou idiou stērigmou</em>)" — the "secure position" is the firm foundation in Christ. The same verb <em>stērizō</em> (establish, make firm) is used in 1 Pet 5:10 for God establishing believers after suffering, and Christ prayed that Peter\'s own faith would not fail and that he would "strengthen your brothers" (Luke 22:32). The security the letter defends is not complacency but the active, guarded stability of those who are rooted in the apostolic testimony about Christ.</p>',
+    "18": '<p>"Grow in the grace and knowledge of our Lord and Savior Jesus Christ. To him be glory both now and forever! Amen." — the letter closes with a doxology directed entirely to Christ: the glory that belongs to "our Lord and Savior" in the eternal realm (<em>eis hēmeran aiōnos</em>, the day of eternity). The entire epistle — with its defense of eyewitness Christology, its warning against false teachers who deny the Sovereign Lord, its eschatological vision of the new creation — ends at the feet of Christ. Growth in grace and growth in the knowledge of Christ are identical; the telos of the Christian life is not a doctrine about Christ but Christ himself, to whom all glory belongs.</p>'
   }
 }
 
 def main():
-    books_data = [
-        ('james', JAMES_ECHO, JAMES_ORIGINAL, JAMES_CONTEXT, JAMES_CHRIST),
-        ('1peter', ONEPET_ECHO, ONEPET_ORIGINAL, ONEPET_CONTEXT, ONEPET_CHRIST),
-        ('2peter', TWOPET_ECHO, TWOPET_ORIGINAL, TWOPET_CONTEXT, TWOPET_CHRIST),
-        ('2john', TWOJOHN_ECHO, TWOJOHN_ORIGINAL, TWOJOHN_CONTEXT, TWOJOHN_CHRIST),
-        ('3john', THREEJOHN_ECHO, THREEJOHN_ORIGINAL, THREEJOHN_CONTEXT, THREEJOHN_CHRIST),
-        ('jude', JUDE_ECHO, JUDE_ORIGINAL, JUDE_CONTEXT, JUDE_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-christ', '2peter')
+    merge_comm(existing, CHRIST)
+    save_comm('mkt-christ', '2peter', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    il = json.loads((ROOT / 'data' / 'interlinear' / '2peter.json').read_text())
+    all_ok = True
+    for ch in sorted(il.keys(), key=int):
+        il_vv = set(il[ch].keys())
+        out_vv = set(existing.get(ch, {}).keys())
+        missing = sorted(il_vv - out_vv, key=int)
+        if missing:
+            print(f'  ch{ch}: still missing {missing}')
+            all_ok = False
+        else:
+            print(f'  ch{ch}: complete ({len(out_vv)} verses) ✓')
+    if all_ok:
+        print('  All chapters complete ✓')
 
 if __name__ == '__main__':
     main()

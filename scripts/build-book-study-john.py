@@ -1,0 +1,428 @@
+"""
+Book Study Data — John
+book_id: john
+lang: greek
+
+Run: python3 scripts/build-book-study-john.py
+
+Notes:
+- Key vocabulary selected from John author group peaks in author-freq-greek.json
+  (John group covers the Gospel, 1-3 John, and Revelation)
+- πιστεύω (G4100) included for its unique Johannine feature: ~98 occurrences as verb,
+  but the noun πίστις never appears — faith is always an active verb in John
+- αἰώνιος (G166) included alongside ζωή (G2222) because the compound phrase
+  'eternal life' is John's central soteriological formula (~17x in the gospel)
+- Ἰουδαῖος (G2453) intentionally excluded from vocabulary — too complex to handle
+  in a significance note without risking misuse
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "john",
+
+    "key_vocabulary": [
+        {
+            "code": "G3056",
+            "lemma": "λόγος",
+            "translit": "lógos",
+            "gloss": "word",
+            "significance": (
+                "John's prologue opens 'In the beginning was the Logos' — a term that spoke "
+                "simultaneously to two worlds. For Greek readers, the Logos was the rational "
+                "principle ordering the cosmos. For Jewish readers it recalled the creative "
+                "word of God in Genesis 1 and the personified Wisdom of Proverbs 8. John uses "
+                "the term to address both, then surpasses both: the Logos is not a "
+                "philosophical abstraction or a divine mediator but an eternal divine Person "
+                "who becomes flesh (1:14). Crucially, John never calls Jesus 'Logos' again "
+                "after the prologue — the word has done its work of establishing preexistence "
+                "and identity before the narrative proper begins."
+            )
+        },
+        {
+            "code": "G4100",
+            "lemma": "πιστεύω",
+            "translit": "pisteúō",
+            "gloss": "commit (to trust)",
+            "significance": (
+                "This verb appears approximately 98 times in John — more than in Matthew, "
+                "Mark, and Luke combined. Crucially, John never uses the corresponding noun "
+                "πίστις ('faith'). This is theologically deliberate: faith in John is not a "
+                "static possession but an ongoing act of trust, an active orientation toward "
+                "Jesus that can be sustained or abandoned. The book's stated purpose (20:31) "
+                "uses a present subjunctive — 'that you may continue believing' — not a one-"
+                "time decision. Every occurrence of πιστεύω in John is an invitation to "
+                "active, present-tense commitment to the one who is the resurrection and the life."
+            )
+        },
+        {
+            "code": "G2222",
+            "lemma": "ζωή",
+            "translit": "zōḗ",
+            "gloss": "life",
+            "significance": (
+                "John uses this word approximately 36 times — far more than any other gospel. "
+                "In John, 'life' is almost always 'eternal life': not merely continued "
+                "biological existence but the quality of life belonging to the age to come, "
+                "participation in the divine life itself. Jesus declares 'I am the resurrection "
+                "and the life' (11:25) and 'I came that they may have life and have it "
+                "abundantly' (10:10). John's soteriology is present-tense: 'whoever believes "
+                "has (ἔχει, present tense) eternal life' (3:36). Life in John is not a future "
+                "reward but a current possession entered by believing."
+            )
+        },
+        {
+            "code": "G166",
+            "lemma": "αἰώνιος",
+            "translit": "aiṓnios",
+            "gloss": "eternal",
+            "significance": (
+                "John uses the phrase 'eternal life' (ζωὴ αἰώνιος) approximately 17 times — "
+                "more than any other NT book. The adjective αἰώνιος is not simply 'unending' "
+                "but 'belonging to the age to come' — the life of the new creation breaking "
+                "into the present through Jesus. John 17:3 provides the most precise "
+                "definition: 'And this is eternal life: that they know you, the only true "
+                "God, and Jesus Christ whom you have sent.' Eternal life in John is not "
+                "duration but relationship — knowing the Father through the Son. The student "
+                "reading 3:16 should hear not 'unending existence' but 'the life of the "
+                "coming age, now available.'"
+            )
+        },
+        {
+            "code": "G1391",
+            "lemma": "δόξα",
+            "translit": "dóxa",
+            "gloss": "dignity",
+            "significance": (
+                "'Glory' is John's master Christological concept. The prologue declares 'we "
+                "have seen his glory, glory as of the only Son from the Father' (1:14); the "
+                "seven signs are manifestations of glory (2:11); the passion is Jesus' 'hour "
+                "of glory' (12:23; 17:1). The decisive move is John's identification of the "
+                "cross as glorification (12:32; 13:31-32) — the lifting up on the cross is "
+                "simultaneously exaltation. In John, glory is not power and triumph but the "
+                "self-giving love of God made fully visible. The High Priestly Prayer (ch. 17) "
+                "reveals the glory Jesus had with the Father before creation — the eternal "
+                "inner life of the Trinity."
+            )
+        },
+        {
+            "code": "G5457",
+            "lemma": "φῶς",
+            "translit": "phōs",
+            "gloss": "fire",
+            "significance": (
+                "Light and darkness is John's primary symbolic dualism. The Prologue "
+                "announces 'the light shines in the darkness, and the darkness has not "
+                "overcome it' (1:5). Jesus declares 'I am the light of the world' (8:12; "
+                "9:5). John 3:19-21 makes the dualism a present judgment: people love "
+                "darkness rather than light because their deeds are evil; those who do truth "
+                "come to the light. The healing of the man born blind (ch. 9) dramatizes "
+                "this — physical sight and spiritual sight, blindness and seeing, are the "
+                "same story. The verdict of the trial before Pilate (18:28–19:16) is set "
+                "explicitly 'early' — at the dawn, as the light is coming — with heavy irony."
+            )
+        },
+        {
+            "code": "G3875",
+            "lemma": "παράκλητος",
+            "translit": "paráklētos",
+            "gloss": "advocate",
+            "significance": (
+                "This word appears only in John (14:16, 26; 15:26; 16:7) and 1 John (2:1) in "
+                "the NT. It means one called alongside as advocate, counselor, or helper. At "
+                "14:16, Jesus calls the Spirit 'another Paraclete' (ἄλλον παράκλητον) — "
+                "implying Jesus himself has been the first. The Spirit continues Jesus' "
+                "ministry: teaching, reminding, testifying, convicting, and guiding into "
+                "all truth. This pneumatology establishes the Spirit as a personal presence, "
+                "not an impersonal force, who maintains the relationship Jesus had established "
+                "with his disciples after his physical departure. The community that loses "
+                "Jesus does not lose the Paraclete."
+            )
+        },
+        {
+            "code": "G4592",
+            "lemma": "σημεῖον",
+            "translit": "sēmeîon",
+            "gloss": "miracle",
+            "significance": (
+                "John uses this word approximately 17 times to describe Jesus' miracles — "
+                "never δύναμις ('mighty work,' the Synoptic term). A σημεῖον is a meaningful "
+                "indicator: it points beyond itself to what it signifies. The seven signs are "
+                "not primarily demonstrations of power but epiphanies of identity: water to "
+                "wine reveals Jesus gives the true wine of the new age; feeding the 5,000 "
+                "reveals he is the bread of life; raising Lazarus reveals he is the "
+                "resurrection and the life. John signals this hermeneutic explicitly: each "
+                "sign is followed by a discourse that unpacks the revelation. The crowd's "
+                "failure is to want more signs (6:30) rather than hearing what the signs "
+                "are pointing to."
+            )
+        },
+        {
+            "code": "G225",
+            "lemma": "ἀλήθεια",
+            "translit": "alḗtheia",
+            "gloss": "true",
+            "significance": (
+                "John uses this word approximately 25 times — more than any other gospel. "
+                "In John, truth is not primarily a propositional quality but a personal one: "
+                "'I am the way, and the truth, and the life' (14:6). The Spirit is 'the "
+                "Spirit of truth' (14:17; 15:26; 16:13). Freedom comes through knowing "
+                "the truth (8:32); sanctification is through the truth (17:17). Pilate's "
+                "question 'What is truth?' (18:38) is John's most ironic moment — he is "
+                "standing in front of the one who is the truth, and cannot see it. In the "
+                "Johannine framework, truth is not a concept to be mastered but a Person "
+                "to be known, and knowing the truth is inseparable from knowing Jesus."
+            )
+        },
+        {
+            "code": "G3306",
+            "lemma": "μένω",
+            "translit": "ménō",
+            "gloss": "abide",
+            "significance": (
+                "John uses this verb approximately 40 times — more than any other NT book. "
+                "It denotes stable, permanent indwelling: the Spirit 'remains' on Jesus at "
+                "the baptism (1:32-33); eternal life 'remains' in the believer (12:34); "
+                "those who eat Jesus' flesh 'remain' in him and he in them (6:56). The vine "
+                "discourse (15:1-17) builds entirely on this word: 'Abide in me, and I in "
+                "you... those who abide in me and I in them bear much fruit.' μένω is John's "
+                "vocabulary for mutual indwelling — the participatory union between the "
+                "believer and the Triune God that is the telos of eternal life. Translating "
+                "it as 'remain' captures the permanence; 'abide' captures the intimacy."
+            )
+        },
+        {
+            "code": "G2889",
+            "lemma": "κόσμος",
+            "translit": "kósmos",
+            "gloss": "adorning",
+            "significance": (
+                "John uses this word approximately 78 times — far more than any other NT "
+                "book — and exploits its double meaning throughout. The world is the object "
+                "of God's love: 'For God so loved the world that he gave his only Son' "
+                "(3:16-17). But 'the world' is also the realm of rebellion against the light "
+                "(1:10-11; 15:18-19). These are not two different referents but two sides of "
+                "one reality: creation that God loves has become enemy territory. Believers "
+                "are 'in the world but not of it' (17:11, 16). John's unresolved tension "
+                "between the world as loved and the world as hostile is not a contradiction "
+                "but the grammar of incarnation: the Word came into enemy territory because "
+                "he loved it."
+            )
+        },
+        {
+            "code": "G25",
+            "lemma": "ἀγαπάω",
+            "translit": "agapáō",
+            "gloss": "to love (in a",
+            "significance": (
+                "Love in John is the inner life of the Trinity made available to humanity: "
+                "the Father loves the Son (3:35; 5:20); the Son loves the disciples (13:1; "
+                "15:9); the command is to love one another as Jesus loved (13:34-35). The "
+                "new commandment is not simply to love but to love <em>as Jesus loved</em> "
+                "— a standard that only makes sense if Jesus' love is somehow accessible to "
+                "his followers. John 3:16 uses this verb to name the Father's motive for the "
+                "entire incarnation: God's ἀγαπάω for the world is the reason for the Son's "
+                "coming. In John, love is not sentiment but the character of divine action — "
+                "self-giving unto death."
+            )
+        },
+        {
+            "code": "G3962",
+            "lemma": "πατήρ",
+            "translit": "patḗr",
+            "gloss": "father",
+            "significance": (
+                "John uses this word approximately 137 times — far more than any other "
+                "gospel. The Father-Son relationship is John's central theological structure: "
+                "the Son does nothing of himself but only what he sees the Father doing "
+                "(5:19); speaks only the Father's words (14:24); does the works the Father "
+                "gives him (17:4). This is not subordination in the sense of inequality but "
+                "the eternal pattern of relational life within God. The disciples are invited "
+                "into this same relationship: 'As the Father has sent me, even so I am "
+                "sending you' (20:21). The Father in John is not an abstraction but the "
+                "personal divine other in eternal relation with the Son, whose relationship "
+                "with humanity is the model for the Son's mission."
+            )
+        },
+        {
+            "code": "G1325",
+            "lemma": "δίδωμι",
+            "translit": "dídōmi",
+            "gloss": "adventure",
+            "significance": (
+                "This verb appears approximately 76 times in John — far more than any other "
+                "gospel. Divine giving is the structural grammar of John's soteriology: God "
+                "gave his only Son (3:16); the Father gives the Son authority over all flesh "
+                "(17:2); the Son gives eternal life (17:2); the Spirit is given (14:16); "
+                "believers are given to the Son by the Father (17:6-12); Jesus gives his "
+                "flesh for the life of the world (6:51). The verb creates an unbroken chain "
+                "of divine gift from Father to Son to believers to the world. Everything "
+                "the believer has is given, and the giving originates in the eternal love "
+                "of the Father. John's theology is thoroughly grace-structured."
+            )
+        },
+        {
+            "code": "G1097",
+            "lemma": "γινώσκω",
+            "translit": "ginṓskō",
+            "gloss": "allow",
+            "significance": (
+                "John uses this verb approximately 57 times — far more than the Synoptics. "
+                "Knowing in John is not propositional mastery but relational recognition — "
+                "the intimate knowledge of persons. John 17:3 defines eternal life as knowing "
+                "the Father and the Son. Jesus knows his sheep and is known by them, 'even "
+                "as the Father knows me and I know the Father' (10:14-15). This knowing is "
+                "mutual, progressive, and transformative — not a one-time transfer of "
+                "information but the ongoing deepening of a relationship. The LXX uses the "
+                "same Greek root for the knowledge of intimate union (Genesis 4:1). Knowing "
+                "God in John is participating in the same personal knowledge that exists "
+                "between the Father and the Son."
+            )
+        },
+    ],
+
+    "language_notes": (
+        "<p>John's prologue (1:1–18) opens with <em>Ἐν ἀρχῇ ἦν ὁ λόγος</em> — the first "
+        "three words echo the LXX Genesis 1:1 (<em>Ἐν ἀρχῇ ἐποίησεν ὁ θεός</em>) with "
+        "deliberate precision. John replaces 'God made' with 'the Word was' — preexistence "
+        "rather than creative action is the first claim. The prologue is structured "
+        "chiastically around v. 14 ('the Word became flesh') as the center, with parallel "
+        "statements about the Word's preexistence, role in creation, reception by the world, "
+        "and John's testimony framing it. The Greek is dense and rhythmic, almost hymnic — "
+        "many scholars identify a pre-Johannine hymn behind vv. 1–5, 9–11, 14, 16. Whether "
+        "or not that is correct, the prologue functions as a theological overture: every "
+        "theme of the Gospel — light, life, word, witness, flesh, glory, grace, truth — is "
+        "stated here before the narrative begins.</p>"
+        "<p>John's prose style is deceptively simple — short sentences, limited vocabulary, "
+        "frequent repetition — but this simplicity is deliberate and theologically loaded. "
+        "The Farewell Discourse (chs. 13–17) circles the same vocabulary (love, abide, "
+        "know, Father, send, Spirit) in what appears to be repetitive argument but functions "
+        "as a deepening spiral: each return to the same terms carries more weight from what "
+        "has preceded. This style is closer to meditation than to rhetoric. John's Greek is "
+        "not the rhetorical sophistication of Hebrews or the argumentative precision of "
+        "Paul — it is liturgical prose, written for rereading, where meaning accumulates "
+        "over multiple passes through the same language.</p>"
+        "<p>John's <strong>ἵνα</strong> clauses (purpose/result clauses) are his "
+        "grammatical signature of divine intentionality. God sent the Son <em>ἵνα</em> "
+        "whoever believes might have eternal life (3:16); the Spirit is given <em>ἵνα</em> "
+        "he might teach and remind (14:26); the signs are written <em>ἵνα</em> readers "
+        "might believe (20:31). John uses <em>ἵνα</em> approximately 145 times — far more "
+        "than any other NT book. Every event in John's narrative is purposive; nothing "
+        "happens accidentally. The repeated <em>ἵνα</em> creates a theology of divine "
+        "intention: what God does, he does for a stated end, and the end is always the "
+        "life and belief of the recipients.</p>"
+        "<p>The Greek perfect tense in John carries theological weight that English "
+        "translations often level. 'It is finished' (19:30 — <em>τετέλεσται</em>) is a "
+        "perfect passive: the work of the cross is not merely past but completed with "
+        "present, ongoing consequence. The Beloved Disciple 'saw and believed' (20:8 — "
+        "<em>εἶδεν καὶ ἐπίστευσεν</em>) — aorists marking the moment of coming to faith. "
+        "John's tense choices are not stylistic conventions but theological instruments: "
+        "when he uses the perfect, the completed action has present force; when he uses "
+        "the present, he marks an abiding state. The student reading John in Greek will "
+        "find the tense system as interpretively rich as the vocabulary.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Clement of Alexandria (c. 200 AD) called John 'the "
+        "spiritual gospel' because of its theological depth — it supplements the 'bodily' "
+        "facts of the Synoptics with the Spirit's deeper meaning. Origen's Commentary on "
+        "John is the longest patristic commentary on any biblical book. The Fourth Gospel "
+        "was decisive in the trinitarian controversies of the 3rd and 4th centuries: "
+        "'the Word was God' (1:1) anchored the Nicene position; Arians appealed to 'the "
+        "Father is greater than I' (14:28). The Council of Nicaea (325 AD) used Johannine "
+        "vocabulary — 'only-begotten,' 'light of light,' 'true God' — to define the Son's "
+        "relation to the Father. John 1:1 and 20:28 are the bedrock of Nicene Christology.</p>"
+        "<p><strong>Medieval:</strong> John's Gospel was the primary source for medieval "
+        "mystical theology. Meister Eckhart, Julian of Norwich, and Bernard of Clairvaux "
+        "drew on John's language of union and mutual indwelling (15:4-5; 17:21-23) to "
+        "articulate the soul's participation in the divine life. The prologue was read "
+        "at the end of the Mass in medieval Catholic liturgy, making John 1:1-14 perhaps "
+        "the most publicly repeated biblical text in the medieval West. The Beloved "
+        "Disciple's identification with John the apostle gave the community's distinctive "
+        "theology unique authority as eyewitness testimony.</p>"
+        "<p><strong>Reformation:</strong> Luther called John his preferred gospel — 'the "
+        "chief gospel' — for its direct and explicit statement of grace through faith. "
+        "Calvin wrote a major commentary focused on the Father-Son relationship as the "
+        "model of sovereign grace. The Reformation debates about John concentrated on "
+        "the Farewell Discourse: what exactly did Jesus promise the Spirit would do in "
+        "16:13 ('guide you into all truth')? Whether this guaranteed continuing doctrinal "
+        "certainty for the church, or was limited to the apostolic deposit, divided "
+        "Protestant and Catholic interpretations of the Spirit's ongoing role.</p>"
+        "<p><strong>Modern:</strong> Three debates dominate Johannine scholarship. First, "
+        "the relationship between John and the Synoptics — independent tradition, or "
+        "dependence? Second, the 'Johannine community' hypothesis (J. Louis Martyn, "
+        "Raymond Brown): did John's distinctive theology emerge from a specific community's "
+        "experience of expulsion from the synagogue (9:22)? Third, John's portrait of "
+        "Jesus — do the long theological discourses represent independent historical memory "
+        "or theological development by the Johannine school? Brown's two-volume Anchor "
+        "Bible commentary (1966, 1970) remains the standard reference for all three "
+        "questions.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Before reading John, understand its <strong>two-level structure</strong>. "
+        "Every scene operates simultaneously as historical narrative and theological "
+        "discourse. When Nicodemus asks 'How can a man be born when he is old?' (3:4), "
+        "his literal question becomes the vehicle for a theology of Spirit and new birth. "
+        "When the Samaritan woman asks about water, Jesus turns it toward living water. "
+        "John's Jesus never allows a question to remain merely literal — he always moves "
+        "it to the level of divine reality. This is not evasion but John's theological "
+        "claim: every historical encounter with Jesus was an encounter with the eternal "
+        "Word, and every misunderstanding in the narrative is an invitation to see deeper.</p>"
+        "<p>The seven signs are a structured sequence, not a random list. Each sign "
+        "reveals something specific about Jesus' identity and is followed by a discourse "
+        "that unpacks the revelation: water to wine leads to new birth (chs. 2–3); the "
+        "feeding of the 5,000 leads to 'I am the bread of life' (ch. 6); the healing of "
+        "the blind man leads to 'I am the light of the world' (chs. 9–10); raising Lazarus "
+        "leads to 'I am the resurrection and the life' (ch. 11). Read each sign with its "
+        "following discourse as a single unit. The sign is not the point; the identity "
+        "it discloses is.</p>"
+        "<p>Two misreadings to avoid: First, reading 'the Jews' (Ἰουδαῖοι, ~70 occurrences) "
+        "as an ethnic or racial category. In John, this phrase functions as a narrative "
+        "label for the religious establishment opposing Jesus — not a verdict on the Jewish "
+        "people, all of whom (Jesus included) were ethnically Jewish. The polemic reflects "
+        "an intra-Jewish dispute, not anti-Semitism; importing the latter meaning into "
+        "John's language has caused serious historical harm. Second, reading John's dualism "
+        "(light/darkness, above/below, Spirit/flesh) as Platonic or Gnostic. Both poles "
+        "in John exist within creation, not as metaphysical opposites; the darkness is not "
+        "a cosmic principle but the rebellion of the world against its Creator. "
+        "Enter the gospel at the prologue (1:1–18) for the theological overture, or at "
+        "ch. 15 (the vine discourse) for John's most concentrated language of union "
+        "with Christ.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('john')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('john', merged)
+
+main()

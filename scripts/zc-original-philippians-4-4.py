@@ -1,27 +1,34 @@
 """
-Combined script: Philippians (echo + original + context + christ) and
-Colossians (echo + original + context + christ) — all 4 chapters each.
+MKT Original Commentary — Philippians chapter 4
+Run: python3 scripts/zc-original-philippians-4-4.py
 
-This script writes all 8 output files. It is idempotent via merge functions.
+Key translation decisions for ch 4:
+- chairete (v4): 'rejoice' — imperative; MKT 'Rejoice in the Lord always'
+- epieikes (v5): 'gentleness/forbearance/reasonableness' — rare virtue term;
+  MKT 'gentleness'; lit. range: fitting, equitable, moderate
+- eggys (v5): 'near/at hand' — spatial proximity OR temporal imminence;
+  MKT 'the Lord is near' keeps the ambiguity
+- autarkes (v11): 'content' — Stoic self-sufficiency vocabulary; Paul baptizes
+  this Stoic concept: sufficiency comes from Christ, not inner resources
+- mueō (v12): 'learned the secret' — mystery-religion initiation vocabulary;
+  MKT 'learned the secret'; the apostle has been initiated into a higher school
+- aretē (v8): 'virtue' — only Pauline use of this Greek philosophical term
+- logos (v15,17): 'account' in commercial/bookkeeping sense
+- euōdia (v18): 'pleasing aroma' — LXX sacrificial vocabulary (Gen 8:21;
+  Exod 29:18); the Philippians' gift is a cultic offering
+- Kaisaros oikia (v22): Caesar's household — the network of imperial slaves
+  and freedmen in Rome who administered the empire
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_comm(layer, book, data):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,21 +36,8 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -51,178 +45,40 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# PHILIPPIANS
-# ============================================================
-
-PHIL_ECHO = {
-  "2": {
-    "5": [
-      {"type": "allusion", "target": "Isa 53:12", "note": "Have this mind among yourselves, which is yours in Christ Jesus — the self-emptying of the Christ-hymn echoes the Servant who poured himself out to death (Isa 53:12); the humiliation-exaltation pattern of the hymn is the Servant trajectory"},
-      {"type": "allusion", "target": "Isa 45:23", "note": "Every knee shall bow and every tongue confess — Phil 2:10-11 cites Isa 45:23 directly (as I live, every knee shall bow to me and every tongue shall swear allegiance to YHWH); Paul applies this YHWH-universal-homage text to Jesus, making the confession of Jesus's lordship the fulfillment of YHWH's eschatological claim on all creation"}
-    ]
-  },
-  "3": {
-    "9": [
-      {"type": "allusion", "target": "Jer 9:23-24", "note": "Not having a righteousness of my own that comes from the law — Jeremiah's warning not to boast in wisdom, might, or riches; Paul's not-boasting in Torah credentials echoes the prophetic critique of self-sufficiency; the only boast is knowing YHWH (and for Paul: Christ)"},
-      {"type": "allusion", "target": "Hab 2:4", "note": "A righteousness from God that depends on faith — the Habakkuk anchor of Pauline faith-righteousness; the righteous one shall live by faith; Phil 3:9 applies the same faith-vs-works distinction as Gal 3:11 and Rom 1:17"}
-    ],
-    "21": [
-      {"type": "fulfillment", "target": "Dan 7:13-14", "note": "The Lord Jesus Christ will transform our lowly body to be like his glorious body, by the power that enables him even to subject all things to himself — the Danielic authority of the Son of Man to whom dominion is given (Dan 7:14) is the basis for Paul's confidence in the bodily transformation at the parousia"}
-    ]
-  }
-}
-
-PHIL_ORIGINAL = {
-  "2": {
-    "6": "<p><strong>hos en morphe theou hyparchon ouch harpagmon hegesato to einai isa theo</strong> (<em>hos en morphē theou hyparchōn ouch harpagmon hēgēsato to einai isa theō</em>): the most debated sentence in Philippians. <em>Morphe theou</em> (form/mode of God) is not mere appearance (doxa/eidos) but the actual mode of existence — the divine being's characteristic reality. <em>Harpagmon</em> (HARPAGMOS): the crux. Older interpretation: 'did not regard equality with God as something to be grasped (and held onto)' — the pre-existent Son relinquished divine prerogatives. Newer consensus (N.T. Wright, R. Hoover): 'did not regard equality with God as something to exploit for his own advantage' — already possessing it, he did not use it selfishly. The second reading requires no ontological descent at incarnation — the Son freely chose not to exploit his divine position. Either way, the <em>kenosis</em> (self-emptying, v. 7) is voluntary and constitutes the pattern for Christian ethics (v. 5).</p>",
-
-    "9": "<p><strong>dio kai ho theos auton hyperypsosen kai echarisato auto to onoma to hyper pan onoma</strong> (<em>dio kai ho theos auton hyperypsōsen kai echarisato autō to onoma to hyper pan onoma</em>): 'Therefore God has highly exalted him and bestowed on him the name that is above every name.' <em>Hyperypsōsen</em> (super-exalted) is a hapax-legomenon in the NT — the <em>hyper</em> prefix intensifies beyond normal exaltation. The 'name above every name' that is then used in v. 10 is YHWH (<em>Kyrios</em>): by giving Jesus the name Lord-of-all, God applies Isa 45:23 (every knee bows to YHWH) to Jesus. The highest OT claim — universal homage to YHWH alone — is now predicated of the crucified and exalted Jesus.</p>",
-
-    "11": "<p><strong>kai pasa glossa exomologesetai hoti Kyrios Iesous Christos eis doxan Theou patros</strong> (<em>kai pāsa glōssa exomologēsetai hoti Kyrios Iēsous Christos eis doxan Theou patros</em>): 'every tongue confess that Jesus Christ is Lord, to the glory of God the Father.' The confession <em>Kyrios Iesous Christos</em> is the earliest Christian creed (cf. Rom 10:9; 1 Cor 12:3). Its application of Isa 45:23 to Jesus is the most explicit equation of Jesus with YHWH in the undisputed Pauline letters. The <em>eis doxan Theou patros</em> (to the glory of God the Father) prevents the Christology from displacing the Father: Jesus's lordship is the Father's glory, not a rival to it — a proto-Trinitarian formulation.</p>"
-  },
-  "3": {
-    "8": "<p><strong>alla men oun kai hegoumai panta zemia einai dia to hyperechon tes gnoseos Christou Iesou tou kyriou mou</strong>: 'Indeed, I count everything as loss because of the surpassing worth of knowing Christ Jesus my Lord.' <em>Zemia</em> (loss) and <em>skybala</em> (v. 8: dung/rubbish — a deliberately coarse word, the strongest available Greek term for something worthless or repulsive) balance against <em>to hyperechon</em> (the surpassing value). Paul revalues his entire pre-conversion Jewish curriculum vitae — circumcision, Benjaminite lineage, Pharisaic zeal, Torah-righteousness — as <em>skybala</em> compared to the knowing (<em>gnōsis</em>) of Christ. This is not anti-Judaism but a Christological superordination: Christ is worth more than everything else combined.</p>",
-
-    "20": "<p><strong>hemon de to politeuma en ouranois hyparchei</strong> (<em>hēmōn de to politeuma en ouranois hyparchei</em>): 'Our citizenship (<em>politeuma</em>) is in heaven.' <em>Politeuma</em> is a technical term for a community's civic identity — Philippi was a Roman colony whose citizens held Roman citizenship with its legal privileges (Acts 16:21). Paul uses the very term for civic identity to relocate the Philippians' primary belonging: they are residents in a Roman colony but their true <em>politeuma</em> is heavenly. The word also evokes the Jewish diaspora institution of a <em>politeuma</em> — a recognized community of foreigners living under their own governance within a host city (attested in Egypt and Cyrene).</p>"
-  }
-}
-
-PHIL_CONTEXT = {
-  "1": {
-    "1": "<p>Philippi was a Roman colony (colonia Iulia Augusta Philippensis, named for Philip II of Macedon and refounded by Augustus) in the province of Macedonia, on the Via Egnatia — the major east-west Roman road. Its citizens held Roman citizenship and its society closely modeled Roman institutions (the <em>duoviri</em> rather than Greek <em>stratēgoi</em> of Acts 16:20). Paul founded the church ca. 49-50 CE (Acts 16) — the first European church. The congregation had significant female leadership (Lydia, Euodia, Syntyche) and military members. Philippians is written from prison (1:7, 13, 17) — probably Rome (ca. 60-62 CE) or Ephesus (ca. 54-55 CE, supported by proximity implied by Philippians 2:19-30).</p>",
-
-    "13": "<p>The Praetorium (<em>praitorion</em>, 1:13) most naturally refers to the Praetorian Guard — the elite imperial bodyguard of 9,000 soldiers headquartered at Rome. If this is the Roman imprisonment, Paul's gospel has penetrated the household troops of the emperor — and Caesar's household is specifically mentioned (4:22: 'those of Caesar's household'). This is the remarkable irony: the imprisoned apostle has evangelized the imperial palace guard while awaiting trial before the emperor.</p>"
-  },
-  "3": {
-    "5": "<p>Paul's Jewish credentials (3:5-6) are the most complete self-description in his letters: circumcised on the eighth day (Torah-observant from birth; not a proselyte); of the people of Israel (full ethnic Israelite, not a convert); tribe of Benjamin (the prestige tribe that gave Israel its first king, Saul; Paul's Jewish name); Hebrew of Hebrews (Aramaic-speaking, Palestinian Jewish heritage, not a Diaspora Hellenist); as to the law a Pharisee (the most rigorous Torah-observance movement); as to zeal a persecutor of the church (demonstrating active Jewish loyalty); as to righteousness under the law, blameless. This is the curriculum vitae of a first-generation Pharisaic scholar of the highest standing — which Paul then categorizes as <em>skybala</em>.</p>"
-  }
-}
-
-PHIL_CHRIST = {
-  "2": {
-    "8": "<p>A direct revelation: 'He humbled himself by becoming obedient to the point of death, even death on a cross.' The descending movement of the Christ-hymn (form of God → form of a servant → death on a cross) reaches its nadir in the cross — the most shameful death in Roman society. The cross is not an accident that interrupted Christ's mission but the deliberate end-point of his voluntary self-humiliation. Crucifixion as the mode of death is theologically load-bearing: God's ultimate self-revelation occurs precisely at the place of maximum human shame. The Christological pattern is the template for Paul's ministry (3:10: I want to know him and the fellowship of his sufferings).</p>",
-
-    "11": "<p>A direct revelation: 'Every tongue confess that Jesus Christ is Lord, to the glory of God the Father.' The universal confession of Jesus as Lord (applying Isa 45:23's YHWH-homage text to Jesus) is the eschatological goal of all creation. This is not merely a future prediction but the normative Christological claim that shapes present discipleship: Jesus is Lord now, before every knee bows; the community that confesses this lives in counter-cultural obedience to a different sovereign than Caesar. The Christological center of Philippians: the crucified and exalted Jesus is the Lord of all creation.</p>"
-  },
-  "3": {
-    "10": "<p>A direct revelation: 'That I may know him and the power of his resurrection, and may share his sufferings, becoming like him in his death, that by any means possible I may attain the resurrection from the dead.' Paul's Christological-participatory formula: knowing Christ includes knowing both the power of his resurrection and the fellowship of his suffering. The resurrection is the pole that defines the suffering as meaningful — suffering is not masochism but Servant-pattern participation. <em>Summorphizomenos to thanatō autou</em> (being conformed to his death) applies the Christ-hymn (2:8) to Paul's own experience: his suffering is a Christomorphic process.</p>",
-
-    "20": "<p>A direct revelation: 'Our citizenship is in heaven, and from it we await a Savior, the Lord Jesus Christ, who will transform our lowly body to be like his glorious body.' The parousia will accomplish the final Christological transformation: the resurrection-body of Christ becomes the template for the redeemed body of believers. This is the personal eschatological application of 1 Cor 15:49 (we shall bear the image of the man of heaven). Christ's glorious resurrection body is not merely an isolated miracle but the prototype of the new creation in which believers will share at his coming.</p>"
-  }
-}
-
-# ============================================================
-# COLOSSIANS
-# ============================================================
-
-COL_ECHO = {
-  "1": {
-    "15": [
-      {"type": "allusion", "target": "Prov 8:22-31", "note": "The firstborn of all creation — Wisdom's self-description in Prov 8:22 ('the LORD possessed me at the beginning of his work, the first of his acts of old') resonates with Christ as the firstborn; what Wisdom claimed as pre-creation origin Paul attributes to Christ as the agent of all creation"},
-      {"type": "allusion", "target": "Gen 1:26-27", "note": "The image of the invisible God — Adam was made in the image of God (tselem elohim); Christ is the image of the invisible God in whom the Adamic image-bearing reaches its perfect, unfallen expression"}
-    ],
-    "20": [
-      {"type": "allusion", "target": "Isa 52:7", "note": "Making peace through the blood of his cross — the beautiful feet that bring good news of peace (Isa 52:7) are the feet of Christ's mission; the peace is accomplished not merely proclaimed, grounded in the blood of the cross"},
-      {"type": "allusion", "target": "Ezek 37:1-14", "note": "Reconciling all things to himself — the valley of dry bones and YHWH's breath restoring life; the cosmic reconciliation of Col 1:20 exceeds even Ezekiel's national restoration to encompass all creation"}
-    ]
-  },
-  "2": {
-    "14": [
-      {"type": "fulfillment", "target": "Isa 43:25", "note": "Having canceled the record of debt that stood against us — YHWH's declaration 'I am he who blots out your transgressions for my own sake' (Isa 43:25) finds its mechanism in the cross: the debt-document nailed to the cross is the vehicle of the blotting-out"},
-      {"type": "fulfillment", "target": "Exod 31:18", "note": "Nailing it to the cross — the tablets written by God's finger that Moses shattered at the golden calf; the law's written demands, now used against us, are rendered powerless by being nailed to the cross where Christ absorbed their condemnation"}
-    ]
-  },
-  "3": {
-    "10": [
-      {"type": "allusion", "target": "Gen 1:26-27", "note": "Being renewed in knowledge after the image of its creator — the new creation restores the original imago Dei; the knowledge lost at the Fall (Gen 3, where the desire for knowledge outside of God broke the relationship) is restored in the new creation"}
-    ]
-  }
-}
-
-COL_ORIGINAL = {
-  "1": {
-    "15": "<p><strong>hos estin eikon tou theou tou aoratou prototokos pases ktiseos</strong> (<em>hos estin eikōn tou theou tou aoratou, prōtotokos pasēs ktiseōs</em>): 'who is the image of the invisible God, the firstborn of all creation.' The Colossian hymn (1:15-20) is one of the highest Christological statements in the NT. <em>Eikon</em> (image) denotes not a copy of an absent original but the precise visible representation of an invisible reality — Christ is the icon in whom the otherwise-invisible God is seen (cf. John 1:18; Heb 1:3: <em>apaugasma</em> + <em>charakter</em>). <em>Prōtotokos pasēs ktiseōs</em>: 'firstborn of all creation' — <em>prōtotokos</em> is not 'first created' (which would be <em>prōtoktistos</em>) but the one who holds the firstborn's status of priority and authority over all creation; Col 1:16-17 confirms he is the creator, not a creature.</p>",
-
-    "19": "<p><strong>hoti en auto eudokesen pan to pleroma katoikesai</strong> (<em>hoti en autō eudokēsen pan to plērōma katoikēsai</em>): 'for in him all the fullness was pleased to dwell.' <em>Pleroma</em> (fullness) in Gnostic usage (slightly later than Colossians) denotes the totality of divine attributes distributed among aeons. Paul uses the term to assert the counter-claim: the entire divine fullness (not a portion distributed among spiritual intermediaries) resides bodily (<em>somatikos</em>, 2:9) in Christ. The Colossian false teaching apparently proposed a hierarchy of spiritual powers mediating access to God; the hymn's response is that Christ contains the whole without remainder.</p>"
-  },
-  "2": {
-    "14": "<p><strong>exaleipsas to kath' hemon cheirographon tois dogmasin ho en hypenantios hemin</strong> (<em>exaleipsas to kath' hēmōn cheirographon tois dogmasin ho ēn hypenantios hēmin</em>): 'having canceled the record of debt (<em>cheirographon</em>) that stood against us with its legal demands.' <em>Cheirographon</em> (handwritten document/bond) was a legal IOU — a debtor's acknowledgment of what was owed. The metaphor: humanity's accumulated debt of sin-obligations constituted a document that indicted us. <strong>proseilosas auto to staurō</strong>: 'nailing it to the cross.' The practice of affixing a notice of charges (<em>titulus</em>) to the cross of a condemned person (John 19:19-22: 'Jesus of Nazareth, King of the Jews') provides the image: our indicting debt-document was nailed to the cross with Christ, absorbing its condemnation in his death.</p>",
-
-    "15": "<p><strong>apekdysamenos tas archas kai tas exousias edeigmatisen en parresia thriambeusas autous en auto</strong> (<em>apekdysamenos tas archas kai tas exousias edeigmatisen en parrēsia, thriambeusas autous en autō</em>): 'disarming the rulers and authorities and putting them to open shame, by triumphing over them in him.' The cosmic powers (<em>archai kai exousiai</em>) that featured in the Colossian false teaching as spiritual intermediaries are publicly stripped of their authority by the cross. The triumphal procession image: in a Roman triumph, defeated enemies were displayed as captives behind the general's chariot. Christ's cross is the paradoxical triumph: precisely in what looks like defeat, the powers are disarmed and publicly humiliated.</p>"
-  },
-  "3": {
-    "3": "<p><strong>apethanete gar kai he zoe hymon kekryptai syn to Christo en to theo</strong> (<em>apethanete gar kai hē zōē hymōn kekryptai syn tō Christō en tō theō</em>): 'for you have died, and your life is hidden with Christ in God.' The perfect passive <em>kekryptai</em> (is and remains hidden) describes the present state: the believer's true life is concealed within the divine-Christological reality, not visible to external observation. This 'hiddenness' will be resolved at the parousia (v. 4: 'when Christ who is your life appears, you also will appear with him in glory') — eschatological glory is the unveiling of what is now hidden. The mystical union language ('with Christ in God') positions the believer's ontological security within the relationship between the Son and the Father.</p>"
-  }
-}
-
-COL_CONTEXT = {
-  "1": {
-    "2": "<p>Colossae was a city in the Lycus River valley of Phrygia (western Turkey), about 160 km east of Ephesus, near Laodicea and Hierapolis. In the classical period it was a significant city; by the mid-first century CE it had been eclipsed by its neighbors but remained a substantial wool-trading town. Paul did not found the Colossian church himself (2:1: 'those who have not seen me face to face'); it was apparently founded by Epaphras during Paul's Ephesian ministry (1:7; 4:12-13). The letter (written ca. 60-62 CE from Rome, or possibly Ephesus or Caesarea) addresses a 'philosophy' (<em>philosophia</em>, 2:8) threatening the congregation.</p>",
-
-    "16": "<p>The powers mentioned in the Colossian hymn and polemic (<em>archai, exousiai, thronoi, kyriotetes, angels</em>) reflect a rich Second Temple Jewish angelology that assigned cosmic governance of nations, natural forces, and celestial bodies to angelic intermediaries. 1 Enoch's Watchers, the 'Sons of God' of Deut 32:8 LXX, and the Qumran 'Prince of the congregation' all reflect this angelological world. The Colossian false teaching apparently involved veneration of these powers as necessary intermediaries — perhaps combined with Jewish calendar observances (2:16: new moons and Sabbaths) and ascetic practices (2:21: Do not handle, do not taste, do not touch). Scholars debate whether this is Jewish mysticism, proto-Gnosticism, or a local syncretistic mixture.</p>"
-  },
-  "2": {
-    "8": "<p>The 'philosophy and empty deceit according to human tradition, according to the elemental spirits of the world (<em>stoicheia tou kosmou</em>)' opposed in 2:8 has generated enormous scholarly debate. <em>Stoicheia</em> can mean: (1) the basic elements (earth, water, fire, air) of Greco-Roman cosmology; (2) the ABCs / elementary principles of instruction; (3) the elemental spiritual beings associated with the cosmos (astral spirits, planetary powers). The context (2:15-18: powers, angels, calendars) and the Galatian parallel (Gal 4:3, 9) where Paul equates <em>stoicheia</em> with slavish pre-Christian religious observance suggest option (3) or a combination: cosmic powers that enforced the old religious order Christ has superseded.</p>"
-  }
-}
-
-COL_CHRIST = {
-  "1": {
-    "15": "<p>A direct revelation: 'He is the image of the invisible God, the firstborn of all creation.' The Colossian hymn's Christological thesis: Christ is not an emanation from God, not an angelic mediator, not one power among many, but the very image of the otherwise-invisible God. The entire OT struggle to represent the unrepresentable God — the burning bush, the cloud-pillar, the Shekinah-glory, the prophetic visions — finds its resolution in Christ: in him the invisible God is fully and finally visible. The image-claim is not an accommodation for weak minds but the definitive disclosure of divine reality.</p>",
-
-    "20": "<p>A direct revelation: 'And through him to reconcile to himself all things, whether on earth or in heaven, making peace by the blood of his cross.' The scope of reconciliation is cosmic — not merely human spiritual relationships with God, but 'all things' in heaven and on earth. The cross is not a local transaction affecting individual souls but the resolution of a cosmic disruption (Rom 8:19-22: the creation groaning for redemption). The peace made through the blood of the cross is the eschatological shalom YHWH promised through the prophets, now grounded in the specific historical event of Christ's death.</p>"
-  },
-  "2": {
-    "9": "<p>A direct revelation: 'For in him the whole fullness of deity dwells bodily.' <em>Somatikos</em> (bodily) is the decisive word that distinguishes Paul's Christology from all Gnostic alternatives: the fullness of deity is not distributed among spiritual intermediaries but concentrated in the bodily, incarnate, crucified, and risen Jesus. The false teaching of Colossae proposed a spectrum of spiritual powers mediating access to the divine fullness; Paul's response is that you have the fullness in Christ already (v. 10: 'you have been filled in him') — no further spiritual program, calendar, or ascetic discipline is needed to access divine reality.</p>",
-
-    "15": "<p>A direct revelation: 'He disarmed the rulers and authorities and put them to open shame by triumphing over them in him.' The cross — which appeared to be Rome's and the powers' triumph over Jesus — was in fact Christ's triumph over the powers. The Christological paradox of Colossians: the moment of apparent defeat is the moment of definitive victory. The powers are not destroyed at the cross (they continue to act in history, Eph 6:12) but they are decisively disarmed — their authority is broken, their indictment-power (the cheirographon) is canceled, their ability to condemn is gone.</p>"
-  },
-  "3": {
-    "4": "<p>A direct revelation: 'When Christ who is your life appears, then you also will appear with him in glory.' Christ is not merely the source of life or the example of life but is himself the believer's life — a participatory identification so radical that the believer's appearance at the parousia is simultaneous with and inseparable from Christ's own appearing. The eschatological hope of Colossians is not individual survival after death but corporate appearing with Christ at his coming — the believer's hidden life (3:3) unveiled in glory. The Christological frame encompasses both the hiddenness of the present and the glory of the future.</p>"
+ORIGINAL = {
+  "4": {
+    "1": '<p><strong>hoste, adelphoi mou agapetoi kai epipotheto, chara kai stephanos mou</strong>: \'therefore\' (<em>hoste</em>) draws the conclusion of 3:17-21. <em>Agapetoi kai epipotheto</em> (beloved and longed for): the doubled emotional language is unusually warm. <em>Stephanos</em> (crown): the victor\'s wreath of the athletic games, not the royal diadem (<em>diadem</em>). Paul uses the same crown-image in 1 Thess 2:19-20 where the community itself is his crown at Christ\'s Parousia. The crown is eschatological — not present status but anticipated reward. <em>Stekete en Kyrio</em>: stand firm in the Lord — the imperative that 3:20-21\'s Parousia hope grounds.</p>',
+    "2": '<p><strong>Euodian parakaleo kai Syntichen parakaleo to auto phronein en Kyrio</strong>: the only named individuals addressed in the main body of the letter (apart from Epaphroditus and Timothy). Both names are Greek — Euodia (Good Journey) and Syntyche (Happy Chance). The identical formula applied to each (<em>parakaleo...</em>) gives neither precedence. The dispute between them is not specified. <em>To auto phronein</em> (be of the same mind): the <em>phronein</em> root is the letter\'s key term — phronein en Kyrio means having the same Christ-oriented mindset that Paul described in 2:5 (let this mind be in you which was in Christ Jesus).</p>',
+    "3": '<p><strong>nai eroto kai se, gnesie syzyge</strong>: \'true/genuine companion\' (<em>gnesie syzyge</em>). <em>Gnesios</em> (genuine, dispute level 2): MKT \'true companion\'; lit. legitimately born, genuine — the opposite of counterfeit. The identity of this \'true companion\' is debated: Epaphroditus, Luke, Silas, or even Paul\'s wife (though the masculine adjective makes the last unlikely). <em>Biblo tes zoes</em> (book of life, dispute level 2 — <em>zoe</em>): the eschatological register of the righteous (Exod 32:32-33; Isa 4:3; Dan 12:1; Rev 3:5; 13:8; 17:8; 20:12-15).</p>',
+    "4": '<p><strong>chairete en Kyrio pantote</strong>: the double imperative rejoice — the repetition is emphatic. <em>Chairō</em> (rejoice/be glad): MKT \'rejoice\'; the word family includes \'grace\' (<em>charis</em>) and \'gift\' (<em>charisma</em>) — all derived from the root of gladness/favor. The qualifier <em>en Kyrio</em> (in the Lord): rejoicing is not a psychological technique but a location — located within the sphere of Christ\'s lordship, which guarantees the Parousia-hope (3:20-21) and therefore grounds present joy regardless of circumstances (Paul writes from prison). <em>Pantote</em> (always): no circumstantial exception.</p>',
+    "5": '<p><strong>to epieikes hymon gnostheto pasin anthropois</strong>: let your <em>epieikes</em> be known to all people. <em>Epieikes</em> (gentleness, forbearance, reasonableness, moderation): one of the most difficult Greek virtue-terms to translate. It occurs in 1 Tim 3:3; Tit 3:2; James 3:17; 1 Pet 2:18. Aristotle defined it as equity that corrects strict legal justice when strict application would be unjust (Nicomachean Ethics 5.10). In the LXX it renders the Hebrew concept of patient, non-retaliatory response. MKT \'gentleness\' captures one dimension. <em>Ho Kyrios eggys</em>: the Lord is near (<em>eggys</em> — close, proximate). Ambiguous: spatial (the Lord is close — omnipresent) or temporal (the Parousia is imminent, cf. 3:20-21; 1 Cor 16:22; Rev 22:20). The temporal reading connects to the entire eschatological logic of ch 3-4.</p>',
+    "6": '<p><strong>meden merimnate</strong>: be anxious about nothing (<em>merimnaō</em> — to be distracted, divided in one\'s concerns, pulled in different directions). The same verb family appears in Matt 6:25-34 (do not worry) and Luke 10:41 (Martha is worried/distracted about many things). <em>En panti...</em>: in every situation, by prayer (<em>proseuche</em> — general prayer), petition (<em>deesis</em> — specific request), and thanksgiving (<em>eucharistia</em>) — three modes of address to God. The thanksgiving embedded in request is the Philippians\' characteristic posture (1:3). <em>To aitema hymon</em> (your requests): the content of the petitions presented before God.</p>',
+    "7": '<p><strong>he eirene tou theou he hyperechousa panta noun phrouresei tas kardias hymon kai ta noemata hymon en Christo Iesou</strong>: the peace of God surpassing all understanding will guard your hearts and minds. <em>Eirene</em> (peace): the Greek rendering of Hebrew <em>shalom</em> — comprehensive well-being, not merely absence of conflict. <em>Hyperechousa panta noun</em>: surpassing (<em>hyperecho</em> — to excel, be superior to) all mind/understanding. <em>Phroureō</em> (guard): military verb — to stand sentinel, post a guard; used for soldiers guarding a city gate or a prisoner. The peace of God is personified as a military guard standing watch over the hearts and minds. <em>En Christo Iesou</em>: in Christ Jesus — the sphere within which the guarding operates.</p>',
+    "8": '<p><strong>hosa estin alethē, hosa semna, hosa dikaia, hosa hagna, hosa prosphile, hosa euphema</strong>: the virtue catalogue of six <em>hosa</em> (whatever) clauses. <em>Semna</em> (noble/honorable/worthy of respect): the adjective for what commands reverence — used in 1 Tim 3:8, 11; Tit 2:2. <em>Arete</em> (virtue, excellence): the only occurrence of this key Stoic philosophical term in Paul. <em>Arete</em> is the central concept of Greek ethics — the excellence proper to a thing or person (Aristotle); the four cardinal virtues of Stoicism. Paul uses it without apology, demonstrating that Greek ethical vocabulary can serve Christian formation. <em>Epainos</em> (praise, commendation): what merits approval. The list moves from ontological qualities (true, noble, right, pure) to aesthetic ones (lovely, admirable) to the encompassing virtue-term and the functional criterion (praise).</p>',
+    "9": '<p><strong>ha kai emathete kai parelabete kai ekousate kai eidete en emoi</strong>: four verbs of reception — learned, received, heard, seen. <em>Parelabete</em> (received): the technical term for tradition-transmission (1 Cor 11:23; 15:3) — the Philippians received the apostolic tradition from Paul. <em>Ekousate</em> (heard): auditory reception of Paul\'s teaching. <em>Eidete en emoi</em> (seen in me): the apostle himself is the embodied example of the teaching — his conduct is the lived tradition the community observed. <em>Tauta prassete</em>: practice these things. <em>Ho de theos tes eirenes estai meth\' hymon</em>: the God of peace (cf. the peace of God, v.7) will be with them — the divine presence as the consequence of Christ-shaped practice.</p>',
+    "10": '<p><strong>Echarēn de en Kyrio megalos</strong>: I rejoiced greatly in the Lord — the joy-theme (v.4) applied to Paul\'s own experience. <em>Hoti ede pote anethaleite to hyper emou phronein</em>: that your thinking-for-me has revived (<em>anathallo</em> — to bloom again, revive; used of plants putting out new growth). <em>Phronein hyper emou</em> (thinking/caring for me): the <em>phronein</em> root again — the letter\'s key term now applied to the community\'s practical concern for Paul. <em>Ef\' ho kai ephroneit\' akaireisthe de</em>: indeed you were thinking of me — you lacked the opportunity. Paul preemptively softens any implication of neglect: they were concerned but circumstantially unable to help.</p>',
+    "11": '<p><strong>ouch hoti ephzeto to hysterema lego</strong>: not that I speak from need (<em>hysterema</em> — what is lacking, the deficit). <em>Ego gar emathon en hois eimi autarkes einai</em>: I have learned (<em>emathon</em> — aorist, completed learning) to be content (<em>autarkes</em>) in whatever circumstances. <em>Autarkes</em> (self-sufficient, content): the Stoic term for self-sufficiency — the wise person\'s independence from external circumstances. The Stoic <em>autarkeia</em> was achieved through the development of inner rational virtue. Paul uses the vocabulary but fundamentally reorients it: he has learned contentment, not achieved it through native virtue; and the sufficiency comes from Christ who strengthens him (v.13), not from inner resources.</p>',
+    "12": '<p><strong>oida kai tapeinousthai, oida kai perisseuein</strong>: I know how to be humbled (<em>tapeinoomai</em> — the verb of Christ\'s kenosis in 2:8) and how to abound. <em>En panti kai en pasin memyemai</em>: in all things and in all circumstances I have been initiated (<em>myeō</em> — perfect passive: to initiate into a mystery; to instruct in the secrets). <em>Myeō</em> is the technical vocabulary of Hellenistic mystery religions: to be initiated into the sacred rites. Paul adopts the vocabulary while inverting the source: he was \'initiated\' not by a mystery cult but by Christ — the \'secret\' (<em>mysterion</em>) of contentment through Christ\'s empowering. The verb appears only here in the NT.</p>',
+    "13": '<p><strong>panta ischyo en to endynamounti me Christo</strong>: I can do all things through Christ who strengthens me. <em>Ischyo</em> (to be strong, able, avail): general strength-capability. <em>Endynamoō</em> (strengthen): the en-prefix intensifying <em>dynamoō</em> (to empower from <em>dynamis</em> — power). The verse is directly connected to the contentment claim of vv.11-12: \'all things\' refers to all the circumstances of abasement and abundance just listed, not an unlimited universal capability. The strengthening comes from Christ himself — the one who \'works in you to will and to act\' (2:13: <em>ho theos estin ho energōn en hymin</em>).</p>',
+    "14": '<p><strong>plen kalos epoiesate synkoinonesantes mou te thlipsei</strong>: yet it was well done of you to share (<em>synkoinoneo</em> — to participate together with, to co-fellowship) in my affliction (<em>thlipsis</em>). The <em>syn</em>-prefix in <em>synkoinoneo</em> recurs throughout Philippians — the sharing and participation that characterizes authentic community (1:7: synkoinonous mou tes charitos; 1:5: koinonia eis to euangelion). Even as Paul distances himself from material need (vv.11-12), he values the Philippians\' participation itself as a relational act of solidarity.</p>',
+    "15": '<p><strong>oidate de kai hymeis, Philippesioi, hoti en arche tou euangeliou</strong>: the Philippians know their own history with Paul. <em>Arche tou euangeliou</em> (the beginning of the gospel): Paul\'s first missionary campaign in Europe, ~49-50 CE. <em>Logon doseos kai lempseos</em>: the accounting of giving and receiving (<em>logos</em> in the commercial/bookkeeping sense — the account balance). <em>Logos</em> (dispute level 2): here clearly the financial-accounting sense (credit/debit ledger), not the theological Word. Only the Philippian church had a giving-and-receiving relationship with Paul — they were his unique financial partners in mission.</p>',
+    "16": '<p><strong>hoti kai en Thessalonike kai hapax kai dis eis ten chreian moi epempsate</strong>: even when I was in Thessalonica, you sent to my need (<em>chreia</em>) more than once (<em>hapax kai dis</em> — once and twice = repeatedly). This is confirmed by 1 Thess 2:9 (Paul worked with his hands in Thessalonica) and Acts 17:1-9 (brief Thessalonian ministry). The Philippian support supplemented Paul\'s manual labor income during the Thessalonian mission. The historicity of the detail grounds the gratitude in specific remembered acts of generosity.</p>',
+    "17": '<p><strong>ouch hoti epizeteo to doma, alla epizeteo ton karpont on pleonazonta eis logon hymon</strong>: not that I seek the gift (<em>doma</em> — the concrete transfer of goods), but I seek the fruit (<em>karpos</em>) that increases to your account (<em>logos</em> — the ledger entry). <em>Logos</em> (dispute level 2): again the commercial-accounting sense. The eschatological reversal: Paul does not want his financial account credited but theirs. Their generosity will accumulate in the divine ledger as credit toward the eschatological judgment (cf. 2 Cor 9:6-11; Matt 6:20: store up treasures in heaven).</p>',
+    "18": '<p><strong>apecho de panta kai perisseuō</strong>: I have received full payment (<em>apecho</em> — the technical commercial receipt verb, used on papyri receipts meaning \'paid in full\'; cf. Matt 6:2, 5, 16 where the hypocrites \'have received their reward\' — apechousin). Paul issues a formal receipt. <em>Osme euodias, thysian dekten, euareston to theo</em>: a pleasing aroma (<em>euodia</em>), an acceptable sacrifice (<em>thysia dekte</em>), well-pleasing to God (<em>euarestos</em>). The sacrificial-cultic vocabulary comes from the LXX: <em>osme euodias</em> appears in Gen 8:21 (Noah\'s offering) and repeatedly in Exod-Lev for acceptable burnt offerings. The Philippians\' financial gift is reframed as a priestly offering ascending to God.</p>',
+    "19": '<p><strong>ho de theos mou plerose pasan chreian hymon kata to ploutos autou en doxe en Christo Iesou</strong>: my God will supply (<em>pleroō</em> — fill full, satisfy completely) all your need (<em>chreian</em> — the same word used of Paul\'s need in v.16) according to his riches in glory in Christ Jesus. The logical reciprocity: they supplied Paul\'s need; God will supply theirs. <em>Kata to ploutos autou en doxe</em>: according to his wealth/riches in glory — not a miserly minimum but a supply proportioned to divine abundance. <em>En Christo Iesou</em>: the Christ-sphere is the medium through which God\'s supply comes.</p>',
+    "20": '<p><strong>to de theo kai patri hemon he doxa eis tous aionas ton aionon. amen</strong>: the doxology. <em>To theo kai patri hemon</em>: to our God and Father — the letter\'s characteristic double designation (1:2: God our Father). <em>He doxa</em> (the glory): <em>doxa</em> (dispute in wider vocabulary; here unambiguous doxological use). <em>Eis tous aionas ton aionon</em> (unto the ages of the ages): the Hebrew idiom of temporal infinity — the Amen-formula closes the letter\'s body before the final greetings.</p>',
+    "21": '<p><strong>aspasasthe panta hagion en Christo Iesou</strong>: greet every saint in Christ Jesus. <em>Hagion</em> (holy one, saint — <em>hagios</em>, dispute level 2): those set apart for God. <em>Hoi syn emoi adelphoi</em>: the brothers with Paul — his co-workers in the place of imprisonment, probably Rome.</p>',
+    "22": '<p><strong>aspazontai hymas pantes hoi hagioi, malista de hoi ek tes Kaisaros oikias</strong>: all the saints greet you, especially those from Caesar\'s household (<em>Kaisaros oikia</em>). <em>Kaisaros oikia</em> is not the imperial family but the vast network of slaves and freedmen who administered Roman imperial operations — found in cities throughout the empire. Inscriptional evidence (CIL VI) documents hundreds of imperial slaves and freedmen at Rome. Their greetings from Rome to Philippi — a Roman colony — represent the gospel\'s penetration into the imperial administrative apparatus, a remarkable irony given that Paul writes from Roman custody.</p>',
+    "23": '<p><strong>he charis tou Kyriou Iesou Christou meta tou pneumatos hymon</strong>: the grace of the Lord Jesus Christ be with your spirit (<em>pneuma</em>). The singular <em>pneumatos hymon</em> (your spirit — singular, not plural \'spirits\') treats the community as a single collective person, or uses spirit for the inner life of each member. The closing grace-benediction is Pauline standard (Gal 6:18; Phlm 25; 1 Cor 16:23; 2 Cor 13:14); here the spirit/grace pairing connects to the Spirit-Christ relationship throughout the letter. <em>Amen</em>: the liturgical assent that closes the letter in public worship.</p>'
   }
 }
 
 def main():
-    # Philippians
-    e = load_echo('philippians')
-    merge_echo(e, PHIL_ECHO)
-    save_echo('philippians', e)
-
-    c = load_comm('mkt-original', 'philippians')
-    merge_comm(c, PHIL_ORIGINAL)
-    save_comm('mkt-original', 'philippians', c)
-    print(f'Phil original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'philippians')
-    merge_comm(c, PHIL_CONTEXT)
-    save_comm('mkt-context', 'philippians', c)
-    print(f'Phil context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'philippians')
-    merge_comm(c, PHIL_CHRIST)
-    save_comm('mkt-christ', 'philippians', c)
-    print(f'Phil christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    # Colossians
-    e = load_echo('colossians')
-    merge_echo(e, COL_ECHO)
-    save_echo('colossians', e)
-
-    c = load_comm('mkt-original', 'colossians')
-    merge_comm(c, COL_ORIGINAL)
-    save_comm('mkt-original', 'colossians', c)
-    print(f'Col original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'colossians')
-    merge_comm(c, COL_CONTEXT)
-    save_comm('mkt-context', 'colossians', c)
-    print(f'Col context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'colossians')
-    merge_comm(c, COL_CHRIST)
-    save_comm('mkt-christ', 'colossians', c)
-    print(f'Col christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-original', 'philippians')
+    merge_comm(existing, ORIGINAL)
+    save_comm('mkt-original', 'philippians', existing)
+    count = len(existing.get('4', {}))
+    print(f'  ch4: {count} entries')
 
 if __name__ == '__main__':
     main()

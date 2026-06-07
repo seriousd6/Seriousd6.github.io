@@ -1,0 +1,286 @@
+[
+  {
+    "id": "chiasm",
+    "label": "Chiasm (Chiasmus)",
+    "symbol": "ABA'",
+    "plain": "A mirror-image structure where elements in the first half are repeated in reverse order in the second half. The center is the theological climax — what the author considers most important. The pattern is often written as A-B-C-C'-B'-A' or A-B-B'-A'. Named after the Greek letter chi (χ), which looks like an X.",
+    "significance": "The center of a chiasm carries the passage's main point — which may not be where English readers expect it. In Hebrew poetry and narrative, the climax comes in the middle, not at the end. Missing the chiastic structure means missing the author's emphasis.",
+    "examples": [
+      { "ref": "John 1:1–18", "note": "The Johannine prologue is a chiasm centered on v.12–13 (the right to become children of God) — not on the Incarnation (v.14), which is often treated as the climax." },
+      { "ref": "Philemon 1:4–22", "note": "Paul's letter to Philemon is a tight chiasm; the center (vv.15–16) is the reframing of Onesimus as a 'beloved brother' — the theological hinge of the whole letter." },
+      { "ref": "Matt 6:1–18", "note": "The Sermon on the Mount section on piety (almsgiving / prayer / fasting) is a triple chiasm, each unit built on the same three-point structure." }
+    ]
+  },
+  {
+    "id": "inclusio",
+    "label": "Inclusio (Envelope Structure)",
+    "symbol": "A…A'",
+    "plain": "A literary technique where the same word, phrase, or theme appears at both the beginning and end of a passage, creating a 'bracket' or 'envelope' around the material. Signals the beginning and end of a literary unit.",
+    "significance": "Inclusios mark unit boundaries. They tell you where a passage begins and ends — which affects how you interpret what's inside. They also create a thematic unity: the ending echoes the beginning, producing resonance.",
+    "examples": [
+      { "ref": "Ps 8:1, 9", "note": "'O LORD, our Lord, how majestic is your name in all the earth!' opens and closes Psalm 8 — an inclusio that frames the whole meditation on humanity's place in creation." },
+      { "ref": "Matt 1:23; 28:20", "note": "Matthew opens with 'God with us' (Immanuel) and closes with 'I am with you always' — an inclusio spanning the whole Gospel, framing Jesus's presence as the book's central theme." },
+      { "ref": "John 1:1; 1:18", "note": "The prologue opens and closes with the Son's relationship to God ('was with God' / 'in the bosom of the Father') — an inclusio framing the whole Logos passage." }
+    ]
+  },
+  {
+    "id": "synonymous-parallelism",
+    "label": "Synonymous Parallelism",
+    "symbol": "A // A'",
+    "plain": "In Hebrew poetry, the second line restates the same idea in different words. The two lines don't add new information — they deepen and amplify each other. This is the most common type of biblical parallelism.",
+    "significance": "In synonymous parallelism, the second line is not redundant — it intensifies, specifies, or adds nuance to the first. The second line always completes and enriches the first. Readers who skip the second line miss the amplification. Psalm 19:1 — 'The heavens declare the glory of God' // 'and the sky above proclaims his handiwork' — the two lines reinforce each other and together say more than either line alone.",
+    "examples": [
+      { "ref": "Ps 19:1", "note": "'The heavens declare the glory of God' // 'and the sky above proclaims his handiwork.' Two images of the same cosmic testimony." },
+      { "ref": "Ps 24:1", "note": "'The earth is the LORD's, and everything in it' // 'the world, and all who live in it.' The second line extends 'everything' to include humanity specifically." },
+      { "ref": "Prov 1:8", "note": "'Hear, my son, your father's instruction' // 'and forsake not your mother's teaching.' Same command, both parents named." }
+    ]
+  },
+  {
+    "id": "antithetical-parallelism",
+    "label": "Antithetical Parallelism",
+    "symbol": "A // ¬A'",
+    "plain": "The second line of the poetic couplet states the opposite or contrast of the first. Common in Proverbs, where wisdom and folly are set against each other.",
+    "significance": "The contrast sharpens the meaning of both lines. The wicked is defined by not being what the righteous is — and vice versa. The antithesis is not merely rhetorical but theological: there are two paths, two outcomes, two characters.",
+    "examples": [
+      { "ref": "Prov 10:1", "note": "'A wise son makes a glad father' // 'but a foolish son is a sorrow to his mother.' Wisdom and folly contrasted in their effects on the family." },
+      { "ref": "Ps 1:6", "note": "'For the LORD knows the way of the righteous' // 'but the way of the wicked will perish.' The climactic antithesis of Psalm 1." },
+      { "ref": "Prov 14:34", "note": "'Righteousness exalts a nation' // 'but sin is a reproach to any people.'" }
+    ]
+  },
+  {
+    "id": "synthetic-parallelism",
+    "label": "Synthetic Parallelism",
+    "symbol": "A + B (additive)",
+    "plain": "The second line adds to or develops the first — building on it, completing it, or extending it. Not repetition (synonymous) or contrast (antithetical), but progression. The second line is necessary to complete the thought.",
+    "significance": "Synthetic parallelism drives the poem forward. Unlike synonymous parallelism (which deepens), synthetic parallelism advances. Each line is a step toward the conclusion. Missing this structure can make the poem seem repetitive when it is actually building.",
+    "examples": [
+      { "ref": "Ps 19:7–9", "note": "A six-line synthetic unit: each line adds a new attribute of Torah (perfect / sure / right / pure / clean / true) and a new effect (reviving / making wise / rejoicing / enlightening / enduring / righteous)." },
+      { "ref": "Prov 3:5–6", "note": "'Trust in the LORD with all your heart' → 'do not lean on your own understanding' → 'in all your ways acknowledge him' → 'and he will make straight your paths.' Each line builds toward the promise." }
+    ]
+  },
+  {
+    "id": "climactic-parallelism",
+    "label": "Climactic / Staircase Parallelism",
+    "symbol": "A / A+B / A+B+C",
+    "plain": "A series of lines in which each line picks up a word or phrase from the previous line and adds to it, creating a staircase effect that builds toward a climax. Common in Psalms and Ugaritic poetry.",
+    "significance": "The building rhythm creates momentum and emphasis. The final climactic line carries the theological payload after the buildup. Readers who don't feel the staircase miss the rhetorical force of the conclusion.",
+    "examples": [
+      { "ref": "Ps 29:1–2", "note": "'Ascribe to the LORD...' / 'Ascribe to the LORD...' / 'Ascribe to the LORD...' — three ascending commands, each adding a new element." },
+      { "ref": "Ps 121:1–2", "note": "'I lift my eyes to the hills — where does my help come from?' // 'My help comes from the LORD, who made heaven and earth.' The question of the first line is answered climactically in the second." }
+    ]
+  },
+  {
+    "id": "merism",
+    "label": "Merism",
+    "symbol": "A + Z = everything",
+    "plain": "Two extremes or opposites are named to indicate the whole range between them. 'Heaven and earth' = everything. 'Day and night' = always. 'Young and old' = everyone. Merism is a way of expressing totality by naming the poles.",
+    "significance": "When the Bible says 'God made the heavens and the earth' it means he made everything — the polar pair stands for the entire creation. When Psalm 139 says 'You know when I sit and when I rise' it means God knows everything about the psalmist. Missing the merism makes these statements smaller than they are.",
+    "examples": [
+      { "ref": "Gen 1:1", "note": "'The heavens and the earth' = all of reality / everything that exists. A merism for the totality of creation." },
+      { "ref": "Ps 139:2", "note": "'You know when I sit down and when I rise up' = you know everything I do, at every moment." },
+      { "ref": "Isa 45:7", "note": "'I form the light and create darkness, I make peace and create calamity' — pairs of opposites expressing God's sovereignty over all reality." }
+    ]
+  },
+  {
+    "id": "hendiadys",
+    "label": "Hendiadys",
+    "symbol": "A and B = one idea",
+    "plain": "Two words connected by 'and' that express a single complex idea — one of the words is a modifier of the other. 'With wrath and great anger' = with very great wrath. 'Grace and truth' = gracious truthfulness. The 'and' is not really a coordinate conjunction but a way of expressing what English does with an adverb or adjective.",
+    "significance": "Hendiadys is common in Hebrew but rare in English. Translators who miss it split the two words into separate ideas. John 1:14 ('grace and truth' = חֶסֶד וֶאֱמֶת, hesed we-emet) is a Hebrew hendiadys often meaning 'steadfast, faithful love' — not two separate attributes.",
+    "examples": [
+      { "ref": "John 1:14", "note": "'Full of grace and truth' — Hebrew hendiadys (חֶסֶד וֶאֱמֶת, hesed we-emet): 'full of steadfast, faithful love.' The two words together express covenant faithfulness, not two separate virtues." },
+      { "ref": "Gen 3:16", "note": "'With pain and labor you shall bring forth children' — one idea (painful labor), expressed as two nouns joined by 'and.'" },
+      { "ref": "Ps 23:6", "note": "'Goodness and mercy' (חֶסֶד וָטוֹב) — likely a hendiadys: 'your faithful goodness' will follow me." }
+    ]
+  },
+  {
+    "id": "litotes",
+    "label": "Litotes (Understatement)",
+    "symbol": "¬A = very A",
+    "plain": "Expressing a strong affirmation by denying the opposite. 'Not unworthy' = very worthy. 'No small disturbance' = a very large disturbance. Common in Acts and Greek rhetoric. The understatement is ironic — the denial of the negative implies a strong positive.",
+    "significance": "Litotes produces emphasis through negation. When Luke says there was 'no small stir' (Acts 12:18; 19:23), he means a very large uproar — the litotes intensifies. Readers unfamiliar with the device may underread the force of the statement.",
+    "examples": [
+      { "ref": "Acts 12:18", "note": "'No small disturbance among the soldiers' = a very large, alarming commotion. Luke's litotes understates for effect." },
+      { "ref": "Acts 17:4", "note": "'Not a few of the leading women' = many prominent women. Greek litotes expressing a significant number." },
+      { "ref": "Acts 19:23", "note": "'No little disturbance' = a major riot. The silver-idol craftsmen's response to Paul." }
+    ]
+  },
+  {
+    "id": "hyperbole",
+    "label": "Hyperbole (Deliberate Exaggeration)",
+    "symbol": "MORE than is literally true",
+    "plain": "Deliberate and obvious exaggeration for rhetorical emphasis. The speaker does not intend literal truth but dramatic impact. Common in Hebrew poetry and in Jesus's teaching. Hyperbole makes a point by pushing it to an extreme.",
+    "significance": "When Jesus says 'If your right eye causes you to sin, gouge it out' (Matt 5:29) or 'It is easier for a camel to go through the eye of a needle than for a rich man to enter the kingdom of God' (Matt 19:24), he is using hyperbole. Taking these literally misses the rhetorical device and produces distorted interpretation.",
+    "examples": [
+      { "ref": "Matt 5:29–30", "note": "'If your right eye causes you to sin, gouge it out' — hyperbole for the radical seriousness of avoiding sin. Jesus is not prescribing self-mutilation." },
+      { "ref": "Matt 19:24", "note": "'Easier for a camel to go through the eye of a needle' — hyperbole for the near-impossibility of the rich trusting God over wealth." },
+      { "ref": "John 21:25", "note": "'The world itself could not contain the books' that would record all Jesus did — hyperbole expressing the inexhaustible significance of his ministry." }
+    ]
+  },
+  {
+    "id": "irony",
+    "label": "Irony",
+    "symbol": "says A, means ¬A (or more than A)",
+    "plain": "Saying one thing while meaning something else — often the opposite, but sometimes something richer than the surface statement. Biblical irony is often dramatic (the reader knows something the characters don't) or verbal (the words mean more than their speaker intends).",
+    "significance": "John's Gospel is saturated with dramatic irony: characters make statements that are literally true in a way they don't understand. Pilate's 'Behold the man!' (John 19:5) is ironic — he presents Jesus as pathetic when John means the reader to see the true Man, the Son of God. Missing irony means reading a statement at face value when the author means something deeper.",
+    "examples": [
+      { "ref": "John 11:50", "note": "Caiaphas says 'it is better for you that one man should die for the people.' John calls this prophecy (vv.51–52) — Caiaphas spoke more truly than he knew, though his intent was murder." },
+      { "ref": "John 19:5", "note": "Pilate: 'Behold the man!' — dramatic irony. Pilate mocks; John intends the reader to see the Son of Man, the new Adam." },
+      { "ref": "Amos 4:4–5", "note": "'Come to Bethel and transgress! Bring your sacrifices every morning...' — cutting irony, mimicking the priests' invitation. Amos mocks their religion." }
+    ]
+  },
+  {
+    "id": "paronomasia",
+    "label": "Paronomasia (Wordplay / Pun)",
+    "symbol": "word A ≈ word B (sound/meaning)",
+    "plain": "Using words that sound similar for rhetorical effect — a pun, play on words, or sound-alike connection that creates meaning through the sonic resemblance. Hebrew and Greek both use paronomasia extensively. Translations inevitably lose most of it.",
+    "significance": "Biblical paronomasia is theologically loaded — the wordplay is part of the meaning. 'The man (אָדָם, adam) was made from the ground (אֲדָמָה, adamah)' — humanity and soil are etymologically linked, making the curse ('to the ground you shall return') deeply ironic. Jesus's 'You are Peter (Πέτρος) and on this rock (πέτρα) I will build my church' is an explicit pun.",
+    "examples": [
+      { "ref": "Gen 2:7, 3:19", "note": "Adam (אָדָם) formed from adamah (אֲדָמָה, ground) — the pun makes the curse in 3:19 ('to the ground you shall return') a devastating ironic echo of the creation." },
+      { "ref": "Matt 16:18", "note": "'You are Peter (Πέτρος) and on this rock (πέτρα) I will build my church' — a deliberate Greek pun on Peter's name. The Aramaic original (Cephas/Kefa) has the same pun." },
+      { "ref": "Amos 8:1–2", "note": "God shows Amos a basket of summer fruit (קַיִץ, qayits); God says Israel's end (קֵץ, qets) has come. The Hebrew pun is the oracle: summer fruit signals the end." }
+    ]
+  },
+  {
+    "id": "acrostic",
+    "label": "Acrostic",
+    "symbol": "א-ב-ג… / A-B-C…",
+    "plain": "A poem where successive verses or strophes begin with successive letters of the Hebrew alphabet. This signals literary completeness (A to Z = everything) and demonstrates virtuosic literary craft. Completely invisible in translation.",
+    "significance": "Acrostics signal that the poem is complete in every way — both artistically and theologically. Psalm 119 is a 22-stanza acrostic (8 verses per letter, 176 total) on the perfection and completeness of Torah. Lamentations 1–4 are acrostics expressing comprehensive grief. The structure itself is the message: everything from A to Z has been covered.",
+    "examples": [
+      { "ref": "Ps 119", "note": "The great acrostic: 22 sections of 8 verses each, one per Hebrew letter. The structure expresses the completeness of Torah — every aspect of God's word, from aleph to taw." },
+      { "ref": "Lam 1–4", "note": "Four acrostic poems of grief over Jerusalem's destruction. Lamentations 3 is a triple acrostic (3 verses per letter). The exhaustive form enacts exhaustive grief — language pushed to its limit." },
+      { "ref": "Prov 31:10–31", "note": "The 'excellent wife' poem is an alphabetic acrostic — a complete portrait, from A to Z, of wisdom embodied in a woman." }
+    ]
+  },
+  {
+    "id": "anaphora",
+    "label": "Anaphora (Repeated Opening)",
+    "symbol": "X… / X… / X…",
+    "plain": "Repetition of the same word or phrase at the beginning of successive lines or clauses. Creates rhythm, emphasis, and cumulative rhetorical force. Very common in prophetic speech.",
+    "significance": "Anaphora is the hammering device of rhetoric. When Amos repeats 'For three transgressions of Damascus / of Gaza / of Tyre...' eight times, the repetition creates judgment that is inescapable and comprehensive. The rhythm itself enacts the relentlessness of the divine verdict.",
+    "examples": [
+      { "ref": "Amos 1:3–2:16", "note": "'For three transgressions of X, and for four, I will not revoke the punishment' — eight-fold anaphora creating the sweep of universal judgment across the nations." },
+      { "ref": "Matt 5:3–11", "note": "'Blessed are...' — the Beatitudes as eight-fold anaphora. Each repetition of 'Blessed' establishes a new paradox." },
+      { "ref": "1 Cor 13:4–7", "note": "'Love is... love is... love does not... love does not... love does not...' — anaphoric definition of love as accumulation." }
+    ]
+  },
+  {
+    "id": "refrain",
+    "label": "Refrain",
+    "symbol": "[A…] REFRAIN [B…] REFRAIN",
+    "plain": "A fixed phrase or line repeated at regular intervals in a poem or passage, marking structural divisions and reinforcing a central theme. The refrain returns the reader to the core theological point.",
+    "significance": "The refrain is the theological anchor of a poem. In Psalms 42–43 (probably one poem), 'Why are you cast down, O my soul?' returns three times — each time after exploring a deeper layer of despair and hope. The refrain creates a conversation between the psalmist and his own soul.",
+    "examples": [
+      { "ref": "Ps 42:5, 11; 43:5", "note": "'Why are you cast down, O my soul? Hope in God; for I shall again praise him, my salvation and my God.' — three-fold refrain in a single literary unit, structuring the movement from lament to hope." },
+      { "ref": "Ps 107:8, 15, 21, 31", "note": "'Let them thank the LORD for his steadfast love, for his wondrous works to the children of man' — four-fold refrain marking the four salvation narratives." },
+      { "ref": "Gen 1", "note": "'And God saw that it was good' — the refrain marking the completion of each creation day, accumulating into 'very good' at the end." }
+    ]
+  },
+  {
+    "id": "inclusio-chiasm-combo",
+    "label": "Concentric Structure (Combined Inclusio + Chiasm)",
+    "symbol": "A-B-C-X-C'-B'-A'",
+    "plain": "A sophisticated structure combining inclusio and chiasm: an outer bracket (inclusio) containing a chiastic interior, with a center (X) as the theological climax. The whole structure radiates outward from the center like a series of concentric rings.",
+    "significance": "Large biblical units (the Tabernacle instructions in Exodus, the Sermon on the Mount, the prologue of John) are often organized concentrically. The center is the key — not the beginning or end. Western linear reading ('start to finish') misses the architectural emphasis of the text.",
+    "examples": [
+      { "ref": "Deut 1–34", "note": "The whole book of Deuteronomy is organized concentrically around the Decalogue (5–11) as center, with the legal code (12–26) and blessings/curses (27–28) as successive rings." },
+      { "ref": "Phil 2:5–11", "note": "The Christ hymn has a concentric structure: divine pre-existence (A) → humility/incarnation (B) → cross (C, center) → resurrection/exaltation (B') → universal acclamation (A'). The cross is the center." }
+    ]
+  },
+  {
+    "id": "discourse-structure",
+    "label": "Discourse Structure (Argument Outline)",
+    "symbol": "thesis → ground → inference → application",
+    "plain": "The logical structure of a piece of expository or argumentative prose — particularly in Paul's letters. The Greek particles (γάρ, οὖν, ἄρα, ἵνα, ἀλλά) mark the moves of the argument. Understanding the discourse structure is essential for reading Paul.",
+    "significance": "Paul argues. His letters have thesis statements, supporting arguments (γάρ = because/for), inferences (οὖν = therefore), purpose clauses (ἵνα = in order that), and applications. Without the discourse structure, Paul's letters seem like a string of disconnected statements. The particle system is the skeleton of the argument.",
+    "examples": [
+      { "ref": "Rom 1:16–17", "note": "The thesis: 'I am not ashamed of the gospel, for (γάρ) it is the power of God for salvation... for (γάρ) in it the righteousness of God is revealed.' Two γάρ-chains ground the thesis with supporting reasons." },
+      { "ref": "Rom 8:1–4", "note": "'Therefore (ἄρα οὖν) there is now no condemnation for those who are in Christ Jesus' — the οὖν summarizes chapters 5–7 and draws the conclusion. Everything before 8:1 is ground; 8:1 is inference." },
+      { "ref": "Eph 2:8–10", "note": "Grace (v.8a) → through faith (v.8b) → not from yourselves (v.8c) → God's gift (v.8d) → not works (v.9) → so that (ἵνα) no one can boast (v.9) → purpose: good works (v.10)." }
+    ]
+  },
+  {
+    "id": "gospel-narrative-arc",
+    "label": "Narrative Arc (Plot Structure)",
+    "symbol": "setup → tension → climax → resolution",
+    "plain": "Biblical narratives follow a plot structure: establishment of normal world → introduction of conflict or tension → climax (moment of decision or crisis) → resolution. Hebrew narrative in particular is extremely compressed — every detail is there for a reason, and what is omitted is as significant as what is included.",
+    "significance": "Hebrew narrative is an 'art of reticence' (Alter). It reports actions without explaining motives. The gaps — what is left out — are deliberate invitations for the reader to fill in. Understanding narrative arc and compression helps readers ask the right questions of the text.",
+    "examples": [
+      { "ref": "Gen 22:1–19", "note": "The Akedah follows the arc perfectly: normal state (Abraham and Isaac) → tension (sacrifice command) → climax (hand raised with knife) → resolution (the ram; the promise renewed). The narration is spare; emotional weight falls in what is not said." },
+      { "ref": "Ruth", "note": "Famine-death-exile (setup) → Ruth's faithfulness and Boaz encounter (rising action) → the threshing floor scene (climax) → kinsman-redeemer marriage and birth (resolution). The structure mirrors the Davidic ancestry it builds toward." },
+      { "ref": "Mark's Gospel", "note": "Mark's rapid-fire 'immediately (εὐθύς)' creates breathless narrative momentum. The whole Gospel is structured toward the moment of recognition at the cross (15:39) — the first human confession that Jesus is the Son of God, spoken by a Gentile centurion at the moment of death." }
+    ]
+  },
+  {
+    "id": "psalm-lament-structure",
+    "label": "Psalm Lament Structure",
+    "symbol": "address → complaint → petition → confidence → praise",
+    "plain": "Individual lament psalms follow a recurring five-movement structure: (1) address to God, (2) complaint/description of the problem, (3) petition/request for help, (4) expression of trust, (5) vow of praise. The movement from lament to praise is the spiritual journey of the psalm.",
+    "significance": "The lament structure is theologically important: the psalm does not suppress grief but voices it directly to God. The turn to praise is not a denial of pain but its transformation. Claus Westermann argued that the lament psalms model the full range of the human-God relationship — they legitimize crying out. Half of the Psalter is lament.",
+    "examples": [
+      { "ref": "Ps 22", "note": "Address: 'My God, my God' (v.1) → Complaint: 'Why have you forsaken me?' (vv.1–8) → Petition: 'Be not far from me' (vv.11, 19) → Confidence: 'He has not hidden his face' (vv.24) → Vow of praise: 'I will tell of your name' (v.22). Jesus quotes v.1 from the cross — the whole psalm is his voice." },
+      { "ref": "Ps 13", "note": "A compressed lament in 6 verses: address+complaint ('How long, O LORD?', vv.1–2) → petition ('Consider and answer me', vv.3–4) → trust → praise (vv.5–6)." }
+    ]
+  },
+  {
+    "id": "woe-oracle",
+    "label": "Woe Oracle (Prophetic Speech Form)",
+    "symbol": "הוֹי / Woe to X who does Y",
+    "plain": "A fixed prophetic formula: 'Woe to...' (הוֹי in Hebrew, οὐαί in Greek) + identification of the guilty party + description of their sin + announcement of judgment. The הוֹי was originally a funeral cry — calling 'woe' over someone was like pronouncing them already dead.",
+    "significance": "When a prophet cries הוֹי, it is not a mild expression of disapproval — it is a death sentence in prophetic speech. Isaiah's 'Woe to those who call evil good' (Isa 5:20) is a funeral announcement over the living. Jesus's 'Woe to you, scribes and Pharisees' in Matthew 23 uses the same speech form — he is publicly pronouncing judicial doom.",
+    "examples": [
+      { "ref": "Isa 5:8–23", "note": "Six woe oracles in succession: woe to those who accumulate land, who drink early, who call evil good, who are wise in their own eyes... Each follows the formula and builds the indictment." },
+      { "ref": "Hab 2:6–19", "note": "Five woe oracles against Babylon: against unjust gain, security through violence, bloodshed, idolatry... The woe series is the prophetic court verdict." },
+      { "ref": "Matt 23:13–36", "note": "Seven woe oracles against the scribes and Pharisees — using the same prophetic form as Isaiah and Habakkuk. Jesus is functioning as an OT prophet pronouncing judicial woes." }
+    ]
+  },
+  {
+    "id": "covenant-lawsuit",
+    "label": "Covenant Lawsuit (Rib Pattern)",
+    "symbol": "summons → witnesses → charges → verdict",
+    "plain": "A prophetic speech form modeled on ANE treaty legal proceedings. The structure: (1) summons to the cosmic court with heaven/earth as witnesses, (2) statement of God's past faithfulness, (3) indictment of Israel's covenant violations, (4) verdict and sentence. The Hebrew term is רִיב (rib = dispute/lawsuit).",
+    "significance": "When you see the prophets summoning heaven and earth as witnesses, you are in a covenant lawsuit. This is not poetry about nature — it is a legal proceeding in the cosmic court. The prophet is the prosecuting attorney. Israel is the defendant. The offense is covenant breach. Understanding this form makes the prophets' logic transparent.",
+    "examples": [
+      { "ref": "Mic 6:1–8", "note": "'Hear what the LORD says: Arise, plead your case before the mountains...' — a full covenant lawsuit: summons (vv.1–2) → recitation of God's faithfulness (vv.3–5) → indictment (vv.6–7) → verdict/requirement (v.8: 'do justice, love kindness, walk humbly')." },
+      { "ref": "Isa 1:2–20", "note": "'Hear, O heavens, and give ear, O earth' — heaven and earth as witnesses. Israel is the rebellious child. The lawsuit language drives the whole passage." },
+      { "ref": "Deut 32:1", "note": "Moses's Song begins with the covenant lawsuit summons: 'Give ear, O heavens... hear, O earth.' Deuteronomy 32 is a prophetic rib anticipating Israel's future covenant failure." }
+    ]
+  },
+  {
+    "id": "typology",
+    "label": "Typology (Type and Antitype)",
+    "symbol": "type (OT) → antitype (NT fulfillment)",
+    "plain": "A biblical-theological pattern where OT persons, events, or institutions foreshadow NT realities. The OT item is the 'type'; the NT fulfillment is the 'antitype.' Typology is not allegory — it respects the historical reality of the OT while seeing its forward-pointing significance.",
+    "significance": "The NT reads the OT typologically throughout. Adam is a 'type' of Christ (Rom 5:14). The Passover lamb is a type of Christ (1 Cor 5:7). The Tabernacle's Yom Kippur ritual is a type of Christ's high-priestly work (Hebrews). Missing typological patterns means missing how the NT authors understood and used the OT.",
+    "examples": [
+      { "ref": "Rom 5:14", "note": "Paul explicitly calls Adam a 'type (τύπος) of the one to come' — the structural pattern of one man's act affecting all who are in him applies to both Adam and Christ." },
+      { "ref": "Heb 9–10", "note": "The entire Levitical sacrificial system is read typologically: the high priest → Christ; the annual Day of Atonement → Christ's once-for-all sacrifice; the Holy of Holies → the true heavenly sanctuary." },
+      { "ref": "John 3:14–15", "note": "Jesus interprets the bronze serpent (Num 21) as a type of his crucifixion — 'just as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up.' Jesus himself identifies the typological pattern." }
+    ]
+  },
+  {
+    "id": "apocalyptic-imagery",
+    "label": "Apocalyptic Imagery and Symbolism",
+    "symbol": "numbers / beasts / cosmic scenes = theological truths",
+    "plain": "Apocalyptic literature (Daniel, Revelation, parts of Ezekiel, Zechariah, portions of the Gospels) uses highly symbolic, coded imagery drawn from a specific literary tradition. Numbers, colors, beasts, heavenly beings, and cosmic battles are theological symbols, not necessarily literal descriptions. The genre has its own conventions.",
+    "significance": "Reading Revelation as a newspaper-code prediction of modern events misreads the genre. Apocalyptic imagery is coded communication about present realities (persecution, empire, faithfulness) using symbolic language that the original audience recognized. The beast from the sea (Rev 13) is Rome; '666' uses gematria (number-letter code). Interpreting the symbols requires knowledge of the genre and its OT sources (Daniel, Ezekiel, Zechariah).",
+    "examples": [
+      { "ref": "Rev 13:1–18", "note": "The beast from the sea = Rome (7 hills, 7 emperors). '666' = Nero Caesar in Hebrew gematria (נְרוֹן קֵסָר). The number of the beast is a political commentary using the conventions of Jewish apocalyptic." },
+      { "ref": "Dan 7:2–8", "note": "Four beasts from the sea = four world empires (Babylon, Medo-Persia, Greece, Rome). The symbolic tradition is established here and drawn on throughout NT apocalyptic." },
+      { "ref": "Zech 1–6", "note": "Zechariah's night visions (horses, horns, measuring line, lampstand) follow apocalyptic conventions — symbolic communication about the restored community's place in God's plan, interpreted by an angelic guide." }
+    ]
+  },
+  {
+    "id": "gospel-sandwich",
+    "label": "Markan Sandwich (Intercalation)",
+    "symbol": "A → B → A' (story within story)",
+    "plain": "Mark's narrative technique of interrupting one story with another, creating an interpretive frame: story A begins, story B interrupts and completes in the middle, story A resumes and completes. The two stories interpret each other — B explains the inner meaning of A.",
+    "significance": "Mark's sandwiches are intentional and systematic — he uses this technique 6+ times. The interrupting story is the commentary on the framing story. The fig tree sandwiches the Temple cleansing (Mark 11:12–25): the cursed fig tree interprets the Temple's coming judgment. Israel is the barren fig tree; the Temple is the barren institution being judged.",
+    "examples": [
+      { "ref": "Mark 11:12–25", "note": "A: Jesus curses the fig tree (vv.12–14) → B: Temple cleansing (vv.15–19) → A': Disciples see the dead fig tree (vv.20–25). The barren fig tree = Israel/Temple. The Temple's coming destruction is the meaning of both events." },
+      { "ref": "Mark 5:21–43", "note": "A: Jairus' daughter dying (vv.21–24) → B: Hemorrhaging woman healed (vv.25–34) → A': Jairus' daughter raised (vv.35–43). The woman's 12-year illness and the girl's 12 years of life interpret each other; Jesus's power over both long suffering and death is the theme." },
+      { "ref": "Mark 3:20–35", "note": "A: Jesus's family thinks he is crazy (vv.20–21) → B: Scribes say he casts out demons by Beelzebul (vv.22–30) → A': Jesus's family arrives; he redefines family (vv.31–35). The scribes and family both misunderstand; the sandwich equates their rejection." }
+    ]
+  }
+]

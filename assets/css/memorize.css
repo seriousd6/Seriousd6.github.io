@@ -357,6 +357,49 @@
   vertical-align: middle;
 }
 
+/* ── Reveal button (in card front) ─────────────────────────────── */
+.mem-reveal-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: .55rem 1.5rem;
+  background: var(--color-primary, #c8a96e);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.mem-reveal-btn:hover { opacity: .85; }
+
+/* ── Original Language panel extra layout ───────────────────────── */
+.mem-ol-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .75rem 0 .5rem;
+  flex-wrap: wrap;
+}
+.mem-ol-info { font-size: .85rem; color: var(--color-muted, #888); margin: 0; }
+.mem-ol-controls { display: flex; gap: .5rem; align-items: center; }
+.mem-ol-list { margin-top: .5rem; }
+.mem-ol-remove-btn {
+  background: none;
+  border: 1px solid var(--color-border, #c8a96e40);
+  color: var(--color-muted, #888);
+  font-size: .75rem;
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: .25rem;
+  transition: background .15s, color .15s;
+}
+.mem-ol-remove-btn:hover { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+.mem-ol-card__front { text-align: center; padding: 2rem 1rem; }
+.mem-ol-card__back  { text-align: center; padding: 1.5rem 1rem; }
+
 /* ── Review done ─────────────────────────────────────────────────────────────── */
 .mem-review-done {
   text-align: center;

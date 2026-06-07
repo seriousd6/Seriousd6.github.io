@@ -1,0 +1,165 @@
+"""
+Book Study Data — 1 Chronicles
+book_id: 1chronicles
+lang: hebrew
+
+Run: python3 scripts/build-book-study-1chronicles.py
+
+Notes:
+- Author group: Historical (Joshua-Esther) in author-freq-hebrew.json
+- 12 vocab entries; Hebrew translit fields blank in glossary — supplied manually
+- Historical-group peak words are generic; vocab selected for 1 Chronicles' specific theology:
+  seeking YHWH (darash), Levitical ministry (sharat), thanksgiving-praise (yadah),
+  hallelujah root (halal), genealogical enrollment (yachas), generational continuity (dor),
+  wonderful deeds (pala), the standing posture of Levites (amad), wholehearted devotion (shalem),
+  seeking his face (baqash), the divine blueprint (tavnit), David's strenuous labor (amal)
+- H2388 chazaq (be strong), H8451 torah, H1004 bayit, H3559 kun, H6944 qodesh,
+  H3027 yad all appear in the Historical group peaks but were already used in earlier books
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "1chronicles",
+
+    "key_vocabulary": [
+        {
+            "code": "H1875",
+            "lemma": "דָּרַשׁ",
+            "translit": "dāraš",
+            "gloss": "seek",
+            "significance": "דָּרַשׁ (darash, &lsquo;to tread or frequent; hence, to seek, to inquire of, to care for — especially to inquire of God through established means&rsquo;) is Chronicles&rsquo; most important evaluative criterion. The Chronicler explains Saul&rsquo;s death in a single verdict: &lsquo;he did not seek (darash) YHWH&rsquo; (10:14) — and explains David&rsquo;s successful retrieval of the ark by the contrasting fact that &lsquo;we did not seek (darash) it in the days of Saul&rsquo; (13:3). The darash-formula drives the entire historiography: David &lsquo;inquired (wayyidros) of God&rsquo; before every major military campaign (14:10, 14), and the outcome follows accordingly. The Psalm of 1 Chr 16 opens the liturgical section with &lsquo;Seek (dirsh) YHWH and his strength; seek his presence continually&rsquo; (16:11). David&rsquo;s final charge to Solomon (28:9) makes the darash-principle explicit: &lsquo;If you seek (tidreshennu) him, he will be found by you; but if you forsake him, he will cast you off forever.&rsquo; The Chronicler&rsquo;s theology of history is fundamentally a darash-theology: the outcome of a reign is explained by whether its king sought YHWH. This is not prosperity-gospel pragmatism but covenant logic — YHWH is present and responsive to those who seek him, absent to those who do not. Jesus&rsquo;s &lsquo;seek (zēteite) first the kingdom of God&rsquo; (Matt 6:33) is the darash-imperative applied to the whole of the disciple&rsquo;s life priorities."
+        },
+        {
+            "code": "H8334",
+            "lemma": "שָׁרַת",
+            "translit": "šārat",
+            "gloss": "minister",
+            "significance": "שָׁרַת (sharat, &lsquo;to attend as a servant or worshipper; to minister in a formal, consecrated capacity — the word for courtly or priestly service&rsquo;) is the technical term for Levitical ministry in 1 Chronicles, appearing throughout the chapters organizing David&rsquo;s temple personnel. &lsquo;YHWH the God of Israel chose me from all my father&rsquo;s house to be king over Israel forever...and among the sons of Levi, he chose me to serve (lesharet) him&rsquo; is the principle behind all the appointments (28:4). 1 Chr 15:2: &lsquo;no one but the Levites may carry the ark of God, for YHWH chose them to carry the ark of God and to minister (lesharet) to him forever.&rsquo; 1 Chr 16:4: David &lsquo;appointed some of the Levites as ministers (meshartim) before the ark of YHWH, to invoke, to give thanks, and to praise YHWH.&rsquo; 1 Chr 23:13: Aaron was set apart so that &lsquo;he and his sons forever should...minister (lesharet) to him.&rsquo; The sharat-language distinguishes the consecrated, appointed service of the Levites from ordinary work: the sharet stands before YHWH as his court attendant, in a relationship of personal, ongoing dedication. This is the OT&rsquo;s highest vocational category. Hebrews 8:2 applies sharat-language to Christ: he is the &lsquo;minister (leitourgos — the Greek sharet) of the holy places and of the true tent that the Lord set up, not man&rsquo; — the earthly Levitical sharat was pointing all along toward the Son who ministers in the true heavenly sanctuary."
+        },
+        {
+            "code": "H3034",
+            "lemma": "יָדָה",
+            "translit": "yādāh",
+            "gloss": "give thanks",
+            "significance": "יָדָה (yadah, &lsquo;in Hiphil: to extend the hand in public acknowledgment; hence, to give thanks, to praise, to confess — the root also of Yehudah [Judah], whose name means &ldquo;this time I will praise YHWH&rdquo; [Gen 29:35]&rsquo;) is the first imperative of David&rsquo;s inaugural Psalm in 1 Chr 16:8: &lsquo;Give thanks (hodu) to YHWH; call upon his name; make known his deeds among the peoples!&rsquo; The Psalm returns to yadah at 16:34 (&lsquo;give thanks [hodu] to YHWH, for he is good; for his steadfast love endures forever&rsquo;) and 16:41. The Levites are explicitly appointed &lsquo;to invoke, to give thanks (lehod), and to praise YHWH&rsquo; (16:4). 1 Chr 29:13 concludes David&rsquo;s great prayer of dedication: &lsquo;And now we thank (modim) you, our God, and praise your glorious name.&rsquo; The yadah-posture is the correct covenantal response to YHWH&rsquo;s acts: to publicly extend the hand in acknowledgment that what YHWH did was his work and his gift. The name Judah (Yehudah = &ldquo;the praise-tribe&rdquo;) means the covenant community is genealogically defined by this yadah-orientation — thanksgiving is not an optional posture but the defining stance of the people bearing the covenant. Paul&rsquo;s &lsquo;give thanks in all circumstances&rsquo; (1 Thess 5:18) and Hebrews&rsquo; &lsquo;let us continually offer up a sacrifice of praise (yadah&rsquo;s Greek equivalent) to God&rsquo; (Heb 13:15) continue the Levitical yadah-vocation as the Christian community&rsquo;s defining act."
+        },
+        {
+            "code": "H1984",
+            "lemma": "הָלַל",
+            "translit": "hālal",
+            "gloss": "praise",
+            "significance": "הָלַל (halal, &lsquo;to be clear, to shine; hence, to make a show, to boast in the best sense — to give exuberant, public praise; the root of &ldquo;hallelujah&rdquo; [hallelu-Yah]&rsquo;) reaches its most fully institutionalized form in 1 Chronicles. David&rsquo;s inaugural Psalm closes with the gathered people&rsquo;s response: all the people said &lsquo;Amen!&rsquo; and praised (wayehalelu) YHWH&rsquo; (16:36). The Levitical choirs are explicitly appointed for this halal-function: those &lsquo;who should give praise (lehallel)...with musical instruments&rsquo; (16:42). 1 Chr 23:5: &lsquo;4,000 shall offer praise (lehallel) to YHWH with the instruments that I have made for praise (lehallel).&rsquo; 1 Chr 29:13: David&rsquo;s dedicatory prayer praises (mehallelim) YHWH&rsquo;s glorious name. 1 Chronicles represents a historic moment in the theology of praise: the halal is no longer an occasional outburst in response to specific deliverance (like Miriam&rsquo;s song after the Red Sea) but a structured, appointed, continual vocation. Four thousand Levites praise YHWH as their full-time calling. The Psalms&rsquo; five hallelujah-collections (Pss 113-118, 135, 146-150) are the literary deposit of this institution. Revelation&rsquo;s four hallelujah choruses (19:1-6) — the only New Testament occurrences of the word hallelujah — show that the Levitical halal-tradition will fill eternity: &lsquo;Hallelujah! For the Lord our God the Almighty reigns.&rsquo;"
+        },
+        {
+            "code": "H3187",
+            "lemma": "יָחַשׂ",
+            "translit": "yāḥaś",
+            "gloss": "enroll by genealogy",
+            "significance": "יָחַשׂ (yachas, &lsquo;to enroll by pedigree, to trace genealogical lineage — the technical verb for official registration in the covenant community&rsquo;) is the distinctive verb of the genealogical chapters (1-9) that open 1 Chronicles. &lsquo;The sons of Reuben the firstborn of Israel (he was the firstborn, but because he defiled his father&rsquo;s couch, his birthright was given to the sons of Joseph...so he could not be enrolled in the genealogy [lehityachas] according to the birthright)&rsquo; (5:1). The verb appears across multiple tribes (5:7, 17; 7:5, 7, 9, 40; 9:1, 22) always in the context of official, documented covenantal standing. To be yachas&rsquo;d is to be counted as a member of the covenant people with legitimate claim on its institutions and inheritance. The nine chapters of genealogy that modern readers often skip were for the post-exilic community the most urgent material in the book: Who is a legitimate priest? Who can serve as a Levite? Who belongs to which tribe and what portion of the land? The yachas records answer these questions. Ezra 2:62-63 shows what happened to those whose yachas record could not be found — they were excluded from the priesthood until YHWH could be consulted. Matthew&rsquo;s genealogy of Jesus (Matt 1:1-17) is the ultimate yachas: establishing Jesus&rsquo;s covenantal standing as son of David and son of Abraham, the heir of both the Davidic covenant and the Abrahamic promises."
+        },
+        {
+            "code": "H1755",
+            "lemma": "דּוֹר",
+            "translit": "dôr",
+            "gloss": "generation",
+            "significance": "דּוֹר (dor, &lsquo;a revolution of time, an age or generation — the span from one turning to the next&rsquo;) frames Chronicles&rsquo; theology of covenant continuity across catastrophe. 1 Chr 16:15, quoting Psalm 105: &lsquo;He remembers his covenant forever, the word that he commanded, for a thousand generations (dor).&rsquo; The &ldquo;thousand generations&rdquo; idiom (Deut 7:9) means infinite, boundless faithfulness — YHWH&rsquo;s covenant is not limited to any particular dor but spans them all. Yet 1 Chr 29:15 introduces the counterpoint: &lsquo;For we are strangers before you and sojourners, as all our fathers were. Our days on the earth are like a shadow, and there is no abiding.&rsquo; Individual dor are fleeting and shadowy; YHWH&rsquo;s covenant spans them all. This is the theological comfort Chronicles offers its post-exilic audience: your dor suffered the exile, but the covenant was not limited to your dor. The nine chapters of genealogy (chs. 1-9) are the Chronicler&rsquo;s concrete demonstration that dor after dor, from Adam through the exile and return, YHWH&rsquo;s purposes have continued without interruption. The liturgical formula &lsquo;from generation to generation (dor vador)&rsquo; (Ps 79:13; 89:1; Isa 40:8) becomes in the NT Mary&rsquo;s Magnificat: &lsquo;his mercy is for those who fear him from generation to generation (genea)&rsquo; (Luke 1:50) — the dor-theology of 1 Chronicles applied to the new covenant community gathered around the son of David."
+        },
+        {
+            "code": "H6381",
+            "lemma": "פָּלָא",
+            "translit": "pālāʾ",
+            "gloss": "wonderful",
+            "significance": "פָּלָא (pala, &lsquo;to separate, to distinguish; by implication, to be marvelous or extraordinary — used for acts and persons that exceed ordinary categories, specifically for the inexplicable mighty acts of YHWH&rsquo;) is the vocabulary of wonder in 1 Chr 16. The Psalm David appoints for the temple&rsquo;s inaugural worship commands: &lsquo;Remember the wonderful deeds (niflaotav) that he has done, his miracles (mofetav), and the judgments he uttered&rsquo; (16:12). 1 Chr 16:24: &lsquo;Declare his glory among the nations, his marvelous works (niflaotav) among all the peoples.&rsquo; The niflaot (wonders) are the events that require YHWH&rsquo;s direct agency to explain — the Exodus plagues, the Red Sea, the conquest, the Davidic victories — that the community is commanded to remember and proclaim. The pala-language places these events in a category beyond human explanation and beyond natural processes: they are &ldquo;separated out&rdquo; from the ordinary run of events as YHWH&rsquo;s direct signature. Isaiah 9:6 names the promised Davidic king &ldquo;Wonderful Counselor (Pele-Yoets)&rdquo; — the pala-quality applied to a person. Matthew&rsquo;s &lsquo;the people were astonished at his teaching&rsquo; (7:28) and Luke&rsquo;s Magnificat (&lsquo;he who is mighty has done great things [megaleia] for me,&rsquo; 1:49) — the NT equivalent of niflaot — apply the pala-vocabulary to Jesus: he is himself the marvelous wonder that the Psalms of 1 Chronicles commanded Israel to remember."
+        },
+        {
+            "code": "H5975",
+            "lemma": "עָמַד",
+            "translit": "ʿāmad",
+            "gloss": "stand",
+            "significance": "עָמַד (amad, &lsquo;to stand, to take a position, to be appointed and established in a role — the posture of a courtier or servant before a superior&rsquo;) is the defining bodily posture of Levitical ministry in 1 Chronicles. 1 Chr 6:31-32: &lsquo;These are those whom David put in charge of the service of song in the house of YHWH...They ministered with song before the tabernacle of the tent of meeting until Solomon built the house of YHWH in Jerusalem, and they stood (wayyamdū) in their office according to their rule.&rsquo; 1 Chr 23:30: &lsquo;They were to stand (laamod) every morning, thanking and praising YHWH, and likewise at evening.&rsquo; The amad-posture is not incidental but ontological: to stand before someone is to present oneself as available, attentive, and responsive — the posture of a servant before a king. Deuteronomy 18:7 uses the same formula for the legitimate priest: he &lsquo;stands to minister before YHWH.&rsquo; Zechariah 3:1-7 — the vision of Joshua the high priest &lsquo;standing (omed) before the angel of YHWH&rsquo; — is the amad-scene at the heart of the post-exilic restoration. The NT&rsquo;s repeated amad-equivalent in Hebrews is striking: the OT priests &lsquo;stand daily at their service&rsquo; (Heb 10:11) while Christ &lsquo;sat down at the right hand of God&rsquo; — the Levitical amad is completed and surpassed by the priestly work of Christ, which is finished (&lsquo;It is done,&rsquo; John 19:30) rather than endlessly repeated."
+        },
+        {
+            "code": "H8003",
+            "lemma": "שָׁלֵם",
+            "translit": "šālēm",
+            "gloss": "whole",
+            "significance": "שָׁלֵם (shalem, &lsquo;whole, complete, entire, undivided — from the root shared with shalom [peace/completeness]&rsquo;) is the Chronicler&rsquo;s key descriptor for the covenant devotion that YHWH requires and that Solomon must maintain. David&rsquo;s charge to Solomon (1 Chr 28:9): &lsquo;Know the God of your father and serve him with a whole heart (lev shalem) and with a willing mind, for YHWH searches all hearts and understands every plan and thought. If you seek him, he will be found by you.&rsquo; 1 Chr 29:9: &lsquo;the people rejoiced because they had given willingly, for with a whole heart (lev shalem) they had offered freely to YHWH.&rsquo; 1 Chr 29:19: &lsquo;grant to Solomon my son a whole heart (lev shalem) to keep your commandments, your testimonies, and your statutes.&rsquo; The lev shalem (whole heart) is the Chronicler&rsquo;s answer to what went wrong in 1 Kings 11:4 (Solomon&rsquo;s &lsquo;heart was not wholly true [lo shalem] to YHWH&rsquo;): the catastrophe of the divided kingdom began with a divided heart. Chronicles&rsquo; post-exilic community is being told that the shalem-devotion they must bring to rebuilding the temple and its worship is the very thing Solomon lacked. The Shema&rsquo;s &lsquo;love YHWH your God with all your heart (bechol-levavkha)&rsquo; (Deut 6:5) is the shalem-imperative at the center of Israel&rsquo;s identity; Jesus identifies it as the greatest commandment (Mark 12:30), making the lev shalem the axis of the entire Christian ethical life."
+        },
+        {
+            "code": "H1245",
+            "lemma": "בָּקַשׁ",
+            "translit": "bāqaš",
+            "gloss": "seek",
+            "significance": "בָּקַשׁ (baqash, &lsquo;to search out, to look for intently, to strive after — a sustained, urgent pursuit rather than a casual glance; in religious contexts, to desire or request something from YHWH&rsquo;) appears alongside darash in 1 Chr 16:11 in a double intensification of the seeking-imperative: &lsquo;Seek (dirsh) YHWH and his strength; seek (baqashu) his face (panav) continually!&rsquo; The pairing of darash (seek/inquire, more investigative and covenantally formal) and baqash (seek/desire, more volitional and personally urgent) in the same verse shows the Chronicler&rsquo;s theological precision: comprehensive seeking of YHWH involves both the mind&rsquo;s inquiry and the will&rsquo;s desire. The specific object of baqash here is &ldquo;his face (panav)&rdquo; — not merely his benefits or his information, but YHWH himself, direct encounter with his personal presence. This face-seeking language implies intimacy: it is the language of a person who wants not merely what the king can give but the king himself. 1 Chr 22:19: &lsquo;Set your heart and soul to seek (lidrosh) YHWH your God.&rsquo; The baqash/darash pairing provides a vocabulary for what we might call integrated seeking: intellectual engagement with YHWH&rsquo;s word (darash) and volitional desire for YHWH&rsquo;s presence (baqash). Psalm 27:8 (also in the baqash vocabulary: &lsquo;Your face, YHWH, do I seek [abaqesh]&rsquo;) is the interior expression of what Chronicles institutionalizes in the Levitical worship system."
+        },
+        {
+            "code": "H8403",
+            "lemma": "תַּבְנִית",
+            "translit": "tabnît",
+            "gloss": "plan",
+            "significance": "תַּבְנִית (tavnit, &lsquo;a structural pattern, model, or blueprint — a design for something to be built, whether architectural or visionary&rsquo;) is the word for the divine architectural plan that David received from YHWH and passed to Solomon for the temple. 1 Chr 28:11-12: &lsquo;Then David gave Solomon his son the plan (tavnit) of the vestibule of the temple, and of its houses, its treasuries, its upper rooms, and its inner rooms, and of the room for the mercy seat, and the plan (tavnit) of all that he had in mind.&rsquo; 1 Chr 28:18: &lsquo;refined gold for the plan (tavnit) of the chariot — the golden cherubim that spread their wings and covered the ark of the covenant.&rsquo; 1 Chr 28:19 clarifies the source: &lsquo;All this he made clear to me in writing from the hand of YHWH, all the work to be done according to the plan (tavnit).&rsquo; The tavnit is not David&rsquo;s own architectural creativity but YHWH&rsquo;s revealed design, received as a divine communication. This echoes Exodus 25:9, 40, where YHWH showed Moses the tavnit of the tabernacle: &lsquo;Exactly as I show you concerning the pattern of the tabernacle and all its furniture, so you shall make it.&rsquo; The identical tavnit-theology in both Exodus (tabernacle) and 1 Chronicles (temple) signals that the earthly worship place is always a divinely-specified copy of a heavenly reality. Hebrews 8:5 cites this explicitly: the priests &lsquo;serve a copy and shadow of the heavenly things&rsquo; — Moses was instructed to make everything &lsquo;according to the pattern (typos, the Greek tavnit) shown him on the mountain.&rsquo;"
+        },
+        {
+            "code": "H5999",
+            "lemma": "עָמָל",
+            "translit": "ʿāmāl",
+            "gloss": "labor",
+            "significance": "עָמָל (amal, &lsquo;toil, wearing effort — the exhausting labor that costs the laborer; sometimes colored by the misery or trouble the toil produces&rsquo;) appears in a surprisingly personal disclosure from David in 1 Chr 22:14: &lsquo;With great pains (be-omli, lit. &ldquo;in my labor/toil&rdquo;) I have provided for the house of YHWH: a hundred thousand talents of gold, a million talents of silver, and bronze and iron beyond weighing, for there is so much of it; timber and stone too I have provided. To these you must add.&rsquo; The amal-word here is striking: David is not describing bureaucratic resource allocation but the wearing, self-costly labor of a man who poured out his life-energies for a project he would never personally complete (21:18-22:1 make clear that David was excluded from building). He prepared because YHWH had given him this vision; he bore the amal of preparation as his form of devotion, knowing that Solomon would receive the benefit. Job uses amal for the exhausting suffering of his own situation (Job 3:10; 16:2); Ecclesiastes returns to it repeatedly for the futility of human toil (&lsquo;what do people gain from all their amal under the sun?&rsquo; Qoh 1:3). That David redeems the word by pouring his amal into the house of YHWH is the Chronicler&rsquo;s theology of substitutionary service: he labored so others could worship. Paul&rsquo;s &lsquo;to this end I labor (kopiō), struggling with all his energy that he powerfully works within me&rsquo; (Col 1:29) is the same amal-intensity, now sustained not by David&rsquo;s resources but by the risen Christ."
+        }
+    ],
+
+    "language_notes": (
+        "<p>The Chronicler&rsquo;s governing hermeneutic is what scholars call the <strong>&ldquo;seek-and-find&rdquo; (darash) theology</strong>. Where Samuel-Kings explains the exile through covenant violation, Chronicles explains history through the seeking or non-seeking of YHWH. The verb darash (to seek/inquire of) functions as the book&rsquo;s central evaluative criterion: Saul died because he did not darash YHWH (10:14); David prospered because he consistently darash&rsquo;d YHWH before major decisions (14:10, 14); the entire temple enterprise is YHWH&rsquo;s response to David&rsquo;s darash-orientation. The Psalm of 1 Chr 16 makes the darash-imperative liturgical: &lsquo;Seek (dirsh) YHWH and his strength; seek (baqashu) his face continually&rsquo; (16:11). The pairing of darash (intellectual inquiry) with baqash (volitional desire for his face) shows that the seeking is comprehensive: it involves the whole person in an integrated orientation toward YHWH. This darash-theology is the Chronicler&rsquo;s gift to the post-exilic community: history is not determined by Babylon&rsquo;s armies but by Israel&rsquo;s seeking or non-seeking of YHWH. The community that has returned from exile and is rebuilding can reorient history by reorientating itself toward YHWH through the restored darash-institutions of worship.</p>"
+        "<p>The <strong>nine chapters of genealogy</strong> (chs. 1-9) that open 1 Chronicles are among the most passed-over material in the OT, but they represent the post-exilic community&rsquo;s most urgent practical concern: identity and legitimacy. The distinctive verb yachas (to enroll by genealogy) signals that these lists are not mere family history but covenantal registration documents. The yachas records establish who belongs to the covenant community, who has legitimate standing to serve as priest or Levite, who can claim which portion of the land. The genealogies trace from Adam (1:1) through the patriarchs and twelve tribes to the post-exilic Israelites (ch. 9), with the obvious purpose of demonstrating that the returning exiles stand in unbroken continuity with pre-exilic Israel. The dor (generation) vocabulary frames this continuity theologically: YHWH&rsquo;s covenant is not disrupted by the galah (exile) of one or two generations; it spans a &ldquo;thousand generations&rdquo; (16:15, citing Ps 105:8). The genealogies are the Chronicler&rsquo;s concrete answer to the post-exilic anxiety: &lsquo;Are we still the covenant people?&rsquo; Answer: read chs. 1-9; you are the yachas&rsquo;d community in unbroken continuity from Adam.</p>"
+        "<p>1 Chronicles is the OT&rsquo;s most fully institutionalized <strong>theology of worship</strong>, expressed through the sharat and amad vocabulary that organizes the Levitical appointments. Sharat (to minister/serve) marks the Levites&rsquo; service as formal, consecrated, and personally intimate — courtly attendance before YHWH. Amad (to stand) is the Levites&rsquo; bodily posture: they stand before YHWH daily (23:30), their physical position a statement of readiness, availability, and dedication. The yadah (give thanks) and halal (praise) verbs describe what the standing Levites actually do: they publicly acclaim YHWH&rsquo;s greatness, extending the hand (yadah) in thanksgiving and shining out (halal) in exuberant praise. 1 Chr 23:5 records that David appointed 4,000 Levites specifically for halal — this is the moment when praise becomes a dedicated full-time vocation rather than an occasional response. The Psalms are the literary deposit of this institution; the book of Psalms is, in a real sense, the Levitical halal/yadah corpus made available for all Israel&rsquo;s worship. Chronicles thus establishes the institutional infrastructure for what we call liturgical worship: appointed people, appointed times, appointed words, appointed music — all organized so that YHWH is praised continually.</p>"
+        "<p>David&rsquo;s temple preparations (chs. 22-29) are the climax of 1 Chronicles and introduce distinctive vocabulary that recurs nowhere else in the Historical books. The tavnit (divine plan/pattern) that David received and passed to Solomon (28:11-19) establishes that the temple&rsquo;s design is not architectural creativity but revealed blueprint — exactly as the tabernacle received the YHWH-given tavnit in Exodus 25. The shalem (whole/complete) vocabulary of David&rsquo;s charge to Solomon (28:9; 29:9, 19) identifies the heart-condition that makes the temple meaningful: a whole (shalem) heart, undivided and fully oriented toward YHWH. And David&rsquo;s personal disclosure of amal (labor/toil, 22:14) reveals the emotional texture of preparation: he bore the wearing cost of amassing resources for a house he would never build, as an act of devotion. Together, tavnit, shalem, and amal constitute the Chronicler&rsquo;s theology of preparation as worship.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Augustine&rsquo;s <em>City of God</em> (Books XV-XVII) traces the genealogies of Genesis and Chronicles as the thread of the <em>civitas Dei</em> (city of God) through human history — the line from Adam through Seth through Abraham through David is the Chronicler&rsquo;s yachas read as providential history. The tavnit-argument became central in patristic exegesis of Hebrews: if the earthly temple was built according to a divine pattern that pointed to heavenly realities, then all of Chronicles&rsquo; elaborate temple preparations are themselves a shadow-system that points beyond itself to Christ. Origen read the Levitical worship of 1 Chronicles as a multi-layered allegory: the outer courts = the body; the Holy Place = the soul; the Holy of Holies = the spirit — the architectural tripartite structure maps onto the human person who is being shaped for worship. The four-fold Levitical halal/yadah commission (16:4) became the patristic template for the Christian church&rsquo;s four-fold liturgical action: invocation, thanksgiving, praise, and offering.</p>"
+        "<p><strong>Reformation:</strong> Calvin&rsquo;s lectures on 1-2 Chronicles (published posthumously) focused on the genealogies as theological history — not dead lists but the record of God&rsquo;s electing and preserving grace through time. He argued against those who skip chs. 1-9: the genealogies exist to teach that God&rsquo;s covenantal purposes are not abstract but embedded in particular families and persons across many generations. Calvin also treated David&rsquo;s temple preparations (chs. 22-29) as a model for ecclesiastical planning: that David was prohibited from building the temple was not a setback but a division of labor, each generation contributing what God assigned it. Luther emphasized David&rsquo;s amal (22:14) as an example of generous sacrifice for the church even by those who will not see its completion — a model for Reformation-era communities rebuilding church institutions after Roman distortion.</p>"
+        "<p><strong>Modern scholarship:</strong> 1-2 Chronicles has become the test case for the study of &ldquo;inner-biblical interpretation&rdquo; — how later biblical texts reread and reinterpret earlier ones. The Chronicler&rsquo;s selective retelling of Samuel-Kings (omitting David&rsquo;s sins, restructuring the narrative around temple preparation) is now recognized not as distortion but as a distinct theological perspective for a specific community. Sara Japhet&rsquo;s commentary (1993) and Ralph Klein have established that the Chronicler is doing what every preacher does: retelling the inherited story for a new situation. The genealogies&rsquo; function in post-exilic identity formation has been illuminated by sociological approaches: the yachas records are the community&rsquo;s boundary-maintenance documents in a context of contested post-exilic identity.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Do not skip the genealogies (chs. 1-9). They are not filler but the post-exilic community&rsquo;s most urgent material: identity-forming documents that answer &ldquo;who are we?&rdquo; before the building project can begin. Notice that the genealogies are not uniformly complete — some lines are traced in detail, others briefly. The emphasis falls on the Levitical lines (chs. 6), the Benjaminite line (ch. 8, Saul&rsquo;s tribe), and the Judahite-Davidic line (ch. 3): the three lines that matter most for temple worship, for the cautionary tale of the monarchy, and for the Davidic covenant hope respectively. Read the genealogies asking: whose continuity is being established, and why does it matter for the returning community?</p>"
+        "<p>The climax of 1 Chronicles is chapters 22-29 — David&rsquo;s temple preparations, his charge to Solomon, and his great prayer of dedication (29:10-19). Everything in the book builds toward this: the genealogies establish who the covenant people are; the account of the ark&rsquo;s arrival and David&rsquo;s Psalm (chs. 13-16) establish how they are to worship; the military victories (chs. 18-20) clear the political space for what only peace can build. Read 28:9 as the Chronicler&rsquo;s summary theology: &lsquo;Know the God of your father and serve him with a whole heart and a willing mind, for YHWH searches all hearts.&rsquo; That sentence contains the Chronicler&rsquo;s entire program.</p>"
+        "<p>The most common misreading of Chronicles is to treat its omissions as dishonest whitewashing. Chronicles omits Bathsheba, Uriah, and Absalom&rsquo;s rebellion — not to deceive but to answer a different question than Samuel-Kings. Kings asked: &ldquo;Why did we go into exile?&rdquo; Chronicles asks: &ldquo;How do we rebuild covenant community and worship after exile?&rdquo; For that question, David as the template of whole-hearted (shalem) temple preparation is the relevant truth — not his moral failures. Read Chronicles alongside Samuel-Kings for the full picture.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('1chronicles')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('1chronicles', merged)
+
+main()

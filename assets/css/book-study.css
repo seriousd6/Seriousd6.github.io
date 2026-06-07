@@ -986,6 +986,156 @@ body.bk-nt { background-color: #f8f9fc; }
   }
 }
 
+/* ── Tier navigation strip ──────────────────────────────────── */
+/* Shared across all three tiers for a given book. Appears at top of each
+   tier page and links between Guide / Deep Dive / Commentary.
+   Active item styled via [data-tier=X] [data-tier-item=X] — no JS needed.
+   Items for tiers not yet written: add [hidden] on the <li> element.         */
+.bk-tier-nav {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.bk-tier-nav__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.bk-tier-nav__book {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  white-space: nowrap;
+  padding: 0.75rem 0;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.bk-tier-nav__book:hover { color: var(--color-primary); }
+.bk-tier-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+}
+.bk-tier-nav__item { display: flex; }
+.bk-tier-nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem 1.25rem 0.55rem;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: var(--color-muted);
+  transition: color 0.12s, border-color 0.12s;
+  white-space: nowrap;
+  gap: 0.1rem;
+}
+.bk-tier-nav__link:hover { color: var(--color-primary); }
+.bk-tier-nav__icon { font-size: 0.95rem; line-height: 1; }
+.bk-tier-nav__label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; }
+.bk-tier-nav__sub   { font-size: 0.65rem; opacity: 0.7; }
+/* Active item inherits --bk-accent set by genre class on <body> */
+[data-tier="guide"]      [data-tier-item="guide"]      .bk-tier-nav__link,
+[data-tier="deep-dive"]  [data-tier-item="deep-dive"]  .bk-tier-nav__link,
+[data-tier="commentary"] [data-tier-item="commentary"] .bk-tier-nav__link {
+  color: var(--bk-accent, var(--color-primary));
+  border-bottom-color: var(--bk-accent, var(--color-primary));
+}
+.bk-tier-nav__back {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.bk-tier-nav__back:hover { color: var(--color-primary); }
+.bk-tier-nav__item[hidden] { display: none; }
+
+@media (max-width: 600px) {
+  .bk-tier-nav__sub { display: none; }
+  .bk-tier-nav__inner { gap: 0.5rem; padding: 0 0.75rem; }
+  .bk-tier-nav__back { display: none; }
+  .bk-tier-nav__link { padding: 0.5rem 0.75rem; }
+}
+
+[data-theme="dark"] .bk-tier-nav { background: var(--color-surface); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bk-tier-nav { background: var(--color-surface); }
+}
+
+/* ── Book-level discussion questions ───────────────────────── */
+.bk-questions { margin: 2rem 0; }
+.bk-questions__title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 1rem;
+  padding-bottom: 0.4rem; border-bottom: 2px solid var(--bk-accent, var(--color-primary));
+  color: var(--bk-accent, var(--color-primary));
+}
+.bk-questions__list {
+  list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem;
+}
+.bk-question {
+  padding: 0.8rem 1rem; border-radius: 8px;
+  border-left: 3px solid var(--bk-accent-soft, rgba(0,0,0,0.08));
+  background: var(--bk-accent-dim, rgba(0,0,0,0.025));
+  font-size: 0.93rem; line-height: 1.55;
+  counter-increment: bk-q;
+}
+.bk-questions__list { counter-reset: bk-q; }
+.bk-question::before {
+  content: counter(bk-q) ". ";
+  font-weight: 700; color: var(--bk-accent, var(--color-primary));
+  margin-right: 0.15rem;
+}
+
+/* ── Chapter questions grid ─────────────────────────────────── */
+.bk-ch-questions { margin: 2rem 0; }
+.bk-ch-questions__title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 1rem;
+  padding-bottom: 0.4rem; border-bottom: 2px solid var(--bk-accent, var(--color-primary));
+  color: var(--bk-accent, var(--color-primary));
+}
+.bk-ch-questions__note {
+  font-size: 0.82rem; color: var(--color-muted); margin-bottom: 1rem;
+}
+.bk-ch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.55rem;
+}
+.bk-ch-card {
+  border: 1px solid var(--color-border); border-radius: 8px;
+  background: var(--color-surface); overflow: hidden;
+}
+.bk-ch-card__head {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bk-accent-soft, rgba(0,0,0,0.04));
+  border-bottom: 1px solid var(--color-border);
+}
+.bk-ch-card__num {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--bk-accent, var(--color-primary));
+}
+.bk-ch-card__ref {
+  font-size: 0.7rem; color: var(--color-muted); margin-left: auto;
+}
+.bk-ch-card__body { padding: 0.6rem 0.75rem; }
+.bk-ch-card__q { font-size: 0.82rem; line-height: 1.5; margin: 0 0 0.3rem; }
+.bk-ch-card__q + .bk-ch-card__q { border-top: 1px solid var(--color-border); padding-top: 0.3rem; }
+
+@media (max-width: 600px) {
+  .bk-ch-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Dark mode ──────────────────────────────────────────────── */
 /* body.bk-ot and body.bk-nt override var(--color-bg) with hardcoded light
    values — these must be reset in dark mode to prevent near-white backgrounds

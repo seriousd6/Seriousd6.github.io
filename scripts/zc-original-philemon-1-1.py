@@ -1,30 +1,28 @@
 """
-Combined script: 1 Timothy, 2 Timothy, Titus, Philemon — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for all four letters.
+MKT Original Commentary — Philemon (23 missing verses; v16 and v18 already present)
+Run: python3 scripts/zc-original-philemon-1-1.py
 
-The Pastoral Epistles (ca. 60-67 CE or deutero-Pauline ca. 80-100 CE)
-address church order, ministry qualifications, sound doctrine, and personal
-discipleship. Key theological contributions: the faithful sayings (pistoi logoi),
-the appearing (epiphaneia) Christology, and the portrait of Paul as exemplary sufferer.
+Key translation decisions:
+- achrēstos/euchrēstos (v11): 'useless/useful' — the Onesimus wordplay; also echoes
+  achristos/en Christō (without Christ / in Christ) — the name Onesimus means 'useful'
+- splanchna (vv.7,12,20): 'bowels/heart/affections' — the visceral center of emotion
+- koinōnia (v6): 'fellowship/participation/partnership' — the key social-theological term
+- presbyteros vs presbeutēs (v9): 'old man' (most MSS) or 'ambassador' (Lightfoot conjecture)
+- echōristhē (v15): divine passive — 'was separated' rather than 'ran away';
+  theological framing of Onesimus's departure as providential
+- ellogei (v18): bookkeeping/accounting term — 'charge to my account'
+- autographō (v19): Paul's autograph note functions as a legal IOU
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_comm(layer, book, data):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -32,21 +30,8 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -54,215 +39,47 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# 1 TIMOTHY
-# ============================================================
-
-ONETIM_ECHO = {
-  "2": {
-    "5": [
-      {"type": "fulfillment", "target": "Job 9:33", "note": "There is one mediator between God and people, the man Christ Jesus — Job's lament 'there is no arbiter between us who might lay his hand on us both' is answered: the mediator Job could not find is Christ, who as the man Christ Jesus bridges the divine-human gap"},
-      {"type": "fulfillment", "target": "Isa 53:12", "note": "Who gave himself as a ransom for all — the Servant who poured out his soul to death and bore the sin of many; the ransom-giving fulfills the Servant's self-offering on behalf of the many"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Ps 24:3-4", "note": "He was manifested in the flesh, vindicated by the Spirit — the hymn of 1 Tim 3:16 celebrates the incarnation-exaltation pattern; the Psalm's ascent to YHWH's holy hill resonates with the vindicated Christ ascending to the heavenly Zion"},
-      {"type": "allusion", "target": "Isa 52:15", "note": "Proclaimed among the nations, believed on in the world — the Servant's proclamation that would cause kings to shut their mouths; the worldwide proclamation of the exalted Christ fulfills the Servant's mission reaching to all nations"}
-    ]
-  }
-}
-
-ONETIM_ORIGINAL = {
-  "2": {
-    "5": "<p><strong>heis gar theos heis kai mesites theou kai anthropon anthropos Christos Iesous</strong> (<em>heis gar theos, heis kai mesitēs theou kai anthrōpōn, anthrōpos Christos Iēsous</em>): 'For there is one God and one mediator between God and people, the man Christ Jesus.' The <em>mesites</em> (mediator) terminology was used in both Hellenistic contract law (a third party who guarantees a transaction) and in LXX usage for Moses's mediating role at Sinai (Gal 3:19-20). The Christological uniqueness: there is <em>one</em> mediator — contra the Greco-Roman polytheistic model of multiple divine intermediaries, and contra any Jewish or emerging Gnostic scheme of angelic mediators. The qualifier <em>anthrōpos</em> (man) before Christ Jesus emphasizes the genuine humanity that enables the mediation: the mediator must be able to touch both parties.</p>"
-  },
-  "3": {
-    "16": "<p><strong>homologoumenos mega estin to tes eusebeias mysterion</strong>: 'Great indeed, as we confess, is the mystery of godliness.' What follows (vv. 16b-c) is almost certainly a pre-Pauline hymn or creedal fragment in six lines, possibly arranged in two strophes of three: (1) manifested in flesh / vindicated by Spirit / seen by angels; (2) proclaimed among nations / believed in the world / taken up in glory. The six verbs are all aorist passives — divine actions done to Christ. The structure mirrors Phil 2:6-11's humiliation-exaltation pattern: the first triad (incarnation, vindication, heavenly witness) parallels the descending and ascending of the Christ-hymn.</p>"
-  },
-  "6": {
-    "15": "<p><strong>ho makarios kai monos dynamastes ho basileus ton basileonton kai kyrios ton kyrieonton</strong> (<em>ho makarios kai monos dynastēs, ho basileus tōn basileuontōn kai kyrios tōn kyrieuontōn</em>): 'the blessed and only Sovereign, the King of kings and Lord of lords.' The doxology of 6:15-16 applies to the epiphaneia of Jesus the titles that Hellenistic rulers and the Roman emperor claimed. <em>Dynastēs</em> (Sovereign/potentate) was used of divine-right rulers in the Hellenistic east. <em>King of kings and Lord of lords</em> echoes Deut 10:17 (YHWH as God of gods and Lord of lords) and Daniel 2:37, 47 (the God of heaven as King over kings). The doxology places the Roman emperor's pretensions under the sovereignty of Christ.</p>"
-  }
-}
-
-ONETIM_CONTEXT = {
+ORIGINAL = {
   "1": {
-    "3": "<p>1 Timothy is addressed to Timothy in Ephesus — Paul's extended base of ministry (Acts 19, ca. 52-55 CE; and likely again ca. 60-65 CE if the Pastoral Epistles reflect a release from Roman imprisonment). Ephesus was the largest city in the province of Asia and the site of the Artemis temple; it had a large Jewish community, numerous mystery cult associations, and by the late first century a substantial Christian community (see Revelation 2:1-7). The false teachers Timothy must address are described as teaching 'different doctrine' (<em>heterodidaskale</em>), focusing on 'myths and endless genealogies' (1:4) and 'what they call knowledge' (<em>pseudonymos gnōsis</em>, 6:20), possibly an early form of Jewish-Gnostic speculation.</p>"
-  },
-  "5": {
-    "17": "<p>The 'double honor' for elders who rule well (v. 17) — especially those who labor in preaching and teaching — reflects the early church's emerging distinction between lay elders and teaching-preaching elders. The citation of Deut 25:4 (do not muzzle an ox when it treads grain) and the dominical saying 'the laborer deserves his wages' (Luke 10:7) as dual warrant for paying ministers indicates that by the Pastoral period, apostolic-era oral tradition (Jesus's teaching) was already cited alongside Torah as authoritative Scripture.</p>"
-  }
-}
-
-ONETIM_CHRIST = {
-  "1": {
-    "15": "<p>A direct revelation: 'The saying is trustworthy and deserving of full acceptance, that Christ Jesus came into the world to save sinners, of whom I am the foremost.' The first of the Pastoral Epistles' five 'faithful sayings' (<em>pistos ho logos</em>) is a Christological mission-statement: the incarnation's purpose is soteriological — Christ came into the world (implying pre-existence, like John 1:14) specifically to save sinners. Paul's self-designation as 'the foremost of sinners' makes the statement an autobiographical proof: if Christ saved me (the persecutor of the church), his saving purpose is as wide as the worst sinner.</p>"
-  },
-  "2": {
-    "5": "<p>A direct revelation: 'There is one mediator between God and people, the man Christ Jesus, who gave himself as a ransom for all.' The two Christological claims together: (1) Christ is the unique, sole mediator — no competing spiritual hierarchy is needed or valid; (2) his mediation was accomplished through self-giving as a ransom (<em>antilytron</em>, substitutionary ransom-payment). <em>Antilytron</em> (found only here in NT) intensifies <em>lytron</em> (ransom, Mark 10:45) with the <em>anti</em> prefix indicating substitution: a ransom given in place of others. The universality ('for all', <em>hyper pantōn</em>) combined with the singularity ('one mediator') is the Christological center of 1 Timothy's soteriology.</p>"
-  },
-  "3": {
-    "16": "<p>A direct revelation: 'He was manifested in the flesh, vindicated by the Spirit, seen by angels, proclaimed among the nations, believed on in the world, taken up in glory.' The Christological hymn traces the entire arc of Christ's work in six compressed phrases: incarnation → resurrection-vindication → heavenly acknowledgment → worldwide proclamation → faith-response → ascension. The hymn is the doctrinal center of the household-of-God section (3:14-16): sound church order and ministry is grounded in the Christological mystery that the church has received and proclaims.</p>"
-  }
-}
-
-# ============================================================
-# 2 TIMOTHY
-# ============================================================
-
-TWOTIM_ECHO = {
-  "2": {
-    "8": [
-      {"type": "fulfillment", "target": "2 Sam 7:12-13", "note": "Jesus Christ, risen from the dead, the offspring of David — the Davidic promise (I will raise up your offspring after you and establish his throne forever) is fulfilled in the resurrection of David's descendant Jesus; the risen Christ is the Davidic heir whose kingdom will have no end"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Deut 31:19-22", "note": "All Scripture is breathed out by God — the divine-origin claim for Scripture echoes YHWH's instruction to Moses to write down the Song (Deut 31:19) as a witness; the written word as YHWH's own testimony against and for Israel; now extended to all Scripture"}
-    ]
-  },
-  "4": {
-    "8": [
-      {"type": "allusion", "target": "Isa 40:10", "note": "Henceforth there is laid up for me the crown of righteousness which the Lord, the righteous judge, will award — YHWH coming with his reward, his recompense before him; Paul's awaited crown from the righteous judge at the parousia echoes the Isaianic expectation of the Lord's coming with vindication for the righteous"}
-    ]
-  }
-}
-
-TWOTIM_ORIGINAL = {
-  "2": {
-    "15": "<p><strong>spoudason seauton dokimon parastēsai to theo ergaten anepaiskunton orthotomounta ton logon tes aletheias</strong> (<em>spoudason seauton dokimon parastēsai tō theō, ergatēn anepaiskunton, orthotomounta ton logon tēs alētheias</em>): 'Do your best to present yourself to God as one approved, a worker who has no need to be ashamed, rightly handling the word of truth.' <em>Orthotomounta</em> (rightly dividing/handling/cutting): used in LXX Prov 3:6 ('he will make straight your paths') and 11:5. The word evokes a craftsman cutting or laying material in a straight line — a road-builder, a carpenter, a surgeon. The image: the handling of the word of truth requires the precision and skill of a craftsman who cuts straight rather than crooked. Historically, the King James 'rightly dividing' was applied dispensationally; the original metaphor is about competent, accurate, straight-course exposition.</p>"
-  },
-  "3": {
-    "16": "<p><strong>pasa graphe theopneustos kai ophelimos</strong> (<em>pāsa graphē theopneustos kai ōphelimos</em>): 'All Scripture is God-breathed (<em>theopneustos</em>) and profitable.' <em>Theopneustos</em> is a Pauline coinage (hapax legomenon) combining <em>theos</em> (God) and <em>pneō</em> (breathe) — 'God-breathed' or 'breathed out by God.' The breath-metaphor echoes Gen 2:7 (YHWH breathed into Adam's nostrils) and the Spirit-wind of Ezekiel's valley of bones: the Scriptures are alive with divine breath, not merely human compositions. The primary referent is the OT (which Timothy was taught from childhood, v. 15); the claim's extension to apostolic writings is implicit in 2 Pet 3:16's treatment of Paul's letters as <em>graphe</em>.</p>"
-  }
-}
-
-TWOTIM_CONTEXT = {
-  "1": {
-    "8": "<p>2 Timothy is widely regarded as Paul's final letter — written from a second Roman imprisonment ca. 66-67 CE, shortly before his death (4:6-8). The tone differs markedly from 1 Timothy: more personal, more urgent, more reflective of approaching death. The suffering-motif pervades the letter: Paul's chains (1:8, 16; 2:9), his abandonment by former associates (1:15; 4:10-16), his awareness of impending execution (4:6-8). If authentic (and most scholars accept 2 Timothy as more likely Pauline than 1 Timothy or Titus), it is the most personal surviving Pauline document. The mention of specific people (Hymenaeus, Philetus, Alexander the coppersmith, Demas, Luke, Mark) and personal items (the cloak at Troas, the books and parchments, 4:13) suggests authentic personal memory.</p>"
-  },
-  "3": {
-    "1": "<p>The 'last days' (<em>eschatais hēmerais</em>) characterized by moral collapse (vv. 1-9: lovers of self, lovers of money, proud, arrogant, abusive, disobedient to parents, ungrateful, unholy, heartless, unappeasable...) represents a conventional form in Jewish and early Christian eschatological literature called the 'signs of the end' tradition — cf. 1 Enoch 91-93 (the Apocalypse of Weeks), 2 Baruch 27-30, and rabbinic descriptions of the era before Messiah's coming. Paul's use of this tradition applies it to the present crisis in Timothy's ministry, not a distant future: the last days have already begun in the false teachers' behavior.</p>"
-  }
-}
-
-TWOTIM_CHRIST = {
-  "1": {
-    "10": "<p>A direct revelation: 'Our Savior Christ Jesus abolished death and brought life and immortality to light through the gospel.' The Christological declaration concentrates the gospel: Christ 'abolished' (<em>katargēsantos</em>) death — not merely defeated it but rendered it inoperative; brought life and immortality 'to light' (<em>phōtisantos</em>) — these were previously hidden in God's eternal purpose (v. 9) but are now disclosed through the proclamation. The Christology of 2 Timothy: the epiphany of the Savior is the historical moment when death's power was broken and life was made publicly visible.</p>"
-  },
-  "2": {
-    "8": "<p>A direct revelation: 'Remember Jesus Christ, risen from the dead, the offspring of David, as preached in my gospel.' Paul's summary of the gospel in one sentence unites the two great OT streams: Davidic messiahship (the royal covenant of 2 Sam 7) and resurrection (the prophetic expectation of Isa 26:19; Dan 12:2). 'Remember' (<em>mnemoneue</em>) is imperative — not a passive recollection but an active, sustaining focus on the Christological fact that generates Paul's willingness to suffer (v. 9-10: I endure everything for the sake of the elect). The risen Davidic Christ is the content of endurance.</p>"
-  },
-  "4": {
-    "8": "<p>A direct revelation: 'Henceforth there is laid up for me the crown of righteousness, which the Lord, the righteous judge, will award to me on that Day — and not only to me but also to all who have loved his appearing.' The parousia of Christ (the <em>epiphaneia</em> that Paul loved) is the moment of final vindication. The 'crown of righteousness' is not earned by Paul's sufferings but 'laid up' (<em>apokeitai</em>) — already determined, awaiting award. The righteous judge who will confer it is Christ himself. The Christological movement of 2 Timothy: from the first epiphaneia (incarnation, 1:10) through present endurance to the final epiphaneia where the judge vindicates the faithful.</p>"
-  }
-}
-
-# ============================================================
-# TITUS
-# ============================================================
-
-TITUS_ECHO = {
-  "2": {
-    "14": [
-      {"type": "fulfillment", "target": "Exod 19:5", "note": "To purify for himself a people of his own possession — YHWH's Sinai declaration 'you shall be my treasured possession' (LXX: laos periousios, exactly the term used here); the new covenant community is the fulfillment of what the Sinai covenant pointed toward"},
-      {"type": "fulfillment", "target": "Ezek 37:23", "note": "Who gave himself to redeem us from all lawlessness — YHWH's promise to cleanse Israel from all their backslidings; the redemption from lawlessness fulfills Ezekiel's new covenant cleansing promise"}
-    ]
-  },
-  "3": {
-    "5": [
-      {"type": "fulfillment", "target": "Ezek 36:25-27", "note": "Renewing of the Holy Spirit whom he poured out on us richly — YHWH's promise to sprinkle clean water, put his Spirit within, and cause Israel to walk in his statutes; the new birth through the Spirit fulfills Ezekiel's new covenant restoration"}
-    ]
-  }
-}
-
-TITUS_ORIGINAL = {
-  "2": {
-    "13": "<p><strong>prosdechomenoi ten makarian elpida kai epiphaneian tes doxes tou megalou theou kai soteros hemon Iesou Christou</strong> (<em>prosdechomenoi tēn makarian elpida kai epiphaneian tēs doxēs tou megalou theou kai sōtēros hēmōn Iēsou Christou</em>): 'waiting for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ.' The Greek syntax — <em>tou megalou theou kai soteros hemon Iesou Christou</em> — with the single definite article governing both 'God' and 'Savior' (the Granville Sharp rule) most naturally refers to one person: 'our great God and Savior, Jesus Christ.' This is one of the most explicit divine predications of Jesus in the NT — calling him directly 'our great God.' <em>Epiphaneia</em> (appearing/manifestation) is the distinctive Pastoral Christological term for the Incarnation (1 Tim 3:16; 2 Tim 1:10) and the parousia (1 Tim 6:14; 2 Tim 4:1, 8) — a term the Hellenistic world used for the appearance of a deity or the arrival of a king.</p>"
-  }
-}
-
-TITUS_CONTEXT = {
-  "1": {
-    "5": "<p>Titus in Crete: the island of Crete had a significant Jewish community (Acts 2:11; Josephus mentions Cretan Jews). Paul's description of Cretans — citing the Cretan poet Epimenides ('Cretans are always liars, evil beasts, lazy gluttons', v. 12) — uses an ancient ethnic stereotype familiar to his Greco-Roman audience. The church-planting task in Crete required appointing elders in 'every town' (<em>kata polin</em>), indicating a widespread but organizationally young mission. The Pastoral Epistles' emphasis on <em>episkopos</em> (overseer), <em>presbyteros</em> (elder), and <em>diakonos</em> (deacon) reflects the institutionalization of church leadership as the apostolic generation aged and died.</p>"
-  },
-  "3": {
-    "5": "<p>The 'washing of regeneration and renewing of the Holy Spirit' (<em>loutron palingenesias kai anakainōseōs Pneumatos Hagiou</em>) combines Jewish purification-immersion imagery (<em>mikveh</em>) with the OT new-covenant Spirit-promise (Ezek 36:25-27; Joel 2:28-29). <em>Palingenesia</em> (regeneration/new birth) appears only here and Matt 19:28 (the renewal of all things at the eschatological restoration) in the NT — linking individual new birth with cosmic new creation. <em>Paliggenesia</em> was also a Stoic term for the cyclical renewal of the cosmos after the ekpyrosis (cosmic fire) — Paul's use may deliberately appropriate the Stoic vocabulary and fill it with Christological content: the Spirit's renewal is the eschatological new creation arriving in individual conversion.</p>"
-  }
-}
-
-TITUS_CHRIST = {
-  "2": {
-    "14": "<p>A direct revelation: 'Who gave himself for us to redeem us from all lawlessness and to purify for himself a people of his own possession who are zealous for good works.' The Christological mission-statement of Titus: the self-giving of Christ (<em>edōken heauton</em>) accomplishes two things — ransom from lawlessness and purification-for-possession. The people-of-God language (laos periousios = treasured possession, Exod 19:5) is deliberately applied to the new covenant community formed by Christ's self-gift. Christ does not merely save individuals but creates a community that embodies his purposes — 'zealous for good works' completes the Christological transaction with an ethical telos.</p>"
-  },
-  "3": {
-    "4": "<p>A direct revelation: 'But when the goodness and loving kindness of God our Savior appeared, he saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewing of the Holy Spirit.' The 'appearance' (<em>epephanē</em>) of God's goodness is the Incarnation — the divine character made visible in Jesus. The Christological-Trinitarian movement: God the Savior's goodness appeared → he saved by mercy (not merit) → through the washing of the Spirit → poured out richly through Jesus Christ our Savior. The threefold divine action (God, Spirit, Christ) grounds salvation entirely outside human achievement.</p>"
-  }
-}
-
-# ============================================================
-# PHILEMON
-# ============================================================
-
-PHILEMON_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Lev 19:34", "note": "No longer as a slave but more than a slave, as a dear brother — the Levitical command to treat the alien among you as the native; the Onesimus-Philemon relationship after conversion exceeds the Torah's ethnic solidarity by requiring brotherly love between master and enslaved person"},
-      {"type": "allusion", "target": "Deut 23:15-16", "note": "Receive him no longer as a slave but as a dear brother — Deuteronomy's command not to return a runaway slave to his master but to let him dwell wherever he chooses; Paul's appeal works within Roman law while nudging toward a more radical Christian brotherhood that subverts the institution"}
-    ]
-  }
-}
-
-PHILEMON_ORIGINAL = {
-  "1": {
-    "16": "<p><strong>ouketi hos doulon alla hyper doulon adelphon agapeton</strong> (<em>ouketi hōs doulon alla hyper doulon, adelphon agapēton</em>): 'no longer as a slave but more than a slave, as a dear brother.' The grammatical structure — <em>ouketi ... alla hyper</em> (no longer ... but beyond) — expresses a qualitative transformation, not just a label change. Onesimus remains in a social relationship with Philemon but that relationship is now defined by a different primary category: <em>adelphos agapētos</em> (beloved brother). Paul does not directly command emancipation, but the logic of brotherhood makes slavery an anomaly: how can you own your brother? The letter is the most politically charged use of household-code language in Paul — Christian kinship (<em>adelphos</em>) is placed in deliberate tension with Roman social institution (<em>doulos</em>).</p>",
-
-    "18": "<p><strong>ei de ti edikesen se e opheilei touto emoi ellogei</strong> (<em>ei de ti ēdikēsen se ē opheilei, touto emoi ellogei</em>): 'If he has wronged you at all or owes you anything, charge that to my account.' <em>Ellogei</em> (charge to my account / impute) is a commercial-accounting term used only here and Rom 5:13 (sin is not <em>ellogeitai</em> when there is no law) in the NT. Paul offers to absorb Onesimus's debt as a surety. The theological parallel is explicit in the letter's rhetoric: as Paul stands in for Onesimus absorbing his debt-liability, Christ stands in for sinners absorbing their debt before God. Philemon is the NT's most compressed illustration of imputed righteousness in a human-relational register.</p>"
-  }
-}
-
-PHILEMON_CONTEXT = {
-  "1": {
-    "10": "<p>Onesimus was enslaved in Philemon's household in Colossae (cf. Col 4:9: 'Onesimus, our faithful and dear brother, who is one of you'). The traditional reading: Onesimus ran away from Philemon, somehow encountered Paul in prison (Rome or Ephesus), was converted, and is now being returned. A minority reading (B. Winter, A. Callahan): Onesimus was sent by Philemon to assist Paul in prison (a known practice, cf. Phil 2:25-30 — Epaphroditus sent to serve Paul), and Paul now appeals for him to be released permanently for gospel ministry. Either way, the letter navigates Roman slave-law (the <em>Lex Petronia</em> of ca. 61 CE and related legislation governed runaways) while applying theological pressure through the rhetoric of Christian brotherhood.</p>",
-
-    "16": "<p>Roman slavery in the first century CE: approximately 1-2 million enslaved people in Italy alone (roughly 30-35% of the Italian population, Scheidel's estimate); enslaved persons could be freed by manumission (<em>manumissio</em>) through various legal mechanisms. Freed persons became Roman citizens with some legal restrictions. The distinction Paul makes — 'both in the flesh and in the Lord' — is the Christian social ontology: Onesimus has both a new spiritual identity (brother in Christ) and an unchanged social location (in Philemon's household). Paul does not directly call for legal manumission, but the category 'dear brother' both in the flesh and in the Lord strains against the institution's dehumanizing premise.</p>"
-  }
-}
-
-PHILEMON_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'If you consider me your partner, receive him as you would receive me.' Paul's intercession for Onesimus reveals a pattern of representative substitution: the apostle places himself in the position of the offender and asks to be treated as Onesimus's surety. This is not strictly a direct Christological statement, but Paul consciously patterns his intercession on the Christological movement of divine advocacy — as Christ stands for sinners before the Father, Paul stands for Onesimus before Philemon. The letter reveals the social logic of atonement-theology as it should reshape human relationships.</p>",
-
-    "18": "<p>A direct revelation: 'If he has wronged you at all, or owes you anything, charge that to my account.' The imputation-language (<em>ellogei</em>) makes this the most concrete illustration in the NT of the substitutionary logic that governs Paul's soteriology. The Christ-event logic: Christ receives the charge of our debt against God's account; Paul enacts this same logic with Onesimus's debt to Philemon. The atonement is not merely a doctrinal formula but a relational pattern that should generate analogous acts of substitutionary absorption of another's debt. Philemon is called to receive Onesimus 'as you would receive me' (v. 17) — Christ-likeness enacted in the ordinary economy of first-century household relationships.</p>"
+    "1": '<p><em>Paulos desmios Christou Iēsou</em> (Paul, prisoner of Christ Jesus): the self-designation <em>desmios</em> (prisoner, one in chains) replaces the standard Pauline apostolic title. Paul does not claim apostolic authority at the outset — instead his imprisonment becomes the basis of his appeal (vv. 9-10). <em>Christou Iēsou</em> qualifies the imprisonment: Paul is not merely Rome\'s prisoner but Christ\'s — his chains are in service of Christ rather than the result of crime. <em>Timotheos ho adelphos</em> (Timothy our brother) — the co-sender lends weight to the appeal without supplanting Paul\'s personal voice; the letter remains first-person singular throughout despite the plural opening.</p>',
+    "2": '<p><em>Apphia tē adelphē</em> (Apphia our sister): the feminine name is Phrygian in origin; she is likely Philemon\'s wife given her placement between him and Archippus. <em>Archippō tō systratiōtē hēmōn</em> (Archippus our fellow soldier) — the military metaphor for ministry-partnership (<em>systratiōtēs</em>) appears also in Phil 2:25 for Epaphroditus. Archippus may be the Colossian minister of Col 4:17. <em>Kata oikon sou ekklēsia</em> (the church in your house) — the household church as the basic social unit of early Christianity; Philemon\'s home is both his private dwelling and the assembly point of the local church. This means Onesimus\'s return will be a public, community event.</p>',
+    "3": '<p><em>Charis hymin kai eirēnē apo theou patros hēmōn kai Kyriou Iēsou Christou</em> (grace and peace to you from God our Father and the Lord Jesus Christ): the standard Pauline greeting formula. The plural <em>hymin</em> (to you, plural) addresses the entire community gathered in Philemon\'s house (v. 2), not only Philemon himself. Paul\'s appeal is thus conducted not privately but in the sight of the community — a subtle social pressure that the household church will be watching how Philemon responds to the letter.</p>',
+    "4": '<p><em>Eucharisteō tō theō mou pantote mneian sou poioumenos epi tōn proseuchōn mou</em> (I thank my God always, making mention of you in my prayers): the thanksgiving section of Philemon is among the most personal in the Pauline corpus. <em>Pantote</em> (always) — continuous, habitual prayer for Philemon. <em>Mneian sou poioumenos</em> (making mention of you) — <em>mneia</em> (mention, memory, remembrance) at the prayers: Philemon occupies a standing place in Paul\'s prayer life. The thanksgiving primes Philemon emotionally before the appeal of vv. 8-21.</p>',
+    "5": '<p><em>Akouōn sou tēn agapēn kai tēn pistin hēn echeis pros ton Kyrion Iēsoun kai eis pantas tous hagious</em> (hearing of your love and faith which you have toward the Lord Jesus and for all the saints): the chiastic structure of v. 5 — love and faith / toward the Lord / and toward all the saints — places the Godward and humanward expressions of Philemon\'s character in view simultaneously. The report (<em>akouōn</em>, hearing) has reached Paul in prison — Philemon\'s reputation precedes him. The appeal of v. 9 (on the basis of love) takes up this established character: Paul appeals to a quality already known to exist.</p>',
+    "6": '<p><em>Hopōs hē koinōnia tēs pisteōs sou energēs genētai en epignōsei pantos agathou tou en hēmin eis Christon</em> (so that the partnership/sharing of your faith may become effective in the knowledge of every good thing that is in us toward Christ): the most grammatically compressed verse in the letter and among the most disputed in the Pauline corpus. <em>Koinōnia tēs pisteōs</em> — the participation that faith creates; the shared-life that Christian trust generates. <em>Energēs</em> (effective, active, at work) — from <em>ergon</em> (work); faith-koinōnia that produces real effects. <em>Epignōsis</em> (full knowledge/recognition) — the precise knowledge that is the fruit of active faith; the prayer is that Philemon\'s effective faith-partnership will deepen his comprehensive recognition of every good thing \'in us toward Christ\'</p>',
+    "7": '<p><em>Charan gar pollēn eschon kai paraklēsin epi tē agapē sou, hoti ta splanchna tōn hagiōn anapepautai dia sou, adelphe</em> (for I have had much joy and encouragement from your love, because the hearts of the saints have been refreshed through you, brother): <em>splanchna</em> (bowels, viscera — the seat of deep emotion in antiquity; our closest equivalent is "heart" or "gut"): Philemon has refreshed the <em>splanchna</em> of the saints — the word recurs in v. 12 (Onesimus is Paul\'s own <em>splanchna</em>) and v. 20 (Paul asks for <em>splanchna</em>-refreshment from Philemon). <em>Anapepautai</em> (has been rested/refreshed, perfect passive) — the completed refreshment still in effect. The direct address <em>adelphe</em> (brother) is unusually warm for a Pauline letter opening.</p>',
+    "8": '<p><em>Dio, pollēn en Christō parrēsian echōn epitassein soi to anēkon</em> (therefore, although I have great boldness in Christ to order you what is fitting): <em>parrēsia</em> (boldness, frank speech, freedom of expression) — the Greco-Roman philosophical and political virtue of speaking freely and honestly; here Paul\'s apostolic authority grounds his <em>parrēsia</em>. <em>Epitassein</em> (to command, order) — the vocabulary of apostolic authority; Paul has the standing to issue a command. The conditional construction — \'although I have this authority\' — is a rhetorical captatio: Paul invokes the authority he is choosing not to exercise, making the appeal more effective than a direct command.</p>',
+    "9": '<p><em>Dia tēn agapēn mallon parakalō, toioutos ōn hōs Paulos presbyteros, nyni de kai desmios Christou Iēsou</em> (rather I appeal on account of love, being such a one as Paul — an old man and now also a prisoner of Christ Jesus): <em>presbyteros</em> (old man) — the natural reading of the MSS; J. B. Lightfoot\'s emendation to <em>presbeutēs</em> (ambassador) has some appeal but lacks manuscript support. Paul as "old man" appeals to pathos: the aged prisoner asking a favor. The pairing of age (<em>presbyteros</em>) and imprisonment (<em>desmios</em>) makes the appeal from weakness rather than authority — the rhetorical inverse of v. 8\'s rejected command.</p>',
+    "10": '<p><em>Parakalō se peri tou emou teknou, hon egennēsa en tois desmois Onēsimon</em> (I appeal to you concerning my child Onesimus, whom I fathered in my imprisonment): only at v. 10 does Paul name Onesimus — a deliberate rhetorical delay. Having established love (vv. 4-7), authority yielded for love (vv. 8-9), and Paul\'s own situation as prisoner-old-man (v. 9), the name arrives with maximum emotional weight. <em>Egennēsa en tois desmois</em> (I fathered/begat in my chains) — the spiritual birth language (<em>gennaō</em>) of 1 Cor 4:15 and Gal 4:19; Paul is Onesimus\'s spiritual father, making Onesimus his son (<em>teknou</em>).</p>',
+    "11": '<p><em>Ton pote soi achrēston, nyn de soi kai emoi euchrēston</em> (who was formerly useless to you but now is useful both to you and to me): the wordplay on the name Onesimus is the letter\'s central pun. <em>Onēsimos</em> means "useful/profitable" in Greek (from <em>oninēmi</em>, to benefit). <em>Achrēstos</em> (useless) and <em>euchrēstos</em> (useful) contain a further resonance: <em>achristos</em> (without Christ) vs. <em>euchrēstos</em> / in Christ — the sounds are close enough in Greek to hear the Christological overtone. The pre-conversion Onesimus was both "useless" and "christless"; the converted Onesimus is both "useful" and "in Christ." The letter invites Philemon to hear both registers simultaneously.</p>',
+    "12": '<p><em>Hon anapempsa soi, auton, touto estin ta ema splanchna</em> (I am sending him back to you — him who is my very heart/bowels): the double naming — <em>auton</em> (him) + <em>ta ema splanchna</em> (my very bowels/heart) — emphasizes the personal cost of the return. Paul sends back his own heart. <em>Splanchna</em> recurs from v. 7 (Philemon refreshed the saints\' hearts); the emotional vocabulary creates a chain: Philemon\'s love has refreshed many hearts (v.7), now Paul sends his own heart to Philemon (v.12), and asks Philemon to refresh Paul\'s heart (v.20).</p>',
+    "13": '<p><em>Hon egō eboulomēn pros emauton katechein, hina hyper sou moi diakona en tois desmois tou euangeliou</em> (whom I would have liked to keep with me, so that he might serve me in your place in my imprisonment for the gospel): the subjunctive <em>eboulomēn</em> (I would have wished) describes the counterfactual — what Paul could have done but chose not to. <em>Hyper sou</em> (on your behalf, in your place) — Onesimus as Philemon\'s proxy-minister to the imprisoned Paul; Philemon\'s generosity extended to Paul through Onesimus. This constructs the return of Onesimus not as restoration of a slave but as Philemon\'s opportunity to serve Paul through his representative.</p>',
+    "14": '<p><em>Chōris de tēs sēs gnōmēs ouden ēthelēsa poiēsai, hina mē hōs kata anankēn to agathon sou ē alla kata hekousion</em> (but without your consent I wanted to do nothing, so that your good deed might not be as under compulsion but voluntary): <em>gnōmē</em> (judgment, opinion, consent) — Paul respects Philemon\'s autonomy by not acting without his agreement. <em>Anankē</em> (compulsion, necessity) vs. <em>hekousios</em> (voluntary, willing) — the forced gift vs. the free gift; compelled generosity has no moral value. Paul\'s entire rhetorical strategy of persuasion rather than command (vv. 8-9) serves this principle: he wants Philemon\'s free choice, not legal compliance.</p>',
+    "15": '<p><em>Tacha gar dia touto echōristhē pros hōran, hina aiōnion auton apechēs</em> (perhaps for this reason he was separated for a while, so that you might have him back forever): <em>echōristhē</em> — the divine passive; not "he ran away" or "he absconded" but "he was separated" — the providential framing that sees Onesimus\'s departure as divinely orchestrated rather than merely criminal. <em>Pros hōran</em> (for an hour/a while) vs. <em>aiōnion</em> (forever/eternally) — the contrast of temporal and eternal duration; the brief separation serves an eternal reunion. This is the letter\'s most explicit theological reframing of the situation.</p>',
+    "17": '<p><em>Ei oun me echeis koinōnon, proslabou auton hōs eme</em> (if then you consider me a partner, receive him as you would receive me): <em>koinōnos</em> (partner, sharer) — one who shares in the same enterprise; Paul\'s appeal reaches its crux: the logic of gospel-partnership (<em>koinōnia</em>) requires receiving Onesimus as one receives Paul. <em>Proslabou</em> (receive, take to yourself, welcome) — the verb of welcoming into one\'s fellowship. The argument is elegant: if Philemon and Paul are <em>koinōnoi</em> (partners) in the faith, and Onesimus is now Paul\'s son (v.10) and Paul\'s very heart (v.12), then receiving Onesimus is receiving Paul\'s heart into the partnership.</p>',
+    "19": '<p><em>Egō Paulos egrapsa tē emē cheiri, egō apotisō</em> (I, Paul, write with my own hand — I will repay it): the shift to autograph (<em>egrapsa tē emē cheiri</em>) signals a legally significant act; in the ancient world an autograph note functioned as a binding IOU. The emphatic first-person — <em>egō Paulos</em> (I, Paul) — and the present autograph (<em>egō egrapsa</em>) make this a legal pledge. <em>Apotisō</em> (I will repay/reimburse) — the commercial-legal verb for financial restitution. <em>Hina mē legō soi hoti kai seauton moi prosopheileis</em> (not to say that you owe me your very self) — the witty parenthesis that undoes the commercial logic: Paul writes an IOU but then notes that the debt runs the other way; Philemon owes Paul his spiritual life.</p>',
+    "20": '<p><em>Nai, adelphe, egō sou onaimēn en Kyriō</em> (yes, brother, let me benefit from you in the Lord): <em>onaimēn</em> (optative of <em>oninēmi</em>, to benefit/profit) — a second Onesimus-wordplay: Paul uses the verb cognate to the name Onesimus. Just as the name Onesimus means "useful/profitable," Paul asks Philemon to let him have <em>onēsin</em> (benefit, profit) from Philemon through Onesimus\'s reception. <em>Anapausson mou ta splanchna en Christō</em> (refresh my heart/bowels in Christ) — the third and final <em>splanchna</em> in the letter (vv. 7, 12, 20); the chain closes: Philemon has refreshed others\' hearts (v.7); Paul sent his own heart in Onesimus (v.12); now Paul asks Philemon to refresh Paul\'s heart (v.20).</p>',
+    "21": '<p><em>Pepoithōs tē hypakoē sou egrapsa soi, eidōs hoti kai hyper ha legō poiēseis</em> (confident of your obedience I write to you, knowing that you will do even more than I say): <em>pepoithōs</em> (confident, trusting — perfect participle of <em>peithō</em>) — the letter closes as it opened, with confidence in Philemon\'s character. <em>Hypakoē</em> (obedience) — the same word used for the community\'s response to the gospel (Rom 1:5; 6:16); here Philemon\'s response to the apostolic appeal. <em>Kai hyper ha legō poiēseis</em> (you will do even more than I say) — the final nudge: Paul does not explicitly ask for manumission (freedom for Onesimus) but implies it; "more than I say" is the coded request for the freedom that Paul has been gesturing toward throughout.</p>',
+    "22": '<p><em>Hama de kai hetoimaze moi xeniaan, elipzō gar hoti dia tōn proseuchōn hymōn charisthēsomai hymin</em> (at the same time prepare a guest room for me, for I hope that through your prayers I will be given back to you): <em>xenia</em> (hospitality, guest room, lodging) — the apostle\'s request for accommodation signals his expectation of release and visit. <em>Dia tōn proseuchōn hymōn</em> (through your prayers) — the plural <em>hymōn</em> addresses the household church again; the community\'s prayers participate in Paul\'s hoped-for release. <em>Charisthēsomai</em> (I will be given as a grace/gift) — the divine passive of gracious giving; Paul\'s release will be a divine gift mediated through the community\'s intercession.</p>',
+    "23": '<p><em>Aspazetai se Epaphras ho synaichmalōtos mou en Christō Iēsou</em> (Epaphras my fellow prisoner in Christ Jesus greets you): Epaphras appears in Col 1:7 and 4:12 as the founder of the Colossian church and Paul\'s "faithful minister of Christ." <em>Synaichmalōtos</em> (fellow prisoner of war) — the compound of <em>syn</em> (with) + <em>aichmalōtos</em> (prisoner of war, captured in battle); a stronger word than <em>desmios</em> (bound prisoner). Whether Epaphras was literally co-imprisoned with Paul or the term is metaphorical (prisoner of Christ, as in Rom 7:23) is disputed — Col 4:10 uses it for Aristarchus.</p>',
+    "24": '<p><em>Markos, Aristarchos, Dēmas, Loukas, hoi synergoi mou</em> (Mark, Aristarchus, Demas, Luke, my fellow workers): the collegial list of Paul\'s companions in Rome. Mark (John Mark) had been the point of contention between Paul and Barnabas (Acts 15:37-39); his restoration to Paul\'s circle is complete (cf. 2 Tim 4:11: "Mark is useful to me for ministry"). Aristarchus is from Thessalonica (Acts 20:4; 27:2). Demas, here a fellow worker, will later desert Paul for love of the present age (2 Tim 4:10). Luke, the physician and author of Luke-Acts (Col 4:14). The list connects Philemon to the broader Pauline network.</p>',
+    "25": '<p><em>Hē charis tou Kyriou Iēsou Christou meta tou pneumatos hymōn</em> (the grace of the Lord Jesus Christ be with your spirit): the closing grace-benediction — the same formula as Gal 6:18 and Phil 4:23; the singular <em>spirit</em> (<em>pneumatos</em>) may refer to the individual spirit of Philemon as primary addressee, or the community\'s collective spirit. The entire letter has operated on the logic of grace: the grace that saved Onesimus (vv. 10-11), the grace Paul asks Philemon to extend (vv. 17-21), and the grace of the Lord that both grounds and enables the human grace Paul requests. The benediction does not merely close the letter — it names the power that makes the appeal possible.</p>'
   }
 }
 
 def main():
-    books = [
-        ('1timothy', ONETIM_ECHO, ONETIM_ORIGINAL, ONETIM_CONTEXT, ONETIM_CHRIST),
-        ('2timothy', TWOTIM_ECHO, TWOTIM_ORIGINAL, TWOTIM_CONTEXT, TWOTIM_CHRIST),
-        ('titus', TITUS_ECHO, TITUS_ORIGINAL, TITUS_CONTEXT, TITUS_CHRIST),
-        ('philemon', PHILEMON_ECHO, PHILEMON_ORIGINAL, PHILEMON_CONTEXT, PHILEMON_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-original', 'philemon')
+    merge_comm(existing, ORIGINAL)
+    save_comm('mkt-original', 'philemon', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-        print(f'{book} original: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-        print(f'{book} context: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book} christ: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'philemon.json').read_text())
+    il_vv = set(il.get('1', {}).keys())
+    out_vv = set(existing.get('1', {}).keys())
+    missing = il_vv - out_vv
+    if missing:
+        print(f'  Still missing: {sorted(missing, key=int)}')
+    else:
+        print(f'  ch1: complete ({len(out_vv)} verses) ✓')
 
 if __name__ == '__main__':
     main()

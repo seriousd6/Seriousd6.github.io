@@ -1,30 +1,27 @@
 """
-Combined script: 1 Timothy, 2 Timothy, Titus, Philemon — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for all four letters.
+MKT Original Commentary — Titus chapters 1–3 (45 missing verses; ch2v13 already present)
+Run: python3 scripts/zc-original-titus-1-3.py
 
-The Pastoral Epistles (ca. 60-67 CE or deutero-Pauline ca. 80-100 CE)
-address church order, ministry qualifications, sound doctrine, and personal
-discipleship. Key theological contributions: the faithful sayings (pistoi logoi),
-the appearing (epiphaneia) Christology, and the portrait of Paul as exemplary sufferer.
+Key translation decisions:
+- episkopos / presbyteros (1:5,7): same office, two names; oversight and seniority emphasis
+- theou oikonomon (1:7): 'God's household-manager/steward' — not owner but entrusted manager
+- hairetikon (3:10): 'divisive person' (from haireomai, to choose) — one who forms a faction
+- palingenesia (3:5): 'regeneration/new birth' — only here and Matt 19:28 in NT
+- philanthrōpia (3:4): 'love of humanity' — Hellenistic divine-ruler virtue applied to God
+- laon periousion (2:14): 'people of his own possession' — LXX of segullah (Exod 19:5)
+- tou megalou theou kai sōtēros hēmōn Iēsou Christou (2:13): Granville Sharp rule
+  applies — one article + kai links two nouns for same person; Jesus called 'great God and Savior'
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_comm(layer, book, data):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -32,21 +29,8 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -54,215 +38,78 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# 1 TIMOTHY
-# ============================================================
-
-ONETIM_ECHO = {
-  "2": {
-    "5": [
-      {"type": "fulfillment", "target": "Job 9:33", "note": "There is one mediator between God and people, the man Christ Jesus — Job's lament 'there is no arbiter between us who might lay his hand on us both' is answered: the mediator Job could not find is Christ, who as the man Christ Jesus bridges the divine-human gap"},
-      {"type": "fulfillment", "target": "Isa 53:12", "note": "Who gave himself as a ransom for all — the Servant who poured out his soul to death and bore the sin of many; the ransom-giving fulfills the Servant's self-offering on behalf of the many"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Ps 24:3-4", "note": "He was manifested in the flesh, vindicated by the Spirit — the hymn of 1 Tim 3:16 celebrates the incarnation-exaltation pattern; the Psalm's ascent to YHWH's holy hill resonates with the vindicated Christ ascending to the heavenly Zion"},
-      {"type": "allusion", "target": "Isa 52:15", "note": "Proclaimed among the nations, believed on in the world — the Servant's proclamation that would cause kings to shut their mouths; the worldwide proclamation of the exalted Christ fulfills the Servant's mission reaching to all nations"}
-    ]
-  }
-}
-
-ONETIM_ORIGINAL = {
-  "2": {
-    "5": "<p><strong>heis gar theos heis kai mesites theou kai anthropon anthropos Christos Iesous</strong> (<em>heis gar theos, heis kai mesitēs theou kai anthrōpōn, anthrōpos Christos Iēsous</em>): 'For there is one God and one mediator between God and people, the man Christ Jesus.' The <em>mesites</em> (mediator) terminology was used in both Hellenistic contract law (a third party who guarantees a transaction) and in LXX usage for Moses's mediating role at Sinai (Gal 3:19-20). The Christological uniqueness: there is <em>one</em> mediator — contra the Greco-Roman polytheistic model of multiple divine intermediaries, and contra any Jewish or emerging Gnostic scheme of angelic mediators. The qualifier <em>anthrōpos</em> (man) before Christ Jesus emphasizes the genuine humanity that enables the mediation: the mediator must be able to touch both parties.</p>"
-  },
-  "3": {
-    "16": "<p><strong>homologoumenos mega estin to tes eusebeias mysterion</strong>: 'Great indeed, as we confess, is the mystery of godliness.' What follows (vv. 16b-c) is almost certainly a pre-Pauline hymn or creedal fragment in six lines, possibly arranged in two strophes of three: (1) manifested in flesh / vindicated by Spirit / seen by angels; (2) proclaimed among nations / believed in the world / taken up in glory. The six verbs are all aorist passives — divine actions done to Christ. The structure mirrors Phil 2:6-11's humiliation-exaltation pattern: the first triad (incarnation, vindication, heavenly witness) parallels the descending and ascending of the Christ-hymn.</p>"
-  },
-  "6": {
-    "15": "<p><strong>ho makarios kai monos dynamastes ho basileus ton basileonton kai kyrios ton kyrieonton</strong> (<em>ho makarios kai monos dynastēs, ho basileus tōn basileuontōn kai kyrios tōn kyrieuontōn</em>): 'the blessed and only Sovereign, the King of kings and Lord of lords.' The doxology of 6:15-16 applies to the epiphaneia of Jesus the titles that Hellenistic rulers and the Roman emperor claimed. <em>Dynastēs</em> (Sovereign/potentate) was used of divine-right rulers in the Hellenistic east. <em>King of kings and Lord of lords</em> echoes Deut 10:17 (YHWH as God of gods and Lord of lords) and Daniel 2:37, 47 (the God of heaven as King over kings). The doxology places the Roman emperor's pretensions under the sovereignty of Christ.</p>"
-  }
-}
-
-ONETIM_CONTEXT = {
+ORIGINAL = {
   "1": {
-    "3": "<p>1 Timothy is addressed to Timothy in Ephesus — Paul's extended base of ministry (Acts 19, ca. 52-55 CE; and likely again ca. 60-65 CE if the Pastoral Epistles reflect a release from Roman imprisonment). Ephesus was the largest city in the province of Asia and the site of the Artemis temple; it had a large Jewish community, numerous mystery cult associations, and by the late first century a substantial Christian community (see Revelation 2:1-7). The false teachers Timothy must address are described as teaching 'different doctrine' (<em>heterodidaskale</em>), focusing on 'myths and endless genealogies' (1:4) and 'what they call knowledge' (<em>pseudonymos gnōsis</em>, 6:20), possibly an early form of Jewish-Gnostic speculation.</p>"
-  },
-  "5": {
-    "17": "<p>The 'double honor' for elders who rule well (v. 17) — especially those who labor in preaching and teaching — reflects the early church's emerging distinction between lay elders and teaching-preaching elders. The citation of Deut 25:4 (do not muzzle an ox when it treads grain) and the dominical saying 'the laborer deserves his wages' (Luke 10:7) as dual warrant for paying ministers indicates that by the Pastoral period, apostolic-era oral tradition (Jesus's teaching) was already cited alongside Torah as authoritative Scripture.</p>"
-  }
-}
-
-ONETIM_CHRIST = {
-  "1": {
-    "15": "<p>A direct revelation: 'The saying is trustworthy and deserving of full acceptance, that Christ Jesus came into the world to save sinners, of whom I am the foremost.' The first of the Pastoral Epistles' five 'faithful sayings' (<em>pistos ho logos</em>) is a Christological mission-statement: the incarnation's purpose is soteriological — Christ came into the world (implying pre-existence, like John 1:14) specifically to save sinners. Paul's self-designation as 'the foremost of sinners' makes the statement an autobiographical proof: if Christ saved me (the persecutor of the church), his saving purpose is as wide as the worst sinner.</p>"
+    "1": '<p><em>Doulos theou, apostolos de Iēsou Christou</em> (servant of God and apostle of Jesus Christ): the double title is unusual for Paul — elsewhere he is "servant of Christ Jesus" (Rom 1:1; Phil 1:1) or "apostle of Christ Jesus" (1 Tim 1:1; 2 Tim 1:1), but "servant of God" (<em>doulos theou</em>) is the OT designation for Moses (Deut 34:5), Joshua (Josh 24:29), and the prophets. The combination places Paul simultaneously in the prophetic succession (<em>doulos theou</em>) and the apostolic commission (<em>apostolos Iēsou Christou</em>). <em>Kata pistin eklektōn theou kai epignōsin alētheias</em> (for the faith of God\'s elect and the knowledge of the truth) — the apostolate is purposive: aimed at producing both trust and precise knowledge.</p>',
+    "2": '<p><em>Ep\' elpidi zōēs aiōniou, hēn epēggeilato ho apseudēs theos pro chronōn aiōniōn</em> (in the hope of eternal life, which the non-lying God promised before eternal times): <em>apseudēs</em> (incapable of lying/non-lying) — a hapax in the NT; the negative compound emphatically denies any possibility of divine deception. The promise of eternal life precedes human history: <em>pro chronōn aiōniōn</em> (before ages of time) — the same phrase as 2 Tim 1:9; the pre-temporal promise grounds the present hope in an eternal divine commitment that antedates creation itself. The God who cannot lie has spoken this into irrevocable existence before time began.</p>',
+    "3": '<p><em>En kairois idiois</em> (at his own times/in his own appointed seasons): <em>kairos</em> (the right time, appointed moment) stands against <em>chronos</em> (clock-time); the revelation of the eternal promise happened at divinely determined moments. <em>Ephanerōsen de ton logon autou en kērygmati</em> (he made manifest his word in proclamation/heralding) — the gospel is manifested not merely preserved; the proclamation is the act of manifestation. <em>Ho epesteuphēn egō</em> (with which I was entrusted) — the perfect passive; Paul is the steward of a trust he did not choose but received.</p>',
+    "4": '<p><em>Gnēsiō teknō kata koinēn pistin</em> (genuine child according to the common faith): <em>gnēsios</em> (legitimate, genuine, not spurious) — the same as 2 Tim 2:2 and Phil 4:3; Titus is the legitimate heir of Paul\'s apostolic work on Crete. <em>Koinēn pistin</em> (common/shared faith) — <em>koinē</em> (shared in common): the one faith is the common property of Paul and Titus and all believers. The greeting formula adds <em>eleos</em> (mercy) to the standard "grace and peace" — as in 2 Tim 1:2; <em>apo theou patros kai Christou Iēsou tou sōtēros hēmōn</em> (from God the Father and Christ Jesus our Savior) — both the Father and Christ bear the <em>sōtēr</em> (Savior) title in Titus (1:4; 2:10, 13; 3:4, 6).</p>',
+    "5": '<p><em>Toutou charin apelipon se en Krētē hina ta leiponta epidiorthōsē kai katastēsēs kata polin presbyterous</em> (for this reason I left you in Crete so that you might set right what remained and appoint elders in each city): <em>epidiorthoō</em> (to set right additionally, to complete the correction of) — the prefix <em>epi-</em> suggests completing what was begun; the Cretan mission was partly done but unfinished. <em>Kata polin</em> (city by city) — the urban church-planting strategy: elders appointed in every city of the island. Crete\'s major cities (Gortyn, Knossos, Cnossus) would each require church leadership. <em>Hōs egō soi dietaxamēn</em> (as I directed/commanded you) — the apostolic authorization behind Titus\'s appointments.</p>',
+    "6": '<p><em>Anegklētos</em> (blameless/unaccused, without charge against him): the judicial term — no indictment can stand against the elder; he is someone against whom no legitimate accusation has been brought. <em>Mias gynaikos anēr</em> (husband of one wife, lit. man of one woman) — the qualification is contested: does it mean monogamous (rather than polygamous), married only once (rather than remarried), or sexually faithful? The most straightforward reading is fidelity: the elder is a one-woman man, sexually devoted to his wife alone. <em>Tekna echōn pista, mē en katēgorią aselgeias ē anypotakta</em> (children who are believers, not accused of debauchery or rebellion) — the household-order criterion: a man who cannot govern his children cannot govern the church.</p>',
+    "7": '<p><em>Dei gar ton episkopon anegklēton einai hōs theou oikonomon</em> (for the overseer must be blameless as God\'s household-manager/steward): the shift from <em>presbyteros</em> (elder, v.5) to <em>episkopos</em> (overseer, v.7) in the same elder-qualification list confirms that the two titles denote the same office — elder describes the person (seniority/honor), overseer describes the function (supervisory management). <em>Theou oikonomon</em> (God\'s household-manager) — the <em>oikonomos</em> was the manager of a large estate: enslaved or freed, he had significant authority over the household\'s affairs but ultimate accountability to the owner. The elder is not the owner of the church but God\'s appointed steward. The five negatives of v. 7 — <em>mē authades</em> (not arrogant/self-willed), <em>mē orgilos</em> (not quick-tempered), <em>mē paroinon</em> (not given to wine), <em>mē plēktēn</em> (not violent/pugnacious), <em>mē aischrokerdē</em> (not greedy for shameful gain) — are the disqualifying vices of the autocratic household manager.</p>',
+    "8": '<p>The six virtues of v. 8 counter the five vices of v. 7: <em>philoxenon</em> (hospitable — literally a lover of strangers/guests), <em>philagathon</em> (a lover of goodness/what is good), <em>sōphrona</em> (self-controlled/sound-minded), <em>dikaion</em> (just/righteous), <em>hosion</em> (devout/holy — the priestly term for what is sacred before God), <em>enkratē</em> (self-controlled/continent — the strong-willed mastery of appetites). The virtue list follows the Stoic cardinal virtues loosely (<em>phronēsis, dikaiosynē, sōphrosynē, andreia</em>) but grounds them in the relational and priestly life of the community leader rather than in philosophical self-cultivation.</p>',
+    "9": '<p><em>Antechomenon tou kata tēn didachēn pistou logou</em> (holding firmly to the trustworthy word according to the teaching): the elder\'s relationship to the apostolic tradition is described by <em>antechomai</em> (to hold fast, cling to) — a grip that does not loosen. <em>Hina dynatos ē kai parakalein en tē didaskalia tē hygiainousē kai tous antilegontas elegchein</em> (so that he may be able both to encourage by sound doctrine and to refute those who contradict) — the elder must be capable of both constructive exhortation (<em>parakaleō</em>) and apologetic refutation (<em>elegchō</em>). The same person who encourages the convinced must be able to stop the mouth of the opponent.</p>',
+    "10": '<p><em>Eisin gar polloi anypotaktoi, mataiologoi kai phrenapatatai, malista hoi ek tēs peritomēs</em> (for there are many insubordinate, empty-talkers and mind-deceivers, especially those of the circumcision): <em>anypotaktoi</em> (insubordinate, not subject to authority) — those who will not submit to church authority. <em>Mataiologoi</em> (empty-talkers) — speakers of <em>mataios</em> (vain, empty, futile) things; the output of their speech is zero content. <em>Phrenapatatai</em> (mind-deceivers) — <em>phrēn</em> (mind/diaphragm, the seat of thought) + <em>apataō</em> (to deceive); those who deceive the mind. <em>Hoi ek tēs peritomēs</em> (those of the circumcision) — the Jewish or Judaizing teachers who promote circumcision and Torah observance (cf. v. 14: Jewish myths and human commandments).</p>',
+    "11": '<p><em>Hous dei epistomizein</em> (who must be silenced/muzzled): <em>epistomizō</em> = to put something in the mouth, to bridle, to muzzle — the livestock metaphor of stopping an animal\'s mouth from eating or making noise; applied to human speech, it means to silence by authoritative action. <em>Holous oikous anatrepousin didaskontes ha mē dei aischrou kerdous charin</em> (they overturn whole households, teaching what they should not for the sake of shameful gain) — <em>anatrepō</em> (to overturn, upset) used for the destruction of households; the financial motive (<em>aischrou kerdous charin</em> = for shameful profit) connects to the <em>aischrokerdēs</em> disqualification of v. 7.</p>',
+    "12": '<p><em>Eipen tis ex autōn idios autōn prophētēs</em> (one of their own prophets said): the unnamed prophet is Epimenides of Knossos (ca. 600 BCE), a semi-legendary Cretan seer and philosopher. The quotation — <em>Krētes aei pseustai, kaka thēria, gasteres argai</em> (Cretans are always liars, evil beasts, lazy gluttons) — was widely circulated in the ancient world as characterizing Cretan culture. It generates the famous "Liar\'s Paradox": if a Cretan says all Cretans always lie, the statement undermines itself. Paul uses the quotation rhetorically without entering the logical paradox — he affirms its practical truth about the specific teachers in Crete. <em>Idios autōn prophētēs</em> (their own prophet) — even from within their own tradition comes the damning assessment.</p>',
+    "13": '<p><em>Hē martyria autē estin alēthēs</em> (this testimony is true): Paul\'s affirmation of the pagan prophet\'s word is remarkable — he does not dismiss the Cretan philosopher but endorses his observation as accurate. <em>Di\' hēn aitian elegche autous apotomōs</em> (for which reason rebuke them sharply): <em>apotomos</em> (sharply, curtly, abruptly) — the adverb from <em>apotemnō</em> (to cut off); a sharp rebuke is appropriate because the illness requires strong treatment. <em>Hina hygiainōsin en tē pistei</em> (so that they will be sound/healthy in the faith) — the medical metaphor continues: the goal of sharp rebuke is restored health.</p>',
+    "14": '<p><em>Mē prosechontes Ioudaikois mythois kai entolais anthrōpōn apostrephomenōn tēn alētheian</em> (not paying attention to Jewish myths and commandments of people who turn away from the truth): <em>Ioudaikoi mythoi</em> (Jewish myths) — the same pair <em>mythos</em> + Jewish content as 1 Tim 1:4 (myths and endless genealogies); the Cretan errorists blend Jewish esoteric speculation with legal minutiae. <em>Entolais anthrōpōn</em> (commandments of humans) — echoes Mark 7:7 / Isa 29:13: "teaching as doctrines the commandments of men"; the human-tradition overlay that obscures divine command. <em>Apostrephomenōn tēn alētheian</em> (who turn away from the truth) — the turning-away motion contrasted with holding fast (v. 9).</p>',
+    "15": '<p><em>Panta katharois kathara</em> (to the pure all things are pure): the aphorism applies the purity principle radically — for those whose conscience and mind are cleansed, no food or object is ritually impure. This echoes Rom 14:20 and Mark 7:19 (declaring all foods clean). <em>Tois de memiasmenos kai apistois ouden katharon</em> (but to the defiled and unbelieving nothing is pure) — <em>miainō</em> (to stain, defile, pollute) describes internal defilement that projects outward onto everything one touches or eats; the impurity is not in the object but in the perceiver. <em>Alla memiantai autōn kai ho nous kai hē syneidēsis</em> (but both their mind and conscience have been defiled) — the double defilement: rational faculty (<em>nous</em>) and moral self-awareness (<em>syneidēsis</em>) are both tainted.</p>',
+    "16": '<p><em>Theon homologousin eidenai, tois de ergois arnountai</em> (they profess to know God but by their works they deny him): the sharpest formulation of the religious-hypocrite\'s contradiction in the NT. <em>Homologeō</em> (to profess, confess) and <em>arneomai</em> (to deny) are the pair used for confession and denial of Christ (Matt 10:32-33; 2 Tim 2:12-13); here the same pair is applied to the relationship with God expressed through life-conduct. Verbal acknowledgment without moral correspondence is itself denial. <em>Bdelyktoi ontes kai apeitheis kai pros pan ergon agathon adokimoi</em> (being detestable and disobedient and disqualified for every good work) — <em>adokimos</em> (disqualified, failing the test) — the opposite of <em>dokimos</em> (approved, 2 Tim 2:15).</p>'
   },
   "2": {
-    "5": "<p>A direct revelation: 'There is one mediator between God and people, the man Christ Jesus, who gave himself as a ransom for all.' The two Christological claims together: (1) Christ is the unique, sole mediator — no competing spiritual hierarchy is needed or valid; (2) his mediation was accomplished through self-giving as a ransom (<em>antilytron</em>, substitutionary ransom-payment). <em>Antilytron</em> (found only here in NT) intensifies <em>lytron</em> (ransom, Mark 10:45) with the <em>anti</em> prefix indicating substitution: a ransom given in place of others. The universality ('for all', <em>hyper pantōn</em>) combined with the singularity ('one mediator') is the Christological center of 1 Timothy's soteriology.</p>"
+    "1": '<p><em>Sy de lalei ha prepei tē hygiainousē didaskalia</em> (but you speak what is fitting for sound teaching): the adversative <em>sy de</em> (but you) sharply contrasts Titus with the defective teachers of ch. 1. <em>Prepei</em> (is fitting/appropriate) — the language of proper decorum; sound doctrine generates specific behavioral expectations that are "fitting" for it. <em>Hygiainousa didaskalia</em> (sound/healthy teaching) — the signature medical metaphor of the Pastoral Epistles; doctrine as health-giving rather than disease-producing.</p>',
+    "2": '<p><em>Presbyterous nēphalious einai, semnous, sōphronas, hygiainontas tē pistei, tē agapē, tē hypomonē</em> (older men to be temperate, dignified, self-controlled, sound in faith, in love, in endurance): the household code for older men. <em>Nēphalios</em> (temperate, sober — originally not drunk with wine, then broadly self-restrained). <em>Semnos</em> (dignified, honorable, worthy of respect) — the gravitas appropriate to age. The three objects of <em>hygiainō</em> (be sound in) — faith, love, endurance — form a triad that echoes the three theological virtues (faith, hope, love) with endurance substituting for hope, emphasizing the active dimension of sustained trust.</p>',
+    "3": '<p><em>Presbyteridas hōsautōs en katastēmati hieroprepeis</em> (older women likewise in bearing fitting for what is sacred): <em>katastēma</em> (bearing, deportment, manner of life) — the outward expression of the inward character. <em>Hieroprepes</em> (fitting for what is sacred/holy) — from <em>hieros</em> (sacred, holy) + <em>prepō</em> (to be fitting); the behavior appropriate to persons consecrated to God. <em>Mē diabolous</em> (not slanderers) — <em>diabolos</em> as adjective = slanderous, gossiping (the devil\'s characteristic work is slander, so the slanderer acts as the devil\'s instrument). <em>Kalodidaskālous</em> (teachers of what is good) — a hapax; the older women are teachers within their sphere — of the younger women (v. 4).</p>',
+    "4": '<p><em>Hina sōphronizōsin tas neas philandrous einai, philoteknous</em> (that they may train/encourage the younger women to love their husbands and children): <em>sōphronizō</em> (to make self-controlled, to train, to encourage toward wisdom) — the causative of <em>sōphrōn</em>; the older women impart the virtue of sound-mindedness to the younger. <em>Philandrous</em> (husband-lovers) and <em>philoteknous</em> (children-lovers) — compound adjectives formed on <em>philos</em> (loving); these are not commands imposed from outside but orientations formed by communal example and mentorship.</p>',
+    "5": '<p><em>Sōphronas, hagnas, oikourgous agathas, hypotassomenas tois idiois andrasin, hina mē ho logos tou theou blasphēmētai</em> (self-controlled, pure, working at home, good, subject to their own husbands, so that the word of God may not be blasphemed): <em>oikourgous</em> (workers at home, domestic managers) — the term signals the sphere of primary responsibility, not a general prohibition on public activity. <em>Hina mē ho logos tou theou blasphēmētai</em> (so that the word of God may not be slandered/blasphemed) — the missional rationale appears identically in 1 Tim 6:1; household order is a gospel concern because the watching world judges the teaching by the practitioners\' lives.</p>',
+    "6": '<p><em>Tous neoterους hōsautōs parakalei sōphronein</em> (likewise encourage the younger men to be self-controlled): the single instruction for younger men is <em>sōphronein</em> (to be self-controlled, sound-minded) — the same root virtue that appears throughout the household code. The brevity is itself an observation: young men need one thing above all others. <em>Hōsautōs</em> (likewise, in the same manner) — the instruction for young men parallels and continues the household code that began with older men (v. 2) and older women (v. 3).</p>',
+    "7": '<p><em>Peri panta seauton parecho typon kalōn ergōn, en tē didaskalia aphthorian, semnotēta</em> (in everything present yourself as a model of good works, in teaching uncorruptness, dignity): <em>typos</em> (model, pattern, example) — the impression made by a die or seal that others replicate; Titus himself is to be the living pattern for young men to follow (cf. 1 Tim 4:12: "be an example to the believers"). <em>Aphthoria</em> (uncorruptness, integrity) in teaching — the quality of teaching untainted by self-interest, hidden agenda, or compromise. This is the only NT occurrence of <em>aphthoria</em>.</p>',
+    "8": '<p><em>Logon hygiē, akatakriton, hina ho ex enantias entrapē mēden echōn legein peri hēmōn phaulon</em> (sound speech that cannot be condemned, so that the opponent may be ashamed, having nothing bad to say about us): <em>hygios logos</em> (sound/healthy speech) — the health-metaphor extended to the manner of speech. <em>Akatakritos</em> (cannot be condemned, without accusation against it) — speech so unimpeachable that even the hostile critic finds no legitimate target. <em>Ho ex enantias</em> (the one from the opposite side, the opponent/adversary) — shame (<em>entrapē</em>) is the social consequence of failed attack; the opponent is put to shame by finding nothing to criticize.</p>',
+    "9": '<p><em>Doulous idiois despotais hypotassesthai en pasin</em> (slaves to be subject to their own masters in everything): the slave instruction in Titus is briefer than in Eph 6:5-8 or Col 3:22-25. The triple description — <em>euarestous einai, mē antilegontas, mē nosphizomenous</em> (to be pleasing, not talking back, not pilfering) — addresses the three specific behaviors most likely to undermine the slave\'s trustworthiness. <em>Antilegō</em> (to talk back, contradict, oppose in speech) — the verbal resistance that signals disrespect. <em>Nosphizomai</em> (to set aside for oneself, pilfer, embezzle) — from <em>nosphis</em> (apart, separately); the same word used of Ananias and Sapphira keeping back part of the proceeds (Acts 5:2-3).</p>',
+    "10": '<p><em>Alla pistin pasan endeiknumenous agathēn, hina tēn didaskalian tēn tou sōtēros hēmōn theou kosmōsin en pasin</em> (but showing all good faith/trustworthiness, so that they may adorn the teaching of our God and Savior in everything): <em>pistin agathēn</em> (good faithfulness/trustworthiness) — <em>pistis</em> here as reliability rather than saving faith; the slave who is completely trustworthy. <em>Kosmeō</em> (to adorn, decorate, arrange beautifully) — the slave\'s trustworthy conduct is a cosmetic act: it makes the teaching beautiful to the watching world. From this verb comes "cosmetic" and "cosmos" (the ordered universe). The teaching of the gospel is adorned or disfigured by the behavior of those who profess it.</p>',
+    "11": '<p><em>Epephanē gar hē charis tou theou sōtērios pasin anthrōpois</em> (for the grace of God has appeared, bringing salvation to all people): the great christological declaration that grounds the household code (vv. 2-10) in salvation-history. <em>Epiphanē</em> (appeared, was manifested) — the aorist of <em>epiphainō</em>; the appearing of the Incarnation. <em>Charis tou theou sōtērios</em> (the saving grace of God / the grace of God that brings salvation) — grace personified as appearing. <em>Pasin anthrōpois</em> (to all people) — the universal scope of salvific grace; not limited by ethnicity, class, or gender (the household code has addressed all: men, women, slaves).</p>',
+    "12": '<p><em>Paideuousa hēmas hina arnēsamenoi tēn asebeian kai tas kosmikais epithumias sōphronōs kai dikaiōs kai eusebōs zēsōmen en tō nyn aiōni</em> (instructing us that, having denied ungodliness and worldly desires, we may live self-controlled, righteously, and godly in the present age): <em>paideuousa</em> (instructing, training, disciplining) — grace is personified as a teacher-disciplinarian; it does not merely forgive but forms. The three adverbs — <em>sōphronōs</em> (self-controlled, sound-mindedly: inward orientation), <em>dikaiōs</em> (righteously: horizontal/social orientation), <em>eusebōs</em> (godly: vertical/divine orientation) — cover the three axes of the virtuous life. The renunciation of <em>asebeia</em> (ungodliness) and <em>kosmikai epithumiai</em> (worldly desires) is the negative counterpart to the triple-virtue life.</p>',
+    "14": '<p><em>Hos edōken heauton hyper hēmōn hina lytrōsētai hēmas apo pasēs anomias kai katharisē heautō laon periousion</em> (who gave himself for us to redeem us from all lawlessness and to purify for himself a people of his own possession): the two purpose-clauses of the self-giving. <em>Lytrōsētai</em> (to ransom/redeem) — the ransom-payment vocabulary (from <em>lytron</em> = the price of redemption); freedom from <em>anomia</em> (lawlessness) is the result. <em>Laon periousion</em> (a people of his own possession/a treasured people) — <em>periousion</em> is the LXX translation of Hebrew <em>segullah</em> (treasured possession, special property) in Exod 19:5; Deut 7:6; 14:2; 26:18: Israel as YHWH\'s special possession is now applied to the church purified by Christ. <em>Zēlōtēn kalōn ergōn</em> (zealous for good works) — the purified people are defined by their eagerness for good works, not by ethnic or ritual status.</p>',
+    "15": '<p><em>Tauta lalei kai parakalei kai elegche meta pasēs epitagēs</em> (speak these things and encourage and rebuke with all authority): the three imperatives (<em>lalei, parakalei, elegche</em>) cover the full ministerial range: proclamation, encouragement, and correction. <em>Epitagē</em> (authority, command, directive) — the ministerial authority that grounds Titus\'s teaching is apostolic in origin (derived from Paul and ultimately from God). <em>Mēdeis sou periphronitō</em> (let no one disregard/despise you) — <em>periphronō</em> = to think around or beyond something, to dismiss it as beneath notice; the same verb as 1 Tim 4:12 for Timothy\'s youth. Titus\'s authority is not self-asserted but grounded in the apostolic word he carries.</p>'
   },
   "3": {
-    "16": "<p>A direct revelation: 'He was manifested in the flesh, vindicated by the Spirit, seen by angels, proclaimed among the nations, believed on in the world, taken up in glory.' The Christological hymn traces the entire arc of Christ's work in six compressed phrases: incarnation → resurrection-vindication → heavenly acknowledgment → worldwide proclamation → faith-response → ascension. The hymn is the doctrinal center of the household-of-God section (3:14-16): sound church order and ministry is grounded in the Christological mystery that the church has received and proclaims.</p>"
-  }
-}
-
-# ============================================================
-# 2 TIMOTHY
-# ============================================================
-
-TWOTIM_ECHO = {
-  "2": {
-    "8": [
-      {"type": "fulfillment", "target": "2 Sam 7:12-13", "note": "Jesus Christ, risen from the dead, the offspring of David — the Davidic promise (I will raise up your offspring after you and establish his throne forever) is fulfilled in the resurrection of David's descendant Jesus; the risen Christ is the Davidic heir whose kingdom will have no end"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Deut 31:19-22", "note": "All Scripture is breathed out by God — the divine-origin claim for Scripture echoes YHWH's instruction to Moses to write down the Song (Deut 31:19) as a witness; the written word as YHWH's own testimony against and for Israel; now extended to all Scripture"}
-    ]
-  },
-  "4": {
-    "8": [
-      {"type": "allusion", "target": "Isa 40:10", "note": "Henceforth there is laid up for me the crown of righteousness which the Lord, the righteous judge, will award — YHWH coming with his reward, his recompense before him; Paul's awaited crown from the righteous judge at the parousia echoes the Isaianic expectation of the Lord's coming with vindication for the righteous"}
-    ]
-  }
-}
-
-TWOTIM_ORIGINAL = {
-  "2": {
-    "15": "<p><strong>spoudason seauton dokimon parastēsai to theo ergaten anepaiskunton orthotomounta ton logon tes aletheias</strong> (<em>spoudason seauton dokimon parastēsai tō theō, ergatēn anepaiskunton, orthotomounta ton logon tēs alētheias</em>): 'Do your best to present yourself to God as one approved, a worker who has no need to be ashamed, rightly handling the word of truth.' <em>Orthotomounta</em> (rightly dividing/handling/cutting): used in LXX Prov 3:6 ('he will make straight your paths') and 11:5. The word evokes a craftsman cutting or laying material in a straight line — a road-builder, a carpenter, a surgeon. The image: the handling of the word of truth requires the precision and skill of a craftsman who cuts straight rather than crooked. Historically, the King James 'rightly dividing' was applied dispensationally; the original metaphor is about competent, accurate, straight-course exposition.</p>"
-  },
-  "3": {
-    "16": "<p><strong>pasa graphe theopneustos kai ophelimos</strong> (<em>pāsa graphē theopneustos kai ōphelimos</em>): 'All Scripture is God-breathed (<em>theopneustos</em>) and profitable.' <em>Theopneustos</em> is a Pauline coinage (hapax legomenon) combining <em>theos</em> (God) and <em>pneō</em> (breathe) — 'God-breathed' or 'breathed out by God.' The breath-metaphor echoes Gen 2:7 (YHWH breathed into Adam's nostrils) and the Spirit-wind of Ezekiel's valley of bones: the Scriptures are alive with divine breath, not merely human compositions. The primary referent is the OT (which Timothy was taught from childhood, v. 15); the claim's extension to apostolic writings is implicit in 2 Pet 3:16's treatment of Paul's letters as <em>graphe</em>.</p>"
-  }
-}
-
-TWOTIM_CONTEXT = {
-  "1": {
-    "8": "<p>2 Timothy is widely regarded as Paul's final letter — written from a second Roman imprisonment ca. 66-67 CE, shortly before his death (4:6-8). The tone differs markedly from 1 Timothy: more personal, more urgent, more reflective of approaching death. The suffering-motif pervades the letter: Paul's chains (1:8, 16; 2:9), his abandonment by former associates (1:15; 4:10-16), his awareness of impending execution (4:6-8). If authentic (and most scholars accept 2 Timothy as more likely Pauline than 1 Timothy or Titus), it is the most personal surviving Pauline document. The mention of specific people (Hymenaeus, Philetus, Alexander the coppersmith, Demas, Luke, Mark) and personal items (the cloak at Troas, the books and parchments, 4:13) suggests authentic personal memory.</p>"
-  },
-  "3": {
-    "1": "<p>The 'last days' (<em>eschatais hēmerais</em>) characterized by moral collapse (vv. 1-9: lovers of self, lovers of money, proud, arrogant, abusive, disobedient to parents, ungrateful, unholy, heartless, unappeasable...) represents a conventional form in Jewish and early Christian eschatological literature called the 'signs of the end' tradition — cf. 1 Enoch 91-93 (the Apocalypse of Weeks), 2 Baruch 27-30, and rabbinic descriptions of the era before Messiah's coming. Paul's use of this tradition applies it to the present crisis in Timothy's ministry, not a distant future: the last days have already begun in the false teachers' behavior.</p>"
-  }
-}
-
-TWOTIM_CHRIST = {
-  "1": {
-    "10": "<p>A direct revelation: 'Our Savior Christ Jesus abolished death and brought life and immortality to light through the gospel.' The Christological declaration concentrates the gospel: Christ 'abolished' (<em>katargēsantos</em>) death — not merely defeated it but rendered it inoperative; brought life and immortality 'to light' (<em>phōtisantos</em>) — these were previously hidden in God's eternal purpose (v. 9) but are now disclosed through the proclamation. The Christology of 2 Timothy: the epiphany of the Savior is the historical moment when death's power was broken and life was made publicly visible.</p>"
-  },
-  "2": {
-    "8": "<p>A direct revelation: 'Remember Jesus Christ, risen from the dead, the offspring of David, as preached in my gospel.' Paul's summary of the gospel in one sentence unites the two great OT streams: Davidic messiahship (the royal covenant of 2 Sam 7) and resurrection (the prophetic expectation of Isa 26:19; Dan 12:2). 'Remember' (<em>mnemoneue</em>) is imperative — not a passive recollection but an active, sustaining focus on the Christological fact that generates Paul's willingness to suffer (v. 9-10: I endure everything for the sake of the elect). The risen Davidic Christ is the content of endurance.</p>"
-  },
-  "4": {
-    "8": "<p>A direct revelation: 'Henceforth there is laid up for me the crown of righteousness, which the Lord, the righteous judge, will award to me on that Day — and not only to me but also to all who have loved his appearing.' The parousia of Christ (the <em>epiphaneia</em> that Paul loved) is the moment of final vindication. The 'crown of righteousness' is not earned by Paul's sufferings but 'laid up' (<em>apokeitai</em>) — already determined, awaiting award. The righteous judge who will confer it is Christ himself. The Christological movement of 2 Timothy: from the first epiphaneia (incarnation, 1:10) through present endurance to the final epiphaneia where the judge vindicates the faithful.</p>"
-  }
-}
-
-# ============================================================
-# TITUS
-# ============================================================
-
-TITUS_ECHO = {
-  "2": {
-    "14": [
-      {"type": "fulfillment", "target": "Exod 19:5", "note": "To purify for himself a people of his own possession — YHWH's Sinai declaration 'you shall be my treasured possession' (LXX: laos periousios, exactly the term used here); the new covenant community is the fulfillment of what the Sinai covenant pointed toward"},
-      {"type": "fulfillment", "target": "Ezek 37:23", "note": "Who gave himself to redeem us from all lawlessness — YHWH's promise to cleanse Israel from all their backslidings; the redemption from lawlessness fulfills Ezekiel's new covenant cleansing promise"}
-    ]
-  },
-  "3": {
-    "5": [
-      {"type": "fulfillment", "target": "Ezek 36:25-27", "note": "Renewing of the Holy Spirit whom he poured out on us richly — YHWH's promise to sprinkle clean water, put his Spirit within, and cause Israel to walk in his statutes; the new birth through the Spirit fulfills Ezekiel's new covenant restoration"}
-    ]
-  }
-}
-
-TITUS_ORIGINAL = {
-  "2": {
-    "13": "<p><strong>prosdechomenoi ten makarian elpida kai epiphaneian tes doxes tou megalou theou kai soteros hemon Iesou Christou</strong> (<em>prosdechomenoi tēn makarian elpida kai epiphaneian tēs doxēs tou megalou theou kai sōtēros hēmōn Iēsou Christou</em>): 'waiting for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ.' The Greek syntax — <em>tou megalou theou kai soteros hemon Iesou Christou</em> — with the single definite article governing both 'God' and 'Savior' (the Granville Sharp rule) most naturally refers to one person: 'our great God and Savior, Jesus Christ.' This is one of the most explicit divine predications of Jesus in the NT — calling him directly 'our great God.' <em>Epiphaneia</em> (appearing/manifestation) is the distinctive Pastoral Christological term for the Incarnation (1 Tim 3:16; 2 Tim 1:10) and the parousia (1 Tim 6:14; 2 Tim 4:1, 8) — a term the Hellenistic world used for the appearance of a deity or the arrival of a king.</p>"
-  }
-}
-
-TITUS_CONTEXT = {
-  "1": {
-    "5": "<p>Titus in Crete: the island of Crete had a significant Jewish community (Acts 2:11; Josephus mentions Cretan Jews). Paul's description of Cretans — citing the Cretan poet Epimenides ('Cretans are always liars, evil beasts, lazy gluttons', v. 12) — uses an ancient ethnic stereotype familiar to his Greco-Roman audience. The church-planting task in Crete required appointing elders in 'every town' (<em>kata polin</em>), indicating a widespread but organizationally young mission. The Pastoral Epistles' emphasis on <em>episkopos</em> (overseer), <em>presbyteros</em> (elder), and <em>diakonos</em> (deacon) reflects the institutionalization of church leadership as the apostolic generation aged and died.</p>"
-  },
-  "3": {
-    "5": "<p>The 'washing of regeneration and renewing of the Holy Spirit' (<em>loutron palingenesias kai anakainōseōs Pneumatos Hagiou</em>) combines Jewish purification-immersion imagery (<em>mikveh</em>) with the OT new-covenant Spirit-promise (Ezek 36:25-27; Joel 2:28-29). <em>Palingenesia</em> (regeneration/new birth) appears only here and Matt 19:28 (the renewal of all things at the eschatological restoration) in the NT — linking individual new birth with cosmic new creation. <em>Paliggenesia</em> was also a Stoic term for the cyclical renewal of the cosmos after the ekpyrosis (cosmic fire) — Paul's use may deliberately appropriate the Stoic vocabulary and fill it with Christological content: the Spirit's renewal is the eschatological new creation arriving in individual conversion.</p>"
-  }
-}
-
-TITUS_CHRIST = {
-  "2": {
-    "14": "<p>A direct revelation: 'Who gave himself for us to redeem us from all lawlessness and to purify for himself a people of his own possession who are zealous for good works.' The Christological mission-statement of Titus: the self-giving of Christ (<em>edōken heauton</em>) accomplishes two things — ransom from lawlessness and purification-for-possession. The people-of-God language (laos periousios = treasured possession, Exod 19:5) is deliberately applied to the new covenant community formed by Christ's self-gift. Christ does not merely save individuals but creates a community that embodies his purposes — 'zealous for good works' completes the Christological transaction with an ethical telos.</p>"
-  },
-  "3": {
-    "4": "<p>A direct revelation: 'But when the goodness and loving kindness of God our Savior appeared, he saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewing of the Holy Spirit.' The 'appearance' (<em>epephanē</em>) of God's goodness is the Incarnation — the divine character made visible in Jesus. The Christological-Trinitarian movement: God the Savior's goodness appeared → he saved by mercy (not merit) → through the washing of the Spirit → poured out richly through Jesus Christ our Savior. The threefold divine action (God, Spirit, Christ) grounds salvation entirely outside human achievement.</p>"
-  }
-}
-
-# ============================================================
-# PHILEMON
-# ============================================================
-
-PHILEMON_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Lev 19:34", "note": "No longer as a slave but more than a slave, as a dear brother — the Levitical command to treat the alien among you as the native; the Onesimus-Philemon relationship after conversion exceeds the Torah's ethnic solidarity by requiring brotherly love between master and enslaved person"},
-      {"type": "allusion", "target": "Deut 23:15-16", "note": "Receive him no longer as a slave but as a dear brother — Deuteronomy's command not to return a runaway slave to his master but to let him dwell wherever he chooses; Paul's appeal works within Roman law while nudging toward a more radical Christian brotherhood that subverts the institution"}
-    ]
-  }
-}
-
-PHILEMON_ORIGINAL = {
-  "1": {
-    "16": "<p><strong>ouketi hos doulon alla hyper doulon adelphon agapeton</strong> (<em>ouketi hōs doulon alla hyper doulon, adelphon agapēton</em>): 'no longer as a slave but more than a slave, as a dear brother.' The grammatical structure — <em>ouketi ... alla hyper</em> (no longer ... but beyond) — expresses a qualitative transformation, not just a label change. Onesimus remains in a social relationship with Philemon but that relationship is now defined by a different primary category: <em>adelphos agapētos</em> (beloved brother). Paul does not directly command emancipation, but the logic of brotherhood makes slavery an anomaly: how can you own your brother? The letter is the most politically charged use of household-code language in Paul — Christian kinship (<em>adelphos</em>) is placed in deliberate tension with Roman social institution (<em>doulos</em>).</p>",
-
-    "18": "<p><strong>ei de ti edikesen se e opheilei touto emoi ellogei</strong> (<em>ei de ti ēdikēsen se ē opheilei, touto emoi ellogei</em>): 'If he has wronged you at all or owes you anything, charge that to my account.' <em>Ellogei</em> (charge to my account / impute) is a commercial-accounting term used only here and Rom 5:13 (sin is not <em>ellogeitai</em> when there is no law) in the NT. Paul offers to absorb Onesimus's debt as a surety. The theological parallel is explicit in the letter's rhetoric: as Paul stands in for Onesimus absorbing his debt-liability, Christ stands in for sinners absorbing their debt before God. Philemon is the NT's most compressed illustration of imputed righteousness in a human-relational register.</p>"
-  }
-}
-
-PHILEMON_CONTEXT = {
-  "1": {
-    "10": "<p>Onesimus was enslaved in Philemon's household in Colossae (cf. Col 4:9: 'Onesimus, our faithful and dear brother, who is one of you'). The traditional reading: Onesimus ran away from Philemon, somehow encountered Paul in prison (Rome or Ephesus), was converted, and is now being returned. A minority reading (B. Winter, A. Callahan): Onesimus was sent by Philemon to assist Paul in prison (a known practice, cf. Phil 2:25-30 — Epaphroditus sent to serve Paul), and Paul now appeals for him to be released permanently for gospel ministry. Either way, the letter navigates Roman slave-law (the <em>Lex Petronia</em> of ca. 61 CE and related legislation governed runaways) while applying theological pressure through the rhetoric of Christian brotherhood.</p>",
-
-    "16": "<p>Roman slavery in the first century CE: approximately 1-2 million enslaved people in Italy alone (roughly 30-35% of the Italian population, Scheidel's estimate); enslaved persons could be freed by manumission (<em>manumissio</em>) through various legal mechanisms. Freed persons became Roman citizens with some legal restrictions. The distinction Paul makes — 'both in the flesh and in the Lord' — is the Christian social ontology: Onesimus has both a new spiritual identity (brother in Christ) and an unchanged social location (in Philemon's household). Paul does not directly call for legal manumission, but the category 'dear brother' both in the flesh and in the Lord strains against the institution's dehumanizing premise.</p>"
-  }
-}
-
-PHILEMON_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'If you consider me your partner, receive him as you would receive me.' Paul's intercession for Onesimus reveals a pattern of representative substitution: the apostle places himself in the position of the offender and asks to be treated as Onesimus's surety. This is not strictly a direct Christological statement, but Paul consciously patterns his intercession on the Christological movement of divine advocacy — as Christ stands for sinners before the Father, Paul stands for Onesimus before Philemon. The letter reveals the social logic of atonement-theology as it should reshape human relationships.</p>",
-
-    "18": "<p>A direct revelation: 'If he has wronged you at all, or owes you anything, charge that to my account.' The imputation-language (<em>ellogei</em>) makes this the most concrete illustration in the NT of the substitutionary logic that governs Paul's soteriology. The Christ-event logic: Christ receives the charge of our debt against God's account; Paul enacts this same logic with Onesimus's debt to Philemon. The atonement is not merely a doctrinal formula but a relational pattern that should generate analogous acts of substitutionary absorption of another's debt. Philemon is called to receive Onesimus 'as you would receive me' (v. 17) — Christ-likeness enacted in the ordinary economy of first-century household relationships.</p>"
+    "1": '<p><em>Hypomimnēske autous archais exousiais hypotassesthai, peitharchein</em> (remind them to be subject to rulers and authorities, to obey): <em>hypomimnēskō</em> (to remind by bringing to mind) — the present imperative of continuous reminder; the congregation needs ongoing recall, not once-for-all instruction. <em>Archai kai exousiai</em> (rulers and authorities) — the standard Pauline designation for governing powers (Rom 13:1-7; 1 Pet 2:13-14). <em>Peitharchein</em> (to obey authority/submit to governing power) — the compound of <em>peithō</em> (persuade/trust) + <em>archē</em> (rule/origin); to be persuaded by and submit to legitimate governance. <em>Pros pan ergon agathon etoimous einai</em> (ready for every good work) — civic engagement and public virtue are the Christian\'s response to the governing order.</p>',
+    "2": '<p><em>Mēdena blasphēmein, amachous einai, epieikeis</em> (to slander no one, to be peaceable, gentle): <em>amachos</em> (not fighting, peaceable, non-combative) — <em>a-</em> + <em>mache</em> (battle/fight); the peaceable person who does not enter verbal or physical combat. <em>Epieikēs</em> (gentle, fair, reasonable) — the Aristotelian virtue of <em>epieikeia</em>: the capacity to go beyond strict legal right in favor of what is fair and humane; the "sweet reasonableness" (Matthew Arnold) that characterizes the mature person. <em>Pasan endeiknumenous prautēta pros pantas anthrōpous</em> (showing all gentleness toward all people) — the universality is absolute: not just toward believers or toward social equals but toward everyone.</p>',
+    "3": '<p><em>Hēmen gar pote kai hēmeis anoētoi, apeitheis, planōmenoi, douleuontes epithumiais kai hēdonais poikilais</em> (for we too were once foolish, disobedient, deceived, enslaved to various desires and pleasures): the autobiographical grounding of the social ethics — the community\'s own history of moral failure establishes why they cannot treat outsiders with contempt. <em>Anoētoi</em> (foolish, without understanding) — <em>a-</em> + <em>noeō</em> (to understand); lacking the moral perception to see reality clearly. <em>Douleuontes</em> (enslaved/serving as slaves) — the involuntary servitude to desire; not chosen but captured. <em>En kakia kai phthonō diagontes</em> (spending our time in malice and envy) — the social poison of envious malice that breeds mutual destruction.</p>',
+    "4": '<p><em>Hote de hē chrēstotēs kai hē philanthrōpia epephanē tou sōtēros hēmōn theou</em> (but when the kindness and the love-of-humanity of our Savior God appeared): the <em>de</em> (but) marks the salvation-historical turning point; the "once" of v. 3 gives way to the "but when" of divine intervention. <em>Chrēstotēs</em> (kindness, goodness, graciousness) — a warm relational quality: the disposition to give good things generously. <em>Philanthrōpia</em> (love of humanity) — the term from which "philanthropy" derives; in Hellenistic usage it described the benevolent regard of gods and rulers for those below them; its application to God upends the power calculus: the divine Sovereign loves humanity with the warm affection of the patron. <em>Epephanē</em> (appeared) — the third <em>epiphaneia</em> in Titus (2:11; 3:4) marks the letter\'s Christological signature.</p>',
+    "5": '<p><em>Ouk ex ergōn tōn en dikaiosynē ha epoiēsamen hēmeis alla kata to autou eleos esōsen hēmas</em> (not from works of righteousness that we did but according to his own mercy he saved us): the anti-works-righteousness formula closely parallels Eph 2:8-9 and Rom 3:24; the ground of salvation is exclusively divine mercy, not human performance. <em>Dia loutrou palingenesias kai anakainōseōs pneumatos hagiou</em> (through the washing of regeneration and renewing of the Holy Spirit): <em>loutron</em> (washing, bath, laver) — almost certainly baptism; the visible water-rite is the instrument through which regeneration (<em>palingenesia</em>) and renewal (<em>anakainōsis</em>) are worked by the Spirit. <em>Palingenesia</em> (regeneration, new birth) appears only here and Matt 19:28 (cosmic renewal at the eschaton) in the NT — a remarkable weight for a single term. The Spirit is the agent of both the washing\'s inner reality and its continuing effect.</p>',
+    "6": '<p><em>Hou execheen eph\' hēmas plousiōs dia Iēsou Christou tou sōtēros hēmōn</em> (whom he poured out on us richly through Jesus Christ our Savior): <em>ekcheo</em> (to pour out) — the Pentecost vocabulary (Acts 2:17-18, 33, citing Joel 2:28-29; "I will pour out my Spirit on all flesh"); the Spirit poured out generously (<em>plousiōs</em>, richly/abundantly) connects the ongoing experience of the Spirit with the Pentecost event. <em>Dia Iēsou Christou</em> (through Jesus Christ) — Christ as the mediator of the Spirit\'s outpouring; the Spirit is poured out by the Father through the Son (cf. John 15:26; 16:7).</p>',
+    "7": '<p><em>Hina dikaiōthentes tē ekeinon chariti klēronomoi genēthōmen kat\' elpida zōēs aiōniou</em> (so that having been justified by his grace we might become heirs according to the hope of eternal life): the salvation-history sequence from v. 4-6 reaches its telos in justification (<em>dikaiōthentes</em>) and inheritance (<em>klēronomoi</em>). The aorist passive <em>dikaiōthentes</em> (having been justified) grounds the inheritance in a prior, completed divine act. <em>Klēronomoi</em> (heirs) — the adoption/inheritance language of Romans 8:17 (co-heirs with Christ); the justified person enters the family and inherits the family\'s estate. <em>Kat\' elpida zōēs aiōniou</em> (according to the hope of eternal life) — the inheritance is presently held in hope, not yet fully received (Rom 8:24-25).</p>',
+    "8": '<p><em>Pistos ho logos</em> (faithful/trustworthy is the saying): the fourth Pastoral Epistle formula introducing or endorsing a theological statement (1 Tim 1:15; 3:1; 4:9; 2 Tim 2:11). Here it endorses the soteriology of vv. 4-7. <em>Peri toutōn boulomei se diabebaiousthai, hina phrontizōsin kalōn ergōn proistasthai hoi pepisteukotes theō</em> (about these things I want you to insist confidently, so that those who have trusted God may be devoted to good works) — <em>proistēmi</em> (to stand before, to lead, to devote oneself to) applied to good works: the justified person who is rich in good works. Theology grounds ethics: the right understanding of grace and justification produces the energy for good works rather than undermining it.</p>',
+    "9": '<p><em>Mōras de zētēseis kai genealogias kai ereis kai machas nomikais periistaso</em> (but avoid foolish controversies and genealogies and quarrels and legal disputes): the four nouns build from speculative (<em>zētēseis</em>, controversies/inquiries) through genealogical (<em>genealogiai</em>) to combative (<em>ereis</em>, quarrels) to specifically legal (<em>machai nomikai</em>, legal disputes) — a progression from the merely futile to the genuinely destructive. <em>Periistaso</em> (avoid, stand around, shun) — the same avoidance verb as 2 Tim 2:16. <em>Eisin gar anōpheleis kai mataioi</em> (for they are unprofitable and futile) — the practical criterion: these debates produce no benefit and are empty of content.</p>',
+    "10": '<p><em>Hairetikon anthrōpon meta mian kai deuteran nouthesian paraitou</em> (a divisive/heretical person, after a first and second warning, reject): <em>hairetikos</em> — from <em>haireō</em> (to choose, select); one who creates a faction by selecting their own path away from the community. The word will later develop into "heretic" (one who holds false doctrine), but here the primary sense is the party-maker, the schismatic who divides. <em>Nouthesia</em> (warning, admonition) — <em>nous</em> (mind) + <em>tithēmi</em> (place); to place something in the mind; to admonish. The two-warning rule before exclusion allows for repentance while maintaining community integrity.</p>',
+    "11": '<p><em>Eidōs hoti exestraptai ho toioutos kai hamartanei, ōn autokatakritos</em> (knowing that such a person is perverted and sinning, being self-condemned): <em>exstrephō</em> (to turn inside-out, to pervert, to corrupt completely) — the prefix <em>ex-</em> intensifies the turning; the divisive person has been thoroughly corrupted. <em>Autokatakritos</em> (self-condemned) — a hapax in the NT; the condemnation is not imposed from outside but self-generated: the divisive person\'s own actions constitute the judgment against them. This limits the community\'s role: they are not pronouncing a new verdict but acknowledging the verdict the person\'s own conduct has already declared.</p>',
+    "12": '<p><em>Hotan pempsō Arteman pros se ē Tychikon, speudason elthein pros me eis Nikopolin</em> (when I send Artemas or Tychicus to you, make haste to come to me at Nicopolis): Artemas is otherwise unknown; Tychicus is Paul\'s trusted emissary (Eph 6:21; Col 4:7; 2 Tim 4:12; Acts 20:4). The sending of a replacement allows Titus to leave Crete. Nicopolis (Victory City) — most likely Nicopolis in Epirus (northwest Greece, modern Preveza), founded by Augustus to commemorate his victory at Actium (31 BCE). It was a significant Roman colony on the Adriatic route. <em>Ekei gar kekrika paracheimasai</em> (for there I have decided to spend the winter) — Paul\'s travel plans grounding the letter in a specific historical moment.</p>',
+    "13": '<p><em>Zēnan ton nomikon kai Apollō spoudaiōs propempson</em> (Zenas the lawyer and Apollos send on their way diligently): Zenas is otherwise unknown — <em>nomikos</em> may mean a Jewish Torah-expert (the standard NT use) or a Roman jurist; both interpretations have ancient support. Apollos appears in Acts 18:24-28, 1 Corinthians 1-4, and 16:12 as a significant Alexandrian teacher; his presence in the Pastoral Epistles is notable. They are apparently the carriers of the letter to Titus. <em>Hina mēden autois leipē</em> (so that they lack nothing) — the community\'s responsibility to supply traveling missionaries (cf. 3 John 5-8; Rom 15:24).</p>',
+    "14": '<p><em>Manthanetōsan de kai hoi hēmeteroi kalōn ergōn proistasthai eis tas anagkaias chreias, hina mē ōsin akarpoi</em> (let our people also learn to devote themselves to good works for urgent needs, so that they may not be unfruitful): the final practical instruction of the letter; <em>kalōn ergōn proistasthai</em> (to devote themselves to good works) repeats the phrase from 3:8. <em>Anagkaias chreias</em> (urgent/pressing needs) — the practical needs that the community must address through active good-work investment. <em>Akarpoi</em> (unfruitful) — the fruitlessness of faith that does not express itself in good works; James 2:17 makes the same point. The letter that opened with the apostolic mandate ends with the community\'s responsibility for practical fruitfulness.</p>',
+    "15": '<p><em>Aspazontai se hoi met\' emou pantes</em> (all those with me greet you): the anonymous group around Paul in his current location (Nicopolis, or wherever he was at the letter\'s writing). <em>Aspasai tous philountas hēmas en pistei</em> (greet those who love us in the faith) — the community of mutual love within the faith; the recipients are distinguished by love. <em>Hē charis meta pantōn hymōn</em> (grace be with all of you) — the plural <em>hymōn</em> confirms, as in 1 Tim 6:21 and 2 Tim 4:22, that behind the individual addressee stands a congregation. The letter closes with the grace that opened salvation-history in 2:11 — grace appeared (<em>epephanē</em>) and grace concludes the letter.</p>'
   }
 }
 
 def main():
-    books = [
-        ('1timothy', ONETIM_ECHO, ONETIM_ORIGINAL, ONETIM_CONTEXT, ONETIM_CHRIST),
-        ('2timothy', TWOTIM_ECHO, TWOTIM_ORIGINAL, TWOTIM_CONTEXT, TWOTIM_CHRIST),
-        ('titus', TITUS_ECHO, TITUS_ORIGINAL, TITUS_CONTEXT, TITUS_CHRIST),
-        ('philemon', PHILEMON_ECHO, PHILEMON_ORIGINAL, PHILEMON_CONTEXT, PHILEMON_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-original', 'titus')
+    merge_comm(existing, ORIGINAL)
+    save_comm('mkt-original', 'titus', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-        print(f'{book} original: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-        print(f'{book} context: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book} christ: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'titus.json').read_text())
+    all_ok = True
+    for ch in ['1', '2', '3']:
+        il_vv = set(il.get(ch, {}).keys())
+        out_vv = set(existing.get(ch, {}).keys())
+        missing = il_vv - out_vv
+        if missing:
+            print(f'  ch{ch} still missing: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'  ch{ch}: complete ({len(out_vv)} verses)')
+    if all_ok:
+        print('All Titus original entries present ✓')
 
 if __name__ == '__main__':
     main()

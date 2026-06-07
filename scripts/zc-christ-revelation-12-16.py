@@ -1,53 +1,39 @@
 """
-Combined script: Revelation — all four layers (echo + original + context + christ)
-Output: data/echoes/revelation.json + mkt-original + mkt-context + mkt-christ
+MKT Christ Commentary — Revelation chapters 12–16
+Run: python3 scripts/zc-christ-revelation-12-16.py
 
-Revelation is the most OT-saturated NT book (approximately 404 verses
-contain echoes from 278 OT passages without ever giving a direct citation).
-Key zones: the throne-room vision (chs 4-5, Ezekiel + Isaiah + Daniel),
-the seals/trumpets/bowls (Exodus plagues + prophetic judgment oracles),
-the Lamb who was slain (Isa 53 + Passover), and the new creation (Isa 65-66 + Ezek 40-48).
+Source data used:
+- data/interlinear/revelation.json
+- data/translation/draft/mediating/revelation.json (MKT text)
+
+Christological focus decisions in this range:
+- Ch 12 v5: The male child = Christ; his ascension compressed into a single clause
+- Ch 13 v8: "the Lamb slain from the foundation of the world" — eternal election ground of redemption
+- Ch 13 v11: the beast-from-earth's "two horns like a lamb" = explicit anti-Christ parody
+- Ch 14 v1: Lamb on Zion as the fulfillment of Ps 2:6 (the anointed king on Zion)
+- Ch 14 v14: "one like a son of man" = direct Dan 7:13-14 citation applied to Christ as Judge
+- Ch 15 v3-4: Song of Moses and the Lamb as unified — Christ's redemption = new Exodus
+- Ch 16 v15: "I come like a thief" = Christ's first-person voice interrupts the bowl sequence
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,158 +41,191 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-REV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "fulfillment", "target": "Dan 7:13", "note": "Behold he is coming with the clouds — the Danielic Son of Man coming with the clouds of heaven; Revelation's opening vision applies Dan 7:13 directly to the parousia of Jesus"},
-      {"type": "fulfillment", "target": "Zech 12:10", "note": "Every eye will see him, even those who pierced him, and all tribes of the earth will wail — the mourning of Zech 12:10 (they will look on him whom they have pierced, and mourn for him) is applied to the universal vision of the returning Christ; the piercing of Christ on the cross is the historical fulfillment of the Zecharian piercing"}
-    ],
-    "12": [
-      {"type": "allusion", "target": "Dan 10:5-6", "note": "Among the lampstands one like a son of man, clothed with a long robe and with a golden sash — Daniel's vision of the heavenly man clothed in linen, girded with gold, with face like lightning; John's vision of the glorified Christ reuses Daniel's heavenly-figure imagery"},
-      {"type": "allusion", "target": "Exod 25:37", "note": "The seven golden lampstands — the seven-branched menorah of the tabernacle; the seven churches are the new menorah, the light-bearing presence of God in the world as the tabernacle was in Israel"}
-    ]
-  },
-  "4": {
-    "2": [
-      {"type": "allusion", "target": "Ezek 1:26-28", "note": "A throne stood in heaven with one seated on it, with the appearance of jasper and carnelian, and around the throne a rainbow — Ezekiel's throne-chariot vision (merkabah): the one on the throne with the appearance of gleaming amber, the rainbow surrounding; John's throne-room draws directly from Ezekiel's initial vision"},
-      {"type": "allusion", "target": "Isa 6:1-3", "note": "The four living creatures crying Holy, holy, holy — the seraphim of Isaiah's throne vision crying the Trisagion; the four living creatures of Revelation 4 combine Ezekiel's four living creatures (Ezek 1:5-14) with Isaiah's seraphim (Isa 6:2-3)"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "fulfillment", "target": "Gen 49:9-10", "note": "Behold, the Lion of the tribe of Judah, the Root of David — the Judah-lion prophecy of Gen 49:9-10 (the scepter shall not depart from Judah) identifies the Lion as the coming ruler from Judah's line; Revelation applies this to the resurrected Christ who has conquered"},
-      {"type": "fulfillment", "target": "Isa 11:1", "note": "The Root of David has conquered — the shoot from the stump of Jesse (Isa 11:1) who will rule with justice; the Davidic root-branch motif of Isaiah fulfilled in Christ's resurrection-conquest"}
-    ],
-    "6": [
-      {"type": "fulfillment", "target": "Isa 53:7", "note": "A Lamb standing, as though it had been slain — the lamb led to slaughter of Isa 53:7 (he was led like a lamb to the slaughter and like a sheep before its shearers is silent); the slain-but-standing Lamb is the risen Christ as the Servant who was killed and lives"},
-      {"type": "allusion", "target": "Zech 3:9", "note": "A Lamb with seven horns and seven eyes, the seven spirits of God — the stone with seven eyes before Joshua the high priest (Zech 3:9: I will engrave its inscription; seven are the eyes of the LORD which range through the whole earth); the seven eyes as divine omniscience applied to the Lamb"}
-    ]
-  },
-  "6": {
-    "12": [
-      {"type": "allusion", "target": "Joel 2:10", "note": "The sun became black as sackcloth, the full moon became like blood, the stars fell to earth — the Day-of-the-LORD cosmic signs of Joel 2:10 and 2:31 (the sun will be turned to darkness and the moon to blood before the great and awesome day of the LORD); the sixth seal's cosmic disruption uses Joel's Day-of-LORD imagery"}
-    ]
-  },
-  "7": {
-    "17": [
-      {"type": "fulfillment", "target": "Isa 25:8", "note": "God will wipe away every tear from their eyes — Isa 25:8 (YHWH will swallow up death forever and wipe away tears from all faces); the eschatological comfort of the feast-after-death promise now applied to the great multitude before the Lamb"}
-    ]
-  },
-  "11": {
-    "15": [
-      {"type": "fulfillment", "target": "Dan 2:44", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — Daniel's vision of the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44: 'the God of heaven will set up a kingdom that shall never be destroyed'); the seventh trumpet announces this as completed"}
-    ]
-  },
+REVELATION = {
   "12": {
-    "5": [
-      {"type": "fulfillment", "target": "Ps 2:9", "note": "She gave birth to a male child, one who is to rule all the nations with a rod of iron — Ps 2:9 (you shall break them with a rod of iron); the messianic ruler of Ps 2 is identified as the male child born of the woman; the rod-of-iron rule is the eschatological conquest of Christ"}
-    ]
-  },
-  "19": {
-    "11": [
-      {"type": "allusion", "target": "Isa 11:4", "note": "The rider on the white horse is called Faithful and True, and in righteousness he judges and makes war — the messianic judge who strikes the earth with the rod of his mouth and slays the wicked with the breath of his lips (Isa 11:4); the rider's warfare is by the word of his mouth (v. 15)"}
-    ],
-    "13": [
-      {"type": "allusion", "target": "Isa 63:1-3", "note": "He is clothed in a robe dipped in blood — the warrior-in-crimson of Isa 63:1-6 whose garments are stained red from treading the winepress of nations' judgment; the Revelation rider's blood-stained robe echoes the Isaianic divine warrior"}
-    ]
-  },
-  "21": {
-    "1": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "I saw a new heaven and a new earth, for the first heaven and first earth had passed away — Isa 65:17's promise (I create new heavens and a new earth; the former shall not be remembered) is the explicit basis for Revelation's new creation; the eschatological promise receives its fullest apocalyptic depiction here"}
-    ],
-    "3": [
-      {"type": "fulfillment", "target": "Lev 26:11-12", "note": "Behold the dwelling place of God is with man — the Sinai covenant promise 'I will set my dwelling among you ... I will walk among you and will be your God and you shall be my people' (Lev 26:11-12) reaches its consummation in the New Jerusalem; what the tabernacle mediated, the new creation embodies directly"},
-      {"type": "fulfillment", "target": "Ezek 37:27", "note": "My dwelling place shall be with them and I will be their God and they shall be my people — Ezekiel's new covenant promise of YHWH dwelling with his people in the restored Israel reaches its cosmic fullness in the new creation"}
-    ]
-  },
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Ezek 47:1-12", "note": "The river of the water of life flowing from the throne — Ezekiel's vision of the temple-river that flows deeper and deeper toward the sea, bringing life wherever it goes (Ezek 47:9: everything will live where the river goes); the New Jerusalem's river fulfills Ezekiel's temple-river"}
-    ],
-    "2": [
-      {"type": "fulfillment", "target": "Gen 2:9", "note": "The tree of life with its twelve kinds of fruit, one for each month — the tree of life in the middle of the garden (Gen 2:9) that Adam and Eve were excluded from after the Fall; the new creation restores unrestricted access to the tree of life for those who wash their robes (v. 14), reversing the consequence of Gen 3:24"}
-    ]
-  }
-}
+    "1": '<p>The great sign of the woman clothed with the sun frames chs. 12–14 as the cosmic drama of Christ\'s arrival and its consequences. The woman represents the covenant people who bore the Messiah — the Israel from whom Christ came according to the flesh (Rom 9:4–5). Her solar-stellar glory echoes Gen 37:9–10 (Joseph\'s dream of sun, moon, and eleven stars bowing to him, signaling the family that would produce the covenant line). The entire vision is arranged around the birth of Christ as its pivotal event: the woman\'s identity is determined by what she produces.</p>',
 
-REV_ORIGINAL = {
-  "1": {
-    "8": "<p><strong>ego eimi to Alpha kai to Omega legei Kyrios ho Theos ho on kai ho en kai ho erchomenos ho Pantokrator</strong>: 'I am the Alpha and the Omega, says the Lord God, who is and who was and who is to come, the Almighty.' <em>Alpha kai Omega</em>: the first and last letters of the Greek alphabet — a comprehensive inclusio encompassing all of reality. The phrase is applied both to God the Father (1:8; 21:6) and to Jesus (22:13: 'I am the Alpha and the Omega, the first and the last, the beginning and the end') — the shared title making the Christological identification with YHWH explicit. <em>Pantokrator</em> (Almighty): the LXX translation of Hebrew <em>El Shaddai</em> and <em>YHWH Tsvaot</em> (LORD of hosts) — here applied to both Father and Son as the supreme governing power over all creation.</p>",
+    "2": '<p>The woman\'s labor pain echoes Isa 66:7–8 (the woman in labor who gives birth before pain comes = the miraculous, sudden emergence of the messianic age) and Mic 5:3 ("He will abandon them until the time when she who is in labor gives birth... then the rest of his brothers shall return to the children of Israel"). The labor that produced the Messiah was the entire travail of the covenant people through centuries of exile, persecution, and waiting — the pain of that long redemptive history compressed into the birth cry.</p>',
 
-    "17": "<p><strong>ego eimi ho protos kai ho eschatos kai ho zon kai egenomen nekros kai idou zon eimi eis tous aionas ton aionon</strong>: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore.' The phrase <em>ho protos kai ho eschatos</em> (first and last) is YHWH's self-identification in Isa 41:4; 44:6; 48:12 — the exclusive divine claim to be both origin and terminus of all history. Jesus applies this YHWH-title to himself in combination with the resurrection claim: 'I died and behold I am alive.' The resurrection is the proof that the crucified one is the living YHWH — the divine identity claim vindicated by rising from death.</p>"
+    "3": '<p>The great red dragon is identified at v. 9 as Satan. His seven-head, ten-horn structure (echoing Dan 7\'s four beasts combined) reveals that the satanic opposition to Christ operates through human empires — Rome in the immediate context, but any imperial power that sets itself against God\'s anointed. The dragon\'s seven diadems (royal crowns) are a parody of Christ\'s many crowns at 19:12, where the returning Christ wears multiple crowns as the universal sovereign.</p>',
+
+    "4": '<p>The dragon waiting to devour the child at his birth is the cosmic framing of the Herod episode (Matt 2:13–18: the slaughter of the innocents). More broadly, it names the pattern that runs through all of Scripture: satanic opposition to the messianic line from Cain\'s murder of Abel through Pharaoh\'s infanticide to Athaliah\'s near-destruction of the Davidic line (2 Chr 22:10). The entire OT contains the dragon waiting for the child to appear. The "third of the stars swept down" reflects the prior cosmic defeat of a portion of the angelic realm (cf. Jude 6; 2 Pet 2:4), positioning the dragon as already a defeated rebel operating on borrowed time.</p>',
+
+    "5": '<p>This verse is one of Revelation\'s most compressed Christological statements: the birth and the ascension in a single clause. "She gave birth to a son, a male child, who is to rule all the nations with an iron rod" — the explicit citation of Ps 2:9 (the messianic king given the nations as his inheritance) identifies the child as the Davidic Messiah. "Her child was caught up to God and to his throne" = the ascension and session of Christ at the right hand of the Father (Acts 1:9; Eph 1:20–22; Phil 2:9–11; Heb 1:3; 12:2). The entire earthly ministry between birth and ascension is omitted — not because it is unimportant but because Revelation focuses on the cosmic significance of the exaltation: the child who the dragon tried to devour now sits enthroned.</p>',
+
+    "6": '<p>The woman fleeing to the wilderness for 1,260 days represents the church in the post-Ascension era — sustained by God during the period of tribulation while awaiting the return of the ascended Christ. The wilderness-provision echoes the way Christ himself was sustained in the wilderness (Matt 4:11: "angels came and were ministering to him") and the way YHWH sustained Israel through Christ in the wilderness (1 Cor 10:4: "they drank from the spiritual Rock that followed them, and the Rock was Christ"). The divine preparation of a place for the woman echoes Christ\'s promise in John 14:2–3 ("I go to prepare a place for you").</p>',
+
+    "7": '<p>Michael\'s war against the dragon in heaven is the cosmic-angelic dimension of the victory Christ accomplished at the cross. John 12:31 ("Now is the judgment of this world; now will the ruler of this world be cast out") and Col 2:15 ("he disarmed the rulers and authorities and put them to open shame, by triumphing over them in him") make explicit that the cross was the decisive defeat of the satanic powers. What Michael enacts in heaven is the outworking of what Christ accomplished on earth. The heavenly war and the earthly redemption are one event seen from two perspectives.</p>',
+
+    "8": '<p>"He was not strong enough, and there was no longer any place for him and his angels in heaven" — the dragon\'s defeat is total and irreversible. The resurrection of Christ sealed it: the one who had "the power of death" (Heb 2:14) has been rendered powerless by the one who conquered death. The dragon is strong enough to rage against the church (v. 12) but not strong enough to hold his position before the throne. The limitation on the dragon\'s power is grounded in Christ\'s accomplished work.</p>',
+
+    "9": '<p>"The great dragon was hurled down — that ancient serpent called the devil and Satan, who leads the whole world astray" — the identification of the dragon with the serpent of Gen 3 is explicit. The entire conflict from Eden to Golgotha reaches its decisive resolution here: the serpent who deceived Adam and Eve (Gen 3:13), who accused Job (Job 1:6–12), who tempted Jesus in the wilderness (Matt 4:1–11), is the same being now definitively cast down. Christ\'s temptation in the wilderness was the opening battle; the cross was the decisive victory; this casting-down is its cosmic proclamation. Luke 10:18 ("I saw Satan fall like lightning from heaven") anticipates this moment.</p>',
+
+    "10": '<p>"Now have come the salvation and the power and the kingdom of our God and the authority of his Christ" — the heavenly proclamation announces that the cross-resurrection-ascension has inaugurated the kingdom. The salvation (<em>sōtēria</em>) declared here echoes 7:10 ("salvation belongs to our God and to the Lamb") and the name of Jesus (<em>Iēsous</em> = YHWH saves). "The accuser of our brothers has been thrown down" — Christ\'s atoning work silences the accusation against the elect: Rom 8:33–34 ("Who shall bring any charge against God\'s elect? It is God who justifies. Who is to condemn? Christ Jesus is the one who died — more than that, who was raised — who is at the right hand of God, who indeed is interceding for us") and Col 2:14 (the record of debt cancelled and nailed to the cross).</p>',
+
+    "11": '<p>"They conquered him by the blood of the Lamb and by the word of their testimony; they did not love their lives so much as to shrink from death" — the blood of the Lamb is the instrument of the martyrs\' conquest. The blood is not a metaphor for courage but the actual atoning blood of Christ\'s sacrifice: 1 Pet 1:18–19 ("you were ransomed... with the precious blood of Christ, like that of a lamb without blemish or spot"); Eph 1:7 ("in him we have redemption through his blood, the forgiveness of our trespasses"); Rev 1:5 ("him who loves us and has freed us from our sins by his blood"). The "word of their testimony" (<em>logos tēs martyrias autōn</em>) is their witness to Christ\'s death and resurrection — the same word Paul identified as the power of God for salvation (Rom 1:16; 1 Cor 1:18).</p>',
+
+    "12": '<p>"Woe to the earth and the sea, because the devil has come down to you in great wrath, because he knows that his time is short" — the dragon\'s temporal limitation is directly tied to the Parousia of Christ. The "short time" is the period between the Ascension and the Return — precisely the era in which the church lives and witnesses. The intensification of persecution is the sign that the satanic opposition is fighting a rearguard action: the dragon rages most fiercely because his time is running out. Christ\'s return will permanently end the dragon\'s earthly access.</p>',
+
+    "13": '<p>When the dragon turns from the failed attack on the child (Christ, who is now enthroned) to pursuing the woman (the church), he redirects the cosmic hostility from the source to the community. The church\'s persecution is the overflow of the satanic opposition to Christ: because the dragon cannot attack the ascended, enthroned Lord directly, it attacks his body on earth. This is the pattern Paul identified: "I... rejoice in my sufferings for your sake, and in my flesh I am filling up what is lacking in Christ\'s afflictions for the sake of his body" (Col 1:24).</p>',
+
+    "14": '<p>"The woman was given the two wings of a great eagle so that she could fly to her place in the wilderness" — the eagle-wings imagery directly echoes Exod 19:4 ("I bore you on eagles\' wings and brought you to myself") — YHWH\'s description of the Exodus deliverance. Christ is the one who now bears his church through the wilderness of tribulation: he is both the eagle who carries and the destination ("brought you to myself"). The provision in the wilderness for "a time, times, and half a time" is the period of Christ\'s intercession from the throne on behalf of the church he has already ransomed (Heb 7:25: "he always lives to make intercession for them").</p>',
+
+    "15": '<p>The serpent pouring water "like a river" after the woman echoes the Egyptian-army pursuit at the Red Sea — the dragon as the anti-pharaoh pursuing the church through the wilderness. In the Exodus pattern, YHWH divided the sea and drowned the pursuing army (Exod 14); in Revelation\'s recapitulation, the earth swallows the flood (v. 16). Christ as the new Moses leads his people safely through the dragon\'s flood: John 10:28–29 ("I give them eternal life, and they will never perish, and no one will snatch them out of my hand").</p>',
+
+    "16": '<p>The earth swallowing the serpent\'s flood echoes the earth swallowing Korah\'s rebellion against Moses (Num 16:30–33) — the creation itself acts as an agent of divine protection for the covenant community. That the earth rescues the church is a testimony to Christ\'s sovereignty over creation: he spoke the earth into being (John 1:3; Col 1:16), and it remains his instrument for protecting those who bear his name. The creation that groans and waits for redemption (Rom 8:22) already anticipates that redemption by sheltering the church.</p>',
+
+    "17": '<p>"The dragon was furious with the woman and went off to wage war against the rest of her offspring — those who keep the commandments of God and hold to the testimony of Jesus" — the church is defined by "the testimony of Jesus" (<em>tēn martyrian Iēsou</em>). This phrase recurs throughout Revelation (1:9; 19:10; 20:4) as the defining mark of the true community. Holding to the testimony of Jesus under dragon-inspired persecution is not merely intellectual assent but a lived witness that costs its bearers everything (v. 11) — the form that faithfulness to Christ takes in the era between his Ascension and Return.</p>'
   },
-  "4": {
-    "8": "<p><strong>hagios hagios hagios Kyrios ho Theos ho Pantokrator ho en kai ho on kai ho erchomenos</strong>: 'Holy, holy, holy, is the Lord God Almighty, who was and is and is to come.' The Trisagion (Isa 6:3) is adapted with the temporal formula that characterizes Revelation's divine self-identification. The fourfold repetition of praise from the four living creatures links Revelation's throne-room to Isaiah's call-vision: the same divine holiness that destroyed Isaiah's self-confidence before the vision of YHWH is now the content of ceaseless heavenly worship. John hears the cosmic liturgy that underlies all earthly worship.</p>"
-  },
-  "5": {
-    "5": "<p><strong>enikesen ho leon ho ek tes phyles Iouda e riza David anoixai to biblion</strong>: 'The Lion of the tribe of Judah, the Root of David, has conquered, so that he can open the scroll.' The title-cluster is Christological recapitulation: <em>Leon ek phyles Iouda</em> (Lion-of-Judah: Gen 49:9-10), <em>Riza David</em> (Root of David: Isa 11:1, 10; Rev 22:16), <em>enikesen</em> (has conquered). Then the stunning inversion: the 'Lion' who conquers is revealed as a 'Lamb standing as if slain' (v. 6). John hears Lion, then sees Lamb — the conquering is through the cross, not through military force. This Lion-Lamb inversion is Revelation's central hermeneutic: power is redefined by the slain Lamb who stands.</p>"
-  },
+
   "13": {
-    "18": "<p><strong>de estin sophia ho echon noun psephisato ton arithmon tou theriou arithmos gar anthropou estin kai ho arithmos autou hexakosioi hexekonta hex</strong>: '666' — the number of the beast. <em>Arithmos anthropou</em> (number of a human/humanity) — the beast's number is not cosmic but human, not transcendent but sub-divine. <em>Gematria</em> (assigning numerical values to letters) was a common Greco-Roman literary technique. The best-attested solution: NERON KAISER in Hebrew letters (nun=50 + resh=200 + vav=6 + nun=50 + qoph=100 + samek=60 + resh=200 = 666). Nero Caesar as the prototype of the beast — the first Roman persecutor of Christians — makes the political-historical reference legible to John's seven churches (ca. 90-95 CE, under Domitian, the 'second Nero').</p>"
-  },
-  "21": {
-    "3": "<p><strong>idou he skene tou theou meta ton anthropon kai skemnosei met auton</strong>: 'Behold the dwelling place (<em>skene</em>) of God is with people, and he will dwell (<em>skenosei</em>) with them.' The <em>skene</em>-language deliberately echoes the wilderness tabernacle (<em>Mishkan</em>) and anticipates John 1:14 where the Word <em>eskenosen</em> (tabernacled) among us. The eschatological new creation is the realization of what the tabernacle mediated: direct divine presence without the veil, without the intermediary system, without separation — YHWH's face-to-face dwelling with his people. The Sinai covenant promise reaches its telos in the new Jerusalem.</p>"
-  },
-  "22": {
-    "20": "<p><strong>nai erchomai tachy</strong> (<em>nai erchomai tachy</em>): 'Surely I am coming soon.' The final direct speech of Christ in the canon is a promise of return. <em>Tachy</em> (soon/quickly): the eschatological urgency that has characterized the entire Revelation. The community's response — <em>Amen, erchou Kyrie Iesou</em> (Come, Lord Jesus) — is the Greek form of the Aramaic <em>Maranatha</em> (1 Cor 16:22; Didache 10:6). The canon ends with a promise and a prayer: Christ's 'I am coming' and the community's 'Come.' The entire Christian life is lived in this tension of promise-and-prayer, the <em>already</em> of Christ's victory and the <em>not yet</em> of his return.</p>"
-  }
-}
+    "1": '<p>The beast rising from the sea is Daniel\'s four beasts (Dan 7:3–7) combined into one — the accumulated empires of Babylon, Persia, Greece, and Rome merged into a single imperial power. Against this composite beast stands the single figure of the Son of Man to whom all dominion was given (Dan 7:13–14). The beast is the anti-Son-of-Man: where Christ received his authority from the Father through suffering and resurrection, the beast receives its authority from the dragon through imperial violence. The sea as the beast\'s origin echoes the chaos-sea of Gen 1:2 — the beast is the embodiment of the primordial disorder that opposes God\'s ordered creation.</p>',
 
-REV_CONTEXT = {
-  "1": {
-    "9": "<p>The island of Patmos is a small volcanic island in the Aegean Sea, part of the Dodecanese chain, about 37 miles southwest of Ephesus. The Roman practice of <em>relegatio in insulam</em> (banishment to an island) was used for political offenders of some status — those meriting death were executed, those of social standing were exiled. John's Patmos exile 'on account of the word of God and the testimony of Jesus' (v. 9) places the Revelation within the Roman persecution of Christians, most plausibly under Domitian (81-96 CE, who demanded to be addressed as <em>Dominus et Deus</em>, Lord and God — a title the Revelation's 'Lord God Almighty' directly counters). The imperial cult was particularly strong in the seven cities of Revelation (Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, Laodicea, and Ephesus all had imperial temples and cult practices).</p>"
-  },
-  "4": {
-    "1": "<p>John's heavenly ascent follows the well-established pattern of Jewish apocalyptic merkabah mysticism (throne-chariot speculation based on Ezek 1 and Isa 6). The rabbinic tradition (b. Hagigah 11b-16a) treated merkabah speculation as dangerous esoterica — only the wisest scholars should study it. John's vision democratizes the throne-room: every Christian is shown what the mystical traditions reserved for elite initiates. The four living creatures (combining Ezek 1:5-14's four creatures with Isa 6:2-3's seraphim) and the twenty-four elders (representing either the twelve patriarchs + twelve apostles, or the twenty-four priestly courses of 1 Chr 24) frame the throne in the same pattern as the OT heavenly-temple tradition.</p>"
-  },
-  "12": {
-    "1": "<p>The woman clothed with the sun (ch. 12) has generated three major interpretive traditions: (1) the church giving birth to Christ and then fleeing persecution (corporate-ecclesial reading); (2) Mary (Roman Catholic tradition, citing Gen 3:15 and the Immaculate Conception typology); (3) Israel/the covenant community through whom the Messiah came (salvation-historical reading). The best reading combines 2 and 3: the woman is the covenant community (OT Israel → NT church) through whom the Messiah came; Mary is the proximate historical instantiation. The cosmic imagery (sun, moon, twelve stars = Gen 37:9's dream of Joseph) links the woman to the patriarchal promise-community.</p>"
-  },
-  "17": {
-    "9": "<p>The seven hills on which the woman sits (v. 9: <em>hepta ore</em>) is the most explicit historical identification in Revelation — Rome was universally known as the 'city of seven hills' (Septemontium). The woman 'Babylon the great' (vv. 5, 18: 'the great city that has dominion over the kings of the earth') is Rome — coded in the 'Babylon' cipher that 1 Peter also uses (1 Pet 5:13). Jewish and Christian apocalyptic literature routinely used 'Babylon' for Rome as the current oppressive empire (4 Ezra 3:1-2, 28-31; 2 Baruch 10-11). The coding protected the text from Roman censorship while being transparent to readers in the seven churches who knew the 'mystery' (v. 7).</p>"
-  }
-}
+    "2": '<p>"The dragon gave the beast his power and his throne and great authority" — the anti-trinitarian economy is explicit. In the Trinity, the Father gives Christ authority: Matt 28:18 ("All authority in heaven and on earth has been given to me"); John 17:2 ("you have given him authority over all flesh"). In the satanic counterfeit, the dragon gives the beast power, throne, and authority — the same threefold pattern of delegated sovereignty, but from the adversary rather than from God. The beast is the anti-Christ not primarily in the sense of a specific individual but in the structural sense: the institutional embodiment of everything that parodies and opposes Christ\'s kingship.</p>',
 
-REV_CHRIST = {
-  "1": {
-    "17": "<p>A direct revelation: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore, and I have the keys of Death and Hades.' Three layered claims: (1) divine identity — the first-and-last YHWH-title; (2) resurrection reality — I died and I live; (3) eschatological authority — I hold the keys to death and Hades. These three together constitute the Christological thesis of Revelation: the crucified and risen Lord is the sovereign YHWH who controls death itself. The entire apocalyptic vision — judgments, seals, trumpets, bowls, the final victory — flows from this threefold claim made by Christ to John on Patmos.</p>"
-  },
-  "5": {
-    "6": "<p>A direct revelation: 'A Lamb standing, as though it had been slain, with seven horns and seven eyes, which are the seven spirits of God sent out into all the earth.' The Lamb-vision is Revelation's Christological center. The Lamb is: (1) slain — bearing the marks of the cross permanently in his resurrection body; (2) standing — the resurrection state; (3) with seven horns — omnipotent (seven = completeness; horns = power); (4) with seven eyes — omniscient. This is the highest Christological symbol in the canon: the crucified-and-risen Jesus is simultaneously the sacrificial victim and the omnipotent, omniscient Lord of all history. The entire drama of Revelation unfolds as this Lamb opens the seals of history.</p>",
+    "3": '<p>"One of its heads seemed to have a mortal wound, but the mortal wound was healed" — the most explicit anti-Christ parody in the chapter: the beast mimics the death and resurrection of Christ. The Nero redivivus legend (Nero\'s supposed survival after his suicide in 68 CE, or his expected return from the east) was the surface-level referent for John\'s audience. But the theological point is the parody: the world "marvels" at the beast\'s apparent resurrection just as it should have marveled at and believed in Christ\'s actual resurrection. The beast apes the most fundamental event of Christian faith and uses it for deception rather than redemption.</p>',
 
-    "12": "<p>A direct revelation: 'Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!' The sevenfold doxology directed to the Lamb matches the sevenfold doxology directed to God in v. 13 — the deliberate parallelism attributes to Christ the same divine worthiness that belongs to YHWH alone. The ground of worthiness is the slaying (<em>ho esphagmenos</em>) — the cross is the qualification for cosmic lordship. The order in the throne-room is anti-imperial: not the emperor who receives tribute but the crucified-and-exalted Lamb who receives worship from every creature.</p>"
+    "4": '<p>"Who is like the beast, and who can fight against it?" — the challenge echoes the divine rhetorical question of Exod 15:11 ("Who is like you, O LORD, among the gods?") and the name of the archangel Michael (<em>mika-el</em> = "who is like God?"). The worship directed to the dragon and the beast is the inversion of true worship: instead of confessing that only God is incomparable, the crowd confesses the beast\'s invincibility. The question "who can fight against it?" is answered at 19:11–21 — the returning Christ, whose title is "Faithful and True," defeats the beast with the sword of his mouth.</p>',
+
+    "5": '<p>The beast\'s authority for 42 months (3.5 years) is the same period as the church\'s wilderness protection (12:6, 14) and the two witnesses\' prophesying (11:3). The simultaneous running of these three timelines signals that the beast\'s persecution of the church and the church\'s divine protection are concurrent: while the beast rages, Christ\'s protecting power is simultaneously operative. The beast\'s "haughty words" echo Dan 7:8, 11 (the little horn that spoke great things) — a figure whose boasting Daniel connects to the Son of Man\'s vindicating judgment.</p>',
+
+    "6": '<p>The beast\'s blasphemy against God\'s "name and his dwelling — those who dwell in heaven" targets the realities Christ secured. Christ\'s name is now "above every name" (Phil 2:9); his dwelling is the heavenly sanctuary where he intercedes (Heb 7:25; 9:24); those who dwell in heaven are the ones ransomed by the Lamb (5:9). The beast\'s blasphemy is specifically directed at the achievements of Christ\'s redemptive work — the name, the dwelling, the redeemed community.</p>',
+
+    "7": '<p>"Authority was given it over every tribe, people, language, and nation" — the fourfold formula for universal humanity (cf. 5:9; 7:9; 11:9; 14:6) here describes the beast\'s reach, as a parody of Christ\'s universal redemption: Christ purchased people "from every tribe and language and people and nation" (5:9) and made them a kingdom of priests; the beast claims dominion over the same universal scope but for domination rather than redemption. The passive "was given" throughout ch. 13 signals divine permission: even the beast\'s power operates within the sovereign purpose of God.</p>',
+
+    "8": '<p>"Everyone whose name has not been written in the book of life of the Lamb who was slain from the foundation of the world" — one of the most theologically rich statements in Revelation. The Lamb\'s book of life = the register of the elect; the Lamb\'s slaughter "from the foundation of the world" grounds the atonement in eternity before creation. Eph 1:4–5 ("he chose us in him before the foundation of the world") and 1 Pet 1:20 ("he was foreknown before the foundation of the world but was made manifest in the last times for the sake of you") are the epistolary parallels. The cross was not an emergency response to sin but the eternal redemptive purpose of God, executed at the appointed time.</p>',
+
+    "9": '<p>"If anyone has an ear, let him hear" — the recurring call of the seven letters (2:7, 11, 17, 29; 3:6, 13, 22) now applied to the beast-vision. It is Christ\'s voice that calls throughout the letters; here his call frames the most sobering part of the vision. To "hear" is to perceive the true nature of the beast — a parody of divine authority, a persecutor of the saints, a temporary power doomed to judgment — so that the call to patient endurance in v. 10 makes sense. Hearing properly means not being deceived by the beast\'s apparent power.</p>',
+
+    "10": '<p>"If anyone is to go into captivity, into captivity he will go; if anyone is to be killed with the sword, with the sword he will be killed. Here is a call for the patient endurance and faithfulness of the saints" — the call to endurance rather than violent resistance is grounded in Christ\'s own pattern. Christ did not resist the authorities who arrested and crucified him (John 18:36: "my kingdom is not of this world; if it were, my servants would fight"); he endured the cross for the joy set before him (Heb 12:2). The saints\' endurance mirrors the Lamb\'s endurance: the path of the faithful runs through suffering to vindication, not around it.</p>',
+
+    "11": '<p>"Another beast rising out of the earth... it had two horns like a lamb, but it spoke like a dragon" — the false prophet (identified as such in 16:13; 19:20; 20:10) is the most explicit anti-Christ figure in the chapter. Christ is the Lamb (5:6; the central image of Revelation); the false prophet appears lamb-like but speaks satanically. This parodies Christ in his prophetic office: Christ is the true prophet who speaks the Father\'s words (John 12:49–50; 17:8; Heb 1:1–2); the false prophet is the satanic counterfeit who speaks the dragon\'s words in lamb\'s clothing. Matt 7:15 ("Beware of false prophets, who come to you in sheep\'s clothing but inwardly are ravenous wolves") anticipates this figure.</p>',
+
+    "12": '<p>The beast-from-the-earth exercises "all the authority of the first beast in its presence" — the false prophet\'s delegated authority from the beast echoes how Christ exercises the Father\'s authority (John 5:19: "the Son can do nothing of his own accord, but only what he sees the Father doing"). The satanic economy deliberately mimics the divine economy of the Trinity. "Making the earth and those who dwell in it worship the first beast" — the false prophet\'s agenda is worship-direction, just as the Holy Spirit\'s agenda is to glorify Christ (John 16:14: "he will glorify me"). The Spirit directs worship toward Christ; the false prophet directs worship toward the beast.</p>',
+
+    "13": '<p>"It performs great signs, even making fire come down from heaven to earth in front of everyone" — the false prophet\'s fire from heaven parodies Elijah\'s calling fire from heaven (1 Kgs 18:38; 2 Kgs 1:10–12) and the outpouring of the Holy Spirit at Pentecost (Acts 2:3: "tongues as of fire appeared to them"). Jesus warned that "false christs and false prophets will arise and perform great signs and wonders, so as to lead astray, if possible, even the elect" (Matt 24:24). The criterion for testing is not whether signs occur but whether they direct to the true God and the crucified, risen, returning Christ.</p>',
+
+    "14": '<p>The false prophet deceiving those who dwell on earth by the signs permitted to him — the deceptive power of signs echoes Jesus\'s repeated warnings (Matt 24:11, 24; Mark 13:22). Paul applies the same test: "even if we or an angel from heaven should preach to you a gospel contrary to the one we preached to you, let him be accursed" (Gal 1:8). The image of the beast that the earth-dwellers are deceived into making echoes Dan 3 (Nebuchadnezzar\'s golden image) — the pattern of imperial idolatry that the faithful (Shadrach, Meshach, and Abednego; later Daniel) refused at mortal risk.</p>',
+
+    "15": '<p>The image of the beast given breath so it could speak — the false prophet\'s counterfeit of the Spirit\'s life-giving work (Gen 2:7: YHWH breathed life into Adam; Ezek 37:9–10: the Spirit breathing into the dry bones; John 20:22: Jesus breathes the Holy Spirit onto the disciples). The animation of the beast\'s image is the satanic counterfeit of resurrection and Spirit-empowerment. Those who would not worship the image are killed — the precise situation of the seven churches under Domitian\'s imperial cult demands, and the real-world cost of "the testimony of Jesus" (12:17).</p>',
+
+    "16": '<p>The mark on the right hand or forehead contrasts directly with the seal of God on the servants\' foreheads (7:3–4) and the divine name on the 144,000\'s foreheads (14:1). Where Christ marks his own with the Father\'s name and the Lamb\'s name (14:1; 22:4), the beast marks its followers with its own name or number. The right hand or forehead = the total person (action and thought, doing and identity). Participation in the beast-economy requires bodily allegiance — a direct parallel to the bodily allegiance that baptism and the Lord\'s Supper represent for Christ\'s followers.</p>',
+
+    "17": '<p>"No one could buy or sell unless he had the mark" — the beast controls the means of earthly sustenance, just as Christ offers the true means of eternal sustenance: "I am the bread of life; whoever comes to me shall not hunger, and whoever believes in me shall never thirst" (John 6:35). The choice is between beast-provided bread that perishes and Christ-given bread that endures to eternal life (John 6:27). The economic exclusion for refusing the beast\'s mark maps onto the pressure the seven churches faced for refusing to participate in trade guilds and civic worship — a concrete daily-life choice between the beast and the Lamb.</p>',
+
+    "18": '<p>"Let the one who has understanding calculate the number of the beast, for it is the number of a man, and its number is 666" — the number 666 represents the triple failure to reach the divine seven: the beast\'s claim to divine completeness always falls short. In Hebrew gematria, Nero Caesar (נרון קסר) = 666, making Nero the historical embodiment. But the theological meaning is broader: 666 is the number of any human system that claims divine prerogatives while permanently falling short of genuine divinity. In the numerical lore of the period, Jesus\'s name (<em>Iēsous</em>) in Greek gematria = 888, the number that exceeds the complete seven — surpassing perfection rather than falling short of it.</p>'
   },
-  "19": {
-    "16": "<p>A direct revelation: 'On his robe and on his thigh he has a name written: King of kings and Lord of lords.' The rider on the white horse — identified in vv. 11-16 with 'Faithful and True,' with eyes like flame, with many diadems, clothed in blood-stained robe, wielding a sharp sword from his mouth — bears the supreme title that Deut 10:17 gives to YHWH (God of gods and Lord of lords). Jesus as King-of-kings and Lord-of-lords is the final Christological counter-claim to every imperial title: Caesar's claim to divine lordship is answered by the appearance of the one whose sovereignty is not shared and whose kingdom will not be destroyed.</p>"
+
+  "14": {
+    "1": '<p>The Lamb standing on Mount Zion with the 144,000 is the triumphant answer to chs. 12–13. Against the beast\'s mark on the foreheads of its followers, the Lamb\'s name and the Father\'s name are written on the 144,000\'s foreheads. Against the beast\'s throne of power, the Lamb stands on Zion — the eschatological hill of YHWH\'s anointed king (Ps 2:6: "I have set my King on Zion, my holy hill"; Heb 12:22–24: "you have come to Mount Zion and to the city of the living God, the heavenly Jerusalem... and to Jesus, the mediator of a new covenant"). The vision of the enthroned Lamb on Zion is the counterimage to every image of the beast\'s dominion in ch. 13.</p>',
+
+    "2": '<p>The voice from heaven "like the sound of many waters and like the sound of loud thunder" echoes the voice of the risen Christ in 1:15 ("his voice was like the roar of many waters") and the divine voice at the baptism and Transfiguration. The harpists\' music accompanying the voice connects to the Levitical worship of the temple, now enacted in the heavenly sanctuary where Christ intercedes — the music of the redeemed community gathered before the throne of the Lamb who purchased them.</p>',
+
+    "3": '<p>"They were singing something like a new song before the throne... No one could learn that song except the 144,000 who had been redeemed from the earth" — the new song is the song of redemption sung by those who have experienced it (5:9: "they sang a new song: \'Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God\'"). The song is uniquely learnable by the redeemed because it is not merely a composition but the lived knowledge of what it means to be bought at the price of the Lamb\'s blood. Those outside the redemption cannot sing it because they have not experienced it.</p>',
+
+    "4": '<p>"These are those who have not defiled themselves with women, for they are virgins. They follow the Lamb wherever he goes. These have been redeemed from mankind as firstfruits for God and the Lamb" — "following the Lamb wherever he goes" is the defining Christological characteristic of the 144,000, echoing the disciples\' call (Matt 4:19; John 1:43; 21:19, 22) and its full cost (Mark 8:34: "take up his cross and follow me"). The Lamb\'s path went through crucifixion to resurrection; following him wherever he goes means following that path. "Firstfruits for God and the Lamb" applies Paul\'s resurrection-firstfruits language: 1 Cor 15:20 ("Christ has been raised from the dead, the firstfruits of those who have fallen asleep"); the 144,000 are the harvest of which Christ himself is the first sheaf.</p>',
+
+    "5": '<p>"In their mouth no lie was found; they are blameless" — the moral purity of the 144,000 echoes the Servant\'s character in Isa 53:9 ("there was no deceit in his mouth"). The blamelessness of Christ is the ground of the redeemed community\'s blamelessness: they are found without deceit not by their own moral achievement but because they are in Christ, whose righteousness is credited to them (2 Cor 5:21; Phil 3:9). Eph 1:4 ("he chose us in him before the foundation of the world, that we should be holy and blameless before him") grounds the blamelessness in election in Christ.</p>',
+
+    "6": '<p>The first angel carrying "an eternal gospel to proclaim to those who dwell on earth" — the gospel is eternal (<em>aiōnion</em>) because it announces the accomplishment of the Lamb who was slain from the foundation of the world (13:8). The gospel reaches every nation, tribe, language, and people — the universal scope of Christ\'s redemption (Matt 28:19; Rev 5:9). The creation-worship call ("Worship him who made heaven and earth, the sea and the springs of water") grounds the gospel in the Creator who is also the Redeemer — Christ through whom all things were created (John 1:3; Col 1:16) and through whom all things are being reconciled (Col 1:20).</p>',
+
+    "7": '<p>"Fear God and give him glory, for the hour of his judgment has come" — the judgment announced here is the judgment Christ executes at his return (John 5:22: "the Father judges no one, but has given all judgment to the Son"; Acts 17:31: "he has fixed a day on which he will judge the world in righteousness by a man whom he has appointed"). The worship commanded — "worship him who made heaven and earth" — includes acknowledging the lordship of Christ whom God has exalted (Phil 2:11: "every tongue confess that Jesus Christ is Lord, to the glory of God the Father").</p>',
+
+    "8": '<p>"Fallen, fallen is Babylon the great" — the announcement of Babylon\'s fall anticipates the victory Christ will accomplish at his return. The fall of every earthly power that sets itself against God is the result of Christ\'s kingship: "He must reign until he has put all his enemies under his feet" (1 Cor 15:25). Babylon\'s "wine of immorality" contrasts with the true wine of the Lord\'s Supper that Christ declared he would not drink again "until the kingdom of God comes" (Luke 22:18) — the cup of judgment for Babylon is the counterpart of the cup of the new covenant for the redeemed.</p>',
+
+    "9": '<p>The third angel\'s warning against worshipping the beast — the choice between beast-worship and God-worship is ultimately a choice between the beast and the Lamb. There is no neutral position: Revelation\'s dualism is not metaphysical but moral and covenantal. Those who receive the beast\'s mark simultaneously reject the Lamb\'s seal (7:3). The warning "in front of the holy angels and in front of the Lamb" (v. 10) specifies the Lamb as the witness to the judgment — Christ is present at the moment when the choice is made and executed.</p>',
+
+    "10": '<p>"He will also drink the wine of God\'s wrath, poured full strength into the cup of his fury" — the cup of wrath that the beast-worshippers drink is the cup that Christ took upon himself in Gethsemane (Matt 26:39, 42: "My Father, if it be possible, let this cup pass from me") and drank at the cross for all who believe. Those who reject the Lamb\'s atonement receive the undiluted cup themselves; those who receive the Lamb\'s sacrifice find that Christ has drunk their cup. The torment "in the presence of the holy angels and in the presence of the Lamb" means that the judgment takes place in the full view of Christ — not as a distant bureaucratic process but as a personally witnessed reckoning.</p>',
+
+    "11": '<p>"The smoke of their torment ascends forever and ever. They have no rest, day or night — those who worship the beast and its image and whoever receives the mark of its name" — the permanence of the judgment corresponds to the permanence of the Lamb\'s redemption. Eternal life for the redeemed (John 3:16; 17:3) is inseparable from the reality of eternal death for the finally impenitent: Revelation does not soften the latter to make the former more comfortable. The Lamb who secured eternal life by his blood is the same figure in whose presence the final judgment occurs (vv. 9–10).</p>',
+
+    "12": '<p>"Here is a call for the patient endurance of the saints — those who keep the commandments of God and their faith in Jesus" — "faith in Jesus" (<em>pistis Iēsou</em>) can be rendered as trust in Jesus (the saints\' faith toward him) or as the faithfulness of Jesus (Christ\'s own faithfulness as the ground of their endurance). Both meanings are present: the saints endure by clinging to Christ, and they do so because Christ\'s own faithfulness secured their redemption. The conjunction of "commandments of God" and "faith in Jesus" resists any separation between loyalty to the covenant and trust in the Messiah — they are one integrated allegiance.</p>',
+
+    "13": '<p>"Blessed are the dead who die in the Lord from now on... they will rest from their labors, for their deeds follow them" — dying "in the Lord" (<em>en Kyriō</em>) is the language of union with Christ in death. Phil 1:21 ("to die is gain") and Phil 1:23 ("to depart and be with Christ, which is far better") express the same reality. The rest from labors echoes Heb 4:9–11 (the Sabbath rest that remains for the people of God, entered through faith in Christ). The Spirit\'s "Yes" of confirmation is the witness of the Holy Spirit to Christ\'s promise that those who die in him are blessed — the same Spirit who raised Christ from the dead (Rom 8:11) guarantees the truth of the beatitude.</p>',
+
+    "14": '<p>"There was a white cloud, and seated on the cloud was one like a son of man, with a golden crown on his head and a sharp sickle in his hand" — the most direct application of Dan 7:13–14 to Christ in Revelation. The Son of Man coming on the clouds receives all dominion, glory, and kingdom; here that same figure appears on a white cloud with a crown (sovereign authority) and a sickle (executive judgment). Jesus claimed this identity at his trial (Mark 14:62: "you will see the Son of Man seated at the right hand of Power and coming with the clouds of heaven"). The harvest he executes is the eschatological gathering described in Matt 13:36–43 (the Son of Man sends his angels to gather the wheat at the end of the age).</p>',
+
+    "15": '<p>The angel calling from the temple for the Son of Man to "put in your sickle and reap" — the angel announces the divinely appointed moment: "the hour has come to reap, for the harvest of the earth is fully ripe." The timing of the eschatological harvest is the Father\'s to determine (Matt 24:36: "But concerning that day and hour no one knows, not even the angels of heaven, nor the Son, but the Father only"), but its execution belongs to the Son of Man. The angel mediates the announcement; the Son of Man enacts the judgment.</p>',
+
+    "16": '<p>The Son of Man swinging his sickle and reaping the earth — the grain harvest as the gathering of the elect (Matt 13:30, 39: "gather the wheat into my barn... the harvest is the end of the age"; John 4:35–36: "the fields are white for harvest"). The Son of Man who was once sown as the grain of wheat that falls into the earth and dies (John 12:24: "unless a grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit") now reaps the harvest that his death produced. The crucified grain becomes the reaping harvester.</p>',
+
+    "17": '<p>The second angel with a sharp sickle comes from the heavenly temple — the judgment instruments flow from the same heavenly sanctuary where the risen Christ intercedes and where the prayers of the saints ascend (8:3–5). The heavenly temple is the sanctuary of the new covenant established by Christ\'s blood (Heb 9:11–12: "he entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood, thus securing an eternal redemption").</p>',
+
+    "18": '<p>The angel with authority over fire commands the grape harvest — the altar from which the command comes is the heavenly altar of incense where the saints\' prayers have been accumulated (6:9; 8:3–5; 16:7). The martyrs\' prayers are being answered in the judgment. Fire in Revelation is associated with the divine presence and the Spirit\'s judgment; the angel\'s authority over fire connects the grape harvest to the Spirit\'s role in the final judgment that Christ executes (Matt 3:11: "he will baptize you with the Holy Spirit and fire").</p>',
+
+    "19": '<p>The angel gathering the vine of the earth and throwing it into "the great winepress of the wrath of God" — the winepress of divine wrath echoes Isa 63:1–6, where YHWH treads the winepress alone: "I have trodden the winepress alone, and from the peoples no one was with me; I trod them in my anger and trampled them in my wrath." Revelation 19:15 explicitly applies this image to the returning Christ ("he will tread the winepress of the fury of the wrath of God the Almighty"). The angel here initiates the gathering; Christ at his return executes the treading. The grapes of wrath are the nations gathered against the Lamb (Ps 2:1–2).</p>',
+
+    "20": '<p>"The winepress was trodden outside the city, and blood flowed from the winepress as high as a horse\'s bridle, for 1,600 stadia" — the blood flowing "outside the city" echoes the location of Christ\'s crucifixion: Heb 13:12 ("Jesus also suffered outside the gate in order to sanctify the people through his own blood"). The judgment outside the city reverses and fulfills the cross outside the city: where Christ\'s blood was shed outside Jerusalem to purify the people, the blood of the judgment flows outside the eschatological city as the final reckoning. The winepress outside the city is the cross\'s judgment shadow cast forward to the Parousia.</p>'
   },
-  "21": {
-    "5": "<p>A direct revelation: 'And he who was seated on the throne said: Behold, I am making all things new.' In the new creation vision, the one seated on the throne (identified with the Lamb in 22:1, 3 where both are said to be the throne of the new Jerusalem) speaks the new creation into being. The <em>kaina</em> (new, qualitatively new) of v. 5 echoes 2 Cor 5:17 (new creation) and Isa 65:17 — the eschatological renewal is not the old patched up but the new inaugurated by divine decree. The Christological new creation: as Christ's word created the old order (John 1:3; Col 1:16), so his word re-creates the new.</p>"
+
+  "15": {
+    "1": '<p>"Seven angels with the seven last plagues, for with these the wrath of God is finished" — the completion of divine wrath in the bowl plagues is the penultimate act before the new creation. The wrath of God is "finished" (<em>etelesthē</em>), using the teleological vocabulary of Christ\'s "It is finished" (<em>tetelestai</em>, John 19:30) at the cross. The completion of wrath against the impenitent is the same verb as the completion of atonement for the repentant: both are "finished," both are definitive, and both originate in the same divine holiness that cannot tolerate sin and cannot fail to accomplish what it sets out to do.</p>',
+
+    "2": '<p>"Those who had conquered the beast and its image and the number of its name" standing on the sea of glass mixed with fire — the victorious community identified by their conquest of the beast. Their conquest is achieved through "the blood of the Lamb and the word of their testimony" (12:11): they stand before the throne because Christ\'s atoning blood and their faithful witness to it have brought them through. The sea of glass "mixed with fire" (4:6 was pure glass; now fire is added) suggests that the judgment fires have been traversed and survived. They hold harps of God — instruments of worship given by God, not their own achievement.</p>',
+
+    "3": '<p>"They were singing the song of Moses the servant of God and the song of the Lamb" — the two songs are one. Moses\'s song at the Red Sea (Exod 15) celebrated YHWH\'s deliverance of Israel from Egypt through the sea; the Lamb\'s song celebrates Christ\'s deliverance of the new Israel from the power of sin and death through his blood. The unity of the two songs declares that the Exodus was a type of the redemption Christ accomplished: 1 Cor 10:1–4 ("our fathers all passed through the sea... the Rock was Christ"). To sing Moses\'s song and the Lamb\'s song is to read the whole Bible as one story of redemption, culminating in the Lamb\'s sacrifice.</p>',
+
+    "4": '<p>"Who will not fear you, O Lord, and glorify your name? For you alone are holy, and all nations will come and worship before you" — the universal worship anticipated here fulfills Ps 86:9 and Isa 2:2–3 (all nations streaming to the mountain of the LORD). That "all nations will come and worship" is the eschatological vision that Christ\'s redemption makes possible: he purchased people from every nation (5:9; 7:9) so that what was promised to Abraham (Gen 22:18) might be fulfilled. The Lamb\'s sacrifice is the mechanism by which the nations are brought to worship the one true God.</p>',
+
+    "5": '<p>"The temple of the tabernacle of testimony in heaven was opened" — the heavenly original of which the Mosaic tabernacle was the copy (Heb 8:5; 9:24) is the sanctuary where Christ serves as high priest (Heb 8:1–2: "a minister in the holy places, in the true tent that the Lord set up, not man"). The judgment flows from the sanctuary where Christ intercedes — the two functions (intercession and judgment) are not opposites but are both expressions of the one holy God\'s response to history. The opened temple signals that the final act of judgment is consistent with, not a departure from, the priestly work of Christ in the heavenly sanctuary.</p>',
+
+    "6": '<p>The seven angels clothed in pure bright linen with golden sashes echo the description of the risen Christ in 1:13 ("one like a son of man, clothed with a long robe and with a golden sash around his chest"). The angels clothed like Christ carry out Christ\'s judgment. The pure linen also anticipates the "fine linen, bright and pure" worn by the Bride of Christ at 19:8 ("for the fine linen is the righteous deeds of the saints") — the same purity that marks the Lamb\'s followers marks the angels who execute the final judgment.</p>',
+
+    "7": '<p>One of the four living creatures giving the seven golden bowls "filled with the wrath of God who lives forever and ever" — the four living creatures are the guardians of the divine throne, associated with the holiness of God ("Holy, holy, holy," 4:8). Their role in distributing the bowls of wrath shows that the final judgment is an act of the same holy God who is worshipped by the creatures: judgment is not a departure from holiness but an expression of it. The bowls filled with wrath contrast with the golden bowls "filled with incense, which are the prayers of the saints" (5:8) — the prayers of the martyrs for justice are answered through the bowls of wrath.</p>',
+
+    "8": '<p>"The temple was filled with smoke from the glory of God and from his power, and no one was able to enter the temple until the seven plagues of the seven angels were finished" — the smoke-filled sanctuary echoes the consecration of the tabernacle (Exod 40:34–35) and the dedication of Solomon\'s temple (1 Kgs 8:10–11). During the final judgments, even heavenly access to the sanctuary is suspended: the completion of judgment is the precondition for the new creation and the permanent, unhindered access to the divine presence it brings (21:22: "I saw no temple in the city, for its temple is the Lord God Almighty and the Lamb"). The suspension of access here makes the open access of the new creation more striking.</p>'
   },
-  "22": {
-    "13": "<p>A direct revelation: 'I am the Alpha and the Omega, the first and the last, the beginning and the end.' Revelation's closing divine address: Jesus claims for himself the three divine-identity formulae that the book opened with in relation to the Father (1:8: Alpha-Omega + Almighty). The three phrases together (Alpha/Omega, first/last, beginning/end) constitute the most comprehensive divine self-identification in the canon — and the book assigns them to Jesus. The Christological conclusion of Revelation: the Jesus who was crucified under Pontius Pilate, who was raised and ascended, who will return, is the one to whom all time and all reality belong. He is the beginning and the end of all creation.</p>"
+
+  "16": {
+    "1": '<p>"Go and pour out the seven bowls of God\'s wrath on the earth" — the loud voice from the temple commands the seven angels. The command originates in the heavenly sanctuary where Christ serves as high priest and where the prayers of the saints have been accumulated (8:3–5; 6:10: "How long... will you not judge and avenge our blood?"). The bowl judgments are the answer to the prayers of the martyred community: the voice from the temple that commands judgment is also the voice of the interceding Christ who advocates for those whose blood has been shed in his name.</p>',
+
+    "2": '<p>The first bowl — "ugly, festering sores broke out on the people who had the mark of the beast and who worshipped its image" — the mark that promised economic security (13:17) and social belonging now produces physical suffering. The sores echo the sixth Egyptian plague (Exod 9:9–11: boils on all the Egyptians). Christ is the one who leads the new Exodus: "our Passover lamb has been sacrificed" (1 Cor 5:7); the plagues on Egypt\'s power are now visited on the beast\'s power in the greater Exodus of the last days. The mark of the beast that was received in place of Christ\'s seal now marks its bearers for judgment rather than protection.</p>',
+
+    "3": '<p>The second bowl — the sea becoming blood "like that of a dead person," all sea creatures dying — echoes the first Exodus plague (Exod 7:20–21: the Nile turned to blood) universalized. The total death of sea creatures contrasts with the partial destruction of the trumpet plagues (8:9: a third of the sea creatures died). The bowl judgments are intensifications of the trumpets — final rather than penultimate, complete rather than partial. The sea as the domain of the beast (13:1) is judged in kind: the origin of the beast becomes the locus of devastating judgment.</p>',
+
+    "4": '<p>The third bowl — rivers and springs becoming blood — continues the Exodus-plague pattern (the Nile and all Egypt\'s waters in Exod 7:19). The expansion from sea (second bowl) to fresh water (third bowl) represents comprehensive judgment of all water, the basic condition of earthly life. The prayer of the saints who were deprived of life (through martyrdom) is answered by the removal of the life-sustaining water from those who took life unjustly. The angel of the waters\' declaration in v. 5 provides the theological interpretation: this is calibrated justice, not arbitrary suffering.</p>',
+
+    "5": '<p>"You are just in these judgments, you who are and who were, the Holy One" — the angel of the waters confirms the justice of the judgment using the divine identity formula from 1:4, 8. "The Holy One" is a title that recurs throughout Isaiah for YHWH and applied to Christ in the NT (Mark 1:24; John 6:69; Acts 3:14; 1 John 2:20; Rev 3:7). The holiness that demanded sacrifice in the OT temple — the same holiness that made the cross necessary — now demands judgment of the impenitent. The just God who was just in justifying the ungodly through Christ\'s blood (Rom 3:26) is equally just in condemning those who refuse that justification.</p>',
+
+    "6": '<p>"For they poured out the blood of your saints and prophets, and you have given them blood to drink. They deserve it" — the lex talionis principle executed at the eschatological level. The blood of the saints shed by the beast-system answers the prayer of the martyrs under the altar (6:10). Christ\'s own blood was poured out (Matt 26:28: "my blood of the covenant, which is poured out for many for the forgiveness of sins") — the shedding of his blood made possible the forgiveness that the martyrs received; the shedding of the saints\' blood in imitation of Christ triggers the judgment that their persecutors receive.</p>',
+
+    "7": '<p>"Yes, Lord God Almighty, your judgments are true and just" — the altar\'s response confirms that the prayers for justice have been answered. The same altar from which the incense of the saints\' prayers ascended (8:3–5) now speaks to confirm that the judgment is righteous. The doxological affirmation of divine justice is a form of worship: acknowledging that God\'s judgments are "true and just" is the response of the redeemed community to the vindication of those who died for the testimony of Jesus.</p>',
+
+    "8": '<p>The fourth bowl — the sun given power to scorch people with fire — inverts the creative purpose of the sun (Gen 1:14–16: the sun to govern the day and provide light for the earth) into a source of destroying heat. The creation made through Christ (John 1:3; Col 1:16) and that testifies to his divinity (Rom 1:20) becomes an instrument of judgment against those who refused to acknowledge the Creator. The non-repentance in v. 9 reveals the twofold effect of the judgments: softening toward repentance in some and hardening in others — the same gospel that is the fragrance of life to some is the fragrance of death to others (2 Cor 2:15–16).</p>',
+
+    "9": '<p>"They blasphemed the name of God who had authority over these plagues. They did not repent and give him glory" — the pattern of Pharaoh\'s hardened heart (Exod 7:22; 8:15; 9:12; 10:20; 11:10) is repeated at eschatological scale. To "give glory to God" means acknowledging Christ as Lord (Phil 2:11: "every tongue confess that Jesus Christ is Lord, to the glory of God the Father") — the refusal to give glory is ultimately the refusal to bow before the Lamb who alone is worthy (5:12).</p>',
+
+    "10": '<p>The fifth bowl — darkness on the throne of the beast — echoes the ninth Egyptian plague (Exod 10:21–23: three days of darkness over Egypt) and specifically targets the seat of imperial power. The darkness on the beast\'s throne inverts the light around the divine throne (4:5; 1 John 1:5: "God is light, and in him is no darkness at all"). Christ is "the light of the world" (John 8:12; 9:5); the beast\'s throne is plunged into the darkness that is its natural environment (John 3:19–20: "people loved the darkness rather than the light"). The judgment makes visible what was always spiritually true: the beast\'s kingdom is a kingdom of darkness.</p>',
+
+    "11": '<p>"They cursed the God of heaven because of their pain and their sores. They refused to repent of what they had done" — the double refusal (blasphemy against God, refusal to repent) in the face of compounding judgment reveals the nature of final hardening. The "sores" from the first bowl (v. 2) are still present — the plagues accumulate rather than replacing one another. The refusal to repent is the fully revealed orientation of a will that has set itself definitively against the Lamb: the same people who would not receive the seal of repentance (the Spirit\'s seal, 7:3) will not now repent under judgment.</p>',
+
+    "12": '<p>The sixth bowl — the Euphrates dried up "to prepare the way for the kings from the east" — echoes the second Exodus imagery of Isa 11:15–16 (YHWH drying the tongue of the Sea of Egypt and the Euphrates to bring the exiles home) and Isa 44:28–45:3 (Cyrus as the LORD\'s anointed who opens doors and subdues kings). Just as Cyrus was a type of the Deliverer who opens the way, the drying of the Euphrates prepares the way for the armies that will converge at Armageddon — the final battle where Christ\'s return will bring history to its conclusion (19:11–21).</p>',
+
+    "13": '<p>"Three impure spirits that looked like frogs come out of the mouth of the dragon, out of the mouth of the beast and out of the mouth of the false prophet" — the demonic trinity parodies the Holy Trinity. As the Spirit proceeds from the Father and the Son and brings life (John 15:26; 16:14), the frog-spirits proceed from the dragon, beast, and false prophet and bring deception for destruction. The three spirits\' joint origin from the satanic trinity reveals the coordinated nature of the final deception against Christ\'s return — the entire satanic system aligns to oppose the Parousia.</p>',
+
+    "14": '<p>"They are demonic spirits that perform miraculous signs, going out to the kings of the whole world to assemble them for the battle on the great day of God the Almighty" — the gathering of the nations for the final battle echoes Ps 2:1–3 ("Why do the nations rage... the kings of the earth set themselves, against the LORD and against his Anointed"). The demonic deception gathers the nations against the returning Christ — but the outcome of Ps 2 is already declared: the one who sits in heaven laughs, and the Son receives the nations as his inheritance (Ps 2:4–9). The gathering of the nations is not a threat to Christ\'s return but the occasion for his decisive victory.</p>',
+
+    "15": '<p>"Look, I come like a thief! Blessed is the one who remains awake and keeps his clothes" — Christ\'s first-person voice interrupts the bowl sequence with a direct eschatological warning and beatitude. The "coming like a thief" motif runs through Matt 24:42–44; Luke 12:39–40; 1 Thess 5:2, 4; 2 Pet 3:10; Rev 3:3 — always applied to Christ\'s return as the call to watchfulness. The one who "keeps his clothes" maintains the white robes of righteousness (3:4–5; 7:14; 19:8) rather than being found spiritually naked (3:17–18). This is the fifth of Revelation\'s seven beatitudes (1:3; 14:13; 16:15; 19:9; 20:6; 22:7, 14), and the only one spoken in Christ\'s own first-person voice in the midst of the bowl judgments.</p>',
+
+    "16": '<p>"They gathered the kings to the place that in Hebrew is called Armageddon" — the mountain of Megiddo is the gathering point for the nations\' final assault that will be met by the returning Christ (19:11–21). The outcome is not described here but at 19:19–21: the beast and the false prophet are captured and thrown into the lake of fire; the rest are slain by "the sword that came from the mouth of him who was sitting on the horse" — Christ\'s word of judgment. The gathering is the prelude to the victory; the battle is decided before it begins by the authority of the coming King.</p>',
+
+    "17": '<p>"It is done!" (<em>gegonen</em>) — the great voice from the throne echoes 21:6 ("It is done!") and points back to Christ\'s "It is finished" (<em>tetelestai</em>, John 19:30) at the cross. The three declarations form a theological sequence: at the cross, the work of atonement is finished; at the seventh bowl, the work of judgment is done; in the new creation, all things are made new. The three "it is done/finished" declarations mark the three great moments of redemptive completion: cross, judgment, and new creation. The flashes of lightning, rumblings, and earthquake are the standard theophanic accompaniments signaling the divine presence in action.</p>',
+
+    "18": '<p>The great earthquake — "no earthquake like it has ever occurred since mankind has been on earth" — the superlative scale echoes Matt 24:21 ("there will be great tribulation, such as has not been from the beginning of the world until now") and Dan 12:1. The cosmic disruption at the seventh bowl signals the complete unraveling of the old order — the same created structures that bore the weight of human sin and divine patience now finally give way under the full force of the divine wrath that the Lamb\'s return brings to completion.</p>',
+
+    "19": '<p>Babylon remembered before God — "God remembered great Babylon, to give her the cup of the wine of the fury of his wrath" — the divine "remembering" is the covenant formula of judgment (Gen 8:1; Exod 2:24). The "cup of the wine of his wrath" is the undiluted cup of 14:10, which Christ did not spare himself from at the cross (Mark 10:38: "Are you able... to be baptized with the baptism with which I am baptized?") but now pours out in final judgment on the unrepentant. The cross exhausted the cup for the elect; for the unrepentant, the cup remains.</p>',
+
+    "20": '<p>"Every island fled away and the mountains could no longer be found" — the cosmic de-creation echoes the sixth seal\'s upheaval (6:14) and anticipates the new creation where "the first heaven and the first earth had passed away" (21:1). The removal of geographical features that seemed permanent is the sign of the passing of "the form of this world" (1 Cor 7:31) before the establishment of the new creation that Christ will bring. The eschatological landscape prepared for the new creation requires the removal of the old order.</p>',
+
+    "21": '<p>"From the sky huge hailstones, each weighing about a hundred pounds, fell on people. And they cursed God on account of the plague of hail" — the final response of the beast\'s followers is not repentance but blasphemy — the hardening is complete, and the pattern of non-repentance that ran through the trumpet plagues (9:20–21) is definitively confirmed. The bowl sequence ends not with conversion but with the total revelation of the two communities: those who worship the Lamb (19:1–10) and those who curse God. The cursing of God under hail is the inverse of the heavenly worship that follows Christ\'s return.</p>'
   }
 }
 
 def main():
-    e = load_echo('revelation')
-    merge_echo(e, REV_ECHO)
-    save_echo('revelation', e)
-    print(f'Rev echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'revelation')
-    merge_comm(c, REV_ORIGINAL)
-    save_comm('mkt-original', 'revelation', c)
-    print(f'Rev original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'revelation')
-    merge_comm(c, REV_CONTEXT)
-    save_comm('mkt-context', 'revelation', c)
-    print(f'Rev context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'revelation')
-    merge_comm(c, REV_CHRIST)
-    save_comm('mkt-christ', 'revelation', c)
-    print(f'Rev christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-christ', 'revelation')
+    merge_comm(existing, REVELATION)
+    save_comm('mkt-christ', 'revelation', existing)
+    print('Revelation 12–16 mkt-christ written.')
 
 if __name__ == '__main__':
     main()

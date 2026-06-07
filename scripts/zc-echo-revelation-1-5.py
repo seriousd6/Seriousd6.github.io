@@ -66,6 +66,57 @@ REV_ECHO = {
       {"type": "allusion", "target": "Exod 25:37", "note": "The seven golden lampstands — the seven-branched menorah of the tabernacle; the seven churches are the new menorah, the light-bearing presence of God in the world as the tabernacle was in Israel"}
     ]
   },
+  "2": {
+    "7": [
+      {"type": "fulfillment", "target": "Gen 2:9; 3:22-24", "note": "To the one who conquers I will grant to eat of the tree of life, which is in the paradise of God — the tree of life in the garden of Eden from which Adam and Eve were excluded after the Fall (Gen 3:22-24: lest he reach out his hand and take also of the tree of life); the promise to Ephesus reverses the expulsion-sentence, restoring access to what sin forfeited."},
+      {"type": "allusion", "target": "Ezek 28:13", "note": "Paradise of God — the Edenic imagery of Ezek 28:13 (you were in Eden, the garden of God) where the garden is described as the dwelling of divine glory; the Revelation promise recasts Eden as the eschatological dwelling of the victorious community."}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Isa 49:2", "note": "The one who has the sharp two-edged sword — the Servant of the LORD whose mouth was made like a sharp sword (Isa 49:2: he made my mouth like a sharp sword, in the shadow of his hand he hid me); the sword-mouth of Christ as judge echoes the Servant whose word is the instrument of divine justice."}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Num 25:1-2; 31:16", "note": "The teaching of Balaam, who taught Balak to put a stumbling block before Israel, so that they might eat food sacrificed to idols and practice sexual immorality — Num 31:16 identifies Balaam's counsel to Balak: through him Israel committed unfaithfulness against the LORD at Peor (Num 25:1-3) by eating sacrifices to Moabite gods and committing sexual immorality; the Pergamum letter identifies the same syncretistic pattern in the church."}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Isa 62:2", "note": "I will give him a white stone with a new name written on it — Isa 62:2 promises a new name given by the LORD's own mouth to redeemed Jerusalem; the new name on the stone parallels the Isaianic promise of a renewed identity that replaces the old shame-name with a name reflecting covenant restoration."}
+    ],
+    "20": [
+      {"type": "allusion", "target": "1 Kgs 16:31; 21:25; 2 Kgs 9:22", "note": "That woman Jezebel, who calls herself a prophetess and is teaching and seducing my servants to practice sexual immorality and to eat food sacrificed to idols — 1 Kgs 16:31 identifies Jezebel as the Phoenician queen who led Ahab into Baal worship; 2 Kgs 9:22 summarizes her influence as 'whoredoms and sorceries'; the Thyatira letter uses 'Jezebel' as the type-name for any figure who draws God's people into syncretistic sexual immorality."}
+    ],
+    "23": [
+      {"type": "allusion", "target": "Jer 17:10", "note": "I am he who searches mind and heart, and I will give to each of you according to your works — Jer 17:10 (I the LORD search the heart and test the mind, to give every man according to his ways, according to the fruit of his deeds); the divine claim to search minds-and-hearts (Jer 11:20; Ps 7:9) is now made by the glorified Christ as judge of the churches."}
+    ],
+    "27": [
+      {"type": "fulfillment", "target": "Ps 2:8-9", "note": "He will rule the nations with a rod of iron, as when earthen pots are broken in pieces, even as I myself have received authority from my Father — Ps 2:8-9 is the messianic oracle (ask of me, and I will make the nations your heritage; you shall break them with a rod of iron); the Thyatira promise shares the Davidic ruler's authority with the conqueror, extending the Ps 2 inheritance to the faithful community."}
+    ]
+  },
+  "3": {
+    "4": [
+      {"type": "allusion", "target": "Zech 3:4-5", "note": "They will walk with me in white, for they are worthy — Zechariah's vision of Joshua the high priest being reclothed: 'Take off the filthy garments' and 'I will clothe you with pure vestments' (Zech 3:4); the worthy remnant in Sardis receive the clean garments that Zechariah's vision promised to the restored priesthood."}
+    ],
+    "5": [
+      {"type": "fulfillment", "target": "Exod 32:32-33; Dan 12:1", "note": "I will never blot his name out of the book of life — Moses's intercession in Exod 32:32 ('blot me out of your book') reveals that the heavenly record could erase names; Dan 12:1 promises that 'everyone found written in the book shall be delivered'; Revelation's promise to the conqueror in Sardis secures the Danielic deliverance as the permanent non-erasure of the faithful from God's book."}
+    ],
+    "7": [
+      {"type": "fulfillment", "target": "Isa 22:22", "note": "Who has the key of David, who opens and no one will shut, who shuts and no one opens — Isa 22:22 is the investiture of Eliakim as royal steward ('I will place on his shoulder the key of the house of David; he shall open, and none shall shut; he shall shut, and none shall open'); the Philadelphia letter applies the steward's key-authority directly to Christ as the true and final steward of God's household."}
+    ],
+    "9": [
+      {"type": "fulfillment", "target": "Isa 49:23; 60:14", "note": "I will make them come and bow down before your feet, and they will learn that I have loved you — Isa 49:23 (kings shall bow down to you with their faces to the ground) and Isa 60:14 (those who afflicted you shall come bowing low) describe the nations and enemies prostrating before restored Israel; the Philadelphia promise transfers this Isaianic vindication to the Gentile church community that will see its opponents humbled."}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Isa 56:5", "note": "I will make him a pillar in the temple of my God — Isa 56:5 promises to eunuchs and foreigners within the covenant 'a monument and a name better than sons and daughters; I will give them an everlasting name that shall not be cut off'; the pillar is the permanent, immovable place within God's house that matches Isaiah's promise of an indelible name for the marginalized faithful."},
+      {"type": "fulfillment", "target": "Isa 62:2; Ezek 48:35", "note": "I will write on him the name of my God, and the name of the city of my God, the new Jerusalem — Isa 62:2 (you shall be called by a new name that the mouth of the LORD will give) and Ezek 48:35 (the name of the city from that time on shall be: The LORD Is There) converge: the victorious community is inscribed with the divine name and the city-name, realizing both Isaianic and Ezekielian promises of renewed identity."}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Isa 65:16", "note": "The Amen, the faithful and true witness, the beginning of God's creation — Isa 65:16 (the God of the Amen; the former troubles are forgotten) uses the Hebrew Amen as a divine title for the faithful God; Revelation applies this Isaianic 'God of the Amen' title to Christ as the faithful witness whose testimony is the ground of the new creation."}
+    ],
+    "19": [
+      {"type": "allusion", "target": "Prov 3:11-12", "note": "Those whom I love, I reprove and discipline — Prov 3:11-12 (do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves, as a father the son in whom he delights); the Laodicea rebuke applies Wisdom's father-discipline maxim to the risen Christ's corrective relationship with his lukewarm church."}
+    ],
+    "20": [
+      {"type": "allusion", "target": "Song 5:2", "note": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, I will come in to him and eat with him — Song 5:2's beloved stands outside knocking ('I hear my beloved knocking: Open to me, my sister, my love, my dove, my perfect one'); the Laodicea invitation recasts the Song's lover-at-the-door as Christ seeking entry into the church that has excluded him through its self-sufficiency."}
+    ]
+  },
   "4": {
     "2": [
       {"type": "allusion", "target": "Ezek 1:26-28", "note": "A throne stood in heaven with one seated on it, with the appearance of jasper and carnelian, and around the throne a rainbow — Ezekiel's throne-chariot vision (merkabah): the one on the throne with the appearance of gleaming amber, the rainbow surrounding; John's throne-room draws directly from Ezekiel's initial vision"},

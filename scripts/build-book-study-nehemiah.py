@@ -1,0 +1,169 @@
+"""
+Book Study Data — Nehemiah
+book_id: nehemiah
+lang: hebrew
+
+Run: python3 scripts/build-book-study-nehemiah.py
+
+Notes:
+- Author group: Historical (Joshua-Esther) in author-freq-hebrew.json
+- Historical peaks are all generic function words; vocabulary selected for Nehemiah's
+  specific theology: wall-rebuilding as community restoration, honor-shame dynamics,
+  prayer-and-action integration, social justice, biblical exposition
+- 12 vocab entries; Hebrew translit fields blank in glossary — supplied manually
+- H2346 chomah (wall): central object of entire first half; wall-as-identity-marker
+- H4945 mashqeh (cupbearer): Nehemiah's title that explains his access to the king
+- H6567 parash: only used in this specific form (meforash) in Neh 8:8 — first
+  OT description of public biblical exposition with explanation; root of modern
+  Hebrew perush (commentary)
+- H5127 nus: the key verb of Neh 6:11 — Nehemiah's courageous refusal to flee
+- H8055 samach (verb) distinct from H8057 simchah (noun) used in Ezra;
+  samach covers 8:10 and the wall dedication joy of 12:43
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "nehemiah",
+
+    "key_vocabulary": [
+        {
+            "code": "H2346",
+            "lemma": "חוֹמָה",
+            "translit": "ḥômāh",
+            "gloss": "wall",
+            "significance": "חוֹמָה (chomah, &lsquo;a wall of protection — always used of a city wall, the defensive enclosure that defines a city&rsquo;s security and identity&rsquo;) is the central object of Nehemiah and carries enormous symbolic weight. 2:17: &lsquo;Come, let us build the wall (chomah) of Jerusalem, that we may no longer be a reproach (cherpah).&rsquo; The chomah and the cherpah (shame) are explicitly linked: the broken wall is the visible sign of the community&rsquo;s disgrace, and rebuilding it is the removal of that disgrace. When the chomah is completed in 52 days (6:15), the political effect is immediate: &lsquo;all our enemies...were afraid and fell greatly in their own esteem, for they perceived that this work had been accomplished with the help of our God&rsquo; (6:16). The wall becomes YHWH&rsquo;s public vindication of the restored community. The dedication of the chomah in chapter 12 is one of the most joyful liturgical ceremonies in the OT: two great choirs process in opposite directions along the top of the wall, converging at the temple with thanksgiving. The wall is thus not merely military infrastructure but a theological symbol of community coherence — the physical boundary that enables the covenant community to exist as a distinct people. Revelation 21:12-14 describes the New Jerusalem&rsquo;s walls (teichos — the Greek chomah-equivalent) in elaborate detail, and 21:3 declares that the city&rsquo;s meaning is YHWH&rsquo;s dwelling with his people: the chomah frames the place of presence."
+        },
+        {
+            "code": "H2781",
+            "lemma": "חֶרְפָּה",
+            "translit": "ḥerpāh",
+            "gloss": "reproach",
+            "significance": "חֶרְפָּה (cherpah, &lsquo;contumely, disgrace — the public shame of being mocked or contemptible in the eyes of one&rsquo;s neighbors; from charaph, to taunt&rsquo;) frames Nehemiah&rsquo;s entire mission. 1:3: &lsquo;The survivors...are in great trouble and shame (cherpah), and the wall of Jerusalem is broken down.&rsquo; 2:17: &lsquo;Come, let us build the wall...that we may no longer be a reproach (cherpah).&rsquo; Cherpah in the OT is the condition of a people whose God appears weak or absent: to be cherpah is to invite the question, &ldquo;Where is your God?&rdquo; (Ps 42:10). The cultural honor-shame framework of the ancient Near East meant that a city without walls was not merely vulnerable — it was publicly humiliated, exposed as a client of no great patron. Sanballat&rsquo;s mockery of the builders (4:1-3) is a classic honor-challenge: &lsquo;What are these feeble Jews doing?...what they are building — if a fox goes up on it he will break down their stone wall!&rsquo; Nehemiah deflects the cherpah-challenge not by boasting but by appealing to divine honor (2:20: &lsquo;The God of heaven will make us prosper, and we his servants will arise and build&rsquo;). Jesus &lsquo;endured the cross, despising the shame (aischynēn — the Greek cherpah-equivalent)&rsquo; (Heb 12:2), and was exalted — the pattern by which cherpah is ultimately reversed through YHWH&rsquo;s vindication rather than human counter-shaming."
+        },
+        {
+            "code": "H4945",
+            "lemma": "מַשְׁקֶה",
+            "translit": "mašqeh",
+            "gloss": "cupbearer",
+            "significance": "מַשְׁקֶה (mashqeh, &lsquo;one who causes to drink; a cupbearer or butler — the court officer responsible for the king&rsquo;s wine service, who tasted all liquids first to protect against poisoning and stood constantly in the royal presence&rsquo;) is Nehemiah&rsquo;s official title and the key to everything that follows. 1:11: &lsquo;I was the cupbearer (mashqeh) to the king.&rsquo; 2:1: &lsquo;In the month of Nisan, in the twentieth year of King Artaxerxes, when wine was before him, I took up the wine and gave it to the king.&rsquo; The mashqeh&rsquo;s face was always in the king&rsquo;s line of sight — which is why Artaxerxes noticed Nehemiah&rsquo;s sadness immediately. The role also implies trust of the highest order: the mashqeh was a human guarantee of the king&rsquo;s safety. This intimate trust made Nehemiah&rsquo;s position unique among the exiles — more direct access to Artaxerxes than any ambassador. The mashqeh title connects Nehemiah to Joseph&rsquo;s prison companion the &lsquo;cupbearer (mashqeh)&rsquo; of Pharaoh (Gen 40-41): as the Pharaoh&rsquo;s cupbearer was restored and became the means of Joseph&rsquo;s deliverance, Nehemiah&rsquo;s mashqeh-role is the means of Jerusalem&rsquo;s deliverance. Jesus&rsquo;s &lsquo;I am in the midst of you as the one who serves (ho diakonōn)&rsquo; (Luke 22:27), himself serving the cup at the Last Supper, gives the mashqeh-service its ultimate fulfillment: the King himself becomes the servant who pours."
+        },
+        {
+            "code": "H8055",
+            "lemma": "שָׂמַח",
+            "translit": "śāmaḥ",
+            "gloss": "rejoice",
+            "significance": "שָׂמַח (samach, &lsquo;to be bright or blithe, to rejoice, to make joyful&rsquo;) appears in the two greatest joy-moments of Nehemiah. First, the famous theological declaration of 8:10: &lsquo;Do not be grieved, for the joy (simchah) of YHWH is your strength (oz)&rsquo; — and the people went away to &lsquo;make great merriment (samach samchah gedolah),&rsquo; transformed from weeping to feasting. Second, the climax of the wall dedication: 12:43: &lsquo;They offered great sacrifices that day and rejoiced (wayyismechu), for God had made them rejoice (esamecham) with great joy; the women and children also rejoiced (wayyismechu). And the joy (simchah) of Jerusalem was heard far away.&rsquo; The 12:43 verse repeats the samach-root three times in quick succession, with a fourth occurrence of the noun — the grammatical concentration mirrors the overwhelming communal reality of the moment. The contrast with chapter 1 (Nehemiah weeping and mourning) makes the book&rsquo;s arc legible: the samach of the dedication is the answer to the mourning of the opening. 8:10 is the theological caption for the whole: the joy is not a mood but a resource — the simchah of YHWH (his delight in his restored people, and their delight in him) is the oz (strength) that makes the entire restoration project possible. Paul&rsquo;s &lsquo;Rejoice in the Lord always; again I will say, rejoice&rsquo; (Phil 4:4) is the NT&rsquo;s most direct application of the samach-theology."
+        },
+        {
+            "code": "H4284",
+            "lemma": "מַחֲשָׁבָה",
+            "translit": "maḥăšābāh",
+            "gloss": "plan",
+            "significance": "מַחֲשָׁבָה (machashavah, &lsquo;a contrivance, intention, or plan — from chashav [to think/devise]; used of craftsmen&rsquo;s designs, of adversaries&rsquo; plots, and of divine purposes&rsquo;) is the word for the adversaries&rsquo; frustrated schemes throughout Nehemiah. 4:15: &lsquo;When our enemies heard that it was known to us and that God had frustrated their plan (machashavatan), we all returned to the wall, each to his work.&rsquo; The adversaries&rsquo; machashavah-strategies escalate through the book: mockery (4:1-3), coordinated attack (4:8), a secret conference (6:2), a false letter to Artaxerxes (6:5-7), a prophetic deception designed to drive Nehemiah into the temple (6:10-13). Each time, Nehemiah&rsquo;s prayer and discernment frustrate the machashavah. 6:2: &lsquo;Sanballat and Geshem sent to me, saying, &ldquo;Come and let us meet together...&rdquo;&rsquo; — Nehemiah recognized it as a machashavah to harm him and refused. The divine frustration of human machashavah is a consistent OT theme: &lsquo;Many are the machashavot in the human heart, but the counsel (etsah) of YHWH alone will stand&rsquo; (Prov 19:21); &lsquo;For my machashavot are not your machashavot...as the heavens are higher than the earth, so are my machashavot higher than your machashavot&rsquo; (Isa 55:8-9). Nehemiah&rsquo;s story is the narrative proof: the machashavah of the adversaries collapses when it encounters the machashavah of YHWH."
+        },
+        {
+            "code": "H6299",
+            "lemma": "פָּדָה",
+            "translit": "pādāh",
+            "gloss": "redeem",
+            "significance": "פָּדָה (padah, &lsquo;to sever, to ransom — to release by means of a price or payment; distinct from gaal [kinsman-redemption] and kaphar [atonement-covering]; padah emphasizes the act of buying out of a binding condition&rsquo;) is Nehemiah&rsquo;s appeal in his opening prayer: 1:10: &lsquo;They are your servants and your people, whom you have redeemed (padita) by your great power and by your strong hand.&rsquo; Nehemiah is praying from Susa, ~900 miles from Jerusalem. His appeal does not rest on the current community&rsquo;s merit but on the prior padah of the Exodus: YHWH&rsquo;s act of ransom then is the basis for his action now. Padah is the Deuteronomic exodus-redemption word: &lsquo;YHWH has brought you out with a mighty hand and redeemed (padah) you from the house of slavery, from the hand of Pharaoh king of Egypt&rsquo; (Deut 7:8). Nehemiah&rsquo;s prayer uses the exact Deuteronomic framework: when the exiles &lsquo;return&rsquo; to YHWH (Deut 30:1-10), he will act in accordance with his prior padah. The prayer of Neh 1 is thus not sentimental but covenantal-logical: Nehemiah holds YHWH to his own word. A surprising echo appears in chapter 5:8, where Nehemiah confronts the nobles over economic exploitation: &lsquo;We, as far as we are able, have bought back (padinu) our Jewish brothers who have been sold to the nations.&rsquo; The same padah-word: the community has been practicing padah for each other, and it is contradicted by those now re-enslaving their brothers. The NT&rsquo;s &lsquo;in him we have redemption (apolytōsis) through his blood&rsquo; (Eph 1:7) is the padah of the new covenant — the same severing-from-bondage, accomplished by the price of Christ&rsquo;s blood."
+        },
+        {
+            "code": "H5127",
+            "lemma": "נוּס",
+            "translit": "nûs",
+            "gloss": "flee",
+            "significance": "נוּס (nus, &lsquo;to flit, to vanish away, to flee — whether from physical danger, enemy attack, or moral failure&rsquo;) appears at the moral climax of Nehemiah&rsquo;s personal courage. Chapter 6: Shemaiah, a paid agent of Tobiah, pretends to warn Nehemiah of an assassination plot and urges him: &lsquo;Let us meet together in the house of God...for they are coming to kill you by night.&rsquo; Nehemiah&rsquo;s response (6:11): &lsquo;Should such a man as I flee (anus)? And who is like me, who would go into the temple to save his life? I will not go in.&rsquo; The nus-refusal is simultaneously an act of political discernment and moral courage: entering the temple as a layman would violate sacred space and destroy his religious credibility; fleeing would signal that he could be intimidated. The rhetorical force of &ldquo;should such a man as I flee?&rdquo; is not arrogance but recognition that the role he has been given by God demands a different response than self-preservation. The nus-question is the leader&rsquo;s existential question: is this person defined by their safety or by their commission? Nehemiah then records (6:14): &lsquo;Remember Tobiah and Sanballat, O my God, according to these things that they did, and also the prophetess Noadiah...who wanted to make me afraid (larev&rsquo;ah)&rsquo; — the nus-refusal is followed by a prayer that gives YHWH the role of vindicator. Jesus&rsquo;s &lsquo;the good shepherd lays down his life for the sheep...the hired hand...flees (pheugei — the Greek nus-equivalent)&rsquo; (John 10:11-13) is the ultimate anti-nus: the shepherd who does not flee when the wolf comes."
+        },
+        {
+            "code": "H2734",
+            "lemma": "חָרָה",
+            "translit": "ḥārāh",
+            "gloss": "burn with anger",
+            "significance": "חָרָה (charah, &lsquo;to glow or grow warm — specifically of anger, zeal, or jealousy; the instinctive fierce response of one confronted with injustice or offense, as distinct from the controlled anger of deliberate judgment&rsquo;) appears in Nehemiah&rsquo;s most vulnerable and most human moment. 5:6: &lsquo;I was very angry (wayyichar li me'od) when I heard their outcry and these words.&rsquo; The outcry (tse&rsquo;aqah) was that Jewish nobles and officials were exploiting their own people — charging interest on loans, taking mortgage of fields and children, effectively re-enslaving the community that had just been freed from Babylon. The charah of 5:6 is explicitly called anger, and it is presented as justified: what Nehemiah saw contradicted the entire covenant identity of the restored community. But his charah is immediately followed by deliberate restraint: &lsquo;I took counsel with myself (vae&rsquo;mas&rsquo;ha libi), and I brought charges against the nobles and the officials&rsquo; (5:7) — the anger is channeled through careful reflection into a structured confrontation rather than impulsive reaction. This pattern — charah → deliberate counsel → structured action — is the OT&rsquo;s model of righteous anger: feeling the moral weight of injustice and using it as energy for purposeful correction rather than indulging it as gratification. Ephesians 4:26&rsquo;s &lsquo;Be angry and do not sin; do not let the sun go down on your anger&rsquo; applies the same pattern. Jesus&rsquo;s temple-clearing (John 2:13-17: &lsquo;Zeal for your house will consume me&rsquo;) is the NT&rsquo;s supreme charah — righteous anger in service of the Father&rsquo;s honor."
+        },
+        {
+            "code": "H6567",
+            "lemma": "פָּרָשׁ",
+            "translit": "pāraš",
+            "gloss": "expound",
+            "significance": "פָּרָשׁ (parash, &lsquo;to separate, to distribute; figuratively, to specify or declare distinctly; to expound clearly&rsquo;) appears in one of the most theologically significant verses for the history of biblical interpretation: 8:8: &lsquo;And they read from the book, from the Law of God, clearly (meforash), and they gave the sense (sekhel), so that the people understood (yavinu) the reading.&rsquo; The Pual participle meforash (&ldquo;made distinct, clearly explained&rdquo;) describes Ezra&rsquo;s and the Levites&rsquo; manner of reading the Law: they don&rsquo;t merely recite but parash — they make the text distinct, section by section, with explanation of meaning. This is the earliest OT description of what would become rabbinic midrash (exposition): read the text, explain its meaning, ensure comprehension. Whether the explanation involved translation from Hebrew into Aramaic (which the returning exiles had absorbed in Babylon), grammatical unpacking, or contextual paraphrase, the result was that &lsquo;the people understood (yavinu)&rsquo; — understanding is the goal of all parash, not merely recitation. The modern Hebrew word perush (commentary/interpretation) derives directly from this parash-root, and the entire tradition of Jewish biblical commentary traces its origin to the scene described in Nehemiah 8. Luke 24:32, 45: the risen Christ &lsquo;opened the Scriptures&rsquo; and &lsquo;opened their minds to understand the Scriptures&rsquo; on the Emmaus road — the ultimate parash. Philip &lsquo;opening his mouth...from this Scripture told him the good news about Jesus&rsquo; (Acts 8:35) is the NT parash in action."
+        },
+        {
+            "code": "H6818",
+            "lemma": "צַעֲקָה",
+            "translit": "ṣaʿăqāh",
+            "gloss": "outcry",
+            "significance": "צַעֲקָה (tse&rsquo;aqah, &lsquo;a shriek, an outcry — specifically the cry of one in distress or oppression who calls out for justice or help&rsquo;) is the word for the social justice crisis of Nehemiah 5. 5:1: &lsquo;Now there arose a great outcry (tse&rsquo;aqah gedolah) of the people and of their wives against their Jewish brothers.&rsquo; The people are mortgaging their fields and children to survive famine and royal taxes — economic slavery within the restored covenant community. The tse&rsquo;aqah-word carries the whole weight of OT covenant justice theology: Exod 2:23-24: &lsquo;The people of Israel groaned because of their slavery and cried out (tse&rsquo;aqah). Their cry for rescue came up to God. And God heard their groaning.&rsquo; YHWH heard the tse&rsquo;aqah of Israel in Egypt and acted; now in Nehemiah 5, the same cry arising within the golah community is a direct indictment: the people who were liberated from slavery are now re-enacting Egyptian slavery on their own brothers. Nehemiah&rsquo;s anger (charah, 5:6) is the immediate response — he receives the tse&rsquo;aqah as YHWH received Israel&rsquo;s Egyptian cry, and he acts as YHWH&rsquo;s representative to confront the oppressors. Psalm 34:15: &lsquo;the ears of YHWH are toward those who cry (tse&rsquo;aqah) to him.&rsquo; James 5:4&rsquo;s &lsquo;Behold, the wages of the laborers...kept back by fraud, are crying out (krazousi — the Greek tse&rsquo;aqah-equivalent), and the cries of the harvesters have reached the ears of the Lord of hosts&rsquo; applies the identical covenant-justice framework to the NT church."
+        },
+        {
+            "code": "H3427",
+            "lemma": "יָשַׁב",
+            "translit": "yāšab",
+            "gloss": "dwell",
+            "significance": "יָשַׁב (yashav, &lsquo;properly, to sit down; by implication, to dwell, to settle, to inhabit — the most common Hebrew verb for permanent residence and established community life&rsquo;) is the word for the repopulation of Jerusalem, the final structural goal of the entire Ezra-Nehemiah narrative. 7:4: &lsquo;The city was wide and large, but the people within it were few and no houses had been rebuilt.&rsquo; 11:1-2: &lsquo;The leaders of the people settled (yashvu) in Jerusalem. And the rest of the people cast lots to bring one in ten to dwell (lashevet) in Jerusalem the holy city.&rsquo; Walls without inhabitants are monuments, not communities; Nehemiah&rsquo;s building project is complete only when people yashav in the city it protects. The yashav-settlement is theologically charged throughout the OT: Israel&rsquo;s covenant goal is to yashav in the land (Deut 12:10: &lsquo;when you...live [yashavtem] in the land that YHWH your God is giving you to inherit&rsquo;); the exile was precisely the removal from yashav — galah (H1540, exile) is the forced departure from settled dwelling. Nehemiah&rsquo;s repopulation is the reversal of the galah: those displaced now yashav again. The crowning theological use of yashav is in the Psalter: &lsquo;He who yashav in the shelter of the Most High will abide in the shadow of the Almighty&rsquo; (Ps 91:1) — the ultimate yashav is in YHWH&rsquo;s own presence. Revelation 21:3: &lsquo;Behold, the dwelling (skēnē) of God is with man. He will dwell (skēnōsei) with them&rsquo; — the cosmic yashav, when the Creator settles with his people."
+        },
+        {
+            "code": "H5797",
+            "lemma": "עֹז",
+            "translit": "ʿōz",
+            "gloss": "strength",
+            "significance": "עֹז (oz, &lsquo;strength in various applications — force, security, majesty; the power that comes from proximity to a strong patron or from intrinsic might&rsquo;) is the word for the resource Nehemiah announces to the weeping community in Nehemiah 8:10: &lsquo;Do not be grieved, for the joy (simchah) of YHWH is your strength (oz).&rsquo; The context is precise: the people had wept when Ezra read the law (8:9) because they understood for the first time what they had missed and failed to keep. The Levites tell them not to weep because the day is holy — and then comes the theological claim: it is the simchah of YHWH that constitutes their oz. Not their numbers (small), not their walls (newly built but thin), not their military capacity (minimal), but the joy of the covenant relationship. Oz throughout the Psalter is consistently a divine attribute that becomes available to those in relationship with YHWH: &lsquo;YHWH is my light and my salvation...YHWH is the oz of my life&rsquo; (Ps 27:1); &lsquo;YHWH is the oz of his people, he is the saving refuge of his anointed&rsquo; (Ps 28:8); &lsquo;The Lord YHWH is my oz and my song&rsquo; (Isa 12:2). The oz-formula of Neh 8:10 is thus a precision statement: the small, vulnerable post-exilic community has access to oz not through what it builds or accumulates but through the simchah of covenant belonging. Paul&rsquo;s &lsquo;I can do all things through him who strengthens (endynamounti) me&rsquo; (Phil 4:13) and &lsquo;when I am weak, then I am strong (dynatos)&rsquo; (2 Cor 12:10) are the NT&rsquo;s most explicit development of the oz-through-relationship theology that Neh 8:10 declares."
+        }
+    ],
+
+    "language_notes": (
+        "<p>Nehemiah is primarily a <strong>first-person memoir</strong> — the most immediate and personal writing voice in the Hebrew Bible. Unlike the third-person historical prose of Kings or Chronicles, Nehemiah speaks directly: &lsquo;When I heard these words I sat down and wept&rsquo; (1:4); &lsquo;Then I arose in the night, I and a few men with me&rsquo; (2:12); &lsquo;So I prayed to the God of heaven&rsquo; (2:4). This autobiographical directness creates a distinctive rhetorical effect: the reader accompanies Nehemiah into his decision-making, his grief, his anger, and his prayer. The most linguistically distinctive feature of this memoir is the <strong>intercalated &ldquo;arrow prayer&rdquo;</strong>: short prayers embedded between sentences of narrative action. 2:4: &lsquo;So the king said to me, &ldquo;What are you requesting?&rdquo; So I prayed to the God of heaven. And I said to the king...&rsquo; There is no gap in the narrative for this prayer; Nehemiah prays silently in the instant between the king&rsquo;s question and his own answer. This integration of prayer into the texture of action is the book&rsquo;s signature spiritual pattern: prayer and work are not sequential but simultaneous. The arrow prayers appear throughout (1:4; 2:4; 4:4-5; 5:19; 6:9, 14; 13:14, 22, 29, 31), ranging from a word to a sentence, always embedded in action.</p>"
+        "<p>The <strong>honor-shame vocabulary</strong> structures the cultural logic of the entire book. The key term is cherpah (reproach/disgrace, H2781) — the public shame of a broken-walled city visible to all its neighbors. The verb qalas (to mock, to scoff — 2:19; 4:1) describes Sanballat&rsquo;s response to the building project: in an honor-shame culture, mockery is not merely offensive but is a public claim that the builder is too weak and foolish to succeed, a formal challenge-and-riposte exchange. Nehemiah&rsquo;s counter-move (2:20: &lsquo;The God of heaven will make us prosper&rsquo;) transfers the locus of honor from himself to YHWH — it is YHWH&rsquo;s honor at stake, not Nehemiah&rsquo;s. 4:4-5: Nehemiah&rsquo;s prayer explicitly asks YHWH to &lsquo;return their taunt (cherpah) on their own heads&rsquo; — invoking the honor-code&rsquo;s reciprocity clause, but assigning vengeance to YHWH rather than taking it himself. The 52-day completion (6:15-16) is the honor-code&rsquo;s verdict: the nations saw that God honored the builders, and their own esteem fell correspondingly.</p>"
+        "<p>The <strong>legal and contractual vocabulary</strong> of Nehemiah appears in two key passages. In chapter 5, when Nehemiah confronts the economic exploitation, he uses oath-language to bind the nobles to reform: &lsquo;So I called the priests and made them swear (wayyishaveu) to do as they had promised&rsquo; (5:12) — the nishba (oath-swearing) ritual formalizes the commitment and makes it binding before YHWH. In chapters 9-10, the covenant renewal ceremony concludes with a signed commitment (amanah, H548 — a faithful dealing or covenant document, 9:38): &lsquo;In view of all this, we make a firm covenant (kanim amanah) in writing; on the sealed document are the names of our princes, our Levites, and our priests.&rsquo; This is the closest the OT comes to a written constitutional covenant — a public, signed commitment to specific practices (no intermarriage, Sabbath observance, temple support). The covenant renewal of Nehemiah 9-10 is structurally modeled on the Sinai covenant pattern: historical narrative of YHWH&rsquo;s faithfulness (ch. 9), then covenant stipulations (ch. 10).</p>"
+        "<p>The <strong>great prayer of Nehemiah 9</strong> is the most comprehensive historical-theological prayer in the OT, recapitulating the entire narrative of YHWH&rsquo;s faithfulness from creation (9:6: &lsquo;You alone are YHWH. You have made heaven, the heaven of heavens...and you preserve them all&rsquo;) through the Exodus, the wilderness, the conquest, the judges, the monarchy, and the exile, to the present moment. Its Hebrew is dense with OT quotation and allusion: the divine character formula of 9:17 (&lsquo;a God ready to forgive, gracious and merciful, slow to anger and abounding in steadfast love&rsquo;) quotes Exod 34:6-7 almost verbatim. This intertextual density gives the prayer its rhetorical power: Nehemiah&rsquo;s community is not approaching YHWH with new arguments but holding him to his own revealed character as disclosed throughout the canon. The movement of the prayer — YHWH&rsquo;s faithfulness, Israel&rsquo;s unfaithfulness, YHWH&rsquo;s renewed faithfulness — ends in the present moment of Persian oppression (9:36-37) without a resolution, making the prayer itself an act of faith that YHWH&rsquo;s character will continue to operate as it always has.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> The early church generally treated Ezra-Nehemiah as a single book (as in Jewish tradition and the LXX), so Nehemiah-specific patristic reception is relatively sparse compared to Ezra. Origen saw Nehemiah&rsquo;s rebuilding of Jerusalem&rsquo;s walls as a figure for the restoration of the soul after sin — the broken wall as a soul open to demonic assault, and the rebuilt wall as the virtues protecting the interior life. Chrysostom used Nehemiah&rsquo;s combination of prayer and practical action as a model for the integrated Christian life, arguing against any dichotomy between spiritual and material concerns. The great prayer of Nehemiah 9 was cited frequently in early Christian liturgical catechetical contexts as a model of historical consciousness in prayer — approaching God through the narrative of his previous acts.</p>"
+        "<p><strong>Reformation:</strong> Calvin&rsquo;s lectures on Nehemiah gave the book its most sustained Reformation-era treatment. He read Nehemiah&rsquo;s governorship as a model of godly magistracy — the civil ruler who uses political power in service of the community&rsquo;s covenant life rather than personal advancement. Calvin was particularly struck by Nehemiah&rsquo;s refusal to claim the governor&rsquo;s food allowance (5:14-19), reading it as an example of leadership that costs rather than exploits. The prayer-and-action integration (4:9: &lsquo;we prayed to our God and set a guard&rsquo;) became a Reformation-era commonplace for the falseness of any piety that excludes practical effort, and any activism that excludes prayer. The Puritan tradition elevated Nehemiah&rsquo;s leadership model extensively — his combination of strategic planning, emotional resilience, courageous confrontation, and constant prayer-dependence made him a template for the Puritan conception of godly leadership in a hostile world.</p>"
+        "<p><strong>Modern scholarship:</strong> Contemporary Nehemiah scholarship focuses on three main questions: the historical reliability of the Nehemiah Memoir (widely considered one of the most historically credible first-person sources in the OT), the social dynamics of the returned exile community (particularly the conflict in ch. 5 between wealthy and poor within the golah), and the theological significance of Nehemiah 8 as the origin point of the synagogue and rabbinic interpretive traditions. The &lsquo;meforash&rsquo; of 8:8 has generated extensive debate about whether it indicates translation into Aramaic, grammatical explanation, or both. Feminist scholarship has engaged the intermarriage dissolution in both Ezra and Nehemiah, asking what happened to the dismissed women and children — noting that the text records the dissolution without recording its human cost.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Track Nehemiah&rsquo;s <strong>arrow prayers</strong> as you read — they are the book&rsquo;s spiritual skeleton. Most readers notice the long opening prayer (ch. 1), but the briefer intercalated prayers are equally revealing: the silent prayer before answering the king (2:4), the brief cries in 4:4-5 and 6:9, the &ldquo;Remember me, O God, for good&rdquo; refrain that closes the book (13:14, 22, 29, 31). Every high-pressure moment produces a prayer. Nehemiah does not treat prayer as a separate spiritual activity disconnected from action; prayer is how he acts.</p>"
+        "<p>Read chapters 1-7 (the wall) and chapters 8-10 (the word) as two acts of a single restoration. The wall without the law-reading is infrastructure without identity; the law-reading without the wall is spiritual renewal in a community still exposed and shamed. Neither is sufficient alone. The climax of both comes in 8:10: the joy of YHWH is your strength — spoken by Ezra to a weeping people who have just heard the law for the first time. Don&rsquo;t stop at chapter 7 and treat the rest as appendix.</p>"
+        "<p>Do not skip chapter 5. It is the book&rsquo;s most overlooked passage and arguably its most courageous moment: Nehemiah interrupts the wall-building project to confront economic injustice within the community itself. The people rebuilding the external wall had internal walls built against each other — the wealthy taking advantage of the poor while everyone was focused on the common enemy outside. Nehemiah&rsquo;s willingness to stop the popular project to address the inconvenient internal problem is the mark of a leader whose commitment to covenant community exceeds his commitment to his reputation as an efficient builder. Read 5:19 (&ldquo;Remember me, O God, for good&rdquo;) as Nehemiah&rsquo;s entirely honest prayer after spending political capital to protect the poor — the appropriate end of a chapter that cost him something real.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('nehemiah')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('nehemiah', merged)
+
+main()

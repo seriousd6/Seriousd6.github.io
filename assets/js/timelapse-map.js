@@ -52,7 +52,8 @@ var _empLayers   = {};   /* id → L.polygon */
 var _routeLayers = {};   /* id → L.polyline */
 var _figLayers   = {};   /* id → L.marker   */
 var _placeLayers = {};   /* id → L.marker (divIcon dot) */
-var _placeTipEl  = null; /* custom multi-dot tooltip element */
+var _placeTipEl    = null; /* combined stacking tooltip (dots + route) */
+var _hoveredRoute  = null; /* route currently under cursor — read by _onPlaceMouseMove */
 var _tribeLayers = {};   /* id → { poly, label } */
 var _tribeTipEl  = null; /* custom tribe tooltip — bottom-right corner at cursor */
 
@@ -140,6 +141,13 @@ function _buildLayers() {
   });
 
   /* Route polylines */
+  // INTENT: Each route gets a slightly thicker transparent hit-area polyline stacked
+  //   above the visible line so mouseover fires reliably on thin lines; the visible line
+  //   carries color and animates via _renderRoutes. The hit line is always transparent.
+  // CHANGE? _routeLayers[id] is the visible line. Route description is rendered inside
+  //   _onPlaceMouseMove via _hoveredRoute. If route schema adds fields, update
+  //   the _hoveredRoute HTML block in _onPlaceMouseMove.
+  // VERIFY: Hover Paul's 1st Journey line — tooltip shows label + description text.
   (_data.routes || []).forEach(function (route) {
     var line = L.polyline([[0,0]], {
       color:     route.color,
@@ -147,10 +155,32 @@ function _buildLayers() {
       opacity:   0,
       lineCap:   'round',
       lineJoin:  'round',
-      dashArray: route.dashed ? '8 5' : null
+      dashArray: route.dashed ? '8 5' : null,
+      interactive: false
     });
     line.addTo(_map);
+    line._routeId = route.id;
     _routeLayers[route.id] = line;
+
+    /* Transparent wide hit line on top for easy hover */
+    var hit = L.polyline([[0,0]], {
+      color:    'transparent',
+      weight:   14,
+      opacity:  0,
+      lineCap:  'round',
+      lineJoin: 'round'
+    });
+    hit._routeId = route.id;
+    hit.addTo(_map);
+    /* Set _hoveredRoute so _onPlaceMouseMove includes the route in the shared stack */
+    hit.on('mouseover', function (e) {
+      var r = (_data.routes || []).find(function (x) { return x.id === e.target._routeId; });
+      var vis = _routeLayers[e.target._routeId];
+      if (r && vis && (vis.options.opacity || 0) > 0.01) { _hoveredRoute = r; _onPlaceMouseMove(e); }
+    });
+    hit.on('mousemove', _onPlaceMouseMove);
+    hit.on('mouseout',  function () { _hoveredRoute = null; });
+    line._hitLine = hit;
   });
 
   /* Figure markers */
@@ -230,7 +260,7 @@ function _buildLayers() {
     _placeLayers[place.id] = marker;
   });
 
-  /* Build the shared tooltip element and wire map-level hover */
+  /* Build the shared tooltip elements and wire map-level hover */
   _placeTipEl = document.createElement('div');
   _placeTipEl.className = 'tl-place-tip';
   document.body.appendChild(_placeTipEl);
@@ -492,6 +522,7 @@ function _renderRoutes(t) {
     var totalWindow = route.end + (figureActive ? 0 : linger) + 80;
     if (t < route.start || t > totalWindow) {
       line.setStyle({ opacity: 0 });
+      if (line._hitLine) line._hitLine.setStyle({ opacity: 0 });
       return;
     }
 
@@ -507,8 +538,14 @@ function _renderRoutes(t) {
     if (partial.length >= 2) {
       line.setLatLngs(partial);
       line.setStyle({ opacity: alpha * (route.opacity || 0.85) });
+      /* Keep hit line in sync so hover only works when the route is visible */
+      if (line._hitLine) {
+        line._hitLine.setLatLngs(partial);
+        line._hitLine.setStyle({ opacity: alpha > 0.05 ? 0.001 : 0 });
+      }
     } else {
       line.setStyle({ opacity: 0 });
+      if (line._hitLine) line._hitLine.setStyle({ opacity: 0 });
     }
   });
 }
@@ -552,14 +589,15 @@ function _renderFigures(t) {
     var marker = _figLayers[fig.id];
     if (!marker) return;
     var pos = _figurePos(fig.positions, t, fig.end);
-    if (!pos) { marker.setOpacity(0); return; }
+    if (!pos) { marker.setOpacity(0); marker._figData = null; return; }
     marker.setLatLng([pos.lat, pos.lon]);
     marker.setOpacity(1);
-    if (pos.note) {
-      marker.bindTooltip(escHtml(fig.label + ' — ' + pos.note), {
-        permanent: false, direction: 'top', offset: [0,-10]
-      });
-    }
+    // INTENT: Store current figure state on the marker so _onPlaceMouseMove can
+    //   include figures in the same stacking tooltip as place dots — avoids native
+    //   Leaflet tooltips (which render a separate, non-stacking tooltip per marker).
+    // CHANGE? If fig.color or pos.note schema changes, update _onPlaceMouseMove
+    //   which reads marker._figData.{label, color, note}.
+    marker._figData = { label: fig.label, color: fig.color || '#e63', note: pos.note || '' };
     visible.push({ id: fig.id, label: fig.label, color: fig.color, note: pos.note || '' });
   });
 
@@ -694,7 +732,17 @@ function _renderPlaces(t) {
   });
 }
 
-/* ── Place proximity tooltip ─────────────────────────────────────────────── */
+/* ── Place + figure proximity tooltip ────────────────────────────────────── */
+// INTENT: Single map-level mousemove handler builds one stacking tooltip for all
+//   visible place dots AND figure markers within _PLACE_HIT_PX of the cursor.
+//   Place dots are non-interactive (interactive:false) so they can't bindTooltip;
+//   figures previously used native bindTooltip which rendered separately and couldn't
+//   stack. Now both share this handler so the tooltip always shows everything nearby.
+// CHANGE? If place marker positions or figure marker positions diverge from
+//   _placeLayers/_figLayers, update the two forEach loops. If _figData schema
+//   changes (set in _renderFigures), update the figure HTML block below.
+// VERIFY: On the timelapse map, position the slider so a named figure (e.g. Moses)
+//   is near a place dot → hovering between them shows both in one stacked tooltip.
 var _PLACE_HIT_PX = 22;   /* pixel radius that counts as "hovering this dot" */
 
 function _onPlaceMouseMove(e) {
@@ -708,39 +756,76 @@ function _onPlaceMouseMove(e) {
     var marker = _placeLayers[place.id];
     if (!marker) return;
     var mPt = _map.latLngToContainerPoint(marker.getLatLng());
-    if (pt.distanceTo(mPt) <= _PLACE_HIT_PX) nearby.push(place);
+    if (pt.distanceTo(mPt) <= _PLACE_HIT_PX) nearby.push({ type: 'place', data: place });
   });
 
-  if (!nearby.length) { _hidePlaceTip(); return; }
+  /* Also check visible figure markers */
+  Object.keys(_figLayers).forEach(function (id) {
+    var marker = _figLayers[id];
+    if (!marker || !marker._figData) return;  /* _figData=null means hidden (set by _renderFigures) */
+    var mPt = _map.latLngToContainerPoint(marker.getLatLng());
+    if (pt.distanceTo(mPt) <= _PLACE_HIT_PX) nearby.push({ type: 'figure', data: marker._figData });
+  });
 
-  /* Build combined HTML — separator between entries */
+  if (!nearby.length && !_hoveredRoute) { _hidePlaceTip(); return; }
+
+  /* Build combined HTML — dots first, then hovered route (with separator) */
   var html = '';
-  nearby.forEach(function (place, i) {
+  nearby.forEach(function (item, i) {
     if (i > 0) html += '<div class="tl-place-tip-sep"></div>';
-    html += '<div class="tl-place-tt-label">' + escHtml(place.label) + '</div>' +
-            '<div class="tl-place-tt-sig">'   + escHtml(place.significance || '') + '</div>';
+    if (item.type === 'figure') {
+      var fd = item.data;
+      html += '<div class="tl-place-tt-label tl-fig-tt-label" style="border-left-color:' +
+              escHtml(fd.color) + '">' + escHtml(fd.label) + '</div>' +
+              (fd.note ? '<div class="tl-place-tt-sig">' + escHtml(fd.note) + '</div>' : '');
+    } else {
+      var place = item.data;
+      html += '<div class="tl-place-tt-label">' + escHtml(place.label) + '</div>' +
+              '<div class="tl-place-tt-sig">'   + escHtml(place.significance || '') + '</div>';
+    }
   });
+  if (_hoveredRoute) {
+    if (html) html += '<div class="tl-place-tip-sep"></div>';
+    html += '<div class="tl-route-tt-label" style="border-left-color:' +
+            escHtml(_hoveredRoute.color || '#999') + '">' + escHtml(_hoveredRoute.label) + '</div>' +
+            (_hoveredRoute.description
+              ? '<div class="tl-route-tt-desc">' + escHtml(_hoveredRoute.description) + '</div>' : '');
+  }
 
   _placeTipEl.innerHTML = html;
   _placeTipEl.style.display = 'block';
 
-  /* Position above-right of cursor; clamp to viewport on next frame when size is known */
+  /* Position above-right of cursor; clamp to viewport on next frame when size is known.
+     If the single-column tooltip exceeds the viewport height, switch to two columns so
+     many stacked entries don't cascade off-screen. getBoundingClientRect() forces a
+     synchronous reflow so the post-class measurements are accurate. */
   var cx = e.originalEvent.clientX, cy = e.originalEvent.clientY;
   _placeTipEl.style.left = (cx + 14) + 'px';
   _placeTipEl.style.top  = (cy - 14) + 'px';
   requestAnimationFrame(function () {
     if (_placeTipEl.style.display === 'none') return;
+    /* Reset to single-column before measuring so re-entries don't accumulate wide class */
+    _placeTipEl.classList.remove('tl-place-tip--wide');
     var r = _placeTipEl.getBoundingClientRect();
+    /* Switch to two-column layout when content would overflow the viewport */
+    if (r.height > window.innerHeight - 48) {
+      _placeTipEl.classList.add('tl-place-tip--wide');
+      r = _placeTipEl.getBoundingClientRect();   /* re-measure after reflow */
+    }
     var x = cx + 14, y = cy - r.height - 8;
     if (x + r.width  > window.innerWidth  - 8) x = cx - r.width - 14;
     if (y < 8)                                  y = cy + 14;
+    if (y + r.height > window.innerHeight - 8) y = window.innerHeight - r.height - 8;
     _placeTipEl.style.left = x + 'px';
     _placeTipEl.style.top  = y + 'px';
   });
 }
 
 function _hidePlaceTip() {
-  if (_placeTipEl) _placeTipEl.style.display = 'none';
+  if (_placeTipEl) {
+    _placeTipEl.style.display = 'none';
+    _placeTipEl.classList.remove('tl-place-tip--wide');
+  }
 }
 
 /* ── Tribe tooltip — bottom-right corner at cursor ───────────────────────── */
@@ -822,15 +907,33 @@ function _buildEventList() {
 }
 
 /* ── Event list text filter ──────────────────────────────────────────────── */
+// INTENT: Filter visible event items by search query. Shows a "No events match" message
+//   when all items are hidden so the user knows the query returned zero results.
+// CHANGE? If .tl-ev-item selector changes, update both the filter loop and the count check.
+// VERIFY: Open /maps/timelapse/, type "zzz" → "No events match" message; clear input → list restores.
 function _wireEventSearch() {
   var input  = document.getElementById('tl-event-search');
   var listEl = document.getElementById('tl-event-list');
   if (!input || !listEl) return;
   input.addEventListener('input', function () {
     var q = input.value.trim().toLowerCase();
+    var visible = 0;
     listEl.querySelectorAll('.tl-ev-item').forEach(function (el) {
-      el.style.display = (q && !el.textContent.toLowerCase().includes(q)) ? 'none' : '';
+      var show = !q || el.textContent.toLowerCase().includes(q);
+      el.style.display = show ? '' : 'none';
+      if (show) visible++;
     });
+    var emptyEl = listEl.querySelector('.tl-ev-empty');
+    if (!visible && q) {
+      if (!emptyEl) {
+        emptyEl = document.createElement('p');
+        emptyEl.className = 'tl-ev-empty';
+        listEl.appendChild(emptyEl);
+      }
+      emptyEl.textContent = 'No events match "' + q + '"';
+    } else if (emptyEl) {
+      emptyEl.remove();
+    }
   });
 }
 

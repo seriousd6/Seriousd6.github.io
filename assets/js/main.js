@@ -31,18 +31,17 @@
   function _r(p) { return _root + p; }
 
   /* ── Module-level state shared between sidebar and reader ──── */
-  // INTENT: BOOK_STUDIES is populated asynchronously inside loadTopics() after
-  //   data/topics.json loads. Code that reads it must run inside the .then()
-  //   callback or use _readerUpdate as a deferred callback. Do NOT read
-  //   BOOK_STUDIES synchronously at module init time — it will be empty.
-  //   _readerUpdate is set by initReaderStudyLink() so the reader banner can
-  //   appear even if the reader already has a book selected before topics load.
-  // CHANGE? If topics.json gains new fields (e.g. a "section" key), update the
-  //   loop in loadTopics(), the BOOK_STUDIES entry shape, window._BOOK_STUDIES
-  //   exposure, and initReaderStudyLink's read of BOOK_STUDIES[bookId].
-  // VERIFY: Open the reader on Romans; the "Study guide available" banner should
-  //   appear above results without requiring a page reload.
+  // INTENT: BOOK_STUDIES is populated from data/books-content.json (primary) and
+  //   data/topics.json (fallback). Both are async; _readerUpdate is set by
+  //   initReaderStudyLink() so the banner fires whenever either load completes.
+  //   _bookContent holds the full books-content.json object for tier-aware banners.
+  // CHANGE? If books-content.json schema changes (guide/deep_dive/commentary keys),
+  //   update getBannerItems() and loadBooksContent() below. If topics.json is
+  //   removed, also remove the loadTopics() BOOK_STUDIES fallback path.
+  // VERIFY: Open the reader on Romans; the study banner shows tier links.
+  //   Open on a book with no content; banner is hidden.
   var BOOK_STUDIES   = {};
+  var _bookContent   = null;
   var _readerUpdate  = null;
 
   /* ── Nav data ─────────────────────────────────────────────── */
@@ -52,11 +51,12 @@
   // Tool links appear above the collapsible groups so they're always visible.
   var NAV = {
     tools: [
-      { label: '📖 The Holy Bible', href: _r('read/') },
-      { label: '📜 Apocrypha',      href: _r('apocrypha/') },
-      { label: '🔍 Explore',        href: _r('search/') },
-      { label: '📚 Studies',        href: _r('studies/') },
-      { label: '✝ Discipline',      href: _r('discipline/') }
+      { label: '📖 The Holy Bible',        href: _r('read/') },
+      { label: '📜 Apocrypha',             href: _r('apocrypha/') },
+      { label: '🔍 Explore',               href: _r('search/') },
+      { label: '📚 Studies',               href: _r('studies/') },
+      { label: '✝ Discipline',             href: _r('discipline/') },
+      { label: '🔬 Original Language Study', href: _r('translation/workshop/') }
     ],
     groups: [
       {
@@ -100,11 +100,7 @@
           { label: '📋 Library',                href: _r('library/') },
           { label: '📚 Reading History',        href: _r('library/progress/') }
         ],
-        subgroups: [
-          { id: 'book-overviews',   label: 'Bible Book Overviews', items: [] },
-          { id: 'study-guides',     label: 'Study Guides',         items: [] },
-          { id: 'topical-articles', label: 'Topical Articles',     items: [] }
-        ]
+        subgroups: []
       }
     ]
   };
@@ -218,7 +214,12 @@
   //   Desktop topic page      → overlays content (sidebar-overlay + sb-open toggle)
   //   Mobile (<1024 px)       → always overlay, toggled by hamburger button
   function buildSidebar() {
-    if (new URLSearchParams(location.search).get('minimal')) return;
+    if (new URLSearchParams(location.search).get('minimal')) {
+      /* No sidebar in minimal/iframe mode — remove the 240px body padding-left
+         that style.css applies by default so the page fills the iframe fully. */
+      document.body.classList.add('sidebar-collapsed');
+      return;
+    }
 
     var sidebar = mk('aside', 'site-sidebar');
     sidebar.id  = 'site-sidebar';
@@ -459,76 +460,103 @@
     if (legacyToggle) legacyToggle.style.display = 'none';
   }
 
-  /* ── Load topics from data/topics.json ───────────────────── */
-  // Fetches the topics manifest and appends links into the Bible Books and
-  // Topical Studies subgroups inside the sidebar. Each topic entry must have
-  // { slug, label, type } where type is "book" (goes under Bible Books) or
-  // anything else (goes under Topical Studies). An optional "book" field maps
-  // the topic to a book ID so the reader can show the study guide banner.
-  // If the fetch fails, static sidebar items still render normally.
-  function loadTopics() {
-    var bookEl    = document.getElementById('sbsg-library-book-overviews');
-    var studyEl   = document.getElementById('sbsg-library-study-guides');
-    var topicalEl = document.getElementById('sbsg-library-topical-articles');
-    if (!bookEl && !studyEl && !topicalEl) return;
+  /* ── Load books-content.json — primary source for BOOK_STUDIES ── */
+  // INTENT: Fetches the books-content manifest and builds BOOK_STUDIES (used
+  //   by the reader study banner). Also stores the full manifest in _bookContent
+  //   so getBannerItems() can make tier-aware link decisions per navigation state.
+  //   Falls back gracefully — if fetch fails, the topics.json fallback below
+  //   provides basic BOOK_STUDIES entries for books with existing study pages.
+  // CHANGE? If books-content.json schema changes (guide/deep_dive/commentary
+  //   keys or the url field name), update both here and in getBannerItems().
+  // VERIFY: Open reader on Romans — study banner appears. Open on Genesis —
+  //   banner is hidden.
+  function loadBooksContent() {
+    fetch(_r('data/books-content.json'))
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        _bookContent = data;
+        if (data.books) {
+          Object.keys(data.books).forEach(function (bookId) {
+            var bc = data.books[bookId];
+            var best = (bc.commentary && bc.commentary.exists && bc.commentary.url)
+              || (bc.deep_dive && bc.deep_dive.exists && bc.deep_dive.url)
+              || (bc.guide && bc.guide.exists && bc.guide.url);
+            if (best) BOOK_STUDIES[bookId] = { href: _r(best), label: bookId };
+          });
+        }
+        if (_readerUpdate) _readerUpdate();
+      })
+      .catch(function () {});
+  }
 
+  /* ── Load topics.json — fallback BOOK_STUDIES for books not in books-content ── */
+  // INTENT: Provides backward-compatible BOOK_STUDIES entries from topics.json
+  //   for any book with a t.book field. loadBooksContent() overrides these entries
+  //   once books-content.json loads (it runs first in the init sequence).
+  //   Sidebar subgroup DOM elements no longer exist, so this only builds state.
+  // CHANGE? If topics.json is fully retired, remove this function and its call.
+  // VERIFY: Remove books-content.json temporarily — reader banner for Hebrews
+  //   still shows the study-guides/hebrews/ link from topics.json.
+  function loadTopics() {
     fetch(_r('data/topics.json'))
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (topics) {
         topics.forEach(function (t) {
-          // Allow an explicit href override (e.g. study-guides/) instead of the default topics/ path.
           var href = t.href ? _r(t.href) : _r('topics/' + t.slug + '/');
-          var a    = mk('a', 'sb-subchild');
-          a.href   = href;
-          a.textContent = t.label;
-          if (isActive(href)) a.setAttribute('aria-current', 'page');
-
-          if (t.type === 'book')  { if (bookEl)    bookEl.appendChild(a); }
-          else if (t.type === 'study') { if (studyEl) studyEl.appendChild(a); }
-          else                    { if (topicalEl) topicalEl.appendChild(a); }
-
-          if (t.book) BOOK_STUDIES[t.book] = { href: href, label: t.label };
-        });
-
-        /* INTENT: Walk the freshly-appended topic links to find the active page,
-           then expand that link's subgroup and its parent group. Must run after
-           all appendChild calls complete — this is why it's at the end of the
-           .then() callback rather than in the sidebar-build phase.
-           VERIFY: Navigate directly to /topics/justification/; the Library →
-           Topical Articles subgroup should be pre-expanded with that link highlighted. */
-        [bookEl, studyEl, topicalEl].forEach(function (itemsEl) {
-          if (!itemsEl || !itemsEl.querySelector('[aria-current="page"]')) return;
-
-          var sgBtn = itemsEl.previousElementSibling;
-          if (sgBtn && sgBtn.classList.contains('sb-subgroup-btn')) {
-            sgBtn.setAttribute('aria-expanded', 'true');
-            sgBtn.classList.add('is-active');
-            itemsEl.removeAttribute('hidden');
-          }
-
-          /* Walk up to find the enclosing .sb-group-items */
-          var node = itemsEl.parentNode;
-          while (node && !node.classList.contains('sb-group-items')) node = node.parentNode;
-          if (node) {
-            node.removeAttribute('hidden');
-            var gBtn = node.previousElementSibling;
-            if (gBtn && gBtn.classList.contains('sb-group-btn')) {
-              gBtn.setAttribute('aria-expanded', 'true');
-              gBtn.classList.add('is-active');
-            }
+          if (t.book && !BOOK_STUDIES[t.book]) {
+            BOOK_STUDIES[t.book] = { href: href, label: t.label };
           }
         });
-
         if (_readerUpdate) _readerUpdate();
       })
-      .catch(function () { /* fail silently — static items still render */ });
+      .catch(function () {});
   }
 
-  /* ── Reader: show study-guide link when a book with a study is open ── */
-  // Watches the reader's book selector and verse container for changes.
-  // When the reader is showing a book that has a corresponding topic page
-  // in BOOK_STUDIES, a banner appears above the chapter with a link to that page.
-  // The banner is hidden for books without a study guide.
+  /* ── Tier-aware banner items ─────────────────────────────── */
+  // INTENT: Returns an array of { label, href, icon } items for the reader study
+  //   banner, choosing the most contextually useful tiers based on navigation state.
+  //   ch===0 = book intro (show all tiers); ch>0 = chapter view (prefer deep dive).
+  //   Falls back to the legacy BOOK_STUDIES single-link if _bookContent is absent.
+  // CHANGE? If books-content.json adds new tiers or renames guide/deep_dive/
+  //   commentary keys, update the bc field reads here. If reader.js adds a verse
+  //   field to _readerNavState, add verse-level Tier 3 preference logic.
+  // VERIFY: Reader at Romans intro (ch=0) → banner shows all available tiers.
+  //   Reader at Romans 8 (ch=8) → banner shows "Deep dive" link to topics/romans/.
+  //   Reader at Genesis 1 → banner is hidden (no content).
+  function getBannerItems(bookId, ch) {
+    if (!_bookContent || !_bookContent.books) {
+      var legacy = BOOK_STUDIES[bookId];
+      return legacy ? [{ label: 'Study resource', href: legacy.href, icon: '📖' }] : null;
+    }
+    var bc = _bookContent.books[bookId];
+    if (!bc) return null;
+    var items = [];
+    if (ch === 0) {
+      if (bc.deep_dive  && bc.deep_dive.exists)  items.push({ label: 'Deep Dive',   href: _r(bc.deep_dive.url),  icon: '⊕' });
+      if (bc.guide      && bc.guide.exists)       items.push({ label: 'Study Guide', href: _r(bc.guide.url),      icon: '◎' });
+      if (bc.commentary && bc.commentary.exists)  items.push({ label: 'Commentary',  href: _r(bc.commentary.url), icon: '❧' });
+    } else {
+      if (bc.commentary && bc.commentary.exists && bc.commentary.chapters_done.indexOf(ch) !== -1)
+        items.push({ label: 'Verse commentary', href: _r(bc.commentary.url + '#ch-' + ch), icon: '❧' });
+      else if (bc.deep_dive && bc.deep_dive.exists)
+        items.push({ label: 'Deep dive',  href: _r(bc.deep_dive.url), icon: '⊕' });
+      if (bc.guide && bc.guide.exists)
+        items.push({ label: 'Study guide', href: _r(bc.guide.url), icon: '◎' });
+    }
+    return items.length ? items : null;
+  }
+
+  /* ── Reader: tier-aware study banner ─────────────────────── */
+  // INTENT: Watches the reader's results container for any navigation (chapter
+  //   render, book intro). On each change, reads window._readerNavState (set by
+  //   reader.js) for current bookId+ch, calls getBannerItems() to pick the right
+  //   tier links, and renders them. Multiple tiers render as links separated by ·.
+  // CHANGE? If reader.js changes the _readerNavState shape (bookId, ch keys),
+  //   update the destructuring below. If getBannerItems() signature changes, update
+  //   the call here.
+  // VERIFY: Reader on Romans 8 → banner shows "⊕ Deep dive" + "◎ Study guide".
+  //   Reader on Genesis 1 → banner hidden. Navigate back to Romans → banner
+  //   reappears without a page reload.
   function initReaderStudyLink() {
     var bookSel   = document.getElementById('reader-book-select');
     var resultsEl = document.getElementById('reader-results');
@@ -539,18 +567,19 @@
     resultsEl.parentNode.insertBefore(banner, resultsEl);
 
     function update() {
-      var bookId = bookSel.value;
-      var study  = BOOK_STUDIES[bookId];
-      if (study) {
-        var bookName = bookSel.options[bookSel.selectedIndex]
-          ? bookSel.options[bookSel.selectedIndex].text
-          : study.label;
-        banner.innerHTML =
-          '<span class="reader-study-banner__icon">📖</span>' +
-          '<span class="reader-study-banner__text">Study guide available:</span>' +
-          '<a class="reader-study-banner__link" href="' + study.href + '">' +
-            bookName + ' Study →' +
-          '</a>';
+      var state  = window._readerNavState;
+      var bookId = (state && state.bookId) || bookSel.value;
+      var ch     = (state && state.ch != null) ? state.ch : -1;
+      var items  = getBannerItems(bookId, ch);
+      if (items && items.length) {
+        var html = '<span class="reader-study-banner__icon" aria-hidden="true">📖</span>' +
+                   '<span class="reader-study-banner__text">Study resources:</span>';
+        items.forEach(function (item, i) {
+          if (i > 0) html += '<span class="reader-study-banner__sep" aria-hidden="true"> · </span>';
+          html += '<a class="reader-study-banner__link" href="' + item.href + '">' +
+                    item.icon + ' ' + item.label + '</a>';
+        });
+        banner.innerHTML = html;
         banner.removeAttribute('hidden');
       } else {
         banner.setAttribute('hidden', '');
@@ -567,6 +596,7 @@
 
   buildSidebar();
   initReaderStudyLink();
+  loadBooksContent();
   loadTopics();
 
 })();

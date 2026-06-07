@@ -97,6 +97,7 @@
       <div class="mem-tabs" role="tablist">
         <button class="mem-tab mem-tab--active" data-tab="browse" role="tab" aria-selected="true"  id="mem-browse-tab"  aria-controls="mem-browse-panel">Browse</button>
         <button class="mem-tab" data-tab="review" role="tab" aria-selected="false" id="mem-review-tab" aria-controls="mem-review-panel">Review <span id="mem-due-badge" class="mem-badge" hidden></span></button>
+        <button class="mem-tab" data-tab="ol"     role="tab" aria-selected="false" id="mem-ol-tab"     aria-controls="mem-ol-panel">Original Language <span id="ol-due-badge" class="mem-badge" hidden></span></button>
       </div>
       <div id="mem-browse-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-browse-tab">
         <div class="mem-add-row">
@@ -148,6 +149,55 @@
           </p>
           <button id="mem-back-browse" class="mem-back-btn">Back to Browse</button>
         </div>
+      </div>
+
+      <!-- ── Original Language flashcard panel ───────────────────── -->
+      <div id="mem-ol-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-ol-tab" hidden>
+
+        <!-- Deck list view -->
+        <div id="ol-list-view">
+          <div class="mem-ol-header">
+            <p id="ol-deck-info" class="mem-ol-info"></p>
+            <div class="mem-ol-controls">
+              <select id="ol-lang-filter" class="mem-mode-select" aria-label="Language filter">
+                <option value="all">All languages</option>
+                <option value="greek">Greek only</option>
+                <option value="hebrew">Hebrew only</option>
+              </select>
+              <button id="ol-review-btn" class="mem-add-btn" type="button" disabled>Review Due</button>
+            </div>
+          </div>
+          <div id="ol-word-list" class="mem-ol-list"></div>
+          <div id="ol-empty" class="bsw-empty-state" hidden>
+            <span class="bsw-empty-state__glyph" aria-hidden="true">α</span>
+            <p class="bsw-empty-state__title">No words in your deck yet</p>
+            <p class="bsw-empty-state__desc">Study a passage in the Original Language Study tool, then click ☆ on any word to add it here.</p>
+            <a class="bsw-empty-state__cta" href="../translation/workshop/">Open Original Language Study</a>
+          </div>
+        </div>
+
+        <!-- Flashcard review view (hidden until started) -->
+        <div id="ol-review-view" hidden>
+          <div id="ol-review-progress" class="mem-progress"></div>
+          <div class="mem-card" id="ol-card">
+            <div id="ol-front" class="mem-card__front mem-ol-card__front"></div>
+            <div id="ol-back"  class="mem-card__back  mem-ol-card__back" hidden></div>
+            <div id="ol-actions" class="mem-card__actions" hidden>
+              <button class="mem-rate-btn mem-rate-btn--again" data-rating="again">Again<br><small>1 day</small></button>
+              <button class="mem-rate-btn mem-rate-btn--hard"  data-rating="hard">Hard<br><small>3 days</small></button>
+              <button class="mem-rate-btn mem-rate-btn--good"  data-rating="good">Good<br><small>7 days</small></button>
+              <button class="mem-rate-btn mem-rate-btn--easy"  data-rating="easy">Easy<br><small>21 days</small></button>
+            </div>
+          </div>
+          <div id="ol-done" class="mem-review-done" hidden>
+            <p>All caught up! Your Greek and Hebrew vocabulary is reviewed for today.</p>
+            <p style="font-size:.85rem;margin-bottom:1rem">
+              <a href="../translation/workshop/" style="color:var(--color-primary);font-weight:500">Study more passages to discover new words →</a>
+            </p>
+            <button id="ol-back-btn" class="mem-back-btn" type="button">Back to Deck</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -719,7 +769,7 @@
       // ── Prayers IIFE ──────────────────────────────────────────────────
       (function(){
         var JOURNAL_KEY='bsw_journal', READ_URL='../read/';
-        var _editId=null, _searchQ='', _tagFilter=null, _statusFilter='all', _formTags=[];
+        var _editId=null, _searchQ='', _tagFilter=null, _statusFilter='all', _formTags=[], _searchTimer=null;
         function load(){try{return JSON.parse(localStorage.getItem(JOURNAL_KEY)||'[]');}catch(e){return[];}}
         function save(a){localStorage.setItem(JOURNAL_KEY,JSON.stringify(a));}
         function fmt(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'short',month:'long',day:'numeric',year:'numeric'});}
@@ -912,7 +962,7 @@
             render();
           });
         });
-        document.getElementById('journal-search').addEventListener('input',function(){_searchQ=this.value.trim();render();});
+        document.getElementById('journal-search').addEventListener('input',function(){_searchQ=this.value.trim();clearTimeout(_searchTimer);_searchTimer=setTimeout(render,150);});
         document.getElementById('journal-new-btn').addEventListener('click',function(){showForm(null);document.getElementById('journal-form-container').scrollIntoView({behavior:'smooth',block:'nearest'});});
         render();
       }());
@@ -920,7 +970,7 @@
       // ── Reflections sub-IIFE ──────────────────────────────────────────
       (function(){
         var REFL_KEY='bsw_reflections',READ_URL='../read/';
-        var _rEditId=null,_rSearchQ='',_rTagFilter=null,_rFormTags=[];
+        var _rEditId=null,_rSearchQ='',_rTagFilter=null,_rFormTags=[],_rSearchTimer=null;
         function loadR(){try{return JSON.parse(localStorage.getItem(REFL_KEY)||'[]');}catch(e){return[];}}
         function saveR(a){localStorage.setItem(REFL_KEY,JSON.stringify(a));}
         function todayR(){return new Date().toISOString().slice(0,10);}
@@ -1018,7 +1068,7 @@
           card.appendChild(head);card.appendChild(body);return card;
         }
         document.getElementById('refl-new-btn').addEventListener('click',function(){showReflForm(null);});
-        document.getElementById('refl-search').addEventListener('input',function(){_rSearchQ=this.value.trim();renderRefl();});
+        document.getElementById('refl-search').addEventListener('input',function(){_rSearchQ=this.value.trim();clearTimeout(_rSearchTimer);_rSearchTimer=setTimeout(renderRefl,150);});
         renderRefl();
       }());
     } // end initJournal
@@ -1053,7 +1103,7 @@
       function fmtW(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'});}
       function fmtWS(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});}
 
-      var _wEditId=null, _wSearchQ='', _wEditFastId=null;
+      var _wEditId=null, _wSearchQ='', _wEditFastId=null, _wSearchTimer=null;
 
       function showSermonForm(entry){
         _wEditId=entry?entry.id:null;var isEdit=!!entry;
@@ -1174,7 +1224,7 @@
       }
 
       document.getElementById('worship-new-btn').addEventListener('click',function(){showSermonForm(null);});
-      document.getElementById('worship-search').addEventListener('input',function(){_wSearchQ=this.value.trim();renderSermons();});
+      document.getElementById('worship-search').addEventListener('input',function(){_wSearchQ=this.value.trim();clearTimeout(_wSearchTimer);_wSearchTimer=setTimeout(renderSermons,150);});
       document.getElementById('fast-new-btn').addEventListener('click',function(){showFastForm(null);});
       renderSermons(); renderFasts();
     } // end initWorship
@@ -1182,7 +1232,7 @@
     /* ══════════════════════════ GRATITUDE ══════════════════════════════════ */
     function initGratitude() {
       var GRAT_KEY='bsw_gratitude';
-      var _gEditId=null, _gSearchQ='', _gFormTags=[];
+      var _gEditId=null, _gSearchQ='', _gFormTags=[], _gSearchTimer=null;
       function loadG(){try{return JSON.parse(localStorage.getItem(GRAT_KEY)||'[]');}catch(e){return[];}}
       function saveG(a){localStorage.setItem(GRAT_KEY,JSON.stringify(a));}
       function todayG(){return new Date().toISOString().slice(0,10);}
@@ -1266,7 +1316,7 @@
       }
 
       document.getElementById('grat-new-btn').addEventListener('click',function(){showGratForm(null);});
-      document.getElementById('grat-search').addEventListener('input',function(){_gSearchQ=this.value.trim();renderGrat();});
+      document.getElementById('grat-search').addEventListener('input',function(){_gSearchQ=this.value.trim();clearTimeout(_gSearchTimer);_gSearchTimer=setTimeout(renderGrat,150);});
       document.getElementById('grat-export-btn').addEventListener('click',function(){
         var d=loadG();if(!d.length)return;
         var blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='bsw-gratitude-'+todayG()+'.json';a.click();URL.revokeObjectURL(url);
@@ -1288,6 +1338,262 @@
     } // end initGratitude
 
   }()); // end master IIFE
+  </script>
+
+  <!-- Original Language flashcard panel — reads bsw_ws_fc_deck / bsw_ws_fc_progress -->
+  <script type="module">
+  import { loadStrongs } from '../assets/js/core.js';
+
+  var SK_DECK     = 'bsw_ws_fc_deck';
+  var SK_PROGRESS = 'bsw_ws_fc_progress';
+  var FC_INTERVALS = { again: 1, hard: 3, good: 7, easy: 21 };
+
+  var _strongsCache = {};   // lang → dict object
+  var _olInited     = false;
+  var _olQueue      = [];   // codes for current review session
+  var _olIdx        = 0;
+  var _olLang       = 'all';
+
+  function _getDeck() {
+    try { var d = JSON.parse(localStorage.getItem(SK_DECK) || '{}'); return { greek: d.greek || [], hebrew: d.hebrew || [] }; }
+    catch (e) { return { greek: [], hebrew: [] }; }
+  }
+  function _removeFromDeck(code) {
+    var d = _getDeck();
+    d.greek  = d.greek.filter(function (c) { return c !== code; });
+    d.hebrew = d.hebrew.filter(function (c) { return c !== code; });
+    try { localStorage.setItem(SK_DECK, JSON.stringify(d)); } catch (e) {}
+    _renderOlList();
+  }
+  function _getProgress() {
+    try { return JSON.parse(localStorage.getItem(SK_PROGRESS) || '{}'); } catch (e) { return {}; }
+  }
+  function _saveProgress(p) {
+    try { localStorage.setItem(SK_PROGRESS, JSON.stringify(p)); } catch (e) {}
+  }
+  function _today() {
+    return new Date().toISOString().slice(0, 10);
+  }
+  function _isDue(code) {
+    var p = _getProgress()[code];
+    if (!p || !p.due) return true;
+    return p.due <= _today();
+  }
+
+  // Wire the "Original Language" mem-tab button
+  var olBtn = document.getElementById('mem-ol-tab');
+  if (olBtn) {
+    olBtn.addEventListener('click', function () {
+      // Switch mem-tab active states
+      document.querySelectorAll('.mem-tab').forEach(function (b) {
+        b.classList.toggle('mem-tab--active', b === olBtn);
+        b.setAttribute('aria-selected', b === olBtn ? 'true' : 'false');
+      });
+      document.querySelectorAll('.mem-panel').forEach(function (p) { p.hidden = true; });
+      var panel = document.getElementById('mem-ol-panel');
+      if (panel) { panel.hidden = false; _initOlPanel(); }
+    });
+  }
+
+  async function _initOlPanel() {
+    if (_olInited) { _renderOlList(); return; }
+    _olInited = true;
+
+    var deck = _getDeck();
+    var allCodes = [...deck.greek, ...deck.hebrew];
+    if (allCodes.length === 0) {
+      document.getElementById('ol-empty').removeAttribute('hidden');
+      document.getElementById('ol-word-list').hidden = true;
+      document.getElementById('ol-deck-info').textContent = 'No words in your deck yet.';
+      return;
+    }
+
+    // Load strongs data for each language that has entries in the deck
+    if (deck.greek.length && !_strongsCache.greek) {
+      _strongsCache.greek = await loadStrongs('greek').catch(function () { return {}; });
+    }
+    if (deck.hebrew.length && !_strongsCache.hebrew) {
+      _strongsCache.hebrew = await loadStrongs('hebrew').catch(function () { return {}; });
+    }
+
+    // Wire lang filter and review button
+    var langSel = document.getElementById('ol-lang-filter');
+    if (langSel) {
+      langSel.addEventListener('change', function () {
+        _olLang = langSel.value;
+        _renderOlList();
+      });
+    }
+    var reviewBtn = document.getElementById('ol-review-btn');
+    if (reviewBtn) {
+      reviewBtn.addEventListener('click', _startOlReview);
+    }
+    document.getElementById('ol-back-btn').addEventListener('click', function () {
+      document.getElementById('ol-review-view').hidden = true;
+      document.getElementById('ol-list-view').hidden = false;
+      _renderOlList();
+    });
+
+    _renderOlList();
+  }
+
+  function _getFilteredCodes() {
+    var deck = _getDeck();
+    var codes = [];
+    if (_olLang === 'all' || _olLang === 'greek')  codes = codes.concat(deck.greek);
+    if (_olLang === 'all' || _olLang === 'hebrew') codes = codes.concat(deck.hebrew);
+    return codes;
+  }
+
+  function _getEntry(code) {
+    var lang = code.startsWith('G') ? 'greek' : 'hebrew';
+    return (_strongsCache[lang] || {})[code];
+  }
+
+  function _renderOlList() {
+    var codes  = _getFilteredCodes();
+    var prog   = _getProgress();
+    var listEl = document.getElementById('ol-word-list');
+    var infoEl = document.getElementById('ol-deck-info');
+    var emptyEl = document.getElementById('ol-empty');
+    var reviewBtn = document.getElementById('ol-review-btn');
+
+    if (!codes.length) {
+      emptyEl.removeAttribute('hidden');
+      listEl.innerHTML = '';
+      if (infoEl) infoEl.textContent = 'No words match the current filter.';
+      if (reviewBtn) reviewBtn.disabled = true;
+      return;
+    }
+    emptyEl.setAttribute('hidden', '');
+
+    var dueCount = codes.filter(_isDue).length;
+    if (infoEl) infoEl.textContent = codes.length + ' word' + (codes.length === 1 ? '' : 's') + ' in deck · ' + dueCount + ' due today';
+    if (reviewBtn) {
+      reviewBtn.disabled = dueCount === 0;
+      reviewBtn.textContent = dueCount > 0 ? 'Review Due (' + dueCount + ')' : 'All reviewed';
+    }
+
+    // Update badge
+    var badge = document.getElementById('ol-due-badge');
+    if (badge) {
+      if (dueCount > 0) { badge.textContent = dueCount; badge.removeAttribute('hidden'); }
+      else badge.setAttribute('hidden', '');
+    }
+
+    listEl.innerHTML = '';
+    codes.forEach(function (code) {
+      var entry = _getEntry(code);
+      if (!entry) return;
+      var due = _isDue(code);
+      var p   = prog[code];
+      var daysLabel = '';
+      if (!due && p && p.due) {
+        var daysLeft = Math.round((new Date(p.due) - new Date()) / 86400000);
+        daysLabel = 'in ' + daysLeft + ' day' + (daysLeft === 1 ? '' : 's');
+      }
+      var item = document.createElement('div');
+      item.className = 'mem-item' + (due ? ' mem-item--due' : '');
+      item.innerHTML = '<div class="mem-item__ref" style="font-family:\'Noto Serif\',serif;font-size:1.1rem">' + (entry.lemma || code) + '</div>'
+        + '<div class="mem-item__text">' + (entry.gloss || entry.meaning || '') + ' <span class="mem-item__badge">' + code + '</span></div>'
+        + '<div class="mem-item__status' + (due ? ' mem-item__status--due' : '') + '">' + (due ? 'Due today' : daysLabel) + '</div>'
+        + '<button class="mem-ol-remove-btn" type="button" title="Remove from deck" data-code="' + code + '">✕ Remove</button>';
+      item.querySelector('.mem-ol-remove-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        _removeFromDeck(code);
+      });
+      listEl.appendChild(item);
+    });
+  }
+
+  function _startOlReview() {
+    var codes = _getFilteredCodes().filter(_isDue);
+    if (!codes.length) return;
+    // Shuffle
+    _olQueue = codes.slice().sort(function () { return Math.random() - 0.5; });
+    _olIdx = 0;
+    document.getElementById('ol-list-view').hidden = true;
+    document.getElementById('ol-review-view').hidden = false;
+    _showOlCard();
+  }
+
+  function _showOlCard() {
+    var doneEl  = document.getElementById('ol-done');
+    var cardEl  = document.getElementById('ol-card');
+    var progEl  = document.getElementById('ol-review-progress');
+
+    if (_olIdx >= _olQueue.length) {
+      cardEl.hidden = true;
+      doneEl.removeAttribute('hidden');
+      if (progEl) progEl.textContent = 'Session complete — ' + _olQueue.length + ' word' + (_olQueue.length === 1 ? '' : 's') + ' reviewed.';
+      return;
+    }
+
+    cardEl.hidden = false;
+    doneEl.setAttribute('hidden', '');
+
+    var code  = _olQueue[_olIdx];
+    var entry = _getEntry(code);
+    var lang  = code.startsWith('G') ? 'Greek' : 'Hebrew';
+
+    var frontEl   = document.getElementById('ol-front');
+    var backEl    = document.getElementById('ol-back');
+    var actionsEl = document.getElementById('ol-actions');
+
+    frontEl.innerHTML = '<div style="font-size:2rem;font-family:\'Noto Serif\',serif;font-weight:700;margin-bottom:0.5rem">'
+      + (entry ? (entry.lemma || code) : code) + '</div>'
+      + '<div style="font-size:0.8rem;color:var(--color-text-muted,#888)">' + lang + ' · ' + code + '</div>'
+      + '<button class="mem-reveal-btn" id="ol-reveal-btn" type="button">Tap to reveal →</button>';
+    backEl.innerHTML = '<div style="font-size:1.8rem;font-family:\'Noto Serif\',serif;font-weight:700">' + (entry ? (entry.lemma || code) : code) + '</div>'
+      + (entry && entry.translit ? '<div style="font-style:italic;color:var(--color-text-muted,#888);margin:0.25rem 0">' + entry.translit + '</div>' : '')
+      + '<div style="font-size:1.1rem;font-weight:600;color:var(--color-primary,#c8a96e);margin:0.4rem 0">"' + (entry ? (entry.gloss || entry.meaning || '') : '') + '"</div>'
+      + (entry && entry.pos ? '<div style="font-size:0.78rem;color:var(--color-text-muted,#888);text-transform:uppercase;letter-spacing:0.05em">' + entry.pos + '</div>' : '');
+    backEl.setAttribute('hidden', '');
+    actionsEl.setAttribute('hidden', '');
+
+    if (progEl) progEl.textContent = (_olIdx + 1) + ' / ' + _olQueue.length;
+
+    document.getElementById('ol-reveal-btn').addEventListener('click', function () {
+      backEl.removeAttribute('hidden');
+      actionsEl.removeAttribute('hidden');
+      document.querySelector('#ol-front .mem-reveal-btn').style.display = 'none';
+    });
+
+    // Wire rating buttons
+    actionsEl.querySelectorAll('.mem-rate-btn[data-rating]').forEach(function (btn) {
+      btn.onclick = function () {
+        var rating = btn.dataset.rating;
+        var prog = _getProgress();
+        var days = FC_INTERVALS[rating] || 7;
+        var nextDue = new Date();
+        nextDue.setDate(nextDue.getDate() + days);
+        prog[code] = { due: nextDue.toISOString().slice(0, 10), interval: days };
+        _saveProgress(prog);
+        _olIdx++;
+        _showOlCard();
+      };
+    });
+  }
+
+  // Wire keyboard shortcuts during review (1-4)
+  document.addEventListener('keydown', function (e) {
+    var panel = document.getElementById('mem-ol-panel');
+    if (!panel || panel.hidden) return;
+    var rv = document.getElementById('ol-review-view');
+    if (!rv || rv.hidden) return;
+    var actEl = document.getElementById('ol-actions');
+    if (actEl && !actEl.hidden) {
+      var ratings = ['again', 'hard', 'good', 'easy'];
+      var idx = {'1':0,'2':1,'3':2,'4':3}[e.key];
+      if (idx !== undefined) { actEl.querySelectorAll('.mem-rate-btn[data-rating]')[idx].click(); }
+    } else {
+      if (e.key === ' ' || e.key === 'Enter') {
+        var revBtn = document.getElementById('ol-reveal-btn');
+        if (revBtn) revBtn.click();
+        e.preventDefault();
+      }
+    }
+  });
   </script>
 </body>
 </html>

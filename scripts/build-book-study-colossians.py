@@ -1,0 +1,168 @@
+"""
+Book Study Data — Colossians
+book_id: colossians
+lang: greek
+
+Run: python3 scripts/build-book-study-colossians.py
+
+Notes:
+- Key vocabulary selected from Paul author group peaks plus Colossians-specific terms
+- The Christ hymn (1:15-20) dominates: eikon, prototokotos, pleroma, kephale
+- apokatalasso is a uniquely Colossian compound (also Eph 2:16) — cosmic reconciliation
+- apekdyomai (strip off) connects 2:15 (Christ disarming powers) to 3:9 (putting off old self)
+- stoicheion and philosophia name the false teaching's own categories
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "colossians",
+
+    "key_vocabulary": [
+        {
+            "code": "G1504",
+            "lemma": "εἰκών",
+            "translit": "eikōn",
+            "gloss": "image",
+            "significance": "εἰκών in 1:15 ('the εἰκών of the invisible God') does not mean an artistic representation but a precise metaphysical copy — the one in whom the invisible becomes visible without remainder. In LXX usage, εἰκών carried the sense of the image bearing the reality of the original (Gen 1:26-27 uses it for humanity's creation in God's image). Paul's claim is that Christ is the perfect, complete self-expression of the Father — not an imperfect representation but the exact impress of the divine nature. The Nicene language of the Son being 'of the same substance' (homoousios) as the Father was the later dogmatic clarification of what εἰκών meant in Colossians 1."
+        },
+        {
+            "code": "G4416",
+            "lemma": "πρωτότοκος",
+            "translit": "prōtotokos",
+            "gloss": "firstborn",
+            "significance": "πρωτότοκος appears twice in the Christ hymn with distinct referents: 'firstborn of all creation' (1:15) and 'firstborn from the dead' (1:18). Both uses should be read through the OT background, where the firstborn held supremacy and inheritance rights over all others (Ps 89:27 applies 'firstborn' to the king as God's supreme representative). The Arian controversy turned on 1:15 — Arians read it as 'the first being created'; the Nicene Fathers argued that firstborn denotes priority and supremacy, not temporal or ontological origin. Verse 1:16 clinches the case: 'for by him all things were created' — the Creator cannot be a creature."
+        },
+        {
+            "code": "G4138",
+            "lemma": "πλήρωμα",
+            "translit": "plērōma",
+            "gloss": "fullness",
+            "significance": "πλήρωμα in Colossians is deployed specifically against an incipient Gnostic tendency to distribute divine fullness among a hierarchy of angelic intermediaries. The claim of 1:19 ('all the πλήρωμα was pleased to dwell in him') and 2:9 ('in him all the πλήρωμα of deity dwells bodily, σωματικῶς') is absolute: there is no divine fullness outside Christ, no spiritual reality distributed among the powers and principalities that is not already fully present in Christ. The addition of σωματικῶς ('bodily') in 2:9 makes an anti-docetic claim: the fullness dwells in Christ's actual bodily existence, not merely in a spiritual or celestial mode."
+        },
+        {
+            "code": "G2776",
+            "lemma": "κεφαλή",
+            "translit": "kephalē",
+            "gloss": "head",
+            "significance": "In Colossians, κεφαλή is used in two closely related senses: 'he is the head of the body, the church' (1:18) and 'he is the head of all rule and authority' (2:10). The second use is the letter's decisive argument against the Colossian philosophy — any angelic power that the false teachers venerated is already under the authority of Christ. The body-head metaphor in 2:19 is particularly sharp: the false teachers have lost connection with the head 'from whom the whole body, nourished and held together through its joints and ligaments, grows with a growth that is from God.' Disconnection from Christ means disconnection from the source of life."
+        },
+        {
+            "code": "G3466",
+            "lemma": "μυστήριον",
+            "translit": "mystērion",
+            "gloss": "mystery",
+            "significance": "In Colossians, the μυστήριον has a specific Colossian definition that differs from Ephesians: it is 'Christ in you, the hope of glory' (1:27). The mystery hidden for ages and generations is not primarily the Jew-Gentile union (as in Eph 3) but the indwelling presence of Christ himself in Gentile believers — something unimaginable under the old covenant. The false teachers may have offered access to 'hidden mysteries' through angel-worship and ascetic disciplines (2:18); Paul's counter is that the only genuine mystery is the indwelling Christ, who is now openly proclaimed (1:28) rather than concealed in esoteric rites."
+        },
+        {
+            "code": "G604",
+            "lemma": "ἀποκαταλλάσσω",
+            "translit": "apokatallassō",
+            "gloss": "reconcile",
+            "significance": "ἀποκαταλλάσσω is a compound verb that appears only three times in the NT — twice in Colossians (1:20, 1:22) and once in Ephesians (2:16). The triple prefix (ἀπο- + κατα- + ἀλλάσσω) intensifies the simple ἀλλάσσω ('to change') into a complete, thoroughgoing reconciliation. The scope in 1:20 is cosmic: 'through him to reconcile to himself all things, whether on earth or in heaven, making peace by the blood of his cross.' The blood of the cross is the means; the scope is universal (all things); the agent is God; the mediator is Christ. This cosmic reconciliation is simultaneously enacted in the individual believer (1:22: 'he has now reconciled in his body of flesh by his death')."
+        },
+        {
+            "code": "G4747",
+            "lemma": "στοιχεῖον",
+            "translit": "stoicheion",
+            "gloss": "element",
+            "significance": "στοιχεῖον ('element, basic principle') in 2:8 and 2:20 — 'the elementary principles (στοιχεῖα) of the world' — is one of the most debated phrases in Pauline studies. The word can mean: (1) the physical elements (earth, water, fire, air) of Greco-Roman cosmology; (2) elementary teachings or ABCs; (3) cosmic spirit-powers associated with heavenly bodies. In Colossians, context favors a reference to cosmic powers — the false teachers associated spiritual progress with calendar observance and angelic veneration, precisely the kind of cosmic-elemental system Paul describes. The believers have died to these στοιχεῖα with Christ (2:20) — they owe them no allegiance."
+        },
+        {
+            "code": "G5385",
+            "lemma": "φιλοσοφία",
+            "translit": "philosophia",
+            "gloss": "philosophy",
+            "significance": "φιλοσοφία appears only once in the NT, at 2:8: 'See to it that no one takes you captive by philosophy and empty deceit, according to human tradition, according to the elemental spirits of the world, and not according to Christ.' Paul does not condemn philosophy in general (he cites Greek poets in Acts 17), but targets the specific 'philosophy' — the false teachers had given their system this prestigious label. By calling it 'empty deceit' and 'human tradition,' Paul strips the prestige designation and reveals its content: not divine wisdom but κατὰ τὴν παράδοσιν τῶν ἀνθρώπων (according to human tradition). The word's only NT use is polemical."
+        },
+        {
+            "code": "G2356",
+            "lemma": "θρησκεία",
+            "translit": "thrēskeia",
+            "gloss": "worship",
+            "significance": "θρησκεία appears twice in Colossians in negative contexts: 'worship of angels' (ἐν θρησκείᾳ τῶν ἀγγέλων, 2:18) and 'self-made worship' (ἐθελοθρησκίᾳ, 2:23 — a compound Paul may have coined). The false teachers were practicing what they called θρησκεία — solemn religious observance — but Paul classifies it as both misdirected (toward angels rather than God) and self-originated (ἐθελο-, 'self-willed'). The compound ἐθελοθρησκία appears only here in all of ancient Greek literature, suggesting Paul coined it to name the hybrid of voluntary religious feeling and external religious show that characterized the false teaching."
+        },
+        {
+            "code": "G554",
+            "lemma": "ἀπεκδύομαι",
+            "translit": "apekdyomai",
+            "gloss": "strip off",
+            "significance": "ἀπεκδύομαι is used twice in Colossians with a striking theological parallelism. In 2:15 God 'stripped off (ἀπεκδυσάμενος) the rulers and authorities' through the cross — disarming the cosmic powers by making a public spectacle of them. In 3:9 believers are those who have 'stripped off (ἀπεκδυσάμενοι) the old self with its practices.' The same verb connects Christ's cosmic victory over the powers to the believer's personal ethical transformation: putting off the old self is participation in the same stripping action Christ accomplished at the cross. The ethics of Colossians 3 are grounded in the cosmic event of Colossians 2."
+        },
+        {
+            "code": "G4886",
+            "lemma": "σύνδεσμος",
+            "translit": "syndesmos",
+            "gloss": "bond",
+            "significance": "σύνδεσμος ('band, ligament, bond') appears twice with complementary functions. In 2:19, the false teachers have 'lost connection with the Head, from whom the whole body, nourished and knit together through its joints and ligaments (σύνδεσμοι), grows with a growth that is from God.' The word is anatomical: Paul's body-metaphor is physiologically precise — ligaments hold bones together and transmit the movement from the head. In 3:14, love is 'the σύνδεσμος of perfection' — the bond that holds all the virtues together in the new community. The same word simultaneously describes the church's biological union with Christ and its communal unity through love."
+        },
+        {
+            "code": "G614",
+            "lemma": "ἀπόκρυφος",
+            "translit": "apokryphos",
+            "gloss": "hidden",
+            "significance": "ἀπόκρυφος in 2:3 is the direct counter to the false teachers' claim to hidden esoteric knowledge: 'in Christ are hidden (ἀπόκρυφοι) all the treasures of wisdom and knowledge.' The word denotes something concealed, put away safely, kept in reserve. Paul's argument is that the genuine hiddenness is in Christ — not in the mystical visions or angelic hierarchies of the false teaching (2:18) but in the person of the Son. The believers' access to these hidden treasures requires only connection to Christ (through faith, not esoteric initiation), because the hiddenness is a treasuring, not an exclusion."
+        },
+        {
+            "code": "G4983",
+            "lemma": "σῶμα",
+            "translit": "sōma",
+            "gloss": "body",
+            "significance": "σῶμα in Colossians 2:17 carries a philosophical register unusual in Paul: 'These are a shadow of the things to come, but the substance (σῶμα) belongs to Christ.' Here σῶμα does not mean 'body' in the physical sense but 'substance, reality' — the concrete thing of which the shadow is the projection. The Jewish calendar observances (food laws, Sabbath, festivals) were shadows pointing forward to a coming reality; Christ is that reality itself. The same word then returns in 2:19 and 1:18 for the church as Christ's body — the metaphorical body that the head nourishes. Colossians uses σῶμα for both the reality that shadows prefigure and the community that Christ heads."
+        }
+    ],
+
+    "language_notes": (
+        "<p>The Christ hymn (1:15-20) uses <strong>πρωτότοκος</strong> ('firstborn') twice in a structure that maps Christ's supremacy onto the two domains of reality: creation ('firstborn of all creation,' 1:15) and redemption ('firstborn from the dead,' 1:18). The two uses bracket the hymn's two strophes and establish Christ as the preeminent one in both spheres. The hymn then uses the phrase 'that he might be preeminent in everything' (ἵνα γένηται ἐν πᾶσιν αὐτὸς πρωτεύων, 1:18) — the verb πρωτεύω ('to be first') drives home the point that both strophes are claiming supremacy, not merely temporal priority.</p>"
+        "<p>Colossians contains an unusual concentration of <strong>compound verbs with intensive prefixes</strong> that are either unique in the NT or appear very rarely elsewhere. <em>Ἀποκαταλλάσσω</em> (completely reconcile, 1:20, 22) appears only here and Eph 2:16. <em>Ἀπεκδύομαι</em> (completely strip off, 2:15; 3:9) appears only here. <em>Ἐθελοθρησκία</em> (self-willed worship, 2:23) appears nowhere else in ancient Greek. <em>Συμβιβάζω</em> (hold together, 2:2, 19) is rare. This cluster of intensive compounds reflects Paul's attempt to articulate a sufficiency of Christ that is complete and absolute — the intensification is theological: no partial, no additional, no supplement needed.</p>"
+        "<p>The phrase <strong>κατὰ τὴν παράδοσιν τῶν ἀνθρώπων</strong> ('according to human tradition,' 2:8) echoes Jesus's rebuke of the Pharisees in Mark 7:8 — setting aside the commandment of God for human tradition. Whether deliberate or not, Paul's vocabulary places the Colossian philosophy in the same category as the scribal traditions that nullified the law. The contrast with κατὰ Χριστόν ('according to Christ,' 2:8) is Paul's criterion: the test of any teaching is not its antiquity, prestige, or spiritual sophistication but whether it is oriented by and toward Christ.</p>"
+        "<p>The 'shadow versus substance' argument of 2:16-17 uses a Platonic philosophical distinction — the shadow (σκιά) is the projected outline of a real object — and fills it with Jewish-eschatological content. The Torah's prescriptions are not false or evil (they are genuine shadows of a coming reality) but they are shadows precisely because the reality, Christ, has now arrived. Reading the OT shadows in Colossians requires holding two things together: the shadows were genuinely revelatory (they pointed truly), and they are now obsolete as requirements (the reality has displaced the shadow). Paul's argument is eschatological, not dismissive of the Torah.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic Christology:</strong> The Colossians Christ hymn was central to the Arian controversy of the fourth century. Arius cited 1:15 ('firstborn of all creation') as proof that the Son was the first and greatest creature, created before the rest. Athanasius's response in <em>Orations Against the Arians</em> drew on the same passage: firstborn denotes supremacy and inheritance rights, not temporal or ontological origin, and 1:16 immediately explains why — 'for by him all things were created.' The Creator cannot be among the created things. The Nicene Creed's language ('God from God, Light from Light') was forged in the fires of this exegetical dispute.</p>"
+        "<p><strong>The Colossian heresy debate:</strong> Modern scholarship has extensively debated the identity of the false teaching Paul addresses. Early proposals included Gnosticism (anachronistic), Jewish Christianity, or a mystery religion. The current consensus leans toward a form of <em>Jewish mysticism</em> — possibly related to the merkabah (chariot) mysticism evident in some Dead Sea Scrolls texts, combining Torah observance, angel veneration, and ecstatic heavenly ascent. The ascetic practices (food restrictions, 2:16, 20-21), calendar observance (2:16), and 'worship of angels' (2:18) fit this profile. The specifics remain contested because Paul quotes the false teachers' vocabulary without explaining it — he assumes his readers know what he means.</p>"
+        "<p><strong>Authorship debates:</strong> Like Ephesians, Colossians has been challenged as deutero-Pauline by many modern scholars, citing its vocabulary (unique compounds, unusual terms), its developed Christology, and its household code. Defenders of Pauline authorship note that the specific polemic context (the Colossian heresy) explains the unusual vocabulary — Paul is forced to use his opponents' terms to refute them. The close relationship with Philemon (both mention Onesimus and Archippus, suggesting the same group of co-workers) is the strongest argument for authenticity; Philemon is virtually universally accepted as genuine.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Before reading Colossians, understand the presenting problem: a sophisticated religious system is offering the church additional spiritual resources beyond Christ — access to angel worship, mystical visions, and calendar-based purification practices. The false teachers are not denying Christ; they are supplementing him. Paul's response is not to argue that Christ is better than nothing, but that Christ is better than everything — any spiritual reality the false teachers offer is already contained in him. Every argument in chapters 1-2 is an argument for the absolute sufficiency of Christ.</p>"
+        "<p>Read the Christ hymn (1:15-20) as the theological foundation for the warnings of chapter 2. Note its structure: two strophes, each beginning with 'he is' and ending with a supremacy claim. The first strophe (1:15-17) establishes Christ's supremacy in creation — he is before all things, by him all things hold together. The second (1:18-20) establishes his supremacy in redemption — firstborn from the dead, reconciling all things. Then read 2:8-23 as the point-by-point application: because Christ is supreme over creation, the elemental spirits need not be feared (2:8, 20); because his fullness dwells bodily, no angelic fullness need be sought (2:9-10).</p>"
+        "<p>The ethical section of chapters 3-4 is grounded in 3:1-4: 'If then you have been raised with Christ... your life is hidden with Christ in God.' The imperative ('seek the things above') flows from the indicative ('you have been raised'). The vice list (3:5-9) and virtue list (3:10-14) are not general moral improvement but a description of what it looks like to live consistently with a resurrection identity. The common misreading is to moralize chapters 3-4 in isolation; they make full sense only as consequences of the cosmic event of 2:11-15, where the believer died and rose with Christ.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('colossians')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('colossians', merged)
+
+main()

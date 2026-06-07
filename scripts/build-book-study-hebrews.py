@@ -1,0 +1,179 @@
+"""
+Book Study Data — Hebrews
+book_id: hebrews
+lang: greek
+
+Run: python3 scripts/build-book-study-hebrews.py
+
+Notes:
+- Author group: Hebrews (unique peak in author-freq-greek.json)
+- 14 vocab entries for a 13-chapter theological sermon
+- Hebrews has the most literary Greek in the NT: alliteration (1:1), periodic sentences,
+  polished rhetorical organization (identified as a 'word of exhortation,' 13:22)
+- The shadow/reality (σκιά) framework uses Middle Platonic philosophical categories
+- κρείττων ('better') is the structural comparative that runs the entire argument
+- Two 1:3 hapaxes (ἀπαύγασμα, χαρακτήρ) introduce the letter's highest Christology
+- ἀπαράβατος (7:24) and the Melchizedek argument are among the NT's most original
+  theological moves
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "hebrews",
+
+    "key_vocabulary": [
+        {
+            "code": "G541",
+            "lemma": "ἀπαύγασμα",
+            "translit": "apaúgasma",
+            "gloss": "radiance",
+            "significance": "ἀπαύγασμα ('radiance, effulgence, the outshining of light') appears only at 1:3 — a NT hapax — in the letter's soaring prologue: the Son 'is the radiance (ἀπαύγασμα) of the glory of God and the exact imprint (χαρακτήρ) of his nature.' The word draws on Hellenistic Jewish wisdom tradition (Wisdom 7:26 uses the same word of divine Wisdom) and suggests a relationship of participation rather than mere representation: the Son does not merely reflect God's glory as a mirror does light; he radiates it as the sun radiates from its own substance. Paired with χαρακτήρ ('exact stamp, engraving'), the two words together make the strongest identification of Son and Father in the NT prologue tradition — the Son is the outshining of the Father's being and its exact impress in the world."
+        },
+        {
+            "code": "G749",
+            "lemma": "ἀρχιερεύς",
+            "translit": "archiereús",
+            "gloss": "high priest",
+            "significance": "ἀρχιερεύς ('high priest') is Hebrews' signature Christological title, appearing 17 times — more than in all other NT books combined. No other NT author uses the high priest category as a sustained framework for understanding Christ's person and work. The Aaronic high priest entered the Most Holy Place once a year with blood not his own, emerging again; Christ entered once for all with his own blood (9:12) and sat down at the right hand of God — the contrast between 'standing' (Levitical priests had no chairs; their work was never done) and 'sitting' (Christ's work is finished) runs through chapters 8-10. Hebrews' contribution to christology is irreplaceable: it supplies the priestly category that the Gospels lack."
+        },
+        {
+            "code": "G2909",
+            "lemma": "κρείττων",
+            "translit": "kreíttōn",
+            "gloss": "better",
+            "significance": "κρείττων ('better, superior, nobler') is Hebrews' structural word — the comparative form of κρατύς that the author uses as a refrain throughout the argument. Jesus is better than the angels (1:4), Moses (3:3), the Levitical priests (7:7, 22), and the old covenant (8:6). There is a better hope (7:19), a better covenant (8:6), better promises (8:6), better sacrifices (9:23), a better possession (10:34), a better country (11:16), a better resurrection (11:35), and something 'better' for us than for the OT saints (11:40). The word functions as the thesis of the entire letter: the 'better' in each category is not a higher degree of the same thing but a qualitatively different order — the reality to which the shadows always pointed."
+        },
+        {
+            "code": "G1242",
+            "lemma": "διαθήκη",
+            "translit": "diathḗkē",
+            "gloss": "covenant",
+            "significance": "διαθήκη ('covenant, will, testament') is Hebrews' most theologically dense word, carrying a deliberate double meaning. In the LXX, διαθήκη translates בְּרִית (covenant) — a binding relationship between parties. In Greek legal usage, διαθήκη is a will or testament — a unilateral disposition of an estate that takes effect only at death. Hebrews exploits both meanings at 9:15-17: the new covenant is also a 'will' (διαθήκη) that required a death to become effective — Christ's death is both the blood of covenant ratification and the testator's death that activates the bequest. No other NT author presses this double semantic, and it is unique to Hebrews. The old covenant was 'obsolete' (8:13, παλαιόω); the new is 'eternal' (13:20)."
+        },
+        {
+            "code": "G129",
+            "lemma": "αἷμα",
+            "translit": "haîma",
+            "gloss": "blood",
+            "significance": "αἷμα ('blood') appears 21 times in Hebrews — the highest density in any NT letter — and is inseparable from the letter's theology of atonement. The argument turns on the axiom of 9:22: 'Without the shedding of blood there is no forgiveness of sins.' The entire Levitical sacrificial system is a demonstration that access to God requires life given in death. The contrast between the blood of bulls and goats (9:13; 10:4) and the blood of Christ (9:12, 14; 10:19) is the argument's climax: animal blood was effective for external, ritual purification; Christ's blood 'purifies the conscience from dead works to serve the living God' (9:14). The movement is from external to internal, from repeated to once-for-all, from type to antitype."
+        },
+        {
+            "code": "G5048",
+            "lemma": "τελειόω",
+            "translit": "teleióō",
+            "gloss": "make perfect",
+            "significance": "τελειόω ('to complete, perfect, bring to maturity') and its cognates (τέλειος, τελείωσις, τελειωτής) are characteristic Hebrews vocabulary, appearing 15 times in 13 chapters. The word does not primarily denote moral sinlessness but <em>completion</em> — being brought to the appointed goal. In 2:10, Christ was 'made perfect through suffering' — not that he needed moral improvement, but that his suffering completed the trajectory of obedient incarnation. In 7:19, the Law made nothing perfect (could not bring to the goal); in 10:14, Christ's one offering 'has perfected for all time those who are being sanctified.' The contrast is between incomplete and complete, provisional and final, shadow and reality. The word names the qualitative difference between old covenant institutions and their fulfillment in Christ."
+        },
+        {
+            "code": "G4639",
+            "lemma": "σκιά",
+            "translit": "skiá",
+            "gloss": "shadow",
+            "significance": "σκιά ('shadow, shade, dark outline') is Hebrews' most philosophically charged word, appearing at 8:5 and 10:1 to describe the relationship between the Levitical system and the reality it pointed to. In 8:5, the earthly sanctuary is 'a copy and shadow (σκιά) of the heavenly things'; in 10:1, the Law 'has but a shadow of the good things to come, not the true form of these realities.' The framework is Middle Platonic: the earthly participates in but is subordinate to the heavenly, as a shadow is produced by a substance. The author does not reject the old system as false — it was a genuine (if partial) disclosure of heavenly reality. But the shadow and the substance cannot coexist on equal footing once the reality has arrived."
+        },
+        {
+            "code": "G2378",
+            "lemma": "θυσία",
+            "translit": "thysía",
+            "gloss": "sacrifice",
+            "significance": "θυσία ('sacrifice, offering') appears 16 times and tracks the letter's central argument about atonement. The Levitical priests offered θυσίαι repeatedly, year after year (10:1-3) — a repetition that itself proved their insufficiency: if they had worked, they would have stopped. Christ's θυσία is singular and definitive: 'he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself' (9:26). The phrase 'once for all' (ἐφάπαξ, 9:12; 10:10) modifies Christ's θυσία against the daily and annual Levitical offerings. The argument culminates in 10:12-14: 'when Christ had offered for all time a single sacrifice for sins, he sat down at the right hand of God... for by a single offering he has perfected for all time those who are being sanctified.'"
+        },
+        {
+            "code": "G3198",
+            "lemma": "Μελχισεδέκ",
+            "translit": "Melchisedék",
+            "gloss": "Melchizedek",
+            "significance": "Μελχισεδέκ (Melchizedek) is the mysterious Genesis 14:18-20 figure — priest and king of Salem who blessed Abraham — whom the author develops across chapters 5-7 as the type of Christ's priesthood. The Melchizedekian argument is the letter's most original piece of exegesis. The key moves: (1) Psalm 110:4 ('You are a priest forever after the order of Melchizedek') already anticipated a non-Levitical priest who supersedes Aaron; (2) since Abraham paid tithes to Melchizedek, and Levi was 'in Abraham's loins,' the Levitical priests effectively acknowledged the superiority of Melchizedek's priesthood (7:9-10); (3) Melchizedek appears in Genesis without genealogy or birth or death — not because he had none, but because Scripture's silence makes him a type of the Son's eternal priesthood (7:3). The argument uses midrashic reasoning: what the text does <em>not</em> say is as significant as what it says."
+        },
+        {
+            "code": "G531",
+            "lemma": "ἀπαράβατος",
+            "translit": "aparábatos",
+            "gloss": "permanent",
+            "significance": "ἀπαράβατος is a NT hapax at 7:24: 'he holds his priesthood permanently (ἀπαράβατον), because he continues forever.' The word means 'not passing away, not capable of being transferred or superseded' — legally, it described a right that could not be handed to a successor. The Levitical priests died and passed their office on; each new priest meant acknowledging the previous one's impermanence. Christ's priesthood is ἀπαράβατος because he lives forever (7:25): 'he always lives to make intercession' for those who come to God through him. The hapax crystallizes the argument of chapters 7-8: the old priesthood's impermanence was its structural flaw; the new priesthood is permanent by nature because its priest is indestructible."
+        },
+        {
+            "code": "G3954",
+            "lemma": "παρρησία",
+            "translit": "parrhēsía",
+            "gloss": "boldness",
+            "significance": "παρρησία ('bold speech, frankness, confidence, free access') names the pastoral gift that Christ's high priesthood creates: 'Let us then with confidence (μετὰ παρρησίας) draw near to the throne of grace' (4:16); 'we have confidence (παρρησίαν) to enter the holy places by the blood of Jesus' (10:19). In the Greek city, παρρησία was the free speech of a citizen before the assembly — the privilege of those with standing to speak plainly. In the Greco-Roman household, a slave had no παρρησία; a son did. Hebrews applies the word to believers' access to God: through Christ, those who were without standing now have the confident access of children approaching a father. The word is a pastoral summary of the entire high priesthood argument: it names what the doctrine produces in practice."
+        },
+        {
+            "code": "G1860",
+            "lemma": "ἐπαγγελία",
+            "translit": "epangelía",
+            "gloss": "promise",
+            "significance": "ἐπαγγελία ('promise, divine assurance, pledge') is the thread that runs through chapter 11 — the great 'Hall of Faith' — and ties the whole letter together. Abraham 'went out, not knowing where he was going' but 'was looking forward to the city with foundations' (11:8-10); the OT saints 'died in faith, not having received the things promised, but having seen them and greeted them from afar' (11:13). The promises are the forward-pulling force that defines faith in Hebrews: faith is not assurance of what one has but of what one does not yet possess. The argument's pastoral logic: if Abraham, Moses, and the prophets persevered by the promises without receiving them, how much more should the readers — who have received the installment of the new covenant — hold fast."
+        },
+        {
+            "code": "G4102",
+            "lemma": "πίστις",
+            "translit": "pístis",
+            "gloss": "faith",
+            "significance": "Hebrews 11:1 contains the NT's only formal definition of πίστις: 'Faith is the assurance (ὑπόστασις) of things hoped for, the conviction (ἔλεγχος) of things not seen.' The two nouns are significant: ὑπόστασις means 'substance, foundation, underlying reality' — faith is not wishful thinking but a present grip on a future reality; ἔλεγχος means 'proof, evidence, test result' — faith is a form of knowing, not the absence of evidence. The definition is then illustrated by 19 examples from the OT whose faith involved acting on promises not yet fulfilled (Abel through the OT heroes). This definition is distinctive to Hebrews — elsewhere in the NT, faith is primarily trusting response to the gospel; here it is enduring commitment to divine promise across the gap between announcement and fulfillment."
+        },
+        {
+            "code": "G5281",
+            "lemma": "ὑπομονή",
+            "translit": "hypomonḗ",
+            "gloss": "endurance",
+            "significance": "ὑπομονή ('endurance, steadfast patience under pressure') is the pastoral application of the entire theology of Hebrews: 'let us run with endurance (ὑπομονῆς) the race set before us, looking to Jesus, the founder and perfecter of our faith' (12:1-2). The word's appearance at the letter's pastoral climax makes it the answer to the question the whole letter has been answering: given the superiority of Christ and the new covenant, how should believers respond to suffering and temptation to apostasy? With ὑπομονή — active, purposeful endurance modeled on Jesus himself, 'who for the joy that was set before him endured the cross, despising the shame' (12:2). The cloud of witnesses from chapter 11 provides the encouragement; Jesus provides the model and the power."
+        }
+    ],
+
+    "language_notes": (
+        "<p>Hebrews has the most polished literary Greek in the NT — even more carefully crafted than Luke or Paul. The opening two verses (1:1-2) are a sustained period featuring alliteration: <em>πολυμερῶς καὶ πολυτρόπως πάλαι ὁ θεὸς λαλήσας τοῖς πατράσιν ἐν τοῖς προφήταις</em> — the seven consecutive π-sounds are not accidental. The author uses periodic sentences (subordinate clauses building to a main verb at the end), the rhetorical figure of syncrisis (parallel comparison: 'as... so also...'), and the precise vocabulary of Hellenistic philosophical discourse. The word ἀπαύγασμα (1:3, 'radiance') and χαρακτήρ (1:3, 'exact imprint') are philosophical terms borrowed from the tradition of Hellenistic Jewish wisdom (Wisdom of Solomon, Philo). The stylistic care is itself an argument: the author writes as someone who commands Greek as a first-language literary medium.</p>"
+        "<p>The dominant exegetical method is <strong>qal vaḥomer</strong> ('how much more') — the rabbinic lesser-to-greater argument. The pattern appears throughout: 'if the message declared through angels proved to be reliable... how shall we escape if we neglect so great a salvation?' (2:2-3); 'if they did not escape when they refused him who warned them on earth, how much less will we escape?' (12:25). The author pairs this with the equally rabbinic principle that what is <em>not mentioned</em> in a text is significant: Melchizedek has no genealogy in Genesis <em>therefore</em> he typologically prefigures the eternal priesthood (7:3). These are recognizable Second Temple Jewish exegetical moves, demonstrating that the author is steeped in synagogue interpretation even while writing in elegant Greek.</p>"
+        "<p>The <strong>σκιά (shadow) / ἀλήθεια (reality) framework</strong> is Hebrews' most philosophically significant structural feature. In 8:5, the Levitical tabernacle is 'a copy (ὑπόδειγμα) and shadow (σκιά) of the heavenly things'; in 10:1, the Law has 'a shadow of the good things to come, not the true form (εἰκόνα) of these realities.' This is recognizably Middle Platonic: the earthly participates in but is secondary to the heavenly archetype. The author did not import Platonism into Christianity — he used the most available philosophical vocabulary to articulate the typological relationship between the OT institutions and Christ. The framework was enormously influential in patristic interpretation: allegory and typology both borrowed its structure.</p>"
+        "<p>Hebrews contains more NT hapax legomena per chapter than almost any book. From chapter 1 alone: ἀπαύγασμα (1:3, radiance), χαρακτήρ (1:3, exact imprint), φερόμενος (1:3, upholding), κληρονόμος (1:4 in this sense). From chapter 7: ἀμητόρ (7:3, without mother), ἀγενεαλόγητος (7:3, without genealogy), ἀπαράβατος (7:24, permanent). The hapax density is evidence of an author reaching for precision that common vocabulary could not achieve — the novel theological categories required novel words.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Hebrews was received with uncertainty in the early Western church due to the authorship question (Pauline authorship was disputed), but was widely used in the East. Clement of Alexandria accepted it as Pauline but acknowledged the difference in Greek style — perhaps, he suggested, Luke translated it. Origen's famous verdict ('Who wrote the letter, God truly knows') established the terms of the debate. The letter's typological framework became foundational for patristic allegorical interpretation: Origen, Chrysostom, and Ambrose all used Hebrews' shadow/reality scheme as their hermeneutical model for reading the OT. The once-for-all sacrifice (9:26; 10:10-14) became the strongest NT argument against any view of the Eucharist as a repeated sacrifice, generating significant liturgical controversy.</p>"
+        "<p><strong>Reformation:</strong> Luther famously (and controversially) listed Hebrews among the 'disputable' books of the NT — not canonical in the same sense as Romans or John — partly because 6:4-6 seemed to deny repentance after apostasy and thus contradict the gospel of grace. Nevertheless, Luther and Calvin both drew heavily on Hebrews for the once-for-all sacrifice argument against the Catholic Mass. Calvin's argument in the <em>Institutes</em> that Christ's priesthood is not repeated in the Eucharist rests largely on Hebrews 9-10. The author's high Christology in chapters 1-2 (the Son as God's radiance and exact imprint) also furnished material for the Reformers' affirmation of Nicene trinitarian orthodoxy.</p>"
+        "<p><strong>Modern debates:</strong> Three issues dominate contemporary scholarship. First, the <strong>warning passages</strong> (2:1-4; 3:7-4:13; 5:11-6:12; 10:26-31; 12:15-29): can the people described in 6:4-6 ('those who have once been enlightened... and then have fallen away') be genuine believers who lose salvation, or hypothetical cases, or nominal members who were never truly regenerate? The debate maps onto Calvinist vs. Arminian theology and has not been resolved. Second, the <strong>Melchizedek source</strong>: the Qumran document 11Q13 (the Melchizedek Scroll) shows that Second Temple Judaism already had a tradition of Melchizedek as a heavenly figure — this background illuminates but complicates Hebrews' exegesis. Third, <strong>authorship</strong>: Priscilla (Harnack, 1900) and Apollos (Luther, then widely followed) remain the most plausible candidates; neither can be proved.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Hebrews requires two kinds of background knowledge before it opens up: the <strong>Levitical sacrificial system</strong> (Exodus 25-30; Leviticus 1-16, especially the Day of Atonement in Leviticus 16) and the <strong>Melchizedek passage</strong> (Genesis 14:18-20; Psalm 110). Without knowing what the tabernacle looked like, who the high priest was, what happened on Yom Kippur, and why Psalm 110:4 matters, chapters 5-10 will be opaque. Consider reading these OT passages first. The author assumes his readers already know this material — Hebrews is not an introduction to Jewish theology but an argument for people steeped in it.</p>"
+        "<p>The letter has a recognizable <strong>alternating structure</strong>: theological exposition → pastoral warning → theological exposition → pastoral warning. The five 'warning passages' (2:1-4; 3:7-4:13; 5:11-6:12; 10:26-31; 12:15-29) are not digressions — they are the letter's pastoral spine, the reason the theology is being expounded. The author is not writing an academic treatise; he is preaching to people in danger of abandoning the faith. The theology serves the pastoral purpose. Read each doctrinal section asking: what does this mean for people under pressure to return to Judaism?</p>"
+        "<p>The most commonly misread passage is <strong>6:4-6</strong>: 'It is impossible to restore again to repentance those who have once been enlightened...' Three cautions: First, the author describes the people with phrases that are genuinely strong ('tasted the heavenly gift,' 'partakers of the Holy Spirit') — dismissing them as merely nominal is grammatically strained. Second, the author's purpose is warning, not categorization; he writes to prevent the situation, not to identify who is already in it. Third, verse 9 immediately follows with 'though we speak in this way, yet in your case... we are persuaded of better things' — the warning is pastoral, addressed to the community as a whole, not a theological statement about specific individuals. Read it as a serious warning meant to produce perseverance, not as a theorem about the limits of divine grace.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('hebrews')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('hebrews', merged)
+
+main()

@@ -70,6 +70,52 @@ ONETIM_ECHO = {
       {"type": "allusion", "target": "Ps 24:3-4", "note": "He was manifested in the flesh, vindicated by the Spirit — the hymn of 1 Tim 3:16 celebrates the incarnation-exaltation pattern; the Psalm's ascent to YHWH's holy hill resonates with the vindicated Christ ascending to the heavenly Zion"},
       {"type": "allusion", "target": "Isa 52:15", "note": "Proclaimed among the nations, believed on in the world — the Servant's proclamation that would cause kings to shut their mouths; the worldwide proclamation of the exalted Christ fulfills the Servant's mission reaching to all nations"}
     ]
+  },
+  "6": {
+    "1": [
+      {"type": "allusion", "target": "Exod 21:2-6", "note": "All under the yoke of slavery should consider their masters worthy of full respect — the Mosaic slave-code (Exod 21:2-6; Deut 15:12-18) regulated bondservice in Israel; Paul does not cite it to endorse the institution but draws on the same covenantal category of ordered household obligation, reframed by the motive 'so that God's name and our teaching may not be blasphemed'"},
+      {"type": "allusion", "target": "Lev 19:12", "note": "So that God's name may not be blasphemed — Leviticus 19:12 prohibits swearing falsely by YHWH's name and so profaning it; the concern for the name's honor applies: conduct that dishonors the master dishonors God whose name is invoked by the believer's identity"}
+    ],
+    "7": [
+      {"type": "allusion", "target": "Job 1:21", "note": "We brought nothing into the world, and we can take nothing out of it — Job 1:21 (naked I came from my mother's womb, and naked shall I return) is the OT locus classicus for the 'naked entry/exit' axiom; Paul's maxim is the direct didactic form of Job's doxological confession in the moment of total loss"},
+      {"type": "allusion", "target": "Eccl 5:15", "note": "As he came from his mother's womb he shall go again, naked as he came (Eccl 5:15) — Ecclesiastes 5:15 is the wisdom elaboration of the same axiom applied specifically to wealth accumulated under the sun; Paul draws on both the Joban and the Qohelet tradition"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Prov 15:27", "note": "The love of money is a root of all kinds of evil — Proverbs 15:27 (whoever is greedy for unjust gain troubles his own household) and the broader wisdom tradition (Eccl 5:10: he who loves money will not be satisfied with money) provide the OT soil for the Pauline aphorism; the love of money as a comprehensive root-evil systematizes what Proverbs treats case by case"},
+      {"type": "allusion", "target": "Eccl 5:10", "note": "He who loves money will not be satisfied with money (Eccl 5:10) — Qohelet's observation on the insatiability of wealth-desire is the wisdom background to Paul's diagnosis that avarice leads people to wander from the faith; avarice as a spiritual disorder, not merely a social vice, is a consistent OT-wisdom theme"}
+    ],
+    "11": [
+      {"type": "allusion", "target": "Deut 33:1", "note": "O man of God (anthrōpe theou) — the title 'man of God' (ish ha-Elohim) is the OT designation for a prophet in covenant service: Moses (Deut 33:1), Samuel (1 Sam 9:6), Elijah (1 Kgs 17:18), Elisha (2 Kgs 4:7); applying it to Timothy places him in the prophetic succession of those commissioned to speak and guard God's word"},
+      {"type": "allusion", "target": "Deut 16:20", "note": "Pursue righteousness (diōke de dikaiosynēn) — Deuteronomy 16:20 (justice, and only justice, you shall pursue) uses the same pursuit-language for covenant faithfulness; Paul applies the Deuteronomic imperative to Timothy's personal formation: righteousness, godliness, faith, love, endurance, gentleness as the character-cluster to be relentlessly pursued"}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Deut 19:15", "note": "You made your good confession in the presence of many witnesses — Deuteronomy 19:15 requires two or three witnesses to establish a legal matter; Timothy's public confession before many witnesses has the formal structure of covenantal testimony, giving his faith commitment the weight of a legally attested oath in the assembly"},
+      {"type": "allusion", "target": "Ps 22:25", "note": "I will pay my vows in the presence of those who fear him (Ps 22:25) — the Psalter's pattern of public vow-fulfillment before the assembly provides the OT template for the public confession Paul recalls; Timothy's confession is the NT counterpart of the public declaration of trust before the gathered people of God"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "Neh 9:6", "note": "God who gives life to all things (tou zōogonountos ta panta) — Nehemiah 9:6 (you preserve all of them) and Psalm 36:9 (with you is the fountain of life) are the OT ground for Paul's charge; the Creator who holds all life in being is the witness before whom Timothy is commissioned"},
+      {"type": "allusion", "target": "Isa 53:7", "note": "Christ Jesus who testified before Pontius Pilate the good confession — Isaiah 53:7 describes the Servant's silence under oppression; yet Christ's testimony before Pilate (John 18:36-37: for this I was born) is the good confession — the Servant's faithful witness under trial that Timothy's own confession mirrors and participates in"}
+    ],
+    "15": [
+      {"type": "allusion", "target": "Deut 10:17", "note": "King of kings and Lord of lords — Deuteronomy 10:17 (the LORD your God is God of gods and Lord of lords) is the original royal title; it recurs in Daniel 2:47 and is applied to the Lamb in Revelation 17:14 and 19:16; Paul applies the same supreme-sovereignty title to God in this doxology"},
+      {"type": "allusion", "target": "Dan 2:47", "note": "The blessed and only Sovereign (ho makarios kai monos dynastēs) — Daniel's Nebuchadnezzar confesses that Daniel's God is God of gods and Lord of kings (Dan 2:47); Paul's doxology draws on the same vocabulary of absolute divine sovereignty that Daniel established in the confrontation with imperial power"}
+    ],
+    "16": [
+      {"type": "allusion", "target": "Ps 104:2", "note": "Who dwells in unapproachable light — Psalm 104:2 (who covers yourself with light as with a garment) and Exodus 33:20 (no one can see me and live) together establish the divine inaccessibility Paul confesses; the unapproachable light is YHWH's kavod — the blinding glory no creature can approach"},
+      {"type": "allusion", "target": "Exod 33:20", "note": "Whom no one has seen or can see — the Mosaic declaration that no human can see God's face and live (Exod 33:20) is the OT ground of the divine transcendence; the same God whose epiphany in Christ Jesus (v.14) is the scandal of the incarnation remains essentially beyond all creaturely vision"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Ps 52:7", "note": "Not to set their hopes on the uncertainty of riches — Psalm 52:7 (the man who trusted in the abundance of his riches and sought refuge in his own destruction) is the OT archetype of wealth-trust as spiritual failure; Jeremiah 17:5-8 frames the same contrast between creature-trust and Creator-trust"},
+      {"type": "allusion", "target": "Jer 17:5-8", "note": "But set their hopes on God who richly provides — Jeremiah's blessed-man figure (Jer 17:7-8: blessed is the man who trusts in the LORD) is the positive counterpart to the trust-in-wealth warning; Paul echoes the same binary by redirecting hope from uncertain riches to God who richly provides"}
+    ],
+    "19": [
+      {"type": "allusion", "target": "Matt 6:19-21", "note": "Laying up treasure as a firm foundation for the coming age — Jesus's teaching on treasures in heaven (Matt 6:19-21: do not lay up treasures on earth but lay up treasures in heaven) is the dominical ground for Paul's instruction; generosity and good deeds are the heavenly-treasury deposits that survive the age's end"},
+      {"type": "allusion", "target": "Prov 11:24-25", "note": "Rich in good deeds, generous and willing to share — Proverbs 11:24-25 (one gives freely yet grows all the richer; a generous man will prosper) is the wisdom background to Paul's counter-intuitive economics: liberality increases rather than depletes"}
+    ],
+    "20": [
+      {"type": "allusion", "target": "Ezek 3:17-21", "note": "Guard what has been entrusted (parathēkēn phylaxon) — the watchman commission in Ezekiel 3:17-21 (I have made you a watchman; if you do not speak to warn the wicked I will require his blood at your hand) provides the OT model for the stewardship-of-the-word Timothy's guardianship embodies; the parathēkē (deposit) is the gospel entrusted to the prophetic-apostolic community"},
+      {"type": "allusion", "target": "2 Tim 1:14", "note": "Guard the good deposit (2 Tim 1:14: guard the good deposit entrusted to you by the Holy Spirit) — the parathēkē-language is consistent across both Timothean letters; the Spirit is the guardian but Timothy is the commissioned steward"}
+    ]
   }
 }
 

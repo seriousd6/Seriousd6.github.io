@@ -2748,6 +2748,17 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 [data-theme="dark"] .reader-comm-src-sel { background: var(--color-surface); }
 :root:not([data-theme="light"]) .reader-comm-src-sel { background: var(--color-surface); }
 
+/* ── CSS-33: xref-chip active + quick-search chip hover dark mode ─────────── */
+/* INTENT: .reader-xref-chip--active and .reader-qs-chip:hover both use
+   background:var(--color-primary) with color:#fff. In dark mode primary = golden
+   (#e8c87a) — white on golden fails ~1.3:1. --color-on-primary (#1a1208, 10:1) fixes it. */
+[data-theme="dark"] .reader-xref-chip--active,
+[data-theme="dark"] .reader-qs-chip:hover { color: var(--color-on-primary); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .reader-xref-chip--active,
+  :root:not([data-theme="light"]) .reader-qs-chip:hover { color: var(--color-on-primary); }
+}
+
 /* Hide the keyboard hint on any primary-touch device (iPad landscape, touch laptops, phones)
    regardless of screen width — arrow-key navigation doesn't apply on touch devices. */
 @media (pointer: coarse) {

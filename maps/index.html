@@ -109,6 +109,11 @@
     if (new URLSearchParams(location.search).get('minimal')) {
       var bl = document.getElementById('hist-back-link');
       if (bl) bl.removeAttribute('hidden');
+      /* When embedded in the history page iframe, the timelapse link must break
+         out of the iframe and switch the parent to the Animated Map tab — otherwise
+         the timelapse loads inside the Maps iframe while the tab still reads "Maps". */
+      var tl = document.querySelector('.maps-timelapse-link');
+      if (tl) { tl.href = '../history/?tab=timelapse'; tl.target = '_top'; }
     }
   </script>
 </body>

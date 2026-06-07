@@ -1,0 +1,175 @@
+"""
+Book Study Data — Ephesians
+book_id: ephesians
+lang: greek
+
+Run: python3 scripts/build-book-study-ephesians.py
+
+Notes:
+- Key vocabulary selected from Paul author group peaks plus Ephesians-specific terms
+- Ephesians is Paul's most cosmic letter; vocabulary centers on the mystery, the church,
+  the heavenly realm, and the armor of God
+- G346 anakephalaioomai (to sum up / bring under one head) is the letter's cosmic program in one word
+- The 5-fold use of epouranios (heavenly places) is unique in the NT
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "ephesians",
+
+    "key_vocabulary": [
+        {
+            "code": "G3466",
+            "lemma": "μυστήριον",
+            "translit": "mystērion",
+            "gloss": "mystery",
+            "significance": "μυστήριον appears 6 times in Ephesians (1:9; 3:3, 4, 9; 5:32; 6:19) — more than in any other Pauline letter — and is the letter's controlling concept. The word in Greek denoted not a puzzle or a riddle but a secret that has been disclosed: something hidden that is now revealed. Paul defines the specific μυστήριον: it is the plan 'to unite all things in Christ' (1:9-10), and more specifically the inclusion of Gentiles as 'fellow heirs, members of the same body, and partakers of the promise in Christ Jesus' (3:6). The church — Jew and Gentile together — is the visible display of this long-hidden divine secret."
+        },
+        {
+            "code": "G346",
+            "lemma": "ἀνακεφαλαίομαι",
+            "translit": "anakephalaioomai",
+            "gloss": "sum up",
+            "significance": "This compound word — built on κεφαλή (head) — appears in 1:10 where Paul states God's cosmic purpose: 'to sum up (or recapitulate) all things in Christ, things in heaven and things on earth.' The word carries the sense of bringing everything under one head, restoring cosmic unity that was shattered by sin. This is Ephesians' grand thesis in a single verb. The later use of κεφαλή for Christ as head of the church (1:22; 4:15; 5:23) and of the cosmos is not coincidental — the same root word expresses both the cosmic program and its ecclesial center. Irenaeus would later use this word as the key to his theology of recapitulation."
+        },
+        {
+            "code": "G4138",
+            "lemma": "πλήρωμα",
+            "translit": "plērōma",
+            "gloss": "fullness",
+            "significance": "πλήρωμα is used with a density and theological weight in Ephesians found nowhere else in the Pauline corpus. The church is 'the fullness of him who fills all in all' (1:23); Paul prays that believers might be 'filled with all the fullness of God' (3:19); the body of Christ matures toward 'the measure of the stature of the fullness of Christ' (4:13). The word implies not addition to something deficient but the complete expression of something — Christ's fullness overflows into the church, and through the church into the cosmos. This may respond to early Gnostic-like claims about divine 'fullness' (Pleroma) that Paul redefines christologically and ecclesially."
+        },
+        {
+            "code": "G2776",
+            "lemma": "κεφαλή",
+            "translit": "kephalē",
+            "gloss": "head",
+            "significance": "κεφαλή operates on two axes in Ephesians. Cosmically, God has placed Christ 'as head over all things to the church' (1:22) — a claim that Christ rules every cosmic power. Ecclesially, Christ is 'the head from whom the whole body grows' (4:16) — the source and sustainer of the church's life. The third use (5:23, 'the husband is the head of the wife as Christ is the head of the church') has generated extensive debate about whether κεφαλή means 'ruler' (the standard lexical range) or 'source' (argued by some scholars on the basis of the body-growth imagery). The context of mutual submission (5:21) complicates a simple hierarchy reading."
+        },
+        {
+            "code": "G1577",
+            "lemma": "ἐκκλησία",
+            "translit": "ekklēsia",
+            "gloss": "church",
+            "significance": "Ephesians presents the most exalted ecclesiology in the New Testament. The ἐκκλησία is not merely a local congregation but the cosmic body of Christ — his fullness (1:23), the new humanity created from Jew and Gentile (2:15), the dwelling place of God by the Spirit (2:22), and the sphere in which God's wisdom is displayed to the cosmic powers (3:10). The famous declaration 'to him be glory in the church and in Christ Jesus throughout all generations' (3:21) places the church alongside Christ as the locus of divine glory. This is a far grander claim than is made for ἐκκλησία in most other NT letters."
+        },
+        {
+            "code": "G2032",
+            "lemma": "ἐπουράνιος",
+            "translit": "epouranios",
+            "gloss": "heavenly",
+            "significance": "ἐπουράνιος ('in the heavenly places') appears 5 times in Ephesians (1:3, 20; 2:6; 3:10; 6:12) — a concentration found nowhere else in the NT. The phrase denotes the spiritual realm where both divine blessing and cosmic conflict occur simultaneously: believers are blessed with every spiritual blessing 'in the heavenly places' (1:3), raised and seated there with Christ (2:6), and yet the battle against 'spiritual forces of evil in the heavenly places' (6:12) also takes place there. The heavenly realm is not distant or escapist — it is the invisible dimension of present reality in which the exalted Christ reigns and the church participates."
+        },
+        {
+            "code": "G5485",
+            "lemma": "χάρις",
+            "translit": "charis",
+            "gloss": "grace",
+            "significance": "The soteriological summary of 2:8-9 — 'by χάρις you have been saved through faith, and this is not your own doing; it is the gift of God, not a result of works, so that no one may boast' — is the most compact statement of grace-alone salvation in the NT. χάρις appears in the opening eulogy (1:6, 7) and at key transitions throughout (2:5, 7, 8; 3:2, 7, 8; 4:7). Significantly, in 4:7 grace is distributed to each member of the body according to Christ's measure — it is the resource of ministry and gift, not merely the ground of forgiveness. Every service rendered in the church operates from the χάρις given to that member."
+        },
+        {
+            "code": "G728",
+            "lemma": "ἀρραβών",
+            "translit": "arrabōn",
+            "gloss": "earnest",
+            "significance": "ἀρραβών is a commercial and legal term borrowed from Semitic languages (Hebrew עֵרָבוֹן) meaning a down payment or first installment that legally guarantees delivery of the remainder. Paul applies it to the Holy Spirit in 1:14: the Spirit is 'the earnest of our inheritance, until we acquire possession of it.' The metaphor is deliberately transactional — the presence of the Spirit in the believer is God's binding pledge that the full inheritance of the new creation will be delivered. The word appears only 3 times in the NT (here; 2 Cor 1:22; 2 Cor 5:5), each time for the Spirit's guarantee role."
+        },
+        {
+            "code": "G2817",
+            "lemma": "κληρονομία",
+            "translit": "klēronomia",
+            "gloss": "inheritance",
+            "significance": "κληρονομία in Ephesians is the eschatological destination that the letter's present-tense blessings are oriented toward. Paul prays that the Ephesians might know 'the riches of his glorious inheritance in the saints' (1:18) — where 'in the saints' is ambiguous: either God's inheritance that consists in his people, or the inheritance that believers will receive. The Spirit as ἀρραβών (1:14) guarantees this inheritance. In chapter 5, Paul contrasts the inheritance that the morally disordered cannot receive (5:5) with the inheritance of the kingdom of Christ. The inheritance language links Ephesians to the Abrahamic promise while pointing forward to the consummation."
+        },
+        {
+            "code": "G3618",
+            "lemma": "οἰκοδομέω",
+            "translit": "oikodomeō",
+            "gloss": "build",
+            "significance": "The building metaphor runs through Ephesians as one of the dominant images for the church. In 2:19-22 believers are 'built on the foundation of the apostles and prophets, Christ Jesus himself being the cornerstone, in whom the whole structure grows into a holy temple in the Lord.' The shift from architectural past (built, 2:20) to present growth (grows, 2:21) is deliberate — the church is simultaneously a completed structure and a growing organism. In 4:12, 16, 29 the same verb appears for the mutual building-up of the body in love. The church-as-temple replaces the Jerusalem temple as God's dwelling."
+        },
+        {
+            "code": "G1849",
+            "lemma": "ἐξουσία",
+            "translit": "exousia",
+            "gloss": "authority",
+            "significance": "ἐξουσία appears in Ephesians as part of the cosmic powers hierarchy that Christ's resurrection transcended: 'far above all rule (ἀρχή) and authority (ἐξουσία) and power (δύναμις) and dominion' (1:21). In the Greco-Roman world, these powers were understood as real cosmic entities that governed human affairs — star-spirits, angelic intermediaries, territorial powers. Paul's claim is that the resurrection placed Christ above every level of the cosmic hierarchy. In 2:2 Satan is 'the prince of the authority of the air' — still active but already surpassed. The church's task in 6:10-18 is to stand against these powers using God's own armor."
+        },
+        {
+            "code": "G3833",
+            "lemma": "πανοπλία",
+            "translit": "panoplia",
+            "gloss": "full armor",
+            "significance": "πανοπλία (from πᾶς + ὅπλον — all weapons) appears only twice in the NT, both in Ephesians (6:11, 13). The word denotes the complete equipment of a heavily armed Roman soldier: belt, breastplate, boots, shield, helmet, sword. But Paul's source is not Rome but Isaiah 59:17, where God himself dons the armor of justice and salvation as the Divine Warrior. In Ephesians, God's own armor is given to believers for the cosmic battle against 'spiritual forces of evil in the heavenly places' (6:12). Each piece corresponds to a spiritual reality: the shield of faith quenches 'the flaming darts of the evil one' — divine metaphor applied to personal spiritual conflict."
+        },
+        {
+            "code": "G1391",
+            "lemma": "δόξα",
+            "translit": "doxa",
+            "gloss": "glory",
+            "significance": "The phrase 'to the praise of his glory' (εἰς ἔπαινον τῆς δόξης αὐτοῦ) appears as a refrain in the opening eulogy of 1:3-14 (vv. 6, 12, 14), marking the end of each of the letter's three strophes. It functions as a doxological frame: election (1:4-6) → redemption (1:7-12) → sealing by the Spirit (1:13-14), each concluding with the same phrase. The letter ends with a similar doxological burst: 'to him be glory in the church and in Christ Jesus throughout all generations, forever and ever' (3:21). In Ephesians, δόξα is not primarily about human experience of God but about the universe coming to recognize what God has accomplished in Christ."
+        },
+        {
+            "code": "G4152",
+            "lemma": "πνευματικός",
+            "translit": "pneumatikos",
+            "gloss": "spiritual",
+            "significance": "The letter opens with a claim that sets its entire register: 'Blessed be the God and Father of our Lord Jesus Christ, who has blessed us in Christ with every πνευματικῇ blessing in the heavenly places' (1:3). πνευματικός here marks blessings that belong to the realm of the Spirit rather than earthly material blessings — not that material blessings are excluded, but that the primary register of blessing has moved to the dimension of the Spirit. In 5:19 believers are to address one another in 'psalms and hymns and πνευματικαῖς songs' — Spirit-animated worship. The word identifies the new covenant's primary domain of operation."
+        }
+    ],
+
+    "language_notes": (
+        "<p>Ephesians contains what is likely the longest single sentence in the Greek New Testament: <strong>1:3–14</strong>, which runs 22 verses without a main clause break. The structure is a Jewish <em>berakah</em> (blessing prayer): 'Blessed be God who has... who has... who has...' — stacked participial and relative clauses piling up like waves, each adding another dimension of divine blessing. Attempting to break this into English sentences (as most translations do) necessarily fragments what Paul intended as a single overwhelming vision of cosmic grace. Reading 1:3-14 in one breath in Greek, or even as one English block without translation breaks, restores the rhetorical effect.</p>"
+        "<p>The ethical sections of chapters 4–6 are organized around the Greek verb <strong>περιπατέω</strong> ('walk'): 'walk worthy of the calling' (4:1), 'no longer walk as the Gentiles walk' (4:17), 'walk in love' (5:2), 'walk as children of light' (5:8), 'walk carefully' (5:15). The Semitic idiom of 'walking' as a metaphor for conduct was natural to Paul as a Jew (the Hebrew הֲלָכָה, halakah, 'the way one walks,' became the term for Jewish legal practice). In Ephesians, the repeated περιπατέω frames the entire ethical section as a question of manner of life, not merely a list of rules — an integrated pattern of conduct flowing from the identity established in chapters 1–3.</p>"
+        "<p>The formula <strong>ἐν Χριστῷ</strong> ('in Christ') and its variants ('in him,' 'in whom,' 'in the Lord') appear approximately 36 times in Ephesians — far more densely than in any other Pauline letter. This is not a spatial metaphor but a covenantal-participatory one: to be 'in Christ' is to be incorporated into his death, resurrection, and cosmic position. The prepositional phrase governs the entire eulogy of 1:3-14 (where it appears 9 times) and the ethical exhortations of 4-6 (where 'in the Lord' grounds every command). The saturation of this phrase in Ephesians reflects the letter's foundational conviction that the Christian life is not imitation of Christ but participation in Christ.</p>"
+        "<p>Ephesians uses a cluster of <strong>σύν- compounds</strong> (syn-, 'together with') to describe the Gentiles' new status in Christ: <em>συγκληρονόμα</em> (fellow heirs, 3:6), <em>σύσσωμα</em> (members of the same body, 3:6), <em>συμμέτοχα</em> (fellow partakers, 3:6), <em>συζωοποιέω</em> (made alive together, 2:5), <em>συνεγείρω</em> (raised together, 2:6), <em>συγκαθίζω</em> (seated together, 2:6). The prefix σύν- drives home the point grammatically: the mystery is not that Gentiles receive similar blessings to Israel but that they participate in the same blessings, together, in one body. The repetition is unmistakably intentional.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Irenaeus of Lyons (c. AD 180) made ἀνακεφαλαίωσις ('recapitulation,' from Eph 1:10) the cornerstone of his theology in <em>Against Heresies</em>: Christ recapitulates Adam's entire history, doing what Adam failed to do at each point, restoring the cosmos under the one head. This interpretation gave Ephesians a cosmic-narrative frame that proved enormously generative. Chrysostom's homilies on Ephesians gave particular attention to the household code (5:22-6:9), reading it through the lens of mutual submission (5:21) in a way that tempered its patriarchal surface. The letter's ecclesiology was foundational for the early church's self-understanding as a new humanity.</p>"
+        "<p><strong>Reformation and modern:</strong> The Reformation focused on 2:8-9 ('by grace through faith, not of works') as a locus classicus for the doctrine of grace alone. Luther cited it frequently; it became a fixture of Protestant catechesis as the clear statement of sola gratia. The question of Pauline authorship became the dominant critical issue in modern scholarship: the letter's grand, cosmic style, unusually long sentences, and different vocabulary from the undisputed letters led many nineteenth- and twentieth-century scholars to classify it as deutero-Pauline — written by a follower of Paul after his death. The debate remains unresolved; conservatives point to the prison context and the letter's theological coherence with Colossians.</p>"
+        "<p><strong>The household code debate:</strong> Ephesians 5:22-6:9 has been among the most contested NT texts in modern interpretation. Egalitarian readers argue that the foundational principle (5:21, 'submit to one another') governs the entire code, so that the wife's submission is one instance of mutual submission. Complementarian readers argue that the husband's special role as 'head' (5:23) establishes an ordered structure of authority. Both sides agree that Paul's instruction to husbands to 'love your wives as Christ loved the church' (5:25) introduced a cruciform ethic of self-giving that was radical against the background of Greco-Roman household codes, which imposed duties on wives, children, and slaves but made no corresponding demands on husbands.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Read Ephesians in two passes corresponding to its two halves. Chapters 1-3 are almost entirely indicative — they declare what God has done and what believers already are in Christ. Chapters 4-6 are almost entirely imperative — they call believers to live consistently with this identity. The hinge is 4:1: 'I therefore urge you to walk in a manner worthy of the calling to which you have been called.' The word 'therefore' links the ethics to the theology: the way you live should reflect who you are. This indicative-then-imperative structure is Paul's consistent pattern, but Ephesians is its purest expression.</p>"
+        "<p>The opening eulogy (1:3-14) rewards slow reading. Try reading all 22 verses as a single unit — notice how it sweeps from eternity past (chosen before the foundation of the world, 1:4) through redemption (1:7-8) through the present sealing of the Spirit (1:13-14) to the eschatological inheritance (1:14), all framed by the refrain 'to the praise of his glory.' This is not theology for the intellect alone but doxology — Paul is worshipping as he writes. The structure of the letter mirrors the structure of salvation: blessing received (1-3) leads to life transformed (4-6).</p>"
+        "<p>A common misreading of the armor of God passage (6:10-18) is to treat it as a personal spiritual discipline checklist. The context is corporate: Paul uses second-person plural throughout ('you all stand firm') and the cosmic backdrop is the church's shared position in the heavenly places. The armor is not manufactured by the believer's effort but 'put on' — received as God's own equipment. Watch also for how the letter ends with prayer requests (6:18-20): the cosmic battle is fought on its knees.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('ephesians')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('ephesians', merged)
+
+main()

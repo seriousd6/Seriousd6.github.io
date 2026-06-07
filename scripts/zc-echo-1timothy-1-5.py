@@ -1,11 +1,15 @@
 """
-Combined script: 1 Timothy, 2 Timothy, Titus, Philemon — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for all four letters.
+MKT Echo Layer — 1 Timothy chapters 1–5 (completing ch1, ch4, ch5; ch2-3 already done)
+Run: python3 scripts/zc-echo-1timothy-1-5.py
 
-The Pastoral Epistles (ca. 60-67 CE or deutero-Pauline ca. 80-100 CE)
-address church order, ministry qualifications, sound doctrine, and personal
-discipleship. Key theological contributions: the faithful sayings (pistoi logoi),
-the appearing (epiphaneia) Christology, and the portrait of Paul as exemplary sufferer.
+Echo entries cover OT citations, allusions, types, and prophecy-fulfillments.
+Key OT connections:
+- ch1: Decalogue (vice list mirrors second table); doxology connects to OT
+  Kingship psalms and monotheism (Shema); "handed over to Satan" echoes Job 1-2
+- ch4: "everything God created is good" = Gen 1:31 allusion; Neh 8 public
+  Scripture reading; Num 27 hand-laying ordination
+- ch5: Deut 25:4 explicit quotation (muzzled ox); Deut 17:6/19:15 two-witness
+  rule; Dan 7 heavenly court imagery
 """
 
 import json, pathlib
@@ -18,16 +22,6 @@ def load_echo(book):
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
@@ -46,223 +40,84 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-# ============================================================
-# 1 TIMOTHY
-# ============================================================
-
-ONETIM_ECHO = {
-  "2": {
-    "5": [
-      {"type": "fulfillment", "target": "Job 9:33", "note": "There is one mediator between God and people, the man Christ Jesus — Job's lament 'there is no arbiter between us who might lay his hand on us both' is answered: the mediator Job could not find is Christ, who as the man Christ Jesus bridges the divine-human gap"},
-      {"type": "fulfillment", "target": "Isa 53:12", "note": "Who gave himself as a ransom for all — the Servant who poured out his soul to death and bore the sin of many; the ransom-giving fulfills the Servant's self-offering on behalf of the many"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Ps 24:3-4", "note": "He was manifested in the flesh, vindicated by the Spirit — the hymn of 1 Tim 3:16 celebrates the incarnation-exaltation pattern; the Psalm's ascent to YHWH's holy hill resonates with the vindicated Christ ascending to the heavenly Zion"},
-      {"type": "allusion", "target": "Isa 52:15", "note": "Proclaimed among the nations, believed on in the world — the Servant's proclamation that would cause kings to shut their mouths; the worldwide proclamation of the exalted Christ fulfills the Servant's mission reaching to all nations"}
-    ]
-  }
-}
-
-ONETIM_ORIGINAL = {
-  "2": {
-    "5": "<p><strong>heis gar theos heis kai mesites theou kai anthropon anthropos Christos Iesous</strong> (<em>heis gar theos, heis kai mesitēs theou kai anthrōpōn, anthrōpos Christos Iēsous</em>): 'For there is one God and one mediator between God and people, the man Christ Jesus.' The <em>mesites</em> (mediator) terminology was used in both Hellenistic contract law (a third party who guarantees a transaction) and in LXX usage for Moses's mediating role at Sinai (Gal 3:19-20). The Christological uniqueness: there is <em>one</em> mediator — contra the Greco-Roman polytheistic model of multiple divine intermediaries, and contra any Jewish or emerging Gnostic scheme of angelic mediators. The qualifier <em>anthrōpos</em> (man) before Christ Jesus emphasizes the genuine humanity that enables the mediation: the mediator must be able to touch both parties.</p>"
-  },
-  "3": {
-    "16": "<p><strong>homologoumenos mega estin to tes eusebeias mysterion</strong>: 'Great indeed, as we confess, is the mystery of godliness.' What follows (vv. 16b-c) is almost certainly a pre-Pauline hymn or creedal fragment in six lines, possibly arranged in two strophes of three: (1) manifested in flesh / vindicated by Spirit / seen by angels; (2) proclaimed among nations / believed in the world / taken up in glory. The six verbs are all aorist passives — divine actions done to Christ. The structure mirrors Phil 2:6-11's humiliation-exaltation pattern: the first triad (incarnation, vindication, heavenly witness) parallels the descending and ascending of the Christ-hymn.</p>"
-  },
-  "6": {
-    "15": "<p><strong>ho makarios kai monos dynamastes ho basileus ton basileonton kai kyrios ton kyrieonton</strong> (<em>ho makarios kai monos dynastēs, ho basileus tōn basileuontōn kai kyrios tōn kyrieuontōn</em>): 'the blessed and only Sovereign, the King of kings and Lord of lords.' The doxology of 6:15-16 applies to the epiphaneia of Jesus the titles that Hellenistic rulers and the Roman emperor claimed. <em>Dynastēs</em> (Sovereign/potentate) was used of divine-right rulers in the Hellenistic east. <em>King of kings and Lord of lords</em> echoes Deut 10:17 (YHWH as God of gods and Lord of lords) and Daniel 2:37, 47 (the God of heaven as King over kings). The doxology places the Roman emperor's pretensions under the sovereignty of Christ.</p>"
-  }
-}
-
-ONETIM_CONTEXT = {
+ECHOES_1TIM = {
   "1": {
-    "3": "<p>1 Timothy is addressed to Timothy in Ephesus — Paul's extended base of ministry (Acts 19, ca. 52-55 CE; and likely again ca. 60-65 CE if the Pastoral Epistles reflect a release from Roman imprisonment). Ephesus was the largest city in the province of Asia and the site of the Artemis temple; it had a large Jewish community, numerous mystery cult associations, and by the late first century a substantial Christian community (see Revelation 2:1-7). The false teachers Timothy must address are described as teaching 'different doctrine' (<em>heterodidaskale</em>), focusing on 'myths and endless genealogies' (1:4) and 'what they call knowledge' (<em>pseudonymos gnōsis</em>, 6:20), possibly an early form of Jewish-Gnostic speculation.</p>"
+    "1": [
+      {"type": "allusion", "target": "Ps 106:21", "note": "God our Savior — the OT title 'God their Savior' (Ps 106:21; Ps 25:5; Isa 43:3) is regularly applied to YHWH in the Psalms and Isaiah; Paul applies it to 'God our Savior' and to 'Christ Jesus our hope,' distributing the divine-Savior title between Father and Son in a proto-Trinitarian pairing"},
+      {"type": "allusion", "target": "Jer 17:7", "note": "Christ Jesus our hope — the prophet's beatitude 'blessed is the one who trusts in YHWH, whose hope is YHWH' (Jer 17:7); the OT ground of hope in YHWH is now located specifically in Christ Jesus, making Christ the object of the trust and hope that Jeremiah locates in YHWH"}
+    ],
+    "9": [
+      {"type": "allusion", "target": "Exod 20:1-17", "note": "The vice list of 1 Tim 1:9-10 maps to violations of the Decalogue's second table — lawbreakers/rebels (5th: honor parents); murderers (6th: do not murder); sexually immoral (7th: do not commit adultery); slave traders/kidnappers (8th: do not steal = in ancient application, stealing persons); liars/perjurers (9th: do not bear false witness). The law functions as a diagnostic of sin, not a means of righteousness."}
+    ],
+    "15": [
+      {"type": "allusion", "target": "Ps 51:3-4", "note": "Christ Jesus came into the world to save sinners, of whom I am the foremost — Paul's self-identification as the 'foremost sinner' echoes David's confession in Ps 51 as the paradigmatic sinner pleading for mercy; the chief-sinner claim is a rhetorical intensification of the Davidic penitential tradition applied to the apostle's pre-conversion persecution"},
+      {"type": "allusion", "target": "Ezek 34:16", "note": "Christ Jesus came into the world to save sinners — YHWH's promise to seek the lost, strengthen the weak, and heal the sick (Ezek 34:16) is concentrated in the one Shepherd who comes to save those who are lost (cf. Luke 19:10)"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Ps 10:16", "note": "To the King eternal — YHWH as the eternal/everlasting King (Ps 10:16; Ps 29:10; Ps 145:13; Dan 4:34); the doxology's 'King of the ages' (basilei tōn aiōnōn) applies the OT eternal-kingship title to the one God"},
+      {"type": "allusion", "target": "Exod 33:20", "note": "The only God, immortal, invisible — the invisibility of God (Exod 33:20: no one can see my face and live; John 1:18: no one has seen God at any time) grounds the doxology; the God who is invisible to direct perception has made himself known through Christ"},
+      {"type": "allusion", "target": "Deut 6:4", "note": "The only God — the Shema's assertion of YHWH's uniqueness (Deut 6:4: YHWH is one) is the OT ground for the doxology's 'only God' (monō theō); Pauline monotheism is always Shema-shaped"}
+    ],
+    "20": [
+      {"type": "allusion", "target": "Job 1:12", "note": "Whom I have handed over to Satan — the disciplinary handing over to Satan echoes the divine permission granted to Satan over Job (Job 1:12: 'everything he has is in your hand'); the Satan-handing-over in 1 Tim 1:20 is a disciplinary ecclesial act, not mere punishment — the goal is that they 'be taught not to blaspheme,' just as Job's suffering led to deeper understanding"}
+    ]
+  },
+  "4": {
+    "1": [
+      {"type": "allusion", "target": "Dan 11:32", "note": "In later times some will abandon the faith and follow deceiving spirits — Daniel's end-time apostasy (Dan 11:32: those who act wickedly against the covenant he will corrupt with flattery) provides the OT frame for the Spirit's warning about future defection; the 'deceiving spirits' parallel the spiritual deception in Daniel's vision of end-time turbulence"}
+    ],
+    "3": [
+      {"type": "allusion", "target": "Gen 9:3", "note": "Foods, which God created to be received with thanksgiving — God's authorization of all food after the flood (Gen 9:3: every moving thing that lives shall be food for you) is the theological ground for rejecting the false teachers' food prohibitions; the creational permission extends to all food without restriction"}
+    ],
+    "4": [
+      {"type": "allusion", "target": "Gen 1:31", "note": "Everything God created is good — a near-direct allusion to Gen 1:31 (God saw everything that he had made, and behold, it was very good); the creational goodness of all things is the theological basis for the rejection of the ascetic food prohibitions the false teachers impose"}
+    ],
+    "8": [
+      {"type": "allusion", "target": "Prov 3:1-2", "note": "Godliness has value for both the present life and the life to come — Prov 3:1-2 promises that keeping the commandments brings length of days and years of life; Paul's claim extends the promise eschatologically: godliness profits not only for temporal life but for the age to come, a fulfillment and expansion of the wisdom tradition's this-worldly promises"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Josh 3:10", "note": "The living God, who is the Savior of all people — 'living God' (theos zōn) is an OT divine title distinguishing YHWH from dead idols (Josh 3:10; Ps 42:2; Jer 10:10; Dan 6:26); Paul's application of the living-God title to the one who saves all people (universally, not just Israel) extends the OT contrast between YHWH-the-living and idols to the broadest possible scope"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "Neh 8:1-8", "note": "Devote yourself to the public reading of Scripture — Ezra's public reading of the Law before all Israel (Neh 8:1-8) is the OT paradigm for the liturgical reading of Scripture as a communal formation practice; Timothy's devotion to public reading continues the synagogue and Ezra tradition of Scripture as the community's living constitution"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Num 27:18-23", "note": "The gift given through prophecy when the body of elders laid their hands on you — the ordination of Joshua by Moses through the laying on of hands (Num 27:18-23: Take Joshua...and lay your hand on him, and invest him with some of your authority) is the OT type for the elder-laying-on-of-hands ordination practice; Timothy's commissioning follows the Mosaic pattern of authorized succession"}
+    ]
   },
   "5": {
-    "17": "<p>The 'double honor' for elders who rule well (v. 17) — especially those who labor in preaching and teaching — reflects the early church's emerging distinction between lay elders and teaching-preaching elders. The citation of Deut 25:4 (do not muzzle an ox when it treads grain) and the dominical saying 'the laborer deserves his wages' (Luke 10:7) as dual warrant for paying ministers indicates that by the Pastoral period, apostolic-era oral tradition (Jesus's teaching) was already cited alongside Torah as authoritative Scripture.</p>"
-  }
-}
-
-ONETIM_CHRIST = {
-  "1": {
-    "15": "<p>A direct revelation: 'The saying is trustworthy and deserving of full acceptance, that Christ Jesus came into the world to save sinners, of whom I am the foremost.' The first of the Pastoral Epistles' five 'faithful sayings' (<em>pistos ho logos</em>) is a Christological mission-statement: the incarnation's purpose is soteriological — Christ came into the world (implying pre-existence, like John 1:14) specifically to save sinners. Paul's self-designation as 'the foremost of sinners' makes the statement an autobiographical proof: if Christ saved me (the persecutor of the church), his saving purpose is as wide as the worst sinner.</p>"
-  },
-  "2": {
-    "5": "<p>A direct revelation: 'There is one mediator between God and people, the man Christ Jesus, who gave himself as a ransom for all.' The two Christological claims together: (1) Christ is the unique, sole mediator — no competing spiritual hierarchy is needed or valid; (2) his mediation was accomplished through self-giving as a ransom (<em>antilytron</em>, substitutionary ransom-payment). <em>Antilytron</em> (found only here in NT) intensifies <em>lytron</em> (ransom, Mark 10:45) with the <em>anti</em> prefix indicating substitution: a ransom given in place of others. The universality ('for all', <em>hyper pantōn</em>) combined with the singularity ('one mediator') is the Christological center of 1 Timothy's soteriology.</p>"
-  },
-  "3": {
-    "16": "<p>A direct revelation: 'He was manifested in the flesh, vindicated by the Spirit, seen by angels, proclaimed among the nations, believed on in the world, taken up in glory.' The Christological hymn traces the entire arc of Christ's work in six compressed phrases: incarnation → resurrection-vindication → heavenly acknowledgment → worldwide proclamation → faith-response → ascension. The hymn is the doctrinal center of the household-of-God section (3:14-16): sound church order and ministry is grounded in the Christological mystery that the church has received and proclaims.</p>"
-  }
-}
-
-# ============================================================
-# 2 TIMOTHY
-# ============================================================
-
-TWOTIM_ECHO = {
-  "2": {
-    "8": [
-      {"type": "fulfillment", "target": "2 Sam 7:12-13", "note": "Jesus Christ, risen from the dead, the offspring of David — the Davidic promise (I will raise up your offspring after you and establish his throne forever) is fulfilled in the resurrection of David's descendant Jesus; the risen Christ is the Davidic heir whose kingdom will have no end"}
-    ]
-  },
-  "3": {
-    "16": [
-      {"type": "allusion", "target": "Deut 31:19-22", "note": "All Scripture is breathed out by God — the divine-origin claim for Scripture echoes YHWH's instruction to Moses to write down the Song (Deut 31:19) as a witness; the written word as YHWH's own testimony against and for Israel; now extended to all Scripture"}
-    ]
-  },
-  "4": {
-    "8": [
-      {"type": "allusion", "target": "Isa 40:10", "note": "Henceforth there is laid up for me the crown of righteousness which the Lord, the righteous judge, will award — YHWH coming with his reward, his recompense before him; Paul's awaited crown from the righteous judge at the parousia echoes the Isaianic expectation of the Lord's coming with vindication for the righteous"}
-    ]
-  }
-}
-
-TWOTIM_ORIGINAL = {
-  "2": {
-    "15": "<p><strong>spoudason seauton dokimon parastēsai to theo ergaten anepaiskunton orthotomounta ton logon tes aletheias</strong> (<em>spoudason seauton dokimon parastēsai tō theō, ergatēn anepaiskunton, orthotomounta ton logon tēs alētheias</em>): 'Do your best to present yourself to God as one approved, a worker who has no need to be ashamed, rightly handling the word of truth.' <em>Orthotomounta</em> (rightly dividing/handling/cutting): used in LXX Prov 3:6 ('he will make straight your paths') and 11:5. The word evokes a craftsman cutting or laying material in a straight line — a road-builder, a carpenter, a surgeon. The image: the handling of the word of truth requires the precision and skill of a craftsman who cuts straight rather than crooked. Historically, the King James 'rightly dividing' was applied dispensationally; the original metaphor is about competent, accurate, straight-course exposition.</p>"
-  },
-  "3": {
-    "16": "<p><strong>pasa graphe theopneustos kai ophelimos</strong> (<em>pāsa graphē theopneustos kai ōphelimos</em>): 'All Scripture is God-breathed (<em>theopneustos</em>) and profitable.' <em>Theopneustos</em> is a Pauline coinage (hapax legomenon) combining <em>theos</em> (God) and <em>pneō</em> (breathe) — 'God-breathed' or 'breathed out by God.' The breath-metaphor echoes Gen 2:7 (YHWH breathed into Adam's nostrils) and the Spirit-wind of Ezekiel's valley of bones: the Scriptures are alive with divine breath, not merely human compositions. The primary referent is the OT (which Timothy was taught from childhood, v. 15); the claim's extension to apostolic writings is implicit in 2 Pet 3:16's treatment of Paul's letters as <em>graphe</em>.</p>"
-  }
-}
-
-TWOTIM_CONTEXT = {
-  "1": {
-    "8": "<p>2 Timothy is widely regarded as Paul's final letter — written from a second Roman imprisonment ca. 66-67 CE, shortly before his death (4:6-8). The tone differs markedly from 1 Timothy: more personal, more urgent, more reflective of approaching death. The suffering-motif pervades the letter: Paul's chains (1:8, 16; 2:9), his abandonment by former associates (1:15; 4:10-16), his awareness of impending execution (4:6-8). If authentic (and most scholars accept 2 Timothy as more likely Pauline than 1 Timothy or Titus), it is the most personal surviving Pauline document. The mention of specific people (Hymenaeus, Philetus, Alexander the coppersmith, Demas, Luke, Mark) and personal items (the cloak at Troas, the books and parchments, 4:13) suggests authentic personal memory.</p>"
-  },
-  "3": {
-    "1": "<p>The 'last days' (<em>eschatais hēmerais</em>) characterized by moral collapse (vv. 1-9: lovers of self, lovers of money, proud, arrogant, abusive, disobedient to parents, ungrateful, unholy, heartless, unappeasable...) represents a conventional form in Jewish and early Christian eschatological literature called the 'signs of the end' tradition — cf. 1 Enoch 91-93 (the Apocalypse of Weeks), 2 Baruch 27-30, and rabbinic descriptions of the era before Messiah's coming. Paul's use of this tradition applies it to the present crisis in Timothy's ministry, not a distant future: the last days have already begun in the false teachers' behavior.</p>"
-  }
-}
-
-TWOTIM_CHRIST = {
-  "1": {
-    "10": "<p>A direct revelation: 'Our Savior Christ Jesus abolished death and brought life and immortality to light through the gospel.' The Christological declaration concentrates the gospel: Christ 'abolished' (<em>katargēsantos</em>) death — not merely defeated it but rendered it inoperative; brought life and immortality 'to light' (<em>phōtisantos</em>) — these were previously hidden in God's eternal purpose (v. 9) but are now disclosed through the proclamation. The Christology of 2 Timothy: the epiphany of the Savior is the historical moment when death's power was broken and life was made publicly visible.</p>"
-  },
-  "2": {
-    "8": "<p>A direct revelation: 'Remember Jesus Christ, risen from the dead, the offspring of David, as preached in my gospel.' Paul's summary of the gospel in one sentence unites the two great OT streams: Davidic messiahship (the royal covenant of 2 Sam 7) and resurrection (the prophetic expectation of Isa 26:19; Dan 12:2). 'Remember' (<em>mnemoneue</em>) is imperative — not a passive recollection but an active, sustaining focus on the Christological fact that generates Paul's willingness to suffer (v. 9-10: I endure everything for the sake of the elect). The risen Davidic Christ is the content of endurance.</p>"
-  },
-  "4": {
-    "8": "<p>A direct revelation: 'Henceforth there is laid up for me the crown of righteousness, which the Lord, the righteous judge, will award to me on that Day — and not only to me but also to all who have loved his appearing.' The parousia of Christ (the <em>epiphaneia</em> that Paul loved) is the moment of final vindication. The 'crown of righteousness' is not earned by Paul's sufferings but 'laid up' (<em>apokeitai</em>) — already determined, awaiting award. The righteous judge who will confer it is Christ himself. The Christological movement of 2 Timothy: from the first epiphaneia (incarnation, 1:10) through present endurance to the final epiphaneia where the judge vindicates the faithful.</p>"
-  }
-}
-
-# ============================================================
-# TITUS
-# ============================================================
-
-TITUS_ECHO = {
-  "2": {
-    "14": [
-      {"type": "fulfillment", "target": "Exod 19:5", "note": "To purify for himself a people of his own possession — YHWH's Sinai declaration 'you shall be my treasured possession' (LXX: laos periousios, exactly the term used here); the new covenant community is the fulfillment of what the Sinai covenant pointed toward"},
-      {"type": "fulfillment", "target": "Ezek 37:23", "note": "Who gave himself to redeem us from all lawlessness — YHWH's promise to cleanse Israel from all their backslidings; the redemption from lawlessness fulfills Ezekiel's new covenant cleansing promise"}
-    ]
-  },
-  "3": {
     "5": [
-      {"type": "fulfillment", "target": "Ezek 36:25-27", "note": "Renewing of the Holy Spirit whom he poured out on us richly — YHWH's promise to sprinkle clean water, put his Spirit within, and cause Israel to walk in his statutes; the new birth through the Spirit fulfills Ezekiel's new covenant restoration"}
+      {"type": "allusion", "target": "Ps 146:9", "note": "The widow who is really in need puts her hope in God and continues night and day to pray — YHWH's care for widows (Ps 146:9: YHWH watches over the sojourner; he upholds the widow and the fatherless) is the OT ground for the community's obligation to true widows; the widow who prays day and night enacts the trust in YHWH that the Psalms commend"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Gen 18:1-8", "note": "Showing hospitality, washing the feet of the Lord's people — Abraham's foot-washing of the three visitors (Gen 18:4) and the Psalms' commendation of hospitality stand behind the widow-qualification list; foot-washing is the specific sign of hospitality (cf. Gen 18; Luke 7:44; John 13:14) that marks a genuinely hospitable community member"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Num 18:21", "note": "Elders who direct the affairs of the church well are worthy of double honor, especially those whose work is preaching and teaching — the Levitical principle of material support for those who serve at the altar (Num 18:21: I give to the Levites all the tithes in Israel as their inheritance in return for their service at the tent of meeting) grounds the principle of paid ministry; the elder-support obligation is the new-covenant extension of the Levitical maintenance principle"}
+    ],
+    "18": [
+      {"type": "fulfillment", "target": "Deut 25:4", "note": "Do not muzzle an ox while it is treading out the grain — the explicit Scripture quotation (cited in 1 Cor 9:9 with the same application); Deut 25:4's command to allow the ox to eat while threshing is read as a divine statement about the right of those who labor in God's service to receive material support; Paul reads the agricultural law as establishing a spiritual-economic principle"}
+    ],
+    "19": [
+      {"type": "fulfillment", "target": "Deut 19:15", "note": "Do not entertain an accusation against an elder unless it is brought by two or three witnesses — the explicit application of Deut 17:6 and 19:15's two-witness judicial requirement to church discipline; the Mosaic law's procedural protection against false accusation (one witness is not enough) is applied directly to the protection of elders from baseless charges"}
+    ],
+    "21": [
+      {"type": "allusion", "target": "Dan 7:10", "note": "In the sight of God and Christ Jesus and the elect angels — the heavenly court imagery draws on Dan 7:10 (thousands upon thousands attended him; ten thousand times ten thousand stood before him; the court sat in judgment) and the broader OT tradition of the divine council; the charge is made before the assembled heavenly witnesses as an oath-formula of maximum solemnity"}
     ]
-  }
-}
-
-TITUS_ORIGINAL = {
-  "2": {
-    "13": "<p><strong>prosdechomenoi ten makarian elpida kai epiphaneian tes doxes tou megalou theou kai soteros hemon Iesou Christou</strong> (<em>prosdechomenoi tēn makarian elpida kai epiphaneian tēs doxēs tou megalou theou kai sōtēros hēmōn Iēsou Christou</em>): 'waiting for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ.' The Greek syntax — <em>tou megalou theou kai soteros hemon Iesou Christou</em> — with the single definite article governing both 'God' and 'Savior' (the Granville Sharp rule) most naturally refers to one person: 'our great God and Savior, Jesus Christ.' This is one of the most explicit divine predications of Jesus in the NT — calling him directly 'our great God.' <em>Epiphaneia</em> (appearing/manifestation) is the distinctive Pastoral Christological term for the Incarnation (1 Tim 3:16; 2 Tim 1:10) and the parousia (1 Tim 6:14; 2 Tim 4:1, 8) — a term the Hellenistic world used for the appearance of a deity or the arrival of a king.</p>"
-  }
-}
-
-TITUS_CONTEXT = {
-  "1": {
-    "5": "<p>Titus in Crete: the island of Crete had a significant Jewish community (Acts 2:11; Josephus mentions Cretan Jews). Paul's description of Cretans — citing the Cretan poet Epimenides ('Cretans are always liars, evil beasts, lazy gluttons', v. 12) — uses an ancient ethnic stereotype familiar to his Greco-Roman audience. The church-planting task in Crete required appointing elders in 'every town' (<em>kata polin</em>), indicating a widespread but organizationally young mission. The Pastoral Epistles' emphasis on <em>episkopos</em> (overseer), <em>presbyteros</em> (elder), and <em>diakonos</em> (deacon) reflects the institutionalization of church leadership as the apostolic generation aged and died.</p>"
-  },
-  "3": {
-    "5": "<p>The 'washing of regeneration and renewing of the Holy Spirit' (<em>loutron palingenesias kai anakainōseōs Pneumatos Hagiou</em>) combines Jewish purification-immersion imagery (<em>mikveh</em>) with the OT new-covenant Spirit-promise (Ezek 36:25-27; Joel 2:28-29). <em>Palingenesia</em> (regeneration/new birth) appears only here and Matt 19:28 (the renewal of all things at the eschatological restoration) in the NT — linking individual new birth with cosmic new creation. <em>Paliggenesia</em> was also a Stoic term for the cyclical renewal of the cosmos after the ekpyrosis (cosmic fire) — Paul's use may deliberately appropriate the Stoic vocabulary and fill it with Christological content: the Spirit's renewal is the eschatological new creation arriving in individual conversion.</p>"
-  }
-}
-
-TITUS_CHRIST = {
-  "2": {
-    "14": "<p>A direct revelation: 'Who gave himself for us to redeem us from all lawlessness and to purify for himself a people of his own possession who are zealous for good works.' The Christological mission-statement of Titus: the self-giving of Christ (<em>edōken heauton</em>) accomplishes two things — ransom from lawlessness and purification-for-possession. The people-of-God language (laos periousios = treasured possession, Exod 19:5) is deliberately applied to the new covenant community formed by Christ's self-gift. Christ does not merely save individuals but creates a community that embodies his purposes — 'zealous for good works' completes the Christological transaction with an ethical telos.</p>"
-  },
-  "3": {
-    "4": "<p>A direct revelation: 'But when the goodness and loving kindness of God our Savior appeared, he saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewing of the Holy Spirit.' The 'appearance' (<em>epephanē</em>) of God's goodness is the Incarnation — the divine character made visible in Jesus. The Christological-Trinitarian movement: God the Savior's goodness appeared → he saved by mercy (not merit) → through the washing of the Spirit → poured out richly through Jesus Christ our Savior. The threefold divine action (God, Spirit, Christ) grounds salvation entirely outside human achievement.</p>"
-  }
-}
-
-# ============================================================
-# PHILEMON
-# ============================================================
-
-PHILEMON_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Lev 19:34", "note": "No longer as a slave but more than a slave, as a dear brother — the Levitical command to treat the alien among you as the native; the Onesimus-Philemon relationship after conversion exceeds the Torah's ethnic solidarity by requiring brotherly love between master and enslaved person"},
-      {"type": "allusion", "target": "Deut 23:15-16", "note": "Receive him no longer as a slave but as a dear brother — Deuteronomy's command not to return a runaway slave to his master but to let him dwell wherever he chooses; Paul's appeal works within Roman law while nudging toward a more radical Christian brotherhood that subverts the institution"}
-    ]
-  }
-}
-
-PHILEMON_ORIGINAL = {
-  "1": {
-    "16": "<p><strong>ouketi hos doulon alla hyper doulon adelphon agapeton</strong> (<em>ouketi hōs doulon alla hyper doulon, adelphon agapēton</em>): 'no longer as a slave but more than a slave, as a dear brother.' The grammatical structure — <em>ouketi ... alla hyper</em> (no longer ... but beyond) — expresses a qualitative transformation, not just a label change. Onesimus remains in a social relationship with Philemon but that relationship is now defined by a different primary category: <em>adelphos agapētos</em> (beloved brother). Paul does not directly command emancipation, but the logic of brotherhood makes slavery an anomaly: how can you own your brother? The letter is the most politically charged use of household-code language in Paul — Christian kinship (<em>adelphos</em>) is placed in deliberate tension with Roman social institution (<em>doulos</em>).</p>",
-
-    "18": "<p><strong>ei de ti edikesen se e opheilei touto emoi ellogei</strong> (<em>ei de ti ēdikēsen se ē opheilei, touto emoi ellogei</em>): 'If he has wronged you at all or owes you anything, charge that to my account.' <em>Ellogei</em> (charge to my account / impute) is a commercial-accounting term used only here and Rom 5:13 (sin is not <em>ellogeitai</em> when there is no law) in the NT. Paul offers to absorb Onesimus's debt as a surety. The theological parallel is explicit in the letter's rhetoric: as Paul stands in for Onesimus absorbing his debt-liability, Christ stands in for sinners absorbing their debt before God. Philemon is the NT's most compressed illustration of imputed righteousness in a human-relational register.</p>"
-  }
-}
-
-PHILEMON_CONTEXT = {
-  "1": {
-    "10": "<p>Onesimus was enslaved in Philemon's household in Colossae (cf. Col 4:9: 'Onesimus, our faithful and dear brother, who is one of you'). The traditional reading: Onesimus ran away from Philemon, somehow encountered Paul in prison (Rome or Ephesus), was converted, and is now being returned. A minority reading (B. Winter, A. Callahan): Onesimus was sent by Philemon to assist Paul in prison (a known practice, cf. Phil 2:25-30 — Epaphroditus sent to serve Paul), and Paul now appeals for him to be released permanently for gospel ministry. Either way, the letter navigates Roman slave-law (the <em>Lex Petronia</em> of ca. 61 CE and related legislation governed runaways) while applying theological pressure through the rhetoric of Christian brotherhood.</p>",
-
-    "16": "<p>Roman slavery in the first century CE: approximately 1-2 million enslaved people in Italy alone (roughly 30-35% of the Italian population, Scheidel's estimate); enslaved persons could be freed by manumission (<em>manumissio</em>) through various legal mechanisms. Freed persons became Roman citizens with some legal restrictions. The distinction Paul makes — 'both in the flesh and in the Lord' — is the Christian social ontology: Onesimus has both a new spiritual identity (brother in Christ) and an unchanged social location (in Philemon's household). Paul does not directly call for legal manumission, but the category 'dear brother' both in the flesh and in the Lord strains against the institution's dehumanizing premise.</p>"
-  }
-}
-
-PHILEMON_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'If you consider me your partner, receive him as you would receive me.' Paul's intercession for Onesimus reveals a pattern of representative substitution: the apostle places himself in the position of the offender and asks to be treated as Onesimus's surety. This is not strictly a direct Christological statement, but Paul consciously patterns his intercession on the Christological movement of divine advocacy — as Christ stands for sinners before the Father, Paul stands for Onesimus before Philemon. The letter reveals the social logic of atonement-theology as it should reshape human relationships.</p>",
-
-    "18": "<p>A direct revelation: 'If he has wronged you at all, or owes you anything, charge that to my account.' The imputation-language (<em>ellogei</em>) makes this the most concrete illustration in the NT of the substitutionary logic that governs Paul's soteriology. The Christ-event logic: Christ receives the charge of our debt against God's account; Paul enacts this same logic with Onesimus's debt to Philemon. The atonement is not merely a doctrinal formula but a relational pattern that should generate analogous acts of substitutionary absorption of another's debt. Philemon is called to receive Onesimus 'as you would receive me' (v. 17) — Christ-likeness enacted in the ordinary economy of first-century household relationships.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1timothy', ONETIM_ECHO, ONETIM_ORIGINAL, ONETIM_CONTEXT, ONETIM_CHRIST),
-        ('2timothy', TWOTIM_ECHO, TWOTIM_ORIGINAL, TWOTIM_CONTEXT, TWOTIM_CHRIST),
-        ('titus', TITUS_ECHO, TITUS_ORIGINAL, TITUS_CONTEXT, TITUS_CHRIST),
-        ('philemon', PHILEMON_ECHO, PHILEMON_ORIGINAL, PHILEMON_CONTEXT, PHILEMON_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_echo('1timothy')
+    merge_echo(existing, ECHOES_1TIM)
+    save_echo('1timothy', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-        print(f'{book} original: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-        print(f'{book} context: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book} christ: {len(c)} chs, {sum(len(v) for v in c.values())} vs')
+    il = json.loads((ROOT / 'data' / 'interlinear' / '1timothy.json').read_text())
+    present_chs = sorted(existing.keys(), key=int)
+    print(f'  Chapters with echo entries: {present_chs}')
+    for ch in ['1', '2', '3', '4', '5']:
+        count = len(existing.get(ch, {}))
+        print(f'  ch{ch}: {count} verses with entries')
 
 if __name__ == '__main__':
     main()

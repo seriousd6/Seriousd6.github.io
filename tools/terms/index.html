@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <title>Contested Term Commentary — Bible Study</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <style>
+    /* ── Contested Terms Tool (tg-*) ─────────────────────────────── */
+    body { margin: 0; font-family: var(--font-body, Georgia, serif); }
+    .tg-page { display: flex; flex-direction: column; height: 100vh; overflow: hidden; background: var(--color-bg, #faf8f5); }
+
+    .tg-topbar {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.5rem 1rem; background: var(--sb-bg, #1a120a);
+      color: #e8d5b0; font-size: 0.9rem; flex-shrink: 0;
+      border-bottom: 2px solid var(--color-primary, #c8a96e);
+    }
+    .tg-topbar__title { font-weight: 600; }
+    .tg-back { color: var(--color-primary, #c8a96e); text-decoration: none; font-size: 0.85rem; }
+    .tg-back:hover { text-decoration: underline; }
+    .tg-topbar__sep { color: #5a4a30; }
+
+    .tg-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      flex: 1; overflow: hidden;
+    }
+
+    /* Left: term list */
+    .tg-list-col {
+      border-right: 1px solid var(--color-border, #c8a96e30);
+      display: flex; flex-direction: column; overflow: hidden;
+      background: var(--sb-bg, #1a120a);
+    }
+    .tg-search {
+      padding: 0.5rem 0.75rem;
+      background: #221808;
+      border-bottom: 1px solid #3a280e;
+    }
+    .tg-search input {
+      width: 100%; box-sizing: border-box;
+      background: #1a120a; color: #e8d5b0;
+      border: 1px solid #3a280e; border-radius: 4px;
+      padding: 0.4rem 0.6rem; font-size: 0.85rem;
+    }
+    .tg-search input::placeholder { color: #7a6a4a; }
+    .tg-list { flex: 1; overflow-y: auto; }
+    .tg-list-item {
+      display: flex; flex-direction: column; gap: 0.15rem;
+      padding: 0.6rem 0.75rem; cursor: pointer;
+      border-bottom: 1px solid #221808;
+      transition: background 0.1s;
+    }
+    .tg-list-item:hover { background: #221808; }
+    .tg-list-item--active { background: #2a1e0a; border-left: 3px solid var(--color-primary, #c8a96e); }
+    .tg-list-item__lemma { font-size: 1.05rem; color: #e8d5b0; font-family: var(--font-mono, 'SBL Greek', serif); }
+    .tg-list-item__code  { font-size: 0.7rem; color: #7a6a4a; }
+    .tg-list-item__gloss { font-size: 0.78rem; color: #a89060; }
+    .tg-dispute {
+      display: inline-block; font-size: 0.62rem; font-weight: 700;
+      padding: 0.05rem 0.3rem; border-radius: 3px; margin-left: 0.3rem;
+      vertical-align: middle;
+    }
+    .tg-dispute--3 { background: #3a2e00; color: #fdd835; }
+    .tg-dispute--4 { background: #3a1218; color: #ef9a9a; }
+    .tg-dispute--5 { background: #5a1010; color: #ff8080; }
+
+    /* Right: detail panel */
+    .tg-detail-col {
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      background: var(--color-bg, #faf8f5);
+    }
+    .tg-placeholder {
+      color: var(--color-text-muted, #999); font-style: italic;
+      padding: 2rem 0; text-align: center;
+    }
+
+    /* Detail components */
+    .tg-entry-head { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .tg-entry-lemma { font-size: 2rem; font-family: var(--font-mono, 'SBL Greek', serif); color: var(--color-primary, #c8a96e); }
+    .tg-entry-translit { font-size: 1rem; color: var(--color-text-muted, #888); font-style: italic; }
+    .tg-entry-code { font-size: 0.8rem; color: var(--color-text-muted, #999); font-family: monospace; }
+    .tg-entry-pos { font-size: 0.8rem; color: var(--color-text-muted, #888); }
+    .tg-entry-status {
+      font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;
+    }
+    .tg-status--draft     { background: #e0e0e0; color: #555; }
+    .tg-status--confirmed { background: #e6f4ea; color: #2e7d32; }
+    .tg-status--locked    { background: #e3f2fd; color: #1565c0; }
+    .tg-status--override  { background: #fff3e0; color: #e65100; }
+
+    .tg-section { margin-bottom: 1.5rem; }
+    .tg-section-title {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--color-text-muted, #999);
+      margin-bottom: 0.5rem; padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--color-border, #c8a96e20);
+    }
+
+    /* Tiers table */
+    .tg-tiers { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .tg-tiers th, .tg-tiers td { padding: 0.4rem 0.6rem; border: 1px solid var(--color-border, #c8a96e20); text-align: left; }
+    .tg-tiers th { background: var(--color-surface, #f5f0e8); font-weight: 600; font-size: 0.78rem; }
+    .tg-tiers td:first-child { font-style: italic; color: var(--color-text-muted, #888); width: 100px; }
+
+    /* Semantic range */
+    .tg-semantic { font-size: 0.95rem; line-height: 1.6; color: var(--color-text, #2c2218); }
+
+    /* Decision log */
+    .tg-log { list-style: none; margin: 0; padding: 0; }
+    .tg-log li { padding: 0.35rem 0; border-bottom: 1px solid var(--color-border, #c8a96e15); font-size: 0.85rem; }
+    .tg-log__date { color: var(--color-text-muted, #999); font-family: monospace; font-size: 0.75rem; margin-right: 0.5rem; }
+    .tg-log__action { font-weight: 600; margin-right: 0.5rem; }
+    .tg-log__note { color: var(--color-text-muted, #666); }
+
+    /* Related codes */
+    .tg-related { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tg-related-chip {
+      background: var(--color-surface, #f5f0e8); border: 1px solid var(--color-border, #c8a96e30);
+      border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.8rem; cursor: pointer;
+    }
+    .tg-related-chip:hover { background: var(--color-primary, #c8a96e); color: #fff; }
+
+    /* Count badge */
+    .tg-count { font-size: 0.75rem; color: var(--color-text-muted, #999); margin-top: 0.3rem; }
+
+    @media (max-width: 680px) {
+      .tg-layout { grid-template-columns: 1fr; }
+      .tg-list-col { height: 40vh; }
+      .tg-detail-col { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="tg-page">
+
+  <div class="tg-topbar">
+    <a href="../../" class="tg-back">← Site</a>
+    <span class="tg-topbar__sep">|</span>
+    <span>⚖</span>
+    <span class="tg-topbar__title">Contested Term Commentary</span>
+  </div>
+
+  <div class="tg-layout">
+
+    <div class="tg-list-col">
+      <div class="tg-search">
+        <input type="search" id="tg-filter" placeholder="Filter terms…" autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="tg-count" id="tg-count" style="padding: 0.3rem 0.75rem; background: #1a120a;"></div>
+      <div class="tg-list" id="tg-list"></div>
+    </div>
+
+    <div class="tg-detail-col" id="tg-detail">
+      <p class="tg-placeholder">← Select a term to view its commentary</p>
+    </div>
+
+  </div>
+</div>
+
+<script type="module">
+  import { _resolve } from '../../assets/js/core.js';
+
+  // INTENT: Load the phase5.json contested-terms bundle, then render the left list and
+  //   wire up click → detail panel. Filter is client-side (17 entries).
+  // CHANGE? If phase bundles are split, update DATA_URL to load phase1+phase5 or a combined file.
+  // VERIFY: Page loads → 17 entries in left list; click G1343 → δικαιοσύνη detail renders.
+  const DATA_URL  = _resolve('../../data/translation/phase5.json');
+  const DISPUTE_LABELS = { 1: 'minor', 2: 'moderate', 3: 'contested', 4: 'major', 5: 'severe' };
+
+  let allEntries = [];   // [{code, entry}] sorted by dispute_level desc
+  let activeCode = null;
+
+  async function init() {
+    const data = await fetch(DATA_URL).then(r => r.json());
+    allEntries = Object.entries(data)
+      .map(([code, entry]) => ({ code, entry }))
+      .sort((a, b) => (b.entry.dispute_level || 0) - (a.entry.dispute_level || 0));
+    renderList(allEntries);
+    document.getElementById('tg-filter').addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      renderList(allEntries.filter(function({ code, entry }) {
+        return code.toLowerCase().includes(q)
+          || (entry.lemma || '').toLowerCase().includes(q)
+          || (entry.translit || '').toLowerCase().includes(q)
+          || JSON.stringify(entry.tiers || {}).toLowerCase().includes(q);
+      }));
+    });
+  }
+
+  function escHtml(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderList(items) {
+    const list = document.getElementById('tg-list');
+    const count = document.getElementById('tg-count');
+    count.textContent = items.length + ' term' + (items.length !== 1 ? 's' : '');
+    list.innerHTML = items.map(function({ code, entry }) {
+      const lvl = entry.dispute_level || 0;
+      const primary = (entry.tiers && entry.tiers.mediating && entry.tiers.mediating.primary)
+        || (entry.tiers && entry.tiers.literal && entry.tiers.literal.primary) || '';
+      const isActive = code === activeCode ? ' tg-list-item--active' : '';
+      return '<div class="tg-list-item' + isActive + '" data-code="' + escHtml(code) + '">'
+        + '<span class="tg-list-item__lemma">' + escHtml(entry.lemma || code)
+        + (lvl >= 3 ? '<span class="tg-dispute tg-dispute--' + lvl + '">' + escHtml(DISPUTE_LABELS[lvl] || 'L' + lvl) + '</span>' : '')
+        + '</span>'
+        + '<span class="tg-list-item__code">' + escHtml(code) + ' · ' + escHtml(entry.translit || '') + '</span>'
+        + (primary ? '<span class="tg-list-item__gloss">' + escHtml(primary) + '</span>' : '')
+        + '</div>';
+    }).join('');
+    list.querySelectorAll('.tg-list-item[data-code]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        const code = el.dataset.code;
+        var found = allEntries.find(function(e) { return e.code === code; });
+        if (found) openEntry(found.code, found.entry);
+      });
+    });
+  }
+
+  function openEntry(code, entry) {
+    activeCode = code;
+    // Refresh active state without full re-render
+    document.querySelectorAll('.tg-list-item').forEach(function(el) {
+      el.classList.toggle('tg-list-item--active', el.dataset.code === code);
+    });
+
+    const lvl = entry.dispute_level || 0;
+    const status = entry.status || 'draft';
+    const tiers = entry.tiers || {};
+    const tierRows = ['literal', 'mediating', 'thought'].map(function(t) {
+      const ti = tiers[t] || {};
+      return '<tr><td>' + t + '</td><td>' + escHtml(ti.primary || '—')
+        + (ti.notes ? ' <small style="color:#999">(' + escHtml(ti.notes) + ')</small>' : '')
+        + '</td></tr>';
+    }).join('');
+
+    const log = (entry.decision_log || []).slice().reverse();
+    const logHtml = log.length
+      ? '<ul class="tg-log">' + log.map(function(l) {
+          return '<li><span class="tg-log__date">' + escHtml(l.date || '') + '</span>'
+            + '<span class="tg-log__action">' + escHtml(l.action || '') + '</span>'
+            + '<span class="tg-log__note">' + escHtml(l.note || '') + '</span></li>';
+        }).join('') + '</ul>'
+      : '<p style="color:#999;font-size:.85rem">No decision log entries.</p>';
+
+    const related = (entry.related_lemmas || []);
+    const relatedHtml = related.length
+      ? '<div class="tg-related">' + related.map(function(r) {
+          return '<span class="tg-related-chip" data-code="' + escHtml(r.code || '') + '">'
+            + escHtml(r.lemma || r.code || '') + '</span>';
+        }).join('') + '</div>'
+      : '<p style="color:#999;font-size:.85rem">None recorded.</p>';
+
+    const freqLabel = (entry.nt_freq > 0 && entry.ot_freq > 0) ? 'NT/OT'
+      : (entry.nt_freq > 0 ? 'NT' : 'OT');
+    const freq = (entry.nt_freq || 0) + (entry.ot_freq || 0);
+
+    document.getElementById('tg-detail').innerHTML =
+      '<div class="tg-entry-head">'
+      + '<span class="tg-entry-lemma">' + escHtml(entry.lemma || code) + '</span>'
+      + '<span class="tg-entry-translit">' + escHtml(entry.translit || '') + '</span>'
+      + '<span class="tg-entry-code">' + escHtml(code) + '</span>'
+      + '<span class="tg-entry-pos">' + escHtml(entry.pos || '') + '</span>'
+      + (lvl >= 2 ? '<span class="tg-dispute tg-dispute--' + lvl + '">' + escHtml(DISPUTE_LABELS[lvl] || 'L' + lvl) + ' dispute</span>' : '')
+      + '<span class="tg-entry-status tg-status--' + escHtml(status) + '">' + escHtml(status) + '</span>'
+      + '</div>'
+      + (freq ? '<p class="tg-count">' + freq.toLocaleString() + '× in ' + freqLabel + '</p>' : '')
+
+      + '<div class="tg-section">'
+      + '<div class="tg-section-title">Rendering Tiers</div>'
+      + '<table class="tg-tiers"><thead><tr><th>Tier</th><th>Primary rendering</th></tr></thead><tbody>'
+      + tierRows + '</tbody></table></div>'
+
+      + (entry.semantic_range ? '<div class="tg-section"><div class="tg-section-title">Semantic Range</div>'
+        + '<p class="tg-semantic">' + escHtml(entry.semantic_range) + '</p></div>' : '')
+
+      + (entry.user_notes ? '<div class="tg-section"><div class="tg-section-title">Decision Notes</div>'
+        + '<p class="tg-semantic">' + escHtml(entry.user_notes) + '</p></div>' : '')
+
+      + '<div class="tg-section"><div class="tg-section-title">Related Terms</div>' + relatedHtml + '</div>'
+
+      + '<div class="tg-section"><div class="tg-section-title">Decision Log</div>' + logHtml + '</div>';
+
+    // Wire related chips to open their entry
+    document.querySelectorAll('.tg-related-chip[data-code]').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        const targetCode = chip.dataset.code;
+        var found = allEntries.find(function(e) { return e.code === targetCode; });
+        if (found) openEntry(found.code, found.entry);
+      });
+    });
+  }
+
+  init().catch(function(err) { console.error('[Terms]', err); });
+</script>
+</body>
+</html>

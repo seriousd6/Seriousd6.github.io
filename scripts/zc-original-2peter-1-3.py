@@ -1,50 +1,41 @@
 """
-Combined script: James, 1 Peter, 2 Peter, 2 John, 3 John, Jude — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for each letter.
+MKT Original Commentary — 2 Peter chapters 1–3 (60 missing verses; ch3v9 already present)
+Run: python3 scripts/zc-original-2peter-1-3.py
 
-The General Epistles span wisdom tradition (James), suffering-theology (1 Peter),
-eschatological warning (2 Peter, Jude), and community discernment (2-3 John).
+Source data used:
+- data/interlinear/2peter.json
+- data/translation/draft/mediating/2peter.json (MKT text)
+
+Key decisions in this range:
+- epignosis: the epi-strengthened "full/thorough knowledge" — appears in every chapter, central to the letter's polemic against false teachers
+- theias koinonoi physeos (v1:4): "partakers of the divine nature" — unique NT phrase; uses Stoic/Platonic divinization language for new-covenant transformation
+- virtue chain vv1:5-7: sorites/climax rhetorical figure from Hellenistic philosophy — faith → virtue → knowledge → self-control → endurance → godliness → brotherly-love → love
+- epoptai (v1:16): eyewitnesses — the technical term for initiates who have seen the mysteries; applied to Transfiguration witnesses
+- heosphoros (v1:19): morning star / Phosphorus (planet Venus as dawn herald) — eschatological
+- tartarosas (v2:4): consigning to Tartarus — the only NT use of this Greek mythological term for the deepest underworld
+- stoicheia (v3:10,12): elements/heavenly bodies — the basic constituents of the cosmos that will be dissolved at the eschaton
+- eilikrine dianoia (v3:1): pure understanding — tested by sunlight (the etymology of eilikrinos)
+- tas loipas graphas (v3:16): "the rest of the scriptures" — Paul's letters placed alongside Scripture
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -52,288 +43,93 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# JAMES
-# ============================================================
-
-JAMES_ECHO = {
+PETER2 = {
   "1": {
-    "17": [
-      {"type": "allusion", "target": "Num 23:19", "note": "With whom there is no variation or shadow due to change — God is not a man that he should lie or change his mind; YHWH's immutability as the ground of trust echoes in James's description of the Father of lights"},
-      {"type": "allusion", "target": "Mal 3:6", "note": "I the LORD do not change — YHWH's immutability guarantees the covenant; James's 'no variation' language in describing the Father draws from the prophetic declaration of divine constancy"}
-    ]
+    "1": '<p><strong>Symeon Petros</strong> — the Hebrew/Aramaic form of Simon (cf. Acts 15:14), more formal and Semitic than the common Greek <em>Simōn</em>; the double name may signal the letter\'s claim of apostolic authenticity. <strong>doulos kai apostolos</strong> — slave and envoy: the two terms bracket the range from complete dependence to delegated authority. <strong>tois isotimon hēmin lachousin pistin</strong> — to those who have obtained a faith equally precious with ours (<em>isotimon</em> = equal in honor/value; <em>lagchanō</em> = to receive by lot, suggesting divine allocation rather than human achievement).</p>',
+    "2": '<p><strong>epignōsis</strong> — full/thorough knowledge (the <em>epi</em>-strengthened form of <em>gnōsis</em>; <em>epi</em> + <em>ginōskō</em> = to know fully, recognize completely). This word appears throughout 2 Peter (1:2, 3, 8; 2:20; 3:18) as the letter\'s central epistemological term — placed in direct contrast to the false teachers\' claims to <em>gnōsis</em>. Grace and peace multiply <em>en epignōsei</em> — through the knowledge of God and of Jesus; right knowledge of God is the channel of covenant blessing.</p>',
+    "3": '<p><strong>tēs theias dynameōs autou</strong> — his divine power (the <em>theia dynamis</em> = divine power, a phrase common in Hellenistic philosophy and Jewish Wisdom literature for God\'s operative energy); <strong>ta pros zōēn kai eusebeian</strong> — everything pertaining to life and godliness (<em>eusebeia</em> = godliness, reverence — a distinctly Greek religious term that 2 Peter uses 4 times; rare in Paul but common in the Pastoral Epistles). <strong>dia epignōseōs tou kalesantos hēmas</strong> — through the knowledge of the one who called us; the calling is by the divine <em>doxē kai aretē</em> (glory and virtue/excellence — the two defining qualities of divine being in Greek philosophical theology).</p>',
+    "4": '<p><strong>theias koinōnoi physeōs</strong> — partakers/sharers of the divine nature (this phrase is unique in the NT; <em>koinōnoi physeōs</em> uses the language of Stoic and Middle Platonic philosophy about participation in the divine principle that pervades reality). Peter applies it to the new covenant: believers share in the divine nature not by absorption into God (the Platonic divinization trajectory) but by escaping the <em>phthora</em> (corruption/decay) that pervades the created order. <strong>phygontes tēs en tō kosmō en epithymia phthoras</strong> — having escaped the corruption that is in the world through desire; the two-stage movement: escape from the old creation\'s decay and positive participation in the divine life.</p>',
+    "5": '<p><strong>kai auto touto de spoudēn pasan pareisenenkontes</strong> — and for this very reason, bringing alongside all diligence/effort (<em>spoudē</em> = earnest effort; <em>pareispheromai</em> = to bring in alongside — a compound of motion with co-participation). The virtue chain begins: <strong>episychorigēsate en tē pistei hymōn tēn aretēn</strong> — supply in your faith virtue (<em>epichorēgeō</em> = to fund/supply in addition; the word for the wealthy patron who supplements the chorus\'s resources with his own). The chain is a <em>sorites</em> (chain argument) or <em>climax</em> (ladder figure) — a Hellenistic rhetorical structure for progressive moral development: <em>pistis</em> (faith) → <em>aretē</em> (virtue/excellence).</p>',
+    "6": '<p><strong>en de tē aretē tēn gnōsin</strong> — in virtue, knowledge; <strong>en de tē gnōsei tēn enkrateian</strong> — in knowledge, self-control (<em>enkrateia</em> = mastery over oneself; the Stoic cardinal virtue of temperance); <strong>en de tē enkrateia tēn hypomonēn</strong> — in self-control, endurance (<em>hypomonē</em> = the capacity to remain under pressure without breaking — the same virtue James prizes). The chain deliberately places <em>gnōsis</em> within a framework of practical virtue — a rebuke of those who claim knowledge while lacking the moral qualities that should accompany it.</p>',
+    "7": '<p><strong>en de tē hypomonē tēn eusebeian</strong> — in endurance, godliness; <strong>en de tē eusebeia tēn philadelphian</strong> — in godliness, brotherly/sisterly love (<em>philadelphia</em> = love of siblings/fellow believers); <strong>en de tē philadelphia tēn agapēn</strong> — in brotherly love, love (<em>agapē</em>). The chain ends with <em>agapē</em> — the comprehensive love that orients toward the other\'s good without regard to reciprocity. The movement of the chain: from individual faith through communal affection to universal love — each virtue is the foundation for the next.</p>',
+    "8": '<p><strong>tauta gar hymin hyparchonta kai pleonazonta</strong> — for these things being present in you and increasing (<em>pleonazō</em> = to increase, abound — the same root as <em>pleon</em>, more). <strong>ouk argous oude akarpous kathistēsin</strong> — they make you neither idle/barren nor unfruitful (<em>argos</em> = not-working, inactive — the failure-state that contradicts the virtue-chain; <em>akarpos</em> = without fruit). <strong>eis tēn tou Kyriou hēmōn Iēsou Christou epignōsin</strong> — with respect to the full knowledge of our Lord Jesus Christ; the chain\'s telos is deeper knowledge of Christ, not mere ethical achievement.</p>',
+    "9": '<p><strong>hō de mē parestin tauta, typhlos estin, myōpazōn</strong> — the one for whom these things are absent is blind, short-sighted/squinting (<em>myōpazōn</em> = squinting, shortsighted — the medical term for myopia; this is the only NT occurrence of the word; blind spiritually sees nothing; short-sighted sees close-up immediate pleasures but misses the eschatological horizon). <strong>lēthēn labōn tou katharismou tōn palai autou hamartiōn</strong> — having received forgetfulness of his past-sins cleansing (<em>lēthē</em> = forgetfulness, oblivion — the mythological river Lethe; the person without virtues has forgotten they were cleansed at baptism).</p>',
+    "10": '<p><strong>spoudasate bebaian hymōn tēn klēsin kai eklogēn poiēsasthai</strong> — make every effort to make your calling and election firm (<em>bebaian</em> = firm, secure, reliable — a legal/commercial term for a guaranteed security; the calling and election belong to God but their <em>bebaiotēs</em> in the believer\'s lived experience is confirmed through the virtue-chain of vv.5-7). <strong>ou mē ptaisēte pote</strong> — you will by no means stumble at any time (the double negative <em>ou mē</em> is emphatic).</p>',
+    "11": '<p><strong>plousios gar epichōrēgēthēsetai hymin hē eisodos</strong> — for richly will be supplied to you the entrance (<em>plousios</em> = richly/abundantly; <em>epichorēgeō</em> = supply bountifully, the same generous funding word as v.5). <strong>eis tēn aiōnion basileian</strong> — into the eternal kingdom of our Lord and Savior Jesus Christ. The contrast with the barely-saved (1 Pet 4:18) is implicit: the virtue-chain produces a rich entrance, not a narrow escape.</p>',
+    "12": '<p><strong>hypomimnēskein hymas aei peri toutōn</strong> — to keep reminding you always of these things (<em>hypomimnēskō</em> = to remind, bring to mind; the letter as an instrument of memory against forgetting, v.9). <strong>kaitoige eidotas kai estērigmenous</strong> — although you know them and are established in the present truth (<em>stērizō</em> = to establish, firm up — the same root as <em>stērigmos</em> in 3:17).</p>',
+    "13": '<p><strong>en toutō tō skēnōmati</strong> — in this tent/tabernacle (the body as a temporary dwelling; <em>skēnōma</em> = a tent/booth — the same imagery as 2 Cor 5:1-4 where Paul describes the body as an earthly tent; also echoing John 1:14\'s <em>skēnoō</em> = to pitch a tent). <strong>diegeirein hymas en hypomnēsei</strong> — to stir you up by way of reminder (<em>diegeirō</em> = to arouse completely — a strong word for awakening from sleep/drowsiness).</p>',
+    "14": '<p><strong>hoti tacheinē estin hē apothesis tou skēnōmatos mou</strong> — that the putting-off of my tent is soon (<em>apothesis</em> = laying aside, putting off — the same clothing-removal word; death is the putting off of the tent-body). <strong>kathōs kai ho Kyrios hēmōn Iēsous Christos edēlōsen moi</strong> — as also our Lord Jesus Christ made clear to me (<em>dēloō</em> = to make plain, show; the reference may be to John 21:18-19 where Christ predicted Peter\'s death).</p>',
+    "15": '<p><strong>spoudasō de kai hekastote echein hymas</strong> — I will make every effort that you also may always have (<em>spoudazō</em> = to make haste, be diligent — the same root as <em>spoudē</em> in v.5). <strong>meta tēn emēn exodon</strong> — after my departure/exodus (<em>exodos</em> = going out; the same word used of Moses\' Exodus and of Jesus\' "departure" at the Transfiguration in Luke 9:31 — deliberately chosen; Peter\'s death is his own exodus-event). The letter serves as a permanent testamentary reminder after its author\'s death.</p>',
+    "16": '<p><strong>ou gar sesophismenois mythois exakolouthēsantes</strong> — for not having followed cleverly devised/sophisticated myths (<em>sesophismenois</em> = perfect passive participle of <em>sophizō</em> = to make wise, craft cleverly; the false teachers\' narratives are <em>mythoi</em> — myths/invented stories, in deliberate contrast to what Peter is about to assert). <strong>parousia</strong> — the coming, presence, arrival (the technical eschatological term). <strong>epoptai genēthentes</strong> — having become eyewitnesses (<em>epoptēs</em> = one who has seen with their own eyes; the technical term for initiates admitted to the highest level of the Eleusinian Mysteries who had seen the sacred objects — Peter applies the mysteries-vocabulary to the Transfiguration as the supreme revelation-event).</p>',
+    "17": '<p><strong>phōnēs ... hypo tēs megaloprepous doxēs</strong> — voice from the Majestic/Magnificent Glory (<em>megaloprepēs</em> = magnificent, befitting greatness — used as a divine title only here in the NT; the <em>megaloprepous doxēs</em> is the divine presence-cloud that spoke). <strong>ho Huios mou ho agapētos mou houtos estin, eis hon egō eudokēsa</strong> — This is my Son, my Beloved, in whom I have found delight (combining the Synoptic Transfiguration voice and the Baptism voice; <em>eudokeō</em> = to be well-pleased, to find one\'s delight in).</p>',
+    "18": '<p><strong>kai tautēn tēn phōnēn hēmeis ēkousamen ex ouranou enechtheisan</strong> — and this voice we ourselves heard borne from heaven (<em>enenchthen</em> = being carried — passive of <em>pherō</em>; same root as v.21\'s <em>pheromenoi</em> for the prophets being borne by the Spirit). <strong>syn autō ontes en tō hagiō orei</strong> — being with him on the holy mountain; the Transfiguration as the founding event of Peter\'s apostolic knowledge, placed above the written prophetic word in terms of experiential priority (though the prophetic word is "more reliable" in v.19 because it is more widely accessible).</p>',
+    "19": '<p><strong>ton prophētikon logon bebaiōteron</strong> — the prophetic word made more reliable (<em>bebaiōteron</em> = more firm, more reliable — the comparative of <em>bebaios</em>; the eyewitness experience confirms what the prophets wrote). <strong>lychnō phainonti en auchmērō topō</strong> — a lamp shining in a murky/squalid place (<em>auchmēros</em> = dark and murky, dry and dirty — the condition of the age before the eschatological dawn). <strong>heōsphoros</strong> — the morning star, Phosphorus (the planet Venus as the dawn-herald; the word combines <em>heōs</em> = dawn + <em>pherō</em> = to bear/bring; Christ is the dawn that ends the darkness; Rev 22:16 calls him "the bright morning star").</p>',
+    "20": '<p><strong>idias epiluseōs</strong> — one\'s own interpretation/loosing (<em>epilysis</em> = unloosing, solving, interpreting — a word for solving riddles or unlocking enigmas; the verb <em>epilyō</em> means to unloose, explain). <strong>pāsa prophēteia graphēs</strong> — every prophecy of Scripture (the <em>graphē</em> — the written Scripture — as the corpus within which prophecy operates; no prophecy of Scripture is a matter of the prophet\'s own idiosyncratic interpretation). The verse grounds the authority of Scripture in its origin (v.21) rather than any human interpreter\'s cleverness.</p>',
+    "21": '<p><strong>ou gar thelēmati anthrōpou ēnechthē prophēteia pote</strong> — for no prophecy was ever brought by human will (<em>pherō</em> = to bear/bring/carry — the same verb as in v.18; the prophecy was carried, not originated by human will). <strong>hypo Pneumatos hagiou pheromenoi elalēsan apo Theou anthrōpoi</strong> — carried along by the Holy Spirit, human beings spoke from God (<em>pheromenoi</em> = being borne along — the image of a ship carried by the wind; the prophets as vessels passively borne by the Spirit\'s wind while actively speaking). The two phrases contrast: human will drove the false teachers; the Spirit drove the true prophets.</p>'
   },
   "2": {
-    "23": [
-      {"type": "fulfillment", "target": "Gen 15:6", "note": "Abraham believed God and it was counted to him as righteousness, and he was called a friend of God — James cites Gen 15:6 (as does Paul in Rom 4 and Gal 3) but applies it to the Abraham of Gen 22 (the Aqedah); the faith that justified Abraham was not bare intellectual belief but the active trust that obeyed unto the ultimate test"}
-    ]
-  },
-  "4": {
-    "6": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — James quotes Prov 3:34 LXX exactly (as does 1 Pet 5:5); the wisdom tradition's insistence that YHWH resists the arrogant and upholds the lowly is the hermeneutical key to James's social ethics"}
-    ]
-  },
-  "5": {
-    "4": [
-      {"type": "allusion", "target": "Isa 5:9", "note": "Behold the pay of the laborers who mowed your fields, which you kept back by fraud, is crying out — YHWH's ear hears the cry of the oppressed wages; James's eschatological indictment of wealthy landowners echoes the Isaianic woe-oracles against exploitative landowners"}
-    ]
-  }
-}
-
-JAMES_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>pasan charan hegesasthe adelphoi mou hotan peirasmois peripesete poikilois</strong> (<em>pāsan charān hēgēsasthe, adelphoi mou, hotan peirasmois peripesēte poikilois</em>): 'Count it all joy when you fall into various trials.' <em>Hegeomai</em> (count/consider) is a deliberate act of valuation — joy is not a natural reaction to trials but a chosen re-evaluation. <em>Peirasmoi</em> (trials/temptations) covers both external testing by circumstances (v. 2-4) and internal temptation by desire (v. 13-14) — James distinguishes them but uses the same word, showing that external pressure and internal desire interact in the same human experience of testing.</p>",
-
-    "22": "<p><strong>ginesthe de poietai logou kai me monon akroatai paralogizomenoi heautous</strong> (<em>ginesthe de poiētai logou kai mē monon akroatai paralogizomenoi heautous</em>): 'Be doers of the word and not hearers only, deceiving yourselves.' <em>Poietes logou</em> (doer of the word): the verbal-moral contrast between hearing and doing is fundamental to both the wisdom tradition (Prov 2:1-6) and the dominical teaching (Matt 7:24-27: the wise and foolish builders). <em>Paralogizomenoi</em> (deceiving, reasoning falsely alongside) implies a syllogistic self-deception: 'I heard the word, therefore I have received it and its benefits' — the error of intellectual reception without moral transformation.</p>"
-  },
-  "2": {
-    "14": "<p><strong>ti ophelos adelphoi mou ean pistin lege tis echein erga de me eche</strong> (<em>ti ophelos, adelphoi mou, ean pistin legē tis echein, erga de mē echē</em>): 'What good is it, my brothers, if someone says he has faith but does not have works?' The famous James-Paul tension: Luther notoriously called James 'an epistle of straw' for seeming to contradict Paul's faith-righteousness. The resolution lies in different uses of <em>pistis</em>: Paul's 'faith' is the whole person's trust in and surrender to God; James's target is a merely verbal profession (<em>legē tis echein</em>, 'says he has faith') without ethical corollary. James and Paul agree that genuine faith produces works (cf. Gal 5:6: 'faith working through love'); their different opponents require different emphases.</p>"
+    "1": '<p><strong>pseudoprophētai en tō laō</strong> — false prophets among the people (the Jewish prophetic tradition included false prophets from Moses\' time — Deut 13; 18:20-22; the pattern recurs). <strong>pseudodidaskaloi en hymin</strong> — false teachers among you; the shift from <em>prophētai</em> to <em>didaskaloi</em> reflects the post-apostolic ecclesial structure where teaching rather than prophesy is the primary function of leadership. <strong>haireseis apōleias</strong> — destructive heresies/factions (<em>hairesis</em> = a chosen position, a school of thought, a faction — not yet the fully technical meaning of "heresy" but the beginning of the trajectory). <strong>ton agorasanta autous despotēn arnoumenoi</strong> — denying the Master who bought them (<em>agorazō</em> = to buy in the marketplace — the redemption/ransom vocabulary; the false teachers are within the redeemed community yet deny the sovereign who purchased them).</p>',
+    "2": '<p><strong>aselgeiais</strong> — their licentiousness/debauchery (<em>aselgeia</em> = conduct without restraint; the letter repeatedly pairs doctrinal error with sexual and social license — the two are not separable). <strong>hē hodos tēs alētheias blasphēmēthēsetai</strong> — the way of truth will be blasphemed (the early Christians described their movement as a <em>hodos</em> = way/road — Acts 9:2; 19:9,23; 24:14,22; the false teachers\' conduct gives ammunition to those who slander the entire movement).</p>',
+    "3": '<p><strong>plastois logois hymas emporeuontai</strong> — with fabricated/molded words they will exploit you (<em>plastos</em> = molded, artificial — from <em>plassō</em> = to mold clay; the false teachers\' words are artfully manufactured rather than faithfully received). <strong>emporeuontai</strong> = they will trade in you, exploit you for profit (<em>emporos</em> = merchant, trader — the false teachers\' pastoral relationship is commercial exploitation). <strong>to krima ekpalai ouk argei kai hē apōleia autōn ou nystazei</strong> — their judgment from of old is not idle and their destruction does not slumber (<em>argei</em> = is idle, from <em>argos</em> = without work; the divine judgment may appear slow but it is never asleep).</p>',
+    "4": '<p><strong>angelōn hamartēsantōn ouk epheisato</strong> — he did not spare angels when they sinned (referring to Gen 6:1-4 and the Enochic tradition about the Watchers who transgressed divine boundaries). <strong>tartarōsas</strong> — having consigned to Tartarus (<em>tartaroō</em> = to send to Tartarus; the only NT use of this Greek mythological term; Tartarus was the deepest underworld in Greek mythology, below Hades — used here as a borrowing for the place of maximum divine imprisonment; this shows Peter\'s willingness to use culturally accessible vocabulary for theological purposes). <strong>seirais zophou tēresamenous</strong> — confined in chains of darkness for judgment.</p>',
+    "5": '<p><strong>archaion kosmon ouk epheisato</strong> — he did not spare the ancient world; <strong>Noah dikaiosynēs kēryka phylaxas</strong> — protecting Noah, a herald of righteousness (<em>kēryx</em> = a herald, one who makes public proclamation; the designation of Noah as a preacher is not in Genesis but in Second Temple Jewish tradition — Josephus <em>Ant.</em> 1.74; Philo — developing the biblical record of Noah\'s construction of the ark as an implicit proclamation). <strong>ogdoon</strong> — eighth (Noah plus seven others = eight; cf. 1 Pet 3:20).</p>',
+    "6": '<p><strong>Sodomon kai Gomorras poleis tephrōsas katastroph ē katekrinen</strong> — he condemned the cities of Sodom and Gomorrah, reducing them to ashes in a catastrophe (<em>tephrōsas</em> = having reduced to ash, from <em>tephra</em> = ash — a hapax in the NT; the word may reflect volcanic ash and destruction imagery). <strong>hypodeigma mellontōn asebein</strong> — an example for those who are going to be ungodly (the destruction of Sodom functions as an eschatological type: what happened to those cities prefigures the judgment of the ungodly in the last days).</p>',
+    "7": '<p><strong>dikaion Lōt kataponoumenon</strong> — righteous Lot being worn down/distressed (<em>kataponeomai</em> = to be exhausted by toil, worn down — only here in NT; Lot\'s righteousness is more emphasized in Second Temple tradition than in Genesis itself). <strong>hypo tēs tōn athesmōn en aselgeia anastrophēs</strong> — by the conduct in licentiousness of the lawless ones (<em>athesmos</em> = without law/divine ordinance, lawless).</p>',
+    "8": '<p><strong>blemati gar kai akoē ho dikaios</strong> — for by sight and hearing the righteous man (<em>blemma</em> = a look, a glance — a rare word for the act of seeing); <strong>enkatoikōn en autois hēmeran ex hēmeras</strong> — dwelling among them day by day; <strong>psychēn dikaian anomois ergois ebasanizen</strong> — was tormenting his righteous soul with lawless deeds (<em>basanizō</em> = to torture, test as on a touchstone; Lot\'s soul was on the rack of what he witnessed daily — a vivid image of the suffering of righteousness in a hostile environment).</p>',
+    "9": '<p><strong>oiden Kyrios eusebeois ek peirasmou ryesthai</strong> — the Lord knows how to rescue the godly from trial (<em>oiden</em> = he knows — the divine knowledge as the basis of the divine action; the summary principle of the three examples). <strong>adikous de eis hēmeran kriseōs kolazomenous tērein</strong> — and to hold the unrighteous for the day of judgment while being punished (the present passive participle <em>kolazomenous</em> suggests ongoing punishment during the holding — not merely detention but active discipline while awaiting final judgment).</p>',
+    "10": '<p><strong>malista de tous opisō sarkos en epithymia miasmou poreuomenous</strong> — especially those who walk behind the flesh in the desire of defilement (<em>miasmos</em> = pollution, defilement — the OT purity vocabulary applied to the false teachers\' conduct). <strong>kyriotētos kataphronountas</strong> — despising lordship/dominion (<em>kyriotēs</em> = lordship, authority — possibly divine sovereignty or angelic authorities). <strong>tolmētai, authadeis, doxas ou tremousin blasphēmountes</strong> — audacious and self-willed, not trembling while blaspheming the glorious ones (<em>authadēs</em> = self-pleasing, self-willed — the vice of total self-referentiality).</p>',
+    "11": '<p><strong>hopou angeloi ischyi kai dynamei meizones ontes</strong> — whereas angels, greater in strength and power (<em>ischys</em> and <em>dynamis</em> are paired as complementary force-words — the natural/inherent capacity and the operative power). <strong>ou pherousin kat\'autōn para Kyriō blasphēmon krisin</strong> — do not bring a slanderous judgment against them before the Lord (the angels who are mightier than the false teachers\' targets nevertheless exercise restraint in accusation — implying the false teachers show a reckless arrogance that even angels avoid).</p>',
+    "12": '<p><strong>hōs aloga zōa physika gennēta eis halōsin kai phthoran</strong> — like unreasoning natural animals born for capture and destruction (<em>alogos</em> = without <em>logos</em>/reason; the false teachers act by instinct like animals bred to be caught and killed). <strong>en hois agnoousin blasphēmountes</strong> — blaspheming in matters they do not understand (<em>agnoousin</em> = they are ignorant of — the intellectual failure behind the arrogance: speaking authoritatively about what one does not know). <strong>en tē phthora autōn kai phthārēsontai</strong> — in their destruction they will be destroyed (wordplay on <em>phthora</em> — corruption/destruction — the same word as 1:4\'s corruption from which believers escape).</p>',
+    "13": '<p><strong>adikoumenoi misthon adikias</strong> — receiving as wages the wages of unrighteousness (<em>adikia</em> appears twice — the wordplay: the unrighteous thing they do produces unrighteous wages; a reaping-what-you-sow structure). <strong>hēdonēn hēgoumenoi tēn en hēmera tryphēn</strong> — counting delight in daytime revelry as pleasure (<em>tryphē</em> = luxurious/soft living, sensual pleasure; daytime carousing was specifically disreputable — nighttime drinking was conventional, but daytime drinking marked a person as beyond social norms). <strong>spiloi kai mōmoi</strong> — spots and blemishes (<em>spilos</em> = a stain; <em>mōmos</em> = a blemish, fault — the language of cultic impurity applied to social conduct).</p>',
+    "14": '<p><strong>ophthalmoūs mestous moichalidos</strong> — eyes full of adulteress (the metaphor is striking: the gaze itself is contaminated by the object of desire, as though adultery fills the very organ of perception). <strong>akatapastous hamartias</strong> — insatiable for sin (<em>akatapaustos</em> = without ceasing, unceasing — the incapacity to stop sinning). <strong>deleazontes psychas astēriktous</strong> — luring unstable souls (<em>deleazō</em> = to bait a trap, lure by bait — the same hunting/fishing term as Jas 1:14; <em>astēriktos</em> = unestablished, unstable — the opposite of those established in the present truth, 1:12). <strong>karatekhnimenoi pleonexia</strong> — hearts trained in greed (<em>gymnasein</em> = trained by exercise, like an athlete).</p>',
+    "15": '<p><strong>kataleipontes eutheian hodon eplanukenthēsan</strong> — having abandoned the straight way they have wandered (<em>kataleipō</em> = to leave behind, abandon — the decisive departure from the right path; <em>planaomai</em> = to wander, be led astray — the same root as <em>planē</em>, error/deception). <strong>tē hodō tou Balaam tou Beōr</strong> — the way of Balaam son of Beor; Balaam is the OT archetype of the prophet who uses his gift for personal financial gain (Num 22-24; 31:16); <strong>misthon adikias ēgapēsen</strong> — he loved the wages of unrighteousness.</p>',
+    "16": '<p><strong>elegxin de eschen idias paranomias</strong> — but he had a rebuke of his own transgression (<em>elegxin</em> = a conviction, a formal rebuke; <em>paranomia</em> = transgression against law). <strong>hypozygion aphōnon en anthrōpou phōnē phthengxamenon</strong> — a voiceless beast of burden having spoken with a human voice (<em>hypozygion</em> = under-a-yoke, a beast of burden — a donkey; <em>aphōnon</em> = voiceless, unable to speak by nature; the donkey\'s miraculous speech is the paradox that rebukes the prophet). <strong>ekōlusen tēn tou prophētou paraphronian</strong> — it restrained the madness of the prophet (<em>paraphronía</em> = madness, being beside one\'s mind — the word used only here in NT).</p>',
+    "17": '<p><strong>houtoi eisin pēgai anydroi</strong> — these are springs without water (<em>anydros</em> = waterless; the promise of springs — teachers who should provide refreshment — belied by the absence of what they promise). <strong>homichlai hypo lailapos elaunomenai</strong> — mists/clouds driven by a storm (<em>homichlē</em> = mist, fog; the promise of rain — refreshment for the thirsty — that produces only driven fog). <strong>hois ho zophos tou skotous tetērētai</strong> — for whom the blackest/murkiest darkness has been preserved (<em>zophos</em> = deep darkness, gloom — the same darkness-word as v.4\'s chains of darkness).</p>',
+    "18": '<p><strong>hyperonka gar mataiotētos phthengomenoi</strong> — for mouthing great swelling words of emptiness (<em>hyperonkos</em> = over-swollen, inflated — the puffed-up boasting of empty rhetoric; <em>mataiotes</em> = emptiness, futility — the LXX term for <em>hebel</em>/vanity in Ecclesiastes). <strong>deleazousin en epithymiais sarkos aselgeiais tous ontōs apopheugontas tous en planē anastraphomenous</strong> — they entrap in fleshly desires of licentiousness those who are just escaping from those who live in error. The grammar is complex: they target new converts who have barely escaped the old way of life.</p>',
+    "19": '<p><strong>eleutherian autois epaggellomenoi</strong> — promising freedom to them (<em>epaggellomai</em> = to announce, promise — the language of declaration); <strong>douloi hyparchontes tēs phthoras</strong> — themselves being slaves of corruption (<em>phthora</em> = corruption/decay — the same word as 1:4\'s corruption from which believers escape; the false teachers are enslaved to the very thing they claim to offer freedom from). <strong>hō gar tis hēttētai, toutō dedoulōtai</strong> — by whatever someone is defeated/overcome, to this he has been enslaved (a general principle: defeat in battle produces enslavement; the false teachers are conquered by corruption and therefore serve it).</p>',
+    "20": '<p><strong>en epignōsei tou Kyriou</strong> — through the knowledge of the Lord (<em>epignōsis</em> again — the theme-word of the letter; they had the full knowledge and still returned to the world). <strong>toutois de palin emplekomenoi hēttōntai</strong> — being entangled again in these and overcome (<em>emplekō</em> = to weave in, entangle — the word for the trap-net closing around prey; <em>hēttaomai</em> = to be worsted, defeated). <strong>gegonen autois ta eschata cheirona tōn prōtōn</strong> — the last state has become for them worse than the first (echoing Matt 12:45 / Luke 11:26 — the parable of the returning evil spirit).</p>',
+    "21": '<p><strong>kreitton gar ēn autois mē epegnōkenai tēn hodon tēs dikaiosynēs</strong> — for it was better for them not to have known the way of righteousness (<em>epegnōkenai</em> = perfect active infinitive of <em>epiginōskō</em> = to know fully; they had indeed fully known; the knowledge was real but not transformative). <strong>ē epignousin epistrepsai ek tēs paradotheisēs autois hagias entolēs</strong> — than having known it, to have turned back from the holy commandment delivered to them (<em>paradotheisēs</em> = delivered/handed over — the paradosis/tradition vocabulary; the commandment was received through the apostolic delivery).</p>',
+    "22": '<p>Two proverbs close the chapter: <strong>kyōn epistrepsas epi to idion exerama</strong> — a dog having returned to its own vomit (Prov 26:11 LXX — the revulsion of the return to what was once expelled); <strong>hys lousamenē eis kylisman borboru</strong> — a sow that has washed returning to wallowing in mud (<em>kylisma</em> = a rolling place, a place for wallowing; <em>borboros</em> = mud, mire — a strong word for filth). The two animals contrast clean/unclean: the dog was ritually unclean in Jewish tradition; the pig equally so; both images capture the disgust of apostasy.</p>'
   },
   "3": {
-    "1": "<p><strong>me polloi didaskaloi ginesthe adelphoi mou eidotes hoti meizon krima lepsometha</strong> (<em>mē polloi didaskaloi ginesthe, adelphoi mou, eidotes hoti meizon krima lēpsometha</em>): 'Not many of you should become teachers, my brothers, knowing that we who teach will be judged with greater strictness.' The <em>meizon krima</em> (greater judgment) for teachers reflects the Jewish wisdom tradition's high estimation of the Torah-teacher's responsibility (m. Avot 2:7: 'the more Torah, the more life; the more study, the more wisdom; the more counsel, the more understanding; the more righteousness, the more peace; ... the more Torah, the more life') and its warning about the consequences of teaching falsehood. James is aware of his own exposure to this judgment.</p>"
-  }
-}
-
-JAMES_CONTEXT = {
-  "1": {
-    "1": "<p>James is addressed 'to the twelve tribes in the Dispersion' — framing the audience as the diaspora Jewish-Christian community. Whether 'James the brother of the Lord' (Gal 1:19; Josephus Ant. 20.200) is the author (martyred 62 CE) or a pseudonymous use of his authority (ca. 80-100 CE) is debated, but the letter's decidedly Jewish-Christian character (the synagogue imagery of 2:2; the explicit wisdom-tradition shaping; the prophetic social ethics) is consistent with Jerusalem's Jewish-Christian leader. Josephus describes James as 'the brother of Jesus who was called Christ' and records his death by stoning at the instigation of the high priest Ananus II, ca. 62 CE. If authentic, James is among the earliest NT writings.</p>"
-  },
-  "2": {
-    "1": "<p>The community James addresses assembles in a <em>synagoge</em> (2:2) — the term for a Jewish gathering-place, not yet the distinctly Christian <em>ekklesia</em> (church building). The social stratification problem (wealthy visitor with gold rings and fine clothing given the good seat; poor visitor told to stand or sit on the floor) reflects the patron-client dynamics of both the Roman and the Palestinian Jewish world. James's condemnation of partiality (<em>prosopolepsia</em>) is grounded in the same divine-impartiality tradition Paul invokes (Rom 2:11; Acts 10:34) — YHWH who shows no partiality to the rich over the poor is the standard for the community's hospitality.</p>"
-  }
-}
-
-JAMES_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.' James's God-centered theology (without yet making a Christological application) shows the Father's immutable character as the ground of human trust and patience in trial. The Christological trajectory: this unchanging Father of lights is the one who sent his Son (not yet named in ch.1, but cf. 2:1: 'the faith in our Lord Jesus Christ, the Lord of glory'). The stability of the Father underwrites the whole counsel of the letter.</p>"
-  },
-  "2": {
-    "1": "<p>A direct revelation: 'The faith of our Lord Jesus Christ, the Lord of glory.' James's only explicit Christological title is <em>Kyrios tes doxes</em> — 'the Lord of glory.' In LXX Ps 24:7-10, the 'King of glory' (<em>basileus tes doxes</em>) is YHWH himself. James transfers this divine glory-title to Jesus: to hold 'the faith of the Lord of glory' while showing partiality to the rich is a theological contradiction — the one who identifies with the poor (the Magnificat's God; the Beatitudes' Christ) cannot be honored by honoring the rich over the poor.</p>"
-  },
-  "5": {
-    "7": "<p>A direct revelation: 'Be patient, therefore, brothers, until the coming of the Lord.' James ends with the parousia as the motive for patience in suffering (vv. 7-11) and restraint of speech (vv. 12). The 'coming of the Lord' (<em>parousia tou Kyriou</em>) frames the whole letter's ethics eschatologically: the injustice of the rich oppressors, the suffering of the righteous, the unanswered prayers — all are held before the coming Judge (v. 9: 'the Judge is standing at the door'). The standing judge at the door is the Christ whose coming is imminent.</p>"
-  }
-}
-
-# ============================================================
-# 1 PETER
-# ============================================================
-
-ONEPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "quote", "target": "Lev 11:44", "note": "You shall be holy, for I am holy — the Levitical holiness-imperative is directly quoted as the foundation for Peter's ethics; the holiness character of YHWH is the standard for covenant-community behavior in both the old and new covenants"}
-    ],
-    "24": [
-      {"type": "fulfillment", "target": "Isa 40:6-8", "note": "All flesh is like grass and all its glory like the flower of grass; the grass withers and the flower falls, but the word of the Lord remains forever — Peter applies Isa 40:6-8 to the imperishable seed of the gospel-word; the word that endures is the good news preached to them, fulfilling Isaiah's consolation-proclamation"}
-    ]
-  },
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Isa 28:16", "note": "Behold I am laying in Zion a stone, a cornerstone chosen and precious, and whoever believes in him will not be put to shame — Peter cites Isa 28:16 LXX as fulfilled in Christ; the Zion-foundation stone of Isaiah is identified with the rejected-and-vindicated Christ"},
-      {"type": "fulfillment", "target": "Ps 118:22", "note": "The stone that the builders rejected has become the cornerstone — the second OT stone text: the rejected cornerstone of Ps 118 is Christ crucified and raised; the very rejection that qualified him as victim becomes his exaltation-identity"},
-      {"type": "fulfillment", "target": "Isa 8:14", "note": "A stone of stumbling and a rock of offense — Isa 8:14 LXX (YHWH as both sanctuary and stone of stumbling for Israel); Peter applies the dual effect to Christ: to believers, the cornerstone; to unbelievers, the stumbling stone"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Exod 19:6", "note": "A royal priesthood, a holy nation — Peter applies the Sinai covenant's identity-markers (Exod 19:6: a kingdom of priests and a holy nation) directly to the church; the new covenant community is the Sinai identity realized and expanded beyond ethnic Israel"},
-      {"type": "fulfillment", "target": "Isa 43:20-21", "note": "A people for his own possession, that you may proclaim the excellencies of him who called you — Isa 43:21 LXX (my people whom I formed for myself, to declare my praise); Peter completes the new-community description with the Isaianic mission: called-out-from-darkness people who exist to proclaim the God who called them"}
-    ]
-  },
-  "3": {
-    "10": [
-      {"type": "quote", "target": "Ps 34:12-16", "note": "Whoever desires to love life and see good days, let him keep his tongue from evil — Peter quotes Ps 34:12-16 LXX directly as the biblical foundation for his ethics of suffering and peace-seeking; Psalm 34 (the acrostic of David's deliverance) becomes the wisdom-framework for the community's response to hostility"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — same Prov 3:34 LXX quotation as James 4:6; the shared citation indicates it was a widely known community warrant for humility in the face of suffering and opposition"}
-    ]
-  }
-}
-
-ONEPET_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>anagennesas hemas eis elpida zosan di anastaseos Iesou Christou ek nekron</strong> (<em>anagennēsas hēmas eis elpida zōsan di anastaseōs Iēsou Christou ek nekrōn</em>): 'who has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.' <em>Anagennao</em> (born again/anew) appears only here and v. 23 in the NT; John 3 uses <em>gennethenai anothen</em> (born from above/again). The new birth is not an isolated spiritual event but a directed new genesis: <em>eis elpida zosan</em> (into a living hope). The resurrection of Christ is not merely the means but the content of the hope — living hope because the Resurrected One lives.</p>",
-
-    "18": "<p><strong>ou phthartois argyrio e chruso oi elytrothete ... alla timio haimati has amnos amomou kai aspilon Christou</strong> (<em>ou phthartois, argyriō ē chrysō, oi elytrōthēte ... alla timiō haimati hōs amnos amōmou kai aspilou Christou</em>): 'not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-metaphor (<em>lytroō</em>, redeem/ransom) is grounded in the Exodus-redemption of Israel (Exod 6:6: 'I will redeem you with an outstretched arm') and the Servant's self-pouring in Isa 53. The lamb-without-blemish terminology is directly cultic: the Passover lamb (Exod 12:5) and the sacrificial requirements of Lev 22:19-25 — Christ fulfills the sacrificial requirements as the perfect offering.</p>"
-  },
-  "2": {
-    "24": "<p><strong>hos tas hamartias hemon autos anenegken en to somati autou epi to xylon</strong> (<em>hos tas hamartias hēmōn autos anēnenken en tō sōmati autou epi to xylon</em>): 'He himself bore our sins in his body on the tree.' The language is saturated with Isa 53: <em>anaphero</em> is the LXX word for the priestly act of lifting/bearing an offering to the altar; <em>epi to xylon</em> (on the tree) echoes Deut 21:23 (a hanged man is cursed) and Gal 3:13 (Christ redeemed us from the curse of the law by becoming a curse for us). The phrase 'in his body' is a deliberate anti-Docetic marker: the sin-bearing was physical, not merely spiritual — the crucifixion was real.</p>"
-  }
-}
-
-ONEPET_CONTEXT = {
-  "1": {
-    "1": "<p>1 Peter is addressed to the diaspora of Pontus, Galatia, Cappadocia, Asia, and Bithynia — a geographic sweep of the northern half of Asia Minor (modern Turkey). The term <em>parepidemos</em> (sojourner/temporary resident, v. 1) and <em>paroikos</em> (alien/resident without citizenship, 2:11) had legal specificity: resident aliens without full citizenship rights, dependent on local good will. Peter applies these social categories to the spiritual situation of believers: they are not truly at home in this age, regardless of their legal status. The five provinces listed correspond roughly to the area of a Bithynian governor's jurisdiction, suggesting a single administrative document.</p>"
-  },
-  "2": {
-    "13": "<p>Peter's 'submit to every human institution' (<em>hypotassō pase anthropine ktisei</em>) parallels Paul's Romans 13, but the social context is different: 1 Peter addresses communities facing active hostility and false accusation, not merely civic obligation. The political submission is part of the apologetic strategy: by visibly good behavior (v. 15: <em>agathopoia</em>, doing good), the community silences the ignorance of foolish critics. The 'honor everyone, love the brotherhood, fear God, honor the emperor' (v. 17) places the emperor in the fourth position — honored, but not uniquely so, and subordinate to God-fear.</p>"
-  }
-}
-
-ONEPET_CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'You were ransomed from the futile ways inherited from your forefathers, not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-price Christology: Christ's blood is the currency of redemption from inherited futility. The Passover-lamb imagery connects the death of Christ to the entire Exodus-redemption narrative — as the Passover blood protected Israel from the destroying angel, Christ's blood ransoms believers from the bondage of empty ancestral religion. The lamb is not merely a metaphor for innocence but a liturgical category that places the cross within the sacrificial system's culmination.</p>"
-  },
-  "2": {
-    "24": "<p>A fulfillment: 'He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.' 1 Peter 2:22-25 is the most sustained application of Isa 53 to the passion in the NT outside the Gospel traditions. Peter works through the Servant Song verse by verse: v. 22 (Isa 53:9: no sin in his mouth), v. 23 (Isa 53:7: did not retaliate), v. 24 (Isa 53:4-5: bore our griefs, wounded for our iniquities, by his stripes we are healed), v. 25 (Isa 53:6: we all went astray like sheep). The suffering community (1:6-7; 2:19-21; 4:12-16) is invited to understand their own suffering through the Servant-Christ who bore sins and called them to follow his pattern.</p>"
-  },
-  "3": {
-    "18": "<p>A direct revelation: 'Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit.' The uniqueness and finality of the atonement: <em>hapax</em> (once, for all time) marks the non-repeatability of Christ's sin-bearing death. The substitutionary logic: the righteous (<em>dikaios</em>) for the unrighteous (<em>adikous</em>) — the morally qualified dies for the morally disqualified. The telos: 'that he might bring us to God' (<em>hina hemas prosagagē to theo</em>) — access to God is the goal of the cross, not merely forgiveness as a legal transaction.</p>"
-  }
-}
-
-# ============================================================
-# 2 PETER
-# ============================================================
-
-TWOPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Dan 7:13-14", "note": "The power and coming of our Lord Jesus Christ — the Danielic 'power and great glory' of the Son of Man's coming; Peter grounds the Transfiguration as the preview of the parousia-power and glory that Daniel anticipated"},
-      {"type": "allusion", "target": "Ps 2:7", "note": "This is my beloved Son with whom I am well pleased — the divine voice at the Transfiguration echoes Ps 2:7's royal adoption formula; Peter as eyewitness to this Father-to-Son declaration grounds his eschatological teaching"}
-    ]
-  },
-  "3": {
-    "13": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "New heavens and a new earth in which righteousness dwells — Peter cites the Isaianic new creation promise (Isa 65:17; 66:22) as the eschatological expectation; the new creation where righteousness dwells (not merely exists but inhabits fully) is the goal toward which the present cosmos is moving"}
-    ]
-  }
-}
-
-TWOPET_ORIGINAL = {
-  "3": {
-    "9": "<p><strong>ou bradynei Kyrios tes epangelias hos tines bradyteta hegountai alla makrothymei eis hymas me boulomenos tinas apolesai alla pantas eis metanoian chorein</strong> (<em>ou bradynei Kyrios tēs epangelias, hōs tines bradytēta hēgountai, alla makrothymei eis hymas, mē boulomenos tinas apolesthai alla pantas eis metanoian chōrein</em>): 'The Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish but that all should reach repentance.' <em>Makrothymia</em> (patience/longsuffering) reframes the delayed parousia as a divine mercy-extension rather than a failed prediction. The universalistic-sounding 'not wishing that any should perish' is balanced by 'toward you' — the patience is specifically exercised toward the addressees, inviting them toward repentance. The passage is one of the key texts on divine patience and the purpose of eschatological delay.</p>"
-  }
-}
-
-TWOPET_CONTEXT = {
-  "3": {
-    "3": "<p>The 'scoffers' who mock the parousia promise ('Where is the promise of his coming? For ever since the fathers fell asleep, all things are continuing as they were from the beginning', vv. 3-4) reflect an Epicurean-style skepticism about divine intervention in the regularities of nature: if God were going to act, why hasn't he? The Epicurean doctrine of <em>ataraxia</em> (undisturbed natural regularity, governed by atoms, not divine providence) provided intellectual cover for dismissing apocalyptic expectations. Peter's response: the uniformitarians forget that the past was not uniform — the flood was God's catastrophic intervention in the 'natural order' (vv. 5-6), and the coming fire will be the next. The argument uses Genesis to rebut Epicurean naturalism.</p>"
-  }
-}
-
-TWOPET_CHRIST = {
-  "1": {
-    "1": "<p>A direct revelation: 'To those who have obtained a faith of equal standing with ours by the righteousness of our God and Savior Jesus Christ.' The phrase 'our God and Savior Jesus Christ' (<em>tou theou hemon kai soteros Iesou Christou</em>) — following the same Granville Sharp single-article construction as Titus 2:13 — directly predicates deity of Jesus Christ. 2 Peter opens with its highest Christological claim: Jesus is God and Savior. This framing situates the entire letter's authority under the person of the divine Savior whose return the scoffers mock.</p>"
-  },
-  "3": {
-    "10": "<p>A direct revelation: 'The day of the Lord will come like a thief, and then the heavens will pass away with a roar, and the heavenly bodies will be burned up and dissolved, and the earth and the works that are done on it will be exposed.' The Day of the Lord (the YHWH theophany-judgment tradition; Amos 5:18-20; Joel 2; Zeph 1:14-18) is identified with the Day of Jesus Christ (v. 12: 'waiting for and hastening the coming of the day of God'). The cosmic dissolution is not the end of material existence but its purification — leading to the new heavens and new earth of v. 13. The Christological judgment: the Lord Jesus presides over this dissolution as the eschatological judge whose day arrives unexpectedly.</p>"
-  }
-}
-
-# ============================================================
-# 2 JOHN, 3 JOHN, JUDE
-# ============================================================
-
-TWOJOHN_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "1 John 4:2", "note": "Those who do not confess the coming of Jesus Christ in the flesh are the deceiver and the antichrist — the same anti-Docetic test as 1 John 4:2 (every spirit that confesses Jesus Christ has come in the flesh is from God); 2 John applies the same doctrinal test to traveling teachers"}
-    ]
-  }
-}
-
-TWOJOHN_ORIGINAL = {
-  "1": {
-    "7": "<p><strong>hoti polloi planoi exelthon eis ton kosmon hoi me homologountes Iesoun Christon erchomenon en sarki houtos estin ho planos kai ho antichristos</strong> (<em>hoti polloi planoi exēlthon eis ton kosmon, hoi mē homologountes Iēsoun Christon erchomenon en sarki</em>): 'For many deceivers have gone out into the world, those who do not confess the coming of Jesus Christ in the flesh.' The present participle <em>erchomenon</em> (coming) rather than the perfect <em>elēlythota</em> (having come, 1 John 4:2) may signal a future reference — not the Incarnation but the parousia. Either way, the test is the same: affirm the bodily reality of Jesus's existence, whether past (Incarnation) or future (Return). The Docetic denial of Christ's flesh eliminates both the atonement and the resurrection-body hope.</p>"
-  }
-}
-
-TWOJOHN_CONTEXT = {
-  "1": {
-    "1": "<p>2 John is addressed from 'the elder' to 'the elect lady and her children' — most likely a metaphor for a particular congregation and its members (cf. 1 Pet 5:13 where 'Babylon' = Rome; 'she' = the church in Babylon). The 'elder' is commonly identified with John the Apostle or John the Elder of Ephesus (Papias distinguishes these; Eusebius records the tradition of two Johns in Asia). The letter is a brief (13 verses) traveling advisory: the practice of Greco-Roman hospitality created real danger for Christian communities — traveling teachers could exploit the obligation of hospitality to spread heresy. 2 John's 'do not receive him into your house' (v. 10) restricts the normal hospitality-obligation for doctrinal cause.</p>"
-  }
-}
-
-TWOJOHN_CHRIST = {
-  "1": {
-    "3": "<p>A direct revelation: 'Grace, mercy, and peace will be with us from God the Father and from Jesus Christ the Father's Son.' The Trinitarian greeting (Father and Son together as the source of grace, mercy, and peace) frames 2 John's doctrinal concern: the Christ of the greeting (the Son of the Father) is the same Christ whose bodily reality the deceivers deny (v. 7). Christology determines fellowship (vv. 9-11): to go beyond Christ's teaching is to lose the Father; to hold the Son's teaching is to have both the Son and the Father. The Christological and Trinitarian are inseparable in 2 John.</p>"
-  }
-}
-
-THREEJOHN_ECHO = {
-  "1": {
-    "11": [
-      {"type": "allusion", "target": "Gen 1:4", "note": "Whoever does good is from God; whoever does evil has not seen God — the fundamental creation-theology judgment: good comes from God, evil does not; 3 John applies this creation-ethics criterion to the community conflict between the hospitable Gaius and the domineering Diotrephes"}
-    ]
-  }
-}
-
-THREEJOHN_ORIGINAL = {
-  "1": {
-    "4": "<p><strong>meizotera toutōn ouk echo charan hina akouo ta ema tekna en te aletheia peripatounta</strong> (<em>meizoteran toutōn ouk echō charan, hina akouō ta ema tekna en tē alētheia peripatounta</em>): 'I have no greater joy than to hear that my children are walking in the truth.' The elder's pastoral identity is entirely defined by the spiritual progress of his 'children' — those he has led to faith. <em>Peripatountas en te aletheia</em> (walking in truth) is the Johannine idiom for the whole-life embodiment of the gospel: truth is not merely intellectual assent but an ambulatory practice that shapes the whole life.</p>"
-  }
-}
-
-THREEJOHN_CONTEXT = {
-  "1": {
-    "9": "<p>Diotrephes 'who likes to put himself first' (<em>philoproteuo</em>, v. 9) represents the emergence of local congregational autonomy that resisted the authority of the itinerant apostolic elder. The conflict between the elder's authority (rooted in the apostolic tradition) and Diotrephes's local authority (rooted in congregational control) anticipates the later tension between episcopal and local governance structures. Diotrephes's practices — refusing the elder's letter, refusing to receive traveling brothers, and expelling those who do — constitute a miniature local church coup. 3 John is the NT's only document addressing intra-Christian church politics at this granular level.</p>"
-  }
-}
-
-THREEJOHN_CHRIST = {
-  "1": {
-    "7": "<p>A direct revelation: 'For they have gone out for the sake of the name, accepting nothing from the Gentiles.' The missionaries who deserve hospitality go out 'for the sake of the Name' (<em>hyper tou onomatos</em>) — the Name of Jesus, YHWH's eschatological Name in the NT (Acts 4:12; Phil 2:9-10). They are supported not by the Gentile world's resources but by the community of believers. The missional church is defined by: (1) the Name as motivation, (2) non-worldly financial support, and (3) mutual community support (<em>synergoi</em>, v. 8). The entire brief letter is framed within this Christological missiology.</p>"
-  }
-}
-
-JUDE_ECHO = {
-  "1": {
-    "9": [
-      {"type": "allusion", "target": "Zech 3:2", "note": "The Lord rebuke you — Michael's rebuke of the devil in Jude's midrash on the Assumption of Moses echoes YHWH's rebuke of Satan in Zech 3:2 ('The LORD rebuke you, O Satan'); the heavenly court's handling of demonic accusation follows the same pattern"}
-    ],
-    "14": [
-      {"type": "quote", "target": "1 Enoch 1:9", "note": "Behold the Lord comes with ten thousands of his holy ones to execute judgment — Jude quotes 1 Enoch 1:9 as prophetic authority; this is the only direct quotation of 1 Enoch in the NT, indicating the apocalyptic tradition's authority in some early Christian communities"},
-      {"type": "allusion", "target": "Deut 33:2", "note": "He came from Sinai ... with holy ones at his right hand — the Sinai theophany with the myriads of holy ones (angels/saints); both Deut 33:2 and 1 Enoch 1:9 draw from the same theophany tradition that Jude applies to the parousia of Christ"}
-    ]
-  }
-}
-
-JUDE_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>parakalo agapetoi pasan spoude poioumenos graphein hymin peri tes koines soteries anagkaion egesamen grapsai hymin parakalon epagonizesthai te hapax paradotheise tois hagiois pistei</strong>: 'I found it necessary to write appealing to you to contend for the faith that was once for all delivered to the saints.' <em>Hapax paradotheise</em> (once for all delivered): the single, unrepeatable handing-over of the faith — <em>paradidomi</em> is the technical tradition-transmission verb (as in 1 Cor 11:23, 15:3). The faith is not a developing deposit that each generation revises but a fixed, delivered tradition that needs defending, not augmenting. <em>Epagonizomai</em> (contend earnestly for) is the athletic-contest word applied to doctrinal fidelity — not aggressive attack of opponents but vigorous defense of what was given.</p>"
-  }
-}
-
-JUDE_CONTEXT = {
-  "1": {
-    "4": "<p>The opponents Jude addresses are 'certain people who have crept in unnoticed' (<em>pareisedysan</em>) — using the technical language of infiltration. They are described as 'perverting the grace of our God into sensuality and denying our only Master and Lord Jesus Christ.' The combination of antinomian sexual license ('sensuality') with Christological denial suggests a proto-Gnostic group that used the grace-freedom of the gospel (cf. Rom 6:1: 'shall we continue in sin so that grace may abound?') as license for moral license. Jude's use of 1 Enoch and the Assumption of Moses (v. 9) indicates familiarity with the wider Jewish apocalyptic tradition and suggests a Jewish-Christian context for both author and audience.</p>"
-  }
-}
-
-JUDE_CHRIST = {
-  "1": {
-    "25": "<p>A direct revelation: 'To the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority before all time and now and forever.' Jude's doxology is the most comprehensive Christological doxology in the NT — ascribing glory, majesty, dominion, and authority (four throne-room attributes of YHWH in Daniel and Isaiah) to God through Christ, and extending this across all three tenses of time (before, now, forever). The Christ through whom this glory is ascribed is the Lord whose 'love you keep yourselves in' (v. 21) and who presents believers blameless with rejoicing (v. 24). The letter's defense of the faith is framed by this doxological Christology.</p>"
+    "1": '<p><strong>eilikrinē dianoia</strong> — pure/sincere understanding (<em>eilikrinēs</em> = tested by the sun, genuinely pure; the etymology connects to examining something in direct sunlight to detect adulteration — applied to the mind that has been examined and found genuine). <strong>en hypomnēsei diegeirein</strong> — to stir up by way of reminder (<em>hypomnēsis</em> = a bringing to mind; <em>diegeirō</em> = to arouse completely — the same word as 1:13).</p>',
+    "2": '<p><strong>mnēsthēnai tōn proeirēmenōn rhēmatōn hypo tōn hagiōn prophētōn</strong> — to remember the words previously spoken by the holy prophets (<em>proeirēmenōn</em> = having been spoken before — the OT prophets speak in advance of fulfillment). <strong>kai tēs tōn apostolōn hymōn entolēs tou Kyriou</strong> — and the commandment of the Lord given through your apostles (the two authoritative sources: prophets and apostles; the letter grounds its appeal in this dual witness structure).</p>',
+    "3": '<p><strong>en eschate tōn hēmerōn empaiktai en empaigmonē</strong> — in the last days mockers will come, scoffing (<em>empaiktēs</em> = scoffer, mocker — a hapax in the NT but appearing also in Jude 18; the compound: <em>en</em> + <em>paizō</em> = to play as a child, to mock). <strong>kata tas idias autōn epithymias poreuomenoi</strong> — walking according to their own desires (the scoffers\' eschatological denial is rooted in their desire to live without accountability).</p>',
+    "4": '<p><strong>pou estin hē epaggelia tēs parousias autou</strong> — where is the promise of his coming? (<em>epaggelia</em> = promise; the scoffers challenge the promise on empirical grounds: no coming has occurred). <strong>panta houtōs diamenei</strong> — all things continue as they were (<em>diamenō</em> = to continue through without change; <em>ap\'archēs ktiseōs</em> — from the beginning of creation; the argument is from the uniformity of the natural order — a form of proto-uniformitarianism that denies divine intervention).</p>',
+    "5": '<p><strong>touto gar autois thelontas lanthanei</strong> — for this escapes them, willing it to escape (<em>lanthanō</em> = to be hidden, to escape notice; <em>thelontas</em> = willing/choosing — the ignorance is chosen, not accidental; the scoffers <em>want</em> not to know). <strong>ek logou Theou ouranoi ēsan ekpalai</strong> — by the word of God heavens existed long ago (<em>logos Theou</em> = the creative word of Gen 1; the same word that sustains creation can also judge it). <strong>gē ex hydatos kai di\'hydatos synesōsa</strong> — the earth having been formed out of water and through water.</p>',
+    "6": '<p><strong>di\'hōn ho tote kosmos hydati kataklysmenos apōleto</strong> — through which the then-world being deluged with water was destroyed (<em>kataklysmenos</em> = flooded — the word that gives us "cataclysm"; the flood is the historical precedent that refutes uniformitarianism: the world-as-it-was did not continue; it was destroyed by water). The scoffers\' uniformitarian argument is built on deliberate amnesia of the flood.</p>',
+    "7": '<p><strong>hoi de nyn ouranoi kai hē gē tō autō logō tethēsaurismenoi eisin</strong> — but the present heavens and earth by the same word have been stored up/treasured (<em>thēsaurizō</em> = to store as treasure — the cosmic order is not permanent but stored for future use; <em>logō</em> = by the word — the same divine creative word of v.5). <strong>pyri tēroumenoi eis hēmeran kriseōs</strong> — being guarded by fire for the day of judgment (a chiasm with the flood: the first world was destroyed by water; the present world is guarded by/for fire).</p>',
+    "8": '<p><strong>hen de touto mē lanthanetō hymas</strong> — but do not let this one thing escape your notice (echoing v.5\'s <em>lanthanei</em> — the scoffers chose not to know; Peter\'s readers must actively prevent this from escaping their notice). <strong>hoti mia hēmera para Kyriō hōs chilia etē kai chilia etē hōs hēmera mia</strong> — that one day with the Lord is as a thousand years and a thousand years as one day (Ps 90:4 LXX citation/allusion: Moses\' prayer acknowledging that from God\'s perspective, a thousand years are like yesterday when past — the divine relationship to time utterly differs from human time-experience; the scoffers\' argument from temporal delay collapses against divine trans-temporality).</p>',
+    "10": '<p><strong>hēxei de hēmera Kyriou hōs kleptēs</strong> — but the day of the Lord will come like a thief (the thief-image for the Day of the Lord: unexpected arrival that cannot be prepared for by the unprepared; cf. Matt 24:43; 1 Thess 5:2; Rev 3:3; 16:15). <strong>stoicheia de kausoumena lythēsetai</strong> — the elements (<em>stoicheia</em> = basic constituents; here likely the heavenly bodies or the fundamental components of the cosmos) being burned will be dissolved (<em>lyō</em> = to loose, dissolve). <strong>kai gē kai ta en autē erga katakahēsetai</strong> — and the earth and the works in it will be found/burned (<em>heurethēsetai</em> or <em>katakahēsetai</em> — the text is disputed; either "will be found out" = exposed, or "will be burned up").</p>',
+    "11": '<p><strong>toutōn houtōs pantōn lyomenōn</strong> — these things being thus dissolved (present passive participle — the dissolution is the assumed condition for the moral argument that follows). <strong>potapous dei hyparchein hymas</strong> — what sort of persons ought you to be? (<em>potapos</em> = of what sort, from what country/origin — the question about the quality of character that the eschatological perspective requires). <strong>en hagiais anastrophais kai eusebeiais</strong> — in holy conduct/ways of life and acts of godliness (plural <em>anastrophais</em> and <em>eusebeiais</em> — the multiple concrete instances of the holy life).</p>',
+    "12": '<p><strong>prosdokōntas kai speudontas tēn parousian tēs tou Theou hēmeras</strong> — expecting and hastening the coming/presence of the day of God (<em>speudontas</em> = hastening, causing to hasten — the startling claim that human conduct can hasten the Day; Jewish tradition held that Israel\'s repentance would hasten the messianic age; here, holy conduct and godliness participate in the divine timing). <strong>di\'hēn ouranoi pyroumenoi lythēsontai</strong> — on account of which the heavens being set on fire will be dissolved.</p>',
+    "13": '<p><strong>kainous de ouranous kai kainēn gēn kata to epaggeltna autou prosdokōmen</strong> — but new heavens and a new earth according to his promise we expect (<em>kainous</em> = new in kind/quality, not just new in time — the <em>kainos</em> vs. <em>neos</em> distinction; the new heavens and earth are qualitatively different, not merely temporally subsequent). The promise cites Isa 65:17; 66:22. <strong>en hois dikaiosynē katoikei</strong> — in which righteousness dwells (<em>katoikei</em> = to dwell as a permanent resident; the new order has righteousness as its permanent inhabitant — contrasting with the false teachers who inhabit the present order).</p>',
+    "14": '<p><strong>prosdokōntes tauta spoudasate amōmētoi kai aspiloi autō heurethēnai</strong> — eagerly expecting these things, make every effort to be found blameless and spotless before him (<em>amōmētos</em> = without censure, blameless; <em>aspilos</em> = without spot/stain — the same purity terms as 1 Pet 1:19\'s lamb without defect; the eschatological expectation produces the moral urgency to be found worthy). <strong>en eirēnē</strong> — in peace; the peace that characterizes the eschatological community is already to be the present condition of those expecting it.</p>',
+    "15": '<p><strong>tēn tou Kyriou hēmōn makrothymian sōtērian hēgeisthe</strong> — consider the patience of our Lord as salvation (<em>makrothymia</em> = long-suffering patience, the capacity to wait without retaliation; God\'s apparent delay in the Day of the Lord is reframed as salvific opportunity rather than divine inattention). <strong>kathōs kai ho agapētos hēmōn adelphos Paulos</strong> — as also our beloved brother Paul (the only NT text outside the Pauline letters that cites Paul as an authoritative author; the designation <em>agapētos adelphos</em> — beloved brother — establishes collegial apostolic equality).</p>',
+    "16": '<p><strong>hōs kai en pasais tais epistolais lalōn en autais peri toutōn</strong> — as also in all his letters, speaking in them concerning these things (the reference to "all his letters" implies a recognized collection). <strong>tas loipas graphas</strong> — the rest of the Scriptures (<em>graphas</em> = the Scriptures — the word used for authoritative scriptural writings; placing Paul\'s letters alongside "the rest of the Scriptures" is a significant statement about early canonization). <strong>dysnoēta</strong> — hard to understand (<em>dysnoētos</em> = difficult to comprehend — an honest acknowledgment).</p>',
+    "17": '<p><strong>phylassesthe hina mē tē tōn athesmōn planē synapachthentes</strong> — guard yourselves lest, being swept along by the error of the lawless (<em>synapagō</em> = to carry away together with, to be swept along by), <strong>ekpesēte tou idiou stērigmou</strong> — you fall from your own stability (<em>stērigmos</em> = stability, foundation — the noun of <em>stērizō</em> = to establish; the established stability described in 1:12 is the thing at risk; the letter\'s warning circles back to its opening concern).</p>',
+    "18": '<p><strong>auxanete de en chariti kai gnōsei tou Kyriou hēmōn kai sōtēros Iēsou Christou</strong> — grow in the grace and knowledge of our Lord and Savior Jesus Christ (the concluding exhortation returns to the letter\'s opening theme: knowledge — <em>gnōsis</em> here rather than the letter\'s usual <em>epignōsis</em>, but the same semantic range; growth in grace and knowledge together). <strong>autō hē doxa kai nyn kai eis hēmeran aiōnos</strong> — to him the glory both now and to the day of eternity (the doxology closes the letter; <em>hēmera aiōnos</em> = the day of eternity — a unique phrase; eternity as a day that never ends).</p>'
   }
 }
 
 def main():
-    books_data = [
-        ('james', JAMES_ECHO, JAMES_ORIGINAL, JAMES_CONTEXT, JAMES_CHRIST),
-        ('1peter', ONEPET_ECHO, ONEPET_ORIGINAL, ONEPET_CONTEXT, ONEPET_CHRIST),
-        ('2peter', TWOPET_ECHO, TWOPET_ORIGINAL, TWOPET_CONTEXT, TWOPET_CHRIST),
-        ('2john', TWOJOHN_ECHO, TWOJOHN_ORIGINAL, TWOJOHN_CONTEXT, TWOJOHN_CHRIST),
-        ('3john', THREEJOHN_ECHO, THREEJOHN_ORIGINAL, THREEJOHN_CONTEXT, THREEJOHN_CHRIST),
-        ('jude', JUDE_ECHO, JUDE_ORIGINAL, JUDE_CONTEXT, JUDE_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-original', '2peter')
+    merge_comm(existing, PETER2)
+    save_comm('mkt-original', '2peter', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    il = json.loads((ROOT / 'data' / 'interlinear' / '2peter.json').read_text())
+    all_ok = True
+    for ch in ['1', '2', '3']:
+        il_vv = set(il.get(ch, {}).keys())
+        out_vv = set(existing.get(ch, {}).keys())
+        missing = il_vv - out_vv
+        if missing:
+            print(f'  ch{ch} still missing: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'  ch{ch}: complete ({len(out_vv)} verses)')
+    if all_ok:
+        print('All 2 Peter ch1-3 original entries present ✓')
 
 if __name__ == '__main__':
     main()

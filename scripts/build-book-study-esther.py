@@ -1,0 +1,169 @@
+"""
+Book Study Data — Esther
+book_id: esther
+lang: hebrew
+
+Run: python3 scripts/build-book-study-esther.py
+
+Notes:
+- Author group: Historical (Joshua-Esther) in author-freq-hebrew.json
+- Historical peaks are generic function words; vocabulary selected for Esther's
+  specific literary and theological program: hidden providence, reversal,
+  the pur-lot system, Jewish identity, banquet structure, and the haphak-reversal
+- 12 vocab entries; Hebrew translit fields blank in glossary — supplied manually
+- H6332 pur: Akkadian/Persian loanword for "lot"; unique to Esther; gives the
+  festival its name; appears in 3:7 and 9:24-26
+- H2015 haphak: THE word for the book's reversal in 9:1 ("veyinahhafok hu")
+  and 9:22 ("nehepak"); not used in any prior book
+- H8045 shamad: the genocidal edict word in 3:13; used in reversed form in 8:11;
+  links Haman to the Amalekite-enemy tradition
+- H3064 Yehudi: the identity word that precipitates the crisis; used as denominative
+  verb in 8:17 ("mitYahadim" = people who "became Jews")
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "esther",
+
+    "key_vocabulary": [
+        {
+            "code": "H6332",
+            "lemma": "פּוּר",
+            "translit": "pûr",
+            "gloss": "lot",
+            "significance": "פּוּר (pur, &lsquo;a lot — an Akkadian/Persian loanword meaning the lot or die cast to determine fate; the word that names the festival of Purim&rsquo;) is the theological pivot of the book. 3:7: &lsquo;In the first month...they cast Pur (that is, the lot) before Haman day after day; and it fell in the twelfth month, which is the month of Adar.&rsquo; Haman uses the pur to determine the astrologically optimal date for his genocide — trusting pagan divination to give him the right timing. The lot falls eleven months away, which (providentially) allows time for the plot to be foiled. 9:24-26 provides the interpretive summary: &lsquo;Haman...had plotted against the Jews to destroy them, and had cast Pur...to crush and destroy them. But when it came before the king, he gave orders in writing that his evil plan...should return on his own head...therefore they called these days Purim, after the word Pur.&rsquo; The festival is named Purim specifically to memorialize the reversal: the pur that Haman trusted to guarantee genocide became the identifier of Jewish survival. Pagan fate-determination is overridden by YHWH&rsquo;s providence — the lots that Haman consulted are answered by a God who has his own calendar. Proverbs 16:33: &lsquo;The lot (goral) is cast into the lap, but its every decision is from YHWH.&rsquo; Esther is the narrative commentary on that proverb: what appears to be fate is in fact providence."
+        },
+        {
+            "code": "H3064",
+            "lemma": "יְהוּדִי",
+            "translit": "yĕhûdî",
+            "gloss": "Jew",
+            "significance": "יְהוּדִי (Yehudi, &lsquo;a descendant of Judah (Yehudah); by the post-exilic period, any member of the covenant community — a Jew&rsquo;) is the identity-word that precipitates the crisis and structures its resolution. 3:4: Mordecai declares he is a Yehudi. 3:6: Haman seeks &lsquo;to destroy all the Jews (Yehudim), the people of Mordecai, throughout the whole kingdom.&rsquo; The Yehudi-identity is what Haman wants to annihilate and what Mordecai refuses to surrender. Esther&rsquo;s revelation of her Yehudi identity to the king (7:3-4) is the turning point: &lsquo;Let my life be granted me...for we have been sold, I and my people, to be destroyed.&rsquo; The moment she says &lsquo;my people&rsquo; the hidden Yehudi identity becomes a public claim on the king&rsquo;s justice. The most remarkable use of Yehudi comes at 8:17: &lsquo;Many from the peoples of the country declared themselves Jews (mitYahadim) because fear of the Jews had fallen on them.&rsquo; The same root is used as a denominative verb — people voluntarily &lsquo;Jew-ifying&rsquo; themselves. The identity Haman found threatening enough to genocide is so vindicated by the end of the book that outsiders want to claim it. This is the reversal the prophets envisioned: &lsquo;ten men from the nations of every tongue shall take hold of the robe of a Jew (Yehudi), saying, &ldquo;Let us go with you, for we have heard that God is with you&rdquo;&rsquo; (Zech 8:23)."
+        },
+        {
+            "code": "H4960",
+            "lemma": "מִשְׁתֶּה",
+            "translit": "mišteh",
+            "gloss": "banquet",
+            "significance": "מִשְׁתֶּה (mishteh, &lsquo;from shatah [to drink]; a drinking-feast or banquet — the ancient Near Eastern occasion of social gathering, political alliance, and the conferral of honor&rsquo;) is the structural backbone of Esther. No other OT book approaches Esther&rsquo;s concentration of banquets: the book contains ten mishteh events, organized symmetrically. It opens with a 180-day royal mishteh (1:3-4) and a 7-day drinking party (1:5); Esther&rsquo;s selection is celebrated with a mishteh (2:18); Haman and the king drink together after sealing the genocidal decree (3:15); Esther requests a mishteh (5:4), then a second (5:8); Haman is exposed at the second mishteh (7:1-10); the Jews celebrate with a mishteh (8:17); Purim is established as a mishteh of gladness (9:17-22). In the patronage-client culture of the Persian court, the mishteh is not entertainment but politics: alliances are ratified, honors conferred, and decisions enacted at the table. Esther&rsquo;s strategy uses the mishteh format deliberately — she brings Haman to a relaxed setting before making her accusation, catching him vulnerable. The reversal of the book is mirrored in the reversal of its banquets: the mishteh of Persian power (ch. 1) is answered by the mishteh of Jewish survival (ch. 9). Jesus&rsquo;s &lsquo;many will come from east and west and recline at table with Abraham, Isaac, and Jacob in the kingdom of heaven&rsquo; (Matt 8:11) is the eschatological mishteh that Esther&rsquo;s Purim feast anticipates."
+        },
+        {
+            "code": "H2803",
+            "lemma": "חָשַׁב",
+            "translit": "ḥāšab",
+            "gloss": "devise",
+            "significance": "חָשַׁב (chashav, &lsquo;properly, to plait or weave; figuratively, to think, devise, plan — the mental act of crafting a complex scheme, like a weaver planning a pattern&rsquo;) appears in the pivotal reversal-summary of 8:3 and 9:25 as the word for Haman&rsquo;s plotting. 9:25: &lsquo;When it came before the king, he gave orders in writing that his evil plan that he had devised (machashavato ha-ra&rsquo;ah asher chasav) against the Jews should return on his own head.&rsquo; The machashavah (plan, from chashav) that Haman &lsquo;wove&rsquo; is undone not by direct divine intervention but by the plan returning on its deviser. This is Psalm 7:14-16 narrativized: &lsquo;He who is pregnant with evil conceives trouble...He makes a pit, digging it out, and falls into the hole that he has made. His trouble returns (yashuv) on his own head.&rsquo; Haman&rsquo;s chashav produces the exact outcome he sought to prevent. The chashav-word also appears in Genesis 50:20, Joseph&rsquo;s summary of his brothers&rsquo; treachery: &lsquo;you chashavtem evil against me, but God chashav it (hashavah) for good.&rsquo; Both Esther and Joseph display the same theological pattern: human evil-devising (chashav) is overridden by divine counter-devising (also chashav) — the plotter&rsquo;s loom is in the weaver&rsquo;s hands. The cross applies this most fully: &lsquo;this Jesus, delivered up according to the definite plan (boulē) and foreknowledge of God, you crucified and killed by the hands of lawless men&rsquo; (Acts 2:23)."
+        },
+        {
+            "code": "H2015",
+            "lemma": "הָפַךְ",
+            "translit": "hāpak",
+            "gloss": "overturn",
+            "significance": "הָפַךְ (haphak, &lsquo;to turn about or over; to change, overturn, pervert, return — the most comprehensive Hebrew word for reversal&rsquo;) is the word that names the book&rsquo;s central theological event. 9:1: &lsquo;on the very day when the enemies of the Jews hoped to gain the mastery over them, the reverse occurred (veyinahhafok hu) — the Jews gained mastery over those who hated them.&rsquo; 9:22: &lsquo;the month that had been turned (nehepak) for them from sorrow into gladness and from mourning into a holiday.&rsquo; The haphak-reversal is both historical event and theological category: YHWH&rsquo;s governance of history operates by turning what was intended for destruction into the occasion for deliverance. The same verb appears at the Red Sea (Exod 14:5: the hearts of Pharaoh&rsquo;s servants &lsquo;turned / haphak&rsquo; against Israel — and YHWH turned the situation against them), and in Lamentations&rsquo; desperate prayer: &lsquo;Restore us to yourself, O YHWH, that we may be restored (haphak)&rsquo; (Lam 5:21). The prophet Amos uses haphak for the eschatological reversal of mourning: &lsquo;I will turn (haphakti) your feasts into mourning and all your songs into lamentation&rsquo; (Amos 8:10) — and then Amos 9:14-15 reverses it back. The resurrection is the ultimate haphak: the crucifixion was the appointed date for the destruction of God&rsquo;s people; on that very day the reversal occurred — death was overturned."
+        },
+        {
+            "code": "H5307",
+            "lemma": "נָפַל",
+            "translit": "nāpal",
+            "gloss": "fall",
+            "significance": "נָפַל (naphal, &lsquo;to fall — in a vast range of applications: physical falling, falling in battle, lots falling, judgment falling upon someone&rsquo;) traces the reversal-arc of Esther in three stages. First, the pur &lsquo;fell&rsquo; (naphal): 3:7: &lsquo;and the pur...fell (naphal) in the twelfth month, which is the month of Adar&rsquo; — the lot designates the date of planned genocide. Second, Haman &lsquo;fell&rsquo; (naphal) before Esther&rsquo;s couch (7:8: &lsquo;Haman was falling [naphal] on the couch where Esther was&rsquo; — the text&rsquo;s deliberate double meaning, whether he was begging or physically fell, leads to his death). Third, the &lsquo;fear of the Jews fell (naphal) on all peoples&rsquo; (9:2, 3): &lsquo;and the fear of them fell (naphal) upon all peoples.&rsquo; The naphal-arc is complete: the lot that fell for the Jews&rsquo; destruction, then Haman&rsquo;s own fall, then fear falling on their enemies. Psalm 7:15 provides the interpretive principle: &lsquo;He makes a pit, digging it out, and falls (yippal) into the hole that he has made&rsquo; — the Psalmist&rsquo;s confident assertion that the wicked man&rsquo;s schemes return on himself. Esther is the narrative proof of Psalm 7: the lot cast for Jewish destruction falls back as dread upon those who cast it."
+        },
+        {
+            "code": "H2091",
+            "lemma": "זָהָב",
+            "translit": "zāhāb",
+            "gloss": "gold",
+            "significance": "זָהָב (zahav, &lsquo;gold — the metal in its full range of uses: currency, jewelry, temple furnishings, royal regalia; also figuratively, anything of highest value&rsquo;) is the word for the scepter that controls access to the king and thus controls the entire plot of Esther. 4:11: &lsquo;If any man or woman goes to the king inside the inner court without being called, there is but one law — to be put to death, except the one to whom the king holds out the golden (zahav) scepter so that he may live.&rsquo; 5:2: &lsquo;When the king saw Queen Esther standing in the court, she won favor in his sight, and he held out to Esther the golden (zahav) scepter that was in his hand.&rsquo; 8:4: after Haman&rsquo;s death, &lsquo;the king held out the golden (zahav) scepter to Esther.&rsquo; The zahav scepter is the instrument of grace and death — its extension to Esther is the physical enactment of favor: the king accepts her unasked approach. Without the extended scepter, her intercession cannot proceed; with it, every door opens. The scene is an enacted parable of access to a sovereign through grace: approach without invitation means death; favor extended means life. The author of Hebrews draws the contrast explicitly: &lsquo;Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need&rsquo; (Heb 4:16) — where Esther approached with mortal fear, believers approach with confidence, because the golden scepter of grace is always extended."
+        },
+        {
+            "code": "H7561",
+            "lemma": "רָשַׁע",
+            "translit": "rāšaʿ",
+            "gloss": "be wicked",
+            "significance": "רָשַׁע (rasha, &lsquo;to be morally wrong; to act wickedly; causatively, to declare or treat as guilty/wicked — the strongest OT term for criminal wickedness or moral wickedness&rsquo;) is the word for the summary judgment on Haman and his scheme. 9:25 uses the machashavah ha-ra&rsquo;ah (evil plan) that &lsquo;returned on his own head.&rsquo; Haman&rsquo;s career as the archetypal rasha follows the structure of Psalm 7: &lsquo;The wicked (rasha) man plots against the righteous (tsaddiq)...His mischief returns on his own head, and on his own skull his violence descends&rsquo; (Ps 7:9-16). Haman&rsquo;s wounded pride at Mordecai&rsquo;s refusal to bow (3:5) drives him to plot genocide — the disproportionate response of the rasha who treats a personal slight as requiring collective punishment. The Agagite dimension intensifies this: Haman is identified as an Agagite (3:1), connecting him to Agag, king of Amalek (1 Sam 15), the ancestral enemy. Mordecai is a Benjaminite (2:5), the tribe of Saul. The Esther narrative recapitulates the Saul/Amalek conflict — another Benjaminite faces another Agagite; this time the Agagite meets his end. The rasha who targets the righteous becomes his own instrument of destruction, as the OT consistently patterns: &lsquo;the rulers of this age...crucified the Lord of glory...God has prepared for those who love him&rsquo; what the rasha&rsquo;s scheming cannot foresee (1 Cor 2:8-9)."
+        },
+        {
+            "code": "H3498",
+            "lemma": "יָתַר",
+            "translit": "yātar",
+            "gloss": "remain",
+            "significance": "יָתַר (yatar, &lsquo;to jut over or exceed; to be left over, to remain as a survivor or remnant — the verb form of yeter [remnant], used of what survives after comprehensive destruction&rsquo;) is the word for the Jewish survival that Esther ensures. 9:12-16: &lsquo;Now the rest (she&rsquo;ar, from sha&rsquo;ar) of the Jews who were in the king&rsquo;s provinces also gathered to defend their lives...&rsquo; The yatar-theology runs throughout the OT: no matter how total the threat, YHWH always preserves a remnant-survivor through whom the covenant line continues. Isaiah uses the related noun for the remnant that will return: &lsquo;In that day YHWH will extend his hand yet a second time to recover the remnant (she&rsquo;ar) that remains (yatar) of his people&rsquo; (Isa 11:11). The theological significance of Haman&rsquo;s failure is precisely this: his plot was designed as a shamad (complete annihilation, H8045) that would prevent any yatar. The existence of a Jewish remnant after Esther is not a political accident but a theological assertion: YHWH&rsquo;s covenant cannot be severed by genocide because he preserves yatar when comprehensive destruction is attempted. Paul&rsquo;s &lsquo;at the present time there is a remnant (leimma — the Greek yatar-equivalent), chosen by grace&rsquo; (Rom 11:5) applies the same yatar-theology: God always preserves a remnant through which his covenant purposes continue, even through the darkest moments of history."
+        },
+        {
+            "code": "H4194",
+            "lemma": "מָוֶת",
+            "translit": "māwet",
+            "gloss": "death",
+            "significance": "מָוֶת (mavet, &lsquo;death in any form — natural or violent; the state of the dead; by metonymy, the realm of the dead [sheol/hades]&rsquo;) is the threat that hangs over every scene of Esther and whose reversal is the book&rsquo;s greatest claim. The book is structured around mavet: the death sentence over anyone who approaches the king unbidden (4:11); the death-decree against all Jews (3:13); &lsquo;if I perish (avad), I perish&rsquo; — Esther&rsquo;s acceptance of possible death in her intercession (4:16); Haman&rsquo;s death (7:10); the Jews&rsquo; deliverance from the mavet intended for them (9:1-17). Esther&rsquo;s intercession is specifically an approach toward the instrument of mavet-by-edict (the king without permission) in order to prevent mavet-by-edict against her people. The book&rsquo;s resolution is captured in 9:22: &lsquo;the month that had been turned (haphak) for them from sorrow (yagon) into gladness (simchah) and from mourning (evel) into a holiday (yom tov).&rsquo; Mourning and sorrow are the vocabulary of mavet; gladness and holiday are the vocabulary of life — the haphak-reversal transforms the month of intended mavet into the month of celebration. The NT&rsquo;s &lsquo;Death (thanatos — the Greek mavet-equivalent) is swallowed up in victory&rsquo; (1 Cor 15:54, citing Isa 25:8) is the ultimate mavet-haphak: where Esther enacted the pattern in one people&rsquo;s deliverance, the resurrection reverses mavet for the whole creation."
+        },
+        {
+            "code": "H1419",
+            "lemma": "גָּדוֹל",
+            "translit": "gādôl",
+            "gloss": "great",
+            "significance": "גָּדוֹל (gadol, &lsquo;great in any sense — large in size, important in rank, senior in age, severe in intensity&rsquo;) is the word woven through Esther to describe positions of honor and power, and its distribution tracks the book&rsquo;s reversal. Haman is introduced as the one the king has &lsquo;advanced (gadol — made great) above all the officials&rsquo; (3:1). His self-description in 5:11 is pure gadol: &lsquo;[Haman] told them of the greatness (gadol) of his riches, the multitude of his sons, all the promotions with which the king had honored him.&rsquo; His request is for gadol-honor: to be paraded in the king&rsquo;s robes on the king&rsquo;s horse through the city square while someone calls out the king&rsquo;s honor formula before him (6:8-9). But the person accorded this honor is Mordecai (6:10-11) — the man Haman came to the palace to have hanged. At the end, it is Mordecai who is &lsquo;great (gadol) among the Jews and popular with the multitude of his brothers, for he sought the welfare of his people and spoke peace to all his people&rsquo; (10:3). The gadol that Haman craved and monopolized passes to Mordecai — not through self-aggrandizement but through service. This is Proverbs 25:6-7 enacted: &lsquo;Do not put yourself forward in the king&rsquo;s presence...it is better to be told, &ldquo;Come up here,&rdquo; than to be put lower.&rsquo; Jesus&rsquo;s &lsquo;whoever humbles himself will be exalted&rsquo; (Matt 23:12) is the NT formulation of the gadol-reversal that Esther narratizes."
+        },
+        {
+            "code": "H8045",
+            "lemma": "שָׁמַד",
+            "translit": "šāmad",
+            "gloss": "annihilate",
+            "significance": "שָׁמַד (shamad, &lsquo;to desolate — the strongest Hebrew word for total destruction and elimination; used for YHWH&rsquo;s commands to utterly destroy the Canaanites, and for the catastrophic destruction of enemies&rsquo;) is the word in Haman&rsquo;s genocidal edict and its reversal. 3:13: &lsquo;letters were sent...with instruction to destroy, to kill, and to annihilate (l&rsquo;shamad) all Jews, young and old, women and children, in one day.&rsquo; The three-verb formula (to destroy, to kill, to annihilate) intensifies to a crescendo ending in shamad — the strongest possible word for total elimination. The use of shamad carries irony: this is the word YHWH used to command Israel to utterly destroy the Amalekites (1 Sam 15:3) and other nations (Deut 7:2). In Esther, the descendant of Agag (the Amalekite king Saul spared) turns shamad against the descendants of Saul&rsquo;s tribe. The reversal makes the irony complete: 8:11 gives the Jews the right &lsquo;to destroy, to kill, and to annihilate (l&rsquo;shamad) any armed force of any people or province that might attack them&rsquo; — the identical three-verb formula, now applied in the opposite direction. On the day planned for the shamad of the Jews, their enemies experience it instead (9:6-16). The Saul/Agag parallel comes full circle: what Saul failed to execute against Agag, Esther and Mordecai effectively accomplish against his descendant. Paul&rsquo;s &lsquo;the one who was trying to destroy (portheō) the church now preaches the faith he once tried to destroy&rsquo; (Gal 1:23) is the personal shamad-reversal: the weapon of destruction turned into proclamation."
+        }
+    ],
+
+    "language_notes": (
+        "<p>The most distinctive literary feature of Esther is the <strong>absence of the divine name</strong>. Neither the Tetragrammaton (YHWH) nor the word Elohim (God) appears anywhere in the Hebrew text of Esther — a unique phenomenon in the Hebrew Bible. This is not accidental but an act of deliberate literary art: the author writes from inside the experience of diaspora, where YHWH does not make dramatic appearances, burning bushes, or audible speeches. Instead, the book is a sustained argument for hidden providence: &ldquo;coincidences&rdquo; that individually could be explained naturally but collectively constitute unmistakable divine orchestration. The king&rsquo;s insomnia on the night Haman builds his gallows (6:1), the timing of Mordecai&rsquo;s recorded loyalty to the crown, Esther&rsquo;s placement in the palace years before the crisis — each could be chance; together they form a pattern no chance could produce. The deliberate absence of God&rsquo;s name forces the reader to do what the diaspora community must do: see God in the arrangement of events rather than in spectacular intervention. This makes Esther the OT&rsquo;s most sophisticated treatment of what theologians call &ldquo;general providence.&rdquo;</p>"
+        "<p>Esther has the most <strong>elaborate chiastic structure</strong> of any OT narrative. The book is organized around a center (the king&rsquo;s sleepless night, ch. 6) with symmetrical panels expanding outward: two opening banquets / Mordecai&rsquo;s honor and degradation alternating with Haman&rsquo;s honor and degradation / two closing banquets. The literary sophistication extends to the <strong>reversal vocabulary</strong> (haphak) and the <strong>falling vocabulary</strong> (naphal): the lot &ldquo;falls&rdquo; for destruction; Haman &ldquo;falls&rdquo; before Esther&rsquo;s couch; fear &ldquo;falls&rdquo; on the enemies. The book uses these words as structural markers of its reversal theology. The three-verb formula &ldquo;to destroy, to kill, and to annihilate (shamad)&rdquo; (3:13) is intentionally echoed when the Jews are given the same rights in reverse (8:11) — the verbatim repetition signals that the entire decree has been turned on its head.</p>"
+        "<p>The <strong>honor-shame vocabulary</strong> saturates Esther because its world is the Persian court — the most honor-conscious political environment in the ancient world. Vashti&rsquo;s refusal to display herself (1:12) is a shame-event for the king; Mordecai&rsquo;s refusal to bow (3:2) is a shame-event for Haman. The word for Haman&rsquo;s response to Mordecai&rsquo;s non-bow is wayyimale chema (3:5: he was filled with wrath/heat) — the language of the heat of wounded honor. The honor the king proposes to give &ldquo;to the man the king delights to honor&rdquo; (6:6-9) is the entire Persian honor-system compressed into a scene: royal robe, royal horse, and a herald proclaiming before him through the city square. Haman designs it for himself and must perform it for Mordecai. The structural principle of Proverbs 25:6-7 is enacted with precision.</p>"
+        "<p>Esther&rsquo;s <strong>wordplay and irony</strong> extend to the very mechanisms of the plot. The pur (lot) that Haman cast to determine the date of genocide becomes the name of the festival celebrating its failure. The gallows (H6086 ets, tree/wood) that Haman builds for Mordecai are used to hang Haman (7:10). The three-verb edict for Jewish annihilation (3:13) becomes the three-verb edict for Jewish self-defense (8:11). Haman&rsquo;s own words about honoring &ldquo;the man the king delights to honor&rdquo; (6:6) are used against him: he must honor Mordecai. In every case, the mechanism intended for Jewish destruction becomes the vehicle of Jewish vindication — the consistent literary signature of a God who uses his enemies&rsquo; weapons against them.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic and Medieval:</strong> Esther had a contested reception in the early church. Jerome expressed reservations about its canonicity due to the absence of God&rsquo;s name and the book&rsquo;s focus on violence; he treated it as less spiritually authoritative than the prophets. Origen read Esther allegorically: Esther as the church interceding before Christ the King, Haman as the devil, and Mordecai as the Holy Spirit or Scripture. The Greek LXX additions to Esther (not in the Hebrew) added explicit prayers and religious language to make the book&rsquo;s piety more visible — a commentary on the discomfort the Hebrew text&rsquo;s silences caused. Medieval interpreters favored the allegorical reading, connecting Esther&rsquo;s intercession to Mary&rsquo;s intercessory role in Catholic theology.</p>"
+        "<p><strong>Reformation:</strong> Luther famously remarked he wished the book had never existed and would gladly trade it for the apocryphal 1 Maccabees — too much Jewish nationalism, too little Christ. Calvin did not comment on Esther. This Reformation ambivalence stands in sharp contrast to the Jewish tradition, which honored Esther as perhaps the most beloved of all biblical books: at Purim, the entire Megillah (scroll) is read aloud, with noisemakers (groggers) drowning out Haman&rsquo;s name at each mention. The Jewish tradition reads the absent divine name as present everywhere — YHWH visible in every &ldquo;coincidence.&rdquo;</p>"
+        "<p><strong>Modern scholarship:</strong> Contemporary scholarship has rehabilitated Esther significantly. The book&rsquo;s literary artistry — its chiastic structure, irony, reversal-theology, and diaspora theology — has received sustained attention. The absent God&rsquo;s name is now read as a sophisticated theological statement about providence in the secular world rather than a deficiency. Feminist scholarship has engaged Esther and Vashti as complex characters navigating a patriarchal court, recovering Vashti&rsquo;s refusal (ch. 1) as an act of courage alongside Esther&rsquo;s. The book&rsquo;s relevance to diaspora communities and minority groups facing persecution has made it especially significant for Jewish communities in the modern period, particularly in light of the Holocaust.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Track the <strong>banquets (mishteh)</strong> through the book — they are its structural skeleton and narrative engine. Every major plot development happens at or around a mishteh: Esther&rsquo;s selection, the genocide decree, Esther&rsquo;s intercession, Haman&rsquo;s exposure, the Jewish celebration. When you notice a banquet scene, ask: what alliance is being formed or broken? What honor is being conferred or withdrawn? Who has access to the table?</p>"
+        "<p>The book is a sustained argument for <strong>hidden providence</strong>. Read each &ldquo;coincidence&rdquo; as a theological statement: the king&rsquo;s sleepless night (6:1), the timing of Mordecai&rsquo;s recorded loyalty, Esther&rsquo;s placement in the palace years before the crisis. None of these requires miraculous explanation individually; their convergence requires the explanation 4:14 points toward: &ldquo;who knows whether you have not come to the kingdom for such a time as this?&rdquo; The book trains the reader to see Providence working through natural events.</p>"
+        "<p>The moral heart is <strong>chapter 4</strong> — read it slowly. Esther&rsquo;s initial refusal (4:11), Mordecai&rsquo;s challenge (4:13-14), and Esther&rsquo;s response (4:15-16) form a complete arc: comfort, call, and courageous obedience. &ldquo;If I perish, I perish&rdquo; is not fatalism but faith — the acceptance of personal risk in order to intercede for others. Everything before chapter 4 explains how Esther got to this moment; everything after shows what happens when someone steps into the role Providence prepared for them. Don&rsquo;t read Esther as passive — chapter 4 reveals a woman who chooses to act at personal cost when she could have remained safe.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('esther')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('esther', merged)
+
+main()

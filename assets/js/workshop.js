@@ -12,7 +12,7 @@
  */
 'use strict';
 
-import { _resolve, initTheme, parseRef, loadInterlinear, loadStrongs, escHtml, INTERLINEAR_ROOT } from './core.js';
+import { _resolve, initTheme, parseRef, loadBooks, loadVersions, loadInterlinear, loadStrongs, loadBook, getVersion, setVersion, loadCommentary, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, loadCrossRefs, parseCrossRefEntry, escHtml, INTERLINEAR_ROOT } from './core.js';
 
 /* ── URLs ──────────────────────────────────────────────────── */
 const PHASE_URLS = {
@@ -52,6 +52,10 @@ const BOOK_ORDER_NT = [
   ['philemon','Phm'],['hebrews','Heb'],['james','Jas'],['1peter','1Pet'],['2peter','2Pet'],
   ['1john','1Jn'],['2john','2Jn'],['3john','3Jn'],['jude','Jude'],['revelation','Rev'],
 ];
+// INTENT: O(1) NT book membership test derived from BOOK_ORDER_NT so that language
+//   detection in _studyPassage() stays in sync with the book-order definition above.
+// CHANGE? If a book is added to BOOK_ORDER_NT, this Set updates automatically.
+const NT_BOOKS = new Set(BOOK_ORDER_NT.map(function([id]) { return id; }));
 
 /* ── Phase definitions ─────────────────────────────────────── */
 const PHASES = [
@@ -80,9 +84,34 @@ const  PAGE_SIZE  = 80;
 // VERIFY: Type "John 1:1" in the passage input, click Study → sw-passage-view is
 //   shown, ws-browse-panel is hidden, tiles appear.
 let _passageMode     = false;
+let _studyMode       = 'verse';   // 'verse' | 'word' | 'book'
 let _passageRef      = null;      // parsed ref object (bookId, ch, v, endCh, endV)
 let _translationMode = false;     // false = hides translator-only sections in dossier
 let _depth           = 2;         // 1=Reader, 2=Student, 3=Scholar
+let _lastWordCode    = null;      // last word opened in verse mode (for dossier tab re-render)
+let _originalWordOrder = false;  // when true, Hebrew tiles flow RTL (original language direction)
+
+// INTENT: Track the 8 most-recently studied passage refs in localStorage so the nav
+//   column can show a quick-access history list in study mode. Most recent first.
+// CHANGE? If localStorage key bsw_ws_recent_passages changes, update _renderNav too.
+// VERIFY: Study 3 passages → nav left column shows all 3 as clickable ref buttons.
+var _LS_RECENT = 'bsw_ws_recent_passages';
+var _MAX_RECENT = 8;
+
+function _pushRecentPassage(refStr) {
+  var list = _getRecentPassages();
+  list = list.filter(function(r) { return r !== refStr; });
+  list.unshift(refStr);
+  if (list.length > _MAX_RECENT) list = list.slice(0, _MAX_RECENT);
+  try { localStorage.setItem(_LS_RECENT, JSON.stringify(list)); } catch(e) {}
+}
+
+function _getRecentPassages() {
+  try {
+    var raw = localStorage.getItem(_LS_RECENT);
+    return raw ? JSON.parse(raw) : [];
+  } catch(e) { return []; }
+}
 
 // INTENT: Grammar data cache for SW-B particle highlighting in passage tiles and
 //   the Grammar Significance dossier section. Loaded lazily on first passage study.
@@ -92,6 +121,91 @@ let _depth           = 2;         // 1=Reader, 2=Student, 3=Scholar
 //   Click γάρ tile → dossier Grammar section shows "Ground / Reason" function card.
 let _particlesCache = {};         // lang ('greek'|'hebrew') → {code: particle entry}
 let _morphSigCache  = {};         // lang → morphology significance data
+// INTENT: Grammar debates cache for SW-C — lazy-loaded array of debate objects.
+//   Checked in _renderDossier() to surface Contested Interpretation cards when
+//   the clicked word's code matches a debate and the current passage is a trigger passage.
+// CHANGE? If grammar-debates.json schema changes (strongs_keys, trigger_passages fields),
+//   update _renderDebateSection() and the index built in _loadDebates().
+// VERIFY: Study Gal 2:16, click G4102 (πίστεως) → Contested Interpretation card appears
+//   showing both sides of the πίστις Χριστοῦ debate with proponents named.
+let _debatesCache   = null;       // array of debate objects (null = not yet loaded)
+let _debatesByCode  = {};         // inverted index: strongs_code → [debate, ...]
+
+// INTENT: Idiom database cache for SW-E — loaded lazily on first passage study.
+//   _idiomsIndex maps Strong's code → [idiom ids] for O(1) lookup per tile click.
+//   _idiomsData maps idiom id → full idiom entry for rendering.
+// CHANGE? If data/idioms.json or data/idioms-index.json paths change, update _loadIdioms().
+// VERIFY: Study John 1 → click G5207 (υἱός) → "Idiom Alert" section shows son-of-x
+//   and son-of-man entries. Study John 1:1-18 passage → "Idioms in This Passage" panel
+//   appears above tiles listing all idioms triggered by tokens in the pericope.
+let _idiomsData  = null;   // id → full idiom entry (null = not loaded)
+let _idiomsIndex = null;   // strongs_code → [idiom id, ...] (null = not loaded)
+
+// INTENT: Cognate family data for SW-H — shows root→descendants so the user sees
+//   semantic weight from root meaning (e.g. כבד "heavy" → כָּבוֹד "glory", the weight of God).
+//   Two caches: one per language (Hebrew/Greek) for families array, one for the inverted index.
+// CHANGE? If cognate-families-*.json or cognate-index-*.json paths change, update _loadCognates().
+// VERIFY: Click H3519 (כָּבוֹד) → "Word Family" section shows root H3513 כָּבַד "heavy/honor"
+//   with chips for כָּבֵד (heavy), כָּבֵד (liver), כְּבֵדֻת (heavily), כָּבוֹד (glory).
+let _cognatesFamilies = { H: null, G: null };  // lang prefix → families array (null = not loaded)
+let _cognatesIndex    = { H: null, G: null };  // lang prefix → code→root map
+
+// INTENT: Author frequency data for SW-J — shows which NT/OT author uses a word most
+//   intensively (normalized per 1000 tokens). Enables detecting Johannine, Pauline, or
+//   Lukan characteristic vocabulary at a glance.
+// CHANGE? If author groups in build-author-frequencies.py change, update the author label
+//   mapping in _renderAuthorFreqSection().
+// VERIFY: Click G26 (ἀγάπη) → Author Frequency shows Paul as peak; John close behind.
+let _authorFreqCache = { greek: null, hebrew: null };  // lang → { code: { rates, peak } }
+
+// INTENT: Semantic field data for SW-I — PMI co-occurrence neighbors showing which words
+//   travel together in the corpus. Reveals conceptual clusters invisible in dictionary definitions.
+// CHANGE? If semantic-fields-*.json schema changes (fields renamed), update _renderSemanticSection().
+// VERIFY: Click H2617 (חֶסֶד hesed) → Semantic Neighborhood shows אֱמֶת, אֱמוּנָה, רַחֲמִים.
+let _semanticCache = { greek: null, hebrew: null };  // lang → { code: [{ code, pmi, co_count }] }
+
+// INTENT: Second Temple context data for SW-L — surfaces relevant Jewish background
+//   documents when a word in the dossier has matching strongs_keys or when the current
+//   passage matches a trigger reference in data/second-temple/context.json.
+// CHANGE? If strongs_keys or trigger_passages schema changes, update _renderSTContext().
+// VERIFY: Study John 1:1, click G3056 (λόγος) → "Second Temple Context" section appears
+//   with Philo Logos entry showing source, date, context, and representative quote.
+let _stContextCache = null;  // array of context entries (null = not loaded)
+
+// INTENT: OT-in-NT quotation data for SW-K — shows the MT/LXX/NT three-column comparison
+//   panel whenever a dossier word appears in a NT quotation of the OT.
+//   _otInNtCache is keyed by nt_ref (e.g. "Matt 1:23") and also indexed by ot_ref for OT-side lookup.
+// CHANGE? If data/ot-in-nt/quotations.json schema changes, update _renderOTinNTSection().
+// VERIFY: Study Matt 1:23 → click G3933 (παρθένος) → "OT Source" section shows Isa 7:14
+//   in three columns with עַלְמָה vs παρθένος difference highlighted and interpretation note.
+let _otInNtCache    = null;   // array of quotation entries (null = not loaded)
+let _otInNtByRef    = {};     // nt_ref string → [quotation, ...] (built on load)
+
+// INTENT: Per-book synthesis data for SW-M — each book's pericope entries are loaded
+//   lazily on first Synthesis tab click and cached. Each entry is { key, ref, data }
+//   where key is the raw ref string (e.g. "Rom 1:16-17") and ref is the parseRef result.
+//   undefined = not yet attempted, null = fetch in progress, [] = loaded but no data.
+// CHANGE? If data/synthesis/ filename convention changes, update _loadSynthesis() path.
+// VERIFY: Study Romans 1:16 → click Synthesis tab → "The Thesis of Romans" pericope loads.
+let _synthesisCache = {};   // bookId → [{ key, ref, data }] | null (undefined = not loaded)
+let _interData      = null; // last-loaded interlinear book data; set by _studyPassage, read by _renderWordStudyPanel concordance
+
+// INTENT: Vocabulary flashcard state for SW-N. Deck is a Set of Strong's codes persisted
+//   in localStorage; progress tracks SRS due-dates and intervals per code.
+//   _fcQueue is the list of due codes for the current flashcard session (rebuilt on open).
+// CHANGE? If localStorage keys change (SK_FC_DECK, SK_FC_PROGRESS), migrate old data.
+// VERIFY: Add G3056 to deck (☆→★), open flashcards → λόγος appears as due card.
+const SK_FC_DECK     = 'bsw_ws_fc_deck';      // JSON: { greek: [...], hebrew: [...] }
+const SK_FC_PROGRESS = 'bsw_ws_fc_progress';  // JSON: { code: { due, interval, ease } }
+// INTENT: FC_INTERVALS are seed intervals for the first review only.
+//   After the first rating, _fcRate() computes subsequent intervals using the ease factor
+//   (SM-2-style): Good = prev_interval × ease; Easy = prev_interval × ease × 1.3.
+const FC_INTERVALS   = { again: 1, hard: 3, good: 7, easy: 21 };  // first-review seeds only
+let _fcDeck    = { greek: new Set(), hebrew: new Set() };  // loaded from localStorage on init
+let _fcProgress = {};   // code → { due: ISO string, interval: days }
+let _fcQueue   = [];    // current session due codes (shuffled)
+let _fcIdx     = 0;     // position in _fcQueue
+let _fcReviewed = 0;    // count reviewed this session
 
 /* ── DOM refs ──────────────────────────────────────────────── */
 let $nav, $queue, $count, $dossier, $search, $layout, $loading, $loadingText, $topbarStats;
@@ -194,11 +308,35 @@ function _buildQueue(phaseId) {
 }
 
 /* ── Nav ───────────────────────────────────────────────────── */
+// INTENT: Render the left nav column. In study mode (default), shows study shortcuts:
+//   recent passages, flashcard deck count, frequency-sorted vocabulary links. In translation
+//   mode, shows the original phase nav with progress bars and flagged-entry counts.
+// CHANGE? If _translationMode or PHASES change, update both branches. Recent-passage history
+//   is stored in localStorage key 'bsw_ws_recent_passages' as a JSON array of refStrings.
+// VERIFY: Load fresh → study nav shows. Click ⚙ → enable Translation mode → phase nav appears.
 function _renderNav() {
-  const st = _stats();
-  let html = '';
+  if (!_translationMode) {
+    // INTENT: Study mode nav shows recent passage history for quick re-study.
+    // CHANGE? If _pushRecentPassage or _LS_RECENT key changes, update here.
+    // VERIFY: Study John 1:1, then Romans 8:1 → nav shows both as clickable buttons.
+    var recents = _getRecentPassages();
+    if (!recents.length) { $nav.innerHTML = ''; return; }
+    var html = '<div class="ws-nav-section ws-nav-section--recent">Recent</div>';
+    recents.forEach(function(ref) {
+      html += '<button class="ws-nav-btn ws-nav-btn--recent" data-ref="' + _esc(ref) + '">'
+        + '<span class="ws-nav-btn__label">' + _esc(ref) + '</span></button>';
+    });
+    $nav.innerHTML = html;
+    $nav.querySelectorAll('.ws-nav-btn--recent[data-ref]').forEach(function(btn) {
+      btn.addEventListener('click', function() { _studyPassage(btn.dataset.ref); });
+    });
+    return;
+  }
 
-  // Progress bars
+  // ── Translation nav ───────────────────────────────────────────────────────
+  const st = _stats();
+  var html = '';
+
   html += '<div class="ws-nav-progress">';
   const gPct = Math.round(st.gConf / st.gTotal * 100);
   const hPct = Math.round(st.hConf / st.hTotal * 100);
@@ -239,7 +377,7 @@ function _renderNav() {
   }
 
   $nav.innerHTML = html;
-  $nav.querySelectorAll('.ws-nav-btn').forEach(btn => {
+  $nav.querySelectorAll('.ws-nav-btn[data-phase]').forEach(btn => {
     btn.addEventListener('click', () => {
       _uiState.phase = btn.dataset.phase;
       _uiState.activeCode = null;
@@ -452,9 +590,19 @@ function _renderGrammarSection(code, lang) {
 }
 
 /* ── Dossier ───────────────────────────────────────────────── */
-function _renderDossier(code) {
+// INTENT: Renders lexical dossier for a Strong's code. When targetEl is supplied,
+//   writes to that element instead of $dossier — used by the verse-mode "Word" tab.
+//   compact=true renders a trimmed set (range + grammar + disputes + idioms + 3 uses + sources)
+//   and adds a "→ Full Word Study" button; skips deep-dive sections not needed for verse reading.
+//   The mobile bottom sheet behavior is skipped when a custom targetEl is provided.
+// CHANGE? If $dossier element ID changes, update the querySelector fallback below.
+//   If compact sections change, update SW-U5 notes in TODO.md.
+// VERIFY: Click any tile in verse mode → "Word" tab shows compact dossier + "Full Word Study" btn.
+//   Click the "Full Word Study" btn → switches to Word Study mode with the full dossier.
+function _renderDossier(code, targetEl, compact) {
+  var $el = targetEl || $dossier;
   const entry = _getEntry(code);
-  if (!entry) { $dossier.innerHTML = '<p class="ws-placeholder">Entry not found.</p>'; return; }
+  if (!entry) { $el.innerHTML = '<p class="ws-placeholder">Entry not found.</p>'; return; }
 
   const src         = entry;
   const hasSrcData  = !!(src.source_data);
@@ -471,7 +619,7 @@ function _renderDossier(code) {
 
   let html = '<div class="ws-dossier">';
 
-  // ── Header + depth toggle
+  // ── Header + depth toggle (compact mode omits depth toggle, adds "Full Word Study" link)
   html += `<div class="ws-dossier-head">
     <div class="ws-dossier-head__top">
       <span class="ws-dossier__code">${_esc(code)}</span>
@@ -482,13 +630,17 @@ function _renderDossier(code) {
     </div>
     <div class="ws-dossier-head__meta">
       ${freq > 0 ? `<span>${freqLabel} frequency: <strong>${freq.toLocaleString()}×</strong></span>` : ''}
-      <span>Status: <span class="ws-dossier-head__status ws-status--${entry._status}">${entry._status}</span></span>
+      ${!compact ? `<span>Status: <span class="ws-dossier-head__status ws-status--${entry._status}">${entry._status}</span></span>` : ''}
     </div>
-    <div class="sw-depth-toggle" id="sw-depth-toggle">
-      <span class="sw-depth-label">Depth:</span>
-      <button type="button" class="sw-depth-btn${_depth === 1 ? ' sw-depth-btn--active' : ''}" data-depth="1" title="Reader — essential summary">Reader</button>
-      <button type="button" class="sw-depth-btn${_depth === 2 ? ' sw-depth-btn--active' : ''}" data-depth="2" title="Student — all lexical sources">Student</button>
-      <button type="button" class="sw-depth-btn${_depth === 3 ? ' sw-depth-btn--active' : ''}" data-depth="3" title="Scholar — all sources including M&amp;M and LXX bridge">Scholar</button>
+    <div class="ws-dossier-head__actions">
+      ${!compact ? `<div class="sw-depth-toggle" id="sw-depth-toggle">
+        <span class="sw-depth-label">Depth:</span>
+        <button type="button" class="sw-depth-btn${_depth === 1 ? ' sw-depth-btn--active' : ''}" data-depth="1" title="Reader — essential summary">Reader</button>
+        <button type="button" class="sw-depth-btn${_depth === 2 ? ' sw-depth-btn--active' : ''}" data-depth="2" title="Student — all lexical sources">Student</button>
+        <button type="button" class="sw-depth-btn${_depth === 3 ? ' sw-depth-btn--active' : ''}" data-depth="3" title="Scholar — all sources including M&amp;M and LXX bridge">Scholar</button>
+      </div>` : ''}
+      <button type="button" class="sw-link-word-btn" data-code="${_esc(code)}" title="Copy link to this word">&#128279;</button>
+      <button type="button" class="sw-add-deck-btn" data-code="${_esc(code)}" title="${_isInDeck(code) ? 'Remove from flashcard deck' : 'Add to flashcard deck'}">${_isInDeck(code) ? '★' : '☆'}</button>
     </div>
   </div>`;
 
@@ -505,7 +657,9 @@ function _renderDossier(code) {
   // CHANGE? If attested_uses schema changes in build-attested-uses.py, update field names here.
   // VERIFY: Open G26 (ἀγάπη) — verse samples from John, Paul, and at least one other NT author
   //   appear below the semantic range headline and above the Lexical Sources section.
-  if (src.attested_uses && src.attested_uses.length) html += _renderAttestedUses(src.attested_uses);
+  if (src.attested_uses && src.attested_uses.length) {
+    html += _renderAttestedUses(compact ? src.attested_uses.slice(0, 3) : src.attested_uses);
+  }
 
   // ── SW-B: Grammar Significance (particle function card + POS morphology hints)
   // INTENT: Surface grammar significance right after the attested range so the user
@@ -518,6 +672,67 @@ function _renderDossier(code) {
   //   with colored card. Click a non-particle tile → section is absent or shows morph hints only.
   html += _renderGrammarSection(code, entry._lang || (code.startsWith('G') ? 'greek' : 'hebrew'));
 
+  // ── SW-C: Contested Interpretation (grammar debates panel)
+  // INTENT: Surface active scholarly debates tied to this Strong's code and current passage.
+  //   Only visible at Student+ depth (data-depth-min="2"). Shown after grammar significance
+  //   but before lexical sources — the debate is about the word's meaning in context,
+  //   which should be visible before the reader dives into dictionary definitions.
+  // CHANGE? If _renderDebateSection is moved or debates.json schema changes, update both
+  //   _renderDebateSection() and _debateTriggerMatches().
+  // VERIFY: Study Gal 2:16, click πίστεως tile → "Contested Interpretation" section with
+  //   the πίστις Χριστοῦ debate card. In browse mode, clicking G4102 shows all triggers.
+  html += _renderDebateSection(code);
+
+  // ── SW-E: Idiom Alert (culturally loaded expressions that English readers miss)
+  // INTENT: Surface idiom alerts directly after debates so the user sees cultural context
+  //   before diving into lexical sources. Checks _idiomsIndex (pre-loaded in _studyPassage)
+  //   for the clicked code — renders a card only when there is a real idiom match.
+  // CHANGE? If idiom data schema changes, update _renderIdiomAlertSection(). If this section
+  //   should only show in passage mode (not browse mode), add a _passageMode guard here.
+  // VERIFY: Click G5207 (υἱός) → "Idiom Alert" shows "Son of X" and "Son of Man" entries
+  //   with plain-English explanation and expandable cultural details. Click G3056 (λόγος) →
+  //   no idiom alert (λόγος has no idiom entry). In browse mode, idioms still show.
+  html += _renderIdiomAlertSection(code);
+
+  // ── SW-J: Author Frequency
+  // INTENT: Show which NT/OT author uses this word most intensively (per 1000 words)
+  //   so the reader can spot characteristic vocabulary (Pauline δικαιοσύνη, Johannine ἀγαπάω).
+  // CHANGE? If _authorFreqCache[lang] is null (no study passage loaded yet), returns empty.
+  //   Pre-warm by adding _loadAuthorFreq(lang) to _studyPassage() Promise.all.
+  // VERIFY: Study Romans, click G1343 (δικαιοσύνη) → "Author Frequency" at Student depth
+  //   shows Paul with peak badge; other authors have smaller heat-bar cells.
+  if (!compact) html += _renderAuthorFreqSection(code, entry._lang || (code.startsWith('G') ? 'greek' : 'hebrew'));
+
+  // ── SW-I: Semantic Neighborhood (PMI co-occurrence)
+  // INTENT: Show words that cluster with this word across the biblical corpus via PMI.
+  //   Scholar depth only — PMI is a statistical tool that requires interpretive sophistication.
+  // CHANGE? If the semantic fields data should be accessible at Student depth, change
+  //   data-depth-min to "2" in _renderSemanticSection().
+  // VERIFY: Study John 1, click G3056 (λόγος) → "Semantic Neighborhood" appears at Scholar
+  //   depth with co-occurring words as chips. Click a chip → dossier navigates there.
+  if (!compact) html += _renderSemanticSection(code, entry._lang || (code.startsWith('G') ? 'greek' : 'hebrew'));
+
+  // ── SW-H: Word Family (cognate roots)
+  // INTENT: Show the root word and sibling family members as clickable chips so the user
+  //   can see how a word's meaning derives from its root and travel to related entries.
+  //   Depends on _cognatesFamilies + _cognatesIndex pre-loaded by _loadCognates() in
+  //   _studyPassage(). In browse mode the data may not be loaded — renders empty string.
+  // CHANGE? If cognate data files change schema, update _renderCognateSection(). If this
+  //   section should appear before debates/idioms, move this line up in _renderDossier.
+  // VERIFY: Click H3519 (כָּבוֹד) → "Word Family" section at Student depth shows root
+  //   H3513 callout and sibling chips. Click a chip → dossier updates to that entry.
+  if (!compact) html += _renderCognateSection(code);
+
+  // ── SW-L: Second Temple Context (Jewish background at Scholar depth)
+  // INTENT: Surface relevant Second Temple Jewish background documents for the clicked word.
+  //   Scholar-depth only (data-depth-min="3") since this requires more specialist interest.
+  //   Checks both strongs_keys (word-level) and trigger_passages (passage-level overlap).
+  // CHANGE? If _stContextCache is not pre-loaded when clicking in browse mode, this will
+  //   render empty — to show ST context in browse mode, add _loadSTContext() to initWorkshopPage.
+  // VERIFY: In Scholar mode, click G3056 (λόγος) → "Second Temple Context" card shows Philo
+  //   Logos entry with source, date, context paragraph, significance, and representative quote.
+  if (!compact) html += _renderSTContext(code);
+
   // INTENT: Extrabiblical uses (M&M papyri) follow biblical attestation — showing the same
   //   word in ordinary Koine Greek outside the Bible, the strongest evidence against
   //   over-theological readings. Rendered only when data exists (requires fetch-moulton-milligan.py).
@@ -525,7 +740,7 @@ function _renderDossier(code) {
   //   (field names: source, citation, text, note), update _renderExtrabib accordingly.
   // VERIFY: Open G3056 (λόγος) after running fetch-moulton-milligan.py — Extrabiblical
   //   section appears with M&M badge and papyri citation(s) showing commercial/ordinary use.
-  if (entry._lang === 'greek' && src.extrabiblical_uses && src.extrabiblical_uses.length) {
+  if (!compact && entry._lang === 'greek' && src.extrabiblical_uses && src.extrabiblical_uses.length) {
     html += _renderExtrabib(src.extrabiblical_uses);
   }
 
@@ -567,23 +782,26 @@ function _renderDossier(code) {
   //   greek_lemma, frequency, note), update _renderLxxBridge accordingly.
   // VERIFY: Open H2617 (חֶסֶד) — LXX Bridge section appears below Lexical Sources showing
   //   ἔλεος (170×) as dominant rendering, χάρις (12×) secondary, with semantic notes.
-  if (entry._lang === 'hebrew' && src.lxx_bridge && src.lxx_bridge.length) {
+  if (!compact && entry._lang === 'hebrew' && src.lxx_bridge && src.lxx_bridge.length) {
     html += _renderLxxBridge(src.lxx_bridge);
   }
 
-  // ── Book distribution map (shows where this word actually clusters)
-  html += _renderBookDistribution(entry._bookFreq, entry._lang);
+  if (!compact) {
+    // ── Book distribution map (shows where this word actually clusters)
+    html += _renderBookDistribution(entry._bookFreq, entry._lang);
 
-  // ── Default Rendering Tendency (your starting-point per tier — not a decided meaning)
-  html += '<div class="ws-section ws-section--tiers sw-trans-section" id="ws-tiers-section">';
-  html += '<div class="ws-section-title">Default Rendering Tendency <span class="ws-section-note">— your starting point; context below is where meaning is actually decided</span></div>';
-  html += _renderTiersView(entry._tiers);
-  html += '</div>';
+    // ── Default Rendering Tendency (your starting-point per tier — not a decided meaning)
+    html += '<div class="ws-section ws-section--tiers sw-trans-section" id="ws-tiers-section">';
+    html += '<div class="ws-section-title">Default Rendering Tendency <span class="ws-section-note">— your starting point; context below is where meaning is actually decided</span></div>';
+    html += _renderTiersView(entry._tiers);
+    html += '</div>';
+  }
 
   // ── Per-book defaults (middle tier between global default and passage overrides)
-  html += _renderBookDefaults(code, entry);
+  if (!compact) html += _renderBookDefaults(code, entry);
 
   // ── Contextual Renderings (the primary work surface — where translation actually happens)
+  if (!compact) {
   const overrides = ((_decisions[code] || {}).context_overrides) || src.context_overrides || [];
   html += `<div class="ws-section ws-section--contextual sw-trans-section" id="ws-overrides-section">
     <div class="ws-section-title ws-section-title--contextual">Contextual Renderings
@@ -610,7 +828,9 @@ function _renderDossier(code) {
     html += '</div>';
   }
   html += '</div>';
+  } // end contextual renderings
 
+  if (!compact) {
   // ── Decision log (translation mode only)
   const log = entry._decLog;
   html += '<div class="ws-section sw-trans-section"><div class="ws-section-title">Decision Log</div>';
@@ -639,25 +859,87 @@ function _renderDossier(code) {
     <button class="ws-action-btn ws-action-btn--defer"    data-action="defer"    ${isLocked ? 'disabled' : ''}>⟳ Defer</button>
     <button class="ws-action-btn ws-action-btn--lock"     data-action="lock"     ${!isConfirmed || isLocked ? 'disabled' : ''}>★ Anchor</button>
   </div>`;
+  } // end !compact
+
+  // ── Compact: "Full Word Study →" button
+  if (compact) {
+    html += '<div class="sw-dossier-full-link">'
+      + '<button type="button" class="ws-btn ws-btn--sm sw-open-word-study-btn" data-code="' + _esc(code) + '">'
+      + '&#8594; Full Word Study'
+      + '</button></div>';
+  }
 
   html += '</div>';
-  $dossier.innerHTML = html;
+  $el.innerHTML = html;
 
-  $dossier.querySelectorAll('[data-action]').forEach(btn => {
+  // INTENT: On narrow screens, slide the dossier up as a bottom sheet when a word is opened.
+  //   Only applies to the primary dossier column, not the tab-embedded version (targetEl).
+  // CHANGE? If $dossier element ID changes from ws-dossier, update querySelector here.
+  // VERIFY: On mobile viewport (< 760px), click any interlinear tile — dossier slides up
+  //   from the bottom; tap backdrop or ✕ to dismiss.
+  if (!targetEl && window.innerWidth < 760) {
+    var existingHandle = $dossier.querySelector('.sw-dossier-handle');
+    if (!existingHandle) {
+      var handle = document.createElement('div');
+      handle.className = 'sw-dossier-handle';
+      handle.innerHTML = '<div class="sw-dossier-handle__pill"></div>'
+        + '<button class="sw-dossier-handle__close" aria-label="Close word panel">✕</button>';
+      $dossier.insertBefore(handle, $dossier.firstChild);
+    }
+    $dossier.classList.add('sw-dossier--open');
+    var backdrop = document.getElementById('sw-dossier-backdrop') || (function() {
+      var el = document.createElement('div');
+      el.id = 'sw-dossier-backdrop';
+      el.className = 'sw-dossier-backdrop';
+      document.getElementById('workshop-container').appendChild(el);
+      return el;
+    })();
+    backdrop.style.display = 'block';
+    function _closeDossierSheet() {
+      $dossier.classList.remove('sw-dossier--open');
+      backdrop.style.display = 'none';
+    }
+    $dossier.querySelector('.sw-dossier-handle__close').onclick = _closeDossierSheet;
+    backdrop.onclick = _closeDossierSheet;
+  }
+
+  $el.querySelectorAll('[data-action]').forEach(btn => {
     btn.addEventListener('click', () => _handleAction(btn.dataset.action, code));
   });
 
+  // SW-N: "Link to this word" button — copies workshop URL with ?s=G3056 to clipboard
+  // INTENT: Generates a direct deep-link to the current word's dossier so the user can
+  //   share or bookmark it. Uses navigator.clipboard if available; falls back to prompt().
+  // CHANGE? If the workshop URL structure changes (no longer at translation/workshop/), update path.
+  // VERIFY: Click the 🔗 button in the dossier header — browser shows "Copied!" toast; paste
+  //   into address bar → page loads and auto-opens the word.
+  const linkBtn = $el.querySelector('.sw-link-word-btn[data-code]');
+  if (linkBtn) {
+    linkBtn.addEventListener('click', function() {
+      const wordCode = linkBtn.dataset.code;
+      const url = (location.origin + location.pathname).replace(/\/+$/, '') + '/?s=' + encodeURIComponent(wordCode);
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() {
+          linkBtn.textContent = '✓';
+          setTimeout(function() { linkBtn.textContent = '🔗'; }, 1500);
+        });
+      } else {
+        prompt('Copy this link:', url);
+      }
+    });
+  }
+
   // Contextual rendering buttons (renamed class; old ws-add-override-btn alias kept for safety)
-  ($dossier.querySelector('.ws-add-contextual-btn') || $dossier.querySelector('.ws-add-override-btn'))
+  ($el.querySelector('.ws-add-contextual-btn') || $el.querySelector('.ws-add-override-btn'))
     ?.addEventListener('click', () => _showAddOverrideForm(code));
-  $dossier.querySelectorAll('.ws-remove-override-btn').forEach(btn => {
+  $el.querySelectorAll('.ws-remove-override-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = parseInt(btn.dataset.idx, 10);
       const dec = _decisions[code] || {};
       const ovs = [...(dec.context_overrides || src.context_overrides || [])];
       ovs.splice(idx, 1);
       _setDecision(code, { context_overrides: ovs });
-      _renderDossier(code);
+      _renderDossier(code, targetEl);
     });
   });
 
@@ -665,7 +947,7 @@ function _renderDossier(code) {
   // INTENT: On blur, collect all book-default inputs for this entry and persist to _decisions.
   // CHANGE? _setDecision merges at the top level; book_defaults must be the full object each save.
   // VERIFY: Edit a per-book input, tab away; reload the entry — the value should persist.
-  $dossier.querySelectorAll('.ws-bookdef-input').forEach(inp => {
+  $el.querySelectorAll('.ws-bookdef-input').forEach(inp => {
     inp.addEventListener('blur', () => {
       const c    = inp.dataset.bdCode;
       const book = inp.dataset.bdBook;
@@ -678,6 +960,72 @@ function _renderDossier(code) {
       _setDecision(c, { book_defaults: updated });
     });
   });
+
+  // SW-H: Cognate chip click — navigate dossier to that family member's entry
+  // INTENT: Each chip in the Word Family section carries data-code; clicking it should
+  //   update the active entry to that word's dossier without requiring the user to scroll
+  //   the queue or search for the entry. Uses _getEntry() to confirm the entry exists first.
+  // CHANGE? If the dossier should open in a second panel instead, update this handler.
+  // VERIFY: Open H3519 (כָּבוֹד) → Word Family section → click H3513 chip → dossier
+  //   refreshes showing H3513 (כָּבַד) as the active entry with its own word family.
+  $el.querySelectorAll('.sw-cognate-chip[data-code]').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      var targetCode = chip.dataset.code;
+      if (!targetCode || !_getEntry(targetCode)) return;
+      _uiState.activeCode = targetCode;
+      _saveUiState();
+      _renderDossier(targetCode, targetEl);
+    });
+    chip.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); chip.click(); }
+    });
+  });
+
+  $el.querySelectorAll('.sw-semantic-chip[data-code]').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      var targetCode = chip.dataset.code;
+      if (!targetCode) return;
+      if (_getEntry(targetCode)) {
+        _uiState.activeCode = targetCode;
+        _saveUiState();
+        _renderDossier(targetCode, targetEl);
+      } else {
+        _openWord(targetCode);
+      }
+    });
+    chip.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); chip.click(); }
+    });
+  });
+
+  // INTENT: Wire every verse-sample and echo .ref link inside the dossier to open as a
+  //   workshop passage study instead of the main-site Bible Gateway popup.
+  // CHANGE? If wireRefLinks signature changes in main wire.js, update this parallel impl.
+  // VERIFY: Open G3056 → click a verse sample ref (e.g. "John 1:1") → passage study opens.
+  $el.querySelectorAll('a.ref[data-ref], span.ref[data-ref]').forEach(function(refEl) {
+    refEl.style.cursor = 'pointer';
+    refEl.removeAttribute('href');
+    refEl.addEventListener('click', function(e) {
+      e.preventDefault();
+      var ref = refEl.dataset.ref;
+      if (ref) _studyPassage(ref);
+    });
+  });
+
+  // INTENT: "Full Word Study →" button (compact dossier only) switches to Word Study mode
+  //   and opens the full dossier for the same code so the user can explore without leaving verse mode.
+  // CHANGE? If _setStudyMode or _openWord signature changes, update call below.
+  // VERIFY: In verse mode Word tab, click "Full Word Study →" → switches to Word Study mode, full dossier loads.
+  var openWsBtn = $el.querySelector('.sw-open-word-study-btn[data-code]');
+  if (openWsBtn) {
+    openWsBtn.addEventListener('click', function() {
+      var c = openWsBtn.dataset.code;
+      if (c) {
+        _setStudyMode('word');
+        _openWord(c);
+      }
+    });
+  }
 }
 
 // INTENT: Render a compact book-distribution heat map so the user can see at a glance
@@ -1753,6 +2101,7 @@ function _renderDashboard() {
 
 /* ── Topbar stats ──────────────────────────────────────────── */
 function _updateTopbarStats() {
+  if (!_translationMode) { $topbarStats.innerHTML = ''; return; }
   const st = _stats();
   const gP = Math.round(st.gConf / st.gTotal * 100);
   const hP = Math.round(st.hConf / st.hTotal * 100);
@@ -1798,7 +2147,7 @@ function _esc(str) {
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-/* ── Depth toggle (SW-A) ───────────────────────────────────── */
+/* ── Depth toggle (SW-A/SW-G) ──────────────────────────────── */
 // INTENT: Depth controls how much of the dossier is shown. Reader (1) = essential
 //   summary only; Student (2) = all lexical sources; Scholar (3) = all including
 //   M&M papyri and LXX bridge. Applied by setting a CSS class on ws-page.
@@ -1806,10 +2155,64 @@ function _esc(str) {
 //   sw-depth-1/2/3 rules in workshop.css that hide [data-depth-min].
 // VERIFY: At depth 1, open the dossier for G26 — Lexical Sources section is hidden.
 //   At depth 2, it is visible. At depth 3, LXX Bridge is also visible.
+const SK_DEPTH_PROMPTED = 'bsw_ws_depth_set';
 function _initDepth() {
-  try { _depth = parseInt(localStorage.getItem(SK_DEPTH), 10) || 2; } catch { _depth = 2; }
+  const raw = localStorage.getItem(SK_DEPTH);
+  if (!raw) {
+    // First visit — show depth chooser; default to Student until they choose
+    _depth = 2;
+    _applyDepth(2);
+    _showDepthPrompt();
+    return;
+  }
+  try { _depth = parseInt(raw, 10) || 2; } catch { _depth = 2; }
   if (_depth < 1 || _depth > 3) _depth = 2;
   _applyDepth(_depth);
+}
+
+// INTENT: Render a one-time first-visit depth chooser above the passage entry area.
+//   Dismissed permanently by choosing a level (stores both SK_DEPTH and SK_DEPTH_PROMPTED).
+//   Allows users who don't know what to expect to understand the three depth levels before
+//   diving into the dossier.
+// CHANGE? If the three depth levels change (SW-G), update the label/description text below.
+//   If the passage-entry area ID changes from 'sw-depth-prompt-host', update the querySelector.
+// VERIFY: Clear localStorage, reload workshop — depth chooser banner appears above the passage
+//   input. Click "Student" → banner disappears, depth is set, page reload shows no banner.
+function _showDepthPrompt() {
+  const host = document.querySelector('.ws-page');
+  if (!host || document.getElementById('sw-depth-prompt')) return;
+
+  const banner = document.createElement('div');
+  banner.id = 'sw-depth-prompt';
+  banner.className = 'sw-depth-prompt';
+  banner.innerHTML = '<div class="sw-depth-prompt__title">Choose your study depth</div>'
+    + '<p class="sw-depth-prompt__sub">You can change this any time in the dossier.</p>'
+    + '<div class="sw-depth-prompt__choices">'
+    + '<button class="sw-depth-prompt__btn" data-pick="1">'
+    + '<span class="sw-depth-prompt__btn-label">Reader</span>'
+    + '<span class="sw-depth-prompt__btn-desc">Word summary, verse samples, and idiom alerts — no lexical jargon</span>'
+    + '</button>'
+    + '<button class="sw-depth-prompt__btn sw-depth-prompt__btn--rec" data-pick="2">'
+    + '<span class="sw-depth-prompt__btn-label">Student <span class="sw-depth-prompt__rec">recommended</span></span>'
+    + '<span class="sw-depth-prompt__btn-desc">All lexical sources, grammar significance, contested interpretations, cultural context</span>'
+    + '</button>'
+    + '<button class="sw-depth-prompt__btn" data-pick="3">'
+    + '<span class="sw-depth-prompt__btn-label">Scholar</span>'
+    + '<span class="sw-depth-prompt__btn-desc">Everything — M&M papyri, LXX bridge, semantic fields, Second Temple context</span>'
+    + '</button>'
+    + '</div>';
+
+  banner.addEventListener('click', function(e) {
+    const btn = e.target.closest('[data-pick]');
+    if (!btn) return;
+    const level = parseInt(btn.dataset.pick, 10);
+    _applyDepth(level);
+    try { localStorage.setItem(SK_DEPTH_PROMPTED, '1'); } catch(e) {}
+    banner.remove();
+  });
+
+  // Insert at the top of the page, before existing content
+  host.insertBefore(banner, host.firstChild);
 }
 function _applyDepth(level) {
   _depth = level;
@@ -1834,6 +2237,13 @@ function _applyDepth(level) {
 // VERIFY: On load, #ws-tiers-section and #ws-actions should not be visible. Click
 //   "Translation mode" → they appear. Click again → they hide.
 function _applyTransMode() {
+  // INTENT: Toggle translation-mode CSS class on the page root so the 3-column grid (with nav)
+  //   is shown in translation mode and the 2-column grid (no nav) in study mode.
+  // CHANGE? If the ws-page element ID/class changes, update the querySelector below.
+  // VERIFY: Click ⚙ → Translation mode → nav column appears with phase list; toggle off → hides.
+  const page = document.querySelector('.ws-page');
+  if (page) page.classList.toggle('ws-page--translation', _translationMode);
+
   const dossier = document.getElementById('ws-dossier');
   if (dossier) dossier.classList.toggle('sw-trans-on', _translationMode);
   const btn = document.getElementById('sw-trans-toggle-btn');
@@ -1841,6 +2251,8 @@ function _applyTransMode() {
     btn.classList.toggle('ws-btn--active', _translationMode);
     btn.setAttribute('aria-pressed', _translationMode ? 'true' : 'false');
   }
+  if ($nav) _renderNav();
+  if ($topbarStats) _updateTopbarStats();
 }
 
 /* ── Passage study mode (SW-A) ─────────────────────────────── */
@@ -1882,22 +2294,765 @@ async function _loadMorphSig(lang) {
   return _morphSigCache[lang];
 }
 
+// INTENT: Lazily fetch literary genre.json and structures.json for the SW-D literary panel.
+//   Both are loaded together since they are small and always used together.
+// CHANGE? If literary file paths change, update both URLs below.
+// VERIFY: Study John 1:1-18 → click "Literary Structure" tab → genre badge shows "gospel"
+//   with sub-genres; the John prologue chiasm renders with element labels.
+let _literaryCache = { genre: null, structures: null, devices: null };
+// INTENT: Fetch all three literary data files in parallel; guard so repeated calls are no-ops.
+//   devices-glossary.json (DATA-15) is now fetched here and rendered as a collapsible
+//   reference at the bottom of the Literary tab.
+// CHANGE? If any data/literary/*.json file is moved, update its URL below.
+// VERIFY: Open DevTools → Network, study any passage, click Literary tab → three requests
+//   fire: genre.json, structures.json, devices-glossary.json. Second click: zero requests.
+async function _loadLiterary() {
+  if (_literaryCache.genre && _literaryCache.structures && _literaryCache.devices) return _literaryCache;
+  const [genre, structures, devices] = await Promise.all([
+    _literaryCache.genre      ? Promise.resolve(_literaryCache.genre)
+      : fetch(_resolve('../../data/literary/genre.json')).then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; }),
+    _literaryCache.structures ? Promise.resolve(_literaryCache.structures)
+      : fetch(_resolve('../../data/literary/structures.json')).then(function(r) { return r.ok ? r.json() : []; }).catch(function() { return []; }),
+    _literaryCache.devices    ? Promise.resolve(_literaryCache.devices)
+      : fetch(_resolve('../../data/literary/devices-glossary.json')).then(function(r) { return r.ok ? r.json() : []; }).catch(function() { return []; }),
+  ]);
+  _literaryCache.genre      = genre;
+  _literaryCache.structures = structures;
+  _literaryCache.devices    = devices;
+  return _literaryCache;
+}
+
+// INTENT: Lazily fetch grammar-debates.json and build the _debatesByCode inverted index
+//   so that _renderDebateSection() can look up debates by Strong's code in O(1).
+// CHANGE? If grammar-debates.json is moved from data/grammar/, update the URL here.
+// VERIFY: After studying any passage, open DevTools → Network: one request to
+//   grammar-debates.json, then subsequent tile clicks reuse the cached array.
+async function _loadDebates() {
+  if (_debatesCache !== null) return _debatesCache;
+  try {
+    const url = _resolve('../../data/grammar/grammar-debates.json');
+    _debatesCache = await fetch(url).then(function(r) { return r.ok ? r.json() : []; });
+  } catch (e) {
+    _debatesCache = [];
+  }
+  // Build inverted index: code → [debate, ...]
+  _debatesByCode = {};
+  (_debatesCache || []).forEach(function(debate) {
+    (debate.strongs_keys || []).forEach(function(code) {
+      if (!_debatesByCode[code]) _debatesByCode[code] = [];
+      _debatesByCode[code].push(debate);
+    });
+  });
+  return _debatesCache;
+}
+
+// INTENT: Lazily fetch all three cultural background files in parallel and cache them.
+//   Provides frameworks primer, book-context notes, and symbol lookup for SW-F tab.
+// CHANGE? If cultural/ file paths change, update the three _resolve() URLs below.
+//   If new cultural files are added (e.g., geography.json), add a fourth fetch here
+//   and expose it in _literaryCulturalCache.
+// VERIFY: Study any passage, click "Cultural Context" tab → framework primers appear
+//   for the book. DevTools Network shows one set of requests to data/cultural/*.json
+//   and no repeat requests on subsequent tab clicks.
+let _culturalCache = { frameworks: null, bookContext: null, symbols: null };
+async function _loadCultural() {
+  if (_culturalCache.frameworks && _culturalCache.bookContext && _culturalCache.symbols) return _culturalCache;
+  try {
+    const [frameworks, bookContext, symbols] = await Promise.all([
+      _culturalCache.frameworks  ? Promise.resolve(_culturalCache.frameworks)
+        : fetch(_resolve('../../data/cultural/frameworks.json')).then(function(r) { return r.ok ? r.json() : []; }),
+      _culturalCache.bookContext ? Promise.resolve(_culturalCache.bookContext)
+        : fetch(_resolve('../../data/cultural/book-context.json')).then(function(r) { return r.ok ? r.json() : {}; }),
+      _culturalCache.symbols     ? Promise.resolve(_culturalCache.symbols)
+        : fetch(_resolve('../../data/cultural/symbols.json')).then(function(r) { return r.ok ? r.json() : {}; }),
+    ]);
+    _culturalCache.frameworks  = frameworks  || [];
+    _culturalCache.bookContext = bookContext || {};
+    _culturalCache.symbols     = symbols    || {};
+  } catch(e) {
+    _culturalCache.frameworks  = [];
+    _culturalCache.bookContext = {};
+    _culturalCache.symbols     = {};
+  }
+  return _culturalCache;
+}
+
+// INTENT: Lazily fetch idioms.json and idioms-index.json, storing the full entries in
+//   _idiomsData (keyed by id) and the inverted index in _idiomsIndex (code → [id,...]).
+//   Both files are fetched in parallel on first call; subsequent calls return immediately.
+// CHANGE? If the idioms JSON schema changes (id field renamed, strongs_trigger_* renamed),
+//   update _renderIdiomAlertSection() and _renderPassageIdioms(). If files are moved from
+//   data/, update the _resolve() paths below.
+// VERIFY: After studying any passage, DevTools → Network shows one request each to
+//   idioms.json and idioms-index.json. Subsequent passage studies make no new requests.
+async function _loadIdioms() {
+  if (_idiomsData !== null && _idiomsIndex !== null) return;
+  try {
+    const [rawArr, rawIdx] = await Promise.all([
+      fetch(_resolve('../../data/idioms.json')).then(function(r) { return r.ok ? r.json() : []; }),
+      fetch(_resolve('../../data/idioms-index.json')).then(function(r) { return r.ok ? r.json() : {}; }),
+    ]);
+    // Convert array → id-keyed map
+    _idiomsData = {};
+    (rawArr || []).forEach(function(entry) { if (entry.id) _idiomsData[entry.id] = entry; });
+    _idiomsIndex = rawIdx || {};
+  } catch(e) {
+    _idiomsData  = {};
+    _idiomsIndex = {};
+  }
+}
+
+// INTENT: Load cognate family data for the given language (H or G). Uses separate JSON
+//   files per language to avoid loading Hebrew data when studying Greek and vice versa.
+//   Pre-warms both families array and the O(1) code→root index.
+// CHANGE? If cognate-families or cognate-index file paths change, update both fetch URLs.
+//   If a third language is added (Aramaic), extend _cognatesFamilies and _cognatesIndex.
+// VERIFY: After studying a Hebrew passage, DevTools → Network shows one request to
+//   cognate-families-hebrew.json and one to cognate-index-hebrew.json. No re-fetch on
+//   subsequent passages in the same language.
+async function _loadCognates(lang) {
+  var prefix = lang === 'greek' ? 'G' : 'H';
+  if (_cognatesFamilies[prefix] !== null && _cognatesIndex[prefix] !== null) return;
+  var langSlug = lang === 'greek' ? 'greek' : 'hebrew';
+  try {
+    var [famArr, idxObj] = await Promise.all([
+      fetch(_resolve('../../data/grammar/cognate-families-' + langSlug + '.json')).then(function(r) { return r.ok ? r.json() : []; }),
+      fetch(_resolve('../../data/grammar/cognate-index-' + langSlug + '.json')).then(function(r) { return r.ok ? r.json() : {}; }),
+    ]);
+    _cognatesFamilies[prefix] = famArr  || [];
+    _cognatesIndex[prefix]    = idxObj  || {};
+  } catch(e) {
+    _cognatesFamilies[prefix] = [];
+    _cognatesIndex[prefix]    = {};
+  }
+}
+
+// INTENT: Render the "Word Family" section for the dossier (SW-H). Looks up the clicked
+//   code in _cognatesIndex to find its root, then finds the full family in _cognatesFamilies.
+//   Each family member renders as a clickable chip — click navigates to that word's dossier.
+//   Shows the root meaning callout to make the etymology visually prominent.
+// CHANGE? If chip click behavior should differ (e.g. open in a new panel), update the
+//   onclick handler on .sw-cognate-chip. If max chips should change, adjust the slice limit.
+// VERIFY: Click H3519 (כָּבוֹד) → "Word Family" shows root H3513 callout "כָּבַד — heavy/honor"
+//   + chips for all family members. Click a chip → dossier navigates to that entry.
+//   Click G25 (ἀγαπάω) → family shows G26 ἀγάπη and G27 ἀγαπητός chips.
+function _renderCognateSection(code) {
+  var prefix = code.startsWith('G') ? 'G' : 'H';
+  var index  = _cognatesIndex[prefix];
+  var fams   = _cognatesFamilies[prefix];
+  if (!index || !fams) return '';  // data not loaded (shouldn't happen — pre-warmed)
+
+  var rootCode = index[code];
+  if (!rootCode) return '';  // not in any family
+
+  // Find the family object
+  var family = null;
+  for (var i = 0; i < fams.length; i++) {
+    if (fams[i].root === rootCode) { family = fams[i]; break; }
+  }
+  if (!family || family.members.length < 2) return '';
+
+  // Build chip HTML — members sorted by is_root first, then others
+  var rootMember  = family.members.find(function(m) { return m.is_root; }) || family.members[0];
+  var otherMembers= family.members.filter(function(m) { return m.code !== code && !m.is_root; });
+  var selfMember  = family.members.find(function(m) { return m.code === code && !m.is_root; });
+
+  function chip(m) {
+    var isActive = m.code === code ? ' sw-cognate-chip--active' : '';
+    var isRoot   = m.is_root       ? ' sw-cognate-chip--root'   : '';
+    return '<span class="sw-cognate-chip' + isActive + isRoot + '" data-code="' + _esc(m.code) + '" title="' + _esc(m.gloss) + '" role="button" tabindex="0">'
+      + '<span class="sw-cognate-chip__lemma">' + _esc(m.lemma) + '</span>'
+      + '<span class="sw-cognate-chip__gloss">' + _esc(m.gloss.split(',')[0]) + '</span>'
+      + '<span class="sw-cognate-chip__code">' + _esc(m.code) + '</span>'
+      + '</span>';
+  }
+
+  // Show root callout + all chips (cap at 12 members to keep dossier scannable)
+  var allChips = family.members.slice(0, 12).map(chip).join('');
+
+  var rootCallout = '<div class="sw-cognate-root-callout">'
+    + '<span class="sw-cognate-root-callout__lemma">' + _esc(rootMember.lemma) + '</span>'
+    + (rootMember.translit ? '<span class="sw-cognate-root-callout__translit">' + _esc(rootMember.translit) + '</span>' : '')
+    + ' <span class="sw-cognate-root-callout__dash">—</span> '
+    + '<span class="sw-cognate-root-callout__meaning">' + _esc(family.root_meaning) + '</span>'
+    + '</div>';
+
+  return '<div class="ws-section sw-cognate-section" data-depth-min="2">'
+    + '<div class="ws-section-title">Word Family <span class="ws-section-note">— share root meaning with ' + _esc(family.root_meaning) + '</span></div>'
+    + rootCallout
+    + '<div class="sw-cognate-chips">' + allChips + '</div>'
+    + '</div>';
+}
+
+// INTENT: Lazy-load OT-in-NT quotations data. Builds two indexes on first load:
+//   _otInNtByRef keys each quotation by the NT reference string for passage-based lookup.
+//   Also builds _otInNtByOTRef for when the user is studying an OT passage and wants to
+//   see how that OT text was quoted in the NT.
+// CHANGE? If the nt_ref or ot_ref format in quotations.json changes, update the split logic here.
+//   If the path moves, update the fetch URL.
+// VERIFY: After studying Matt 1:23, DevTools → Network shows one request to quotations.json.
+//   Click G3933 (παρθένος) in passage → "OT Source" section appears with three-column compare.
+async function _loadOTinNT() {
+  if (_otInNtCache !== null) return;
+  try {
+    var arr = await fetch(_resolve('../../data/ot-in-nt/quotations.json')).then(function(r) { return r.ok ? r.json() : []; });
+    _otInNtCache = arr || [];
+    _otInNtByRef = {};
+    _otInNtCache.forEach(function(q) {
+      // Index by NT reference (e.g. "Matt 1:23")
+      var ntKey = (q.nt_ref || '').trim();
+      if (!_otInNtByRef[ntKey]) _otInNtByRef[ntKey] = [];
+      _otInNtByRef[ntKey].push(q);
+    });
+  } catch(e) {
+    _otInNtCache = [];
+    _otInNtByRef = {};
+  }
+}
+
+// INTENT: Find quotation entries relevant to the current passage (NT side) or the OT ref
+//   being studied. In passage mode, matches any quotation whose nt_ref overlaps with the
+//   current study passage range. Returns array of matching quotation objects.
+// CHANGE? If _passageRef format changes, update the ch/v comparison logic here.
+// VERIFY: Study Matt 1:23 → _findRelevantQuotations() returns the Isa 7:14 entry.
+//   Study John 1:1-18 → no OT-in-NT entries (John 1 has no explicit formal quotations).
+function _findRelevantQuotations() {
+  if (!_otInNtCache || !_passageRef) return [];
+  var results = [];
+  _otInNtCache.forEach(function(q) {
+    var parsed = parseRef(q.nt_ref);
+    if (!parsed) return;
+    if (parsed.bookId !== _passageRef.bookId) return;
+    // Check verse overlap
+    var qCh = parsed.ch;
+    var qV  = parsed.v;
+    if (qCh < _passageRef.ch || qCh > _passageRef.endCh) return;
+    if (qCh === _passageRef.ch && qV < _passageRef.v) return;
+    if (qCh === _passageRef.endCh && qV > _passageRef.endV) return;
+    results.push(q);
+  });
+  return results;
+}
+
+// INTENT: Render the OT-in-NT three-column comparison panel for the passage view.
+//   Shows all formal quotations in the current passage with MT | LXX | NT columns,
+//   key differences highlighted, and an interpretation note.
+//   Called from _renderPassageTiles() (or _studyPassage) after tiles are rendered.
+// CHANGE? If the passage tab system is refactored, move this rendering to the Intertextual tab.
+//   If quotations.json gains more fields (e.g. commentary_refs), add them here.
+// VERIFY: Study Matt 1:22-23 → "Intertextual" tab → OT-in-NT panel shows Isa 7:14 with
+//   three columns, עַלְמָה/παρθένος difference card highlighted gold, fulfillment type badge.
+function _renderOTinNTPanel(quotations) {
+  if (!quotations || !quotations.length) return '';
+
+  var typeLabels = {
+    'direct-predictive':     { label: 'Direct prediction', cls: 'sw-nt-type--direct' },
+    'typological':           { label: 'Typological',        cls: 'sw-nt-type--typology' },
+    'typological-predictive':{ label: 'Typological + predictive', cls: 'sw-nt-type--both' },
+    'applicational':         { label: 'Applicational',      cls: 'sw-nt-type--apply' },
+  };
+
+  var html = '<div class="sw-ot-in-nt-panel">';
+  html += '<div class="ws-section-title">OT Quotations in This Passage</div>';
+
+  quotations.forEach(function(q) {
+    var typeInfo = typeLabels[q.fulfillment_type] || { label: q.fulfillment_type, cls: '' };
+    html += '<div class="sw-ot-block">';
+
+    // Header
+    html += '<div class="sw-ot-block__header">'
+      + '<span class="sw-ot-block__refs"><a class="ref" data-ref="' + _esc(q.nt_ref) + '">' + _esc(q.nt_ref) + '</a>'
+      + ' ← <a class="ref" data-ref="' + _esc(q.ot_ref) + '">' + _esc(q.ot_ref) + '</a></span>'
+      + (q.quotation_marker ? '<span class="sw-ot-block__marker">"' + _esc(q.quotation_marker) + '"</span>' : '')
+      + '<span class="sw-ot-type-badge ' + typeInfo.cls + '">' + typeInfo.label + '</span>'
+      + '</div>';
+
+    // Three-column compare
+    html += '<div class="sw-triple-compare">'
+      + '<div class="sw-triple-col sw-triple-col--mt"><div class="sw-triple-col__header">Hebrew MT</div>'
+      + '<div class="sw-triple-col__text sw-triple-col__text--heb">' + _esc(q.mt_hebrew || '—') + '</div></div>'
+      + '<div class="sw-triple-col sw-triple-col--lxx"><div class="sw-triple-col__header">Greek LXX</div>'
+      + '<div class="sw-triple-col__text">' + _esc(q.lxx_greek || '—') + '</div></div>'
+      + '<div class="sw-triple-col sw-triple-col--nt"><div class="sw-triple-col__header">NT Text</div>'
+      + '<div class="sw-triple-col__text">' + _esc(q.nt_greek || '—') + '</div></div>'
+      + '</div>';
+
+    // Key differences
+    if (q.key_differences && q.key_differences.length) {
+      html += '<div class="sw-ot-diffs">';
+      q.key_differences.forEach(function(diff) {
+        html += '<div class="sw-diff-highlight"><span class="sw-diff-highlight__word">' + _esc(diff.word) + '</span>'
+          + '<span class="sw-diff-highlight__note">' + _esc(diff.note) + '</span></div>';
+      });
+      html += '</div>';
+    }
+
+    // Interpretation note
+    if (q.interpretation_note) {
+      html += '<div class="sw-ot-block__note">' + _esc(q.interpretation_note) + '</div>';
+    }
+
+    html += '</div>';
+  });
+
+  html += '</div>';
+  return html;
+}
+
+// INTENT: Check whether a debate's trigger_passages overlap with the current study passage.
+//   Returns the matching trigger refs as strings (for display), or all triggers if no passage active.
+// INTENT: Load author frequency data for the given language lazily. One file per language
+//   to avoid loading OT author data when studying NT passages.
+// CHANGE? If author-freq-*.json path or schema changes, update _renderAuthorFreqSection().
+// VERIFY: Click G26 (ἀγάπη) in passage view → Author Frequency section appears at Student depth.
+async function _loadAuthorFreq(lang) {
+  var key = lang === 'greek' ? 'greek' : 'hebrew';
+  if (_authorFreqCache[key] !== null) return;
+  try {
+    var data = await fetch(_resolve('../../data/grammar/author-freq-' + key + '.json')).then(function(r) { return r.ok ? r.json() : {}; });
+    _authorFreqCache[key] = data || {};
+  } catch(e) {
+    _authorFreqCache[key] = {};
+  }
+}
+
+// INTENT: Load semantic field (PMI co-occurrence) data for the given language.
+// CHANGE? If semantic-fields-*.json schema changes, update _renderSemanticSection().
+// VERIFY: Click H2617 (חֶסֶד) → Semantic Neighborhood shows אֱמֶת and אֱמוּנָה chips.
+async function _loadSemanticFields(lang) {
+  var key = lang === 'greek' ? 'greek' : 'hebrew';
+  if (_semanticCache[key] !== null) return;
+  try {
+    var data = await fetch(_resolve('../../data/grammar/semantic-fields-' + key + '.json')).then(function(r) { return r.ok ? r.json() : {}; });
+    _semanticCache[key] = data || {};
+  } catch(e) {
+    _semanticCache[key] = {};
+  }
+}
+
+// INTENT: Render the Author Frequency section (SW-J) in the dossier. Shows per-author
+//   normalized rates as a small heat map with peak-author badge. Only rendered at Student+.
+//   Authors with zero rate are hidden to keep the display compact.
+// CHANGE? If author group labels change in build-author-frequencies.py, update NT_AUTHORS
+//   and OT_AUTHORS maps here so labels match the JSON keys.
+// VERIFY: Click G1343 (δικαιοσύνη) → Paul has highlighted peak badge; relative rates visible.
+function _renderAuthorFreqSection(code, lang) {
+  var key    = lang === 'greek' ? 'greek' : 'hebrew';
+  var cache  = _authorFreqCache[key];
+  if (!cache) return '';
+  var entry  = cache[code];
+  if (!entry || !entry.rates) return '';
+
+  var NT_AUTHORS = ['Paul', 'John', 'Luke', 'Matthew', 'Mark', 'Peter', 'Hebrews', 'James', 'Jude'];
+  var OT_AUTHORS = ['Moses', 'Historical', 'Wisdom', 'Major', 'Minor'];
+  var authors    = lang === 'greek' ? NT_AUTHORS : OT_AUTHORS;
+
+  var maxRate = Math.max.apply(null, Object.values(entry.rates));
+  if (maxRate === 0) return '';
+
+  var cells = '';
+  authors.forEach(function(author) {
+    var rate = entry.rates[author] || 0;
+    if (!rate) return;
+    var intensity = Math.ceil((rate / maxRate) * 4);
+    var isPeak    = author === entry.peak;
+    cells += '<div class="sw-author-cell' + (isPeak ? ' sw-author-cell--peak' : '') + '" title="' + _esc(author) + ': ' + rate.toFixed(2) + '/1000 words">'
+      + '<div class="sw-author-cell__bar sw-author-heat--' + intensity + '"></div>'
+      + '<span class="sw-author-cell__label">' + _esc(author.slice(0, 4)) + '</span>'
+      + (isPeak ? '<span class="sw-author-cell__peak-badge">★</span>' : '')
+      + '</div>';
+  });
+
+  if (!cells) return '';
+  return '<div class="ws-section sw-author-freq-section" data-depth-min="2">'
+    + '<div class="ws-section-title">Author Frequency <span class="ws-section-note">— normalized per 1,000 words</span></div>'
+    + '<div class="sw-author-grid">' + cells + '</div>'
+    + '</div>';
+}
+
+// INTENT: Render the Semantic Neighborhood section (SW-I) in the dossier. Shows the top
+//   PMI co-occurring words as clickable chips — clicking navigates to that word's dossier.
+//   Rendered at Scholar depth only since PMI requires interpretation to use correctly.
+// CHANGE? If the co-count threshold should appear in the display, add it to the chip title.
+//   If chip click should also update the queue highlight, call _renderQueueActive() after.
+// VERIFY: Click H2617 (חֶסֶד hesed) → "Semantic Neighborhood" chips include אֱמֶת, אֱמוּנָה.
+//   Click one of those chips → dossier navigates to that entry.
+function _renderSemanticSection(code, lang) {
+  var key      = lang === 'greek' ? 'greek' : 'hebrew';
+  var cache    = _semanticCache[key];
+  if (!cache) return '';
+  var neighbors = cache[code];
+  if (!neighbors || !neighbors.length) return '';
+
+  var html = '<div class="ws-section sw-semantic-section" data-depth-min="3">'
+    + '<div class="ws-section-title">Semantic Neighborhood <span class="ws-section-note">— words that travel together in the corpus (PMI)</span></div>'
+    + '<div class="sw-semantic-chips">';
+
+  // Show top 8 neighbors
+  var topN = neighbors.slice(0, 8);
+  topN.forEach(function(n) {
+    var entry = _getEntry(n.code);
+    var lemma = entry ? (entry.lemma || '') : '';
+    var gloss = entry ? (entry.gloss || '').split(',')[0] : n.code;
+    html += '<span class="sw-semantic-chip" data-code="' + _esc(n.code) + '" role="button" tabindex="0"'
+      + ' title="' + _esc(n.code) + ' ' + _esc(lemma) + ' — PMI ' + n.pmi + '">'
+      + (lemma ? '<span class="sw-semantic-chip__lemma">' + _esc(lemma) + '</span>' : '')
+      + '<span class="sw-semantic-chip__gloss">' + _esc(gloss) + '</span>'
+      + '<span class="sw-semantic-chip__code">' + _esc(n.code) + '</span>'
+      + '</span>';
+  });
+
+  html += '</div>'
+    + '<p class="sw-semantic-note">PMI = pointwise mutual information. Higher = these words co-occur more than random chance across the biblical corpus.</p>'
+    + '</div>';
+  return html;
+}
+
+// INTENT: Load Second Temple context data lazily on first passage study or dossier open.
+// CHANGE? If second-temple/context.json schema changes (strongs_keys or trigger_passages),
+//   update _renderSTContext() accordingly.
+// VERIFY: After studying any passage, DevTools → Network shows one request to context.json.
+async function _loadSTContext() {
+  if (_stContextCache !== null) return;
+  try {
+    var arr = await fetch(_resolve('../../data/second-temple/context.json')).then(function(r) { return r.ok ? r.json() : []; });
+    _stContextCache = arr || [];
+  } catch(e) {
+    _stContextCache = [];
+  }
+}
+
+// INTENT: Lazily loads the synthesis JSON for a given book (SW-M). Each key in the file
+//   is a pericope ref string (e.g. "Rom 1:16-17"); we parse it with parseRef and store
+//   the structured entry so _renderSynthesisTab can do overlap matching against the
+//   current passage. One file per book; only fetched when the Synthesis tab is clicked.
+// CHANGE? If synthesis files move from data/synthesis/{bookId}.json, update path below.
+//   If the key format changes, update the parseRef call and overlap logic in _renderSynthesisTab.
+// VERIFY: Study Romans 1:16 → Synthesis tab → pericope card renders without 404 error.
+//   Study Acts (no synthesis file) → tab shows "no synthesis notes" gracefully.
+async function _loadSynthesis(bookId) {
+  if (_synthesisCache[bookId] !== undefined) return;
+  _synthesisCache[bookId] = null;  // sentinel while fetching
+  try {
+    var data = await fetch(_resolve('../../data/synthesis/' + bookId + '.json'))
+      .then(function(r) { return r.ok ? r.json() : null; });
+    if (!data) { _synthesisCache[bookId] = []; return; }
+    var entries = [];
+    Object.keys(data).forEach(function(key) {
+      var ref = parseRef(key);
+      if (ref) entries.push({ key: key, ref: ref, data: data[key] });
+    });
+    _synthesisCache[bookId] = entries;
+  } catch(e) {
+    _synthesisCache[bookId] = [];
+  }
+}
+
+// INTENT: Render the "Second Temple Context" dossier section for a clicked Strong's code.
+//   Finds all context entries where strongs_keys[] includes the code. If the current passage
+//   is active, also includes entries whose trigger_passages overlap with the passage.
+//   Rendered at Scholar depth (data-depth-min="3") since this is specialist background.
+// CHANGE? If this should show at Student depth for key entries, change data-depth-min to "2".
+//   If the section should appear only in passage mode, add a _passageMode guard.
+// VERIFY: Click G3056 (λόγος) → "Second Temple Context" card appears with Philo entry.
+//   Click G5207 (υἱός) → Son of Man (1 Enoch) and son-of-x idiom context entries appear.
+function _renderSTContext(code) {
+  if (!_stContextCache || !_stContextCache.length) return '';
+
+  // Find entries matching this Strong's code
+  var matches = _stContextCache.filter(function(e) {
+    return (e.strongs_keys || []).indexOf(code) >= 0;
+  });
+
+  // Also include trigger_passages matches if in passage mode
+  if (_passageRef) {
+    _stContextCache.forEach(function(e) {
+      if (matches.indexOf(e) >= 0) return;  // already in
+      var tps = e.trigger_passages || [];
+      for (var i = 0; i < tps.length; i++) {
+        var parsed = parseRef(tps[i]);
+        if (!parsed) continue;
+        if (parsed.bookId !== _passageRef.bookId) continue;
+        if (parsed.ch < _passageRef.ch || parsed.ch > _passageRef.endCh) continue;
+        matches.push(e);
+        break;
+      }
+    });
+  }
+
+  if (!matches.length) return '';
+
+  var html = '<div class="ws-section sw-st-section" data-depth-min="3">'
+    + '<div class="ws-section-title">Second Temple Context <span class="ws-section-note">— Jewish background for this word/passage</span></div>';
+
+  matches.forEach(function(e) {
+    html += '<div class="sw-st-card">'
+      + '<div class="sw-st-card__header">'
+      + '<span class="sw-st-source-chip">' + _esc(e.source) + '</span>'
+      + '<span class="sw-st-work">' + _esc(e.source_work || '') + '</span>'
+      + (e.source_date ? '<span class="sw-st-date">' + _esc(e.source_date) + '</span>' : '')
+      + '</div>'
+      + '<p class="sw-st-context">' + _esc(e.context) + '</p>'
+      + '<p class="sw-st-significance">' + _esc(e.significance) + '</p>'
+      + (e.representative_quote
+          ? '<blockquote class="sw-st-quote">' + _esc(e.representative_quote) + '</blockquote>'
+          : '')
+      + '</div>';
+  });
+
+  html += '</div>';
+  return html;
+}
+
+// INTENT: Check whether a debate's trigger_passages overlap with the current study passage.
+//   Returns the matching trigger refs as strings (for display), or all triggers if no passage active.
+// CHANGE? If _passageRef format changes (bookId/ch/v/endCh/endV), update comparison logic here.
+// VERIFY: Study Rom 3:22 → πίστις Χριστοῦ debate shows "Active in this passage: Rom 3:22".
+//   Study John 1 → pistis-christou debate does NOT appear (no trigger matches).
+function _debateTriggerMatches(debate) {
+  if (!_passageRef) return debate.trigger_passages || [];  // browse mode: show all triggers
+  var matches = [];
+  (debate.trigger_passages || []).forEach(function(trigStr) {
+    var parsed = parseRef(trigStr);
+    if (!parsed) return;
+    if (parsed.bookId !== _passageRef.bookId) return;
+    if (parsed.ch < _passageRef.ch || parsed.ch > _passageRef.endCh) return;
+    if (parsed.ch === _passageRef.ch && parsed.v < _passageRef.v) return;
+    if (parsed.ch === _passageRef.endCh && parsed.v > _passageRef.endV) return;
+    matches.push(trigStr);
+  });
+  return matches;
+}
+
+// INTENT: Build the Contested Interpretation HTML for the dossier. If the clicked
+//   word's code appears in any debate's strongs_keys AND the current passage contains
+//   a trigger reference (or no passage is active), render a two-position debate card.
+//   Shows position labels, renderings, named proponents, and why-it-matters callout.
+// CHANGE? If the grammar-debates.json schema changes (position_c added, field renames),
+//   update the HTML generation loop here. If the section should only show in Scholar depth,
+//   add data-depth-min="3" to the wrapper.
+// VERIFY: Study Gal 2:16 → click G4102 → "Contested Interpretation" card with πίστις
+//   Χριστοῦ debate, both positions, proponents, and why-it-matters callout.
+//   Study John 1:1 → click G2316 → θεὸς ἦν ὁ λόγος debate card appears.
+function _renderDebateSection(code) {
+  const debates = _debatesByCode[code];
+  if (!debates || !debates.length) return '';
+
+  const STATUS_LABELS = {
+    'major-debate': { label: 'Major ongoing debate', cls: 'sw-debate-status--major' },
+    'moderate':     { label: 'Significant debate',   cls: 'sw-debate-status--moderate' },
+    'settled':      { label: 'Largely settled',      cls: 'sw-debate-status--settled' },
+  };
+
+  let html = '';
+  debates.forEach(function(debate) {
+    const triggers = _debateTriggerMatches(debate);
+    // In passage mode, only show if there's a trigger match in the current passage
+    if (_passageRef && triggers.length === 0) return;
+
+    const status = STATUS_LABELS[debate.scholarly_status] || { label: debate.scholarly_status, cls: '' };
+    const positions = [debate.position_a, debate.position_b, debate.position_c].filter(Boolean);
+
+    html += '<div class="sw-debate-card" data-debate-id="' + _esc(debate.id) + '">'
+      + '<div class="sw-debate-card__header">'
+      + '<span class="sw-debate-card__icon">⚖</span>'
+      + '<div class="sw-debate-card__title">' + _esc(debate.label) + '</div>'
+      + '<span class="sw-debate-status ' + status.cls + '">' + _esc(status.label) + '</span>'
+      + '</div>';
+
+    if (debate.construction) {
+      html += '<div class="sw-debate-card__construction">Construction: <em>' + _esc(debate.construction) + '</em></div>';
+    }
+
+    if (triggers.length > 0) {
+      html += '<div class="sw-debate-card__triggers">Active in this passage: '
+        + triggers.map(function(t) { return '<span class="sw-debate-trigger-ref">' + _esc(t) + '</span>'; }).join(', ')
+        + '</div>';
+    }
+
+    html += '<div class="sw-debate-positions">';
+    positions.forEach(function(pos, i) {
+      const letters = ['A', 'B', 'C'];
+      html += '<div class="sw-debate-position">'
+        + '<div class="sw-debate-position__header">'
+        + '<span class="sw-debate-position__letter">' + letters[i] + '</span>'
+        + '<span class="sw-debate-position__label">' + _esc(pos.label) + '</span>'
+        + '</div>'
+        + '<div class="sw-debate-position__rendering">&ldquo;' + _esc(pos.rendering) + '&rdquo;</div>'
+        + '<p class="sw-debate-position__arg">' + _esc(pos.argument) + '</p>';
+      if (pos.proponents && pos.proponents.length) {
+        html += '<div class="sw-debate-position__proponents">'
+          + pos.proponents.map(function(p) {
+              return '<span class="sw-proponent-chip">' + _esc(p) + '</span>';
+            }).join('')
+          + '</div>';
+      }
+      html += '</div>';
+    });
+    html += '</div>'; // .sw-debate-positions
+
+    if (debate.why_it_matters) {
+      html += '<div class="sw-debate-card__why"><strong>Why it matters:</strong> ' + _esc(debate.why_it_matters) + '</div>';
+    }
+
+    html += '</div>'; // .sw-debate-card
+  });
+
+  if (!html) return '';
+  return '<div class="ws-section sw-debates-section" data-depth-min="2"><div class="ws-section-title">Contested Interpretation</div>' + html + '</div>';
+}
+
+// INTENT: Build the "Idiom Alert" dossier section for a clicked Strong's code.
+//   If the code appears in _idiomsIndex, renders a card for each matching idiom entry
+//   explaining what the idiom means and why English readers miss it. Returns '' if
+//   no idioms match or if idiom data is not yet loaded.
+// CHANGE? If idioms.json schema changes (cultural_meaning, plain_english, key_passages
+//   fields), update the HTML template below. If this section should be depth-gated,
+//   add data-depth-min="2" to the wrapper div.
+// VERIFY: Study John 1 → click G5207 (υἱός) → "Idiom Alert" section appears with
+//   "Son of X / Children of X" and "Son of Man" cards, each with plain-English explanation.
+function _renderIdiomAlertSection(code) {
+  if (!_idiomsIndex || !_idiomsData) return '';
+  const ids = _idiomsIndex[code];
+  if (!ids || !ids.length) return '';
+
+  let html = '';
+  ids.forEach(function(id) {
+    const idiom = _idiomsData[id];
+    if (!idiom) return;
+    html += '<div class="sw-idiom-alert-card">';
+    html += '<div class="sw-idiom-alert-card__phrase">' + _esc(idiom.phrase) + '</div>';
+    if (idiom.plain_english) {
+      html += '<div class="sw-idiom-alert-card__plain">' + _esc(idiom.plain_english) + '</div>';
+    }
+    if (idiom.cultural_meaning) {
+      html += '<details class="sw-idiom-details"><summary>Full cultural explanation</summary>'
+        + '<p class="sw-idiom-details__body">' + _esc(idiom.cultural_meaning) + '</p>';
+      if (idiom.significance) {
+        html += '<p class="sw-idiom-details__sig"><strong>Significance:</strong> ' + _esc(idiom.significance) + '</p>';
+      }
+      html += '</details>';
+    }
+    if (idiom.key_passages && idiom.key_passages.length) {
+      html += '<div class="sw-idiom-alert-card__refs">Key passages: '
+        + idiom.key_passages.map(function(r) {
+            return '<a class="ref" data-ref="' + _esc(r) + '">' + _esc(r) + '</a>';
+          }).join(' · ')
+        + '</div>';
+    }
+    html += '</div>'; // .sw-idiom-alert-card
+  });
+
+  if (!html) return '';
+  return '<div class="ws-section sw-idiom-alert-section" data-depth-min="1">'
+    + '<div class="ws-section-title">Idiom Alert <span class="ws-section-note">— culturally loaded expression</span></div>'
+    + html
+    + '</div>';
+}
+
+// INTENT: Collect all idioms triggered by Strong's codes in the current passage tiles
+//   and return HTML for a collapsible panel shown above the tiles. Each matching idiom
+//   gets a compact chip in the panel; clicking one opens its details inline.
+//   Returns '' if no idioms match any token in the passage or if idioms not loaded.
+// CHANGE? If _renderPassageTiles HTML structure changes (tile data-strongs attribute),
+//   the caller in _renderPassageTiles must still pass the collected code set.
+// VERIFY: Study John 1:1-18 → collapsible "Idioms in This Passage" panel above tiles
+//   shows chips for at least "Son of Man" and "Son of X" (G5207 appears in verse 51 if
+//   in range, or G3056 Logos). Panel can be opened/closed via the details element.
+function _renderPassageIdioms(codesInPassage) {
+  if (!_idiomsIndex || !_idiomsData) return '';
+  const seen = {};   // idiom id → true (dedup across multiple code triggers)
+  codesInPassage.forEach(function(code) {
+    const ids = _idiomsIndex[code];
+    if (ids) ids.forEach(function(id) { seen[id] = true; });
+  });
+  const ids = Object.keys(seen);
+  if (!ids.length) return '';
+
+  let html = '<details class="sw-idiom-panel"><summary class="sw-idiom-panel__summary">'
+    + '<span class="sw-idiom-panel__badge">' + ids.length + '</span>'
+    + ' Idiom' + (ids.length > 1 ? 's' : '') + ' in This Passage'
+    + '</summary><div class="sw-idiom-panel__body">';
+
+  ids.forEach(function(id) {
+    const idiom = _idiomsData[id];
+    if (!idiom) return;
+    html += '<div class="sw-idiom-panel__item">'
+      + '<div class="sw-idiom-panel__item-phrase">' + _esc(idiom.phrase) + '</div>'
+      + '<div class="sw-idiom-panel__item-plain">' + _esc(idiom.plain_english || idiom.cultural_meaning || '') + '</div>'
+      + '</div>';
+  });
+
+  html += '</div></details>';
+  return html;
+}
+
+// INTENT: Show passage tiles within verse-mode container; hide browse and empty-state panels.
+// CHANGE? If new panels are added to sw-verse-mode, add them to the hidden list here.
+// VERIFY: Study John 1:1 → tiles appear; browse panel and empty state are hidden.
 function _switchToPassageMode() {
   _passageMode = true;
-  const browse  = document.getElementById('ws-browse-panel');
-  const passage = document.getElementById('sw-passage-view');
-  if (browse)  browse.hidden  = true;
-  if (passage) passage.hidden = false;
+  document.getElementById('ws-browse-panel').hidden  = true;
+  document.getElementById('sw-verse-empty').hidden   = true;
+  document.getElementById('sw-passage-view').hidden  = false;
 }
+
+// INTENT: Return to the empty / entry state when a passage is closed.
+//   Browse vocabulary has been replaced by the Word Study dictionary tab,
+//   so closing a passage now returns to the blank entry prompt.
+// CHANGE? If a new landing state is added to sw-verse-mode, show it here instead.
+// VERIFY: Study John 1:1 → click ✕ Close → passage hides, entry prompt shows.
 function _switchToBrowseMode() {
   _passageMode = false;
-  const browse  = document.getElementById('ws-browse-panel');
-  const passage = document.getElementById('sw-passage-view');
-  if (browse)  browse.hidden  = false;
-  if (passage) passage.hidden = true;
+  document.getElementById('sw-passage-view').hidden     = true;
+  document.getElementById('sw-verse-empty').hidden      = false;
+  const actionsBar = document.getElementById('sw-passage-actions');
+  if (actionsBar) actionsBar.hidden = true;
+}
+
+// INTENT: Navigate to the verse immediately before or after the currently loaded passage.
+//   Uses _interData chapter keys to find chapter boundaries (no separate fetch needed).
+//   Stops at the first/last verse of the book rather than overflowing into the next book.
+// CHANGE? If _passageRef or _interData structure changes, update chapter/verse lookup here.
+// VERIFY: Study John 1:51 → click Next → John 2:1 loads. Study John 1:1 → click Prev → button does nothing.
+function _navVerse(delta) {
+  if (!_passageRef || !_interData) return;
+  var ch = _passageRef.ch;
+  var v  = _passageRef.v;
+  var bookId = _passageRef.bookId;
+
+  var newV = v + delta;
+  var newCh = ch;
+
+  if (delta === 1) {
+    var maxV = Math.max.apply(null, Object.keys(_interData[String(ch)] || {}).map(Number));
+    if (newV > maxV) {
+      var maxCh = Math.max.apply(null, Object.keys(_interData).map(Number));
+      if (ch >= maxCh) return; // already at last verse of book
+      newCh = ch + 1;
+      newV = 1;
+    }
+  } else {
+    if (newV < 1) {
+      if (ch <= 1) return; // already at first verse of book
+      newCh = ch - 1;
+      var prevChData = _interData[String(newCh)] || {};
+      newV = Math.max.apply(null, Object.keys(prevChData).map(Number));
+    }
+  }
+
+  var bookName = _passageRef.bookName || bookId;
+  _studyPassage(bookName + ' ' + newCh + ':' + newV);
 }
 
 async function _studyPassage(refStr) {
+  // INTENT: loadBooks() populates bookLookup which parseRef() requires. It resolves
+  //   from cache on repeat calls so there is no visible delay after the first study.
+  //   Always switches to Verse Study mode first so the tiles column is visible.
+  // CHANGE? If loadBooks() signature changes in core.js, update this await.
+  // VERIFY: Type "John 1:1" on first page load and click Study Passage — tiles render.
+  _setStudyMode('verse');
+  await loadBooks();
   const parsed = parseRef(refStr);
   if (!parsed) {
     const header = document.getElementById('sw-passage-header');
@@ -1906,9 +3061,20 @@ async function _studyPassage(refStr) {
     return;
   }
   _passageRef = parsed;
+  _pushRecentPassage(refStr.trim());
+  _renderNav();
 
+  // INTENT: Push the studied passage into the URL so refresh/share/back preserves it.
+  //   ?ref= is already read on load (line ~5110); this closes the read-write symmetry.
+  // CHANGE? If URL scheme changes from ?ref= to ?passage=, update both here and the load-time param read below.
+  // VERIFY: Study John 1:1 → URL bar updates to ?ref=John+1%3A1; refresh → passage reloads.
+  history.replaceState(null, '', '?ref=' + encodeURIComponent(refStr.trim()));
+
+  _originalWordOrder = false;
+  const isHebrew = !NT_BOOKS.has(parsed.bookId);
   const header = document.getElementById('sw-passage-header');
   if (header) header.innerHTML = '<span class="sw-passage-ref-label">' + _esc(parsed.display) + '</span>'
+    + (isHebrew ? '<button type="button" class="sw-word-order-btn ws-btn ws-btn--sm" id="sw-word-order-btn" title="Toggle original Hebrew word order (right-to-left)">&#x2194; Order</button>' : '')
     + '<button type="button" class="sw-close-passage ws-btn ws-btn--sm" id="sw-close-passage-btn">✕ Close</button>';
 
   const tilesEl = document.getElementById('sw-ptiles');
@@ -1916,23 +3082,567 @@ async function _studyPassage(refStr) {
 
   _switchToPassageMode();
 
+  // INTENT: Toggle Hebrew tile direction RTL/LTR so the user can view tokens in
+  //   original right-to-left reading flow vs. English left-to-right presentation.
+  // CHANGE? If tile container id changes from sw-ptiles, update selector here.
+  // VERIFY: Study Genesis 1:1 → click Order button → tiles wrap right-to-left; click again → LTR restored.
+  var wordOrderBtn = document.getElementById('sw-word-order-btn');
+  if (wordOrderBtn) {
+    wordOrderBtn.addEventListener('click', function () {
+      _originalWordOrder = !_originalWordOrder;
+      var tilesEl2 = document.getElementById('sw-ptiles');
+      if (tilesEl2) tilesEl2.classList.toggle('sw-ptiles--rtl', _originalWordOrder);
+      wordOrderBtn.classList.toggle('ws-btn--active', _originalWordOrder);
+      wordOrderBtn.title = _originalWordOrder
+        ? 'Showing original Hebrew order (RTL) — click for English order (LTR)'
+        : 'Toggle original Hebrew word order (right-to-left)';
+    });
+  }
+
   // Wire close button
   const closeBtn = document.getElementById('sw-close-passage-btn');
   if (closeBtn) closeBtn.addEventListener('click', function () { _switchToBrowseMode(); });
 
+  // INTENT: Show prev/next verse navigation bar. Verse bounds are checked against
+  //   _interData after it loads; the bar is wired now and _updateVerseNavBar() refreshes
+  //   disabled state after data resolves.
+  // CHANGE? If _interData structure changes (chapter keys as strings), update _navVerse().
+  // VERIFY: Study John 1:1 → nav bar visible; click Next → John 1:2 loads; at John 1:51 → John 2:1 loads.
+  var verseNavBar = document.getElementById('sw-verse-nav-bar');
+  var verseNavLabel = document.getElementById('sw-verse-nav-label');
+  if (verseNavBar) {
+    verseNavBar.hidden = false;
+    if (verseNavLabel) verseNavLabel.textContent = parsed.display || '';
+    var prevBtn = document.getElementById('sw-prev-verse-btn');
+    var nextBtn = document.getElementById('sw-next-verse-btn');
+    if (prevBtn) prevBtn.onclick = function() { _navVerse(-1); };
+    if (nextBtn) nextBtn.onclick = function() { _navVerse(1); };
+  }
+
+  // INTENT: Load passage-specific notes from localStorage and wire auto-save on input.
+  //   Each passage gets its own localStorage key so notes are not overwritten when switching passages.
+  // CHANGE? If SK_DECISIONS key scheme changes, update the bsw_ws_notes_ prefix here.
+  // VERIFY: Study John 1:1, type a note → reload page, study John 1:1 again → note persists.
+  //   Study Romans 1:1 → notes field is empty (different passage key).
+  const notesTa  = document.getElementById('sw-passage-notes-ta');
+  const noteKey  = 'bsw_ws_notes_' + refStr.trim().toLowerCase().replace(/\s+/g, '_');
+  if (notesTa) {
+    try { notesTa.value = localStorage.getItem(noteKey) || ''; } catch(e) {}
+    notesTa.oninput = function() {
+      try { localStorage.setItem(noteKey, notesTa.value); } catch(e) {}
+    };
+  }
+
+  // SW-N: Show export sheet button and wire it to _exportStudySheet(parsed, noteKey)
+  // INTENT: Export button is only shown in passage mode. Click triggers window.print() after
+  //   writing a print-only overlay with passage ref + interlinear HTML + active dossier + notes.
+  //   Uses @media print CSS to hide the normal UI and show only sw-print-sheet.
+  // CHANGE? If the dossier selector (#ws-dossier) changes, update the querySelector below.
+  // VERIFY: Study Romans 8:1, click "Export Study Sheet" → print dialog opens; preview shows
+  //   passage ref, word tiles, current dossier entry, user notes.
+  const actionsBar = document.getElementById('sw-passage-actions');
+  if (actionsBar) actionsBar.hidden = false;
+  const exportBtn = document.getElementById('sw-export-sheet-btn');
+  if (exportBtn) {
+    exportBtn.onclick = function() { _exportStudySheet(parsed, noteKey); };
+  }
+
   try {
-    const lang       = parsed.bookId === 'psalms' || !parsed.bookId.match(/matthew|mark|luke|john|acts|romans|1corinthians|2corinthians|galatians|ephesians|philippians|colossians|1thessalonians|2thessalonians|1timothy|2timothy|titus|philemon|hebrews|james|1peter|2peter|1john|2john|3john|jude|revelation/)
-      ? 'hebrew' : 'greek';
-    const [interData, strongsDict, particles] = await Promise.all([
+    const lang = NT_BOOKS.has(parsed.bookId) ? 'greek' : 'hebrew';
+    const [interData, strongsDict, particles, bibleBook] = await Promise.all([
       loadInterlinear(parsed.bookId),
       loadStrongs(lang),
       _loadParticles(lang),
-      _loadMorphSig(lang),   // pre-warm morphSigCache so dossier grammar section is sync
+      loadBook(getVersion(), parsed.bookId).catch(function() { return null; }),
+      _loadMorphSig(lang),
+      _loadDebates(),
+      _loadLiterary(),
+      _loadIdioms(),
+      _loadCultural(),
+      _loadCognates(lang),
+      _loadOTinNT(),
+      _loadSTContext(),
+      _loadAuthorFreq(lang),
+      _loadSemanticFields(lang),
     ]);
-    _renderPassageTiles(parsed, interData, strongsDict, particles);
+    _interData = interData;  // cache for Word Study concordance
+    _renderPassageTiles(parsed, interData, strongsDict, particles, bibleBook);
   } catch (err) {
     if (tilesEl) tilesEl.innerHTML = '<span class="sw-ptile-loading">Could not load interlinear data.</span>';
   }
+}
+
+// INTENT: Render the Literary Structure tab content for the current passage.
+//   Shows: (1) book genre badge + literary note, (2) structural diagram if a matching
+//   structure entry exists for this pericope, (3) literary devices glossary intro.
+//   All data comes from the preloaded _literaryCache — no additional fetch needed.
+// CHANGE? If literary JSON schemas change (genre fields, structure element fields),
+//   update this function. If the tab is renamed in the HTML, update the data-tab value.
+// VERIFY: Study John 1:1–18 → Literary Structure tab → "gospel" badge, sub-genres listed,
+//   chiasm diagram renders with color-coded element rows and the center highlighted.
+function _renderLiteraryTab(parsed) {
+  const genre      = (_literaryCache.genre || {})[parsed.bookId] || null;
+  const structures = (_literaryCache.structures || []);
+
+  // Find structural entries that overlap with the current passage
+  const matchingStructures = structures.filter(function(s) {
+    if (s.bookId !== parsed.bookId) return false;
+    // Check if the structure range overlaps the current passage range
+    const sStart = s.ch_start * 1000 + (s.v_start || 1);
+    const sEnd   = s.ch_end   * 1000 + (s.v_end   || 999);
+    const pStart = parsed.ch  * 1000 + parsed.v;
+    const pEnd   = parsed.endCh * 1000 + parsed.endV;
+    return sStart <= pEnd && sEnd >= pStart;
+  });
+
+  let html = '<div class="sw-literary-tab">';
+
+  // ── Genre badge
+  if (genre) {
+    html += '<div class="sw-genre-block">'
+      + '<span class="sw-genre-badge sw-genre-badge--' + _esc(genre.genre) + '">' + _esc(genre.genre) + '</span>';
+    if (genre.sub && genre.sub.length) {
+      html += genre.sub.map(function(s) {
+        return '<span class="sw-genre-sub-badge">' + _esc(s) + '</span>';
+      }).join('');
+    }
+    html += '</div>';
+    if (genre.literary_note) {
+      html += '<p class="sw-literary-note">' + _esc(genre.literary_note) + '</p>';
+    }
+    if (genre.structure_note) {
+      html += '<p class="sw-structure-note"><strong>Structure:</strong> ' + _esc(genre.structure_note) + '</p>';
+    }
+  }
+
+  // ── Structural diagrams for matching pericopes
+  matchingStructures.forEach(function(s) {
+    const TYPE_ICONS = {
+      'chiasm':       '⊕',
+      'hymn':         '♫',
+      'narrative':    '◆',
+      'discourse':    '→',
+      'anaphora':     '≡',
+      'parallel':     '∥',
+      'lament':       '◐',
+      'antithetical': '⟺',
+      'intercalation':'⧖',
+      'acrostic':     'א',
+    };
+    const icon = TYPE_ICONS[s.structure_type] || '◇';
+
+    html += '<div class="sw-structure-block">'
+      + '<div class="sw-structure-block__header">'
+      + '<span class="sw-structure-icon">' + icon + '</span>'
+      + '<span class="sw-structure-label">' + _esc(s.label) + '</span>'
+      + '<span class="sw-structure-type-badge">' + _esc(s.structure_type) + '</span>'
+      + '</div>';
+
+    if (s.note) {
+      html += '<p class="sw-structure-note-detail">' + _esc(s.note) + '</p>';
+    }
+
+    if (s.elements && s.elements.length) {
+      html += '<div class="sw-structure-elements">';
+      s.elements.forEach(function(el) {
+        const isCenter = el.id === 'X' || el.id.includes('X') || el.label.includes('★');
+        html += '<div class="sw-structure-el' + (isCenter ? ' sw-structure-el--center' : '') + '">'
+          + '<span class="sw-structure-el__id">' + _esc(el.id) + '</span>'
+          + '<span class="sw-structure-el__ref">' + _esc(el.ref) + '</span>'
+          + '<span class="sw-structure-el__label">' + _esc(el.label) + '</span>'
+          + '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div>'; // .sw-structure-block
+  });
+
+  if (!matchingStructures.length && !genre) {
+    html += '<p class="sw-tab-stub">No literary structure data for this passage yet. More passages will be added progressively.</p>';
+  }
+
+  // ── Literary devices glossary (collapsible reference, always visible)
+  const devices = _literaryCache.devices || [];
+  if (devices.length) {
+    html += '<details class="sw-devices-glossary">'
+      + '<summary class="sw-devices-glossary__toggle">Literary Devices Reference (' + devices.length + ' terms)</summary>'
+      + '<div class="sw-devices-glossary__body">';
+    devices.forEach(function(d) {
+      html += '<div class="sw-device-entry">'
+        + '<span class="sw-device-entry__name">' + _esc(d.label || '') + '</span>';
+      if (d.symbol) {
+        html += '<code class="sw-device-entry__sym">' + _esc(d.symbol) + '</code>';
+      }
+      html += '<span class="sw-device-entry__def">' + _esc(d.plain || '') + '</span>';
+      if (d.significance) {
+        html += '<span class="sw-device-entry__sig">' + _esc(d.significance) + '</span>';
+      }
+      if (d.examples && d.examples.length) {
+        html += '<span class="sw-device-entry__ex">'
+          + d.examples.map(function(ex) {
+            return '<strong>' + _esc(ex.ref) + '</strong> — ' + _esc(ex.note);
+          }).join('; ')
+          + '</span>';
+      }
+      html += '</div>';
+    });
+    html += '</div></details>';
+  }
+
+  html += '</div>'; // .sw-literary-tab
+  return html;
+}
+
+// INTENT: Render the Cultural Context tab for the current passage (SW-F).
+//   Shows: (1) applicable cultural frameworks for this book (from _culturalCache.frameworks),
+//   (2) book-specific context notes (from _culturalCache.bookContext[bookId]),
+//   (3) a symbols reference accordion. All data from _culturalCache — no additional fetch.
+// CHANGE? If cultural data schema changes (key_cultural_notes, cultural_frameworks fields),
+//   update the rendering logic below. If this tab should be depth-gated, add sw-depth-N
+//   wrappers around individual sections.
+// VERIFY: Study Romans 1:1 → "Cultural Context" tab shows "Honor and Shame" framework primer
+//   + Romans-specific context notes about Jewish/Gentile tensions. Study John 1:1 →
+//   shows "Second Temple Judaism" and "Temple, Presence..." frameworks.
+function _renderCulturalTab(parsed) {
+  const bookCtx    = (_culturalCache.bookContext || {})[parsed.bookId] || null;
+  const frameworks = _culturalCache.frameworks  || [];
+  const symbols    = _culturalCache.symbols     || {};
+
+  let html = '<div class="sw-cultural-tab">';
+
+  // ── Book context section
+  if (bookCtx) {
+    html += '<div class="sw-cultural-book-ctx">';
+    html += '<div class="ws-section-title">' + _esc(parsed.bookId.charAt(0).toUpperCase() + parsed.bookId.slice(1)) + ' — Historical Context</div>';
+    if (bookCtx.historical_context) {
+      html += '<p class="sw-cultural-book-ctx__hist">' + _esc(bookCtx.historical_context) + '</p>';
+    }
+    if (bookCtx.key_cultural_notes && bookCtx.key_cultural_notes.length) {
+      html += '<div class="sw-cultural-notes">';
+      bookCtx.key_cultural_notes.forEach(function(note) {
+        html += '<div class="sw-cultural-note">💡 ' + _esc(note) + '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+
+  // ── Applicable framework primers
+  const applicableFrameworks = bookCtx && bookCtx.cultural_frameworks
+    ? frameworks.filter(function(fw) {
+        return bookCtx.cultural_frameworks.includes(fw.id);
+      })
+    : [];
+
+  if (applicableFrameworks.length) {
+    html += '<div class="ws-section-title" style="margin-top:.8rem;">Relevant Cultural Frameworks</div>';
+    applicableFrameworks.forEach(function(fw) {
+      html += '<details class="sw-framework-block"><summary class="sw-framework-block__summary">' + _esc(fw.title) + '</summary>';
+      html += '<div class="sw-framework-block__body">';
+      if (fw.summary) html += '<p class="sw-framework-block__summary-text">' + _esc(fw.summary) + '</p>';
+      if (fw.what_it_means_for_reading) {
+        html += '<div class="sw-framework-block__reading"><strong>For reading this passage:</strong> ' + _esc(fw.what_it_means_for_reading) + '</div>';
+      }
+      if (fw.key_concepts && fw.key_concepts.length) {
+        html += '<div class="sw-framework-block__concepts">';
+        fw.key_concepts.forEach(function(kc) {
+          html += '<div class="sw-concept-row">'
+            + '<span class="sw-concept-row__term">' + _esc(kc.term) + '</span>'
+            + '<span class="sw-concept-row__def">' + _esc(kc.explanation) + '</span>'
+            + '</div>';
+        });
+        html += '</div>';
+      }
+      if (fw.key_passages && fw.key_passages.length) {
+        html += '<div class="sw-framework-block__passages">Key passages: '
+          + fw.key_passages.map(function(r) {
+              return '<a class="ref" data-ref="' + _esc(r) + '">' + _esc(r) + '</a>';
+            }).join(' · ')
+          + '</div>';
+      }
+      html += '</div></details>'; // .sw-framework-block
+    });
+  }
+
+  // ── Symbols reference (collapsible)
+  const symCategories = Object.keys(symbols);
+  if (symCategories.length) {
+    html += '<details class="sw-symbols-ref"><summary class="sw-symbols-ref__summary">Biblical Symbols Reference</summary>';
+    html += '<div class="sw-symbols-ref__body">';
+    const catLabels = { numbers: 'Numbers', colors: 'Colors', spatial: 'Spatial', cosmological: 'Light, Elements & Cosmos' };
+    symCategories.forEach(function(cat) {
+      const items = symbols[cat];
+      if (!items || !items.length) return;
+      html += '<div class="sw-symbol-cat"><div class="sw-symbol-cat__label">' + _esc(catLabels[cat] || cat) + '</div>';
+      items.forEach(function(sym) {
+        html += '<div class="sw-symbol-row">'
+          + '<span class="sw-symbol-row__sym">' + _esc(sym.symbol) + '</span>'
+          + '<div class="sw-symbol-row__info">'
+          + '<span class="sw-symbol-row__meaning">' + _esc(sym.meaning) + '</span>'
+          + (sym.note ? '<span class="sw-symbol-row__note">' + _esc(sym.note) + '</span>' : '')
+          + '</div></div>';
+      });
+      html += '</div>'; // .sw-symbol-cat
+    });
+    html += '</div></details>';
+  }
+
+  if (!bookCtx && !applicableFrameworks.length) {
+    html += '<p class="sw-tab-stub">Cultural context data coming soon for this book.</p>';
+  }
+
+  html += '</div>'; // .sw-cultural-tab
+  return html;
+}
+
+// INTENT: Render a single synthesis pericope card for SW-M.
+//   Shows: pericope label, literary note, key terms (clickable code chips), cultural notes,
+//   intertextual connections, synthesis paragraph, and tradition map accordion. All sections
+//   except key terms and synthesis body are depth-gated so Reader mode sees the essentials.
+// CHANGE? If synthesis JSON schema changes (key_terms[], tradition_map fields), update here.
+//   Depth gate: cultural_notes + tradition_map hidden at depth-1, revealed at depth 2+.
+// VERIFY: Study John 1:1-18 → Synthesis tab → all sections render; click G3056 chip →
+//   dossier opens for λόγος. Tradition map accordions open/close. Reader depth hides cultural.
+function _renderSynthesisPericope(key, d) {
+  var html = '<div class="sw-synthesis-pericope">';
+
+  // ── Header
+  html += '<div class="sw-synthesis-header">'
+    + '<span class="sw-synthesis-ref">' + _esc(key) + '</span>'
+    + '<h3 class="sw-synthesis-label">' + _esc(d.pericope_label || '') + '</h3>'
+    + '</div>';
+
+  // ── Literary note (all depths)
+  if (d.literary_note) {
+    html += '<section class="sw-synthesis-section">'
+      + '<div class="sw-synthesis-section-title">Literary Note</div>'
+      + '<p class="sw-synthesis-literary">' + _esc(d.literary_note) + '</p>'
+      + '</section>';
+  }
+
+  // ── Key terms with clickable code chips (all depths)
+  if (d.key_terms && d.key_terms.length) {
+    html += '<section class="sw-synthesis-section"><div class="sw-synthesis-section-title">Key Terms</div>'
+      + '<div class="sw-synthesis-kterm-list">';
+    d.key_terms.forEach(function(kt) {
+      html += '<div class="sw-synthesis-kterm">'
+        + '<button class="sw-synthesis-kterm-chip" data-code="' + _esc(kt.code) + '">' + _esc(kt.code) + '</button>'
+        + '<span class="sw-synthesis-kterm-note">' + _esc(kt.note) + '</span>'
+        + '</div>';
+    });
+    html += '</div></section>';
+  }
+
+  // ── Synthesis paragraph (all depths — core payoff)
+  if (d.synthesis) {
+    html += '<section class="sw-synthesis-section sw-synthesis-main">'
+      + '<div class="sw-synthesis-section-title">Synthesis</div>'
+      + '<p class="sw-synthesis-body">' + _esc(d.synthesis) + '</p>'
+      + '</section>';
+  }
+
+  // ── Cultural notes (Student+ depth)
+  if (d.cultural_notes && d.cultural_notes.length) {
+    html += '<section class="sw-synthesis-section" data-depth-min="2">'
+      + '<div class="sw-synthesis-section-title">Cultural Background</div>';
+    d.cultural_notes.forEach(function(note) {
+      html += '<p class="sw-synthesis-note">' + _esc(note) + '</p>';
+    });
+    html += '</section>';
+  }
+
+  // ── Intertextual connections (all depths)
+  if (d.intertextual_connections && d.intertextual_connections.length) {
+    html += '<section class="sw-synthesis-section">'
+      + '<div class="sw-synthesis-section-title">Intertextual Connections</div>'
+      + '<ul class="sw-synthesis-connections">';
+    d.intertextual_connections.forEach(function(conn) {
+      html += '<li class="sw-synthesis-conn">' + _esc(conn) + '</li>';
+    });
+    html += '</ul></section>';
+  }
+
+  // ── Tradition map accordion (Student+ depth)
+  if (d.tradition_map) {
+    var tm = d.tradition_map;
+    html += '<section class="sw-synthesis-section sw-tradition-block" data-depth-min="2">'
+      + '<div class="sw-synthesis-section-title">Tradition Map</div>';
+    if (tm.patristic) {
+      html += '<details class="sw-tradition-details"><summary class="sw-tradition-era">Patristic</summary>'
+        + '<p class="sw-tradition-text">' + _esc(tm.patristic) + '</p></details>';
+    }
+    if (tm.reformation) {
+      html += '<details class="sw-tradition-details"><summary class="sw-tradition-era">Reformation</summary>'
+        + '<p class="sw-tradition-text">' + _esc(tm.reformation) + '</p></details>';
+    }
+    if (tm.modern_debates && tm.modern_debates.length) {
+      html += '<details class="sw-tradition-details"><summary class="sw-tradition-era">Modern Debates</summary>'
+        + '<ul class="sw-tradition-debates">';
+      tm.modern_debates.forEach(function(debate) {
+        html += '<li class="sw-tradition-debate">' + _esc(debate) + '</li>';
+      });
+      html += '</ul></details>';
+    }
+    html += '</section>';
+  }
+
+  html += '</div>'; // .sw-synthesis-pericope
+  return html;
+}
+
+// INTENT: Render the Synthesis tab for the current passage (SW-M).
+//   Finds all pericopes in the loaded synthesis file that overlap the current passage
+//   range using chapter:verse arithmetic. Shows "no synthesis" message for unmatched passages.
+//   Delegates chip clicks to _openWord() so key term codes navigate the dossier.
+// CHANGE? If more synthesis files are added (data/synthesis/*.json), they will be picked up
+//   automatically — this function only looks at the already-loaded bookId entries.
+// VERIFY: Study John 1:1-18 → Synthesis tab → "The Prologue" card renders.
+//   Study John 5:1-15 → "no synthesis notes" message + list of available pericopes shows.
+function _renderSynthesisTab(parsed) {
+  var entries = _synthesisCache[parsed.bookId];
+  if (!entries || !entries.length) {
+    return '<p class="sw-tab-stub">No synthesis notes for this passage yet.</p>';
+  }
+
+  // Find pericopes that overlap the current passage
+  var qStart = parsed.ch * 1000 + parsed.v;
+  var qEnd   = parsed.endCh * 1000 + parsed.endV;
+  var matches = entries.filter(function(e) {
+    var pStart = e.ref.ch * 1000 + e.ref.v;
+    var pEnd   = e.ref.endCh * 1000 + e.ref.endV;
+    return pStart <= qEnd && qStart <= pEnd;
+  });
+
+  if (!matches.length) {
+    var avail = entries.map(function(e) { return e.key; }).join(' · ');
+    return '<p class="sw-tab-stub">No synthesis notes for this passage range. '
+      + 'Available pericopes: <em>' + _esc(avail) + '</em>.</p>';
+  }
+
+  var html = '<div class="sw-synthesis-tab">';
+  matches.forEach(function(e) { html += _renderSynthesisPericope(e.key, e.data); });
+  html += '</div>';
+  return html;
+}
+
+// INTENT: Build the "What to notice here" auto-summary banner (SW-O integration).
+//   Scans the set of Strong's codes present in the passage against all pre-loaded caches
+//   (particles, idioms, debates, literary) and produces a scannable list of analytical
+//   observations the reader might miss. Returns '' if no notable items found.
+// CHANGE? If a new cache (second-temple, OT-in-NT) is added to _studyPassage(), add a
+//   corresponding detection block here. If the banner should only appear at Student+,
+//   add a _depth check before building the html.
+// VERIFY: Study Gal 2:16 → notice banner lists discourse markers, πίστις Χριστοῦ debate,
+//   faith idiom. Study John 1:1-18 → lists chiasm structure, Logos debate, Son of Man idiom.
+function _renderPassageNoticeBanner(parsed, codesInPassage, seenFunctions, particles) {
+  const items = [];
+
+  // ── Discourse markers present
+  if (seenFunctions.size > 0) {
+    const fnLabels = {
+      'ground': 'ground/reason (γάρ / כִּי)', 'inference': 'inference (οὖν / לָכֵן)',
+      'contrast': 'contrast (ἀλλά)', 'strong-contrast': 'strong contrast',
+      'adversative': 'adversative', 'purpose': 'purpose (ἵνα)',
+      'result': 'result (ὥστε)', 'condition': 'condition (εἰ)',
+      'cause': 'cause', 'negation': 'negation', 'negation-prohibition': 'prohibition (μή)',
+      'immediacy': 'immediacy (הִנֵּה)', 'focus': 'focus',
+    };
+    const uniqueFns = [];
+    seenFunctions.forEach(function(fn) { if (fnLabels[fn]) uniqueFns.push(fnLabels[fn]); });
+    if (uniqueFns.length) {
+      items.push({ icon: '◉', label: 'Discourse markers', detail: uniqueFns.slice(0, 4).join(', ') + (uniqueFns.length > 4 ? '…' : '') });
+    }
+  }
+
+  // ── Contested interpretations triggered
+  if (_debatesByCode) {
+    const triggeredDebates = [];
+    codesInPassage.forEach(function(code) {
+      const debates = _debatesByCode[code];
+      if (!debates) return;
+      debates.forEach(function(d) {
+        const matches = _debateTriggerMatches(d);
+        if (matches.length && !triggeredDebates.find(function(x) { return x.id === d.id; })) {
+          triggeredDebates.push(d);
+        }
+      });
+    });
+    if (triggeredDebates.length) {
+      items.push({ icon: '⚑', label: 'Contested interpretation' + (triggeredDebates.length > 1 ? 's' : ''), detail: triggeredDebates.map(function(d) { return d.label.split('—')[0].trim(); }).slice(0, 3).join(' · ') });
+    }
+  }
+
+  // ── Idioms in passage
+  if (_idiomsIndex) {
+    const idiomIds = {};
+    codesInPassage.forEach(function(code) {
+      const ids = _idiomsIndex[code];
+      if (ids) ids.forEach(function(id) { idiomIds[id] = true; });
+    });
+    const count = Object.keys(idiomIds).length;
+    if (count) {
+      const phrases = Object.keys(idiomIds).slice(0, 3).map(function(id) {
+        return _idiomsData && _idiomsData[id] ? _idiomsData[id].phrase.split('(')[0].trim() : id;
+      });
+      items.push({ icon: '💬', label: count + ' culturally loaded idiom' + (count > 1 ? 's' : ''), detail: phrases.join(' · ') + (count > 3 ? '…' : '') });
+    }
+  }
+
+  // ── Literary structure match
+  if (_literaryCache.structures) {
+    const matching = _literaryCache.structures.filter(function(s) {
+      if (s.bookId !== parsed.bookId) return false;
+      const sStart = s.ch_start * 1000 + (s.v_start || 0);
+      const sEnd   = s.ch_end   * 1000 + (s.v_end   || 999);
+      const pStart = parsed.ch  * 1000 + (parsed.v   || 0);
+      const pEnd   = parsed.endCh * 1000 + (parsed.endV || 999);
+      return sStart <= pEnd && sEnd >= pStart;
+    });
+    if (matching.length) {
+      items.push({ icon: '📐', label: 'Literary structure', detail: matching.map(function(s) { return s.label; }).join(' · ') });
+    }
+  }
+
+  // ── Cultural frameworks applicable to this book
+  if (_culturalCache.bookContext && _culturalCache.frameworks) {
+    const bookCtx = _culturalCache.bookContext[parsed.bookId];
+    if (bookCtx && bookCtx.cultural_frameworks && bookCtx.cultural_frameworks.length) {
+      const fwLabels = bookCtx.cultural_frameworks.slice(0, 3).map(function(id) {
+        const fw = _culturalCache.frameworks.find(function(f) { return f.id === id; });
+        return fw ? fw.title : id;
+      });
+      items.push({ icon: '🏛', label: 'Cultural lens', detail: fwLabels.join(' · ') });
+    }
+  }
+
+  if (!items.length) return '';
+
+  // INTENT: Open banner automatically on first study of a passage; collapse it on revisit
+  //   so it doesn't push tiles below the fold when the user already knows what's there.
+  // CHANGE? If parsed ref format changes, update the sessionStorage key construction below.
+  // VERIFY: Study Gal 2:16 → banner opens automatically. Navigate away and re-study Gal 2:16 → banner starts collapsed.
+  var refKey = 'bsw_ws_banner_seen_' + (parsed.bookId || '') + '_' + (parsed.ch || '') + '_' + (parsed.v || '');
+  var seenBefore = sessionStorage.getItem(refKey);
+  sessionStorage.setItem(refKey, '1');
+
+  let html = '<details class="sw-notice-banner"' + (seenBefore ? '' : ' open') + '><summary class="sw-notice-banner__summary">'
+    + '<span class="sw-notice-banner__icon">👁</span>'
+    + '<span class="sw-notice-banner__title">What to notice in this passage</span>'
+    + '<span class="sw-notice-banner__count">' + items.length + ' item' + (items.length !== 1 ? 's' : '') + '</span>'
+    + '</summary><ul class="sw-notice-banner__list">';
+
+  items.forEach(function(item) {
+    html += '<li class="sw-notice-banner__item">'
+      + '<span class="sw-notice-banner__item-icon">' + item.icon + '</span>'
+      + '<span class="sw-notice-banner__item-body">'
+      + '<span class="sw-notice-banner__item-label">' + _esc(item.label) + '</span>'
+      + (item.detail ? '<span class="sw-notice-banner__item-detail">' + _esc(item.detail) + '</span>' : '')
+      + '</span></li>';
+  });
+
+  html += '</ul></details>';
+  return html;
 }
 
 // INTENT: Render interlinear token tiles for a passage reference, annotating any
@@ -1942,7 +3652,13 @@ async function _studyPassage(refStr) {
 //   If particles JSON schema changes (color/function fields), update annotation logic here.
 // VERIFY: Study Romans 8:1-11 → οὖν tile (G3767) has blue left-border + "inference" badge.
 //   Study Ps 23 → כִּי tiles (H3588) have sienna left-border + "because/that" badge.
-function _renderPassageTiles(parsed, interData, strongsDict, particles) {
+// INTENT: Render interlinear tiles for the given passage range. If bibleBook is supplied
+//   (the versioned translation data), show the translation text above each verse's tiles so
+//   the reader can correlate English rendering with original-language words immediately.
+// CHANGE? If bibleBook data shape changes from {ch:{v:"text"}}, update the accessor below.
+// VERIFY: Study John 1:1 → translation text "In the beginning was the Word…" appears above
+//   the interlinear tiles. Verse number is clickable to open verse-study for that verse.
+function _renderPassageTiles(parsed, interData, strongsDict, particles, bibleBook) {
   const tilesEl  = document.getElementById('sw-ptiles');
   const tabsEl   = document.getElementById('sw-passage-tabs');
   const tabCont  = document.getElementById('sw-tab-content');
@@ -1956,7 +3672,8 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
   const startCh = parsed.ch;
   const endCh   = parsed.endCh;
 
-  // First pass: collect which functions appear so legend is passage-specific
+  // First pass: collect which particle functions appear (for legend) and all codes (for idioms)
+  const codesInPassage = new Set();
   for (let ch = startCh; ch <= endCh; ch++) {
     const chData = interData[String(ch)];
     if (!chData) continue;
@@ -1966,6 +3683,7 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
       const tokens = chData[String(v)];
       if (!tokens) continue;
       tokens.forEach(function(tok) {
+        if (tok.s) codesInPassage.add(tok.s);
         if (particles && tok.s && particles[tok.s]) seenFunctions.add(particles[tok.s].function);
       });
     }
@@ -2008,8 +3726,14 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
       const tokens = chData[String(v)];
       if (!tokens || !tokens.length) continue;
 
+      // Translation text for this verse (from loaded Bible version)
+      var verseText = bibleBook && bibleBook[String(ch)] && bibleBook[String(ch)][String(v)];
+
       html += '<div class="sw-verse-row">';
       html += '<span class="sw-verse-num">' + ch + ':' + v + '</span>';
+      if (verseText) {
+        html += '<div class="sw-verse-translation">' + _esc(verseText) + '</div>';
+      }
       html += '<span class="sw-tiles-wrap">';
       tokens.forEach(function (tok) {
         const sEntry    = strongsDict && tok.s && strongsDict[tok.s];
@@ -2018,32 +3742,73 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
         const gloss     = tok.text || (sEntry && sEntry.gloss) || '';
         const pClass    = particle ? (' sw-particle--' + particle.function) : '';
         const pTitle    = particle ? (' — ' + particle.function_label) : '';
-        html += '<span class="sw-ptile' + pClass + '" data-strongs="' + _esc(tok.s || '') + '" tabindex="0" role="button"'
+        html += '<span class="sw-ptile' + pClass + '" data-strongs="' + _esc(tok.s || '') + '"'
+          + ' data-lemma="' + _esc(lemma) + '" data-gloss="' + _esc(gloss) + '"'
+          + ' tabindex="0" role="button"'
           + (tok.s ? ' title="' + _esc(tok.s) + ' ' + _esc(lemma) + pTitle + '"' : '') + '>'
           + (lemma ? '<span class="sw-ptile__lemma">' + _esc(lemma) + '</span>' : '')
           + '<span class="sw-ptile__eng">' + _esc(gloss) + '</span>'
           + (tok.s ? '<span class="sw-ptile__s">' + _esc(tok.s) + '</span>' : '')
-          + (particle ? '<span class="sw-ptile__badge">' + _esc(particle.function_label.split(' ')[0].toLowerCase()) + '</span>' : '')
+          + (particle ? '<span class="sw-ptile__badge" data-abbr="' + _esc(particle.function_label.charAt(0).toUpperCase()) + '">' + _esc(particle.function_label.split(' ')[0].toLowerCase()) + '</span>' : '')
           + '</span>';
       });
       html += '</span></div>';
     }
   }
 
-  tilesEl.innerHTML = (legendHtml + html) || '<span class="sw-ptile-loading">No tokens found for this passage.</span>';
+  const noticeBanner = _renderPassageNoticeBanner(parsed, codesInPassage, seenFunctions, particles);
+  const idiomPanel   = _renderPassageIdioms(codesInPassage);
+  tilesEl.innerHTML = (noticeBanner + idiomPanel + legendHtml + html) || '<span class="sw-ptile-loading">No tokens found for this passage.</span>';
 
   // Wire tile click → open dossier
+  // Shared tooltip element for tile hover previews
+  var _hoverTip = document.getElementById('sw-tile-tooltip');
+  if (!_hoverTip) {
+    _hoverTip = document.createElement('div');
+    _hoverTip.id = 'sw-tile-tooltip';
+    _hoverTip.className = 'sw-tile-tooltip';
+    document.body.appendChild(_hoverTip);
+  }
+  var _hoverTimer = null;
+
   tilesEl.querySelectorAll('.sw-ptile[data-strongs]').forEach(function (tile) {
     tile.addEventListener('click', function () {
       const code = tile.dataset.strongs;
       if (code) {
         tilesEl.querySelectorAll('.sw-ptile').forEach(function (t) { t.classList.remove('sw-ptile--active'); });
         tile.classList.add('sw-ptile--active');
+        _hoverTip.hidden = true;
         _openWord(code);
       }
     });
     tile.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tile.click(); }
+    });
+
+    // INTENT: Show a micro-tooltip on hover with gloss + lemma — lets users scan
+    //   word meanings without opening the full dossier for every word.
+    // CHANGE? If tile data attributes change (data-strongs, data-gloss, data-lemma), update below.
+    // VERIFY: Hover over a tile for 400ms → small tooltip appears with gloss text; move away → hides.
+    tile.addEventListener('mouseenter', function () {
+      clearTimeout(_hoverTimer);
+      _hoverTimer = setTimeout(function() {
+        var gloss = tile.dataset.gloss || '';
+        var lemma = tile.dataset.lemma || '';
+        if (!gloss && !lemma) return;
+        var rect = tile.getBoundingClientRect();
+        _hoverTip.innerHTML = (lemma ? '<span class="sw-tile-tooltip__lemma">' + _esc(lemma) + '</span>' : '')
+          + (gloss ? '<span class="sw-tile-tooltip__gloss">' + _esc(gloss) + '</span>' : '');
+        _hoverTip.hidden = false;
+        // Position above the tile, centered
+        var tipW = _hoverTip.offsetWidth || 120;
+        var left = rect.left + rect.width / 2 - tipW / 2;
+        _hoverTip.style.left = Math.max(4, Math.min(left, window.innerWidth - tipW - 4)) + 'px';
+        _hoverTip.style.top  = (rect.top + window.scrollY - _hoverTip.offsetHeight - 6) + 'px';
+      }, 380);
+    });
+    tile.addEventListener('mouseleave', function () {
+      clearTimeout(_hoverTimer);
+      _hoverTip.hidden = true;
     });
   });
 
@@ -2051,21 +3816,115 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
   if (tabsEl)  tabsEl.hidden  = false;
   if (tabCont) tabCont.hidden = false;
 
-  // Wire tab buttons
+  // Wire tab buttons — literary tab renders live data (SW-D); others still stub
+  // INTENT: Tab click updates active state and renders the appropriate content.
+  //   Literary tab is fully implemented (SW-D). Cultural/Intertextual/Synthesis are
+  //   stubs until SW-F/K/M are implemented.
+  // CHANGE? When implementing SW-F (cultural), replace the 'cultural' stub with a call
+  //   to _renderCulturalTab(parsed). Same pattern for SW-K and SW-M.
+  // VERIFY: Study John 1:1-18, click "Literary Structure" tab → genre badge + chiasm diagram.
+  //   Click "Cultural Context" → stub message shows SW-F placeholder.
   if (tabsEl) {
     tabsEl.querySelectorAll('.sw-tab-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         tabsEl.querySelectorAll('.sw-tab-btn').forEach(function (b) { b.classList.remove('sw-tab-btn--active'); });
         btn.classList.add('sw-tab-btn--active');
         if (tabCont) {
-          const stubs = { literary: 'Literary Structure analysis — coming in SW-D.',
-                          cultural: 'Cultural Context — coming in SW-F.',
-                          intertextual: 'Intertextual connections — coming in SW-K.',
-                          synthesis: 'Passage synthesis — coming in SW-M.' };
-          tabCont.innerHTML = '<p class="sw-tab-stub">' + _esc(stubs[btn.dataset.tab] || '') + '</p>';
+          if (btn.dataset.tab === 'literary') {
+            tabCont.innerHTML = _renderLiteraryTab(parsed);
+          } else if (btn.dataset.tab === 'cultural') {
+            tabCont.innerHTML = _renderCulturalTab(parsed);
+          } else if (btn.dataset.tab === 'intertextual') {
+            // SW-K: Render OT-in-NT panel for the current passage
+            var quotations = _findRelevantQuotations();
+            if (quotations.length) {
+              tabCont.innerHTML = _renderOTinNTPanel(quotations);
+              // Re-wire any .ref links the panel introduced
+              if (window.wireRefLinks) window.wireRefLinks(tabCont);
+            } else {
+              tabCont.innerHTML = '<p class="sw-tab-stub">No formal OT quotations identified in this passage. '
+                + 'See the Literary Structure tab for allusions and echoes.</p>';
+            }
+          } else if (btn.dataset.tab === 'synthesis') {
+            // SW-M: Load per-book synthesis data lazily, then render
+            // INTENT: Synthesis files are per-book and only fetched on first Synthesis tab click.
+            //   _loadSynthesis returns immediately if already cached; await ensures render
+            //   always sees populated _synthesisCache[bookId].
+            // CHANGE? If synthesis becomes eager (pre-warmed in _studyPassage Promise.all),
+            //   remove the _loadSynthesis call here and render synchronously.
+            // VERIFY: Click Synthesis tab on Romans 1:16 → loading flashes, then pericope card appears.
+            tabCont.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading synthesis…</p>';
+            _loadSynthesis(parsed.bookId).then(function() {
+              tabCont.innerHTML = _renderSynthesisTab(parsed);
+              // Wire key term code chips → open dossier
+              tabCont.querySelectorAll('.sw-synthesis-kterm-chip[data-code]').forEach(function(chip) {
+                chip.addEventListener('click', function() { _openWord(chip.dataset.code); });
+              });
+              if (window.wireRefLinks) window.wireRefLinks(tabCont);
+
+              // SW-N: User synthesis notes textarea — persisted per passage ref
+              // INTENT: Appends an editable textarea to the synthesis tab so users can write
+              //   their own synthesis alongside the curated content. Saves to localStorage
+              //   per-passage on input so notes survive navigation.
+              // CHANGE? If the synthesis tab is split across multiple render calls, move this
+              //   to a separate function called at the end of each synthesis render.
+              // VERIFY: Study John 1:1, click Synthesis, type a note → navigate away → return
+              //   → synthesis tab re-renders and user note is pre-populated.
+              var synNotesKey = 'bsw_ws_synthesis_' + (parsed.display || '').replace(/\s+/g, '_');
+              var synNoteHtml = '<div class="sw-synthesis-user-notes">'
+                + '<div class="sw-synthesis-section-title">My Synthesis Notes</div>'
+                + '<textarea class="sw-synthesis-notes-ta" rows="4" placeholder="Write your own synthesis for this passage — your reading, applications, questions…"></textarea>'
+                + '</div>';
+              tabCont.insertAdjacentHTML('beforeend', synNoteHtml);
+              var synTa = tabCont.querySelector('.sw-synthesis-notes-ta');
+              if (synTa) {
+                try { synTa.value = localStorage.getItem(synNotesKey) || ''; } catch(e) {}
+                synTa.oninput = function() {
+                  try { localStorage.setItem(synNotesKey, synTa.value); } catch(e) {}
+                };
+              }
+            });
+          } else if (btn.dataset.tab === 'crossrefs') {
+            // INTENT: Load cross-references for each verse in the passage and render them
+            //   as clickable ref chips that open a passage study when clicked.
+            // CHANGE? If loadCrossRefs data shape changes ({ch_v: [...]}), update accessor below.
+            // VERIFY: Study John 3:16 → Cross-refs tab → related verses listed; click one → passage opens.
+            tabCont.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading cross-references…</p>';
+            _renderCrossRefsTab(parsed, tabCont);
+          } else if (btn.dataset.tab === 'commentary') {
+            // INTENT: Load and display commentaries for individual verses in the passage range.
+            //   Uses the same loadCommentary() infrastructure as verse-study.js but scoped
+            //   to the passage. Shows one collapsible block per commentary source per verse.
+            // CHANGE? If COMMENTARY_SOURCES changes in core.js, update the source list imported here.
+            // VERIFY: Study Romans 8:1 → Commentary tab → Ellicott/Matthew Henry text appears.
+            tabCont.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading commentaries…</p>';
+            _renderCommentaryTab(parsed, tabCont);
+          } else if (btn.dataset.tab === 'grammar') {
+            // INTENT: Show layer-1 particle/morph tokens and layer-2 mkt-original prose notes.
+            // CHANGE? If mkt-original JSON schema changes ({ch:{v:html}}), update _renderGrammarTab.
+            // VERIFY: Study Romans 1:1 → Grammar tab → particle table + prose commentary appears.
+            tabCont.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading grammar notes…</p>';
+            _renderGrammarTab(parsed, tabCont);
+          } else if (btn.dataset.tab === 'dossier') {
+            // INTENT: Re-render the last opened word's dossier into the tab content area.
+            //   If no word has been opened yet, show a prompt to click a tile.
+            // CHANGE? If _lastWordCode variable is renamed, update reference below.
+            // VERIFY: Click a tile → Word tab active with dossier. Click Literary → switch back.
+            //   Click Word tab again → same word still shown.
+            if (_lastWordCode && _getEntry(_lastWordCode)) {
+              tabCont.innerHTML = '';
+              _renderDossier(_lastWordCode, tabCont, !_translationMode);
+            } else {
+              tabCont.innerHTML = '<p class="sw-tab-stub">Click any word tile to see its lexical dossier here.</p>';
+            }
+          } else {
+            tabCont.innerHTML = '';
+          }
         }
       });
     });
+    // Auto-render literary tab on first passage load (it's the default active tab)
+    if (tabCont) tabCont.innerHTML = _renderLiteraryTab(parsed);
   }
 }
 
@@ -2076,10 +3935,32 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles) {
 //   may already find the entry without the fallback fetch.
 // VERIFY: Click G3056 (λόγος) in a passage tile — dossier should show the full
 //   lexical entry even if only phase1 is loaded (λόγος is a top-100 NT word).
+// INTENT: Open a word's dossier. In verse study mode, renders into the "Word" tab of
+//   the right panel. In translation mode or word study mode, renders into $dossier.
+// CHANGE? If _studyMode values change, update the verse-mode branch condition below.
+// VERIFY: In verse mode, click a tile → Word tab activates with full dossier content.
 async function _openWord(code) {
+  _lastWordCode = code;
+
+  // Determine render target: verse mode → Word tab; otherwise → main dossier column
+  var verseTabTarget = null;
+  if (_studyMode === 'verse' && !_translationMode) {
+    var tabCont = document.getElementById('sw-tab-content');
+    var tabsEl  = document.getElementById('sw-passage-tabs');
+    if (tabCont && tabsEl) {
+      tabsEl.querySelectorAll('.sw-tab-btn').forEach(function(b) { b.classList.remove('sw-tab-btn--active'); });
+      var dossierBtn = tabsEl.querySelector('[data-tab="dossier"]');
+      if (dossierBtn) dossierBtn.classList.add('sw-tab-btn--active');
+      tabCont.removeAttribute('hidden');
+      verseTabTarget = tabCont;
+    }
+  }
+
+  var isCompact = !!(verseTabTarget && !_translationMode);
+
   // Try cached phases first (fast path)
   if (_getEntry(code)) {
-    _renderDossier(code);
+    _renderDossier(code, verseTabTarget, isCompact);
     _uiState.activeCode = code;
     _renderQueueActive();
     return;
@@ -2090,7 +3971,7 @@ async function _openWord(code) {
     await _loadPhase(fallback);
   } catch (e) { /* silent */ }
   if (_getEntry(code)) {
-    _renderDossier(code);
+    _renderDossier(code, verseTabTarget, isCompact);
     _uiState.activeCode = code;
   } else {
     // Word not in any source — show minimal entry from Strongs data
@@ -2115,6 +3996,1348 @@ async function _openWord(code) {
   }
 }
 
+/* ── SW-N: Vocabulary Flashcard System ────────────────────── */
+
+// INTENT: Load flashcard deck and progress from localStorage on page init.
+//   Deck is stored as { greek: [...codes], hebrew: [...codes] }. Progress is
+//   { code: { due: ISOdate, interval: days } }. Called once during initWorkshopPage.
+// CHANGE? If the deck format adds language auto-detection (by code prefix), update here.
+// VERIFY: After adding G3056 to deck and reloading → _fcDeck.greek contains G3056.
+function _fcLoadState() {
+  try {
+    var raw = JSON.parse(localStorage.getItem(SK_FC_DECK) || '{}');
+    _fcDeck.greek   = new Set(raw.greek   || []);
+    _fcDeck.hebrew  = new Set(raw.hebrew  || []);
+  } catch(e) { _fcDeck = { greek: new Set(), hebrew: new Set() }; }
+  try {
+    _fcProgress = JSON.parse(localStorage.getItem(SK_FC_PROGRESS) || '{}');
+  } catch(e) { _fcProgress = {}; }
+}
+
+function _fcSaveDeck() {
+  try {
+    localStorage.setItem(SK_FC_DECK, JSON.stringify({
+      greek:  Array.from(_fcDeck.greek),
+      hebrew: Array.from(_fcDeck.hebrew),
+    }));
+  } catch(e) {}
+}
+
+function _fcSaveProgress() {
+  try { localStorage.setItem(SK_FC_PROGRESS, JSON.stringify(_fcProgress)); } catch(e) {}
+}
+
+function _isInDeck(code) {
+  return code.startsWith('G') ? _fcDeck.greek.has(code) : _fcDeck.hebrew.has(code);
+}
+
+// INTENT: Toggle a word code in/out of the custom flashcard deck.
+//   Updates the ★/☆ button state immediately and updates the nav badge count.
+//   Saves the updated deck to localStorage.
+// CHANGE? If deck has a max size or deduplication rule, add guard here.
+// VERIFY: Click ☆ on G3056 → button becomes ★, nav badge count increases by 1.
+function _fcToggleDeck(code) {
+  var set = code.startsWith('G') ? _fcDeck.greek : _fcDeck.hebrew;
+  if (set.has(code)) {
+    set.delete(code);
+  } else {
+    set.add(code);
+  }
+  _fcSaveDeck();
+  _fcUpdateBadge();
+  // Re-render the ★/☆ button state in the dossier if it's open for this code
+  var btn = document.querySelector('.sw-add-deck-btn[data-code="' + code + '"]');
+  if (btn) {
+    btn.textContent = _isInDeck(code) ? '★' : '☆';
+    btn.title = _isInDeck(code) ? 'Remove from flashcard deck' : 'Add to flashcard deck';
+  }
+}
+
+function _fcUpdateBadge() {
+  var badge = document.getElementById('sw-fc-due-badge');
+  if (!badge) return;
+  var now = new Date();
+  var dueCount = 0;
+  var allCodes = [..._fcDeck.greek, ..._fcDeck.hebrew];
+  allCodes.forEach(function(code) {
+    var p = _fcProgress[code];
+    if (!p || new Date(p.due) <= now) dueCount++;
+  });
+  badge.textContent = dueCount > 0 ? dueCount : '';
+  badge.hidden = dueCount === 0;
+}
+
+// INTENT: Build the queue of due cards for this flashcard session.
+//   A card is due if it has no progress record or its due date is in the past.
+//   Shuffled for variety. Then renders the first card.
+// CHANGE? If a "cram all" mode is added, bypass the due-date filter.
+// VERIFY: After rating a card "Good" → it disappears from queue for 7 days.
+function _fcOpenView() {
+  var now = new Date();
+  var allCodes = [..._fcDeck.greek, ..._fcDeck.hebrew];
+  _fcQueue = allCodes.filter(function(code) {
+    var p = _fcProgress[code];
+    return !p || new Date(p.due) <= now;
+  });
+  // Shuffle
+  for (var i = _fcQueue.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = _fcQueue[i]; _fcQueue[i] = _fcQueue[j]; _fcQueue[j] = tmp;
+  }
+  _fcIdx      = 0;
+  _fcReviewed = 0;
+
+  var view = document.getElementById('sw-flashcard-view');
+  var layout = document.getElementById('ws-layout');
+  if (view)   view.hidden   = false;
+  if (layout) layout.hidden = true;
+
+  var label = document.getElementById('sw-fc-deck-label');
+  if (label) label.textContent = allCodes.length + ' words in deck';
+
+  if (_fcQueue.length === 0) {
+    _fcShowDone(allCodes.length);
+  } else {
+    _fcShowCard(_fcQueue[0]);
+  }
+}
+
+function _fcCloseView() {
+  var view   = document.getElementById('sw-flashcard-view');
+  var layout = document.getElementById('ws-layout');
+  if (view)   view.hidden   = true;
+  if (layout) layout.hidden = false;
+  _fcUpdateBadge();
+}
+
+// INTENT: Render the front face of a flashcard for the given Strong's code.
+//   Looks up the entry in any loaded phase cache; falls back to Strongs data.
+//   The back face (gloss, freq, samples) is hidden until the user taps "Reveal".
+// CHANGE? If the dossier source changes (new phases), update the _getEntry fallback logic.
+// VERIFY: Open flashcard for G26 → front shows ἀγαπάω; reveal → gloss + 3 verse samples appear.
+async function _fcShowCard(code) {
+  var front  = document.getElementById('sw-fc-front');
+  var back   = document.getElementById('sw-fc-back');
+  var done   = document.getElementById('sw-fc-done');
+  var prog   = document.getElementById('sw-fc-progress-label');
+  if (!front || !back) return;
+
+  front.hidden = false;
+  back.hidden  = true;
+  if (done) done.hidden = true;
+
+  var remaining = _fcQueue.length - _fcIdx;
+  if (prog) prog.textContent = remaining + ' remaining · ' + _fcReviewed + ' reviewed';
+
+  // Look up entry (try cached phases first)
+  var entry = _getEntry(code);
+  if (!entry) {
+    try {
+      await _loadPhase(code.startsWith('G') ? 'phase1' : 'phase2');
+      entry = _getEntry(code);
+    } catch(e) {}
+  }
+
+  var lemma    = entry ? (entry.lemma || entry.lemmas || code) : code;
+  var translit = entry ? (entry.translit || '') : '';
+  var pos      = entry ? (entry.pos || '') : '';
+  var gloss    = entry ? (entry.gloss || entry.semantic_range || '') : '';
+  var freq     = entry ? (entry._freq || 0) : 0;
+  var samples  = entry ? (entry.attested_uses || []) : [];
+
+  document.getElementById('sw-fc-word').textContent    = lemma;
+  document.getElementById('sw-fc-translit').textContent = translit;
+
+  // Back side content
+  document.getElementById('sw-fc-back-word').textContent = lemma;
+  document.getElementById('sw-fc-pos').textContent       = pos ? '[' + pos + ']' : '';
+  document.getElementById('sw-fc-gloss').textContent     = gloss;
+  document.getElementById('sw-fc-freq').textContent      = freq > 0 ? freq.toLocaleString() + '× in scripture' : '';
+
+  var sampEl = document.getElementById('sw-fc-samples');
+  if (sampEl && samples.length) {
+    sampEl.innerHTML = samples.slice(0, 3).map(function(s) {
+      return '<div class="sw-fc-sample">'
+        + '<a class="ref" data-ref="' + _esc(s.ref) + '">' + _esc(s.ref) + '</a>'
+        + ' — ' + _esc(s.gloss || s.note || '')
+        + '</div>';
+    }).join('');
+    if (window.wireRefLinks) window.wireRefLinks(sampEl);
+  } else if (sampEl) {
+    sampEl.innerHTML = '';
+  }
+
+  // Update rating button labels to show the actual computed interval for this card.
+  var prev  = _fcProgress[code] || {};
+  var ease  = prev.ease     || 2.5;
+  var previ = prev.interval || 0;
+  function _nextDays(r) {
+    if (previ === 0) return FC_INTERVALS[r] || 7;
+    switch (r) {
+      case 'again': return 1;
+      case 'hard':  return Math.max(1, Math.round(previ * 1.2));
+      case 'good':  return Math.max(1, Math.round(previ * ease));
+      case 'easy':  return Math.max(1, Math.round(previ * ease * 1.3));
+    }
+    return 7;
+  }
+  function _dayLabel(d) { return d === 1 ? '1 day' : d < 31 ? d + ' days' : Math.round(d / 7) + ' wks'; }
+  back.querySelectorAll('.sw-fc-rate-btn[data-rating]').forEach(function(btn) {
+    var small = btn.querySelector('small');
+    if (small) small.textContent = _dayLabel(_nextDays(btn.dataset.rating));
+  });
+}
+
+function _fcReveal() {
+  var front = document.getElementById('sw-fc-front');
+  var back  = document.getElementById('sw-fc-back');
+  if (front) front.hidden = true;
+  if (back)  back.hidden  = false;
+}
+
+// INTENT: Record the user's rating using an SM-2-style ease algorithm. First review
+//   uses FC_INTERVALS as seed days; subsequent reviews multiply the prior interval by
+//   the entry's ease factor so well-known words graduate beyond the 21-day cap.
+// CHANGE? If SRS constants change (ease floor/ceiling, Easy multiplier), update the three
+//   numeric literals below and the FC_INTERVALS comment above.
+// VERIFY: Rate G3056 "Easy" three consecutive sessions → intervals grow (e.g. 21 → 54 → 140
+//   days) rather than capping at 21. Check bsw_ws_fc_progress in DevTools → Application.
+function _fcRate(rating) {
+  var code  = _fcQueue[_fcIdx];
+  var prev  = _fcProgress[code] || {};
+  var ease  = prev.ease     || 2.5;
+  var previ = prev.interval || 0;   // 0 = first review
+
+  var days;
+  if (previ === 0) {
+    // First review: use seed interval
+    days = FC_INTERVALS[rating] || 7;
+  } else {
+    switch (rating) {
+      case 'again': days = 1;                                       break;
+      case 'hard':  days = Math.max(1, Math.round(previ * 1.2));   break;
+      case 'good':  days = Math.max(1, Math.round(previ * ease));  break;
+      case 'easy':  days = Math.max(1, Math.round(previ * ease * 1.3)); break;
+      default:      days = Math.max(1, Math.round(previ * ease));
+    }
+  }
+
+  // Update ease factor (SM-2 style)
+  switch (rating) {
+    case 'again': ease = Math.max(1.3, ease - 0.20); break;
+    case 'hard':  ease = Math.max(1.3, ease - 0.15); break;
+    case 'good':  /* unchanged */                     break;
+    case 'easy':  ease = Math.min(3.0, ease + 0.15); break;
+  }
+
+  var due = new Date();
+  due.setDate(due.getDate() + days);
+  _fcProgress[code] = { due: due.toISOString(), interval: days, ease: ease };
+  _fcSaveProgress();
+  _fcReviewed++;
+  _fcIdx++;
+
+  if (_fcIdx >= _fcQueue.length) {
+    _fcShowDone(_fcDeck.greek.size + _fcDeck.hebrew.size);
+  } else {
+    _fcShowCard(_fcQueue[_fcIdx]);
+  }
+}
+
+function _fcShowDone(totalDeck) {
+  var front = document.getElementById('sw-fc-front');
+  var back  = document.getElementById('sw-fc-back');
+  var done  = document.getElementById('sw-fc-done');
+  if (front) front.hidden = true;
+  if (back)  back.hidden  = true;
+  if (!done) return;
+  done.hidden = false;
+  var msg = document.getElementById('sw-fc-done-msg');
+  if (msg) msg.textContent = _fcReviewed > 0
+    ? 'Session complete! Reviewed ' + _fcReviewed + ' card' + (_fcReviewed !== 1 ? 's' : '') + '.'
+    : 'All ' + totalDeck + ' cards are up to date — nothing due right now.';
+  var stats = document.getElementById('sw-fc-done-stats');
+  if (stats) stats.textContent = 'Deck size: ' + totalDeck + ' words';
+}
+
+// INTENT: Keyboard shortcut handler for flashcard mode.
+//   Space = reveal; 1/2/3/4 = Again/Hard/Good/Easy.
+// CHANGE? If more rating levels are added, extend the key→rating map below.
+// VERIFY: Study a card, press Space → back revealed; press 3 → "Good" recorded, next card shows.
+function _fcKeyHandler(e) {
+  var view = document.getElementById('sw-flashcard-view');
+  if (!view || view.hidden) return;
+  var backHidden = document.getElementById('sw-fc-back') && document.getElementById('sw-fc-back').hidden;
+  if (e.key === ' ' || e.key === 'Spacebar') {
+    e.preventDefault();
+    if (backHidden) _fcReveal();
+  } else if (!backHidden) {
+    var map = { '1': 'again', '2': 'hard', '3': 'good', '4': 'easy' };
+    if (map[e.key]) { e.preventDefault(); _fcRate(map[e.key]); }
+  }
+}
+
+// INTENT: Generates a print-only study sheet for the current passage by collecting
+//   the interlinear tile HTML, active dossier HTML, synthesis tab content, and user notes,
+//   then writes them into a dedicated #sw-print-sheet div before calling window.print().
+//   A @media print rule in workshop.css hides the normal layout and shows only the print sheet.
+//   The print sheet is cleaned up after printing via the afterprint event.
+// CHANGE? If passage tile or dossier selectors change, update querySelectorAll paths below.
+//   If synthesis tab content should also print, pre-load _loadSynthesis before calling this.
+// VERIFY: Study Romans 8:1, export study sheet → print preview shows: ref, tiles, notes.
+//   Study John 1:1, open G3056 dossier, export → dossier content appears in print preview.
+function _exportStudySheet(parsed, noteKey) {
+  var tilesEl   = document.getElementById('sw-ptiles');
+  var dossierEl = document.getElementById('ws-dossier');
+  var tilesHtml   = tilesEl   ? tilesEl.innerHTML   : '';
+  var dossierHtml = dossierEl ? dossierEl.innerHTML  : '';
+  var notes = '';
+  try { notes = localStorage.getItem(noteKey) || ''; } catch(e) {}
+
+  // Synthesis content if loaded for this book
+  var synEntries = _synthesisCache[parsed.bookId];
+  var synHtml = '';
+  if (synEntries && synEntries.length) {
+    synHtml = _renderSynthesisTab(parsed);
+  }
+
+  var sheet = document.getElementById('sw-print-sheet') || document.createElement('div');
+  sheet.id = 'sw-print-sheet';
+  sheet.innerHTML =
+    '<div class="swp-ref">' + _esc(parsed.display) + '</div>'
+    + '<div class="swp-tiles">' + tilesHtml + '</div>'
+    + (dossierHtml ? '<div class="swp-dossier"><h3>Word Study</h3>' + dossierHtml + '</div>' : '')
+    + (synHtml     ? '<div class="swp-synthesis"><h3>Passage Synthesis</h3>' + synHtml + '</div>' : '')
+    + (notes       ? '<div class="swp-notes"><h3>My Notes</h3><p>' + _esc(notes).replace(/\n/g, '<br>') + '</p></div>' : '');
+
+  if (!document.getElementById('sw-print-sheet')) document.body.appendChild(sheet);
+
+  window.print();
+  window.addEventListener('afterprint', function cleanup() {
+    window.removeEventListener('afterprint', cleanup);
+    sheet.innerHTML = '';
+  }, { once: true });
+}
+
+/* ── Cross-References Tab ───────────────────────────────────── */
+// INTENT: Render cross-references for all verses in the passage. Each verse gets a
+//   collapsible group of ref chips sorted by vote count. Clicking any chip calls
+//   _studyPassage() to open that reference in the workshop.
+// CHANGE? If loadCrossRefs data shape changes from {ch:{v:[[ref,votes],...]}} update accessors.
+// VERIFY: Study Psalm 22:1 → Cross-refs tab → Matt 27:46, Heb 2:12 appear as chips.
+async function _renderCrossRefsTab(parsed, container) {
+  var data = await loadCrossRefs(parsed.bookId);
+  if (!data) {
+    container.innerHTML = '<p class="sw-tab-stub">No cross-references available for this book.</p>';
+    return;
+  }
+
+  var html = '<div class="sw-xref-tab">';
+  var anyFound = false;
+
+  for (var ch = parsed.ch; ch <= parsed.endCh; ch++) {
+    var chData = data[String(ch)];
+    if (!chData) continue;
+    var vStart = (ch === parsed.ch)    ? parsed.v    : 1;
+    var vEnd   = (ch === parsed.endCh) ? parsed.endV : 999;
+
+    for (var v = vStart; v <= vEnd; v++) {
+      var entries = chData[String(v)];
+      if (!entries || !entries.length) continue;
+      anyFound = true;
+
+      // Sort by votes desc, take top 12
+      var sorted = entries.slice().sort(function(a, b) {
+        return (parseCrossRefEntry(b).votes || 0) - (parseCrossRefEntry(a).votes || 0);
+      }).slice(0, 12);
+
+      html += '<div class="sw-xref-verse">'
+        + '<div class="sw-xref-verse__ref">' + ch + ':' + v + '</div>'
+        + '<div class="sw-xref-chips">';
+
+      sorted.forEach(function(entry) {
+        var e = parseCrossRefEntry(entry);
+        if (!e.ref) return;
+        var score = Math.min(100, Math.round((e.votes || 1) / 400 * 100));
+        var intensity = score > 70 ? 'sw-xref-chip--hi' : (score > 35 ? 'sw-xref-chip--mid' : '');
+        html += '<span class="sw-xref-chip ' + intensity + '" data-ref="' + _esc(e.ref) + '" role="button" tabindex="0">'
+          + _esc(e.ref) + '</span>';
+      });
+
+      html += '</div></div>';
+    }
+  }
+
+  html += '</div>';
+  container.innerHTML = anyFound ? html : '<p class="sw-tab-stub">No cross-references for this verse range.</p>';
+
+  // Wire chip clicks → _studyPassage
+  container.querySelectorAll('.sw-xref-chip[data-ref]').forEach(function(chip) {
+    chip.addEventListener('click', function() { _studyPassage(chip.dataset.ref); });
+    chip.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); chip.click(); }
+    });
+  });
+}
+
+/* ── Commentary Tab (passage-level) ────────────────────────── */
+// INTENT: Render all available commentary sources for each verse in the passage range.
+//   Shows a source selector (persisted to localStorage), then one collapsible block per
+//   verse with the commentary text from the selected source. Falls back gracefully when
+//   a source has no data for the book.
+// CHANGE? If COMMENTARY_SOURCES changes, the selector rerenders automatically. If the
+//   commentary data schema changes ({ch:{v:html}}), update the accessor in the render loop.
+// VERIFY: Study Romans 8:1 → Commentary tab → select Ellicott → verse 1 text appears.
+//   Switch to Matthew Henry → different text replaces it without a page reload.
+async function _renderCommentaryTab(parsed, container) {
+  var src = getCommentarySource();
+
+  // Source selector
+  var selectorHtml = '<div class="sw-comm-selector">'
+    + '<label class="sw-comm-selector__label">Commentary:</label>'
+    + '<select class="sw-comm-selector__sel" id="sw-comm-src-sel">'
+    + COMMENTARY_SOURCES.filter(function(s) { return !s.id.startsWith('mkt-'); })
+        .map(function(s) {
+          return '<option value="' + _esc(s.id) + '"' + (s.id === src ? ' selected' : '') + '>'
+            + _esc(s.label) + '</option>';
+        }).join('')
+    + '</select></div>';
+
+  container.innerHTML = selectorHtml + '<div id="sw-comm-body" class="sw-comm-body"><p class="sw-tab-stub sw-tab-stub--loading">Loading…</p></div>';
+
+  // Wire source change
+  var sel = container.querySelector('#sw-comm-src-sel');
+  if (sel) {
+    sel.addEventListener('change', function() {
+      setCommentarySource(sel.value);
+      _loadAndRenderCommentary(parsed, sel.value, container.querySelector('#sw-comm-body'));
+    });
+  }
+
+  await _loadAndRenderCommentary(parsed, src, container.querySelector('#sw-comm-body'));
+}
+
+async function _loadAndRenderCommentary(parsed, srcId, bodyEl) {
+  if (!bodyEl) return;
+  bodyEl.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading…</p>';
+  var data = await loadCommentary(parsed.bookId, srcId);
+  if (!data) {
+    bodyEl.innerHTML = '<p class="sw-tab-stub">No commentary available for this book in the selected source.</p>';
+    return;
+  }
+
+  var html = '';
+  for (var ch = parsed.ch; ch <= parsed.endCh; ch++) {
+    var chData = data[String(ch)];
+    if (!chData) continue;
+    var vStart = (ch === parsed.ch)    ? parsed.v    : 1;
+    var vEnd   = (ch === parsed.endCh) ? parsed.endV : 999;
+    for (var v = vStart; v <= vEnd; v++) {
+      var text = chData[String(v)];
+      if (!text) continue;
+      html += '<div class="sw-comm-verse">'
+        + '<div class="sw-comm-verse__ref">' + ch + ':' + v + '</div>'
+        + '<div class="sw-comm-verse__text">' + text + '</div>'
+        + '</div>';
+    }
+  }
+
+  bodyEl.innerHTML = html || '<p class="sw-tab-stub">No commentary for this verse range.</p>';
+  if (window.wireRefLinks) window.wireRefLinks(bodyEl);
+}
+
+// INTENT: Grammar tab — layer 1: per-verse particle/morphology token rows; layer 2:
+//   mkt-original prose notes for the same verse range. Loads particles and mkt-original
+//   in parallel; falls back gracefully when either is missing.
+// CHANGE? If mkt-original JSON schema changes from {ch:{v:html}}, update accessor below.
+//   If _particlesCache or _morphSigCache loading changes, update _loadParticles call.
+// VERIFY: Study Romans 1:1 → Grammar tab → token rows show lemma + particle badge or POS hint;
+//   prose block shows δοῦλος/ἀφωρισμένος commentary. Study Genesis 1:1 → prose block absent (no mkt-orig).
+async function _renderGrammarTab(parsed, container) {
+  var lang = NT_BOOKS.has(parsed.bookId) ? 'greek' : 'hebrew';
+  var particles = _particlesCache[lang] || {};
+
+  // Load particles if not yet cached
+  var particlePromise = _particlesCache[lang]
+    ? Promise.resolve(_particlesCache[lang])
+    : _loadParticles(lang);
+
+  // Load mkt-original prose notes (may 404 for OT — that's fine)
+  var mktUrl = _resolve('../../data/commentary/mkt-original/' + parsed.bookId + '.json');
+  var mktPromise = fetch(mktUrl).then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; });
+
+  var results = await Promise.all([particlePromise, mktPromise]);
+  var particlesData = results[0] || {};
+  var mktData       = results[1];
+
+  // Build layer-1: per-verse token rows from already-loaded _interData
+  var layer1Html = '';
+  if (_interData) {
+    for (var ch = parsed.ch; ch <= parsed.endCh; ch++) {
+      var chData = _interData[String(ch)];
+      if (!chData) continue;
+      var vStart = (ch === parsed.ch)    ? parsed.v    : 1;
+      var vEnd   = (ch === parsed.endCh) ? parsed.endV : 999;
+      for (var v = vStart; v <= vEnd; v++) {
+        var tokens = chData[String(v)];
+        if (!tokens || !tokens.length) continue;
+        layer1Html += '<div class="sw-grammar-verse">'
+          + '<div class="sw-grammar-verse__ref">' + ch + ':' + v + '</div>'
+          + '<table class="sw-grammar-table"><thead><tr>'
+          + '<th>Word</th><th>Gloss</th><th>Code</th><th>Note</th>'
+          + '</tr></thead><tbody>';
+        tokens.forEach(function(tok) {
+          if (!tok.s) return;
+          var entry     = _getEntry(tok.s);
+          var lemma     = (entry && entry.lemma)  || '';
+          var gloss     = tok.text || (entry && entry.gloss) || tok.s;
+          var particle  = particlesData[tok.s];
+          var noteHtml  = particle
+            ? '<span class="sw-grammar-particle sw-marker-legend--' + _esc(particle.function) + '">'
+              + _esc(particle.function_label) + '</span>'
+            : (entry && entry.pos ? '<span class="sw-grammar-pos">' + _esc(entry.pos) + '</span>' : '');
+          layer1Html += '<tr>'
+            + '<td class="sw-grammar-lemma">' + (lemma ? _esc(lemma) : '<span style="opacity:.5">' + _esc(tok.s) + '</span>') + '</td>'
+            + '<td class="sw-grammar-gloss">' + _esc(gloss) + '</td>'
+            + '<td class="sw-grammar-code">' + _esc(tok.s) + '</td>'
+            + '<td class="sw-grammar-note">' + noteHtml + '</td>'
+            + '</tr>';
+        });
+        layer1Html += '</tbody></table></div>';
+      }
+    }
+  }
+
+  // Build layer-2: mkt-original prose
+  var layer2Html = '';
+  if (mktData) {
+    for (var ch2 = parsed.ch; ch2 <= parsed.endCh; ch2++) {
+      var chData2 = mktData[String(ch2)];
+      if (!chData2) continue;
+      var vStart2 = (ch2 === parsed.ch)    ? parsed.v    : 1;
+      var vEnd2   = (ch2 === parsed.endCh) ? parsed.endV : 999;
+      for (var v2 = vStart2; v2 <= vEnd2; v2++) {
+        var prose = chData2[String(v2)];
+        if (!prose) continue;
+        layer2Html += '<div class="sw-grammar-prose">'
+          + '<div class="sw-grammar-prose__ref">' + ch2 + ':' + v2 + ' — Original Language Notes</div>'
+          + prose
+          + '</div>';
+      }
+    }
+  }
+
+  if (!layer1Html && !layer2Html) {
+    container.innerHTML = '<p class="sw-tab-stub">No grammar data available for this passage.</p>';
+    return;
+  }
+
+  container.innerHTML = (layer1Html || '') + (layer2Html
+    ? '<div class="sw-grammar-prose-section">' + layer2Html + '</div>'
+    : '<p class="sw-grammar-no-prose">Original language notes not yet available for this book.</p>');
+}
+
+/* ── Word Study Dictionary / Glossary ─────────────────────── */
+// INTENT: Accent-forgiving full Strong's dictionary searchable by gloss (English),
+//   lemma (original script), transliteration, or Strong's code. Loads both Greek and
+//   Hebrew lazily on first open; filters are additive chips (all on = show everything).
+// CHANGE? If loadStrongs() return shape changes (lemma/gloss/pos fields), update _dictNorm().
+// VERIFY: Open Word Study → click Dictionary → type "love" → G25/G26/H157 appear.
+//   Type "logos" → G3056 appears. Deselect "Hebrew" chip → only Greek entries show.
+
+var _dictCache = { greek: null, hebrew: null };  // null = not loaded; {} = loaded
+var _dictActiveFilters = new Set(['greek', 'hebrew', 'noun', 'verb', 'name', 'other']);
+var _dictSearchTimer = null;
+
+// Strip accents / diacritics from a string for accent-forgiving comparison
+function _stripAccents(str) {
+  return (str || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+// Map a POS string to a filter category
+function _posToFilter(pos) {
+  if (!pos) return 'other';
+  var p = pos.toLowerCase();
+  if (p.includes('noun') || p.includes('substantive')) return 'noun';
+  if (p.includes('verb') || p.includes('participle'))   return 'verb';
+  if (p.includes('name') || p.includes('proper'))       return 'name';
+  return 'other';
+}
+
+// Load dictionaries lazily
+async function _ensureDictLoaded(langs) {
+  var tasks = [];
+  if (langs.includes('greek') && !_dictCache.greek) {
+    tasks.push(loadStrongs('greek').then(function(d) { _dictCache.greek = d || {}; }).catch(function() { _dictCache.greek = {}; }));
+  }
+  if (langs.includes('hebrew') && !_dictCache.hebrew) {
+    tasks.push(loadStrongs('hebrew').then(function(d) { _dictCache.hebrew = d || {}; }).catch(function() { _dictCache.hebrew = {}; }));
+  }
+  if (tasks.length) await Promise.all(tasks);
+}
+
+// INTENT: Wire the dictionary toggle button and filter chips. Called once when Word Study
+//   mode panel is first shown. Re-calls are safe (idempotent via _dictInited guard).
+// CHANGE? If filter chip data-filter values change in HTML, update _dictActiveFilters init and _posToFilter().
+// VERIFY: Click "Dictionary" button → dict panel slides in/out. Deselect "Verbs" → verb entries disappear.
+var _dictInited = false;
+function _initDictPanel() {
+  if (_dictInited) return;
+  _dictInited = true;
+
+  var toggleBtn  = document.getElementById('sw-ws-dict-toggle');
+  var dictCol    = document.getElementById('sw-ws-dict-col');
+  var bodyArea   = document.getElementById('sw-ws-body-area');
+  var wsInput    = document.getElementById('sw-ws-input');
+  var filterBtns = document.querySelectorAll('.sw-ws-filter[data-filter]');
+
+  // Filter chips — additive (all on by default; click toggles off/on)
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var f = btn.dataset.filter;
+      if (_dictActiveFilters.has(f)) {
+        _dictActiveFilters.delete(f);
+        btn.classList.remove('sw-ws-filter--active');
+      } else {
+        _dictActiveFilters.add(f);
+        btn.classList.add('sw-ws-filter--active');
+      }
+      _runDictSearch();
+    });
+  });
+
+  // INTENT: Dictionary toggle opens a 50/50 split: left=dict browser, right=word detail.
+  //   Toggling off restores full-width word detail. Runs initial search on first open.
+  // CHANGE? If sw-ws-dict-col or sw-ws-body-area IDs change, update selectors here.
+  // VERIFY: Click Dictionary → left panel appears with filters + list; word detail stays on right.
+  if (toggleBtn && dictCol && bodyArea) {
+    toggleBtn.addEventListener('click', function() {
+      var open = !dictCol.hidden;
+      dictCol.hidden = open;
+      bodyArea.classList.toggle('sw-ws-body-area--dict-open', !open);
+      toggleBtn.classList.toggle('ws-btn--active', !open);
+      if (!open) _runDictSearch();
+    });
+  }
+
+  // Search input drives both the detail panel AND the dictionary list
+  if (wsInput) {
+    wsInput.addEventListener('input', function() {
+      clearTimeout(_dictSearchTimer);
+      _dictSearchTimer = setTimeout(_runDictSearch, 250);
+    });
+  }
+}
+
+// INTENT: Run an accent-forgiving search across both Strong's dictionaries.
+//   Query matches against: gloss, lemma, transliteration, Strong's code.
+//   Results are filtered by active chip set, then limited to 200 rows for performance.
+// CHANGE? If _dictCache structure changes (greek/hebrew keys), update lang loop below.
+// VERIFY: Search "agape" → G26 appears. Search "chesed" → H2617 appears.
+//   Search "faith" → G4102, H530 both appear (if both lang filters active).
+async function _runDictSearch() {
+  var dictCol = document.getElementById('sw-ws-dict-col');
+  if (!dictCol || dictCol.hidden) return;
+
+  var q = ((document.getElementById('sw-ws-input') || {}).value || '').trim();
+  var qStrip = _stripAccents(q);
+
+  // Determine which language dicts to load based on active filters
+  var langs = [];
+  if (_dictActiveFilters.has('greek'))  langs.push('greek');
+  if (_dictActiveFilters.has('hebrew')) langs.push('hebrew');
+  if (!langs.length) { _renderDictResults([], q); return; }
+
+  await _ensureDictLoaded(langs);
+
+  var results = [];
+
+  langs.forEach(function(lang) {
+    var dict = _dictCache[lang] || {};
+    Object.keys(dict).forEach(function(code) {
+      var entry = dict[code];
+      if (!entry) return;
+
+      // POS filter check
+      var posFilter = _posToFilter(entry.pos || entry.part_of_speech || '');
+      if (!_dictActiveFilters.has(posFilter)) return;
+
+      // If no query, include all (up to limit)
+      if (!q) { results.push({ code: code, entry: entry, lang: lang, score: 0 }); return; }
+
+      // Accent-forgiving matching
+      var lemmaStrip   = _stripAccents(entry.lemma || '');
+      var glossStrip   = _stripAccents(entry.gloss || entry.meaning || '');
+      var translitStrip = _stripAccents(entry.translit || entry.transliteration || '');
+      var codeStrip    = (code || '').toLowerCase();
+
+      var score = 0;
+      if (codeStrip === qStrip.toUpperCase() || codeStrip === qStrip)       score = 100; // exact code
+      else if (codeStrip.startsWith(qStrip))                                 score = 90;
+      else if (lemmaStrip.startsWith(qStrip))                                score = 85;
+      else if (translitStrip.startsWith(qStrip))                             score = 80;
+      else if (glossStrip.split(/\s+/).some(function(w) { return w.startsWith(qStrip); })) score = 75;
+      else if (lemmaStrip.includes(qStrip))                                  score = 60;
+      else if (translitStrip.includes(qStrip))                               score = 55;
+      else if (glossStrip.includes(qStrip))                                  score = 50;
+      else return; // no match
+
+      results.push({ code: code, entry: entry, lang: lang, score: score });
+    });
+  });
+
+  // Sort: exact/prefix matches first, then by score desc, then alphabetically by gloss
+  results.sort(function(a, b) {
+    if (b.score !== a.score) return b.score - a.score;
+    return (a.entry.gloss || '').localeCompare(b.entry.gloss || '');
+  });
+
+  _renderDictResults(results.slice(0, 200), q);
+}
+
+function _renderDictResults(results, q) {
+  var statusEl = document.getElementById('sw-dict-status');
+  var listEl   = document.getElementById('sw-dict-list');
+  if (!statusEl || !listEl) return;
+
+  statusEl.textContent = results.length === 0 ? (q ? 'No matches' : 'Loading…')
+    : results.length + ' entr' + (results.length === 1 ? 'y' : 'ies') + (results.length === 200 ? ' (showing first 200)' : '');
+
+  if (!results.length) { listEl.innerHTML = ''; return; }
+
+  var qStrip = _stripAccents(q);
+  function _hi(str) {
+    if (!q) return _esc(str || '');
+    var s = _esc(str || '');
+    var sLow = _stripAccents(str || '');
+    var idx = sLow.indexOf(qStrip);
+    if (idx < 0) return s;
+    return _esc((str || '').slice(0, idx)) + '<em class="sw-dict-hi">' + _esc((str || '').slice(idx, idx + q.length)) + '</em>' + _esc((str || '').slice(idx + q.length));
+  }
+
+  var html = '';
+  results.forEach(function(r) {
+    var posClass = r.lang === 'greek' ? 'sw-dict-meta--greek' : 'sw-dict-meta--hebrew';
+    var pos = (r.entry.pos || r.entry.part_of_speech || '').replace(/\b(\w)/g, function(m) { return m.toUpperCase(); });
+    html += '<div class="sw-dict-entry" data-code="' + _esc(r.code) + '" role="button" tabindex="0">'
+      + '<span class="sw-dict-word">' + _esc(r.entry.lemma || r.code) + '</span>'
+      + '<span class="sw-dict-gloss">' + _hi(r.entry.gloss || r.entry.meaning || '') + '</span>'
+      + '<span class="sw-dict-meta ' + posClass + '">' + _esc(r.code) + '</span>'
+      + '</div>';
+  });
+  listEl.innerHTML = html;
+
+  // Wire entry clicks → open word study for that code
+  listEl.querySelectorAll('.sw-dict-entry[data-code]').forEach(function(row) {
+    row.addEventListener('click', function() {
+      listEl.querySelectorAll('.sw-dict-entry').forEach(function(r) { r.classList.remove('sw-dict-entry--active'); });
+      row.classList.add('sw-dict-entry--active');
+      _renderWordStudyPanel(row.dataset.code);
+    });
+    row.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+    });
+  });
+}
+
+/* ── Study Mode Switching ──────────────────────────────────── */
+// INTENT: Switch between the three primary study modes (verse/word/book). Each mode
+//   shows a different center column panel and adjusts the page CSS class so the dossier
+//   column is hidden in word and book modes (giving the center panel full width).
+// CHANGE? If new mode panel IDs are added to index.html, add them to the panel map here.
+// VERIFY: Click "Word Study" tab → dossier column disappears; Word Study panel fills center.
+function _setStudyMode(mode) {
+  _studyMode = mode;
+
+  // Update mode button states
+  document.querySelectorAll('.sw-mode-btn').forEach(function(btn) {
+    btn.classList.toggle('sw-mode-btn--active', btn.dataset.mode === mode);
+  });
+
+  // Toggle page-level CSS classes so grid layout adjusts
+  var page = document.querySelector('.ws-page');
+  if (page) {
+    page.classList.toggle('ws-page--word-study', mode === 'word');
+    page.classList.toggle('ws-page--book-study', mode === 'book');
+  }
+
+  // Show/hide panels
+  var verseMode = document.getElementById('sw-verse-mode');
+  var wordMode  = document.getElementById('sw-word-mode');
+  var bookMode  = document.getElementById('sw-book-mode');
+  if (verseMode) verseMode.hidden = (mode !== 'verse');
+  if (wordMode)  wordMode.hidden  = (mode !== 'word');
+  if (bookMode)  bookMode.hidden  = (mode !== 'book');
+
+  if (mode === 'book') {
+    _initBookStudyPanel();
+  } else if (mode === 'word') {
+    _initDictPanel();  // idempotent — safe to call on every entry to word mode
+    if (_uiState.activeCode) {
+      _renderWordStudyPanel(_uiState.activeCode);
+    }
+  }
+}
+
+/* ── Word Study Panel ──────────────────────────────────────── */
+// INTENT: Full-page word study in the center column. Uses curated vocabulary entry if available
+//   (rich dossier sections: grammar, debates, idioms, frequency, semantic neighborhood, cognates,
+//   second-temple context, lexical sources) with concordance in a second column. Falls back to
+//   Strongs-only data for words outside the curated set.
+// CHANGE? If Strong's data format changes (loadStrongs return shape), update destructuring below.
+//   If dossier rendering functions are renamed, update all calls inside this function.
+// VERIFY: Click "Word Study", type G3056 → λόγος lemma card shows; scroll to see grammar,
+//   idiom alerts, semantic neighborhood; right column shows usage from current book if loaded.
+async function _renderWordStudyPanel(code) {
+  var bodyEl = document.getElementById('sw-ws-body');
+  if (!bodyEl) return;
+  bodyEl.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading…</p>';
+
+  var lang = code.startsWith('G') ? 'greek' : 'hebrew';
+
+  // Load both curated entry and Strongs fallback in parallel
+  var [strongsDict] = await Promise.all([
+    loadStrongs(lang).catch(function() { return {}; })
+  ]);
+
+  var curatedEntry = _getEntry(code);  // may be null if word not in curated vocab set
+  var sEntry = strongsDict[code];
+
+  if (!curatedEntry && !sEntry) {
+    bodyEl.innerHTML = '<p class="sw-ws-placeholder">No entry found for <strong>' + _esc(code) + '</strong>.</p>';
+    return;
+  }
+
+  // Prefer curated data; fall back to Strongs fields
+  var src    = curatedEntry || {};
+  var lemma  = src.lemma    || sEntry?.lemma   || sEntry?.word   || code;
+  var gloss  = src.gloss    || sEntry?.gloss   || sEntry?.meaning || '';
+  var translit = src.translit || sEntry?.translit || sEntry?.transliteration || '';
+  var pos    = src.pos      || sEntry?.pos     || sEntry?.part_of_speech || '';
+  var freq   = src.nt_freq  ?? src.ot_freq     ?? sEntry?.frequency ?? 0;
+  var freqLabel = lang === 'greek' ? 'NT' : 'OT';
+
+  // ── Left column: lemma card + rich lexical sections ──────────────────
+  var leftHtml = '<div class="sw-ws-lemma-card">'
+    + '<div class="sw-ws-lemma-word">' + _esc(lemma) + '</div>'
+    + (translit ? '<div class="sw-ws-lemma-translit">' + _esc(translit) + '</div>' : '')
+    + '<div class="sw-ws-lemma-gloss">"' + _esc(gloss) + '"</div>'
+    + (pos ? '<div class="sw-ws-lemma-pos">' + _esc(pos) + ' · ' + _esc(code) + '</div>' : '<div class="sw-ws-lemma-pos">' + _esc(code) + '</div>')
+    + '</div>';
+
+  // Add-to-deck button
+  leftHtml += '<div style="margin-top:0.75rem;margin-bottom:0.5rem">'
+    + '<button type="button" class="sw-add-deck-btn ws-btn ws-btn--sm" data-code="' + _esc(code) + '">'
+    + (_isInDeck(code) ? '★ In Your Deck' : '☆ Add to Deck')
+    + '</button></div>';
+
+  if (curatedEntry) {
+    // ── Rich sections from curated dossier data ─────────────────────────
+    // Semantic range (attested range headline)
+    if (src.semantic_range) {
+      leftHtml += '<div class="sw-ws-section-head">Attested Range</div>'
+        + '<div class="sw-ws-prose">' + _esc(src.semantic_range) + '</div>';
+    }
+    if (src.attested_uses && src.attested_uses.length) {
+      leftHtml += _renderAttestedUses(src.attested_uses);
+    }
+
+    // Grammar significance (morphology hints, particle function card)
+    leftHtml += _renderGrammarSection(code, lang);
+
+    // Contested interpretations
+    leftHtml += _renderDebateSection(code);
+
+    // Idiom alerts
+    leftHtml += _renderIdiomAlertSection(code);
+
+    // Author frequency
+    leftHtml += _renderAuthorFreqSection(code, lang);
+
+    // Semantic neighborhood (PMI co-occurrence)
+    leftHtml += _renderSemanticSection(code, lang);
+
+    // Word family / cognates
+    leftHtml += _renderCognateSection(code);
+
+    // Second Temple context
+    leftHtml += _renderSTContext(code);
+
+    // Extrabiblical uses (M&M papyri — Greek only)
+    if (lang === 'greek' && src.extrabiblical_uses && src.extrabiblical_uses.length) {
+      leftHtml += _renderExtrabib(src.extrabiblical_uses);
+    }
+
+    // Frequency
+    if (freq) {
+      leftHtml += '<div class="sw-ws-section-head">Frequency</div>'
+        + '<div class="sw-ws-prose">Appears <strong>' + freq + '</strong> time'
+        + (freq === 1 ? '' : 's') + ' in the ' + freqLabel + '</div>';
+    }
+
+    // Lexical sources (Dodson/Thayer/BDB etc.)
+    leftHtml += _renderLexicalSourcesSection(src);
+
+    // LXX Bridge (Hebrew only — how Septuagint translators rendered this word)
+    if (lang === 'hebrew' && src.lxx_bridge && src.lxx_bridge.length) {
+      leftHtml += _renderLxxBridge(src.lxx_bridge);
+    }
+
+  } else {
+    // ── Strongs-only fallback (word not in curated vocab set) ─────────────
+    var definition = sEntry.definition || sEntry.long_definition || '';
+    if (definition) {
+      leftHtml += '<div class="sw-ws-section-head">Definition</div>'
+        + '<div class="sw-ws-prose">' + _esc(definition) + '</div>';
+    }
+    if (sEntry.semantic_range) {
+      leftHtml += '<div class="sw-ws-section-head">Semantic Range</div>'
+        + '<div class="sw-ws-prose">' + _esc(sEntry.semantic_range) + '</div>';
+    }
+    if (freq) {
+      leftHtml += '<div class="sw-ws-section-head">Frequency</div>'
+        + '<div class="sw-ws-prose">Appears <strong>' + freq + '</strong> time'
+        + (freq === 1 ? '' : 's') + ' in the ' + freqLabel + '</div>';
+    }
+    // Cognate family from cached data even for Strongs-only entries
+    var cognateFamily = _getCognateFamily(code, lang);
+    if (cognateFamily && cognateFamily.members && cognateFamily.members.length > 1) {
+      leftHtml += '<div class="sw-ws-section-head">Word Family</div><div>';
+      cognateFamily.members.slice(0, 8).forEach(function(m) {
+        if (m.code === code) return;
+        leftHtml += '<span class="sw-xref-chip" style="margin-bottom:0.3rem" data-code="' + _esc(m.code) + '">'
+          + _esc(m.lemma || m.code) + ' <em style="font-style:normal;opacity:0.7">' + _esc(m.gloss || '') + '</em></span> ';
+      });
+      leftHtml += '</div>';
+    }
+    leftHtml += '<p class="ws-placeholder" style="font-size:.8rem;margin-top:1rem">'
+      + 'Full dossier unavailable — word is outside the curated vocabulary set.</p>';
+  }
+
+  // ── Right column: concordance from loaded interlinear book ────────────
+  var rightHtml = '<div class="sw-ws-section-head">Usage in Scripture</div>';
+  if (_interData && _passageRef) {
+    var matches = [];
+    Object.keys(_interData).forEach(function(ch) {
+      var chData = _interData[ch];
+      if (!chData || !chData.verses) return;
+      Object.keys(chData.verses).forEach(function(v) {
+        var verseWords = chData.verses[v];
+        if (!Array.isArray(verseWords)) return;
+        var hasCode = verseWords.some(function(w) {
+          return w.strongs === code || (Array.isArray(w.strongs) && w.strongs.includes(code));
+        });
+        if (hasCode) {
+          var ref = _passageRef.bookId + ' ' + ch + ':' + v;
+          matches.push({ ch: parseInt(ch), v: parseInt(v), ref: ref, allWords: verseWords });
+        }
+      });
+    });
+
+    if (matches.length) {
+      rightHtml += '<div style="font-size:0.78rem;color:var(--color-text-muted,#7a6a4a);margin-bottom:0.5rem">'
+        + matches.length + ' occurrence' + (matches.length === 1 ? '' : 's') + ' in current book</div>';
+      matches.slice(0, 20).forEach(function(m) {
+        var verseGloss = m.allWords.map(function(w) {
+          var g = w.gloss || '';
+          return (w.strongs === code || (Array.isArray(w.strongs) && w.strongs.includes(code)))
+            ? '<em>' + _esc(g) + '</em>' : _esc(g);
+        }).join(' ');
+        rightHtml += '<div class="sw-ws-usage-verse" data-ref="' + _esc(m.ref) + '">'
+          + '<span class="sw-ws-usage-ref">' + _esc(m.ref.replace(/^\S+ /, '')) + '</span>'
+          + '<span class="sw-ws-usage-text">' + verseGloss + '</span>'
+          + '</div>';
+      });
+      if (matches.length > 20) {
+        rightHtml += '<p style="font-size:0.78rem;color:var(--color-text-muted,#7a6a4a);margin-top:0.5rem">… and ' + (matches.length - 20) + ' more</p>';
+      }
+    } else {
+      rightHtml += '<p style="font-size:0.87rem;color:var(--color-text-muted,#7a6a4a)">Not found in the currently loaded book.</p>';
+    }
+  } else {
+    // INTENT: No passage loaded — show where the word appears across the Bible so
+    //   the user has immediate value before loading a specific passage.
+    // CHANGE? If _renderBookDistribution signature changes, update call below.
+    var distEntry = _getEntry(code);
+    if (distEntry && Object.keys(distEntry._bookFreq || {}).length) {
+      rightHtml += '<div style="font-size:0.82rem;color:var(--color-text-muted,#7a6a4a);margin-bottom:0.5rem">'
+        + 'Bible distribution (study a passage to see verse occurrences)</div>';
+      rightHtml += _renderBookDistribution(distEntry._bookFreq, distEntry._lang);
+    } else {
+      rightHtml += '<p style="font-size:0.87rem;color:var(--color-text-muted,#7a6a4a)">'
+        + 'Study a passage first — occurrences from that book will appear here.</p>';
+    }
+  }
+
+  bodyEl.innerHTML = '<div class="sw-ws-detail"><div class="sw-ws-detail-left">' + leftHtml + '</div>'
+    + '<div class="sw-ws-detail-right">' + rightHtml + '</div></div>';
+
+  // Wire deck toggle
+  var deckBtn = bodyEl.querySelector('.sw-add-deck-btn[data-code]');
+  if (deckBtn) deckBtn.addEventListener('click', function() {
+    _fcToggleDeck(deckBtn.dataset.code);
+    deckBtn.textContent = _isInDeck(deckBtn.dataset.code) ? '★ In Your Deck' : '☆ Add to Deck';
+  });
+
+  // Wire cognate/family/semantic chips to navigate within word study
+  bodyEl.querySelectorAll('[data-code]').forEach(function(chip) {
+    chip.addEventListener('click', function(e) {
+      var c = chip.dataset.code;
+      if (c && c !== code) { e.stopPropagation(); _renderWordStudyPanel(c); }
+    });
+  });
+
+  // Wire verse usage rows to switch to verse study
+  bodyEl.querySelectorAll('.sw-ws-usage-verse[data-ref]').forEach(function(row) {
+    row.addEventListener('click', function() {
+      _setStudyMode('verse');
+      _studyPassage(row.dataset.ref);
+    });
+  });
+}
+
+// INTENT: Render the Lexical Sources section (Dodson, Thayer, BDB, etc.) for the word study panel.
+//   Pulls from src.source_data directly without <details> wrapping since the panel is full-width.
+// CHANGE? If source_data field names change in seed-glossary.py, update the keys below.
+// VERIFY: Word Study → type G26 (ἀγάπη) → Lexical Sources section shows Dodson and Thayer cards.
+function _renderLexicalSourcesSection(src) {
+  if (!src.source_data) return '';
+  var sd = src.source_data;
+  var isGreek = (src._lang === 'greek');
+  var manifest = isGreek ? [
+    { label: 'Dodson (CC0)',        gloss: sd.dodson?.gloss,   def: sd.dodson?.def,   extra: sd.dodson?.deriv },
+    { label: 'Thayer (1889)',       gloss: sd.thayer?.short,   def: sd.thayer?.long,  extra: '' },
+    { label: 'Abbott-Smith (1922)', gloss: sd.abbott?.gloss,   def: sd.abbott?.def,   extra: sd.abbott?.classical_note || '' },
+  ] : [
+    { label: "Strong's Hebrew",     gloss: sd.hebrew?.gloss,   def: sd.hebrew?.def,   extra: sd.hebrew?.deriv },
+    { label: 'BDB (1906)',          gloss: sd.bdb?.short,      def: sd.bdb?.long,     extra: '' },
+    { label: 'Gesenius (1857)',     gloss: sd.gesenius?.gloss, def: sd.gesenius?.def, extra: sd.gesenius?.cognates || '' },
+  ];
+  var active = manifest.filter(function(m) { return m.gloss || m.def; });
+  if (!active.length) return '';
+  var out = '<div class="sw-ws-section-head">Lexical Sources</div>';
+  active.forEach(function(m) { out += _sourceCard(m.label, m.gloss, m.def, m.extra); });
+  return out;
+}
+
+// _getCognateFamily: pull the current word's cognate family from the cached data.
+function _getCognateFamily(code, lang) {
+  var prefix = lang === 'greek' ? 'G' : 'H';
+  var idx = _cognatesIndex[prefix];
+  var families = _cognatesFamilies[prefix];
+  if (!idx || !families) return null;
+  var root = idx[code];
+  if (!root) return null;
+  return families.find(function(f) { return f.root === root; }) || null;
+}
+
+/* ── Book Study Panel ──────────────────────────────────────── */
+// INTENT: Initialize the book selector dropdown once on first entry into book study mode.
+//   Populates from data/bible/books.json so the user can pick any canonical book.
+// CHANGE? If loadBooks() data shape changes (bookId, name), update the option-building here.
+// VERIFY: Switch to Book Study mode → dropdown lists all 66 books alphabetically by order.
+var _bookStudyInited = false;
+async function _initBookStudyPanel() {
+  if (_bookStudyInited) return;
+  _bookStudyInited = true;
+  await loadBooks();
+  var sel = document.getElementById('sw-book-select');
+  if (!sel) return;
+
+  // loadBooks() populates the module-level metaBooks via bookOrder; re-fetch via loadBooks return
+  var books = await loadBooks();
+  books.forEach(function(b) {
+    var opt = document.createElement('option');
+    opt.value = b.id;
+    opt.textContent = b.name;
+    sel.appendChild(opt);
+  });
+
+  sel.addEventListener('change', function() {
+    if (sel.value) _renderBookStudy(sel.value);
+  });
+
+  // Pre-select the current passage's book if one is loaded
+  if (_passageRef) {
+    sel.value = _passageRef.bookId;
+    _renderBookStudy(_passageRef.bookId);
+  }
+}
+
+// INTENT: Render book-level study content: introduction, themes, key vocabulary, and idioms
+//   found in that book. Data sources: cultural/book-context.json, author-freq data, idioms.json.
+// CHANGE? If cultural/book-context.json schema changes (intro/themes fields renamed), update accessors.
+// VERIFY: Switch to Book Study, select Romans → intro paragraph, theme chips, key term list renders.
+// INTENT: Load supplemental book study data from data/workshop/book-study/{bookId}.json.
+//   This is the SW-V schema: key_vocabulary, language_notes, reception, reading_guide.
+//   Falls back to empty object if file doesn't exist yet (most books not yet generated).
+// CHANGE? If the book study data path or schema changes, update the fetch URL and field accessors below.
+// VERIFY: Select Romans in Book Study → Vocabulary/Language/Reception/Reading tabs all render.
+var _bookStudyCache = {};
+async function _loadBookStudyData(bookId) {
+  if (_bookStudyCache[bookId] !== undefined) return _bookStudyCache[bookId];
+  try {
+    var url = _resolve('../../data/workshop/book-study/' + bookId + '.json');
+    var res = await fetch(url);
+    _bookStudyCache[bookId] = res.ok ? await res.json() : {};
+  } catch(e) { _bookStudyCache[bookId] = {}; }
+  return _bookStudyCache[bookId];
+}
+
+async function _renderBookStudy(bookId) {
+  var bodyEl = document.getElementById('sw-book-body');
+  if (!bodyEl) return;
+  bodyEl.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading…</p>';
+
+  var lang = _bookLang(bookId);
+
+  // Pre-warm caches — all populate module-level variables; return values vary.
+  // Phase data is loaded so _getEntry() resolves lemma/gloss in the Key Terms tab.
+  var [,,,, bsData] = await Promise.all([
+    _loadCultural().catch(function() {}),
+    (lang === 'greek' ? _loadAuthorFreq('greek') : _loadAuthorFreq('hebrew')).catch(function() {}),
+    _loadIdioms().catch(function() {}),
+    _loadPhase(lang === 'greek' ? 'phase1' : 'phase2').catch(function() {}),
+    _loadBookStudyData(bookId),
+  ]);
+
+  // Access module-level caches directly after loading
+  var bookCtx = _culturalCache && _culturalCache.bookContext && _culturalCache.bookContext[bookId];
+
+  var html = '';
+
+  // Introduction
+  if (bookCtx && bookCtx.intro) {
+    html += '<div class="sw-book-intro-card">' + _esc(bookCtx.intro) + '</div>';
+  }
+
+  // Determine which tabs to show based on available supplemental data
+  var hasVocab    = bsData && Array.isArray(bsData.key_vocabulary) && bsData.key_vocabulary.length;
+  var hasLangNote = bsData && bsData.language_notes;
+  var hasReception = bsData && bsData.reception;
+  var hasReadingGuide = bsData && bsData.reading_guide;
+
+  // Build tab bar — supplemental tabs shown when data exists
+  html += '<div class="sw-book-tabs">'
+    + '<button type="button" class="sw-book-tab sw-book-tab--active" data-btab="overview">Overview</button>'
+    + '<button type="button" class="sw-book-tab" data-btab="themes">Themes</button>'
+    + '<button type="button" class="sw-book-tab" data-btab="terms">Key Terms</button>'
+    + '<button type="button" class="sw-book-tab" data-btab="idioms">Idioms</button>'
+    + (hasVocab      ? '<button type="button" class="sw-book-tab" data-btab="vocabulary">Vocabulary</button>' : '')
+    + (hasLangNote   ? '<button type="button" class="sw-book-tab" data-btab="language">Language</button>' : '')
+    + (hasReception  ? '<button type="button" class="sw-book-tab" data-btab="reception">Reception</button>' : '')
+    + (hasReadingGuide ? '<button type="button" class="sw-book-tab" data-btab="reading">Reading Guide</button>' : '')
+    + '</div>'
+    + '<div id="sw-book-tab-content" class="sw-book-tab-content"></div>';
+
+  bodyEl.innerHTML = html;
+
+  var freqData  = _authorFreqCache[lang] || null;
+  var idiomsArr = _idiomsData ? Object.values(_idiomsData) : [];
+
+  // Wire tab switching
+  var tabContent = bodyEl.querySelector('#sw-book-tab-content');
+  bodyEl.querySelectorAll('.sw-book-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      bodyEl.querySelectorAll('.sw-book-tab').forEach(function(b) { b.classList.remove('sw-book-tab--active'); });
+      btn.classList.add('sw-book-tab--active');
+      var tab = btn.dataset.btab;
+      if (tab === 'vocabulary') {
+        _renderBookVocabTab(bsData.key_vocabulary, tabContent);
+      } else if (tab === 'language') {
+        tabContent.innerHTML = '<div class="sw-book-html-content">' + (bsData.language_notes || '') + '</div>';
+      } else if (tab === 'reception') {
+        tabContent.innerHTML = '<div class="sw-book-html-content">' + (bsData.reception || '') + '</div>';
+      } else if (tab === 'reading') {
+        tabContent.innerHTML = '<div class="sw-book-html-content">' + (bsData.reading_guide || '') + '</div>';
+      } else {
+        _renderBookTab(tab, bookId, bookCtx, freqData, idiomsArr, tabContent, lang);
+      }
+    });
+  });
+
+  _renderBookTab('overview', bookId, bookCtx, freqData, idiomsArr, tabContent, lang);
+}
+
+// INTENT: Render the key_vocabulary array as clickable rows that open Word Study for each code.
+//   Shows lemma, translit, gloss chip, and significance note for each entry.
+// CHANGE? If key_vocabulary schema fields change (code/lemma/translit/gloss/significance), update row HTML.
+// VERIFY: Romans Book Study → Vocabulary tab → 15 rows with lemma, gloss, and expandable significance.
+function _renderBookVocabTab(vocab, container) {
+  if (!vocab || !vocab.length) {
+    container.innerHTML = '<p class="sw-ws-placeholder">No vocabulary data for this book yet.</p>';
+    return;
+  }
+  var html = '<div style="font-size:0.78rem;color:var(--color-text-muted,#7a6a4a);margin-bottom:0.75rem">'
+    + 'Characteristic vocabulary of this book. Click any row to open full Word Study.</div>';
+  vocab.forEach(function(entry) {
+    html += '<details class="sw-bookvoc-row" data-code="' + _esc(entry.code || '') + '">'
+      + '<summary class="sw-bookvoc-summary">'
+      + '<span class="sw-bookvoc-lemma">' + _esc(entry.lemma || entry.code || '') + '</span>'
+      + (entry.translit ? '<span class="sw-bookvoc-translit">' + _esc(entry.translit) + '</span>' : '')
+      + '<span class="sw-bookvoc-gloss">' + _esc(entry.gloss || '') + '</span>'
+      + '<span class="sw-bookvoc-code">' + _esc(entry.code || '') + '</span>'
+      + '</summary>'
+      + '<div class="sw-bookvoc-sig">' + _esc(entry.significance || '') + '</div>'
+      + '</details>';
+  });
+  container.innerHTML = html;
+  container.querySelectorAll('.sw-bookvoc-row[data-code]').forEach(function(row) {
+    row.querySelector('.sw-bookvoc-summary').addEventListener('click', function(e) {
+      // Single click opens details; double-click or Ctrl+click opens Word Study
+    });
+    row.addEventListener('dblclick', function() {
+      var code = row.dataset.code;
+      if (code) { _setStudyMode('word'); _renderWordStudyPanel(code); }
+    });
+  });
+}
+
+function _bookLang(bookId) {
+  // OT books are Hebrew; NT books are Greek
+  var ntStart = ['matthew', 'mark', 'luke', 'john', 'acts', 'romans', '1corinthians',
+    '2corinthians', 'galatians', 'ephesians', 'philippians', 'colossians',
+    '1thessalonians', '2thessalonians', '1timothy', '2timothy', 'titus', 'philemon',
+    'hebrews', 'james', '1peter', '2peter', '1john', '2john', '3john', 'jude', 'revelation'];
+  return ntStart.includes((bookId || '').toLowerCase()) ? 'greek' : 'hebrew';
+}
+
+function _renderBookTab(tab, bookId, bookCtx, freqData, idiomsArr, container, lang) {
+  var html = '';
+
+  if (tab === 'overview') {
+    if (bookCtx) {
+      if (bookCtx.historical_context) {
+        html += '<p>' + _esc(bookCtx.historical_context) + '</p>';
+      }
+      if (bookCtx.key_cultural_notes && bookCtx.key_cultural_notes.length) {
+        html += '<div class="sw-ws-section-head">Cultural Notes</div>';
+        bookCtx.key_cultural_notes.forEach(function(note) {
+          html += '<p>' + _esc(typeof note === 'string' ? note : String(note)) + '</p>';
+        });
+      }
+    } else {
+      html = '<p class="sw-ws-placeholder">No overview available for this book yet.</p>';
+    }
+
+  } else if (tab === 'themes') {
+    var frameworks = (bookCtx && bookCtx.cultural_frameworks) || [];
+    // INTENT: Look up each framework ID in the already-loaded _culturalCache.frameworks array
+    //   so the Themes tab shows prose (summary + what_it_means_for_reading) rather than bare chip labels.
+    // CHANGE? If frameworks.json schema changes (summary/what_it_means_for_reading renamed), update accessors here.
+    var fwIndex = {};
+    if (_culturalCache && Array.isArray(_culturalCache.frameworks)) {
+      _culturalCache.frameworks.forEach(function(fw) { fwIndex[fw.id] = fw; });
+    }
+    if (frameworks.length) {
+      frameworks.forEach(function(t) {
+        var id  = typeof t === 'string' ? t : (t.name || String(t));
+        var fw  = fwIndex[id];
+        html += '<div class="sw-book-theme-block">'
+          + '<span class="sw-book-theme-chip">' + _esc(fw ? fw.title : id) + '</span>';
+        if (fw && fw.summary) {
+          html += '<p class="sw-book-theme-summary">' + _esc(fw.summary) + '</p>';
+        }
+        if (fw && fw.what_it_means_for_reading) {
+          html += '<p class="sw-book-theme-reading">' + _esc(fw.what_it_means_for_reading) + '</p>';
+        }
+        html += '</div>';
+      });
+    } else {
+      html = '<p class="sw-ws-placeholder">No themes data for this book yet.</p>';
+    }
+
+  } else if (tab === 'terms') {
+    // Map bookId to the author group name used in author-freq data
+    var BOOK_TO_AUTHOR = {
+      matthew: 'Matthew', mark: 'Mark', luke: 'Luke', acts: 'Luke',
+      john: 'John', '1john': 'John', '2john': 'John', '3john': 'John', revelation: 'John',
+      romans: 'Paul', '1corinthians': 'Paul', '2corinthians': 'Paul',
+      galatians: 'Paul', ephesians: 'Paul', philippians: 'Paul',
+      colossians: 'Paul', '1thessalonians': 'Paul', '2thessalonians': 'Paul',
+      '1timothy': 'Paul', '2timothy': 'Paul', titus: 'Paul', philemon: 'Paul',
+      hebrews: 'Hebrews', james: 'James',
+      '1peter': 'Peter', '2peter': 'Peter',
+      jude: 'Jude',
+    };
+    var authorGroup = BOOK_TO_AUTHOR[bookId] || null;
+
+    if (freqData && authorGroup) {
+      var entries = [];
+      Object.keys(freqData).forEach(function(code) {
+        var d = freqData[code];
+        if (!d || !d.peak || !d.rates) return;
+        if (d.peak === authorGroup) {
+          var peakRate = d.rates[authorGroup] || 0;
+          entries.push({ code: code, peakRate: peakRate });
+        }
+      });
+
+      entries.sort(function(a, b) { return b.peakRate - a.peakRate; });
+      var topEntries = entries.slice(0, 30);
+
+      if (topEntries.length) {
+        html += '<div style="font-size:0.78rem;color:var(--color-text-muted,#7a6a4a);margin-bottom:0.75rem">'
+          + 'Characteristic vocabulary of ' + authorGroup + ' (peak usage vs. other NT authors). Click any term to open Word Study.</div>';
+        topEntries.forEach(function(e) {
+          var entry = _getEntry(e.code);
+          var wordLabel = entry ? _esc(entry.lemma || e.code) : _esc(e.code);
+          var glossLabel = entry ? _esc((entry._tiers && entry._tiers.literal && entry._tiers.literal.primary) || '') : '';
+          html += '<div class="sw-book-term-row" data-code="' + _esc(e.code) + '">'
+            + '<span class="sw-book-term-word">' + wordLabel + '</span>'
+            + '<span class="sw-book-term-gloss">' + glossLabel + '</span>'
+            + '<span class="sw-book-term-count">' + Math.round(e.peakRate * 10) / 10 + '/1k</span>'
+            + '</div>';
+        });
+        html += '<p style="font-size:0.75rem;color:var(--color-text-muted,#7a6a4a);margin-top:0.75rem">'
+          + 'Click any row to open full word study with gloss and concordance.</p>';
+      } else {
+        html = '<p class="sw-ws-placeholder">No distinctive term data for this author group.</p>';
+      }
+    } else if (!authorGroup) {
+      html = '<p class="sw-ws-placeholder">Author group mapping not available for this book.<br><small>OT author frequency data is work in progress.</small></p>';
+    } else {
+      html = '<p class="sw-ws-placeholder">Vocabulary frequency data not available.</p>';
+    }
+
+  } else if (tab === 'idioms') {
+    // Show idioms associated with this book
+    var bookIdioms = [];
+    // INTENT: Show idioms relevant to this book's language. The idioms schema uses
+    //   strongs_trigger_gr / strongs_trigger_he arrays, not a `books` field.
+    //   Greek books show idioms that have Greek trigger codes; Hebrew books show Hebrew ones.
+    if (Array.isArray(idiomsArr)) {
+      var triggerKey = lang === 'greek' ? 'strongs_trigger_gr' : 'strongs_trigger_he';
+      bookIdioms = idiomsArr.filter(function(idiom) {
+        return Array.isArray(idiom[triggerKey]) && idiom[triggerKey].length > 0;
+      });
+    }
+
+    if (bookIdioms.length) {
+      html += '<div style="font-size:0.78rem;color:var(--color-text-muted,#7a6a4a);margin-bottom:0.75rem">'
+        + bookIdioms.length + ' idiom' + (bookIdioms.length === 1 ? '' : 's') + ' found in this book</div>';
+      bookIdioms.forEach(function(idiom) {
+        html += '<div class="sw-book-idiom-row">'
+          + '<div class="sw-book-idiom-phrase">' + _esc(idiom.phrase || idiom.id || '') + '</div>'
+          + '<div class="sw-book-idiom-mean">' + _esc(idiom.meaning || idiom.note || '') + '</div>'
+          + '</div>';
+      });
+    } else {
+      html = '<p class="sw-ws-placeholder">No idioms catalogued for this book yet.</p>';
+    }
+  }
+
+  container.innerHTML = html;
+
+  // Wire key term rows → open Word Study panel for that code
+  container.querySelectorAll('.sw-book-term-row[data-code]').forEach(function(row) {
+    row.addEventListener('click', function() {
+      _setStudyMode('word');
+      _renderWordStudyPanel(row.dataset.code);
+    });
+  });
+}
+
 /* ── Init ──────────────────────────────────────────────────── */
 export async function initWorkshopPage() {
   $nav         = document.getElementById('ws-nav');
@@ -2133,6 +5356,47 @@ export async function initWorkshopPage() {
   // Show UI immediately — no upfront fetch needed
   $loading.hidden = true;
   $layout.hidden  = false;
+
+  // ── Mode bar ── wire Verse/Word/Book Study tabs
+  // INTENT: Mode tabs switch the center column between passage tiles, word study panel,
+  //   and book study panel. CSS class on .ws-page controls the grid column count.
+  // CHANGE? If new modes are added, add data-mode values here and in _setStudyMode().
+  // VERIFY: Click "Word Study" → dossier column disappears; word search input is focused.
+  document.querySelectorAll('.sw-mode-btn[data-mode]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      _setStudyMode(btn.dataset.mode);
+      if (btn.dataset.mode === 'word') {
+        _initDictPanel();
+        var inp = document.getElementById('sw-ws-input');
+        if (inp) inp.focus();
+      }
+    });
+  });
+
+  // Wire word study search input
+  var $wsInput = document.getElementById('sw-ws-input');
+  if ($wsInput) {
+    var _wsTimer;
+    $wsInput.addEventListener('input', function() {
+      clearTimeout(_wsTimer);
+      _wsTimer = setTimeout(function() {
+        var val = ($wsInput.value || '').trim();
+        if (/^[GH]\d+$/i.test(val)) {
+          // Exact Strong's code — render detail directly
+          _renderWordStudyPanel(val.toUpperCase());
+        } else if (val.length >= 2) {
+          // Text search — run dict search if dictionary is open, otherwise just show detail hint
+          _runDictSearch();
+        }
+      }, 300);
+    });
+    $wsInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var val = ($wsInput.value || '').trim();
+        if (val) _renderWordStudyPanel(val.startsWith('G') || val.startsWith('H') ? val.toUpperCase() : val);
+      }
+    });
+  }
 
   // Wire search
   let _searchTimer;
@@ -2163,8 +5427,33 @@ export async function initWorkshopPage() {
   // Passage entry — study button and Enter key
   const $studyBtn  = document.getElementById('sw-study-btn');
   const $refInput  = document.getElementById('sw-ref-input');
-  const $browseLink = document.getElementById('sw-browse-link');
   const $transBtn  = document.getElementById('sw-trans-toggle-btn');
+
+  // ── Version selector — populate from versions.json, re-study on change
+  // INTENT: Lets users switch translation (BSB/KJV/ESV etc.) without leaving the workshop.
+  //   On change, setVersion() persists the choice and _studyPassage() re-renders the tiles
+  //   with the new translation text shown alongside interlinear.
+  // CHANGE? If passage entry bar HTML structure changes, update getElementById('sw-version-sel').
+  // VERIFY: Study John 1:1 in BSB → switch to KJV → passage re-renders with KJV translation text.
+  var $versionSel = document.getElementById('sw-version-sel');
+  if ($versionSel) {
+    loadVersions().then(function(versions) {
+      var current = getVersion();
+      versions.forEach(function(v) {
+        var opt = document.createElement('option');
+        opt.value = v.id;
+        opt.textContent = v.id + (v.name ? ' — ' + v.name.replace(/^The /, '') : '');
+        if (v.id === current) opt.selected = true;
+        $versionSel.appendChild(opt);
+      });
+    }).catch(function() {
+      var opt = document.createElement('option'); opt.value = 'BSB'; opt.textContent = 'BSB'; $versionSel.appendChild(opt);
+    });
+    $versionSel.addEventListener('change', function() {
+      setVersion($versionSel.value);
+      if (_passageRef) _studyPassage(_passageRef.raw || _passageRef.display);
+    });
+  }
 
   function _doStudy() {
     const ref = ($refInput.value || '').trim();
@@ -2175,16 +5464,27 @@ export async function initWorkshopPage() {
     if (e.key === 'Enter') _doStudy();
   });
 
-  $browseLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    _switchToBrowseMode();
-  });
+  // INTENT: Advanced panel toggle — shows/hides translation workflow tools (mode toggle,
+  //   import/export). Hidden by default so the primary experience is pure study.
+  // CHANGE? If the panel ID changes, update getElementById here.
+  // VERIFY: Click ⚙ → advanced panel slides open showing translation tools; click again → hides.
+  var $advancedToggle = document.getElementById('sw-advanced-toggle');
+  var $advancedPanel  = document.getElementById('sw-advanced-panel');
+  if ($advancedToggle && $advancedPanel) {
+    $advancedToggle.addEventListener('click', function() {
+      var isOpen = !$advancedPanel.hidden;
+      $advancedPanel.hidden = isOpen;
+      $advancedToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
 
-  // Translation mode toggle
-  $transBtn.addEventListener('click', function() {
-    _translationMode = !_translationMode;
-    _applyTransMode();
-  });
+  // Translation mode toggle (in advanced panel)
+  if ($transBtn) {
+    $transBtn.addEventListener('click', function() {
+      _translationMode = !_translationMode;
+      _applyTransMode();
+    });
+  }
   _applyTransMode();
 
   // Depth toggle — delegated from the dossier column since depth buttons are rendered
@@ -2197,4 +5497,78 @@ export async function initWorkshopPage() {
   _updateTopbarStats();
   _renderNav();
   _activatePhase();
+
+  // SW-N: Flashcard system init — load state, wire buttons, keyboard handler
+  // INTENT: Load deck + progress on init; wire the nav button to open flashcard view;
+  //   wire "Add to deck" clicks delegated from dossier; wire rating and reveal buttons
+  //   delegated from the flashcard view; wire keyboard shortcuts.
+  // CHANGE? If flashcard view HTML IDs change, update getElementById calls in _fcOpenView.
+  // VERIFY: Click ★ on G3056 in dossier → nav badge shows 1; click "Flashcards" → view opens.
+  _fcLoadState();
+  _fcUpdateBadge();
+
+  // INTENT: Override window.wireRefLinks with a workshop-aware version that routes .ref
+  //   link clicks to _studyPassage() instead of the main-site Bible Gateway popup.
+  //   Every passage tab and flashcard that calls wireRefLinks(el) benefits automatically.
+  // CHANGE? If main wire.js changes the wireRefLinks API, update only this adapter.
+  // VERIFY: Click any verse-sample link in the dossier or Synthesis tab → workshop
+  //   passage study opens for that reference; no Bible Gateway popup appears.
+  window.wireRefLinks = function(root) {
+    (root || document).querySelectorAll('a.ref[data-ref], span.ref[data-ref]').forEach(function(el) {
+      el.style.cursor = 'pointer';
+      el.removeAttribute('href');
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var ref = el.dataset.ref;
+        if (ref) _studyPassage(ref);
+      });
+    });
+  };
+
+  var fcNavBtn = document.getElementById('sw-flashcard-nav-btn');
+  if (fcNavBtn) fcNavBtn.addEventListener('click', _fcOpenView);
+
+  var fcCloseBtn = document.getElementById('sw-fc-close-btn');
+  if (fcCloseBtn) fcCloseBtn.addEventListener('click', _fcCloseView);
+
+  var fcDoneClose = document.getElementById('sw-fc-done-close');
+  if (fcDoneClose) fcDoneClose.addEventListener('click', _fcCloseView);
+
+  var fcRevealBtn = document.getElementById('sw-fc-reveal-btn');
+  if (fcRevealBtn) fcRevealBtn.addEventListener('click', _fcReveal);
+
+  // Rating buttons
+  var fcView = document.getElementById('sw-flashcard-view');
+  if (fcView) {
+    fcView.querySelectorAll('.sw-fc-rate-btn[data-rating]').forEach(function(btn) {
+      btn.addEventListener('click', function() { _fcRate(btn.dataset.rating); });
+    });
+  }
+
+  // Delegated "Add to deck" clicks from dossier (button rendered inside _renderDossier HTML)
+  document.getElementById('ws-dossier').addEventListener('click', function(e) {
+    var btn = e.target.closest('.sw-add-deck-btn[data-code]');
+    if (btn) _fcToggleDeck(btn.dataset.code);
+  });
+
+  document.addEventListener('keydown', _fcKeyHandler);
+
+  // SW-N: Auto-open word from URL param ?s=G3056 (set by the "Link to this word" button)
+  // INTENT: If the page is loaded with ?s=<StrongsCode>, open the dossier for that code
+  //   so sharing/bookmarking a direct word link works. Also supports ?ref=John+1:1 to
+  //   pre-load a passage.
+  // CHANGE? If URL scheme changes from ?s= to ?word=, update the key name here.
+  // VERIFY: Navigate to translation/workshop/?s=G3056 → page loads, λόγος dossier opens.
+  //   Navigate with ?ref=Romans+8:1 → passage study loads automatically.
+  var params = new URLSearchParams(location.search);
+  var autoCode = params.get('s');
+  var autoRef  = params.get('ref');
+  if (autoCode) {
+    await loadBooks();
+    _openWord(autoCode);
+  } else if (autoRef) {
+    await loadBooks();
+    if ($refInput) $refInput.value = autoRef;
+    _studyPassage(autoRef);
+  }
 }

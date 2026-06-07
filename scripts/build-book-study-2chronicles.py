@@ -1,0 +1,170 @@
+"""
+Book Study Data — 2 Chronicles
+book_id: 2chronicles
+lang: hebrew
+
+Run: python3 scripts/build-book-study-2chronicles.py
+
+Notes:
+- Author group: Historical (Joshua-Esther) in author-freq-hebrew.json
+- 12 vocab entries; Hebrew translit fields blank in glossary — supplied manually
+- Vocab selected for 2 Chronicles' specific theology:
+  humble/subdue (kana, the word of 7:14), act faithlessly (ma'al, the exile diagnosis),
+  praise/hymn (tehillah, Jehoshaphat battle), forever (olam, Davidic covenant permanence),
+  seer (chozeh, the prophetic office), lean/rely (sha'an, Asa's trust vocabulary),
+  proud/haughty (gavah, Uzziah's fatal pride), compassion (rachamim, Hezekiah's Passover),
+  salvation (yeshuah, the name of Jesus), stir up (ur, Cyrus decree close),
+  work/craftsmanship (melakah, Solomon's temple construction),
+  be gracious/implore (chanan, Manasseh's repentance prayer)
+- H3665 kana: not used in any prior book. H7725 shub (return) was used in Ruth,
+  H1875 darash and H1245 baqash were used in 1 Chronicles — 2 Chr 7:14's other
+  verbs are unavailable; kana is the one fresh and most distinctive term here
+- H3444 yeshuah: distinct code from H8668 teshuah (used in 2 Kings); both from yasha root
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "2chronicles",
+
+    "key_vocabulary": [
+        {
+            "code": "H3665",
+            "lemma": "כָּנַע",
+            "translit": "kānaʿ",
+            "gloss": "humble",
+            "significance": "כָּנַע (kana, &lsquo;to bend the knee; causatively, to humiliate, to subdue — in the Niphal/Hiphil, to humble oneself before a superior&rsquo;) is the pivotal word of 2 Chronicles&rsquo; most famous verse: &lsquo;if my people who are called by my name humble themselves (veyikknau), and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land&rsquo; (7:14). The kana-act is the hinge that opens every other divine promise in the verse: hearing, forgiveness, and healing all follow from humbling. The Chronicler deploys kana as his evaluative criterion for repentant kings: Rehoboam and his princes &lsquo;humbled themselves (wayikkanu)&rsquo; when Shemaiah prophesied against them (12:6-7), and judgment was partially averted. Manasseh — the worst king in Judah&rsquo;s history — &lsquo;humbled himself greatly (wayyikna me&rsquo;od) before the God of his fathers&rsquo; from an Assyrian prison (33:12), and YHWH restored him. By contrast, Zedekiah &lsquo;did not humble himself (lo nikna) before Jeremiah the prophet who spoke from the mouth of YHWH&rsquo; (36:12) — the absence of kana signals the irreversible trajectory toward exile. Kana is thus the single most theologically weighted act in 2 Chronicles: the history of Judah from Solomon to Zedekiah is explained by whether its kings and people would bend the knee to YHWH&rsquo;s word. The NT&rsquo;s &lsquo;God opposes the proud but gives grace to the humble&rsquo; (Jas 4:6, citing Prov 3:34) and Jesus&rsquo;s &lsquo;whoever humbles himself will be exalted&rsquo; (Matt 23:12) are the kana-principle applied to the kingdom community."
+        },
+        {
+            "code": "H4603",
+            "lemma": "מָעַל",
+            "translit": "māʿal",
+            "gloss": "act faithlessly",
+            "significance": "מָעַל (ma&rsquo;al, &lsquo;to cover up, to act covertly; hence, to act treacherously or faithlessly against a covenant obligation — the specific word for covenant treason against YHWH, not merely ordinary sin&rsquo;) is the Chronicler&rsquo;s diagnostic term for the apostasy that ultimately brought the exile. 2 Chr 36:14: &lsquo;All the officers of the priests and the people likewise were exceedingly unfaithful (wayyimallu ma&rsquo;al me&rsquo;od), following all the abominations of the nations, and they polluted the house of YHWH.&rsquo; This ma&rsquo;al-summary is Chronicles&rsquo; verdict on the exile. But ma&rsquo;al appears throughout the kings&rsquo; evaluations: Saul died because of his &lsquo;breach of faith (ma&rsquo;al)&rsquo; (1 Chr 10:13); Uzziah &lsquo;was unfaithful (wayyimal) to YHWH his God&rsquo; in entering the temple to burn incense (26:16); Ahaz &lsquo;was unfaithful (wayimal)&rsquo; in worshipping Aramean gods (28:19). The ma&rsquo;al-vocabulary carries a specific legal register: it is not generic wrongdoing but covenant treason — acting against the suzerain while still maintaining the outward covenant identity. What makes ma&rsquo;al particularly grave is its covert dimension: the ma&rsquo;al-offender does not formally renounce the covenant but betrays it from within. This is why it falls under the covenant curse category that 2 Chronicles consistently applies. Hebrews 10:26&rsquo;s &lsquo;if we go on sinning deliberately after receiving the knowledge of the truth, there no longer remains a sacrifice for sins&rsquo; uses the same logic of covenant treason that ma&rsquo;al describes — betrayal from inside the covenant community."
+        },
+        {
+            "code": "H8416",
+            "lemma": "תְּהִלָּה",
+            "translit": "tĕhillāh",
+            "gloss": "praise",
+            "significance": "תְּהִלָּה (tehillah, &lsquo;laudation, a hymn or song of praise — the noun form of the halal root [hallelujah]; the Hebrew name for the book of Psalms is tehillim [praises]&rsquo;) appears in one of 2 Chronicles&rsquo; most dramatic scenes. When Jehoshaphat faces a coalition of three enemy armies, he appoints singers to go before the army: &lsquo;Sing to YHWH and praise (tehillah) his holy splendor&rsquo; — and &lsquo;when they began to sing and praise (tehillah), YHWH set an ambush against the men of Ammon, Moab, and Mount Seir...so that they were routed&rsquo; (20:21-22). The tehillah precedes the battle and replaces the battle: the choir&rsquo;s praise is the military action. This is 2 Chronicles&rsquo; most concentrated theology of worship-as-warfare: tehillah is not a prelude to YHWH&rsquo;s action but the human response that creates the occasion for his intervention. The word also appears in Solomon&rsquo;s dedicatory prayer: &lsquo;hear my prayer and the tehillah of your servant&rsquo; (6:20, NRSV equivalent) — prayer that contains praise. The tehillah-theology of 2 Chr 20 vindicated the Levitical worship institutions that 1 Chronicles established: David&rsquo;s singers were not aesthetic decoration but spiritual weaponry. Psalm 22:3&rsquo;s &lsquo;you are holy, enthroned on the praises (tehillot) of Israel&rsquo; is the theology behind Jehoshaphat&rsquo;s strategy: YHWH inhabits the tehillah of his people, making worship the place where his royal power is most immediately present."
+        },
+        {
+            "code": "H5769",
+            "lemma": "עוֹלָם",
+            "translit": "ʿôlām",
+            "gloss": "forever",
+            "significance": "עוֹלָם (olam, &lsquo;the vanishing point — that which extends beyond the visible horizon; hence, time out of mind, antiquity or perpetuity, eternity&rsquo;) is the recurring word for the Davidic covenant&rsquo;s permanence throughout 2 Chronicles. 2 Chr 7:16: &lsquo;For now I have chosen and consecrated this house that my name may be there forever (olam), and my eyes and my heart will be there for all time (olam).&rsquo; 2 Chr 13:5: &lsquo;Do you not know that YHWH God of Israel gave the kingship over Israel forever (olam) to David and his sons by a covenant of salt?&rsquo; 2 Chr 21:7: &lsquo;Yet YHWH was not willing to destroy the house of David, because of the covenant that he had made with David, and since he had promised to give a lamp to him and to his sons forever (olam).&rsquo; The olam-vocabulary functions as the theological immune system against historical catastrophe: whenever the exile threatens to invalidate the covenant promises, the olam of those promises is asserted. The exile does not cancel the olam-covenant; it suspends it pending repentance (kana). The Cyrus decree that closes the book is the first installment of the olam-promise&rsquo;s resumption: YHWH&rsquo;s word to David endures beyond Babylon. Hebrews 13:8&rsquo;s &lsquo;Jesus Christ is the same yesterday and today and forever (eis tous aiōnas)&rsquo; is the NT&rsquo;s olam-claim applied to the Son who fulfills the Davidic covenant: his priesthood and kingdom are olam in the sense Chronicles uses — not merely very long, but inviolably permanent."
+        },
+        {
+            "code": "H2374",
+            "lemma": "חֹזֶה",
+            "translit": "ḥōzeh",
+            "gloss": "seer",
+            "significance": "חֹזֶה (chozeh, &lsquo;a beholder in vision, a seer — from the verb chazah, to gaze at or have a prophetic vision of&rsquo;) is 2 Chronicles&rsquo; consistent title for the prophetic figures who accompany each king and deliver YHWH&rsquo;s word of accountability. The Chronicler names specific chozim: Iddo &lsquo;the seer&rsquo; (9:29; 12:15; 13:22); Gad &lsquo;the king&rsquo;s seer&rsquo; (1 Chr 29:29); Heman &lsquo;the king&rsquo;s seer&rsquo; (1 Chr 25:5); Jeduthun &lsquo;the king&rsquo;s seer&rsquo; (2 Chr 35:15). Each king&rsquo;s reign is accompanied by at least one prophetic chozeh who brings YHWH&rsquo;s perspective to bear — a structural feature that ensures no king acts in a prophetically unwitnessed vacuum. 2 Chr 16:7-10 is particularly striking: when Asa imprisons Hanani the chozeh for delivering an uncomfortable message, the king&rsquo;s violence against the seer is itself a symptom of his departure from seeking YHWH. The chozeh-tradition is distinct from the classical writing prophets but related: the chozeh sees (chazah) spiritual and historical reality more clearly than the king and declares it without deference to royal convenience. The prophetic &lsquo;visions (chazon)&rsquo; of Isaiah, Obadiah, Nahum, Habakkuk, and others come from the same chazah-root: the prophets are chozim in the broader sense — those who have seen what YHWH has shown them. The NT&rsquo;s &lsquo;your sons and daughters will prophesy, your young men will see visions (horaseis)&rsquo; (Acts 2:17, citing Joel 2:28) applies the chozeh-commissioning to the entire Pentecostal community."
+        },
+        {
+            "code": "H8172",
+            "lemma": "שָׁעַן",
+            "translit": "šāʿan",
+            "gloss": "lean on",
+            "significance": "שָׁעַן (sha&rsquo;an, &lsquo;to support oneself, to lean against — the weight-bearing posture of trusting a support structure&rsquo;) is 2 Chronicles&rsquo; distinctive trust-word, different from batach (used in 2 Kings) in its physical metaphor: to sha&rsquo;an is to lean one&rsquo;s body weight against something, transferring the load to the support. 2 Chr 13:18: &lsquo;The men of Judah prevailed, because they relied (nish&rsquo;anu) on YHWH, the God of their fathers.&rsquo; 2 Chr 14:11: Asa&rsquo;s prayer before battle against the Ethiopians: &lsquo;YHWH, there is none like you to help (lezor), between the mighty and the weak. Help us, O YHWH our God, for we rely (nish&rsquo;anu) on you.&rsquo; The battle result confirms the sha&rsquo;an: YHWH strikes down the Ethiopians. But 2 Chr 16:7-8 introduces the sha&rsquo;an-crisis: Hanani rebukes Asa for relying (sha&rsquo;anta) on Aram against Baasha rather than on YHWH — the same verb applied to the wrong object: &lsquo;Because you relied (sha&rsquo;anta) on the king of Aram and did not rely (sha&rsquo;anta) on YHWH your God, the army of the king of Aram has escaped you.&rsquo; The sha&rsquo;an/sha&rsquo;an contrast in the same verse is the Chronicler&rsquo;s sharpest formulation of misplaced trust: you can lean on Aram or you can lean on YHWH — not both. Isaiah 50:10 uses the same vocabulary: &lsquo;let him trust in the name of YHWH and lean on (sha&rsquo;an) his God&rsquo; — the prophetic equivalent of Chronicles&rsquo; sha&rsquo;an-theology applied to the exilic community."
+        },
+        {
+            "code": "H1361",
+            "lemma": "גָּבַהּ",
+            "translit": "gābah",
+            "gloss": "be proud",
+            "significance": "גָּבַהּ (gavah, &lsquo;to soar, to be lofty — used physically [of tall objects] and figuratively [of proud persons]; the opposite of kana [humble]&rsquo;) is the word for the fatal pride that destroys kings at the height of their success in 2 Chronicles. 2 Chr 26:16: &lsquo;But when he [Uzziah] was strong, his heart was lifted up (wayyigbah libbo) to his destruction. For he was unfaithful (ma&rsquo;al) to YHWH his God and entered the temple to burn incense.&rsquo; Uzziah&rsquo;s gavah-moment is triggered by his success: he was strong (chazaq), and his heart rose (gavah). The sequence — strength → gavah → ma&rsquo;al → judgment — is the Chronicler&rsquo;s diagnosis of power&rsquo;s characteristic temptation. 2 Chr 32:25-26 applies the same pattern to Hezekiah, whose faith had been exemplary: &lsquo;But Hezekiah did not make return according to the benefit done to him, for his heart was proud (gavah libbo). Therefore wrath came upon him and Judah and Jerusalem. But Hezekiah humbled himself (wayyikna) for the pride of his heart.&rsquo; The kana/gavah pair becomes the fundamental moral axis of 2 Chronicles: gavah (pride, ascent) is the human posture that excludes YHWH; kana (humbling, descent) is the posture that opens the way to YHWH&rsquo;s response. Proverbs 16:18&rsquo;s &lsquo;pride (gaon) goes before destruction, and a haughty spirit before a fall&rsquo; is the systematic statement of the gavah-principle that 2 Chronicles narrates in case after case. Jesus&rsquo;s &lsquo;everyone who exalts (hypsōn, the Greek gavah-equivalent) himself will be humbled&rsquo; (Luke 18:14) is the same axiom."
+        },
+        {
+            "code": "H7356",
+            "lemma": "רַחַם",
+            "translit": "raḥam",
+            "gloss": "compassion",
+            "significance": "רַחַם (racham, usually in the plural rachamim — &lsquo;deep compassion, the visceral feeling of attachment that moves toward another&rsquo;s need; from rechem [womb] — the most intimate physical image the Hebrew language has for tender love&rsquo;) appears in 2 Chr 30:9 in Hezekiah&rsquo;s remarkable letter inviting the scattered northern exiles to his great Passover: &lsquo;For YHWH your God is gracious and compassionate (rachum ve-chanun). He will not turn away his face from you if you return to him...your brothers and your children will find compassion (rachamim) with their captors and return to this land.&rsquo; The rachamim of verse 9 has two referents: YHWH&rsquo;s own character (he is rachum) and the hoped-for compassion of the Assyrian captors toward the exiles. Hezekiah&rsquo;s Passover invitation crosses the political divide between Judah and the devastated northern kingdom — the rachamim-appeal is to the deepest covenantal instinct: YHWH&rsquo;s motherly tenderness for his scattered children. Racham/rechem imagery in the OT consistently applies womb-love to divine affection: &lsquo;Can a mother forget the baby at her breast and have no rachamim on the child she has borne? Though she may forget, I will not forget you&rsquo; (Isa 49:15). Jesus&rsquo;s parable of the prodigal&rsquo;s father who &lsquo;saw him and felt compassion (esplanchnisthē — the visceral Greek equivalent of rachamim)&rsquo; (Luke 15:20) is the NT&rsquo;s most vivid rachamim-image: the God who crosses the exile&rsquo;s distance to bring his children home."
+        },
+        {
+            "code": "H3444",
+            "lemma": "יְשׁוּעָה",
+            "translit": "yĕšûʿāh",
+            "gloss": "salvation",
+            "significance": "יְשׁוּעָה (yeshuah, &lsquo;something saved, deliverance, salvation, victory — the feminine abstract noun from yasha [to save]; the form behind the name Yeshua/Jesus&rsquo;) is the word for YHWH&rsquo;s decisive intervention on behalf of his people in 2 Chronicles. 2 Chr 20:17: Jahaziel prophesies to Jehoshaphat before the Ammonite-Moabite coalition: &lsquo;You will not need to fight in this battle. Stand firm, hold your position, and see the yeshuah of YHWH on your behalf, O Judah and Jerusalem.&rsquo; The command to &lsquo;see the yeshuah (re&rsquo;u et-yeshuath YHWH)&rsquo; is a deliberate echo of Moses at the Red Sea: &lsquo;Stand firm and see the yeshuah of YHWH, which he will work for you today&rsquo; (Exod 14:13). The Jehoshaphat battle is thus Chronicles&rsquo; second Exodus: YHWH&rsquo;s yeshuah replaces human military effort, given to those who stand firm in trust. 2 Chr 6:41: Solomon prays that &lsquo;your priests, O YHWH God, be clothed with yeshuah&rsquo; — the priestly garments of the Aaronic tradition become a metaphor for the divine salvation that clothes YHWH&rsquo;s ministers. Matthew 1:21 makes the etymological connection explicit: &lsquo;you shall call his name Jesus (Iēsoun), for he will save (sōsei) his people from their sins.&rsquo; The name Jesus = Yeshua = &ldquo;YHWH is yeshuah&rdquo; — the name itself is the theological claim that the one who comes is YHWH&rsquo;s decisive, personal, embodied yeshuah."
+        },
+        {
+            "code": "H5782",
+            "lemma": "עוּר",
+            "translit": "ʿûr",
+            "gloss": "stir up",
+            "significance": "עוּר (ur, &lsquo;to wake up, to rouse — literally, to awaken the sleeping; figuratively, to stir up the dormant or the latent, to bring to action&rsquo;) is the closing word of 2 Chronicles and one of the most hope-charged verbs in the OT: &lsquo;Now in the first year of Cyrus king of Persia, that the word of YHWH by the mouth of Jeremiah might be fulfilled, YHWH stirred up (he&rsquo;ir) the spirit of Cyrus king of Persia, so that he made a proclamation&rsquo; (36:22). The ur of Cyrus&rsquo;s spirit is YHWH&rsquo;s sovereign act: the most powerful pagan king of his era acts at divine initiative when YHWH chooses to ur him. This ur-theology is the Chronicler&rsquo;s final theological affirmation: YHWH&rsquo;s sovereignty is not limited to the covenant community. He can stir up a pagan emperor to accomplish what generations of unfaithful kings could not. The ur-vocabulary resonates throughout the Psalms as a prayer: &lsquo;Awake (ura), O my glory! Awake, O harp and lyre!&rsquo; (Ps 57:8); &lsquo;Awake (ur), YHWH! Why do you sleep?&rsquo; (Ps 44:23). Isaiah 45:1 explicitly names Cyrus as YHWH&rsquo;s &lsquo;anointed (messiah)&rsquo; whom YHWH grasps by the right hand — making Cyrus the most unexpected of messianic figures. Ezra 1:1 repeats the 2 Chronicles 36:22 closing verbatim, creating a canonical hinge between the two books: the ur of Cyrus&rsquo;s spirit is the beginning of restoration. The resurrection of Jesus is the ur of all urs — the ultimate divine awakening that reverses the exile of death."
+        },
+        {
+            "code": "H4399",
+            "lemma": "מְלָאכָה",
+            "translit": "mĕlāʾkāh",
+            "gloss": "work",
+            "significance": "מְלָאכָה (melakah, &lsquo;deputyship, ministry — skilled work done as a commissioned agent; the work carried out on behalf of a patron by an authorized craftsman or servant&rsquo;) is the word for Solomon&rsquo;s temple construction in 2 Chronicles. 2 Chr 2:14: Hiram describes his craftsman Huram-abi as capable of &lsquo;executing any melakah that may be assigned him&rsquo;. 2 Chr 5:1: &lsquo;Thus all the melakah that Solomon did for the house of YHWH was finished.&rsquo; 2 Chr 8:16: &lsquo;All the melakah of Solomon was completed from the day the foundation of the house of YHWH was laid until it was finished (shalem).&rsquo; The melakah-language frames the temple construction not as Solomon&rsquo;s creative achievement but as a commissioned project — the craftsmen are deputies executing a divinely-specified design (the tavnit of 1 Chr 28). This is the OT background for Bezalel&rsquo;s melakah in Exodus 31:3-5: &lsquo;I have filled him with the Spirit of God...with knowledge and all craftsmanship (melakah)&rsquo; — the same Spirit-empowered melakah equips the craftsmen for both the tabernacle and the temple. Notably, melakah also appears in Genesis 2:2: &lsquo;God rested from all his melakah that he had done&rsquo; — creation itself is described as YHWH&rsquo;s melakah, and the temple&rsquo;s melakah mirrors and re-enacts the cosmic melakah of creation. Paul&rsquo;s &lsquo;like a skilled master builder (architektōn) I laid a foundation&rsquo; (1 Cor 3:10) stands in the melakah-tradition: apostolic work as commissioned, skilled construction on behalf of the divine patron."
+        },
+        {
+            "code": "H2603",
+            "lemma": "חָנַן",
+            "translit": "ḥānan",
+            "gloss": "be gracious",
+            "significance": "חָנַן (chanan, &lsquo;to bend or stoop in kindness to an inferior; to be gracious, to bestow favor; in Hithpael, to implore graciously — to throw oneself on another&rsquo;s grace&rsquo;) is the root of &ldquo;YHWH is gracious and compassionate (rachum ve-chanun)&rdquo; (2 Chr 30:9, echoing Exod 34:6) and the verb of Manasseh&rsquo;s desperate prayer. 2 Chr 33:12-13: &lsquo;And when he was in distress, he entreated (wayyechal et-penei, seeking YHWH&rsquo;s favor) YHWH his God and humbled himself (wayyikna) greatly before the God of his fathers. He prayed to him, and God was moved by his entreaty (wayyeal lo) and heard his plea (techinnato, from chanan) and brought him again to Jerusalem.&rsquo; The techinnah (Manasseh&rsquo;s plea) is the noun of chanan: a supplication that appeals not to merit but to the gracious character of the one addressed. Manasseh had been the worst king in Judah&rsquo;s history — his sins were so severe that 2 Kings 23:26 says even Josiah&rsquo;s reform could not reverse their effect. Yet Manasseh&rsquo;s chanan-prayer from prison is answered: YHWH &lsquo;was moved&rsquo; and restored him to Jerusalem. Chronicles&rsquo; inclusion of this restoration (absent from Kings) is its most radical statement: no prior wickedness places a person beyond the reach of YHWH&rsquo;s response to genuine kana and chanan. The tax collector&rsquo;s prayer in Luke 18:13 — &lsquo;God, be merciful (hilasthēti) to me, a sinner&rsquo; — is the NT&rsquo;s closest structural equivalent to Manasseh&rsquo;s chanan: the prayer that throws itself on divine grace rather than merit."
+        }
+    ],
+
+    "language_notes": (
+        "<p>2 Chronicles is organized by the <strong>kana/gavah moral axis</strong> — humbling (kana) vs. pride (gavah) — as the theological key to every king&rsquo;s reign. 7:14 establishes the pattern: divine promise is conditioned on kana (humble yourself), prayer, seeking, and turning. Every subsequent king is implicitly evaluated against this kana-criterion: Rehoboam partially averted judgment by kana (12:6-7); Manasseh reversed the most catastrophic reign in Chronicles by kana from an Assyrian prison (33:12); Zedekiah sealed the exile by refusing to kana (36:12). The corresponding failure is gavah (pride): Uzziah&rsquo;s gavah-heart (26:16) made him enter the temple and burn incense — the priestly prerogative he had no standing to assume — and his leprosy came immediately. Hezekiah&rsquo;s gavah-episode (32:25-26) shows the pattern even in the godliest reign: success → gavah → divine warning → kana → reprieve. The kana/gavah axis is not a simplistic formula but a diagnostic that the Chronicler applies with narrative sophistication, showing how the same dynamic works differently in different personalities and contexts.</p>"
+        "<p>The <strong>ma&rsquo;al vocabulary</strong> (to act faithlessly/commit covenant treason) is the Chronicler&rsquo;s legal term for the apostasy that accumulates across generations until the exile becomes inevitable. Ma&rsquo;al is not ordinary sin (chata) but covenant treason: it describes the act of someone who maintains the outward covenant identity while acting secretly against the covenant&rsquo;s suzerain. The cumulative use of ma&rsquo;al across the kings — Saul, Uzziah, Ahaz, the officers of the priests (36:14) — creates a portrait of covenant identity without covenant fidelity. 2 Chronicles 36&rsquo;s great summary of the exile&rsquo;s causes deploys ma&rsquo;al as the headline sin: &lsquo;All the officers of the priests and the people likewise were exceedingly unfaithful (ma&rsquo;al me&rsquo;od).&rsquo; The narrative implication is clear: the exile was not a divine overreaction or political accident but the measured covenant-consequence of cumulative covenant treason. The Deuteronomistic curses (Deut 28) that 2 Kings deploys as the interpretive framework are here expressed through the ma&rsquo;al concept: Israel was not merely disobedient but faithless — and faithlessness by covenant partners carries a different weight than mere rule-breaking.</p>"
+        "<p>The <strong>Jehoshaphat battle narrative</strong> (ch. 20) is 2 Chronicles&rsquo; most concentrated expression of its worship-as-trust theology, and its vocabulary is among the most theologically compressed in the book. Jehoshaphat&rsquo;s response to the three-army coalition follows a precise sequence: fear → seeking YHWH (darash — note the 1 Chronicles vocabulary reappearing) → fasting → assembly → prayer → prophetic word → kana → tehillah-singers go first. The battle is won before any sword is drawn: YHWH &lsquo;set an ambush&rsquo; (20:22) when the tehillah (praise) began. The phrase &lsquo;stand firm, hold your position, and see the yeshuah of YHWH&rsquo; (20:17) deliberately echoes Moses at the Red Sea (Exod 14:13), making the Jehoshaphat battle a new Exodus. The sha&rsquo;an (lean/rely) vocabulary of the period — Judah prevailed because they sha&rsquo;an&rsquo;d on YHWH (13:18), Asa sha&rsquo;an&rsquo;d on YHWH in battle (14:11) then sha&rsquo;an&rsquo;d on Aram in diplomacy (16:7) — provides the moral framework: the consistency of sha&rsquo;an determines the consistency of YHWH&rsquo;s intervention.</p>"
+        "<p>The book closes with <strong>Cyrus&rsquo;s decree</strong> (36:22-23), where the ur (stir up) vocabulary performs the Chronicler&rsquo;s final theological affirmation: YHWH&rsquo;s sovereignty operates through pagan kings as well as covenant ones. The olam-covenant vocabulary that runs throughout 2 Chronicles (7:16; 13:5; 21:7) reaches its horizon here: the &ldquo;forever&rdquo; of the Davidic covenant outlasts even Babylonian destruction. The edict of Cyrus is the first installment of the olam-promise&rsquo;s resumption — the temple will be rebuilt, the return will happen, the Davidic line will continue. Significantly, the book ends with an incomplete sentence: &lsquo;Whoever is among you of all his people, may YHWH his God be with him. Let him go up.&rsquo; The open ending is canonical design: the story is not finished. The rachamim (compassion) that Hezekiah invoked (30:9) for the scattered exiles is beginning to be fulfilled — and will be completely fulfilled only when the greater son of David arrives to usher in the restoration that Cyrus&rsquo;s edict could only initiate.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> 2 Chr 7:14 became one of the most cited OT texts in patristic literature on prayer and repentance. Augustine used it in his <em>City of God</em> as the template for national and corporate confession: the four conditions of humbling, praying, seeking, and turning are the four movements of authentic repentance. The patristic writers found Manasseh&rsquo;s restoration (ch. 33) particularly striking: Origen cited it as the OT&rsquo;s most dramatic example of the efficacy of sincere repentance regardless of prior sin, and it became a standard text in the catechetical tradition for arguing against the rigorists (Novatians) who denied post-baptismal forgiveness. The <em>Prayer of Manasseh</em> — a deuterocanonical text that fills in the prayer Chronicles mentions (33:13) but does not quote — was composed precisely to supply what 2 Chronicles left as a summary, showing how widely the Manasseh episode captured the early church&rsquo;s imagination.</p>"
+        "<p><strong>Reformation:</strong> Calvin&rsquo;s commentary on 2 Chronicles treated the book as a laboratory of ecclesiology: each king&rsquo;s relationship to proper temple worship was read as a lesson for the Reformed church&rsquo;s relationship to proper worship form. The ur of Cyrus (36:22) became a Reformation text for arguing that God can work through unexpected, even non-Christian instruments to accomplish his purposes in history — the Reformers used it to explain the providential role of secular rulers in supporting ecclesiastical reform. The Puritan tradition elevated 2 Chr 7:14 to almost canonical status as the paradigm for national covenant renewal: the conditions of humbling, prayer, seeking, and turning were preached repeatedly in times of national crisis as the path to divine favor.</p>"
+        "<p><strong>Modern scholarship:</strong> 2 Chronicles is central to discussions of the Chronicler&rsquo;s &ldquo;retribution theology&rdquo; — the apparent principle that immediate, visible blessing follows faithfulness and judgment follows sin. Scholars like Raymond Dillard and William Johnstone have nuanced this: the Chronicler&rsquo;s theology is less mechanical than it first appears, precisely because Manasseh&rsquo;s restoration (ch. 33) breaks the simplest form of the pattern. Recent scholarship also focuses on how the Cyrus decree connects Chronicles to Ezra, making the two books a canonical unit exploring exile and restoration — with 2 Chronicles providing the theological framework (why exile happened) and Ezra-Nehemiah providing the historical account of return.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Read 2 Chronicles as a gallery of case studies in the kana/gavah dynamic: each king is a worked example of what humbling (kana) or pride (gavah) looks like and what it produces. Track the evaluative language: when a king &lsquo;was not humbled (lo nikna),&rsquo; or &lsquo;his heart was lifted up (gavah),&rsquo; or &lsquo;he sought (darash) YHWH,&rsquo; these are the Chronicler&rsquo;s theological verdicts, not merely narrative description. Read 7:14 first and keep it as the lens: every king&rsquo;s story is the story of whether he and his people met those four conditions.</p>"
+        "<p>The Jehoshaphat battle narrative (ch. 20) is the theological climax of 2 Chronicles&rsquo; worship theology. It shows what happens when the entire kana/tehillah/sha&rsquo;an complex works exactly as designed: Jehoshaphat hears of the coalition, fears, seeks YHWH, gathers the people, prays, receives a prophetic word, and sends singers first. The result is YHWH fighting the battle while Judah watches. Read it slowly and notice the sequence: it is not arbitrary but a carefully designed liturgy that matches the worship theology of 1 Chronicles. This chapter shows that the David-era Levitical appointments were not ceremonial aesthetics but practical faith-equipment.</p>"
+        "<p>Do not skip Manasseh&rsquo;s repentance (33:1-20) — it is the most theologically surprising moment in the book. The worst king in Judah&rsquo;s history kana&rsquo;d from an Assyrian prison, and YHWH heard. The common misreading is to treat Chronicles&rsquo; omission of Manasseh&rsquo;s sins from Kings as softening his guilt — in fact, Chronicles makes his sins no less severe (21:11-15 are explicit) while adding his repentance as a crucial episode absent from Kings. The theological point: no prior depth of wickedness can exhaust the possibilities opened by genuine kana and chanan-prayer. That is 2 Chronicles&rsquo; most radical claim.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('2chronicles')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('2chronicles', merged)
+
+main()

@@ -1,50 +1,42 @@
 """
-Combined script: James, 1 Peter, 2 Peter, 2 John, 3 John, Jude — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for each letter.
+MKT Original Commentary — 1 Peter chapters 1–4 (88 missing verses; ch1v3, ch1v18, ch2v24 already present)
+Run: python3 scripts/zc-original-1peter-1-4.py
 
-The General Epistles span wisdom tradition (James), suffering-theology (1 Peter),
-eschatological warning (2 Peter, Jude), and community discernment (2-3 John).
+Source data used:
+- data/interlinear/1peter.json
+- data/translation/draft/mediating/1peter.json (MKT text)
+- data/translation/glossary-greek.json (key terms)
+
+Key decisions in this range:
+- paroikos/parepidemos: resident alien and sojourner — dual civic status language (not metaphor)
+- logos/rhema: both appear for "word" in ch1; rhema is the spoken utterance; logos is more comprehensive
+- dokimion: the tested quality/genuineness of faith (v1:7) — not the test itself but the result
+- logikon (v2:2): ambiguous — rational or word-related milk; both senses likely intentional given ch1 logos emphasis
+- basileion hierateuma (v2:9): could be "palace of priests" or "royal priesthood" — the LXX ambiguity retained
+- xylon (v2:24): tree/wood — the Deut 21:23 hanging-on-tree language deliberately invoked
+- antitypon (v3:21): the technical type/antitype term — Noah's flood is the type; baptism the antitype
+- hapax (v3:18): once-for-all — the adverb of non-repetition applied to Christ's atoning suffering
+- ktistes (v4:19): Creator — unique NT word for God; only occurrence in NT
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -52,288 +44,123 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# JAMES
-# ============================================================
-
-JAMES_ECHO = {
+PETER1 = {
   "1": {
-    "17": [
-      {"type": "allusion", "target": "Num 23:19", "note": "With whom there is no variation or shadow due to change — God is not a man that he should lie or change his mind; YHWH's immutability as the ground of trust echoes in James's description of the Father of lights"},
-      {"type": "allusion", "target": "Mal 3:6", "note": "I the LORD do not change — YHWH's immutability guarantees the covenant; James's 'no variation' language in describing the Father draws from the prophetic declaration of divine constancy"}
-    ]
+    "1": '<p><strong>apostolos</strong> (sent one/envoy) — the title claims delegated authority; Peter writes not as a local elder but as one commissioned by Christ. <strong>parepidēmois diasporas</strong> — resident aliens of the dispersion; <em>parepidēmos</em> is a sociological term for someone with no civic rights in the location they inhabit (a visitor or foreigner). <em>Diaspora</em> is the Jewish technical term for Israelites living outside the land — Peter applies it to Gentile-majority house churches across Asia Minor, redefining their sociological marginalization as theological identity.</p>',
+    "2": '<p>The greeting is Trinitarian in structure: <em>prognōsin Patros</em> (foreknowledge of the Father) | <em>hagiasmon Pneumatos</em> (sanctification of the Spirit) | <em>rantismon haimatos Iēsou Christou</em> (sprinkling of the blood of Jesus Christ). The third element echoes Exod 24:3-8: Moses sprinkled blood on the people at Sinai to ratify the covenant. <strong>rantismos</strong> is a cultic term carrying both Levitical purification and covenant-ratification freight; Peter opens by locating his readers within a new covenant ceremony.</p>',
+    "4": '<p>Three alpha-privative adjectives describe the inheritance: <em>aphtharton</em> (un-perishing), <em>amianton</em> (un-defiled), <em>amaranton</em> (un-fading) — each negates an OT inheritance failure. The Promised Land perished under judgment; the temple was defiled; Israel\'s glory faded. <strong>tetērēmenēn</strong> is a perfect passive participle: the inheritance stands as already having been guarded — the perfect preserves the completeness of the divine action. <em>En ouranois</em> — in the heavens, not on earth; spatial contrast to the perishable earthly inheritance.</p>',
+    "5": '<p><strong>phrouroumenous dia pisteōs</strong> — being guarded through faith (present passive participle: the guarding is ongoing). <em>Phroureō</em> is the word for a military garrison or guard posted to secure a position; the believers are under active divine guard. <strong>eis sōtērian</strong> — toward salvation; combined with <em>apokalyphthēnai</em> (ready to be revealed) — salvation is not a past event only but a coming revelation. The present faith and the future revelation frame the letter\'s ethics: live now in light of what will be unveiled.</p>',
+    "6": '<p><strong>ei deon</strong> — if it is necessary (a condition of propriety, not divine caprice — what is fitting for your growth); <em>oligon arti</em> — for a little while, now; <strong>lypēthentes</strong> — having been grieved (aorist passive: the grief has occurred but is not the controlling reality); <em>en poikilois peirasmois</em> — in various kinds of trials (<em>poikilos</em> = many-colored, variegated). The temporal frame (<em>oligon</em>) relativizes the trials against the coming revelation of v.5.</p>',
+    "7": '<p><strong>to dokimion tēs pisteōs</strong> — the tested quality/genuineness of your faith. <em>Dokimion</em> is not the test itself but the proven result of testing — the gold\'s purity as verified by fire. <strong>polytimoteron chrysiou</strong> — more precious than gold; the comparison is inverted from what one might expect: gold is tested to prove purity and is still perishable; faith is tested to prove <em>pistis</em> and results in <em>epainon kai doxan kai timēn</em> (praise, glory, honor) at the revelation of Christ. The metallurgical image makes tested faith more valuable than its testing instrument.</p>',
+    "8": '<p><strong>hon ouk idontes agapate</strong> — whom not having seen you love (the aorist participle <em>idontes</em> emphasizes the absence — not a temporary failure to see but a characteristic: these believers have not been eyewitnesses). <strong>agalliasthe</strong> is a present indicative — you are currently exulting; the exultation is not future but present. <em>chara aneklalētō kai dedoxasmenē</em> — joy inexpressible and glorified/transfigured — the perfect passive <em>dedoxasmenē</em> (already having been glorified) gives the present joy an eschatological quality.</p>',
+    "9": '<p><strong>komizomenoi to telos tēs pisteōs</strong> — receiving the <em>telos</em> of faith. <em>Telos</em> is the goal/purpose/completion, not merely the endpoint; faith has a built-in purpose that it is now achieving. <strong>sōtērian psychōn</strong> — salvation of souls; <em>psychē</em> here means the whole self/life (not the Greek immortal soul), consistent with LXX usage where <em>psychē</em> translates <em>nephesh</em>.</p>',
+    "10": '<p><strong>exeraunēsan</strong> — they searched out intensely (compound <em>ex</em> + <em>eraunaō</em>: intensive searching, as one searches through records); the verb is a hapax in the NT. <strong>peri tēs eis hymas charitos</strong> — concerning the grace coming toward you (not the grace the prophets received but the grace <em>destined for you</em> — the prophets searched for what was aimed at believers who would come centuries later).</p>',
+    "11": '<p><strong>to pneuma Christou</strong> — the Spirit of Christ (not merely the Spirit of God — Peter makes the remarkable claim that the pre-incarnate Christ\'s Spirit was speaking through the OT prophets). <strong>ta eis Christon pathēmata kai tas meta tauta doxas</strong> — the sufferings <em>toward</em> Christ (literally: the sufferings going into/directed at Christ) and the glories after these; the two-phase structure (suffering → glory) was the pattern the prophets were searching to understand temporally (v.11b: <em>pote ē poion kairon</em> — when and what sort of time).</p>',
+    "12": '<p><strong>ou heautois hymin de diēkonoun</strong> — not to themselves but to you they were serving (<em>diakoneō</em> = to serve, minister — the prophets were inter-temporal servants); <strong>di\'Pneumatos hagiou apostalentos ap\'ouranou</strong> — through Holy Spirit sent from heaven (the Pentecost perspective looking back at the Spirit\'s post-resurrection sending). <strong>eis ha epithymousin angeloi parakupsai</strong> — into which angels long to stoop for a closer look (<em>parakuptō</em> = to stoop and peer, used of Mary Magdalene at the empty tomb in John 20:11); the angels\' longing-to-look intensifies the privilege of believers who have received what prophets and angels could only glimpse.</p>',
+    "13": '<p><strong>anazōsamenoi tas osphyas tēs dianoias hymōn</strong> — having girded the loins of your mind (the Exodus posture: Exod 12:11 required loins girded for departure; Peter transposes the physical readiness for the Exodus journey into intellectual and moral readiness for the new exodus). <strong>nēphontes teleios</strong> — being completely sober (<em>nēphō</em> = to be sober, not under the influence; <em>teleios</em> modifying the participle — a full, complete sobriety). The object of hope: <em>tēn pheromenēn hymin charin</em> — the grace being brought to you (present participle — the grace is in transit).</p>',
+    "14": '<p><strong>tekna hypakoēs</strong> — children of obedience (a semitic genitive: obedience defines and characterizes these children as it once characterized Israel). <strong>mē syschēmatizomenoi tais proteron epithymiais en tē agnoiā hymōn</strong> — not conforming to the former desires in your ignorance; <em>syschēmatizō</em> (to conform to a schema/pattern) is the same root as Rom 12:2\'s "do not be conformed to this age." <em>Agnoia</em> (ignorance) — not merely lack of information but the moral darkness of life without knowing the living God.</p>',
+    "15": '<p><strong>kata ton kalesanta hymas hagion</strong> — according to the Holy One who called you; the caller\'s holiness is both the standard and the source of the called-ones\' holiness. <strong>en pasē anastrophē</strong> — in all conduct (<em>anastrophē</em> = the way of life, the turning and returning of daily behavior — a key word in 1 Peter appearing 6 times). The identity of the one calling determines the quality of life appropriate to the call.</p>',
+    "16": '<p><strong>gegraрtai gar</strong> — for it stands written (perfect passive: the writing stands as authoritative present fact). The Lev 11:44 / 19:2 citation appears in three OT contexts; Peter selects the holiness formula that grounds holiness in divine character rather than ritual observance. The quotation is bare — no introduction naming Leviticus — suggesting Peter\'s audience would recognize it as the foundational holiness command of Torah.</p>',
+    "17": '<p><strong>ei Patera epikaleisthe</strong> — if you call on as Father (the conditional implies this is in fact true — addressees do call God Father); <strong>ton aprosōpolēmptōs krinonta</strong> — the one judging impartially (<em>aprosōpolēmptōs</em> = without regard to face/appearance — the technical judicial term for impartial judgment, from Deut 1:17 tradition). <strong>paroikias hymon</strong> — your sojourning (the duration of your residence as temporary aliens on earth). The combination: you call God Father + he judges impartially = live in reverent fear, not presumption.</p>',
+    "19": '<p><strong>timitō haimati hōs amnou amōmou kai aspilou Christou</strong> — the precious blood of Christ as a lamb without defect and without spot. <em>Amōmos</em> (without blemish) + <em>aspilos</em> (without spot) are the Passover lamb requirements (Exod 12:5; Lev 22:18-20). The Passover connection is not stated but encoded in the vocabulary; Peter\'s readers familiar with the LXX would recognize the cultic language of sacrifice qualification applied to Christ.</p>',
+    "20": '<p><strong>proegnōsmenou men pro katabolēs kosmou</strong> — having been foreknown before the foundation (<em>katabolē</em> = laying down/founding) of the world (perfect passive participle — the foreknowledge is a completed eternal fact); <strong>phanerōthentos de ep\'eschatou tōn chronōn</strong> — but having been manifested at the last of the times. The contrast of eternal foreknowledge and historical manifestation makes Christ\'s appearance in time not an improvisation but the planned execution of an eternal purpose.</p>',
+    "21": '<p><strong>tous di\'autou pisteuontas eis Theon</strong> — those through him believing into God (the preposition <em>dia</em> — through Christ — frames faith as having a Christological medium: access to God comes through rather than around Christ). <strong>ton egeiranta auton ek nekrōn kai doxan autō donta</strong> — who raised him from the dead and gave him glory — two aorist participles describing God\'s decisive acts that ground the believer\'s faith and hope in God.</p>',
+    "22": '<p><strong>agapēn adelphotētos anypokriton</strong> — sincere love of the brotherhood. <em>Adelphotēs</em> (brotherhood/siblinghood) is relatively rare in Greek; 1 Pet 2:17 and 5:9 are the only other NT uses — all in this letter. <strong>anypokritos</strong> — un-hypocritical: not the love of the actor playing a role but the love that is actually what it presents. <strong>ektenōs</strong> — earnestly/stretchedly (from <em>ekteinō</em> = to stretch out; the word describes a bow drawn taut for maximum force).</p>',
+    "23": '<p><strong>anagegennēmenoi ouk ek sporās phthartēs alla aphthartou</strong> — having been born again not from perishable seed but imperishable (perfect passive participle: the birth is a completed past fact with ongoing present identity). <em>Sporā</em> (seed) is the biological/agricultural term for the reproductive cell; spiritual birth uses the natural birth analogy but distinguishes the seed: perishable biological seed versus imperishable divine word. <strong>dia logou zōntos Theou kai menontos</strong> — through the living and enduring word of God (two present participles — the word is currently alive and currently enduring).</p>',
+    "24": '<p>Isaiah 40:6-8 LXX is quoted with slight adaptation to connect the "word" of the prophecy to the "word" preached in the gospel (v.25). <strong>pāsa sarx hōs chortos</strong> — all flesh as grass (<em>sarx</em> in the LXX sense of mortal humanity in its frailty, not sinful nature specifically). The contrast: the perishable seed of natural birth (v.23) = flesh as grass; the imperishable seed of rebirth = the enduring word of God.</p>',
+    "25": '<p><strong>to de rhēma Kyriou menei eis ton aiōna</strong> — but the <em>rhēma</em> (spoken utterance) of the Lord abides forever. <em>Rhēma</em> (spoken word) is distinguished here from <em>logos</em> (word, used in v.23); the shift may be deliberate — the living <em>logos</em> of God generates a specific <em>rhēma</em> that was preached. <strong>touto de estin to rhēma to euaggelisthen eis hymas</strong> — and this is the <em>rhēma</em> that was preached as good news to you; the preached gospel is identified as the fulfillment of the prophetically spoken word of Isaiah.</p>'
   },
   "2": {
-    "23": [
-      {"type": "fulfillment", "target": "Gen 15:6", "note": "Abraham believed God and it was counted to him as righteousness, and he was called a friend of God — James cites Gen 15:6 (as does Paul in Rom 4 and Gal 3) but applies it to the Abraham of Gen 22 (the Aqedah); the faith that justified Abraham was not bare intellectual belief but the active trust that obeyed unto the ultimate test"}
-    ]
+    "1": '<p><strong>apothemenoi</strong> — strip off/put away (aorist middle participle: a decisive action, like removing a garment — the same clothing metaphor as Eph 4:22, Col 3:8). The five vices: <em>kakian</em> (malice), <em>dolon</em> (deceit), <em>hypokrisias</em> (hypocrisies), <em>phthonous</em> (envies), <em>katalalias</em> (slanders). The list moves from internal attitude (malice, deceit) to performed disguise (hypocrisies) to competitive vice (envies) to destructive speech (slanders) — a social anatomy of community breakdown.</p>',
+    "2": '<p><strong>artigennēta brephē</strong> — newborn infants (continuing the birth-imagery of 1:23); <strong>logikon adolon gala</strong> — pure/unadulterated rational/word-milk. <em>Logikon</em> is deliberately ambiguous: (1) rational milk — milk appropriate to reasoning beings; (2) milk of the Word (<em>logos</em>) — given Peter\'s emphasis on the living <em>logos</em> in 1:23-25, both senses likely operate. <em>Adolos</em> = unadulterated, without guile — the same virtue asked of the community (guile listed as a vice in v.1); the milk itself models the character sought.</p>',
+    "3": '<p><strong>ei egeusasthe</strong> — if you have tasted (aorist — a completed past experience: having once tasted); <em>hoti chrēstos ho Kyrios</em> — that the Lord is good/kind. In Greek, <em>chrēstos</em> (good, kind) is a near-homophone of <em>Christos</em> (Christ); early Christian readers likely heard the wordplay deliberately: "if you have tasted that Christ is Christ." The verse cites Ps 34:8 LXX and connects tasting the Lord to coming to the living Stone of v.4.</p>',
+    "4": '<p><strong>pros hon proserchomenoi</strong> — coming to whom (present participle — the coming is ongoing); <strong>lithos zōn</strong> — living stone (an oxymoron in natural terms: stones are dead material; a living stone combines the solidity of stone with the vitality of life). <strong>apo anthrōpōn men apodedokimasmenon</strong> — having been rejected by humans after testing (<em>apodokimazō</em> = to reject after examination — the same word used in Ps 118:22 LXX; the builders who tested and discarded the stone); <em>para Theō de eklekton entimon</em> — but before God chosen and precious.</p>',
+    "5": '<p><strong>kai autoi hōs lithoi zōntes oikodomeisthe</strong> — you also as living stones are being built (present passive — the building is ongoing; the believers share the attribute of the cornerstone: living stones forming a spiritual house). <strong>oikos pneumatikos</strong> — a spiritual house (not made of physical material; the temple-imagery — God dwelling among his people — is realized in the community). <strong>hierateuma hagion</strong> — holy priesthood: the community does collectively what the Levitical priesthood did institutionally; <em>pneumatikas thysias</em> — spiritual sacrifices (not animal blood but the offering of lives and praise).</p>',
+    "6": '<p>The Isaiah 28:16 LXX citation introduces the stone catena. <strong>akrogōniaion</strong> — cornerstone (literally head-corner-stone; the foundational stone that determines the alignment of all others). <strong>ho pisteuōn ep\'autō ou mē kataischynthē</strong> — the one believing on him will by no means be put to shame (the <em>ou mē</em> double negative is emphatic — an absolute denial of shame for the believer). The honor-shame world of Peter\'s readers makes this promise significant: the rejected stone (= social shame) is actually the chosen cornerstone (= divine honor).</p>',
+    "7": '<p><strong>hymin oun hē timē</strong> — to you therefore the honor/preciousness (<em>timē</em> = honor and price; the same word as <em>entimon</em> in v.4 — the stone is precious to God; this preciousness/honor comes to believers through their relationship to the stone). The Ps 118:22 LXX citation: <em>ho lithos hon apedokimasan hoi oikodomoūntes, houtos egenēthē eis kephalēn gōnias</em> — the stone which the builders rejected became the head of the corner. The reversal is total: rejection → supremacy.</p>',
+    "8": '<p>The Isa 8:14 citation: <strong>lithos proskommatos kai petra skandalou</strong> — stone of stumbling and rock of offense. <em>Proskomma</em> (stumbling block — what the foot strikes against) and <em>skandalon</em> (trap-stick — the triggering stick of an animal trap). The same stone that is the corner for believers is the stumbling-stone for unbelievers; the difference is not in the stone but in the posture of approach. <strong>hoi apeithountes</strong> — those disobeying the word: disobedience to the word, not merely disbelief, is what makes Christ a stumbling stone.</p>',
+    "9": '<p>Four OT titles applied to the new community: <strong>genos eklekton</strong> (chosen race — Isa 43:20), <strong>basileion hierateuma</strong> (royal priesthood — Exod 19:6 LXX, where <em>basileion</em> is ambiguous: palace/kingdom of priests or royal/kingly priesthood), <strong>ethnos hagion</strong> (holy nation — Exod 19:6), <strong>laos eis peripoiēsin</strong> (people for possession/acquisition — <em>peripoiēsis</em> = personal possession, the LXX equivalent of Hebrew <em>segullah</em>, Exod 19:5). All four titles were Israel\'s covenant identity; all four are now applied to the multi-ethnic community of believers. <em>Aretās exangeilatē</em> — you might declare the excellences/virtues: <em>aretai</em> is the Greek word for human excellence; applied to God\'s deeds, it reframes divine acts as demonstrations of divine excellence.</p>',
+    "10": '<p><strong>hoi pote ou laos, nyn de laos Theou</strong> — once not a people, now the people of God (Hosea 1:9 + 2:23 — the not-my-people → my-people reversal). The Hosea background is Israel\'s rejection and restoration through covenant faithfulness; Peter applies the restoration language to communities that were never formally within the Mosaic covenant at all. <strong>ouk ēleēmenoi, nyn de eleēthentes</strong> — having not received mercy, but now having received mercy (<em>eleeō</em> twice — the mercy-vocabulary of the covenant).</p>',
+    "11": '<p><strong>paroikous kai parepidēmous</strong> — resident aliens and sojourners (two civic-status terms of increasing marginalization). A <em>paroikos</em> had some recognized status as a resident alien; a <em>parepidēmos</em> was even more transient — a visitor with no lasting legal tie. Peter uses both terms to describe the community\'s actual social condition and reframe it theologically: their marginalized status corresponds to their true identity as those whose home is elsewhere. <strong>sarkinōn epithymiōn... strateuesthai kata tēs psychēs</strong> — fleshly desires waging war against the soul — military language for the internal conflict.</p>',
+    "12": '<p><strong>anastrophēn kalēn echontes en tois ethnesin</strong> — having good conduct among the nations/Gentiles; <em>anastrophē</em> (way of life, conduct — the key word of the letter) in public view among outsiders. <strong>katēgorousin</strong> — they slander (present tense — ongoing); <strong>epopteusantes</strong> — having observed (<em>epoptēs</em> was the technical term for one who had been initiated to view the mysteries; Peter may be playing on the mystery-religion vocabulary: the pagan observers become involuntary witnesses to the Christian way of life).</p>',
+    "13": '<p><strong>hypotagēte pasē anthrōpinē ktisei</strong> — submit to every human institution (<em>ktisis</em> = creature/creation; the phrase means all human authority structures as institutions of human society). <strong>dia ton Kyrion</strong> — for the Lord\'s sake (the reason for submission is not political quietism but the Lord\'s own authority over the public order). <strong>basilei hōs hyperechonti</strong> — to the king as supreme (<em>hyperechō</em> = to be above/supreme — the political language of hierarchy).</p>',
+    "14": '<p>Governors (<strong>hēgemosin</strong>) sent by the king to perform two functions: <em>eis ekdikēsin kakōn</em> (for punishment of evildoers) and <em>epainon agathopoiōn</em> (for praise of those doing good). The theory of government presupposed is the Roman administrative ideal that provincial governors punish vice and reward virtue — the Christian community\'s good behavior should fit the "reward" category, not the "punishment" category.</p>',
+    "15": '<p><strong>hoti houtōs estin to thelēma tou Theou</strong> — for this is the will of God (the will of God grounds the ethic of good conduct — not mere pragmatism but divine purpose). <strong>agathopoiountas phimoun tēn tōn aphronōn anthrōpōn agnōsian</strong> — by doing good to muzzle the ignorance of foolish people (<em>phimoō</em> = to muzzle; used for silencing animals; the good deeds silence the slanders as effectively as a muzzle).</p>',
+    "16": '<p><strong>hōs eleutheroi</strong> — as free people (the freedom is real, not merely metaphorical); <strong>kai mē echontes tēn eleutherian eis epikalymma tēs kakias</strong> — and not using freedom as a covering for evil (<em>epikalymma</em> = covering/veil — the freedom that becomes a disguise for self-indulgence betrays its own nature). <strong>hōs Theou douloi</strong> — as God\'s slaves/servants — the paradox: freedom is expressed through willing service to God, not through autonomous self-determination.</p>',
+    "17": '<p>Four rapid imperatives without connective particles (asyndeton): <strong>timēsate pantas</strong> (honor all people), <strong>tēn adelphotēta agapate</strong> (love the brotherhood), <strong>ton Theon phobeisthe</strong> (fear/revere God), <strong>ton basilea timathe</strong> (honor the king). The structure is chiastic in scope: all → brotherhood → God → king, with the two honor-commands framing two inner commands. The double use of <em>timaō</em> for both "all people" and "the king" prevents the emperor from claiming unique honor; the king is honored as one instance of honoring all people, not as a unique category.</p>',
+    "18": '<p><strong>oiketai</strong> — household servants (<em>oiketēs</em> = a domestic/house servant, more specific than <em>doulos</em> — these are household staff, not agricultural or commercial slaves). <strong>en panti phobō</strong> — in all reverence (the <em>phobos</em> here is the fear of God from 1:17, not necessarily fear of the master — the next verse makes this explicit: <em>dia syneīdēsin Theou</em>). <strong>tois skoliois</strong> — to the crooked ones (<em>skolios</em> = bent, crooked — describing morally twisted masters).</p>',
+    "19": '<p><strong>touto gar charis</strong> — for this is grace/commendable (<em>charis</em> here functions as "what is creditable/acceptable to God" — not merely natural grace but the specifically theological quality of action aligned with God\'s own character). <strong>dia syneīdēsin Theou</strong> — through awareness/consciousness of God (<em>syneidēsis</em> = conscience, co-knowing; the awareness of God that shapes the response to unjust suffering).</p>',
+    "20": '<p><strong>poion gar kleos</strong> — for what <em>kleos</em> (fame, glory — the Greek honor-concept for achieving noteworthy reputation)? The question uses the vocabulary of Greco-Roman achievement culture: enduring beating for wrongdoing earns no honor-credit in any value system. <strong>agathopoiountas kai paschontas</strong> — doing good and suffering: this combination — good conduct still producing suffering — is the situation of Christ and of Peter\'s community. <em>Touto charis para Theō</em> — this is acceptable with God.</p>',
+    "21": '<p><strong>eis touto gar eklēthēte</strong> — for to this you were called (the calling is to the path of unjust suffering, not away from it). <strong>hypogrammon</strong> — a copybook (literally: writing under a model; the schoolchild\'s exercise of tracing over the teacher\'s letters to learn the correct form; the unique NT use of this word makes Christ\'s life the pattern that must be traced over). <strong>hina epakolouthēsēte tois ichnesin autou</strong> — that you might follow in his tracks (<em>ichnē</em> = footprints — the marks left by a person\'s feet).</p>',
+    "22": '<p>Isaiah 53:9 LXX: <strong>hamartian ouk epoiēsen, oude heurethē dolos en tō stomati autou</strong> — no sin committed, no deceit found in his mouth. The two absences are absolute: no wrongdoing (acted) and no deceit (spoken) — the two modes of offense against others. The citation follows the Isaiah 53 Servant pattern that runs through vv.21-25 without formal introduction; Peter assumes his readers recognize the intertextual register.</p>',
+    "23": '<p><strong>loidoroumenos ouk anteloidorei</strong> — being insulted he did not counter-insult (<em>antiloidoreō</em> = to insult in return); <strong>paschōn ouk ēpeilei</strong> — suffering he did not threaten. Two present participles + two imperfect negatives: the ongoing suffering of Christ produced no reactive violence in return. <strong>paredidou de tō krinonti dikaiōs</strong> — but kept entrusting himself to the one judging justly (imperfect: a sustained act of trust rather than a single moment; <em>paradidōmi</em> = to hand over, entrust).</p>',
+    "25": '<p><strong>poimena kai episkopon tōn psychōn hymōn</strong> — Shepherd and Overseer/Guardian of your souls. The two titles are combined: the Shepherd of Ezek 34 (who seeks, feeds, and protects the flock) and the <em>episkopos</em> (one who watches over, supervises — the same word for the office of overseer in the churches). <strong>eplanuomenoi</strong> — straying/wandering (the Isa 53:6 sheep-going-astray image; the perfect passive: you were in the state of having strayed; now you have returned).</p>'
+  },
+  "3": {
+    "1": '<p><strong>homotrópōs</strong> — in the same way (connecting to the submission pattern of 2:13-18 — wives\' submission is one instance of the general Christian submission pattern). <strong>hina kai ei tines apeithousīn tō logō</strong> — so that even if some disobey the word (the <em>logos</em> = the gospel word; the husbands in view are unbelievers who have not responded to the preached gospel). <strong>aneu logou kerdēthēsontai</strong> — they will be won without a word (the irony: the <em>logos</em> they refuse from preaching they may receive through living).</p>',
+    "2": '<p><strong>epopteusantes tēn en phobō agnēn anastrophēn hymōn</strong> — having observed your pure conduct in reverence. <em>Epopteusantes</em> (aorist participle — having observed): the husbands observe; the observation precedes the winning. <em>Phobos</em> (reverence/fear) — as throughout the letter, this is reverence for God rather than fear of the husband; the wife\'s conduct is directed Godward, not primarily husbandward.</p>',
+    "3": '<p><strong>hōn estō ouch ho exōthen embroplokēs trichōn</strong> — whose beauty should not be the external braiding of hair. The three prohibitions: elaborate hair-plaiting (<em>embroplokē</em>), putting around gold (<em>perithesis chrysiōn</em>), wearing of clothes (<em>endysis imatiōn</em>). The third prohibition (wearing clothes) is obviously not absolute; the pattern (external → internal) shows the prohibition is against prioritizing outward display. Roman elite women\'s elaborate hair constructions are the specific cultural reference.</p>',
+    "4": '<p><strong>ho kryptos tēs kardias anthrōpos</strong> — the hidden person of the heart (the interior self that is invisible to outside observation but fully known to God). <strong>to aprauton kai hēsychion pneuma</strong> — the gentle and quiet spirit: <em>praus</em> (gentle, not pushing its own claims) + <em>hēsychos</em> (quiet, not demanding to be heard). <strong>ho estin enōpion tou Theou polyteles</strong> — which is before God very costly/precious (<em>polyteles</em> = very valuable — the comparative register of God\'s evaluation vs. human evaluation).</p>',
+    "5": '<p><strong>hai hagiai gynaikes hai elpizousai eis Theon</strong> — the holy women who were hoping into God (present participle — their characteristic posture was active hope toward God, not passive resignation). <strong>ekosmoun heautas hypotassomenai tois idiois andrasin</strong> — used to adorn themselves submitting to their own husbands (the adornment and the submission are simultaneous — the submission is the adornment).</p>',
+    "6": '<p><strong>hōs Sarra hypēkousen tō Abraam, kyrion auton kalousa</strong> — as Sarah obeyed Abraham, calling him lord (the reference is to Gen 18:12 where Sarah uses <em>adon</em>/lord for Abraham in her internal speech — an act of deep disposition, not public performance). <strong>hēs egenēthēte tekna agathopoiousai</strong> — whose daughters you have become by doing good (the genealogy is ethical and behavioral — becoming daughters of Sarah by living as she lived, not by biological descent). <strong>mē phoboumenai mēdemian ptoan</strong> — not fearing any alarm/sudden terror (<em>ptoa</em> = sudden fright from a startling thing).</p>',
+    "7": '<p><strong>kata gnōsin</strong> — according to knowledge (with insight/understanding — not instinctively but intelligently). <strong>gynaikeiō skeuei hōs asthenesterō</strong> — to the female vessel as the weaker (<em>skeuos</em> = vessel, instrument — the body as the physical container of the person; <em>asthenesteron</em> = comparatively weaker in physical capacity, not morally or spiritually inferior). <strong>synklēronomois charitos zōēs</strong> — co-heirs of the grace of life (both husband and wife are joint inheritors; the <em>syn-</em> prefix emphasizes the co-equality). <strong>eis to mē enkoptesthai tas proseuchas</strong> — lest your prayers be hindered/cut off (<em>enkoptō</em> = to cut into, interrupt).</p>',
+    "8": '<p>Five community virtues in asyndeton: <strong>homophrōnes</strong> (like-minded — literally one-fronted/of one mind), <strong>sympatheis</strong> (sympathetic — feeling-with), <strong>philadelphoi</strong> (brother/sister-loving), <strong>eusplagchnoi</strong> (tender-heartedly compassionate — literally good-boweled, since the <em>splanchna</em> were the seat of emotion), <strong>tapeinophrones</strong> (humble-minded — literally low-fronted; not servile but unpretentious in self-assessment). The list moves from cognitive unity to affective engagement to practical disposition.</p>',
+    "9": '<p><strong>mē apodidontes kakon anti kakou ē loidorian anti loidorias</strong> — not repaying evil for evil or insult for insult; <em>apodidōmi</em> (to give back, repay) — the exchange-vocabulary of reciprocity that governs honor culture is negated. <strong>tounantion de eulogoūntes</strong> — but on the contrary blessing. <strong>eis touto gar eklēthēte</strong> — for to this you were called: the calling to blessing-as-response (not just blessing as an add-on). <em>Hina eulogian klēronomēsēte</em> — that you might inherit blessing.</p>',
+    "10": '<p>Psalm 34:12-16 LXX citation runs through vv.10-12. <strong>ho thelōn zōēn agapan kai idein hēmeras agathas</strong> — the one who desires to love life and see good days (the appetite for life is the assumed motivation). <strong>pausatō tēn glōssan apo kakou</strong> — let him stop the tongue from evil (<em>pausō</em> — the causative/reflexive use: cause the tongue to stop). The conjunction of tongue-control and life-love connects speech ethics directly to quality of living.</p>',
+    "11": '<p><strong>ekklīnatō de apo kakou kai poiēsatō agathon</strong> — let him turn away from evil and do good (two aorist imperatives from Ps 34 — decisive actions, not ongoing habits). <strong>zētēsatō eirēnēn kai diōxatō autēn</strong> — let him seek peace and pursue it (<em>diōkō</em> = to pursue as a runner pursues a goal; the aggressive pursuit of peace rather than passive waiting for it). The hunting/racing metaphor applied to peace-seeking reverses the aggressive pursuit of status characteristic of honor culture.</p>',
+    "12": '<p><strong>hoti ophthalmoi Kyriou epi dikaious</strong> — for the eyes of the Lord are on the righteous (the divine surveillance is benevolent — watching to protect and answer). <strong>kai ōta autou eis deēsin autōn</strong> — and his ears toward their petition (the posture of attentiveness). <strong>prosōpon de Kyriou epi poiountas kaka</strong> — but the face of the Lord against those doing evil (<em>prosōpon</em> in opposition = the face turned against; contrast with the attentive gaze toward the righteous).</p>',
+    "13": '<p><strong>kai tis ho kakōsōn hymas</strong> — and who is going to harm you? (rhetorical question expecting "no one" — if God\'s eyes are on the righteous, v.12, who can successfully harm them?) <strong>ean tou agathou mimētai gēnēsthe</strong> — if you become imitators of the good (<em>mimētai</em> = imitators, those who pattern themselves on a model).</p>',
+    "14": '<p><strong>all\'ei kai paschoite dia dikaiosynēn</strong> — but even if you should suffer because of righteousness (fourth-class condition — the optative of remote possibility — not denying the possibility but acknowledging its cost). <strong>makarioi</strong> — blessed (the beatitude-form; the only explicit beatitude in 1 Peter). <strong>ton de phobon autōn mē phobēthēte</strong> — their fear do not fear (Isa 8:12 LXX echo; the paronomasia <em>phobos/phobeomai</em> — fear-their-fear is a trap to be avoided).</p>',
+    "15": '<p><strong>Kyrion de ton Christon hagiasate en tais kardiais hymōn</strong> — but sanctify Christ as Lord in your hearts (the textual variant: some manuscripts read <em>Kyrion ton Theon</em> following Isa 8:13 LXX exactly — "sanctify the LORD of hosts"; Peter\'s adaptation replaces <em>Theon</em> with <em>ton Christon</em>, applying the Isa 8:13 command directly to Christ). <strong>apologia</strong> — a defense (the technical legal term for a formal defense in a trial; the readiness is for official interrogation). <strong>to en hymin elpidi</strong> — the hope that is in you (the hope as the distinctive marker that makes the community explicable and questionable).</p>',
+    "16": '<p><strong>syneīdēsin echontes agathēn</strong> — having a good conscience (<em>syneidēsis</em> = consciousness, co-knowing; the good conscience is the internal correlate of the good conduct observable from outside). <strong>hina en ō katalaleisthe</strong> — so that in the matter in which you are slandered (<em>katalaleō</em> = to speak down against); <strong>kataischynthōsin</strong> — they might be ashamed; the reversal of shame as in 2:6.</p>',
+    "17": '<p><strong>ei theloi to thelēma tou Theou paschein</strong> — if the will of God wills for you to suffer (the cognate construction <em>theloi to thelēma</em> emphasizes the divine will as the framework; suffering is not God\'s will in the sense of being preferred, but may be his will in the sense of being permitted and purposed). <strong>agathopoiountas ē kakopoiountas</strong> — doing good rather than doing evil: the distinction ensures that the suffering in view is specifically unjust suffering of righteous people.</p>',
+    "18": '<p><strong>Christos hapax peri hamartiōn epathen</strong> — Christ once-for-all suffered for sins (<em>hapax</em> = once and once only — the adverb of non-repetition; the once-for-all character distinguishes Christ\'s death from the repeated Levitical sacrifices). <strong>dikaios hyper adikōn</strong> — the righteous one for/on behalf of the unrighteous ones (the substitutionary formula: Christ in the place of the unrighteous). <strong>hina hymas prosagagē tō Theō</strong> — that he might bring you near to God (<em>prosagō</em> = to bring into the divine presence — the language of priestly access). <strong>thanatōtheis men sarki, zōopoiētheis de pneumati</strong> — put to death in the flesh but made alive in the spirit (the contrasting spheres of death and life).</p>',
+    "19": '<p><strong>en ō kai tois en phylakē pneumasin poreutheis ekēryxen</strong> — in which also, having gone, he proclaimed to the spirits in prison. Three major interpretations: (1) Christ\'s proclamation of victory to imprisoned fallen angels (Gen 6 background); (2) Christ\'s pre-incarnate proclamation through Noah; (3) Christ\'s proclamation to OT dead. The verse identifies the spirits as <em>tois en phylakē</em> (in prison/guardhouse) — a word typically used for divine imprisonment of hostile spiritual beings. The <em>en ō</em> (in which) refers back either to the Spirit or to the state of being made-alive (v.18).</p>',
+    "20": '<p><strong>apeitheisasin pote</strong> — who once disobeyed (aorist participle — a completed historical act); <strong>hote apexedecheto hē tou Theou makrothymia en hēmerais Nōe</strong> — when God\'s patience was waiting in the days of Noah (the divine patience as the window of opportunity before judgment). <strong>kataskeuazomenēs kibōtou</strong> — while the ark was being prepared (present passive — the ongoing construction as the duration of the patience). <strong>di\'hydatos</strong> — through water: the eight were saved <em>through</em> (not from) the water — water as both instrument of judgment and passage to safety.</p>',
+    "21": '<p><strong>ho kai hymas antitypon nyn sōzei baptisma</strong> — which also now saves you as the antitype — baptism. <em>Antitypon</em> is the technical term for the corresponding reality to the type: Noah\'s flood is the type; baptism is the antitype (the fulfillment that corresponds to the original pattern). <strong>ouk sarkos apothesis rhypou</strong> — not the removal of bodily filth (baptism is not mere external washing). <strong>syneīdēseōs agathēs eperōtēma eis Theon</strong> — the pledge/appeal of a good conscience toward God (<em>eperōtēma</em> = a binding legal question/pledge; baptism is an act of commitment/allegiance, not just a washing ceremony).</p>',
+    "22": '<p><strong>hos estin en dexiā tou Theou</strong> — who is at the right hand of God (the post-resurrection exaltation; Ps 110:1 background — the enthroned Lord). <strong>hypotagentōn autō angelōn kai exousiōn kai dynameōn</strong> — with angels, authorities, and powers subjected to him (aorist passive participle — the subjection is accomplished). The three categories (angels, authorities, powers) are the cosmic hierarchy of spiritual beings; their subjection grounds the believer\'s confidence in the face of social pressure: the hostile spiritual realities are already under the authority of the risen Christ.</p>'
   },
   "4": {
-    "6": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — James quotes Prov 3:34 LXX exactly (as does 1 Pet 5:5); the wisdom tradition's insistence that YHWH resists the arrogant and upholds the lowly is the hermeneutical key to James's social ethics"}
-    ]
-  },
-  "5": {
-    "4": [
-      {"type": "allusion", "target": "Isa 5:9", "note": "Behold the pay of the laborers who mowed your fields, which you kept back by fraud, is crying out — YHWH's ear hears the cry of the oppressed wages; James's eschatological indictment of wealthy landowners echoes the Isaianic woe-oracles against exploitative landowners"}
-    ]
-  }
-}
-
-JAMES_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>pasan charan hegesasthe adelphoi mou hotan peirasmois peripesete poikilois</strong> (<em>pāsan charān hēgēsasthe, adelphoi mou, hotan peirasmois peripesēte poikilois</em>): 'Count it all joy when you fall into various trials.' <em>Hegeomai</em> (count/consider) is a deliberate act of valuation — joy is not a natural reaction to trials but a chosen re-evaluation. <em>Peirasmoi</em> (trials/temptations) covers both external testing by circumstances (v. 2-4) and internal temptation by desire (v. 13-14) — James distinguishes them but uses the same word, showing that external pressure and internal desire interact in the same human experience of testing.</p>",
-
-    "22": "<p><strong>ginesthe de poietai logou kai me monon akroatai paralogizomenoi heautous</strong> (<em>ginesthe de poiētai logou kai mē monon akroatai paralogizomenoi heautous</em>): 'Be doers of the word and not hearers only, deceiving yourselves.' <em>Poietes logou</em> (doer of the word): the verbal-moral contrast between hearing and doing is fundamental to both the wisdom tradition (Prov 2:1-6) and the dominical teaching (Matt 7:24-27: the wise and foolish builders). <em>Paralogizomenoi</em> (deceiving, reasoning falsely alongside) implies a syllogistic self-deception: 'I heard the word, therefore I have received it and its benefits' — the error of intellectual reception without moral transformation.</p>"
-  },
-  "2": {
-    "14": "<p><strong>ti ophelos adelphoi mou ean pistin lege tis echein erga de me eche</strong> (<em>ti ophelos, adelphoi mou, ean pistin legē tis echein, erga de mē echē</em>): 'What good is it, my brothers, if someone says he has faith but does not have works?' The famous James-Paul tension: Luther notoriously called James 'an epistle of straw' for seeming to contradict Paul's faith-righteousness. The resolution lies in different uses of <em>pistis</em>: Paul's 'faith' is the whole person's trust in and surrender to God; James's target is a merely verbal profession (<em>legē tis echein</em>, 'says he has faith') without ethical corollary. James and Paul agree that genuine faith produces works (cf. Gal 5:6: 'faith working through love'); their different opponents require different emphases.</p>"
-  },
-  "3": {
-    "1": "<p><strong>me polloi didaskaloi ginesthe adelphoi mou eidotes hoti meizon krima lepsometha</strong> (<em>mē polloi didaskaloi ginesthe, adelphoi mou, eidotes hoti meizon krima lēpsometha</em>): 'Not many of you should become teachers, my brothers, knowing that we who teach will be judged with greater strictness.' The <em>meizon krima</em> (greater judgment) for teachers reflects the Jewish wisdom tradition's high estimation of the Torah-teacher's responsibility (m. Avot 2:7: 'the more Torah, the more life; the more study, the more wisdom; the more counsel, the more understanding; the more righteousness, the more peace; ... the more Torah, the more life') and its warning about the consequences of teaching falsehood. James is aware of his own exposure to this judgment.</p>"
-  }
-}
-
-JAMES_CONTEXT = {
-  "1": {
-    "1": "<p>James is addressed 'to the twelve tribes in the Dispersion' — framing the audience as the diaspora Jewish-Christian community. Whether 'James the brother of the Lord' (Gal 1:19; Josephus Ant. 20.200) is the author (martyred 62 CE) or a pseudonymous use of his authority (ca. 80-100 CE) is debated, but the letter's decidedly Jewish-Christian character (the synagogue imagery of 2:2; the explicit wisdom-tradition shaping; the prophetic social ethics) is consistent with Jerusalem's Jewish-Christian leader. Josephus describes James as 'the brother of Jesus who was called Christ' and records his death by stoning at the instigation of the high priest Ananus II, ca. 62 CE. If authentic, James is among the earliest NT writings.</p>"
-  },
-  "2": {
-    "1": "<p>The community James addresses assembles in a <em>synagoge</em> (2:2) — the term for a Jewish gathering-place, not yet the distinctly Christian <em>ekklesia</em> (church building). The social stratification problem (wealthy visitor with gold rings and fine clothing given the good seat; poor visitor told to stand or sit on the floor) reflects the patron-client dynamics of both the Roman and the Palestinian Jewish world. James's condemnation of partiality (<em>prosopolepsia</em>) is grounded in the same divine-impartiality tradition Paul invokes (Rom 2:11; Acts 10:34) — YHWH who shows no partiality to the rich over the poor is the standard for the community's hospitality.</p>"
-  }
-}
-
-JAMES_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.' James's God-centered theology (without yet making a Christological application) shows the Father's immutable character as the ground of human trust and patience in trial. The Christological trajectory: this unchanging Father of lights is the one who sent his Son (not yet named in ch.1, but cf. 2:1: 'the faith in our Lord Jesus Christ, the Lord of glory'). The stability of the Father underwrites the whole counsel of the letter.</p>"
-  },
-  "2": {
-    "1": "<p>A direct revelation: 'The faith of our Lord Jesus Christ, the Lord of glory.' James's only explicit Christological title is <em>Kyrios tes doxes</em> — 'the Lord of glory.' In LXX Ps 24:7-10, the 'King of glory' (<em>basileus tes doxes</em>) is YHWH himself. James transfers this divine glory-title to Jesus: to hold 'the faith of the Lord of glory' while showing partiality to the rich is a theological contradiction — the one who identifies with the poor (the Magnificat's God; the Beatitudes' Christ) cannot be honored by honoring the rich over the poor.</p>"
-  },
-  "5": {
-    "7": "<p>A direct revelation: 'Be patient, therefore, brothers, until the coming of the Lord.' James ends with the parousia as the motive for patience in suffering (vv. 7-11) and restraint of speech (vv. 12). The 'coming of the Lord' (<em>parousia tou Kyriou</em>) frames the whole letter's ethics eschatologically: the injustice of the rich oppressors, the suffering of the righteous, the unanswered prayers — all are held before the coming Judge (v. 9: 'the Judge is standing at the door'). The standing judge at the door is the Christ whose coming is imminent.</p>"
-  }
-}
-
-# ============================================================
-# 1 PETER
-# ============================================================
-
-ONEPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "quote", "target": "Lev 11:44", "note": "You shall be holy, for I am holy — the Levitical holiness-imperative is directly quoted as the foundation for Peter's ethics; the holiness character of YHWH is the standard for covenant-community behavior in both the old and new covenants"}
-    ],
-    "24": [
-      {"type": "fulfillment", "target": "Isa 40:6-8", "note": "All flesh is like grass and all its glory like the flower of grass; the grass withers and the flower falls, but the word of the Lord remains forever — Peter applies Isa 40:6-8 to the imperishable seed of the gospel-word; the word that endures is the good news preached to them, fulfilling Isaiah's consolation-proclamation"}
-    ]
-  },
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Isa 28:16", "note": "Behold I am laying in Zion a stone, a cornerstone chosen and precious, and whoever believes in him will not be put to shame — Peter cites Isa 28:16 LXX as fulfilled in Christ; the Zion-foundation stone of Isaiah is identified with the rejected-and-vindicated Christ"},
-      {"type": "fulfillment", "target": "Ps 118:22", "note": "The stone that the builders rejected has become the cornerstone — the second OT stone text: the rejected cornerstone of Ps 118 is Christ crucified and raised; the very rejection that qualified him as victim becomes his exaltation-identity"},
-      {"type": "fulfillment", "target": "Isa 8:14", "note": "A stone of stumbling and a rock of offense — Isa 8:14 LXX (YHWH as both sanctuary and stone of stumbling for Israel); Peter applies the dual effect to Christ: to believers, the cornerstone; to unbelievers, the stumbling stone"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Exod 19:6", "note": "A royal priesthood, a holy nation — Peter applies the Sinai covenant's identity-markers (Exod 19:6: a kingdom of priests and a holy nation) directly to the church; the new covenant community is the Sinai identity realized and expanded beyond ethnic Israel"},
-      {"type": "fulfillment", "target": "Isa 43:20-21", "note": "A people for his own possession, that you may proclaim the excellencies of him who called you — Isa 43:21 LXX (my people whom I formed for myself, to declare my praise); Peter completes the new-community description with the Isaianic mission: called-out-from-darkness people who exist to proclaim the God who called them"}
-    ]
-  },
-  "3": {
-    "10": [
-      {"type": "quote", "target": "Ps 34:12-16", "note": "Whoever desires to love life and see good days, let him keep his tongue from evil — Peter quotes Ps 34:12-16 LXX directly as the biblical foundation for his ethics of suffering and peace-seeking; Psalm 34 (the acrostic of David's deliverance) becomes the wisdom-framework for the community's response to hostility"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — same Prov 3:34 LXX quotation as James 4:6; the shared citation indicates it was a widely known community warrant for humility in the face of suffering and opposition"}
-    ]
-  }
-}
-
-ONEPET_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>anagennesas hemas eis elpida zosan di anastaseos Iesou Christou ek nekron</strong> (<em>anagennēsas hēmas eis elpida zōsan di anastaseōs Iēsou Christou ek nekrōn</em>): 'who has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.' <em>Anagennao</em> (born again/anew) appears only here and v. 23 in the NT; John 3 uses <em>gennethenai anothen</em> (born from above/again). The new birth is not an isolated spiritual event but a directed new genesis: <em>eis elpida zosan</em> (into a living hope). The resurrection of Christ is not merely the means but the content of the hope — living hope because the Resurrected One lives.</p>",
-
-    "18": "<p><strong>ou phthartois argyrio e chruso oi elytrothete ... alla timio haimati has amnos amomou kai aspilon Christou</strong> (<em>ou phthartois, argyriō ē chrysō, oi elytrōthēte ... alla timiō haimati hōs amnos amōmou kai aspilou Christou</em>): 'not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-metaphor (<em>lytroō</em>, redeem/ransom) is grounded in the Exodus-redemption of Israel (Exod 6:6: 'I will redeem you with an outstretched arm') and the Servant's self-pouring in Isa 53. The lamb-without-blemish terminology is directly cultic: the Passover lamb (Exod 12:5) and the sacrificial requirements of Lev 22:19-25 — Christ fulfills the sacrificial requirements as the perfect offering.</p>"
-  },
-  "2": {
-    "24": "<p><strong>hos tas hamartias hemon autos anenegken en to somati autou epi to xylon</strong> (<em>hos tas hamartias hēmōn autos anēnenken en tō sōmati autou epi to xylon</em>): 'He himself bore our sins in his body on the tree.' The language is saturated with Isa 53: <em>anaphero</em> is the LXX word for the priestly act of lifting/bearing an offering to the altar; <em>epi to xylon</em> (on the tree) echoes Deut 21:23 (a hanged man is cursed) and Gal 3:13 (Christ redeemed us from the curse of the law by becoming a curse for us). The phrase 'in his body' is a deliberate anti-Docetic marker: the sin-bearing was physical, not merely spiritual — the crucifixion was real.</p>"
-  }
-}
-
-ONEPET_CONTEXT = {
-  "1": {
-    "1": "<p>1 Peter is addressed to the diaspora of Pontus, Galatia, Cappadocia, Asia, and Bithynia — a geographic sweep of the northern half of Asia Minor (modern Turkey). The term <em>parepidemos</em> (sojourner/temporary resident, v. 1) and <em>paroikos</em> (alien/resident without citizenship, 2:11) had legal specificity: resident aliens without full citizenship rights, dependent on local good will. Peter applies these social categories to the spiritual situation of believers: they are not truly at home in this age, regardless of their legal status. The five provinces listed correspond roughly to the area of a Bithynian governor's jurisdiction, suggesting a single administrative document.</p>"
-  },
-  "2": {
-    "13": "<p>Peter's 'submit to every human institution' (<em>hypotassō pase anthropine ktisei</em>) parallels Paul's Romans 13, but the social context is different: 1 Peter addresses communities facing active hostility and false accusation, not merely civic obligation. The political submission is part of the apologetic strategy: by visibly good behavior (v. 15: <em>agathopoia</em>, doing good), the community silences the ignorance of foolish critics. The 'honor everyone, love the brotherhood, fear God, honor the emperor' (v. 17) places the emperor in the fourth position — honored, but not uniquely so, and subordinate to God-fear.</p>"
-  }
-}
-
-ONEPET_CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'You were ransomed from the futile ways inherited from your forefathers, not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-price Christology: Christ's blood is the currency of redemption from inherited futility. The Passover-lamb imagery connects the death of Christ to the entire Exodus-redemption narrative — as the Passover blood protected Israel from the destroying angel, Christ's blood ransoms believers from the bondage of empty ancestral religion. The lamb is not merely a metaphor for innocence but a liturgical category that places the cross within the sacrificial system's culmination.</p>"
-  },
-  "2": {
-    "24": "<p>A fulfillment: 'He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.' 1 Peter 2:22-25 is the most sustained application of Isa 53 to the passion in the NT outside the Gospel traditions. Peter works through the Servant Song verse by verse: v. 22 (Isa 53:9: no sin in his mouth), v. 23 (Isa 53:7: did not retaliate), v. 24 (Isa 53:4-5: bore our griefs, wounded for our iniquities, by his stripes we are healed), v. 25 (Isa 53:6: we all went astray like sheep). The suffering community (1:6-7; 2:19-21; 4:12-16) is invited to understand their own suffering through the Servant-Christ who bore sins and called them to follow his pattern.</p>"
-  },
-  "3": {
-    "18": "<p>A direct revelation: 'Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit.' The uniqueness and finality of the atonement: <em>hapax</em> (once, for all time) marks the non-repeatability of Christ's sin-bearing death. The substitutionary logic: the righteous (<em>dikaios</em>) for the unrighteous (<em>adikous</em>) — the morally qualified dies for the morally disqualified. The telos: 'that he might bring us to God' (<em>hina hemas prosagagē to theo</em>) — access to God is the goal of the cross, not merely forgiveness as a legal transaction.</p>"
-  }
-}
-
-# ============================================================
-# 2 PETER
-# ============================================================
-
-TWOPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Dan 7:13-14", "note": "The power and coming of our Lord Jesus Christ — the Danielic 'power and great glory' of the Son of Man's coming; Peter grounds the Transfiguration as the preview of the parousia-power and glory that Daniel anticipated"},
-      {"type": "allusion", "target": "Ps 2:7", "note": "This is my beloved Son with whom I am well pleased — the divine voice at the Transfiguration echoes Ps 2:7's royal adoption formula; Peter as eyewitness to this Father-to-Son declaration grounds his eschatological teaching"}
-    ]
-  },
-  "3": {
-    "13": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "New heavens and a new earth in which righteousness dwells — Peter cites the Isaianic new creation promise (Isa 65:17; 66:22) as the eschatological expectation; the new creation where righteousness dwells (not merely exists but inhabits fully) is the goal toward which the present cosmos is moving"}
-    ]
-  }
-}
-
-TWOPET_ORIGINAL = {
-  "3": {
-    "9": "<p><strong>ou bradynei Kyrios tes epangelias hos tines bradyteta hegountai alla makrothymei eis hymas me boulomenos tinas apolesai alla pantas eis metanoian chorein</strong> (<em>ou bradynei Kyrios tēs epangelias, hōs tines bradytēta hēgountai, alla makrothymei eis hymas, mē boulomenos tinas apolesthai alla pantas eis metanoian chōrein</em>): 'The Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish but that all should reach repentance.' <em>Makrothymia</em> (patience/longsuffering) reframes the delayed parousia as a divine mercy-extension rather than a failed prediction. The universalistic-sounding 'not wishing that any should perish' is balanced by 'toward you' — the patience is specifically exercised toward the addressees, inviting them toward repentance. The passage is one of the key texts on divine patience and the purpose of eschatological delay.</p>"
-  }
-}
-
-TWOPET_CONTEXT = {
-  "3": {
-    "3": "<p>The 'scoffers' who mock the parousia promise ('Where is the promise of his coming? For ever since the fathers fell asleep, all things are continuing as they were from the beginning', vv. 3-4) reflect an Epicurean-style skepticism about divine intervention in the regularities of nature: if God were going to act, why hasn't he? The Epicurean doctrine of <em>ataraxia</em> (undisturbed natural regularity, governed by atoms, not divine providence) provided intellectual cover for dismissing apocalyptic expectations. Peter's response: the uniformitarians forget that the past was not uniform — the flood was God's catastrophic intervention in the 'natural order' (vv. 5-6), and the coming fire will be the next. The argument uses Genesis to rebut Epicurean naturalism.</p>"
-  }
-}
-
-TWOPET_CHRIST = {
-  "1": {
-    "1": "<p>A direct revelation: 'To those who have obtained a faith of equal standing with ours by the righteousness of our God and Savior Jesus Christ.' The phrase 'our God and Savior Jesus Christ' (<em>tou theou hemon kai soteros Iesou Christou</em>) — following the same Granville Sharp single-article construction as Titus 2:13 — directly predicates deity of Jesus Christ. 2 Peter opens with its highest Christological claim: Jesus is God and Savior. This framing situates the entire letter's authority under the person of the divine Savior whose return the scoffers mock.</p>"
-  },
-  "3": {
-    "10": "<p>A direct revelation: 'The day of the Lord will come like a thief, and then the heavens will pass away with a roar, and the heavenly bodies will be burned up and dissolved, and the earth and the works that are done on it will be exposed.' The Day of the Lord (the YHWH theophany-judgment tradition; Amos 5:18-20; Joel 2; Zeph 1:14-18) is identified with the Day of Jesus Christ (v. 12: 'waiting for and hastening the coming of the day of God'). The cosmic dissolution is not the end of material existence but its purification — leading to the new heavens and new earth of v. 13. The Christological judgment: the Lord Jesus presides over this dissolution as the eschatological judge whose day arrives unexpectedly.</p>"
-  }
-}
-
-# ============================================================
-# 2 JOHN, 3 JOHN, JUDE
-# ============================================================
-
-TWOJOHN_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "1 John 4:2", "note": "Those who do not confess the coming of Jesus Christ in the flesh are the deceiver and the antichrist — the same anti-Docetic test as 1 John 4:2 (every spirit that confesses Jesus Christ has come in the flesh is from God); 2 John applies the same doctrinal test to traveling teachers"}
-    ]
-  }
-}
-
-TWOJOHN_ORIGINAL = {
-  "1": {
-    "7": "<p><strong>hoti polloi planoi exelthon eis ton kosmon hoi me homologountes Iesoun Christon erchomenon en sarki houtos estin ho planos kai ho antichristos</strong> (<em>hoti polloi planoi exēlthon eis ton kosmon, hoi mē homologountes Iēsoun Christon erchomenon en sarki</em>): 'For many deceivers have gone out into the world, those who do not confess the coming of Jesus Christ in the flesh.' The present participle <em>erchomenon</em> (coming) rather than the perfect <em>elēlythota</em> (having come, 1 John 4:2) may signal a future reference — not the Incarnation but the parousia. Either way, the test is the same: affirm the bodily reality of Jesus's existence, whether past (Incarnation) or future (Return). The Docetic denial of Christ's flesh eliminates both the atonement and the resurrection-body hope.</p>"
-  }
-}
-
-TWOJOHN_CONTEXT = {
-  "1": {
-    "1": "<p>2 John is addressed from 'the elder' to 'the elect lady and her children' — most likely a metaphor for a particular congregation and its members (cf. 1 Pet 5:13 where 'Babylon' = Rome; 'she' = the church in Babylon). The 'elder' is commonly identified with John the Apostle or John the Elder of Ephesus (Papias distinguishes these; Eusebius records the tradition of two Johns in Asia). The letter is a brief (13 verses) traveling advisory: the practice of Greco-Roman hospitality created real danger for Christian communities — traveling teachers could exploit the obligation of hospitality to spread heresy. 2 John's 'do not receive him into your house' (v. 10) restricts the normal hospitality-obligation for doctrinal cause.</p>"
-  }
-}
-
-TWOJOHN_CHRIST = {
-  "1": {
-    "3": "<p>A direct revelation: 'Grace, mercy, and peace will be with us from God the Father and from Jesus Christ the Father's Son.' The Trinitarian greeting (Father and Son together as the source of grace, mercy, and peace) frames 2 John's doctrinal concern: the Christ of the greeting (the Son of the Father) is the same Christ whose bodily reality the deceivers deny (v. 7). Christology determines fellowship (vv. 9-11): to go beyond Christ's teaching is to lose the Father; to hold the Son's teaching is to have both the Son and the Father. The Christological and Trinitarian are inseparable in 2 John.</p>"
-  }
-}
-
-THREEJOHN_ECHO = {
-  "1": {
-    "11": [
-      {"type": "allusion", "target": "Gen 1:4", "note": "Whoever does good is from God; whoever does evil has not seen God — the fundamental creation-theology judgment: good comes from God, evil does not; 3 John applies this creation-ethics criterion to the community conflict between the hospitable Gaius and the domineering Diotrephes"}
-    ]
-  }
-}
-
-THREEJOHN_ORIGINAL = {
-  "1": {
-    "4": "<p><strong>meizotera toutōn ouk echo charan hina akouo ta ema tekna en te aletheia peripatounta</strong> (<em>meizoteran toutōn ouk echō charan, hina akouō ta ema tekna en tē alētheia peripatounta</em>): 'I have no greater joy than to hear that my children are walking in the truth.' The elder's pastoral identity is entirely defined by the spiritual progress of his 'children' — those he has led to faith. <em>Peripatountas en te aletheia</em> (walking in truth) is the Johannine idiom for the whole-life embodiment of the gospel: truth is not merely intellectual assent but an ambulatory practice that shapes the whole life.</p>"
-  }
-}
-
-THREEJOHN_CONTEXT = {
-  "1": {
-    "9": "<p>Diotrephes 'who likes to put himself first' (<em>philoproteuo</em>, v. 9) represents the emergence of local congregational autonomy that resisted the authority of the itinerant apostolic elder. The conflict between the elder's authority (rooted in the apostolic tradition) and Diotrephes's local authority (rooted in congregational control) anticipates the later tension between episcopal and local governance structures. Diotrephes's practices — refusing the elder's letter, refusing to receive traveling brothers, and expelling those who do — constitute a miniature local church coup. 3 John is the NT's only document addressing intra-Christian church politics at this granular level.</p>"
-  }
-}
-
-THREEJOHN_CHRIST = {
-  "1": {
-    "7": "<p>A direct revelation: 'For they have gone out for the sake of the name, accepting nothing from the Gentiles.' The missionaries who deserve hospitality go out 'for the sake of the Name' (<em>hyper tou onomatos</em>) — the Name of Jesus, YHWH's eschatological Name in the NT (Acts 4:12; Phil 2:9-10). They are supported not by the Gentile world's resources but by the community of believers. The missional church is defined by: (1) the Name as motivation, (2) non-worldly financial support, and (3) mutual community support (<em>synergoi</em>, v. 8). The entire brief letter is framed within this Christological missiology.</p>"
-  }
-}
-
-JUDE_ECHO = {
-  "1": {
-    "9": [
-      {"type": "allusion", "target": "Zech 3:2", "note": "The Lord rebuke you — Michael's rebuke of the devil in Jude's midrash on the Assumption of Moses echoes YHWH's rebuke of Satan in Zech 3:2 ('The LORD rebuke you, O Satan'); the heavenly court's handling of demonic accusation follows the same pattern"}
-    ],
-    "14": [
-      {"type": "quote", "target": "1 Enoch 1:9", "note": "Behold the Lord comes with ten thousands of his holy ones to execute judgment — Jude quotes 1 Enoch 1:9 as prophetic authority; this is the only direct quotation of 1 Enoch in the NT, indicating the apocalyptic tradition's authority in some early Christian communities"},
-      {"type": "allusion", "target": "Deut 33:2", "note": "He came from Sinai ... with holy ones at his right hand — the Sinai theophany with the myriads of holy ones (angels/saints); both Deut 33:2 and 1 Enoch 1:9 draw from the same theophany tradition that Jude applies to the parousia of Christ"}
-    ]
-  }
-}
-
-JUDE_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>parakalo agapetoi pasan spoude poioumenos graphein hymin peri tes koines soteries anagkaion egesamen grapsai hymin parakalon epagonizesthai te hapax paradotheise tois hagiois pistei</strong>: 'I found it necessary to write appealing to you to contend for the faith that was once for all delivered to the saints.' <em>Hapax paradotheise</em> (once for all delivered): the single, unrepeatable handing-over of the faith — <em>paradidomi</em> is the technical tradition-transmission verb (as in 1 Cor 11:23, 15:3). The faith is not a developing deposit that each generation revises but a fixed, delivered tradition that needs defending, not augmenting. <em>Epagonizomai</em> (contend earnestly for) is the athletic-contest word applied to doctrinal fidelity — not aggressive attack of opponents but vigorous defense of what was given.</p>"
-  }
-}
-
-JUDE_CONTEXT = {
-  "1": {
-    "4": "<p>The opponents Jude addresses are 'certain people who have crept in unnoticed' (<em>pareisedysan</em>) — using the technical language of infiltration. They are described as 'perverting the grace of our God into sensuality and denying our only Master and Lord Jesus Christ.' The combination of antinomian sexual license ('sensuality') with Christological denial suggests a proto-Gnostic group that used the grace-freedom of the gospel (cf. Rom 6:1: 'shall we continue in sin so that grace may abound?') as license for moral license. Jude's use of 1 Enoch and the Assumption of Moses (v. 9) indicates familiarity with the wider Jewish apocalyptic tradition and suggests a Jewish-Christian context for both author and audience.</p>"
-  }
-}
-
-JUDE_CHRIST = {
-  "1": {
-    "25": "<p>A direct revelation: 'To the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority before all time and now and forever.' Jude's doxology is the most comprehensive Christological doxology in the NT — ascribing glory, majesty, dominion, and authority (four throne-room attributes of YHWH in Daniel and Isaiah) to God through Christ, and extending this across all three tenses of time (before, now, forever). The Christ through whom this glory is ascribed is the Lord whose 'love you keep yourselves in' (v. 21) and who presents believers blameless with rejoicing (v. 24). The letter's defense of the faith is framed by this doxological Christology.</p>"
+    "1": '<p><strong>Christou oun pathontos sarki</strong> — since therefore Christ suffered in the flesh (the incarnation and suffering are specified together — not spiritual suffering but bodily); <strong>kai hymeis tēn autēn ennoian hoplisasthe</strong> — arm yourselves with the same attitude/thinking (<em>ennoia</em> = thought, mental attitude; <em>hoplisasthe</em> = military aorist imperative: put on armor). <strong>ho pathōn sarki pepautai hamartias</strong> — the one who has suffered in the flesh has ceased from sin (perfect active: has-and-is-now-ceased; the logic: sharing in Christ\'s suffering is the path of mortification of sinful desire).</p>',
+    "2": '<p><strong>eis to mēketi anthrōpōn epithymiais</strong> — so as no longer to live for human desires (the negative purpose of the suffering-attitude). <strong>alla thelemati Theou</strong> — but for the will of God (the alternative orientation: from <em>epithymia</em> [reactive craving] to <em>thelēma</em> [purposeful divine will]).</p>',
+    "3": '<p><strong>aselgeia, epithymia, oinophlygia, kōmos, potos, athemitois eidōlolatriais</strong> — debauchery, desire, wine-excess, carousing, drinking-parties, forbidden idolatries. <em>Oinophlygia</em> = wine-excess. <em>Kōmos</em> = riotous carousing. <em>Potos</em> = organized drinking bout (specifically the sympotic party, sometimes dedicated to Dionysus — a social institution, not merely individual excess). The list names the social events from which the community has withdrawn, explaining why they are perceived as strange (v.4).</p>',
+    "4": '<p><strong>en hō xenizontai</strong> — in which they are surprised/alien-ated (<em>xenizō</em> = to make to feel like a foreigner; the pagans are surprised because withdrawal from normal social-religious events seems bizarre). <strong>mē syntrechontōn hymōn eis tēn autēn tēs asōtias anachysin</strong> — you not running together with them into the same flood-tide of recklessness (<em>anachysis</em> = a pouring/flooding out; <em>asōtia</em> = recklessness, the opposite of safe/saved living). <em>Blasphēmountes</em> — they slander (present participle — ongoing social pressure).</p>',
+    "5": '<p><strong>hoi apodōsousin logon</strong> — they will render an account (the eschatological accounting; <em>apodidōmi</em> = to give back what is owed). <strong>tō etoimōs echonti krinai zōntas kai nekrous</strong> — to the one who is ready to judge living and dead (the universal scope of the coming judgment — no one escapes by death; cf. 2 Tim 4:1; Acts 10:42).</p>',
+    "6": '<p><strong>eis touto gar kai nekrois euēggelisthē</strong> — for to this end also the gospel was preached to the dead. The most debated verse in 1 Peter after 3:19: the "dead" most likely refers to those who were alive when they heard the gospel but have since died (not the post-mortem proclamation of 3:19). <strong>hina krinōmenoi men kata anthrōpous sarki, zōsin de kata Theon pneumati</strong> — so that having been judged according to humans in the flesh, they might live according to God in the spirit (the purpose is life-in-spirit despite death-in-flesh).</p>',
+    "7": '<p><strong>pantōn de to telos ēggiken</strong> — the end of all things has drawn near (perfect active: it has drawn-and-remains-near; eschatological imminence as motivation). <strong>sōphrōnēsate kai nēpsate eis proseuchas</strong> — be soberminded and be alert for prayers (<em>sōphroneō</em> = to be sound-minded, prudent; <em>nēphō</em> = to be sober/not intoxicated; both words for the mental clarity required for effective prayer).</p>',
+    "8": '<p><strong>tēn eis heautous agapēn ektenē echontes</strong> — having earnest love for one another (<em>ektenēs</em> = stretched out, taut — the word for a muscle under tension or a bow drawn taut; love that is exerted, not relaxed). <strong>hoti agapē kalyptei plēthos hamartiōn</strong> — because love covers a multitude of sins (Prov 10:12 allusion). <em>Kalyptō</em> (to cover/conceal) — love does not ignore or excuse sin but covers it in the sense of not broadcasting it to destroy the offender.</p>',
+    "9": '<p><strong>philoxenoi eis allēlous aneu gongysmou</strong> — hospitable to one another without grumbling (<em>philoxenos</em> = love-of-stranger/foreigner; the word for offering hospitality to traveling Christians who lack accommodation; <em>gongysmōs</em> = grumbling — the word for Israel\'s wilderness complaint). The juxtaposition: love-of-stranger without the murmuring that marked the wilderness generation who received hospitality from God but grumbled at the conditions.</p>',
+    "10": '<p><strong>hekastos kathōs elaben charisma</strong> — each as he/she received a grace-gift (<em>charisma</em> = gift from <em>charis</em>, grace; the distribution is individual — <em>hekastos</em>, each one). <strong>eis heautous auto diakonountes</strong> — serving it for one another (the gift is received for service, not for self-display). <strong>hōs kaloi oikonomoi poikilēs charitos Theou</strong> — as good stewards of the varied grace of God (<em>oikonomos</em> = household manager; the person is a steward/manager, not an owner; <em>poikilēs</em> = many-colored — the same word as <em>poikilois peirasmois</em> in 1:6, now applied to grace rather than trials).</p>',
+    "11": '<p><strong>ei tis lalei, hōs logia Theou</strong> — if anyone speaks, as oracles of God (<em>logion</em> = a short, authoritative utterance; the LXX uses it for divine decrees and commandments). <strong>ei tis diakonei, hōs ex ischuos hēs chorēgei ho Theos</strong> — if anyone serves, as out of the strength that God supplies (<em>chorēgeō</em> = the verb for the wealthy patron who funds a public performance; the word for the chorus-funder\'s munificence applied to God\'s power-supply). <em>Hina en pasin doxazētai ho Theos dia Iēsou Christou</em> — that in all things God might be glorified through Jesus Christ.</p>',
+    "12": '<p><strong>mē xenizesthe tē en hymin pyrosei pros peirasmōn hymin ginomenē</strong> — do not be surprised at the fiery ordeal occurring among you for your testing (<em>xenizō</em> again — same root as <em>xenos</em>, stranger; do not be made to feel this is foreign/strange; <em>pyrōsis</em> = a burning ordeal). <strong>hōs xeniou hymin symbaīnontos</strong> — as though something foreign were happening to you (the double <em>xenos</em>-root is deliberate: do not be made strange by the strange-thing).</p>',
+    "13": '<p><strong>koinōneite tois Christou pathēmasin</strong> — you are sharers in / partners with Christ\'s sufferings (<em>koinōneō</em> = to be partners/sharers in; the word for fellowship/participation; suffering is participation in Christ\'s suffering, not mere analogy). <strong>hina kai en tē apokalypsei tēs doxēs autou charēte agalliōmenoi</strong> — that also at the revelation of his glory you might rejoice, exulting (two words for joy: <em>chairō</em> the general and <em>agalliaō</em> the intense exultation — the same combination as 1:6-8).</p>',
+    "14": '<p><strong>ei oneidizesthe en onomati Christou</strong> — if you are insulted because of the name of Christ (the name as the stated grounds for social insult; cf. v.16 where "Christian" becomes the formal accusation). <strong>makarioi</strong> — blessed (second beatitude of the letter). <strong>to tēs doxēs kai to tou Theou Pneuma</strong> — the Spirit of glory and of God (<em>to tēs doxēs</em> — the Spirit characterized by glory; <em>to tou Theou</em> — belonging to God: the double characterization echoes Isa 11:2 where the sevenfold Spirit rests on the Servant). <strong>anapauetai</strong> — rests on you (<em>anapauō</em> = to give rest, to settle — the same term as Isa 11:2 LXX).</p>',
+    "15": '<p><strong>mēdeis gar hymōn paschetō hōs phoneus ē kleptēs ē kakopoios</strong> — let no one among you suffer as a murderer or thief or evildoer (the three categories represent just grounds for legal punishment). <strong>ē hōs allotrioepískopos</strong> — or as a meddler/busybody (<em>allotrioepiskopos</em> = overseer/inspector of others\' affairs — a hapax in the NT; combining <em>allotrion</em>, another\'s, + <em>episkopos</em>, overseer; the intruder into others\' business who creates community friction).</p>',
+    "16": '<p><strong>hōs Christianos</strong> — as a Christian. <em>Christianos</em> was first used in Acts 11:26 in Antioch; its use here implies it had become an official designation that could be registered as a legal accusation. The willingness to be known publicly by the name is itself a speech act of allegiance. <strong>doxazetō de ton Theon en tō onomati toutō</strong> — let him glorify God in this name (the accusation-name becomes the praise-name — the social shame is transformed by reframing the name as belonging to God\'s glory).</p>',
+    "17": '<p><strong>hoti kairos tou arxasthai to krima apo tou oikou tou Theou</strong> — because it is time for judgment to begin from the house of God. The <em>oikos tou Theou</em> (house of God) was the temple in Ezek 9:6: "begin at my sanctuary" — divine judgment starting with God\'s own people before extending outward. The suffering of Peter\'s community is reframed as the initial stage of the coming universal judgment; they are at its leading edge. <strong>ti to telos tōn apeithountōn tō tou Theou euangeliō</strong> — what will be the end/outcome of those disobeying God\'s gospel.</p>',
+    "18": '<p>Proverbs 11:31 LXX: <strong>kai ei ho dikaios molis sōzetai</strong> — and if the righteous is scarcely/barely saved (<em>molis</em> = with difficulty, barely). The LXX translation of Prov 11:31 significantly differs from the MT; the LXX version introduces the theme of difficult salvation for the righteous — consistent with Peter\'s context of suffering believers. <strong>ho asebēs kai hamartōlos pou phaneitai</strong> — where will the ungodly and sinner appear? (rhetorical question expecting: nowhere safely).</p>',
+    "19": '<p><strong>hōste kai hoi paschontes kata to thelēma tou Theou</strong> — so that also those suffering according to the will of God (the <em>kata to thelēma</em> — the divine will as the framework that transforms suffering from meaningless to purposeful). <strong>pistos ktistēs</strong> — faithful Creator (<em>ktistēs</em> = creator; the only occurrence in the NT for God as Creator; the connection: the one who made you is the one most competent and committed to hold you). <strong>en agathopoiia paratithesthōsan tas psychas</strong> — let them entrust their souls in doing good (the active entrusting is combined with active good-doing — trust is not passive resignation but active fidelity).</p>'
   }
 }
 
 def main():
-    books_data = [
-        ('james', JAMES_ECHO, JAMES_ORIGINAL, JAMES_CONTEXT, JAMES_CHRIST),
-        ('1peter', ONEPET_ECHO, ONEPET_ORIGINAL, ONEPET_CONTEXT, ONEPET_CHRIST),
-        ('2peter', TWOPET_ECHO, TWOPET_ORIGINAL, TWOPET_CONTEXT, TWOPET_CHRIST),
-        ('2john', TWOJOHN_ECHO, TWOJOHN_ORIGINAL, TWOJOHN_CONTEXT, TWOJOHN_CHRIST),
-        ('3john', THREEJOHN_ECHO, THREEJOHN_ORIGINAL, THREEJOHN_CONTEXT, THREEJOHN_CHRIST),
-        ('jude', JUDE_ECHO, JUDE_ORIGINAL, JUDE_CONTEXT, JUDE_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-original', '1peter')
+    merge_comm(existing, PETER1)
+    save_comm('mkt-original', '1peter', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    il = json.loads((ROOT / 'data' / 'interlinear' / '1peter.json').read_text())
+    all_ok = True
+    for ch in ['1', '2', '3', '4']:
+        il_vv = set(il.get(ch, {}).keys())
+        out_vv = set(existing.get(ch, {}).keys())
+        missing = il_vv - out_vv
+        if missing:
+            print(f'  ch{ch} still missing: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'  ch{ch}: complete ({len(out_vv)} verses)')
+    if all_ok:
+        print('All 1 Peter ch1-4 original entries present ✓')
 
 if __name__ == '__main__':
     main()

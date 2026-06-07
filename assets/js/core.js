@@ -42,7 +42,7 @@ export var MAPS_URL         = _resolve('../../maps/');
 export var LIB_READER_URL   = _resolve('../../library/read/');
 export var VERSE_STUDY_URL  = _resolve('../../verse-study/');
 export var COMPARE_URL      = _resolve('../../compare/');
-export var WORD_URL         = _resolve('../../word/');
+export var WORD_URL         = _resolve('../../translation/workshop/'); // word/?s= redirects here
 export var STORAGE_KEY      = 'bsw_version';   // localStorage key for the user's chosen Bible version
 
 // ── Map cross-references ───────────────────────────────────────────────────

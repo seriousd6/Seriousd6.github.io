@@ -1,28 +1,23 @@
 """
-Combined script: James, 1 Peter, 2 Peter, 2 John, 3 John, Jude — all four layers.
-Output: echoes + mkt-original + mkt-context + mkt-christ for each letter.
+MKT Context Commentary — James chapters 1–4 (86 missing verses; ch1v1 and ch2v1 already present)
+Run: python3 scripts/zc-context-james-1-4.py
 
-The General Epistles span wisdom tradition (James), suffering-theology (1 Peter),
-eschatological warning (2 Peter, Jude), and community discernment (2-3 John).
+Historical-cultural context: Jewish diaspora setting; wisdom tradition (Sirach, Proverbs);
+Second Temple halakha; synagogue assembly (2:2); trial vocabulary; Stoic diatribe style;
+Leviticus 19 as the "royal law" foundation; Abraham/Rahab as paradigmatic figures;
+tongue-control in wisdom literature (Sirach 28); two-kinds-of-wisdom tradition;
+prophetic adultery-metaphor for worldliness (Hos, Jer); Prov 3:34 LXX citation (4:6).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_comm(layer, book, data):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -30,21 +25,8 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -52,288 +34,121 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# JAMES
-# ============================================================
-
-JAMES_ECHO = {
+CONTEXT = {
   "1": {
-    "17": [
-      {"type": "allusion", "target": "Num 23:19", "note": "With whom there is no variation or shadow due to change — God is not a man that he should lie or change his mind; YHWH's immutability as the ground of trust echoes in James's description of the Father of lights"},
-      {"type": "allusion", "target": "Mal 3:6", "note": "I the LORD do not change — YHWH's immutability guarantees the covenant; James's 'no variation' language in describing the Father draws from the prophetic declaration of divine constancy"}
-    ]
+    "2": '<p>"Trials of many kinds" (<em>peirasmois poikilois</em>) — the vocabulary of <em>peirasmos</em> covers both testing/trial and temptation; the two senses are distinguished in vv. 13-14 where God does not tempt but people are drawn by their own desire. The backdrop is the diaspora Jewish community facing social marginalization: economic hardship, discrimination, legal vulnerability, and social pressure to assimilate. The Jewish wisdom tradition consistently addressed how to maintain faithfulness under trial (Ps 66:10; Wis 3:5-6; Sir 2:1-6).</p>',
+    "3": '<p>The <em>dokimion tēs pisteōs</em> (testing of faith) producing <em>hypomonē</em> (endurance/steadfastness) draws on the metallurgical testing tradition: gold and silver are refined in fire to prove their purity (Prov 17:3; Ps 66:10; Wis 3:5-6; 1 Pet 1:7). The tested believer is like refined metal — the trial proves and purifies simultaneously. <em>Hypomonē</em> (steadfast endurance, the capacity to remain under) was a central virtue in both Jewish and Stoic ethics for navigating hardship.</p>',
+    "4": '<p><em>Teleios kai holoklēros</em> (mature and complete, lacking nothing) — <em>teleios</em> is the person who has reached the goal of their development; <em>holoklēros</em> (whole in all parts, with no part missing) is a term from sacrificial purity (an animal without blemish or missing limb was <em>holoklēros</em>). The combination describes the person who has been shaped by endurance into full maturity — the goal that the wisdom tradition sets as the telos of the tested life.</p>',
+    "5": '<p>Prayer for wisdom addressed to God who gives <em>haploōs</em> (simply, generously, without ulterior motive) and <em>mē oneidizontos</em> (without reproaching) stands against the pedagogy of shaming teachers in the ancient world. Socrates questioned relentlessly; sophists charged fees. The God of James gives wisdom without demanding that the petitioner prove their worthiness first. The wisdom-prayer tradition runs through Solomon\'s request (1 Kgs 3:9; Wis 7:7) and is grounded in Israel\'s conviction that YHWH is the source of practical wisdom for living.</p>',
+    "6": '<p>The doubting person is compared to <em>klydon thalassēs anemizomenō kai rhipizomenō</em> (a wave of the sea driven and tossed by the wind) — the unstable sea as an image of the person without settled conviction. Mediterranean sea conditions made this image vivid: sudden storms could turn calm water into violent swells. The instability of the double-minded person was a recognized category in Jewish ethics: Sirach 1:28 warns against being "double of heart" in approaching God.</p>',
+    "7": '<p>The one who doubts should not expect to receive anything from the Lord — the principle that prayer requires settled trust in the giver. This is not a legalistic condition but a relational one: asking while simultaneously disbelieving the giver will give is a form of not really asking. The wisdom tradition consistently connected prayer\'s effectiveness to the character and orientation of the petitioner (Prov 15:8, 29; 28:9; Sir 35:16-17).</p>',
+    "8": '<p><em>Anēr dipsychos</em> (double-minded man) — <em>dipsychos</em> is a compound of <em>dyo</em> (two) + <em>psychē</em> (soul); the person with two souls pulling in opposite directions. The term appears to have been coined in Jewish-Christian literature (it appears in the Didache, 1 Clement, and Shepherd of Hermas alongside James) as a technical term for the person who oscillates between trust in God and trust in self or the world. <em>Akatastatos en pasais tais hodois autou</em> (unstable in all his ways) — the two-ways tradition: the person who cannot commit to one path destabilizes every path they walk.</p>',
+    "9": '<p>The social reversal instruction — the humble believer (<em>ho tapeinos</em>) boasting in his high position, the rich person in his humiliation — enacts the honor-shame inversion of the beatitudes (Matt 5:3-12; Luke 6:20-26). The diaspora Jewish-Christian community included members of various economic levels, and economic stratification threatened communal cohesion. The wisdom tradition consistently warned against the pride of the wealthy and affirmed the dignity of the poor (Prov 22:2; Sir 10:22-24; Ps 113:7-8).</p>',
+    "10": '<p>The rich person "passing away like a wildflower" (<em>hōs anthos chortou</em>) cites Isa 40:6-8 LXX: "all flesh is grass and all its glory like the flower of the field... the grass withers, the flower fades." The comparison deploys the great Isaianic passage on human transience against those who trust in wealth. The rich person is told to "boast" in their humiliation — a paradoxical inversion of the honor system that valued wealth as the basis of status.</p>',
+    "11": '<p>The scorching sun withering the plant elaborates the Isa 40:6-8 image with Palestinian agricultural specificity: the <em>kausōn</em> (scorching heat, the sirocco — the hot desert wind from the east that can wither crops overnight) is a phenomenon familiar to every farmer in the ancient Near East. The rich person will similarly wither "in the midst of his pursuits" — the scorching reversal will come without warning, as it does in the field.</p>',
+    "12": '<p>The <em>stephanos tēs zōēs</em> (crown of life) promised to the one who endures is the victor\'s wreath awarded at athletic games, here given eschatological significance. The athlete who endures the full contest receives the crown; the believer who endures the full trial of life receives the crown of life. The same image appears in Rev 2:10 (crown of life to the faithful unto death) and 1 Cor 9:25 (an imperishable crown). The crown transforms the athletic competition into an eschatological image.</p>',
+    "13": '<p>The insistence that God does not tempt (<em>apeirastos kakōn estin, peirazei de autos oudena</em> — God is untested by evil and he himself tests no one) counters a common ancient tendency to attribute moral testing to divine arbitrariness. The OT tradition includes God testing Abraham (Gen 22:1), but the testing tradition in Second Temple Judaism increasingly distinguished between divine testing-toward-faithfulness and the temptation-toward-sin that James addresses here. God is the author of trials that produce endurance (v. 2-3), not of the inner enticement toward evil.</p>',
+    "14": '<p>Each person is tempted <em>hypo tēs idias epithumias exelkomenos kai deleazomenos</em> (by their own desire being dragged out and lured) — two fishing/hunting terms: <em>exelkomai</em> (to drag out, as a fish is dragged from water) and <em>deleazō</em> (to lure with bait). The imagery is of desire as the bait that lures the person from their natural habitat (right living) into danger. The source of temptation is internal (<em>idias epithumias</em>, one\'s own desires) rather than external divine imposition — a sharp distinction from fate-theology.</p>',
+    "15": '<p>The birth-metaphor traces the genealogy of sin: <em>hē epithumia syllabousa tiktei hamartian</em> (desire, having conceived, gives birth to sin; sin, being completed, gives birth to death). The sexual metaphor — desire as mother conceiving and giving birth — was used in philosophical literature for the generation of vices. The sequence (desire → sin → death) echoes Genesis 3\'s structure: desire for what God prohibited → disobedience → death. The second birth-image (sin gives birth to death) completes the inverse of the gospel: the word of truth gives birth to new life (v. 18), but desire gives birth to death.</p>',
+    "16": '<p>The brief warning <em>mē planasthe, adelphoi mou agapētoi</em> (do not be deceived, my beloved brothers and sisters) functions as a paragraph break in James\'s diatribe style. The diatribe — a Stoic-Cynic rhetorical form using dialogical address, rhetorical questions, and direct imperatives — shaped much of James\'s argumentative style. The repeated direct address ("my brothers," "my dear brothers") is characteristic of the diatribe\'s attempt to create intimate engagement with a diverse audience.</p>',
+    "17": '<p><em>Pāsa dosis agathē kai pān dōrēma teleion anōthen estin</em> (every good gift and every perfect gift is from above) — the verse may be a liturgical or wisdom fragment with a hexameter rhythm in Greek, suggesting it is a known saying. <em>Katerchetai apo tou patros tōn phōtōn</em> (coming down from the Father of lights) — the celestial image: God as the source of the luminaries (Gen 1:14-16), with whom there is no variation or shadow due to change (<em>parallaxē ē tropēs aposkiasma</em>). The astronomical precision — no parallax, no turning shadow — grounds divine consistency in cosmological terms.</p>',
+    "18": '<p><em>Boulētheis apekuēsen hēmas logō alētheias</em> (having willed it, he gave us birth through the word of truth) — the divine birth-giving contrasts with v. 15\'s desire-giving-birth-to-death. The voluntary divine will (<em>boulētheis</em>) and the instrument (the word of truth) describe the mechanics of regeneration. <em>Eis to einai hēmas aparchēn tina tōn autou ktismatōn</em> (that we might be a kind of firstfruits of his creatures) — <em>aparchē</em> (firstfruits) is the OT term for the first portion consecrated to YHWH (Lev 23:9-14; Num 15:17-21); the regenerate community is the consecrated first portion of the new creation.</p>',
+    "19": '<p>The triad <em>tachys eis to akousai, bradys eis to lalēsai, bradys eis orgēn</em> (quick to listen, slow to speak, slow to anger) is a concentrated wisdom aphorism. The wisdom tradition consistently valued attentive listening over hasty speech (Prov 17:27-28; 21:23; Sir 5:11-13; Eccl 5:1-2). Sirach 5:11: "Be swift to hear, and with patience make your reply." The sequence is deliberate: attentive listening produces wise speech; restrained speech prevents anger; and anger prevention preserves the social fabric of the community.</p>',
+    "20": '<p><em>Orgē gar andros dikaiosynēn theou ouk ergazetai</em> (for human anger does not produce the righteousness of God) — the Jewish background distinguishes between YHWH\'s righteous anger (which produces justice and restoration) and human anger (which produces destruction). The Psalms and prophets are full of divine anger that serves righteousness; James\'s point is not that anger is always sinful but that the anger humans display in communal conflict does not advance the covenantal righteousness that God requires.</p>',
+    "21": '<p><em>Ton emphyton logon</em> (the implanted word) draws on the Stoic concept of the <em>logos spermatikos</em> (the seed-word implanted in rational beings) and Jeremiah\'s new covenant promise (Jer 31:33: the law written on the heart). The word that is "implanted" is not merely external instruction but the regenerating word of v. 18 (the word of truth) now resident within the person. <em>Apothemenoi</em> (putting off/removing) uses the clothing metaphor of removing a dirty garment (Col 3:8; Eph 4:22) — moral filth as soiled clothing to be discarded.</p>',
+    "22": '<p><em>Poiētai logou ginesthe, mē akroatai monon</em> (be doers of the word, not hearers only) — the doer/hearer distinction was basic to rabbinic ethics: learning Torah that is not applied in action is a form of self-deception. The Sermon on the Mount\'s house-builders (Matt 7:24-27) make the same point: hearing without doing is building on sand. Jewish halakha (the walk, the practical application of Torah to life) was precisely the tradition of translating heard instruction into embodied practice.</p>',
+    "23": '<p>The mirror image — hearing the word but not doing it is like looking in a mirror and immediately forgetting what you look like — deploys a commonplace analogy from ancient rhetoric. Mirrors in antiquity were metal surfaces that gave imperfect reflections; the image flickers and fades. The analogy is precise: hearing without doing produces a fleeting self-knowledge that leaves no behavioral trace, just as a glance in a mirror leaves no lasting impression on the viewer\'s conduct.</p>',
+    "24": '<p>The immediacy of forgetting — <em>euthys epelatheto hopoios ēn</em> (immediately forgot what he looked like) — is the psychological observation about knowledge unmoored from practice. Ancient philosophers (Plato, Aristotle) distinguished between theoretical knowledge and practical wisdom (<em>phronēsis</em>); James makes a similar distinction between hearing-knowledge and enacted-knowledge. The word heard and forgotten is knowledge that has not reached the level of <em>phronēsis</em>.</p>',
+    "25": '<p><em>Ho de parakupsas eis nomon teleion ton tēs eleutherias</em> (whoever looks intently into the perfect law of freedom) — <em>parakuptō</em> (to stoop and look closely, to peer into) describes the careful examination of the word. The <em>nomos teleios tēs eleutherias</em> (perfect law of freedom) is James\'s distinctive reframing of Torah: not the law of bondage (as some Pauline anti-Law polemic might suggest) but the law that liberates. This connects to Ps 119\'s celebration of Torah as life-giving and the Jewish tradition of the law as the gift of divine wisdom for flourishing, not a burden.</p>',
+    "26": '<p><em>Ei tis dokei thrēskos einai</em> (if anyone thinks himself religious) — <em>thrēskeia</em> (religion, religious observance) refers specifically to the practice of religious duties and rites. The tongue as the test of genuine religion draws on the wisdom tradition: Prov 21:23 (those who guard their mouths keep themselves from calamity), Sir 28:12-26 (the tongue as fire that destroys communities). <em>Apataō heautou kardian</em> (deceiving his own heart) — self-deception through religious performance without corresponding speech-discipline.</p>',
+    "27": '<p><em>Thrēskeia katharā kai amiantos para tō theō kai patri autē estin</em> (pure and undefiled religion before God and Father is this) — James defines genuine religion by the two categories that Torah consistently identifies as the test of covenant faithfulness: care for the vulnerable (<em>orphans and widows</em>) and separation from moral corruption (<em>aspilon heauton tērein apo tou kosmou</em>). Deut 10:18; Isa 1:17; Ps 68:5 all root covenant faithfulness in care for orphans and widows. The prophets constantly measured Israel\'s faithfulness by its treatment of the most vulnerable.</p>'
   },
   "2": {
-    "23": [
-      {"type": "fulfillment", "target": "Gen 15:6", "note": "Abraham believed God and it was counted to him as righteousness, and he was called a friend of God — James cites Gen 15:6 (as does Paul in Rom 4 and Gal 3) but applies it to the Abraham of Gen 22 (the Aqedah); the faith that justified Abraham was not bare intellectual belief but the active trust that obeyed unto the ultimate test"}
-    ]
+    "2": '<p><em>Synagōgēn hymōn</em> (your assembly/synagogue) — James uses the Jewish term <em>synagōgē</em> rather than the Christian <em>ekklēsia</em> for the community\'s gathering; this is the only NT use of <em>synagōgē</em> for a Christian assembly. The word suggests the community was predominantly Jewish-Christian and still using the synagogue format and vocabulary. The <em>chrysodaktylios</em> (gold-ring-wearer) — a term of social distinction; in Roman society, the gold ring (<em>anulus aureus</em>) was the mark of the equestrian order (the second tier of Roman aristocracy), though by the first century wealthy freedmen also wore gold rings.</p>',
+    "3": '<p>The preferential seating — "sit here in a good place" vs. "stand there" or "sit at my feet" — maps onto the honor-based seating arrangements of the ancient synagogue and Greco-Roman assembly. Public meetings had hierarchical seating that expressed social status; the front seats (for elders and dignitaries) vs. the standing room or floor reflected and reinforced social distinctions. Assigning seats by wealth rather than by need or seniority makes the community a mirror of the surrounding honor-hierarchy rather than an alternative to it.</p>',
+    "4": '<p><em>Ou diekrīthēte en heautois kai egenesthe kritai dialogismōn ponērōn</em> (have you not made distinctions among yourselves and become judges with evil thoughts) — <em>diakrinō</em> (to distinguish, discriminate, judge; also to doubt — the same root as v. 1:6) creates a wordplay: the person who "doubts" (is double-minded, v. 1:8) naturally "discriminates" (makes social distinctions). The internal instability of the double-minded person produces external social discrimination. Evil thoughts (<em>dialogismoi ponēroi</em>) are the internal judges that generate unjust external judgments.</p>',
+    "5": '<p>God\'s election of the poor (<em>eklexato tous ptōchous tō kosmō</em>) draws on the consistent OT and Second Temple tradition that YHWH has special regard for the poor (Ps 9:18; 34:6; 68:10; 72:12-13; Isa 61:1; Zeph 3:12). The Qumran community used the self-designation <em>ebyonim</em> (the poor) as a mark of their elect status. The beatitude "blessed are the poor" (Luke 6:20) and the Nazareth manifesto (Luke 4:18) stand in the same tradition. The community that discriminates against the poor acts against the divine election.</p>',
+    "6": '<p>The rich dragging community members to court (<em>eis kritēria helkousin hymas</em>) and blaspheming the noble name (<em>blasphēmousin to kalon onoma to epiklēthen eph\' hymas</em>) describes a specific social conflict in the diaspora community. Wealthy creditors could bring debtors to court and enforce collection; the "noble name" invoked over believers at baptism (the name of Jesus) is blasphemed by those who exploit members of the Jesus-community. The socioeconomic exploitation of the community by external wealth-holders is the immediate context of James\'s warning against showing deference to the rich.</p>',
+    "7": '<p>The blasphemy of the noble name by the rich echoes the prophetic charge that Israel profaned YHWH\'s name before the nations (Ezek 36:20-23; Isa 52:5; cf. Rom 2:24). The name of Jesus invoked over the baptized community is YHWH\'s own name in its new-covenant form; to blaspheme that name is to continue the pattern of the nations who dishonored the divine name throughout Israel\'s history. The community that defers to those who blaspheme the name betrays the name that defines them.</p>',
+    "8": '<p><em>Nomon bassilikon</em> (the royal law) — James\'s description of the Levitical command "love your neighbor as yourself" (Lev 19:18 LXX). <em>Basilikos</em> (royal, kingly) — either the "law of the king" (the supreme law given by God the king), or the "law of the kingdom" (the law of the divine kingdom), or the "chief/supreme law" (among laws). The rabbinic tradition identified Lev 19:18 as the great principle (the <em>kelal gadol</em> of Torah); Hillel\'s summary "what is hateful to you, do not do to your neighbor — that is the whole Torah" stands in the same tradition.</p>',
+    "9": '<p>Showing partiality (<em>prosōpolēmpteō</em>) while claiming to keep the royal law violates the very law one claims to honor — because Lev 19:15 (immediately following the "love your neighbor" command in the same chapter) explicitly prohibits showing partiality in judgment: "You shall not be partial to the poor or defer to the great, but in righteousness shall you judge your neighbor." Leviticus 19 is the chapter in which love-of-neighbor is embedded in a comprehensive social ethic that explicitly includes impartial judgment.</p>',
+    "10": '<p>The principle of law-unity — stumbling at one point incurs liability for the whole (<em>gegonan pantōn enochos</em>, guilty of all) — reflects the rabbinic understanding of Torah as an organic unity rather than a collection of independent rules. A covenant relationship is either whole or broken; partial observance does not constitute partial covenant faithfulness. The analogy is not purely legal but relational: a marriage relationship is either honored or violated; selective fidelity is still infidelity.</p>',
+    "11": '<p>The citation of the Decalogue — "do not commit adultery" (Exod 20:14/Deut 5:18) and "do not murder" (Exod 20:13/Deut 5:17) — grounds the law-unity argument in the specific lawgiver. The one who issued both commands is the same (<em>ho... eipon</em>, "the one who said") — a single divine will expressed in multiple commands. Violating any command is not just breaking a rule but dishonoring the unified will of the lawgiver. The same argument appears in Matt 5:17-19 (Jesus affirming the law\'s unity) and Rom 13:9 (love as the summary of the second table).</p>',
+    "12": '<p><em>Nomos eleutherias</em> (the law of freedom) — James\'s distinctive phrase from 1:25, repeated here as the standard by which conduct will be judged. The eschatological judgment is by the same law that gives freedom — the law that liberates rather than constrains. This stands against the antinomian tendency to see law and freedom as opposites; in James, the perfect law and freedom are co-extensive. The judgment that uses the law-of-freedom as its criterion tests not external compliance but internal character.</p>',
+    "13": '<p><em>Eleos katakauchātai kriseōs</em> (mercy triumphs over/boasts against judgment) — the legal language of <em>katakauchaomai</em> (to boast over, to triumph in a contest against) frames mercy and judgment as contending powers where mercy wins. The Jewish tradition consistently held that divine mercy (<em>hesed</em>) and divine justice (<em>mishpat</em>) are both true of God but that mercy has the final word. Ps 103:8-14; Mic 7:18-20; the Eighteen Benedictions — all affirm that God delights in mercy. The community that shows no mercy removes itself from the sphere of divine mercy.</p>',
+    "14": '<p>The faith/works question in James is addressed to a community that claims (<em>legē tis echein pistin</em> — "if someone claims to have faith") while lacking corresponding action. The specific test case — a brother or sister without clothes and daily food (vv. 15-16) — is drawn from the concrete social situation of the diaspora community where economic need was real and urgent. The wisdom tradition held that practical care for the poor was itself a form of faithfulness; Prov 19:17: "Whoever is generous to the poor lends to the LORD."</p>',
+    "15": '<p>The scenario of v. 15 — a brother or sister without clothing (<em>gymnos</em>) and lacking daily food (<em>leipomenoi tēs ephēmerou trophēs</em>) — describes conditions that were real in the diaspora Jewish-Christian communities. The language of <em>ephēmeros</em> (daily, for the day) echoes the Lord\'s Prayer\'s "daily bread" (Matt 6:11) and the manna tradition (Exod 16:4-5: only enough for each day). The dependent members of the community whose subsistence is precarious are exactly the "widow and orphan" of James 1:27.</p>',
+    "16": '<p>"Go in peace" (<em>hypagete en eirēnē</em>) was a standard Jewish farewell blessing; its use here to dismiss the needy without material help is a parody of the blessing — the formula of covenant peace applied to a situation that violates covenant obligation. The Epistle of Enoch (1 En. 94-105) similarly critiques the wealthy who pronounce religious formulas over the poor while exploiting them. <em>Thermainesthai kai chortazesthai</em> (be warm and be filled) — the two basic physical needs; the verbal blessing without physical provision is empty sound.</p>',
+    "17": '<p>The dead-faith aphorism — <em>hē pistis, ean mē echē erga, nekrā estin kath\' heautēn</em> (faith, if it does not have works, is dead in itself) — structures James\'s argument through an analogy with death: as the body without the spirit is dead (v. 26), faith without works is dead. The Stoic tradition used similar body-soul analogies to describe the relationship between philosophical knowledge and practiced virtue. James\'s argument is not about merit-earning but about the diagnostic relationship between genuine trust and its behavioral expression.</p>',
+    "18": '<p>The diatribe form reaches its peak in v. 18 with an imagined interlocutor (<em>all\' erei tis</em>, "but someone will say") who claims a division of labor: you have faith, I have works. James\'s response is that faith invisible to others — unprovable without works — cannot be demonstrated. The diatribe (dialogical challenge-and-response) was the standard form of Stoic and Cynic popular teaching; James uses it throughout the letter to engage an implied objector whose position is refuted by demonstration.</p>',
+    "19": '<p>The monotheism test — "you believe God is one" (<em>heis estin ho theos</em>) — is the Shema (Deut 6:4: "the LORD our God, the LORD is one"), the foundational confession of Judaism. The demons also assent to this proposition and tremble (<em>phrissousin</em> — they shudder with fear). The distinction James draws is between propositional assent (which even demons achieve) and the faith that transforms the one who holds it. The Shema was Israel\'s central creedal commitment; James points out that intellectual agreement with the Shema is not sufficient for salvation.</p>',
+    "20": '<p>The address <em>anthrōpe kene</em> (empty man / foolish person) — the diatribe\'s direct challenge to the imagined objector. <em>Kenos</em> (empty, hollow, without content) describes the person whose religious confession has no substance to match it. The request for evidence (<em>hoti hē pistis chōris tōn ergōn argē estin</em> — that faith apart from works is unproductive/idle) uses <em>argos</em> (not-working, idle) — cognate with <em>ergon</em> (work) — to make faith-without-works an oxymoron: faith that does not work is a not-working faith.</p>',
+    "21": '<p>Abraham (<em>Abraam ho patēr hēmōn</em> — Abraham our father) is the paradigmatic figure of faith in the Jewish tradition (Gen 15:6: he believed and it was reckoned to him as righteousness) and the supreme example of faithful works in the binding of Isaac (<em>Aqedah</em>, Gen 22). The use of both texts together — Gen 15 and Gen 22 — to show their mutual implication was a standard feature of Second Temple Jewish exegesis. The Aqedah (the binding of Isaac) was read as the supreme test that proved (not produced) Abraham\'s righteousness; Sirach 44:20: "he kept the commandment when he was tested."</p>',
+    "22": '<p><em>Hē pistis synērgei tois ergois autou kai ek tōn ergōn hē pistis eteliōthē</em> (faith was working together with his works, and from works faith was completed/perfected) — <em>synergei</em> (works together with, cooperates) and <em>eteliōthē</em> (was perfected, brought to completion). James\'s reading of the Abraham narrative is that the Aqedah did not create Abraham\'s faith but brought it to its full expression. The faith of Gen 15 found its telos in the act of Gen 22; the act did not earn the faith but realized it. <em>Teleioō</em> (to perfect, complete, bring to the goal) — the same root as <em>teleios</em> in 1:4.</p>',
+    "23": '<p>The "scripture was fulfilled" (<em>eplērōthē hē graphē</em>) formula applied to Gen 15:6 shows James reading the Aqedah (Gen 22) as the fulfillment of the earlier declaration of righteousness. The forensic language of Gen 15:6 — <em>elogisthē</em> (was credited/reckoned/counted) — is the accounting term; Abraham\'s trust in God\'s promise was entered in the divine ledger as righteousness. James and Paul both cite Gen 15:6 but to different ends: Paul to show that faith precedes works; James to show that the faith of Gen 15 was genuinely demonstrated by the works of Gen 22.</p>',
+    "24": '<p>The conclusion — <em>ex ergōn dikaioutai anthrōpos kai ouk ek pisteōs monon</em> (a person is justified by works and not by faith alone) — is James\'s sharpest apparent contrast with Paul (Rom 3:28: "a person is justified by faith apart from works of the law"). The resolution lies in the different uses of "faith" and "works": Paul argues against the mistaken assumption that Torah-observance earns standing before God; James argues against the mistaken assumption that intellectual assent is sufficient without behavioral expression. Both are attacking different forms of the same error: the separation of inner conviction from outer life.</p>',
+    "25": '<p>Rahab the prostitute (<em>Raab hē pornē</em>) as the second exemplar of active faith is striking: a Gentile woman, a prostitute, a resident of Jericho (the enemy city). The choice of Rahab alongside Abraham is deliberate contrast: the great patriarch and the foreign harlot both demonstrate genuine faith by action (Josh 2:1-21; 6:17-25). In rabbinic tradition, Rahab was celebrated as a proselyte who entered the covenant through her hospitality to the spies; she became an ancestor of prophets (including Jeremiah, according to some traditions).</p>',
+    "26": '<p>The body-spirit / faith-works analogy with which the passage concludes (<em>hōsper to sōma chōris pneumatos nekron estin, houtōs kai hē pistis chōris ergōn nekra estin</em>) reflects the Platonic tradition of the body as animated by the soul/spirit; without the animating principle, the body is an inert corpse. James uses this widespread analogy to make faith-without-works as obviously contradictory as a living body without a spirit. The death-analogy is precise: dead faith is not absent faith but faith that has lost its animating principle.</p>'
+  },
+  "3": {
+    "1": '<p>The warning against many becoming teachers (<em>mē polloi didaskaloi ginesthe</em>) addresses a specific problem in the diaspora Jewish-Christian community: the prestige of the teacher role attracted many who were not qualified. In the Jewish tradition, the teacher (<em>rabbi</em>, <em>didaskalos</em>) held significant social honor; Sirach 38:24-39:11 extols the sage who devotes himself to study of the law. The stricter judgment for teachers (<em>meizon krima</em> — greater condemnation) reflects the accountability of those entrusted with the community\'s formation.</p>',
+    "2": '<p><em>Polla gar ptaiomen hapantes</em> (for we all stumble in many things) — the universal acknowledgment of moral imperfection sets the frame for the tongue discussion. The perfect person (<em>teleios anēr</em>) who does not stumble in speech is the wisdom ideal: Sirach 14:1: "Happy is one who has not slipped with his mouth." The tongue as the test of perfection concentrates the entire moral life on one organ because speech is the primary mode of social interaction — the tongue reveals and creates character simultaneously.</p>',
+    "3": '<p>The bit-in-the-horse\'s-mouth image was a commonplace in ancient rhetoric for the control of a powerful force through a small instrument. Plato used the chariot image in the Phaedrus (the horses of the soul guided by the charioteer of reason). The physical fact that a small bit controls an entire large animal made the analogy immediately compelling for audiences familiar with horses as the primary means of transportation and military power.</p>',
+    "4": '<p>The ship rudder analogy (<em>hēlikon euchumon o hē euthyna tou euthynontos bouletai</em> — where the will of the pilot directs) extends the small-controls-large image to the sea. Mediterranean seafaring was central to the economic life of the diaspora communities; the image of the ship driven by fierce winds (<em>sklēron pneumatōn</em> — strong gales) yet steered by a tiny rudder (<em>mikrou pedalio</em>) would be immediately vivid. The pilot\'s will expressed through the rudder determines the ship\'s course despite overwhelming wind-force.</p>',
+    "5": '<p>The tongue making "great boasts" (<em>megala auchei</em>) and the forest fire started by a small spark (<em>hēlikon pyr hēlikon hylēn anaptei</em> — how great a forest so small a fire kindles) combine the boasting tradition and the destruction tradition. The droughts that preceded wildfires in the Palestinian hill country and the forests of Lebanon were real contexts for the image. Sirach 28:14: "A hasty tongue has overthrown many, and made them wander from sea to sea." The forest fire is uncontrollable once started — the tongue\'s destructive capacity is similarly self-amplifying.</p>',
+    "6": '<p><em>Hē glōssa pyr, ho kosmos tēs adikias hē glōssa kathistatai en tois melesin hēmōn</em> (the tongue is a fire, the world of unrighteousness; the tongue is set among our members) — the identification of the tongue with the "world of unrighteousness" (<em>kosmos tēs adikias</em>) connects the tongue\'s destructive power to the cosmic reality of evil. <em>Phlogizousa ton trochon tēs geneseōs</em> (setting on fire the wheel of birth/life-cycle) — a rare phrase; <em>trochos tēs geneseōs</em> may draw on Orphic or Pythagorean imagery of the wheel of reincarnation, or simply mean the entire course of human life. Being set on fire by Gehenna (<em>geenna</em>) — the valley of Hinnom south of Jerusalem, used for burning refuse, became the Jewish image for the fires of final judgment (Isa 66:24).</p>',
+    "7": '<p>The four categories of living creatures that humans have tamed — <em>thēria kai peteinōn herpetōn te kai enaliōn</em> (wild beasts, birds, reptiles, and sea creatures) — echo the four categories of Gen 1:20-25 over which Adam was given dominion (Gen 1:28). The universal human dominion over the created order is invoked to sharpen the irony: humans tame every other creature but cannot tame the tongue. The failure of self-mastery is the more striking because of the demonstrated capacity for other-mastery.</p>',
+    "8": '<p><em>Akatastaton kakon</em> (restless/unstable evil) — <em>akatastatos</em> is the same word as 1:8 (the double-minded man, unstable in all his ways). The restless instability of the double-minded person and the restless instability of the tongue are cognates in James\'s thought: both are symptoms of the lack of settled wholeness that the perfect person possesses. <em>Iou thanatēphorou gemei</em> (full of deadly poison) — the serpent\'s poison as an image for the tongue\'s destructive speech appears in Ps 140:3 and Rom 3:13.</p>',
+    "9": '<p>The double use of the tongue — blessing the Lord and Father, cursing people made in the image of God — is the central contradiction James identifies in the community\'s speech life. The image of God (<em>kath\' homoiōsin theou</em>) grounding the prohibition against cursing people draws on Gen 1:26-27: to curse the person made in God\'s image is to attack the image of the God one is simultaneously blessing. The rabbinic tradition identified the image of God in every human person as the theological ground of human dignity; James makes it the ground of speech ethics.</p>',
+    "10": '<p>"This should not be" (<em>ou chrē, adelphoi mou, tauta houtōs ginesthai</em>) — the simple declaration of incongruity. The diatribe form uses such direct assertions to bring the logical contradiction into sharp relief. The Jewish liturgical tradition of blessing God at every meal and occasion made the blessing/curse contrast vivid: the same mouth that pronounced the three-daily Amidah (the Eighteen Benedictions praising God) could also speak injury to a neighbor. James\'s pastoral concern is the integration of worship and ethics.</p>',
+    "11": '<p>The spring that produces both fresh and bitter water from the same opening (<em>opēs</em>) is geographically specific: springs in Palestine could vary in salinity and purity depending on their source. The question is rhetorical and expects the answer "No" — a single spring does not produce two kinds of water simultaneously. The natural impossibility mirrors the moral incongruity of the tongue that blesses and curses from the same source. Exod 15:23-25 (the bitter waters at Marah made sweet by Moses casting wood into them) may be in the background.</p>',
+    "12": '<p>The fig/olive and grapevine/fig impossibilities are agricultural facts: a fig tree cannot bear olives; a grapevine cannot bear figs. The impossibility of a salt spring (<em>halykos</em>) producing fresh water is a natural fact about saline springs. These natural impossibilities are offered as evidence for the moral impossibility of blessed speech and cursed speech coexisting in an integrated person. The agricultural and natural images throughout James 3 reflect the Palestinian rural context of the wisdom tradition, even in its diaspora expression.</p>',
+    "13": '<p><em>Tis sophos kai epistēmōn en hymin</em> (who is wise and understanding among you) — the wisdom tradition\'s standard challenge. The demonstration of wisdom is through <em>kalēs anastrophēs ta erga</em> (the works of a good way of life) performed in <em>prautēti sophias</em> (the meekness/gentleness of wisdom). The Jewish wisdom tradition consistently connected wisdom to practical ethics; Prov 8-9 portrays wisdom as a person calling the community to right living. Wisdom is not displayed in speculative argument but in the quality of one\'s life.</p>',
+    "14": '<p>Bitter jealousy (<em>zēlon pikron</em>) and selfish ambition (<em>eritheia</em>) — <em>eritheia</em> (originally the work of a day-laborer, then factionalism, self-promotion for personal gain) was a recognized social vice in the ancient world. Aristotle used <em>eritheia</em> for the kind of political self-promotion that seeks office for personal advantage rather than community good. The instruction not to boast (<em>mē katakauchasthe</em>) and not to lie against the truth (<em>pseudesthe kata tēs alētheias</em>) links the internal vices to their external speech expressions.</p>',
+    "15": '<p>The three-part description of false wisdom — <em>epigeios, psychikē, daimoniōdēs</em> (earthly, soulish/natural, demonic) — uses a descending scale from the merely created (<em>epigeios</em>, of the earth) through the merely natural (<em>psychikos</em>, of the <em>psychē</em> rather than the <em>pneuma</em>) to the actively evil (<em>daimoniōdēs</em>, demonic in character). The wisdom that serves the ego and the faction is not neutral but actively aligned with the demonic — the forces that oppose the divine order. The contrast with "wisdom from above" (v. 17) is cosmic in scope.</p>',
+    "16": '<p>Where jealousy and selfish ambition exist, there is <em>akatastasia</em> (disorder, instability, anarchy — the same root as <em>akatastatos</em>, unstable, in 1:8 and 3:8) and <em>pan phaulon pragma</em> (every base practice). The social consequence of the wrong wisdom is communal chaos; the individual vices of bitter jealousy and self-promotion destroy the community\'s ordered life. The wisdom tradition consistently linked individual character to communal health: the wise person is the foundation of a stable community; the fool is its undoing (Prov 11:14; 15:22).</p>',
+    "17": '<p>The seven qualities of wisdom from above — <em>hagnē, eirēnikē, epieikēs, eupeithēs, mestē eleous kai karpōn agathōn, adiakritos, anypokritos</em> (pure, peaceable, gentle, open to persuasion, full of mercy and good fruits, impartial, sincere) — form a structured catalogue. The first quality is purity (<em>hagnē</em>), which precedes and grounds the rest; the last two are impartiality (<em>adiakritos</em>, not discriminating — the virtue that ch. 2\'s favoritism violated) and sincerity (<em>anypokritos</em>, unhypocritical — genuine rather than performed). The list is both an ideal portrait and an implicit critique of the community\'s current failings.</p>',
+    "18": '<p><em>Karpos de dikaiosynēs en eirēnē speiretai tois poiousin eirēnēn</em> (the harvest of righteousness is sown in peace by those who make peace) — the agricultural sowing-harvest metaphor from the wisdom tradition (Prov 11:18; Hos 10:12: "sow for yourselves righteousness; reap steadfast love") closes the two-wisdoms section. Peace (<em>eirēnē</em>) is both the condition in which righteousness is sown and the fruit that peacemakers produce. The peacemaker who sows righteousness harvests a righteousness-crop — the community shaped by peacemaking wisdom.</p>'
   },
   "4": {
-    "6": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — James quotes Prov 3:34 LXX exactly (as does 1 Pet 5:5); the wisdom tradition's insistence that YHWH resists the arrogant and upholds the lowly is the hermeneutical key to James's social ethics"}
-    ]
-  },
-  "5": {
-    "4": [
-      {"type": "allusion", "target": "Isa 5:9", "note": "Behold the pay of the laborers who mowed your fields, which you kept back by fraud, is crying out — YHWH's ear hears the cry of the oppressed wages; James's eschatological indictment of wealthy landowners echoes the Isaianic woe-oracles against exploitative landowners"}
-    ]
-  }
-}
-
-JAMES_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>pasan charan hegesasthe adelphoi mou hotan peirasmois peripesete poikilois</strong> (<em>pāsan charān hēgēsasthe, adelphoi mou, hotan peirasmois peripesēte poikilois</em>): 'Count it all joy when you fall into various trials.' <em>Hegeomai</em> (count/consider) is a deliberate act of valuation — joy is not a natural reaction to trials but a chosen re-evaluation. <em>Peirasmoi</em> (trials/temptations) covers both external testing by circumstances (v. 2-4) and internal temptation by desire (v. 13-14) — James distinguishes them but uses the same word, showing that external pressure and internal desire interact in the same human experience of testing.</p>",
-
-    "22": "<p><strong>ginesthe de poietai logou kai me monon akroatai paralogizomenoi heautous</strong> (<em>ginesthe de poiētai logou kai mē monon akroatai paralogizomenoi heautous</em>): 'Be doers of the word and not hearers only, deceiving yourselves.' <em>Poietes logou</em> (doer of the word): the verbal-moral contrast between hearing and doing is fundamental to both the wisdom tradition (Prov 2:1-6) and the dominical teaching (Matt 7:24-27: the wise and foolish builders). <em>Paralogizomenoi</em> (deceiving, reasoning falsely alongside) implies a syllogistic self-deception: 'I heard the word, therefore I have received it and its benefits' — the error of intellectual reception without moral transformation.</p>"
-  },
-  "2": {
-    "14": "<p><strong>ti ophelos adelphoi mou ean pistin lege tis echein erga de me eche</strong> (<em>ti ophelos, adelphoi mou, ean pistin legē tis echein, erga de mē echē</em>): 'What good is it, my brothers, if someone says he has faith but does not have works?' The famous James-Paul tension: Luther notoriously called James 'an epistle of straw' for seeming to contradict Paul's faith-righteousness. The resolution lies in different uses of <em>pistis</em>: Paul's 'faith' is the whole person's trust in and surrender to God; James's target is a merely verbal profession (<em>legē tis echein</em>, 'says he has faith') without ethical corollary. James and Paul agree that genuine faith produces works (cf. Gal 5:6: 'faith working through love'); their different opponents require different emphases.</p>"
-  },
-  "3": {
-    "1": "<p><strong>me polloi didaskaloi ginesthe adelphoi mou eidotes hoti meizon krima lepsometha</strong> (<em>mē polloi didaskaloi ginesthe, adelphoi mou, eidotes hoti meizon krima lēpsometha</em>): 'Not many of you should become teachers, my brothers, knowing that we who teach will be judged with greater strictness.' The <em>meizon krima</em> (greater judgment) for teachers reflects the Jewish wisdom tradition's high estimation of the Torah-teacher's responsibility (m. Avot 2:7: 'the more Torah, the more life; the more study, the more wisdom; the more counsel, the more understanding; the more righteousness, the more peace; ... the more Torah, the more life') and its warning about the consequences of teaching falsehood. James is aware of his own exposure to this judgment.</p>"
-  }
-}
-
-JAMES_CONTEXT = {
-  "1": {
-    "1": "<p>James is addressed 'to the twelve tribes in the Dispersion' — framing the audience as the diaspora Jewish-Christian community. Whether 'James the brother of the Lord' (Gal 1:19; Josephus Ant. 20.200) is the author (martyred 62 CE) or a pseudonymous use of his authority (ca. 80-100 CE) is debated, but the letter's decidedly Jewish-Christian character (the synagogue imagery of 2:2; the explicit wisdom-tradition shaping; the prophetic social ethics) is consistent with Jerusalem's Jewish-Christian leader. Josephus describes James as 'the brother of Jesus who was called Christ' and records his death by stoning at the instigation of the high priest Ananus II, ca. 62 CE. If authentic, James is among the earliest NT writings.</p>"
-  },
-  "2": {
-    "1": "<p>The community James addresses assembles in a <em>synagoge</em> (2:2) — the term for a Jewish gathering-place, not yet the distinctly Christian <em>ekklesia</em> (church building). The social stratification problem (wealthy visitor with gold rings and fine clothing given the good seat; poor visitor told to stand or sit on the floor) reflects the patron-client dynamics of both the Roman and the Palestinian Jewish world. James's condemnation of partiality (<em>prosopolepsia</em>) is grounded in the same divine-impartiality tradition Paul invokes (Rom 2:11; Acts 10:34) — YHWH who shows no partiality to the rich over the poor is the standard for the community's hospitality.</p>"
-  }
-}
-
-JAMES_CHRIST = {
-  "1": {
-    "17": "<p>A revelation of God: 'Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.' James's God-centered theology (without yet making a Christological application) shows the Father's immutable character as the ground of human trust and patience in trial. The Christological trajectory: this unchanging Father of lights is the one who sent his Son (not yet named in ch.1, but cf. 2:1: 'the faith in our Lord Jesus Christ, the Lord of glory'). The stability of the Father underwrites the whole counsel of the letter.</p>"
-  },
-  "2": {
-    "1": "<p>A direct revelation: 'The faith of our Lord Jesus Christ, the Lord of glory.' James's only explicit Christological title is <em>Kyrios tes doxes</em> — 'the Lord of glory.' In LXX Ps 24:7-10, the 'King of glory' (<em>basileus tes doxes</em>) is YHWH himself. James transfers this divine glory-title to Jesus: to hold 'the faith of the Lord of glory' while showing partiality to the rich is a theological contradiction — the one who identifies with the poor (the Magnificat's God; the Beatitudes' Christ) cannot be honored by honoring the rich over the poor.</p>"
-  },
-  "5": {
-    "7": "<p>A direct revelation: 'Be patient, therefore, brothers, until the coming of the Lord.' James ends with the parousia as the motive for patience in suffering (vv. 7-11) and restraint of speech (vv. 12). The 'coming of the Lord' (<em>parousia tou Kyriou</em>) frames the whole letter's ethics eschatologically: the injustice of the rich oppressors, the suffering of the righteous, the unanswered prayers — all are held before the coming Judge (v. 9: 'the Judge is standing at the door'). The standing judge at the door is the Christ whose coming is imminent.</p>"
-  }
-}
-
-# ============================================================
-# 1 PETER
-# ============================================================
-
-ONEPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "quote", "target": "Lev 11:44", "note": "You shall be holy, for I am holy — the Levitical holiness-imperative is directly quoted as the foundation for Peter's ethics; the holiness character of YHWH is the standard for covenant-community behavior in both the old and new covenants"}
-    ],
-    "24": [
-      {"type": "fulfillment", "target": "Isa 40:6-8", "note": "All flesh is like grass and all its glory like the flower of grass; the grass withers and the flower falls, but the word of the Lord remains forever — Peter applies Isa 40:6-8 to the imperishable seed of the gospel-word; the word that endures is the good news preached to them, fulfilling Isaiah's consolation-proclamation"}
-    ]
-  },
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Isa 28:16", "note": "Behold I am laying in Zion a stone, a cornerstone chosen and precious, and whoever believes in him will not be put to shame — Peter cites Isa 28:16 LXX as fulfilled in Christ; the Zion-foundation stone of Isaiah is identified with the rejected-and-vindicated Christ"},
-      {"type": "fulfillment", "target": "Ps 118:22", "note": "The stone that the builders rejected has become the cornerstone — the second OT stone text: the rejected cornerstone of Ps 118 is Christ crucified and raised; the very rejection that qualified him as victim becomes his exaltation-identity"},
-      {"type": "fulfillment", "target": "Isa 8:14", "note": "A stone of stumbling and a rock of offense — Isa 8:14 LXX (YHWH as both sanctuary and stone of stumbling for Israel); Peter applies the dual effect to Christ: to believers, the cornerstone; to unbelievers, the stumbling stone"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Exod 19:6", "note": "A royal priesthood, a holy nation — Peter applies the Sinai covenant's identity-markers (Exod 19:6: a kingdom of priests and a holy nation) directly to the church; the new covenant community is the Sinai identity realized and expanded beyond ethnic Israel"},
-      {"type": "fulfillment", "target": "Isa 43:20-21", "note": "A people for his own possession, that you may proclaim the excellencies of him who called you — Isa 43:21 LXX (my people whom I formed for myself, to declare my praise); Peter completes the new-community description with the Isaianic mission: called-out-from-darkness people who exist to proclaim the God who called them"}
-    ]
-  },
-  "3": {
-    "10": [
-      {"type": "quote", "target": "Ps 34:12-16", "note": "Whoever desires to love life and see good days, let him keep his tongue from evil — Peter quotes Ps 34:12-16 LXX directly as the biblical foundation for his ethics of suffering and peace-seeking; Psalm 34 (the acrostic of David's deliverance) becomes the wisdom-framework for the community's response to hostility"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "quote", "target": "Prov 3:34", "note": "God opposes the proud but gives grace to the humble — same Prov 3:34 LXX quotation as James 4:6; the shared citation indicates it was a widely known community warrant for humility in the face of suffering and opposition"}
-    ]
-  }
-}
-
-ONEPET_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>anagennesas hemas eis elpida zosan di anastaseos Iesou Christou ek nekron</strong> (<em>anagennēsas hēmas eis elpida zōsan di anastaseōs Iēsou Christou ek nekrōn</em>): 'who has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.' <em>Anagennao</em> (born again/anew) appears only here and v. 23 in the NT; John 3 uses <em>gennethenai anothen</em> (born from above/again). The new birth is not an isolated spiritual event but a directed new genesis: <em>eis elpida zosan</em> (into a living hope). The resurrection of Christ is not merely the means but the content of the hope — living hope because the Resurrected One lives.</p>",
-
-    "18": "<p><strong>ou phthartois argyrio e chruso oi elytrothete ... alla timio haimati has amnos amomou kai aspilon Christou</strong> (<em>ou phthartois, argyriō ē chrysō, oi elytrōthēte ... alla timiō haimati hōs amnos amōmou kai aspilou Christou</em>): 'not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-metaphor (<em>lytroō</em>, redeem/ransom) is grounded in the Exodus-redemption of Israel (Exod 6:6: 'I will redeem you with an outstretched arm') and the Servant's self-pouring in Isa 53. The lamb-without-blemish terminology is directly cultic: the Passover lamb (Exod 12:5) and the sacrificial requirements of Lev 22:19-25 — Christ fulfills the sacrificial requirements as the perfect offering.</p>"
-  },
-  "2": {
-    "24": "<p><strong>hos tas hamartias hemon autos anenegken en to somati autou epi to xylon</strong> (<em>hos tas hamartias hēmōn autos anēnenken en tō sōmati autou epi to xylon</em>): 'He himself bore our sins in his body on the tree.' The language is saturated with Isa 53: <em>anaphero</em> is the LXX word for the priestly act of lifting/bearing an offering to the altar; <em>epi to xylon</em> (on the tree) echoes Deut 21:23 (a hanged man is cursed) and Gal 3:13 (Christ redeemed us from the curse of the law by becoming a curse for us). The phrase 'in his body' is a deliberate anti-Docetic marker: the sin-bearing was physical, not merely spiritual — the crucifixion was real.</p>"
-  }
-}
-
-ONEPET_CONTEXT = {
-  "1": {
-    "1": "<p>1 Peter is addressed to the diaspora of Pontus, Galatia, Cappadocia, Asia, and Bithynia — a geographic sweep of the northern half of Asia Minor (modern Turkey). The term <em>parepidemos</em> (sojourner/temporary resident, v. 1) and <em>paroikos</em> (alien/resident without citizenship, 2:11) had legal specificity: resident aliens without full citizenship rights, dependent on local good will. Peter applies these social categories to the spiritual situation of believers: they are not truly at home in this age, regardless of their legal status. The five provinces listed correspond roughly to the area of a Bithynian governor's jurisdiction, suggesting a single administrative document.</p>"
-  },
-  "2": {
-    "13": "<p>Peter's 'submit to every human institution' (<em>hypotassō pase anthropine ktisei</em>) parallels Paul's Romans 13, but the social context is different: 1 Peter addresses communities facing active hostility and false accusation, not merely civic obligation. The political submission is part of the apologetic strategy: by visibly good behavior (v. 15: <em>agathopoia</em>, doing good), the community silences the ignorance of foolish critics. The 'honor everyone, love the brotherhood, fear God, honor the emperor' (v. 17) places the emperor in the fourth position — honored, but not uniquely so, and subordinate to God-fear.</p>"
-  }
-}
-
-ONEPET_CHRIST = {
-  "1": {
-    "18": "<p>A direct revelation: 'You were ransomed from the futile ways inherited from your forefathers, not with perishable things such as silver or gold, but with the precious blood of Christ, like that of a lamb without blemish or spot.' The ransom-price Christology: Christ's blood is the currency of redemption from inherited futility. The Passover-lamb imagery connects the death of Christ to the entire Exodus-redemption narrative — as the Passover blood protected Israel from the destroying angel, Christ's blood ransoms believers from the bondage of empty ancestral religion. The lamb is not merely a metaphor for innocence but a liturgical category that places the cross within the sacrificial system's culmination.</p>"
-  },
-  "2": {
-    "24": "<p>A fulfillment: 'He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.' 1 Peter 2:22-25 is the most sustained application of Isa 53 to the passion in the NT outside the Gospel traditions. Peter works through the Servant Song verse by verse: v. 22 (Isa 53:9: no sin in his mouth), v. 23 (Isa 53:7: did not retaliate), v. 24 (Isa 53:4-5: bore our griefs, wounded for our iniquities, by his stripes we are healed), v. 25 (Isa 53:6: we all went astray like sheep). The suffering community (1:6-7; 2:19-21; 4:12-16) is invited to understand their own suffering through the Servant-Christ who bore sins and called them to follow his pattern.</p>"
-  },
-  "3": {
-    "18": "<p>A direct revelation: 'Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit.' The uniqueness and finality of the atonement: <em>hapax</em> (once, for all time) marks the non-repeatability of Christ's sin-bearing death. The substitutionary logic: the righteous (<em>dikaios</em>) for the unrighteous (<em>adikous</em>) — the morally qualified dies for the morally disqualified. The telos: 'that he might bring us to God' (<em>hina hemas prosagagē to theo</em>) — access to God is the goal of the cross, not merely forgiveness as a legal transaction.</p>"
-  }
-}
-
-# ============================================================
-# 2 PETER
-# ============================================================
-
-TWOPET_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "Dan 7:13-14", "note": "The power and coming of our Lord Jesus Christ — the Danielic 'power and great glory' of the Son of Man's coming; Peter grounds the Transfiguration as the preview of the parousia-power and glory that Daniel anticipated"},
-      {"type": "allusion", "target": "Ps 2:7", "note": "This is my beloved Son with whom I am well pleased — the divine voice at the Transfiguration echoes Ps 2:7's royal adoption formula; Peter as eyewitness to this Father-to-Son declaration grounds his eschatological teaching"}
-    ]
-  },
-  "3": {
-    "13": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "New heavens and a new earth in which righteousness dwells — Peter cites the Isaianic new creation promise (Isa 65:17; 66:22) as the eschatological expectation; the new creation where righteousness dwells (not merely exists but inhabits fully) is the goal toward which the present cosmos is moving"}
-    ]
-  }
-}
-
-TWOPET_ORIGINAL = {
-  "3": {
-    "9": "<p><strong>ou bradynei Kyrios tes epangelias hos tines bradyteta hegountai alla makrothymei eis hymas me boulomenos tinas apolesai alla pantas eis metanoian chorein</strong> (<em>ou bradynei Kyrios tēs epangelias, hōs tines bradytēta hēgountai, alla makrothymei eis hymas, mē boulomenos tinas apolesthai alla pantas eis metanoian chōrein</em>): 'The Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish but that all should reach repentance.' <em>Makrothymia</em> (patience/longsuffering) reframes the delayed parousia as a divine mercy-extension rather than a failed prediction. The universalistic-sounding 'not wishing that any should perish' is balanced by 'toward you' — the patience is specifically exercised toward the addressees, inviting them toward repentance. The passage is one of the key texts on divine patience and the purpose of eschatological delay.</p>"
-  }
-}
-
-TWOPET_CONTEXT = {
-  "3": {
-    "3": "<p>The 'scoffers' who mock the parousia promise ('Where is the promise of his coming? For ever since the fathers fell asleep, all things are continuing as they were from the beginning', vv. 3-4) reflect an Epicurean-style skepticism about divine intervention in the regularities of nature: if God were going to act, why hasn't he? The Epicurean doctrine of <em>ataraxia</em> (undisturbed natural regularity, governed by atoms, not divine providence) provided intellectual cover for dismissing apocalyptic expectations. Peter's response: the uniformitarians forget that the past was not uniform — the flood was God's catastrophic intervention in the 'natural order' (vv. 5-6), and the coming fire will be the next. The argument uses Genesis to rebut Epicurean naturalism.</p>"
-  }
-}
-
-TWOPET_CHRIST = {
-  "1": {
-    "1": "<p>A direct revelation: 'To those who have obtained a faith of equal standing with ours by the righteousness of our God and Savior Jesus Christ.' The phrase 'our God and Savior Jesus Christ' (<em>tou theou hemon kai soteros Iesou Christou</em>) — following the same Granville Sharp single-article construction as Titus 2:13 — directly predicates deity of Jesus Christ. 2 Peter opens with its highest Christological claim: Jesus is God and Savior. This framing situates the entire letter's authority under the person of the divine Savior whose return the scoffers mock.</p>"
-  },
-  "3": {
-    "10": "<p>A direct revelation: 'The day of the Lord will come like a thief, and then the heavens will pass away with a roar, and the heavenly bodies will be burned up and dissolved, and the earth and the works that are done on it will be exposed.' The Day of the Lord (the YHWH theophany-judgment tradition; Amos 5:18-20; Joel 2; Zeph 1:14-18) is identified with the Day of Jesus Christ (v. 12: 'waiting for and hastening the coming of the day of God'). The cosmic dissolution is not the end of material existence but its purification — leading to the new heavens and new earth of v. 13. The Christological judgment: the Lord Jesus presides over this dissolution as the eschatological judge whose day arrives unexpectedly.</p>"
-  }
-}
-
-# ============================================================
-# 2 JOHN, 3 JOHN, JUDE
-# ============================================================
-
-TWOJOHN_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "1 John 4:2", "note": "Those who do not confess the coming of Jesus Christ in the flesh are the deceiver and the antichrist — the same anti-Docetic test as 1 John 4:2 (every spirit that confesses Jesus Christ has come in the flesh is from God); 2 John applies the same doctrinal test to traveling teachers"}
-    ]
-  }
-}
-
-TWOJOHN_ORIGINAL = {
-  "1": {
-    "7": "<p><strong>hoti polloi planoi exelthon eis ton kosmon hoi me homologountes Iesoun Christon erchomenon en sarki houtos estin ho planos kai ho antichristos</strong> (<em>hoti polloi planoi exēlthon eis ton kosmon, hoi mē homologountes Iēsoun Christon erchomenon en sarki</em>): 'For many deceivers have gone out into the world, those who do not confess the coming of Jesus Christ in the flesh.' The present participle <em>erchomenon</em> (coming) rather than the perfect <em>elēlythota</em> (having come, 1 John 4:2) may signal a future reference — not the Incarnation but the parousia. Either way, the test is the same: affirm the bodily reality of Jesus's existence, whether past (Incarnation) or future (Return). The Docetic denial of Christ's flesh eliminates both the atonement and the resurrection-body hope.</p>"
-  }
-}
-
-TWOJOHN_CONTEXT = {
-  "1": {
-    "1": "<p>2 John is addressed from 'the elder' to 'the elect lady and her children' — most likely a metaphor for a particular congregation and its members (cf. 1 Pet 5:13 where 'Babylon' = Rome; 'she' = the church in Babylon). The 'elder' is commonly identified with John the Apostle or John the Elder of Ephesus (Papias distinguishes these; Eusebius records the tradition of two Johns in Asia). The letter is a brief (13 verses) traveling advisory: the practice of Greco-Roman hospitality created real danger for Christian communities — traveling teachers could exploit the obligation of hospitality to spread heresy. 2 John's 'do not receive him into your house' (v. 10) restricts the normal hospitality-obligation for doctrinal cause.</p>"
-  }
-}
-
-TWOJOHN_CHRIST = {
-  "1": {
-    "3": "<p>A direct revelation: 'Grace, mercy, and peace will be with us from God the Father and from Jesus Christ the Father's Son.' The Trinitarian greeting (Father and Son together as the source of grace, mercy, and peace) frames 2 John's doctrinal concern: the Christ of the greeting (the Son of the Father) is the same Christ whose bodily reality the deceivers deny (v. 7). Christology determines fellowship (vv. 9-11): to go beyond Christ's teaching is to lose the Father; to hold the Son's teaching is to have both the Son and the Father. The Christological and Trinitarian are inseparable in 2 John.</p>"
-  }
-}
-
-THREEJOHN_ECHO = {
-  "1": {
-    "11": [
-      {"type": "allusion", "target": "Gen 1:4", "note": "Whoever does good is from God; whoever does evil has not seen God — the fundamental creation-theology judgment: good comes from God, evil does not; 3 John applies this creation-ethics criterion to the community conflict between the hospitable Gaius and the domineering Diotrephes"}
-    ]
-  }
-}
-
-THREEJOHN_ORIGINAL = {
-  "1": {
-    "4": "<p><strong>meizotera toutōn ouk echo charan hina akouo ta ema tekna en te aletheia peripatounta</strong> (<em>meizoteran toutōn ouk echō charan, hina akouō ta ema tekna en tē alētheia peripatounta</em>): 'I have no greater joy than to hear that my children are walking in the truth.' The elder's pastoral identity is entirely defined by the spiritual progress of his 'children' — those he has led to faith. <em>Peripatountas en te aletheia</em> (walking in truth) is the Johannine idiom for the whole-life embodiment of the gospel: truth is not merely intellectual assent but an ambulatory practice that shapes the whole life.</p>"
-  }
-}
-
-THREEJOHN_CONTEXT = {
-  "1": {
-    "9": "<p>Diotrephes 'who likes to put himself first' (<em>philoproteuo</em>, v. 9) represents the emergence of local congregational autonomy that resisted the authority of the itinerant apostolic elder. The conflict between the elder's authority (rooted in the apostolic tradition) and Diotrephes's local authority (rooted in congregational control) anticipates the later tension between episcopal and local governance structures. Diotrephes's practices — refusing the elder's letter, refusing to receive traveling brothers, and expelling those who do — constitute a miniature local church coup. 3 John is the NT's only document addressing intra-Christian church politics at this granular level.</p>"
-  }
-}
-
-THREEJOHN_CHRIST = {
-  "1": {
-    "7": "<p>A direct revelation: 'For they have gone out for the sake of the name, accepting nothing from the Gentiles.' The missionaries who deserve hospitality go out 'for the sake of the Name' (<em>hyper tou onomatos</em>) — the Name of Jesus, YHWH's eschatological Name in the NT (Acts 4:12; Phil 2:9-10). They are supported not by the Gentile world's resources but by the community of believers. The missional church is defined by: (1) the Name as motivation, (2) non-worldly financial support, and (3) mutual community support (<em>synergoi</em>, v. 8). The entire brief letter is framed within this Christological missiology.</p>"
-  }
-}
-
-JUDE_ECHO = {
-  "1": {
-    "9": [
-      {"type": "allusion", "target": "Zech 3:2", "note": "The Lord rebuke you — Michael's rebuke of the devil in Jude's midrash on the Assumption of Moses echoes YHWH's rebuke of Satan in Zech 3:2 ('The LORD rebuke you, O Satan'); the heavenly court's handling of demonic accusation follows the same pattern"}
-    ],
-    "14": [
-      {"type": "quote", "target": "1 Enoch 1:9", "note": "Behold the Lord comes with ten thousands of his holy ones to execute judgment — Jude quotes 1 Enoch 1:9 as prophetic authority; this is the only direct quotation of 1 Enoch in the NT, indicating the apocalyptic tradition's authority in some early Christian communities"},
-      {"type": "allusion", "target": "Deut 33:2", "note": "He came from Sinai ... with holy ones at his right hand — the Sinai theophany with the myriads of holy ones (angels/saints); both Deut 33:2 and 1 Enoch 1:9 draw from the same theophany tradition that Jude applies to the parousia of Christ"}
-    ]
-  }
-}
-
-JUDE_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>parakalo agapetoi pasan spoude poioumenos graphein hymin peri tes koines soteries anagkaion egesamen grapsai hymin parakalon epagonizesthai te hapax paradotheise tois hagiois pistei</strong>: 'I found it necessary to write appealing to you to contend for the faith that was once for all delivered to the saints.' <em>Hapax paradotheise</em> (once for all delivered): the single, unrepeatable handing-over of the faith — <em>paradidomi</em> is the technical tradition-transmission verb (as in 1 Cor 11:23, 15:3). The faith is not a developing deposit that each generation revises but a fixed, delivered tradition that needs defending, not augmenting. <em>Epagonizomai</em> (contend earnestly for) is the athletic-contest word applied to doctrinal fidelity — not aggressive attack of opponents but vigorous defense of what was given.</p>"
-  }
-}
-
-JUDE_CONTEXT = {
-  "1": {
-    "4": "<p>The opponents Jude addresses are 'certain people who have crept in unnoticed' (<em>pareisedysan</em>) — using the technical language of infiltration. They are described as 'perverting the grace of our God into sensuality and denying our only Master and Lord Jesus Christ.' The combination of antinomian sexual license ('sensuality') with Christological denial suggests a proto-Gnostic group that used the grace-freedom of the gospel (cf. Rom 6:1: 'shall we continue in sin so that grace may abound?') as license for moral license. Jude's use of 1 Enoch and the Assumption of Moses (v. 9) indicates familiarity with the wider Jewish apocalyptic tradition and suggests a Jewish-Christian context for both author and audience.</p>"
-  }
-}
-
-JUDE_CHRIST = {
-  "1": {
-    "25": "<p>A direct revelation: 'To the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority before all time and now and forever.' Jude's doxology is the most comprehensive Christological doxology in the NT — ascribing glory, majesty, dominion, and authority (four throne-room attributes of YHWH in Daniel and Isaiah) to God through Christ, and extending this across all three tenses of time (before, now, forever). The Christ through whom this glory is ascribed is the Lord whose 'love you keep yourselves in' (v. 21) and who presents believers blameless with rejoicing (v. 24). The letter's defense of the faith is framed by this doxological Christology.</p>"
+    "1": '<p><em>Polemos kai machai en hymin</em> (wars and conflicts among you) — <em>polemos</em> (war, armed conflict) and <em>mache</em> (fight, battle) applied to community disputes. The origin James identifies — <em>ek tōn hēdonōn hymōn tōn strateuomenōn en tois melesin hymōn</em> (from your pleasures that are warring in your members) — uses military imagery for inner conflict: the pleasures themselves wage war within the body. The Stoic and Platonic traditions analyzed inner conflict as the war of irrational desires against reason; James gives this a more specifically social application — inner disorder produces communal conflict.</p>',
+    "2": '<p><em>Epithymeite kai ouk echete</em> (you desire and do not have) — the sequence of unfulfilled desire leading to violence echoes Micah 2:2: "They covet fields and seize them; houses, and take them away." The failure to ask God (v. 2b: "you do not have because you do not ask") diagnoses the community\'s conflict as a failure of prayer: they seek satisfaction through social competition rather than petitionary trust. The Jewish prayer tradition assumed that unmet need was the appropriate occasion for petition; James\'s community has bypassed prayer in favor of conflict.</p>',
+    "3": '<p><em>Aitēte kai ou lambanete, dioti kakōs aiteisthe</em> (you ask and do not receive because you ask badly) — the wrong motive in prayer (<em>hina en tais hēdonais hymōn dapanēsēte</em>, to spend on your own pleasures) disqualifies the request. The tradition of prayer heard and unanswered runs through the psalms of lament (Ps 22:2: "I cry but you do not answer") and the wisdom tradition; James locates the problem not in divine unwillingness but in the petitioner\'s orientation. Prayer that seeks self-gratification rather than God\'s will is not genuine petition.</p>',
+    "4": '<p><em>Moichalides</em> (adulteresses) — the prophetic address to Israel as YHWH\'s unfaithful spouse (Hos 2:2-13; Jer 3:1-10; Ezek 16:15-58) frames the community\'s "friendship with the world" as spiritual adultery. The marriage-covenant between YHWH and Israel provided the prophets with their most powerful image for Israel\'s unfaithfulness; James applies it to the community\'s desire for the world\'s approval and goods. <em>Echthra tou theou</em> (enmity toward God) — <em>echthros tou theou</em> (enemy of God) was the most extreme statement of covenantal breach.</p>',
+    "5": '<p>The difficult verse — "Or do you think the Scripture speaks without purpose? \'The Spirit he made to dwell in us longs jealously\'" — cites a text not identifiable in the OT canon. Possible sources include Exod 20:5 (the jealous God who will not share his people with other gods), Num 11:29, or an apocryphal text. The divine jealousy (<em>epipothei... phthonon</em>) for the Spirit he has placed in his people recalls the prophetic tradition of YHWH\'s jealous love for Israel (Isa 63:10-11; Ezek 36:26-27). The Spirit given at the new creation longs for undivided devotion.</p>',
+    "6": '<p>The explicit Scriptural citation — <em>ho theos hyperēphanois antitassetai, tapeinois de didōsin charin</em> (God opposes the proud but gives grace to the humble) — is from Prov 3:34 LXX (which differs from the MT). The same verse is cited in 1 Pet 5:5. The divine opposition to pride (<em>antitassomai</em>, to arrange against, to set in battle array against) and the divine grace to the humble (<em>tapeinois</em>) make God himself the adversary of the proud. The community that pursues worldly honor (v. 4) finds itself in battle against the God who opposes pride.</p>',
+    "7": '<p><em>Hypotageite oun tō theō</em> (submit therefore to God) — the military submission vocabulary from the honor-and-authority tradition; the <em>hypo-tassō</em> (arrange under) of voluntary subordination to the divine authority. <em>Antistēte de tō diabolō kai pheuxetai aph\' hymōn</em> (resist the devil and he will flee from you) — the two-movements instruction: submission toward God and resistance toward the devil. The tradition of the devil\'s flight at resistance is rooted in the understanding that the devil operates as an accuser and tempter but lacks ultimate power over those who are firmly aligned with God.</p>',
+    "8": '<p><em>Eggisate tō theō kai eggiei hymin</em> (draw near to God and he will draw near to you) — the mutual-drawing-near language echoes the prophetic call to return (Zech 1:3: "Return to me and I will return to you"; Mal 3:7). The spatial image of approaching the deity was central to priestly and temple theology: the worshipper drew near to the divine presence at the altar. James applies it to the posture of the heart. <em>Katharisate cheiras... hagnisate kardias</em> (cleanse hands... purify hearts) — the ritual purity vocabulary (hands = external conduct; heart = internal motivation) reflects the prophetic synthesis of Isa 1:16-17 and Ps 24:4.</p>',
+    "9": '<p><em>Talaipōrēsate kai penthēsate kai klausate</em> (be wretched and mourn and weep) — the call to lamentation. The reversal of laughter to mourning (<em>ho gelōs hymōn eis penthos metastraphētō kai hē chara eis katēpheian</em>) inverts the joy that the world offers into the mourning that authentic repentance produces. This is the language of prophetic lament (Joel 1:13-14; 2:12-13) — the community is called to the kind of communal mourning that accompanies genuine return to God. The joy of repentance that follows the mourning is the beatitude pattern (Matt 5:4: "blessed are those who mourn, for they will be comforted").</p>',
+    "10": '<p><em>Tapeinōthēte enōpion Kyriou kai hypsōsei hymas</em> (humble yourselves before the Lord and he will exalt you) — the reversal pattern that runs through the wisdom and prophetic traditions: the humble are exalted, the proud are brought low (1 Sam 2:7-8; Ps 147:6; Prov 3:34; Luke 1:52-53; Matt 23:12). The passive <em>hypsōsei</em> (he will exalt) is a divine passive: the exaltation comes from God, not from self-promotion. This is the opposite of the worldly honor-seeking of v. 4 (friendship with the world for the sake of standing).</p>',
+    "11": '<p><em>Mē katalaleite allēlōn</em> (do not slander one another) — the prohibition of <em>katalaleō</em> (to speak down against, slander) targets the speech-act that claims judicial authority over another member of the community. <em>Ho katalālōn adelphou ē krinōn ton adelphon autou katalālei nomou kai krinei nomon</em> (the one who slanders a brother or judges his brother slanders the law and judges the law) — to usurp the role of judge over a fellow member is to usurp the law\'s role, and thereby to place oneself above the law rather than under it.</p>',
+    "12": '<p><em>Heis estin ho nomothetēs kai kritēs</em> (there is one Lawgiver and Judge) — the divine monopoly on legislation and judgment grounds the prohibition of human judgment over one another. The Jewish tradition of the divine as the sole Lawgiver (Exod 20:1-17; Deut 5:6-21) and the sole Judge (Gen 18:25: "Shall not the Judge of all the earth do right?") removes legislative and judicial authority from human community members. The question <em>sy de tis ei ho krinōn ton plēsion</em> (but who are you who judges your neighbor?) — echoes Ezek 22:2 and the prophetic challenge to self-appointed judges.</p>',
+    "13": '<p><em>Age nyn hoi legontes</em> (come now, you who say) — the diatribe\'s direct challenge to a specific group within the community. The merchants who plan travel and commerce (<em>emporeusomaethia kai kerdasomen</em> — we will trade and make a profit) are not condemned for trading but for the presumption of autonomous planning that ignores divine sovereignty over time and life. The first-century Jewish diaspora included significant merchant communities whose commercial travel through the Mediterranean world was both economically necessary and culturally distinctive.</p>',
+    "14": '<p><em>Atmis gar este hē pros oligon phainomenē, epeita kai aphanizomenē</em> (for you are a mist that appears for a little while and then disappears) — the brevity-of-life image. <em>Atmis</em> (mist, vapor, steam) echoes Ecclesiastes\' <em>hebel</em> (vapor, breath, vanity — the word used 38 times in Ecclesiastes for the fleeting character of human life and endeavor). The morning mist that burns off when the sun rises is a Palestinan agricultural reality; James uses it as Qohelet uses <em>hebel</em> — to locate human planning within the context of human transience.</p>',
+    "15": '<p><em>Ean ho Kyrios thelēsē kai zēsomen kai poiēsomen touto ē ekeino</em> (if the Lord wills, we will live and do this or that) — the formula of divine-will acknowledgment. The equivalent formula in the Jewish tradition was the Aramaic <em>im yirtzeh ha-Shem</em> (if God wills) or Greek <em>ean ho theos thelē</em> — a recognized expression of creaturely dependence on divine sovereignty over the future. Paul uses equivalent formulas (1 Cor 4:19; 16:7; Acts 18:21). The formula is not fatalism but the theological recognition that human agency is embedded in divine providence.</p>',
+    "16": '<p><em>Nyn de kauchasthe en tais alazoneiais hymōn</em> (but as it is, you boast in your arrogances) — <em>alazoneia</em> (boasting, arrogance, pretension) was the vice of the <em>alazōn</em> (the braggart, the one who claims more than they possess) — a stock figure in comedy and diatribe as the target of satirical critique. Aristotle contrasted <em>alazoneia</em> (excess self-presentation) with <em>eirōneia</em> (self-deprecation) and <em>alētheia</em> (truthful self-presentation) as the vices flanking the virtue of honest self-assessment. The boasting merchants claim more control over the future than they possess.</p>',
+    "17": '<p><em>Eidoti oun kalon poiein kai mē poionti hamartia autō estin</em> (to the one who knows the right thing to do and does not do it, it is sin for him) — the closing principle of ch. 4 is the wisdom tradition\'s foundational insight: sin is not only active transgression but the failure to act on known obligation. The Greek philosophical tradition (Aristotle\'s akrasia, weakness of will) and the Jewish halakhic tradition both wrestled with the gap between knowing the good and doing it. James closes the chapter with this principle to encompass all the failures he has described: those who know what God requires and yet choose worldly friendship, pride, judgment of others, and autonomous planning are all instances of this single pattern.</p>'
   }
 }
 
 def main():
-    books_data = [
-        ('james', JAMES_ECHO, JAMES_ORIGINAL, JAMES_CONTEXT, JAMES_CHRIST),
-        ('1peter', ONEPET_ECHO, ONEPET_ORIGINAL, ONEPET_CONTEXT, ONEPET_CHRIST),
-        ('2peter', TWOPET_ECHO, TWOPET_ORIGINAL, TWOPET_CONTEXT, TWOPET_CHRIST),
-        ('2john', TWOJOHN_ECHO, TWOJOHN_ORIGINAL, TWOJOHN_CONTEXT, TWOJOHN_CHRIST),
-        ('3john', THREEJOHN_ECHO, THREEJOHN_ORIGINAL, THREEJOHN_CONTEXT, THREEJOHN_CHRIST),
-        ('jude', JUDE_ECHO, JUDE_ORIGINAL, JUDE_CONTEXT, JUDE_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo(book, e)
+    existing = load_comm('mkt-context', 'james')
+    merge_comm(existing, CONTEXT)
+    save_comm('mkt-context', 'james', existing)
 
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'james.json').read_text())
+    all_ok = True
+    for ch in ['1', '2', '3', '4']:
+        il_vv = set(il.get(ch, {}).keys())
+        out_vv = set(existing.get(ch, {}).keys())
+        missing = il_vv - out_vv
+        if missing:
+            print(f'  ch{ch} still missing: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'  ch{ch}: complete ({len(out_vv)} verses)')
+    if all_ok:
+        print('All James ch1-4 context entries present ✓')
 
 if __name__ == '__main__':
     main()

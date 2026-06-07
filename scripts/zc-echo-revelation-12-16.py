@@ -1,12 +1,15 @@
 """
-Combined script: Revelation — all four layers (echo + original + context + christ)
-Output: data/echoes/revelation.json + mkt-original + mkt-context + mkt-christ
+MKT Echo Layer — Revelation ch12-16
+Fills ch15 and ch16 (ch12-14 already had partial entries from prior run)
+Run: python3 scripts/zc-echo-revelation-12-16.py
 
-Revelation is the most OT-saturated NT book (approximately 404 verses
-contain echoes from 278 OT passages without ever giving a direct citation).
-Key zones: the throne-room vision (chs 4-5, Ezekiel + Isaiah + Daniel),
-the seals/trumpets/bowls (Exodus plagues + prophetic judgment oracles),
-the Lamb who was slain (Isa 53 + Passover), and the new creation (Isa 65-66 + Ezek 40-48).
+Echo strategy (per guide: selective — 2-3 best echoes per verse, not every parallel):
+- Ch15: Song of Moses (Exod 15; Deut 32), tabernacle of testimony (Exod 38),
+        Sinai glory-cloud filling sanctuary (Exod 40; 1 Kgs 8)
+- Ch16: Seven bowls echo seven Egyptian plagues structurally;
+        key: boils (Exod 9), water-to-blood (Exod 7), darkness (Exod 10),
+        Euphrates drying (Isa 11; Jer 51), frogs (Exod 8),
+        cup of wrath (Jer 25; Isa 51), hail (Exod 9), Armageddon (Zech 12; Judg 5)
 """
 
 import json, pathlib
@@ -15,7 +18,9 @@ ROOT = pathlib.Path(__file__).parent.parent
 
 def load_echo(book):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
@@ -23,17 +28,8 @@ def save_echo(book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def merge_echo(existing, new_data):
+    """Merge echo entries; deduplicate by (type, target) within each verse."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -47,166 +43,80 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-REV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "fulfillment", "target": "Dan 7:13", "note": "Behold he is coming with the clouds — the Danielic Son of Man coming with the clouds of heaven; Revelation's opening vision applies Dan 7:13 directly to the parousia of Jesus"},
-      {"type": "fulfillment", "target": "Zech 12:10", "note": "Every eye will see him, even those who pierced him, and all tribes of the earth will wail — the mourning of Zech 12:10 (they will look on him whom they have pierced, and mourn for him) is applied to the universal vision of the returning Christ; the piercing of Christ on the cross is the historical fulfillment of the Zecharian piercing"}
+REVELATION_ECHOES = {
+  "15": {
+    "3": [
+      {"type": "allusion", "target": "Exod 15:1-18", "note": "The Song of Moses after the Exodus sea-crossing — 'Great and marvelous are your works' matches the victory-doxology register of Exod 15, where YHWH's rescue of Israel from Egypt is celebrated in song. John combines 'song of Moses' and 'song of the Lamb' to signal that the final Exodus (the Lamb's redemption) fulfills and surpasses the first."},
+      {"type": "allusion", "target": "Deut 32:3-4", "note": "Moses's final Song (Deut 32): 'I will proclaim the name of the LORD... his works are perfect and all his ways are just' — the Deuteronomic Song of Moses identifies divine justice in judgment as the content of true worship; Revelation's martyrs sing the same acknowledgment of God's righteous ways in the face of the bowls."},
+      {"type": "allusion", "target": "Ps 145:17", "note": "'The LORD is righteous in all his ways and faithful in all he does' — the Psalmic acclamation of divine righteousness provides the liturgical vocabulary for the saints' doxology; 'just and true are your ways' (Rev 15:3) draws from this tradition of worship-as-theodicy."}
     ],
-    "12": [
-      {"type": "allusion", "target": "Dan 10:5-6", "note": "Among the lampstands one like a son of man, clothed with a long robe and with a golden sash — Daniel's vision of the heavenly man clothed in linen, girded with gold, with face like lightning; John's vision of the glorified Christ reuses Daniel's heavenly-figure imagery"},
-      {"type": "allusion", "target": "Exod 25:37", "note": "The seven golden lampstands — the seven-branched menorah of the tabernacle; the seven churches are the new menorah, the light-bearing presence of God in the world as the tabernacle was in Israel"}
+    "4": [
+      {"type": "allusion", "target": "Ps 86:9", "note": "'All the nations you have made will come and worship before you, Lord' — the Davidic psalm anticipates the eschatological worship of all nations; Rev 15:4 ('all nations will come and worship before you') cites this as the goal that the bowl judgments ultimately serve: universal worship through universal justice."},
+      {"type": "allusion", "target": "Jer 10:7", "note": "'Who should not fear you, King of the nations? This is your due' — Jeremiah's polemic against idols grounds the fear-of-God in the uniqueness of YHWH as King of the nations; Rev 15:4 ('Who will not fear you, O Lord, and glorify your name?') transplants this motif to the final vindication of YHWH's sovereignty over every imperial power."}
+    ],
+    "5": [
+      {"type": "allusion", "target": "Exod 38:21", "note": "The 'tabernacle of the covenant law' (lit. tabernacle of testimony — <em>mishkan ha-eduth</em>) — the wilderness Tabernacle was called the tabernacle of testimony because it housed the ark containing the tablets of the covenant. Rev 15:5 opens the heavenly counterpart of that earthly sanctuary, signaling that the bowl judgments proceed from the very source of the covenant law that has been violated."},
+      {"type": "allusion", "target": "Num 1:50", "note": "The Levites were appointed over 'the tabernacle of the testimony' (<em>mishkan ha-eduth</em>) — the identical phrase used in Rev 15:5 for the heavenly temple. The careful alignment of heavenly sanctuary with the Mosaic tabernacle-of-testimony establishes the bowls as covenant-faithfulness in action: what the earthly tabernacle foreshadowed, the heavenly temple now executes."}
+    ],
+    "8": [
+      {"type": "allusion", "target": "Exod 40:34-35", "note": "The glory-cloud filled the tabernacle so that Moses could not enter — the completion of the tabernacle inaugurated by the divine Presence filling it and temporarily excluding the mediator. Rev 15:8 mirrors this: the heavenly temple fills with smoke from God's glory, and no one can enter until the seven plagues are fulfilled. The pattern: the completion of judgment (like the completion of the sanctuary) is marked by the overwhelming divine Presence."},
+      {"type": "allusion", "target": "1 Kgs 8:10-11", "note": "When Solomon's temple was dedicated, the glory-cloud filled it so that the priests could not enter — the Solomonic dedication theophany repeats the Exodus tabernacle pattern. Revelation deploys both precedents: the heavenly temple's inaccessibility during the bowl sequence maps the same divine-glory-filling that marked the great dedications of Israel's worship history."}
     ]
   },
-  "4": {
+  "16": {
     "2": [
-      {"type": "allusion", "target": "Ezek 1:26-28", "note": "A throne stood in heaven with one seated on it, with the appearance of jasper and carnelian, and around the throne a rainbow — Ezekiel's throne-chariot vision (merkabah): the one on the throne with the appearance of gleaming amber, the rainbow surrounding; John's throne-room draws directly from Ezekiel's initial vision"},
-      {"type": "allusion", "target": "Isa 6:1-3", "note": "The four living creatures crying Holy, holy, holy — the seraphim of Isaiah's throne vision crying the Trisagion; the four living creatures of Revelation 4 combine Ezekiel's four living creatures (Ezek 1:5-14) with Isaiah's seraphim (Isa 6:2-3)"}
-    ]
-  },
-  "5": {
-    "5": [
-      {"type": "fulfillment", "target": "Gen 49:9-10", "note": "Behold, the Lion of the tribe of Judah, the Root of David — the Judah-lion prophecy of Gen 49:9-10 (the scepter shall not depart from Judah) identifies the Lion as the coming ruler from Judah's line; Revelation applies this to the resurrected Christ who has conquered"},
-      {"type": "fulfillment", "target": "Isa 11:1", "note": "The Root of David has conquered — the shoot from the stump of Jesse (Isa 11:1) who will rule with justice; the Davidic root-branch motif of Isaiah fulfilled in Christ's resurrection-conquest"}
-    ],
-    "6": [
-      {"type": "fulfillment", "target": "Isa 53:7", "note": "A Lamb standing, as though it had been slain — the lamb led to slaughter of Isa 53:7 (he was led like a lamb to the slaughter and like a sheep before its shearers is silent); the slain-but-standing Lamb is the risen Christ as the Servant who was killed and lives"},
-      {"type": "allusion", "target": "Zech 3:9", "note": "A Lamb with seven horns and seven eyes, the seven spirits of God — the stone with seven eyes before Joshua the high priest (Zech 3:9: I will engrave its inscription; seven are the eyes of the LORD which range through the whole earth); the seven eyes as divine omniscience applied to the Lamb"}
-    ]
-  },
-  "6": {
-    "12": [
-      {"type": "allusion", "target": "Joel 2:10", "note": "The sun became black as sackcloth, the full moon became like blood, the stars fell to earth — the Day-of-the-LORD cosmic signs of Joel 2:10 and 2:31 (the sun will be turned to darkness and the moon to blood before the great and awesome day of the LORD); the sixth seal's cosmic disruption uses Joel's Day-of-LORD imagery"}
-    ]
-  },
-  "7": {
-    "17": [
-      {"type": "fulfillment", "target": "Isa 25:8", "note": "God will wipe away every tear from their eyes — Isa 25:8 (YHWH will swallow up death forever and wipe away tears from all faces); the eschatological comfort of the feast-after-death promise now applied to the great multitude before the Lamb"}
-    ]
-  },
-  "11": {
-    "15": [
-      {"type": "fulfillment", "target": "Dan 2:44", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — Daniel's vision of the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44: 'the God of heaven will set up a kingdom that shall never be destroyed'); the seventh trumpet announces this as completed"}
-    ]
-  },
-  "12": {
-    "5": [
-      {"type": "fulfillment", "target": "Ps 2:9", "note": "She gave birth to a male child, one who is to rule all the nations with a rod of iron — Ps 2:9 (you shall break them with a rod of iron); the messianic ruler of Ps 2 is identified as the male child born of the woman; the rod-of-iron rule is the eschatological conquest of Christ"}
-    ]
-  },
-  "19": {
-    "11": [
-      {"type": "allusion", "target": "Isa 11:4", "note": "The rider on the white horse is called Faithful and True, and in righteousness he judges and makes war — the messianic judge who strikes the earth with the rod of his mouth and slays the wicked with the breath of his lips (Isa 11:4); the rider's warfare is by the word of his mouth (v. 15)"}
-    ],
-    "13": [
-      {"type": "allusion", "target": "Isa 63:1-3", "note": "He is clothed in a robe dipped in blood — the warrior-in-crimson of Isa 63:1-6 whose garments are stained red from treading the winepress of nations' judgment; the Revelation rider's blood-stained robe echoes the Isaianic divine warrior"}
-    ]
-  },
-  "21": {
-    "1": [
-      {"type": "fulfillment", "target": "Isa 65:17", "note": "I saw a new heaven and a new earth, for the first heaven and first earth had passed away — Isa 65:17's promise (I create new heavens and a new earth; the former shall not be remembered) is the explicit basis for Revelation's new creation; the eschatological promise receives its fullest apocalyptic depiction here"}
+      {"type": "allusion", "target": "Exod 9:8-12", "note": "The sixth Egyptian plague: Moses threw soot into the air and festering boils broke out on the Egyptians. The first bowl (ugly, festering sores on those with the mark of the beast) directly reprises this plague — the beast's worshipers receive the judgment the Pharaoh's subjects received. The bowls are the new-Exodus plagues poured on the new Egypt (Rome/Babylon)."}
     ],
     "3": [
-      {"type": "fulfillment", "target": "Lev 26:11-12", "note": "Behold the dwelling place of God is with man — the Sinai covenant promise 'I will set my dwelling among you ... I will walk among you and will be your God and you shall be my people' (Lev 26:11-12) reaches its consummation in the New Jerusalem; what the tabernacle mediated, the new creation embodies directly"},
-      {"type": "fulfillment", "target": "Ezek 37:27", "note": "My dwelling place shall be with them and I will be their God and they shall be my people — Ezekiel's new covenant promise of YHWH dwelling with his people in the restored Israel reaches its cosmic fullness in the new creation"}
-    ]
-  },
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Ezek 47:1-12", "note": "The river of the water of life flowing from the throne — Ezekiel's vision of the temple-river that flows deeper and deeper toward the sea, bringing life wherever it goes (Ezek 47:9: everything will live where the river goes); the New Jerusalem's river fulfills Ezekiel's temple-river"}
+      {"type": "allusion", "target": "Exod 7:17-21", "note": "The first Egyptian plague: the Nile turned to blood and every fish died — Pharaoh's water-system becomes a death-system. The second bowl (sea turns to blood like a dead man, every living creature dies) escalates the Exodus plague from the Nile to the entire sea, signaling that the new-Exodus judgment is total, not partial."}
     ],
-    "2": [
-      {"type": "fulfillment", "target": "Gen 2:9", "note": "The tree of life with its twelve kinds of fruit, one for each month — the tree of life in the middle of the garden (Gen 2:9) that Adam and Eve were excluded from after the Fall; the new creation restores unrestricted access to the tree of life for those who wash their robes (v. 14), reversing the consequence of Gen 3:24"}
+    "4": [
+      {"type": "allusion", "target": "Ps 78:44", "note": "'He turned their rivers to blood; they could not drink from their streams' — the psalmist's recitation of the Exodus plagues frames them as covenant-history events to be retold in worship. Rev 16:4 (rivers and springs become blood) draws on this psalmic tradition of plague-as-covenant-enforcement, applicable now to Babylon's empire."},
+      {"type": "allusion", "target": "Exod 7:19", "note": "Moses stretched out his staff over all the waters of Egypt — streams, canals, ponds, all reservoirs — and they turned to blood. The third bowl extends the water-to-blood judgment from sea (v3) to inland fresh waters, completing the saturation of the water system that the Exodus plague began."}
+    ],
+    "5": [
+      {"type": "allusion", "target": "Deut 32:4", "note": "'He is the Rock, his works are perfect, and all his ways are just' — the Song of Moses' declaration of divine righteousness in judgment underlies the angel of the waters' doxology ('you are just in these judgments'). Rev 16:5-7 pauses the bowl sequence for two theodicy-doxologies, grounding the violence of the judgments in the character of the God who poured them."}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Exod 10:21-23", "note": "The ninth Egyptian plague: thick darkness covered Egypt for three days so that no one could see or move, while Israel had light. The fifth bowl (beast's kingdom plunged into darkness) reprises this plague against the Pharaonic empire's successor — the beast's kingdom loses the light as Pharaoh's land did."},
+      {"type": "allusion", "target": "Isa 8:22", "note": "'They will look toward the earth and see only distress and darkness' — Isaiah's judgment-darkness against those who reject YHWH's word. The gnawing of tongues in agony (Rev 16:10) parallels the Isaianic imagery of judgment-torment that results from rejecting the divine light."}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Isa 11:15-16", "note": "'The LORD will dry up the gulf of the Egyptian sea... he will make people cross over dry-shod... as there was for Israel when they came up from Egypt' — Isaiah's new-Exodus vision includes drying up the Euphrates for the return of the remnant. Rev 16:12 inverts the direction: the Euphrates is dried to prepare the way for eastern kings, but the echo activates both the Exodus-crossing pattern and the judgment-against-Babylon theme."},
+      {"type": "allusion", "target": "Jer 51:36", "note": "'I will dry up her sea and make her springs run dry' — YHWH's judgment against Babylon includes drying up her waters. Revelation's bowl against the Euphrates (Babylon's river) implements Jeremiah's Babylon-oracle: the great river that sustained and protected Babylon is removed to prepare the final assault."}
+    ],
+    "13": [
+      {"type": "allusion", "target": "Exod 8:1-15", "note": "The second Egyptian plague: frogs swarmed from the Nile over all Egypt. Rev 16:13 (three frog-like impure spirits emerging from the dragon, beast, and false prophet) transforms the Exodus plague into a demonic triad — the unholy trinity disgorges frogs as Pharaoh's Egypt was afflicted by them, linking the two great empires of opposition to God's purposes."}
+    ],
+    "15": [
+      {"type": "allusion", "target": "Matt 24:43", "note": "'If the owner of the house had known at what time of night the thief was coming, he would have kept watch' — Jesus's own parable of the unexpected thief interrupts the bowl sequence as a direct-speech beatitude from the risen Christ. The thief-warning was spoken in the Olivet Discourse context; its insertion here confirms that the bowl-judgments are the backdrop against which the church's watchfulness becomes urgent."},
+      {"type": "allusion", "target": "1 Thess 5:2", "note": "'You know very well that the day of the Lord will come like a thief in the night' — Paul's eschatological warning uses the same thief-imagery as the dominical saying, indicating it was already a fixed early Christian phrase for the unexpected Parousia. Rev 16:15 embeds it within the bowl sequence as a pastoral aside to the letter's recipients."}
+    ],
+    "16": [
+      {"type": "allusion", "target": "Zech 12:11", "note": "'On that day the weeping in Jerusalem will be great, like the weeping of Hadad Rimmon in the plain of Megiddo' — Zechariah's eschatological mourning oracle (for the one who was pierced, v10) is located at Megiddo. Rev 16:16 names the gathering point as Har-Megiddo (Armageddon), the place Zechariah associates with the final mourning and repentance before YHWH."},
+      {"type": "allusion", "target": "Judg 5:19", "note": "'Kings came, they fought; at Taanach, by the waters of Megiddo, they took no plunder' — Deborah's song commemorates the proto-Armageddon battle where the kings of Canaan assembled at Megiddo and were destroyed. The naming of Har-Megiddo as the gathering place of the kings of the whole world activates the ancient memory of decisive cosmic battle at this specific geographic locus."}
+    ],
+    "19": [
+      {"type": "allusion", "target": "Jer 25:15-16", "note": "'Take from my hand this cup filled with the wine of my wrath and make all the nations to whom I send you drink it' — YHWH gave Jeremiah a cup of wrath to pass to all nations beginning with Jerusalem; Rev 16:19 (Babylon given the cup of the wine of the fury of his wrath) completes this Jeremian program: Babylon, last in the sequence of nations Jeremiah addressed (Jer 25:26: 'the king of Babylon'), finally receives the cup she was spared for last."},
+      {"type": "allusion", "target": "Isa 51:17", "note": "'Awake, awake! Rise up, Jerusalem, you who have drunk from the hand of the LORD the cup of his wrath, you who have drained to its dregs the goblet that makes people stagger' — Israel drank the cup before Babylon did; now Babylon receives what Israel endured. The echo reframes the bowl judgment: Babylon's cup is the mirror of the cup YHWH's own people drank."}
+    ],
+    "21": [
+      {"type": "allusion", "target": "Exod 9:22-26", "note": "The seventh Egyptian plague: Moses stretched out his staff and YHWH sent hail throughout Egypt — the worst hailstorm Egypt had ever seen. Rev 16:21 (hundred-pound hailstones) reprises and exceeds the Exodus hail as the seventh bowl exceeds the seventh plague, and men curse God as Pharaoh's heart was hardened rather than softened by the same judgment."},
+      {"type": "allusion", "target": "Josh 10:11", "note": "'The LORD hurled large hailstones down on them... and more of them died from the hail than were killed by the Israelites' — the hail at Beth Horon, where YHWH fought for Israel against the Amorite kings, becomes the precedent for divine hail-warfare. The kings gathered at Armageddon (v16) face the same divine-warrior hail that destroyed the kings who opposed Joshua."}
     ]
-  }
-}
-
-REV_ORIGINAL = {
-  "1": {
-    "8": "<p><strong>ego eimi to Alpha kai to Omega legei Kyrios ho Theos ho on kai ho en kai ho erchomenos ho Pantokrator</strong>: 'I am the Alpha and the Omega, says the Lord God, who is and who was and who is to come, the Almighty.' <em>Alpha kai Omega</em>: the first and last letters of the Greek alphabet — a comprehensive inclusio encompassing all of reality. The phrase is applied both to God the Father (1:8; 21:6) and to Jesus (22:13: 'I am the Alpha and the Omega, the first and the last, the beginning and the end') — the shared title making the Christological identification with YHWH explicit. <em>Pantokrator</em> (Almighty): the LXX translation of Hebrew <em>El Shaddai</em> and <em>YHWH Tsvaot</em> (LORD of hosts) — here applied to both Father and Son as the supreme governing power over all creation.</p>",
-
-    "17": "<p><strong>ego eimi ho protos kai ho eschatos kai ho zon kai egenomen nekros kai idou zon eimi eis tous aionas ton aionon</strong>: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore.' The phrase <em>ho protos kai ho eschatos</em> (first and last) is YHWH's self-identification in Isa 41:4; 44:6; 48:12 — the exclusive divine claim to be both origin and terminus of all history. Jesus applies this YHWH-title to himself in combination with the resurrection claim: 'I died and behold I am alive.' The resurrection is the proof that the crucified one is the living YHWH — the divine identity claim vindicated by rising from death.</p>"
-  },
-  "4": {
-    "8": "<p><strong>hagios hagios hagios Kyrios ho Theos ho Pantokrator ho en kai ho on kai ho erchomenos</strong>: 'Holy, holy, holy, is the Lord God Almighty, who was and is and is to come.' The Trisagion (Isa 6:3) is adapted with the temporal formula that characterizes Revelation's divine self-identification. The fourfold repetition of praise from the four living creatures links Revelation's throne-room to Isaiah's call-vision: the same divine holiness that destroyed Isaiah's self-confidence before the vision of YHWH is now the content of ceaseless heavenly worship. John hears the cosmic liturgy that underlies all earthly worship.</p>"
-  },
-  "5": {
-    "5": "<p><strong>enikesen ho leon ho ek tes phyles Iouda e riza David anoixai to biblion</strong>: 'The Lion of the tribe of Judah, the Root of David, has conquered, so that he can open the scroll.' The title-cluster is Christological recapitulation: <em>Leon ek phyles Iouda</em> (Lion-of-Judah: Gen 49:9-10), <em>Riza David</em> (Root of David: Isa 11:1, 10; Rev 22:16), <em>enikesen</em> (has conquered). Then the stunning inversion: the 'Lion' who conquers is revealed as a 'Lamb standing as if slain' (v. 6). John hears Lion, then sees Lamb — the conquering is through the cross, not through military force. This Lion-Lamb inversion is Revelation's central hermeneutic: power is redefined by the slain Lamb who stands.</p>"
-  },
-  "13": {
-    "18": "<p><strong>de estin sophia ho echon noun psephisato ton arithmon tou theriou arithmos gar anthropou estin kai ho arithmos autou hexakosioi hexekonta hex</strong>: '666' — the number of the beast. <em>Arithmos anthropou</em> (number of a human/humanity) — the beast's number is not cosmic but human, not transcendent but sub-divine. <em>Gematria</em> (assigning numerical values to letters) was a common Greco-Roman literary technique. The best-attested solution: NERON KAISER in Hebrew letters (nun=50 + resh=200 + vav=6 + nun=50 + qoph=100 + samek=60 + resh=200 = 666). Nero Caesar as the prototype of the beast — the first Roman persecutor of Christians — makes the political-historical reference legible to John's seven churches (ca. 90-95 CE, under Domitian, the 'second Nero').</p>"
-  },
-  "21": {
-    "3": "<p><strong>idou he skene tou theou meta ton anthropon kai skemnosei met auton</strong>: 'Behold the dwelling place (<em>skene</em>) of God is with people, and he will dwell (<em>skenosei</em>) with them.' The <em>skene</em>-language deliberately echoes the wilderness tabernacle (<em>Mishkan</em>) and anticipates John 1:14 where the Word <em>eskenosen</em> (tabernacled) among us. The eschatological new creation is the realization of what the tabernacle mediated: direct divine presence without the veil, without the intermediary system, without separation — YHWH's face-to-face dwelling with his people. The Sinai covenant promise reaches its telos in the new Jerusalem.</p>"
-  },
-  "22": {
-    "20": "<p><strong>nai erchomai tachy</strong> (<em>nai erchomai tachy</em>): 'Surely I am coming soon.' The final direct speech of Christ in the canon is a promise of return. <em>Tachy</em> (soon/quickly): the eschatological urgency that has characterized the entire Revelation. The community's response — <em>Amen, erchou Kyrie Iesou</em> (Come, Lord Jesus) — is the Greek form of the Aramaic <em>Maranatha</em> (1 Cor 16:22; Didache 10:6). The canon ends with a promise and a prayer: Christ's 'I am coming' and the community's 'Come.' The entire Christian life is lived in this tension of promise-and-prayer, the <em>already</em> of Christ's victory and the <em>not yet</em> of his return.</p>"
-  }
-}
-
-REV_CONTEXT = {
-  "1": {
-    "9": "<p>The island of Patmos is a small volcanic island in the Aegean Sea, part of the Dodecanese chain, about 37 miles southwest of Ephesus. The Roman practice of <em>relegatio in insulam</em> (banishment to an island) was used for political offenders of some status — those meriting death were executed, those of social standing were exiled. John's Patmos exile 'on account of the word of God and the testimony of Jesus' (v. 9) places the Revelation within the Roman persecution of Christians, most plausibly under Domitian (81-96 CE, who demanded to be addressed as <em>Dominus et Deus</em>, Lord and God — a title the Revelation's 'Lord God Almighty' directly counters). The imperial cult was particularly strong in the seven cities of Revelation (Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, Laodicea, and Ephesus all had imperial temples and cult practices).</p>"
-  },
-  "4": {
-    "1": "<p>John's heavenly ascent follows the well-established pattern of Jewish apocalyptic merkabah mysticism (throne-chariot speculation based on Ezek 1 and Isa 6). The rabbinic tradition (b. Hagigah 11b-16a) treated merkabah speculation as dangerous esoterica — only the wisest scholars should study it. John's vision democratizes the throne-room: every Christian is shown what the mystical traditions reserved for elite initiates. The four living creatures (combining Ezek 1:5-14's four creatures with Isa 6:2-3's seraphim) and the twenty-four elders (representing either the twelve patriarchs + twelve apostles, or the twenty-four priestly courses of 1 Chr 24) frame the throne in the same pattern as the OT heavenly-temple tradition.</p>"
-  },
-  "12": {
-    "1": "<p>The woman clothed with the sun (ch. 12) has generated three major interpretive traditions: (1) the church giving birth to Christ and then fleeing persecution (corporate-ecclesial reading); (2) Mary (Roman Catholic tradition, citing Gen 3:15 and the Immaculate Conception typology); (3) Israel/the covenant community through whom the Messiah came (salvation-historical reading). The best reading combines 2 and 3: the woman is the covenant community (OT Israel → NT church) through whom the Messiah came; Mary is the proximate historical instantiation. The cosmic imagery (sun, moon, twelve stars = Gen 37:9's dream of Joseph) links the woman to the patriarchal promise-community.</p>"
-  },
-  "17": {
-    "9": "<p>The seven hills on which the woman sits (v. 9: <em>hepta ore</em>) is the most explicit historical identification in Revelation — Rome was universally known as the 'city of seven hills' (Septemontium). The woman 'Babylon the great' (vv. 5, 18: 'the great city that has dominion over the kings of the earth') is Rome — coded in the 'Babylon' cipher that 1 Peter also uses (1 Pet 5:13). Jewish and Christian apocalyptic literature routinely used 'Babylon' for Rome as the current oppressive empire (4 Ezra 3:1-2, 28-31; 2 Baruch 10-11). The coding protected the text from Roman censorship while being transparent to readers in the seven churches who knew the 'mystery' (v. 7).</p>"
-  }
-}
-
-REV_CHRIST = {
-  "1": {
-    "17": "<p>A direct revelation: 'I am the first and the last, and the living one. I died, and behold I am alive forevermore, and I have the keys of Death and Hades.' Three layered claims: (1) divine identity — the first-and-last YHWH-title; (2) resurrection reality — I died and I live; (3) eschatological authority — I hold the keys to death and Hades. These three together constitute the Christological thesis of Revelation: the crucified and risen Lord is the sovereign YHWH who controls death itself. The entire apocalyptic vision — judgments, seals, trumpets, bowls, the final victory — flows from this threefold claim made by Christ to John on Patmos.</p>"
-  },
-  "5": {
-    "6": "<p>A direct revelation: 'A Lamb standing, as though it had been slain, with seven horns and seven eyes, which are the seven spirits of God sent out into all the earth.' The Lamb-vision is Revelation's Christological center. The Lamb is: (1) slain — bearing the marks of the cross permanently in his resurrection body; (2) standing — the resurrection state; (3) with seven horns — omnipotent (seven = completeness; horns = power); (4) with seven eyes — omniscient. This is the highest Christological symbol in the canon: the crucified-and-risen Jesus is simultaneously the sacrificial victim and the omnipotent, omniscient Lord of all history. The entire drama of Revelation unfolds as this Lamb opens the seals of history.</p>",
-
-    "12": "<p>A direct revelation: 'Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!' The sevenfold doxology directed to the Lamb matches the sevenfold doxology directed to God in v. 13 — the deliberate parallelism attributes to Christ the same divine worthiness that belongs to YHWH alone. The ground of worthiness is the slaying (<em>ho esphagmenos</em>) — the cross is the qualification for cosmic lordship. The order in the throne-room is anti-imperial: not the emperor who receives tribute but the crucified-and-exalted Lamb who receives worship from every creature.</p>"
-  },
-  "19": {
-    "16": "<p>A direct revelation: 'On his robe and on his thigh he has a name written: King of kings and Lord of lords.' The rider on the white horse — identified in vv. 11-16 with 'Faithful and True,' with eyes like flame, with many diadems, clothed in blood-stained robe, wielding a sharp sword from his mouth — bears the supreme title that Deut 10:17 gives to YHWH (God of gods and Lord of lords). Jesus as King-of-kings and Lord-of-lords is the final Christological counter-claim to every imperial title: Caesar's claim to divine lordship is answered by the appearance of the one whose sovereignty is not shared and whose kingdom will not be destroyed.</p>"
-  },
-  "21": {
-    "5": "<p>A direct revelation: 'And he who was seated on the throne said: Behold, I am making all things new.' In the new creation vision, the one seated on the throne (identified with the Lamb in 22:1, 3 where both are said to be the throne of the new Jerusalem) speaks the new creation into being. The <em>kaina</em> (new, qualitatively new) of v. 5 echoes 2 Cor 5:17 (new creation) and Isa 65:17 — the eschatological renewal is not the old patched up but the new inaugurated by divine decree. The Christological new creation: as Christ's word created the old order (John 1:3; Col 1:16), so his word re-creates the new.</p>"
-  },
-  "22": {
-    "13": "<p>A direct revelation: 'I am the Alpha and the Omega, the first and the last, the beginning and the end.' Revelation's closing divine address: Jesus claims for himself the three divine-identity formulae that the book opened with in relation to the Father (1:8: Alpha-Omega + Almighty). The three phrases together (Alpha/Omega, first/last, beginning/end) constitute the most comprehensive divine self-identification in the canon — and the book assigns them to Jesus. The Christological conclusion of Revelation: the Jesus who was crucified under Pontius Pilate, who was raised and ascended, who will return, is the one to whom all time and all reality belong. He is the beginning and the end of all creation.</p>"
   }
 }
 
 def main():
-    e = load_echo('revelation')
-    merge_echo(e, REV_ECHO)
-    save_echo('revelation', e)
-    print(f'Rev echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
+    existing = load_echo('revelation')
+    merge_echo(existing, REVELATION_ECHOES)
+    save_echo('revelation', existing)
 
-    c = load_comm('mkt-original', 'revelation')
-    merge_comm(c, REV_ORIGINAL)
-    save_comm('mkt-original', 'revelation', c)
-    print(f'Rev original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'revelation')
-    merge_comm(c, REV_CONTEXT)
-    save_comm('mkt-context', 'revelation', c)
-    print(f'Rev context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'revelation')
-    merge_comm(c, REV_CHRIST)
-    save_comm('mkt-christ', 'revelation', c)
-    print(f'Rev christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    # Verify ch15 and ch16 now have entries
+    for ch in ['12', '13', '14', '15', '16']:
+        count = len(existing.get(ch, {}))
+        status = 'done' if count > 0 else 'MISSING'
+        print(f'  ch{ch}: {count} verses with echoes — {status}')
 
 if __name__ == '__main__':
     main()

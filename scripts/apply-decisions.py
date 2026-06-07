@@ -107,6 +107,10 @@ def apply(decisions_path, dry_run=False):
         if dec.get('notes'):
             entry['user_notes'] = dec['notes']
 
+        # Semantic range — 2-3 sentence synthesis written by the curation agent
+        if dec.get('semantic_range'):
+            entry['semantic_range'] = dec['semantic_range']
+
         # Track changes
         change = f'{old_status} → {status}' if status and status != old_status else 'log/tiers updated'
         stats[lang][code] = change

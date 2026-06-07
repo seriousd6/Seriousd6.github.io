@@ -1,0 +1,434 @@
+"""
+Book Study Data — Acts
+book_id: acts
+lang: greek
+
+Run: python3 scripts/build-book-study-acts.py
+
+Notes:
+- Key vocabulary from Luke author group peaks (covers Luke + Acts) plus Acts-specific words
+- ὁδός (G3598) included because 'the Way' is the earliest name for the Christian movement
+  in Acts (9:2; 19:9, 23; 22:4; 24:14, 22) — theologically distinctive to this book
+- ἀνίστημι (G450) used specifically for the resurrection sense dominant in Acts; the verb
+  appears in every major apostolic sermon
+- Ἰουδαῖος excluded — too complex for a significance note without risk of misuse
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "acts",
+
+    "key_vocabulary": [
+        {
+            "code": "G4151",
+            "lemma": "πνεῦμα",
+            "translit": "pneûma",
+            "gloss": "spirit",
+            "significance": (
+                "The Holy Spirit is mentioned over 50 times in Acts and is the book's "
+                "primary narrative agent — not background atmosphere but an actor who speaks "
+                "(13:2), forbids (16:6), directs (16:7), and pours itself out (2:17). The "
+                "Pentecost outpouring (ch. 2) is the narrative hinge: the same Spirit who "
+                "descended on Jesus at his baptism now descends on the assembled disciples, "
+                "inaugurating the age of witness. Luke's pneumatology in Acts is resolutely "
+                "action-oriented: the Spirit empowers for mission, shapes strategic decisions, "
+                "falls on Gentiles before anyone expects it (10:44-47), and is the real reason "
+                "the gospel crosses boundaries no human strategy would have planned."
+            )
+        },
+        {
+            "code": "G3144",
+            "lemma": "μάρτυς",
+            "translit": "mártys",
+            "gloss": "martyr",
+            "significance": (
+                "Acts 1:8 commissions the disciples as <em>μάρτυρες</em> — witnesses who "
+                "testify from personal knowledge of what they have seen. The word carries "
+                "both legal and narrative weight: in a legal sense, a witness gives court "
+                "testimony about observed events; in Acts, the primary qualification for the "
+                "apostolic office is having been a witness to the resurrection (1:22). The "
+                "word's secondary meaning — one who seals testimony with blood ('martyr') — "
+                "is present when Paul calls Stephen 'your witness' (22:20). In Acts, "
+                "testimony consistently advances through suffering; witness and martyrdom "
+                "are not opposites but the same word applied to different outcomes."
+            )
+        },
+        {
+            "code": "G3686",
+            "lemma": "ὄνομα",
+            "translit": "ónoma",
+            "gloss": "called",
+            "significance": (
+                "The name of Jesus is Acts' power center. Peter heals in 'the name of Jesus "
+                "Christ of Nazareth' (3:6); the Sanhedrin demands to know 'by what name' "
+                "the healing was done (4:7), and Peter's answer is unequivocal: 'there is "
+                "no other name under heaven given among men by which we must be saved' "
+                "(4:12). The earliest persecution specifically prohibits speaking 'in this "
+                "name' (4:17-18; 5:28). In Acts, 'the name' is not a verbal formula but "
+                "the concentrated authority of the risen Lord — to invoke the name is to "
+                "act with his delegated authority, and the opposition to the name reveals "
+                "who the real political threat is."
+            )
+        },
+        {
+            "code": "G3598",
+            "lemma": "ὁδός",
+            "translit": "hodós",
+            "gloss": "journey",
+            "significance": (
+                "'The Way' (ἡ ὁδός) is the earliest known name for the Christian movement, "
+                "appearing six times in Acts (9:2; 19:9, 23; 22:4; 24:14, 22) — always in "
+                "contexts of persecution or legal defense. Before his conversion, Paul "
+                "'persecuted this Way to the death' (22:4). In Ephesus, opponents 'spoke "
+                "evil of the Way before the congregation' (19:9). The usage echoes Isaiah's "
+                "call to prepare 'the way of the Lord' (40:3) and Jesus' self-identification "
+                "as 'the way' (John 14:6). The name reflects an understanding of Christianity "
+                "as a distinctive path of life and community, not merely a set of private "
+                "beliefs — and its use under persecution shows the community's self-awareness "
+                "as a distinct and publicly identifiable movement."
+            )
+        },
+        {
+            "code": "G2962",
+            "lemma": "κύριος",
+            "translit": "kýrios",
+            "gloss": "Lord",
+            "significance": (
+                "Acts 2:36 is the kerygmatic center of the entire book: 'Let all the house "
+                "of Israel therefore know for certain that God has made him both Lord and "
+                "Christ, this Jesus whom you crucified.' The resurrection has installed "
+                "Jesus in the position of Lord — the one who holds supreme authority, divine "
+                "sovereignty. This is the claim that gets the apostles arrested (4:2), that "
+                "Paul preaches in every synagogue, and that explains why 'the name of the "
+                "Lord Jesus was extolled' (19:17). In Acts, 'Lord' is not an honorific but "
+                "a royal title for the risen, exalted, reigning Christ — and its use of Jesus "
+                "is the most politically charged claim in the book."
+            )
+        },
+        {
+            "code": "G1484",
+            "lemma": "ἔθνος",
+            "translit": "éthnos",
+            "gloss": "Gentile",
+            "significance": (
+                "Acts is the story of the gospel crossing the Jewish-Gentile boundary — the "
+                "most theologically contested move of the first century. The word ἔθνη "
+                "(plural: Gentiles, nations) appears approximately 43 times. The Cornelius "
+                "episode (chs. 10-11) is the theological pivot: the Spirit falls on uncircumcised "
+                "Gentiles before they are baptized, and the Jerusalem church's response — "
+                "'God has granted to the Gentiles also the repentance that leads to life' "
+                "(11:18) — is stunned acceptance. The Jerusalem Council (ch. 15) settles "
+                "the question doctrinally: Gentiles are received by grace through faith, "
+                "not by becoming Jews first. What follows is Paul's three missionary "
+                "journeys through the ἔθνη."
+            )
+        },
+        {
+            "code": "G1577",
+            "lemma": "ἐκκλησία",
+            "translit": "ekklēsía",
+            "gloss": "assembly",
+            "significance": (
+                "Acts uses this word approximately 23 times to describe the community of "
+                "Jesus' followers — the same word used in the LXX for Israel's covenant "
+                "assembly (qahal). The Jerusalem community it describes in 2:42-47 — devoted "
+                "to teaching, fellowship, bread-breaking, and prayer — is not a human "
+                "organization but a divinely constituted entity. Paul tells the Ephesian "
+                "elders to shepherd 'the church of God, which he obtained with his own blood' "
+                "(20:28). Acts' use of ἐκκλησία claims continuity with Israel's covenant "
+                "community while defining it around the risen Lord — the church is not a "
+                "new religion but the covenant people of God reconstituted around Jesus."
+            )
+        },
+        {
+            "code": "G2842",
+            "lemma": "κοινωνία",
+            "translit": "koinōnía",
+            "gloss": "communion",
+            "significance": (
+                "Acts 2:42 describes the Jerusalem community's four practices: the apostles' "
+                "teaching, κοινωνία, the breaking of bread, and prayer. The word means "
+                "'having in common' — participation at every level: shared life (2:44 — "
+                "'they had all things in common'), shared meals (2:46), shared reception of "
+                "the Spirit. The economic sharing of 4:32-35 is not a political program but "
+                "the enacted form of κοινωνία: if you share the same Spirit and the same "
+                "Lord, sharing material goods is the natural consequence. The early "
+                "community's practices are not disciplinary rules but expressions of the "
+                "unity the Spirit has created across social and ethnic boundaries."
+            )
+        },
+        {
+            "code": "G450",
+            "lemma": "ἀνίστημι",
+            "translit": "anístēmi",
+            "gloss": "arise",
+            "significance": (
+                "In Acts, this verb and its passive form are used predominantly for the "
+                "resurrection of Jesus: 'God raised him up, loosing the pangs of death' "
+                "(2:24, 32; 3:26; 13:33-34; 17:31). The resurrection is not one item in "
+                "the apostolic message but its center and climax — every major sermon in "
+                "Acts reaches its pivot with the declaration that God raised Jesus from the "
+                "dead. This is Acts' historical claim, not merely theological assertion: "
+                "witnesses are named (1:22), the empty tomb is implied, and the hearers "
+                "are called to respond. The resurrection in Acts is the court testimony on "
+                "which everything else — Lordship, forgiveness, judgment — depends."
+            )
+        },
+        {
+            "code": "G3341",
+            "lemma": "μετάνοια",
+            "translit": "metánoia",
+            "gloss": "repentance",
+            "significance": (
+                "Every apostolic sermon in Acts calls for repentance: Pentecost ('Repent "
+                "and be baptized,' 2:38), Peter at Solomon's Portico (3:19), Paul at "
+                "Athens ('God commands all people everywhere to repent,' 17:30). In Acts, "
+                "repentance is the appropriate human response to the announcement that God "
+                "has exalted the crucified Jesus as Lord — it is not merely emotional sorrow "
+                "but a cognitive and volitional reorientation toward a new political reality. "
+                "The one you (or your generation) rejected and crucified has been installed "
+                "as Lord of all; to repent is to realign yourself with that fact. In Acts, "
+                "repentance is public, historical, and verifiable — it changes what people do."
+            )
+        },
+        {
+            "code": "G907",
+            "lemma": "βαπτίζω",
+            "translit": "baptízō",
+            "gloss": "baptize",
+            "significance": (
+                "Baptism in Acts is consistently associated with the name of Jesus, "
+                "forgiveness of sins, and reception of the Holy Spirit — though the "
+                "relationship among these three varies in different accounts. At Pentecost "
+                "(2:38) baptism follows repentance and precedes the Spirit's gift. At "
+                "Cornelius's house (10:44-48), the Spirit falls before baptism. In Ephesus "
+                "(19:1-7), disciples who had only John's baptism receive baptism 'in the "
+                "name of the Lord Jesus,' after which the Spirit comes. Acts presents these "
+                "variations without harmonizing them, signaling that baptism is the rite of "
+                "entry into the community, but the Spirit's coming is not mechanically tied "
+                "to its administration — both are gifts of grace."
+            )
+        },
+        {
+            "code": "G1411",
+            "lemma": "δύναμις",
+            "translit": "dýnamis",
+            "gloss": "ability",
+            "significance": (
+                "Acts 1:8 links power to the Spirit's coming and to witness: 'You will "
+                "receive power when the Holy Spirit has come upon you, and you will be my "
+                "witnesses.' The word reappears at key moments of Spirit-empowered action: "
+                "Peter's healing of the lame man (3:12 — 'why do you stare at us, as though "
+                "by our own power...?'), the apostolic testimony given 'with great power' "
+                "(4:33), Stephen's miracles 'with great power' (6:8). In Acts, δύναμις "
+                "never belongs to the human agent — it always belongs to the risen Lord "
+                "acting through them. When the apostles disclaim their own power (3:12; "
+                "14:15), they are not being modest; they are making a theological claim "
+                "about the source of what is happening."
+            )
+        },
+        {
+            "code": "G2784",
+            "lemma": "κηρύσσω",
+            "translit": "kērýssō",
+            "gloss": "proclaim",
+            "significance": (
+                "This verb describes the herald's public announcement — news requiring a "
+                "public response, not private instruction. In Acts, Paul 'proclaimed' Jesus "
+                "in the synagogues immediately after his conversion (9:20), and he continues "
+                "proclaiming 'the kingdom of God and teaching about the Lord Jesus Christ' "
+                "in Rome, 'with all boldness and without hindrance' (28:31). The word's "
+                "force is significant: the gospel is not offered as a private religious "
+                "option but announced as a public reality that makes demands. The apostles "
+                "are not counselors but heralds — and the opposition they provoke in "
+                "synagogues, markets, and before governors is the response of civic and "
+                "religious authority to a public claim they cannot ignore."
+            )
+        },
+        {
+            "code": "G3056",
+            "lemma": "λόγος",
+            "translit": "lógos",
+            "gloss": "word",
+            "significance": (
+                "Luke's six structural summary statements mark the gospel's growth with "
+                "variations on this word: 'the word of God increased' (6:7); 'the word of "
+                "the Lord continued to increase and prevail mightily' (19:20). The verb is "
+                "a divine passive: the growth is God's act. In Acts, 'the word' is not a "
+                "text but a dynamic, active reality that spreads like a living thing — Paul "
+                "can refer to 'the word of this salvation' (13:26) and 'the word of his "
+                "grace' (14:3; 20:32). The summaries function as structural chapter headings "
+                "attributing the mission's expansion to divine causation. When Paul is "
+                "imprisoned in Rome but preaches 'without hindrance' (28:31), the final "
+                "note is that the word — not Paul — is unconstrained."
+            )
+        },
+        {
+            "code": "G2097",
+            "lemma": "εὐαγγελίζω",
+            "translit": "euangelízō",
+            "gloss": "declare",
+            "significance": (
+                "Luke uses this verb more than any other NT author, and it characterizes "
+                "every stage of the Acts mission: Philip 'proclaimed the good news about "
+                "the kingdom of God and the name of Jesus Christ' to Samaria (8:12); Paul "
+                "'preached the good news' throughout his journeys; the summary at 5:42 "
+                "describes the apostles 'preaching Jesus as the Christ' daily. The verb's "
+                "performative force — to announce, not merely to inform — keeps Acts from "
+                "being a travelogue. Every journey is an act of proclamation; every city "
+                "visited is an audience for the announcement that Jesus is Lord. The gospel "
+                "does not merely spread; it is actively heralded, and its advance is the "
+                "carrying of a declaration into new territory."
+            )
+        },
+    ],
+
+    "language_notes": (
+        "<p>Acts opens with a grammatically significant word: 'In the first book, O "
+        "Theophilus, I have dealt with all that Jesus <em>began</em> to do and teach' "
+        "(1:1 — <em>ἤρξατο Ἰησοῦς ποιεῖν τε καὶ διδάσκειν</em>). The verb is "
+        "<em>ἄρχομαι</em> ('to begin'), used with a complementary infinitive. Luke says "
+        "the Gospel records what Jesus <em>began</em> to do — implying that Acts records "
+        "what Jesus <em>continues</em> to do through his Spirit and his church. The "
+        "protagonist of Acts is not Peter or Paul but the risen Lord who commands (1:2), "
+        "appears (9:5), speaks (18:9-10), and acts through his people. The single word "
+        "<em>ἤρξατο</em> frames the entire two-volume work as one continuous story.</p>"
+        "<p>The apostolic speeches in Acts follow a recognizable kerygmatic pattern: "
+        "scriptural premise → narrative of Jesus' death and resurrection → fulfillment "
+        "claim → call to repentance. Luke composed these speeches in the style of "
+        "Thucydides (who wrote that he gave speakers 'what in his opinion they would "
+        "probably have said'). Whether they are historical transcripts, Lukan compositions, "
+        "or a combination is debated — but their consistent focus on the resurrection as "
+        "historical fact, testified to by named witnesses, is Luke's literary and "
+        "theological presentation of the apostolic kerygma. Comparing Peter's Pentecost "
+        "speech (2:14-36), Stephen's defense (ch. 7), and Paul at Pisidian Antioch "
+        "(13:16-41) reveals both the common structure and the distinct emphases each "
+        "speaker brings.</p>"
+        "<p>The six growth summaries are Luke's compositional signature in Acts: 'the "
+        "word of God increased and multiplied' (6:7); 'the churches... were being built "
+        "up' (9:31); 'the word of God increased and multiplied' (12:24); 'the churches "
+        "were strengthened in the faith, and they increased in numbers daily' (16:5); "
+        "'the word of the Lord continued to increase and prevail mightily' (19:20); "
+        "'proclaiming the kingdom of God... with all boldness and without hindrance' "
+        "(28:31). Each uses passive voice — <em>ηὔξανεν</em>, 'was increasing' — "
+        "attributing the growth to God. These summaries function as structural dividers "
+        "marking periods of expansion and as theological commentary: what looks like "
+        "human religious growth is divine action.</p>"
+        "<p>The 'we' passages (16:10-17; 20:5-21:18; 27:1-28:16) are among the NT's "
+        "most discussed stylistic features. When Luke's narrative suddenly shifts from "
+        "third person to first person, the author signals his own eyewitness presence. "
+        "These sections are consistently more specific in geographical, nautical, and "
+        "logistical detail than the surrounding narrative. The account of the shipwreck "
+        "(ch. 27) is the most detailed sea voyage account in ancient literature, with "
+        "technical Greek nautical vocabulary (<em>ὑποζώννυτες</em>, 'undergirding the "
+        "ship'; <em>ἐκβολήν ἐποιοῦντο</em>, 'they jettisoned the cargo') that a "
+        "non-participant would not have known. When Luke writes 'we,' the prose slows, "
+        "and the texture of eyewitness memory becomes palpable.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Acts was less commented in the patristic period "
+        "than the gospels or Paul's letters, partly because its narrative format was less "
+        "amenable to theological argument. John Chrysostom's 55 homilies on Acts "
+        "(c. 400 AD) are the most substantial patristic engagement — and Chrysostom "
+        "famously lamented that Acts was 'unknown to most' in his congregation. The book "
+        "was used primarily as historical background for Paul's letters and as evidence "
+        "for early church practice: apostolic prayer, common meals, Spirit-empowered "
+        "witness. The Pentecost narrative was read annually at Whitsunday, establishing "
+        "Acts 2 as a central liturgical text early on.</p>"
+        "<p><strong>Medieval:</strong> Acts' role in medieval Christianity was largely "
+        "hagiographical — its accounts of apostolic suffering provided the model for "
+        "saints' lives. The communal sharing of Acts 2:42-47 was read as precedent for "
+        "monasticism: the Jerusalem community as the first monastery. Bede wrote a "
+        "commentary on Acts that shaped Western reading of the book. The speeches were "
+        "mined for patristic quotations to support positions in theological disputes, "
+        "but rarely read as a sustained literary and theological argument in their own "
+        "right.</p>"
+        "<p><strong>Reformation:</strong> Luther and Calvin both valued Acts as the "
+        "historical record of the apostolic preaching they sought to restore. Calvin's "
+        "commentary on Acts emphasizes the Spirit's sovereignty in mission. The "
+        "Reformation debates about Acts concentrated on the Jerusalem Council (ch. 15): "
+        "did it establish precedent for church councils to decide theological questions? "
+        "Catholics said yes — council authority derives from apostolic succession. "
+        "Protestants said no — the Council's authority derived from its fidelity to "
+        "Scripture ('it has seemed good to the Holy Spirit and to us,' 15:28, means "
+        "the Spirit confirmed what Scripture already taught, not that the council itself "
+        "possessed infallible authority).</p>"
+        "<p><strong>Modern:</strong> Three debates dominate Acts scholarship. First, "
+        "the reliability of the speeches — historical transcripts, Lukan Thucydidean "
+        "compositions, or a combination? Second, Acts vs. Galatians: why do they give "
+        "different accounts of Paul's Jerusalem visits? Third, the 'we' passages — "
+        "eyewitness marker, source document, or literary convention? F.F. Bruce's "
+        "commentary (1951, revised 1988) and Luke Timothy Johnson's Anchor Bible "
+        "commentary (1992) remain important reference points. The unity of Luke-Acts "
+        "as a theological program — traced by scholars from Henry Cadbury to the "
+        "present — is the consensus framework for Acts interpretation.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>The most important thing to bring to Acts is the recognition that it is "
+        "<strong>volume 2 of Luke-Acts</strong>, not a standalone history. The Gospel "
+        "ends with disciples in Jerusalem waiting; Acts begins with the same disciples "
+        "receiving the Spirit they were promised. Acts 1:8 — 'Jerusalem... Judea... "
+        "Samaria... ends of the earth' — is not just a commission but the book's "
+        "outline. Every major section advances the gospel one ring further from the "
+        "center, and the reader should track: where is the gospel going next, and "
+        "who is receiving it for the first time? The answer at the end (ch. 28) is "
+        "Rome — the center of the world — with the gospel still spreading.</p>"
+        "<p>The apostolic speeches deserve close reading as the book's theological "
+        "core. They follow a recognizable pattern — historical argument from Scripture, "
+        "narration of Jesus' death and resurrection, fulfillment claim, call to "
+        "repentance — and they reveal what the earliest church understood as the "
+        "essential content of the gospel. Compare Peter's Pentecost sermon (2:14-36) "
+        "with Paul at Pisidian Antioch (13:16-41) and Paul at Athens (17:22-31): same "
+        "core, very different audiences, and the adjustments Paul makes for a Greek "
+        "philosophical audience are instructive without being accommodations of content.</p>"
+        "<p>A common misreading of Acts 2:44-45 ('they had all things in common') is "
+        "to read it either as a blueprint for Christian communalism or as an irrelevant "
+        "historical curiosity. Luke presents it as neither: economic sharing is the "
+        "enacted form of Spirit-created unity. It flows from theology, not policy — "
+        "a community that shares the same risen Lord naturally shares what they have. "
+        "A second common misreading: treating the Cornelius episode (chs. 10-11) as "
+        "resolved too easily. Luke tells it three times (the vision, the event, Peter's "
+        "report to Jerusalem) because it is the most theologically contested moment in "
+        "the book — the extension of the covenant to Gentiles on equal terms, confirmed "
+        "by the Spirit alone. Enter Acts at ch. 2 for the theological center, or at "
+        "ch. 10 for the most consequential boundary-crossing the book narrates.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('acts')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('acts', merged)
+
+main()

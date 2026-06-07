@@ -4799,3 +4799,101 @@ Fix: added `id="journal-tab-{prayers,reflections,gratitude}"` + `aria-controls` 
 **(c) `.journal-status-filters` role="group" had no `aria-label`.** Screen readers announced an anonymous group. Fix: added `aria-label="Filter by prayer status"`.
 
 **Files modified:** `discipline/index.html`, `sw.js` (v86 → v87).
+
+---
+
+## Iteration 23 — 2026-06-06
+
+### CODE-22 · wire.js: add INTENT/CHANGE?/VERIFY to 4 exported functions
+
+**Dimension 1, Cycle 10 — Code Comment Audit**
+
+Four exported functions in `wire.js` lacked INTENT blocks despite having non-obvious cross-module couplings:
+
+- **`wireRefEl`** — attaches tooltip (callScheduleShow) + modal (callOpenModal) behavior to a single [data-ref] element; the injection points are registered via setTooltipFn/setModalFn in app.js, so removal of those registrations silently breaks all ref interactions
+- **`wireRefLinks`** — idempotent [data-ref] scanner (el._refWired guard); called by both app.js on page load AND search.js after rendering results; if search.js stops passing its container as root, search-result refs lose interactivity
+- **`wireInlineVerses`** — initializes all .bsw-verse embeds with live verse text; version-change subscriber registered via onVersionChange in app.js; getVersion() reads bsw_version from localStorage
+- **`applyBookmarks`** — reads localStorage bookmarks via isBookmarked() and toggles .reader-verse__num--bookmarked CSS class on each verse; called by reader.js after chapter renders
+
+Added full INTENT/CHANGE?/VERIFY blocks to wireRefEl and wireRefLinks; INTENT/CHANGE? to wireInlineVerses and applyBookmarks.
+
+**Files modified:** `assets/js/wire.js`, `sw.js` (v87 → v88).
+
+---
+
+### CSS-32 · lib-browser.css dark mode: lb-vol-chip--active and lb-sec-tab--active
+
+**Dimension 7, Cycle 10 — Visual System**
+
+`.lb-vol-chip--active` and `.lb-sec-tab--active` both use `background: var(--color-primary); color: #fff`. The existing dark mode block already overrides `.lb-vol-chip` background to surface-alt, but not the active-state text color — in dark mode, golden primary background (#e8c87a) with white text = 1.3:1 contrast fail.
+
+Fix: added `color: var(--color-on-primary)` to both selectors in both `[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` blocks in `lib-browser.css`.
+
+**Files modified:** `assets/css/lib-browser.css`, `sw.js` (v87 → v88).
+
+---
+
+### CSS-33 · reader.css dark mode: reader-xref-chip--active and reader-qs-chip hover
+
+**Dimension 7, Cycle 10 — Visual System**
+
+`.reader-xref-chip--active` and `.reader-qs-chip:hover` both use `background: var(--color-primary); color: #fff` with no dark mode override. In dark mode golden primary + white text = 1.3:1 contrast fail.
+
+Fix: added dark mode block at end of `reader.css`:
+- `[data-theme="dark"] .reader-xref-chip--active, [data-theme="dark"] .reader-qs-chip:hover { color: var(--color-on-primary); }`
+- Corresponding `@media (prefers-color-scheme: dark)` block.
+
+**Files modified:** `assets/css/reader.css`, `sw.js` (v87 → v88).
+
+---
+
+### PERF-9 · discipline/index.html: debounce 4 journal/worship search inputs
+
+**Dimension 6, Cycle 9 — Performance**
+
+Four search inputs in `discipline/index.html` fired their render functions synchronously on every `input` event with no debounce: `#journal-search` → `render()`, `#refl-search` → `renderRefl()`, `#worship-search` → `renderSermons()`, `#grat-search` → `renderGrat()`. Each render does a localStorage read + O(n log n) sort + filter + innerHTML write. Inconsistent with the 150ms debounce applied to `library.js:dictSearch` (PERF-8) and `workshop.js:$search` (200ms).
+
+Fix: added `_searchTimer`, `_rSearchTimer`, `_wSearchTimer`, `_gSearchTimer` timer variables to each section's var declaration, then wrapped each input handler with `clearTimeout + setTimeout(..., 150)`.
+
+**Files modified:** `discipline/index.html`, `sw.js` (v88 → v89).
+
+---
+
+### MAP-G · Unify figure marker popups with stacking place tooltip
+
+**User request 2026-06-06 / Loop implementation**
+
+Two popup systems existed on the timelapse map: place dots used a custom `_onPlaceMouseMove`/`_placeTipEl` stacking tooltip (responsive, stacks multiple nearby entries). Figure markers used native Leaflet `bindTooltip` (non-stacking, separate per-marker tooltip).
+
+**Fix:**
+- `_renderFigures()` now stores `marker._figData = { label, color, note }` instead of calling `marker.bindTooltip()`.
+- `_onPlaceMouseMove` extended to also scan `_figLayers` for nearby visible figures (opacity > 0 + `_figData` present) within `_PLACE_HIT_PX`.
+- Figure entries rendered with `tl-fig-tt-label` class + `border-left-color` inline style (using figure's `color` field) so they're visually distinct from place entries.
+- Added `.tl-fig-tt-label { border-left: 3px solid #e63; padding-left: .4rem; font-style: italic; }` CSS + dark mode override for `.tl-place-tt-sig`.
+
+**Files modified:** `assets/js/timelapse-map.js`, `assets/css/timelapse.css`, `sw.js` (v89 → v90).
+
+---
+
+### MAP-I · Animated timelapse accuracy + hoverable route lines
+
+**User request 2026-06-06 / Loop implementation**
+
+Three issues fixed:
+
+**I1 — Coordinate fixes** (`data/maps/timelapse.json`):
+- En-gedi (Saul/David): was `31.47, 35.45` (in the Dead Sea water) → fixed to `31.46, 35.38` (western shore oasis).
+- Jesus in Wilderness: was `31.55, 35.5` (middle of Dead Sea) → fixed to `31.72, 35.20` (Judean Desert, west of Dead Sea).
+
+**I2 — Route timing fixes** (`data/maps/timelapse.json`):
+- `paul-journey1`: start 1052 → 1049 (now starts when Paul departs Antioch, not mid-journey at Lystra).
+- `paul-journey2`: start 1055 → 1053 (now starts at Philippi leg, not Ephesus).
+- `paul-journey3`: start 1057 → 1055 (now starts at Ephesus departure).
+
+**I3 — Hoverable route lines** (`assets/js/timelapse-map.js`):
+- Each route now gets a transparent hit polyline (weight=14) stacked above the visible colored line.
+- `_onRouteOver`/`_onRouteMove`/`_onRouteOut` handlers show/move/hide a `_routeTipEl` tooltip with route label (colored left border) + description paragraph.
+- Added `description` fields to all 22 routes in `timelapse.json`.
+- New `.tl-route-tip`, `.tl-route-tt-label`, `.tl-route-tt-desc` CSS + dark mode overrides.
+
+**Files modified:** `assets/js/timelapse-map.js`, `assets/css/timelapse.css`, `data/maps/timelapse.json`, `sw.js` (v90 → v91).

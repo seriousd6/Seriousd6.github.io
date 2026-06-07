@@ -1,0 +1,163 @@
+"""
+Book Study Data — James
+book_id: james
+lang: greek
+
+Run: python3 scripts/build-book-study-james.py
+
+Notes:
+- Author group: James (unique peak in author-freq-greek.json)
+- 12 vocab entries for a 5-chapter wisdom epistle
+- James is structurally like Proverbs — thematic clusters, not linear argument
+- δίψυχος (1:8; 4:8) appears to be a Jamesian coinage that entered early Christian vocabulary
+- The faith/works debate (ch. 2) requires careful reading: James and Paul use 'faith' and
+  'works' in different senses (Paul: works of the Law; James: deeds of mercy from living faith)
+- The tongue metaphors in ch. 3 use classical rhetorical examples (ship, fire, spring)
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "james",
+
+    "key_vocabulary": [
+        {
+            "code": "G4102",
+            "lemma": "πίστις",
+            "translit": "pístis",
+            "gloss": "faith",
+            "significance": "πίστις in James refers specifically to bare intellectual assent — the kind of 'faith' that the demons also have: 'You believe that God is one; you do well — even the demons believe, and shudder!' (2:19). This is not Paul's πίστις (which is trusting, life-reshaping reliance on Christ and his gospel) but mere doctrinal acknowledgment without transforming effect. James's target is not genuine Pauline faith but a corrupted form of it — people who have reduced faith to propositional agreement and then claim it saves them regardless of how they live. Understanding this distinction dissolves the apparent James-Paul contradiction: they use the same word for different referents, and each is attacking a different error."
+        },
+        {
+            "code": "G2041",
+            "lemma": "ἔργον",
+            "translit": "érgon",
+            "gloss": "work",
+            "significance": "ἔργον ('work, deed, act') in James refers to concrete acts of mercy — visiting widows and orphans (1:27), giving food and clothing to the poor (2:15-16), welcoming the stranger. These are not 'works of the Law' in Paul's sense (Torah-observance as ethnic covenant identity markers) but the natural outworkings of a living faith. 'Faith without works is dead' (2:17, 26) means: faith that produces no acts of mercy is not genuine faith but a corpse — the word and outward form are there but the life is absent. The biological metaphor ('dead') is deliberate: just as a corpse looks like a person but is not, faith-without-deeds looks like faith but is not the real thing."
+        },
+        {
+            "code": "G1344",
+            "lemma": "δικαιόω",
+            "translit": "dikaióō",
+            "gloss": "justify",
+            "significance": "δικαιόω ('to declare righteous, justify, vindicate') is the word at the center of the James-Paul tension. James 2:24 says 'a person is justified by works and not by faith alone'; Romans 3:28 says 'a person is justified by faith apart from works of the law.' Both cite Abraham (James 2:21; Romans 4:3). The apparent contradiction dissolves when the different contextual meanings are recognized: Paul uses δικαιόω for the initial forensic declaration at the moment of justification; James uses it for the public vindication of a life that demonstrates genuine faith (the same Greek word but different temporal moments and different conversation partners). Abraham in Romans 4 is justified before circumcision; in James 2:21, Abraham's justification is demonstrated/vindicated by the binding of Isaac decades later."
+        },
+        {
+            "code": "G1100",
+            "lemma": "γλῶσσα",
+            "translit": "glōssa",
+            "gloss": "tongue",
+            "significance": "γλῶσσα ('tongue, language') is the subject of chapter 3's most vivid passage — the longest concentrated treatment of speech ethics in the NT. The tongue is a 'small member' that 'boasts of great things' (3:5). Three sustained metaphors unfold: the ship's rudder (a small thing that steers a great vessel), the spark that starts a forest fire (a small thing with catastrophic consequences), and the untameable animal (horses and wild beasts can be tamed by humans, but no human can tame the tongue). The tongue's fundamental contradiction is its double use: 'with it we bless our Lord and Father, and with it we curse people who are made in the likeness of God' (3:9). The fresh water / salt water image (3:11) names this contradiction: the same spring cannot produce both."
+        },
+        {
+            "code": "G4678",
+            "lemma": "σοφία",
+            "translit": "sophía",
+            "gloss": "wisdom",
+            "significance": "σοφία ('wisdom') in James is the letter's governing virtue — the quality God gives generously to those who ask in faith (1:5). Chapter 3 develops the two wisdoms in sustained antithesis. The wisdom from above (3:17) is 'first pure, then peaceable, gentle, open to reason, full of mercy and good fruits, impartial and sincere.' The earthly wisdom (3:15) is 'demonic' (δαιμονιώδης — a NT hapax) and produces jealousy and selfish ambition. The contrast echoes the OT wisdom tradition's two-ways structure (Proverbs 1-9) and reaches back to the Sermon on the Mount's binary choices. James's wisdom is practical and relational rather than speculative: it shows itself in 'the meekness of wisdom' (3:13 — πρᾳΰτης σοφίας) through good conduct."
+        },
+        {
+            "code": "G5046",
+            "lemma": "τέλειος",
+            "translit": "téleios",
+            "gloss": "perfect",
+            "significance": "τέλειος ('complete, brought to its goal, mature, perfect') and its cognates appear 5 times in 5 chapters — unusually dense for a short letter. In 1:2-4, trials produce ὑπομονή (endurance), which produces τελειότης (completeness): the person who endures is 'perfect (τέλειοι) and complete, lacking in nothing.' In 1:17, 'every perfect (τέλειον) gift is from above.' In 1:25, the law of liberty is the 'perfect law.' In 3:2, controlling the tongue would make someone a 'perfect man.' The word does not mean morally sinless (no human achieves that in James) but complete, mature, integrated — the opposite of the δίψυχος (double-minded) person who is divided. τέλειος describes the person whose inner commitments and outer actions have come into alignment."
+        },
+        {
+            "code": "G3551",
+            "lemma": "νόμος",
+            "translit": "nómos",
+            "gloss": "law",
+            "significance": "νόμος ('law') in James does not primarily mean the Mosaic Law as a system of covenant obligation (as in Paul's Galatians) but the teaching of Jesus distilled from the OT: 'the royal law' (νόμον βασιλικόν, 2:8) is 'love your neighbor as yourself' (Leviticus 19:18); 'the perfect law, the law of liberty' (1:25; 2:12) is what the wise person lives by. The phrase 'law of liberty' is paradoxical: law usually constrains, but James envisions a law that liberates because it describes the life humans were made for. The background is likely Jesus' fulfillment of the Law (Matthew 5-7), with James presenting the law of love as the summation of kingdom ethics. Those who show partiality to the rich violate the royal law (2:9)."
+        },
+        {
+            "code": "G1374",
+            "lemma": "δίψυχος",
+            "translit": "dípsychos",
+            "gloss": "double-minded",
+            "significance": "δίψυχος ('two-souled, double-minded') is a compound that appears to have been coined in early Christian literature — its first known occurrences are James 1:8 and 4:8, with subsequent appearances in the Didache and Shepherd of Hermas. The word joins δύο (two) and ψυχή (soul) to describe a person pulled in two directions at once. In 1:6-8, the δίψυχος asks God for wisdom but doubts — 'like a wave of the sea that is driven and tossed by the wind.' In 4:8, the call is 'draw near to God... purify your hearts, you double-minded.' The double-mindedness James has in mind is not intellectual uncertainty about God's existence but the divided will that simultaneously wants the world's approval and God's gifts — the person James 4:4 calls a 'friend of the world' and an 'enemy of God.'"
+        },
+        {
+            "code": "G4145",
+            "lemma": "πλούσιος",
+            "translit": "ploúsios",
+            "gloss": "rich",
+            "significance": "πλούσιος ('wealthy, abounding in resources') and its antonym πτωχός ('poor, destitute') run through the letter as a sustained concern. The rich are warned that their wealth is like a withering flower (1:10-11) and that it will rust and rot as a witness against them (5:1-3). In 2:1-7, the rich man is shown to the best seat in the assembly while the poor man is told to sit on the floor — James calls this 'making distinctions among yourselves' (2:4) and 'evil judges.' The rich man has typically dragged the poor into court and blasphemed the name of Christ (2:6-7). James does not condemn wealth per se (Abraham was wealthy) but the exploitation of the poor by the rich and the church's complicity in honoring wealth over the poor."
+        },
+        {
+            "code": "G5281",
+            "lemma": "ὑπομονή",
+            "translit": "hypomonḗ",
+            "gloss": "endurance",
+            "significance": "ὑπομονή ('steadfast endurance under pressure') frames the letter's opening argument (1:3-4) and its closing illustration (5:11): 'You have heard of the steadfastness (ὑπομονήν) of Job.' In 1:3-4, the testing of faith produces ὑπομονή, and ὑπομονή produces completeness — the logic makes endurance not an unpleasant necessity but a productive formation process. In 5:7-11, the farmer who waits for rain and the prophets who suffered provide the models; Job's story is the seal: 'you have seen the purpose of the Lord, how the Lord is compassionate and merciful' (5:11). The ending of Job — not in suffering but in restoration — is James's evidence that endurance is oriented toward an outcome, not simply a virtue to be suffered through."
+        },
+        {
+            "code": "G4236",
+            "lemma": "πρᾳότης",
+            "translit": "praiótēs",
+            "gloss": "meekness",
+            "significance": "πρᾳότης ('meekness, gentleness, humility') in 1:21 accompanies the command to 'receive with meekness the implanted word' — the receptive posture toward Scripture. In 3:13, the wise person shows their wisdom 'in the meekness of wisdom' (ἐν πρᾳΰτητι σοφίας), demonstrating that James's wisdom is not intellectual pride but humble practical goodness. The word in Greek philosophy could mean 'the appropriate degree of anger' — not passivity or weakness but measured, controlled response. In James it functions as the antithesis of the arrogant boasting condemned in 3:14-16 and 4:13-16. True wisdom is inseparable from meekness because wisdom requires the knowledge of one's own limits and the teachability that only humility produces."
+        },
+        {
+            "code": "G218",
+            "lemma": "ἀλείφω",
+            "translit": "aleíphō",
+            "gloss": "anoint",
+            "significance": "ἀλείφω ('to oil, anoint with perfume or oil') appears at 5:14 in the letter's most liturgically significant passage: 'Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing (ἀλείψαντες) him with oil in the name of the Lord.' The word is distinct from χρίω ('to anoint in a sacral/royal sense' — used for Christ as Messiah); ἀλείφω refers to the physical application of oil. In the ancient world, oil was used medicinally (cf. Luke 10:34; Mark 6:13 where the disciples healed by anointing). James's instruction pairs the anointing with prayer of faith — the oil is not itself the healing agent but a physical embodiment of the spiritual petition. This passage became the NT basis for the Catholic sacrament of anointing of the sick."
+        }
+    ],
+
+    "language_notes": (
+        "<p>James writes some of the most polished Greek in the NT. The letter uses more classical rhetorical devices than Paul or Luke: <em>asyndeton</em> (rapid-fire clauses without connecting particles), <em>diatribe</em> (rhetorical questions with imaginary interlocutors: &lsquo;But someone will say, &ldquo;You have faith and I have works&rdquo;&rsquo; 2:18), <em>antithesis</em> (wisdom from above vs. earthly wisdom, 3:15-17), and extended <em>similitudo</em> (the developed comparison: tongue like a rudder, tongue like a spark, 3:3-6). The vocabulary includes rare classical words unavailable in the Septuagint, suggesting an educated author writing for audiences familiar with Greek literary convention. This makes James's Greek closer to Plutarch or Epictetus than to most of the NT.</p>"
+        "<p>The word <strong>δίψυχος</strong> ('double-minded,' 1:8; 4:8) appears to have been coined by early Christian writers — its earliest occurrences are here and in subsequent Christian literature (Didache, Shepherd of Hermas), where it becomes a characteristic term for spiritual instability. The compound (δύο + ψυχή, 'two souls') vividly names the divided will: a person whose soul is pulled in two directions simultaneously. The word's coinages like this show James operating at the intersection of Greek vocabulary (ψυχή as 'soul') and Jewish ethical binary (wholehearted vs. divided devotion to God, cf. the שְׁמַע Israel's call to love with the <em>whole</em> heart). James may have coined δίψυχος as the Greek equivalent of the Hebrew concept of the divided heart.</p>"
+        "<p>The tongue passage in chapter 3 displays the most concentrated <strong>extended metaphor</strong> sequence in the NT. Three comparisons unfold in 3:3-6: (1) the ship's <em>rudder</em> — a small member that directs a large vessel against strong winds; (2) the forest <em>fire</em> sparked by a small flame — vast destruction from a tiny source; (3) the unclean <em>animal</em> (3:7-8) — humanity has tamed every beast of land, sea, and air, but no human can tame the tongue. Each metaphor develops a different aspect of the tongue's nature: its disproportionate power, its destructive potential, and its fundamental resistance to self-control. The accumulation is deliberate — James is not satisfied with one image but multiplies them to capture what a single metaphor cannot.</p>"
+        "<p>The <strong>two-wisdoms antithesis</strong> in 3:15-17 is structurally parallel and reads almost as a catechism. Earthly wisdom: <em>ψυχική, δαιμονιώδης</em> (worldly, demonic — the latter a NT hapax, appearing only here); its fruit: jealousy and selfish ambition, disorder and every vile practice. Heavenly wisdom: <em>ἄνωθεν</em> (from above), characterized by purity, peaceableness, gentleness, openness to reason, mercy, good fruits, impartiality, sincerity. The parallelism is the argument: wisdom is not a neutral tool; it comes from above or below, and its source determines its character and its fruit. This binary recalls Proverbs 1-9 (where Wisdom and Folly are rival women calling to the young man) and the Two Ways tradition in Jewish ethics.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> James had a difficult reception in the early church. Origen used it but acknowledged its disputed status; Eusebius listed it among the 'disputed' writings (ἀντιλεγόμενα). The Western church was slow to accept it, partly due to uncertainty about whether the author was the Lord's brother and partly due to the apparent tension with Pauline theology. By the late fourth century Athanasius included it in his canonical list (367 CE), and the Council of Carthage (397 CE) settled its acceptance. Despite canonical uncertainty, the letter was widely used ethically — the tongue passage, the wisdom chapter, and the prayer for healing all had practical impact on Christian communities regardless of formal canonical status.</p>"
+        "<p><strong>Reformation:</strong> Luther famously called James 'an epistle of straw' because it 'sets works over against faith' and 'does not teach Christ.' He placed it with Hebrews, Jude, and Revelation in the appendix of his 1522 New Testament (not the main canon). This was not a formal rejection of James's authority but a theological ranking — Luther read 2:24 as a direct contradiction of Romans 3:28. Later Lutherans softened his position; Calvin and Zwingli accepted James's canonical authority without difficulty. The Reformers' debate about James forced a more precise reading of the letter, eventually producing the exegetical consensus that James and Paul use 'faith' and 'works' in complementary rather than contradictory senses.</p>"
+        "<p><strong>Modern interpretation:</strong> Contemporary scholarship is largely consensual that the James-Paul tension is apparent rather than real. Paul's target is 'works of the Law' as covenant identity markers (circumcision, food laws) that some were adding to faith as a basis for justification; James's target is dead orthodoxy — faith that is only intellectual assent without moral transformation. Luke Timothy Johnson and others have demonstrated the letter's deep connections to the Jesus tradition (the Sermon on the Mount underlies the entire letter) and to Jewish wisdom literature (especially Sirach). The prayer for healing (5:14-16) continues to generate debate about anointing practice, miraculous healing, and whether the 'sins' forgiven are related to physical illness.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>James is the Proverbs of the NT — it does not build a linear argument but accumulates thematic clusters, each approached from a different angle. Do not try to read it as a theological essay. Instead, read it as a collection of sermons organized around a single concern: the gap between what people profess and how they live. The letter's organizing question is 1:22: 'Do not merely listen to the word, and so deceive yourselves. Do what it says.' Every section is an answer to the question: what does doing the word look like in this area of life?</p>"
+        "<p>The <strong>faith and works passage (2:14-26)</strong> is the most misread in the letter. Before engaging it, fix in mind what James means by 'faith' here: he means the faith the demons have (2:19) — intellectual assent to monotheism without transforming trust. That is the faith he says is dead. He is not attacking Paul's doctrine; he is attacking a distortion of it that was already appearing in the church (people who said 'I believe' as a magical formula and then lived unchanged). Abraham's example (2:21-23) shows that the 'justification by works' James has in mind is the public vindication of a life of faith, not the initial verdict at conversion.</p>"
+        "<p>Three sections repay repeated reading. <strong>Chapter 3:1-12</strong> (the tongue) is the most practically demanding: James argues that the inability to control speech is diagnostic of the absence of genuine wisdom. <strong>Chapter 3:13-4:10</strong> (the two wisdoms and the call to humility) contains the most sustained ethical argument in the letter — the source of conflicts, the call to 'draw near to God,' and the contrast between worldly and heavenly wisdom. <strong>Chapter 5:13-18</strong> (prayer and anointing) is the most theologically unusual: it connects prayer for physical healing with the forgiveness of sins and invokes Elijah as the model for bold intercessory prayer. Each section assumes the previous ones — the person who cannot tame the tongue is not yet the person of wisdom who can pray in faith.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('james')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('james', merged)
+
+main()

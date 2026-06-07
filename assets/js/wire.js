@@ -25,12 +25,17 @@ import { getNotes, getNote, saveNote, getBookmarks, isBookmarked, toggleBookmark
 import { scheduleHide, cancelShow, hideTooltip } from './tooltip.js';
 
 // ── wireRefEl ─────────────────────────────────────────────────────────────
-// Attaches all interactive behaviour to a single ref element:
-//   hover/focus  → schedules the verse preview tooltip (300 ms delay)
-//   blur/leave   → schedules tooltip hide (200 ms delay)
-//   click/Enter  → cancels any pending tooltip and opens the full verse modal
-// If the element is an <a>, its href is removed so it behaves as a button
-// (prevents navigating away) while remaining keyboard accessible via tabindex.
+// INTENT: Attach tooltip-on-hover + modal-on-click to one [data-ref] element.
+//   <a> elements have their href stripped and get role="button" so they don't
+//   navigate while remaining keyboard accessible. hover/focus → preview tooltip
+//   via callScheduleShow; click/Enter → full verse modal via callOpenModal.
+// CHANGE? callScheduleShow and callOpenModal are injected by app.js via
+//   setTooltipFn / setModalFn (bottom of this file). If either registration
+//   function is removed or renamed in app.js, all ref hover/click interactions
+//   will silently do nothing. If tooltip delay constants change in tooltip.js,
+//   the hover feel changes without any change here.
+// VERIFY: Open any topic page → hover a ref link → preview tooltip appears after
+//   ~300ms; click → verse modal opens. Keyboard: Tab to ref, press Enter → modal.
 export function wireRefEl(el, parsed) {
   if (el.tagName === 'A') {
     el.removeAttribute('href');
@@ -56,10 +61,15 @@ export function wireRefEl(el, parsed) {
 }
 
 // ── wireRefLinks ──────────────────────────────────────────────────────────
-// Finds all [data-ref] elements under root (defaults to document) and wires
-// each one that hasn't already been wired (guarded by el._refWired flag).
-// Called by app.js after initial page load, and by search.js after rendering
-// results so ref links in search output are also interactive.
+// INTENT: Wire all unwired [data-ref] elements under root (defaults to document).
+//   Uses el._refWired flag to make the call idempotent — safe to call again after
+//   dynamic content injection (e.g. search results, modal verse lists).
+// CHANGE? Called by app.js on initial page load AND by search.js after rendering
+//   results. If search.js stops passing its results container as root, ref links
+//   inside search results will lose interactivity. If the [data-ref] attribute
+//   is renamed, update this querySelectorAll and the wireRefEl/autoTagRefs callers.
+// VERIFY: Open /search/ → type a query → hover a ref link in results → tooltip shows.
+//   Reload page → hovering original-page refs still works (not double-wired).
 export function wireRefLinks(root) {
   var container = root || document;
   var els = container.querySelectorAll('[data-ref]');
@@ -433,6 +443,14 @@ export function autoTagBareChapters(bookId, bookName) {
 // with live verse text. Used on topic pages and the home page to embed verses
 // inline in content without hardcoding translation text.
 // The element must have a valid data-ref attribute (e.g. data-ref="John 1:1").
+// INTENT: Populate all .bsw-verse[data-ref] elements on page load with live verse
+//   text from the user's current Bible version. Called once by app.js after
+//   core data is ready; updateInlineVerses handles subsequent version changes.
+// CHANGE? getVersion() reads bsw_version from localStorage (storage.js). If the
+//   storage key changes, inline verses will silently default to the fallback version.
+//   Also called implicitly via onVersionChange → updateInlineVerses (app.js).
+// VERIFY: Load a topic page with `<span class="bsw-verse" data-ref="John 3:16">`.
+//   The verse text should populate in the user's current version within ~1 second.
 export function wireInlineVerses() {
   var els = document.querySelectorAll('.bsw-verse[data-ref]');
   if (!els.length) return;
@@ -529,6 +547,16 @@ export function applyModalHighlights(bodyEl, parsed) {
 //   in storage.js changes its ref key format (currently "Book Ch:V" string), or
 //   if the class name `reader-verse__num--bookmarked` is renamed in reader.css,
 //   both call sites silently show no bookmark state with no JS error.
+// INTENT: Scan all .reader-verse elements in container and toggle the
+//   .reader-verse__num--bookmarked CSS class to match the current bookmark set
+//   (read from localStorage via isBookmarked). Called by reader.js after each
+//   chapter render so the star indicator stays in sync without a full re-render.
+// CHANGE? If the bookmark storage key (bsw_bookmarks in storage.js) changes, or
+//   if isBookmarked() signature changes, update the call here. If the verse
+//   data attributes (data-book, data-ch, data-v) are renamed in reader.js
+//   templates, update the querySelectorAll selector and attribute reads.
+// VERIFY: In the reader, bookmark a verse → verse number shows a star glyph.
+//   Navigate to another chapter and back → star persists. Unbookmark → star disappears.
 export function applyBookmarks(container) {
   if (!container) return;
   container.querySelectorAll('.reader-verse[data-book][data-ch][data-v]').forEach(function (el) {

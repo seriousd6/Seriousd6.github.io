@@ -6,6 +6,15 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Deep-dive word study: all occurrences, translation breakdown, and usage statistics for a Strong's concordance entry." />
   <title>Word Study — Bible Study</title>
+  <!-- Redirect: word study has moved into the Original Language Study workshop -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(location.search);
+      var code = params.get('s') || params.get('code');
+      var dest = '../translation/workshop/' + (code ? '?s=' + encodeURIComponent(code) : '');
+      location.replace(dest);
+    })();
+  </script>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <link rel="stylesheet" href="../assets/css/word.css" />

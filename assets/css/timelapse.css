@@ -351,10 +351,20 @@
   border-radius: 6px;
   padding: .4rem .55rem;
   box-shadow: 0 2px 10px rgba(0,0,0,.15);
-  font-size: .78rem;
+  font-size: .74rem;
   color: #222;
-  line-height: 1.45;
+  line-height: 1.4;
   pointer-events: none;
+}
+
+/* Two-column layout when many entries would overflow the viewport height.
+   column-count:2 auto-balances entries; column-rule draws a subtle divider.
+   Width doubles so each column is the same ~200px as the single-column form. */
+.tl-place-tip--wide {
+  width: 418px;
+  column-count: 2;
+  column-gap: .7rem;
+  column-rule: 1px solid #e8e8e8;
 }
 
 .tl-place-tip-sep {
@@ -372,6 +382,29 @@
   color: #555;
   font-size: .73rem;
   line-height: 1.4;
+}
+
+/* Figure entries in the stacking tooltip get a colored left border so you can
+   distinguish a person (figure) from a place at a glance without reading the text. */
+.tl-fig-tt-label {
+  border-left: 3px solid #e63;   /* default; overridden by inline style="border-left-color:…" */
+  padding-left: .4rem;
+  font-style: italic;
+}
+
+/* ── Route entries inside the shared stacking tooltip ─────────────────────── */
+/* .tl-route-tip is gone — route info is appended to _placeTipEl instead */
+.tl-route-tt-label {
+  font-weight: 700;
+  margin-bottom: .25rem;
+  border-left: 3px solid #999;  /* overridden by inline style="border-left-color:…" */
+  padding-left: .4rem;
+}
+
+.tl-route-tt-desc {
+  color: #555;
+  font-size: .72rem;
+  line-height: 1.45;
 }
 
 /* ── Leaflet region labels ────────────────────────────────────────────────── */
@@ -657,7 +690,12 @@
   .tl-map-wrapper { flex: none; height: 320px; }
   .tl-map-container { height: 100%; }
   .tl-info-panel { width: 100%; }
-  .tl-events-toggle { display: flex; align-items: center; }
+  .tl-events-toggle { display: flex; align-items: center; min-height: 2.75rem; }
+  /* CSS-34: bring all playback/search controls up to 44px tap surface on mobile */
+  .tl-btn-play,
+  .tl-btn-step,
+  .tl-btn-continue { min-height: 2.75rem; min-width: 2.75rem; }
+  .tl-event-search  { min-height: 2.75rem; }
 }
 
 /* ── Dark mode ─────────────────────────────────────────────────────────────── */
@@ -669,14 +707,17 @@
    dark overrides below as well.
    VERIFY: In dark mode at /maps/timelapse/, hover a tribe dot — tooltip should have a
    dark background, legible warm-white text, and a subtle border, not a white box. */
+[data-theme="dark"] .tl-place-tip--wide { column-rule-color: var(--color-border, #3a2e1e); }
 [data-theme="dark"] .tl-tribe-tip,
 [data-theme="dark"] .tl-place-tip {
   background: var(--color-surface, #231a0d);
   border-color: var(--color-border, #3a2e1e);
   color: var(--color-text, #e8dfc8);
 }
+[data-theme="dark"] .tl-route-tt-desc { color: var(--color-muted, #a09070); }
 [data-theme="dark"] .tl-tribe-tt-detail { color: var(--color-muted, #a09070); }
 [data-theme="dark"] .tl-place-tip-sep   { border-top-color: var(--color-border, #3a2e1e); }
+[data-theme="dark"] .tl-place-tt-sig    { color: var(--color-muted, #a09070); }
 /* INTENT: Play, continue, and events-toggle buttons use background:var(--color-primary)
    which is golden (#e8c87a) in dark mode — white text on golden fails (~1.3:1).
    --color-on-primary (#1a1208) is designed for exactly this pairing (10:1 on golden). */
@@ -686,14 +727,17 @@
 [data-theme="dark"] .tl-map-link:hover { color: var(--color-on-primary); }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tl-place-tip--wide { column-rule-color: var(--color-border, #3a2e1e); }
   :root:not([data-theme="light"]) .tl-tribe-tip,
   :root:not([data-theme="light"]) .tl-place-tip {
     background: var(--color-surface, #231a0d);
     border-color: var(--color-border, #3a2e1e);
     color: var(--color-text, #e8dfc8);
   }
+  :root:not([data-theme="light"]) .tl-route-tt-desc { color: var(--color-muted, #a09070); }
   :root:not([data-theme="light"]) .tl-tribe-tt-detail { color: var(--color-muted, #a09070); }
   :root:not([data-theme="light"]) .tl-place-tip-sep   { border-top-color: var(--color-border, #3a2e1e); }
+  :root:not([data-theme="light"]) .tl-place-tt-sig    { color: var(--color-muted, #a09070); }
   :root:not([data-theme="light"]) .tl-btn-play,
   :root:not([data-theme="light"]) .tl-btn-continue,
   :root:not([data-theme="light"]) .tl-events-toggle { color: var(--color-on-primary); }

@@ -1,0 +1,138 @@
+"""
+Book Study Data — 2 John
+book_id: 2john
+lang: greek
+
+Run: python3 scripts/build-book-study-2john.py
+
+Notes:
+- Author group: John (peak in author-freq-greek.json)
+- 8 vocab entries (13 verses — short letter per BS_AGENT_GUIDE.md allowance)
+- ἀλήθεια appears 5× in 13 verses — densest concentration of 'truth' in any NT letter
+- The hospitality prohibition (v. 10-11) must be read in its ancient context:
+  receiving a traveling teacher = sponsoring their ministry
+- The prohibition on χαίρειν (greeting) is significant: χαίρε was the standard Greek
+  salutation AND the word for 'rejoice' — not giving it means refusing to share joy
+  with those who undermine the source of joy
+- προάγω ('go ahead/transgress') in v. 9 inverts the false teachers' own self-claim:
+  they thought they were advancing; John says they have gone ahead of and beyond Christ
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "2john",
+
+    "key_vocabulary": [
+        {
+            "code": "G225",
+            "lemma": "ἀλήθεια",
+            "translit": "alḗtheia",
+            "gloss": "truth",
+            "significance": "ἀλήθεια ('truth, reality, what corresponds to fact') appears 5 times in 13 verses — the highest concentration of the word in any NT letter. It opens the greeting ('whom I love in truth,' v. 1; 'the truth that abides in us and will be with us forever,' v. 2), motivates the elder's joy ('I rejoiced greatly to find some of your children walking in the truth,' v. 4), and provides the standard against which the deceivers are measured. The letter refuses to treat truth as abstract or doctrinal only: truth is walked in (v. 4), it accompanies love (v. 3), and it abides as a permanent presence in the community (v. 2). To walk in truth is not merely to hold correct beliefs but to live in correspondence with the reality of who God is and who Christ is."
+        },
+        {
+            "code": "G26",
+            "lemma": "ἀγάπη",
+            "translit": "agápē",
+            "gloss": "love",
+            "significance": "ἀγάπη ('love') appears alongside ἀλήθεια (truth) throughout the letter as its inseparable companion. The greeting pairs them: 'grace, mercy, and peace from God the Father and from Jesus Christ the Father's Son, in truth and love' (v. 3). The elder's command is anchored in divine origin: 'this is the commandment, just as you have heard from the beginning' (v. 6) — love is not a new invention but the original command. Significantly, the letter defines love through obedience, not feeling: 'this is love, that we walk according to his commandments' (v. 6). The connection to truth is not accidental: a love that welcomes false teachers (v. 10-11) is not genuine love for either the community or the truth. Love without truth is not love; truth without love is not Christian."
+        },
+        {
+            "code": "G3306",
+            "lemma": "μένω",
+            "translit": "ménō",
+            "gloss": "abide",
+            "significance": "μένω ('to remain, stay, abide') appears in v. 2 for the truth that 'abides in us and will be with us forever' and again in v. 9 for the decisive test of a teacher: 'everyone who goes on ahead and does not abide (μένων) in the teaching of Christ does not have God; whoever abides in the teaching has both the Father and the Son.' The word is characteristic of the Johannine corpus (see 1 John), and here it defines orthodoxy in spatial terms: abiding in the teaching of Christ means remaining where Christ has placed you — within the bounds of apostolic testimony about his person. To move beyond those bounds ('goes ahead') is to leave, not advance. The false teachers had departed; abiding is faithfulness."
+        },
+        {
+            "code": "G500",
+            "lemma": "ἀντίχριστος",
+            "translit": "antíchristos",
+            "gloss": "antichrist",
+            "significance": "ἀντίχριστος ('opponent of Christ') appears in v. 7 in the letter's sharpest identification of the deceivers: 'such a one is the deceiver and the antichrist.' The word — appearing to be a Johannine coinage — links the traveling false teachers to a cosmic adversarial category that 1 John had introduced (2:18, 22; 4:3). The connection is significant: what looks like a local dispute about hospitality to traveling teachers is placed in the largest possible theological frame — these teachers embody the spirit that opposes Christ himself. The purpose of the identification is not dramatic rhetoric but practical: the community must understand the stakes of who they welcome and sponsor. An antichrist in the house is not simply an inconvenient houseguest."
+        },
+        {
+            "code": "G4108",
+            "lemma": "πλάνος",
+            "translit": "plános",
+            "gloss": "deceiver",
+            "significance": "πλάνος ('wandering, deceptive; as noun, a wanderer or deceiver') appears in v. 7 for the teachers who deny that Jesus Christ has come in the flesh: 'many deceivers (πλάνοι) have gone out into the world.' The word's root meaning is 'roving' or 'wandering' — the πλάνος is someone who roams without fixed home or fixed truth, leading others off their proper course. The same root gives us the verb πλανάω ('to lead astray, deceive') and the English word 'planet' (the wandering stars of antiquity). The application to the false teachers is pointed: they are wanderers by nature — they have left the apostolic community (cf. 1 John 2:19 'they went out from us'), they travel without fixed home, and their teaching causes others to wander from the truth."
+        },
+        {
+            "code": "G1322",
+            "lemma": "διδαχή",
+            "translit": "didachḗ",
+            "gloss": "teaching",
+            "significance": "διδαχή ('teaching, instruction, doctrine') appears twice in v. 9-10 as the criterion for Christian hospitality: 'everyone who does not abide in the <em>teaching of Christ</em>... if anyone comes to you and does not bring this teaching, do not receive him into your house.' The phrase 'teaching of Christ' (ἡ διδαχὴ τοῦ Χριστοῦ) is grammatically ambiguous — it could be the teaching that comes <em>from</em> Christ (subjective genitive) or the teaching <em>about</em> Christ (objective genitive). Both are likely intended: the teaching about Christ's incarnation is also the teaching that comes from Christ, since the Incarnation is both the content and the source of apostolic instruction. This διδαχή is the community's measuring rod against which all visiting teachers must be assessed before they receive community support."
+        },
+        {
+            "code": "G4254",
+            "lemma": "προάγω",
+            "translit": "proágō",
+            "gloss": "go ahead",
+            "significance": "προάγω ('to lead forward, go before, go ahead') appears at v. 9 in one of the NT's most rhetorically pointed uses: 'everyone who goes on ahead (ὁ προάγων) and does not abide in the teaching of Christ does not have God.' The verb inverts the false teachers' own self-presentation: they apparently claimed to be spiritually advanced, progressive, moving forward beyond the basic apostolic teaching about Christ's incarnation. John accepts their vocabulary and turns it against them — yes, they have gone ahead, but going ahead of the teaching of Christ means leaving Christ behind, and leaving Christ behind means losing the Father as well. Progress that abandons the incarnate Christ is regression. The word gives the verse its irony: the most advanced position is to abide, not to move on."
+        },
+        {
+            "code": "G5463",
+            "lemma": "χαίρω",
+            "translit": "chaírō",
+            "gloss": "rejoice",
+            "significance": "χαίρω ('to rejoice, be glad; to greet, say farewell') underlies the letter's most striking prohibition: 'do not receive him into your house or give him any greeting (χαίρειν, v. 10); for whoever greets (χαίρων, v. 11) him takes part in his wicked works.' The infinitive χαίρειν was the standard Greek greeting — equivalent to 'hello' or 'goodbye' — but it also means 'rejoice.' The same word appears in v. 4: 'I rejoiced greatly (ἐχάρην λίαν) to find some of your children walking in the truth.' The prohibition on χαίρειν thus carries a double edge: the community is not to exchange even conventional pleasantries with those who undermine the source of genuine joy. To greet the deceiver is to share the joy that belongs to Christ's community with someone actively working against it. The word makes the prohibition about more than social etiquette."
+        }
+    ],
+
+    "language_notes": (
+        "<p>2 John is the NT&rsquo;s most compressed demonstration of its governing dual themes: <strong>ἀλήθεια</strong> (truth) and <strong>ἀγάπη</strong> (love). The word truth appears 5 times in 13 verses — a density no NT letter matches. The opening three verses weave the two words together with the preposition <em>ἐν</em> ('in'): we love each other in truth (v. 1), grace and peace are from God in truth and love (v. 3). The preposition is significant: truth and love are not merely qualities the community has but the environment it inhabits — the element, like water for a fish, within which all relationships exist. This prevents both sentimentalism (love without truth, which welcomes everyone regardless of what they teach) and cold orthodoxy (truth without love, which is correct but harsh).</p>"
+        "<p>The letter&rsquo;s key exegetical crux is in v. 9: <strong>ὁ προάγων</strong> — 'the one who goes ahead.' The participle of προάγω can mean 'to lead forward' or 'to go before,' but in context it functions as &lsquo;to go too far, to transgress.&rsquo; The elder is targeting the false teachers&rsquo; own self-description as spiritually progressive, advanced beyond the rudimentary teaching of the apostles. John&rsquo;s rhetorical strategy is to accept their vocabulary and reverse its valence: going ahead of the teaching of Christ is not progress toward God but departure from God. The paradox is intentional — true advance is expressed by abiding (μένω) in the teaching, not by moving beyond it. The one who claims to be most advanced has actually gone furthest from God.</p>"
+        "<p>The prohibition against <strong>χαίρειν</strong> (v. 10-11) exploits the double meaning of the word. χαίρειν was the standard Greek salutation — the greeting you spoke when meeting or parting — equivalent to Latin <em>ave</em> or <em>vale</em>. But the word literally means &lsquo;to rejoice,&rsquo; and the elder has just used it in v. 4: &lsquo;I rejoiced (ἐχάρην) greatly.&rsquo; The prohibition thus carries an implicit argument: the greeting that signals shared joy should not be extended to those who undermine the source of Christian joy. The letter&rsquo;s refusal to grant even the conventional <em>hello</em> is not social hostility but a principled refusal to express communal solidarity with those working against the community&rsquo;s identity.</p>"
+        "<p>The title <strong>ὁ πρεσβύτερος</strong> ('the elder') by which the author identifies himself (v. 1; cf. 3 John 1) reflects a form of authority that is neither purely charismatic (like a prophet) nor purely institutional (like an apostle explicitly named). The elder speaks with authority recognized by the community but grounded in personal relationship and long pastoral care rather than formal office. The same self-designation in 3 John shows it was a consistent self-identification of the author, and most scholars identify him with the apostle John, though the title may reflect his role in the Johannine community at Ephesus rather than (or in addition to) his apostolic commission.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic and canonical:</strong> 2 John had a disputed early reception — some churches did not initially know of it, and Eusebius placed it among the antilegomena (disputed writings). Its brevity (the shortest NT book) led some to suspect it was not genuinely apostolic. Jerome noted that 2-3 John circulated under the name &lsquo;John the Elder&rsquo; and were disputed precisely on the question of authorship — whether this elder was the apostle John or a different John. The letters were eventually received as canonical; Jerome himself accepted them. Their practical and pastoral specificity — unlike the universal address of 1 John — actually supports early and genuine origin: later pseudonymous letters tend toward grand theological scope, not letters about hospitality disputes.</p>"
+        "<p><strong>The &lsquo;elect lady&rsquo; question:</strong> Interpreters have debated whether the address 'the elect lady and her children' (v. 1) refers to a literal woman or is a metaphor for a local church. Three possibilities have been proposed: (1) a literal woman named Kyria or Electa or whose name is &lsquo;Lady&rsquo;; (2) an unnamed individual woman with her household; (3) a local church, with &lsquo;children&rsquo; as its members. The third interpretation is favored by most modern scholars because the closing &lsquo;the children of your elect sister greet you&rsquo; (v. 13) fits a parallel church better than a biological sister, and because the letter&rsquo;s concerns (communal hospitality, doctrinal testing) are institutional rather than personal. The metaphor of the church as a woman has OT precedent (Israel as God&rsquo;s bride; the heavenly Jerusalem).</p>"
+        "<p><strong>The hospitality prohibition:</strong> vv. 10-11 have generated controversy in modern discussion about Christian openness and tolerance. Two misreadings should be avoided. First, the prohibition is not about social contact with all unbelievers; it addresses specifically those who come claiming to be teachers bringing the gospel but corrupting it. Second, &lsquo;do not receive him into your house&rsquo; in the first-century context meant: do not provide the hospitality (lodging, meals, financial support) that enabled itinerant teachers to continue their ministry circuit. The community&rsquo;s shared resources were not to be weaponized for false doctrine. Most modern commentators (including those with an ecumenical orientation) have come to read this as a principled limit on institutional support rather than a call for social exclusion.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>Read 2 John in under five minutes — it is 13 verses — and then re-read it alongside 3 John. The two letters are companion pieces addressing the same problem of itinerant teachers from opposite directions: 2 John says &lsquo;do not receive the false teachers&rsquo;; 3 John says &lsquo;do receive the faithful ones.&rsquo; Together they define the principle: Christian hospitality is not unconditional but is exercised with discernment. What is commended in 3 John (Gaius&rsquo;s generosity to faithful teachers) is the positive version of what 2 John prohibits (sponsoring false ones). Neither letter is complete without the other.</p>"
+        "<p>The letter&rsquo;s central argument is in v. 9: going ahead of the teaching of Christ is not spiritual progress but departure from God. Hold this against the false teachers&rsquo; probable self-description: they claimed to be advanced, beyond the elementary Christology of the apostles, spiritually elevated above the &lsquo;crude&rsquo; notion that God became materially incarnate. John&rsquo;s reply is to name their progressive claim as transgression. The one marker of genuine spiritual advance in 2 John is abiding — staying within the teaching of Christ, not moving beyond it. This counter-intuitive posture — that orthodoxy is faithfulness to what was received rather than development beyond it — is the letter&rsquo;s permanent contribution to the theology of tradition.</p>"
+        "<p>Common misreadings: First, treating vv. 10-11 as a command for believers to be socially hostile to all non-Christians. The prohibition targets specific people: traveling teachers who claim Christian authority but deny the incarnation. Second, reading &lsquo;this is love, that we walk according to his commandments&rsquo; (v. 6) as an equation of love with rule-keeping. John&rsquo;s point is the opposite of legalism: love is the orientation that expresses itself through obedience, not the reward earned by it. The commandments describe the shape of love, not its precondition. Third, interpreting &lsquo;the elect lady&rsquo; as a reference to an individual woman and therefore reading the letter as purely personal correspondence. Its themes of communal discernment and hospitality policy are better understood as addressed to a congregation navigating an institutional problem.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('2john')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('2john', merged)
+
+main()

@@ -613,8 +613,8 @@ export function renderModalWordStudy(parsed, container) {
       html += '<div class="bsw-ws-row">';
       html += '<div class="bsw-ws-eng">' + escHtml(tok.text || '–') + '</div>';
       html += '<div class="bsw-ws-strongs"><a class="bsw-ws-strongs-link" href="' +
-        escHtml(WORD_URL + '?s=' + encodeURIComponent(tok.s)) + '" target="_blank">' +
-        escHtml(tok.s) + ' ↗</a></div>';
+        escHtml(WORD_URL + '?s=' + encodeURIComponent(tok.s)) + '">' +
+        escHtml(tok.s) + ' →</a></div>';
       if (entry) {
         html += '<div class="bsw-ws-lemma">' + escHtml(entry.lemma || '') + '</div>';
         html += '<div class="bsw-ws-translit">' + escHtml(entry.translit || '') + '</div>';

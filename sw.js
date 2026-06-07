@@ -22,7 +22,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v87';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v96';  // bump when HTML/CSS/JS/icon changes
 var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
 
 // App shell: files cached immediately on install
@@ -215,6 +215,48 @@ var SHELL_URLS = [
   './data/maps/places.json',
   './data/maps/timelapse.json',
   './data/wordcloud/frequencies.json',
+  // Translation Workshop (SW-A through SW-M) — added 2026-06-06
+  './translation/workshop/index.html',
+  './assets/css/workshop.css',
+  './assets/js/workshop.js',
+  // Grammar data (SW-B particles, morphSig; SW-C debates; SW-H cognates; SW-I semantic; SW-J author-freq)
+  './data/grammar/greek-particles.json',
+  './data/grammar/hebrew-particles.json',
+  './data/grammar/greek-morphology-significance.json',
+  './data/grammar/hebrew-morphology-significance.json',
+  './data/grammar/grammar-debates.json',
+  './data/grammar/cognate-families-greek.json',
+  './data/grammar/cognate-families-hebrew.json',
+  './data/grammar/cognate-index-greek.json',
+  './data/grammar/cognate-index-hebrew.json',
+  './data/grammar/author-freq-greek.json',
+  './data/grammar/author-freq-hebrew.json',
+  './data/grammar/semantic-fields-greek.json',
+  './data/grammar/semantic-fields-hebrew.json',
+  // Literary data (SW-D)
+  './data/literary/genre.json',
+  './data/literary/structures.json',
+  './data/literary/devices-glossary.json',
+  // Idiom data (SW-E)
+  './data/idioms.json',
+  './data/idioms-index.json',
+  // Cultural background data (SW-F)
+  './data/cultural/frameworks.json',
+  './data/cultural/book-context.json',
+  './data/cultural/symbols.json',
+  // Second Temple context (SW-L)
+  './data/second-temple/context.json',
+  // OT-in-NT quotations (SW-K)
+  './data/ot-in-nt/quotations.json',
+  // Synthesis data (SW-M) — per-book, lazy-loaded; cache the ones written so far
+  './data/synthesis/genesis.json',
+  './data/synthesis/matthew.json',
+  './data/synthesis/john.json',
+  './data/synthesis/romans.json',
+  './data/synthesis/galatians.json',
+  './data/synthesis/hebrews.json',
+  './data/synthesis/psalms.json',
+  './data/synthesis/isaiah.json',
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────

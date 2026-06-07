@@ -1,0 +1,323 @@
+[
+  {
+    "id": "john-prologue",
+    "label": "John 1:1–18 — Chiastic Prologue",
+    "bookId": "john",
+    "ch_start": 1, "v_start": 1, "ch_end": 1, "v_end": 18,
+    "structure_type": "chiasm",
+    "note": "The prologue is organized concentrically. The center (vv.12–13) — the right to become children of God — is the theological heart, not the incarnation (v.14) which is often treated as the climax by Western linear readers.",
+    "elements": [
+      { "id": "A",  "ref": "1:1–2",   "label": "The Word with God (pre-existence)" },
+      { "id": "B",  "ref": "1:3",     "label": "All things made through him" },
+      { "id": "C",  "ref": "1:4–5",   "label": "Life and light come into darkness" },
+      { "id": "D",  "ref": "1:6–8",   "label": "John the Baptist: witness to the light" },
+      { "id": "E",  "ref": "1:9–11",  "label": "The light came to his own; not received" },
+      { "id": "X",  "ref": "1:12–13", "label": "★ CENTER: Right to become children of God" },
+      { "id": "E'", "ref": "1:14",    "label": "The Word received — became flesh; we beheld his glory" },
+      { "id": "D'", "ref": "1:15",    "label": "John the Baptist: witness to the Word" },
+      { "id": "C'", "ref": "1:16",    "label": "Grace upon grace received" },
+      { "id": "B'", "ref": "1:17",    "label": "Law came through Moses; grace+truth through Christ" },
+      { "id": "A'", "ref": "1:18",    "label": "The only Son, in the Father's bosom, has made him known" }
+    ]
+  },
+  {
+    "id": "philemon-chiasm",
+    "label": "Philemon — Chiastic Letter",
+    "bookId": "philemon",
+    "ch_start": 1, "v_start": 4, "ch_end": 1, "v_end": 22,
+    "structure_type": "chiasm",
+    "note": "Philemon is a masterpiece of rhetorical chiasm. The center (vv.15–16) — Onesimus as 'beloved brother' — is the theological hinge Paul has been building toward. Everything before creates the conditions; everything after draws out the implication.",
+    "elements": [
+      { "id": "A",  "ref": "vv.4–7",  "label": "Paul's gratitude for Philemon's love and faith" },
+      { "id": "B",  "ref": "vv.8–9",  "label": "Paul appeals in love, not command" },
+      { "id": "C",  "ref": "vv.10–11","label": "Onesimus: formerly useless, now useful" },
+      { "id": "D",  "ref": "vv.12–14","label": "Paul sends Onesimus back; Philemon's free choice" },
+      { "id": "X",  "ref": "vv.15–16","label": "★ CENTER: Onesimus — no longer a slave, but a dear brother" },
+      { "id": "D'", "ref": "v.17",    "label": "Receive him as you would receive me" },
+      { "id": "C'", "ref": "vv.18–19","label": "Paul covers the debt — he will repay" },
+      { "id": "B'", "ref": "vv.20–21","label": "Paul's confidence in Philemon's obedience" },
+      { "id": "A'", "ref": "v.22",    "label": "Paul hopes to come; Philemon's prayers for him" }
+    ]
+  },
+  {
+    "id": "romans-8-structure",
+    "label": "Romans 8 — Chiastic Argument",
+    "bookId": "romans",
+    "ch_start": 8, "v_start": 1, "ch_end": 8, "v_end": 39,
+    "structure_type": "chiasm",
+    "note": "Romans 8 is often read as a series of separate topics (no condemnation, Spirit, adoption, suffering, election). The chiastic reading reveals a unified argument with vv.18–25 (suffering and creation's groaning) as the center — not the triumphant ending (vv.38–39) that Western readers expect.",
+    "elements": [
+      { "id": "A",  "ref": "8:1–4",   "label": "No condemnation — the law's requirements met in Christ" },
+      { "id": "B",  "ref": "8:5–11",  "label": "Flesh vs. Spirit: two orientations, two outcomes" },
+      { "id": "C",  "ref": "8:12–17", "label": "Adoption: heirs of God, co-heirs with Christ" },
+      { "id": "X",  "ref": "8:18–25", "label": "★ CENTER: Present suffering < future glory; creation groans" },
+      { "id": "C'", "ref": "8:26–30", "label": "Spirit intercedes; golden chain of salvation" },
+      { "id": "B'", "ref": "8:31–34", "label": "God for us — who can be against? Christ intercedes" },
+      { "id": "A'", "ref": "8:35–39", "label": "Nothing can separate us from the love of God in Christ" }
+    ]
+  },
+  {
+    "id": "sermon-mount-structure",
+    "label": "Matthew 5–7 — Sermon on the Mount Structure",
+    "bookId": "matthew",
+    "ch_start": 5, "v_start": 1, "ch_end": 7, "v_end": 29,
+    "structure_type": "discourse",
+    "note": "The Sermon has a structured literary architecture, not merely a list of teachings. The Beatitudes open with 'poor in spirit' and close with 'persecuted for righteousness' — an inclusio. The Lord's Prayer (6:9–13) is the center of the central section on piety.",
+    "elements": [
+      { "id": "A",  "ref": "5:3–12",  "label": "Beatitudes — the character of Kingdom citizens (inclusio: poor in spirit / persecuted)" },
+      { "id": "B",  "ref": "5:13–16", "label": "Salt and light — the function of Kingdom citizens" },
+      { "id": "C",  "ref": "5:17–48", "label": "Six antitheses — 'you have heard... but I say' (Torah deepened)" },
+      { "id": "X",  "ref": "6:1–18",  "label": "★ CENTER: Piety section — almsgiving, prayer (Lord's Prayer), fasting (three-fold chiasm)" },
+      { "id": "C'", "ref": "6:19–34", "label": "Treasure, eye, two masters, anxiety — heart's allegiance" },
+      { "id": "B'", "ref": "7:1–12",  "label": "Judging, pearls, asking — relationships within the community" },
+      { "id": "A'", "ref": "7:13–29", "label": "Two ways, two trees, two foundations — the two-path conclusion" }
+    ]
+  },
+  {
+    "id": "psalm-22-structure",
+    "label": "Psalm 22 — Lament to Praise",
+    "bookId": "psalms",
+    "ch_start": 22, "v_start": 1, "ch_end": 22, "v_end": 31,
+    "structure_type": "lament",
+    "note": "Psalm 22 is the paradigmatic individual lament. Jesus quotes v.1 from the cross — the whole psalm becomes his voice in the NT. The movement from abandonment to cosmic praise models the spiritual arc of suffering-through-to-trust.",
+    "elements": [
+      { "id": "A",  "ref": "22:1–2",  "label": "Address + Complaint: 'My God, why have you forsaken me?'" },
+      { "id": "B",  "ref": "22:3–5",  "label": "Past trust: 'Our fathers trusted and you delivered them'" },
+      { "id": "C",  "ref": "22:6–8",  "label": "Deepened complaint: mocked, despised by people" },
+      { "id": "B'", "ref": "22:9–11", "label": "Past trust: 'On you was I cast from birth'" },
+      { "id": "X",  "ref": "22:12–21","label": "★ CRISIS: encircled by enemies (bulls, lions, dogs) — urgent petition" },
+      { "id": "D",  "ref": "22:22–26","label": "Vow of praise: 'I will tell of your name to my brothers'" },
+      { "id": "E",  "ref": "22:27–31","label": "Cosmic praise: all nations, all generations shall worship" }
+    ]
+  },
+  {
+    "id": "isaiah-40-structure",
+    "label": "Isaiah 40 — The Comfort Opening",
+    "bookId": "isaiah",
+    "ch_start": 40, "v_start": 1, "ch_end": 40, "v_end": 31,
+    "structure_type": "discourse",
+    "note": "Isaiah 40 is the great pivot of the whole book — the move from judgment (1–39) to comfort (40–66). The chapter's structure moves from the divine herald announcing comfort, through a series of rhetorical questions establishing God's incomparability, to the climactic promise of renewed strength for the weary.",
+    "elements": [
+      { "id": "A",  "ref": "40:1–2",  "label": "Comfort commission: speak tenderly to Jerusalem; her warfare is ended" },
+      { "id": "B",  "ref": "40:3–5",  "label": "Voice in the wilderness: prepare the way; all flesh shall see" },
+      { "id": "C",  "ref": "40:6–8",  "label": "Contrast: all flesh is grass — but the word of our God stands forever" },
+      { "id": "D",  "ref": "40:9–11", "label": "Herald: 'Behold your God!' — he comes with power and tenderness" },
+      { "id": "X",  "ref": "40:12–26","label": "★ CENTER: The incomparable God — creator, ruler, beyond comparison" },
+      { "id": "D'", "ref": "40:27–28","label": "Rebuke of despair: Have you not known? Have you not heard?" },
+      { "id": "A'", "ref": "40:29–31","label": "Promise: those who wait on the LORD shall renew their strength" }
+    ]
+  },
+  {
+    "id": "gen-1-2-structure",
+    "label": "Genesis 1–2 — Days of Creation Structure",
+    "bookId": "genesis",
+    "ch_start": 1, "v_start": 1, "ch_end": 2, "v_end": 3,
+    "structure_type": "parallel",
+    "note": "The six creation days form two parallel triads. Days 1–3 create the realms (light/darkness, sea/sky, land/vegetation); days 4–6 fill those realms with rulers (lights, birds/fish, animals/humans). The seventh day (rest) stands as conclusion and goal.",
+    "elements": [
+      { "id": "A",  "ref": "1:3–5",   "label": "Day 1: Light / darkness (realm)" },
+      { "id": "B",  "ref": "1:6–8",   "label": "Day 2: Sea / sky (realm)" },
+      { "id": "C",  "ref": "1:9–13",  "label": "Day 3: Land / vegetation (realm)" },
+      { "id": "A'", "ref": "1:14–19", "label": "Day 4: Lights — sun, moon, stars (fill day 1's realm)" },
+      { "id": "B'", "ref": "1:20–23", "label": "Day 5: Birds + fish (fill day 2's realm)" },
+      { "id": "C'", "ref": "1:24–31", "label": "Day 6: Animals + humanity (fill day 3's realm)" },
+      { "id": "X",  "ref": "2:1–3",   "label": "★ GOAL: Day 7 — God rests; sanctifies the Sabbath" }
+    ]
+  },
+  {
+    "id": "ruth-structure",
+    "label": "Ruth — Four-Scene Narrative",
+    "bookId": "ruth",
+    "ch_start": 1, "v_start": 1, "ch_end": 4, "v_end": 22,
+    "structure_type": "narrative",
+    "note": "Ruth is a four-act narrative with the threshing floor scene (ch.3) as the dramatic and structural center. The genealogy at the end (4:18–22) is the surprise ending that reveals this is a Davidic origin story — Ruth is David's great-grandmother.",
+    "elements": [
+      { "id": "A",  "ref": "1:1–22",  "label": "Act 1: Famine, death, return — 'your God shall be my God'" },
+      { "id": "B",  "ref": "2:1–23",  "label": "Act 2: Fields — Ruth meets Boaz; hesed in practice" },
+      { "id": "X",  "ref": "3:1–18",  "label": "★ CENTER: Threshing floor — Ruth's bold proposal; Boaz's honor" },
+      { "id": "B'", "ref": "4:1–12",  "label": "Act 3: City gate — legal redemption, sandal ceremony, witnesses" },
+      { "id": "A'", "ref": "4:13–22", "label": "Act 4: Marriage + birth + genealogy — David's lineage revealed" }
+    ]
+  },
+  {
+    "id": "gen-22-akedah",
+    "label": "Genesis 22 — The Akedah (Binding of Isaac)",
+    "bookId": "genesis",
+    "ch_start": 22, "v_start": 1, "ch_end": 22, "v_end": 19,
+    "structure_type": "narrative",
+    "note": "The Akedah is perhaps the most carefully crafted narrative in the OT. Robert Alter calls it a masterpiece of 'narrative reticence.' The three-day journey and the fourfold 'together' (יַחְדָּו) build unbearable tension. The ram in v.13 is the narrative's delayed resolution — and its theology.",
+    "elements": [
+      { "id": "A",  "ref": "22:1–2",  "label": "Command: take your son, your only son, whom you love — go to Moriah" },
+      { "id": "B",  "ref": "22:3–5",  "label": "Journey: three days together; 'I and the boy will go and worship and come back'" },
+      { "id": "C",  "ref": "22:6–8",  "label": "'My father?' — 'God will provide the lamb, my son.' They went together." },
+      { "id": "X",  "ref": "22:9–10", "label": "★ CRISIS: Altar built. Isaac bound. Hand raised. Knife." },
+      { "id": "C'", "ref": "22:11–12","label": "'Do not lay your hand on the boy.' — the angel speaks from heaven" },
+      { "id": "B'", "ref": "22:13",   "label": "Resolution: הִנֵּה — ram in the thicket. Abraham named the place: 'The LORD will provide.'" },
+      { "id": "A'", "ref": "22:15–19","label": "Promise renewed: your offspring shall possess the gate of their enemies" }
+    ]
+  },
+  {
+    "id": "col-1-15-20-hymn",
+    "label": "Colossians 1:15–20 — Christ Hymn",
+    "bookId": "colossians",
+    "ch_start": 1, "v_start": 15, "ch_end": 1, "v_end": 20,
+    "structure_type": "hymn",
+    "note": "Two stanzas of six lines each, organized around 'He is the image of God' and 'He is the head of the body.' The parallel structure asserts Christ's supremacy over both creation (stanza 1) and new creation (stanza 2). Possibly a pre-Pauline hymn.",
+    "elements": [
+      { "id": "S1", "ref": "1:15–17", "label": "Stanza 1 — Supremacy over creation: firstborn, agent, sustainer" },
+      { "id": "S2", "ref": "1:18–20", "label": "Stanza 2 — Supremacy over new creation: head, firstborn from dead, reconciler" }
+    ]
+  },
+  {
+    "id": "phil-2-hymn",
+    "label": "Philippians 2:5–11 — Christ Hymn",
+    "bookId": "philippians",
+    "ch_start": 2, "v_start": 5, "ch_end": 2, "v_end": 11,
+    "structure_type": "hymn",
+    "note": "The Christ hymn has a V-shape (or inverted arch): descent (vv.6–8) followed by exaltation (vv.9–11). The cross (v.8) is the lowest point and therefore the theological center — the hinge on which everything turns. Possibly anti-imperial: Caesar is not 'Lord'; Jesus is.",
+    "elements": [
+      { "id": "A",  "ref": "2:6",    "label": "In the form of God — did not exploit equality with God" },
+      { "id": "B",  "ref": "2:7a",   "label": "Emptied himself — took the form of a servant" },
+      { "id": "C",  "ref": "2:7b",   "label": "Born in human likeness" },
+      { "id": "X",  "ref": "2:8",    "label": "★ NADIR: Obedient to death — even death on a cross" },
+      { "id": "C'", "ref": "2:9",    "label": "Therefore God highly exalted him" },
+      { "id": "B'", "ref": "2:10",   "label": "Every knee shall bow — in heaven, on earth, under earth" },
+      { "id": "A'", "ref": "2:11",   "label": "Every tongue confess: Jesus Christ is LORD, to the glory of God the Father" }
+    ]
+  },
+  {
+    "id": "1-cor-13-structure",
+    "label": "1 Corinthians 13 — The Love Poem",
+    "bookId": "1corinthians",
+    "ch_start": 13, "v_start": 1, "ch_end": 13, "v_end": 13,
+    "structure_type": "discourse",
+    "note": "Chapter 13 interrupts the spiritual gifts discussion (chs. 12 and 14) as a poetic centerpiece. It has a three-movement structure, each movement revealing a new dimension of love: its necessity, its character, its permanence. The structure is deliberate — love is the center of the gift discussion.",
+    "elements": [
+      { "id": "A",  "ref": "13:1–3",  "label": "Movement 1: Without love, all gifts are nothing (three 'if I...' conditionals)" },
+      { "id": "B",  "ref": "13:4–7",  "label": "Movement 2: What love is and does (15 attributes — 8 negative, 7 positive)" },
+      { "id": "C",  "ref": "13:8–13", "label": "Movement 3: Love never fails — now/then contrast, and the greatest of these is love" }
+    ]
+  },
+  {
+    "id": "amos-1-2-oracles",
+    "label": "Amos 1–2 — Oracles Against Nations",
+    "bookId": "amos",
+    "ch_start": 1, "v_start": 1, "ch_end": 2, "v_end": 16,
+    "structure_type": "anaphora",
+    "note": "Eight oracles in identical form ('For three transgressions of X, and for four, I will not revoke the punishment...'), circling ever closer to Israel. The audience applauds the first six judgments against foreign enemies — then the rhetorical trap springs: Judah (7), then Israel (8). The structure is a rhetorical ambush.",
+    "elements": [
+      { "id": "1", "ref": "1:3–5",   "label": "Damascus (Syria) — for threshing Gilead with iron sledges" },
+      { "id": "2", "ref": "1:6–8",   "label": "Gaza (Philistia) — for exiling whole communities" },
+      { "id": "3", "ref": "1:9–10",  "label": "Tyre — for disregarding the covenant of brotherhood" },
+      { "id": "4", "ref": "1:11–12", "label": "Edom — for pursuing his brother with sword" },
+      { "id": "5", "ref": "1:13–15", "label": "Ammon — for ripping open pregnant women in Gilead" },
+      { "id": "6", "ref": "2:1–3",   "label": "Moab — for burning the bones of Edom's king" },
+      { "id": "7", "ref": "2:4–5",   "label": "Judah — for rejecting the LORD's instruction (trap begins to spring)" },
+      { "id": "8", "ref": "2:6–16",  "label": "★ Israel — most detailed indictment; the trap closes. Israel is no different." }
+    ]
+  },
+  {
+    "id": "ps-1-structure",
+    "label": "Psalm 1 — Two Ways",
+    "bookId": "psalms",
+    "ch_start": 1, "v_start": 1, "ch_end": 1, "v_end": 6,
+    "structure_type": "antithetical",
+    "note": "Psalm 1 is the gateway to the Psalter — a wisdom poem on two paths that frames every subsequent psalm as a meditation on choosing between them. The structure is antithetical throughout: the blessed person (vv.1–3) vs. the wicked (vv.4–6), tree vs. chaff, established vs. perishing.",
+    "elements": [
+      { "id": "A",  "ref": "1:1–3", "label": "The Blessed Person: negative definition (vv.1) → positive definition (v.2) → tree image (v.3)" },
+      { "id": "X",  "ref": "1:4",  "label": "★ PIVOT: 'Not so the wicked!' — the antithesis" },
+      { "id": "A'", "ref": "1:4–6","label": "The Wicked: chaff image (v.4) → judgment outcome (vv.5–6)" }
+    ]
+  },
+  {
+    "id": "ps-119-structure",
+    "label": "Psalm 119 — The Great Acrostic",
+    "bookId": "psalms",
+    "ch_start": 119, "v_start": 1, "ch_end": 119, "v_end": 176,
+    "structure_type": "acrostic",
+    "note": "Psalm 119 is the longest chapter in the Bible and the most elaborate literary achievement in the Psalter: 22 stanzas of 8 verses each, one per Hebrew letter. Every stanza has 8 different Hebrew synonyms for 'the word/instruction of God' (תּוֹרָה, עֵדוּת, פִּקּוּד, חֹק, מִצְוָה, מִשְׁפָּט, אִמְרָה, דֶּרֶךְ). The structure proclaims that Torah is complete — every letter, every aspect.",
+    "elements": [
+      { "id": "א", "ref": "119:1–8",   "label": "Aleph — walking in the Torah of the LORD" },
+      { "id": "ב", "ref": "119:9–16",  "label": "Beth — how can a young man keep his way pure?" },
+      { "id": "ג", "ref": "119:17–24", "label": "Gimel — deal bountifully with your servant" },
+      { "id": "ד", "ref": "119:25–32", "label": "Daleth — my soul clings to the dust" },
+      { "id": "…", "ref": "…",         "label": "(22 stanzas total, aleph through taw)" },
+      { "id": "ת", "ref": "119:169–176","label": "Taw — let my cry come before you, O LORD" }
+    ]
+  },
+  {
+    "id": "daniel-aramaic-ring",
+    "label": "Daniel 2–7 — Aramaic Ring Structure",
+    "bookId": "daniel",
+    "ch_start": 2, "v_start": 1, "ch_end": 7, "v_end": 28,
+    "structure_type": "chiasm",
+    "note": "The Aramaic section of Daniel (2:4b–7:28) is a carefully constructed literary ring. The outer chapters (2 and 7) are parallel visions of four world kingdoms; the inner chapters are parallel court tales. The center (chs. 4–5) shows two kings humbled by God.",
+    "elements": [
+      { "id": "A",  "ref": "ch.2",  "label": "Nebuchadnezzar's statue: four kingdoms; a stone strikes it" },
+      { "id": "B",  "ref": "ch.3",  "label": "Fiery furnace: faithfulness under threat of death" },
+      { "id": "C",  "ref": "ch.4",  "label": "Nebuchadnezzar humbled — 'the Most High rules the kingdom of men'" },
+      { "id": "C'", "ref": "ch.5",  "label": "Belshazzar judged — the same lesson, refused" },
+      { "id": "B'", "ref": "ch.6",  "label": "Lions' den: faithfulness under threat of death" },
+      { "id": "A'", "ref": "ch.7",  "label": "Four beasts: same four kingdoms; Son of Man receives dominion" }
+    ]
+  },
+  {
+    "id": "rev-letters-structure",
+    "label": "Revelation 2–3 — Seven Letters Pattern",
+    "bookId": "revelation",
+    "ch_start": 2, "v_start": 1, "ch_end": 3, "v_end": 22,
+    "structure_type": "anaphora",
+    "note": "Each of the seven letters follows an identical seven-part formula, creating a systematic structure that makes comparison and contrast across the churches possible. Reading them as a unit (not as isolated letters) reveals a movement from external threat to internal compromise.",
+    "elements": [
+      { "id": "1", "ref": "2:1–7",   "label": "Ephesus — left their first love (externally faithful, internally cold)" },
+      { "id": "2", "ref": "2:8–11",  "label": "Smyrna — suffering; no rebuke" },
+      { "id": "3", "ref": "2:12–17", "label": "Pergamum — compromise with false teaching" },
+      { "id": "4", "ref": "2:18–29", "label": "Thyatira — tolerating 'Jezebel'; longest letter" },
+      { "id": "5", "ref": "3:1–6",   "label": "Sardis — reputation for life; actually dead" },
+      { "id": "6", "ref": "3:7–13",  "label": "Philadelphia — little power; no rebuke" },
+      { "id": "7", "ref": "3:14–22", "label": "Laodicea — lukewarm; 'I stand at the door and knock'" }
+    ]
+  },
+  {
+    "id": "mark-3-intercalation",
+    "label": "Mark 3:20–35 — Markan Sandwich",
+    "bookId": "mark",
+    "ch_start": 3, "v_start": 20, "ch_end": 3, "v_end": 35,
+    "structure_type": "intercalation",
+    "note": "A classic Markan intercalation: the family-frames interpret the scribes accusation and vice versa. Both groups misunderstand Jesus (family: 'beside himself'; scribes: 'has Beelzebul'). The sandwich equates family rejection with demonic attribution. The center redefines family as those who do God's will.",
+    "elements": [
+      { "id": "A",  "ref": "3:20–21", "label": "Frame A: Jesus's family comes to seize him — 'He is beside himself'" },
+      { "id": "B",  "ref": "3:22–30", "label": "INSERT: Scribes — 'He has Beelzebul'; Jesus: the divided kingdom argument; unforgivable sin" },
+      { "id": "A'", "ref": "3:31–35", "label": "Frame A': Family arrives; Jesus redefines family — 'Whoever does God's will is my brother'" }
+    ]
+  },
+  {
+    "id": "isaiah-servant-songs",
+    "label": "Isaiah — Four Servant Songs",
+    "bookId": "isaiah",
+    "ch_start": 42, "v_start": 1, "ch_end": 53, "v_end": 12,
+    "structure_type": "parallel",
+    "note": "Four 'Servant Songs' form a progressive theological arc through Isaiah 40–55. Each song deepens the portrait of the servant — from gentle herald to obedient sufferer to ultimate atoning sacrifice. The fourth song (52:13–53:12) is the theological climax of all four.",
+    "elements": [
+      { "id": "S1", "ref": "42:1–9",    "label": "Song 1: The gentle servant — brings justice quietly; 'a bruised reed he will not break'" },
+      { "id": "S2", "ref": "49:1–13",   "label": "Song 2: The discouraged servant — 'I have labored in vain'; but given as a light to the nations" },
+      { "id": "S3", "ref": "50:4–11",   "label": "Song 3: The obedient servant — set his face like flint; not ashamed" },
+      { "id": "S4", "ref": "52:13–53:12","label": "★ CLIMAX Song 4: Suffering, rejected, pierced for our transgressions — the ultimate atonement" }
+    ]
+  },
+  {
+    "id": "lamentations-3-center",
+    "label": "Lamentations 3 — Center of the Center",
+    "bookId": "lamentations",
+    "ch_start": 3, "v_start": 1, "ch_end": 3, "v_end": 66,
+    "structure_type": "chiasm",
+    "note": "The five poems of Lamentations are structured concentrically with ch.3 as the center. Within ch.3, vv.22–24 ('The steadfast love of the LORD never ceases') are the central turning point of the entire book — the lowest point of despair (vv.1–20) gives way to the confession of hope, before returning to lament (vv.25–66).",
+    "elements": [
+      { "id": "A",  "ref": "ch.1", "label": "Lament 1: Jerusalem personified as weeping widow" },
+      { "id": "B",  "ref": "ch.2", "label": "Lament 2: God as the adversary — his wrath" },
+      { "id": "X",  "ref": "ch.3", "label": "★ CENTER: Individual lament (3:1–20) → confession of hope (3:21–24) → return to lament" },
+      { "id": "B'", "ref": "ch.4", "label": "Lament 4: The siege and its horrors" },
+      { "id": "A'", "ref": "ch.5", "label": "Lament 5: Community prayer for restoration" }
+    ]
+  }
+]

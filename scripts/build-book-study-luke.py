@@ -1,0 +1,418 @@
+"""
+Book Study Data — Luke
+book_id: luke
+lang: greek
+
+Run: python3 scripts/build-book-study-luke.py
+
+Notes:
+- Key vocabulary selected from Luke author group peaks (covers Luke + Acts) in
+  author-freq-greek.json, supplemented by theologically distinctive Lukan words
+- εὐαγγελίζω (G2097) preferred over εὐαγγέλιον — Luke characteristically uses the
+  verb; he uses it ~10x in the gospel and ~15x in Acts, more than any other NT author
+- σήμερον (G4594) included for its repeated eschatological weight in Lukan pivots
+- ἄφεσις (G859) included for its double meaning (forgiveness + Jubilee release)
+  that is central to the Nazareth manifesto (4:18)
+"""
+
+import json, os, sys
+
+# ── boilerplate ──────────────────────────────────────────────────────────────
+
+def load_book_study(book_id):
+    path = f'data/workshop/book-study/{book_id}.json'
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_book_study(book_id, data):
+    os.makedirs('data/workshop/book-study', exist_ok=True)
+    path = f'data/workshop/book-study/{book_id}.json'
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'wrote {path} ({len(data.get("key_vocabulary", []))} vocab entries)')
+
+def merge_book_study(existing, new_data):
+    """Fill only fields not already present. Safe to re-run."""
+    result = dict(existing)
+    for key, val in new_data.items():
+        if key not in result or not result[key]:
+            result[key] = val
+    return result
+
+# ── content ──────────────────────────────────────────────────────────────────
+
+BOOK_STUDY = {
+    "bookId": "luke",
+
+    "key_vocabulary": [
+        {
+            "code": "G1163",
+            "lemma": "δεῖ",
+            "translit": "deî",
+            "gloss": "behoved",
+            "significance": (
+                "Luke uses this impersonal verb of divine necessity approximately 18 times in "
+                "the gospel — more than any other gospel — and it marks every structurally "
+                "important moment of Jesus' mission: he 'must' be in his Father's house (2:49), "
+                "'must' preach the kingdom to other cities (4:43), the Son of Man 'must' suffer "
+                "and be raised (9:22). In the resurrection narratives (24:7, 26, 44), the "
+                "disciples are given the retrospective key: 'Was it not necessary that the "
+                "Christ should suffer?' Luke's δεῖ is not fatalism but the grammar of willing "
+                "obedience — Jesus does what the Father's plan requires, and the word marks "
+                "each such moment of conscious alignment with that purpose."
+            )
+        },
+        {
+            "code": "G2097",
+            "lemma": "εὐαγγελίζω",
+            "translit": "euangelízō",
+            "gloss": "declare",
+            "significance": (
+                "Luke characteristically uses the verb ('to proclaim good news') rather than "
+                "the noun εὐαγγέλιον — approximately 10 times in the gospel and 15 times in "
+                "Acts, more than any other NT author. The verb is performative: it does not "
+                "merely describe good news but enacts it. The Nazareth manifesto (4:18) is the "
+                "programmatic moment: Jesus reads Isaiah 61 — 'he has anointed me to proclaim "
+                "good news (εὐαγγελίσασθαι) to the poor' — and declares 'today this is "
+                "fulfilled.' Every subsequent healing, welcome, and parable is an instance of "
+                "this proclamation in action."
+            )
+        },
+        {
+            "code": "G4151",
+            "lemma": "πνεῦμα",
+            "translit": "pneûma",
+            "gloss": "spirit",
+            "significance": (
+                "The Holy Spirit saturates Luke's narrative at every structurally significant "
+                "moment: Elizabeth is filled with the Spirit (1:41), John is filled from the "
+                "womb (1:15), the Spirit comes upon Mary (1:35), Simeon is led by the Spirit "
+                "(2:25-27), and at the Jordan the Spirit descends on Jesus (3:22). Jesus is "
+                "then 'full of the Holy Spirit' and 'led by the Spirit' into the wilderness "
+                "(4:1). In Nazareth he declares 'The Spirit of the Lord is upon me' (4:18). "
+                "Luke's theology of the Spirit is anticipatory — the gospel's Spirit-saturated "
+                "narrative sets up the outpouring in Acts 2, where the disciples receive what "
+                "Jesus had embodied throughout his ministry."
+            )
+        },
+        {
+            "code": "G4434",
+            "lemma": "πτωχός",
+            "translit": "ptōchós",
+            "gloss": "poor",
+            "significance": (
+                "Luke uses this word 10 times — more than any other gospel — and in contexts "
+                "that resist spiritualizing. His Beatitude says 'blessed are you who are poor' "
+                "(6:20), addressed to literal, materially destitute Galilean disciples, without "
+                "Matthew's 'in spirit' qualification. The Isaiah 61 manifesto identifies the "
+                "poor as the gospel's primary recipients (4:18). The parable of the rich man "
+                "and Lazarus (16:19-31) is Luke's starkest statement: the economic reversal "
+                "that begins in the Magnificat is real. The Lukan poor are recipients of a "
+                "Jubilee event, not just a metaphor for the spiritually humble."
+            )
+        },
+        {
+            "code": "G4982",
+            "lemma": "σώζω",
+            "translit": "sṓzō",
+            "gloss": "heal",
+            "significance": (
+                "Luke uses this verb approximately 17 times — more than any other gospel — "
+                "and characteristically applies it to both physical healing and spiritual "
+                "rescue without separating the two. When Jesus heals the bleeding woman, the "
+                "Samaritan leper, or Bartimaeus, he declares 'your faith has saved you' "
+                "(σέσωκέν σε, 7:50; 17:19; 18:42) — the identical formula used for the "
+                "sinful woman's forgiveness (7:50). Luke's mission summary at 19:10 — 'the "
+                "Son of Man came to seek and to save the lost' — uses this verb to encompass "
+                "the entire scope of Jesus' work: healing, welcome, forgiveness, and "
+                "resurrection are all one saving act."
+            )
+        },
+        {
+            "code": "G4991",
+            "lemma": "σωτηρία",
+            "translit": "sōtēría",
+            "gloss": "deliver",
+            "significance": (
+                "Luke is the only gospel to use this noun multiple times, embedding it in the "
+                "birth narrative hymns. Zechariah's Benedictus declares God has raised up 'a "
+                "horn of salvation' (1:69) and that 'knowledge of salvation through the "
+                "forgiveness of sins' will be given (1:77). The word appears again at 19:9 "
+                "when Jesus declares 'salvation has come to this house' — Zacchaeus the tax "
+                "collector having become the gospel's clearest embodiment of what Luke calls "
+                "salvation. The concentration of σωτηρία in the infancy narrative, followed "
+                "by its climactic appearance in 19:9, frames the entire gospel as a story of "
+                "salvation arriving."
+            )
+        },
+        {
+            "code": "G3341",
+            "lemma": "μετάνοια",
+            "translit": "metánoia",
+            "gloss": "repentance",
+            "significance": (
+                "Luke uses this noun and its corresponding verb more than any other gospel. "
+                "Repentance in Luke is not primarily guilt-laden sorrow but a turning — a "
+                "reorientation of one's entire life toward God, demonstrated in concrete "
+                "action (Zacchaeus's restitution, 19:8). The three parables of Luke 15 all "
+                "climax in celebration that accompanies repentance (15:7, 10, 24) — 'there "
+                "is more joy in heaven over one sinner who repents.' Repentance in Luke is "
+                "the human correlate to the seeking-and-finding God: God goes looking; the "
+                "human turns and comes home."
+            )
+        },
+        {
+            "code": "G5479",
+            "lemma": "χαρά",
+            "translit": "chará",
+            "gloss": "gladness",
+            "significance": (
+                "Luke is the gospel of joy. The angel's birth announcement is 'good news of "
+                "great joy' (2:10). The infancy hymns are suffused with it. The three lost-"
+                "and-found parables of ch. 15 climax in celebration (15:6, 9, 32). The "
+                "disciples return from mission 'with joy' (10:17); Jesus 'rejoiced in the "
+                "Holy Spirit' (10:21); at the resurrection the disciples return to Jerusalem "
+                "'with great joy' (24:52). Joy in Luke is not emotional sentiment but the "
+                "eschatological response to the kingdom's arrival — the recognition that the "
+                "age of salvation has come, that the dead are raised, and that the Father "
+                "has run to meet the returning child."
+            )
+        },
+        {
+            "code": "G4336",
+            "lemma": "προσεύχομαι",
+            "translit": "proseúchomai",
+            "gloss": "pray (X earnestly",
+            "significance": (
+                "Luke records Jesus praying at every major structural turning point — his "
+                "baptism (3:21), before choosing the Twelve (6:12), before Peter's confession "
+                "(9:18), at the transfiguration (9:29), in Gethsemane (22:41), and from the "
+                "cross (23:34, 46). These prayer scenes are almost entirely absent in the "
+                "parallel Matthean and Markan accounts. Luke's Jesus is constitutively "
+                "dependent on the Father in prayer — his sonship is expressed in the posture "
+                "of petition, not merely the exercise of power. The disciples' request 'teach "
+                "us to pray' (11:1) follows directly from their observation of Jesus praying: "
+                "the Lord's Prayer is drawn out of his own practice."
+            )
+        },
+        {
+            "code": "G859",
+            "lemma": "ἄφεσις",
+            "translit": "áphesis",
+            "gloss": "deliverance",
+            "significance": (
+                "This noun carries a double semantic range that is central to Luke's soteriology: "
+                "it means both 'forgiveness of sins' and 'release from captivity.' Both senses "
+                "are active in the Nazareth manifesto: Isaiah 61 promises release (ἄφεσις) to "
+                "captives and the oppressed — the economic and social liberation of Jubilee — "
+                "and Luke 1:77 applies the word to 'forgiveness of sins.' Luke refuses to "
+                "separate the two: the forgiveness Jesus offers is simultaneously a liberation "
+                "from the power of sin, debt, and exclusion. When Jesus forgives the sinful "
+                "woman (7:47-48) and welcomes Zacchaeus (19:9), both senses of ἄφεσις are "
+                "operative at once."
+            )
+        },
+        {
+            "code": "G1656",
+            "lemma": "ἔλεος",
+            "translit": "éleos",
+            "gloss": "compassion (human or divine",
+            "significance": (
+                "Luke places ἔλεος in the Magnificat five times (1:50, 54, 58, 72, 78), "
+                "embedding mercy at the heart of his birth narrative theology. The word then "
+                "sounds throughout the gospel: the Good Samaritan shows mercy (10:37); the "
+                "ten lepers cry 'have mercy on us' (17:13); the tax collector's prayer is "
+                "'God, be merciful to me, a sinner' (18:13). In each case Luke shows mercy "
+                "as active, costly intervention on behalf of the helpless — not pity from a "
+                "distance but the crossing of social, ethnic, and religious boundaries to "
+                "serve. The God of Luke is the God of the Magnificat: his mercy endures "
+                "from generation to generation."
+            )
+        },
+        {
+            "code": "G4594",
+            "lemma": "σήμερον",
+            "translit": "sḗmeron",
+            "gloss": "this (to-)day",
+            "significance": (
+                "Luke uses 'today' approximately 11 times — more than any other gospel — at "
+                "moments of decisive arrival. In Nazareth: 'Today this scripture has been "
+                "fulfilled in your hearing' (4:21). To Zacchaeus: 'Today salvation has come "
+                "to this house' (19:9). From the cross: 'Today you will be with me in "
+                "paradise' (23:43). In Greek, σήμερον is a simple temporal adverb, but Luke "
+                "loads each occurrence with eschatological weight. The kingdom is not "
+                "approaching or imminent — it is here, in this encounter, in this moment. "
+                "Luke's reader is invited to stand in the synagogue at Nazareth and hear "
+                "the scroll rolled back: today."
+            )
+        },
+        {
+            "code": "G2147",
+            "lemma": "εὑρίσκω",
+            "translit": "heurískō",
+            "gloss": "find",
+            "significance": (
+                "The three parables of Luke 15 are structured around finding: the shepherd "
+                "finds the lost sheep (15:5), the woman finds the lost coin (15:9), the "
+                "prodigal is 'found' (15:32). The verb is not incidental — it is the climax "
+                "each parable moves toward, and the finding is what generates the joy. This "
+                "vocabulary connects to the Lukan mission summary at 19:10: 'the Son of Man "
+                "came to seek and to save the lost.' Luke's God is not passive, waiting to "
+                "be found by those who search hard enough; God goes out, sweeps the house, "
+                "scans the horizon. The finding is God's initiative."
+            )
+        },
+        {
+            "code": "G5290",
+            "lemma": "ὑποστρέφω",
+            "translit": "hypostréphō",
+            "gloss": "come again",
+            "significance": (
+                "Luke uses this verb approximately 21 times — far more than any other NT book. "
+                "It functions as both a narrative device (marking the completion of a scene) "
+                "and a theological signal: the healed leper returns to give thanks (17:15), "
+                "the disciples return with joy from mission (10:17), the disciples return to "
+                "Jerusalem 'with great joy' after the resurrection (24:52). Each return is a "
+                "recognition scene — something has happened that the returning person must now "
+                "bring back and report. Luke's narrative is structured around departures and "
+                "returns, each return weighted with what has been encountered on the way."
+            )
+        },
+        {
+            "code": "G5485",
+            "lemma": "χάρις",
+            "translit": "cháris",
+            "gloss": "grace",
+            "significance": (
+                "Gabriel's greeting to Mary — κεχαριτωμένη ('highly favored / full of grace,' "
+                "1:28) — opens the gospel's characterization of the new age as one of divine "
+                "favor poured out without merit. Luke uses χάρις in contexts of both divine "
+                "generosity (2:40, 52 — the child Jesus 'growing in grace') and the warm "
+                "reception that grace generates in community. The theological core of Luke's "
+                "grace is the prodigal's father who does not make the son earn reinstatement "
+                "but runs to meet him — a picture of divine initiative that cannot be "
+                "distinguished from the word χάρις itself: favor that costs the giver "
+                "everything and asks nothing of the recipient first."
+            )
+        },
+    ],
+
+    "language_notes": (
+        "<p>Luke opens with one of the most elegant sentences in the New Testament: a "
+        "classical Greek periodic sentence with elaborate participial phrases, literary "
+        "vocabulary (<em>ἐπειδήπερ</em>, <em>ἀκριβῶς</em>, <em>καθεξῆς</em>), and the "
+        "formal address to a patron (<em>κράτιστε Θεόφιλε</em>, 'most excellent "
+        "Theophilus'). This is the register of Greco-Roman historiography — Thucydides, "
+        "Josephus, the opening of Acts of the Apostles. Luke is signaling that he writes "
+        "within the intellectual culture of his audience. He then immediately shifts for "
+        "the birth narratives into a Hebraized Greek style saturated with LXX idiom — "
+        "<em>ἐγένετο</em> ('it came to pass'), <em>καὶ ἰδού</em> ('and behold'), "
+        "Semitic parallelism in the hymns — a stylistic pivot that is itself a theological "
+        "claim: this story belongs simultaneously to Greco-Roman history and to the "
+        "biblical narrative of Israel.</p>"
+        "<p>The Magnificat (1:46-55) and Benedictus (1:68-79) are composed in LXX Greek "
+        "with pervasive Semitic parallelism. Their verbs are aorists — 'he has scattered "
+        "the proud,' 'he has filled the hungry' — even though these events are still future "
+        "in the narrative. This is the Hebrew prophetic perfect: action so certain in God's "
+        "purpose that it can be described as already accomplished. Translating these as "
+        "simple past tense (as many English versions do) flattens the force; they are "
+        "proclamations about what God is already doing, seen from the vantage point of "
+        "certainty. Mary is not reporting history — she is prophesying the future as "
+        "completed fact.</p>"
+        "<p>Luke's characteristic use of <strong>δεῖ</strong> ('it is necessary') appears "
+        "approximately 18 times in the gospel and marks the moments of divine necessity in "
+        "Jesus' mission. The word is an impersonal verb — no subject other than the implied "
+        "divine will — and its repeated appearance at turning points (2:49; 4:43; 9:22; "
+        "24:7, 26, 44) creates a grammar of purposeful obedience. When the risen Christ "
+        "asks the disciples on the Emmaus road, 'Was it not <em>necessary</em> that the "
+        "Christ should suffer?' the word wraps the entire passion in retrospective "
+        "theological inevitability. This is not fate but filial obedience: Jesus does what "
+        "the Father's redemptive plan requires at every moment.</p>"
+        "<p>Luke's <strong>σήμερον</strong> ('today') functions as an eschatological present "
+        "tense. In Greek the word is a plain temporal adverb, but Luke places it at moments "
+        "of decisive arrival — the Nazareth synagogue (4:21), Zacchaeus's house (19:9), the "
+        "cross (23:43) — and each occurrence carries the force of a proclamation: the time "
+        "of fulfillment is not approaching but has arrived in this encounter. Luke's "
+        "narrative theology resists the deferral of salvation. The Isaiah 61 Jubilee is not "
+        "a future program but a present event, and σήμερον is the word that marks each "
+        "moment of its arrival.</p>"
+    ),
+
+    "reception": (
+        "<p><strong>Patristic:</strong> Luke was treasured in the early church especially "
+        "for material found nowhere else: the birth narrative hymns (Magnificat, Benedictus, "
+        "Nunc Dimittis) entered Christian liturgy almost immediately and shaped the church's "
+        "daily prayer for centuries. The Good Samaritan and the Prodigal Son became the "
+        "most commented parables in all of Christian literature. Luke's gospel was also the "
+        "site of the first major canon controversy: Marcion (c. 140 AD) accepted a stripped "
+        "version of Luke as his sole canonical gospel, removing the birth narratives and OT "
+        "quotations to construct a purely Gentile, non-Jewish Jesus. Irenaeus's rebuttal "
+        "established that the fourfold gospel was irreducible and that Luke's Jewish "
+        "rootedness was theologically essential.</p>"
+        "<p><strong>Medieval:</strong> Luke's portrait of Mary became the primary gospel "
+        "basis for Marian theology in the medieval West. The Magnificat was sung daily at "
+        "Vespers, embedding its reversal theology in every monastery's prayer cycle. Luke's "
+        "parables were the primary subjects of allegorical exegesis: in Origen and "
+        "Augustine, the Good Samaritan is Christ, the wounded man is Adam, the inn is the "
+        "church. The Prodigal Son's robe, ring, and fatted calf received elaborate symbolic "
+        "readings. This allegorical approach, while creative, often bypassed the economic "
+        "and social dimensions of the parables that Luke's narrative context makes "
+        "explicit.</p>"
+        "<p><strong>Reformation:</strong> Luther loved Luke's gospel for its grace without "
+        "merit — the Prodigal Son was his clearest picture of justification: the father "
+        "runs to meet the returning son without waiting for proof of reform. Calvin engaged "
+        "Luke's distinctive material closely in his Synoptic Harmony. The Magnificat became "
+        "a flash point: was Mary's declaration of the mighty being 'scattered' and the "
+        "hungry being 'filled' a spiritual metaphor or a social-economic reversal? The "
+        "interpretive divide opened in the Reformation has run through liberation theology "
+        "in the 20th century to the present.</p>"
+        "<p><strong>Modern:</strong> Hans Conzelmann's 1954 work <em>The Theology of "
+        "St. Luke</em> established Luke-Acts as a unified two-volume theological history "
+        "structured in three epochs: the time of Israel, the time of Jesus, and the time "
+        "of the church. While Conzelmann's three-epoch schema has been refined — many "
+        "argue Luke sees only two epochs, before and after Jesus — the two-volume unity "
+        "and the centrality of the Spirit, prayer, and the marginalized remain organizing "
+        "themes of contemporary scholarship. The debate over whether Luke's attention to "
+        "the poor reflects a social ethic or a narrative device for characterizing the "
+        "gospel's universal scope remains active.</p>"
+    ),
+
+    "reading_guide": (
+        "<p>The single most important thing to grasp before reading Luke is the "
+        "<strong>two-volume structure</strong>. Luke and Acts are one continuous narrative: "
+        "the gospel traces the Spirit-anointed career of Jesus from Galilee to Jerusalem; "
+        "Acts traces the Spirit-empowered mission of the church from Jerusalem to Rome. "
+        "The commission at the end of Luke (24:47-49) is the same as the commission that "
+        "opens Acts (1:8). Luke cannot be fully read without Acts — it deliberately ends "
+        "with the disciples waiting, and Acts resumes where it left off. The Spirit who "
+        "descends on Jesus at his baptism is the same Spirit poured out at Pentecost.</p>"
+        "<p>The structural pivot is <strong>9:51</strong>: Jesus 'set his face to go to "
+        "Jerusalem.' From this moment the narrative becomes a ten-chapter journey (9:51–"
+        "19:44) in which almost all of Luke's unique material appears — the Good Samaritan, "
+        "the Prodigal Son, Zacchaeus, the ten lepers. Pay attention to what Jesus teaches "
+        "<em>on the way</em> and to whom. The journey is both literal and theological: "
+        "Jesus is not merely traveling but moving deliberately toward the cross, and each "
+        "encounter on the road is a parable of the kingdom he is bringing.</p>"
+        "<p>Two common misreadings: First, spiritualizing the poor. Luke says 'blessed are "
+        "you who are poor' (6:20) without Matthew's qualifier 'in spirit' — addressed to "
+        "literal, materially poor Galilean disciples. The Magnificat's reversals are not "
+        "metaphor in Luke; they describe a real inversion of social hierarchy that the "
+        "kingdom effects. Second, reading the Prodigal Son as a story about personal "
+        "repentance alone. Luke ends the parable with the older brother outside the feast — "
+        "and Jesus does not tell us whether he ever came in. The parable is equally about "
+        "those who exclude themselves from the Father's welcome by their righteousness. "
+        "Enter the gospel at ch. 15 for Luke's most concentrated statement of grace, or "
+        "at 4:16-21 for his mission manifesto.</p>"
+    ),
+}
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    existing = load_book_study('luke')
+    merged   = merge_book_study(existing, BOOK_STUDY)
+    save_book_study('luke', merged)
+
+main()
