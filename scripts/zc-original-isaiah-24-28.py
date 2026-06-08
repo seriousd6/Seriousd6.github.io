@@ -1,52 +1,45 @@
 """
-Isaiah — all four layers (echo + original + context + christ)
-Output: data/echoes/isaiah.json + mkt-original + mkt-context + mkt-christ
+MKT Original Commentary — Isaiah chapters 24–28
+Run: python3 scripts/zc-original-isaiah-24-28.py
 
-Isaiah is the NT's most cited OT prophet — roughly 419 citations or allusions.
-The book divides into two major sections (1-39: judgment; 40-66: comfort/servant)
-with the Servant Songs (42:1-4; 49:1-6; 50:4-9; 52:13-53:12) as the NT's
-most foundational OT Christological resource.
+Chapters 24-27 are the "Isaiah Apocalypse" — a cosmic judgment and restoration cycle
+structurally distinct from the oracles against nations (13-23). Chapter 28 begins the
+"woe" cycle addressing Ephraim and Jerusalem.
+
+Key translation decisions in this range:
+- 24:5 bĕrît ʿôlām: "everlasting covenant" — probably the Noahic covenant (Gen 9),
+  since it binds "the earth"; the violation brings cosmic judgment, not merely national.
+- 25:8 billaʿ hammāwet lāneṣaḥ: "He will swallow up death forever" — quoted verbatim
+  in 1 Cor 15:54 as the resurrection victory of Christ; the original is eschatological,
+  not merely metaphorical.
+- 26:4 ṣûr ʿôlāmîm: "Rock of ages" or "everlasting Rock" — a unique phrase combining
+  the rock-of-refuge imagery (Ps 18; 31) with eternal-duration language.
+- 27:1 liwyātān: Leviathan — the chaos sea-monster of Canaanite mythology, here YHWH's
+  opponent on the Day of the LORD; its defeat inaugurates the new creation.
+- 28:10/13 ṣaw lāṣaw qaw lāqaw: either mocking baby-talk (the people won't hear adult
+  instruction) or description of God's patient teaching method; both readings are attested.
+- 28:16 ʾeben bōḥan: "tested/precious stone" — the cornerstone that becomes the central
+  NT citation for Christ as the stone (Rom 9:33; 1 Pet 2:6-8; Matt 21:42).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -54,153 +47,137 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ISA_ECHO = {
-  "6": {
-    "1": [
-      {"type": "fulfillment", "target": "John 12:41", "note": "Isaiah saw his glory and spoke of him — John identifies the YHWH whose glory Isaiah saw in the throne-vision (Isa 6:1-4) with the pre-incarnate Christ; the seraphim's Trisagion is the worship of the Son before the Incarnation"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Matt 13:14-15", "note": "You will indeed hear but never understand — Jesus cites Isa 6:9-10 to explain his parable-methodology; the hardening effect of his teaching on the religious leaders fulfills the Isaianic commission to preach to those who will not understand"},
-      {"type": "fulfillment", "target": "Acts 28:26-27", "note": "Paul's final quotation of Isa 6:9-10 to the Roman Jews who reject the gospel closes the book of Acts — the Isaianic hardening frames the entire mission narrative from Jesus's parable-ministry to Paul's Roman imprisonment"}
-    ]
+ISAIAH = {
+  "24": {
+    "1": '<p><strong>bōqēq</strong> (H1238) — to empty, drain, lay waste; from a root meaning to pour out completely. The verb conveys total depletion rather than mere destruction. <strong>bôlēq</strong> (H1110) — to lay waste, make desolate; the near-synonym in the same verse intensifies the completeness. YHWH empties the earth of its human order and then distorts its surface — the cosmic judgment is both demographic and physical.</p>',
+    "2": '<p>The social leveling formula: priest/people, master/servant, mistress/maid, buyer/seller, lender/borrower, creditor/debtor — six pairs spanning the entire social hierarchy. The reversal is grammatical equality: <em>kāʿam kakkōhēn</em> ("as with the people, so with the priest"). Social structures that organize human community are dissolved by the coming judgment — no status exempts.</p>',
+    "3": '<p>The repetition of the root <em>bwq</em> twice in one verse — <strong>hēbôq tibboq</strong> — is an infinitive absolute construction that intensifies: "will be completely/utterly emptied." Similarly <em>hbz tibbaz</em> — "plundered, it will be plundered." The double infinitive absolute construction is Isaiah\'s way of expressing absolute certainty with rhetorical force. YHWH has spoken this word (<em>peh Yhwh dibber</em>).</p>',
+    "4": '<p><strong>ʾābelâ nābĕlâ hāʾāreṣ</strong> — "the earth mourns/dries up, the world withers"; <em>ʾābal</em> (H56) can mean both to mourn (as people do) and to dry up (as plants do) — the deliberate double meaning personifies the earth as a mourner while describing its literal ecological collapse. <strong>mārôm</strong> — the height/heavens; the cosmic mourning reaches vertically through all creation.</p>',
+    "5": '<p><strong>ḥillĕpû tôrâ</strong> — "transgressed the laws/instruction" (<em>tôrâ</em> without the article, suggesting law in general, not specifically Moses); <strong>ḥālĕfû ḥōq</strong> — "violated the statute/decree"; <strong>hēpĕrû bĕrît ʿôlām</strong> — "broken the everlasting covenant." The <em>bĕrît ʿôlām</em> most likely refers to the Noahic covenant (Gen 9:16), which is with "all flesh" and "the earth" — explaining why creation itself is cursed. Violation of the universal covenant produces universal ecological judgment.</p>',
+    "6": '<p><strong>ʾālâ</strong> (H423) — oath/curse; the covenant curse (<em>qĕlālâ</em>) has consumed (<em>ʾāklâ</em>) the earth. Those who live on it are pronounced guilty (<em>nĕʾāšĕmû</em>, held to account). The diminishing of the inhabitants — <em>wayyiśrāpû yōšĕbê-ʾāreṣ</em> ("the inhabitants of the earth are scorched/burned") — may be the result of drought or plague, both covenant curse instruments (Deut 28:22-24).</p>',
+    "7": '<p><strong>ʾābel tîrôš</strong> — "the new wine mourns/withers" — the same <em>ʾābal</em> double meaning as v.4 (mourns/withers). The festive grape harvest becomes an occasion of grief. <strong>ʾumllâ gephen</strong> — "the vine languishes/is sick" (<em>ʾāmal</em>, H535 — to be faint, sick, languid). The joy of the wine culture is eliminated as a specific sign of covenant curse — wine gladdens the heart (Ps 104:15); its absence means cursed desolation.</p>',
+    "8": '<p><strong>šābat</strong> (H7673) — ceased/stopped; the root of Sabbath. The joyful tambourines (<em>tōp</em>), the noisy revelers (<em>šaʾôn ʿallîzîm</em>), and the joyful harp (<em>kinnôr</em>) all fall silent. In the ancient world, music, drinking, and celebration were inseparable from civic and cultic life — their cessation signals total social collapse.</p>',
+    "9": '<p>Strong drink (<em>šēkār</em>) becomes bitter to those who drink it — the reversal of the expected pleasure. They no longer sing to wine (<em>lōʾ yāšîrû layyāyin</em>). The drinking-song culture of the ANE was part of how people celebrated life, harvest, and victory; its silencing is both literal (no harvest) and metaphorical (nothing to celebrate).</p>',
+    "10": '<p><strong>qiryat-tōhû</strong> — "city of chaos/formlessness" — the word <em>tōhû</em> (H8414) is the same root as in Gen 1:2 (the primeval chaos before creation: <em>tōhû wābōhû</em>). The city, which represents the height of human civilizational achievement, is reduced to primeval formlessness. <strong>šubar kol-bayit</strong> — "every house is broken/shut up" — the city is physically impassable.</p>',
+    "11": '<p>The crying in the streets is for wine (<em>ʿal-hayyāyin</em>) — the same wine that mourned in v.7. The cry is specifically the absence of the expected substance of celebration. <strong>ʿārbâ kol-śimḥâ</strong> — "all joy has grown dark/has set" (<em>ʿārab</em>, to grow dark, as the sun at evening). <strong>gālâ mĕśôś hāʾāreṣ</strong> — "the joy of the earth has gone into exile."</p>',
+    "12": '<p><strong>šûʾâ</strong> (H7722) — desolation/ruin; the city is left as a wasteland (<em>nišʾar bāʿîr šammâ</em>). The city gates (<em>šaʿar</em>) are battered to ruins (<em>yuškat šaʾar lĕtōhû</em>). Gates in the ANE were the judicial and commercial center of city life — their destruction means the end of all public order and commerce.</p>',
+    "13": '<p>The remnant imagery: <strong>kĕnōqep zayit</strong> — "like the gleaning of the olive" (<em>nōqep</em>, the beating/shaking of the olive tree to dislodge the last olives); <strong>kĕʿôlēlôt</strong> — "like gleanings/after-pickings" after the grape harvest. The survival of a remnant is compared to the few olives or grapes left after thorough harvesting — the remnant is intentionally left, not forgotten. Compare 17:6.</p>',
+    "14": '<p>The remnant raises its voice — <strong>yiśśĕʾû qôlām</strong> — and sings for joy (<em>yārōnnû</em>). The geographical direction is significant: they sing "from the west" (<em>mimmāʿărāḇ</em>). The cosmic scope of judgment (vv.1-13) produces a cosmic scope of praise — the remnant in the distant west responds to YHWH\'s majesty (<em>gĕʾôn Yhwh</em>). This is not a nationalistic but a universal gathering.</p>',
+    "15": '<p><strong>bāʾûrîm</strong> — "in the east/in the fires" — highly debated. LXX reads "in the light" (<em>ʾôr</em>); MT likely means "in the regions of light" (east). <strong>bĕʾiyyê hayyām</strong> — "in the coastlands of the sea." The universal praise comes from east and west simultaneously — the people of YHWH are scattered and gathered from every direction.</p>',
+    "16": '<p><strong>mikkĕnap hāʾāreṣ</strong> — "from the wing/edge of the earth" — the extremities of the inhabited world. The songs of praise are for the <em>ṣaddîq</em> ("Righteous One" — may be a title for YHWH or the messianic agent). The prophet\'s response: <strong>rāzî lî</strong> — "my secret/my leanness to me!" — a cry of personal grief or exhaustion at what he has seen. <strong>bōgedîm bāgādû</strong> — "the treacherous have been treacherous" — the world\'s faithlessness continues even as judgment falls.</p>',
+    "17": '<p><strong>paḥad wāpaḥat wāpāḥ</strong> — the three "p" words: terror, pit, and snare — a rhetorical triple alliteration in Hebrew that is untranslatable but memorable. Flight from one danger leads directly to another (the one who flees the terror falls into the pit; the one who escapes the pit is caught in the snare). This is the inescapability of the cosmic judgment.</p>',
+    "18": '<p><strong>ʾarûbbôt mimmārôm niptāḥû</strong> — "the windows of heaven are opened" — the language of the Flood (Gen 7:11). The cosmic catastrophe reactivates the Flood imagery, confirming that the <em>bĕrît ʿôlām</em> of v.5 is indeed the Noahic covenant. The foundations of the earth (<em>môsĕdê ʾāreṣ</em>) shake (<em>yirʿāšû</em>) simultaneously — judgment attacks both from above and below.</p>',
+    "19": '<p>The threefold verb assault: <strong>rōʿâ rōʿāʿâ hāʾāreṣ</strong> ("the earth is utterly broken") — <em>rāʿaʿ</em> (H7489) means to be shattered/shaken violently; <strong>pôr hitpōrĕrâ</strong> ("completely dissolved/split apart"); <strong>môṭ hitmoṭĕṭâ</strong> ("moved violently/shaken to the core"). Three different verbs of earth-shaking each intensified by their own infinitive absolute — the rhetorical force mimics the seismic event.</p>',
+    "20": '<p><strong>nûaʿ tānûaʿ hāʾāreṣ kaššikkôr</strong> — "the earth staggers like a drunkard" — the same verb <em>nûaʿ</em> (H5128) used for swaying/staggering in intoxication. The earth is compared to a drunk man (<em>šikkôr</em>) and to a hammock (<em>mĕlûnâ</em>, temporary shelter) — both images convey instability. Its transgression (<em>pišʿāh</em>) weighs it down; it falls and will not rise again.</p>',
+    "21": '<p><strong>yipqōd Yhwh ṣĕbāʾôt</strong> — "YHWH of hosts will visit in judgment" (<em>pāqad</em>, H6485 — to attend to, to visit for judgment or blessing depending on context). The object is twofold: the "host of the exalted ones on high" (<em>ṣĕbāʾ hammārôm bammārôm</em> — probably celestial/spiritual powers) and the kings of the earth (<em>malkê hāʾădāmâ</em>). The cosmic dimension of the judgment includes both supernatural and human authority structures.</p>',
+    "22": '<p><strong>yē ʾaspû ʾăsēpâ</strong> — "they will be gathered, gathered together" (double infinitive absolute for certainty) — like prisoners into a pit (<em>bôr</em>) and shut up (<em>sāgar</em>) in a prison (<em>kelēʾ</em>). After many days they will be visited (<em>yuppāqēdû</em>) — the same <em>pāqad</em> as in v.21, now for release or further judgment. The delay suggests a temporary holding before final judgment.</p>',
+    "23": '<p><strong>bôš halbānâ ûpĕrâ hahammâ</strong> — "the moon (<em>lĕbānâ</em>, the white one) will be ashamed and the sun (<em>ḥammâ</em>, the hot one) will be abashed" — when YHWH reigns on Mount Zion (<em>mālak Yhwh ṣĕbāʾôt bĕhar ṣiyyôn</em>) and in Jerusalem before his elders (<em>ziqnāyw</em>). The cosmic lights are eclipsed by the glory of YHWH\'s royal presence — the image of divine enthronement that renders all other light secondary.</p>',
   },
-  "7": {
-    "14": [
-      {"type": "fulfillment", "target": "Matt 1:23", "note": "Behold the virgin shall conceive and bear a son and shall call his name Immanuel — Matthew cites Isa 7:14 LXX (parthenos = virgin) as fulfilled in the virginal conception of Jesus; the Immanuel sign given to Ahaz in the Assyrian crisis reaches its ultimate fulfillment in the one who is literally God-with-us"}
-    ]
+  "25": {
+    "1": '<p><strong>ʾělōhay ʾattâ</strong> — "you are my God" — the intimate possessive framing the entire psalm. <strong>ʾēśāʾ ʾĕrômmĕmkā</strong> — "I will exalt you." The basis: YHWH did wondrous things (<em>pālaʾ ʿēṣôt mērāḥôq</em>) — "wonderful counsels from afar," i.e., plans laid long ago now fulfilled. <em>ʿēṣôt</em> (plans/counsels) is the same word as 14:26-27 — YHWH\'s sovereign governance of history proved by events. <strong>ʾĕmûnâ ʾōmen</strong> — "faithfulness/firmness of old/truth."</p>',
+    "2": '<p><strong>śamtā mēʿîr lĕgal</strong> — "you have made a city into a heap of rubble" (<em>gal</em>, a heap of stones); <strong>mibṣār lĕmappēlâ</strong> — "a fortified city into a ruin." The unidentified city (probably representative of all hostile powers rather than a specific city) is contrasted with YHWH\'s eternal city Zion. The city of foreigners (<em>qiryat zārîm</em>) will never be rebuilt (<em>lōʾ tîbbāneh lĕʿôlām</em>).</p>',
+    "3": '<p><strong>ʿam ʿāz</strong> — "a strong/fierce people" will honor YHWH; <strong>qiryat gôyîm ʿārîṣîm</strong> — "city of ruthless/terrible nations" will fear him. The reversal: the nations that trusted in military strength now honor YHWH. This is the eschatological conversion of the gentile nations — not their destruction but their submission and worship, which is the hope of vv.6-8.</p>',
+    "4": '<p><strong>kî-hāyîtā māʿôz laddāl māʿôz lāʾebyôn</strong> — "you have been a stronghold to the poor/needy" (<em>dāl</em> + <em>ʾebyôn</em>, the two key Hebrew terms for the economically marginal). <strong>maḥăseh mizzārem</strong> — "refuge from the storm." The image of YHWH as shelter specifically for the vulnerable is one of Isaiah\'s persistent themes (cf. 14:30; 32:2) and a defining characteristic of his eschatological king.</p>',
+    "5": '<p><strong>kĕḥōreb bĕṣāyôn</strong> — "like heat in a dry place" — the powerful nations are reduced like excessive heat moderated by a cloud\'s shadow (<em>ṣēl ʿāb</em>). <strong>zammîr ʿārîṣîm yaʿăneh</strong> — "the song of the terrible ones is silenced/humbled" — the victory songs of the conquering nations go quiet before YHWH\'s intervention. The powerful are not merely defeated but shamed into silence.</p>',
+    "6": '<p><strong>mišteh šĕmānîm</strong> — "feast of fat things/rich food"; <strong>mišteh šĕmārîm</strong> — "feast of well-aged wine" (<em>šĕmārîm</em>, from <em>šāmar</em>, to keep/preserve — aged wine kept on its dregs). The eschatological banquet on Mount Zion is for <em>kol-hāʿammîm</em> — "all peoples" — not Israel alone. The double qualification <em>šĕmānîm mĕmullāḥîm</em> ("marrow-rich"), <em>šĕmārîm mĕzuqqāqîm</em> ("well-refined") emphasizes the superlative quality of what YHWH provides.</p>',
+    "7": '<p><strong>hallôṭ hallûṭ</strong> — "the covering that is spread/cast" (<em>lûṭ</em>, H3875, wrapped/veiled); <strong>hamsĕkâ hamsûkâ</strong> — "the veil that is woven over" (<em>māsak</em>, to weave/cover). The double image of a shroud/veil covering all peoples is the metaphor for death and mourning that YHWH removes. The removal is not merely comforting but cosmic — death as a regime is dismantled.</p>',
+    "8": '<p><strong>billaʿ hammāwet lāneṣaḥ</strong> — "he will swallow up death forever" (<em>bālaʿ</em>, H1104, to swallow, consume). Paul quotes this verse in 1 Cor 15:54 at the climax of his resurrection argument: "Death is swallowed up in victory." The word <em>lāneṣaḥ</em> (forever/in victory — the same word the NT reads as "victory") makes the swallowing definitive and permanent. <strong>māḥâ ʾădōnāy Yhwh dimʿâ mēʿal kol-pānîm</strong> — "Lord YHWH will wipe away tears from all faces" — quoted directly in Rev 21:4.</p>',
+    "9": '<p>The response of the saved remnant: <strong>hinnēh ʾĕlōhênû zeh</strong> — "behold, this is our God" — the climactic identification of the God who acts is made in the moment of salvation. <strong>qiwwînû lô</strong> — "we waited for him/hoped in him"; <strong>yôšîʿēnû</strong> — "he will save us." The waiting (<em>qāwâ</em>, H6960) is the posture that characterizes faith in Isaiah\'s theology (cf. 8:17; 30:18; 40:31).</p>',
+    "10": '<p><strong>kî tānûaḥ yad Yhwh bāhar hazzeh</strong> — "for the hand of YHWH will rest on this mountain" — Mount Zion as the place of YHWH\'s settled presence. The contrast: Moab is trampled (<em>yûddaš</em>) like straw in a dunghill (<em>mô madmēnâ</em>) — the trampling imagery for judgment. <strong>pāraś yādāyw bĕqirbô</strong> — "he spreads his hands in the midst of it" like a swimmer spreading his arms to swim.</p>',
+    "11": '<p>The swimmer comparison: one who swims extends his arms (<em>yiśḥeh lišĕḥôt</em>) — so YHWH humbles (<em>šippal</em>) Moab\'s pride (<em>gāʾôn</em>) and the skill/craft of his hands (<em>ʿim miśgab yādāyw</em>). The precise mechanism of humiliation — the very extension of hands that is skillful swimming becomes the gesture of defeat — turns Moab\'s effort into the means of its own downfall.</p>',
+    "12": '<p><strong>ûmiḇṣar māʿûzzê ḥômōtêkā</strong> — "the fortress and the high walls of your fortifications" — Moab\'s military security. <strong>higgîaʿ hišpîl hĭggiyaʿ lāʾāreṣ</strong> — "he brings them low, he brings them down to the ground" — the threefold verb descent mirrors the cosmic descent imagery of 14:11-15. Even the most fortified human security has no defense against YHWH\'s cosmic judgment.</p>',
   },
-  "9": {
-    "2": [
-      {"type": "fulfillment", "target": "Matt 4:15-16", "note": "The people dwelling in darkness have seen a great light — Matthew applies Isa 9:1-2 to Jesus's Galilean ministry; the light in Zebulun and Naphtali is the gospel's arrival in the darkened region; Jesus is the great light"}
-    ]
+  "26": {
+    "1": '<p><strong>bayyôm hahûʾ</strong> — "in that day" — the eschatological day of YHWH. <strong>ʿîr ʿāz lānû</strong> — "we have a strong city" — in contrast to 24:10\'s <em>qiryat-tōhû</em> (city of chaos). <strong>yĕšûʿâ yāšît ḥômôt wāḥēl</strong> — "he sets salvation as walls and ramparts" — the city\'s security is not military but theological; <em>yĕšûʿâ</em> (salvation) is the structural material of the city\'s defense.</p>',
+    "2": '<p><strong>pitḥû šĕʿārîm</strong> — "Open the gates!" — the imperative of welcome. <strong>gôy ṣaddîq šōmēr ʾĕmûnîm</strong> — "a righteous nation that keeps faith/faithfulness" (<em>ṣaddîq</em>, H6662; <em>ʾĕmûnîm</em>, plural of faithfulness). The city is open to those who are righteous and faithful — the entry requirement is character shaped by YHWH\'s covenant, not ethnic identity.</p>',
+    "3": '<p><strong>yēṣer sāmûk tiṣṣōr šālôm šālôm</strong> — "the steadfast mind you keep in perfect peace" (<em>yēṣer</em>, H3336, formed/framed inclination or formed mind; <em>sāmûk</em>, H5564, upheld/leaned upon). The doubled <em>šālôm šālôm</em> (peace, peace) is an intensified form — "complete peace" or "deep peace." The basis is trust (<em>bāṭûaḥ bĕkā</em>, trusting in you) — the orientation of the mind determines the quality of peace received.</p>',
+    "4": '<p><strong>biṭḥû ḇYhwh ʿăḏê-ʿaḏ</strong> — "trust in YHWH forever and ever" — <em>ʿăḏê-ʿaḏ</em> is the strongest Hebrew expression of perpetual duration. The reason: <strong>kî bĕYāh Yhwh ṣûr ʿôlāmîm</strong> — "for in Yah YHWH is the Rock of Ages/everlasting Rock." The title <em>ṣûr ʿôlāmîm</em> combines the rock-refuge imagery (Ps 18:2; 31:3) with the eternal duration of divine character — the reliability of YHWH is permanent by definition.</p>',
+    "5": '<p><strong>kî hišpîl yōšĕbê mārom</strong> — "for he brings low those who dwell on high" — the divine reversal pattern. The lofty city (<em>qiryâ niśśāʾâ</em>, the exalted city) is brought down; it is laid low to the ground (<em>lāʾāreṣ yiggāʿennāh</em>), brought even to the dust (<em>ʿad-ʿāpār</em>). The vocabulary of v.5 reverses the vocabulary of self-exaltation from 14:13-14 — pride goes to dust.</p>',
+    "6": '<p>The foot of those who were afflicted (<em>regelyānî ûpăʿămê ḏallîm</em>) treads on what was the proud city. The inversion: those at the bottom of the social order now walk on the ruins of what oppressed them. This is not mere social revolution but the specific reversal that characterizes YHWH\'s governance — the poor (<em>ḏal</em>) and the needy are elevated precisely as the powerful are cast down.</p>',
+    "7": '<p><strong>ʾōraḥ laṣṣaddîq mĕšārîm</strong> — "the path of the righteous is level/smooth" (<em>mĕšārîm</em>, H4339, from <em>yāšar</em>, straight/even). <strong>mêšārîm tipal-maʿgal ṣaddîq</strong> — "you make smooth/level the track of the righteous." YHWH is the one who clears the path — the righteous do not walk on their own strength but on a way prepared for them.</p>',
+    "8": '<p><strong>ʾap bĕderek mišpāṭêkā Yhwh qiwwînûkā</strong> — "in the path of your judgments/justice, YHWH, we wait for you" — the waiting (<em>qāwâ</em>, the same root as 25:9) is done on the path of divine justice, not in withdrawal from the world. <strong>lĕšimkā ûlĕzikrekā taʾăwat nāpeš</strong> — "for your name and your memory/remembrance is the desire of the soul" — the ultimate object of longing is the name and presence of YHWH.</p>',
+    "9": '<p><strong>napšî ʾiwwitîkā ballaylâ</strong> — "with my soul I have desired you in the night" — the night as the time of intense spiritual seeking (cf. Ps 63:6). <strong>ʾap rûḥî bĕqirbî ʾăšaḥărêkā</strong> — "even with my spirit within me I seek you earnestly" (the <em>šaḥar</em> root means to seek at dawn). <strong>kî ʾăšer mišpāṭêkā lāʾāreṣ ṣedeq lāmĕdû yōšĕbê ṯēḇēl</strong> — "for when your judgments fall on the earth, the inhabitants of the world learn righteousness" — divine judgment has a pedagogical purpose.</p>',
+    "10": '<p><strong>yûḥan rāšāʿ bal-lāmad ṣedeq</strong> — "when grace is shown to the wicked, he does not learn righteousness" — the inverse pedagogical principle: unmerited favor does not reform character the way discipline does. The wicked continue to deal wrongly even in an upright land (<em>bĕʾereṣ nĕkōḥôt yĕʿawwēl</em>) and do not see YHWH\'s majesty (<em>gĕʾût Yhwh bal-yirʾeh</em>).</p>',
+    "11": '<p><strong>Yhwh rāmâ yādĕkā</strong> — "YHWH, your hand is lifted high" — the extended hand as the instrument of judgment (cf. 5:25; 9:12, 17, 21; 10:4). The adversaries do not see it (<em>bal-yĕḥĕzāyûn</em>) but will be ashamed. <strong>ʾēš ṣārêkā tōʾkĕlēm</strong> — "fire shall consume your adversaries" — the fire of divine jealousy/zeal (<em>qinʾat ʿamkā</em>) is what destroys the enemies of YHWH\'s people.</p>',
+    "12": '<p><strong>Yhwh tišpāt šālôm lānû</strong> — "YHWH, you will ordain/appoint peace for us" — the passive reception of peace as YHWH\'s gift. <strong>kî gam kol-maʿăśênû pāʿaltā llānû</strong> — "for indeed all our works you have accomplished for us" — the acknowledgment that even the good works of the community are ultimately YHWH\'s doing; the monergistic theology of grace here anticipates Paul\'s formulation in Phil 2:13.</p>',
+    "13": '<p><strong>ʾădōnāy ʾĕlōhênû bĕʿālûnû ʾădōnîm zûlatekā</strong> — "O YHWH our God, lords other than you have ruled over us" — the historical confession of unfaithfulness and subjugation to foreign powers. <strong>raq-bĕkā nazkîr šĕmekā</strong> — "but through you alone do we acclaim your name" — the exclusive focus on YHWH as the only name worth calling upon emerges from the history of failed alternatives.</p>',
+    "14": '<p><strong>mētîm bal-yiḥyû rĕpāʾîm bal-yāqûmû</strong> — "the dead will not live; the shades/departed spirits will not rise" — a specific group (the oppressive lords of v.13) will not experience resurrection; their memory is destroyed (<em>lakēn pāqadtā wattašmîdēm</em>). This is in deliberate contrast with v.19 where YHWH\'s dead will rise — the distinction between those under divine judgment (no resurrection) and those under divine covenant (resurrection).</p>',
+    "15": '<p><strong>yāsaptā laggôy Yhwh yāsaptā laggôy</strong> — "you have added to the nation, O YHWH, you have added to the nation" — the repeated verb emphasizes the extension of Israel through the ingathering of exiles and gentile converts. YHWH is glorified (<em>nikbadtā</em>) and has extended all the borders of the land. The double accent on increase/addition is the opposite of the diminishment of the corrupt city (vv.5-6).</p>',
+    "16": '<p><strong>Yhwh bĕṣar pĕqādûkā</strong> — "YHWH, in distress they sought you" (<em>pāqad</em>, to seek out, attend to — here the people attend to God precisely when in trouble). <strong>ṣāqûn laḥaš mûsar</strong> — "they poured out a whispered/quiet prayer for discipline" — the word <em>laḥaš</em> (H3908) connotes whispering, quiet prayer, perhaps muttered under duress. Distress drives the community to YHWH when prosperity does not.</p>',
+    "17": '<p><strong>kĕmô hārâ taqrîḇ lālēdet tāḥîl tizʿaq bĕḥeblêhā</strong> — "like a pregnant woman approaching delivery who writhes and cries out in her labor pains" — the simile for the community\'s condition before YHWH. The birth metaphor is carefully developed: the pain is real, the outcome is expected, but the next verse reveals the tragic surprise.</p>',
+    "18": '<p>The tragedy: <strong>hārînû ḥalnû kĕmô yālādnû rûaḥ</strong> — "we were with child, we writhed in pain, but we gave birth to wind/nothing" (<em>rûaḥ</em> here means wind, emptiness). No salvation has been accomplished on earth (<em>lōʾ naʿăśeh ṣĕdāqôt bāʾāreṣ</em>); the inhabitants of the world have not fallen (<em>wĕbal-yippĕlû yōšĕbê ṯēḇēl</em>). Human striving and even prophetic promise has produced nothing — only YHWH\'s intervention (v.19) can bring the dead to life.</p>',
+    "19": '<p><strong>yiḥyû mētêkā nĕbēlātî yāqûmûn</strong> — "your dead will live; my corpses/body (<em>nĕbēlāh</em>) will arise" — an explicit resurrection declaration, directly countering vv.14,18. <strong>hāqîṣû wĕrannĕnû šōkĕnê ʿāpār</strong> — "awake and sing, you who dwell in the dust" — the reversal of death-sleep into singing. <strong>ṭal ʾôrōt ṭallekā</strong> — "for your dew is a dew of light" — resurrection is connected to the dew that preserves life in arid seasons; <em>ṭal ʾôrōt</em> (dew of lights) may image the resurrection glory.</p>',
+    "20": '<p><strong>lĕkā ʿammî bōʾ bĕḥăḏāreykā ûsĕgōr dĕlatōtêkā baʿăḏekā</strong> — "come, my people, enter your rooms/chambers, and shut your doors behind you" — the hiding of God\'s people during the moment of judgment echoes the Passover (Exod 12:22-23: stay inside, blood on the doorposts) and the Flood (Noah shut in the ark). <strong>ḥăbî kimaṭ-rageʿ ʿad-yaʿăbōr-zāʿam</strong> — "hide for a little while until the wrath has passed."</p>',
+    "21": '<p><strong>kî-hinnēh Yhwh yōṣēʾ mimĕqōmô</strong> — "for behold, YHWH is coming out of his place" — the decisive divine self-disclosure in judgment. <strong>lipqōd ʿăwōn yōšēb hāʾāreṣ ʿālāyw</strong> — "to punish the iniquity of the earth\'s inhabitants against him." The earth will disclose (<em>tigalleh</em>) its blood — the unjust blood shed throughout history will be exposed and the earth will no longer cover (<em>wĕlōʾ tĕkasseh ʿôd</em>) it. Justice will be complete.</p>',
   },
-  "11": {
-    "1": [
-      {"type": "fulfillment", "target": "Rom 15:12", "note": "The root of Jesse who rises to rule the Gentiles — Paul cites Isa 11:10 (the root of Jesse as a signal for the nations) as fulfilled in Christ's universal lordship over Gentiles"},
-      {"type": "fulfillment", "target": "Rev 5:5", "note": "The Root of David has conquered — Revelation applies the Root of Jesse/David imagery of Isa 11:1 to the risen Christ who has conquered; the shoot from the stump of Jesse is the crucified-and-risen Messiah"}
-    ],
-    "2": [
-      {"type": "fulfillment", "target": "John 1:32-33", "note": "The Spirit of the LORD shall rest upon him — the anointing Spirit of Isa 11:2 is visibly manifest when the Spirit descends as a dove at Jesus's baptism; the Spirit resting on Christ at baptism marks the beginning of the Isaianic messianic anointing"}
-    ]
+  "27": {
+    "1": '<p><strong>liwyātān nāḥāš bārîaḥ</strong> — "Leviathan, the fleeing serpent"; <strong>liwyātān nāḥāš ʿăqallātôn</strong> — "Leviathan, the twisting/coiling serpent"; <strong>hattannîn ʾăšer bayyām</strong> — "the dragon that is in the sea." These are the three names of the cosmic chaos-monster from Canaanite mythology (attested in Ugaritic texts as Lotan). YHWH\'s <em>ḥereb qāšâ ûgĕdôlâ ûḥăzāqâ</em> (hard, great, and strong sword) will slay it. The Day of the LORD inaugurates the defeat of cosmic chaos.</p>',
+    "2": '<p><strong>kerem ḥemed</strong> — "vineyard of delight/desire" (<em>ḥemed</em>, H2532, desirable, lovely). This vineyard is presented positively — in contrast to 5:1-7\'s vineyard that produced wild grapes and was destroyed. The shift is significant: the same vineyard imagery now pictures YHWH\'s relationship to his people as one of delight rather than disappointment. <strong>ʿannû lāh</strong> — "answer/sing about it" — the song is one of celebration.</p>',
+    "3": '<p><strong>ʾănî Yhwh nōṣĕrāh</strong> — "I, YHWH, am its keeper/guardian" (<em>nāṣar</em>, H5341, to guard, watch, preserve). The comparison with the withered vineyard of ch. 5 is deliberate: there YHWH removed his protection; here he personally provides continuous irrigation (<em>lirgāʿîm ʾašqennāh</em>, "moment by moment I water it") and guards it day and night (<em>pen yipqōd ʿāleyhā</em>).</p>',
+    "4": '<p><strong>ḥēmâ ʾên lî</strong> — "I have no wrath" — YHWH\'s posture toward his now-restored vineyard is one from which anger has departed. The only thing that might provoke his engagement is <em>šāmîr wāšayit</em> (briers and thorns, which represent external enemies or internal sin) — but even then he would march (<em>ʾemdēhā</em>) through them and burn them together (<em>yāḥad ʾaṣṣîtennāh</em>).</p>',
+    "5": '<p><strong>ô yĕḥāzeq bĕmaʿûzzî</strong> — "or let him take hold of my fortress/protection" — an alternative to being burned: seeking YHWH\'s protection by making peace (<em>šālôm yaʿăśeh lî</em>). The offer is open: <em>yaʿăśeh šālôm lî</em> — "let him make peace with me." This unexpected clemency in the middle of an oracle against the enemies of the vineyard models YHWH\'s willingness to receive any who turn to him.</p>',
+    "6": '<p><strong>hayyābāʾîm</strong> — "in coming days" (the plural of <em>bāʾ</em>, the ones coming/what is to come — a temporal expression for the eschatological future). Israel will blossom (<em>yiprāḥ</em>), sprout (<em>ûparāḥ</em>), and fill the face of the world (<em>ûmillĕʾû pĕnê-ṯēḇēl tĕnûʾâ</em>) with fruit. The agricultural imagery carries the eschatological restoration — the people of YHWH become fruitful in a way that blesses the entire inhabited world.</p>',
+    "7": '<p>The rhetorical question: <strong>hakĕmakkat makkēhû hikkāhû</strong> — "has he (YHWH) struck him (Israel) as he struck those who struck him?" The answer is implied: no — YHWH\'s discipline of Israel, though real, is not the same as his judgment on Israel\'s enemies. <strong>ʾim-kĕhereḡ hărûgāyw hōrāg</strong> — "has he killed as those who killed him were killed?" The graduated distinction in severity of punishment is a statement of divine mercy within judgment.</p>',
+    "8": '<p><strong>bĕsaʾssēʾâ bĕšallĕḥāh tĕrîḇennāh</strong> — "by driving her away, by sending her away, you contended with her" (<em>rîḇ</em>, to contend at law, to dispute). The exile is framed as a legal dispute in which YHWH argues his case against his people. <strong>hāgâ bĕrûḥô haqqāšâ bĕyôm qādîm</strong> — "he drove her away with his harsh/east wind on a day of the east wind" — the east wind (<em>qādîm</em>) is the hot, destructive desert wind from the east, used as a metaphor for divine judgment (cf. Jer 18:17; Hos 13:15).</p>',
+    "9": '<p><strong>lākēn bĕzōʾt yĕkuppār ʿăwōn-yaʿăqōb</strong> — "therefore by this will the iniquity of Jacob be covered/atoned for" (<em>kāpar</em>, H3722, to cover, to make atonement). The instrument of atonement is the removal of sin — specifically the destruction of the altars and Asherah poles (<em>ʾăšērîm</em>) and incense altars (<em>ḥammānîm</em>) that represented the sin. The atonement is enacted through the exile\'s purification of idolatry from the people.</p>',
+    "10": '<p>The fortified city (<em>ʿîr bĕṣûrâ</em>) is desolate (<em>bāḏāḏ</em>) — an image of Samaria or Jerusalem after conquest. <strong>nĕwēh mĕšullāḥ</strong> — "an abandoned/deserted habitation" — the city that expelled its inhabitants is now itself deserted, its land serving only as pasture (<em>wirʿâ šām ʿēgel</em>). The calf grazing on the ruins of a great city is the ultimate image of civilization reduced to wilderness.</p>',
+    "11": '<p><strong>biyḇôš qĕṣîrāh tišbarnâ</strong> — "when its boughs are dry, they are broken off" (<em>yāḇēš</em>, dry/withered; <em>šāḇar</em>, break). The women come and kindle fire with the branches — the ruins become fuel. <strong>ʿam lōʾ-bînôt hûʾ</strong> — "it is a people without understanding/discernment" — the theological diagnosis that makes judgment inevitable. Without understanding of YHWH\'s ways, there is no path to blessing.</p>',
+    "12": '<p><strong>wĕhāyâ bayyôm hahûʾ yāḥbōṭ Yhwh</strong> — "on that day YHWH will beat out/thresh" (<em>ḥābaṭ</em>, H2251, to beat grain from stalks) — the gathering image. From the Euphrates River (<em>nahar</em>) to the Brook of Egypt (<em>naḥal miṣrayim</em>), YHWH will glean the scattered Israelites one by one (<em>ʾeḥāḏ ʾeḥāḏ</em>). The careful individual gathering is the opposite of mass deportation — YHWH brings his people home one at a time.</p>',
+    "13": '<p><strong>wĕhāyâ bayyôm hahûʾ yiqqāʿēʾ bĕšôpār gāḏôl</strong> — "on that day a great trumpet will be blown" (<em>šôpār gāḏôl</em>, the great ram\'s horn). The lost ones (<em>hāʾōbĕḏîm</em>) in Assyria and the scattered ones (<em>hanniddāḥîm</em>) in Egypt will come and worship (<em>hištaḥăwû lYhwh</em>) on the holy mountain in Jerusalem. The great trumpet of eschatological ingathering is developed in Matt 24:31 (the Son of Man\'s angels with a great trumpet) and 1 Cor 15:52 (the last trumpet at resurrection).</p>',
   },
-  "40": {
-    "3": [
-      {"type": "fulfillment", "target": "Mark 1:2-4", "note": "The voice of one crying in the wilderness: Prepare the way of the LORD — all four Gospels cite Isa 40:3 as fulfilled in John the Baptist; the voice calling for the preparation of YHWH's way is the one who announces the arrival of Jesus, whose way John prepares"}
-    ]
+  "28": {
+    "1": '<p><strong>hôy ʿăṭeret gēʾût šikkōrê ʾeprayim</strong> — "Woe to the proud crown of the drunkards of Ephraim!" The northern capital Samaria is described as a crown (<em>ʿăṭeret</em>) perched on the head of a fertile valley (<em>gēʾ šĕmānîm</em>). The crown is simultaneously their pride and their symbol of power. <strong>ṣîṣ nōḇēl ṣĕḇî tipʾartô</strong> — "a fading flower of his glorious beauty" — the ephemeral crown will wither like a flower. Historically: Samaria fell to Assyria in 722 BCE.</p>',
+    "2": '<p><strong>hinnēh ḥāzāq wĕʾammîṣ lāʾāḏōnāy</strong> — "the LORD has one who is mighty and strong" — Assyria is YHWH\'s instrument. The imagery: a driving storm of hail (<em>zerem bārāḏ saʿar qāṭeb</em>) and flooding waters (<em>zerem mayim kabbîrîm šōṭĕpîm</em>). The natural forces are weaponized as divine judgment. The proud crown of Ephraim (Samaria) will be overwhelmed by the very forces that seemed to surround it safely.</p>',
+    "3": '<p><strong>bĕreglāyim tĕrûmmanâ ʿăṭeret gēʾût šikkōrê ʾeprayim</strong> — "the proud crown of the drunkards of Ephraim will be trampled underfoot" — the literal trampling fulfills the metaphor of vv.1-2. The crown of pride (<em>ʿăṭeret gēʾût</em>) becomes refuse underfoot — the reversal from head-covering to foot-contact is total humiliation.</p>',
+    "4": '<p><strong>wĕhāyĕtâ ṣîṣat nōḇēl ṣĕḇî tipʾartô</strong> — "the fading flower of his glorious beauty" repeats v.1\'s image but adds the resolution: it will be like a first-ripe fig (<em>bikkûrâ</em>) before the summer, which the one who sees it immediately swallows (<em>biltĕʿennāh</em>). The first fig of the season is devoured on sight — the eagerness of the destroyer matches the sudden vulnerability of the city.</p>',
+    "5": '<p><strong>bayyôm hahûʾ yihyeh Yhwh ṣĕbāʾôt lĕʿăṭeret ṣĕbî</strong> — "on that day YHWH of hosts will be a crown of beauty" (<em>ʿăṭeret ṣĕbî</em>) — the divine substitute for the human proud crown of Ephraim. YHWH himself becomes the crown, the glory, and the diadem (<em>ṣĕpîrat tipʾārâ</em>) for the remnant of his people (<em>lišĕʾār ʿammô</em>). The same imagery used to describe Samaria\'s pride is redirected to describe YHWH\'s presence with the faithful remnant.</p>',
+    "6": '<p><strong>rûaḥ mišpāṭ lĕyôšēḇ hammišpāṭ</strong> — "a spirit of justice to the one who sits in judgment" — the judicial function rightly discharged when YHWH is the crown; <strong>ûgĕḇûrâ lĕmĕšîḇê milḥāmâ šāʿrâ</strong> — "strength to those who turn back the battle at the gate." The gate was both the court and the last line of defense — YHWH\'s presence enables both true justice and effective defense.</p>',
+    "7": '<p>Now Isaiah turns to Judah and Jerusalem: <strong>wĕgam-ʾēlleh bayyāyin šāgû</strong> — "but even these stagger with wine" (<em>šāgâ</em>, H7686, to go astray, err, stagger). The same drunkard imagery applied to Ephraim now indicts Jerusalem. The priest (<em>kōhēn</em>) and the prophet (<em>nāḇîʾ</em>) specifically are drunk — those responsible for justice and revelation have compromised their office through intoxication and thus error in vision (<em>bāreʾâ pāqû</em>) and judgment (<em>kāšĕlû bammišpāṭ</em>).</p>',
+    "8": '<p><strong>kî kol-šulḥānôt māleʾû qîʾ ṣōʾâ bĕlî māqôm</strong> — "for all tables are full of vomit and filth" — the graphic image of a banquet hall defiled by the drunkenness of those who ate there. The prophetic indictment uses the physical reality of the consequence of drunkenness to symbolize the moral-spiritual state of the leadership: what should be the table of holy counsel and sacred meal has become a site of degradation.</p>',
+    "9": '<p>The mocking response of the drunken leaders to Isaiah: <strong>ʾet-mî yôreh ḏēʿâ</strong> — "whom will he teach knowledge?" and <strong>ʾet-mî yāḇîn šĕmûʿâ</strong> — "to whom will he explain the message?" — the sarcastic questions imply: does he think we are children, just weaned from milk (<em>gĕmûlê mēḥālāḇ ʿattîqê miššādāyim</em>)? The leaders reject the simplicity of YHWH\'s instruction as beneath their sophistication.</p>',
+    "10": '<p><strong>kî ṣaw lāṣaw ṣaw lāṣaw qaw lāqaw qaw lāqaw</strong> — the debated phrase: either (a) the leadership mocks Isaiah\'s teaching as baby-talk (<em>ṣaw</em> and <em>qaw</em> as meaningless syllables), or (b) Isaiah describes YHWH\'s patient repetitive instruction (line upon line, precept upon precept — <em>zĕʿēr šām zĕʿēr šām</em>). The ambiguity may be intentional: what the leaders mock as childish repetition is actually YHWH\'s gracious teaching method.</p>',
+    "11": '<p><strong>kî bĕlaʿăgê śāpâ ûblĕšôn ʾaḥeret yĕdabbēr ʾel hāʿam hazzeh</strong> — "for by people of strange lips and a foreign tongue he will speak to this people" — YHWH will use the incomprehensible language of the Assyrian army as his word to the people who would not hear clear Hebrew instruction. Paul quotes this verse in 1 Cor 14:21 as a text about tongues (<em>glossolalia</em>) — the sign of tongues addressed to those who do not believe.</p>',
+    "12": '<p><strong>ʾăšer ʾāmar ʾălêhem zōʾt hammĕnûḥâ hānîḥû lĕʿāyēp</strong> — "who said to them, \'This is the resting place; let the weary rest\'" — YHWH offered rest (<em>mĕnûḥâ</em>) through his instruction, but they would not hear. <strong>wĕlōʾ ʾāḇû šĕmôaʿ</strong> — "and they were not willing to listen." The refusal of offered rest is a persistent Isaianic motif (cf. 30:15: "in returning and rest you shall be saved") that Hebrews 3-4 develops as the warning against refusing the Sabbath-rest in Christ.</p>',
+    "13": '<p>The consequence: the word of YHWH (<em>dĕbar Yhwh</em>) that they refused now comes to them as <em>ṣaw lāṣaw ṣaw lāṣaw</em> — the very thing they mocked becomes the instrument of their stumbling (<em>kāšĕlû wĕnāplû</em>), being broken (<em>wĕnišbārû</em>), trapped (<em>wĕnôqĕšû</em>), and taken (<em>wĕnillākĕdû</em>). The four verbs of destruction progressively increase in finality.</p>',
+    "14": '<p><strong>lākēn šimʿû dĕbar Yhwh ʾanšê lāṣôn</strong> — "therefore hear the word of YHWH, you scoffers (<em>lāṣôn</em>, H3944, those who mock/deride)" — the address to the leaders of Jerusalem who have struck a deal with Egypt against Assyria. The term <em>ʾanšê lāṣôn</em> (men of scoffing/mockery) identifies the ruling class\'s defining posture toward prophetic warning.</p>',
+    "15": '<p><strong>kāratnû bĕrît ʾet-māwet wĕʿim-šĕʾôl ʿāśînû ḥōzeh</strong> — "we have made a covenant with death, and with Sheol we have an agreement (<em>ḥōzeh</em>)." The Jerusalem leaders\' claim — that they have a deal that will protect them from the coming "overflowing scourge" (<em>šôṭ šôṭēp</em>) by hiding in lies (<em>šeqer maḥsēnû</em>) and falsehood (<em>bāšāqer nistaranû</em>). The political alliance with Egypt is metaphorized as a covenant with death itself.</p>',
+    "16": '<p><strong>hinnēh yissaḏ bĕṣiyyôn ʾāben ʾeben bōḥan pinnāt yiqrat mûssāḏ mûssāḏ</strong> — "Behold, I am laying in Zion a stone, a tested/proven stone, a precious cornerstone as a sure foundation." The cornerstone that YHWH lays contrasts with the false foundation the leaders have built on lies. <strong>hammaʾămîn lōʾ yāḥîš</strong> — "the one who believes/trusts will not flee/be in haste." This verse is cited in Rom 9:33; 1 Pet 2:6-8; Matt 21:42 — the NT identifies Christ as this tested cornerstone.</p>',
+    "17": '<p><strong>wĕśamtî mišpāṭ lĕqāw ûṣĕdāqâ lĕmišqālet</strong> — "I will make justice the measuring line (<em>qāw</em>) and righteousness the plumb line (<em>mišqālet</em>)" — the precise measurement of <em>mišpāṭ</em> and <em>ṣĕdāqâ</em> will expose the false foundation. The same <em>qāw</em> word used mockingly in vv.10,13 now becomes the divine measuring instrument. <strong>yissaḥ bārāḏ māḥăseh kāzāb</strong> — "hail will sweep away the refuge of lies" — the covenant with death is undone.</p>',
+    "18": '<p><strong>wĕkuppar bĕrîtĕkem ʾet-māwet</strong> — "your covenant with death will be annulled/covered" (<em>kāpar</em>, the atonement/covering verb used here for cancellation). The overflowing scourge (<em>šôṭ šôṭēp</em>) will come and they will be trampled by it (<em>wahyîtem lô lĕmirmās</em>). The false security is stripped away: every time the scourge passes it will take them (<em>yiqqaḥ ʾetkem</em>).</p>',
+    "19": '<p><strong>miggap ʿôbĕrô yiqqaḥ ʾetkem</strong> — "each time it passes, it will take you" — the repeated assault. <strong>kî-baqqer baqqer yaʿăbōr bayyôm wāballaylâ</strong> — "morning by morning it will pass, by day and by night." The relentlessness of the judgment is its defining quality. <strong>raq šĕmûʿâ hăḇîn ʾet-haššĕmûʿâ</strong> — "it will be nothing but terror to understand the message" — the very understanding of what YHWH has said will itself be terrifying.</p>',
+    "20": '<p><strong>kî qāṣar hammittâ mihistārēaʿ</strong> — "for the bed is too short to stretch out on" — the proverbial saying (too short to lie in, too narrow to wrap in) describes the inadequacy of the false security. The Egyptian alliance is like a bed that is too small and a blanket that is too narrow — it cannot actually cover the danger or provide the promised rest.</p>',
+    "21": '<p><strong>kî kĕhar pĕrāṣîm yāqûm Yhwh</strong> — "for YHWH will rise up as at Mount Perazim" (2 Sam 5:20, where YHWH broke out against the Philistines for David); <strong>kĕʿēmeq bĕgiḇʿôn yirgeʿ</strong> — "as in the valley of Gibeon he will storm" (probably Jos 10:10-11). <strong>maʿăśēhû zār maʿăśēhû</strong> — "his work is strange/alien, his deed is foreign" — judgment against his own people Israel/Judah is unnatural to YHWH; mercy and restoration are his characteristic work. Discipline is the exception, not the norm.</p>',
+    "22": '<p><strong>wĕʿattâ ʾal-titṣaḥăqû</strong> — "therefore do not scoff" — the direct warning to the scoffers addressed in v.14. The restraint from scoffing is grounded in the fact that YHWH of hosts has told him (<em>kī kālâ wĕneḥĕrāṣâ šāmaʿtî mēʾēt ʾăḏōnāy Yhwh ṣĕḇāʾôt ʿal-kol-hāʾāreṣ</em>) "a decreed end/destruction upon the whole earth." The cosmic scope of what has been determined makes mockery both foolish and dangerous.</p>',
+    "23": '<p><strong>haʾăzînû ûšimʿû qôlî haqšîḇû ûšimʿû ʾimrātî</strong> — "give ear and hear my voice; be attentive and hear what I say" — the introduction to the agricultural parable (vv.24-29). The call to attentive listening (<em>haʾăzîn</em>, <em>šāmaʿ</em>, <em>hiqšîḇ</em> — three hearing verbs) signals that what follows requires careful thought, not surface reading.</p>',
+    "24": '<p>The farmer does not plow all day to prepare the ground — he plows in order to plant (<em>yiphattaḥ wîśadded ʾaḏmātô</em>, he opens and breaks up his ground). <strong>hal kol-hayyôm yaḥărōš haḥōrēš</strong> — "does the plowman plow all day?" The rhetorical question expects "no" — preparation serves a purpose beyond itself. The parable will draw an analogy to divine action: YHWH\'s destructive work (plowing) serves a constructive purpose (harvest).</p>',
+    "25": '<p>After preparing the ground, the farmer sows in order: <em>qeṣaḥ</em> (dill/black cumin) and <em>kammōn</em> (cumin) are scattered; <em>ḥiṭṭâ</em> (wheat) and <em>śĕʿōrâ</em> (barley) are planted in rows; <em>kussemeth</em> (spelt/emmer) at the border. Each seed has its own proper place (<em>nismān śĕʿōrâ ûkussemeth gebûlātô</em>) — the farmer arranges according to the nature of each crop. The specificity of agricultural knowledge here reflects real Palestinian farming practice.</p>',
+    "26": '<p><strong>wĕyissĕrô lammišpāṭ</strong> — "and he instructs him for the right order/justice" — YHWH is the source of the farmer\'s knowledge. <strong>ʾĕlōhāyw yôrennû</strong> — "his God teaches him." The agricultural wisdom of the skilled farmer is itself a form of divine instruction — wisdom about the natural world and wisdom about YHWH\'s governance share the same source.</p>',
+    "27": '<p>Different crops require different threshing methods: <em>qeṣaḥ</em> is not threshed with a threshing sledge (<em>bĕḥārûṣ</em>) — it is beaten out with a stick (<em>bĕmaṭṭeh</em>); <em>kammōn</em> not with a wagon wheel (<em>ʾôpan ʿăgālâ</em>) — with a rod (<em>bĕšāḇeṭ</em>). The delicate seeds require delicate methods. The implication for divine action: YHWH applies graduated, appropriate judgment, not indiscriminate force.</p>',
+    "28": '<p>Grain is crushed but not infinitely — the thresher does not thresh it forever (<em>lōʾ lāneṣaḥ yādûš</em>); when he drives the wagon wheel and horses over it, he does not grind it (<em>lōʾ yĕšōḥeqennû</em>). The grain is threshed to free the kernel, not to destroy it. <strong>galgal ʿeglātô ûpārāšāyw lōʾ yĕdaqqennû</strong> — "he does not powder it with his wagon wheel and horses." The restraint of the divine thresher mirrors the farmer\'s wisdom.</p>',
+    "29": '<p><strong>gam-zōʾt mēʾim Yhwh ṣĕbāʾôt yāṣāʾâ</strong> — "this also comes from YHWH of hosts" — the agricultural wisdom of the parable is explicitly claimed as coming from YHWH. <strong>hipliʾ ʿēṣâ hiḡdîl tûšiyyâ</strong> — "he is wonderful in counsel (<em>pālāʾ</em>, the same root as in 9:6\'s <em>pele-yôʿēṣ</em>, Wonderful Counselor), and excellent in wisdom (<em>hiḡdîl tûšiyyâ</em>, made great the sound wisdom)." The agricultural parable thus closes with a title that ties Isaiah 28 to Isaiah 9 — YHWH\'s wisdom in governing history is as careful and purposeful as a skilled farmer\'s wisdom in managing his harvest.</p>',
   },
-  "42": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 12:18-21", "note": "Behold my servant whom I have chosen, my beloved in whom my soul delights — Matthew cites the first Servant Song (Isa 42:1-4) at length as fulfilled in Jesus's withdrawal from controversy and gentle healing ministry; the bruised reed he would not break is his treatment of the vulnerable"}
-    ]
-  },
-  "49": {
-    "6": [
-      {"type": "fulfillment", "target": "Acts 13:47", "note": "I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth — Paul and Barnabas cite Isa 49:6 as their scriptural warrant for turning to the Gentiles; the Servant's mission to be a light to the nations is the apostolic commission"},
-      {"type": "fulfillment", "target": "Luke 2:32", "note": "A light for revelation to the Gentiles and for glory to your people Israel — Simeon's Nunc Dimittis applies Isa 49:6 to the infant Jesus; the Servant's mission as light-to-nations is announced over Jesus at the temple presentation"}
-    ]
-  },
-  "52": {
-    "15": [
-      {"type": "fulfillment", "target": "Rom 15:21", "note": "Those who were never told about him will see, and those who have never heard will understand — Paul cites Isa 52:15 as his apostolic principle for pioneer mission: to proclaim where Christ has not been named, fulfilling the Servant's revelation to nations who never heard"}
-    ]
-  },
-  "53": {
-    "1": [
-      {"type": "fulfillment", "target": "John 12:38", "note": "Who has believed what he heard from us? — John cites Isa 53:1 to explain Israel's unbelief despite Jesus's signs; the question of Isa 53 (who believed the Servant-report?) is the question that frames the rejection of Jesus"},
-      {"type": "fulfillment", "target": "Rom 10:16", "note": "Lord, who has believed what he heard from us? — Paul cites Isa 53:1 to explain Israel's failure to embrace the gospel; the Servant's rejected message is the gospel that Israel stumbles over"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Matt 8:17", "note": "He took our illnesses and bore our diseases — Matthew cites Isa 53:4 in connection with Jesus's healing ministry; the Servant's bearing of human disease and suffering is enacted in Jesus's healings, not only in his atoning death"}
-    ],
-    "7": [
-      {"type": "fulfillment", "target": "Acts 8:32-33", "note": "He was led like a sheep to the slaughter and like a lamb before its shearer is silent — Philip reads Isa 53:7-8 to the Ethiopian eunuch and proclaims Jesus as the fulfillment; the silent suffering of the Servant is Jesus's silent submission to his accusers and executioners"}
-    ],
-    "12": [
-      {"type": "fulfillment", "target": "Luke 22:37", "note": "And he was numbered with the transgressors — Jesus at the Last Supper applies Isa 53:12 to himself: this must be fulfilled in me; the Servant's identification with sinners is Jesus's crucifixion between two criminals"}
-    ]
-  },
-  "61": {
-    "1": [
-      {"type": "fulfillment", "target": "Luke 4:18-19", "note": "The Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor — Jesus reads Isa 61:1-2 in the Nazareth synagogue and says: Today this Scripture has been fulfilled in your hearing; his entire ministry is the proclamation of the Jubilee-anointing of Isa 61"}
-    ]
-  },
-  "65": {
-    "17": [
-      {"type": "fulfillment", "target": "2 Cor 5:17", "note": "I create new heavens and a new earth — Paul's new creation language in 2 Cor 5:17 (if anyone is in Christ, new creation) draws from Isa 65:17's eschatological promise; the new creation is already present in Christ"},
-      {"type": "fulfillment", "target": "Rev 21:1", "note": "Then I saw a new heaven and a new earth — Revelation's new creation vision fulfills Isa 65:17 and 66:22 literally; John sees the eschatological reality that Isaiah prophesied in the vision of the New Jerusalem"}
-    ]
-  }
-}
-
-ISA_ORIGINAL = {
-  "6": {
-    "3": "<p><strong>kadosh kadosh kadosh YHWH tsvaot melo kol-haaretz kevodo</strong> (<em>qādôš qādôš qādôš Yhwh ṣĕbāʾôt, mĕlōʾ kāl-hāʾāreṣ kĕbôdô</em>): 'Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory.' The Trisagion is the foundational liturgical text of Jewish and Christian worship. <em>Kadosh</em> (holy) in Hebrew means primarily 'set apart, other, distinct' — YHWH is wholly other from creation. The threefold repetition (<em>shalosh</em>) conveys absolute superlative in Hebrew (cf. Gen 14:10: 'many/many/many pits' = full of pits; Jer 22:29: 'O earth, earth, earth') — not a Trinitarian formula in context, but available for Trinitarian appropriation given its threefold address. <em>Tsvaot</em> (of hosts/armies): YHWH as commander of the heavenly armies — the most frequent divine title in Isaiah (62 occurrences in the book).</p>"
-  },
-  "7": {
-    "14": "<p><strong>hinei haalmah harah veyoledet ben veqarat shemo immanuel</strong> (<em>hinnēh hāʿalmāh hārāh wĕyōledet bēn wĕqārāt šĕmô ʿimmānûʾēl</em>): 'Behold the young woman is with child and shall bear a son and shall call his name Immanuel.' The philological crux: <em>almah</em> (young woman) vs. the LXX <em>parthenos</em> (virgin). <em>Almah</em> means 'young woman of marriageable age' — not a technical term for biological virginity (which is <em>betulah</em>). However, in context an unmarried <em>almah</em> would normally be a virgin; Matthew's use of LXX <em>parthenos</em> sees the deeper Christological fulfillment where the historical sign (birth within a year to a young woman in Ahaz's time) is transcended by the ultimate Immanuel born without a human father — the literal 'God with us.'</p>"
-  },
-  "40": {
-    "3": "<p><strong>qol qore bamidbar panu derek YHWH yasheru baaravah mesillah lelohenu</strong> (<em>qôl qôrēʾ bammidbar pannû derek Yhwh yašĕrû bāʿărābāh mĕsillāh lēʾlōhênû</em>): 'A voice crying in the wilderness: Prepare the way of the LORD; make straight in the desert a highway for our God.' The four Gospels unanimously apply this voice to John the Baptist. Critically, the original syntax is ambiguous: is the voice 'in the wilderness' (most translations) or does the voice cry 'Prepare the way of the LORD in the wilderness' (Mark 1:3 seems to read the wilderness phrase with the road-preparation)? The Qumran community (1QS 8:14) cited this same verse for their own desert withdrawal — interpreting 'preparing the way' as Torah-study. The NT's application to John is the contested alternative: the way is prepared through proclamation, not desert community-formation.</p>"
-  },
-  "52": {
-    "13": "<p><strong>hinneh yaskil avdi yarum venissa vegavah meod</strong> (<em>hinnēh yašĕkîl ʿabdî yārûm wĕniśśāʾ wĕgābahh mĕʾōd</em>): 'Behold, my servant shall act wisely; he shall be high and lifted up and shall be exalted.' The fourth Servant Song (52:13-53:12) opens with the Servant's triumph — <em>yarum venissa vegavah</em> (high, lifted up, exalted) — three verbs used for YHWH's own majesty in Isa 6:1 and 33:10. The Servant shares the divine exaltation-vocabulary. The shock of the Song: the path to this exaltation is through disfigurement so severe that people were appalled (52:14), and the means of exaltation is vicarious suffering (53:4-6). The Hebrew <em>nasa</em> (to bear/lift) runs through the Song: 52:13 (be lifted up), 53:4 (bore our griefs), 53:11 (bear their iniquities), 53:12 (bore the sin of many) — the lifting of the Servant and his bearing of sin are different sides of the same word.</p>",
-
-    "7": "<p><strong>noogesh vehu naaneh velo yiptach piv kesh latabach yuval vekrachel lifnei gozezeiha nelamah velo yiftach piv</strong>: 'He was oppressed and he was afflicted, yet he opened not his mouth; like a lamb that is led to the slaughter, and like a sheep that before its shearers is silent, so he opened not his mouth.' The lamb-image combines the Passover lamb (Exod 12) and the Day of Atonement offering — an intentional fusion of Israel's two great atoning sacrifices. The silence contrasts with every protest of innocence in biblical lament-psalms: the Servant has no claim to make, no defense to offer — or rather, his silence is itself the defense, the refusal to protect himself from the death that will accomplish others' salvation. Peter applies this silence to Christ's non-retaliation (1 Pet 2:23) and Luke applies the lamb-image to the Ethiopian eunuch's question about Isa 53:7 (Acts 8:32-33).</p>"
-  }
-}
-
-ISA_CONTEXT = {
-  "1": {
-    "1": "<p>Isaiah ben Amoz prophesied under four Judean kings: Uzziah, Jotham, Ahaz, and Hezekiah (ca. 740-686 BCE), spanning the Assyrian crisis and its aftermath. His call-vision (ch. 6) was in the year Uzziah died — a political transition when the nation faced the rising Assyrian threat under Tiglath-Pileser III. Isaiah's ministry context: the Northern Kingdom fell to Assyria in 722 BCE (referenced in Isa 7-8; 28); Jerusalem survived the siege of Sennacherib in 701 BCE (ch. 36-39). The 'Deutero-Isaiah' debate: many critical scholars argue that chs. 40-66 come from a later author writing during the Babylonian exile (ca. 550-530 BCE), given the specific naming of Cyrus (44:28; 45:1) and the Babylonian setting of chs. 40-55. Conservative scholars hold single Isaianic authorship under divine foreknowledge. The canonical unity of the book is supported by the NT's consistent attribution of both halves to 'Isaiah.'</p>"
-  },
-  "53": {
-    "1": "<p>The fourth Servant Song (Isa 52:13-53:12) has been interpreted in Jewish tradition as: (1) collective Israel suffering in exile and ultimately vindicated; (2) the righteous remnant of Israel; (3) an individual historical figure (Jeremiah, Moses, Hezekiah, or a suffering prophet). Early Jewish sources (1QIs, Targum Jonathan, b. Sanhedrin 98b where some rabbis applied it to the Messiah) show a live debate. The NT unanimously applies the Servant to Jesus (Matt 8:17; Luke 22:37; John 12:38; Acts 8:32; Rom 10:16; 1 Pet 2:22-24; Rev 5:6). The linguistic data: the Servant suffers vicariously ('for our sins', 'for our transgressions', 'the LORD laid on him the iniquity of us all'), is innocent ('no violence or deceit'), is exalted after suffering ('he shall see his offspring, he shall prolong his days'), and his suffering is efficacious ('by his knowledge shall the righteous one, my servant, make many to be accounted righteous').</p>"
-  },
-  "61": {
-    "1": "<p>The Spirit-anointing oracle of Isa 61:1-3 in its original context speaks of a prophetic figure commissioned to announce the Year of Jubilee (Lev 25) — the release of captives, the year of divine favor, the comfort of mourners. Whether Isa 61 belongs to 'Deutero-Isaiah' or 'Trito-Isaiah' (chs. 56-66), its Jubilee-economics for the poor were already a live text in Second Temple Judaism — Qumran's Melchizedek Scroll (11QMelch) applies Isa 61 to the eschatological release in the final Jubilee under Melchizedek. Jesus's Nazareth reading (Luke 4:18-21) claims to be this eschatological Jubilee-fulfillment: his ministry is the Year of the Lord's favor enacted in person.</p>"
-  }
-}
-
-ISA_CHRIST = {
-  "7": {
-    "14": "<p>A fulfillment: 'Behold the virgin shall conceive and bear a son, and they shall call his name Immanuel.' The historical sign (birth to a young woman in Ahaz's time) is the type; the antitype is Jesus's virginal conception by the Holy Spirit, which makes the 'God with us' name literal for the first time in history. Every previous 'Immanuel' moment (YHWH dwelling in the tabernacle, in the temple, with Israel) was mediated through materials and institutions; in Christ, God is with us in person, in flesh, without mediation. The Immanuel bookend that Matthew establishes (1:23 = Isa 7:14; 28:20 = 'I am with you always') frames the entire Gospel as the Immanuel narrative.</p>"
-  },
-  "42": {
-    "1": "<p>A direct revelation: 'Behold my servant whom I uphold, my chosen, in whom my soul delights; I have put my Spirit upon him; he will bring forth justice to the nations.' The first Servant Song is the OT's portrait of the Messiah as servant rather than conqueror. The divine delight in the Servant echoes at the baptism (Matt 3:17: 'my beloved Son, with whom I am well pleased') — the Father's Psalm 2 / Servant-declaration. The Spirit's endowment (v. 1) is the anointing that Luke 4:18 identifies with Jesus's public ministry. The justice-to-the-nations mission is the mandate for the Gentile mission of Acts. The first Servant Song defines Christ's method: gentle, persistent, non-violent, Spirit-empowered, globally-oriented justice.</p>"
-  },
-  "52": {
-    "13": "<p>A direct revelation: 'Behold, my servant shall act wisely; he shall be high and lifted up, and shall be exalted.' The Servant Songs reach their climax in the fourth song: the exaltation begins the song (52:13) and ends it (53:12: 'I will divide him a portion among the many, and he shall divide the spoil with the strong'). The Christological movement: wisdom → humiliation (disfigurement, rejection, death) → exaltation (he shall see his offspring, he shall prolong his days). The resurrection is implicit in 'he shall prolong his days' after 'he was cut off out of the land of the living' (53:8-10). The fourth Servant Song is the OT's clearest pre-figuration of the entire Christological narrative: incarnation, rejection, crucifixion, resurrection, and universal reign.</p>"
-  },
-  "53": {
-    "5": "<p>A direct revelation: 'He was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.' The substitutionary suffering of the Servant expressed in four parallel lines: (1) pierced for our transgressions; (2) crushed for our iniquities; (3) chastisement for our peace; (4) wounds for our healing. The preposition <em>lemaan</em>/<em>min</em> in Hebrew (for/because of/from our transgressions) carries causal weight — the Servant suffers not for his own sins but for others'. Peter cites v. 5b-c in 1 Pet 2:24 (by his wounds you have been healed) as the foundational text for Christ's atoning death. The fourfold parallelism is the OT's most precise statement of what the cross accomplishes.</p>",
-
-    "11": "<p>A direct revelation: 'Out of the anguish of his soul he shall see and be satisfied; by his knowledge shall the righteous one, my servant, make many to be accounted righteous, and he shall bear their iniquities.' The justification-language of Isa 53:11 — <em>yatsdiq</em> (make righteous/justify) + the many — is Paul's foundation for Pauline justification theology. The righteous Servant making many righteous by bearing their iniquities is the atonement-justification nexus that Romans 3-5 develops: Christ's obedient death (bearing iniquities) is the ground of the justified status of many. Isaiah 53:11 is the OT's closest approximation to Paul's 'he made him to be sin so that in him we might become the righteousness of God' (2 Cor 5:21).</p>"
-  },
-  "61": {
-    "1": "<p>A direct revelation: 'The Spirit of the Lord GOD is upon me, because the LORD has anointed me to bring good news to the poor; he has sent me to bind up the brokenhearted, to proclaim liberty to the captives and the opening of the prison to those who are bound; to proclaim the year of the LORD's favor.' Jesus's Nazareth declaration — 'Today this Scripture has been fulfilled in your hearing' (Luke 4:21) — is the most explicit Christological self-application of an OT text in the Gospels. Jesus is not a prophet announcing a future event; he is himself the eschatological year of favor. The Jubilee of Isa 61 (release from debt-slavery, return of land, restoration of community) is enacted wherever Christ's reign extends — in healing, exorcism, forgiveness, community inclusion.</p>"
-  }
 }
 
 def main():
-    e = load_echo('isaiah')
-    merge_echo(e, ISA_ECHO)
-    save_echo('isaiah', e)
-    print(f'Isaiah echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'isaiah')
-    merge_comm(c, ISA_ORIGINAL)
-    save_comm('mkt-original', 'isaiah', c)
-    print(f'Isaiah original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'isaiah')
-    merge_comm(c, ISA_CONTEXT)
-    save_comm('mkt-context', 'isaiah', c)
-    print(f'Isaiah context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'isaiah')
-    merge_comm(c, ISA_CHRIST)
-    save_comm('mkt-christ', 'isaiah', c)
-    print(f'Isaiah christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-original', 'isaiah')
+    merge_comm(existing, ISAIAH)
+    save_comm('mkt-original', 'isaiah', existing)
+    # INTENT: Verify all Isaiah 24-28 mkt-original verses present against interlinear
+    # CHANGE? If interlinear/isaiah.json verse counts change, update expected totals
+    # VERIFY: Console shows OK with all 98 verses; no MISSING output
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'isaiah.json').read_text())
+    out = json.loads((ROOT / 'data' / 'commentary' / 'mkt-original' / 'isaiah.json').read_text())
+    missing = []
+    for ch in range(24, 29):
+        ck = str(ch)
+        for v in il.get(ck, {}):
+            if v not in out.get(ck, {}):
+                missing.append(f'{ch}:{v}')
+    if missing:
+        print(f'  MISSING: {missing}')
+    else:
+        total = sum(len(il.get(str(c), {})) for c in range(24, 29))
+        print(f'  OK: all Isaiah 24-28 mkt-original verses present ({total} verses)')
 
 if __name__ == '__main__':
     main()

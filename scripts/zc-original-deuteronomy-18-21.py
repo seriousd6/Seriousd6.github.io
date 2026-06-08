@@ -1,45 +1,34 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+mkt-original | Deuteronomy 18–21 | 86 verses
+Run: python3 scripts/zc-original-deuteronomy-18-21.py
+
+Interpretation decisions:
+- Ch 18: The Prophet Like Moses (vv. 15-22) is the theological crown; navi treated as
+  a living office that climaxes in the NT fulfillment — flagged briefly, full treatment
+  in mkt-christ.
+- Ch 19: goel hadam rendered 'blood avenger' (MKT); the same root (ga'al) as the
+  kinsman-redeemer in Ruth/Isaiah is noted for semantic depth.
+- Ch 20: shalom in vv. 10-11 rendered 'peace terms' by MKT (disp=2 noted).
+  cherem rendered 'devote to destruction' consistent with Josh/1 Sam treatment.
+- Ch 21: eglah arufah ritual uses kaphar (atone) — expiation theology central.
+  v.23 'curse of God' (qilelat Elohim) — Paul quotes Gal 3:13 in mkt-christ layer.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +38,110 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
+DEUTERONOMY = {
+    "18": {
+        "1": "<p><b>No portion or inheritance (v. 1).</b> The Levitical priests receive no tribal territory in the land allotment. <span class='term'>נַחֲלָה</span> (<i>nachalah</i>) means “inheritance, share” — the same word used of each tribe’s land grant. The Levites’ exclusion from land is a positive statement: YHWH himself replaces the land. <span class='term'>אִשֵׁי יְהוָה</span> (<i>ishei YHWH</i>) = “YHWH’s fire-offerings” — the altar portions — constitute their material income. The MKT’s “fire-offerings of the LORD” preserves the liturgical specificity over generic “the LORD’s offerings.”</p>",
+        "2": "<p><b>YHWH is their inheritance (v. 2).</b> The statement is direct and personal: <span class='term'>יְהוָה הוּא נַחֲלָתוֹ</span> — “YHWH, he is his inheritance.” The personal pronoun <i>hu’</i> lends emphasis. This exact formulation recurs in Ps 16:5, where the psalmist claims YHWH as his portion — a verse Peter applies to Christ’s resurrection (Acts 2:25-28). The priestly pattern anticipates the NT reversal where all believers are “royal priests” who inherit YHWH himself (1 Pet 2:9).</p>",
+        "3": "<p><b>Priestly portions (v. 3).</b> The three prescribed portions — <span class='term'>זְרֹעַ</span> (<i>zero’a</i>, arm/shoulder), <span class='term'>לְחָיַיִם</span> (<i>lechayyim</i>, cheeks/jaw), <span class='term'>קֵבָה</span> (<i>qevah</i>, stomach/maw) — specify which parts of the sacrificial animal belong to the officiating priest. The Mishnah (Chullin 10) debates these boundaries in detail. The MKT “shoulder, cheeks, and stomach” follows the standard rendering; “maw” (KJV) is archaic English for the stomach of a ruminant.</p>",
+        "4": "<p><b>Firstfruits (v. 4).</b> <span class='term'>רֵאשִׁית</span> (<i>reshit</i>) = “firstfruits, first/beginning” — the same word in Gen 1:1 (<i>bereshit</i>). The offering list — grain, wine, oil, first fleece — parallels the harvest calendar festivals. <span class='term'>גֵז</span> (<i>gez</i>, first shearing) appears only here and Job 31:20 in this agricultural sense. Giving the first fleece to the priest acknowledges YHWH as the source of the flock’s fertility.</p>",
+        "5": "<p><b>Chosen to minister in the name of YHWH (v. 5).</b> Three key terms converge: <span class='term'>בָחַר</span> (<i>bachar</i>, chosen) — the election language of Deut 7:6 applied now to the priestly tribe; <span class='term'>שָׁרַת</span> (<i>sharat</i>, minister/serve in the sanctuary) — distinguished from <i>avad</i> (ordinary work); and <span class='term'>בְשֵׁם יְהוָה</span> (<i>beshem YHWH</i>, in the name of YHWH) — to act in the name is to act with the authority and identity of the one named. The phrase recurs in vv. 7, 22 and is foundational for NT “in the name of Jesus” usage.</p>",
+        "6": "<p><b>A Levite from any town (v. 6).</b> Any Levite scattered in the towns may present himself and serve, driven by his <span class='term'>נֶפשׁ</span> (<i>nefesh</i>): “with all his desire/self.” <i>Nefesh</i> here carries the sense of personal longing — the whole living person’s orientation — not a disembodied soul. The MKT’s “whenever he wishes” conveys the voluntary, desire-driven character of the move. YHWH chose them (<i>bachar</i>), but individual Levites exercise their own will in presenting for service.</p>",
+        "7": "<p><b>Equal standing (v. 7).</b> The Levite who comes from the towns “ministers in the name of YHWH his God, just as all his fellow Levites who stand before the LORD there do.” <span class='term'>עָמַד לִפְנֵי יְהוָה</span> = “stand before YHWH” — a technical term for priestly service in the sanctuary presence. All Levites share the same standing regardless of origin; there is no priestly aristocracy within the tribe based on city of origin.</p>",
+        "8": "<p><b>Equal shares (v. 8).</b> The incoming Levite receives equal food portions alongside the resident Levites. The phrase <span class='term'>לְבַד מִמְכָרָיו עַל-הָאָבוֹת</span> is contested: “besides what he has from the sale of his patrimony” (MKT), or perhaps “besides his inherited shares.” The principle is clear: no financial disadvantage for choosing full-time sanctuary service.</p>",
+        "9": "<p><b>Detestable practices of the nations (v. 9).</b> <span class='term'>תּוֹעֲבֹת הַגּוֹיִם</span> (<i>to’avot haggoyim</i>, detestable practices of the nations) — <i>to’evah</i> (abomination/detestable thing) is the strongest Hebrew term of moral revulsion. The prohibition triggers the list in vv. 10-12. Israel’s distinctive identity as YHWH’s people is maintained by categorical separation from the surrounding cultures’ methods of accessing the divine or the future.</p>",
+        "10": "<p><b>Occult practices list I (v. 10).</b> The first group: <span class='term'>מַעֲבִיר בְנוֹ-בִתּוֹ בָאֵשׁ</span> (passes son/daughter through fire — child sacrifice); <span class='term'>קֹסֵם קְסָמִים</span> (<i>qosem qesamim</i>, practices divination); <span class='term'>מְעוֹנֵן</span> (augur/interprets omens); <span class='term'>מְנַחֵשׁ</span> (<i>menachesh</i>, divines — from <i>nachash</i>, serpent; observes omens). These represent attempts to manipulate or know the future apart from YHWH’s revealed word.</p>",
+        "11": "<p><b>Occult practices list II (v. 11).</b> <span class='term'>מְכַשֵׁף</span> (<i>mekashef</i>, sorcerer — the Septuagint renders this <i>pharmakos</i>, root of “pharmacy” in the sense of magical potions); <span class='term'>חֹבֵר חָבֶר</span> (casts spells/binds — binding incantations); <span class='term'>שֹאֵל אוֹב</span> (consults a medium — <i>ov</i>, a spirit of the dead; the Witch of Endor uses this in 1 Sam 28); <span class='term'>יִדְּעֹנִי</span> (spiritist/wizard — “knowing one”); <span class='term'>דֹרֵשׁ אֶל-הַמֵּתִים</span> (necromancer — seeks the dead). The range spans all forms of unauthorized access to hidden knowledge.</p>",
+        "12": "<p><b>Detestable to YHWH (v. 12).</b> Every person practicing these things is <span class='term'>תּוֹעֲבַת יְהוָה</span> (an abomination to YHWH) — the personal construction (not just “this practice” but “this person”). This is why YHWH drives out the nations. The expulsion from Canaan is explicitly framed as moral judgment, not ethnic preference. Israel is the instrument of YHWH’s justice against generations of occult practice.</p>",
+        "13": "<p><b>Blameless before YHWH (v. 13).</b> <span class='term'>תָמִים</span> (<i>tamim</i>, blameless/whole/complete) — the same word describing Noah (“blameless in his generation,” Gen 6:9) and the unblemished sacrificial animal. It connotes integrity, completeness, undivided loyalty. Contrasted with the occult practitioners in vv. 10-12, Israel’s blamelessness means exclusive reliance on YHWH’s revelation rather than unauthorized divination.</p>",
+        "14": "<p><b>You are different (v. 14).</b> The nations being dispossessed “heed omen-readers and diviners.” <span class='term'>וְאַתָּה לֹא-כֵן</span> (but as for you, not so) — emphatic contrast. YHWH does not leave Israel without access to divine guidance; he provides the prophetic office as his chosen channel, replacing all occult alternatives.</p>",
+        "15": "<p><b>The Prophet Like Moses (v. 15).</b> <span class='term'>נָבִיא מִקִּרְבְךָ מֵאַחֶיךָ כָמֹנִי</span> — “a prophet from your midst, from your brothers, like me.” <span class='term'>נָבִיא</span> (<i>navi</i>, prophet) — one who speaks forth YHWH’s words (from <i>naba</i>, to bubble up/pour forth speech); <span class='term'>כָמֹנִי</span> (<i>kamoni</i>, like me) — Moses as the paradigm; <span class='term'>אֵלָיו תִשְׁמָעוּן</span> (to him you shall listen) — the same verb as in Shema-related commands. Peter cites v. 15 explicitly in Acts 3:22, identifying the Prophet as Jesus; Stephen repeats it in Acts 7:37. The MKT’s “you must listen to him” conveys the imperative force.</p>",
+        "16": "<p><b>The Horeb pattern (v. 16).</b> YHWH’s provision of a prophet is grounded in Israel’s own Horeb request — the people could not bear direct divine speech. <span class='term'>יוֹם הַקָּהָל</span> (<i>yom haqahal</i>, the day of the assembly) refers to Sinai/Horeb in Deut 9:10 and 10:4 — a fixed term for the covenant-founding assembly. The pattern is: YHWH speaks → mediator hears → Israel receives through the mediator. The prophetic office formally extends and institutionalizes what Moses exemplified at Sinai.</p>",
+        "17": "<p><b>YHWH affirms (v. 17).</b> YHWH’s direct speech to Moses: “What they have said is right/good” (<span class='term'>הֵיטִיבוּ</span>, they have done well). Israel’s request for mediation was not a failure of faith but an appropriate recognition of human limits before divine holiness. The prophet-as-mediator structure is thus divinely instituted — a pedagogical structure for covenant life before the coming of the one who would fulfill it directly.</p>",
+        "18": "<p><b>YHWH’s words in the prophet’s mouth (v. 18).</b> <span class='term'>וְנָתַתִּי דְבָרַי בְפִיוֹ</span> — “I will put my words in his mouth.” This verbal formula recurs in Jer 1:9 (YHWH’s call of Jeremiah) and Ezek 3:3 (Ezekiel swallowing the scroll). The prophet is not a mere oracle-interpreter but a mouthpiece for YHWH’s own speech. The chain of authority: YHWH → prophet → people, parallel to Moses at Sinai.</p>",
+        "19": "<p><b>Accountability for non-compliance (v. 19).</b> <span class='term'>דָרַשׁ מֵעִמּוֹ</span> (I will require/seek from him) — YHWH personally holds accountable anyone who does not heed the prophet’s words spoken in YHWH’s name. The construction is legal: to “require” in a juridical sense. Acts 3:23 quotes this verse (“everyone who does not listen to that prophet shall be destroyed”) applying it to the warning about rejecting Jesus.</p>",
+        "20": "<p><b>Two kinds of false prophet (v. 20).</b> The death penalty applies to: (1) <span class='term'>הַנָּבִיא אֲשֶׁר יָזִיד לְדַבֵּר</span> (the prophet who presumes to speak) — <i>zud</i> means to act arrogantly/presumptuously (same root as in 1:43, Israel’s presumptuous ascent against the Amorites); (2) speaking in the name of other gods. Both categories corrupt Israel’s relationship with YHWH at its root and carry capital penalty.</p>",
+        "21": "<p><b>Testing a prophet (v. 21).</b> <span class='term'>אֵיכָה נֵדַע</span> (how shall we know?) — <span class='term'>יָדַע</span> (<i>yada</i>, know/discern — disp=2: “know” vs. “recognize/discern”). The question is pastorally urgent: Israel’s covenant life depends on heeding true prophets and rejecting false ones, yet both claim YHWH’s authority. The test provided in v. 22 is empirical: predictive accuracy.</p>",
+        "22": "<p><b>The empirical test (v. 22).</b> If the predicted word does not happen (<span class='term'>לֹא יִהְיֶה וְלֹא יָבֹא</span>, shall not happen and shall not come), the prophet has spoken <span class='term'>בְזָדוֹן</span> (presumptuously/arrogantly). <span class='term'>לֹא תָגוּר מִמֶּנּוּ</span> (do not fear him) — false prophets may threaten, but their predictive failure exposes them. Jeremiah’s clash with Hananiah (Jer 28) is the canonical application: Hananiah prophesied peace within two years; his death within that year vindicated Jeremiah.</p>"
+    },
+    "19": {
+        "1": "<p><b>Context: after dispossession (v. 1).</b> The cities of refuge law is temporally anchored: “when YHWH your God cuts off the nations.” <span class='term'>כָרַת</span> (<i>karat</i>, cut off) — the same verb as “cut a covenant” (<i>karat berit</i>); here used of judgment, the severing of nations from the land. The law presupposes settled life after the conquest. The three cities required by vv. 2-3 are fulfilled in Josh 20:7-8.</p>",
+        "2": "<p><b>Three cities set apart (v. 2).</b> <span class='term'>תַבְדִּיל</span> (<i>tavdil</i>, you shall separate/set apart) — the same root as <i>havdalah</i> (the separation between sacred and ordinary at Sabbath end). The cities of refuge are spatially consecrated for a specific legal function: sanctuary where YHWH arbitrates through the elders. <span class='term'>בְתוֹךְ אַרצְךָ</span> (in the midst of your land) — central location ensures accessibility.</p>",
+        "3": "<p><b>Prepare the roads (v. 3).</b> <span class='term'>תָכִין לְךָ הַדֶּרֶךְ</span> (prepare the road for yourself) — the infrastructure obligation. Jewish tradition (Makkot 10b) specifies the roads must be wide and marked with signs reading <i>miklat</i> (refuge). <span class='term'>שִׁלַשְׁתָּ</span> (divide into three districts) — equal geographical distribution ensures no part of the land is far from refuge. The system embeds legal protection into the landscape itself.</p>",
+        "4": "<p><b>The unintentional killer (v. 4).</b> <span class='term'>שֹגֵג</span> (<i>shogeg</i>, unintentional) — someone who acts in error, by mistake, without premeditation. The specification <span class='term'>בִבְלִי-דַעַת</span> (without knowledge) reinforces inadvertent action — “he did not hate him previously.” The legal distinction between manslaughter and murder is as old as the Covenant Code (Exod 21:12-14) and is here formalized into the refuge city system.</p>",
+        "5": "<p><b>The woodcutting example (v. 5).</b> A case study illustrating <i>shogeg</i>: two men go to the forest to cut wood; the iron ax head flies off and strikes the partner. <span class='term'>נָשַׁל</span> (<i>nashal</i>, slips off/comes loose) — accidental dislodgment. The specific material detail — iron ax, wooden handle — is historically realistic; iron implements were expensive and scarce in early Israel (cf. 1 Sam 13:19-22). The case is paradigmatic for any accidental death from legitimate activity.</p>",
+        "6": "<p><b>Blood avenger (v. 6).</b> <span class='term'>גֹאֵל הַדָּם</span> (<i>go’el hadam</i>, blood redeemer/avenger) — from <span class='term'>גָאַל</span> (<i>ga’al</i>, to redeem/act as kinsman). The same root underlies <i>go’el</i> as Ruth’s kinsman-redeemer (Ruth 3:9) and YHWH as Israel’s redeemer (<i>go’el yisrael</i>, Isa 41:14). The avenger’s role in pre-state Israel was to restore family honor and blood-balance. <span class='term'>נֶפשׁ</span> (<i>nefesh</i>, life/person — disp=3) — the whole embodied life of the innocent party is at stake in “though he is not deserving of death.”</p>",
+        "7": "<p><b>Therefore (v. 7).</b> <span class='term'>עַל-כֵּן</span> (therefore) — the logic: precisely because the blood avenger’s anger is real and the risk of miscarried justice is real, the three cities are required. The law does not assume the avenger is wrong in his grief; it creates structural protection for the innocent until the judicial process can assess the case.</p>",
+        "8": "<p><b>Three more cities if territory expands (v. 8).</b> YHWH’s enlargement of territory was promised to the patriarchs (Gen 15:18-21 specifying 10 nations; the covenant extends beyond what Joshua initially received). If the full territorial promise is fulfilled, a proportional expansion of refuge cities is required — three more, for six total. This anticipates a larger, more complex covenant society needing more access to justice infrastructure.</p>",
+        "9": "<p><b>Conditional on faithfulness (v. 9).</b> The expansion of refuge cities is conditioned on Israel’s faithfulness: <span class='term'>לְאַהֲבָה אֶת-יְהוָה אֱלֹהֶיךָ</span> (to love YHWH your God) and <span class='term'>לָלֶכֶת בִדְרָכָיו כָל-הַיָּמִים</span> (to walk in his ways all the days). Love and walking in YHWH’s ways are the twin covenant requirements; legal infrastructure follows from covenant faithfulness.</p>",
+        "10": "<p><b>Innocent blood (v. 10).</b> <span class='term'>דָם נָקִי</span> (<i>dam naqi</i>, innocent blood) — the concern recurs throughout Deuteronomy (19:10, 13; 21:8, 9; 27:25). Shedding innocent blood defiles the land (Num 35:33). The refuge system prevents judicial murder in grief while ensuring genuine murderers face justice. “Bloodguilt” on the land is a theological offense against YHWH’s inheritance, not merely a civil wrong.</p>",
+        "11": "<p><b>The intentional killer (v. 11).</b> <span class='term'>שֹאְנֵא</span> (<i>sone’</i>, one who hates) — the premeditation criterion. If someone hates his neighbor, lies in wait (<span class='term'>אָרַב</span>, ambushes), and murders him, then flees to a refuge city — the city does not grant asylum. <i>Sone’</i> (hating) is the legal term for premeditated enmity, contrasted with the non-hating in v. 4. The distinction between hot-blooded accidents and cold-blooded hatred is the fundamental axis of the law.</p>",
+        "12": "<p><b>Extradition (v. 12).</b> The elders of the killer’s own city (<span class='term'>זִקְנֵי עִירוֹ</span>) must send for him and hand him to the blood avenger (<i>go’el hadam</i>). The refuge city provides temporary asylum pending judicial review, not permanent sanctuary. The elders’ responsibility to extradite is a check on both vigilante justice (protecting the innocent) and legal impunity (extraditing the guilty).</p>",
+        "13": "<p><b>No pity (v. 13).</b> <span class='term'>לֹא-תָחוֹס עֵינְךָ עָלָיו</span> (your eye shall not spare/pity him) — the idiom appears five times in Deuteronomy (7:16; 13:8; 19:13, 21; 25:12), always in capital or extreme cases. <span class='term'>וּבִעַרְתָּ דַם-הַנָּקִי</span> (purge innocent blood) — <i>bi’er</i> (purge/burn out) suggests complete removal of moral pollution. The formula “so that things may go well for you” connects legal faithfulness to communal wellbeing.</p>",
+        "14": "<p><b>Boundary markers (v. 14).</b> <span class='term'>גְּבוּל</span> (<i>gevul</i>, boundary/border) set by predecessors (<span class='term'>רִאשֹׁנִים</span>, the former ones). Moving a boundary marker was the ancient equivalent of land fraud. This verse echoes in Prov 22:28 and 23:10, and corresponds to laws across the ancient Near East (e.g., Babylonian <i>kudurru</i> boundary stones). The land is YHWH’s gift; manipulating its boundaries is an offense against YHWH’s distribution.</p>",
+        "15": "<p><b>Two-witness requirement (v. 15).</b> <span class='term'>לֹא-יָקוּם עֵד אֶחָד</span> (a single witness shall not rise) to establish guilt in any crime. The requirement of <span class='term'>שְׁנַיִם עֵדִים</span> (two witnesses) or three protects against accusation-as-conviction. Jesus applies this in Matt 18:16 for church discipline; Paul uses it in 2 Cor 13:1 and 1 Tim 5:19. The principle underlies the Torah’s entire judicial system as protection against false accusation.</p>",
+        "16": "<p><b>Malicious witness (v. 16).</b> <span class='term'>עֵד חָמָס</span> (<i>ed chamas</i>, malicious/violent witness) — <i>chamas</i> is the word for pre-flood violence (Gen 6:11, 13); here it describes a witness whose testimony is an act of violence against the accused. The Ninth Commandment’s “false witness against your neighbor” (5:20) is here specified as a capital matter when it leads to capital accusation.</p>",
+        "17": "<p><b>Before the judges (v. 17).</b> Both parties stand before YHWH — <span class='term'>לִפְנֵי יְהוָה</span> in the judicial context means before the sanctuary and its priests and judges (cf. Deut 17:8-13). <span class='term'>שָׁפַט</span> (<i>shaphat</i>, judge — disp=2: can mean “judge,” “decide,” or “govern”; here MKT renders “judges who are serving at that time”). The divine presence at the tribunal makes false witness not merely a legal infraction but a theological offense.</p>",
+        "18": "<p><b>Careful investigation (v. 18).</b> <span class='term'>דָרַשׁ הַשֹּׁפְטִים הֵיטֵב</span> (the judges shall investigate carefully/thoroughly) — <i>darash</i> (inquire deeply) and <i>hetev</i> (thoroughly/well). If the witness is found to have spoken <span class='term'>שֶׁקֶר</span> (<i>sheqer</i>, falsehood), the mirror-image punishment follows.</p>",
+        "19": "<p><b>Mirror punishment (v. 19).</b> <span class='term'>וַעֲשִׂיתֶם לוֹ כַאֲשֶׁר זָמַם</span> (do to him as he schemed to do to his brother) — <i>zamam</i> (schemed/plotted) implies premeditated false accusation. The principle is proportionate justice: the punishment matches the intended crime precisely. This is the lex talionis logic applied to perjury.</p>",
+        "20": "<p><b>Deterrence (v. 20).</b> The remaining people hearing and fearing is an explicit deterrence rationale: <span class='term'>הַנִּשְׁאָרִים יִשְׁמְעוּ וְיִירָאוּ</span> (the remaining shall hear and fear). The formula “never again do such evil” (<span class='term'>לֹא-יֹסִפוּ לַעֲשֹׂת עוֹד</span>) recurs in 17:13 and 21:21 as a standard deterrence clause in capital cases.</p>",
+        "21": "<p><b>Lex talionis (v. 21).</b> <span class='term'>נֶפשׁ בְנֶפשׁ עַיִן בְעַיִן שֵׁן בְשֵׁן</span> — life for life, eye for eye, tooth for tooth. This is the third occurrence of the formula in the Torah (Exod 21:23-25; Lev 24:17-21). <i>Nefesh</i> (disp=3) here means “life/person” — the whole living person. The formula is not a license for unlimited revenge but a cap: proportionate, equivalent, no more. Jesus’ counterstatement in Matt 5:38-39 does not abolish it but transcends it in the kingdom context.</p>"
+    },
+    "20": {
+        "1": "<p><b>Holy war theology (v. 1).</b> <span class='term'>אַל-תִירָא</span> (do not fear) — because YHWH goes with them. <span class='term'>כִּי-יְהוָה אֱלֹהֶיךָ עִמָּךְ</span> (for YHWH your God is with you) — the divine presence as the decisive military factor. Horses and chariots (<span class='term'>סוּסִים וְרֶכֶב</span>) were the ancient arms race; Israel’s king was explicitly forbidden to multiply horses (Deut 17:16). The asymmetric warfare presumption: YHWH fighting for Israel defeats any numerical/technological disparity.</p>",
+        "2": "<p><b>The priest addresses the troops (v. 2).</b> <span class='term'>וְנִגַּשׁ הַכֹּהֵן</span> (the priest shall step forward) — the military context requires a priestly officiant. Holy war is a sacred event. The priest speaks on YHWH’s behalf before battle begins, in contrast to Israel’s later failure to consult YHWH before engaging battle (Num 14:44-45).</p>",
+        "3": "<p><b>Hear, O Israel (v. 3).</b> The battle address begins <span class='term'>שְׁמַע יִשְׂרָאֵל</span> (Hear, O Israel) — echoing the Shema’s opening (6:4). The four-fold prohibition: do not let your heart grow soft, do not fear, do not panic, do not be terrified. The quadruple prohibition addresses the psychological dimensions of pre-battle fear comprehensively.</p>",
+        "4": "<p><b>YHWH fights for you (v. 4).</b> <span class='term'>כִּי יְהוָה אֱלֹהֵיכֶם הַהֹלֵךְ עִמָּכֶם</span> (for YHWH your God is the one who goes with you) — the divine warrior motif. <span class='term'>לְהוֹשִׁיעַ אֶתְכֶם</span> (to save/give victory) — <i>yasha</i>, the root of “Joshua/Jesus/Yeshua.” The Song of the Sea (Exod 15:3) is foundational: “YHWH is a warrior.”</p>",
+        "5": "<p><b>New house exemption (v. 5).</b> <span class='term'>חֲנֻכָּה</span> (<i>chanukah</i>, dedication) — the same word as the festival of Hanukkah (Num 7:10-11). A man who has built a house but not yet dedicated it is exempt from service. The exemptions in vv. 5-7 are expressions of the covenant blessings of land, vine, and family — Israel fights precisely to enjoy these goods, not to be denied them by premature death.</p>",
+        "6": "<p><b>Vineyard exemption (v. 6).</b> <span class='term'>חִלֵּל</span> (<i>chillel</i>, make common/begin to use) — the first three years of a fruit tree’s produce are <i>orlah</i> (Lev 19:23); year four is sacred; year five is normal use. To plant a vineyard and die before enjoying it is a covenant curse (Deut 28:30); the exemption protects the warrior from this irony.</p>",
+        "7": "<p><b>Betrothed exemption (v. 7).</b> <span class='term'>אֵרַשׂ</span> (<i>eras</i>, betrothed) — legal commitment not yet consummated. Betrothal in ancient Israel was binding (breaking it required divorce, Matt 1:19). The man is exempted “so he does not die and another man take her” — the same formulation as Deut 28:30’s covenant curses reversed.</p>",
+        "8": "<p><b>The fearful exemption (v. 8).</b> <span class='term'>יָרֵא וְרַךְ הַלֵּבָב</span> (afraid and soft/faint-hearted) — the fearful soldier is sent home so he does not cause others to “melt” (<span class='term'>יִמַּס</span>, <i>yimas</i>) in their heart. The psychological realism is notable — the law accommodates human weakness rather than demanding impossible heroism from all.</p>",
+        "9": "<p><b>Commanders appointed (v. 9).</b> <span class='term'>שָׂרֵי צְבָאוֹת</span> (<i>sarei tzeva’ot</i>, commanders of the armies) — appointed after the exemptions are processed, so the fighting force is determined before leadership is assigned. The order — screen the army, then command it — reflects practical military wisdom embedded in the legal framework.</p>",
+        "10": "<p><b>Offer of peace to distant cities (v. 10).</b> <span class='term'>קָרָאתָ אֵלֶיהָ לְשָׁלוֹם</span> (call to it for peace/summons it to peace) — <span class='term'>שָׁלוֹם</span> (<i>shalom</i>, disp=2) here means “terms of peace” or “a peace arrangement” (MKT “offer it peace”), not merely absence of war but formal submission. The requirement to offer terms before siege applies only to “distant cities” (v. 15) — the Canaanite cities are explicitly excluded (vv. 16-18).</p>",
+        "11": "<p><b>If it accepts (v. 11).</b> Accepting the peace terms means the city opens its gates and submits to <span class='term'>מַס</span> (<i>mas</i>, forced labor/tribute/corvée) — compulsory labor service. The MKT “compulsory labor” reflects the labor obligations imposed on subjugated peoples throughout the ancient Near East (cf. Solomon’s labor levy, 1 Kgs 5:13-14). Submission means labor servitude but not slaughter.</p>",
+        "12": "<p><b>Siege if refuses (v. 12).</b> <span class='term'>לֹא-תַשְׁלִים עִמָּךְ</span> (does not make peace with you) — the same root as shalom. If the city refuses peaceful submission, siege (<span class='term'>צוּר</span>, besiege/hem in) follows. The siege is coercive — bringing the city to terms by military pressure.</p>",
+        "13": "<p><b>Sword to all males (v. 13).</b> <span class='term'>וְהִכִּיתָ אֶת-כָּל-זְכוּרָהּ לְפִי-חָרֶב</span> (strike all its males with the edge of the sword) — standard ancient Near Eastern practice for resisting cities. This applies to distant cities, not the Canaanite cities under <i>cherem</i>. The males represent the city’s military and resistance capacity.</p>",
+        "14": "<p><b>Plunder of distant cities (v. 14).</b> The women, children, livestock, and goods — <span class='term'>שָׁלָל</span> (<i>shalal</i>, plunder/spoil) — may be taken as booty for Israel. This is standard ancient warfare law for non-<i>cherem</i> cities. The war laws contain humanitarian constraints even within the violence they regulate.</p>",
+        "15": "<p><b>Distant cities (v. 15).</b> The rules in vv. 10-14 apply specifically to cities “far from you, not belonging to these nearby nations.” The distinction is crucial: the leniency applies only to non-Canaanite peoples. The six nations in v. 17 are under an entirely different law, <i>cherem</i>, for the specific theological reasons stated in v. 18.</p>",
+        "16": "<p><b>Nothing alive (v. 16).</b> <span class='term'>לֹא תְחַיֶּה כָּל-נְשָׁמָה</span> (do not let anything that breathes remain alive) — <span class='term'>נְשָׁמָה</span> (<i>neshamah</i>) is the breath of life (Gen 2:7). The absoluteness of the <i>cherem</i> for the listed nations is theologically motivated, not ethnic animus — the reason is given explicitly in vv. 17-18.</p>",
+        "17": "<p><b>Cherem (v. 17).</b> <span class='term'>הַחֲרֵם תַחֲרִימֵם</span> (utterly devote to destruction) — the infinitive absolute intensification of <i>charam</i>. <span class='term'>חֵרֶם</span> (<i>cherem</i>) is sacred destruction: the thing is removed from ordinary use and consecrated entirely to YHWH’s wrath (cf. 1 Sam 15:3, Saul’s failure with the Amalekites). The six peoples listed are the standard Canaanite roster (cf. Gen 15:20-21). MKT “utterly destroy them” captures the intensified verbal form.</p>",
+        "18": "<p><b>Reason for cherem (v. 18).</b> <span class='term'>לְמַעַן אֲשֶׁר לֹא-יְלַמְּדוּ</span> (so that they do not teach you) — the purpose clause explains the total destruction: the Canaanite cult would corrupt Israel’s covenant relationship. <span class='term'>תּוֹעֲבֹתֵיהֶם</span> (their abominations) echoes the occult list of 18:9-14. The <i>cherem</i> is a prophylactic measure against religious contamination, not ethnic genocide per se.</p>",
+        "19": "<p><b>Do not destroy fruit trees (v. 19).</b> <span class='term'>לֹא-תַשְׁחִית אֶת-עֵצָהּ</span> (do not destroy its trees). The rhetorical question: <span class='term'>כִּי הָאָדָם עֵץ הַשָּׂדֶה</span> — “Is the tree of the field a person/man?” — is interpreted: (a) the tree is not your enemy, so do not make war on it; (b) you may eat from it (because it is not an enemy soldier). MKT “for is the tree a person, that you should besiege it?” captures the rhetorical sense. A remarkable humanitarian-ecological constraint embedded in warfare law.</p>",
+        "20": "<p><b>Non-fruit trees (v. 20).</b> Non-fruit-bearing trees (<span class='term'>אֲשֶׁר לֹא-תֵדַע</span>, which you know — <i>yada</i>, disp=2: “know/recognize” that they do not bear fruit) may be cut for siege-works. <span class='term'>מָצוֹר</span> (<i>matsor</i>, siege works/fortifications) — the timber is repurposed for the military objective. The distinction fruit-bearing/non-fruit-bearing creates a proportionate environmental rule: destroy only what serves the military purpose, preserve what sustains life.</p>"
+    },
+    "21": {
+        "1": "<p><b>Unsolved murder (v. 1).</b> <span class='term'>חָלָל</span> (<i>chalal</i>, slain/pierced) — not merely “dead” but “pierced/slain by violence”; the word carries the sense of a violent death requiring expiation. <span class='term'>לֹא נוֹדַע מִי הִכָּהוּ</span> (it is not known who struck him) — <i>yada</i> (disp=2; “not known/not discovered”). The ritual responds to the moral pollution of unresolved bloodshed on YHWH’s land. The land itself is defiled by innocent blood (Num 35:33: “blood defiles the land”).</p>",
+        "2": "<p><b>Measurement (v. 2).</b> <span class='term'>וְיָצְאוּ זְקֵנֶיךָ וְשֹׁפְטֶיךָ</span> (your elders and judges shall go out) — both judicial and governance leadership participate. <span class='term'>וּמָדְדוּ</span> (they shall measure) — <i>madad</i>, the same verb used for measuring grain (Ruth 3:15). The closest town bears corporate responsibility for the death, determined by geographical measurement.</p>",
+        "3": "<p><b>The heifer (v. 3).</b> <span class='term'>עֶגְלַת בָּקָר</span> (<i>eglat baqar</i>, young cow/heifer) — specifically one that has never been worked or yoked. <span class='term'>לֹא-עֻבַּד בָהּ</span> (never worked with it) and <span class='term'>לֹא-מָשְׁכָה בְעֹל</span> (never pulled a yoke) — the virginal status of the animal reflects its sacred purpose. Unused animals are often used in sacred contexts (the red heifer of Num 19; the donkey on which Jesus rides, Mark 11:2).</p>",
+        "4": "<p><b>Perennial stream (v. 4).</b> <span class='term'>נַחַל אֵיתָן</span> (<i>nachal eitan</i>, perennial/ever-flowing stream) — a wadi that flows year-round. <span class='term'>אֲשֶׁר לֹא-יֵעָבֵד בוֹ וְלֹא יִזָּרֵעַ</span> (not cultivated and not sown) — the ground is doubly uncultivated, matching the heifer’s uncultivated state. The neck-breaking (<span class='term'>עָרַף</span>, <i>araf</i> — cf. the ritual’s name <i>eglah arufah</i>) rather than sacrificial slaughter avoids the blood-altar requirement; this is a purgation ritual, not a sacrifice per se.</p>",
+        "5": "<p><b>The Levitical priests come forward (v. 5).</b> YHWH “has chosen them to serve him (<span class='term'>לְשָׁרְתוֹ</span>) and to pronounce blessings in the name of YHWH (<span class='term'>לְבָרֵךְ בְשֵׁם יְהוָה</span>), and by their word every dispute (<span class='term'>רִיב</span>) and every wound (<span class='term'>נֶגַע</span>) is settled.” The priests do not perform the neck-breaking (the elders do, v. 6), but their presence authorizes the ritual as YHWH-sanctioned expiation.</p>",
+        "6": "<p><b>Hand-washing (v. 6).</b> <span class='term'>וְרָחֲצוּ אֶת-יְדֵיהֶם עַל-הָעֶגְלָה</span> (all the elders shall wash their hands over the heifer) — the hand-washing ritual transfers the communal guilt: the hands that wash are declared innocent by the act. Pilate’s hand-washing in Matt 27:24 echoes this ritual, though in a morally inverted application — he attempts to disclaim responsibility for innocent blood (Jesus) where the guilt is real.</p>",
+        "7": "<p><b>The declaration (v. 7).</b> <span class='term'>עָנוּ וְאָמְרוּ</span> (they shall declare/answer and say) — a formal legal declaration: “Our hands did not shed this blood (<span class='term'>שָׁפְכוּ</span>, <i>shafakhu</i>), nor did our eyes see it.” Both active perpetration and witnessing without reporting are disclaimed. The elders speak on behalf of the town; it is a corporate innocence declaration that opens the way for YHWH’s atonement.</p>",
+        "8": "<p><b>Atonement prayer (v. 8).</b> <span class='term'>כַפֵּר לְעַמְךָ יִשְׂרָאֵל</span> (atone for your people Israel) — <span class='term'>כָּפַר</span> (<i>kaphar</i>, atone/cover/expiate) is the foundational sacrificial term; here used of a purgation ritual without blood applied to the altar. The petition invokes YHWH’s redemption (<span class='term'>פָדִיתָ</span>, you redeemed) — the Exodus as the ground of ongoing divine mercy. The town’s corporate guilt from the murder is averted by YHWH’s own atonement.</p>",
+        "9": "<p><b>Purging bloodguilt (v. 9).</b> <span class='term'>וְאַתָּה תְּבַעֵר הַדָּם הַנָּקִי</span> (you shall purge the innocent blood from your midst) — <i>bi’er</i> (purge/burn out) as in 13:5 and 17:7. The ritual’s purpose is communal purity before YHWH. <span class='term'>הַיָּשָׁר בְעֵינֵי יְהוָה</span> (what is right in the eyes of YHWH) — the standard for covenant faithfulness throughout Deuteronomy.</p>",
+        "10": "<p><b>Captive women in war (v. 10).</b> The war-bride law: when YHWH delivers enemies into Israel’s hand and Israel takes prisoners (<span class='term'>שָׁבִיתָ שִׁבְיוֹ</span>), the law addresses what happens when a soldier is attracted to a female captive. The humanitarian purpose is to prevent casual sexual exploitation by creating a marriage process with mandatory mourning and time delays.</p>",
+        "11": "<p><b>Attracted to a captive (v. 11).</b> <span class='term'>יְפַת תֹּאַר</span> (<i>yefat to’ar</i>, beautiful in form/appearance) — a formulaic phrase (cf. Gen 29:17, Rachel; Esth 2:7, Esther). <span class='term'>וְחָשַׁקְתָּ בָהּ</span> (you are attracted to her/desire her) — <i>chashaq</i> is strong desire (the same word used of YHWH’s love for Israel in 7:7). The law does not condemn the attraction but channels it into a regulated, humane process.</p>",
+        "12": "<p><b>Mourning rites (v. 12).</b> <span class='term'>וְגִלְּחָה אֶת-רֹאשָׁהּ</span> (she shall shave her head) and <span class='term'>וְעָשְׂתָה אֶת-צִפָּרְנֶיהָ</span> (trim her nails) — mourning practices signifying her transition from captive to potential wife. These may also be symbolic purification rites, removing signs of the old identity/home. The head-shaving recalls Nazirite vow release (Num 6:18) and lament contexts (Job 1:20).</p>",
+        "13": "<p><b>Month of mourning (v. 13).</b> <span class='term'>וּבָכְתָה אֶת-אָבִיהָ וְאֶת-אִמָּהּ יֶרַח יָמִים</span> (she shall mourn her father and mother for a full month of days) — <i>yerach yamim</i> = thirty days, the standard mourning period (cf. Moses, Deut 34:8; Aaron, Num 20:29). The month creates a mandatory waiting period preventing hasty exploitation of grief-shock.</p>",
+        "14": "<p><b>Rights of the captive wife (v. 14).</b> If the man is no longer pleased with her, he must <span class='term'>שִׁלַחְתָּהּ לְנַפְשָׁהּ</span> (release her to go where her <i>nefesh</i>/self desires — let her go free). <span class='term'>נֶפשׁ</span> here is “self/person” (disp=3) — she is given the right of self-determination. Critical: <span class='term'>לֹא-תִתְעַמֵּר בָהּ בַכָּסֶף</span> (you may not sell her for money) and <span class='term'>לֹא-תִתְעַנֶּה בָהּ</span> (you may not treat her as a slave) — the war-bride law prevents a rejected foreign wife from becoming a household slave.</p>",
+        "15": "<p><b>Two wives (v. 15).</b> The law does not endorse polygamy but regulates it. <span class='term'>שְׂנוּאָה</span> (<i>senu’ah</i>, hated/unloved) — the “hated” wife is not necessarily despised but relatively less loved; the term describes the legal and relational disparity (cf. Gen 29:31, Leah “seen as hated” relative to Rachel). Both wives have borne sons, making inheritance legally pressing.</p>",
+        "16": "<p><b>Firstborn rights (v. 16).</b> <span class='term'>בְּכֹרָה</span> (<i>bekhorahh</i>, firstborn-right/primogeniture) — the legal status of the firstborn son, including the double inheritance share (v. 17). The father may not transfer the <i>bekhorahh</i> to the loved wife’s son at the expense of the unloved wife’s firstborn. The protection of the unloved wife’s son corrects the patriarchal tendency to prefer the beloved’s children (as Jacob favored Joseph over his brothers).</p>",
+        "17": "<p><b>Double portion (v. 17).</b> <span class='term'>פִּי שְׁנַיִם</span> (<i>pi shnayim</i>, mouth/measure of two = double portion) — the firstborn receives twice the share of each other son. <span class='term'>רֵאשִׁית אֹנוֹ</span> (beginning of his vigor/strength) — the firstborn represents the father’s prime productive capacity. <span class='term'>מִשְׁפַּט הַבְּכֹרָה</span> (the right of the firstborn) is a formal legal institution, not a mere custom, and cannot be arbitrarily reassigned.</p>",
+        "18": "<p><b>Stubborn and rebellious son (v. 18).</b> <span class='term'>סוֹרֵר וּמֹרֶה</span> (<i>sorer u’moreh</i>, stubborn and rebellious) — a standard pair of terms for persistent, open defiance. The key elements: (1) he will not obey either parent; (2) they discipline him (<span class='term'>יִסְּרוּ</span>, <i>yisseru</i>); (3) he still does not listen. The case requires sustained, unresponsive defiance — not a single incident. The Talmud (Sanhedrin 68b-71a) debates the case so narrowly that many conclude it was never actually carried out.</p>",
+        "19": "<p><b>Brought before the elders (v. 19).</b> <span class='term'>תָפְשׂוּ בוֹ אָבִיו וְאִמּוֹ</span> (his father and mother shall seize/take hold of him) — both parents, together, must bring the case; neither can act alone. They bring him to <span class='term'>זִקְנֵי עִירוֹ</span> (the elders of his city) at <span class='term'>שַׁעַר מְקֹמוֹ</span> (the gate of his place) — the ancient courthouse (cf. Ruth 4:1, Amos 5:15). Parental accusation is brought before the community for adjudication, not private execution.</p>",
+        "20": "<p><b>The accusation (v. 20).</b> <span class='term'>זוֹלֵל וְסֹבֵא</span> (<i>zozel ve’sove’</i>, glutton and drunkard) — the two specific charges that define the rebellion behaviorally. Prov 23:20-21 warns against this combination: “Do not be among those who give themselves to drink or among those who gorge themselves on meat.” The combination implies a life of reckless self-indulgence that corrupts covenant community. Both terms appear in the wisdom literature as paradigms of disorder.</p>",
+        "21": "<p><b>Stoning and deterrence (v. 21).</b> <span class='term'>רְגָמֻהוּ כָל-אַנְשֵׁי עִירוֹ בָּאֲבָנִים וָמֵת</span> (all the men of his town shall stone him to death) — communal execution makes the judgment a corporate act, not a private killing. The standard deterrence formula: <span class='term'>וּבִעַרְתָּ הָרָע מִקִּרְבֶךָ</span> (purge the evil from your midst) + “all Israel will hear and fear.”</p>",
+        "22": "<p><b>Hanging on a tree (v. 22).</b> <span class='term'>וְתָלִיתָ אֹתוֹ עַל-עֵץ</span> (you shall hang him on a tree/wood) — post-execution display of the body as public disgrace and deterrent. <span class='term'>חֵטְא מִשְׁפַּט-מָוֶת</span> (a sin deserving the death penalty) — the hanging is for a crime already executed, not a mode of execution itself (though cf. Esth 2:23; 7:9-10 for later gallows use). The display communicates the community’s unambiguous rejection of the crime.</p>",
+        "23": "<p><b>Cursed of God — bury the same day (v. 23).</b> <span class='term'>קִלְלַת אֱלֹהִים תָּלוּי</span> (one hanged is a curse/cursing of God) — the displayed corpse is called a <span class='term'>קְלָלָה</span> (<i>qelalah</i>, curse/accursed thing). <span class='term'>אֱלֹהִים</span> (<i>Elohim</i>) here — could mean “a curse from God” (God’s curse rests on him) or “a curse to God” (his hanging dishonors God). Paul quotes this verse directly in Gal 3:13: “Christ redeemed us from the curse of the law by becoming a curse for us — for it is written, ‘Cursed is everyone who is hanged on a tree.’” The mandate to bury the same day (not leave overnight) is a humanitarian and land-defilement concern; land contaminated by unburied corpses violates covenant holiness (see mkt-christ for the full Gal 3 application).</p>"
+    }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    data = load_comm('mkt-original', 'deuteronomy')
+    merge_comm(data, DEUTERONOMY)
+    chs = sorted(data.keys(), key=lambda x: int(x))
+    total_v = sum(len(data[c]) for c in chs)
+    print(f'Deuteronomy original: {len(chs)} chapters, {total_v} verses')
+    save_comm('mkt-original', 'deuteronomy', data)
 
 if __name__ == '__main__':
     main()

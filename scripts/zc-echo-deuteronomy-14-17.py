@@ -60,6 +60,37 @@ DEUT_ECHO = {
       {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
     ]
   },
+  "14": {
+    "3": [
+      {"type": "allusion", "target": "Acts 10:11", "note": "The clean/unclean food legislation of Deut 14:3-21 is the backdrop for Peter's vision: all animals let down in the sheet, the voice saying 'Do not call unclean what God has made clean' — the Mosaic food distinctions are declared fulfilled and transcended in Christ"},
+      {"type": "allusion", "target": "Mark 7:19", "note": "Thus he declared all foods clean — Mark's parenthetical comment on Jesus's teaching about defilement (paralleling Matt 15:17-20) is the Christological cancellation of the Deut 14 food code; the Mosaic boundary is dissolved in Christ"}
+    ]
+  },
+  "15": {
+    "4": [
+      {"type": "allusion", "target": "Acts 4:34", "note": "There was not a needy person among them — Luke's description of the Jerusalem church deliberately echoes Deut 15:4's vision of a community where there will be no poor; the early church's economic sharing is the Spirit-enabled fulfillment of Israel's debt-release legislation"}
+    ],
+    "11": [
+      {"type": "quote", "target": "Matt 26:11", "note": "The poor you always have with you — Jesus quotes Deut 15:11 directly in response to the disciples' complaint about the expensive ointment; the irony is that Moses's own call to open-handedness to the poor is the basis for releasing the woman from that obligation in that moment"},
+      {"type": "quote", "target": "John 12:8", "note": "The poor you always have with you, but you do not always have me — Jesus's direct citation of Deut 15:11 at Bethany; his physical presence is the once-for-all occasion that the debt-release legislation cannot qualify"}
+    ]
+  },
+  "16": {
+    "1": [
+      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "Christ our Passover has been sacrificed — Paul's citation of the Passover lamb as the type of Christ's death; Deut 16:1-8 prescribes the centralized annual Passover that Jesus fulfills as the once-for-all Passover Lamb (cf. John 1:29)"}
+    ],
+    "9": [
+      {"type": "fulfillment", "target": "Acts 2:1", "note": "When the day of Pentecost came — the Feast of Weeks (Shavuot/Pentecost) prescribed in Deut 16:9-12 is the occasion when the Spirit is poured out on the gathered disciples; the agricultural harvest festival becomes the occasion of the Spirit-harvest of first converts"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "John 7:2", "note": "The Feast of Tabernacles prescribed in Deut 16:13-15 is the feast setting for Jesus's Jerusalem teaching in John 7-8; the water-pouring ceremony of Sukkot (John 7:37-38) is the occasion for Jesus's cry 'If anyone thirsts let him come to me and drink'"}
+    ]
+  },
+  "17": {
+    "14": [
+      {"type": "allusion", "target": "John 18:36", "note": "The king legislation of Deut 17:14-20 (not multiplying horses, wives, or gold; writing Torah; not lifting his heart above his brothers) is the portrait of the ideal king that Israel's history consistently failed to produce; Jesus as the true King fulfills every condition: no military apparatus (John 18:36 'my kingdom is not of this world'), no earthly wealth, perfect knowledge of Torah, servant-hearted toward his brothers"}
+    ]
+  },
   "18": {
     "15": [
       {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},

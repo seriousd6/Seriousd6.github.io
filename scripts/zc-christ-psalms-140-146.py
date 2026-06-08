@@ -1,53 +1,46 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
+MKT Christ Commentary — Psalms chapters 140–146
+Run: python3 scripts/zc-christ-psalms-140-146.py
 
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+Source data used:
+- data/interlinear/psalms.json
+- data/commentary/mkt-christ/psalms.json (continuity)
+
+Key Christological decisions in this range:
+- Psalms 140–143 are Davidic lament psalms — the righteous sufferer hemmed in by enemies.
+  Christological thread: these psalms are the template Christ inhabits in his passion —
+  the betrayal, the cave (Gethsemane), the cry "deliver me," the "too strong for me."
+- Ps 142:7 "bring me out of prison" → Acts 2:24 (God raised him, loosing the pangs of death);
+  the righteous surrounding the delivered prisoner = the resurrection community.
+- Ps 143:2 "no one living is righteous before you" → Rom 3:20 + 2 Cor 5:21 (Christ our
+  righteousness; we stand before God only because he stood condemned in our place).
+- Ps 144:3 "what is man that you regard him, the son of man" → Heb 2:6-9 (explicitly applied
+  to Christ's incarnation — made lower than the angels to save humanity).
+- Ps 145:13 "your kingdom is an everlasting kingdom" → Dan 7:14 + Rev 11:15 + Luke 1:33.
+- Ps 146:3 "put not your trust in princes, in a son of man, in whom there is no salvation" →
+  Acts 4:12 (the son of man in whom there IS salvation is Christ, not any human ruler).
+- Ps 146:7-8 "sets the prisoners free... opens the eyes of the blind" → Luke 4:18 (Christ
+  quotes Isa 61 which matches these verses); Matt 11:5 (direct fulfillment enumeration).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,112 +48,130 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
+PSALMS = {
+  "140": {
+    "1": '<p>A type: the prayer of the righteous sufferer surrounded by violent enemies. Christ as the embodiment of this pattern — Luke 22:2 ("the chief priests and scribes were seeking how to put him to death"). He was delivered not from death but through it (Acts 2:24); the prayer for deliverance finds its ultimate answer in the resurrection, not the avoidance of suffering.</p>',
+    "2": '<p>A type: "who plan evil things in their heart and stir up wars continually." The conspiracy against Christ. Luke 22:3-6 — Satan entered Judas and the chief priests paid thirty pieces of silver. Acts 4:27-28 — "both Herod and Pontius Pilate, with the Gentiles and the peoples of Israel, gathered together against your holy servant Jesus." The enemies\' plans were overruled by God\'s definite plan (Acts 2:23).</p>',
+    "3": '<p>A theme: <strong>"under their lips is the venom of asps."</strong> Paul quotes this in Rom 3:13 as part of the universal portrait of human sin — "their throat is an open grave; they use their tongues to deceive." Christ bore the full weight of this sinful speech at his trial and crucifixion. He is the truth (John 14:6) that unmasks the venom; he bears its sting without becoming venomous (1 Pet 2:23).</p>',
+    "4": '<p>A type: the prayer for protection from the hands of the wicked. In Gethsemane, Christ prayed for the Father\'s will (Luke 22:42) — he was not shielded from suffering but guarded through it. His protection of his own: John 17:11-12 — "keep them in your name... I have kept them, and not one of them has been lost." The one who prays for protection becomes the protector of all who are his.</p>',
+    "5": '<p>A type: "arrogant men have hidden a trap for me." The repeated attempts to trap Jesus with his own words — Matt 22:15-22 (tax question), Luke 11:54 ("lying in wait for him, to catch him in something he might say"). He escaped every verbal snare, fulfilling the pattern of the righteous who outmaneuver the trapper — until he voluntarily walked into death itself (John 10:18).</p>',
+    "6": '<p>A type: "I say to the LORD, You are my God; give ear to my voice when I call to you!" The address to the Father. Heb 5:7 — "he offered up prayers and supplications, with loud cries and tears, to him who was able to save him from death, and he was heard because of his reverence." The prayer that rises from the most extreme distress is the prayer that is answered through resurrection.</p>',
+    "7": '<p>A shadow: "O LORD, my Lord, the strength of my salvation, you have covered my head in the day of battle." The Father\'s power protecting and ultimately vindicating the Son. Eph 1:19-20 — "the immeasurable greatness of his power toward us who believe... which he worked in Christ when he raised him from the dead." The battle in which God covered Christ\'s head was the battle with death itself.</p>',
+    "8": '<p>A type: "Grant not, O LORD, the desires of the wicked; do not further their evil plot." The wicked desired Christ dead and sealed in the tomb (Matt 27:62-66 — the guard on the tomb). The Father did not grant their ultimate desire — Acts 2:24: "it was not possible for him to be held by death." The plotted end is not the actual end; God\'s plan overrules human conspiracy.</p>',
+    "9": '<p>A type: "let the mischief of their lips overwhelm them." Matt 27:25 — "His blood be on us and on our children!" — the mischief of lips returning on the speakers. But Christ\'s response reverses the curse: Luke 23:34 — "Father, forgive them, for they know not what they do." He absorbed the mischief of lips rather than letting it destroy the speakers.</p>',
+    "10": '<p>A revelation of God: burning coals and fire as instruments of divine judgment on unrepentant evil. 2 Thess 1:8 — "inflicting vengeance on those who do not know God and on those who do not obey the gospel of our Lord Jesus." Matt 25:41 — "Depart from me, you cursed, into the eternal fire." The judgment that Ps 140 requests is the judgment Christ will execute at the end of the age.</p>',
+    "11": '<p>A revelation of God: no place established for the slanderer. Rev 21:8 — "all liars, their portion will be in the lake that burns with fire." The slanderer who "will not be established in the land" anticipates the final exclusion of falsehood from the new creation (Rev 21:27 — "nothing unclean will ever enter it... but only those who are written in the Lamb\'s book of life").</p>',
+    "12": '<p>A shadow: "The LORD will maintain the cause of the afflicted and will execute justice for the needy." Christ identifies with and maintains the cause of the poor. Luke 4:18 — "he has anointed me to proclaim good news to the poor." Matt 25:31-46 — Christ is identified with "the least of these." His resurrection is the vindication of the afflicted one, and his return will complete that vindication universally.</p>',
+    "13": '<p>A shadow: "the righteous shall give thanks to your name; the upright shall dwell in your presence." The dwelling in God\'s presence is the eschatological goal, realized through Christ. John 17:24 — "Father, I desire that they also, whom you have given me, may be with me where I am, to see my glory." Rev 21:3 — "the dwelling place of God is with man." To be "in Christ" is already to dwell in God\'s presence (Eph 2:6).</p>',
   },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
+  "141": {
+    "1": '<p>A type: the urgency of the righteous sufferer\'s cry to God. Heb 5:7 — Christ "offered up prayers and supplications, with loud cries and tears, to him who was able to save him from death." The hasten-to-me urgency of the psalm is the urgency of Gethsemane. God\'s answer is not immediate deliverance but ultimate vindication through resurrection.</p>',
+    "2": '<p>A type: <strong>"Let my prayer be counted as incense before you, and the lifting up of my hands as the evening sacrifice."</strong> Christ\'s death on the cross is the final evening sacrifice — Heb 9:26 ("he appeared once for all at the end of the ages to put away sin by the sacrifice of himself"). Rev 8:3-4 — incense with the prayers of the saints rises before the throne. The sacrifice and the prayer become one in Christ\'s offering.</p>',
+    "3": '<p>A revelation of God: the wisdom of guarded speech. Christ modeled this at his trial — Matt 26:63 (silent before the high priest); Matt 27:14 (no answer to Pilate). 1 Pet 2:23 — "when he was reviled, he did not revile in return." The guard over lips is the discipline that Christ embodied perfectly and calls his followers to (Jas 1:26; 1 Pet 3:10).</p>',
+    "4": '<p>A revelation of God: prayer for a heart not inclined to evil, not joining the company of evildoers. Heb 4:15 — Christ was tempted in every way, yet without sin. He ate with sinners (Luke 15:2) without being corrupted. The prayer for purity is answered in Christ\'s imputed righteousness (2 Cor 5:21) — his pure heart credited to those who are in him.</p>',
+    "5": '<p>A theme: receiving righteous rebuke as precious oil rather than insult. Christ received the rebuke of John\'s baptism (Matt 3:14-15 — John said "I need to be baptized by you, and do you come to me?") with acceptance. He welcomed correction from the righteous while resisting the evil of the unrighteous — the posture that Ps 141 calls wisdom and that Christ embodied.</p>',
+    "6": '<p>A revelation of God: the reversal where unjust judges are themselves thrown down. Acts 7:51-53 — Stephen\'s charge against the council that they resist the Holy Spirit and killed the prophets. Rev 6:15-17 — the kings and judges of the earth cry for the mountains to fall on them to hide from the wrath of the Lamb. The tables of judgment are turned at the last day.</p>',
+    "7": '<p>A type: "scattered at the mouth of Sheol" — the scattering of the community at the leader\'s death. Matt 26:31 — "I will strike the shepherd, and the sheep of the flock will be scattered" (= Zech 13:7). Christ descends to Sheol — Acts 2:27 (Ps 16:10 — "you will not abandon my soul to Hades"). The bones scattered at Sheol\'s mouth are reassembled by the resurrection.</p>',
+    "8": '<p>A type: "my eyes are toward you, O LORD God; in you I seek refuge." Even in extremity, Christ kept his eyes toward the Father. John 17:1 — "Father, the hour has come; glorify your Son." Heb 12:2 — "who for the joy that was set before him endured the cross." The cross is endured with eyes fixed on the Father\'s purpose. Luke 23:46 — "Father, into your hands I commit my spirit!"</p>',
+    "9": '<p>A type: "Keep me from the trap that they have laid for me." Luke 20:20 — they sent spies "to catch him in what he said." John 10:39 — "again they sought to arrest him, but he escaped from their hands." He was not trapped until the appointed hour — and then he laid down his own life voluntarily (John 10:18). The nets of the wicked could not hold him.</p>',
+    "10": '<p>A shadow: "Let the wicked fall into their own nets, while I pass on safely." Christ passes through all human plots and emerges victorious. John 10:39 — escaped from their hands. Acts 2:24 — not possible to be held by death. The ultimate "passing safely" is the resurrection — through death itself, Christ passed through to the other side, and the nets of death held him only three days (Acts 2:24).</p>',
   },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
+  "142": {
+    "1": '<p>A type: "With my voice I cry out to the LORD; with my voice I plead for mercy." David in the cave pours out his soul to God. Gethsemane is the NT cave — Luke 22:41-44 (Christ prayed apart, in agony). The cry of the one in extremity that rises to the Father and is heard — Heb 5:7: "he was heard because of his reverence." The cave\'s cry is answered by the empty tomb.</p>',
+    "2": '<p>A type: "I pour out my complaint before him; I tell my trouble before him." The one who holds nothing back in prayer. Luke 22:44 — "being in agony he prayed more earnestly; his sweat became like great drops of blood." Christ brought the full weight of his suffering before the Father. The prayer is not edited or composed — it is the raw cry of the one in extremity, fully trusting the Father.</p>',
+    "3": '<p>A type: "When my spirit faints within me, you know my way." Even in the collapse of all earthly certainty, the Father knows the path. Acts 2:23-24 — "this Jesus, delivered up according to the definite plan and foreknowledge of God, you crucified and killed by the hands of lawless men. God raised him up." The Father knew the way through the cave of death to resurrection.</p>',
+    "4": '<p>A type: "there is none who takes notice of me; no one cares for my soul." The abandonment. Matt 26:56 — "all the disciples left him and fled." John 16:32 — "you will leave me alone. Yet I am not alone, for the Father is with me." Christ entered the extreme of human isolation — yet he said the Father is with him. On the cross the Father\'s face was turned away (Matt 27:46); yet even there, Christ commended his spirit to him (Luke 23:46).</p>',
+    "5": '<p>A type: "I cry to you, O LORD; I say, \'You are my refuge, my portion in the land of the living.\'" The prisoner\'s confession of trust at the lowest point is Christ\'s own pattern. From the cross — Luke 23:46 — "Father, into your hands I commit my spirit!" He claimed the Father as his portion even as he died, expressing the trust that Ps 142 rehearses. "The land of the living" is the resurrection.</p>',
+    "6": '<p>A type: "I am brought very low! Deliver me from my persecutors, for they are too strong for me." Phil 2:8 — Christ "humbled himself by becoming obedient to the point of death." He voluntarily accepted the state of being "too strong for me" — overwhelmed by the forces arrayed against him, including death itself. This was not defeat but the deepest act of trust and obedience.</p>',
+    "7": '<p>A direct: <strong>"Bring me out of prison, that I may give thanks to your name! The righteous will surround me, for you will deal bountifully with me."</strong> Acts 2:24 — "God raised him up, loosing the pangs of death, because it was not possible for him to be held by it." The righteous surrounding the released prisoner is the resurrection community (1 Cor 15:6 — "he appeared to more than five hundred brothers at one time"). The "bountiful dealing" is the resurrection and glorification of the Son.</p>',
   },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
+  "143": {
+    "1": '<p>A type: appeal to God\'s faithfulness and righteousness in prayer. Christ as the supreme intercessor appeals not to his own merits but to the Father\'s character. Rom 8:34 — "Christ Jesus is the one who died... who is at the right hand of God, who indeed is interceding for us." Heb 7:25 — "he always lives to make intercession for them." His intercession rests on the Father\'s faithfulness, not on merit he earns.</p>',
+    "2": '<p>A direct: <strong>"Enter not into judgment with your servant, for no one living is righteous before you."</strong> The premise of the gospel — Rom 3:20 ("by works of the law no human being will be justified in his sight"); Gal 2:16. No one stands before God\'s justice — except Christ, who is our righteousness. 2 Cor 5:21 — "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God." We stand before God only because Christ stood condemned in our place.</p>',
+    "3": '<p>A type: "the enemy has crushed my life to the ground; he has made me sit in darkness like those long dead." Christ was "delivered over to the power of darkness" (Luke 22:53). Isa 53:10 — "it was the will of the LORD to crush him." The crushing of the life to the ground and the sitting in darkness among the dead is what Christ entered — fully, without reserve — to defeat death from within.</p>',
+    "4": '<p>A type: "my spirit faints within me; my heart within me is appalled." Luke 22:44 — "being in agony he prayed more earnestly; his sweat became like great drops of blood falling down to the ground." The Gethsemane account describes exactly the emotional extremity of Ps 143:4. The spirit-fainting and heart-appalled one is the Son in the garden before the cross.</p>',
+    "5": '<p>A type: "I meditate on all that you have done; I ponder the works of your hands." Christ drew on Scripture throughout his passion as the anchor of trust. From the cross he quoted Ps 22:1 (Matt 27:46) and Ps 31:5 (Luke 23:46). His meditation on the works of God — the Exodus, the covenant, the resurrection promises — was the foundation of his trust through the darkest hour.</p>',
+    "6": '<p>A type: <strong>"my soul thirsts for you like a parched land."</strong> John 19:28 — "I thirst." Christ\'s cry from the cross is the fulfillment of the thirsty soul of Ps 143. He thirsted so that those who come to him will never thirst (John 4:14 — "a spring of water welling up to eternal life"; John 7:37-38 — "rivers of living water"). He bore the thirst so others would be satisfied.</p>',
+    "7": '<p>A type: "Hide not your face from me, lest I be like those who go down to the pit." Christ descended into death — Acts 2:27 (Ps 16:10 — "you will not abandon my soul to Hades"). The fear of the pit was the fear Christ faced and entered. On the cross the Father\'s face was hidden (Matt 27:46 — "My God, my God, why have you forsaken me?"). But the answer is resurrection — the Father did not ultimately abandon him to the pit.</p>',
+    "8": '<p>A shadow: <strong>"Let me hear in the morning of your steadfast love."</strong> The resurrection morning — Mark 16:2 ("very early on the first day of the week they went to the tomb when the sun had risen"). Easter morning is the morning of God\'s steadfast love proclaimed in the resurrection. John 14:6 — "I am the way and the truth and the life." The way made known is the way Christ opens through death to life.</p>',
+    "9": '<p>A type: "Deliver me from my enemies, O LORD! I have fled to you for refuge." The prayer for deliverance answered through resurrection. Heb 6:18 — "we who have fled for refuge might have strong encouragement to hold fast to the hope set before us." Christ, who prayed for deliverance and received it through resurrection, becomes himself the refuge for all who flee to him.</p>',
+    "10": '<p>A type: <strong>"Teach me to do your will, for you are my God!"</strong> The will of the Father perfectly obeyed by the Son. Luke 22:42 — "not my will, but yours be done." John 4:34 — "my food is to do the will of him who sent me and to accomplish his work." Christ obeyed the Father\'s will to the point of death (Phil 2:8), making perfect obedience the ground of our redemption (Rom 5:19).</p>',
+    "11": '<p>A shadow: "For your name\'s sake, O LORD, preserve my life! In your righteousness bring my soul out of trouble!" God\'s righteousness is vindicated in the resurrection of the Son. Rom 3:25-26 — God presented Christ as a propitiation "to show his righteousness... so that he might be just and the justifier of the one who has faith in Jesus." The Father\'s name and righteousness are both at stake in the Son\'s vindication.</p>',
+    "12": '<p>A shadow: "And in your steadfast love you will cut off my enemies, and you will destroy all the adversaries of my soul, for I am your servant." The destruction of Christ\'s enemies is both accomplished and being completed. 1 Cor 15:25-26 — "he must reign until he has put all his enemies under his feet. The last enemy to be destroyed is death." The servant\'s prayer is the prayer being answered across the entire church age until the last enemy falls.</p>',
   },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
+  "144": {
+    "1": '<p>A revelation of God: YHWH as the warrior who trains and empowers for battle. Rev 19:11-15 — Christ is "Faithful and True, and in righteousness he judges and makes war." The decisive battle was not fought with physical weapons but at the cross — Col 2:15 ("having disarmed the rulers and authorities, he made a public spectacle of them, triumphing over them by the cross"). The Lord of hosts trains his people for spiritual warfare (Eph 6:10-17).</p>',
+    "2": '<p>A shadow: the cascade of protective metaphors — steadfast love, fortress, stronghold, deliverer, shield, refuge. All point toward Christ. He is the rock (1 Cor 10:4), the deliverer (Rom 11:26), the shield of faith (Eph 6:16). All nations coming under his rule: Rev 11:15 — "the kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever."</p>',
+    "3": '<p>A direct: <strong>"O LORD, what is man that you regard him, or the son of man that you think of him?"</strong> Heb 2:6-9 explicitly applies this text to Christ: "What is man that you are mindful of him... you have crowned him with glory and honor." The "son of man" who receives divine attention is Jesus Christ, who "for a little while was made lower than the angels" in the incarnation, then "crowned with glory and honor because of the suffering of death." The condescension of God toward humanity is the incarnation.</p>',
+    "4": '<p>A theme: human frailty and transience — "man is like a breath; his days are like a passing shadow." Christ entered this transience in the incarnation (John 1:14 — "the Word became flesh"). His resurrection breaks the shadow — Heb 13:8 ("Jesus Christ is the same yesterday and today and forever"). He became mortal to defeat mortality; he became breath to give the breath of the Spirit (John 20:22).</p>',
+    "5": '<p>A type: "Bow your heavens, O LORD, and come down!" The prayer for divine descent is the incarnation. John 1:14 — "the Word became flesh and dwelt among us." John 6:38 — "I have come down from heaven, not to do my own will but the will of him who sent me." God "came down" in Christ — not in smoke and fire as at Sinai (Exod 19:18) but in flesh. The prayer of the psalm is answered in the birth of the Son.</p>',
+    "6": '<p>A type: "Flash forth the lightning and scatter them; send out your arrows and rout them!" The divine warrior image. The ultimate warfare is the cross — Col 2:15 (disarming the powers through the cross); Heb 2:14-15 (destroying the one who has the power of death). The arrows and lightning of the warrior are the weapons Christ used to defeat sin, death, and the devil — the weapons of self-giving love and obedient death.</p>',
+    "7": '<p>A type: "Stretch out your hand from on high; rescue me and deliver me from the many waters." The rescue from the waters of death — Acts 2:24 ("God raised him up, loosing the pangs of death"). The hand stretched out from on high is the Father\'s hand that raised the Son. The lying enemies whose mouths speak falsehood are the false witnesses at Christ\'s trial (Matt 26:59-61).</p>',
+    "8": '<p>A type: "from the hand of foreigners, whose mouths speak lies." Acts 4:27-28 — "both Herod and Pontius Pilate, with the Gentiles and the peoples of Israel, gathered together against your holy servant Jesus." The foreigners whose lies condemn the righteous are the Gentile rulers who executed the Messiah — yet this was "according to whatever your hand and your plan had predestined to take place."</p>',
+    "9": '<p>A shadow: <strong>"I will sing a new song to you, O God."</strong> Rev 5:9 — "they sang a new song: \'Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation.\'" The new song of the redeemed is the song of the Lamb. What Ps 144 calls for, Rev 5 delivers — the new song sung because Christ has accomplished the new exodus.</p>',
+    "10": '<p>A shadow: "who gives victory to kings, who rescues David his servant from the cruel sword." The Father gives victory to his anointed king through resurrection. Acts 2:36 — "God has made him both Lord and Christ, this Jesus whom you crucified." The rescue from the cruel sword is the rescue from the sword of death — death was the final sword, and Christ was raised through it.</p>',
+    "11": '<p>A type: the repeated prayer against lying enemies. Judas\'s betrayal (Luke 22:3-6), false witnesses (Matt 26:60-61), Pilate\'s "I find no fault" while condemning (Luke 23:4,24) — the right hand of falsehood is the hand that signed the death warrant while declaring innocence. Acts 4:27-28 — the Gentiles and peoples of Israel gathered against the holy servant Jesus "to do whatever your hand and your plan had predestined."</p>',
+    "12": '<p>A theme: flourishing children like well-grown plants. In Christ the family of God flourishes beyond any physical household. John 1:12-13 — those who receive Christ are "born of God." Isa 53:10 — "he shall see his offspring and prolong his days." Rev 7:9 — the great multitude that no one can number, gathered from every nation — the flourishing family of the new creation.</p>',
+    "13": '<p>A theme: full barns, abundant flocks — the messianic vision of overflowing abundance. The messianic age is characterized by abundance (John 10:10 — "I came that they may have life and have it abundantly"). The physical abundance of Ps 144 prefigures the spiritual abundance of the new covenant and the fullness of the new creation (Rev 21:4 — "no more death, nor mourning, nor crying, nor pain").</p>',
+    "14": '<p>A theme: "no cry of distress in our streets." Rev 21:4 — "he will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore." The vision of Ps 144 — a community with no cry of distress — is the vision of the new creation that Christ brings. He is the one who takes away mourning (John 11:35; Luke 7:13 — "do not weep").</p>',
+    "15": '<p>A direct: <strong>"Blessed are the people whose God is the LORD!"</strong> The beatitude form. Matt 5:3-12 — Christ pronounces the Beatitudes as the new law of the kingdom. The supreme blessing — "whose God is the LORD" — is now articulated through union with Christ (2 Cor 5:17; Gal 2:20). The blessed people are those who are in Christ, in whom God has made his dwelling (John 14:23).</p>',
   },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
+  "145": {
+    "1": '<p>A shadow: "I will extol you, my God and King." Christ is the King of kings (Rev 17:14; 1 Tim 6:15) before whom all will bow. Phil 2:10-11 — "at the name of Jesus every knee should bow... and every tongue confess that Jesus Christ is Lord." The King who is extolled forever is the Christ who reigns forever (Luke 1:33 — "of his kingdom there will be no end").</p>',
+    "2": '<p>A revelation of God: ceaseless, eternal praise. In the new creation this is the unceasing reality — Rev 4:8 ("day and night they never cease to say, \'Holy, holy, holy, is the Lord God Almighty\'"). The object of eternal praise is God and the Lamb (Rev 5:13 — "to him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever").</p>',
+    "3": '<p>A revelation of God: "his greatness is unsearchable." Eph 3:8 — "the unsearchable riches of Christ." Rom 11:33 — "Oh, the depth of the riches and wisdom and knowledge of God! How unsearchable are his judgments." The greatness that is unsearchable is most fully expressed in Christ — his love surpasses knowledge (Eph 3:19), his peace surpasses understanding (Phil 4:7).</p>',
+    "4": '<p>A theme: one generation commending God\'s works to the next. 2 Tim 2:2 — "what you have heard from me in the presence of many witnesses entrust to faithful men, who will be able to teach others also." The chain of transmission is the church across generations. The mighty deeds being transmitted are now centered on Christ — Acts 2:11 (they heard the "mighty works of God" at Pentecost).</p>',
+    "5": '<p>A revelation of God: meditation on the glorious splendor of God\'s majesty. 2 Cor 4:6 — "the light of the knowledge of the glory of God in the face of Jesus Christ." The face where the splendor and majesty of God is seen is the face of the incarnate Son. Heb 1:3 — Christ "is the radiance of the glory of God and the exact imprint of his nature."</p>',
+    "6": '<p>A revelation of God: proclaiming God\'s awesome deeds. The supreme awesome deed is the resurrection. Acts 2:32-36 — "this Jesus God raised up, and of that we are all witnesses." The proclamation of God\'s awesome deeds is the proclamation of the resurrection, which the disciples carried to the ends of the earth (Acts 1:8).</p>',
+    "7": '<p>A revelation of God: "pour forth the fame of your abundant goodness... sing aloud of your righteousness." Rom 3:25-26 — the cross demonstrates God\'s righteousness "so that he might be just and the justifier of the one who has faith in Jesus." The abundant goodness poured forth is the grace "lavished on us" in Christ (Eph 1:7-8). The righteousness celebrated is the righteousness of God revealed in the gospel (Rom 1:17).</p>',
+    "8": '<p>A revelation of God: <strong>"The LORD is gracious and merciful, slow to anger and abounding in steadfast love."</strong> The covenant-character formula (Exod 34:6) is definitively revealed in Christ. John 1:14 — "full of grace and truth"; John 1:17 — "grace and truth came through Jesus Christ"; 1 John 4:9 — "God\'s love was made manifest among us in that God sent his only Son." The YHWH-character formula is the Christ-character formula.</p>',
+    "9": '<p>A revelation of God: "The LORD is good to all, and his mercy is over all that he has made." The universal goodness of God, which the NT traces to common grace — Matt 5:45 ("he makes his sun rise on the evil and on the good"). This universal goodness is the backdrop of the gospel\'s reach to all nations (Acts 17:25-27). The mercy that is "over all" is the mercy supremely expressed in Christ\'s death "for all" (2 Cor 5:14-15).</p>',
+    "10": '<p>A shadow: "All your works shall give thanks to you, O LORD, and all your saints shall bless you." Rev 5:13 — "every creature in heaven and on earth and under the earth... I heard saying, \'To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!\'" The universal thanksgiving of Ps 145 is the universal worship of Rev 5, directed equally to God and the Lamb.</p>',
+    "11": '<p>A shadow: "They shall speak of the glory of your kingdom and tell of your power." Mark 1:14-15 — "Jesus came into Galilee, proclaiming the gospel of God, and saying, \'The time is fulfilled, and the kingdom of God is at hand.\'" Christ both announces and embodies the kingdom whose glory and power the psalm proclaims. He is the kingdom in person — Luke 17:21 ("the kingdom of God is in your midst").</p>',
+    "12": '<p>A theme: "to make known to the children of man your mighty deeds, and the glorious splendor of your kingdom." Matt 28:19-20 — "Go therefore and make disciples of all nations." The making known to all humanity of God\'s mighty deeds and kingdom glory is the mission Christ entrusts to his church. The "children of man" who must know are all peoples; the mighty deeds now center on the death and resurrection of Christ.</p>',
+    "13": '<p>A direct: <strong>"Your kingdom is an everlasting kingdom, and your dominion endures throughout all generations."</strong> Dan 7:14 — "his dominion is an everlasting dominion... his kingdom shall not be destroyed." Rev 11:15 — "the kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever." Luke 1:33 — "of his kingdom there will be no end." The everlasting kingdom is Christ\'s kingdom.</p>',
+    "14": '<p>A shadow: "The LORD upholds all who are falling and raises up all who are bowed down." Luke 4:18 — "he has sent me to... set at liberty those who are oppressed." Acts 3:7 — Peter takes the lame man by the hand and "raised him up." Christ literally and spiritually "raises up" all who are bowed down. He is the fulfillment of Ps 145:14 in both his earthly miracles and his continuing intercession (Heb 7:25).</p>',
+    "15": '<p>A type: "The eyes of all look to you, and you give them their food in due season." John 6:35 — "I am the bread of life; whoever comes to me shall not hunger." Matt 14:19 — Jesus looked up to heaven, gave thanks, broke the bread, and fed the multitude. The eyes of all who look to God for food look to Christ the bread of life. The feeding miracles are the enacted fulfillment of Ps 145:15.</p>',
+    "16": '<p>A type: "You open your hand; you satisfy the desire of every living thing." The open hand of blessing — John 6:11 (Jesus distributed to those seated). Rev 7:16-17 — before the Lamb\'s throne they "shall hunger no more... the Lamb in the midst of the throne will be their shepherd, and he will guide them to springs of living water." The open hand that satisfies all desire is the pierced hand of the risen Christ.</p>',
+    "17": '<p>A revelation of God: "The LORD is righteous in all his ways and kind in all his works." Heb 7:26 — Christ is "holy, innocent, unstained, separated from sinners." John 14:9 — "whoever has seen me has seen the Father." The righteousness and kindness of YHWH in all his ways is visible in Christ who perfectly mirrors the Father\'s character (Heb 1:3 — "the exact imprint of his nature").</p>',
+    "18": '<p>A shadow: "The LORD is near to all who call on him, to all who call on him in truth." Acts 17:27 — God "is actually not far from each one of us." Eph 2:13 — "you who once were far off have been brought near by the blood of Christ." The nearness of God to those who call is the nearness of Christ (John 14:18 — "I will not leave you as orphans; I will come to you"; Matt 28:20 — "I am with you always").</p>',
+    "19": '<p>A shadow: "He fulfills the desire of those who fear him; he also hears their cry and saves them." Matt 1:21 — "he will save his people from their sins." John 17:3 — the deepest desire is eternal life; Christ gives it. Luke 7:22 — the deaf hear, the blind see, the dead are raised. He hears and saves — the lame walk, the lepers are cleansed. Christ is the fulfillment of every cry and desire in Ps 145:19.</p>',
+    "20": '<p>A revelation of God: "The LORD preserves all who love him, but all the wicked he will destroy." John 10:28-29 — "I give them eternal life, and they shall never perish." Rev 20:15 — the final judgment of the wicked. The sharp division of the last day — preservation of the beloved and destruction of the wicked — is the work of Christ the judge (John 5:22-29; Matt 25:31-46).</p>',
+    "21": '<p>A shadow: "let all flesh bless his holy name forever and ever." Rev 5:9-14 — every creature praising God and the Lamb. Phil 2:10-11 — every tongue confessing that Jesus Christ is Lord. The "forever and ever" of universal praise is the ceaseless worship of the new creation before the throne of God and the Lamb (Rev 22:3-5). What Ps 145 calls for, Revelation describes in its consummation.</p>',
   },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
+  "146": {
+    "1": '<p>A revelation of God: "Praise the LORD, O my soul!" — whole-being, lifelong praise. Heb 2:12 — Christ leads his brothers in worship: "I will declare your name to my brothers; in the midst of the congregation I will sing your praise." The model of soul-praise is Christ himself, who in Heb 2:12 quotes Ps 22:22 — the risen Christ praising God in the midst of the assembly.</p>',
+    "2": '<p>A revelation of God: "I will praise the LORD as long as I live; I will sing praises to my God while I have my being." The lifelong praise that the psalm vows is the eternal praise of those who live in Christ (John 11:25-26 — "everyone who lives and believes in me shall never die"). The life that praises forever is the eternal life Christ gives — praise that outlasts biological existence.</p>',
+    "3": '<p>A direct: <strong>"Put not your trust in princes, in a son of man, in whom there is no salvation."</strong> Acts 4:12 — "there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved." The "son of man in whom there is no salvation" stands in sharp contrast with the Son of Man who is himself the only salvation (John 3:17; Luke 19:10 — "the Son of Man came to seek and to save the lost").</p>',
+    "4": '<p>A theme: "When his breath departs, he returns to the earth; on that very day his plans perish." Human mortality makes human hope misplaced. Jas 4:13-14 — "you are a mist that appears for a little time and then vanishes." Christ, who died and rose, is not subject to this mortality — Rev 1:18 ("I died, and behold I am alive forevermore"). His plans do not perish with his breath because his breath is eternal life (John 11:25-26).</p>',
+    "5": '<p>A shadow: "Blessed is he whose help is the God of Jacob, whose hope is in the LORD his God." 1 Pet 1:3 — "blessed be the God and Father of our Lord Jesus Christ! According to his great mercy, he has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead." The blessedness of those who hope in the Lord is now the blessedness of those who hope in the risen Christ.</p>',
+    "6": '<p>A revelation of God: the Creator who "made heaven and earth, the sea, and all that is in them, who keeps faith forever." John 1:3 — "all things were made through him"; Col 1:16-17 — "all things were created through him and for him... in him all things hold together." The creator who keeps faith is the Christ through whom creation was made and who holds it together. His faithfulness is the faithfulness of the Creator.</p>',
+    "7": '<p>A type: <strong>"who executes justice for the oppressed, who gives food to the hungry. The LORD sets the prisoners free."</strong> Luke 4:18 (quoting Isa 61) — "he has anointed me to proclaim good news to the poor, to proclaim liberty to the captives, to set at liberty those who are oppressed." Jesus\'s ministry is the direct enactment of this verse — the miracles of feeding (John 6), healing, and liberation perform what Ps 146:7 says God does.</p>',
+    "8": '<p>A direct: <strong>"the LORD opens the eyes of the blind. The LORD lifts up those who are bowed down."</strong> Matt 11:5 — "the blind receive their sight and the lame walk, lepers are cleansed and the deaf hear, and the dead are raised up." These are the signs of the messianic age (Isa 35:5-6), and Jesus performs them as evidence of his identity (Luke 7:22). John 9:39 — "for judgment I came into this world, that those who do not see may see." The verse is not analogy but direct fulfillment.</p>',
+    "9": '<p>A shadow: "The LORD watches over the sojourners; he upholds the widow and the fatherless." Matt 25:31-46 — Christ is identified with the vulnerable: "I was a stranger and you welcomed me." Jas 1:27 — "religion that is pure and undefiled before God the Father is this: to visit orphans and widows in their affliction." Christ is the guardian of the sojourner and the protector of the vulnerable — the one who defines true religion as care for the most exposed.</p>',
+    "10": '<p>A direct: <strong>"The LORD will reign forever, your God, O Zion, to all generations. Praise the LORD!"</strong> Rev 11:15 — "the kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever." Luke 1:33 — "of his kingdom there will be no end." The eternal reign announced in the final verse of Ps 146 is the eternal reign of Christ — the Lord who reigns in Zion is the Lord Jesus, enthroned at the Father\'s right hand (Heb 1:3) until all enemies are under his feet (1 Cor 15:25).</p>',
   },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
 }
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-christ', 'psalms')
+    merge_comm(existing, PSALMS)
+    save_comm('mkt-christ', 'psalms', existing)
+    # INTENT: Verify coverage for Psalms 140-146 against interlinear verse inventory
+    # CHANGE? If interlinear/psalms.json verse counts change, recount expected totals here
+    # VERIFY: Console shows wrote data/commentary/mkt-christ/psalms.json; no missing verses
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'psalms.json').read_text())
+    out = json.loads((ROOT / 'data' / 'commentary' / 'mkt-christ' / 'psalms.json').read_text())
+    missing = []
+    for ch in range(140, 147):
+        ck = str(ch)
+        for v in il.get(ck, {}):
+            if v not in out.get(ck, {}):
+                missing.append(f'{ch}:{v}')
+    if missing:
+        print(f'  MISSING: {missing}')
+    else:
+        print(f'  OK: all Psalms 140-146 mkt-christ verses present ({sum(len(il.get(str(c),{})) for c in range(140,147))} verses)')
 
 if __name__ == '__main__':
     main()

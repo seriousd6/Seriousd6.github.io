@@ -71,6 +71,45 @@ DEUT_ECHO = {
       {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
     ]
   },
+  "22": {
+    "12": [
+      {"type": "allusion", "target": "Matt 23:5", "note": "Tassels (tzitzit) on the four corners of your garment — Jesus accuses the scribes and Pharisees of making their tassels long to be seen; the outward sign meant to remind Israel of the commandments (Num 15:38-39) had become a performance of piety rather than an act of covenant remembrance"},
+      {"type": "allusion", "target": "Matt 9:20", "note": "The woman who had bled for twelve years touched the fringe (tzitzit) of Jesus's garment; the healing power that flowed from the hem of the Messiah's garment redeems the tassel-commandment by embodying the holiness it was meant to evoke — to touch his garment is to receive the wholeness Israel's covenant was designed to give"}
+    ]
+  },
+  "23": {
+    "1": [
+      {"type": "shadow", "target": "Acts 8:27-39", "note": "No one whose testicles are crushed or whose male organ is cut off shall enter the assembly of the LORD — the Ethiopian eunuch of Acts 8 was a person excluded under Deut 23:1; Philip's baptism of him is the enacted fulfillment of Isa 56:3-5 (I will give them a name better than sons and daughters) and signals the new covenant's removal of assembly-barriers through Christ"},
+      {"type": "allusion", "target": "Gal 3:28", "note": "No distinction of male and female in Christ Jesus — the Deuteronomic assembly-exclusions that separated Israelites from the covenant community are abolished in Christ; the one new humanity (Eph 2:15) has no boundary-markers of exclusion"}
+    ],
+    "5": [
+      {"type": "theme", "target": "Rom 8:28", "note": "The LORD your God turned the curse into a blessing for you, because the LORD your God loved you — the Balaam curse-turned-blessing (Num 22-24) becomes a pattern that Paul applies universally: God works all things together for good for those who love him; the divine reversal of curse into blessing reaches its apex in the cross, where the supreme curse becomes the supreme blessing (Gal 3:13-14)"}
+    ],
+    "25": [
+      {"type": "allusion", "target": "Matt 12:1-8", "note": "You may pluck heads of grain with your hand, but you shall not put a sickle to your neighbor's standing grain — when Pharisees accuse the disciples of Sabbath-breaking for plucking grain, Jesus defends them with David's eating of the showbread; both cases apply the same Deuteronomic principle that human need has priority over external ritual restriction, and Jesus declares himself Lord even of the Sabbath"}
+    ]
+  },
+  "24": {
+    "1": [
+      {"type": "quote", "target": "Matt 5:31-32", "note": "He who divorces his wife must give her a certificate of divorce — Jesus quotes Deut 24:1 in the Sermon on the Mount and intensifies it: whoever divorces his wife except for sexual immorality makes her commit adultery; the Mosaic concession to hardness of heart (Matt 19:8) is now superseded by the original creation design (Gen 2:24)"},
+      {"type": "quote", "target": "Matt 19:7", "note": "Why then did Moses command to give a certificate of divorce? — the Pharisees cite Deut 24:1 to challenge Jesus; he responds that Moses permitted it because of hardness of heart but from the beginning it was not so; the Deuteronomic legislation is placed in the category of accommodation, not ideal"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Jas 5:4", "note": "You shall not oppress a hired servant who is poor and needy, whether he is one of your brothers or one of the sojourners who are in your land — James applies the same principle: behold the wages of the laborers who mowed your fields, which you kept back by fraud, are crying out against you; the Lord of hosts has heard their cry; Deuteronomic labor justice is eschatological covenant obligation"}
+    ],
+    "16": [
+      {"type": "theme", "target": "John 9:2-3", "note": "Fathers shall not be put to death because of their children, nor shall children be put to death because of their fathers. Each one shall be put to death for his own sin — when the disciples ask 'who sinned, this man or his parents?', Jesus refuses the hereditary-guilt framework; Deut 24:16 and Ezek 18:20 establish individual moral accountability, which Christ applies to correct a distorted theodicy"}
+    ]
+  },
+  "25": {
+    "4": [
+      {"type": "quote", "target": "1 Cor 9:9", "note": "You shall not muzzle an ox when it treads out the grain — Paul quotes Deut 25:4 explicitly and asks: is it for oxen that God is concerned? Does he not certainly speak for our sake? He argues that the law's principle of worker-support applies to apostles; the oxen are the type, the gospel worker is the reality; the law teaches by analogy that those who labor in the word deserve material support"},
+      {"type": "quote", "target": "1 Tim 5:18", "note": "Paul cites Deut 25:4 alongside 'the laborer deserves his wages' (Luke 10:7) as twin scriptural warrants for supporting elders who rule well; treating both as Scripture places Deut 25:4 in the same authoritative category as dominical teaching — the Mosaic law and the word of Jesus agree in their principle of rewarding labor"}
+    ],
+    "5": [
+      {"type": "allusion", "target": "Matt 22:24-28", "note": "If brothers dwell together and one of them dies and has no son, his brother shall take the widow as wife and perform the duty of a husband's brother to her — the Sadducees cite levirate marriage to Jesus to argue against resurrection: whose wife will she be after seven brothers each married and died? Jesus's answer (in the resurrection they neither marry nor are given in marriage) reveals that the levirate institution, designed to preserve the family name in the old covenant, is superseded in the resurrection order"}
+    ]
+  },
   "30": {
     "12": [
       {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}

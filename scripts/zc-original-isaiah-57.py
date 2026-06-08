@@ -1,0 +1,74 @@
+"""
+MKT Original Commentary — Isaiah chapter 57
+Run: python3 scripts/zc-original-isaiah-57.py
+
+Source data used:
+- data/interlinear/isaiah.json
+- data/translation/glossary-hebrew.json
+- data/translation/draft/mediating/isaiah.json
+
+Key decisions in this range:
+- vv. 1-2: 'abad used for righteous perishing — nuance of premature death
+- v. 15: rām wĕniśśā' — same phrase as 6:1 (Isaiah's vision); intentional echo
+- v. 15: dual dwelling — high/holy + crushed/lowly — paradox maintained
+- v. 19: bōrē' nîb śĕpātāyim — creator verb applied to speech-act
+- v. 21: shalom inclusio with v. 2 — wicked excluded from the peace the righteous enter
+"""
+import json, pathlib
+
+ROOT = pathlib.Path(__file__).parent.parent
+
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
+
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
+    print(f'  wrote {p.relative_to(ROOT)}')
+
+def merge_comm(existing, new_data):
+    # INTENT: Non-destructive merge — existing entries are never overwritten, safe to re-run
+    for ch, verses in new_data.items():
+        if ch not in existing: existing[ch] = {}
+        for v, html in verses.items():
+            if v not in existing[ch]: existing[ch][v] = html
+
+ISAIAH = {
+"57": {
+"1": "<p><strong>hazzaddîq 'ābad</strong> — <em>the righteous one perishes</em>. The verb <em>'ābad</em> (אָבַד) typically denotes destruction or premature loss — the same word used for the wicked perishing in judgment. Its application to the righteous is deliberately jarring. <em>wĕ'ênennû mêbîn</em> — <em>and no one takes it to heart</em> — the root <em>bîn</em> (to understand/consider) in Hiphil negated: the community lacks the spiritual perception to recognize what the righteous man's death means.</p>",
+"2": "<p><strong>yābô' šālôm</strong> — <em>he enters into peace</em>. The Qal imperfect <em>yābô'</em> frames entry into peace as the righteous one's destination. <em>yānûaḥû 'al-miškĕbôtām</em> — <em>they rest on their beds</em> — the plural <em>miškĕbôt</em> (beds) generalizes to the class of the upright. <em>hōlēk nĕkōḥô</em> — <em>who walk in their uprightness</em> — the participle describes continuous integrity of life. The word <em>šālôm</em> here (v. 2) and in vv. 19 and 21 creates a structural inclusio: peace is the righteous one's entrance; peace is what YHWH creates and proclaims; peace is what the wicked cannot have.</p>",
+"3": "<p><strong>wĕ'attem qĭrĕbû hēnnāh</strong> — <em>but you, draw near here</em>. The sharp turn from consolation to accusation. The addressees are <em>bĕnê 'ōnenāh</em> — <em>sons of a sorceress</em> — the root <em>'ānan</em> (to practice divination). The pair <em>zera' mĕnā'ēp̄ wattizĕnèh</em> — <em>offspring of the adulterer and the loose woman</em> — uses both cultic and sexual unfaithfulness language. In Hebrew prophetic idiom, covenant violation is adultery; the charge layers literal and figurative dimensions.</p>",
+"4": "<p><strong>'al-mî tit'annāgû</strong> — <em>Against whom do you mock?</em>. The Hithpa'el <em>tit'annāgû</em> (from עָנַג — to delight/sport with) is ironic: those who mock and stick out the tongue (<em>tarhîbû peh ta'ărîkû lāšôn</em>) against the righteous are themselves children of transgression (<em>yaldê-pèša'</em>) and offspring of deceit (<em>zera' šāqer</em>).</p>",
+"5": "<p><strong>hannĕḥāmîm bā'ēlîm taḥat kol-'ēṣ ra'ănān</strong> — <em>burning with lust among the oaks, under every green tree</em>. The participle <em>hannĕḥāmîm</em> (from חָמַם — to be hot, heated with passion) indicates ongoing ritual acts at high places. The phrase <em>taḥat kol-'ēṣ ra'ănān</em> — under every leafy/green tree — is formulaic for Canaanite fertility cult (cf. Deut 12:2; 2 Kgs 17:10). <em>šōḥaṭê hayyĕlādîm</em> — <em>slaughtering children</em> — the Pi'el participle of שָׁחַט (to slaughter/butcher, the term for ritual killing) applied to child sacrifice in the ravines (<em>neḥālîm</em>).</p>",
+"6": "<p><strong>bĕḥĕlĕqê-naḥal ḥelqēk</strong> — <em>among the smooth stones of the stream is your portion</em>. The smooth stream stones (<em>ḥĕlāqê naḥal</em>) were apparently used as cult objects — their smoothness (from <em>ḥālaq</em>, smooth) creates a wordplay with <em>ḥēleq</em> (portion/lot). YHWH's accusation is ironic: they have chosen smooth stones as their portion rather than YHWH himself. <em>gam-lāhem šāpaktĕ nèsek</em> — to these you have poured out a drink offering (<em>nesek</em>). The irony intensifies: YHWH asks whether he should relent at this (<em>hă'al-'ēlleh 'ennāḥēm</em>)?</p>",
+"7": "<p><strong>'al-har-gābōah ûniśśā' śamtĕ miškāb̠ēk</strong> — <em>on a high and lofty mountain you have made your bed</em>. The high mountain is the cultic high place (<em>bāmāh</em>). The word <em>miškāb̠</em> (bed, couch) used in a cultic context carries the double meaning of both the altar-bed and the sexual charge of the fertility rite. <em>šām 'ālît liz-bôaḥ zāb̠aḥ</em> — <em>there you went up to offer sacrifice</em>.</p>",
+"8": "<p><strong>'aḥar haddèlet wĕhamĕzûzāh śamtĕ zikrōnēk</strong> — <em>behind the door and the doorpost you have set up your memorial</em>. The <em>mĕzûzāh</em> (doorpost, from which the modern mezuzah takes its name) is where the Shema was to be inscribed (Deut 6:9). Here pagan cultic symbols are placed where YHWH's word belongs — the most intimate domestic space perverted. <em>kî mē'ittî gālît</em> — <em>for you have uncovered yourself away from me</em> — the verb <em>gālāh</em> (to uncover/expose) is the standard term for sexual exposure and for exile; both meanings are active.</p>",
+"9": "<p><strong>wattāšûrî lamèlek bāšèmen</strong> — <em>you went to the king with oil</em>. The identity of <em>hammelek</em> (the king) is debated — possibly Molech (מֹלֶךְ, the deity requiring child sacrifice) or a foreign monarch. <em>wattarbî mĕrĕqqāḥayik</em> — <em>and multiplied your perfumes</em> — lavish preparation for an illicit liaison. <em>wattišlĕḥî ṣir-rayik 'ad-mērāḥôq</em> — sent your envoys far off, down to Sheol.</p>",
+"10": "<p><strong>bĕrōb̠ darkēk yāga'tĕ</strong> — <em>in the length of your journey you grew weary</em>. The same verb <em>yāga'</em> (to toil/grow weary) used by the Servant in 49:4 — but there in noble perseverance; here in futile idolatrous pilgrimage. <em>lō' 'āmartĕ nôaš</em> — <em>you did not say, 'It is hopeless'</em> — the noun <em>nôaš</em> (despair, hopelessness) is from אָנַשׁ; they found the energy to persist in apostasy. <em>ḥayyat yādēk māṣā't</em> — the life of your hand you found (i.e., enough to keep going), so you were not weakened.</p>",
+"11": "<p><strong>wĕ'et-mî dā'agtĕ wattîrĕ'î</strong> — <em>Whom did you dread and fear?</em>. The rhetorical question exposes the root of apostasy: fear of the wrong party. <em>wĕ'ōtî lō' zāk̠artĕ</em> — <em>me you did not remember</em> — the verb <em>zākar</em> (to remember, with covenantal force) negated. The silence of YHWH is named: <em>hălō' 'ănî maḥašèh ûmē'ōlām</em> — <em>Have I not been silent, even for a long time?</em> — divine patience misread as absence.</p>",
+"12": "<p><strong>'ănî 'aggîd ṣidqātēk</strong> — <em>I will declare your righteousness</em>. The irony is severe: YHWH will declare their righteousness — but the declaration will expose it as empty. <em>wĕ'et-ma'ăśayik wĕlō' yô'îlûk</em> — <em>but your works will not profit you</em> — the Hiphil of יָעַל (to be profitable) negated; the cultic efforts yield nothing.</p>",
+"13": "<p><strong>bĕzā'aqēk yaṣṣîlûk qibbuṣayik</strong> — <em>when you cry out, let your collection of idols deliver you</em>. The sarcasm is pointed: let the gathered idols (<em>qibbuṣayik</em>, your collected things) rescue them. <em>wĕyiśśā' kūllām rûaḥ</em> — <em>all of them will be carried off by the wind</em> — the wind (<em>rûaḥ</em>) takes the idols away; the idols cannot save even themselves. The contrast: <em>wĕhahôsèh bî yinḥal-'āreṣ</em> — <em>but the one who takes refuge in me will inherit the land</em> — the covenant inheritance language.</p>",
+"14": "<p><strong>sōllû sōllû paqqû-dārek</strong> — <em>Build up, build up, prepare the way!</em>. The doubled imperative <em>sōllû sōllû</em> (Pi'el of סָלַל, to cast up a highway) signals urgency; cf. 40:3. <em>hārîmû mikšôl middèrek 'ammî</em> — <em>remove every obstacle from the way of my people</em>. The divine highway motif shifts register from judgment (vv. 3–13) to restoration. The second great movement of the chapter begins here.</p>",
+"15": "<p><strong>kî kōh 'āmar rām wĕniśśā'</strong> — <em>for thus says the high and lofty one</em>. The phrase <em>rām wĕniśśā'</em> — high and lifted up — is identical to Isa 6:1 (<em>'ădōnāy yōšēb̠ 'al-kisse' rām wĕniśśā'</em>), the vision of YHWH's throne. <em>šōkēn 'ad</em> — <em>who inhabits eternity</em> — the participle <em>šōkēn</em> (dwelling, tabernacling) with <em>'ad</em> (eternity/forever). The divine paradox: <em>wĕ'et-dakkā' ûšĕpal-rûaḥ</em> — <em>yet also with the crushed and lowly of spirit</em> — YHWH dwells in the utterly high place AND in the contrite human heart simultaneously. The infinitives of purpose: <em>lĕhaḥăyôt rûaḥ šĕpālîm wĕlĕhaḥăyôt lēb̠ nidkā'îm</em> — <em>to revive the spirit of the lowly and revive the heart of the crushed</em>.</p>",
+"16": "<p><strong>kî lō' lĕ'ôlām 'ārîb̠</strong> — <em>for I will not contend forever</em>. The verb <em>rîb̠</em> (to contend, bring a legal dispute) is the same word used when YHWH wages a covenant lawsuit against Israel (cf. 49:25). Here its limit is asserted. <em>wĕlō' lāneṣaḥ 'eqṣôp̄</em> — <em>I will not always be angry</em>. The reason: <em>kî-rûaḥ mĕlĕpānāy ya'ătôp̄</em> — <em>for a spirit would faint before me</em> — if YHWH sustained unrelenting anger, the creature could not endure; mercy is woven into the structure of creation.</p>",
+"17": "<p><strong>bĕ'awōn biṣ'ô qāṣaptî</strong> — <em>because of the iniquity of his unjust gain I was angry</em>. The noun <em>beṣa'</em> (בֶּצַע) — unjust gain, dishonest profit — is the cause of divine anger (<em>qāṣap̄</em>, Qal perfect). <em>wĕ'akkēhû hāstēr wĕ'eqṣōp̄</em> — <em>I struck him; I hid myself and was angry</em> — the hiding of YHWH's face (<em>hāstēr</em>, Hiphil infinitive absolute of סָתַר) is used as divine discipline (cf. 8:17; 54:8).</p>",
+"18": "<p><strong>dĕrāk̠āyw rā'îtî wĕ'erp̄ā'ēhû</strong> — <em>I have seen his ways, yet I will heal him</em>. The sequence is theologically striking: YHWH sees the wayward path and heals regardless. The verb <em>rāp̄ā'</em> (to heal) in Qal imperfect (<em>'erp̄ā'ēhû</em>) — future decisive healing. <em>wĕ'anḥēhû wĕ'ăšallēm nĕḥumîm lô</em> — <em>I will lead him and restore comfort to him</em> — the Pi'el <em>'anḥēhû</em> (guide/lead) and Piel <em>'ăšallēm</em> (restore/repay) frame restoration as both direction and restitution.</p>",
+"19": "<p><strong>bôrē' nîb̠ śĕpātāyim</strong> — <em>creating the fruit of lips</em>. The verb <em>bārā'</em> (to create, the Genesis 1 word) applied to the divine speech-act: YHWH creates what the lips speak. <em>šālôm šālôm</em> — the doubled noun is an intensifying superlative: <em>complete peace</em>. Recipients: <em>lārāḥôq wĕlaqārôb̠</em> — to the far and the near — universalizing the scope of peace. <em>'āmar YHWH ûrĕpā'tîw</em> — <em>says YHWH, and I will heal him</em> — the healing of v. 18 now embedded in the proclamation.</p>",
+"20": "<p><strong>wĕhārĕšā'îm kayyām nigrāš</strong> — <em>but the wicked are like the tossing sea</em>. The Niphal participle <em>nigrāš</em> (from גָּרַשׁ — to drive/toss out) describes chronic unrest. <em>kî hašqēṭ lō' yûkal</em> — <em>for it cannot be quiet</em> — the sea of wickedness has no capacity for <em>šālôm</em>. <em>wayyigrĕšû mêmāyw rèfeš wāṭît</em> — its waters toss up mire (<em>rèfeš</em>) and mud (<em>ṭît</em>). The image is the exact antithesis of the living water and rest offered in vv. 18-19.</p>",
+"21": "<p><strong>'ên šālôm 'āmar 'ĕlōhāy lārĕšā'îm</strong> — <em>There is no peace, says my God, for the wicked</em>. This is the chapter's closing line and its structurally decisive verdict — mirroring 48:22 almost exactly. The inclusio with v. 2 (<em>šālôm... yābô'</em> — the righteous enter peace) is now closed: peace is the exclusive inheritance of the righteous. The wicked cannot receive what YHWH creates (<em>bôrē' šālôm šālôm</em>, v. 19) because they have not turned from the ways that preclude it. The divine title here is <em>'ĕlōhāy</em> — my God — the prophet's own intimate relationship underscoring the authority of the verdict.</p>"
+}
+}
+
+def main():
+    existing = load_comm('mkt-original', 'isaiah')
+    merge_comm(existing, ISAIAH)
+    save_comm('mkt-original', 'isaiah', existing)
+    v = sum(len(vs) for vs in ISAIAH.values())
+    print(f'Isaiah 57 mkt-original: {v} verses written.')
+
+if __name__ == '__main__':
+    main()

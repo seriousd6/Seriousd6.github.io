@@ -1,166 +1,190 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
-
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+MKT Christ Commentary — Psalms chapters 80–85
+Run: python3 scripts/zc-christ-psalms-80-85.py
+Key decisions:
+- Ps 80: vine-from-Egypt (v8) → John 15:1 true vine TYPE; v17 'son of man'
+  at YHWH's right hand → Dan 7:13 / Acts 2:33 DIRECT; refrain face-shine
+  (vv3/7/19) → 2 Cor 4:6 face of Christ
+- Ps 81: v10 'I am LORD who brought you up' + fill-open-mouth → John 6:35
+  bread of life new-Exodus; v12 gave-them-over to stubborn hearts →
+  Rom 1:24/28 DIRECT pattern; v16 honey-from-rock → 1 Cor 10:4
+- Ps 82: v6 'you are gods, sons of the Most High' → John 10:34-36 DIRECT
+  CITATION Jesus quotes in self-defense before Sanhedrin
+- Ps 83: v18 name-YHWH-Most-High over all earth → Phil 2:9-11 name of Christ
+- Ps 84: v9 'look on the face of your anointed (mashiach)' = messianic petition
+  fulfilled in Heb 7:25 / John 17 intercession; v11 sun-and-shield →
+  John 8:12 / Rom 8:32
+- Ps 85: v8 speak-peace → Eph 2:17 / John 20:19-21 risen Christ speaks
+  shalom DIRECT; v9 glory-dwells → John 1:14 incarnation; v10
+  hesed-emet meet / righteousness-peace kiss = the atonement (2 Cor 5:21 /
+  Rom 3:26); v11 faithfulness-springs-from-earth/righteousness-looks-from-
+  heaven = Incarnation; v13 righteousness-marches-before = John Baptist
+  forerunner / Isa 40:3
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def load_comm(layer: str, book: str) -> dict:
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
+
+
+def save_comm(layer: str, book: str, data: dict) -> None:
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=2))
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
 
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
+def merge_comm(existing: dict, new_data: dict) -> None:
+    # INTENT: Write only absent keys so re-running never overwrites manual edits.
+    # CHANGE? If key schema changes (e.g. chapter keys become ints), update both
+    #   merge_comm and the PSALMS dict below to match.
+    # VERIFY: After run, check python3 -c "import json; d=json.load(open(
+    #   'data/commentary/mkt-christ/psalms.json')); print(len(d),'chapters')"
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
-        for v, entries in verses.items():
+        for v, text in verses.items():
             if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
+                existing[ch][v] = text
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
-  },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
+PSALMS = {
+    "80": {
+        "1": "<p>The cry to the <strong>Shepherd of Israel</strong> enthroned above the cherubim reaches its fulfillment in the one who came as the <strong>Good Shepherd</strong> (John 10:11) — the very <em>YHWH</em> who led Joseph like a flock now takes on flesh to seek the lost sheep of Israel. The throne above the cherubim that the psalmist addresses is the one from which the Son descends (John 3:13; Heb 1:3).</p>",
+        "2": "<p>The summons to <strong>stir up your might</strong> before Ephraim, Benjamin, and Manasseh — tribes of the Rachel-Joseph line — is a plea for the powerful showing-up of God. The disciples who witnessed Christ transfigured and resurrected saw precisely this: the divine might displayed not in military power but in the power of an indestructible life (Heb 7:16).</p>",
+        "3": "<p>The <strong>refrain</strong> — <em>shuvennu Elohim haer panekha venivvashea</em> — \"Restore us, O God; make your face shine, so that we may be saved\" — is the Aaronic blessing (Num 6:25-26) transformed into desperate petition. In Christ, the shining face of God is given permanently: \"God... has shone in our hearts to give the light of the knowledge of God's glory <strong>in the face of Jesus Christ</strong>\" (2 Cor 4:6). The shining that the psalmist begs for is the very face the disciples beheld (John 1:14).</p>",
+        "4": "<p>\"How long, O <strong>LORD God of hosts</strong>, will you be angry with your people's prayers?\" — the smoke of divine anger that seems to consume prayer itself. Christ on the cross cries \"My God, my God, why have you forsaken me?\" (Matt 27:46), identifying fully with the community whose prayers seem to go nowhere; and then, risen, he opens the way to the Father so that prayers are no longer met with smoke but with the Spirit's intercession (Rom 8:26-27).</p>",
+        "5": "<p>\"You have fed them with the <strong>bread of tears</strong> and given them tears to drink in full measure\" — the divine feeding with sorrow. Christ, the Bread of Life (John 6:35), entered into this very experience: \"Man of sorrows and acquainted with grief\" (Isa 53:3). The one who feeds with bread of tears is the same one who becomes the bread that ends the tears (Rev 21:4: \"He will wipe away every tear\").</p>",
+        "6": "<p>\"You make us an object of <strong>contention</strong> for our neighbors, and our enemies laugh among themselves\" — the scorn of surrounding nations. Jesus bore this scorn explicitly: he was mocked by Herod's soldiers (Luke 23:11), the crowd wagged their heads (Matt 27:39), and the rulers \"scoffed\" (Luke 23:35). The shame borne by Israel that the psalmist laments is the shame Christ absorbed as Israel's representative head.</p>",
+        "7": "<p>The <strong>refrain</strong> recurs: \"Restore us, O God of hosts; make your face shine, so that we may be saved.\" The three-fold repetition of this refrain across the psalm (vv3, 7, 19) mirrors the threefold divine name escalation: first \"God\" (<em>Elohim</em>), then \"God of hosts\" (<em>Elohei Tsevat</em>), finally \"LORD God of hosts\" (<em>YHWH Elohei Tsevat</em>) — an intensification that finds its fullest expression in Christ who is \"Emmanuel, God with us\" (Matt 1:23), the complete shining of the divine face.</p>",
+        "8": "<p>\"You brought a <strong>vine out of Egypt</strong>; you drove out the nations and planted it\" — the great vine-transplant of the Exodus. Jesus said \"I am the <strong>true vine</strong>\" (John 15:1), explicitly claiming to be what Israel the historic vine failed to be. The vine-from-Egypt that should have filled the land is now the true vine from which the branches draw life — the Exodus-vine history is not abandoned but fulfilled and surpassed.</p>",
+        "9": "<p>\"You cleared the ground for it; it took deep root and filled the land\" — the flourishing of the planted vine. The true vine planted in the land, Jesus of Nazareth, took root in the soil of Jewish history (Matt 1:1-17), bore fruit through death and resurrection, and now fills the earth as his people spread to every nation (Acts 1:8; Rev 7:9). The geographical filling of the land points toward the eschatological filling of the earth.</p>",
+        "10": "<p>\"The mountains were covered with its shade, the mighty cedars with its branches\" — the vine's cosmic reach. The <strong>mustard seed</strong> parable (Matt 13:31-32) uses the same image: a tiny plant that grows until \"the birds of the air come and perch in its branches.\" Christ's kingdom begins as the most modest of plantings in Galilee and expands to fill the earth; the vine of Psalm 80:10 is the mustard-tree of the Gospels.</p>",
+        "11": "<p>\"It sent out its branches to the sea, and its shoots to the River\" — the vine spanning from Mediterranean to Euphrates, the full extent of the Davidic promise (Gen 15:18; 1 Kgs 4:21). Ephesians 1:10 speaks of God's plan to bring all things together under Christ — the vine whose branches reach from sea to river becomes the cosmic Christ who fills all in all (Eph 1:23).</p>",
+        "12": "<p>\"Why then have you broken down its walls, so that all who pass along the way pluck its fruit?\" — the ruined vineyard, open to plunder. Isaiah 5:1-7 uses the same image of the unprotected vineyard to speak of divine judgment. Christ quotes the parable of the wicked tenants (Matt 21:33-44) over this same vineyard — the story of Israel's failure is one Jesus knows from the inside, as both the rejected cornerstone and the true Son sent last.</p>",
+        "13": "<p>\"A boar from the forest ravages it, and all that move in the field feed on it\" — the wild beast tearing apart the vine. Christ came to destroy the works of the devil (1 John 3:8), to bind the strong man and plunder his house (Matt 12:29). The vine that was ravaged by the enemy is defended by the Lion of Judah (Rev 5:5).</p>",
+        "14": "<p>\"Turn again, O God of hosts! Look down from heaven, and see; have regard for this vine\" — the prayer that God would look at the vine. The Incarnation is the divine response to this prayer: God does not merely look down from heaven but descends to the vine in the person of his Son. \"The LORD looked down from his holy height\" (Ps 102:19) finds its ultimate expression in the One who stooped from highest heaven to the manger (Phil 2:6-7).</p>",
+        "15": "<p>\"The stock that your right hand planted, and the <strong>son</strong> that you made strong for yourself\" — the vine personalized as a son. Here is the Christological hinge: the vine is simultaneously a <em>son</em>. Jesus is the True Vine (John 15:1) <em>and</em> the Son of God — the personification of Israel-vine in a single person. \"This is my beloved Son\" (Matt 3:17) is the divine recognition of the stock planted by the right hand.</p>",
+        "16": "<p>\"They have burned it with fire, they have cut it down; may they perish at the rebuke of your face!\" — the vine cut down and burned. This images Christ's death: the true vine is cut down at Calvary, burned in the fire of divine wrath (Gal 3:13: \"cursed is everyone who is hung on a tree\"). But the cut vine rises — the burned branch is not consumed but resurrected; the rebuke of God's face falls on Christ so that the divine face may shine on his people (refrain, v19).</p>",
+        "17": "<p>\"Let your hand be on <strong>the man of your right hand</strong>, the <strong>son of man</strong> whom you have made strong for yourself\" — one of the most direct Messianic moments in the Psalter. \"<em>Ben-adam</em>\" (son of man) seated at the right hand of power, strengthened by God himself. Daniel 7:13 sees \"one like a son of man\" coming with the clouds to receive all authority. Jesus explicitly takes this title as his own self-designation (Matt 8:20; 26:64: \"you will see the Son of Man seated at the right hand of Power\"). The man at YHWH's right hand of Psalm 80:17 is the ascended Christ (Acts 2:33; Heb 1:13).</p>",
+        "18": "<p>\"Then we shall not turn back from you; give us life, and we will call upon your name!\" — the vow of faithfulness and the cry for life (<em>hayyenu</em>). Christ's resurrection answers this cry perfectly: it is the giving of life that makes calling on the name possible. \"Everyone who calls on the name of the Lord will be saved\" (Rom 10:13, quoting Joel 2:32) — the life-cry of Psalm 80:18 is answered in the resurrection and the outpouring of the Spirit at Pentecost.</p>",
+        "19": "<p>The <strong>final refrain</strong> in its fullest form: \"Restore us, O <em>YHWH</em> God of hosts; make your face shine, so that we may be saved!\" — the most complete divine name combined with the prayer for the shining face. Second Corinthians 4:6: the face of <strong>Jesus Christ</strong> is the shining face the psalm seeks. The escalating divine name through the psalm's three refrains traces the journey from lament to the full light of God's glory in Christ.</p>"
+    },
+    "81": {
+        "1": "<p>\"Sing aloud to God our strength; shout for joy to the <strong>God of Jacob</strong>!\" — the festal call to worship. In Christ, the God of Jacob is recognized as the Father of our Lord Jesus Christ (Eph 1:3) — the tribal patriarch-God who comes to be the God of all nations through the seed of Abraham/Jacob (Gal 3:16). The shouting of the assembly gathered at the feast finds its fullest echo in the church's gathered worship (Heb 12:22-24).</p>",
+        "2": "<p>\"Raise a song; sound the tambourine, the sweet lyre with the harp!\" — the liturgical instruments of praise. In the new creation, the song of the redeemed fills heaven: \"They sang a new song\" (Rev 5:9) before the Lamb. The festal musicality of Psalm 81 points toward the eternal worship of the Lamb, the one toward whom all celebration ultimately moves.</p>",
+        "3": "<p>\"Blow the trumpet at the new moon, at the full moon, on our feast day\" — the lunar calendar marking the sacred assembly. Paul writes that the Sabbaths, new moons, and festivals \"are a shadow of the things to come, but the substance belongs to Christ\" (Col 2:16-17). The trumpet-call to the feast is the type; Christ is the substance whom the feast days commemorate and anticipate.</p>",
+        "4": "<p>\"For it is a statute for Israel, a decree of the God of Jacob\" — the divine ordinance ordering the festal assembly. Christ \"came not to abolish the Law and the Prophets but to fulfill them\" (Matt 5:17). The statutes and decrees of the covenant are fulfilled in him — the festal calendar finds its fulfillment in the One toward whom every feast pointed: the Passover Lamb, the Firstfruits from the dead (1 Cor 15:20), the Bread of heaven.</p>",
+        "5": "<p>\"He made it a decree in Joseph, when he went out over the land of Egypt. I hear a language I had not known\" — the Exodus origin of the ordinance, and the divine oracle in a form not previously known. Hebrews 1:1-2: \"In the past God spoke... at many times and in various ways, but in these last days he has spoken to us by his Son.\" The unknown language becomes the known Word made flesh — the radically new mode of divine speech that the Incarnation represents.</p>",
+        "6": "<p>\"I relieved your shoulder of the burden; your hands were freed from the basket\" — the liberation from Egyptian slave-labor. Jesus explicitly takes this image: \"Come to me, all who labor and are heavy laden, and I will give you rest... my yoke is easy, and my burden is light\" (Matt 11:28-30). The liberation from the brick-basket of Egypt is the type; the freedom Christ gives from sin's burden and the law's condemnation is the antitype. The shoulder freed in Exodus points to the yoke removed by Christ.</p>",
+        "7": "<p>\"In distress you called, and I delivered you; I answered you in the secret place of thunder; I tested you at the waters of Meribah\" — divine response from hidden thunder. John 12:28-29: when a voice came from heaven after Jesus' prayer, \"the crowd that stood there and heard it said that it had thundered.\" The divine voice from the thunder-cloud over Israel's wilderness is the same voice that confirms the Son at his hour of glory. The waters of Meribah-testing prepare for the one who is himself the living water (John 4:14; 7:37-38).</p>",
+        "8": "<p>\"Hear, O my people, while I admonish you! O Israel, if you would but listen to me!\" — the divine call to hear. Jesus stands in this tradition and intensifies it: \"He who has ears to hear, let him hear\" (Matt 13:9). Revelation 2-3 repeats \"He who has an ear, let him hear what the Spirit says to the churches\" — the listening that Israel failed to do is now called for by the risen Christ through the Spirit. The divine appeal of Psalm 81:8 echoes through every page of the Gospels.</p>",
+        "9": "<p>\"There shall be no strange god among you; you shall not bow down to a foreign god\" — the first commandment's heart. Christ himself is the fulfillment of this exclusivity: \"I am the way, the truth, and the life. No one comes to the Father except through me\" (John 14:6). The demand for exclusive devotion to YHWH alone is concentrated in the person of the Son, who is YHWH's definitive self-revelation (John 10:30; Col 2:9).</p>",
+        "10": "<p>\"I am the LORD your God, who brought you up out of the land of Egypt. <strong>Open your mouth wide, and I will fill it</strong>\" — the Exodus formula of divine self-identification combined with a promise of provision. Jesus takes both elements: he is the one who brings the new Exodus (Luke 9:31), and he is the Bread that fills the open mouth — \"I am the <strong>bread of life</strong>; whoever comes to me shall not hunger, and whoever believes in me shall never thirst\" (John 6:35). The Sinai self-identification of YHWH is fulfilled in the \"I am\" declarations of Jesus.</p>",
+        "11": "<p>\"But my people did not listen to my voice; Israel would not submit to me\" — the terrible refusal. This is the pattern that runs through the OT prophets and culminates in Stephen's speech (Acts 7:51-53: \"you always resist the Holy Spirit; as your fathers did, so do you\"). Christ came to the very ones who would not listen and was rejected: \"He came to his own, and his own people did not receive him\" (John 1:11). The non-listening of Psalm 81:11 reaches its climax at the cross.</p>",
+        "12": "<p>\"So I <strong>gave them over to their stubborn hearts</strong>, to follow their own counsels\" — the divine judicial abandonment. Paul uses this exact pattern in Romans 1:24-28: \"God <em>gave them over</em> (<em>paredoken</em>) in the sinful desires of their hearts... God gave them over to shameful lusts... God gave them over to a depraved mind.\" The threefold giving-over of Romans 1 echoes the giving-over of Psalm 81:12. Christ is the answer: in him the Father does not give over but gives <em>up</em> the Son for us all (Rom 8:32), so that the pattern of judicial abandonment is reversed through substitutionary love.</p>",
+        "13": "<p>\"Oh, that my people would listen to me, that Israel would walk in my ways!\" — the divine lament-wish. This holy longing is taken up by Jesus over Jerusalem: \"O Jerusalem, Jerusalem... how often would I have gathered your children together as a hen gathers her brood under her wings, and you were not willing!\" (Matt 23:37). The divine wish-oracle of Psalm 81:13 is Jesus weeping over the city. God's desire for his people's flourishing is not cold decree but aching love.</p>",
+        "14": "<p>\"I would soon subdue their enemies and turn my hand against their foes\" — the conditional promise of victory. In Christ, the enemies are decisively defeated — not foreign nations geographically, but the powers of sin, death, and the devil. \"The reason the Son of God appeared was to destroy the works of the devil\" (1 John 3:8). The hand turned against the foes of God's people is the resurrection-power of Christ who \"disarmed the rulers and authorities and put them to open shame\" (Col 2:15).</p>",
+        "15": "<p>\"Those who hate the LORD would cringe before him, and their fate would last forever\" — the reversal of fortunes. Philippians 2:10-11: \"At the name of Jesus every knee shall bow, in heaven and on earth and under the earth, and every tongue confess that Jesus Christ is Lord.\" The cringing before YHWH of Psalm 81:15 is fulfilled in the eschatological submission to Christ at whose name every knee bows — including those who hated him.</p>",
+        "16": "<p>\"But he would feed you with the finest of the wheat, and with <strong>honey from the rock</strong> I would satisfy you\" — the provision of honey from the rock. First Corinthians 10:4: \"they drank from the spiritual Rock that followed them, and <strong>the Rock was Christ</strong>.\" The rock that pours out honey in Psalm 81:16 is the preexistent Christ who fed Israel in the wilderness and who now gives himself as the Bread of Life — wheat and honey from the Rock who is Christ himself, the fullest satisfaction of the human soul.</p>"
+    },
+    "82": {
+        "1": "<p>\"God has taken his place in the <strong>divine assembly</strong>; in the midst of the gods he holds judgment\" — YHWH presiding over the heavenly council, judging the <em>elohim</em> (divine beings / ruling powers). Christ's exaltation places him above every such power: \"far above all rule and authority and power and dominion\" (Eph 1:21). The scene of divine judgment in Psalm 82 anticipates the eschatological judgment through Christ (Acts 17:31), who now presides over the divine council that previously held judgment.</p>",
+        "2": "<p>\"How long will you judge unjustly and show partiality to the wicked?\" — the indictment of the unjust judges. Christ's judicial ministry is the opposite: he judges with perfect equity, showing no partiality (Acts 10:34; Rom 2:11). The failure of the divine council's justice creates the vacuum that the Messiah fills — the one Judge who is perfectly righteous (2 Tim 4:8: \"the Lord, the righteous judge\").</p>",
+        "3": "<p>\"Give justice to the weak and the fatherless; maintain the right of the afflicted and the destitute\" — the justice mandate. Jesus explicitly identifies his mission with this: \"The Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor\" (Luke 4:18, quoting Isa 61:1). The justice mandate of Psalm 82:3 is the mission statement of the Anointed One who comes to do what the unjust judges failed to do.</p>",
+        "4": "<p>\"Rescue the weak and the needy; deliver them from the hand of the wicked\" — the rescue mandate. Titus 2:14 describes Christ as one \"who gave himself for us to redeem us from all lawlessness and to purify for himself a people.\" The Psalter's vision of the Messiah as deliverer of the poor and weak (Pss 72, 82) is fulfilled in Christ who rescues through his own self-giving.</p>",
+        "5": "<p>\"They have neither knowledge nor understanding, they walk about in darkness; all the foundations of the earth are shaken\" — the cosmic consequence of unjust rule. Jesus describes himself as \"the light of the world\" (John 8:12), coming into the darkness that unjust rulers perpetuate. The shaking of the foundations is stabilized by the one who holds all things together (Col 1:17: \"in him all things hold together\").</p>",
+        "6": "<p>\"I declared, '<strong>You are gods</strong>, sons of the Most High, every one of you'\" — Jesus quotes this verse verbatim in John 10:34-36 when the Jewish leaders accuse him of blasphemy for calling himself the Son of God. He responds: \"Is it not written in your Law, 'I said, you are gods'? If he called them gods to whom the word of God came — and Scripture cannot be broken — do you say of him whom the Father consecrated and sent into the world, 'You are blaspheming,' because I said, 'I am the Son of God'?\" This DIRECT CITATION is one of the most theologically precise uses of the OT in the Gospels: Jesus uses the lesser dignity of the human judges (<em>elohim</em>) to argue the greater dignity of the one whom the Father sent. Psalm 82 sits at the center of the Sanhedrin's confrontation with Christ.</p>",
+        "7": "<p>\"Nevertheless, like men you shall die, and fall like any prince\" — the mortality of these gods, contrasted with the divine immortality they claimed. Christ dies — the truly divine Son takes on mortality (Heb 2:14-15: \"he himself likewise partook of flesh and blood, that through death he might destroy the one who has the power of death\"). But unlike the dying gods of Psalm 82:7, Christ rises; his mortality is voluntary and temporary, destroyed by the power of an indestructible life (Heb 7:16).</p>",
+        "8": "<p>\"<strong>Rise up, O God, judge the earth</strong>; for all the nations belong to you!\" — the eschatological prayer for divine judgment. Acts 17:31: \"He has fixed a day on which he will judge the world in righteousness by a man whom he has appointed; and of this he has given assurance to all by raising him from the dead.\" The rising-up of God to judge all nations in Psalm 82:8 is the resurrection and return of Christ, the appointed Judge to whom all nations belong (Rev 11:15: \"The kingdom of the world has become the kingdom of our Lord and of his Messiah\").</p>"
+    },
+    "83": {
+        "1": "<p>\"O God, do not keep silence; do not hold your peace or be still, O God!\" — the urgent cry against divine silence. Christ himself cried from the cross \"My God, my God, why have you forsaken me?\" (Matt 27:46) — identifying fully with Israel's plea against the divine silence. But the silence was broken at the resurrection: the God who seemed still now speaks the most eloquent word possible by raising his Son from the dead (Acts 2:24: \"God raised him up, loosing the pangs of death\").</p>",
+        "2": "<p>\"For behold, your enemies make an uproar; those who hate you have raised their heads\" — the hostile assembly rising against God. Acts 4:25-28 quotes Psalm 2:1-2 in the context of the Sanhedrin's opposition to Christ: \"the rulers were gathered together against the Lord and against his Anointed.\" The uproar of the enemies in Psalm 83:2 is the same pattern that Herod, Pontius Pilate, the Gentiles, and the people of Israel participated in when they gathered against Jesus.</p>",
+        "3": "<p>\"They lay crafty plans against your people; they consult together against your <strong>treasured ones</strong> (<em>tsepuneykha</em>)\" — scheming against those who are hidden/treasured. Colossians 3:3: \"your life is now <strong>hidden with Christ in God</strong>.\" The treasured-hidden ones of Psalm 83:3 are the type of those who are hidden with Christ; the scheming against them is the warfare that the church experiences (Eph 6:12), and their hiddenness in God is their protection.</p>",
+        "4": "<p>\"They say, 'Come, let us wipe them out as a nation; let the name of Israel be remembered no more!'\" — the genocidal ambition to erase the covenant people. Christ's promise to Peter answers this definitively: \"on this rock I will build my church, and the gates of hell shall not prevail against it\" (Matt 16:18). The anti-erasure promise is grounded in Christ's own indestructibility — the covenant community cannot be erased because its head cannot be held by death (Acts 2:24).</p>",
+        "5": "<p>\"For they conspire with one accord; against you they make a covenant\" — unified opposition against God. The irony of the passion narrative is that those who should never have cooperated — Herod and Pilate — became friends because of their shared opposition to Jesus (Luke 23:12). The conspirators who unite against God's people are ultimately united against God himself, and Christ is the one in whom God absorbs and defeats that unified opposition.</p>",
+        "6": "<p>\"The tents of Edom and the Ishmaelites, Moab and the Hagrites\" — the coalition of surrounding nations. Theologically, the coalition of hostile powers surrounding Israel types the eschatological gathering of nations against God's people (Rev 19:19-21; 20:8) — the Gog-Magog assault that Christ defeats at his return. The named enemies of Psalm 83 become the nameless masses of Revelation's final battle.</p>",
+        "7": "<p>\"Gebal and Ammon and Amalek, Philistia with the inhabitants of Tyre\" — the expanded coalition. The breadth of opposition reveals that this is not merely a local military threat but a representative gathering of hostile powers. Christ's victory is over every power and principality (Eph 1:21; Col 2:15), not merely one empire's army. The Psalm's wide list of enemies anticipates the cosmic scope of Christ's triumph.</p>",
+        "8": "<p>\"Assyria also has joined them; they are the strong arm of the children of Lot\" — the great imperial power joining the coalition. The empires of history (Assyria, Babylon, Persia, Rome) are gathered against God's people — and Christ is the one who outlasts every empire. \"He must reign until he has put all his enemies under his feet\" (1 Cor 15:25; cf. Ps 110:1).</p>",
+        "9": "<p>\"Do to them as you did to Midian, as to Sisera and Jabin at the river Kishon\" — the appeal to past deliverances. Gideon's defeat of Midian (Judg 7-8) and Deborah/Barak's defeat of Sisera (Judg 4-5) are the models of divine victory through unexpected means. Christ is the ultimate Deliverer whom all the judges foreshadow — the greater Gideon who delivers not with three hundred warriors but through the weakness of the cross, defeating the enemy by what appears to be defeat itself (1 Cor 1:25).</p>",
+        "10": "<p>\"Who were destroyed at En-dor, who became dung for the ground\" — the enemies becoming fertilizer, the ultimate humiliation. Christ's victory includes the complete defeat and public shaming of every opposing power: \"he disarmed the rulers and authorities and put them to open shame, by triumphing over them in him\" (Col 2:15). The historical shamings of Israel's enemies are the type of the eschatological shaming of every anti-God power.</p>",
+        "11": "<p>\"Make their nobles like Oreb and Zeeb, all their princes like Zebah and Zalmunna\" — the named leaders of Midian defeated by Gideon. Every Oreb and Zeeb who rises against God's people meets the same fate in the end. Revelation 19:20-21: \"the beast was captured, and with it the false prophet... These two were thrown alive into the lake of fire.\" The specific historical judgments of Judges become the template for the final judgment of Revelation.</p>",
+        "12": "<p>\"Who said, 'Let us take possession for ourselves of the pastures of God'\" — the enemies' land-grab against the divine inheritance. The attempt to seize God's heritage is the fundamental posture of anti-God powers. Christ's resurrection counter-claim is definitive: \"All authority in heaven and on earth has been given to me\" (Matt 28:18). The ones who said \"let us take possession\" discover that the inheritance belongs to the risen Son (Heb 1:2: God \"has spoken to us by his Son, whom he appointed the heir of all things\").</p>",
+        "13": "<p>\"O my God, make them like whirling dust, like chaff before the wind!\" — the imprecation by wind-driven dispersal. John the Baptist speaks of Christ's coming with the winnowing fork: \"his winnowing fork is in his hand, and he will clear his threshing floor and gather his wheat into the barn, but the chaff he will burn with unquenchable fire\" (Matt 3:12). The chaff-before-the-wind imagery of Psalm 83:13 is the same eschatological judgment that John announces as Christ's coming work.</p>",
+        "14": "<p>\"As fire consumes the forest, as the flame sets the mountains ablaze\" — the consuming fire of divine judgment. Second Thessalonians 1:8: \"in flaming fire, inflicting vengeance on those who do not know God and on those who do not obey the gospel of our Lord Jesus.\" The fire that the psalmist calls for is the eschatological fire of the final judgment administered through Christ.</p>",
+        "15": "<p>\"So may you pursue them with your tempest and terrify them with your hurricane!\" — the storm-imagery of divine pursuit. Christ the judge comes \"on the clouds of heaven with power and great glory\" (Matt 24:30) — the tempest that pursues the enemy is his parousia. The storm-Christophany of the OT (YHWH speaking from the whirlwind, Job 38) and the storms of Revelation (Rev 8:5-7; 16:18) converge in the one who comes in judgment.</p>",
+        "16": "<p>\"Fill their faces with shame, that they may <strong>seek your name, O LORD</strong>\" — the evangelistic telos of judgment: shame leading to seeking. Acts 17:27: \"God did this so that they would seek him and perhaps reach out for him and find him.\" Even the imprecatory psalm has a missional heart — the purpose of judgment is not merely punishment but repentance and recognition. Christ's coming in judgment aims at the redemption of those who seek, even from among the nations.</p>",
+        "17": "<p>\"Let them be put to shame and dismayed forever; let them perish in disgrace\" — the darker possibility: those who do not seek are put to shame permanently. This is the NT's \"outer darkness\" and \"second death\" (Rev 20:14). Christ does not minimize the reality of final judgment; indeed he speaks of it more than any other NT figure. The permanence of shame in Psalm 83:17 is the sober counterpoint to the hope of v16.</p>",
+        "18": "<p>\"Let them know that <strong>you alone, whose name is the LORD, are the Most High over all the earth</strong>\" — the universal knowledge of the divine name as the goal of the whole psalm. Philippians 2:9-11: \"God has highly exalted him and bestowed on him <strong>the name that is above every name</strong>, so that at the name of Jesus every knee should bow... and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.\" The universal recognition of YHWH's name in Psalm 83:18 is fulfilled in the universal recognition of Christ as Lord — the one through whom YHWH's name is made known to all the earth.</p>"
+    },
+    "84": {
+        "1": "<p>\"How lovely is your <strong>dwelling place</strong>, O LORD of hosts!\" — the ache for the divine dwelling. Christ is himself the true temple: \"Destroy this temple, and in three days I will raise it up\" (John 2:19-21). The lovely dwelling of Psalm 84:1 is the body of Christ — the place where God's glory dwells (John 1:14: \"we have seen his glory\"). To long for the divine dwelling is, knowingly or not, to long for Christ.</p>",
+        "2": "<p>\"My soul longs, yes, faints for the courts of the LORD; my heart and flesh sing for joy to the living God\" — the intensity of longing for divine presence. This same longing describes the eschatological community's yearning for Christ: Revelation 22:20 \"Come, Lord Jesus!\" (<em>Maranatha</em>, 1 Cor 16:22). The soul-fainting longing of the Psalter pilgrim is the prototype of the church's eschatological yearning for the parousia.</p>",
+        "3": "<p>\"Even the sparrow has found a home, and the swallow a nest for herself, where she may lay her young — near your altars\" — the most vulnerable creature finding shelter in the divine house. Luke 12:6-7: \"Are not five sparrows sold for two pennies? Yet not one of them is forgotten before God... You are of more value than many sparrows.\" The God who notices the sparrow's nest at his altar is the Father whose Son speaks of the Father's attentiveness to the most vulnerable creature. The bird sheltering at God's altar becomes the sparrows whose Creator notes their every fall.</p>",
+        "4": "<p>\"Blessed are those who dwell in your house, ever singing your praise!\" — the blessedness of continuous divine-presence dwelling. Hebrews 12:22-24 says the church has already \"come to Mount Zion and to the city of the living God, the heavenly Jerusalem.\" The dwelling-in-the-divine-house of Psalm 84:4 is the present eschatological reality of those who are in Christ — they dwell in the house now, and will do so fully in the new creation (Rev 21:3: \"Behold, the dwelling place of God is with man\").</p>",
+        "5": "<p>\"Blessed are those whose strength is in you, in whose heart are <strong>the pilgrim roads</strong>\" — strength found in God, pilgrimage as the inner life's posture. Hebrews 11:10 describes the patriarchs as those \"looking forward to the city that has foundations, whose designer and builder is God.\" The pilgrim roads in the heart are the Abrahamic journey of faith toward the city of God — the posture of every believer in Christ (Phil 3:20: \"our citizenship is in heaven\").</p>",
+        "6": "<p>\"As they go through the Valley of Baca, they make it a place of springs; the early rain also covers it with pools\" — the transformation of the dry valley of weeping into springs of water. John 7:37-38: \"If anyone thirsts, let him come to me and drink. Whoever believes in me, as the Scripture has said, 'Out of his heart will flow rivers of living water.'\" The pilgrim who passes through Baca-weeping finds springs; the believer in Christ finds rivers of living water flowing from within. The transformation of dry valleys is Christ's gift through the Spirit.</p>",
+        "7": "<p>\"They go from strength to strength; each one appears before God in Zion\" — the progressive strengthening of the pilgrim until they stand before God. Romans 1:17: \"the righteousness of God is revealed from faith to faith\" — the \"strength to strength\" and \"faith to faith\" journeys are the same progressive movement. The appearing before God in Zion is fulfilled in Christ who \"appeared once for all at the end of the ages to put away sin by the sacrifice of himself\" (Heb 9:26) and in whom believers will appear before God (2 Cor 5:10).</p>",
+        "8": "<p>\"O LORD God of hosts, hear my prayer; give ear, O God of Jacob!\" — the prayer of the pilgrims. Christ intercedes for exactly these pilgrims at the right hand of the Father: Hebrews 7:25 says \"he always lives to make intercession\" for those who draw near to God through him. The prayer of Psalm 84:8 is answered in the permanent intercessory ministry of the ascended Son, the great High Priest who prays for his people without ceasing.</p>",
+        "9": "<p>\"Behold our shield, O God; look on the face of your <strong>anointed</strong> (<em>mashiach</em>)!\" — one of the most direct Messianic petitions in the Psalter. The prayer that God would \"look on the face of your Messiah\" is fulfilled in the eternal intercession of Christ before the Father (Heb 7:25; John 17). God looks on the face of his Anointed and is pleased: \"This is my beloved Son, with whom I am well pleased\" (Matt 3:17). In Christ, God's favor toward his Messiah becomes God's favor toward all who shelter under the shield.</p>",
+        "10": "<p>\"For a day in your courts is better than a thousand elsewhere. I would rather stand at the threshold of the house of my God than dwell in the tents of wickedness\" — the incomparable value of even minimal access to divine presence. John 14:2-3: \"In my Father's house are many rooms. I go to prepare a place for you... I will come again and will take you to myself.\" The single day in the courts that exceeds a thousand is the eternal access Christ opens — not a day but an eternity in the Father's house.</p>",
+        "11": "<p>\"For the LORD God is a <strong>sun and shield</strong>; the LORD bestows favor and honor. <strong>No good thing does he withhold from those who walk with integrity</strong>\" — the completeness of divine provision. John 8:12: \"I am the <strong>light of the world</strong>\" — the Sun of Psalm 84:11 is the light-of-the-world who is Christ. Romans 8:32: \"He who did not spare his own Son but gave him up for us all, how will he not also with him <strong>graciously give us all things</strong>?\" The withholding of no good thing in Psalm 84:11 is the generosity of the Father who gives the Son and with him everything else. The sun-and-shield of Israel's temple theology becomes the light-and-protection of Christ.</p>",
+        "12": "<p>\"O LORD of hosts, blessed is the one who trusts in you!\" — the beatitude of trust. \"Blessed are all who take refuge in him\" (Ps 2:12) — the Messianic Psalm uses the same beatitude language. The blessing of those who trust in YHWH is the same as the blessing of those who take refuge in the Messianic Son. Jesus's own Beatitudes (Matt 5:3-12) are the expansion of this single declaration: the trusting, seeking, longing soul is blessed because the God trusted is the God who gives himself fully in Christ.</p>"
+    },
+    "85": {
+        "1": "<p>\"LORD, you were favorable to your land; you restored the fortunes of Jacob\" — the memory of past restoration (presumably post-exile return) as the ground for present petition. Paul reads Israel's restoration history as prophetic of the cosmic restoration in Christ: \"If their rejection means the reconciliation of the world, what will their acceptance mean but life from the dead?\" (Rom 11:15). The restoration of Jacob's fortunes becomes the resurrection of the world through the last Jacob — Christ who is Israel-in-person.</p>",
+        "2": "<p>\"You forgave the iniquity of your people; you <strong>covered</strong> (<em>kissita</em>) all their sin\" — the covering of sin as the foundation of restoration. Romans 4:7-8 quotes Psalm 32:1-2: \"Blessed is the one whose transgression is forgiven, whose sin is covered.\" This covering-of-sin is what Christ's atonement accomplishes: \"their sins and their lawless deeds I will remember no more\" (Heb 10:17). The sins covered in Psalm 85:2 are covered by the blood of Christ — the atonement that God was building toward all through Israel's history of forgiveness.</p>",
+        "3": "<p>\"You withdrew all your wrath; you turned from your hot anger\" — the withdrawal of divine wrath. Romans 3:25: Christ is the <em>hilasterion</em> (mercy seat / propitiation) \"to show God's righteousness, because in his divine forbearance he had passed over former sins.\" The wrath-withdrawal of Psalm 85:3 was always provisional, anticipating the definitive propitiation in Christ at the cross where God's wrath is fully satisfied and fully withdrawn.</p>",
+        "4": "<p>\"Restore us again, O God of our salvation, and put away your indignation toward us!\" — the renewed petition, even after past restoration. The community knows that restoration is not once-for-all in history but ongoing. In Christ, the basis of restored relationship is permanent: Hebrews 10:14: \"by a single offering he has perfected for all time those who are being sanctified.\" The ongoing petition of Psalm 85:4 becomes the ongoing intercession that Christ makes (Heb 7:25) — he prays the psalm from within the human experience of needing God's favor.</p>",
+        "5": "<p>\"Will you be angry with us forever? Will you prolong your anger to all generations?\" — the anxiety that divine wrath might have no end. Christ answers this anxiety definitively: the Father's permanent favor toward those in the Son means the wrath is not prolonged but absorbed and ended at the cross. \"There is therefore now no condemnation for those who are in Christ Jesus\" (Rom 8:1). The anxiety of Psalm 85:5 is the very question that the atonement resolves.</p>",
+        "6": "<p>\"Will you not revive us again, that your people may rejoice in you?\" — the prayer for revival, for the giving of new life. Romans 8:11: \"If the Spirit of him who raised Jesus from the dead dwells in you, he who raised Christ Jesus from the dead will also give life to your mortal bodies through his Spirit.\" The revival of Psalm 85:6 is the resurrection-life that flows from Christ's resurrection through the Spirit to his people — the life that makes real rejoicing possible.</p>",
+        "7": "<p>\"Show us your steadfast love, O LORD, and grant us your salvation\" — the petition for both <em>hesed</em> and <em>yeshuah</em> (salvation). John 3:16 is the ultimate answer: \"For God so loved the world that he gave his only Son, so that whoever believes in him should not perish but have eternal life.\" The <em>hesed</em> shown and the salvation granted converge in the gift of the Son — the love shown <em>is</em> the salvation given. The double petition of Psalm 85:7 is answered in the single gift of Christ.</p>",
+        "8": "<p>\"Let me hear what God the LORD will speak, for <strong>he will speak peace (<em>shalom</em>) to his people</strong>, to his faithful ones\" — the divine peace-speaking as the oracle of salvation. Christ after the resurrection speaks this peace: \"Jesus came and stood among them and said, '<strong>Peace be with you</strong>!'\" (John 20:19, 21). Ephesians 2:17: \"he came and <strong>preached peace</strong> to you who were far off and peace to those who were near.\" The divine peace-speaking of Psalm 85:8 is the risen Christ's Easter greeting and the apostolic proclamation of the gospel — the same <em>shalom</em> now embodied and announced by the Prince of Peace.</p>",
+        "9": "<p>\"Surely his salvation is near to those who fear him, so that <strong>glory may dwell in our land</strong>\" — glory dwelling in the land of Israel as the goal of salvation. John 1:14: \"the Word became flesh and <strong>dwelt</strong> (<em>eskenosen</em>, tabernacled) among us, and we have seen his <strong>glory</strong>.\" The glory that was to dwell in the land in Psalm 85:9 took up tabernacle-residence in the person of Jesus of Nazareth, in the specific land of Israel. The Incarnation is the fulfillment of the dwelling-glory for which the psalm reaches.</p>",
+        "10": "<p>\"<strong>Steadfast love (<em>hesed</em>) and faithfulness (<em>emet</em>) meet; righteousness (<em>tsedeq</em>) and peace (<em>shalom</em>) kiss</strong>\" — the great convergence of divine attributes at the place of atonement. This verse has been called the theology of the cross in four words. At Calvary: <em>hesed</em> (the covenant love that would not let Israel go) meets <em>emet</em> (the faithful keeping of every promise); <em>tsedeq</em> (the righteous requirement that sin must be punished) kisses <em>shalom</em> (the peace God restores to sinners). Romans 3:26: God is both \"just and the one who justifies those who have faith in Jesus.\" Second Corinthians 5:21: \"God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.\" The four attributes that seemed irreconcilable are reconciled in the body of Christ on the cross — the kiss of righteousness and peace.</p>",
+        "11": "<p>\"<strong>Faithfulness springs up from the earth</strong>, and <strong>righteousness looks down from heaven</strong>\" — the cosmic meeting of earth-below and heaven-above. This verse images the Incarnation: <em>emet</em> (faithfulness) \"springs up from the earth\" — the perfectly faithful human Christ, born of Mary, rooted in Jewish soil, rising from the earth in resurrection; <em>tsedeq</em> (righteousness) \"looks down from heaven\" — the divine righteousness of the Father, descending in the person of the Son (John 3:13: \"No one has ascended into heaven except he who descended\"). In the person of Christ, the two directions of Psalm 85:11 converge: heaven's righteousness and earth's faithfulness meet in the Incarnate One.</p>",
+        "12": "<p>\"Yes, the LORD will give what is good, and our land will yield its harvest\" — the fecundity of restored creation following divine favor. Romans 8:19-21: \"the creation waits with eager longing for the revealing of the sons of God... creation itself will be set free from its bondage to decay.\" The land yielding its harvest in Psalm 85:12 is the eschatological restoration of all things in Christ — the new creation that flows from the atonement accomplished in vv10-11.</p>",
+        "13": "<p>\"<strong>Righteousness will march before him and prepare a path for his steps</strong>\" — the forerunner of righteousness preparing the way. Isaiah 40:3: \"A voice cries: 'In the wilderness prepare the way of the LORD; make straight in the desert a highway for our God.'\" Matthew 3:3 identifies this with John the Baptist who prepares the way for Christ: \"For this is he who was spoken of by the prophet Isaiah.\" The righteousness marching before him to prepare his path is John the Baptist as forerunner, and Christ himself as the righteousness that arrives — the forerunner announces what Christ himself <em>is</em>. The final verse of this restoration psalm opens onto the Advent: the one coming in righteousness, prepared for by the way-maker.</p>"
+    }
 }
 
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
 
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
+# INTENT: Write mkt-christ entries for Psalms 80-85, adding 86 verses to the
+#   psalms.json commentary file. merge_comm ensures only absent keys are written,
+#   so re-running is safe after manual edits.
+# CHANGE? If data/commentary/mkt-christ/psalms.json schema changes (e.g. nested
+#   sub-keys), update load_comm/save_comm and the PSALMS dict structure above.
+# VERIFY: python3 -c "import json; d=json.load(open('data/commentary/mkt-christ/
+#   psalms.json')); print(len(d),'chapters'); print('82 v6:',
+#   d.get('82',{}).get('6','MISSING')[:80])"
+def main() -> None:
+    existing = load_comm("mkt-christ", "psalms")
+    before = sum(len(v) for v in existing.values())
+    merge_comm(existing, PSALMS)
+    after = sum(len(v) for v in existing.values())
+    save_comm("mkt-christ", "psalms", existing)
+    print(f"{len(existing)} chapters, {after} verse entries total")
+    print(f"Added {after - before} new entries this run")
 
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
+    checks = [
+        ("80", "17", "son of man"),
+        ("81", "12", "gave them over"),
+        ("82", "6", "you are gods"),
+        ("83", "18", "Most High"),
+        ("84", "9", "anointed"),
+        ("85", "10", "kiss"),
+    ]
+    for ch, v, keyword in checks:
+        entry = existing.get(ch, {}).get(v, "MISSING")
+        status = "OK" if keyword.lower() in entry.lower() else f"MISSING keyword '{keyword}'"
+        print(f"  Ps {ch}:{v} — {status}")
 
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
 
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
-}
-
-def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,50 +1,30 @@
 """
-Isaiah — all four layers (echo + original + context + christ)
-Output: data/echoes/isaiah.json + mkt-original + mkt-context + mkt-christ
+original | Isaiah | 19-23 | python3 scripts/zc-original-isaiah-19-23.py
 
-Isaiah is the NT's most cited OT prophet — roughly 419 citations or allusions.
-The book divides into two major sections (1-39: judgment; 40-66: comfort/servant)
-with the Servant Songs (42:1-4; 49:1-6; 50:4-9; 52:13-53:12) as the NT's
-most foundational OT Christological resource.
+Key translation decisions:
+- Isa 19:3/14: ruach rendered 'spirit' in both -- v3=Egypt's own spirit/counsel draining;
+  v14=a spirit of confusion the LORD pours in (judicial deception, cf. 1 Sam 16:14)
+- Isa 19:10: nefesh rendered 'sick at heart' -- soul/vitality of the workers grieved
+- Isa 19:25: YHWH blessing Egypt 'my people' -- fullest Gentile-inclusion text in chs 1-39
+- Isa 22:13: 'eat and drink, for tomorrow we die' -- MKT matches exact idiom Paul cites 1 Cor 15:32
+- Isa 22:22: 'key of the house of David' -- MKT preserves exact phrase Rev 3:7 quotes
+- Isa 22:23/25: aman rendered 'solid place' -- firmness/reliability not belief
+- Isa 23:18: qodesh rendered 'set apart as holy' -- Tyre's income consecrated to LORD
 """
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -54,153 +34,117 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ISA_ECHO = {
-  "6": {
-    "1": [
-      {"type": "fulfillment", "target": "John 12:41", "note": "Isaiah saw his glory and spoke of him — John identifies the YHWH whose glory Isaiah saw in the throne-vision (Isa 6:1-4) with the pre-incarnate Christ; the seraphim's Trisagion is the worship of the Son before the Incarnation"}
-    ],
-    "9": [
-      {"type": "fulfillment", "target": "Matt 13:14-15", "note": "You will indeed hear but never understand — Jesus cites Isa 6:9-10 to explain his parable-methodology; the hardening effect of his teaching on the religious leaders fulfills the Isaianic commission to preach to those who will not understand"},
-      {"type": "fulfillment", "target": "Acts 28:26-27", "note": "Paul's final quotation of Isa 6:9-10 to the Roman Jews who reject the gospel closes the book of Acts — the Isaianic hardening frames the entire mission narrative from Jesus's parable-ministry to Paul's Roman imprisonment"}
-    ]
-  },
-  "7": {
-    "14": [
-      {"type": "fulfillment", "target": "Matt 1:23", "note": "Behold the virgin shall conceive and bear a son and shall call his name Immanuel — Matthew cites Isa 7:14 LXX (parthenos = virgin) as fulfilled in the virginal conception of Jesus; the Immanuel sign given to Ahaz in the Assyrian crisis reaches its ultimate fulfillment in the one who is literally God-with-us"}
-    ]
-  },
-  "9": {
-    "2": [
-      {"type": "fulfillment", "target": "Matt 4:15-16", "note": "The people dwelling in darkness have seen a great light — Matthew applies Isa 9:1-2 to Jesus's Galilean ministry; the light in Zebulun and Naphtali is the gospel's arrival in the darkened region; Jesus is the great light"}
-    ]
-  },
-  "11": {
-    "1": [
-      {"type": "fulfillment", "target": "Rom 15:12", "note": "The root of Jesse who rises to rule the Gentiles — Paul cites Isa 11:10 (the root of Jesse as a signal for the nations) as fulfilled in Christ's universal lordship over Gentiles"},
-      {"type": "fulfillment", "target": "Rev 5:5", "note": "The Root of David has conquered — Revelation applies the Root of Jesse/David imagery of Isa 11:1 to the risen Christ who has conquered; the shoot from the stump of Jesse is the crucified-and-risen Messiah"}
-    ],
-    "2": [
-      {"type": "fulfillment", "target": "John 1:32-33", "note": "The Spirit of the LORD shall rest upon him — the anointing Spirit of Isa 11:2 is visibly manifest when the Spirit descends as a dove at Jesus's baptism; the Spirit resting on Christ at baptism marks the beginning of the Isaianic messianic anointing"}
-    ]
-  },
-  "40": {
-    "3": [
-      {"type": "fulfillment", "target": "Mark 1:2-4", "note": "The voice of one crying in the wilderness: Prepare the way of the LORD — all four Gospels cite Isa 40:3 as fulfilled in John the Baptist; the voice calling for the preparation of YHWH's way is the one who announces the arrival of Jesus, whose way John prepares"}
-    ]
-  },
-  "42": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 12:18-21", "note": "Behold my servant whom I have chosen, my beloved in whom my soul delights — Matthew cites the first Servant Song (Isa 42:1-4) at length as fulfilled in Jesus's withdrawal from controversy and gentle healing ministry; the bruised reed he would not break is his treatment of the vulnerable"}
-    ]
-  },
-  "49": {
-    "6": [
-      {"type": "fulfillment", "target": "Acts 13:47", "note": "I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth — Paul and Barnabas cite Isa 49:6 as their scriptural warrant for turning to the Gentiles; the Servant's mission to be a light to the nations is the apostolic commission"},
-      {"type": "fulfillment", "target": "Luke 2:32", "note": "A light for revelation to the Gentiles and for glory to your people Israel — Simeon's Nunc Dimittis applies Isa 49:6 to the infant Jesus; the Servant's mission as light-to-nations is announced over Jesus at the temple presentation"}
-    ]
-  },
-  "52": {
-    "15": [
-      {"type": "fulfillment", "target": "Rom 15:21", "note": "Those who were never told about him will see, and those who have never heard will understand — Paul cites Isa 52:15 as his apostolic principle for pioneer mission: to proclaim where Christ has not been named, fulfilling the Servant's revelation to nations who never heard"}
-    ]
-  },
-  "53": {
-    "1": [
-      {"type": "fulfillment", "target": "John 12:38", "note": "Who has believed what he heard from us? — John cites Isa 53:1 to explain Israel's unbelief despite Jesus's signs; the question of Isa 53 (who believed the Servant-report?) is the question that frames the rejection of Jesus"},
-      {"type": "fulfillment", "target": "Rom 10:16", "note": "Lord, who has believed what he heard from us? — Paul cites Isa 53:1 to explain Israel's failure to embrace the gospel; the Servant's rejected message is the gospel that Israel stumbles over"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Matt 8:17", "note": "He took our illnesses and bore our diseases — Matthew cites Isa 53:4 in connection with Jesus's healing ministry; the Servant's bearing of human disease and suffering is enacted in Jesus's healings, not only in his atoning death"}
-    ],
-    "7": [
-      {"type": "fulfillment", "target": "Acts 8:32-33", "note": "He was led like a sheep to the slaughter and like a lamb before its shearer is silent — Philip reads Isa 53:7-8 to the Ethiopian eunuch and proclaims Jesus as the fulfillment; the silent suffering of the Servant is Jesus's silent submission to his accusers and executioners"}
-    ],
-    "12": [
-      {"type": "fulfillment", "target": "Luke 22:37", "note": "And he was numbered with the transgressors — Jesus at the Last Supper applies Isa 53:12 to himself: this must be fulfilled in me; the Servant's identification with sinners is Jesus's crucifixion between two criminals"}
-    ]
-  },
-  "61": {
-    "1": [
-      {"type": "fulfillment", "target": "Luke 4:18-19", "note": "The Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor — Jesus reads Isa 61:1-2 in the Nazareth synagogue and says: Today this Scripture has been fulfilled in your hearing; his entire ministry is the proclamation of the Jubilee-anointing of Isa 61"}
-    ]
-  },
-  "65": {
-    "17": [
-      {"type": "fulfillment", "target": "2 Cor 5:17", "note": "I create new heavens and a new earth — Paul's new creation language in 2 Cor 5:17 (if anyone is in Christ, new creation) draws from Isa 65:17's eschatological promise; the new creation is already present in Christ"},
-      {"type": "fulfillment", "target": "Rev 21:1", "note": "Then I saw a new heaven and a new earth — Revelation's new creation vision fulfills Isa 65:17 and 66:22 literally; John sees the eschatological reality that Isaiah prophesied in the vision of the New Jerusalem"}
-    ]
-  }
-}
-
-ISA_ORIGINAL = {
-  "6": {
-    "3": "<p><strong>kadosh kadosh kadosh YHWH tsvaot melo kol-haaretz kevodo</strong> (<em>qādôš qādôš qādôš Yhwh ṣĕbāʾôt, mĕlōʾ kāl-hāʾāreṣ kĕbôdô</em>): 'Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory.' The Trisagion is the foundational liturgical text of Jewish and Christian worship. <em>Kadosh</em> (holy) in Hebrew means primarily 'set apart, other, distinct' — YHWH is wholly other from creation. The threefold repetition (<em>shalosh</em>) conveys absolute superlative in Hebrew (cf. Gen 14:10: 'many/many/many pits' = full of pits; Jer 22:29: 'O earth, earth, earth') — not a Trinitarian formula in context, but available for Trinitarian appropriation given its threefold address. <em>Tsvaot</em> (of hosts/armies): YHWH as commander of the heavenly armies — the most frequent divine title in Isaiah (62 occurrences in the book).</p>"
-  },
-  "7": {
-    "14": "<p><strong>hinei haalmah harah veyoledet ben veqarat shemo immanuel</strong> (<em>hinnēh hāʿalmāh hārāh wĕyōledet bēn wĕqārāt šĕmô ʿimmānûʾēl</em>): 'Behold the young woman is with child and shall bear a son and shall call his name Immanuel.' The philological crux: <em>almah</em> (young woman) vs. the LXX <em>parthenos</em> (virgin). <em>Almah</em> means 'young woman of marriageable age' — not a technical term for biological virginity (which is <em>betulah</em>). However, in context an unmarried <em>almah</em> would normally be a virgin; Matthew's use of LXX <em>parthenos</em> sees the deeper Christological fulfillment where the historical sign (birth within a year to a young woman in Ahaz's time) is transcended by the ultimate Immanuel born without a human father — the literal 'God with us.'</p>"
-  },
-  "40": {
-    "3": "<p><strong>qol qore bamidbar panu derek YHWH yasheru baaravah mesillah lelohenu</strong> (<em>qôl qôrēʾ bammidbar pannû derek Yhwh yašĕrû bāʿărābāh mĕsillāh lēʾlōhênû</em>): 'A voice crying in the wilderness: Prepare the way of the LORD; make straight in the desert a highway for our God.' The four Gospels unanimously apply this voice to John the Baptist. Critically, the original syntax is ambiguous: is the voice 'in the wilderness' (most translations) or does the voice cry 'Prepare the way of the LORD in the wilderness' (Mark 1:3 seems to read the wilderness phrase with the road-preparation)? The Qumran community (1QS 8:14) cited this same verse for their own desert withdrawal — interpreting 'preparing the way' as Torah-study. The NT's application to John is the contested alternative: the way is prepared through proclamation, not desert community-formation.</p>"
-  },
-  "52": {
-    "13": "<p><strong>hinneh yaskil avdi yarum venissa vegavah meod</strong> (<em>hinnēh yašĕkîl ʿabdî yārûm wĕniśśāʾ wĕgābahh mĕʾōd</em>): 'Behold, my servant shall act wisely; he shall be high and lifted up and shall be exalted.' The fourth Servant Song (52:13-53:12) opens with the Servant's triumph — <em>yarum venissa vegavah</em> (high, lifted up, exalted) — three verbs used for YHWH's own majesty in Isa 6:1 and 33:10. The Servant shares the divine exaltation-vocabulary. The shock of the Song: the path to this exaltation is through disfigurement so severe that people were appalled (52:14), and the means of exaltation is vicarious suffering (53:4-6). The Hebrew <em>nasa</em> (to bear/lift) runs through the Song: 52:13 (be lifted up), 53:4 (bore our griefs), 53:11 (bear their iniquities), 53:12 (bore the sin of many) — the lifting of the Servant and his bearing of sin are different sides of the same word.</p>",
-
-    "7": "<p><strong>noogesh vehu naaneh velo yiptach piv kesh latabach yuval vekrachel lifnei gozezeiha nelamah velo yiftach piv</strong>: 'He was oppressed and he was afflicted, yet he opened not his mouth; like a lamb that is led to the slaughter, and like a sheep that before its shearers is silent, so he opened not his mouth.' The lamb-image combines the Passover lamb (Exod 12) and the Day of Atonement offering — an intentional fusion of Israel's two great atoning sacrifices. The silence contrasts with every protest of innocence in biblical lament-psalms: the Servant has no claim to make, no defense to offer — or rather, his silence is itself the defense, the refusal to protect himself from the death that will accomplish others' salvation. Peter applies this silence to Christ's non-retaliation (1 Pet 2:23) and Luke applies the lamb-image to the Ethiopian eunuch's question about Isa 53:7 (Acts 8:32-33).</p>"
-  }
-}
-
-ISA_CONTEXT = {
-  "1": {
-    "1": "<p>Isaiah ben Amoz prophesied under four Judean kings: Uzziah, Jotham, Ahaz, and Hezekiah (ca. 740-686 BCE), spanning the Assyrian crisis and its aftermath. His call-vision (ch. 6) was in the year Uzziah died — a political transition when the nation faced the rising Assyrian threat under Tiglath-Pileser III. Isaiah's ministry context: the Northern Kingdom fell to Assyria in 722 BCE (referenced in Isa 7-8; 28); Jerusalem survived the siege of Sennacherib in 701 BCE (ch. 36-39). The 'Deutero-Isaiah' debate: many critical scholars argue that chs. 40-66 come from a later author writing during the Babylonian exile (ca. 550-530 BCE), given the specific naming of Cyrus (44:28; 45:1) and the Babylonian setting of chs. 40-55. Conservative scholars hold single Isaianic authorship under divine foreknowledge. The canonical unity of the book is supported by the NT's consistent attribution of both halves to 'Isaiah.'</p>"
-  },
-  "53": {
-    "1": "<p>The fourth Servant Song (Isa 52:13-53:12) has been interpreted in Jewish tradition as: (1) collective Israel suffering in exile and ultimately vindicated; (2) the righteous remnant of Israel; (3) an individual historical figure (Jeremiah, Moses, Hezekiah, or a suffering prophet). Early Jewish sources (1QIs, Targum Jonathan, b. Sanhedrin 98b where some rabbis applied it to the Messiah) show a live debate. The NT unanimously applies the Servant to Jesus (Matt 8:17; Luke 22:37; John 12:38; Acts 8:32; Rom 10:16; 1 Pet 2:22-24; Rev 5:6). The linguistic data: the Servant suffers vicariously ('for our sins', 'for our transgressions', 'the LORD laid on him the iniquity of us all'), is innocent ('no violence or deceit'), is exalted after suffering ('he shall see his offspring, he shall prolong his days'), and his suffering is efficacious ('by his knowledge shall the righteous one, my servant, make many to be accounted righteous').</p>"
-  },
-  "61": {
-    "1": "<p>The Spirit-anointing oracle of Isa 61:1-3 in its original context speaks of a prophetic figure commissioned to announce the Year of Jubilee (Lev 25) — the release of captives, the year of divine favor, the comfort of mourners. Whether Isa 61 belongs to 'Deutero-Isaiah' or 'Trito-Isaiah' (chs. 56-66), its Jubilee-economics for the poor were already a live text in Second Temple Judaism — Qumran's Melchizedek Scroll (11QMelch) applies Isa 61 to the eschatological release in the final Jubilee under Melchizedek. Jesus's Nazareth reading (Luke 4:18-21) claims to be this eschatological Jubilee-fulfillment: his ministry is the Year of the Lord's favor enacted in person.</p>"
-  }
-}
-
-ISA_CHRIST = {
-  "7": {
-    "14": "<p>A fulfillment: 'Behold the virgin shall conceive and bear a son, and they shall call his name Immanuel.' The historical sign (birth to a young woman in Ahaz's time) is the type; the antitype is Jesus's virginal conception by the Holy Spirit, which makes the 'God with us' name literal for the first time in history. Every previous 'Immanuel' moment (YHWH dwelling in the tabernacle, in the temple, with Israel) was mediated through materials and institutions; in Christ, God is with us in person, in flesh, without mediation. The Immanuel bookend that Matthew establishes (1:23 = Isa 7:14; 28:20 = 'I am with you always') frames the entire Gospel as the Immanuel narrative.</p>"
-  },
-  "42": {
-    "1": "<p>A direct revelation: 'Behold my servant whom I uphold, my chosen, in whom my soul delights; I have put my Spirit upon him; he will bring forth justice to the nations.' The first Servant Song is the OT's portrait of the Messiah as servant rather than conqueror. The divine delight in the Servant echoes at the baptism (Matt 3:17: 'my beloved Son, with whom I am well pleased') — the Father's Psalm 2 / Servant-declaration. The Spirit's endowment (v. 1) is the anointing that Luke 4:18 identifies with Jesus's public ministry. The justice-to-the-nations mission is the mandate for the Gentile mission of Acts. The first Servant Song defines Christ's method: gentle, persistent, non-violent, Spirit-empowered, globally-oriented justice.</p>"
-  },
-  "52": {
-    "13": "<p>A direct revelation: 'Behold, my servant shall act wisely; he shall be high and lifted up, and shall be exalted.' The Servant Songs reach their climax in the fourth song: the exaltation begins the song (52:13) and ends it (53:12: 'I will divide him a portion among the many, and he shall divide the spoil with the strong'). The Christological movement: wisdom → humiliation (disfigurement, rejection, death) → exaltation (he shall see his offspring, he shall prolong his days). The resurrection is implicit in 'he shall prolong his days' after 'he was cut off out of the land of the living' (53:8-10). The fourth Servant Song is the OT's clearest pre-figuration of the entire Christological narrative: incarnation, rejection, crucifixion, resurrection, and universal reign.</p>"
-  },
-  "53": {
-    "5": "<p>A direct revelation: 'He was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.' The substitutionary suffering of the Servant expressed in four parallel lines: (1) pierced for our transgressions; (2) crushed for our iniquities; (3) chastisement for our peace; (4) wounds for our healing. The preposition <em>lemaan</em>/<em>min</em> in Hebrew (for/because of/from our transgressions) carries causal weight — the Servant suffers not for his own sins but for others'. Peter cites v. 5b-c in 1 Pet 2:24 (by his wounds you have been healed) as the foundational text for Christ's atoning death. The fourfold parallelism is the OT's most precise statement of what the cross accomplishes.</p>",
-
-    "11": "<p>A direct revelation: 'Out of the anguish of his soul he shall see and be satisfied; by his knowledge shall the righteous one, my servant, make many to be accounted righteous, and he shall bear their iniquities.' The justification-language of Isa 53:11 — <em>yatsdiq</em> (make righteous/justify) + the many — is Paul's foundation for Pauline justification theology. The righteous Servant making many righteous by bearing their iniquities is the atonement-justification nexus that Romans 3-5 develops: Christ's obedient death (bearing iniquities) is the ground of the justified status of many. Isaiah 53:11 is the OT's closest approximation to Paul's 'he made him to be sin so that in him we might become the righteousness of God' (2 Cor 5:21).</p>"
-  },
-  "61": {
-    "1": "<p>A direct revelation: 'The Spirit of the Lord GOD is upon me, because the LORD has anointed me to bring good news to the poor; he has sent me to bind up the brokenhearted, to proclaim liberty to the captives and the opening of the prison to those who are bound; to proclaim the year of the LORD's favor.' Jesus's Nazareth declaration — 'Today this Scripture has been fulfilled in your hearing' (Luke 4:21) — is the most explicit Christological self-application of an OT text in the Gospels. Jesus is not a prophet announcing a future event; he is himself the eschatological year of favor. The Jubilee of Isa 61 (release from debt-slavery, return of land, restoration of community) is enacted wherever Christ's reign extends — in healing, exorcism, forgiveness, community inclusion.</p>"
-  }
+ISAIAH = {
+"19": {
+"1": "<p><em>The oracle of Egypt.</em> <em>Massa</em> (oracle/burden) opens this unit as it opened ch 13. YHWH is flagged -- the divine personal name is the one coming on a swift cloud to Egypt. The cloud-rider imagery evokes Ps 68:4 and 104:3, where the LORD rides the clouds; that title belongs to YHWH alone. <em>Idols of Egypt</em> (<em>elilim</em>) -- worthless things, cognate with nothing -- tremble before the LORD coming in theophanic judgment.</p>",
+"2": "<p><em>I will stir up Egyptians against Egyptians.</em> Divine sovereignty over internal Egyptian strife -- the LORD is the active agent behind civil conflict that appears merely political. The Hebrew <em>yasseti</em> (I will stir up) makes YHWH the prime mover. The structure moves from the high-level announcement (v1) to the specific mechanisms of judgment (vv2-4).</p>",
+"3": "<p><em>Egypt's spirit will drain away within it.</em> <em>Ruach</em> is flagged (disp 4) -- rendered <em>spirit</em>. Here, <em>ruach</em> refers to Egypt's national capacity for wisdom, courage, and governance; it is being emptied out (<em>vavuqqah</em>: drained). The MKT's <em>drain away</em> captures the emptying image. Egypt turns to enchanters, mediums, and spiritists -- replacing the LORD's counsel with occult substitutes. Idols (v1) and spirit (v3) both fail simultaneously.</p>",
+"4": "<p><em>I will hand Egypt over to a harsh master; a cruel king will rule over them.</em> YHWH is flagged as the one making this pronouncement. <em>Melek</em> (king, disp 2) -- the cruel king is deliberately unnamed, keeping the oracle at the level of type (Assyrian kings -- Esarhaddon, Ashurbanipal -- are historical referents). The MKT preserves the Hebrew pair <em>adon qasheh</em> (harsh master) and <em>melek az</em> (cruel king).</p>",
+"5": "<p>The Nile's drying is the centerpiece of Egypt's agricultural judgment -- Egypt is the gift of the Nile, and without it there is no harvest. The MKT's <em>parched and drained</em> captures the two stages of water loss. The LORD does not need armies when he can remove the water: judgment works through the withdrawal of created goods.</p>",
+"6": "<p>The channels and branches of the Nile system are specified. Reeds and rushes -- the papyrus-producing plants, Egypt's primary writing material and export commodity -- wither and rot. Judgment works from the main channel outward, drying up the entire delta system.</p>",
+"7": "<p>The papyrus reeds are the most economically significant detail: Egypt's papyrus trade supplied the ancient world's writing materials. The MKT's <em>crops planted along its banks</em> broadens the picture from papyrus to the full agricultural system. When the Nile withdraws, everything planted along it dies in sequence from the main channel outward.</p>",
+"8": "<p>The fishermen mourn -- hook, net, and seine fishermen whose livelihood depends on the Nile's abundance. The mourning (<em>avelu</em>) is the formal vocabulary of communal lamentation; this is more than economic loss. The MKT distinguishes <em>lament</em> (for hook fishermen) and <em>languish</em> (for net fishermen), following the Hebrew verbal distinctions.</p>",
+"9": "<p>Linen workers and weavers -- Egypt's other major export industry after papyrus. Egyptian fine linen was famous throughout the ancient world. Both the raw material workers (combed flax) and the finished-goods manufacturers (weavers) are put to shame -- the economic ripple from water loss reaches every major industry.</p>",
+"10": "<p><em>Egypt's foundations will be crushed; all who work for hire will be sick at heart.</em> <em>Nefesh</em> is flagged (disp 3) -- the MKT renders the workers as <em>sick at heart</em>. The Hebrew <em>kol-sachire nefesh</em> is literally <em>all the hired-ones of soul</em> -- those who hire out their whole vital selves for wages. <em>Sick at heart</em> captures not just economic distress but deep existential anguish when life-defining work is destroyed.</p>",
+"11": "<p><em>The wisest of Pharaoh's counselors give worthless advice.</em> The confrontation between Egypt's legendary wisdom and the word of the LORD. Egyptian wisdom was renowned (1 Kings 4:30); Isaiah ironically dismantles it. The princes of Zoan (Tanis, capital of the Nile delta) and their wise men cannot decode what the LORD is doing -- wisdom that lacks the fear of the LORD is hollow at the critical moment.</p>",
+"12": "<p>YHWH is flagged -- the divine name is the one whose plan the Egyptian wise men cannot decode. The rhetorical challenge -- <em>where are they now?</em> -- is devastating: the wisdom tradition collapses when confronted with genuine divine action. <em>Yada</em> (know, disp 2) appears in <em>make known</em> (causative): the wise men cannot cause-to-be-known what the LORD has decreed.</p>",
+"13": "<p><em>The leaders of Egypt have led her astray.</em> Those who should be the anchor of Egyptian governance have become stumbling-blocks. The princes of Zoan are treated as <em>fools</em> (<em>nivalu</em>) and Memphis's princes are <em>deluded</em> (<em>hitvu</em>). The geographic diversity of failed leadership (Zoan in the delta, Memphis in the center) suggests all of Egypt's governing centers have collapsed simultaneously.</p>",
+"14": "<p>YHWH is flagged; <em>ruach</em> is flagged (disp 4) -- a second occurrence, now a spirit the LORD actively pours in (<em>massakh</em>: mixed/poured). This is judicial deception -- when a people persistently refuse truth, the LORD gives them over to confusion (cf. 1 Kings 22:22; Rom 1:24-28). The MKT's <em>spirit of confusion</em> distinguishes this active divine gift of disorientation from the natural political chaos of v2.</p>",
+"15": "<p><em>There will be nothing Egypt can accomplish -- neither head nor tail, neither palm branch nor reed.</em> The head-tail and palm branch-reed idioms (already used in 9:14-15 for Judah) reappear for Egypt -- the judgment vocabulary is transferable across nations. From top to bottom, from the honorable to the worthless, nothing remains capable of action.</p>",
+"16": "<p>YHWH is flagged -- the hand of the LORD is the source of Egypt's terror. The comparison to frightened women is a stock ancient Near Eastern image of military collapse -- the reversal of martial confidence into panic. The phrase <em>in that day</em> (repeated five times in vv16-23) marks this section as eschatological: a future period when the LORD's redemptive purposes for Egypt unfold.</p>",
+"17": "<p>YHWH is flagged -- the land of Judah becomes a source of dread to Egypt because of the LORD's purposes (<em>etzah</em>: counsel/plan). The mention of Judah is startling: tiny Judah, perennially Egypt's dependency, becomes frightening to Egypt because it carries the LORD's counsel. Whoever stands with the LORD of hosts becomes formidable to all who oppose him.</p>",
+"18": "<p>YHWH is flagged. <em>In that day five cities in Egypt will speak the language of Canaan</em> -- Hebrew, the language of the covenant people -- <em>and swear loyalty to the LORD of hosts.</em> Five Egyptian cities speaking Hebrew and swearing allegiance to YHWH is the oracle's most extraordinary future-hope element. One city is called <em>the City of Destruction</em> (Hebrew <em>heres</em>) or <em>the City of the Sun</em> (<em>Heliopolis</em>) in a manuscript variant -- the textual ambiguity may be deliberate wordplay. The MKT follows the <em>heres</em> reading.</p>",
+"19": "<p>YHWH is flagged twice -- an altar dedicated to the LORD at Egypt's center, and a standing stone at Egypt's border dedicated to the LORD. Both altar and <em>matsevah</em> (standing stone) are covenant-marker forms. In the Torah, standing stones mark patriarchal covenant events (Gen 28:18); here Egypt erects its own. The MKT's <em>in the heart of Egypt</em> emphasizes that this is not a peripheral border cult but a central worship practice.</p>",
+"20": "<p>YHWH is flagged twice -- the altar and pillar serve as <em>sign and witness to the LORD of hosts in the land of Egypt</em>. The covenant-legal language is applied to Egypt's worship. When Egypt cries out to the LORD, he will send a <em>savior</em> (<em>moshia</em>) and champion -- the same word used for the judges who delivered Israel (Judg 3:9,15). The MKT's <em>deliver and rescue them</em> preserves the doubled Hebrew verb of salvation.</p>",
+"21": "<p>YHWH is flagged three times. <em>The LORD will make himself known to Egypt, and the Egyptians will acknowledge the LORD in that day.</em> <em>Yada</em> (know, disp 2) appears twice -- the LORD making himself known and the Egyptians knowing/acknowledging him. The second <em>yada</em> is covenantal acknowledgment-knowing, not mere intellectual awareness. The Egyptians will worship with sacrifice, grain offering, vows fulfilled -- the full vocabulary of covenant worship applied to the former oppressors of Israel.</p>",
+"22": "<p>YHWH is flagged twice. <em>The LORD will strike Egypt -- striking and healing.</em> The paradox of divine chastisement as ultimately remedial. The repeated striking-and-healing is not cruelty but covenantal discipline that produces repentance. The Egyptians will <em>shuv</em> (return/repent) to the LORD -- the core word for covenant restoration -- and the LORD will heal them with active therapeutic care.</p>",
+"23": "<p><em>In that day there will be a highway from Egypt to Assyria.</em> The highway connecting the scattered (11:16; 40:3) now connects Egypt and Assyria -- Israel's two great enemies -- in shared worship. The three nations together <em>avad</em> (serve/worship) the LORD. The MKT's <em>will worship together</em> captures the shared cultic life the highway enables. The nations who enslaved and threatened Israel are now co-worshippers.</p>",
+"24": "<p><em>In that day Israel will be the third alongside Egypt and Assyria, a blessing in the midst of the earth.</em> The three-in-a-row structure -- Egypt, Assyria, Israel -- is itself remarkable: Israel in the middle, no longer defined by opposition to these nations but by shared membership in the LORD's community of blessing. The <em>blessing in the midst of the earth</em> echoes the Abrahamic promise (Gen 12:3) now extended to include Israel's former oppressors as co-recipients.</p>",
+"25": "<p>YHWH is flagged -- the divine name as the blesser. <em>Egypt my people</em> -- the covenant term <em>ami</em> (my people), used exclusively in the OT for Israel, is here applied to Egypt. <em>Assyria the work of my hands</em> -- creator-language. <em>Israel my inheritance</em> -- land-gift language. Three equally honorific divine titles for three nations. This verse is the zenith of Gentile-inclusion prophecy in the first half of Isaiah (chs 1-39), surpassing even 2:2-4.</p>",
+},
+"20": {
+"1": "<p>The historical anchor: Sargon king of Assyria -- the only occurrence of Sargon's name in the Bible, confirmed by Assyrian annals for the capture of Ashdod in 711 BC. The commander-in-chief (<em>tartan</em>) is an Assyrian military title preserved in Hebrew transliteration. <em>Melek</em> (king, disp 2) -- Sargon as king is the flagged usage; the MKT's <em>king of Assyria</em> is standard. The precision of the date-formula is a claim of specific historical grounding for what follows as prophetic sign-act.</p>",
+"2": "<p>YHWH is flagged -- the divine name as the one who speaks through (<em>beyad</em>: by the hand of) Isaiah. The command to Isaiah is stark: remove sackcloth and sandals and walk naked. Sackcloth was the prophetic garment, identifying Isaiah's public prophetic identity. The command strips him of his identity-garb to embody the stripping of Egypt and Cush. The MKT's <em>he obeyed</em> makes Isaiah's compliance explicit from the Hebrew verbal form.</p>",
+"3": "<p>YHWH is flagged -- the divine name confirms the command and its duration: three years as a <em>sign and portent</em> (<em>ot u-mofet</em>). Sign and portent is the paired phrase of prophetic symbolic action (Deut 28:46; Ezek 4-5). Three years of nakedness is an extraordinary commitment to prophetic embodiment. The word <em>portent</em> (<em>mofet</em>) means wonder or omen -- Isaiah's naked body is an omen of what is coming to Egypt and Cush.</p>",
+"4": "<p><em>Melek</em> (king, disp 2) -- the king of Assyria who will lead away the Egyptian captives. The sign is interpreted: naked and barefoot Isaiah represents the captives who will be stripped and marched out. The Hebrew <em>erom</em> (naked) is intensified by specifying <em>buttocks bared</em> -- the humiliation of captivity described with anatomical frankness the oracle requires. The MKT preserves this without euphemism.</p>",
+"5": "<p>Nations that had relied on Cush and boasted about Egypt will find their guarantor stripped and captive. The language of hope shifted to terror and shame -- the standard prophetic reversal of misplaced confidence. Egypt trusted in idols (ch 19); nations trusted in Egypt; now both the idols and Egypt fail together.</p>",
+"6": "<p><em>Melek</em> (king, disp 2) -- the coastland peoples realize their flight to Egypt as protection <em>from the king of Assyria</em> has failed. The oracle closes with the question: if Egypt -- the one we escaped to -- has been captured, how shall we ourselves escape? The sign-act (three years of nakedness) has compressed a multi-year geopolitical process into bodily demonstration.</p>",
+},
+"21": {
+"1": "<p>The oracle of the Desert of the Sea -- paradoxical title that has puzzled commentators. The oracle concerns Babylon (identified in v9), and the Babylonian plain between the Tigris and Euphrates -- flat, semi-arid, seasonally flooded -- could be described as both desert and sea-flat. The MKT preserves the paradoxical title. Whirlwinds sweeping through the Negeb create visceral urgency: swift, uncontrollable, and desiccating.</p>",
+"2": "<p>The grim vision identifies the agents: Elam and Media will besiege Babylon. Historically, the Medo-Persian coalition under Cyrus conquered Babylon in 539 BC -- this oracle anticipates it by generations. The Hebrew uses the same root word for both agent and action (<em>boged yibgod, shoded yishod</em>): the traitor practices his trade, the plunderer plunders thoroughly. Repetition creates the inescapability of the judgment.</p>",
+"3": "<p>Isaiah's physical response to the vision -- racked with anguish, labor pains, staggering with terror. The prophet becomes the receiver of what is shown in a way that involves bodily suffering. This is not detached prediction but participatory revelation: the prophet's body registers the weight of what is coming. The evening of longing turned into dread -- the watchman waiting for morning (v11) finds the night extending.</p>",
+"4": "<p>The reeling mind and shuddering terror continue. The prophet had been waiting for the collapse of Babylon as a moment of relief for God's people; instead the vision is more terrible than expected. This prophetic ambivalence -- longing for judgment on the wicked but being shattered by its horror when it arrives -- is a mark of authentic prophetic sensibility (cf. Jeremiah's laments, Hab 3:16).</p>",
+"5": "<p>The feast scene: <em>Set the table, spread the rugs, eat and drink!</em> The Babylonian feasting party is interrupted by the sudden call to arms -- <em>Rise up, O princes, and oil the shields.</em> Oiling leather shields was preparation for battle. The juxtaposition of feast and military emergency is historically grounded in Daniel 5, where Belshazzar's feast is interrupted by the Medo-Persian conquest. The MKT preserves the abruptness of the transition.</p>",
+"6": "<p>The Lord (<em>Adonai</em>) commissions the watchman -- a different divine title here, not YHWH. The commissioning of a watchman is a formal military-prophetic action. The watchman imagery runs through Ezekiel (3:17; 33:2-7) and becomes the model for the prophetic role: stationed to report what he sees, responsible for faithfully conveying the divine warning.</p>",
+"7": "<p>The watchman sees a procession -- cavalry pairs, donkey caravans, camel caravans -- the movement of a large siege force. The instruction to <em>listen diligently, very diligently</em> repeats the adverb for urgency. The MKT's doubled adverb follows the Hebrew. The mixed procession (donkeys + camels + cavalry) suggests a siege train: supplies and military force moving together.</p>",
+"8": "<p>The lookout calls from the watchtower: <em>I stand continually by day, and I keep my watch post every night.</em> The faithfulness of the watchman (continually, every night) contrasts with the coming suddenness of the announcement. The MKT follows the <em>lookout</em> reading rather than the lion (<em>aryeh</em>) variant of some manuscripts.</p>",
+"9": "<p><em>Fallen, fallen is Babylon! All the carved images of her gods are shattered to the ground!</em> <em>Elohim</em> is flagged (disp 4) -- the plural divine name used for Babylon's gods. The dual <em>fallen, fallen</em> creates the repetition that becomes the signature of the eschatological Babylon announcements in Rev 14:8 and 18:2, which quote this verse verbatim. The MKT's exact phrasing preserves the doubled announcement that Revelation cites.</p>",
+"10": "<p><em>O my people, crushed and winnowed.</em> <em>Elohim</em> and YHWH are flagged -- the God of Israel, the God of hosts, has spoken. The address <em>my threshing, son of my threshing floor</em> is one of Isaiah's most tender images for the suffering of God's people: they are grain that has been threshed by the events of history. The announcement is not triumphalism but pastoral assurance: what the LORD of hosts reported, Isaiah has now passed on.</p>",
+"11": "<p>The oracle of Dumah -- possibly Edom (<em>edom</em> and <em>dumah</em> share consonants; Seir is Edomite territory). The night-watchman cry: <em>Watchman, what is left of the night?</em> Night carries symbolic weight of judgment and uncertainty; morning represents deliverance. The doubled question suggests the inquirer's anxiety: the night feels interminable, and they need assurance that it will end.</p>",
+"12": "<p>The watchman's answer is enigmatic: morning comes, but so does night -- if you want to inquire, inquire; come back again. For Edom specifically (if Dumah = Edom), the oracle offers no final resolution -- a partial morning, not an eschatological dawn. The invitation to <em>come back</em> leaves a door open for further inquiry, which is itself a form of grace extended to those outside the covenant.</p>",
+"13": "<p>The oracle concerning Arabia -- the Dedanite caravans taking shelter in the thickets of Arabia. Dedanites were a trading people from northwestern Arabia (cf. Ezek 27:20); their caravans were famous long-distance trade routes. The taking-shelter image suggests the disruption of normal trade and the flight of merchants into the wilderness to escape approaching armies.</p>",
+"14": "<p>The people of Tema -- another Arabian tribe east of the Dedanites -- are called to bring water and food to the fugitives. The humanitarian appeal within the oracle of judgment: even amid warfare, the obligation to care for the displaced persists. The ancient Near Eastern hospitality ethic applied to a refugee crisis.</p>",
+"15": "<p>The fugitives have fled from swords, drawn swords, bent bows, and the fury of battle. The four instruments of war -- sword (sheathed/unsheathed), bow (bent/aimed), general battlefield fury -- enumerate the full range of military threat. The cascading list of dangers gives the sense of enemies on all sides with no direction of safety.</p>",
+"16": "<p><em>Within a year, reckoned as a hired worker counts a year.</em> The temporal precision -- a hired worker's year is a full twelve months, not an approximation -- makes the oracle specific and verifiable. All the <em>kavod</em> (glory, disp 2) of Kedar (a major Arabian tribal confederation) will fail. The MKT renders <em>kavod</em> as <em>glory</em> -- the honor and splendor of the Kedarite warriors is what the oracle targets.</p>",
+"17": "<p><em>Elohim</em> and YHWH are flagged -- <em>the LORD, the God of Israel</em> is the speaker who decrees the diminishing of Kedar's warriors. The double divine title (YHWH + Elohim of Israel) emphasizes the covenant-specific character: the God who is Israel's particular God is also the one who sets the limits of Arabia's power. The chapter closes with this covenantal note: Kedar's archers are the remnant left after the LORD's word runs its course.</p>",
+},
+"22": {
+"1": "<p><em>The burden of the Valley of Vision.</em> <em>Massa</em> -- the oracle-burden, now applied to Jerusalem itself. The Valley of Vision is associated with Jerusalem (the Hinnom Valley or the broader depression around the city). The irony is acute: Jerusalem, the place of divine vision, has become the object of the oracle of judgment. The scene of the people on rooftops celebrating while surrounded by siege fits either the Assyrian threat (701 BC) or a later Babylonian siege.</p>",
+"2": "<p><em>You are a city full of uproar and celebration!</em> The Hebrew <em>mehuma</em> (tumult) and <em>aliza</em> (exultant) depict a city in festive mood despite military crisis. The shocking note: <em>your slain were not killed by the sword</em> -- they died not heroically in battle but from famine, disease, and flight. Not a warrior's death but the disgrace of non-combat death in siege conditions. The MKT preserves the distinction.</p>",
+"3": "<p><em>All your commanders fled together.</em> Military leadership's flight without battle -- captured <em>without a bow being drawn</em>. The bow (<em>keshet</em>) as synecdoche for military resistance: not a single bow was drawn in defense. The commanders were found and taken by archers in their flight -- captured, not defeated. The dishonor of this kind of surrender is what Isaiah mourns in v4.</p>",
+"4": "<p>Isaiah refuses to be comforted: <em>Turn away from me; let me weep bitterly.</em> The prophet personally mourns over Jerusalem's ruin -- he is not detached from the people he indicts. Pastoral lamentation alongside prophetic judgment: both are authentic responses to the same reality. The personal voice (<em>I said, let me weep bitterly</em>) makes this more than oracle; it is private grief at covenant failure.</p>",
+"5": "<p>The double divine title <em>Adonai YHWH-Sabaoth</em> -- Master + covenant name + army commander -- governs the day of panic. The three nouns for what fills the Valley: <em>mehuma</em> (panic), <em>mirmas</em> (trampling), <em>mevukha</em> (confusion) -- alliterative in Hebrew. The battering of walls and crying to the mountains fills the day with disaster from every direction.</p>",
+"6": "<p>Elam and Kir -- two nations used as Assyrian auxiliaries -- contribute to the siege. Elam's quiver and Kir's shield represent different military units: archery and close-combat infantry. The specificity of military equipment (quiver, chariot, cavalry, shield) gives the oracle historical density. Jerusalem is surrounded by the composite forces of the Assyrian imperial army.</p>",
+"7": "<p>The finest valleys choked with chariots and cavalry posted at the gates -- the siege of the city from the surrounding terrain. The <em>finest valleys</em> are productive agricultural land now turned into a military staging area. Cavalry at the city gates means no one enters or exits -- the classic siege cut-off. The MKT's <em>choked with chariots</em> captures the sense of overwhelming density.</p>",
+"8": "<p><em>He stripped away Judah's defenses.</em> The masculine singular agent -- the LORD himself -- removed Judah's covering on that day. The people's response was to look to the human arsenal (Solomon's armory, the House of the Forest, 1 Kings 7:2) rather than to the LORD. When divine protection is withdrawn, the people's instinct is to trust human military resources rather than to return to the one who withdrew the protection.</p>",
+"9": "<p>The technical details of Jerusalem's water system -- the gaps in the wall, the lower pool -- are consistent with Hezekiah's Siloam tunnel (2 Kings 20:20; 2 Chron 32:30). The preparations are practically competent. But v11 will indict the failure behind all this competent preparation: they looked to the human water system and not to the one who fashioned it long ago.</p>",
+"10": "<p>Taking inventory of the houses and demolishing buildings to shore up the wall -- a standard siege-preparation practice. Jerusalem's response to the threat is technically rational: census the population, mobilize the housing, strengthen the walls. The problem is not the tactics but the theology: all this human preparation occurs without returning to the LORD whose word determines the outcome.</p>",
+"11": "<p><em>But you did not look to him who made it.</em> The accusation is not against the practical preparations but against the direction of trust. The two pools, the wall, the cistern -- all created by the same LORD who fashioned the land long ago. The MKT's <em>you did not look to him who made it</em> and <em>you did not see him who planned it long ago</em> preserves the two Hebrew verbs of spiritual perception that Jerusalem failed to exercise.</p>",
+"12": "<p>YHWH-Sabaoth called for weeping, mourning, shaved heads, and sackcloth -- the standard signs of grief and repentance in a crisis. The divine expectation was penitential return. What actually happened (v13) is the opposite: celebration and feasting. The contrast between what the LORD called for and what the people chose is the moral center of the oracle against Jerusalem.</p>",
+"13": "<p><em>Instead there was only celebration -- slaughtering oxen, killing sheep, eating meat and drinking wine. Let us eat and drink, for tomorrow we die.</em> The feast of denial: present-tense verbs of consuming, then the fatalistic refrain. Paul cites this verse in 1 Cor 15:32 as the logical conclusion of a theology without resurrection: if the dead are not raised, hedonistic fatalism is the rational response. The MKT's exact phrasing matches the form Paul cites.</p>",
+"14": "<p>YHWH is flagged -- the LORD revealed this directly in the prophet's hearing: <em>This guilt will never be atoned for while you live.</em> The irrevocability is unusual in Isaiah, where most oracles of judgment are conditional or reversible. The phrase <em>niglah be-aznai</em> (uncovered/revealed in my ears) conveys intimate auditory revelation. The oracle carries the weight of a final refusal of repentance, beyond which further intercession is pointless.</p>",
+"15": "<p>The oracle shifts from the people collectively to Shebna, the palace administrator (<em>asher al-habayit</em>: the one over the house -- the chief steward). The abrupt targeting of a specific bureaucrat is unusual prophetic practice. Shebna is accused of carving a grand tomb for himself -- claiming the honor of the royal burial ground for a man of no distinguished lineage. The divine commissioning formula (<em>Go</em>) makes this a direct divine charge.</p>",
+"16": "<p><em>What gives you the right to be here? Who do you think you are?</em> The blunt rhetorical challenge -- not even naming Shebna, addressing him as <em>this man</em> -- drips with prophetic contempt. The tomb was carved in the rock on a height, the most prestigious burial location. The MKT's <em>what gives you the right</em> captures the Hebrew <em>mah-lekha poh</em> literally: what is to you here? The implied answer: nothing you have earned.</p>",
+"17": "<p>YHWH is flagged -- the LORD is about to throw Shebna away violently. The metaphor of hurling -- <em>tavhevkha</em>: whirl you around and throw you -- is physical and humiliating. The violent throw of a large man from a high position. The MKT's <em>hurl you away with a violent throw</em> captures the forceful Hebrew. The promised honor of a grand tomb is inverted: Shebna will die in a foreign land.</p>",
+"18": "<p>YHWH is flagged; <em>kavod</em> (glory, disp 2) -- <em>your glorious chariots will be the shame of your master's house.</em> The kavod that Shebna sought through his grand tomb and ceremonial chariots becomes the very vehicle of his shame. The MKT's <em>glorious chariots</em> renders kavod's range from physical splendor to proud status. Outward display of honor becomes the marker of disgrace when expelled.</p>",
+"19": "<p>The removal oracle is stated plainly: <em>I will remove you from your position, and you will be pulled down from your office.</em> The MKT uses the pair <em>remove / pulled down</em> to translate the Hebrew double verb of displacement. Both the status-role and the functional-role are taken away. The displacement creates the vacancy that Eliakim (v20) is called to fill.</p>",
+"20": "<p>Eliakim son of Hilkiah is summoned. The contrast with Shebna is implicit: Shebna's family is unspecified; Eliakim's father Hilkiah is named. The divine first-person commissioning (<em>I will summon my servant Eliakim</em>) makes this a divine appointment, not a political promotion. The word <em>servant</em> (<em>avdi</em>: my servant) is the title of honor given to Moses, David, and the Servant of the LORD in chs 40-55 -- Eliakim participates in this honorific vocabulary.</p>",
+"21": "<p>The investiture of Eliakim with Shebna's robe, sash, and authority is a formal succession ceremony. Eliakim becomes <em>a father to the residents of Jerusalem and to the house of Judah</em> -- the pastoral-paternal role of the chief steward. The MKT's <em>hand your authority over to him</em> is appropriately formal for an act of official investiture, and the paternal title underscores the protective, not merely administrative, dimension of the office.</p>",
+"22": "<p><em>I will lay on his shoulder the key of the house of David; what he opens no one will shut, and what he shuts no one will open.</em> The key of the house of David is the chief steward's authority over royal access. Rev 3:7 quotes this verse directly for Christ: <em>who holds the key of David, what he opens no one can shut, and what he shuts no one can open.</em> The MKT's exact phrasing closely follows the Hebrew and is quotable for Rev 3:7 without adjustment.</p>",
+"23": "<p><em>I will drive him in like a peg into a solid place, and he will become a throne of glory to his ancestral household.</em> <em>Aman</em> (disp 2) is the root of <em>solid place</em> -- the same root as <em>emet</em> (truth/faithfulness) and <em>amen</em>. The <em>maqom ne'eman</em> (solid/faithful/reliable place) secures the peg in something genuinely trustworthy. <em>Kavod</em> (glory, disp 2) -- Eliakim will become a throne of glory. The MKT's <em>solid place</em> captures aman's reliability sense without importing the belief sense.</p>",
+"24": "<p>Everything of the household will hang on Eliakim -- all the <em>kavod</em> (honor/glory, disp 2), from the largest vessels to the smallest bowls. The MKT's <em>all the honour of his father's household</em> captures the kavod that transfers to Eliakim's peg. The list of vessels hanging on the peg illustrates how much weight a single trustworthy appointment can bear -- and therefore how catastrophic its failure would be (v25).</p>",
+"25": "<p><em>In that day the peg that was driven into the solid place will fail.</em> <em>Aman</em> (disp 2) appears again -- the <em>solid/faithful place</em> gives way and the peg is cut down and falls, and everything hanging on it falls with it. YHWH is flagged twice. Even a divinely appointed steward is temporary. Only the one who holds the key of David permanently (Rev 3:7 -- Christ) is the true and unbreakable peg -- the fulfillment that makes all human stewards types and shadows.</p>",
+},
+"23": {
+"1": "<p>The oracle against Tyre -- the greatest commercial city of the ancient world. <em>Massa</em> again. The ships of Tarshish (the farthest western trading destination) are addressed: wail, for Tyre is destroyed. The news travels the trade routes faster than armies: ships at sea hear of Tyre's fall and lose their home port. The MKT's <em>no house left standing, no harbor</em> captures the total collapse of Tyre's infrastructure.</p>",
+"2": "<p>The coastal peoples and Sidon's merchants are addressed in shock. Sidon was Tyre's sister-city in Phoenicia; together they dominated Mediterranean trade. The Hebrew <em>milhati-yam</em> (traders of the sea) -- the MKT's <em>sailed the seas</em> is a dynamic rendering of what is literally <em>crossers of the sea</em>. The merchants who made the coastal peoples wealthy now have no livelihood.</p>",
+"3": "<p>The grain of Shihor -- the Nile delta harvest -- was the cargo that made Tyre the grain distribution center for the Mediterranean. The great waters of the sea are Tyre's commercial highway. The MKT's trade-flow rendering is accurate: Egyptian grain crossed the Mediterranean and became Tyre's income. Tyre was the world's trading floor, and nations were enriched by her commerce.</p>",
+"4": "<p>The sea itself -- personified as Sidon's fortress -- disowns Tyre and Sidon. The sea's declaration that it has not labored nor brought up sons and daughters creates a strange maternal metaphor: the sea had been the mother-womb of Tyre's civilization, and now it disavows the relationship. The MKT's <em>the sea's own fortress declares</em> preserves the personification -- the sea, created by YHWH, refuses to be the foundation of Tyre's pride.</p>",
+"5": "<p>The news spreads to Egypt -- Egypt writhes with anguish (<em>chul</em>: writhe, the labor-pain verb) at the news. Egypt's economic dependence on Tyre as its trading partner means Tyre's fall causes Egypt real economic pain. The sequence of grief (Sidon, vv2-4; Egypt, v5) traces the economic web along which Tyre's collapse ripples outward.</p>",
+"6": "<p>The command to sail to Tarshish -- flee to the far west, to the end of the known world. With no home market to return to, the displaced merchants must sail as far as possible. The repetition of <em>Tarshish</em> (vv1, 6, 10, 14) frames the oracle with the image of the farthest trading post now receiving all the displaced commerce of a collapsed Tyre.</p>",
+"7": "<p>The rhetorical question: <em>Is this the city that you once celebrated?</em> The contrast between Tyre's ancient glory and its present ruin is the oracle's central irony. <em>Ancient in its origins</em> -- Tyre claimed great antiquity. A city <em>whose people sailed out to settle distant shores</em> -- Tyre's colonial expansion into Carthage, Gades, and the western Mediterranean was a source of pride. All of it is now past.</p>",
+"8": "<p><em>Who planned this against Tyre?</em> The rhetorical question sets up v9. The crown-bestowing city, whose traders were princes, whose merchants were the honored of the earth -- the superlatives of Tyrian commercial glory pile up before the answer falls. Tyre issued trade charters and commercial rights as a monarch issues crowns: hence <em>crown-bestowing city</em>.</p>",
+"9": "<p>YHWH is flagged -- <em>the LORD of hosts planned it.</em> The answer to v8's question: the LORD of hosts is the planner of Tyre's fall. The purpose: <em>to strip the pride from all magnificence and to humiliate all the famous of the earth.</em> The divine motive is not commercial jealousy but the systematic humiliation of human pride -- the same theme as 2:12-17. The universality (<em>all the famous of the earth</em>) makes Tyre's judgment paradigmatic, not merely local.</p>",
+"10": "<p>The daughter of Tarshish is told to flow through the land like the Nile -- with Tyre gone, Tarshish can trade freely across the sea without the Tyrian commercial monopoly that previously restricted her. The liberation of Tarshish through Tyre's fall: judgment against one creates freedom for others. The MKT's <em>flow through your land like the Nile</em> preserves the river-metaphor of commercial freedom.</p>",
+"11": "<p>YHWH is flagged -- <em>the LORD stretched his hand out over the sea and shook the kingdoms.</em> The divine hand over the sea evokes the Exodus (Exod 14:21): as the LORD stretched out his hand over the Red Sea to divide it, now he stretches it over the Mediterranean to shatter Tyre. The order against Canaan (Phoenicia) is pronounced through the same gesture that once opened the sea for Israel.</p>",
+"12": "<p>The <em>crushed virgin daughter of Sidon</em> -- the virgin-daughter personification for a city that had maintained her independence and was now violated by conquest. The command to cross to Cyprus (Kittim) offers no real refuge -- even there there will be no rest. The geographic expansion of the flight westward maps the exhaustion of escape options.</p>",
+"13": "<p>The Chaldeans were originally a people-of-nothing, raised up by Assyria, who then themselves conquered the empire that raised them -- a compressed historical sketch of how empires rise and fall. The MKT's <em>people who were nothing until Assyria raised them up</em> captures the irony: Assyria created the instrument of its own replacement. No empire is final; each is provisional.</p>",
+"14": "<p>The refrain of the ships of Tarshish (v1 repeated) closes the oracle's body: <em>your fortress harbour is destroyed.</em> The refrain-structure creates the sense of inevitable completeness -- what was announced at the beginning has been traced through its causes and is now confirmed in the repeated wail. The Hebrew inclusio (<em>ships of Tarshish</em> opening and closing) is a deliberate literary frame.</p>",
+"15": "<p><em>In that day Tyre will be forgotten for seventy years -- the span of one king's lifetime.</em> <em>Melek</em> (king, disp 2) -- the king's lifetime (seventy years) gives the oracle a specific temporal horizon. After seventy years (the same period as the Babylonian exile, Jer 25:11-12; 29:10), Tyre will be remembered again. The MKT's <em>span of one king's lifetime</em> renders <em>kime melek echad</em>: like the days of one king.</p>",
+"16": "<p>The forgotten prostitute's song -- a haunting image: the city-as-prostitute must go through the streets playing her harp, making sweet music so people will remember her again. The city-as-harlot metaphor will be developed extensively in Ezekiel (16; 23) for Jerusalem and Samaria, and by Revelation (17-18) for Babylon. Tyre is the commercial precedent: a city that sold itself to every trading partner.</p>",
+"17": "<p>YHWH is flagged -- the LORD will attend to Tyre after seventy years. She will return to her trading -- <em>playing the harlot with all the kingdoms of the world</em>. The prostitute metaphor is sustained: Tyre's commercial promiscuity is her nature, and after the seventy-year interruption it resumes. The MKT preserves the harlot metaphor without euphemism, as the Hebrew requires for the theological statement to register.</p>",
+"18": "<p>YHWH is flagged twice; <em>qodesh</em> (holiness, disp 2) is flagged -- <em>her merchandise and her earnings will be set apart as holy to the LORD.</em> The eschatological reversal is extraordinary: Tyre the harlot-city's income, previously consecrated to herself and her commercial partners, will become <em>qodesh YHWH</em> -- holy to the LORD. The MKT's <em>set apart as holy</em> captures the consecration language. The profits will supply those who live before the LORD -- a transformation of commercial wealth into covenant-community support that anticipates the eschatological gathering of all nations' wealth into Zion (60:5-7; Rev 21:24-26).</p>",
+},
 }
 
 def main():
-    e = load_echo('isaiah')
-    merge_echo(e, ISA_ECHO)
-    save_echo('isaiah', e)
-    print(f'Isaiah echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'isaiah')
-    merge_comm(c, ISA_ORIGINAL)
-    save_comm('mkt-original', 'isaiah', c)
-    print(f'Isaiah original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'isaiah')
-    merge_comm(c, ISA_CONTEXT)
-    save_comm('mkt-context', 'isaiah', c)
-    print(f'Isaiah context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'isaiah')
-    merge_comm(c, ISA_CHRIST)
-    save_comm('mkt-christ', 'isaiah', c)
-    print(f'Isaiah christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    data = load_comm('mkt-original', 'isaiah')
+    merge_comm(data, ISAIAH)
+    chs = sorted(data.keys(), key=lambda x: int(x))
+    total_v = sum(len(data[c]) for c in chs)
+    print(f'Isaiah original: {len(chs)} chapters, {total_v} verses')
+    save_comm('mkt-original', 'isaiah', data)
 
 if __name__ == '__main__':
     main()

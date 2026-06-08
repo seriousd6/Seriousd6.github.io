@@ -1,53 +1,47 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
+MKT Christ Commentary — Psalms chapters 96–102
+Run: python3 scripts/zc-christ-psalms-96-102.py
 
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+Source data used:
+- data/interlinear/psalms.json
+- data/commentary/mkt-christ/psalms.json (continuity)
+
+Key Christological decisions in this range:
+- Psalms 96-99 are "enthronement psalms" — YHWH reigns over all the earth.
+  Christological thread: Christ's lordship and universal kingship (Phil 2:9-11; Rev 11:15);
+  his coming to judge (Acts 17:31); cosmic praise at his return (Rev 19:1-7).
+- Ps 96:13 / 98:9 "He comes to judge the earth in righteousness" → Acts 17:31 (direct NT
+  quotation pattern); Rev 19:11 ("in righteousness he judges and makes war").
+- Ps 100:3 "we are his people, and the sheep of his pasture" → John 10:14,27 (direct
+  application to the Good Shepherd who knows his sheep).
+- Ps 100:4 "Enter his gates with thanksgiving" → John 10:9 (Christ the gate) + Heb 10:19-22
+  (entering the holy place through his blood).
+- Ps 102:25-27 is directly quoted in Heb 1:10-12 and applied to Christ as the eternal,
+  unchanging Creator — the most explicit Christ-quotation from the Psalter in Hebrews.
+- Ps 101: Royal charter of integrity — Christ as the perfect king who embodies all of David's
+  pledges without exception (Heb 4:15; Heb 7:26).
+- Ps 99:6-7 Moses/Aaron/Samuel as types of the mediator → Christ as the final prophet
+  (Deut 18:15), high priest (Heb 7-10), and intercessor (Heb 7:25).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -55,112 +49,126 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
+PSALMS = {
+  "96": {
+    "1": '<p>A shadow: "Sing to the LORD a new song." Rev 5:9 — "they sang a new song: \'Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God.\'" The new song is the song of the Lamb — sung because Christ has done the new thing that ends all exile and brings the new creation. The command to sing it to "all the earth" is the scope of the gospel.</p>',
+    "2": '<p>A direct: "Proclaim his salvation from day to day." The word for "salvation" (<em>yĕšûʿâ</em>) is Jesus\'s name — Matt 1:21 ("you shall call his name Jesus, for he will save his people from their sins"). The daily proclamation of God\'s salvation is the daily proclamation of the gospel of Jesus Christ. Acts 5:42 — "every day, in the temple and from house to house, they did not cease teaching and preaching that the Christ is Jesus."</p>',
+    "3": '<p>A theme: "Declare his glory among the nations, his marvelous works among all the peoples." Matt 28:19-20 — the Great Commission sends disciples to all nations to proclaim what God has done. Acts 1:8 — "you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth." The declaration of God\'s glory among the nations is the mission of the church, centered on the marvelous work of the resurrection.</p>',
+    "4": '<p>A revelation of God: "the LORD is great and greatly to be praised; he is to be feared above all gods." Phil 2:9-11 — "God has highly exalted him and bestowed on him the name that is above every name, that at the name of Jesus every knee should bow." The greatness that surpasses all other claims to greatness is the greatness of Christ, the name above all names.</p>',
+    "5": '<p>A revelation of God: "the gods of the peoples are idols, but the LORD made the heavens." Acts 17:22-31 — Paul\'s Areopagus sermon: "The God who made the world and everything in it is the Lord of heaven and earth." Col 1:16 — all things were created through Christ. The one who made the heavens is the one through whom all things were made — the son who is the agent of creation.</p>',
+    "6": '<p>A revelation of God: "Splendor and majesty are before him; strength and beauty are in his sanctuary." Heb 1:3 — Christ "is the radiance of the glory of God and the exact imprint of his nature." Rev 1:12-16 — the vision of the risen Christ in splendor and majesty. The splendor before God is most fully visible in the face of Jesus Christ (2 Cor 4:6).</p>',
+    "7": '<p>A revelation of God: "Ascribe to the LORD glory and strength." Rev 5:12 — "Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!" The ascription of glory and strength to the Lord is the ascription of the heavenly worship to the Lamb — the praise that the psalm calls for is the praise that Revelation describes directed at Christ.</p>',
+    "8": '<p>A type: "bring an offering and come into his courts." Heb 10:10,14 — Christ offered himself as the one sacrifice that ends all others. Through him we come into God\'s courts — Heb 10:19-22 ("we have confidence to enter the holy places by the blood of Jesus"). The offering we bring is no longer animal sacrifice but the "sacrifice of praise" (Heb 13:15 — "the fruit of lips that acknowledge his name").</p>',
+    "9": '<p>A revelation of God: "Worship the LORD in the splendor of holiness; tremble before him, all the earth!" Heb 12:28-29 — "let us offer to God acceptable worship, with reverence and awe, for our God is a consuming fire." The splendor of holiness in which acceptable worship occurs is the holiness of Christ in whom we stand (1 Cor 1:30 — he became our sanctification). We worship in his holiness, not our own.</p>',
+    "10": '<p>A shadow: "Say among the nations, \'The LORD reigns!\' Yes, the world is established, it shall never be moved; he will judge the peoples with equity." Rev 11:15 — "the kingdom of the world has become the kingdom of our Lord and of his Christ." Acts 17:31 — God "has fixed a day on which he will judge the world in righteousness by a man whom he has appointed." The reign of the LORD is the reign of Christ.</p>',
+    "11": '<p>A shadow: "Let the heavens be glad, and let the earth rejoice; let the sea roar, and all that fills it." Rev 19:1-7 — the great multitude in heaven praising God: "Hallelujah! Salvation and glory and power belong to our God!" The cosmic joy that Ps 96 calls for is the eschatological joy at the final salvation that Rev 19 describes as already erupting in anticipation.</p>',
+    "12": '<p>A shadow: "let the field exult, and everything in it! Then shall all the trees of the forest sing for joy." Rom 8:21-22 — "creation itself will be set free from its bondage to corruption and obtain the freedom of the glory of the children of God." The creation that sings for joy is the creation liberated at the renewal of all things (Matt 19:28; Rev 21:5 — "Behold, I am making all things new").</p>',
+    "13": '<p>A direct: <strong>"He comes to judge the earth. He will judge the world in righteousness, and the peoples in his faithfulness."</strong> Acts 17:31 — "he has fixed a day on which he will judge the world in righteousness by a man whom he has appointed." Rev 19:11 — "in righteousness he judges and makes war." The judge who comes is Christ, the appointed judge of all humanity. The whole Psalter\'s vision of divine judgment converges on his return.</p>',
   },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
+  "97": {
+    "1": '<p>A shadow: "The LORD reigns; let the earth rejoice." Rev 11:15 — "the kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever." Rev 19:6 — "Hallelujah! For the Lord our God the Almighty reigns." The enthronement of the Lord announced in the Psalter is the enthronement of Christ at his resurrection and exaltation (Acts 2:36 — "God has made him both Lord and Christ").</p>',
+    "2": '<p>A revelation of God: "Clouds and thick darkness are around him; righteousness and justice are the foundation of his throne." Heb 1:8 — "Your throne, O God, is forever and ever, the scepter of uprightness is the scepter of your kingdom." The throne whose foundation is righteousness and justice is the throne on which Christ sits — the throne he shares with the Father (Rev 3:21 — "the one who conquers, I will grant him to sit with me on my throne").</p>',
+    "3": '<p>A revelation of God: "Fire goes before him and burns up his adversaries all around." 2 Thess 1:7-8 — Christ will be "revealed from heaven with his mighty angels in flaming fire, inflicting vengeance on those who do not know God." Heb 12:29 — "our God is a consuming fire." The fire that goes before the LORD is the fire of the holiness of Christ at his coming.</p>',
+    "4": '<p>A revelation of God: "His lightnings light up the world; the earth sees and trembles." Matt 24:27 — "as the lightning comes from the east and shines as far as the west, so will be the coming of the Son of Man." Rev 16:18 — "flashes of lightning, rumblings, peals of thunder, and a great earthquake." The theophanic imagery of Ps 97 is the imagery of Christ\'s second coming.</p>',
+    "5": '<p>A revelation of God: "The mountains melt like wax before the LORD, before the Lord of all the earth." Rev 16:20 — "every island fled away, and no mountains were to be found." 2 Pet 3:12 — "the day of God... because of which the heavens will be set on fire and dissolved, and the heavenly bodies will melt as they burn!" The dissolution of creation before the LORD is the dissolution before the returning Christ.</p>',
+    "6": '<p>A revelation of God: "The heavens proclaim his righteousness, and all the peoples see his glory." Rev 1:7 — "Behold, he is coming with the clouds, and every eye will see him, even those who pierced him, and all tribes of the earth will wail on account of him." 2 Cor 4:6 — "the light of the knowledge of the glory of God in the face of Jesus Christ." Every eye will see the glory at Christ\'s return.</p>',
+    "7": '<p>A direct: "worship him, all you gods!" Heb 1:6 — "when he brings the firstborn into the world, he says, \'Let all God\'s angels worship him.\'" This is a direct NT application of the command to heavenly beings to worship Christ at his exaltation/incarnation. Col 1:15-16 — Christ is above all principalities and powers. The "gods" commanded to worship in Ps 97:7 are the angels commanded to worship the Son in Heb 1:6.</p>',
+    "8": '<p>A shadow: "Zion hears and is glad, and the daughters of Judah rejoice, because of your judgments, O LORD." Luke 1:46-55 — Mary\'s Magnificat rejoices at God\'s judgment on the proud and his mercy on the lowly. Luke 2:14 — "glory to God in the highest, and on earth peace among those with whom he is pleased!" The daughters of Judah rejoicing at the LORD\'s coming find their fullest expression in those who welcome the incarnate Son.</p>',
+    "9": '<p>A direct: "For you, O LORD, are most high over all the earth; you are exalted far above all gods." Phil 2:9 — "God has highly exalted him and bestowed on him the name that is above every name." Eph 1:21 — Christ is seated at the right hand of God "far above all rule and authority and power and dominion, and above every name that is named." The "most high over all the earth" and "exalted far above all gods" is the exalted Christ.</p>',
+    "10": '<p>A shadow: "He preserves the lives of his saints; he delivers them from the hand of the wicked." John 10:28-29 — "I give them eternal life, and they shall never perish; no one will snatch them out of my hand." 1 Pet 1:5 — "who by God\'s power are being guarded through faith for a salvation ready to be revealed." Christ is the keeper who preserves his own through every danger, even death itself.</p>',
+    "11": '<p>A shadow: "Light is sown for the righteous, and joy for the upright in heart." John 8:12 — "I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life." John 15:11 — "these things I have spoken to you, that my joy may be in you, and that your joy may be full." The light and joy that are "sown" for the righteous are sown in Christ — they spring up in the resurrection and flower fully in the new creation.</p>',
+    "12": '<p>A shadow: "Rejoice in the LORD, O you righteous, and give thanks to his holy name!" Phil 4:4 — "Rejoice in the Lord always; again I will say, rejoice." Col 3:17 — "whatever you do, in word or deed, do everything in the name of the Lord Jesus, giving thanks to God the Father through him." The "holy name" in which the righteous rejoice and give thanks is the name of Jesus, the Lord.</p>',
   },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
+  "98": {
+    "1": '<p>A direct: "His right hand and his holy arm have worked salvation for him." Luke 1:51 — "He has shown strength with his arm." Isa 53:1 — "to whom has the arm of the LORD been revealed?" (quoted in John 12:38 in connection with Christ). Acts 13:17 — Paul cites God\'s "great arm" in the Exodus, a pattern fulfilled in the resurrection. The "holy arm" that works salvation is the arm of the LORD at work in Christ.</p>',
+    "2": '<p>A direct: <strong>"The LORD has made known his salvation; he has revealed his righteousness in the sight of the nations."</strong> Rom 1:17 — "in the gospel the righteousness of God is revealed from faith for faith." Rom 3:25-26 — the cross reveals God\'s righteousness publicly. The "salvation" made known to the nations is the gospel of Jesus Christ — the word <em>yĕšûʿâ</em> (salvation) is the Hebrew form of the name Jesus.</p>',
+    "3": '<p>A shadow: "He has remembered his steadfast love and faithfulness to the house of Israel." Luke 1:54-55 — Magnificat: "He has helped his servant Israel, in remembrance of his mercy, as he spoke to our fathers, to Abraham and to his offspring forever." The covenant faithfulness God remembered is the faithfulness he enacted in sending the Son — the fulfillment of every promise made to Israel.</p>',
+    "4": '<p>A revelation of God: "Make a joyful noise to the LORD, all the earth; break forth into joyous song and sing praises!" Rev 19:1-6 — "After this I heard what seemed to be the loud voice of a great multitude in heaven, crying out, \'Hallelujah! Salvation and glory and power belong to our God.\'" The universal joyful noise that Ps 98 calls for is the hallelujah chorus of Revelation, celebrating the final salvation in Christ.</p>',
+    "5": '<p>A revelation of God: "Sing praises to the LORD with the lyre, with the lyre and the sound of melody!" Rev 5:8 — "the four living creatures and the twenty-four elders fell down before the Lamb, each holding a harp and golden bowls full of incense." The lyre/harp worship of the Psalter is the harp worship before the Lamb in Revelation. The one before whom the harps play is the risen Christ.</p>',
+    "6": '<p>A revelation of God: "With trumpets and the sound of the horn make a joyful noise before the King, the LORD!" Rev 8:2 (seven trumpets of the angels); 1 Thess 4:16 — "the Lord himself will descend from heaven with a cry of command, with the voice of an archangel, and with the sound of the trumpet of God." The trumpet noise before the King is the trumpet of Christ\'s return.</p>',
+    "7": '<p>A shadow: "Let the sea roar and all that fills it; the world and those who dwell in it." Rev 5:13 — "I heard every creature in heaven and on earth and under the earth and in the sea, and all that is in them, saying, \'To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!\'" The sea roaring in praise of the LORD is the sea joining the cosmic worship of God and the Lamb.</p>',
+    "8": '<p>A shadow: "Let the rivers clap their hands; let the hills sing for joy together." Rom 8:21-22 — "creation itself will be set free from its bondage to corruption and obtain the freedom of the glory of the children of God." The rivers clapping and hills singing represent creation\'s anticipation of the liberation that Christ brings — the new creation where the groaning ends and joy begins (Rev 21:4-5).</p>',
+    "9": '<p>A direct: <strong>"He comes to judge the earth. He will judge the world with righteousness, and the peoples with equity."</strong> Acts 17:31 — "he has fixed a day on which he will judge the world in righteousness by a man whom he has appointed." Rev 19:11 — "in righteousness he judges and makes war." This verse and Ps 96:13 form a pair — both the enthronement and new song traditions converge on the coming of Christ as universal judge in righteousness.</p>',
   },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
+  "99": {
+    "1": '<p>A shadow: "The LORD reigns; let the peoples tremble! He sits enthroned upon the cherubim; let the earth quake!" Heb 1:3 — Christ "sat down at the right hand of the Majesty on high." Rev 4-5 — the throne scene where the Lamb receives the scroll of universal sovereignty. Phil 2:10 — "at the name of Jesus every knee should bow." The trembling of the peoples before the enthroned LORD is the response to Christ\'s universal lordship.</p>',
+    "2": '<p>A shadow: "The LORD is great in Zion; he is exalted over all the peoples." Eph 1:20-22 — God "seated him at his right hand in the heavenly places, far above all rule and authority... and put all things under his feet." Heb 12:22 — the heavenly Zion where Christ is great. The greatness of the LORD in Zion is the greatness of Christ in the heavenly Jerusalem.</p>',
+    "3": '<p>A shadow: "Let them praise your great and awesome name! Holy is he!" Phil 2:9-10 — "the name that is above every name, that at the name of Jesus every knee should bow." Rev 4:8 — "Holy, holy, holy, is the Lord God Almighty, who was and is and is to come!" The praise of the great and awesome name is fulfilled in the worship of the one whose name is above all names.</p>',
+    "4": '<p>A shadow: "The King in his might loves justice. You have established equity; you have executed justice and righteousness in Jacob." Isa 9:7 — "of the increase of his government and of peace there will be no end, on the throne of David and over his kingdom, to establish it and to uphold it with justice and with righteousness from this time forth and forevermore." Christ is the just king who establishes righteousness in his kingdom (Heb 1:8-9).</p>',
+    "5": '<p>A shadow: "Exalt the LORD our God; worship at his footstool! Holy is he!" Heb 1:6 — "Let all God\'s angels worship him!" Rev 5:14 — "the four living creatures said \'Amen!\' and the elders fell down and worshiped." The call to exalt and worship before the LORD\'s footstool is the call fulfilled in the eternal worship before the throne of the Lamb.</p>',
+    "6": '<p>A type: "Moses and Aaron were among his priests, Samuel also was among those who called upon his name." Moses (Deut 18:15 — "the LORD your God will raise up for you a prophet like me"), Aaron (the high-priestly type fulfilled in Christ, Heb 7-10), Samuel (the prophet-intercessor; 1 Sam 12:23 — "far be it from me to sin against the LORD by ceasing to pray for you"). All three are types of Christ as prophet, priest, and intercessor.</p>',
+    "7": '<p>A type: "In the pillar of the cloud he spoke to them." The pillar of cloud = the Shekinah, the divine presence among Israel. John 1:14 — "the Word became flesh and <em>eskēnōsen</em> (tabernacled) among us, and we have seen his glory." The cloud presence in the wilderness is the type of which the incarnation is the antitype — God dwelling among his people in the fullness of his glory in the person of his Son.</p>',
+    "8": '<p>A revelation of God: "you were a forgiving God to them, but an avenger of their wrongdoings." The dual character of God — forgiveness and justice held together. Rom 3:25-26 — the cross demonstrates that God is "just and the justifier of the one who has faith in Jesus." The forgiveness of God does not override his justice; the cross is where both are simultaneously satisfied. Christ bears the vengeance so that the forgiveness can be real.</p>',
+    "9": '<p>A shadow: "Worship at his holy mountain; for the LORD our God is holy!" Heb 12:22 — "you have come to Mount Zion and to the city of the living God, the heavenly Jerusalem." Rev 14:1 — "I looked, and behold, on Mount Zion stood the Lamb, and with him 144,000 who had his name and his Father\'s name written on their foreheads." The holy mountain of God is the mountain where the Lamb stands.</p>',
   },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
+  "100": {
+    "1": '<p>A revelation of God: "Make a joyful noise to the LORD, all the earth!" The universal scope of worship — all the earth — is the scope of the gospel. Rev 7:9-10 — "a great multitude that no one could number, from every nation, from all tribes and peoples and languages, standing before the throne and before the Lamb, crying out with a loud voice." The joyful noise of all the earth is the worship before Christ\'s throne.</p>',
+    "2": '<p>A revelation of God: "Serve the LORD with gladness! Come into his presence with singing!" Eph 2:18 — "through him we both have access in one Spirit to the Father." Heb 4:16 — "let us then with confidence draw near to the throne of grace." The access to God\'s presence that Ps 100 calls for is the access Christ opens — through him, with gladness, we come into the Father\'s presence.</p>',
+    "3": '<p>A direct: <strong>"Know that the LORD, he is God! It is he who made us, and we are his; we are his people, and the sheep of his pasture."</strong> John 10:14,27 — "I am the good shepherd. I know my own and my own know me... My sheep hear my voice, and I know them, and they follow me." The knowledge of the Lord and the identity as his sheep are fulfilled in the relationship of Christ and his flock. To know that the LORD is God is to know that Jesus is Lord (John 20:28).</p>',
+    "4": '<p>A type: <strong>"Enter his gates with thanksgiving, and his courts with praise!"</strong> John 10:9 — "I am the gate; whoever enters through me will be saved." Heb 10:19-22 — "we have confidence to enter the holy places by the blood of Jesus, by the new and living way that he opened for us through the curtain, that is, through his flesh." The gates we enter are entered through Christ; the thanksgiving we bring is for his sacrifice.</p>',
+    "5": '<p>A revelation of God: "For the LORD is good; his steadfast love endures forever, and his faithfulness to all generations." John 1:17 — "grace and truth came through Jesus Christ." Eph 2:7 — "the immeasurable riches of his grace in kindness toward us in Christ Jesus." The goodness, steadfast love, and faithfulness that are "forever" and "to all generations" are the attributes of God most fully displayed in Christ — in the cross (Rom 5:8) and in the promise of his return.</p>',
   },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
+  "101": {
+    "1": '<p>A type: "I will sing of steadfast love and justice; to you, O LORD, I will make music." David\'s royal charter of covenant virtues. Christ as the perfect king embodies both: "God is love" (1 John 4:8) and "must reign until he has put all his enemies under his feet" (1 Cor 15:25). Heb 2:12 — the risen Christ "sings praise" in the assembly. He fulfills every verse of David\'s charter without remainder.</p>',
+    "2": '<p>A type: "I will ponder the way that is blameless. Oh when will you come to me? I will walk with integrity of heart within my house." Heb 4:15 — Christ was "in every respect tempted as we are, yet without sin." 1 Pet 2:22 — "he committed no sin, neither was deceit found in his mouth." The longing "when will you come to me?" is the deepest cry of the Psalter — answered in John 1:14 when God comes in the flesh.</p>',
+    "3": '<p>A revelation of God: "I will not set before my eyes anything that is worthless." Christ set his eyes on the Father\'s will (John 8:29 — "I always do the things that are pleasing to him"). Heb 12:2 — he ran "looking to Jesus, the founder and perfecter of our faith, who for the joy set before him endured the cross." His eyes were fixed on the Father\'s purpose — he put nothing worthless before his eyes.</p>',
+    "4": '<p>A revelation of God: "A perverse heart shall be far from me; I will know nothing of evil." 1 John 3:5 — "in him there is no sin." Heb 7:26 — "holy, innocent, unstained, separated from sinners, and exalted above the heavens." Christ is the one king who keeps the charter of Ps 101 perfectly — the perverse heart is not merely far from him but has no foothold in him at all. His sinlessness is the ground of our acceptance.</p>',
+    "5": '<p>A revelation of God: "Whoever slanders his neighbor secretly I will destroy. Whoever has a haughty look and an arrogant heart I will not endure." Matt 23:12 — "whoever exalts himself will be humbled." Luke 1:51 — God "has scattered the proud in the thoughts of their hearts." Christ denounces pride and slander as incompatible with his kingdom (Matt 5:21-22; 23:1-36). He is the king who cannot be moved by arrogance and whose kingdom has no place for it.</p>',
+    "6": '<p>A shadow: "I will look with favor on the faithful in the land, that they may dwell with me." John 17:24 — "Father, I desire that they also, whom you have given me, may be with me where I am, to see my glory." Rev 7:15 — "they are before the throne of God, and serve him day and night in his temple." The faithful dwelling with the king and ministering before him is the permanent state of the redeemed in the new creation.</p>',
+    "7": '<p>A shadow: "No one who practices deceit shall dwell in my house; no one who utters lies shall continue before my eyes." Rev 21:27 — "nothing unclean will ever enter it, nor anyone who does what is detestable or false, but only those who are written in the Lamb\'s book of life." Rev 22:15 — "outside are the dogs and sorcerers and the sexually immoral and murderers and idolaters, and everyone who loves and practices falsehood." The king\'s house from which liars are excluded is the new Jerusalem.</p>',
+    "8": '<p>A shadow: "Morning by morning I will destroy all the wicked in the land, cutting off all the evildoers from the city of the LORD." Rev 22:15 — the evildoers are "outside" the city. Matt 25:41 — "Depart from me, you cursed." The final purging of evil from God\'s city is the work Christ will complete at the last judgment — the cutting off that Ps 101 anticipates, the separation of sheep from goats that Matt 25 describes.</p>',
   },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
+  "102": {
+    "1": '<p>A type: "Hear my prayer, O LORD; let my cry come to you! Do not hide your face from me in the day of my distress!" The prayer of the one who is "faint" and "pours out his complaint." Heb 5:7 — Christ "offered up prayers and supplications, with loud cries and tears, to him who was able to save him from death, and he was heard because of his reverence." The prayer of the afflicted that Ps 102 rehearses is the prayer Christ prayed in Gethsemane.</p>',
+    "2": '<p>A type: "Incline your ear to me; answer me speedily in the day when I call!" The urgency of the sufferer\'s cry. Luke 22:44 — "being in agony he prayed more earnestly." Heb 5:7 — "he was heard." The Father answered the cry not with exemption from death but with resurrection — the answer that surpassed the prayer by giving not just relief but eternal life.</p>',
+    "3": '<p>A type: "For my days pass away like smoke, and my bones burn like a furnace." The physical wasting of the afflicted one. Isa 53:2-3 — "he had no form or majesty that we should look at him... he was despised and rejected by men; a man of sorrows, and acquainted with grief." Christ assumed fully the suffering and transience of the afflicted human being — bone, breath, body — to redeem it from within.</p>',
+    "4": '<p>A type: "My heart is struck down like grass and has withered; I forget to eat my bread." The collapse of body and will under extremity. Luke 22:43 — an angel appeared to strengthen him. John 19:28 — "I thirst" — even the basic need for water abandoned. Christ descended into the complete human experience of extremity so that the extreme sufferer would find him there.</p>',
+    "5": '<p>A type: "Because of my loud groaning my bones cling to my skin." Matt 27:50 — "Jesus cried out again with a loud voice and yielded up his spirit." Heb 5:7 — "with loud cries and tears." The loud groaning of the psalmist is the loud cry of Christ from the cross — the extremity of suffering expressed in the only language available: the wordless cry.</p>',
+    "6": '<p>A type: "I am like a desert owl of the wilderness, like an owl of the waste places." The imagery of lonely, nocturnal creatures in desolate places. Gethsemane — Jesus "withdrew from them about a stone\'s throw, and knelt down and prayed" (Luke 22:41). John 16:32 — "you will leave me alone." The desert owl alone in the waste places is the type of Christ\'s lonely prayer in the garden and his abandonment on the cross.</p>',
+    "7": '<p>A type: "I lie awake; I am like a lonely sparrow on the housetop." The sleepless, solitary vigil. Luke 22:39-46 — Christ prayed through the night in Gethsemane while the disciples slept (Luke 22:45 — "he found them sleeping for sorrow"). He was the solitary watcher, the lonely sparrow, while those around him could not keep watch for even one hour (Mark 14:37).</p>',
+    "8": '<p>A type: "All the day my enemies taunt me; those who deride me use my name for a curse." Matt 27:39-44 — "those who passed by derided him, wagging their heads and saying, \'You who would destroy the temple and rebuild it in three days, save yourself!\'... the chief priests also, along with the scribes and elders, mocked him." Gal 3:13 — "Christ redeemed us from the curse of the law by becoming a curse for us." He became a curse so we could receive the blessing.</p>',
+    "9": '<p>A type: "For I eat ashes like bread and mingle tears with my drink." John 11:35 — "Jesus wept." Luke 19:41 — "he wept over it (Jerusalem)." Heb 5:7 — "with loud cries and tears." The one who ate ashes and mingled tears with his drink offered at the Last Supper the new wine of the covenant — "this cup that is poured out for you is the new covenant in my blood" (Luke 22:20). His tears became the cup of salvation.</p>',
+    "10": '<p>A type: "because of your indignation and anger; for you have taken me up and thrown me down." The divine wrath falling on the righteous sufferer. Isa 53:10 — "it was the will of the LORD to crush him." Gal 3:13 — Christ became a curse for us. Rom 3:25 — God presented him as a propitiation. The divine indignation that falls on the psalmist is the divine judgment that fell on Christ vicariously — he was "taken up and thrown down" so that we would be raised up with him (Eph 2:6).</p>',
+    "11": '<p>A type: "My days are like an evening shadow; I wither away like grass." Phil 2:7-8 — Christ "made himself nothing... becoming obedient to the point of death." He who is "the same yesterday and today and forever" (Heb 13:8) entered the withering and the shadow of mortality — the eternal Son took on the transience of flesh so that the transient could be clothed with eternity (2 Cor 5:4).</p>',
+    "12": '<p>A revelation of God: "But you, O LORD, are enthroned forever; you are remembered throughout all generations." The contrast between the wasting psalmist and the eternal God. This contrast becomes the paradox of Christ — the eternal Son who wasted away in death (Heb 13:8 — "the same yesterday, today, and forever") rose and reigns forever. The eternally enthroned one is the one who died and rose (Rev 1:18 — "I am alive forevermore").</p>',
+    "13": '<p>A shadow: "You will arise and have pity on Zion; it is the time to favor her; the appointed time has come." Gal 4:4 — "when the fullness of time had come, God sent forth his Son, born of woman, born under the law." 2 Cor 6:2 — "Behold, now is the favorable time; behold, now is the day of salvation." The "appointed time" that Ps 102 awaits is the time that Paul says has arrived in Christ — the fullness of time, the acceptable year of the Lord.</p>',
+    "14": '<p>A theme: devotion to Zion\'s stones and dust — the longing for Jerusalem\'s restoration. This longing is fulfilled in the heavenly Jerusalem. Heb 11:10 — Abraham "was looking forward to the city that has foundations, whose designer and builder is God." Rev 21:2 — "the holy city, new Jerusalem, coming down out of heaven from God." The devotion to Zion\'s dust is the devotion to the eternal city that Christ is building (Matt 16:18).</p>',
+    "15": '<p>A shadow: "Nations will fear the name of the LORD, and all the kings of the earth will fear your glory." Rev 15:3-4 — "who will not fear, O Lord, and glorify your name? For you alone are holy. All nations will come and worship you." Phil 2:10-11 — every knee bowing before Christ. The universal fear of God\'s name among the nations is the universal acknowledgment of Christ\'s lordship that the gospel is bringing about.</p>',
+    "16": '<p>A shadow: "For the LORD builds up Zion; he appears in his glory." Matt 16:18 — "I will build my church." Heb 12:22 — the heavenly Zion. Matt 25:31 — "when the Son of Man comes in his glory, and all the angels with him." The LORD who builds Zion and appears in glory is Christ who builds his church and will appear at the second coming. The building and the appearing belong together.</p>',
+    "17": '<p>A shadow: "he regards the prayer of the destitute and does not despise their prayer." Heb 4:15-16 — Christ "sympathizes with our weaknesses," so "let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need." He who prayed as the destitute one (v.1-11) is now the one who hears the destitute and does not despise their cry. The sufferer becomes the sympathetic high priest.</p>',
+    "18": '<p>A shadow: "Let this be recorded for a generation to come, so that a people yet to be created may praise the LORD." 1 Pet 2:9-10 — "you are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light. Once you were not a people, but now you are God\'s people." The "people yet to be created" are the born-again community of Christ — the new humanity that the gospel creates.</p>',
+    "19": '<p>A type: "that he looked down from his holy height; from heaven the LORD looked at the earth, to hear the groans of the prisoners." John 3:13 — "no one has ascended into heaven except he who descended from heaven, the Son of Man." John 3:16-17 — "God so loved the world, that he gave his only Son." The God who looks down from heaven and descends to hear the prisoners is the God who sends and is the Son, who descends to liberate those "doomed to die."</p>',
+    "20": '<p>A type: "to set free those who were doomed to die." Luke 4:18 — "he has sent me to proclaim liberty to the captives." Heb 2:14-15 — Christ through death destroyed "the one who has the power of death... and delivered all those who through fear of death were subject to lifelong slavery." Those "doomed to die" are liberated through Christ\'s own death — the substitution that sets the condemned free.</p>',
+    "21": '<p>A shadow: "that they may declare in Zion the name of the LORD, and in Jerusalem his praise." Acts 2 — Pentecost: people from every nation declaring the mighty works of God in Zion/Jerusalem (Acts 2:5-11). Phil 2:10-11 — every tongue confessing the name of Jesus. The declaration of God\'s name in Zion is fulfilled at Pentecost and completed at the final gathering (Rev 7:9-10).</p>',
+    "22": '<p>A shadow: "when peoples gather together, and kingdoms, to worship the LORD." Rev 7:9-10 — "a great multitude that no one could number, from every nation, from all tribes and peoples and languages, standing before the throne and before the Lamb, crying out with a loud voice." The universal gathering of peoples and kingdoms to worship is the eschatological assembly before the throne of God and the Lamb.</p>',
+    "23": '<p>A type: "He has broken my strength in the way; he has shortened my days." Christ was crucified in his early thirties. Isa 53:8 — "by oppression and judgment he was taken away... he was cut off out of the land of the living." The one "broken in the way" and whose days were shortened is the one whose death at the height of his ministry was the hinge of all history — his cutting off is the ground of his people\'s life (Isa 53:8-10).</p>',
+    "24": '<p>A type: "O my God, do not take me away in the midst of my days!" The prayer not to die prematurely — the prayer that Christ prayed in its own form in Gethsemane (Luke 22:42 — "Father, if you are willing, remove this cup from me"). He died in the midst of his days — and yet "it was not possible for him to be held by death" (Acts 2:24). He died in the midst of his days but lives for all days.</p>',
+    "25": '<p>A direct: <strong>"Of old you laid the foundation of the earth, and the heavens are the work of your hands."</strong> Heb 1:10 quotes this verse and applies it directly to Christ: "And, \'You, Lord, laid the foundation of the earth in the beginning, and the heavens are the work of your hands.\'" John 1:3 — "all things were made through him." Col 1:16 — "all things were created through him and for him." The Creator addressed in Ps 102:25 is the Christ addressed in Heb 1:10.</p>',
+    "26": '<p>A direct: <strong>"They will perish, but you will remain; they will all wear out like a garment. You will change them like a robe, and they will pass away."</strong> Heb 1:11-12 continues the direct quotation and applies it to Christ — the eternal one before whom created things pass away. 2 Pet 3:10-13 — "the heavens will pass away with a roar and the heavenly bodies will be burned up and dissolved." The perishable creation stands over against the imperishable Christ.</p>',
+    "27": '<p>A direct: <strong>"but you are the same, and your years have no end."</strong> Heb 1:12b — "but you are the same, and your years will have no end." Heb 13:8 — "Jesus Christ is the same yesterday and today and forever." The eternal sameness of the one addressed in Ps 102:27 is the eternal sameness of Jesus Christ, as Hebrews explicitly declares. This is the clearest identification in Hebrews of the God of the Psalms as Jesus Christ.</p>',
+    "28": '<p>A shadow: "The children of your servants shall dwell secure; their offspring shall be established before you." John 10:28-29 — "I give them eternal life, and they shall never perish; no one will snatch them out of my hand." 1 Pet 1:5 — "who by God\'s power are being guarded through faith." Rev 22:3-4 — "the throne of God and of the Lamb will be in it, and his servants will worship him. They will see his face, and his name will be on their foreheads." The offspring established before God are the redeemed before the throne of Christ.</p>',
   },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
 }
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    existing = load_comm('mkt-christ', 'psalms')
+    merge_comm(existing, PSALMS)
+    save_comm('mkt-christ', 'psalms', existing)
+    # INTENT: Verify coverage for Psalms 96-102 against interlinear verse inventory
+    # CHANGE? If interlinear/psalms.json verse counts change, recount expected totals here
+    # VERIFY: Console shows wrote data/commentary/mkt-christ/psalms.json; no missing verses
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'psalms.json').read_text())
+    out = json.loads((ROOT / 'data' / 'commentary' / 'mkt-christ' / 'psalms.json').read_text())
+    missing = []
+    for ch in range(96, 103):
+        ck = str(ch)
+        for v in il.get(ck, {}):
+            if v not in out.get(ck, {}):
+                missing.append(f'{ch}:{v}')
+    if missing:
+        print(f'  MISSING: {missing}')
+    else:
+        print(f'  OK: all Psalms 96-102 mkt-christ verses present ({sum(len(il.get(str(c),{})) for c in range(96,103))} verses)')
 
 if __name__ == '__main__':
     main()

@@ -54,6 +54,30 @@ def merge_comm(existing, new_data):
 # ============================================================
 
 DEUT_ECHO = {
+  "11": {
+    "1": [
+      { "type": "allusion", "target": "John 14:15", "note": "Deuteronomy's foundational equation of covenant love with commandment-keeping anticipates Jesus's identical formula: loving him means keeping his commandments." }
+    ],
+    "26": [
+      { "type": "type", "target": "Gal 3:10-13", "note": "The blessing-and-curse binary set before Israel at Gerizim and Ebal is the typological framework Paul uses to explain Christ becoming accursed so that believers are transferred to the blessing side of the covenant." }
+    ]
+  },
+  "12": {
+    "5": [
+      { "type": "type", "target": "John 2:19-21", "note": "The place YHWH chooses to make his name dwell is the type of Christ as the true temple; Jesus identifies his own body as the singular dwelling of the divine Name where true sacrifice is offered." }
+    ],
+    "11": [
+      { "type": "fulfillment", "target": "John 4:21-23", "note": "The centralized-worship-at-one-chosen-place principle reaches its fulfillment and transcendence when Jesus declares that true worship is now in spirit and truth, no longer tied to any geographic sanctuary." }
+    ]
+  },
+  "13": {
+    "1": [
+      { "type": "type", "target": "Matt 24:24", "note": "The Mosaic false-prophet test — signs and wonders used to lead Israel after other gods — is the OT template for Jesus's end-time warning that false christs will perform great signs in order to lead even the elect astray." }
+    ],
+    "5": [
+      { "type": "quote", "target": "1 Cor 5:13", "note": "Paul quotes the Deuteronomic purge-the-evil-from-among-you formula directly to instruct the Corinthian church on excommunicating the impenitent, grounding new-covenant church discipline in Mosaic covenant law." }
+    ]
+  },
   "6": {
     "4": [
       {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},

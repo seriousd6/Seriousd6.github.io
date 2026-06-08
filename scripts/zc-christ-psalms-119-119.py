@@ -1,51 +1,17 @@
-"""
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
-
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
-"""
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -55,112 +21,217 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
-  },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
-  "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
-  }
-}
+# Psalm 119 — the great Torah psalm. Every verse meditates on God's word (torah/dabar/huqqim).
+# Christological lens: Christ IS the living Word (John 1:1,14); he kept Torah perfectly (Matt 5:17;
+# Heb 4:15); now through Spirit he writes Torah on hearts (Jer 31:33; Heb 8:10).
+PSALMS = {"119": {
+# ── ALEPH (vv 1-8) ──────────────────────────────────────────────────────────────
+"1": "<p>Blessed are those whose way is <em>blameless</em>, who walk in the Torah of the LORD. Christ alone walked this blameless way perfectly (Heb 4:15); his righteousness is credited to all who are in him (2 Cor 5:21), so that they may walk in him as the true Torah (John 1:14).</p>",
+"2": "<p>Blessed are those who keep his testimonies and seek him with their whole heart. Jesus sought the Father with undivided heart throughout his earthly life (John 4:34; 17:4); in union with Christ, the believer's half-hearted seeking is met by his whole-hearted obedience (Heb 10:10).</p>",
+"3": "<p>They do no wrong but walk in his ways. Only Christ fulfilled this perfectly (1 Pet 2:22); his sinless walk becomes the pattern for the new creation life (Eph 2:10; 1 John 2:6).</p>",
+"4": "<p>You have commanded your precepts to be kept diligently. Jesus affirmed that not one iota of the law passes away until all is accomplished (Matt 5:18), and he accomplished all its demands in his life and death (Matt 5:17; Rom 10:4).</p>",
+"5": "<p>Oh that my ways may be steadfast in keeping your statutes! The psalmist's longing is answered in Christ, who was steadfast in every trial (Heb 12:2), and in the Spirit, who enables steadfastness in believers (Phil 2:13; 1 Pet 1:5).</p>",
+"6": "<p>Then I shall not be put to shame when I look on all your commandments. Christ endured the cross, despising its shame (Heb 12:2), and raises his people to share in his honor before the Father (Rom 8:30; 1 John 2:28).</p>",
+"7": "<p>I will praise you with an upright heart when I learn your righteous rules. Jesus is the one who has learned and lived every righteous rule (John 8:29); his resurrection life is a perpetual praise before the Father, into which believers are drawn (Heb 13:15; Rev 5:9-10).</p>",
+"8": "<p>I will keep your statutes — do not utterly forsake me! The cry not to be forsaken finds its deepest utterance in Christ's dereliction on the cross (Matt 27:46); his cry is answered by resurrection, guaranteeing that the Father will never ultimately forsake those who are in him (Heb 13:5).</p>",
+# ── BETH (vv 9-16) ───────────────────────────────────────────────────────────────
+"9": "<p>How can a young man keep his way pure? By guarding it according to your word. Christ is the answer to this question: only through the Word made flesh (John 1:14) and the sanctifying work of truth (John 17:17) can any life be truly purified.</p>",
+"10": "<p>With my whole heart I have sought you; let me not wander from your commandments. Jesus sought the Father completely throughout his earthly ministry (John 5:30; 6:38); his perfect seeking provides the ground on which wandering believers can return (Luke 15:4-7).</p>",
+"11": "<p><em>I have stored up your word in my heart, that I might not sin against you.</em> Psalm 40:8 echoes this: “your law is within my heart” — cited in Heb 10:7 as the voice of Christ entering the world. Jesus uniquely embodied Word stored in heart, fulfilling the new-covenant promise of Torah written inwardly (Jer 31:33).</p>",
+"12": "<p>Blessed are you, O LORD; teach me your statutes. Christ is both the Teacher (Matt 23:10; John 13:13) and the teaching itself (John 14:6); in him the disciples received truth not as external statute but as the indwelling Word (John 15:7).</p>",
+"13": "<p>With my lips I declare all the rules of your mouth. Jesus declared the Father's word perfectly (John 12:49-50; 17:8); his disciples are sent out to declare what they have heard from him (Matt 10:27; Acts 4:20).</p>",
+"14": "<p>In the way of your testimonies I delight as much as in all riches. Christ embodied delight in the Father's will above all earthly treasure (Matt 4:4; John 4:34); he calls his followers to seek first the kingdom rather than wealth (Matt 6:33; Luke 12:21).</p>",
+"15": "<p>I will meditate on your precepts and fix my eyes on your ways. Jesus modeled constant communion with the Father (Mark 1:35; Luke 5:16); looking to him is the Christian's mode of spiritual formation (Heb 12:2; 2 Cor 3:18).</p>",
+"16": "<p>I will delight in your statutes; I will not forget your word. Christ's entire life was delight in the Father's statutes (John 8:29); the Holy Spirit, whom he sends, keeps believers from forgetting by bringing all things to remembrance (John 14:26).</p>",
+# ── GIMEL (vv 17-24) ─────────────────────────────────────────────────────────────
+"17": "<p>Deal bountifully with your servant, that I may live and keep your word. The bountiful dealing of God reached its apex in the gift of his Son (John 3:16; Rom 8:32); because Christ lived and kept the word perfectly, believers share in that life (John 10:10; 14:19).</p>",
+"18": "<p><em>Open my eyes, that I may behold wondrous things out of your law.</em> After the resurrection, Christ opened the disciples' minds to understand the scriptures (Luke 24:45); this same illumination continues through his Spirit (1 Cor 2:10-12; Eph 1:17-18).</p>",
+"19": "<p>I am a sojourner on the earth; hide not your commandments from me. Christ himself sojourned on earth as a pilgrim (John 1:14 — “tabernacled among us”), not of this world (John 17:14,16); his people share this alien identity (Heb 11:13-14; 1 Pet 2:11).</p>",
+"20": "<p>My soul is consumed with longing for your rules at all times. Jesus was consumed with zeal for the Father's house and word (John 2:17; Ps 69:9 cited there); his longing to do the Father's will was total (John 4:34).</p>",
+"21": "<p>You rebuke the insolent, accursed ones, who wander from your commandments. Christ's own ministry of rebuke was directed at those who nullified God's word with their traditions (Matt 15:3-9; Mark 7:13); on the last day he will execute that rebuke finally (Matt 25:41-46).</p>",
+"22": "<p>Take away from me scorn and contempt, for I have kept your testimonies. Christ bore the ultimate scorn and contempt — the cross (Heb 12:2; Ps 22:6-8); because he kept the Father's testimonies perfectly, he is now crowned with glory (Heb 2:9), and his people are promised honor in him (Rom 8:17).</p>",
+"23": "<p>Even though princes sit plotting against me, your servant will meditate on your statutes. Jesus faced the plotting of the Sanhedrin and Herod (Matt 26:3-4; Acts 4:27); he remained unmoved in obedience to the Father (Luke 22:42; John 10:18).</p>",
+"24": "<p>Your testimonies are my delight; they are my counselors. Christ is the Wonderful Counselor (Isa 9:6); through the Spirit of truth he counsels believers in all things (John 14:26; 16:13), making God's word their delight rather than burden (1 John 5:3).</p>",
+# ── DALETH (vv 25-32) ────────────────────────────────────────────────────────────
+"25": "<p>My soul clings to the dust; give me life according to your word. The soul clinging to dust is the human condition under death's dominion (Gen 3:19; Rom 5:12); Christ descended to the lowest humiliation (Phil 2:8 — “death on a cross”) and was raised by the Father's word of life (Acts 2:24; Rom 8:11).</p>",
+"26": "<p>When I told of my ways, you answered me; teach me your statutes. Jesus taught openly, saying only what the Father commanded (John 12:50); his complete transparency to the Father is the model for confessional prayer that receives divine instruction.</p>",
+"27": "<p>Make me understand the way of your precepts, and I will meditate on your wondrous works. Christ is the interpreter of the Father (John 1:18 — <em>exegēsato</em>); through his incarnation, teaching, and resurrection he makes the Father's wondrous works intelligible (Matt 11:25-27).</p>",
+"28": "<p>My soul melts away for sorrow; strengthen me according to your word. In Gethsemane Jesus said “my soul is overwhelmed with sorrow to the point of death” (Matt 26:38); the Father strengthened him (Luke 22:43) and the word fulfilled in resurrection became the ground of all Christian comfort (2 Cor 1:5).</p>",
+"29": "<p>Put false ways far from me and graciously teach me your law. Christ is the truth that exposes every false way (John 14:6; 8:32); his word purifies those who receive it (John 15:3; Eph 5:26).</p>",
+"30": "<p>I have chosen the way of faithfulness; I set your rules before me. Jesus chose the faithful way at every point — in the wilderness (Matt 4:1-11), in Gethsemane (Luke 22:42), and at Calvary (John 19:30); his faithful choice is credited to those who trust him (Heb 12:2; 2 Tim 2:13).</p>",
+"31": "<p>I cling to your testimonies, O LORD; let me not be put to shame. Christ clung to the Father's word through every trial and was vindicated by resurrection (Acts 2:24; 1 Tim 3:16); those who cling to him share in his vindication (Rom 10:11; 1 Pet 2:6).</p>",
+"32": "<p>I will run in the way of your commandments when you enlarge my heart. The law written externally constrains; the new-covenant Spirit enlarges the heart to run willingly (2 Cor 3:17; Ezek 36:27). Christ inaugurated this enlargement by sending the Spirit (John 7:38-39; Acts 2:4).</p>",
+# ── HE (vv 33-40) ────────────────────────────────────────────────────────────────
+"33": "<p>Teach me, O LORD, the way of your statutes, and I will keep it to the end. Jesus is the ultimate Teacher (Matt 23:10; John 13:13) who teaches the way to the very end — and promises to be with his followers to the end of the age (Matt 28:20).</p>",
+"34": "<p>Give me understanding, that I may keep your law and observe it with my whole heart. Christ is the one in whom are hidden all treasures of wisdom and knowledge (Col 2:3); through him the Spirit of understanding illumines believers (Eph 1:17; 1 Cor 2:16).</p>",
+"35": "<p>Lead me in the path of your commandments, for I delight in it. Jesus said “I am the way” (John 14:6) — he is the very path of the commandments embodied; walking in him is walking in the way of God (Col 2:6; 1 John 2:6).</p>",
+"36": "<p>Incline my heart to your testimonies, and not to selfish gain. Christ came not to be served but to serve (Matt 20:28); his self-giving love re-orients the heart away from covetousness toward generous obedience (2 Cor 8:9; Phil 2:5-8).</p>",
+"37": "<p>Turn my eyes from looking at worthless things; and give me life in your ways. Jesus declared “I am the light of the world” (John 8:12); fixing eyes on him turns them from worthless vanity to life-giving truth (Heb 12:2; 2 Cor 4:18).</p>",
+"38": "<p>Confirm to your servant your promise, that you may be feared. The promises of God find their Yes in Christ (2 Cor 1:20); his resurrection confirms every divine promise, producing reverent trust in those who receive it (Acts 13:32-33).</p>",
+"39": "<p>Turn away the reproach that I dread, for your rules are good. Christ took the ultimate reproach upon himself (Heb 13:13; Ps 69:9) so that his people need not bear condemnation (Rom 8:1); the rules are good because Christ is good (Mark 10:18; Matt 19:17).</p>",
+"40": "<p>Behold, I long for your precepts; in your righteousness give me life. Jesus was the one who longed for the Father's will more than anything (John 4:34); the righteousness of God that gives life is now disclosed in and through him (Rom 1:17; 3:21-22).</p>",
+# ── WAW (vv 41-48) ───────────────────────────────────────────────────────────────
+"41": "<p>Let your steadfast love come to me, O LORD, your salvation according to your promise. The steadfast love (<em>hesed</em>) of God came incarnate in Jesus Christ (John 1:14 — “full of grace and truth”); he is the salvation promised to the fathers (Luke 1:54-55,72-73; Acts 13:23).</p>",
+"42": "<p>Then shall I have an answer for him who taunts me, for I trust in your word. Christ answered every taunt — from Satan in the wilderness (Matt 4:4,7,10), from the scribes (Matt 22:46), and from the cross (Luke 23:34) — with the living word of God; his vindication answers every accusation against his people (Rom 8:33-34).</p>",
+"43": "<p>And take not the word of truth utterly from my mouth, for my hope is in your rules. Jesus is “the truth” (John 14:6) and “the word” (John 1:1); the Spirit of truth ensures that the word of truth is never taken from the mouth of the church (Matt 10:19-20; John 15:26).</p>",
+"44": "<p>I will keep your law continually, forever and ever. The keeping of the law forever is realized in Christ, whose perfect obedience is eternal in its efficacy (Heb 9:12; 10:14); the new creation community participates in this eternal keeping through him.</p>",
+"45": "<p>And I shall walk in a wide place, for I have sought your precepts. The wide place of freedom belongs to those whom the Son sets free (John 8:32,36); Christ's resurrection opened the wide place beyond the narrow gate of death (Matt 7:14; John 10:9).</p>",
+"46": "<p><em>I will also speak of your testimonies before kings and shall not be put to shame.</em> Jesus promised this to his disciples: “you will be brought before kings and governors... and I will give you words” (Luke 21:12-15); Paul stood before governors and Caesar (Acts 26; Phil 1:13), not ashamed (2 Tim 1:8).</p>",
+"47": "<p>For I find my delight in your commandments, which I love. Jesus proclaimed “I love the Father and I do exactly what the Father has commanded me” (John 14:31); in him Torah-keeping becomes love-keeping, from the inside out (John 15:10; 1 John 5:3).</p>",
+"48": "<p>I will lift up my hands toward your commandments, which I love, and I will meditate on your statutes. Christ lifted his hands in blessing at his ascension (Luke 24:50); the posture of hands lifted in worship and love is the eschatological posture of those whom he leads (Rev 5:11-14).</p>",
+# ── ZAYIN (vv 49-56) ─────────────────────────────────────────────────────────────
+"49": "<p>Remember your word to your servant, in which you have made me hope. The word God remembered supremely is the promise fulfilled in Christ's resurrection (Acts 2:30-31; 13:32-33); because God remembered his oath to David, Christ was raised from the dead (Heb 6:17-18).</p>",
+"50": "<p>This is my comfort in my affliction, that your promise gives me life. The risen Christ is the supreme comfort of the afflicted (2 Cor 1:5); he comforts with the comfort he himself received in resurrection, having been sustained by the Father's promise through the cross (Heb 12:2).</p>",
+"51": "<p>The insolent utterly deride me, but I do not turn away from your law. Jesus was derided on the cross (Luke 23:35-39; Ps 22:7-8); he did not turn aside from the Father's will but completed it (John 19:30). His steadfastness is the source of his people's (Heb 12:1-3).</p>",
+"52": "<p>When I think of your rules from of old, I take comfort, O LORD. Christ is the same yesterday, today, and forever (Heb 13:8); meditating on his eternal faithfulness — from creation through covenant history to resurrection — is the well of enduring comfort.</p>",
+"53": "<p>Hot indignation seizes me because of the wicked, who forsake your law. Jesus showed holy indignation at those who made the Father's house a den of thieves (John 2:17; Ps 69:9); his zeal for God's honor is the model for righteous anger against sin (Eph 4:26).</p>",
+"54": "<p>Your statutes have been my songs in the house of my sojourning. Christ sang a hymn on the night of his betrayal (Matt 26:30); the church joins his song in its pilgrim house, knowing that the dwelling prepared by him awaits (John 14:2-3; Heb 11:13-14).</p>",
+"55": "<p>I remember your name in the night, O LORD, and keep your law. Jesus spent nights in prayer to the Father (Luke 6:12; Mark 1:35); in Gethsemane, the darkest night of all, he kept the Father's will (Luke 22:39-46).</p>",
+"56": "<p>This blessing has fallen to me: that I have kept your precepts. The supreme inheritance that fell to Christ as the Son is that he kept the Father's precepts in full (Heb 1:2,4); through him the blessing of Abraham falls on all who are in him (Gal 3:14).</p>",
+# ── HETH (vv 57-64) ──────────────────────────────────────────────────────────────
+"57": "<p>The LORD is my portion; I promise to keep your words. Christ declared the Father to be his all (John 17:5); he is himself the inheritance portion of those who belong to him (Eph 1:18; Col 1:12), and the promise to keep God's words is fulfilled in him (2 Cor 1:20).</p>",
+"58": "<p>I entreat your favor with all my heart; be gracious to me according to your promise. Jesus interceded for his own with his whole being (John 17; Heb 7:25); he is the mediator through whom grace reaches those who entreat the Father (1 Tim 2:5; Heb 4:16).</p>",
+"59": "<p>When I think on my ways, I turn my feet to your testimonies. The prodigal “came to himself” and turned (Luke 15:17-20) — a picture of repentance enabled by the Father's waiting love. Christ calls all to repentance and return (Mark 1:15; Luke 13:3).</p>",
+"60": "<p>I hasten and do not delay to keep your commandments. Jesus said “my food is to do the will of him who sent me” (John 4:34) — his obedience was immediate, eager, not reluctant. The Spirit produces this same eager readiness in those who are renewed (Phil 2:13).</p>",
+"61": "<p>Though the cords of the wicked ensnare me, I do not forget your law. The cords of wickedness bound Jesus literally — in Gethsemane and at Pilate's hall (John 18:12,24); yet he did not forget or forsake the Father's mission (John 18:11; 19:30).</p>",
+"62": "<p>At midnight I rise to praise you, because of your righteous rules. Paul and Silas sang hymns at midnight in prison (Acts 16:25), continuing the pattern Christ established; the Easter vigil at midnight anticipates the resurrection dawn that vindicates every righteous rule.</p>",
+"63": "<p>I am a companion of all who fear you, of those who keep your precepts. Christ is not ashamed to call believers brothers (Heb 2:11); he gathered around himself a community of those who fear God and keep his word (John 17:6), the new family of the fear of the LORD.</p>",
+"64": "<p>The earth, O LORD, is full of your steadfast love; teach me your statutes. The earth filled with <em>hesed</em> reached its fullness in the incarnation: “we have seen his glory, full of grace and truth” (John 1:14); Christ the teacher gives the ultimate lesson in divine love (1 John 4:9-10).</p>",
+# ── TETH (vv 65-72) ──────────────────────────────────────────────────────────────
+"65": "<p>You have dealt well with your servant, O LORD, according to your word. The Father dealt supremely well with the Son in raising him from the dead (Acts 2:24); this good dealing overflows to all who are in Christ (Rom 8:28,32; Eph 1:3).</p>",
+"66": "<p>Teach me good judgment and knowledge, for I believe in your commandments. Christ is the wisdom of God (1 Cor 1:24,30); in him are hidden all treasures of wisdom and knowledge (Col 2:3). The judgment he teaches is not external rule but knowing the Father (John 17:3).</p>",
+"67": "<p>Before I was afflicted I went astray, but now I keep your word. Hebrews 5:8 captures the same pattern: “although he was a Son, he learned obedience through what he suffered.” Christ's affliction was not correction of sin but formation for the priestly role that saves those who strayed (1 Pet 2:25).</p>",
+"68": "<p>You are good and do good; teach me your statutes. Jesus is the one who declared “no one is good except God alone” (Mark 10:18) — then embodied that divine goodness in human form. His goodness teaches statutes not by command but by demonstration (Acts 10:38).</p>",
+"69": "<p>The insolent smear me with lies, but with my whole heart I keep your precepts. False witnesses were brought against Jesus at his trial (Matt 26:59-61); he kept the Father's precepts entirely, allowing the lies to accomplish the redemptive purpose (Isa 53:7; 1 Pet 2:23).</p>",
+"70": "<p>Their heart is unfeeling like fat, but I delight in your law. Christ marveled at hardened hearts (Mark 3:5); his own heart was always tender toward the Father's will and toward the suffering (Matt 9:36; 11:29), making him the true keeper of a law written in love.</p>",
+"71": "<p><em>It is good for me that I was afflicted, that I might learn your statutes.</em> Hebrews 5:8-9 applies this directly: through his sufferings Christ “learned obedience” and “became the source of eternal salvation.” His affliction was the curriculum that qualified him as the eternal high priest (Heb 2:10,17-18).</p>",
+"72": "<p>The law of your mouth is better to me than thousands of gold and silver. Christ left the riches of heaven to take on poverty (2 Cor 8:9; Phil 2:6-7), finding the Father's word more precious than all divine prerogatives; this is the mind that he gives to his people (Phil 4:11-13).</p>",
+# ── YODH (vv 73-80) ──────────────────────────────────────────────────────────────
+"73": "<p><em>Your hands have made and fashioned me; give me understanding to learn your commandments.</em> John 1:3 and Heb 1:2 identify Christ as the agent of all creation (“all things were made through him”); the one who fashioned humanity entered it (John 1:14) to restore the understanding that sin had darkened (Eph 4:18; Rom 12:2).</p>",
+"74": "<p>Those who fear you shall see me and rejoice, because I have hoped in your word. The women who came to the tomb feared, then rejoiced when they saw the risen Christ (Matt 28:8); the promise “those who fear you shall see me and rejoice” is fulfilled at Easter and in every encounter with the living Lord.</p>",
+"75": "<p>I know, O LORD, that your rules are righteous, and that in faithfulness you have afflicted me. The Father's afflicting of the Son was a righteous act of faithfulness to the covenant of redemption (Isa 53:10; Acts 2:23); the resurrection vindicates both the righteousness of the affliction and the faithfulness of God (Rom 3:25-26).</p>",
+"76": "<p>Let your steadfast love comfort me according to your promise to your servant. The Paraclete — the Comforter — is the Spirit of Christ sent to the afflicted disciples (John 14:16-18,26); all comfort flows from the <em>hesed</em> promise fulfilled in Christ's death and resurrection (2 Cor 1:3-5).</p>",
+"77": "<p>Let your mercy come to me, that I may live; for your law is my delight. The mercy of God came in person at the incarnation: “the mercy promised to our fathers” (Luke 1:54,72); Christ is both the delight of the Father's law and the source of mercy for those who delight in him (Titus 3:5; Eph 2:4-5).</p>",
+"78": "<p>Let the insolent be put to shame, because they have wronged me with falsehood; as for me, I will meditate on your precepts. At the resurrection, shame was reversed: those who condemned the righteous one stood condemned (Acts 2:36; Rev 20:11-15); the risen Christ meditates as the eternal priest who intercedes (Heb 7:25).</p>",
+"79": "<p>Let those who fear you turn to me, that they may know your testimonies. The risen Christ drew all who feared God to himself — the 120 in the upper room, the 3,000 at Pentecost (Acts 1:15; 2:41) — to hear the testimonies of his death and resurrection (Acts 2:22-36).</p>",
+"80": "<p>May my heart be blameless in your statutes, that I may not be put to shame. The blameless heart was Christ's alone among all humans (Heb 4:15; 1 Pet 1:19); through his blamelessness, those united to him are presented holy and blameless before the Father (Col 1:22; Eph 1:4).</p>",
+# ── CAPH (vv 81-88) ──────────────────────────────────────────────────────────────
+"81": "<p>My soul longs for your salvation; I hope in your word. Simeon longed for the consolation of Israel and saw it in the infant Jesus (Luke 2:25-32); Jesus himself is “the salvation of God” seen by all flesh (Luke 3:6; Isa 40:5). The longing of every soul is met in him.</p>",
+"82": "<p>My eyes long for your promise; I ask, When will you comfort me? The disciples in the upper room asked “how long?” (John 16:17-19); Jesus' answer was Easter morning, when every comfort promised was substantiated (John 20:20; 2 Cor 1:20).</p>",
+"83": "<p>For I have become like a wineskin in the smoke, yet I have not forgotten your statutes. The withered, smoke-darkened wineskin recalls Christ's disfigurement on the cross (Isa 52:14); yet in that extremity he remembered the Father's mission (“it is finished,” John 19:30) and did not forget the statutes he came to fulfill.</p>",
+"84": "<p>How long must your servant endure? When will you judge those who persecute me? The souls under the altar cry “how long?” (Rev 6:10); Christ is both the one who endured longest (Heb 12:3) and the judge who answers that cry at his coming (Rev 19:11).</p>",
+"85": "<p>The insolent have dug pitfalls for me; they do not live according to your law. The pit was dug for Christ (Ps 7:15; Acts 2:23-24); yet God did not abandon him to the pit — the resurrection lifted him from the grave they had dug (Ps 16:10; Acts 2:27,31).</p>",
+"86": "<p>All your commandments are sure; they persecute me with falsehood — help me! The sure commandments are embodied in the true and faithful witness (Rev 3:14; 19:11); persecuted by false witnesses (Matt 26:59-60), Christ cried to the Father (Matt 27:46) and received resurrection help (Acts 2:24).</p>",
+"87": "<p>They have almost made an end of me on earth, but I have not forsaken your precepts. Good Friday seemed to make an end of Jesus on earth; yet he had not forsaken the Father's precepts — “Father, into your hands I commit my spirit” (Luke 23:46) was his final act of obedience before resurrection vindication.</p>",
+"88": "<p>In your steadfast love give me life, that I may keep the testimonies of your mouth. Life from the dead is given by the Father's <em>hesed</em> in Christ's resurrection (Rom 6:4; Eph 2:4-5); the risen life enables keeping the testimonies — now written on the heart by the Spirit (Ezek 36:26-27; 2 Cor 3:3).</p>",
+# ── LAMED (vv 89-96) ─────────────────────────────────────────────────────────────
+"89": "<p><em>Forever, O LORD, your word is firmly fixed in the heavens.</em> John 1:1 opens with this eternal fixedness: “In the beginning was the Word.” Jesus declared “heaven and earth will pass away, but my words will not pass away” (Matt 24:35); his word is the unshakeable foundation of all things (Heb 1:3; Rev 19:13).</p>",
+"90": "<p>Your faithfulness endures to all generations; you have established the earth, and it stands fast. Christ is the same yesterday, today, and forever (Heb 13:8); by him the Father established the earth (Heb 1:2,10-12), and through his resurrection the new creation stands unshakeable (1 Cor 15:20; Rev 21:1).</p>",
+"91": "<p>By your appointment they stand this day, for all things are your servants. All things were created through Christ and for Christ (Col 1:16); the continuing order of creation is sustained by his word of power (Heb 1:3), every creature serving the purposes of the Creator-Redeemer.</p>",
+"92": "<p>If your law had not been my delight, I would have perished in my affliction. Christ's delight in the Father's word was what sustained him through the passion — he came to do what was written (Heb 10:7; Luke 22:37); without that inner delight in the Father's will, the cross would have been unendurable (Heb 12:2).</p>",
+"93": "<p>I will never forget your precepts, for by them you have given me life. The precepts given life are the promises kept in resurrection; Christ never forgot the Father's purpose even in death (John 10:17-18), and the risen life he now shares becomes the life of all who belong to him (John 14:19).</p>",
+"94": "<p>I am yours; save me, for I have sought your precepts. Jesus' entire identity was “I am the Father's” (John 10:30; 17:1); his saving mission was the precept he sought (John 4:34). Those who belong to him cry “I am yours” and find their salvation secure in him (Rom 8:38-39).</p>",
+"95": "<p>The wicked lie in wait to destroy me, but I consider your testimonies. As Jesus was being plotted against (Matt 26:3-4; John 11:53), he moved steadily in accordance with the divine script of the scriptures (Luke 24:44-46); the testimonies ordered his path through the ambush of the cross to resurrection.</p>",
+"96": "<p>I have seen a limit to all perfection, but your commandment is exceedingly broad. All human perfection has limits; Christ alone exceeded every limit — sinless (Heb 4:15), risen, ascended, interceding without end (Heb 7:25). His commandment of love is broader than all law (Matt 22:37-40; John 15:12).</p>",
+# ── MEM (vv 97-104) ──────────────────────────────────────────────────────────────
+"97": "<p>Oh how I love your law! It is my meditation all the day. Jesus' all-day meditation was the Father's will (John 4:34; 5:19); he embodies the law-lover of Psalm 1:2, delighting in the Torah that he himself fulfills (Matt 5:17; John 15:10).</p>",
+"98": "<p>Your commandment makes me wiser than my enemies, for it is ever with me. Christ confounded his opponents with wisdom beyond their learning (Matt 22:46; Luke 2:47); the wisdom from above was ever with him (1 Cor 1:30; Col 2:3) and is given to those who ask in his name (James 1:5).</p>",
+"99": "<p>I have more understanding than all my teachers, for your testimonies are my meditation. Jesus as a boy showed understanding surpassing his teachers (Luke 2:47); as the Son he received direct instruction from the Father (John 8:28; 12:49) and surpassed all human wisdom (Matt 13:54; 1 Cor 1:24).</p>",
+"100": "<p>I understand more than the aged, for I keep your precepts. The Ancient of Days gave to Christ the eternal dominion (Dan 7:13-14); though young in human years, Jesus astonished elders (Luke 2:46-47) with the wisdom of one who had been with the Father from eternity (John 17:5).</p>",
+"101": "<p>I hold back my feet from every evil way, in order to keep your word. Jesus refused every evil path — the temptations of Satan (Matt 4:1-11), the pressure to avoid the cross (Matt 16:23), the crowd's desire to make him king on their terms (John 6:15); he kept the Father's word precisely by refusing every shortcut.</p>",
+"102": "<p>I do not turn aside from your rules, for you have taught me. The Father taught the Son (John 8:28; 5:19-20); Jesus did nothing of his own initiative but only what he saw the Father doing. This divine teaching shaped his entire mission and is now transmitted to his people through the Spirit (John 14:26; 1 John 2:27).</p>",
+"103": "<p><em>How sweet are your words to my taste, sweeter than honey to my mouth!</em> Christ is the bread of life (John 6:35), the living word sweeter than honey (cf. Ezek 3:3; Rev 10:9-10); those who eat his flesh and drink his blood — eucharistic union — find divine sweetness (John 6:51-55; Ps 34:8).</p>",
+"104": "<p>Through your precepts I get understanding; therefore I hate every false way. Christ is truth (John 14:6); every false way is exposed and condemned by his light (John 3:19-20; 8:12). Through his precepts believers gain the discernment to love truth and hate falsehood (1 Thess 5:21-22).</p>",
+# ── NUN (vv 105-112) ─────────────────────────────────────────────────────────────
+"105": "<p><em>Your word is a lamp to my feet and a light to my path.</em> Jesus declared “I am the light of the world; whoever follows me will not walk in darkness but will have the light of life” (John 8:12); the word-as-lamp is embodied in Christ the living Word who illuminates every step (John 1:4-9; Ps 36:9).</p>",
+"106": "<p>I have sworn an oath and confirmed it, to keep your righteous rules. Christ confirmed his oath of obedience at Gethsemane — “not my will, but yours” (Luke 22:42) — and in Heb 6:13-17 God swears by himself, guaranteeing the promise in Christ's resurrection. The oath is sworn and kept.</p>",
+"107": "<p>I am severely afflicted; give me life, O LORD, according to your word. The height of affliction — the cross — is where the word of life was planted in the tomb; according to the Father's word, life came from the greatest affliction (Heb 2:9-10; 1 Pet 3:18).</p>",
+"108": "<p>Accept my freewill offerings of praise, O LORD, and teach me your rules. The supreme freewill offering is Christ himself, who offered his life willingly (John 10:17-18; Eph 5:2 — “a fragrant offering and sacrifice to God”). The Father accepted this offering in resurrection and now teaches its meaning through the Spirit.</p>",
+"109": "<p>I hold my life in my hand continually, but I do not forget your law. Christ held his life in his own hand — “no one takes it from me; I lay it down of my own accord” (John 10:18); in that constant willingness to give, he never forgot the law of love that commanded the gift (John 15:13).</p>",
+"110": "<p>The wicked have laid a snare for me, but I do not stray from your precepts. The Sanhedrin and Judas laid multiple snares for Jesus (Matt 22:15; 26:14-16; John 11:53); he walked through each one according to the Father's predetermined plan (Acts 2:23; 4:28), not straying from his mission.</p>",
+"111": "<p>Your testimonies are my heritage forever, for they are the joy of my heart. The Father appointed Christ heir of all things (Heb 1:2); the inheritance of the testimonies — all of Scripture — belongs to Christ, who opens their meaning (Luke 24:44-46) and shares the inheritance with his co-heirs (Rom 8:17; Eph 1:11).</p>",
+"112": "<p>I incline my heart to perform your statutes forever, to the end. Christ's inclination to do the Father's will was total and permanent — he is the same forever (Heb 13:8), performing the Father's purposes to the end and beyond (1 Cor 15:25-28). This forever-inclination is what he works in his people (Phil 1:6; 2:13).</p>",
+# ── SAMEK (vv 113-120) ───────────────────────────────────────────────────────────
+"113": "<p>I hate the double-minded but I love your law. Christ's love was undivided (John 14:31; 17:4); he called for single-eyed devotion (Matt 6:22-24) and exposed double-minded hypocrisy (Matt 23:27-28). Loving the law while hating double-mindedness is the integrated wholeness Christ embodies.</p>",
+"114": "<p>You are my hiding place and my shield; I hope in your word. The Father hid Christ in the tomb, then unveiled him in glory (Col 3:3-4); Christ himself is now the hiding place of his people (Ps 32:7; Col 3:3) and their shield of faith (Eph 6:16).</p>",
+"115": "<p>Depart from me, you evildoers, that I may keep the commandments of my God. Jesus spoke these words — “depart from me” — at the final judgment (Matt 7:23; 25:41); the separation of evildoers from the holy presence is his act as the judge, defending the integrity of the Father's commandments.</p>",
+"116": "<p>Uphold me according to your promise, that I may live, and let me not be put to shame in my hope. God upheld Christ in resurrection (Acts 2:24; Ps 16:10) — the promise literally kept; those who hope in him are not put to shame (Rom 5:5; 10:11; 1 Pet 2:6).</p>",
+"117": "<p>Hold me up, that I may be safe and have regard for your statutes continually. The Father held the Son safe through every assault — in the wilderness, through Gethsemane, through the cross — and raised him in safety. Christ now holds his people safe so that they may walk in his statutes (John 10:28-29).</p>",
+"118": "<p>You spurn all who go astray from your statutes, for their cunning is in vain. The cunning of Pilate, Herod, the Sanhedrin, and death itself was ultimately in vain (Acts 4:25-28; 1 Cor 2:8; Rev 20:14); the Father spurned the scheming and raised the one they had condemned (Acts 4:10-11).</p>",
+"119": "<p>All the wicked of the earth you discard like dross; therefore I love your testimonies. The dross is separated in the fire of judgment; Christ is the refiner (Mal 3:2-3; Matt 3:12) who purifies his people and casts away the dross. The purity of the testimonies — embodied in him — is what makes them lovable.</p>",
+"120": "<p>My flesh trembles for fear of you, and I am afraid of your judgments. The disciples fell on their faces in fear at the Transfiguration (Matt 17:6); before the holiness of God, the appropriate response is trembling awe. Christ teaches the fear of the Lord (Prov 9:10; Luke 12:5) while standing as the one who bore judgment for his people.</p>",
+# ── AYIN (vv 121-128) ────────────────────────────────────────────────────────────
+"121": "<p>I have done what is just and right; do not leave me to my oppressors. Christ did only what was just and right (Acts 3:14 — “the Holy and Righteous One”); the Father did not leave him to his oppressors ultimately — resurrection was the vindication of the righteous one who had been delivered to sinners (Luke 24:7).</p>",
+"122": "<p>Give your servant a pledge of good; let not the insolent oppress me. The pledge of good given by the Father is the Spirit as deposit and guarantee (2 Cor 1:22; 5:5; Eph 1:14); through Christ the Spirit is the down payment that confirms the inheritance against all oppression.</p>",
+"123": "<p>My eyes long for your salvation and for the fulfillment of your righteous promise. Simeon's eyes saw the fulfillment (Luke 2:30) — “my eyes have seen your salvation.” The righteous promise fulfilled in Christ is what every believing eye now looks toward in hope (Titus 2:13; Heb 9:28).</p>",
+"124": "<p>Deal with your servant according to your steadfast love, and teach me your statutes. God's <em>hesed</em>-dealing reached its climax in giving his Son (John 3:16; 1 John 4:9); the Son is the ultimate Teacher of statutes (Matt 23:10; John 13:13), instruction in love rather than mere rule.</p>",
+"125": "<p>I am your servant; give me understanding, that I may know your testimonies. Jesus called himself the servant (Mark 10:45; Luke 22:27; Phil 2:7); as the Servant of the LORD (Isa 42:1; 49:3) he understood the testimonies perfectly and now gives understanding to his servants through his Spirit (1 Cor 2:12; 1 John 2:27).</p>",
+"126": "<p>It is time for the LORD to act, for your law has been broken. The fullness of time — when law-breaking had reached its zenith — was when God sent his Son (Gal 4:4-5; Rom 5:6); the kairos moment of divine action was the cross and resurrection that addressed law-breaking with law-fulfilling redemption.</p>",
+"127": "<p>Therefore I love your commandments above gold, above fine gold. Christ loved the Father's commandments above the treasures of heaven (2 Cor 8:9; Phil 2:6-8), giving up divine prerogatives to obey; this love of commandments above gold is the mind he imparts (Phil 2:5; 4:11-13).</p>",
+"128": "<p>Therefore I consider all your precepts to be right; I hate every false way. Jesus declared every scripture to be authoritative (Matt 5:18; John 10:35); he hated the false ways of hypocrites and false prophets (Matt 23; Rev 2:6,15). His judgment of every false way is the standard for the discernment of his people (1 John 4:1).</p>",
+# ── PE (vv 129-136) ──────────────────────────────────────────────────────────────
+"129": "<p>Your testimonies are wonderful; therefore my soul keeps them. Jesus himself said the scriptures testify to him (John 5:39); their wonder is that they all converge on the one who is wonderful (Isa 9:6). Those who encounter the wonderful Christ keep his testimonies out of love (John 14:15).</p>",
+"130": "<p><em>The unfolding of your words gives light; it imparts understanding to the simple.</em> On the Emmaus road Christ unfolded the scriptures, giving light to those whose eyes had been darkened by grief (Luke 24:27,32,45); the burning-heart experience is the paradigm for how his word illuminates the simple (Acts 16:14; 1 Cor 2:6-10).</p>",
+"131": "<p>I open my mouth and pant, for I long for your commandments. The longing for God's commandments finds its analog in Christ's “thirst” on the cross (John 19:28) — a thirst that had driven his entire mission; and in the beatitude “blessed are those who hunger and thirst for righteousness” (Matt 5:6).</p>",
+"132": "<p>Turn to me and be gracious to me, as is your way with those who love your name. The Father turned toward the Son in resurrection — the supreme act of grace toward the one who loved his name above all; this grace defines the pattern by which God turns to all who love the name of Jesus (Acts 4:12; Phil 2:9-11).</p>",
+"133": "<p>Keep steady my steps according to your promise, and let no iniquity get dominion over me. Christ's steps were kept perfectly steady — no iniquity ever gained dominion (Heb 4:15; 1 Pet 2:22); through him, the dominion of sin over believers is broken (Rom 6:14; Gal 5:16).</p>",
+"134": "<p>Redeem me from human oppression, that I may keep your precepts. The Father redeemed Christ from the oppression of death itself (Acts 2:24; Heb 2:14-15); this redemption is the basis of all Christian freedom from human and spiritual oppression (Gal 5:1; 1 Cor 7:23).</p>",
+"135": "<p>Make your face shine upon your servant and teach me your statutes. The priestly blessing (Num 6:25) finds its fulfillment in the face of Christ: “the light of the knowledge of the glory of God in the face of Jesus Christ” (2 Cor 4:6). The shining face that teaches is the face seen on the mount of transfiguration (Matt 17:2).</p>",
+"136": "<p>My eyes shed streams of tears, because people do not keep your law. Jesus wept over Jerusalem for the same reason (Luke 19:41-44); he mourned law-breaking not with cold judgment but with compassionate grief. The prophet-king's tears are the measure of the cost of sin (Isa 53:3-4; John 11:35).</p>",
+# ── TSADHE (vv 137-144) ──────────────────────────────────────────────────────────
+"137": "<p>Righteous are you, O LORD, and right are your rules. Christ is “Jesus Christ the righteous” (1 John 2:1) — the one who embodies divine righteousness in human form. His life and death vindicate the righteousness of God's rules (Rom 3:25-26), showing that God is both just and the justifier.</p>",
+"138": "<p>You have appointed your testimonies in righteousness and in all faithfulness. The appointed testimonies — all of Scripture — are fulfilled in Christ (Luke 24:44); their appointment in faithfulness is demonstrated by the precision with which they were kept in his life, death, and resurrection (Matt 26:54,56).</p>",
+"139": "<p>My zeal consumes me, because my foes forget your words. The zeal that consumed Jesus was zeal for the Father's house (John 2:17 = Ps 69:9); this consuming zeal is what drove him to cleanse the temple and ultimately to the cross, where the forgetting of God's word by his people was addressed.</p>",
+"140": "<p>Your promise is well tried, and your servant loves it. Christ is the promise well tried — tested in every way yet without sin (Heb 4:15), tested by suffering and found faithful (Heb 5:7-9); those who love the tried and tested promise find it is indeed Christ himself (2 Cor 1:20).</p>",
+"141": "<p>I am small and despised, yet I do not forget your precepts. Christ was despised and rejected (Isa 53:3; John 1:11); yet even from that position of smallness and contempt — “a worm and not a man” (Ps 22:6) — he did not forget the Father's precepts. His resurrection reversed the despising (Phil 2:9-11).</p>",
+"142": "<p><em>Your righteousness is righteous forever, and your law is truth.</em> Jesus declared “your word is truth” (John 17:17) and “I am the truth” (John 14:6); these two identifications converge: Christ is the living embodiment of the Torah that is truth. His righteousness is the eternal righteousness credited to those who trust him (Rom 10:4).</p>",
+"143": "<p>Trouble and anguish have found me out, but your commandments are my delight. The anguish that found Christ out was Gethsemane (Luke 22:44; Heb 5:7); even there, the commandment — “not my will but yours” — was his delight (John 4:34). The cross was not duty grudgingly performed but love willingly given (John 15:13).</p>",
+"144": "<p>Your testimonies are righteous forever; give me understanding that I may live. The forever-righteous testimonies converge on the one who lives forever — the risen Christ; the understanding that leads to life is the recognition that the testimonies testify to him (John 5:39-40; Luke 24:27,45).</p>",
+# ── QOPH (vv 145-152) ────────────────────────────────────────────────────────────
+"145": "<p>With my whole heart I cry; answer me, O LORD! I will keep your statutes. Jesus cried with a loud voice (Matt 27:50; Heb 5:7) — the whole-heart cry from the cross; the Father answered with resurrection. The pattern: whole-heart cry + commitment to statutes = divine answer (John 11:41-42).</p>",
+"146": "<p>I cry to you; save me, that I may observe your testimonies. “Save me” is the last-resort prayer answered in resurrection; Christ was “saved from death” (Heb 5:7 — σῴζειν ἐκ θανάτου) and raised to observe the eternal testimonies as the eternal priest (Heb 7:25).</p>",
+"147": "<p>I rise before dawn and cry for help; I hope in your words. Jesus rose before dawn to pray (Mark 1:35); the greatest rising before dawn was the resurrection itself, the first day of the week when God answered all the nighttime cries with morning light (Luke 24:1; John 20:1; Mal 4:2).</p>",
+"148": "<p>My eyes are awake before the watches of the night, that I may meditate on your promise. The nightlong prayer in Gethsemane (Matt 26:36-46) was vigil meditation on the promise that the cup would accomplish redemption; Jesus' sleepless watchfulness is the pastoral vigilance he now exercises as the one who neither slumbers nor sleeps (Ps 121:4).</p>",
+"149": "<p>Hear my voice according to your steadfast love; O LORD, according to your justice give me life. The Father heard the Son's voice according to steadfast love — the resurrection is the supreme act of divine <em>hesed</em> toward the obedient Son (Heb 5:7; Acts 2:24); this hearing extends to all who cry through Christ (John 11:41-42; Heb 4:16).</p>",
+"150": "<p>They draw near who persecute me with evil purpose; they are far from your law. Those who persecuted Christ drew near at Gethsemane (“the hour has come... rise, let us go” — Matt 26:45-47); they were far from the law even as they invoked it (John 19:7). Their nearness to him in arrest became the means of redemption for those far off (Eph 2:13,17).</p>",
+"151": "<p><em>But you are near, O LORD, and all your commandments are truth.</em> “And surely I am with you always, to the very end of the age” (Matt 28:20); the nearness of God promised here is the nearness of the risen Christ through the Spirit (John 14:18,23). All commandments as truth is fulfilled: he is the truth (John 14:6).</p>",
+"152": "<p>Long have I known from your testimonies that you have founded them forever. The eternal foundation of the testimonies is the eternal Son (John 1:1; 8:58; Rev 1:8); he is “the same yesterday and today and forever” (Heb 13:8), the rock on which the testimonies — and the church — are founded (Matt 16:18; 1 Cor 3:11).</p>",
+# ── RESH (vv 153-160) ────────────────────────────────────────────────────────────
+"153": "<p>Look on my affliction and deliver me, for I do not forget your law. The Father looked on the ultimate affliction — the cross — and delivered through resurrection (Acts 2:24; Ps 22:24); Christ's not-forgetting of the law in his deepest affliction is the pattern for those who are in him (Heb 12:1-3).</p>",
+"154": "<p>Plead my cause and redeem me; give me life according to your promise! Christ is the advocate who pleads the cause of his people before the Father (1 John 2:1; Heb 7:25); he redeemed by his blood (1 Pet 1:18-19) and gives life according to the promise of resurrection (John 14:19; 1 Cor 15:20-23).</p>",
+"155": "<p>Salvation is far from the wicked, for they do not seek your statutes. The wicked who condemned Jesus sought their own statutes, not God's (John 11:47-53; Acts 4:25-27); salvation was near to those who saw in the condemned one the Savior (Luke 23:40-43), for he is near to all who call (Rom 10:13).</p>",
+"156": "<p>Great is your mercy, O LORD; give me life according to your rules. The great mercy is God's in sending Christ (Titus 3:5; Eph 2:4); the life given according to the rules is resurrection life — the ultimate rule kept by Christ, the ultimate life given through him (John 10:10; 11:25).</p>",
+"157": "<p>Many are my persecutors and my adversaries, but I do not swerve from your testimonies. Christ had many persecutors — the Sanhedrin, Pilate, Herod, the crowds; yet he did not swerve: “I always do what pleases him” (John 8:29). His unswerving course through persecution is the path he maps for his followers (John 15:20; 2 Tim 3:12).</p>",
+"158": "<p>I look at the faithless with disgust, because they do not keep your commands. Jesus looked with grief and anger at those who hardened their hearts (Mark 3:5); his disgust at faithlessness is a reflex of his love for the Father's commands. The one who is faithful even when others are faithless (2 Tim 2:13).</p>",
+"159": "<p>Consider how I love your precepts! Give me life according to your steadfast love. The love of precepts reaches its summit in Christ: “I love the Father and I do exactly what the Father has commanded” (John 14:31); the life given according to <em>hesed</em> is the resurrection — the Father's steadfast love vindicating the Son's love of the precepts.</p>",
+"160": "<p><em>The sum of your word is truth, and every one of your righteous rules endures forever.</em> “Your word is truth” (John 17:17) and “I am the truth” (John 14:6) — these two identifications show that Christ is the sum of all God's truth. The eternal endurance of righteous rules is guaranteed by the one who rose to fulfill them forever (Rom 10:4; Matt 5:17).</p>",
+# ── SHIN (vv 161-168) ────────────────────────────────────────────────────────────
+"161": "<p>Princes persecute me without cause, but my heart stands in awe of your words. Christ was persecuted without cause — Pilate declared him innocent three times (Luke 23:4,14,22); yet his heart stood in awe of the Father's word enough to lay down his life in fulfillment of it (John 10:18; Heb 10:7).</p>",
+"162": "<p>I rejoice at your word like one who finds great spoil. The joy of finding the word is a parable of the kingdom: the treasure hidden in a field (Matt 13:44), the joy that cost everything to obtain. Christ is both the joy and the one who “for the joy set before him endured the cross” (Heb 12:2).</p>",
+"163": "<p>I hate and abhor falsehood, but I love your law. “The devil is the father of lies” (John 8:44); Christ is truth (John 14:6). His hatred of falsehood and love of law are the poles of his identity, and his people are conformed to the same polarity by his Spirit (Eph 4:25; 1 Pet 1:22).</p>",
+"164": "<p>Seven times a day I praise you for your righteous rules. Sevenfold praise — the number of completeness — is the praise of the heavenly worship (Rev 5:12; 7:12); Christ leads the eternal song of praise for the Father's righteous ways (Rev 15:3-4; Heb 2:12), and his church joins that unceasing worship.</p>",
+"165": "<p><em>Great peace have those who love your law; nothing can make them stumble.</em> “Peace I leave with you; my peace I give to you” (John 14:27); “I have told you these things so that in me you may have peace” (John 16:33). The great peace belongs to those who love the law-keeper, Christ himself; stumbling is prevented by the one who keeps them (Jude 24).</p>",
+"166": "<p>I hope for your salvation, O LORD, and I do your commandments. The salvation hoped for is Jesus, whose name means “the LORD saves” (Matt 1:21; Luke 2:30); doing the commandments is the outflow of belonging to him (John 15:10; 1 John 5:3), not the ground but the fruit.</p>",
+"167": "<p>My soul keeps your testimonies; I love them exceedingly. The testimonies are kept in the heart of the one who loves — and love is the fulfilling of the law (Rom 13:10). Christ's love exceeded all measure (John 13:1; 15:13); his love in the heart of believers becomes the exceeding love that keeps the testimonies (Gal 5:14).</p>",
+"168": "<p>I keep your precepts and testimonies, for all my ways are before you. Jesus said “I always do what pleases him” because the Father's eyes were always on him (John 8:29; 11:42); nothing was hidden from the Father (John 16:30; 17:4). This transparency — all ways before God — becomes the believer's posture in Christ (Heb 4:13; 1 John 3:21).</p>",
+# ── TAV (vv 169-176) ─────────────────────────────────────────────────────────────
+"169": "<p>Let my cry come before you, O LORD; give me understanding according to your word. The cry that came before the Father supremely was Gethsemane and the cross (Heb 5:7; Matt 27:46); the understanding given is resurrection — the Father's answer that illuminated all that the Son had done (Luke 24:26-27,44-46).</p>",
+"170": "<p>Let my plea come before you; deliver me according to your word. Deliverance according to the word is fulfilled in Christ's resurrection — “it was impossible for death to keep its hold on him” (Acts 2:24); every scriptural promise of deliverance for the righteous was activated and vindicated in that event.</p>",
+"171": "<p>My lips will pour forth praise, for you teach me your statutes. The mouth of Christ poured forth praise — at the Last Supper hymn (Matt 26:30), in resurrection appearances (Heb 2:12 = Ps 22:22: “I will declare your name to my brothers; in the assembly I will sing your praises”); his praise-teaching continues as the risen Lord through the Spirit (Eph 5:19; Col 3:16).</p>",
+"172": "<p>My tongue will sing of your word, for all your commandments are right. Christ is the Word sung — the Logos who “was God” (John 1:1) and who became the song of Moses and the Lamb (Rev 15:3); all his commandments are right because he is the righteous one who embodied and fulfilled them all.</p>",
+"173": "<p>Let your hand be ready to help me, for I have chosen your precepts. The hand of God that was ready to help was the resurrection-power of the Spirit (Rom 8:11; Eph 1:19-20); Christ had chosen the Father's precepts from eternity, and the Father's hand helped him through death to life as the guarantee of help to all who choose those precepts in him.</p>",
+"174": "<p>I long for your salvation, O LORD, and your law is my delight. The longing for salvation that spans the entire Torah-psalm finds its object in Jesus — the one who is Salvation (Luke 2:30; John 4:22); he is also the delight of the law (Matt 5:17), and those who find him find both their longing satisfied and their delight fulfilled.</p>",
+"175": "<p>Let my soul live and praise you, and let your rules help me. “I am the resurrection and the life” (John 11:25); Christ is the one who makes the soul live — truly, eternally — so that it may praise. His rules help not as a burden but as the structure of the life he gives (1 John 5:3; Matt 11:28-30).</p>",
+"176": "<p><em>I have gone astray like a lost sheep; seek your servant, for I do not forget your commandments.</em> After 176 verses of Torah-meditation, the psalm ends with this confession of lostness — and with the cry to be found. Christ is the answer: “I am the good shepherd” (John 10:11,14); “the Son of Man came to seek and to save the lost” (Luke 19:10). He is the shepherd who seeks the one lost sheep (Luke 15:4-7), and 1 Pet 2:25 applies this very verse: “you were like sheep going astray, but now you have returned to the Shepherd and Overseer of your souls.”</p>",
+}}
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    data = load_comm('mkt-christ', 'psalms')
+    merge_comm(data, PSALMS)
+    chs = sorted(data.keys(), key=lambda x: int(x))
+    total_v = sum(len(data[c]) for c in chs)
+    print(f'Psalms christ: {len(chs)} chapters, {total_v} verses')
+    save_comm('mkt-christ', 'psalms', data)
 
 if __name__ == '__main__':
     main()

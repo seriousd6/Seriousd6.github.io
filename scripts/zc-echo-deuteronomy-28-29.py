@@ -54,6 +54,22 @@ def merge_comm(existing, new_data):
 # ============================================================
 
 DEUT_ECHO = {
+  "28": {
+    "1": [
+      { "type": "type", "target": "Gal 3:14", "note": "The blessings-for-obedience covenant structure of Deuteronomy 28 sets the framework that Christ resolves: in him the blessing of Abraham reaches the Gentiles, and the Spirit is the covenant blessing received through faith rather than law-keeping." }
+    ],
+    "15": [
+      { "type": "type", "target": "Gal 3:10", "note": "All who rely on works of the law are under a curse, for it is written 'cursed is everyone who does not abide by all things written in the Book of the Law' — Paul draws on the curse-for-disobedience principle of Deut 28 to demonstrate that law-keeping can only condemn, not justify." }
+    ]
+  },
+  "29": {
+    "4": [
+      { "type": "fulfillment", "target": "Rom 11:8", "note": "Paul directly quotes Deut 29:4 ('God gave them a spirit of stupor, eyes that would not see and ears that would not hear') to explain the partial hardening of Israel — what Moses described as Israel's wilderness inability becomes the prophesied pattern of Israel's response to the Messiah." }
+    ],
+    "29": [
+      { "type": "fulfillment", "target": "1 Cor 2:10", "note": "The secret things that belong to YHWH become the mystery now revealed through the Spirit: Paul argues that what eyes have not seen nor ears heard God has revealed through the Spirit — the Deuteronomic hiddenness of divine counsel is overcome in Christ." }
+    ]
+  },
   "6": {
     "4": [
       {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},

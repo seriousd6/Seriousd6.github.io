@@ -1,51 +1,44 @@
 """
-Psalms — all four layers (echo + original + context + christ)
-Adds chs 18-150 echo content and all original/context/christ entries.
-Output: data/echoes/psalms.json + mkt-original + mkt-context + mkt-christ
+MKT Christ Commentary — Psalms chapter 118
+Run: python3 scripts/zc-christ-psalms-118-118.py
 
-Psalms is quoted in the NT more than any other OT book (~80 direct citations).
-Key Christological Psalms: 2 (Messianic king), 8 (Son of Man),
-16 (resurrection), 22 (Passion), 45 (royal wedding), 69 (zeal/persecution),
-110 (Davidic Lord), 118 (cornerstone), 119 (Torah meditation).
+Source data used:
+- data/interlinear/psalms.json
+- data/translation/draft/mediating/psalms.json (MKT text)
+- data/commentary/mkt-christ/psalms.json (continuity)
+
+Key Christological decisions in this range:
+- Ps 118 is the most directly cited psalm in the entire NT. The hallel psalm sung at Passover
+  (Matt 26:30 — the hymn sung before Gethsemane), it becomes the lens through which the
+  passion-and-resurrection is interpreted.
+- v6 — DIRECT CITATION: Heb 13:6 quotes this verbatim as a promise for believers.
+- v22 — DIRECT CITATION: Matt 21:42; Mark 12:10; Luke 20:17; Acts 4:11; 1 Pet 2:7.
+  The rejected-stone-become-cornerstone is Jesus's own self-interpretation after the
+  parable of the wicked tenants; Acts 4:11 is Peter's courtroom application.
+- v25-26 — DIRECT CITATION: Matt 21:9; Mark 11:9; Luke 19:38; John 12:13 — "Hosanna"
+  and "Blessed is he who comes in the name of the LORD" are the Palm Sunday cries.
+  Matt 23:39 cites v26 as the word that will greet Christ at the second coming.
+- v17 — the resurrection declaration: "I will not die — I will live, and I will tell."
+  The one who was shoved to the point of falling (v13 = the cross) does not remain dead.
+- v14 — Exod 15:2 citation appearing again here: the salvation song of the Red Sea becomes
+  the salvation song of the resurrection; the new Exodus theme is explicit.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -55,112 +48,55 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-PSA_ECHO = {
-  "22": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 27:46", "note": "My God my God why have you forsaken me — the opening cry of Ps 22 becomes Jesus's cry of dereliction from the cross; the Passion Psalm begins with abandonment and ends with vindication and proclamation; Jesus quotes its opening in Aramaic (Eloi eloi lema sabachthani), indicating it frames his entire cross-experience"},
-      {"type": "allusion", "target": "Heb 2:12", "note": "I will tell of your name to my brothers; in the midst of the congregation I will praise you — the risen Christ quotes Ps 22:22 in Hebrews 2 as his own proclamation of the Father's name to his siblings after resurrection; the Psalm's movement from dereliction to praise is the movement of Christ's death and resurrection"}
-    ],
-    "18": [
-      {"type": "fulfillment", "target": "John 19:24", "note": "They divide my garments among them and for my clothing they cast lots — John notes the soldiers' casting of lots for Jesus's seamless robe as fulfilling Ps 22:18 exactly; the Passion's most specific physical detail had been prophesied a thousand years before"}
-    ]
-  },
-  "45": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 1:8", "note": "Your throne O God is forever and ever — Hebrews 1:8 quotes Ps 45:6 directly as a word addressed to the Son: the divine throne of Ps 45 (the royal wedding psalm) belongs to Christ, making him the one addressed as God in the OT's own worship"}
-    ]
-  },
-  "69": {
-    "9": [
-      {"type": "fulfillment", "target": "John 2:17", "note": "Zeal for your house has consumed me — John cites Ps 69:9 as fulfilled when Jesus cleansed the temple; the disciples remembered this verse as the scripture that governed his action"},
-      {"type": "allusion", "target": "Rom 15:3", "note": "The reproaches of those who reproach you have fallen on me — Paul quotes Ps 69:9b as the Christ-pattern: Christ did not please himself but bore the reproaches meant for God; Christ takes the insults aimed at God's house as his own"}
-    ]
-  },
-  "110": {
-    "1": [
-      {"type": "fulfillment", "target": "Acts 2:34-35", "note": "The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool — Peter's Pentecost sermon cites Ps 110:1 as the proof that the risen Jesus is the Lord David spoke of, now enthroned at God's right hand"},
-      {"type": "fulfillment", "target": "Heb 1:13", "note": "To which of the angels did God ever say: Sit at my right hand? — Hebrews opens with Ps 110:1 as the definitive Christological text distinguishing Christ from angels; no angel received this throne-assignment, only the Son"}
-    ],
-    "4": [
-      {"type": "fulfillment", "target": "Heb 7:17", "note": "You are a priest forever after the order of Melchizedek — the Melchizedekian priesthood of Ps 110:4 is the foundational text for Hebrews' extended argument that Christ's eternal priesthood supersedes the Levitical order; Hebrews 7 is entirely an exposition of this one verse"}
-    ]
-  },
+# INTENT: mkt-christ for Psalm 118 — the great hallel psalm sung at Passover, the most
+#   densely NT-cited psalm in the Psalter. The rejected stone (v22), the Hosanna (vv25-26),
+#   the resurrection declaration (v17), and the Heb 13:6 citation (v6) make this psalm the
+#   primary OT lens for the passion, triumphal entry, and resurrection.
+# CHANGE? If commentary/mkt-christ/psalms.json structure changes, update load_comm/save_comm.
+# VERIFY: python3 -c "import json; d=json.load(open('data/commentary/mkt-christ/psalms.json'));
+#   print('118:', len(d.get('118', {})), 'verses')"
+
+PSALMS = {
   "118": {
-    "22": [
-      {"type": "fulfillment", "target": "Matt 21:42", "note": "The stone that the builders rejected has become the cornerstone — Jesus quotes Ps 118:22-23 after the parable of the tenants; the rejected stone is his own rejection by the Jerusalem leadership and his vindication through resurrection"},
-      {"type": "fulfillment", "target": "1 Pet 2:7", "note": "The stone that the builders rejected has become the cornerstone — Peter applies Ps 118:22 to Christ and then to believers as living stones built on this cornerstone"}
-    ]
-  },
-  "132": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "Of the fruit of your body I will set on your throne — Peter cites this Davidic promise (Ps 132:11, cf. Ps 89:3-4; 2 Sam 7:12) as the basis for understanding Jesus's resurrection as the fulfillment of the Davidic covenant: God swore to David that he would put one of his descendants on his throne, and knowing this, David spoke of the resurrection of the Christ"}
-    ]
-  }
-}
-
-PSA_ORIGINAL = {
-  "2": {
-    "7": "<p><strong>YHWH amar elai beni atta ani hayom yelidticha</strong> (<em>Yhwh ʾāmar ʾēlay, bĕnî ʾattâ ʾănî hayyôm yĕlídtîkā</em>): 'The LORD said to me: You are my Son; today I have begotten you.' The royal adoption formula of Ps 2:7 was applied to the Davidic king at his enthronement — the king became YHWH's 'son' in a representative capacity (2 Sam 7:14; Ps 89:26-27). The NT applies it to Jesus at three Christological moments: the baptism (Matt 3:17), the transfiguration (2 Pet 1:17), and the resurrection (Acts 13:33; Heb 1:5; 5:5). The resurrection is the decisive 'today' in NT usage: the day of Christ's enthronement at the Father's right hand is the day of divine sonship's full eschatological declaration.</p>"
-  },
-  "8": {
-    "4": "<p><strong>mah enosh ki tizkerenu uben adam ki tipqedenu</strong> (<em>mâ-ʾĕnôš kî-tizqĕrennû ûben-ʾādām kî tipqĕdennû</em>): 'What is man that you are mindful of him, and the son of man that you care for him?' <em>Ben adam</em> (son of man) in Ps 8 is the representative human made lower than the heavenly beings and crowned with glory — a meditation on Gen 1:26-28's dominion mandate. The NT (Heb 2:5-9) applies Ps 8 to Christ as the true human who fulfills the Adamic mandate: 'We do not yet see everything in subjection to him, but we see him who for a little while was made lower than the angels, namely Jesus, crowned with glory and honor because of the suffering of death.' Christ recapitulates and fulfills humanity's Ps 8 vocation.</p>"
-  },
-  "22": {
-    "1": "<p><strong>eli eli lamah azavtani</strong> (<em>ʾēlî ʾēlî lāmāh ʿăzabtānî</em>): 'My God, my God, why have you forsaken me?' The opening of the Passion Psalm in its Hebrew form. The Aramaic at the cross (Mark 15:34: <em>Eloi eloi lema sabachthani</em>) uses the Aramaic form of the Psalm's Hebrew opening, suggesting Jesus was quoting from memory in the vernacular. The Psalm moves from dereliction (vv. 1-21) to proclamation and praise (vv. 22-31) — ending not in abandonment but in universal witness ('all the ends of the earth shall turn to the LORD', v. 27). The early church understood Jesus's citation of the Psalm's opening as invoking the whole Psalm, including its vindication ending.</p>"
-  },
-  "110": {
-    "1": "<p><strong>neum YHWH laadoni shev limini ad ashit oyvecha hadom leraglecha</strong> (<em>nĕʾum Yhwh laʾdōnî, šēb liymînî ʿad-ʾāšît ʾōyĕbêkā hădōm lĕraglêkā</em>): 'The oracle of YHWH to my lord: Sit at my right hand until I make your enemies your footstool.' <em>Neum</em> (oracle of) is the formula for divine speech — the highest possible speech-authority marker in Hebrew prophecy. David writes <em>laadoni</em> (to my lord), creating the theological puzzle Jesus exploits in Matt 22:41-46: how can David's descendant also be David's lord? The Davidic Messiah must be more than a Davidic son; only divine sonship accounts for the double identity. <em>Shev limini</em> (sit at my right hand): enthronement at the supreme position of divine authority — the NT applies this to the resurrection/ascension as Christ's enthronement (Acts 2:34-35; Eph 1:20-21; Heb 1:3).</p>",
-
-    "4": "<p><strong>nishba YHWH velo yinachem atta kohen leolam al divrati malkitsedek</strong> (<em>nišbaʿ Yhwh wĕlōʾ yinnāḥēm ʾattā-kōhēn lĕʿôlām ʿal-diḇrātî malkîṣedeq</em>): 'YHWH has sworn and will not change his mind: You are a priest forever after the manner of Melchizedek.' The divine oath (<em>nishba ... velo yinachem</em>) makes this the most certain OT promise after the Abrahamic oath. <em>Malkitsedek</em> (Melchizedek, king of righteousness): the mysterious priest-king of Gen 14:18-20 who blessed Abraham and received a tithe — without genealogy, without recorded birth or death. Hebrews 7 uses the silence of Scripture about Melchizedek's origins as a typological argument: a priesthood with no recorded beginning or end points to an eternal priesthood.</p>"
-  }
-}
-
-PSA_CONTEXT = {
-  "1": {
-    "1": "<p>The Psalter (150 poems spanning roughly David's reign to the post-exilic period) was the hymnbook of the Second Temple — used in liturgy from the restoration (Ezra-Nehemiah) through the NT period. The Dead Sea Scrolls (1QPs, 4QPsa-r, and 11QPsa) preserve the most psalms of any biblical book among the Qumran community, indicating the Psalter's centrality in Jewish worship. The Psalter is organized into five books (Ps 1-41, 42-72, 73-89, 90-106, 107-150) mirroring the five books of Moses, each ending with a doxology. The arrangement suggests a canonical editorial design: the Psalter tells the story of Israel's covenant relationship with YHWH from Torah-delight (Ps 1) to universal praise (Ps 150).</p>"
-  },
-  "22": {
-    "1": "<p>Psalm 22 is the most cited OT Psalm in the NT Passion narratives. Its historical background (David's persecution?) is unknown — the Psalm presents an archetypal experience of abandonment and vindication. The pattern: intense lament (vv. 1-21) → sudden transition to praise (v. 22) → eschatological proclamation (vv. 27-31: 'all the families of the nations shall worship before you ... posterity shall serve him; it shall be told of the Lord to the coming generation'). The Psalm functions in NT usage not as a prediction of specific details but as the divinely-given interpretive framework for understanding the cross: suffering-unto-vindication, abandonment-unto-universal-proclamation.</p>"
-  },
-  "110": {
-    "1": "<p>Psalm 110 is the most frequently quoted OT text in the NT. Jesus cites it in the Synoptics (Matt 22:41-46 and parallels) as a riddle about the Messiah's nature. Peter cites it at Pentecost (Acts 2:34-35). Paul cites it (1 Cor 15:25; Eph 1:20; Col 3:1). Hebrews cites or alludes to it eight times (1:3, 13; 5:6, 10; 6:20; 7:17, 21; 8:1; 10:12-13). Its dominance in NT Christology is due to its dual claim: (1) divine enthronement at God's right hand; (2) eternal Melchizedekian priesthood. These two — divine lordship and perfect priesthood — are the two Christological pillars the NT builds on from this one Psalm.</p>"
-  }
-}
-
-PSA_CHRIST = {
-  "2": {
-    "7": "<p>A direct revelation: 'You are my Son; today I have begotten you.' The royal Psalm 2 reaches its Christological fullness in the resurrection. Paul at Pisidian Antioch (Acts 13:33): God raised Jesus, 'as it is written in the second Psalm, You are my Son, today I have begotten you.' The 'today' of divine fatherhood is not the eternal generation alone but the specific day of the resurrection-enthronement, when the Son's identity is publicly declared. Every application of Ps 2:7 in the NT (baptism, transfiguration, resurrection) marks a moment when the Father publicly declares the Son's identity for the community to hear.</p>"
-  },
-  "22": {
-    "1": "<p>A fulfillment: 'My God, my God, why have you forsaken me?' The Passion Psalm that Jesus cited from the cross is both a historical lament (David in extremity) and a Christological prophecy (the Son's abandonment in the atonement). The cry 'why have you forsaken me' is not a failure of faith but a genuine experience of divine absence — the moment when Christ bore the full weight of human sin-under-judgment. The Psalm's movement (dereliction → trust → vindication → universal proclamation) is the death-and-resurrection narrative in miniature. Jesus did not die in despair; the Psalm he cited ends in the world's worship of YHWH through the one who suffered.</p>"
-  },
-  "110": {
-    "1": "<p>A direct revelation: 'The LORD says to my Lord: Sit at my right hand until I make your enemies your footstool.' The most foundational Christological oracle in the OT: the risen and ascended Christ is enthroned at the Father's right hand (the supreme position of divine authority) awaiting the final subjection of all enemies, including death (1 Cor 15:25-26). The present era is the era of Christ's enthronement: he reigns now, his enemies are being progressively placed under his feet, and the ultimate subjection is certain. Ps 110:1 frames the entire NT's understanding of the ascension and the present Christological situation of the cosmos.</p>",
-
-    "4": "<p>A fulfillment: 'You are a priest forever after the order of Melchizedek.' The divine oath of the eternal priesthood is fulfilled in Christ's resurrection, which established him as the priest who never dies. Unlike the Levitical priests who needed to offer sacrifice repeatedly and who were replaced by death, Christ offered himself once and lives forever in the power of an indestructible life (Heb 7:16, 24-25). The Melchizedekian priesthood — prior to Aaron, not from the tribe of Levi, without recorded end — is the OT's own signal that the Levitical system was provisional. Christ's eternal intercession ('he always lives to make intercession for them', Heb 7:25) is the fulfillment of Ps 110:4's oath.</p>"
+    "1": "<p>\"Give thanks to the LORD, for he is good; his steadfast love endures forever.\" The opening refrain of Psalm 118 is also its close (v29) — the psalm is framed by this liturgical declaration. In Jewish practice, Psalm 118 was the final psalm of the Egyptian Hallel (Ps 113-118), sung at Passover. Matthew 26:30 (\"when they had sung a hymn, they went out to the Mount of Olives\") — the hymn sung after the Last Supper and before Gethsemane was Psalm 118. Christ sang this psalm of rejected-stone-and-resurrection the night before his death. The \"steadfast love endures forever\" (<em>ki le'olam hasdo</em>) is the ground of the thanksgiving: what will be demonstrated in the next 24 hours is that the hesed that sent the Son into death will bring him through it.</p>",
+    "2": "<p>\"Let Israel declare: 'His steadfast love endures forever.'\" The communal proclamation of enduring hesed — Israel's corporate testimony. In the NT, the Israel that declares this is redefined: Romans 9:6 (\"not all who are descended from Israel are Israel\") and Galatians 6:16 (\"the Israel of God\") describe the new covenant community as the heirs of Israel's worship tradition. The church that sings Psalm 118's refrain — \"his steadfast love endures forever\" — is the true Israel making the declaration that the psalm calls for. The body of Christ is the community that testifies to the resurrection as the ultimate act of enduring hesed.</p>",
+    "3": "<p>\"Let the house of Aaron declare: 'His steadfast love endures forever.'\" The priestly witness to enduring hesed. In Christ, the Aaronic priesthood is superseded and fulfilled: Hebrews 7:11-19 argues that the Levitical/Aaronic priesthood was incomplete and that Christ as the priest \"in the order of Melchizedek\" (Heb 7:17) is the eternal high priest whose priesthood does not end with death. The \"house of Aaron\" that declares hesed endures forever finds its ultimate form in Christ, the eternal priest whose intercession never ceases (Heb 7:25: \"he always lives to intercede for them\").</p>",
+    "4": "<p>\"Let all who fear the LORD declare: 'His steadfast love endures forever.'\" The expansion of the proclamation to all who fear YHWH — beyond Israel and the priesthood to the wider community of the faithful. Acts 10:35 (\"in every nation the one who fears him and does what is right is acceptable to him\") and Revelation 15:4 (\"all nations will come and worship before you\") describe the universal community of hesed-declarers that the psalm's expansion envisions. In Christ, the wall dividing \"Israel,\" \"the house of Aaron,\" and \"all who fear the LORD\" is removed (Eph 2:14) — all become one body declaring the same enduring love.</p>",
+    "5": "<p>\"From the depths of my distress I called to the LORD; the LORD answered me and gave me room to breathe.\" The distress-call and the spacious answer — the pattern of Gethsemane and the resurrection. Hebrews 5:7 (\"during the days of Jesus's life on earth, he offered up prayers and petitions with fervent crying and tears to the one who could save him from death, and he was heard because of his reverent submission\") describes the distress-call of v5. The \"room to breathe\" (<em>bamercav</em>, a spacious place) is the resurrection's answer: the constriction of death is replaced by the spaciousness of risen life. What the psalmist experiences as temporary relief from distress, Christ experiences as the definitive escape from death's constriction.</p>",
+    "6": "<p>\"The LORD is on my side; I will not be afraid. What can any person do to me?\" A direct citation: Hebrews 13:6 quotes this verse verbatim as a promise for believers: \"So we say with confidence: 'The Lord is my helper; I will not be afraid. What can mere mortals do to me?'\" (Heb 13:6, citing Ps 118:6). The citation appears in the context of Hebrews 13:5 (\"I will never leave you; never will I forsake you\") — the two promises together constitute the ground of Christian fearlessness. Christ himself lived this verse: before Pilate (who could only kill the body, Matt 10:28), before the cross (which he endured without fear of the human agents, Heb 12:2), and in the resurrection (which proved that what persons did to him was not the final word).</p>",
+    "7": "<p>\"The LORD stands on my side as my helper; I will see my enemies brought to shame.\" The divine helper-role and the eventual shame of enemies — the pattern the resurrection enacts. Romans 8:31 (\"if God is for us, who can be against us?\") is the theological form of v7. The enemies brought to shame are not gloated over but are the negative of vindication: Acts 2:36 (\"God has made this Jesus, whom you crucified, both Lord and Messiah\") is the moment when those who put Christ to death see that their actions were the opposite of what they intended. The shame of Christ's enemies is the reverse side of the resurrection's vindication.</p>",
+    "8": "<p>\"It is better to take shelter in the LORD than to put your confidence in any person.\" The comparative trust claim — YHWH as shelter surpassing any human protection — is foundational to the NT's understanding of faith. John 2:24-25 (\"Jesus did not entrust himself to them, for he knew all people... he knew what was in each person\") shows Christ himself practicing v8: he did not put confidence in persons but in the Father alone. This is not misanthropy but theological realism — the only shelter that endures death is the divine shelter. The cross confirms it: every human protection failed (the disciples fled, Pilate capitulated, the crowds turned) but the divine shelter held.</p>",
+    "9": "<p>\"It is better to take shelter in the LORD than to put your confidence in rulers.\" The second comparative — rulers (<em>nedivim</em>, nobles/princes) as inferior to the divine shelter. Acts 4:12 (\"salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved\") is the NT equivalent: the rulers (Herod, Pilate, Caesar) cannot provide the salvation that YHWH in Christ provides. Jesus refused the political Messianism that would have made him a military or political leader (John 6:15: \"knowing that they intended to come and make him king by force, Jesus withdrew\"). The better shelter is not political power but the divine presence.</p>",
+    "10": "<p>\"All the nations closed in around me, but in the name of the LORD I routed them.\" The nations surrounding the anointed — the international hostility that Psalm 2 also describes (\"the nations rage... against the LORD and against his anointed\"). Acts 4:25-27 quotes Psalm 2 in response to the trial of Peter and John: \"the nations raged, the peoples plotted in vain... Herod and Pontius Pilate met together with the Gentiles and the people of Israel in this city to conspire against your holy servant Jesus.\" The nations of Ps 118:10 are the coalition of Ps 2:1-2, now identified specifically as the parties to the crucifixion. \"In the name of the LORD I routed them\" — the resurrection.</p>",
+    "11": "<p>\"They surrounded me — closed in from every side — but in the name of the LORD I cut them off.\" The encirclement intensified — surrounding from every direction. The passion-week encirclement: the chief priests surrounding Jesus with questions (Matt 21:23; 22:15-46), the soldiers surrounding the garden (John 18:3-12), the crowd surrounding the cross (Luke 23:35). Each act of encirclement intends to trap or destroy; each is answered by the name of YHWH. The name invoked against death is the resurrection name — the God who raises the dead breaks every encirclement that death constructs around the living.</p>",
+    "12": "<p>\"They swarmed around me like bees, but blazed out as quickly as a brush fire; in the name of the LORD I cut them off.\" The bee-swarm image of hostile attack — quick, multiple, painful — against the single figure who invokes the divine name. The brush fire that blazes up and quickly dies: the opposition that appeared overwhelming is ultimately transient. James 4:14 (\"you are a mist that appears for a little while and then vanishes\") and 1 Corinthians 15:55 (\"where, O death, is your sting?\") describe the transience of even the most overwhelming opposition. The bee's sting — death — is removed by the resurrection. The name invoked is the resurrection name.</p>",
+    "13": "<p>\"I was shoved to the point of falling, but the LORD was there to help me.\" The near-fall — the moment of maximum precarity before divine intervention. \"Shoved to the point of falling\" is the crucifixion language: pushed to the very edge of death, driven to the ground by the weight of the cross, nailed to the wood. Luke 23:26 (\"as the soldiers led him away, they seized Simon from Cyrene... and put the cross on him to carry it behind Jesus\") shows Jesus at the point of physical collapse under the cross's weight. \"But the LORD was there to help\" — the resurrection is the help that arrives at the moment of maximum apparent defeat. Psalm 22:24 makes the same claim: \"he has not despised or scorned the suffering of the afflicted one... but has listened to his cry for help.\"</p>",
+    "14": "<p>\"The LORD is my strength and my song; he has become my salvation.\" A citation from Exodus 15:2 — the song of Moses at the Red Sea after the crossing. The same words appear in Isaiah 12:2 (the eschatological thanksgiving for the new Exodus). The NT reads the resurrection as the new Exodus: 1 Corinthians 10:1-4 (the Exodus as a type of baptism and the spiritual food and drink = Christ). Luke 9:31 calls the cross and resurrection an \"exodus\" (<em>exodon</em>) that Jesus was about to accomplish in Jerusalem. Christ is himself the strength, song, and salvation of the new Exodus — the one who leads through the sea of death and brings his people to the other side.</p>",
+    "15": "<p>\"Shouts of joy and victory echo in the tents of the righteous: 'The right hand of the LORD does mighty things!'\" The victory shout in the community of the righteous — the resurrection announcement reverberating through those who belong to Christ. Luke 24:33-35 (the two from Emmaus returning to the eleven: \"the Lord has risen and has appeared to Simon!\") is the specific historical moment of the victory shout echoing in the tents of the righteous. The \"right hand of the LORD\" that does mighty things is the right hand of Acts 2:33 (\"exalted to the right hand of God, he has received from the Father the promised Holy Spirit and has poured out what you now see and hear\").</p>",
+    "16": "<p>\"The right hand of the LORD is raised high; the right hand of the LORD does mighty things!\" The doubled acclamation of the divine right hand — the repeated insistence on this single phrase marks it as the theological center of the victory song. Acts 2:33 (\"exalted to the right hand of God\") and Hebrews 1:3 (\"he sat down at the right hand of the Majesty in heaven\") give the exaltation-form of the raised right hand. Revelation 1:16 (\"in his right hand he held seven stars\") shows the risen Christ with the right hand still active in his exalted state. The right hand raised high is the universal sovereignty displayed in the resurrection and ascension.</p>",
+    "17": "<p>\"I will not die — I will live, and I will tell of what the LORD has done.\" The resurrection declaration. This verse is the center of the psalm's Christological meaning. The one who was shoved to the point of falling (v13), who was disciplined hard (v18), does not remain in death. John 10:17-18 (\"I lay down my life — only to take it up again... no one takes it from me, but I lay it down of my own accord\") is the self-determination that v17 asserts: the declaration \"I will live\" is not wishful thinking but the sovereign announcement of the one who holds the keys of death and Hades (Rev 1:18). \"I will tell of what the LORD has done\" — the resurrection testimony: Luke 24:46-47; Acts 1:3 (\"appearing to them over a period of forty days and speaking about the kingdom of God\").</p>",
+    "18": "<p>\"The LORD has disciplined me hard, but he has not let death have me.\" The hard discipline and the limit on death — what Hebrews 5:8 (\"although he was a son, he learned obedience from what he suffered\") and Hebrews 12:6 (\"the Lord disciplines the one he loves, and he chastens everyone he accepts as his son\") explicate. The discipline is real and severe (the cross), but it has a boundary: \"he has not let death have me.\" Acts 2:24 (\"it was impossible for death to keep its hold on him\") is the NT statement of this boundary. The hard discipline of the cross is the instrument of salvation; death is the doorway, not the terminus. The disciplined-but-not-destroyed pattern is then shared with believers (2 Cor 4:9: \"struck down, but not destroyed\").</p>",
+    "19": "<p>\"Open the righteous gates for me so I can go in and give thanks to the LORD.\" The entry through the righteous gates — the approach to the divine presence for worship. John 10:9 (\"I am the gate; whoever enters through me will be saved\") is the inverse application: Christ is not the one asking for the gate to be opened but is himself the gate through which others enter. Hebrews 10:19-20 (\"we have confidence to enter the Most Holy Place by the blood of Jesus, by a new and living way opened for us through the curtain, that is, his body\") is the entry-through-Christ that v19 anticipates. The opening of the temple veil at the crucifixion (Matt 27:51) is the moment when the righteous gate is opened through the death of Christ.</p>",
+    "20": "<p>\"This is the LORD's own gate; only the righteous may enter through it.\" The divine ownership of the gate and the righteousness requirement. John 14:6 (\"I am the way and the truth and the life; no one comes to the Father except through me\") is the exclusivity of v20 fulfilled in Christ — the one gate through whom the righteous enter is the personal Christ. Romans 3:22 (\"righteousness is given through faith in Jesus Christ to all who believe\") solves the problem of who qualifies as \"the righteous\": those who enter are those made righteous in Christ, not those who achieve righteousness by their own effort. The gate that admits only the righteous becomes accessible to all who trust the one who has become their righteousness (1 Cor 1:30).</p>",
+    "21": "<p>\"I praise you because you answered me and have become my salvation.\" The personal thanksgiving that follows the entry through the gate — the individual voice within the communal psalm. This is the voice that Christ lifts in the resurrection: the Father answered his prayer (Heb 5:7), becoming his salvation through the resurrection. In John 11:41-42 (\"Father, I thank you that you have heard me... I knew that you always hear me\"), Christ models the personal thanksgiving of v21 — the assurance that the Father's answer is certain, spoken before the visible evidence arrives. V21 is the personal doxology of the one who has come through the shoved-to-the-point-of-falling (v13) and the hard discipline (v18) to the thanksgiving side of death.</p>",
+    "22": "<p>\"The stone that the builders threw aside has become the cornerstone.\" The most widely cited verse from the Psalms in the NT. Christ applies it to himself immediately after the parable of the wicked tenants (Matt 21:42: \"have you never read in the Scriptures: 'The stone the builders rejected has become the cornerstone'?\"). Peter cites it in the Jerusalem council (Acts 4:11: \"Jesus is 'the stone you builders rejected, which has become the cornerstone'\"). 1 Peter 2:7 cites it for believers: \"the stone the builders rejected has become the cornerstone\" — and then continues to Isa 8:14 (a stone of stumbling for those who reject). Ephesians 2:20 (\"with Christ Jesus himself as the chief cornerstone\") is the ecclesial application. The rejected-and-exalted stone is Jesus's self-understanding of his death and resurrection: rejected by the builders of Israel's temple establishment, raised by the Father to the place of maximum structural importance.</p>",
+    "23": "<p>\"This is what the LORD has done; it is wonderful in our sight.\" Cited together with v22 in Matthew 21:42, the wonderfulness of the rejected-stone-become-cornerstone is the astonishment of the resurrection. Acts 2:12 (\"amazed and perplexed, they asked one another, 'What does this mean?'\") and Acts 3:10 (\"they were filled with wonder and amazement\") capture the <em>niphla'ot</em> (wonderful) that v23 announces. \"In our sight\" (<em>be'einenu</em>) — the resurrection is a public event witnessed by many (1 Cor 15:5-8: \"more than five hundred of the brothers and sisters at the same time, most of whom are still living\"). The wonder is not private mystical experience but public divine act.</p>",
+    "24": "<p>\"This is the day the LORD has made; let us celebrate and be glad in it.\" The resurrection day — the Lord's Day. The early church met on \"the first day of the week\" (Acts 20:7; 1 Cor 16:2; Rev 1:10: \"on the Lord's Day\") specifically because the resurrection occurred on the first day (Matt 28:1; John 20:1). Psalm 118:24 is the OT ground of the Lord's Day theology: the day YHWH has made — not made in the sense of creating it in time, but made in the sense of investing it with unique divine significance through the resurrection act. The celebration and gladness are the liturgical form of Easter faith: Luke 24:41 (\"they still did not believe it because of joy and amazement\") is the first Easter response.</p>",
+    "25": "<p>\"LORD, save us, we pray! LORD, grant us success, we pray!\" The <em>hoshi'ah-na</em> (Hosanna — save now!) and the <em>anna YHWH hatzlichah na</em> (grant success now). Matthew 21:9 records the crowd's cry at the triumphal entry as \"Hosanna to the Son of David! Blessed is he who comes in the name of the LORD! Hosanna in the highest heaven!\" — taking both v25 and v26 and directing them to Jesus. Mark 11:9 (\"Hosanna! Blessed is he who comes in the name of the LORD!\") similarly. The Palm Sunday cry is the Passover hallel psalm applied to Jesus as the arriving Davidic king: those crying \"Hosanna\" were singing the psalm they sang annually and now applying it to the one who had come to fulfill it.</p>",
+    "26": "<p>\"May God bless the one who comes in the name of the LORD! We bless you from the LORD's house.\" A direct citation: Matthew 21:9 (Palm Sunday); Matthew 23:39 (\"you will not see me again until you say, 'Blessed is he who comes in the name of the Lord'\") — Christ applies this verse to his own second coming. Luke 13:35 (same citation). John 12:13 (the crowd at the triumphal entry: \"blessed is the king of Israel!\"). The \"one who comes\" (<em>haba</em>) is a Messianic title: Luke 7:19-20 (John the Baptist's question: \"are you the one who is to come?\"). The blessing from \"the LORD's house\" is the temple establishment's endorsement — ironically, the temple leadership's rejection of Jesus fulfills the rejected-stone of v22, while the crowd's Palm Sunday acclamation fulfills v26.</p>",
+    "27": "<p>\"The LORD is God, and his light has shone on us. Bind the sacrifice with cords and bring it all the way to the horns of the altar.\" The light shining and the sacrifice bound to the altar — two powerful Christological images. John 1:9 (\"the true light that gives light to everyone was coming into the world\") is the light-shone-on-us of v27. John 8:12 (\"I am the light of the world\") is the personal claim. The sacrifice bound with cords: at the crucifixion, Christ is bound (John 18:12: \"the detachment of soldiers... arrested Jesus; they bound him\") and brought to the place of sacrifice. \"All the way to the horns of the altar\" — the horns of the altar were the place of ultimate refuge (1 Kgs 1:50; 2:28) and of the sacrifice's blood application. Christ is brought all the way to the cross as the altar of his own sacrifice (Heb 13:10-12).</p>",
+    "28": "<p>\"You are my God, and I will give you thanks; you are my God, and I will praise you.\" The personal covenant declaration — \"you are my God\" — spoken by the one who has passed through the shoved-to-falling (v13) and the hard discipline (v18) to reach the thanksgiving. This is the voice of the risen Christ addressing the Father. John 20:17 (Christ to Mary: \"I am ascending to my Father and your Father, to my God and your God\") uses the same possessive: \"my God\" — the risen Christ maintains the personal covenantal relationship with the Father that sustained him through the passion. The double \"you are my God\" and the double thanksgiving/praise are the emphatic personal testimony of the resurrection's survivor.</p>",
+    "29": "<p>\"Give thanks to the LORD, for he is good; his steadfast love endures forever.\" The closing refrain — the psalm ends where it began. Having journeyed through distress, encirclement, near-fall, hard discipline, and the rejected stone that becomes the cornerstone, the psalm arrives back at the opening declaration of divine goodness and enduring hesed. The resurrection is the proof: the hesed of YHWH endured through the entire passion and came out the other side unchanged. Revelation 5:9-13 (the four living creatures and the elders and ten thousand angels singing to the Lamb) is the eschatological form of this closing thanksgiving — the entire creation joins the hallel that Psalm 118 invites, because the one who was rejected and raised has been given all honor and glory and power forever.</p>"
   }
 }
 
 def main():
-    e = load_echo('psalms')
-    merge_echo(e, PSA_ECHO)
-    save_echo('psalms', e)
-    print(f'Psalms echo: {len(e)} chapters, {sum(len(v) for v in e.values())} verses')
-
-    c = load_comm('mkt-original', 'psalms')
-    merge_comm(c, PSA_ORIGINAL)
-    save_comm('mkt-original', 'psalms', c)
-    print(f'Psalms original: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-context', 'psalms')
-    merge_comm(c, PSA_CONTEXT)
-    save_comm('mkt-context', 'psalms', c)
-    print(f'Psalms context: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
-
-    c = load_comm('mkt-christ', 'psalms')
-    merge_comm(c, PSA_CHRIST)
-    save_comm('mkt-christ', 'psalms', c)
-    print(f'Psalms christ: {len(c)} chapters, {sum(len(v) for v in c.values())} verses')
+    data = load_comm('mkt-christ', 'psalms')
+    merge_comm(data, PSALMS)
+    chs = sorted(data.keys(), key=lambda x: int(x))
+    total_v = sum(len(data[c]) for c in chs)
+    print(f'Psalms christ: {len(chs)} chapters, {total_v} verses')
+    save_comm('mkt-christ', 'psalms', data)
 
 if __name__ == '__main__':
     main()

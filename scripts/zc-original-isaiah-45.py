@@ -1,0 +1,61 @@
+import json, pathlib
+
+ROOT = pathlib.Path(__file__).parent.parent
+
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
+
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
+    print(f'  wrote {p.relative_to(ROOT)}')
+
+def merge_comm(existing, new_data):
+    # INTENT: Non-destructive merge — existing entries are never overwritten, safe to re-run
+    for ch, verses in new_data.items():
+        if ch not in existing: existing[ch] = {}
+        for v, html in verses.items():
+            if v not in existing[ch]: existing[ch][v] = html
+
+ISAIAH = {
+"45": {
+"1": "<p><strong>lĕmāšîaḥô lĕkôreš</strong> — <em>to his anointed, to Cyrus</em>. The term <em>māšîaḥ</em> (מָשִׁיחַ, anointed) is applied to a foreign king — a uniquely bold claim. YHWH grasps Cyrus's right hand (<em>ḥāzaqtî bîmînô</em>), the posture of divine empowerment. The verse opens with the oracular messenger formula angled toward a pagan ruler, asserting that YHWH is the hidden sovereign behind Persian conquest.</p>",
+"2": "<p><strong>wāhădûrîm 'ăyaššēr</strong> — <em>and the rugged places I will make level</em>. The Pi'el of יָשַׁר (<em>yeyyōšēr</em>) denotes active straightening. Doors of bronze (<em>daltôt nĕḥušet</em>) and bars of iron (<em>bĕrîḥê barzèl</em>) are broken — Herodotus records Cyrus entering Babylon via the Euphrates channel under bronze gates. The verse uses *yiqtol* verbs throughout, framing YHWH's actions as imminent and certain.</p>",
+"3": "<p><strong>maṭmônê ḥōšek</strong> — <em>treasures of darkness</em> and <em>hidden riches of secret places</em>. These are material spoils granted so Cyrus may <em>know</em> (<em>tēda'</em>) the personal name YHWH. The clause <em>qōrĕ'akā bišmekā</em> — <em>who calls you by your name</em> — signals intimate foreknowledge; Cyrus is named prophetically before his birth.</p>",
+"4": "<p><strong>lĕma'an 'abdî ya'ăqōb</strong> — <em>for the sake of my servant Jacob</em>. The cosmic military campaign of Cyrus has a theological purpose: Israel's redemption. The phrase <em>wĕ'epĕsinnĕkā</em> — <em>though you have not known me</em> — makes divine sovereignty explicit: YHWH acts through unknowing instruments. The verb <em>ekannĕkā</em> (Pi'el of כָּנָה) — <em>I surname/title you</em> — indicates honorific designation.</p>",
+"5": "<p><strong>'ănî YHWH wĕ'ên 'ôd</strong> — <em>I am YHWH and there is none else</em>. The foundational monotheistic formula (<em>'ên 'ôd</em>) recurs through vv. 5–6, 14, 18, 21–22. Even where Cyrus does not acknowledge YHWH, YHWH girds him — the verb <em>wa'a'azzĕrĕkā</em> (Pi'el of אָזַר, to gird/equip) — underscoring sovereignty over those outside covenant.</p>",
+"6": "<p><strong>lĕma'an yēdĕ'û</strong> — <em>so that they may know</em>. The universal scope (<em>mimmizraḥ šemeš wûmimma'ărabô</em>, from east to west) is stated: all nations are to recognize YHWH's uniqueness. The infinitive of purpose drives the oracle — revelation of divine identity is the telos of historical events.</p>",
+"7": "<p><strong>yôṣēr 'ôr ûbôrē' ḥōšek</strong> — <em>forming light and creating darkness</em>. Two Qal participles (<em>yôṣēr</em> from יָצַר; <em>bôrē'</em> from בָּרָא) assert continuous creative activity. The climax is the theologically sharp <em>bôrē' rā'</em> — <em>creating evil/disaster</em>. This is not moral evil but calamity (<em>rā'</em> as adversity) — asserting YHWH's sovereignty over all reality, countering Persian dualism (Ahura Mazda vs. Angra Mainyu).</p>",
+"8": "<p><strong>har'îpû šāmayim</strong> — <em>drip/rain down, O heavens</em>. The verb <em>rā'ap̄</em> (Hiphil) means to let fall in drops; heavens and earth are called to release righteousness (<em>ṣedeq</em>) and salvation (<em>yešû'āh</em>). The imagery is agricultural (rain bringing forth crops) applied to cosmic justice: salvation sprouts from the earth (<em>tiṣmaḥ</em>).</p>",
+"9": "<p><strong>hôy rāb̠ 'et-yōṣrô</strong> — <em>woe to one who strives with his Maker</em>. The <em>hôy</em> oracle (woe cry) opens a lawsuit metaphor. <em>ḥèreś</em> (potsherd) among the potsherds of the ground — the creature is earthenware arguing with the potter. The rhetorical questions (<em>hăyō'mar ḥōmer lĕyōṣĕrô</em>) make the absurdity concrete. The Qal imperfect <em>yārib̠</em> — to contend, bring legal suit — frames the creature's complaint as legal overreach.</p>",
+"10": "<p><strong>hôy 'ōmēr lĕ'āb̠</strong> — <em>woe to one who says to a father, 'What are you begetting?'</em>. The paired woe oracle extends the analogy from potter/clay to parent/child. Both challenge the prerogative of the creator/parent. The point is that creatures cannot interrogate the purposes of their origin.</p>",
+"11": "<p><strong>šā'ălûnî</strong> — <em>ask me of things to come</em>. The form is a Qal imperative plural with suffix — YHWH invites interrogation of his purposes regarding his children and the works of his hands (<em>pō'al yādāy</em>). This is not sarcasm but genuine openness: YHWH will explain — through his word to prophets — what he is doing.</p>",
+"12": "<p><strong>'ănōkî 'āśîtî 'èreṣ</strong> — <em>I made the earth and created man upon it</em>. Creation credentials undergird the political claims of vv. 1–7. The series of *qatal* perfects (<em>'āśîtî</em>, <em>bārā'tî</em>, <em>nāṭîtî</em>, <em>ṣiwwêtî</em>) — made, created, stretched, commanded — establishes unassailable authority to commission Cyrus.</p>",
+"13": "<p><strong>hā'îrtî bĕ-ṣedeq</strong> — <em>I have stirred him up in righteousness</em>. The verb <em>'ûr</em> (Hiphil, <em>hā'îrtî</em>) means to arouse/awaken — Cyrus is YHWH's awakened instrument. The purpose is double: to build the city (<em>yibĕneh 'îrî</em>) and release the exiles (<em>gālûtî yĕšallēaḥ</em>). The clause <em>lō' bĕmḥîr wĕlō' bĕšōḥad</em> — not for price, not for bribe — emphasizes sheer sovereign grace.</p>",
+"14": "<p><strong>yĕgî'a mĭṣrayim</strong> — <em>the wealth of Egypt</em>. Three nations — Egypt, Cush, Sabeans — will transfer their wealth and come in chains (<em>bazzîqqîm</em>) and bow, confessing <em>'ak bĕkā 'ēl wĕ'ên 'ôd</em> — <em>Surely God is in you, and there is no other</em>. The chains here are voluntary submission, not conquest. This is the reversal of exodus: former oppressor nations becoming worshippers.</p>",
+"15": "<p><strong>'ēl mistattēr</strong> — <em>a God who hides himself</em>. The Hithpa'el participle of סָתַר — <em>who conceals himself</em> — describes YHWH's mysterious self-veiling in history, even as he is confessed as <em>'ĕlōhê yiśrā'ēl môšîa'</em> — <em>God of Israel, Savior</em>. The tension between hiddenness and saving action is a motif throughout Isaiah.</p>",
+"16": "<p><strong>bōšû wĕgam-niklĕmû</strong> — <em>they are put to shame and also confounded</em>. The idol-makers (<em>ḥārāšê ṣîrîm</em>, craftsmen of idols) face corporate humiliation. The Pi'el <em>yēlĕkû</em> — <em>they go off together</em> — in shame. The contrast with v. 17 (Israel saved with eternal salvation) is rhetorically sharp.</p>",
+"17": "<p><strong>niôša' yiśrā'ēl</strong> — <em>Israel is saved by YHWH with an everlasting salvation</em>. The Niphal of יָשַׁע — passive, Israel as recipient of salvation. The modifier <em>tĕšû'at 'ôlāmîm</em> — everlasting salvation — is unique in Isaiah; temporal qualifiers emphasize the finality and permanence of what YHWH accomplishes.</p>",
+"18": "<p><strong>lō'-tōhû bĕrā'āh</strong> — <em>not in chaos did he form it</em>. YHWH created earth to be inhabited (<em>lāšèbet yĕṣārāh</em>) — <em>yāšab̠</em> (to dwell) is the telos of creation. The use of <em>tōhû</em> (formless void, cf. Gen 1:2) asserts that chaos was not the intended state. Monotheistic purpose underlies all creation. The repetition of <em>'ănî YHWH wĕ'ên 'ôd</em> anchors the theology.</p>",
+"19": "<p><strong>lō'-bassēter dibbartî</strong> — <em>I have not spoken in secret, in a land of darkness</em>. YHWH's word is public, given in the open and declared in advance — contrasting with the oracular obscurities of pagan divination. The verb <em>'āmartî</em> — <em>I said</em> — and <em>dibbartî</em> — <em>I spoke</em> — are *qatal* perfects of completed, dependable revelation.</p>",
+"20": "<p><strong>hiqqābĕṣû ûbō'û</strong> — <em>assemble yourselves and come</em>. The call is universal: survivors of the nations (<em>pĕlîṭê haggôyim</em>). The irony — those who pray to a wooden god (<em>wĕmitpallĕlîm 'el-'ēl lō' yôšîa'</em>) have no knowledge — sets up the contrast with YHWH who saves. The verb <em>yôšîa'</em> (Hiphil of ישׁע) — cannot save — deliberately echoes <em>môšîa'</em> of v. 15.</p>",
+"21": "<p><strong>haggîdû wĕhaggîšû</strong> — <em>declare and present your case</em>. Legal language: YHWH challenges the nations to produce counsel (<em>yā'ṣû</em>) that predicted events. The rhetorical question <em>ûmî hiš-mî'a</em> — <em>who made this heard?</em> — anticipates the answer: YHWH alone. The divine title <em>'ēl ṣaddîq ûmôšîa'</em> — <em>righteous God and Savior</em> — combines covenantal justice with redemptive action.</p>",
+"22": "<p><strong>pĕnû 'ēlay wĕhiwwāšĕ'û</strong> — <em>Turn to me and be saved, all the ends of the earth!</em>. The Qal imperative <em>pĕnû</em> (turn) and Niphal imperative <em>hiwwāšĕ'û</em> (be saved) form a paired command: turning and salvation are simultaneous. The universal scope (<em>kol-'apĕsê 'āreṣ</em>) is maximally inclusive. The theological ground: <em>'ănî 'ēl wĕ'ên 'ôd</em>.</p>",
+"23": "<p><strong>bî niš-ba'tî</strong> — <em>By myself I have sworn</em>. Divine oath formula (cf. Gen 22:16). The word that has gone from YHWH's mouth (<em>yāṣā' mippî ṣĕdāqāh</em>) will not return empty. The prediction: <em>kol bèrek tikra'</em> — <em>every knee shall bow</em> — and <em>kol lāšôn tiššābaʿ</em> — <em>every tongue shall swear</em>. The *yiqtol* verbs convey inevitable future reality. NT: Phil 2:10–11; Rom 14:11 cite this verse for Christ's universal lordship.</p>",
+"24": "<p><strong>'ak bYHWH lî 'āmar</strong> — <em>Only in YHWH are righteousness and strength</em>. The particle <em>'ak</em> (only, surely) introduces the exclusive claim. The phrase <em>'ēlāyw yāb̠ô' wĕyēb̠ōšû</em> — all who were angry at him will come in shame (<em>yēb̠ōšû</em>, Niphal of בּוֹשׁ) — reversal of the shaming of Israel's enemies.</p>",
+"25": "<p><strong>bĕYHWH yiṣdĕqû</strong> — <em>in YHWH all the offspring of Israel will be declared righteous</em>. The Qal *yiqtol* <em>yiṣdĕqû</em> — to be in right standing, to be justified — closes the chapter on the widest possible note: all the seed of Israel vindicated and glorying (<em>yit-hallālû</em>, Hithpa'el of הָלַל). This is the eschatological endpoint of the Cyrus oracle: political liberation serves theological vindication.</p>"
+}
+}
+
+def main():
+    existing = load_comm('mkt-original', 'isaiah')
+    merge_comm(existing, ISAIAH)
+    save_comm('mkt-original', 'isaiah', existing)
+    v = sum(len(vs) for vs in ISAIAH.values())
+    print(f'Isaiah 45 mkt-original: {v} verses written.')
+
+if __name__ == '__main__':
+    main()
