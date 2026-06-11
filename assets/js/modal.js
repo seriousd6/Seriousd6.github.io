@@ -74,8 +74,19 @@ export function registerModalDictionary(fn)    { _renderModalDictionaryFn  = fn;
 // made on the verse-study page are visible here without a page reload.
 
 export function _commAttr(source) {
+  // INTENT: Returns attribution HTML for the given commentary source ID.
+  //   AI-assisted sources (isAI: true) get a .src-badge--ai chip linking to /about/;
+  //   public-domain sources get plain italic text. HTML output is safe because all
+  //   content comes from the hardcoded COMMENTARY_SOURCES array, never user input.
+  // CHANGE? If COMMENTARY_SOURCES moves to core.js or isAI semantics change, update here.
+  // VERIFY: Select "Original Language (MKT)" in verse study — attribution shows gold AI badge.
   var s = COMMENTARY_SOURCES.filter(function (x) { return x.id === source; })[0];
-  return s ? s.attr : source;
+  if (!s) return source;
+  if (s.isAI) {
+    return '<span class="src-badge src-badge--ai">' + s.label +
+           ' · AI-assisted · <a href="/about/">methods &amp; prompts</a></span>';
+  }
+  return s.attr;
 }
 
 // ── buildModalDOM ─────────────────────────────────────────────────────────
@@ -529,7 +540,7 @@ export function renderModal(parsed, versionId) {
       }
 
       body.innerHTML = html;
-      attr.textContent = ATTRIBUTION[versionId] || '';
+      attr.innerHTML = ATTRIBUTION[versionId] || '';
       applyModalHighlights(body, parsed);
       _maybeAutoTag(body);
       _injectModalFootnotes(parsed, body);
@@ -1486,20 +1497,6 @@ export function _injectShortcutsBtn() {
   btn.setAttribute('aria-label', 'Keyboard shortcuts');
   btn.textContent = '?';
   btn.addEventListener('click', _showShortcutsOverlay);
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
-}
-
-export function _injectPrintBtn() {
-  var browseBar = document.querySelector('.reader-browse-bar');
-  if (!browseBar || document.getElementById('reader-print-btn')) return;
-  var btn = document.createElement('button');
-  btn.id        = 'reader-print-btn';
-  btn.className = 'reader-print-btn';
-  btn.title     = 'Print chapter';
-  btn.setAttribute('aria-label', 'Print chapter');
-  btn.textContent = '⎙ Print';
-  btn.addEventListener('click', function () { window.print(); });
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
 }

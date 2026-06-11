@@ -1,45 +1,40 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Context Commentary — Ezekiel chapters 47–48
+Run: python3 scripts/zc-context-ezekiel-47-48.py
+
+These two chapters are the climax of the eschatological vision in Ezekiel 40–48.
+
+Key interpretive decisions:
+- Ch47 temple river: treated as eschatological/typological, not literally predictive of a physical
+  Kidron valley transformation; the primary referent is the restoration of creation through YHWH's
+  presence, fulfilled typologically in the Spirit flowing from Christ (John 7:38-39; Rev 22:1-2)
+- v11 salt marshes: the preservation of some salt areas is a feature of the vision's realism —
+  even the eschatological order maintains practical structures rather than abolishing all
+  present-world functions
+- v12 monthly fruit / healing leaves: the explicit connection to Gen 2:9 (tree of life) and
+  Rev 22:2 (leaves for healing of nations) is treated as intentional canonical bookending
+- Ch48 Zadokite priests: the favored status of the sons of Zadok reflects the historical Zadokite
+  claim to legitimate priestly lineage; the Qumran community's self-identification as "sons of Zadok"
+  shows its live significance in Second Temple Judaism
+- v35 YHWH-Shammah: treated as the theological capstone of the entire book, answering the crisis
+  of the glory's departure in chs 10-11 with a permanent-presence declaration
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +44,78 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
+EZEKIEL_CONTEXT = {
   "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
+    "1": "<p>The temple river vision begins with water flowing from below the south side of the temple threshold (<em>miftan habbayit</em>). In ANE cosmology, the temple was built at the center of the world over the <em>apsu</em> — the primordial freshwater ocean beneath the earth from which rivers spring. Babylon's Esagila temple was located over the symbolic apsu; the cosmic water flowing from the temple's foundation was an architectural and theological statement. Jerusalem's temple on Mount Moriah had a geographic precedent: the Gihon spring (the city's primary water source) flows from below the eastern hill of Jerusalem. Ezekiel's vision supernaturalizes this existing reality: the water that trickled from the Gihon becomes a cosmic river. The eastward direction is topographically accurate — the Kidron valley runs east-southeast from Jerusalem toward the Jordan rift and the Dead Sea.</p>",
+    "2": "<p>The angel-guide leads Ezekiel out through the north gate (where the waters would not yet be visible) and around the outside to the east gate — positioning him as an observer of the water emerging from the south side. The north-gate exit and east-gate observation point are part of Ezekiel's characteristic approach: the vision's features are revealed incrementally, as a tour of the eschatological temple complex. &#8220;Water trickling out from the south side&#8221; (<em>mayim mefakkim min-hakkathef hayemanit</em>) — a trickle at the source, not yet impressive in volume, establishes the contrast with what follows. The miracle is not in the starting volume but in the unexplained growth.</p>",
+    "3": "<p>The measuring man's 1,000-cubit intervals (approximately 500 meters each) give the water-depth survey a systematic, careful structure. At the first measurement Ezekiel is ankle-deep — the water is real and physical, not a vision-illusion. A cubit is roughly 18 inches / 45 cm; ankle-deep in a 1,000-cubit-wide channel is already substantial. The measuring line (<em>qav hamidah</em>) is the same instrument used throughout chs. 40-43 for the temple measurements — the eschatological order is precisely measured, not vague or approximate. The precision contrasts with the chaotic disorder of the exile and the imprecise vagueness of merely human hope.</p>",
+    "4": "<p>The water doubles in depth at each station — ankle to knee to waist — without any visible tributaries or additional sources. Natural rivers deepen as tributaries join them; this river deepens from the sacred source alone. The parallel in the NT is the miraculous multiplication of resources from a divine source: the feeding of 5,000 begins with what a child can carry and becomes more than sufficient for thousands (John 6:9-13). The eschatological water follows the same logic of divine surplus: YHWH's provision does not merely match need — it overflows all natural limits.</p>",
+    "5": "<p>&#8220;A river I could not cross, for the water had risen; it was deep enough to swim in, a river that could not be forded&#8221; (<em>nahal asher lo-uchal la-avor ki-gavu hamayim mey-sivah nahal asher lo-ye-aver</em>) — impassable depth. The verb &#8220;could not cross&#8221; signals that the river now exceeds human control and navigation: one can no longer wade through it by one's own strength but must swim — that is, surrender to the current. The theological implication has been recognized throughout the Christian tradition: the river of divine grace overflows human management. John's &#8220;rivers of living water&#8221; (John 7:38) and Revelation's &#8220;river of the water of life&#8221; (Rev 22:1) cite this exact verse as their OT source.</p>",
+    "6": "<p>&#8220;Son of man, have you seen this?&#8221; — the angel's question invites Ezekiel to register the significance of what he has witnessed. The same rhetorical invitation appears in the vision of the dry bones (37:3: &#8220;can these bones live?&#8221;) and in Zechariah's visions (Zech 4:2: &#8220;what do you see?&#8221;). The divine guide does not lecture but questions — drawing the prophet into active contemplation rather than passive reception. &#8220;He led me back to the bank of the river&#8221; — returning to the observation point for the next phase of the vision: the trees and the sea.</p>",
+    "7": "<p>&#8220;A great many trees on both sides&#8221; (<em>etz rav meod al-sefat hanahal mizzo umizo</em>) — the trees lining the river's banks are the first preparation for v.12's fruit-and-healing description. In Genesis 2:9-10, a river flowed out of Eden and the tree of life stood in the garden; here the river flows out of the eschatological temple and the trees stand on both banks. The river-and-trees combination is the Eden-garden pattern: where YHWH's river flows, the original paradise-garden returns. The ancient Israelite audience would have recognized this as the restoration of what was lost at the Fall.</p>",
+    "8": "<p>The river flows to the eastern region, down to the Arabah (the Jordan rift valley south of the Dead Sea), and into the sea — the Dead Sea (<em>yam haqadmoni</em>, the eastern sea). &#8220;When they flow into the sea, the water there will become fresh&#8221; (<em>venitrefu hamayim</em>, literally will be healed) — the same verb used for healing wounds and diseases. The Dead Sea (averaging 33% salinity, approximately 10 times saltier than the ocean) is the most lifeless large body of water on earth. No fish live in it; its shores are salt formations; its name in Hebrew (<em>Yam haMelach</em>, Sea of Salt) reflects its absolute barrenness. That YHWH's river will heal it is the paradigmatic eschatological reversal: what is most dead in the created order will be made most alive by the flow from YHWH's sanctuary.</p>",
+    "9": "<p>&#8220;Every living creature that swarms will live; there will be very many fish. For these waters go there and make the sea fresh&#8221; — the ecological transformation is total and immediate. &#8220;Very many fish&#8221; (<em>dagah rabbah meod</em>) — fish abundance was a primary indicator of divine blessing in the ancient Near East; the Nile's fish were Egypt's food staple (Num 11:5: the Israelites in the wilderness remembered the fish they ate in Egypt). The Dead Sea transformed into a fish-teeming body of water is the biological reversal of the curse — where YHWH was absent (the Dead Sea region is associated with Sodom and the cities of the plain, Gen 14:3; 19:24-29), life will flourish through his presence.</p>",
+    "10": "<p>En-gedi (<em>Ein Gedi</em>, &#8220;spring of the young goat&#8221;) is the famous oasis on the western shore of the Dead Sea, currently one of the few natural freshwater springs in the Judean desert. It was known in biblical times for its vineyards (Song of Songs 1:14) and was a refuge for David when fleeing Saul (1 Sam 24:1). En-eglaim is probably modern Ain Feshkha, near the northern end of the Dead Sea. Fishermen standing along the entire length of the shore from one famous spring to another — from south to north — is the &#8220;from Dan to Beersheba&#8221; formula applied to the Dead Sea: totality expressed through named endpoints. &#8220;Like the fish of the Great Sea&#8221; — the Mediterranean was the richest fishing body of water the ancient Israelites knew; the Dead Sea will match its abundance.</p>",
+    "11": "<p>&#8220;Its swamps and marshes will not become fresh; they will be left for salt&#8221; — even in the eschatological vision, a qualification remains. Some areas of standing water at the margins will not be freshened — they will remain as salt-producing zones. Salt in the OT is the preservative of covenant (Num 18:19: &#8220;a covenant of salt forever before the LORD&#8221;; 2 Chr 13:5: the Davidic covenant is a &#8220;covenant of salt&#8221;), the required accompaniment of every grain offering (Lev 2:13), and a practical necessity for preserving food. The preservation of salt-producing marshes in the eschatological order reflects a realism that anticipates Revelation's structure: the new creation is genuinely new but does not abolish all structures of the present order. Some things persist as they are because they are good.</p>",
+    "12": "<p>&#8220;On the banks of the river, on both sides, will grow all kinds of trees for food. Their leaves will not wither, nor their fruit fail; they will bear fresh fruit every month, because the water for them flows from the sanctuary. Their fruit will be for food, and their leaves for healing&#8221; — this verse closes a canonical arc that opens in Genesis 2:9 (tree of life in the garden, bearing fruit; the river flowing from Eden) and closes in Revelation 22:2 (&#8220;the tree of life with its twelve kinds of fruit, yielding its fruit each month. The leaves of the tree were for the healing of the nations&#8221;). The specific verbal parallels between Ezek 47:12 and Rev 22:2 are not coincidental: John is citing Ezekiel explicitly, identifying the eschatological river-and-trees as the garden-of-Eden restoration realized in the new Jerusalem. Monthly fruit rather than annual harvest signals perpetual, unceasing abundance — the agricultural cycle of seasons and scarcity replaced by the continuous fruitfulness of the divine economy. Leaves for healing extend the trees' benefit beyond nutrition to restoration: even decay and disease are reversed.</p>",
+    "13": "<p>The land-boundary section begins with the patriarchal formula: &#8220;Thus says the Lord GOD: This is the boundary by which you shall divide the land as an inheritance among the twelve tribes of Israel.&#8221; Joseph receives two portions (via Manasseh and Ephraim) — this honors the double-portion given to Joseph by Jacob (Gen 48:5-6, 22), which was the inheritance right normally belonging to the firstborn. Reuben (the actual firstborn) lost his double-portion through his sin (Gen 49:3-4; 1 Chr 5:1-2). Joseph's double portion in the eschatological allotment maintains this ancient honor permanently.</p>",
+    "14": "<p>&#8220;I raised my hand and swore to give it to your fathers; this land shall fall to you as your inheritance&#8221; — the divine oath (<em>nasa yad</em>, raising the hand = oath-gesture in ANE legal tradition) to the patriarchs is the ultimate basis for the eschatological land allotment. The patriarchal promises are repeatedly described as sworn oaths (Gen 12:7; 15:18; 22:16-17; 26:3; 28:13; Exod 6:8; Deut 1:8). The phrase &#8220;this land shall fall to you&#8221; (<em>venafal halakhem haaretz benahalah</em>) uses the term for the allocation of portions by lot — as if the eschatological land-assignment is itself a cosmic lottery superintended by YHWH. &#8220;Equally, one share as well as another&#8221; — the eschatological order is characterized by absolute equity: no tribe receives more or better land than another.</p>",
+    "15": "<p>The northern boundary begins at the Great Sea (Mediterranean) and runs northeast toward Lebo-hamath (the entrance to the Syrian city of Hamath on the Orontes River). Lebo-hamath was the traditional northern ideal-boundary of the Promised Land (Num 34:8; 1 Kings 8:65; Amos 6:14). Under David and Solomon, Israel reached this northern extent during the empire's greatest expansion; under most other kings, the actual northern border fell considerably short. The eschatological vision restores the maximum promised extent — not as a correction to history but as the fulfillment of the patriarchal boundaries.</p>",
+    "16": "<p>Berothah and Sibraim are locations on the border between the Aramean kingdoms of Damascus and Hamath — a frontier region roughly corresponding to modern southern Syria/northern Lebanon. Hauran is the fertile volcanic plateau east of the Sea of Galilee (modern Jebel Druze area of southern Syria), known for its rich basaltic soil and agricultural productivity. The boundary description uses real place-names to establish that the eschatological vision is geographically anchored, not purely symbolic — the land promised is a specific piece of the earth, with named borders that could in principle be drawn on a map.</p>",
+    "17": "<p>Hazar-enan (&#8220;enclosure of springs&#8221;) is the northeastern corner of the boundary — probably in the Damascus region. &#8220;The northern border of Damascus, with the border of Hamath beyond&#8221; — this establishes that the eschatological allotment includes territory that was previously Aramean, not Israelite. The inclusion of Damascus's northern border implies that even formerly enemy territory is absorbed into the restored Israel — the eschatological boundaries exceed the historical Solomonic boundaries. The vision is not merely restorative but transformative.</p>",
+    "18": "<p>The eastern boundary runs along the Jordan River from Hauran south to the Dead Sea (&#8220;eastern sea&#8221;). The Jordan as the eastern boundary reflects the traditional Israelite self-understanding: the Transjordanian territories (Reuben, Gad, half-Manasseh) were allocated by Moses (Num 32) but were always understood as the outer edge of the inheritance. In Ezekiel's vision, the Jordan is the boundary — meaning the Transjordanian territories are not included in the twelve-tribe allotment. The twelve tribes are arranged west of the Jordan, the land of the promise, with the Jordan forming the definitive eastern edge.</p>",
+    "19": "<p>The southern boundary runs from Tamar (near the southern end of the Dead Sea, probably modern Ain Husb) westward to Meribah-kadesh (Kadesh-barnea, the wilderness oasis where Israel spent time in the forty years) and then along the Brook of Egypt (<em>nahal Mitzrayim</em>) to the Great Sea. The Brook of Egypt is the Wadi el-Arish, which runs across the Sinai peninsula to the Mediterranean near el-Arish — the traditional southwestern border of Canaan and the historical boundary between Egypt and Israel's territory (1 Kings 8:65). The southern boundary follows the same natural features that historically separated Israel's territory from the Egyptian sphere of influence.</p>",
+    "20": "<p>The western boundary is simply the Great Sea (Mediterranean) — the natural western limit of the known Levantine world. Running &#8220;to a point opposite the entrance of Hamath&#8221; establishes continuity with the northern boundary (Lebo-hamath) on the coastal side. The four boundaries together (Mediterranean west, Lebanon/Syria north, Jordan east, Sinai south) describe a territory corresponding to the maximum promises of the Abrahamic covenant (Gen 15:18: &#8220;from the river of Egypt to the great river, the river Euphrates&#8221;) but implementing them through the specific Mosaic boundaries of Num 34 rather than the wider Euphrates-to-Egypt extent.</p>",
+    "21": "<p>&#8220;You shall divide this land among yourselves according to the tribes of Israel&#8221; — the allocation is plural and communal: not a single monarch's territory but a twelve-tribe inheritance with each tribe having its own defined portion. The tribal structure of the eschatological vision contrasts with the monarchic centralization that preceded the exile. Post-exilic restoration visions (also in Isa 11:12-13; Jer 31:31; and Ezek 37:15-22) consistently envision the twelve-tribe covenant structure renewed rather than replaced by a single kingdom — the return to the tribal covenant form is itself a theological statement about the nature of YHWH's governance.</p>",
+    "22": "<p>&#8220;You shall allot it as an inheritance for yourselves and for the resident aliens who live among you and have had children among you. They shall be to you as native-born Israelites; they shall be allotted an inheritance among the tribes of Israel&#8221; — this is the most remarkable provision in the eschatological land-allotment. Mosaic law carefully distinguished native Israelites (<em>ezrach</em>) from resident aliens (<em>ger</em>): the <em>ger</em> was protected (Exod 22:21; Deut 10:19) and could participate in the Passover if circumcised (Exod 12:48) but did not own tribal land. Ezekiel's eschatological vision removes this distinction: aliens with children in the community are &#8220;as native-born&#8221; (<em>k'ezrach</em>) and receive tribal inheritance allotments. This provision is the OT's clearest eschatological anticipation of Gentile inclusion in covenant inheritance — Paul's argument in Eph 2:12-13 (&#8220;you who once were far off have been brought near&#8221;) and Gal 3:29 (&#8220;if you are Christ's then you are Abraham's offspring, heirs according to promise&#8221;) are the Christological fulfillment of this verse.</p>",
+    "23": "<p>&#8220;In whatever tribe the sojourner resides, there you shall assign his inheritance&#8221; — the alien's residence determines their tribal affiliation in the eschatological order. The principle is spatial-relational: belonging is determined by where one has put down roots and built family, not by ethnic descent. This is a striking inversion of the Deuteronomic concern to distinguish Israel from the nations (Deut 7:1-6; 23:3-8): in the eschatological order, the residence-and-family criterion for inheritance replaces the birth-and-genealogy criterion. The practical wisdom is social integration: aliens who have lived among a tribe and raised children there are embedded in its community; the inheritance only confirms what social reality has already established.</p>"
   },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
+  "48": {
+    "1": "<p>The tribal allotment of ch.48 follows the sacred district placement established in 45:1-8 and 48:8-20. Dan is assigned the northernmost strip — from the road of Hethlon (the route to the Hamath entrance) to Hazar-enan. Dan's placement in the extreme north is theologically charged: Dan was the tribe most associated with idolatry in the northern kingdom. Jeroboam set one of his two golden calves at the city of Dan (1 Kings 12:29-30), and the shrine there was condemned throughout the prophets (Amos 8:14; Hos 8:5-6). Placing Dan at the farthest remove from the sanctuary (in the northernmost strip, seven tribes away from the central sacred district) could be read as honorary distance — a restored but still distinct position — or as simple geometric logic. The Revelation 7 list of the 144,000 conspicuously omits Dan (replaced by Manasseh), suggesting early Christian tradition was aware of Dan's ambiguous status.</p>",
+    "2": "<p>Asher is allocated the second strip from the north, adjacent to Dan. In the historical tribal allotments (Joshua 19:24-31), Asher received territory along the Phoenician coast, north of Carmel. Asher was criticized in the Song of Deborah for remaining at the sea while Israel went to war (Judg 5:17). In the eschatological allotment, Asher occupies interior land rather than coastal territory — the arrangement is east-to-west strips without the geographical features (coastlines, mountain ranges) that determined the historical allotments. The uniform &#8220;from the east side to the west side&#8221; formula applied to each tribe reflects the eschatological equality of the distribution.</p>",
+    "3": "<p>Naphtali, historically in the upper Jordan valley and the Galilee region (Joshua 19:32-39), receives the third strip. Naphtali was praised in the Song of Deborah (Judg 5:18: &#8220;a people who risked their lives to the death&#8221;) and was the region where Jesus began his Galilean ministry — Matthew 4:13-16 cites Isa 9:1-2 (&#8220;land of Zebulun and Naphtali ... the people dwelling in darkness have seen a great light&#8221;) as fulfilled in Jesus's move to Capernaum. In the eschatological vision, Naphtali occupies a strip in the northern distribution without the specific Galilean geography of its historical allotment.</p>",
+    "4": "<p>Manasseh, the half-tribe (one of Joseph's two sons), receives the fourth strip — the only tribe in the northern seven that is half of a double-portion. In the historical allotments, the tribe of Manasseh was split between Cisjordan and Transjordan; in Ezekiel's vision, the Transjordanian territory is not part of the allotment (the Jordan is the eastern boundary, 47:18), so Manasseh receives a single western strip alongside the other tribes. The Joseph-double-portion is expressed through Ephraim and Manasseh each receiving their own full strip — so Joseph effectively gets two strips (vv. 4-5) as promised.</p>",
+    "5": "<p>Ephraim, the preeminent tribe of the northern kingdom and the tribe through which Jacob's blessing flowed (Gen 48:19-20: &#8220;his offspring shall become a multitude of nations&#8221;), receives the fifth strip. Ephraim's historical prominence — the northern kingdom was often called &#8220;Ephraim&#8221; in the prophets (Hos 4:17; 5:3; 13:1; Isa 7:2, 5, 8-9; 11:13) — gives its inclusion in the eschatological list significance: the divided kingdom (Israel/Ephraim in the north; Judah in the south) is reunited in the twelve-tribe allotment. Ezek 37:15-22 had already prophesied the re-uniting of the two sticks (Judah + Joseph/Ephraim) into one — the tribal allotment enacts this reunion spatially.</p>",
+    "6": "<p>Reuben, Jacob's firstborn who lost the birthright through his sin with Bilhah (Gen 35:22; 49:3-4), receives the sixth strip — just north of the sacred district, adjacent to Judah. In the historical allotments, Reuben was given Transjordanian territory (Num 32; Joshua 13:15-23). The eschatological allotment places Reuben in Cisjordan (west of the Jordan), in the main tribal body. The forfeited birthright status (which passed to Joseph/Judah in the historical arrangement) does not bar Reuben from the eschatological inheritance — the restoration is genuinely restorative, not merely recapitulating historical rewards and penalties.</p>",
+    "7": "<p>Judah receives the seventh strip, immediately north of the sacred district — the most honored position among the seven northern tribes. The positioning is not accidental: as the tribe of the Davidic covenant and the tribe through which the messianic promise runs (Gen 49:10: &#8220;the scepter shall not depart from Judah&#8221;), Judah's adjacency to the sacred district honors its covenant role. Judah is separated from the sanctuary only by the sacred district itself and flanks it directly — closer to the divine center than any other tribe. The southern side of the sacred district is flanked by Benjamin (v.23), the other tribe of the southern kingdom, creating a Judah-Benjamin bracket around the sanctuary.</p>",
+    "8": "<p>The sacred district (<em>terumah</em>) is twenty-five thousand cubits wide (east-west) and in breadth matching the tribal strips — approximately twelve kilometers square. The sanctuary (<em>miqdash</em>) is in the midst of the sacred district, centered both east-west and north-south. This centering is architecturally and theologically fundamental: the temple is not at the edge of the sacred territory but at its exact center, equidistant from all borders. The same principle governs Ezekiel's entire city vision: the holy center radiates outward in equal measure in all directions. The city of Jerusalem in Ezekiel's vision does not approach the temple from one direction but circles it equally from all sides.</p>",
+    "9": "<p>The &#8220;portion set apart for the LORD&#8221; (<em>hatrumah asher tarimu laYHWH</em>) has specific dimensions: twenty-five thousand cubits long and twenty thousand cubits wide. The distinction between the &#8220;holy portion&#8221; and the &#8220;city's property&#8221; (v.15) organizes the central territory into three horizontal strips: priests (25,000 × 10,000, with the sanctuary), Levites (25,000 × 10,000), and common use / city (25,000 × 5,000). The width-progression (10,000 priests, 10,000 Levites, 5,000 common) reflects a concentric holiness: the innermost strip contains the most sacred, the city strip is the least sacred within the sacred district.</p>",
+    "10": "<p>The priests' strip (25,000 × 10,000 cubits) has the sanctuary of the LORD at its center. The Zadokite priests are not named here but in v.11; this verse establishes the geographic fact before the identifying qualification. The measurement of the priestly strip as wider than the city strip (10,000 vs. 5,000 cubits) reflects the primacy of the priestly-sacred over the civic-common within the central district. The same hierarchical logic governs the wilderness camp arrangement (Num 2-3): the Levites surround the tabernacle; the priests are closest; the tribes are arrayed by standard; the holy things are at the center.</p>",
+    "11": "<p>&#8220;The consecrated priests, the sons of Zadok, who kept my charge and did not go astray when the people of Israel went astray, as the Levites did&#8221; — this verse is the eschatological vindication of the Zadokite priestly claim. Zadok was the priest who anointed Solomon (1 Kings 1:39) and whose line served as high priests throughout the First Temple period and into the Second Temple (the Oniad high priests traced their lineage to Zadok until the Maccabean period). The contrast with the Levites &#8220;who went astray&#8221; refers to Ezek 44:10-14: the Levitical priests who served at the <em>bamot</em> (high places) and participated in Israel's idolatry were demoted from sanctuary service. The Zadokites maintained temple-purity. The Dead Sea Scrolls community called themselves &#8220;sons of Zadok&#8221; (1QS 5:2; 9:14) — claiming Zadokite priestly legitimacy against the Hasmonean and Herodian high priests they regarded as usurpers.</p>",
+    "12": "<p>&#8220;A special allotment from the holy district — a most holy section, adjoining the Levites' territory&#8221; — the Zadokite priests' strip is distinguished as <em>qodesh qodashim</em> (most holy), the same category as the temple's inner sanctum. The entire priestly strip shares in the holiness of the sanctuary at its center. &#8220;Adjoining the Levites' territory&#8221; places the Levites in the strip between the priests and the city: the holiness-gradient (priests → Levites → common) is geographically expressed in the three-strip arrangement of the sacred district.</p>",
+    "13": "<p>The Levites receive a strip identical in dimensions to the priests (25,000 × 10,000) — the same size allocation honors their service even though they were demoted from sanctuary duty (Ezek 44:10-14). The same priestly dignity of service is maintained; only the specific function changes. The equal dimensions refuse to create a permanent underclass within the sacred ministry: the Levites are limited in sanctuary access but equal in spatial provision. This balance between accountability (the demotion stands) and grace (equal allocation) reflects the eschatological order's refusal to either excuse sin or permanently exclude the chastened.</p>",
+    "14": "<p>&#8220;They shall not sell or exchange any of it; they shall not alienate this prime portion of the land, for it is holy to the LORD&#8221; — the inalienability of the sacred portion is the final fulfillment of the Jubilee principle. Lev 25:23 established the theological basis: &#8220;the land shall not be sold in perpetuity, for the land is mine. For you are strangers and sojourners with me.&#8221; In the Jubilee system, land alienated through poverty returned to its original owner every fiftieth year — a temporary mechanism for an eternal truth. In the eschatological order, the most holy section is permanently inalienable: no sale, no exchange, no alienation. The land of YHWH's temple is held in trust, not owned, and the trust is permanent.</p>",
+    "15": "<p>The remaining strip of 5,000 × 25,000 cubits is for &#8220;common use&#8221; (<em>chol</em> — not holy but not ritually impure) — for the city, housing, and open land (<em>migrash</em>, pastureland outside the walls). The city occupies the center of this common strip, flanked by agricultural land on east and west (v.18). This arrangement separates the sacred district (where the sanctuary is) from the civic district (where people live and work) while both remain within the central allotment. The separation of sacred and civic within the same central zone reflects a nuanced theology: the sacred does not dominate all space, but the civic does not displace the sacred either — they coexist in ordered distinction.</p>",
+    "16": "<p>The city's dimensions — 4,500 cubits on each side — form a perfect square (approximately 2.25 km per side, or about 5 km² total area). The perfect square reflects the same mathematical ordering that characterizes the entire temple complex (chs. 40-43): YHWH's order is expressed in geometric precision. The pre-exilic Jerusalem was irregularly shaped and topographically constrained (the narrow ridge between the Kidron and Hinnom valleys); the eschatological city is unconstrained by topography and expresses its idealized form in perfect symmetry.</p>",
+    "17": "<p>Open land (&#8220;pastureland&#8221;, <em>migrash</em>) of 250 cubits surrounds the city on all four sides — a buffer zone between the city walls and the agricultural land. The <em>migrash</em> was a standard feature of Levitical cities in the Mosaic legislation (Num 35:1-5: each Levitical city had 1,000 cubits of migrash around it). The eschatological city follows the same spatial convention — the city-migrash-farmland sequence creates a gradient from urban to rural that mirrors the sacred-district gradient (most holy → holy → common) in the upper zone.</p>",
+    "18": "<p>The remaining length of the common-use strip — 10,000 cubits on each side of the city — is agricultural land whose produce is food for the city workers (<em>avodei hair</em>). This is the civic economy of the eschatological city: the surrounding agricultural zone sustains the urban population. The &#8220;workers of the city&#8221; do not live off tribute from subject peoples but from the productivity of their own land — a self-sustaining community rather than an extractive empire. The economic structure of the eschatological city thus reverses the Babylonian imperial model (where conquered peoples' surplus sustained the urban population of Babylon).</p>",
+    "19": "<p>&#8220;The workers of the city, from all the tribes of Israel, shall cultivate it&#8221; — the agricultural workers come from all twelve tribes, not just from one region. This pan-tribal participation in the city's food production dissolves the tribal-territorial separation that characterized the historical arrangements: all tribes contribute to the city's sustenance, and the city belongs to all tribes equally. The city is not Jerusalem-as-Judah's-capital but Jerusalem as all-Israel's city — the eschatological expression of the principle in v.35 that the city's name is YHWH's presence, not a tribal possession.</p>",
+    "20": "<p>The entire central allotment — 25,000 × 25,000 cubits — forms a perfect square when the sacred district (priests + Levites + city) is combined. The symmetry is explicit: &#8220;you shall set apart the holy portion together with the city's property&#8221; — they form a unified square. This 25,000 × 25,000 cubit square (approximately 144 km²) is the geometric center of the land, with the sanctuary at its exact center. Revelation's new Jerusalem is a perfect cube/square (Rev 21:16: &#8220;the city lies foursquare, its length the same as its width&#8221;) — the same mathematical perfection expressing divine order.</p>",
+    "21": "<p>The prince's territory flanks the sacred district on both sides — from the eastern edge of the 25,000 × 25,000 square to the Jordan (eastern border) and from its western edge to the Great Sea (western border). The prince occupies the full width of the tribal strip on both sides of the sacred district without encroaching on the district itself. This is the constitutional structure of Ezekiel's eschatological monarchy: the prince has extensive territory but is explicitly excluded from the sacred zone. Ezek 43:7-8 had condemned the pre-exilic kings who placed their palace &#8220;alongside my sanctuary, with only a wall between me and them.&#8221; The eschatological arrangement rectifies this by placing a substantial open territory between the prince's land and the sanctuary.</p>",
+    "22": "<p>The boundary details in v.22 clarify that the Levites' and city's portions within the central square are not part of the prince's territory — only the flanking land east and west of the square belongs to the prince. &#8220;Between the border of Judah and the border of Benjamin&#8221; establishes the vertical position of the central district: Judah to the north and Benjamin to the south, the two tribes of the southern kingdom, bracket the sacred district. This positioning honors the historical fact that Jerusalem was located on the border between Judah and Benjamin (Josh 15:63; 18:28) — even in the eschatological arrangement, the traditional tribal boundaries inform the layout.</p>",
+    "23": "<p>Benjamin receives the first strip south of the sacred district — the position corresponding to Judah's position north of it. Just as Judah is the first northern tribe and is adjacent to the sacred district, Benjamin is the first southern tribe and adjacent to it. The Judah-Benjamin bracketing of the sanctuary continues the historical connection: these two tribes were historically inseparable from Jerusalem and its temple, and in the eschatological arrangement they remain the sanctuary's nearest neighbors. Benjamin's position of honor (immediately adjacent to the sanctuary, south side) corresponds to the tribe's historical identification with the temple mount — the temple was technically within Benjamin's tribal territory according to some boundary-readings (Josh 18:16, 28).</p>",
+    "24": "<p>Simeon receives the second strip south of the sacred district. Simeon was historically one of the most disadvantaged tribes — Jacob's blessing called him scattered in Israel (Gen 49:7) because of his violence at Shechem (Gen 34:25-31), and Simeon's tribal allotment was absorbed within Judah's territory (Joshua 19:1-9) rather than being a separate region. In the eschatological allotment, Simeon receives its own equal strip, undoing the historical dispossession. The restoration of the historically diminished tribe is part of the eschatological pattern: those who were least honored in history receive full honor in the restored order.</p>",
+    "25": "<p>Issachar, historically located in the Jezreel valley (Joshua 19:17-23), receives the third strip south. In the Song of Deborah, Issachar is praised for going into battle (Judg 5:15: &#8220;Issachar's princes were with Deborah&#8221;). The Chronicler credits the sons of Issachar with &#8220;understanding of the times, to know what Israel ought to do&#8221; (1 Chr 12:32) — wisdom and discernment were their tribal characterization. In the eschatological vision, their strip occupies the same horizontal position as all others: equal in size, equal in value.</p>",
+    "26": "<p>Zebulun, historically adjacent to Issachar in the lower Galilee region (Joshua 19:10-16), receives the fourth strip south. Zebulun and Naphtali (already placed in the northern third strip) were the tribes of Galilee — the same region Isaiah predicted would see a great light (Isa 9:1-2) and Matthew identified as the location of Jesus's ministry (Matt 4:15-16). In the eschatological allotment they are separated: Naphtali in the north and Zebulun in the south of the sacred district, creating a geographic symmetry around the center.</p>",
+    "27": "<p>Gad receives the southernmost strip — the last tribe before the southern boundary of Tamar and the Brook of Egypt. Historically, Gad occupied Transjordanian territory (the Gilead region, Num 32; Joshua 13:24-28). The eschatological arrangement places Gad in Cisjordan, in the southern extremity — a geographic repositioning that integrates the historically peripheral tribe into the main tribal body. Jacob's blessing (Gen 49:19: &#8220;raiders shall raid Gad, but he shall raid at their heels&#8221;) characterized Gad as a border-warrior tribe; placement at the southern border of the eschatological allotment may preserve a faint echo of this border-guardian role.</p>",
+    "28": "<p>The southern boundary of Gad's strip runs from Tamar to Meribah-kadesh (Kadesh-barnea) and along the Brook of Egypt (Wadi el-Arish) to the Great Sea — exactly the southern boundary specified in 47:19. The recapitulation of the boundary at Gad's southern edge confirms that the tribal distribution fills the land completely and precisely, with no gaps and no overflows: the southernmost tribe's southern border is the land's southern border. The mathematical precision of the eschatological allotment — equal strips, symmetric boundaries, centered sanctuary — reflects the ordered perfection of the restored creation.</p>",
+    "29": "<p>&#8220;This is the land that you shall allot as an inheritance among the tribes of Israel, and these are their portions, declares the Lord GOD&#8221; — the land-allocation oracle is formally closed with the double confirmation formula: declarative statement (&#8220;this is the land&#8221;) and divine speech-marker (&#8220;declares the Lord GOD&#8221;). The allocation is both human (&#8220;you shall allot&#8221;) and divine (&#8220;declares the Lord GOD&#8221;) — the tribes receive their portions by human process, but the legitimacy and finality of the allocation is grounded in YHWH's declaration. This combination of human agency and divine authority mirrors the Jubilee structure: human land-transactions are valid, but YHWH's prior claim and final word set their boundaries.</p>",
+    "30": "<p>The city's gates are introduced — &#8220;these shall be the exits of the city&#8221; (<em>veeleh totzaot hair</em>). The four walls, each measuring 4,500 cubits, have three gates each, totaling twelve gates for the twelve tribes. The &#8220;exits&#8221; (<em>totzaot</em>) word implies that the gates are named for the direction the traveler goes out toward each tribe's territory: through the Reuben gate, one heads toward Reuben's strip; through the Dan gate, toward the northernmost territory. The city gates function as a directional map of the whole land, with the city at the center and the tribes radiating outward through their respective gates.</p>",
+    "31": "<p>North wall gates: Reuben, Judah, Levi. The inclusion of Levi among the gate-names is significant — Levi has no tribal territory strip (the Levites' portion is within the central sacred district), but Levi receives a gate. This honors the tribe's priestly identity: even without a land allotment, Levi has a place in the city's gates. Revelation 21:12-13 cites these twelve gates directly: &#8220;the wall of the city had twelve gates ... on the gates the names of the twelve tribes of the sons of Israel. On the east three gates, on the north three gates, on the south three gates, and on the west three gates.&#8221; The gate-arrangement is one of the most directly cited Ezekielian elements in the NT's eschatological vision.</p>",
+    "32": "<p>East wall gates: Joseph, Benjamin, Dan. Joseph is named (rather than Ephraim + Manasseh separately) — presumably because the full double-portion would require more than one gate name, and the gate system requires exactly three per wall. Alternatively, naming Joseph as one gate honors the tribal patriarch rather than sub-dividing. Dan appears on the east wall — the tribe placed at the northern extremity of the land has a gate on the east wall. The gate placement does not strictly correspond to where each tribe's territory lies; the arrangement likely balances the distribution of names across the four walls.</p>",
+    "33": "<p>South wall gates: Simeon, Issachar, Zebulun. These three tribes had their strips in the southern portion of the central allotment (vv. 24-26), so their south-wall gate placement corresponds roughly to their territorial position. The south wall's three names are all Leah-tribes (sons of Jacob by Leah) — as are the north wall's Reuben and Judah (Levi is also Leah's son). The east wall has Joseph (Rachel's son), Dan (Bilhah's son), and Benjamin (Rachel's son). The west wall has Gad (Zilpah), Asher (Zilpah), and Naphtali (Bilhah). The matriarchal mixing across walls reflects the eschatological dissolution of the hierarchies among Jacob's sons and their mothers — in the restored city, all twelve gates are equal in dignity.</p>",
+    "34": "<p>West wall gates: Gad, Asher, Naphtali. These are the sons of Jacob's concubines Zilpah (Gad, Asher) and Bilhah (Naphtali) — historically considered lower in status than the sons of Leah and Rachel. Yet in the eschatological city, these sons have gates of equal dignity on the city wall. The book of Jubilees and later midrashic tradition wrestled with the status of Jacob's twelve sons; Ezekiel's gate-arrangement refuses any distinction: twelve equal gates, twelve equal tribes, twelve equal positions in the city of God.</p>",
+    "35": "<p>&#8220;The circumference of the city shall be eighteen thousand cubits. And the name of the city from that day on shall be: The LORD Is There&#8221; (<em>YHWH-Shammah</em>). The final verse of Ezekiel is the theological climax toward which the entire book has been moving. The book's crisis is the departure of YHWH's glory (<em>kavod</em>) from the temple in chs. 10-11: the Shekinah rose from the cherubim, paused at the temple threshold, went to the eastern gate, and then departed eastward from the city (10:18-19; 11:22-23), as if YHWH himself went into exile with his people. The book's restoration vision is the reversal of this departure: the glory returns from the east through the eastern gate (43:1-5), fills the temple, and declares permanent residence (43:7-9). The city's final name — YHWH-Shammah — is not a prediction of the future but a declaration of permanent present reality: YHWH Is There, not &#8220;was there&#8221; or &#8220;will be there.&#8221; The divine presence that departed in judgment has returned in grace, and its presence defines the city's identity for all time. The OT divine-name tradition (YHWH-Nissi, Exod 17:15; YHWH-Shalom, Judg 6:24; YHWH-Tsidkenu, Jer 23:6; YHWH-Raah, Gen 22:14) reaches its apex here: the most comprehensive divine name is not an attribute but presence itself — YHWH is there, and that is sufficient.</p>"
   }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'ezekiel')
+    merge_comm(existing, EZEKIEL_CONTEXT)
+    save_comm('mkt-context', 'ezekiel', existing)
+    for ch in ['47', '48']:
+        vv = existing.get(ch, {})
+        print(f'  ch{ch}: {len(vv)} verse(s) with context commentary')
 
 if __name__ == '__main__':
     main()

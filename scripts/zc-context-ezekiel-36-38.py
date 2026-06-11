@@ -1,45 +1,40 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Context Commentary — Ezekiel chapters 36–38
+Run: python3 scripts/zc-context-ezekiel-36-38.py
+
+Covers: ANE/historical background, geography, archaeology, cultural context
+NOT: Hebrew grammar (mkt-original) or Christological typology (mkt-christ)
+
+Key contextual clusters:
+- Ch 36: The restoration of the land and people; the "for my name's sake" theology
+  as YHWH's reputation among the nations at stake; the new heart/new spirit promise
+  (v26) as the climax of Ezekiel's restoration theology; agricultural restoration
+  vocabulary and its ANE covenantal background
+- Ch 37: The dry bones vision in its exilic context — the despair language "our bones
+  are dried up, our hope is perished" (v11) as the community's self-assessment;
+  the two-sticks vision as political unification oracle (Ephraim/Israel + Judah);
+  the historical divided monarchy context
+- Ch 38: Gog of Magog — identification candidates (Gyges of Lydia, Scythians,
+  symbolic northern enemy); the coalition geography (Meshech, Tubal, Gomer,
+  Beth-togarmah, Persia, Cush, Put, Sheba, Dedan); the eschatological battle
+  motif in ANE cosmology; cosmic earthquake and divine self-vindication
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +44,109 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"36": {
+"1": "<p>Chapter 36 opens with an oracle &quot;to the mountains of Israel&quot; — the direct counterpart to the oracle against the mountains in ch 6. Where ch 6 announced desolation for the mountains that hosted the idol-worship, ch 36 announces restoration for those same mountains now shamed by enemy occupation. The structural pairing of chs 6 and 36 is one of the major literary symmetries of the book: the same geographical entity that received the judgment oracle now receives the restoration oracle.</p>",
+"2": "<p>The enemy&apos;s taunt — &quot;Aha! The ancient heights have become our possession&quot; — is the specific insult addressed in the restoration oracle. The &quot;ancient heights&quot; (<em>bamot ʿolam</em>) refers to the highlands of Israel, the geographic heart of the land. The nations who said &quot;Aha!&quot; over Israel&apos;s desolation are the same nations condemned in ch 25 (Ammon, 25:3). The restoration is in part a vindication against these taunters.</p>",
+"3": "<p>Being made desolate and pursued from every side so that the nations talked about Israel — the diaspora experience of national humiliation is the context for the restoration promise. The Babylonian exile produced a community perceived by surrounding nations as abandoned by its God. The nations' theological conclusion (that YHWH had failed or been defeated) is precisely the &quot;profaning of YHWH's holy name&quot; that drives the restoration in vv22-23.</p>",
+"4": "<p>The address to the mountains, hills, ravines, valleys, desolate wastes, and forsaken cities — the comprehensive geographic inventory of the land as the addressee mirrors the comprehensive destruction oracle of ch 6. The mountains of Israel are promised that they will bear fruit for YHWH&apos;s people Israel; the land itself is a participant in the covenant, capable of responding to YHWH&apos;s word.</p>",
+"5": "<p>YHWH&apos;s jealous fire against the rest of the nations (Edom specifically and all the nations) who took Israel&apos;s land with &quot;wholehearted joy and utter contempt.&quot; Edom is singled out (Ezek 25:12-14; 35:1-15; Obad 1) as the paradigm of the nations who exploited Israel&apos;s collapse. Edomite expansion into the Negev following 586 BCE is documented archaeologically in the Negev Highland survey data and in later references to &quot;Idumea&quot; as formerly Edomite territory.</p>",
+"6": "<p>YHWH speaking in jealous wrath against the nations who have become a reproach to Israel — the same jealousy (<em>qinʾah</em>) that drove the judgment against Israel (ch 5:13) is now directed against the taunting nations. The divine jealousy is not petulant but covenantal: YHWH&apos;s reputation is bound to Israel&apos;s story; when Israel is humiliated, YHWH&apos;s name is dishonored among the nations.</p>",
+"7": "<p>YHWH lifting his hand in oath — the divine oath-gesture (<em>nasati ʾet-yadi</em>, I have raised my hand) is the ANE legal swearing-formula. Raising the hand was the standard gesture for oath-taking in the ancient Near East, documented in both Egyptian and Mesopotamian iconographic sources. YHWH&apos;s sworn oath ensures that the nations surrounding Israel will themselves bear shame.</p>",
+"8": "<p>&quot;But you, mountains of Israel, shoot your branches and yield your fruit to my people Israel&quot; — the botanical restoration imagery (branches, fruit, agricultural abundance) connects to the Deuteronomic blessing vocabulary (Deut 28:1-14). The promise of fruitfulness is the reversal of the covenant curse of barrenness (Lev 26:20; Deut 28:18). The timing — &quot;for they are coming soon&quot; — gives the restoration an eschatological urgency.</p>",
+"9": "<p>&quot;I am for you&quot; — the divine hostile-presence formula inverted: <em>hinneni ʾeleikhem</em> (behold I am for you/toward you), instead of the judgment formula <em>hinneni ʾaleikha</em> (I am against you). The agricultural activity (turning toward them, being cultivated, being sown) personifies the mountains as a farming operation under divine management. The plowing, sowing, and population-increase are the agricultural covenant-blessing triad.</p>",
+"10": "<p>Multiplying people on the mountains of Israel — all the house of Israel, all of it — the explicit inclusion of &quot;all of it&quot; anticipates the reunification of Ephraim and Judah announced in ch 37. The cities rebuilt and the waste places inhabited reverse the destruction oracle of ch 6:6 (&quot;cities shall be laid waste and the high places be desolate&quot;). The architectural and demographic restoration are inseparable.</p>",
+"11": "<p>The multiplication of people and animals on the mountains — a prosperity formula drawn from the Deuteronomic blessing vocabulary (Deut 28:11, &quot;YHWH will make you abound in prosperity in the fruit of your womb and in the fruit of your livestock and in the fruit of your ground&quot;). The declaration &quot;I will settle you as in your former times and will do more good to you than ever before&quot; is YHWH&apos;s self-commitment to exceed even the pre-exilic prosperity of the Solomonic period.</p>",
+"12": "<p>&quot;I will let people walk on you, even my people Israel&quot; — the land is addressed as the place where human beings walk. The land will no longer bereave Israel of children — an unusual promise suggesting that the land itself had been &quot;consuming&quot; its inhabitants through the wars and deportations. This personification of the land as a devourer that YHWH now restrains addresses the community&apos;s fear that the land itself had become hostile to human habitation.</p>",
+"13": "<p>The nations&apos; taunt that the land &quot;devours people and bereaves its nation of children&quot; — a specific accusation the surrounding nations had made about the land of Canaan. The land&apos;s reputation as a devourer of its inhabitants appears already in the pre-settlement spy report (Num 13:32, &quot;a land that devours its inhabitants&quot;). YHWH&apos;s promise reverses this reputation by ending the land&apos;s consuming character.</p>",
+"14": "<p>&quot;You shall no longer devour people and no longer bereave your nation of children&quot; — the divine promise addressed to the land itself. The grammatical second-person address to the land throughout ch 36 is not merely personification but a genuine oracle directed at the created order: the land has agency in the covenant relationship, capable of receiving divine promises alongside the people.</p>",
+"15": "<p>The ending of the nations&apos; taunts and the end of the peoples&apos; insults — the social humiliation of exile addressed alongside the agricultural restoration. The land will no longer cause the nation to stumble (the exile had caused many to conclude that YHWH had failed); YHWH declares that the land&apos;s covenant relationship with its people is restored.</p>",
+"16": "<p>A new oracle unit addresses the reason for the exile. The word-event formula resets the prophetic speech. The retrospective analysis of the exile&apos;s cause (vv16-21) is the theological foundation for the restoration&apos;s motivation (vv22-38).</p>",
+"17": "<p>The house of Israel living on their land defiling it &quot;like the defilement of a menstruant woman&quot; — the impurity language (<em>ketumat niddah</em>) applies the strongest Levitical purity category to the covenant violation. The land itself had become ritually unclean through Israel&apos;s bloodshed and idol-worship, as if defiled by the most serious form of bodily impurity. The Levitical connection between land-defilement and human moral violation (Lev 18:24-28; Num 35:33-34) is the theological principle at work.</p>",
+"18": "<p>YHWH pouring out his fury on them for the blood they shed in the land and for the idols with which they defiled it — the two-charge formula (blood + idols) that has been the structural basis of Ezekiel&apos;s indictment throughout (cf. 22:3-4). The fury poured out corresponds to the cup of wrath imagery of ch 23 and the metallurgical furnace of ch 22.</p>",
+"19": "<p>The scattering among the nations according to their ways and deeds — the exile as lex talionis. The pattern of Israel&apos;s social life was returned to them as the shape of their historical experience. The specific description &quot;according to their ways and according to their deeds I judged them&quot; establishes that the exile was not arbitrary but proportionate to the specific patterns of covenant violation documented in chs 1-24.</p>",
+"20": "<p>&quot;When they came to the nations, wherever they came, they profaned my holy name, in that people said of them, &apos;These are the people of YHWH, and yet they had to go out of his land.&apos;&quot; — the theological crisis of the exile: the surrounding nations drew the conclusion that YHWH had failed or been defeated. This theological embarrassment — YHWH&apos;s reputation among the nations being damaged by Israel&apos;s exile — is the specific concern that drives the restoration. YHWH&apos;s honor among the nations is at stake.</p>",
+"21": "<p>&quot;But I had concern for my holy name, which the house of Israel had profaned among the nations&quot; — the motivation for restoration is explicitly NOT Israel&apos;s repentance or merit but YHWH&apos;s own reputation (<em>shem qadshi</em>, holy name). This is the most theologically striking move in the book: the restoration is grounded not in Israel&apos;s worthiness but in YHWH&apos;s self-interest in his own honor among the nations. The Deuteronomy 9:4-5 pattern (&quot;not because of your righteousness&quot;) is the background framework.</p>",
+"22": "<p>&quot;Therefore say to the house of Israel: Thus says Lord YHWH: It is not for your sake that I am about to act, O house of Israel, but for the sake of my holy name.&quot; — this explicit denial of Israel&apos;s merit as the basis for restoration is theologically radical. ANE restoration theologies typically portrayed the people&apos;s repentance or a king&apos;s intercession as what moved the deity to restore. Ezekiel&apos;s oracle grounds restoration entirely in divine initiative and self-interest, preparing for the new-heart promise that follows: the repentance will be the result, not the cause, of restoration.</p>",
+"23": "<p>YHWH vindicating the holiness of his name among the nations — the mission-statement of the restoration. The nations will know that YHWH is YHWH when he is vindicated through Israel. The recognition formula here functions at the universal (national) level: the restoration of Israel is an event that communicates YHWH&apos;s identity to all nations. This is the Isaianic &quot;servant of YHWH&quot; paradigm (Isa 49:6, &quot;a light to the nations&quot;) applied to the restored community.</p>",
+"24": "<p>The gathering from the nations and bringing into the land — the standard gathering-from-diaspora promise (also 11:17; 20:34, 41-42; 34:13; 37:21). The sequence — first gathering, then cleansing, then new heart — establishes that YHWH acts first; the community&apos;s transformation follows the divine action. This is the opposite of a conditional promise where Israel must first change and then YHWH will gather them.</p>",
+"25": "<p>&quot;I will sprinkle clean water on you and you will be clean; from all your uncleannesses and from all your idols I will cleanse you.&quot; — the ritual cleansing by sprinkling (<em>zaraqti ʿaleyhem mayim tehorim</em>) invokes the purification ritual of Numbers 19 (the water of purification made from the ashes of the red heifer, used to cleanse corpse-defilement). The application of this ritual to the entire community (not just individuals with specific contamination) is an unprecedented use of the purification-water concept.</p>",
+"26": "<p><strong>&quot;A new heart I will give you, and a new spirit I will put within you; I will remove the heart of stone from your flesh and give you a heart of flesh.&quot;</strong> — the climax of Ezekiel&apos;s theology of restoration. The new heart (<em>lev ḥadash</em>) and new spirit (<em>ruach ḥadashah</em>) address the root cause of Israel&apos;s failure: not external circumstances but the internal orientation of the community. The heart of stone (<em>lev haʾeven</em>) vs. heart of flesh (<em>lev basar</em>) contrast is the most powerful diagnosis of the human condition in the prophetic literature — the inability to respond to YHWH&apos;s word is built into the community&apos;s psychological structure. The anticipation of this promise in 11:19 and its parallel in Jer 31:31-34 (the new covenant) establish the new heart/new spirit as the central promise of the post-exilic restoration theology.</p>",
+"27": "<p>&quot;And I will put my Spirit within you, and cause you to walk in my statutes and be careful to obey my rules.&quot; — the divine Spirit (YHWH&apos;s own <em>ruach</em>) as the internal enabler of covenant obedience. The Spirit does not merely inspire but causes (<em>ʿasiti</em>, qal perfect of ʿasah, but the causative nuance is important) the obedience — obedience becomes the effect of the Spirit&apos;s indwelling rather than a prerequisite for divine favor. This sequence (Spirit first, then obedience) is the theological foundation of Paul&apos;s argument in Romans 8:1-4.</p>",
+"28": "<p>Dwelling in the land they were given — the covenantal land-dwelling formula. The covenant declaration follows: &quot;you shall be my people and I shall be your God&quot; — the shortest and most foundational form of the Sinaitic covenant (Exod 6:7; Lev 26:12; Jer 31:33). The covenant formula functions as the summary statement that the restoration fulfills the original covenantal purpose of the Exodus.</p>",
+"29": "<p>Salvation from uncleannesses — calling for the grain and multiplying it. The agricultural abundance that follows the internal cleansing and covenant restoration is the Deuteronomic blessing vocabulary (Deut 28:1-14) now grounded in internal transformation rather than external compliance. The agricultural economy of the ancient Near East made harvest abundance the most tangible sign of divine favor; the restoration of grain, wine, and oil (v30) restores the economic foundation of covenant life.</p>",
+"30": "<p>Multiplying the fruit of trees and produce of the field — the threefold agricultural formula (grain + fruit + harvest) is the Deuteronomic blessing triad (Deut 28:11). The removal of the famine-reproach among the nations is the social vindication that parallels the divine-name vindication of vv22-23: just as YHWH&apos;s name is vindicated among the nations by the restoration, the community is vindicated against the famine-reproach that the nations had associated with Israel during the siege and exile.</p>",
+"31": "<p>&quot;Then you will remember your evil ways and your deeds that were not good, and you will loathe yourselves for your iniquities and your abominations.&quot; — the sequence is confirmed: restoration first, then repentance. The community will remember and loathe themselves after the restoration has occurred, not before. This post-restoration self-loathing (also 20:43; 16:63) is the reversed sequence that makes Ezekiel&apos;s theology of grace distinctive: YHWH restores the undeserving, and they respond with shame rather than pride.</p>",
+"32": "<p>&quot;It is not for your sake that I will act&quot; — the explicit anti-merit declaration is repeated from v22. The double declaration (vv22 and 32) creates a literary frame around the restoration promise, ensuring the reader does not misread the restoration as conditional on Israel&apos;s merit. The shame and disgrace Israel bears is the appropriate response to undeserved grace rather than a prerequisite that earns it.</p>",
+"33": "<p>&quot;On the day I cleanse you from all your iniquities, I will cause the cities to be inhabited and the waste places shall be rebuilt&quot; — the synchronization of inner cleansing and external reconstruction. The same day that the new heart is given, the physical land is rebuilt. The inner and outer restoration happen together rather than sequentially, because the land itself participates in the covenant relationship.</p>",
+"34": "<p>The desolate land tilled instead of being the desolation in the sight of all who passed by — the land&apos;s reputation among travelers is restored. Ancient trade routes ran through Canaan; the desolate landscape left by the Babylonian conquest was visible to travelers and traders who passed through, contributing to the international perception of YHWH&apos;s failure. The restored land&apos;s cultivation reverses this international witness.</p>",
+"35": "<p>&quot;They will say: This desolate land has become like the garden of Eden&quot; — the Eden comparison is the highest possible standard for land-quality. The garden of Eden as the ideal of abundant, well-watered, flourishing land is the eschatological goal of restoration. The ruined and forsaken and desolate cities made fortified and inhabited — the urban reconstruction is the human correlate of the agricultural restoration.</p>",
+"36": "<p>The nations round about knowing that YHWH has rebuilt the ruined places and replanted the desolated land — the restoration is a public, internationally visible event. The recognition formula is applied to the surrounding nations who observe the restoration. The witnessing nations&apos; acknowledgment of YHWH&apos;s action in restoring Israel completes the &quot;for my name&apos;s sake&quot; motivation of v22-23.</p>",
+"37": "<p>&quot;I, YHWH, have spoken and I will do it&quot; — the divine self-commitment to accomplish what has been declared. This formula occurs throughout Ezekiel&apos;s restoration oracles (22:14; 24:14; 37:14) as the absolute guarantee that the prophetic word will be fulfilled. Unlike human speech that can be retracted, YHWH&apos;s spoken word carries the force of accomplished fact from the moment it is uttered.</p>",
+"38": "<p>YHWH responding to Israel&apos;s inquiry by multiplying people like a flock, like the flock of Jerusalem at her appointed feasts — the pilgrimage-flock analogy. Jerusalem&apos;s three annual pilgrimage feasts (Passover/Unleavened Bread, Weeks/Shavuot, Tabernacles/Sukkot) brought enormous crowds to the city; the population multiplication of restored Israel is compared to the scale of these festival gatherings. The restored land will be filled with people as densely as Jerusalem during the great festivals.</p>"
+},
+"37": {
+"1": "<p>The hand of YHWH upon Ezekiel and the Spirit-transport to the valley of dry bones — the same transport formula as 3:22; 8:1; 11:24; 40:1. The &quot;valley&quot; (<em>biqʿah</em>) is a broad flat basin, possibly the same valley of Ezek 3:22-23. The scene — dry bones covering the valley floor — is a battlefield scene of total annihilation. Ancient battles left the unburied dead exposed to sun, wind, and scavengers; the extreme dryness of the bones indicates that much time has passed since the defeat.</p>",
+"2": "<p>Walking among the bones — the guide leading Ezekiel around the entire valley to survey the full extent of the desolation before the restoration. The comprehensive survey (many, all around, very dry) establishes the totality of the death before any hint of restoration is given. The rhetorical technique of establishing maximum despair before the reversal maximizes the impact of the restoration oracle.</p>",
+"3": "<p>&quot;Son of man, can these bones live?&quot; — YHWH&apos;s question to Ezekiel is the theological question of the entire exile. The community&apos;s self-assessment in v11 (&quot;our bones are dried up, our hope has perished, we are indeed cut off&quot;) confirms that this is the existential crisis the vision addresses. Ezekiel&apos;s diplomatic non-answer (&quot;O Lord YHWH, you know&quot;) is the appropriate response of a prophet who will not speak beyond his commission.</p>",
+"4": "<p>The command to prophesy to the bones — the prophetic word directed at dry bones is the most extreme test of prophetic efficacy. In the ANE world, prophetic oracles were directed at kings, nations, and cities; directing a prophetic word at corpses makes the point that the community is so dead that only a word directed at death itself can accomplish the restoration. The bones as audience for the prophetic proclamation is the literary preparation for the resurrection-narrative.</p>",
+"5": "<p>The promised restoration sequence: breath/spirit entering, sinews coming, flesh covering, skin stretching — and then life returning. The sequence (structural elements first, then life) follows the creation order of Gen 2:7 inverted: dust + divine breath = living soul. Here the living soul has been reduced to dust/dry bones; the restoration reverses the death process.</p>",
+"6": "<p>Sinews, flesh, skin, and breath — the four-stage restoration of the human body. The anatomical specificity (sinews, flesh, skin, each mentioned separately) has led some interpreters to see in this sequence a deliberate reversal of decomposition: the body decomposes in reverse order of its formation. The theological point: YHWH can reverse the full process of death and decay.</p>",
+"7": "<p>Ezekiel prophesying as commanded — and the noise (<em>qol</em>), the rattling (<em>raʿash</em>), and the bones coming together. The sound of the bones assembling is the auditory dimension of the restoration; the rattling/earthquake vocabulary (<em>raʿash</em>) connects to the earthquake of divine presence in the prophetic tradition (1 Kgs 19:11-12; Isa 6:4). The bones assembling is a military mustering of the dead.</p>",
+"8": "<p>Sinews and flesh appearing, skin covering over them — but no breath yet. The two-stage restoration (body first, then life) creates a pause between the physical reconstitution and the actual vivification. This pause is part of the dramatic structure: the incomplete restoration (bodies without breath) emphasizes that physical reconstitution alone is not enough. The breath/spirit must be given separately, establishing that national/political restoration without the Spirit is insufficient.</p>",
+"9": "<p>The second prophetic command — to prophesy to the breath/wind/spirit from the four winds. The address to the four winds (<em>mearbaʿ ruḥot</em>) invokes the cosmological scope of the divine breath: the life-giving spirit comes from all four directions, not from one source. The four winds gather the scattered exiles as the breath gathers the breath of life into the assembled bodies — the two uses of the four-winds imagery (exile-scattering in 5:10 and life-gathering here) are intentionally contrasted.</p>",
+"10": "<p>The breath entering and the standing up of an exceedingly great army (<em>ḥayil gadol meʾod meʾod</em>) — the dried bones become a vast military force. The specific military framing (&quot;army&quot;) of the restored community is significant: the restoration is not merely demographic but martial. The nation capable of defending itself and its land (cf. the restoration of military strength in 39:9) is the image of complete national restoration. The Babylonian exile had deprived Judah of its military capacity; restoration includes the recovery of that capacity.</p>",
+"11": "<p><strong>&quot;Son of man, these bones are the whole house of Israel. Behold, they say: Our bones are dried up, and our hope has perished. We are indeed cut off.&quot;</strong> — the interpretation of the vision. The bones are not literal but represent the exilic community&apos;s self-understanding. The three-part despair formula (&quot;bones dried, hope perished, cut off&quot;) is the community&apos;s existential diagnosis. <em>Nigraẓnu lanu</em> (we are cut off for ourselves) may reflect the technical legal term for excommunication or disinheritance — they experience themselves as having lost their place in the covenant community.</p>",
+"12": "<p>YHWH opening the graves and bringing Israel up from the graves — the grave imagery (<em>qivroteikhem</em>) is the national equivalent of individual death. The image of being brought out of graves is the national counterpart of individual resurrection: YHWH as the God who opens graves and restores life is the same YHWH who will bring the dead nation back into the land. The land-promise is explicitly the destination of the resurrection (&quot;I will bring you into the land of Israel&quot;).</p>",
+"13": "<p>The recognition formula through the resurrection experience — &quot;you shall know that I am YHWH when I open your graves.&quot; The restoration-as-resurrection is the event that will produce the knowledge of YHWH that the exile seemed to have refuted. The community that concluded YHWH had abandoned them will know through the restoration that their conclusion was wrong — YHWH had not died or failed but had been at work through the exile to accomplish the purposes disclosed in chs 34-48.</p>",
+"14": "<p>&quot;I will put my Spirit within you and you shall live.&quot; — the connection between the dry-bones vision and the new-heart promise of 36:26-27 is explicit: the Spirit that vivifies the dry bones is the same Spirit that will be put within the restored community. The vision of ch 37 and the promise of ch 36 are the same restoration seen from different angles: the external (national/political) and the internal (spiritual) dimensions of the same divine act.</p>",
+"15": "<p>The two-sticks sign-act introduces the second oracle of ch 37. The sticks are inscribed with the names of Ephraim (representing the northern kingdom) and Judah (representing the southern kingdom); held together in Ezekiel&apos;s hand, they become one stick. The historical background: the northern kingdom of Israel (Ephraim) fell to Assyria in 722 BCE; the southern kingdom (Judah) to Babylon in 586 BCE. The two deportations are the two-part political catastrophe that the two-sticks sign-act promises to reverse.</p>",
+"16": "<p>The stick for Judah and the stick for Ephraim/Joseph/all the house of Israel — the explicit labeling of the two sticks with the names of the divided monarchy. The Joseph/Ephraim designation for the northern kingdom reflects the genealogical reality (Joseph&apos;s two sons Manasseh and Ephraim received the double-portion; Ephraim became dominant among the northern tribes under Jeroboam). The &quot;all the house of Israel&quot; appended to Ephraim&apos;s stick anticipates the comprehensive reunion promised in the sign-act&apos;s interpretation.</p>",
+"17": "<p>Joining the sticks together into one stick in the hand — the physical joining in Ezekiel&apos;s hand is the sign that YHWH will join the two kingdoms. The hand-held joining is what provokes the community&apos;s question (v18) that receives the formal interpretation (vv21-28). The sign-act precedes and provokes the oracle, following the pattern of Ezekiel&apos;s sign-acts throughout the book.</p>",
+"18": "<p>The community&apos;s question — the sign-act fulfills its function of generating curiosity and question. The community asking &quot;will you not tell us what you mean by these?&quot; is the expected response that the sign-act is designed to provoke. The pedagogical function of the sign-acts is to create teachable moments in the community&apos;s ongoing encounter with prophetic proclamation.</p>",
+"19": "<p>YHWH taking the stick of Joseph and joining it with the stick of Judah to make them one — the interpretation of the sign-act describes YHWH&apos;s personal agency in the reunification. The Davidic king who will shepherd the reunited community (v24) is the specifically Davidic element: the reunification is not a return to the pre-Davidic tribal federation but the fulfillment of the Davidic covenant under a single shepherd-king.</p>",
+"20": "<p>The sticks on which you write — the material artifact in Ezekiel&apos;s hand is the evidence of the sign-act&apos;s claim. The physical inscription of the names on the sticks makes the promise concrete and visible. Written documents had legal force in the ancient Near East; the inscribed names on the joined sticks have the character of a written covenant document.</p>",
+"21": "<p>YHWH gathering Israel from the nations where they are scattered and bringing them into their own land — the gathering-from-diaspora promise (also 11:17; 20:34, 41-42; 34:13; 36:24) is here specifically applied to the reunification of the divided monarchy. The gathering includes &quot;all sides&quot; — a comprehensive directional formula for the worldwide diaspora that existed even in Ezekiel&apos;s time (Babylonian exiles + Egyptian refugees + earlier Assyrian diaspora of the north).</p>",
+"22": "<p>One nation in the land on the mountains of Israel, one king over them all — the political unity oracle. The contrast with the divided monarchy is explicit: &quot;never again divided into two kingdoms.&quot; The post-exilic historical reality never fully achieved this reunion (the northern tribes were never repatriated as a distinct political entity), which has fueled ongoing eschatological interpretation. The promise is taken in various Jewish and Christian traditions as awaiting ultimate fulfillment.</p>",
+"23": "<p>They will not defile themselves with their idols and detestable things — the new heart of 36:26 is here expressed as behavioral non-idolatry. The purification from all their backslidings (the exile itself as purification) enables a new beginning with the covenant formula: &quot;they shall be my people and I will be their God.&quot; The covenant formula closes the reunification oracle as it closed the new-heart oracle of 36:28.</p>",
+"24": "<p>David my servant shall be king over them — the &quot;David&quot; here is almost certainly not a literal resurrected David but the ideal Davidic king, the fulfillment of the Davidic covenant promise. The Davidic covenant (2 Sam 7) promised an eternal Davidic dynasty; after the apparent failure of that dynasty in 586 BCE, Ezekiel&apos;s oracle promises a new Davidic shepherd-king who will fulfill what the historical Davidic kings failed to accomplish. The shepherd-king imagery (also 34:23-24) draws on the ANE convention of the ideal king as shepherd of his people.</p>",
+"25": "<p>The land given to Jacob the servant — the patriarchal land-grant (Gen 17:8; 28:13-15; 35:12) is the ultimate legal basis for the restoration. The eternal dwelling in the land with the Davidic servant as their prince forever — the covenantal permanence promised here is the counter to the exile&apos;s apparent evidence of covenant cancellation.</p>",
+"26": "<p>A covenant of peace (<em>berit shalom</em>) — the same covenant of peace promised in 34:25 and Num 25:12 (to Phinehas). The everlasting covenant (<em>berit ʿolam</em>) parallels the eternal covenant of Gen 9:16 (Noah), Gen 17:7 (Abraham), and 2 Sam 23:5 (David). The multiplication and placing of YHWH&apos;s sanctuary in the midst of the people forever — the sanctuary restored to its proper function as the center of the covenant community.</p>",
+"27": "<p>YHWH&apos;s dwelling-place (<em>mishkan</em>) over them — the tabernacle/dwelling vocabulary of the Exodus tradition applied to the restored community. The covenant formula — &quot;I will be their God and they shall be my people&quot; — is the same formula that ends the new-heart oracle (36:28) and the reunification oracle (37:23), creating a triple covenant-formula frame around the major restoration promises of chs 36-37.</p>",
+"28": "<p>The nations knowing that YHWH sanctifies Israel when his sanctuary is in the midst of them forever — the universal recognition formula closes the reunification oracle. The restored sanctuary as the instrument of international acknowledgment of YHWH connects to the &quot;for my name&apos;s sake&quot; motivation of 36:21-23. The sanctuary&apos;s presence among the restored community is YHWH&apos;s testimony to the nations that the exile did not represent his defeat.</p>"
+},
+"38": {
+"1": "<p>Standard word-event formula opens the Gog of Magog oracle — the most extensive and most debated oracle in Ezekiel. The entire ch 38-39 unit is a carefully constructed literary composition: ch 38 describes the attack, ch 39 describes the aftermath. The oracle presupposes the restored Israel of chs 34-37 as its context: the attack comes against a people who have been gathered from the nations and are living in security.</p>",
+"2": "<p><strong>Gog of the land of Magog, chief prince of Meshech and Tubal</strong> — the identity of Gog has been debated since antiquity. (1) The most widely held historical identification is with <strong>Gyges of Lydia</strong> (d. 644 BCE), known in Akkadian sources as <em>Gu-gu</em> of <em>Luddu</em> — a powerful western Anatolian king who sought Assyrian assistance against northern (Scythian/Cimmerian) invaders. (2) The Scythian identification associates Gog with the Scythian (Greek <em>Skythai</em>) migrations through the Levant in the 7th century BCE, documented by Herodotus and by the prophetic tradition of the &quot;northern foe&quot; in Jeremiah 1:14; 4:6; 6:1, 22. (3) More likely, Gog is a symbolic/eschatological figure — the ultimate enemy of YHWH&apos;s people at the end of history — drawing on the northern-enemy tradition without requiring a specific historical referent.</p>",
+"3": "<p>YHWH against Gog — the hostile-presence formula (<em>hinneni ʾeleikha</em>) directed at Gog matches the formula used against the nations in chs 25-32. The oracle is addressed to a figure that YHWH himself summons and turns against Israel (v4), which is the theological key: Gog comes at YHWH&apos;s initiative, not merely his own. The attack is YHWH&apos;s design, not Gog&apos;s independent aggression.</p>",
+"4": "<p>&quot;I will turn you about and put hooks in your jaws and bring you out with your whole army&quot; — the hooks-in-jaw imagery inverts the normal direction of divine leading: YHWH leads Israel by the hand; he leads Gog by force, as a captive animal. The image of a captured animal with a hook through its jaw appears in Assyrian reliefs depicting the treatment of conquered kings. YHWH uses the same coercive force on the enemy of his people that the Assyrians used on defeated rulers.</p>",
+"5": "<p>The coalition armies: Persia, Cush, and Put — three geographically distinct regions. Persia (Iran) represents the eastern direction; Cush (Ethiopia/Sudan) the southern; Put (Libya) the western. The three represent the compass directions east, south, and west, with Gog&apos;s northern coalition providing the northern element (v6). The four-directional scope of the coalition establishes Gog&apos;s attack as a truly universal threat from all directions.</p>",
+"6": "<p>Gomer and all his hordes, Beth-togarmah from the uttermost parts of the north — Gomer is identified with the Cimmerians (Greek <em>Kimmeroi</em>), a northern steppe people who invaded Anatolia in the 7th century BCE, documented in Assyrian texts. Beth-togarmah is Armenia/southeastern Anatolia. The conjunction of Gomer (Cimmerians) and Meshech/Tubal (peoples of Anatolia and the Black Sea region) in the coalition corresponds to the ANE geography of the &quot;northern peoples&quot; who threatened the civilized world of the ancient Near East.</p>",
+"7": "<p>&quot;Be ready and keep ready, you and all your company that are assembled around you, and be a guard for them&quot; — YHWH commanding Gog to prepare is the supreme irony of the oracle: the enemy is being prepared for a battle that will become the instrument of YHWH&apos;s self-glorification (v23). Gog&apos;s military preparation serves YHWH&apos;s purposes, not Gog&apos;s. The divine sovereignty over the enemy&apos;s preparations is the theological claim that the oracle establishes from the outset.</p>",
+"8": "<p>&quot;After many days you will be mustered; in the latter years you will go against the land.&quot; — the temporal setting &quot;after many days&quot; (<em>meʾaḥarit yamim</em>) and &quot;latter years&quot; (<em>beʾaḥarit hashanim</em>) places the Gog oracle explicitly in an eschatological timeframe — later than the restoration oracles of chs 34-37 but still within history. The restored people &quot;gathered from many peoples on the mountains of Israel, which had long been desolate&quot; is the restored community of chs 34-37 as the target of the attack.</p>",
+"9": "<p>&quot;You will come like a storm — like a cloud covering the land.&quot; — the cloud-covering image for overwhelming military force appears throughout the prophetic literature for large invading armies (Isa 8:7-8; Jer 4:13; Joel 2:2). The storm metaphor also connects to the theophanic storm of YHWH&apos;s own approach (Ezek 1:4; Nah 1:3); the enemy comes as a pseudo-theophany, imitating but ultimately confronting the genuine divine storm.</p>",
+"10": "<p>Evil thoughts arising in Gog&apos;s mind — the internal deliberation of the enemy revealed to the prophet. The three terms for Gog&apos;s mental process (&quot;evil thoughts,&quot; &quot;devising an evil scheme&quot;) expose the motives behind the military campaign: it is an act of rapacity driven by the perception of easy pickings from an undefended, prosperous people. The disclosure of enemy intentions is a feature of prophetic oracles that establishes YHWH&apos;s omniscience — he knows Gog&apos;s thoughts before Gog acts on them.</p>",
+"11": "<p>&quot;I will go up against the land of unwalled villages; I will fall upon the quiet people who dwell securely, all of them dwelling without walls, and having no bars or gates.&quot; — the &quot;unwalled villages&quot; (<em>perazot</em>) is the key target-description. Iron Age Canaan had extensive unwalled settlements alongside the fortified cities; after the Babylonian conquest, the rebuilding of fortifications was limited. Gog specifically targets the vulnerability of the restored community — their peace and security (the fulfillment of the new-covenant promise) becomes the occasion for the attack.</p>",
+"12": "<p>&quot;To seize spoil and carry off plunder, to turn your hand against the waste places that are now inhabited.&quot; — the explicitly economic motivation of Gog&apos;s campaign. The restored Israel as a uniquely prosperous and uniquely undefended community is the temptation for the attack. The &quot;navel of the earth&quot; (<em>tabur haʾarets</em>) is a cosmological term for the center of the world — also used in Judg 9:37 for a central geographic location. The concept of Jerusalem/Israel as the world&apos;s center (omphalos) appears in later Jewish and Christian cosmography (cf. Ezek 5:5, &quot;Jerusalem in the center of the nations&quot;).</p>",
+"13": "<p>Sheba, Dedan, and the merchants of Tarshish asking whether Gog comes to take spoil — the commercial nations observe the military campaign with their own economic interest. Sheba (southwest Arabia) and Dedan (northwest Arabia) were major caravan trade centers; Tarshish (probably Tartessus in Spain) was the furthest western commercial reach of the Phoenician trading network. Their question (&quot;have you come to seize spoil?&quot;) is not opposition but curiosity about whether they can benefit from the campaign — they stand aside as observers rather than participants.</p>",
+"14": "<p>&quot;On that day when my people Israel are dwelling securely, will you not know it?&quot; — YHWH&apos;s question to Gog is ironic: the security that provokes Gog&apos;s attack is YHWH&apos;s own gift to the restored community. Gog attacking the secure Israel is therefore attacking not just a human community but YHWH&apos;s own covenantal work. The attack is ultimately an attack on YHWH himself, which is why YHWH responds with the full fury of the theophanic battle in ch 39.</p>",
+"15": "<p>Gog coming from his place out of the uttermost parts of the north — the direction &quot;uttermost parts of the north&quot; (<em>yarketei tsafon</em>) is the same phrase used for the divine assembly mountain in Ps 48:2 (Zion described as the divine assembly mountain in the north, <em>yarkete tsafon</em>) and in Isa 14:13 for Baal&apos;s assembly mountain. The north in Canaanite cosmography was the direction of the divine assembly; Gog comes from the direction associated with the divine realm — a final counterfeit of the divine warrior theme.</p>",
+"16": "<p>&quot;You will come up against my people Israel, like a cloud covering the land. In the latter days I will bring you against my land&quot; — YHWH explicitly claims the initiative: &quot;I will bring you against my land&quot; (<em>ʾavi&apos;akha ʾal-ʾartsiy</em>). The land is YHWH&apos;s (<em>ʾartsiy</em>, my land), not merely Israel&apos;s; the attack on it is therefore an attack on YHWH&apos;s own property. The purpose — &quot;that the nations may know me when through you, O Gog, I vindicate my holiness before their eyes&quot; — reveals that YHWH brings Gog for self-vindicating purposes.</p>",
+"17": "<p>&quot;Are you he of whom I spoke in former days by my servants the prophets of Israel?&quot; — YHWH&apos;s rhetorical identification of Gog with the northern-enemy tradition of the earlier prophets. This connects the Gog oracle to Jeremiah&apos;s &quot;foe from the north&quot; oracles (Jer 1:14; 4:6; 6:1, 22) and possibly to Amos 5:27 and other northern-enemy threats. The Gog oracle is presented as the fulfillment of the entire northern-enemy prophetic tradition — all the prior prophecies of the northern enemy find their ultimate expression in this eschatological assault.</p>",
+"18": "<p>&quot;On that day when Gog comes against the land of Israel, my wrath will be roused in my anger.&quot; — the divine anger at the attack on the restored community. The three-part anger vocabulary (<em>ḥamati</em> + <em>ʾappi</em> + <em>qinʾati</em>, wrath + anger + jealousy) expresses the superlative intensity of YHWH&apos;s response. The fire of YHWH&apos;s jealousy is the same <em>qinʾah</em> that drove the restoration &quot;for my name&apos;s sake&quot; in 36:5 — it is now directed in defense of the restored people.</p>",
+"19": "<p>&quot;In my jealousy and in my blazing wrath I declare: On that day there shall be a great earthquake in the land of Israel.&quot; — the cosmic earthquake as the vehicle of divine judgment. ANE theophany traditions consistently included earthquake as a component of the divine appearance (1 Kgs 19:11-12; Ps 68:7-8; Isa 29:6; Joel 2:10; Amos 1:1; Nah 1:5). The earthquake in this oracle is not merely natural but theophanic — the earth responds to YHWH&apos;s presence as it did at Sinai (Exod 19:18).</p>",
+"20": "<p>The shaking of fish, birds, beasts, creeping things, and all people — the totality of creation responding to the divine earthquake. The comprehensive list of living beings (fish of the sea, birds of the sky, beasts of the field, creeping things, all people on the face of the earth) mirrors the creation-taxonomy of Gen 1. The total-creation response to the divine earthquake is a de-creation moment: the created order is shaken to its foundations by YHWH&apos;s direct intervention in history.</p>",
+"21": "<p>Every sword turned against his brother — the pan-military confusion that destroys the attacking coalition from within. Mutual destruction within the enemy coalition is a recurring motif in YHWH&apos;s holy war: Gideon&apos;s army of 300 routing the Midianite coalition through their own mutual slaughter (Judg 7:22); Jehoshaphat&apos;s victory through the enemy turning on itself (2 Chr 20:23). YHWH fighting for Israel against the nations without Israel needing to fight is the consistent pattern of the holy-war tradition.</p>",
+"22": "<p>Pestilence, blood, torrential rain, hailstones, fire, and sulfur — the arsenal of covenant-curse weapons directed at Gog. Hail and fire appear in the Egyptian plague narrative (Exod 9:23-24); the sulfur-and-fire vocabulary echoes the destruction of Sodom and Gomorrah (Gen 19:24) and the theophanic battle in Ps 11:6. The pestilence and blood are the siege-weapons used against Jerusalem in chs 5-6 — now directed outward against the enemy of the restored community.</p>",
+"23": "<p>&quot;I will show my greatness and my holiness and make myself known in the eyes of many nations. Then they will know that I am YHWH.&quot; — the ultimate purpose of the Gog oracle and the climax of the entire Ezekiel book&apos;s &quot;that they will know that I am YHWH&quot; motif. The defeat of Gog is the final, universal recognition event — not just Israel or the surrounding nations but &quot;many nations&quot; see YHWH&apos;s greatness and holiness vindicated in the defeat of the ultimate eschatological enemy.</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'ezekiel')
+    merge_comm(existing, NEW)
+    save_comm('mkt-context', 'ezekiel', existing)
+    print('Ezekiel 36-38 mkt-context written.')
 
 if __name__ == '__main__':
     main()

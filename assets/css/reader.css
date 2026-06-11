@@ -615,16 +615,16 @@ body.bsw-font-xl  { --reader-font-size: 1.42rem; }
   display: inline;
 }
 
-.reader-verse--hl-yellow   { background: rgba(255, 230, 80,  0.32); border-radius: 2px; }
-.reader-verse--hl-orange   { background: rgba(255, 165, 50,  0.30); border-radius: 2px; }
-.reader-verse--hl-pink     { background: rgba(235, 100, 150, 0.27); border-radius: 2px; }
-.reader-verse--hl-red      { background: rgba(220, 80,  80,  0.25); border-radius: 2px; }
-.reader-verse--hl-purple   { background: rgba(160, 80,  200, 0.22); border-radius: 2px; }
-.reader-verse--hl-lavender { background: rgba(180, 155, 230, 0.30); border-radius: 2px; }
-.reader-verse--hl-green    { background: rgba(100, 200, 120, 0.28); border-radius: 2px; }
-.reader-verse--hl-teal     { background: rgba(60,  190, 175, 0.25); border-radius: 2px; }
-.reader-verse--hl-blue     { background: rgba(80,  160, 255, 0.25); border-radius: 2px; }
-.reader-verse--hl-mint     { background: rgba(120, 220, 200, 0.25); border-radius: 2px; }
+.reader-verse--hl-yellow   { background: rgba(255, 230, 80,  0.45); border-radius: 2px; }
+.reader-verse--hl-orange   { background: rgba(255, 165, 50,  0.42); border-radius: 2px; }
+.reader-verse--hl-pink     { background: rgba(235, 100, 150, 0.38); border-radius: 2px; }
+.reader-verse--hl-red      { background: rgba(220, 80,  80,  0.36); border-radius: 2px; }
+.reader-verse--hl-purple   { background: rgba(160, 80,  200, 0.34); border-radius: 2px; }
+.reader-verse--hl-lavender { background: rgba(180, 155, 230, 0.42); border-radius: 2px; }
+.reader-verse--hl-green    { background: rgba(100, 200, 120, 0.40); border-radius: 2px; }
+.reader-verse--hl-teal     { background: rgba(60,  190, 175, 0.37); border-radius: 2px; }
+.reader-verse--hl-blue     { background: rgba(80,  160, 255, 0.37); border-radius: 2px; }
+.reader-verse--hl-mint     { background: rgba(120, 220, 200, 0.37); border-radius: 2px; }
 
 .reader-verse__num {
   font-family: var(--font-ui);
@@ -1361,6 +1361,66 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   outline-offset: 2px;
 }
 
+/* ── Columns / Reader toggle buttons ─────────────────────── */
+.reader-columns-btn,
+.reader-mode-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-columns-btn:hover,
+.reader-mode-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-columns-btn--on,
+.reader-mode-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.25);
+}
+.reader-columns-btn--on:hover,
+.reader-mode-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+  color: #fff;
+}
+.reader-columns-btn:focus-visible,
+.reader-mode-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Columns mode ─────────────────────────────────────────── */
+body.bsw-columns-on .reader-result-group__text {
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid var(--color-border);
+  text-align: justify;
+}
+/* Suppress columns inside grids that have their own two-column layout */
+body.bsw-columns-on .reader-layout--comm-mode .reader-result-group__text {
+  column-count: 1;
+}
+@media (max-width: 700px) {
+  body.bsw-columns-on .reader-result-group__text { column-count: 1; }
+}
+
+/* ── Reader mode (no verse numbers, no chapter markers) ────── */
+body.bsw-reader-mode .reader-verse__num       { display: none; }
+body.bsw-reader-mode .reader-chapter-break    { display: none; }
+body.bsw-reader-mode .reader-result-group__title { display: none; }
+
 /* ── Xref footnotes toggle button ────────────────────────── */
 .reader-xref-notes-btn {
   padding: 0.28rem 0.7rem;
@@ -1450,6 +1510,10 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 .reader-parallel-badge--quotation   { background: rgba(155,89,182,0.15); color: #6a3d8f; }
 .reader-parallel-badge--allusion    { background: rgba(192,131,42,0.15); color: #8a5a00; }
 /* quotation-source and allusion-source share the same colour family as their counterparts */
+/* Echo-specific badge types (TEMPORARY — remove when echoes fully replaces parallels) */
+.reader-parallel-badge--type        { background: rgba(26,175,155,0.15); color: #1a7060; }
+.reader-parallel-badge--shadow      { background: rgba(100,110,170,0.15); color: #3a4880; }
+.reader-parallel-badge--theme       { background: rgba(180,80,130,0.15); color: #7a2858; }
 
 .reader-parallel-ref-label {
   font-family: var(--font-ui);
@@ -1688,6 +1752,41 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   .reader-compare-cell--a { border-right: none; }
   .reader-compare-col-hdr--b,
   .reader-compare-cell--b { border-top: 2px solid var(--color-primary); }
+}
+
+/* ── Split attribution row (mirrors compare grid columns) ───── */
+.reader-compare-attr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+.reader-compare-attr__cell {
+  padding-top: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+.reader-compare-attr__cell--a {
+  padding-right: 1rem;
+  border-right: 1px solid var(--color-border);
+}
+.reader-compare-attr__cell--b {
+  padding-left: 1rem;
+}
+@media (max-width: 600px) {
+  .reader-compare-attr { grid-template-columns: 1fr; }
+  .reader-compare-attr__cell--a {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-right: 0;
+    padding-bottom: 0.4rem;
+  }
+  .reader-compare-attr__cell--b {
+    padding-left: 0;
+    padding-top: 0.4rem;
+  }
 }
 
 /* ── Column header label / version selector ─────────────────── */
@@ -2314,23 +2413,6 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   line-height: 1.8;
 }
 
-/* ── Print button (in browse bar) ────────────────────────── */
-.reader-print-btn {
-  padding: .28rem .6rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  background: var(--color-surface);
-  color: var(--color-muted);
-  font-size: .78rem;
-  cursor: pointer;
-  line-height: 1;
-  transition: color .12s, border-color .12s;
-}
-.reader-print-btn:hover {
-  color: var(--color-text);
-  border-color: var(--color-text);
-}
-
 /* ── Print styles ────────────────────────────────────────── */
 @media print {
   /* Hide everything except the chapter text */
@@ -2471,16 +2553,16 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
    Both manual toggle ([data-theme="dark"]) and OS preference are covered.
    ─────────────────────────────────────────────────────────────────────────── */
 
-[data-theme="dark"] .reader-verse--hl-yellow   { background: rgba(255, 210,   0, 0.17); }
-[data-theme="dark"] .reader-verse--hl-orange   { background: rgba(255, 135,  20, 0.15); }
-[data-theme="dark"] .reader-verse--hl-pink     { background: rgba(230,  70, 135, 0.14); }
-[data-theme="dark"] .reader-verse--hl-red      { background: rgba(210,  55,  55, 0.13); }
-[data-theme="dark"] .reader-verse--hl-purple   { background: rgba(155,  60, 215, 0.12); }
-[data-theme="dark"] .reader-verse--hl-lavender { background: rgba(165, 135, 240, 0.15); }
-[data-theme="dark"] .reader-verse--hl-green    { background: rgba( 65, 195,  85, 0.13); }
-[data-theme="dark"] .reader-verse--hl-teal     { background: rgba( 30, 185, 170, 0.13); }
-[data-theme="dark"] .reader-verse--hl-blue     { background: rgba( 55, 145, 255, 0.14); }
-[data-theme="dark"] .reader-verse--hl-mint     { background: rgba( 90, 215, 195, 0.13); }
+[data-theme="dark"] .reader-verse--hl-yellow   { background: rgba(255, 210,   0, 0.26); }
+[data-theme="dark"] .reader-verse--hl-orange   { background: rgba(255, 135,  20, 0.24); }
+[data-theme="dark"] .reader-verse--hl-pink     { background: rgba(230,  70, 135, 0.22); }
+[data-theme="dark"] .reader-verse--hl-red      { background: rgba(210,  55,  55, 0.21); }
+[data-theme="dark"] .reader-verse--hl-purple   { background: rgba(155,  60, 215, 0.20); }
+[data-theme="dark"] .reader-verse--hl-lavender { background: rgba(165, 135, 240, 0.24); }
+[data-theme="dark"] .reader-verse--hl-green    { background: rgba( 65, 195,  85, 0.21); }
+[data-theme="dark"] .reader-verse--hl-teal     { background: rgba( 30, 185, 170, 0.21); }
+[data-theme="dark"] .reader-verse--hl-blue     { background: rgba( 55, 145, 255, 0.22); }
+[data-theme="dark"] .reader-verse--hl-mint     { background: rgba( 90, 215, 195, 0.21); }
 
 [data-theme="dark"] .reader-verse__num--highlighted                      { color: #f0c030; }
 [data-theme="dark"] .reader-verse--hl-orange  .reader-verse__num--highlighted { color: #f09040; }
@@ -2574,16 +2656,16 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 .reader-bookmark-ref:hover { text-decoration: underline; }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .reader-verse--hl-yellow   { background: rgba(255, 210,   0, 0.17); }
-  :root:not([data-theme="light"]) .reader-verse--hl-orange   { background: rgba(255, 135,  20, 0.15); }
-  :root:not([data-theme="light"]) .reader-verse--hl-pink     { background: rgba(230,  70, 135, 0.14); }
-  :root:not([data-theme="light"]) .reader-verse--hl-red      { background: rgba(210,  55,  55, 0.13); }
-  :root:not([data-theme="light"]) .reader-verse--hl-purple   { background: rgba(155,  60, 215, 0.12); }
-  :root:not([data-theme="light"]) .reader-verse--hl-lavender { background: rgba(165, 135, 240, 0.15); }
-  :root:not([data-theme="light"]) .reader-verse--hl-green    { background: rgba( 65, 195,  85, 0.13); }
-  :root:not([data-theme="light"]) .reader-verse--hl-teal     { background: rgba( 30, 185, 170, 0.13); }
-  :root:not([data-theme="light"]) .reader-verse--hl-blue     { background: rgba( 55, 145, 255, 0.14); }
-  :root:not([data-theme="light"]) .reader-verse--hl-mint     { background: rgba( 90, 215, 195, 0.13); }
+  :root:not([data-theme="light"]) .reader-verse--hl-yellow   { background: rgba(255, 210,   0, 0.26); }
+  :root:not([data-theme="light"]) .reader-verse--hl-orange   { background: rgba(255, 135,  20, 0.24); }
+  :root:not([data-theme="light"]) .reader-verse--hl-pink     { background: rgba(230,  70, 135, 0.22); }
+  :root:not([data-theme="light"]) .reader-verse--hl-red      { background: rgba(210,  55,  55, 0.21); }
+  :root:not([data-theme="light"]) .reader-verse--hl-purple   { background: rgba(155,  60, 215, 0.20); }
+  :root:not([data-theme="light"]) .reader-verse--hl-lavender { background: rgba(165, 135, 240, 0.24); }
+  :root:not([data-theme="light"]) .reader-verse--hl-green    { background: rgba( 65, 195,  85, 0.21); }
+  :root:not([data-theme="light"]) .reader-verse--hl-teal     { background: rgba( 30, 185, 170, 0.21); }
+  :root:not([data-theme="light"]) .reader-verse--hl-blue     { background: rgba( 55, 145, 255, 0.22); }
+  :root:not([data-theme="light"]) .reader-verse--hl-mint     { background: rgba( 90, 215, 195, 0.21); }
 
   :root:not([data-theme="light"]) .reader-verse__num--highlighted                       { color: #f0c030; }
   :root:not([data-theme="light"]) .reader-verse--hl-orange  .reader-verse__num--highlighted { color: #f09040; }
@@ -2763,4 +2845,320 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
    regardless of screen width — arrow-key navigation doesn't apply on touch devices. */
 @media (pointer: coarse) {
   .reader-browse-hint { display: none; }
+}
+
+/* ── Echoes panel layout (reader-layout--echoes mode) ─────────────────────── */
+
+/* Base: panel is hidden until parallels is activated. */
+.reader-echoes-panel {
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  font-size: 0.88rem;
+}
+
+/* Outer layout: collapse to 1fr (xref panel hidden); reader-main takes full
+   outer width so its own inner grid controls the content split. */
+@media (min-width: 700px) {
+  .reader-layout--echoes {
+    grid-template-columns: 1fr !important;
+  }
+  .reader-layout--echoes.reader-layout--with-sidebar {
+    grid-template-columns: 160px 1fr !important;
+  }
+  .reader-layout--echoes .reader-xref-panel {
+    display: none !important;
+  }
+
+  /* Inner grid on reader-main: controls span full width (row 1),
+     results + echoes panel share row 2 at 50/50. */
+  .reader-layout--echoes .reader-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 0;
+  }
+  .reader-layout--echoes .reader-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .reader-layout--echoes #reader-results {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+  }
+  .reader-layout--echoes .reader-echoes-panel {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    border-left: 1px solid var(--color-border);
+    padding: 0 0 2rem 0;
+    max-height: calc(100vh - 5rem);
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+  }
+}
+
+/* Mobile: stack echoes below main text, full width. */
+@media (max-width: 699px) {
+  .reader-layout--echoes .reader-echoes-panel {
+    display: flex;
+    border-top: 2px solid var(--color-border);
+    max-height: 60vh;
+    padding: 0.5rem 0 1rem;
+  }
+}
+
+/* ── Echo panel interior ──────────────────────────────────────────────────── */
+
+.reader-echo-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+.reader-echo-panel__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: 1;
+}
+
+.reader-echo-panel__title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.reader-echo-panel__ref {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.reader-echo-panel__count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.reader-echo-panel__loading,
+.reader-echo-panel__empty {
+  padding: 1.25rem 1rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.reader-echo-panel__list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ── Echo cards ────────────────────────────────────────────────────────────── */
+
+.reader-echo-card {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s;
+}
+
+.reader-echo-card--highlight {
+  background: rgba(var(--color-primary-rgb, 90, 110, 200), 0.07);
+}
+
+.reader-echo-card__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.84rem;
+  color: var(--color-text);
+  min-height: 2.4rem;
+}
+
+.reader-echo-card__toggle:hover {
+  background: var(--color-hover, rgba(0,0,0,0.04));
+}
+
+.reader-echo-card__v {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 2.2rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.reader-echo-card__badge {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+/* Badge colours — shared with parallel panel badge modifiers */
+.reader-echo-card__badge--quotation  { background: rgba(220,120,40,0.15); color: #b35a00; }
+.reader-echo-card__badge--allusion   { background: rgba(80,120,220,0.13); color: #2955b5; }
+.reader-echo-card__badge--fulfillment{ background: rgba(40,160,80,0.15);  color: #1a7a3a; }
+.reader-echo-card__badge--type       { background: rgba(140,50,200,0.13); color: #7a1abf; }
+.reader-echo-card__badge--shadow     { background: rgba(140,50,200,0.13); color: #7a1abf; }
+.reader-echo-card__badge--theme      { background: rgba(20,150,180,0.13); color: #0e7a9a; }
+.reader-echo-card__badge--parallel   { background: rgba(100,100,100,0.12);color: #555; }
+
+.reader-echo-card__target {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.83rem;
+  color: var(--color-text);
+}
+
+.reader-echo-card__chevron {
+  font-size: 0.6rem;
+  color: var(--color-muted);
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+
+.reader-echo-card--expanded .reader-echo-card__chevron {
+  transform: rotate(90deg);
+}
+
+.reader-echo-card__body {
+  padding: 0.25rem 1rem 0.75rem 1rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface, var(--color-bg));
+}
+
+/* Verse text fetched from the target reference — reuses parallel panel text styles */
+.reader-echo-card__verse {
+  margin-bottom: 0.5rem;
+}
+
+.reader-echo-card__verse .reader-parallel-text {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.62;
+  color: var(--color-text);
+}
+
+.reader-echo-card__verse .reader-parallel-loading,
+.reader-echo-card__verse .reader-parallel-empty {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.reader-echo-card__verse .reader-parallel-pager {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+}
+
+/* Note sits between verse text and the Read link — styled as a callout */
+.reader-echo-card__note {
+  margin: 0.4rem 0 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-left: 2px solid var(--color-primary);
+  font-size: 0.81rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.reader-echo-card__read {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.reader-echo-card__read:hover { text-decoration: underline; }
+
+/* ── Verse indicators for echoes ──────────────────────────────────────────── */
+
+/* Dot indicator to the left of verses that have echoes */
+.reader-verse--has-echo {
+  position: relative;
+}
+
+.reader-verse--has-echo::before {
+  content: '';
+  position: absolute;
+  left: -0.85rem;
+  top: 0.35em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.55;
+}
+
+/* Hover highlight: coloured left border + light tint when hovering a card */
+.reader-verse--echo-hover {
+  border-left: 3px solid var(--color-primary) !important;
+  padding-left: 0.3rem;
+  background: rgba(var(--color-primary-rgb, 90, 110, 200), 0.06) !important;
+  border-radius: 2px;
+}
+
+/* ── Dark mode adjustments ────────────────────────────────────────────────── */
+
+[data-theme="dark"] .reader-echo-card--highlight {
+  background: rgba(120, 150, 255, 0.1);
+}
+
+[data-theme="dark"] .reader-echo-card__badge--quotation  { background: rgba(220,140,60,0.2);  color: #f0a060; }
+[data-theme="dark"] .reader-echo-card__badge--allusion   { background: rgba(100,140,255,0.17); color: #8aadff; }
+[data-theme="dark"] .reader-echo-card__badge--fulfillment{ background: rgba(60,200,100,0.18);  color: #5dca80; }
+[data-theme="dark"] .reader-echo-card__badge--type       { background: rgba(180,80,255,0.17);  color: #c97aff; }
+[data-theme="dark"] .reader-echo-card__badge--shadow     { background: rgba(180,80,255,0.17);  color: #c97aff; }
+[data-theme="dark"] .reader-echo-card__badge--theme      { background: rgba(40,190,220,0.17);  color: #60d0e8; }
+[data-theme="dark"] .reader-echo-card__badge--parallel   { background: rgba(160,160,160,0.15); color: #aaa; }
+
+[data-theme="dark"] .reader-verse--echo-hover {
+  background: rgba(120, 150, 255, 0.09) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .reader-echo-card--highlight {
+    background: rgba(120, 150, 255, 0.1);
+  }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--quotation  { background: rgba(220,140,60,0.2);  color: #f0a060; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--allusion   { background: rgba(100,140,255,0.17); color: #8aadff; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--fulfillment{ background: rgba(60,200,100,0.18);  color: #5dca80; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--type       { background: rgba(180,80,255,0.17);  color: #c97aff; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--shadow     { background: rgba(180,80,255,0.17);  color: #c97aff; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--theme      { background: rgba(40,190,220,0.17);  color: #60d0e8; }
+  :root:not([data-theme="light"]) .reader-echo-card__badge--parallel   { background: rgba(160,160,160,0.15); color: #aaa; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover {
+    background: rgba(120, 150, 255, 0.09) !important;
+  }
 }

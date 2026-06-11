@@ -1,47 +1,39 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Christ Commentary — Deuteronomy chapters 18–21
+Run: python3 scripts/zc-christ-deuteronomy-18-21.py
+
+Note: 18:15 already present (the prophet-like-Moses direct prophecy).
+
+Key Christological decisions:
+- Ch18: Levitical priesthood as type of Christ's eternal high priesthood (Heb 7);
+  18:18 is a direct NT citation (Acts 3:22; 7:37) — YHWH's words in the prophet's
+  mouth fulfilled when Jesus says "the words I speak are not my own" (John 12:49)
+- Ch19: Cities of refuge = Christ as the refuge for those fleeing judgment (Heb 6:18);
+  lex talionis (19:21) directly transcended by Jesus in Matt 5:38-39
+- Ch20: Divine warrior going before (type of Christ in spiritual battle, Eph 6;
+  Rev 19:11-16); peace offer before siege (type of Christ's offer before judgment)
+- Ch21: Eglah arufah = communal atonement type; 21:23 is the most direct
+  Christological verse in Deuteronomy after 18:15 — Paul cites it in Gal 3:13
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -49,274 +41,106 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
+DEUTERONOMY = {
   "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
+    "1": "<p>A type: the Levitical priests who have no territorial inheritance but receive their portion from YHWH and from the sacrificial system directly anticipate Christ as the eternal High Priest. Hebrews 7:11-17 explicitly contrasts the Levitical priesthood (which required land, succession, and ongoing sacrifices) with the Melchizedekian priesthood of Christ (who holds his priesthood permanently because he lives forever). YHWH as the Levites' inheritance (v.2) is the type of the believer's inheritance in Christ (Eph 1:11; Col 1:12).</p>",
+    "2": "<p>YHWH himself is the Levites' inheritance -- the type is clear: the true inheritance of the covenant people is not land or material goods but YHWH himself. This reaches its NT fulfillment in the believer whose inheritance is Christ and who in turn is Christ's inheritance (Eph 1:11, 18). The Levite who receives no land allotment but lives from YHWH's provision shadows the disciple who is told to seek first the kingdom and trust that all other things will be given (Matt 6:33).</p>",
+    "3": "<p>The priestly portion from the sacrificial offerings -- shoulder, cheeks, stomach -- establishes the pattern that those who serve at the altar share in what is offered at the altar (1 Cor 9:13). As a shadow of Christ, the priest who receives the portion of the sacrifice points to Christ who is simultaneously the priest and the sacrifice (Heb 9:14: through the eternal Spirit he offered himself). The NT applies this pattern to the minister of the gospel who is supported by those he serves (1 Cor 9:14; Gal 6:6).</p>",
+    "4": "<p>The firstfruits of grain, wine, oil, and wool given to the priest establish the pattern that YHWH's representative receives the first and best of everything. As a type, this patterns the NT principle that Christ as the firstborn from the dead (Col 1:18; Rev 1:5) has priority over all creation -- he is the firstfruits of those who have died (1 Cor 15:20-23). The firstfruits given to the priest are the type of Christ as the firstfruits of the new creation offered to the Father.</p>",
+    "5": "<p>YHWH's choosing of Levi out of all the tribes to stand and minister in his name is an election of grace, not merit -- a shadow of Christ's appointment as High Priest not by genealogy or achievement but by divine oath (Heb 5:4-6; 7:28: the Son who has been made perfect forever). The Levites did not choose to be priests; they were chosen. Christ did not appoint himself but was appointed by the Father (Heb 5:5: I have appointed you my Son; you are a priest forever).</p>",
+    "6": "<p>The Levite who comes from anywhere in Israel to minister at the central sanctuary -- welcomed regardless of where he has been living -- shadows Christ's welcome of the estranged. The freedom of the Levite to come whenever he wishes and be received into full ministry is a type of the open invitation of the gospel: anyone who comes to Christ will not be cast out (John 6:37). There is no restriction based on origin; the door of ministry at YHWH's sanctuary stands open.</p>",
+    "7": "<p>Ministering in the name of YHWH is the Levitical calling that reaches its fulfillment in Christ's unique ministry in the Father's name. Jesus repeatedly identifies his mission as being sent in the Father's name (John 5:43; 10:25; 17:11-12) and performing works in the Father's name (John 10:25). The Levite who ministers in the name of YHWH is the shadow; Christ who comes in the Father's name and perfectly carries out his will is the substance.</p>",
+    "8": "<p>Equal shares for all Levites regardless of individual circumstances establishes the fairness of YHWH's provision within the priestly community. As a theme, this shadows the NT principle of equality within the body of Christ: there is neither Jew nor Greek, slave nor free, in Christ (Gal 3:28), and the distribution of spiritual gifts is YHWH's own sovereign allocation (1 Cor 12:4-11). The God who provides fairly for all his servants in the OT provides fairly for all his people in the NT.</p>",
+    "9": "<p>The prohibition against imitating the detestable practices of the nations is the negative preparation for the positive provision that follows (v.15-22): instead of the occult, Israel will have the prophet. As a revelation of God, this establishes that YHWH is not a God whose will is hidden or who must be manipulated through secret arts -- he speaks through his prophet. The NT fulfillment is Christ who makes YHWH fully known (John 1:18: the only God, who is at the Father's side, has made him known) and the Spirit who reveals what the eye has not seen (1 Cor 2:9-10).</p>",
+    "10": "<p>The prohibition of child sacrifice -- no one shall sacrifice his son or daughter in the fire -- establishes that YHWH does not accept human sacrifice from his people. As a revelation of God, this makes the cross all the more extraordinary: YHWH does not demand that his people sacrifice their children, but he himself gives his own Son (John 3:16; Rom 8:32: he who did not spare his own Son but gave him up for us all). The prohibition of human sacrifice and the giving of the divine Son are not contradictions -- they are the same God refusing to accept the sacrifice of a human and instead providing it himself.</p>",
+    "11": "<p>The prohibition of consulting mediums, spiritists, or those who call up the dead establishes Christ as the only legitimate bridge between the living and the dead. As a shadow pointing to Christ, these prohibitions clear the field of all false mediators. The resurrection of Christ is YHWH's own answer to the human desire to consult the dead: he gives a living Mediator (Heb 8:6; 9:15; 12:24) who has conquered death (Rev 1:18: I hold the keys of death and Hades) rather than a medium who only appears to access it.</p>",
+    "12": "<p>The detestability of occult practices to YHWH and their connection to the Canaanites' expulsion establishes that YHWH's judgment falls on those who seek spiritual guidance from sources other than him. As a revelation of God, this is the principle Paul develops in 1 Cor 10:20-21: you cannot drink the cup of the Lord and the cup of demons. The exclusivity of YHWH as the source of true spiritual knowledge is fulfilled in Christ as the one in whom are hidden all the treasures of wisdom and knowledge (Col 2:3).</p>",
+    "13": "<p>Be blameless before YHWH your God -- the call to wholehearted covenant integrity as the alternative to occult practice. As a shadow pointing to Christ, this is the standard that only he meets perfectly. The NT's call to blamelessness (Phil 2:15; 1 Thess 3:13; Rev 14:5) is grounded in Christ's blamelessness imputed to his people (2 Cor 5:21) -- they are blameless in him (Col 1:22) rather than by independent achievement.</p>",
+    "14": "<p>The nations you are about to dispossess listen to fortune-tellers and diviners -- but as for you, YHWH has not permitted this. The contrast establishes Israel as the people who have direct access to YHWH's word rather than needing occult access to divine will. As a theme, this is the NT contrast between those who seek signs (1 Cor 1:22) and those who have received the Spirit who searches all things (1 Cor 2:10). The prophetic word that replaces divination reaches its fullness in Christ who is himself the Word (John 1:1-14).</p>",
+    "16": "<p>This is exactly what you asked at Horeb when you said, Do not let me hear the voice of YHWH my God again -- the people's fear of direct divine speech became the occasion for the prophetic office. As a type of the incarnation, this verse is profound: the people could not bear to hear YHWH speak directly; the solution was a mediating prophet. The incarnation is the ultimate divine response to human inability to bear direct divine presence -- YHWH comes in human form so that the encounter can be endured (John 1:14; Heb 1:1-2). Moses mediates the word; Christ is the Word made flesh.</p>",
+    "17": "<p>YHWH said, What they have said is right -- YHWH affirms the people's request for a mediating prophet as appropriate. As a revelation of God, this establishes that YHWH's provision of a mediator is not a concession to human weakness but an approved and appropriate structure for the covenant relationship. The NT develops this as the permanent structure: there is one God and one mediator between God and humanity, the man Christ Jesus (1 Tim 2:5). The mediation that began with Moses reaches its final and perfect form in Christ.</p>",
+    "18": "<p>I will raise up for them a prophet like you from among their brothers -- I will put my words in his mouth. This is a direct prophecy with explicit NT citations: Peter in Acts 3:22 and Stephen in Acts 7:37 both identify Jesus as the fulfillment. The fulfillment marker is the word-in-mouth language: Jesus himself says the words he speaks are not his own but the Father's who sent him (John 12:49-50; 14:10). The prophet whose words are completely YHWH's own words is Jesus, who speaks only what the Father tells him to speak.</p>",
+    "19": "<p>Anyone who will not listen to my words that the prophet speaks in my name -- I myself will hold them accountable. This is the accountability for rejecting the prophet that Hebrews explicitly applies to Christ: if the word declared by angels proved to be reliable and every sin received just retribution, how shall we escape if we neglect such a great salvation? (Heb 2:2-3). The accountability for rejecting the Mosaic law is exceeded by the accountability for rejecting Christ. Refusing to hear the prophet YHWH raises is not mere disobedience -- it is the rejection of YHWH himself.</p>",
+    "21": "<p>How can we know whether a word was not spoken by YHWH? -- the question of prophetic authentication that the NT applies to Christ. Jesus authenticates his prophetic authority through his works (John 10:25: the works I do in my Father's name testify about me), his resurrection (the ultimate fulfillment, validating all his predictions), and the consistency of his teaching with the Father's will. The empirical test of prophecy (non-fulfillment exposes a false prophet) is transformed in Christ: the resurrection is YHWH's vindication that Jesus is not the false prophet but the true one.</p>",
+    "22": "<p>When a prophet speaks in the name of YHWH and the word is not fulfilled -- that prophet has spoken presumptuously. As a shadow of Christ, every word Jesus spoke was fulfilled -- most decisively, his prediction of his own death and resurrection (Matt 16:21; 20:18-19) and his warning about the destruction of Jerusalem (Matt 24:2), which occurred in 70 CE. The test of a true prophet is fulfilled in Christ not just negatively (no unfulfilled prediction) but positively (every significant prediction fulfilled with precision).</p>",
+  },
+  "19": {
+    "1": "<p>The cities of refuge established when YHWH gives Israel the land are a type of Christ as the refuge for those fleeing the consequence of sin. Hebrews 6:18 explicitly uses the city-of-refuge imagery for Christ: we who have fled for refuge might have strong encouragement to hold fast to the hope set before us. The establishment of the refuge cities at the very moment of entering the land -- before anything else is organized -- signals that YHWH anticipates human failure and prepares the place of refuge before the need arises. Christ is the pre-prepared, pre-existent refuge (Rev 13:8: the Lamb slain from the foundation of the world).</p>",
+    "2": "<p>Three cities designated in the midst of the land establishes accessibility -- no part of the land is so remote that a fleeing person cannot reach a city of refuge. As a shadow of Christ, this is the universal accessibility of salvation: wherever a person is, they are within reach of the Refuge. The three-city structure also foreshadows the expansion (v.8-9: six if the territory expands), which mirrors the universal scope of the gospel -- what begins in Israel expands to the nations (Matt 28:19).</p>",
+    "3": "<p>Prepare the roads and divide the territory into three districts so any manslayer can flee there -- the infrastructure of refuge is the covenant community's responsibility. As a theme, this shadows the NT's commission to prepare the way for people to reach Christ: the church is the community that prepares the roads, removes the obstacles, and makes the path to the Refuge accessible (Isa 40:3-4; Rom 10:14-15). Evangelism is road-building to the city of refuge.</p>",
+    "4": "<p>The manslayer who kills his neighbor unintentionally -- without prior hatred -- is the one for whom the city of refuge is designed. As a type of the sinner who comes to Christ, the manslayer is guilty (there is a real death) but not with the premeditated malice that would disqualify him from refuge. Christ's refuge is not for those who claim no guilt but for those who have genuinely caused harm without premeditated evil -- who killed without wishing to (Rom 5:6-8: while we were still sinners, Christ died for us; 7:15: I do what I do not want to do).</p>",
+    "5": "<p>The woodcutter whose axhead slips and kills his companion is the paradigm case of unintentional manslaughter. The detailed, realistic scenario grounds the legal provision in ordinary human accident. As a shadow of Christ, the one who kills by mischance -- not by intent -- is exactly the type of person Christ's refuge covers. The NT extension is more radical: even intentional sin is covered by Christ's atonement for those who flee to him in repentance (1 John 1:9; Heb 10:17-18). The city of refuge that covers even accidents in the OT is the type of a mercy that covers even deliberate sin in the NT.</p>",
+    "6": "<p>The blood avenger pursuing in fierce anger to overtake the manslayer on a long road -- the urgency of the flight to refuge. As a type, the blood avenger is the law (or Satan as accuser, Rev 12:10) that rightly pursues the guilty and will condemn them if they do not reach the refuge. The long road and the fierce pursuit of the avenger shadow the NT's urgency about coming to Christ: flee from the wrath to come (Matt 3:7; Luke 3:7). The refuge must be reached before the avenger catches up; there is no safety outside the city.</p>",
+    "7": "<p>Therefore I command you: designate three cities -- the refuge is not a suggestion but a command, establishing the legal framework for the type. The divine command to establish cities of refuge mirrors the divine command underlying the gospel: God commands all people everywhere to repent (Acts 17:30). The refuge is YHWH's provision, not human invention, and the command to establish it carries divine authority. So too the command to come to Christ and find refuge is not a polite invitation but a divine command backed by divine authority.</p>",
+    "8": "<p>If YHWH enlarges your territory as sworn to your ancestors -- three more cities, totaling six. The expansion of the refuge network with the expansion of the covenant territory is a shadow of the universal expansion of salvation. What begins as three cities in Canaan (and three in Transjordan, Josh 20) expands with the territory; in Christ, the refuge expands to the whole world (Isa 49:6: I will make you a light for the nations, that my salvation may reach to the ends of the earth). The increasing availability of refuge is the OT pattern that Christ's universal mission fulfills.</p>",
+    "9": "<p>If you keep all this commandment I am giving you, loving YHWH and walking always in his ways -- the condition for the expanded refuge. As a shadow pointing to Christ, the conditional covenant (expanded blessing for expanded obedience) is resolved by Christ's perfect obedience that secures the universal expansion of the covenant unconditionally. The Abrahamic promise of land to the ends of the earth is not conditional in Christ (Gal 3:14-18) -- it is secured by his faithfulness, not Israel's.</p>",
+    "10": "<p>Innocent blood shall not be shed in your land -- the concern to prevent communal bloodguilt underlies the entire cities-of-refuge institution. As a revelation of God, YHWH is a God who cares about the specific circumstances of individual deaths: not every killing is murder, and not every guilty party is equally guilty. This discriminating justice is the OT shadow of the NT's differentiation between sins -- some done in ignorance, some in full knowledge (Luke 23:34: Father, forgive them, for they do not know what they are doing; 1 Tim 1:13: I received mercy because I acted in ignorance).</p>",
+    "11": "<p>But if someone hates his neighbor, ambushes him, and flees to the city of refuge -- the murderer who misuses the refuge. The city of refuge offers no protection to the deliberate murderer who comes with premeditated malice. As a shadow, this establishes the limit of the refuge type: Christ's refuge is not for those who presume on grace while deliberately continuing in the sin they claim to be fleeing (Heb 10:26-27: if we go on sinning deliberately after receiving knowledge of the truth, there no longer remains a sacrifice for sins). The refuge is genuine only for those who truly flee, not for those who manipulate it.</p>",
+    "12": "<p>The elders of his city shall send for him and hand him over to the blood avenger -- communal accountability for the murderer. As a theme of divine judgment, this establishes that the covenant community is responsible for enforcing the moral distinctions the law makes: the unintentional killer is protected; the murderer is handed over. The NT parallel is the church's responsibility to exercise discipline within the community (1 Cor 5:9-13; Matt 18:15-18), distinguishing between those who need refuge and those who exploit it.</p>",
+    "13": "<p>Show him no pity -- purge the guilt of innocent blood from Israel so that things may go well. The no-pity formula applied to the murderer who misuses the refuge is the limit of covenant mercy. As a revelation of God, YHWH is not indifferent to the difference between the repentant and the unrepentant. The NT parallel is the warning of Hebrews 6:4-6: it is impossible for those who have once been enlightened and then have fallen away to be restored again. There is a point at which the abuse of mercy ends its availability -- not because YHWH lacks power to forgive but because the heart has hardened beyond return.</p>",
+    "14": "<p>Do not move your neighbor's boundary marker -- the stability of boundaries established by the ancestors. As a theme of covenant justice, this is the principle that Christ's coming does not erase the covenant boundaries established by the law and the prophets but fulfills them (Matt 5:17). The boundary-marker law shadows the NT's concern for the integrity of doctrinal boundaries (Jude 3: contend for the faith once delivered to the saints; Rev 22:18-19: do not add to or subtract from). The gospel guard against false teachers is the NT equivalent of the boundary-marker protection.</p>",
+    "15": "<p>One witness is not enough -- the matter must be established by two or three witnesses. This procedural rule is directly applied to the resurrection in the NT: the four Gospels are the four witnesses; Paul cites the more than 500 witnesses to the risen Christ (1 Cor 15:6). Jesus himself applies the two-witnesses rule to his own testimony (John 8:17-18: in your law it is written that the testimony of two witnesses is true -- I am the one who testifies about myself, and the Father who sent me also testifies about me). The legal standard of the OT is the standard the NT resurrection claim meets.</p>",
+    "16": "<p>If a malicious witness comes forward and accuses someone of a crime -- the false accusation as a legal threat. As a type of the accusation against Christ, this verse establishes the pattern: Jesus was falsely accused by malicious witnesses at his trial (Matt 26:59-60: the chief priests and the whole Sanhedrin were looking for false evidence against Jesus). The false witnesses who brought manufactured charges against the innocent one embody the malicious witness of Deut 19:16 -- and the resurrection is YHWH's counter-verdict against the false accusation.</p>",
+    "17": "<p>Both parties shall stand before YHWH, before the priests and the judges at the sanctuary -- the legal dispute is heard before YHWH as the ultimate judge. As a shadow of the final judgment, every false accusation and every true one will be heard at the final tribunal where Christ is the judge to whom all judgment has been given (John 5:27; Acts 17:31). The sanctuary-court that renders judgment in YHWH's presence is the type of the judgment seat of Christ (2 Cor 5:10; Rom 14:10).</p>",
+    "18": "<p>The judges shall investigate the matter carefully, and if the witness has testified falsely -- due process before judgment. As a revelation of God, YHWH is the God of careful, fair investigation who does not condemn without evidence (Gen 18:20-21). The NT extends this: God's judgment is according to truth (Rom 2:2) and according to deeds (Rev 20:12). The careful investigation of the OT court is the shadow of the final judgment where nothing will be hidden and all will be known (Luke 8:17; Matt 12:36).</p>",
+    "19": "<p>You shall do to him what he intended to do to his brother -- mirror punishment for the false witness. As a type of divine retributive justice, this establishes the principle that accusation is itself a moral act -- what you intended for others, if falsely intended, returns to you. The NT application: Satan, the accuser of the brothers (Rev 12:10), is cast down (Rev 12:11) -- the one who intended accusation to destroy receives the condemnation he intended for others. Christ's resurrection is the moment when the false accusation is reversed and turned back on the accusers.</p>",
+    "20": "<p>The rest of the people will hear and be afraid, and will never do such an evil thing again -- public exemplary deterrence. As a theme, the public demonstration of justice that deters evil is the principle that underlies God's judgment history. The NT example is the sudden death of Ananias and Sapphira (Acts 5:1-11: great fear seized the whole church). YHWH does not conceal his judgments; they are public and instructive. The final judgment will be the ultimate public demonstration of divine justice, and its anticipation should deter (Heb 10:30-31).</p>",
+    "21": "<p>Show no pity: life for life, eye for eye, tooth for tooth -- the lex talionis that Jesus directly addresses in Matt 5:38-39. This is one of the few OT laws Jesus explicitly supersedes: you have heard that it was said, an eye for an eye and a tooth for a tooth, but I say to you, do not resist the one who is evil. Jesus does not abolish the principle of proportionate justice -- he transcends it with the call to absorb rather than retaliate. The shadow of proportionate retribution gives way to the substance of Christ who absorbs the full penalty rather than demanding its equivalent.</p>",
+  },
+  "20": {
+    "1": "<p>When you march against your enemies and see horses and chariots and forces larger than yours -- do not be afraid, for YHWH your God is with you. As a revelation of God, YHWH is the divine warrior who goes before his people into battle. The NT applies this warrior imagery to Christ: he is the one who has already won the decisive battle (Col 2:15: he disarmed the rulers and authorities and put them to open shame by triumphing over them in him) and who leads his people in triumph (2 Cor 2:14). The Christian faces spiritual enemies larger than himself, but the divine warrior who brought Israel out of Egypt has already triumphed.</p>",
+    "2": "<p>The priest who steps forward to address the troops before battle -- the priestly role in holy war. As a type, the priest who speaks YHWH's word to the fighting force before battle shadows Christ as both the High Priest and the divine warrior who goes before his people (Heb 4:14-16; Rev 19:11-16). In Christ, the priest and the warrior are united in one person: he is the one who intercedes for his people (Heb 7:25) and who leads them in the spiritual battle they face (Eph 6:10-18).</p>",
+    "3": "<p>Hear, O Israel! Today you are about to engage your enemies in battle -- the pre-battle address that echoes the Shema. The echo of Shema language (Hear, O Israel) in the battle address establishes that the military campaign is a covenant act. As a shadow, this patterns the NT description of the Christian life as warfare: put on the full armor of God, stand firm, take up your position -- and the ground of confidence is YHWH who has already secured the victory (Eph 6:10-20; 1 Cor 15:57: thanks be to God, who gives us the victory through our Lord Jesus Christ).</p>",
+    "4": "<p>For YHWH your God goes with you to fight on your behalf against your enemies and to give you victory. As a direct revelation of God as divine warrior, this is fulfilled in Christ who is Immanuel (God with us, Matt 1:23) and who promises to be with his disciples to the very end of the age (Matt 28:20). The divine warrior who fights for Israel is the same God incarnate in Christ who fights for his people -- not by military conquest but by defeating the powers of sin and death (1 Cor 15:54-57; Heb 2:14-15).</p>",
+    "5": "<p>Has any man built a new house and not yet dedicated it? Let him go home. The exemption from military service for those who have not yet completed life-cycle transitions shadows the NT kingdom principle that the works of God belong to times and seasons (John 2:4; 7:6). There is an appointed time for everything (Eccl 3:1-8), and the covenant community makes provision for the human rhythms of life within the demands of service. Christ himself attended a wedding (John 2) and did not treat every moment as crisis-mobilization.</p>",
+    "6": "<p>Has any man planted a vineyard and not yet eaten of its fruit? Let him go home. The vineyard exemption establishes that there are legitimate covenant claims that take priority over military service. As a theme, the vineyard imagery connects to Israel as YHWH's vineyard (Isa 5:1-7) and Christ as the true vine (John 15:1). The man who has not yet enjoyed the fruit of his vineyard is the type of the one who has not yet fully participated in the covenant life -- which is fulfilled in Christ as the true vine who produces fruit through his branches (John 15:5).</p>",
+    "7": "<p>Has any man become engaged and not yet married? Let him go home. The betrothal exemption protects the marriage covenant even within the demands of holy war. As a theme, this shadows the NT image of the church as the betrothed of Christ (2 Cor 11:2; Rev 19:7; 21:2) -- the preparation for the marriage of the Lamb is a priority in YHWH's economy. The soldier who has not yet married is freed from battle so the covenant relationship can be completed; the church that awaits the return of the bridegroom is similarly in a season of preparation.</p>",
+    "8": "<p>Is any man here afraid or faint-hearted? Let him go home so he does not make his brothers' hearts faint. The exemption for the afraid acknowledges the reality of fear and provides for it graciously -- while also recognizing that communal courage can be undermined by communal fear. As a revelation of God, YHWH does not demand that his people suppress or deny their fear; he provides the legitimate exit and then calls those who remain to actual trust. The NT calls for courage in the face of fear grounded not in personal bravery but in Christ's presence (John 16:33: take heart, I have overcome the world).</p>",
+    "9": "<p>When the officers finish addressing the troops, they shall appoint military commanders to lead them. The ordered structure of leadership established before battle shadows the NT's ordered structure of the church: apostles, prophets, evangelists, pastors, and teachers equipping the saints for works of service (Eph 4:11-12). The army that goes into battle with appropriate leadership is the type of the covenant community that faces spiritual opposition with appropriate gift-ordered leadership.</p>",
+    "10": "<p>When you advance on a city to attack it, first offer it peace. The offer of peace before siege is a type of Christ's offer of peace before judgment. Jesus wept over Jerusalem and said, if you had known the things that make for peace -- but now they are hidden from your eyes (Luke 19:41-42). The city that rejects the peace offer faces siege; the nation that rejects the messianic peace offer faces judgment (Matt 22:7; Luke 21:20-24). YHWH does not move immediately to judgment; he first offers terms of peace, which is the character of the God who does not desire the death of the wicked (Ezek 33:11).</p>",
+    "11": "<p>If the city accepts the offer and opens its gates, all the people shall serve you under compulsory labor. Peaceful submission results in life, even under constraint. As a shadow of the gospel, this is the type of the life available to those who surrender to Christ before the judgment falls: a constrained life, subject to the new Lord, but still life. The NT parallel is not slavery but servitude to righteousness (Rom 6:18) -- those who surrender to Christ serve him, which is not constraint but freedom (John 8:32).</p>",
+    "12": "<p>But if it refuses peace and chooses to fight -- the city that rejects the peace offer faces siege. As a type of eschatological judgment, the city that spurns the peace offer receives war. This is the pattern of the kingdom: the king who invited guests to the wedding and had their city burned when they refused (Matt 22:7). Rejecting the peace that YHWH offers does not leave things neutral; it escalates to the judgment that the peace offer was designed to prevent.</p>",
+    "13": "<p>When YHWH your God delivers it into your hand, put every male to the sword. The conquest's severity against resistant cities shadows the final judgment against those who resist YHWH to the end. As a type of eschatological judgment, this is the pattern that Revelation develops as the harvest of the earth and the treading of the winepress (Rev 14:14-20; 19:15). The divine warrior who delivers cities into Israel's hands is the type of Christ who at the final judgment will deliver the resistant kingdoms of this world to YHWH's justice (1 Cor 15:24-28).</p>",
+    "14": "<p>The women, children, livestock, and goods you may take as plunder for yourselves -- YHWH has given them to you. The preservation of non-combatants in distant city conquest reflects YHWH's care for those who are not the primary object of judgment. As a theme, the distinction between combatants and non-combatants in warfare shadows the NT distinction between those who actively resist Christ and those who have simply been caught in the systems of fallen human power. YHWH's judgment is discriminating, not indiscriminate (Gen 18:25: shall not the Judge of all the earth do right?).</p>",
+    "15": "<p>This is how you shall treat the distant cities, not the nearby nations. The distinction between distant and nearby cities in the warfare law is a shadow of the distinction between the particular judgment on Canaan (unique and unrepeatable) and the general provisions for warfare elsewhere. As a revelation of God, YHWH's purposes are particular and historical -- his command to Israel at a specific moment in history does not establish a general principle for all time. The NT resolution is that Christ fulfills and supersedes the holy war commands (Eph 2:16-17; Isa 57:19), becoming the peace between Jew and Gentile.</p>",
+    "16": "<p>In the cities of these nearby peoples you must not leave anyone alive -- the cherem command for the Canaanite cities. As a shadow of final judgment, the cherem is the OT form of the eschatological judgment that will come at the end of history on all that opposes YHWH (Rev 19:11-21; 2 Thess 1:7-9). The Canaanite nations under cherem are not a model for inter-human warfare but a type of the final divine judgment in which all that is in rebellion against YHWH will be devoted to destruction.</p>",
+    "17": "<p>Utterly destroy them -- the Hittites, Amorites, Canaanites, Perizzites, Hivites, and Jebusites -- as YHWH your God commanded. As a type of Christ's conquest over sin and death (1 Cor 15:24-26: he must reign until he has put all his enemies under his feet -- the last enemy to be destroyed is death), the cherem against the named nations prefigures the eschatological destruction of the spiritual enemies of YHWH's kingdom. The nations listed are historical; the enemies Christ destroys are sin, death, and the devil (Heb 2:14-15; Rev 20:10, 14).</p>",
+    "18": "<p>So they cannot teach you to imitate their abominations -- the theological rationale for the cherem. As a revelation of God, the cherem is not ethnic extermination but theological quarantine: the total removal of the source of spiritual contamination. The NT parallel is the call to radical severance from sin patterns that corrupt (Matt 5:29-30: if your eye causes you to sin, gouge it out) and from fellowship with darkness (2 Cor 6:14-18). The spiritual cherem of the NT is the internal work of mortification (Col 3:5) rather than external conquest.</p>",
+    "19": "<p>During a prolonged siege, do not destroy the surrounding trees by taking an ax to them -- you may eat from them. The protection of fruit trees even in warfare is a remarkable creation-care provision. As a revelation of God, YHWH's concern for trees in a siege law establishes that creation has value independent of human strategic utility. The NT develops this in the vision of the new creation (Rev 21-22) where the tree of life reappears as the provision for the nations. The trees that must not be cut down in the siege shadow the tree of life that Christ restores (Rev 22:2).</p>",
+    "20": "<p>You may cut down the non-fruit-bearing trees and use them to build siege works. The distinction between fruit-bearing (protected) and non-fruit-bearing (available for use) trees is a shadow of the fruit-bearing principle that runs throughout the OT and NT: the tree that bears good fruit stands (Matt 3:10; 7:17-19; John 15:2-5). The fig tree that does not bear fruit is cursed (Mark 11:13-14). The siege-warfare distinction between productive and unproductive trees is the type of the eschatological distinction between those who bear fruit in Christ and those who do not.</p>",
   },
   "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
+    "1": "<p>If a murdered person is found in the open country and no one knows who struck him -- the problem of communal guilt without identifiable individual guilt. As a type of the cross, this verse is striking: Jesus was killed, and the question of who bears responsibility is distributed across multiple parties (the Sanhedrin, Pilate, the crowd, all of humanity by whose sins he died). The eglah arufah ritual addresses exactly this type of distributed communal guilt. The one innocent person whose death cannot be attributed to a single guilty party becomes the occasion for communal atonement.</p>",
+    "2": "<p>Your elders and judges shall go out and measure the distance to the nearest town -- the nearest community bears the most responsibility. As a theme of communal accountability, this establishes the principle of proximity as moral responsibility. The NT development is the parable of the Good Samaritan (Luke 10:30-37): the neighbor is the one who is near and whose nearness creates obligation. The community nearest to the innocent person's death cannot claim neutrality through ignorance.</p>",
+    "3": "<p>The elders of the nearest town shall take a young cow that has never been put to work or yoked -- the unused heifer as the ritual animal. As a type pointing to Christ, the animal that has never been yoked and never worked is the animal that has not yet been incorporated into human utility -- it is, in a sense, pure of human use. This patterns Christ who was without sin (Heb 4:15; 1 Pet 1:19: a lamb without blemish or defect) -- not merely ceremonially pure but genuinely untainted by the corruption that the ritual addresses.</p>",
+    "4": "<p>They shall bring the heifer to a rocky ravine with a running stream -- ground that has never been cultivated or planted. The doubly liminal space (unused animal, uncultivated ground, running water) creates a ritual zone outside normal human society for the transfer of communal pollution. As a shadow of the cross, Christ dies outside the city wall (Heb 13:12: Jesus also suffered outside the city gate), at a liminal location, in a ritual act that removes the guilt that could not be attributed to any one person (John 11:50: it is better that one man die for the people).</p>",
+    "5": "<p>The Levitical priests shall come forward, for YHWH has chosen them to serve him and to pronounce blessings in his name -- the priestly authorization of the atonement ritual. As a type, the priestly authorization of the eglah arufah shadows Christ as the High Priest who both authorizes and performs the atonement for communal guilt (Heb 9:11-14). The Levitical priests preside over a ritual that can only partially address communal guilt; Christ as the eternal High Priest performs the once-for-all offering that fully and permanently removes it.</p>",
+    "6": "<p>All the elders of the nearest town shall wash their hands over the heifer -- hand-washing as the transfer of communal guilt to the substitute. As a type of atonement, the elders' hand-washing over the heifer transfers the community's guilt to the substitute. Pilate's hand-washing (Matt 27:24) deliberately echoes this imagery -- but ironically and perversely: the elders in Deuteronomy wash hands to transfer guilt to an animal substitute; Pilate washes hands to disclaim guilt for executing the innocent One who would be the true substitute. The symbol is the same; the reality is inverted.</p>",
+    "7": "<p>They shall declare: Our hands did not shed this blood, nor did we witness it. The declaration of innocence in the presence of the substitute who bears what the community cannot attribute to itself. As a type of Christ, the community's declaration of non-participation does not make them innocent -- the blood is still shed, the guilt is still real, only unattributable. The cross is YHWH's solution to the guilt that humanity bears collectively and cannot assign individually: Christ takes the guilt that all share but none fully owns.</p>",
+    "8": "<p>Forgive your people Israel, whom you redeemed, O YHWH, and do not hold them guilty for the blood of an innocent person. The atonement prayer over the substituted heifer is a direct pointer to the cross. This is the prayer the cross answers: the prayer for forgiveness of innocent blood shed by a community (the human race) on behalf of whom a substitute (Christ) has died. The prayer Forgive your people whom you redeemed is answered in Eph 1:7: in him we have redemption through his blood, the forgiveness of sins.</p>",
+    "9": "<p>In this way you shall purge innocent bloodguilt from your midst by doing what is right in YHWH's sight. The purging of innocent bloodguilt through the prescribed atonement ritual points to the purging of the greatest innocent blood -- Christ's -- through the prescribed atonement that God himself provides. Acts 3:19 applies this directly: repent and turn back so that your sins may be wiped out. The blood of Christ, which speaks a better word than Abel's (Heb 12:24), purges the communal guilt of humanity that the eglah arufah could only partially address.</p>",
+    "10": "<p>When you go to war and YHWH gives you victory and you take captives -- the war-captive woman law begins. As a theme pointing to Christ's redemption, the taking of captives in warfare is a shadow of the human condition under the power of sin and death (Rom 6:6, 17: you were slaves to sin; 1 Cor 15:56: the sting of death is sin). Christ as the divine warrior takes captives in a very different sense: leading captivity captive (Eph 4:8, quoting Ps 68:18), he frees those captured by the enemy and makes them his own.</p>",
+    "11": "<p>If you notice a beautiful woman among the captives and are attracted to her and want to marry her -- the law begins with a realistic acknowledgment of human desire. As a theme of redemption, this shadows the language Scripture uses for God's love for Israel and Christ's love for the church: he saw her in her captivity and desired her (Ezek 16:6-8; Eph 5:25-27: Christ loved the church and gave himself for her, to make her holy, cleansing her). The divine desire for the captive woman is the OT type of the redemptive love that claims the enemy's captive for the covenant.</p>",
+    "12": "<p>She shall shave her head and trim her nails -- the mourning and transition rituals that mark the captive woman's crossing from one status to another. As a shadow of the transformation of the one claimed by the covenant, this patterns baptism as the ritual of transition (Rom 6:3-4: we were buried with him by baptism into death, so that we too might walk in newness of life). The old identity is stripped away; the new identity in the covenant community begins.</p>",
+    "13": "<p>She shall remove her captivity clothing and mourn her father and mother for a month -- the allowed time of grief for the old life. As a theme of grace in the transition from old to new, this provision for mourning the old identity before entering the new one shadows the NT's acknowledgment that leaving the old life has genuine costs. Discipleship means leaving things behind (Matt 19:29: everyone who has left houses or brothers or sisters or father or mother or children or fields for my name's sake will receive a hundred times as much). The mourning is real; so is the provision for it.</p>",
+    "14": "<p>If you are no longer pleased with her, you must release her freely -- you may not sell her or treat her as a slave. The protection of the captive woman even in the case of rejection is a shadow of Christ's irreversible commitment to those he has claimed. The NT fulfillment inverts the shadow: Christ does not release his people (John 10:28-29: I give them eternal life and they shall never perish; no one can snatch them from my hand). But the principle that the one claimed cannot be discarded as property establishes the dignity of the redeemed -- they are not disposable objects but persons with permanent covenant standing.</p>",
+    "15": "<p>If a man has two wives, one loved and one unloved, and both have borne him sons -- the polygamous household inheritance law. This verse does not stand in direct typological relationship to Christ but as a revelation of God: YHWH is concerned for the rights of the unloved and the structurally vulnerable. The unloved wife's son must not be cheated of his legitimate birthright because of the father's emotional preference. This establishes the principle that covenant rights are not distributed according to favoritism (Deut 10:17: YHWH is not partial).</p>",
+    "16": "<p>When he divides his estate among his sons, he may not give the firstborn's rights to the son of the loved wife -- the protection of the firstborn's legal rights over emotional preference. As a theme, this shadows the NT's insistence that God plays no favorites: he chose the younger over the elder (Jacob over Esau, 1 Cor 1:27-29: God chose the foolish, the weak, the low and despised) but he does not thereby establish a principle of arbitrary preference. The law that protects the firstborn from being displaced by the father's favorite is a shadow of the God who distributes covenant rights not by human preference but by his own righteous determination.</p>",
+    "17": "<p>He must acknowledge the unloved wife's firstborn by giving him a double share -- the firstborn rights are a legal obligation, not a gift. As a type pointing to Christ as the true firstborn, this verse establishes the category of firstborn with special significance: the firstborn over all creation (Col 1:15) who receives the first and the double portion. Christ inherits all things (Heb 1:2: he appointed the heir of all things) as the firstborn, and those united to him share in this inheritance (Rom 8:17: heirs together with Christ).</p>",
+    "18": "<p>If a man has a stubborn and rebellious son who refuses to obey either parent -- the rebellious son who defies the covenant household. As a type of Christ's substitution, the stubborn-rebellious son who faces community death is the opposite of the obedient Son: where the rebellious son refuses to listen to either parent, Christ is perfectly obedient to the Father even to death on a cross (Phil 2:8). Christ takes the fate of the rebellious son -- execution by the community -- not because he deserves it but to bear what the rebellious son merits (Gal 3:13; 2 Cor 5:21).</p>",
+    "19": "<p>His father and mother shall bring him before the elders at the city gate and the whole town shall judge him. The communal judgment of the rebellious son requires the participation of the entire community -- the same mechanism of communal judgment applied to Christ at his trial: Pilate, Herod, the Sanhedrin, the crowd all participated in the execution of the one who was publicly brought before the authorities and condemned. The covenant community structure of Deuteronomy becomes the mechanism through which the true Son's substitutionary death is carried out.</p>",
+    "20": "<p>This son of ours is stubborn and rebellious -- he is a profligate and a drunkard. The specific charges of gluttony and drunkenness that disqualify the rebellious son from the covenant are charges that were ironically leveled at Jesus: the Pharisees called him a glutton and a drunkard, a friend of tax collectors and sinners (Matt 11:19; Luke 7:34). Jesus was falsely accused of the very behaviors that characterize the rebellious son -- he bore the accusation of the one whose punishment he was taking.</p>",
+    "21": "<p>All the men of his town shall stone him to death -- so you shall purge the evil from your midst, and all Israel will hear and be afraid. As a type of Christ's execution, the communal stoning of the rebellious son (though the NT method was crucifixion) establishes the pattern of the community purging a condemned member through a public execution with deterrent effect. Jesus's execution was intended as deterrence (John 11:48: if we let him go on like this, everyone will believe in him and the Romans will come). The purging of evil from the midst of the covenant community is accomplished by Christ's death, but in the opposite direction -- not by executing the guilty but by the innocent bearing the guilty's penalty.</p>",
+    "22": "<p>If a man is executed for a capital offense and you hang his body on a tree -- the post-mortem display of the condemned. The hanging on a tree that follows execution is a public declaration of YHWH's curse on the condemned person. As a direct type of the crucifixion, this verse establishes the theological framework within which Paul interprets the cross. To die by crucifixion was to die in the manner of Deut 21:22-23 -- publicly cursed, shamefully displayed, condemned by YHWH. This is what Christ voluntarily underwent (Gal 3:13).</p>",
+    "23": "<p>Bury him that same day, for anyone hanged on a tree is under God's curse. This is one of the most theologically loaded verses in Deuteronomy and the NT's most explicit citation of it. Paul quotes it directly in Galatians 3:13: Christ redeemed us from the curse of the law by becoming a curse for us -- for it is written, Cursed is everyone who is hanged on a tree. The crucifixion is not an incidental form of death; it is the specific form that places Christ under the divine curse of Deut 21:23, which is the curse of the law that all covenant-breakers deserve. Christ does not merely die -- he dies under the specific legal curse, bearing it on behalf of those who deserve it, so that the blessing of Abraham might come to the Gentiles (Gal 3:14).</p>",
   },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-christ', 'deuteronomy')
+    merge_comm(existing, DEUTERONOMY)
+    save_comm('mkt-christ', 'deuteronomy', existing)
+    print('Deuteronomy 18-21 mkt-christ written.')
 
 if __name__ == '__main__':
     main()

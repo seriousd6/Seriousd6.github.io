@@ -1,129 +1,118 @@
-"""
-Numbers — all four layers.
-Key NT uses: bronze serpent (21), water from rock (20), wilderness wandering as warning,
-Balaam's star oracle (24), Phinehas's zeal, priestly blessing (6:24-26).
-"""
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-ECHO = {
-  "6": {
-    "24": [
-      {"type": "allusion", "target": "2 Cor 13:14", "note": "The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace — the Aaronic blessing (Num 6:24-26) is the OT's most direct benediction of divine favor; Paul's trinitarian benediction in 2 Cor 13:14 echoes its structure and is its new covenant fulfillment"}
-    ]
-  },
-  "14": {
-    "29": [
-      {"type": "allusion", "target": "Heb 3:17", "note": "Your dead bodies shall fall in this wilderness — the wilderness generation's judgment (their corpses fell in the desert) is Hebrews' central warning about unbelief: with whom was God provoked for forty years? Was it not with those who sinned, whose bodies fell in the wilderness? (Heb 3:17)"},
-      {"type": "allusion", "target": "1 Cor 10:5", "note": "God was not pleased with most of them, for they were overthrown in the wilderness — Paul cites the wilderness generation's fate as a warning to the Corinthians; the judgment on the unbelieving exodus generation is the type of what awaits persistent unbelief"}
-    ]
-  },
-  "21": {
-    "8": [
-      {"type": "fulfillment", "target": "John 3:14-15", "note": "Make a fiery serpent and set it on a pole and everyone who is bitten, when he sees it, shall live — Jesus explicitly cites the bronze serpent as a type of his own crucifixion: as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life (John 3:14-15); looking to the lifted serpent = believing in the lifted Christ"}
-    ]
-  },
-  "24": {
-    "17": [
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "A star shall come out of Jacob — Balaam's messianic oracle (the star from Jacob) is applied to Christ in Revelation: I am the root and the descendant of David, the bright morning star; Num 24:17 was a significant messianic proof-text in Second Temple Judaism (the Dead Sea Scrolls use it messianically)"}
-    ]
-  },
-  "25": {
-    "11": [
-      {"type": "allusion", "target": "Rom 10:2", "note": "Phinehas son of Eleazar has turned back my wrath by being jealous with my jealousy — Phinehas's zeal for YHWH's honor (executing the Israelite and Midianite woman in their sin) is cited as the model of passionate covenant faithfulness; Paul's description of Israel's zeal for God echoes the Phinehas tradition"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "6": {
-    "24": "<p><strong>yevarechecha YHWH veyishmerecha yaer YHWH panav eleicha vichuneka yissa YHWH panav eleicha veyasem lecha shalom</strong>: The Aaronic Blessing (Birkat Kohanim) is the oldest liturgical text in continuous use — fragments of it were found on silver amulets from the 7th century BCE (the Ketef Hinnom scrolls, the oldest biblical text discovered). Its three-part structure increases in length: 3 words, 5 words, 7 words, with a crescendo toward <em>shalom</em> (peace/wholeness/well-being). The divine name YHWH appears three times — early Christian interpreters saw this as a Trinitarian hint. The blessing has been recited in Jewish synagogues for over 2,500 years and by Christian ministers at service benedictions, making it one of the most-spoken texts in human history.</p>"
-  },
-  "21": {
-    "8": "<p><strong>veasa lecha saraf veshim oto al nes vehaya kol hanashuch veraah oto vachai</strong>: 'Make a fiery serpent and set it on a pole, and everyone who is bitten, when he sees it, shall live.' The serpent-on-a-pole raises a question: is this a violation of the second commandment (no graven images)? The text suggests: (1) it is the looking in faith, not the object itself, that saves; (2) YHWH appointed the image for a specific purpose as a means of grace. The Greek translation (<em>ophis chalkous</em>, bronze serpent) uses the same word Paul uses in 2 Cor 5:21: God made him who knew no sin to be <em>sin</em> (Gk. <em>hamartia</em>) for us — Christ becomes the thing that kills (sin/the serpent) in order to be the means of salvation for all who look to him.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "1": "<p>Numbers takes its English name from the two censuses (chs. 1 and 26); the Hebrew title is <em>Bemidbar</em> (In the Wilderness), which better captures the book's geographical and theological content. It narrates the wilderness journey from Sinai to the plains of Moab — a journey that should have taken months but became 40 years because of the generation's unbelief at Kadesh-barnea (chs. 13-14). The book is structured around the failure of the first generation (which dies in the wilderness) and the formation of the second generation (which enters Canaan). The typological theme of wilderness-as-testing-ground is developed extensively in the NT: Israel's forty years in the wilderness corresponds to Jesus's forty days of testing (Matt 4:1-11), and Paul makes the wilderness generation's failures into warnings for the church (1 Cor 10:1-13).</p>"
-  },
-  "21": {
-    "4": "<p>The bronze serpent incident (Num 21:4-9) occurs during one of the wilderness generation's recurring cycles of complaint-judgment-intercession-deliverance. The people speak against God and against Moses; YHWH sends fiery serpents as judgment; the people confess sin and Moses intercedes; YHWH provides the bronze serpent as a means of healing. The serpent-image was preserved in Israel and later became an object of idolatry: Hezekiah destroyed it during his reforms (2 Kings 18:4: he broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had burned incense to it). The thing appointed as a healing sign became an idol — illustrating the tendency of every divine gift to be worshiped rather than used. Jesus redeems the image by applying it to himself in John 3:14.</p>"
-  }
-}
+            if v not in existing[ch]: existing[ch][v] = html
 
 CHRIST = {
-  "6": {
-    "24": "<p>A direct revelation: 'The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' The Aaronic blessing is Israel's definitive statement of what divine favor looks like: not an absence of difficulty but the direct presence and face of YHWH turned toward his people in grace. In Christ, the Aaronic blessing receives its ultimate fulfillment: the Father's face shines in the face of Christ (2 Cor 4:6: the light of the knowledge of the glory of God in the face of Jesus Christ); the divine peace (<em>shalom</em>) that the blessing promised is the peace Christ gives (John 14:27: Peace I leave with you; my peace I give to you); the benedictions of Christian worship (2 Cor 13:14; Jude 24-25; Rev 1:4-5) are the new covenant form of the ancient priestly blessing.</p>"
-  },
-  "21": {
-    "8": "<p>A type: 'Set it on a pole, and everyone who is bitten, when he sees it, shall live.' Jesus explicitly applies the bronze serpent typology to himself (John 3:14-15), making it the Bible's own explanation of why Christ must be 'lifted up' on the cross. The structural parallel: Israel was under God's judgment for sin (serpent bites = death sentence) → Moses interceded → YHWH appointed an external means of salvation (look to the serpent) → those who looked in faith lived. The antitype: humanity is under God's judgment for sin → Christ intercedes → the Father appoints the cross as the external means of salvation → those who look in faith to the crucified Christ live forever. The bronze serpent is Numbers' most explicit Christological type, made explicit not by later Christian interpretation but by Jesus himself.</p>"
-  }
+"7": {
+"1": "<p>A shadow: The day Moses finished setting up the tabernacle and anointed it for YHWH's dwelling foreshadows the day Christ was consecrated for his ministry — his baptism, when the Spirit descended and the Father declared him his Son (Luke 3:21-22). As the tabernacle was anointed with oil for divine inhabitation, Christ was anointed with the Spirit without measure (John 3:34) for the work of making God's dwelling with humanity.</p>",
+"2": "<p>A theme: The tribal leaders (<em>nesiim</em>) bringing voluntary gifts for the tabernacle's service foreshadow the apostles and elders who give their lives to the service of Christ's church — the true tabernacle (Heb 8:2). Their gifts are freely offered, not coerced, reflecting Paul's principle: 'not I, but the grace of God' (1 Cor 15:10).</p>",
+"3": "<p>A shadow: Six wagons and twelve oxen — shared transport resources for the tabernacle's movement — foreshadow the Spirit's gifts distributed for the movement and mission of the church. As each wagon served a specific Levitical clan's carrying need, each spiritual gift serves a specific function in Christ's body (1 Cor 12:4-7: 'to each is given the manifestation of the Spirit for the common good').</p>",
+"4": "<p>A theme: YHWH instructing Moses to receive the gifts 'for the service of the tent of meeting' establishes that human offerings become useful only when taken up into divine service. Christ takes up human gifts and labor into his own redemptive work — the loaves in the boy's hands, the nets Peter lays down, the tears poured on his feet — all received and transformed for YHWH's purposes.</p>",
+"5": "<p>A shadow: The distribution according to function — each clan receives what suits its actual work — foreshadows the Spirit's distribution of gifts 'to each one individually as he wills' (1 Cor 12:11). Christ as head of the body assigns each member gifts appropriate to the body's needs, not to individual preference or prestige.</p>",
+"6": "<p>A theme: Two wagons and four oxen to Gershon, four wagons and eight oxen to Merari — proportional to the weight of their assigned work. Christ distributes grace 'according to the measure of Christ's gift' (Eph 4:7) — each member equipped in proportion to the ministry they are called to, not beyond what they can bear (1 Cor 10:13).</p>",
+"7": "<p>A shadow: The Gershonites carrying the tabernacle's outer coverings — the fabric that forms the visible exterior — foreshadow those in Christ's body whose ministry presents the gospel's external form to the world: evangelists, teachers who clothe the message in accessible form. The covering of the tabernacle makes its holiness approachable; so the Spirit-given capacity to communicate makes Christ's glory approachable.</p>",
+"8": "<p>A shadow: The Merarites receiving the most wagons because they carry the heaviest structural load — the frames and bars — foreshadow those called to bear the weight of structural ministry in Christ's body: apostolic and administrative gifts that maintain the church's integrity under pressure (Gal 6:2; 2 Cor 11:28).</p>",
+"9": "<p>A direct type: The Kohathites receiving no wagons because they must carry the holy objects on their shoulders directly — body to sacred object, no intermediary — is a type of Christ's own bearing of the cross. The most holy object (the ark, which covered the law) is carried by direct physical contact, just as Christ 'himself bore our sins in his body on the tree' (1 Pet 2:24). No mechanism, no distance — direct personal bearing.</p>",
+"10": "<p>A shadow: The twelve-day dedication of the altar — one tribe per day — foreshadows the patient, complete dedication through which Christ establishes his church tribe by tribe, person by person, in contrast to his own single once-for-all sacrifice (Heb 10:10). The altar dedicated by twelve successive offerings finds its fulfillment in the altar that Christ himself is (Heb 13:10), requiring no further dedication.</p>",
+"11": "<p>A theme: YHWH designating one tribe per day — ensuring every tribe presents before him individually — reveals Christ's personal knowledge of each member of his body. He calls his sheep by name (John 10:3). The twelve-day dedication reflects the same particularity: not a crowd offering in aggregate but each tribe, each leader, each gift recognized individually before YHWH.</p>",
+"12": "<p>A direct fulfillment: Nahshon son of Amminadab for Judah offers first on day one. Nahshon is in the direct messianic genealogy: Ruth 4:20 and Matthew 1:4 place him as the ancestor of David and ultimately of Jesus. The first offering in the tabernacle dedication comes from the tribe and family line that will produce the ultimate offering. The beginning and the end of Israel's sacrificial system share the same bloodline.</p>",
+"13": "<p>A direct type: The silver dish (130 shekels) and silver basin (70 shekels) filled with fine flour mixed with oil — a grain offering — foreshadow Christ as the bread of life (John 6:35). The grain offering (<em>minchah</em>) is an unbloody, wholesome gift: flour mixed with oil, without leaven (Lev 2:11 — 'no leaven shall be burned in an offering'). Christ, sinless and Spirit-anointed, is the pure grain-gift of himself to the Father.</p>",
+"14": "<p>A direct type: The gold pan filled with incense foreshadows Christ's intercessory prayer — the rising smoke of incense representing prayer ascending to God (Rev 5:8: 'golden bowls full of incense, which are the prayers of the saints'). Christ as our high priest ever lives to make intercession (Heb 7:25). The gold pan — small, precise, purpose-built for fragrant prayer — is a type of the throne where Christ intercedes.</p>",
+"15": "<p>A direct type: The three-animal burnt offering (bull, ram, lamb) represents total consecration to YHWH — the entire animal ascending in smoke, nothing withheld. Christ's self-offering is the ultimate burnt offering: 'he offered himself without blemish to God' (Heb 9:14). The ascending smoke of the olah is the language Ephesians 5:2 uses of Christ: 'gave himself up for us, a fragrant offering and sacrifice to God.'</p>",
+"16": "<p>A direct type: The male goat for the sin offering (<em>chatat</em>) is a type of Christ made sin for us (2 Cor 5:21: 'he made him to be sin who knew no sin, so that in him we might become the righteousness of God'). Every dedication ceremony, however exalted, begins with the sin offering — acknowledging that approach to YHWH requires atonement. Christ is both the offerer and the offering that makes all approach possible.</p>",
+"17": "<p>A direct type: The peace offerings (<em>shelamim</em>) — two oxen, five rams, five goats, five lambs — represent communal celebration and fellowship with YHWH. Christ is our peace offering: 'he himself is our peace' (Eph 2:14). The peace offering was shared between God, priest, and offerer — a three-way communion. Christ's sacrifice creates the ultimate peace offering: table fellowship with the Father (Rev 3:20).</p>",
+"18": "<p>A shadow: Nethanel of Issachar brings the identical offering on day two. The second day's identical gift affirms that access to YHWH is not earned by status or distinctive contribution — the same gift suffices for every tribe. Christ's atonement is equally sufficient for every person: 'there is neither Jew nor Greek... you are all one in Christ Jesus' (Gal 3:28).</p>",
+"19": "<p>A theme: Nethanel's silver dish and basin — the same weight as Nahshon's — embody the principle of equal standing before the altar. In Christ, there is no privileged access for the first tribe over the last: 'the same Lord is Lord of all, bestowing his riches on all who call on him' (Rom 10:12).</p>",
+"20": "<p>A theme: The gold incense pan on day two. Twelve pans, twelve days, twelve fragrances of prayer ascending — a picture of the persistent intercessory prayer of the whole people before YHWH. Christ teaches persistent prayer (Luke 18:1-8) and his own intercession never ceases (Heb 7:25).</p>",
+"21": "<p>A shadow: Nethanel's burnt offering — the same three animals as Nahshon's. The uniformity of the burnt offering across all twelve days teaches that total consecration to YHWH takes the same form regardless of tribal identity. Christ's call to discipleship is uniform: 'deny yourself and take up your cross' (Matt 16:24) — the same terms for every follower.</p>",
+"22": "<p>A direct type: The sin offering for Issachar, as for every tribe. 'All have sinned and fall short of the glory of God, and are justified by his grace as a gift, through the redemption that is in Christ Jesus' (Rom 3:23-24). The sin offering's repetition across all twelve tribes is the liturgical enactment of this universal need and universal provision.</p>",
+"23": "<p>A theme: Issachar's peace offerings. Issachar's territory will be the Jezreel Valley, where Jesus healed many (Mark 3:7-8: 'a great crowd from Galilee followed'). The peace offering for Issachar points to the shalom that the One who will walk that land brings — not only cessation of hostility with God but wholeness, healing, restoration.</p>",
+"24": "<p>A shadow: Eliab of Zebulun brings the identical offering on day three. Zebulun's territory — northern Galilee and the Sea of Galilee region — was the heartland of Jesus's ministry. The offering brought by Zebulun's leader foreshadows the Light that will rise over Zebulun's land: 'the people dwelling in darkness have seen a great light' (Matt 4:16, quoting Isa 9:1-2).</p>",
+"25": "<p>A theme: Zebulun's silver vessels. The fine flour and oil of Zebulun's grain offering foreshadow the bread and the oil of the kingdom — the messianic feast prepared by the one who 'takes away the sin of the world' (John 1:29) and who himself is the bread of life (John 6:35).</p>",
+"26": "<p>A shadow: The gold incense pan for Zebulun. The tribe that will one day hear Jesus preach from a boat on its sea (Mark 4:1) and witness healing in its towns sends prayer ascending in smoke before YHWH. The same land that will host Christ's miracles first offers this fragrant prayer in anticipation.</p>",
+"27": "<p>A direct type: Zebulun's burnt offering. The <em>olah</em> (whole ascending offering) ascends entirely to YHWH — a picture of Christ's resurrection ascension, 'carried up into heaven' (Luke 24:51), the ultimate ascending offering who has gone before us into the holy place (Heb 6:20).</p>",
+"28": "<p>A direct type: The sin offering for Zebulun — a single goat for a single tribe, identical to all others. 'He is the propitiation for our sins, and not for ours only but also for the sins of the whole world' (1 John 2:2). The twelve goats together totaling one great sin offering for all Israel = Christ's one sacrifice for the whole world.</p>",
+"29": "<p>A theme: Zebulun's peace offerings. The communal feast that follows atonement is the eschatological picture: 'I tell you I will not drink again of this fruit of the vine until that day when I drink it new with you in my Father's kingdom' (Matt 26:29). Every peace offering feast in Numbers points toward the messianic banquet.</p>",
+"30": "<p>A shadow: Elizur of Reuben brings his offering on day four. Reuben — Jacob's firstborn who forfeited the birthright through moral failure — brings the identical offering as Judah (who received the scepter) and Ephraim (who received the birthright blessing). At the altar, the forfeited birthright does not disqualify from equal access. Christ restores what was forfeited: 'I will restore to you the years that the swarming locust has eaten' (Joel 2:25).</p>",
+"31": "<p>A theme: Reuben's silver vessels. The equal access to YHWH's altar that the standardized vessels represent is the gospel's scandal of grace: Reuben's leader brings the same gift as Judah's, and YHWH receives both. 'There is no distinction, for all have sinned and all are justified freely' (Rom 3:22-24).</p>",
+"32": "<p>A shadow: The incense pan for Reuben. Prayer ascending from the tribe that failed morally — ascending with the same fragrance as prayer from the tribe of the promise. Christ 'is able to save to the uttermost those who draw near to God through him' (Heb 7:25). The uttermost includes Reuben.</p>",
+"33": "<p>A direct type: Reuben's burnt offering. The total consecration offering ascending from a tribe with a complicated history reminds that the olah's significance is not the offerer's righteousness but YHWH's reception. 'While we were yet sinners, Christ died for us' (Rom 5:8). The altar receives and transforms what the offerer himself cannot purify.</p>",
+"34": "<p>A direct type: The sin offering for Reuben. 'He who knew no sin was made sin so that we might become the righteousness of God' (2 Cor 5:21). The goat for Reuben stands in the place of Reuben's accumulated guilt — as Christ stands in the place of every human's accumulated guilt.</p>",
+"35": "<p>A theme: Reuben's peace offerings. Five days of dedication peace offerings: the cumulative shalom building across the tribes. Christ's peace is not a static achievement but a cumulative covering — his kingdom is 'of peace, and there will be no end' (Isa 9:7).</p>",
+"36": "<p>A shadow: Shelumiel of Simeon brings his offering on day five. Simeon and Levi were cursed to be scattered (Gen 49:5-7); Simeon was absorbed into Judah. Yet here Simeon stands with a full offering. Christ gathers the scattered: 'I will bring your offspring from the east and from the west... Do not fear, for I am with you' (Isa 43:5-6).</p>",
+"37": "<p>A theme: Simeon's silver vessels. The grain offering of fine flour — the fruit of agricultural labor transformed into worship — points to Christ who takes human effort and offers it to the Father in himself. 'Offer your bodies as a living sacrifice, holy and pleasing to God' (Rom 12:1).</p>",
+"38": "<p>A shadow: The incense pan for Simeon. The tribe whose name means 'hearing' (<em>shama</em>) sends prayer that YHWH hears. Christ is the one who hears prayer perfectly: 'If you ask me anything in my name, I will do it' (John 14:14). All prayer is received through him who ever lives to intercede.</p>",
+"39": "<p>A direct type: Simeon's burnt offering. The tribe scattered in Israel, yet bringing an ascending whole-burnt-offering, mirrors Christ 'outside the camp' (Heb 13:11-13) — rejected, scattered from the center of power, yet his offering ascending as the most fragrant of all.</p>",
+"40": "<p>A direct type: Simeon's sin offering. One goat for the tribe that will be scattered — a picture of the single sacrifice sufficient for the most dispersed and marginalized. 'He is the same Lord over all, rich toward all who call on him' (Rom 10:12).</p>",
+"41": "<p>A theme: Simeon's peace offerings. Six tribes have brought peace offerings by day six. The accumulating shalom of the dedication mirrors the kingdom's expansion: 'The kingdom of heaven is like leaven that a woman took and hid in three measures of flour, till it was all leavened' (Matt 13:33).</p>",
+"42": "<p>A shadow: Eliasaph of Gad brings his offering on day six. Gad settled east of the Jordan — pragmatic, choosing visible good pasture over invisible future promise. Yet Gad's offering is not lesser. Christ meets the pragmatic and the faith-driven at the same altar: 'Come to me, all who labor and are heavy laden, and I will give you rest' (Matt 11:28).</p>",
+"43": "<p>A theme: Gad's silver vessels — 200 shekels of silver like every other tribe. Silver in Zechariah 11:12 and Matthew 26:15 marks Judas's price for the betrayal of Christ: thirty pieces of silver. The silver offered at the altar in devotion is transformed into the silver paid for the ultimate offering.</p>",
+"44": "<p>A shadow: The incense pan for Gad. Gad means 'fortune' — a tribe named for prosperity. The incense of prayer rising from the tribe of material hope foreshadows Christ who transforms temporal hopes into eternal ones: 'Seek first the kingdom of God and his righteousness, and all these things will be added to you' (Matt 6:33).</p>",
+"45": "<p>A direct type: Gad's burnt offering. Gad's territory east of the Jordan would be the site of Jesus's healing of the Gadarene demoniac (Mark 5:1-20) — a man living among tombs, unclean, desperate. The burnt offering from Gad's territory anticipates the region's encounter with the one whose self-offering brings full restoration.</p>",
+"46": "<p>A direct type: The sin offering for Gad — the seventh goat in the sequence. Seven goats now consumed over seven days: the week of dedication requires seven atonements, corresponding to the completeness of sin's scope. Christ's single death in history accomplishes what the seven-day series pointed toward: one complete, sufficient covering.</p>",
+"47": "<p>A theme: Gad's peace offerings. Seven days of peace feasts conclude. The number seven evokes the Sabbath: creation completed in seven days, the seventh day blessed and set apart. The peace offering on day seven is a rest-offering — the labor of worship culminating in the rest of communal celebration with YHWH. Christ is our Sabbath rest (Heb 4:9-10).</p>",
+"48": "<p>A shadow: Elishama of Ephraim brings his offering on day eight. Eight is the number of new beginnings in Jewish and early Christian thought — circumcision on the eighth day, Christ's resurrection on the first day of the new week (the 'eighth day' in patristic writing). Ephraim's offering on day eight carries the resonance of new creation.</p>",
+"49": "<p>A theme: Ephraim's silver vessels. Ephraim — the younger son blessed ahead of the elder (Gen 48) — brings the same offering as every other tribe. The reversal of primogeniture that blessed Ephraim over Manasseh finds its ultimate fulfillment in Christ's reversal of human expectations: 'the last will be first, and the first last' (Matt 20:16).</p>",
+"50": "<p>A shadow: The incense pan for Ephraim. The tribe that would dominate the northern kingdom's worship — often deviantly (golden calves at Bethel) — here offers pure incense from the prescribed golden pan. The desire for worship was embedded in Ephraim; only its direction was corrupted. Christ redirects all human worship-hunger toward the Father: 'God is spirit, and those who worship him must worship in spirit and truth' (John 4:24).</p>",
+"51": "<p>A direct type: Ephraim's burnt offering. Ephraim's tribe will shout 'Hosanna!' in the crowds of Jesus's triumphal entry (the tribe of central Israel). The ascending smoke of the olah from Ephraim's representative prefigures the ascending praises that will greet the one the burnt offering ultimately pointed toward.</p>",
+"52": "<p>A direct type: The sin offering for Ephraim on day eight. Ephraim's spiritual history includes the gravest syncretism — Jeroboam's altars at Bethel, directly competing with YHWH's appointed worship. Yet the sin offering for Ephraim at the tabernacle is received. Christ's atonement covers not merely individual sin but corporate, generational patterns of apostasy: 'Where sin increased, grace abounded all the more' (Rom 5:20).</p>",
+"53": "<p>A theme: Ephraim's peace offerings. The communal feast offered by the central Israelite tribe is a foretaste of the messianic feast in which Ephraim and Manasseh both participate: 'On this mountain the Lord of hosts will make for all peoples a feast of rich food, a feast of well-aged wine' (Isa 25:6).</p>",
+"54": "<p>A shadow: Gamaliel of Manasseh brings his offering on day nine. Manasseh — the elder of Joseph's sons, blessed second (Gen 48) — represents the reversal of human expectation that runs through the Jacob narrative. A descendant of Manasseh was the Pharisee Gamaliel who protected the early apostles (Acts 5:34-39). The tribe's lineage runs from this offering through centuries to an act of unintentional mercy toward Christ's followers.</p>",
+"55": "<p>A theme: Manasseh's silver vessels. The divided tribe — half east, half west of the Jordan — brings a single offering. Christ gathers the divided: 'I have other sheep that are not of this fold. I must bring them also, and they will listen to my voice. So there will be one flock, one shepherd' (John 10:16).</p>",
+"56": "<p>A shadow: The incense pan for Manasseh. Manasseh's western territory included Shechem, the ancient covenant renewal site (Josh 24) and the location of Jesus's conversation with the Samaritan woman (John 4). The prayer ascending from Manasseh's territory is answered in the woman who says, 'Come, see a man who told me all that I ever did' (John 4:29).</p>",
+"57": "<p>A direct type: Manasseh's burnt offering. The unchanging form of the burnt offering — always the same three animals — reflects the immutability of the requirement for total consecration. Christ 'is the same yesterday and today and forever' (Heb 13:8); the basis for approaching God does not change across the centuries.</p>",
+"58": "<p>A direct type: The sin offering for Manasseh. 'Christ died for sins once for all, the righteous for the unrighteous, to bring you to God' (1 Pet 3:18). The nine accumulated sin offerings by day nine are nine tokens of the one atonement toward which all these animals pointed.</p>",
+"59": "<p>A theme: Manasseh's peace offerings. Nine tribes have celebrated the peace feast with YHWH. The building cumulation is the narrative shape of the kingdom: 'The kingdom of God is as if a man should scatter seed on the ground, and he sleeps and rises night and day, and the seed sprouts and grows' (Mark 4:26-27). The peace offering's cumulation over twelve days mirrors the kingdom's patient, compounding growth.</p>",
+"60": "<p>A shadow: Abidan of Benjamin brings his offering on day ten. Benjamin — 'son of the right hand' — foreshadows Christ, who 'sat down at the right hand of the Majesty on high' (Heb 1:3). The tribe named for the right hand of honor brings its offering on day ten: a tribe bearing in its name the posture that defines Christ's eternal status before the Father.</p>",
+"61": "<p>A theme: Benjamin's silver vessels. Benjamin — the last-born, the youngest, the one Joseph wept over (Gen 43:30) — brings the same offering as the firstborn and the most powerful tribes. Christ's preferential care for the least: 'Blessed are the poor in spirit, for theirs is the kingdom of heaven' (Matt 5:3).</p>",
+"62": "<p>A shadow: The incense pan for Benjamin. Paul was from the tribe of Benjamin (Phil 3:5) — the great apostle to the Gentiles came from Israel's smallest, youngest tribe. The incense of Benjamin's prayer is the prayer of the tribe that will produce the man who carries the gospel 'from Jerusalem and all the way around to Illyricum' (Rom 15:19).</p>",
+"63": "<p>A direct type: Benjamin's burnt offering. The tribe that produced Saul, the first king, brings its ascending offering. The king who came from Benjamin's tribe was replaced; the King from Judah's tribe endures. 'The Lord has sought out a man after his own heart' (1 Sam 13:14) — the burnt offering of Benjamin's tribe points away from Saul toward David toward Christ.</p>",
+"64": "<p>A direct type: The sin offering for Benjamin. Benjamin's history includes the gravest internal crisis of the tribal federation — the Gibeah atrocity and near annihilation of the tribe (Judg 19-21). Yet Benjamin stands at the altar with a sin offering like every other tribe. The altar receives the tribe that nearly disappeared from Israel.</p>",
+"65": "<p>A theme: Benjamin's peace offerings. Ten tribes' peace offerings accumulated. The feast of communion grows tribe by tribe — ten of twelve now represented. The eschatological feast Christ promises is for all twelve: 'You will eat and drink at my table in my kingdom and sit on thrones judging the twelve tribes of Israel' (Luke 22:30).</p>",
+"66": "<p>A shadow: Ahiezer of Dan brings his offering on day eleven. Dan — the tribe of Samson, the tribe that relocated north, the tribe absent from Revelation 7's list — brings a full and complete offering at the tabernacle's dedication. Whatever Dan's future compromises, the offering stands. Christ 'receives sinners and eats with them' (Luke 15:2) — the prophetic trajectory does not negate the present mercy.</p>",
+"67": "<p>A theme: Dan's silver vessels. The grain offering of fine flour mixed with oil from the tribe that will later offer rival worship (Judg 18:30-31) — the same flour, the same oil, the same vessel, the same weight. Christ's desire is that even those who stray should return to the altar's prescribed form: 'Return to me, and I will return to you' (Mal 3:7).</p>",
+"68": "<p>A shadow: The incense pan for Dan. The tribe of the judge Samson — whose strength came and went with his hair, whose dedication to YHWH was compromised by his loves — offers incense like every other tribe. The prayer of imperfect dedication still ascends. Christ intercedes for those whose dedication is inconsistent: 'I have prayed for you that your faith may not fail' (Luke 22:32).</p>",
+"69": "<p>A direct type: Dan's burnt offering. The ascending whole-offering from the tribe that will later offer golden calves (the northern Dan shrine, 1 Kgs 12:29-30) is a testament to how far the departure from the prescribed offering will fall. Christ came to restore what was lost — the authorized, Spirit-led worship that these animals represent but cannot finally achieve.</p>",
+"70": "<p>A direct type: The sin offering for Dan. Eleven goats now consumed. The accumulation of sin offerings throughout the dedication does not reduce their significance; each is received on its own terms. Christ, 'offered once to bear the sins of many' (Heb 9:28), renders unnecessary the repetition — but the repetition here testifies to how necessary the one offering would need to be.</p>",
+"71": "<p>A theme: Dan's peace offerings. Eleven tribes now represented in the peace feast. One remains. The feast is not complete until all twelve tribes have presented their offering and shared the communion meal — a picture of the eschatological feast awaiting the full number of the redeemed (Rev 7:4-9, where all twelve tribes are represented).</p>",
+"72": "<p>A shadow: Pagiel of Asher brings his offering on day twelve. Asher — whose blessing Jacob pronounced as 'his food shall be rich, and he shall yield royal delicacies' (Gen 49:20) — brings the dedication offering that completes the twelve. Asher's territory produced the prophetess Anna (Luke 2:36-38), who recognized the infant Christ after eighty-four years of fasting and prayer in the temple — the offering of a lifetime of faithful waiting.</p>",
+"73": "<p>A theme: Asher's silver vessels. The tribe of royal food and abundance brings the same standard grain offering as every other tribe. At the altar, the tribe of abundance and the tribe of the scattered stand in the same posture. The ground is level at the foot of the cross (C.S. Lewis's image): no one brings more from their own resources than another.</p>",
+"74": "<p>A shadow: The incense pan for Asher. Asher's territory along the northern coast would become part of the region Anna the prophetess came from — her decades of incense-fragrant prayer in the temple is the personal fulfillment of what this pan represents. The dedicated woman who prays night and day embodies the prayer of the whole tribe ascending in smoke.</p>",
+"75": "<p>A direct type: Asher's burnt offering — the penultimate whole-ascending-offering of the dedication series. The 'royal delicacies' of Asher's inheritance are surrendered in the olah: the best of the tribe's resources ascending entirely to YHWH. Christ's self-offering is the ultimate royal delicacy poured out: 'He poured out his soul to death' (Isa 53:12).</p>",
+"76": "<p>A direct type: The sin offering for Asher. Eleven tribes' sin offerings have been received; one more completes the cycle. The completion motif runs throughout the Bible: twelve tribes, twelve apostles, twelve foundations in the New Jerusalem (Rev 21:14). The sin offering for Asher begins the final completions.</p>",
+"77": "<p>A theme: Asher's peace offerings. The second-to-last peace feast. Asher means 'blessed/happy' — the tribe of blessing concludes its offering with the feast that embodies blessing: communion with YHWH over shared meat. The eschatological beatitude is 'blessed are those invited to the marriage supper of the Lamb' (Rev 19:9).</p>",
+"78": "<p>A shadow: Ahira of Naphtali brings his offering on day twelve — the final day. Naphtali's territory along the northwest shore of the Sea of Galilee is where Jesus most concentrated his ministry: Capernaum was his 'own city' (Matt 9:1), where he healed the centurion's servant, raised Jairus's daughter, called Matthew, and gave the Sermon on the Mount. The last tribe in the dedication order is the first in the geography of Jesus's ministry.</p>",
+"79": "<p>A theme: Naphtali's silver vessels. The 'land of Naphtali' that Isaiah 9:1 names as a land of darkness becomes the land of the great Light. The grain offering from Naphtali's leader at the tabernacle dedication is the first-fruits offering of a territory that will one day host the Bread of Life walking its shores.</p>",
+"80": "<p>A shadow: The gold incense pan for Naphtali — the twelfth and final pan. Twelve pans of incense completed: twelve tribes' prayers ascending before YHWH. The 'prayers of the saints' in Revelation 5:8 are golden bowls of incense — the same image, now before the throne of the Lamb who was slain. The twelve incense pans of Numbers 7 become the golden bowls that surround the throne.</p>",
+"81": "<p>A direct type: Naphtali's burnt offering — the twelfth and final olah of the dedication series. Twelve ascending whole-offerings, one for each tribe. The twelve burnt offerings together constitute a single act of national consecration, all-tribal and all-encompassing. Christ's single sacrifice encompasses what twelve sequential offerings represented: 'by a single offering he has perfected for all time those who are being sanctified' (Heb 10:14).</p>",
+"82": "<p>A direct type: The sin offering for Naphtali — the twelfth and final goat. Twelve sin offerings, twelve tribes, one cumulative atonement. 'He is the propitiation for our sins, and not for ours only but also for the sins of the whole world' (1 John 2:2). The twelve tribes' twelve goats are arithmetic pointing toward the one Lamb who 'takes away the sin of the world' (John 1:29).</p>",
+"83": "<p>A theme: Naphtali's peace offerings — the final tribal feast. The twelve-day dedication closes with communion. The shalom feast of the twelve tribes anticipates the Lamb's marriage supper: 'Blessed are those who are invited to the marriage supper of the Lamb' (Rev 19:9). The peace offering is not the end of eating with God but its beginning.</p>",
+"84": "<p>A shadow: The summary of all twelve dedication gifts becomes a single offering: twelve silver dishes, twelve basins, twelve gold pans. The twelve is one. As the twelve tribes are one Israel, the twelve disciples are one body, and the twelve foundations of the New Jerusalem bear the names of the twelve apostles (Rev 21:14) — the many becoming one in Christ who 'will unite all things in him' (Eph 1:10).</p>",
+"85": "<p>A theme: 2,400 shekels of silver total. Silver in Scripture often signifies redemption: the thirty silver coins (the price of betrayed innocence, Matt 26:15) and the atonement money of Exodus 30 are silver. The 2,400-shekel total is the weight of the whole nation's redemption-offering — a vast silver testimony to the value YHWH places on the nation he is bringing near.</p>",
+"86": "<p>A shadow: Twelve gold pans totaling 120 shekels. Gold = divinity; the incense pan = prayer. 120 shekels of gold representing twelve tribes' prayers before YHWH. The 120 disciples in the upper room at Pentecost (Acts 1:15) are the twelve-tribe remnant of the new Israel assembled in prayer — the living fulfillment of the golden incense pans ascending before the throne.</p>",
+"87": "<p>A direct type: The total burnt offerings — twelve bulls, twelve rams, twelve lambs — plus twelve goats for sin. The aggregate whole-offering of Israel: twelve of every category, comprehensive and complete. Christ 'once for all' fulfills every category simultaneously: 'he entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood, thus securing an eternal redemption' (Heb 9:12).</p>",
+"88": "<p>A direct type: The total peace offerings — twenty-four bulls, sixty rams, sixty goats, sixty lambs. The numbers are large: the dedication feast involved hundreds of animals for communal celebration. The scale of the peace offering points toward the scale of Christ's peace: 'the peace of God, which surpasses all understanding' (Phil 4:7). The shalom established by Christ's death is proportionately larger than the peace feast Israel could stage.</p>",
+"89": "<p>A direct type: Moses enters the tent and hears YHWH's voice speaking from above the <em>kapporet</em> between the two cherubim on the ark of the testimony. This verse is the theological heart of Numbers 7: all twelve days of offering culminate in a moment of divine speech. The <em>kapporet</em> (mercy seat / covering) is where YHWH meets his servant. Hebrews 4:16 applies this image directly to Christ: 'Let us draw near with confidence to the throne of grace, that we may receive mercy and find grace to help in time of need.' The mercy seat becomes the throne of grace; the voice between the cherubim is now the voice of the Son at the Father's right hand, ever living to intercede (Heb 7:25). The entire twelve-day dedication creates the context for one word from between the wings — and in Christ, that word is now available to every person who draws near.</p>"
+}
 }
 
-def main():
-    e = load_echo('numbers')
-    merge_echo(e, ECHO)
-    save_echo('numbers', e)
-
-    c = load_comm('mkt-original', 'numbers')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'numbers', c)
-
-    c = load_comm('mkt-context', 'numbers')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'numbers', c)
-
-    c = load_comm('mkt-christ', 'numbers')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'numbers', c)
-
-    print('numbers: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+comm = load_comm('mkt-christ', 'numbers')
+merge_comm(comm, CHRIST)
+save_comm('mkt-christ', 'numbers', comm)
+print('Numbers 7 mkt-christ written.')

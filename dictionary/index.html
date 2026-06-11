@@ -55,15 +55,21 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
-  <script type="module" src="../assets/js/app.js"></script>
   <script>
-    if (new URLSearchParams(location.search).get('minimal')) {
-      var bl = document.getElementById('explore-back-link');
-      if (bl) bl.removeAttribute('hidden');
-      var ft = document.querySelector('.site-footer');
-      if (ft) ft.hidden = true;
-    }
+    // Redirect all dictionary traffic to Biblepedia, translating old ?entry= to ?a=
+    // Topical entries (?src=nave/torrey) redirect to biblepedia home since topical
+    // browsing is also accessible via /search/?tab=dictionary.
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var entry  = params.get('entry');
+      var src    = params.get('src') || '';
+      var base   = new URL('../biblepedia/', location.href).href;
+      if (entry && src !== 'nave' && src !== 'torrey') {
+        location.replace(base + '?a=' + encodeURIComponent(entry));
+      } else {
+        location.replace(base);
+      }
+    })();
   </script>
 </body>
 </html>

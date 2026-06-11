@@ -1,0 +1,73 @@
+{
+  "_note": "Master provenance manifest. Keys match data path prefixes used in JS. UI reads this via assets/js/provenance.js to render source badges.",
+
+  "bible/KJV":            { "name": "King James Version (1769)", "type": "external", "license": "Public domain", "year": "1769" },
+  "bible/BSB":            { "name": "Berean Standard Bible", "type": "external", "license": "Free for personal/non-commercial use", "year": "2022", "url": "https://berean.bible" },
+  "bible/WEB":            { "name": "World English Bible", "type": "external", "license": "Public domain (CC0)", "year": "2020", "url": "https://worldenglish.bible" },
+  "bible/ASV":            { "name": "American Standard Version", "type": "external", "license": "Public domain", "year": "1901" },
+  "bible/YLT":            { "name": "Young's Literal Translation", "author": "Robert Young", "type": "external", "license": "Public domain", "year": "1898", "url": "https://github.com/wldeh/bible-api" },
+  "bible/DBY":            { "name": "Darby Translation", "author": "John Nelson Darby", "type": "external", "license": "Public domain", "year": "1890", "url": "https://github.com/wldeh/bible-api" },
+  "bible/GNV":            { "name": "Geneva Bible (1599)", "type": "external", "license": "Public domain", "year": "1599", "url": "https://github.com/wldeh/bible-api" },
+  "bible/AKJV":           { "name": "American King James Version", "type": "external", "license": "Public domain", "url": "https://github.com/wldeh/bible-api" },
+  "bible/WEBBE":          { "name": "World English Bible (British Edition)", "type": "external", "license": "Public domain (CC0)", "url": "https://github.com/wldeh/bible-api" },
+  "bible-apocrypha/DR":   { "name": "Douay-Rheims 1899", "type": "external", "license": "Public domain", "year": "1899", "url": "https://ebible.org" },
+  "bible-apocrypha/WEB-CE":    { "name": "World English Bible Catholic Edition", "type": "external", "license": "CC0", "url": "https://ebible.org" },
+  "bible-apocrypha/KJV-APO":   { "name": "KJV with Apocrypha (1611/1769)", "type": "external", "license": "Public domain", "url": "https://ebible.org" },
+  "bible-apocrypha/BRENTON":   { "name": "Brenton's English LXX", "author": "Lancelot C.L. Brenton", "type": "external", "license": "Public domain", "year": "1851", "url": "https://ebible.org" },
+
+  "crossrefs":             { "name": "OpenBible Cross-References (TSK)", "type": "external", "license": "CC BY 4.0", "url": "https://openbible.info" },
+
+  "commentary/mhc":        { "name": "Matthew Henry Concise Commentary", "author": "Matthew Henry", "type": "external", "license": "Public domain", "year": "1706", "url": "https://crosswire.org/sword/" },
+  "commentary/barnes":     { "name": "Barnes' Notes on the Bible", "author": "Albert Barnes", "type": "external", "license": "Public domain", "year": "1832–1885", "url": "https://crosswire.org/sword/" },
+  "commentary/jfb":        { "name": "Jamieson, Fausset & Brown", "author": "Robert Jamieson, A.R. Fausset, David Brown", "type": "external", "license": "Public domain", "year": "1871", "url": "https://crosswire.org/sword/" },
+  "commentary/clarke":     { "name": "Adam Clarke's Commentary", "author": "Adam Clarke", "type": "external", "license": "Public domain", "year": "1810–1826", "url": "https://crosswire.org/sword/" },
+  "commentary/calvin":     { "name": "Calvin's Commentaries", "author": "John Calvin", "type": "external", "license": "Public domain", "year": "1540–1564", "url": "https://crosswire.org/sword/" },
+  "commentary/ellicott":   { "name": "Ellicott's Commentary", "author": "Charles J. Ellicott (ed.)", "type": "external", "license": "Public domain", "year": "1878–1884", "url": "https://www.studylight.org/commentaries/eng/ebc/" },
+  "commentary/rwp":        { "name": "Robertson's Word Pictures", "author": "A.T. Robertson", "type": "external", "license": "Public domain", "year": "1930–1933", "url": "https://crosswire.org/sword/" },
+  "commentary/wesley":     { "name": "Wesley's Explanatory Notes", "author": "John Wesley", "type": "external", "license": "Public domain", "year": "1765", "url": "https://crosswire.org/sword/" },
+  "commentary/synthesis":  { "name": "Synthesis Commentary", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/", "note": "AI-aggregated verse notes drawing on multiple public-domain commentary sources" },
+  "commentary/mkt-christ": { "name": "Christological Commentary Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+  "commentary/mkt-context":{ "name": "Historical Context Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+  "commentary/mkt-original":{ "name": "Original Language Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+
+  "interlinear":           { "name": "Morphological Hebrew/Greek Bible", "type": "external", "license": "CC BY 4.0", "note": "Greek NT: morphgnt/sblgnt; Hebrew OT: openscriptures/morphhb", "url": "https://github.com/morphgnt/sblgnt" },
+
+  "strongs/greek":         { "name": "Strong's Greek Lexicon (Dodson)", "author": "James Strong; John Dodson (rev.)", "type": "external", "license": "CC0", "url": "https://github.com/openscriptures/strongs" },
+  "strongs/hebrew":        { "name": "Strong's Hebrew Lexicon (BDB)", "author": "James Strong; Brown-Driver-Briggs", "type": "external", "license": "Public domain", "year": "1906", "url": "https://github.com/openscriptures/strongs" },
+  "strongs/thayer":        { "name": "Thayer's Greek Lexicon", "author": "Joseph H. Thayer", "type": "external", "license": "Public domain", "year": "1889" },
+  "strongs/gesenius":      { "name": "Gesenius' Hebrew Lexicon (Tregelles tr.)", "author": "Wilhelm Gesenius; S.P. Tregelles (tr.)", "type": "external", "license": "Public domain", "year": "1857", "url": "https://archive.org/details/geseniushebrew00geseuoft" },
+  "strongs/abbott-smith":  { "name": "Abbott-Smith Greek Lexicon", "author": "G.H. Abbott-Smith", "type": "external", "license": "Public domain", "year": "1922", "url": "https://ccel.org/ccel/abbott_smith/lexicon" },
+
+  "translation/glossary":  { "name": "MKT Lemma Glossary", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/", "note": "5,523 Greek + 8,674 Hebrew lemma entries with three-tier gloss decisions reviewed in the Translation Workshop" },
+  "translation/draft":     { "name": "Modern Kingdom Translation (MKT)", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/", "note": "Three-tier Bible translation (Literal / Mediating / Thought) produced from Hebrew/Greek interlinear by agent-authored static Python scripts" },
+
+  "workshop/book-study":   { "name": "Book Study Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/", "note": "Key vocabulary, language notes, reception history, and reading guide per book — generated by AI agents from interlinear, author-frequency, and glossary data" },
+
+  "topical":               { "name": "Nave's Topical Bible", "author": "Orville J. Nave", "type": "external", "license": "Public domain", "year": "1896", "url": "https://github.com/openscriptures/nave" },
+
+  "isbe":                  { "name": "Int'l Standard Bible Encyclopaedia", "author": "James Orr (ed.)", "type": "external", "license": "Public domain", "year": "1915", "url": "https://crosswire.org/sword/" },
+  "dictionary":            { "name": "Easton's Bible Dictionary", "author": "M.G. Easton", "type": "external", "license": "Public domain", "year": "1897", "url": "https://crosswire.org/sword/" },
+  "smith":                 { "name": "Smith's Bible Dictionary", "author": "William Smith", "type": "external", "license": "Public domain", "year": "1884", "url": "https://crosswire.org/sword/" },
+  "hitchcock":             { "name": "Hitchcock's Bible Names Dictionary", "type": "external", "license": "Public domain" },
+
+  "devotionals":           { "name": "Spurgeon's Morning and Evening", "author": "Charles H. Spurgeon", "type": "external", "license": "Public domain", "year": "1865", "url": "https://ccel.org" },
+
+  "library":               { "name": "Library Documents (141 docs)", "type": "external", "license": "Public domain / Holy See free use", "note": "Patristic, Reformation, medieval, confessional, liturgical, and apologetics texts — from Wikisource, CCEL, EEBO-TCP (CC0), archive.org, and vatican.va" },
+
+  "echoes":                { "name": "OT→NT Echo & Parallel Layer", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/", "note": "Fulfillment, typology, shadow, allusion, and direct-quote connections between OT and NT" },
+
+  "ot-in-nt":              { "name": "OT Quotations in the NT", "type": "external", "license": "Public domain" },
+
+  "timeline":              { "name": "Bible Timeline", "type": "project_curated", "year": "2026", "reviewer": "David Seis", "note": "Manually curated biblical chronology with AI-assisted event and figure descriptions" },
+  "maps":                  { "name": "Biblical Geography", "type": "external", "license": "Public domain", "url": "https://openbible.info", "note": "OpenBible.info geography data" },
+
+  "wordcloud":             { "name": "Word Frequency Data", "type": "derived", "note": "Derived from interlinear morphological data via scripts/generate-wordcloud.py" },
+
+  "biblepedia":            { "name": "Biblepedia Articles", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+
+  "idioms":                { "name": "Biblical Idioms Glossary", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+
+  "cultural":              { "name": "Cultural Context Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+  "literary":              { "name": "Literary & Genre Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" },
+  "synthesis":             { "name": "Synthesis Study Notes", "type": "ai_assisted", "model": "claude-sonnet-4-6", "year": "2026", "reviewer": "David Seis", "about_url": "/about/" }
+}

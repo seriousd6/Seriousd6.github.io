@@ -53,7 +53,7 @@ _BARE_REF_RE = re.compile(r'^(\d+):(\d+)')
 
 def _normalize(text):
     """Replace non-breaking spaces and normalize whitespace."""
-    return text.replace('\xa0', ' ').replace('\xa0', ' ').replace('\ufffd', ' ').strip()
+    return text.replace('\xa0', ' ').replace('\ufffd', ' ').strip()
 
 
 def _parse_segment(segment, current_book, name_map):
@@ -108,6 +108,12 @@ def extract_refs_from_html(html_text, name_map):
     return results
 
 
+def _add_entry(idx, bid, ch, v, slug, term):
+    existing = idx[bid][ch][v]
+    if not any(e['id'] == slug for e in existing):
+        existing.append({'id': slug, 'term': term})
+
+
 def build_index(source_dir, out_dir, name_map, source_label):
     """Build verse-index from a dictionary source directory."""
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -132,18 +138,13 @@ def build_index(source_dir, out_dir, name_map, source_label):
                 bid = name_map.get(m.group(1).lower())
                 if not bid:
                     continue
-                ch, v = m.group(2), m.group(3)
-                existing = idx[bid][ch][v]
-                if not any(e['id'] == slug for e in existing):
-                    existing.append({'id': slug, 'term': term})
+                _add_entry(idx, bid, m.group(2), m.group(3), slug, term)
         else:
             # Extract from HTML (Smith path)
             html = data.get('html', '')
             if html:
                 for bid, ch, v in extract_refs_from_html(html, name_map):
-                    existing = idx[bid][ch][v]
-                    if not any(e['id'] == slug for e in existing):
-                        existing.append({'id': slug, 'term': term})
+                    _add_entry(idx, bid, ch, v, slug, term)
         processed += 1
 
     written = 0
@@ -162,7 +163,8 @@ def build_index(source_dir, out_dir, name_map, source_label):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--source', choices=['easton', 'smith', 'isbe', 'both', 'all'], default='both')
+    parser.add_argument('--source', choices=['easton', 'smith', 'isbe', 'both', 'all'], default='both',
+                        help='"both"=easton+smith, "all"=easton+smith+isbe')
     args = parser.parse_args()
 
     name_map = build_name_map(BOOKS_JSON)

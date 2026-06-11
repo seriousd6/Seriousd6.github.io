@@ -1,46 +1,28 @@
 """
-Leviticus — all four layers.
-Leviticus is the NT's primary type-source for atonement theology and the priesthood.
-Key: Yom Kippur (16), purity laws (11-15), Holiness Code (17-26), Levitical offerings.
+mkt-original | leviticus | ch 11-12
+Dietary laws (kashrut) and post-birth purification.
+Key terms: tameh/tahor (unclean/clean), sheqets (detestable), maphresat parsa/maalat gerah
+(split hoof/chews cud), snapir/qasqeset (fins/scales), sheretz (swarming creatures),
+qedoshim tihyu (be holy), lehabdil (to distinguish/separate), tazria (bear seed),
+niddah (menstrual impurity), dam tohoratah (blood of purification), kipper (atone).
+Run: python3 scripts/zc-original-leviticus-11-12.py
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,99 +32,72 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "1": {
-    "4": [
-      {"type": "allusion", "target": "Heb 9:14", "note": "He shall lay his hand on the head of the burnt offering and it shall be accepted for him to make atonement — the laying of hands transfers the offerer's identity to the animal; this identification mechanism is the type of Christ's substitution: he bore our sins in his body on the tree (1 Pet 2:24)"}
-    ]
+LEVITICUS = {
+  "11": {
+    "1": "<p>YHWH speaks to both Moses and Aaron — unusual in Leviticus, where most instructions go to Moses alone. The double addressee signals that this law concerns the priestly community as enforcers: Aaron and his sons will adjudicate purity cases. The phrase <em>vayedabber YHWH el-Moshe ve'el-Aharon</em> (YHWH spoke to Moses and to Aaron) marks laws that require priestly implementation.</p>",
+    "2": "<p><strong>zot haḥayyah asher tokhelu</strong>: 'This is the living thing that you may eat.' The term <em>ḥayyah</em> (living creature) is the broad category; the subsequent verses subdivide it into land animals, aquatic creatures, birds, and flying insects. The dietary laws assume that Israel's relationship to creation is ordered — not every creature is equally appropriate for consumption, and the distinctions encode a theology of discernment (<em>lehabdil</em>, v. 47).</p>",
+    "3": "<p><strong>maphresat parsa ushosaat shesa umaalet gerah</strong>: 'splits the hoof, completely divided, and chews the cud.' Two criteria must both be met. <em>Parsa</em> (hoof, pl. <em>parsot</em>) refers to the horny covering; <em>shosaat shesa</em> ('completely divided') requires full bifurcation; <em>gerah</em> (cud) refers to partially digested food brought back for re-chewing. The double requirement — external (hoof) and internal (digestive) — creates a taxonomic system that cannot be met by appearance alone; it requires observation of behavior. The pig fails the second test; the camel fails the first.</p>",
+    "4": "<p><strong>et-hagamal</strong>: The camel (<em>gamal</em>) chews the cud but lacks a split hoof. The camel was the primary long-distance transport animal in the ancient Near East; its exclusion from the diet marks its role as a working animal distinct from food animals. <strong>tameh hu lachem</strong>: 'it is unclean to you' — the personal pronoun <em>lachem</em> (to you) signals that uncleanness is relational and covenantal, not an intrinsic property of the animal itself.</p>",
+    "5": "<p><strong>hashaphan</strong>: The rock badger or hyrax (<em>Procavia capensis</em>), a small mammal that appears to chew its jaw laterally (a form of coprophagy or caecotrophy), thus appearing to chew cud but lacking the ruminant digestive system. Its front feet are not truly split-hoofed. The identification is uncertain; some render it as 'coney.' Like the camel, it fails the split-hoof criterion.</p>",
+    "6": "<p><strong>ha'arnevet</strong>: The hare. Hares perform cecotrophy (re-ingestion of soft fecal pellets) which gives the appearance of cud-chewing; they also lack split hooves. The MKT renders <em>arnevet</em> as 'hare' following the most common identification. The law makes no claim about the hare's actual digestive biology — it describes observed behavior (chewing motion) as the criterion.</p>",
+    "7": "<p><strong>veet-haḥazir</strong>: The pig (<em>ḥazir</em>). The pig is the paradigmatic forbidden food in the OT and later Jewish tradition. It has fully split hooves but does not chew cud — it fails the internal/behavioral criterion. By the 2nd century BCE, refusal to eat pork had become a marker of Jewish identity (1 Macc 1:62-63; 2 Macc 6:18-31). The pig's exclusion made Israel's diet visibly distinct from surrounding cultures where pork was common.</p>",
+    "8": "<p><strong>mivsaram lo tokhelu uveniglatam lo tiga'u</strong>: 'their flesh you shall not eat, and their carcasses you shall not touch.' Double prohibition: consumption and contact. The term <em>nivelah</em> (carcass/corpse of an animal) marks a distinct impurity category — the dead body of an animal generates ritual contagion. The prohibition on touching carcasses extends beyond diet to behavior in any context.</p>",
+    "9": "<p><strong>snapir veqasqeset</strong>: 'fins and scales.' Two criteria for aquatic life, paralleling the two criteria for land animals. <em>Snapir</em> (fins) enables directed swimming; <em>qasqeset</em> (scales) covers the body. Creatures with both — most familiar fish — are clean. The Hebrew taxonomy groups all water life into those with and without these features, making no distinction between saltwater and freshwater beyond 'seas and streams.'</p>",
+    "10": "<p><strong>sheqets</strong>: 'detestable/abomination.' This is a stronger term than the standard <em>tameh</em> (unclean) — <em>sheqets</em> (from the root <em>shqts</em>) denotes something not merely ritually impure but fundamentally unfit, an object of revulsion. The term is reserved here for aquatic creatures without fins and scales, and for flying insects (v. 20, 23). The distinction matters: some unclean things (like animals that die naturally) can become clean through washing; <em>sheqets</em> creatures are categorically rejected, not merely temporarily impure.</p>",
+    "11": "<p><strong>sheqets yihyu lachem</strong>: 'they shall be detestable to you.' The personal address (<em>lachem</em>) continues — the classification is addressed to Israel as a covenant community, not as a universal biological taxonomy. The repetition of <em>sheqets</em> (vv. 10, 11, 12) emphasizes the categorical nature of the aquatic prohibition.</p>",
+    "12": "<p>Summary restatement of the aquatic rule: fins and scales = clean; no fins and scales = detestable. The threefold repetition (vv. 10, 11, 12) is characteristic of Levitical legal style — stating a rule, applying it, then restating the principle — which ensures no ambiguity through what might appear redundant repetition.</p>",
+    "13": "<p><strong>veet-elleh teshaqqesu min-ha'oph</strong>: 'These you shall detest among the birds.' The bird list (vv. 13-19) uses the verb <em>shaqats</em> (to detest/make abominable), the denominative of <em>sheqets</em>. No criteria are given for forbidden birds, unlike the land-animal and aquatic rules — the list is simply enumerated. Most are birds of prey and carrion eaters: their exclusion may relate to their contact with blood and death, which are primary impurity sources in Leviticus. <strong>ha'nesher</strong>: the eagle or griffon vulture — the largest and most imposing bird, listed first.</p>",
+    "14": "<p><strong>hada'ah</strong>: The red kite; <strong>ha'ayyah</strong>: the black kite. Raptors that hunt live prey. The phrase 'of any kind' (<em>leminatah</em>) appears throughout the bird list, extending each prohibition to the full species category. The Hebrew bird taxonomy uses broad grouping terms rather than precise ornithological distinctions.</p>",
+    "15": "<p><strong>oreḇ leminahu</strong>: 'the raven of any kind.' Ravens are corvids — intelligent scavengers and omnivores. The raven was famously sent out by Noah from the ark (Gen 8:7) and fed Elijah (1 Kgs 17:6); its exclusion from the diet does not affect its symbolic or narrative roles.</p>",
+    "16": "<p>The list continues with owl species and the sea gull (<em>haśhaḥaph</em>). The Hebrew terms for owl species (<em>bat-ha'anah</em>, <em>taḥmas</em>) are among the most uncertain identifications in the OT; the exact species cannot be determined with confidence. The MKT follows the most commonly proposed identifications while noting that certainty is impossible for many of these terms.</p>",
+    "17": "<p>Additional owl species: <strong>hakos</strong> (little owl), <strong>hashalaḵ</strong> (cormorant or fisher-owl), <strong>hayanshuph</strong> (great owl or short-eared owl). The Hebrew term <em>shalaḵ</em> (plunging) describes a diving bird — likely a pelican or gannet rather than a cormorant. These are all birds that hunt fish or live near water and death.</p>",
+    "18": "<p>Further owl/vulture species: <strong>hatinshemet</strong> (barn owl or ibis), <strong>haqa'at</strong> (tawny owl or pelican), <strong>haraḥam</strong> (Egyptian vulture/carrion vulture). The last term, <em>raḥam</em>, is related to the root <em>rḥm</em> (womb/compassion) — perhaps a folk etymology for the bird's appearance. These are primarily carrion-eaters, reinforcing the pattern of death-contact as the underlying logic of the list.</p>",
+    "19": "<p><strong>haḥasidah</strong>: the stork (from <em>ḥesed</em>, steadfast love — named for its faithfulness to its mate or offspring); <strong>ha'anaphah</strong>: the heron; <strong>hadukhiphath</strong>: the hoopoe; <strong>ha'ataleph</strong>: the bat. The bat is not a bird but is classified here with flying creatures — the Hebrew taxonomy groups by mode of locomotion, not by biological class. This is important for interpretation: the dietary law does not reflect modern taxonomy but ancient phenomenological classification.</p>",
+    "20": "<p><strong>kol-sheretz ha'oph haholekh al-arba'</strong>: 'all flying swarmers that walk on four legs.' <em>Sheretz</em> (swarming creature) is a category distinct from birds — it covers flying insects and other small crawling creatures. <em>Ha'oph</em> (flying creature) is the qualifier. The criterion 'walks on four legs' appears to describe insects generally (ignoring that insects have six legs — the text counts the walking legs). These are categorically detestable (<em>sheqets</em>).</p>",
+    "21": "<p><strong>asher lo-khra'ayim mima'al leraglav</strong>: 'that have jointed legs above their feet for hopping on the ground.' The exception clause permits flying insects with <em>kera'ayim</em> (jointed/bent legs) designed for jumping. This is a morphological criterion parallel to the hoofed-animal criteria. The permitted insects are locusts — species that hop rather than merely crawl.</p>",
+    "22": "<p>Four permitted locust species: <strong>arbeh</strong> (migratory locust, the most common term), <strong>sola'am</strong> (bald locust), <strong>ḥargol</strong> (cricket/long-horned locust), <strong>ḥagab</strong> (grasshopper). The precise species are uncertain; all four are jumping insects in the locust/grasshopper family. John the Baptist ate locusts and wild honey (Matt 3:4), consistent with this permitted category. Locusts were a practical protein source in the ancient Near East.</p>",
+    "23": "<p>Summary: all other <em>sheretz ha'oph</em> (flying swarmers) with four feet (i.e., that crawl rather than jump) are detestable (<em>sheqets</em>). The logic is consistent: the flying creature category has a positive criterion (jointed jumping legs) parallel to the land and water criteria.</p>",
+    "24": "<p><strong>veleh titamma'u</strong>: 'by these you shall become unclean.' The impurity transmission rules now follow the prohibition list. <em>Tame'</em> (become unclean) is the reflexive/factitive — touching the carcass is the mechanism. <strong>ad-ha'arev</strong>: 'until the evening' — the standard time-limit for minor impurity; evening resets the ritual day. This is the lightest impurity category: time-limited, resolved without sacrifice.</p>",
+    "25": "<p><strong>veḥobel nibletan yekabbes begadav</strong>: 'whoever picks up their carcass shall wash his clothes.' Contact by carrying (<em>nasa</em>) rather than merely touching is a more severe form of contamination — it requires laundering of clothes in addition to the person being unclean until evening. The escalating severity (touch → carry → eat) reflects a graduated contamination theology.</p>",
+    "26": "<p>Animals with divided hooves that fail the double criterion (either incomplete division or lack of cud-chewing) also generate carcass impurity. This verse extends the impurity rules beyond the listed forbidden animals to any animal that partially meets the criteria — ensuring no gray-area exceptions.</p>",
+    "27": "<p><strong>kol-holekh al-kappav</strong>: 'everything that walks on its paws.' Carnivorous mammals — dogs, lions, bears, cats — that walk on pads rather than hooves. These are unclean, and their carcasses transmit impurity. The prohibition covers the full range of non-hoofed land animals not already covered by the listed exceptions.</p>",
+    "28": "<p>Carrying the carcass of a paw-walker requires both clothes-washing and waiting until evening. The symmetry with v. 25 (carrying vs. touching) is maintained across all carcass categories — the graduated response is consistent regardless of which forbidden animal's carcass is involved.</p>",
+    "29": "<p><strong>sheretz hashorerets al-ha'arets</strong>: 'the swarming things that swarm on the ground.' A distinct sub-category of ground-swarming creatures, separate from the flying swarmers (v. 20) and from the general land animals. Eight species are listed: <em>ḥoled</em> (weasel), <em>akbar</em> (mouse/rat), <em>tsav</em> (great lizard/toad), and others. <em>Sheretz</em> (from <em>shrs</em>, to swarm/teem) is the collective term for small creatures that move in groups or swarms.</p>",
+    "30": "<p>Continuation of the ground-swarmers list: <em>ana qah</em> (gecko), <em>koaḥ</em> (monitor lizard/land crocodile), <em>leta'ah</em> (wall lizard), <em>ḥomet</em> (skink/sand lizard), <em>tinshemet</em> (chameleon). The precise identification of each term is disputed. What is clear is the category: small reptiles and rodents that 'swarm' along the ground, live in the soil, and are particularly associated with death, decay, and the underworld in ancient Near Eastern thought.</p>",
+    "31": "<p><strong>tameim hem lachem</strong>: 'they are unclean to you.' The summary formula for the ground-swarmers. Contact with their dead bodies transmits impurity until evening. The phrase <em>hem lachem</em> (they are to you) again positions uncleanness as relational — a category defined by the covenant relationship, not a universal property.</p>",
+    "32": "<p>Contamination spreads to objects: any wooden, cloth, leather, or sackcloth article on which a dead swarmer falls becomes unclean. It must be immersed in water and remains unclean until evening. This extends the impurity system beyond persons to domestic objects — the household, not just the individual, is the unit of purity concern. The mention of specific materials (wood, cloth, leather, sack) shows that the law addresses the practical household context of ancient Israel.</p>",
+    "33": "<p><strong>vekhol-keli-ḥeres asher-yippol mehem</strong>: 'any clay vessel into which any of them falls.' The clay vessel (<em>keli ḥeres</em>) becomes unclean and must be broken — not merely washed. This is because clay is porous and cannot be fully cleansed; it absorbs impurity in a way that wood or metal cannot. The rule about breaking clay pots is consistent across Leviticus and Numbers where persistent impurity is involved. The asymmetry between clay (break) and other materials (wash) reflects practical knowledge of material properties.</p>",
+    "34": "<p>Any food or liquid in a contaminated vessel becomes unclean by contact. The contamination pathway: dead swarmer → vessel → water in vessel → food wet by that water. The rule about water as a conductor of impurity (<em>mayim yutan</em>, 'water has been put on') appears also in v. 38 (wet seed) — water activates impurity transfer in a way that dry contact does not for seeds and food.</p>",
+    "35": "<p><strong>vekol-asher-yippol minevilatam alav yitma</strong>: 'everything on which any part of their carcass falls is unclean.' Fixed cooking vessels — <em>tanur</em> (clay oven) and <em>kirayim</em> (cooking range/brazier with two openings) — must be torn down. They cannot be cleansed because their function involves food contact and fire-use that would spread contamination. The destruction of contaminated fixed installations reflects the seriousness of maintaining purity in food preparation.</p>",
+    "36": "<p><strong>akh ma'yan ubor miqveh-mayim yihyeh tahor</strong>: 'But a spring or a cistern, a gathering of water, shall be clean.' A positive exception: large natural water sources — springs, cisterns, *miqveh* (ritual gathering of water) — are not contaminated by carcass contact in the same way. They remain clean, though the person who touched the carcass while in them is still unclean. The <em>miqveh</em> (gathering of water) here is the term later used for the ritual immersion pool — the law implicitly grounds the purifying function of immersion in this verse.</p>",
+    "37": "<p><strong>vekhivnevelatam al-zera'-zeru'a asher yizarea tahor hu</strong>: 'if any part of their carcass falls on seed that is to be planted, it is clean.' Dry seed is not contaminated by carcass contact. The exception preserves agricultural productivity — if every contaminated seed had to be discarded, subsistence farming would be impossible. The rule draws a practical boundary around the impurity system: it is designed to govern food and personal purity, not to destroy the food supply.</p>",
+    "38": "<p>Contrast: if water has been put on the seed first and a carcass falls on it, the wet seed is unclean. Water activates impurity transfer (see v. 34) — the distinction between dry and wet is a consistent principle throughout the Levitical purity system. Wet = susceptible to impurity; dry = resistant. This is an important exegetical observation for interpreting the broader system.</p>",
+    "39": "<p><strong>vekhiv-yamut min-habeheima asher-hi lachem leokhlah</strong>: 'if an animal that you are permitted to eat dies.' An animal that was clean for consumption but died naturally (not slaughtered) generates impurity through contact and consumption. The term <em>nevel</em> (carcass of a naturally-dead animal) is distinct from <em>treifa</em> (torn/killed by predators, v. 40) and from <em>zavuaḥ</em> (slaughtered). The clean/unclean distinction does not override the life/death distinction: even a clean animal becomes an impurity source at death.</p>",
+    "40": "<p>Eating from a dead clean animal requires washing of clothes and renders the person unclean until evening. Carrying the carcass also requires clothes-washing. The parallel between eating and carrying maintains the graduated response — both are forms of intimate contact with death that require purification, even when the animal was intrinsically clean.</p>",
+    "41": "<p><strong>vekhol-hasheres hashorerets al-ha'arets sheqets hu lo ye'akhel</strong>: 'Every creature that swarms on the ground is detestable; it shall not be eaten.' <em>Sheqets</em> returns as the characterization of all ground-swarmers — they are categorically detestable, not merely ritually impure. The prohibition is absolute: there is no clean sub-category of ground-swarming creatures parallel to the locust exception among flying swarmers.</p>",
+    "42": "<p><strong>kol-holekh al-gahon</strong>: 'everything that goes on its belly' — snakes and worm-like creatures; <strong>kol-holekh al-arba'</strong>: 'everything that goes on all fours' — crawling quadrupeds; <strong>kol-marbeh raglaim</strong>: 'everything that has many feet' — centipedes, millipedes. The three movement-types comprehensively cover all ground-locomotion categories, ensuring no creature that moves by crawling or multiple legs escapes the prohibition.</p>",
+    "43": "<p><strong>al-teshaqqesu et-nafshoteikhem</strong>: 'do not defile yourselves in your souls/selves.' The term <em>nefesh</em> (soul/self/life) here is the reflexive — eating forbidden things defiles the self, not merely the body. <em>Shiqqutstem</em> (make yourselves detestable) uses the root of <em>sheqets</em> reflexively: by eating detestable things, you become detestable. The dietary law is a guard against self-corruption — identity is shaped by what one consumes.</p>",
+    "44": "<p><strong>ki ani YHWH Eloheikhem vehitqaddashtem vihyitem qedoshim ki qadosh ani</strong>: 'For I am YHWH your God; consecrate yourselves and be holy, for I am holy.' The theological foundation of the entire dietary system is YHWH's own holiness (<em>qedushah</em>). <em>Hitqaddashtem</em> (consecrate yourselves) is the reflexive-intensive of <em>qadash</em> (to be holy/set apart); <em>qedoshim tihyu</em> (you shall be holy) is the imperative of the holiness program. The logic: YHWH is intrinsically holy (set apart, utterly other); Israel is YHWH's covenant people; therefore Israel must embody that separateness in every domain of life including diet. Peter quotes this verse directly in 1 Pet 1:16 to ground NT ethical holiness.</p>",
+    "45": "<p><strong>ki ani YHWH hama'aleh etchem me'erets mitsrayim lihyot lachem lElohim</strong>: 'For I am YHWH who brought you up out of the land of Egypt to be your God.' The historical grounding of the holiness demand: the Exodus event establishes both YHWH's identity as Israel's redeemer and Israel's identity as YHWH's redeemed people. The dietary laws are not arbitrary restrictions but the embodied practice of a people whose whole existence is defined by divine rescue. <em>Vihyitem qedoshim ki qadosh ani</em>: the holiness command is grounded in divine nature, not human effort — Israel is called to reflect what YHWH already is.</p>",
+    "46": "<p><strong>zot torat habeheima veha'oph</strong>: 'This is the law (<em>torah</em>) concerning animals and birds.' The summary heading (<em>torah</em>, instruction/law) introduces the closing summary. The term <em>torah</em> here is in its basic sense of authoritative instruction, before it acquired the canonical sense of 'the Law.' It applies to <em>beheima</em> (land animals), <em>oph</em> (flying creatures), <em>nefesh ḥayyah hahoma-yim</em> (living creatures in the waters), and <em>nefesh hashoretset</em> (swarming creatures).</p>",
+    "47": "<p><strong>lehabdil bein hatame uvein hatahor uvein haḥayyah hane'ekelet uvein haḥayyah asher lo te'akhel</strong>: 'to distinguish between the unclean and the clean, and between the living creatures that may be eaten and those that may not be eaten.' The climactic purpose statement of the entire chapter. <em>Lehabdil</em> (to separate/distinguish/discern) is the priestly verb — the same root used in Gen 1 for the divine acts of separation (light/darkness, waters above/below). The priest's function is to embody the Creator's act of ordering; the dietary laws extend that discernment into daily life. Israel as 'a kingdom of priests' (Exod 19:6) is a people whose everyday eating practices enact the distinction-making that characterizes both YHWH's creation and YHWH's holiness.</p>"
   },
-  "16": {
-    "2": [
-      {"type": "fulfillment", "target": "Heb 9:7", "note": "But into the second tent only the high priest goes, and only once a year, and not without blood — the structure of Yom Kippur (Lev 16) is Hebrews' central OT text for demonstrating that the Levitical system was designed to be temporary and pointing forward to a greater reality: Christ enters the true holy of holies once for all by his own blood"}
-    ],
-    "15": [
-      {"type": "fulfillment", "target": "Heb 9:12", "note": "He shall make atonement for the Holy Place because of the uncleannesses of the people — Aaron enters with the blood of a bull and a goat (Lev 16:14-15); Christ by his own blood entered once for all into the holy places (Heb 9:12), securing eternal redemption rather than annual covering"},
-      {"type": "fulfillment", "target": "Heb 10:4", "note": "The blood of bulls and goats cannot take away sins — the Yom Kippur ritual (Lev 16) required annual repetition because animal blood could not permanently remove sin-guilt; this annual repetition was the system's built-in indication of its provisional character"}
-    ],
-    "20": [
-      {"type": "allusion", "target": "John 1:29", "note": "The live goat — the scapegoat (Azazel) that bears the people's sins and is sent into the wilderness; Behold the Lamb of God who takes away the sin of the world: Christ is both the sacrificed goat whose blood atones (v. 15) and the scapegoat who removes sin by bearing it away"}
-    ],
-    "29": [
-      {"type": "allusion", "target": "Heb 13:11-12", "note": "The bodies of those animals whose blood is brought into the holy places are burned outside the camp — Jesus also suffered outside the gate in order to sanctify the people through his own blood (Heb 13:12); the burning of the sin-offering carcass outside the camp is the type of the crucifixion outside Jerusalem"}
-    ]
-  },
-  "17": {
-    "11": [
-      {"type": "fulfillment", "target": "Heb 9:22", "note": "For the life of the flesh is in the blood and I have given it for you on the altar to make atonement for your souls — the blood-for-life principle (Lev 17:11) is the theological foundation of all sacrificial atonement; without the shedding of blood there is no forgiveness of sins (Heb 9:22) applies this principle to Christ's death"}
-    ]
-  },
-  "19": {
-    "18": [
-      {"type": "fulfillment", "target": "Matt 22:39", "note": "You shall love your neighbor as yourself — the great commandment from the Holiness Code (Lev 19:18); Jesus names this as the second great commandment and Paul calls it the fulfillment of the whole law (Gal 5:14; Rom 13:9); James calls it the royal law (Jas 2:8)"},
-      {"type": "allusion", "target": "Gal 5:14", "note": "For the whole law is fulfilled in one word: You shall love your neighbor as yourself — Paul cites Lev 19:18 as the summary of the entire Mosaic law's ethical demand; the law's social obligations are summed in neighbor-love, which is the character of the Spirit-filled life"}
-    ]
-  },
-  "26": {
-    "12": [
-      {"type": "fulfillment", "target": "2 Cor 6:16", "note": "I will walk among you and will be your God and you shall be my people — the covenant formula of Lev 26:12 is the OT's recurring covenant-relationship phrase (also Ezek 36:28; Jer 31:33); Paul quotes it in 2 Cor 6:16 as the basis for the church as the temple of the living God; it is fulfilled in the Spirit's indwelling of the new covenant community"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "1": {
-    "4": "<p><strong>vesomach yado al rosh haolah veratzon lo lekapper alav</strong>: 'He shall lay his hand on the head of the burnt offering, and it shall be accepted for him to make atonement for him.' The <em>semikah</em> (laying of hands) is the key act of self-identification with the sacrifice: the offerer transfers his identity to the animal, which then represents him before YHWH. The term <em>kopher</em> (ransom/atonement, verb <em>kipper</em>) has its root either in 'to cover' or 'to ransom/substitute' (the latter supported by the Semitic cognate). The NT takes both senses: Christ's blood covers/forgives sin (Col 2:13-14) and he gives his life as a ransom (<em>lytron</em>) for many (Mark 10:45).</p>"
-  },
-  "16": {
-    "2": "<p>Yom Kippur (Day of Atonement) is the annual reset of Israel's covenant relationship: the accumulated sin of the year is dealt with by the high priest's double ritual — (1) the bull's blood for his own sin, (2) one goat killed for the people's sin (the sacrificed goat), (3) one goat bearing the sins symbolically into the wilderness (the scapegoat, <em>azazel</em>). The two-goat ritual together communicates the complete theology of atonement: blood-payment (the dead goat) + removal (the scapegoat). Christ fulfills both aspects: his blood makes propitiation and his bearing of sin removes it ('as far as the east is from the west, so far does he remove our transgressions from us', Ps 103:12).</p>"
-  },
-  "17": {
-    "11": "<p><strong>ki nefesh habasar badam hi vaani netatihu lachem al hamizbeach lekapper al nafshoteichem ki hadam hu bakafra banefesh</strong>: 'For the life [<em>nefesh</em>] of the flesh is in the blood, and I have given it for you on the altar to make atonement for your souls [<em>nefesh</em>], for it is the blood that makes atonement by the life.' The blood-for-life exchange is the theological axiom underlying all sacrifice: blood (= life) offered for life (= the offerer's forfeit life). The principle is stated as divine appointment — 'I have given it for you on the altar' — sacrifice is not a human invention but a divinely ordained mechanism of atonement. Hebrews 9:22's 'without the shedding of blood there is no forgiveness of sins' is a direct application of Lev 17:11 to Christ's death.</p>"
-  },
-  "19": {
-    "18": "<p><strong>veahavta lereiacha kamocha ani YHWH</strong>: 'You shall love your neighbor as yourself: I am YHWH.' The neighbor-love command concludes with the divine self-identification formula (<em>ani YHWH</em>) — the obligation is grounded not in a social contract but in YHWH's own character and authority. The scope of <em>rea</em> (neighbor) in Leviticus 19 extends throughout the chapter to include resident aliens (v. 34: 'love him as yourself, for you were aliens in Egypt'). Jesus's parable of the Good Samaritan expands the neighbor-category to include the unexpected outsider, but the Levitical warrant is already broader than its surface reading.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "1": "<p>Leviticus is the central book of the Torah and the most liturgical: it contains the instructions for the five primary offerings (burnt, grain, peace, sin, guilt), the ordination of the Aaronic priesthood, the purity laws, the Holiness Code (chs. 17-26), and the festival calendar. Its context is the completed tabernacle (Exod 40) — YHWH's glory has filled the structure, and now YHWH speaks from within it (Lev 1:1: YHWH called to Moses and spoke to him from the tent of meeting). The book addresses the central problem of how a holy God can dwell among a sinful people — the answer is a complex system of sacrifice, priesthood, purification, and consecration. Hebrews reads Leviticus as the most detailed typological preparation for Christ's high-priestly work.</p>"
-  },
-  "16": {
-    "1": "<p>Yom Kippur (the Day of Atonement, Lev 23:27-28) became the most solemn day in the Jewish calendar — the only mandatory communal fast in the Torah. In Second Temple Judaism, it was the one day the high priest entered the most holy place. When the temple was destroyed in 70 CE, the entire Yom Kippur sacrificial system became inoperative — Hebrews' argument that Christ's once-for-all sacrifice supersedes the annual Yom Kippur ritual became immediately relevant to Jewish Christians watching the temple system collapse. The phrase 'once for all' (<em>ephapax</em>, Heb 9:12; 10:10) is Hebrews' direct response to Yom Kippur's annual repetition.</p>"
-  }
-}
-
-CHRIST = {
-  "16": {
-    "2": "<p>A fulfillment: 'YHWH said to Moses, Tell Aaron your brother not to come at any time into the Holy Place inside the veil, before the mercy seat that is on the ark, so that he may not die. For I will appear in the cloud over the mercy seat.' The entire Yom Kippur ritual — its restrictions, its blood-sprinkling, its once-per-year access, its careful approach protocol — is the OT's most detailed type of Christ's high-priestly work. Hebrews 9:1-14 maps the Yom Kippur elements onto Christ systematically: the holy of holies → heaven; the high priest → Christ; bull and goat blood → Christ's own blood; annual repetition → once for all; the mercy seat → Christ as <em>hilasterion</em> (Rom 3:25). Every element of Leviticus 16 is the shadow; Christ is the substance.</p>"
-  },
-  "17": {
-    "11": "<p>A direct revelation: 'For the life of the flesh is in the blood, and I have given it for you on the altar to make atonement for your souls, for it is the blood that makes atonement by the life.' This verse is the theological axiom that explains why Christ had to die a bloody death — not a natural death, not a symbolic death, but a sacrificial death involving the shedding of blood. The divine appointment ('I have given it for you on the altar') means that blood-atonement is not a primitive accommodation to human psychology but a divine mechanism built into creation-order: life given for life, blood for blood. Christ's death fulfills this principle at its ultimate level: his blood, the blood of the God-man, atones not for one year or one nation but once for all humanity (Heb 9:12).</p>"
-  },
-  "19": {
-    "18": "<p>A direct revelation: 'You shall love your neighbor as yourself: I am YHWH.' Jesus elevates Lev 19:18 to the second-greatest commandment (Matt 22:39) and Paul calls it the fulfillment of the whole law (Gal 5:14; Rom 13:9). But Christ does not merely cite the command — he embodies it: 'Greater love has no one than this, that someone lay down his life for his friends' (John 15:13). The neighbor-love of Lev 19:18 reaches its ultimate expression in the cross, where Christ loved his neighbors — his enemies — at the cost of his life (Rom 5:8: God demonstrates his love for us in that while we were still sinners, Christ died for us).</p>"
+  "12": {
+    "1": "<p>Standard Sinaitic address formula — YHWH speaks to Moses alone for the post-birth purification law. The transition from the dietary laws (addressed to Aaron and Moses jointly) to the birth-purity laws (Moses alone) reflects the scope: the dietary laws required priestly enforcement; the birth-purity law primarily affects the mother and is administered by the priest only at the offering stage (v. 6).</p>",
+    "2": "<p><strong>isha ki tazria veyaldah zakhar</strong>: 'When a woman bears seed and gives birth to a male.' The verb <em>tazria</em> (third-person feminine hiphil of <em>zara'</em>, to sow/plant seed) is literally 'when she sows seed' or 'when she causes seed to sprout' — a striking agricultural metaphor applied to human conception. The chapter heading (<em>ki tazria</em>) is the Hebrew name for this Torah portion. The comparison <em>keniddat devatah</em> (as during her menstruation) indicates a seven-day impurity period — the birth itself generates the same impurity category as menstruation (<em>niddah</em>).</p>",
+    "3": "<p><strong>uvayom hashemini yimmol besar orlatah</strong>: 'On the eighth day the flesh of his foreskin shall be circumcised.' The eighth-day circumcision rule connects the birth-purity law to the Abrahamic covenant (Gen 17:12). The timing is significant: the mother's seven-day impurity period ends, and on the eighth day — the first day of her 33-day blood-purification period — the male child enters the covenant. The eighth day is theologically loaded in Leviticus and later tradition as a day of new beginning (Lev 9:1 — Aaron's inaugural offering; Lev 14:10 — leper's purification completion).</p>",
+    "4": "<p><strong>shloshet ushloshem yom teshev bidemei toharah</strong>: 'thirty-three days she shall remain in the blood of her purification.' <em>Demei toharah</em> (blood of purification) is a nuanced phrase — the blood is called 'blood of purification' even though it is still associated with ritual impurity. The mother is in an intermediate state: no longer in the severe impurity of <em>niddah</em> but not yet fully restored to holiness. She may not touch holy things or enter the sanctuary — the two primary locations of YHWH's presence. The total impurity period for a son: 7 + 33 = 40 days.</p>",
+    "5": "<p><strong>ve'im-neqevah teled vetame'a shnayim kishnuatah</strong>: 'if she gives birth to a girl, she shall be unclean two weeks, as in her menstruation.' The impurity period doubles for a daughter — 14 days of <em>niddah</em>-equivalent impurity followed by 66 days of blood-purification, totaling 80 days. The reason for the doubled period is not explained in the text and has generated extensive rabbinic discussion. It may reflect the understanding that a female child carries her own future reproductive capacity, or it may reflect the ritual weight of the female body's future role. The asymmetry is acknowledged but not rationalized in the text itself.</p>",
+    "6": "<p><strong>uvimlo'ot yemei toharatah levin o levat</strong>: 'when the days of her purification are complete, for a son or a daughter.' The purification offering consists of two animals: a year-old lamb (<em>keves ben-shenato</em>) for a burnt offering (<em>olah</em>) and a young dove or turtledove (<em>ben-yonah</em> or <em>tor</em>) for a sin offering (<em>ḥatta't</em>). The lamb is the standard offering of someone fully reintegrating into the covenant community; the accompanying sin offering addresses not moral sin but the ritual impurity state of childbirth. The two-offering structure (restoration + purity-cleansing) mirrors other purification rituals in Leviticus.</p>",
+    "7": "<p><strong>vekhipper aleiha hakohen vetahera</strong>: 'the priest shall make atonement for her and she will be clean.' <em>Kipper</em> (atonement) is the central verb of Levitical sacrifice — it covers, removes, or ransoms guilt and impurity. Here it applies to birth-impurity rather than moral sin, confirming that <em>kipper</em> operates across both sin and ritual-impurity categories. <strong>zot torat hayoledet</strong>: 'this is the law for the one who gives birth' — the summary formula (<em>torah</em>) paralleling v. 11:46. The law applies universally: every birth, regardless of sex, requires this purification ritual.</p>",
+    "8": "<p><strong>ve'im-lo timsah yadah dei she</strong>: 'if she cannot afford a lamb.' The poverty provision offers two turtledoves (<em>tor</em>) or two young pigeons (<em>bnei yonah</em>) as a substitution — one for the burnt offering and one for the sin offering. This provision is directly invoked in Luke 2:24: when Mary and Joseph bring Jesus to the temple for Mary's purification and Jesus's presentation, they offer 'a pair of turtledoves, or two young pigeons' (Luke 2:24, citing Lev 12:8) — signaling that Joseph and Mary were poor. The one who would become the ultimate offering was presented in the temple under the provision for the poor.</p>"
   }
 }
 
 def main():
-    e = load_echo('leviticus')
-    merge_echo(e, ECHO)
-    save_echo('leviticus', e)
-
     c = load_comm('mkt-original', 'leviticus')
-    merge_comm(c, ORIGINAL)
+    merge_comm(c, LEVITICUS)
     save_comm('mkt-original', 'leviticus', c)
-
-    c = load_comm('mkt-context', 'leviticus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'leviticus', c)
-
-    c = load_comm('mkt-christ', 'leviticus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'leviticus', c)
-
-    print('leviticus: all 4 layers written')
 
 if __name__ == '__main__':
     main()

@@ -1,45 +1,36 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Original Commentary — Ezekiel chapters 11–14
+Run: python3 scripts/zc-original-ezekiel-11-14.py
+
+Source data:
+- data/interlinear/ezekiel.json
+- data/translation/glossary-hebrew.json
+- data/translation/draft/mediating/ezekiel.json
+
+Key decisions:
+- Ch 11: <em>ruach</em> rendered Spirit (not wind) when the prophetic context is clear; new-heart promise
+  treated as the same new-covenant vocabulary as Jer 31:33 and Ezek 36:26
+- Ch 12: <em>mofet</em> (portent/sign-act) distinguished from <em>ot</em> (sign); prince in v10 = <em>hanasi</em>
+- Ch 13: <em>gillulim</em> (dung idols) is the consistently pejorative term; <em>tafal</em> (whitewash) in v10-15
+- Ch 14: the Danel of v14/20 is the legendary hero of ANE tradition (not Daniel of the later book);
+  <em>gillulim</em> in v1-11 reinforces the pejorative register throughout
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +40,121 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"11": {
+"1": "<p><strong>wayyissaʾeni ruach</strong> — &quot;the Spirit lifted me up&quot; — the verb <em>nasaʾ</em> (lift/carry) with <em>ruach</em> as subject is Ezekiel's standard transport-formula (also 3:12, 14; 8:3; 43:5). <em>Ruach</em> here cannot be translated &quot;wind&quot; as in natural contexts — the prophetic transport is the Spirit's agency. The gate facing east where Ezekiel lands is the same gate through which YHWH's glory will return in 43:1-4.</p>",
+"2": "<p>The two men and their twenty-five colleagues — likely military and civic leaders of Jerusalem — are singled out by name (<em>Jaazaniah</em> and <em>Pelatiah</em>). The naming in prophetic vision is the OT equivalent of the public accusation; these are not symbolic figures but real officials whose counsel is condemned as contrary to YHWH's purposes.</p>",
+"3": "<p><strong>lo beqarov livnot batim</strong> — &quot;it is not near to build houses&quot; — the leaders' slogan denies the urgency of judgment. The implied meaning is: &quot;we are safe in Jerusalem (the pot); the exile crowd is already gone.&quot; The pot metaphor (<em>sir</em>, cooking pot) is their image of security, which Ezekiel inverts: the pot is the place of cooking, not protection.</p>",
+"4": "<p>The divine command to prophesy (<em>hinave</em>, imperative piel of <em>nava</em>) against them is addressed to Ezekiel while still in the vision-state. The imperative is direct and immediate — <em>piel</em> aspect emphasizes the declared/prophetic nature of the speech act, distinguishing it from ordinary speech.</p>",
+"5": "<p><strong>vatippol ʿalai ruach YHWH</strong> — &quot;the Spirit of YHWH fell on me&quot; — the verb <em>nafal</em> (fall) describes the sudden, overwhelming onset of prophetic inspiration. The same vocabulary appears for the Spirit falling on Saul (1 Sam 10:10) and Samson (Judg 14:6). The divine speech that follows (&quot;thus says YHWH&quot;) is authorized by this Spirit-falling.</p>",
+"6": "<p>The accusation — <strong>you have multiplied your slain in this city</strong> — uses the perfect <em>hirbatem</em> (you have multiplied) as an accomplished fact. The fill-the-streets-with-corpses imagery (<em>malletem ḥutsoteha ḥalal</em>) is the judicial evidence that makes the leaders guilty of blood.</p>",
+"7": "<p><strong>ʾasher natattem betokhah hem habasar vehi hasir vaʾatem hotsenu mitokhah</strong> — the wordplay reverses the leaders' slogan: yes, the city is a pot and you are in it — but the meat in the pot is the slain, not you; and you will be removed from it (the exile that is coming is not protection but expulsion). The grammatical stress on <em>hem</em> (they, emphatic) and <em>vaʾatem</em> (but you) creates a sharp contrast.</p>",
+"8": "<p>The fear they claim not to have (<em>haḥerev yeratem</em>) is what they will face: they feared the sword of enemies and so formed foreign alliances; YHWH will bring on them the very sword they tried to avoid. The irony of self-fulfilling judgment through policy choices is the structural point of vv7-8.</p>",
+"9": "<p><strong>vehoseti etchem mitokha venatati etchem beyad zarim</strong> — the two-step judgment: extraction (<em>hoseti</em>, hiphil of <em>yatsa</em>, I will bring out) from the city and delivery (<em>natati beyad zarim</em>, I will give into the hand of strangers). The same verb pair (<em>yatsa</em> + <em>natan beyad</em>) appears throughout Judges and Kings for YHWH delivering Israel to enemies.</p>",
+"10": "<p>The border of Israel as the place of judgment — <strong>ʿal gevul Yisraʾel eshpet etchem</strong> — specifies the location: the frontier where Nebuchadnezzar caught and judged Zedekiah (2 Kgs 25:6-7; Jer 52:9-10). The prophecy is precise enough to be a prediction of an historical event, and precisely fulfilled.</p>",
+"11": "<p>The repeated declaration — <strong>hi lo tihyeh lachem lesir vaʾatem lo tihyu vasar betokhah</strong> — &quot;this city will not be a pot for you and you will not be flesh within it&quot; — is the definitive reversal of the leaders' slogan. The verb <em>tihyeh</em>/<em>tihyu</em> (imperfect of <em>hayah</em>) is a firm future declaration, not a possibility.</p>",
+"12": "<p><strong>uveḥuqqot haggoyim asher sevivoteikhem ʿasitem</strong> — &quot;you acted according to the statutes of the nations around you&quot; — the word <em>ḥuqqot</em> (statutes/ordinances) used for pagan practices inverts the covenant formula: YHWH's <em>ḥuqqim</em> (statutes) were the law Israel was to follow; using <em>ḥuqqot haggoyim</em> condemns them for having a rival statutory code.</p>",
+"13": "<p>The death of Pelatiah (<em>vayamat Pelatiah ven Benayahu</em>) during the prophetic speech — while Ezekiel is still in the vision — is a sign-act death. Ezekiel&apos;s response (falling on his face, crying out) matches his response to the glory-vision in ch 1. The death within the vision corresponds to what will happen in history.</p>",
+"14": "<p>The transition to the consolation oracle — announced by the formula <em>vayehi devar YHWH ʾelai leʾmor</em> (the word of YHWH came to me saying) — marks a new divine speech unit. The formula is the standard Ezekielian messenger-speech opener and signals a shift in tone.</p>",
+"15": "<p>The insulting slogan of the Jerusalem residents — <strong>riḥaqu meʿal YHWH lahem nittenah haʾarets lemorah</strong> — &quot;they have gone far from YHWH; to us the land is given as a possession&quot; — treats proximity to Jerusalem as proximity to YHWH. The perfect <em>riḥaqu</em> (they have gone far) is their assessment of the exiles; the divine response inverts it completely in what follows.</p>",
+"16": "<p><strong>vehiʾi lahem lemigdash meʿat baʾaratsot asher baʾu sham</strong> — &quot;I have been to them a little sanctuary in the countries where they have gone&quot; — <em>migdash meʿat</em> (little/temporary sanctuary) is one of Ezekiel's most profound coinages. YHWH himself is the sanctuary in exile, replacing the temple as the place of divine presence. The term <em>meʿat</em> (a little, of minor extent) may be the divine humility of accompanying the exiles into Babylon.</p>",
+"17": "<p>The gathering-from-peoples promise — <strong>veqibbatsti etchem mehaʿamim veʾasafti etchem mehaʾaratsot</strong> — uses the same verb pair (<em>qabats</em> + <em>ʾasaf</em>, gather + collect) that Deuteronomy 30:3-4 uses for the eschatological regathering. The two verbs reinforce each other: <em>qabats</em> is the general term; <em>ʾasaf</em> (collect/harvest) adds the nuance of gathering what was scattered.</p>",
+"18": "<p>The promise of their cultic cleansing — <strong>vehesiru kol-shiqqutseyha ukhol-toʿavoteha mimennah</strong> — &quot;they will remove all its detestable things and all its abominations from it&quot; — uses <em>shiqqutsim</em> (detestable things, often idols) and <em>toʿavot</em> (abominations). Both terms are strong cultic-pollution vocabulary. The imperfect <em>vehesiru</em> is part of the sequential future narrative that follows the gathering promise.</p>",
+"19": "<p><strong>venatati lahem lev ʾeḥad veruach ḥadashah etten beqirbam vehashirothi et-lev haʾeven mibesaram venatati lahem lev basar</strong> — the new-heart/new-spirit promise anticipates 36:26 almost word for word. Key terms: <em>lev ʾeḥad</em> (one heart — undivided loyalty, unlike the divided heart of v21); <em>ruach ḥadashah</em> (new spirit — not just reformed behavior but a new animating principle); <em>lev haʾeven</em> (heart of stone — the unresponsive covenant heart); <em>lev basar</em> (heart of flesh — responsive, feeling, alive to YHWH's word).</p>",
+"20": "<p>The covenant-formula conclusion — <strong>vehayu li leʿam vaʾani ʾehyeh lahem leʾlohim</strong> — &quot;they shall be my people and I will be their God&quot; — is the Sinaitic covenant formula in its simplest form (also Jer 31:33). The imperfects express ongoing covenant relationship. The formula occurs at the climax of restoration promises throughout the prophets.</p>",
+"21": "<p>The contrasting judgment clause — <strong>veʾel-lev shiqqutseyhem vetoʿavoteyhem libam holeikh</strong> — &quot;as for those whose heart goes after their detestable things and their abominations&quot; — the heart-going-after (<em>holeikh</em>, participle of <em>halakh</em>) the idols is the opposite of the one-heart promised in v19. The participial form describes an ongoing disposition.</p>",
+"22": "<p>The departure of the <em>kavod</em> (glory) — <strong>vayyissaʾu hakheruvim ʾet-kanfeyhem</strong> — the cherubim lifting their wings in preparation for departure is the signal that the <em>kavod YHWH</em> is about to move. The same verb <em>nasaʾ</em> (lift) used for Ezekiel being carried is used for the wings. The symmetry is deliberate: the prophet and the glory move together.</p>",
+"23": "<p>The <em>kavod YHWH</em> pausing <strong>ʿal-hahar ʾasher miqqedem laʿir</strong> — &quot;on the mountain east of the city&quot; — the Mount of Olives. This is the last resting place of the divine glory before it leaves for Babylon (implied in chs 10-11). The mountain east of the city is where the glory will return in 43:1-4 and where Zechariah 14:4 locates the eschatological theophany.</p>",
+"24": "<p>The Spirit-transport home — <strong>veruach nesaʾtni vateviʾeni khaldeʾyma</strong> — the same verb (<em>nasaʾ</em>) for the return trip. The whole vision journey is framed by Spirit-transport. The phrase <em>bemar&apos;eh beruach</em> (in the vision by the Spirit) clarifies that the journey was visionary, not physical — an important marker in a book full of border-crossing between vision and reality.</p>",
+"25": "<p>The report to the exiles — <strong>vaʾadabber ʾel-haggolah ʾet kol-divrei YHWH</strong> — Ezekiel as messenger to the community. The term <em>haggolah</em> (the exile community/the deportees) is Ezekiel's standard designation for his audience. The act of speaking &quot;all the words of YHWH&quot; affirms the completeness of the prophetic report — nothing withheld from the community.</p>"
+},
+"12": {
+"1": "<p>The standard word-event formula — <em>vayehi devar YHWH ʾelai leʾmor</em> — opens a new section. Ezekiel's book is organized around these divine-speech introductions; they mark the beginning of distinct oracular units. The formula occurs over 50 times in Ezekiel, more than any other prophetic book.</p>",
+"2": "<p><strong>ben-ʾadam betokh beit-hameri ʾattah yoshev</strong> — &quot;son of man, you are dwelling among a rebellious house&quot; — <em>beit hameri</em> (house of rebellion) is Ezekiel&apos;s characteristic designation for Israel. <em>Meri</em> (rebellion) is a noun of action derived from <em>marah</em> (to be bitter/rebellious against authority). The phrase <em>ʿeynayyim lahem lirʾot velo raʾu</em> (they have eyes to see but do not see) echoes the Isaianic hardening formula (Isa 6:9-10) and is cited by Jesus in Mark 4:12 and John 12:40.</p>",
+"3": "<p><strong>ʿaseh lekha kelei golah</strong> — &quot;prepare for yourself exile-gear&quot; — <em>kelei</em> (implements/gear) is a general term for personal equipment. The instruction to pack in front of them during the day and then move out at evening creates the visual narrative of deportation. The sign-act performs the coming exile before it happens.</p>",
+"4": "<p>The two stages of the baggage-carrying sign-act — during the day (<em>yomam</em>) and at dusk (<em>beʿerev</em>) — correspond to the stages of exile: the visible departure and the night-flight that Zedekiah will make (2 Kgs 25:4). The dusk/night timing is historically specific to Zedekiah's attempted escape.</p>",
+"5": "<p><strong>beqir ḥatsor-lekha vehotseta vo</strong> — &quot;dig through the wall before their eyes and go out through it&quot; — the wall-digging sign-act represents the hole in the city wall through which Zedekiah&apos;s party escaped. The Hebrew <em>ḥatsar</em> means to dig/pierce; the action symbolizes the forced breach of the city&apos;s defenses.</p>",
+"6": "<p><strong>bevalayl tatse</strong> — &quot;go out at night&quot; — the nighttime departure is the specific circumstance of Zedekiah's flight. The covering of the face (<em>kaseh ʿal-paneikha</em>) is interpreted in v12 as the prince covering his face so as not to see the land with his eyes — a reference to Zedekiah&apos;s blinding (2 Kgs 25:7). The sign-act precedes the event it symbolizes by months or years. The term <em>mofet</em> (wonder/portent) for Ezekiel himself is significant: he does not merely announce but embodies the prophetic word.</p>",
+"7": "<p>The faithful execution of the sign-act — <em>vaʾaʿas keʾasher tsuvviti</em> (I did as I was commanded) — is Ezekiel&apos;s standard response to divine commands. The Hebrew imperfect-consecutive narrative (<em>vav</em>-consecutive + imperfect) creates the sequential action report. The obedient execution is as much a part of the prophetic act as the verbal oracle.</p>",
+"8": "<p>Morning brings the word again — <em>vayehi devar YHWH ʾelai beboqer</em> — the divine speech frames the sign-act. The night-departure is followed immediately by the morning-explanation, creating a close prophetic discourse unit.</p>",
+"9": "<p>The house of Israel&apos;s question — <em>halo ʾamru ʾeleikha beit Yisraʾel beit hameri ma ʾattah ʿoseh</em> — &quot;has not the house of Israel said to you: what are you doing?&quot; — the rhetorical question anticipates their puzzlement and sets up the explanation. The <em>beit hameri</em> (rebellious house) epithet attached to the questioners colors their question with the very attitude that makes the sign necessary.</p>",
+"10": "<p><strong>hanasi hamassa hazze biYerushalaim</strong> — &quot;this oracle concerns the prince in Jerusalem&quot; — <em>hanasi</em> (the prince/leader) is Ezekiel&apos;s preferred term for the Judean king; he rarely calls the king <em>melek</em> (king) in chapters 1-24, possibly to avoid legitimizing Zedekiah&apos;s kingship. The term <em>massa</em> (oracle/burden) derives from <em>nasaʾ</em> (lift/carry) — the oracle is a weight carried.</p>",
+"11": "<p>Ezekiel as <em>mofet</em> — <em>keʾasher ʿasiti ken yeʿaseh lahem bagolah yelikhu behasher</em> — &quot;as I have done, so it will be done to them; into exile, into captivity they will go&quot; — the identification of the prophet with the people he represents is Ezekiel&apos;s distinctive feature. The sign-act has executive force: what Ezekiel mimes, the community will experience. <em>Mofet</em> (wonder) usually denotes a divine act; applying it to the prophet makes the prophet&apos;s enacted body a divine instrument.</p>",
+"12": "<p>The specific application to the prince — <strong>vehanasi ʾasher betokhah ʾel-khetefav yissaʾ baʾalafel veʾel-pi haqqir yiḥtoru lehotseti vo ʿeynayyiv yekhasseh yaʿan ʾasher loʾ yirʾe leʿayin ʾet-haʾarets</strong> — the covering of the eyes so as not to see the land with the eye is the predictive element: Zedekiah will have his eyes put out (2 Kgs 25:7) before being taken to Babylon. The sign-act&apos;s eye-covering turns out to be a precise prophecy of his blinding.</p>",
+"13": "<p>YHWH spreading his net over the prince — <em>ufrassti et-resheti ʿalav venitpas bimetsudati</em> — the hunter/net imagery for divine judgment. The verb <em>paras</em> (spread/stretch) + <em>resheti</em> (my net) + <em>nitpas</em> (captured) traces the divine entrapment. Zedekiah is caught while fleeing (2 Kgs 25:4-5); he will come to Babylon but not see it — the eyes put out before the arrival precisely fulfills &quot;he will not see it.&quot;</p>",
+"14": "<p>The scattering of all who support the prince — <em>vekhol-ʾagappayu ʾezroh lekhal-ruaḥ</em> — &quot;all who are around him I will scatter to every wind&quot; — <em>ruaḥ</em> (wind/spirit) here means compass-directions (&quot;to every wind&quot; = in all directions). The four winds appear throughout Ezekiel as the scope of divine scattering and gathering (5:10; 37:9).</p>",
+"15": "<p>The recognition formula — <em>veyadeʿu ki ʾani YHWH</em> — &quot;and they will know that I am YHWH&quot; — is Ezekiel&apos;s most characteristic refrain (appearing ~72 times). The purpose of every judgment and every restoration is the acknowledgment of YHWH&apos;s identity and sovereignty. The formula uses the imperfect <em>yadeʿu</em> (they will know) — the knowing is future, when the events confirm the word.</p>",
+"16": "<p>The remnant that survives the sword, famine, and pestilence — <em>vehishtarti mehem ʾanshei mispar</em> — &quot;I will leave of them a few men&quot; — <em>mispar</em> (number/count) means &quot;men who can be counted,&quot; i.e., a very small remnant. The remnant&apos;s purpose: <em>lemaʿan yesapperu kol-toʿavoteyhem baggoyim</em> — they will declare all their abominations among the nations. The scattered remnant becomes involuntary testimony to YHWH&apos;s justice.</p>",
+"17": "<p>Another word-event formula initiates the new sign-act. The double formula (vv1 and 17) marks chapter 12 as containing two distinct sign-act oracles.</p>",
+"18": "<p><strong>benaʿara tokhal laḥmekha uviraʿash vetimhon tishte meimekha</strong> — &quot;eat your bread with quaking and drink your water with trembling and apprehension&quot; — the three nouns for fear/anxiety: <em>naʿara</em> (anxiety), <em>raʿash</em> (trembling), <em>timhon</em> (dismay/confusion). The escalating emotional vocabulary describes the physical experience of siege-anxiety. The sign-act mimes the psychology of siege more than its logistics.</p>",
+"19": "<p>The interpretation: the land and its fullness will be stripped from the city&apos;s inhabitants — <em>letitom eret koʾah tiqqafrethah</em> (she will be stripped of what fills her). The <em>eret koʾah</em> (fullness of the land) is everything the land produces. The expression &quot;because of the violence of all who dwell in it&quot; grounds the economic desolation in moral cause.</p>",
+"20": "<p>The ruined-city conclusion — <em>vehaʿarim hanoshabot teḥarovna vehaʾarets shemamah tihyeh</em> — follows the earlier pattern (6:14). The future tenses (<em>teḥarovna</em>, <em>tihyeh</em>) are imperfects of strong prediction. The verse summarizes the geographic scope: not just Jerusalem but all the inhabited cities.</p>",
+"21": "<p>A third oracle-unit opens with yet another word-event formula. The focus now is on a specific proverb that was circulating among the exiles and the Jerusalem community.</p>",
+"22": "<p><strong>ma hammashal hazze lakhem ʿal-ʾadmat Yisraʾel leʾmor yaʾarikhu hayyamim veʾavad kol-ḥazon</strong> — &quot;what is this proverb that you have in the land of Israel: the days grow long and every vision comes to nothing?&quot; — the proverb challenges the credibility of unfulfilled prophecy. <em>Mashal</em> (proverb/byword) represents communal conventional wisdom that has become a form of resistance to the prophetic word. The rhetorical structure quotes the skeptical community directly.</p>",
+"23": "<p>YHWH&apos;s abolition of the proverb — <em>vehishbatti et-hammashal hazze</em> — the verb <em>shavat</em> (hiphil: cause to cease/abolish) is the same word used for the Sabbath rest. YHWH &quot;Sabbaths&quot; the false proverb — causes it to stop. The new formula to replace it: <em>qarev hayyamim udvar kol-ḥazon</em> — &quot;the days are near and the word of every vision.&quot; The deferred fulfillment becomes imminent fulfillment.</p>",
+"24": "<p>The paired abolitions — <em>kol-ḥazon shav vemiqsam ḥalaq</em> — &quot;every empty vision and flattering divination&quot; — <em>ḥazon shav</em> (false/empty vision) is opposed to true prophecy; <em>miqsam ḥalaq</em> (flattering divination) refers to the false prophets&apos; technique of smooth answers. Both will be abolished &quot;in the midst of the house of Israel.&quot;</p>",
+"25": "<p><strong>ki ʾani YHWH adabber ʾet ʾasher adabber davar veyyeʿaseh loʾ timmasheikh ʿod</strong> — &quot;for I YHWH will speak the word that I speak and it will be performed; it will no longer be delayed&quot; — the emphatic self-reference (<em>ʾani YHWH</em>, I myself am YHWH) and the repeated <em>adabber... davar</em> (I will speak... word) underscore the absolute reliability of divine speech. <em>Timmasheikh</em> (be drawn out/delayed) from <em>mashakh</em> — the delay is over.</p>",
+"26": "<p>A fourth oracle within ch 12 is introduced. The people&apos;s second proverb is quoted: <em>haḥazon ʾasher zeh ḥoze liymim rabbim ulnitot shanim ʾaḥerot hu mitnabe</em> — &quot;the vision he sees is for many days; and he prophesies of times far off.&quot; This second proverb does not deny prophecy but safely defers it to the distant future, making it existentially irrelevant to the present generation.</p>",
+"27": "<p>The oracle that counters the second proverb — the specific content is in vv28. The structure of the chapter (three proverbs addressed in sequence: the vision-always-fails proverb, the imminence replacement, and the far-future safety proverb) represents a sophisticated engagement with the community&apos;s prophetic skepticism.</p>",
+"28": "<p><strong>loʾ yimmasheikh ʿod kol-divray ki adabber davar veyyeʿaseh</strong> — &quot;none of my words will be delayed any longer; the word I speak will be performed&quot; — the chapter closes with the same imminence formula as v25, forming an inclusio around the two-proverb refutation. The word for &quot;none of my words&quot; (<em>kol-divray</em>) is emphatically comprehensive.</p>"
+},
+"13": {
+"1": "<p>Standard prophetic-word formula opens the oracle against false prophets. The formal structure — <em>vayehi devar YHWH ʾelai leʾmor</em> — is followed immediately by the direct address <em>ben-ʾadam</em> (son of man), Ezekiel&apos;s consistent designation that marks his humanity before the divine commission.</p>",
+"2": "<p><strong>hinave ʾel-neviʾei Yisraʾel hannivveʾim</strong> — &quot;prophesy against the prophets of Israel who are prophesying&quot; — the piel imperative <em>hinave</em> followed by the niphal participle <em>hannivveʾim</em> creates an ironic opposition: Ezekiel who truly prophesies (piel) is commanded to address those who claim to prophesy (niphal participial, merely performing the act). The phrase <em>haholkhim ʾaḥar ruḥam</em> — &quot;who follow their own spirit&quot; — names the source: not the divine ruaḥ but their own.</p>",
+"3": "<p><strong>hoi ʾal-neviʾei hannavalim ʾasher holkhim ʾaḥar ruḥam</strong> — the <em>hoi</em> (woe) oracle begins. <em>Navalim</em> is the word for &quot;foolish/wicked&quot; (related to <em>naval</em>, the wicked man of 1 Sam 25 and Ps 14:1). The characterization emphasizes moral rather than merely intellectual failure. <em>Umebal lo raʾu</em> — &quot;and have seen nothing&quot; — the false prophets are blind to the divine reality they claim to disclose.</p>",
+"4": "<p><strong>keshvaʿalim baḥaravot neviʾeikha Yisraʾel hayu</strong> — &quot;your prophets, O Israel, have been like jackals among ruins&quot; — the jackal-in-ruins image is a desolation metaphor: jackals inhabit abandoned places (14:15; Isa 34:13; Jer 9:11). The false prophets inhabit the ruin of the covenant community rather than building it up or standing in the breach (v5).</p>",
+"5": "<p><strong>loʾ ʿalitem bifretsoyt vattivnu gader ʾal-beit Yisraʾel laʿamod bammiilḥama beyom YHWH</strong> — &quot;you have not gone up into the breaches nor built up a wall for the house of Israel to stand in battle on the day of YHWH&quot; — the wall/breach metaphor (<em>paratsot</em>, breaches; <em>gader</em>, wall) is the defining image of prophetic failure. True prophets stand in the breach (intercede in the gap between YHWH&apos;s anger and the people); false prophets have abandoned this intercessory function.</p>",
+"6": "<p><strong>ḥazu shav veqesem kazav haʾomrim neʾum YHWH vaYHWH loʾ shelaḥam</strong> — &quot;they have seen false vision and lying divination, saying &quot;Thus says YHWH,&quot; when YHWH has not sent them&quot; — the term <em>shav</em> (false/vain) is the same word used in the third commandment (&quot;do not take the name of YHWH in vain&quot;). Using the prophetic formula without divine commission is precisely the violation of that commandment.</p>",
+"7": "<p>The series of rhetorical questions — <em>halo ḥazon shav ḥazitem umigesem kazav ʾamartem veʾomrim neʾum YHWH vaʾani loʾ dibbartim</em> — &quot;have you not seen a false vision and spoken a lying divination, when you say &quot;Thus says YHWH,&quot; but I have not spoken?&quot; — the <em>ʾani loʾ dibbartim</em> (but I have not spoken) is the decisive divine refutation. The first-person denial of authorship removes all legitimacy from their messages.</p>",
+"8": "<p>The result clause — <em>lakhein koh ʾamar ʾAdanai YHWH yaʾan dabberkem shav vaḥazitem kazav lakhein ḥinneni ʾaleikhem</em> — &quot;therefore thus says Lord YHWH: because you have spoken falsehood and seen lies, therefore I am against you&quot; — the double <em>lakhein</em> (therefore... therefore) creates a formal legal structure: accusation → verdict. <em>Hinneni ʾaleikhem</em> (behold I am against you) is the opposite of <em>ʾani ittekhem</em> (I am with you) — the divine hostile-presence formula.</p>",
+"9": "<p><strong>vehayetah yadi ʾel-hanneviʾim haḥozim shav vehaqqosemim kazav besod ʿammi loʾ yihyu</strong> — the three-part exclusion: (1) <em>besod ʿammi loʾ yihyu</em> (they will not be in the council/assembly of my people); (2) <em>bikhethav beit Yisraʾel loʾ yikkathvu</em> (in the register of the house of Israel they will not be written); (3) <em>veʾel-ʾadmat Yisraʾel loʾ yavoʾu</em> (to the land of Israel they will not come). The exclusions move from community to register to land — a comprehensive disinheritance.</p>",
+"10": "<p><strong>yaʿan uveyaʿan hittu ʾet-ʿammi leʾmor shalom veʾein shalom vehu bone ḥayits vehinnam totim ʾoto tafeil</strong> — &quot;because they have misled my people, saying peace when there is no peace; and when the people build a wall, they plaster it with whitewash&quot; — the peace/no-peace (<em>shalom veʾein shalom</em>) contrast echoes Jeremiah 6:14 and 8:11. The whitewash word <em>tafeil</em> (plaster/smear) is the key technical term — applying a cosmetic covering to an inadequate structure.</p>",
+"11": "<p>The coming storm that will collapse the plastered wall — <em>shotef geshem vehavi ʾavnei ʾelgavish tappol veruaḥ seʿarot tevaqeʿa</em> — &quot;the flooding rain will fall, hailstones will fall, and a stormy wind will break out&quot; — the storm as YHWH&apos;s judgment uses meteorological imagery for historical events (the Babylonian invasion). The three agents — rain (<em>geshem shotef</em>), hail (<em>ʾavnei ʾelgavish</em>), wind (<em>ruaḥ seʿarot</em>) — are covenant-curse weapons (cf. Exod 9:22-26).</p>",
+"12": "<p>The rhetorical question that exposes the whitewash failure — <em>heʾayye hattiḥ ʾasher taḥtem</em> — &quot;where is the plaster with which you plastered it?&quot; — anticipates the community asking where the false prophets&apos; message went when the wall collapsed. The question is directed by the survivors to the prophets who gave false assurance. The <em>tafal/tiḥ</em> terms (<em>tiḥ</em> is more general, <em>tafal</em> more specific) may represent dialectal variation or near-synonyms.</p>",
+"13": "<p>YHWH announces the storm personally — <em>uvʾappe aʾaseh ruaḥ seʿarot</em> (in my wrath I will make a stormy wind) — the divine anger (<em>ʾap</em>, nose/anger) is the source of the meteorological weapons. The personal agency (<em>aʾaseh</em>, I will make/cause) makes explicit what the false prophets denied: divine action is real and imminent.</p>",
+"14": "<p>The wall pulled down and its foundation laid bare — <em>veḥarastiv ʾel-haʾarets venighla yesodo</em> — uses the same verb <em>haras</em> (pull down/demolish) that appears in Ezekiel&apos;s commission (5:16: breaking the staff of bread). The foundation exposure is the decisive act: not just superficial damage but structural collapse.</p>",
+"15": "<p>The recognition formula follows (<em>veyadeʿu ki ʾani YHWH</em>) immediately after the destruction, as it does throughout Ezekiel. Here it is applied specifically to the false prophets: even they will know YHWH&apos;s identity when their message is falsified by events.</p>",
+"16": "<p>Summary statement restating the core accusation — the prophets of Israel who prophesied to Jerusalem and saw visions of peace for her (<em>ḥozim lah ḥazon shalom veʾein shalom</em>) — &quot;when there is no peace.&quot; The repetition of <em>shalom veʾein shalom</em> brackets the entire oracle against false prophets (vv3-16), making the peace-lie the defining sin of false prophecy.</p>",
+"17": "<p>The second oracle unit addresses the prophetesses — <em>ven-ʾadam sim panekha ʾel-benot ʿammekha hannivveʾot</em> — &quot;son of man, set your face against the daughters of your people who are prophesying&quot; — the gendered shift is grammatically marked: <em>benot</em> (daughters) vs. <em>neviʾei</em> (male prophets). Their sin is outlined as involving specific objects and techniques not fully understood.</p>",
+"18": "<p><strong>kesatot ʿal kol-mafrqot yadeyhem</strong> — &quot;who sew magic bands on all wrists&quot; — <em>kesatot</em> (plural of <em>kesat</em>) are unknown objects, possibly wristbands or cushions used in divination; the term occurs only here in the OT. The <em>mispakhot</em> (veils/coverings) are also uncertain — possibly used to cover faces in entrancement or as part of divination rituals. The exact practice is opaque but the condemnation of it as false prophecy is clear.</p>",
+"19": "<p>The prostituting of divine service for handfuls of barley and scraps of bread — <em>vattekhallelenah ʾoti ʾel-ʿammi bishʾele shiʿorei seʿorim uvifitetei leḥem</em> — the trivialization of the prophetic office for minimal payment is the economic dimension of their false prophecy. <em>ḥillel</em> (piel: profane/desecrate) is the same root as <em>ḥalal</em> (pierce/profane); the piel makes it intensive — utterly profaning the divine name among the people.</p>",
+"20": "<p>YHWH tearing the bands from the arms — <em>hinneni ʾel-kesatoteikhem ʾasher ʾattem mefarshot sham ʾet-hannefattot</em> — the hostile-presence formula (<em>hinneni ʾel</em>) applied to the implements of false prophecy. The liberation of the souls (implied: those who were ensnared by the false prophetesses) is the positive dimension of the judgment on the practitioners.</p>",
+"21": "<p>The veils torn — <em>veqaraʿti ʾet-mispekhoteykem vehtsal ʾet-ʿammi miyyadekhem</em> — the tearing verb <em>qaraʿ</em> (tear/rend) is used for the tearing of garments in mourning and for divine judgment (1 Sam 15:27-28; 1 Kgs 11:11). The imagery parallels the wall-plaster removal of vv11-14: false protective coverings torn away.</p>",
+"22": "<p>The moral indictment — <strong>bifashovtekhem lev-tsaddiq sheqer vaʾani loʾ hikhʾavtihu</strong> — &quot;because you disheartened the righteous with lies when I had not grieved him&quot; — the verb <em>khiʾavtihu</em> (caused him grief) is from <em>kaaʾav</em> (to be in pain). YHWH had not intended to pain the righteous; the false prophetesses did so independently. The counterpart is strengthening the wicked by their false assurances.</p>",
+"23": "<p>The future cessation — <em>lakhein shav loʾ tḥazena uqesem loʾ teqsomna ʿod</em> — imperfects of permanent refusal: &quot;you will no longer see false visions nor practice divination.&quot; The definitive verb <em>hitsalti ʾet-ʿammi miyyadekhem</em> (I will rescue my people from your hand) uses the rescue vocabulary (<em>natsal</em>, hiphil) normally applied to deliverance from enemies. The false prophetesses are treating YHWH&apos;s people as prey.</p>"
+},
+"14": {
+"1": "<p>Elders coming before Ezekiel — <em>vayyavoʾu ʾelai ʾanashim miziqnei Yisraʾel vayyeshvu lifanai</em> — &quot;certain elders of Israel came to me and sat before me&quot; — the sitting-before posture (<em>yashav lifanai</em>) indicates a formal consultation. The elders expect prophetic counsel; what they receive instead is a divine diagnosis of their interior idolatry.</p>",
+"2": "<p>Standard word-event formula marks the divine speech that interrupts or reframes the consultation. The elders may not know that YHWH will speak about them rather than to their agenda.</p>",
+"3": "<p><strong>ben-ʾadam haʾanashim haʾelle heʿelu gilluleihem ʿal-libam umikshol ʿavonam natenu lineqed paneyhem</strong> — &quot;son of man, these men have set up their idols in their hearts, and put the stumbling block of their iniquity before their faces&quot; — <em>gillulim</em> (dung-idols, from <em>gillul</em>, related to <em>gal</em>, dung-heap) is Ezekiel&apos;s strongly pejorative term for idols; he uses it ~40 times. The expression <em>gillulim ʿal-libam</em> (idols on/in the heart) distinguishes interior from exterior idolatry: the problem is not necessarily that they have physical idols but that they have given the idol-allegiance of the heart.</p>",
+"4": "<p>The principle of the answering-oracle — <em>kol-ish ish mibbet Yisraʾel ʾasher yaʿale ʾet-gillulav ʾal-libam... vavoʾ ʾel-hannavi ʾani YHWH neʿneiti lo vo baʾasher bo bemargoa gillulav</em> — YHWH&apos;s declared policy: anyone who comes to a prophet while harboring idols in the heart will receive an answer that meets them in their idolatry (&quot;through the very thing in which he has gone astray&quot;). The ironic judgment mirrors the Pharaoh-hardening dynamic: the seeker&apos;s own idolatry becomes the medium of their self-condemnation.</p>",
+"5": "<p>The purpose of the answering-oracle — <em>lemaʿan tafos ʾet-beit Yisraʾel belibam</em> — &quot;to lay hold of the house of Israel in their hearts&quot; — <em>tafas</em> (seize/lay hold of) describes divine judicial arrest. The verb used for seizing the idolaters through their idolatry is a form of the lex talionis applied to interior religion: the idol in the heart becomes the means of divine apprehension.</p>",
+"6": "<p>The call to repentance — <em>shuvu vehashivu meʿal gilulleikhem</em> — &quot;repent and turn away from your idols&quot; — the double repentance verb: <em>shuvu</em> (turn/return, imperative qal) and <em>hashivu</em> (turn away, hiphil imperative — cause to turn). The two-part construction intensifies the urgency: simply repent + specifically turn away from idols. The hiphil suggests an active act of will distinct from the passive turning.</p>",
+"7": "<p>The general principle restated — <em>kol-ish ish mibbet Yisraʾel umin-hagger asher yagur beYisraʾel</em> — now expanded to include &quot;the stranger who sojourns in Israel.&quot; The extension to the <em>ger</em> (resident alien) universalizes the principle beyond ethnic boundaries. The Deuteronomic legislation consistently included the <em>ger</em> in covenant obligations (Deut 5:14; 14:21; etc.).</p>",
+"8": "<p>The cutting-off (<em>hikkratti</em>) of the idolater from the people — <em>venatattihu leʾot ulimshalim vekhirrattihu miqirb ʿammi</em> — uses two distinct exclusion terms: <em>ʾot</em> (sign, he becomes a living warning-sign) and <em>mashal</em> (proverb/byword, his fate becomes a saying). To be made into a <em>mashal</em> is to have one&apos;s life turned into cautionary instruction for others (cf. 5:15; Deut 28:37).</p>",
+"9": "<p>The hardest verse in the oracle — <strong>vehanavi ki yefutteh vedibbar davar ʾani YHWH pittahti ʾet-hannavi hahu</strong> — &quot;if the prophet is deceived and speaks a word, I YHWH have deceived that prophet&quot; — the verb <em>pittah</em> (entice/deceive, piel) applied to YHWH is theologically loaded. The parallel in 1 Kings 22:19-22 (the lying spirit sent to deceive Ahab&apos;s prophets) clarifies the mechanism: YHWH permits or uses the prophet&apos;s own inclination to self-deception to produce prophetic misguidance. The grammar (<em>ʾani YHWH pittahti</em>, emphatic first-person) makes YHWH&apos;s secondary causality explicit without removing the prophet&apos;s primary responsibility.</p>",
+"10": "<p>Both prophet and inquirer bear their guilt equally — <em>venasaʾu ʿavonam kikhʿavon hadoreshe ken ʿavon hannavi yihyeh</em> — &quot;they shall bear their punishment; the punishment of the inquirer and the punishment of the prophet shall be alike&quot; — the <em>nasa ʿavon</em> formula (bear/carry iniquity) is the standard covenant-curse language for consequence-bearing. The equal distribution of guilt between the deceived inquirer and the deceiving prophet is consistent with the principle of individual accountability developed in ch 18.</p>",
+"11": "<p>The ultimate purpose of the prophetic judgment mechanism — <em>lemaʿan loʾ-yitʿu ʿod beit Yisraʾel meʾaḥaray</em> — &quot;so that the house of Israel may no longer go astray from following me.&quot; The <em>lemaʿan</em> (in order that) clause grounds even the hardest aspect of ch 14 (YHWH enticing false prophets) in the larger purpose of restoring covenant faithfulness. The goal is restoration of the <em>lev echad</em> (one heart) promised in 11:19.</p>",
+"12": "<p>New oracle unit — the four-judgment schema begins. The formal opening — <em>vayehi devar YHWH ʾelai leʾmor</em> followed by a direct address — introduces the distinctive Noah-Daniel-Job speculation.</p>",
+"13": "<p>The conditional schema — <em>eres ʾasher teḥeta li limʿol maʿal</em> — &quot;when a land sins against me by acting faithlessly&quot; — <em>maʿal</em> (faithless/treacherous act, specifically covenant violation) is one of Ezekiel&apos;s favored terms for Israel&apos;s sin. The conditional pattern (four times in vv13, 17, 19, 21) and the response (YHWH sends a judgment agent) creates a systematic catalog of divine judgment tools.</p>",
+"14": "<p><strong>vehayu shloshet haʾanashim haʾelle betokha Noaḥ Daniʾel veʾiyyov</strong> — the three righteous exemplars: Noah, Daniʾel (spelled differently from the prophet Daniel of the later book — probably the legendary hero of ANE tradition, as the spelling with <em>yod</em> is distinct), and Job. All three are men who were uniquely righteous in contexts of pervasive wickedness, and all were the only survivors in their contexts. The point: even the maximum of righteous intercession cannot avert the judgment once a land has crossed the threshold of covenant violation.</p>",
+"15": "<p>The second judgment scenario — <em>lo ḥayya raʿah ʾaʿavir baʾarets</em> — wild beasts as covenant curse (Lev 26:22; Deut 32:24). The desolation of the land (<em>shemamah</em>) is the result, a term that echoes through the book. The <em>ʾaʿavir</em> (hiphil imperfect of <em>ʿavar</em>, cause to pass through) frames the beasts as sent, not merely present.</p>",
+"16": "<p>The hypothetical righteous — <em>hamma shloshet haʾanashim baʾtokha ḥay ʾani</em> — YHWH swears by his life (<em>ḥay ʾani</em>, as I live, the divine oath formula) that even Noah, Daniel, and Job could save only themselves. The <em>ḥay ʾani</em> oath formula (&quot;as I live&quot;) intensifies the declaration to maximum certainty; it is used when YHWH makes irrevocable pronouncements (also 5:11; 16:48; 17:16, 19, etc.).</p>",
+"17": "<p>Third scenario — the sword (<em>ḥerev</em>) as the third covenant-curse instrument. The paired judgments — sword/famine (vv17-18), wild beasts (v15-16), plague (v19-20) — are the &quot;four sore acts of judgment&quot; announced in v21 (<em>shevu mishpatai raʿim</em>).</p>",
+"18": "<p>The unchanging conclusion for each scenario — <em>ʾim-benim veʾim-banot yatsillu hemmah levaddam yinnatselut</em> — &quot;they would deliver neither sons nor daughters, but they alone would be saved&quot; — the repeated refrain in each judgment scenario (vv16, 18, 20) establishes the principle of individualized accountability that is fully developed in ch 18. Righteousness is non-transferable; it cannot serve as credit for another person&apos;s standing.</p>",
+"19": "<p>The fourth scenario — pestilence (<em>dever</em>) and blood (<em>dam</em>) — is the final covenant-curse instrument. The phrase <em>leshafokh dami ʿaleha</em> (to pour out my blood/fury on it) uses <em>dam</em> (blood) in the sense of bloody judgment (the poured-out blood = violent death). The quartet is now complete: famine, wild beasts, sword, plague — the four instruments of Lev 26:14-39.</p>",
+"20": "<p>The final application of the three-righteous formula — <em>veNoaḥ Daniʾel veʾiyyov betokha ḥay ʾani... ʾim-ben veʾim-bat yatsillu hemmah levaddam yinnatselut</em> — the <em>ḥay ʾani</em> oath and the <em>hemmah levaddam</em> (they alone) refrain are repeated for the third time. The repetition is not redundancy but legal reinforcement: the principle of non-transferable righteousness is established by the triple oath-formula.</p>",
+"21": "<p><strong>ki koh ʾamar ʾAdanai YHWH ʾaf ki ʾarbaat mishpatai haraʿim ḥerev veraʿav veḥayya raʿah vedever shilaḥti ʾel-Yerushalaim</strong> — &quot;for thus says Lord YHWH: how much more when I send my four disastrous judgments — sword, famine, wild beasts, and plague — against Jerusalem&quot; — the <em>ʾaf ki</em> (how much more) is the qal-waḥomer (light-to-heavy) argument: if even three hypothetical righteous cannot save anyone in a land under judgment, how much less can Jerusalem claim protection? The four judgments sent simultaneously represent maximum covenant curse.</p>",
+"22": "<p>The unexpected conclusion — a remnant survives: <em>vehinneh noteret bo peletah mossiʾim banim uvanot</em> — &quot;behold, there will be survivors in it who will be brought out, sons and daughters&quot; — the survival of survivors (and specifically sons and daughters, the very ones the three righteous of vv14-20 could not save) overturns the schema. The survivors are brought out not by the righteousness of Noah/Daniel/Job but by divine decision. Their purpose: when the watching community sees their behavior (<em>darkeikhem veʾalileyhem</em>, ways and deeds), they will be consoled.</p>",
+"23": "<p>The consolation paradox — <em>veniqhamu etchem ki tirʾu ʾet-darkeikhem veʾet-ʾalileyhem viydeʾtem ki loʾ ḥinnami ʾasiti ʾet kol-ʾasher ʾasiti vah</em> — &quot;they will console you when you see their ways and their deeds, and you will know that not without cause have I done what I have done&quot; — the consolation comes not from pleasant news but from the recognition of justice: the behavior of the remnant-survivors demonstrates why the judgment was necessary. The <em>loʾ ḥinnami</em> (not without cause) is YHWH&apos;s self-vindication and the community&apos;s acceptance of that vindication as their consolation.</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', 'ezekiel')
+    merge_comm(existing, NEW)
+    save_comm('mkt-original', 'ezekiel', existing)
+    print('Ezekiel 11-14 mkt-original written.')
 
 if __name__ == '__main__':
     main()

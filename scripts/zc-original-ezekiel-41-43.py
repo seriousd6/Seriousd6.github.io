@@ -1,45 +1,36 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Original Commentary — Ezekiel chapters 41–43
+Run: python3 scripts/zc-original-ezekiel-41-43.py
+
+Source data:
+- data/interlinear/ezekiel.json
+
+Key decisions:
+- Ch 41: technical architectural terminology tracked; the wooden altar/table (v22) is the
+  mizbeaḥ haʿets — treated as table before YHWH, not a burnt-offering altar
+- Ch 42: leshakhot (priests' chambers) distinguished from the heikhal; the holy/common
+  dividing wall (v20) is the chomah that separates qodesh from ḥol
+- Ch 43: kavod YHWH vocabulary from chs 1–3 and 10–11 returns here in the restoration
+  entry; ruach lifts Ezekiel again (transport formula); torat habayit (law of the house)
+  in v12 is the programmatic term for the entire vision's purpose; ariel in v15-16
+  rendered "hearth of God" per Isa 29:1 cognate
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +40,93 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"41": {
+"1": "<p><strong>vayeviʾeni ʾel-heikhal</strong> — the guide brings Ezekiel into the <em>heikhal</em> (nave/main hall of the temple), the outer of the two main rooms. <em>Heikhal</em> is borrowed from the Sumerian <em>egal</em> (great house) via Akkadian — it denotes both the palace of a king and the main room of a temple. The doorpost-pillars (<em>ʾeil</em>) measured at six cubits: <em>ʾeil</em> (doorpost/jamb) is literally a ram or pillar — the same word used for the temple entrance in 1 Kgs 6:31. The measurement formula (<em>vayyamed ʾet-ʾeil hapetha sita ʾammot</em>) begins the systematic numerical description of the sanctuary zones.</p>",
+"2": "<p>The entrance (<em>petaḥ</em>) ten cubits wide and the sides of the entrance five cubits each — the <em>petaḥ</em> (opening/doorway) of the nave. The word <em>katef</em> (shoulder/side) used for the flanking walls establishes the architectural spatial language: the entrance has a width (<em>roḥav</em>) and two shoulders (<em>katfot</em>). The description moves inward: doorposts → entrance → nave walls.</p>",
+"3": "<p><strong>veheikhal penim</strong> — the inner room, the Most Holy Place (<em>devir</em> by implication though not named here). The guide measures the jambs at two cubits, the doorway at six cubits, and the walls seven cubits on each side. The narrowing of the entrance (<em>petaḥ shisha ʾammot</em> vs. the nave entrance of ten cubits) mirrors the increasing sanctity as one moves inward — architecturally encoding the graduated holiness of the temple zones.</p>",
+"4": "<p><strong>vayyamed ʾet-orko ʿesrim ʾammah veʾet-roḥbo ʿesrim ʾammah</strong> — the innermost room is precisely 20 × 20 cubits, a perfect square. The cube/square of the Most Holy Place is its defining architectural feature (also 1 Kgs 6:20, where it is 20 × 20 × 20 cubits — a perfect cube). The geometric perfection encodes the absolute holiness of the space. The declaration <em>zeh qodesh haqqodashim</em> (this is the Most Holy Place) at the end of v4 is the interpretive climax of the architectural description of the inmost sanctuary.</p>",
+"5": "<p>The outer wall of the temple measured at six cubits, and the side chambers (<em>tsela</em>) four cubits wide: <em>tsela</em> literally means &quot;rib/side&quot; (as in Eve from Adam&apos;s rib, Gen 2:21-22). The side chambers running along the temple walls were storage rooms and priestly spaces. The three-story arrangement of the side chambers (v6) is the same structural element described in 1 Kgs 6:5-6.</p>",
+"6": "<p>The thirty-three side chambers in three stories — <em>tslaʿot tsela ʾel-tsela shalosh ushloshim peʿamim</em> — a total of 33 per side (the Hebrew is debated; LXX has a different reading). The widening of the upper stories (<em>hammisgeret</em>) so they do not penetrate the temple wall is the structural innovation that allows multi-story side chambers without compromising the temple&apos;s main wall integrity.</p>",
+"7": "<p>The widening by stages as one goes higher — <em>veroḥav yereveh umussav saviv saviv</em> — the winding passage (<em>musav</em>) that circled the temple on each level. The architectural term <em>musav</em> (winding/surrounding passage) appears only here and is related to <em>savav</em> (to go around). The structural widening by story reflects the load-bearing engineering of ancient multi-story stone construction.</p>",
+"8": "<p>The raised platform (<em>gabhut lahem ḥatser</em>) — the elevated terrace surrounding the temple. The measurement formula specifies the height of the terrace: <em>shesh ʾammot ʾatsum</em> (six cubits by full measure). <em>ʾatsum</em> (full/complete) may modify the cubit as a standard unit, distinguishing it from the short cubit (seven handbreadths vs. six) noted elsewhere in Ezekiel (40:5).</p>",
+"9": "<p>The wall of the side chambers — five cubits — and the free space (<em>manuaḥ</em>) left open between the side chambers and the priests&apos; chambers (<em>lishkot siv-tsela habbayit</em>). <em>Manuaḥ</em> literally means &quot;resting place/open space&quot; (from <em>nuaḥ</em>, to rest). The architectural principle of leaving open space between structures is both practical and symbolic in the sanctuary context.</p>",
+"10": "<p>The space between the chambers — twenty cubits around the temple. This free space (the <em>gizrah</em> of v12) created a buffer between the sanctuary and the outer courts. The structural principle of graduated separation between zones of holiness is built into the architecture of the vision.</p>",
+"11": "<p>The doorways of the side chambers facing the free space — <em>petaḥ hatsela ʾel-hammanuaḥ</em> — one door to the north and one to the south. The orientation of the entrances toward the <em>manuaḥ</em> (free space) rather than toward the outer court is a deliberate boundary-maintaining feature: access to the side chambers is from the sanctuary-side, not from the public court-side.</p>",
+"12": "<p><strong>habbinyan ʾasher lifnei haggizrah</strong> — the building (<em>binyan</em>) before the separated yard (<em>gizrah</em>) on the west side: seventy cubits wide, ninety cubits long, with five-cubit walls. <em>Gizrah</em> (separated area/restricted zone) is a technical architectural term derived from <em>gazar</em> (to cut off/separate). The western building with its separated yard completes the overall plan of the sanctuary compound.</p>",
+"13": "<p>The overall temple measurements: one hundred cubits long and one hundred cubits wide — the perfect square of the outer boundary. The overall compound is thus a perfect square, with the inner most room (20 × 20) as its core. The numerical symbolism of 100 × 100 (= 10² × 10²) encodes divine perfection at the macroscopic level of the entire complex.</p>",
+"14": "<p>The width of the east face of the temple — one hundred cubits — and the separated area: the breadth of the face toward the east is established as the final measurement completing the outer boundary. The repeated use of the word <em>phanim</em> (face/front) for the east side marks the temple&apos;s orientation: the east is the <em>phanim</em> (front/face) because YHWH&apos;s glory entered from the east (43:1-4).</p>",
+"15": "<p>The building behind the temple including its galleries: one hundred cubits. The term <em>ʾattiq</em> (gallery/colonnade) is a technical architectural term of uncertain etymology; it appears to refer to the covered colonnades running along the sides of the inner court. The measurement confirms the overall square footprint of the complex.</p>",
+"16": "<p>The thresholds (<em>sippim</em>), latticed windows (<em>ḥallonot ʾatumat</em>), and galleries (<em>ʾatiqot</em>) round about on three sides — paneled with wood from the floor to the windows. <em>Ḥallonot ʾatumat</em> (narrow/closed windows) is the same term used for Solomon&apos;s temple windows (1 Kgs 6:4). The covering (paneling) with wood from floor to ceiling is the sanctuary&apos;s interior finish. <em>Saf</em> (threshold/floor-level) establishes the starting point for the wood-paneling measurement.</p>",
+"17": "<p>The space above the door and to the inner chamber and to the outside — measurements given. The spatial description moves carefully from the measured threshold up to the carved surfaces. The wood-paneling program is the context for the carvings described in vv18-20.</p>",
+"18": "<p><strong>ʿasuyi keruvim vetimmorot</strong> — made with cherubim (<em>keruvim</em>) and palm trees (<em>timmorot</em>). The alternating cherub-palm decorative motif is the same as Solomon&apos;s temple interior (1 Kgs 6:29, 32, 35). Each cherub has two faces: <em>penei ʾadam ʾel-hattimorat mizzeh upenei kefir ʾel-hattimorat mizzeh</em> — the face of a man and the face of a young lion alternating on each side of the palm. This is a simplified version of the four-faced cherubim of ch 1 and 10.</p>",
+"19": "<p>The two faces of the wall carvings — human face to the palm on one side, lion face to the palm on the other. The reduction from four faces (ch 1) to two faces on the wall carvings represents the adaptation of the vision-cherubim for architectural use. The facing-pairs (human/palm, lion/palm) suggest bilateral symmetry and the integration of creation-order (human authority and leonine power) with the garden-axis of the sanctuary (the palm as stylized tree-of-life).</p>",
+"20": "<p>The cherubim and palm trees carved from the floor to above the doorway — <em>mehaʾaretz ʿad-meʿal hapetaḥ</em> — on the entire wall of the nave. The continuous carved program from floor to lintel transforms the nave interior into a visual garden-sanctuary, continuous with the garden-imagery of Eden. The same motif decorates both the nave (<em>heikhal</em>) and the Most Holy Place entrance, linking the two zones visually.</p>",
+"21": "<p><strong>hamezonah mezuzot hamishkan</strong> — the doorposts of the nave are square: <em>mezuzat</em> (doorpost, the structural element that receives the mezuzah-scroll in Deut 6:9) combined with <em>mishkan</em> (tabernacle/dwelling-place). The specific term for the nave&apos;s doorposts is architecturally precise; the square doorpost form distinguishes the nave from the curved/rounded entryways of ordinary buildings.</p>",
+"22": "<p><strong>hamizbeaḥ ʿets shalosh ʾammot ghovah... veqirot mimmenu ʿatsayim</strong> — the wooden altar: three cubits high, two cubits long — <em>veqirot mimmenu ʿatsayim</em> (its walls of wood). The angel identifies it: <em>zeh hashulḥan ʾasher lifnei YHWH</em> — &quot;this is the table that is before YHWH.&quot; The wooden altar is explicitly identified as a <em>shulḥan</em> (table) rather than an altar for burnt offerings. This is the incense altar/table of presence, not a sacrificial altar. The three terms — altar dimensions, wooden construction, identification as table before YHWH — distinguish it clearly from the great bronze altar of v13.</p>",
+"23": "<p>The two doors of the nave and of the Most Holy Place: <em>ushetayim daletot lahekhal veladevir</em>. The term <em>devir</em> (inner oracle/Most Holy Place) appears here — it is the term used in 1 Kgs 6:5, 16, 19-23 for the innermost chamber. The use of <em>devir</em> here (not just &quot;inner room&quot;) anchors the visionary temple to the Solomonic temple vocabulary.</p>",
+"24": "<p>The double doors (<em>delatayim</em> — a dual of <em>delet</em>, door) with two swinging/folding leaves (<em>tsalmot</em>) on each door: two leaves on one door and two leaves on the other. <em>Tsalmot</em> (folding leaves, from <em>tselem</em> or possibly related to <em>tsalal</em>, to fold/collapse) allows the doors to swing open to either side. The precision of the architectural vocabulary shows the visionary guidance takes the temple engineering seriously.</p>",
+"25": "<p>Cherubim and palm trees carved on the nave doors as on the walls — the decorative program is continuous between walls and doors. The wooden canopy (<em>ʿets ʿav</em>) before the entrance of the nave: <em>ʿab</em> (thick/dense) applied to wood suggests a dense carved wooden screen or a carved lintel. The threshold (<em>saf</em>) at the entrance completes the architectural frame.</p>",
+"26": "<p>The narrow windows and palm trees on either side of the porch, including the side chambers — the carved program extends from the inner spaces outward to the porch. The consistency of the palm-tree motif throughout the temple complex (nave walls, doors, portico, side chambers) creates a unified visual theology: the sanctuary is the garden, and the garden is the place of divine presence.</p>"
+},
+"42": {
+"1": "<p>The guide takes Ezekiel northward into the outer court to the chamber complex opposite the separated yard — <em>hammenuḥah</em> and the building. The spatial movement in the vision narrative is always purposeful: each new zone is accessible only after the prior zone is fully measured, enacting the principle that entry into holiness requires preparation and sequence.</p>",
+"2": "<p>The north-facing structure — a hundred cubits long and fifty cubits wide. The explicit measurement of the chamber complex to the north of the sanctuary follows the same convention as the measurements of the sanctuary itself. The north/south pairing of priestly chamber complexes (v11 describes the south equivalent) creates the bilateral symmetry of the priestly precinct.</p>",
+"3": "<p><strong>neged haʿesrim</strong> — opposite the twenty cubits of the inner court and opposite the pavement of the outer court: galleries (<em>ʾatiqim</em>) in three stories over against each other. The three-tiered gallery structure (<em>ʾatiq ʾel-mul ʾatiq shelosh peʿamim</em>) echoes the three-tiered side chambers of ch 41. The repetition of the three-tiered structure in both the sanctuary side chambers and the priestly chambers emphasizes the architectural principle of ascending order.</p>",
+"4": "<p>A walkway (<em>mahalakh</em>) in front of the chambers — ten cubits wide and a hundred cubits long: <em>upetiḥam latsafon</em> — their openings facing north. <em>Mahalakh</em> (walkway/passage, from <em>halakh</em>, to walk) is the corridor that gives access to the chambers. The north-facing orientation is the priests&apos; access side — approaching from the outer court rather than from the sanctuary proper.</p>",
+"5": "<p>The upper chambers are shorter than the lower and middle ones because the galleries (<em>ʾatiqim</em>) take up more of their space — <em>ki yiʾkhlelu ha-ʾatiqim mimmennah min-hattaḥtonot umin-hattikhonot mibbenavyan</em>. This describes a structural feature of the gallery system: each level&apos;s floor space is reduced by the gallery width, so the uppermost rooms are shortest. The engineering precision of this description suggests the vision is not symbolic schematic but architectural reality.</p>",
+"6": "<p>The three-story chambers have no pillars (<em>ki eyn lahem ʿammudim kaʿammudei haḥatserot</em>) like the pillars of the courts. The absence of the free-standing columns that support colonnaded courts distinguishes the priestly chambers from public colonnaded spaces. The structural support comes from the walls themselves rather than columns, making the chambers more enclosed and private.</p>",
+"7": "<p>The outer wall (<em>gadar</em>) — a single wall of fifty cubits along the outer court in front of the chambers. <em>Gadar</em> (wall built of stones, as distinct from <em>ḥomah</em>, a city/boundary wall) is used for a structural dividing wall. The fifty-cubit wall creates the outer boundary of the priestly chamber precinct relative to the outer court.</p>",
+"8": "<p>The length before the outer chambers is fifty cubits — <em>ve-ʿal-penei hallishakhot ʾasher larabbim ʾorek ḥamishim ʾammah</em> — while the nave length is one hundred cubits. The fifty/one hundred ratio of the outer chambers to the full nave maintains the proportional system of the entire complex.</p>",
+"9": "<p>Below these chambers — <em>mitaḥat hallishakhot haʾelle</em> — the entrance from the east side as one enters from the outer court. The lower entrance (<em>mevoh lahen miqqedem bevo lahen miḥatser haḥitsonah</em>) connects the outer court to the priestly chamber precinct. The access pattern — entering from the east side at the lower level — parallels YHWH&apos;s glory entering from the east (43:1-4).</p>",
+"10": "<p>In the wall of the court toward the east — chambers facing south (<em>derom</em>) before the separated yard and before the building. The south-side chambers are the mirror of the north-side chambers, creating the bilateral symmetry of the priestly precinct. The directional description makes explicit the four-sided enclosure of the sanctuary zone.</p>",
+"11": "<p>The walkway before them (<em>derekh lifnehem</em>) — like the appearance of the north chambers — same length, same width, same exits and arrangements (<em>kemishpateyhen vekhifteḥeyhen</em>). The exact parallelism between north and south priestly chambers is stated explicitly: <em>kekhol toʾarotam vekhifteḥeyhen ukhematkhnotam</em> (all their forms and all their exits and all their arrangements). The principle of mirror-symmetry in the priestly precinct is architectural theology: the bilateral structure encodes the completeness of priestly service.</p>",
+"12": "<p>The entrance to the south chambers — <em>lifnei hagadar hadarek ʾasher qedem bevoʾam</em> — &quot;before the wall, the way as one enters from the east.&quot; The access pattern from the east is repeated for the south chambers as for the north. The east-entry convention for both priestly chamber complexes connects to the east-facing orientation of the entire sanctuary.</p>",
+"13": "<p><strong>lishkhot hatstasfon velishtot hadarom ʾasher lifnei haggizrah</strong> — the north and south chambers before the separated yard are the holy chambers (<em>lishkhot haqqodesh</em>) where priests who approach YHWH eat the most holy offerings (<em>qodshei haqqodashim</em> — a double plural of the superlative, &quot;the holiest holy things&quot;). The specific activities for these chambers: eating the grain offering (<em>minḥah</em>), sin offering (<em>ḥattat</em>), and guilt offering (<em>ʾasham</em>). The three sacrifice types that require eating in the holy precinct are precisely the three types eaten only within the sanctuary per Lev 6-7.</p>",
+"14": "<p><strong>uvevaʾam hakohanim veloʾ yetsʾu min-haqqodesh ʾel-heḥatser haḥitsonah</strong> — when the priests enter the holy precinct they shall not go out from the holy place to the outer court without leaving there their vestments in which they minister. The consecration principle: priestly garments <em>yeniḥu vigdeyhem ʾasher yesharteru vahem</em> (they shall lay aside the garments in which they serve) before entering the outer court, because these garments are holy (<em>qodesh hem</em>) and must not carry holiness into the common space. The <em>levushot aḥerot</em> (other garments) worn in the outer court are the boundary between sacred and common space made textile.</p>",
+"15": "<p>The outer court measurement upon completion — <em>ukhilah ʾet-midot habbayit hapenimi</em> (having finished measuring the inner temple) — the guide takes Ezekiel out through the east gate to measure the outer boundary. The east gate as exit parallels the east gate as entry: the east is both the entrance and the exit of the sanctuary vision, framing the entire measurement sequence.</p>",
+"16": "<p>The east side: five hundred reeds by the measuring rod — <em>ḥamesh meʾot ḥamesh meʾot qane hamiddah</em>. The measurement is by the full measuring rod (six long cubits each rod, per 40:5), not by individual cubits. The outer boundary at five hundred reeds × four sides creates the enormous perimeter of the holy district.</p>",
+"17": "<p>The north side: five hundred reeds by the measuring rod. The bilateral symmetry of north and south, east and west at the outer boundary confirms the perfect square of the entire holy precinct at the macro-scale.</p>",
+"18": "<p>The south side: five hundred reeds by the measuring rod. The systematic measurement of all four sides in sequence — east, north, south, west (reversing to west in v19) — follows the orientation convention that places east first (the face/front of the sanctuary).</p>",
+"19": "<p>The west side: five hundred reeds by the measuring rod. The four-directional completion of the outer boundary measurement corresponds to the four-directional completeness of the sanctuary&apos;s holiness. The five-hundred-reed measurement on each side creates a perfect square of 500 × 500 reeds.</p>",
+"20": "<p><strong>lehavchal ven-haqqodesh uven-haḥol</strong> — the wall had a measurement of five hundred cubits on each side to make a separation between the holy and the common: <em>lehavchal ven-haqqodesh uven-haḥol</em>. The double terms <em>qodesh</em> (holy/sacred) and <em>ḥol</em> (common/profane) express the fundamental binary of the Israelite cult. <em>Lehavchal</em> (to divide/separate, hiphil of <em>badal</em>, the same root as <em>mavdil</em>, divider) — the wall&apos;s ultimate purpose is to embody the distinction that is foundational to Israel&apos;s entire theological and ritual system. This <em>ḥomah</em> (boundary wall) is YHWH&apos;s architectural encoding of the holy/common distinction that governs all of life.</p>"
+},
+"43": {
+"1": "<p><strong>vayolickheni ʾel-hashaʿar shaʿar ʾasher pone derekh haqqadim</strong> — the guide leads Ezekiel to the east gate. The east gate is the climax and destination of the entire architectural tour: all the measurements have been orientation-framework for the event that now occurs. <em>Pone derekh haqqadim</em> (facing the way of the east) repeats the phrase from 40:6 where the tour began at the east gate.</p>",
+"2": "<p><strong>vehinneh kevod ʾElohei Yisraʾel ba midderekh haqqadim</strong> — &quot;and behold the glory of the God of Israel came from the way of the east.&quot; The return of the <em>kavod</em> (glory) from the east is the inverse of its departure eastward to the Mount of Olives in 11:23. The <em>kavod</em> vocabulary is drawn from chs 1-3 and 8-11: <em>qol</em> (voice/sound) + <em>mayim rabbim</em> (many waters) is the theophanic sound-descriptor of 1:24; the earth shining with his glory (<em>vehaʾarets hiʾirah mikkevodo</em>) recalls the initial throne-chariot vision.</p>",
+"3": "<p>The vision Ezekiel now sees is like the vision at the time of the city&apos;s destruction (<em>kimmarʾeh hammarʾeh ʾasher raʾiti bivoʾi leshaḥet ʾet-haʿir</em>) and like the vision by the river Khebar. The divine self-consistency is the point: the <em>kavod</em> that judged Jerusalem is identical to the <em>kavod</em> that now returns to redeem it. YHWH does not change; the change is in the circumstances of encounter. Ezekiel falls on his face (<em>vayyipol ʾal-panay</em>) — the standard response to the theophany (1:28; 3:23).</p>",
+"4": "<p><strong>ukhevod YHWH ba ʾel-habbayit derekh shaʿar ʾasher panayw derekh haqqadim</strong> — the glory of YHWH entered the house by the east-facing gate. The precision is theologically loaded: the same gate through which YHWH&apos;s glory departed (the Mount of Olives, 11:23) is the gate of return. The dwelling in the temple is not automatic but deliberate and directional: YHWH chooses the east gate as both the gate of departure and the gate of return.</p>",
+"5": "<p><strong>vattiśśaʾeni ruach vatteviʾeni ʾel-heḥatser hapenimi</strong> — the Spirit (<em>ruach</em>) lifts and brings Ezekiel into the inner court. The Spirit-transport formula recurs from 2:2; 3:12, 14; 8:3; 11:1, 24 — each time Ezekiel is carried to a position of prophetic witness. The inner court is the closest a non-priest approaches the sanctuary; the Spirit brings Ezekiel there to witness the glory filling the house.</p>",
+"6": "<p><strong>veʾeshmaʿ meiddabber ʾelai min-habbayit</strong> — Ezekiel hears the divine voice speaking from within the house. The shift from the angel-guide as speaker (throughout chs 40-42) to YHWH speaking directly (<em>meiddabber ʾelai</em>) marks the theological climax of the vision. The divine speech replaces the guided measurement tour — the sanctuary is now interpreted by its owner/inhabitant.</p>",
+"7": "<p><strong>ben-ʾadam ʾet-meqom khisʾi veʾet-meqom kapot raglay</strong> — &quot;son of man, this is the place of my throne and the place of the soles of my feet.&quot; The <em>meqom khisʾi</em> (place of my throne) combines the ark-throne and the footstool images from Ps 99:5; 132:7. <em>Kapot raglay</em> (soles of my feet) — YHWH&apos;s feet resting on the earth/temple echoes Isa 66:1. The forever-dwelling declaration — <em>ʾasher eshkon sham benei Yisraʾel leʿolam</em> — &quot;where I will dwell among the children of Israel forever&quot; — is the covenant-promise formula in its spatial form: the sanctuary as the locus of the <em>mishkan</em> (dwelling) relationship.</p>",
+"8": "<p>The specific sins that defiled the former temple — <em>besimam sipam ʾet-sippi umezuzatam ʾetsel mezuzati</em> — &quot;by setting their threshold by my threshold and their doorpost beside my doorpost.&quot; The complaint: the royal palace shared a wall with the temple, symbolically treating the divine and human dwelling as co-equal. The royal construction that abutted the temple violated the qodesh/ḥol (holy/common) boundary that the entire vision of chs 40-42 has been establishing architecturally. Their <em>toʿavot</em> (abominations) defiled YHWH&apos;s holy name.</p>",
+"9": "<p>The removal of their harlotry and the carcasses of their kings — <em>veʿattah yerraḥiqu ʾet-znutam veʾet-pigrê malkheyhem mimmenni</em> — the condition for permanent divine dwelling: the ritual and political pollution must be removed. <em>Pigrê malkheyhem</em> (corpses/carcasses of their kings) may refer to royal burials adjacent to or within the temple precincts, a practice confirmed by archaeology. The promise: <em>veshakhantti vetokhkham leʿolam</em> (I will dwell among them forever).</p>",
+"10": "<p><strong>veʾattah ven-ʾadam hagged ʾet-beit Yisraʾel ʾet-habbayit</strong> — &quot;and you, son of man, describe the temple to the house of Israel.&quot; The purpose of the entire architectural vision is now stated: it is not only for Ezekiel to see but for him to describe to the exilic community. The act of description (<em>hagged</em>, hiphil of <em>nagad</em>, to declare/tell) carries the same weight as the act of measurement. Ezekiel&apos;s verbal declaration of the visionary temple shapes the community&apos;s hope.</p>",
+"11": "<p>The condition for the temple plan&apos;s disclosure to Israel — <em>veʾim nikhlemu mikol ʾasher ʿasu tsurat habbayit</em> — &quot;if they are ashamed of all they have done, make known the form of the house.&quot; The <em>nikhlem</em> (ashamed, niphal of <em>kalam</em>, to be ashamed/humiliated) is the prerequisite for hearing the temple vision. The disclosure is conditional: the vision is given in anticipation of repentance, not despite its absence. Once ashamed, they are to know <em>kol-tsurato</em> (all its form/plan) and <em>kol-ḥuqqotav</em> (all its ordinances).</p>",
+"12": "<p><strong>zot torat habbayit</strong> — &quot;this is the law of the temple.&quot; The programmatic phrase <em>torat habbayit</em> (law/instruction of the house) is the title for the entire architectural-cultic revelation of chs 40-48. <em>Torah</em> here means not just &quot;law&quot; but &quot;instruction/directive&quot; — the blueprint for restored covenant life. The content of the law: <em>ʿal-roʾsh hahar kol-gevulo saviv saviv qodesh qodashim</em> — &quot;on the top of the mountain, all its surrounding area shall be most holy.&quot; The entire mountain summit is declared <em>qodesh qodashim</em> (most holy/holy of holies) — the same superlative applied to the inner sanctuary&apos;s offerings (42:13). The mountain-top geography encodes graduated holiness at the landscape scale.</p>",
+"13": "<p>The altar measurements begin: <em>veʾelleh middot hamizbeaḥ beʾammot</em> — the altar in cubits. The base (<em>ḥeq</em>, literally bosom/hollow) one cubit high and one cubit wide with a rim (<em>geshen</em>) of a handbreadth — this is the lowest ledge of the altar. The technical term <em>ḥeq hamizbeaḥ</em> (the bosom of the altar) is unique here; it describes the base channel or drain of the altar that collects blood and liquids.</p>",
+"14": "<p>From the base (<em>ḥeq haʾarets</em>) to the lower ledge (<em>ʾazarah haqqetanah</em>): two cubits, one cubit wide; from the smaller ledge to the larger ledge (<em>ʾazarah haggadolah</em>): four cubits, one cubit wide. The stepped-ledge design of the altar — base, small ledge, large ledge, hearth — mirrors the stepped approach of the temple precincts: each step higher is more restricted, more holy.</p>",
+"15": "<p><strong>vehaharʾel ʾarbaʿ ʾammot</strong> — the <em>harʾel</em> (hearth of God / altar-hearth, a hapax; possibly related to <em>ʾariel</em> of Isa 29:1, &quot;hearth of God&quot;) is four cubits; from the <em>ʾariel</em> upward, the four horns (<em>qarnot</em>). The four horns of the altar are the most theologically charged feature: they are the objects to which the blood of sin offerings is applied (Exod 27:2; 29:12; Lev 4:7, 18, 25, 30) and to which one could flee for asylum (1 Kgs 1:50-51).</p>",
+"16": "<p>The <em>harʾel</em> (altar hearth) is twelve cubits square — <em>ʾarbaʿ ʿasar ʾorek beʾarbaʿ ʿasar roḥav</em> — actually fourteen cubits by fourteen, not twelve: the fourteen-by-fourteen measurement is the <em>ʾariel</em> upper surface. The square dimension with equal length and breadth (<em>ʾarbaʿah tsedadim</em>, on four sides) mirrors the Most Holy Place&apos;s 20 × 20 perfect square.</p>",
+"17": "<p>The larger ledge (<em>ʾazarah haggadolah</em>) fourteen cubits square — steps (<em>maʿalot</em>) facing east. <em>Maʿalot</em> (steps/ascent) from <em>ʿalah</em> (to go up/ascend) — the same root as the <em>ʿolah</em> (burnt offering, lit. that which goes up). The priest ascends by steps from the east to approach the altar top. The east-orientation of the altar steps parallels the east-orientation of the entire sanctuary.</p>",
+"18": "<p><strong>veyyoʾmer ʾelai ben-ʾadam koh ʾamar ʾAdanai YHWH ʾelleh ḥuqqot hamizbeaḥ</strong> — &quot;he said to me: son of man, thus says Lord YHWH: these are the ordinances of the altar.&quot; The transition from measurement (<em>middot</em>) to ordinances (<em>ḥuqqot</em>) marks the altar section&apos;s movement from architecture to ritual. <em>Ḥuqqot</em> (statutes/ordinances) are divinely established ritual procedures — not arbitrary rules but the structuring principles of holy engagement.</p>",
+"19": "<p>The instructions for the altar&apos;s consecration day: give to the Levitical priests of the seed of Zadok (<em>kizeraʿ Tsadoq</em>) who approach YHWH a bull (<em>par ben-baqar</em>) as a sin offering (<em>ḥattat</em>). The Zadokite priesthood (<em>bene Tsadoq</em>) is Ezekiel&apos;s consistently preferred priestly line (40:46; 43:19; 44:15; 48:11) — the line that remained faithful when the Levites went astray. The specificity of the priestly lineage for the altar consecration is the cultic application of the general principle that holiness requires designated mediators.</p>",
+"20": "<p>The blood of the sin offering applied to the four horns (<em>qarnot</em>), the four corners of the ledge (<em>ʾazarah ʾarbaʿ pinot</em>), and the surrounding rim — <em>vekhiparta ʿalav</em> (and you shall make atonement for it). The verb <em>kippar</em> (piel: atone/purge) is the central cultic action: the altar must be atoned for before it can be used to make atonement. The seven-day altar consecration purges the altar from all defilement before regular worship begins.</p>",
+"21": "<p>The sin offering bull — <em>velaqaḥta ʾet-happar haḥattat veserafto bamifqad habbayit miḥuts lammiqdash</em> — burned at the appointed place outside the sanctuary (<em>mifqad habbayit</em>, the designated/appointed place of the house). The burning outside the sanctuary (not on the altar) follows the Levitical rule for sin offerings whose blood is brought into the holy place (Lev 4:12; 6:11; cf. Heb 13:11-13).</p>",
+"22": "<p>On the second day: a male goat without blemish (<em>seʿir ʿizzim tamim</em>) as a sin offering. The Levitical principle of <em>tamim</em> (without blemish, whole/complete) for sacrificial animals (Lev 1:3, 10; 3:1, 6; 4:3, etc.) is maintained. The goat&apos;s blood purges the altar as the bull&apos;s did: the two-day sin-offering consecration doubles the purification.</p>",
+"23": "<p>After completion of the purification — <em>vekhaleta ḥatteʾ</em> — a bull and a ram from the flock without blemish (<em>pen-baqar tamim veʾayil min-hatsson tamim</em>). The transition from sin offering (<em>ḥattat</em>) to burnt offering (<em>ʿolah</em>) marks the completion of the purification phase and the beginning of the consecration/dedication phase. The burnt offering is entirely consumed on the altar, expressing total dedication.</p>",
+"24": "<p><strong>vehiqravtem lifnei YHWH</strong> — &quot;and you shall present them before YHWH.&quot; The priests (<em>kohanim</em>) throw salt (<em>melaḥ</em>) on the offerings. The salt covenant (<em>berit melaḥ</em>, Num 18:19; Lev 2:13) — salt symbolizes incorruptibility and the endurance of the covenant relationship. Every offering is salted because every offering is covenant-ratifying.</p>",
+"25": "<p>Seven days — <em>shivʿat yamim</em> — a goat for a sin offering each day, and a bull and ram from the flock. The seven-day duration of the altar consecration parallels the seven-day ordination of the Aaronic priests (Lev 8:33-35) and the seven-day dedication of Solomon&apos;s temple (1 Kgs 8:65). Seven days constitutes a complete time-unit for sacred transitions.</p>",
+"26": "<p>Seven days the priests make atonement (<em>yekapperu</em>) for the altar and cleanse it (<em>vetiharu ʾoto</em>) and consecrate it (<em>umiluhu yado</em> — lit. and fill its hand). The phrase <em>millo yad</em> (fill the hand) is the technical term for priestly ordination/installation, used throughout Exodus-Leviticus (Exod 28:41; 29:9, 29, 33, 35; Lev 8:33; etc.). Applying it to the altar is striking: the altar undergoes ordination as the priests do, because it is the primary locus of priestly service.</p>",
+"27": "<p><strong>umimleʾot hayyamim vehaya vayom hashemiʾni vahalʾaah yaʿasu hakohanim ʾal-hamizbeaḥ</strong> — &quot;and when the days are completed, it shall be that from the eighth day and onward the priests shall offer your burnt offerings and your peace offerings on the altar.&quot; The eighth day (<em>yom hashemiʾni</em>) is the day of new beginning — the day after the seven-day completion, the day of resurrection/new creation (also Lev 9:1; 12:3; the circumcision of the eighth day). <em>Veratsti etchem</em> — &quot;and I will accept you.&quot; The declarative divine acceptance of the community through the altar service is the culminating point of the altar consecration: the restored sanctuary enables restored worship which enables YHWH&apos;s acceptance of his people.</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', 'ezekiel')
+    merge_comm(existing, NEW)
+    save_comm('mkt-original', 'ezekiel', existing)
+    print('Ezekiel 41-43 mkt-original written.')
 
 if __name__ == '__main__':
     main()

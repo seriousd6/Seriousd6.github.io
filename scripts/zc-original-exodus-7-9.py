@@ -1,45 +1,40 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
+MKT Original Commentary — Exodus chapters 7–9
+Run: python3 scripts/zc-original-exodus-7-9.py
+
+Source data used:
+- data/interlinear/exodus.json
+- data/translation/glossary-hebrew.json
+- data/translation/draft/mediating/exodus.json (MKT text)
+
+Key decisions in this range:
+- Heart-hardening vocabulary: three distinct Hebrew verbs used across these chapters:
+    chazaq (H2388, to make strong/firm) -- 7:13,22; 8:19; 9:12,35 (God as subject from 9:12);
+    kaved (H3515, to be/make heavy/dull) -- 7:14; 8:15,32; 9:7,34 (Pharaoh's own hardening);
+    qashah (H7185, to stiffen) -- 7:3 (God's prospective declaration).
+  The MKT preserves these distinctions rather than flattening to one English verb.
+- "I am the LORD" formula (ani YHWH, 7:5,17; 8:22; 9:14,29): the covenant recognition formula.
+- 7:1 "like God to Pharaoh": elohim here means judge/authority figure, not divine nature.
+- 9:16 he'emadticha: quoted in Rom 9:17 (LXX anestesa se -- I raised you up).
+- "Finger of God" (8:19, etsba Elohim): exact phrase quoted in Luke 11:20.
+- Distinction/separation (pala, 8:22; 9:4): rare verb meaning to make wonderfully separate.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,156 +44,112 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
+EXODUS = {
+  "7": {
+    "1": '<p><strong>netatikha elohim le-Paroh</strong> (<em>nĕtattîḵā ʾĕlōhîm lĕpharʿōh</em>): "I have made you like God to Pharaoh." <em>Elohim</em> here does not mean divine nature but authority-figure or judge — the same usage as Exod 21:6 ("bring him before elohim/judges") and Ps 82:1,6. Moses will function as the divine court\'s authorized representative before Pharaoh\'s court. Aaron is his <em>navi</em> (prophet) — the same relational structure as God-and-prophet.</p>',
+    "2": '<p><strong>dibber</strong> (<em>dabbēr</em>): imperative of <em>davar</em>. The chain of speech — LORD to Moses, Moses to Aaron, Aaron to Pharaoh — is the model of prophetic delegation. The ultimate source of the word is YHWH; the transmission is through two human intermediaries. "Speak everything I command you" emphasizes that no editorial selection is permitted; the word must reach Pharaoh unfiltered.</p>',
+    "3": '<p><strong>va\'ani aqsheh et-lev Paroh</strong> (<em>waʾănî ʾaqšeh ʾet-lēb parʿōh</em>): "But I will harden Pharaoh\'s heart." The verb here is <em>qashah</em> (H7185) — to make stiff, stubborn (Deut 2:30; Isa 48:4). This is the first of three distinct hardening verbs: <em>qashah</em> (divine prospective declaration, 7:3), <em>kaved</em> (heavy, dull — Pharaoh\'s own tendency, 7:14; 8:15,32; 9:7,34), and <em>chazaq</em> (strong, firm — 7:13,22; explicitly God\'s action from 9:12). The MKT does not flatten these to a single English word.</p>',
+    "4": '<p><strong>tsivotai</strong> (<em>ṣibĕʾōtay</em>): "my hosts/armies." The exodus is framed militarily: Israel departs not as refugees but as an army (with <em>tsava</em>, military host — 12:41). <em>Bi-yad ramah</em> ("with an upraised hand," 14:8; Num 33:3) — the gesture of triumphant military procession. The plague sequence is the campaign; the sea crossing is the battle.</p>',
+    "5": '<p><strong>veyadu Mitsrayim ki ani YHWH</strong>: "Then the Egyptians will know that I am the LORD." The recognition formula — <em>ki ani YHWH</em> — is the theological purpose of the plague sequence. The plagues are not primarily punitive but revelatory: YHWH is revealing his identity to Egypt. The formula occurs throughout Ezekiel in the same function (Ezek 6:7,13; 7:4 etc.) as the purpose clause of divine action in history.</p>',
+    "6": '<p><strong>kaasher tsivah YHWH otam</strong>: "just as the LORD had commanded them." The compliance formula — used at 7:10,20; 12:28,50; 39:43; 40:19,21 etc. — emphasizes that the plagues are executed according to a precise divine script. Moses and Aaron\'s obedience is total and unvarying. The phrase functions as a refrain marking the faithful execution of divine commands.</p>',
+    "7": '<p><strong>ben-shemonim shanah Mosheh</strong>: "Moses was eighty years old." The age notice is unusual — ages at commission are rarely recorded. At 80, Moses is at a stage traditionally beyond active leadership in ANE culture. The advanced ages (80 and 83) emphasize that this calling is not about human vitality or natural aptitude; the power will be entirely YHWH\'s.</p>',
+    "8": '<p>The section vv.8-13 introduces the staff-sign (<em>mofet</em>) before the plagues begin. The structure follows the plague narrative pattern: divine command → execution → Pharaoh\'s response → hardening statement. This pattern, repeated with variations across chapters 7-12, is the literary architecture of the plague sequence.</p>',
+    "9": '<p><strong>tenah lachem mofet</strong>: "Show us a wonder/portent." <em>Mofet</em> (H4159) — wonder, portent, prodigy — is distinct from <em>ot</em> (sign, H226). An <em>ot</em> is a symbolic marker; a <em>mofet</em> is a powerful demonstration. Together they form the technical term for the plague sequence (<em>otot umofetim</em>, "signs and wonders," 7:3). Pharaoh is demanding a demonstration of power, which he gets — but the snake-swallowing points to the ultimate swallowing of his own forces.</p>',
+    "10": '<p><strong>matteh</strong> (H4294): staff, rod — the instrument of divine power throughout the plague narrative and the sea crossing. The same word means "tribe" when used of Israel\'s divisions (Gen 49:28). Aaron\'s staff is used for most plague signs; Moses\'s staff is reserved for the decisive actions at the sea (14:16). The distinction may indicate that Aaron\'s priestly role encompasses the mediatorial plague-signs.</p>',
+    "11": '<p><strong>chakhamim umekhashfim</strong>: "wise men and sorcerers." Two terms: <em>chakhamim</em> (wise men, occult specialists) and <em>mekhashfim</em> (sorcerers, from <em>kashaph</em>, to practice witchcraft — Lev 20:27; Deut 18:10). 2 Tim 3:8 names two of them: Jannes and Jambres — names from Jewish tradition (cf. CD 5:17-19; Targum Ps-Jonathan) not in the Hebrew text. Their power is real but subordinate and limited.</p>',
+    "12": '<p><strong>vativel matteh Aharon et-matetam</strong>: "Aaron\'s staff swallowed (<em>bala</em>) up their staffs." <em>Bala</em> (H1104) — to swallow, engulf. The same verb is used at the sea when the deep swallows Pharaoh\'s army (15:12: "the earth swallowed them"). The preview is precise: the staff that swallows the Egyptian staffs here anticipates the sea that swallows the Egyptian army later. The instrument of YHWH\'s power consumes the instruments of Egyptian power.</p>',
+    "13": '<p><strong>vayechezak lev Paroh</strong>: "Pharaoh\'s heart was hardened (<em>chazaq</em>)." The first occurrence of <em>chazaq</em> (H2388) — to be/become strong, firm, resolute — in the hardening sequence. The passive construction ("was hardened") leaves the agent ambiguous. Contrast v.14 where <em>kaved</em> is used. The three verbs mark different aspects of the hardening: <em>qashah</em> = stubborn stiffening (God\'s declaration); <em>kaved</em> = heavy/dull internal state (Pharaoh\'s own); <em>chazaq</em> = strong resolve (ambiguous/divine from 9:12).</p>',
+    "14": '<p><strong>kaved lev Paroh</strong>: "Pharaoh\'s heart is heavy (<em>kaved</em>, H3515)." <em>Kaved</em> — heavy, dull, unresponsive; the same root as <em>kavod</em> (glory, weight). "Heaviness of heart" implies internal dullness and unresponsiveness rather than external compulsion. In the early plagues, <em>kaved</em> consistently describes Pharaoh\'s own heart-state (7:14; 8:15,32; 9:7,34) — Pharaoh is making himself heavy toward YHWH\'s word.</p>',
+    "15": '<p><strong>hinennu yotsee hamaymah</strong>: "Watch for him as he goes out to the river." Pharaoh\'s morning visit to the Nile is likely a ritual act — the Nile was sacred to Egypt (associated with the inundation deity Hapy). The confrontation at the sacred river is a deliberate choice: YHWH challenges Pharaoh in his own religious space. The "staff... turned into a snake" in Moses\'s hand is the same sign as 4:3 — the credentials remain the same.</p>',
+    "16": '<p><strong>shalach et-ami veyaavduni</strong>: "Let my people go, so that they may serve/worship me." The demand exploits a Hebrew wordplay: <em>avad</em> (H5647) means both to work/serve (as slaves) and to worship/serve (as devotees). The Israelites are currently <em>ovdim</em> for Pharaoh; the demand is that they become <em>ovdim</em> for YHWH. The entire exodus is a transfer of the object of <em>avad</em> — whose servants shall Israel be?</p>',
+    "17": '<p><strong>bezu tedah ki ani YHWH</strong>: "By this you will know that I am the LORD." The recognition formula (<em>ki ani YHWH</em>) introduces each plague-cycle: the plague is the sign whose purpose is knowledge of YHWH\'s identity. The Nile strike is a direct assault on Egyptian religious identity — the Nile is both the source of life and the focus of Egyptian worship. Striking it is striking Egypt\'s gods.</p>',
+    "18": '<p><strong>dam</strong> (H1818): blood. The Nile turning to "blood" is stated without qualification, though the magicians replicate it (v.22) and Egyptians can dig for seepage water (v.24), suggesting the water becomes undrinkable rather than literally becoming human blood. The Egyptian term for the Nile flood is <em>Hapy</em>, the red/fertile inundation — the wordplay on blood and the Nile\'s red flood season may be implicit in the sign.</p>',
+    "19": '<p><strong>al-mishneihem</strong>: "over all their waters." The command extends the blood-water to "rivers, canals, ponds, and all pools of water" — not just the Nile but every water body. "Vessels of wood and vessels of stone" — stored water is also affected. The total scope makes the plague comprehensive, though Exod 8:24 (where Egyptians can dig for water) suggests some sources remain accessible by effort.</p>',
+    "20": '<p><strong>leeinei Paroh veleeinei avadav</strong>: "in full view of Pharaoh and his officials." The public, witnessed nature of the plagues is theologically significant: these are not private miracles but performed before the maximum possible audience. The exodus narrative is constructed as a public theological drama witnessing YHWH\'s power to the entire Egyptian power structure.</p>',
+    "21": '<p><strong>vayivrash hanahar</strong>: "the river smelled." The death of fish and the stench of the Nile represent the undoing of Egypt\'s greatest natural blessing. The Nile\'s inability to sustain its fish (the most abundant protein source in Egypt) and the stench that follows are the signature of divine judgment against Egypt\'s central deity-resource.</p>',
+    "22": '<p><strong>belat\'eihem</strong>: "by their secret arts." The acknowledgment that the Egyptian magicians possess real operative power is theologically careful: the text does not demythologize their abilities but demonstrates that YHWH\'s power exceeds them at every point until it doesn\'t (8:18-19). The graduated failure of the magicians — replicate blood, replicate frogs, fail at gnats — is the narrative\'s structured argument for YHWH\'s incomparable power.</p>',
+    "23": '<p><strong>velo sham libbo gam lezot</strong>: "paying no attention to this either." Literally "he did not set his heart on this" — <em>lev</em> (heart) is the organ of attention, decision, and will. Pharaoh\'s heart-failure is both described internally (heaviness, hardening) and externally (turning away, not attending). The biblical psychology of heart-orientation is being traced through the narrative.</p>',
+    "24": '<p><strong>vayachperu kol-Mitsrayim</strong>: "All the Egyptians dug." The practical response — digging for seepage water along the banks — demonstrates both the plague\'s reality (the Nile itself is compromised) and the resilience of Egyptian civilization. The irony: the nation whose slaves dug canals must now dig for their own drinking water, while their ruler refuses to relent.</p>',
+    "25": '<p><strong>shivat yamim</strong>: "Seven days passed." The seven-day interval marks a complete period before the next plague. Whether literally seven days or a rounded period, it emphasizes that YHWH does not accelerate the judgment beyond the pace he has set. The deliberateness of the plague sequence — each beginning after the previous is fully established — is part of the revelatory design.</p>'
   },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
+  "8": {
+    "1": '<p><strong>bo el-Paroh</strong>: "Go to Pharaoh." The second plague cycle begins. The frog plague has Egyptian religious dimensions: frogs were associated with Heqet, the frog-headed goddess of fertility and midwifery. The plague inverts this: the emblem of fertility becomes an infestation of the most intimate spaces.</p>',
+    "2": '<p><strong>negof et-kol-gevulcha batsfardeiyim</strong>: "I will plague your whole country with frogs." <em>Nagaf</em> (H5062) — to strike, plague; related to <em>nega</em> (H5061, plague, stroke). The Hiphil participle of <em>shalach</em> and the noun <em>makka</em> (blow, plague, H4347) together are the plague narrative\'s vocabulary of divine striking. The frogs\' reach is total: palace, bedroom, bed, kitchen, court.</p>',
+    "3": '<p><strong>uvemishtekha uvethanurekha</strong>: "your kneading bowls, your ovens." The invasion reaches the most intimate domestic spaces of food preparation. The inversion is complete: the Nile\'s fertility blessing, which made Egypt\'s agriculture possible, now desecrates the food supply itself. The frogs in the kneading bowls render food preparation impossible.</p>',
+    "4": '<p><strong>uvecha uvaamcha uvchol-avadecha</strong>: "over you, your people, and all your officials." The hierarchy addressed — king, people, officials — frames the plague as touching the complete social order. This is consistent across the plagues: the divine judgment is not class-specific but touches Egypt\'s entire social structure from the top down.</p>',
+    "5": '<p><strong>neteh et-yadcha bemateikha</strong>: "Stretch out your hand with your staff." The <em>matteh</em> (staff) and <em>natah yad</em> (stretch out the hand) form the plague-initiation formula. The same gesture initiates the sea crossing (14:16,21,26,27), creating a structural link between the plague-hand and the sea-crossing-hand. YHWH\'s outstretched hand is the consistent instrument of both judgment and salvation.</p>',
+    "6": '<p><strong>vataal hatsfardeiyah</strong>: "Frogs came up (<em>alah</em>)." <em>Alah</em> (H5927) — to go up, ascend. The frogs "go up" from the Nile over the land — using the verb for ascent that will later describe Israel\'s "going up" out of Egypt (13:18; Num 20:5). The frogs\' ascending infestation is a counter-image to Israel\'s ascending departure.</p>',
+    "7": '<p><strong>vaya\'asu khen hachartumaim belat\'eihem</strong>: "The magicians did the same." The magicians replicate the plague by adding more frogs — but cannot remove the infestation they have added to. Their power extends to multiplication of the problem but not to its resolution. This limitation will be fully exposed at gnats (8:18): they can bring life but cannot uncreate what YHWH has made.</p>',
+    "8": '<p><strong>hatiru el-YHWH</strong>: "Pray to the LORD." <em>Athar</em> (H6279) — to pray, entreat; used for intercessory prayer (Gen 25:21; Num 21:7; Judg 13:8). Pharaoh\'s first request for intercession recognizes Moses\'s access to YHWH as something Pharaoh himself lacks. The intercessor who prays on behalf of the enemy who enslaved his people is the first of many such mediatorial paradoxes in Moses\'s career.</p>',
+    "9": '<p><strong>hitpa\'er alai</strong>: "I leave to you the honor of setting the time." Literally "glorify yourself over me" — Moses offers Pharaoh the rhetorical advantage of choosing the schedule. The move is strategically significant: if Pharaoh sets the time and the frogs disappear precisely at that time, the timed fulfillment becomes an undeniable demonstration of YHWH\'s control. Moses is engineering an epistemological proof, not merely performing a service.</p>',
+    "10": '<p><strong>lemaan tedah ki-ein kYHWH Eloheinu</strong>: "so that you may know there is no one like the LORD our God." The incomparability formula — <em>ein kamoni</em> ("there is none like me," 9:14) / <em>ein kYHWH</em> ("none like the LORD") — is the theological claim the plagues are designed to demonstrate. Each plague is an argument; the argument is the uniqueness and incomparability of YHWH.</p>',
+    "11": '<p><strong>rak banehar tish\'arna</strong>: "they will remain only in the Nile." The frogs\' removal to the Nile — the source from which they came — is the reversal of their coming. The Nile, the focus of Egypt\'s worship and the origin of the plague, receives them back. The divine power that deploys from the Nile also retracts to the Nile.</p>',
+    "12": '<p><strong>vayitsa Mosheh... vayitsar</strong>: "Moses cried out (<em>tsaaq</em>, H6817) to the LORD." <em>Tsaaq</em> is the cry of distress and urgent appeal — the same verb used for Israel\'s cry under bondage (2:23; 3:7,9). Moses uses the language of oppressed Israel in his prayer on behalf of oppressive Egypt. The intercession that uses the vocabulary of the victim\'s cry is a profound irony.</p>',
+    "13": '<p><strong>vaya\'as YHWH kidvar Mosheh</strong>: "The LORD did what Moses asked." The compliance formula applied to YHWH\'s response to Moses\'s prayer mirrors the compliance formula applied to Moses\'s response to YHWH\'s commands (7:6,10,20). YHWH and Moses are in a reciprocal relationship of command-and-compliance that defines the partnership of the plague narrative.</p>',
+    "14": '<p><strong>chamarim chamarim</strong>: "great heaps." <em>Chomer</em> (H2563) — heap, pile. The dead frogs piled into heaps recall the piled corpses of Pharaoh\'s army at the sea (14:30). "The land reeked" (<em>tivash haarets</em>) — the same root <em>bo\'esh</em> as the Nile\'s stench in 7:18,21. The stench of each plague gives way to the stench of the next; Egypt accumulates evidence of its refusal.</p>',
+    "15": '<p><strong>hakhbeid et-libbo velo shama</strong>: "he hardened his heart (<em>kaved</em>) and would not listen." Here <em>kaved</em> (H3515) is used with Pharaoh explicitly as the subject: "he made his heart heavy." The MT\'s reading places the hardening initiative squarely with Pharaoh at the moment of relief. The pattern is: crisis → temporary compliance → relief → self-hardening → refusal. Pharaoh hardens when the pressure is off.</p>',
+    "16": '<p><strong>hach et-afar haarets</strong>: "Strike the dust of the ground." The third plague uses <em>afar</em> (dust, H6083) — the material of the earth, specifically of dry land. The plagues have moved from water (Nile blood) to water-plus-earth (frogs from the Nile) to earth itself (dust to gnats). The no-warning feature (unlike plagues 1 and 2) is the defining characteristic of each triad\'s third plague.</p>',
+    "17": '<p><strong>kinnim</strong> (H3654): the precise insect is disputed: gnats, mosquitoes, or lice (LXX <em>skniphes</em>, Josephus <em>phtheires</em>/lice). The attack on the dust-of-the-ground reverses the creation of humanity from dust (Gen 2:7): the dust that was the raw material of God\'s creation-blessing becomes the raw material of divine judgment on Egypt\'s civilization.</p>',
+    "18": '<p><strong>vaya\'asu khen hachartumaim lehotsi et-hakinim veloh yakholu</strong>: "The magicians tried to produce gnats but they could not." The first absolute failure of Egyptian magic. The inability to produce gnats from dust — the very material of creation — marks the boundary of occult power. What YHWH makes from earth, no human art can replicate. The magicians\' progressive failure: replicate (blood, 7:22), replicate (frogs, 8:7), fail (gnats, 8:18).</p>',
+    "19": '<p><strong>etsba Elohim hi</strong>: "This is the finger of God!" The magicians\' theological interpretation is the pivot of the first six plagues. <em>Etsba Elohim</em> (H676 + H430) — finger of God. This is the same phrase Jesus uses in Luke 11:20 to interpret his exorcisms: "if it is by the finger of God that I cast out demons, then the kingdom of God has come upon you." The Exodus phrase becomes the christological phrase for the in-breaking of God\'s kingdom through Jesus\'s ministry.</p>',
+    "20": '<p><strong>hashkem baboker</strong>: "Get up early in the morning." The morning confrontation at the water (cf. 7:15) suggests YHWH knows Pharaoh\'s routine. The fourth plague (flies, <em>arob</em>) opens the second triad (flies, livestock, boils), which introduces the Goshen distinction — escalating the theological drama from demonstrated power to selective protection.</p>',
+    "21": '<p><strong>arob</strong> (H6157): swarms, literally "mixture" — the exact insect is debated (LXX <em>kynomuia</em>, dog-flies; Ps 78:45 "swarms"). The comprehensive impact ("the houses of Egypt were ruined, and also the ground on which they stood") uses <em>shachat</em> (to ruin, corrupt, destroy) — the same verb as the flood narrative\'s "the earth was corrupt" (Gen 6:11,12). The plague-vocabulary deliberately echoes the primeval destruction.</p>',
+    "22": '<p><strong>vehafleti et-erets Goshen</strong>: "I will set apart (<em>pala</em>) the land of Goshen." <em>Pala</em> (H6395, Hiphil) — to make wonderful, to distinguish, to treat as exceptional. The rare verb (also 9:4; 11:7) conveys that YHWH\'s protection of Goshen is not a natural phenomenon but a miraculous differentiation. "By this you will know that I, the LORD, am in the midst of this land" — YHWH\'s presence is argued from the geographic precision of his protection.</p>',
+    "23": '<p><strong>pedut</strong> (H6304): distinction, separation — possibly from <em>padah</em> (to redeem, H6299). If the root is redemptive, the "distinction" YHWH places between his people and Pharaoh\'s people is simultaneously a redemptive act. The ambiguity may be deliberate: the "distinction" in the plagues anticipates the "redemption" at the sea (6:6: "I will redeem you with an outstretched arm").</p>',
+    "24": '<p><strong>kabed arob bayit Paroh</strong>: "Dense (<em>kaved</em>) swarms of flies poured into Pharaoh\'s palace." The plague itself is <em>kaved</em> (heavy) — the same adjective used of Pharaoh\'s heavy heart (7:14; 8:15,32; 9:7). The heavy-hearted Pharaoh receives a heavy plague; the descriptor mirrors the disposition.</p>',
+    "25": '<p><strong>lechu zivchu lEloheichem baarets</strong>: "Go, sacrifice to your God here in the land." Pharaoh\'s first compromise: in-country sacrifice. Moses rejects it: the problem is not merely distance but the nature of the sacrifice. Sacrificing cattle (sacred to Egypt) in Egyptian territory would provoke Egyptians to violence; the three-day journey into the wilderness is specifically required.</p>',
+    "26": '<p><strong>to\'avat Mitsrayim</strong>: "detestable to the Egyptians." <em>To\'evah</em> (H8441) — abomination, detestable thing. The same word used throughout Leviticus and Deuteronomy for practices incompatible with Israel\'s covenantal identity. Here applied inversely: Israel\'s sacrifice is an abomination to Egypt. The clash of incompatible religious systems is the theological backdrop to the exodus\'s necessity.</p>',
+    "27": '<p><strong>derekh shloshes yamim</strong>: "three-day journey." The original demand (3:18; 5:3) maintained throughout the negotiations. Each of Pharaoh\'s compromises attempts to reduce the scope of the departure — in-country sacrifice (v.25), don\'t go too far (v.28) — without meeting YHWH\'s actual requirement. The total and unconditional departure is non-negotiable.</p>',
+    "28": '<p><strong>rak harbek lo tirchiku laleches</strong>: "but you must not go very far." Pharaoh\'s second compromise imposes a distance restriction on a departure he is ostensibly granting. The attempt to limit the scope of Israel\'s service to YHWH is the structural equivalent of every partial obedience — the departure without the departure.</p>',
+    "29": '<p><strong>hoel Paroh hotoel</strong>: "let Pharaoh not continue to deceive (<em>tal tal</em>)." The verb <em>tal</em> (H8591) — to mock, deceive, make a fool of — is Moses\'s first explicit accusation of Pharaoh\'s bad faith. Despite accepting Pharaoh\'s terms, Moses recognizes and names the pattern: Pharaoh is playing for temporary relief, not intending genuine compliance. The accusation proves accurate (v.32).</p>',
+    "30": '<p><strong>vayitaar el-YHWH</strong>: "prayed to the LORD." The intercessory movement — leave the human court, approach the divine court — is Moses\'s characteristic pattern throughout the plague narrative. His departure from Pharaoh\'s presence is the signal that intercession begins. The prayer\'s content is not recorded; the result speaks for it.</p>',
+    "31": '<p><strong>lo nishar echad</strong>: "not a single one remained." Total removal of the flies — complete, not partial. The comprehensive fulfillment of Moses\'s stated terms makes Pharaoh\'s subsequent hardening all the more stark: the proof was complete; the refusal that follows is therefore a fully informed rejection of YHWH\'s power.</p>',
+    "32": '<p><strong>vayakhbeid Paroh et-libbo gam bapa\'am hazot</strong>: "Pharaoh hardened his heart even this time." <em>Kaved</em> (H3515) with Pharaoh as subject — the final such occurrence in the plague narrative. "Even this time" (<em>gam bapa\'am hazot</em>) marks the cumulative character of each refusal: every <em>pa\'am</em> (time, occasion) carries the weight of all previous occasions.</p>'
   },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
-  },
-  "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
+  "9": {
+    "1": '<p><strong>Elohi ha\'Ivrim</strong>: "the God of the Hebrews." The full covenant title — "the LORD, the God of the Hebrews" — appears in each plague-introduction (7:16; 8:1,20; 9:1,13; 10:3). YHWH is not merely a deity but the God specifically of this people, whose identity is tied to their release. The covenant name establishes that the plague is not merely a power demonstration but a covenant action on behalf of a specific people.</p>',
+    "2": '<p><strong>veodkha mechazik bam</strong>: "and continue to hold them." <em>Chazaq</em> (H2388, Hiphil) with Pharaoh as subject: "if you continue making yourself strong/firm in holding them." The hardening vocabulary (<em>chazaq</em>) and the grip vocabulary (<em>chazaq</em>) are the same word: Pharaoh\'s hard heart is his hard grip on Israel. The theological connection is explicit in the Hebrew.</p>',
+    "3": '<p><strong>yad YHWH hovah</strong>: "the hand of the LORD will be." <em>Yad YHWH</em> — the hand of the LORD — is the central metaphor of Exodus: the mighty hand that delivers (13:9; 14:31; 15:6). Here applied as plague-instrument: the same divine hand that will deliver Israel through the sea first strikes Egypt\'s livestock. <em>Dever</em> (H1698, pestilence) — Hab 3:5 personifies it marching before the divine warrior.</p>',
+    "4": '<p><strong>veheflah YHWH bein miqneh Yisrael</strong>: "the LORD will distinguish (<em>pala</em>) between Israel\'s livestock and Egypt\'s." <em>Pala</em> (H6395) for the second time (cf. 8:22). The remarkable precision of YHWH\'s protection — biological and geographic specificity — is the strongest single evidence-claim the plagues make: if every Egyptian field animal dies while not one Israelite animal dies, the distinction is supernatural.</p>',
+    "5": '<p><strong>vayasem YHWH moed</strong>: "the LORD set a time (<em>moed</em>)." <em>Moed</em> (H4150) — appointed time, set meeting; the vocabulary of sacred assembly (Lev 23). The use of <em>moed</em> for the plague\'s appointed moment carries liturgical weight: even the judgment is ordered by divine appointment, as sacred in its timing as Israel\'s own festival calendar.</p>',
+    "6": '<p><strong>lo met mimikneh venei Yisrael echad</strong>: "not one of the Israelites\' animals had died." Total fulfillment of the distinction: every Egyptian field animal dead, zero Israelite animals dead. The precision creates an empirically testable claim (Pharaoh sends inspectors, v.7). YHWH\'s word is verifiable by the evidence it generates.</p>',
+    "7": '<p><strong>vayikhbad lev Paroh</strong>: "Pharaoh\'s heart was heavy (<em>kaved</em>)." The inspectors\' report confirms the miracle; Pharaoh receives verifiable proof and still hardens. The inverse relationship between evidence and responsiveness in Pharaoh — the more complete the proof, the heavier the heart — is the paradox the NT addresses in its hardening theology (John 12:40 quoting Isa 6:9-10; Rom 9:17-18).</p>',
+    "8": '<p><strong>piach kivshaim</strong>: "furnace soot (<em>piach</em>, H6368)." The <em>kivshan</em> (furnace, H3536) — the kiln used for brickmaking, the site of Israel\'s slave labor (cf. Gen 19:28 for <em>kivshan</em>; implied throughout Exod 1:14; 5). The sixth plague uses the physical material of Israelite oppression as the raw material of Egypt\'s judgment. The instrument of the slaves\' suffering becomes the instrument of the slaveholders\' affliction.</p>',
+    "9": '<p><strong>shechein poreiach avubot</strong>: "festering boils (<em>avubot</em>)." <em>Shechein</em> (H7822) — inflammation, boil; used of Job\'s affliction (Job 2:7), the Egyptian boils of Deut 28:27 as a covenant curse, and the plague of Rev 16:2. The sixth plague enters the human body itself — unlike the previous environmental and animal plagues. The escalation from external to bodily affliction marks the second triad\'s culmination.</p>',
+    "10": '<p><strong>vayiz\'reihu Mosheh hashamayimah</strong>: "Moses threw it into the air (toward the sky)." The heavenward gesture — throwing soot upward, toward the divine domain — and the dust falling on all Egypt below creates a visual image of divine judgment descending from heaven. Plague descends from above; salvation (the pillar of cloud/fire) also descends from above. The vertical axis is the theological axis of Exodus.</p>',
+    "11": '<p><strong>velo yakhlu hachartumaim la\'amod lifnei Mosheh</strong>: "The magicians could not stand before Moses because of the boils." Their incapacitation by the very plague they helped multiply is ironic: they brought up more frogs (8:7) and more gnats (8:18, tried unsuccessfully) — now they cannot even present themselves in the contest. "Unable to stand" (<em>amad</em>) is the language of defeat in judicial or military contest. The Egyptian occult system is permanently incapacitated.</p>',
+    "12": '<p><strong>vayechazek YHWH et-lev Paroh</strong>: "But the LORD hardened (<em>chazaq</em>) Pharaoh\'s heart." The theological turning point: from 9:12 onward, YHWH is explicitly the subject of the hardening (9:12; 10:1,20,27; 11:10; 14:4,8). The shift in agency does not mean God begins overriding Pharaoh\'s free will arbitrarily; it means Pharaoh\'s pattern of self-hardening through repeated choices has reached the threshold where God ratifies and seals what Pharaoh has already determined to be. Romans 1:24,26,28 uses the same pattern: "God gave them over" — divine confirmation of human choice.</p>',
+    "13": '<p><strong>hashkem baboker vehityatsev lifnei Paroh</strong>: "Get up early in the morning and stand before Pharaoh." The seventh plague (hail) begins the third triad. "This is what the LORD, the God of the Hebrews, says" — the covenant title occurs five times in the plague introductions. The hail is the most severe plague so far announced in advance; the announcement itself is part of the argument: YHWH announces precisely what he will do.</p>',
+    "14": '<p><strong>ki bapa\'am hazot ani sholeiach et-kol-magefotai</strong>: "For this time I will send all my plagues against you personally." <em>El-libkha</em> — against your heart, i.e., against your very person. The escalation is explicit: previous plagues targeted the environment, animals, and servants; this one is directed at Pharaoh himself. "There is no one like me in all the earth" — the incomparability formula now claims universal scope, not merely supremacy over Egyptian deities.</p>',
+    "15": '<p><strong>ki atah shalakhti et-yadi vakek otekha</strong>: "For by now I could have stretched out my hand and struck you." The past potential — what God could have done already — establishes the restraint that has characterized the plague sequence. The plagues have been graduated, not maximal. YHWH\'s restraint is purposeful (v.16), not a limitation of power.</p>',
+    "16": '<p><strong>he\'emadtikha</strong> (<em>heʿĕmadtîḵā</em>): "I have raised you up/maintained you." Hiphil of <em>amad</em> (H5975, to stand) — to cause to stand, to establish, to maintain. The LXX translates <em>anestesa se</em> ("I raised you up"), which Paul quotes verbatim in Romans 9:17: "For the Scripture says to Pharaoh: \'For this very purpose I have raised you up, that I might show my power in you, and that my name might be proclaimed in all the earth.\'" The hardening of Pharaoh is embedded within YHWH\'s purpose for the universal proclamation of his name — the exodus serves a missionary goal.</p>',
+    "17": '<p><strong>mistateil beami</strong>: "setting yourself against my people." <em>Salal</em> (H5549) — to cast up, pile up (a road or mound), here to erect oneself as an obstacle. The image is of Pharaoh constructing himself as a physical barrier against Israel\'s departure. The verb\'s construction-imagery suggests not passive resistance but active, engineered opposition.</p>',
+    "18": '<p><strong>kaved meod asher lo-hayah kamohuu mitsrayim</strong>: "the most severe... that has ever fallen on Egypt from the day it was founded." The superlative framing establishes the hail as a historical marker. Egypt\'s antiquity is acknowledged; this storm exceeds anything in its long history. The claim of unprecedented severity is the hail\'s claim on Pharaoh\'s attention.</p>',
+    "19": '<p><strong>shelach hoykl et-miqnekha</strong>: "Give the order to bring your livestock to shelter." The advance warning before the hail — absent in the third plague of each previous triad (gnats, 8:16; boils, 9:8) — is unusual mercy: YHWH gives Pharaoh\'s own officials the option of protecting their possessions. The warning creates a division within Egypt between those who respond to YHWH\'s word (v.20) and those who do not (v.21).</p>',
+    "20": '<p><strong>hayare et-dvar YHWH</strong>: "Those who feared (<em>yare</em>) the word of the LORD." <em>Yirah</em> (H3372) — the fear/reverence of YHWH — appears within Pharaoh\'s own court, among non-Israelite Egyptians. The plague creates a theological division within Egypt itself. This anticipates the "mixed multitude" (<em>erev rav</em>, 12:38) that departs with Israel — Egyptians who align with YHWH\'s purpose.</p>',
+    "21": '<p><strong>va\'asher lo sam libbo el-dvar YHWH</strong>: "those who did not set their heart on the word of the LORD." The heart-orientation (<em>sam libbo</em>) toward YHWH\'s word is the distinguishing marker between those who are protected and those who suffer. The lev (heart) that is "set on" the divine word is the response YHWH requires — the same heart-orientation that Pharaoh consistently refuses is freely given by unnamed Egyptian officials.</p>',
+    "22": '<p><strong>neteh et-yadkha al-hashamayim</strong>: "Stretch out your hand toward the sky." The upward gesture — toward the heavens — marks the hail as descending from the divine domain above. The combination of thunder (<em>qolot</em>, "voices/thunders"), hail, and fire (lightning) recalls the Sinai theophany (19:16) and anticipates the cosmic disruptions of Revelation\'s trumpet and bowl judgments (Rev 8:7; 16:21).</p>',
+    "23": '<p><strong>qolot</strong> (H6963): "thunder/voices." The same word for the thunder at Sinai (19:16; 20:18) where YHWH speaks in <em>qolot</em>. The hailstorm\'s thunder is YHWH\'s voice, just as Sinai\'s thunder is YHWH\'s voice. Pharaoh will later acknowledge "voices of God" (<em>qolot Elohim</em>, v.28) — using the divine plural for superlative intensity. The storm is not merely meteorological; it is a theophany.</p>',
+    "24": '<p><strong>uvar uaish mitlaqachat betokh habarad</strong>: "lightning flashing through it." <em>Mitlaqachat</em> — flashing, self-intermingling — describes fire and hail as supernaturally interwoven. Ps 105:32-33 cites the hail plague: "He gave them hail for rain, and lightning throughout their land; he struck down their vines and their fig trees, and shattered the trees of their country." The Psalm\'s poetic rendering confirms the plague\'s status as paradigmatic divine judgment.</p>',
+    "25": '<p><strong>vayakh habarad bkhol-erets Mitsrayim</strong>: "The hail struck down everything in the fields throughout Egypt." The comprehensive destruction of the field environment — human laborers, animals, crops — is the culmination of the second triad\'s agricultural focus. The agricultural devastation of Egypt\'s labor-system (the one that enslaved Israel) is now being dismantled by the same God who commissioned it for his own purpose.</p>',
+    "26": '<p><strong>raq beerets Goshen</strong>: "Only in the land of Goshen." The third explicit Goshen exception (8:22; 9:4,26). The geographic precision of YHWH\'s protection — a named region, not merely individual exemptions — is the plague narrative\'s most powerful evidence-claim. The visible boundary between Goshen and Egypt is a spatial argument for YHWH\'s sovereign control of the natural order.</p>',
+    "27": '<p><strong>chata\'ti hapaam YHWH hatsadiq</strong>: "This time I have sinned. The LORD is righteous (<em>tsadiq</em>)." Pharaoh\'s confession applies the judicial vocabulary: <em>tsadiq</em> (righteous, in the right) to YHWH and <em>resha\'im</em> (wicked, in the wrong) to himself and his people. The judicial framework — who is in the right — is the framework in which Moses has been operating throughout. Pharaoh finally articulates it correctly. Moses\'s response (v.30: "I know you do not yet truly fear the LORD God") demonstrates that correct theological statement without genuine fear is insufficient.</p>',
+    "28": '<p><strong>qolot Elohim uvarad</strong>: "this deadly thunder (<em>qolot Elohim</em>)." <em>Elohim</em> used as a superlative intensifier (divine thunder = overwhelming/mighty thunder). The same construction appears in "mountains of God" (Ps 36:6), "cedars of God" (Ps 80:10). Pharaoh\'s language acknowledges the thunder as divinely overwhelming — he wants the divine voice to stop.</p>',
+    "29": '<p><strong>phros kapai el-YHWH</strong>: "I will spread out my hands to the LORD." The gesture of spreading palms upward (<em>peres kaf</em>) is the OT intercessory posture (1 Kgs 8:22,38,54; Isa 1:15; Ps 44:20). "The earth is the LORD\'s (<em>laYHWH haarets</em>)" — the creation-ownership formula grounds the prayer in YHWH\'s cosmic sovereignty. The one who owns the earth can stop its weather; the prayer is based on demonstrated ownership.</p>',
+    "30": '<p><strong>terem tiru mipnei YHWH Elohim</strong>: "you still do not truly fear the LORD God." Moses intercedes while knowing the confession is inadequate. <em>Yirah</em> (H3372) — the fear/reverence of YHWH — is the required disposition. Pharaoh acknowledges YHWH\'s righteousness (v.27) and power (v.28) without possessing genuine fear. The theological diagnosis: right information about YHWH without the right orientation toward him.</p>',
+    "31": '<p><strong>vehapishta vehase\'orah nukah</strong>: "The flax and barley were ruined." The agronomic precision — flax and barley in bloom or heading, wheat and spelt not yet ripe — provides chronological specificity: the hail falls approximately in February (Egyptian calendar, month of Phamenoth). The detail authenticates the account as based on knowledge of Egyptian agricultural seasons and has been confirmed by Egyptologists\' reconstructions of the Nile calendar.</p>',
+    "32": '<p><strong>afilot henah</strong>: "they ripen later." <em>Afilot</em> — late-ripening, from <em>afel</em> (dark, late). The wheat and spelt\'s survival means Egypt\'s food supply is not yet fully destroyed; the agricultural crisis is severe but not yet total. This restraint — even in the most destructive plague so far — is consistent with the graduated purpose (v.15-16): YHWH is demonstrating power, not annihilating Egypt prematurely.</p>',
+    "33": '<p><strong>vayifros kapav el-YHWH</strong>: "He spread out his hands toward the LORD." The intercessory gesture (cf. v.29) occurs outside the city — at a physical remove from Pharaoh\'s court, in the open field, facing the heavens. The spatial and social geography of the prayer matters: Moses does not pray in Pharaoh\'s presence but in YHWH\'s presence, turning from the human authority toward the divine.</p>',
+    "34": '<p><strong>vayosef lachato vayakhbeid libbo hu va\'avadav</strong>: "he sinned again and hardened his heart, he and his officials." <em>Kaved</em> (H3515) — the final occurrence with Pharaoh as explicit subject. "He and his officials" — the hardening now encompasses the entire institutional court; it is not Pharaoh alone but the collective Egyptian ruling class that hardens together. The communal hardening prepares for communal judgment at the sea.</p>',
+    "35": '<p><strong>vayechezak lev Paroh velo shalach</strong>: "<em>Chazaq</em> — Pharaoh\'s heart was firm." The closing formula uses <em>chazaq</em> (the resolution-and-firmness verb) and ends with "just as the LORD had said through Moses" (<em>kaasher diber YHWH beyad Mosheh</em>). Every element of chapters 7-9 — prediction, execution, hardening — occurs "just as the LORD had said." The plague narrative is presented as the perfect fulfillment of YHWH\'s own announced plan.</p>'
   }
 }
 
 def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
+    existing = load_comm('mkt-original', 'exodus')
+    merge_comm(existing, EXODUS)
+    save_comm('mkt-original', 'exodus', existing)
+    print('Exodus 7-9 mkt-original written.')
 
 if __name__ == '__main__':
     main()

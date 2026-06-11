@@ -1,45 +1,36 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Original Commentary — Ezekiel chapters 26–28
+Run: python3 scripts/zc-original-ezekiel-26-28.py
+
+Source data:
+- data/interlinear/ezekiel.json
+- data/translation/glossary-hebrew.json
+
+Key decisions:
+- Ch 26: the wordplay tsur (rock/Tyre) is noted; Nebuchadnezzar's title "king of kings" (melek
+  hamelakhim) is the primary foreign-king honorific in Ezekiel
+- Ch 27: the qinah (lament) genre shapes the entire chapter; the trade catalog (vv12-25)
+  is treated as geographic/economic register rather than theological discourse
+- Ch 28: the prince/king of Tyre distinction maintained; "Danel" in v3 treated as the same
+  legendary ANE hero referenced in 14:14, 20 (not the biblical Daniel); the cherub passage
+  is read as depicting the king via the Adam-in-Eden template without asserting demonic identity
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +40,103 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"26": {
+"1": "<p>The date formula — <em>vayehi bishtei ʿesre shanah beʾeḥad laḥodesh</em> — &quot;in the eleventh year, on the first of the month&quot; — is unusual in omitting the month. Either the month is implied from context or there is a textual gap. The precision of Ezekiel&apos;s other date-formulas (1:1; 8:1; 20:1; 24:1; 29:1; 30:20; 31:1; 32:1, 17; 33:21; 40:1) suggests a month is missing here. The absence has attracted scribal notice since antiquity.</p>",
+"2": "<p><strong>yaʿan ʾasher ʾamrah Tsur ʿal-Yerushalaim heʾaḥ nishberah delet haʿammim nasavvu ʾelai ʾemmalleʾ hoḥarebah</strong> — &quot;because Tyre said of Jerusalem: Aha! the gate of the peoples is broken; it has turned to me; I shall be replenished, now that she is laid waste&quot; — <em>delet haʿammim</em> (gate of the peoples) refers to Jerusalem&apos;s strategic commercial role; Tyre&apos;s gloating (<em>heʾaḥ</em>, the exclamation of malicious delight) is the same that condemns Ammon in 25:3. The verb <em>nasavvu ʾelai</em> (turned to me) reflects Tyre&apos;s expectation of absorbing Jerusalem&apos;s trade.</p>",
+"3": "<p>YHWH&apos;s hostile-presence formula — <em>hinneni ʿaleikha Tsur</em> — introduces the oracle. The metaphor of waves (<em>kammayyim ʿolim goyim</em>, nations rising like the sea) applied to the attacking nations is appropriate given Tyre&apos;s maritime identity. The sea that is Tyre&apos;s strength becomes the vehicle of its destruction.</p>",
+"4": "<p>The stripping of Tyre&apos;s walls and towers — <em>venatats ḥomot Tsur uheharset migdaleha</em> — uses the verbs <em>natas</em> (pull down) and <em>haras</em> (demolish), the standard terminology for city-destruction throughout the prophets. The result — <em>veḥisoti ʿafarah mimennah venatati ʾotah letsuaḥ sela</em> (I will scrape her dust from her and make her a bare rock) — introduces the key pun: <em>tsur</em> (rock) is both the Hebrew name for Tyre and the common noun for rock. Tyre will become what her name means.</p>",
+"5": "<p>The bare-rock image is developed — <em>mishtoaḥ ḥaramim tihyeh betokh hayam</em> — &quot;she will be a place for spreading nets in the midst of the sea.&quot; The image of a fishing net-drying rock in the sea emphasizes Tyre&apos;s reduction from an empire to a substrate. The declaration <em>ʾani dibbartim neʾum ʾAdanai YHWH</em> (I have spoken, declares Lord YHWH) invokes divine authority as the guarantee of fulfillment.</p>",
+"6": "<p>The satellite settlements on the mainland — <em>benoteyha ʾasher bassadeh</em> (her daughters in the field) — are the mainland towns around Tyre proper. They will fall by the sword (<em>baḥerev tiharagna</em>) — the same fate as the island city but by an earthly army rather than the sea-imagery used for Tyre herself.</p>",
+"7": "<p><strong>melek hamelakhim</strong> — &quot;king of kings&quot; — is Nebuchadnezzar&apos;s title in Ezekiel (also Dan 2:37; Ezra 7:12). The Aramaic and Hebrew titles translate Akkadian <em>šar šarrāni</em>, the imperial honorific of the Babylonian and Assyrian kings. The listing of his military assets (<em>sus verekev vefarashim</em>, horses, chariots, horsemen + infantry with shields, helmets, and spears) is the standard battle-array formula. He comes from the north (<em>mittsfon</em>) — the compass direction of Babylon&apos;s approach to Canaan via the Fertile Crescent.</p>",
+"8": "<p>The siege procedure — <em>bnot shefelekha baḥerev yaharog venadhan ʿaleikha dayeq ushapal ʿaleikha solelah</em> — siege-ramp (<em>solelah</em>), siege-wall (<em>dayeq</em>), shield-roof (<em>tsinnah</em>) — is the full technical vocabulary of ancient siege warfare. The same sequence appears in siege descriptions in 4:2 and 17:17.</p>",
+"9": "<p>The battering ram against the walls — <em>umḥi qabbelet yittein beḥomotayikh vemigreynotav yittots migdaleikha</em> — <em>qabbelet</em> (battering engine) from <em>qabal</em> (to be opposite/facing); <em>migreynotav</em> (his axes/picks) or possibly &quot;battle-axes.&quot; Both terms are military technical vocabulary that preserves the specific ancient engineering of siege assault.</p>",
+"10": "<p>The abundance of Nebuchadnezzar&apos;s horses (<em>merov susav yekhasseikh ʿafaram</em>) emphasizes the numerical superiority of the invaders — their dust alone will cover the city. The noise of horsemen and wagon-wheels and chariots entering the gates (<em>bebôʾô bivaʿayikh kevaʾu befaret ʿir meforatsah</em>) gives the imagery of breach: he enters through the shattered gates as through a breached city.</p>",
+"11": "<p><strong>befarsat susav yirmessek</strong> — &quot;with the hooves of his horses he will trample all your streets&quot; — the personalization of the horses&apos; hooves on Tyre&apos;s streets intensifies the violence. The killing of the people (<em>yotsatsekha ʾet-ʿammekha baḥerev yaharog</em>) and the toppling of the steles (<em>vematsebot ʿuzzekha laʾarets tirad</em>) — the memorial pillars of Tyre — represent both demographic and religious destruction.</p>",
+"12": "<p>The plundering sequence — <em>veshalelu ḥeileikh</em> (they will plunder your wealth), <em>webazezu rekhullateikh</em> (loot your merchandise), <em>veharshu ḥomotayikh</em> (pull down your walls), <em>venyitstsetshu batei ḥemudateikh</em> (demolish your fine houses) — and the disposal of the rubble and timber into the sea (<em>vehishlikhuh ʾel-tokh hayam</em>) is the specific prediction that later commentators noted as pointing to Alexander&apos;s causeway-construction from the rubble.</p>",
+"13": "<p>The silencing of Tyre&apos;s music — <em>vehishbatti hamon shirayikh veqol kinnoroteikh loʾ yishamaʿ ʿod</em> — &quot;I will put an end to the noise of your songs and the sound of your lyres shall be heard no more&quot; — uses the same silencing vocabulary as the anti-Babylon oracles in Revelation 18:22. The music of the commercial city is a marker of its prosperity; its silence marks desolation.</p>",
+"14": "<p>The bare-rock conclusion returns — <em>venatattikh letsuaḥ sela mishtoaḥ ḥaramim tihyi loʾ tibbane ʿod</em> — &quot;I will make you a bare rock; you will be a place for spreading nets; you will never be rebuilt&quot; — the <em>loʾ tibbane ʿod</em> (never be rebuilt) is the absolute form of the desolation oracle, used also for Babylon (Isa 13:20) and Nineveh (Nah 1:14). The divine self-declaration follows: <em>ki ʾani YHWH dibbartim</em>.</p>",
+"15": "<p>The reaction of the coastlands to Tyre&apos;s fall — <em>hakoh ʾamar ʾAdanai YHWH leTs veharaʿash mishmia ḥallaleikh beʾanqot ḥalal beharag herag betokhakh</em> — the trembling of the coastlands at the sound of Tyre&apos;s fall (<em>raʿash</em>) anticipates the extended mourning-lament of ch 27. The structural pattern of ch 26 is: announcement (vv1-6) → battle description (vv7-14) → cosmic reaction (vv15-18) → divine verdict (vv19-21).</p>",
+"16": "<p>The princes of the sea (<em>kol nesiʾei hayam</em>) descending from their thrones, removing their robes, and sitting on the ground in mourning garments (<em>ʿal-haʾarets yeshvu uḥaradu leragatim veshamehu ʿaleikh</em>) — the gestures of mourning (sitting on the ground, trembling, horror) are the standard mourning postures of the ANE. Their response is the emotional correlate of Tyre&apos;s fall&apos;s economic-political significance.</p>",
+"17": "<p>The <em>qinah</em> (lament) the maritime princes compose — <em>venasʾu ʿaleikh qinah veʾamru lakh</em> — begins here and continues through v18. The rhythmic 3+2 <em>qinah</em> meter (the standard Hebrew lament meter of Lamentations) shapes the verse. The content — <em>eikh ʾabaddt nashevet miyammim haʿir hahulala</em> (how you have perished, you who were inhabited from the seas, the praised city) — uses the rhetorical <em>eikh</em> (how!) that opens Lamentations 1:1.</p>",
+"18": "<p>The fear of the coastlands on the day of Tyre&apos;s fall — <em>ʿattah yeḥardetu ha-iyyim beyom mappaltek venivhalu hayyim ʾasher bayam mitsʾeteikh</em> — &quot;now the islands will tremble on the day of your fall; the islands in the sea are terrified by your passing&quot; — the two verbs <em>yiḥradu</em> (tremble) and <em>nivhalu</em> (are terrified) express the psychic shock of the whole maritime world at the removal of Tyre from it.</p>",
+"19": "<p>The deep-water imagery of the divine judgment — <em>ki koh ʾamar ʾAdanai YHWH betiiti ʾoteikh kʿarim neʾeshamot kahaʿalot aleikh ʾet-tehom umikhasseikh hayyim harabim ʿaleikh</em> — YHWH bringing up the deep (<em>tehom</em>) over Tyre returns to the creation-chaos vocabulary. <em>Tehom</em> is the primordial deep of Genesis 1:2; covering a city with it inverts creation and reduces a human settlement to primordial chaos.</p>",
+"20": "<p>Descent to the pit — <em>vehoredetikh ʾet-yordei vor ʾel-ʿam ʿolam</em> — &quot;I will bring you down with those who go to the pit, to the ancient people&quot; — <em>bor</em> (pit/cistern) is one of the Hebrew terms for Sheol; <em>ʿam ʿolam</em> (ancient people) refers to the long-dead of previous generations. The final state of Tyre is existence among the dead, not among the living, in the land (<em>betsiyot taḥtiyot kaḥarevot ʿolam</em>, the desolate places of the deep, as in ancient ruins).</p>",
+"21": "<p>The terror-term conclusion — <em>ballahot ʾettenek veʾeynek loʾ tihyeh uvuvuqesh uloʾ timmatsʾi leʿolam ʿod</em> — &quot;I will make you a terror and you will cease to be; though you are sought, you will never be found again.&quot; <em>Ballahot</em> (terrors/sudden destruction) is a term used in Job (18:11, 14) for the terrors that pursue the wicked. The complete cessation — never to be found — is the eschatological form of the desolation oracle.</p>"
+},
+"27": {
+"1": "<p>Standard word-event formula introduces the <em>qinah</em> (lament) over Tyre. The chapter is entirely composed as a funeral song in the second person, addressed to Tyre directly.</p>",
+"2": "<p><strong>veʾattah ben-ʾadam seʾa ʿal-Tsur qinah</strong> — &quot;and you, son of man, take up a lament over Tyre&quot; — the command to raise a <em>qinah</em> is the standard introduction to the dirge genre (also 19:1; 26:17; 28:12; 32:2). The <em>qinah</em> meter (3+2 beats) creates the limping, mournful rhythm associated with death throughout the Hebrew poetic tradition.</p>",
+"3": "<p>Tyre&apos;s self-description — <em>ʾani kelilat yofi</em> — &quot;I am perfect in beauty&quot; — echoes the pride-language of the Eden-cherub in 28:12. The pride of Tyre is her maritime position: <em>yoshevet ʿal-mevoʾot yam</em> (you who sit at the gateway to the sea) and her role as merchant to many peoples (<em>rohelet haʿammim</em>). The term <em>rohelet</em> (female merchant/trader, from <em>rahal</em>, to trade) personifies the city as a woman engaged in commerce.</p>",
+"4": "<p>The ship metaphor begins — <em>bigvul yammim bonayikh kallelu yofeikh</em> — &quot;your builders perfected your beauty in the midst of the seas&quot; — <em>bigvul yammim</em> (in the heart/boundary of the seas) is Tyre&apos;s geographic location on an island. The builders (<em>bonayikh</em>) who perfected her beauty are those who built the physical city; the beauty metaphor applied to a city&apos;s architecture is common in wisdom poetry.</p>",
+"5": "<p>The shipbuilding details begin with the timber — <em>ʿatsei shenim mizLevanon laʾsu lakh leʾoren lehashpilat kanafeikh</em> — &quot;they made all your planks of fir trees from Lebanon; they took a cedar from Lebanon to make a mast for you.&quot; The sourcing of cedar and fir from Lebanon is historically accurate — the Phoenicians were the primary timber traders of the ancient world, using Lebanese cedar for their own shipbuilding and export.</p>",
+"6": "<p>The oars from oaks of Bashan — <em>allonim miBashan ʿasu mishshoteikh qarsheikh ʿasu shen-bat-ʾashshurim meʾiyyei Kittim</em> — &quot;of oaks of Bashan they made your oars; your deck they made of ivory inlaid in boxwood from the coasts of Cyprus.&quot; <em>Bat-ʾashshurim</em> is unclear — possibly &quot;daughter of Asshur-trees&quot; (a species of cypress) or a corrupt text. <em>Kittim</em> consistently refers to Cyprus in the OT.</p>",
+"7": "<p>The sail of Egypt — <em>shesh-beriqmah miMitsrayim hayah mifrasek lihyot lakh nes</em> — &quot;fine embroidered linen from Egypt was your sail, serving as your banner&quot; — <em>shesh</em> (fine linen) is the high-quality Egyptian linen used for priestly garments and for luxury sails. The awning materials from Elishah (probably Alashiya = Cyprus) complete the luxury ship-fitting.</p>",
+"8": "<p>The professional crew — <em>yoshevei Tsidon veʾArvad hayu shotatayikh ḥakhameikh Tsur hayu vakh yoshevei ḥavveleikh</em> — sailors from Sidon and Arvad (Arwad, an island city north of Byblos), skilled craftsmen and pilots from Tyre&apos;s own population. The <em>ḥakhamim</em> (wise men/skilled craftsmen) of Tyre are the same class referenced in 28:3-5 — the expertise of the city is built into both the trade-ship lament and the king-of-Tyre oracle.</p>",
+"9": "<p>The elders of Gebal (= Byblos) as caulkers — <em>ziqnei Geval vaḥakhameyhah hayu vakh maḥazeqei bidzqeikh kol-ʾaniyot hayam veshallehem hayu vakh laʿarov markolteikh</em> — Gebal/Byblos was a Phoenician city whose elders were skilled shipwrights (<em>ḥazaq</em> = to strengthen/caulk). The phrase &quot;all the ships of the sea and their mariners were in you to trade your merchandise&quot; summarizes Tyre&apos;s function as the trading hub of the ancient world.</p>",
+"10": "<p>Persia, Lud (Lydia), and Put in Tyre&apos;s army — <em>Paras veLud vaPhut hayu veḥeileikh ʾanshei milḥamateikh</em> — &quot;Persia and Lud and Put were in your army, your men of war&quot; — the foreign military professionals who served as mercenaries. <em>Phut</em> (Libya/Somalia) and <em>Lud</em> (Lydia in western Anatolia) indicate the geographic breadth of Tyre&apos;s military recruitment. The hanging of shields and helmets on walls (<em>hem tallu ʿaleikh tsinnah vekhovaʿ hem natenu hoddekha</em>) is the decorative military display typical of Phoenician cities.</p>",
+"11": "<p>The Arvadites and Gammadites on the towers — <em>uvenei Arvad veḥeileikh ʿal-ḥomotayikh saviv vegammadim bemigdolotayikh hayu ʾashperoteyhem tillu ʿal-ḥomotayikh saviv hem killu yofeikh</em> — the Arvadites as garrison troops on the walls, Gammadim (origin uncertain — possibly a place-name or a term for elite warriors) on the towers. The decoration of the city with military hardware (&quot;they completed/perfected your beauty&quot;) connects back to the <em>kelilat yofi</em> (perfect in beauty) claim of v3.</p>",
+"12": "<p>The trade catalog begins with Tarshish (<em>Tarshish sokhartekh merov kol-hon bekhesef barzel bedia uvol natan ʿizaveikh</em>) — Tarshish (probably Tartessus in Spain) trading silver, iron, tin, and lead for Tyre&apos;s wares. The verb <em>ʿizzevikh</em> (supplied you) from <em>ʿazav</em> (leave/leave for, here in the sense of leaving goods in payment) will recur as the structural verb of the trade catalog throughout the chapter.</p>",
+"13": "<p>Greece (Javan), Tubal, and Meshech — <em>Yavan Tuval uMeshekh hemmah rohaleikh benefshet ʾadam ukhle neḥoshet natenu ʿizbeikh</em> — trading in human slaves (<em>nefesh ʾadam</em>, lit. human soul/person — the OT term for slave trade) and bronze vessels. Javan (Ionia/Greece), Tubal and Meshech (regions in Anatolia/Caucasus) are grouped together as they are in the Table of Nations (Gen 10:2) and in the Gog oracle (Ezek 38-39).</p>",
+"14": "<p>Beth-togarmah (<em>mivet Togarmah susim uperashim uperedim natenu ʿizbeikh</em>) — trading horses, war-horses, and mules. Togarmah (probably Armenia/southeastern Anatolia) was known in antiquity for its horse-breeding; the connection is confirmed by Assyrian annals that record tribute in horses from that region.</p>",
+"15": "<p>The sons of Dedan — <em>benei Dedan rohalaikh iyyim rabbim sekullat yadeikh shenhabbim vehobnin heshivu ʿeshbeikh</em> — trading from &quot;many coastlands&quot; in ivory (<em>shen-ʾabbim</em>, lit. elephant-tooth) and ebony (<em>hobnin</em>, the word is borrowed from an Egyptian or Semitic root for hard dark wood). Dedan (northwest Arabia) served as a caravan hub connecting Arabian and African trade goods to Mediterranean markets.</p>",
+"16": "<p>Aram (Syria) — <em>Aram sokhartekh merov maʿaseikh benovfeikh veʾargavan veriqmah uvuts veraʾmot venokhet natenu ʿizbeikh</em> — trading turquoise (<em>nofekh</em>), purple (<em>ʾargaman</em>), embroidered work (<em>riqmah</em>), fine linen (<em>buts</em>), coral (<em>raʾmot</em>), and rubies/red coral (<em>kadkod</em> — the identification is uncertain). The luxuries are consistent with what Aram controlled through caravan routes.</p>",
+"17": "<p>Judah and Israel — <em>Yehudah veʾerets Yisraʾel hemmah rohaleikh beḥitey Minnit vepannat udvaish vashemen utsori natenu maʿarveikh</em> — trading wheat of Minnith (a place in Ammon, Judg 11:33), confections (<em>pannat</em> — uncertain, possibly pastry/cakes), honey, oil, and balm (<em>tsori</em>, the resin product associated with Gilead). The inclusion of Judah and Israel in the trade catalog is significant: even YHWH&apos;s covenant people are commercial partners of Tyre.</p>",
+"18": "<p>Damascus — <em>Dammesek sokhartekh berov maʿaseikh merov kol-hon beyein Ḥelbon uvetsemer Tsaḥar</em> — trading Helbon wine (a premium wine region near Damascus) and white wool (<em>tsemer Tsaḥar</em> or wool of Zahar). The wine of Helbon was noted in Assyrian records as a luxury item sent to the royal court.</p>",
+"19": "<p>Dan and Javan and Uzal — <em>vedan veYavan meʾuzzal beʾizbeikh natanu barzel ʿashut qinnamon uqane hayah bemaʿarveikh</em> — Dan and Javan (possibly Aden or a Yemenite location named Uzal/Azal; Gen 10:27) trading wrought iron, cassia, and cane. The aromatic spices (cassia, cane) were luxury goods from the East.</p>",
+"20": "<p>Dedan — <em>Dedan rohaltekh bebigdei ḥofshy lerikbah</em> — trading in saddle blankets/riding cloths (<em>bigdei ḥofshi lerikbah</em>). Dedan&apos;s second appearance in the catalog (also v15) reflects its dual role as both an ivory/ebony importer and a textile supplier.</p>",
+"21": "<p>Arabia and all the princes of Kedar — <em>Araviʾah vekhol neisiʾei Qedar hemmah sokherei yadeikh bekevashim uʾeilim vaʿattudim bam sokhartekh</em> — trading in lambs (<em>kevasim</em>), rams (<em>ʾeilim</em>), and goats (<em>ʿattudim</em>). The pastoral/livestock trade of the Arabian peninsula rounds out the catalog&apos;s commodity diversity.</p>",
+"22": "<p>The merchants of Sheba and Raamah — <em>rohallei Shevaʾ veRaʿmah hemmah rohalaikh beroshe kol-boshem uvekhal-ʾeven yeqarah uvezahav natanu ʿizbeikh</em> — trading spices (<em>beshem</em>) and precious stones and gold. Sheba (southwest Arabia/Ethiopia) was associated with gold, spices, and precious stones in the OT (1 Kgs 10:2; Ps 72:10; Isa 60:6).</p>",
+"23": "<p>Haran, Canneh, Eden, the merchants of Sheba, Asshur, and Chilmad — <em>Ḥaran veKhanneh veʿEden rohallei Shevaʾ Ashshur veKhilmad rohaltekh</em> — the northern Mesopotamian trade centers complete the circle. Haran (the city of Abraham&apos;s sojourn) and Asshur (Assyria) appear as commercial partners alongside the south Arabian Sheba, indicating the full compass range of Tyre&apos;s trade network.</p>",
+"24": "<p>These traders bring <em>maklulim</em> — &quot;complete/choice things&quot; — including luxurious garments (<em>gelomei tekhelet verigmah</em>), treasures of fine cloths (<em>geneizei brumim</em>), and bound and bound-and-twisted cords (<em>vaḥavlim veʾarozim bemarkolloteikh</em>). The vocabulary here is highly specialized and several terms are <em>hapax legomena</em> (words occurring only here). The textile and cord trades may reflect particular Phoenician specializations.</p>",
+"25": "<p><strong>ʾaniyot Tarshish sharat suḥrateikh vatimmaʾli vatikked meʾod belev yammim</strong> — &quot;the ships of Tarshish were carriers for your merchandise, and you were filled and made glorious in the heart of the seas.&quot; The trade catalog concludes with the <em>aniyyot Tarshish</em> (Tarshish-ships — a class of large ocean-going cargo vessels rather than necessarily ships bound for Tarshish specifically). Their &quot;singing&quot; (<em>sharat</em>) Tyre&apos;s trade is a personification of commercial activity.</p>",
+"26": "<p>The east-wind destruction — <em>beʿaddeikh heshiʾahu shotatayikh ʾet-yam hamereḥet ruaḥ haqqadim shevaratikh belev yammim</em> — &quot;your rowers have brought you into deep waters; the east wind has wrecked you in the heart of the seas.&quot; The <em>ruaḥ haqqadim</em> (east wind) is the hot, destructive wind from the Arabah/desert that destroys ships and crops throughout the OT (Jonah 4:8; Hos 13:15; Ps 48:7). The east wind from YHWH is the agent of Tyre&apos;s destruction after the elaborate building of the ship in vv4-25.</p>",
+"27": "<p>The sinking inventory — <em>honayikh veʾozaroteikh maʿaraveikh ḥalatayikh veʾanshei milḥamateikh umisraʿim rabbim bekol-qahal betokhekh yamafilu belev yammim beyom mappaltek</em> — every element of Tyre&apos;s wealth and personnel enumerated in the trade catalog now sinks: riches, merchandise, exchange goods, mariners, pilots, repairers, traders, warriors, all the assembly. The inverted echo of the catalog is the literary conclusion of the ship-metaphor.</p>",
+"28": "<p>The sailors on the land shake at the sound of the cry of the pilots — <em>liqol zeʿaqat ḥavvalaikh yirʿashu migrashot</em> — the trembling coastal communities (<em>migrashot</em>, lit. open spaces/suburbs outside a city) echo ch 26&apos;s description of the coastlands trembling at Tyre&apos;s fall.</p>",
+"29": "<p>The abandonment of the ships — <em>veyardu meʾaniyyoteyhem kol tofssei mishet ḥalatayim vekhol-ʾanshei hayam el-haʾarets yaʿamodu</em> — everyone who works the sea (ships&apos; crews) comes ashore. The movement from ship to land in response to Tyre&apos;s fall inverts Tyre&apos;s perpetual habitation of the sea.</p>",
+"30": "<p>The mourning postures — <em>vehishmiʿu ʿaleikh beqolam vayitsʿaqu mara veyaallu ʿafar ʿal-rosheiyhem beʾefer yitpalashu</em> — raising the voice in bitter crying (<em>mara</em>), putting dust on the head (<em>ʿafar ʿal-rosheiyhem</em>), rolling in ashes (<em>beʾefer yitpalashu</em>) — three mourning gestures. <em>Hitpalesh</em> (roll in ashes/dust) appears also in Jer 6:26 and Mic 1:10 for intense mourning.</p>",
+"31": "<p>Shaving the head and girding with sackcloth — <em>vehiqriḥu ʾaleyikh qorḥah veḥagru saqim uvaḥu ʾeleyikh bemarrat nefesh mourning bitter of soul</em> — the combination of shaved head (<em>qorḥah</em>), sackcloth (<em>saq</em>), and bitter weeping (<em>marat nefesh</em>) is the standard mourning-triad of the OT. The mourning is performed specifically <em>ʿaleikh</em> (over/for you, Tyre).</p>",
+"32": "<p>The <em>qinah</em> (dirge) composed by the mourners — <em>unesʾu ʿaleikh benihem qinah veqanenu ʿalaykh mi keTsur kedomemah betokh hayam</em> — &quot;and in their wailing they raise a lamentation for you and lament over you: Who is like Tyre, like her who is stilled in the midst of the sea?&quot; — the rhetorical <em>mi-k</em> (who is like?) formula is the OT incomparability formula applied here to commercial greatness. The same form appears in the Exodus songs (Exod 15:11, <em>mi-khamokha</em>) where YHWH&apos;s incomparability is declared. Here the incomparability is Tyre&apos;s commercial power — which makes its loss all the more devastating.</p>",
+"33": "<p>The goods flowing out from Tyre satisfying many peoples — <em>betset ʿizbeikh miyyammim hisbaʿta ʿammim rabbim verov honayikh umaʿaraveikh hivʿarta malkei ʾerets</em> — &quot;when your wares came from the seas you satisfied many peoples; with your abundance of wealth and merchandise you enriched the kings of the earth.&quot; The verb <em>hisbaʿta</em> (you satisfied/filled) and <em>hivʿarta</em> (you enriched, lit. made rich) are the economic vocabulary of Tyre&apos;s commercial power at its height — now mourned as past.</p>",
+"34": "<p>The time of breaking — <em>ʿet nishbaret miyyammim bemaʿaqqei mayim maʿaraveikh ukhol-qahalekh betokh nafalu</em> — &quot;now you are wrecked by the seas, in the depths of the waters; your merchandise and all your crew have sunk with you.&quot; The temporal shift from past prosperity (v33) to present destruction (<em>ʿet</em>, now/at the time) creates the rhetorical pathos of the lament.</p>",
+"35": "<p>The horror of the coastlands — <em>kol yoshevei haʾiyyim nashemu ʿaleikh umalkeyhem saʿaru saʿar raʿu phanim</em> — the same aghast-reaction vocabulary of 26:15-18 is repeated here to frame the lament from the mourner&apos;s perspective. <em>Saʿaru saʿar</em> (their hair bristles in terror — cognate with <em>seʿar</em>, hair) is an idiomatic expression for extreme fear.</p>",
+"36": "<p>The hissing conclusion — <em>sokhrim baʿammim sherequ ʿalaykh ballahot hayit veʾeynekh leʿolam ʿad</em> — &quot;the merchants among the peoples hiss at you; you have come to a dreadful end and shall be no more forever.&quot; <em>Sharequ</em> (hissing) is both the sound of shock and the ritual gesture of contempt/dismissal for a destroyed city (Jer 19:8; 49:17; Lam 2:15). <em>Ballahot hayit</em> (you have become terrors) echoes the <em>ballahot</em> conclusion of 26:21 — the same word closing both the oracle and the lament.</p>"
+},
+"28": {
+"1": "<p>Standard word-event formula opens the two-part oracle against the prince of Tyre (vv1-10) and the king of Tyre (vv11-19). The distinction between <em>nagid</em> (prince/leader) and <em>melek</em> (king) may reflect political reality — Ithobalos II of Tyre used the title <em>nagid</em> — or may be a deliberate prophetic choice to deny Tyre&apos;s ruler the full royal dignity.</p>",
+"2": "<p><strong>ben-ʾadam ʾemor lenagid Tsur koh ʾamar ʾAdanai YHWH yaʿan gabaḥ libbekha vattoʾmer ʾel ʾani moʾshav ʾelohim yashavti belev yammim</strong> — the first sin named: <em>gabaḥ libbekha</em> (your heart was lifted up/proud). The prince&apos;s claim is <em>ʾel ʾani</em> (I am a god) — not merely king-like or divinely appointed, but divine identity claimed as his own. The phrase <em>moʾshav ʾelohim</em> (seat/dwelling of God) locates the claim geographically: the prince sits in the divine dwelling-place (the sea-citadel of Tyre = the mythological sea-abode of the divine assembly). The contrast: <em>veʾattah ʾadam velo-ʾel</em> — &quot;but you are a man and not God.&quot;</p>",
+"3": "<p><strong>ḥakham ʾattah miDaniʾel kol-setum loʾ ʿamam ʿaddekha</strong> — &quot;you are wiser than Daniel; no secret is hidden from you.&quot; The ironic comparison to Daniel — almost certainly the legendary <em>Daniʾel</em> of ANE wisdom tradition (not the biblical Daniel, whose book was written later) — is the same figure referenced in 14:14, 20. Tyre&apos;s king claims a wisdom (<em>ḥakham</em>) surpassing this proverbially wise man. The pride is compounded: he claims both divine identity and surpassing wisdom.</p>",
+"4": "<p>The wisdom used for commercial gain — <em>bekhokhmateikha uvivunateikha ʿasita lekha ḥayil</em> — &quot;by your wisdom and your understanding you have made wealth for yourself&quot; — the connection between <em>ḥokhmah</em> (wisdom) and commercial success is a theme of Proverbs (8:18-19; 3:16). What distinguishes Tyre&apos;s case is that the wisdom-wealth is self-generated and self-attributed.</p>",
+"5": "<p>The causal chain — wisdom → gold → pride: <em>berov ḥokhmateikha birekhulatekha hirbeita ḥeileikh vayyigbaḥ levaveikha beḥeileikha</em> — &quot;by your great wisdom in your trade you have increased your wealth and your heart has become proud because of your wealth.&quot; The <em>wayhi</em>-consecutive (<em>vayyigbaḥ levaveikha</em>) marks the pride as a consequence of the prosperity.</p>",
+"6": "<p>The divine response to the divine-claim — <em>lakhein koh ʾamar ʾAdanai YHWH yaʿan sitteikha libbekha klevav ʾelohim</em> — &quot;therefore thus says Lord YHWH: because you have compared your heart to the heart of God&quot; — the verb <em>shat</em> (set/compare) in <em>sitteikha libbekha</em> (you have set/compared your heart) uses the same root as <em>ʾani YHWH sham</em> (I YHWH have set it there) in other oracular contexts. The setting/comparing of the heart to the divine heart is the specific theological offense.</p>",
+"7": "<p><strong>veheveʾeti ʿaleikha zarim ʿaritsim goyim</strong> — &quot;therefore I am about to bring strangers against you, the most ruthless of nations.&quot; <em>Aritsim</em> (ruthless/terrible ones) from <em>arits</em> (to be ruthless, to cause fear) — the same word used for the Babylonians in Ps 54:3 and Isa 29:5. YHWH deploying the most ruthless nations against the self-styled divine ruler is the counter-force.</p>",
+"8": "<p>Descent to the pit — <em>lashaḥat yoridukha vamata ḥallelei ḥalal belev yammim</em> — &quot;they will thrust you down into the pit and you will die the death of those who are slain in the heart of the seas.&quot; The irony: the divine dwelling in the heart of the sea (<em>belev yammim</em> in v2) becomes the death-location in v8. The claim to inhabit the divine seat is overturned by dying in the same sea.</p>",
+"9": "<p>The deathbed non-deity — <em>haʾamor toʾmar ʾel ʾani lifnei horegekha veʾattah ʾadam velo-ʾel beyad meḥallelekha</em> — &quot;will you still say &apos;I am God&apos; in the presence of the one who slays you? You are a man and not God in the hand of the one who wounds you.&quot; The repetition of <em>ʾadam velo-ʾel</em> (a man and not God) from v2 is the literary inclusio of the first oracle.</p>",
+"10": "<p><strong>mot ʿarelim tamut beyad zarim</strong> — &quot;you will die the death of the uncircumcised by the hand of strangers.&quot; Death by the hand of the uncircumcised (<em>ʿarelim</em>) is the most dishonorable death for a Semitic ruler. The term <em>ʿarel</em> (uncircumcised) carries the full weight of covenant-outside status — to die at the hands of those outside the covenant community is to die without honor, the antithesis of the divine status the prince claimed.</p>",
+"11": "<p>The second oracle — <em>seʾa qinah ʾal-melek Tsur</em> — shifts the address from <em>nagid</em> (prince) to <em>melek</em> (king) and changes the genre from accusation-oracle to <em>qinah</em> (lament). The shift in title has been interpreted as: (1) a second historical ruler; (2) a shift from the human ruler to his demonic counterpart; (3) a rhetorical elevation of the addressee to heighten the contrast of fall. The lament form applies the highest possible status claims to Tyre&apos;s ruler precisely to make the fall most devastating.</p>",
+"12": "<p><strong>attah ḥotem toknit male ḥokhmah vekhilil yofi</strong> — &quot;you were the seal of perfection, full of wisdom and perfect in beauty.&quot; <em>Ḥotem toknit</em> (seal/pattern of perfection) — <em>toknit</em> from <em>takan</em> (to measure/construct, be established); the &quot;seal of the measuring pattern&quot; describes the king as the perfect exemplar of what a being should be. The same cluster of terms (<em>ḥokhmah</em>, <em>yofi</em>) appears in ch 27&apos;s description of Tyre-the-ship.</p>",
+"13": "<p>The Eden setting — <em>beʿEden gan-haʾElohim hayita</em> — &quot;you were in Eden, the garden of God.&quot; The twelve precious stones that covered him (<em>even yequrah mekhaseka</em>) correspond approximately to the twelve stones of the high priest&apos;s breastplate (Exod 28:17-20), though the lists differ and the text is partially corrupt in both Hebrew and LXX traditions. The king-in-Eden parallel to Adam is the template for the next verses.</p>",
+"14": "<p><strong>ʾatt-kerub mimshakh hasokek venatatikha</strong> — &quot;you were an anointed guardian cherub, and I placed you.&quot; <em>Kerub mimshakh</em> (anointed cherub) — the <em>mimshakh</em> (anointed/spread out) could modify either the cherub (as anointed) or the position (as covering/spanning); the LXX renders it differently. <em>Hasokek</em> (covering/screening) from <em>sakhakh</em> (to cover, used of the cherubim over the ark in Exod 25:20) — the covering function identifies this cherub with the role of the ark-cherubim. The holy mountain of God (<em>har qodesh ʾElohim</em>) is a mythological term for the divine assembly&apos;s location (also Isa 14:13; Ps 48:2).</p>",
+"15": "<p><strong>tamim ʾattah biderakhekha miyom hibborekha ʿad-nimtsaʾ ʿavelah vakh</strong> — &quot;you were blameless in your ways from the day you were created until unrighteousness was found in you.&quot; The term <em>tamim</em> (blameless, complete) is the character-descriptor of Noah (Gen 6:9) and Abraham (Gen 17:1), and Job (Job 1:1). Its use here establishes that the king&apos;s primordial state was genuine moral integrity, not just surface perfection — making the subsequent fall all the more tragic.</p>",
+"16": "<p>The sin that caused the fall — <em>berob rekhullatekha mallu tokhekha ḥamas vatetaʾ</em> — &quot;in the abundance of your trade you were filled with violence and you sinned.&quot; The trade-pride (<em>rekhullah</em>) that filled him with <em>hamas</em> (violence/injustice) is the commercial corruption that corrupted the primordial wisdom. The verb <em>vatteḥeʾ</em> (and you sinned, qal imperfect consecutive) narrates the moral causation simply and directly.</p>",
+"17": "<p>The pride of beauty — <em>gabaḥ libbekha beyofeikh shihhateta ḥokhmateikha ʿal-yifʾeikha</em> — &quot;your heart was proud because of your beauty; you corrupted your wisdom for the sake of your splendor.&quot; The three corruptions: pride (<em>gabaḥ</em>) because of beauty (<em>yofi</em>), corruption (<em>shihhat</em>) of wisdom because of splendor (<em>yifʾeikha</em>). The sequence — wisdom → beauty → pride → corruption — is Tyre&apos;s tragedy in compressed form.</p>",
+"18": "<p>The profaning of the sanctuaries — <em>merov ʿavoneikha beʿevel rekhullatekha ḥillalta miqdashekha</em> — &quot;by the multitude of your iniquities, in the unrighteousness of your trade, you profaned your sanctuaries.&quot; <em>Ḥillel</em> (piel: profane/defile) applied to one&apos;s own sanctuaries (<em>miqdashekha</em>) — the commercial corruption extended into the sacred sphere. YHWH&apos;s response: <em>vaʾotsaʾ ʾesh mittokekha</em> — &quot;I brought forth fire from your midst&quot; — the fire from within Tyre itself as the agent of self-destruction.</p>",
+"19": "<p>The universal horror conclusion — <em>kol yodeʿeikh baʿammim shamemuʾ ʿaleikha ballahot hayita veʾeynnekha leʿolam ʾad</em> — &quot;all who know you among the peoples are appalled at you; you have become a terror and you shall be no more forever.&quot; The <em>ballahot</em> (terrors) conclusion is the third time this word closes an Ezekiel oracle in chs 26-28 (also 26:21; 27:36), creating a formal refrain of terror and non-existence across the anti-Tyre oracle complex.</p>",
+"20": "<p>Standard word-event formula opens the brief oracle against Sidon (vv20-26). Sidon was Tyre&apos;s neighbor and the older Phoenician city; the pair Tyre-and-Sidon appears frequently in prophetic literature (Isa 23; Jer 27:3; Joel 3:4).</p>",
+"21": "<p>The address to Sidon — <em>sim panekha ʾel-Tsidon vehinave ʿaleha</em> — uses the set-face formula (<em>sim panekha ʾel</em>) that Ezekiel uses for Jerusalem (4:3), the mountains of Israel (6:2), the south (20:46), and Ammon (25:2). The formula marks the prophetic oracle as a directed, intentional divine word.</p>",
+"22": "<p>YHWH&apos;s hostile-presence formula — <em>hinneni ʿaleikh Tsidon venikkabdeti betokhekh</em> — &quot;I am against you, Sidon, and I will be glorified in your midst.&quot; The divine self-glorification (<em>nikkabed</em>, niphal of <em>kavad</em>, be honored/glorified) through judgment is a recurring theme: divine honor is established when divine words are vindicated by events. The recognition formula — <em>veyadeʿu ki ʾani YHWH</em> — follows immediately.</p>",
+"23": "<p>Plague and sword in Sidon&apos;s streets — <em>veshillaḥti vah dever vedam beḥutsoteha venafall ḥalal betokhah baḥerev ʿaleha missaviv</em> — the sword-from-outside and plague-from-within complement each other as siege-weapons. The encircling sword (<em>ʿaleha missaviv</em>) is standard siege-attack language.</p>",
+"24": "<p>The removal of the thorn from Israel&apos;s side — <em>veloʾ yihyeh ʿod lebeit Yisraʾel sillon mamʾir vequts makʾiv mikkol sevivotam habbazim ʾotam veyadeʿu ki ʾani ʾAdanai YHWH</em> — &quot;and for the house of Israel there shall be no more a brier to prick or a thorn to cause pain from all their neighbors who have treated them with contempt.&quot; <em>Sillon mamʾir</em> (pricking brier) and <em>quts makʾiv</em> (painful thorn) are the images for the surrounding hostile nations that perpetually irritate/wound Israel. Their removal is the positive aspect of the OAN judgments.</p>",
+"25": "<p>The gathering and restoration oracle — <em>koh ʾamar ʾAdanai YHWH beqabbetstsi ʾet-beit Yisraʾel min-haʿammim ʾasher nafotsu vam veniqddashti vam leʾeinei haggoyim</em> — &quot;when I gather the house of Israel from the peoples among whom they are scattered, I will manifest my holiness in them before the eyes of the nations.&quot; The gathering-from-the-nations promise echoes 11:17 and 20:34. <em>Veniqddashti vam</em> (I will be sanctified among them) — divine sanctification through the gathered community: the nations&apos; acknowledgment of YHWH comes through his restoration of Israel.</p>",
+"26": "<p>The security of dwelling in the land — <em>veyashvu ʿaleha lavetaḥ uvanu batim venataʿu keramim veyashvu lavetaḥ beʿasoti shefatim bekol-hazim otam missevivotam veyadeʿu ki ʾani YHWH ʾeloheyhem</em> — &quot;they will dwell securely, building houses and planting vineyards; they will dwell securely when I execute judgments against all their neighbors who have treated them with contempt, and they will know that I am YHWH their God.&quot; The covenant-security formula (<em>yashav lavetaḥ</em>, dwell in safety; <em>benot batim</em>, build houses; <em>nataʿ keramim</em>, plant vineyards) is the Deuteronomic covenant-blessing formula. The final <em>veyadeʿu ki ʾani YHWH ʾeloheyhem</em> (they will know that I am YHWH their God) is the only instance in the OAN section where the recognition formula includes <em>ʾeloheyhem</em> (their God) — marking the Sidon oracle as the passage back toward Israel&apos;s restoration.</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', 'ezekiel')
+    merge_comm(existing, NEW)
+    save_comm('mkt-original', 'ezekiel', existing)
+    print('Ezekiel 26-28 mkt-original written.')
 
 if __name__ == '__main__':
     main()

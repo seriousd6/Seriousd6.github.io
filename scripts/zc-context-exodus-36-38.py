@@ -1,45 +1,39 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
-"""
+MKT Context Commentary — Exodus chapters 36–38
+Run: python3 scripts/zc-context-exodus-36-38.py
 
+Ch 36: Execution of tabernacle curtains and structural boards — the construction
+       narrative mirrors the blueprint of chs 25-27 using the same vocabulary.
+       The freewill offerings were so abundant Moses had to restrain them (vv. 4-7).
+Ch 37: Bezalel constructs the ark, mercy seat with cherubim, table with utensils,
+       lampstand — the inner-sanctuary objects — following the blueprint precisely.
+Ch 38: Bronze altar with its grating, the laver from women's bronze mirrors, the court
+       with pillars and hangings, and the final inventory of metals used.
+
+Historical/cultural context:
+- The execution narrative (chs 35-40) deliberately mirrors the blueprint (chs 25-31)
+  using parallel structure to emphasize complete covenant faithfulness.
+- The bronze mirrors donated by the serving women (38:8) are the only material
+  whose provenance is specified as personal sacrifice — the laver that purified
+  the priests was made from women's sacrificed beauty tools.
+- The metal inventory (38:24-31) is a unique ANE sanctuary accounting document
+  providing the exact gold, silver, bronze weights used.
+"""
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,156 +43,132 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
+EXODUS = {
+  "36": {
+    "1": "<p>Bezalel, Oholiab, and every skilled craftsman (<i>kol chakham-lev</i>) in whom YHWH put wisdom to know how to do the work of the sanctuary do 'all that YHWH commanded.' The execution narrative begins by confirming that the Spirit-filled craftsmanship principle (31:1–6) was fully operative. No human instruction manual was needed: the same Spirit who gave Moses the blueprint gave Bezalel the skill to execute it. The verse functions as a title for the entire execution section (chs 36–39).</p>",
+    "2": "<p>Moses summoned Bezalel and Oholiab and every skilled craftsman in whose heart YHWH had put wisdom — everyone whose heart stirred him (<i>kol asher nesa'o libbo*</i>) to come to the work. The dual motivation (divine gifting AND personal willingness) characterizes the tabernacle's human construction team. YHWH did not conscript craftsmen; he gifted and moved people whose hearts were already drawn to the work. Sacred craft is vocation, not coercion.</p>",
+    "3": "<p>Moses gave the craftsmen all the freewill offering materials Israel had brought. The materials collected in 35:21–29 are now transferred to the workers. The pivot from collection to construction marks the shift from community participation to skilled execution. The entire community contributed material; the Spirit-gifted craftsmen converted that material into YHWH's dwelling. Both contributions — the many and the few skilled — were necessary.</p>",
+    "4": "<p>All the skilled craftsmen left their construction work and came to Moses — they were overwhelmed by the abundance of contributions. The workers had to stop work to report to Moses: the people were bringing more than the work required. This is one of the few instances in Scripture where a building campaign was halted because of too much generosity rather than too little. It inverts the typical funding crisis of sacred architecture.</p>",
+    "5": "<p>'The people are bringing more than enough for the service of the work that YHWH has commanded to do.' The crafts teams' report to Moses is a formal logistical statement: the incoming supply exceeds the engineering requirements. The abundance of offering was not merely spiritual generosity but practical surplus — the material specifications were well-defined and the craftsmen knew exactly how much was needed.</p>",
+    "6": "<p>Moses commanded a proclamation throughout the camp: 'Let no man or woman do any more work for the offering of the sanctuary.' The proclamation (<i>qol</i> — voice/announcement) stopped the offering campaign. The act of restraining generosity — a leader telling his people to stop giving — is almost without parallel in ancient temple-building literature. Most ancient building inscriptions emphasize the difficulty of collecting materials; Exodus uniquely records a surplus.</p>",
+    "7": "<p>The available material (<i>hammelakha hayeta dayyam*</i>) was sufficient for all the work, with some to spare. The abundance of Israel's freewill offering is a theological statement: a community that had just escaped slavery in Egypt, carrying away Egypt's wealth (12:35–36), had more than enough to build YHWH's dwelling. The plunder of Egypt became the furnishing of YHWH's sanctuary — the material transferred from the oppressor's economy to the liberated community's worship.</p>",
+    "8": "<p>The skilled craftsmen made the ten curtains of the tabernacle — fine twisted linen with blue, purple, and crimson thread, with cherubim of skilled work. The execution narrative begins with the innermost layer (fine linen curtains) and works outward, following the blueprint of chapter 26. The parallel vocabulary (same Hebrew terms, same specifications) creates a literary mirroring that signals perfect covenant compliance: what was commanded was done exactly as commanded.</p>",
+    "9": "<p>Each curtain: 28 × 4 cubits, all identical. The execution account gives the same measurements as the blueprint (26:2). The repetition is not narrative inefficiency but covenant documentation: every specification was met. Ancient Near Eastern building inscriptions similarly list exact measurements to prove the construction matched the divine or royal mandate.</p>",
+    "10": "<p>Five curtains joined together into one group, and five into another — paralleling the blueprint of 26:3. The modular assembly system (two joined panels of five) was implemented exactly as specified. The joining creates two manageable transport units that assemble into the complete inner ceiling-and-wall covering of the tabernacle.</p>",
+    "11": "<p>Blue loops of fifty on each panel's joining edge — implementing the blueprint of 26:4–5. The fifty-loop count on each panel was precise engineering for the clasping system. Fifty was not an approximate figure; it was the exact count required for the gold clasps to align and join the two panels seamlessly. Perfect count = perfect alignment.</p>",
+    "12": "<p>Fifty loops on one panel and fifty on the other, the loops facing each other. The execution account specifies that the loops faced each other — the technical detail ensuring that the clasps could pass through both sets of loops simultaneously. Even details of orientation were part of the covenant specification.</p>",
+    "13": "<p>Fifty gold clasps joined the loops and the two panels became one. The result: <i>vayhi hamishkan echad</i> — the tabernacle became one. The same unity-word that appears in the blueprint (26:6) reappears in the execution: the design intent (unity) was achieved. The gold clasps are the material expression of the covenant unity they create — the most precious metal joining the panels into the singular dwelling of YHWH.</p>",
+    "14": "<p>Eleven goat-hair curtains for the outer tent, implementing 26:7. The shift from ten fine-linen inner curtains to eleven goat-hair outer curtains follows the blueprint's logic: the extra curtain for the entrance overhang. The construction team's adherence to both count and purpose demonstrates understanding of the design, not mere mechanical replication.</p>",
+    "15": "<p>Each goat-hair curtain: 30 × 4 cubits, all identical. Two cubits longer than the fine-linen curtains (28 cubits) — the extra length that would overhang the rear wall and the entrance. The dimensional engineering served the protective function of the outer layer: complete coverage of the inner tent. The craftsmen built to specification knowing why each measurement mattered.</p>",
+    "16": "<p>Five curtains joined separately, six separately — the asymmetric grouping of 26:9. The six-curtain panel's extra curtain would be folded double at the entrance (26:9), creating the entrance vestibule. The craftsmen implemented this asymmetry deliberately because the blueprint required it — they understood the design's entrance-covering function.</p>",
+    "17": "<p>Fifty loops on each outer panel's joining edge — fifty on the edge of one and fifty on the edge of the other. The goat-hair outer tent used the same fifty-loop system as the inner fine-linen tent, maintaining engineering consistency across layers. The parallel construction systems (inner and outer) could be assembled and disassembled by the same protocol.</p>",
+    "18": "<p>Fifty bronze clasps for the outer tent — contrasting with the fifty gold clasps of the inner. The material shift (gold inside, bronze outside) follows the holiness-gradient principle: the inner space demands the most precious clasps; the outer weather-covering uses the sturdy outdoor metal. The number (fifty) is identical; the material marks the spatial distinction.</p>",
+    "19": "<p>Ram-skin coverings dyed red and tachash-skin coverings for the outermost layers. These functional waterproofing layers are made exactly as specified (26:14). The execution account, even for the least glamorous and least visible elements (buried under tent, never seen in use), confirms they were made exactly to specification. Every layer of the tabernacle — even the one covered by rough hide — was made as YHWH commanded.</p>",
+    "20": "<p>The acacia-wood standing boards (<i>qerashim</i>), upright. The structural frame construction begins here. The acacia boards are the skeleton of the tabernacle — everything else hangs on or covers them. Bezalel and his team had to source, season, and plane acacia timber from the Sinai wilderness, then shape each board to exact dimensions with two precisely spaced tenons per board. The construction required both foresty and finish carpentry skills.</p>",
+    "21": "<p>Each board: 10 cubits × 1.5 cubits. The exact dimensions of the blueprint (26:16). Forty boards for the two long walls plus eight for the rear wall = 48 boards total, each 10 × 1.5 cubits of acacia. The material volume — approximately 720 cubic cubits of dense acacia wood — represents a significant timber-gathering operation in a region where large trees are scarce.</p>",
+    "22": "<p>Two tenons (<i>yadot</i>) per board for fitting into the sockets — identical to the blueprint (26:17). The tenon-and-socket joint required precision: tenons sized to fit the silver socket mortises exactly, with enough tolerance for assembly but tight enough to prevent wobble. The metalworking and woodworking crews had to coordinate: socket dimensions set the tenon size, or vice versa.</p>",
+    "23": "<p>Twenty boards for the south side of the tabernacle. The south wall required twenty boards × 1.5 cubits = 30 cubits of wall. The execution matches the blueprint (26:18). Twenty boards, each requiring two tenons and two sockets, meant forty silver sockets for the south wall alone — a significant silver commitment from the ransom-tax collection.</p>",
+    "24": "<p>Forty silver sockets (<i>adanim</i>) under the twenty boards — two per board. The silver sockets were the foundation — hidden underground, supporting everything above. The word <i>adanim</i> is related to <i>adon</i> (lord/master), suggesting the sockets are the 'masters' or foundational supports. The foundation of YHWH's dwelling rested on silver that came from the ransom paid for every Israelite life (30:12–16; 38:25–28).</p>",
+    "25": "<p>Twenty boards for the north side with forty silver sockets — precisely mirroring the south. The bilateral symmetry of the tabernacle's long walls was both aesthetically and structurally intentional. The same crew made both walls using the same jigs and templates, ensuring that the assembled structure would be geometrically regular.</p>",
+    "26": "<p>Two sockets under each board — the same detail repeated for every wall to ensure no socket was omitted. The execution account's repetition of the two-per-board detail for each wall functions as a completeness check: no board was left unanchored. A single missing socket would have destabilized the entire wall section.</p>",
+    "27": "<p>Six boards for the rear (west) wall. Six boards × 1.5 cubits = 9 cubits. The shorter rear wall (9 cubits vs. 30-cubit side walls) accommodated the corner boards of vv. 28–30 to reach the full 10-cubit interior width. The rear wall construction required the most complex joinery — the corner boards bridging the rear and side walls.</p>",
+    "28": "<p>Two corner boards for the rear corners of the tabernacle. The corner boards had to fit into both the rear-wall board line and the side-wall board line — a structural challenge requiring precision at the junction. The two corner boards completed the rectangular enclosure, giving the tabernacle its four fully enclosed sides.</p>",
+    "29": "<p>The corner boards were matched at the bottom and joined at the top with a single ring. The ring-and-joint system of the blueprint (26:24) was implemented: the corner boards were structurally coupled to resist spreading. The single ring at the top unified what was two separate boards at the bottom, reflecting the tabernacle's broader principle: joined elements create unity (cf. the gold clasps uniting the curtain panels).</p>",
+    "30": "<p>Eight boards total for the rear wall with sixteen silver sockets — two per board. The eight boards (six primary + two corner) required sixteen sockets. The silver socket count for the rear wall was smaller than for the side walls (sixteen vs. forty) but used the same construction logic: silver foundation, acacia frame above.</p>",
+    "31": "<p>Five acacia-wood crossbars for the south side. The crossbars stabilized the twenty standing boards laterally, preventing the wall from racking under the curtain tension and wind loading. Five bars × 30-cubit wall = the same bar-to-span ratio for all walls (20 boards / 5 bars = one bar every four boards).</p>",
+    "32": "<p>Five crossbars for the north side, five for the rear wall — completing the three-wall lateral bracing system. Each set of five crossbars created a rigid truss-like panel. The middle bar of each set passed through the full length of the wall (26:28), while the four flanking bars were shorter. The middle bar was the primary structural member.</p>",
+    "33": "<p>The middle crossbar passing through the middle of the boards from end to end — the structural spine of each wall, overlaid with gold (v. 34). The middle bar's continuous run from corner to corner made each wall a single rigid unit. Without it, the boards would function as independent columns with only their sockets holding them in alignment; with it, they act as a monolithic wall panel.</p>",
+    "34": "<p>Gold overlay on the boards, gold rings for the crossbars, and gold overlay on the crossbars. The execution matches the blueprint (26:29). Every interior-facing surface of the structural elements was gold-covered. The tabernacle's interior was entirely golden — golden boards for walls, golden overlaid bars, golden rings, golden furnishings. Walking into the holy place was entering a room of gold.</p>",
+    "35": "<p>The inner veil (<i>parokhet</i>) of blue, purple, crimson, and fine linen with cherubim — the work of a skilled craftsman (<i>ma'aseh choshev</i>). The blueprint specified this weave-grade (26:31) and the execution delivered it. The cherubim woven into the inner veil made the boundary between the holy place and the most holy place a visual continuation of the cherubim above the ark — the guardian figures marked every threshold of divine nearness.</p>",
+    "36": "<p>Four gold-overlaid acacia pillars with gold hooks set in four silver sockets for the inner veil. The four pillars (vs. five for the entrance screen) are positioned at the one-third mark of the tabernacle's interior length, dividing the 30-cubit space into a 20-cubit holy place and a 10-cubit most holy place. The silver sockets ground the veil's pillars in the ransom-foundation; the gold hooks connect it to the ceiling of gold.</p>",
+    "37": "<p>The entrance screen (<i>masakh</i>) of blue, purple, crimson, and fine linen — the work of an embroiderer (<i>ma'aseh roqem</i>). The embroidered entrance screen (lower craft grade than the cherubim-woven inner veil) was hung on five gold-overlaid acacia pillars with gold hooks in five bronze sockets. The shift to bronze sockets at the entrance marks the transition from the inner sacred space to the threshold between holy and common — the point where any approaching priest made the first spatial crossing into YHWH's domain.</p>",
+    "38": "<p>Five pillars with gold hooks and gold-overlaid tops (<i>rashehem*</i>), with five bronze sockets. The entrance pillars' bronze sockets (vs. the inner veil's silver sockets) continue the material-gradient logic. Gold caps the pillars visually; bronze grounds them practically. The entrance was both beautiful (gold above) and functional (bronze below) — accessible to priestly service without compromising the inner zone's silver-and-gold standard.</p>"
   },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
+  "37": {
+    "1": "<p>Bezalel made the ark (<i>ha'aron</i>) — 2.5 × 1.5 × 1.5 cubits — of acacia wood. Bezalel is named as the ark's maker in the execution account, the only craftsman specifically named for a specific object. His name means 'in the shadow of God,' and the object he personally made is the one over which the divine shadow rests — the ark covered by the mercy seat where YHWH's glory dwelt. The naming is deliberate: the Spirit-filled craftsman and the Spirit-indwelt object belong together in the narrative.</p>",
+    "2": "<p>Gold overlay inside and out with a golden crown border. The execution replicates the blueprint exactly (25:11). The inside of the ark — never seen by any human after the mercy seat was placed on it — was overlaid with gold, an act of workmanship that had no human audience. The inner gold was made for YHWH alone. This is perhaps the most striking expression in the tabernacle narrative of work done entirely coram Deo — in the sight of God without human witness.</p>",
+    "3": "<p>Four gold rings cast for the ark's four feet, two per side. The rings were cast (<i>yatzaq</i> — to pour/cast metal) rather than hammered — indicating that the ring-forming process involved molten gold poured into molds. The casting technique produced the consistent ring geometry needed for the poles to slide in and out smoothly for transport.</p>",
+    "4": "<p>Acacia-wood poles overlaid with gold for carrying the ark. The poles were made separate from the ark body and inserted into the rings. The carrying system's design — two men per pole, one pole per side — meant the ark could be transported by four Levites without any of them touching the ark itself. The poles mediated the gap between human hands and the sacred object.</p>",
+    "5": "<p>The poles inserted in the rings on the two sides for carrying. The execution account confirms the ring-and-pole assembly was completed. The permanent nature of the poles (25:15 — 'they shall not be taken from it') means the ark was never without its transport infrastructure. Even in the most holy place in the Jerusalem temple (1 Kgs 8:8), the poles remained — visible reminders of YHWH's character as the God who accompanies his people on the move.</p>",
+    "6": "<p>The mercy seat (<i>kaporet</i>) — 2.5 × 1.5 cubits of pure gold. The mercy seat was made separately and placed on top of the ark (v. 9). Pure gold, hammered to form a slab matching the ark's top dimensions exactly. The <i>kaporet</i> was the most expensive object in the tabernacle per unit area — solid gold throughout, no acacia core — because the place of atonement could bear no impure material at its center.</p>",
+    "7": "<p>Two hammered-gold cherubim at the two ends of the mercy seat. 'Hammered' (<i>mikshah</i>) indicates the cherubim were formed by the metalsmith's hammer from a solid gold sheet or ingot — not cast. The beating-out technique required exceptional skill: the complex three-dimensional form of the cherubim (wings, faces, bodies) had to be shaped entirely by hand from a single piece of gold without seams or joins.</p>",
+    "8": "<p>One cherub at each end, emerging from the mercy seat (<i>mikanda*</i>). The cherubim were formed integrally from the mercy seat material — the atonement cover and its guardian figures are one object. In ANE iconography, cherubim flanking a throne or sacred object were standard. YHWH's throne-room design placed the guardian figures not to the sides but as integral parts of the throne's surface, emerging from the place of atonement itself.</p>",
+    "9": "<p>The cherubim spread their wings upward, shielding the mercy seat, their faces toward each other and toward the mercy seat. The posture precisely implements the blueprint (25:20). The cherubim's downward gaze toward the mercy seat directs the viewer's attention to the same point — the place where blood was applied on Yom Kippur, the place where YHWH communicated with Moses, the place where the covenant demands and divine mercy converged.</p>",
+    "10": "<p>The table (<i>shulchan</i>) — 2 × 1 × 1.5 cubits of acacia, gold-overlaid with a golden crown border. Bezalel (or his team) made the table according to 25:23–30. The table's proportions (2:1:1.5) match the ark's width-to-length ratio but in a smaller scale. The crown border on the table, like those on the ark and incense altar, identifies it as a throne-room object.</p>",
+    "11": "<p>Gold overlay and golden crown border, implementing 25:24. The table's gold overlay on all surfaces (including the bottom, unseen in use) followed the same principle as the ark: every surface was gold because the work was for YHWH, not for human display. The standard of workmanship was not calibrated to what worshipers would see but to what YHWH would inhabit.</p>",
+    "12": "<p>The frame/molding (<i>misgeret*</i>) of a handsbreadth around the table with a golden crown on the frame. The practical function (retaining the showbread) was executed with the same decorative quality as all other table elements. In sacred architecture, the functional and the beautiful were never separated: every utilitarian element was crafted to the same standard as the purely decorative.</p>",
+    "13": "<p>Four gold rings cast for the table, one per corner. The table's transport system mirrors the ark's (and the incense altar's and the bronze altar's): rings cast into the object's structure, poles inserted for Levitical carrying. The consistency of transport design across all sanctuary objects enabled the Levites to develop a single set of carrying protocols applicable to all objects.</p>",
+    "14": "<p>The rings positioned close to the frame, to hold the carrying poles. The ring placement (near the frame rather than at the legs) meant the poles ran beneath the tabletop, keeping the table balanced during transport. The center-of-gravity engineering of the pole placement shows that the sanctuary's designers considered practical transport physics as part of the sacred design.</p>",
+    "15": "<p>Acacia-wood poles overlaid with gold for carrying the table. Every set of carrying poles in the sanctuary was gold-overlaid — the transport infrastructure was as precious as the objects it carried. The poles were not utility tools that happened to serve sacred objects; they were sacred objects themselves, part of the sanctuary's total material economy.</p>",
+    "16": "<p>The table's utensils — plates, dishes, jugs, and bowls for pouring libations — all of pure gold. The service vessels (25:29) were made to specification. The full gold-utensil suite meant every interaction with the showbread (setting, removing, libating) was conducted with objects of the same material quality as the table itself. The service of the bread-of-presence was conducted entirely in gold.</p>",
+    "17": "<p>The lampstand (<i>menorah</i>) of pure hammered gold (<i>zahav tahor mikshah</i>): shaft, base, branches, cups, calyxes, and petals all in one piece. The lampstand was the most technically demanding object in the entire sanctuary — hammered from a single mass of gold (25:31) into a seven-branched form with seventeen decorative cup-calyx-petal units. No molds, no joins, no assembly: one piece of beaten gold shaped into botanical complexity.</p>",
+    "18": "<p>Six branches from the lampstand's sides — three on each side. The six branches plus the central shaft = seven lamps. The seven-lamp design was not arbitrary: seven is the number of completeness/perfection in Hebrew symbolism (Gen 2:2; Rev 1:20), and the seven flames burning in the holy place represented the completeness of divine illumination in YHWH's dwelling.</p>",
+    "19": "<p>Three almond-blossom cups per branch — calyx and petal — for each of the six branches. The detailed botanical vocabulary (gevia'im meshukadim — almond-shaped cups, kaphtor — calyx, perach — petal/flower) reflects precise design language. The almond-blossom motif connected the lampstand to themes of divine watchfulness and priestly legitimacy (cf. Aaron's almond-blossoming staff in Num 17:8, which confirmed Levitical election).</p>",
+    "20": "<p>Four almond-blossom cups on the central shaft — one more than each branch — establishing the shaft's dominance in the design. The central shaft's extra cup meant it bore the greatest decorative elaboration, visually identifying it as the trunk from which the six branches grew. The arboreal design (trunk with branches, botanical decorations) made the lampstand a stylized tree — evoking Eden's tree of life in the sanctuary's most light-giving object.</p>",
+    "21": "<p>One calyx under each pair of branches — three calyxes marking the three branching points along the shaft. The structural calyxes (different from the decorative cup-calyxes on the branches) served as visual brackets at each point where two branches met the shaft. They formalized the junction points, giving the lampstand a rhythmic visual structure from bottom to top.</p>",
+    "22": "<p>The calyxes and branches were one piece with the shaft — all of pure gold. The unity of construction is reiterated (as in the blueprint, 25:36). The lampstand was an engineering marvel precisely because of this unity requirement: modern artisans would build it from joined parts; the Sinai lampstand was hammered from one ingot. The artisan who made it worked within the constraints of a single material mass, requiring extraordinary three-dimensional metalsmithing skill.</p>",
+    "23": "<p>The seven lamps made, with their tongs and fire-pans, all of pure gold. The maintenance tools were completed to specification (25:38). Seven lamps for the seven branches — the number of flames in YHWH's holy place equal to the number of days in the week, equal to the number of completeness. The tongs and fire-pans of pure gold for daily lamp maintenance: even routine sanctuary tasks used the most precious materials.</p>",
+    "24": "<p>One talent of pure gold for the lampstand and all its utensils. One talent = approximately 34 kg of gold. This single weight represents the lampstand's material cost, separate from all other gold used in the tabernacle. The talent-measure confirms that the lampstand was not simply heavy but precisely heavy — its material was weighed and accounted for in the final inventory (38:24).</p>",
+    "25": "<p>The incense altar (<i>mizbach hamiqtar</i>) of acacia wood — 1 × 1 × 2 cubits — with integral horns. The incense altar's construction (following the ark, table, and lampstand) completes the inner-sanctuary furniture set. Its square, proportioned form (1:1:2) and integral horns match the blueprint of 30:1–5. The incense altar was the daily-ministry object that came closest to the veil — positioned before the veil, between the lampstand and the table, at the threshold of the most holy place.</p>",
+    "26": "<p>Gold overlay on its top, sides, and horns, with a golden crown border. The full gold treatment (including the horns where blood was applied) confirmed that the incense altar's holiness-grade was 'most holy' (30:10). The golden crown on the incense altar matched those on the ark and table — the three crowns of the sanctuary's innermost furnishings, marking the complete set of crowned objects in YHWH's holy place.</p>",
+    "27": "<p>Two gold rings below the crown on opposite sides for the carrying poles. The incense altar's transport system mirrors all other sanctuary objects: rings cast for poles. The two-ring system (rather than the four rings of the ark and table) reflects the incense altar's narrower body — two rings, one per side, sufficed for stable carrying of the smaller object.</p>",
+    "28": "<p>Acacia-wood poles overlaid with gold for the incense altar. The standard pole construction (same as all other sanctuary objects) confirms that the incense altar was fully integrated into the tabernacle's transport system. No object was excluded from the mobility principle — every furnishing had its poles ready.</p>",
+    "29": "<p>Bezalel made the anointing oil and the pure fragrant incense — the work of a perfumer (<i>ma'aseh roqeach*</i>). The perfumery skill required for the five-spice anointing oil and four-spice incense formula was a distinct craft from metalworking and weaving. Bezalel's Spirit-gifting explicitly included 'all crafts' (31:5), encompassing this specialized work. The incense and oil sealed the sanctuary's full sensory engagement: sight (gold, colors, light), smell (incense), touch (anointing) all came from Bezalel's workshop.</p>"
   },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
-  },
-  "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
+  "38": {
+    "1": "<p>The altar of burnt offering (<i>mizbach ha'olah</i>) — 5 × 5 × 3 cubits of acacia wood. The bronze altar was the largest and most physically imposing object in the sanctuary compound, stationed at the entrance to the court. Its construction followed the blueprint of 27:1–8 exactly. The acacia wood, though eventually overlaid with bronze, had to withstand the thermal stresses of an outdoor fire altar; the hollow construction (27:8) provided structural flexibility.</p>",
+    "2": "<p>Four horns at the four corners formed from the altar itself — bronze-overlaid with all altar surfaces. The horns are the altar's most theologically charged features: blood of the sin offering was applied to the horns (29:12); Aaron's sons carried the blood into the tent and applied it first to the incense altar's horns on Yom Kippur (30:10). The four-directional horns of the bronze altar were the meeting-point of sacrifice and atonement in Israel's public worship.</p>",
+    "3": "<p>All the altar's utensils — pots, shovels, basins, forks, fire-pans — all of bronze. The complete service set for the altar implemented 27:3. Bronze was the practical choice for objects exposed to fire, ash, blood, and weather: harder and more durable than any alternative available to ancient smiths, and resistant to the chemical effects of repeated high-temperature use.</p>",
+    "4": "<p>A bronze grating of network (<i>mikhbar ma'aseh resheth nechoshet</i>) under the altar's ledge, reaching halfway up the 3-cubit height. The grating implemented 27:4–5. The bronze mesh platform served as the combustion surface — sacrificial animals and grain placed on the grating, ash falling below, airflow maintained from beneath. The network construction (interlaced bronze rods) provided strength while allowing the necessary air circulation for sustained combustion.</p>",
+    "5": "<p>Four rings cast at the four corners of the bronze grating for the carrying poles. The rings on the grating (not on the altar body) meant the grating was the structural load-bearer for transport. When the Levites carried the altar, they lifted from the grating-rings, not from the altar's outer bronze surface. The engineering distributed the carrying load to the strongest structural element.</p>",
+    "6": "<p>Acacia-wood poles overlaid with bronze — bronze rather than gold for the altar's poles, following the holiness-gradient. The altar's poles are the only carrying poles in the sanctuary not overlaid with gold. Bronze poles for the bronze altar, gold poles for the gold-interior objects — the material consistency extended even to the transport infrastructure.</p>",
+    "7": "<p>The poles inserted through the grating-rings on the two sides of the altar for carrying. The carrying system implemented 27:6–7. The poles running through the grating rings meant the altar hung between the poles during transport — a suspension carry that balanced the hollow bronze structure without stressing any single point of the altar body.</p>",
+    "8": "<p>The bronze laver (<i>kiyyor nechoshet</i>) and its bronze stand, made from the bronze mirrors (<i>mar'ot hatzove'ot</i>) of the serving women (<i>hatzove'ot asher tzav'u*</i>) at the entrance of the tent of meeting. This is one of the most striking verses in the construction account: the laver — the purification vessel where priests washed before serving — was made from mirrors donated by women who served at the sanctuary entrance. Their sacrificed beauty-tools became the purification source for all priestly ministry. The laver reflects both literally (it was made from mirrors) and metaphorically: the priest who washed in it saw himself reflected in the very material of the women's devotion.</p>",
+    "9": "<p>The court hangings for the south side — 100 cubits of fine twisted linen with twenty pillars and twenty bronze sockets, silver hooks and bands. The court construction implemented 27:9–10. The fine linen of the court hangings (the same material as the innermost tent curtains) elevated the public space of the sanctuary: even Israel's approach route was curtained in royal-quality fabric. The boundary between the camp and the sacred compound was itself a threshold of beauty.</p>",
+    "10": "<p>Their twenty pillars and twenty bronze sockets with silver hooks and bands on the pillars. The detailed material specification for the court pillars follows 27:10 exactly. The silver decorative elements on bronze-socketed pillars embodied the court's intermediate holiness grade — not as precious as the inner tent's gold-and-silver, but not common either. The visible silver (hooks and bands) marked the court pillars as sacred boundary-markers.</p>",
+    "11": "<p>The north side: 100 cubits with twenty pillars, twenty bronze sockets, silver hooks and bands — identical to the south. The bilateral symmetry of the court's long walls created an enclosure that was consistent from all approach angles. Whether an Israelite approached the court from the east (the front entrance), circled to the south, or came from the north, the same pillar-with-silver-banding greeted them at the boundary of the sacred space.</p>",
+    "12": "<p>The west end (50 cubits): ten pillars with ten sockets, silver hooks and bands. The shorter west wall maintained the same material standard as the long walls (silver hooks and bands, bronze sockets) while halving the pillar count proportionally to the shorter span. The west wall's backing position — facing away from the camp's approach — received the same workmanship as the more visible east and long sides.</p>",
+    "13": "<p>The east end (50 cubits): the entrance side. Unlike the west end, the east is specified as the <i>mizrach</i> (sunrise side) — the front-facing side toward which the camp looked. The east orientation of the sanctuary entrance was not arbitrary: it placed Israel's approach toward the rising sun (and, in the exodus context, toward Egypt in the west). Approaching the sanctuary from the east was approaching from the direction of the created order's daily renewal.</p>",
+    "14": "<p>Fifteen cubits of hangings on one side of the gate entrance (south flank) with three pillars and three sockets. The gate flanks implemented 27:14. The gate's south flank of fifteen cubits, with three pillars at five-cubit intervals, maintained the same spacing as the long walls. From the camp's approach, the gate opening was flanked by matching panels of fine linen, framing the entrance as a deliberate threshold rather than a gap in the enclosure.</p>",
+    "15": "<p>The same on the other side (north flank): fifteen cubits, three pillars, three sockets. The symmetry of the gate flanks (15+15) with the twenty-cubit gate screen between them balanced the fifty-cubit east wall. The symmetric flanking panels made the gate a centered architectural feature — the east wall was not a wall with a door but an entrance design centered on an axis.</p>",
+    "16": "<p>All the hangings around the court were of fine twisted linen. The material uniformity of the court's boundary — fine linen throughout — meant the entire sacred perimeter was of the same fabric as the innermost sanctuary walls. From outside, the court looked like a field of white linen (fine linen undyed was white); from inside, the priest serving at the altar was enclosed in the same material as the tabernacle. The court was not a lesser space but a continuous extension of the sanctuary's fabric.</p>",
+    "17": "<p>The pillar sockets were bronze, the hooks and bands were silver, the pillar tops (<i>tzippui rashehem*</i>) gold-overlaid. This is the only verse describing gold on the court pillars — the gold-overlaid tops were not mentioned in the blueprint (27:10–17), but their execution adds a detail: the topmost visible element of each court pillar was golden. The pillars thus embodied the full material hierarchy in a single object: bronze foot, silver body, gold crown — ground-level common, middle sacred, top most precious.</p>",
+    "18": "<p>The gate screen of twenty cubits — blue, purple, crimson, and fine linen, the work of an embroiderer — with four pillars and four sockets of bronze, silver hooks and gold-overlaid tops. The gate screen's four sacred colors matched the tabernacle's entrance screen and inner veil, making the court entrance visually continuous with the inner sanctuary's threshold elements. The embroidered gate screen was the first sacred object an Israelite saw when approaching the sanctuary — it communicated that crossing this threshold meant entering YHWH's domain.</p>",
+    "19": "<p>Their four pillars, four sockets of bronze, silver hooks, and silver bands on the tops. The gate screen's four pillars (vs. five for the tabernacle entrance, three per gate flank) were the public face of the sanctuary's most accessible threshold. The gate screen's pillar count (four) signals that this threshold, while the most public, was also the most liminal — four is the number of the earth's directions, and the gate was where all directions of Israel's camp converged.</p>",
+    "20": "<p>All the pegs of the tabernacle and the court all around — bronze. The tent pegs that anchored the guy-ropes of the entire structure were all bronze. The pegs were the most unglamorous and most essential hardware of the sanctuary: driven into the desert ground, bearing the tension loads of the curtain walls and roof, invisible in use. Bronze's hardness made it ideal for ground penetration without buckling — the same practical logic that made bronze the altar metal.</p>",
+    "21": "<p>This is the inventory (<i>pekudei</i>) of the tabernacle — the tabernacle of the testimony — as it was counted (<i>poked*</i>) at Moses's command, by the work of the Levites under the direction of Ithamar son of Aaron the priest. The sanctuary accounts were maintained by the Levites under priestly oversight — a formal accounting of all materials used. This inventory is the ancient world's equivalent of a post-construction audit: materials in, materials used, balance accounted. The tabernacle is perhaps the best-documented sacred construction project in ancient Near Eastern literature.</p>",
+    "22": "<p>Bezalel son of Uri son of Hur of the tribe of Judah made all that YHWH commanded Moses. The summary of Bezalel's work gives his full genealogy — son, grandfather, tribe. The triple genealogy for the master craftsman elevates him to the same documentary status as a king or high priest in biblical genealogical practice. Bezalel's lineage is recorded because his vocation was as significant as any royal or priestly appointment in Israel's history.</p>",
+    "23": "<p>Oholiab son of Ahisamach of the tribe of Dan — engraver, designer, embroiderer in blue, purple, and crimson and fine linen. Oholiab is the designer-decorator whose specific skills (engraving, artistic design, embroidery) complemented Bezalel's metalworking and construction skills. Dan and Judah together — the northern extreme and the royal southern tribe — built the sanctuary together. The tabernacle was not a Judahite project but an all-Israel work.</p>",
+    "24": "<p>All the gold used for the work — all the wave-offering gold — 29 talents and 730 shekels by the sanctuary shekel. Approximately 1,000 kg of gold. This is one of the few ancient sanctuaries with surviving material cost documentation. The gold figure (29 talents + 730 shekels) was the total wave-offering gold — the voluntary contribution from Israel's post-exodus plunder. The entire gold economy of the tabernacle came from the freewill gifts of a newly freed people.</p>",
+    "25": "<p>The silver from the community census: 100 talents and 1,775 shekels by the sanctuary shekel. The 100 talents of silver came from the census ransom-tax (30:12–16): 603,550 males × half a shekel = 301,775 shekels = approximately 100 talents and 1,775 shekels. The census count embedded in the silver total confirms the population figure of Numbers 1: the silver material record and the census record cross-validate each other.</p>",
+    "26": "<p>A beka per person — half a shekel by the sanctuary shekel — from everyone who crossed over into the counted, twenty years and older, 603,550 men. The beka-per-person rate (half a shekel = one beka) confirms that every counted male paid exactly the same amount. The silver foundation of the tabernacle thus preserved, in its very material, the record of every Israelite man who crossed from Egypt to Sinai: the sanctuary was built on the ransom of every named life.</p>",
+    "27": "<p>100 talents of silver for casting the 100 sockets of the sanctuary and the 100 sockets of the veil — one talent per socket. The one-talent-per-socket rate was precise: 100 sockets, 100 talents, one-to-one. The silver sockets were identical in weight, confirming that each was made to the same specification. The architectural foundation of YHWH's dwelling required exactly as much silver as was collected from the census ransom — a perfectly calibrated covenant economy.</p>",
+    "28": "<p>1,775 shekels of silver for the pillar hooks, gold-overlaid tops, and bands. The remaining silver after the socket-casting (1,775 shekels from the census surplus) was used for the visible decorative elements of the court pillars. The census surplus — the fraction of shekels above the 100 talents — was not wasted but applied to the court's visible beauty. Every shekel of ransom silver found its place in YHWH's dwelling.</p>",
+    "29": "<p>The bronze wave-offering: 70 talents and 2,400 shekels. Approximately 2,400 kg of bronze — the largest single-metal quantity by weight in the tabernacle, concentrated in the outer court (altar, laver, sockets, pegs). The high bronze weight reflects the court's construction requirements: the altar alone (5 × 5 × 3 cubits of bronze-covered framework plus grating) required substantial metal, and the 96 court pillar sockets plus the tent pegs added significantly to the total.</p>",
+    "30": "<p>The bronze used for: the entrance sockets of the tent of meeting, the bronze altar with its bronze grating, all the altar's utensils, the court sockets all around, the court gate sockets, and all the tabernacle pegs and court pegs. The comprehensive itemization of bronze applications closes the metal inventory with an exhaustive list: nothing was omitted, nothing unaccounted. The tabernacle's material transparency — full accounting of every metal in and its application — is itself a statement about the character of YHWH's economy: nothing is hidden, everything is accounted for.</p>",
+    "31": "<p>The court pegs and all the pegs of the tabernacle surrounding the court. This final inventory line closes the construction accounts of chapters 36–38. The pegs — the most humble, most functional, least visible elements of the entire sanctuary — receive the same accounting as the ark and the lampstand. In YHWH's building, the pegs that held the tent in the desert wind mattered as much as the gold that covered the ark. Nothing in the covenant economy was too small to count.</p>"
   }
 }
 
 def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
+    existing = load_comm('mkt-context', 'exodus')
+    merge_comm(existing, EXODUS)
+    save_comm('mkt-context', 'exodus', existing)
+    print('Exodus 36-38 mkt-context written.')
+    import pathlib
+    out = json.loads((ROOT / 'data/commentary/mkt-context/exodus.json').read_text())
+    il = json.loads((ROOT / 'data/interlinear/exodus.json').read_text())
+    all_ok = True
+    for ch in range(36, 39):
+        ck = str(ch)
+        missing = set(il.get(ck, {}).keys()) - set(out.get(ck, {}).keys())
+        if missing:
+            print(f'ch {ch} STILL MISSING: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'ch {ch}: complete ({len(out.get(ck, {}))} verses)')
+    if all_ok:
+        print('All verses present.')
 
 if __name__ == '__main__':
     main()

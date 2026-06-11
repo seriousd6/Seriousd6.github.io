@@ -20,7 +20,7 @@ import {
   wireRefLinks, wireRefEl, applyHighlights, applyBookmarks, autoTagRefs,
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
-import { getParallelsEnabled, injectAllParallelPanels, applyParallelPagination } from './parallels.js';
+import { getParallelsEnabled, refreshEchoesPanel } from './parallels.js';
 import {
   getInterlinearEnabled, injectAllInterlinearRows
 } from './interlinear.js';
@@ -205,18 +205,33 @@ export function injectComparePanel(groups, cmpVer, resultsEl) {
       });
       applyHighlights(grid);
       wireVerseNumberPopup(grid);
-      var attr = ATTRIBUTION[cmpVer];
-      if (attr) {
-        var attrEl2 = document.createElement('p');
-        attrEl2.className = 'reader-result-group__attr';
-        attrEl2.textContent = attr;
-        grid.after(attrEl2);
+      var attrA = ATTRIBUTION[primaryVer] || '';
+      var attrB = ATTRIBUTION[cmpVer] || '';
+      if (attrA || attrB) {
+        var splitAttr = document.createElement('div');
+        splitAttr.className = 'reader-compare-attr';
+        var cellAttrA = document.createElement('div');
+        cellAttrA.className = 'reader-compare-attr__cell reader-compare-attr__cell--a';
+        cellAttrA.innerHTML = attrA;
+        var cellAttrB = document.createElement('div');
+        cellAttrB.className = 'reader-compare-attr__cell reader-compare-attr__cell--b';
+        cellAttrB.innerHTML = attrB;
+        splitAttr.appendChild(cellAttrA);
+        splitAttr.appendChild(cellAttrB);
+        grid.after(splitAttr);
       }
     }).catch(function () {
       grid.querySelectorAll('.reader-compare-cell--b').forEach(function (cell) {
         cell.classList.remove('reader-compare-cell--loading');
         cell.innerHTML = '<span class="reader-compare-unavail">—</span>';
       });
+      var attrFallback = ATTRIBUTION[primaryVer] || '';
+      if (attrFallback) {
+        var attrEl2 = document.createElement('p');
+        attrEl2.className = 'reader-result-group__attr';
+        attrEl2.innerHTML = attrFallback;
+        grid.after(attrEl2);
+      }
     });
   });
 }
@@ -398,7 +413,7 @@ export function initReaderLookup() {
 
         var attrEl = document.createElement('p');
         attrEl.className  = 'reader-result-group__attr';
-        attrEl.textContent = ATTRIBUTION[ver] || '';
+        attrEl.innerHTML = ATTRIBUTION[ver] || '';
         attrEl.hidden = !!(g.ref.v && !g.ref.endV);
         groupEl.appendChild(attrEl);
 
@@ -468,7 +483,7 @@ export function initReaderLookup() {
 
       if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
       if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
-      if (getParallelsEnabled()) { applyParallelPagination(resultsEl); injectAllParallelPanels(resultsEl); }
+      if (getParallelsEnabled()) refreshEchoesPanel();
 
       _historyPush(q, ver);
       _recordReadingDay();
@@ -1701,15 +1716,41 @@ export function initCommModeToggle() {
       _activateCommMode();
     }
   });
+
+  // INTENT: Expose _deactivateCommMode so parallels.js can enforce mutual exclusion
+  //   without a circular import — parallels calls this when turning parallels ON.
+  // CHANGE? If _deactivateCommMode is renamed, update this assignment and the
+  //   window._readerDeactivateComm call in parallels.js initParallelToggle.
+  // VERIFY: Enable Commentary, then click Parallels — Commentary should deactivate.
+  window._readerDeactivateComm = _deactivateCommMode;
+}
+
+function _syncCommGridPage(groupEl) {
+  var grid = groupEl.querySelector('.reader-comm-grid');
+  if (!grid || !grid._verseData) return;
+  // Sync verse cell visibility to match current pagination state of each span
+  grid.querySelectorAll('.reader-comm-cell--verse').forEach(function (cell) {
+    var idx = parseInt(cell.dataset.commIdx, 10);
+    if (!isNaN(idx) && grid._verseData[idx]) {
+      cell.style.display = grid._verseData[idx].span.style.display;
+    }
+  });
+  _rebuildCommCells(grid);
 }
 
 function _activateCommMode() {
   var parsed = _readerPanelParsed;
   if (!parsed || !parsed.bookId) return;
 
+  // Mutual exclusion: turn parallels (echoes panel) off before activating commentary.
+  if (window._readerTurnOffParallels) window._readerTurnOffParallels();
+
   var btn = document.getElementById('reader-comm-toggle');
   if (btn) btn.setAttribute('aria-pressed', 'true');
   try { localStorage.setItem('bsw_reader_comm_mode', '1'); } catch (e) {}
+
+  // Let the pagination system sync commentary grids on page change
+  window._readerOnPageChange = _syncCommGridPage;
 
   var layout = document.querySelector('.reader-layout');
   if (layout) layout.classList.add('reader-layout--comm-mode');
@@ -1733,6 +1774,8 @@ function _deactivateCommMode() {
   var btn = document.getElementById('reader-comm-toggle');
   if (btn) btn.setAttribute('aria-pressed', 'false');
   try { localStorage.setItem('bsw_reader_comm_mode', '0'); } catch (e) {}
+
+  window._readerOnPageChange = null;
 
   var layout = document.querySelector('.reader-layout');
   if (layout) layout.classList.remove('reader-layout--comm-mode');
@@ -1784,6 +1827,9 @@ function _buildCommGrid() {
       cell.className      = 'reader-comm-cell reader-comm-cell--verse';
       cell.style.gridRow    = String(idx + 2); // row 1 = picker
       cell.style.gridColumn = '1';
+      cell.dataset.commIdx  = String(idx);
+      // Hide cell when the verse is currently paginated out so no empty rows appear
+      if (vd.span.style.display === 'none') cell.style.display = 'none';
       cell.appendChild(vd.span);
       grid.appendChild(cell);
     });
@@ -1860,6 +1906,11 @@ function _rebuildCommCells(grid) {
     cell.className      = 'reader-comm-cell reader-comm-cell--comm';
     cell.style.gridRow    = startRow + ' / span ' + spanCount;
     cell.style.gridColumn = '2';
+    // Hide comm cell when every verse in its range is paginated out
+    var allHidden = verseData.slice(sec.startIdx, sec.endIdx + 1).every(function (vd) {
+      return vd.span.style.display === 'none';
+    });
+    if (allHidden) cell.style.display = 'none';
 
     if (sec.foundKey !== null && chd && chd[String(sec.foundKey)]) {
       var html = chd[String(sec.foundKey)];
@@ -1881,5 +1932,76 @@ function _rebuildCommCells(grid) {
     }
 
     grid.appendChild(cell);
+  });
+}
+
+// ── Columns Toggle — RD-COL ───────────────────────────────────────────────
+// INTENT: Adds justified 2-column layout to the verse text area, mimicking a
+//   printed Bible column style. Independent of all other toggles; suppressed
+//   by CSS when commentary mode or compare grid is active.
+var _COLUMNS_KEY = 'bsw_reader_columns';
+export function initColumnsToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-columns-btn')) return;
+
+  var on = localStorage.getItem(_COLUMNS_KEY) === '1';
+  var btn = document.createElement('button');
+  btn.id        = 'reader-columns-btn';
+  btn.className = 'reader-columns-btn' + (on ? ' reader-columns-btn--on' : '');
+  btn.type      = 'button';
+  btn.textContent = 'Columns';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.title = 'Toggle 2-column justified layout';
+  if (on) document.body.classList.add('bsw-columns-on');
+
+  var viewPopover = document.getElementById('reader-view-popover');
+  if (viewPopover) {
+    viewPopover.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
+
+  btn.addEventListener('click', function () {
+    on = !on;
+    try { localStorage.setItem(_COLUMNS_KEY, on ? '1' : '0'); } catch (e) {}
+    btn.classList.toggle('reader-columns-btn--on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    document.body.classList.toggle('bsw-columns-on', on);
+  });
+}
+
+// ── Reader Mode Toggle — RD-READ ─────────────────────────────────────────
+// INTENT: Removes verse numbers, chapter break dividers, and group title headings
+//   for a clean, distraction-free reading experience. Pure CSS via body class.
+var _READER_MODE_KEY = 'bsw_reader_mode';
+export function initReaderModeToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-mode-btn')) return;
+
+  var on = localStorage.getItem(_READER_MODE_KEY) === '1';
+  var btn = document.createElement('button');
+  btn.id        = 'reader-mode-btn';
+  btn.className = 'reader-mode-btn' + (on ? ' reader-mode-btn--on' : '');
+  btn.type      = 'button';
+  btn.textContent = 'Reader';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.title = 'Toggle reader mode (hides verse numbers and chapter markers)';
+  if (on) document.body.classList.add('bsw-reader-mode');
+
+  var viewPopoverR = document.getElementById('reader-view-popover');
+  if (viewPopoverR) {
+    viewPopoverR.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
+
+  btn.addEventListener('click', function () {
+    on = !on;
+    try { localStorage.setItem(_READER_MODE_KEY, on ? '1' : '0'); } catch (e) {}
+    btn.classList.toggle('reader-mode-btn--on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    document.body.classList.toggle('bsw-reader-mode', on);
   });
 }

@@ -1,45 +1,44 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
-"""
+MKT Christ Commentary — Exodus chapters 30–32
+Run: python3 scripts/zc-christ-exodus-30-32.py
 
+Ch 30: Incense altar (before the veil); census/ransom tax (kofer nafsho);
+       bronze laver; holy anointing oil (5 spices); holy incense (4 spices).
+Ch 31: Bezalel filled with the Spirit; Oholiab; Sabbath as covenant sign;
+       tablets written with the finger of God.
+Ch 32: Golden calf apostasy; Moses's intercession; YHWH relents; tablets broken;
+       Levites' loyalty; Moses's offer to be blotted from the divine book.
+
+Key Christological frames:
+- Incense altar before the veil = Christ as intercessor (Heb 7:25; Rev 8:3-4).
+- Kofer nafsho (ransom for life) = Christ's ransom (Mark 10:45; 1 Tim 2:6).
+- Anointing oil → Messiah/Christ (the Anointed One); 5-spice oil formula shadows
+  the Spirit's anointing of Jesus at baptism (Luke 3:22; Acts 10:38).
+- Bezalel's Spirit-filling for craft = the Spirit enabling every dimension of
+  new-creation work (1 Cor 12:4-11; Eph 4:7-13).
+- Sabbath as covenant sign → Christ as Lord of the Sabbath, the true rest (Heb 4:9-10).
+- Finger of God (31:18) → Spirit of God (Luke 11:20; Matt 12:28).
+- Golden calf = paradigm of idolatry that Christ's death addresses; 1 Cor 10:7.
+- Moses's intercession offer (blot me out) = type of Christ's substitutionary
+  intercession, though YHWH refuses and reserves the true substitution for the cross.
+- The broken tablets = covenant broken by sin, restored in the new covenant written
+  on hearts (2 Cor 3:3; Jer 31:33).
+"""
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,156 +48,125 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
+EXODUS = {
+  "30": {
+    "1": "<p>The incense altar before the veil — the closest permanent object to the most holy place — is the OT form of Christ's intercessory ministry. Incense rising before the veil is the physical image of prayer ascending to the divine presence. Revelation 8:3–4 makes the identification explicit: an angel with a golden censer stands before the altar, adding much incense with the prayers of all the saints — the prayers rise before God. Christ 'always lives to make intercession' at the right hand of the Father (Heb 7:25), the ultimate incense altar whose mediation never ceases.</p>",
+    "2": "<p>The altar's square symmetry (one cubit by one cubit) and the integral horns point to the altar as the place where sacrifice and prayer meet: the incense altar's Yom Kippur blood-anointing (v. 10) fuses intercession and atonement. Christ at the Father's right hand is simultaneously the once-for-all sacrifice and the living intercessor — the cross and the intercession are one continuous priestly act.</p>",
+    "3": "<p>Gold-overlaid crown (<i>zer zahav</i>): the same crown-motif as on the ark and table marks the incense altar as a throne-room object. Christ's intercession is royal as well as priestly — he intercedes as the enthroned King (Heb 1:3: 'sat down at the right hand of the Majesty on high'), not as a supplicant. The priestly incense rises from the royal throne-room.</p>",
+    "4": "<p>Two gold rings for the carrying poles — the incense altar is portable, accompanying Israel's journey. Christ's intercessory ministry is similarly mobile: he intercedes not from a fixed earthly location but from the heavenly sanctuary that is accessible everywhere ('where two or three are gathered in my name, there am I among them,' Matt 18:20). The transportable incense altar is the type of the always-accessible intercessor.</p>",
+    "5": "<p>Gold-overlaid acacia poles — the same material and method as all other sanctuary transport objects. The intercession of Christ operates through the same economy as all his covenant acts: incarnate (acacia/humanity) and divine (gold/deity) in inseparable union. The poles of the incense altar are not silver or bronze — the inner-sanctuary standard throughout is the gold of divine purity.</p>",
+    "6": "<p>The altar placed before the veil of the testimony — in closest proximity to the ark. Christ's intercession is directed immediately to the Father's presence: 'he entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood' (Heb 9:12). The OT incense altar stood outside the veil; Christ's intercession is within the veil, in the very presence of God.</p>",
+    "7": "<p>Aaron burns incense every morning when he tends the lamps — the daily morning incense links prayer with the rekindling of light. Christ's intercession and the Spirit's illuminating work are similarly paired: the Spirit who 'illumines' (John 16:13) and the Son who intercedes (Rom 8:34) operate together in the believer's daily renewal. Morning-by-morning incense = the ongoing, never-ceasing mediation of the ascended Christ.</p>",
+    "8": "<p>The evening incense at the lamp-lighting completes the daily bracket: every day begins and ends with fragrant intercession before YHWH. This perpetual incense (<i>qetoret tamid</i>) shadows the NT's call to 'pray without ceasing' (1 Thess 5:17) — but more fundamentally, Christ's unceasing intercession as the ground of the believer's prayer. The believer prays because Christ's incense is always ascending; every prayer rises within his unceasing mediation.</p>",
+    "9": "<p>No unauthorized incense, no burnt offering on the incense altar — it has a single exclusive function. Christ's mediatorial role is exclusively his: 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). No secondary mediator, no priestly substitute can add to or alter his mediation. The incense altar's exclusivity is the OT form of the NT's insistence on the singular, irreplaceable mediation of the Son.</p>",
+    "10": "<p>One day a year — Yom Kippur — the incense altar receives atoning blood on its horns. The incense altar participates in the great atonement: prayer and blood meet on the same altar once a year. The NT's merger of intercession and atonement is permanent and comprehensive: Christ 'entered once for all into the holy places' (Heb 9:12) and 'always lives to make intercession' (Heb 7:25). The annual Yom Kippur meeting of blood and incense on the altar is compressed into a single eternal act in Christ.</p>",
+    "11": "<p>YHWH addresses Moses for the census-tax legislation — a separate divine speech within the sanctuary instructions. The transition signals a distinct covenant act: the census and its ransom tax are not mere administration but a theological statement about every human life before YHWH.</p>",
+    "12": "<p>The ransom (<i>kofer nafsho</i>) — ransom for his life — required from every counted man. This is a direct Christological type: Mark 10:45, Christ says he came 'to give his life as a ransom (<i>lytron</i>) for many.' The Greek <i>lytron</i> corresponds exactly to the Hebrew <i>kofer</i> — the ransom payment that redeems the life under YHWH's claim. What the census ransom enacted symbolically (every life has a ransom price), Christ paid actually. The half-shekel per person becomes the infinite price of his blood paid once for all.</p>",
+    "13": "<p>Half a shekel by the sanctuary standard — the fixed, equal amount for every Israelite regardless of wealth. The ransom equality (rich and poor pay the same) prefigures the ground-leveling of the cross: 'there is neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus' (Gal 3:28). Christ's ransom covers every person at equal cost to him and equal value to them — no gradations in the price paid or the redemption received.</p>",
+    "14": "<p>Everyone twenty years and older counted — the military-age community. The cross similarly addresses the full adult community of covenant responsibility: those who bear the weight of covenant obligation are the ones for whom the ransom is paid. 'Christ died for our sins' (1 Cor 15:3) — the specific burden of covenant failure is what his death addresses.</p>",
+    "15": "<p>The rich shall not give more, the poor shall not give less — the ransom is equal. This equality of redemption price is one of the most striking features of the atonement type: the cross is not a graded payment where more-sinful people require more sacrifice. 'One has died for all' (2 Cor 5:14) — the single death covers all equally. The democracy of the census ransom is the democracy of the cross.</p>",
+    "16": "<p>The ransom money funds the tent of meeting — the place of covenant encounter. Christ's atoning work similarly funds the church: 'you were bought with a price' (1 Cor 6:20) and the community built from that purchase is the body where YHWH's presence dwells (1 Cor 3:16). The purchased community is the ransom's purpose: not merely to release individuals from judgment but to build the community of the divine presence.</p>",
+    "17": "<p>The laver instruction — transitioning from the ransom tax to the purification basin. The purification infrastructure of the sanctuary follows the provision of its financial foundation. Christologically: the ransom (cross) is followed by purification (baptism, regeneration) — the order of 30:12–21 mirrors the order of salvation.</p>",
+    "18": "<p>The bronze laver for washing — hands and feet — before priestly service. The laver's purification foreshadows baptism: John's baptism of repentance and Jesus's institution of baptism both draw on the purification-before-service motif. 'He saved us through the washing of regeneration and renewing of the Holy Spirit' (Tit 3:5). The bronze laver is not final atonement (that is the bronze altar) but the ongoing purification that enables continued priestly access.</p>",
+    "19": "<p>Hands and feet washed — the dual washing anticipates John 13:5–10, where Jesus washes the disciples' feet. Peter's protest ('You shall never wash my feet') and Jesus's response ('If I do not wash you, you have no share with me') recapitulate the laver's theology: the priestly washing is not optional but necessary for covenant participation. Jesus as the high priest washing his disciples' feet is the ultimate laver.</p>",
+    "20": "<p>'Lest they die' — the mortal seriousness of unwashed access to holiness. The NT retains the seriousness: 'whoever eats the bread or drinks the cup of the Lord in an unworthy manner will be guilty concerning the body and blood of the Lord' (1 Cor 11:27). Approaching the holy without the washing of Christ's blood is as lethal in spiritual reality as approaching the laver-less sanctuary was in the type.</p>",
+    "21": "<p>Perpetual statute for all generations — the laver washing is permanent covenant requirement. The NT equivalent: 'if we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness' (1 John 1:9). The ongoing purification of confession is the new-covenant laver — not a one-time act but a perpetual access-mechanism to holiness.</p>",
+    "22": "<p>The anointing oil formula given to Moses personally — the <i>shemen mishchat qodesh</i> (holy anointing oil). The anointing oil is the most direct type of the Messiah/Christ in the entire Torah: <i>mashiach</i> (anointed one) comes from the same root as <i>shemen mishchat*</i> (anointing oil). The elaborate five-spice formula is the material signature of what it means to be anointed — consecrated, set apart, empowered by the Spirit of YHWH for a specific divine calling.</p>",
+    "23": "<p>The five ingredients: myrrh, cinnamon, calamus, cassia — all aromatic spices. Song of Solomon 4:14 uses several of these same spices in its description of the beloved, and the NT identifies Christ as the one in whom 'all the fullness of God was pleased to dwell' (Col 1:19). The fragrance of the anointing oil fills the sanctuary; Christ's anointing fills the world: 'we are the aroma of Christ to God' (2 Cor 2:15).</p>",
+    "24": "<p>Cassia and olive oil complete the formula. The anointing of Jesus at Bethany (Matt 26:7; John 12:3) — with costly nard — recapitulates the anointing-oil motif at the eve of the cross. The woman who anointed Jesus 'has done a beautiful thing to me,' Jesus said — she prepared his body for burial (Matt 26:12). The holy anointing oil that consecrated the sanctuary objects to death-and-life-giving service prefigures the anointing that marked Jesus for his ultimate consecration in death.</p>",
+    "25": "<p>A compound of perfumer — skilled craft for the sacred blend. The Spirit's anointing of Christ is not crude or approximate but exquisitely fitted to the specific calling: 'the Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor' (Luke 4:18, citing Isa 61:1). The anointing is precisely calibrated to the mission — the five-spice blend maps to the Spirit's precisely fitted empowerment of Christ for his specific redemptive vocation.</p>",
+    "26": "<p>The oil anoints the tent and all its furnishings — every object in the sanctuary. Christ's anointing is similarly comprehensive: 'God anointed Jesus of Nazareth with the Holy Spirit and with power' (Acts 10:38) — not for one specific task but for the totality of his ministry. And through him, the church receives a share in the anointing: 'you have been anointed by the Holy One' (1 John 2:20). The anointing that consecrated every sanctuary object now consecrates every believer as a living stone in the temple (1 Pet 2:5).</p>",
+    "27": "<p>All the altars anointed — including the incense altar that is the type of Christ's intercession. The anointed intercessor: the incense altar's consecration by oil is the type of the Spirit's anointing that empowers Christ's priestly ministry. Hebrews 9:14 speaks of Christ offering himself 'through the eternal Spirit' — his sacrifice was a Spirit-anointed priestly act, not merely a historical event.</p>",
+    "28": "<p>The bronze altar and laver anointed — even the outer-court objects receive the oil. The anointing reaches from the most holy place (ark) to the most common object (tent pegs). Christ's anointing similarly reaches from the heights of divine glory to the depths of human experience: 'he who descended is the one who also ascended far above all the heavens, that he might fill all things' (Eph 4:10). The anointing fills all levels of the sanctuary and all dimensions of the creation.</p>",
+    "29": "<p>The anointed objects become 'most holy' — whatever touches them is made holy. This is the contagion of holiness in the positive direction: the anointed consecrates what it contacts. Christ's anointing extends to those who touch him: 'power came out from him and healed them all' (Luke 6:19). The woman who touched the hem of his garment (Luke 8:44) experienced the holiness-contagion principle of the anointed sanctuary.</p>",
+    "30": "<p>Aaron and his sons anointed to serve as priests. The anointing of the high priest is the direct OT type of the Spirit's anointing of Christ at his baptism (Luke 3:22) — the dove descending is YHWH's oil poured on his appointed High Priest at the inauguration of his public ministry. As Aaron was anointed to serve, Christ was anointed to serve — 'not to be served but to serve, and to give his life as a ransom for many' (Mark 10:45).</p>",
+    "31": "<p>The anointing oil to remain holy through all generations — a perpetual covenant element. The Spirit's anointing of Christ is not a temporary empowerment but the permanent bond of the eternal covenant: 'God gives the Spirit without measure' (John 3:34) to the Son. Christ's anointing is ontological, not functional only — he is the Anointed One in his very person, not merely equipped by anointing for a task.</p>",
+    "32": "<p>The oil cannot be applied to ordinary human flesh — exclusive to sanctuary use. The exclusivity of the anointing oil points toward the uniqueness of Christ's anointing: no one else shares his specific Spirit-anointing as the Son. Believers receive the Spirit (1 John 2:27: 'the anointing that you received from him abides in you') as a participation in Christ's anointing, not as an independent equivalent. The prohibition against common use preserves the uniqueness of the Messiah's anointing.</p>",
+    "33": "<p>The karet penalty for misappropriating the holy oil — cut off from the covenant people. The NT counterpart is the warning against 'profaning the blood of the covenant' and 'insulting the Spirit of grace' (Heb 10:29). What was enacted as judicial exclusion under the old covenant becomes, under the new, a spiritual reality: to treat the anointing of Christ as common is to lose access to the covenant's benefits.</p>",
+    "34": "<p>The incense formula: stacte, onycha, galbanum, and frankincense in equal parts. The four-ingredient incense formula creates the specific fragrance belonging exclusively to YHWH's presence. The NT's theology of prayer-as-incense (Rev 5:8; 8:3–4) inherits this exclusivity: prayer offered 'in Jesus's name' has a specific character that nothing else replaces. 'In my name' is not a formula but the identification of prayer as offered through the specific mediatorial incense of Christ's intercession.</p>",
+    "35": "<p>The incense to be salted — pure and holy. Salt in Hebrew covenant practice signified permanence and uncorruptibility (Num 18:19 — 'covenant of salt'). The salted incense = the intercession that never putrefies, never loses its quality before YHWH. Christ's intercession at the Father's right hand is similarly uncorrupted and permanent: 'he holds his priesthood permanently, because he continues forever' (Heb 7:24).</p>",
+    "36": "<p>Some incense ground fine before the testimony. The finest ground form of the incense goes closest to the divine presence. The closest approach to YHWH requires the most refined offering. Christ's prayer in John 17 — the 'high priestly prayer' — is the most refined form of his intercession: ground fine in the anguish of Gethsemane and the impending cross, placed in the immediate presence of the Father.</p>",
+    "37": "<p>No duplicate incense formula for personal use. The exclusivity of Christ's mediatorial prayer is safeguarded: no human prayer is equivalent to Christ's intercession, though all prayers are offered within it. 'There is one mediator between God and men' (1 Tim 2:5) — this uniqueness is the theological content of the incense exclusivity law.</p>",
+    "38": "<p>Karet for making the incense formula for personal pleasure. Using the covenant mediatorial fragrance for self-pleasure is a covenant crime. The NT equivalent: treating the cross as a license for sin ('What shall we say then? Are we to continue in sin that grace may abound? By no means!' Rom 6:1–2). The incense was not given for self-indulgence but for covenant intercession; Christ's death was not given for self-license but for holy living.</p>"
   },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
-  },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
+  "31": {
+    "1": "<p>The Spirit-filling of Bezalel begins with a divine speech to Moses — the commissioning of the craftsman is an act of revelation, not administration. The one who will build the place of God's presence is himself appointed by divine speech, mirroring the divine speech that created the world ex nihilo. The act of building the sanctuary requires the same divine initiative as the creation it will house.</p>",
+    "2": "<p>'I have called him by name' (<i>qara beshemo</i>) — divine election by personal name. This is the language of the prophetic call: 'Before I formed you in the womb I knew you, and before you were born I consecrated you; I appointed you a prophet to the nations' (Jer 1:5). Christ is preeminently the one called by name before creation: 'his name shall be called Emmanuel' (Matt 1:23); 'the Lamb who was slain before the foundation of the world' (Rev 13:8). Every calling by name echoes the ultimate naming of the Son.</p>",
+    "3": "<p>'I have filled him with the Spirit of God, in wisdom, in understanding, in knowledge, and in all craftsmanship.' This is the first occurrence in Scripture of Spirit-filling for a specific vocation — and it is for artistic craft, not prophecy or leadership. The NT expands this: 'to each is given the manifestation of the Spirit for the common good' (1 Cor 12:7), and the gifts include 'teaching,' 'helping,' 'administrating' alongside the more dramatic gifts. The Spirit's work in Bezalel is the OT prototype of all spiritual giftedness. Christ, anointed 'without measure' (John 3:34), is the source from whom all Spirit-gifting flows.</p>",
+    "4": "<p>To devise artistic designs, work in gold, silver, bronze — the creative-thinking dimension of Spirit-gifting. The Spirit empowers not only execution but conception: <i>lachshov machashavot</i> (to devise designs/thoughts). John's prologue roots all true creativity in the Logos: 'all things were made through him' (John 1:3). The Spirit-gifted craftsman who devises designs participates in the creative work of the one through whom all things were made.</p>",
+    "5": "<p>Cutting stones, carving wood, every kind of craft. The comprehensive scope of the Spirit's craftsmanship extends to every material and every technique. The NT lists of spiritual gifts (1 Cor 12; Eph 4; Rom 12) similarly cover a comprehensive range of skills and callings. The Spirit who fills Bezalel for the old-covenant sanctuary fills the church for the new-covenant community, equipping every form of necessary work.</p>",
+    "6": "<p>Oholiab from Dan given alongside Bezalel from Judah — the north-south partnership. The Spirit equips not an individual but a community of craftsmen. Paul's body-of-Christ teaching (1 Cor 12:12–27) makes the same point: no single person has all the gifts; the Spirit distributes to each as he wills, requiring mutual dependence. Bezalel needed Oholiab; the church needs every member's gift.</p>",
+    "7": "<p>The full list of sanctuary objects assigned to Bezalel and Oholiab: tent of meeting, ark, mercy seat, all furnishings. The Spirit-filled craftsmen are given comprehensive responsibility. The NT counterpart: the Spirit equips the church not for partial obedience but for the full scope of its mission — 'until we all attain to the unity of the faith and of the knowledge of the Son of God, to mature manhood, to the measure of the stature of the fullness of Christ' (Eph 4:13).</p>",
+    "8": "<p>The lampstand of pure gold specifically named. The lampstand as the sanctuary's light-source connects to Christ as 'the light of the world' (John 8:12) and to the seven lampstands as the churches in Revelation 1:20. The Spirit-filled craftsman who makes the lampstand is providing the object that will burn before YHWH perpetually — a type of the Spirit's illuminating work in the church, which is itself the lampstand of Christ's light in the world.</p>",
+    "9": "<p>The altars and laver included in the commission. The Spirit equips Bezalel for the implements of sacrifice as well as the furnishings of beauty. The cross and the table, judgment and sustenance, are all within the Spirit's purview. The NT Spirit is not only the Spirit of doxology but the Spirit of the cross: 'Christ offered himself without blemish to God through the eternal Spirit' (Heb 9:14).</p>",
+    "10": "<p>The service garments and priestly vestments included. The Spirit's work extends to the visible, external clothing of the covenant ministry — not only the inner furnishings but the outer presentation. The NT equivalent: the Spirit produces not only inner transformation but visible fruit (Gal 5:22–23: love, joy, peace — the clothing of the new person). The garments of holiness are Spirit-woven.</p>",
+    "11": "<p>'They shall do all that I have commanded you.' The Spirit-gifted craftsmen execute the covenant command with complete fidelity. This is the pattern of Christ: 'I have kept my Father's commandments and abide in his love' (John 15:10). The Spirit's work always produces covenant faithfulness — not creativity for its own sake but creativity in the service of what YHWH has commanded.</p>",
+    "12": "<p>The Sabbath command inserted into the craftsmen commissioning — even the sanctuary building must stop on the Sabbath. The placement is deliberate: no project, however sacred, overrides the Sabbath. Christ is 'Lord of the Sabbath' (Mark 2:28) — his lordship over the Sabbath is not a claim to be exempted from it but the declaration that he is the Sabbath's telos. The Sabbath's purpose (rest in God) finds its fulfillment in Christ, so he can fulfill the Sabbath even while reinterpreting its application.</p>",
+    "13": "<p>The Sabbath is a sign (<i>ot</i>) between YHWH and Israel through all generations. Sign-language is covenant-language: the Sabbath marks Israel as YHWH's covenant people in the same way circumcision marks the individual. The NT moves the sign to the Lord's Day (first day of the week, resurrection day) — not abolishing the sign but trans-figuring it. The Sabbath pointed toward the rest secured by the finished work of creation; the Lord's Day points toward the rest secured by the finished work of new creation (John 19:30: 'It is finished').</p>",
+    "14": "<p>Death penalty for Sabbath violation — karet (cutting off). The seriousness of Sabbath matches the seriousness of idolatry: both are capital covenant crimes because both strike at the core of covenant identity. The NT does not impose the judicial penalty but maintains the theological seriousness: spurning the completed rest of Christ is the spiritual equivalent of Sabbath desecration. 'There remains a Sabbath rest for the people of God, for whoever has entered God's rest has also rested from his works' (Heb 4:9–10).</p>",
+    "15": "<p>Shabbat shabbaton — a Sabbath of complete rest, holy to YHWH. The doubled form (Sabbath of Sabbaths) intensifies to the highest degree. Christ's own rest in the tomb on the Sabbath (Holy Saturday) is the ultimate <i>shabbat shabbaton</i> — the Creator resting in death, the work of redemption complete, waiting for the eighth-day resurrection that the Sabbath was always pointing toward.</p>",
+    "16": "<p>Israel shall keep the Sabbath as an everlasting covenant (<i>berit olam</i>). The Sabbath's permanent covenant status places it in the company of the Noahic covenant (Gen 9:16), circumcision (Gen 17:7), and the priestly covenant (Num 25:13). Christ fulfills these eternal covenants from within: the new covenant is the eternal covenant (Heb 13:20 — 'the eternal covenant') in which every prior <i>berit olam</i> is included and transcended.</p>",
+    "17": "<p>Between YHWH and Israel an eternal sign — YHWH rested and was refreshed (<i>vayyinnafash</i>). The anthropomorphic 'was refreshed' suggests that creation's completion involved a relational and emotional dimension in the divine rest. The resurrection, viewed through this lens, is YHWH's ultimate refreshment — the 'completion' of new creation, the rest of the one who has accomplished the redemption of all things. 'Having made purification for sins, he sat down at the right hand of the Majesty on high' (Heb 1:3) — the sitting is the Sabbath rest of accomplished redemption.</p>",
+    "18": "<p>The tablets written by the finger of God (<i>etzba Elohim</i>). The 'finger of God' will appear in Luke 11:20 as Jesus's description of his exorcisms: 'if it is by the finger of God that I cast out demons, then the kingdom of God has come upon you.' Matthew 12:28 renders this 'by the Spirit of God' — equating the finger of God with the Spirit. The same divine finger that inscribed the covenant law at Sinai is operative in Christ's ministry: the Spirit who wrote the law on stone now writes it on hearts (2 Cor 3:3), casting out the powers that hold humanity captive.</p>"
   },
   "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
+    "1": "<p>'Moses delayed (<i>boshesh</i>)' — the people's apostasy begins with impatience. Paul quotes v. 6 of this chapter in 1 Cor 10:7 as a direct warning to the Corinthian church: 'Do not be idolaters as some of them were; as it is written, the people sat down to eat and drink and rose up to play.' The golden calf is the paradigm of covenant apostasy — the people saw the absence of the mediator and substituted their own religious construction for YHWH's specified worship. The church faces the same temptation: when Christ seems distant, to substitute human-made religion for the covenant relationship.</p>",
+    "2": "<p>Gold earrings from wives, sons, daughters — the gold that adorned Israel in the exodus now funds apostasy. The spoils of Egypt (12:35–36), given as YHWH's provision, are redirected to idol-making. The misuse of God's gifts for self-made religion is the basic form of idolatry: taking YHWH's provision and offering it to a substitute. The NT parallel: 'they exchanged the glory of the immortal God for images' (Rom 1:23) — the downward exchange of glory for idol is the defining movement of human sin.</p>",
+    "3": "<p>The people stripped their gold willingly and brought it to Aaron. The willingness of the idolatrous offering contrasts with the later willingness of the tabernacle offering (35:29) — the same generous impulse can serve either true worship or false. Human generosity is not inherently a virtue; it is only as good as its object. The NT: 'each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver' (2 Cor 9:7) — the cheerfulness must be directed toward the right object.</p>",
+    "4": "<p>Aaron fashioned a golden calf and said: 'These are your gods, O Israel, who brought you up from the land of Egypt.' The attribution of the exodus to the calf is the theological core of the sin: Israel transfers the saving act of YHWH to a created object. This is the root idolatry that Paul describes in Rom 1:25: 'they exchanged the truth about God for a lie and worshiped and served the creature rather than the Creator.' Christ confronts this root: 'I am the way, the truth, and the life' (John 14:6) — the living mediator against whom every calf-substitute is measured.</p>",
+    "5": "<p>Aaron calls a feast 'to YHWH' over the calf — the divine name used over an idol. This is not outright atheism but syncretism: YHWH's name over an illegitimate object. Jeroboam later repeated exactly this formula (1 Kgs 12:28). The NT warning: 'Not everyone who says to me Lord, Lord will enter the kingdom of heaven' (Matt 7:21) — the use of the divine name over wrong worship is the perpetual form of the golden calf sin.</p>",
+    "6": "<p>'They rose up to play (<i>letzacheq</i>).' Paul explicitly cites this verse (1 Cor 10:7) to warn the Corinthian church against idolatry. The 'eating, drinking, and playing' sequence is the covenant feast corrupted into a pagan celebration. The Lord's Supper — the NT covenant meal — is the antidote to the golden-calf feast: the same communal eating-and-drinking directed rightly, toward the true mediator whose body and blood are represented. 'As often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes' (1 Cor 11:26).</p>",
+    "7": "<p>YHWH tells Moses: 'Go down — your people have corrupted themselves.' The distancing language (<i>amkha</i> — 'your people,' not 'my people') marks the covenant breach. The NT equivalent appears in Matt 15:8: 'This people honors me with their lips, but their heart is far from me.' The formal continuity of covenant language ('your people') coexists with the relational breach — formal religion without true covenant relationship is the golden calf condition in every age.</p>",
+    "8": "<p>'They have turned aside quickly' (<i>saru maher</i>) — the speed of the apostasy is indicted. The covenant was sworn in Exod 24:3–8 and violated in Exod 32 within the span of Moses's forty days. The quickness of spiritual regression after visible divine encounter is the recurrent tragedy of covenant history. Galatians 1:6: 'I am astonished that you are so quickly deserting him who called you in the grace of Christ.' Speed of apostasy measures the shallowness of the root (Matt 13:5–6).</p>",
+    "9": "<p>'A stiff-necked people' (<i>am qesheh oref</i>) — the defining characterization that becomes the persistent prophetic indictment. Stephen uses this phrase (Acts 7:51) to indict the council that is about to stone him: 'You stiff-necked people, uncircumcised in heart and ears, you always resist the Holy Spirit.' The stiff-necked condition is the structural stubbornness that the old covenant could diagnose but not cure. The new covenant addresses the root: 'I will remove the heart of stone from your flesh and give you a heart of flesh' (Ezek 36:26).</p>",
+    "10": "<p>YHWH offers to make a great nation from Moses alone — the Abrahamic promise offered to a new starting point. This moment is the deepest covenant crisis: YHWH is willing to dissolve Israel and reconstitute through Moses. Moses's response will determine whether the covenant continues. Christ faced the equivalent cosmic crisis at Gethsemane: 'Not my will, but yours be done' (Luke 22:42) — the greater Moses, choosing not his own continuation but the redemption of the people who failed.</p>",
+    "11": "<p>Moses's intercession: 'Why does your wrath burn against your people, whom you brought out of Egypt?' Moses reclaims Israel as YHWH's people — refusing the distancing language of v. 7. The intercessor insists on the covenant relationship that YHWH's anger is threatening to dissolve. Christ's intercession on the cross follows the same pattern: 'Father, forgive them' (Luke 23:34) — the intercessor at the moment of the people's worst offense insists on their covenant relationship with the Father.</p>",
+    "12": "<p>Moses's second argument: Egypt's reputation — what would the nations say? The missional dimension of the intercession: YHWH's reputation among the nations is at stake. The NT equivalent: Christ's own vindication serves the proclamation — 'if Christ has not been raised, your faith is futile and you are still in your sins' (1 Cor 15:17). The reputation of YHWH/Christ in the world is the stakes of the covenant crisis.</p>",
+    "13": "<p>Moses appeals to the patriarchal oath — 'Remember Abraham, Isaac, and Israel, your servants.' The appeal to the covenant precedent: YHWH cannot annul his prior unconditional oath to the patriarchs without becoming oath-breaker. Paul uses the same argument in Rom 9–11 when addressing Israel's current rejection of the gospel: God cannot 'abandon the gifts and calling' that are 'irrevocable' (Rom 11:29). The covenant's irrevocability is the ground of both Moses's intercession and Paul's eschatological hope.</p>",
+    "14": "<p>YHWH relented (<i>vayyinnachem</i>) — changed course in response to Moses's intercession. This is the responsive relationship of prayer: YHWH genuinely responds to the intercessor's plea. The NT: 'the prayer of a righteous person has great power as it is working' (Jas 5:16). Moses's effectual intercession is a type of Christ's intercession — except that Christ's mediation is not merely persuasive but substitutionary: he does not merely persuade the Father to relent but provides the ground on which relenting is just.</p>",
+    "15": "<p>Moses descends with two stone tablets written on both sides. The tablets that will be broken in v. 19 are the completed, authoritative covenant document — their breaking is not accidental but prophetically enacted: the broken law cannot be replaced by human effort but requires divine re-inscription (ch. 34). The NT: 'the letter kills but the Spirit gives life' (2 Cor 3:6) — the broken tablets of the old covenant give way to the new covenant written on hearts.</p>",
+    "16": "<p>The tablets are God's work, the writing is God's writing engraved (<i>charut</i>) on the tablets. The divine handwriting — the finger-of-God inscription — is the authoritative covenant document. 2 Cor 3:3 deliberately contrasts: 'a letter from Christ, delivered by us, written not with ink but with the Spirit of the living God, not on tablets of stone but on tablets of human hearts.' The engraved stone is replaced by the Spirit-written heart — same divine Author, different medium.</p>",
+    "17": "<p>Joshua misidentifies the noise as the sound of war — his military ear hears what is not there. The correct identification belongs to Moses: 'it is the sound of singing.' The discernment of what is happening spiritually in the community belongs to the mediator who has been in the divine presence. Christ's spiritual sight similarly perceives what the disciples miss: 'Blessed are the eyes that see what you see' (Luke 10:23) — the mediator's perception of spiritual reality is the ground of the community's orientation.</p>",
+    "18": "<p>Moses's poetic triplet — 'not victory, not defeat, but singing.' The diagnosis: a celebration happening where there should be neither triumph nor defeat. The misuse of the covenant feast (eating and drinking, v. 6) is not martial but festive apostasy — more insidious than open opposition. The NT equivalent: the lukewarm church of Laodicea (Rev 3:16–17) — not in crisis, not in battle, but celebrating comfortably in a condition of spiritual need it cannot perceive.</p>",
+    "19": "<p>Moses smashes the tablets at the foot of the mountain — the prophetic sign-act of covenant violation. The tablets are broken because the covenant is broken. The NT reads the broken tablets as a Christological promise: '2 Cor 3:7 describes the 'ministry of death, carved in letters on stone' as 'coming with such glory' — the broken tablets of the old covenant's condemnation give way to the 'ministry of the Spirit' with even greater glory. The shattering of the stone is the beginning of the heart-inscription.</p>",
+    "20": "<p>Moses burns, grinds, and makes Israel drink the powdered calf — the forced ingestion of their idolatry. This ordeal parallels the bitter-water test of Num 5 (the jealousy ordeal for suspected infidelity): Israel's covenant infidelity is processed through the body. The cross similarly makes the consequences of sin bodily: 'he himself bore our sins in his body on the tree' (1 Pet 2:24). The covenant crisis is not merely forensic but physical — sin and its consequences are embodied.</p>",
+    "21": "<p>Moses confronts Aaron: 'What did this people do to you?' The question presupposes that leadership failure had an identifiable cause. Aaron's response (v. 24) will evade this question completely. The NT's demand for pastoral accountability follows the same logic: 'Keep watch over yourselves and all the flock' (Acts 20:28). The spiritual leader who failed to prevent apostasy must give an account of why.</p>",
+    "22": "<p>Aaron begins with excuse and deflection — 'my lord's anger not burn.' The self-protective language of the accused leader: reduce the questioner's anger before addressing the substance. Aaron does not begin with confession but with emotional management. The NT: 'if we say we have no sin, we deceive ourselves, and the truth is not in us. If we confess our sins, he is faithful and just to forgive us our sins' (1 John 1:8–9). The path to restoration requires the confession Aaron refused.</p>",
+    "23": "<p>Aaron reports the people's demand verbatim — 'we do not know what has become of this man Moses.' The attribution of the exodus to Moses ('this man') is repeated: Israel's leadership failure involves misdirecting worship from YHWH to the human mediator, so that when the human mediator disappeared, the worship collapsed. The NT's resolution: the Spirit comes specifically to cover Christ's physical absence — 'when the Helper comes, whom I will send to you from the Father' (John 15:26). The mediator is never absent from those in whom the Spirit dwells.</p>",
+    "24": "<p>Aaron's evasion: 'I threw the gold in the fire and out came this calf.' The calf is portrayed as spontaneously self-emergent — Aaron refuses the agency he clearly had (v. 4: 'he fashioned it with a graving tool'). This is the original sin's evasion pattern from Adam (Gen 3:12) to the final judgment (Matt 25:44). The NT demands personal accountability before the judgment seat of Christ: 'each of us will give an account of himself to God' (Rom 14:12).</p>",
+    "25": "<p>'The people were let loose (<i>paru'a*</i>)' — the social disintegration that follows the removal of the covenant constraint. 'For derision among their adversaries.' Israel's apostasy has made them a laughing-stock before the nations — the exact opposite of the covenant's intended missional witness (Deut 4:6–8: the nations will say 'what nation is so great as to have such righteous decrees?'). The loss of covenant integrity is always also a missional failure.</p>",
+    "26": "<p>'Who is for YHWH? To me!' (<i>mi laYHWH eilai</i>) — Moses's call to loyalty in the moment of crisis. The Levites gather to Moses. This moment of covenant decision — YHWH or the calf, loyalty or defection — is the structural pattern of every call to discipleship. Jesus: 'If anyone would come after me, let him deny himself and take up his cross and follow me' (Matt 16:24). The choice between YHWH and the comfortable alternative confronts every generation.</p>",
+    "27": "<p>The Levites execute judgment — sword against brother, companion, neighbor. Covenant loyalty above kinship. Jesus's most shocking teaching mirrors this exactly: 'Do you think that I have come to give peace on earth? No, I tell you, but rather division. For from now on in one household of five there will be division' (Luke 12:51–52). The sword that the Levites carried at Sinai for YHWH's loyalty is the metaphorical sword Jesus says he came to bring — the unavoidable division between covenant allegiance and family or cultural pressure.</p>",
+    "28": "<p>Three thousand men fell. Paul's contrast in 2 Cor 3:6 and 1 Cor 10:8 is precise: at the Sinai golden calf, 3,000 died for idolatry; at Pentecost, 3,000 were baptized and received the Spirit (Acts 2:41). The letter kills; the Spirit gives life. The same number — 3,000 — is the measure of the law's death-dealing and the Spirit's life-giving. The numerical parallel is a Christological statement: where the law condemned, the Spirit of the risen Christ restores.</p>",
+    "29": "<p>'Consecrate yourselves today to YHWH' (<i>milu yadkhem*</i>) — fill your hands, the idiom for priestly ordination. The Levites' loyalty under pressure becomes their priestly commissioning. The NT counterpart: the disciples' faithfulness through the passion (however imperfect) and the resurrection commission (Matt 28:18–20) constitutes their apostolic ordination. Crisis faithfulness, not just formal appointment, is the ground of covenant ministry.</p>",
+    "30": "<p>Moses: 'Perhaps I can make atonement (<i>achaperah*</i>) for your sin.' The first use of <i>kapar</i> (atone) applied to an intercession rather than a sacrifice. Moses goes to intercede before YHWH on behalf of sinners — the intercessor going up for those below. The type of Christ: 'he went to make propitiation for the sins of the people' (Heb 2:17). The intercession is real but insufficient on its own — what Moses offers in vv. 31–32 reveals both the shape and the limit of the type.</p>",
+    "31": "<p>Moses returns to YHWH: 'This people have sinned a great sin — they have made gods of gold.' The honest confession of the covenant crime before YHWH is the first necessary act of intercession — the mediator presents the people's guilt without minimization. Christ does not minimize human sin but bears it: 'he made him to be sin who knew no sin, so that in him we might become the righteousness of God' (2 Cor 5:21). The honest presentation precedes the substitution.</p>",
+    "32": "<p>'If you will forgive their sin — but if not, blot me, please, from your book which you have written.' Moses offers himself as a substitute: his own covenant standing, his own name in the divine record, in exchange for Israel's forgiveness. This is the most extraordinary human intercession in the Torah and the closest OT approach to substitutionary atonement. Paul echoes Moses's offer in Rom 9:3: 'I could wish that I myself were accursed and cut off from Christ for the sake of my brothers.' Both Moses and Paul embody the intercession that could not fully satisfy — only Christ could actually be cut off in place of sinners.</p>",
+    "33": "<p>YHWH refuses the substitution: 'whoever has sinned against me, I will blot out of my book.' Individual moral accountability cannot be transferred by another's offer under the law — Moses's sacrifice cannot cover Israel's sin. But this refusal points forward: if a human mediator's offer to be blotted out cannot transfer covenant standing, something greater is needed. Christ is not blotted from the book on Israel's behalf — he is the Lamb 'whose name has been written before the foundation of the world in the book of life of the Lamb who was slain' (Rev 13:8). He did not lose his place; he made a place for others.</p>",
+    "34": "<p>YHWH sends Israel forward with the angel-guide, with the deferred judgment of 'when I visit, I will visit their sin upon them.' The deferred visitation: judgment is not cancelled but postponed. Christ's cross is the point at which the deferred visitation falls — 'God presented Christ as a propitiation' (Rom 3:25) addressing 'the sins previously committed' under the patient forbearance of God. The deferred punishment of Exod 32:34 is the theological problem that the cross resolves.</p>",
+    "35": "<p>YHWH struck the people with a plague because of what they did with the calf Aaron made. The immediate plague, the deferred visitation, and the ultimate cross are concentric responses to the same covenant crime. The plague is a temporal judgment; the deferred visitation is the eschatological reckoning; the cross is YHWH himself absorbing the reckoning in the person of his Son. 'He was pierced for our transgressions; he was crushed for our iniquities' (Isa 53:5) — the full weight of what Exod 32:35 began fell on the Servant.</p>"
   }
 }
 
 def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
+    existing = load_comm('mkt-christ', 'exodus')
+    merge_comm(existing, EXODUS)
+    save_comm('mkt-christ', 'exodus', existing)
+    print('Exodus 30-32 mkt-christ written.')
+    import pathlib
+    out = json.loads((ROOT / 'data/commentary/mkt-christ/exodus.json').read_text())
+    il = json.loads((ROOT / 'data/interlinear/exodus.json').read_text())
+    all_ok = True
+    for ch in range(30, 33):
+        ck = str(ch)
+        missing = set(il.get(ck, {}).keys()) - set(out.get(ck, {}).keys())
+        if missing:
+            print(f'ch {ch} STILL MISSING: {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'ch {ch}: complete ({len(out.get(ck, {}))} verses)')
+    if all_ok:
+        print('All verses present.')
 
 if __name__ == '__main__':
     main()

@@ -25,7 +25,7 @@ import {
   registerModalWordStudy, registerModalTopics, registerModalConfessions,
   registerModalFathers, registerModalDictionary,
   registerMemHelpers, registerAutoTagTerms,
-  _showShortcutsOverlay, _injectShortcutsBtn, _injectPrintBtn,
+  _showShortcutsOverlay, _injectShortcutsBtn,
   initHistoryWidget
 } from './modal.js';
 import {
@@ -42,7 +42,8 @@ import {
   initReaderPage, initCompareToggle, injectComparePanel,
   isCompareEnabled, getCompareVersion, setCompareVersion,
   initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle,
-  initSidebarToggle, initXrefNotesToggle, initCommModeToggle
+  initSidebarToggle, initXrefNotesToggle, initCommModeToggle,
+  initColumnsToggle, initReaderModeToggle
 } from './reader.js';
 import {
   initParallelToggle, getParallelsEnabled, setParallelsEnabled
@@ -57,6 +58,7 @@ import {
 import { initWordPage } from './word.js';
 import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './daily.js';
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
+import { initBiblepediaPage } from './biblepedia.js';
 import { runAutoTagTerms, autoTagTerms, getTermMap2 } from './terms.js';
 import { runAutoTagPlaces, autoTagPlacesIn } from './places.js';
 import { initTimelinePage, initChurchTimelinePage } from './timeline.js';
@@ -178,8 +180,9 @@ function init() {
       initSplitToggle();
       initFontSizeControls();
       initXrefNotesToggle();
+      initColumnsToggle();
+      initReaderModeToggle();
       _injectShortcutsBtn();
-      _injectPrintBtn();
     }
 
     // ── Verse Study page (verse-study/index.html) ─────────────────────────
@@ -218,6 +221,11 @@ function init() {
     // full library document viewer on the same page.
     if (document.getElementById('dict-list')) {
       initDictionaryPage();
+    }
+
+    // ── Biblepedia page (biblepedia/index.html) ───────────────────────────
+    if (document.getElementById('bp-container')) {
+      initBiblepediaPage();
     }
 
     // ── Timeline page (timeline/index.html) ──────────────────────────────

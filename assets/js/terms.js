@@ -10,7 +10,7 @@ import { wireRefLinks } from './wire.js';
 import {
   _naveLoad, _naveData, _naveMap,
   _dictLoad, _dictData,
-  DICT_PAGE_URL
+  DICT_PAGE_URL, BIBLEPEDIA_URL
 } from './library.js';
 
 var _termTipEl     = null;
@@ -123,13 +123,10 @@ function _showTermTip(anchor, key) {
   }
 
   html += '<div class="bsw-term-tooltip__links">';
-  if (entry.dictId) {
-    var dHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.dictId);
-    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(dHref) + '">Easton\'s &#x2192;</a>';
-  }
-  if (entry.smithId) {
-    var sHref = DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(entry.smithId);
-    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(sHref) + '">Smith\'s &#x2192;</a>';
+  if (entry.dictId || entry.smithId) {
+    var artSlug = entry.dictId || entry.smithId;
+    var bpHref = BIBLEPEDIA_URL + '?a=' + encodeURIComponent(artSlug);
+    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(bpHref) + '">Article &#x2192;</a>';
   }
   if (entry.naveSlugs && entry.naveSlugs.length) {
     var nHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.naveSlugs[0]) + '&src=nave';

@@ -1,47 +1,44 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Context Commentary — Deuteronomy chapters 8–10
+Run: python3 scripts/zc-context-deuteronomy-8-10.py
+
+Source data used:
+- data/interlinear/deuteronomy.json
+- data/translation/glossary-hebrew.json (zakar, anah, yirah, hesed, mul)
+- data/translation/draft/mediating/deuteronomy.json (MKT text)
+- data/translation/notes/deuteronomy.json
+- scripts/zc-context-deuteronomy-1-2.py (prior context script for style/terminology)
+
+Key decisions:
+- "YHWH" retained for the divine name (consistent with prior Deuteronomy context scripts)
+- Ch 8 centers on the wilderness-testing-manna complex and the Baal-fertility polemic (v17-18)
+- Ch 9 centers on the golden calf retelling as anti-self-righteousness argument; Moses as
+  paradigmatic covenant intercessor
+- Ch 10 centers on the heart-circumcision metaphor (v16), Levitical separation (v8-9),
+  and YHWH as patron-of-the-marginalized triad (v18-19)
+- Matt 4:4 (citing Deut 8:3) noted in the temptation-wilderness parallel
+- The Anakite/giant warrior tradition placed in its Num 13/Josh 11 frame
+- Hittite suzerainty treaty parallels noted where the historical prologue pattern continues
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -49,274 +46,162 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
+DEUTERONOMY = {
+  "8": {
+    "1": """<p>The opening imperative — "be careful to carry out every commandment I am giving you today" — sets up the motivational argument that follows: obedience leads to life, multiplication, and land-possession, the three core covenant promises to the patriarchs. The <em>hayom</em> (today) that recurs throughout Deuteronomy is the treaty-renewal device: Moses presents the covenant as a living present obligation, not a historical relic. Every generation encounters the covenant as though it were made with them directly (Deut 5:3: "not with our ancestors ... but with us, all of us here alive today").</p>""",
 
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
+    "2": """<p>The command to <em>zakar</em> (remember) the wilderness journey is not mere historical recall — in Hebrew thought, remembrance activates the continuing significance of past events. The forty years are characterised by two divine actions: <em>anah</em> (humbling — the verb used of degradation but also of discipline that brings low in order to lift up) and <em>nasah</em> (testing — the same verb used of Abraham in Gen 22:1). The wilderness is simultaneously a place of punishment and refinement: YHWH allowed hunger, dependency, and disorientation in order to surface what was in Israel's heart. The phrase "whether you would keep his commandments" frames the wilderness not as abandonment but as diagnostic — YHWH tested Israel before bringing them into prosperity, the same pattern of proving trust before granting inheritance.</p>""",
 
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
+    "3": """<p>The manna episode (Exod 16) is re-read here as a theological lesson: YHWH allowed hunger before providing manna precisely to teach that life is not ultimately dependent on food but on divine word. <em>Lechem</em> (bread) in ANE culture was the basic survival commodity — its presence or absence marked divine favor or judgment. The manna was miraculous because it arrived with a word ("I will rain bread from heaven," Exod 16:4); the word preceded and produced the bread. Jesus cites this verse verbatim in his first temptation (Matt 4:4), transforming the wilderness test into a Christological statement: the Son of God relives Israel's wilderness testing and, unlike Israel, passes it by trusting the word over the bread. The forty days of Jesus's fasting recapitulate Israel's forty years.</p>""",
 
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
+    "4": """<p>The preservation of clothing and the prevention of foot swelling are listed among the wilderness miracles. In the ANE, clothing was a significant economic resource — fabric production was labor-intensive, and worn clothing signified poverty. The rabbinic tradition (b. Yoma 75a) expanded on these preservation miracles, describing clouds of glory as the agent of clothing care. The theological point is providential sufficiency: YHWH supplied not only food but clothing, so Israel's dependence was total — no room for claiming independent resourcefulness.</p>""",
 
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
+    "5": """<p>The paternal discipline metaphor (<em>yissar</em>, to discipline, reprove, chastise) is the hermeneutical key to the wilderness experience. In ANE family law, a father's right and obligation to discipline a son was foundational to family structure — it was an expression of relational investment, not cruelty. The Wisdom tradition picks up this Deuteronomic framework: Prov 3:11-12 ("do not despise the LORD's discipline ... for YHWH reproves whom he loves, as a father the son he delights in") feeds into Heb 12:5-11, which cites Prov 3 and explains the community's persecution as Deuteronomic fatherly discipline. The wilderness hardships are signs not of YHWH's abandonment but of his parental investment.</p>""",
 
-# ============================================================
-# JEREMIAH
-# ============================================================
+    "6": """<p>The three-verb summary of covenant response — "keep his commandments, walk in his ways, fear him" — previews the more elaborate summary of 10:12-13. Walking in YHWH's ways (<em>derech</em>) is the Deuteronomic equivalent of covenant faithfulness: an ongoing relational orientation rather than point-by-point rule compliance. Fear (<em>yirah</em>) in Deuteronomy is not primarily terror but reverential awe — the recognition of YHWH's supreme authority that shapes all decision-making. The Shema (6:4-9) has established the cognitive framework; 8:6 draws the volitional conclusion.</p>""",
 
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
+    "7": """<p>The description of Canaan as a well-watered land is counterpointed against the wilderness's aridity. The three water sources — <em>nehalim</em> (wadis), <em>ayanot</em> (springs), and <em>tehomot</em> (underground waters) — represent the full range of ancient Israelite water sources. The Canaanite fertility religion located divine powers (Baal, Asherah) precisely in these water sources — rain and fertility were Baal's domain. Deuteronomy systematically reassigns all natural goods to YHWH: the land with its streams is not Baal's gift but YHWH's. The anti-Baal polemic underlies the agricultural catalogues of vv. 7-9.</p>""",
 
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
+    "8": """<p>The seven agricultural products of Canaan — wheat, barley, grapevines, figs, pomegranates, olive oil, honey — are a culturally specific list. In ANE land-grant inscriptions, the productivity of a promised land was described in similarly enumerative terms. Grapes, figs, and olives were the three staple crops of the Levantine highlands; their presence together constituted a fully self-sufficient agricultural economy. This list echoes Num 13:23-27, where the spies returned with these same products as evidence of the land's bounty — but brought a bad report anyway. Deuteronomy re-presents the abundance the spies saw but refused to trust.</p>""",
 
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
+    "9": """<p>Iron and copper from the land's stones refers to the mineral wealth of the Arabah and Transjordanian regions. Archaeological evidence confirms iron ore deposits in the Wadi Arabah and copper smelting at Timna going back to the Bronze Age. These metals were essential for agricultural tools and were symbolically linked to military and economic power. The verse is theologically significant: the land is not only agriculturally abundant but minerally rich — a complete gift. This anticipates vv. 17-18: all this will tempt Israel to attribute wealth to their own productive capacity.</p>""",
 
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
+    "10": """<p>The command to bless YHWH after eating is the scriptural basis for the <em>birkat ha-mazon</em>, the rabbinic grace said after meals — one of the oldest still-practiced Jewish blessings. The text says "bless YHWH your God for the good land he has given you": the act of blessing (acknowledging YHWH as source) is the structural response to satiation that prevents the pride warned against in vv. 11-18. In Second Temple and rabbinic thinking, this verse and Deut 26:1-11 were the two explicit Torah commands to give thanks. The physical act of eating required a verbal acknowledgment of YHWH as the ultimate food-provider.</p>""",
 
-# ============================================================
-# EZEKIEL
-# ============================================================
+    "11": """<p>The warning against forgetting YHWH by failing to keep his commandments establishes a cognitive-behavioral chain: prosperity → satiation → pride → forgetfulness → disobedience. The verb <em>shamar</em> (keep, guard) is the covenant fidelity term — the opposite of forgetting is not merely remembering but actively guarding the commandments. Deuteronomy is the first text in the Torah to develop this wealth-and-forgetting dynamic as a structural theological concern; it becomes the recurring judgment explanation in the Deuteronomistic History: Israel's apostasy consistently follows periods of prosperity and settled comfort.</p>""",
 
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
+    "12": """<p>The sequence of prosperity markers — eating one's fill, building fine houses, settling down — describes the social transformation from pastoral nomads to settled urbanites. The "fine house" (<em>battim tovim</em>) marks the transition from tent-dwelling to permanent architecture, from mobile covenant community to landed aristocracy. Archaeology confirms the Israelite shift from simple four-room houses in the Iron I period (early settlement) to more elaborate domestic architecture as wealth accumulated. Deuteronomy anticipates this transition as spiritually dangerous.</p>""",
 
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
+    "13": """<p>Growing herds, flocks, silver, and gold complete the wealth-accumulation picture. The list moves from food security (vv. 7-10) through settled housing (v. 12) to pastoral wealth and precious metals — a complete picture of Canaanite elite prosperity. Silver and gold were used in ANE economies as the medium of tribute, stored wealth, and gift exchange in patron-client networks. The more Israel resembles prosperous Canaanite society, the less it resembles the covenant community formed in the wilderness.</p>""",
 
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
+    "14": """<p>The "proud heart" (<em>levavecha gevoha</em>) is the covenant's primary spiritual danger. <em>Gevahat lev</em> (height/pride of heart) is a standard Wisdom and prophetic term for the posture that substitutes self-sufficiency for covenant dependency (Prov 16:18: "pride goes before destruction"). The specific form here is historical amnesia: forgetting the Exodus — the foundational deliverance that established Israel's identity as a people who depend entirely on YHWH, having been rescued from a state of total helplessness.</p>""",
 
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
+    "15": """<p>The wilderness terrors — venomous snakes (<em>nachash saraf</em>, the fiery/burning serpents of Num 21:6), scorpions, and waterless ground — are the negative counterpart to the good land's abundance. The bronze serpent episode (Num 21:4-9) is the specific background: Israel complained about the manna, YHWH sent serpents, and Moses made a bronze serpent on a pole that healed anyone who looked at it. Jesus cites this episode (John 3:14-15) as a type of his own crucifixion: "just as Moses lifted up the serpent in the wilderness, so the Son of Man must be lifted up." The wilderness serpents thus carry Christological resonance.</p>""",
 
-# ============================================================
-# DANIEL
-# ============================================================
+    "16": """<p>The manna is introduced a second time (also v. 3), now with a different purpose emphasis: "so that he might do you good in the end" (<em>l'hiytivcha b'acharitecha</em>). The sequence — hunger, provision, humbling, testing, then ultimate good — is a pedagogical pattern. The Deuteronomic theology of covenant: present hardship is not divine hostility but preparation for a promised future. The rabbis developed this into the concept that tribulation prepares for ultimate blessing (<em>yissurin</em>).</p>""",
 
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
+    "17": """<p>"My power and the strength of my hands have produced this wealth for me" is the exact temptation Deuteronomy anticipates. The phrase <em>kochi v'otsem yadi</em> (my power and strength of my hand) is a self-attribution formula that appears in ANE royal inscriptions where kings credit their own prowess for conquest and prosperity. Deuteronomy's warning is that the covenant community will adopt the ideology of ANE rulers — the self-made man who owes prosperity to his own effort — which Canaanite culture modeled. The wealth the good land produces is structurally identical to what Canaanite elites possessed, and the temptation is to explain it the same way they did.</p>""",
+
+    "18": """<p>The counter-claim is decisive: "it is he who gives you the ability to produce wealth, in order to confirm his covenant." Two points: (1) the ability to work and prosper (<em>koach la'asot chayil</em>) is itself a divine gift — even human agency is derivative; (2) the purpose of prosperity is covenant confirmation (<em>l'haqim et-brito</em>), not personal enrichment. The covenant with the patriarchs (Abraham, Isaac, Jacob) is the frame within which all of Israel's prosperity must be understood. Israel's wealth in Canaan is a fulfillment of the land-promise to Abraham (Gen 12:7; 17:8), not a product of Israelite achievement. This is the background for Paul's argument in Romans 4 and Galatians 3 about the priority of the Abrahamic covenant over the Sinaitic.</p>""",
+
+    "19": """<p>The warning is categorical: "if you ever forget the LORD your God and follow other gods" — the two halves belong together. Forgetting YHWH does not result in neutral atheism; it results in worship of the Canaanite deities who inhabited the land. The verb <em>halach acharei elohim acherim</em> (walk after other gods) is the Deuteronomistic formula for apostasy that appears throughout Judges and Kings. The phrase "serving and bowing down" describes the full physical practice of worship: the body performing the postures of submission that belong only to YHWH.</p>""",
+
+    "20": """<p>The comparison to the nations being destroyed is the severest possible warning: Israel's fate will mirror the fate of the Canaanites if they disobey. The Canaanites are being expelled for their wickedness (9:4-5); Israel will be expelled for the same reason if they replicate it. This creates a deliberate irony: "because you would not obey the LORD your God" is the same judgment that falls on the nations that never had the covenant. Amos 3:2 makes the same point: "You only have I known of all the families of the earth; therefore I will punish you for all your iniquities."</p>"""
   },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
+
   "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
+    "1": """<p>"Hear, O Israel" (<em>shema yisrael</em>) opens chapter 9 with the same formula as the Shema (6:4), signaling a new address. The description of Canaanite cities as "fortified to the sky" (<em>betstsurot bashamayim</em>) is hyperbolic but reflects genuine ANE siege-wall architecture — Late Bronze Age Canaanite cities like Hazor and Megiddo had massive earthen ramparts and stone fortification systems. The Num 13 spy report had already described the cities as "great and fortified up to heaven" (13:28); Deuteronomy repeats the description to show that the obstacle hasn't changed, but the mandate to trust has.</p>""",
+
+    "2": """<p>The Anakites (<em>Anakim</em>) are the giant-warrior tradition attached to Canaanite territories. Numbers 13:33 links them to the Nephilim of Genesis 6:4: "we seemed like grasshoppers in our own eyes." The proverb "who can stand up to the Anakites?" is presented as common knowledge — a piece of settled despair that Deuteronomy quotes only to demolish. Joshua 11:21-22 records the eventual defeat of the Anakites under Joshua; some survivors in Gaza, Gath, and Ashdod may explain the later Philistine giant warriors, including Goliath of Gath (1 Sam 17).</p>""",
+
+    "3": """<p>YHWH as "consuming fire" (<em>esh okhelah</em>) going before Israel is direct theophany language. The consuming-fire image appears at Sinai/Horeb (Exod 24:17: "the appearance of the glory of the LORD was like a consuming fire") — the same YHWH who appeared at Sinai acts as Israel's divine warrior in Canaan. The Deuteronomistic History carries this warrior-YHWH theology throughout: the victories at Jericho, the Gibeonite battle, and others are YHWH's direct military action. Israel's role is to follow and "drive out" (<em>yoresh</em>), not to conquer by their own strength.</p>""",
+
+    "4": """<p>The counter-theology of self-righteousness is introduced with dramatic emphasis: "Do not say to yourself, 'The LORD has brought me in to possess this land because of my righteousness.'" The word <em>tzidqati</em> (my righteousness) anticipates the entire argument of vv. 4-6. In the ANE patron-client system, conquest and land-grant functioned as reward for loyal service. Deuteronomy explicitly dismantles any application of this logic to Israel's conquest: it is not Israel's covenant loyalty that earns Canaan, but the nations' wickedness that forfeits it. Grace precedes obedience in the covenant structure, not the reverse.</p>""",
+
+    "5": """<p>The dual reason for the conquest is stated with precision: (1) the wickedness of the nations (<em>berishaat haggoyim</em>), and (2) the fulfillment of the oath to the patriarchs (<em>l'haqim et-hadavar asher nishba YHWH la'avoteichem</em>). Both grounds are external to Israel's merit. The patriarchal oath (Gen 12:7; 15:18; 26:3; 28:13) is consistently framed as unconditional divine promise. Paul's argument in Galatians 3 that the law (Sinai) does not annul the prior promise (Abrahamic covenant) builds directly on this Deuteronomic argument structure.</p>""",
+
+    "6": """<p>"You are a stubborn people" (<em>am qesheh oref</em> — literally "stiff-necked people") is introduced as YHWH's own characterization of Israel, repeated from the golden calf episode (Exod 32:9; 33:3-5). The term is a draft-animal metaphor: a stiff-necked ox cannot be turned by the yoke — it resists the handler's direction. This is the background of Stephen's speech (Acts 7:51: "you stiff-necked people, uncircumcised in heart and ears — you always resist the Holy Spirit"), which weaponizes Deuteronomy's own characterization of Israel against the Temple establishment.</p>""",
+
+    "7": """<p>The command "remember this — do not forget" brackets the entire historical recitation (vv. 7-24) as an anti-pride exercise. "From the day you left Egypt until you arrived here, you have been rebellious against the LORD" makes the whole wilderness history a single narrative of ongoing rebellion. This categorical framing is unusual: Deuteronomy does not soften the story into a pattern of cycles but presents continuous rebellion. The implication: if Israel was rebellious throughout the time of miracles and direct divine provision, there is no basis for self-confidence as they enter Canaan.</p>""",
+
+    "8": """<p>Horeb is Deuteronomy's name for the mountain called Sinai in Exodus and Leviticus (a northern/Elohistic vs. southern/Yahwistic tradition). The golden calf episode (Exod 32) is the paradigmatic act of rebellion, and it happened at the very moment of covenant-making: while Moses was receiving the Torah, Israel was constructing an alternative worship system. The "ready to destroy you" mirrors Exod 32:10 precisely. YHWH's threat of total annihilation is presented as genuine — Moses's intercession was the barrier between Israel and destruction.</p>""",
+
+    "9": """<p>The forty days and forty nights without food or water on the mountain establish Moses as a figure of extraordinary spiritual intensity. In ANE court protocol, a petitioner before a king would fast as a sign of urgency and submission. The stone tablets (<em>luchot avanim</em>) are the treaty document in ANE terms — inscribed on stone to signal permanence and authority. The phrase "written by the finger of God" (<em>ketuvim b'etzba elohim</em>) from Exod 31:18 is repeated here: the divine authorship of the Decalogue distinguishes it from Moses's later writing of the broader Torah.</p>""",
+
+    "10": """<p>The "two stone tablets written by the finger of God" specifies what exactly Moses received: the Decalogue specifically, not the entire Sinaitic law-corpus. The "day of the assembly" (<em>yom haqqahal</em>) — the day YHWH appeared at Sinai to the whole assembled people (Exod 20:18-21) — is important: the Sinai theophany was a public event witnessed by the entire nation, creating a communally attested divine encounter. The assembly-tradition feeds into the NT concept of the <em>ekklesia</em> (assembly/church) as the community that gathers before God.</p>""",
+
+    "11": """<p>The "tablets of the covenant" (<em>luchot habrit</em>) — the name given to the Decalogue tablets — identifies the ten commandments as the core covenant document. In Hittite suzerainty-treaty parallels, the treaty text was deposited in the sanctuary before the deity and periodically read publicly. The Decalogue in the ark fills exactly this function: the covenant document kept in YHWH's presence (Deut 31:10-13). The tablets are not primarily legal regulations but the covenant-treaty text — their presence or absence signals the state of the relationship.</p>""",
+
+    "12": """<p>YHWH's command "get up and go down quickly" conveys urgency: the rebellion is ongoing and acute. The phrase "your people, whom you brought from Egypt" — YHWH's attributing the people to Moses in the moment of divine wrath — recurs in Exod 32:7 verbatim. It is a distancing formula: in anger, YHWH disowns Israel ("your people" to Moses; not "my people"). The "cast metal idol" (<em>massekhah</em>) is the golden calf — possibly a pedestal for YHWH (the ANE pattern of gods standing on animal thrones) that was effectively worshipped as the deity itself.</p>""",
+
+    "13": """<p>"I have observed this people, and they are indeed a stubborn people" — YHWH's evaluation uses the same <em>qesheh oref</em> language as v. 6, but now as a verdict following the golden calf evidence. The verb <em>ra'iti</em> (I have seen/observed) carries theologically loaded divine-sight meaning: YHWH's seeing is always also a judicial assessment (as in Gen 6:5: "YHWH saw that the wickedness of man was great"). The observation here is a covenant indictment: YHWH has assessed Israel's character and the verdict is confirmed stubborn rebellion.</p>""",
+
+    "14": """<p>"Leave me alone so that I may destroy them and blot out their name" captures the theological crisis: Israel's destruction would represent the failure of the Abrahamic covenant. "Blotting out a name" (<em>machah et-shemam</em>) in ANE culture was total annihilation — obliterating both a person and their memory. The promise to make a new nation from Moses mirrors the original call to Abraham (Gen 12:2). Moses's refusal of this offer (vv. 26-29) is theologically remarkable: he refuses personal dynastic advancement to argue for Israel's continuation — the opposite of self-interest.</p>""",
+
+    "15": """<p>Moses descended from the mountain "while it was ablaze with fire" — the fire accompanying the Sinai theophany was still active. The tablets were still in his hands — he had not yet read the commandment against graven images to the people when he saw them violating it. The dramatic contrast (covenant document in Moses's hands; covenant violation in Israel's sight) sets up the tablet-breaking as a covenant-dissolution act.</p>""",
+
+    "16": """<p>The cast metal calf (<em>egel massekhah</em>) is described as something Israel "made for themselves" — the self-construction language emphasizes that this is a human creation masquerading as deity. The phrase "quickly turned from the way the LORD had commanded you" (<em>satam mahher min-haderekh asher tzivvah YHWH etckem</em>) is the covenant-violation formula. The speed ("quickly") heightens the offense: within Moses's forty-day absence, Israel had abandoned the covenant.</p>""",
+
+    "17": """<p>Moses seizing and throwing the tablets is an interpretive act. In ANE treaty procedure, the physical destruction of a treaty document formally terminated the treaty relationship — a suzerain who destroyed a vassal's treaty copy was ending the covenant. Moses's smashing of the tablets is both a covenant-outrage response and a symbolic declaration that Israel has voided the covenant by its own action. The act was "before your eyes" (<em>l'eineihem</em>) — public and witnessed, making Israel's covenant breach a matter of historical record.</p>""",
+
+    "18": """<p>Moses's second prostration — forty days and forty nights of total fasting — follows the golden calf disaster. In this intercession, Moses is the covenant mediator whose personal standing before YHWH stands between the people and divine judgment. The pattern of prophetic intercession (Abraham in Gen 18:22-33; Samuel in 1 Sam 7:5-9) has its paradigmatic form here. The NT presents Jesus as the ultimate covenant mediator whose intercession is not temporary or partial but permanent and complete (Heb 7:25: "he always lives to make intercession for them").</p>""",
+
+    "19": """<p>"I was terrified of the LORD's fierce anger" — Moses's fear is covenant realism: the divine anger was genuinely destructive, and Moses placed himself between the people and it. The phrase <em>aph u'chemah</em> (anger and burning wrath) describes the intensity of divine covenant-indignation. "The LORD listened to me that time as well" is the understated climax: Moses's intercession worked. The theological implication is that prophetic intercession genuinely shapes divine action within the covenant relationship.</p>""",
+
+    "20": """<p>Aaron's inclusion in the divine anger is significant: he made the calf (Exod 32:2-4, 24), yet Moses intercedes for him as well as the people. Aaron was "ready to be destroyed" — the high priestly office offered no immunity from covenant judgment; it was Moses's intercession, not Aaron's priestly status, that preserved him. The Aaronic priesthood that emerges from this crisis is thus founded on prophetic intercession, not on inherent sacral immunity.</p>""",
+
+    "21": """<p>The destruction of the golden calf — burning, crushing, grinding to fine dust, throwing the dust into the stream — parallels Exod 32:20. In some ANE ritual contexts, the ashes of a destroyed sacred object were thrown into water as ritual nullification. Deuteronomy adds the detail "the stream running down the mountain": the ashes of Israel's idol were washed away by the mountain stream, symbolically undoing the act. In Num 5:17-28 (the ordeal of the bitter water), ground material is mixed into water as a test; some interpreters see a related ritual of curse-absorption here.</p>""",
+
+    "22": """<p>Taberah (Num 11:1-3: fire from YHWH consumed the camp outskirts), Massah (Exod 17:7: testing YHWH at the waters of Meribah), and Kibroth-hattaavah (Num 11:34: the graves of craving) form a brief litany of rebellion sites. Each name is a memorial of specific failures: Taberah means "burning," Massah means "testing/temptation," Kibroth-hattaavah means "graves of craving." The place-names themselves carry the memory of judgment, turning geography into a theological record. Paul refers to the wilderness rebellion episodes as typological warnings for the Corinthian community (1 Cor 10:5-11).</p>""",
+
+    "23": """<p>Kadesh-barnea is the pivotal failure: YHWH commanded "go up and take possession of the land" and Israel refused — the Num 13-14 spy episode. This failure cost an entire generation their entry into the land (Num 14:22-23). The verbs used — "you rebelled against the LORD your God's command," "you did not trust him," "you refused to obey him" — are covenant-treaty language for deliberate treaty violation. <em>Lo he'emantem</em> (you did not trust/believe) uses the root of <em>emunah</em> (faith/faithfulness) — the failure at Kadesh-barnea was precisely a failure of covenant faith.</p>""",
+
+    "24": """<p>"You have been rebellious against the LORD from the day I first knew you" — Moses's concluding indictment covers the entire period of his association with Israel. This categorical historical verdict is the baseline for what follows: Moses will nonetheless intercede for this people (vv. 25-29) not because their record merits it but because the covenant purpose (the Abrahamic promise) requires it. The tension between Israel's proven stubbornness and YHWH's commitment to the patriarchal oath carries the entire narrative of Israel's history.</p>""",
+
+    "25": """<p>Moses's forty-day prostration "because the LORD had threatened to destroy you" is an act of prophetic interposition: placing himself before YHWH on behalf of people who have no standing before that authority. The prostration (<em>hitnapal</em>, to fall/prostrate) is the posture of a suppliant before a superior — Moses adopting total vulnerability on behalf of those who cannot stand. The duration (forty days) matches the golden calf intercession: Moses's response to each covenant crisis is sustained, costly intercession.</p>""",
+
+    "26": """<p>Moses's prayer begins with an appeal to YHWH's own investment: "your people and your inheritance" — taking YHWH's own words about Israel back to YHWH. In ANE legal language, an inheritance (<em>nachalah</em>) is inalienable property; the owner cannot simply discard it. Moses argues that YHWH's treatment of Israel as <em>nachalah</em> creates an obligation YHWH himself established. "Whom you redeemed by your greatness" references the Exodus — YHWH's prior investment is the argument for continued protection. This intercession pattern is the OT basis for Heb 7:25 (Christ interceding on the basis of his completed redemptive work).</p>""",
+
+    "27": """<p>"Remember your servants Abraham, Isaac, and Jacob" — the appeal to the patriarchal covenant is Moses's strongest argument. YHWH's oath to the patriarchs was sworn by himself (Gen 22:16: "by myself I swore, declares the LORD") — it cannot be voided without YHWH contradicting his own sworn word. "Do not consider the stubbornness of this people" asks YHWH to set aside the evidentiary record of Israel's behavior and judge on the basis of covenant commitment. This is the proto-pattern for what the NT calls grace: judgment suspended on the basis of prior covenant commitment rather than present merit.</p>""",
+
+    "28": """<p>"Otherwise the land you brought us from will say, 'The LORD was unable to bring them to the land he had promised'" — Moses's argument from YHWH's reputation among the nations. This is the same argument used in Exod 32:12 ("why should the Egyptians say, 'He brought them out to harm them'"?). YHWH's honor among the nations is at stake in Israel's fate. In the ANE patron-deity relationship, a deity's inability to protect the people reflected on the deity's power — Moses weaponizes this theological logic in YHWH's favor.</p>""",
+
+    "29": """<p>The prayer closes with the ownership language: "your people and your inheritance, whom you brought out by your great power and your outstretched arm." The "outstretched arm" (<em>zero'a netuyah</em>) is the standard Exodus power formula (Exod 6:6; 15:16). Moses ends by reminding YHWH that these are the people he himself rescued — destroying them would undo his own Exodus work. The prayer's logic: YHWH's redemptive action has already committed him to their preservation; the patriarchal covenant and the Exodus covenant together create an irrevocable divine investment in Israel's survival.</p>"""
   },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
+
+  "10": {
+    "1": """<p>The second stone tablets are chiseled by Moses himself — a significant departure from the first tablets where YHWH both wrote and provided the stone (Exod 31:18). After the covenant breach, Moses participates more actively in the renewal. The wooden chest (<em>aron etz</em>) here is presented as a simple portable container Moses makes himself, before the more elaborate Exod 25 ark with its gold overlay and mercy-seat design. Deuteronomy's simpler presentation is consistent with its focus on the essentials of covenant relationship rather than the cultic details of the Priestly tradition.</p>""",
+
+    "2": """<p>YHWH's promise to rewrite the broken tablets — "I will write on the tablets the words that were on the first tablets, which you broke" — is a covenant renewal after dissolution. The fact that the content is identical to the first tablets confirms that the Decalogue is YHWH's own covenant terms, which YHWH himself re-commits to. The broken tablets are not forgotten (YHWH references "which you broke") — covenant history, including its ruptures and renewals, is preserved rather than erased.</p>""",
+
+    "3": """<p>Moses's personal construction of the ark — "so I made an ark of acacia wood" — is Deuteronomy's distinctive account, differing from the Exodus tradition where Bezalel constructs it as part of the tabernacle project (Exod 37:1). Deuteronomy focuses on Moses's personal role as covenant mediator: Moses is presented as doing everything spiritually essential himself. The acacia wood (<em>shittim</em>) was the standard construction material for sacred objects in the tabernacle — lightweight, hard, and found in the Sinai region.</p>""",
+
+    "4": """<p>The tablets are identified as "the Ten Commandments" (<em>aseret haddevarim</em>, literally "the ten words") — Deuteronomy's term for what is usually called the Decalogue (from Greek <em>deka logoi</em>). The dual emphasis — spoken from fire to the assembly, then written by the divine finger — establishes both the spoken and written forms of the covenant. The assembly-day reference (<em>yom haqqahal</em>): the Sinai covenant was given in a context of corporate public witness, not private revelation.</p>""",
+
+    "5": """<p>"There they remain" (<em>sham yihyu</em>) — the tablets placed in the ark and remaining there. The resting place of the ark in Solomon's temple (1 Kgs 8:9: "there was nothing in the ark except the two tablets of stone that Moses had placed there at Horeb") establishes unbroken continuity from Sinai to the First Temple. The covenant document at the center of Israel's worship-space defined the nature of the covenant relationship: Israel's entire cult was built around housing and honoring YHWH's treaty-text with Israel.</p>""",
+
+    "6": """<p>The parenthetical notice of Aaron's death at Moserah (the parallel in Num 20:22-29 places it at Mount Hor) is one of several minor geographical variations between Deuteronomy and Numbers. Aaron's death marks the priestly succession: "Eleazar his son took over the priestly ministry" (<em>yekhahein tachatav</em> — the standard succession formula for the Aaronic priesthood). The notice establishes the continuity of the Levitical-Aaronic priesthood into the period when Deuteronomy was composed.</p>""",
+
+    "7": """<p>The itinerary from Moserah through Gudgodah to Jotbathah ("a land of flowing streams") is a parenthetical geographical notice. Jotbathah's description as a land of streams (<em>nachalei mayim</em>) may contrast with the wilderness's waterless character, suggesting YHWH's providential water-provision even in desert journeys. These brief geographical notes served as mnemonic markers for the listening audience, connecting the speech to locations in Israel's collective memory.</p>""",
+
+    "8": """<p>The Levitical separation is one of the most theologically important institutional decisions in Israel's history. The three functions of the tribe of Levi — carry the ark, stand before YHWH to minister, pronounce blessings in his name — constitute the full range of sacral service. "Stand before YHWH" (<em>la'amod lifnei YHWH l'sharto</em>) is the court-service formula used for royal attendants in ANE palace administration; here it describes the Levites as YHWH's divine court personnel. Pronouncing blessings "in his name" (<em>bishemo l'varech</em>) is the liturgical function described in the Aaronic blessing (Num 6:22-27), where the priest puts YHWH's name on Israel. The phrase "which they do to this day" signals Deuteronomy's awareness of ongoing Levitical ministry — the institutions described are still functioning.</p>""",
+
+    "9": """<p>"The LORD is his inheritance" (<em>YHWH hu nachlatam</em>) is the theological definition of the Levitical condition. While the other tribes received territorial inheritance, the Levites received YHWH himself — mediated through their share in altar offerings and tithes (Deut 18:1-8). This is a radical social arrangement: an entire tribe was removed from the land-economy and sustained by the covenant community's worship practices. The Levites' landlessness made them perpetually dependent on YHWH's provision through the community — institutionalized covenant dependence. The NT applies this pattern to Christian ministry: "the Lord has commanded that those who proclaim the gospel should get their living by the gospel" (1 Cor 9:14).</p>""",
+
+    "10": """<p>Moses's summary of the second forty-day fast confirms its intercessory character: "the LORD was unwilling to destroy you." The understatement is deliberate — the divine unwillingness to destroy is presented as the outcome of sustained prophetic intercession. The theological implication is that Moses's intercession genuinely influenced the divine decision, not by overcoming YHWH's will, but by activating a deeper level of YHWH's covenantal commitment. This is not prayer coercing God but prayer engaging the divine character that is already committed to covenant faithfulness.</p>""",
+
+    "11": """<p>"Get up and lead the people on their journey" — the command after the golden calf crisis is a covenant renewal and mission confirmation. YHWH does not revoke Moses's leadership or alter the destination; the covenant is renewed to the same ends. The Exodus-to-Canaan mission is re-commissioned, not scaled back. The theological point is the stability of divine purpose despite human failure: the golden calf did not permanently redirect Israel's covenant trajectory. This is the pattern Paul describes in Rom 3:3: "what if some were unfaithful? Does their faithlessness nullify the faithfulness of God?"</p>""",
+
+    "12": """<p>"What does the LORD your God ask of you?" — this summary formula is the closest Deuteronomy comes to a single-verse statement of the covenant's essence, comparable to Mic 6:8 ("what does YHWH require of you but to do justice, love covenant-faithfulness, and walk humbly with your God") and Mark 12:28-30 (Jesus's greatest commandment). Five verbs follow: fear (<em>yirah</em>), walk (<em>halakh</em>), love (<em>ahavah</em>), serve (<em>oved</em>), keep (<em>shamar</em>). The sequence moves from inner disposition (fear, love) to embodied practice (walk, serve, keep). This is not law-keeping as transaction but covenant relationship as total orientation of person.</p>""",
+
+    "13": """<p>"For your own good" (<em>l'tovatekhah</em>) — the commandments are not arbitrary impositions but provisions for human flourishing within the covenant structure. Deuteronomy consistently presents covenant obedience as in Israel's genuine interest, not merely YHWH's demand. The treaty-form context supports this: a suzerain's provisions protected the vassal's welfare as well as the suzerain's honor. This anticipates the NT principle that divine commands were intended to lead to life (Rom 7:10: "the commandment that was intended to bring life") — the intention was always human flourishing.</p>""",
+
+    "14": """<p>"To the LORD your God belong the heavens, even the highest heavens, the earth and everything in it" — the universal sovereignty claim that makes Canaan's gift more striking, not less. If YHWH owns everything, the gift of a specific land is a grant from the universal owner, not a property transfer. The phrase <em>hashamayim u'shmei hashamayim</em> (the heavens and the heavens of heavens) is a merism for the totality of the cosmos, appearing also in 1 Kgs 8:27 (Solomon's temple dedication prayer) and Neh 9:6. YHWH's universal ownership is the theological prerequisite for his ability to grant Canaan to Israel.</p>""",
+
+    "15": """<p>The contrast between YHWH owning everything (v. 14) and choosing Israel specifically ("yet the LORD delighted in your fathers and loved them") creates a sovereign election framework. The verb <em>hashaq</em> (to delight in, to set affection upon) describes specific personal attachment — it is used of romantic attachment in Gen 34:8. The patriarchal love (<em>ahav</em>) that motivated YHWH's choice is not earned love but initiated love: YHWH loved the patriarchs and then their descendants not because of something in them but because of something in himself. Deut 7:7-8 makes this explicit: "it was not because you were more in number ... but because YHWH loves you."</p>""",
+
+    "16": """<p>"Circumcise your hearts and stop being stubborn" (<em>umaltem et-arlathem levavechem v'arpechem lo taqshu od</em>): the metaphor of heart circumcision is one of Deuteronomy's most theologically provocative formulations. Physical circumcision was the covenant sign (Gen 17:10-14) signifying belonging to Abraham's family. Heart circumcision uses the same image — the removal of an obstruction to full covenant intimacy — applied to the inner life. <em>Orlat levav</em> (foreskin of the heart) is the uncircumcised heart that cannot receive the covenant's demands. Jeremiah (Jer 4:4) and Paul (Rom 2:29) both take up this metaphor, and Deuteronomy itself predicts that YHWH will accomplish this eschatologically (Deut 30:6: "YHWH your God will circumcise your heart ... to love YHWH your God with all your heart"). The command of 10:16 and the promise of 30:6 define the covenant's anthropological problem and divine solution.</p>""",
+
+    "17": """<p>"The LORD your God is God of gods and Lord of lords" (<em>elohei ha'elohim u'adonei ha'adonim</em>) — a superlative claim using the ANE idiom of stacked genitive constructions (king of kings, lord of lords) to intensify to the highest degree. This exact title ("Lord of lords") appears in Dan 2:47 and is applied to Christ in Rev 17:14 and 19:16. The four divine attributes that follow — great, mighty, awesome, impartial, and incorruptible — contrast with ANE deities that could be manipulated through offerings and were favorable toward their ethnic in-group. YHWH's impartiality is a covenant guarantee: the powerless can rely on his justice because it is structurally incorruptible.</p>""",
+
+    "18": """<p>"He upholds justice for the fatherless and the widow, and loves the foreigner, providing them with food and clothing" — the classic triad of the marginalised in ANE covenant law (orphan, widow, sojourner). This triad appears throughout the prophets (Isa 1:17; Jer 7:6; Zech 7:10; Mal 3:5) as the test of covenant faithfulness: a society that protects its most vulnerable members shows that YHWH's covenant character has shaped its social structures. In the ANE, the fatherless and widow had no male protector in a patrilineal society; the foreigner (<em>ger</em>) had no tribal or kinship network. YHWH functions as the institutional patron of those who have no human patron — a revolutionary social theology embedded in covenant law.</p>""",
+
+    "19": """<p>"So love the foreigner, for you were foreigners in the land of Egypt" — the motivation for covenant care of the <em>ger</em> is Israel's own experience of vulnerability and dependence. This is Deuteronomy's characteristic move: historical experience becomes the basis for covenant ethics. The command to love (<em>ahavtem</em>) the foreigner uses the same verb as YHWH's love for the patriarchs (v. 15) — the same love commanded of Israel toward the resident alien. The logic: YHWH loved you when you were powerless; therefore you must love those who are powerless. This is the ethical structure Jesus deploys in his summary of the law (Matt 22:34-40) and Paul in his ethics (Rom 13:8-10).</p>""",
+
+    "20": """<p>The three-verb summary of covenant response — "fear the LORD your God, serve him, hold fast to him" — parallels the five-verb summary of v. 12. The verb <em>davaq</em> (hold fast, cling to) is the covenant-loyalty term — it describes exclusive attachment (also used in Gen 2:24 for the marital bond: "therefore a man shall leave his father and mother and hold fast to his wife"). Taking oaths in YHWH's name is the formal legal declaration of covenant identity: swearing by YHWH's name acknowledged his sovereignty over all truth-claims.</p>""",
+
+    "21": """<p>"He is your praise and he is your God" — <em>tehillah</em> (praise) applied to YHWH as Israel's proper object of praise means that YHWH himself is the content of Israel's praise, not merely the recipient. Israel praises YHWH by declaring what he has done, and what he has done constitutes the substance of their identity. The "great and awe-inspiring things for you that your own eyes have seen" refers to the Exodus and wilderness events — Israel's praise-vocabulary is entirely grounded in witnessed historical acts, not abstract theological claims.</p>""",
+
+    "22": """<p>"Your fathers went down to Egypt as seventy people, and now the LORD your God has made you as numerous as the stars of the sky" — the fulfillment of the Abrahamic promise (Gen 15:5: "look toward heaven and number the stars, if you are able ... so shall your offspring be"). The seventy (Gen 46:27; Exod 1:5) who entered Egypt and the star-numerous multitude who left are placed in direct contrast — the Exodus is itself a fulfillment of the Abrahamic multiplication promise. This concludes the argument of chapters 8-10: Israel possesses nothing on the basis of merit, but everything on the basis of YHWH's covenantal faithfulness to sworn promises.</p>"""
   }
 }
 
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
-}
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'deuteronomy')
+    merge_comm(existing, DEUTERONOMY)
+    save_comm('mkt-context', 'deuteronomy', existing)
+    print('Deuteronomy 8–10 mkt-context written.')
 
 if __name__ == '__main__':
     main()

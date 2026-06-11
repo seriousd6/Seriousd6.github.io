@@ -1,45 +1,38 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Context Commentary — Daniel chapters 3–5
+Run: python3 scripts/zc-context-daniel-3-5.py
+
+Source data used:
+- data/interlinear/daniel.json
+- data/translation/draft/mediating/daniel.json (MKT text)
+- data/translation/notes/daniel.json
+
+Key decisions in this range:
+- Ch 3 is in Aramaic (begins 2:4b); Greek loanwords in the instrument lists (qitros,
+  pesanterin, sumponyah) are noted as evidence in the dating debate without taking sides.
+- "Son of the gods" (bar elahin, 3:25): rendered descriptively; Nebuchadnezzar uses his
+  own polytheistic vocabulary -- no claim about what he understood.
+- "Watchers" (4:13,17,23): unique OT term; Second Temple background noted.
+- Belshazzar as co-regent: Nabonidus Chronicle evidence cited.
+- MENE MENE TEKEL UPARSIN as monetary wordplay explained.
+- "Darius the Mede" (5:31) historicity issue noted but not resolved.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +42,118 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
+DANIEL = {
+  "3": {
+    "1": '<p>The chapter is entirely in Aramaic, the imperial lingua franca of the Neo-Babylonian and Persian empires. The golden statue is 60 cubits tall and 6 cubits wide (approximately 27 metres high and 2.7 metres wide) — a strikingly disproportionate silhouette that may suggest an obelisk or stele rather than a naturalistic figure. The "plain of Dura" (<em>biqa\' dura</em>) is unidentified; proposals include sites near Babylon. No Babylonian record of this statue survives, though colossal royal statues are well attested in ANE archaeology.</p>',
+    "2": '<p>Seven categories of officials are summoned — a literary convention for completeness, meaning every level of provincial administration. The term <em>satrap</em> (Aram. <em>achashdarpan</em>) is a Persian loanword, one of several in the chapter that inform the dating debate. The repeated listing of officials in vv.2-3 reinforces that the entire imperial apparatus was mobilized — no exemption existed.</p>',
+    "3": '<p>The repetition of the official list from v.2 is a deliberate literary device, not an error. It reinforces the totalizing pressure of the state command. Daniel himself is conspicuously absent from the narrative; the text offers no explanation.</p>',
+    "4": '<p>The herald addresses "peoples, nations, and languages" (<em>ammayya umayya welshanayya</em>) — an Aramaic formula used throughout Daniel (3:4,7; 4:1; 5:19; 6:25; 7:14) to denote universal scope. In Daniel 7:14 the same formula describes the dominion of the Son of Man, creating an irony: the human empire demands universal worship, prefiguring the kingdom that will actually receive it.</p>',
+    "5": '<p>Six instruments are listed, repeated four times in the chapter. Three terms are Greek loanwords: <em>qitros</em> (kithara), <em>pesanterin</em> (psalterion), <em>sumponyah</em> (symphonia). Scholars dating Daniel to the Maccabean period (c.165 BCE) cite these Hellenisms; those defending an earlier date note that Greek musical culture was present in the Near East well before Alexander and that Nebuchadnezzar employed musicians from diverse cultures.</p>',
+    "6": '<p>The furnace (<em>attun</em>) was likely a large industrial kiln used for brickmaking, common in Mesopotamia and attested in cuneiform texts. The penalty of death by fire was used in Babylonian law for certain offenses (cf. Jer 29:22). The immediate, extreme penalty reflects the absolute authority of the Babylonian king.</p>',
+    "7": '<p>"All the peoples... fell down and worshipped" — the universal compliance sets up the contrast with the three men who refuse. The pattern of universal conformity interrupted by faithful dissent recurs in apocalyptic literature and is foundational to the book\'s theology of witness under imperial pressure.</p>',
+    "8": '<p>The "Chaldeans" here likely means a professional class — astrologers and court advisors — rather than an ethnic group. The accusation is politically motivated: the promotion of Shadrach, Meshach, and Abednego (2:49) may have created resentment among native Babylonian officials who now see an opportunity.</p>',
+    "9": '<p>The formulaic greeting "O king, live forever" (<em>malka l\'olam cheyeh</em>) is the standard Aramaic court address, equivalent to "Your Majesty." It appears in 2:4; 5:10; 6:6,21; Neh 2:3; 1 Kgs 1:31. It creates a context of court protocol that makes the accusation that follows more formally binding.</p>',
+    "10": '<p>The Chaldeans quote the king\'s own decree back to him — a legal tactic that makes it difficult for Nebuchadnezzar to retract without undermining royal authority. Once the decree has been formally restated, the king is legally bound to it by his own word.</p>',
+    "11": '<p>The penalty is restated to prime the audience for the confrontation ahead. The furnace threat appears eight times in the chapter (vv.6,11,15,17,19,20,21,23), creating sustained narrative tension and framing the miracle when it comes.</p>',
+    "12": '<p>"Certain Jewish men" (<em>gavrin yehudayeh</em>) — the Aramaic emphasizes ethnic identity as the center of the accusation. Their Babylonian throne-names are used throughout ch.3; their Hebrew names (Hananiah, Mishael, Azariah) are suppressed, which may signal that the imperial identity-replacement project of ch.1 is now being weaponized against them.</p>',
+    "13": '<p>Nebuchadnezzar\'s rage (<em>benegaz vegitsef</em>, "in furious rage") is immediate. His emotional volatility is a recurring character trait in Daniel 1-4, contrasted with the steady composure of Daniel and his friends. In ch.4, this volatility will be turned inward in divine judgment.</p>',
+    "14": '<p>The king\'s question "Is it really true?" gives the three men an opportunity to recant. This procedural fairness — hearing before execution — makes the three men\'s subsequent refusal more costly and deliberate. Nebuchadnezzar is not simply executing them; he is genuinely expecting compliance.</p>',
+    "15": '<p>The theological crux: "who is the god who will rescue you from my hand?" The rhetorical question (<em>uman hu elah di yeshezibkun min yadai</em>) assumes no such god exists. The answer, though Nebuchadnezzar does not yet know it, will be demonstrated in the verses that follow.</p>',
+    "16": '<p>"We have no need to defend ourselves to you in this matter" (<em>la chashchim anan \'al-denah pittgam l\'hatvutakh</em>) — not defiance, but calm refusal to treat the king\'s offer as a genuine theological question requiring debate. The Aramaic <em>pittgam</em> ("word, matter") is a Persian loanword.</p>',
+    "17": '<p>"The God we serve is able to rescue us from the burning fiery furnace, and he will deliver us from your hand, O king." The verb <em>meshezib</em> (to rescue, deliver) echoes the exodus vocabulary of deliverance. But v.18 immediately qualifies the confidence — the rescue is possible, not guaranteed.</p>',
+    "18": '<p>"But even if he does not" (<em>wehin la</em>) — theologically the most significant sentence in Daniel 3. Faith is not contingent on miraculous deliverance. The three men separate their confidence in God\'s ability from their expectation of a particular outcome. Chrysostom called this "the most glorious words in all of Scripture." The same unconditional trust appears in Hab 3:17-19 and Job 13:15.</p>',
+    "19": '<p>Nebuchadnezzar\'s expression changes (<em>tzelem apohui eshtenad</em>, "the image of his face was altered") — <em>tzelem</em> is the same word used in 2:31 for Nebuchadnezzar\'s dream-statue. A verbal irony: the king who erected an image (<em>tzelem</em>) is himself transformed by rage. The furnace is heated seven times, signifying maximum intensity.</p>',
+    "20": '<p>The "strongest soldiers" (<em>giborei chayil</em>) — elite warriors used to execute the command — become its casualties in v.22. The irony is structural: the very strength tasked with enforcing imperial will is consumed by the instrument of that will.</p>',
+    "21": '<p>The three men are thrown in fully clothed — <em>sarbalin</em> (robes), <em>pattishin</em> (tunics), <em>karbelatin</em> (hats) — making the miracle measurable: "not even their clothing was singed" (v.27). The detailed garment list, like the official and instrument lists, sets up a total reversal to be measured precisely.</p>',
+    "22": '<p>The soldiers who throw them in are killed by the heat — a witness to the furnace\'s genuinely lethal temperature (ruling out naturalistic explanations for survival) and an ironic reversal: the instruments of state power are consumed by the instrument of state power.</p>',
+    "23": '<p>The three men fall bound into the furnace. The narrative brevity — no prayer, no cry, no pause — heightens the tension before the reversal. The binding (<em>k\'fitin</em>) becomes significant: the ropes burn but the men do not (implied by v.25 where they walk freely).</p>',
+    "24": '<p>Nebuchadnezzar\'s astonishment is expressed publicly before his counselors — making the miracle a witnessed, documented event within the narrative\'s own world. The king counts three thrown in and sees four walking — the discrepancy is the center of the scene.</p>',
+    "25": '<p>"The appearance of the fourth is like a son of the gods" (<em>vedeyeh revia\' dameh levar elahin</em>). Nebuchadnezzar uses his own polytheistic vocabulary — <em>elahin</em> is plural. He is not making a christological confession; he is saying the figure resembles a divine being from his own pantheon. The LXX renders "angel of God." The narrative identifies the figure obliquely through Nebuchadnezzar\'s witness, leaving interpretation open to the reader.</p>',
+    "26": '<p>Nebuchadnezzar calls them "servants of the Most High God" (<em>avdohi di elah ila\'ah</em>) — the title <em>elah ila\'ah</em> ("Most High God") is a significant concession. He has not converted to monotheism (v.29 still envisions his own gods existing), but he acknowledges the God of Israel as holding the supreme position.</p>',
+    "27": '<p>The fourfold witness — hair not singed, garments unaffected, no smell of fire, bodies unharmed — is certified by all the imperial officials present: satraps, prefects, governors, counselors. The same administrative apparatus that witnessed the command now witnesses its reversal.</p>',
+    "28": '<p>Nebuchadnezzar\'s declaration uses the exodus formula: God "sent his angel and rescued his servants." The angle of YHWH intervening to deliver — the exodus pattern — is applied here to the Babylonian context. The king acknowledges that the three men "set aside the king\'s command," meaning their disobedience was recognized and is now validated.</p>',
+    "29": '<p>The royal decree protecting the God of Israel from blasphemy is parallel in structure to Darius\'s decrees in ch.6. Nebuchadnezzar remains a polytheist — he grants legal protection without mandating worship. "No other god can deliver like this" is the closest he comes to a monotheistic statement in this chapter.</p>',
+    "30": '<p>The three men\'s promotion is the narrative reward pattern throughout Daniel: faithful witness under pressure results in vindication and advancement. Cf. Joseph in Egypt; Daniel in 2:48-49; Daniel in 6:28. The book\'s theology maps providential faithfulness onto narrative structure.</p>'
   },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
+  "4": {
+    "1": '<p>Daniel 4 is unique in the OT: it is cast as a first-person royal letter (<em>igeret</em>) from Nebuchadnezzar to his entire empire, announcing his own humiliation and restoration. No Babylonian parallel to such a document has been identified. A text known as the "Prayer of Nabonidus" (4Q242, found at Qumran) describes a similar illness suffered by a Babylonian king; some scholars see it as a historically dislocated tradition related to this account.</p>',
+    "2": '<p>"Signs and wonders" (<em>atayya umofeta\'ya</em>) — the vocabulary of the exodus transplanted to a Babylonian context. The theological claim is that the God of Israel\'s sovereignty extends into Babylonian experience, reversing the implied theology of conquest (that Babylon\'s gods defeated Israel\'s God, 1:2).</p>',
+    "3": '<p>"His kingdom is an everlasting kingdom; his dominion endures from generation to generation" — the doxology here (repeated and expanded in vv.34-35) forms the literary frame of the chapter. The same language is cited or echoed in NT eschatology (Rev 11:15) and later Jewish liturgy (<em>Adon Olam</em>).</p>',
+    "4": '<p>"At rest... and thriving in my palace" — Nebuchadnezzar describes the pinnacle of success immediately before catastrophe. The pattern — prosperity followed by disaster — is a wisdom-literature topos (cf. Job 1; Ps 73). The Aramaic <em>rachan</em> ("flourishing, leafy") uses tree imagery that will dominate the chapter.</p>',
+    "5": '<p>The dream-report structure parallels Daniel 2: disturbing dream, court wise men unable to interpret, Daniel brought in to succeed. The repetition reinforces the pattern that only divine revelation can access the meaning of history, not professional divination however sophisticated.</p>',
+    "6": '<p>The summoning of all the court interpreters — magicians, astrologers, Chaldeans, soothsayers — follows the established Daniel pattern (chs. 2, 4, 5). The reader anticipates their failure. The repetition is pedagogical: it establishes a reliable pattern before applying it to Belshazzar in ch.5.</p>',
+    "7": '<p>"They could not give the interpretation" — the wise men\'s failure is the narrative gap that Daniel fills. The theology: true understanding of history belongs to the God who acts in it, not to human divinatory systems however refined.</p>',
+    "8": '<p>Daniel arrives last (<em>le\'acharon</em>). His Babylonian name Belteshazzar is glossed as "after the name of my god" — likely Bel (Marduk), chief Babylonian deity. Nebuchadnezzar acknowledges "the spirit of the holy gods" (<em>ruach elahin qadishin</em>) in Daniel — using his own theological framework rather than Israel\'s.</p>',
+    "9": '<p>"No mystery is too difficult for you" (<em>kol-raz la anesh lak</em>) — <em>raz</em> (mystery, secret) is a Persian loanword occurring 9 times in Daniel 2 and 4. It denotes not merely a puzzle but a revealed divine secret inaccessible to human investigation. The word recurs in the Dead Sea Scrolls as a key term for divine revelation.</p>',
+    "10": '<p>The cosmic tree vision draws on the widespread ANE image of the <em>axis mundi</em>, the world-tree connecting earth and heaven. Similar imagery appears in Ezek 31 (the cedar of Lebanon representing Egypt) and Ezek 17 (the eagle and the vine). In each case, the cosmic tree symbolizes imperial arrogance that is eventually cut down.</p>',
+    "11": '<p>"Its top reached to heaven" (<em>rageh leshemaya</em>) — the same idiom used of the Tower of Babel (Gen 11:4, "a tower with its top in the heavens"). The echo is deliberate: Babylonian imperial ambition repeatedly overreaches into the divine sphere and is repeatedly brought low.</p>',
+    "12": '<p>The tree provides food, shelter, and beauty for all creation. This is the image of an ideal king as provider and protector; Nebuchadnezzar has been this for his empire. The critique is not that he is a bad king but that he has forgotten the source of his greatness.</p>',
+    "13": '<p>"A watcher, a holy one" (<em>\'ir w\'qadish</em>) — the term <em>\'ir</em> ("watcher") is unique in the OT to this chapter (vv.13,17,23). It appears frequently in Second Temple apocalyptic literature, especially 1 Enoch, where the Watchers are angelic beings (some fallen). Here the watcher is holy and acts as a divine agent of judgment. The term was evidently familiar to the original audience.</p>',
+    "14": '<p>The watcher\'s decree uses the language of siegecraft and military destruction: cut down, trim, strip, scatter. The command is passive (<em>kiruhu</em>, "cut it down"), implying divine agency through unspecified means — the empire falls, but no specific human adversary is named as God\'s instrument at this point.</p>',
+    "15": '<p>"But leave the stump of its roots" (<em>ikkar shoreshoi</em>) — the preserved stump indicates reformative rather than final judgment. Iron and bronze binding is obscure; some read it as a symbol of constrained reason during madness, others as a physical image for the enduring dynastic claim that will be restored after the judgment period.</p>',
+    "16": '<p>"Let his mind be changed from a human mind and let the mind of an animal be given to him, and let seven seasons pass over him." The phrase is clinically precise: <em>lebbeh min-enasha yeshteneh</em> (human heart/mind replaced by an animal\'s). Modern psychiatry labels the described condition <em>boanthropy</em> — the delusion of being a bovine animal. Documented cases exist from Antiquity to the present. "Seven seasons" (<em>\'iddan</em>) most likely means seven years.</p>',
+    "17": '<p>"This sentence is decreed by the watchers and commanded by the holy ones, so that the living may know that the Most High rules the kingdom of men and gives it to whom he will." The explicit theological purpose of the judgment is stated: the exercise of divine sovereignty over human empires. This is the thematic thesis of the entire book of Daniel.</p>',
+    "18": '<p>Nebuchadnezzar\'s appeal to Daniel is a concession of his own court\'s inadequacy. "Because the spirit of the holy gods is in you" — despite the pagan framing, the king recognizes a category of access to divine knowledge that his own diviners lack. The repeated emphasis on Daniel\'s superiority to the court wise men is the book\'s apologetic for divine revelation over human wisdom systems.</p>',
+    "19": '<p>Daniel\'s dismay (<em>tiwhah Daniel ki sha\'ah chada</em>, "Daniel was appalled for a time") reflects genuine concern for the king. This detail humanizes Daniel and resists a reading of the chapter as simple nationalist celebration of Babylonian downfall. Daniel wishes the dream applied to Nebuchadnezzar\'s enemies, not to the king himself — a compassion that complicates the text\'s politics.</p>',
+    "20": '<p>The interpretation begins: "The tree you saw... it is you, O king." The direct move from symbol to referent is characteristic of Daniel\'s interpretive style (cf. 2:36-45). Ezek 31 used the same cosmic-tree imagery for Pharaoh; the prophetic convention was established before Daniel appropriates it.</p>',
+    "21": '<p>Daniel rehearses the tree\'s positive attributes before announcing judgment — acknowledging what has been good before pronouncing what must change. This mirrors prophetic oracle structure: the indictment is more powerful for being preceded by acknowledgment of genuine greatness.</p>',
+    "22": '<p>"It is you, O king, who have grown and become strong... your dominion extends to the ends of the earth." The description is historically grounded: Nebuchadnezzar (reigned 605-562 BCE) built the Neo-Babylonian empire to its peak, including the Ishtar Gate, the Hanging Gardens, and extensive canal systems. His building inscriptions repeatedly claim that Marduk gave him power to build Babylon. The sin is not the greatness itself but the refusal to acknowledge its source.</p>',
+    "23": '<p>The watcher-decree is repeated (from vv.13-15) — the repetition confirms the matter is fixed. In Gen 41:32 Joseph explicitly explains that Pharaoh\'s double dream means "the thing is fixed by God, and God will shortly bring it about." Daniel\'s repetition of the watcher\'s command functions similarly as rhetorical confirmation that the judgment will not be reversed.</p>',
+    "24": '<p>"It is the decree of the Most High that has come upon my lord the king." Daniel uses the respectful address "my lord the king" while delivering a judgment oracle. The combination of prophetic boldness and royal courtesy is Daniel\'s consistent manner throughout the book, distinguishing him from confrontational prophets like Elijah.</p>',
+    "25": '<p>The specific content: seven years of madness, eating grass, drenched with dew. The historical basis is unconfirmed in Babylonian records, though the Nabonidus Chronicle describes Nabonidus\'s extended absence in Arabia at Teima — some scholars propose a partial historical connection. The purpose explicitly stated: "until you know that the Most High rules the kingdom of men."</p>',
+    "26": '<p>"Your kingdom will be restored to you as soon as you acknowledge that Heaven rules" — the Aramaic <em>shemayah shalit</em> ("Heaven rules") uses Heaven as a circumlocution for God. This is one of the earliest clear attestations of this theological convention, which becomes standard in Second Temple Judaism and produces Matthew\'s "kingdom of heaven" as distinct from the other Synoptics\' "kingdom of God."</p>',
+    "27": '<p>Daniel\'s counsel — repent, show mercy to the oppressed — is an OT appeal to repentance as a means of averting decreed judgment. The conditional "it may be that there will be a prolonging" is prophetically honest: the decree is made, but God is responsive to repentance. The sins named (unrighteousness, oppression) are social justice violations — the same sins denounced by Amos and Isaiah alongside idolatry.</p>',
+    "28": '<p>"All this came upon King Nebuchadnezzar" — the fulfillment narrated in two Aramaic words. Brevity is emphasis: despite the warning, despite the grace period, the decree executes. The narrative offers no indication of any attempt at repentance between v.27 and v.28.</p>',
+    "29": '<p>Twelve months between the warning and the judgment. The specific duration suggests a grace period — divine patience before execution. This is consistent with the OT pattern of warning before judgment (Amos 4:6-12; Jer 25:3-11) and with the NT\'s characterization of divine forbearance (Rom 2:4; 2 Pet 3:9).</p>',
+    "30": '<p>"Is this not great Babylon, which I myself have built as a royal residence by my mighty power and for the glory of my majesty?" Nebuchadnezzar\'s building inscriptions from Babylon read almost identically: "I, Nebuchadnezzar, king of Babylon... the noble prince, who is dear to the god Marduk, I built..." The pride is not literary invention; it is historically characteristic of ANE royal ideology. The sin is attributing to oneself what belongs to the One who gave the power.</p>',
+    "31": '<p>"While the word was still in the king\'s mouth, a voice fell from heaven" — the immediacy of divine judgment is absolute. No gap between pride and consequence. The "voice from heaven" (<em>qal min shemayah</em>) becomes <em>bath qol</em> ("daughter of a voice") in later rabbinic Hebrew — a technical term for divine communication after the closure of prophecy.</p>',
+    "32": '<p>The decree is repeated a third time, adding the purpose clause: "until you know that the Most High rules the kingdom of men." The judgment is explicitly restorative and revelatory, not merely punitive. This is the pattern of OT exile theology: judgment is designed to produce knowledge of God (Ezek 36:23; Isa 45:3).</p>',
+    "33": '<p>"That same hour the word was fulfilled against Nebuchadnezzar." The madness is described with clinical detail: eating grass like an ox, body wet with dew, hair grown like eagles\' feathers, nails like birds\' claws — suggesting outdoor, homeless conditions lasting years. Babylon\'s bureaucratic machinery apparently continued without him; cuneiform records from this period show administrative continuity that did not depend on continuous royal presence.</p>',
+    "34": '<p>"At the end of the appointed time, I lifted my eyes toward heaven, and my understanding returned to me." The restoration is linked to a single posture: lifted eyes — an act of acknowledgment and prayer. The first-person voice returns (absent since v.27) as sanity returns. The structural parallel between lifting eyes and restored sanity is deliberate theology: true perception of reality begins with orientation toward God.</p>',
+    "35": '<p>"No one can stay his hand or say to him, \'What are you doing?\'" — language that resonates with Job 9:12 and Isa 29:16, and resurfaces in Rom 9:20. Nebuchadnezzar has arrived at a theology of absolute divine sovereignty that OT Israel struggled to maintain consistently. The dramatic irony is that a pagan king now articulates what Israel\'s own prophets had been proclaiming for centuries.</p>',
+    "36": '<p>The restoration narrative is compressed: reason returned, honor restored, counselors sought him out, kingdom re-established, greatness added. The speed of restoration without resistance implies either literary convention or genuine political loyalty. The administration\'s ability to restore a king after a prolonged absence of uncertain nature is remarkable and narratively unexplained.</p>',
+    "37": '<p>"Now I, Nebuchadnezzar, praise and exalt and glorify the King of heaven, for all his works are true and his ways are just; and those who walk in pride he is able to humble." The closing doxology is the theological thesis of the chapter and, arguably, of the book\'s first half. Whether this represents genuine conversion or a literary vehicle for theological statement remains debated; the text presents it as genuine and gives it the last word.</p>'
   },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
+  "5": {
+    "1": '<p>The scene shifts to Belshazzar\'s feast. Belshazzar was historically the son of Nabonidus (556-539 BCE), the last Neo-Babylonian king, who served as co-regent while his father campaigned in Arabia. The Nabonidus Chronicle and cuneiform administrative texts confirm Belshazzar\'s role. The feast may coincide with the fall of Babylon to Cyrus; the Cyrus Cylinder records entry into the city on October 12, 539 BCE.</p>',
+    "2": '<p>"While Belshazzar tasted the wine" — the desecration of the temple vessels is committed in drunken bravado. The vessels had been seized by Nebuchadnezzar (1:2; 2 Chr 36:10). Their use in a feast praising Babylonian idols represents the maximum possible sacrilege — instruments consecrated for YHWH\'s worship profaned in service of rival deities.</p>',
+    "3": '<p>The vessels from "the temple of God in Jerusalem" (<em>min hekla di-beyt-elaha di birushlem</em>) are now serving wine at Belshazzar\'s feast. The chapter is the structural mirror image of Daniel 1: where Daniel refused to defile himself with the king\'s food, Belshazzar defiles the holy with his own. The chiasm is theological as well as literary.</p>',
+    "4": '<p>"They praised the gods of gold and silver, of bronze, iron, wood, and stone" — a list of idolatrous materials that echoes the materials of Nebuchadnezzar\'s dream-statue (2:31-33: gold, silver, bronze, iron). The empire worships its own power, projected onto material representations of divinity.</p>',
+    "5": '<p>"The fingers of a human hand appeared and wrote on the plaster of the wall, opposite the lampstand" — the lampstand illuminates the writing, making it visible to the entire court. The hand comes "from before him" (v.24 — <em>min yadeh</em>, divine passive). This is an act of pure divine inscription without human intermediary.</p>',
+    "6": '<p>"The king\'s face changed color" (<em>ziv anpohui eshtenoh</em>, "the light of his face was altered") — the same idiom as 3:19 (Nebuchadnezzar) and 5:10 (the queen). "The joints of his hips gave way and his knees knocked together" — ANE idiom for terror in the face of divine power (cf. Isa 21:3; Jer 30:6; Nah 2:10).</p>',
+    "7": '<p>The reward offered — purple robe, gold chain, third rank (<em>talti b\'malkuta</em>) — is historically precise. Nabonidus was king, Belshazzar co-regent, so the highest available appointment was third rank. This detail would only be accurate under the Nabonidus co-regency arrangement, which was unknown to scholars until the discovery of the Nabonidus Chronicle in the 19th century.</p>',
+    "8": '<p>The failure of the wise men follows the established Daniel pattern (chs. 2, 4), but here the crisis is more acute: the king needs the writing both read and interpreted. The writing was apparently in an unusual form — not simply illegible but requiring inspired interpretation to decode its meaning from its visible letters.</p>',
+    "9": '<p>"King Belshazzar was greatly alarmed, his color changed, and his lords were bewildered" (<em>mitbahlin</em>, "terrified, confounded"). The court\'s collective terror mirrors the king\'s individual response. The moment of imperial confidence in vv.1-4 has collapsed entirely; the power dynamic has been reversed by a hand writing on a wall.</p>',
+    "10": '<p>The queen — likely the queen mother, not Belshazzar\'s wife (who is already present at the feast) — enters with knowledge the king lacks. Her awareness of Daniel\'s abilities from Nebuchadnezzar\'s era provides the narrative bridge to Daniel\'s appearance and reminds the reader that Daniel\'s reputation has persisted across the dynasty even when not immediately useful.</p>',
+    "11": '<p>"There is a man in your kingdom in whom is the spirit of the holy gods" — the queen uses the same language Nebuchadnezzar used (4:8-9). "In the days of your father" (<em>bi-yomei avuk</em>) uses <em>av</em> (father/ancestor) loosely — in Semitic convention, royal predecessors are often called "father." Nebuchadnezzar was not Belshazzar\'s direct biological father, but he was the dynasty\'s founding figure.</p>',
+    "12": '<p>Daniel is described as having "an excellent spirit, knowledge, and the ability to interpret dreams, explain riddles, and solve difficult problems" (<em>mefera\' kirin umeshre\' qutrin</em>) — three capabilities precisely suited to the present crisis. The queen\'s knowledge of Daniel\'s reputation has been maintained across regime changes; his gift was recognized and remembered even when not in current use.</p>',
+    "13": '<p>"Are you that Daniel, one of the exiles of Judah?" frames Daniel as a foreigner and deportee — <em>min benei galuta di yehud</em>, "from the sons of the exile of Judah." The repeated emphasis on Daniel\'s outsider status underscores that his power of interpretation comes from the God of his exile, not from training in Babylonian wisdom traditions.</p>',
+    "14": '<p>"Light, understanding, and excellent wisdom" (<em>nehiru usoklethanu wehokhmah yatirta</em>) — a wisdom triad. The Aramaic <em>nehiru</em> (light, illumination) may carry irony: Daniel was given the Babylonian name Belteshazzar, which Nebuchadnezzar linked to the light of his god (4:8). The true light of divine wisdom now belongs to the one bearing that name.</p>',
+    "15": '<p>The repeated failure of the wise men is again noted. The pattern is established so firmly by this point in the book that the reader anticipates the outcome before the wise men even appear. The structure teaches by repetition: human divinatory systems, however sophisticated, cannot access the meaning of divine action in history.</p>',
+    "16": '<p>The offer of rewards is again made. Daniel\'s response in v.17 will be to decline while still providing the interpretation — separating divine service from material reward. This is a consistent pattern: Daniel 2:16 (asks for time without seeking payment), Daniel 5:17 (declines the reward), Daniel 6 (continues praying despite the decree). The gifts of God are not for sale.</p>',
+    "17": '<p>"Let your gifts remain with you and give your rewards to another" — Daniel\'s refusal of payment mirrors Elisha\'s refusal of Naaman\'s gift (2 Kgs 5:16). The interpretation belongs to God, not to a transaction. This separates the prophetic role from the court-diviner role: the court diviner is hired for results; the prophet speaks whether paid or not.</p>',
+    "18": '<p>Daniel begins with a historical lesson — what God did to Nebuchadnezzar (vv.18-21) — before applying the principle to Belshazzar. The rhetorical strategy establishes the pattern (God gives and removes kingdoms) before pronouncing the verdict. Belshazzar had access to this lesson; his culpability rests on available knowledge willfully ignored (v.22).</p>',
+    "19": '<p>"Whom he would, he killed, and whom he would, he kept alive; whom he would, he raised up, and whom he would, he humbled." The fourfold description of absolute royal power establishes the height from which Nebuchadnezzar fell and from which Belshazzar will now fall. Even maximum human power operates within divine permission.</p>',
+    "20": '<p>"But when his heart was lifted up and his spirit became arrogant, he was deposed from his royal throne and his glory was taken from him" — the Nebuchadnezzar narrative compressed into one verse, serving as the principle underlying the judgment now about to be applied. The repeated pattern across Daniel 3, 4, and 5 is the book\'s central theological argument: human pride that displaces divine acknowledgment ends in humiliation.</p>',
+    "21": '<p>Daniel summarizes Nebuchadnezzar\'s madness and restoration: "until he knew that the Most High God rules the kingdom of men and sets over it whom he will." The purpose clause is the key. Nebuchadnezzar eventually learned this; the question of ch.5 is whether Belshazzar will learn it before or after the decree executes — and the answer, given that the writing is already on the wall, is effectively: after.</p>',
+    "22": '<p>"And you, Belshazzar his son, have not humbled your heart, even though you knew all this" (<em>la hashpelt lebbabak kol-qobel di kol-denah yedast</em>). The Aramaic is emphatic: "all of this you knew." The indictment turns on knowledge — Belshazzar had access to the lesson of Nebuchadnezzar and chose to disregard it. Greater knowledge creates greater accountability.</p>',
+    "23": '<p>"But you have lifted yourself up against the Lord of heaven" (<em>hitromamta \'al mare shemayah</em>) — the preposition <em>\'al</em> (against) is used of hostile action. The vessels desecration is the evidence: using what belongs to YHWH to praise "gods of gold and silver, of bronze, iron, wood, and stone, which do not see or hear or know" — a direct allusion to the idol polemic of Isa 44:9-20 and Jer 10:1-16.</p>',
+    "24": '<p>"So the hand was sent from his presence, and this writing was inscribed" — the passive construction conceals the divine agent. The hand comes from the divine presence (<em>min yadeh</em>). God writes his own verdict directly into the physical environment; no prophet intermediary is required.</p>',
+    "25": '<p>The inscription: <em>MENE MENE TEKEL UPARSIN</em>. These are Aramaic words with a secondary wordplay as monetary denominations: MENE = mina, TEKEL = shekel, PARSIN = two half-shekels. The denominations descend in value, possibly encoding a message about a kingdom of diminishing worth. The Aramaic consonants could be read multiple ways, which may explain why the court wise men could not interpret it even if they could read the letters.</p>',
+    "26": '<p>MENE: "God has numbered the days of your kingdom and brought it to an end." The divine passive — God is the counter — is the point. The kingdom is not merely ending through historical contingency; it has been consciously counted out, assessed, and found to have reached its divinely appointed limit. The same sovereignty over historical timing that Daniel proclaimed in ch.2 is here executed in real time.</p>',
+    "27": '<p>TEKEL: "you have been weighed in the balance and found wanting" (<em>chaser</em>). The scales (<em>moznayim</em>) as a metaphor for divine moral assessment appear in Job 31:6 and Isa 40:12-15. The verdict is a single word: deficient. Measured against the standard of Nebuchadnezzar\'s eventual acknowledgment of God, Belshazzar comes up short.</p>',
+    "28": '<p>PERES: "your kingdom is divided and given over to the Medes and Persians." The wordplay is explicit: <em>peres</em> (to divide/split) sounds like <em>Paras</em> (Persia). The message embedded in the inscription announces the succeeding empire — as Daniel\'s earlier visions had already mapped (chs. 2 and 7: the silver kingdom follows the gold).</p>',
+    "29": '<p>Belshazzar honors Daniel despite the verdict — purple robe, gold chain, third rank — which are now meaningless, since that very night the kingdom ends. The purple and gold given to the "third ruler" of a kingdom that no longer exists that evening is the book\'s darkest irony: worldly reward given and received in the same breath as the verdict that ends the world that produced it.</p>',
+    "30": '<p>"That very night Belshazzar the Chaldean king was killed" — confirmed historically. The Nabonidus Chronicle records that Gubaru (Gobryas), Cyrus\'s commander, entered Babylon without battle. The Cyrus Cylinder describes the peaceful surrender of the city. Belshazzar\'s death is consistent with the historical record of the city\'s fall. The narrative\'s one-sentence brevity mirrors the divine economy: what God declares, he executes without elaboration.</p>',
+    "31": '<p>"Darius the Mede received the kingdom, being about sixty-two years old." This is the most historically contested verse in Daniel. No "Darius the Mede" between Belshazzar and Cyrus appears in extra-biblical sources. Proposed identifications include Gubaru (Gobryas, Cyrus\'s general who administered Babylon), Cyrus himself under a different title, or a scribal confusion. The book\'s four-empire scheme (Dan 2 and 7) requires a Median ruler between Babylon and Persia; whether this reflects historical fact or a schematized tradition remains an open question in scholarship.</p>'
   }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'daniel')
+    merge_comm(existing, DANIEL)
+    save_comm('mkt-context', 'daniel', existing)
+    print('Daniel 3-5 mkt-context written.')
 
 if __name__ == '__main__':
     main()

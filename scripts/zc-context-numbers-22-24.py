@@ -1,129 +1,129 @@
-"""
-Numbers — all four layers.
-Key NT uses: bronze serpent (21), water from rock (20), wilderness wandering as warning,
-Balaam's star oracle (24), Phinehas's zeal, priestly blessing (6:24-26).
-"""
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-ECHO = {
-  "6": {
-    "24": [
-      {"type": "allusion", "target": "2 Cor 13:14", "note": "The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace — the Aaronic blessing (Num 6:24-26) is the OT's most direct benediction of divine favor; Paul's trinitarian benediction in 2 Cor 13:14 echoes its structure and is its new covenant fulfillment"}
-    ]
-  },
-  "14": {
-    "29": [
-      {"type": "allusion", "target": "Heb 3:17", "note": "Your dead bodies shall fall in this wilderness — the wilderness generation's judgment (their corpses fell in the desert) is Hebrews' central warning about unbelief: with whom was God provoked for forty years? Was it not with those who sinned, whose bodies fell in the wilderness? (Heb 3:17)"},
-      {"type": "allusion", "target": "1 Cor 10:5", "note": "God was not pleased with most of them, for they were overthrown in the wilderness — Paul cites the wilderness generation's fate as a warning to the Corinthians; the judgment on the unbelieving exodus generation is the type of what awaits persistent unbelief"}
-    ]
-  },
-  "21": {
-    "8": [
-      {"type": "fulfillment", "target": "John 3:14-15", "note": "Make a fiery serpent and set it on a pole and everyone who is bitten, when he sees it, shall live — Jesus explicitly cites the bronze serpent as a type of his own crucifixion: as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life (John 3:14-15); looking to the lifted serpent = believing in the lifted Christ"}
-    ]
-  },
-  "24": {
-    "17": [
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "A star shall come out of Jacob — Balaam's messianic oracle (the star from Jacob) is applied to Christ in Revelation: I am the root and the descendant of David, the bright morning star; Num 24:17 was a significant messianic proof-text in Second Temple Judaism (the Dead Sea Scrolls use it messianically)"}
-    ]
-  },
-  "25": {
-    "11": [
-      {"type": "allusion", "target": "Rom 10:2", "note": "Phinehas son of Eleazar has turned back my wrath by being jealous with my jealousy — Phinehas's zeal for YHWH's honor (executing the Israelite and Midianite woman in their sin) is cited as the model of passionate covenant faithfulness; Paul's description of Israel's zeal for God echoes the Phinehas tradition"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "6": {
-    "24": "<p><strong>yevarechecha YHWH veyishmerecha yaer YHWH panav eleicha vichuneka yissa YHWH panav eleicha veyasem lecha shalom</strong>: The Aaronic Blessing (Birkat Kohanim) is the oldest liturgical text in continuous use — fragments of it were found on silver amulets from the 7th century BCE (the Ketef Hinnom scrolls, the oldest biblical text discovered). Its three-part structure increases in length: 3 words, 5 words, 7 words, with a crescendo toward <em>shalom</em> (peace/wholeness/well-being). The divine name YHWH appears three times — early Christian interpreters saw this as a Trinitarian hint. The blessing has been recited in Jewish synagogues for over 2,500 years and by Christian ministers at service benedictions, making it one of the most-spoken texts in human history.</p>"
-  },
-  "21": {
-    "8": "<p><strong>veasa lecha saraf veshim oto al nes vehaya kol hanashuch veraah oto vachai</strong>: 'Make a fiery serpent and set it on a pole, and everyone who is bitten, when he sees it, shall live.' The serpent-on-a-pole raises a question: is this a violation of the second commandment (no graven images)? The text suggests: (1) it is the looking in faith, not the object itself, that saves; (2) YHWH appointed the image for a specific purpose as a means of grace. The Greek translation (<em>ophis chalkous</em>, bronze serpent) uses the same word Paul uses in 2 Cor 5:21: God made him who knew no sin to be <em>sin</em> (Gk. <em>hamartia</em>) for us — Christ becomes the thing that kills (sin/the serpent) in order to be the means of salvation for all who look to him.</p>"
-  }
-}
+            if v not in existing[ch]: existing[ch][v] = html
 
 CONTEXT = {
-  "1": {
-    "1": "<p>Numbers takes its English name from the two censuses (chs. 1 and 26); the Hebrew title is <em>Bemidbar</em> (In the Wilderness), which better captures the book's geographical and theological content. It narrates the wilderness journey from Sinai to the plains of Moab — a journey that should have taken months but became 40 years because of the generation's unbelief at Kadesh-barnea (chs. 13-14). The book is structured around the failure of the first generation (which dies in the wilderness) and the formation of the second generation (which enters Canaan). The typological theme of wilderness-as-testing-ground is developed extensively in the NT: Israel's forty years in the wilderness corresponds to Jesus's forty days of testing (Matt 4:1-11), and Paul makes the wilderness generation's failures into warnings for the church (1 Cor 10:1-13).</p>"
-  },
-  "21": {
-    "4": "<p>The bronze serpent incident (Num 21:4-9) occurs during one of the wilderness generation's recurring cycles of complaint-judgment-intercession-deliverance. The people speak against God and against Moses; YHWH sends fiery serpents as judgment; the people confess sin and Moses intercedes; YHWH provides the bronze serpent as a means of healing. The serpent-image was preserved in Israel and later became an object of idolatry: Hezekiah destroyed it during his reforms (2 Kings 18:4: he broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had burned incense to it). The thing appointed as a healing sign became an idol — illustrating the tendency of every divine gift to be worshiped rather than used. Jesus redeems the image by applying it to himself in John 3:14.</p>"
-  }
+"22": {
+"1": "<p>Israel camps in the plains of Moab (<b>arvot Mo'av</b>) across the Jordan from Jericho — the final staging ground before the conquest. This location frames the entire Balaam narrative: the threat to Israel comes not from military attack but from a hired curse-maker. Moab's strategy reflects a common ancient Near Eastern belief that a skilled diviner could tip the scales of battle by invoking divine hostility against an enemy.</p>",
+"2": "<p>Balak son of Zippor sees what Israel did to the Amorites. The intelligence report is accurate: Sihon and Og, both powerful Transjordanian kings, have been destroyed (Num 21). Balak's fear is rational by any strategic calculation — he has seen what Israel's God does to their enemies.</p>",
+"3": "<p>Moab is filled with dread (<b>vayagor Mo'av</b> — 'Moab was greatly afraid') because Israel is numerous. The emotional vocabulary escalates: first Moab 'sees' (v2), then 'dreads' (v3), then 'loathes' (v3 — <em>vayakutz</em>, to be disgusted/to loathe, the same word Pharaoh used of Israel in Exod 1:12). The pattern mirrors the Egyptian oppression's starting point.</p>",
+"4": "<p>Moab consults with the elders of Midian — a political alliance between neighboring peoples who share the threat. The phrase 'this assembly will lick up all our surroundings as an ox licks up the grass of the field' is vivid: the imagery is agricultural, the threat is total, the anxiety is existential. Balak is introduced as king of Moab at this time.</p>",
+"5": "<p>Balak sends messengers to <b>Bil'am ben Be'or</b> (Balaam son of Beor) at Pethor near the Euphrates. This is upper Mesopotamia — the hire is international, not local. Balaam was famous enough to be sought from a thousand miles away. Extra-biblical confirmation: the Deir Alla inscription found in Jordan (c. 800 BCE) mentions 'Balaam son of Beor, a seer of the gods' — the same figure, showing he was a genuine regional reputation, not a literary invention.</p>",
+"6": "<p>'Come, curse this people for me... for I know that those you bless are blessed, and those you curse are cursed.' Balak's commission is explicit: <b>arah-li</b> (curse for me). He acknowledges Balaam's power is real — not flattery but genuine belief in the efficacy of professional cursing. The ancient Near Eastern world took prophetic cursing seriously; Balak is doing what any rational king of his time would do.</p>",
+"7": "<p>The elders of Moab and Midian go with divination fees (<b>qesem</b> — literally, divination tools/payment) in hand. <em>Qesem</em> is the same word used for Balaam's divination practice (Josh 13:22 calls him a diviner). They bring payment in advance — the professional fee establishing the contractual nature of the hire. YHWH will demonstrate that no fee can purchase a prophecy that contradicts his purposes.</p>",
+"8": "<p>Balaam asks the delegation to spend the night — he will bring back YHWH's answer in the morning. The name YHWH in Balaam's mouth is striking. A Mesopotamian prophet-for-hire knows Israel's covenant name for God. The narrative will show that Balaam's encounter with YHWH is genuine, not theatrical; whatever his normal practice, YHWH actually speaks to him.</p>",
+"9": "<p>God comes to Balaam at night and asks: 'Who are these men with you?' The question is not for divine information — YHWH knows — but to draw Balaam into articulating his situation. It parallels YHWH's questions to Adam ('Where are you?') and Cain ('Where is your brother?'): the question initiates a moral reckoning.</p>",
+"10": "<p>Balaam reports the commission accurately: Balak son of Zippor, king of Moab. He identifies himself as receiving the message — presenting the request to YHWH as a broker. The narrative shows Balaam genuinely consulting YHWH, not performing a ritual; the outcome is a real divine decision.</p>",
+"11": "<p>Balaam quotes Balak: 'A people has come out of Egypt and it covers the face of the earth — come, curse them for me, perhaps I can fight against them and drive them out.' The verb <b>qalov</b> (curse/imprecate, from <em>qalal</em>, to be light/treat as contemptible) contrasts with <b>barak</b> (bless). Balak wants Israel rendered contemptible before YHWH, not valued and protected.</p>",
+"12": "<p>YHWH's answer is absolute: do not go with them; do not curse the people, for they are blessed (<b>barukh</b> — the perfect passive, already in a state of blessing). The divine passive is key: Israel is in a state of blessing; they cannot be cursed because the blessing is already pronounced and standing. The Abrahamic covenant (Gen 12:3: 'I will bless those who bless you') is the theological background.</p>",
+"13": "<p>Balaam rises in the morning and tells the princes he cannot go — YHWH has refused. He does not explain the theological reason (that Israel is blessed); he simply reports the divine prohibition. The first delegation returns empty-handed.</p>",
+"14": "<p>The Moabite officials report to Balak: 'Balaam refuses to come with us.' The summary is accurate but flat — it doesn't convey that the refusal came from YHWH. Balak will interpret it as negotiable, sending a more impressive delegation.</p>",
+"15": "<p>Balak sends again — more numerous and more honorable (<b>nichbadim</b>, weighty/respected) than the first. The strategy is escalation: if the first fee didn't work, a better offer and higher-status messengers might. Balak is operating on the assumption that divine speech can be purchased if the price is right.</p>",
+"16": "<p>The new messengers deliver Balak's appeal directly: 'Do not let anything hinder you from coming to me.' The urgency escalates. Balak removes all implied obstacles — Balaam's hesitation is interpreted as preliminary negotiation, not genuine divine refusal.</p>",
+"17": "<p>'I will surely reward you greatly (<b>kabod akabedkha</b> — honor I will greatly honor you), and whatever you say to me I will do.' Balak offers unlimited honor and compliance. The phrase echoes Ruth 1:8 and 2 Sam 10:3 — 'whatever you say' is a royal blank check. No professional diviner would easily refuse such an offer.</p>",
+"18": "<p>Balaam's response is notable: 'Even if Balak gives me his house full of silver and gold, I could not go beyond the word of YHWH my God to do less or more.' The declaration is genuine — Balaam articulates the absolute authority of YHWH's word. Yet the story will show that even correct theology can coexist with compromise of intent.</p>",
+"19": "<p>Balaam asks the new delegation to stay overnight — he will again seek YHWH's word. The repetition of the overnight consultation is odd if the divine answer was already clear. Balaam is going back to God hoping for a different answer — the first sign of the 'Balaam error' that 2 Peter 2:15 and Jude 11 warn about: loving the wages of unrighteousness.</p>",
+"20": "<p>YHWH speaks again: if the men came to call you, rise and go with them — but only the word I speak to you shall you do. The conditional permission creates immediate tension: God grants what he already refused, with a strict limitation. This is not reversal of the divine will but accommodation to Balaam's desire while absolutely constraining its outcome.</p>",
+"21": "<p>Balaam rises in the morning, saddles his donkey, and goes with the Moabite officials. The haste suggests eagerness — Balaam got the go-ahead and moves quickly. But YHWH's anger burns because he went (<b>vayichar af Elohim</b>), apparently because Balaam's heart was already set on going for profit rather than faithful service. The permission was granted; the motive behind seeking it was corrupt.</p>",
+"22": "<p>The Angel of YHWH (<b>mal'ach YHWH</b>) stands in the road as an adversary (<b>satan</b> — used as a common noun here: adversary/blocker). The donkey sees the angel with a drawn sword; Balaam does not. The professional seer who commands large fees for supernatural perception is blind to what the animal he rides can plainly see.</p>",
+"23": "<p>The donkey turns off the road into a field; Balaam strikes her to turn her back. The first of three encounters: road, narrow path, no room to turn. The structure escalates — each time the donkey has less room to maneuver, forcing the confrontation closer. Ancient listeners would recognize the pattern of threefold repetition as building toward a climax.</p>",
+"24": "<p>The angel stands in a narrow path between the vineyards with a wall on each side. The geography constricts: field turned to path, and the path narrows further. The donkey has nowhere to flee except into the wall.</p>",
+"25": "<p>The donkey presses against the wall and crushes Balaam's foot against it. He strikes again. The donkey's evasive action causes physical harm to Balaam — the animal trying to protect her rider is injured in doing so. The repeated striking reveals Balaam's frustration and self-will.</p>",
+"26": "<p>The angel moves to a still narrower place where there is no room to turn right or left. The constriction is complete. The final position leaves the donkey nowhere to go but down — stop or fall. The angel is not blocking Balaam symbolically; he is physically occupying the only possible path.</p>",
+"27": "<p>The donkey lies down under Balaam. Exhausted, pinned by the angel, there is simply nothing else she can do. Balaam's anger burns and he strikes her with his staff. The staff — Balaam's instrument of prophetic authority — is turned on a defenseless animal who is trying to save his life.</p>",
+"28": "<p>YHWH opens the donkey's mouth (<b>vayiftach YHWH et-pi ha'aton</b>). The act is miraculous and jarring. The only other speaking animal in the Torah is the serpent (Gen 3) — a sinister deceiver. This donkey is the opposite: a faithful animal who speaks truth to a deceived human. The donkey says: 'What have I done to you, that you have struck me these three times?'</p>",
+"29": "<p>Balaam answers the donkey without apparent astonishment at the animal's speech — either he is too angry to register the miracle, or the narrative implies that the supernatural nature of the moment suppressed normal cognitive response. His answer betrays his frustration: 'You have made a fool of me! If I had a sword in my hand I would kill you right now.'</p>",
+"30": "<p>The donkey makes the decisive argument: 'Am I not your donkey on which you have ridden all your life until today? Have I ever been accustomed to do this to you?' <em>He'asken hi'asanti</em> — 'have I been accustomed to do this?' The argument from precedent is irrefutable. The animal's consistent past behavior should have triggered inquiry, not anger. Balaam can only say: 'No.'</p>",
+"31": "<p>YHWH opens Balaam's eyes and he sees the angel with a drawn sword. The eyes that could not see what the donkey saw are now opened by divine initiative — not by Balaam's spiritual capacity but by YHWH's gracious act. He falls on his face. The professional seer, exposed and prostrate, is now receiving what he was supposed to be able to perceive professionally.</p>",
+"32": "<p>The angel tells Balaam: 'Why have you struck your donkey these three times? I came out as an adversary because your way is <b>yarat</b> (headstrong/reckless/perverse) before me.' The word <em>yarat</em> is rare and strong — the path Balaam was taking was not merely risky but morally deviant. The donkey was the hero; Balaam was the problem.</p>",
+"33": "<p>'The donkey saw me and turned away from me three times — if she had not turned, I would have killed you and let her live.' The reversal of expected roles is complete: the donkey deserves to live; Balaam deserved death. The animal's faithfulness saved the prophet. This is the narrative inversion that gives the story its power.</p>",
+"34": "<p>Balaam confesses: 'I have sinned, for I did not know that you were standing in the road to meet me.' His confession is genuine in form — acknowledgment of sin, acknowledgment of ignorance. But it stops short of renouncing the mission. He offers to turn back if YHWH is displeased — the offer of withdrawal reveals the condition: if YHWH permits it, he still wants to go.</p>",
+"35": "<p>The angel says: 'Go with the men — but only the word that I speak to you shall you speak.' YHWH does not change the permission; he reissues the constraint. Balaam goes forward under the most absolute restriction: not his divination skill, not his professional judgment, but only the word YHWH places in his mouth. The Balaam narrative is a sustained demonstration of this principle.</p>",
+"36": "<p>Balak comes out to meet Balaam at the Arnon border — the formal meeting of king and hired prophet. Balak's mild reproof ('Why did you not come to me? Am I not able to honor you?') reveals his assumption that the delay was about negotiation. He still does not understand that Balaam's power is entirely borrowed from a God who cannot be hired.</p>",
+"37": "<p>Balak's complaint is essentially commercial: 'Did I not earnestly send for you? Why did you not come?' <em>Hashlo'ach shalakhti</em> — 'did I not urgently send?' The king of Moab is performing royal exasperation at a slow contractor. The context of divine veto is entirely invisible to him.</p>",
+"38": "<p>Balaam's answer establishes the ground rules for everything that follows: 'The word God puts in my mouth — that I must speak.' <b>Ha'davar asher yasim Elohim befiy</b> — 'the word that God places in my mouth.' Balaam's role is passive receiver, not active formulator. He arrives with empty hands, professionally speaking; whatever comes must be given.</p>",
+"39": "<p>They go to Kiriath-huzoth. The place name means 'city of streets' — a city with open plazas, a gathering place. Balak sacrifices oxen and sheep and sends portions to Balaam and the officials with him. The hospitality is royal and generous; the scene is preparation for the oracles that will follow.</p>",
+"40": "<p>Balak sacrifices cattle and sheep and sends to Balaam and to the princes who were with him. The fellowship meal before the oracle-seeking is ancient practice: Mesopotamian ritual texts describe meals preceding divination ceremonies. The social and ritual preparation creates the context from which Balaam will speak — except the word will come from YHWH, not from the ritual.</p>",
+"41": "<p>In the morning Balak takes Balaam to Bamoth-baal ('high places of Baal') and from there he can see the edge of Israel's camp. The strategic logic: see your target before pronouncing a curse over it. Divination and cursing in the ancient world often required line-of-sight to the target, or at minimum a representative view. Balak has arranged the optimal conditions for the curse he is paying for — but he cannot arrange what God will say.</p>"
+},
+"23": {
+"1": "<p>Balaam commands Balak: build seven altars, prepare seven bulls and seven rams. The number seven is the number of completeness in Israelite and Semitic religious thought. Seven altars, seven animals — the most complete ritual setup possible. Balaam is staging as comprehensive a ceremony as he knows to coax a divine word.</p>",
+"2": "<p>Balak and Balaam offer a bull and a ram on each altar. Fourteen animals for seven altars — a substantial offering. The ritual compliance is complete. Now Balaam tells Balak to stand by his burnt offering while Balaam goes to seek YHWH (<b>ulai yikareh YHWH likrati</b> — 'perhaps YHWH will come to meet me'). The hedging ('perhaps') is notable for a professional prophet — even Balaam knows the divine word cannot be summoned on demand.</p>",
+"3": "<p>Balaam goes to a bare height (<b>shefiy</b> — a bare, isolated summit). The withdrawal to isolated high ground for prophetic encounter is standard in the ancient world: Elijah at Horeb, Moses at Sinai, the prophets at the high places. The separation from communal noise creates the conditions for divine speech.</p>",
+"4": "<p>God meets Balaam. The encounter is real — not theatrical. Balaam reports: 'I have arranged the seven altars and offered a bull and a ram on each.' He presents his ritual performance as grounds for the encounter. YHWH's response will come regardless of the ritual scaffolding — the preparation neither forces nor merits the word; it only marks readiness to receive.</p>",
+"5": "<p>YHWH puts a word in Balaam's mouth (<b>vayasem YHWH davar befiy Bil'am</b>) and sends him back to Balak. This is the fulfillment of Balaam's declaration in 22:38 — the word is placed, not earned or generated. Balaam is now a vessel of divine speech, not a practitioner of divination.</p>",
+"6": "<p>Balaam returns to find Balak standing beside his burnt offering with all the princes of Moab. The royal audience awaits the professional word. They will not receive what they are expecting.</p>",
+"7": "<p>The first oracle begins with the formal marker <b>vayissa meshaloh</b> — 'he lifted up his parable/discourse.' <em>Mashal</em> denotes a wise comparison, an authoritative saying, a parable that reveals hidden truth. Balaam speaks from Aram and Moab: 'From Aram Balak brought me, from the eastern mountains: come, curse for me Jacob; come, denounce Israel.' He quotes the commission in poetic form — setting up the reversal that follows.</p>",
+"8": "<p>'How can I curse whom God has not cursed? How can I denounce whom YHWH has not denounced?' The rhetorical questions are devastating: the entire professional basis of Balaam's hire is negated. A curse only works if the targeted deity has withdrawn protection. YHWH has not cursed Israel; therefore Balaam cannot. His skill is irrelevant against divine protection.</p>",
+"9": "<p>'For from the top of the rocks I see him, and from the hills I behold him: behold, a people dwelling alone, not reckoning itself among the nations.' <b>Am levadad yishkon</b> — 'a people dwelling alone.' Israel's distinctiveness is not isolation by choice but divine design: set apart from the nations, not to be analyzed by the categories of national power and alliance that Balak is applying.</p>",
+"10": "<p>'Who can count the dust of Jacob, or number the fourth part of Israel? Let me die the death of the righteous, and let my end be like his.' The closing benediction is remarkable — the hired curse-maker ends by wishing to share Israel's destiny. <b>Mot yesharim</b> — 'the death of the upright.' Balaam sees something in Israel's future that he wants for himself: a righteous death, a good end.</p>",
+"11": "<p>Balak protests: 'What have you done to me? I brought you to curse my enemies, and here you have blessed them.' The commercial transaction has been violated from his perspective — he ordered a curse and received a blessing. His complaint is the complaint of one who believed divine speech could be contracted, now confronting evidence that it cannot.</p>",
+"12": "<p>Balaam's answer is direct: 'Must I not take care to speak what YHWH puts in my mouth?' The divine compulsion is absolute. Balaam has not betrayed Balak voluntarily; he has been unable to do otherwise. The word placed in his mouth is irresistible — not because Balaam is spiritually excellent but because YHWH's word, once given, shapes the mouth that carries it.</p>",
+"13": "<p>Balak tries a new location: come with me to another place where you can see them — only the edge, not all of them — and curse them from there. The strategy reveals a folk-magic assumption: perhaps a different angle of vision would change the divine word. If seeing all of Israel produced a blessing, maybe seeing only part of Israel would enable a partial curse. The logic is spatial, not theological.</p>",
+"14": "<p>Balak takes Balaam to the field of Zophim ('lookout field'), to the top of Pisgah. The same mountain range from which Moses will later see the promised land before his death (Deut 34:1). The high places of Numbers 22-24 and the high place of Moses's final vision are geographically connected — all are looking over the Jordan valley toward the promised land.</p>",
+"15": "<p>Balaam repeats the setup: seven altars, seven bulls, seven rams. The ritual is identical to the first round. Balak is hoping that the same ceremony at a different location will produce a different result. Balaam plays along — not because he believes it will change things, but because YHWH may speak again.</p>",
+"16": "<p>YHWH meets Balaam and puts a word in his mouth. The formula is identical to v4-5: divine initiative, placed word, sent messenger. The location has changed; the mechanism has not. The second oracle begins from the same divine source as the first.</p>",
+"17": "<p>Balaam returns to Balak standing by his burnt offering with the Moabite princes. The exact scene as v6. Balak asks: 'What has YHWH spoken?' The king has shifted vocabulary — he no longer speaks of Balaam's divination technique but asks what <em>YHWH</em> said. Even Balak, despite himself, is beginning to use the correct theological vocabulary.</p>",
+"18": "<p>'Rise, Balak, and hear; give ear to me, son of Zippor.' The second oracle opens with a command to the king — an inversion of royal protocol. The hired consultant is commanding the king to listen. The word Balaam carries places him above Balak's authority in the moment of its delivery.</p>",
+"19": "<p>'God is not a man that he should lie (<b>lo ish El viykazev</b>), nor a son of man that he should change his mind. Has he said, and will he not do it? Has he spoken, and will he not fulfill it?' This verse becomes one of the foundational statements of divine immutability in the Torah. The contrast is absolute: human speech is unreliable (lies, changed minds); divine speech is unconditional. The oracle protects Israel by establishing the reliability of the God who protects them.</p>",
+"20": "<p>'Behold, I received a command to bless (<b>levarekh laqachti</b>) — he has blessed, and I cannot reverse it.' The divine command to bless is already in force; it preceded Balaam's arrival. Balaam has not changed the divine verdict — he has merely reported what was already settled. The blessing of Israel is not negotiable after-the-fact; it was given in advance.</p>",
+"21": "<p>'He has not observed iniquity in Jacob, nor has he seen trouble in Israel; YHWH their God is with them, and the shout of a king is among them.' Despite Israel's consistent failures in the wilderness (the very rebellions of Numbers 11-21), YHWH's commitment to the covenant people is not conditioned on their performance. The shout of a king — the victory cry of the divine warrior-king — dwells among them. Israel's God is also their king.</p>",
+"22": "<p>'God brings them out of Egypt; they have as it were the horns of the wild ox.' <b>To'afot re'em lo</b> — 'the strength of a wild ox is his.' The <em>re'em</em> (wild ox/aurochs) was the most powerful wild animal in the Near East — extinct in historical times but emblematic of irresistible strength. Israel's strength is borrowed from YHWH who brought them from Egypt; the source of their invincibility is behind them in history.</p>",
+"23": "<p>'For there is no enchantment against Jacob (<b>lo nachash beYa'akov</b>), no divination against Israel.' This verse is devastating to Balak's entire strategy: the professional tools Balaam came to use (<em>nachash</em> — serpent-divination; <em>kesem</em> — soothsaying) have no effect against a people under YHWH's protection. Balaam's own trade is declared powerless against his target. The irony is structural to the whole narrative.</p>",
+"24": "<p>'At this time it shall be said of Jacob and Israel: See what God has done!' The oracle closes with Israel as the subject of divine wonder — the nations who see what YHWH does for Israel will have only one response: astonishment. The curse commission has been transformed into an evangelistic proclamation.</p>",
+"25": "<p>Balak: 'Do not curse them at all, and do not bless them at all.' He asks for neutrality after failing to get a curse. The trajectory — curse request, blessing received, request for silence — shows Balak's progressive defeat. Balaam cannot comply with this either; YHWH will speak a third and fourth time.</p>",
+"26": "<p>Balaam's answer: 'Did I not tell you all that YHWH speaks, that I will do?' The question is almost reproachful. From the beginning Balaam declared his constraint. The divine compulsion was never hidden. Balak's progressive disappointment comes not from betrayal but from the consistent fulfillment of exactly what Balaam warned him would happen.</p>",
+"27": "<p>Balak tries a third location: come, I will take you to another place; perhaps it will be right in God's eyes for you to curse them from there. The 'perhaps' is telling — Balak is no longer confident; he is grasping. Each failed attempt reduces certainty while the ritual investment grows.</p>",
+"28": "<p>Balak brings Balaam to the top of Peor that overlooks Jeshimon (the wasteland/desert). Peor is the site that will become infamous in Numbers 25 — the Baal-Peor apostasy. The geography links the failed curse attempt to the successful seduction strategy: the hill Balak and Balaam stood on to curse Israel became the site where Israel condemned themselves.</p>",
+"29": "<p>Balaam again: seven altars, seven bulls, seven rams. A third time. The repetition is the point — each time, the same ritual produces the same result. The pattern is threefold in the Balaam narrative (three embassies, three locations, three oracle sets), signaling both completeness and the finality of the divine word.</p>",
+"30": "<p>Balak does as Balaam said and offers on each altar. The obedience is mechanical now — both men going through the established motions, Balak hoping for a different result, Balaam knowing the word will come from YHWH regardless of altar count or location.</p>"
+},
+"24": {
+"1": "<p>Balaam sees that it pleases YHWH to bless Israel, and he does not go as before to seek omens (<b>lo halakh kepa'am bepa'am likrat nechashim</b>). The shift is significant: Balaam abandons his divination technique and turns his face toward the wilderness (where Israel is). He stops performing and starts receiving. This change of posture marks the transition from professional ceremony to genuine prophetic encounter.</p>",
+"2": "<p>Balaam lifts his eyes and sees Israel dwelling tribe by tribe, and the Spirit of God (<b>Ruach Elohim</b>) comes upon him. The Spirit that rested on the seventy elders (Num 11:25-26) now falls on the foreign prophet-for-hire. The oracle that follows comes not from divination or fee but from the same Spirit who moved over the waters in Genesis 1.</p>",
+"3": "<p>The third oracle opens with the most elaborate self-introduction: 'The oracle of Balaam son of Beor, the oracle of the man whose eye is opened (<b>shetu ha'ayin</b>).' The 'opened eye' (or 'pierced eye' — the Hebrew is debated) contrasts with his blindness to the angel (22:31). The man who could not see what his donkey saw now has his inner eye opened by YHWH's Spirit.</p>",
+"4": "<p>'The oracle of one who hears the words of God, who sees the vision of the Almighty (<b>Shaddai</b>), who falls down with his eyes uncovered.' <em>El Shaddai</em> — the divine name associated with the patriarchal promises (Gen 17:1, 28:3, 35:11). Balaam's encounter is continuous with the patriarchal tradition of divine revelation, not foreign to it. He falls prostrate — the posture of one receiving divine weight, not performing a professional service.</p>",
+"5": "<p>'How lovely are your tents, O Jacob, your dwelling places, O Israel!' <b>Mah tovu ohalekha Ya'akov</b> — the opening phrase that the Jewish tradition turned into the morning prayer entering the synagogue. The professional curse-maker speaks poetry of beauty over the people he came to condemn. The transformation of purpose is complete: Balak contracted aesthetic devastation; he received aesthetic praise.</p>",
+"6": "<p>'Like valleys that stretch out, like gardens beside a river, like aloes that YHWH planted, like cedars beside the waters.' The imagery is lush and abundant — valleys, gardens, aloes, cedars. These are images of the promised land itself (the cedars of Lebanon, the garden of Eden, river-watered abundance). Balaam sees Israel as already inhabiting the fruitfulness of their inheritance.</p>",
+"7": "<p>'Water shall flow from his buckets, and his seed shall be in many waters; his king shall be higher than Agag, and his kingdom shall be exalted.' <b>Agag</b> — king of the Amalekites — becomes significant in 1 Samuel 15 when Saul spares Agag against YHWH's command. Balaam's oracle already names Agag as the standard of royal power that Israel's king will surpass. The prophecy shapes the context for reading Saul's later failure.</p>",
+"8": "<p>'God brings him out of Egypt; he has as it were the horns of a wild ox; he shall eat up the nations his adversaries, and shall break their bones in pieces, and pierce them through with his arrows.' The wild ox imagery returns from 23:22 — the divine source of Israel's strength is the exodus event. The consuming and bone-breaking imagery is military: total defeat of enemies, not just victory but annihilation of resistance.</p>",
+"9": "<p>'He crouched down and lay like a lion, and like a lioness — who dares rouse him? Blessed are those who bless you, and cursed are those who curse you.' The lion imagery (also in Jacob's blessing to Judah, Gen 49:9) signals both majesty and dormant power. The closing verse echoes the Abrahamic covenant almost verbatim (Gen 12:3: 'I will bless those who bless you and curse those who curse you'). Balaam has become an instrument for republishing the foundational Abrahamic promise.</p>",
+"10": "<p>Balak's anger burns against Balaam; he strikes his hands together — the gesture of angry dismissal or contemptuous rejection. He has received the opposite of what he paid for three times. His command: 'I called you to curse my enemies and you have blessed them these three times.'</p>",
+"11": "<p>'Flee to your place! I said I would honor you greatly, but YHWH has held you back from honor.' <em>Mena'akha YHWH mekabed</em> — 'YHWH has kept you from honor.' The irony: Balak frames YHWH as the obstacle to Balaam's enrichment. In fact YHWH has protected both Israel and Balaam (whose death was narrowly avoided in ch22). The economic frame Balak brought to the encounter cannot interpret what actually happened.</p>",
+"12": "<p>Balaam's answer refers to his own messengers to Balak: 'Did I not tell your messengers whom you sent to me: If Balak should give me his house full of silver and gold, I could not go beyond the word of YHWH to do either good or bad of my own accord.' The declaration of prophetic constraint is complete. Balaam has been consistent throughout; Balak has not been listening.</p>",
+"13": "<p>'What YHWH speaks, that will I speak.' The shortest possible formula for prophetic identity: identity with the divine word, not the human speaker. Balaam's value is entirely borrowed; without YHWH's word he is just a diviner-for-hire with a recalcitrant donkey.</p>",
+"14": "<p>Before departing, Balaam offers to advise Balak: 'I will let you know what this people will do to your people in the latter days (<b>be'acharit hayamim</b>).' The phrase <em>acharit hayamim</em> ('end of days' / 'latter days') is a technical term for the eschatological future — the time when YHWH's purposes reach their culmination. What follows is not just Israel's military future but the cosmic-historical horizon.</p>",
+"15": "<p>The fourth oracle begins with the same expanded self-identification as the third: the opened eye, the hearing of God's words, the vision of Shaddai, the prostrate posture. The repeated introduction marks this as a continuation and amplification of the third oracle's register of divine revelation.</p>",
+"16": "<p>Additional in the fourth introduction: 'who hears the words of God and knows the knowledge of the Most High (<b>Elyon</b>).' <em>El Elyon</em> — 'God Most High' — is the name used by Melchizedek (Gen 14:18-20), by the Psalms' royal theology, and in Daniel's visions. Balaam's prophecy consciously invokes the most universal divine title, not the covenant name YHWH, for what follows is universal in scope.</p>",
+"17": "<p>'I see him but not now; I behold him but not near: a star shall come out of Jacob, and a scepter shall rise from Israel. He shall crush the forehead of Moab and break down all the sons of Sheth.' <b>Darakh kokhav miYa'akov vekam shevet miYisrael</b> — 'a star goes out from Jacob and a scepter arises from Israel.' This becomes the most cited messianic text in the Second Temple period. The Qumran community quoted it (4QTestimonia). Bar Kokhba ('son of the star') took his name from it. The 'scepter' (<em>shevet</em>) links to Jacob's blessing of Judah (Gen 49:10 — 'the scepter shall not depart from Judah'). The star-and-scepter image points to a coming ruler whose origin is Israelite but whose reach is universal.</p>",
+"18": "<p>'Edom shall be a possession, Seir also, his enemies, shall be a possession, while Israel does valiantly.' The immediate application targets Edom/Seir — the traditional enemy and brother-nation. David's conquest of Edom (2 Sam 8:14) partially fulfills this. The full scope, given the <em>acharit hayamim</em> framing, exceeds any single historical event.</p>",
+"19": "<p>'And one from Jacob shall exercise dominion and destroy the survivors of cities.' The singular 'one from Jacob' (<b>miya'akov</b>) points toward a specific individual, not Israel collectively. The dominion is over enemies' cities — comprehensive, not selective. The oracle concludes with the picture of a sovereign ruler from Jacob's line exercising universal authority.</p>",
+"20": "<p>Three brief final oracles: against Amalek, Kenites, and Kittim. Amalek was 'first among the nations' — the first to attack Israel after the exodus (Exod 17:8-16), and now the first named in the judgment oracles. 'Its end is destruction' (<b>vacharitoh adev</b>). The nation that was first in hostility to Israel will be first in destruction.</p>",
+"21": "<p>The Kenites: 'Your dwelling place is enduring, and your nest is set in the rock; nevertheless Kain shall be consumed.' The Kenites were allied with Israel (Jethro was a Kenite; cf. Judg 1:16) yet not immune to historical judgment. The rock-nest imagery (like an eagle's eyrie) suggests fortified security — yet even that cannot guarantee permanence apart from YHWH's will.</p>",
+"22": "<p>'Nevertheless Kain shall be consumed. How long shall Asshur take you captive?' The oracle sees beyond the Kenites' immediate security to a future Assyrian captivity. The reference to Asshur (Assyria) is striking: Balaam, speaking centuries before the Assyrian empire's rise, names the imperial power that will sweep away much of the ancient Near East. The oracle reaches into history that has not yet happened.</p>",
+"23": "<p>'Alas, who can live when God does this? (<b>mi yichyeh misumo El</b>)' — a cry of astonishment at the scale of what is coming. The final oracle fragment describes ships from Kittim afflicting Asshur and Eber, then perishing themselves. <em>Kittim</em> in later usage (Qumran War Scroll) refers to Rome. The oracle's horizon keeps expanding: Balaam sees empires rising and falling in the eschatological future.</p>",
+"24": "<p>Ships from Kittim afflict Asshur and Eber — and Kittim too shall come to destruction. The pattern of empire: each power rises, each in turn is consumed. No human empire is the final power. Balaam sees the long arc of history from the plains of Moab, all the way to the horizon of time, and what he sees is not stability but successive judgment.</p>",
+"25": "<p>Balaam rises and returns to his place, and Balak also goes his way. The narrative ends without ceremony — two disappointed men going home. The chapters that follow (Num 25) will reveal Balaam's secondary strategy: unable to curse Israel by oracle, he advised Balak to seduce them through Moabite and Midianite women (Num 31:16). The man who spoke truest about Israel's blessing also devised the plan that brought Israel's worst moment of apostasy at Peor.</p>"
+}
 }
 
-CHRIST = {
-  "6": {
-    "24": "<p>A direct revelation: 'The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' The Aaronic blessing is Israel's definitive statement of what divine favor looks like: not an absence of difficulty but the direct presence and face of YHWH turned toward his people in grace. In Christ, the Aaronic blessing receives its ultimate fulfillment: the Father's face shines in the face of Christ (2 Cor 4:6: the light of the knowledge of the glory of God in the face of Jesus Christ); the divine peace (<em>shalom</em>) that the blessing promised is the peace Christ gives (John 14:27: Peace I leave with you; my peace I give to you); the benedictions of Christian worship (2 Cor 13:14; Jude 24-25; Rev 1:4-5) are the new covenant form of the ancient priestly blessing.</p>"
-  },
-  "21": {
-    "8": "<p>A type: 'Set it on a pole, and everyone who is bitten, when he sees it, shall live.' Jesus explicitly applies the bronze serpent typology to himself (John 3:14-15), making it the Bible's own explanation of why Christ must be 'lifted up' on the cross. The structural parallel: Israel was under God's judgment for sin (serpent bites = death sentence) → Moses interceded → YHWH appointed an external means of salvation (look to the serpent) → those who looked in faith lived. The antitype: humanity is under God's judgment for sin → Christ intercedes → the Father appoints the cross as the external means of salvation → those who look in faith to the crucified Christ live forever. The bronze serpent is Numbers' most explicit Christological type, made explicit not by later Christian interpretation but by Jesus himself.</p>"
-  }
-}
-
-def main():
-    e = load_echo('numbers')
-    merge_echo(e, ECHO)
-    save_echo('numbers', e)
-
-    c = load_comm('mkt-original', 'numbers')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'numbers', c)
-
-    c = load_comm('mkt-context', 'numbers')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'numbers', c)
-
-    c = load_comm('mkt-christ', 'numbers')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'numbers', c)
-
-    print('numbers: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+comm = load_comm('mkt-context', 'numbers')
+merge_comm(comm, CONTEXT)
+save_comm('mkt-context', 'numbers', comm)
+print('Numbers 22-24 mkt-context written.')

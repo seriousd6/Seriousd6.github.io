@@ -1,45 +1,30 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
-"""
+MKT Original Commentary — Exodus chapters 30–32
+Run: python3 scripts/zc-original-exodus-30-32.py
 
+Ch 30: Incense altar; census/ransom tax (kofer nafsho); laver; anointing oil
+       formula (five spices); incense formula (four spices)
+Ch 31: Bezalel filled with ruach Elohim (first OT Spirit-filling for craft);
+       wisdom triad (chokhmah, tevunah, da'at); Sabbath as covenant sign;
+       tablets written with etzba Elohim (finger of God)
+Ch 32: Golden calf — qesheh-oref (stiff-necked); Moses's intercession using
+       the patriarchal promises; YHWH relents (nacham); Moses smashes tablets;
+       Moses offers to be blotted from the divine book (book of life concept)
+"""
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / f"data/commentary/{source}/{book}.json"
+    if p.exists():
+        return json.loads(p.read_text(encoding="utf-8"))
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / f"data/commentary/{source}/{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,156 +34,117 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
+EXODUS = {
+  "30": {
+    "1": "<p><span class='heb'>מִזְבַּח מִקְטַר קְטֹרֶת</span> <i>mizbach miqtar qetoret</i> — an altar of burning of incense. This second altar inside the tent is distinct from the bronze altar of burnt offering; it stands before the veil, between the lampstand and the bread-table, reserved exclusively for incense. The specification of acacia wood overlaid with gold (vv. 1–5) mirrors the ark and table constructions, signalling that this object belongs to the holy-of-holies complex though positioned in the outer room.</p>",
+    "2": "<p>The altar is square — one cubit by one cubit — and two cubits tall. Its horns are formed from the same piece as the altar body (<span class='heb'>מִמֶּנּוּ</span>). The horn-structure is consistent across all three altars; projections where blood was applied and where the atoning function concentrated.</p>",
+    "3": "<p>Gold overlay extends to top, sides, and horns, with a golden crown (<span class='heb'>זֵר זָהָב</span> <i>zer zahav</i>) encircling it. The crown motif (also on ark and table) marks objects of unique holiness and may reflect the concept of divine kingship — a crown for YHWH's dwelling furnishings.</p>",
+    "4": "<p>Two golden rings beneath the crown on opposite sides receive the carrying poles — a deliberate design ensuring the altar can be transported without any hand touching it, consistent with the transport protocols for all sacred furnishings (cf. Num 4:15).</p>",
+    "5": "<p>The acacia-wood poles are also gold-overlaid, maintaining the material continuity of the most sacred objects. No unfinished wood was visible on any item in the inner sanctuary.</p>",
+    "6": "<p>The incense altar is placed <span class='heb'>לִפְנֵי הַפָּרֹכֶת</span> <i>lifnei happarokhet</i> — before the veil — that screens the ark of the testimony. In the incense offering's smoke rising toward the veil, the boundary between the outer room and the Most Holy Place was regularly enacted. The altar stood nearest to where YHWH's presence dwelt.</p>",
+    "7": "<p>Aaron burns <span class='heb'>קְטֹרֶת סַמִּים</span> <i>qetoret sammim</i> — incense of spices — each morning when he tends the lamps. The temporal link to lamp-trimming creates a morning-and-evening liturgical rhythm. Incense and light together symbolize prayer ascending and divine illumination (Ps 141:2; Rev 8:3–4).</p>",
+    "8": "<p>A second incense offering at twilight, again at the lamp-lighting, establishes the <span class='heb'>קְטֹרֶת תָּמִיד</span> <i>qetoret tamid</i> — continual incense — as the framing act of every day. Israel begins and ends each day with fragrant prayer ascending before YHWH.</p>",
+    "9": "<p><span class='heb'>לֹא-תַעֲלוּ עָלָיו קְטֹרֶת זָרָה</span> <i>lo ta'alu alav qetoret zarah</i> — you shall not offer strange incense upon it. This altar has a single sacred function. The prohibition extends to burnt offering, grain offering, and libation — the incense altar is not a general offering surface. Nadab and Abihu's '<span class='heb'>אֵשׁ זָרָה</span>' (Lev 10:1) may be the corresponding violation on the incense side.</p>",
+    "10": "<p>Once a year Aaron performs atonement (<span class='heb'>כִּפֶּר</span>) on its horns with the sin-offering blood of Yom Kippur. The incense altar, though not the primary locus of sacrifice, requires annual purification, marking it as a place where holiness and human impurity potentially meet. It is <span class='heb'>קֹדֶשׁ קָדָשִׁים לַיהוָה</span> — most holy to YHWH.</p>",
+    "11": "<p>YHWH begins a new instruction to Moses with the standard <span class='heb'>וַיְדַבֵּר יְהוָה אֶל-מֹשֶׁה</span>, marking the census-tax legislation as a discrete unit. Its placement here, between altar and laver instructions, situates it within the maintenance economy of the sanctuary.</p>",
+    "12": "<p><span class='heb'>כֹּפֶר נַפְשׁוֹ</span> <i>kofer nafsho</i> — a ransom for his life. When a census is taken, every counted man must pay a ransom to avoid a plague. The census itself, by numbering Israel, risks treating persons as military units or assets; the ransom payment acknowledges that each life belongs to YHWH and cannot be catalogued without acknowledgment of that ownership. The root <span class='heb'>כפר</span> is the same as 'atonement.'</p>",
+    "13": "<p><span class='heb'>מַחֲצִית הַשֶּׁקֶל</span> <i>machatzit hasheqel</i> — half a shekel, by the sanctuary standard. The fixed amount — not proportional to wealth — signals equality before YHWH: every soul is worth the same ransom. The sanctuary shekel (20 gerahs) was the standard unit for sacred payments throughout the Torah.</p>",
+    "14": "<p>The census applies to <span class='heb'>כָּל-הָעֹבֵר עַל-הַפְּקֻדִים</span> — everyone who crosses over into the counted — twenty years and older. This age aligns exactly with the military census of Numbers 1, confirming the dual function: the counting was both a military muster and a sacred accounting of the redeemed community.</p>",
+    "15": "<p>The wealthy shall not give more; the poor shall not give less. The ransom is the same for all: <span class='heb'>לְכַפֵּר עַל-נַפְשֹׁתֵיכֶם</span> — to make atonement for your lives. Economic status creates no differential standing before YHWH in the realm of life-ransom. This principle runs against the grain of much ancient Near Eastern practice where sacrifice was proportional to social standing.</p>",
+    "16": "<p>The half-shekel ransom money is designated for <span class='heb'>עֲבֹדַת אֹהֶל מוֹעֵד</span> — the service of the tent of meeting. The community's continued funding of the sanctuary is built directly into the census mechanism. The Levitical temple tax preserved in Neh 10:32 and Jesus's era (Matt 17:24–27) reflects this same legislation.</p>",
+    "17": "<p>The laver instruction opens with the standard formula. Positioned between the altar tax and the anointing oil, the laver belongs to the operational infrastructure of the priesthood rather than the furnishing of the inner sanctuary — it stood in the courtyard between altar and tent entrance.</p>",
+    "18": "<p><span class='heb'>כִּיּוֹר נְחֹשֶׁת</span> <i>kiyyor nechoshet</i> — a bronze basin, with a bronze stand. Unlike the gold items inside the tent, the laver is bronze — the same material as the altar of burnt offering. Bronze characterizes the courtyard objects; gold the inner sanctuary. The material gradient maps the gradation of holiness.</p>",
+    "19": "<p>Aaron and his sons wash their hands and feet from the laver. The dual washing is distinctive: hand-washing was common in priestly contexts throughout the ancient Near East, but foot-washing before entering a sacred space reflects the idea that the ground of the sanctuary is holy (cf. Exod 3:5). The priest approaches holy service with clean hands (action) and clean feet (movement/presence).</p>",
+    "20": "<p><span class='heb'>לְבִלְתִּי מוּת</span> <i>levilti mut</i> — so that they do not die. The laver washing is not ceremonial nicety but a matter of life before YHWH's holiness. The phrase recurs in v. 21, creating a solemn bracket. Approaching the holy altar or entering the tent without washing constitutes a lethal crossing of the holiness boundary.</p>",
+    "21": "<p>This is a perpetual statute (<span class='heb'>חֻקַּת עוֹלָם</span>) for Aaron and his descendants throughout their generations. The washing requirement passes to every generation of priests — a law embedded in the very definition of what it means to officiate in the tent.</p>",
+    "22": "<p>The anointing oil instruction begins with the characteristic <span class='heb'>וְאַתָּה</span> — 'and you' — directing Moses personally. The formula for the sacred oil is given with precise measurements: a recipe locked into the covenant document. Moses's role here is not just receiver but compounder; he is to make this specific blend.</p>",
+    "23": "<p>The five ingredients: (1) <span class='heb'>מֹר-דְּרוֹר</span> <i>mor deror</i> — free-flowing (liquid) myrrh, 500 shekels; (2) <span class='heb'>קִנְּמָן-בֶּשֶׂם</span> <i>qinnam besem</i> — sweet cinnamon, 250 shekels; (3) <span class='heb'>קְנֵה-בֹשֶׂם</span> <i>qaneh bosem</i> — fragrant cane, 250 shekels. The trade roots of these spices (Arabia, India, SE Asia) signal that the sanctuary draws on the wealth of the whole creation.</p>",
+    "24": "<p>(4) <span class='heb'>קִדָּה</span> <i>qiddah</i> — cassia, 500 shekels; (5) <span class='heb'>שֶׁמֶן זַיִת</span> <i>shemen zayit</i> — olive oil, one hin (about 4 liters). The spice quantities follow a 500-250-250-500 pattern around the olive oil base, suggesting a deliberate symmetry in the formulation. Together these five ingredients constitute <span class='heb'>שֶׁמֶן מִשְׁחַת-קֹדֶשׁ</span> — the holy anointing oil.</p>",
+    "25": "<p><span class='heb'>רֹקַח מִרְקַחַת</span> — a compound, a blend of a perfumer. The preparation requires professional craft (<span class='heb'>מַעֲשֵׂה רֹקֵחַ</span>); this is not a simple mixture but a skilled formulation. The same technical vocabulary appears for the incense formula, indicating that the sanctuary's sensory economy required real artisanal expertise.</p>",
+    "26": "<p>The anointing oil consecrates the tent of meeting, the ark, the table, the lampstand, the altars, the laver — every item is consecrated by being anointed. Anointing (<span class='heb'>מָשַׁח</span>) is the act of setting apart; the root gives us <span class='heb'>מָשִׁיחַ</span> — 'anointed one,' messiah. Every sanctuary object is in this sense a forerunner to the Messiah who is himself the consecrated place of meeting with God.</p>",
+    "27": "<p>The altar of burnt offering with all its utensils and the laver are explicitly included. Everything that belongs to the service of the sanctuary — from the highest (ark) to the most functional (laver) — is anointed. There is no secular tier within the tent complex.</p>",
+    "28": "<p>The anointed objects become <span class='heb'>קֹדֶשׁ קָדָשִׁים</span> — most holy. Whatever touches them will be made holy. Holiness is communicated through touch: the anointed altar sanctifies any offering placed upon it. This principle underlies Jesus's argument in Matt 23:19 that the altar is greater than the gift because the altar sanctifies the gift.</p>",
+    "29": "<p>This verse reiterates that anointing makes objects most holy. The emphasis on 'most holy' (as opposed to merely holy) marks a category distinction: these objects stand at the summit of the holiness spectrum accessible to Israel, exceeded only by the ark where YHWH's kabod dwells.</p>",
+    "30": "<p>Aaron and his sons are also anointed: <span class='heb'>וּמָשַׁחְתָּ אֹתָם וְקִדַּשְׁתָּ אֹתָם</span> — you shall anoint them and consecrate them. The priest is to the human world what the altar is to the object world: both anointed, both set apart, both most holy in their respective spheres. The anointing of persons connects them organically to the anointed sanctuary they serve.</p>",
+    "31": "<p>The oil is to be <span class='heb'>שֶׁמֶן מִשְׁחַת-קֹדֶשׁ</span> throughout all Israel's generations. The perpetuity clause here is identical to that for the incense: both are covenant-permanent institutions, not temporary regulations. Every anointed king and priest in Israel's history was consecrated under this continuing ordinance.</p>",
+    "32": "<p>The prohibition: <span class='heb'>עַל-בְּשַׂר אָדָם לֹא יִיסָךְ</span> — it shall not be poured on ordinary human flesh. The sacred oil may not be duplicated for personal use or applied to any unauthorized person. The exclusive-use principle prevents the sacred blend from becoming a common cosmetic and maintains the categorical separation between holy and common.</p>",
+    "33": "<p>Anyone who compounds a duplicate formula or applies it to an outsider (<span class='heb'>זָר</span>) is <span class='heb'>וְנִכְרַת מֵעַמָּיו</span> — cut off from his people. The <span class='heb'>כָּרֵת</span> penalty (exclusion from covenant community, often through premature death) reflects the severity of misappropriating sacred identity markers. Holiness cannot be counterfeited without consequence.</p>",
+    "34": "<p>The incense formula: four aromatic ingredients — <span class='heb'>נָטָף וּשְׁחֵלֶת וְחֶלְבְּנָה</span> <i>nataf, ushchellet, vekhelbenah</i> — stacte, onycha, and galbanum — plus <span class='heb'>לְבֹנָה זַכָּה</span> — pure frankincense — in equal parts. The 'equal parts' specification is unusual and deliberate: a precise ratio creates the specific fragrance that belongs uniquely to YHWH's presence.</p>",
+    "35": "<p><span class='heb'>מְמֻלָּח</span> <i>memulach</i> — salted. Salt (the preserving, purifying agent) is added, making the incense <span class='heb'>טָהוֹר קֹדֶשׁ</span> — pure and holy. Salt in the ancient world signified covenant permanence (Num 18:19; 2 Chr 13:5); its inclusion in the incense ties the daily offering to the covenant framework itself.</p>",
+    "36": "<p>Some of the incense is to be ground fine and placed before the ark in the tent of meeting. The finest ground form of the incense goes closest to YHWH — a gradation of refinement corresponds to the gradation of proximity to the divine presence.</p>",
+    "37": "<p>The second prohibition mirrors the first: no unauthorized formula replication of the incense. <span class='heb'>לֹא תַעֲשׂוּ לָכֶם</span> — you shall not make for yourselves. The incense formula is not proprietary in a commercial sense but covenantally reserved: it belongs to YHWH.</p>",
+    "38": "<p>As with the oil, the karet penalty applies: anyone who makes the incense formula for personal pleasure (<span class='heb'>לְהָרִיחַ בָּהּ</span> — to smell it) is cut off. The sanctuary senses — sight (light), taste (showbread), smell (incense) — were consecrated entirely to YHWH. Using them for self-pleasure was a form of covenant theft.</p>"
   },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
-  },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
+  "31": {
+    "1": "<p>The Spirit-filling narrative opens with the standard divine speech formula. The name <span class='heb'>בְּצַלְאֵל</span> <i>Betzalel</i> means 'in the shadow of God' — one sheltered under divine protection and presence. His genealogy is given with unusual specificity: son of Uri, son of Hur, of the tribe of Judah. The triple genealogy and tribal identification signal that this appointment is as significant as any priestly or kingly appointment in Israel.</p>",
+    "2": "<p><span class='heb'>רְאֵה קָרָאתִי בְשֵׁם</span> — 'See, I have called by name.' Divine calling by name is the language of election and personal commissioning (cf. Isa 43:1; 45:3–4). YHWH does not draft the best available craftsman; he names and calls a specific individual from eternity for this specific task.</p>",
+    "3": "<p><span class='heb'>וָאֲמַלֵּא אֹתוֹ רוּחַ אֱלֹהִים</span> <i>va'amalle oto ruach Elohim</i> — and I have filled him with the Spirit of God. This is the first occurrence in Scripture of the Spirit of God filling a specific person for a defined vocation. The Spirit-filling is for craft and construction, not just prophecy or leadership: <span class='heb'>בְּחָכְמָה בִּתְבוּנָה וּבְדַעַת</span> — in wisdom, understanding, and knowledge. All three terms appear together in Prov 3:19–20 to describe YHWH's own act of creation, grounding Bezalel's work in the divine creative pattern.</p>",
+    "4": "<p><span class='heb'>לַחְשֹׁב מַחֲשָׁבֹת</span> — to devise plans, designs. The root <span class='heb'>חשב</span> (think, devise) is the same used for the skilled weaving of the ephod (28:6) — artistic, intentional, thoughtful work. The Spirit empowers not rote execution but creative problem-solving within the sanctuary's specifications. Bezalel is not a copyist but a Spirit-empowered designer.</p>",
+    "5": "<p>The Spirit's gifting extends to all crafts: <span class='heb'>לַעֲשׂוֹת בְּכָל-מְלָאכָה</span> — to work in every craft. Stone cutting, wood working, and all skilled work fall within the Spirit's enabling. This comprehensive gifting indicates that the Spirit equips comprehensively for the fullness of the task YHWH assigns — no aspect of the calling exceeds the Spirit's provision.</p>",
+    "6": "<p>Bezalel receives a partner: <span class='heb'>אָהֳלִיאָב</span> <i>Oholiab</i> — 'tent of my father' — son of Ahisamach, of the tribe of Dan. That the two master craftsmen come from Judah (royal tribe) and Dan (northern outpost tribe) together suggests the sanctuary construction is a pan-Israelite work, uniting the whole nation in service to YHWH. <span class='heb'>בְּלֶב כָּל-חֲכַם-לֵב נָתַתִּי חָכְמָה</span> — into the heart of every skilled person I have put wisdom. YHWH equips all the craftsmen as he equips Bezalel.</p>",
+    "7": "<p>The objects Bezalel and Oholiab are to construct are listed: the tent of meeting, the ark, the mercy seat, all furnishings of the tent. The list is a recapitulation of chapters 25–27 — the blueprint is now matched to its builders. The divine instructions and the divine empowerment converge at this point.</p>",
+    "8": "<p>The lampstand of pure gold (<span class='heb'>מְנֹרַת הַזָּהָב הַטָּהוֹר</span>) is specifically named. Its distinctive form — the most complex of the furnishings with its hammered petals, calyxes, and branches — required the highest level of craft. The Spirit who fills Bezalel is sufficient for the lampstand's demands.</p>",
+    "9": "<p>The altar of incense, the altar of burnt offering, and the laver are included. The full complement of sanctified objects — from the innermost ark to the outermost laver — will be made by Spirit-endowed craftsmen. The sanctuary is not a human monument to divine specifications; it is a divinely-empowered construction for divine habitation.</p>",
+    "10": "<p><span class='heb'>בִּגְדֵי הַשְּׂרָד</span> <i>bigdei haserad</i> — the service garments. These finely woven vestments for Aaron and his sons are included in the craftsmen's commission. The priestly garments, like the sanctuary objects, require Spirit-endowed skill. There is no separation between spiritual endowment and material craftsmanship in YHWH's economy.</p>",
+    "11": "<p>The anointing oil and the fragrant incense also belong to the craftsmen's mandate. The comprehensive scope — architecture, metallurgy, weaving, perfumery — demonstrates that <span class='heb'>כְּכֹל אֲשֶׁר-צִוִּיתִךָ יַעֲשׂוּ</span> — all that I have commanded you, they shall do. The Spirit's enabling is coterminous with the covenant's commands.</p>",
+    "12": "<p>The Sabbath instruction interrupts the craftsman narrative. Its placement is deliberate: even the sacred construction project does not override the Sabbath. YHWH addresses Moses directly: <span class='heb'>אַךְ אֶת-שַׁבְּתֹתַי תִּשְׁמֹרוּ</span> — 'nevertheless, my Sabbaths you shall keep.' The <span class='heb'>אַךְ</span> (but, nevertheless) creates a contrast with what precedes: all that urgent building work, and yet — Sabbath is not suspended.</p>",
+    "13": "<p><span class='heb'>כִּי אוֹת הִיא בֵּינִי וּבֵינֵיכֶם</span> — for it is a sign between me and you. The Sabbath is a covenant sign (<span class='heb'>אוֹת</span>), not merely a rest regulation. The same word describes the rainbow (Gen 9:12–13) and circumcision (Gen 17:11) — each is a visible marker of a covenant relationship. Sabbath observance by Israel is the weekly renewal of the Sinai covenant identity. <span class='heb'>לְדֹרֹתֵיכֶם</span> — through your generations. The sign is perpetual.</p>",
+    "14": "<p><span class='heb'>וּשְׁמַרְתֶּם אֶת-הַשַּׁבָּת כִּי קֹדֶשׁ הִיא לָכֶם</span> — you shall keep the Sabbath, for it is holy to you. The Sabbath is holy because YHWH is holy, and the people of YHWH are marked by participating in his holy rest. The death penalty for Sabbath violation (<span class='heb'>מוֹת יוּמָת</span>) — the same formula as murder — signals that Sabbath breaking strikes at covenant identity as fundamentally as murder strikes at the image of God.</p>",
+    "15": "<p><span class='heb'>שַׁבַּת שַׁבָּתוֹן</span> <i>Shabbat Shabbaton</i> — a Sabbath of complete rest, a holy Sabbath to YHWH. The doubled form intensifies: this is not ordinary rest but the most intensive cessation. <span class='heb'>כָּל-הָעֹשֶׂה מְלָאכָה בְּיוֹם הַשַּׁבָּת מוֹת יוּמָת</span> — everyone who does work on the Sabbath day shall surely be put to death. The absolute prohibition applies even during the building of the sanctuary.</p>",
+    "16": "<p><span class='heb'>וְשָׁמְרוּ בְנֵי-יִשְׂרָאֵל אֶת-הַשַּׁבָּת לַעֲשׂוֹת אֶת-הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם</span> — the Israelites shall keep the Sabbath, observing the Sabbath throughout their generations as an everlasting covenant (<i>berit olam</i>). The <i>berit olam</i> formula appears for the rainbow (Gen 9:16), circumcision (Gen 17:7), and the priestly covenant (Num 25:13). Sabbath joins this select group of unbreakable covenantal bonds.</p>",
+    "17": "<p><span class='heb'>בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִוא לְעֹלָם</span> — between me and the Israelites it is a sign forever. The Sabbath sign brackets the creation narrative into every week: YHWH rested on the seventh day and was refreshed (<span class='heb'>וַיִּנָּפַשׁ</span>). The anthropomorphic 'was refreshed' is unique to this verse — suggesting that creation's completion included an emotional/relational dimension in the divine rest that Israel now shares.</p>",
+    "18": "<p><span class='heb'>לֻחֹת הָאֶבֶן כְּתֻבִים בְּאֶצְבַּע אֱלֹהִים</span> — tablets of stone written with the finger of God. The phrase <span class='heb'>אֶצְבַּע אֱלֹהִים</span> appeared in 8:19 on the lips of the Egyptian magicians who could not replicate the gnats: 'This is the finger of God.' Now the same divine finger inscribes covenant law. The magicians acknowledged it as the marker of unstoppable divine power; the Sinai tablets bear that same power's permanent inscription. The tablets conclude the entire revelation at Sinai before the catastrophe of the following chapter.</p>"
   },
   "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
+    "1": "<p><span class='heb'>בֹּשֵׁשׁ מֹשֶׁה</span> <i>boshesh Moshe</i> — Moses delayed. The rare verb <span class='heb'>בשש</span> suggests an expectant waiting that has stretched beyond tolerance. The people do not know that Moses is receiving the most detailed covenant legislation in Israel's history; they know only that he has been absent for forty days (24:18). Their demand: <span class='heb'>עֲשֵׂה-לָנוּ אֱלֹהִים</span> — 'make for us gods.' The same people who heard YHWH's voice and swore 'all that YHWH has spoken we will do' (24:3, 7) now demand alternative divine representation.</p>",
+    "2": "<p>Aaron asks for gold earrings from wives, sons, and daughters — not as a delay tactic (the text gives no such signal) but as apparently genuine compliance. Aaron's complicity is complete and immediate, which makes his later evasion (v. 24) all the more revealing. The gold that adorned Israel in the exodus from Egypt now funds their apostasy at Sinai.</p>",
+    "3": "<p>The people strip their gold earrings and bring them to Aaron. The willingness — even eagerness — of the act stands in sharp contrast to the voluntary giving for the tabernacle (25:2; 35:29). The same generosity with material wealth serves either YHWH's dwelling or human-made religion.</p>",
+    "4": "<p>Aaron fashions an <span class='heb'>עֵגֶל מַסֵּכָה</span> <i>egel massekah</i> — a molten/cast calf. The proclamation: <span class='heb'>אֵלֶּה אֱלֹהֶיךָ יִשְׂרָאֵל אֲשֶׁר הֶעֱלוּךָ מֵאֶרֶץ מִצְרָיִם</span> — 'These are your gods, O Israel, who brought you up from the land of Egypt.' The plural <span class='heb'>אֱלֹהֶיךָ</span> and plural verb may reflect a title formula used in Canaanite religion; the attribution of the exodus to a calf-image is the theological inversion of Sinai — the covenant is being transferred from YHWH to an idol.</p>",
+    "5": "<p>Aaron builds an altar and calls a feast to YHWH (<span class='heb'>חַג לַיהוָה</span>). This detail is theologically significant: Aaron does not abandon the divine name but applies it to the calf-worship. This is syncretism, not outright abandonment — YHWH's name over an idolatrous object. Jeroboam's later calf-shrines at Bethel and Dan repeat exactly this formula (1 Kgs 12:28).</p>",
+    "6": "<p><span class='heb'>וַיַּשְׁכִּימוּ מִמָּחֳרָת וַיַּעֲלוּ עֹלֹת</span> — they rose early and offered burnt offerings. The worship proceeds with full liturgical form — offerings, then eating and drinking, then <span class='heb'>וַיָּקֻמוּ לְצַחֵק</span> — 'they rose up to play/revel.' The term <span class='heb'>צחק</span> (play, sport, revel) in a sexual or festive sense recalls its use in Gen 39:14, 17 (Potiphar's wife's accusation). Paul quotes this verse in 1 Cor 10:7 as a warning against idolatry.</p>",
+    "7": "<p>YHWH tells Moses: <span class='heb'>לֶךְ-רֵד כִּי שִׁחֵת עַמְּךָ</span> — 'Go, descend, for your people whom you brought up from Egypt have acted corruptly.' The distancing language is striking: YHWH calls Israel 'your people' and 'whom you brought up' — the possessive and agency have been transferred away from YHWH to Moses. This is not mere anger but the language of covenantal breach: YHWH is marking his distance from the people who have just broken the covenant.</p>",
+    "8": "<p><span class='heb'>סָרוּ מַהֵר</span> <i>saru maher</i> — they have turned aside quickly. The speed of the apostasy magnifies its depth: the ink, as it were, is barely dry on 'all that YHWH has spoken we will do' (24:7). <span class='heb'>עָשׂוּ לָהֶם עֵגֶל מַסֵּכָה</span> — they have made for themselves a molten calf. The reflexive <span class='heb'>לָהֶם</span> (for themselves) marks the idolatry as self-serving religious construction.</p>",
+    "9": "<p><span class='heb'>עַם-קְשֵׁה-עֹרֶף</span> <i>am qesheh oref</i> — a stiff-necked people. The metaphor is from agriculture: an ox that stiffens its neck refuses the yoke. Israel has refused to bear YHWH's covenant yoke. This phrase becomes the defining characterization of Israel in subsequent texts (33:3, 5; 34:9; Deut 9:6, 13; Acts 7:51), pointing to a structural stubbornness in human nature that covenant law alone cannot cure.</p>",
+    "10": "<p><span class='heb'>וְעַתָּה הַנִּיחָה לִּי</span> <i>veatah hannicha li</i> — 'and now, leave me alone.' YHWH's proposal: his anger will burn and consume Israel, and then he will make Moses into a great nation. This echoes the Abrahamic promise (Gen 12:2) now offered to Moses alone. YHWH is not simply threatening — he is presenting a genuine covenant option. Moses's response will define Israel's future.</p>",
+    "11": "<p><span class='heb'>וַיְחַל מֹשֶׁה</span> <i>vaychal Moshe</i> — Moses implored (or: became soft toward, appeased) the face of YHWH. The verb root <span class='heb'>חלה</span> (to be sick, weak; to implore) conveys the intensity of intercessory petition — prostration and earnest pleading. Moses does not simply pray; he takes a posture of full intercession. His first argument: Egypt's reputation and YHWH's honor among the nations.</p>",
+    "12": "<p><span class='heb'>לָמָּה יֹאמְרוּ מִצְרַיִם</span> — 'Why should Egypt say...?' Moses's intercession invokes the missional argument: destroying Israel would allow the nations to conclude that YHWH brought Israel out to destroy them in the wilderness — a slander against YHWH's character. <span class='heb'>שׁוּב מֵחֲרוֹן אַפֶּךָ</span> — 'turn from the burning of your anger.' The imperative directed at YHWH is remarkable: Moses commands God to repent of the intended judgment.</p>",
+    "13": "<p>The patriarchal appeal: <span class='heb'>זְכֹר לְאַבְרָהָם לְיִצְחָק וּלְיִשְׂרָאֵל עֲבָדֶיךָ</span> — 'Remember Abraham, Isaac, and Israel, your servants.' Moses grounds his intercession not in Israel's merit but in YHWH's prior oath. The divine promises sworn by oath to the patriarchs cannot be annulled by Israel's failure without YHWH becoming oath-breaker. <span class='heb'>אַרְבֶּה אֶת-זַרְעֲכֶם כְּכוֹכְבֵי הַשָּׁמָיִם</span> — 'I will multiply your seed as the stars of the heavens' — Moses quotes the covenant promise verbatim back to YHWH.</p>",
+    "14": "<p><span class='heb'>וַיִּנָּחֶם יְהוָה עַל-הָרָעָה</span> <i>vayyinnachem YHWH al haraah</i> — YHWH relented over the disaster he had spoken of doing. The verb <span class='heb'>נחם</span> in the Niphal means to change course, to be moved to a different course of action. This is not divine inconsistency but the theology of responsive relationship: YHWH genuinely responds to intercessory prayer. Moses's prayer functioned — the covenant promises provided the grounds for mercy. The text does not explain this as divine foreknowledge of Moses's intercession; it presents it as real divine responsiveness.</p>",
+    "15": "<p>Moses descends with the two tablets in his hands — <span class='heb'>כְּתֻבִים מִשְּׁנֵי עֶבְרֵיהֶם</span> — written on both sides, front and back. The unusual detail of writing on both sides may indicate the comprehensiveness of the covenant content, or possibly that no blank space remained — the divine law filled the available surface completely.</p>",
+    "16": "<p><span class='heb'>חֲרוּת עַל-הַלֻּחֹת</span> <i>charut al halluchot</i> — engraved on the tablets. The rabbis read a wordplay: <span class='heb'>חרות</span> (charut) = 'engraved' but also resonates with <span class='heb'>חֵרוּת</span> (cherut) = 'freedom.' The engraved law is the charter of freedom, not its negation. Paul's contrast of 'letter' and 'Spirit' (2 Cor 3) engages precisely this tablet tradition.</p>",
+    "17": "<p>Joshua, who had been waiting on the mountain (24:13), hears the noise and interprets it as the sound of war (<span class='heb'>קוֹל מִלְחָמָה</span>). His military ear hears battle; Moses corrects him with the poetic triplet of v. 18. Joshua's misidentification emphasizes that what is happening in the camp is not heroic warfare but something more disturbing — covenant apostasy dressed as celebration.</p>",
+    "18": "<p>Moses's poetic response: 'It is not the voice of those who shout in victory, nor the voice of those who cry in defeat — but the voice of singing I hear.' The carefully crafted three-line analysis (victory shout / defeat cry / singing) identifies what is actually wrong: a celebration is happening where there should be neither victory nor defeat — it is festive worship directed wrongly.</p>",
+    "19": "<p><span class='heb'>וַיַּשְׁלֵךְ מִיָּדָו אֶת-הַלֻּחֹת</span> — he threw the tablets from his hands and broke them at the foot of the mountain. Moses's act of shattering the tablets is not an anger-driven accident but a prophetic sign-act: Israel has broken the covenant, so the covenant document is visibly broken. The tablets are broken at the foot of the mountain where the covenant was made, closing the revelation-reception arc dramatically.</p>",
+    "20": "<p>Moses burns the calf, grinds it to powder, scatters it on the water, and makes Israel drink it. The forced drinking of the ground idol echoes the bitter-waters ordeal of Num 5:17–28 (the jealousy water for suspected adultery) — Israel must ingest the evidence of their idolatrous infidelity. The covenant breach is processed through the body.</p>",
+    "21": "<p>Moses confronts Aaron directly: <span class='heb'>מֶה-עָשָׂה לְךָ הָעָם הַזֶּה כִּי-הֵבֵאתָ עָלָיו חֲטָאָה גְדֹלָה</span> — 'What did this people do to you that you brought such great sin upon them?' The question invites Aaron's explanation while framing the incident theologically: this was not a people-initiative but Aaron's leadership failure. The 'great sin' phrase (<span class='heb'>חֲטָאָה גְדֹלָה</span>) becomes the standard formula for idolatry in the prophetic literature.</p>",
+    "22": "<p>Aaron begins with displacement: <span class='heb'>אַל-יִחַר אַף אֲדֹנִי</span> — 'Let not the anger of my lord burn.' Then characterization of the people: <span class='heb'>כִּי בְרָע הוּא</span> — 'for they are set on evil.' Aaron blames the people before explaining his own actions. The pattern of deflecting responsibility to others begins immediately in the text's history (cf. Gen 3:12–13).</p>",
+    "23": "<p>Aaron reports the people's demand verbatim: 'Make us gods who will go before us, for this man Moses who brought us up from Egypt — we do not know what has become of him.' The attribution of the exodus to Moses ('this man Moses') echoes YHWH's distancing language in v. 7 — Israel and YHWH are each refusing to claim the relationship.</p>",
+    "24": "<p>Aaron's evasion reaches its nadir: <span class='heb'>וָאֹמַר לָהֶם לְמִי זָהָב הִתְפָּרָקוּ וַיִּתְּנוּ-לִי וָאַשְׁלִכֵהוּ בָאֵשׁ וַיֵּצֵא הָעֵגֶל הַזֶּה</span> — 'I said to them, whoever has gold, remove it; they gave it to me, I threw it in the fire, and out came this calf.' Aaron portrays himself as passive recipient of the gold and spectator of a miraculous self-emergence. The calf 'came out' (<span class='heb'>וַיֵּצֵא</span>) — as if it were a spontaneous natural phenomenon, not something Aaron fashioned with a graving tool (v. 4). This is one of Scripture's most blatant acts of self-exculpation.</p>",
+    "25": "<p><span class='heb'>כִּי פָרֻעַ הוּא</span> — for they were out of control (or: uncovered, let loose). Moses sees the people are <span class='heb'>פָּרֻעַ</span> — ungoverned, unrestrained. Aaron had 'let them loose' (<span class='heb'>שִׁמְשָׁה</span> in LXX's rendering reflects a social disintegration). <span class='heb'>לְשִׁמְצָה בְּקָמֵיהֶם</span> — to derision among their adversaries. The apostasy has not only broken the covenant; it has made Israel a laughing stock before the watching nations — the very opposite of the missional concern Moses raised in his intercession.</p>",
+    "26": "<p><span class='heb'>מִי לַיהוָה אֵלָי</span> <i>mi laYHWH eilai</i> — 'Who is for YHWH? To me!' Moses's call to loyalty is the decisive moment of the chapter. <span class='heb'>וַיֵּאָסְפוּ אֵלָיו כָּל-בְּנֵי לֵוִי</span> — all the sons of Levi gathered to him. The Levites' response to this moment of crisis becomes the ground of their priestly election (Deut 33:9). Loyalty to YHWH over kinship ties defines Levitical vocation.</p>",
+    "27": "<p>The Levites are commanded to execute judgment: each man his sword against brother, companion, and neighbor. The scope — no clan exemption — demonstrates that covenant fidelity supersedes family loyalty. This is the same principle invoked in Deut 13:6–9 for the town that entices to idolatry. Approximately three thousand died that day.</p>",
+    "28": "<p>Three thousand fell. The number later becomes the count of those who received the Spirit at Pentecost (Acts 2:41), where the law written on stone (at Sinai) is contrasted with the law written on the heart — and what the letter killed, the Spirit gave life to. The structural parallel between Sinai and Pentecost is not incidental.</p>",
+    "29": "<p><span class='heb'>מִלְאוּ יֶדְכֶם הַיּוֹם לַיהוָה</span> — 'Consecrate yourselves today to YHWH.' The phrase <span class='heb'>מִלֵּא יָד</span> (fill the hand) is the technical term for priestly ordination (28:41; 29:9). The Levites' act of loyalty — sword against kin — functions as their ordination: through faithfulness to YHWH above family, they receive the priesthood. Blessing is the outcome of their faithfulness.</p>",
+    "30": "<p>Moses addresses the people the following day: <span class='heb'>אַתֶּם חֲטָאתֶם חֲטָאָה גְדֹלָה</span> — 'You have sinned a great sin.' The direct statement leaves no ambiguity. Then: 'I will go up to YHWH — perhaps I can make atonement (<span class='heb'>אֲכַפְּרָה</span>) for your sin.' Moses moves from judgment to intercession a second time.</p>",
+    "31": "<p>Moses's second intercession begins with confession: <span class='heb'>אָנָּא חָטָא הָעָם הַזֶּה חֲטָאָה גְדֹלָה</span> — 'O, this people have sinned a great sin and made for themselves gods of gold.' No minimization, no excuses — he presents the sin to YHWH as it is. Then comes the conditional petition.</p>",
+    "32": "<p><span class='heb'>וְעַתָּה אִם-תִּשָּׂא חַטָּאתָם וְאִם-אַיִן מְחֵנִי נָא מִסִּפְרְךָ אֲשֶׁר כָּתָבְתָּ</span> — 'And now, if you will forgive their sin — but if not, blot me, please, from your book which you have written.' The phrase <span class='heb'>סִפְרְךָ</span> (your book) is the earliest clear reference to what later tradition calls the book of life (Ps 69:28; Dan 12:1; Phil 4:3; Rev 3:5; 20:12). Moses offers himself — his name, his covenant standing, his eternal record — as substitution for the people. This is the most extraordinary act of intercession in the Torah.</p>",
+    "33": "<p>YHWH's response closes the door on the substitution: <span class='heb'>מִי אֲשֶׁר חָטָא-לִי אֶמְחֶנּוּ מִסִּפְרִי</span> — 'Whoever has sinned against me, I will blot out of my book.' Individual moral accountability cannot be transferred by another's offer. Moses's intercession is refused not because it is unworthy but because atonement cannot function by the substitution of the innocent for the guilty under the law — a principle that points forward to the one who would be made sin for us in a way that satisfied what the law could not (2 Cor 5:21).</p>",
+    "34": "<p>YHWH sends Israel forward: <span class='heb'>לֵךְ נְחֵה אֶת-הָעָם</span> — 'Go, lead the people.' The journey resumes, but with the ominous addition: <span class='heb'>וּבְיוֹם פָּקְדִי וּפָקַדְתִּי עֲלֵהֶם חַטָּאתָם</span> — 'and on the day I visit, I will visit their sin upon them.' The golden calf incident is not fully resolved at the chapter's end; a day of reckoning is deferred, not cancelled. The messenger/angel sent before them (23:20–23) will carry on, but YHWH's own presence remains in question — a tension that chapter 33 addresses.</p>",
+    "35": "<p><span class='heb'>וַיִּגֹּף יְהוָה אֶת-הָעָם</span> — YHWH struck the people with a plague because of what they did with the calf Aaron made. The immediate judgment falls through plague — the same instrument threatened at the census (30:12) if ransom was not paid. The chapter closes with consequence: the golden calf produces death. This is not the last consequence — the deferred visitation of v. 34 hangs over all subsequent Israel.</p>"
   }
 }
 
 def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
+    existing = load_comm('mkt-original', 'exodus')
+    merge_comm(existing, EXODUS)
+    save_comm('mkt-original', 'exodus', existing)
+    print('Exodus 30-32 mkt-original written.')
+    # Verify
+    check = json.loads((ROOT / 'data/commentary/mkt-original/exodus.json').read_text())
+    for ch, vs in EXODUS.items():
+        for v in vs:
+            assert v in check.get(ch, {}), f'Missing {ch}:{v}'
+    print('All verses verified.')
 
 if __name__ == '__main__':
     main()

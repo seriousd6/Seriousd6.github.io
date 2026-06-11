@@ -83,8 +83,21 @@ ECHO = {
     ]
   },
   "26": {
+    "11": [
+      {"type": "fulfillment", "target": "2 Cor 6:16", "note": "I will make my dwelling among you — Lev 26:11-12 together form the covenant-presence promise Paul quotes in 2 Cor 6:16: I will make my dwelling among them and walk among them, and I will be their God, and they shall be my people; Paul applies this covenant-indwelling formula to the new covenant church as the temple of the living God, fulfilled by the Spirit's indwelling of believers"},
+      {"type": "fulfillment", "target": "Rev 21:3", "note": "I will set my dwelling in your midst — the tabernacling-presence promise of Lev 26:11 reaches its ultimate fulfillment in Rev 21:3: Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people; the covenant-dwelling formula found throughout the OT (Lev 26:12; Ezek 37:27; Jer 31:33) reaches its eschatological completion in the new creation"}
+    ],
     "12": [
       {"type": "fulfillment", "target": "2 Cor 6:16", "note": "I will walk among you and will be your God and you shall be my people — the covenant formula of Lev 26:12 is the OT's recurring covenant-relationship phrase (also Ezek 36:28; Jer 31:33); Paul quotes it in 2 Cor 6:16 as the basis for the church as the temple of the living God; it is fulfilled in the Spirit's indwelling of the new covenant community"}
+    ]
+  },
+  "27": {
+    "30": [
+      {"type": "allusion", "target": "Matt 23:23", "note": "Every tithe of the land, whether of the seed of the land or of the fruit of the trees, is YHWH's; it is holy to YHWH — Leviticus 27:30 establishes the tithe as YHWH's holy portion; Jesus in Matt 23:23 (and Luke 11:42) rebukes the Pharisees for meticulous tithing of spices while neglecting the weightier matters of the law — justice, mercy, and faithfulness; he does not abolish the tithe but locates it within the larger moral framework it was always meant to serve"},
+      {"type": "allusion", "target": "Luke 11:42", "note": "The tithe as YHWH's holy portion (Lev 27:30) — Luke 11:42: Woe to you Pharisees! For you tithe mint and rue and every herb, and neglect justice and the love of God. These you ought to have done, without neglecting the others; Jesus preserves the Levitical tithe obligation while insisting that external compliance without the law's moral core is a distortion of the entire system"}
+    ],
+    "32": [
+      {"type": "allusion", "target": "Matt 23:23", "note": "Every tenth animal of the herd or flock that passes under the herdsman's staff shall be holy to YHWH — the tithe of livestock complements the agricultural tithe of Lev 27:30; together they establish the comprehensive principle of YHWH's prior claim on the produce of the land and its animals; Jesus's reference to tithing in Matt 23:23 encompasses this full Levitical tithe system"}
     ]
   }
 }

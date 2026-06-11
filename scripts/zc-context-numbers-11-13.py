@@ -1,46 +1,30 @@
 """
-Numbers — all four layers.
-Key NT uses: bronze serpent (21), water from rock (20), wilderness wandering as warning,
-Balaam's star oracle (24), Phinehas's zeal, priestly blessing (6:24-26).
+context | Numbers 11-13 | Grumbling, 70 elders, Miriam, spies
+Run: python3 scripts/zc-context-numbers-11-13.py
+
+Ch 11: Desert hardship complaints, quail plague, 70-elder institution, Spirit distribution, Eldad/Medad
+Ch 12: Miriam and Aaron challenge Moses; Cushite wife; Moses' unique prophetic status; Miriam's tsara'at
+Ch 13: Twelve spies scout Canaan; Anakim/Nephilim report; Caleb vs. majority
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / "data" / "commentary" / source / f"{book}.json"
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
+
+
+def save_comm(source, book, data):
+    p = ROOT / "data" / "commentary" / source / f"{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
+    print(f"  wrote {p.relative_to(ROOT)}")
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,80 +34,106 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "6": {
-    "24": [
-      {"type": "allusion", "target": "2 Cor 13:14", "note": "The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace — the Aaronic blessing (Num 6:24-26) is the OT's most direct benediction of divine favor; Paul's trinitarian benediction in 2 Cor 13:14 echoes its structure and is its new covenant fulfillment"}
-    ]
-  },
-  "14": {
-    "29": [
-      {"type": "allusion", "target": "Heb 3:17", "note": "Your dead bodies shall fall in this wilderness — the wilderness generation's judgment (their corpses fell in the desert) is Hebrews' central warning about unbelief: with whom was God provoked for forty years? Was it not with those who sinned, whose bodies fell in the wilderness? (Heb 3:17)"},
-      {"type": "allusion", "target": "1 Cor 10:5", "note": "God was not pleased with most of them, for they were overthrown in the wilderness — Paul cites the wilderness generation's fate as a warning to the Corinthians; the judgment on the unbelieving exodus generation is the type of what awaits persistent unbelief"}
-    ]
-  },
-  "21": {
-    "8": [
-      {"type": "fulfillment", "target": "John 3:14-15", "note": "Make a fiery serpent and set it on a pole and everyone who is bitten, when he sees it, shall live — Jesus explicitly cites the bronze serpent as a type of his own crucifixion: as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life (John 3:14-15); looking to the lifted serpent = believing in the lifted Christ"}
-    ]
-  },
-  "24": {
-    "17": [
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "A star shall come out of Jacob — Balaam's messianic oracle (the star from Jacob) is applied to Christ in Revelation: I am the root and the descendant of David, the bright morning star; Num 24:17 was a significant messianic proof-text in Second Temple Judaism (the Dead Sea Scrolls use it messianically)"}
-    ]
-  },
-  "25": {
-    "11": [
-      {"type": "allusion", "target": "Rom 10:2", "note": "Phinehas son of Eleazar has turned back my wrath by being jealous with my jealousy — Phinehas's zeal for YHWH's honor (executing the Israelite and Midianite woman in their sin) is cited as the model of passionate covenant faithfulness; Paul's description of Israel's zeal for God echoes the Phinehas tradition"}
-    ]
-  }
+
+NUMBERS_CONTEXT = {
+    "11": {
+        "1": "<p>The narrative opens with an unnamed complaint (<i>mitˀonenim</i>, a <i>hitpael</i> hapax in this form suggesting an intensive, self-pitying grumble). The fire at Taberah — the site's name (<i>tabˁerah</i> = burning) commemorates the event — struck the outskirts of the camp, not the center where the tabernacle stood. In ANE tradition, fire from a deity signals both presence and judgment; YHWH's restraint in not consuming the center implies measured, proportionate punishment.</p>",
+        "2": "<p>Moses' intercession stops the fire. The pattern of intercession-as-mediation appears throughout Numbers and recalls Abraham (Gen 18:23–32) and Moses at the golden calf (Exod 32:11–13). The place name Taberah is preserved in memory as a warning toponym — a function ANE cultures routinely used to encode theological lessons in geography.</p>",
+        "3": "<p>Naming the site after the judgment is a standard OT mnemonic device: Massah and Meribah (water-dispute sites), Kibroth-hattaavah (graves of craving), and Taberah all encode the warning in the placename. ANE travel itineraries used similar memorial toponymy.</p>",
+        "4": "<p>The <i>asafsuf</i> — usually rendered 'rabble' or 'riffraff' — is a hapax legomenon. The word is likely onomatopoeic, evoking the aimless gathering of a motley crowd. These are the 'mixed multitude' (<i>ˁerev rav</i>) who came out of Egypt with Israel (Exod 12:38). Egyptian sources (including Papyrus Anastasi I and Ipuwer papyrus) attest to a fluid underclass in the Nile delta, consistent with non-Israelite laborers joining the exodus. The lusting (<i>hit'avu taˀavah</i>, figura etymologica) evokes covetous, unrestrained desire.</p>",
+        "5": "<p>The specific foods — cucumbers (<i>qishˀuˀim</i>), melons (<i>avattihim</i>), leeks (<i>hazir</i>), onions (<i>batzal</i>), garlic (<i>shum</i>) — are all authentically Egyptian agricultural products. Cucumbers and melons are well-attested in Egyptian garden plots; leeks, onions, and garlic appear in Egyptian medical papyri and ration lists for laborers (the Kahun Papyrus lists onions and garlic for pyramid builders). The list is not idealized nostalgia but a culturally accurate inventory of the diet of Egyptian laborers.</p>",
+        "6": "<p>Manna alone is now perceived as deprivation. The <i>nefesh</i> ('soul/appetite') is dried up — a visceral expression of unfulfilled craving. 'Nothing at all except this manna' positions the miraculous provision as inadequate in the people's estimation. The dietary complaint echoes Exod 16:3 and forms a recurring grumbling cycle throughout the wilderness period.</p>",
+        "7": "<p>The description of manna's appearance — like <i>gad</i> (coriander seed) and its color like <i>bdolah</i> (bdellium resin, a translucent white or pale yellowish gum from a tree known in Arabia and India) — provides the only visual description of manna in the Torah. Exod 16:31 calls it white and honey-flavored; here it looks like bdellium, which would be translucent-yellowish. Modern proposals for the natural basis of manna include secretions of the tamarisk tree (<i>Tamarix gallica</i>) attacked by insects (the Sinai Bedouin still call this substance <i>mann es-simma</i>), or perhaps scale-insect (<i>Trabutina mannipara</i>) excretions. Neither fully matches the biblical description of daily, abundant provision.</p>",
+        "8": "<p>The people ground manna in mills or pounded it in mortars, then boiled or made cakes from it — all standard Neolithic-to-Bronze Age food processing methods. The use of a mill (<i>reḥayim</i>, a common domestic object) and mortar (<i>medokah</i>) reflects realistic Bronze Age domestic technology attested in archaeology across the Levant. The taste: 'like a rich oil-cake' (<i>keshaad hashamen</i>).</p>",
+        "9": "<p>Manna arrived with the dew at night, connecting the provision to the night camp cycle. The dew's arrival frames manna as intimately embedded in the natural rhythms of the desert — an interpretation that emphasizes YHWH's provision as woven into creation itself rather than purely spectacular intervention.</p>",
+        "10": "<p>The people's weeping 'throughout their clans, each at the door of his tent' creates a collective lamentation scene. The doorway of the tent is the threshold between family and community — weeping there signals communal, clan-level distress. Moses' own anger compounds the leadership crisis: he is personally aggrieved as well as overwhelmed.</p>",
+        "11": "<p>Moses' direct address to YHWH employs the form of a legal complaint or lament (<i>larev</i> — 'why have you dealt ill with your servant?'). This frank theological dialogue is characteristic of Numbers' portrayal of Moses as unique intercessor who speaks face-to-face with God. The language echoes job-like complaint psalms and shows that bold lament is a legitimate OT speech form, not impiety.</p>",
+        "12": "<p>'Did I conceive all this people?' — Moses uses maternal imagery to describe pastoral care, making the rhetorical point that he did not beget this nation and cannot be expected to nurse it through every complaint. The nursing imagery (<i>omen</i>, translated 'nurse' or 'guardian', related to the root ˀmn = faithfulness/support) is striking: Moses portrays himself as an exhausted wet-nurse. This is one of the OT's rare gender-transgressive metaphors applied to male leadership.</p>",
+        "13": "<p>Moses' distress reaches its nadir with the request for death ('kill me at once, if I find favor'). This is the first of three such death-wish passages in Moses' career (Exod 32:32; Num 11:15; also see Elijah's death wish in 1 Kgs 19:4 under similar leadership exhaustion). The repetition establishes a pattern: prophetic burnout produces death wishes that God addresses without granting.</p>",
+        "14": "<p>YHWH responds with administrative decentralization: 70 elders to bear the burden with Moses. The number 70 has deep resonance in the OT — 70 descendants of Jacob (Gen 46:27), 70 elders and young men at Sinai (Exod 24:1,9), 70 nations in the Table of Nations (Gen 10). The number suggests a cosmic completeness, representing all Israel in representative form.</p>",
+        "15": "<p>The institutional solution (70 elders sharing the leadership burden) does not precede but follows Moses' reaching his breaking point. The text models a principle of governance: divine institutions often emerge from human limitation rather than prosperous planning. The tabernacle doorway is specified as the meeting point — the sacred threshold where divine encounter occurs.</p>",
+        "16": "<p>'Registered officers over the people' — these <i>shotrim</i> are administrative officials attested throughout the OT (Exod 5:6,10,14 in Egypt; Deut 16:18 as court officials). The combination of elders (<i>ziqenim</i>) and officers represents both traditional community leadership and administrative function — the text distinguishes the two roles even as it combines them for this task.</p>",
+        "17": "<p>YHWH promises to 'take' (<i>ˀatzal</i>) of the Spirit that is on Moses and put it on the 70 elders. The verb <i>ˀatzal</i> is the same root used in Moses' prayer in Num 11:25 and in Ezek 42:6 (structural support beams). The metaphor implies not diminishment of Moses but extension — the Spirit is 'set apart' from him to distribute, as buttresses branch from a central pillar. The Spirit in this context is the enabling power for prophetic leadership.</p>",
+        "18": "<p>The consecration command ('consecrate yourselves for tomorrow') follows the standard purity sequence for divine encounter: washing, abstaining from sexual intercourse (compare Exod 19:15), and readiness. The promise of meat is ironic — YHWH will give them meat, but as judgment rather than blessing. The irony of getting exactly what one craves as punishment is a recurring biblical motif (Ps 78:29–31).</p>",
+        "19": "<p>'You rejected YHWH who is among you' — the rejection language is covenant terminology (<i>meˀastem</i>). The accusation is not merely one of ingratitude but of formal covenant violation: YHWH is not a distant supplier but a covenant partner who <i>dwells among them</i>. Rejecting his provision is tantamount to rejecting his presence.</p>",
+        "20": "<p>'Until it comes out of your nostrils and becomes loathsome to you' — this visceral hyperbole employs the logic of surfeit: forced consumption until disgust. It is a form of measure-for-measure judgment: they craved meat; they will have meat beyond bearing. The loathing-through-excess motif appears in Prov 25:16 (honey) and reflects wisdom literature's observation that excessive desire destroys its own object.</p>",
+        "21": "<p>Moses raises the logistical objection: 600,000 men on foot (the census figure of Num 1). He calculates that even slaughtering all the herds and draining the sea's fish would be insufficient. The objection is mathematically minded — Moses is a realist about provision. YHWH's response ('Is my hand short?') invokes the divine attribute of sovereign power over natural limits (compare Isa 50:2; 59:1).</p>",
+        "22": "<p>The '600,000 men on foot' echoes the census of Numbers 1 and the Exodus tradition (Exod 12:37). The historical debate about whether this is literal or symbolic (some scholars argue for a military unit size of 'thousand' = 'clans') does not affect the narrative point: Moses sees a humanly impossible provision problem, and YHWH reframes it as a question of divine capacity.</p>",
+        "23": "<p>YHWH's rhetorical question — 'Is my hand short? Now you shall see whether my word will come true for you or not' — frames the quail provision as a test of prophetic credibility. The 'shortened hand' idiom (also Isa 50:2; 59:1) references impotence or inability. YHWH rejects this framing: his word is irrevocable, and the provision will demonstrate it.</p>",
+        "24": "<p>The 70 elders assemble at the tabernacle. YHWH speaks to Moses in the cloud — the standard theophany medium in Numbers (compare the cloud in Num 9:15–23). The assembly at the tabernacle connects the administrative innovation to the central sanctuary, keeping the new institution embedded in the worship structure.</p>",
+        "25": "<p>The Spirit comes on the 70 and they prophesy — once, not continuously (<i>lo yasafu</i> = 'they did not continue/add again' in v.25 means this was a one-time validating sign of the Spirit's bestowal). The temporary nature of this prophecy distinguishes the 70 elders from Moses, whose prophetic relationship with YHWH is permanent and face-to-face (Num 12:6–8). Compare 1 Sam 10:5–6, 10–11 (Saul's prophesying as the Spirit-anointing sign), and Joel 2:28–29's promise of universal Spirit-distribution.</p>",
+        "26": "<p>Eldad and Medad remain in the camp (not going to the tabernacle) but receive the Spirit and prophesy there. Their names are not explained; Eldad may mean 'God has loved' and Medad 'beloved.' The incident creates a structural tension: valid divine action occurring outside the official designated sanctuary space. This tension between charismatic/institutional religion recurs throughout the OT and into the NT (compare Mark 9:38–40, where John objects to exorcism outside the Twelve).</p>",
+        "27": "<p>A young man runs to report the camp-prophecy to Moses — the urgency of the report implies the community senses a breach of order. Joshua (already Moses' aide, <i>mesharet</i> = assistant/minister) urges Moses to stop them. Joshua's reaction is protective of Moses' unique authority. The institutional impulse to restrict divine activity to authorized channels is represented sympathetically in Joshua, even though it is corrected.</p>",
+        "28": "<p>Joshua's request to 'restrain them' reflects a concern for ordered authority: if the Spirit moves outside the designated space without Moses' involvement, does that undermine his primacy? Joshua's protectiveness of Moses is demonstrated earlier (Exod 33:11) when he 'would not leave' the tent of meeting. His attachment to institutional order is consistent with his character.</p>",
+        "29": "<p>Moses' response — 'Would that all YHWH's people were prophets, that YHWH would put his Spirit on them!' — is one of the great programmatic statements of the OT. It looks forward to Joel 2:28–29 and Acts 2:16–21 as a wish that becomes eschatological promise. Moses subverts institutional anxiety with pneumatological generosity: the Spirit's distribution is never a threat to authentic authority. The phrase is preserved because it is programmatic, not incidental.</p>",
+        "30": "<p>Moses and the 70 elders return to camp. The episode is structured to conclude before the quail narrative (vv.31–35) begins, creating a literary pause. The 70-elder institution is established as background before the punitive quail provision demonstrates what happens when craving replaces trust.</p>",
+        "31": "<p>A wind from YHWH drives quail from the sea (<i>min-hayam</i>). The Sinai quail migration is well documented: the common quail (<i>Coturnix coturnix</i>) migrates northward from East Africa across the Sinai Peninsula in spring, flying over the sea and landing exhausted in large numbers along the coast. The Sinai Bedouin historically caught them in nets as they fell. The description of quail 'three feet above the ground' (approximately a cubit on each side of the camp and two cubits above) matches the flight height of exhausted migrating birds just above the surface.</p>",
+        "32": "<p>The people gather quail for a full day and night and another day — an extreme act of accumulation. 'The one who gathered least gathered ten homers' — a homer is approximately 6.5 bushels, so even the minimum gathering was enormous. The excessive accumulation echoes the manna violation (Exod 16:20) where people kept manna overnight against instruction. The compulsive gathering demonstrates that the craving is not about genuine need but ungoverned appetite.</p>",
+        "33": "<p>The plague strikes while the meat is still between their teeth — before they can even swallow. This detail emphasizes the measure-for-measure structure: judgment comes precisely at the moment of consumption, as if the desire itself is punished. The anger of YHWH burning 'with a great burning' (<i>ˀaf-YHWH varav meˀod</i>) is the narrative peak.</p>",
+        "34": "<p>The site is named Kibroth-hattaavah — 'graves of craving' or 'graves of desire.' The place name encodes the lesson with maximum compression: this is where the craving was buried with those who craved. The naming pattern is the same as Taberah (v.3) — wilderness geography becomes a topographic theology, each site a frozen parable.</p>",
+        "35": "<p>Israel moves on to Hazeroth. The stopping-point list in Numbers follows the standard ANE itinerary format (compare Egyptian travel logs like Papyrus Anastasi I, which records stages with named stopping points). The progression from Taberah → Kibroth-hattaavah → Hazeroth marks the narrative geography of the rebellion cycles.</p>",
+    },
+    "12": {
+        "1": "<p>Miriam and Aaron spoke against Moses 'because of the Cushite woman he had married.' The identification of the Cushite (<i>kushit</i>) wife is debated. Cush in the OT usually refers to Nubia/Ethiopia (south of Egypt), but the term can occasionally refer to a Midianite clan in Arabia. Some ancient interpreters (Josephus, Ant. 2.10) connect this to a story of Moses' time in Ethiopia. Others identify her with Zipporah, the Midianite (Exod 2:21), citing a targum identification of 'Cush' with Midian in Hab 3:7. The narrative does not resolve this; the complaint about the wife is the stated occasion, but vv. 2–8 show the real issue is prophetic primacy.</p>",
+        "2": "<p>The actual grievance: 'Has YHWH spoken only through Moses? Has he not spoken through us also?' The challenge is to Moses' exclusive prophetic mediatorial role. Aaron is also a designated priest-prophet (Exod 4:14–16), and Miriam is explicitly called a prophetess (Exod 15:20). Their claim has institutional basis; the narrative frames it as pride rather than valid complaint. The parenthetical 'and YHWH heard' (the last clause of v.2) is an ominous foreshadowing: divine omniscience is invoked immediately after their question.</p>",
+        "3": "<p>The parenthetical remark that Moses was 'more humble/meek than any man on the face of the earth' (<i>ˁanav meˀod</i>) is the only such character attribution in the Torah for Moses. <i>ˁanav</i> (humble, meek) carries connotations of lowliness before God — not weakness but a posture of radical dependence. The verse is syntactically odd as a self-description (if Moses wrote the Pentateuch, this verse poses questions — ancient interpreters noticed this), but it functions narratively to explain why Moses did not defend himself: his meekness precluded self-defense.</p>",
+        "4": "<p>YHWH responds immediately and summons all three — Moses, Aaron, and Miriam — to the tent of meeting. The urgency ('suddenly') of the divine summons signals the seriousness of the challenge. The use of the tent of meeting as the venue for adjudication between prophets mirrors the judicial function of the sanctuary throughout the OT (compare 1 Sam 3:3–14 at Shiloh).</p>",
+        "5": "<p>YHWH descends in a pillar of cloud and stands at the doorway. The theophanic cloud at the doorway replicates the pattern of Exod 33:9–10 (Moses at the tent of meeting). The pillar of cloud as the medium of divine presence is the standard Sinai narrative form and marks this as a direct divine adjudication rather than human arbitration.</p>",
+        "6": "<p>YHWH articulates a hierarchy of prophetic revelation: to ordinary prophets, YHWH speaks in visions or dreams. The dream-oracle (<i>halom</i>) is the standard prophetic medium in the ancient Near East — attested extensively in Mari prophecy texts (18th century BCE), Akkadian dream omens, and Egyptian theophanic dreams (compare Pharaoh's dreams in Gen 41). The vision (<i>marˀeh</i>) is the waking ecstatic mode. Both are legitimate but mediated.</p>",
+        "7": "<p>Moses' status is categorically different: 'faithful in all my house' (<i>neˀeman bˀkhol-beiti</i>) — not 'prophet' but 'servant in my household.' The <i>ˀeved</i> designation combined with 'faithful in all my house' echoes the status of Joseph in Potiphar's and Pharaoh's household (Gen 39:4–5; 41:40–41). Heb 3:2,5 quotes this verse verbatim in the Christological argument: Moses as servant-in-the-house establishes the pattern that Christ fulfills as Son-over-the-house.</p>",
+        "8": "<p>'Mouth to mouth I speak with him, and clearly (<i>marˀeh</i>), not in riddles, and he sees the form of YHWH.' This is the most explicit description of Mosaic prophecy. The 'mouth to mouth' idiom (<i>peh ˀel-peh</i>) is unparalleled in the OT for any other prophet. The 'form' (<i>temunah</i>) of YHWH is carefully calibrated — not the face (which no one sees, Exod 33:20) but the <i>temunah</i>, a contoured shape. The rhetorical question 'Why then were you not afraid to speak against my servant Moses?' implies the challenge to Moses is a challenge to YHWH's own unique communication channel.</p>",
+        "9": "<p>YHWH's anger burns (<i>vayyiḥar ˀaf-YHWH</i>) and he departs. The abrupt divine exit — without pronouncing sentence — leaves the scene charged with unresolved judgment. The cloud lifts and Miriam is discovered leprous. The juxtaposition of YHWH leaving and Miriam's condition being revealed implies that YHWH's anger is the cause even without explicit command.</p>",
+        "10": "<p>Miriam becomes leprous — white as snow (<i>metzaˁat kashaleg</i>). The condition is <i>tsara'at</i>, a term covering a range of skin conditions requiring priestly diagnosis (Lev 13–14). It is not necessarily Hansen's disease (leprosy) but a general category of skin-scale disorder. The condition makes Miriam ritually impure and excluded from the camp — a profound social judgment against the prophetess. Aaron is not similarly afflicted: his priestly role (interceding for Israel) requires his continued functionality.</p>",
+        "11": "<p>Aaron addresses Moses as 'my lord' (<i>ˀadoni</i>) — a sudden reversal from the challenge of v.2. The formula 'do not lay sin on us' (<i>ˀal-naˀ tashet ˁalenu ḥatˀt</i>) is a standard OT request for forgiveness. Aaron's self-description as 'we have acted foolishly' (<i>noˀalnu</i>, from <i>naˀal</i> = to be foolish/irrational) is an acknowledgment that the challenge was irrational given YHWH's direct communication with Moses.</p>",
+        "12": "<p>Aaron's plea uses vivid mortality imagery: 'let her not be like one who is dead, like one who comes out of his mother's womb with his flesh half consumed.' The stillbirth image — a half-formed child — is the most extreme metaphor for incompleteness and divine judgment in the OT. The urgency of Aaron's intercession is conveyed through the grotesque comparison.</p>",
+        "13": "<p>Moses' intercession is minimal but complete: 'O God, please heal her' (<i>ˀel naˀ rˀfaˀ naˀ lah</i>) — five Hebrew words. The brevity is remarkable: Moses, who could argue at length (Exod 32:11–13), intercedes for the sister who just challenged his authority with a single-sentence prayer. This is the <i>ˁanav</i> character of v.3 in action. The use of <i>ˀel</i> (generic 'God') rather than YHWH in this brief cry may be intentional — a raw, unadorned cry.</p>",
+        "14": "<p>YHWH's response invokes social custom: 'If her father had spit in her face, would she not be shamed seven days?' Spitting in the face is an extreme gesture of contempt and public shaming in the ANE (compare Deut 25:9; Job 30:10). YHWH applies the logic of proportionate social shame: Miriam's public challenge of Moses (the Lord's representative) requires a proportionate public consequence — seven days outside the camp, the standard tsara'at isolation period (Lev 13:4–5).</p>",
+        "15": "<p>The entire Israel community waits for Miriam at Hazeroth — they do not move until she returns. Despite her sin, she is not left behind. The community's solidarity with Miriam (waiting the full seven days) and the subsequent journey together preserve her in the community. Her rehabilitation, not just her punishment, is part of the narrative.</p>",
+        "16": "<p>The departure from Hazeroth to the wilderness of Paran positions the camp for the spy mission of ch. 13. The wilderness of Paran is the broader desert region (east of Sinai, west of Edom; compare Gen 21:21, Hagar; 1 Sam 25:1, David). Kadesh-barnea is later associated with this region (Num 13:26). The itinerary note connects the Miriam episode to the imminent crisis of the spy report.</p>",
+    },
+    "13": {
+        "1": "<p>YHWH's command to send spies comes here as divine instruction; Deut 1:22 presents the spy mission as the people's initiative that Moses approved and YHWH permitted. The two accounts are complementary, not contradictory: the people's request was approved by Moses and ratified by YHWH. The diplomatic/military reconnaissance mission is standard ANE practice — Egyptian military campaigns regularly employed advance scouts, and Canaanite city-states maintained intelligence networks.</p>",
+        "2": "<p>The land is described as 'Canaan, which I am giving to the Israelites.' The present participle (<i>noten</i>) emphasizes divine gift in progress — the inheritance is already being transferred even before occupation. The command to send 'one man from each tribe' establishes the representative character of the mission: this is an all-Israel reconnaissance, not a military elite unit.</p>",
+        "3": "<p>The scouts are sent from the wilderness of Paran. The 12 scouts represent the 12 tribes; their names are given in vv. 4–15. All are '<i>nesiˀim</i>' (leaders, chieftains) — not the same individuals as the tribal leaders of Num 1 or Num 7, but senior representatives. The mission's composition signals its importance as a national enterprise.</p>",
+        "4": "<p>Shammua son of Zaccur from Reuben heads the list. The list proceeds roughly in the traditional birth-order arrangement but with some variations. The scouts' names are largely unremarkable historically — none appear in patriarchal genealogies or later tribal heroic traditions except Caleb and Joshua.</p>",
+        "5": "<p>Shaphat son of Hori from Simeon. The twelve-representative structure reflects the standing census-and-tribal organization of Num 1–2. Each tribe has equal voice in the reconnaissance, making the subsequent majority report a collective failure rather than a failure of leadership alone.</p>",
+        "6": "<p>Caleb son of Jephunneh from Judah. Caleb is identified here as a Judahite, but Num 32:12 and Josh 14:6 note he is a 'Kenizzite' by clan — the Kenizzites being a Transjordanian people incorporated into Judah. Caleb's dual identity (incorporated foreigner within Judah's tribe) is thematically significant: the one who trusts YHWH and receives the promised inheritance is himself a descendant of the nations that inhabited the land.</p>",
+        "7": "<p>Igal son of Joseph from Issachar. The tribal order continues without comment; the narrative preserves the full twelve-name list to establish the completeness of the representative body even though only Caleb and Joshua emerge as named actors in the sequel.</p>",
+        "8": "<p>Hoshea son of Nun from Ephraim — Joshua's original name before Moses renames him in v.16. Hoshea (<i>hoshea</i> = salvation, deliverance) shares the same root as Joshua/Yeshua. The pre-renaming usage here is precise historical notation: this is the pre-theophoric form of the name.</p>",
+        "9": "<p>Palti son of Raphu from Benjamin. The Benjaminite scout's name is preserved though he plays no further role. The completeness of the list is a literary device emphasizing the representativeness of the failure: all twelve tribes sent leaders; ten of those leaders failed in faith.</p>",
+        "10": "<p>Gaddiel son of Sodi from Zebulun. Again, no narrative role. The Zebulunite territory in the land (northern Galilee) and its eventual fate are irrelevant to the spy narrative; his inclusion simply completes the twelve.</p>",
+        "11": "<p>Gaddi son of Susi from Manasseh (the tribe of Joseph). The phrase 'the tribe of Joseph, the tribe of Manasseh' is a double designation reflecting Manasseh's status as a half-tribe within the Joseph allocation. Both Manasseh and Ephraim (represented by Hoshea/Joshua) are from Joseph's line.</p>",
+        "12": "<p>Ammiel son of Gemalli from Dan. The Dan tribe's territory would be assigned in the far north and later in the coastal plain; their scout participates in the representative mission without later narrative significance here.</p>",
+        "13": "<p>Sethur son of Michael from Asher. Asher's territory would be the northern coastal region. The scout's inclusion in the list is for narrative completeness.</p>",
+        "14": "<p>Nahbi son of Vophsi from Naphtali. The Naphtalite territory would adjoin Asher in the north. The twelve scouts include all twelve tribal territories of the eventual land allocation, making the report they bring back a report for all twelve tribes.</p>",
+        "15": "<p>Geuel son of Machi from Gad. Gad's eventual territory would be east of the Jordan — they are nonetheless included in the reconnaissance of Canaan west of the Jordan. All twelve tribes participated in the failure of faith, though Gad and Reuben would later negotiate Transjordanian settlement (Num 32).</p>",
+        "16": "<p>Moses renamed Hoshea son of Nun 'Joshua' (<i>Yehoshua</i> = 'YHWH saves/delivers'). The renaming adds the divine name (<i>YHWH</i> = Yah) to the theophoric root <i>hoshea</i>. This parallels Abram → Abraham (Gen 17:5) and Sarai → Sarah (Gen 17:15). Moses encodes in Joshua's name the theological claim that the coming salvation of the land is YHWH's act. In Hebrew, Jesus' name is Yeshua, the shortened form of Yehoshua — the spy mission is being led by a man named 'YHWH saves,' whose name is the name Jesus himself bears.</p>",
+        "17": "<p>Moses sends the scouts from Paran/Kadesh-barnea with specific geographic instructions: go up into the Negev (the dry southern region) and into the highlands. The Negev — from <i>negev</i> meaning 'dry' or 'south' — is the semi-arid region immediately south of the Judean hills. It is the natural route of entry into Canaan from Sinai and corresponds archaeologically to the Beer-sheba valley and its surroundings.</p>",
+        "18": "<p>The reconnaissance agenda includes: land quality (good or bad), city fortification type (open camps or walled cities), population strength (few or many), and soil quality (fat or lean, wooded or bare). This is a standard military intelligence checklist comparable to what Egyptian and Mesopotamian texts describe for advance reconnaissance. The scouts are sent to gather information for a potential military campaign — the question of whether to proceed with conquest is not on the table; the question is how.</p>",
+        "19": "<p>The question of fortification — 'in open camps or in strongholds' (<i>bammaḥanot ˀo bammivaṣarim</i>) — is a key military variable. Bronze Age Canaan was characterized by a system of city-states, each with its own walled city surrounded by satellite villages. Archaeological surveys of Late Bronze Age Canaan reveal exactly this pattern: major cities (Hazor, Megiddo, Lachish, Gezer) with extensive mud-brick or stone fortifications, surrounded by smaller unwalled settlements.</p>",
+        "20": "<p>The command to bring back fruit of the land locates the mission in summer — 'the time of the first ripe grapes' (<i>yemei biqqure ˁanavim</i>). The grape harvest in Canaan typically begins in July–August, though first fruits of different varieties appear from June. The mission timing is specified because it determines what produce can be brought back as evidence of the land's fertility.</p>",
+        "21": "<p>The scouts go from the wilderness of Zin to Rehob near Lebo-hamath. Zin is in the far south (Kadesh-barnea area); Lebo-hamath is the traditional northern boundary of the promised land (Num 34:8; Amos 6:14). The scouts traverse the full extent of Canaan from south to north — a distance of approximately 250 miles — the maximum possible reconnaissance sweep.</p>",
+        "22": "<p>At Hebron the scouts see Ahiman, Sheshai, and Talmai — 'the descendants of Anak.' Hebron (<i>ḥevron</i>) is one of the oldest cities in Canaan; it was built 'seven years before Zoan in Egypt' according to the note here (Zoan = Tanis, a major Egyptian delta city). The Anakim (<i>ˁanaqim</i>) are the giant clan; their names (Ahiman, Sheshai, Talmai) appear again in Josh 15:14 where Caleb drives them out — Caleb claiming the very territory the ten faithless scouts found most terrifying.</p>",
+        "23": "<p>The valley of Eshcol ('Eshcol' = cluster of grapes) yields a branch with a single cluster requiring two men to carry it on a pole, along with pomegranates and figs. The account of a cluster so large it required two men is either narrative hyperbole emphasizing Canaan's fertility or a literal report of an unusually large cluster from the Hebron area (the Hebron hills are still famous for their grapes). Pomegranates and figs complete the traditional trio of Canaan's fruit abundance (see Deut 8:8's seven species).</p>",
+        "24": "<p>The valley is named Eshcol ('cluster') because of the cluster cut there. This is another topographic etiology — the text preserves the name's origin as a memorial to the scouts' finding. The naming practice is consistent with the wider Pentateuchal etiology genre (Beer-sheba = well of seven/oath; Penuel = face of God, etc.).</p>",
+        "25": "<p>The reconnaissance takes 40 days — a round number with sacred resonance: 40 days of flood (Gen 7:12), 40 days of Moses on Sinai (Exod 24:18; 34:28), 40 days of Elijah's journey (1 Kgs 19:8), 40 years in the wilderness (Num 14:33–34). The 40-day/year correspondence in Num 14:34 explicitly links the mission duration to the punishment duration, making the spies' decision temporally load-bearing.</p>",
+        "26": "<p>The scouts return to Paran, to Kadesh, and report to Moses, Aaron, and the whole congregation. Kadesh-barnea is the staging point for the entire wilderness period; it is situated in the northeastern Sinai, identified with ˁAin Qudeis / ˁAin el-Qudeirat. The archaeological evidence at ˁAin el-Qudeirat shows Iron Age occupation but limited Bronze Age remains — consistent with a semi-nomadic encampment rather than a permanent settlement.</p>",
+        "27": "<p>The scouts affirm the land's fertility: 'It flows with milk and honey, and this is its fruit.' The phrase 'flowing with milk and honey' (<i>zavat ḥalav udvash</i>) is the standard Pentateuchal description of Canaan (appears ~20 times in Exod, Lev, Num, Deut). 'Milk and honey' in ANE context represents pastoral wealth (milk = livestock) and agricultural abundance (honey = bee honey or date syrup). It is a stereotyped phrase of land-praise found in analogous form in Egyptian texts describing the Levant.</p>",
+        "28": "<p>'However' (<i>ˀefes</i>) — the pivot word that inverts the positive report. The strong adversative introduces the negative assessment: the people are strong, the cities fortified and very large (<i>gedolot meˀod uveṣurot</i>), and the descendants of Anak are there. The rhetorical structure — positive land assessment followed by adversative catalog of obstacles — is designed to create fear, not a balanced assessment. The scouts' methodology is flawed: they present obstacles without reference to divine promise.</p>",
+        "29": "<p>The hostile occupants are enumerated: Amalekites in the Negev (confirmed by Exod 17:8 and 1 Sam 15); Hittites, Jebusites, Amorites in the highlands; Canaanites by the sea and along the Jordan. Each group corresponds to archaeologically and textually attested Late Bronze Age peoples. The Hittites in Canaan are typically identified with Neo-Hittite remnants or local Canaanites who adopted Hittite cultural markers, since the Hittite empire's center was in Anatolia.</p>",
+        "30": "<p>Caleb silences the congregation before Moses and says, 'Let us go up at once and occupy it, for we are well able to overcome it.' The verb 'we are well able' (<i>yakol nukal lah</i>) is grammatically emphatic — the infinitive absolute construction intensifying the assurance. Caleb's faith is not naivety; he saw the same giants and fortified cities as the others and arrives at the opposite conclusion.</p>",
+        "31": "<p>The majority counters: 'We are not able to go up against the people, for they are stronger than we.' The word 'stronger than we' (<i>ḥazaq mimmennu</i>) could grammatically be translated 'stronger than it (the land)' — an ambiguity ancient commentators noted. If 'than it,' the scouts suggest even YHWH cannot take the land from its current occupants, a more radical theological failure. Most interpreters take it as 'than we,' but the theological issue either way is that YHWH's power is excluded from the calculus.</p>",
+        "32": "<p>The scouts spread a 'bad report' (<i>dibbat haˀaretz</i>) — slander, defamation. <i>Dibbah</i> in the OT carries legal connotations of false report; it is the same word used in Proverbs (Prov 10:18; 25:10). The land itself is accused: 'it is a land that devours its inhabitants.' This contradicts the scouts' own previous observation (v.27) that the land flows with milk and honey — a logical contradiction the narrative allows to stand as evidence of fear-driven distortion.</p>",
+        "33": "<p>The Nephilim (specifically the Anakim as descendants of Nephilim) appear here. The Nephilim are introduced in Gen 6:4 as 'the mighty men of old, men of renown' born of the 'sons of God' and 'daughters of men.' The spies invoke this primeval category to make the Canaanite giants seem supernaturally formidable. 'We seemed to ourselves like grasshoppers, and so we seemed to them.' The simile deliberately abases the spies: they have internalized the enemy's supposed perspective. The grasshopper metaphor for insignificance before rulers is an ANE idiom (compare Isa 40:22, where God sees earth's inhabitants as grasshoppers). The spies' self-assessment contrasts sharply with Caleb and Joshua's faith-assessment (Num 14:9: 'do not fear the people of the land... their protection is removed from them, and the LORD is with us').</p>",
+    },
 }
 
-ORIGINAL = {
-  "6": {
-    "24": "<p><strong>yevarechecha YHWH veyishmerecha yaer YHWH panav eleicha vichuneka yissa YHWH panav eleicha veyasem lecha shalom</strong>: The Aaronic Blessing (Birkat Kohanim) is the oldest liturgical text in continuous use — fragments of it were found on silver amulets from the 7th century BCE (the Ketef Hinnom scrolls, the oldest biblical text discovered). Its three-part structure increases in length: 3 words, 5 words, 7 words, with a crescendo toward <em>shalom</em> (peace/wholeness/well-being). The divine name YHWH appears three times — early Christian interpreters saw this as a Trinitarian hint. The blessing has been recited in Jewish synagogues for over 2,500 years and by Christian ministers at service benedictions, making it one of the most-spoken texts in human history.</p>"
-  },
-  "21": {
-    "8": "<p><strong>veasa lecha saraf veshim oto al nes vehaya kol hanashuch veraah oto vachai</strong>: 'Make a fiery serpent and set it on a pole, and everyone who is bitten, when he sees it, shall live.' The serpent-on-a-pole raises a question: is this a violation of the second commandment (no graven images)? The text suggests: (1) it is the looking in faith, not the object itself, that saves; (2) YHWH appointed the image for a specific purpose as a means of grace. The Greek translation (<em>ophis chalkous</em>, bronze serpent) uses the same word Paul uses in 2 Cor 5:21: God made him who knew no sin to be <em>sin</em> (Gk. <em>hamartia</em>) for us — Christ becomes the thing that kills (sin/the serpent) in order to be the means of salvation for all who look to him.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "1": "<p>Numbers takes its English name from the two censuses (chs. 1 and 26); the Hebrew title is <em>Bemidbar</em> (In the Wilderness), which better captures the book's geographical and theological content. It narrates the wilderness journey from Sinai to the plains of Moab — a journey that should have taken months but became 40 years because of the generation's unbelief at Kadesh-barnea (chs. 13-14). The book is structured around the failure of the first generation (which dies in the wilderness) and the formation of the second generation (which enters Canaan). The typological theme of wilderness-as-testing-ground is developed extensively in the NT: Israel's forty years in the wilderness corresponds to Jesus's forty days of testing (Matt 4:1-11), and Paul makes the wilderness generation's failures into warnings for the church (1 Cor 10:1-13).</p>"
-  },
-  "21": {
-    "4": "<p>The bronze serpent incident (Num 21:4-9) occurs during one of the wilderness generation's recurring cycles of complaint-judgment-intercession-deliverance. The people speak against God and against Moses; YHWH sends fiery serpents as judgment; the people confess sin and Moses intercedes; YHWH provides the bronze serpent as a means of healing. The serpent-image was preserved in Israel and later became an object of idolatry: Hezekiah destroyed it during his reforms (2 Kings 18:4: he broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had burned incense to it). The thing appointed as a healing sign became an idol — illustrating the tendency of every divine gift to be worshiped rather than used. Jesus redeems the image by applying it to himself in John 3:14.</p>"
-  }
-}
-
-CHRIST = {
-  "6": {
-    "24": "<p>A direct revelation: 'The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' The Aaronic blessing is Israel's definitive statement of what divine favor looks like: not an absence of difficulty but the direct presence and face of YHWH turned toward his people in grace. In Christ, the Aaronic blessing receives its ultimate fulfillment: the Father's face shines in the face of Christ (2 Cor 4:6: the light of the knowledge of the glory of God in the face of Jesus Christ); the divine peace (<em>shalom</em>) that the blessing promised is the peace Christ gives (John 14:27: Peace I leave with you; my peace I give to you); the benedictions of Christian worship (2 Cor 13:14; Jude 24-25; Rev 1:4-5) are the new covenant form of the ancient priestly blessing.</p>"
-  },
-  "21": {
-    "8": "<p>A type: 'Set it on a pole, and everyone who is bitten, when he sees it, shall live.' Jesus explicitly applies the bronze serpent typology to himself (John 3:14-15), making it the Bible's own explanation of why Christ must be 'lifted up' on the cross. The structural parallel: Israel was under God's judgment for sin (serpent bites = death sentence) → Moses interceded → YHWH appointed an external means of salvation (look to the serpent) → those who looked in faith lived. The antitype: humanity is under God's judgment for sin → Christ intercedes → the Father appoints the cross as the external means of salvation → those who look in faith to the crucified Christ live forever. The bronze serpent is Numbers' most explicit Christological type, made explicit not by later Christian interpretation but by Jesus himself.</p>"
-  }
-}
 
 def main():
-    e = load_echo('numbers')
-    merge_echo(e, ECHO)
-    save_echo('numbers', e)
+    data = load_comm("mkt-context", "numbers")
+    merge_comm(data, NUMBERS_CONTEXT)
+    save_comm("mkt-context", "numbers", data)
 
-    c = load_comm('mkt-original', 'numbers')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'numbers', c)
 
-    c = load_comm('mkt-context', 'numbers')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'numbers', c)
-
-    c = load_comm('mkt-christ', 'numbers')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'numbers', c)
-
-    print('numbers: all 4 layers written')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

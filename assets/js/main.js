@@ -56,7 +56,8 @@
       { label: '🔍 Explore',               href: _r('search/') },
       { label: '📚 Studies',               href: _r('studies/') },
       { label: '✝ Discipline',             href: _r('discipline/') },
-      { label: '🔬 Original Language Study', href: _r('translation/workshop/') }
+      { label: '🔬 Original Language Study', href: _r('translation/workshop/') },
+      { label: 'ℹ About / AI',               href: _r('about/') }
     ],
     groups: [
       {
@@ -78,7 +79,7 @@
           { label: '🔍 Search',        href: _r('search/') },
           { label: '📑 Topics',        href: _r('search/?tab=topics') },
           { label: '📖 Study Guides',  href: _r('search/?tab=guides') },
-          { label: '📘 Dictionary',    href: _r('search/?tab=dictionary') },
+          { label: '📘 Biblepedia',     href: _r('biblepedia/') },
           { label: '☁ Word Cloud',     href: _r('search/?tab=wordcloud') }
         ]
       },

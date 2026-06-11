@@ -1,129 +1,137 @@
-"""
-Numbers — all four layers.
-Key NT uses: bronze serpent (21), water from rock (20), wilderness wandering as warning,
-Balaam's star oracle (24), Phinehas's zeal, priestly blessing (6:24-26).
-"""
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
+            if v not in existing[ch]: existing[ch][v] = html
 
-ECHO = {
-  "6": {
-    "24": [
-      {"type": "allusion", "target": "2 Cor 13:14", "note": "The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace — the Aaronic blessing (Num 6:24-26) is the OT's most direct benediction of divine favor; Paul's trinitarian benediction in 2 Cor 13:14 echoes its structure and is its new covenant fulfillment"}
-    ]
+# ── Numbers 8–10 | mkt-original ────────────────────────────────────────────
+# Lexical/semantic Hebrew commentary
+
+NEW = {
+  "8": {
+    "1": "<p>The divine speech formula <strong>vayedaber YHWH el-Moshe</strong> opens the section on the menorah. <strong>Vayedaber</strong> (from <em>dabar</em>, H1696, to speak) is the standard legislative introduction; its repetition throughout Leviticus and Numbers structures the entire Sinai revelation as a series of divine addresses.</p>",
+    "2": "<p><strong>Behaalotekha</strong> (<em>be-ha-alotekha</em>, from <em>alah</em>, H5927): &lsquo;when you cause to go up&rsquo; or &lsquo;when you mount.&rsquo; This is the title of the Torah portion. The same root gives <em>&lsquo;olah</em> (H5930), the burnt offering that &lsquo;goes up&rsquo; in smoke to YHWH. The verb is also used for ascending to the sanctuary, going up to battle, and the sun rising. The lamps that &lsquo;go up&rsquo; toward the menorah face (<em>meul penei ha-menorah</em>, &lsquo;toward the face of the lampstand&rsquo;) share their root with the offering that ascends entirely to God.</p>",
+    "3": "<p>Aaron does <strong>ken</strong> (<em>ken</em>, H3651, thus/so): the compliance formula signals perfect obedience. <strong>El-mul penei ha-menorah</strong> = toward the face of the lampstand; <em>penei</em> (construct of <em>panim</em>, H6440) = face. The lamps illuminate &lsquo;toward the face&rsquo; &mdash; the directional language of divine encounter permeates the sanctuary.</p>",
+    "4": "<p><strong>Miqdash</strong> (<em>ha-menorah miqdash</em>): <em>miqdash</em> (H4720) = sanctuary/holy place, from <em>qadash</em> (H6942) = to be holy/set apart. The menorah is described as made according to the pattern (<em>mareh</em>, H4758) that YHWH showed Moses. The pattern-correspondence between the heavenly original and the earthly copy is a recurring concern in the tabernacle construction (Ex 25:9, 40).</p>",
+    "5": "<p>Another <strong>vayedaber YHWH el-Moshe</strong> opens the Levite consecration section. The two-part structure of ch.8 &mdash; menorah (vv.1-4) then Levites (vv.5-26) &mdash; may be intentional: the lampstand provides light for the sanctuary; the Levites provide the human service-structure that maintains it.</p>",
+    "6": "<p><strong>Qach et-ha-Leviyim</strong> = &lsquo;take the Levites&rsquo; (<em>laqach</em>, H3947, to take/bring). <strong>Vetiharta otam</strong> = &lsquo;and purify them&rsquo; (<em>taher</em>, H2891, Piel = to cleanse/purify). The Piel intensification of <em>taher</em> indicates a formal, deliberate purification process.</p>",
+    "7": "<p><strong>Mei chattat</strong> = literally &lsquo;waters of purification offering&rsquo; or &lsquo;sin-water.&rsquo; <em>Chattat</em> (H2403) is the same term used for the sin/purification offering; here applied to the sprinkling water. <strong>Ve-he'eviru ta'ar al-kol-besaram</strong> = &lsquo;let a razor pass over all their flesh&rsquo; (<em>ta'ar</em>, H8593); total body-hair removal signals the Levites&rsquo; complete consecration, analogous to the shaving of the healed skin disease sufferer (Lev 14:8-9).</p>",
+    "8": "<p><strong>Par ben-baqar</strong> = &lsquo;a bull, a son of the herd&rsquo; (<em>par</em>, H6499; <em>baqar</em>, H1241). The &lsquo;son of the herd&rsquo; specifies a young adult male, the most costly sacrificial animal category. <strong>Solet</strong> (<em>solet</em>, H5560) = fine flour for the <em>minchah</em> grain offering accompanying the burnt offering. The dual offering (bull for <em>&lsquo;olah</em>; bull for <em>chattat</em>) mirrors the high priest&rsquo;s consecration (Lev 8:14-21).</p>",
+    "9": "<p>The Levites are brought near (<em>hiqravta</em>, from <em>qarav</em>, H7126, to bring near/approach) before the tent of meeting, then the whole congregation (<em>kol-adat</em>) assembles. The entire community&rsquo;s participation in the Levitical consecration signals that the Levites represent all Israel, not merely the priestly class.</p>",
+    "10": "<p><strong>Samekhu venei-Yisrael et-yedeihem al-ha-Leviyim</strong> = &lsquo;the children of Israel shall lay their hands on the Levites.&rsquo; <em>Samakh</em> (H5564, Qal) = to lean/lay upon. This is the same hand-laying gesture used in sacrifice (Lev 1:4; 3:2) when the offerer identifies with the animal. Israel&rsquo;s hand-laying on the Levites makes the substitution structural and visible: the Levites stand before YHWH <em>as</em> Israel.</p>",
+    "11": "<p><strong>Tenufah</strong> (<em>tenufah</em>, H8573): wave/elevation offering; from <em>nuf</em> (H5130) = to wave, move to and fro. Aaron &lsquo;waves&rsquo; the Levites as a tenufah before YHWH. Applying this term to persons is unique &mdash; it normally denotes portions of animal sacrifice (Lev 7:30). The Levites are formally presented as a human offering from Israel to YHWH.</p>",
+    "12": "<p>The Levites lay hands on the bull&rsquo;s heads: <strong>ve-samekhu ha-Leviyim et-yadeihem al-rosh ha-parim</strong>. The chain of substitution: Israel lays hands on Levites (v.10), Levites lay hands on bulls (v.12) = Israel &rarr; Levites &rarr; bulls. <strong>Kipper al-ha-Leviyim</strong> = &lsquo;make atonement for the Levites&rsquo; (<em>kipper</em>, H3722, Piel = to atone/cover/wipe).</p>",
+    "13": "<p>The Levites stand before Aaron and his sons and are waved (<em>henafta otam tenufah</em>) before YHWH a second time. The repetition of the wave-offering action (vv.11, 13, 15, 21) emphasizes that the Levites&rsquo; status as a human offering to YHWH is permanently established.</p>",
+    "14": "<p><strong>Vehivdaltem et-ha-Leviyim miqerev benei-Yisrael</strong> = &lsquo;you shall separate the Levites from among the children of Israel.&rsquo; <em>Hivdil</em> (from <em>badal</em>, H914, Hiphil) = to separate, distinguish. The same verb separates light from darkness (Gen 1:4), clean from unclean (Lev 20:25), and Israel from the nations. The Levites&rsquo; separation is a microcosm of Israel&rsquo;s own separation.</p>",
+    "15": "<p><strong>Avodah</strong> (<em>avodah</em>, H5656): service, work, labor; from <em>abad</em> (H5647) = to serve/work/worship. The same word covers slave-labor, agricultural work, and liturgical service. <strong>Tahor</strong> (<em>tahor</em>, H2889) = clean/pure: after purification, the Levites are clean and ready for service.</p>",
+    "16": "<p><strong>Netunm netunm hem li</strong> = &lsquo;given, given they are to me.&rsquo; The doubled <em>netun</em> (from <em>natan</em>, H5414 = to give) is emphatic: the Levites are wholly given. <strong>Takhat kol-peter rechem</strong> = &lsquo;in place of all who open the womb&rsquo; (<em>peter</em>, H6363 = firstborn-opener); the Levites substitute for all firstborns of Israel.</p>",
+    "17": "<p><strong>Ki li kol-bechor</strong> = &lsquo;for every firstborn is mine.&rsquo; YHWH&rsquo;s ownership claim on the firstborn is the foundational premise of Levitical theology: the Levites exist as the corporate redemption-substitute for every firstborn Israelite, based on the Exodus night (Ex 13:2). The Levites carry the meaning of the Exodus firstborn-deliverance forward.</p>",
+    "18": "<p><strong>Ettenu et-ha-Leviyim tachat kol-bechor benei-Yisrael</strong> = &lsquo;I give the Levites instead of all firstborns.&rsquo; <em>Tachat</em> (H8478) = under/instead of/in exchange for. The substitution root: lex talionis (<em>nefesh tachat nefesh</em>), the ram instead of Isaac (Gen 22:13), the Levites instead of the firstborns. Substitution is structural throughout the covenant economy.</p>",
+    "19": "<p><strong>Le-khapper al-benei-Yisrael</strong> = &lsquo;to make atonement for the children of Israel.&rsquo; <strong>Negef</strong> (<em>negef</em>, H5063): plague, blow, striking; from <em>nagaf</em> (H5062) = to strike/smite. The Levites&rsquo; mediating atonement-function prevents the <em>negef</em> that would occur if unauthorized persons approached the sanctuary. The same word describes the plagues of Egypt and the deaths from sanctuary transgression (Num 16:47).</p>",
+    "20": "<p>Full compliance formula: Moses, Aaron, and all the congregation did to the Levites <em>ke-kol asher-tzivah YHWH et-Moshe</em> = &lsquo;according to all that YHWH commanded Moses.&rsquo; The full-community compliance notation marks the Levitical consecration as a formally complete covenant act witnessed by the whole assembly.</p>",
+    "21": "<p><strong>Vayitchattau ha-Leviyim va-yechabsu bigdeihem</strong> = &lsquo;and the Levites purified themselves and washed their garments.&rsquo; <em>Chata</em> in the Hithpael (H2398) = to purify oneself; the reflexive form of the purification-offering verb. Washing garments (<em>kibbes</em>, H3526) is a standard purification step (Lev 11:25; 13:6; 14:8-9; 15:5-27).</p>",
+    "22": "<p><strong>Avodatam</strong> = their service (<em>avodah</em>, H5656 + possessive). The Levites now enter their service under Aaron and his sons. The hierarchy is explicit: Levites serve the sanctuary under priestly supervision; priests serve YHWH directly. This two-tier structure reflects the increasing degrees of holiness toward YHWH&rsquo;s presence.</p>",
+    "23": "<p>Another divine speech formula opens the age-limit section. The specificity of the service regulations (ages 25-50) reflects the administrative reality of a tribe numbered for service: not everyone serves at peak capacity at every stage of life, and the liturgical infrastructure requires managed succession.</p>",
+    "24": "<p><strong>Latzava tzava</strong> (from <em>tzava</em>, H6635, H6633) = &lsquo;to do military/conscript service.&rsquo; <em>Tzava</em> means both &lsquo;army/host&rsquo; and the &lsquo;mustering/service&rsquo; of that host. The Levitical service is described as a <em>tzava</em> &mdash; a military conscription into YHWH&rsquo;s service &mdash; from age 25. Israel is organized as YHWH&rsquo;s military camp.</p>",
+    "25": "<p><strong>Yashav me-tzva ha-avodah</strong> = &lsquo;shall cease from the mustering of the service&rsquo; at age 50. <em>Yashav</em> (H3427) = to sit, dwell, retire from; the Levite who has passed his prime &lsquo;sits down&rsquo; from heavy carrying work. This does not mean total retirement &mdash; v.26 specifies ongoing lighter assistance.</p>",
+    "26": "<p><strong>Vesharet</strong> = &lsquo;and he shall minister&rsquo; (<em>sharat</em>, H8334, Piel = to attend, minister; used almost exclusively for priestly/Levitical service and royal attendants). The 50+ Levite may still <em>sharet</em> his brothers but shall not carry heavy loads. <strong>Avodah lo ya'avod</strong> = &lsquo;service he shall not serve&rsquo; &mdash; the cognate absolute emphasizes the absoluteness of the restriction on heavy service.</p>"
   },
-  "14": {
-    "29": [
-      {"type": "allusion", "target": "Heb 3:17", "note": "Your dead bodies shall fall in this wilderness — the wilderness generation's judgment (their corpses fell in the desert) is Hebrews' central warning about unbelief: with whom was God provoked for forty years? Was it not with those who sinned, whose bodies fell in the wilderness? (Heb 3:17)"},
-      {"type": "allusion", "target": "1 Cor 10:5", "note": "God was not pleased with most of them, for they were overthrown in the wilderness — Paul cites the wilderness generation's fate as a warning to the Corinthians; the judgment on the unbelieving exodus generation is the type of what awaits persistent unbelief"}
-    ]
+  "9": {
+    "1": "<p><strong>Bemidbar Sinai</strong> = &lsquo;in the wilderness of Sinai&rsquo; &mdash; the geographical anchor for the Second Passover law. The date formula &lsquo;second year, first month&rsquo; is one of the few precise calendar datings in Numbers, and it places this event a month before the census of ch.1 (second month) &mdash; the book is not in strict chronological order.</p>",
+    "2": "<p><strong>Ha-pesach</strong> (<em>ha-pesach</em>, H6453): Passover, from <em>pasach</em> (H6452) = to pass over/skip; YHWH &lsquo;passed over&rsquo; Israelite houses with blood on the doorposts (Ex 12:13). <strong>Mo'ado</strong> = &lsquo;its appointed time&rsquo; (<em>mo'ed</em>, H4150), from <em>ya'ad</em> (H3259) = to appoint/meet. YHWH&rsquo;s feast calendar is structured around <em>mo'edim</em> (appointed times), making the liturgical calendar an expression of covenant relationship.</p>",
+    "3": "<p><strong>Bein ha-arbayim</strong> = &lsquo;between the evenings&rsquo; = at twilight/dusk; the ambiguous phrase (between sunset and full dark) was debated in later interpretation. <strong>Ke-khol-chuqqotav uke-khol-mishpatav</strong> = &lsquo;according to all its statutes and all its rules&rsquo; (<em>chuqqah</em>, H2708 + <em>mishpat</em>, H4941): statute plus judicial ordinance &mdash; two complementary legal categories covering divine law comprehensively.</p>",
+    "4": "<p>Moses commands the Passover and the Israelites comply. The pattern of divine command &rarr; Mosaic transmission &rarr; Israelite compliance is the literary backbone of Numbers. It creates a rhythm of speech-and-obedience that models the covenant relationship.</p>",
+    "5": "<p>The Passover is kept on the fourteenth day, <strong>bein ha-arbayim</strong> (v.3). The brevity of the compliance report (&lsquo;they did so&rsquo;) against the extended law-giving creates a narrative of swift, complete obedience &mdash; ideal Israel executing YHWH&rsquo;s command without deliberation.</p>",
+    "6": "<p><strong>Temei'im le-nefesh adam</strong> = &lsquo;impure from a human corpse.&rsquo; <em>Tameh</em> (H2931) = impure; <em>nefesh adam</em> (H5315 + H120) = human soul/person; contact with the dead (<em>met</em>, H4191) created the most serious and long-lasting impurity (7-day contamination, Num 19). These men cannot observe the Passover on the appointed day.</p>",
+    "7": "<p>The men ask: <strong>lammah niggara</strong> = &lsquo;why should we be diminished/cut off?&rsquo; (<em>gara'</em>, H1639, Niphal = to be diminished, cut off from). The verb conveys exclusion from the community&rsquo;s covenant act. Their concern is not technical compliance but genuine inclusion in Israel&rsquo;s redemptive identity.</p>",
+    "8": "<p><strong>Imdu va-eshme'ah</strong> = &lsquo;stand, and I will hear what YHWH commands about you.&rsquo; Moses&rsquo;s response models prophetic judicial consultation. <em>Shama'</em> (H8085) = to hear/heed; the same root gives the Shema (&lsquo;Hear, O Israel&rsquo;). Hearing YHWH&rsquo;s word is the primary posture of the covenant mediator.</p>",
+    "9": "<p>YHWH speaks directly with the ruling. The pattern of case-by-case divine legal consultation (Num 9:8; 15:34; 27:5) establishes that biblical law was not a closed, static corpus but developed through real pastoral situations brought before YHWH through Moses.</p>",
+    "10": "<p><strong>Le-nefesh tameh</strong> = impure from a dead person. <strong>Uvo-derekh rechokah</strong> = &lsquo;on a distant road.&rsquo; <em>Rechokah</em> (H7350) = distant, far. The two qualifying conditions &mdash; death-impurity and physical distance &mdash; are the pastoral realities that the Second Passover provision addresses. Both represent involuntary exclusion from the appointed time.</p>",
+    "11": "<p><strong>Ba-chodesh ha-sheni be-arba'ah asar yom</strong> = &lsquo;in the second month, on the fourteenth day.&rsquo; Exactly one month after the regular Passover. <strong>Al-matzot umerorim yokhluhu</strong> = &lsquo;they shall eat it with unleavened bread and bitter herbs.&rsquo; <em>Matzot</em> (H4682) = unleavened bread (haste, affliction); <em>merorim</em> (H4844) = bitter herbs (the bitterness of slavery). The delayed Passover retains all the original elements.</p>",
+    "12": "<p><strong>Etzem lo yishberu vo</strong> = &lsquo;a bone they shall not break in it.&rsquo; <em>Etzem</em> (H6106) = bone; the structural integrity of the lamb is maintained. The Passover-bone law (also Ex 12:46) is cited explicitly as fulfilled in Jesus in John 19:36. <strong>Ke-khol-chuqqat ha-Pesach ya'asu oto</strong> = according to all the statute (<em>chuqqat</em>, H2708) of the Passover.</p>",
+    "13": "<p>The clean person who voluntarily omits the Passover is cut off: <em>nikkrata</em> (from <em>karat</em>, H3772, Niphal = to be cut off). <strong>Karet</strong> is the most severe communal penalty: exclusion from the covenant community. The absence of legitimate exemption (no impurity, no distant journey) makes willful non-observance inexcusable and carries the full consequence.</p>",
+    "14": "<p><strong>Ki ger yagur itkhem</strong> = &lsquo;and if a sojourner sojourns among you.&rsquo; <em>Ger</em> (H1616) = resident alien; <em>gur</em> (H1481) = to dwell as a stranger. The cognate absolute (<em>ger yagur</em>) is emphatic. <strong>Chuqqah achat</strong> = &lsquo;one statute&rsquo; &mdash; the universalizing principle: the same law for all residents. This appears throughout the Holiness Code (Lev 24:22) and foreshadows the gospel&rsquo;s removal of ethnic barriers.</p>",
+    "15": "<p><strong>Ve-yom haqim et-ha-mishkan</strong> = &lsquo;and on the day the tabernacle was erected.&rsquo; <em>Mishkan</em> (H4908) = dwelling/tabernacle, from <em>shakan</em> (H7931) = to dwell, settle. YHWH&rsquo;s <em>shekhinah</em> (dwelling-presence) is linguistically embedded in the tabernacle&rsquo;s name. <strong>Yechasseh ha-anan</strong> = &lsquo;the cloud covered&rsquo; (<em>kisah</em>, H3680, Piel); the cloud both reveals and veils YHWH&rsquo;s presence.</p>",
+    "16": "<p><strong>Ke-en ha-esh</strong> = &lsquo;like the appearance of fire.&rsquo; <em>Mar'eh</em> (H4758) = appearance/vision; <em>esh</em> (H784) = fire. The night-fire and day-cloud are matched to human perception: visible phenomena indicating YHWH&rsquo;s presence without revealing his person. The dual appearance serves visibility across the full 24-hour cycle.</p>",
+    "17": "<p><strong>Uve-he'alot ha-anan</strong> = &lsquo;and when the cloud was taken up&rsquo; (<em>alah</em>, H5927, Niphal = to be lifted; same root as <em>behaalotekha</em>, 8:2). Israel travels at the cloud&rsquo;s rising and camps at its settling. <em>Nasa</em> (H5265) = to set out/break camp; <em>chanah</em> (H2583) = to encamp. YHWH&rsquo;s movement defines the community&rsquo;s movement.</p>",
+    "18": "<p><strong>Al-pi YHWH</strong> = &lsquo;at the mouth of YHWH&rsquo; &mdash; by YHWH&rsquo;s command. <em>Peh</em> (H6310) = mouth; the mouth of YHWH = his word/command. This phrase recurs 9 times in vv.18-23, hammering the point: Israel moves and stops <em>only</em> at YHWH&rsquo;s word. The cloud is the visible form of the divine word.</p>",
+    "19": "<p><strong>Mishmart YHWH</strong> = &lsquo;the charge/guard of YHWH&rsquo; (<em>mishmeret</em>, H4931 = charge, from <em>shamar</em>, H8104 = to keep, guard). When the cloud rests long on the tabernacle, Israel waits. The extended cloud-dwelling tests patience: can Israel wait on YHWH without forcing movement by their own schedule?</p>",
+    "20": "<p>The rhetorical pattern of vv.20-23 lists multiple temporal scenarios (two days, a month, a year) to make the point exhaustive: <em>regardless of duration</em>, Israel follows the cloud. <strong>Beyamim mispar</strong> = &lsquo;for a number of days&rsquo;; <strong>chodesh yamim</strong> = a month of days; <strong>yamim rabbim</strong> = many days &mdash; all governed by the same <em>al-pi YHWH</em> principle.</p>",
+    "21": "<p><strong>Im-hayah ha-anan me-erev ad-boker</strong> = &lsquo;if the cloud was from evening to morning.&rsquo; Even a nighttime lifting triggers departure at dawn. YHWH&rsquo;s timing does not conform to Israel&rsquo;s preferred schedule. <strong>Uvyom uvalayla</strong> = &lsquo;whether by day or by night&rsquo; &mdash; the cloud&rsquo;s signal is authoritative at any hour.</p>",
+    "22": "<p><strong>Shenayim yamim o chodesh o yamim</strong> = &lsquo;two days, or a month, or longer.&rsquo; The escalating temporal series reaches an open-ended &lsquo;yamim&rsquo; (extended time). <strong>Yishkon</strong> = &lsquo;it dwells&rsquo; (<em>shakan</em>, H7931); the same root as <em>mishkan</em>. When the cloud-dwelling extends, Israel&rsquo;s camping extends correspondingly.</p>",
+    "23": "<p><strong>Al-pi YHWH yachanu ve-al-pi YHWH yissa'u</strong> = &lsquo;at the mouth of YHWH they camped and at the mouth of YHWH they set out.&rsquo; The chapter&rsquo;s summary verse: camp/mouth/YHWH // mouth/YHWH/set-out. <strong>Mishmart YHWH shamaru</strong> = &lsquo;the charge of YHWH they kept&rsquo; (cognate absolute: <em>mishmeret</em> + <em>shamar</em>). Israel&rsquo;s wilderness faithfulness is encapsulated here.</p>"
   },
-  "21": {
-    "8": [
-      {"type": "fulfillment", "target": "John 3:14-15", "note": "Make a fiery serpent and set it on a pole and everyone who is bitten, when he sees it, shall live — Jesus explicitly cites the bronze serpent as a type of his own crucifixion: as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life (John 3:14-15); looking to the lifted serpent = believing in the lifted Christ"}
-    ]
-  },
-  "24": {
-    "17": [
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "A star shall come out of Jacob — Balaam's messianic oracle (the star from Jacob) is applied to Christ in Revelation: I am the root and the descendant of David, the bright morning star; Num 24:17 was a significant messianic proof-text in Second Temple Judaism (the Dead Sea Scrolls use it messianically)"}
-    ]
-  },
-  "25": {
-    "11": [
-      {"type": "allusion", "target": "Rom 10:2", "note": "Phinehas son of Eleazar has turned back my wrath by being jealous with my jealousy — Phinehas's zeal for YHWH's honor (executing the Israelite and Midianite woman in their sin) is cited as the model of passionate covenant faithfulness; Paul's description of Israel's zeal for God echoes the Phinehas tradition"}
-    ]
+  "10": {
+    "1": "<p><strong>Vayedaber YHWH el-Moshe</strong> opens the trumpet section. The three consecutive divine-speech openings in ch.8, 9, and 10 reflect the literary structure of the second-year preparation period: consecration of Levites (ch.8), calendar adjustments (ch.9), and march-signaling system (ch.10) are all revealed at Sinai before the departure.</p>",
+    "2": "<p><strong>Chatzotzrot keseph</strong> = &lsquo;silver trumpets.&rsquo; <em>Chatzotzrot</em> (H2689) is a technical term for the straight metal tube trumpets, distinct from <em>shofar</em> (H7782, ram&rsquo;s horn, curved). The <em>chatzotzrot</em> are manufactured objects of precious metal; the <em>shofar</em> is a natural animal product. They serve different functions: <em>chatzotzrot</em> for Levitical and military signaling; <em>shofar</em> for covenant events and eschatological proclamation.</p>",
+    "3": "<p><strong>Teqa'tem</strong> = &lsquo;you shall blow them&rsquo; (<em>taqa'</em>, H8628, to thrust/drive/blow). A single blast (<em>teqi'ah</em>, H8628 cognate noun) assembles the whole congregation at the tent of meeting entrance. The trumpet-blast is both summons and signal of sacred assembly, connecting military and liturgical functions in a single instrument.</p>",
+    "4": "<p><strong>Ve-im-be-achat yitqe'u</strong> = &lsquo;if with one they blow.&rsquo; A single trumpet summons only the <em>nesi'im</em> (H5387) = leaders/princes/lifted-up ones (from <em>nasa'</em>, H5375 = to lift up; a <em>nasi</em> is one elevated/appointed). The single vs. double trumpet blast creates a two-level assembly signal: partial blast for leadership, full blast for whole community.</p>",
+    "5": "<p><strong>Teru'ah</strong> (<em>teru'ah</em>, H8643): alarm/battle cry; from <em>ru'a</em> (H7321) = to shout, raise a war cry. The <em>teru'ah</em> is distinct from the <em>teqi'ah</em> (sustained single blast for assembly): the <em>teru'ah</em> is a series of staccato blasts signaling movement and urgency. The same root gives the <em>teru'ah</em> of the Jubilee (Lev 25:9) and the eschatological <em>yom teru'ah</em> (day of alarm, Ps 150:5; Zeph 1:16).</p>",
+    "6": "<p>The east-side camps march on the first <em>teru'ah</em>; the south-side camps on the second. <strong>Lemas'eihem yitqe'u</strong> = &lsquo;they shall blow the alarm for their marching.&rsquo; <em>Massa</em> (H4550) = journey stage, from <em>nasa'</em> (H5265) = to set out, pull up stakes (literally &lsquo;uproot&rsquo; tent pegs). The march order is encoded acoustically: each community responds to its specific signal.</p>",
+    "7": "<p><strong>Uvehaqqhil et-ha-qahal</strong> = &lsquo;in assembling the assembly.&rsquo; Cognate absolute (<em>haqhil</em> + <em>qahal</em>, H6951): to assemble the assembly. <em>Qahal</em> = congregation/assembly (the word transliterated into Greek as <em>ekklesia</em>/church). <strong>Tiqe'u ve-lo tari'u</strong> = &lsquo;blow but do not alarm&rsquo; &mdash; sustained blast for assembly, not staccato for march. Two different trumpet-calls produce two different congregational responses.</p>",
+    "8": "<p><strong>Benei-Aharon ha-kohanim yitqe'u ba-chatzotzrot</strong> = &lsquo;the sons of Aaron, the priests, shall blow the trumpets.&rsquo; The trumpet-sounding is a priestly monopoly, not a general function. The civil, military, and liturgical functions of community organization are integrated under priestly authority: YHWH speaks through his priests, and the community responds to the priestly signal.</p>",
+    "9": "<p><strong>Ve-nizkartem lifnei YHWH Eloheikhem</strong> = &lsquo;and you shall be remembered before YHWH your God.&rsquo; <em>Zakar</em> (H2142, Niphal = to be remembered); <em>lifnei</em> = before/in the presence of. The battle-alarm has a theological dimension: sounding it &lsquo;remembers&rsquo; Israel before YHWH, bringing them into his saving attention. Divine remembrance in the OT is not passive recollection but active intervention (Gen 8:1: &lsquo;God remembered Noah&rsquo; = God acted).</p>",
+    "10": "<p><strong>Yom simchatkhem</strong> = &lsquo;your day of rejoicing&rsquo; (<em>simchah</em>, H8057); <strong>umoadekhem</strong> = your appointed feasts (<em>mo'ed</em>, H4150); <strong>verashei chodesheikhem</strong> = your new moons. All three are marked by <em>chatzotzrot</em>. The trumpets sound on the same occasions as the <em>mo'edim</em> &mdash; they are the acoustic markers of YHWH&rsquo;s appointed times, making the calendar audible.</p>",
+    "11": "<p><strong>Va-yehi ba-shanah ha-shnit ba-chodesh ha-sheni</strong> = &lsquo;in the second year, in the second month.&rsquo; The precise date marks Israel&rsquo;s departure from Sinai as historically anchored. <strong>Na'alah he-anan</strong> = &lsquo;the cloud lifted up&rsquo; (<em>alah</em>, H5927, again; same root as <em>behaalotekha</em>, ch.8). The cloud that settled on the tabernacle (ch.9) now rises, signaling departure from the covenant mountain.</p>",
+    "12": "<p><strong>Midbar Sinai</strong> to <strong>midbar Paran</strong> = from the Sinai wilderness to the Paran wilderness. <em>Midbar</em> (H4057) = wilderness, from <em>dabar</em> (H1696, to lead/drive/speak): the wilderness is both &lsquo;the led place&rsquo; and &lsquo;the speaking place&rsquo; (where YHWH spoke). The journey from revelation-site to boundary-of-promise begins here.</p>",
+    "13": "<p><strong>Vayisu bari'shonah al-pi YHWH beyad-Moshe</strong> = &lsquo;they set out for the first time at the command of YHWH through the hand of Moses.&rsquo; <em>Al-pi YHWH</em> (at the mouth of YHWH) links back to ch.9; <em>beyad-Moshe</em> (by the hand of Moses) = through Moses&rsquo;s agency. The <em>yad</em> (H3027, hand) of a mediator = the authority delegated through that person.</p>",
+    "14": "<p>The Judah-contingent leads: <strong>Mahaneh benei-Yehudah</strong> = camp of the sons of Judah. <em>Mahaneh</em> (H4264) = camp/army-camp, from <em>chanah</em> (H2583). Judah&rsquo;s primacy in the march order (also in the census, Num 1) reflects the Judah-blessing of Gen 49:8-10 and anticipates the Davidic-Messianic trajectory rooted in Judah&rsquo;s tribe.</p>",
+    "15": "<p><strong>Al-tzvo'o Nachshon ben-Amminadav</strong> = over his host, Nahshon son of Amminadab. The tribal leader names in the march order mirror the census (Num 1) and dedication offerings (Num 7), creating a coherent narrative of wilderness-generation leadership. Nahshon appears in Matthew&rsquo;s genealogy of Jesus (Matt 1:4), linking the march-leader to the Messianic line.</p>",
+    "16": "<p><strong>Netanel ben-Tzuar</strong> over Issachar&rsquo;s host. The name <em>Netanel</em> (H5417) = &lsquo;God has given&rsquo; (from <em>natan</em>, H5414). The tribal leaders&rsquo; names are frequently theophoric, embedding YHWH&rsquo;s activity into the community&rsquo;s naming patterns.</p>",
+    "17": "<p><strong>Veyurad ha-mishkan</strong> = &lsquo;and the tabernacle was taken down.&rsquo; <em>Yarad</em> (H3381) = to go down/descend. The tabernacle &lsquo;descends&rsquo; for transport: the Gershonites carry curtains/coverings and the Merarites carry frames/bases, marching ahead of the sacred objects-bearers so the structure can be re-erected at the next camp before the holy objects arrive.</p>",
+    "18": "<p>The Reuben-contingent marches second. <strong>Mahaneh Reuven</strong> = Reuben&rsquo;s camp. Reuben&rsquo;s second-place position reflects his historic primacy as firstborn (Gen 29:32) combined with his current displacement (Gen 49:3-4). The march order encodes Israel&rsquo;s tribal history.</p>",
+    "19": "<p><strong>Al-tzvo'o Elitzur ben-Shedeur</strong> = Elizur son of Shedeur over Reuben. <em>Elitzur</em> = &lsquo;my God is a rock&rsquo; (from <em>tzur</em>, H6697 = rock). The rock-imagery in Israelite naming reflects the theological centrality of YHWH as refuge and fortress (Ps 18:2; Deut 32:4), the same image Paul develops in 1 Cor 10:4 (&lsquo;that rock was Christ&rsquo;).</p>",
+    "20": "<p><strong>Al-tzvo'o Shelumiel ben-Tzurishaddai</strong> = Shelumiel son of Zurishaddai over Simeon. <em>Shelumiel</em> = &lsquo;God is my peace&rsquo; (from <em>shalom</em>, H7965); <em>Tzurishaddai</em> = &lsquo;my rock is Shaddai&rsquo; (combining <em>tzur</em> and <em>Shaddai</em>, the divine name for the Almighty/Powerful One). Patriarchal naming theology is dense in the tribal leadership list.</p>",
+    "21": "<p><strong>Ha-nosaim et-ha-miqdash</strong> = &lsquo;the bearers of the sanctuary.&rsquo; <em>Miqdash</em> (H4720, holy place). The Kohathites carry the holy objects in the middle of the march column, between the tabernacle-structure carriers and the rear tribes. The sacred objects never lead unhoused; the dwelling is always erected before the holy objects arrive.</p>",
+    "22": "<p>The Ephraim-contingent follows the Kohathites. <strong>Mahaneh benei-Efrayim</strong> = the camp of the sons of Ephraim. Ephraim&rsquo;s place in the third group (vs. Judah leading) reflects the ongoing tension between Judah&rsquo;s scepter-blessing (Gen 49:10) and Ephraim&rsquo;s birthright-blessing (Gen 48:14-20) &mdash; both are honored in the march order.</p>",
+    "23": "<p><strong>Al-tzvo'o Elishama ben-Ammihud</strong> = Elishama son of Ammihud over Ephraim. <em>Elishama</em> (H476) = &lsquo;my God has heard&rsquo; (from <em>shama'</em>, H8085 = to hear). The divine hearing is a recurring theological theme: YHWH hears Israel&rsquo;s cry (Ex 2:24; 3:7), a name-motif embedded in tribal leadership.</p>",
+    "24": "<p><strong>Al-tzvo'o Gamliel ben-Pedahtzur</strong> = Gamaliel son of Pedahzur over Manasseh. <em>Gamliel</em> (H1583) = &lsquo;God has rewarded/dealt bountifully&rsquo;; <em>Pedahtzur</em> = &lsquo;the rock has redeemed&rsquo; (from <em>pada</em>, H6299 = to redeem/ransom + <em>tzur</em>, rock). Redemption (<em>pedut</em>) is embedded in the Manassite leadership name.</p>",
+    "25": "<p><strong>Me'asef le-khol-ha-machanot</strong> = &lsquo;the rear guard for all the camps.&rsquo; <em>Me'asef</em> (from <em>asaph</em>, H622 = to gather/collect); the Dan contingent serves as the &lsquo;gatherer&rsquo; that follows all other camps, ensuring no one is left behind. The military-formation logic gives every tribe a defined role in the community&rsquo;s advance.</p>",
+    "26": "<p><strong>Al-tzvo'o Achiezer ben-Ammishaddai</strong> = Ahiezer son of Ammishaddai over Dan. <em>Achiezer</em> (H295) = &lsquo;my brother is a help&rsquo; (from <em>ach</em>, H251 = brother + <em>ezer</em>, H5828 = help). <em>Ezer</em> is the same word used for Eve as Adam&rsquo;s <em>&lsquo;ezer kenegdo</em> (Gen 2:18) and for YHWH as Israel&rsquo;s &lsquo;help&rsquo; throughout the Psalms.</p>",
+    "27": "<p><strong>Al-tzvo'o Pagi'el ben-Okhran</strong> = Pagiel son of Ocran over Asher. <em>Pagi'el</em> (H6295) = &lsquo;God has encountered/met&rsquo; (from <em>paga'</em>, H6293 = to meet, strike, intercede). The root <em>paga'</em> is used for intercessory prayer in Isaiah 53:12 (&lsquo;he made intercession for the transgressors&rsquo;) &mdash; a striking name for a wilderness leader.</p>",
+    "28": "<p><strong>Eleh mas'ei benei-Yisrael</strong> = &lsquo;these are the marching-stages of the children of Israel.&rsquo; <em>Massa</em> (H4550) = stage/departure; the same word gives the book of Numbers its Hebrew title <em>Bemidbar</em> and the sub-heading <em>Eleh ha-masa'ot</em> (Num 33:1-2). The march is Israel&rsquo;s defining activity &mdash; a people on the move toward YHWH&rsquo;s promise.</p>",
+    "29": "<p><strong>Chotev ben-Re'uel ha-Midyani choten Moshe</strong> = &lsquo;Hobab son of Reuel the Midianite, Moses&rsquo;s father-in-law.&rsquo; The identity question (Ex 2:18 names Re&rsquo;uel; Ex 3:1 names Jethro; Num 10:29 names Hobab as son of Re&rsquo;uel) is a text-critical puzzle. <em>Choten</em> (H2859) = in-law relation. Moses&rsquo;s invitation &mdash; <em>heitavnu lakh</em> (we will do you good, from <em>yatav</em>, H3190) &mdash; frames the invitation in terms of covenant blessing.</p>",
+    "30": "<p>Hobab declines: <strong>lo elekh</strong> = &lsquo;I will not go.&rsquo; The brief dialogue &mdash; invitation (v.29), refusal (v.30), counter-invitation (v.31) &mdash; models the dynamic of drawing reluctant outsiders into covenant blessing. The reason for Hobab&rsquo;s refusal (&lsquo;I will go to my own land and kindred&rsquo;) is legitimate; Moses does not dismiss it but re-argues the case.</p>",
+    "31": "<p><strong>Ki yadanta chanotenu bamidbar</strong> = &lsquo;for you know how we are to camp in the wilderness.&rsquo; <em>Yada'</em> (H3045) = to know (experiential knowledge). <strong>Hayita lanu le-einayim</strong> = &lsquo;you shall be our eyes.&rsquo; <em>Einayim</em> (H5869) = eyes; the desert guide as the community&rsquo;s &lsquo;eyes&rsquo; for terrain and water. Hobab&rsquo;s Midianite knowledge is presented as genuinely needed alongside the cloud&rsquo;s guidance.</p>",
+    "32": "<p>Moses promises Hobab that whatever good YHWH does for Israel, <strong>vehitatavnu lakh</strong> = &lsquo;we will do good to you.&rsquo; The promise of covenant sharing with an outsider models the missional principle: YHWH&rsquo;s blessing flows outward to include those who join his people. The text does not record Hobab&rsquo;s final answer, leaving the invitation open-ended.</p>",
+    "33": "<p><strong>Aron berit-YHWH</strong> = &lsquo;the ark of the covenant of YHWH.&rsquo; <em>Aron</em> (H727) = box/chest; <em>berit</em> (H1285) = covenant. The ark leads three days&rsquo; journey before Israel, seeking out (<em>tur</em>, H8446 = to spy out, reconnoiter) a resting place. <em>Manuach</em> (H4496) = resting place, from <em>nuach</em> (H5117) = to rest; the same root as Noah (<em>Noach</em>). The ark-led march toward rest foreshadows the eschatological rest.</p>",
+    "34": "<p><strong>Va-anan YHWH aleihem yomam</strong> = &lsquo;and the cloud of YHWH was over them by day.&rsquo; The ark leads on the ground (spatial vanguard) while the cloud covers from above (protective canopy). The dual presence &mdash; ahead and above &mdash; models YHWH&rsquo;s comprehensive protection of the community on the march.</p>",
+    "35": "<p><strong>Qumah YHWH veyafutzu oyvekha</strong> = &lsquo;Arise, O YHWH, and let your enemies be scattered.&rsquo; <em>Qum</em> (H6965) = to rise/arise; the divine warrior&rsquo;s advance. <em>Nafatz</em> (H6327, Qal) = to scatter/disperse. Moses&rsquo;s prayer formula, spoken as the ark lifted up, frames the march as a divine military advance. The formula is quoted verbatim in Ps 68:1 and becomes the template for YHWH&rsquo;s warrior-imagery throughout the Psalter.</p>",
+    "36": "<p><strong>Shuvah YHWH rivevot alfei Yisrael</strong> = &lsquo;Return, O YHWH, to the ten thousands of the thousands of Israel.&rsquo; <em>Shuv</em> (H7725) = to return/turn back; the divine warrior returns to rest among his people. <em>Revavah</em> (H7233) = ten thousand; <em>eleph</em> (H505) = thousand/clan. The two-line formula (v.35: arise to scatter; v.36: return to rest) brackets each march as a complete divine military campaign with a beginning and a homecoming.</p>"
   }
 }
 
-ORIGINAL = {
-  "6": {
-    "24": "<p><strong>yevarechecha YHWH veyishmerecha yaer YHWH panav eleicha vichuneka yissa YHWH panav eleicha veyasem lecha shalom</strong>: The Aaronic Blessing (Birkat Kohanim) is the oldest liturgical text in continuous use — fragments of it were found on silver amulets from the 7th century BCE (the Ketef Hinnom scrolls, the oldest biblical text discovered). Its three-part structure increases in length: 3 words, 5 words, 7 words, with a crescendo toward <em>shalom</em> (peace/wholeness/well-being). The divine name YHWH appears three times — early Christian interpreters saw this as a Trinitarian hint. The blessing has been recited in Jewish synagogues for over 2,500 years and by Christian ministers at service benedictions, making it one of the most-spoken texts in human history.</p>"
-  },
-  "21": {
-    "8": "<p><strong>veasa lecha saraf veshim oto al nes vehaya kol hanashuch veraah oto vachai</strong>: 'Make a fiery serpent and set it on a pole, and everyone who is bitten, when he sees it, shall live.' The serpent-on-a-pole raises a question: is this a violation of the second commandment (no graven images)? The text suggests: (1) it is the looking in faith, not the object itself, that saves; (2) YHWH appointed the image for a specific purpose as a means of grace. The Greek translation (<em>ophis chalkous</em>, bronze serpent) uses the same word Paul uses in 2 Cor 5:21: God made him who knew no sin to be <em>sin</em> (Gk. <em>hamartia</em>) for us — Christ becomes the thing that kills (sin/the serpent) in order to be the means of salvation for all who look to him.</p>"
-  }
-}
+existing = load_comm('mkt-original', 'numbers')
+merge_comm(existing, NEW)
+save_comm('mkt-original', 'numbers', existing)
 
-CONTEXT = {
-  "1": {
-    "1": "<p>Numbers takes its English name from the two censuses (chs. 1 and 26); the Hebrew title is <em>Bemidbar</em> (In the Wilderness), which better captures the book's geographical and theological content. It narrates the wilderness journey from Sinai to the plains of Moab — a journey that should have taken months but became 40 years because of the generation's unbelief at Kadesh-barnea (chs. 13-14). The book is structured around the failure of the first generation (which dies in the wilderness) and the formation of the second generation (which enters Canaan). The typological theme of wilderness-as-testing-ground is developed extensively in the NT: Israel's forty years in the wilderness corresponds to Jesus's forty days of testing (Matt 4:1-11), and Paul makes the wilderness generation's failures into warnings for the church (1 Cor 10:1-13).</p>"
-  },
-  "21": {
-    "4": "<p>The bronze serpent incident (Num 21:4-9) occurs during one of the wilderness generation's recurring cycles of complaint-judgment-intercession-deliverance. The people speak against God and against Moses; YHWH sends fiery serpents as judgment; the people confess sin and Moses intercedes; YHWH provides the bronze serpent as a means of healing. The serpent-image was preserved in Israel and later became an object of idolatry: Hezekiah destroyed it during his reforms (2 Kings 18:4: he broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had burned incense to it). The thing appointed as a healing sign became an idol — illustrating the tendency of every divine gift to be worshiped rather than used. Jesus redeems the image by applying it to himself in John 3:14.</p>"
-  }
-}
-
-CHRIST = {
-  "6": {
-    "24": "<p>A direct revelation: 'The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' The Aaronic blessing is Israel's definitive statement of what divine favor looks like: not an absence of difficulty but the direct presence and face of YHWH turned toward his people in grace. In Christ, the Aaronic blessing receives its ultimate fulfillment: the Father's face shines in the face of Christ (2 Cor 4:6: the light of the knowledge of the glory of God in the face of Jesus Christ); the divine peace (<em>shalom</em>) that the blessing promised is the peace Christ gives (John 14:27: Peace I leave with you; my peace I give to you); the benedictions of Christian worship (2 Cor 13:14; Jude 24-25; Rev 1:4-5) are the new covenant form of the ancient priestly blessing.</p>"
-  },
-  "21": {
-    "8": "<p>A type: 'Set it on a pole, and everyone who is bitten, when he sees it, shall live.' Jesus explicitly applies the bronze serpent typology to himself (John 3:14-15), making it the Bible's own explanation of why Christ must be 'lifted up' on the cross. The structural parallel: Israel was under God's judgment for sin (serpent bites = death sentence) → Moses interceded → YHWH appointed an external means of salvation (look to the serpent) → those who looked in faith lived. The antitype: humanity is under God's judgment for sin → Christ intercedes → the Father appoints the cross as the external means of salvation → those who look in faith to the crucified Christ live forever. The bronze serpent is Numbers' most explicit Christological type, made explicit not by later Christian interpretation but by Jesus himself.</p>"
-  }
-}
-
-def main():
-    e = load_echo('numbers')
-    merge_echo(e, ECHO)
-    save_echo('numbers', e)
-
-    c = load_comm('mkt-original', 'numbers')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'numbers', c)
-
-    c = load_comm('mkt-context', 'numbers')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'numbers', c)
-
-    c = load_comm('mkt-christ', 'numbers')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'numbers', c)
-
-    print('numbers: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+# Verify
+il = json.loads((ROOT / 'data' / 'interlinear' / 'numbers.json').read_text())
+data = load_comm('mkt-original', 'numbers')
+all_ok = True
+for ch, expected in [('8', 26), ('9', 23), ('10', 36)]:
+    il_vv = set(il.get(ch, {}).keys())
+    out_vv = set(data.get(ch, {}).keys())
+    missing = il_vv - out_vv
+    if missing:
+        print(f'ch {ch} STILL MISSING: {sorted(missing, key=int)}')
+        all_ok = False
+    else:
+        print(f'ch {ch}: complete ({len(out_vv)} verses)')
+if all_ok:
+    print('All verses present')

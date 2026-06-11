@@ -335,8 +335,8 @@ body.sb-open .site-sidebar {
 }
 .sb-version label { white-space: nowrap; flex-shrink: 0; }
 .sb-version select {
-  background: rgba(0,0,0,0.3);
-  color: #d4c4a0;
+  background: #1c0e05;
+  color: var(--sb-text);
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 4px;
   padding: 2px 5px;
@@ -749,3 +749,27 @@ body.bsw-modal-open {
   white-space: nowrap;
 }
 .hist-back-link:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+/* ── Provenance / source attribution badges ── */
+/* Inline chip shown next to section headers to identify data origin */
+.src-badge {
+  display: inline-block;
+  font: 0.68rem/1.4 var(--font-ui);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 0.4em;
+}
+.src-badge a { color: inherit; text-decoration: underline dotted; }
+.src-badge a:hover { color: var(--color-accent); }
+/* AI-assisted content gets a warm gold tint to distinguish from verbatim external sources */
+.src-badge--ai {
+  border-color: #b8860b;
+  color: #8c6a00;
+  background: #fffbf0;
+}
+[data-theme="dark"] .src-badge { color: var(--color-muted); border-color: var(--color-border); background: transparent; }
+[data-theme="dark"] .src-badge--ai { background: rgba(184,134,11,0.12); color: #c9a030; border-color: #b8860b; }

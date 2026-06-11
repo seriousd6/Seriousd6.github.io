@@ -7,6 +7,20 @@ To add a new looping project, see `working/todo-workflow.md` → "How to Add a L
 
 ---
 
+### Paragraph Structure Data (PARA loop)
+
+*Agent generates `data/paragraphs/{bookId}.json` for all 66 books — paragraph breaks, section types (narrative/poetry/dialogue/list/doxology), and section headings per chapter. Used by the reader's Print Mode to reformat verses into proper literary structure.*
+
+| File | Purpose |
+|---|---|
+| `PARA_AGENT_PROMPT.md` | Paste prompt for each agent session |
+| `PARA_QUEUE.md` | Work queue — 66 books (long books split into ~25-ch rows); claim → complete |
+
+- [ ] **PARA-NT** — Complete all 27 NT books (~27 work units)
+- [ ] **PARA-OT** — Complete all 39 OT books (~57 work units after long-book splits)
+
+---
+
 ### Wide Source Commentary (WS loop)
 
 *Agent writes per-verse synthesis from Calvin, Matthew Henry, Ellicott, JFB, Clarke, Wesley, Barnes for every verse of every book. Priority order: Hebrews → Romans → Galatians → Ephesians → 1 John → NT → OT.*

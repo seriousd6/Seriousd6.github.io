@@ -1,129 +1,80 @@
-"""
-Numbers — all four layers.
-Key NT uses: bronze serpent (21), water from rock (20), wilderness wandering as warning,
-Balaam's star oracle (24), Phinehas's zeal, priestly blessing (6:24-26).
-"""
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-ECHO = {
-  "6": {
-    "24": [
-      {"type": "allusion", "target": "2 Cor 13:14", "note": "The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace — the Aaronic blessing (Num 6:24-26) is the OT's most direct benediction of divine favor; Paul's trinitarian benediction in 2 Cor 13:14 echoes its structure and is its new covenant fulfillment"}
-    ]
-  },
-  "14": {
-    "29": [
-      {"type": "allusion", "target": "Heb 3:17", "note": "Your dead bodies shall fall in this wilderness — the wilderness generation's judgment (their corpses fell in the desert) is Hebrews' central warning about unbelief: with whom was God provoked for forty years? Was it not with those who sinned, whose bodies fell in the wilderness? (Heb 3:17)"},
-      {"type": "allusion", "target": "1 Cor 10:5", "note": "God was not pleased with most of them, for they were overthrown in the wilderness — Paul cites the wilderness generation's fate as a warning to the Corinthians; the judgment on the unbelieving exodus generation is the type of what awaits persistent unbelief"}
-    ]
-  },
-  "21": {
-    "8": [
-      {"type": "fulfillment", "target": "John 3:14-15", "note": "Make a fiery serpent and set it on a pole and everyone who is bitten, when he sees it, shall live — Jesus explicitly cites the bronze serpent as a type of his own crucifixion: as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life (John 3:14-15); looking to the lifted serpent = believing in the lifted Christ"}
-    ]
-  },
-  "24": {
-    "17": [
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "A star shall come out of Jacob — Balaam's messianic oracle (the star from Jacob) is applied to Christ in Revelation: I am the root and the descendant of David, the bright morning star; Num 24:17 was a significant messianic proof-text in Second Temple Judaism (the Dead Sea Scrolls use it messianically)"}
-    ]
-  },
-  "25": {
-    "11": [
-      {"type": "allusion", "target": "Rom 10:2", "note": "Phinehas son of Eleazar has turned back my wrath by being jealous with my jealousy — Phinehas's zeal for YHWH's honor (executing the Israelite and Midianite woman in their sin) is cited as the model of passionate covenant faithfulness; Paul's description of Israel's zeal for God echoes the Phinehas tradition"}
-    ]
-  }
-}
+            if v not in existing[ch]: existing[ch][v] = html
 
 ORIGINAL = {
-  "6": {
-    "24": "<p><strong>yevarechecha YHWH veyishmerecha yaer YHWH panav eleicha vichuneka yissa YHWH panav eleicha veyasem lecha shalom</strong>: The Aaronic Blessing (Birkat Kohanim) is the oldest liturgical text in continuous use — fragments of it were found on silver amulets from the 7th century BCE (the Ketef Hinnom scrolls, the oldest biblical text discovered). Its three-part structure increases in length: 3 words, 5 words, 7 words, with a crescendo toward <em>shalom</em> (peace/wholeness/well-being). The divine name YHWH appears three times — early Christian interpreters saw this as a Trinitarian hint. The blessing has been recited in Jewish synagogues for over 2,500 years and by Christian ministers at service benedictions, making it one of the most-spoken texts in human history.</p>"
-  },
-  "21": {
-    "8": "<p><strong>veasa lecha saraf veshim oto al nes vehaya kol hanashuch veraah oto vachai</strong>: 'Make a fiery serpent and set it on a pole, and everyone who is bitten, when he sees it, shall live.' The serpent-on-a-pole raises a question: is this a violation of the second commandment (no graven images)? The text suggests: (1) it is the looking in faith, not the object itself, that saves; (2) YHWH appointed the image for a specific purpose as a means of grace. The Greek translation (<em>ophis chalkous</em>, bronze serpent) uses the same word Paul uses in 2 Cor 5:21: God made him who knew no sin to be <em>sin</em> (Gk. <em>hamartia</em>) for us — Christ becomes the thing that kills (sin/the serpent) in order to be the means of salvation for all who look to him.</p>"
-  }
+"3": {
+"1": "<p>'These are the generations of Aaron and Moses on the day YHWH spoke with Moses on Mount Sinai.' The phrase <em>eleh toldot</em> (these are the generations/account) echoes the structural formula of Genesis — each major section of the Torah's family history opens with it. Here it introduces not a genealogy in the biological sense but a priestly succession: who stands where in the sacred hierarchy.</p>",
+"2": "<p>Aaron's four sons: Nadab, Abihu, Eleazar, and Ithamar. The order is birth order; Nadab is the firstborn. All four were anointed and ordained as priests in Leviticus 8-9. The list names all four, knowing what the reader of Leviticus already knows: two of the four are dead.</p>",
+"3": "<p>These are the names of Aaron's sons, the anointed priests (<em>hakohanim hameshuchim</em>) whom he ordained (<em>mille yad</em> — filled the hand) to serve. <em>Mille yad</em> is the technical term for priestly ordination — literally 'filling the hand' with the offering portions, an idiom for commissioning. The ordination was real; the deaths that followed were not its negation.</p>",
+"4": "<p>Nadab and Abihu died before YHWH when they offered unauthorized fire (<em>esh zarah</em>) in the wilderness of Sinai; they had no sons. Eleazar and Ithamar served as priests in Aaron's lifetime. The deaths of Nadab and Abihu (Lev 10:1-2) are recalled without elaboration — the fact is stated flatly. Their childlessness matters: the priestly line continues only through Eleazar and Ithamar. The priesthood's future is narrowed by their disobedience.</p>",
+"5": "<p>YHWH commands Moses to bring the tribe of Levi near (<em>haqrev</em>) and present them to Aaron the priest to serve him. The verb <em>qarav</em> (draw near, approach) is the language of sacred approach throughout the Torah — the same word used for bringing offerings to the altar. Levi is brought near to the priest the way offerings are brought near: dedicated, surrendered, placed in sacred service.</p>",
+"6": "<p>'They shall keep his charge (<em>mishmereth</em>) and the charge of the whole congregation before the tent of meeting, to do the service (<em>avodah</em>) of the tabernacle.' <em>Mishmereth</em> (watch/guard/charge) is related to <em>shamar</em> (to keep/guard) — the same word used for Adam's responsibility in the garden (Gen 2:15). Levi guards the sanctuary as Adam was meant to guard Eden.</p>",
+"7": "<p>They shall guard all the furnishings of the tent of meeting and fulfill the obligations of the Israelites, doing the service of the tabernacle. The Levites mediate between the dangerous holiness of the tabernacle and the mass of the Israelite community. Without the Levitical buffer, every Israelite's accidental contact with holy objects would be fatal.</p>",
+"8": "<p>'You shall give the Levites to Aaron and his sons; they are given, given from among the Israelites.' <em>Netunah netunah</em> — 'given, given,' the repeated infinitive absolute expressing complete and inalienable dedication. The Levites are not merely assigned; they are surrendered. The doubled form is emphatic: this giving is irrevocable.</p>",
+"9": "<p>Aaron and his sons shall be responsible for their priesthood; any unauthorized person (<em>zar</em>) who approaches shall be put to death. <em>Zar</em> (stranger/foreigner/unauthorized) is the technical term for anyone outside the appointed role who enters the sacred zone. The death penalty is not punitive arbitrariness — it enforces the principle that holiness handles differently from ordinary reality.</p>",
+"10": "<p>YHWH speaks: 'I myself have taken the Levites from among the Israelites in place of every firstborn who opens the womb among the Israelites; the Levites shall be mine.' The theological foundation of the entire chapter: <em>li hem</em> — 'they are mine.' The Levites are YHWH's personal property, taken to himself. Their service is not a tribal vocation they chose but a divine claim on their existence.</p>",
+"11": "<p>'For every firstborn is mine: on the day I struck every firstborn in Egypt, I consecrated for myself every firstborn in Israel, both man and beast; they shall be mine, I am YHWH.' The firstborn claim roots in the Passover night (Exod 12-13). YHWH passed over Israel's firstborn by striking Egypt's; the spared firstborn became permanently marked as YHWH's own. The Levites now carry that designation substitutionally for all Israel's firstborn sons.</p>",
+"12": "<p>YHWH commands: take a census of the sons of Levi by their father's houses and clans. Every male from a month old and upward (<em>miben-chadesh vama'lah</em>) shall be counted. The month-old threshold differs from the military census (ch1: twenty years and up) — infants are included because this is not a fighting force census but a dedication inventory. Every Levite from earliest infancy belongs to YHWH.</p>",
+"13": "<p>Moses counts them as YHWH commanded. The census is direct obedience to divine instruction — no intermediary, no delay. The precision of the count matters because the Levite total will be compared against the firstborn total in vv.40-51. The numbers must be accurate for the theological exchange to be calculable.</p>",
+"14": "<p>The sons of Levi by their clans: Gershon, Kohath, and Merari. Three clans for three sons of Levi (Gen 46:11). Each clan has distinct responsibilities, distinct positions in the camp, and distinct counts. The three-part structure of Levitical service will organize the rest of the chapter and the detailed assignments of chapter 4.</p>",
+"15": "<p>The Gershonite clans: Libni and Shimei. Gershon's two sons give rise to two clans, both bearing names that become common in later Levitical genealogies. <em>Libni</em> (white/pure) and <em>Shimei</em> (hearing) — the names carry no narrative significance but the genealogy preserves their identity against the anonymizing pressure of large numbers.</p>",
+"16": "<p>The Kohathite clans: Amram, Izhar, Hebron, Uzziel. Four clans from Kohath's four sons. Amram is Moses and Aaron's father — the most prominent Kohathite clan. The Kohathites carry the most sacred objects (ark, altars, lampstand) and are positioned closest to the sanctuary entrance.</p>",
+"17": "<p>The Merarite clans: Mahli and Mushi. Two clans from Merari's two sons. The Merarites carry the structural components — the frames, bars, pillars, and bases of the tabernacle's skeleton. Their carrying duty is physically the heaviest; they receive the most wagons in chapter 7.</p>",
+"18": "<p>The Gershonite count: 7,500 males from a month old and up. The number places Gershon as the second-largest Levitical clan after Kohath. Their camp position is west of the tabernacle; their carrying assignments are the curtains, coverings, and screen at the tabernacle entrance.</p>",
+"19": "<p>The Gershonites camp behind the tabernacle, to the west, under the leadership of Eliasaph son of Lael. The western position places them at the rear of the tabernacle when facing the entrance (east). The arrangement is not accidental: the different Levitical clans surround the tabernacle as the tribes surround the Levitical camps, creating concentric rings of increasing holiness toward the center.</p>",
+"20": "<p>The Gershonite charge (<em>mishmereth</em>): the tabernacle and the tent, its covering, the screen for the entrance of the tent of meeting, the hangings of the court, the screen for the entrance of the court surrounding the tabernacle and the altar, its cords, and all its service. The itemized list is precise and total — every fabric element is accounted for. Nothing is left to improvisation; the responsibility is specific.</p>",
+"21": "<p>The Kohathite count: 8,600 males from a month old and up. The largest of the three Levitical clans. Their position is south of the tabernacle. The Kohathites are responsible for the most dangerous objects — the sacred furniture — and their census reflects the large workforce their duties required.</p>",
+"22": "<p>The Kohathites camp on the south side under Elizaphan son of Uzziel. The southern position places the Kohathites on the side from which the Israelite tribes of Reuben, Simeon, and Gad camp (Num 2:10-16). The Kohathites' proximity to these tribes creates the safeguard: anyone from those tribes trying to approach the tabernacle must pass through the Kohathite buffer zone.</p>",
+"23": "<p>The Kohathite charge: the ark, the table, the lampstand, the altars, the vessels of the sanctuary used in service, the screen, and all its service. These are the most sacred objects — the ones for which the Kohathites carry the most severe restrictions. Numbers 4 will specify the elaborate wrapping procedures required before the Kohathites can carry even these holy objects.</p>",
+"24": "<p>Eleazar son of Aaron is appointed chief over the chiefs of the Levites and has oversight of those who keep the charge of the sanctuary (<em>shomrei mishmereth hakodesh</em>). Eleazar — who will succeed Aaron as high priest (Num 20:26-28) — is already functioning as the administrative head of the entire Levitical system. His position over the Levitical clan chiefs mirrors the high priest's position over all priests.</p>",
+"25": "<p>The Merarite count: 6,200 males from a month old and up. The smallest of the three Levitical clans. Their position is north of the tabernacle under Zuriel son of Abihail. The north is the side from which the Dan, Asher, and Naphtali tribal division camps.</p>",
+"26": "<p>The Merarite charge: the frames of the tabernacle, its bars, pillars, bases, all its utensils, all its service, the pillars of the court surrounding the tabernacle and the altar with their bases, pegs, and cords. The structural skeleton: the wooden framework that gives the tabernacle its shape. Without Merari's careful disassembly, transport, and reassembly, the tabernacle cannot stand.</p>",
+"27": "<p>Moses, Aaron, and his sons camp east of the tabernacle — before the tent of meeting toward the sunrise (<em>mizrachah</em>). The east is the direction of the entrance and the direction of the sunrise — the most prominent and sacred position around the tabernacle. The priestly family guards the entrance itself; no unauthorized approach from the east side is possible without passing them.</p>",
+"28": "<p>'Any outsider who approaches shall be put to death.' The death penalty for unauthorized approach is reiterated with Moses and Aaron's position at the entrance. The priestly family's presence at the gate is enforcement as well as service: they are the last line of defense against inadvertent profanation of the holy.</p>",
+"29": "<p>Total Levites counted: 22,000. The count covers all three clans (7,500 + 8,600 + 6,200 = 22,300, but v39 states 22,000 — the difference has puzzled commentators; the most common explanation is a scribal adjustment or that clan totals were rounded). The number serves the theological purpose of being almost equal to Israel's firstborn count.</p>",
+"30": "<p>YHWH commands a separate census of all Israelite firstborn males from a month old and up, and record their names. The firstborn census runs parallel to the Levite census precisely to enable the exchange. The names must be recorded — this is not statistical abstraction but a ledger of persons, each individually dedicated to YHWH by the Passover claim.</p>",
+"31": "<p>The total of Israelite firstborn males from a month old and up: 22,273. The number is slightly larger than the Levite count (22,000), creating a surplus of 273 firstborn who cannot be covered by the Levitical substitution. The discrepancy is not a problem to paper over but the setup for the redemption provision in vv.44-51.</p>",
+"32": "<p>YHWH declares the exchange: 'I take the Levites from among the Israelites instead of (<em>tachat</em>) every firstborn of the Israelites.' <em>Tachat</em> (in place of, substitute for) is the substitution language used elsewhere in the Torah for the offering in Isaac's place (Gen 22:13). The Levites are not merely similar to the firstborn — they are their substitutes, fulfilling their YHWH-claim by representation.</p>",
+"33": "<p>The Levites are YHWH's: 'For all the firstborn are mine; on the day I struck down all the firstborn in Egypt, I consecrated for myself all the firstborn in Israel, both man and beast; they shall be mine — I am YHWH.' The repeated <em>li hem</em> and the self-identification formula (<em>ani YHWH</em>) anchor the claim: this is not a priestly system innovation but a direct divine possession established at the Passover.</p>",
+"34": "<p>Moses redeems the 273 excess firstborn: each at five shekels, using the sanctuary shekel standard. The five-shekel redemption price will become the standard for firstborn redemption in later Israel (Num 18:16). <em>Pidyon haben</em> — the redemption of the firstborn son — is still practiced in Judaism, paid to a Kohen (descendant of Aaron) at thirty days of a firstborn son's life.</p>",
+"35": "<p>Moses gives the redemption money to Aaron and his sons, as YHWH commanded. The circulation is complete: YHWH claims the firstborn, provides Levitical substitutes, but the 273 for whom no Levite substitute was available must be redeemed with silver. The money goes to the priests — sustaining the priestly household from the firstborn claim.</p>",
+"36": "<p>The chapter closes with the fulfillment formula: 'Moses and Aaron and the whole congregation of Israel did as YHWH commanded Moses and Aaron, so they did.' The obedience is collective and complete — the census, the exchange, the redemption, all executed exactly as commanded. The repetition 'as YHWH commanded' is the compliance receipt for the elaborate provision of the chapter.</p>",
+"37": "<p>The Levitical system established here — census by clan, assigned responsibilities, defined positions, substitutionary role for the firstborn, priests sustained by redemption money — is not provisional or temporary. It is the permanent administrative and theological structure of Israelite worship until the New Testament priesthood of Christ transforms its categories.</p>",
+"38": "<p>The Gershonite clans camp west, responsible for the soft tabernacle coverings. Their number (7,500) and position form a western boundary of Levitical service. The western side faces away from the entrance — the less prominent direction, but still sacred territory requiring Levitical administration.</p>",
+"39": "<p>The Kohathite clans camp south, responsible for the holy furniture and vessels. Their position on the south side, combined with their charge of the ark and altars, makes them the most sensitive of the Levitical clusters. The elaborate wrapping procedures of chapter 4 apply specifically to Kohathite transport, reflecting the extreme holiness of their assigned objects.</p>",
+"40": "<p>The Merarite clans camp north, responsible for the structural frames and hardware. The north-south-west Levitical ring, combined with the priestly family at the east, creates a complete encirclement of the tabernacle by sacred personnel. The Israelite tribal camps lie outside this inner ring, separated from the holiest precincts by the Levitical buffer.</p>",
+"41": "<p>The total Levite count of 22,000 establishes the basis for the firstborn exchange. The text has laid out the three clans, their positions, their charges, and their clan leaders with deliberate precision. Each element of the Levitical system is known, named, and placed — nothing is left to improvisation in the organization of YHWH's sanctuary service.</p>",
+"42": "<p>The surplus calculation: 22,273 firstborn minus 22,000 Levites = 273 unredeemed firstborn who still carry the YHWH-claim. Money redeems them where Levites cannot. The five-shekel-per-person rate standardizes the redemption and makes it calculable: 273 × 5 = 1,365 shekels of silver collected.</p>",
+"43": "<p>The 1,365 shekels go to Aaron and his sons. The priestly household benefits materially from the firstborn system — this is part of the broader provision YHWH makes for the Levites and priests who have no territorial inheritance. Their sustenance comes from the sacred — from tithes, firstfruits, and redemption monies, not from agricultural land.</p>",
+"44": "<p>The firstborn exchange theology: every Israelite family that produces a firstborn son has a YHWH-claim placed on that child from the Passover. The Levite system means that in most cases this claim is satisfied vicariously. For the few not covered, silver serves. The system ensures no one is forgotten in the divine accounting.</p>",
+"45": "<p>YHWH's care in specifying the counting methodology ('from a month old and up'), the age threshold, the clan enumeration, and the redemption mechanism reflects the divine attention to administrative detail. The God who created the cosmos in ordered stages also creates his worship system in ordered tiers. Holiness is not chaos; it is the most carefully ordered reality in existence.</p>",
+"46": "<p>The obedience formula that closes major sections of Numbers: 'Moses did as YHWH commanded him — so he did.' The simplicity of the compliance statement is its own theological weight. The complex provisions of the chapter — census, exchange, redemption, money transfer — are summarized as a single act of obedience. Complexity becomes simplicity when it is executed faithfully.</p>",
+"47": "<p>The Levitical system requires ongoing administration. Each time an Israelite firstborn is born, the system must register the claim and either assign a Levite or collect five shekels. The chapter establishes not just a one-time enumeration but a permanent mechanism — the firstborn claim is continuous, the Levitical substitution is perpetual, and the redemption money is an ongoing priestly income stream.</p>",
+"48": "<p>The camp arrangement finalized in this chapter — Levites in a ring around the tabernacle, priests at the entrance, tribes outside — is not merely logistical. It is a spatial theology: increasing holiness toward the center, graduated access based on sacred role, the divine presence at the core surrounded by layers of dedicated human mediation. The camp is a theology rendered in geography.</p>",
+"49": "<p>The Levite-firstborn exchange also carries an implicit redemption theology. Every Israelite firstborn was under a death claim — YHWH's, exercised through the Passover night's terrible logic. The Levite substitution releases the firstborn back to the family while fulfilling the claim through transfer. The firstborn is ransomed; the Levite serves in his place. One dedicated life stands in for another.</p>",
+"50": "<p>Eleazar's position as chief over the clan chiefs (v24) and Aaron's position at the tabernacle entrance (v27) establish the priestly hierarchy that will govern Israel's worship for the entire period of the tabernacle and temple. The structure has a head (Aaron, later the high priest), executive (Eleazar), and three departmental clans. The hierarchy serves the holiness of the sanctuary, not the status of the individuals within it.</p>",
+"51": "<p>The chapter's final statement returns to YHWH's claim: 'I have taken the Levites instead of all the firstborn of Israel, and I have given the Levites as a gift to Aaron and his sons from among the Israelites, to do the service of the Israelites at the tent of meeting and to make atonement (<em>lekhaper</em>) for the Israelites.' <em>Lekhaper</em> — to atone, to cover — is the goal of the entire Levitical arrangement: not merely efficient management of a worship system, but ongoing atonement for the people of God before the holy presence of YHWH.</p>"
+}
 }
 
-CONTEXT = {
-  "1": {
-    "1": "<p>Numbers takes its English name from the two censuses (chs. 1 and 26); the Hebrew title is <em>Bemidbar</em> (In the Wilderness), which better captures the book's geographical and theological content. It narrates the wilderness journey from Sinai to the plains of Moab — a journey that should have taken months but became 40 years because of the generation's unbelief at Kadesh-barnea (chs. 13-14). The book is structured around the failure of the first generation (which dies in the wilderness) and the formation of the second generation (which enters Canaan). The typological theme of wilderness-as-testing-ground is developed extensively in the NT: Israel's forty years in the wilderness corresponds to Jesus's forty days of testing (Matt 4:1-11), and Paul makes the wilderness generation's failures into warnings for the church (1 Cor 10:1-13).</p>"
-  },
-  "21": {
-    "4": "<p>The bronze serpent incident (Num 21:4-9) occurs during one of the wilderness generation's recurring cycles of complaint-judgment-intercession-deliverance. The people speak against God and against Moses; YHWH sends fiery serpents as judgment; the people confess sin and Moses intercedes; YHWH provides the bronze serpent as a means of healing. The serpent-image was preserved in Israel and later became an object of idolatry: Hezekiah destroyed it during his reforms (2 Kings 18:4: he broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had burned incense to it). The thing appointed as a healing sign became an idol — illustrating the tendency of every divine gift to be worshiped rather than used. Jesus redeems the image by applying it to himself in John 3:14.</p>"
-  }
-}
-
-CHRIST = {
-  "6": {
-    "24": "<p>A direct revelation: 'The LORD bless you and keep you; the LORD make his face shine on you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' The Aaronic blessing is Israel's definitive statement of what divine favor looks like: not an absence of difficulty but the direct presence and face of YHWH turned toward his people in grace. In Christ, the Aaronic blessing receives its ultimate fulfillment: the Father's face shines in the face of Christ (2 Cor 4:6: the light of the knowledge of the glory of God in the face of Jesus Christ); the divine peace (<em>shalom</em>) that the blessing promised is the peace Christ gives (John 14:27: Peace I leave with you; my peace I give to you); the benedictions of Christian worship (2 Cor 13:14; Jude 24-25; Rev 1:4-5) are the new covenant form of the ancient priestly blessing.</p>"
-  },
-  "21": {
-    "8": "<p>A type: 'Set it on a pole, and everyone who is bitten, when he sees it, shall live.' Jesus explicitly applies the bronze serpent typology to himself (John 3:14-15), making it the Bible's own explanation of why Christ must be 'lifted up' on the cross. The structural parallel: Israel was under God's judgment for sin (serpent bites = death sentence) → Moses interceded → YHWH appointed an external means of salvation (look to the serpent) → those who looked in faith lived. The antitype: humanity is under God's judgment for sin → Christ intercedes → the Father appoints the cross as the external means of salvation → those who look in faith to the crucified Christ live forever. The bronze serpent is Numbers' most explicit Christological type, made explicit not by later Christian interpretation but by Jesus himself.</p>"
-  }
-}
-
-def main():
-    e = load_echo('numbers')
-    merge_echo(e, ECHO)
-    save_echo('numbers', e)
-
-    c = load_comm('mkt-original', 'numbers')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'numbers', c)
-
-    c = load_comm('mkt-context', 'numbers')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'numbers', c)
-
-    c = load_comm('mkt-christ', 'numbers')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'numbers', c)
-
-    print('numbers: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+comm = load_comm('mkt-original', 'numbers')
+merge_comm(comm, ORIGINAL)
+save_comm('mkt-original', 'numbers', comm)
+print('Numbers 3 mkt-original written.')

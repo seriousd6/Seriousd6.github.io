@@ -56,6 +56,44 @@ ECHO = {
       {"type": "allusion", "target": "Heb 9:14", "note": "He shall lay his hand on the head of the burnt offering and it shall be accepted for him to make atonement — the laying of hands transfers the offerer's identity to the animal; this identification mechanism is the type of Christ's substitution: he bore our sins in his body on the tree (1 Pet 2:24)"}
     ]
   },
+  "8": {
+    "12": [
+      {"type": "allusion", "target": "Heb 1:9", "note": "Moses poured the anointing oil on Aaron's head and anointed him to consecrate him — the anointing of Aaron as high priest is the type of the messianic anointing; Heb 1:9 quotes Ps 45:7: God has anointed you with the oil of gladness beyond your companions, applying it to the Son; the title Messiah/Christ means Anointed One, pointing to the ultimate anointed high priest and king"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Heb 7:27", "note": "The bull of the sin offering for Aaron's own sins at his ordination — Aaron must first offer for his own sins before ministering for others (see v. 14-17); Heb 7:27 explicitly contrasts this with Christ: unlike those high priests, he has no need to offer sacrifices daily, first for his own sins and then for those of the people, since he did this once for all when he offered up himself"}
+    ],
+    "22": [
+      {"type": "allusion", "target": "Heb 9:14", "note": "The blood of the ordination ram applied to Aaron's right ear, right thumb, and right big toe (vv. 22-24) — blood applied to the extremities of the body consecrates the whole man for priestly service; Heb 9:14 applies the blood-consecration principle to Christ's blood which purifies our conscience from dead works to serve the living God; ordination by blood is the type of believers' consecration through Christ's atoning blood"},
+      {"type": "allusion", "target": "Heb 10:22", "note": "The sprinkling of Aaron's body with blood at ordination — the entire person of the priest is cleansed and consecrated by blood; Heb 10:22 calls believers to draw near with hearts sprinkled clean from an evil conscience, applying the ordination blood-sprinkling to new covenant access for all believers through Christ's blood"}
+    ],
+    "30": [
+      {"type": "allusion", "target": "Heb 9:21", "note": "Moses sprinkled Aaron, his sons, and their garments with the anointing oil and the blood of the sacrifice — the sprinkling with blood consecrates both the priests and the objects of their ministry; Heb 9:21 notes that in the same way Moses sprinkled the tent and all the vessels used in worship with blood, establishing the pattern that consecration by blood applies to the entire sacrificial system and all its instruments"}
+    ]
+  },
+  "9": {
+    "7": [
+      {"type": "allusion", "target": "Heb 7:27", "note": "Draw near to the altar and offer your sin offering and your burnt offering and make atonement for yourself and for the people — Aaron's inaugural service requires him to offer first for himself, then for the people; Heb 7:27 uses this pattern to establish Christ's superiority: he has no need to offer for his own sins first; his single self-offering is sufficient for all the people permanently"}
+    ],
+    "22": [
+      {"type": "allusion", "target": "Luke 24:50", "note": "Aaron lifted his hands toward the people and blessed them — the high-priestly blessing is one of the great priestly acts; Luke 24:50 describes Jesus's ascension scene: he led his disciples out to Bethany, and lifting up his hands he blessed them; the risen Christ's departure blessing enacts the high-priestly benediction of the new covenant, with the blessing accompanying his departure rather than a return from a sanctuary"}
+    ],
+    "24": [
+      {"type": "allusion", "target": "Heb 12:29", "note": "Fire came out from before YHWH and consumed the burnt offering and the fat pieces on the altar; and when all the people saw it they shouted and fell on their faces — YHWH's accepting the inaugural sacrifice with consuming fire demonstrates his presence and approval; Heb 12:29 cites Deut 4:24 but draws on the same consuming-fire tradition: our God is a consuming fire, warning that approach to the living God demands reverence and cannot be casual or unauthorized"}
+    ]
+  },
+  "10": {
+    "1": [
+      {"type": "allusion", "target": "Heb 12:28", "note": "Nadab and Abihu offered unauthorized fire before YHWH which he had not commanded them — and fire came out from before YHWH and consumed them; the destruction of two priests for unauthorized worship is the OT's starkest demonstration that acceptable worship is defined by God's command, not human initiative; Heb 12:28-29 draws the consequence for new covenant worship: let us offer God acceptable worship with reverence and awe, for our God is a consuming fire — the holy God who consumed Nadab and Abihu is the same God Christians approach through Christ"},
+      {"type": "allusion", "target": "1 Cor 3:17", "note": "YHWH's fire consuming the two priests for profaning his sanctuary — the violation of the sacred space results in death; Paul warns: if anyone destroys God's temple, God will destroy him, for God's temple is holy, and you are that temple (1 Cor 3:17); the principle from the Nadab and Abihu incident extends to the new covenant community: the holiness of the divine dwelling demands reverence"}
+    ],
+    "3": [
+      {"type": "allusion", "target": "1 Pet 3:15", "note": "This is what YHWH has said: Among those who are near me I will be sanctified — the divine announcement after the destruction of Nadab and Abihu; those who serve closest to YHWH must hold him most holy; 1 Pet 3:15 applies the principle to all believers: sanctify Christ as Lord in your hearts — the entire community of new covenant priests is called to the same holiness-before-God that the inner circle of Aaronic priests was required to maintain"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Heb 5:14", "note": "To distinguish between the holy and the common, and between the unclean and the clean — the priests' duty to maintain and teach the distinctions between holy/common and clean/unclean (v. 10-11); Heb 5:14 applies this discernment function to maturity in Christ: solid food is for the mature, who by constant practice have trained themselves to distinguish good from evil; the priestly art of discrimination between holy and common becomes the Christian art of moral and spiritual discernment"}
+    ]
+  },
   "16": {
     "2": [
       {"type": "fulfillment", "target": "Heb 9:7", "note": "But into the second tent only the high priest goes, and only once a year, and not without blood — the structure of Yom Kippur (Lev 16) is Hebrews' central OT text for demonstrating that the Levitical system was designed to be temporary and pointing forward to a greater reality: Christ enters the true holy of holies once for all by his own blood"}

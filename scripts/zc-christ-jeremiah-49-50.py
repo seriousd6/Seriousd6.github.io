@@ -1,45 +1,33 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Christ Commentary — Jeremiah chapters 49–50
+Run: python3 scripts/zc-christ-jeremiah-49-50.py
+
+Key decisions:
+- Ch 49: Oracles Against Nations — Ammon, Edom, Damascus, Kedar, Elam
+- Ch 50: Extended Babylon oracle; Babylon as anti-God civilization type throughout
+- Edom connected to Romans 9 (Jacob/Esau) and general pride/humility theme
+- Babylon connected to Rev 17-18 as eschatological typological fulfillment
+- OAN genre: divine sovereignty over all nations is the christological hinge —
+  the one sovereign over the nations is identified in NT as Christ (Rev 19:16; Phil 2:10)
+- Restoration promises within OAN oracles (Ammon v6, Elam v39) treated as types
+  of Gentile inclusion in the new covenant
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +37,103 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"49": {
+"1": "<p>The oracle against <strong>Ammon</strong> opens with YHWH's challenge: <strong>Has Israel no sons? Has he no heir? Why then has Milcom dispossessed Gad?</strong> The territorial claim of the Ammonites against Israel's tribes is read as a challenge to YHWH's covenant allocation of the land. The broader christological theme is that the nations' claims to possess what belongs to YHWH's people will ultimately be reversed: Romans 4:13 promises that Abraham and his offspring would inherit the world — a promise fulfilled in Christ's heirs who are &quot;heirs according to promise&quot; (Gal 3:29).</p>",
+"2": "<p>YHWH's declaration that <strong>the days are coming when I will make the battle cry heard against Rabbah of the Ammonites</strong> — the judgment on the capital city of the nation that dispossessed Israel — establishes the divine reversal of unjust possession. The theme of divine reversal of unjust power runs throughout the NT: the Magnificat (Luke 1:51-53) celebrates the God who &quot;scatters the proud... brings down the mighty from their thrones... lifts up the humble.&quot; Christ himself is the agent of this reversal — his cross overturns every claim of power built on oppression.</p>",
+"3": "<p><strong>Heshbon wails and Ai cries out; the daughters of Rabbah wail, clothed in sackcloth</strong> — the image of mourning spreading through the cities that benefited from unjust power. The sackcloth mourning that follows the fall of unjust cities is the image of repentance that the gospel calls for before the day of judgment: Jesus cites Tyre, Sidon, and Sodom (Matt 11:21-22) as cities that would have repented in sackcloth if they had seen his miracles. The mourning that comes too late after judgment is the negative version of the timely repentance the gospel urgently invites.</p>",
+"4": "<p>Ammon's proud self-confidence — <strong>why do you boast in your valleys? Your valley flows, O faithless daughter, who trusted in her treasures saying: who will come against me?</strong> — is the pride of security in material wealth and geographic advantage. The NT identifies this as the core spiritual error: the rich fool who says &quot;eat, drink, be merry&quot; (Luke 12:19); Laodicea who says &quot;I am rich... and need nothing&quot; (Rev 3:17). Against this, Christ says: &quot;You do not know that you are wretched, pitiable, poor, blind, and naked.&quot;</p>",
+"5": "<p>The judgment — <strong>I will bring terror upon you from all your neighbors, and you will be driven out every man straight before him, with no one to gather the fugitives</strong> — describes the complete dispersal of Ammon's population. The image of scattered fugitives with no one to gather contrasts with Christ's mission: &quot;the Son of Man came to seek and to save the lost&quot; (Luke 19:10); &quot;I have other sheep not of this fold; I must bring them also&quot; (John 10:16). The scattering of judgment and the gathering of redemption are the two poles of the gospel's eschatological movement.</p>",
+"6": "<p>The surprising restoration promise — <strong>but afterward I will restore the fortunes of the Ammonites</strong> — is embedded within a judgment oracle. This is the OAN pattern that the NT reads as the hope of Gentile inclusion. Paul's argument in Romans 11:11-15 is structurally identical: Israel's stumbling brought salvation to the Gentiles; the Gentiles' reception leads back to Israel's restoration. The God who restores even Ammon's fortunes is the God whose mercy finally encompasses all nations — the theological basis for the mission to the Gentiles.</p>",
+"7": "<p>The oracle against <strong>Edom</strong> opens with a challenge to Edom's famous wisdom: <strong>Is there no longer wisdom in Teman? Has counsel perished from the prudent? Has their wisdom vanished?</strong> Paul quotes Isaiah 29:14 in 1 Corinthians 1:19 (&quot;I will destroy the wisdom of the wise&quot;) in the context of arguing that Christ crucified is foolishness to Greeks but power and wisdom of God to those who are being saved. The Edomite wisdom tradition that Jeremiah calls into question is the type of all human wisdom that the cross overturns.</p>",
+"8": "<p>The command to <strong>flee, turn back, dwell in the depths, O inhabitants of Dedan</strong> — the flight from the coming judgment on Edom — points to the day when no human wisdom or geographic retreat provides safety. The NT applies the same futility to flight from divine judgment: &quot;they called to the mountains and rocks, fall on us and hide us from the face of him who is seated on the throne&quot; (Rev 6:16). Against this, the gospel offers a different kind of hiding — not from Christ but in Christ (Col 3:3).</p>",
+"9": "<p>The completeness of Edom's judgment — <strong>if grape gatherers came to you, would they not leave gleanings? If thieves came by night, would they not destroy only enough for themselves?</strong> — establishes that the divine judgment on Edom is more thorough than any human enemy would be. The completeness of divine judgment is a consistent NT theme: Jesus speaks of the body and soul both being destroyed in Gehenna (Matt 10:28). The thoroughness of the judgment underlines why the gospel's rescue must be equally thorough — not partial reform but total redemption.</p>",
+"10": "<p>YHWH's personal execution of judgment — <strong>but I have stripped Esau bare, I have uncovered his hiding places, and he is not able to conceal himself</strong> — is the complete exposure of Edom before YHWH. The uncovering of every hiding place is the NT image of eschatological accountability: &quot;nothing is hidden that will not be made manifest, nor is anything secret that will not be known&quot; (Luke 8:17; cf. 1 Cor 4:5). Christ is the one before whom everything is laid bare (Heb 4:13), and whose judgment is therefore both more penetrating and, for those in him, more completely vindicating.</p>",
+"11": "<p>The promise within judgment — <strong>leave your fatherless children; I will keep them alive; and let your widows trust in me</strong> — is the divine provision for the most vulnerable even in the context of national judgment. James 1:27 (&quot;religion that is pure and undefiled before God is this: to visit orphans and widows in their affliction&quot;) places the care of orphans and widows at the heart of authentic covenant life. Christ's care for widows (Luke 7:11-15; 21:1-4) and his provision for his mother from the cross (John 19:26-27) embody this divine commitment.</p>",
+"12": "<p>The logic of judgment's inevitability — <strong>for those who did not deserve to drink the cup will certainly drink it, and you are the one who will certainly go unpunished?</strong> — establishes that if even the less culpable must face judgment, certainly Edom cannot escape. The &quot;cup of judgment&quot; image runs throughout the OT prophets into the NT: Jesus in Gethsemane prays &quot;let this cup pass from me&quot; (Matt 26:39) — the cup of divine wrath. He drinks it voluntarily so that those who trust in him do not have to drink it. The cup no innocent person should have to drink, Christ drank in our place.</p>",
+"13": "<p>The oath — <strong>I have sworn by myself that Bozrah will become a horror, a taunt, a waste, and a curse, and all its cities shall be perpetual wastes</strong> — is the divine self-oath that cannot be revoked. The divine swearing by himself (because there is no higher authority) underlies the NT's confidence in God's promises: Hebrews 6:13-18 uses this very logic — God swore by himself to Abraham, and the two unchangeable things (his promise and his oath) provide strong encouragement to the heirs of the promise. The divine self-oath of judgment mirrors the divine self-oath of salvation.</p>",
+"14": "<p>The herald sent among the nations — <strong>I have heard a message from YHWH, and an envoy has been sent among the nations: gather yourselves against her and rise up for battle</strong> — is the divine mobilization of the nations for judgment. The NT presents Christ as the one who receives authority over all nations (Matt 28:18; Rev 19:15-16). The divine herald who mobilizes the nations for judgment in Jeremiah becomes the apostolic proclamation that mobilizes the nations for repentance — the same divine authority deployed for redemption rather than destruction.</p>",
+"15": "<p>YHWH's word — <strong>I will make you small among the nations, despised among mankind</strong> — addresses Edom's pride with the promise of humiliation. The NT consistently identifies the humbling of the proud as the precondition for receiving grace: &quot;God opposes the proud but gives grace to the humble&quot; (Jas 4:6; 1 Pet 5:5, both citing Prov 3:34). Christ's incarnation itself is the divine model of voluntary humiliation (Phil 2:6-8): he who could claim greatness became small, so that the small might be made great.</p>",
+"16": "<p>The diagnosis of Edom's fall — <strong>the horror you inspire has deceived you, and the pride of your heart, you who live in the clefts of the rock</strong> — identifies pride as the root cause. <em>Zaron</em> (pride, presumption) is the sin that the OT prophets consistently identify as the root of national and personal catastrophe. Jesus's Sermon on the Mount opens with &quot;blessed are the poor in spirit&quot; (Matt 5:3) — the exact antithesis of Edomite pride. The kingdom of God belongs to those who have made no claim on it, not those who nest in the heights.</p>",
+"17": "<p>Edom becoming <strong>a horror; everyone who passes by will be appalled and will hiss because of all her disasters</strong> — the image of a city so thoroughly destroyed that it becomes a byword. Jesus applies a similar image to Jerusalem (Matt 24:2; Luke 19:44) when prophesying its destruction in AD 70. The pattern of the city that rejected its prophets becoming a horror is the judgment-form of &quot;the stone the builders rejected has become the cornerstone&quot; (Matt 21:42). Rejection of the divine word leads to the very desolation the word warned about.</p>",
+"18": "<p>The comparison — <strong>as when Sodom and Gomorrah and their neighbor cities were overthrown, no man shall dwell there, no son of man shall sojourn there</strong> — invokes the archetype of divine judgment. Jesus uses the same comparison for the judgment on cities that rejected his disciples (Matt 10:15; 11:23-24): Sodom's fate will be more bearable on the day of judgment than the fate of those who heard the gospel and refused it. The Sodom-comparison throughout Scripture calibrates the severity of rejection of the divine word.</p>",
+"19": "<p>YHWH coming <strong>like a lion from the thicket of the Jordan against a sheepfold</strong> — the divine judgment described as a predator's attack — is an image the NT applies christologically to the Lion of Judah. Revelation 5:5: &quot;the Lion of the tribe of Judah, the Root of David, has conquered.&quot; The lion who attacks in judgment in Jeremiah becomes the Lion who conquers on behalf of his people in Revelation. The same divine ferocity that executes judgment on the nations is the ferocity that overcomes the powers of sin, death, and the devil.</p>",
+"20": "<p>The rhetorical appeal — <strong>hear the counsel of YHWH against Edom and his purposes that he has formed against Teman: surely the little ones of their flock will be dragged away</strong> — frames the judgment as the execution of the divine counsel formed before the event. Ephesians 1:11 speaks of &quot;the plan of him who works all things according to the counsel of his will.&quot; The &quot;counsel&quot; (<em>ʿetsah</em>) of YHWH that governs the nations is the same purposeful will that the NT identifies as the plan centered on Christ — encompassing both judgment and redemption in a single divine economy.</p>",
+"21": "<p>The seismic imagery — <strong>at the sound of their fall the earth shall tremble; the sound of their cry shall be heard at the Red Sea</strong> — frames Edom's judgment as a cosmic event. The Red Sea reference invokes the Exodus miracle as the measure of divine power. Peter's Pentecost sermon (Acts 2:19-20) applies cosmic disturbance imagery to the eschatological judgment. The shaking of creation at Christ's crucifixion (Matt 27:51-54) and at his return (Heb 12:26-27) are the NT fulfillments of this pattern: the earth trembles when YHWH acts decisively in history.</p>",
+"22": "<p>YHWH <strong>swooping down like an eagle spreading its wings over Bozrah</strong> — the divine raptor imagery — is the posture of invincible judgment from above. Deuteronomy 32:11 uses the eagle image positively for divine care: &quot;like an eagle that stirs up its nest, that flutters over its young.&quot; The same image applies in both directions in Scripture. Christ uses it: &quot;Wherever the corpse is, there the vultures will gather&quot; (Matt 24:28) — the coming of the Son of Man for judgment is as certain and swift as the eagle finding its prey. The divine eagle both protects the redeemed and judges the wicked.</p>",
+"23": "<p>The oracle against <strong>Damascus</strong> — <strong>Hamath and Arpad are put to shame, for they have heard bad news; they are faint-hearted; there is sorrow by the sea, it cannot be quiet</strong> — describes the paralysis of the nations when they hear of divine judgment on their neighbors. The spreading of dread at the news of divine judgment is the negative form of the spreading of the gospel: &quot;how beautiful are the feet of those who preach the good news&quot; (Rom 10:15, citing Isa 52:7). Both the news of judgment and the news of salvation travel through human messengers; both have cosmic implications.</p>",
+"24": "<p><strong>Damascus has become feeble, she has turned to flee, and panic seized her; anguish and sorrow have taken hold of her, as of a woman in labor</strong> — the &quot;woman in labor&quot; (<em>ḥevel yoledah</em>) image for crisis is one of the most consistent eschatological images in Scripture. Paul uses it in 1 Thessalonians 5:3: &quot;sudden destruction will come upon them as labor pains come upon a pregnant woman.&quot; The labor-pain image captures both the inevitability and the productive purpose of the crisis: out of the birth-pangs of judgment comes the new creation (Rom 8:22).</p>",
+"25": "<p>The lament over <strong>the city of renown not abandoned, the city of my joy</strong> — the prophet or YHWH mourning over Damascus's fall — echoes the divine grief over judgment that runs through the prophets. Jesus weeps over Jerusalem (Luke 19:41) — the divine grief is incarnate in the Son who mourns over the city that will face judgment. The God who executes judgment on the nations does not do so with cold indifference but with the grief of one who loved the city and would have spared it if it had turned.</p>",
+"26": "<p>The young men of Damascus <strong>falling in her squares, and all her soldiers being destroyed in that day</strong> — the military power neutralized in a single day — points to the eschatological day when all human military power is rendered obsolete. Revelation 19:17-21 describes the final battle where the armies of the earth are defeated by the Word of God on a white horse. The military might of Damascus, destroyed in a day, is a historical type of the final collapse of all opposition to the reign of Christ.</p>",
+"27": "<p>The fire consuming <strong>the wall of Damascus and devouring the strongholds of Ben-hadad</strong> — the palace complexes of the ancient Syrian king — is the divine fire that reaches the highest levels of political power. The NT presents Christ's judgment as reaching all human power structures: &quot;every knee shall bow, in heaven and on earth and under the earth, and every tongue confess that Jesus Christ is Lord&quot; (Phil 2:10-11). The fire on Ben-hadad's strongholds is the historical type of the universal authority Christ exercises at his exaltation.</p>",
+"28": "<p>The oracle against <strong>Kedar and the kingdoms of Hazor that Nebuchadnezzar struck</strong> — the nomadic and semi-nomadic Arab peoples — represents the extension of YHWH's sovereign judgment to the desert-dwelling peoples beyond settled civilization. The universality of YHWH's authority over even the most remote peoples is the basis for the universal scope of the gospel. Acts 2:5 (&quot;there were dwelling in Jerusalem Jews, devout men from every nation under heaven&quot;) and Revelation 7:9 (&quot;a great multitude from every nation&quot;) fulfill the trajectory of YHWH's sovereignty over all peoples that the OAN oracles establish.</p>",
+"29": "<p>The stripping of the nomads — <strong>their tents and their flocks shall be taken, their curtains and all their goods and their camels carried off</strong> — is the comprehensive plundering of the desert peoples' mobile wealth. Against the stripping of earthly possessions, the NT offers a different kind of wealth: &quot;lay up for yourselves treasures in heaven, where neither moth nor rust destroys and where thieves do not break in and steal&quot; (Matt 6:20). Christ invites his followers into an economy of heavenly investment that the Babylonian raider cannot touch.</p>",
+"30": "<p>The call to <strong>flee far away, dwell in the depths, O inhabitants of Hazor, for Nebuchadnezzar has made a plan against you</strong> — flight from the coming military power. Against the counsel to flee Babylon, Jesus offers the alternative: &quot;come to me, all who labor and are heavy laden, and I will give you rest&quot; (Matt 11:28). Rather than flight from an advancing army, the gospel offers coming to the one who has conquered every army, every principality, and every power (Col 2:15).</p>",
+"31": "<p>The description of Hazor as <strong>a nation at ease, that dwells securely, with no doors or bars</strong> — the vulnerability of open and secure prosperity — echoes the warning Jesus gives: &quot;as it was in the days of Noah... they were eating and drinking, marrying and giving in marriage, until the day when Noah entered the ark, and the flood came and swept them all away&quot; (Matt 24:37-39). Prosperity without preparedness is the spiritual condition that the gospel's urgency addresses. The open city with no gates is the image of the soul with no watchfulness.</p>",
+"32": "<p>The scattering of Hazor's population <strong>to every wind</strong> — complete dispersal — is the judgment image that the gathering of Christ's elect reverses. Matthew 24:31: &quot;he will send out his angels with a loud trumpet call, and they will gather his elect from the four winds, from one end of heaven to the other.&quot; The divine scattering of judgment and the divine gathering of redemption are the two movements of YHWH's sovereignty over all peoples and all directions of the earth.</p>",
+"33": "<p>Hazor becoming <strong>a haunt of jackals, an everlasting waste; no man shall dwell there; no son of man shall sojourn in her</strong> — permanent desolation. The everlasting-waste formula is the strongest OT statement of permanent removal from the community of human habitation. Against this, the NT offers permanent habitation: &quot;I go to prepare a place for you&quot; (John 14:2); the New Jerusalem where God dwells with his people permanently (Rev 21:3). The desolation that is judgment's end is the negative image of the eternal dwelling that grace provides.</p>",
+"34": "<p>The oracle against <strong>Elam at the beginning of the reign of Zedekiah</strong> — Elam was the ancient power east of Babylon, located in what is now southwestern Iran. YHWH's authority over Elam confirms the universal scope of his sovereignty. The NT presents Christ as the one through whom God exercises this universal authority: Colossians 1:15-20 claims that all things — including powers and principalities far beyond Israel's cultural horizon — were created through Christ and for Christ. Every nation and every power, including Elam, falls within Christ's domain.</p>",
+"35": "<p>The destruction of <strong>the bow of Elam, the mainstay of their might</strong> — Elamite archers were famous in the ancient world. YHWH's breaking of Elam's signature military strength establishes that no human weapon or skill is the ultimate security. Paul's &quot;the weapons of our warfare are not of the flesh but have divine power to destroy strongholds&quot; (2 Cor 10:4) makes the same point positively: the bow of human military power is broken, and the divine power operates through weakness, through the preached word, through the crucified Christ (1 Cor 1:25).</p>",
+"36": "<p>The four winds brought against Elam — <strong>I will bring upon Elam the four winds from the four quarters of heaven and will scatter them to all those winds</strong> — is the comprehensive dispersal of a nation. The four winds of judgment in Jeremiah become the four winds from which the elect are gathered in Matthew 24:31. The same divine sovereignty that scatters in judgment gathers in grace: the four corners of the earth that receive the scattered nations are also the four corners from which the redeemed are assembled before the throne of the Lamb (Rev 7:1-4).</p>",
+"37": "<p>The statement — <strong>I will dismay Elam before their enemies and before those who seek their life; I will bring disaster upon them, my fierce anger</strong> — describes the divine wrath operative in historical events. The NT does not soften the reality of divine wrath: Romans 1:18 (&quot;the wrath of God is revealed from heaven against all ungodliness&quot;) and Hebrews 10:31 (&quot;it is a fearful thing to fall into the hands of the living God&quot;) maintain the OT's seriousness about divine anger. Christ's atonement is the only resolution: he bore the divine wrath so that those who trust him do not (Rom 3:25; 1 John 2:2).</p>",
+"38": "<p>YHWH's throne set up in Elam — <strong>I will set my throne in Elam and destroy their king and officials</strong> — is YHWH claiming direct sovereignty over a nation far outside Israel's borders. The image of the divine throne established in Elam anticipates the NT claim that Christ has been given &quot;all authority in heaven and on earth&quot; (Matt 28:18) — a claim that has no geographical boundaries. The throne set up in Elam is the historical type of the throne that Christ occupies over every people, language, and nation (Rev 5:9).</p>",
+"39": "<p>The restoration promise — <strong>but in the latter days I will restore the fortunes of Elam</strong> — is the most surprising OAN restoration promise, given that Elam was never part of the covenant people. The Elamites (Persians) are listed among the nations hearing the gospel at Pentecost (Acts 2:9). This verse may underlie the presence of Elamites among the Pentecost crowd — YHWH's promised restoration of Elam fulfilled in their inclusion in the outpouring of the Spirit. The restoration of even the most distant nations is the trajectory the gospel fulfills globally.</p>"
+},
+"50": {
+"1": "<p>The extended oracle against <strong>Babylon and the land of the Chaldeans</strong> — the longest single oracle in Jeremiah — begins with YHWH speaking against the world's dominant power. Revelation 17-18 identifies Babylon as the symbolic name for the anti-God world-system that persists through all ages. The fall of historical Babylon is both a literal prophecy and a type: the ultimate Babylon is any civilization that sets itself up as the absolute authority against YHWH. Christ's return brings the definitive fall of every Babylon (Rev 18:2, 10, 21).</p>",
+"2": "<p>The public proclamation — <strong>declare among the nations and proclaim; set up a banner and proclaim; do not conceal it</strong> — Babylon's fall is to be announced to all the nations. The proclamation of Babylon's fall in Revelation 14:8 (&quot;fallen, fallen is Babylon the great&quot;) echoes this command. The gospel is also a public proclamation — not concealed but announced openly to all nations (Matt 28:19; Luke 24:47). The good news of Babylon's fall is inseparable from the good news of Christ's victory, for both declare that the anti-God power will not have the last word.</p>",
+"3": "<p>The people from the north coming against Babylon to make the land a desolation — the same directional language used of Babylon coming against Israel — establishes a kind of poetic justice: what Babylon did to others will be done to Babylon. Paul's &quot;do not be deceived: God is not mocked, for whatever one sows, that will he also reap&quot; (Gal 6:7) is the NT principle underlying this reversal. The justice that Christ embodies is the justice of perfect accountability: no system built on oppression escapes the accounting.</p>",
+"4": "<p>The promise — <strong>in those days and in that time the people of Israel and the people of Judah shall come together, weeping as they go, and seek YHWH their God</strong> — is the eschatological reunion of the divided kingdom in repentance. Jesus prays for the unity of his followers: &quot;that they may be one, as we are one&quot; (John 17:22). Ephesians 2:11-22 presents Christ as the one who has broken down the dividing wall — uniting not just Israel and Judah but Jew and Gentile into one new humanity. The eschatological unity of the covenant people is accomplished in Christ.</p>",
+"5": "<p>The people seeking YHWH — <strong>asking the way to Zion with faces turned toward it: come, let us join ourselves to YHWH in an everlasting covenant that will never be forgotten</strong> — is the pilgrimage of the restored people to covenant renewal. Jesus is &quot;the way&quot; (John 14:6) — he himself is the path to Zion, the access to the Father. The &quot;everlasting covenant that will never be forgotten&quot; is the new covenant whose blood is Christ's (Luke 22:20; Heb 13:20) — permanent, unforgettable, and secured in the resurrection.</p>",
+"6": "<p>The diagnosis — <strong>my people have been lost sheep; their shepherds have led them astray, turning them away on the mountains; they have gone from mountain to hill, they have forgotten their resting place</strong> — is the precise condition that Jesus describes the crowd as being in: &quot;when he saw the crowds, he had compassion for them, because they were harassed and helpless, like sheep without a shepherd&quot; (Matt 9:36). Jesus presents himself as the response: &quot;I am the good shepherd&quot; (John 10:11). The lost sheep of Jeremiah 50 are the lost sheep Jesus seeks until he finds them (Luke 15:4-7).</p>",
+"7": "<p>The oppressors' excuse — <strong>all who found them have devoured them; their enemies said: we are not guilty, for they have sinned against YHWH, their true habitation</strong> — is the logic of blaming the victim for their covenant failure. The NT addresses this: Jesus does not accept the disciples' assumption that the man born blind sinned or that his parents did (John 9:3). The sinner's vulnerability does not license oppression; rather, it intensifies the responsibility to show mercy. Christ's atonement addresses sin without using it as justification for oppression.</p>",
+"8": "<p>The command to flee Babylon — <strong>flee from the midst of Babylon, and go out of the land of the Chaldeans</strong> — is the call to separation from the corrupt system. Revelation 18:4: &quot;come out of her, my people, lest you take part in her sins, lest you share in her plagues.&quot; This is the NT application of Jeremiah 50:8 — the command to the people of God to not be conformed to the world-system (Rom 12:2). The call out of Babylon is the call to the alternative community shaped by the gospel.</p>",
+"9": "<p>The great nations from the north stirred up against Babylon — <strong>their arrows are like a skilled warrior who does not return empty-handed</strong> — is the divine mobilization of history's powers as instruments of judgment. Paul in Romans 13:1-4 describes political power as &quot;God's servant for your good&quot; and as one who &quot;carries out God's wrath on the wrongdoer.&quot; The nations that YHWH uses as instruments of judgment are under his direction — an expression of Christ's lordship over the political powers that Paul insists are &quot;instituted by God.&quot;</p>",
+"10": "<p>Babylon plundered — <strong>Chaldea shall be plundered; all who plunder her shall be satisfied</strong> — is the reversal of the plunderer: the one who stripped nations is itself stripped. The Beatitude &quot;blessed are the merciful, for they shall receive mercy&quot; (Matt 5:7) has its dark complement: those who show no mercy will receive none. Babylon's plundering of nations returns on its own head — the measure-for-measure justice that the NT calls the divine judgment running through history.</p>",
+"11": "<p>YHWH's address to the plunderers of Israel — <strong>though you rejoice, though you exult, O plunderers of my heritage, though you frolic like a heifer in pasture</strong> — is the divine word against those who rejoiced in Israel's suffering. The NT locates the final reckoning for this in the parable of the sheep and goats (Matt 25:31-46): &quot;I was hungry and you did not feed me... as you did not do it to one of the least of these, you did not do it to me.&quot; Indifference to or rejoicing in the suffering of God's people is treated as treatment of Christ himself.</p>",
+"12": "<p>Babylon's mother being <strong>utterly shamed, she who bore you being put to shame</strong> — the image of Babylon's founding civilization brought to shame at its heir's destruction. The NT uses shame language for the cross: Christ &quot;endured the cross, despising the shame&quot; (Heb 12:2), transforming shame itself. The eschatological reversal is that those who trust in Christ &quot;will not be put to shame&quot; (Rom 10:11; 1 Pet 2:6), while those who built their systems on oppression inherit the shame they tried to avoid.</p>",
+"13": "<p>Babylon becoming <strong>a waste, a dry land, a desert; no one shall dwell there</strong> — the permanent desolation of the world's greatest city. Revelation 18:21-23 uses similar imagery: Babylon thrown down &quot;shall be found no more.&quot; The contrast with the New Jerusalem (Rev 21:2-3) is the contrast between the city of man built on opposition to God and the city of God descending from heaven. The desolation of one is the precondition for the flourishing of the other; Christ's judgment of Babylon is inseparable from his establishment of the new order.</p>",
+"14": "<p>The call to draw the bow against Babylon — <strong>all you who bend the bow, shoot at her, spare no arrows, for she has sinned against YHWH</strong> — frames the military attack as covenant justice. The cosmic battle in Revelation (19:11-21) is described similarly: the rider on the white horse, whose name is the Word of God, strikes the nations. The &quot;sword from his mouth&quot; (Rev 19:15) is the divine word executing judgment — the bow of the nations is replaced by the word of Christ, which is the instrument of both judgment and salvation.</p>",
+"15": "<p>Babylon's walls falling — <strong>her walls have fallen; it is the vengeance of YHWH. Take vengeance on her; as she has done, do to her</strong> — is the covenant-justice principle applied to the empire. Paul addresses vengeance carefully: &quot;Beloved, never avenge yourselves, but leave it to the wrath of God, for it is written, vengeance is mine, I will repay, says the Lord&quot; (Rom 12:19, citing Deut 32:35). The divine vengeance that Jeremiah announces is precisely what Paul says belongs to God alone — and what Christ executes at the end, freeing his people from the need to exact it themselves.</p>",
+"16": "<p>The cutting off of <strong>the sower and the one who handles the sickle in harvest time</strong> — the disruption of agricultural production as the practical sign of societal collapse. Against this agricultural death, the NT promises an eschatological harvest: &quot;the harvest is plentiful but the workers are few&quot; (Matt 9:37); &quot;the Son of Man will send his angels, and they will gather out of his kingdom all causes of sin&quot; (Matt 13:41). The sower and harvester cut off by judgment will be replaced by the divine sower who plants the word and the angels who gather the harvest.</p>",
+"17": "<p>Israel as <strong>a hunted sheep driven away by lions</strong> — first by Assyria and then Babylon — is the image of the covenant people as prey. Jesus presents himself as the counterforce: the Good Shepherd who gives his life for the sheep rather than fleeing from the wolf (John 10:11-13). The lion that scattered Israel is overcome by the Lion of Judah who gathers his scattered flock (Rev 5:5; John 10:16). The hunted sheep imagery is resolved in Christ who both absorbs the attack of the predator and becomes the protector.</p>",
+"18": "<p>YHWH's declaration that <strong>I am bringing punishment on the king of Babylon and his land as I brought punishment on the king of Assyria</strong> — the consistent pattern of divine judgment on imperial powers. Paul's argument in Romans 9:17 uses Pharaoh to make the same point: God raised up Pharaoh precisely to demonstrate divine power. Each imperial power — Pharaoh, Assyria, Babylon — is used in the divine economy and then judged. Christ's lordship over all empires (Rev 1:5: &quot;ruler of kings on earth&quot;) is the NT statement of what Jeremiah demonstrates historically.</p>",
+"19": "<p>The promise of Israel's return — <strong>I will restore Israel to his pasture and he shall feed on Carmel and Bashan</strong> — is the eschatological restoration of the people to their inheritance. Paul's argument in Romans 11:26 (&quot;all Israel will be saved&quot;) invokes this restoration trajectory. The feeding on Carmel and Bashan — the richest pastures of the promised land — is the OT image of covenant satiation that the NT presents as the eschatological feast with Abraham, Isaac, and Jacob (Matt 8:11).</p>",
+"20": "<p>The most sweeping forgiveness promise in Jeremiah 50 — <strong>in those days and at that time... the iniquity of Israel shall be sought and there shall be none, and the sins of Judah, and they shall not be found, for I will pardon those whom I leave as a remnant</strong> — directly echoes the new covenant of 31:34 (&quot;I will forgive their iniquity and remember their sin no more&quot;). Hebrews 10:17-18 quotes 31:34 as the proof that Christ's sacrifice has accomplished permanent forgiveness. The iniquity sought and not found is the condition Hebrews declares accomplished in the once-for-all sacrifice of Christ (Heb 9:26; 10:14).</p>",
+"21": "<p>YHWH's command against <strong>Merathaim</strong> (double bitterness) and <strong>Pekod</strong> (visitation) — symbolic names for Babylon — frames the judgment as divinely commanded, not merely political happenstance. The symbolic names point to the theological character of the judgment: Babylon's double bitterness (the bitterness it caused and the bitterness of its own judgment) and its divine visitation. Christ's coming is described as &quot;the visitation&quot; (<em>episkopē</em>, Luke 19:44; 1 Pet 2:12) — divine attention that either saves or judges depending on the response.</p>",
+"22": "<p>The <strong>sound of war and great destruction in the land</strong> — the battle language of Babylon's fall — is the language of eschatological war. Revelation 19:11-21 presents the eschatological battle in the same terms. The &quot;great destruction&quot; is the destruction of all that opposes the reign of God — the final clearing away of every Babylon so that the New Jerusalem can come down. Between the historical fall of Babylon and the eschatological fall stands Christ's cross, which is the decisive victory that makes the final reckoning certain.</p>",
+"23": "<p>The taunt — <strong>how the hammer of the whole earth is cut down and broken! How Babylon has become a desolation among the nations!</strong> — describes the fall of the universal instrument of power. Paul uses hammer/weapon imagery in 2 Corinthians 10:4: &quot;the weapons of our warfare are not of the flesh but have divine power to destroy strongholds.&quot; The hammer of the whole earth is broken so that the divine power — working through apparent weakness — can accomplish what no earthly force could. Christ crucified is God's foolishness that is wiser than human wisdom (1 Cor 1:25).</p>",
+"24": "<p>Babylon caught <strong>in a trap without its knowledge</strong> — the judgment coming upon the self-confident empire by surprise. Jesus repeatedly warns against the trap of spiritual complacency: &quot;be on guard, keep awake. For you do not know when the time will come&quot; (Mark 13:33); &quot;like a trap it will come upon all who dwell on the face of the whole earth&quot; (Luke 21:35). The surprise of judgment for the spiritually careless is the consistent NT warning, resolved only by the watchfulness of those who know the Bridegroom is coming.</p>",
+"25": "<p>YHWH opening <strong>his armory and bringing out the weapons of his wrath</strong> — the divine arsenal deployed against Babylon. The armor of God passage in Ephesians 6:10-18 reappropriates the divine-warrior imagery from the OT prophets: the same divine armory that executes judgment on Babylon becomes the armor given to the church for spiritual warfare. Christ is both the warrior who wields YHWH's weapons in judgment and the one who arms his people to &quot;stand against the schemes of the devil.&quot;</p>",
+"26": "<p>The command — <strong>come against her from every quarter; open her granaries; pile her up like heaps of grain and devote her to destruction; let nothing be left of her</strong> — is the total destruction (<em>ḥerem</em>) applied to the empire that had applied it to others. The total-dedication language (<em>ḥerem</em>) runs from the conquest of Canaan to the final judgment. Revelation 20:14-15 uses the image of the lake of fire for the complete and permanent removal of death, Hades, and all whose names are not in the Book of Life — the ultimate <em>ḥerem</em> that ends the reign of evil permanently.</p>",
+"27": "<p>The slaughter of Babylon's warriors — <strong>kill all her bulls; let them go down to the slaughter</strong> — is the divine purging of the power structures built on oppression. The &quot;bulls&quot; as the powerful leaders echoes Psalm 22:12 (&quot;strong bulls of Bashan encircle me&quot;) — the image of oppressive power surrounding the suffering righteous one. Christ, the one surrounded by the bulls on the cross, is vindicated; the bulls that surround him face the slaughter he faced on their behalf.</p>",
+"28": "<p>The fugitives from Babylon <strong>declaring in Zion the vengeance of YHWH our God, the vengeance for his temple</strong> — the proclamation of divine justice from within the experience of deliverance. Revelation 18:20 (&quot;rejoice over her, O heaven, and you saints and apostles and prophets, for God has given judgment for you against her&quot;) is the NT declaration of the same divine justice. The vengeance for the temple — for everything Babylon destroyed — is announced not from bitterness but from the perspective of those who have been rescued.</p>",
+"29": "<p>The summoning of archers against Babylon — <strong>let none escape; repay her according to her deeds; do to her according to all that she has done</strong> — is the divine insistence on complete moral accountability. The &quot;according to their deeds&quot; formula appears in Revelation 20:12 at the final judgment. The moral ledger that Babylon accumulated is precisely the ledger that the gospel addresses: Christ takes the ledger of sin (Col 2:14, the &quot;record of debt&quot;) and cancels it at the cross. The accountability Babylon faces is the accountability from which those in Christ are freed.</p>",
+"30": "<p>The prophecy — <strong>her young men shall fall in her squares, and all her soldiers shall be destroyed in that day</strong> — is the military annihilation of Babylon's power. The consistent NT theme is that all human military and political power is temporary and will be overturned: &quot;he has put down the mighty from their thrones and exalted those of humble estate&quot; (Luke 1:52). The fall of Babylon's soldiers is the historical type of the eschatological reversal of all power built on violence and oppression.</p>",
+"31": "<p>The direct address — <strong>behold, I am against you, O most proud one, declares the Lord God of hosts, for your day has come, the time when I will punish you</strong> — is YHWH's direct confrontation of pride. The NT presents Christ as the direct confrontation of all human pride: his cross is &quot;a stumbling block to Jews and folly to Gentiles&quot; (1 Cor 1:23) precisely because it inverts the values of power and wisdom that pride celebrates. The one who is against the proud is the one who welcomes the humble — and Christ's cross is the place where this divine disposition is most fully expressed.</p>",
+"32": "<p>The proud stumbling and falling with <strong>no one to raise him up</strong> — in contrast to YHWH's promise to raise up Israel. Acts 3:15 and 4:10 make the raising-up contrast central: Israel killed the Author of life but God raised him from the dead. Those who refuse the one who raises the dead are left with no one to raise them. The raising-up that Babylon cannot receive is the resurrection gift that Christ offers — the ultimate reversal of every fall, available only through the one who was himself raised.</p>",
+"33": "<p>The solidarity of oppression — <strong>the people of Israel and Judah together have been oppressed; all who took them captive have held them fast, they refuse to let them go</strong> — is the image of captivity under Babylon's power. The Exodus language (&quot;refuse to let them go&quot;) deliberately echoes Pharaoh's refusal. Paul identifies this captivity in cosmic terms: humanity held captive under sin (Gal 3:22), under the elemental spirits (Gal 4:3), under the power of darkness (Col 1:13). Christ's redemption is the new Exodus: &quot;he has delivered us from the domain of darkness and transferred us to the kingdom of his beloved Son&quot; (Col 1:13).</p>",
+"34": "<p><strong>Their Redeemer is strong; YHWH of hosts is his name</strong> — one of the most direct christological titles in the OT prophets. The <em>goʾel</em> (Redeemer) who is strong (<em>ḥazaq</em>) is the kinsman-redeemer who has the power to execute the right of redemption. The NT applies this: &quot;since therefore the children share in flesh and blood, he himself likewise partook of the same things, that through death he might destroy the one who has the power of death&quot; (Heb 2:14). Christ becomes the strong Redeemer by entering the captivity, paying the ransom, and rising victorious.</p>",
+"35": "<p>The sword against <strong>the Chaldeans and the inhabitants of Babylon</strong> — the comprehensive judgment striking every level of Babylonian society. The &quot;sword of the Spirit, which is the word of God&quot; (Eph 6:17) is the NT reappropriation of the divine-sword imagery: the same divine word that executes judgment on Babylon becomes the gospel proclamation that is &quot;living and active, sharper than any two-edged sword&quot; (Heb 4:12). The sword of judgment and the word of life are the same divine reality operating in different modes.</p>",
+"36": "<p>The sword against <strong>her diviners, that they may be made fools</strong> — Babylon's famous wise men and astrologers exposed as fools by the divine judgment. Isaiah 47:13-15 addresses Babylon's astrologers and wise counselors with the same exposure. Paul applies the same logic to the &quot;wise men, the scribes, the debater of this age&quot; (1 Cor 1:20): &quot;God has made foolish the wisdom of this world.&quot; The exposure of Babylon's diviners is the OT type of the cross as the exposure of all human wisdom that does not know God (1 Cor 1:21).</p>",
+"37": "<p>The sword against <strong>her horses and chariots and all the foreign troops in her midst</strong> who will become women — the military feminization that represents total defeat. The NT inverts the military image: Christ's power &quot;is made perfect in weakness&quot; (2 Cor 12:9); the power that conquers is not military might but the word of the cross. The horses and chariots that represent Babylon's military confidence are replaced by the white horse of the Word of God (Rev 19:11-13), whose name is written on him: King of kings and Lord of lords.</p>",
+"38": "<p>The sword/drought against <strong>her waters, that they may be dried up</strong> — the disruption of Babylon's water supply (the Euphrates). Revelation 16:12 describes the drying up of the Euphrates to prepare the way for the kings from the east in the eschatological judgment. Against the drying waters of judgment, Jesus offers the water that never runs dry: &quot;the water that I will give him will become in him a spring of water welling up to eternal life&quot; (John 4:14). The drying of Babylon's waters contrasts with the ever-flowing river of the water of life from the throne of God and the Lamb (Rev 22:1).</p>",
+"39": "<p>Babylon becoming <strong>a haunt of jackals, a home of ostriches</strong> — the wilderness creatures that inherit the desolate city. This is the fate of the anti-God civilization: Isaiah 13:21-22 and Revelation 18:2 (&quot;Babylon has become a dwelling place for demons&quot;) use similar imagery. Against the habitation of the desolate city by unclean creatures, the New Jerusalem is inhabited by those whose names are written in the Lamb's book of life (Rev 21:27) — the contrast between the habitation of death and the habitation of eternal life.</p>",
+"40": "<p>The Sodom-comparison — <strong>as when God overthrew Sodom and Gomorrah and their neighbor cities, no man shall dwell there, no son of man shall sojourn in her</strong> — makes Babylon's destruction the ultimate expression of covenant judgment. Jesus uses the Sodom comparison for the judgment on cities that reject the gospel (Matt 10:15; 11:23-24), establishing Sodom as the benchmark for judgment on those who reject the divine visitation. The fall of Babylon calibrated to Sodom's destruction is the most severe possible statement of what awaits all anti-God civilization at the end.</p>",
+"41": "<p>The people from the north — <strong>a great nation and many kings are stirring from the farthest parts of the earth</strong> — coming against Babylon inverts the pattern of Babylon coming against Israel from the north. The eschatological reversal of the north-invader motif (also in Ezek 38-39 and Rev 20:8) frames the judgment on Babylon as the divine reversal of all military aggression. Christ's return is described in Revelation 19:11-16 as the ultimate northern invader from heaven — the one who comes not to oppress the weak but to judge the oppressors.</p>",
+"42": "<p>The invaders described as <strong>cruel and without mercy, their sound is like the roaring sea</strong> — the instruments of judgment portrayed in terrifying terms. The &quot;roaring sea&quot; image recurs in Revelation (the sea of glass, the voice of many waters) and in Jesus's description of the end: &quot;the sea and the waves roaring&quot; as signs of the Son of Man's coming (Luke 21:25-27). The terrifying noise of judgment is the opposite of the &quot;still, small voice&quot; of grace — both are divine; the difference is in the posture of the hearer.</p>",
+"43": "<p>The king of Babylon <strong>hearing the report about them and his hands falling limp; anguish taking hold of him, pain as of a woman in labor</strong> — the mightiest monarch in the world reduced to birth-pangs of terror. Luke 21:26 speaks of &quot;people fainting with fear and with foreboding of what is coming on the world&quot; in the description of the end times. The king who made nations tremble is himself made to tremble — the great reversal of power that Christ's return enacts completely and permanently.</p>",
+"44": "<p>YHWH <strong>like a lion coming up from the thicket of the Jordan against a strong sheepfold</strong> — the same image used of judgment against Edom in 49:19. The repeated lion-coming-up image in the OAN section establishes YHWH as the sovereign predator who holds all nations accountable. Revelation 5:5 (&quot;the Lion of the tribe of Judah, the Root of David, has conquered&quot;) applies this imagery to Christ: the Lion who judged the nations is the Lion who conquered on behalf of his sheep. The predator becomes the protector in the great christological reversal.</p>",
+"45": "<p>The appeal — <strong>hear the plan of YHWH against Babylon, and the purposes he has formed against the land of the Chaldeans</strong> — frames the oracle as the communication of the divine plan (<em>machashevet</em>). Ephesians 3:10-11 speaks of &quot;the eternal purpose that he has realized in Christ Jesus our Lord&quot; — the divine plan that was hidden and is now made known. The same word (<em>boulē</em>, counsel/plan) describes both the divine plan for Babylon's judgment and the divine plan for redemption: both are expressions of the same sovereign divine purposefulness.</p>",
+"46": "<p>The climactic cry — <strong>at the sound of the capture of Babylon the earth shall tremble, and her cry shall be heard among the nations</strong> — is the eschatological earthquake that marks the end of the anti-God empire. Revelation 18:9-10 describes the kings of the earth weeping at the fall of Babylon: &quot;Alas, alas, you great city, you mighty city, Babylon! For in a single hour your judgment has come.&quot; The earth-shaking that accompanies the fall of every Babylon — historical, spiritual, and final — is the trembling that precedes the establishment of the unshakeable kingdom (Heb 12:28), whose builder and maker is God.</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-christ', 'jeremiah')
+    merge_comm(existing, NEW)
+    save_comm('mkt-christ', 'jeremiah', existing)
+    print('Jeremiah 49–50 mkt-christ written.')
 
 if __name__ == '__main__':
     main()

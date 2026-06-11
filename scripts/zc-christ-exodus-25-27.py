@@ -1,204 +1,137 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
+MKT Christ — Exodus chapters 25–27
+Run: python3 scripts/zc-christ-exodus-25-27.py
+Covers: Tabernacle furnishings — ark/mercy seat, showbread table, lampstand, curtains, veil, bronze altar
+ch25: 40 verses (v22 already present), ch26: 37 verses, ch27: 21 verses
 """
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
+            if v not in existing[ch]: existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
-  },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
-  },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
-  },
-  "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
+new_entries = {
+"25": {
+"1": "<p>A theme: YHWH calls Moses to receive instructions for a dwelling place among his people. The entire Tabernacle project is framed as a divine initiative — God wants to live with humanity. This longing finds its ultimate answer in the Incarnation: the Word became flesh and dwelt (<em>eskenosen</em>) among us (John 1:14), the same tenting language as the Tabernacle (<em>mishkan</em>).</p>",
+"2": "<p>A theme: Take for me a freewill offering (<em>terumah</em>) from every man whose heart moves him. Generosity for God's dwelling is rooted in willing love, not compulsion. Paul echoes this in 2 Corinthians 9:7: each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.</p>",
+"3": "<p>A theme: The first three materials — gold, silver, bronze — form a hierarchy from divine glory (gold) to humanity's fallen state (bronze). Christ as the meeting point of heaven and earth takes up all three in his offices: gold for King, silver (atonement ransom) for Priest, bronze (altar) for sacrifice.</p>",
+"4": "<p>A theme: Blue, purple, and scarlet yarns appear throughout the Tabernacle — a triad scholars connect to heaven (blue), royalty (purple), and blood/sacrifice (scarlet). All three prefigure Christ: the heavenly Son, the royal Messiah, the blood-shedding Lamb.</p>",
+"5": "<p>A theme: Acacia wood (<em>atzei shittim</em>) — an incorruptible desert timber — clad in gold forms the structural element of the Tabernacle and its furnishings. Early interpreters saw in this a type of Christ's two natures: incorruptible humanity (acacia) united with divine glory (gold), the hypostatic union in material form.</p>",
+"6": "<p>A theme: Oil for the lampstand and spices for anointing oil and incense point to the Spirit and prayer. Christ is the Anointed One (<em>mashiach</em>); the Spirit rests on him without measure (John 3:34), and his intercession as High Priest is the reality behind every offering of incense.</p>",
+"7": "<p>A theme: Onyx stones and setting stones for the ephod and breastpiece appear here among the raw materials. The stones bear the names of Israel's tribes, carried by the priest before God. Christ as the great High Priest carries his people on his shoulders and on his heart (Heb 7:25) — the weight-bearing and affection of an interceding priest.</p>",
+"8": "<p>A direct type: Let them make me a sanctuary (<em>miqdash</em>), that I may dwell in their midst. This verse is the theological heart of the entire Tabernacle project. Jesus applies it to himself: Destroy this temple, and in three days I will raise it up (John 2:19), and John comments, he was speaking about the temple of his body (v21). The Incarnation is the true sanctuary; the Tabernacle is its advance copy.</p>",
+"9": "<p>A direct type: Exactly as I show you concerning the pattern (<em>tabnit</em>) of the tabernacle... so you shall make it. Hebrews 8:5 cites this verse directly: the earthly sanctuary is a shadow and copy (<em>hypodeigma kai skia</em>) of the heavenly things. The pattern shown to Moses on the mountain is the heavenly reality of which Christ's body and ministry are the substance.</p>",
+"10": "<p>A direct type: The Ark of the Covenant (<em>aron habrit</em>), 2.5 cubits by 1.5 by 1.5, is the most holy object in Israel's worship. Hebrews 9:4 places it in its ultimate context — the inner sanctuary where Christ as High Priest entered with his own blood (Heb 9:12). The ark holds the covenant document (the Law); Christ is the one who fulfills and embodies the Law (Matt 5:17).</p>",
+"11": "<p>A direct type: The ark overlaid with pure gold inside and out, with a gold molding around it. The double gold images complete holiness, nothing hidden, no division between public appearance and inner reality. Christ is described as holy, innocent, unstained, separated from sinners (Heb 7:26) — the same perfect integrity.</p>",
+"12": "<p>A shadow: Four gold rings cast for the ark, with two on each side, are for the poles used to carry it. The ark is never set down permanently in this age — it is carried, mobile, on pilgrimage. This images the church age: God's presence goes with his people on the way (Matt 28:20, I am with you always), not yet settled in the eschatological rest.</p>",
+"13": "<p>A shadow: The poles of acacia wood overlaid with gold are inserted into the rings. The ark is carried on human shoulders — the priests bear the divine presence. Paul's language of the church as temple of the Holy Spirit (1 Cor 6:19) and treasure in jars of clay (2 Cor 4:7) extends this: God's presence is still carried by frail human bearers.</p>",
+"14": "<p>A shadow: The poles shall remain in the rings of the ark; they shall not be taken from it. Permanent readiness for movement. The church is never to settle so comfortably that it cannot be on mission — the poles are always in, always ready. Christ himself was always moving toward Jerusalem, toward the cross, toward the Father's sending purpose.</p>",
+"15": "<p>A direct type: The tablets of the covenant (<em>edut</em> = testimony/witness) placed inside the ark give it its full name: the ark of the testimony. Christ is the faithful and true witness (Rev 3:14); the Law he fulfills and mediates is written on hearts under the new covenant (Jer 31:33, Heb 10:16). The ark becomes the chest holding heaven's testimony to covenant faithfulness.</p>",
+"16": "<p>A direct type: You shall put into the ark the testimony that I shall give you. The Law goes inside; the mercy seat goes on top. The order is theologically crucial: atonement (mercy seat) covers the Law. Paul's logic in Romans 3:25-26 mirrors this exactly — the hilasterion (mercy seat) demonstrates God's righteousness precisely by covering what the Law condemns.</p>",
+"17": "<p>A direct type: The mercy seat (<em>kapporet</em>, from <em>kapar</em> = to cover/atone) is made of pure gold. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — translated propitiation or mercy seat. The Hebrew and Greek words carry the same meaning: the place where blood is sprinkled and God's wrath against sin is covered. Christ is not merely like the mercy seat; he IS the mercy seat.</p>",
+"18": "<p>A direct type: Two golden cherubim on the mercy seat spread their wings upward and face each other, looking down at the mercy seat. Angels are present at the resurrection tomb looking at the place where Jesus lay (John 20:12) — an echo of cherubim watching the mercy seat. The resurrection completes the atonement the mercy seat symbolized.</p>",
+"19": "<p>A direct type: The cherubim face each other, their faces toward the mercy seat. In Hebrews 9:5, the author mentions the cherubim of glory overshadowing the mercy seat as part of the old covenant order now superseded. The glory (<em>doxa</em>) that hovered between the cherubim is the Shekinah — the divine presence that in the new covenant indwells believers through the Spirit (Rom 8:9).</p>",
+"20": "<p>A direct type: The cherubim wings spread upward, overshadowing the mercy seat — creating a throne. The ark is the footstool of YHWH's invisible throne (Ps 99:5, 1 Chr 28:2). Christ is now seated at the right hand of the Majesty on high (Heb 1:3), having ascended beyond the earthly type to the heavenly throne itself.</p>",
+"21": "<p>A shadow: The cherubim and mercy seat are made as one piece with the ark lid — not attached separately. The atonement and the covenant document are inseparable: you cannot have the law without the covering, or the covering without the law. Grace and truth both come through Jesus Christ (John 1:17) — not grace instead of truth, but both in one person.</p>",
+"23": "<p>A shadow: The Table of the Presence (<em>shulchan hapanim</em>, literally table of faces) is made of acacia wood overlaid with gold. This table is where the bread (<em>lechem panim</em>, bread of faces/presence) is set before God perpetually. Jesus declares himself the bread of life (John 6:35) — the permanent presence-bread that gives life.</p>",
+"24": "<p>A shadow: A gold molding and a rim around the table. The reverence given to the table of showbread points to the reverence due the one who feeds his people with himself. The Lord's Supper is the new covenant table of presence: do this in remembrance of me — a perpetual meal in God's presence.</p>",
+"25": "<p>A shadow: Four gold rings and poles of acacia/gold for carrying — the same portable design as the ark. The table that feeds God's people is carried on pilgrimage with them. Christ feeds his people wherever they gather: where two or three are gathered in my name, there am I among them (Matt 18:20).</p>",
+"26": "<p>A shadow: The poles remain in the rings of the table permanently — same rule as the ark. The provision of Christ is constant and portable, not tied to geography or season. Paul writes from prison with the same confidence: my God will supply every need of yours according to his riches in glory in Christ Jesus (Phil 4:19).</p>",
+"27": "<p>A shadow: Plates, dishes, flagons, and bowls of pure gold for the table — vessels for serving and pouring. The new covenant meal extends this: bread and cup (Matt 26:26-28), the body and blood of Christ, the complete provision of the new presence-table.</p>",
+"28": "<p>A shadow: And you shall set the bread of the Presence on the table before me regularly. The bread is set out perpetually — every Sabbath, twelve loaves, one for each tribe (Lev 24:5-9). Jesus feeds all twelve tribes of the new Israel: I am the bread of life; whoever comes to me shall not hunger (John 6:35). The twelve loaves prefigure the universal reach of Christ's provision.</p>",
+"29": "<p>A shadow: The bread is eaten by the priests in a holy place (Lev 24:9). David's emergency eating of the showbread (1 Sam 21:1-6) becomes the occasion for Jesus' teaching that the Son of Man is Lord of the Sabbath (Matt 12:1-8). Christ supersedes both the tabernacle regulations and the Sabbath law — he is the reality the bread pointed toward.</p>",
+"30": "<p>A shadow: The Lampstand (<em>menorah</em>) is made of pure gold — hammered, beaten (<em>miqqshah</em>) from a single piece. Christ the Light of the World (John 8:12) was himself beaten — the suffering servant bruised for our iniquities (Isa 53:5). The hammered gold images a glory achieved through suffering.</p>",
+"31": "<p>A shadow: The menorah has a central shaft with three branches on each side — seven total. Seven signifies divine perfection. In Revelation 1:12-20, the risen Christ walks among seven golden lampstands identified as the seven churches — the menorah becomes a figure of Christ's presence among his gathered people.</p>",
+"32": "<p>A shadow: Cups shaped like almond blossoms adorn every branch. The almond (<em>shaqed</em>) is the watching or waking tree — first to bloom, symbol of alertness and divine watchfulness (Jer 1:11-12). Christ is the same yesterday and today and forever (Heb 13:8) — the one who always watches over his people.</p>",
+"33": "<p>A shadow: Six branches come from the central shaft — a living, growing tree of light. The menorah as a stylized tree of life in the holy place recalls the Garden of Eden. Christ restores access to the tree of life (Rev 2:7, 22:2); in him the exile from Eden is reversed and the light of life returns.</p>",
+"34": "<p>A shadow: The menorah is a single piece — shaft and branches all hammered from one talent of gold. No assembly from separate parts; organic unity from root to tip. John pictures Christ and his people with the same organic unity: I am the vine; you are the branches (John 15:5). The light of the menorah is one light, though distributed through seven flames.</p>",
+"35": "<p>A shadow: See that you make them after the pattern for them, which is being shown you on the mountain. This repeated command emphasizes the derivative nature of all earthly sanctuary objects — they are copies. Hebrews 9:23-24 makes the same point: Christ has entered not into holy places made with hands but into heaven itself.</p>",
+"36": "<p>A shadow: The high priest trims and fills the lamps every morning and evening (Exod 30:7-8). Christ maintains the light of his church perpetually: I will never leave you nor forsake you (Heb 13:5). The church's light is sustained by the one who is himself the light.</p>",
+"37": "<p>A shadow: The menorah's knobs, branches, and base are all one beaten work of pure gold. Every part contributes to a single function: giving light. Paul's body-of-Christ metaphor (1 Cor 12:12-27) describes the same organic unity: many parts, one body, one source of life and light.</p>",
+"38": "<p>A shadow: The seven lamps shed light in the holy place — the only source of light in that windowless room. Christ is the light of the world (John 8:12) — in him, God's dwelling place is filled with his own glory.</p>",
+"39": "<p>A shadow: The tongs and trays for the menorah are also pure gold. Every accessory serves the lampstand's function. In the new covenant, all ministry gifts (Eph 4:11-12) serve the same purpose: that the church might shine as the light of the world (Matt 5:14), holding out the word of life (Phil 2:15-16).</p>",
+"40": "<p>A direct type: The menorah made from a full talent of pure gold, and the repeated pattern-command close this section. Revelation 21:23 announces the fulfillment of the menorah's witness: the city has no need of sun or moon to shine on it, for the glory of God gives it light, and its lamp is the Lamb.</p>"
+},
+"26": {
+"1": "<p>A shadow: The innermost curtain of the Tabernacle — ten panels of twisted fine linen in blue, purple, and scarlet with cherubim woven in — forms the ceiling and walls of the holy place. The cherubim embroidered overhead recall Eden's guardian cherubim (Gen 3:24) and the mercy seat cherubim (Exod 25:18). The Tabernacle is a reconstituted garden-sanctuary; Christ's work tears the veil and reopens the way to God's presence.</p>",
+"2": "<p>A theme: Each curtain panel has identical dimensions — precise uniformity. The precision of the Tabernacle construction mirrors the precision of divine plan. Paul writes that Christ was sent in the fullness of time (<em>pleroma tou chronou</em>, Gal 4:4) — the exact moment, the right dimensions of redemptive history fulfilled in one person.</p>",
+"3": "<p>A theme: Five curtain panels joined to five — two sets of five coupled together. The number five recurs throughout the Tabernacle. Christ's five wounds — the visible signs of his grace — become the marks of his resurrection body (John 20:27).</p>",
+"4": "<p>A shadow: Loops of blue on the edge of each set of curtains, to be joined by clasps. At the cross, what was torn (the veil, the separation between God and humanity) is rejoined through Christ's blood. The curtains joined at the seam image atonement as the rejoining of what sin separated.</p>",
+"5": "<p>A shadow: Fifty loops on each curtain set, corresponding exactly so the clasps can join them. The fifty days from Passover to Pentecost (Shavuot) mark the same careful divine timing: the exodus redemption finds its covenant-sealing at Sinai, as Christ's resurrection finds its covenant-sealing in the Spirit poured out at Pentecost.</p>",
+"6": "<p>A shadow: Fifty golden clasps join the two sets of curtains into one. Christ's atoning work is described in Ephesians 2:14-16 as making one new humanity out of two — Jew and Gentile — reconciling both to God in one body through the cross. The golden clasps of unity prefigure the cross as the joining point of all humanity.</p>",
+"7": "<p>A shadow: The second layer — eleven goat-hair curtains (<em>yeriot izzim</em>) — forms a tent over the inner linen curtains. Goat hair is the rougher, exterior layer that protects the beautiful inner dwelling. This images Christ's incarnate humanity: the form of a servant (Phil 2:7) that veils his divine glory while housing God's presence.</p>",
+"8": "<p>A shadow: The goat-hair curtain panels are slightly larger than the linen panels — the extra length drapes down over the sides. The hiding and revealing of Christ's glory follows this logic: the outer form drapes down to conceal, while the inner reality of his divine nature is protected within. Peter's confession breaks through the veil: you are the Christ, the Son of the living God (Matt 16:16).</p>",
+"9": "<p>A shadow: Five goat-hair panels joined to six, with the sixth panel doubled over at the front — creating an extra flap at the entrance. The entrance to the Tabernacle is always a point of particular care. Christ says: I am the door; if anyone enters by me, he will be saved (John 10:9) — the entrance is always about him.</p>",
+"10": "<p>A shadow: Fifty loops on the outer goat-hair curtains, matching the fifty loops of the inner linen. The two layers are precisely coordinated — outer and inner aligned. Christ's humanity and divinity are not in conflict but perfectly coordinated — two natures, one person, no confusion, no separation (Council of Chalcedon, 451 AD).</p>",
+"11": "<p>A shadow: Bronze clasps (not gold) join the outer goat-hair curtains. Bronze throughout the Tabernacle is associated with judgment and sacrifice. The outer covering is held together by bronze — judgment-metal — because it must bear the elements. Christ's humanity bore the full weight of the curse; his human nature was the appointed bearer of suffering (Heb 2:10).</p>",
+"12": "<p>A shadow: The extra half-panel of the goat-hair curtain hangs down over the back of the Tabernacle. Nothing is wasted; every dimension is purposeful. The back of the Tabernacle, like the back God showed Moses in the cleft (Exod 33:23), is part of the same divine intentionality — even what seems secondary serves the whole design.</p>",
+"13": "<p>A shadow: The goat-hair curtains hang down a cubit on either side. The divine presence is enclosed and protected on all sides. Paul's benediction echoes this enclosure: that you may have strength to comprehend the breadth and length and height and depth of Christ's love (Eph 3:18).</p>",
+"14": "<p>A shadow: Two more layers — ram skins dyed red, and tahash skins — form the outermost covering. The innermost beauty (cherubim-embroidered linen) is completely hidden from outside; only the rough outer skin is visible. This images the paradox of the Incarnation: he had no form or majesty that we should look at him... he was despised and rejected (Isa 53:2-3), yet within, the full glory of God.</p>",
+"15": "<p>A shadow: The boards (<em>qereshim</em>) of acacia wood, standing upright, form the walls. Acacia is incorruptible desert wood — it does not rot. Christ's body, uniquely, did not see corruption (Ps 16:10, Acts 2:27-31) — the apostolic argument from Psalm 16 is that Jesus is the true incorruptible one whose body was raised before decay.</p>",
+"16": "<p>A shadow: Each board is 10 cubits high and 1.5 cubits wide. The boards standing tall image the resurrection — what lay horizontal in death stands upright in resurrection. Paul describes the church as a holy temple in the Lord, being built together into a dwelling place for God by the Spirit (Eph 2:21-22).</p>",
+"17": "<p>A shadow: Two tenons (<em>yadot</em>, literally hands) on the base of each board, fitting into the silver sockets below. Christ as the foundation (1 Cor 3:11) and believers as living stones (1 Pet 2:5) built on him extend this image: each member fits into Christ by the work of redemption.</p>",
+"18": "<p>A shadow: Twenty boards for the south side. The careful accounting models the precision of divine construction. Jesus says: I will build my church, and the gates of hell shall not prevail against it (Matt 16:18) — the same divine architect, the same meticulous construction, an unshakeable spiritual edifice.</p>",
+"19": "<p>A direct type: Forty silver sockets — two under each board — hold the boards upright. The silver comes from the census ransom money (Exod 30:16, 38:25-28) — each socket represents one person's atonement payment. The entire Tabernacle structure stands on silver atonement money. Christ's atoning work is the very foundation on which everything stands.</p>",
+"20": "<p>A shadow: Twenty boards on the north side with forty silver sockets — mirroring the south side exactly. The symmetry images the consistency of God's redemptive work: the same atonement-foundation for every person. There is no distinction (Rom 3:22) — the same silver socket of grace holds up Jew and Gentile alike.</p>",
+"21": "<p>A shadow: Two silver sockets under each board — not one. The doubled foundation speaks of the double security of the believer: no one will snatch them out of my hand... no one is able to snatch them out of the Father's hand (John 10:28-29). Two sockets, two divine hands, one foundation.</p>",
+"22": "<p>A shadow: Six boards for the west end — the end farthest from the entrance. The whole structure is oriented toward the ark; every board points to the mercy seat. In Christ, the entire cosmos finds its orientation: all things were created through him and for him (Col 1:16).</p>",
+"23": "<p>A shadow: Two boards for the two rear corners — special corner boards. The corners bear the structural stress of the meeting of two walls. Christ is the cornerstone (<em>akrogoniaios</em>, Eph 2:20, 1 Pet 2:6) — the stone at which two walls meet and which holds the tension of diverse peoples into one unified structure.</p>",
+"24": "<p>A shadow: The corner boards are separate beneath but joined at the top to a single ring. Two boards, distinct at the base, joined at the head. This images the unity of the church in Christ: many distinct members, joined at the top — one Lord, one faith, one baptism, one God and Father of all (Eph 4:5-6).</p>",
+"25": "<p>A shadow: Eight boards total at the west end with sixteen silver sockets. The number eight in Hebrew thought connotes resurrection and new beginnings (circumcision on the eighth day, David the eighth son). The west end — oriented toward the Holy of Holies — carries the overtone of resurrection: all Tabernacle worship points toward the place of God's presence, and beyond that, to the resurrection life Christ opens.</p>",
+"26": "<p>A shadow: Crossbars (<em>beriachin</em>) of acacia wood connect the boards horizontally. Vertical boards alone would flex and topple; horizontal crossbars create structural integrity. The horizontal crossbar running through the middle of all boards images the cross as the structural element that holds together what would otherwise collapse — creating horizontal unity across the vertical standing members.</p>",
+"27": "<p>A shadow: Five crossbars on each wall side — the middle bar runs from end to end through the middle of the boards. The single bar passing through all the boards connects every standing member in one continuous line. Christ is all in all (Col 3:11) — passing through every part of his people as the unifying center.</p>",
+"28": "<p>A shadow: The middle crossbar runs through the center of all the boards from end to end. This central bar is hidden inside the boards — not visible on the surface. Christ's indwelling presence in his people is often hidden, interior: Christ in you, the hope of glory (Col 1:27).</p>",
+"29": "<p>A shadow: The boards are overlaid with gold; the rings are gold; the crossbars overlaid with gold. The wood is entirely covered — no bare wood visible. Those in Christ are clothed in him (Gal 3:27) — humanity covered in divine righteousness, the rough wood of fallen nature dressed in the gold of Christ's perfection.</p>",
+"30": "<p>A direct type: Then you shall erect the tabernacle according to the plan for it that you were shown on the mountain. Moses is copying — following a heavenly blueprint. Hebrews 8:5 draws the explicit conclusion: earthly priests serve a copy and shadow of the heavenly things. For when Moses was about to erect the tent, he was instructed: see that you make everything according to the pattern shown you on the mountain.</p>",
+"31": "<p>A direct type: The inner veil (<em>parochet</em>) of blue, purple, scarlet, and fine linen with cherubim is hung to separate the Holy Place from the Most Holy Place. Matthew 27:51 records: the curtain of the temple was torn in two, from top to bottom. Hebrews 10:19-20 interprets it: we have confidence to enter the holy places by the blood of Jesus, by the new and living way that he opened for us through the curtain, that is, through his flesh. The torn veil IS his torn body.</p>",
+"32": "<p>A direct type: The veil hangs on four gold pillars with gold hooks, set in four silver sockets. The pillars are gold-overlaid acacia — the same two-nature image throughout the Tabernacle. The silver sockets continue the atonement-foundation theme. Every structural element of the veil points to the person who would become the way through it: fully divine, fully human, his body broken as atonement.</p>",
+"33": "<p>A direct type: The ark with the mercy seat is placed behind the veil — in the Most Holy Place. God dwells behind it, unapproachable except by the high priest once a year with blood. Hebrews 9:7-8 makes this explicit: the Holy Spirit was indicating that the way into the holy places is not yet opened as long as the first section is still standing. Christ's death ends this first section.</p>",
+"34": "<p>A direct type: The mercy seat is put on top of the ark of the testimony in the Most Holy Place. The mercy seat — atonement — sits above the Law. Paul's conclusion in Romans 8:1 — there is therefore now no condemnation for those who are in Christ Jesus — is the lived reality of this spatial relationship.</p>",
+"35": "<p>A shadow: The table of showbread is set on the north side; the menorah on the south side. Christ is both: I am the bread of life (John 6:35) and I am the light of the world (John 8:12). The two furnishings in the outer holy place image the double gift of Christ — sustenance and sight.</p>",
+"36": "<p>A shadow: The screen (<em>masak</em>) for the entrance to the Tabernacle — blue, purple, scarlet, and fine linen — is a second veil. Christ is both the veil and the way through it: I am the door; if anyone enters by me, he will be saved and will go in and out and find pasture (John 10:9).</p>",
+"37": "<p>A shadow: The entrance screen hangs on five pillars of acacia overlaid with gold, with five bronze sockets — not silver. Bronze (judgment) holds up the entrance; silver (atonement) holds up the inner veil. The distinction points to the two aspects of Christ's work: his bearing of judgment makes the entrance possible; his atonement opens the inner way.</p>"
+},
+"27": {
+"1": "<p>A direct type: The bronze altar (<em>mizbeach hanechoshet</em>) — 5 cubits square and 3 cubits high — made of acacia wood overlaid with bronze. Bronze throughout the Tabernacle signals judgment absorbed. This is the first thing encountered inside the Tabernacle courtyard: before the laver, before the holy place, before the mercy seat, there is an altar of sacrifice. The cross is the first reality of the new covenant; all else flows from it.</p>",
+"2": "<p>A direct type: Four horns at the four corners of the altar. The horns of the altar were the place where atoning blood was applied (Lev 4:7, 18, 25, 30). The four horns face the four cardinal directions — sacrifice reaching in all directions. Christ's atonement is for the sins of the whole world (1 John 2:2), not directionally limited.</p>",
+"3": "<p>A shadow: Pots, shovels, basins, forks, and fire pans — all bronze — for the altar's operation. The workaday instruments of sacrifice are all judgment-metal. There is nothing romantic about atonement: it involves ashes, fat, blood, fire. Hebrews 9:22 states the blunt principle: without the shedding of blood there is no forgiveness of sins.</p>",
+"4": "<p>A shadow: A bronze grating under the altar ledge, with four bronze rings at its corners. The grating allows the fire to draw air from below while ashes fall through. The altar is constructed for sustained burning — the fire is never to go out (Lev 6:12-13). Christ's intercession is unceasing (Heb 7:25): the fire on the altar of his priestly ministry never dies.</p>",
+"5": "<p>A shadow: The grating is set halfway down the altar. The altar holds both the consuming fire of holiness and the remnant of what has been consumed. The cross holds both divine wrath fully spent and human sin fully absorbed — nothing escapes, nothing remains unconsumed in Christ's atoning death.</p>",
+"6": "<p>A shadow: Poles of acacia wood overlaid with bronze for carrying the altar. The altar of sacrifice is portable — carried on pilgrimage with the people. We have an altar from which those who serve the tent have no right to eat (Heb 13:10) — the church's altar goes with it.</p>",
+"7": "<p>A shadow: The poles go through the rings on two sides of the altar. Both the mercy seat and the altar go with God's people on their journey. Atonement (altar) and presence (ark) are always together — justification and fellowship with God are inseparable gifts in Christ.</p>",
+"8": "<p>A shadow: You shall make it hollow, with boards. As it has been shown you on the mountain, so shall it be made. The altar is hollow — a frame filled with earth or stones when in use (cf. Exod 20:24-25). The hollow altar images Christ: the outer form is human and temporal; the inner substance is the eternal weight of sacrifice he bears.</p>",
+"9": "<p>A shadow: The courtyard (<em>chatzer</em>) is set off by fine linen hangings 100 cubits on the south side. The courtyard is the public face of the Tabernacle — accessible to all Israel, not only priests. In the new covenant, the veil torn, all believers are a royal priesthood (1 Pet 2:9), the whole church has access through Christ to the holy presence.</p>",
+"10": "<p>A shadow: Twenty bronze pillars with twenty bronze sockets, with silver hooks and bands. Bronze holds the courtyard up from the ground; silver decorates the tops. The courtyard is entered through judgment absorbed (bronze), sustained by atonement (silver). The path into God's presence under both covenants is the same: through sacrifice and atonement.</p>",
+"11": "<p>A shadow: The north side mirrors the south exactly — 100 cubits, twenty pillars, twenty bronze sockets, silver hooks and bands. The symmetry images the fairness and universality of the gospel: the same terms of access on every side. Paul: there is neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus (Gal 3:28).</p>",
+"12": "<p>A shadow: The west end of the courtyard is 50 cubits wide with ten pillars and ten sockets. The western orientation (toward the Most Holy Place) is the direction of approach. Christians orient themselves toward Christ: let us run with endurance the race that is set before us, looking to Jesus (Heb 12:1-2).</p>",
+"13": "<p>A shadow: The east end — the entrance side — is also 50 cubits. In Eden, humanity was driven east from God's presence (Gen 3:24); the Tabernacle entrance from the east reverses this — the worshiper approaches from the east, moving westward toward God. Christ is the sunrise (<em>anatole</em>) from on high who has visited us (Luke 1:78) — the light that reverses the eastward exile.</p>",
+"14": "<p>A shadow: The north side of the entrance — 15 cubits, three pillars, three sockets. The entrance to God's presence has a structured approach — not casual, not without mediation. Christ says: no one comes to the Father except through me (John 14:6): structured access, one mediator, the same message as the courtyard entrance gate.</p>",
+"15": "<p>A shadow: The south side of the entrance mirrors the north — 15 cubits, three pillars, three sockets. In Revelation 21:13, the New Jerusalem has gates on all four sides — the entrance to God's presence opened in every direction. The courtyard's eastern entrance, opened to all who come, anticipates the universal welcome of the new covenant.</p>",
+"16": "<p>A direct type: The gate of the courtyard — 20 cubits wide, made of blue, purple, scarlet, and fine linen — is the one and only entrance; there are no side doors. Jesus' claim I am the door (John 10:9) is set precisely in the context of those who climbed in by another way (v1) — the uniqueness of the gate is the point. There is one entrance to the Father's presence, and it is Christ.</p>",
+"17": "<p>A shadow: All the pillars of the courtyard are connected with silver bands and have silver hooks. Silver atonement-money holds together the entire visible perimeter of the courtyard. The visual message to every approaching worshiper: what holds this whole structure together is ransom-silver, redemption paid. The perimeter of the church is the atonement of Christ.</p>",
+"18": "<p>A shadow: The courtyard is 100 cubits by 50 cubits, enclosed by 5-cubit-high fine linen hangings. The height of 5 cubits blocks sight of the interior from outside — the Tabernacle is hidden from casual view. The realities of Christ's atoning work are spiritually discerned (1 Cor 2:14): the natural person does not accept the things of the Spirit of God, for they are folly to him.</p>",
+"19": "<p>A shadow: All the utensils of the Tabernacle service, all its pegs, and all the pegs of the court are bronze. Every functional instrument is judgment-metal. The operations of the sanctuary are all about absorbing judgment: sacrifice, atonement, covering. Christ's ministry is comprehensive: not just his death but all righteousness fulfilled (Matt 3:15).</p>",
+"20": "<p>A shadow: Pure olive oil beaten (<em>katit</em>) for the lamps is brought by the people to keep the lamps burning continually. The olive oil must be beaten — pressed, crushed. <em>Katit</em> means crushed or beaten. The Spirit who anoints Christ and the church is the Spirit of the Anointed One, poured out from the one who was himself crushed (Isa 53:5, 53:10). The light of the church is fed by the oil of the Spirit, who proceeds from the crushed Servant.</p>",
+"21": "<p>A direct type: Aaron and his sons are to tend the lamps from evening to morning before YHWH — a perpetual statute throughout their generations. The priestly care of the lampstand night and day images Christ's unceasing intercession: he is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them (Heb 7:25). The lamps never go out because the High Priest never stops tending them.</p>"
+}
 }
 
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
-  }
-}
-
-def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+data = load_comm('mkt-christ', 'exodus')
+merge_comm(data, new_entries)
+save_comm('mkt-christ', 'exodus', data)
+print('Exodus 25-27 mkt-christ written.')

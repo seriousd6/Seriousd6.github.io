@@ -1,45 +1,37 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Christ Commentary — Ezekiel chapters 39–40
+Run: python3 scripts/zc-christ-ezekiel-39-40.py
+
+Ch 39: Gog's total defeat and its aftermath — eschatological reversal, YHWH's glory
+       displayed, Spirit outpoured. Rev 19:17-20 and Rev 20:7-10 quote/echo this chapter
+       directly; Pentecost (Acts 2:33) fulfills v. 29.
+Ch 40: The new temple vision opens on Yom Kippur 573 BCE. The measuring figure
+       (gleaming bronze, linen cord, measuring reed) prefigures the risen Christ of Rev 1.
+       The graduated access (outer court → inner court → temple) fulfilled in Hebrews 9-10.
+       Sons of Zadok = faithful high priest; perfect square inner court = New Jerusalem cube.
+
+Interpretation decisions:
+- Every verse gets an entry; brief is fine for architectural measurements.
+- The dominant NT lenses: Rev 19-20 for ch 39; Rev 1, Hebrews 9-10 for ch 40.
+- "Holy name" in ch 39 is read through Phil 2:9-11 (name above every name).
+- Spirit poured out (39:29) = Pentecost as the first fulfillment, new creation as final.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +41,96 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
+EZEKIEL = {
+  "39": {
+    "1": "<p>YHWH commands Ezekiel to prophesy against Gog a second time (cf. 38:1-9) — the repetition signals an amplification of the vision, not a second invasion. The Christological lens: Christ's final eschatological victory over all enemies is the ultimate fulfillment of YHWH's sovereignty announced here. The formula 'thus says the Lord GOD' — <em>kōh ʾāmar ʾădōnāy YHWH</em> — is the prophetic word-event in which divine authority is fully invested; Jesus fulfills this formula by speaking on his own authority ('But I say to you,' Matt 5:22), claiming the very authority the prophetic formula pointed to.</p>",
+    "2": "<p>YHWH will 'turn back' and 'drive forward' Gog — a sovereign reversal in which the enemy's own momentum becomes the mechanism of his destruction. The NT parallel is the cross: in Acts 2:23, what enemies intended as destruction ('according to the definite plan and foreknowledge of God') becomes the instrument of salvation. The enemy does not circumvent YHWH's purposes; he executes them against himself. This is the deep logic of the Gog oracle: the assembled enemy is brought precisely to the site of his defeat.</p>",
+    "3": "<p>The stripping of weapons — bow and arrows from Gog's hands — prefigures Christological disarmament of the powers: 'He disarmed the rulers and authorities and put them to open shame, triumphing over them in him' (Col 2:15). The enemy's military equipment is useless against the divine sovereign. At the cross, the weapons the powers wielded (accusation, condemnation, death) were turned against those who wielded them — the 'bow struck from the left hand' of every hostile spiritual power.</p>",
+    "4": "<p>Gog falls 'on the mountains of Israel' — the land YHWH gave to his people becomes the site of enemy defeat. The birds of prey and wild animals consuming Gog's army will be revisited in 39:17-20 and cited almost verbatim in Revelation 19:17-21 for the great supper of God at Christ's parousia. Christ's return is the definitive enactment of this divine victory: the one who fell on the mountains of Israel in apparent defeat (the crucifixion in the land of Israel) returns as the one before whom all enemies fall.</p>",
+    "5": "<p>'For I have spoken, declares the Lord GOD' — the divine word guarantees the outcome. No contingency, no uncertainty. The NT parallel is Jesus's resurrection: 'It was impossible for death to hold him' (Acts 2:24), because the word of YHWH's victory is self-executing. The prophetic perfect is implicit here — Gog's fall is as certain as if already accomplished. Christ's victory at the cross was accomplished in the same irrevocable certainty: 'It is finished' (John 19:30) enacts the irreversibility of YHWH's declared purpose.</p>",
+    "6": "<p>Fire on Magog and the coastlands extends the judgment to the known world — the defeat of Gog is not local but cosmic. The recognition formula 'they will know that I am the LORD' is the goal: not only destruction but revelation. The Christological fulfillment: at Christ's return, 'every knee will bow and every tongue will confess that Jesus Christ is Lord' (Phil 2:10-11) — the cosmic recognition that YHWH's sovereignty belongs to Jesus is the eschatological fulfillment of the nations 'knowing YHWH.'</p>",
+    "7": "<p>'I will make my holy name known ... I will not let my holy name be profaned anymore; and the nations will know that I am the LORD, the Holy One in Israel.' The holy name that YHWH will not allow to be profaned is the same name that Paul identifies as exalted above every name: 'God has highly exalted him and bestowed on him the name that is above every name' (Phil 2:9). Christ's name is YHWH's holy name given its ultimate glorification — the name that was profaned by Israel's exile is the name that, in Jesus, will never be profaned again because the one who bears it is infinitely worthy.</p>",
+    "8": "<p>'Behold, it has come and it has happened' — the day of YHWH's self-announced victory has arrived. The perfect tenses signal prophetic certainty: the future event is so certain it is spoken as done. Jesus uses the same speech-act at the cross: 'It is finished' (<em>tetelestai</em>, John 19:30) announces the accomplishment of eschatological redemption in the past tense. What the prophets spoke of as yet to come, Jesus speaks of as completed — the fulfillment-declaration matches the prophetic language of certainty.</p>",
+    "9": "<p>The inhabitants of Israel burn Gog's weapons for seven years — the complete sabbatical cycle, signifying total cleansing. Seven years of burning inverts seven years of war: the spoils of the enemy's defeat provide the fuel for the peaceful community's sustenance. The Christological reversal: Christ's death, the weapon the powers intended to destroy him, becomes the perpetual fuel of the church's life — 'we preach Christ crucified' (1 Cor 1:23). The enemy's armaments become the church's provision.</p>",
+    "10": "<p>Israel need not take wood from field or forest — the defeated enemy's weapons supply all they need for seven years. This is a type of superabundant provision from an unexpected source. The NT parallel: the cross, which appeared to be the enemy's definitive weapon against God's people, becomes the inexhaustible source of grace for the church. 'They will plunder those who plundered them and loot those who looted them' — the reversal of exile is total; those stripped by the nations are now enriched by the nations' defeat.</p>",
+    "11": "<p>'Valley of the Travelers' (<em>gê hāʿōbĕrîm</em>, or possibly 'Valley of Abarim') — a burial site that will block the travelers, so great is the heap of the dead. The name Hamon-gog (v. 16, 'the horde of Gog') marks the permanent memorial. The burial of Gog in Israel's land is the inversion of exile: the enemy who threatened to possess the land is buried in it, becoming its permanent testimony to YHWH's victory. Christ's burial in the land of Israel is similarly a sovereign act — the one given 'a grave with the wicked' (Isa 53:9) is buried in Joseph's new tomb, the enemy's own burial logic reversed.</p>",
+    "12": "<p>Seven months of burial to cleanse the land — the full cycle of cleansing after the great battle. The concern for land-purity reflects Num 35:33-34: 'You shall not pollute the land in which you live, for blood pollutes the land.' The Christological echo: Christ's atoning blood, rather than polluting the land, purifies: 'The blood of Jesus his Son cleanses us from all sin' (1 John 1:7). The ritual of cleansing that follows Gog's defeat points to the once-for-all cleansing that follows the cross — no further months of burial required.</p>",
+    "13": "<p>'All the people of the land will bury them, and it will bring them renown on the day I am glorified' — the burial is corporate and leads to YHWH's glorification. The people's work of cleansing participates in the divine act of glorification. The NT parallel: the church's proclamation of the crucified and risen Christ — the announcement of the enemy's defeat — brings glory to the Father (John 17:1-4). The community that works to declare the victory participates in the divine glorification that the victory occasions.</p>",
+    "14": "<p>Dedicated burial teams comb the land for remaining bones — a systematic, comprehensive cleansing over time. The thoroughness signals that YHWH's victory leaves nothing unfinished. The Christological parallel: 'This is the will of him who sent me, that I should lose nothing of all that he has given me' (John 6:39). Christ's redemptive work is equally comprehensive — no scattered bone of those given to him is overlooked; the same thoroughness that marks Gog's burial marks the gathering of the redeemed.</p>",
+    "15": "<p>When a traveler sees a bone, he marks it for burial teams — even isolated bones are accounted for. The detail emphasizes the exhaustive nature of the cleansing. The NT echo: in Revelation 20:13, 'the sea gave up the dead who were in it, and Death and Hades gave up the dead who were in them' — no scattered remains are overlooked in the final resurrection. The One who conquers death is as thorough as the burial teams sweeping Gog's battlefield.</p>",
+    "16": "<p>The city named Hamonah ('the horde') — the very name of the enemy becomes the name of a city in the cleansed land, a permanent memorial of YHWH's victory. The topographical reimagining: what was a site of threat is now a place within the restored community. The cross similarly transforms the vocabulary of death: 'crucified' becomes the church's boast (Gal 6:14), the instrument of execution becomes the sign of salvation. The enemy's name, absorbed into the geography of God's people, testifies permanently to defeat.</p>",
+    "17": "<p>'Speak to every kind of bird and to every wild animal: Assemble and come; gather from every side to my sacrifice.' This sacrificial feast — Gog's army as the sacrificial meal for birds and animals — is directly quoted in Revelation 19:17-18: 'Come, gather for the great supper of God, to eat the flesh of kings, the flesh of captains ...' The angel standing in the sun calling the birds at Christ's parousia is Ezekiel's oracle enacted. The feast that Ezekiel described for Gog's defeat is explicitly the feast that follows Christ's return in Revelation.</p>",
+    "18": "<p>'You will eat the flesh of the mighty and drink the blood of the earth's princes — rams, lambs, and goats, bulls, all the fatlings of Bashan.' The imagery of sacrificial animals applied to human warriors is deliberately inverted: those who sacrificed others become the sacrifice. The Revelation 19:18 echo extends the list to 'kings, captains, mighty men, horses and their riders.' The irony is total: the empire that devoured God's people becomes food for the birds — the predators become the prey at the advent of the divine Warrior.</p>",
+    "19": "<p>'You will eat fat until you are gorged and drink blood until you are drunk — from my sacrifice that I have prepared for you.' The divine sacrifice (<em>zibḥî</em>, 'my sacrifice') is YHWH's own prepared feast — the battle is YHWH's doing, not Israel's; he is both host and slaughterer. The Christological weight: the cross is also YHWH's own prepared sacrifice — 'God was in Christ reconciling the world to himself' (2 Cor 5:19). The sacrifice of Gog foreshadows in inverted form the sacrifice of Christ: one is the wicked sacrificed for their wickedness; the other is the innocent sacrificed for the wicked's salvation.</p>",
+    "20": "<p>'You will be filled at my table with horses and chariots, with mighty warriors and every kind of soldier' — the enemy's military technology is part of the feast. The table of YHWH — normally the site of covenant communion and blessing — here becomes the site of enemy consumption. This is the negative counterpart to the positive 'table in the presence of my enemies' (Ps 23:5). At Christ's return, the powers that stood against the people of God are finally consumed; the divine table is set for both feasts, depending on one's posture toward the King.</p>",
+    "21": "<p>'I will display my glory among the nations, and all the nations will see my judgment that I have carried out.' The glory-display (<em>ʾet-kĕbōdî</em>) is the purpose of Gog's defeat: not national vindication alone but divine revelation. The Christological fulfillment: 'The Son of Man will come in his glory ... and all the nations will be gathered before him' (Matt 25:31-32). Christ's return is the ultimate manifestation of divine glory to the watching nations — the judgment Ezekiel prophesied is executed by the Son given all authority (Matt 28:18).</p>",
+    "22": "<p>'From that day forward, the house of Israel will know that I am the LORD their God.' The recognition formula now addresses Israel specifically — having witnessed YHWH's rescue, they know with unambiguous certainty. The Christological trajectory: Paul in Romans 11:26-27 sees this comprehensive Israel-knowledge as the eschatological conclusion of the age, citing Isa 59:20-21 and Jer 31:33 in parallel. 'All Israel will be saved' — the comprehensive knowing of YHWH that Ezekiel prophesied will occur when 'the Deliverer will come from Zion,' whom Paul identifies with Christ.</p>",
+    "23": "<p>'The nations will know that the house of Israel went into exile because of their iniquity — because they were unfaithful to me, I hid my face from them.' The exile is publicly interpreted: the nations who watched Israel be exiled will understand at last that it was covenant-faithlessness, not YHWH's weakness. The Christological echo: 'He made himself nothing ... becoming obedient to the point of death' (Phil 2:7-8) — Christ's apparent weakness (the 'hidden face' of God in the crucifixion) will be publicly declared at the resurrection as the mechanism of divine purpose, not divine failure.</p>",
+    "24": "<p>'I dealt with them according to their uncleanness and their transgressions, and I hid my face from them.' The <em>hester panim</em> (hiding of YHWH's face) is the ultimate covenant curse (Deut 31:17-18) — divine abandonment in response to covenant breach. Jesus's cry from the cross — 'My God, my God, why have you forsaken me?' (Matt 27:46) — is the ultimate <em>hester panim</em>: the Son, having taken on the covenant curse of Israel's transgressions, experiences the very abandonment that exile signified. He enters the exile that Israel deserved.</p>",
+    "25": "<p>'Now I will restore the fortunes of Jacob and have compassion on the whole house of Israel, and I will be zealous for my holy name.' After the <em>hester panim</em> of v. 24, YHWH's restoration-zeal returns. The resurrection is God's 'now I will restore' after the cross: what looked like divine abandonment gives way to vindication — 'God raised him up, loosing the pangs of death' (Acts 2:24). The zeal for the holy name that drives the restoration finds its ultimate expression in the name given above every name to the risen Christ (Phil 2:9).</p>",
+    "26": "<p>'After they have borne their shame and all their faithlessness by which they were unfaithful to me, when they dwell securely in their land with no one to make them afraid.' The bearing of shame (<em>nāśĕʾû ʾet-kĕlimmātām</em>) is the precondition for secure dwelling. The Christological inversion: Christ bears the shame of his people so they need not carry it — 'looking to Jesus, the founder and perfecter of our faith, who for the joy that was set before him endured the cross, despising the shame' (Heb 12:2). He bears the covenant shame that was Israel's, enabling the secure dwelling that follows.</p>",
+    "27": "<p>'When I have brought them back from the peoples and gathered them from the lands of their enemies, and through them have shown myself holy in the sight of many nations' — the gathering of Israel is itself a display of divine holiness to the nations. The NT eschatological gathering is Christ's own: 'He will send out his angels with a loud trumpet call, and they will gather his elect from the four winds' (Matt 24:31). The eschatological ingathering that Ezekiel prophesied is accomplished by the Son of Man who sends his angels.</p>",
+    "28": "<p>'They will know that I am the LORD their God — I who sent them into exile among the nations, yet I have gathered them to their own land and left none of them behind.' 'Left none behind' (<em>lōʾ ʾôtîr ʿôd mihem šām</em>) — complete ingathering, not a remnant. The Christological parallel is explicit in Jesus's words: 'This is the will of him who sent me, that I should lose nothing of all that he has given me, but raise it up on the last day' (John 6:39). The God who leaves none of his exiled people behind is the same as the Son who loses none of those the Father has given him.</p>",
+    "29": "<p>'I will no longer hide my face from them, for I have poured out my Spirit on the house of Israel.' The chapter's climax: the reversal of <em>hester panim</em> is sealed by the Spirit's outpouring. Peter on Pentecost applies Joel 2:28-32 to the Spirit-event of Acts 2, but Ezekiel 39:29 is the structural prototype: the Spirit poured out signals the definitive end of divine hiddenness. 'God has poured out his love into our hearts through the Holy Spirit who has been given to us' (Rom 5:5). The Spirit's outpouring is the unveiled face of God — the opposite of abandonment — permanently mediating the divine presence to his gathered people.</p>"
   },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
-}
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
+  "40": {
+    "1": "<p>The vision of the new temple begins on the tenth of the first month in the twenty-fifth year of exile — Yom Kippur, the Day of Atonement, 573 BCE. The date is not incidental: the Day of Atonement was the one day the high priest could enter the Most Holy Place, the annual enactment of restored access between a holy God and a sinful people. The entire temple vision (chs. 40-48) begins on this day of maximal atonement-significance. The Christological weight: 'He entered once for all into the holy places ... through his own blood, thus securing an eternal redemption' (Heb 9:12). The single annual entrance of the high priest gave way to Christ's once-for-all entrance.</p>",
+    "2": "<p>Ezekiel is carried 'in divine visions' (<em>bĕmarʾôt ʾĕlōhîm</em>) to a high mountain with 'something resembling a city' on its southern slope. The high mountain is the eschatological Zion — 'the mountain of the house of the LORD shall be established as the highest of the mountains' (Mic 4:1; Isa 2:2). John's vision of the New Jerusalem similarly comes from a great, high mountain (Rev 21:10): 'He carried me away in the Spirit to a great, high mountain, and showed me the holy city Jerusalem.' Ezekiel's visionary transport to the mountain of God is the prototype for the Seer's vision of the final city-temple.</p>",
+    "3": "<p>The measuring figure — 'a man whose appearance was like gleaming bronze' (<em>kĕmareʾēh nĕḥōšet</em>), holding a linen cord and measuring reed — is the angelomorphic guide of the vision. The description 'gleaming bronze' is the same vocabulary used for the feet of the risen Christ: 'his feet were like burnished bronze refined in a furnace' (Rev 1:15). The measuring activity (Rev 11:1; 21:15) is also Christologically associated: in Revelation 21:15-17 the angel measures the New Jerusalem using a measuring rod, directly echoing Ezekiel's temple-measuring. The measuring figure points to the Christ who both measures and inhabits the final temple.</p>",
+    "4": "<p>'Son of man, look with your eyes, hear with your ears, and fix your attention on everything I am showing you — for you were brought here in order to show it to you.' The imperative of attentive reception: the vision is given for proclamation ('declare all that you see to the house of Israel,' v. 4b). The Christological role: Jesus as the Son who declares what he has seen with the Father — 'No one has ever seen God; the only God, who is at the Father's side, he has made him known' (John 1:18). The one who comes from the Father's presence to declare what he has seen is the fulfillment of the prophet-receiver role Ezekiel inhabits here.</p>",
+    "5": "<p>The outer wall measured with a 'long cubit' (seven handbreadths rather than six) — a precision that signals this is no ordinary building. The wall surrounding the temple complex is the boundary between the holy and the common. The Christological fulfillment: the dividing wall between Jew and Gentile, and between humanity and God's presence, is abolished in Christ — 'he has broken down in his flesh the dividing wall of hostility' (Eph 2:14). The outer boundary of Ezekiel's temple gives way to the open-access community of the new temple where all who are in Christ have full citizenship.</p>",
+    "6": "<p>The east-facing gate is measured first. The eastern orientation is theologically weighted: the divine glory that departed through the east gate (Ezek 10:19; 11:23) will return through the east gate (Ezek 43:2-4; 44:2). The gate faces the sunrise — the direction of divine glory and, for the NT community, the direction of the Son's return: 'As the lightning comes from the east and shines as far as the west, so will be the coming of the Son of Man' (Matt 24:27). The eastern orientation of this first gate frames the entire temple vision eschatologically.</p>",
+    "7": "<p>The guardrooms flank the gate passage — three on each side, six total. The guardroom design follows the pattern of Solomon's temple and the Iron Age gate-city. In the new temple, those who guard the gate are transformed: the Levitical gatekeepers who controlled access in the old order give way to Christ himself as the gate: 'I am the gate; whoever enters by me will be saved' (John 10:9). The architectural gatekeeping function is fulfilled in Christ's person — he is the entry-point, not merely the one who controls entry.</p>",
+    "8": "<p>The inner porch of the gate — one reed in depth. The layered entries (outer threshold, guardroom passage, inner vestibule) create a graduated approach, each threshold marking a step deeper into the sacred precinct. The Christological reading: Hebrews 9-10 interprets the tabernacle's graduated access as a 'shadow of the good things to come' (Heb 10:1). The series of thresholds is the architectural expression of the progressive-access logic that Christ's high-priestly work fulfills: 'We have confidence to enter the holy places by the blood of Jesus, by the new and living way he opened for us' (Heb 10:19-20).</p>",
+    "9": "<p>The entry porch of eight cubits 'faced inward' — oriented toward the interior rather than the exterior, pointing deeper into the sanctuary. The inward orientation is a spatial metaphor for the direction of Christological movement: the new covenant's transformation works from the inside out, law written on hearts (Jer 31:33), Spirit dwelling within (Ezek 36:27). The entry oriented inward anticipates the Spirit-indwelling community where the temple's inner logic governs the gathered worshippers.</p>",
+    "10": "<p>The east gate's six guardrooms — three per side, all the same size, with matching doorposts. The symmetry signals order, proportion, divine precision. The Christological reading: the new temple is perfectly ordered because its architect and inhabitant is the same — 'the one who descends is the same as the one who ascended, that he might fill all things' (Eph 4:10). The geometric precision of the temple measurements corresponds to the completion and fullness (plērōma) that characterizes Christ's redemptive work and its architectural expression in the gathered community.</p>",
+    "11": "<p>The gate opening: ten cubits wide, the total passage thirteen cubits long. The measurements establish proportional access — not a narrow passage requiring special entry technique, but a defined, dignified opening. The Christological gate-language: Jesus's 'I am the gate' (John 10:9) is not restrictive but salvific — 'whoever enters by me will be saved and will go in and out and find pasture.' The measured gate of Ezekiel becomes the person of Christ: the entry is both specific (only through him) and generous (spacious, accessible to all who come).</p>",
+    "12": "<p>The low barriers in front of each guardroom — one cubit, defining the guardroom space. Small architectural details accumulate into a coherent whole. The Christological principle: every detail of the new temple's construction is the expression of divine intention. 'In him the whole structure, being joined together, grows into a holy temple in the Lord' (Eph 2:21) — the 'whole structure' (<em>pāsa hē oikodomē</em>) includes even the minor architectural elements, because every member of the body fitted together participates in the temple-growth.</p>",
+    "13": "<p>The full gate-width measured ceiling to ceiling: twenty-five cubits. The measurement 'door facing door' captures the axial symmetry — each door aligns with its counterpart across the passage. The bilateral symmetry of the gate structure speaks to the judicial-access character of the gate: both sides of the entrance are equally defined and equally open. The risen Christ holds 'the keys of Death and Hades' (Rev 1:18) — the gateway that once shut out the living now stands open because the one who conquered death holds its key.</p>",
+    "14": "<p>The sixty-cubit doorposts rising above the court. The monumental scale of the gateposts signals the grandeur of the entrance. The Christological resonance: the temple-gate columns in Solomon's temple were named Jachin ('He establishes') and Boaz ('In him is strength') — 1 Kings 7:21. Paul applies both qualities to Christ: 'in him all things hold together' (<em>ta panta en autō synestēken</em>, Col 1:17) and 'I can do all things through him who strengthens me' (Phil 4:13). The great columns that marked Israel's temple entry find their Christological meaning in the one who both establishes and strengthens.</p>",
+    "15": "<p>The total depth of the gate-complex: fifty cubits from outer face to inner vestibule. Fifty is the jubilee number — the year of release, debt-cancellation, and return to inheritance (Lev 25). The gateway of fifty cubits is architecturally jubilary: entry through this gate is entry into the liberation from all accumulated debt. The Christological jubilee: Jesus at Nazareth (Luke 4:18-19) reads Isaiah 61 and announces 'the year of the LORD's favor' — the eschatological jubilee in which all debts are cancelled, all captives released, all land returned. The fifty-cubit gate is a jubilee gate.</p>",
+    "16": "<p>Recessed windows facing inward in the guardrooms and vestibules, and palm decorations throughout. The windows admit light but face inward — illuminating the interior of the sacred precinct. The palm trees (<em>tîmōrîm</em>) echo Solomon's temple (1 Kings 6:29-32) and anticipate the New Jerusalem's 'tree of life ... bearing twelve kinds of fruit' (Rev 22:2). Christ as the 'light of the world' (John 8:12) is the interior illumination of the new temple — the light that the inward-facing windows admit. The palm decorations tie the new temple to the old, fulfilling rather than replacing the Solomonic aesthetic.</p>",
+    "17": "<p>Ezekiel is brought into the outer court: chambers surrounding it, thirty in total, fronting a pavement. The outer court is the most accessible space — where the general Israelite community gathered. The thirty chambers may correspond to the thirty courses of Levitical service (1 Chr 24-26). The Christological outer court is the church gathered from all nations: 'the outer court of the temple has been given over to the nations' (Rev 11:2). The inclusion of Gentiles in the outer court — already present in the Solomonic 'court of the Gentiles' — is the type for the multiethnic gathered community of Christ.</p>",
+    "18": "<p>The lower pavement runs alongside the gates, matching their length. The pavement connects the gates to the chambers — a thoroughfare of access. The Christological thoroughfare: 'I am the way' (John 14:6) — not merely a gate but a path that extends from entry to destination. The pavement that connects gate to gate in Ezekiel's temple vision is the spatial metaphor for the way of Christ that connects the entry-point (faith) to the destination (fullness of the divine presence).</p>",
+    "19": "<p>The measured distance from outer gate to inner court: one hundred cubits. The proportional space between outer and inner courts establishes the graduated approach. The hundred-cubit span between courts is the architectural expression of the distinction between common access and holy access — the space Hebrews 9 calls 'the first section' and 'the second section' (Heb 9:2-7). Christ 'passed through the greater and more perfect tent not made with hands' (Heb 9:11) — he traverses the hundred-cubit span on behalf of all who cannot.</p>",
+    "20": "<p>The north gate of the outer court receives the same measuring attention as the east gate. The measurement is repeated — north, south, east — establishing that the entire outer court perimeter is equally ordered and equally accessible. The Christological completeness: the new temple has no back door, no neglected side. All approaches are measured, all entries dignified. 'There is neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus' (Gal 3:28) — the multi-directional accessibility of Ezekiel's gates anticipates the multi-ethnic, multi-status access Christ grants.</p>",
+    "21": "<p>The north outer gate matches the east gate: same dimensions, same structure. The repetition of identical dimensions (fifty cubits long, twenty-five cubits wide) for each gate ensures no gate has an architectural advantage over another. The Christological equivalence: all entry to the Father is 'through me' (John 14:6) regardless of which direction one comes from. The same gate-logic governs all compass points — the same Christ who is the east gate is the north gate and south gate: universally accessible from every quarter.</p>",
+    "22": "<p>The north gate has the same windows, vestibule, and palm trees as the east gate — and seven steps ascending to it. The ascending steps (<em>maʿălōt</em>) are the architectural experience of drawing near: each step is a movement toward the holy. The Psalms of Ascent (Pss 120-134) are the liturgical counterpart — the pilgrim's progressive approach to YHWH's presence. The Christological ascent: 'Through him we have access in one Spirit to the Father' (Eph 2:18) — the access Christ provides is the fulfillment of the ascending pilgrimage the steps represent.</p>",
+    "23": "<p>The inner court has gates directly opposite the north and east outer gates: the alignment creates sight-lines from outer to inner, a visual access-axis. One hundred cubits measured from outer gate to inner gate. The aligned gates create an unobstructed approach — no barrier breaks the line of sight between the outer worshipper and the inner sanctuary. The Christological sight-line: 'Blessed are the pure in heart, for they shall see God' (Matt 5:8). The aligned gates are the spatial metaphor for the unobstructed vision of God that Christ's purification enables.</p>",
+    "24": "<p>Ezekiel is led southward — the measuring proceeds systematically around the court. The south gate receives the same measurement. The comprehensive measurement of all four compass points establishes the complete-perimeter nature of the new order. The Christological completeness: 'Now there is no condemnation for those who are in Christ Jesus' (Rom 8:1) — the comprehensive enclosure of the new covenant community in Christ means there is no unguarded side, no direction from which condemnation can enter the measured, bounded community of the new temple.</p>",
+    "25": "<p>The south gate: fifty cubits long, twenty-five cubits wide — the same as all the others. The architectural uniformity is not monotony but covenant consistency: every member of the covenant community stands in the same relationship to the measuring standard. The Christological standard: 'There is one body and one Spirit ... one Lord, one faith, one baptism, one God and Father of all' (Eph 4:4-6). The one measurement that governs all gates is the one Christ who defines all access — uniform not because access is minimal but because it is equally generous at every point.</p>",
+    "26": "<p>Seven steps to the south gate, vestibule facing them, palm trees on the doorposts. The palm trees (<em>tîmōrîm</em>) are a consistent ornamental motif — the tree associated with victory and royalty (cf. the crowd's palm branches at Jesus's entry into Jerusalem, John 12:13). The pilgrim who ascends these seven steps toward the palm-decorated vestibule is ascending into the victory of the divine King. 'Hosanna! Blessed is he who comes in the name of the Lord!' — the crowd that greeted Jesus with palms was enacting the temple-entry liturgy that Ezekiel's palm-decorated gates anticipated.</p>",
+    "27": "<p>The south inner gate measures one hundred cubits between outer and inner gates — same as the east and north measurements. The consistent hundred-cubit span around the entire inner court establishes a perfect regularity. The Christological regularity: the atonement that enables approach to the inner court is equally effective from every direction — 'the same Lord is Lord of all, bestowing his riches on all who call on him' (Rom 10:12). The hundred cubits is the same distance regardless of one's starting point.</p>",
+    "28": "<p>Ezekiel is brought through the south gate into the inner court — the first direct movement of entry into the inner court. The inner court is the priest's court — the space of more restricted, more sacred access. The inner court in Hebrews' framework corresponds to the 'holy place' of the tabernacle where the daily priestly service occurred (Heb 9:6). Christ as high priest enters not the earthly inner court but 'the greater and more perfect tent' (Heb 9:11) — but having done so, 'we have confidence to enter the holy places by the blood of Jesus' (Heb 10:19).</p>",
+    "29": "<p>The south inner gate: same measurements as all the others. The description 'its measurements were the same as all the others' (<em>ûmiddôteyhā kemiddôt hāriʾšōnôt</em>) is repeated for each inner gate — a verbal formula of equality. The Christological formula of equality: 'For all have sinned and fall short of the glory of God, and are justified by his grace as a gift, through the redemption that is in Christ Jesus' (Rom 3:23-24). The 'same measurements' of grace — equally distributed, equally accessed — is the new covenant's architectural principle.</p>",
+    "30": "<p>The vestibules around the gates: twenty-five cubits long, five cubits wide — a narrow space of transitional access. The vestibule (<em>ʾûlām</em>) in biblical architecture is the antechamber between outside and inside, the threshold-space. The Christological threshold: 'I am the door' (John 10:7, 9) — Jesus is the living vestibule, the threshold-person through whom one passes from outside to inside. The narrow vestibule is not a restriction but the necessary passage; what narrows is the specificity of the way (Matt 7:14), not the generosity of the welcome.</p>",
+    "31": "<p>The vestibule of the outer court, with palm trees and eight steps. Eight steps — one more than the seven steps of the outer gate (v. 22, 26). The ascending stairway increases in depth as one approaches the inner courts. Eight is the number of new beginning: circumcision on the eighth day, the eighth day after Passover (Lev 23:36), the first day of the new week on which Christ rose. The eight steps ascending to the inner vestibule are the architecture of new-creation access — each step deeper into the new-creation temple is a step further into the resurrection order.</p>",
+    "32": "<p>The east inner gate: brought to the east side, measured with the same standard. The inner court's east gate aligns with the outer court's east gate — the axis from which divine glory departed (chs. 10-11) and to which it will return (43:2-4). The east-facing alignment of the innermost and outermost gates creates a direct sight-line for the divine glory's return. The Christological return through the east: 'As the lightning comes from the east and shines as far as the west, so will be the coming of the Son of Man' (Matt 24:27). The axis of departure is the axis of return.</p>",
+    "33": "<p>The east inner gate: same dimensions, same structure — fifty cubits long, twenty-five cubits wide. The inner court's east gate mirrors the outer court's east gate: what is true at the outermost boundary is true at the innermost. The Christological consistency: 'Jesus Christ is the same yesterday and today and forever' (Heb 13:8). The same Christ who is the outer gate of entry into the covenant community is the inner gate of deepest access to the Father — the mediator whose character is consistent at every level of approach.</p>",
+    "34": "<p>The east inner gate vestibule faces the outer court — looking outward toward the gathered people rather than inward toward the Most Holy Place. The outward-facing vestibule is a welcoming posture: the innermost accessible space is oriented toward those still approaching. The Christological hospitality: 'Come to me, all who labor and are heavy laden, and I will give you rest' (Matt 11:28) — the one who has entered the inner presence faces outward to call the approaching multitude. The sanctuary is not closed off but inviting.</p>",
+    "35": "<p>The north inner gate: measured and found the same. The systematic completion of all four inner gates — south (v. 28), east (v. 32), north (v. 35) — establishes the enclosed perfection of the inner court. An enclosed, measured perimeter is safe — the new temple's inner court is a space of protected holiness. The Christological enclosure: 'I give them eternal life, and they will never perish, and no one will snatch them out of my hand' (John 10:28). The measured, enclosed inner court is the spatial metaphor for the security of those within Christ's keeping.</p>",
+    "36": "<p>The north inner gate: fifty cubits long, twenty-five cubits wide, with windows all around. The windows in every gate and every chamber create a pervasive luminosity within the temple complex. The Christological light: 'In your light we see light' (Ps 36:9) — the divine light that the windows admit throughout the temple is the light of Christ who is himself the light of the world (John 8:12). The new temple has no dark corners: the comprehensive fenestration ensures that divine light reaches every chamber and every gate passage.</p>",
+    "37": "<p>The north inner gate vestibule: palm trees on its doorposts, eight steps ascending. The visual motif of palms and the eight ascending steps is repeated at each inner gate. The repetition is liturgical rather than monotonous — each repetition is another iteration of the same movement toward God that the entire temple vision enacts. The Christological liturgy of repetition: 'Day after day, in the temple and from house to house, they did not cease teaching and preaching Jesus as the Christ' (Acts 5:42). The repeated approach to God through Christ is not exhausted by repetition; the gates remain open.</p>",
+    "38": "<p>A chamber beside the inner gate's doorposts where burnt offerings are washed. The washing of the sacrifice before presentation ensures ritual purity before the altar. The Christological washing: Christ 'loved the church and gave himself up for her, that he might sanctify her, having cleansed her by the washing of water with the word' (Eph 5:25-26). The preparation of the sacrifice by washing becomes the preparation of the church by Christ's word — the new community is washed-and-presented, fit for the inner court offering.</p>",
+    "39": "<p>In the gate's vestibule, two tables on each side — four tables total — for slaughtering the burnt offering, sin offering, and guilt offering. The fourfold provision for all three major offering types (burnt, sin, guilt) situates the entire sacrificial system at the threshold of the inner court. The Christological replacement: 'He has appeared once for all at the end of the ages to put away sin by the sacrifice of himself' (Heb 9:26). The four tables for multiple repeated sacrifices are replaced by one act — Christ's single sufficient offering makes the multiplication of sacrificial tables unnecessary in the new covenant's final fulfillment.</p>",
+    "40": "<p>Outside the porch, beside the north gate, two more tables stand on each side — bringing the total to eight tables around the gate area. The accumulation of sacrificial tables around the inner court gate reflects the high volume of cultic activity the new temple envisions. The Christological perspective: the multiplication of tables for repeated sacrifice is the old order's expression of sin's ongoing weight. The once-for-all sacrifice of Christ resolves the need for table multiplication: 'By a single offering he has perfected for all time those who are being sanctified' (Heb 10:14).</p>",
+    "41": "<p>Four tables on each side of the gate — eight tables total — on which the sacrificial animals were slaughtered. The eight tables arranged at the inner court gate create a complete sacrificial precinct. The Christological reading: the altar of sacrifice to which these slaughter tables belong points to the cross. 'We have an altar from which those who serve the tent have no right to eat' (Heb 13:10). The church's altar is Christ himself, the single sacrifice who fulfills what eight slaughter tables could only approximate.</p>",
+    "42": "<p>The four stone tables for burnt offerings: one and a half cubits long, a cubit and a half wide, one cubit high — sturdy, level platforms for the sacrificial work. The careful dimensions ensure adequate, stable surfaces. The Christological stability: 'No one can lay a foundation other than that which is laid, which is Jesus Christ' (1 Cor 3:11). The stone tables that bear the weight of sacrifice find their fulfillment in the foundation-stone who bears the weight of the world's sin — the one on whom the cross was laid is the same one on whom the new building rests.</p>",
+    "43": "<p>Double hooks fastened all around the interior walls, and flesh resting on the tables. The hooks and the prepared surfaces speak to the functional efficiency of the sacrificial system — everything prepared for the sacred work. The Christological sacrifice: every detail of the sacrificial apparatus — the hooks, the tables, the stone surfaces — points to the thoroughness of Christ's preparation for his own sacrifice. 'For this purpose I have come to this hour' (John 12:27) — the Son came prepared, hooks and tables included in the divine plan from before the world's foundation (1 Pet 1:20).</p>",
+    "44": "<p>Chambers for the singers in the inner court: one facing south beside the north gate, one facing north beside the south gate. The singers have chambers in the inner court — their worship is not peripheral but central, located where the priests minister. The Christological worship: 'Speaking to one another in psalms and hymns and spiritual songs, singing and making melody to the Lord with your heart' (Eph 5:19). The singers' chambers in the inner court correspond to the worshipping community of the new covenant who sings at the heart of the new temple, not its margins.</p>",
+    "45": "<p>'This south-facing chamber is for the priests who are responsible for the care of the temple.' The division of priestly duties — temple-care and altar-service — reflects the ordered ministry of the sanctuary. The Christological priestly order: 'You yourselves like living stones are being built up as a spiritual house, to be a holy priesthood, to offer spiritual sacrifices acceptable to God through Jesus Christ' (1 Pet 2:5). The priesthood of all believers occupies the temple-care role within the new spiritual house — every member of the community is responsible for the new temple's maintenance.</p>",
+    "46": "<p>'The north-facing chamber is for the priests who have charge of the altar. These are the sons of Zadok — those Levites who draw near to the LORD to serve him.' The sons of Zadok are the faithful priests who did not go astray during Israel's apostasy (Ezek 44:15) — they alone are given altar-service. The Christological high priest: Jesus is the ultimate 'son of Zadok' — the faithful high priest who did not go astray. 'We do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin' (Heb 4:15). His faithfulness qualifies him alone for the altar of the new covenant.</p>",
+    "47": "<p>The inner court measured: one hundred cubits by one hundred cubits — a perfect square. The altar stands in front of the temple. The perfect square inner court (100×100 cubits) is the geometric expression of the divine completeness. The New Jerusalem is measured as a perfect cube: 12,000 stadia in length, width, and height (Rev 21:16) — a three-dimensional square, the most holy place expanded to cosmic scale. The perfect-square inner court of Ezekiel's new temple is the OT architectural type for the New Jerusalem's perfect cube: the Most Holy Place grown to encompass the entire new creation.</p>",
+    "48": "<p>The temple vestibule (<em>ʾûlām</em>): five-cubit doorposts on each side, three-cubit gate passage on each side, fourteen cubits between the doorposts. The vestibule is the final threshold before the temple proper. The Christological doorway: 'I am the door of the sheep' (John 10:7) — Jesus applies the gate-language to himself as the entry-point into the temple. The vestibule doorposts are the architectural form of the One who stands between the outer court of human gathering and the inner sanctuary of divine presence.</p>",
+    "49": "<p>The vestibule: twenty cubits long, eleven cubits wide, with steps ascending and columns flanking the doorposts on each side. The columns at the vestibule entrance echo the Jachin ('He establishes') and Boaz ('In him is strength') pillars of Solomon's temple (1 Kings 7:21). The Christological columns: 'In him all things hold together' (Col 1:17) — the one who establishes and the one who strengthens is the same Son in whom the cosmic temple coheres. The pillars that once marked the entrance to Solomon's temple pointed to the Son whose person would be the final pillar of the new creation's temple (Rev 3:12: 'the one who conquers, I will make him a pillar in the temple of my God').</p>"
   }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-christ', 'ezekiel')
+    merge_comm(existing, EZEKIEL)
+    save_comm('mkt-christ', 'ezekiel', existing)
+    print('Ezekiel 39-40 mkt-christ written.')
 
 if __name__ == '__main__':
     main()

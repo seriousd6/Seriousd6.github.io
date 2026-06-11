@@ -1,45 +1,15 @@
-"""
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
-"""
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     return json.loads(p.read_text()) if p.exists() else {}
 
 def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +19,91 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW_DATA = {
+"18": {
+"1": "<p>Chapter 18 introduces one of Jeremiah's most celebrated sign-acts and one of the Old Testament's richest theological metaphors: <strong>the word that came to Jeremiah from YHWH: Arise, and go down to the potter's house, and there I will let you hear my words</strong>. The potter and clay is an ancient Near Eastern image with wide currency — in Egypt, the god Khnum was depicted as a potter who shaped human beings on a wheel, and Mesopotamian creation texts describe humanity as molded from clay. Israel inherits this material but radically transforms it: the clay is not inert material shaped by capricious divine whim, but a morally responsive community whose own response shapes what the potter does.</p>",
+"2": "<p><strong>So I went down to the potter's house, and there he was working at his wheel</strong>. Jeremiah simply goes and observes. The ceramic workshop was a familiar part of ancient Near Eastern towns — archaeologists have excavated potter's quarters with kilns, clay storage, and wheel-pits. The two-stage wheel (<em>ovnayyim</em> — the two stones) was foot-powered, creating the rotation that allowed shaping. The prophet watches the potter at his ordinary craft and receives a theological revelation from the mundane.</p>",
+"3": "<p><strong>And the vessel he was making of clay was spoiled in the potter's hand, and he reworked it into another vessel, as it seemed good to the potter to do</strong>. The key observation: the spoiled vessel (<em>nishchat haklei asher hu oseh betit</em>) is not discarded but reworked. The clay that fails to hold its intended shape under the potter's hands is not thrown out — it is reshaped into a different vessel. This ordinary workshop practice becomes the theological crux: the spoiled vessel can become something else. The question is whether Israel is still at this reformable stage or has already been fired into a hardened, breakable vessel (cf. ch. 19).</p>",
+"4": "<p>Verse 4 presents the sign-act itself, observed before the interpretation follows. The potter's freedom to reshape what has been spoiled is presented as a matter of the potter's own will: <em>as it seemed good to the potter to do</em>. The sovereign freedom of the craftsman is absolute with unfired clay. This is not arbitrary power but skilled judgment — the potter knows clay, knows its limits, and knows what it can become. The theological application will follow in v6: YHWH's sovereignty over Israel is analogous but morally conditioned in a way no human potter's is.</p>",
+"5": "<p><strong>Then the word of YHWH came to me</strong> — the interpretive oracle follows the observed action. The two-stage structure (observe → receive interpretation) mirrors other sign-act narratives in the prophets (cf. Ezek 37:1–14, where Ezekiel observes the valley of dry bones before receiving the interpretation). The observation is not optional: YHWH sends Jeremiah to see before he tells him. The visual image anchors the theological truth in embodied reality.</p>",
+"6": "<p><strong>O house of Israel, can I not do with you as this potter has done? declares YHWH. Behold, like the clay in the potter's hand, so are you in my hand, O house of Israel</strong>. The application is direct but carefully stated: YHWH can do with Israel what the potter does with clay. The analogy is about possibility and sovereignty, not about mechanism — Israel is not literally clay. The question <em>can I not do</em> (<em>halo kachozeh hazeh uchal la'asot</em>) expects the answer <em>yes, you can</em>. YHWH's sovereign freedom to reshape Israel is asserted as a fact the people cannot deny.</p>",
+"7": "<p><strong>If at any time I declare concerning a nation or a kingdom, that I will pluck up and break down and destroy it</strong>. The theological extension is remarkable: the potter-clay principle is not limited to Israel but applies to <em>any nation or kingdom</em>. YHWH's sovereign authority is universal. The three verbs — <em>pluck up, break down, destroy</em> (<em>natash, nathots, he'avid</em>) — are the three negative actions from Jeremiah's call (1:10), now embedded in a framework of conditional rather than absolute judgment.</p>",
+"8": "<p><strong>And if that nation, concerning which I have spoken, turns from its evil, I will relent of the disaster that I intended to do to it</strong>. The divine flexibility is stated explicitly: announced judgment is not irrevocable. If the nation repents (<em>shav meraatah</em>, turns from its evil), YHWH <em>relents</em> (<em>nichamti</em>, is consoled, changes his mind). The language of divine <em>nacham</em> (repentance/relenting) is theologically significant and was exploited by false prophets to claim that any judgment oracle could be avoided by any degree of ritual penitence. Jeremiah's context makes clear this relenting is conditioned on genuine turning — cf. Jonah 3:10, where Nineveh's genuine repentance produces YHWH's relenting.</p>",
+"9": "<p><strong>And if at any time I declare concerning a nation or a kingdom that I will build and plant it</strong>. The positive trajectory: YHWH also announces blessing on nations — the two remaining positive terms from 1:10 (<em>build, plant</em>). Divine promises of blessing are equally subject to the same moral conditionality.</p>",
+"10": "<p><strong>And if it does evil in my sight, not listening to my voice, then I will relent of the good that I had intended to do to it</strong>. The symmetrical reverse: YHWH can relent from announced blessing just as he can relent from announced judgment. A nation that receives promise of divine favor and then turns to evil forfeits that favor. This symmetry is crucial for Jeremiah's argument throughout the book: Judah inherited the promises of the Sinaitic and Davidic covenants, but those promises do not function as unconditional guarantees against the consequences of persistent covenant violation.</p>",
+"11": "<p><strong>Now, therefore, say to the men of Judah and the inhabitants of Jerusalem: Thus says YHWH, Behold, I am shaping disaster against you and devising a plan against you. Return, every one from his evil way, and amend your ways and your deeds</strong>. The application to Judah is direct: YHWH is currently shaping disaster against them, but the process is not complete. The disaster is being devised (<em>choshev</em>, thinking/planning) — not yet executed. The window for repentance and return (<em>shuvu na ish midarko hara'ah</em>) is still open. This is perhaps Jeremiah's most explicit articulation that the judgment he announces is not meant to be deterministic but is a final warning.</p>",
+"12": "<p><strong>But they say, 'That is in vain! We will follow our own plans, and will every one act according to the stubbornness of his evil heart'</strong>. The people's response to the potter-oracle is explicit rejection. <em>That is in vain</em> (<em>no'ash</em>) — hopeless, pointless. They declare that repentance is futile and announce their intention to continue in the <em>stubbornness of their evil heart</em> (<em>sherirut lev hara'</em>). The Jeremianic diagnostic phrase appears here as self-description — the people no longer deny their orientation but proudly embrace it. This response ends the window of possibility that v11 offered.</p>",
+"13": "<p><strong>Therefore thus says YHWH: Ask among the nations, who has heard the like of this? The virgin Israel has done a very horrible thing</strong>. YHWH calls on the nations as witnesses to Israel's unprecedented apostasy. The rhetorical move of asking the nations to judge Israel's behavior presupposes a common moral standard accessible to all peoples. <em>A very horrible thing</em> (<em>sha'aruriyah</em>) — a term of moral horror and revulsion, used of particularly egregious covenant violation (cf. 5:30; 23:14). The <em>virgin Israel</em> image makes the apostasy a betrayal of first-covenant intimacy.</p>",
+"14": "<p><strong>Does the snow of Lebanon leave the crocks of Sirion? Do the mountain waters run dry, the cold flowing streams?</strong> Two images from nature's constancy: the snowfields of Mount Lebanon (perpetually snow-capped, visible from much of northern Israel) and the flowing mountain streams are reliable, constant, natural. They do not deviate from their nature. The contrast with Israel's deviation from her own covenantal nature is the point: even inanimate features of the natural world are more faithful to their nature than Israel is to her covenant identity.</p>",
+"15": "<p><strong>But my people have forgotten me; they make offerings to false idols; they made them stumble in their ways, in the ancient roads, and to walk into side roads, not the highway</strong>. <em>Forgotten me</em> (<em>shechachuni</em>) — the covenant is a relationship requiring active memory and attention; forgetting is the passive form of apostasy. The <em>ancient roads</em> (<em>netivot olam</em>) are the established covenant ways of YHWH — the Torah path. The <em>side roads</em> (<em>derachim lo-selulab</em>, unbuilt tracks) are the improvised routes of syncretism and foreign worship, leading away from the known covenant path.</p>",
+"16": "<p><strong>Making their land a horror, a thing to be hissed at forever. Everyone who passes by it is horrified and shakes his head</strong>. The covenant land transformed into a spectacle of shame — the hissing and head-shaking of passersby are signs of shocked condemnation (cf. 1 Kgs 9:8; Lam 2:15–16). In the honor-shame culture of the ancient Near East, a land that draws the contemptuous gaze of travelers has experienced the ultimate form of public disgrace. The permanent nature (<em>forever</em>) reflects the depth of the coming devastation.</p>",
+"17": "<p><strong>Like the east wind I will scatter them before the enemy. I will show them my back, not my face, in the day of their calamity</strong>. The east wind (<em>qadim</em>) from the desert was a hot, desiccating, destructive force in Palestinian geography. YHWH will scatter the people as this wind scatters dust. <em>Show them my back, not my face</em> — the reversal of the covenant priestly blessing (Num 6:25–26: YHWH make his face shine upon you). In the day of calamity, YHWH will present his back — the posture of one who has walked away, refusing to be a refuge. This is the enacted withdrawal of covenant protection.</p>",
+"18": "<p><strong>Then they said, Come, let us make plots against Jeremiah, for the law shall not perish from the priest, nor counsel from the wise, nor the word from the prophet. Come, let us strike him with the tongue, and let us not pay attention to any of his words</strong>. The conspiracy against Jeremiah resurfaces. The plotters' argument is significant: they claim the religious establishment (priest, wise, prophet) will continue functioning without Jeremiah's disruptions. The existing religious infrastructure — Torah-instruction from priests, wisdom from sages, prophetic word — is sufficient. They do not need Jeremiah's threatening message. <em>Strike him with the tongue</em>: verbal assassination — slander, discrediting, legal accusation.</p>",
+"19": "<p><strong>Hear me, O YHWH, and listen to the voice of my adversaries</strong>. Jeremiah's prayer begins with an appeal to divine attention. <em>Listen to the voice of my adversaries</em> is a bold petition: Jeremiah is asking YHWH to hear what his enemies are saying — presumably so YHWH can judge them for their words. The prophet's legal appeal to YHWH as judge (<em>riv</em>) continues from 11:20 and 12:1.</p>",
+"20": "<p><strong>Should good be repaid with evil? Yet they have dug a pit for my life. Remember how I stood before you to speak good for them, to turn away your wrath from them</strong>. The moral inversion: Jeremiah has interceded for the very people who are now plotting against him. He has stood before YHWH to speak good for them — precisely the intercession YHWH forbade him to perform (7:16; 11:14; 14:11) but which Jeremiah apparently continued to attempt. The injustice is poignant: his compassion for them has produced their enmity toward him.</p>",
+"21": "<p><strong>Therefore deliver up their children to famine; give them over to the power of the sword; let their wives become childless and widowed. May their men meet death by pestilence, their youths be struck down by the sword in battle</strong>. The imprecatory petitions escalate: children to famine, men to sword, wives to widowhood and childlessness. The covenant-curse vocabulary is precise — these are exactly the penalties of Deuteronomy 28 applied to specific household members. The prayer is not personal revenge but a call for covenantal enforcement against those who have attempted to suppress the word of YHWH.</p>",
+"22": "<p><strong>Let a cry be heard from their houses, when you bring the raider suddenly upon them! For they have dug a pit to take me, and laid snares for my feet</strong>. The specific charge that grounds the imprecation: <em>they have dug a pit to take me, and laid snares for my feet</em> — images of hunting and trapping applied to judicial and physical persecution. The pit recalls Joseph (Gen 37:24) and anticipates Jeremiah's actual imprisonment in a cistern (Jer 38:6). The plotters who set the trap will hear the same sudden raider descend on their own households.</p>",
+"23": "<p><strong>Yet you, O YHWH, know all their plotting to kill me. Forgive not their iniquity, nor blot out their sin from your sight. Let them be overthrown before you; deal with them in the time of your anger</strong>. The final imprecatory petition refuses forgiveness for the persecutors. The theological boldness is deliberate: Jeremiah is not praying for his personal enemies' salvation but for covenant justice. The same YHWH who forgives repentant sinners (v8) will not blot out the sin of those who persistently plot to kill his messenger. The prayer closes with the covenant judgment formula: <em>deal with them in the time of your anger</em> — the appointed time of reckoning.</p>"
+},
+"19": {
+"1": "<p>Chapter 19 presents the second potter-and-clay sign-act — but with a crucial difference from chapter 18. <strong>Thus says YHWH, Go, buy a potter's earthenware flask, and take some of the elders of the people and some of the elders of the priests</strong>. The key distinction: chapter 18 used unfired clay, which can be reshaped. Chapter 19 uses a <em>baqbuq</em> — a fired, glazed ceramic flask. Once pottery has been fired in the kiln, it cannot be reshaped; it can only be broken. The two sign-acts together present two theological moments: the still-reformable and the now-irreversible.</p>",
+"2": "<p><strong>And go out to the Valley of the Son of Hinnom at the entry of the Potsherd Gate, and proclaim there the words that I tell you</strong>. The location is theologically loaded: the <strong>Valley of Hinnom</strong> (<em>Gei Ben-Hinnom</em>) was the site of the worst apostasy in Judah's history — child sacrifice to Baal and Molech at the <strong>Topheth</strong> installation (2 Kgs 23:10; Jer 7:31; 32:35). It was also the city's rubbish dump, where refuse and broken pottery (<em>potsherd gate</em>) were discarded. This valley became the NT <em>Gehenna</em> — the garbage-and-fire valley that Jesus uses as the image of final judgment (Matt 5:22, 29–30; 18:9). The sign-act is performed at the place most associated with the worst of Judah's sin.</p>",
+"3": "<p><strong>And say, Hear the word of YHWH, O kings of Judah and inhabitants of Jerusalem. Thus says YHWH of hosts, the God of Israel: Behold, I am bringing such disaster upon this place that the ears of everyone who hears of it will tingle</strong>. The audience includes the royal house and the general population — both are to witness the sign-act and receive the oracle. <em>The ears of everyone who hears will tingle</em> (<em>tetzalnah oznav</em>) — the same phrase used in 1 Samuel 3:11 for the announcement of Eli's house's judgment and in 2 Kings 21:12 for Manasseh's judgment. The phrasing links this announcement to the full tradition of radical divine judgment in Israel's history.</p>",
+"4": "<p><strong>Because they have forsaken me and have profaned this place by making offerings in it to other gods whom neither they nor their fathers nor the kings of Judah have known; and because they have filled this place with the blood of innocents</strong>. The dual indictment: <em>offerings to unknown gods</em> (foreign cults whose identities YHWH disclaims — neither he nor the patriarchs authorized them) and <em>blood of innocents</em> (child sacrifice). The Hinnom Valley is the physical location of both crimes — the place where foreign altars were erected and where children were burned. The crimes are spatially concentrated, making the valley itself the primary locus of covenant violation.</p>",
+"5": "<p><strong>And have built the high places of Baal to burn their sons in the fire as burnt offerings to Baal, which I did not command or decree, nor did it come into my mind</strong>. The triple denial — <em>did not command, did not decree, did not enter my mind</em> — is one of the strongest possible disavowals. YHWH is emphasizing that child sacrifice was never a possibility within the Yahwistic covenant framework; it is not an extreme form of legitimate worship but a total departure from it. This directly contradicts any theology that portrayed child sacrifice as the ultimate gift to the deity.</p>",
+"6": "<p><strong>Therefore, behold, days are coming, declares YHWH, when this place shall no more be called Topheth, or the Valley of the Son of Hinnom, but the Valley of Slaughter</strong>. The renaming of the Hinnom Valley as the <em>Valley of Slaughter</em> (<em>gei hahareguah</em>) is a prophetic name-change that anticipates its transformation from a place where children were killed as sacrifice to a place where the population of Jerusalem will be killed as judgment. The location of the worst covenant violation becomes the location of the worst covenant punishment — a spatial covenantal irony.</p>",
+"7": "<p><strong>And in this place I will make void the plans of Judah and Jerusalem, and will cause their people to fall by the sword before their enemies, and by the hand of those who seek their life. I will give their dead bodies for food to the birds of the air and to the beasts of the earth</strong>. The <em>making void</em> (<em>vevaqqoti</em>) plays on <em>baqbuq</em> (the flask) — a wordplay the Hebrew audience would catch: I will <em>empty out</em> the plans of Judah like one pours out a flask. The unburied bodies for birds and beasts is the covenant-curse standard (Deut 28:26; Jer 7:33) — this time enacted at the very place where bodies were previously burned as offerings.</p>",
+"8": "<p><strong>And I will make this city a horror and a thing to be hissed at. Everyone who passes by it will be horrified and will hiss because of all its wounds</strong>. The Jerusalem-as-spectacle theme (cf. 18:16) is intensified: the city that was YHWH's chosen dwelling place, the pride of all the earth (Lam 2:15), will become a spectacle of horror. The hissing of passersby is the ancient equivalent of public condemnation — a sound and gesture associated with responses to moral atrocity and divine judgment in the ancient world.</p>",
+"9": "<p><strong>And I will make them eat the flesh of their sons and their daughters, and everyone shall eat the flesh of his neighbor in the siege and in the distress, with which their enemies and those who seek their life afflict them</strong>. Siege cannibalism — the most extreme form of human suffering under prolonged blockade — is listed in Deuteronomy 28:53–57 as a specific covenant curse for covenant violation. It was historically fulfilled during the Babylonian siege of Jerusalem (Lam 4:10: the hands of compassionate women have boiled their own children). The horror of the sign-act location (Hinnom Valley) is compounded by this prediction: the parents who burned their children in the valley will be reduced to eating their children during the siege.</p>",
+"10": "<p><strong>Then you shall break the flask in the sight of the men who go with you</strong>. The moment of the sign-act itself. The breaking of the fired clay flask is irreversible — unlike the unfired clay of chapter 18, which could be remolded, a broken ceramic vessel cannot be repaired. The witnesses (elders of the people and priests, v1) see it happen. The physical event embodies the theological claim: the moment for reshaping has passed. Jerusalem is now the fired flask, not the unfired clay.</p>",
+"11": "<p><strong>And shall say to them, Thus says YHWH of hosts: So will I break this people and this city, as one breaks a potter's vessel, so that it can never be mended. Men shall be buried in Topheth because there will be no place else to bury</strong>. The explicit interpretation: <em>as one breaks a potter's vessel, so that it can never be mended</em>. The irreversibility is stressed. The burial reference is grim: so many will die that the Hinnom Valley itself — previously unusable as a burial site because of its cultic impurity — will have to be pressed into service as a cemetery. The place of child sacrifice becomes a mass grave for adults.</p>",
+"12": "<p><strong>Thus will I do to this place and its inhabitants, declares YHWH, making this city like Topheth. The houses of Jerusalem and the houses of the kings of Judah shall be defiled like the place of Topheth, with all the houses on whose rooftops offerings have been made to all the host of heaven, and drink offerings have been poured out to other gods</strong>. The defilement-logic: the rooftop altars throughout Jerusalem (cf. 2 Kgs 23:12; Jer 32:29) have made every house ritually contaminated, extending the Topheth-defilement across the entire city. The worship of the host of heaven (stars, planets) was a Mesopotamian import that competed with and supplemented YHWH worship throughout the monarchy period.</p>",
+"13": "<p>The extension of the defilement judgment to every house in Jerusalem (v12) means no quarter of the city is exempt. Even the royal palace — whose rooftop had hosted astral altars installed by Manasseh (2 Kgs 21:5) and temporarily dismantled by Josiah (2 Kgs 23:12) — is included in the indictment. The thoroughness of the judgment reflects the thoroughness of the apostasy: it extended from the Hinnom Valley to the city center to the royal palace to every neighborhood rooftop.</p>",
+"14": "<p><strong>Then Jeremiah came from Topheth, where YHWH had sent him to prophesy, and he stood in the court of the YHWH's house and said to all the people</strong>. Jeremiah brings the Hinnom Valley message into the Temple precincts — the most sacred space in Jerusalem. The movement from Topheth to the Temple court is itself symbolic: the place of worst apostasy and the place of YHWH's dwelling are brought into confrontation. The prophet's body carries the message from one sacred site to the other.</p>",
+"15": "<p><strong>Thus says YHWH of hosts, the God of Israel: Behold, I am bringing upon this city and upon all its towns all the disaster that I have pronounced against it, because they have stiffened their neck, refusing to hear my words</strong>. The summary verdict returns to the stiff-neck diagnosis (cf. 17:23) — the physical metaphor for obstinate refusal to accept the covenant yoke. The disaster pronounced against Jerusalem is comprehensive: <em>this city and all its towns</em> — not just the capital but the entire urban network of Judah. The chapter ends with the covenant sentence pronounced and the sign-act completed: the flask is broken; the judgment is sealed.</p>"
+},
+"20": {
+"1": "<p><strong>Now Pashhur the priest, the son of Immer, who was chief officer in the house of YHWH, heard Jeremiah prophesying these things</strong>. The institutional response to Jeremiah's Temple court sermon (19:14–15) is immediate. <strong>Pashhur ben Immer</strong> is the chief officer (<em>paqid nagid</em>) — a Temple security official responsible for maintaining order in the sanctuary complex. His family background (son of Immer — a priestly family; cf. 1 Chr 24:14) and his institutional role make him a representative of the religious establishment that Jeremiah has been attacking throughout chapters 7–20. The confrontation between prophet and institutional priest is inevitable.</p>",
+"2": "<p><strong>Then Pashhur beat Jeremiah the prophet and put him in the stocks that were in the upper Benjamin Gate of the house of YHWH</strong>. Physical violence against the prophet followed by the stocks (<em>mahpekhet</em>) — a device that locked the victim's neck, hands, and feet into a painful bent-forward position. The <em>upper Benjamin Gate</em> was a prominent public location in the Temple area — the stocks were placed where maximum public shame would accompany the physical punishment. The prophet who announced that Jerusalem's gates would be shut (17:27) is now displayed in a gate, imprisoned and shamed.</p>",
+"3": "<p><strong>The next day, when Pashhur released Jeremiah from the stocks, Jeremiah said to him, YHWH does not call your name Pashhur, but Terror on Every Side</strong>. The name-change oracle is one of Jeremiah's most dramatic pronouncements. <em>Magor-Missaviv</em> — <strong>Terror on Every Side</strong> — will become a refrain in Jeremiah's oracles (cf. 6:25; 20:10; 46:5; 49:29). The name Pashhur is uncertain in etymology; YHWH renames him with a title of doom. The person who attempted to silence terror of YHWH's word by physical violence will himself become an embodied reminder of terror. The announcement of this new name to Pashhur's face takes considerable courage.</p>",
+"4": "<p><strong>For thus says YHWH: Behold, I will make you a terror to yourself and to all your friends. They shall fall by the sword of their enemies while you look on. And I will give all Judah into the hand of the king of Babylon. He shall carry them captive to Babylon, and shall strike them down with the sword</strong>. The specific judgment on Pashhur includes being forced to watch his friends die. <em>The king of Babylon</em> is named explicitly — one of the early passages in Jeremiah where Babylon is identified by name rather than as the abstract north-foe. The historical specificity signals that the judgment oracle has advanced from the general to the particular: the instrument of covenant judgment has been identified.</p>",
+"5": "<p><strong>Moreover, I will give all the wealth of the city, all its gains, all its prized belongings, and all the treasures of the kings of Judah into the hand of their enemies, who shall plunder them and seize them and carry them to Babylon</strong>. The total transfer of Jerusalem's accumulated wealth to Babylon is covenant confiscation (cf. 17:3). The Temple treasury, royal treasury, and the private wealth of the city — all will be carried to Babylon. This was historically fulfilled in the deportations of 597 BC (2 Kgs 24:13) and 587 BC (2 Kgs 25:13–17).</p>",
+"6": "<p><strong>And you, Pashhur, and all who dwell in your house, shall go into captivity. To Babylon you shall go, and there you shall die, and there you shall be buried, you and all your friends, to whom you have prophesied falsely</strong>. Pashhur's personal fate: exile to Babylon, death in Babylon, burial in Babylon. The false prophecy charge (<em>nibeta lahem shaqer</em>) completes the indictment: Pashhur was not merely a security official but a prophetic voice in his own right, and he prophesied peace. His physical death in exile will prove his prophecy false and Jeremiah's true.</p>",
+"7": "<p><strong>O YHWH, you have deceived me, and I was deceived; you are stronger than I, and you have prevailed. I have become a laughingstock all the day; everyone mocks me</strong>. The sixth and greatest of Jeremiah's Confessions begins here (20:7–18). The opening verb <em>pittitani</em> (you have persuaded/deceived me) is the same word used in Exod 22:16 for seducing a virgin and in 1 Kgs 22:20–22 for the spirit sent to deceive Ahab's prophets. Jeremiah accuses YHWH of having deceived him into the prophetic vocation — lured him in with what seemed like covenant calling, and then the ministry produced only suffering and mockery. The charge of divine deception is the most theologically daring language in the Confessions.</p>",
+"8": "<p><strong>For whenever I speak, I cry out, I shout, Violence and destruction! For the word of YHWH has become for me a reproach and derision all day long</strong>. The content of Jeremiah's message — <em>violence and destruction</em> (<em>chamas veshod</em>) — is the constant refrain of his preaching. Rather than producing respect or repentance, it has made him an object of contempt. <em>Reproach and derision</em> (<em>cherpah veqeles</em>): the prophet's social status has been destroyed by his message. In an honor-shame culture, this is an existential threat — the inability to function in normal social relationships because one's reputation has been destroyed by association with an unpopular message.</p>",
+"9": "<p><strong>If I say, I will not mention him, or speak any more in his name, there is in my heart as it were a burning fire shut up in my bones, and I am weary with holding it in, and I cannot</strong>. Jeremiah tries silence — the obvious solution to his social humiliation — and finds he cannot maintain it. The <em>burning fire shut up in my bones</em> is one of the most psychologically precise descriptions of prophetic compulsion in the Old Testament. The word cannot be contained; attempting to suppress it produces greater internal anguish than delivering it. This is the paradox of prophetic vocation: Jeremiah did not choose the calling, cannot abandon it, and suffers because of it.</p>",
+"10": "<p><strong>For I hear many whispering. Terror is on every side! Denounce him! Let us denounce him! say all my close friends, watching for my fall. Perhaps he will be deceived; then we can overcome him and take our revenge on him</strong>. <em>Terror on every side</em> (<em>magor missaviv</em>) — the name Jeremiah assigned to Pashhur (v3) has become the slogan of his mockers. They throw his own prophetic language back at him as a taunt. Even his close friends (<em>anshei shlomi</em>, men of my peace — those he trusted as allies) are watching for his stumbling, waiting to denounce him. The intimacy of the betrayal echoes 11:19 (the Anathoth conspiracy) and Psalm 41:9 (my close friend has lifted his heel against me — cited in John 13:18 of Judas).</p>",
+"11": "<p><strong>But YHWH is with me as a dread warrior; therefore my persecutors will stumble; they will not overcome me. They will be greatly shamed, for they will not succeed. Their eternal dishonor will never be forgotten</strong>. A sudden reversal: despite the complaints of vv7–10, confidence breaks through. <em>YHWH is with me as a dread warrior</em> (<em>YHWH ki be'al gibbor ariz</em>) — the divine warrior who fights for Jeremiah. The prophet's persecutors will stumble while pursuing him; their shame will be permanent (<em>bushat olam</em>). The oscillation between lament and trust is the authentic texture of Jeremiah's spiritual life — he does not resolve the tension but holds both poles.</p>",
+"12": "<p><strong>O YHWH of hosts, who tests the righteous, who sees the heart and the mind, let me see your vengeance upon them, for to you have I committed my cause</strong>. The covenant-appeal formula recurs from 11:20 and 15:15 — YHWH as the one who tests (<em>bachen</em>) and sees (<em>ro'eh</em>) the hidden interior. <em>Let me see your vengeance</em>: the prophet asks to witness the covenant enforcement against his persecutors. <em>I have committed my cause to you</em> (<em>galiti et-rivi eleycha</em>): the legal dispute has been formally lodged with the divine judge. Jeremiah is not taking matters into his own hands but waiting for covenant justice.</p>",
+"13": "<p><strong>Sing to YHWH; praise YHWH! For he has delivered the life of the needy from the hand of evildoers</strong>. A call to praise interrupts the complaint sequence — one of the most jarring transitions in Jeremiah. The <em>needy</em> (<em>evyon</em>) — the vulnerable and powerless one whom the system oppresses — has been delivered by YHWH. This praise is eschatological in character: Jeremiah sings as if the deliverance has already happened, in the mode of prophetic certainty. The Psalms of lament regularly include this element of anticipatory praise (cf. Ps 22:22–31 after the lament of vv1–21).</p>",
+"14": "<p><strong>Cursed be the day on which I was born! The day when my mother bore me, let it not be blessed!</strong> The death-wish that follows the praise is one of the most shocking juxtapositions in prophetic literature. The oscillation from praise (v13) to curse (v14) captures the extremity of Jeremiah's psychological state. The cursing of his birthday is the most total rejection of one's existence possible in the Hebrew worldview: to curse the day of birth is to wish one had never been. Job 3 opens with the same formula; Ecclesiastes 4:3 calls it better to have never been born. These are not theological positions but expressions of unbearable suffering.</p>",
+"15": "<p><strong>Cursed be the man who brought the news to my father, A son is born to you, making him very glad</strong>. The birth-announcement was a moment of great joy — a son was born (cf. Jer 33:11: the voice of the bridegroom; John 16:21: a woman who has given birth no longer remembers the anguish). Jeremiah curses the messenger who brought his father the good news, because that joy inaugurated a life of unrelenting suffering. The innocent messenger becomes the target of the prophet's anguish — an expression of the wish that the joyful report had never been made.</p>",
+"16": "<p><strong>Let that man be like the cities that YHWH overthrew without pity; let him hear a cry in the morning and an alarm at noon</strong>. The overthrown cities are likely Sodom and Gomorrah (cf. Gen 19:24–25) — the paradigmatic examples of total divine judgment. To be like Sodom is to receive the worst possible fate. The <em>cry in the morning and alarm at noon</em> describe the sounds of attack and siege — Jeremiah wishes on the birth-messenger a life as catastrophically filled with alarm as his own has been.</p>",
+"17": "<p><strong>Because he did not kill me in the womb; so my mother would have been my grave, and her womb forever great</strong>. The wish reaches its extreme: Jeremiah desires that he had died in utero. The womb as grave — the place of gestation becomes the place of burial without ever having been a place of life outside. The permanent pregnancy of the mother (<em>verachmah harah olam</em>) is a horrific image: the womb swollen with an unborn child who is simultaneously already dead. No birth, no life, no suffering.</p>",
+"18": "<p><strong>Why did I come out from the womb to see toil and sorrow, and spend my days in shame?</strong> The Confession ends on the question that frames the entire chapter's existential crisis: <em>why?</em> (<em>lamah</em>). Not <em>how</em> or <em>when</em> but <em>why</em> — the teleological question about the purpose of existence. Jeremiah sees his life as characterized by <em>toil and sorrow</em> (<em>amal veyagon</em>) and public <em>shame</em> (<em>boshet</em>). He does not answer his own question; the chapter ends with the unanswered why. The Confession provides no resolution — it is a wound that the book leaves open, modeling the honest anguish of the covenant messenger in a world that rejects the covenant word.</p>"
+},
+"21": {
+"1": "<p>Chapter 21 marks a major structural and historical shift in the book of Jeremiah. <strong>This is the word that came to Jeremiah from YHWH, when King Zedekiah sent to him Pashhur the son of Malchiah and Zephaniah the priest, the son of Maaseiah, saying</strong>. The Zedekiah setting places this chapter in the period of the final Babylonian siege of Jerusalem (588–587 BC) — approximately 20 years after the Temple sermon of chapter 7. The delegation includes a <em>Pashhur</em> (different from the Pashhur of chapter 20 — this is son of Malchiah, not son of Immer) and Zephaniah the priest, who appears again in 29:25–26 and 37:3. The royal delegation signals that the crisis has reached the point where even the king who earlier ignored Jeremiah now turns to him.</p>",
+"2": "<p><strong>Please inquire of YHWH for us, for Nebuchadnezzar king of Babylon is making war against us. Perhaps YHWH will deal with us according to all his wonderful deeds and will make him withdraw from us</strong>. Zedekiah's request is a classic covenant-consultation: <em>inquire of YHWH</em> (<em>darash na ba'adenu et YHWH</em>). The king appeals to historical precedent — <em>his wonderful deeds</em> (<em>nifle'otav</em>) — specifically, YHWH's past deliverances, perhaps including the deliverance of Jerusalem from Sennacherib in 701 BC (2 Kgs 19:35–36: the angel destroyed 185,000 Assyrians overnight). Zedekiah is hoping for a repeat Sennacherib-miracle: the besieging army supernaturally withdrawn. The hope is not irrational given precedent; it is the wrong hope in the wrong theological moment.</p>",
+"3": "<p><strong>Then Jeremiah said to them: Thus you shall say to Zedekiah</strong>. The answer is addressed directly to the king. Jeremiah does not soften the message for the royal delegation; he delivers the same uncompromising word to king as to commoner. The answer will directly contradict what the king hoped to hear — no miraculous deliverance, no Sennacherib-repeat, but something far more theologically disorienting.</p>",
+"4": "<p><strong>Thus says YHWH, the God of Israel: Behold, I will turn back the weapons of war that are in your hands and with which you are fighting against the king of Babylon and against the Chaldeans who are besieging you outside the walls. And I will bring them together into the midst of this city</strong>. The divine oracle is a reversal of Zedekiah's hope. Rather than withdrawing the Babylonian army, YHWH will <em>turn back the weapons</em> of Jerusalem's defenders — disable them. Rather than keeping the Babylonians outside the walls, YHWH will bring them inside the city. The Sennacherib-miracle will not be repeated; instead the opposite will happen. The theological reason: Sennacherib attacked YHWH's city without YHWH's authorization; Nebuchadnezzar attacks with YHWH's commission.</p>",
+"5": "<p><strong>I myself will fight against you with outstretched hand and strong arm, in anger and in fury and in great wrath</strong>. The most theologically shocking verse in the chapter: <em>I myself will fight against you</em> (<em>nilchamti ani etkhem</em>). YHWH fought for Israel against Egypt with outstretched hand and strong arm (Exod 6:6; Deut 4:34; 26:8) — the Exodus-war formula now applied in reverse. YHWH is fighting against his own people with the same intensity with which he once fought for them. The covenantal framework makes this possible: the same God who saved Israel at the Exodus will judge them in the exile. The parallel use of Exodus language for judgment is one of Jeremiah's most powerful rhetorical moves.</p>",
+"6": "<p><strong>I will strike down the inhabitants of this city, both man and beast. They shall die of a great pestilence</strong>. The pestilence component of the judgment triad is specified for the city's population — both human and animal. The inclusion of animals reflects the total ecological impact of siege and divine judgment (cf. the animal deaths in the drought oracle, 14:5–6). The besieged city will experience not only military attack but epidemic disease — a predictable result of the crowding, sanitation breakdown, and malnutrition of prolonged siege.</p>",
+"7": "<p><strong>Afterward, declares YHWH, I will give Zedekiah king of Judah and his servants and the people in this city who survive the pestilence, sword, and famine into the hand of Nebuchadnezzar king of Babylon and into the hand of their enemies, into the hand of those who seek their lives. He shall strike them down with the edge of the sword. He shall not pity them or spare them or have compassion</strong>. Zedekiah's personal fate is specified: he will be handed over to Nebuchadnezzar. The triple negation of divine compassion (<em>will not pity, will not spare, will not have compassion</em>) echoes 13:14 — the judgment has reached the point where the covenant mercy attributes are suspended. This was historically fulfilled in 2 Kings 25:6–7: Nebuchadnezzar executed Zedekiah's sons before his eyes and then blinded him.</p>",
+"8": "<p><strong>And to this people you shall say: Thus says YHWH: Behold, I set before you the way of life and the way of death</strong>. The <strong>two-ways offer</strong> is one of Jeremiah's most striking pastoral interventions. The Deuteronomic framework of life and death (Deut 30:15–20: I set before you life and death, blessing and curse — choose life) is now recontextualized: the way of life is not covenant faithfulness leading to prosperity in the land, but surrender to Babylon. The theological inversion is complete: the natural instinct of covenant loyalty (resist the enemy) has become the way of death; surrender to the enemy has become the way of life.</p>",
+"9": "<p><strong>Whoever stays in this city shall die by the sword, by famine, and by pestilence, but whoever goes out and surrenders to the Chaldeans who are besieging you shall live and shall have his life as a prize of war</strong>. The offer is concrete: those who remain in Jerusalem to fight will die by the judgment triad (sword, famine, pestilence). Those who go out and surrender (<em>naphel el-hakasdim</em>, fall/defect to the Chaldeans) will preserve their lives. The phrase <em>life as a prize of war</em> (<em>nafshah lo leshalal</em>) — life as spoil, as something snatched from the enemy — suggests that survival will be bare and undignified, but it will be survival. Jeremiah will repeat this offer throughout the siege period (38:2).</p>",
+"10": "<p><strong>For I have set my face against this city for harm and not for good, declares YHWH: it shall be given into the hand of the king of Babylon, and he shall burn it with fire</strong>. YHWH's face set against Jerusalem (rather than for it) is the ultimate reversal of the Aaronic blessing (Num 6:25–26: YHWH lift up his face to you). The Babylonian burning of Jerusalem is announced categorically: <em>he shall burn it with fire</em>. This is precisely what happened in 587 BC (2 Kgs 25:9). The irreversibility of the flask-sign-act (ch. 19) is here confirmed in explicit historical prediction.</p>",
+"11": "<p><strong>And to the house of the king of Judah say, Hear the word of YHWH</strong>. A separate oracle addressed specifically to the royal house begins here (vv11–14), distinguishing the message to the Davidic dynasty from the message to the general population. The royal house still has a specific covenantal responsibility: to execute justice.</p>",
+"12": "<p><strong>O house of David! Thus says YHWH: Execute justice in the morning, and deliver from the hand of the oppressor him who has been robbed, lest my wrath go forth like fire, and burn with none to quench it, because of your evil deeds</strong>. <em>Execute justice in the morning</em> (<em>shiftu laboqer mishpat</em>) — the king's primary covenantal obligation was judicial: to hear cases at the city gate in the morning (the customary time for judicial proceedings), to defend the oppressed and dispossess the oppressor. The royal failure in this regard (cf. Jer 22:13–17 on Jehoiakim) is what has brought the judgment. Even now, in the siege, genuine judicial reform could theoretically alter the trajectory — but the people's response to the potter-oracle (18:12: that is hopeless) suggests no such reform is forthcoming.</p>",
+"13": "<p><strong>Behold, I am against you, O inhabitant of the valley, O rock of the plain, declares YHWH; you who say, Who shall come down against us, or who shall enter our dwellings?</strong> Jerusalem is addressed under geographical epithets: the <em>inhabitant of the valley</em> and <em>rock of the plain</em> describe the city's topographic setting — it sits on a ridge overlooking valleys, surrounded by heights. The city's rhetorical confidence in its natural defenses (<em>who can come down against us?</em>) is the geographic expression of Zion theology: the impregnable fortress that YHWH defends. Jeremiah announces that the very natural defenses the city trusts will be overcome.</p>",
+"14": "<p><strong>I will punish you according to the fruit of your deeds, declares YHWH; I will kindle a fire in her forest, and it shall devour all that is around her</strong>. The judgment closes with the fire-in-the-forest image — the dense woodland that surrounded Jerusalem (the forests of the hill country) consumed by fire, extending the destruction beyond the city walls into the surrounding territory. <em>According to the fruit of your deeds</em> (<em>kifri ma'aleleikhem</em>): the covenant-recompense formula. The punishment is not arbitrary but the natural consequence of the covenant violations catalogued across the preceding chapters. The chapter ends with the irreversible verdict, and the loop of judgment-announced-judgment-executed closes on Jerusalem after 20 chapters of warning.</p>"
+}
 }
 
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
-}
-
-def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+comm = load_comm("mkt-context", "jeremiah")
+merge_comm(comm, NEW_DATA)
+save_comm("mkt-context", "jeremiah", comm)
+print("Done. Verifying...")
+for ch, verses in NEW_DATA.items():
+    present = sum(1 for v in verses if v in comm.get(ch, {}))
+    print(f"  ch {ch}: {present}/{len(verses)} verses written")

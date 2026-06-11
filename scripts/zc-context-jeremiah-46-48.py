@@ -1,46 +1,12 @@
-"""
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
-"""
-
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     return json.loads(p.read_text()) if p.exists() else {}
-
 def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -49,274 +15,101 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW = {
+"46": {
+"1": "<p>The superscription — <strong>the word of YHWH that came to Jeremiah the prophet concerning the nations</strong> — opens the <strong>Oracles Against the Nations</strong> (OAN), a literary collection found in all the major prophetic books (Isaiah 13-23; Ezekiel 25-32; Amos 1-2; Zephaniah 2). The OAN genre reflects the prophetic claim that YHWH is not merely the God of Israel but the sovereign of all nations, who holds each to account for their conduct. The collection follows the narratives of chs 37-45, shifting from historical prose to elevated poetry. Notably, in the Septuagint (Greek translation), these oracles appear in the center of the book after 25:13, suggesting a different editorial arrangement in the Greek textual tradition.</p>",
+"2": "<p>The historical anchor — <strong>concerning Egypt, about the army of Pharaoh Necho at Carchemish on the Euphrates</strong> in the fourth year of Jehoiakim (605 BC) — ties this oracle to one of the most consequential battles of the ancient Near East. <strong>Carchemish</strong> (modern Karkamish on the Turkish-Syrian border) was where Nebuchadnezzar II decisively defeated the Egyptian army under Pharaoh Necho II, ending Egyptian hegemony over the Levant. The Babylonian Chronicle confirms this battle explicitly, noting that Nebuchadnezzar &quot;crossed the river to go against the Egyptian army which lay in Carchemish,&quot; defeated them utterly, and captured the area. This battle determined the political fate of Judah; the oracle frames it as YHWH's judgment on Egypt.</p>",
+"3": "<p>The sardonic military call-up — <strong>prepare buckler and shield and advance for battle</strong> — addresses Egypt's army in the second person, almost as a war chant. The enumeration of equipment (buckler, shield, armor, horse, chariot) reflects the actual composition of ancient Near Eastern armies: light infantry with bucklers, heavy infantry with shields, cavalry, and chariot corps. The inventory parodies military preparedness: all this equipment will prove useless. The ANE battle oracle typically begins with the call to arms before reversing to announce defeat.</p>",
+"4": "<p>The commands to <strong>harness the horses, mount the steeds, take your positions with helmets, polish the spears, put on coats of mail</strong> continue the mock mobilization. Egyptian military texts and tomb paintings document precisely these elements of military preparation. The polishing of spear points and the donning of scale armor were standard pre-battle procedures. The detail is not generic but reflects accurate knowledge of Egyptian military practice, consistent with the international intelligence network of Judean scribes operating in the 7th-6th centuries.</p>",
+"5": "<p>The reversal — <strong>why do I see them dismayed, turning back? Their warriors are beaten down, they flee in haste, they do not look back — terror on every side</strong> — introduces the military collapse before any engagement is described. The phrase <em>magor missaviv</em> (terror on every side) is Jeremiah's signature phrase (6:25; 20:3-4; 20:10; 49:29), applied here to Egypt. The warriors' failure to look back signals complete rout, as turning back was considered shameful in ancient war ethics.</p>",
+"6": "<p>The <strong>swift cannot flee nor the warrior escape</strong> — a declaration that neither speed nor strength can avoid YHWH's decreed judgment. The geographical specificity — <strong>in the north by the Euphrates River they have stumbled and fallen</strong> — grounds the oracle in Carchemish. The Euphrates was Egypt's northernmost military reach; their defeat there ended their Levantine ambitions. The falling by the river bank images Egypt's army swept away by the river of war.</p>",
+"7": "<p>The comparison — <strong>who is this, rising like the Nile, like rivers whose waters surge?</strong> — deploys Egypt's most iconic geographical feature as a metaphor for imperial ambition. The Nile's annual inundation, flooding the entire Egyptian delta to fertilize it, was the foundation of Egyptian civilization and power. Egypt rising &quot;like the Nile&quot; captures both the grandeur and the regularity of Egyptian imperial assertion — a power that seemed as natural and irresistible as the river itself.</p>",
+"8": "<p><strong>Egypt rises like the Nile, like rivers whose waters churn; it says, I will rise and cover the earth, I will destroy cities and their inhabitants</strong> — the self-proclamation of imperial ambition. In ANE royal inscriptions, conquest language regularly presented the victorious king as covering the earth and destroying enemies. Egypt's self-presentation in this oracle follows the conventions of imperial propaganda. YHWH's counter-proclamation of Egypt's defeat directly confronts the pharaoh's self-exaltation.</p>",
+"9": "<p>The divine summons — <strong>advance, O horses; rage, O chariots; let the warriors march</strong> — addresses the multinational composition of Egypt's army. <strong>Cushites and Libyans</strong> (<em>Kush we-Put</em>) carrying shields, and <strong>Lydians</strong> (<em>Lud</em>) who handle and bend the bow: these are Egypt's foreign auxiliary forces. Egyptian armies regularly incorporated Nubian (Cushite) archers, Libyan infantry, and Lydian mercenaries. The multinational army assembled against YHWH's purpose will be defeated regardless of its international composition.</p>",
+"10": "<p>The oracle's theological climax — <strong>that day is the day of the Lord YHWH of hosts, a day of vengeance to avenge himself on his enemies</strong> — transforms the Carchemish battle into a cosmic Day of YHWH event. The &quot;Day of YHWH&quot; (<em>yom YHWH</em>) is a prophetic concept designating the moment of divine intervention in history to judge enemies and vindicate the covenant (cf. Amos 5:18-20; Isa 2:12-21; Joel 1:15). The sword will devour and be sated with blood — the day is described as a sacrifice (<em>zebah</em>) to YHWH in the land of the north.</p>",
+"11": "<p>The ironic medical counsel — <strong>go up to Gilead and take balm, O virgin daughter Egypt</strong> — echoes the Gilead/balm metaphor of 8:22, where the question was asked whether there was a balm in Gilead for Israel's wound. Now Egypt is told to seek the same remedy, equally in vain. Gilead (Transjordan) was famous in the ancient world for its aromatic resins used medicinally. The designation <strong>virgin daughter Egypt</strong> uses the standard poetic idiom for an unconquered nation — which she will no longer be.</p>",
+"12": "<p>The nations have heard <strong>Egypt's shame</strong> — the military humiliation of Carchemish was an international event whose news spread throughout the ANE. <strong>Your cry has filled the land, warrior has stumbled against warrior and both have fallen together</strong> — the image of Egyptian soldiers crashing into one another in their flight captures the chaos of military rout. Multiple ancient accounts of battle describe exactly this phenomenon: disciplined formations collapse into fleeing masses that impede one another's escape.</p>",
+"13": "<p>The second Egypt oracle — concerning <strong>Nebuchadnezzar king of Babylon's coming to strike the land of Egypt</strong> — looks forward from Carchemish to the later Babylonian campaign against Egypt itself. Nebuchadnezzar conducted a military campaign against Egypt in 568/567 BC (attested in a fragmentary Babylonian administrative text). The oracle prepares Egypt for the coming land invasion, not merely the river battle. The cities named in the following verses are the major centers of Egyptian civilization.</p>",
+"14": "<p><strong>Migdol, Memphis, and Tahpanhes</strong> — three strategic Egyptian cities are commanded to proclaim readiness. Migdol was a northern border fortress; Memphis (<em>Noph</em>) was the ancient capital and religious center in the central delta; Tahpanhes was the eastern border garrison city where Jeremiah himself was taken (43:7). The three cities represent Egypt's defensive perimeter and administrative core. Commanding them to &quot;take their positions and stand ready&quot; echoes the mock military preparations of vv. 3-4 — but now on Egyptian soil.</p>",
+"15": "<p><strong>Why is your strong one swept away?</strong> — the Hebrew <em>ʾabbir</em> (strong one) may refer to the sacred Apis bull, the primary deity associated with Memphis and Egyptian royal power. The Apis bull was the living manifestation of the god Ptah and later identified with Osiris; its cult was central to Egyptian state religion. If so, the oracle declares that Egypt's chief divine power has been swept away by YHWH. <em>Lo ʿamad ki YHWH hadafô</em> (he did not stand because YHWH drove him down) — divine defeat of Egypt's divine champion.</p>",
+"16": "<p>The Babylonian warriors' stumbling against one another — <strong>he stumbled, and they fell, one upon another</strong> — and their mutual counsel to rise and return to their own people and native land suggests the temporary withdrawal or internal confusion of the invading force. The phrase <em>lerets moladetenû</em> (to the land of our birth) is the army's call to return home, implying a campaign that ends without complete conquest — consistent with the partial nature of Nebuchadnezzar's Egyptian campaign.</p>",
+"17": "<p>The derisive name given to Pharaoh — <strong>call his name: Noisy One Who Let the Moment Pass</strong> (<em>sha&apos;on heʿevir hammoʿed</em>) — is a contemptuous throne-name parody. Egyptian pharaohs bore elaborate ceremonial throne-names proclaiming their power; Jeremiah's counter-name characterizes Pharaoh as one who made much noise but missed his moment. The &quot;appointed time&quot; (<em>moʿed</em>) he failed to seize may refer to Egypt's failure to relieve Jerusalem during the siege — the moment of genuine strategic opportunity that slipped away.</p>",
+"18": "<p>The comparison to the mountains — <strong>as surely as I live, declares the King whose name is YHWH of hosts, like Tabor among the mountains and like Carmel by the sea, so shall he come</strong> — invokes the towering visibility of Israel's two most prominent mountains as analogies for the inevitable visibility of Nebuchadnezzar's advance. Mount Tabor (in Galilee) and Mount Carmel (overlooking the Mediterranean) were unmistakable landmarks in their respective landscapes. Nebuchadnezzar's coming will be equally unmistakable and unstoppable.</p>",
+"19": "<p>The command to Egyptian inhabitants to <strong>prepare yourselves for exile, daughter dwelling in Egypt</strong> — using the idiom of packing provisions for deportation — treats Egypt's conquest and deportation as predetermined facts requiring practical preparation. <strong>Memphis shall become a waste, a ruin without inhabitant</strong> — the great ancient capital would be left desolate. Memphis had stood for over two millennia as one of the world's great cities; its potential desolation was an almost unimaginable judgment for ancient hearers.</p>",
+"20": "<p><strong>Egypt is a beautiful heifer, but a gadfly from the north has come upon her</strong> — the heifer image for Egypt is unusual; it may evoke the sacred Apis bull cult or simply the image of a well-fed nation. The gadfly (<em>ʿeqrev</em>, possibly horsefly or deerfly) from the north is Babylon — an irritant that becomes a destroyer. The contrast between the sleek heifer and the stinging insect captures the asymmetry of Egypt's vulnerability: all her apparent strength and beauty will be undone by the relentless northern threat.</p>",
+"21": "<p>Egypt's mercenary warriors — <strong>the hired men in her midst are like fattened calves; they too have turned and fled together, they did not stand</strong> — reflect the historical reality that Egypt relied heavily on foreign mercenaries. Greek, Carian, Lydian, and Nubian mercenary troops served in the Egyptian army; Herodotus and Greek papyri from Elephantine document foreign military colonies in Egypt. The &quot;fattened calves&quot; metaphor captures their comfort-pampered uselessness in crisis: well-fed in peacetime, they bolt at the day of disaster.</p>",
+"22": "<p>The sound of Egypt fleeing — <strong>her sound is like that of a serpent slithering away</strong> — deploys the hissing/rustling image of a snake retreating through undergrowth. The invaders advance with axes <strong>like those who cut wood</strong>: the contrast between the whispering flight of the serpent and the confident axe-strokes of woodcutters dramatizes Egypt's defeat. The axe-wielding woodcutters cutting through the forest (<em>yaʿar</em>) also evoke the army felling everything in its path as it advances.</p>",
+"23": "<p>The cutting down of <strong>her forest</strong> — though it cannot be felled because it is denser than a locust swarm — is a metaphor for cutting through Egypt's seemingly inexhaustible population and resources. The comparison to locusts is quantitative: no matter how numerous Egypt's people, they will be cut down. The locust metaphor recurs in Joel and in Nahum (3:15-17); in ANE texts, armies are routinely compared to locusts for their numbers and their devastating effect on the landscape.</p>",
+"24": "<p><strong>Daughter Egypt shall be put to shame; she shall be delivered into the hand of a people from the north</strong> — &quot;daughter Egypt&quot; (cf. &quot;daughter Zion&quot; for Jerusalem) personifies the nation as a woman to be humiliated by conquest. The shame (<em>hobishah</em>) is both military defeat and social humiliation — the loss of the honor that Egypt's power and prestige had accumulated over millennia. The &quot;people from the north&quot; is Babylon; the directional description has become Jeremiah's standard identifier for the Babylonian threat.</p>",
+"25": "<p>YHWH's declaration against <strong>Amon of Thebes</strong> (<em>No-Amon</em> in Hebrew) — Thebes, the great southern capital and religious center of Egypt, home of Amun-Re, the king of the Egyptian gods — targets the theological heart of Egyptian religion. Nahum 3:8 also names Thebes as a destroyed city. The listing of &quot;Egypt and her gods and her kings, Pharaoh and those who trust in him&quot; as objects of judgment constitutes a comprehensive theological claim: YHWH judges not just Egyptian soldiers but the entire Egyptian divine-royal complex.</p>",
+"26": "<p>The scope of judgment — <strong>I will deliver them into the hand of those who seek their lives, into the hand of Nebuchadnezzar king of Babylon and his servants</strong> — followed by the restoration promise — <strong>but afterwards it will be inhabited as in the days of old</strong> — follows the OAN pattern of judgment + restoration. Egypt will experience YHWH's judgment but will not be permanently destroyed. This limited judgment distinguishes Jeremiah's Egypt oracle from total-destruction rhetoric and anticipates Egypt's actual historical survival under Babylonian and Persian suzerainty.</p>",
+"27": "<p>The sudden pivot to Israel — <strong>but do not fear, O Jacob my servant, nor be dismayed, O Israel, for I am going to save you from far away</strong> — inserts a salvation oracle for Israel within the Egypt OAN. The juxtaposition is deliberate: Egypt falls, but Jacob is rescued. The language of <em>ʿavdi Yaʿaqov</em> (Jacob my servant) echoes Deutero-Isaiah's servant language (Isa 41:8-14; 44:1-2), and the vocabulary of gathering Jacob from distant lands matches the broader exile-restoration hope. The framing within the Egypt OAN implies Jacob's rescue will come partly through Egypt's fall.</p>",
+"28": "<p>The closing comfort — <strong>do not fear, O Jacob my servant, for I am with you</strong> — repeats the covenant presence formula and adds the disciplinary nuance: <strong>I will make a complete end of all the nations among whom I scattered you, but of you I will not make a complete end; I will discipline you in just measure and will by no means leave you unpunished</strong>. The contrast between the nations (complete destruction) and Israel (measured discipline, not destruction) articulates the indestructibility of the covenant community. Jacob suffers covenant discipline; the nations suffer covenant judgment. The distinction is fundamental to Jeremiah's theology of exile.</p>"
+},
+"47": {
+"1": "<p>The superscription — <strong>the word of YHWH that came to Jeremiah the prophet concerning the Philistines, before Pharaoh struck Gaza</strong> — provides a historical anchor in a specific Egyptian military action against the Philistine coast. Pharaoh Necho II attacked Gaza/Kadytis around 609 BC (Herodotus 2.159 mentions this), shortly after defeating and killing King Josiah at Megiddo. The &quot;before&quot; chronology places the oracle in the period when Egyptian power was still dominant on the coastal plain — before Carchemish reversed the geopolitical situation. Gaza as an Egyptian target reflects the contested control of the Philistine coastal corridor.</p>",
+"2": "<p>The <strong>waters rising from the north</strong> — a swelling torrent that will overflow the land and the cities within it, with all inhabitants crying out — returns to Jeremiah's characteristic northern-threat imagery. The flood metaphor (cf. 46:7-8 where Egypt rose like the Nile) is now applied to the Babylonian advance overcoming the Philistine cities. The torrent is unstoppable: it covers the land and its inhabitants, cities and those dwelling in them. The geographical transition from Carchemish (Egypt) to the Philistine coast is geopolitically coherent: Babylon's conquest followed the coastal highway.</p>",
+"3": "<p>The <strong>sound of thundering hooves, the rattling of chariots and rumbling of wheels</strong> — the Babylonian war machine's advance is described as pure sound, a technique that conveys overwhelming force through auditory imagery. Fathers do not look back for their children — the noise of the oncoming army produces panic-flight so total that parental bonds are overridden. In ancient battle accounts, the sound of approaching chariots was a primary psychological weapon; the chariot was the tank of its day, combining speed, elevation, and shock value.</p>",
+"4": "<p>The purpose — <strong>to destroy all the Philistines, to cut off all survivors who might help Tyre and Sidon</strong> — places the oracle in the geopolitical context of Babylon's systematic reduction of the Levantine city-states. Tyre and Sidon (Phoenician cities north of Israel) and Gaza, Ashkelon, and Ashdod (Philistine cities south) formed a coastal arc of city-states between Babylon and Egypt. The Philistines are called <strong>remnant of the coastland of Caphtor</strong> — Caphtor is Crete or the Aegean coast, the Philistines' legendary place of origin (Deut 2:23; Amos 9:7), reflecting knowledge of the Bronze Age migration traditions.</p>",
+"5": "<p><strong>Baldness has come upon Gaza; Ashkelon has been silenced</strong> — mourning rites (shaving the head was a standard ANE mourning practice, cf. Amos 8:10; Mic 1:16) are applied to the Philistine cities personified. The question — <strong>how long will you gash yourselves?</strong> — uses the mourning self-laceration practice condemned elsewhere in the Torah (Lev 19:28; Deut 14:1) but here presented as the natural Philistine response to their annihilation. The question implies that the mourning will continue indefinitely because the destruction is irreversible.</p>",
+"6": "<p>The rhetorical address to <strong>the sword of YHWH</strong> — <strong>how long until you rest? Return to your scabbard; cease and be still</strong> — is a dramatic personification unique in prophetic literature. The sword is addressed as an autonomous agent that can be implored to stop. The cry &quot;how long&quot; (<em>ʿad matay</em>) is the lament question of the psalms applied to the divine instrument of judgment. The oracle's speaker (perhaps a Philistine voice) pleads for the sword's cessation — but receives no answer.</p>",
+"7": "<p>The oracle's final word — <strong>how can it rest, when YHWH has given it a charge?</strong> — is the theological climax of the brief oracle. The sword cannot rest because YHWH has commanded it (<em>YHWH tsivah lo</em>). Against Ashkelon and the seacoast, against the <strong>appointed place</strong> (<em>moʿad</em>), the sword has a divine appointment. The word <em>moʿad</em> (appointed time/place) ties the judgment to divine scheduling: this is not random violence but YHWH's appointed act at YHWH's appointed time. The brevity of the oracle — seven verses — gives it an almost haiku-like concentration of judgment.</p>"
+},
+"48": {
+"1": "<p>The oracle against <strong>Moab</strong> — the longest of the OAN in Jeremiah — introduces a nation with deep and complex ties to Israel. Moab occupied the plateau east of the Dead Sea between the Arnon gorge (north) and the Zered River (south). The <strong>Mesha Stele</strong> (also called the Moabite Stone, c. 840 BC, now in the Louvre) is the longest ancient inscription found in the Levant and provides extensive documentation of Moabite culture, religion, and politics — including Moab's wars with Israel under Omri and Ahab, and the worship of <strong>Chemosh</strong>, Moab's national deity.</p>",
+"2": "<p>The punning wordplay on Moabite city names begins here and runs through the chapter — a feature of the OAN genre called <em>paronomasia</em> (sound-based word play). <strong>Heshbon</strong> (<em>ḥeshbon</em>, meaning calculation/thought) — they have devised evil against it (<em>ḥashvu</em>). The silence of Madmen (<em>Madmen</em>) — they will be silenced (<em>dammî ṭaddôm</em>). <strong>Dimon</strong> and <strong>Nimrim</strong> will become desolate. These puns would have been immediately legible to Hebrew-speaking audiences and created a form of prophetic &quot;name magic&quot; — the city's name encodes its fate.</p>",
+"3": "<p><strong>A voice of crying from Horonaim, desolation and great destruction!</strong> — Horonaim was a Moabite city mentioned in the Mesha Stele, establishing the oracle's geographical realism. The triple cascade — crying, desolation, destruction — mirrors the triple covenant curse (sword, famine, plague) but applied through its effects rather than its instruments. The escalating intensity of the cry-desolation-destruction sequence portrays the collapse moving through the Moabite plateau from city to city.</p>",
+"4": "<p><strong>Moab is destroyed</strong> — her little ones make a cry heard. The image of children crying amid the destruction emphasizes the totality of the disaster: it affects the most vulnerable, not just warriors. The focus on children's voices (<em>zeʿaqah shemaʿu tsaʿareyha</em>) is the prophetic technique of representing communal catastrophe through its impact on the most innocent. Even the youngest and most helpless cannot escape judgment when it comes upon a nation.</p>",
+"5": "<p>The weeping on the road from <strong>Luhith</strong> to <strong>Horonaim</strong> — the descent road is full of crying — evokes the image of refugees streaming out of destroyed cities, weeping as they flee. The <strong>ascent of Luhith</strong> appears in Isaiah 15:5 in a parallel Moab oracle; the two prophetic traditions share geographical knowledge of the specific routes crossing the Moabite plateau. These are real roads known to the ancient world, not generic landscapes of destruction.</p>",
+"6": "<p>The counsel — <strong>flee, save yourselves! Be like a juniper in the desert</strong> (<em>keʿaroʾer bamidbar</em>) — is ambiguous: a juniper/tamarisk in the desert is either an image of loneliness (stripped of everything) or survival (alone but tenacious). The phrasing echoes 17:6, where the man who trusts in man is compared to a bush in the desert — a withered, isolated existence. Surviving the Moabite catastrophe means being reduced to bare life, stripped of all the social and cultic supports of civilization.</p>",
+"7": "<p>The indictment of Moab — <strong>because you trusted in your own works and your treasures, you also will be taken</strong> — identifies the theological root of Moab's fall: self-reliance rather than recognition of YHWH's sovereignty. <strong>Chemosh will go into exile</strong> — the national deity of Moab, whose worship is documented in the Mesha Stele (&quot;I have built this high place for Chemosh...&quot;) and mentioned as a Moabite patron throughout the historical books (Num 21:29; 1 Kgs 11:7, 33), will be deported along with his people. The gods of the nations travel into exile with their nations — a standard ANE concept of divine power being carried in defeat.</p>",
+"8": "<p>The comprehensive judgment — <strong>the destroyer shall come upon every city, and no city shall escape</strong> — is the territorial claim of complete conquest. In ANE conquest accounts, total conquest was claimed as a demonstration of divine mandate; Jeremiah appropriates this totalizing language for YHWH's judgment against Moab. The valley and plateau alike — representing different geographical zones of Moab — are equally under judgment. No topographical feature provides shelter from YHWH's decreed destruction.</p>",
+"9": "<p>The image — <strong>give wings to Moab, for she will fly away</strong> — is either a command to provide the means of escape (give her wings to flee) or a lament that she must flee like a bird. The city of <strong>Kir-hareseth</strong> (meaning &quot;City of the Potsherd&quot; or &quot;Wall of Kiln-Baked Brick,&quot; modern Kerak in Jordan) was Moab's capital fortress, mentioned in 2 Kings 3:25 and Isaiah 16:7. Its destruction signals the fall of Moab's political center. Archaeological excavations at Kerak have confirmed its ancient fortress character.</p>",
+"10": "<p>The extraordinary warning — <strong>cursed is he who does the work of YHWH with slackness, and cursed is he who keeps back his sword from bloodshed</strong> — addresses the Babylonian army as YHWH's instrument, warning against half-hearted execution of the divine commission. This verse is among the most disturbing in Jeremiah: YHWH's curse falls on those who fail to execute judgment completely. It is a theological claim about divine commission that does not soften or mitigate the destruction but insists on its thorough completion.</p>",
+"11": "<p>The famous wine-on-its-lees metaphor — <strong>Moab has been at ease from his youth and has settled on his dregs; he has not been emptied from vessel to vessel nor has he gone into exile, so his taste remains in him and his scent has not changed</strong> — describes Moab's undisturbed historical security. Wine left on its lees (sediment) preserved its flavor without being clarified by decanting. Moab, never having experienced the discipline of exile or conquest that Israel had endured, had preserved its cultural character unchanged — but also its spiritual complacency. The metaphor is a classic of ANE wine-making practice.</p>",
+"12": "<p>YHWH's judgment — <strong>therefore behold, the days are coming when I will send tilters who will tilt him; they will empty his vessels and shatter his jars</strong> — turns the wine metaphor into a destruction oracle. The &quot;tilters&quot; are those who pour wine from vessel to vessel to clarify it; here they are Babylon's armies who will decant Moab from his security into displacement. The shattering of the jars (<em>we-nevaleihem yenapatsetsu</em>) adds the violence of conquest: not just emptied but shattered beyond use.</p>",
+"13": "<p><strong>Then Moab will be ashamed of Chemosh as the house of Israel was ashamed of Bethel, their confidence</strong> — the comparison to Bethel is striking. Bethel was the northern kingdom's royal sanctuary where Jeroboam I had set up the golden calves (1 Kgs 12:29-30), which the Deuteronomists treated as idolatrous. When the northern kingdom fell to Assyria in 722 BC, Bethel's cult was exposed as powerless. Moab's experience with Chemosh will parallel Israel's embarrassment over Bethel: the national deity will prove unable to protect his people.</p>",
+"14": "<p>The taunt — <strong>how can you say, we are heroes and mighty men of valor?</strong> — challenges Moab's military self-assessment. The phrase <em>ʾanashim giborim we-ʾanshe ḥayil lamiḥama</em> (men of might and valor for war) is the standard idiom for elite warriors. The rhetorical question exposes the gap between Moab's self-conception (a warrior nation) and the reality of imminent annihilation. Military self-confidence without YHWH's protection is empty boasting.</p>",
+"15": "<p>The divine declaration — <strong>Moab is destroyed and his cities have been taken; his finest young men have gone down to slaughter, declares the King, YHWH of hosts is his name</strong> — grounds the oracle's authority in YHWH's royal title. The appellation <em>hamelekh YHWH tsevaoʾt shemo</em> (the King, whose name is YHWH of hosts) is a rare formal title combining kingship and the military-cosmic epithet &quot;of hosts&quot; (meaning armies/angelic hosts). This title asserts YHWH's supremacy over all military power, human and divine.</p>",
+"16": "<p><strong>The disaster of Moab is near to come, and his calamity hastens swiftly</strong> — the urgency formula signals the imminence of judgment. The word <em>qarovah ʿal lavo</em> (near to come) creates a sense of prophetic imminence that makes the oracle feel like advance warning rather than retrospective commentary. Throughout the OAN, the judgment is presented as future but imminent — close enough to prepare for but not yet arrived, giving the oracle its warning character.</p>",
+"17": "<p>The lamentation over Moab by his neighbors — <strong>mourn for him, all you who are around him; all who know his name, say, how the strong scepter is broken, the glorious staff!</strong> — invites the surrounding nations to mourn. The broken scepter (<em>maqqel ʿoz</em>) and broken staff (<em>maqqel tifʾaret</em>) are royal symbols of authority. Moab's political power, represented by the royal staff, will be shattered. The neighboring nations are mourners — a theatrical device that conveys the international significance of Moab's fall.</p>",
+"18": "<p>The address to <strong>daughter Dibon, come down from your glory and sit in thirst</strong> — descend and sit in thirst — uses the personification of the city-woman sitting in mourning posture. Dibon was the Moabite capital where the Mesha Stele was discovered in 1868; the stele itself mentions Dibon as Mesha's royal city. The descent from glory (<em>kavod</em>) to sitting in the dust was the classic posture of the defeated — city-lament literature from Mesopotamia (the Lament over the Destruction of Ur) uses identical imagery.</p>",
+"19": "<p>The cry from <strong>Aroer</strong> — the city on the edge of the Arnon gorge — to fleeing Moabites: <strong>what has happened?</strong> Aroer (modern Arair, in Jordan) sat at a key crossing of the Arnon gorge and appears in both Mosaic-period boundary texts (Num 32:34; Deut 2:36) and historical accounts. The question <em>mah hayah</em> (what has happened?) is the natural question of a survivor watching the destruction — unable to comprehend the scale of the catastrophe unfolding before them.</p>",
+"20": "<p><strong>Moab is put to shame, for it is broken down; wail and cry! Tell it by the Arnon that Moab is destroyed</strong> — the proclamation of Moab's fall is to be announced at the Arnon, Moab's northern boundary river. The Arnon gorge (Wadi Mujib) is one of the most dramatic geographical features of Transjordan, cutting deeply into the plateau. In antiquity it marked the northern border of Moabite territory; proclaiming the disaster at this boundary is to announce it to all who cross the border.</p>",
+"21": "<p>The enumeration of destroyed Moabite cities — <strong>judgment has come upon the plateau, upon Holon, Jahaz, Mephaath, Dibon, Nebo, Beth-diblathaim, Kiriathaim, Beth-gamul, Beth-meon, Kerioth, Bozrah</strong> — reads like a geographical survey of the Moabite plateau. Many of these cities appear in the Mesha Stele, demonstrating the oracle's use of accurate geographical knowledge. The systematic listing of defeated cities is a literary form borrowed from ANE victory inscriptions, now deployed as a lament catalog.</p>",
+"22": "<p>The continuation of the city list establishes the comprehensiveness of the judgment. The repeated naming of specific sites rather than a general reference to &quot;Moab&quot; achieves the effect of total conquest — no city, however remote, has been spared. The literary technique mirrors Babylonian and Assyrian conquest inscriptions that listed every city taken; Jeremiah appropriates this genre to proclaim YHWH's judgment rather than a human king's victory.</p>",
+"23": "<p>The list continues through the Moabite plateau cities. The use of real place names — many confirmable from the Mesha Stele, Numbers, and archaeological survey — grounds the oracle in historical-geographical reality rather than rhetorical abstraction. The reader/hearer familiar with Transjordanian geography would recognize the systematic sweep of judgment across the entire plateau, from north to south, from the Arnon to the Zered.</p>",
+"24": "<p>The inclusion of <strong>Kerioth and Bozrah</strong> along with all the cities of the land of Moab, far and near — extending the judgment to Moab's southern cities — completes the geographical sweep. Kerioth may be the burial city associated with Moab (the name means &quot;cities&quot; or possibly a specific cultic city). The dual designation &quot;far and near&quot; (<em>harehaqot we-haqqerovot</em>) is a totality formula meaning without exception — every settlement, however remote or central, falls under judgment.</p>",
+"25": "<p><strong>The horn of Moab is cut off and his arm is broken, declares YHWH</strong> — the horn (<em>qeren</em>) and arm (<em>zeroa</em>) are paired symbols of royal and military power in ANE iconography. The horn represents strength and authority (cf. the Bull iconography of Ugaritic and Canaanite royal imagery); the arm represents the military force to project that power. Cutting the horn and breaking the arm in a single declaration dismantles both the symbolic prestige and the practical military capacity of the Moabite state.</p>",
+"26": "<p><strong>Make him drunk, because he magnified himself against YHWH</strong> — the cup of divine wrath that Jeremiah has described throughout his ministry (25:15-17) is now applied to Moab. Moab's sin is specified: he magnified himself against YHWH (<em>higdil ʿal-YHWH</em>). The specific pride is anti-YHWH arrogance. The drunkenness metaphor leads to wallowing in vomit — a deliberately undignified image for the mighty nation reduced to helpless disgrace. He also becomes a laughingstock (<em>lisḥoq</em>).</p>",
+"27": "<p>The indictment — <strong>was not Israel a laughingstock to you?</strong> — identifies the specific sin underlying Moab's judgment. Moab had mocked Israel; now Moab becomes the object of mockery. The principle of measure-for-measure (<em>midah keneged midah</em>) operates throughout the OAN: nations are judged by the same standard they applied to others. Moab's shaking of heads at the sight of captured Israelites will be replicated when others shake their heads at captured Moabites. The boomerang of mockery returns on those who deploy it.</p>",
+"28": "<p>The call to <strong>flee the cities and dwell in the rock; be like the dove that nests in the sides of the mouth of a gorge</strong> — invokes the dove's instinctive nesting in cliff crevices as an image of the desperate search for safety. The Moabite plateau's dramatic gorges (the Arnon, the Zered) would be the natural refuge for those fleeing city destruction. The dove image conveys the smallness and vulnerability of the survivors — reduced from a nation inhabiting fortified cities to individuals nesting in cliff faces.</p>",
+"29": "<p>The comprehensive indictment of Moab's pride — <strong>we have heard of the pride of Moab, he is very proud; his arrogance, pride, presumption, and haughty heart</strong> — lists four Hebrew words for pride: <em>gaʾavah</em>, <em>geʾeh</em>, <em>gaʾon</em>, <em>gobah lev</em>. This fourfold vocabulary of arrogance functions as a theological diagnosis: Moab's fundamental failure is the refusal to acknowledge YHWH's sovereignty. The same indictment appears in Isaiah 16:6, suggesting a shared prophetic tradition about Moab's character.</p>",
+"30": "<p><strong>I know his insolence, declares YHWH, but it is futile; his boasts are futile</strong> — YHWH's direct claim to know Moab's arrogance is a sovereignty claim. Nothing is hidden from YHWH's knowledge; Moab's self-aggrandizement has been observed and assessed. The word <em>badav</em> (idle words/boasts) may refer to Moab's empty oracles or propaganda. The futility of Moab's pride is its foundation: pride built on autonomous human strength, without YHWH's support, cannot sustain itself.</p>",
+"31": "<p>The lamentation — <strong>therefore I wail for Moab; I cry out for all Moab</strong> — introduces the remarkable feature of divine mourning over the judgment. YHWH (or the prophet speaking for YHWH) weeps over the people being judged. This divine pathos — YHWH lamenting the destruction he himself has decreed — is theologically distinctive of Jeremiah (cf. 8:18-9:3, where the divine voice weeps over Israel). The men of <strong>Kir-heres</strong> are mourned; the divine lamentation is genuine, not performative.</p>",
+"32": "<p>The weeping over <strong>the vine of Sibmah</strong> — mourned more than the weeping of Jazer — invokes Moab's agricultural prosperity. Sibmah was famous for its vineyards (cf. Isa 16:8-9, parallel passage). The vine's tendrils crossing the sea and reaching to Jazer describes the vast spread of Moabite viticulture. On Moab's summer fruit and vintage, the destroyer has fallen — the joyful harvest season is replaced by the silence of destroyed vineyards. The absence of harvest celebration marks the end of normal life.</p>",
+"33": "<p>The removal of <strong>joy and gladness from the fruitful land and the land of Moab</strong> — specifically the end of harvest celebration with the treading of the winepress — removes the central communal joy of the agricultural year. <strong>The treaders tread no wine in the presses; I have put an end to the shouting</strong> — harvest songs and the festive noise of wine-treading cease. In Mediterranean agricultural cultures, the grape harvest was the year's great celebration; its absence signaled total social dissolution.</p>",
+"34": "<p>The cry from <strong>Heshbon to Elealeh, to Jahaz</strong> across the whole Moabite plateau — from the north (Heshbon) across to <strong>Zoar, Eglath-shelishiyah</strong> in the south, even to <strong>Nimrim</strong> — maps the spatial extent of the lamentation. The waters of Nimrim will become desolate: the springs (<em>mei Nimrim</em>) that supported settlement and agriculture will dry up or be abandoned. The combination of weeping voices from the cities and the drying of waters creates a picture of total human and ecological devastation.</p>",
+"35": "<p>The specific judgment — <strong>I will bring to an end in Moab those who offer sacrifice on the high place and those who burn incense to their gods</strong> — targets the Moabite cultic system directly. The <strong>high places</strong> (<em>bamot</em>) of Moab were the outdoor worship sites where sacrifices were offered, mentioned in Numbers 22-25 in connection with Balaam and Baal-Peor. The end of Moabite sacrifice marks the end of Moabite religious community — the cult cannot continue without the nation.</p>",
+"36": "<p>The divine lament — <strong>therefore my heart moans for Moab like flutes, my heart moans like flutes for the men of Kir-heres</strong> — uses the image of funeral flutes, the standard instrument of mourning in the ancient Near East (cf. Matt 9:23). The phrase <em>levi yehemeh kechalalim</em> (my heart moans like flutes) is extraordinarily intimate: YHWH's internal state is described as the mournful sound of the instrument played at funerals. The riches made by Moab have perished — economic prosperity and cultic worship are jointly destroyed.</p>",
+"37": "<p>The mourning rites enumerated — <strong>every head is shaved, every beard cut off; every hand is gashed; on every waist is sackcloth</strong> — represent the complete repertoire of ancient Near Eastern grief expression. Shaved head, cut beard, gashed hands, and sackcloth all appear in ANE lament texts and practice (cf. Jer 41:5 for Israelite mourning; Ezekiel 27:31 for Tyrian mourning). The total coverage — every head, every beard, every hand, every waist — means the entire Moabite population is simultaneously in mourning.</p>",
+"38": "<p>The public space of mourning — <strong>on all the housetops of Moab and in the squares there is nothing but lamentation</strong> — uses the flat rooftops of ancient Levantine houses as communal gathering places for mourning, as they were for other social activities. YHWH's own summary — <strong>I have broken Moab like a vessel for which no one cares</strong> (<em>kekheli ʾein ḥephets bo</em>) — is devastating: Moab is smashed not like a valuable jar but like worthless pottery carelessly discarded. The image of the broken, unwanted vessel conveys complete dismissal.</p>",
+"39": "<p>The triple lamentation — <strong>how it is broken! Wail! How Moab has turned his back in shame!</strong> — is a public cry of devastation. That Moab has become a laughingstock and an object of horror (<em>lemahattah</em>) to all his neighbors inverts the opening indictment (v. 26-27): Moab who mocked Israel now becomes the object of mockery and horror for surrounding nations. The principle of poetic justice is complete: the mockers become the mocked, the proud become the pitiable.</p>",
+"40": "<p>The declaration — <strong>look, he flies like an eagle and spreads his wings over Moab</strong> — introduces the conqueror as an eagle swooping on prey. The eagle (<em>nesher</em>) is the standard biblical image for swift, powerful conquest (cf. Deut 28:49; Hab 1:8; Ezek 17:3). The enemy swooping like an eagle from the sky combines speed and inevitability: the prey cannot outrun the bird of prey. The image is ANE-wide; Assyrian victory inscriptions and Neo-Babylonian texts use the eagle as a royal and martial symbol.</p>",
+"41": "<p>The captured cities — <strong>Kerioth is taken and the strongholds are seized</strong> — move the oracle toward completion. The military heart of Moab is gone. The warriors' anguish — <strong>the heart of Moab's warriors on that day will be like the heart of a woman in labor</strong> — uses the labor-pain metaphor for anguish and helplessness that is widespread in the prophets (cf. Isa 13:8; 21:3; Jer 4:31; 22:23). The strongest men reduced to the involuntary agony of childbirth captures the complete loss of control and the overwhelming nature of the suffering.</p>",
+"42": "<p>The final theological indictment — <strong>Moab will be destroyed and no longer be a people, because he magnified himself against YHWH</strong> — restates the root sin identified in v. 26. Anti-YHWH arrogance is both the cause and the justification of the judgment. The national destruction is proportional to the theological offense: a nation that made itself the measure of its own significance, refusing to acknowledge YHWH's sovereignty, loses its national existence. The judgment matches the sin.</p>",
+"43": "<p>The triple terror formula — <strong>terror, pit, and snare are before you, O inhabitant of Moab</strong> — echoes the famous triple-terror verse of Isaiah 24:17-18, which Jeremiah appears to quote here. The sequence of terror-pit-snare creates an inescapable trap: those who flee the terror fall into the pit; those who climb out of the pit are caught in the snare. The chain of inescapable fates was a rhetorical device for expressing total judgment; Isaiah and Jeremiah both deploy it in OAN contexts.</p>",
+"44": "<p>The inescapability is developed — <strong>he who flees from the terror will fall into the pit, and he who climbs out of the pit will be caught in the snare</strong> — as an elaborate description of the closing trap. The triple-terror sequence borrowed from Isaiah 24:17-18 and reapplied to Moab demonstrates the prophetic tradition's intertextual use of prior oracles. The year of their punishment (<em>shenat peqqudatam</em>) is coming — the appointed time of reckoning that cannot be avoided.</p>",
+"45": "<p>The refugees who fled to Heshbon — the Amorite capital before its conquest by Moses (Num 21:21-31) — standing exhausted in its shadow, the fire going out from Heshbon and devouring Moab, recalls the ancient Song of Heshbon (Num 21:27-30), which described the original Amorite conquest of Moab. Jeremiah's oracle thus frames Moab's fall as a repetition of its original conquest: the same fire that once burned through Moab from Heshbon burns through it again. History repeats as judgment.</p>",
+"46": "<p>The lament — <strong>woe to you, Moab! The people of Chemosh are destroyed</strong> — uses the funeral cry (<em>oy lekha</em>) over the nation and its patron deity. Chemosh's worshippers are destroyed — the national deity has failed his people. <strong>Your sons are taken into exile and your daughters into captivity</strong> — the deportation formula completes the picture of national destruction. The people of Chemosh will experience what the people of YHWH have experienced: exile, captivity, the dissolution of national existence. Chemosh proves as powerless to prevent this as lesser gods had been.</p>",
+"47": "<p>The surprising restoration promise — <strong>yet I will restore the fortunes of Moab in the latter days, declares YHWH</strong> — is one of several such restoration promises appended to the OAN for Moab (here), Ammon (49:6), and Elam (49:39). These eschatological restoration promises signal that the judgment, though severe, is not YHWH's final word even to Israel's historic enemies. The phrase <em>ʾaḥarit hayamim</em> (in the latter days/end of days) is an eschatological marker pointing beyond present judgment to a transformed future order. The book closes even this harsh judgment with a horizon of hope.</p>"
+}
 }
 
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
-}
-
-def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+existing = load_comm("mkt-context", "jeremiah")
+merge_comm(existing, NEW)
+save_comm("mkt-context", "jeremiah", existing)
+print("Done. Verifying chapter coverage...")
+for ch in ["46","47","48"]:
+    n = len(existing.get(ch, {}))
+    print(f"  Ch {ch}: {n} verses")

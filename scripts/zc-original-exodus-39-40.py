@@ -1,45 +1,29 @@
 """
-Exodus — all four layers (echo + original + context + christ).
-Exodus contains the NT's most developed type-system: Passover, Sinai, manna, rock, tabernacle.
+MKT Original Commentary — Exodus chapters 39–40
+Run: python3 scripts/zc-original-exodus-39-40.py
+
+Ch 39: Completion of all priestly garments exactly as commanded (kaasher tzivah YHWH
+       appears 7 times); "HOLY TO THE LORD" inscription; Moses's inspection and blessing.
+Ch 40: Erection of the tabernacle on the first of the first month (New Year inauguration);
+       anointing of tabernacle and priests; the glory-cloud fills the tent of meeting,
+       making it inaccessible to Moses — the OT's climax of divine presence.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,156 +33,99 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "3": {
-    "2": [
-      {"type": "allusion", "target": "Acts 7:30", "note": "The angel of the LORD appeared to Moses in the burning bush — Stephen's speech recounts the burning bush theophany; the angel of the LORD who appeared there is identified in NT use as the pre-incarnate Christ mediating the divine presence"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Matt 22:32", "note": "I am the God of Abraham the God of Isaac and the God of Jacob — Jesus cites Exod 3:6 to prove the resurrection: if YHWH called himself the God of the patriarchs in the present tense after their deaths, they must be alive; the burning bush is the resurrection's OT proof-text"},
-      {"type": "allusion", "target": "Acts 7:32", "note": "I am the God of your fathers — Stephen cites the divine self-identification from the burning bush as the founding moment of YHWH's covenant faithfulness to the patriarchs"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "John 8:58", "note": "I AM WHO I AM — the divine name ehyeh asher ehyeh revealed at the burning bush; Jesus's seven I AM statements (John) and especially John 8:58 ('before Abraham was, I am') are deliberate invocations of the Exodus 3:14 divine name, claiming for Jesus the YHWH-identity"}
-    ]
+EXODUS = {
+  "39": {
+    "1": "<p>The vestments (<em>bigdei serad</em>, בִּגְדֵי שְׂרָד, woven service-garments) are made from <em>tekhelet</em> (blue-violet), <em>argaman</em> (purple), and <em>tola'at shani</em> (crimson) — the three luxury dye-colors reserved for sacred and royal use throughout the ancient Near East. <em>Tekhelet</em> is derived from the sea snail <em>Murex trunculus</em>; <em>argaman</em> from another Murex species; <em>tola'at shani</em> from the dried bodies of the <em>Kermes</em> scale insect. These are the colors of the tabernacle's curtains (26:1) and the high priest's garments, linking priestly attire to the tabernacle structure itself. 'Just as YHWH commanded Moses' (<em>kaasher tzivah YHWH et-Moshe</em>) — the compliance formula appears seven times in this chapter (vv 1, 5, 7, 21, 26, 29, 31), forming the chapter's structural backbone.</p>",
+    "2": "<p>The <em>efod</em> (אֵפוֹד) is the high priest's distinctive vestment — a garment worn over the robe (<em>me'il</em>), probably covering the chest and back, held by the two shoulder-pieces. Gold thread is worked into the blue, purple, crimson, and fine linen — <em>patiyl zahav</em> (gold thread, lit. 'twisted thread of gold'). The gold threads are wound in to create the woven appearance. The ephod's material extravagance signals the high priest's role as the most glorious human being in Israel — his vestments embody the beauty (and cost) of approaching the divine presence.</p>",
+    "3": "<p>The craftsmen beat gold into thin sheets (<em>vayeratzu et-zahav ha'elim</em>) and cut them into threads — <em>patiylim</em> (twisted threads). The metallurgical skill required is extraordinary: the gold must be beaten thin enough to be cut into weavable threads without breaking. This is the same technical vocabulary as the <em>zehav tahor</em> (pure gold) used for the menorah, the ark overlay, and the altar-top. Every object and garment in the tabernacle connects to the gold that signals divine presence.</p>",
+    "4": "<p>Two shoulder-pieces (<em>shtei chetef</em>, שְׁתֵּי כְתֵפֹת) are made to join together at the two edges — the ephod is thus a two-piece garment joined at the shoulders. The shoulder-pieces are the attachment points for the two onyx stones (v7) bearing the names of the twelve tribes — the high priest carries the covenant people on his shoulders into the divine presence.</p>",
+    "5": "<p>The skillfully woven waistband (<em>cheshev efodo</em>, חֵשֶׁב אֵפֻדּוֹ) is an integral part of the ephod, made of the same materials — gold, blue, purple, crimson, and fine twisted linen. 'Just as YHWH had commanded Moses' — the second occurrence of the compliance formula. The waistband holds the ephod against the body; its integration into the garment's fabric (not a separate belt) emphasizes the unified nature of the high priestly vestment.</p>",
+    "6": "<p>The onyx stones (<em>avnei shoham</em>, אַבְנֵי שֹׁהַם) are set in settings of gold filigree (<em>mishbetzot zahav</em>), engraved like seal engravings (<em>pituchei chotam</em>) with the names of the sons of Israel. The seal-engraving technique is used for legal and official documents throughout the ancient world; the tribes' names are permanently carved in precious stone as if in a legal covenant document. The high priest bears Israel's names on his shoulders (<em>al shtei ketefav</em>) as a 'memorial' (<em>zikkaron</em>) — official record-keeping in the divine court.</p>",
+    "7": "<p>The onyx stones with their filigree settings are fastened to the shoulder-pieces of the ephod — stones of remembrance (<em>avnei zikkaron</em>) for the sons of Israel. 'Just as YHWH had commanded Moses' — third occurrence. The term <em>zikkaron</em> (memorial/remembrance) is the same word used for the memorial before YHWH throughout the tabernacle (17:14; 28:12,29; 30:16; Num 5:15). The tribes are before YHWH's eyes in the person of the high priest — priestly intercession carries the covenant people's names into the divine presence.</p>",
+    "8": "<p>The <em>choshen mishpat</em> (חֹשֶׁן מִשְׁפָּט, breastpiece of judgment/decision) is woven with the same four-fold material as the ephod. 'Skillful workmanship' (<em>ma'aseh choshev</em>) — woven artistry, the same descriptor as the ephod (28:15). The term <em>mishpat</em> (judgment/justice/decision) connects the breastpiece to the Urim and Thummim inside it (v19) — the breastpiece is literally the instrument of divine judgment/decision in the sacred space.</p>",
+    "9": "<p>The breastpiece is foursquare (<em>ravua hayah kafol</em>) — doubled, forming a pouch. The precise square dimensions (a span by a span, i.e., approximately nine inches squared when doubled) are specified for the first time in the execution narrative (previously stated in 28:16). The folding creates the pouch that holds the Urim and Thummim — the divine decision-making instruments placed next to the high priest's heart.</p>",
+    "10": "<p>The first row of stones on the breastpiece: <em>odem</em> (ruby/carnelian), <em>pitdah</em> (chrysolite/topaz), <em>bareqet</em> (emerald/beryl). The gemstone identifications are uncertain — ancient color-names often map imperfectly to modern mineralogical categories. The LXX provides a parallel list with Greek names that are themselves debated. What is clear: twelve distinct precious stones, one for each tribe, arranged in four rows of three.</p>",
+    "11": "<p>The second row: <em>nofekh</em> (emerald/carbuncle/turquoise), <em>sapir</em> (lapis lazuli — not modern sapphire), <em>yahalom</em> (probably jasper or onyx). The lapis lazuli (<em>sapir</em>) is particularly significant: the same stone appears in the divine throne theophany of Ezek 1:26 and the pavement of YHWH's court in Exod 24:10. The blue stone of the breastpiece participates in the symbolic vocabulary of the divine presence.</p>",
+    "12": "<p>The third row: <em>leshem</em> (jacinth/amber?), <em>shevo</em> (agate?), <em>achlama</em> (amethyst). The precise identification of these stones remains debated among gemologists and biblical scholars. The Septuagint and Josephus provide partial information; the Dead Sea Scrolls preserve the Hebrew tradition. The theological function is clear even when the mineralogical identification is uncertain: twelve costly, distinct stones representing twelve distinct covenant tribes.</p>",
+    "13": "<p>The fourth row: <em>tarshish</em> (possibly chrysolite/beryl — associated with Mediterranean trade, cf. Ezek 1:16's 'colour of tarshish'), <em>shoham</em> (the same onyx as on the shoulder-pieces), <em>yashfeh</em> (jasper). The final row connects the breastpiece stones to the shoulder-piece stones via <em>shoham</em> — the same gem that bears the tribal names on the shoulders reappears in the breastpiece's final row, uniting the two loci of tribal memorial on the high priest's body.</p>",
+    "14": "<p>The twelve stones with twelve names engraved — each stone bearing one tribal name, 'like the engravings of a signet' (<em>pituchei chotam</em>). Each tribe has a specific, individual stone bearing its specific, individual name. The enumeration 'twelve according to their names' emphasizes that no tribe is generic or interchangeable: each has a named place and a specific stone in the divine court's record-keeping system.</p>",
+    "15": "<p>Chains for the breastpiece: twisted rope-work (<em>migbalot mishbetzot ma'aseh avot</em>) of pure gold (<em>zahav tahor</em>). The gold chains attach the breastpiece to the ephod's shoulder-pieces (vv 17-18), preventing the breastpiece from falling away from the high priest's chest. The structural engineering of the sacred garments ensures both aesthetic precision and functional integrity: the breastpiece must remain over the heart as the high priest ministers.</p>",
+    "16": "<p>Two gold settings (<em>mishbetzot zahav</em>) and two gold rings (<em>taba'ot zahav</em>) are made. The rings are placed at the two corners of the breastpiece — the attachment hardware for the gold chains. The combination of rings and chains connects the breastpiece to both the shoulder-pieces above and the ephod waistband below (v19-21), ensuring it remains precisely positioned over the high priest's heart.</p>",
+    "17": "<p>The two gold chains (<em>shalshot hazahav</em>) are inserted into the two rings at the top corners of the breastpiece. <em>Shalshot</em> (chains, cordage, twisted cords) — the same word used for the cords securing the tent curtains. The precision of the attachment system (two rings at top corners, two rings at lower corners, gold chains above and blue cord below) reflects the tabernacle's characteristic attention to exact, calibrated fastening throughout its entire structure.</p>",
+    "18": "<p>The other ends of the two chains are attached to the two gold settings at the shoulder-pieces of the ephod — securing the breastpiece from above. The engineering is bilateral: two anchor-points above (shoulder-pieces) and two anchor-points below (waistband-level, v20-21) ensure the breastpiece lies flat against the chest without movement. The Urim and Thummim placed inside this precisely secured pouch are positioned directly over the high priest's heart.</p>",
+    "19": "<p>Two more gold rings are placed at the other two corners of the breastpiece — at the edge on the side toward the inner facing of the ephod (<em>el eber hamishbetzet elav mimul efodo</em>). The inner-facing attachment ensures the breastpiece does not swing outward from the body. The detailed attention to which side of the ring faces which direction reflects the instruction culture of the tabernacle: YHWH's specifications are exact, and exact compliance is required.</p>",
+    "20": "<p>Two more gold rings are attached to the two shoulder-pieces of the ephod — toward the front, at the joining-place above the waistband. The positioning 'above the waistband' specifies the anchor-point: the breastpiece is secured both to the shoulder-pieces (top) and to the waistband area (bottom), sandwiched between upper and lower attachment points.</p>",
+    "21": "<p>The breastpiece is bound (<em>vayirkseru</em>) by its rings to the ephod's rings with a blue cord (<em>patiyl tekhelet</em>), so that it is above the waistband and does not come loose from the ephod. 'Just as YHWH commanded Moses' — fourth occurrence of the compliance formula in ch 39. The blue cord (<em>tekhelet</em>, the same color as the curtain cord and tassels) connects the breastpiece to the ephod with the sacred color that throughout the Torah signals divine transcendence and covenant obligation (Num 15:38-40).</p>",
+    "22": "<p>The robe of the ephod (<em>me'il ha'efod</em>, מְעִיל הָאֵפוֹד) is made entirely of blue (<em>tekhelet</em>) — woven by a craftsman. The <em>me'il</em> is the outermost undergarment worn beneath the ephod, visible below it and around it. Its solid blue color creates a visual base for the multicolored ephod above: the high priest is wrapped in the color of heaven.</p>",
+    "23": "<p>The robe's opening (<em>pi-me'il</em>) for the head has a woven binding around it — like the collar of a coat of mail (<em>ke-fi tahrah</em>), so that it will not tear. The structural reinforcement of the neck-opening is a practical detail: the robe must withstand the wear of regular priestly ministry without fraying. The same craftsmanship that produces the most sacred objects attends to the structural integrity of functional seams.</p>",
+    "24": "<p>Pomegranates (<em>rimonim</em>, רִמֹּנִים) made of blue, purple, and crimson twisted linen are attached to the hem (<em>shulei me'il</em>) of the robe. The pomegranate is a symbol of abundance and fertility throughout the ancient Near East — on the temple pillars (1 Kgs 7:18,20,42), in Solomon's garden (Song 4:3,13), and as a symbol of Israel's fruitfulness (Num 13:23; Deut 8:8). The robe's hem bears both pomegranates and bells, creating a combined visual and auditory announcement of the high priest's movements.</p>",
+    "25": "<p>Bells (<em>paamonim</em>, פַּעֲמֹנִים) of pure gold are placed between the pomegranates around the hem — alternating bell and pomegranate around the entire circumference. The bells announce the high priest's entry into the sanctuary (28:35: 'its sound will be heard when he enters the Holy Place before YHWH and when he comes out, so that he does not die'). The auditory announcement of the high priest's presence before YHWH is a protective function: YHWH must hear him coming.</p>",
+    "26": "<p>A bell and a pomegranate alternating (<em>paamon veriman paamon veriman</em>) all around the hem of the robe, for ministering — 'just as YHWH commanded Moses,' fifth occurrence. The alternation creates a rhythmic pattern of sound (bell) and silence (pomegranate) as the priest moves — the ministry of the high priest before YHWH has its own auditory signature, distinct from ordinary movement.</p>",
+    "27": "<p>Tunics (<em>kuttanot shesh</em>) of fine linen are woven for Aaron and his sons — and the turban (<em>mitznefet</em>, מִצְנֶפֶת) of fine linen, and the headdresses (<em>piere hamiznefet</em>) of fine linen. The <em>kuttanet</em> (tunic) is the garment closest to the body, the base layer of the priestly wardrobe. It is the same word as the tunic given to Joseph by Jacob (Gen 37:3), connecting priestly clothing to the patriarchal gift-narrative.</p>",
+    "28": "<p>The linen undergarments (<em>mikhnasei vad</em>) and the linen sash (<em>avnet shesh</em>, linen sash) of blue, purple, and crimson twisted linen — fine needlework (<em>ma'aseh roqem</em>). The undergarments (<em>mikhnasei vad</em>) appear in Lev 6:3 as required for tending the altar-fire. The hidden garments worn nearest to the skin carry the same luxury material as the outer vestments — holiness penetrates to every layer of the high priest's person.</p>",
+    "29": "<p>The sash (<em>avnet</em>) is needlework (<em>ma'aseh roqem</em>) of blue, purple, and crimson — a distinction from the ephod's woven (<em>ma'aseh choshev</em>) work. Both techniques appear in the tabernacle; <em>roqem</em> is embroidery or colorwork on a finished surface while <em>choshev</em> is woven pattern. 'Just as YHWH commanded Moses' — sixth occurrence of the compliance formula.</p>",
+    "30": "<p>The <em>tzitz</em> (צִיץ, diadem/plate) of pure gold (<em>zahav tahor</em>) is made and the inscription engraved on it: <em>qodesh la-YHWH</em> (קֹדֶשׁ לַיהוה, 'HOLY TO THE LORD'). The engraved inscription is the most explicit text in the entire tabernacle — the only verbal content worn by the high priest. It declares his person consecrated to YHWH's exclusive ownership. Zechariah 14:20-21 envisions this inscription extended to horses' bells and cooking pots in the eschatological age — the priestly inscription that belongs to one person will mark all creation.</p>",
+    "31": "<p>A blue cord (<em>patiyl tekhelet</em>) fastens the golden plate to the turban — 'upon the front of the turban' (<em>al mul mitznefeyt</em>). The plate sits on the high priest's forehead, the most visible part of the body when approaching in sacred space. 'Just as YHWH commanded Moses' — seventh and final occurrence in ch 39. Seven compliance formulae in the execution of the priestly garments creates a Sabbath-completeness pattern: the work is done, done right, done whole.</p>",
+    "32": "<p>וַתֵּכֶל כָּל עֲבֹדַת מִשְׁכַּן אֹהֶל מוֹעֵד — 'All the work of the tabernacle of the tent of meeting was finished.' The completion formula uses <em>vatokhel</em> (was finished/completed, from <em>kalah</em>, to complete) — the same verb used for YHWH's completion of creation in Gen 2:2 (<em>vayekhal Elohim</em>). The completion of the tabernacle deliberately mirrors the completion of creation; the sanctuary is a new creation. 'The children of Israel did according to all that YHWH had commanded Moses, exactly so they did' — double compliance formula for the totality.</p>",
+    "33": "<p>They brought the tabernacle to Moses — a remarkable reversal: Bezalel and the craftsmen have been doing the building, and now the entire completed structure is brought before the mediator for inspection. Moses functions as the quality-inspector of the tabernacle, the one who verifies that every element matches the divine pattern shown on the mountain. His authority over the finished product mirrors his authority over the original specifications.</p>",
+    "34": "<p>The covering (<em>mikhseh</em>) of ram skins dyed red (<em>me'orot eilim me'adamim</em>) and the covering of dolphin/dugong skins (<em>mikhseh orot techashim</em>) — the two outer coverings that protect the tabernacle from the elements. The <em>techash</em> skin (possibly dugong or dolphin hide) is the most expensive and durable outer covering, providing weather-resistance for the precious inner structure. The tabernacle's exterior is plain and rough; its interior is magnificent.</p>",
+    "35": "<p>The ark of the Testimony (<em>aron ha'edut</em>) with its poles (<em>badav</em>) and the mercy seat (<em>kapporet</em>). The ark is listed first in the inventory — its primacy in the inventory matches its primacy in the sanctuary's theology. The <em>kapporet</em> (mercy seat, from <em>kapar</em>, to cover/atone) is the site of the annual blood-sprinkling on Yom Kippur (Lev 16:14-15) and the location of YHWH's oracular voice (Exod 25:22).</p>",
+    "36": "<p>The table (<em>shulchan</em>), all its vessels (<em>kol kelaiv</em>), and the bread of the Presence (<em>lechem hapanim</em>, לֶחֶם הַפָּנִים, bread of the faces/presence). The table with its twelve loaves represents Israel's constant communal offering before YHWH's face — twelve loaves for twelve tribes, changed weekly on the Sabbath (Lev 24:5-9). The 'bread of the Presence' is the priestly food eaten in the holy place, the prototype for David's eating of it in 1 Sam 21:6 and Jesus's hermeneutical use of that precedent in Mark 2:26.</p>",
+    "37": "<p>The pure lampstand (<em>menorah hatehoorah</em>) with its row of lamps (<em>neroteyha</em>) — the seven-branched lampstand. 'All its vessels' includes the snuffers, plates, and oil containers specified in 25:38-39. The menorah provides the sanctuary's light — YHWH's dwelling is not dark but perpetually illuminated by the golden tree of light. Its seven branches correspond to the seven days of creation and the seven-fold pattern of completion throughout the tabernacle.</p>",
+    "38": "<p>The gold altar (<em>mizbach hazahav</em>) for incense, the anointing oil (<em>shemen hamishchah</em>), and the fragrant incense (<em>qetoret hasamim</em>). The gold incense altar stands before the veil in the outer Holy Place, burning twice daily (morning and evening, 30:7-8). The anointing oil and incense are listed as components of the whole tabernacle-system — they will be used in the inauguration ceremony of ch 40.</p>",
+    "39": "<p>The bronze altar (<em>mizbach hanechoshet</em>) with its bronze grating (<em>mikhbarto hanechoshet</em>), its poles, and all its vessels — the laver (<em>kior</em>) and its base (<em>kano</em>). The bronze altar receives the sacrifices; the laver provides the water for priestly purification before ministry (30:18-21; 40:31-32). Bronze signals judgment/strength (the outer court's exposed elements are bronze while the inner sanctuary's are gold), creating a gradient from justice at the entrance to glory at the center.</p>",
+    "40": "<p>The court hangings (<em>qal'ai hechatzer</em>), its posts (<em>amudav</em>), its sockets (<em>adaneha</em>), the screen for the court gate (<em>masakh sha'ar hechatzer</em>) — all the pegs (<em>yetedot</em>) and cords (<em>metarim</em>) for the tabernacle and its court. The enumeration of the court's framework closes the inventory by moving from the innermost (ark) to the outermost (court pegs). The inventory is structured centrifugally: from the most holy to the least restricted zone of the sacred precinct.</p>",
+    "41": "<p>The woven service garments (<em>bigdei serad</em>) for serving in the holy place, the holy garments for Aaron the priest, and the garments for his sons to serve as priests — the inventory closes where the chapter began (v1), with the priestly garments. The verbal inclusion (garments at beginning and end) frames the entire inventory within the priestly clothing context: the tabernacle exists for the covenant people's mediated access to YHWH through the ordained priesthood.</p>",
+    "42": "<p>According to all that YHWH had commanded Moses, so the children of Israel did all the work. The compliance formula reaches its most comprehensive form: 'all the work' done 'just as YHWH commanded Moses.' The entire project — from curtain weavers to metalworkers, from garment-makers to woodworkers — is swept into a single compliance statement. Every craftsman's contribution is part of one coordinated act of covenant obedience.</p>",
+    "43": "<p>Moses inspected all the work and behold they had done it as YHWH had commanded — exactly so they had done it. Then Moses blessed them (<em>vayevarech otam Moshe</em>). The blessing (<em>berach</em>) from Moses echoes the blessings of the patriarchs (Gen 48-49) and the priestly blessing of Num 6:24-26. After the formal inspection finds total compliance, the mediator pronounces blessing over the work and workers — the tabernacle project ends with covenant blessing, not merely approval.</p>"
   },
-  "12": {
-    "13": [
-      {"type": "fulfillment", "target": "1 Cor 5:7", "note": "The blood shall be a sign on your houses — the Passover blood that protected Israel from the destroyer is the type of Christ's blood that protects from God's judgment; Christ our Passover has been sacrificed"},
-      {"type": "fulfillment", "target": "John 1:29", "note": "The Passover lamb without blemish — John the Baptist's Behold the Lamb of God who takes away the sin of the world (John 1:29) identifies Jesus as the Passover Lamb; the Gospel of John times the crucifixion to coincide with the Passover lamb slaughter (John 19:14)"}
-    ],
-    "46": [
-      {"type": "fulfillment", "target": "John 19:36", "note": "You shall not break a bone of it — the instruction for the Passover lamb is fulfilled in the soldiers' not breaking Jesus's legs at the crucifixion (John 19:36: these things took place that the Scripture might be fulfilled: not one of his bones will be broken)"}
-    ]
-  },
-  "14": {
-    "22": [
-      {"type": "allusion", "target": "1 Cor 10:1-2", "note": "The Israelites walked through the sea on dry ground — Paul interprets the Red Sea crossing as a baptismal type: all were baptized into Moses in the cloud and in the sea; the exodus deliverance through water prefigures Christian baptism"},
-      {"type": "allusion", "target": "Heb 11:29", "note": "By faith the people crossed the Red Sea as on dry land — the author of Hebrews includes the Red Sea crossing in the Hall of Faith; the Exodus generation's act of walking through the sea was faith in YHWH's promise"}
-    ]
-  },
-  "16": {
-    "4": [
-      {"type": "fulfillment", "target": "John 6:31-35", "note": "Behold I am about to rain bread from heaven for you — the manna in the wilderness is the backdrop for Jesus's Bread of Life discourse; the crowd cites Ps 78:24 (he gave them bread from heaven) and Jesus corrects: my Father gives you the true bread from heaven, and I am that bread of life"},
-      {"type": "allusion", "target": "1 Cor 10:3", "note": "The spiritual food of the manna — Paul calls the manna spiritual food and the rock that followed them spiritual drink; both are Christological types that point to the one spiritual sustainer: Christ"}
-    ]
-  },
-  "17": {
-    "6": [
-      {"type": "fulfillment", "target": "1 Cor 10:4", "note": "Behold I will stand before you on the rock at Horeb and you shall strike the rock and water shall come out — Paul identifies this rock explicitly with Christ: the rock was Christ; the water-giving rock in the wilderness is the type of the one who gives living water (John 7:38-39)"},
-      {"type": "allusion", "target": "John 7:38", "note": "Rivers of living water will flow from within him — Jesus's promise at the Feast of Tabernacles echoes the water-from-the-rock tradition; the rock that gave water is the type, Christ is the antitype who gives the Spirit as living water"}
-    ]
-  },
-  "19": {
-    "5": [
-      {"type": "allusion", "target": "1 Pet 2:9", "note": "You shall be to me a kingdom of priests and a holy nation — the Sinai covenant charter (Exod 19:5-6) is applied to the church in 1 Pet 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession; the church inherits the covenant community's calling"},
-      {"type": "allusion", "target": "Rev 1:6", "note": "He has made us a kingdom, priests to his God and Father — Revelation applies Exod 19:6 to the redeemed: Christ has made us a kingdom and priests; the Sinai covenant's Israel-as-kingdom-of-priests is fulfilled in the church through the new covenant"}
-    ]
-  },
-  "20": {
-    "2": [
-      {"type": "allusion", "target": "Matt 5:17", "note": "You shall not murder / commit adultery / steal — the Decalogue (Exod 20) is the background for the Sermon on the Mount's antitheses; Jesus does not abolish but fulfills, deepening the law to its heart-level intent"},
-      {"type": "allusion", "target": "Rom 7:7", "note": "You shall not covet — Paul cites the tenth commandment as the law that showed him sin: I would not have known covetousness if the law had not said You shall not covet; the Decalogue is the very place where the law's diagnostic function is clearest"}
-    ]
-  },
-  "24": {
-    "8": [
-      {"type": "fulfillment", "target": "Matt 26:28", "note": "Behold the blood of the covenant that the LORD has made with you — Moses sprinkles the covenant blood at Sinai (Exod 24:8); Jesus at the Last Supper calls the cup my blood of the covenant poured out for many; the new covenant blood corresponds to the Sinai covenant blood"},
-      {"type": "fulfillment", "target": "Heb 9:20", "note": "This is the blood of the covenant that God commanded for you — Hebrews cites Exod 24:8 in the context of Christ's blood as the new covenant's ratifying blood; the old covenant's blood-sprinkling is the type of the new covenant's once-for-all blood"}
-    ]
-  },
-  "25": {
-    "9": [
-      {"type": "allusion", "target": "Heb 8:5", "note": "Exactly as I show you concerning the pattern of the tabernacle — the Sinai tabernacle was built according to the heavenly pattern (tabnit); Hebrews argues that the earthly tabernacle is a shadow and copy of the heavenly sanctuary where Christ now ministers as high priest"}
-    ],
-    "40": [
-      {"type": "allusion", "target": "Heb 9:1-5", "note": "The ark of the covenant with the mercy seat — Hebrews describes the tabernacle furnishings (golden lampstand, table, bread of the Presence, incense altar, ark with mercy seat) to show that the old covenant's physical sanctuary points to the greater heavenly sanctuary accessed through Christ's blood"}
-    ]
-  },
-  "32": {
-    "6": [
-      {"type": "allusion", "target": "1 Cor 10:7", "note": "The people sat down to eat and drink and rose up to play — Paul cites Exod 32:6 (the golden calf incident) as a warning against idolatry: do not be idolaters as some of them were; the wilderness generation's failure is the warning example for the Corinthians tempted by idol feasts"}
-    ]
-  },
-  "33": {
-    "7": [
-      {"type": "allusion", "target": "Heb 13:13", "note": "Moses took the tent and pitched it outside the camp — the tent of meeting outside the camp prefigures Jesus suffering outside the gate (Heb 13:12-13); the sacred meeting-space was outside the camp, as the place of sacrifice was outside Jerusalem"}
-    ]
-  },
-  "34": {
-    "29": [
-      {"type": "allusion", "target": "2 Cor 3:7-18", "note": "Moses did not know that the skin of his face shone because he had been talking with God — the veil Moses put over his face (Exod 34:33-35) is Paul's central image in 2 Cor 3: the old covenant glory was fading and veiled; the new covenant's greater glory is unveiled; the veil is removed in Christ"},
-      {"type": "allusion", "target": "Matt 17:2", "note": "His face shone like the sun — the Transfiguration's shining face of Jesus echoes Moses's shining face at Sinai; Jesus is the new and greater Moses whose glory is not derivative but intrinsic, not fading but permanent"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "3": {
-    "14": "<p><strong>ehyeh asher ehyeh</strong> (<em>ʾehyeh ʾăšer ʾehyeh</em>): 'I AM WHO I AM' or 'I WILL BE WHAT I WILL BE.' The divine name is derived from the verb <em>hayah</em> (to be). The Tetragrammaton (YHWH) is likely the Qal imperfect form of <em>hayah</em> — 'He is' or 'He will be.' The name declares YHWH's self-existence and sovereign freedom: he does not derive his existence from anything outside himself; his being is its own definition. John's seven I AM sayings (John 6:35; 8:12; 10:9, 11; 11:25; 14:6; 15:1) and the absolute 'I am' (John 8:58; 18:5-6) are deliberate invocations of the Exodus 3:14 name, claiming for the Son the same underived self-existence.</p>"
-  },
-  "12": {
-    "5": "<p><strong>seh tamim</strong> (<em>śeh tāmîm</em>): 'a lamb without blemish' — the Passover lamb must be <em>tamim</em> (perfect, without defect), the sacrificial standard that applies to all Levitical offerings (Lev 22:19-20) and is applied to Christ in 1 Pet 1:19: 'without blemish or spot.' The lamb is also <em>ben shanah</em> (in its first year), symbolically in the prime of life — not old and worn out. The NT applies the typology systematically: Christ is the Passover lamb (1 Cor 5:7), his bones were not broken per Exod 12:46 (John 19:36), and his blood marks and protects the new covenant community.</p>"
-  },
-  "20": {
-    "2": "<p><strong>anochi YHWH eloheicha asher hotzeiticha meeretz mitzraim mibeit avadim</strong>: 'I am YHWH your God, who brought you out of the land of Egypt, out of the house of slavery.' The Decalogue opens not with a command but with a redemption narrative — the commands follow from the prior act of grace. YHWH does not say 'obey me so that I will be your God and bring you out' but 'I brought you out; therefore I am your God; therefore obey.' The evangelical-imperative structure of the Decalogue is: grace, then obligation. Paul's ethical sections follow the same pattern: Romans 1-11 (gospel), then 12-16 (imperatives); Galatians 1-4 (grace), then 5-6 (walk).</p>"
-  },
-  "25": {
-    "9": "<p><strong>kekol asher ani mareeh otcha et tabnit hamishkan veet tabnit kol kelav veken taashu</strong>: 'Exactly as I show you concerning the pattern [<em>tabnit</em>] of the tabernacle, and of all its furniture, so you shall make it.' The Hebrew <em>tabnit</em> (pattern/model) implies the earthly tabernacle is a copy of a heavenly original. Hebrews (8:5) quotes this verse explicitly (using LXX <em>typos</em> — pattern, type) to argue that the Levitical priests serve a copy and shadow of the heavenly things. The tabernacle's typological function is not a later Christian imposition but is built into the original instructions: Moses saw the heavenly original; Israel built the earthly copy.</p>"
-  },
-  "34": {
-    "6": "<p><strong>YHWH YHWH el rachum vechanun erech apayim verav chesed veemet</strong>: 'YHWH YHWH, a God merciful and gracious, slow to anger, and abounding in steadfast love [<em>chesed</em>] and faithfulness [<em>emet</em>].' The thirteen attributes of divine mercy (mid-dot harachamim) became a cornerstone of Jewish liturgical theology, recited on fast days and festivals. <em>Chesed</em> (covenant love, steadfast love, lovingkindness) is perhaps the OT's richest theological term — it combines loyalty, love, mercy, and covenant-faithfulness into a single word. John's 'grace and truth' (John 1:14, 17) is likely a translation of <em>chesed veemet</em>, applying Exod 34:6's divine attributes to the incarnate Word.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "11": "<p>The historical context of the Exodus is debated: the most common evangelical dating places the Exodus ca. 1446 BCE (the 'early date,' based on 1 Kings 6:1's 480 years from Exodus to Solomon's temple ca. 966 BCE), during Thutmose III's reign. The 'late date' (ca. 1270-1250 BCE, during Ramesses II's reign) is favored by many archaeologists based on the cities Pithom and Ramesses mentioned in Exod 1:11. The Merneptah Stele (ca. 1208 BCE) mentions Israel as a people already in Canaan, providing a terminus ad quem. The question remains open; the theological significance of the Exodus is independent of the exact date.</p>"
-  },
-  "12": {
-    "1": "<p>The Passover (Heb. <em>pesach</em>) became the foundational festival of Israelite identity — the annual re-enactment and remembrance of YHWH's redemptive act. The Passover Seder developed in the Second Temple period and was the meal Jesus shared with his disciples on the night of his arrest. Jesus's identification of the cup with his blood and the bread with his body (Luke 22:19-20) reinterprets the Passover meal through the lens of his approaching death: the new exodus is accomplished through his death as the new Passover lamb. Paul's 'Christ our Passover has been sacrificed' (1 Cor 5:7) is the theological crystallization of this identification.</p>"
-  },
-  "19": {
-    "1": "<p>The Sinai covenant is the central structuring event of the OT: it establishes the constitutional framework of Israel's relationship with YHWH. Its suzerainty-treaty structure (parallel to Hittite treaties: preamble, historical prologue, stipulations, blessings/curses, witnesses) places YHWH as the great king and Israel as his vassal. The Decalogue (20:1-17) is the covenant's summary stipulations. The Book of the Covenant (20:22-23:33) elaborates case law. The covenant-inauguration ceremony (24:1-11) seals the relationship with blood and a covenant meal. Hebrews 12:18-24 contrasts the terrors of Sinai with the joy of Zion — the old covenant's thunders and fire point forward to the new covenant's completed mediation in Christ.</p>"
-  },
-  "25": {
-    "1": "<p>The tabernacle instructions (Exod 25-31) and their execution (35-40) occupy more chapters in Exodus than any other section. The tabernacle is the theological center of the wilderness narrative: YHWH's presence (kavod) dwelling among Israel in the portable sanctuary. Its structure (outer court, holy place, most holy place) reflects the graduated holiness of sacred space that culminates in the ark and mercy seat where YHWH meets with Israel. Solomon's temple is the permanent version of this portable structure. The NT develops the typological chain: tabernacle → temple → Christ's body (John 2:21) → the church as temple (1 Cor 3:16) → the new Jerusalem as the final dwelling of God with his people (Rev 21:3).</p>"
-  }
-}
-
-CHRIST = {
-  "12": {
-    "13": "<p>A fulfillment: 'When I see the blood, I will pass over you, and no plague will befall you to destroy you when I strike the land of Egypt.' The Passover blood on the doorposts is the OT's most developed type of substitutionary atonement: an innocent lamb dies; its blood marks the household; the destroyer passes over those marked. Paul makes the typological identification explicit: 'Christ our Passover has been sacrificed' (1 Cor 5:7). John structures his Gospel so the crucifixion occurs when the Passover lambs are being slaughtered in the temple (John 19:14), and notes the non-breaking of bones fulfills Exod 12:46. The Passover is not merely a historical parallel but the interpretive key YHWH planted in Israel's annual liturgy to explain, centuries in advance, the theological meaning of the cross.</p>"
-  },
-  "14": {
-    "22": "<p>A type: 'And the people of Israel went into the midst of the sea on dry ground, the waters being a wall to them on their right hand and on their left.' Paul explicitly calls the Red Sea crossing a baptismal type: 'all were baptized into Moses in the cloud and in the sea' (1 Cor 10:1-2). The structure is identical to Christian baptism: God's redemptive act through a threshold of water, from slavery into freedom, into covenant relationship. But the antitype is greater: baptism into Christ is death and resurrection with Christ (Rom 6:3-4), not merely deliverance from one earthly power. Moses led Israel through the sea; Christ leads his people through death itself.</p>"
-  },
-  "16": {
-    "15": "<p>A type: 'It is manna' (or 'What is it?') — bread from heaven that YHWH provides. Jesus in John 6 identifies himself as the fulfillment of the manna type: 'Your fathers ate the manna in the wilderness, and they died. This is the bread that comes down from heaven, so that one may eat of it and not die. I am the living bread that came down from heaven' (John 6:49-51). The typological contrast is sharp: the manna sustained physical life temporarily; Christ gives eternal life. The manna was perishable; Christ is permanent. The manna was provided daily; Christ is given once. The Lord's Supper as ongoing eating of Christ (John 6:53-56) is the enacted fulfillment of the manna's promise.</p>"
-  },
-  "25": {
-    "22": "<p>A type: 'There I will meet with you, and from above the mercy seat, from between the two cherubim that are on the ark of the testimony, I will speak with you.' The mercy seat (<em>kapporet</em>, from <em>kipper</em>, to atone/cover) is the lid of the ark, sprinkled with blood on Yom Kippur. Paul in Romans 3:25 calls Christ a <em>hilasterion</em> — the LXX word for the mercy seat. Christ is both the priest who offers the sacrifice and the mercy seat on which the blood is placed; he is both offerer and the place of offering, the one who makes atonement and the locus where God and humanity meet. The tabernacle's most restricted and holy object — accessible only once a year, only by the high priest, only with blood — is fulfilled in Christ who provides permanent access to God.</p>"
+  "40": {
+    "1": "<p>YHWH spoke to Moses on the first day of the first month — New Year's Day in the sacred calendar established at the Exodus (12:2: 'This month shall be the beginning of months for you'). The date selection is programmatic: the tabernacle is inaugurated at the start of the new year established by the Exodus itself, connecting the dwelling's erection to the founding redemptive event. The sanctuary begins its existence on the day the Exodus calendar begins.</p>",
+    "2": "<p>'On the first day of the first month you shall erect the tabernacle of the tent of meeting (<em>mishkan ohel moed</em>).' The double title — <em>mishkan</em> (dwelling/residence) and <em>ohel moed</em> (tent of meeting/appointment) — encompasses both dimensions of the tabernacle's function: YHWH's permanent residence (<em>mishkan</em>, from <em>shakan</em>, to dwell/settle) and the place of divine-human encounter (<em>ohel moed</em>, from <em>moed</em>, appointed time/meeting). Both names will remain in use throughout the Pentateuch.</p>",
+    "3": "<p>The ark of the Testimony (<em>aron ha'edut</em>) is placed inside and screened by the veil (<em>parokhet</em>). The ark goes first — the covenant documents (the two tablets of the Testimony, v20) are the structural center of the entire sanctuary. The veil's placement 'screens' the ark, but the screening is not concealment alone: it marks the threshold between the Holy Place and the Most Holy Place, between the accessible and the unapproachable.</p>",
+    "4": "<p>The table is placed and arranged with its bread of the Presence; the menorah is set in place and its lamps lit. The table and menorah are placed in the outer Holy Place (the two objects flanking the central golden incense altar). The bread is set out (<em>vearkta et-erekho</em>, arranged it in order) before YHWH — the technical term for liturgical arrangement, not casual placement.</p>",
+    "5": "<p>The gold altar of incense is placed before the ark of the Testimony. The incense altar's precise location — before the veil that is before the ark — places it at the threshold of holiness. Twice-daily incense rising before the veil creates a visual and olfactory representation of prayer ascending before YHWH's presence (cf. Ps 141:2; Rev 5:8; 8:3-4).</p>",
+    "6": "<p>The altar for burnt offerings is set up in front of the entrance to the tabernacle of the tent of meeting (<em>petach mishkan ohel moed</em>). The placement of the bronze altar at the entrance rather than inside the structure means every approach to YHWH's dwelling begins at the altar of sacrifice. There is no access to the presence without first passing the altar: the architecture teaches the theology of atonement as the precondition of approach.</p>",
+    "7": "<p>The laver (<em>kior</em>) is set between the tent of meeting and the altar, and water is put in it. The laver's positioning — between sacrifice (altar) and presence (tabernacle entrance) — structures the sequence of priestly preparation: sacrifice first, then washing, then entry. Exod 30:20-21 specifies that failure to wash before ministry incurs death — the laver enforces the purity that the tabernacle's holiness requires.</p>",
+    "8": "<p>The court (<em>chatzer</em>) is set up all around with its hangings — the gate screen (<em>masakh sha'ar hechatzer</em>) is hung at the entrance to the court. The court creates the outermost zone of sanctity: restricted from Israelite commoners who bring offerings to the court entrance but who do not enter the tabernacle itself. The graduated zones (outer court → Holy Place → Most Holy Place) embody the graduated approach to divine holiness.</p>",
+    "9": "<p>Moses is commanded to take the anointing oil (<em>shemen hamishchah</em>) and anoint the tabernacle and everything in it, consecrating it and all its furnishings — 'and it will become holy.' The anointing oil (described in 30:22-33 as a specific blend of myrrh, cinnamon, cane, and cassia in olive oil) is the liquid agent of consecration. Every object that receives the oil is transferred from common to holy status — from merely beautiful to covenantally sacred.</p>",
+    "10": "<p>The altar of burnt offerings and all its utensils are anointed — the altar is then consecrated and 'shall be most holy' (<em>vehayah hamizbeach qodesh qodashim</em>). The superlative <em>qodesh qodashim</em> (holy of holies/most holy) is applied here to the altar — the same grade of holiness applied to the Most Holy Place itself (26:33). Whatever touches a most-holy object is consecrated (Exod 29:37; 30:29) — the altar's holiness is transferable by contact.</p>",
+    "11": "<p>The laver and its base are anointed — consecrating them. The laver's anointing sets it apart for the specific function of priestly purification; after consecration, the water in it is not ordinary water but sacred washing-water. The anointing of functional objects (laver, altar) alongside symbolic objects (lampstand, incense altar) shows that YHWH's presence hallows utility as well as beauty.</p>",
+    "12": "<p>Aaron and his sons are brought to the entrance of the tent of meeting and washed (<em>verchalatam bamayim</em>). The initial washing of the priests before their anointing is a distinct act from the regular laver-washing required before each ministry. This foundational washing is once-for-all — the ordination bathing — while the laver-washing is regular ongoing practice (30:19-21). The once-for-all character of ordination-washing parallels baptism in Christian theology (cf. Tit 3:5).</p>",
+    "13": "<p>Aaron is clothed in the holy garments (<em>bigdei haqodesh</em>) and anointed and consecrated to serve YHWH as priest. The sequence is precise: wash → clothe → anoint → consecrate. Each step moves the person further into sacred status. The anointing of a person with the same oil used to consecrate the tabernacle and its objects makes the high priest covenantally equivalent to a sacred object — a 'most holy' person who embodies YHWH's dwelling.</p>",
+    "14": "<p>Aaron's sons are also clothed in tunics (<em>kuttanot</em>) — the process extends to the priestly dynasty. The ordination covers not just the high priest but the entire Aaronic line; the priesthood is a dynastic office transmitted through the family and confirmed through the same consecration ritual. 'You shall anoint them as you anointed their father, and they shall serve me as priests' — priestly identity passes from generation to generation through anointing.</p>",
+    "15": "<p>'Their anointing shall admit them to a permanent priesthood (<em>kehunnat olam</em>) throughout their generations.' <em>Kehunnat olam</em> (priesthood of eternity/perpetuity) — the Aaronic priesthood is divinely ordained as an <em>olam</em> institution. Hebrews 7:24 contrasts this: because Jesus lives forever, he has an <em>apara baton</em> (non-transferable, permanent) priesthood — what the Aaronic succession sought to perpetuate through generational anointing is achieved definitively in Christ's indestructible life without need of succession.</p>",
+    "16": "<p>Moses did according to all that YHWH had commanded him — exactly so he did. The framing compliance formula for ch 40 (corresponding to the seven compliance formulae of ch 39) signals that the installation ceremony will proceed with the same exactness as the construction. The word <em>ken</em> (exactly so/thus) intensifies the formula: not merely compliance but precise compliance.</p>",
+    "17": "<p>The tabernacle is erected on the first day of the first month in the second year (<em>bishnah hasheinit bachodesh harishon beechad lachodesh</em>). The precise date — year 2, month 1, day 1 — grounds the narrative in a specific moment in Israel's historical experience. The first year from Exodus to Sinai; the second year from Sinai to tabernacle-completion. The tabernacle is erected approximately eleven months after the Exodus.</p>",
+    "18": "<p>Moses erected the tabernacle — he set up its sockets (<em>adanav</em>), put up its boards (<em>kerashav</em>), inserted its bars (<em>berihav</em>), and raised its pillars (<em>amudav</em>). Moses physically assembles the tabernacle — not as the craftsman who built it (Bezalel and Oholiab did) but as the covenant mediator who inaugurates it. The prophet who received the blueprint on the mountain now stands the structure up on earth.</p>",
+    "19": "<p>He spread the tent (<em>ohel</em>) over the tabernacle and put the covering (<em>mikhseh</em>) of the tent on top of it — 'just as YHWH had commanded Moses.' The first compliance formula of ch 40's execution section. The tent covering (goat-hair curtains) and the outer covering (ram and dugong skins) are laid over the wooden structure, creating the multi-layered roof of the dwelling.</p>",
+    "20": "<p>He took the Testimony (<em>ha'edut</em>) and placed it in the ark, put the poles through the rings of the ark, and placed the mercy seat (<em>kapporet</em>) on top of the ark. The tablets of the Testimony — the covenant documents — are the first objects placed inside the completed tabernacle. The mercy seat (atonement-cover) directly overlies the covenant documents: the ark's structure embeds the theology that atonement (the kapporet) governs the relationship between YHWH and his covenant (the tablets). Access to the covenant is mediated through blood-atonement.</p>",
+    "21": "<p>The ark is brought into the tabernacle and the protective veil (<em>parokhet hamaskh</em>) is hung, screening the ark of the Testimony — 'just as YHWH had commanded Moses.' The veil's function is both concealment and protection: concealment of the ark's location from casual view, protection of unauthorized persons from the dangerous holiness of the Most Holy Place. The veil torn at the crucifixion (Matt 27:51; Mark 15:38; Luke 23:45) signals the removal of this structural barrier — access to the Most Holy Place is now opened through Christ's torn body.</p>",
+    "22": "<p>The table is placed in the tent of meeting on the north side of the tabernacle, outside the veil. The table is positioned on the north side — the menorah will be on the south side (v24), with the incense altar in the center before the veil (v26). The spatial arrangement within the Holy Place creates a meaningful interior: light (south), bread/presence (north), prayer/incense (center).</p>",
+    "23": "<p>The bread of the Presence (<em>lechem hapanim</em>) is set in order (<em>vayerakeh</em>) on the table before YHWH — 'just as YHWH commanded Moses.' The twelve loaves arranged in two rows of six are set 'before YHWH' (<em>lifnei YHWH</em>) — the bread faces the divine presence. The priests eat the week-old bread when the fresh loaves replace it each Sabbath (Lev 24:9), eating 'before YHWH' what has been before YHWH all week: priestly food permeated by divine proximity.</p>",
+    "24": "<p>The menorah is placed in the tent of meeting opposite the table (<em>nochach hashulchan</em>), on the south side of the tabernacle. The menorah's seven flames provide the Holy Place's only light — no natural light enters the enclosed tent. The menorah opposite the table of bread creates an interpretive pairing: the light of God's word (Ps 119:105) alongside the bread of the Presence. Both are forms of YHWH's provision placed in his dwelling.</p>",
+    "25": "<p>The lamps are lit before YHWH — 'just as YHWH commanded Moses.' The lighting of the menorah is the first active liturgical act in the tabernacle: Moses kindles the lamps, initiating the perpetual fire that must never go out (27:20: 'a continual lamp before YHWH'). The ongoing light symbolizes YHWH's perpetual presence in his dwelling — the sanctuary is never dark while YHWH dwells there.</p>",
+    "26": "<p>The golden incense altar is placed before the veil — the threshold position before the entrance to the Most Holy Place. The incense burned morning and evening (30:7-8) creates a continuous aromatic presence at the border between the accessible and unapproachable zones of the sanctuary. The incense ascending before the veil is later interpreted as prayer ascending before God's throne (Rev 5:8; 8:3-4).</p>",
+    "27": "<p>Fragrant incense (<em>qetoret samim</em>) is burned on the golden altar — 'just as YHWH commanded Moses.' The specific incense formula (stacte, onycha, galbanum, and frankincense, 30:34-35) creates a smell unlike any ordinary perfume — a unique aroma designating divine presence. The incense altar is the most proximate object to the Most Holy Place that any priest normally approaches; only the high priest on Yom Kippur enters beyond it.</p>",
+    "28": "<p>The entrance screen (<em>masakh petach hamishkan</em>) is hung at the entrance to the tabernacle. The entrance screen marks the boundary between the court (accessible to Israelites bringing offerings) and the tabernacle interior (accessible only to priests). This first screening from the outside world creates the initial zone of restricted access that will be followed by the veil's restriction at the Most Holy Place.</p>",
+    "29": "<p>The burnt offering altar is set up at the entrance to the tabernacle of the tent of meeting and the burnt offering and grain offering are offered on it — 'just as YHWH commanded Moses.' The first sacrifices are offered. The bronze altar is inaugurated by Moses's own sacrifice: the priest-like act of offering before the fully erected dwelling. Every subsequent Israelite who brings an offering will approach this altar at this spot.</p>",
+    "30": "<p>The laver is placed between the tent of meeting and the altar, and water is put in it for washing (<em>rochtzah</em>). The laver is the last element placed before the court gate is set — the assembly point between sacrifice and approach is the washing station. Water in the laver is the last preparation before entering YHWH's presence. The sequence the laver enforces (approach-altar → wash → enter) is the physical curriculum of covenant access.</p>",
+    "31": "<p>Moses, Aaron, and Aaron's sons washed their hands and feet from it (<em>yideihem veralgeihem</em>). The specific body parts — hands and feet — are those that touch the sanctuary's holy objects and walk on its holy ground. The washing is not full-body purification (that was done at ordination, v12) but functional preparation: consecrate what you will touch and where you will go. The same preparation applies to all subsequent priestly ministry (30:19-21).</p>",
+    "32": "<p>Whenever they entered the tent of meeting and whenever they approached the altar, they washed — 'just as YHWH commanded Moses.' The frequency formula ('whenever') makes this repeated, not one-time. Priestly ministry requires re-preparation at each entry — holiness is not a permanently achieved state but a repeatedly renewed condition. The regular washing enacts the regular renewal of covenant readiness.</p>",
+    "33": "<p>Moses erected the court all around the tabernacle and the altar, and hung the screen at the court gate. <em>Vayekhal Moshe et-hamelacha</em> — 'Moses completed the work.' The completion verb <em>kalah</em> echoes 39:32 ('all the work was completed') and Gen 2:1-2 ('the heavens and earth were completed... God completed his work'). Moses's completion of the tabernacle work explicitly parallels YHWH's completion of creation — the sanctuary is the new creation dwelling complete.</p>",
+    "34": "<p>וַיְכַס הֶעָנָן אֶת אֹהֶל מוֹעֵד וּכְבוֹד יהוה מָלֵא אֶת הַמִּשְׁכָּן — 'The cloud covered the tent of meeting, and the glory of YHWH filled the tabernacle.' The climax of the entire Exodus narrative. <em>Kasah</em> (cover, the cloud covering the tent) and <em>male</em> (fill, the glory filling the tabernacle) are two distinct verbs of divine presence: the cloud as external covering, the glory as interior filling. The cloud had been the medium of YHWH's guidance since 13:21; now it settles permanently on the dwelling. John 1:14 explicitly cites this event in the language of the Incarnation: 'the Word became flesh and <em>eskēnōsen</em> (tabernacled/pitched his tent) among us, and we have seen his glory.'</p>",
+    "35": "<p>Moses could not enter the tent of meeting because the cloud rested on it and the glory of YHWH filled the tabernacle. The verb <em>lo yakhol</em> (could not) — the same construction as the magicians 'could not' stand before Moses (9:11). The divine glory makes even Moses, the greatest prophet, incapable of entry. Hebrews 9:8 interprets this inaccessibility as the Holy Spirit's signifying that 'the way into the Most Holy Place had not yet been disclosed as long as the first tabernacle was still functioning' — the barrier that even Moses faced is the barrier Christ removes by his atoning blood (Heb 10:19-20).</p>",
+    "36": "<p>Whenever the cloud lifted (<em>beha'alot he'anan</em>) from the tabernacle, the children of Israel set out on each stage of their journey. The cloud-and-journey pattern that governed the Exodus since 13:21-22 is now formalized into a permanent operational protocol: the cloud's movement directs Israel's movement. YHWH's presence governs the community's travels, not human planning or military strategy.</p>",
+    "37": "<p>But if the cloud did not lift, they did not set out — until the day it lifted. The negative case is as important as the positive: when the cloud does not move, Israel does not move. Obedience includes waiting as well as going. The community that lives by YHWH's directive timing neither advances before the signal nor delays after it. Numbers 9:15-23 elaborates this principle in detail, emphasizing that Israel camped and traveled 'at the command of YHWH.'</p>",
+    "38": "<p>The cloud of YHWH was on the tabernacle by day, and fire was in it by night — in the sight of all the house of Israel throughout all their journeys. The final verse of Exodus mirrors the Exodus's first cloud-appearance (13:21-22) — pillar of cloud by day, pillar of fire by night. The inclusion closes the book: Exodus ends where the wilderness journey begins, with the divine presence visible to all Israel, leading them stage by stage through the wilderness. The cloud that covers the completed tabernacle in v34 has become the cloud that will accompany a traveling people for forty years.</p>"
   }
 }
 
 def main():
-    e = load_echo('exodus')
-    merge_echo(e, ECHO)
-    save_echo('exodus', e)
-
-    c = load_comm('mkt-original', 'exodus')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'exodus', c)
-
-    c = load_comm('mkt-context', 'exodus')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'exodus', c)
-
-    c = load_comm('mkt-christ', 'exodus')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'exodus', c)
-
-    print('exodus: all 4 layers written')
+    existing = load_comm('mkt-original', 'exodus')
+    merge_comm(existing, EXODUS)
+    save_comm('mkt-original', 'exodus', existing)
+    print('Exodus 39-40 mkt-original written.')
 
 if __name__ == '__main__':
     main()

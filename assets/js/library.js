@@ -15,7 +15,8 @@ import {
 import { wireRefLinks } from './wire.js';
 
 // ── Nave constants ──────────────────────────────────────────────────────────
-export var DICT_PAGE_URL = _resolve('../../dictionary/');
+export var DICT_PAGE_URL    = _resolve('../../dictionary/');
+export var BIBLEPEDIA_URL   = _resolve('../../biblepedia/');
 
 var NAVE_URL       = _resolve('../../data/topical/nave.json');
 var NAVE_VIDX_ROOT = _resolve('../../data/topical/verse-index');
@@ -110,7 +111,7 @@ export function _dictLoad() {
   return _dictLoading;
 }
 
-function _dictLoadEntry(slug) {
+export function _dictLoadEntry(slug) {
   if (_dictEntryCache[slug]) return Promise.resolve(_dictEntryCache[slug]);
   return fetch(DICT_ENTRY_URL + slug + '.json')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
@@ -360,11 +361,7 @@ export function renderVSDictionary(parsed, container) {
     var html = '<div class="vs-dict-list">';
     entries.forEach(function (e) {
       var src = e.source;
-      var href = src === 'smith'
-        ? DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(e.id)
-        : src === 'isbe'
-          ? DICT_PAGE_URL + '?src=isbe&entry=' + encodeURIComponent(e.id)
-          : DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+      var href = BIBLEPEDIA_URL + '?a=' + encodeURIComponent(e.id);
       var badge = src === 'smith' ? 'S' : src === 'isbe' ? 'IS' : 'E';
       html += '<a class="vs-dict-item" href="' + escHtml(href) + '">' +
         '<span class="vs-dict-src-badge" data-dict-src="' + escHtml(src) + '">' + badge + '</span>' +
@@ -395,11 +392,7 @@ export function renderModalDictionary(parsed, container) {
     var html = '';
     entries.forEach(function (e) {
       var src    = e.source;
-      var href   = src === 'smith'
-        ? DICT_PAGE_URL + '?src=smith&entry=' + encodeURIComponent(e.id)
-        : src === 'isbe'
-          ? DICT_PAGE_URL + '?src=isbe&entry=' + encodeURIComponent(e.id)
-          : DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id);
+      var href   = BIBLEPEDIA_URL + '?a=' + encodeURIComponent(e.id);
       var meta   = src === 'smith' ? (_smithMap && _smithMap[e.id])
                  : src === 'isbe'  ? (_isbeMap  && _isbeMap[e.id])
                  : (_dictMap && _dictMap[e.id]);
@@ -419,7 +412,7 @@ export function renderModalDictionary(parsed, container) {
         '</div>';
     });
     html += '<p style="margin-top:.75rem;font-size:.75rem;">' +
-      '<a class="bsw-dict-panel-entry__link" href="' + escHtml(DICT_PAGE_URL) + '">Browse full dictionary &#x2192;</a></p>';
+      '<a class="bsw-dict-panel-entry__link" href="' + escHtml(BIBLEPEDIA_URL) + '">Browse Biblepedia &#x2192;</a></p>';
     container.innerHTML = html;
   }).catch(function () {
     container.innerHTML = '<p class="dict-modal-empty">Could not load dictionary data.</p>';

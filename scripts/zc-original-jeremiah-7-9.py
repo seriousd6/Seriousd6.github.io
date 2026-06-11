@@ -1,45 +1,33 @@
 """
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
+MKT Original Commentary — Jeremiah chapters 7–9
+Run: python3 scripts/zc-original-jeremiah-7-9.py
+
+Key translation decisions in this range:
+- 7:4: "deceptive words" (divrê hashsheqer) — the temple-security illusion
+- 7:11: "den of robbers" (me'arat peritsim) — peritsim = violent ones, robbers
+- 7:22-23: "I did not speak... about burnt offerings" — obedience as the prime command
+- 7:31: "lo tsivviti" — explicit divine repudiation of child sacrifice
+- 8:8: "lying pen of the scribes" — scribal corruption of Torah
+- 8:11: doubled shalom — "peace, peace, when there is no peace"
+- 8:22: tsori be-gilad — balm of Gilead; rhetorical question not denying availability
+- 9:4: "every brother is a Jacob" — the pun on yaaqov (supplanter/deceiver)
+- 9:23-24: hesed/mishpat/tsedaqah — the three divine attributes as the only proper boast
+- 9:25-26: "uncircumcised in heart" — the spiritual-circumcision concept
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     return json.loads(p.read_text()) if p.exists() else {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +37,102 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+JEREMIAH = {
+"7": {
+"1": "<p>The superscription marks this as a new oracle unit — the <em>davar YHWH</em> (word of YHWH) formula distinguishes commissioned prophetic speech from the prophet&apos;s own words. The MKT renders it plainly as &quot;This is the word that came to Jeremiah from the LORD&quot; to emphasize the divine commissioning rather than Jeremiah&apos;s own initiative.</p>",
+"2": "<p><strong>ʿamad bĕšaʿar bêt YHWH</strong> — &quot;stand at the gate of the LORD&apos;s house&quot;; the temple gate was the highest-traffic public space in Jerusalem, making this a maximally public proclamation. The MKT follows MT in specifying &quot;all you of Judah who come through these gates to worship&quot; — the sermon is addressed to the worshipping public, not just the priesthood.</p>",
+"3": "<p><strong>hêtîbû darkêkem</strong> — &quot;reform your ways and your actions&quot;; the Hebrew <em>heitev</em> (make good, reform) is an intensive hiphil: genuine transformation, not superficial adjustment. The MKT&apos;s &quot;reform your ways and your actions&quot; preserves the dual emphasis — both conduct (<em>derekh</em>, path/lifestyle) and deeds (<em>maʿăśîm</em>, concrete acts). The conditional structure follows: reform → remain in the land.</p>",
+"4": "<p><strong>divrê hashsheqer</strong> — &quot;deceptive words&quot;; <em>sheqer</em> is falsehood, deception, fraud — the same root used for false oaths and false prophecy. The triple repetition &quot;the temple of the LORD, the temple of the LORD, the temple of the LORD!&quot; mimics what the crowd was saying and ridicules it simultaneously. The MKT preserves the triple repetition because it is structurally essential to understanding what YHWH is calling false.</p>",
+"5": "<p>The conditional clause of the temple-sermon: <em>kî ʾim heytîb teyṭîbû</em> — an infinitive absolute construction (literally &quot;if in reforming you truly reform&quot;) that the MKT renders &quot;if you truly reform.&quot; The infinitive absolute with a finite verb is a Hebrew device for emphasis; &quot;truly&quot; captures this better than a literal translation that would seem redundant.</p>",
+"6": "<p><strong>gēr, yātôm, ʾalmānâ</strong> — the triad of the vulnerable: foreigner, fatherless, widow. This triad recurs throughout the OT as the paradigmatic category of the socially unprotected. &quot;Shed innocent blood&quot; (<em>dām nāqî</em>) refers to judicial murder; &quot;follow other gods&quot; is the religious-covenantal violation. The MKT preserves all three categories to show the breadth of the required reform.</p>",
+"7": "<p>The apodosis of the conditional temple-sermon: <em>wĕšikantî ʾetkem</em> — &quot;I will let you live in this place.&quot; <em>Šākan</em> is the verb root of <em>miškan</em> (tabernacle/dwelling); YHWH promises continued dwelling-in-place if covenant obligations are met. The phrase &quot;for ever and ever&quot; (<em>lĕmîn-ʿôlām wĕʿad-ʿôlām</em>) is emphatic — the land-promise is indefinitely open, contingent on faithfulness.</p>",
+"8": "<p><strong>divrê hashsheqer lĕvilti hoʿîl</strong> — &quot;deceptive words that can do you no good&quot;; <em>lĕvilti hoʿîl</em> is a common prophetic phrase for things that are utterly useless. The MKT renders it idiomatically — the point is that these words not only fail to help but actively harm those who trust in them. The temple-security slogan is not merely inert but destructive.</p>",
+"9": "<p>The covenant-violation catalogue: steal (<em>gānōb</em>), murder (<em>rāṣaḥ</em>), commit adultery (<em>nāʾap</em>), swear falsely (<em>šābaʿ laššeqer</em>), sacrifice to Baal, follow other gods. This is a near-echo of the Decalogue violations — six of the Ten Commandments broken by the worshipping community. The MKT preserves the staccato list to convey the cumulative effect of itemized covenant-breaking.</p>",
+"10": "<p><strong>nilṣalnû</strong> — &quot;we are safe&quot;; from <em>nāṣal</em>, to be rescued/delivered. The crowd enters the temple guilty of Decalogue violations and immediately declares themselves delivered. The MKT&apos;s &quot;We are safe!&quot; captures the presumptuous self-assurance better than &quot;we are delivered&quot; — it is not a theological claim but a smug dismissal of the need for repentance.</p>",
+"11": "<p><strong>mĕʿārat pārîṣîm</strong> — &quot;den of robbers&quot;; <em>pārîṣîm</em> are violent men, robbers, but specifically violent ones who use force (<em>pāraṣ</em>, to break through). This verse is directly cited by Jesus in the Temple Cleansing (Matt 21:13; Mark 11:17; Luke 19:46). The MKT follows the traditional rendering because it is the phrase preserved in the NT citation; &quot;den of violent robbers&quot; would be technically more precise but would obscure the biblical cross-reference.</p>",
+"12": "<p><strong>Šîlōh</strong> — Shiloh was the first permanent sanctuary site of the tabernacle (Josh 18:1), destroyed by the Philistines ca. 1050 BCE (1 Sam 4). YHWH cites his own destruction of Shiloh as precedent for what he can and will do to Jerusalem. The MKT renders &quot;my place that was in Shiloh&quot; to preserve the possessive — YHWH acknowledges Shiloh was his; that did not protect it.</p>",
+"13": "<p><strong>haškēm wĕdabbēr</strong> — &quot;I spoke again and again&quot;; the idiomatic Hebrew for speaking persistently and early (<em>hiškim</em> = to rise early, hence to act persistently). The MKT renders it &quot;I spoke to you again and again&quot; rather than the more literal &quot;rising early to speak&quot; because the idiom&apos;s force is persistency, not the time of day.</p>",
+"14": "<p>The threat parallels the Shiloh precedent: as Shiloh was destroyed, so will this temple. The phrase <em>ʾăšer nātattî lākem wĕlaʾăbôtêkem</em> — &quot;that I gave to you and your ancestors&quot; — underlines that the gift of the temple does not make it inviolable; what YHWH gives, YHWH can take. The MKT preserves this emphasis by making &quot;gave&quot; explicit.</p>",
+"15": "<p><strong>kol-zeraʿ ʾeprāyim</strong> — &quot;the entire offspring of Ephraim&quot;; the Northern Kingdom was &quot;driven out&quot; (<em>gārašti</em>) in the Assyrian deportation of 722 BCE. YHWH here says explicitly that he drove them out from his presence — the passive phrasing common in history-writing is corrected to active divine agency. The MKT preserves &quot;I drove out&quot; to maintain the theological claim.</p>",
+"16": "<p><strong>ʾal-tittpallēl... wĕʾal-tippgaʿ-bî</strong> — &quot;do not pray... do not press me with intercession&quot;; this is one of the most startling commands in the prophets: YHWH forbids Jeremiah to intercede. <em>Pāgaʿ</em> means to encounter, meet, intercede; the MKT&apos;s &quot;do not press me&quot; captures the picture of Jeremiah&apos;s characteristic intercessory intensity. The prohibition signals that judgment has become irrevocable.</p>",
+"17": "<p>A rhetorical question directed at Jeremiah: &quot;Do you not see?&quot; (<em>hărōʾeh ʾattā</em>). YHWH points Jeremiah to the visible idolatry in public spaces as evidence for the judgment he has just pronounced. The MKT&apos;s &quot;towns of Judah and in the streets of Jerusalem&quot; follows MT in specifying both urban and rural scope of the apostate worship.</p>",
+"18": "<p><strong>meleʾket haššāmayim</strong> — &quot;queen of heaven&quot;; the Hebrew phrase (with <em>meleʾket</em> = work/labor/queen, a disputed reading) refers to the Mesopotamian goddess Ishtar/Inanna or the Canaanite Asherah. The MKT renders &quot;queen of heaven&quot; — the majority reading that fits the context of family-organized cultic baking of cakes in the goddess&apos;s image.</p>",
+"19": "<p>YHWH&apos;s rhetorical response: is it me they are provoking (<em>hăkʿăsunî</em>)? The answer is no — the idolaters only harm themselves. The reflexive dimension of sin is captured in &quot;bringing shame on themselves&quot; (<em>lĕmāʿan bōšet pĕnêhem</em>). The MKT preserves this by asking &quot;Is it not themselves they are provoking?&quot; — YHWH is not threatened by idol-worship; the worshippers are self-destructing.</p>",
+"20": "<p><strong>ʾap YHWH wĕḥămātî</strong> — &quot;My anger and my wrath&quot;; the pairing of <em>ʾap</em> (nose/anger, the nose flares in anger) and <em>ḥēmâ</em> (burning wrath, heat) intensifies the divine emotion beyond ordinary anger. The MKT renders both: &quot;my anger and my wrath.&quot; The judgment is on humans, animals, trees, and ground — a reversal of creation&apos;s fruitfulness.</p>",
+"21": "<p><strong>sĕpû ʿôlôtêkem ʿal-zivḥêkem</strong> — &quot;add your burnt offerings to your other sacrifices and eat the meat&quot;; this is ironic permission: since you treat the temple as a guarantor of safety regardless of behavior, go ahead and eat the burnt offerings (normally reserved entirely for God). The MKT preserves the sarcasm by rendering &quot;Go ahead — add your burnt offerings.&quot;</p>",
+"22": "<p><strong>lō-dibbartî... ʿal-ʾōlôt</strong> — &quot;I did not speak with them... about burnt offerings and sacrifices&quot;; this difficult verse argues that the Exodus command&apos;s prime content was covenantal relationship and obedience, not sacrificial detail. The MKT follows the MT: &quot;I did not speak or give them commands about burnt offerings.&quot; The emphasis is not that the sacrificial law was never given, but that it was subordinate to the covenantal relationship. Verse 23 immediately supplies what the prime command actually was.</p>",
+"23": "<p><strong>šimʿû bĕqôlî</strong> — &quot;Obey my voice&quot; or &quot;listen to my voice&quot;; the MKT renders &quot;Obey me&quot; — the prime command given at Sinai is not a list of sacrifices but a relational summons to hearing-obedience. &quot;I will be your God, you will be my people&quot; (<em>lĕʿam</em> / <em>lēʾlōhîm</em>) is the covenant formula; &quot;walk in all the ways I command you&quot; follows from the relational priority.</p>",
+"24": "<p><strong>bĕsĕrîrût libbām hārāʿ</strong> — &quot;the stubbornness of their evil hearts&quot;; <em>šĕrîrût</em> denotes hardness, stubbornness — the intractable resistance of the will. This phrase recurs as one of Jeremiah&apos;s signature diagnostic terms for Israel&apos;s condition. The MKT translates &quot;the stubbornness of their evil hearts&quot; rather than &quot;the imagination of their evil hearts&quot; (KJV) because <em>šĕrîrût</em> is primarily about hardness/stubbornness, not imagination.</p>",
+"25": "<p><strong>haškēm wĕšālôaḥ</strong> — &quot;persistently sent&quot;; another idiom using the &quot;rising early&quot; root for persistent action. The MKT renders &quot;I have persistently sent all my servants the prophets&quot; — the emphasis is on the relentless, patient divine effort to communicate before judgment. The phrase &quot;again and again&quot; (repeated from v.13) underlines the long record of ignored warnings.</p>",
+"26": "<p><strong>qaššû ʾet-ʿarpām</strong> — &quot;they were stubborn and stiff-necked&quot;; <em>qāšâ ʿōrep</em> (hard of neck) is the classic stiff-necked idiom for resistance to divine correction. The MKT renders both the &quot;stubborn&quot; and &quot;stiff-necked&quot; (rather than collapsing them into one English word) to preserve the rhetorical doubling. &quot;They behaved even worse than their ancestors&quot; — the downward spiral of apostasy through the generations.</p>",
+"27": "<p>YHWH addresses Jeremiah directly: you will preach and they will not listen — a pre-announcement of failure. This functions as prophetic call-within-call: Jeremiah is told in advance that his ministry will be formally rejected. The MKT preserves the direct address (&quot;You will speak... you will call&quot;) to maintain the personal commissioning of the prophet.</p>",
+"28": "<p><strong>ʾemûnâ ʾābĕdâ</strong> — &quot;Truth has vanished&quot;; <em>ʾĕmûnâ</em> is faithfulness, reliability, truth as a practiced commitment (not merely propositional accuracy). The loss of <em>ʾĕmûnâ</em> is the social-ethical collapse of covenant. The MKT renders &quot;Truth has vanished from their lips&quot; — <em>ʾĕmûnâ</em> is more than truth-telling; it is the fabric of communal trustworthiness that covenant loyalty creates.</p>",
+"29": "<p><strong>gĕzî nizrēk</strong> — &quot;Shave off your hair and throw it away&quot;; cutting off one&apos;s hair (<em>nēzer</em> = consecrated hair/crown, here in the sense of hair as one&apos;s &quot;crown&quot;) as a mourning gesture. The MKT renders &quot;Shave off your hair&quot; — the mourning rite signals a lament over the generation YHWH has rejected and abandoned.</p>",
+"30": "<p><strong>gillûlêhem</strong> — &quot;their detestable idols&quot;; <em>gillûlîm</em> is a contemptuous term for idols (possibly related to the word for dung-pellets or logs). The MKT uses &quot;detestable idols&quot; — the term is deliberately derogatory, YHWH refusing to name the idols with their own titles. Installing them <em>babbayit ʾăšer-niqrāʾ šĕmî ʿālāw</em> (in the house on which my name is called) is the ultimate desecration.</p>",
+"31": "<p><strong>lō-tsiwwîtî</strong> — &quot;something I never commanded&quot;; the explicit divine repudiation of child sacrifice. <em>Bāmôt hattōpet bĕgêʾ ben-hinnōm</em> — the shrines of Topheth in the valley of Ben Hinnom (the geographic origin of Gehenna). YHWH states clearly that child sacrifice was never in the covenant: &quot;something I never commanded, nor did it enter my mind.&quot; The MKT preserves the first-person emphatic (<em>lō-tsiwwîtî</em>) to make the repudiation direct and unambiguous.</p>",
+"32": "<p><strong>gêʾ hahărēgâ</strong> — &quot;Valley of Slaughter&quot;; the Valley of Ben Hinnom where children were burned will be renamed. The MKT preserves the ominous name &quot;Valley of Slaughter&quot; — Topheth (place of burning) becomes a mass burial site. This verse begins the judgment-description that the temple sermon has been building toward.</p>",
+"33": "<p><strong>hayyôm lāzāyit</strong> — &quot;food for the birds of the sky and the wild animals&quot;; unburied corpses are the ultimate covenant curse (Deut 28:26). The phrase &quot;no one will drive them away&quot; means even the minimal dignity of shooing away scavengers will be absent. The MKT follows MT precisely here because the covenant-curse language needs no softening.</p>",
+"34": "<p><strong>qôl śāśôn wĕqôl śimḥâ qôl ḥātān wĕqôl kallâ</strong> — &quot;the sounds of joy and gladness, the voices of the bridegroom and the bride&quot;; the four-fold joy-formula that will be silenced. This phrase also appears in 16:9; 25:10; 33:11 (where its restoration signals new-covenant renewal). The MKT preserves all four terms: joy, gladness, bridegroom, bride — the complete vocabulary of wedding celebration ended.</p>"
+},
+"8": {
+"1": "<p>The desecration of the bones of the ruling classes — kings, officials, priests, prophets, and people. The exposure of bones (<em>yôṣîʾû ʾet-ʿaṣmôt</em>) was the ultimate post-mortem humiliation in the ancient world; death offered no security from divine judgment. The MKT lists all five categories to show the comprehensive scope: no class of Judahite leadership is exempt.</p>",
+"2": "<p><strong>ʾăšer ʾăhēbûm ûʾăšer ʿăbādûm</strong> — &quot;which this people loved, served, followed, consulted, and worshipped&quot;; the five-fold description of the sun/moon/stars cult mirrors the five classes of victims in v.1. The MKT preserves all five verbs because together they describe the totality of idolatrous devotion — the same comprehensive energy that should have been directed toward YHWH. &quot;They will not be gathered up or buried&quot; — the non-burial is the ironic punishment for those who worshipped celestial bodies.</p>",
+"3": "<p><strong>yibḥar māwet mēḥayyîm</strong> — &quot;will prefer death to life&quot;; an inversion of the covenant&apos;s life/death choice (Deut 30:19). The survivors of the exile will be in conditions so wretched that death is preferable to survival. The MKT renders the future tense strongly: &quot;will prefer death to life&quot; — the covenant inversion is complete when life becomes intolerable.</p>",
+"4": "<p><strong>hăyippōl wĕlōʾ yāqûm</strong> — &quot;When people fall, don&apos;t they get back up?&quot;; a wisdom observation used as the ground for the rhetorical indictment. The MKT renders the wisdom saying as a question (<em>hă-</em> interrogative), as MT indicates. Natural behavior and common sense confirm the abnormality of Judah&apos;s persistent non-repentance.</p>",
+"5": "<p><strong>mĕšûbâ nitsaḥat</strong> — &quot;perpetual backsliding&quot;; <em>mĕšûbâ</em> is apostasy, turning-away; the <em>nitsaḥat</em> (perpetual, enduring) intensifies it. The MKT renders &quot;turned away in perpetual backsliding&quot; — the repetitiveness of the apostasy is as much the indictment as the apostasy itself. They cling to deception (<em>heḥĕzîqû bĕmirmâ</em>) and refuse to return.</p>",
+"6": "<p><strong>ʾên-ʾîš niḥam ʿal-rāʿātô</strong> — &quot;no one repents of his wickedness&quot;; <em>nāḥam</em> (repent, relent) is YHWH&apos;s own word for emotional turning. Here it is used for Israel&apos;s required turning — no one engages in the self-examination that would lead to repentance. The MKT&apos;s &quot;No one repents of his wickedness and asks, &apos;What have I done?&apos;&quot; preserves the introspective question that nobody is asking.</p>",
+"7": "<p><strong>ḥăsîdâ... yādĕʿâ mōwʿădêhā</strong> — &quot;Even the stork in the sky knows when to migrate&quot;; <em>ḥăsîdâ</em> (stork; its root <em>ḥesed</em> means loyal love — the bird was considered loyal to its young). The migration analogy: birds instinctively follow their appointed times (<em>môʿēd</em>) — but Israel does not follow YHWH&apos;s appointed covenant. The MKT preserves the four birds (stork, turtledove, swallow, crane) as a rhetorical accumulation.</p>",
+"8": "<p><strong>ʿēt šeqer sōpĕrîm</strong> — &quot;the lying pen of the scribes has turned it into a lie&quot;; <em>ʿēt</em> is a scribal pen or stylus; <em>šeqer</em> is falsehood/deception. The scribal class that handles the Torah has itself become the instrument of falsification. The MKT renders &quot;the lying pen of the scribes has turned it into a lie&quot; — the <em>tôrat YHWH</em> that they claim to possess has been adulterated by their scribal handling.</p>",
+"9": "<p><strong>ḥāpĕrû ḥăkāmîm</strong> — &quot;The wise will be disgraced&quot;; the <em>ḥākāmîm</em> (the wise ones, the sages) are specifically shamed because they claimed the Torah and were trusted with it. The MKT preserves the targeting of the wise class: &quot;they have rejected the word of the LORD — so what wisdom is left in them?&quot; Wisdom that rejects the word of YHWH is self-refuting.</p>",
+"10": "<p>The judgment on the prophets and priests who falsify: their property will be redistributed — wives to other men, fields to new owners. The phrase <em>miqqāṭōn wĕʿad-gādôl</em> (from the least to the greatest) applies the judgment comprehensively. The MKT follows MT in specifying both the prophets (<em>nāvîʾ</em>) and the priests (<em>kōhēn</em>) as greedy practitioners of the false-peace message.</p>",
+"11": "<p><strong>šālôm šālôm wĕʾên šālôm</strong> — &quot;Peace, peace, when there is no peace&quot;; the doubled <em>šālôm</em> is the signature phrase of Jeremiah&apos;s critique of false prophecy — also appearing in 6:14. <em>Šālôm</em> denotes comprehensive well-being (health, wholeness, safety, prosperity) not merely absence of conflict. The MKT renders the doubling as &quot;Peace, peace,&quot; — the repetition itself performs the falsity of the prophets&apos; assurance.</p>",
+"12": "<p><strong>hōbîšû kî tôʿēbâ ʿāśû</strong> — &quot;Were they ashamed when they committed these detestable acts?&quot; The answer: they could not even blush (<em>wĕlikhˊlōm lōʾ yādĕʿû</em>). Shame and blush (<em>ḥāpar</em> / <em>kālam</em>) are closely related — the capacity for moral shame has been lost. The MKT preserves both: &quot;no shame... did not even know how to blush&quot; — the double negation emphasizes complete moral insensibility.</p>",
+"13": "<p><strong>ʾāsōp ʾăsîpēm</strong> — &quot;I will take away their harvest&quot;; an infinitive absolute construction emphasizing the thoroughness of the removal. The agricultural images (no grapes, no figs, withered leaves) reverse the covenant blessings of the land. The MKT follows MT: &quot;no grapes on the vine, no figs on the fig tree, even the leaves will wither&quot; — the complete reversal of land-prosperity.</p>",
+"14": "<p>The people&apos;s own lament-speech: &quot;Let us flee to the fortified cities&quot; — a despairing acceptance that the judgment announced in v.13 is arriving. The phrase <em>YHWH ʾĕlōhênû hĕdîmānû</strong> — &quot;the LORD our God has condemned us&quot; — shows some recognition of YHWH&apos;s agency. The MKT renders &quot;condemned us&quot; (rather than &quot;silenced us&quot;) following the root <em>dāmam</em> in the sense of bringing to an end.</p>",
+"15": "<p><strong>qāwwîtā lĕšālôm wĕʾên ṭôb</strong> — &quot;We hoped for peace, but no good has come&quot;; the ironic reversal of the false prophets&apos; promises. The people had been told <em>šālôm</em> would come; instead, there is <em>terror</em> (<em>beʿātâ</em>). The MKT preserves the pair &quot;peace/healing&quot; from the false-prophecy vocabulary and &quot;good/terror&quot; as what actually arrived.</p>",
+"16": "<p><strong>miDdan nišmaʿ pinḥat sûsāyw</strong> — &quot;From Dan the snorting of their warhorses is heard&quot;; Dan was the northernmost city; Babylon&apos;s armies approach from the north. <em>Pinḥat</em> (snorting, loud neighing) creates an onomatopoetic effect. The MKT renders &quot;snorting... stallions&apos; neighing&quot; to capture the two different horse-sounds in the Hebrew.</p>",
+"17": "<p><strong>nĕḥāšîm tsipʿōnîm</strong> — &quot;poisonous snakes... vipers that cannot be charmed&quot;; a metaphor for the Babylonian army. <em>Ṣipʿōnî</em> is likely the horned viper; the incantation-resistant quality (&quot;cannot be charmed&quot;) means no prophetic intervention will deflect this judgment. The MKT preserves &quot;vipers that cannot be charmed&quot; — the snake-charming image underlines that Jeremiah&apos;s intercession is futile (cf. 7:16).</p>",
+"18": "<p><strong>mabligîtî ʿālê yāgôn</strong> — &quot;My sorrow is beyond healing&quot;; the prophet&apos;s first-person lament begins. <em>Bālag</em> means to comfort, restore strength; the negated form suggests there is no comfort available. The MKT renders &quot;My sorrow is beyond healing; my heart is faint within me&quot; — identifying these as Jeremiah&apos;s own words of empathetic suffering before YHWH&apos;s speech resumes.</p>",
+"19": "<p><strong>hăʾên YHWH bĕṣiyyôn</strong> — &quot;Is the LORD not in Zion?&quot; The people&apos;s cry in exile is interrupted by YHWH&apos;s counter-question: &quot;Why have they provoked me with their idols?&quot; The MKT preserves this dramatic interruption — the people ask one question, YHWH answers with a different one. &quot;Her King no longer there?&quot; presupposes YHWH as Zion&apos;s true king (<em>malkāh</em>).</p>",
+"20": "<p><strong>ʿābar qātsîr kālâ qāyits</strong> — &quot;The harvest is over, the summer has ended — and we are still not saved&quot;; an agricultural calendar metaphor: the grain harvest (spring) and summer fruit harvest have passed; the year&apos;s natural opportunities for survival have closed, yet the salvation the people waited for has not come. The MKT preserves the agricultural imagery because it grounds the lament in the real experience of watching each season pass without relief.</p>",
+"21": "<p><strong>ʿal-šeber bat-ʿammî</strong> — &quot;I am broken over the brokenness of my people&quot;; wordplay on <em>šābar</em> (break, shatter): the prophet is broken (<em>nišbartî</em>) because of the shattering of the people. The MKT renders &quot;I am broken over the brokenness of my people&quot; — the translation must preserve the echo of the same root to show that the prophet&apos;s suffering is a participation in the people&apos;s suffering.</p>",
+"22": "<p><strong>hăṣōrî ʾên bĕgilʿād</strong> — &quot;Is there no balm in Gilead?&quot; <em>Ṣōrî</em> is the resin of the mastic tree, an ancient medicinal substance; Gilead was famous as its source. The rhetorical question assumes the answer is yes, there is balm in Gilead — but the wound of Israel goes unhealed anyway. The MKT preserves the rhetorical question rather than smoothing it into a statement: &quot;Is there no physician there?&quot; — the problem is not lack of remedy but refusal to receive it.</p>"
+},
+"9": {
+"1": "<p><strong>mî-yittēn rōʾšî mayim</strong> — &quot;Oh that my head were a spring of water&quot;; the optative-wish formula (<em>mî yittēn</em>, &quot;who will give?&quot; = &quot;would that...&quot;) expresses Jeremiah&apos;s grief-wish. The weeping-prophet motif is central to his identity — his tears are not weakness but covenantal mourning. The MKT preserves &quot;weep day and night for the slain of my dear people&quot; — the word <em>ḥălāl</em> (slain, pierced) emphasizes violent death.</p>",
+"2": "<p><strong>ûminnāhem ʾēlek</strong> — &quot;so that I could leave my people and go away from them&quot;; Jeremiah&apos;s second wish: to escape from the people he is condemned to love. <em>Gō mallôn ʾōrḥîm</em> (a lodging place for travelers) in the wilderness — the wish for anonymity and distance. The MKT preserves the tension: Jeremiah does not hate his people, but the weight of their sin is unbearable to the prophet who must live among them.</p>",
+"3": "<p><strong>qāšĕtû ʾet-lĕšônām qĕšĕtām</strong> — &quot;They have bent their tongue like a bow to shoot falsehood&quot;; the tongue-as-weapon metaphor: <em>lāšôn</em> (tongue) bent like a <em>qešet</em> (bow), shooting <em>šeqer</em> (falsehood/lies). The MKT preserves the imagery: &quot;grown powerful in the land but not by truth.&quot; <em>Wĕlōʾ leʾĕmûnâ gābarû bāʾārets</em> — they have prevailed in the land but not through faithfulness.</p>",
+"4": "<p><strong>kol-ʾāḥ ʿāqōb yaʿqōb</strong> — &quot;every brother is a schemer&quot;; this is a pun on the name Jacob (<em>yaʿăqōb</em>, from <em>ʿāqēb</em>, heel) — Jacob the heel-grasper/supplanter. The MKT renders &quot;every brother is a schemer&quot; rather than &quot;every brother will act like Jacob&quot; because the wordplay requires a footnote to work in English; the MKT chose the semantic content over preserving the untranslatable pun. Ideally a reader would know the Jacob connection.</p>",
+"5": "<p><strong>limmĕdû lĕšônām dabber šeqer</strong> — &quot;They have trained their tongue to lie&quot;; <em>limmēd</em> (train, teach) implies deliberate practice — lying has become a cultivated skill. The phrase &quot;they exhaust themselves committing iniquity&quot; (<em>nilʾû bĕhašĕkīl</em>) portrays sin as hard work that they devote serious effort to. The MKT preserves this irony: the energy that should go toward YHWH goes toward deliberate deception.</p>",
+"6": "<p><strong>bĕtôk mirmâ yāšābû</strong> — &quot;You live in the midst of deception&quot;; YHWH addresses Jeremiah directly about the people. <em>Mirmâ</em> (deception, treachery) is the ambient environment — they inhabit deception the way one inhabits a house. &quot;Through their deceit they refuse to know me, declares the LORD&quot; — knowledge of YHWH and deception are mutually exclusive; the commitment to falsehood necessarily drives out knowledge of the God of truth.</p>",
+"7": "<p><strong>tsāraptîm ûbĕḥantîm</strong> — &quot;I will refine them and test them&quot;; the metallurgical purification metaphor: <em>tsārap</em> (smelt, refine) and <em>bāḥan</em> (test, assay) are the verbs for removing dross from metal. The rhetorical question &quot;what else can I do with my sinful people?&quot; (<em>ʾêk ʾeʿĕśeh mippĕnê bat-ʿammî</em>) conveys divine constrained purpose: the refining is YHWH&apos;s response to apostasy that cannot be ignored.</p>",
+"8": "<p><strong>ḥēts šāḥûṭ lĕšônām</strong> — &quot;Their tongue is a lethal arrow that shoots out deceit&quot;; the tongue-bow metaphor of v.3 is here intensified: the tongue is itself the arrow (<em>ḥēts šāḥûṭ</em>, a polished/sharpened arrow). The MKT renders &quot;with their mouths they speak peace to their neighbors, but in their hearts they set a trap.&quot; The gap between spoken peace (<em>šālôm</em>) and planned ambush is the essence of social duplicity.</p>",
+"9": "<p>The covenant-lawsuit formula: &quot;Should I not punish them for all this? Should I not take vengeance on such a nation?&quot; The rhetorical double question (<em>hăʾal-ʾēlleh lōʾ-ʾepqōd</em>) expects the answer yes. <em>Pāqad</em> (punish, visit, attend to) is YHWH&apos;s covenant-enforcement verb — the same root used in promises of blessing. The MKT preserves both questions to maintain the juridical deliberation.</p>",
+"10": "<p><strong>qînâ ûnĕhî</strong> — &quot;weeping and wailing&quot; and &quot;lamentation&quot; (<em>nĕhî</em>); the mourning vocabulary for the desolated mountains. The divine lament (&quot;I will take up weeping&quot; — YHWH is the subject) shows the peculiar Jeremianic characteristic: YHWH himself mourns for the land he is judging. The MKT preserves YHWH as the grieving subject to maintain this theological tension.</p>",
+"11": "<p><strong>wĕnātattî ʾet-yĕrûšālaim lĕʿiyyîm</strong> — &quot;I will make Jerusalem a heap of rubble&quot;; <em>ʿî</em> (rubble-mound, desolate ruin) — the word used for the remnant-mounds of destroyed cities. &quot;A haunt of jackals&quot; (<em>mĕʿôn tannîm</em>): jackals inhabit ruins in OT imagery. The MKT preserves both images — rubble-mound and jackal-haunt — as the two paired symbols of total desolation.</p>",
+"12": "<p>A wisdom-challenge: &quot;Who is wise enough to understand this? Who has received the word from the LORD and can explain it?&quot; The two questions distinguish human wisdom from prophetic revelation. The MKT preserves the distinction: understanding (<em>bîn</em>) vs. having received the word (<em>ʾăšer dibbartî YHWH ʾēlāyw</em>). The answer (from YHWH in vv.13-16) requires the latter, not the former.</p>",
+"13": "<p>YHWH&apos;s answer to the wisdom-challenge: they abandoned his Torah. <em>ʿāzĕbû ʾet-tôrātî</em> — &quot;they have abandoned my law that I placed before them&quot;; <em>nātan lĕpānêhem</em> (placed before them) — the law was openly displayed/available, not hidden. The MKT follows MT in rendering Torah as &quot;law&quot; — the full Mosaic instruction-set that they comprehensively abandoned.</p>",
+"14": "<p><strong>ʾaḥărê haShĕbāʿalîm</strong> — &quot;went after the Baals&quot;; the plural <em>bĕʿālîm</em> denotes the various local Baal-manifestations worshipped at different shrines. &quot;Just as their ancestors had taught them&quot; (<em>kĕʾăšer limmĕdûm ʾăbôtām</em>) — the apostasy is generationally transmitted; it is not mere individual deviation but a family tradition of idolatry. The MKT preserves the plural Baals and the ancestral transmission.</p>",
+"15": "<p><strong>laʿănâ</strong> — &quot;wormwood&quot;; a bitter plant (<em>Artemisia</em>) used as the OT&apos;s metaphor for bitter suffering (Lam 3:15, 19). &quot;Poisoned water&quot; (<em>mê rōʾš</em>) — rōʾš is a poisonous plant (likely hemlock or a similar herb). The combination of bitter food and poisoned drink represents total inversion of covenant blessing (land of milk and honey). The MKT follows standard rendering of these paired covenant-curse images.</p>",
+"16": "<p><strong>ûbizzîtîm bĕtôk haggôyim</strong> — &quot;I will scatter them among nations&quot;; <em>zārâ</em> (scatter, winnow — the agricultural image of grain chaff blown away) is the diaspora verb. The pursuit-by-sword until destroyed is the military covenant curse (Deut 28:41-65). The MKT preserves the diaspora as divine act: &quot;I will scatter... I will pursue.&quot;</p>",
+"17": "<p><strong>hammĕqônĕnôt</strong> — &quot;the professional mourning women&quot;; <em>qînâ</em> (lament, dirge) + participle = women skilled in the art of public mourning. Professional mourners were a recognized occupational class in the ancient world. The MKT renders &quot;professional mourning women&quot; to clarify this was not amateur grief but skilled lament-performance. &quot;The most skilled&quot; (<em>hāḥăkāmôt</em>) — even the mourning requires expertise.</p>",
+"18": "<p>The professional mourners&apos; commission: weep until eyes stream (<em>tērednā dimʿâ ʿênênû</em>) and eyelids overflow (<em>yizzĕlû mayim ʿapʿappênû</em>). The two different Hebrew words for eyes (ʿêyin, outer eye; ʿapʿappe, eyelid) indicate the totality of weeping. The MKT preserves both anatomical terms: &quot;eyes... eyelids&quot; — the total-body weeping for the total judgment.</p>",
+"19": "<p>The lament-cry from Zion: <em>šuddadnû bōšnû meʾōd kî ʾāzabnû ʾārets</em> — &quot;We are devastated! We are utterly disgraced — because we have had to leave the land.&quot; The triple emphasis (devastated, disgraced, exiled) is the MT&apos;s way of conveying the magnitude of the loss. The MKT preserves all three expressions rather than collapsing them.</p>",
+"20": "<p>YHWH addresses the women directly: <em>šimʿā nāšîm dĕbar YHWH</em> — &quot;women, hear the word of the LORD.&quot; The commission to teach daughters to mourn suggests the lament will outlast the immediate generation — it is something that must be institutionalized. The MKT preserves the direct female address as significant: the mourning women are given the prophetic commission to transmit the lament.</p>",
+"21": "<p><strong>māwet ʿālâ bĕḥallônênû</strong> — &quot;death has climbed through our windows&quot;; Death is personified (<em>māwet</em> as a figure, possibly an echo of the Canaanite death-god Mot) entering houses through windows. &quot;Cutting down children in the streets and young men in the public squares&quot; — the harvest-metaphor for mass death: <em>likrôt ʿôlāl meḥûts</em>. The MKT preserves the personification of Death as an active agent.</p>",
+"22": "<p><strong>wĕnāpal niblat hāʾādām kĕdōmen ʿal-pĕnê haśśādeh</strong> — &quot;Human corpses will fall like manure on the open field&quot;; the covenant-curse of unburied dead (Deut 28:26) in its starkest form. <em>Dōmen</em> (dung, manure) is a deliberately undignified comparison. The MKT preserves the bluntness — translation that softens &quot;like manure&quot; undermines the prophetic force.</p>",
+"23": "<p><strong>ʾal-yithalēl ḥākām bĕḥokmātô</strong> — &quot;Let not the wise boast in their wisdom, nor the mighty in their strength, nor the rich in their riches&quot;; the three-fold anti-boast formula. <em>Hālal</em> (boast, praise) — the same root as <em>hallel</em>. The wisdom/strength/riches triad represents the three spheres of human self-sufficiency. The MKT preserves all three in parallel because their cumulative effect is essential — no domain of human competence is exempt from this rejection.</p>",
+"24": "<p><strong>kî ʾim bĕzōʾt yithalēl hammishtallēaḥ haskēl wĕyādōaʿ ʾôtî</strong> — &quot;let him who boasts boast in this: that he understands and knows me&quot;; the only legitimate boast is YHWH-knowledge (<em>daʿat YHWH</em>). The three divine attributes: <em>ḥesed</em> (steadfast love/covenant loyalty), <em>mišpāṭ</em> (justice), <em>ṣĕdāqâ</em> (righteousness) — the same triad that defines YHWH&apos;s character throughout the OT. Paul cites this verse in 1 Cor 1:31 and 2 Cor 10:17: &quot;let him who boasts, boast in the Lord.&quot; The MKT&apos;s rendering of the three attributes is deliberate: &quot;steadfast love, justice, and righteousness in the earth.&quot;</p>",
+"25": "<p><strong>kol-mûl bĕʿorlâ</strong> — &quot;all who are only outwardly circumcised&quot;; the category of the physically circumcised who are simultaneously uncircumcised (i.e., in heart). The MKT renders &quot;all who are only outwardly circumcised&quot; — paraphrasing the literally ambiguous <em>kol-mûl bĕʿorlâ</em> (all circumcised in/with foreskin). This verse sets up the spiritual-circumcision contrast with Paul&apos;s argument in Rom 2:28-29.</p>",
+"26": "<p><strong>ʿărēl lēb</strong> — &quot;uncircumcised in heart&quot;; the phrase used for the nations and equally for Israel. The MKT renders &quot;for all these nations are uncircumcised in the flesh, and all the house of Israel is uncircumcised in heart.&quot; The startling equivalence: Israel&apos;s heart-circumcision deficit is no better than Gentile physical uncircumcision. This verse is the OT basis for Paul&apos;s argument in Rom 2:28-29 (circumcision of the heart, by the Spirit).</p>"
 }
-
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
 }
 
 def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', 'jeremiah')
+    merge_comm(existing, JEREMIAH)
+    save_comm('mkt-original', 'jeremiah', existing)
+    print('Jeremiah 7-9 mkt-original written.')
 
 if __name__ == '__main__':
     main()

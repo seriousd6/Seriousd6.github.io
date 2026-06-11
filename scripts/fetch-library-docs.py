@@ -2468,13 +2468,13 @@ def _is_heading_div(tag, split_h):
   if 'mw-heading' in classes and tag.find(split_h) is not None:
     return True
   # Gutenberg div.chapter where the div contains only the heading (+ optional page markers)
+  _MAX_EXTRA_CHARS = 10  # page numbers like "iii", "45" are ≤10 chars
   if 'chapter' in classes:
     h = tag.find(split_h)
     if h is None:
       return False
-    # Extra non-heading text must be ≤10 chars (page numbers like "iii", "45")
     extra = tag.get_text(strip=True).replace(h.get_text(strip=True), '', 1).strip()
-    return len(extra) <= 10
+    return len(extra) <= _MAX_EXTRA_CHARS
   return False
 
 
@@ -2588,18 +2588,15 @@ def _split_into_sections(soup, split_h='h2', max_sections=0):
 # Output formatting
 # ---------------------------------------------------------------------------
 
-def _html_escape(text):
-  return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
-
-
 def _wrap_sections(sections):
   # INTENT: Emit BSW library v2 format: each section's first child must be
   #   <h2 class="lib-section__title"> per R3 validation rule.
+  from html import escape as _escape
   parts = []
   for s in sections:
     heading     = s['heading'].replace('"', '&quot;')
     title_text  = s['heading'] or 'Preface'
-    title_tag   = f'<h2 class="lib-section__title">{_html_escape(title_text)}</h2>\n'
+    title_tag   = f'<h2 class="lib-section__title">{_escape(title_text)}</h2>\n'
     parts.append(f'<section data-heading="{heading}">\n{title_tag}{s["html"]}\n</section>')
   return '\n\n'.join(parts) + '\n'
 
@@ -2626,6 +2623,8 @@ _GUTENBERG_END_MARKERS = [
 _GUTENBERG_START_MARKERS = [
   '*** START OF THE PROJECT GUTENBERG',
   '*** START OF THIS PROJECT GUTENBERG',
+  '***START OF THE PROJECT GUTENBERG',
+  '***START OF THIS PROJECT GUTENBERG',
 ]
 
 def _clean_gutenberg_soup(soup):

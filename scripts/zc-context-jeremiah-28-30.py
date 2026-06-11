@@ -1,45 +1,15 @@
-"""
-Combined OT Phase 2 script: Deuteronomy, Jeremiah, Ezekiel, Daniel — all four layers.
-These four books have the highest NT echo density of all remaining OT books.
-"""
-
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     return json.loads(p.read_text()) if p.exists() else {}
 
 def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
+    p = ROOT / "data" / "commentary" / layer / f"{book}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -49,274 +19,92 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================================================
-# DEUTERONOMY
-# ============================================================
-
-DEUT_ECHO = {
-  "6": {
-    "4": [
-      {"type": "allusion", "target": "Mark 12:29", "note": "Hear O Israel the LORD our God the LORD is one — Jesus cites the Shema (Deut 6:4-5) as the first and greatest commandment; the Shema frames the entire law in the context of YHWH's singular Lordship over Israel"},
-      {"type": "allusion", "target": "1 Cor 8:6", "note": "One God the Father from whom are all things and one Lord Jesus Christ through whom are all things — Paul's expansion of the Shema incorporates Jesus into the divine identity: the 'one Lord' of the Shema is now differentiated into Father and Son"}
-    ]
-  },
-  "18": {
-    "15": [
-      {"type": "fulfillment", "target": "Acts 3:22", "note": "A prophet like me will the LORD your God raise up for you — Peter cites Deut 18:15 as fulfilled in Jesus; the eschatological prophet-like-Moses was the figure Israel expected, and Peter declares Jesus to be that prophet"},
-      {"type": "fulfillment", "target": "Acts 7:37", "note": "God will raise up for you a prophet like me from your brothers — Stephen's speech identifies the prophet-like-Moses promise as the Christological center of Moses's ministry; Israel's rejection of Moses typifies their rejection of Jesus"}
-    ]
-  },
-  "21": {
-    "23": [
-      {"type": "fulfillment", "target": "Gal 3:13", "note": "Cursed is everyone who hangs on a tree — Paul cites Deut 21:23 as fulfilled in the crucifixion: Christ redeemed us from the curse of the law by becoming a curse for us, for cursed is everyone who hangs on a tree; the cross is the site of curse-absorption"}
-    ]
-  },
-  "30": {
-    "12": [
-      {"type": "allusion", "target": "Rom 10:6-8", "note": "Do not say in your heart who will go up to heaven — Paul adapts Deut 30:12-14 Christologically: the word that is near you, in your heart and mouth, is the word of faith we proclaim; what Deuteronomy said of the Torah-command is now said of Christ and his gospel"}
-    ]
-  },
-  "32": {
-    "21": [
-      {"type": "fulfillment", "target": "Rom 10:19", "note": "I will make you jealous of those who are not a nation — Paul cites the Song of Moses (Deut 32:21) as the OT basis for the Gentile mission provoking Israel to jealousy; the unexpected reversal of Gentile blessing is Moses's own warning"}
-    ],
-    "43": [
-      {"type": "fulfillment", "target": "Rom 15:10", "note": "Rejoice O Gentiles with his people — Paul cites Deut 32:43 LXX as one of four OT texts (Rom 15:9-12) proving that Gentile inclusion in the worship of God was always the divine plan from Moses through the Psalms and Isaiah"}
-    ]
-  }
+NEW_DATA = {
+"28": {
+"1": "<p>Chapter 28 stages the most dramatic prophetic confrontation in the book: the clash between Jeremiah and Hananiah in the Temple. <strong>In that same year, at the beginning of the reign of Zedekiah king of Judah, in the fifth month of the fourth year, Hananiah the son of Azzur, the prophet from Gibeon, spoke to me in the house of YHWH</strong>. The date is approximately 594 BC — the same year as Jeremiah's yoke sign-act (chapter 27). Hananiah is from Gibeon (a Levitical city, Josh 21:17), has prophetic credentials, and speaks in the Temple — all marks of institutional legitimacy. He is not presented as a charlatan from the fringes but as an established prophetic figure.</p>",
+"2": "<p><strong>Thus says YHWH of hosts, the God of Israel: I have broken the yoke of the king of Babylon</strong>. Hananiah uses the authoritative prophetic formula (<em>thus says YHWH of hosts, the God of Israel</em>) — the same formula Jeremiah uses. He claims divine authorization and invokes the same divine title, making his message externally indistinguishable from Jeremiah's. The claim itself — <em>I have broken the yoke of Babylon</em> — directly contradicts Jeremiah's yoke-sign-act of chapter 27. Two prophets, same formula, opposite messages: this is the crisis of discernment that chapter 28 forces the reader to navigate.</p>",
+"3": "<p><strong>Within two years I will bring back to this place all the vessels of YHWH's house, which Nebuchadnezzar king of Babylon took away from this place and carried to Babylon</strong>. The two-year timeline is specific, measurable, and falsifiable — it will either happen or it will not. Hananiah's prophecy is testable in a way that Jeremiah's 70-year oracle is not (no living person in 594 BC would survive to verify the 70-year prediction). The short timeline gives Hananiah's message immediate political appeal and makes Jeremiah's long-term oracle seem less urgent.</p>",
+"4": "<p><strong>I will also bring back to this place Jeconiah the son of Jehoiakim, king of Judah, and all the exiles from Judah who went to Babylon, declares YHWH, for I will break the yoke of the king of Babylon</strong>. Hananiah extends the promise to include Jehoiachin and all the first-deportation exiles (597 BC). This is politically maximalist: not only the Temple vessels but the deported king and entire first exile community will return within two years. The promise taps directly into the hope of the exiles and their families, making it powerfully attractive.</p>",
+"5": "<p><strong>Then the prophet Jeremiah spoke to Hananiah the prophet in the presence of the priests and all the people who were standing in the house of YHWH</strong>. The setting is public and formal — the Temple court with priests and people as witnesses. Jeremiah's response is not private consultation but a public counter-oracle in the same space where Hananiah spoke. The confrontation cannot be dismissed as a private theological dispute; it is a public crisis of prophetic authority.</p>",
+"6": "<p><strong>And the prophet Jeremiah said, Amen! May YHWH do so; may YHWH make the words that you have prophesied come true, and bring back to this place from Babylon the vessels of the house of YHWH, and all the exiles</strong>. Jeremiah's response is startling: he says <em>amen</em> — may it be so! He does not immediately denounce Hananiah as a liar but expresses genuine desire that the restoration prophecy be true. The prophet who has been announcing judgment genuinely wishes the optimistic oracle were accurate. This models the complex pastoral reality: prophets who announce doom are not gleeful about it (cf. 20:17–18; Lam 3:1–20).</p>",
+"7": "<p><strong>Yet hear now this word that I speak in your hearing and in the hearing of all the people</strong>. The qualifier follows the <em>amen</em>: despite his wish that Hananiah were right, Jeremiah must speak what he has received. The <em>yet</em> (<em>akh</em>) signals a critical qualification. The structure — wish it were true, but here is the reality — is the model of honest prophetic speech that neither pretends to wish disaster nor suppresses the accurate message.</p>",
+"8": "<p><strong>The prophets who preceded you and me from ancient times prophesied war, famine, and pestilence against many countries and great kingdoms</strong>. Jeremiah invokes the prophetic tradition as a criterion: the historical pattern of genuine prophecy was primarily judgment-announcement. The prophets before them — Amos, Hosea, Micah, Isaiah — predominantly announced covenant consequences (war, famine, pestilence) rather than unconditional restoration. This statistical argument is not a denial that restoration prophecy is ever genuine, but an observation that the burden of proof lies with those who prophesy peace.</p>",
+"9": "<p><strong>As for the prophet who prophesies peace, when the word of that prophet comes to pass, then it will be known that YHWH has truly sent that prophet</strong>. The Deuteronomic criterion of prophetic truth (Deut 18:21–22): fulfillment proves authenticity. The irony is that Hananiah's two-year prophecy will be precisely testable — within two years, the exiles will not have returned, the Temple vessels will still be in Babylon, and Jehoiachin will still be in prison. The fulfillment criterion cuts against Hananiah's short-term, falsifiable prediction far more than against Jeremiah's long-term oracle.</p>",
+"10": "<p><strong>Then the prophet Hananiah took the yoke bar from the neck of Jeremiah the prophet and broke it</strong>. Hananiah performs a counter-sign-act: he takes the wooden yoke from Jeremiah's neck and breaks it. In sign-act logic, the physical action enacts the message — breaking the yoke symbolizes breaking Babylon's dominion. This is a direct challenge to Jeremiah's sign-act authority. The crowd watching would have seen Hananiah's dramatic action as a compelling visual claim: the yoke of Babylon will be broken just as this wooden bar is broken.</p>",
+"11": "<p><strong>And Hananiah spoke in the presence of all the people, saying, Thus says YHWH: Even so will I break the yoke of Nebuchadnezzar king of Babylon from the neck of all the nations within two years. But Jeremiah the prophet went his way</strong>. Hananiah doubles down on the two-year promise, now with the dramatic visual of the broken yoke. <em>Jeremiah went his way</em> — a remarkable sentence. Jeremiah does not counter-argue, does not produce a dramatic response, does not attempt to out-perform Hananiah's sign-act. He simply leaves. The prophet's authority does not require winning a public performance contest.</p>",
+"12": "<p><strong>Sometime after the prophet Hananiah had broken the yoke bar from off the neck of Jeremiah the prophet, the word of YHWH came to Jeremiah</strong>. The divine word comes to Jeremiah after the confrontation, not during it — another mark of authentic prophecy versus performance. Genuine prophets do not manufacture responses on demand; they wait for the divine word to come and then speak it.</p>",
+"13": "<p><strong>Go, tell Hananiah, Thus says YHWH: You have broken wooden bars, but you have made in their place bars of iron</strong>. The divine response to Hananiah's dramatic sign-act: the broken wooden yoke is replaced with iron. The counter-sign is more severe than the original. Encouraging resistance to Babylon with false prophecy will not produce freedom but a harder, more inescapable form of subjugation. The attempt to break YHWH's appointed instrument of judgment makes the judgment worse rather than averting it.</p>",
+"14": "<p><strong>For thus says YHWH of hosts, the God of Israel: I have put upon the neck of all these nations an iron yoke to serve Nebuchadnezzar king of Babylon, and they shall serve him, for I have given to him even the beasts of the field</strong>. The iron yoke reiterates and intensifies 27:6: YHWH has commissioned Nebuchadnezzar's dominion over nations and beasts. The wooden yoke that Hananiah broke was symbolic; the iron yoke YHWH establishes is the historical reality of Babylonian military dominance that no prophetic sign-act can break.</p>",
+"15": "<p><strong>And Jeremiah the prophet said to the prophet Hananiah, Listen, Hananiah, YHWH has not sent you, and you have made this people trust in a lie</strong>. The direct confrontation Jeremiah avoided in vv6–11 arrives now with divine backing. <em>YHWH has not sent you</em> — the definitive criterion of prophetic invalidity. The harm Hananiah has done is specified: <em>you have made this people trust in a lie</em> (<em>batach al-sheqer</em>). False hope is not neutral; it actively prevents the repentance and surrender that might save lives. Hananiah's false prophecy is not merely wrong — it is an act of spiritual harm.</p>",
+"16": "<p><strong>Therefore thus says YHWH: Behold, I will remove you from the face of the earth. This year you shall die, because you have uttered rebellion against YHWH</strong>. The death-oracle against Hananiah is specific and measurable: <em>this year</em> (<em>hashanah hazot</em>), not within two years but within one year. The charge is <em>rebellion against YHWH</em> (<em>sarah dibbarta el-YHWH</em>) — false prophecy is not mere error but an act of covenant treason. Speaking rebellion in YHWH's name is the crime of Deuteronomy 18:20.</p>",
+"17": "<p><strong>In that same year, in the seventh month, the prophet Hananiah died</strong>. The brief, clinical fulfillment: Hananiah's death within the year proves Jeremiah's prophecy accurate and Hananiah's false. The narrative provides no theological commentary — it simply records the outcome. The reader draws the conclusion: the falsifiable prediction of the true prophet was fulfilled; the falsifiable prediction of the false prophet (two-year restoration) was not. Prophetic authentication by fulfillment operates precisely as Deuteronomy 18:21–22 described.</p>"
+},
+"29": {
+"1": "<p>Chapter 29 contains Jeremiah's letter to the Babylonian exiles — one of the most pastorally significant documents in the Hebrew Bible. <strong>These are the words of the letter that Jeremiah the prophet sent from Jerusalem to the surviving elders of the exiles, and to the priests, the prophets, and all the people, whom Nebuchadnezzar had taken into exile from Jerusalem to Babylon</strong>. The letter was sent to those deported in 597 BC — the first exile that included Jehoiachin, Ezekiel, and the skilled artisans. The recipients include the community leadership (elders, priests, prophets) and the general population.</p>",
+"2": "<p><strong>This was after King Jeconiah and the queen mother, the eunuchs, the officials of Judah and Jerusalem, the craftsmen, and the metal workers had departed from Jerusalem</strong>. The list of the 597 deportation matches 2 Kings 24:14–16: king, court, craftsmen, metal workers. The inclusion of craftsmen and metal workers is historically significant — these were the people who could manufacture weapons and military equipment. Babylon's removal of them was strategic: it left Jerusalem militarily weakened. Their absence from Jerusalem is part of the political-military context Jeremiah is addressing.</p>",
+"3": "<p><strong>The letter was sent by the hand of Elasah the son of Shaphan and Gemariah the son of Hilkiah, whom Zedekiah king of Judah sent to Babylon to Nebuchadnezzar king of Babylon</strong>. The letter traveled with official royal messengers — Zedekiah was sending a delegation to Nebuchadnezzar, and Jeremiah sent his letter through their hands. Elasah ben Shaphan is from the Shaphan family that has been consistently supportive of Jeremiah (cf. Ahikam ben Shaphan, 26:24). Gemariah ben Hilkiah — possibly the son of the high priest who found the law-scroll in Josiah's reign (2 Kgs 22:8). These are trustworthy carriers from reform-sympathetic families.</p>",
+"4": "<p><strong>Thus says YHWH of hosts, the God of Israel, to all the exiles whom I have sent into exile from Jerusalem to Babylon</strong>. The divine authorship is asserted immediately: <em>whom I have sent into exile</em> (<em>asher hig'alti</em>). YHWH sent the exiles, not merely permitted the Babylonians to deport them. The theological framing of the exile as YHWH's purposive act — not just a military defeat — is the foundation of everything that follows. If YHWH sent them, he is with them in Babylon; he can be sought there; he can restore them from there.</p>",
+"5": "<p><strong>Build houses and live in them; plant gardens and eat their produce</strong>. The counterintuitive pastoral counsel begins: put down roots. The natural response to involuntary exile — maintaining refugee mentality, refusing to invest in the host land, preserving resources for the expected quick return — is exactly what Hananiah's false prophecy was encouraging. Jeremiah's counsel is the opposite: build, plant, eat. Long-term investment in the place of exile is YHWH's instruction, not compromise or disloyalty.</p>",
+"6": "<p><strong>Take wives and have sons and daughters; take wives for your sons, and give your daughters in marriage, that they may bear sons and daughters; multiply there, and do not decrease</strong>. The creation mandate (<em>be fruitful and multiply</em>, Gen 1:28) is applied to the Babylonian exile community: perpetuate the covenant people in the diaspora. The instruction to arrange marriages for children implies a multi-generational commitment: this is not a two-year waiting period (contra Hananiah) but an extended sojourn that will require the next generation to be established. Do not decrease: maintaining population is a form of covenant faithfulness.</p>",
+"7": "<p><strong>But seek the welfare of the city where I have sent you into exile, and pray to YHWH on its behalf, for in its welfare you will find your welfare</strong>. The most theologically provocative verse in the letter: <em>seek the shalom of the city</em> (<em>dirshu et-shalom ha'ir</em>). <em>Shalom</em> encompasses peace, welfare, prosperity, wholeness — the comprehensive flourishing of Babylonian society. The covenant community sent into exile is instructed not merely to tolerate Babylon but to actively seek its welfare through prayer and civic engagement. The theological grounding: the exiles' welfare is bound up with Babylon's welfare. This is the foundation for the diaspora theology that shaped post-exilic Judaism and, through it, the NT understanding of the church as sojourners who pray for and serve the civil communities where God has placed them (1 Tim 2:1–2; 1 Pet 2:11–17).</p>",
+"8": "<p><strong>For thus says YHWH of hosts, the God of Israel: Do not let your prophets and your diviners who are among you deceive you, and do not listen to the dreams that they dream</strong>. The exile community has its own false prophets (cf. Ahab and Zedekiah, vv21–23; Shemaiah, vv24–32) who are encouraging the same false hope Hananiah promoted in Jerusalem: quick return, no need to settle in. The warning against exilic false prophecy is the same as the warning to Jerusalem: prophets who promise what you want to hear rather than what YHWH has actually said are deceiving you.</p>",
+"9": "<p><strong>For it is a lie that they are prophesying to you in my name; I did not send them, declares YHWH</strong>. The <em>I did not send</em> criterion applies as much in Babylon as in Jerusalem. YHWH's authentication standards are not geographically variable — the same principle that distinguishes true from false prophecy in the Temple court applies equally in the exile community. Distance from the land does not suspend covenant obligations or prophetic accountability.</p>",
+"10": "<p><strong>For thus says YHWH: When seventy years are completed for Babylon, I will visit you, and I will fulfill to you my promise and bring you back to this place</strong>. The 70-year oracle from 25:11–12 is now addressed directly to the exiles. <em>I will visit you</em> (<em>afqod etkhem</em>) — the divine visitation-for-good that reverses the visitation-for-judgment (cf. 1:10 — I pluck up and destroy; 31:28 — I build and plant). <em>Fulfill my promise</em> (<em>aqqim et-devari hatov</em>): the good word YHWH has spoken about restoration will be executed, not merely announced. The promise is a commitment, not merely an aspiration.</p>",
+"11": "<p><strong>For I know the plans I have for you, declares YHWH, plans for welfare and not for evil, to give you a future and a hope</strong>. Perhaps the most well-known verse in Jeremiah. <em>I know the plans I have for you</em> (<em>ki anochi yada'ti et-hamachashavot asher anochi choshev aleikhem</em>): the divine intentionality toward the covenant community is personal, deliberate, and forward-looking. <em>Welfare and not evil</em> (<em>shalom velo lera'ah</em>): YHWH's ultimate purpose for his people is <em>shalom</em> — the comprehensive flourishing of the covenant community. <em>Future and hope</em> (<em>acharit vetiqvah</em>): the exile that appears to be an ending is actually a pivot toward a future that YHWH has designed. The verse is set in the specific historical context of Babylonian exile, but its principle — divine intentionality toward covenant flourishing — has been appropriated across all contexts of disorientation and suffering.</p>",
+"12": "<p><strong>Then you will call upon me and come and pray to me, and I will hear you</strong>. The restoration of prayer access — which had been withdrawn from Jerusalem (7:16; 11:14; 14:11) — is promised for the exile community. When the 70 years are completed and YHWH visits them, prayer will once again function as a genuine channel of covenant communication. The hearing of prayer (<em>shama'ti</em>) is the restoration of the broken covenant relationship.</p>",
+"13": "<p><strong>You will seek me and find me, when you seek me with all your heart</strong>. The seeking-and-finding promise is one of the most important restoration statements in the prophets. <em>With all your heart</em> (<em>bechol-levavchem</em>): the undivided heart of Deuteronomy 6:5 (love YHWH with all your heart) is the condition for finding YHWH in exile. The exile has stripped away the Temple, the land, the political structures — what remains is the heart-orientation toward YHWH that was always the core of the covenant. The exile's function in Jeremiah's theology is precisely to reduce Israel to this core.</p>",
+"14": "<p><strong>I will be found by you, declares YHWH, and I will restore your fortunes and gather you from all the nations and all the places where I have driven you, declares YHWH, and I will bring you back to the place from which I sent you into exile</strong>. The restoration is comprehensive and personal: YHWH will be <em>found</em> — the seeker will discover that YHWH was present all along. The gathering from <em>all nations and all places</em> anticipates a diaspora broader than the Babylonian exile — a worldwide scattering from which YHWH will gather. The NT reads this as the gathering of the church from all nations (Matt 24:31; John 11:52; Eph 2:11–22).</p>",
+"15": "<p><strong>Because you have said, YHWH has raised up prophets for us in Babylon</strong>. The exiles are appealing to their own prophetic tradition in Babylon to counter Jeremiah's letter. The false prophets among the exiles were claiming YHWH's authorization — <em>YHWH has raised up prophets for us</em> — in support of their restoration-within-two-years message. Jeremiah must address this specific claim: having prophets is not itself proof of divine authorization.</p>",
+"16": "<p><strong>Thus says YHWH concerning the king who sits on the throne of David, and concerning all the people who dwell in this city, your kinsmen who did not go out with you into exile</strong>. Jeremiah addresses the relative situations of the exiles and the Jerusalem remnant. The exiles might be tempted to think that those left in Jerusalem are better off — still in the covenant land, still in the city, still near the Temple. Jeremiah's oracle reverses this assessment.</p>",
+"17": "<p><strong>Thus says YHWH of hosts: Behold, I am sending on them sword, famine, and pestilence, and I will make them like vile figs that are so bad they cannot be eaten</strong>. The bad-fig oracle of chapter 24 is restated: those who remained in Jerusalem (and will remain through the coming decade until Jerusalem's fall in 587) face the judgment triad. The <em>vile figs</em> that cannot be eaten image the complete worthlessness of those who evaded YHWH's appointed exile. The exiles are the good figs of chapter 24; those in Jerusalem are the bad figs.</p>",
+"18": "<p><strong>I will pursue them with sword, famine, and pestilence, and will make them a horror to all the kingdoms of the earth, to be a curse, a terror, a hissing, and a reproach among all the nations where I shall drive them</strong>. The shame-catalogue for the bad-fig population (cf. 24:9): horror, curse, terror, hissing, reproach. Every form of public disgrace in the ancient honor-shame framework will fall on those who remain in Jerusalem and resist YHWH's judgment. The pursuit of the judgment triad is relentless — there is no escaping into Egypt or any other refuge.</p>",
+"19": "<p><strong>Because they did not listen to my words, declares YHWH, that I persistently sent to them by my servants the prophets, but you would not listen, declares YHWH</strong>. The covenant audit: persistent sending, persistent non-listening. The prophetic tradition has been consistent and urgent; the people's response has been consistent and deaf. The formula summarizes the entire history of covenant communication that chapter 25 catalogued — 23 years of Jeremiah's ministry plus the full tradition of prophets before him.</p>",
+"20": "<p><strong>Hear the word of YHWH, all you exiles whom I sent away from Jerusalem to Babylon</strong>. Jeremiah refocuses on the exiles as his primary audience after the digression addressing the Jerusalem situation. The exiles need to receive this word to navigate their situation wisely — understanding that their present condition is YHWH's purposive act, that they have a genuine future, and that the false prophets among them are dangerous.</p>",
+"21": "<p><strong>Thus says YHWH of hosts, the God of Israel, concerning Ahab the son of Kolaiah and Zedekiah the son of Maaseiah, who are prophesying a lie to you in my name: Behold, I will deliver them into the hand of Nebuchadnezzar king of Babylon, and he shall strike them down before your eyes</strong>. Two specific false prophets in Babylon are named and condemned: Ahab ben Kolaiah and Zedekiah ben Maaseiah. Their fate is judicial execution by Nebuchadnezzar — not martyrdom for their faith but punishment as political troublemakers whose false prophecy destabilized the exile community.</p>",
+"22": "<p><strong>Because of them this curse shall be used by all the exiles from Judah in Babylon: YHWH make you like Zedekiah and Ahab, whom the king of Babylon roasted in the fire</strong>. The executions were by fire — a Babylonian method of capital punishment documented in the ancient sources. The names become a curse formula: <em>YHWH make you like Zedekiah and Ahab</em> — their fate so terrible that it becomes the template for invocation of maximum punishment. Daniel 3 provides the background: Babylonian execution by fire was a known institution. These two false prophets died the death they implicitly invited on others by their false prophecy.</p>",
+"23": "<p><strong>Because they have done an outrageous thing in Israel: they have committed adultery with their neighbors' wives, and they have spoken in my name lying words that I did not command them. I am the one who knows, and I am witness, declares YHWH</strong>. The double indictment: sexual immorality (literal adultery) and prophetic fraud (lying in YHWH's name). The combination echoes chapter 23's indictment of Jerusalem's prophets who <em>commit adultery and walk in lies</em> (23:14). The false prophets of Babylon have replicated the corruption of Jerusalem's prophetic establishment in the exile community. <em>I am witness</em> (<em>ani eid</em>): YHWH is the self-declaring divine witness — sufficient testimony without human corroboration.</p>",
+"24": "<p><strong>To Shemaiah of Nehelam you shall say</strong>. A third false prophet in Babylon is addressed — Shemaiah of Nehelam (the location is unknown but possibly a family or place designation). Shemaiah had written letters to Jerusalem attempting to have Jeremiah arrested, and the narrative of his case and Jeremiah's counter-oracle runs through vv25–32.</p>",
+"25": "<p><strong>Thus says YHWH of hosts, the God of Israel: You have sent letters in your name to all the people who are in Jerusalem, and to Zephaniah the son of Maaseiah the priest, and to all the priests, saying</strong>. Shemaiah's letters were sent to the Jerusalem religious authorities, specifically to Zephaniah the priest (who appears in 21:1 and 37:3 as part of the delegations sent to Jeremiah). The letter attempted to invoke the authority of the Temple establishment to suppress Jeremiah's letter.</p>",
+"26": "<p><strong>YHWH has made you priest instead of Jehoiada the priest, to have charge in the house of YHWH over every madman who prophesies, to put him in the stocks and neck irons</strong>. Shemaiah's letter argued that the priest had jurisdiction over those who claimed to be prophets but behaved like madmen. The word for madman (<em>meshugga</em>) — the same root used by Elisha's servant (2 Kgs 9:11: this madman came to you) — was applied to those who behaved with prophetic ecstasy. Shemaiah is arguing that Jeremiah's behavior falls within this category and that the Temple authorities should restrain him.</p>",
+"27": "<p><strong>Now why have you not rebuked Jeremiah of Anathoth who is prophesying to you?</strong> Shemaiah's rhetorical question to Zephaniah the priest: why are you allowing Jeremiah to continue? The fact that this question could be sent suggests that Shemaiah was aware of Jeremiah's letter to the exiles and found it dangerously subversive — counseling submission to Babylon and long-term investment in exile was politically destabilizing to the exile community's hope for quick return.</p>",
+"28": "<p><strong>For he has sent to us in Babylon, saying, Your exile will be long; build houses and live in them, and plant gardens and eat their produce</strong>. Shemaiah quotes Jeremiah's counsel as evidence of its dangerous quality: <em>your exile will be long</em>. This is exactly what Jeremiah said — but Shemaiah presents it as proof of Jeremiah's false and harmful prophecy. The contested interpretation of the exile's duration is the central dispute: Hananiah said two years; Shemaiah agrees with Hananiah; Jeremiah says 70 years.</p>",
+"29": "<p><strong>Zephaniah the priest read this letter in the hearing of Jeremiah the prophet</strong>. Rather than acting on Shemaiah's demand to arrest Jeremiah, Zephaniah read him the letter — the same kind of support Ahikam had provided at the Temple-sermon trial (26:24). The reform-sympathetic strand within the priesthood (traceable back to the Shaphan family) continues to protect Jeremiah from institutional suppression. Zephaniah will later consult Jeremiah on behalf of Zedekiah (37:3; 52:24).</p>",
+"30": "<p><strong>Then the word of YHWH came to Jeremiah</strong>: the divine response to Shemaiah's letter. The pattern is consistent: Jeremiah receives divine authorization for his counter-oracles through the normal prophetic channel. He does not respond impulsively to the letter but waits for the divine word.</p>",
+"31": "<p><strong>Send to all the exiles, saying, Thus says YHWH concerning Shemaiah of Nehelam: Because Shemaiah prophesied to you when I did not send him, and made you trust in a lie</strong>. The <em>I did not send</em> verdict is issued against Shemaiah — the same verdict against Hananiah (28:15) and the false prophets generally (23:21). The harm specified: <em>made you trust in a lie</em> — exactly the charge against Hananiah (28:15). The false prophets' sin is consistently the same: using YHWH's name to create false security that prevents the repentance and reorientation that would actually bring life.</p>",
+"32": "<p><strong>Therefore thus says YHWH: Behold, I will punish Shemaiah of Nehelam and his offspring. He shall not have anyone living among this people, and he shall not see the good that I will do to my people, declares YHWH, for he has spoken rebellion against YHWH</strong>. Shemaiah's punishment is exclusion from the restoration: he will have no one living among the covenant community and will not see the good that YHWH does for his people in the end. This is the harshest possible prophetic punishment — not physical death but covenant exclusion. The false prophet who promised quick return will not participate in the actual return. His offspring — the extension of his legacy — will share the exclusion.</p>"
+},
+"30": {
+"1": "<p>Chapter 30 opens the <strong>Book of Consolation</strong> (chapters 30–33) — the concentrated section of restoration oracles that stands as the theological counterweight to all the judgment prophecies preceding them. <strong>The word that came to Jeremiah from YHWH: Thus says YHWH, the God of Israel: Write in a book all the words that I have spoken to you</strong>. The command to write down the restoration oracles is unusual in the prophetic literature — most prophetic oracles were delivered orally. The writing command implies that these words are especially important for preservation and later consultation.</p>",
+"2": "<p><strong>For behold, days are coming, declares YHWH, when I will restore the fortunes of my people, Israel and Judah, declares YHWH, and I will bring them back to the land that I gave to their fathers, and they shall take possession of it</strong>. The restoration promise encompasses both kingdoms — <em>Israel and Judah</em>. The division of the kingdom (931 BC) and the Assyrian destruction of the north (722 BC) left the 10 northern tribes in perpetual exile. Jeremiah's restoration vision is not merely of Judah from Babylon but of the full reunification of the covenant people. The New Testament reads this as fulfilled in Christ's gathering of the scattered children of God from all nations (Eph 2:11–22).</p>",
+"3": "<p>The restoration promise is grounded in the original patriarchal land-grant: <em>the land that I gave to their fathers</em>. The gift is prior to the exile, prior to the covenant violation, prior to the judgment — YHWH's original intent for the covenant people was land-possession and flourishing. The exile is an interruption, not a cancellation, of the original divine purpose.</p>",
+"4": "<p><strong>These are the words that YHWH spoke concerning Israel and Judah</strong>. The double-address (Israel and Judah) confirms that the restoration vision is comprehensive. The oracles in chapters 30–31 alternate between specific addresses to Ephraim (the north) and Judah (the south), reflecting the comprehensive scope of YHWH's restoration intention.</p>",
+"5": "<p><strong>Thus says YHWH: We have heard a cry of panic, of terror, and no peace</strong>. The opening of the restoration vision paradoxically begins with judgment imagery: a cry of panic, terror, and no peace. The <em>no peace</em> (<em>ein shalom</em>) inverts the false-prophet message of peace — before there is genuine shalom, there must be the honest acknowledgment of the present shalom-lessness. The Book of Consolation begins with a realistic description of the crisis before offering the redemption.</p>",
+"6": "<p><strong>Ask now, and see, can a man bear a child? Why then do I see every man with his hands on his stomach like a woman in labor? Why has every face turned pale?</strong> The labor-pain image here applied to men is a grotesque picture of panic — men clutching their stomachs in the posture of a woman in labor, their faces pale with terror. In a culture where male composure in battle was a mark of honor, this image of men reduced to labor-pains posture captures the complete psychological collapse that accompanies the Babylonian invasion and siege.</p>",
+"7": "<p><strong>Alas! That day is so great there is none like it; it is a time of distress for Jacob; yet he shall be saved out of it</strong>. <strong>Jacob's trouble</strong> (<em>tzarat ya'aqov</em>) — one of the most debated phrases in prophetic eschatology. The day of Jacob's trouble is incomparably great — no historical event like it. Yet the sentence contains the hinge word <em>yet</em> (<em>uminenah</em>): out of this incomparable distress, Jacob shall be saved. The darkness is real and comprehensive; the salvation is equally real and comprehensive. This verse becomes a touchstone for later Jewish and Christian eschatology regarding a period of unprecedented tribulation preceding final redemption (cf. Dan 12:1; Matt 24:21).</p>",
+"8": "<p><strong>And it shall come to pass in that day, declares YHWH of hosts, that I will break his yoke from off your neck, and I will burst your bonds, and foreigners shall no more make a servant of him</strong>. The yoke-breaking imagery from chapter 27–28 returns — but now YHWH himself breaks the yoke, and it stays broken. The wooden yoke Hananiah broke was replaced by iron (28:13); the iron yoke YHWH will break will not be replaced. The freedom from foreign servitude is permanent. The <em>foreigners shall no more make a servant</em> is the definitive end of exile and subjugation.</p>",
+"9": "<p><strong>But they shall serve YHWH their God and David their king, whom I will raise up for them</strong>. The restored community will serve YHWH (not foreign powers) and <em>David their king</em> (<em>et-YHWH Eloheihem ve'et David malcham</em>). The reference to David after David's death (c. 971 BC) cannot be the historical David but the Davidic Messiah — the coming king in David's line who will reign over the reunited people (cf. Hos 3:5; Ezek 34:23–24; 37:24–25). The NT identifies this David-king as Jesus, the son of David (Matt 1:1; Luke 1:32–33; Rev 22:16).</p>",
+"10": "<p><strong>Then fear not, O Jacob my servant, declares YHWH, nor be dismayed, O Israel; for behold, I will save you from far away, and your offspring from the land of their captivity. Jacob shall return and have quiet and ease, and none shall make him afraid</strong>. The covenant reassurance formula — <em>fear not</em> (<em>al-tira</em>) — is one of the most common divine addresses in the prophets (cf. Isa 41:10, 43:1; Jer 46:27–28). <em>Quiet and ease</em> (<em>shaqat vasha'anan</em>): the shalom of settled, untroubled life — the opposite of the panic and labor-pains of vv5–7. The transformation from Jacob's trouble to Jacob's quiet-ease is YHWH's act of redemption.</p>",
+"11": "<p><strong>For I am with you to save you, declares YHWH; I will make a full end of all the nations among whom I scattered you, but of you I will not make a full end. I will discipline you in just measure, and I will by no means leave you unpunished</strong>. The covenant distinction: YHWH will make <em>a full end</em> (<em>kalah</em>) of the nations that served as his instruments of judgment, but not of Israel. The discipline (<em>yisartika</em>) is just and measured — not the full covenant destruction. The covenant relationship is the reason Israel survives while the nations are consumed: Israel belongs to YHWH in a way the instrument-nations do not.</p>",
+"12": "<p><strong>For thus says YHWH: Your hurt is incurable, and your wound is grievous</strong>. The restoration vision pauses to acknowledge the full severity of the present situation before the healing oracle. <em>Incurable hurt</em> (<em>shever enoush</em>) and <em>grievous wound</em> (<em>machalaych</em>) — terms of terminal illness applied to the national situation. The healing that follows will be all the more remarkable because it is healing of what is, from a human standpoint, beyond healing.</p>",
+"13": "<p><strong>There is none to uphold your cause, no medicine for your wound, no healing for you</strong>. The political situation: no ally, no mediator, no therapy that can address the problem. The abandonment of the divine-medicine-for-your-wound framing anticipates the healing oracle that follows — YHWH himself will do what no human physician or political ally can do.</p>",
+"14": "<p><strong>All your lovers have forgotten you; they do not seek you; for I have dealt you the blow of an enemy, the punishment of a merciless foe, because your guilt is great, because your sins are flagrant</strong>. The lovers (political allies, cf. 22:20) have abandoned the wounded Israel. The wound Israel suffers is not from a hostile foreign enemy in the ordinary sense but from YHWH himself — the divine lover has struck the unfaithful partner. The blow of an enemy from YHWH's own hand is the shock that drives the healing oracle: the one who wounded can also heal.</p>",
+"15": "<p><strong>Why do you cry out over your hurt? Your pain is incurable. Because your guilt is great, because your sins are flagrant, I have done these things to you</strong>. The rhetorical question challenges the self-pity that focuses only on the suffering without acknowledging its covenantal source. The wound is self-inflicted in the covenant framework: Israel's great guilt and flagrant sins are the cause of YHWH's blow. Acknowledging this is necessary before healing can occur.</p>",
+"16": "<p><strong>Therefore all who devour you shall be devoured, and all your foes, every one of them, shall go into captivity; those who plunder you shall be plundered, and all who prey on you I will make a prey</strong>. The reversal oracle begins: the devourer will be devoured, the plunderer plundered. This is the lex talionis applied to nations: the judgment they meted out on Israel will be applied to them. The nations that served as YHWH's instruments will not escape accountability for their cruelty (cf. Isa 10:5–19 — YHWH uses Assyria, then judges Assyria for pride and excess; Hab 2:6–20).</p>",
+"17": "<p><strong>For I will restore health to you, and your wounds I will heal, declares YHWH, because they have called you an outcast: It is Zion, for whom no one cares!</strong> The healing oracle arrives: <em>I will restore health to you</em> (<em>arukah e'aleh lach</em>). The incurable wound (v12) that no physician or ally could treat, YHWH will heal. The motivation for the healing is partly YHWH's response to the nations' contemptuous dismissal: they called Israel <em>an outcast</em> (<em>niddach</em>) — cast out, rejected, valueless. YHWH's restoration of Israel is a vindication of his own covenant commitment against those who wrote Israel off as permanently abandoned.</p>",
+"18": "<p><strong>Thus says YHWH: Behold, I will restore the fortunes of the tents of Jacob and have compassion on his dwellings; the city shall be rebuilt on its mound, and the palace shall stand where it used to be</strong>. The physical restoration: the tent-settlements (the broader dwelling-places of the people) and the city of Jerusalem will be rebuilt. <em>On its mound</em> (<em>al-tilibah</em>): the city will rise from its ruins on the same site, not relocated. This is a claim about physical continuity — the same city, the same location, rebuilt by the same God who allowed its destruction.</p>",
+"19": "<p><strong>Out of them shall come songs of thanksgiving, and the voices of those who celebrate. I will multiply them, and they shall not be few; I will make them honored, and they shall not be small</strong>. The restoration community will be characterized by thanksgiving and celebration — the sounds of joy that the judgment section silenced (7:34; 16:9; 25:10). <em>Multiply, not few; honored, not small</em>: the reversal of exile's demographic and social diminishment. The restored community will grow and gain honor, the opposite of the shameful scattering.</p>",
+"20": "<p><strong>Their children shall be as they were of old, and their congregation shall be established before me, and I will punish all who oppress them</strong>. The children of the restored community will be like the children of the covenant's best days — the ideal of each generation reflecting the covenant faithfulness of their ancestors. <em>The congregation established before me</em> (<em>edatam lefanai takun</em>): the covenant assembly reconstituted and presented before YHWH. The protection of the restored community is guaranteed: YHWH will punish their oppressors.</p>",
+"21": "<p><strong>Their prince shall be one of themselves; their ruler shall come out from their midst; I will make him draw near, and he shall approach me, for who would dare of himself to approach me? declares YHWH</strong>. The restored community's leader will be a native son — not a foreign overlord but one from within the covenant people. The leader's access to YHWH (<em>draw near, approach me</em>) is the language of priestly mediation — this figure combines royal and priestly functions, approaching YHWH in the way the high priest approached the holy of holies. The question <em>who would dare of himself to approach me?</em> signals the uniqueness and sacredness of this access: only YHWH can authorize such direct access. The NT reads this through the lens of Christ as the one mediator who has opened access to the Father (Heb 10:19–22; 1 Tim 2:5).</p>",
+"22": "<p><strong>And you shall be my people, and I will be your God</strong>. The covenant formula in its simplest and most ancient form (cf. Gen 17:7–8; Exod 6:7; Lev 26:12; Jer 24:7; 31:33; Ezek 36:28; Rev 21:3). The entire complex of judgment, exile, and restoration in chapters 1–30 is ultimately in service of this simple covenant statement. The purpose of everything YHWH has done — the plucking up and tearing down, the building and planting — is the restoration of this fundamental covenant relationship.</p>",
+"23": "<p><strong>Behold the storm of YHWH! Wrath has gone forth, a whirling tempest; it will burst upon the head of the wicked</strong>. A brief return to judgment imagery (cf. 23:19 — the same verse nearly verbatim) within the restoration section. The storm of YHWH's wrath still falls on the wicked — the restoration of Israel does not mean the abolition of divine justice. The covenant community's restoration is not at the expense of righteousness but through and after the full execution of divine justice.</p>",
+"24": "<p><strong>The fierce anger of YHWH will not turn back until he has executed and accomplished the intents of his heart. In the latter days you will understand it</strong>. The closing verse of chapter 30 (nearly identical to 23:20) anticipates the <em>latter days</em> (<em>be'acharit hayamim</em>) as the time when full understanding of YHWH's purposes will come. The restoration oracles of chapters 30–33 are not fully transparent in their original historical setting — their full meaning will be understood retrospectively, from the vantage point of their fulfillment. This eschatological reservation applies both to Israel's post-exilic restoration and, in Christian reading, to the fuller fulfillment in Christ and the new covenant.</p>"
+}
 }
 
-DEUT_ORIGINAL = {
-  "6": {
-    "4": "<p><strong>shema yisrael YHWH eloheinu YHWH echad</strong> (<em>šĕmaʿ yiśrāʾēl Yhwh ʾĕlōhênû Yhwh ʾeḥād</em>): 'Hear O Israel: YHWH our God, YHWH is one.' The Shema is the foundational confession of Jewish faith, recited morning and evening by observant Jews. <em>Echad</em> (one) is the standard Hebrew numeral one — it allows for internal distinction (as in <em>yom echad</em>, one day, composed of evening and morning; Gen 2:24, <em>basar echad</em>, one flesh, composed of two persons) but asserts the unity of the divine being against all polytheism. Paul's expansion in 1 Cor 8:6 ('one God the Father ... and one Lord Jesus Christ') is not an abandonment of monotheism but a Christological reconfiguration: the Shema's single divine identity now encompasses both Father and Son.</p>"
-  },
-  "18": {
-    "15": "<p><strong>navi mikirbecha meacheicha kamoni yaqim lecha YHWH eloheicha elav tishmaun</strong> (<em>nābîʾ miqqirbĕkā mēʾahêkā kāmōnî yāqîm lĕkā Yhwh ʾĕlōhêkā ʾēlāw tišmāʿûn</em>): 'A prophet like me will YHWH your God raise up for you from among your brothers; to him you shall listen.' The singular prophet (<em>navi</em>) can be read as: (1) a category or series of prophets who will continue Moses's role; (2) an individual eschatological figure. The Qumran community awaited a specific prophetic figure alongside the Messiah and the Aaronic priest (1QS 9:11). Peter and Stephen in Acts 3 and 7 take reading (2): the specific individual is Jesus, whose coming makes the definitive Torah-interpretation that Moses could only anticipate.</p>"
-  },
-  "30": {
-    "15": "<p><strong>reeh natati lefanecha hayom et-hahayyim veet-hatov veet-hamot veet-hara</strong> (<em>rĕʾēh nātattî lĕpānêkā hayyôm ʾet-hahayyîm wĕʾet-haṭṭôb wĕʾet-hammāwet wĕʾet-hārāʿ</em>): 'See I have set before you today life and good, and death and evil.' The covenant's binary choice — life or death, blessing or curse — is Israel's definitive moral situation. Paul's Christological reading of Deut 30 in Romans 10:6-8 is one of his most daring hermeneutical moves: the Torah's own accessibility-language ('not up in heaven, not across the sea, but very near you') is applied to the word of Christ — the gospel is the <em>Torah's own principle</em> of accessibility now embodied in the proclaimed word of faith.</p>"
-  }
-}
-
-DEUT_CONTEXT = {
-  "1": {
-    "1": "<p>Deuteronomy is the fifth book of the Torah and claims to be Moses's farewell addresses on the plains of Moab before Israel enters Canaan (Deut 1:1-5). Its genre is that of a suzerainty treaty — a literary form well-attested in Hittite treaties of the second millennium BCE (Meredith Kline's groundbreaking work showed the structural parallels): preamble (1:1-5), historical prologue (1:6-4:49), stipulations (5-26), sanctions/blessings-curses (27-30), succession arrangements (31-34). The treaty-form supports an early date for Deuteronomy's core. The 'Deuteronomistic History' (Joshua through Kings) shares Deuteronomy's theological vocabulary and framework — its editors used Deuteronomy as the lens for evaluating Israel's kings.</p>"
-  },
-  "18": {
-    "20": "<p>The test for a true prophet (18:21-22: if the word does not come to pass, it is not from YHWH) is applied in the NT to Jesus in a reversed form: his words came to pass, validating his prophetic authority. The false-prophet warning (18:20: the prophet who presumes to speak in YHWH's name a word I have not commanded him — that prophet shall die) is the background for Paul's 'if anyone preaches a gospel contrary to the one you received, let him be accursed' (Gal 1:8-9) — the apostolic test of false teaching applies Deuteronomic prophet-testing logic.</p>"
-  },
-  "34": {
-    "10": "<p>'There has not arisen a prophet since in Israel like Moses, whom YHWH knew face to face' (34:10) is Deuteronomy's own closing judgment — the book ends by declaring Moses's prophetic incomparable greatness, which simultaneously points forward to the one greater prophet who is still awaited (18:15). The ending creates an anticipation: Moses is the greatest so far; the prophet-like-Moses is still coming. Hebrews 3:3 completes the comparison: Jesus has been counted worthy of more glory than Moses, as the builder of a house has more honor than the house.</p>"
-  }
-}
-
-DEUT_CHRIST = {
-  "18": {
-    "15": "<p>A fulfillment: 'YHWH your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen.' Moses is the OT's supreme mediator — prophet (spoke YHWH's word), priest (offered sacrifice), and king (led the nation). The prophet-like-Moses is therefore the one who fulfills and exceeds all three mediatorial roles. Jesus is explicitly this prophet (Acts 3:22; 7:37), and exceeds him: as the Sermon on the Mount places Jesus's authority above Moses's ('you have heard it said ... but I say to you'), so Hebrews (3:3-6) places Christ's glory above Moses's as Son above servant. The Mosaic mediation was provisional; the Christological mediation is final and complete.</p>"
-  },
-  "21": {
-    "23": "<p>A fulfillment: 'A hanged man is cursed by God.' Paul's citation of Deut 21:23 in Galatians 3:13 is one of his most audacious Christological moves: the cross is the cursed man's tree, and Christ became the curse for us by hanging on it. The law's curse-category — designed for criminals — is the very location where Christ absorbs all covenant-curses. The cross is not a circumvention of Torah-logic but its fulfillment: the law had always required a curse-bearer for the covenant community's sin, and Christ is that bearer. The Deuteronomic law that seemed to disqualify Jesus (a hanged criminal is cursed by God) becomes, in Paul's reading, the very mechanism of redemption.</p>"
-  },
-  "30": {
-    "15": "<p>A direct revelation: 'See I have set before you today life and good, and death and evil.' Deuteronomy's covenant-choice reaches its eschatological fullness in Jesus: 'I am the way, and the truth, and the life' (John 14:6); 'I came that they may have life and have it abundantly' (John 10:10). The choice Moses set before Israel — life or death — is now embodied in a person. To choose Christ is to choose life in the covenant's deepest sense; to reject him is to choose the death that Moses warned of. The binary structure of Deut 30 (life vs. death, blessing vs. curse) is not dissolved in the NT but given its ultimate personal form in Christ.</p>"
-  }
-}
-
-# ============================================================
-# JEREMIAH
-# ============================================================
-
-JER_ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Gal 1:15", "note": "Before I formed you in the womb I knew you, before you were born I consecrated you — Paul describes his own apostolic call with the same language: he was set apart before his birth; the prophetic-call pattern of Jeremiah's consecration becomes the pattern for Paul's apostolic election"}
-    ]
-  },
-  "7": {
-    "11": [
-      {"type": "fulfillment", "target": "Matt 21:13", "note": "Has this house become a den of robbers in your eyes? — Jesus quotes Jer 7:11 in the temple-cleansing: my house shall be called a house of prayer, but you have made it a den of robbers; the Jeremianic temple-sermon's judgment of Israel's false security in the temple is Jesus's own indictment of the Herodian temple system"}
-    ]
-  },
-  "31": {
-    "15": [
-      {"type": "fulfillment", "target": "Matt 2:18", "note": "A voice was heard in Ramah, weeping and loud lamentation, Rachel weeping for her children — Matthew cites Jer 31:15 as fulfilled in Herod's massacre of the infants of Bethlehem; Rachel weeping for her exiled children (the Babylonian deportation) is now Rachel weeping for the slaughtered children of Bethlehem"},
-      {"type": "allusion", "target": "Luke 23:28", "note": "Jesus's warning to the daughters of Jerusalem to weep not for him but for themselves and their children echoes the Jeremianic pattern of future lamentation over Jerusalem (Jer 9:1; 14:17; 31:15); the weeping-for-Israel motif runs from Jeremiah through Luke's passion narrative"}
-    ],
-    "31": [
-      {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
-      {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
-    ]
-  }
-}
-
-JER_ORIGINAL = {
-  "31": {
-    "31": "<p><strong>hinei yamim baim neum YHWH vekharati et-beit Yisrael veet-beit Yehudah berit hadasha</strong> (<em>hinnēh yāmîm bāʾîm nĕʾum Yhwh wĕkārattî ʾet-bêt yiśrāʾēl wĕʾet-bêt yĕhûdāh bĕrît ḥădāšāh</em>): 'Behold the days are coming, declares YHWH, when I will make a new covenant with the house of Israel and the house of Judah.' <em>Berit hadasha</em> (new covenant): the only occurrence of this exact phrase in the OT. <em>Hadash</em> (new) can mean 'renewed' (as in the new moon, <em>hodesh</em>) or 'qualitatively different.' Jeremiah's contrast makes it the latter: 'not like the covenant I made with their fathers ... which they broke' (v. 32). The new covenant is distinguished by three characteristics: (1) internalized law (v. 33: on the heart, not stone); (2) universal direct knowledge of YHWH (v. 34: no longer 'know the LORD'); (3) permanent forgiveness (v. 34: I will remember their sin no more).</p>"
-  }
-}
-
-JER_CONTEXT = {
-  "1": {
-    "1": "<p>Jeremiah prophesied ca. 627-586 BCE (from the 13th year of Josiah through the fall of Jerusalem and beyond), the most turbulent period in Judah's history. He witnessed Josiah's reform (621 BCE, 2 Kings 22-23) and its collapse, the defeats at Megiddo (609 BCE) and Carchemish (605 BCE), Nebuchadnezzar's three deportations (605, 597, 586 BCE), the destruction of Jerusalem and the temple (586 BCE), and the assassination of Gedaliah. His call at the outset of his ministry and his suffering throughout (the 'Confessions', Jer 11-20) make him the most personal of the prophets — his inner life is more visible in Scripture than any other OT figure. The 'new covenant' oracle (31:31-34) is addressed to a people in the ruins of the Babylonian exile.</p>"
-  },
-  "31": {
-    "34": "<p>The three promises of Jer 31:33-34 in their historical context: (1) the Torah internalized on hearts rather than carved on tablets solves the problem that generated the exile — Israel kept the external law while their hearts were far from YHWH; (2) the universal knowledge of YHWH solves the class-stratification of covenantal knowledge (prophets, priests, sages knew; the people often did not); (3) the permanent forgiveness ('I will remember their sin no more') solves the accumulated sin-debt that the Mosaic sacrificial system could cover but not finally remove (Heb 10:1-4: the law has a shadow ... sacrifices cannot make perfect those who draw near). The new covenant addresses precisely the structural deficiencies of the Mosaic covenant.</p>"
-  }
-}
-
-JER_CHRIST = {
-  "31": {
-    "31": "<p>A direct revelation: 'Behold the days are coming when I will make a new covenant with the house of Israel and the house of Judah.' The new covenant is the Christological center of the OT's prophetic program: Jesus at the Last Supper explicitly claims to enact this covenant (Luke 22:20: 'This cup that is poured out for you is the new covenant in my blood'), and Hebrews quotes all of Jer 31:31-34 (8:8-12) as the scriptural proof that the old covenant's priesthood and sacrificial system were provisional and superseded. The three elements of the new covenant are fulfilled in Christ: (1) law on hearts → the Spirit writes Christ's character in the believer; (2) universal knowledge of YHWH → all who come to Christ know the Father (John 17:3); (3) permanent forgiveness → the once-for-all sacrifice of Christ (Heb 9:26-28; 10:14).</p>"
-  }
-}
-
-# ============================================================
-# EZEKIEL
-# ============================================================
-
-EZEK_ECHO = {
-  "11": {
-    "19": [
-      {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}
-    ]
-  },
-  "34": {
-    "11": [
-      {"type": "fulfillment", "target": "John 10:11", "note": "I myself will search for my sheep and seek them out — YHWH's own shepherding (Ezek 34:11-16) is enacted by Jesus as the Good Shepherd; what YHWH promised to do for his abandoned sheep (I myself will shepherd them) is what Jesus claims to be doing: I am the good shepherd"}
-    ]
-  },
-  "36": {
-    "25": [
-      {"type": "fulfillment", "target": "John 3:5", "note": "I will sprinkle clean water on you and you shall be clean; I will give you a new spirit — the new birth of water and Spirit in John 3:5 is the fulfillment of Ezek 36:25-27; what Ezekiel prophesied as the new covenant's cleansing and Spirit-filling is what Jesus announces as the necessary birth for entering the kingdom"}
-    ]
-  },
-  "37": {
-    "1": [
-      {"type": "allusion", "target": "John 11:43-44", "note": "The valley of dry bones that come to life at YHWH's breath-word — Jesus's command 'Lazarus, come out' is the personal enactment of the eschatological resurrection vision of Ezek 37; the Spirit's breath (John 20:22) that animates the church repeats the pattern of Ezek 37:9-10"}
-    ]
-  },
-  "47": {
-    "1": [
-      {"type": "fulfillment", "target": "Rev 22:1", "note": "The river of water flowing from the temple — Ezekiel's visionary river (increasingly deep, bringing life to everything it touches) is fulfilled in Revelation's river of life flowing from the throne of God and the Lamb; Jesus is himself the source of living water (John 7:38-39)"}
-    ]
-  }
-}
-
-EZEK_ORIGINAL = {
-  "1": {
-    "28": "<p><strong>ke-mareh haqeshet asher yihyeh beanav beyom hagashem ken mareh hanog saviv hu mareh demut kevod YHWH</strong>: 'Like the appearance of the bow that is in the cloud on the day of rain, so was the appearance of the brightness all around. Such was the appearance of the likeness of the glory of YHWH.' Ezekiel's theophany of the divine chariot-throne (<em>merkabah</em>) is the foundation of Jewish mystical speculation. His careful qualification of language — 'likeness of the glory of YHWH' rather than 'glory of YHWH' — maintains divine transcendence even in the vision. John of Revelation reuses Ezekiel's visionary vocabulary (the four living creatures of Ezek 1 reappear in Rev 4:6-8; the rainbow around the throne in Rev 4:3 echoes Ezek 1:28), grounding the Christological throne-vision in the Ezekielian framework.</p>"
-  },
-  "36": {
-    "26": "<p><strong>venathati lachem lev hadash veruach hadasha etten bekirbechem vahashirothi et-lev haeben mivsarchem venatati lachem lev basar</strong>: 'And I will give you a new heart and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh.' The new heart-new spirit promise is the Ezekielian new covenant (parallel to Jer 31:31-34). <em>Lev hadash</em> (new heart): the decision-making center (<em>lev</em>) of human personhood is replaced — not repaired, not improved, but new. <em>Ruach hadasha</em> (new spirit): YHWH's own Spirit placed within (v. 27: 'I will put my Spirit within you and cause you to walk in my statutes'). This is Pentecost prophesied — the Spirit's indwelling that replaces external Torah-motivation with internal Spirit-empowered desire and ability to obey.</p>"
-  }
-}
-
-EZEK_CONTEXT = {
-  "1": {
-    "1": "<p>Ezekiel was a priest who was deported to Babylon in the first deportation (597 BCE) and received his call-vision in 593 BCE by the Chebar canal in Babylonia ('the thirtieth year', 1:1 — possibly his own thirtieth year, the age for priestly service). He prophesied to the exilic community ca. 593-571 BCE. His priestly background shapes his theology: the book is preoccupied with divine glory (<em>kavod</em>), the departure of the Shekinah from the temple (chs. 8-11), and its eschatological return (chs. 40-48). The merkabah vision (ch. 1) was the most influential single vision in subsequent Jewish mysticism — the Hekhalot literature built an entire tradition of heavenly ascent around it. The four living creatures (lion, ox, eagle, human) reappear in Irenaeus's identification of the four Gospel symbols.</p>"
-  },
-  "37": {
-    "1": "<p>The valley of dry bones vision (37:1-14) is addressed to the exilic community that had concluded 'our bones are dried up, our hope is lost, we are indeed cut off' (v. 11). The corporate resurrection metaphor — national restoration envisioned as bodily resurrection — uses the imagery of physical resurrection for Israel's return from exile. This is not a straightforward prophecy of individual eschatological resurrection (though the same imagery is applied there in Isa 26:19; Dan 12:2), but a bold use of resurrection as the metaphor for what only divine creative power could accomplish for the exiled nation. The NT develops the resurrection-from-exile typology: Christ's resurrection is both personal and the beginning of the great return-from-death that Ezekiel envisioned.</p>"
-  }
-}
-
-EZEK_CHRIST = {
-  "34": {
-    "11": "<p>A direct revelation: 'For thus says the Lord GOD: Behold I, I myself will search for my sheep and seek them out ... I will rescue them from all places where they have been scattered ... I will seek the lost and I will bring back the strayed and I will bind up the injured and I will strengthen the weak.' Jesus's 'I am the good shepherd' (John 10:11) and the parable of the lost sheep (Luke 15:4-6) are the incarnational enactment of Ezek 34's promise. What YHWH said he himself would do (in contrast to the failed shepherds of Israel's leaders) is what Jesus does: the divine shepherd-promise is fulfilled by the Son who is YHWH present in person, doing what YHWH promised he personally would do for the scattered flock.</p>"
-  },
-  "36": {
-    "27": "<p>A direct revelation: 'And I will put my Spirit within you and cause you to walk in my statutes and be careful to obey my rules.' Pentecost is Ezekiel 36:27 enacted. The Spirit's indwelling is not merely motivational but causally efficacious: 'I will cause you to walk' — the Hebrew Hiphil form makes YHWH the enabling cause of the obedience that follows. This is the new covenant's answer to the old covenant's demand without the enabling Spirit: the same Torah-standard now fulfilled because the Spirit from within enables what the law from without could only command. Paul's 'the righteous requirement of the law might be fulfilled in us who walk not according to the flesh but according to the Spirit' (Rom 8:4) is the Christological-pneumatological fulfillment of Ezek 36:27.</p>"
-  },
-  "47": {
-    "9": "<p>A type: 'And wherever the river goes, every living creature that swarms will live, and there will be very many fish. For this water goes there, that the waters of the sea may become fresh; so everything will live where the river goes.' The eschatological temple-river of Ezekiel's vision (ch. 47), increasingly deep and life-giving, is the OT type for the water that flows from Christ. Jesus at Tabernacles (John 7:38-39) applies the Spirit-water promise to himself: 'rivers of living water will flow from within him' — and John explains this is the Spirit. Revelation's new creation river (22:1) flowing from the throne of God and the Lamb completes the Ezekiel type: the new temple's river is Christ himself, and all who drink from him live.</p>"
-  }
-}
-
-# ============================================================
-# DANIEL
-# ============================================================
-
-DAN_ECHO = {
-  "2": {
-    "44": [
-      {"type": "fulfillment", "target": "Luke 1:33", "note": "The God of heaven will set up a kingdom that shall never be destroyed — the stone that becomes a great mountain filling the whole earth (Dan 2:35, 44) is fulfilled in the kingdom announced by the angel: his kingdom will have no end"},
-      {"type": "fulfillment", "target": "Rev 11:15", "note": "The kingdom of the world has become the kingdom of our Lord and of his Christ — the seventh trumpet's announcement is the explicit fulfillment of Dan 2:44's never-to-be-destroyed kingdom of heaven"}
-    ]
-  },
-  "7": {
-    "13": [
-      {"type": "fulfillment", "target": "Matt 26:64", "note": "You will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven — Jesus applies Dan 7:13 to himself before the Sanhedrin; the coming on the clouds of heaven is the exaltation of the Son of Man to the divine throne, which the high priest recognizes as blasphemy"},
-      {"type": "fulfillment", "target": "Acts 1:9", "note": "A cloud took him out of their sight — the ascension cloud echoes the Son of Man coming with the clouds of Dan 7:13; the ascension is the enthronement, not a departure to a distant location"},
-      {"type": "fulfillment", "target": "Rev 1:7", "note": "Behold he is coming with the clouds — Revelation combines Dan 7:13 with Zech 12:10 to describe the parousia as the final manifestation of the Son of Man's cloud-coming that began at the ascension"}
-    ]
-  },
-  "9": {
-    "24": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "To anoint a most holy place — the seventy weeks leading to the anointing of the most holy one (or most holy place) has been interpreted as pointing to Christ's anointing at baptism; the messianic anointing is the fulfillment of Daniel's eschatological program"},
-      {"type": "allusion", "target": "Heb 9:26", "note": "To finish transgression, put an end to sin, and atone for iniquity — the six goals of Daniel's seventy weeks (9:24) are summarized in Hebrews: he has appeared once for all at the end of the ages to put away sin by the sacrifice of himself"}
-    ]
-  },
-  "12": {
-    "2": [
-      {"type": "fulfillment", "target": "John 5:28-29", "note": "Many who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt — Jesus's promise of a resurrection of all the dead, some to life and some to judgment, applies Dan 12:2's general resurrection language to himself as the one who gives life and judges"}
-    ]
-  }
-}
-
-DAN_ORIGINAL = {
-  "7": {
-    "13": "<p><strong>hazeh haveit bechezwe leylaya vaara im-anane shemayya kebar enash ateh vead attiq yomaya matah uqdamoy haytivuhi</strong> (Aramaic): 'I saw in the night visions, and behold, with the clouds of heaven there came one like a son of man, and he came to the Ancient of Days and was presented before him.' The 'one like a son of man' (<em>kebar enash</em>, Aramaic for 'like a human being') in Daniel 7 contrasts with the four beasts (lions, bears, leopards, a terrible beast) that rise from the sea — representing successive human empires. The human figure comes from heaven, not the sea, and receives the dominion the beasts claimed. The NT application (Jesus's self-designation as 'Son of Man' in all four Gospels) is the consistent claim that Jesus is this figure who receives eternal dominion from the Ancient of Days — a claim recognized as divine by the Sanhedrin (Mark 14:62-64).</p>"
-  },
-  "9": {
-    "24": "<p><strong>shivim shavuim nechetach al-amecha vehal ir qadshecha lekale happesha ulehatem chataut velchapper avon ulehavi tsdeq olamim velachtom chazot venavia velimshoach qodesh qodashim</strong>: 'Seventy weeks are decreed about your people and your holy city, to finish the transgression, to put an end to sin, to atone for iniquity, to bring in everlasting righteousness, to seal both vision and prophet, and to anoint a most holy place.' The six infinitives of Dan 9:24 have generated centuries of calculation and debate. The <em>shavuim</em> (weeks/sevens) are most naturally weeks of years (seven-year units), giving 490 years from the decree to rebuild Jerusalem. The six goals — which are systematically soteriological and eschatological — align most naturally with Christ's work: atonement (to finish transgression, atone for iniquity), righteousness (bring in everlasting righteousness), and the end of the prophetic age (seal vision and prophet).</p>"
-  }
-}
-
-DAN_CONTEXT = {
-  "1": {
-    "1": "<p>The book of Daniel is set in the Babylonian exile (605-538 BCE) and narrates the experiences of four young Jewish men under Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus of Persia. The historical reliability of Daniel's court settings has been debated (Darius the Mede is unattested by name in Babylonian records; some details seemed anachronistic). The primary critical alternative: Daniel was composed ca. 167-164 BCE during the Maccabean revolt, as <em>vaticinium ex eventu</em> (prophecy after the fact) using the fictional setting of the sixth century. Conservative scholars argue for a sixth century date and understand the Darius question as a secondary title for Cyrus or an otherwise unrecorded official. The book's affinities with the Aramaic of the fifth-fourth centuries and the absence of Greek loanwords that would be expected in a second century BCE composition support an early composition.</p>"
-  },
-  "7": {
-    "1": "<p>Daniel 7-12 contains four major apocalyptic visions. The genre of apocalypse (from Greek <em>apokalypsis</em>, unveiling) is characterized by: symbolic or heavenly visions mediated by an angel, disclosure of the heavenly perspective on historical events, periodization of history into fixed sequences, and imminent divine intervention. Daniel is the OT's primary apocalyptic text; its imagery (beasts from the sea, the Ancient of Days, the Son of Man, the four kingdoms) was enormously influential on Jewish and Christian apocalyptic (1 Enoch, 4 Ezra, 2 Baruch, and the NT's Revelation). Jesus's eschatological discourse (Mark 13 and parallels) draws extensively from Daniel, particularly the abomination of desolation (Dan 11:31; 12:11 → Mark 13:14) and the coming of the Son of Man (Dan 7:13 → Mark 13:26).</p>"
-  }
-}
-
-DAN_CHRIST = {
-  "7": {
-    "13": "<p>A direct revelation: 'One like a son of man came with the clouds of heaven and came to the Ancient of Days and was presented before him. And to him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; his dominion is an everlasting dominion, which shall not pass away, and his kingdom one that shall not be destroyed.' Jesus's consistent self-identification as 'the Son of Man' throughout the Gospels is a deliberate claim to be this figure — the one who receives from the Ancient of Days the universal, eternal dominion. The ascension is the receiving of this dominion; Pentecost is the beginning of its exercise; the parousia is its final manifestation. The 'Son of Man' claim is Jesus's most characteristic and most Christologically loaded self-designation.</p>"
-  },
-  "9": {
-    "26": "<p>A fulfillment: 'After sixty-two weeks, an anointed one shall be cut off and shall have nothing.' The phrase 'cut off' (<em>yikaret</em>) is the judicial-death vocabulary of Torah (used for capital offenses). The anointed one is cut off not for his own sins (the grammar allows 'and there is nothing to him' or 'but not for himself') — the same pattern as Isa 53:8 ('cut off out of the land of the living ... for the transgression of my people'). Regardless of the precise calculation of the seventy weeks, the Christological core is the same: the anointed one (the Messiah) dies, is cut off, apparently without inheriting anything — and yet this death is the very mechanism by which the six goals of v. 24 are accomplished. The cross is Daniel's predicted event.</p>"
-  },
-  "12": {
-    "2": "<p>A direct revelation: 'And many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame and everlasting contempt.' Daniel 12:2 is the OT's clearest statement of a general resurrection with differentiated outcomes — resurrection to life and resurrection to judgment. Jesus applies this directly to himself: 'The hour is coming when all who are in the tombs will hear his voice and come out, those who have done good to the resurrection of life and those who have done evil to the resurrection of judgment' (John 5:28-29). Christ is the voice that summons from the tombs — the executor of Daniel's two-outcome resurrection — and his own resurrection is the first fruits of what Dan 12:2 prophesied for the final eschatological hour.</p>"
-  }
-}
-
-def main():
-    books_data = [
-        ('deuteronomy', DEUT_ECHO, DEUT_ORIGINAL, DEUT_CONTEXT, DEUT_CHRIST),
-        ('jeremiah', JER_ECHO, JER_ORIGINAL, JER_CONTEXT, JER_CHRIST),
-        ('ezekiel', EZEK_ECHO, EZEK_ORIGINAL, EZEK_CONTEXT, EZEK_CHRIST),
-        ('daniel', DAN_ECHO, DAN_ORIGINAL, DAN_CONTEXT, DAN_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book)
-        merge_echo(e, echo_d)
-        save_echo('', e) if False else save_echo(book, e)
-
-        c = load_comm('mkt-original', book)
-        merge_comm(c, orig_d)
-        save_comm('mkt-original', book, c)
-
-        c = load_comm('mkt-context', book)
-        merge_comm(c, ctx_d)
-        save_comm('mkt-context', book, c)
-
-        c = load_comm('mkt-christ', book)
-        merge_comm(c, chr_d)
-        save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+comm = load_comm("mkt-context", "jeremiah")
+merge_comm(comm, NEW_DATA)
+save_comm("mkt-context", "jeremiah", comm)
+print("Done. Verifying...")
+for ch, verses in NEW_DATA.items():
+    present = sum(1 for v in verses if v in comm.get(ch, {}))
+    print(f"  ch {ch}: {present}/{len(verses)} verses written")

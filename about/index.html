@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Full transparency about AI usage, data sources, and agent prompts used to build this Bible study site." />
+  <title>About & AI Transparency — Bible Study</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
+  <style>
+    /* ── About page layout ── */
+    .about-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    .about-header { margin-bottom: 2rem; border-bottom: 2px solid var(--color-primary); padding-bottom: 1.25rem; }
+    .about-header h1 { font-size: 1.85rem; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .about-header .about-lead { color: var(--color-muted); font-size: 1rem; max-width: 680px; line-height: 1.6; }
+
+    /* Jump-link navigation */
+    .about-toc {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem;
+      margin-bottom: 2.5rem; font-family: var(--font-ui); font-size: 0.82rem;
+    }
+    .about-toc a { color: var(--color-accent); text-decoration: none; white-space: nowrap; }
+    .about-toc a:hover { text-decoration: underline; }
+    .about-toc .toc-sep { color: var(--color-border); }
+
+    /* Section blocks */
+    .about-section { margin-bottom: 3rem; }
+    .about-section h2 {
+      font-size: 1.2rem; color: var(--color-primary); margin-bottom: 1rem;
+      padding-bottom: 0.4rem; border-bottom: 1px solid var(--color-border);
+    }
+    .about-section p { margin-bottom: 0.85rem; }
+    .about-section ul { padding-left: 1.5rem; }
+    .about-section li { margin-bottom: 0.35rem; }
+
+    /* Philosophy callout */
+    .about-callout {
+      background: #fdf7ee; border-left: 4px solid var(--color-accent);
+      padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; margin-bottom: 1.25rem;
+    }
+    .about-callout p { margin: 0; }
+
+    /* Data sources table */
+    .src-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-family: var(--font-ui); margin-bottom: 1.5rem; }
+    .src-table th { background: var(--color-primary); color: #fff; padding: 0.45rem 0.7rem; text-align: left; font-weight: 600; }
+    .src-table td { padding: 0.4rem 0.7rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+    .src-table tr:nth-child(even) td { background: #faf7f2; }
+    .src-table tr:hover td { background: #f5efe3; }
+    .src-table a { color: var(--color-accent); }
+    .src-table .cat-row td {
+      background: #f2ece0; font-weight: 600; color: var(--color-primary);
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.3rem 0.7rem;
+    }
+    .src-table code { font-size: 0.78rem; background: #ede8df; padding: 1px 4px; border-radius: 3px; }
+    .license-pd { color: #3a7a3a; font-size: 0.78rem; }
+    .license-cc { color: #2a6a9a; font-size: 0.78rem; }
+    .license-other { color: #8a5a00; font-size: 0.78rem; }
+
+    /* AI workflow cards */
+    .workflow-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+
+    .workflow-card {
+      border: 1px solid var(--color-border); border-radius: 8px;
+      background: #fffbf4; padding: 1rem 1.1rem;
+    }
+    .workflow-card .wf-title {
+      font-size: 0.95rem; font-weight: 700; color: var(--color-primary);
+      font-family: var(--font-ui); margin-bottom: 0.35rem;
+    }
+    .workflow-card .wf-scope {
+      font-size: 0.76rem; color: var(--color-accent); font-family: var(--font-ui);
+      margin-bottom: 0.6rem; font-style: italic;
+    }
+    .workflow-card p { font-size: 0.88rem; margin-bottom: 0.5rem; line-height: 1.55; }
+    .workflow-card .wf-path {
+      font-size: 0.75rem; font-family: var(--font-mono);
+      background: #ede8df; border-radius: 4px; padding: 3px 6px;
+      display: inline-block; margin-top: 0.25rem; color: #4a3520;
+    }
+    .workflow-card .wf-model {
+      font-size: 0.72rem; font-family: var(--font-ui); color: var(--color-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Prompt accordion blocks */
+    .prompt-block { border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 1.25rem; overflow: hidden; }
+    .prompt-block summary {
+      list-style: none; padding: 0.85rem 1rem; cursor: pointer;
+      background: #f5efe3; font-family: var(--font-ui); font-weight: 600;
+      font-size: 0.92rem; color: var(--color-primary);
+      display: flex; align-items: center; justify-content: space-between;
+      user-select: none;
+    }
+    .prompt-block summary::after { content: '▸'; font-size: 0.8rem; color: var(--color-muted); }
+    .prompt-block[open] summary::after { content: '▾'; }
+    .prompt-block summary::-webkit-details-marker { display: none; }
+    .prompt-block summary:hover { background: #ede8df; }
+    .prompt-block .prompt-meta {
+      padding: 0.6rem 1rem; border-bottom: 1px solid var(--color-border);
+      background: #fdfaf5; font-family: var(--font-ui); font-size: 0.8rem; color: var(--color-muted);
+    }
+    .prompt-block pre {
+      margin: 0; padding: 1rem; overflow-x: auto;
+      font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.6;
+      background: #fefcf7; color: var(--color-text); white-space: pre-wrap; word-break: break-word;
+      max-height: 600px; overflow-y: auto;
+    }
+
+    /* What AI didn't write list */
+    .not-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 2rem; margin-top: 0.75rem; }
+    @media (max-width: 560px) { .not-ai-grid { grid-template-columns: 1fr; } }
+    .not-ai-grid li { font-size: 0.9rem; }
+    .check { color: #3a7a3a; font-weight: bold; margin-right: 0.3em; }
+
+    [data-theme="dark"] .src-table tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+    [data-theme="dark"] .src-table tr:hover td { background: rgba(212,160,23,0.08); }
+    [data-theme="dark"] .src-table .cat-row td { background: rgba(232,200,122,0.1); }
+    [data-theme="dark"] .src-table code { background: rgba(255,255,255,0.07); }
+    [data-theme="dark"] .license-pd { color: #6abf6a; }
+    [data-theme="dark"] .license-cc { color: #6aaad4; }
+    [data-theme="dark"] .license-other { color: #d4a017; }
+    [data-theme="dark"] .check { color: #6abf6a; }
+  </style>
+</head>
+<body>
+<main>
+<div class="container about-page">
+
+  <header class="about-header">
+    <h1>About This Site &amp; AI Transparency</h1>
+    <p class="about-lead">This is a personal Bible study reference tool. AI was used extensively to build it. This page documents every workflow, every external data source, and the exact prompts given to AI agents — so you can judge for yourself what to trust and what to verify.</p>
+  </header>
+
+  <nav class="about-toc" aria-label="Jump to section">
+    <a href="#overview">Overview</a>
+    <span class="toc-sep">·</span>
+    <a href="#not-ai">What AI Didn't Write</a>
+    <span class="toc-sep">·</span>
+    <a href="#sources">External Sources</a>
+    <span class="toc-sep">·</span>
+    <a href="#workflows">AI Workflows</a>
+    <span class="toc-sep">·</span>
+    <a href="#prompts">Agent Prompts</a>
+    <span class="toc-sep">·</span>
+    <a href="#citation">Citation System</a>
+  </nav>
+
+  <!-- ── Overview ── -->
+  <section class="about-section" id="overview">
+    <h2>Overview</h2>
+
+    <div class="about-callout">
+      <p>The historic documents, Bible translations, commentaries, and lexicons on this site are all public-domain texts fetched verbatim from their upstream sources. AI did not write them and did not edit them. What AI <em>did</em> do is help build supplemental study layers on top of those sources — translations, book studies, connection-tagging, site code — which are documented in full below.</p>
+    </div>
+
+    <p>There are honest disagreements about AI use in biblical scholarship. Some concerns are well-founded: AI models can hallucinate citations, confuse theological traditions, or produce confident-sounding errors. Others are more general: that machine-generated content displaces human scholarship.</p>
+
+    <p>This site's position is pragmatic. One person building a comprehensive study tool alone cannot hand-write 9,380 encyclopedia articles, 141 library documents, or commentary notes on every verse of the Bible. The historic scholarship exists and is in the public domain. The AI's role here is <strong>to surface, connect, and structure that scholarship</strong> — not to replace it.</p>
+
+    <p>Where AI was used to generate original analysis (book study language notes, translation choices, echo connections), the prompts are published below in full. You can read exactly what was asked and judge the quality yourself. Source badges throughout the site label AI-generated content with <span class="src-badge src-badge--ai">AI-assisted · details</span> and external historic sources with <span class="src-badge">Barnes Notes · Public Domain</span>.</p>
+  </section>
+
+  <!-- ── What AI Did NOT Write ── -->
+  <section class="about-section" id="not-ai">
+    <h2>What AI Did Not Write</h2>
+    <p>The following content is verbatim text from public-domain or openly-licensed sources. AI did not write, edit, paraphrase, or summarize any of it.</p>
+    <ul class="not-ai-grid">
+      <li><span class="check">✓</span> King James Version (1769)</li>
+      <li><span class="check">✓</span> Berean Standard Bible</li>
+      <li><span class="check">✓</span> World English Bible (WEB / WEBBE)</li>
+      <li><span class="check">✓</span> ASV, YLT, DBY, GNV, AKJV</li>
+      <li><span class="check">✓</span> Douay-Rheims, WEB-CE, Brenton's LXX</li>
+      <li><span class="check">✓</span> Matthew Henry Concise Commentary (1706)</li>
+      <li><span class="check">✓</span> Barnes' Notes on the Bible (1832–1885)</li>
+      <li><span class="check">✓</span> Jamieson, Fausset &amp; Brown (1871)</li>
+      <li><span class="check">✓</span> Adam Clarke's Commentary (1810–1826)</li>
+      <li><span class="check">✓</span> Calvin's Commentaries (1540–1564)</li>
+      <li><span class="check">✓</span> Ellicott's Commentary (1878–1884)</li>
+      <li><span class="check">✓</span> Robertson's Word Pictures NT (1930–1933)</li>
+      <li><span class="check">✓</span> Wesley's Explanatory Notes (1765)</li>
+      <li><span class="check">✓</span> Strong's Hebrew &amp; Greek Lexicons</li>
+      <li><span class="check">✓</span> Brown-Driver-Briggs Hebrew Lexicon</li>
+      <li><span class="check">✓</span> Thayer's Greek Lexicon (1889)</li>
+      <li><span class="check">✓</span> Gesenius' Hebrew Lexicon (1857)</li>
+      <li><span class="check">✓</span> Abbott-Smith Greek Lexicon (1922)</li>
+      <li><span class="check">✓</span> Easton's Bible Dictionary (1897)</li>
+      <li><span class="check">✓</span> Smith's Bible Dictionary (1884)</li>
+      <li><span class="check">✓</span> ISBE Encyclopedia (1915, 9,380 articles)</li>
+      <li><span class="check">✓</span> Nave's Topical Bible (1896)</li>
+      <li><span class="check">✓</span> Spurgeon's Morning &amp; Evening (1865)</li>
+      <li><span class="check">✓</span> All 141 library documents</li>
+      <li><span class="check">✓</span> OpenBible cross-references (TSK, CC BY 4.0)</li>
+      <li><span class="check">✓</span> SBLGNT Greek NT morphology (CC BY 4.0)</li>
+      <li><span class="check">✓</span> OpenScriptures Hebrew OT morphology (CC BY 4.0)</li>
+    </ul>
+  </section>
+
+  <!-- ── External Sources Table ── -->
+  <section class="about-section" id="sources">
+    <h2>External Data Sources</h2>
+    <p>Every external source is documented in <code>data/SOURCES.md</code> in the repository. The table below is a reader-friendly summary. All commentaries, lexicons, and most documents are pre-1928 and fully in the public domain.</p>
+
+    <table class="src-table">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Author / Year</th>
+          <th>License</th>
+          <th>Upstream</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cat-row"><td colspan="4">Bible Texts</td></tr>
+        <tr><td>King James Version</td><td>Multiple translators, 1611/1769</td><td class="license-pd">Public domain</td><td>Direct</td></tr>
+        <tr><td>Berean Standard Bible</td><td>Berean Bible, 2022</td><td class="license-other">Personal/non-commercial use</td><td><a href="https://berean.bible" target="_blank">berean.bible</a></td></tr>
+        <tr><td>World English Bible (WEB / WEBBE)</td><td>Rainbow Missions, 2020</td><td class="license-pd">Public domain (CC0)</td><td><a href="https://worldenglish.bible" target="_blank">worldenglish.bible</a></td></tr>
+        <tr><td>American Standard Version</td><td>1901</td><td class="license-pd">Public domain</td><td>Direct</td></tr>
+        <tr><td>Young's Literal Translation</td><td>Robert Young, 1898</td><td class="license-pd">Public domain</td><td><a href="https://github.com/wldeh/bible-api" target="_blank">wldeh/bible-api</a></td></tr>
+        <tr><td>Darby Translation</td><td>J.N. Darby, 1890</td><td class="license-pd">Public domain</td><td><a href="https://github.com/wldeh/bible-api" target="_blank">wldeh/bible-api</a></td></tr>
+        <tr><td>Geneva Bible (1599)</td><td>1599</td><td class="license-pd">Public domain</td><td><a href="https://github.com/wldeh/bible-api" target="_blank">wldeh/bible-api</a></td></tr>
+        <tr><td>AKJV</td><td>Michael Engelbrite</td><td class="license-pd">Public domain</td><td><a href="https://github.com/wldeh/bible-api" target="_blank">wldeh/bible-api</a></td></tr>
+        <tr><td>Douay-Rheims 1899</td><td>1899</td><td class="license-pd">Public domain</td><td><a href="https://ebible.org" target="_blank">ebible.org</a></td></tr>
+        <tr><td>WEB Catholic Edition</td><td>CC0</td><td class="license-cc">CC0</td><td><a href="https://ebible.org" target="_blank">ebible.org</a></td></tr>
+        <tr><td>KJV with Apocrypha</td><td>1611/1769</td><td class="license-pd">Public domain</td><td><a href="https://ebible.org" target="_blank">ebible.org</a></td></tr>
+        <tr><td>Brenton's English LXX</td><td>L.C.L. Brenton, 1851</td><td class="license-pd">Public domain</td><td><a href="https://ebible.org" target="_blank">ebible.org</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Commentaries</td></tr>
+        <tr><td>Matthew Henry Concise Commentary</td><td>Matthew Henry, 1706</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Barnes' Notes on the Bible</td><td>Albert Barnes, 1832–1885</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Jamieson, Fausset &amp; Brown</td><td>Jamieson, Fausset &amp; Brown, 1871</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Adam Clarke's Commentary</td><td>Adam Clarke, 1810–1826</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Calvin's Commentaries</td><td>John Calvin, 1540–1564</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Ellicott's Commentary</td><td>C.J. Ellicott (ed.), 1878–1884</td><td class="license-pd">Public domain</td><td><a href="https://www.studylight.org/commentaries/eng/ebc/" target="_blank">StudyLight.org</a></td></tr>
+        <tr><td>Robertson's Word Pictures NT</td><td>A.T. Robertson, 1930–1933</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Wesley's Explanatory Notes</td><td>John Wesley, 1765</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Interlinear &amp; Morphology</td></tr>
+        <tr><td>SBLGNT with Morphological Tagging</td><td>morphgnt project</td><td class="license-cc">CC BY 4.0</td><td><a href="https://github.com/morphgnt/sblgnt" target="_blank">morphgnt/sblgnt</a></td></tr>
+        <tr><td>OpenScriptures Morphological Hebrew Bible (WLC)</td><td>openscriptures project</td><td class="license-cc">CC BY 4.0</td><td><a href="https://github.com/openscriptures/morphhb" target="_blank">openscriptures/morphhb</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Lexicons</td></tr>
+        <tr><td>Strong's Greek Lexicon (Dodson revision)</td><td>James Strong; John Dodson</td><td class="license-cc">CC0</td><td><a href="https://github.com/openscriptures/strongs" target="_blank">openscriptures/strongs</a></td></tr>
+        <tr><td>Strong's Hebrew Lexicon (BDB)</td><td>Brown-Driver-Briggs, 1906</td><td class="license-pd">Public domain</td><td><a href="https://github.com/openscriptures/strongs" target="_blank">openscriptures/strongs</a></td></tr>
+        <tr><td>Thayer's Greek Lexicon</td><td>Joseph H. Thayer, 1889</td><td class="license-pd">Public domain</td><td>CrossWire SWORD</td></tr>
+        <tr><td>Gesenius' Hebrew-Chaldee Lexicon (Tregelles tr.)</td><td>Wilhelm Gesenius; S.P. Tregelles (tr.), 1857</td><td class="license-pd">Public domain</td><td><a href="https://archive.org/details/geseniushebrew00geseuoft" target="_blank">archive.org</a></td></tr>
+        <tr><td>Abbott-Smith Manual Greek Lexicon</td><td>G.H. Abbott-Smith, 1922</td><td class="license-pd">Public domain</td><td><a href="https://ccel.org/ccel/abbott_smith/lexicon" target="_blank">CCEL</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Dictionaries &amp; Reference</td></tr>
+        <tr><td>Int'l Standard Bible Encyclopaedia (9,380 articles)</td><td>James Orr (ed.), 1915</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Easton's Bible Dictionary</td><td>M.G. Easton, 1897</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Smith's Bible Dictionary</td><td>William Smith, 1884</td><td class="license-pd">Public domain</td><td><a href="https://crosswire.org/sword/" target="_blank">CrossWire SWORD</a></td></tr>
+        <tr><td>Hitchcock's Bible Names Dictionary</td><td>Roswell D. Hitchcock</td><td class="license-pd">Public domain</td><td>Direct</td></tr>
+
+        <tr class="cat-row"><td colspan="4">Topical &amp; Devotional</td></tr>
+        <tr><td>Nave's Topical Bible</td><td>Orville J. Nave, 1896</td><td class="license-pd">Public domain</td><td><a href="https://github.com/openscriptures/nave" target="_blank">openscriptures/nave</a></td></tr>
+        <tr><td>Spurgeon's Morning and Evening</td><td>C.H. Spurgeon, 1865</td><td class="license-pd">Public domain</td><td><a href="https://ccel.org" target="_blank">CCEL</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Library Documents (141 texts)</td></tr>
+        <tr><td>Patristic writings (Clement, Ignatius, Didache, Polycarp, Athenagoras, Theophilus, Irenaeus, Tertullian, Origen, Augustine, Chrysostom, Athanasius, etc.)</td><td>1st–5th century</td><td class="license-pd">Public domain</td><td><a href="https://wikisource.org" target="_blank">Wikisource</a> / <a href="https://ccel.org" target="_blank">CCEL</a></td></tr>
+        <tr><td>Reformation-era works (Tyndale, Zwingli, Bullinger, Cranmer, Luther)</td><td>1525–1577</td><td class="license-pd">Public domain / CC0</td><td>EEBO-TCP (CC0), <a href="https://archive.org" target="_blank">archive.org</a></td></tr>
+        <tr><td>Reformed confessions (Apostles', Nicene, Athanasian, Augsburg, Belgic, Canons of Dort, Heidelberg, Westminster, etc.)</td><td>325–1689</td><td class="license-pd">Public domain</td><td><a href="https://wikisource.org" target="_blank">Wikisource</a> / <a href="https://gutenberg.org" target="_blank">Gutenberg</a></td></tr>
+        <tr><td>Papal encyclicals &amp; Vatican documents (11 documents)</td><td>Leo XIII–Benedict XVI, 1879–2007</td><td class="license-other">Freely available from Holy See</td><td><a href="https://vatican.va" target="_blank">vatican.va</a></td></tr>
+        <tr><td>Liturgical texts (Book of Common Prayer 1662, Apostolic Constitutions c. 380)</td><td>380–1662</td><td class="license-pd">Public domain</td><td><a href="https://wikisource.org" target="_blank">Wikisource</a></td></tr>
+        <tr><td>Apologetics (James Orr, Theophilus of Antioch)</td><td>180 / 1893</td><td class="license-pd">Public domain</td><td>CCEL / Wikisource</td></tr>
+        <tr><td>Medieval (Bonaventure, Itinerarium Mentis in Deum, 1259)</td><td>Bonaventure; G. Boas (tr.), 1953</td><td class="license-pd">Public domain per CCEL</td><td><a href="https://ccel.org" target="_blank">CCEL</a></td></tr>
+
+        <tr class="cat-row"><td colspan="4">Cross-References &amp; Geography</td></tr>
+        <tr><td>OpenBible Cross-References (Treasury of Scripture Knowledge)</td><td>OpenBible.info</td><td class="license-cc">CC BY 4.0</td><td><a href="https://openbible.info" target="_blank">openbible.info</a></td></tr>
+        <tr><td>Biblical Geography Data</td><td>OpenBible.info</td><td class="license-pd">Public domain</td><td><a href="https://openbible.info" target="_blank">openbible.info</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── AI Workflows ── -->
+  <section class="about-section" id="workflows">
+    <h2>AI-Assisted Workflows</h2>
+    <p>The following features were produced using Claude (Anthropic) as an AI coding and generation assistant. In each case, the AI agent was given specific instructions (the prompts below), generated output as static Python scripts or JSON data, and that output was reviewed by the site owner before being committed.</p>
+
+    <div class="workflow-grid">
+      <div class="workflow-card">
+        <div class="wf-title">Modern Kingdom Translation (MKT)</div>
+        <div class="wf-scope">Three-tier English Bible translation from Hebrew &amp; Greek</div>
+        <p>An agent was given the morphological interlinear data (SBLGNT + WLC), a 5,523-entry Greek glossary, and a 8,674-entry Hebrew glossary, then asked to write <em>static Python scripts</em> that encode translation choices as hardcoded dictionaries. No API calls are made during translation. Each script covers 1–6 chapters and encodes three tiers: <strong>Literal</strong> (source syntax preserved), <strong>Mediating</strong> (natural English flow), and <strong>Thought</strong> (meaning-driven).</p>
+        <p>Contested terms (e.g. the Hebrew <em>chesed</em>, Greek <em>pistis</em>, <em>dikaiosynē</em>) are documented in each script's header docstring with explicit rendering decisions.</p>
+        <code class="wf-path">data/translation/draft/literal|mediating|thought/{book}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Book Study Notes (BS)</div>
+        <div class="wf-scope">Key vocabulary, language notes, reception, reading guide — per book</div>
+        <p>An agent was given the interlinear data, author-frequency statistics, and the 13,000+ entry glossary, then asked to produce four fields for each of the 66 canonical books: (1) 12–18 key vocabulary entries with theological significance notes that go beyond dictionary glosses, (2) original-language observations specific to that book, (3) a survey of the book's reception in church history (patristic → Reformation → modern), and (4) practical reading guidance.</p>
+        <p>The agent explicitly could not reproduce content already present in <code>data/books/introductions/{book}.json</code>, which it was required to read first.</p>
+        <code class="wf-path">data/workshop/book-study/{book}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">OT→NT Echo &amp; Parallel Layer</div>
+        <div class="wf-scope">Fulfillment, typology, shadow, allusion, and direct-quote tagging</div>
+        <p>Agents were given verse-by-verse interlinear data and asked to identify and annotate five types of OT→NT connections: <strong>fulfillment</strong> (prophecy realized), <strong>type</strong> (OT pattern prefigures NT reality), <strong>shadow</strong> (OT narrative foreshadows NT doctrine), <strong>allusion</strong> (NT literary/theological reference), and <strong>quote</strong> (direct quotation). Each connection includes a note explaining the theological relationship.</p>
+        <code class="wf-path">data/echoes/{book}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Synthesis Commentary</div>
+        <div class="wf-scope">Aggregated verse notes drawing on multiple public-domain commentaries</div>
+        <p>For verses where multiple historic commentators agree, an agent was asked to synthesize the convergent scholarly consensus into a single note, citing which commentators contributed. For verses where commentators disagree significantly, the synthesis notes the disagreement rather than smoothing it over. All synthesis commentary is flagged with an AI badge in the UI.</p>
+        <code class="wf-path">data/commentary/synthesis/{book}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Christological &amp; Contextual Commentary (ZC)</div>
+        <div class="wf-scope">Specialized commentary patches for Christ-focus, historical context, and original language</div>
+        <p>The Zebra Critical workflow produced three layers of supplemental commentary: <strong>Christ-focused</strong> notes tracing each passage's connection to Christ, <strong>historical context</strong> notes (Second Temple period, Greco-Roman world, intertextual background), and <strong>original language</strong> notes highlighting what the Hebrew or Greek reveals that English translations miss. These are stored separately from the historic commentaries.</p>
+        <code class="wf-path">data/commentary/mkt-christ|mkt-context|mkt-original/{book}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Library Quality Passes</div>
+        <div class="wf-scope">Formatting, section structure, and gap-filling for 141 historic documents</div>
+        <p>After fetching the 141 library documents from Wikisource, CCEL, EEBO-TCP, archive.org, and vatican.va, agents audited each document for hollow sections (heading without content), formatting inconsistencies, and missing metadata. Where sections were clearly incomplete fetches, agents re-sourced the missing text from the upstream location rather than generating it. No original text was composed.</p>
+        <code class="wf-path">data/library/html/{doc}.html · data/library/docs/{doc}.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Timeline &amp; Map Descriptions</div>
+        <div class="wf-scope">Event overviews, figure bios, place significance notes for the historical timeline</div>
+        <p>Agents were asked to write narrative descriptions for biblical timeline events, biographical summaries for key figures, and geographical significance notes for biblical places — drawing on the public-domain scholarly consensus documented in the historic commentaries and encyclopedias already in the data set. Timeline dates and event ordering were cross-checked against ISBE and Smith's.</p>
+        <code class="wf-path">data/timeline/events.json · data/timeline/detail.json</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+
+      <div class="workflow-card">
+        <div class="wf-title">Site Code &amp; UI (Loop Agent)</div>
+        <div class="wf-scope">All JavaScript, HTML, and CSS for the site interface</div>
+        <p>The entire site codebase — navigation, reader, word study, verse study, translation workshop, maps, timeline, library browser, and all other UI features — was built with Claude Code (Claude acting as a coding assistant in a local terminal session). The agent worked from a TODO list, read the existing code, implemented changes, and the site owner reviewed every diff before committing. No code was deployed without human review.</p>
+        <code class="wf-path">assets/js/*.js · assets/css/*.css · */index.html</code>
+        <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Agent Prompts ── -->
+  <section class="about-section" id="prompts">
+    <h2>The Exact Agent Prompts</h2>
+    <p>These are the literal instructions given to AI agents. They are published here in full so readers can understand exactly what the AI was asked to do and evaluate whether the constraints were appropriate.</p>
+
+    <details class="prompt-block">
+      <summary>MKT Translation Agent Prompt — the prompt given to each translation agent session</summary>
+      <div class="prompt-meta">File: <code>working/MKT_AGENT_PROMPT.md</code> · Used for: Bible translation (MKT) — copy-pasted to start each agent session</div>
+      <pre>
+# MKT Translation Agent Prompt
+
+Copy and paste this entire prompt to a new agent session to claim and complete one work unit.
+
+---
+
+Read the following files **in full** before doing anything else — in this order, no skipping:
+
+1. `TRANSLATION_AGENT_GUIDE.md`
+2. `MKT_STATIC_SCRIPT_GUIDE.md`
+3. `MKT_PROGRESS.md`
+
+You are working on the Modern Kingdom Translation (MKT) project — a three-tier English Bible
+translation (Literal / Mediating / Thought) produced directly from Hebrew and Greek source texts.
+All work is written as static Python scripts containing hardcoded translation dictionaries; no API
+calls are made during the translation step.
+
+---
+
+## Step 1 — Claim a work unit
+
+Open `MKT_PROGRESS.md` and read the **Work Queue** table at the bottom.
+
+Find the first row whose Status is `not started`. Immediately edit that row's Status to
+`in-progress` and save the file — this is your lock. Do this **before** any other work.
+
+After saving, re-read the file to confirm your claim is still there. If another agent
+overwrote your claim (the row now shows a different status you didn't write), move on to
+the next `not started` row and repeat.
+
+If every row is `in-progress` or `complete`, stop and report:
+**"No available work units — all queue entries are claimed or complete."**
+
+Your claimed row gives you: the book, chapter range, script filename, and verse count.
+
+---
+
+## Step 2 — Study the source material
+
+Before writing a single verse, read:
+
+- `data/interlinear/{book}.json` — source tokens for your claimed chapters
+- The most recently completed script(s) for the same book (check `MKT_PROGRESS.md`
+  Script reference table) — carries forward tone, contested-term decisions, and
+  capitalisation conventions
+- `data/translation/draft/literal/{book}.json` — confirm which chapters already have
+  content so you do not overwrite them
+
+---
+
+## Step 3 — Word count constraint
+
+Your script covers **only the chapter range in your claimed work queue row**.
+Do not expand beyond it. Units are pre-sized to ≤ 6 chapters / ≤ 250 verses.
+
+If you run long mid-book, finish the current chapter cleanly and stop. Update the work
+queue row to show the chapters actually completed before marking it `complete`.
+
+---
+
+## Step 4 — Write the script
+
+Follow `MKT_STATIC_SCRIPT_GUIDE.md` exactly. The required structure is:
+
+1. **Header docstring** — book name, chapter range, run command, every contested-term
+   decision documented
+2. **Boilerplate** — `load` / `save` / `merge_tier` helpers (copy verbatim from the guide)
+3. **Translation dictionary** — `BOOKNAME = { "ch": { "v": { "L": "...", "M": "...",
+   "T": "..." } } }`
+4. **`main()`** — iterates the three tiers, calls `merge_tier`, then `save`
+
+Translation principles from `TRANSLATION_AGENT_GUIDE.md` Section 5 are non-negotiable.
+For every term in Section 6 (contested terms), make an explicit rendering choice in all
+three tiers and document it in the header.
+
+---
+
+## Step 5 — Run the script
+
+  python3 scripts/{script_name}.py
+
+Verify it exits cleanly and prints the expected `wrote ...` lines. Spot-check three verses
+spread across the range by reading `data/translation/draft/literal/{book}.json` directly.
+Confirm real translation prose, not word salad.
+
+---
+
+## Step 6 — Update the tracker
+
+Edit `MKT_PROGRESS.md`:
+
+1. **Work Queue table** — update your row's Status to `complete`
+2. **Book row** in the OT/NT table — update Chs Done, Verses Done, and Status string
+3. **Summary table** — recalculate Partial (or Complete) chapters and verses
+4. **`Last updated:`** — set to today's date
+5. **Script reference table** — add your script name and chapter coverage
+
+---
+
+## Key facts
+
+- Chapter and verse keys in all JSON files are **strings** ("1", not 1)
+- All glossary entries are still `draft` — the primary gloss is a proposal, not a confirmed
+  decision; you may deviate when context requires, but document it
+- The three tiers are distinct: L = source syntax preserved, M = natural English with
+  accurate glosses, T = meaning-driven with interpretive surface
+- T should add genuine value over M — if they read the same, rewrite T
+- `merge_tier` never overwrites existing content — safe to run against a partially-complete file
+</pre>
+    </details>
+
+    <details class="prompt-block">
+      <summary>Book Study Agent Prompt — the prompt given to each book study agent session</summary>
+      <div class="prompt-meta">File: <code>working/BS_AGENT_PROMPT.md</code> · Used for: Book Study (BS) — one book per session, 66 total</div>
+      <pre>
+# Book Study Agent Prompt
+
+This prompt runs in a loop — each session claims one book, generates its supplemental data,
+runs the script, and updates the tracker. Each run is fully self-contained.
+
+---
+
+Read the following files **in full** before doing anything else — in this order, no skipping:
+
+1. `BS_AGENT_GUIDE.md`
+2. `BS_SCRIPT_GUIDE.md`
+3. `BS_PROGRESS.md`
+
+---
+
+## Step 1 — Find and claim a work unit
+
+### 1a. Find the first unclaimed book
+
+Scan the `BS_PROGRESS.md` table. Find the first row where **Status** is `not started`.
+Evaluate stale in-progress claims using a 2-hour staleness rule:
+
+| Status | Action |
+|--------|--------|
+| `not started` | Candidate — proceed to 1b |
+| `in-progress @ &lt;timestamp&gt;` where timestamp &lt; 2 hours old | Skip — another agent is working this book |
+| `in-progress @ &lt;timestamp&gt;` where timestamp ≥ 2 hours old | Candidate — treat as abandoned |
+| `complete` | Skip |
+
+### 1b. Verify the output file does not already exist
+
+  import os
+  book_id = 'romans'
+  path = f'data/workshop/book-study/{book_id}.json'
+  print('exists:', os.path.exists(path))
+
+If the file exists and has all four required fields, the book is already complete.
+Update its Status to `complete` in the tracker and move to the next candidate.
+
+### 1c. Claim it
+
+Set the row's Status to `in-progress @ &lt;timestamp&gt;` and save `BS_PROGRESS.md`.
+Re-read the file to confirm the save took effect.
+
+---
+
+## Step 2 — Study the source material
+
+Read these files for your claimed book:
+
+1. `data/books/introductions/{bookId}.json` — **read this carefully**. Do not reproduce
+   any of this in your script output. Your job is to add what this file lacks.
+2. `data/literary/genre.json` — find the entry for your book. Read `literary_note`
+   and `structure_note`. Use this to inform `language_notes`.
+3. `data/cultural/book-context.json` — find the entry for your book. Use this to
+   inform `reception` and `reading_guide`.
+4. Run the vocabulary finder from `BS_AGENT_GUIDE.md` Section 5 to identify
+   characteristic vocabulary candidates. Print the top 25 and decide which 12–18 to
+   include based on theological weight in this specific book.
+
+---
+
+## Step 3 — Write the script
+
+Follow `BS_SCRIPT_GUIDE.md` exactly. Required structure:
+
+1. **Header docstring** — book name, book_id, lang, run command, author group used,
+   any non-obvious decisions
+2. **Boilerplate** — copy `load_book_study`, `save_book_study`, `merge_book_study`
+   verbatim from the guide
+3. **Content dictionary** — `BOOK_STUDY = { "bookId": ..., "key_vocabulary": [...],
+   "language_notes": "...", "reception": "...", "reading_guide": "..." }`
+4. **`main()`** — loads existing, calls `merge_book_study`, saves
+
+Content principles from `BS_AGENT_GUIDE.md` Section 3 are non-negotiable.
+
+---
+
+## Step 4 — Run and verify
+
+  python3 scripts/build-book-study-{bookId}.py
+
+All assertions must pass. Spot-check:
+- Read two or three `significance` notes — do they add real interpretive value?
+- Read the first paragraph of `language_notes` — is it specific to this book?
+
+If anything falls short, edit the script content dictionary in place, re-run, re-verify.
+
+---
+
+## Step 5 — Update the tracker
+
+Edit `BS_PROGRESS.md` in a **single save**:
+1. Set your book's Status to `complete`
+2. Mark the four field columns with ✓
+3. Update the `Last updated:` line to today's date
+4. Increment the relevant counter in the Summary section
+
+---
+
+## Key facts
+
+- **Do not reproduce** content from `data/books/introductions/{bookId}.json`
+- `merge_book_study()` never overwrites existing non-empty fields — safe to re-run
+- HTML in text fields uses `&lt;p&gt;`, `&lt;strong&gt;`, `&lt;em&gt;` only — no headings or lists
+- Small epistles (Philemon, 2–3 John, Jude, Obadiah) may have 8–10 vocab entries
+- If context runs short mid-book, save what you have (partial is better than nothing)
+</pre>
+    </details>
+
+    <details class="prompt-block">
+      <summary>Loop Agent Prompt — the prompt given to general UI/code maintenance agents</summary>
+      <div class="prompt-meta">File: <code>working/LOOP_AGENT_PROMPT.md</code> · Used for: all ongoing UI bug fixes and feature work via the TODO.md queue</div>
+      <pre>
+## Before doing anything else, read these files in full, in order:
+
+1. `CLAUDE.md` — project constraints, comment requirements, what not to do
+2. `working/site-overview.md` — architecture, module map, CSS system, localStorage keys
+3. `CODING_RULES.md` — hard syntax and pattern rules for this codebase
+4. `CODING_PHILOSOPHY.md` — how to think about changes, scope discipline
+
+Do not skip any of these. They are short and will save you from expensive mistakes.
+
+---
+
+## Step 1 — Pick 2–3 work items from `working/TODO.md`
+
+Read `working/TODO.md` in full first. Then apply these filters:
+
+### Skip entirely:
+- The entire **Z4–Z8 MKT Commentary Suite** section
+- The entire **Phase Z — Modern Kingdom Translation** section
+- The entire **Phase O — Long-term / Deferred** section
+- Any row marked `*(claimed — see working/inprogress-*.md)*`
+- Any item that contains `DATA BLOCKED`
+- Any item whose Fix says `"Agents generate …"` — those are data-generation tasks
+
+### Prefer:
+- **HIGH** priority items before MEDIUM, MEDIUM before LOW
+- Items whose **Fix** section names specific files and functions
+- Items touching only 1–3 files
+- Items where all prerequisite infrastructure items are already checked off
+
+---
+
+## Step 2 — Verify the items are real work
+
+For each item you've selected, before claiming it:
+1. Locate the file and function named in the **Problem** section
+2. Confirm the described issue actually exists in the current code
+3. If the item was already fixed silently, mark it [x] and pick a different item
+
+---
+
+## Step 3 — Claim the items
+
+In `working/TODO.md`, append ` *(agent: in-progress)*` to each item's heading line.
+Save the file. Re-read it to confirm the change landed.
+
+---
+
+## Step 4 — Study the relevant files
+
+For each claimed item, read:
+- The file(s) named in the **Problem** section
+- Any sibling functions that the Fix will affect
+- The corresponding `.css` file if CSS changes are part of the Fix
+- `working/site-overview.md` if you need architectural context
+
+Read enough to understand **why** the current code works before changing it.
+
+---
+
+## Step 5 — Implement
+
+**Before writing a single line of code:**
+- Re-read `CODING_RULES.md` Section 3 (comment requirements) and Section 1 (JS syntax)
+- Confirm you know which CSS file to edit
+- Confirm you know which module to import from
+
+**While implementing:**
+- Add `// INTENT:` / `// CHANGE?` / `// VERIFY:` comments per CLAUDE.md — required
+- Use `var` not `let`/`const` — this codebase uses `var` consistently throughout
+- Use `'use strict';` at the top of any new JS file
+- Do not touch code outside the Fix checklist
+
+---
+
+## Step 6 — Verify the work
+
+For JS changes:
+- Trace through the function from call site to output
+- Check that every code path (happy path + error/missing-data path) is handled
+- Confirm any new localStorage reads/writes use the right key
+- Confirm any new fetch() calls have a .catch() handler
+
+For CSS changes:
+- Confirm selector specificity won't be overridden by existing rules
+- Confirm dark mode is handled (`[data-theme="dark"]` override)
+- Confirm `var(--color-*)` is used instead of hardcoded hex
+
+---
+
+## Step 7 — Mark complete and summarize
+
+For each completed item in `working/TODO.md`:
+1. Change [ ] to [x] on every sub-item you completed
+2. Remove the *(agent: in-progress)* suffix from the heading
+3. If partially complete, note what remains
+
+After updating the file, write a brief summary: what changed, which files were modified,
+any edge cases or caveats. Move completed tasks to working/todo-archive.md.
+
+---
+
+## Key facts about this codebase
+
+| Thing | Where it lives |
+|---|---|
+| Path constants (DATA_ROOT, READER_URL, etc.) | `assets/js/core.js` |
+| Bible version state | `localStorage['bsw_version']`, getVersion() / setVersion() in core.js |
+| All fetch caches | Module-level var in each feature module |
+| Dark mode | `[data-theme="dark"]` attribute on body, toggled by storage.js |
+| Reference link wiring | wireRefLinks() in wire.js — called after any DOM insertion |
+| Scripture reference format | &lt;a class="ref" data-ref="Book Ch:V"&gt;display text&lt;/a&gt; |
+| localStorage key prefix | bsw_ — always |
+| CSS variable root | assets/css/style.css :root {} block |
+| Per-feature CSS | assets/css/{feature}.css — one per feature module |
+| Service worker cache | sw.js — APP_CACHE_V bump required on every code deploy |
+</pre>
+    </details>
+
+    <details class="prompt-block">
+      <summary>Book Study Guide (excerpt) — the reference document all BS agents read before writing</summary>
+      <div class="prompt-meta">File: <code>working/BS_AGENT_GUIDE.md</code> · Defines quality standards for key vocabulary, language notes, reception, and reading guide</div>
+      <pre>
+## What the Book Study adds (summary of BS_AGENT_GUIDE.md)
+
+### key_vocabulary (12–18 entries per book)
+The most characteristic vocabulary of the book, selected by two criteria:
+1. Author-distinctive words — Strong's codes where the `peak` author matches this book's
+   author group in author-frequency data
+2. Theologically significant within this book — words that carry interpretive weight here
+   specifically
+
+Each entry includes a `significance` note: "2–3 sentences. WHY this word matters in this
+specific book — not a generic definition. The theological/literary/rhetorical load it
+carries here, what its semantic range implies that English loses, and how understanding
+the original changes interpretation."
+
+Quality bar: "Paul uses this 33× in Romans (his highest density anywhere) always in the
+forensic register — God's declarative act, not a moral quality the believer develops" is
+the target. "This word means X" is not enough.
+
+### language_notes (400–700 words, HTML)
+3–5 paragraphs on what the original language specifically reveals in this book.
+Not generic grammar — observations about THIS book.
+
+For NT Greek books:
+- Characteristic aspect choices (e.g., John's use of perfect tense for abiding states)
+- Particle patterns and what they reveal about argument structure
+- Key Greek idioms or constructions opaque in English
+- Genre-specific language features
+
+For OT Hebrew books:
+- Root-play and wordplay that disappears in English
+- Binyan choices that signal theological meaning
+- Poetic structure if applicable
+- Narrative grammar — waw-consecutive chains, fronting for emphasis
+
+### reception (300–400 words, HTML)
+A concise survey of how this book has been read through church history.
+One paragraph per major tradition:
+- Patristic — which fathers engaged it most and their signature interpretive moves
+- Medieval — notable allegorical or scholastic readings if relevant
+- Reformation — Luther, Calvin, or Zwingli if they wrote on it; the interpretive shift
+- Modern — the one or two critical debates that define contemporary scholarship
+
+A short paragraph that illuminates is better than a list of names.
+
+### reading_guide (200–300 words, HTML)
+- What to watch for as you read verse by verse
+- The single most important thing to understand before starting
+- Common misreadings to avoid (with a sentence on why they happen)
+- Where to start if dipping in rather than reading sequentially
+
+### What NOT to do
+- Do not reproduce content from data/books/introductions/{bookId}.json
+- Do not write significance notes that just restate the dictionary gloss
+- Do not add language_notes that are generic ("Greek has cases")
+- Do not write reception that is just a list of names without interpretive content
+</pre>
+    </details>
+  </section>
+
+  <!-- ── Citation System ── -->
+  <section class="about-section" id="citation">
+    <h2>The Citation &amp; Provenance System</h2>
+    <p>Every piece of data on this site is mapped to its source in <code>data/provenance.json</code>. Pages that render data from AI-assisted sources display a <span class="src-badge src-badge--ai">AI-assisted · <a href="/about/">details</a></span> badge. Pages that render verbatim public-domain scholarship display a <span class="src-badge">Barnes Notes · 1832–1885 · Public Domain</span> badge.</p>
+
+    <p>An ongoing looping process (<code>working/PROVENANCE_AGENT_GUIDE.md</code>) progressively adds a <code>"_source"</code> field to individual JSON data files, prioritizing AI-generated content first. The progress is tracked in <code>working/PROVENANCE_PROGRESS.md</code>. As this work proceeds, more of the raw data files will carry inline source attribution in addition to the UI badges.</p>
+
+    <p>If you find a specific piece of content you believe is inaccurate, misleading, or incorrectly attributed, the source badge will tell you what category of content it is. For AI-generated content (language notes, translation choices, echo connections), the prompts above document exactly what constraints were in place. For historic commentaries, the original public-domain text is authoritative.</p>
+
+    <p>The full repository — including all data files, fetch scripts, build scripts, agent guides, and working notes — is publicly available:</p>
+    <p><a href="https://github.com/seriousd6/Seriousd6.github.io" target="_blank" rel="noopener">github.com/seriousd6/Seriousd6.github.io</a></p>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Personal Bible study notes &amp; references.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script type="module" src="../assets/js/app.js"></script>
+</body>
+</html>

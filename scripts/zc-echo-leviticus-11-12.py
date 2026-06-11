@@ -56,6 +56,29 @@ ECHO = {
       {"type": "allusion", "target": "Heb 9:14", "note": "He shall lay his hand on the head of the burnt offering and it shall be accepted for him to make atonement — the laying of hands transfers the offerer's identity to the animal; this identification mechanism is the type of Christ's substitution: he bore our sins in his body on the tree (1 Pet 2:24)"}
     ]
   },
+  "11": {
+    "7": [
+      {"type": "allusion", "target": "Acts 10:14", "note": "The pig is unclean because it does not chew the cud — the Levitical dietary laws declare pork definitively unclean; Peter's protest at the sheet vision ('I have never eaten anything that is common or unclean') quotes the Levitical clean/unclean framework; YHWH's response ('What God has made clean, do not call common') overturns the dietary boundary as a dividing wall between Jew and Gentile in the new covenant era"},
+      {"type": "allusion", "target": "Mark 7:19", "note": "The pig is unclean — Mark 7:19 explicitly notes that Jesus declared all foods clean, nullifying the Levitical dietary distinction for new covenant believers; the editorial comment interprets Jesus's teaching on what defiles (coming from the heart, not the mouth) as abrogating the Mosaic food laws as an ongoing obligation for the church"}
+    ],
+    "44": [
+      {"type": "fulfillment", "target": "1 Pet 1:16", "note": "You shall be holy, for I am holy — 1 Pet 1:16 quotes Lev 11:44-45 (also 19:2; 20:7) verbatim as the ground of the new covenant call to holiness; the same divine character that required separation from unclean foods now requires separation from sinful desires; Peter applies the Levitical holiness principle to Gentile believers, showing that the underlying demand transcends the specific food-law mechanism"}
+    ],
+    "45": [
+      {"type": "allusion", "target": "1 Pet 1:15", "note": "I am YHWH who brought you up out of the land of Egypt to be your God; you shall therefore be holy, for I am holy — the redemption-grounds-holiness pattern of Lev 11:45 is precisely the pattern of 1 Pet 1:13-16: because you have been ransomed (v. 18-19), therefore be holy in all your conduct (v. 15); redemption precedes obligation in both testaments"}
+    ]
+  },
+  "12": {
+    "3": [
+      {"type": "fulfillment", "target": "Luke 2:21", "note": "On the eighth day the flesh of his foreskin shall be circumcised — the Levitical requirement for circumcision on the eighth day following birth; Luke 2:21 records the circumcision of Jesus on the eighth day, explicitly fulfilling the law: when the time came to circumcise him, he was called Jesus; the incarnate Son submitted to the law's demands from the very first days of his life (Gal 4:4)"}
+    ],
+    "6": [
+      {"type": "fulfillment", "target": "Luke 2:22", "note": "When the days of her purification are completed she shall bring a lamb... and a pigeon or a turtledove — the prescribed offering at the end of the mother's purification period; Luke 2:22-24 records that Mary and Joseph brought Jesus to the temple to present him to the Lord and to offer the sacrifice according to the Law of the Lord"}
+    ],
+    "8": [
+      {"type": "fulfillment", "target": "Luke 2:24", "note": "If she cannot afford a lamb, she shall take two turtledoves or two young pigeons — the poor woman's substitute offering for purification after childbirth; Luke 2:24 notes that Mary and Joseph offered a pair of turtledoves or two young pigeons, quoting the Lev 12:8 poor-woman's provision; the detail establishes that Mary's family was poor, and signals that the one born to fulfill the law entered in poverty from the first day of his temple presentation"}
+    ]
+  },
   "16": {
     "2": [
       {"type": "fulfillment", "target": "Heb 9:7", "note": "But into the second tent only the high priest goes, and only once a year, and not without blood — the structure of Yom Kippur (Lev 16) is Hebrews' central OT text for demonstrating that the Levitical system was designed to be temporary and pointing forward to a greater reality: Christ enters the true holy of holies once for all by his own blood"}

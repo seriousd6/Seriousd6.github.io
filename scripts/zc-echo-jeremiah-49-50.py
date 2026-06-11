@@ -146,6 +146,54 @@ JER_ECHO = {
       {"type": "fulfillment", "target": "Heb 8:8-12", "note": "Behold the days are coming when I will make a new covenant with the house of Israel — Hebrews cites Jer 31:31-34 in full (the longest OT quotation in the NT) as the scriptural demonstration that the Mosaic covenant was designed to be superseded; the new covenant's promise (law on hearts, universal knowledge of YHWH, permanent forgiveness) is fulfilled in Christ"},
       {"type": "fulfillment", "target": "Luke 22:20", "note": "This cup is the new covenant in my blood — Jesus at the Last Supper identifies the cup with Jer 31:31-34's new covenant; the blood of Christ is the blood of the covenant Jeremiah announced, making the Lord's Supper the enacted new covenant seal"}
     ]
+  },
+  "49": {
+    "12": [
+      {"type": "allusion", "target": "Mark 10:38-39", "note": "Those who did not deserve to drink the cup must drink it — the cup of YHWH's wrath poured on Edom resonates with Jesus's cup-language in Gethsemane and with his challenge to James and John: 'Can you drink the cup I am going to drink?' (Mark 10:38); Jesus accepts the cup of divine wrath that the undeserving nations dreaded, drinking it in full at the cross so that his people need not."},
+      {"type": "allusion", "target": "Luke 22:42", "note": "The cup that must be drunk — Jeremiah's oracle that even the innocent cannot escape the cup of divine judgment finds its NT resolution in Gethsemane: 'Father, if you are willing, take this cup from me; yet not my will, but yours be done' (Luke 22:42); Christ accepts the unavoidable cup of wrath to exhaust it for all who are in him."}
+    ],
+    "16": [
+      {"type": "allusion", "target": "Luke 14:11", "note": "The pride of your heart has deceived you, O you who live in the clefts of the rock — Edom's mountain-fortress pride is precisely the pattern Jesus inverts: 'For all those who exalt themselves will be humbled, and those who humble themselves will be exalted' (Luke 14:11); the Edom oracle is the archetypal judgment on the proud; Christ's entire ministry enacts the reversal."},
+      {"type": "allusion", "target": "1 Pet 5:5", "note": "Pride of heart that deceives — Peter applies the same prophetic principle: 'God opposes the proud but shows favor to the humble' (1 Pet 5:5, citing Prov 3:34); Edom's downfall is the pattern; Christ, who humbled himself to death on a cross, is the antitype of Edomite pride."}
+    ],
+    "18": [
+      {"type": "allusion", "target": "Jude 7", "note": "As in the overthrow of Sodom and Gomorrah and their neighboring towns, no one will dwell there — Jude 7 uses the same Sodom/Gomorrah judgment pattern as an example of eternal fire and divine punishment; the Jeremianic oracle against Edom joins a consistent prophetic pattern (Isa 1:9; Amos 4:11; Ezek 16:46) that NT writers invoke as a type of final judgment."},
+      {"type": "allusion", "target": "Rev 18:2", "note": "Desolation like Sodom and Gomorrah — Revelation's description of fallen Babylon (a haunt for every evil spirit and unclean bird) echoes the language of Jer 49:18 and 50:40; Babylon in Revelation is a composite figure that absorbs the desolation oracles of Jeremiah, Isaiah, and Ezekiel; the finality of Sodom/Gomorrah-type destruction is their shared baseline."}
+    ],
+    "19": [
+      {"type": "allusion", "target": "John 10:12-13", "note": "Who is the shepherd who can stand before me? — YHWH's challenge ('Who is like me? Who will appoint me a time?') asserts absolute sovereignty over Edom; the NT counterpoint: no hireling shepherd can protect the flock from YHWH's judgment, but the good shepherd who lays down his life (John 10:11) is the one who can truly stand — because he has already faced the full force of the wolf that threatened the sheep."}
+    ]
+  },
+  "50": {
+    "2": [
+      {"type": "fulfillment", "target": "Rev 14:8", "note": "Announce it among the nations: Babylon is captured, Bel is put to shame, Merodach is dismayed! — this is the herald-cry of Babylon's fall that Revelation directly echoes: 'A second angel followed and said: Fallen! Fallen is Babylon the Great!' (Rev 14:8); Jeremiah's proclamation of Babylon's doom becomes the template for the eschatological angel's announcement of the final empire's destruction."},
+      {"type": "fulfillment", "target": "Rev 18:2", "note": "Babylon is fallen — the angel in Rev 18:2 ('Fallen is Babylon the great! She has become a dwelling for demons') quotes the cumulative prophetic tradition of Jer 50-51 and Isa 21:9; the fall of historical Babylon that Jeremiah proclaimed becomes the type for Revelation's cosmic Babylon, the final form of every empire opposed to God."}
+    ],
+    "6": [
+      {"type": "allusion", "target": "Luke 15:4-6", "note": "My people have been lost sheep; their shepherds have led them astray, turning them to the mountains — the lost-sheep image of Jer 50:6 is the OT groundwork for Jesus's parable of the one lost sheep (Luke 15:4-6) and his 'I am the good shepherd'; Israel's shepherds who led the sheep astray (Jer 23:1-4; Ezek 34; Jer 50:6) are the faithless ones whose failure creates the need for YHWH himself to come and gather the lost, which he does in Christ."},
+      {"type": "allusion", "target": "John 10:11", "note": "Lost sheep with no one to search for them — the Good Shepherd who lays down his life (John 10:11) is YHWH's own answer to the abandoned sheep of Jer 50:6; what Jeremiah mourns as a disaster (shepherds who let the sheep be lost) Christ resolves by being the shepherd who cannot fail because he gives his own life for the sheep."}
+    ],
+    "8": [
+      {"type": "fulfillment", "target": "Rev 18:4", "note": "Flee from the midst of Babylon; go out from the land of the Chaldeans! — this is Jeremiah's evacuation call to the exiles; Revelation quotes it directly as a command to God's people in the final age: 'Come out of her, my people, so that you will not share in her sins, so that you will not receive any of her plagues' (Rev 18:4); the call to come out of Babylon is one of the most direct literary connections between Jeremiah and Revelation."},
+      {"type": "allusion", "target": "2 Cor 6:17", "note": "Come out from among them and be separate — Paul's exhortation to the Corinthians (2 Cor 6:17: 'Come out from them and be separate, says the Lord') applies the Jeremiah/Isaiah exodus-from-Babylon motif to the church's call to moral separation from the world; the physical exile-departure becomes a pattern for the spiritual posture of those who belong to the new covenant community."}
+    ],
+    "20": [
+      {"type": "fulfillment", "target": "Heb 10:17", "note": "In those days ... Israel's guilt will be sought, but there will be none, and the sins of Judah, but they will not be found, for I will forgive the remnant I spare — this is the same promise as Jer 31:34 ('I will remember their sin no more'), now applied after the Babylon-judgment; Heb 10:17 quotes this as the fruit of Christ's once-for-all sacrifice: the definitive forgiveness that makes repeated sacrifice unnecessary because the sin is not merely covered but unfindable."},
+      {"type": "allusion", "target": "Rom 8:1", "note": "No guilt will be found — 'There is therefore now no condemnation for those who are in Christ Jesus' (Rom 8:1) is the NT declaration of precisely what Jer 50:20 promises: a state in which the people's sin cannot be found; not merely pardoned but gone; Paul's 'no condemnation' corresponds to Jeremiah's 'no guilt will be found.'"}
+    ],
+    "29": [
+      {"type": "allusion", "target": "Rev 18:6", "note": "Repay Babylon for all she has done; do to her as she has done — the principle of exact retribution against Babylon becomes Revelation's instruction: 'Give back to her as she has given; pay her back double for what she has done' (Rev 18:6); the lex talionis against the great oppressor runs from Jeremiah through Revelation as a consistent eschatological principle of divine justice."}
+    ],
+    "33": [
+      {"type": "allusion", "target": "Gal 4:5", "note": "Their Redeemer is strong; the LORD Almighty is his name. He will vigorously defend their cause — Paul's language of redemption ('God sent his Son... to redeem those under the law', Gal 4:5) picks up the prophetic tradition of YHWH as Israel's goel (kinsman-redeemer) who has the power and right to buy back what was lost; Christ is the strong Redeemer whose name YHWH Almighty Jeremiah invokes."},
+      {"type": "allusion", "target": "1 Cor 1:30", "note": "Their Redeemer is strong — Paul identifies Christ as our redemption (1 Cor 1:30: 'Christ Jesus, who has become for us wisdom from God — that is, our righteousness, holiness, and redemption'); the Jeremianic picture of the mighty Redeemer who fights for the oppressed is fulfilled in Christ who defeats sin, death, and the powers through the cross and resurrection."}
+    ],
+    "38": [
+      {"type": "allusion", "target": "Rev 17:1-2", "note": "A drought upon her waters, and they shall dry up — Revelation's prostitute Babylon sits on many waters (Rev 17:1) which are explained as 'peoples, multitudes, nations, and languages' (Rev 17:15); Jeremiah's oracle of drought on Babylon's waters (literal rivers that powered the irrigation economy) becomes in Revelation the image of the empire's dominion over peoples; the drying of the waters signals the end of empire."}
+    ],
+    "40": [
+      {"type": "allusion", "target": "Rev 18:21", "note": "As God overthrew Sodom and Gomorrah and their neighboring towns — the angel in Rev 18:21 throws a great millstone into the sea saying 'With such violence the great city of Babylon will be thrown down, never to be found again'; both Jeremiah's oracle and Revelation's vision invoke Sodom/Gomorrah-level finality: not merely defeated but annihilated so thoroughly that no trace remains; Christ's kingdom is the only city that cannot be shaken (Heb 12:28)."}
+    ]
   }
 }
 

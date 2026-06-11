@@ -3,7 +3,7 @@
 
 import {
   PARALLELS_ROOT, READER_URL, getVersion, loadBook, parseRef, escHtml,
-  metaBooks, parallelsCache
+  metaBooks, parallelsCache, loadEchoes
 } from './core.js';
 import { wireRefLinks } from './wire.js';
 
@@ -17,35 +17,73 @@ export function setParallelsEnabled(on) {
   localStorage.setItem(PARALLELS_STORAGE_KEY, on ? '1' : '0');
 }
 
-// INTENT: Fetch parallel-passage data for a book once, caching the result
-//   (including null on 404/error) so subsequent calls return immediately without
-//   re-fetching. Null cache is intentional — books with no parallel data should
-//   not retry on every verse render.
-// CHANGE? parallelsCache is imported from core.js and keyed by bookId; if its
-//   key schema changes (e.g. to `${version}/${bookId}`), update this cache write
-//   and injectParallelPanels' cache-hit check.
-// VERIFY: Open reader, enable parallels, navigate two chapters of the same book —
-//   Network tab should show exactly one fetch for that book's parallels JSON.
+// TEMPORARY: Merges data/echoes/ into the parallel panel while echoes generation
+//   is ongoing. Echoes take precedence over legacy parallels — any verse covered
+//   by echoes has its parallels entry suppressed to avoid duplication. Once echoes
+//   generation is complete and fully replaces data/parallels/, this merge can be
+//   removed and loadParallels can revert to a simple fetch of data/parallels/.
+// INTENT: Returns a merged chapter-keyed object suitable for injectParallelPanels.
+//   Caches the merged result into parallelsCache so both sources are fetched once.
+// VERIFY: Open reader, enable parallels on Jeremiah 1 — should show echo entries
+//   (e.g. v.5 → Gal 1:15). Navigate same chapter twice — only one network request.
 export function loadParallels(bookId) {
   if (parallelsCache[bookId] !== undefined) return Promise.resolve(parallelsCache[bookId]);
-  var url = PARALLELS_ROOT + '/' + bookId + '.json';
-  return fetch(url)
+
+  var parallelsFetch = fetch(PARALLELS_ROOT + '/' + bookId + '.json')
     .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) { parallelsCache[bookId] = d; return d; })
-    .catch(function () { parallelsCache[bookId] = null; return null; });
+    .catch(function () { return null; });
+
+  return Promise.all([parallelsFetch, loadEchoes(bookId)]).then(function (results) {
+    var parData  = results[0] || {};
+    var echoData = results[1] || {};
+    var merged   = {};
+
+    // Echoes first: convert to parallels schema and stake claim on their verses
+    Object.keys(echoData).forEach(function (ch) {
+      merged[ch] = merged[ch] || {};
+      Object.keys(echoData[ch]).forEach(function (v) {
+        var entries = echoData[ch][v];
+        if (!Array.isArray(entries) || !entries.length) return;
+        var adapted = entries.filter(function (e) { return e.target; })
+                             .map(_adaptEchoEntry);
+        if (adapted.length) merged[ch][v] = adapted;
+      });
+    });
+
+    // Parallels second: only add for verses not already covered by echoes
+    Object.keys(parData).forEach(function (ch) {
+      Object.keys(parData[ch]).forEach(function (v) {
+        if (merged[ch] && merged[ch][v]) return; // echoes suppress this verse
+        merged[ch] = merged[ch] || {};
+        merged[ch][v] = parData[ch][v];
+      });
+    });
+
+    var result = Object.keys(merged).length ? merged : null;
+    parallelsCache[bookId] = result;
+    return result;
+  });
+}
+
+// Convert echoes schema { type, target, note } to parallels renderer schema
+// { type, refs: [{ passage, label }] }.
+function _adaptEchoEntry(e) {
+  return { type: e.type, refs: [{ passage: e.target, label: e.note || e.target }] };
 }
 
 // INTENT: Insert the "⇉ Parallels" toggle button into the reader browse bar and
-//   wire its click handler; restores prior on/off state from localStorage. This
-//   function bootstraps the entire parallels subsystem — calling it is required
-//   before any parallel panels can render.
-// CHANGE? The click handler drives a 4-function cascade: applyParallelPagination
-//   + injectAllParallelPanels (on) or removeAllParallelPanels + removeParallelPagination
-//   (off). Also updates PARALLELS_STORAGE_KEY in localStorage; if the key name
-//   changes, update getParallelsEnabled/setParallelsEnabled too.
-// VERIFY: Open /read/, confirm "⇉ Parallels" button appears; toggle it on/off
-//   and verify parallel panels appear/disappear; reload page and confirm the
-//   on/off state is restored from localStorage.
+//   wire its click handler. Activating parallels shows the echoes panel (50/50
+//   layout); deactivating removes it. Mutually exclusive with commentary mode —
+//   turning parallels ON calls window._readerDeactivateComm (set by reader.js),
+//   and turning commentary ON calls window._readerTurnOffParallels (set here).
+// CHANGE? Echoes panel layout class is 'reader-layout--echoes' on .reader-layout;
+//   panel element is #reader-echoes-panel. If either name changes, update CSS and
+//   _activateEchoesLayout/_deactivateEchoesPanel. Also update PARALLELS_STORAGE_KEY
+//   in getParallelsEnabled/setParallelsEnabled if key name changes.
+// VERIFY: Open /read/, confirm "⇉ Parallels" button appears; toggle ON — reader
+//   splits 50/50 and echoes populate; navigate chapters — echoes refresh; toggle
+//   OFF — layout returns to normal. Enable Commentary then Parallels — Commentary
+//   deactivates automatically (and vice versa).
 export function initParallelToggle() {
   var browseBar = document.querySelector('.reader-browse-bar');
   if (!browseBar || document.getElementById('reader-parallels-btn')) return;
@@ -55,26 +93,38 @@ export function initParallelToggle() {
   btn.id        = 'reader-parallels-btn';
   btn.className = 'reader-parallels-btn' + (on ? ' reader-parallels-btn--on' : '');
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  btn.title     = 'Show parallel passages';
+  btn.title     = 'Show echoes and connections panel';
   btn.textContent = '⇉ Parallels';
 
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
+
+  // Expose so reader.js _activateCommMode can enforce mutual exclusion without
+  // a circular import.
+  window._readerTurnOffParallels = function () {
+    if (!on) return;
+    on = false;
+    setParallelsEnabled(false);
+    btn.classList.remove('reader-parallels-btn--on');
+    btn.setAttribute('aria-pressed', 'false');
+    _deactivateEchoesPanel();
+  };
+
+  // Restore layout if parallels was on before page reload — content will be
+  // populated by doLookup via refreshEchoesPanel() when the passage renders.
+  if (on) _activateEchoesLayout();
 
   btn.addEventListener('click', function () {
     on = !on;
     setParallelsEnabled(on);
     btn.classList.toggle('reader-parallels-btn--on', on);
     btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    var resultsEl = document.getElementById('reader-results');
-    if (resultsEl) {
-      if (on) {
-        applyParallelPagination(resultsEl);
-        injectAllParallelPanels(resultsEl);
-      } else {
-        removeAllParallelPanels(resultsEl);
-        removeParallelPagination(resultsEl);
-      }
+    if (on) {
+      if (window._readerDeactivateComm) window._readerDeactivateComm();
+      _activateEchoesLayout();
+      refreshEchoesPanel();
+    } else {
+      _deactivateEchoesPanel();
     }
   });
 }
@@ -137,6 +187,13 @@ export function buildParallelPanel(groupEl, parsed, sets) {
     'quotation-source': 'quotation',
     'allusion':         'allusion',
     'allusion-source':  'allusion',
+    // Echo-specific types (TEMPORARY — remove when echoes fully replaces parallels)
+    'quote':            'quotation',
+    'citation':         'quotation',
+    'type':             'type',
+    'typology':         'type',
+    'shadow':           'shadow',
+    'theme':            'theme',
   };
   // Human-readable connection phrase shown in the badge — reads as a verb toward the linked ref.
   var BADGE_PHRASE_MAP = {
@@ -147,6 +204,13 @@ export function buildParallelPanel(groupEl, parsed, sets) {
     'quotation-source': 'Quoted in',
     'allusion':         'Alludes to',
     'allusion-source':  'Referenced in',
+    // Echo-specific types (TEMPORARY — remove when echoes fully replaces parallels)
+    'quote':            'Quotes',
+    'citation':         'Cites',
+    'type':             'Prefigures',
+    'typology':         'Prefigures',
+    'shadow':           'Foreshadows',
+    'theme':            'Theme in',
   };
 
   sets.forEach(function (s) {
@@ -361,6 +425,20 @@ function _paginateGroup(groupEl, verses, page) {
     v.style.display = (i >= pageStart && i < pageEnd) ? '' : 'none';
   });
 
+  // Hide chapter-break divs that have no visible verse on this page. A break is
+  // visible only if its next verse sibling (or verse before the next break) is shown.
+  var textEl = groupEl.querySelector('.reader-result-group__text');
+  if (textEl) {
+    textEl.querySelectorAll('.reader-chapter-break').forEach(function (brk) {
+      var next = brk.nextElementSibling;
+      while (next && !next.classList.contains('reader-verse') && !next.classList.contains('reader-chapter-break')) {
+        next = next.nextElementSibling;
+      }
+      var hide = !next || next.classList.contains('reader-chapter-break') || next.style.display === 'none';
+      brk.style.display = hide ? 'none' : '';
+    });
+  }
+
   // Remove old page-nav and any injected parallel panels (they'll be re-injected)
   var existing = groupEl.querySelector('.reader-parallel-page-nav');
   if (existing) existing.remove();
@@ -390,11 +468,274 @@ function _paginateGroup(groupEl, verses, page) {
   nav.querySelectorAll('[data-rpage]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       _paginateGroup(groupEl, verses, parseInt(btn.getAttribute('data-rpage'), 10));
-      // Re-inject parallels for the new visible verse slice
-      if (getParallelsEnabled()) {
-        var parsed = _groupParsedRef(groupEl);
-        if (parsed) injectParallelPanels(groupEl, parsed);
-      }
+      // Sync commentary grid if active (window callback set by reader.js)
+      if (window._readerOnPageChange) window._readerOnPageChange(groupEl);
     });
+  });
+}
+
+// ── Echoes panel (replaces inline parallel panels in the new 50/50 layout) ──
+
+function _activateEchoesLayout() {
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.add('reader-layout--echoes');
+  var panel = document.getElementById('reader-echoes-panel');
+  if (panel) panel.hidden = false;
+}
+
+function _deactivateEchoesPanel() {
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.remove('reader-layout--echoes');
+  var panel = document.getElementById('reader-echoes-panel');
+  if (panel) { panel.hidden = true; panel.innerHTML = ''; }
+  // Remove verse markers added by _markEchoVerses
+  var resultsEl = document.getElementById('reader-results');
+  if (resultsEl) {
+    resultsEl.querySelectorAll('.reader-verse--has-echo, .reader-verse--echo-hover').forEach(function (v) {
+      v.classList.remove('reader-verse--has-echo', 'reader-verse--echo-hover');
+    });
+  }
+}
+
+// Map echo type → badge CSS modifier (controls colour).
+var _ECHO_BADGE_CLASS = {
+  'quote': 'quotation', 'citation': 'quotation', 'quotation': 'quotation', 'quotation-source': 'quotation',
+  'allusion': 'allusion', 'allusion-source': 'allusion',
+  'fulfillment': 'fulfillment', 'prophecy-source': 'fulfillment',
+  'type': 'type', 'typology': 'type',
+  'shadow': 'shadow',
+  'theme': 'theme',
+  'parallel': 'parallel',
+};
+// Human-readable verb phrase shown in the badge.
+var _ECHO_BADGE_LABEL = {
+  'quote': 'Quotes', 'citation': 'Cites', 'quotation': 'Quotes', 'quotation-source': 'Cited in',
+  'allusion': 'Alludes to', 'allusion-source': 'Cited in',
+  'fulfillment': 'Fulfilled in', 'prophecy-source': 'Fulfills',
+  'type': 'Prefigures', 'typology': 'Prefigures',
+  'shadow': 'Foreshadows',
+  'theme': 'Theme in',
+  'parallel': 'Parallel',
+};
+
+// INTENT: Populate the echoes panel for the currently-rendered passage. Reads
+//   window._readerGroups to know which (bookId, ch) pairs are on screen, fetches
+//   echoes for each via loadEchoes (cached), then builds expandable echo cards.
+//   Called from reader.js doLookup on every navigation and from initParallelToggle
+//   when the user turns parallels on mid-session.
+// CHANGE? Depends on window._readerGroups (array of { ref: {bookId, ch} }) being
+//   kept up-to-date by reader.js doLookup. Also depends on #reader-echoes-panel
+//   element in read/index.html and .reader-layout--echoes class in reader.css.
+//   If loadEchoes signature changes, update the Promise.all call below.
+// VERIFY: Enable Parallels on Romans 8 — echoes panel should list all echo entries
+//   for that chapter with v. numbers, badge labels, and target refs. Navigate to
+//   Romans 9 — panel should refresh without manual toggle. Hover a card — matching
+//   verse in main text gets a blue left border. Hover the verse — card highlights.
+export function refreshEchoesPanel() {
+  if (!getParallelsEnabled()) return;
+  var panel = document.getElementById('reader-echoes-panel');
+  if (!panel) return;
+
+  var groups = window._readerGroups;
+  if (!groups || !groups.length) return;
+
+  panel.innerHTML = '<p class="reader-echo-panel__loading">Loading echoes…</p>';
+
+  // Collect unique chapters per bookId from the current rendered groups.
+  // Handle multi-chapter refs (e.g. "John 1-3": ch=1, endCh=3) by expanding
+  // the chapter range so echoes from all rendered chapters are included.
+  var bookChMap = Object.create(null);
+  groups.forEach(function (g) {
+    var ref = g && g.ref;
+    if (!ref || !ref.bookId) return;
+    if (!bookChMap[ref.bookId]) bookChMap[ref.bookId] = [];
+    var startCh = ref.ch || 1;
+    var endCh   = ref.endCh ? Math.min(ref.endCh, startCh + 29) : startCh; // cap at 30 chapters
+    for (var c = startCh; c <= endCh; c++) {
+      if (bookChMap[ref.bookId].indexOf(c) === -1) bookChMap[ref.bookId].push(c);
+    }
+  });
+
+  var bookIds = Object.keys(bookChMap);
+  if (!bookIds.length) { panel.innerHTML = ''; return; }
+
+  Promise.all(bookIds.map(function (bookId) {
+    return loadEchoes(bookId).then(function (data) { return { bookId: bookId, data: data }; });
+  })).then(function (results) {
+    _buildEchoesPanel(panel, results, bookChMap, groups);
+  }).catch(function () {
+    panel.innerHTML = '<p class="reader-echo-panel__empty">Could not load echoes.</p>';
+  });
+}
+
+function _buildEchoesPanel(panel, results, bookChMap, groups) {
+  // Flatten all echo entries, sorted by chapter then verse for reading order.
+  var allEntries = [];
+  results.forEach(function (r) {
+    var echoData = r.data;
+    if (!echoData) return;
+    (bookChMap[r.bookId] || []).forEach(function (ch) {
+      var chData = echoData[String(ch)];
+      if (!chData) return;
+      Object.keys(chData).forEach(function (v) {
+        var entries = chData[v];
+        if (!Array.isArray(entries)) return;
+        entries.forEach(function (entry) {
+          if (!entry.target) return;
+          allEntries.push({ v: parseInt(v, 10), ch: ch, bookId: r.bookId, entry: entry });
+        });
+      });
+    });
+  });
+  allEntries.sort(function (a, b) { return a.ch !== b.ch ? a.ch - b.ch : a.v - b.v; });
+
+  // Build panel DOM via a document fragment to avoid multiple reflows.
+  var wrapper = document.createElement('div');
+  wrapper.className = 'reader-echo-panel';
+
+  var hdr = document.createElement('div');
+  hdr.className = 'reader-echo-panel__header';
+  var passageLabel = groups[0] && groups[0].ref ? (groups[0].ref.display || '') : '';
+  hdr.innerHTML =
+    '<span class="reader-echo-panel__title">Echoes &amp; Connections</span>' +
+    (passageLabel ? '<span class="reader-echo-panel__ref">' + escHtml(passageLabel) + '</span>' : '') +
+    '<span class="reader-echo-panel__count">' + allEntries.length + ' connection' + (allEntries.length !== 1 ? 's' : '') + '</span>';
+  wrapper.appendChild(hdr);
+
+  if (!allEntries.length) {
+    var empty = document.createElement('p');
+    empty.className = 'reader-echo-panel__empty';
+    empty.textContent = 'No echoes found for this passage.';
+    wrapper.appendChild(empty);
+  } else {
+    var list = document.createElement('div');
+    list.className = 'reader-echo-panel__list';
+
+    allEntries.forEach(function (item, idx) {
+      var entry  = item.entry;
+      var type   = entry.type || 'allusion';
+      var bClass = _ECHO_BADGE_CLASS[type] || 'allusion';
+      var bLabel = _ECHO_BADGE_LABEL[type] || type;
+      var note   = entry.note   || '';
+      var target = entry.target || '';
+      var bodyId = 'echo-body-' + idx;
+
+      var card = document.createElement('div');
+      card.className = 'reader-echo-card';
+      card.setAttribute('data-echo-v',  String(item.v));
+      card.setAttribute('data-echo-ch', String(item.ch));
+
+      var toggle = document.createElement('button');
+      toggle.className = 'reader-echo-card__toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', bodyId);
+      toggle.innerHTML =
+        '<span class="reader-echo-card__v">v.' + item.v + '</span>' +
+        '<span class="reader-echo-card__badge reader-echo-card__badge--' + escHtml(bClass) + '">' + escHtml(bLabel) + '</span>' +
+        '<span class="reader-echo-card__target" title="' + escHtml(target) + '">' + escHtml(target) + '</span>' +
+        '<span class="reader-echo-card__chevron" aria-hidden="true">&#9654;</span>';
+
+      var body = document.createElement('div');
+      body.className = 'reader-echo-card__body';
+      body.id = bodyId;
+      body.hidden = true;
+
+      // Verse text block — fetched lazily on first expand via loadParallelText
+      var verseBlock = document.createElement('div');
+      verseBlock.className = 'reader-echo-card__verse';
+      body.appendChild(verseBlock);
+
+      if (note) {
+        var noteEl = document.createElement('p');
+        noteEl.className = 'reader-echo-card__note';
+        noteEl.textContent = note;
+        body.appendChild(noteEl);
+      }
+      var readLink = document.createElement('a');
+      readLink.className = 'reader-echo-card__read';
+      readLink.href = READER_URL + '?ref=' + encodeURIComponent(target);
+      readLink.textContent = 'Read ' + target + ' →';
+      body.appendChild(readLink);
+
+      // Expand/collapse; load verse text once on first expansion
+      var textLoaded = false;
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
+        body.hidden = expanded;
+        card.classList.toggle('reader-echo-card--expanded', !expanded);
+        if (!expanded && !textLoaded) {
+          textLoaded = true;
+          loadParallelText(target, getVersion(), verseBlock);
+        }
+      });
+
+      card.appendChild(toggle);
+      card.appendChild(body);
+      list.appendChild(card);
+    });
+
+    wrapper.appendChild(list);
+  }
+
+  panel.innerHTML = '';
+  panel.appendChild(wrapper);
+
+  _wireEchoHovers(panel, allEntries);
+  _markEchoVerses(allEntries);
+}
+
+// INTENT: Wire bidirectional hover: hovering an echo card highlights the matched
+//   verse in the main text; hovering a .reader-verse--has-echo highlights its
+//   cards in the panel. Uses class toggles so multiple overlapping echoes all
+//   light up at once. Called after _buildEchoesPanel inserts the cards.
+// CHANGE? Relies on data-echo-v/data-echo-ch on cards and data-v/data-ch on
+//   .reader-verse spans (set by reader.js render loop). If those attributes are
+//   renamed, update the querySelectorAll selectors in both hover handlers here.
+// VERIFY: Open Romans 8; enable Parallels. Hover an echo card — the corresponding
+//   verse in the left column should show a coloured left border/highlight. Hover
+//   that verse — the card in the right panel should show a highlight background.
+function _wireEchoHovers(panel, allEntries) {
+  var resultsEl = document.getElementById('reader-results');
+  if (!resultsEl) return;
+
+  // Card → verse
+  panel.querySelectorAll('.reader-echo-card').forEach(function (card) {
+    var v  = card.getAttribute('data-echo-v');
+    var ch = card.getAttribute('data-echo-ch');
+    card.addEventListener('mouseenter', function () {
+      resultsEl.querySelectorAll('.reader-verse[data-v="' + v + '"][data-ch="' + ch + '"]')
+        .forEach(function (verse) { verse.classList.add('reader-verse--echo-hover'); });
+    });
+    card.addEventListener('mouseleave', function () {
+      resultsEl.querySelectorAll('.reader-verse--echo-hover')
+        .forEach(function (v) { v.classList.remove('reader-verse--echo-hover'); });
+    });
+  });
+
+  // Verse → cards
+  resultsEl.querySelectorAll('.reader-verse--has-echo').forEach(function (verse) {
+    var v  = verse.getAttribute('data-v');
+    var ch = verse.getAttribute('data-ch');
+    verse.addEventListener('mouseenter', function () {
+      panel.querySelectorAll('.reader-echo-card[data-echo-v="' + v + '"][data-echo-ch="' + ch + '"]')
+        .forEach(function (card) { card.classList.add('reader-echo-card--highlight'); });
+    });
+    verse.addEventListener('mouseleave', function () {
+      panel.querySelectorAll('.reader-echo-card--highlight')
+        .forEach(function (card) { card.classList.remove('reader-echo-card--highlight'); });
+    });
+  });
+}
+
+function _markEchoVerses(allEntries) {
+  var resultsEl = document.getElementById('reader-results');
+  if (!resultsEl) return;
+  // Clear previous markers before re-marking (passage may have changed)
+  resultsEl.querySelectorAll('.reader-verse--has-echo')
+    .forEach(function (v) { v.classList.remove('reader-verse--has-echo'); });
+  allEntries.forEach(function (item) {
+    resultsEl.querySelectorAll('.reader-verse[data-v="' + item.v + '"][data-ch="' + item.ch + '"]')
+      .forEach(function (verse) { verse.classList.add('reader-verse--has-echo'); });
   });
 }

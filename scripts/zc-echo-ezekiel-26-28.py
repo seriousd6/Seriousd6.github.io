@@ -175,6 +175,65 @@ JER_CHRIST = {
 # ============================================================
 
 EZEK_ECHO = {
+  "26": {
+    "3": [
+      {"type": "allusion", "target": "Rev 17:12-14", "note": "YHWH brings many nations against Tyre as successive waves of the sea — Revelation's vision of the beast with ten kings making war draws on this pattern of successive world powers raised against the city that opposes God; the judgment of Tyre by coalition anticipates the judgment of eschatological Babylon"}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Rev 18:21", "note": "The stones, timber, and dust of Tyre thrown into the sea — the angel's millstone cast into the sea in Rev 18:21 enacts the same finality: 'So will Babylon the great city be thrown down with violence, and will be found no more,' echoing Ezek 26:14 (you shall never be rebuilt)"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Rev 18:21", "note": "You shall be a bare rock and never rebuilt — Ezekiel's permanent desolation formula for Tyre (never rebuilt) directly informs Revelation's permanent judgment on eschatological Babylon: 'will be found no more.' Tyre's historic desolation becomes the template for the final commercial empire's irrevocable end"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Rev 18:9-10", "note": "The lament 'How you are destroyed, O city of renown!' from the kings of the sea — Rev 18:9-10 draws on this: the kings of the earth weeping and lamenting over Babylon, standing far off and saying 'Alas, alas, for the great city'; the rhetorical form (distant mourners, repetitive exclamation) is identical"}
+    ],
+    "19": [
+      {"type": "theme", "target": "Rev 18:2", "note": "The great deeps cover Tyre and it descends to the pit among those who go down — Revelation's Babylon becomes 'a haunt of every foul spirit' after her fall; the imagery of a great city descending to desolation and cosmic darkness is shared between the Tyre oracle and Revelation's Babylon"},
+    ]
+  },
+  "27": {
+    "2": [
+      {"type": "allusion", "target": "Rev 18:9-20", "note": "The lamentation over Tyre as a great merchant ship is the primary OT source for Revelation 18's extended lament over Babylon — the structure (address to the city, catalogue of trading partners and goods, mourning from a distance by mariners and merchants) is directly replicated; Ezekiel's lament over Tyre becomes the template for the eschatological lament over the world commercial system"}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Rev 18:12-13", "note": "The cargo list of Tyre's trade (silver, iron, tin, lead, bronze, cloth, linen, coral, ebony, ivory) is the OT source behind Revelation's cargo list of Babylon (gold, silver, precious stones, pearls, fine linen, silk, scarlet, wood, ivory, bronze, iron, marble, spices, livestock, horses, slaves): both texts catalog the luxury goods of the world commercial empire to intensify the pathos of its sudden destruction"}
+    ],
+    "27": [
+      {"type": "allusion", "target": "Rev 18:17-19", "note": "Your wealth, wares, merchants, mariners will sink into the heart of the seas on the day of your ruin — Rev 18:17-19 enacts this: 'all shipmasters and seafarers stood far off and cried out as they saw the smoke of her burning... and they threw dust on their heads as they wept and mourned.' Ezekiel's imagery of the foundered merchant ship becomes Revelation's burning of the great city"}
+    ],
+    "32": [
+      {"type": "allusion", "target": "Rev 18:18", "note": "The mariners raise a wailing over Tyre: 'Who is like Tyre, like one destroyed in the midst of the sea?' — Rev 18:18 draws on this: the seafarers crying 'What city was like the great city?' as they watch Babylon burn; the rhetorical question of incomparability (what city compares?) is the same gesture of mourning at the loss of the world's greatest commercial city"}
+    ],
+    "36": [
+      {"type": "theme", "target": "Rev 18:23", "note": "The merchants among the peoples hiss at Tyre; she has become a terror and shall be no more — Rev 18:23 uses this same finality for eschatological Babylon: 'the light of a lamp will shine in you no more... your merchants were the great ones of the earth.' The end of Tyre's commercial glory is the type of the end of all worldly commercial empire"}
+    ]
+  },
+  "28": {
+    "2": [
+      {"type": "allusion", "target": "2 Thess 2:4", "note": "The prince of Tyre says 'I am a god; I sit in the seat of the gods' — Paul's man of lawlessness 'who opposes and exalts himself against every so-called god or object of worship, so that he takes his seat in the temple of God, proclaiming himself to be God' (2 Thess 2:4) draws on the Tyre oracle as the paradigm of human self-deification that climaxes in the final antichrist"},
+      {"type": "theme", "target": "Phil 2:6-8", "note": "The prince of Tyre exploits his wisdom and beauty to claim divine status — the direct contrast with Christ who, though being in the form of God, 'did not count equality with God a thing to be exploited, but emptied himself.' Tyre's prince grasps at divinity; Christ voluntarily lays it down. The two movements are the mirror images of pride and humility"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "Rev 21:19-20", "note": "The king of Tyre covered with nine precious stones (sardius, topaz, diamond, beryl, onyx, jasper, sapphire, emerald, carbuncle) — nine of these are among the twelve foundation stones of New Jerusalem in Rev 21:19-20; the precious-stone tradition flows from Eden (Ezek 28) through the high priest's breastplate (Exod 28:17-20) to the foundations of the new creation, suggesting that the glory forfeited by pride is restored in the new city"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Rev 12:7-9", "note": "The anointed guardian cherub placed on the holy mountain of God, walking among the stones of fire — though not a direct quotation, the imagery of a glorious heavenly being who falls from the divine mountain underlies the dragon's expulsion from heaven in Rev 12:7-9 and the tradition Jude 6 preserves ('angels who did not stay within their own position of authority'); the Tyre oracle is the primary OT locus of the fall-of-a-heavenly-being tradition"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Luke 18:14", "note": "Your heart was proud because of your beauty; you corrupted your wisdom for the sake of your splendor; I cast you to the ground — Jesus's principle 'everyone who exalts himself will be humbled' (Luke 18:14; 14:11) is the wisdom-tradition summary of the pattern Ezekiel diagnoses in Tyre: beauty and wisdom become the occasion for pride, and pride precipitates the fall"},
+      {"type": "theme", "target": "Isa 14:12-15", "note": "Your heart was lifted up and you said 'I am a god' — both the Tyre oracle (Ezek 28:2,17) and the Babylon oracle (Isa 14:13-14: 'I will ascend to heaven... I will make myself like the Most High') describe the same archetypal pride-fall pattern that the NT applies to Satan (Luke 10:18: 'I saw Satan fall like lightning from heaven') and warns believers against"}
+    ],
+    "22": [
+      {"type": "theme", "target": "John 12:28", "note": "YHWH says 'I will manifest my glory' in the judgment of Sidon — the display of the divine glory through covenant faithfulness and judgment is the theme running through Ezekiel (1:28; 3:23; 10:4; 43:2) that culminates in John's presentation of Christ's glory: 'Father, glorify your name... I have glorified it and will glorify it again' (John 12:28). The glory of YHWH visible in judgment becomes the glory of YHWH visible in the cross"}
+    ],
+    "25": [
+      {"type": "allusion", "target": "John 11:52", "note": "I will gather the house of Israel from the peoples among whom they are scattered and manifest my holiness in them — the gathering of the scattered people of God is fulfilled in Christ who 'would die for the nation and not for the nation only, but also to gather into one the children of God who are scattered abroad' (John 11:51-52); the Ezekielian promise of regathering reaches beyond ethnic Israel to include all who are scattered"}
+    ],
+    "26": [
+      {"type": "allusion", "target": "Rev 21:3-4", "note": "They shall dwell securely when I execute judgments upon all their neighbors who have treated them with contempt — the secure dwelling of YHWH's people after judgment on their enemies is the eschatological vision fulfilled in Rev 21:3-4: 'the dwelling place of God is with man... he will wipe away every tear.' The security that Ezekiel promises after historical judgment, Revelation presents as permanent after the final judgment"}
+    ]
+  },
   "11": {
     "19": [
       {"type": "fulfillment", "target": "2 Cor 3:3", "note": "I will remove the heart of stone and give them a heart of flesh — the new heart/new spirit promise of Ezek 11:19 and 36:26 is fulfilled in the Spirit's ministry that Paul describes: written not on stone tablets but on tablets of human hearts"}

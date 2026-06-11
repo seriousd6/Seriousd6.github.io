@@ -56,6 +56,23 @@ ECHO = {
       {"type": "allusion", "target": "Heb 9:14", "note": "He shall lay his hand on the head of the burnt offering and it shall be accepted for him to make atonement — the laying of hands transfers the offerer's identity to the animal; this identification mechanism is the type of Christ's substitution: he bore our sins in his body on the tree (1 Pet 2:24)"}
     ]
   },
+  "14": {
+    "2": [
+      {"type": "allusion", "target": "Matt 8:4", "note": "The law of the leper for the day of his cleansing — the entire Lev 14 purification ritual is presupposed by Jesus when he heals a leper and commands: go, show yourself to the priest and offer the gift that Moses commanded, for a proof to them (Matt 8:4; Mark 1:44; Luke 5:14); Jesus assumes the Mosaic purification system is still operative in his ministry but fulfills it by healing the condition the ritual could only certify"}
+    ],
+    "4": [
+      {"type": "allusion", "target": "Luke 17:14", "note": "The two live birds, cedar wood, scarlet yarn, and hyssop for the cleansing ritual — the two-bird rite (one killed over living water, the other dipped in blood and released alive) is a dramatic prefiguring of death and resurrection: one bird's death and the other's release in the open field; Luke 17:14 notes Jesus telling the ten lepers to go show themselves to the priests — and as they went they were cleansed, fulfilling the Levitical purification standard"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Heb 9:14", "note": "The priest shall put some of the blood of the guilt offering on the right ear of the cleansed person, on the thumb of his right hand, and on the big toe of his right foot — the blood applied at ordination (Lev 8:23-24) and now at cleansing from disease applied to the same three points of the body; the cleansed person is re-consecrated like a priest; Heb 9:14 applies the blood-consecration principle to Christ's blood purifying the conscience from dead works to serve the living God — all who are cleansed by his blood are consecrated for priestly service"}
+    ]
+  },
+  "15": {
+    "25": [
+      {"type": "fulfillment", "target": "Mark 5:25", "note": "If a woman has a discharge of blood for many days, not at the time of her menstrual impurity, or if she has a discharge beyond the time of her impurity, all the days of the discharge she shall be unclean — Lev 15:25-27 specifies the chronic-discharge impurity; Mark 5:25-34 describes the woman with a flow of blood for twelve years who touched the fringe of Jesus's garment and was immediately healed; the healing enacts the reversal of the Lev 15 impurity: instead of her uncleanness transferring to Jesus by touch, his healing power transferred to her"},
+      {"type": "fulfillment", "target": "Luke 8:43", "note": "The woman with a discharge of blood for twelve years — a direct narrative fulfillment of the Lev 15:25-30 chronic-discharge category; in Leviticus, whatever the impure woman touches becomes unclean; in Luke 8, the unclean woman touches Jesus and becomes clean; Jesus does not absorb her impurity — he abolishes it; the purification law meets its antithesis and end in the one who makes all things clean"}
+    ]
+  },
   "16": {
     "2": [
       {"type": "fulfillment", "target": "Heb 9:7", "note": "But into the second tent only the high priest goes, and only once a year, and not without blood — the structure of Yom Kippur (Lev 16) is Hebrews' central OT text for demonstrating that the Levitical system was designed to be temporary and pointing forward to a greater reality: Christ enters the true holy of holies once for all by his own blood"}

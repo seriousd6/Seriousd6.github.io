@@ -685,9 +685,9 @@ export var ATTRIBUTION = {
   'BSB':   'Berean Standard Bible — Copyright © 2022 by Bible Hub. Used by permission. All rights reserved worldwide.',
   'WEB':   'World English Bible — Public Domain',
   'ASV':   'American Standard Version (1901) — Public Domain',
-  'MKT-L': 'Modern Kingdom Translation — Literal Tier (work in progress). Personal study translation.',
-  'MKT-M': 'Modern Kingdom Translation — Mediating Tier (work in progress). Personal study translation.',
-  'MKT-T': 'Modern Kingdom Translation — Thought Tier (work in progress). Personal study translation.'
+  'MKT-L': 'Modern Kingdom Translation — Literal Tier. AI-assisted from Hebrew/Greek interlinear; overseen by David Seis. See <a href="/about/">About</a> for methods.',
+  'MKT-M': 'Modern Kingdom Translation — Mediating Tier. AI-assisted from Hebrew/Greek interlinear; overseen by David Seis. See <a href="/about/">About</a> for methods.',
+  'MKT-T': 'Modern Kingdom Translation — Thought Tier. AI-assisted from Hebrew/Greek interlinear; overseen by David Seis. See <a href="/about/">About</a> for methods.'
 };
 
 // ── COMMENTARY_SOURCES / loadCommentary ──────────────────────────────────
@@ -703,9 +703,9 @@ export var COMMENTARY_SOURCES = [
   { id: 'barnes',  label: "Barnes' Notes (NT)",          attr: "Barnes' Notes on the Bible (Public Domain)" },
   { id: 'rwp',     label: "Robertson's Word Pictures (NT)", attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
   { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" },
-  { id: 'mkt-original', label: 'Original Language (MKT)', attr: 'MKT Commentary — Original Language (generated)' },
-  { id: 'mkt-context',  label: 'Historical Context (MKT)', attr: 'MKT Commentary — Historical Context (generated)' },
-  { id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: 'MKT Commentary — Christ in Every Verse (generated)' }
+  { id: 'mkt-original', label: 'Original Language (MKT)', attr: 'MKT Commentary — Original Language. AI-assisted; see /about/ for methods and prompts.', isAI: true },
+  { id: 'mkt-context',  label: 'Historical Context (MKT)', attr: 'MKT Commentary — Historical Context. AI-assisted; see /about/ for methods and prompts.', isAI: true },
+  { id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: 'MKT Commentary — Christ in Every Verse. AI-assisted; see /about/ for methods and prompts.', isAI: true }
 ];
 
 // Active commentary source — always read from localStorage so changes made in

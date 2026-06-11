@@ -1,129 +1,144 @@
-"""
-Joshua — all four layers.
-Key NT uses: Rahab's faith/scarlet cord (2), crossing Jordan (3-4),
-fall of Jericho (6), Joshua as type of Jesus (same name), rest-promise (1, 21-22).
-"""
+#!/usr/bin/env python3
+"""mkt-christ commentary — Joshua 6–8 (how the passage points to Christ)"""
+import json
+from pathlib import Path
 
-import json, pathlib
+ROOT = Path(__file__).parent.parent
 
-ROOT = pathlib.Path(__file__).parent.parent
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
+            if v not in existing[ch]: existing[ch][v] = html
 
-ECHO = {
-  "1": {
-    "5": [
-      {"type": "allusion", "target": "Heb 13:5", "note": "I will not leave you or forsake you — YHWH's promise to Joshua (Josh 1:5) is quoted in Heb 13:5 as the basis for Christian contentment: he has said I will never leave you nor forsake you; what was said to Joshua as a conquest promise is applied to all believers as a life-promise"}
-    ]
+DATA = {
+  "6": {
+    "1": "<p>Jericho is <em>sāgûr ûmesugār</em> — shut up and barred — before Israel. The sealed city represents the kingdom of this world closed against God's people. Only YHWH can break what human power cannot. Christ holds the keys of death and Hades (<a class='ref' data-ref='Rev 1:18'>Rev 1:18</a>); the gates of hell shall not prevail against his church (<a class='ref' data-ref='Matt 16:18'>Matt 16:18</a>).</p>",
+    "2": "<p>YHWH speaks in the proleptic perfect: <em>nātattî bĕyādekā</em> — \"I have given.\" The victory is declared done before a single step is taken. Christ's resurrection was promised before the cross (<a class='ref' data-ref='Ps 16:10'>Ps 16:10</a>; <a class='ref' data-ref='Acts 2:31'>Acts 2:31</a>); Revelation announces the Lamb slain from the foundation of the world (<a class='ref' data-ref='Rev 13:8'>Rev 13:8</a>).</p>",
+    "3": "<p>The soldiers march once a day for six days before the seventh-day climax. The pattern mirrors the six-day labor giving way to sabbath rest. Hebrews sees this geography as typology of Christ's sabbath-rest waiting for his people (<a class='ref' data-ref='Heb 4:9-10'>Heb 4:9–10</a>): the true rest is not entered through human conquest but through him.</p>",
+    "4": "<p>Seven priests bearing seven ram's-horn trumpets for seven days — the triple repetition of <em>shéva</em> (seven) signals divine completeness. The seven trumpets of Revelation 8–11 echo this pattern: divine announcement precedes and accomplishes judgment. YHWH's timing moves in sevens toward the final victory.</p>",
+    "5": "<p>At the long blast the people shout and the wall falls. Paul hears this pattern in the eschatological climax: \"at the last trumpet\" the dead are raised (<a class='ref' data-ref='1 Cor 15:52'>1 Cor 15:52</a>), and the Lord descends \"with a shout, with the voice of the archangel, and with the trumpet of God\" (<a class='ref' data-ref='1 Thess 4:16'>1 Thess 4:16</a>). Jericho's wall and death's dominion fall by the same divine trumpet.</p>",
+    "6": "<p>The ark of the covenant — YHWH's throne and presence — leads the procession. Christ is the true ark, the embodiment of God's presence going before his people. He is the pioneer and perfecter of faith who goes ahead into the promised rest (<a class='ref' data-ref='Heb 12:2'>Heb 12:2</a>).</p>",
+    "7": "<p>The armed vanguard goes before the ark and the rear guard follows after — the ark is encompassed by human obedience before and behind, but the power is in the divine presence at the center. Christ is not merely an idea carried by his followers; he himself is the moving force of redemptive history.</p>",
+    "8": "<p>The seven priests begin their march with the trumpets sounding perpetually. Holy war in Joshua is inseparable from worship — it is a liturgical procession before it is a military campaign. Christ's victory on the cross is the ultimate act of priestly sacrifice (<a class='ref' data-ref='Heb 9:26'>Heb 9:26</a>).</p>",
+    "9": "<p>Joshua commands the people to silence — no human word, only the divine sound of the trumpets. The command to silence recalls Isaiah's word: \"In quietness and trust is your strength\" (<a class='ref' data-ref='Isa 30:15'>Isa 30:15</a>). Faith acts without filling the space with human noise.</p>",
+    "10": "<p>\"Do not shout... let no word come from your mouth, until the day I tell you to shout.\" Disciplined trust in the face of what looks absurd. The disciples waiting in Jerusalem between ascension and Pentecost (<a class='ref' data-ref='Acts 1:4'>Acts 1:4</a>) are ordered to wait without acting until the appointed signal. Faith holds its tongue and waits for Christ's timing.</p>",
+    "11": "<p>The ark circles the city and returns to camp — one circuit, done. The apparent futility of the first day defines the entire week's test. Hebrews 11:30 explicitly cites Jericho: \"By faith the walls of Jericho fell, after the people had marched around them for seven days.\" Faith persists through the days of invisibility.</p>",
+    "12": "<p>Joshua rises early the second day and the priests carry the ark again. Early rising in the Bible marks intense spiritual seriousness — Abraham at Moriah (<a class='ref' data-ref='Gen 22:3'>Gen 22:3</a>), Christ before dawn in prayer (<a class='ref' data-ref='Mark 1:35'>Mark 1:35</a>). The discipline of faith does not sleep in.</p>",
+    "13": "<p>Days three through six repeat the same march. This patient repetition without visible result is the biblical shape of faith: \"the testing of your faith produces steadfastness\" (<a class='ref' data-ref='James 1:3'>James 1:3</a>). The Christian life often looks like marching in circles before the wall falls.</p>",
+    "14": "<p>The sixth circuit — one day before the final victory. The people do not know which day is the last; they only know to keep marching. Christ's people live in the same tension: the victory is certain but the day is unknown (<a class='ref' data-ref='Matt 24:36'>Matt 24:36</a>). Faithfulness to the daily walk is the calling.</p>",
+    "15": "<p>Day seven: they rise at dawn and march seven circuits. The seven-times-seven intensification marks divine fullness. Babylon falls as Jericho fell — by divine action, not human assault (<a class='ref' data-ref='Rev 18:2'>Rev 18:2</a>). YHWH's sevenfold completeness drives history toward its appointed end.</p>",
+    "16": "<p>At the seventh circuit Joshua commands: \"Shout, for YHWH has given you the city!\" — present-tense declaration of completed victory before the wall has moved. Christ's cry from the cross, <em>tetelestai</em>, \"It is finished\" (<a class='ref' data-ref='John 19:30'>John 19:30</a>), is the same: the victory declared complete before the tomb is empty, before ascension, before Pentecost, before the nations are gathered in.</p>",
+    "17": "<p>The city is devoted to destruction (<em>ḥērem</em>) — except Rahab who hid the spies. She believed YHWH's word and acted on it (<a class='ref' data-ref='Heb 11:31'>Heb 11:31</a>; <a class='ref' data-ref='James 2:25'>James 2:25</a>). The scarlet cord she hung in the window (<a class='ref' data-ref='Josh 2:18'>Josh 2:18</a>) recalls the Passover blood: the mark of trust in a specific promise that brings the household through judgment. Christ is the true scarlet thread of redemption running from Genesis to Revelation.</p>",
+    "18": "<p>The warning against taking devoted things anticipates chapter 7. Covetousness in the face of sacred prohibition is the pattern of Eden: \"Do not eat\" (<a class='ref' data-ref='Gen 3:3'>Gen 3:3</a>) met with \"I saw, I desired, I took.\" Paul identifies covetousness as idolatry (<a class='ref' data-ref='Col 3:5'>Col 3:5</a>); it is the root sin that keeps covenant people from entering God's rest.</p>",
+    "19": "<p>Silver, gold, bronze, and iron are consecrated to YHWH's treasury — they belong to the LORD first. Colossians 1:16: \"All things were created through him and for him.\" The spoils of conquered darkness belong to Christ; the riches of the nations come into the house of God (<a class='ref' data-ref='Isa 60:5'>Isa 60:5</a>; <a class='ref' data-ref='Rev 21:24'>Rev 21:24</a>).</p>",
+    "20": "<p>The wall fell flat and every man went up straight before him — direct access, no gate required. Ephesians 2:14: Christ \"has broken down in his flesh the dividing wall of hostility.\" The wall that separates is abolished; the way into the holy city is opened directly. The veil torn top to bottom (<a class='ref' data-ref='Matt 27:51'>Matt 27:51</a>) is Jericho's wall in miniature.</p>",
+    "21": "<p>The <em>ḥērem</em> falls on all living things in the city — yet Rahab and her household are brought out. The eschatological judgment works the same pattern: universal judgment, remnant of grace. Noah and his household, Lot and his daughters, Rahab and her family — the righteous preserved through what destroys the old order (<a class='ref' data-ref='2 Pet 2:5-9'>2 Pet 2:5–9</a>).</p>",
+    "22": "<p>Joshua commands the two spies to bring Rahab out as they had sworn. The oath made in YHWH's name is kept even when Jericho burns. Christ's promises to his own are inviolable covenantal oaths: \"I will never leave you nor forsake you\" (<a class='ref' data-ref='Heb 13:5'>Heb 13:5</a>); \"None whom the Father gives me will I lose\" (<a class='ref' data-ref='John 6:39'>John 6:39</a>).</p>",
+    "23": "<p>Rahab is brought out with her father, mother, brothers, and all her family — household salvation. The jailer with his household (<a class='ref' data-ref='Acts 16:33'>Acts 16:33</a>), Cornelius's household (<a class='ref' data-ref='Acts 10:2'>Acts 10:2</a>), Lydia's household (<a class='ref' data-ref='Acts 16:15'>Acts 16:15</a>) — the covenant God consistently saves through households, not only isolated individuals.</p>",
+    "24": "<p>The city and everything in it burned with fire — purifying judgment. 1 Corinthians 3:13–15: each person's work will be tested by fire; what survives (the sacred treasury) is kept; what does not survive is burned. The Christian's life of obedience is the treasury brought through the fire of judgment.</p>",
+    "25": "<p>Rahab the prostitute dwelt in the midst of Israel \"to this day\" — permanent incorporation of the outsider who trusted. Matthew 1:5 places <strong>Rahab</strong> in the genealogy of Jesus Christ, making her faith a literal genetic link in the lineage of the Messiah. The Gentile woman of Jericho becomes an ancestor of the world's Savior; this is the logic of election running backward from Calvary.</p>",
+    "26": "<p>Joshua pronounces a curse on whoever rebuilds Jericho. 1 Kings 16:34 records the exact fulfillment under Hiel of Bethel in Ahab's era. Those who attempt to restore what God has devoted to destruction place themselves under the curse. Christ bore the curse so that his people need not (<a class='ref' data-ref='Gal 3:13'>Gal 3:13</a>).</p>",
+    "27": "<p>YHWH was with Joshua and his fame spread through all the land. The name <em>Yĕhôšûaʿ</em> means \"YHWH saves\" — Joshua's fame is a foretaste of the name above all names. The Great Commission sends the church into all the earth to spread the fame of the true Joshua (<a class='ref' data-ref='Phil 2:9-11'>Phil 2:9–11</a>): the name of Jesus proclaimed to every nation, tribe, tongue, and people.</p>"
   },
-  "2": {
-    "18": [
-      {"type": "allusion", "target": "Heb 11:31", "note": "The scarlet cord in the window — Rahab the prostitute's faith (she hid the spies and trusted in YHWH's deliverance) is remembered in the Hall of Faith; her scarlet cord sign has been read as a type of the blood of Christ marking the household for salvation"},
-      {"type": "allusion", "target": "Jas 2:25", "note": "Was not Rahab the prostitute also justified by works when she received the messengers and sent them out by another way? — James cites Rahab alongside Abraham as proof that faith works; her active concealment of the spies demonstrates living faith, not mere assent"}
-    ]
+  "7": {
+    "1": "<p>Achan commits <em>maʿal</em> — covenant-breaking treachery — in the devoted things. One person's unfaithfulness places the entire covenant community under God's displeasure. Paul parallels this in 1 Corinthians 5: hidden sin in the body affects the whole; \"a little leaven leavens the whole lump\" (<a class='ref' data-ref='1 Cor 5:6'>1 Cor 5:6</a>).</p>",
+    "2": "<p>Joshua sends spies to Ai and receives a confident report — the city seems small and easy. The false confidence after Jericho's miraculous fall is the pattern of spiritual pride: great victory followed by presumption that the next battle is trivial. Proverbs 16:18: \"Pride goes before destruction.\"</p>",
+    "3": "<p>\"Send only two or three thousand — do not weary all the people, for they are few.\" Military calculation without divine consultation (contrast Joshua 9:14). Self-sufficiency and accurate tactical analysis without prayer is still prayerlessness. The disciples who are sent out without the Spirit's power accomplish nothing lasting.</p>",
+    "4": "<p>Thirty-six men killed at Ai — the first casualties of the conquest. The sudden reversal shocks those who thought God's presence made them invulnerable regardless of their own obedience. The New Testament warns that gifts and outward works do not substitute for covenant faithfulness: \"I never knew you\" (<a class='ref' data-ref='Matt 7:23'>Matt 7:23</a>).</p>",
+    "5": "<p>Israel's hearts melt — the same phrase used of Canaan's terror before Israel in 2:11. The tables are turned: sin reverses the spiritual power differential that God's presence provides. Hidden covenantal failure transforms the terrifying into the terrified.</p>",
+    "6": "<p>Joshua tears his clothes and falls before the ark of YHWH until evening, the elders with him. Genuine lament brought before God rather than hidden or minimized is itself a sign of covenant relationship. Christ in Gethsemane prostrates himself before the Father with the weight of the world's sin upon him (<a class='ref' data-ref='Matt 26:39'>Matt 26:39</a>).</p>",
+    "7": "<p>\"Why did you bring us over the Jordan only to hand us to the Amorites?\" — the exact language of the wilderness generation's rebellion (<a class='ref' data-ref='Num 14:3'>Num 14:3</a>). Defeat tempts the covenant community to reinterpret the entire redemptive narrative as a cruel mistake. The disciples at Emmaus echo this: \"we had hoped that he was the one to redeem Israel\" — past tense, hope abandoned (<a class='ref' data-ref='Luke 24:21'>Luke 24:21</a>).</p>",
+    "8": "<p>\"What shall I say, when Israel has turned their backs before their enemies?\" Joshua identifies with the whole people's shame. Christ bears the shame of his people's failures; Hebrews 12:2 says he \"endured the cross, despising the shame\" — taking upon himself the dishonor that accumulates from Israel's covenant failures.</p>",
+    "9": "<p>\"What will you do for your great name?\" — the ultimate appeal: YHWH's reputation is at stake. This is Moses's intercession pattern (<a class='ref' data-ref='Num 14:13-16'>Num 14:13–16</a>) and Christ's prayer: \"Father, glorify your name\" (<a class='ref' data-ref='John 12:28'>John 12:28</a>). The cross is God's ultimate answer — his name glorified through judgment and mercy simultaneously.</p>",
+    "10": "<p>YHWH's command: \"Get up! Why have you fallen on your face?\" The time for lament passes when YHWH speaks. The risen Christ does not leave the disciples weeping — he redirects them from grief to mission (<a class='ref' data-ref='John 20:21'>John 20:21</a>). There is a time to mourn and a time to act; YHWH determines the transition.</p>",
+    "11": "<p>YHWH diagnoses the situation: Israel has sinned, transgressed the covenant, taken devoted things, stolen, deceived, and put the stolen items among their own possessions. The six-verb indictment is comprehensive. The New Testament diagnosis of human sin is similarly exhaustive — no part of the person untouched (<a class='ref' data-ref='Rom 3:10-18'>Rom 3:10–18</a>).</p>",
+    "12": "<p>\"I will be with you no more unless you destroy the devoted things.\" The presence of YHWH is the condition of victory; the condition of presence is holiness. Paul's instruction to expel the immoral man from Corinth (<a class='ref' data-ref='1 Cor 5:13'>1 Cor 5:13</a>) follows the same logic: the body cannot function as the dwelling of the Spirit while openly harboring what is devoted to destruction.</p>",
+    "13": "<p>\"Sanctify yourselves\" before appearing tomorrow — holiness must precede the covenant assembly. 1 Peter 1:15–16: \"Be holy in all your conduct, for it is written, 'Be holy, for I am holy.'\" God's holiness creates the context in which sin is exposed and dealt with.</p>",
+    "14": "<p>The lot will be cast by tribe, clan, family, man — the most granular possible identification process. YHWH's omniscience works through the lot (Proverbs 16:33). No layer of social protection hides the guilty individual from divine examination. Hebrews 4:13: \"Nothing is hidden from his sight; all things are naked and exposed to the eyes of him to whom we must give account.\"</p>",
+    "15": "<p>Whoever is taken with the devoted things shall be burned with fire — because he has transgressed the covenant. The severity of the punishment measures the severity of the crime: covenant violation is not a personal mistake but a communal catastrophe. Galatians 3:13: Christ redeemed us from the curse of the law by becoming a curse for us — absorbing this covenantal condemnation.</p>",
+    "16": "<p>Joshua rises early and brings Israel near by tribe — Judah is taken. The narrowing process begins from the broadest category downward. Divine justice passes through the layers of Israelite social structure like a needle threading cloth. The same movement from general to specific runs through the judgment scenes of Revelation.</p>",
+    "17": "<p>Judah is taken, then the clan of Zerah, then the household of Zabdi. No social structure — tribe, clan, family — can absorb or diffuse individual accountability before God. The individual stands before YHWH in the end (<a class='ref' data-ref='Rom 14:12'>Rom 14:12</a>; <a class='ref' data-ref='2 Cor 5:10'>2 Cor 5:10</a>).</p>",
+    "18": "<p>Achan son of Carmi of the tribe of Judah is taken. The irony: from Judah, the tribe of the scepter and the lion (<a class='ref' data-ref='Gen 49:9-10'>Gen 49:9–10</a>), comes the one who violates the covenant. Like Judas among the twelve, the betrayer comes from within the inner circle. Christ alone is the Judahite whose faithfulness is uncompromised.</p>",
+    "19": "<p>Joshua addresses Achan as \"my son\" — remarkable tenderness in the moment of exposure — and calls him to give glory to YHWH and make confession. Genuine confession is itself an act of worship: it acknowledges YHWH's rightness and the sinner's wrongness. Christ calls the sinner by name with an intimacy that is both exposing and restoring.</p>",
+    "20": "<p>Achan confesses: \"Truly I have sinned against YHWH God of Israel.\" The public named confession before the covenant assembly is the form of repentance that James 5:16 commends: \"Confess your sins to one another.\" Concealment is the enemy of healing; exposure before God and his people opens the path toward restoration.</p>",
+    "21": "<p>\"I saw... I coveted... I took\" — <em>rāʾîtî... waʾeḥmōd... wāʾeqqāḥēm</em> — the anatomy of every sin from Eden onward (<a class='ref' data-ref='Gen 3:6'>Gen 3:6</a>: \"she saw... it was desirable... she took\"). James 1:14–15 unpacks the same sequence: desire, enticement, sin, death. Christ reverses the pattern: he sees, he does not covet, he gives.</p>",
+    "22": "<p>Joshua's messengers run to the tent and find the items hidden with the silver underneath. Numbers 32:23: \"Your sin will find you out.\" No concealment survives divine investigation. Contrast with Christ: his tomb is empty because there is nothing to hide — the burial itself becomes the evidence of resurrection.</p>",
+    "23": "<p>The devoted things are spread before YHWH — a display for the covenant assembly. Paul in Ephesians 5:13: \"everything that is exposed becomes visible, and everything that becomes visible is light.\" What is hidden is poisonous; what is exposed to the light is healed.</p>",
+    "24": "<p>Joshua and all Israel take Achan with his sons, daughters, livestock, and all he has to the Valley of Achor. The corporate nature of the punishment reflects the corporate nature of the violation. The New Testament covenantal principle is the same in reverse: one man's obedience brings justification to many (<a class='ref' data-ref='Rom 5:18-19'>Rom 5:18–19</a>).</p>",
+    "25": "<p>\"Why have you troubled us? YHWH will trouble you today.\" <em>ʿĀkar</em> (trouble) gives the valley its name: Achor. Hosea 2:15 transforms this place of trouble into a door of hope. Christ enters the place of our trouble — the valley of the shadow of death (<a class='ref' data-ref='Ps 23:4'>Ps 23:4</a>) — and makes it the entrance to resurrection life. The very name of our condemnation becomes the place of breakthrough.</p>",
+    "26": "<p>A great heap of stones is raised over Achan — a permanent memorial of judgment. Yet Achor is later promised as a door of hope. The stone heap that marks judgment will be passed through by those who walk through death into life. Christ's resurrection reverses what the stones of burial sealed.</p>"
   },
-  "3": {
-    "17": [
-      {"type": "allusion", "target": "Matt 3:13", "note": "The people passed over on dry ground through the Jordan — the Jordan crossing (waters parted as at the Red Sea) is the typological background for Jesus's baptism in the Jordan: he enters the water of judgment and comes out the other side, inaugurating the new exodus; baptism as the new covenant Jordan-crossing"}
-    ]
-  },
-  "5": {
-    "13": [
-      {"type": "allusion", "target": "Rev 19:11-15", "note": "The commander of YHWH's army with his drawn sword — the divine warrior who appears to Joshua is the pre-incarnate Christ, the same figure who leads the armies of heaven in Revelation 19; the Joshua narrative is set in motion by the personal presence of the divine commander"}
-    ]
-  },
-  "21": {
-    "45": [
-      {"type": "allusion", "target": "Heb 4:8-9", "note": "Not one word of all the good promises that YHWH had made to the house of Israel had failed — Joshua's testimony of YHWH's complete faithfulness to his land-promises; yet Hebrews argues that if Joshua had given them rest, God would not have spoken of another day later on (Ps 95:7-8): the Canaan rest is real but not final, pointing to the eschatological sabbath-rest that remains for the people of God"}
-    ]
+  "8": {
+    "1": "<p>\"Do not fear and do not be dismayed\" — YHWH's word after Achan's removal and the defeat at Ai. The same command that opened the conquest (<a class='ref' data-ref='Josh 1:9'>Josh 1:9</a>) is renewed after failure. Christ speaks the same word to disciples after their failures: \"Peace, do not be afraid\" (<a class='ref' data-ref='Luke 24:36'>Luke 24:36</a>; <a class='ref' data-ref='John 20:19'>John 20:19</a>). Sin dealt with through confession and judgment opens the door to renewed divine mandate.</p>",
+    "2": "<p>This time YHWH allows Israel to keep the spoil and livestock — unlike Jericho's total <em>ḥērem</em>. Different stages of holy war have different rules; grace follows the absolute judgment of the first conquest. The full weight of judgment absorbed at the cross frees the subsequent age for inheritance.</p>",
+    "3": "<p>Thirty thousand chosen warriors sent by night to lie in ambush — a large and covert force. The night deployment of the decisive force recalls the Passover night, the hidden divine work that reverses the apparent order of power. What God does in the dark (<a class='ref' data-ref='John 19:41-42'>John 19:41–42</a> — Christ buried as the city sleeps) will be revealed in the morning's victory.</p>",
+    "4": "<p>\"Lie in ambush behind the city; do not go very far from the city, and all of you be ready.\" Precision and patience — the ambush force must hold position through the night without moving. The disciples waiting between Ascension and Pentecost (<a class='ref' data-ref='Acts 1:4'>Acts 1:4</a>) are commanded to stay in Jerusalem: readiness requires holding position at the appointed place until the signal comes.</p>",
+    "5": "<p>Joshua and the main force will approach Ai from the front and feign retreat. The strategy requires apparent vulnerability — walking toward the enemy looking like easy prey. Christ on the cross appears to be the defeated victim; those watching mock: \"He saved others, he cannot save himself\" (<a class='ref' data-ref='Matt 27:42'>Matt 27:42</a>). The apparent defeat is the precondition of the ambush's effectiveness.</p>",
+    "6": "<p>The men of Ai will say, \"They are fleeing before us as before\" — repeating their first-battle boast. The enemy's confidence in their previous victory sets the trap. Satan and the powers of this age were confident at the cross: \"rulers of this age... crucified the Lord of glory\" — not knowing that the cross was the ambush, not the defeat (<a class='ref' data-ref='1 Cor 2:7-8'>1 Cor 2:7–8</a>).</p>",
+    "7": "<p>When Israel draws them out, the ambush will rise from their place and seize the city. The hidden force, lying in darkness, rises to take possession. The resurrection of Christ is this moment: what lay hidden in the tomb rises to take possession of what appeared to belong to death. Paul: Christ \"disarmed the rulers and authorities and put them to open shame, by triumphing over them\" (<a class='ref' data-ref='Col 2:15'>Col 2:15</a>).</p>",
+    "8": "<p>Once the city is taken they are to set it on fire. YHWH uses different instruments of redemption in different eras while the ultimate destination remains consistent: purifying judgment and inheritance of the land.</p>",
+    "9": "<p>Joshua sends the ambush force away; they lie down west of Ai. Joshua himself stays that night in the valley. The night before the decisive engagement recalls Gethsemane: the leader remains in the valley while others are positioned for the battle ahead. The solitude before the climactic event is a pattern woven through redemptive history.</p>",
+    "10": "<p>Joshua rises early in the morning and musters the people. Early rising marks the urgency of covenant engagement — Abraham at Moriah (<a class='ref' data-ref='Gen 22:3'>Gen 22:3</a>), the women coming to the tomb (<a class='ref' data-ref='Mark 16:2'>Mark 16:2</a>), Christ himself going out to pray (<a class='ref' data-ref='Mark 1:35'>Mark 1:35</a>). The dawn belongs to those whose hope is in YHWH.</p>",
+    "11": "<p>All the fighting men approach directly from the north. YHWH arranges the topography of salvation history so that every move of his people draws the enemy toward the appointed end.</p>",
+    "12": "<p>Five thousand are set in ambush west of the city between Bethel and Ai. The layered preparation for the decisive moment reflects the comprehensive depth of divine providence: no single contingency is unplanned.</p>",
+    "13": "<p>The main force camps north; the rear guard west. The city is surrounded except for the opening to the east — the only exit into the trap. \"Where shall I flee from your presence?\" (<a class='ref' data-ref='Ps 139:7'>Ps 139:7</a>) is not a lament but a recognition that YHWH's encompassing presence allows no genuine escape.</p>",
+    "14": "<p>The king of Ai comes out at the <em>môʿēd</em> — the appointed time. The word <em>môʿēd</em> saturates the Levitical calendar. The king of Ai marches to his doom on the LORD's schedule without knowing it. Christ's opponents arrested him at Passover, the very appointed time designed for sacrificial death. No one could have arranged this except YHWH.</p>",
+    "15": "<p>Joshua and all Israel make as if they are beaten and flee toward the wilderness. \"None of the rulers of this age understood this, for if they had, they would not have crucified the Lord of glory\" (<a class='ref' data-ref='1 Cor 2:8'>1 Cor 2:8</a>). The cross looks like Israel at Ai — flight, vulnerability, defeat — the ambush is invisible to those who think they are winning.</p>",
+    "16": "<p>All the people in Ai are called to pursue, and they chase Israel away from the city. Death commits all its power to swallowing Christ — the great pursuit from Good Friday through Sheol — and in doing so vacates its stronghold. The city of death is taken from behind while its forces are occupied with the one who fled before them.</p>",
+    "17": "<p>Not a man remains in Ai or Bethel — the city is left open, undefended. Religious institutions aligned with the old order can be as empty as any other city when YHWH acts. The resurrection leaves no guardian at the tomb; the stone is rolled away from an already-empty grave.</p>",
+    "18": "<p>YHWH commands Joshua: \"Stretch out the <em>kiḏôn</em> (javelin) toward Ai, for I will give it into your hand.\" The outstretched javelin echoes Moses's outstretched hand at the Red Sea and at Rephidim (<a class='ref' data-ref='Exod 17:11'>Exod 17:11</a>). Christ's arms outstretched on the cross are the ultimate fulfillment: the signal that releases the decisive divine action.</p>",
+    "19": "<p>The ambush rises quickly from its place, runs into the city, and sets it on fire. The speed — \"quickly\" — matches the sudden reversal of resurrection morning. What lay hidden in the earth springs up and takes possession: the stone rolled away (<a class='ref' data-ref='Matt 28:2'>Matt 28:2</a>), the resurrection body appearing \"suddenly\" (<a class='ref' data-ref='Luke 24:36'>Luke 24:36</a>).</p>",
+    "20": "<p>The men of Ai look back and see the smoke of the city rising — no flight possible. Lot's wife looked back at the burning city and became a pillar of salt (<a class='ref' data-ref='Gen 19:26'>Gen 19:26</a>); Christ warns against looking back once the hand is on the plow (<a class='ref' data-ref='Luke 9:62'>Luke 9:62</a>). Those whose heart remains in the condemned city are trapped when it burns.</p>",
+    "21": "<p>When Joshua and all Israel see the smoke they turn back and strike the men of Ai. The Holy Spirit at Pentecost is the smoke-and-fire signal that coordinates the church's counterattack after the apparent retreat of the cross: the risen Christ turns back to complete the victory when the Spirit is poured out (<a class='ref' data-ref='Acts 2:32-33'>Acts 2:32–33</a>).</p>",
+    "22": "<p>Ai is caught between the two Israelite forces. Psalm 110:1: \"Sit at my right hand until I make your enemies your footstool.\" Christ's enemies are surrounded by the Father's decree and the Spirit's work; their only remaining question is timing, not outcome.</p>",
+    "23": "<p>The king of Ai is taken alive and brought before Joshua. Revelation 20:1–3: Satan bound and brought before the divine throne. The kings of the earth who set themselves against YHWH and his anointed (<a class='ref' data-ref='Ps 2:2'>Ps 2:2</a>) will stand before the one they opposed — and it is Christ who receives the nations as his inheritance.</p>",
+    "24": "<p>Israel returns to Ai and strikes it with the sword. Christ's victory is ultimately comprehensive: every knee will bow, every tongue confess (<a class='ref' data-ref='Phil 2:10-11'>Phil 2:10–11</a>). The final enemy, death itself, is destroyed last (<a class='ref' data-ref='1 Cor 15:26'>1 Cor 15:26</a>).</p>",
+    "25": "<p>Twelve thousand fell that day — all the men of Ai. The number twelve is redeemed in the new Jerusalem: twelve gates bearing the names of the twelve tribes and twelve foundations bearing the names of the twelve apostles (<a class='ref' data-ref='Rev 21:12-14'>Rev 21:12–14</a>) — completeness reclaimed from the number of the fallen enemy.</p>",
+    "26": "<p>Joshua did not draw back the hand holding the <em>kiḏôn</em> until all the inhabitants were devoted to destruction. Moses's exhausted arms held up by Aaron and Hur at Rephidim (<a class='ref' data-ref='Exod 17:12'>Exod 17:12</a>) point forward to Christ whose intercession never fails: he \"always lives to intercede\" for those who come to God through him (<a class='ref' data-ref='Heb 7:25'>Heb 7:25</a>).</p>",
+    "27": "<p>The livestock and spoil Israel keeps for themselves, as YHWH commanded. The inheritance of the saints: \"Come, you who are blessed by my Father, inherit the kingdom prepared for you\" (<a class='ref' data-ref='Matt 25:34'>Matt 25:34</a>). The spoil of the enemy becomes the inheritance of the redeemed; what the powers of darkness accumulated is distributed among the heirs of grace.</p>",
+    "28": "<p>Joshua burns Ai and makes it a permanent <em>tel</em> (desolate mound), a waste to this day. The irrevocable nature of YHWH's judgment on Ai prefigures Babylon's fall: \"So will Babylon the great city be thrown down with violence, and will be found no more\" (<a class='ref' data-ref='Rev 18:21'>Rev 18:21</a>).</p>",
+    "29": "<p>The king of Ai is hanged on a tree until evening; at sunset Joshua takes the body down. Deuteronomy 21:22–23 commands that a hanged man's body must not remain on the tree overnight, for he is cursed of God. Paul applies this directly to Christ: \"Christ redeemed us from the curse of the law by becoming a curse for us — for it is written, 'Cursed is everyone who hangs on a tree'\" (<a class='ref' data-ref='Gal 3:13'>Gal 3:13</a>). The precise procedure of taking the body down before sunset is the procedure Joseph of Arimathea performs for Christ (<a class='ref' data-ref='John 19:38-42'>John 19:38–42</a>).</p>",
+    "30": "<p>Joshua builds an altar to YHWH on <strong>Mount Ebal</strong> — the mountain of cursing in Deuteronomy 27. The altar of worship is erected at the place of the covenant curse. The cross is the ultimate altar built at the place of cursing: Christ crucified outside the gate (<a class='ref' data-ref='Heb 13:12'>Heb 13:12</a>), at the place of the skull, under the full weight of the curse — and worship rises from that place.</p>",
+    "31": "<p>The altar is built of uncut stones — no iron tool has touched them (Exodus 20:25). Human skill must not shape what belongs entirely to YHWH. \"The foolishness of God is wiser than human wisdom\" (<a class='ref' data-ref='1 Cor 1:25'>1 Cor 1:25</a>). The instrument of salvation comes rough and unshaped by the wisdom of this age.</p>",
+    "32": "<p>Joshua writes on the stones a copy of the Torah of Moses. The law written on stone anticipates the law written on hearts: Jeremiah 31:33. Paul in 2 Corinthians 3:3: \"you are a letter from Christ... written not with ink but with the Spirit of the living God, not on tablets of stone but on tablets of human hearts.\" The stone inscription at Ebal is the covenant technology being superseded by the new covenant's inward writing.</p>",
+    "33": "<p>All Israel stands on two sides of the ark — half toward Mount Gerizim (blessing), half toward Mount Ebal (curse) — with the <strong>ark of the covenant</strong> in the valley between. Christ stands in the same position: taking the curse upon himself (<a class='ref' data-ref='Gal 3:13'>Gal 3:13</a>) to mediate the blessing to Abraham's children of faith (<a class='ref' data-ref='Gal 3:14'>Gal 3:14</a>). The covenant mediator stands in the valley between the two mountains.</p>",
+    "34": "<p>Joshua reads all the words of the law — blessing and curse — exactly as written. This double reading prepares for the cross where both poles are simultaneously fulfilled: the curse executed on Christ, the blessing released to those in him.</p>",
+    "35": "<p>\"There was not a word of all that Moses commanded that Joshua did not read before all the assembly of Israel, and the women, and the little ones, and the sojourners who lived among them.\" The inclusive scope — women, children, resident aliens — anticipates the comprehensive reach of the new covenant. Galatians 3:28: \"neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus.\" The covenant community at Shechem prefigures the table of Christ where every category of human exclusion is overcome.</p>"
   }
 }
-
-ORIGINAL = {
-  "1": {
-    "1": "<p>Joshua's Hebrew name (<em>Yehoshua</em>) means 'YHWH saves' — the same name as Jesus (Greek <em>Iēsous</em>, from the LXX transliteration of <em>Yehoshua</em>). The name-identity is not coincidental: Hebrews 4:8 uses the identity of names to make a theological argument ('if Joshua [<em>Iēsous</em>] had given them rest ...'). Joshua is Israel's deliverer who leads the people into the promised land after Moses; Jesus is the deliverer who leads his people into the ultimate rest that Canaan only shadowed. The structural parallel is complete: Moses (law) could not bring Israel into rest; Joshua/Jesus (the one YHWH saves) is the one who completes the journey.</p>"
-  },
-  "2": {
-    "18": "<p><strong>et tikvat chut hashani hazeh tiksheri bevad haChalon</strong>: 'this scarlet thread [<em>tikvat chut hashani</em>] you shall tie in the window.' <em>Tikvah</em> can mean both 'cord/thread' and 'hope' — some patristic interpreters (Justin Martyr, Origen) noted that the word for Rahab's hope (<em>tikvah</em>) is the same as the word for her scarlet cord; her hope and the scarlet cord are linguistically the same thing. Whether or not this wordplay is original, the typological point is clear: the scarlet cord marks the household for salvation as the Passover blood marked the doorposts; those inside are safe, those outside are not. Rahab's inclusion in Matthew's genealogy (Matt 1:5) is a Gentile woman's faith being woven into the Messiah's line.</p>"
-  }
-}
-
-CONTEXT = {
-  "1": {
-    "1": "<p>Joshua narrates the conquest of Canaan under Joshua's leadership (ca. 1406-1380 BCE on the early date, ca. 1230-1200 on the late date). It was written to show the fulfillment of YHWH's land-promises to the patriarchs (Gen 15:18-21) and to demonstrate the covenant consequences of obedience and disobedience. The book presents an idealized conquest (all the land was taken, 11:23; 21:45) alongside a realistic acknowledgment of remaining enclaves (13:1-7; 15:63; 16:10) — both perspectives are true at different levels. The conquest's morality (the <em>cherem</em>, the total destruction commanded) has been a central challenge in biblical ethics; the NT never repeats the command and applies it only to the final eschatological judgment, not to earthly conflict.</p>"
-  }
-}
-
-CHRIST = {
-  "1": {
-    "3": "<p>A type: 'Every place that the sole of your foot will tread upon I have given you.' Joshua leads the second generation of Israel into their inheritance — the land promise made to Abraham (Gen 15:18-21), repeated to Isaac and Jacob, promised through Moses, now fulfilled through Joshua. Jesus is the greater Joshua: his name is the same, his mission is analogous (leading his people into the promised inheritance), and the rest he gives exceeds what Canaan could provide. Hebrews 4:1-11 carefully argues that the Canaan-rest was provisional: 'if Joshua had given them rest, God would not have spoken later of another day' (4:8); the true rest is the sabbath-rest that remains for the people of God, entered by faith in Christ (4:11).</p>"
-  },
-  "2": {
-    "18": "<p>A type: 'Tie this scarlet cord in the window and bring your father and mother, your brothers and all your father's household into your house.' Rahab's scarlet cord has been typologically read as the blood of Christ marking the household for salvation — and the parallel is structurally exact: an outsider (a Gentile, a prostitute) is incorporated into God's covenant people by faith expressed through a sign (scarlet cord / blood); everyone inside the marked household is saved; everyone outside is not. Matthew's genealogy (Matt 1:5) incorporates Rahab explicitly into the Messiah's lineage — the Gentile woman of faith is literally in the line of Christ. Rahab is one of the Bible's clearest illustrations that faith, not ethnicity, is the covenant criterion.</p>"
-  },
-  "21": {
-    "45": "<p>A direct revelation: 'Not one word of all the good promises that the LORD had made to the house of Israel had failed; all came to pass.' Joshua's testimony to YHWH's promise-keeping is the OT's most comprehensive affirmation of divine faithfulness to the covenant. Paul applies the same principle to the gospel: 'For all the promises of God find their Yes in him. That is why it is through him that we utter our Amen to God for his glory' (2 Cor 1:20). Christ is the fulfillment of every OT promise — not just some, but all. The land-promises of Joshua are included: their ultimate referent is the new creation inheritance (Rom 4:13: the promise that he would be heir of the world; Heb 11:16: they desire a better country, a heavenly one).</p>"
-  }
-}
-
-def main():
-    e = load_echo('joshua')
-    merge_echo(e, ECHO)
-    save_echo('joshua', e)
-
-    c = load_comm('mkt-original', 'joshua')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'joshua', c)
-
-    c = load_comm('mkt-context', 'joshua')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'joshua', c)
-
-    c = load_comm('mkt-christ', 'joshua')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'joshua', c)
-
-    print('joshua: all 4 layers written')
 
 if __name__ == '__main__':
-    main()
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'joshua.json').read_text())
+    existing = load_comm('mkt-christ', 'joshua')
+    merge_comm(existing, DATA)
+    save_comm('mkt-christ', 'joshua', existing)
+
+    all_ok = True
+    for ch in ['6', '7', '8']:
+        expected = set(il[ch].keys())
+        got = set(existing.get(ch, {}).keys())
+        missing = expected - got
+        if missing:
+            print(f'  ch {ch}: MISSING verses {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'ch {ch}: complete ({len(got)} verses)')
+
+    if all_ok:
+        chs_done = sorted([c for c in existing.keys()], key=int)
+        print(f'All verses present ✓')
+        print(f'Joshua mkt-christ chapters now: {chs_done} ({len(chs_done)}/24)')
+    else:
+        print('INCOMPLETE — fix missing verses above')
