@@ -1,10 +1,16 @@
 <#
 .SYNOPSIS
-    Push all local files to the remote Linux machine, skipping only excluded dirs/files.
+    Push one or more local files or directories to the remote Linux machine.
 
 .DESCRIPTION
     Compares local files against the remote (by MD5 hash, or size+mtime with -SkipHash)
-    and uploads only what is new or changed. Remote-only files are reported but left alone
+    and uploads only what is new or changed.
+
+    When a directory is passed via -Target, all remote files under that directory
+    that no longer exist locally are automatically deleted (force-sync). File targets
+    leave remote-only files alone unless -DeleteExtra is also set.
+
+    Remote-only files outside any targeted directory are reported but left alone
     unless -DeleteExtra is specified.
 
 .PARAMETER RemoteHost
@@ -19,16 +25,20 @@
 .PARAMETER LocalPath
     Local path to sync FROM. Default: current repo root.
 
+.PARAMETER Target
+    Optional file or directory path(s) to sync. Accepts a single value or an array.
+    Each entry may be an absolute path or a path relative to LocalPath
+    (e.g. "topics\john" or "assets\css\style.css").
+    Directory targets force-delete remote-only files within their scope.
+    When omitted, only root-level files are scanned (non-recursive) and remote-only
+    root files are automatically deleted to keep the root in sync.
+
 .PARAMETER DryRun
     Show what would change without touching any files.
 
 .PARAMETER DeleteExtra
     Also delete remote files that no longer exist locally (within non-excluded paths).
-
-.PARAMETER Target
-    Optional file or directory to sync. Accepts an absolute path or a path relative to
-    LocalPath (e.g. "topics\john" or "assets\css\style.css"). When omitted, all files
-    are considered (subject to ExcludeDirs / ExcludeFiles).
+    Directory targets already do this automatically for their own scope.
 
 .PARAMETER SkipHash
     Fall back to size+mtime comparison instead of MD5 hash comparison.
@@ -38,19 +48,20 @@
     .\Sync-ToRemote.ps1
     .\Sync-ToRemote.ps1 -DryRun
     .\Sync-ToRemote.ps1 -Target topics\john
-    .\Sync-ToRemote.ps1 -Target "assets\css\style.css" -DryRun:$false
+    .\Sync-ToRemote.ps1 -Target @("topics\john", "assets\css\style.css")
+    .\Sync-ToRemote.ps1 -Target "assets\css\style.css" -DryRun
     .\Sync-ToRemote.ps1 -DeleteExtra
     .\Sync-ToRemote.ps1 -SkipHash
 #>
 param(
-    [string]  $RemoteHost  = "192.168.86.50",
-    [string]  $RemoteUser  = "domad",
-    [string]  $RemotePath  = "/home/domad/Documents/bible-study-website",
-    [string]  $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
-    [string]  $Target      = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io\working\audit-agent-guide.md",
-    [switch]  $DryRun      = $false,
-    [switch]  $DeleteExtra = $false,
-    [switch]  $SkipHash    = $false
+    [string]   $RemoteHost  = "192.168.86.50",
+    [string]   $RemoteUser  = "domad",
+    [string]   $RemotePath  = "/home/domad/Documents/bible-study-website",
+    [string]   $LocalPath   = "C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io",
+    [string[]] $Target      = @('C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io\working'),
+    [switch]   $DryRun      = $false,
+    [switch]   $DeleteExtra = $false,
+    [switch]   $SkipHash    = $false
 )
 
 $ErrorActionPreference = "Stop"
@@ -61,11 +72,19 @@ $ExcludeDirs = @('.git', 'node_modules', '.claude')
 # Individual files to ignore on both sides — matched by filename anywhere in the tree
 $ExcludeFiles = @('.gitattributes')
 
-# ── resolve -Target to a repo-relative backslash path ─────────────────────────
+# ── resolve -Target entries ────────────────────────────────────────────────────
 
-$TargetRel = ""
-if ($Target) {
-    $t = $Target.Trim()
+# INTENT: Resolve each -Target to a repo-relative backslash path; track which targets
+#   are local directories so they get automatic force-delete in their scope.
+# CHANGE? If LocalPath changes, the substring extraction below must still trim correctly.
+# VERIFY: With multiple targets, $TargetRels should contain one entry per input and
+#   $DirTargetRels should contain only the ones that are directories on disk.
+
+$TargetRels    = [System.Collections.Generic.List[string]]::new()
+$DirTargetRels = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+
+foreach ($rawTarget in $Target) {
+    $t = $rawTarget.Trim()
     if ([System.IO.Path]::IsPathRooted($t)) {
         $lpTrimmed = $LocalPath.TrimEnd('\')
         if (-not $t.StartsWith($lpTrimmed, [System.StringComparison]::OrdinalIgnoreCase)) {
@@ -74,10 +93,15 @@ if ($Target) {
         }
         $t = $t.Substring($lpTrimmed.Length)
     }
-    $TargetRel = ($t.TrimStart('\').TrimStart('/')) -replace '/', '\'
-    if (-not $TargetRel) {
-        Write-Error "-Target resolved to an empty path — pass a file or subdirectory."
+    $rel = ($t.TrimStart('\').TrimStart('/')) -replace '/', '\'
+    if (-not $rel) {
+        Write-Error "-Target '$rawTarget' resolved to an empty path — pass a file or subdirectory."
         exit 1
+    }
+    $TargetRels.Add($rel)
+    $localFull = Join-Path $LocalPath $rel
+    if (Test-Path $localFull -PathType Container) {
+        $DirTargetRels.Add($rel) | Out-Null
     }
 }
 
@@ -87,10 +111,13 @@ function Write-Header($msg) {
     Write-Host "`n=== $msg ===" -ForegroundColor Cyan
 }
 
-# Returns true when relPath should be included given the active -Target (if any).
 function Test-InTarget($relPath) {
-    if (-not $TargetRel) { return $true }
-    return ($relPath -eq $TargetRel -or $relPath -like "$TargetRel\*")
+    # No targets = root-only mode: only consider files directly in the root (no path separator)
+    if ($TargetRels.Count -eq 0) { return $relPath -notlike '*\*' }
+    foreach ($t in $TargetRels) {
+        if ($relPath -eq $t -or $relPath -like "$t\*") { return $true }
+    }
+    return $false
 }
 
 function Test-Excluded($relPath) {
@@ -106,41 +133,71 @@ function Test-Excluded($relPath) {
     return $false
 }
 
+# INTENT: A remote-only file should be deleted if -DeleteExtra is set globally, if it
+#   falls under a directory target (auto force-sync), or if we're in root-only mode
+#   (no targets) — root-only mode always force-syncs the root so stale remote files
+#   at the top level are cleared automatically.
+# CHANGE? $DirTargetRels is populated from -Target entries that resolve to local dirs;
+#   if target resolution logic changes, this check must also change. Root-only mode
+#   relies on Test-InTarget already filtering out subdirectory files from the remote
+#   manifest, so $relPath here is always a root file when $TargetRels.Count -eq 0.
+# VERIFY: -DryRun with no targets should show remote root files as "[will delete]";
+#   with a specific dir target, only files under that dir should show "[will delete]".
+function Test-ShouldDelete($relPath) {
+    if ($DeleteExtra) { return $true }
+    if ($TargetRels.Count -eq 0) { return $true }
+    foreach ($dirTarget in $DirTargetRels) {
+        if ($relPath -eq $dirTarget -or $relPath -like "$dirTarget\*") { return $true }
+    }
+    return $false
+}
+
 # ── 1. Build local file manifest ──────────────────────────────────────────────
 
-$hashMode = -not $SkipHash
-$targetLabel = if ($TargetRel) { " → $TargetRel" } else { "" }
+$hashMode    = -not $SkipHash
+$targetLabel = if ($TargetRels.Count -gt 0) { " → $($TargetRels -join ', ')" } else { "" }
 Write-Header "Scanning local files$targetLabel$(if ($hashMode) { ' (MD5 mode)' } else { ' (size+mtime mode)' })"
 
 $localFiles = [System.Collections.Generic.Dictionary[string, psobject]]::new(
     [System.StringComparer]::OrdinalIgnoreCase
 )
 
-$scanRoot = if ($TargetRel) { Join-Path $LocalPath $TargetRel } else { $LocalPath }
-
-if (Test-Path $scanRoot) {
-    Get-ChildItem -Path $scanRoot -Recurse -File | ForEach-Object {
-        $relPath = $_.FullName.Substring($LocalPath.TrimEnd('\').Length).TrimStart('\')
-        if (-not (Test-Excluded $relPath) -and (Test-InTarget $relPath)) {
-            if ($hashMode) {
-                $hash = (Get-FileHash $_.FullName -Algorithm MD5).Hash.ToLower()
-                $localFiles[$relPath] = [pscustomobject]@{
-                    FullPath = $_.FullName
-                    Hash     = $hash
-                }
-            } else {
-                $epochUtc = ([System.DateTimeOffset]::new($_.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
-                $localFiles[$relPath] = [pscustomobject]@{
-                    FullPath  = $_.FullName
-                    Timestamp = $epochUtc
-                    Size      = $_.Length
-                }
-            }
+# INTENT: Add a single local file item to the manifest, computing hash or mtime depending
+#   on mode. Called for both direct file targets and files discovered via directory recursion.
+# CHANGE? If hash/mtime fields change, update the diff logic in section 3 to match.
+# VERIFY: $localFiles should contain an entry for every non-excluded in-target local file.
+function Add-LocalFile($item) {
+    $relPath = $item.FullName.Substring($LocalPath.TrimEnd('\').Length).TrimStart('\')
+    if (Test-Excluded $relPath) { return }
+    if ($hashMode) {
+        $hash = (Get-FileHash $item.FullName -Algorithm MD5).Hash.ToLower()
+        $localFiles[$relPath] = [pscustomobject]@{ FullPath = $item.FullName; Hash = $hash }
+    } else {
+        $epochUtc = ([System.DateTimeOffset]::new($item.LastWriteTimeUtc)).ToUnixTimeMilliseconds() / 1000.0
+        $localFiles[$relPath] = [pscustomobject]@{
+            FullPath  = $item.FullName
+            Timestamp = $epochUtc
+            Size      = $item.Length
         }
     }
 }
 
-$scopeNote = if ($TargetRel) { "target: $TargetRel" } else { "excluding dirs: $($ExcludeDirs -join ', '); files: $($ExcludeFiles -join ', ')" }
+if ($TargetRels.Count -eq 0) {
+    Get-ChildItem -Path $LocalPath -File | ForEach-Object { Add-LocalFile $_ }
+} else {
+    foreach ($rel in $TargetRels) {
+        $scanRoot = Join-Path $LocalPath $rel
+        if (Test-Path $scanRoot -PathType Leaf) {
+            Add-LocalFile (Get-Item $scanRoot)
+        } elseif (Test-Path $scanRoot -PathType Container) {
+            Get-ChildItem -Path $scanRoot -Recurse -File | ForEach-Object { Add-LocalFile $_ }
+        } else {
+            Write-Warning "  Target '$rel' not found locally — will still check remote for deletions."
+        }
+    }
+}
+
+$scopeNote = if ($TargetRels.Count -gt 0) { "targets: $($TargetRels -join '; ')" } else { "excluding dirs: $($ExcludeDirs -join ', '); files: $($ExcludeFiles -join ', ')" }
 Write-Host "Local:  $($localFiles.Count) files found ($scopeNote)"
 
 # ── 2. Fetch remote file manifest via SSH ─────────────────────────────────────
@@ -227,24 +284,37 @@ foreach ($kvp in $localFiles.GetEnumerator()) {
 }
 
 # Files that exist on remote but not locally
-$remoteOnly = $remoteFiles.Keys | Where-Object { -not $localFiles.ContainsKey($_) }
+$remoteOnly    = @($remoteFiles.Keys | Where-Object { -not $localFiles.ContainsKey($_) })
+$toDelete      = @($remoteOnly | Where-Object { Test-ShouldDelete $_ })
+$remoteOnlyCount = $remoteOnly.Count
+
 foreach ($f in $remoteOnly) {
-    Write-Host "  REMOTE  $f" -ForegroundColor DarkGray
+    if (Test-ShouldDelete $f) {
+        Write-Host "  REMOTE  $f  [will delete]" -ForegroundColor DarkRed
+    } else {
+        Write-Host "  REMOTE  $f" -ForegroundColor DarkGray
+    }
 }
 
-$remoteOnlyCount = @($remoteOnly).Count
-
 Write-Host ""
-Write-Host "  To upload    : $($toUpload.Count)"  -ForegroundColor White
-Write-Host "  Unchanged    : $unchanged"           -ForegroundColor White
-Write-Host "  Remote-only  : $remoteOnlyCount"     -ForegroundColor White
+Write-Host "  To upload    : $($toUpload.Count)"      -ForegroundColor White
+Write-Host "  Unchanged    : $unchanged"               -ForegroundColor White
+if ($toDelete.Count -gt 0) {
+    Write-Host "  To delete    : $($toDelete.Count)"   -ForegroundColor Red
+    $keptCount = $remoteOnlyCount - $toDelete.Count
+    if ($keptCount -gt 0) {
+        Write-Host "  Remote-only (kept) : $keptCount" -ForegroundColor DarkGray
+    }
+} else {
+    Write-Host "  Remote-only  : $remoteOnlyCount"     -ForegroundColor White
+}
 
 if ($DryRun) {
     Write-Host "`n[DRY RUN] No files were modified." -ForegroundColor Magenta
     exit 0
 }
 
-if ($toUpload.Count -eq 0 -and (-not $DeleteExtra -or $remoteOnlyCount -eq 0)) {
+if ($toUpload.Count -eq 0 -and $toDelete.Count -eq 0) {
     Write-Host "`nAlready up to date." -ForegroundColor Green
     exit 0
 }
@@ -306,12 +376,13 @@ if ($toUpload.Count -gt 0) {
     }
 }
 
-# ── 5. Delete remote-only files (opt-in) ──────────────────────────────────────
+# ── 5. Delete remote-only files ───────────────────────────────────────────────
+# Deletes if -DeleteExtra is set, or if the file is under a directory target.
 
-if ($DeleteExtra -and $remoteOnlyCount -gt 0) {
-    Write-Header "Deleting $remoteOnlyCount remote-only files"
+if ($toDelete.Count -gt 0) {
+    Write-Header "Deleting $($toDelete.Count) remote-only files"
 
-    foreach ($f in $remoteOnly) {
+    foreach ($f in $toDelete) {
         $remoteFile = $RemotePath + '/' + ($f -replace '\\', '/')
         ssh "${RemoteUser}@${RemoteHost}" "rm -f '$remoteFile'"
         Write-Host "  DELETED $f" -ForegroundColor Red
@@ -326,4 +397,4 @@ if ($DeleteExtra -and $remoteOnlyCount -gt 0) {
 # ── Done ──────────────────────────────────────────────────────────────────────
 
 Write-Header "Done"
-Write-Host "Uploaded: $($toUpload.Count)  |  Remote-only: $remoteOnlyCount  |  Unchanged: $unchanged"
+Write-Host "Uploaded: $($toUpload.Count)  |  Deleted: $($toDelete.Count)  |  Unchanged: $unchanged"

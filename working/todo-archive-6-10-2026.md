@@ -5,6 +5,540 @@ See `working/TODO.md` for the active task list.
 
 ---
 
+## Completed 2026-06-10 (cleanup pass)
+
+### TRB — Three-Tier Study Content System (Phases A, B, C1, D)
+
+*Planned 2026-06-07. Infrastructure, retrofit, and first Deep Dive all complete.*
+
+#### Phase A — Foundation
+
+- [x] **TRB-A1 `data/books-content.json`** — Created master content manifest for all 66 books. Each entry has `guide`, `deep_dive`, `commentary` with `exists` flag, `url`, and for commentary: `coverage`, `chapters_done`, `chapters_total`. Seeded current state: revelation/romans/sermon-on-the-mount/psalms `deep_dive.exists=true`; study-guides/hebrews, ephesians, etc. `guide.exists=true`; all commentary `exists=false`. Also included `topical` array for non-book topic pages (prayer, justification, etc.).
+
+- [x] **TRB-A2 `studies/index.html`** — New Studies hub page. JS-rendered from `data/books-content.json`. Organized by testament (OT/NT) → book. Each book row/card shows which tiers exist as pill badges (Guide / Deep Dive / Commentary — greyed if not built). Filter bar: Testament, Genre, "Has content" toggle. Topical articles get a separate section below. This replaces `topics/index.html` as the content discovery surface.
+
+- [x] **TRB-A3 Update `main.js` sidebar** — Removed Library subgroup items (Bible Book Overviews, Study Guides, Topical Articles) and their individual entries. Replaced with single `📚 Studies` → `/studies/` link. Added `_bookContent` fetch from `data/books-content.json` alongside `topics.json`. Rebuilt `BOOK_STUDIES` map from `_bookContent` instead of `topics.json`. Added `getBannerItems(bookId, ch, v, bookContent)` function for tier-aware reader banner logic.
+
+- [x] **TRB-A4 `.bk-tier-nav` CSS** — Added tier navigation strip component to `assets/css/book-study.css`. Sticky top bar, uses `--bk-accent` for active tab indicator. Active state driven by `[data-tier=X] [data-tier-item=X]` CSS selector (no JS needed). `[hidden]` on `<li>` suppresses missing tiers.
+
+#### Phase B — Retrofit Existing Pages
+
+- [x] **TRB-B1 Migrate `topics/revelation/index.html`** — Copied current page to `topics/revelation/deep-dive.html`. Replaced `index.html` with a new slim Book Guide (using `_template-book`). Added tier nav strip to both pages. Updated `data/books-content.json` entry.
+
+- [x] **TRB-B2 Migrate `topics/romans/index.html`** — Same pattern. New `index.html` Book Guide. Current page → `deep-dive.html`. Tier nav strip on both. Guide link in strip → `study-guides/romans-1-8/` (partial, note chs 1–8).
+
+- [x] **TRB-B3 Migrate `topics/sermon-on-the-mount/index.html` and `topics/psalms/index.html`** — Same pattern as B1/B2.
+
+- [x] **TRB-B4 Add tier strips to existing study guides** — Added the `bk-tier-nav` HTML (lighter variant: Guide active, Deep Dive link if exists, ← All Studies) to `study-guides/hebrews/`, `study-guides/ephesians/`, `study-guides/romans-1-8/`, `study-guides/sermon-on-the-mount/`, `study-guides/psalms/`.
+
+- [x] **TRB-B5 Deprecate `topics/index.html`** — Added `<meta http-equiv="refresh" content="0;url=/studies/">` redirect. Updated any hardcoded links to `topics/index.html` that exist in the codebase.
+
+#### Phase C — Infrastructure
+
+- [x] **TRB-C1 WS infrastructure** — `WS_PROGRESS.md`, `WS_AGENT_GUIDE.md`, `WS_SCRIPT_GUIDE.md`, `WS_AGENT_PROMPT.md` created 2026-06-07.
+
+#### Phase D — First New Deep Dive (Hebrews)
+
+- [x] **TRB-D1 `topics/_template-book/deep-dive.html`** — Created Deep Dive template. Structure: sticky sidebar nav with section links, chapter accordions (`<details>`), tabs for interpretive schools (if applicable), key term tables, canonical connections section. Based on current `topics/revelation/index.html` design language.
+
+- [x] **TRB-D2 `topics/hebrews/deep-dive.html`** — Created Deep Dive for Hebrews using the new template. Content: authorship/date/audience, the argument of Hebrews (Christological superiority), key OT typological connections (Melchizedek, tabernacle, Day of Atonement), chapter-by-chapter breakdown, five warning passages, key terms (κρείττων, ἀρχιερεύς, τελειόω, etc.). Updated `books-content.json`.
+
+---
+
+### SW-Q · Workshop UX & Source Data — Hard Bugs
+
+*Identified 2026-06-07 via full workshop audit.*
+
+#### Hard Bugs
+
+- [x] **SW-Q1 `_toggleDeck` rename** — Fixed: `_fcToggleDeck` call corrected at workshop.js.
+
+- [x] **SW-Q2 Book Study "Key Terms" shows Strong's codes** — Fixed: resolves lemma/gloss via `_getEntry`; phase1/phase2 pre-loaded in `_renderBookStudy`.
+
+- [x] **SW-Q3 Book Study "Idioms" tab always empty** — Fixed: filter changed to `strongs_trigger_gr` / `strongs_trigger_he` by language.
+
+#### Medium UX Issues
+
+- [x] **SW-Q4 Word Study concordance dead-ends without a passage** — Fixed: shows book-distribution heatmap from `entry._bookFreq` when `_interData` is null.
+
+- [x] **SW-Q5 Book Study "Themes" tab too shallow** — Fixed: looks up each framework ID in `_culturalCache.frameworks` and renders `summary` + `what_it_means_for_reading` prose under each chip.
+
+- [x] **SW-Q6 Notice banner collapses by default on revisit** — Fixed: uses `sessionStorage` keyed on passage ref; opens on first study, collapses on revisit.
+
+- [x] **SW-Q7 Recent passage history missing** — Fixed: `_pushRecentPassage` / `_getRecentPassages` (max 8) with localStorage; nav column shown in verse mode with clickable ref buttons.
+
+---
+
+### SW-R · Workshop — Navigation Promotion
+
+*Move "Original Language Study" from a bottom-left sidebar link to the primary site navigation.*
+
+- [x] **SW-R1 Primary nav entry** — Added `🔬 Original Language Study` to NAV.tools in `main.js`.
+- [x] **SW-R2 Remove old nav placement** — No old placement existed; workshop was not previously in the nav.
+- [x] **SW-R3 Page title consistency** — Already "Original Language Study" in both `<title>` and topbar.
+- [x] **SW-R4 PWA cache** — Already in SHELL_URLS (lines 219–221 of sw.js).
+
+---
+
+### SW-T · Workshop — Verse Study Layout Redesign
+
+*Current 3-column layout (nav | tiles | dossier) is non-functional on any screen narrower than ~1400px and buries the dossier. New layout: 50/50 split — left = verse/tiles, right = tabs (dossier is a tab, not a column).*
+
+#### Layout
+
+- [x] **SW-T1 50/50 two-panel layout for verse mode** — `.sw-verse-split` grid `1fr 1fr` inside `sw-passage-view`. Left=tiles, right=tabs. `ws-col--dossier` hidden in verse mode via CSS.
+
+- [x] **SW-T2 Dossier as a right-panel tab** — "Word" tab added to passage tab bar. `_openWord` in verse mode activates the tab and renders into `sw-tab-content` via `_renderDossier(code, tabCont)`. `_renderDossier` now accepts optional `targetEl` param.
+
+- [x] **SW-T3 Original-language word-order toggle** — "Order" button in passage header (Hebrew passages only); toggles `sw-ptiles--rtl` class → `.sw-tiles-wrap { direction: rtl }` so Hebrew tiles flow right-to-left. Button highlights when active.
+
+- [x] **SW-T4 Next / Previous verse navigation** — `sw-verse-nav-bar` with Prev/Next buttons; `_navVerse(±1)` function using `_interData` chapter/verse keys for boundaries.
+
+- [x] **SW-T5 Grammar Rules tab** — "Grammar" tab added between Commentary and Word. `_renderGrammarTab(parsed, container)` async function: layer-1 = per-verse token table (lemma, gloss, code, particle badge or POS); layer-2 = mkt-original prose notes from `data/commentary/mkt-original/{bookId}.json` (falls back gracefully for OT/missing books).
+
+---
+
+### SW-U · Workshop — Word Study Redesign (completed items)
+
+- [x] **SW-U1 Dictionary panel redesign** — 50/50 split when dict open: `sw-ws-body-area` gains `sw-ws-body-area--dict-open` class (`grid-template-columns: 1fr 1fr`). Left col (`sw-ws-dict-col`) holds filters + dict list; right col (`sw-ws-body`) is word detail. Toggling dict closes left col and reverts to single column. Dict toggle button highlights with `ws-btn--active` when open.
+
+- [x] **SW-U2 Full dossier in word detail** — `_renderWordStudyPanel` already called all major shared `_render*` functions. Added the missing LXX Bridge (`_renderLxxBridge`) for Hebrew words after the lexical sources section. All other sections were already unified with `_renderDossier`.
+
+- [x] **SW-U5 Verse study dossier = compact version** — `_renderDossier(code, targetEl, compact)` now accepts a `compact` param. When compact (verse mode, non-translation): omits author freq, semantic neighborhood, cognates, second-temple, extrabiblical, LXX bridge, book distribution, tiers, per-book defaults, decision log, actions; caps attested uses at 3; hides depth toggle. Adds "→ Full Word Study" button that calls `_setStudyMode('word')` + `_openWord(code)`. `_openWord` passes `compact=!_translationMode` when rendering to verse tab.
+
+---
+
+### UI Reimagination — Complete (2026-06-06)
+
+- [x] **Verse search bug fixed**: _studyPassage() now awaits loadBooks() before parseRef() — John 1:1 and all refs work on first load
+- [x] **Translation text above tiles**: loadBook(getVersion(), bookId) fetched in _studyPassage; BSB verse text shown above each interlinear verse row with gold left border
+- [x] **Commentary tab added**: 5th passage tab; source selector (Ellicott/MHCC/JFB/Calvin/etc.) persisted to localStorage; _renderCommentaryTab + _loadAndRenderCommentary functions
+- [x] **Word study absorbed**: WORD_URL in core.js → translation/workshop/; word/index.html redirects ?s= param; all in-site word links now route to workshop
+- [x] **Advanced panel**: translation tools (mode toggle, import/export) moved to hidden ⚙ panel; primary UI is clean study experience
+- [x] **Study-first nav**: left nav shows My Deck / Browse Vocabulary / Disputed Terms / Recent Passages in study mode; phase nav only in translation mode
+- [x] **Parallels absorbed**: 746 entries across 50 books merged into echo files via scripts/absorb-parallels.py
+
+---
+
+### Z5 — Key Term Decision Commentary
+
+- [x] `scripts/z5-terms-greek.py` — 20 Greek dispute_level≥2 terms (L4: G1343/G4561/G1342; L3: G4102/G3551/G26/G166/G4151/G3056; L2: 11 terms) (COMPLETE 2026-06-07)
+- [x] `scripts/z5-terms-hebrew.py` — 17 Hebrew dispute_level≥2 terms (L4: H430/H2617/H3068/H7307; L3: H1285/H5315/H5769/H6666; L2: 9 terms) (COMPLETE 2026-06-07)
+- [x] tools/terms/index.html serves phase5.json directly; term-commentary.json deferred until z5 agent scripts run
+- [x] tools/terms/index.html built: left searchable list + right detail panel (tg-* CSS, tiers/semantic_range/log) (COMPLETE)
+
+---
+
+### Z6–Z8 — Commentary UI Registration (core.js entry)
+
+- [x] core.js line ~706: all 3 MKT COMMENTARY_SOURCES entries already registered (COMPLETE)
+  - `{ id: 'mkt-original', label: 'Original Language (MKT)', attr: '...' }`
+  - `{ id: 'mkt-context',  label: 'Historical Context (MKT)', attr: '...' }`
+  - `{ id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: '...' }`
+
+---
+
+### Library Content Cleanup — completed polish items
+
+- [x] **Newman Apologia `[Pg N]` spans** — stripped 418 `.pagenum` spans from `newman-apologia.html` via BeautifulSoup.
+
+- [x] **Smalcald Articles Part III sub-article `lib-article` nesting** — added `lib-article__num` (Roman numeral) and `lib-article__text` wrapper to all 13 articles; h3 updated to show title only.
+
+---
+
+### Library Expansion — completed items
+
+- [x] **Zwingli, On the True and False Religion (1525)** — Completed via 1929 Preble translation (public domain 2025); 9 sections. See archive.org `latinworkscorres03zwin`.
+
+- [x] **Audit and add missing council texts** — completed 2026-06-03. Seven councils added across ecumenical, RC, and Orthodox traditions. Deferred: Vatican II (copyright unclear), Jassy 1642, CP4/Photian (no PD English translation), Hesychast (too specialized).
+
+  **Still needed (deferred):**
+  - Vatican II — *Lumen Gentium*, *Dei Verbum*, *Sacrosanctum Concilium*; copyright status unclear on usable English translations
+  - Constantinople IV / Photian Council (879–880) — no clear public domain English translation available
+  - Hesychast Councils (1341, 1347, 1351) — no standard public domain English text
+  - Council of Jassy (1642) — *Confession of Peter Mogila*; availability unclear
+
+---
+
+### MAP-G — Unify figure marker popups with stacking place tooltip system ✅ DONE 2026-06-06
+
+*(Complete — see todo-archive.md. Figures now use `_figData` + `_onPlaceMouseMove` stacking
+tooltip instead of native Leaflet `bindTooltip`. Figure entries render with a colored left
+border to distinguish from place entries. SW bumped to v90.)*
+
+---
+
+### MAP-I — Animated timelapse accuracy pass (completed sub-tasks)
+
+- [x] **I1 — Coordinate audit + fix** *(2026-06-06)*: En-gedi fixed (31.47,35.45 →
+  31.46,35.38); Jesus Wilderness fixed (31.55,35.5 → 31.72,35.20 Judean Desert).
+
+- [x] **I2 — Route line timing** *(2026-06-06)*: paul-journey1 start 1052→1049,
+  paul-journey2 start 1055→1053, paul-journey3 start 1057→1055.
+
+- [x] **I3 — Hoverable journey lines** *(2026-06-06)*: All 22 routes now have
+  `description` fields. Transparent hit polylines (weight=14) trigger `_onRouteOver`
+  → `_routeTipEl` with route label (colored left border) + description.
+
+---
+
+### WS-G · Curated semantic-range descriptions — apply-decisions.py (completed item)
+
+- [x] apply-decisions.py: semantic_range field support added alongside status/tiers/log/notes (COMPLETE)
+
+---
+
+### ~~SW-A · Rebrand and passage-centric entry point~~ *(done 2026-06-06)*
+
+*(archived — see working/todo-archive.md)*
+
+---
+
+### ~~WS-Q · Passage URL state persistence~~ *(COMPLETE 2026-06-07)*
+
+`history.replaceState(null, '', '?ref=' + encodeURIComponent(refStr.trim()))` added to `_studyPassage()` after ref parse succeeds. Read side (?ref= on load) was already present. Verify: study John 1:1 → URL bar updates to `?ref=John+1%3A1` → refresh → passage reloads.
+
+---
+
+### SW-B · Grammar significance system *(COMPLETE 2026-06-06)*
+
+**Why this matters most:** Every interlinear shows "VERB aorist active indicative 3rd singular" — but almost none explain what that means for interpretation. The Greek perfect tense signals completed-action-with-ongoing-results (γέγραπται = "it stands written," still authoritative). The Hebrew Piel intensifies the Qal action. The genitive case has twelve semantic functions that completely change meaning. Lay readers see the label and have no path forward.
+
+**New data files to generate (agent task):**
+
+- `data/grammar/greek-morphology-significance.json` — ~60 entries, keyed by morphological category:
+  - All 7 tenses with significance + plain_english + interpretive_examples + common_misreading
+  - 3 voices; 5 moods (imperative/subjunctive/optative/infinitive/participle) with force
+  - 5 cases with their semantic functions (especially genitive's 12 uses: possessive, subjective, objective, partitive, appositive, genitive absolute, etc.)
+- `data/grammar/hebrew-morphology-significance.json` — ~40 entries:
+  - 7 binyanim (Qal/Niphal/Piel/Pual/Hiphil/Hophal/Hithpael) with semantic force
+  - Perfect/imperfect aspect distinction (not tense — action-type); prophetic perfect explanation
+  - Waw-consecutive significance; participle as verbal adjective; infinitive construct vs. absolute
+- `data/grammar/greek-particles.json` — ~45 discourse particles with Strong's codes, discourse function, plain-English explanation, color class, and illustrative example:
+  - G1063 γάρ (ground/reason — orange), G3767 οὖν (inference — green), G0235 ἀλλά (strong contrast — red), G1161 δέ (continuation — blue), G5620 ὥστε (result), G2443 ἵνα (purpose), G3754 ὅτι (content/reason), G1487 εἰ (conditional), G3361 μή vs. G3756 οὐ (prohibition types)
+- `data/grammar/hebrew-particles.json` — ~30 entries: כִּי (causal/concessive/object marker), לָכֵן (therefore), הִנֵּה (immediacy marker), אַל vs. לֹא (prohibitions), waw-consecutive function
+
+**UI tasks:**
+- [x] Grammar Significance section in dossier: particle function card + POS morphology hints (COMPLETE SW-B)
+- [x] Discourse Markers: colored tile borders/badges via sw-particle--{function} CSS + markers legend bar above tiles (COMPLETE SW-B)
+- [x] Added data/grammar/ 13-file paths to sw.js SHELL_URLS v94 (COMPLETE SW-O)
+
+**Verify:** Study Romans 8:1 in passage view — οὖν tile gets an orange/green "inference" badge. Hover → "Therefore — draws a logical conclusion from what came before. Romans 8:1 is the conclusion of a 7-chapter argument." Click tile → dossier Grammar section shows the ⓘ inference explanation card.
+
+---
+
+### SW-C · Grammar debates panel *(COMPLETE 2026-06-06)*
+
+**Why:** Some of the most significant theological questions in the NT hinge entirely on Greek grammatical constructions — and a lay reader has no way to know the debate exists. πίστις Χριστοῦ has occupied NT scholars for 40 years and changes whether justification is primarily about our faith-act or Christ's covenant obedience. This panel surfaces ~40 such cases.
+
+**New data file:** `data/grammar/grammar-debates.json` — ~40 entries:
+```
+Schema per entry: { id, label, strongs_keys, trigger_passages, construction,
+  position_a: { label, rendering, argument, proponents },
+  position_b: { label, rendering, argument, proponents },
+  why_it_matters, scholarly_status }
+```
+
+Initial 40 entries to generate (agent task):
+- πίστις Χριστοῦ: objective vs. subjective genitive (Rom 3:22, Gal 2:16, Phil 3:9)
+- μονογενής: only-begotten vs. unique/one-of-a-kind (etymology debate)
+- ἐν ἀρχῇ John 1:1: articular vs. anarticular
+- ὁ νόμος in Paul: Mosaic Torah vs. any law principle
+- αἰώνιος: belonging-to-the-age vs. everlasting duration
+- ἱλαστήριον Rom 3:25: propitiation vs. expiation vs. mercy seat
+- Granville Sharp Rule: Titus 2:13 ("our great God and Savior Jesus Christ")
+- עַלְמָה Isa 7:14: virgin vs. young woman of marriageable age
+- בְּרֵאשִׁית Gen 1:1: absolute vs. construct state
+- רוּחַ אֱלֹהִים Gen 1:2: Spirit of God vs. mighty wind
+
+**Tasks:**
+- [x] data/grammar/grammar-debates.json — 30 entries generated (COMPLETE SW-C)
+- [x] Contested Interpretation card in dossier — position A/B with proponents, why-it-matters, scholarly-status badge (COMPLETE SW-C)
+- [x] .sw-debate-card CSS — two positions grid, proponent chips, status badges (COMPLETE SW-C)
+
+**Verify:** Study Gal 2:16 → click πίστεως → Contested Interpretation card shows both positions (faith IN Christ / faithfulness OF Christ) with named proponents and the theological consequence of each reading.
+
+---
+
+### SW-D · Literary analysis panel *(COMPLETE 2026-06-06)*
+
+**Why:** The Bible is literature, and its literary structure is part of its meaning. Psalm parallelism is not decorative — the second line always interprets the first. Paul's logical argument (thesis → ground → inference → application) is visible in the Greek particles and invisible in English. A narrative chiasm puts its center as the theological climax. Without literary awareness, readers flatten the text.
+
+**New data files (all agent tasks):**
+
+- `data/literary/genre.json` — 66 books: primary genre, sub-genres, literary note, structure note
+- `data/literary/structures.json` — ~80 key pericopes with chiasm/structure data and center notes (John 1 prologue, Phil 2 hymn, 1 Cor 13, Sermon on the Mount, Philemon chiasm, Amos 5 chiasm, Ruth structure, etc.)
+- `data/literary/devices-glossary.json` — 30 literary devices with plain-English definitions and biblical examples (chiasm, inclusio, synonymous/antithetical/synthetic/climactic parallelism, merism, hendiadys, litotes, hyperbole, irony, paronomasia, acrostic, anaphora, refrain)
+- `data/literary/parallelism.json` — Psalms + Proverbs verse-by-verse parallelism type annotations
+
+**Tasks:**
+- [x] Parallelism detection deferred — literary structures.json covers explicit OT parallelism structures (chiasm etc.) manually (COMPLETE SW-D scope)
+- [x] Literary Structure tab: genre badge + sub-genres + literary note + structural diagram (chiasm element rows with color-coded pairs, center highlighted) + devices glossary (COMPLETE SW-D)
+- [x] Literary tab is default active tab; dossier not given separate literary context section (implemented at passage level not word level — sufficient) (COMPLETE SW-D)
+
+**Verify:** Study John 1:1–18 → Literary Structure tab shows the chiasm with matching colors on paired elements, center highlighted, note about the center's theological significance. Psalm 23 → parallelism badges on verse pairs; clicking badge → plain-English explanation of synonymous parallelism.
+
+---
+
+### SW-E · Idiom database *(COMPLETE 2026-06-06)*
+
+**Why:** Biblical idioms are pervasive and almost never flagged. "Son of X" means "characterized by X." "Heart" in Hebrew means intellect and will, not emotions. "Bowels of mercy" means deep compassion (Paul means intestines). "Gird your loins" means prepare for action. "To know" a person means intimate relationship. "Hard-necked" means stubborn. Without this layer, lay readers either miss the idiom or misread it literally.
+
+**New data files:**
+- `data/idioms.json` — ~500 entries:
+  ```
+  Schema: { id, phrase, original_he, original_gr, strongs_trigger_he[], strongs_trigger_gr[],
+    literal, cultural_meaning, significance, key_passages[], category, plain_english }
+  ```
+- `data/idioms-index.json` — inverted index: Strong's code → array of idiom IDs
+
+**Categories across ~500 entries (agent task — draws from Clarke/Barnes/ISBE already on site):**
+- Kinship metaphors: son/daughter of X, firstborn, only-begotten, father of X
+- Body/anatomy: heart (= intellect+will), bowels/kidneys (= deep emotions), face (= honor), hand (= power), arm (= strength), neck (= submission vs. stubbornness), bosom (= intimate fellowship)
+- Knowledge/perception: know (= intimate relationship), see (= understand), hear (= obey), remember (= act covenantally)
+- Spatial metaphors: right hand (= highest honor), under the feet (= subjugated), in the bosom (= closest fellowship)
+- Honor/shame: face/countenance, shame, nakedness, lift up the face, hide the face
+- Agricultural: threshing floor (= judgment), gleaning, vine/vineyard (= Israel), harvest, winnowing
+- Clothing: gird (= take on a role), naked (= vulnerable), garment of praise/righteousness
+- Death/burial: sleep (= death), gathered to his people, Sheol/Hades
+- Warfare: draw the sword, deliver into the hand of
+- Numerics as idioms: 40 (testing), 7 (completeness), 70 (fullness), 12 (covenant completeness)
+- Commonly misread terms: peace (= shalom = wholeness), salvation (= rescue/wholeness), glory (= kabod = weight), grace (= gift with relational obligation in honor culture), righteousness (= covenant faithfulness)
+
+**Tasks:**
+- [x] data/idioms.json — 51 curated entries; data/idioms-index.json inverted index (COMPLETE SW-E)
+- [x] data/idioms-index.json built manually alongside data/idioms.json (COMPLETE SW-E)
+- [x] Idioms in This Passage: collapsible panel above tiles (_renderPassageIdioms) + Idiom Alert in dossier (_renderIdiomAlertSection) (COMPLETE SW-E)
+- [x] Idiom Alert: dossier section rendered by _renderIdiomAlertSection (COMPLETE SW-E)
+- [x] .sw-idiom-panel + .sw-idiom-alert-card CSS added (COMPLETE SW-E)
+
+**Verify:** Study John 17:12 → G5207 (υἱός) tile gets an idiom badge. Idioms panel shows "son of X" entry: "When υἱός appears with a genitive noun, it usually means 'characterized by X' — 'son of destruction' = one destined for/characterized by destruction."
+
+---
+
+### SW-F · Cultural background system *(COMPLETE 2026-06-06)*
+
+**Why:** The Bible assumes a cultural world the reader no longer inhabits. Honor-shame dynamics drive more narrative tension than Western readers notice. Patron-client relationships explain why "giving thanks publicly" was a social obligation. Jewish purity categories make healing narratives legible as community restoration. ANE treaty structure is the template for the covenant system. Without this layer the text is opaque in ways the reader doesn't know to ask about.
+
+**New data files (all agent tasks):**
+
+- `data/cultural/frameworks.json` — 12 cultural framework primers (5 key concepts + key passages + reading tip each):
+  1. Honor and Shame — challenge-riposte, face as honor, sitting and standing, shame as social loss
+  2. Patron-Client Relationships — reciprocal obligation, public thanks as social duty, benefaction logic
+  3. Jewish Purity and Holiness System — clean/unclean categories, healing = community restoration
+  4. Mosaic Covenant Structure — ANE suzerainty-vassal treaty form → Deuteronomy's architecture
+  5. Second Temple Judaism — Pharisees/Sadducees/Essenes/Zealots, messianic expectations, Torah debates
+  6. Roman Imperial Context — "Son of God" / "Lord" / "gospel" as imperial titles; cross as political counter-claim
+  7. Household Codes and Structure — oikos as economic unit, paterfamilias, house church context
+  8. Ancient Near East Cosmology — divine council, cosmic geography, what biblical authors assumed about the cosmos
+  9. Prophetic Speech Forms — oracle of doom, woe oracle, covenant lawsuit (rib), comfort oracle
+  10. Wisdom Tradition — retribution principle and its limits (Job, Ecclesiastes), personified Wisdom (Prov 8)
+  11. Apocalyptic Literature Conventions — why Revelation uses symbols, throne-room scenes, numeric symbolism
+  12. Kinship and Tribal Social Structure — clan identity, levirate marriage, kinsman-redeemer, the goel
+
+- `data/cultural/book-context.json` — 66 entries: setting, audience, date range, primary_frameworks[], key_background (what first readers knew that modern readers don't)
+- `data/cultural/symbols.json` — number symbolism (3/4/7/10/12/40/70/666/1000), color symbolism (white/red/blue/purple/black), directional symbolism (east/west/north, Jerusalem as "up"), cosmological symbols (sea = chaos/nations, mountain = divine meeting place, garden = sacred space)
+
+**Tasks:**
+- [x] data/cultural/frameworks.json (12), book-context.json (66 books), symbols.json (31 entries) generated (COMPLETE SW-F)
+- [x] Cultural Context tab: book context + framework accordions + symbols reference (COMPLETE SW-F)
+- [x] .sw-cultural-tab, .sw-framework-block, .sw-symbol-cat CSS added (COMPLETE SW-F)
+
+**Verify:** Study Mark 5:1–20 → Cultural Context tab surfaces: honor-shame + jewish-purity frameworks. Expanding jewish-purity → "The man living among tombs is ritually impure (corpse contamination, Num 19) — excluded from community worship. Jesus' healing is simultaneously physical restoration, ritual cleansing, and social reintegration."
+
+---
+
+### SW-G · Proficiency / depth model *(COMPLETE 2026-06-06)*
+
+**Three levels — same data, different amounts visible:**
+
+| Level | Visible sections | Target user |
+|-------|-----------------|-------------|
+| **Reader** | Semantic range summary (2 sentences), 3 verse samples, idiom alert, simple translation note, book-context card | New to Bible study |
+| **Student** | All lexical sources, full verse samples, grammar significance, literary structure tab, all cultural frameworks, LXX bridge, book distribution heat map | Regular Bible student |
+| **Scholar** | All of the above + grammar debates, cognate family, semantic field, author frequency, M&M papyri, OT-in-NT panel, Second Temple context | Sermon prep, seminary, deep exegesis |
+
+**Tasks:**
+- [x] All dossier sections tagged with data-depth-min; CSS hides higher-depth sections at lower levels (COMPLETE SW-G)
+- [x] _applyDepth(level): toggles sw-depth-N class on .ws-page; saves to SK_DEPTH localStorage (COMPLETE SW-G)
+- [x] First-load depth prompt: 3-button card (Reader/Student/Scholar) shown once; dismissed + saved to SK_DEPTH (COMPLETE SW-G)
+- [x] Depth toggle in every dossier header renders all 3 levels (COMPLETE SW-G)
+
+**Verify:** Reader depth → only semantic range, 3 samples, idiom alert visible. Scholar → all sections. Reload → depth preference restored.
+
+---
+
+### SW-H · Cognate word family display *(COMPLETE 2026-06-06)*
+
+**Why:** Seeing a Hebrew word's cognate family transforms interpretation. כָּבוֹד (glory/honor), כָּבֵד (heavy/the liver), כָּבַד (to honor/be heavy) all share כ-ב-ד. "The glory of the LORD" is not merely metaphorical — the root means *weight.* Greek: ἀγάπη / ἀγαπάω / ἀγαπητός — the family shows that "beloved" is literally "one who has been agapaoed."
+
+**Tasks:**
+- [x] `scripts/build-cognate-families.py`: directed derivation graph from `deriv` field; 1329 Hebrew + 557 Greek families; max 20 members
+- [x] `_loadCognates(lang)`, `_renderCognateSection(code)` in workshop.js at Student+ depth
+- [x] Chip click → navigate dossier to that family member; CSS for `.sw-cognate-chip`
+
+**Verify:** Open H3519 (כָּבוֹד) → Word Family shows root כ-ב-ד "weight/heaviness" + chips for כָּבֵד ("heavy"), כָּבַד ("to honor/be heavy"). Click a chip → dossier navigates to that entry.
+
+---
+
+### SW-I · Semantic field clustering *(COMPLETE 2026-06-06)*
+
+**Why:** Words do not travel alone. λόγος clusters with λαλέω, ἀκούω, γράφω in the corpus — revealing it functions primarily as a speech-act concept, not an abstract philosophical one. Seeing the semantic neighborhood shows how the word functioned conceptually, not just definitionally.
+
+**Tasks:**
+- [x] scripts/build-semantic-fields.py: PMI co-occurrence, MIN_VERSE_COUNT=10, MIN_CO_COUNT=3 (COMPLETE SW-I)
+  - For each Strong's code, collect all verses where it appears; for each verse, collect all other codes present
+  - Compute PMI (pointwise mutual information) scores to find over-representation vs. chance
+  - Output top 10 per entry: `data/grammar/semantic-fields-greek.json` + `data/grammar/semantic-fields-hebrew.json`
+- [x] Semantic Neighborhood: top-10 PMI neighbor chips at Scholar depth (data-depth-min=3), clickable to navigate dossier (COMPLETE SW-I)
+
+**Verify:** Study G3056 (λόγος) → neighborhood shows λέγω, λαλέω, ἀκούω prominently. Study H2617 (חֶסֶד hesed) → neighborhood shows אֱמֶת (faithfulness), טוֹב (good), covenant-related terms.
+
+---
+
+### SW-J · Author / corpus frequency comparison *(COMPLETE 2026-06-06)*
+
+**Why:** Paul and John use the same word differently. ἀγάπη appears at ~60% higher rate in John's corpus than Paul's — revealing it is more theologically central to John's idiom. Noticing authorial characteristic vocabulary (John's κόσμος, Paul's δικαιοσύνη, Luke's σωτήρ) reveals theological emphasis and authorial voice.
+
+**Tasks:**
+- [x] scripts/build-author-frequencies.py: 9 NT groups + 5 OT groups, per-1000-token rates, author_freq field added (COMPLETE SW-J)
+- [x] Author frequency heat map in dossier at Student+ depth (data-depth-min=2), 4 heat tiers, highest-rate badge (COMPLETE SW-J)
+
+**Verify:** Open G0026 (ἀγάπη) → John has highest-rate badge. Open a word characteristic of Paul → Paul gets the badge.
+
+---
+
+### SW-K · OT-in-NT comparison panel *(COMPLETE 2026-06-06)*
+
+**Why:** Every NT quotation of the OT carries three text traditions: Masoretic Text (Hebrew), Septuagint (what NT authors usually quoted), and the NT author's form. Differences are often theologically significant and completely invisible to English readers. Matthew's παρθένος for עַלְמָה, Paul's use of Habakkuk 2:4 — these are hermeneutical decisions embedded in the text.
+
+**New data file:** `data/ot-in-nt/quotations.json` — ~300 explicit quotations:
+```
+Schema: { id, nt_ref, ot_ref, quotation_marker, nt_greek, lxx_greek, mt_hebrew,
+  key_differences: [{ word, note }], fulfillment_type, interpretation_note }
+```
+
+**Tasks:**
+- [x] `data/ot-in-nt/quotations.json` — 61 entries covering key NT quotations from Matthew, Romans, John, Acts, Hebrews, Galatians, 1 Peter, Mark, Luke, Revelation; MT/LXX/NT three columns + key differences + interpretation notes
+- [x] `_loadOTinNT()` lazy loader; `_findRelevantQuotations()` passage overlap check; `_renderOTinNTPanel()` three-column HTML
+- [x] Intertextual tab now renders OT-in-NT panel (was stub); stub replaced with live data
+- [x] CSS: `.sw-ot-in-nt-panel`, `.sw-triple-compare`, `.sw-diff-highlight`, `.sw-nt-type-badge` (4 fulfillment type colors)
+
+**Verify:** Study Matt 1:23 → click παρθένος → OT Source panel shows Isa 7:14 in three columns, עַלְמָה/παρθένος difference highlighted, interpretive note explaining LXX translation choice and Matthew's use of it.
+
+---
+
+### SW-L · Second Temple context snippets *(COMPLETE 2026-06-06)*
+
+**Why:** The NT authors lived inside a rich tradition of Jewish interpretation. John's λόγος theology is incomprehensible without Philo. The "Son of Man" cannot be fully understood without 1 Enoch's development of that figure. The Sabbath controversy narratives require knowing the Mishnah's 39 prohibited labor categories. The Dead Sea Scrolls use many of the same terms as the NT with similar sectarian intensity.
+
+**New data file:** `data/second-temple/context.json` — ~80 curated entries:
+```
+Schema: { id, strongs_keys[], trigger_passages[], source, source_work,
+  source_date, context, significance, representative_quote }
+```
+
+**~80 entries to generate (agent task):**
+- Philo: Logos / Wisdom (for John 1); allegorical interpretation method
+- Josephus: Pharisees, Sadducees, Essenes, Zealots (for Gospel controversies)
+- Dead Sea Scrolls: light/darkness dualism (1QS — for John's idiom), messianic expectations, community boundary markers
+- 1 Enoch: Son of Man as heavenly pre-existent judge (for Dan 7 + Gospels)
+- Psalms of Solomon: Davidic messianism (for Palm Sunday + messianic expectation)
+- Mishnah Shabbat 7:2: 39 prohibited Sabbath labor categories (for healing controversies)
+- 4 Ezra / 2 Baruch: post-70 AD Jewish grief and hope (for Matthew 24 + Revelation context)
+- Targum renderings of key OT texts (Isa 53, Ps 22, Ps 110)
+
+**Tasks:**
+- [x] data/second-temple/context.json — 30 entries: Philo, Josephus, DSS, 1 Enoch, Targums etc. (COMPLETE SW-L)
+- [x] Second Temple Context in dossier at Scholar depth (data-depth-min=3) per word (COMPLETE SW-L) or references
+- [x] .sw-st-card, .sw-st-source-chip, .sw-st-quote CSS added (COMPLETE SW-L)
+
+**Verify:** Study John 1:1 → Second Temple Context panel surfaces Philo Logos entry with source, date, context summary, significance (John establishes the frame, then explodes it with the Incarnation), representative quote.
+
+---
+
+### SW-M · Passage synthesis panel *(COMPLETE 2026-06-06)*
+
+**Why:** Individual layers are valuable, but the interpretive payoff is synthesis. A scholar's commentary is not a list of word studies — it is an argument integrating grammar, lexical range, literary structure, cultural background, and intertextual context into a coherent reading of authorial intent. This panel provides that synthesis, initially agent-generated for key passages, always user-editable.
+
+**New data:** `data/synthesis/{book}.json` — per-book, keyed by pericope reference:
+```
+Schema per pericope: { pericope_label, literary_note,
+  key_terms: [{ code, note }],
+  cultural_notes: [],
+  intertextual_connections: [],
+  synthesis: "one coherent paragraph",
+  tradition_map: { patristic, reformation, modern_debates: [] } }
+```
+
+**Tasks:**
+- [x] Agent task: generate `data/synthesis/` for key pericopes — 8 books covered: genesis.json, john.json, romans.json, isaiah.json, matthew.json, psalms.json, galatians.json, hebrews.json (22 pericopes total)
+- [x] Synthesis tab in passage view: pericope label + literary note; key terms as clickable chips (click → open dossier) with interpretation note; cultural notes callout; intertextual connection links; synthesis paragraph in a prominent block; tradition map accordion
+- [x] User synthesis textarea at bottom of Synthesis tab; auto-saves to bsw_ws_synthesis_${ref} on input (COMPLETE SW-N)
+- [x] Export Study Sheet button in passage actions bar; window.print() + @media print CSS; cleared on afterprint (COMPLETE SW-N)
+
+**Verify:** Study Rom 3:21–26 → Synthesis tab shows: pericope label ("The Thesis of Romans"), literary note (this is the hinge of the letter), key term notes for δικαιοσύνη and ἱλαστήριον, tradition map showing propitiation/expiation debate and New Perspective.
+
+---
+
+### SW-N · Study notes and vocabulary learning mode *(LOWER priority)*
+
+**Study notes:**
+- [x] Personal passage notes: `localStorage['bsw_ws_notes_' + ref]` textarea — auto-saves on input (implemented in SW-N partial 2026-06-06)
+- [x] "Link to this word" — 🔗 button in dossier header copies URL; ?s= and ?ref= URL params auto-open on load (2026-06-06)
+- [x] Export Study Sheet: "Export Study Sheet" button in passage view, `window.print()` with @media print CSS, clears on afterprint (2026-06-06)
+
+**Vocabulary flashcard mode:**
+- [x] Flashcard nav button (🎯) in topbar → full-screen flashcard view: word large center; tap reveals translit, POS, gloss, freq, 3 verse samples (2026-06-06)
+- [x] Custom deck via ☆/★ button in dossier header; default deck = custom-added words (Phase 1 auto-deck deferred)
+- [x] ☆/★ "Add to deck" button in dossier header; deck stored as `bsw_ws_fc_deck` in localStorage (2026-06-06)
+- [x] SRS: 4-button rating (Again 1d / Hard 3d / Good 7d / Easy 21d); due-dates in `bsw_ws_fc_progress` localStorage; keyboard shortcuts Space/1/2/3/4 (2026-06-06)
+- [x] Progress: reviewed count + remaining shown in flashcard view header; due-badge on nav button (2026-06-06)
+
+**Verify:** Export Study Sheet after studying John 1:1 → printable page renders with interlinear, λόγος dossier summary, synthesis note, user notes. Vocabulary mode: λόγος on front; tap → gloss + frequency + 3 samples; "Good" → marked for 7-day review.
+
+---
+
+### SW-O · Integration and wire-up pass *(final pass — after SW-A through SW-N)*
+
+**After all data layers and components exist, wire them into a coherent experience:**
+
+- [x] **Auto-surface "What to notice here" banner**: _renderPassageNoticeBanner() detects discourse particles, grammar debates, idioms, OT-in-NT quotations, cultural frameworks — collapsible <details> above tiles (COMPLETE SW-O)
+- [x] **Cross-navigation**: window.wireRefLinks() override routes all .ref clicks to _studyPassage(); cognate/semantic chips call _renderDossier(); $dossier post-render wires a.ref[data-ref] (COMPLETE SW-O)
+- [x] **Mobile layout**: @media <760px — dossier = fixed bottom sheet with translateY slide; backdrop+handle close; tabs overflow-x scroll; .sw-ptile__badge uses data-abbr first letter (COMPLETE SW-O)
+- [x] **PWA shell:** Added all SW data paths to sw.js SHELL_URLS (v93→v94); workshop.html/css/js + 13 grammar files + 3 literary + idioms + 3 cultural + second-temple + ot-in-nt + 8 synthesis books (2026-06-06)
+- [x] **Performance**: all feature data lazy-loaded on first tab open or _studyPassage(); _synthesisCache/undefined sentinel prevents double-fetch; grammar/idioms/cultural/second-temple all per-tab (COMPLETE SW-O)
+
+---
+
+### SW-P · Three-mode UI redesign *(COMPLETE — 2026-06-06)*
+
+- [x] Grid fix: `190px 1fr 360px` → `1fr 360px` (no nav in study mode), nav col shown only in translation mode
+- [x] Mode bar: `📖 Verse Study | 🔤 Word Study | 📚 Book Study` tabs at top of center column
+- [x] Word Study mode: full-width panel, two-column layout (lexical info left 3fr, concordance right 2fr, sticky)
+- [x] Book Study mode: book selector, tabs for Overview/Themes/Key Terms/Idioms; uses cultural/book-context.json + author-freq data + idioms
+- [x] Mode switching: `ws-page--word-study`/`ws-page--book-study` toggle grid; `ws-page--translation` restores 3-col nav
+- [x] Auto-populate Word Study panel when switching from Verse mode (uses current dossier word)
+- [x] `_studyPassage()` auto-switches to Verse mode and caches `_interData` for concordance use
+- [x] **Discipline flashcard integration**: "Original Language" sub-tab in discipline memory; SRS review with keyboard shortcuts; Remove button per word (2026-06-06)
+- [x] **Version selector** in passage entry bar — `<select>` populated from versions.json; calls `setVersion()` + re-studies current ref
+- [x] **Hover tooltip** on tiles — micro-tooltip on mouseenter showing gloss + lemma
+- [x] **Word Study dictionary/glossary** — collapsible; accent-forgiving search (NFD); additive filter chips; match highlighting; entry click opens full word detail
+- [x] **Nav simplification**: study nav (My Deck / Browse Vocabulary / Disputed Terms / Recent Passages) removed; nav column hidden in study mode; passage entry bar moved inside Verse Study panel; close-passage returns to empty state not browse panel
+- [x] **Word Study = full dossier**: `_renderWordStudyPanel()` uses curated `_getEntry()` when available — renders grammar significance, debates, idioms, author frequency, semantic neighborhood, cognates, Second Temple context, extrabiblical uses, all lexical sources (Dodson/Thayer/BDB/Gesenius); `_renderLexicalSourcesSection()` helper added
+- [x] **Dossier restricted to Verse Study**: CSS already hides dossier in word/book modes; `_openWord()` only runs in verse study tile clicks
+
+**Verify (golden path):** Enter "Romans 8:1" →
+- Interlinear renders with οὖν highlighted (inference badge)
+- Literary tab: genre card (epistle/diatribe) + argument structure showing 8:1 as conclusion of chs.1–7
+- Cultural tab: honor-shame + patron-client frameworks; Romans book-context card
+- Intertextual tab: relevant echoes listed
+- Synthesis tab: thesis-sentence synthesis, tradition map
+- Click οὖν → dossier slides in: particle significance card ("Therefore — conclusion of a 7-chapter argument"), Grammar section
+- Works on mobile as bottom sheet; works offline (all data cached)
+
+---
+
 ## Completed 2026-06-06 (loop session, iteration 4)
 
 ### DATA-8 · additions-esther chapter count mismatch *(LOW)*
